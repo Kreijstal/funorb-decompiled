@@ -81,10 +81,10 @@ public final class Direct3DToolkit extends GpuToolkit {
 
     final void p(byte param0) {
         if (param0 < 84) {
-          this.a(2.017637014389038f, 0.023083189502358437f, 1.1957261562347412f);
+          this.setBloomParameters(2.017637014389038f, 0.023083189502358437f, 1.1957261562347412f);
         }
         if (!this.field_ec) {
-          this.field_O.b(field_Bc, (byte) 114);
+          this.field_O.writeColumnMajorMatrix(field_Bc, (byte) 114);
         } else {
           field_Bc[12] = 0.0f;
           field_Bc[3] = 0.0f;
@@ -201,7 +201,7 @@ public final class Direct3DToolkit extends GpuToolkit {
 
     final void a(int param0, jagdx.IDirect3DPixelShader param1) {
         if (param0 >= -58) {
-          this.a(-40, -73, -126, -53);
+          this.beginPostProcessing(-40, -73, -126, -53);
         }
         this.field_Mc.SetPixelShader(param1);
     }
@@ -223,7 +223,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         if (param1 == MissionVariable.field_c) {
           return 2;
         }
-        if (asa.field_a == param1) {
+        if (OpenGlGlyphMask.field_a == param1) {
           return 4;
         }
         if (param1 == SetThrusterBindingMoveAndTurnHasOppositeMove.field_o) {
@@ -268,7 +268,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         int var5;
         int var7;
         int var6;
-        hf var8;
+        Framebuffer var8;
         var7 = param3;
         if (var7 == 1) {
           var5 = 6;
@@ -277,8 +277,8 @@ public final class Direct3DToolkit extends GpuToolkit {
         }
         var6 = 0;
         if (param1 != 94) {
-          var8 = (hf) null;
-          this.a((hf) null);
+          var8 = (Framebuffer) null;
+          this.bindFramebuffer((Framebuffer) null);
         }
         if (param0) {
           var6 = var6 | 16;
@@ -312,13 +312,13 @@ public final class Direct3DToolkit extends GpuToolkit {
         this.field_Mc.setBooleanRenderState(161, param1);
     }
 
-    final void a(float param0, float param1, float param2) {
+    final void setBloomParameters(float param0, float param1, float param2) {
     }
 
     final void j(byte param0) {
         this.field_Mc.setBooleanRenderState(27, this.field_zb);
         if (param0 != -56) {
-          this.b();
+          this.enableBloom();
         }
     }
 
@@ -330,7 +330,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         if (null == this.field_Tc &&
           SetGrappleDebris.field_o != this.field_A[this.field_ab]) {
           if (vf.field_a != this.field_A[this.field_ab]) {
-            this.field_Mc.SetTransform(this.field_ab + 16, this.field_Eb[this.field_ab].b(field_Bc, (byte) 114));
+            this.field_Mc.SetTransform(this.field_ab + 16, this.field_Eb[this.field_ab].writeColumnMajorMatrix(field_Bc, (byte) 114));
           } else {
             this.field_Mc.SetTransform(this.field_ab + 16, this.field_Eb[this.field_ab].c(field_Bc, (byte) -80));
           }
@@ -429,7 +429,7 @@ public final class Direct3DToolkit extends GpuToolkit {
           decompiledCaughtException = decompiledCaughtParameter0;
           var13 = decompiledCaughtException;
           var13.printStackTrace();
-          this.a((byte) 30);
+          this.dispose((byte) 30);
           throw new RuntimeException("");
         }
     }
@@ -535,10 +535,10 @@ public final class Direct3DToolkit extends GpuToolkit {
         this.field_Mc.SetStreamSource(param2, var4.field_f, 0, var4.a((byte) -33));
     }
 
-    final void v() {
+    final void copyFrontToBackBuffer() {
     }
 
-    final void a(int param0, int param1) throws jkb {
+    final void present(int param0, int param1) throws GraphicsPresentException {
         int fieldTemp$3 = 0;
         boolean discarded$4 = false;
         boolean discarded$5 = false;
@@ -547,7 +547,7 @@ public final class Direct3DToolkit extends GpuToolkit {
           fieldTemp$3 = this.field_Gc + 1;
           this.field_Gc = this.field_Gc + 1;
           if (fieldTemp$3 > 50) {
-            throw new jkb();
+            throw new GraphicsPresentException();
           }
           discarded$4 = this.K(60);
         } else {
@@ -566,17 +566,17 @@ public final class Direct3DToolkit extends GpuToolkit {
         return (hdb) ((Object) new jf(this, param3, param0, param2));
     }
 
-    final void ya() {
+    final void clearDepth() {
         this.b((byte) -74, true);
         this.field_Mc.Clear(2, 0, 1.0f, 0);
     }
 
-    final void o() {
+    final void releaseResources() {
         this.field_Sc.releaseAll((byte) 101);
-        super.o();
+        super.releaseResources();
     }
 
-    final void u() {
+    final void applyPostProcessing() {
     }
 
     final void f(int param0) {
@@ -627,7 +627,7 @@ public final class Direct3DToolkit extends GpuToolkit {
 
     final eb a(int param0, byte[] param1, kb param2, int param3, int param4, int param5, boolean param6, int param7) {
         if (param7 != 11) {
-          this.b(-44, 57);
+          this.createDepthBuffer(-44, 57);
         }
         return (eb) ((Object) new sb(this, param2, param4, param5, param6, param1, param0, param3));
     }
@@ -667,7 +667,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         return (vca) ((Object) new okb(this, mj.field_e, param1));
     }
 
-    final boolean s() {
+    final boolean isBloomEnabled() {
         return false;
     }
 
@@ -694,7 +694,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         return -0.5f;
     }
 
-    final boolean b() {
+    final boolean enableBloom() {
         return false;
     }
 
@@ -717,7 +717,7 @@ public final class Direct3DToolkit extends GpuToolkit {
           field_Bc[15] = 1.0f;
           field_Bc[13] = 0.0f;
         } else {
-          this.field_gb.b(field_Bc, (byte) 114);
+          this.field_gb.writeColumnMajorMatrix(field_Bc, (byte) 114);
         }
         if (param0 != 17891) {
           this.field_Gc = 99;
@@ -853,7 +853,7 @@ public final class Direct3DToolkit extends GpuToolkit {
           decompiledCaughtException = decompiledCaughtParameter1;
           var5 = (RuntimeException) (Object) decompiledCaughtException;
           if (var4 != null) {
-            ((Direct3DToolkit) (var4)).o();
+            ((Direct3DToolkit) (var4)).releaseResources();
           }
           throw var5;
         }
@@ -884,13 +884,13 @@ public final class Direct3DToolkit extends GpuToolkit {
 
     final void s(byte param0) {
         if (param0 != -39) {
-          this.ya();
+          this.clearDepth();
         }
         if (this.field_fc == GetGrapplingHookRopeBreakLength.field_o) {
           this.field_Mc.SetRenderState(19, 5);
           this.field_Mc.SetRenderState(20, 6);
         } else {
-          if (this.field_fc == oj.field_b) {
+          if (this.field_fc == GpuTransform3D.field_b) {
             this.field_Mc.SetRenderState(19, 2);
             this.field_Mc.SetRenderState(20, 2);
           } else {
@@ -934,9 +934,9 @@ public final class Direct3DToolkit extends GpuToolkit {
         this.field_Mc.SetTextureStageState(this.field_ab, 11, param1);
     }
 
-    final synchronized void c(int param0) {
+    final synchronized void updateFrame(int param0) {
         this.field_Sc.poll(false);
-        super.c(param0);
+        super.updateFrame(param0);
     }
 
     final gf a(int param0, int param1, byte[] param2, kb param3, int param4, int param5) {
@@ -978,7 +978,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         return (vmb) ((Object) new dxVertexLayout(this, param1));
     }
 
-    final void a(aja param0, boolean param1) {
+    final void setRenderTarget(ToolkitSprite param0, boolean param1) {
     }
 
     private final static int a(slb param0, byte param1) {
@@ -999,7 +999,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         throw new IllegalArgumentException();
     }
 
-    final int[] na(int param0, int param1, int param2, int param3) {
+    final int[] readPixels(int param0, int param1, int param2, int param3) {
         int var9 = 0;
         Object var5;
         jagdx.IDirect3DSurface var6;
@@ -1038,11 +1038,11 @@ public final class Direct3DToolkit extends GpuToolkit {
         this.field_Mc.SetVertexDeclaration(var3.field_b);
     }
 
-    final hf a(ekb param0, wib param1) {
+    final Framebuffer createFramebuffer(ColorBuffer param0, DepthBuffer param1) {
         return null;
     }
 
-    final void j() {
+    final void restoreDefaultFramebuffer() {
     }
 
     final uda a(byte param0, int param1) {
@@ -1079,7 +1079,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         return stackIn_4_0;
     }
 
-    final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
+    final void writePixels(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         int var11 = 0;
         jagdx.IDirect3DSurface var9;
         int var10;
@@ -1106,7 +1106,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         var12.release(false);
     }
 
-    final void GA(int param0) {
+    final void clearColor(int param0) {
         this.field_Mc.Clear(1, param0, 0.0f, 0);
     }
 
@@ -1130,7 +1130,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         }
     }
 
-    final void a(hf param0) {
+    final void bindFramebuffer(Framebuffer param0) {
     }
 
     final void a(byte param0, uja param1) {
@@ -1153,7 +1153,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         }
     }
 
-    final wib b(int param0, int param1) {
+    final DepthBuffer createDepthBuffer(int param0, int param1) {
         return null;
     }
 
@@ -1164,7 +1164,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         return (Object) null;
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void beginPostProcessing(int param0, int param1, int param2, int param3) {
     }
 
     final void y(byte param0) {

@@ -83,7 +83,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
         boolean stackIn_93_1 = false;
         if (param0 < -111) {
           qca.a(dma.field_g + 640 >> 1, dma.field_j, dma.field_g - 640 >> 1, true, 0);
-          if (0 < lia.field_b) {
+          if (0 < SoftwareTransform3D.field_b) {
             if (null != kl.field_c) {
               kl.field_c.c(tb.field_a.field_L, 0);
             }
@@ -116,7 +116,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
         } else {
           field_p = (java.awt.Image) null;
           qca.a(dma.field_g + 640 >> 1, dma.field_j, dma.field_g - 640 >> 1, true, 0);
-          if (0 < lia.field_b) {
+          if (0 < SoftwareTransform3D.field_b) {
             if (null != kl.field_c) {
               kl.field_c.c(tb.field_a.field_L, 0);
             }

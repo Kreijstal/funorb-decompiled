@@ -112,7 +112,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             if (vqa.field_g != null &&
               !vqa.field_g.field_N &&
               vqa.field_g.field_m.b(param0 + 1).world.d(vqa.field_g.field_L, 76) != null) {
-              var16.h(17704, 1);
+              var16.setTeam(17704, 1);
               var16.a(false, true, (World) null);
               var16.a(var18, 121, (World) null);
               if (0 != GetBots.field_o ||
@@ -198,7 +198,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             if (vqa.field_g != null &&
               !vqa.field_g.field_N &&
               vqa.field_g.field_m.b(param0 + 1).world.d(vqa.field_g.field_L, 76) != null) {
-              var19.h(17704, 1);
+              var19.setTeam(17704, 1);
             }
             var19.a(false, true, (World) null);
             var19.a(var21, 121, (World) null);
@@ -288,7 +288,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             }
           } else {
             if (vqa.field_g.field_m.b(param0 + 1).world.d(vqa.field_g.field_L, 76) != null) {
-              var22.h(17704, 1);
+              var22.setTeam(17704, 1);
               var22.a(false, true, (World) null);
               var22.a(var24, 121, (World) null);
               if (0 != GetBots.field_o ||

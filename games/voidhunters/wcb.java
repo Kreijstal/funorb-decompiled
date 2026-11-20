@@ -62,11 +62,11 @@ final class wcb extends uda {
 
     final void d(int param0) {
         jagdx.IDirect3DDevice var2 = null;
-        oj var3 = null;
+        GpuTransform3D var3 = null;
         if (null != this.field_g) {
           var2 = this.field_e.field_Mc;
           var3 = this.field_d.p(0);
-          var3.b((byte) 105, field_h);
+          var3.writeFirstTwoRows((byte) 105, field_h);
           field_h[7] = field_h[7] * 0.25f;
           field_h[4] = field_h[4] * 0.25f;
           field_h[6] = field_h[6] * 0.25f;
@@ -107,11 +107,11 @@ final class wcb extends uda {
 
     final void c(int param0) {
         jagdx.IDirect3DDevice var2 = null;
-        oj var3 = null;
+        GpuTransform3D var3 = null;
         if (this.field_g != null) {
           var2 = this.field_e.field_Mc;
           var3 = this.field_e.E(0);
-          var2.setVertexShaderConstants(0, var3.a(field_h, (byte) 22));
+          var2.setVertexShaderConstants(0, var3.writeRowMajorMatrix(field_h, (byte) 22));
         }
         if (param0 == 5) {
           return;
@@ -127,14 +127,14 @@ final class wcb extends uda {
 
     final void c(byte param0) {
         jagdx.IDirect3DDevice var2 = null;
-        oj var3 = null;
+        GpuTransform3D var3 = null;
         jagdx.IDirect3DDevice var2Lifetime1;
-        oj var3Lifetime1;
+        GpuTransform3D var3Lifetime1;
         if (param0 == 15) {
           if (null != this.field_g) {
             var2 = this.field_e.field_Mc;
             var3 = this.field_e.E(0);
-            var2.setVertexShaderConstants(0, var3.a(field_h, (byte) 22));
+            var2.setVertexShaderConstants(0, var3.writeRowMajorMatrix(field_h, (byte) 22));
           }
           return;
         }
@@ -142,7 +142,7 @@ final class wcb extends uda {
         if (null != this.field_g) {
           var2Lifetime1 = this.field_e.field_Mc;
           var3Lifetime1 = this.field_e.E(0);
-          var2Lifetime1.setVertexShaderConstants(0, var3Lifetime1.a(field_h, (byte) 22));
+          var2Lifetime1.setVertexShaderConstants(0, var3Lifetime1.writeRowMajorMatrix(field_h, (byte) 22));
         }
     }
 

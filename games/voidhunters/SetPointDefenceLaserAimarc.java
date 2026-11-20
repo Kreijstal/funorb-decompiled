@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetPointDefenceLaserAimarc extends ConsoleCommand {
-    static ima[] field_r;
+    static IndexedSpriteData[] field_r;
     static int field_q;
     static os field_o;
     static Sprite[][] field_p;

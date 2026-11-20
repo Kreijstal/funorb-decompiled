@@ -111,7 +111,7 @@ class pja extends TextureOperation {
         if (this.field_m < param0) {
           return false;
         }
-        ima var2 = GetFighterRepairTime.field_o < 0 ? ima.a(GetAngularVelocitySustainMax.field_o, this.field_m) : ima.a(GetAngularVelocitySustainMax.field_o, GetFighterRepairTime.field_o, this.field_m);
+        IndexedSpriteData var2 = GetFighterRepairTime.field_o < 0 ? IndexedSpriteData.a(GetAngularVelocitySustainMax.field_o, this.field_m) : IndexedSpriteData.a(GetAngularVelocitySustainMax.field_o, GetFighterRepairTime.field_o, this.field_m);
         var2.d();
         this.field_k = var2.b();
         this.field_p = var2.field_e;

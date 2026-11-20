@@ -241,7 +241,7 @@ final class soa extends llb {
               if (ii.field_h) {
                 GetComponentBreakingExplosionForceMultiplier.a(38, param3);
               } else {
-                mjb.a((byte) 108, param3);
+                GpuSprite.a((byte) 108, param3);
               }
             }
             asb.a(param3, SetThrusterParticleSpeedDownshift.field_o, true, (byte) -67);

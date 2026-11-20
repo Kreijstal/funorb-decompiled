@@ -12,11 +12,11 @@ final class hl extends uda {
 
     final void c(int param0) {
         jagdx.IDirect3DDevice var2 = null;
-        oj var3 = null;
+        GpuTransform3D var3 = null;
         if (this.field_k) {
           var2 = this.field_e.field_Mc;
           var3 = this.field_e.E(param0 - 5);
-          var2.setVertexShaderConstants(0, var3.a(field_f, (byte) 22));
+          var2.setVertexShaderConstants(0, var3.writeRowMajorMatrix(field_f, (byte) 22));
         }
         if (param0 == 5) {
           return;
@@ -160,15 +160,15 @@ final class hl extends uda {
 
     final void c(byte param0) {
         jagdx.IDirect3DDevice var2 = null;
-        oj var3 = null;
-        oj var4 = null;
+        GpuTransform3D var3 = null;
+        GpuTransform3D var4 = null;
         if (param0 == 15) {
           if (this.field_k) {
             var2 = this.field_e.field_Mc;
             var3 = this.field_e.g((byte) 82);
             var4 = this.field_e.E(0);
-            var2.setVertexShaderConstants(0, var4.a(field_f, (byte) 22));
-            var2.setVertexShaderConstants(4, var3.a((byte) -4, field_f));
+            var2.setVertexShaderConstants(0, var4.writeRowMajorMatrix(field_f, (byte) 22));
+            var2.setVertexShaderConstants(4, var3.writeRotationCoefficients((byte) -4, field_f));
           }
           return;
         }
@@ -193,11 +193,11 @@ final class hl extends uda {
 
     final void d(int param0) {
         jagdx.IDirect3DDevice var2 = null;
-        oj var3 = null;
+        GpuTransform3D var3 = null;
         if (this.field_k) {
           var2 = this.field_e.field_Mc;
           var3 = this.field_d.p(0);
-          var2.SetVertexShaderConstantF(12, var3.b((byte) 105, field_f), 2);
+          var2.SetVertexShaderConstantF(12, var3.writeFirstTwoRows((byte) 105, field_f), 2);
         }
         if (param0 == 8) {
           return;

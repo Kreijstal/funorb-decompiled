@@ -5,16 +5,16 @@ final class GetBombletSprayPushMultiplier extends ConsoleCommand {
     static int[] field_o;
     static ge field_p;
 
-    final static aja a(byte param0, GraphicsToolkit param1, Sprite param2) {
+    final static ToolkitSprite a(byte param0, GraphicsToolkit param1, Sprite param2) {
         int var4 = 0;
-        aja var3 = null;
+        ToolkitSprite var3 = null;
         RuntimeException var3_ref = null;
         int var5 = 0;
         jva var6 = null;
         int[] stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         int stackIn_7_2 = 0;
-        aja stackIn_12_0 = null;
+        ToolkitSprite stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -44,7 +44,7 @@ final class GetBombletSprayPushMultiplier extends ConsoleCommand {
           if (param0 > -61) {
             field_o = (int[]) null;
           }
-          var3 = param1.a(param2.field_m, param2.field_m, param2.field_r, 0, (byte) 64, param2.field_n);
+          var3 = param1.createSprite(param2.field_m, param2.field_m, param2.field_r, 0, (byte) 64, param2.field_n);
           stackIn_12_0 = var3;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

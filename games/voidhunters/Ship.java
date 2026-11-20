@@ -28,7 +28,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
     boolean justAttachedSomething;
     private ShipAI ai;
 
-    final void g(int param0, int param1) {
+    final void setOwner(int param0, int param1) {
         int var3 = -108 % ((param1 - 35) / 49);
         this.owner = param0;
     }
@@ -91,7 +91,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         }
     }
 
-    final boolean q(int param0) {
+    final boolean isRepairModeFullyCharged(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 >= -6) {
           this.field_x = (int[]) null;
@@ -100,7 +100,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         return stackIn_6_0;
     }
 
-    final void a(byte param0, ShipBlueprint param1) {
+    final void setTargetBlueprint(byte param0, ShipBlueprint param1) {
         try {
           int var3_int = -32 % ((-79 - param0) / 42);
           this.targetBlueprint = param1;
@@ -109,7 +109,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         }
     }
 
-    final int w(int param0) {
+    final int getRepairModeReload(int param0) {
         if (param0 <= 36) {
           this.field_x = (int[]) null;
         }
@@ -121,7 +121,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         boolean stackIn_7_0 = false;
         if (param0 < 31) {
           var3 = (ShipAI) null;
-          this.a((ShipAI) null, -101);
+          this.setAi((ShipAI) null, -101);
         }
         stackIn_7_0 = (1 == vqa.field_k) || !(this.g(false));
         return stackIn_7_0;
@@ -149,7 +149,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         }
     }
 
-    final boolean j(byte param0) {
+    final boolean isSpawnProtected(byte param0) {
         int var2;
         boolean stackIn_4_0 = false;
         var2 = 76 / ((param0 - 49) / 42);
@@ -184,7 +184,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         return this.selfDestructPrepared;
     }
 
-    final boolean s(byte param0) {
+    final boolean isReloading(byte param0) {
         boolean stackIn_6_0 = false;
         if (param0 != -90) {
           this.getSelfDestructPrepared((byte) -68);
@@ -193,7 +193,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         return stackIn_6_0;
     }
 
-    final void m(int param0) {
+    final void toggleShields(int param0) {
         if (param0 != -13539) {
           return;
         }
@@ -210,14 +210,14 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         }
     }
 
-    private final void B(int param0) {
+    private final void clearLastAttackers(int param0) {
         this.lastAttackers = null;
         if (param0 >= -127) {
           this.targetBlueprint = (ShipBlueprint) null;
         }
     }
 
-    final void a(boolean param0, World param1) {
+    final void updateAi(boolean param0, World param1) {
         try {
           if (!param0) {
             SerializableGameState var4 = (SerializableGameState) null;
@@ -229,7 +229,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         }
     }
 
-    final void c(int param0, int param1) {
+    final void recordAttacker(int param0, int param1) {
         if (0 <= this.owner &&
           !fwa.a(param0, 1, this.lastAttackers)) {
           this.lastAttackers = SetAutozoomSpeedDivide.a(param0, true, this.lastAttackers, (byte) -14);
@@ -244,7 +244,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         return (this.field_A & param0) != 0 ? true : false;
     }
 
-    final int y(int param0) {
+    final int getTimeUntilSelfDestructEffect(int param0) {
         if (param0 != 8) {
           this.ai = (ShipAI) null;
         }
@@ -260,7 +260,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
 
     final ShipBlueprint getTargetBlueprint(byte param0) {
         if (param0 != 28) {
-          this.l(45);
+          this.getShieldsToggleCooldown(45);
         }
         return this.targetBlueprint;
     }
@@ -295,15 +295,15 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         int var3 = this.chassis.g(param0, param1 + 5);
         if (param1 != -2) {
           World var4 = (World) null;
-          this.a(false, (World) null);
+          this.updateAi(false, (World) null);
         }
         if (var3 > 0) {
-          this.B(-128);
+          this.clearLastAttackers(-128);
         }
         return var3;
     }
 
-    final void r(int param0) {
+    final void endSpawnProtection(int param0) {
         this.spawnTimer = Particle.field_A;
         if (param0 != -2) {
           int[] var3 = (int[]) null;
@@ -554,7 +554,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           }
           this.chassis.i(param3 + 110);
           this.a(param0, true, (byte) 67, true);
-          if (!this.q(-107)) {
+          if (!this.isRepairModeFullyCharged(-107)) {
             return false;
           }
           if (param3 != 0) {
@@ -760,14 +760,14 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
     final void f(int param0, int param1) {
         this.field_A = this.field_A | param1;
         if (param0 != 0) {
-          this.l((byte) -73);
+          this.hasAi((byte) -73);
         }
     }
 
-    final void a(ShipAI param0, int param1) {
+    final void setAi(ShipAI param0, int param1) {
         try {
           if (param1 != 4) {
-            this.w(105);
+            this.getRepairModeReload(105);
           }
           this.ai = param0;
         } catch (RuntimeException runtimeException) {
@@ -808,7 +808,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           super.writeState(param0, -118);
           param0.writeBits(-632, this.owner, 32);
           if (param1 >= -109) {
-            this.s((byte) -86);
+            this.isReloading((byte) -86);
           }
           param0.writeBits(-632, this.team, 32);
           param0.writeBits(-632, this.dragging, 32);
@@ -888,7 +888,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         this.field_A = 0;
     }
 
-    final int l(int param0) {
+    final int getShieldsToggleCooldown(int param0) {
         if (param0 != -465) {
           this.energy = -114;
         }
@@ -902,14 +902,14 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         return this.lastAttackers;
     }
 
-    final void a(int param0, byte param1) {
+    final void setDragging(int param0, byte param1) {
         this.dragging = param0;
         if (param1 > -48) {
           field_E = 125;
         }
     }
 
-    final void h(int param0, int param1) {
+    final void setTeam(int param0, int param1) {
         if (param0 != 17704) {
           this.getAi((byte) -15);
         }
@@ -925,12 +925,12 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
 
     final int[] A(int param0) {
         if (param0 < 21) {
-          this.y(-71);
+          this.getTimeUntilSelfDestructEffect(-71);
         }
         return this.field_x;
     }
 
-    final boolean a(byte param0, int param1) {
+    final boolean consumeEnergy(byte param0, int param1) {
         if (param0 != 11) {
           return false;
         }
@@ -1020,8 +1020,8 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         }
     }
 
-    final void t(byte param0) {
-        int var2 = this.a((byte) 11, SetMissilesCooldown.field_p * (-fra.field_a + 1)) ? 1 : 0;
+    final void consumeShieldEnergy(byte param0) {
+        int var2 = this.consumeEnergy((byte) 11, SetMissilesCooldown.field_p * (-fra.field_a + 1)) ? 1 : 0;
         int var3 = 85 % ((47 - param0) / 51);
         if (var2 == 0) {
           this.shieldsOn = false;
@@ -1030,20 +1030,20 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         }
     }
 
-    final int m(byte param0) {
+    final int getReloadProgress(byte param0) {
         if (param0 != -64) {
           return 120;
         }
         return this.reloadtimer * 255 / Math.max(vdb.field_d, 1);
     }
 
-    final int o(int param0) {
+    final int getEnergyProgress(int param0) {
         int var2 = -44 / ((param0 - 33) / 44);
         return 255 * this.energy / Math.max(this.getMaxEnergy(true), 1);
     }
 
-    final void e(int param0, int param1) {
-        if (!this.s((byte) -90) &&
+    final void addEnergy(int param0, int param1) {
+        if (!this.isReloading((byte) -90) &&
           this.energy > 0) {
           this.energy = this.energy + param1;
           if (!(this.energy <= this.getMaxEnergy(true))) {
@@ -1076,7 +1076,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         var13 = VoidHunters.field_G;
         try {
           var4_int = qpb.a(false, this.team, 13894143);
-          if (this.j((byte) 108)) {
+          if (this.isSpawnProtected((byte) 108)) {
             var5 = this.b(true);
             if (var5 > 0) {
               var5 = Particle.field_A * var5 / (1 + this.spawnTimer);
@@ -1126,7 +1126,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         return this.ai;
     }
 
-    final boolean l(byte param0) {
+    final boolean hasAi(byte param0) {
         if (param0 != -10) {
           this.getTeam((byte) 25);
         }
@@ -1205,7 +1205,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         return this.maxEnergy;
     }
 
-    final void C(int param0) {
+    final void startSpawnProtection(int param0) {
         this.spawnTimer = 0;
         this.field_D = true;
         if (param0 != 32) {

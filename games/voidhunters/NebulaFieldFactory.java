@@ -170,7 +170,7 @@ final class NebulaFieldFactory implements GameStateFactory {
             stackIn_66_0 = var6Lifetime1;
             break;
           }
-          al.a(stackIn_66_0, var7_ref, 2);
+          SoftwareFramebuffer.insertBefore(stackIn_66_0, var7_ref, 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

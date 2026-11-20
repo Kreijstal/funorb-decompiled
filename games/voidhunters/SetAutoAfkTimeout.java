@@ -20,12 +20,12 @@ final class SetAutoAfkTimeout extends ConsoleCommand {
           try {
             var6 = null;
             if (gia.field_k.field_d != null) {
-              cba.field_e = new gdb(gia.field_k.field_d, 5200, 0);
+              GpuNativeHeap.field_e = new gdb(gia.field_k.field_d, 5200, 0);
               gia.field_k.field_d = null;
-              var6 = new fo(255, cba.field_e, new gdb(gia.field_k.field_t, 12000, 0), 2097152);
+              var6 = new fo(255, GpuNativeHeap.field_e, new gdb(gia.field_k.field_t, 12000, 0), 2097152);
             }
             var7 = null;
-            if (null != cba.field_e) {
+            if (null != GpuNativeHeap.field_e) {
               if (null == btb.field_d) {
                 btb.field_d = new gdb[gia.field_k.field_l.length];
               }
@@ -33,7 +33,7 @@ final class SetAutoAfkTimeout extends ConsoleCommand {
                 btb.field_d[param4] = new gdb(gia.field_k.field_l[param4], 12000, 0);
                 gia.field_k.field_l[param4] = null;
               }
-              var7 = new fo(param4, cba.field_e, btb.field_d[param4], 2097152);
+              var7 = new fo(param4, GpuNativeHeap.field_e, btb.field_d[param4], 2097152);
             }
             var8 = ho.field_a.a(param4, 5, (fo) (var6), (fo) (var7), param3);
             if (param1) {

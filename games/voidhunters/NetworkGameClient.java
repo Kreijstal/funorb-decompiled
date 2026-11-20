@@ -20,7 +20,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (param0 != -116) {
           this.e((byte) 92);
         }
-        String var2 = mea.a(true);
+        String var2 = OpenGlPostEffect.readIncomingString(true);
         MatchResultsFactory.a(MissionList.b((byte) -119), (byte) 56, var2);
     }
 
@@ -533,7 +533,7 @@ abstract class NetworkGameClient extends GameApplet {
     }
 
     final void a(boolean param0, int param1, int param2) {
-        this.a(-119, cp.field_q.field_a, SetShipPersistence.field_r.field_a, param2, aw.field_Bb.field_a, pgb.field_b.field_a, param0, al.field_f.field_a);
+        this.a(-119, cp.field_q.field_a, SetShipPersistence.field_r.field_a, param2, aw.field_Bb.field_a, pgb.field_b.field_a, param0, SoftwareFramebuffer.field_f.field_a);
         int var4 = -37 % ((param1 - 30) / 50);
     }
 
@@ -593,7 +593,7 @@ abstract class NetworkGameClient extends GameApplet {
                 PlayerLeave.a((byte) 108, var3);
                 break;
               case 16:
-                al.a(-113);
+                SoftwareFramebuffer.a(-113);
                 break;
               case 8:
                 SetSalvoDamageMultiplier.a(SetTorpedoProjectiles.field_o, PartitioningManagerFactory.field_a, qga.field_b, false);

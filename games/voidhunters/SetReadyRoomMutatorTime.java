@@ -14,14 +14,14 @@ final class SetReadyRoomMutatorTime extends ConsoleCommand {
           if (!wgb.field_g) {
             return;
           }
-          mmb.field_d = new aja[SetPointDefenceLaserAimarc.field_r.length];
+          mmb.field_d = new ToolkitSprite[SetPointDefenceLaserAimarc.field_r.length];
           var1_int = 0;
           if (param0 > -8) {
             field_o = (int[]) null;
           }
           while (mmb.field_d.length > var1_int) {
             if (null != SetPointDefenceLaserAimarc.field_r[var1_int]) {
-              mmb.field_d[var1_int] = GetDebrisGroupColour.field_r.a(SetPointDefenceLaserAimarc.field_r[var1_int], false);
+              mmb.field_d[var1_int] = GetDebrisGroupColour.field_r.createSprite(SetPointDefenceLaserAimarc.field_r[var1_int], false);
             }
             var1_int++;
           }

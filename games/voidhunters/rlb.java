@@ -54,7 +54,7 @@ final class rlb {
             this.field_f.a(var15, (long)param1, (byte) -117);
             return var15;
           }
-          if (tka.a(97, (int) var6.field_c)) {
+          if (SoftwareGlyphMask.a(97, (int) var6.field_c)) {
             var29 = this.field_c.a(var7, 0.699999988079071f, true, param1, var7, true);
             var19 = new aia(this.field_b, 3553, 6408, var7, var7, var6.field_j != 0 ? true : false, var29, 0, 0, false);
             var19.a(var6.field_s, var6.field_k, 10497);
@@ -67,7 +67,7 @@ final class rlb {
           this.field_f.a(var17, (long)param1, (byte) -117);
           return var17;
         }
-        if (this.field_b.s()) {
+        if (this.field_b.isBloomEnabled()) {
           var12 = this.field_c.a(0.699999988079071f, var7, param1, var7, 76, false);
           var11 = var12;
           var10 = var11;
@@ -84,7 +84,7 @@ final class rlb {
           this.field_f.a(var21, (long)param1, (byte) -117);
           return var21;
         }
-        if (tka.a(97, (int) var6.field_c)) {
+        if (SoftwareGlyphMask.a(97, (int) var6.field_c)) {
           var32 = this.field_c.a(var7, 0.699999988079071f, true, param1, var7, true);
           var25 = new aia(this.field_b, 3553, 6408, var7, var7, var6.field_j != 0 ? true : false, var32, 0, 0, false);
           var25.a(var6.field_s, var6.field_k, 10497);

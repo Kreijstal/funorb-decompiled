@@ -472,7 +472,7 @@ final class PartitioningManager implements DiffableState, ofa {
             field_c = (String) null;
           }
           var3.field_b = this.field_b;
-          var3.zonelists = (PartitionZoneList[]) (SpriteDimensions.a(var3.zonelists, this.zonelists, 1, mjb.field_c, false));
+          var3.zonelists = (PartitionZoneList[]) (SpriteDimensions.a(var3.zonelists, this.zonelists, 1, GpuSprite.field_c, false));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fba.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -621,7 +621,7 @@ final class PartitioningManager implements DiffableState, ofa {
           return;
         }
         try {
-          this.zonelists = (PartitionZoneList[]) (SetAutoDetail.a(10, mjb.field_c, param0, 1, -102, this.zonelists));
+          this.zonelists = (PartitionZoneList[]) (SetAutoDetail.a(10, GpuSprite.field_c, param0, 1, -102, this.zonelists));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fba.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

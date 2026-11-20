@@ -5,75 +5,75 @@ abstract class GraphicsToolkit {
     d field_a;
     int field_b;
 
-    abstract aja a(int[] param0, int param1, int param2, int param3, int param4, boolean param5);
+    abstract ToolkitSprite createSprite(int[] param0, int param1, int param2, int param3, int param4, boolean param5);
 
-    final void a(int param0, byte param1, int param2, int param3, int param4, int param5) {
-        this.aa(param5, param4, param0, param3, param2, 1);
+    final void fillRectangle(int param0, byte param1, int param2, int param3, int param4, int param5) {
+        this.fillRectangle(param5, param4, param0, param3, param2, 1);
         if (param1 != 120) {
           this.field_b = 8;
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3, int param4) {
-        this.s(param2, param1, param0, param4, 1);
+    final void drawCircle(int param0, int param1, int param2, byte param3, int param4) {
+        this.drawCircle(param2, param1, param0, param4, 1);
         int var6 = -99 % ((47 - param3) / 49);
     }
 
-    final void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
-        this.a(param1, param2, param5, param0, param3, param6, 1);
+    final void drawThickLine(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
+        this.drawThickLine(param1, param2, param5, param0, param3, param6, 1);
         if (param4) {
           this.field_a = (d) null;
         }
     }
 
-    abstract void P(int param0, int param1, int param2, int param3, int param4);
+    abstract void drawVerticalLine(int param0, int param1, int param2, int param3, int param4);
 
-    final void b(int param0) throws jkb {
+    final void present(int param0) throws GraphicsPresentException {
         int var2 = -72 / ((-30 - param0) / 53);
-        this.a(0, 0);
+        this.present(0, 0);
     }
 
-    void a(aja param0, boolean param1) {
+    void setRenderTarget(ToolkitSprite param0, boolean param1) {
         try {
-          this.a(this.a(param0, param1 ? this.b(param0.d(), param0.a()) : null));
+          this.bindFramebuffer(this.createFramebuffer(param0, param1 ? this.createDepthBuffer(param0.getWidth(), param0.getHeight()) : null));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ha.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    abstract void a(float param0, float param1, float param2);
+    abstract void setBloomParameters(float param0, float param1, float param2);
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9);
+    abstract void fillGradientTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9);
 
-    final void c(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.b(param4, param5, param0, param3, param2, param1);
+    final void drawLineTo(int param0, int param1, int param2, int param3, int param4, int param5) {
+        this.drawLine(param4, param5, param0, param3, param2, param1);
     }
 
-    abstract za e(int param0);
+    abstract GraphicsHeap createHeap(int param0);
 
-    abstract void j();
+    abstract void restoreDefaultFramebuffer();
 
-    abstract boolean r();
+    abstract boolean hasSlowOffscreenRendering();
 
-    abstract void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6);
+    abstract void drawThickLine(int param0, int param1, int param2, int param3, int param4, int param5, int param6);
 
-    abstract int[] na(int param0, int param1, int param2, int param3);
+    abstract int[] readPixels(int param0, int param1, int param2, int param3);
 
-    abstract boolean h();
+    abstract boolean supportsMultipleThreads();
 
-    abstract void c(int param0);
+    abstract void updateFrame(int param0);
 
-    abstract boolean c();
+    abstract boolean isBloomSupported();
 
-    abstract void u();
+    abstract void applyPostProcessing();
 
-    abstract boolean w();
+    abstract boolean hasVolatileBackbuffer();
 
-    abstract void T(int param0, int param1, int param2, int param3);
+    abstract void intersectClip(int param0, int param1, int param2, int param3);
 
-    abstract void ya();
+    abstract void clearDepth();
 
-    final synchronized static GraphicsToolkit a(int param0, asb param1, int param2, int param3, d param4, java.awt.Canvas param5, int param6, int param7) {
+    final synchronized static GraphicsToolkit create(int param0, asb param1, int param2, int param3, d param4, java.awt.Canvas param5, int param6, int param7) {
         RuntimeException var8 = null;
         GraphicsToolkit stackIn_3_0 = null;
         GraphicsToolkit stackIn_7_0 = null;
@@ -139,46 +139,46 @@ abstract class GraphicsToolkit {
         }
     }
 
-    abstract hf a(ekb param0, wib param1);
+    abstract Framebuffer createFramebuffer(ColorBuffer param0, DepthBuffer param1);
 
-    abstract boolean m();
+    abstract boolean supportsMultipleCanvases();
 
     protected void finalize() {
-        this.a((byte) 30);
+        this.dispose((byte) 30);
     }
 
-    abstract void ZA(int param0, float param1, float param2, float param3, float param4, float param5);
+    abstract void setDirectionalLighting(int param0, float param1, float param2, float param3, float param4, float param5);
 
-    abstract void v();
+    abstract void copyFrontToBackBuffer();
 
-    abstract void a(pw param0);
+    abstract void setViewTransform(Transform3D param0);
 
-    abstract int[] Y();
+    abstract int[] getProjectionParameters();
 
-    abstract void DA(int param0, int param1, int param2, int param3);
+    abstract void setProjectionParameters(int param0, int param1, int param2, int param3);
 
-    abstract boolean q();
+    abstract boolean supportsShadows();
 
-    abstract void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6);
+    abstract void writePixels(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6);
 
-    abstract boolean x();
+    abstract boolean supportsOffscreenRendering();
 
-    abstract void za(int param0, int param1, int param2, int param3, int param4);
+    abstract void fillCircle(int param0, int param1, int param2, int param3, int param4);
 
-    abstract void a(int param0, int param1, int param2, int param3);
+    abstract void beginPostProcessing(int param0, int param1, int param2, int param3);
 
-    final aja a(int param0, int param1, int[] param2, int param3, byte param4, int param5) {
+    final ToolkitSprite createSprite(int param0, int param1, int[] param2, int param3, byte param4, int param5) {
         RuntimeException var7 = null;
-        aja stackIn_3_0 = null;
+        ToolkitSprite stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 < 18) {
-            this.a(-25, -48, -23, 85, -120, -118, 69);
+            this.drawThickLine(-25, -48, -23, 85, -120, -118, 69);
           }
-          stackIn_3_0 = this.a(param2, param3, param1, param0, param5, true);
+          stackIn_3_0 = this.createSprite(param2, param3, param1, param0, param5, true);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -194,31 +194,31 @@ abstract class GraphicsToolkit {
         }
     }
 
-    abstract boolean s();
+    abstract boolean isBloomEnabled();
 
-    final boolean a(int param0) {
+    final boolean supportsPointLights(int param0) {
         if (param0 < -16) {
-          return this.t() > 0 ? true : false;
+          return this.getMaxPointLights() > 0 ? true : false;
         }
-        this.e();
-        return this.t() > 0 ? true : false;
+        this.supportsUnderwaterEffects();
+        return this.getMaxPointLights() > 0 ? true : false;
     }
 
-    abstract void aa(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void fillRectangle(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    abstract boolean f();
+    abstract boolean supportsAntialiasing();
 
-    abstract boolean p();
+    abstract boolean supportsFarClipPlane();
 
-    abstract void d(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void drawRectangle(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    abstract void b(int param0, int param1, int param2, int param3, int param4, int param5);
+    abstract void drawLine(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    abstract void a(za param0);
+    abstract void setHeap(GraphicsHeap param0);
 
-    abstract boolean a();
+    abstract boolean supportsMemoryPools();
 
-    abstract boolean n();
+    abstract boolean supportsResizableBackbuffer();
 
     GraphicsToolkit(d param0) {
         int var2_int = 0;
@@ -242,36 +242,36 @@ abstract class GraphicsToolkit {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        this.U(param0, param3, param4, param2, 1);
+    final void drawHorizontalLineDefaultBlend(int param0, int param1, int param2, int param3, int param4) {
+        this.drawHorizontalLine(param0, param3, param4, param2, 1);
         if (param1 != -25559) {
-          this.j();
+          this.restoreDefaultFramebuffer();
         }
     }
 
-    abstract int XA();
+    abstract int getFarPlane();
 
-    abstract aja a(ima param0, boolean param1);
+    abstract ToolkitSprite createSprite(IndexedSpriteData param0, boolean param1);
 
-    final void a(int param0, int param1, int param2, int param3, byte param4) {
+    final void fillCircle(int param0, int param1, int param2, int param3, byte param4) {
         int var6 = 120 / ((param4 + 44) / 63);
-        this.za(param2, param3, param1, param0, 1);
+        this.fillCircle(param2, param3, param1, param0, 1);
     }
 
-    abstract void K(int[] param0);
+    abstract void getClip(int[] param0);
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawRectangleDefaultBlend(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var7 = -111 / ((-20 - param0) / 57);
-        this.d(param4, param1, param2, param5, param3, 1);
+        this.drawRectangle(param4, param1, param2, param5, param3, 1);
     }
 
-    abstract boolean l();
+    abstract boolean supportsFastTexturedParticles();
 
-    abstract void o();
+    abstract void releaseResources();
 
-    abstract int t();
+    abstract int getMaxPointLights();
 
-    abstract void f(int param0, int param1);
+    abstract void setDepthRange(int param0, int param1);
 
     final static void a(boolean param0, int param1, int param2, int param3) {
         int var4;
@@ -323,45 +323,45 @@ abstract class GraphicsToolkit {
         return;
     }
 
-    abstract void KA(int param0, int param1, int param2, int param3);
+    abstract void setClip(int param0, int param1, int param2, int param3);
 
-    abstract int i();
+    abstract int getNearPlane();
 
-    abstract void GA(int param0);
+    abstract void clearColor(int param0);
 
-    abstract da a(sw param0, ima[] param1, boolean param2);
+    abstract ToolkitFont createFont(ToolkitFontMetrics param0, IndexedSpriteData[] param1, boolean param2);
 
-    abstract void U(int param0, int param1, int param2, int param3, int param4);
+    abstract void drawHorizontalLine(int param0, int param1, int param2, int param3, int param4);
 
-    abstract wib b(int param0, int param1);
+    abstract DepthBuffer createDepthBuffer(int param0, int param1);
 
-    abstract ka a(cbb param0, int param1, int param2, int param3, int param4);
+    abstract ka createModel(cbb param0, int param1, int param2, int param3, int param4);
 
-    final void a(byte param0) {
+    final void dispose(byte param0) {
         if (param0 != 30) {
           return;
         }
         SetLaserProjectiles.field_o[this.field_b] = false;
-        this.o();
+        this.releaseResources();
     }
 
-    abstract aja a(int param0, int param1, boolean param2);
+    abstract ToolkitSprite createSprite(int param0, int param1, boolean param2);
 
-    abstract void a(hf param0);
+    abstract void bindFramebuffer(Framebuffer param0);
 
-    abstract void a(int param0, int param1) throws jkb;
+    abstract void present(int param0, int param1) throws GraphicsPresentException;
 
-    abstract boolean k();
+    abstract boolean supportsEnvironmentMaps();
 
-    abstract boolean b();
+    abstract boolean enableBloom();
 
-    abstract void xa(float param0);
+    abstract void setAmbientLight(float param0);
 
-    abstract boolean e();
+    abstract boolean supportsUnderwaterEffects();
 
-    abstract pw d();
+    abstract Transform3D createTransform();
 
-    abstract void s(int param0, int param1, int param2, int param3, int param4);
+    abstract void drawCircle(int param0, int param1, int param2, int param3, int param4);
 
     static {
     }

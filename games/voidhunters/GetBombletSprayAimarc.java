@@ -125,8 +125,8 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
           if (null == param1.field_lb) {
             param1.field_lb = new IntrusiveDeque();
           }
-          mea.field_e = param1.field_lb;
-          mea.field_e.clear(93);
+          OpenGlPostEffect.field_e = param1.field_lb;
+          OpenGlPostEffect.field_e.clear(93);
           SetUseDetailLines.field_p = new pr(param2);
           GetMomentOfInertiaPredivideDownshift.field_p = param7;
           if (!param5) {

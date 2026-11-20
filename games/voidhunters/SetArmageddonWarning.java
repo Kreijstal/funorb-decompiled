@@ -17,7 +17,7 @@ final class SetArmageddonWarning extends ConsoleCommand {
           if (SetAutozoomAmountMultiply.a((byte) 122, param1)) {
             return false;
           }
-          if (mea.a(121, param1)) {
+          if (OpenGlPostEffect.isRepeatedCharacter(121, param1)) {
             return false;
           }
           if (GetDebrisCarryOver.a(param1, 15)) {

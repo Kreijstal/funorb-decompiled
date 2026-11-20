@@ -173,7 +173,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           kmb.field_f = param1[49];
           ComponentBehaviourFactory.field_c = param1[193];
           Particle.field_p = param1[219];
-          asa.field_e = param1[128];
+          OpenGlGlyphMask.field_e = param1[128];
           ooa.field_xb = param1[151];
           apb.field_a = param1[65];
           GetVelocitySustain.field_o = param1[38];

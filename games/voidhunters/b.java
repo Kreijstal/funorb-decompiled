@@ -261,7 +261,7 @@ final class b extends ka {
         long[] var58;
         bqa var59;
         sr var60;
-        co var61;
+        SoftwareRenderContext var61;
         opa var62;
         float[] var65;
         float[] var66;
@@ -396,7 +396,7 @@ final class b extends ka {
           while (var54 < param1.field_g.length) {
             var59 = param1.field_g[var54];
             var60 = GetBombletSprayAimspeed.a(var59.field_e, 0);
-            var14Lifetime1 = mpb.field_h[param1.field_b[var59.field_b] & 65535] & 16777215;
+            var14Lifetime1 = OpenGlBloomEffect.field_h[param1.field_b[var59.field_b] & 65535] & 16777215;
             stackIn_57_0 = var14Lifetime1;
             stackIn_57_1 = 255;
             if (param1.field_r == null) {
@@ -413,7 +413,7 @@ final class b extends ka {
         this.field_q = new float[this.field_c][];
         this.field_a = new float[this.field_c][];
         var11 = SetSpecialOrderBoxWidth.a(param1, var74, this.field_c, -3);
-        var61 = this.field_f.a((Runnable) ((Object) Thread.currentThread()));
+        var61 = this.field_f.getThreadContext((Runnable) ((Object) Thread.currentThread()));
         var76 = var61.field_a;
         var14Lifetime2 = 0;
         for (var15Lifetime1 = 0; var15Lifetime1 < this.field_c; var15Lifetime1++) {

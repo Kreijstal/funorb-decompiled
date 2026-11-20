@@ -15,10 +15,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private int field_rb;
     jaggl.OpenGL field_c;
     private rlb field_r;
-    private kha field_fc;
+    private OpenGlPostProcessor field_fc;
     int field_X;
     int field_Kc;
-    private mpb field_A;
+    private OpenGlBloomEffect field_A;
     private vf field_Ec;
     private fbb field_d;
     private IntrusiveDeque field_D;
@@ -26,7 +26,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private boolean field_m;
     jaclib.memory.heap.NativeHeap field_Kb;
     int field_Mc;
-    private tla field_qc;
+    private OpenGlSprite field_qc;
     private int field_rc;
     private vga field_E;
     private jaa[] field_kc;
@@ -56,10 +56,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private boolean field_R;
     private boolean field_Ub;
     private int field_e;
-    private epb field_Db;
+    private OpenGlTransform3D field_Db;
     private boolean field_Lb;
-    epb field_F;
-    epb field_Bb;
+    OpenGlTransform3D field_F;
+    OpenGlTransform3D field_Bb;
     private int field_tb;
     private float[] field_L;
     boolean field_I;
@@ -245,14 +245,14 @@ final class OpenGlToolkit extends GraphicsToolkit {
         jaggl.OpenGL.glTexEnvfv(8960, 8705, GetSpinningBladeTopSpeed.field_o, 0);
     }
 
-    final aja a(ima param0, boolean param1) {
+    final ToolkitSprite createSprite(IndexedSpriteData param0, boolean param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int[] stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         int stackIn_9_2 = 0;
-        aja stackIn_18_0 = null;
+        ToolkitSprite stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -262,7 +262,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         int var4 = 0;
         int var5 = 0;
         int var6_int = 0;
-        aja var6 = null;
+        ToolkitSprite var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -305,8 +305,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
               }
             }
           }
-          var6 = this.a(param0.field_f, param0.field_f, var12, 0, (byte) 96, param0.field_e);
-          var6.a(param0.field_c, param0.field_g, param0.field_i, param0.field_d);
+          var6 = this.createSprite(param0.field_f, param0.field_f, var12, 0, (byte) 96, param0.field_e);
+          var6.setPadding(param0.field_c, param0.field_g, param0.field_i, param0.field_d);
           stackIn_18_0 = var6;
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -349,12 +349,12 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(za param0) {
+    final void setHeap(GraphicsHeap param0) {
         mb var3 = null;
         od discarded$0 = null;
         od discarded$1 = null;
         try {
-          this.field_Kb = ((gpa) (param0)).field_e;
+          this.field_Kb = ((OpenGlNativeHeap) (param0)).heap;
           if (this.field_z == null) {
             var3 = new mb(80);
             if (this.field_ac) {
@@ -410,7 +410,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void KA(int param0, int param1, int param2, int param3) {
+    final void setClip(int param0, int param1, int param2, int param3) {
         if (this.field_Sb < param2) {
           param2 = this.field_Sb;
         }
@@ -541,7 +541,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         MonochromeRowCacheEntry.field_e = param1 ? true : false;
     }
 
-    final ka a(cbb param0, int param1, int param2, int param3, int param4) {
+    final ka createModel(cbb param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         ne stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -575,7 +575,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.o(107);
     }
 
-    final void a(aja param0, boolean param1) {
+    final void setRenderTarget(ToolkitSprite param0, boolean param1) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -591,14 +591,14 @@ final class OpenGlToolkit extends GraphicsToolkit {
         tob var10 = null;
         var6 = VoidHunters.field_G;
         try {
-          this.field_qc = (tla) (param0);
+          this.field_qc = (OpenGlSprite) (param0);
           if (!this.field_U) {
             if (!this.field_O) {
               throw new RuntimeException("");
             }
-            var3 = (tob) (this.field_Ic.get((long)(this.field_qc.d() << 16 | this.field_qc.a()), 116));
+            var3 = (tob) (this.field_Ic.get((long)(this.field_qc.getWidth() << 16 | this.field_qc.getHeight()), 116));
             if (var3 == null) {
-              var9 = new tob(this, this.field_qc.d(), this.field_qc.a());
+              var9 = new tob(this, this.field_qc.getWidth(), this.field_qc.getHeight());
               var3 = var9;
               this.field_Gc = this.field_Gc + 4 * var9.field_m;
               while (this.field_Gc > 2097152) {
@@ -613,7 +613,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 }
                 break;
               }
-              this.field_Ic.put((long)(this.field_qc.d() << 16 | this.field_qc.a()), var9, (byte) -120);
+              this.field_Ic.put((long)(this.field_qc.getWidth() << 16 | this.field_qc.getHeight()), var9, (byte) -120);
             }
             this.field_E.a((DualLinkNode) (var3), (byte) -22);
             this.field_c.setPbuffer(var3.f(-128));
@@ -626,9 +626,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
             }
             this.a((byte) -109, (jaa) (this.field_jb));
             if (param1) {
-              var3_ref = (nv) (this.field_Ic.get((long)(this.field_qc.d() << 16 | this.field_qc.a()), 100));
+              var3_ref = (nv) (this.field_Ic.get((long)(this.field_qc.getWidth() << 16 | this.field_qc.getHeight()), 100));
               if (var3_ref == null) {
-                var7 = new nv(this, 6402, this.field_qc.d(), this.field_qc.a());
+                var7 = new nv(this, 6402, this.field_qc.getWidth(), this.field_qc.getHeight());
                 var3_ref = var7;
                 this.field_Gc = this.field_Gc + var7.field_m;
                 while (this.field_Gc > 2097152) {
@@ -643,15 +643,15 @@ final class OpenGlToolkit extends GraphicsToolkit {
                   }
                   break;
                 }
-                this.field_Ic.put((long)(this.field_qc.d() << 16 | this.field_qc.a()), var7, (byte) -124);
+                this.field_Ic.put((long)(this.field_qc.getWidth() << 16 | this.field_qc.getHeight()), var7, (byte) -124);
               }
               this.field_E.a((DualLinkNode) (var3_ref), (byte) -22);
               this.field_jb.a(8, var3_ref, (byte) -20);
             }
-            this.field_jb.a(0, (byte) -126, this.field_qc.field_f);
+            this.field_jb.a(0, (byte) -126, this.field_qc.texture);
           }
-          this.field_Sb = param0.d();
-          this.field_Y = param0.a();
+          this.field_Sb = param0.getWidth();
+          this.field_Y = param0.getHeight();
           this.f((byte) -61);
           this.f(27818);
           this.t(-70);
@@ -670,11 +670,11 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final boolean a() {
+    final boolean supportsMemoryPools() {
         return true;
     }
 
-    final void s(int param0, int param1, int param2, int param3, int param4) {
+    final void drawCircle(int param0, int param1, int param2, int param3, int param4) {
         int var9 = 0;
         float var6;
         float var7;
@@ -723,9 +723,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final da a(sw param0, ima[] param1, boolean param2) {
+    final ToolkitFont createFont(ToolkitFontMetrics param0, IndexedSpriteData[] param1, boolean param2) {
         RuntimeException var4 = null;
-        fn stackIn_1_0 = null;
+        OpenGlFont stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -733,8 +733,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = new fn(this, param0, param1, param2);
-          return (da) ((Object) stackIn_1_0);
+          stackIn_1_0 = new OpenGlFont(this, param0, param1, param2);
+          return (ToolkitFont) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -755,7 +755,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void xa(float param0) {
+    final void setAmbientLight(float param0) {
         if (param0 != this.field_pc) {
           this.field_pc = param0;
           this.e((byte) -122);
@@ -780,11 +780,11 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final boolean h() {
+    final boolean supportsMultipleThreads() {
         return false;
     }
 
-    final void K(int[] param0) {
+    final void getClip(int[] param0) {
         try {
           param0[0] = this.field_oc;
           param0[2] = this.field_ab;
@@ -812,7 +812,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         jaggl.OpenGL.glMatrixMode(5888);
     }
 
-    final int[] na(int param0, int param1, int param2, int param3) {
+    final int[] readPixels(int param0, int param1, int param2, int param3) {
         int var6 = 0;
         int var7 = VoidHunters.field_G;
         int[] var8 = new int[param2 * param3];
@@ -823,7 +823,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         return var8;
     }
 
-    final boolean c() {
+    final boolean isBloomSupported() {
         boolean stackIn_6_0 = false;
         boolean decompiledFrameRemainder0 = true;
         if (this.field_A != null && (this.field_Kc <= 1 ||
@@ -837,9 +837,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
         return stackIn_6_0;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void drawThickLine(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         jaggl.OpenGL.glLineWidth((float)param5);
-        this.b(param0, param1, param2, param3, param4, param6);
+        this.drawLine(param0, param1, param2, param3, param4, param6);
         jaggl.OpenGL.glLineWidth(1.0f);
     }
 
@@ -897,11 +897,11 @@ final class OpenGlToolkit extends GraphicsToolkit {
         jaggl.OpenGL.glFogfv(2918, GetSpinningBladeTopSpeed.field_o, 0);
     }
 
-    final boolean n() {
+    final boolean supportsResizableBackbuffer() {
         return true;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final void fillGradientTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         this.m(-125);
         this.d(param9, 126);
         jaggl.OpenGL.glBegin(4);
@@ -926,7 +926,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.field_x = 4;
         }
         if (param0) {
-          this.T(-60, 98, 93, -48);
+          this.intersectClip(-60, 98, 93, -48);
         }
     }
 
@@ -948,7 +948,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void d(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
         float var7 = 0.3499999940395355f + (float)param0;
         float var8 = (float)param1 + 0.3499999940395355f;
         float var9 = -1.0f + (var7 + (float)param2);
@@ -1088,7 +1088,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_zb.addLast(-10258, var4);
     }
 
-    final wib b(int param0, int param1) {
+    final DepthBuffer createDepthBuffer(int param0, int param1) {
         return null;
     }
 
@@ -1107,22 +1107,22 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void u() {
-        this.field_fc.c(124);
+    final void applyPostProcessing() {
+        this.field_fc.apply(124);
     }
 
-    final void o() {
+    final void releaseResources() {
         Enumeration var1_ref = null;
         java.awt.Canvas var2 = null;
         Long var3 = null;
         int var4 = VoidHunters.field_G;
         IntrusiveNode var1 = this.field_D.first(0);
         while (var1 != null) {
-          ((gpa) (var1)).a(false);
+          ((OpenGlNativeHeap) (var1)).deallocate(false);
           var1 = this.field_D.next((byte) 25);
         }
         if (this.field_fc != null) {
-          this.field_fc.a(true);
+          this.field_fc.dispose(true);
         }
         if (null != this.field_c) {
           this.h((byte) -46);
@@ -1144,7 +1144,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private final void d(int param0) {
         if (param0 <= 111) {
           int[] var3 = (int[]) null;
-          this.SA(15, 87, -102, 81, (int[]) null, -122, 82);
+          this.writePixels(15, 87, -102, 81, (int[]) null, -122, 82);
         }
         jaggl.OpenGL.glMatrixMode(5889);
         jaggl.OpenGL.glLoadMatrixf(this.field_Xb, 0);
@@ -1232,14 +1232,14 @@ final class OpenGlToolkit extends GraphicsToolkit {
         int var2 = 89 % ((param0 + 17) / 44);
     }
 
-    final int XA() {
+    final int getFarPlane() {
         return this.field_bb;
     }
 
-    final boolean b() {
+    final boolean enableBloom() {
         if (null != this.field_A) {
-          if (!this.field_A.e((byte) 117)) {
-            if (!this.field_fc.a(2998, this.field_A)) {
+          if (!this.field_A.isEnabled((byte) 117)) {
+            if (!this.field_fc.addEffect(2998, this.field_A)) {
               return false;
             }
             this.field_r.b(-58);
@@ -1266,7 +1266,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final boolean l() {
+    final boolean supportsFastTexturedParticles() {
         return true;
     }
 
@@ -1304,12 +1304,12 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(pw param0) {
+    final void setViewTransform(Transform3D param0) {
         try {
-          this.field_Db.a(false, param0);
-          this.field_F.a(false, this.field_Db);
-          this.field_F.b(5);
-          this.field_Bb.a(this.field_F, 14);
+          this.field_Db.set(false, param0);
+          this.field_F.set(false, this.field_Db);
+          this.field_F.flipYZ(5);
+          this.field_Bb.setRigidInverse(this.field_F, 14);
           if (this.field_Jb != 1) {
             this.b(true);
           }
@@ -1318,7 +1318,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void aa(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void fillRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
         float var7 = 0.3499999940395355f + (float)param0;
         float var8 = 0.3499999940395355f + (float)param1;
         float var9 = (float)param2 + var7;
@@ -1340,8 +1340,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final boolean s() {
-        return null != this.field_A && this.field_A.e((byte) 57);
+    final boolean isBloomEnabled() {
+        return null != this.field_A && this.field_A.isEnabled((byte) 57);
     }
 
     final void a(float param0, float param1, int param2) {
@@ -1364,7 +1364,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         jaggl.OpenGL.glTexEnvfv(8960, 8705, GetSpinningBladeTopSpeed.field_o, 0);
     }
 
-    final void P(int param0, int param1, int param2, int param3, int param4) {
+    final void drawVerticalLine(int param0, int param1, int param2, int param3, int param4) {
         this.m(106);
         this.d(param4, 62);
         float var6 = (float)param0 + 0.3499999940395355f;
@@ -1413,12 +1413,12 @@ final class OpenGlToolkit extends GraphicsToolkit {
 
     private final void i(int param0, int param1) {
         if (param0 != 5888) {
-          this.e(-78);
+          this.createHeap(-78);
         }
         this.a(false, param1, true);
     }
 
-    final boolean e() {
+    final boolean supportsUnderwaterEffects() {
         return this.field_d.a(8, 3);
     }
 
@@ -1507,21 +1507,21 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final aja a(int param0, int param1, boolean param2) {
-        return (aja) ((Object) new tla(this, param0, param1, param2));
+    final ToolkitSprite createSprite(int param0, int param1, boolean param2) {
+        return (ToolkitSprite) ((Object) new OpenGlSprite(this, param0, param1, param2));
     }
 
     private final void a(boolean param0, int param1, boolean param2) {
         this.a(true, param2, 0, param1);
         if (param0) {
           int[] var5 = (int[]) null;
-          this.K((int[]) null);
+          this.getClip((int[]) null);
         }
     }
 
     private final void l(int param0) {
         if (param0 != 10) {
-          this.c(78);
+          this.updateFrame(78);
         }
         if (this.field_oc <= this.field_ab &&
           this.field_fb <= this.field_C) {
@@ -1531,7 +1531,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final hf a(ekb param0, wib param1) {
+    final Framebuffer createFramebuffer(ColorBuffer param0, DepthBuffer param1) {
         RuntimeException var3 = null;
         Object stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -1542,7 +1542,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_1_0 = null;
-          return (hf) (stackIn_1_0);
+          return (Framebuffer) (stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -1563,11 +1563,11 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
-        this.field_fc.a(param0, param1, param2, param3, -5214);
+    final void beginPostProcessing(int param0, int param1, int param2, int param3) {
+        this.field_fc.begin(param0, param1, param2, param3, -5214);
     }
 
-    final void DA(int param0, int param1, int param2, int param3) {
+    final void setProjectionParameters(int param0, int param1, int param2, int param3) {
         this.field_yc = param3;
         this.field_Qb = param2;
         this.field_gc = param1;
@@ -1583,7 +1583,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void za(int param0, int param1, int param2, int param3, int param4) {
+    final void fillCircle(int param0, int param1, int param2, int param3, int param4) {
         int var10 = 0;
         float var6;
         float var7;
@@ -1654,7 +1654,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_xc.addLast(-10258, var4);
     }
 
-    final void v() {
+    final void copyFrontToBackBuffer() {
         int var1 = 0;
         int var2 = 0;
         int var3 = 0;
@@ -1690,7 +1690,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           jaggl.OpenGL.glFlush();
           jaggl.OpenGL.glReadBuffer(1029);
           jaggl.OpenGL.glDrawBuffer(1029);
-          this.KA(var1, var3, var2, var4);
+          this.setClip(var1, var3, var2, var4);
           return;
         }
     }
@@ -1732,8 +1732,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_hb = new Hashtable();
         this.field_X = 128;
         this.field_Ec = new vf();
-        epb discarded$0 = new epb();
-        epb discarded$1 = new epb();
+        OpenGlTransform3D discarded$0 = new OpenGlTransform3D();
+        OpenGlTransform3D discarded$1 = new OpenGlTransform3D();
         this.field_m = false;
         this.field_D = new IntrusiveDeque();
         this.field_zc = -1;
@@ -1751,9 +1751,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_ec = new IntrusiveDeque();
         this.field_Cc = new IntrusiveDeque();
         this.field_zb = new IntrusiveDeque();
-        this.field_Db = new epb();
-        this.field_F = new epb();
-        this.field_Bb = new epb();
+        this.field_Db = new OpenGlTransform3D();
+        this.field_F = new OpenGlTransform3D();
+        this.field_Bb = new OpenGlTransform3D();
         this.field_i = 1.0f;
         this.field_J = -1;
         this.field_yc = 512;
@@ -1912,24 +1912,24 @@ final class OpenGlToolkit extends GraphicsToolkit {
             this.field_r = new rlb(this, this.field_a);
             this.c((byte) -92);
             this.field_yb = new nk(this);
-            this.field_fc = new kha(this);
-            if (this.field_fc.a(-128)) {
-              this.field_A = new mpb(this);
-              if (!this.field_A.f((byte) 72)) {
-                this.field_A.c((byte) 66);
+            this.field_fc = new OpenGlPostProcessor(this);
+            if (this.field_fc.isAvailable(-128)) {
+              this.field_A = new OpenGlBloomEffect(this);
+              if (!this.field_A.isSupported((byte) 72)) {
+                this.field_A.releaseResources((byte) 66);
                 this.field_A = null;
               }
             }
             this.field_d = new fbb(this);
             this.v(770);
             this.p(-1001);
-            this.v();
+            this.copyFrontToBackBuffer();
             return;
           } catch (java.lang.Throwable decompiledCaughtParameter2) {
             decompiledCaughtException = decompiledCaughtParameter2;
             var4 = decompiledCaughtException;
             var4.printStackTrace();
-            this.o();
+            this.releaseResources();
             throw new RuntimeException("");
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
@@ -2018,17 +2018,17 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.d(false);
     }
 
-    final void a(float param0, float param1, float param2) {
+    final void setBloomParameters(float param0, float param1, float param2) {
         SetDebrisPartitioned.field_q = param2;
         GetSniperCannonProjectileLife.field_q = param1;
         SetShipPersistence.field_o = param0;
     }
 
-    final pw d() {
-        return (pw) ((Object) new epb());
+    final Transform3D createTransform() {
+        return (Transform3D) ((Object) new OpenGlTransform3D());
     }
 
-    final void T(int param0, int param1, int param2, int param3) {
+    final void intersectClip(int param0, int param1, int param2, int param3) {
         if (param2 < this.field_ab) {
           this.field_ab = param2;
         }
@@ -2046,12 +2046,12 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.l(10);
     }
 
-    final void ya() {
+    final void clearDepth() {
         this.a(true, (byte) -67);
         jaggl.OpenGL.glClear(256);
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawLine(int param0, int param1, int param2, int param3, int param4, int param5) {
         float var7;
         float var8;
         float var9;
@@ -2076,7 +2076,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
 
     final int j(int param0, int param1) {
         if (param1 != 25887) {
-          this.j();
+          this.restoreDefaultFramebuffer();
         }
         if (param0 == 1) {
           return 7681;
@@ -2133,15 +2133,15 @@ final class OpenGlToolkit extends GraphicsToolkit {
         return 2;
     }
 
-    final boolean r() {
+    final boolean hasSlowOffscreenRendering() {
         return !this.field_U && this.field_O;
     }
 
-    final int t() {
+    final int getMaxPointLights() {
         return 4;
     }
 
-    final int[] Y() {
+    final int[] getProjectionParameters() {
         return new int[]{this.field_lb, this.field_gc, this.field_Qb, this.field_yc};
     }
 
@@ -2167,7 +2167,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.t(108);
     }
 
-    final void GA(int param0) {
+    final void clearColor(int param0) {
         this.d(0, 100);
         jaggl.OpenGL.glClearColor((float)(param0 & 16711680) / 16711680.0f, (float)(65280 & param0) / 65280.0f, (float)(255 & param0) / 255.0f, (float)(param0 >>> 24) / 255.0f);
         jaggl.OpenGL.glClear(16384);
@@ -2312,15 +2312,15 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_hc.addLast(-10258, var3);
     }
 
-    final boolean k() {
+    final boolean supportsEnvironmentMaps() {
         return true;
     }
 
-    final boolean q() {
+    final boolean supportsShadows() {
         return true;
     }
 
-    final void U(int param0, int param1, int param2, int param3, int param4) {
+    final void drawHorizontalLine(int param0, int param1, int param2, int param3, int param4) {
         this.m(54);
         this.d(param4, 107);
         float var6 = 0.3499999940395355f + (float)param0;
@@ -2334,7 +2334,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
 
     private final void b(boolean param0) {
         jaggl.OpenGL.glLoadIdentity();
-        jaggl.OpenGL.glMultMatrixf(this.field_F.a(param0), 0);
+        jaggl.OpenGL.glMultMatrixf(this.field_F.getColumnMajorMatrix(param0), 0);
         if (this.field_Yb) {
           this.field_d.field_b.e(34336);
         }
@@ -2352,10 +2352,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
         return this.field_s.a((byte) -123);
     }
 
-    final void a(hf param0) {
+    final void bindFramebuffer(Framebuffer param0) {
     }
 
-    final void j() {
+    final void restoreDefaultFramebuffer() {
         if (!this.field_U) {
           if (!this.field_O) {
             throw new RuntimeException("");
@@ -2472,20 +2472,20 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final int i() {
+    final int getNearPlane() {
         return this.field_ob;
     }
 
     private final void b(byte param0) {
         boolean stackIn_6_0 = false;
         if (param0 < 84) {
-          this.a(85, 1, 117, -49);
+          this.beginPostProcessing(85, 1, 117, -49);
         }
         stackIn_6_0 = (this.field_Ub) && (this.field_h);
         jaggl.OpenGL.glDepthMask(stackIn_6_0);
     }
 
-    final boolean w() {
+    final boolean hasVolatileBackbuffer() {
         return true;
     }
 
@@ -2500,7 +2500,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void ZA(int param0, float param1, float param2, float param3, float param4, float param5) {
+    final void setDirectionalLighting(int param0, float param1, float param2, float param3, float param4, float param5) {
         int stackIn_3_0 = 0;
         int var7;
         float var8;
@@ -2613,11 +2613,11 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final boolean m() {
+    final boolean supportsMultipleCanvases() {
         return false;
     }
 
-    final synchronized void c(int param0) {
+    final synchronized void updateFrame(int param0) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$0 = 0;
@@ -2768,16 +2768,16 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final aja a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final ToolkitSprite createSprite(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
         RuntimeException var7 = null;
-        tla stackIn_1_0 = null;
+        OpenGlSprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = new tla(this, param3, param4, param0, param1, param2);
-          return (aja) ((Object) stackIn_1_0);
+          stackIn_1_0 = new OpenGlSprite(this, param3, param4, param0, param1, param2);
+          return (ToolkitSprite) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
@@ -2803,7 +2803,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void f(int param0, int param1) {
+    final void setDepthRange(int param0, int param1) {
         if (param0 != this.field_ob ||
           param1 != this.field_bb) {
           this.field_ob = param0;
@@ -2820,7 +2820,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final boolean p() {
+    final boolean supportsFarClipPlane() {
         return true;
     }
 
@@ -2829,10 +2829,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
         jaggl.OpenGL.glTexEnvi(8960, 34200 + param0, param1);
     }
 
-    final za e(int param0) {
-        gpa var2 = new gpa(param0);
+    final GraphicsHeap createHeap(int param0) {
+        OpenGlNativeHeap var2 = new OpenGlNativeHeap(param0);
         this.field_D.addLast(-10258, var2);
-        return (za) ((Object) var2);
+        return (GraphicsHeap) ((Object) var2);
     }
 
     private final void h(int param0) {
@@ -2869,7 +2869,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(int param0, int param1) throws jkb {
+    final void present(int param0, int param1) throws GraphicsPresentException {
         Throwable decompiledCaughtException = null;
         Exception var3 = null;
         try {
@@ -2891,7 +2891,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
+    final void writePixels(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         try {
           this.i(3);
           this.a(61, (pib) null);
@@ -2906,10 +2906,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final boolean f() {
+    final boolean supportsAntialiasing() {
         boolean stackIn_6_0 = false;
         boolean decompiledFrameRemainder0 = true;
-        if (this.field_y && (!this.s() ||
+        if (this.field_y && (!this.isBloomEnabled() ||
           this.field_sc)) {
           stackIn_6_0 = true;
           decompiledFrameRemainder0 = false;
@@ -2927,7 +2927,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
     }
 
-    final boolean x() {
+    final boolean supportsOffscreenRendering() {
         return this.field_U || this.field_O;
     }
 

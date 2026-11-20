@@ -148,7 +148,7 @@ final class ira extends mfb {
         if (param0 != 0) {
           return -95;
         }
-        return asa.field_e;
+        return OpenGlGlyphMask.field_e;
     }
 
     final int a(byte param0) {

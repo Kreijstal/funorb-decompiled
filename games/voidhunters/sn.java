@@ -118,7 +118,7 @@ final class sn extends os implements oo {
               var5.a(-115, mab.field_h, 7);
             } else {
               if (param2.field_d == 6) {
-                var5.a(-124, lia.field_c, 9);
+                var5.a(-124, SoftwareTransform3D.field_c, 9);
               }
             }
           }

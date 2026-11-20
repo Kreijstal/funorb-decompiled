@@ -114,7 +114,7 @@ abstract class mc extends shb implements nea {
     }
 
     final static void a(int param0, boolean param1) {
-        if (!(lia.field_b <= 0) &&
+        if (!(SoftwareTransform3D.field_b <= 0) &&
           bv.field_d) {
           dma.e(0, 0, dma.field_g, SetToggledScoreboard.field_o.field_u);
           GetTorpedoProjectiles.field_o.b(param1, 45);

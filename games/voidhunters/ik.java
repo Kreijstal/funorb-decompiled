@@ -110,7 +110,7 @@ final class ik extends IntrusiveNode {
         var2[209] = Particle.field_w;
         var2[107] = SetMissileLauncherEnergyUsed.field_o;
         var2[215] = Particle.field_k;
-        var2[128] = asa.field_e;
+        var2[128] = OpenGlGlyphMask.field_e;
         var2[192] = CarouselPlayerInfoFactory.field_a;
         var2[164] = mmb.field_g;
         var2[96] = NebulaFieldFactory.field_b;

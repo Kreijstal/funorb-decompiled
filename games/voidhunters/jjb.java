@@ -22,7 +22,7 @@ final class jjb {
           dma.d(param4, param3, param5, param1, param0);
         } else {
           if (ne.field_v) {
-            GetDebrisGroupColour.field_r.aa(param4, param3, param5, param1, param0, 0);
+            GetDebrisGroupColour.field_r.fillRectangle(param4, param3, param5, param1, param0, 0);
           }
         }
         if (param2 == 17634) {

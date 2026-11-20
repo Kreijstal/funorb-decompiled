@@ -185,7 +185,7 @@ final class moa extends TextureOperation {
         if (!param0) {
           field_n = (String) null;
         }
-        int var3 = var2 - lia.field_b * lia.field_b;
+        int var3 = var2 - SoftwareTransform3D.field_b * SoftwareTransform3D.field_b;
         tb.field_a.a(var1 - var3 * 199 / var2, 32, 199, 90, -124 + dma.field_j - 90);
         bqa.field_d.a(438 * var3 / var2 + (var1 + 202), -126, 438, 0, -4 + (-120 + dma.field_j));
     }

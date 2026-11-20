@@ -44,7 +44,7 @@ final class GetUseFilledPolygons extends ConsoleCommand {
 
     final static void a(int param0) {
         RemoveEventActionFactory.field_b = false;
-        tla.field_c = false;
+        OpenGlSprite.field_c = false;
         GetSelfDestructPrepareToggleCooldown.a(-86, param0);
         SetShipTeamAction.field_b = kla.field_d;
         SetCountermeasureLauncherAimspeed.field_r = kla.field_d;

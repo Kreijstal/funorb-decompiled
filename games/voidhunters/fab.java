@@ -264,7 +264,7 @@ final class fab {
                   if (var6.field_a == this.field_e.field_b.field_a &&
                     this.field_e.field_g != null) {
                     var3 = this.field_e.a((byte) -126);
-                    this.field_e.field_g.a((byte) 30);
+                    this.field_e.field_g.dispose((byte) 30);
                     this.field_e = null;
                   }
                 }
@@ -281,10 +281,10 @@ final class fab {
                           return;
                         }
                         var3 = this.field_e.a((byte) -114);
-                        this.field_e.field_g.a((byte) 30);
+                        this.field_e.field_g.dispose((byte) 30);
                       }
-                      if (var8.field_g.a()) {
-                        var8.field_g.a(var8.field_g.e(100663296));
+                      if (var8.field_g.supportsMemoryPools()) {
+                        var8.field_g.setHeap(var8.field_g.createHeap(100663296));
                       }
                       if (var3 == null) {
                         var8.field_e = wt.a(false);
@@ -487,7 +487,7 @@ final class fab {
             this.a(param1, (byte) -119);
           }
           if (null != this.field_e) {
-            this.field_e.field_g.c((int)(wt.a(false) - this.field_e.field_e));
+            this.field_e.field_g.updateFrame((int)(wt.a(false) - this.field_e.field_e));
           }
           boolean decompiledFrameRemainder0 = true;
           if (this.field_e != null && (var3 == null ||

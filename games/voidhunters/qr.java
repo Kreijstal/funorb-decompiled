@@ -124,12 +124,12 @@ final class qr extends uda {
           ura var4 = (ura) null;
           this.a((byte) -108, 75, (ura) null);
         }
-        this.field_d.a(MissionVariable.field_c, true, asa.field_a);
+        this.field_d.a(MissionVariable.field_c, true, OpenGlGlyphMask.field_a);
     }
 
     final void a(int param0, boolean param1) {
         int var4;
-        oj var5;
+        GpuTransform3D var5;
         var4 = VoidHunters.field_G;
         if (param0 != 5) {
           return;
@@ -143,10 +143,10 @@ final class qr extends uda {
             this.field_d.g(1, -51);
             this.field_d.a((byte) -111, tea.field_d);
             var5 = this.field_d.H((byte) 8);
-            var5.a((byte) -80, 1024);
+            var5.setRotationX((byte) -80, 1024);
             this.field_d.a(LoadSettings.field_o, true);
             if (!this.field_h) {
-              this.field_d.a(asa.field_a, true, MissionVariable.field_c);
+              this.field_d.a(OpenGlGlyphMask.field_a, true, MissionVariable.field_c);
               this.field_d.a(0, pja.field_l, 7);
               this.field_d.g(2, -51);
               this.field_d.a(MissionVariable.field_c, true, je.field_c);
@@ -188,14 +188,14 @@ final class qr extends uda {
           this.field_d.a((byte) -111, meb.field_d);
           this.field_d.F((byte) 108);
           if (this.field_h) {
-            this.field_d.a(asa.field_a, true, asa.field_a);
+            this.field_d.a(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
             this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
             this.field_d.a(0, (byte) -92, SetGrapplingHookMaxExtension8Force.field_q);
           } else {
-            this.field_d.a(asa.field_a, true, asa.field_a);
+            this.field_d.a(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
             this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
             this.field_d.g(2, -90);
-            this.field_d.a(asa.field_a, true, asa.field_a);
+            this.field_d.a(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
             this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, param0 - 2536);
             this.field_d.a(1, pja.field_l, 7);
             this.field_d.a(0, (byte) -105, SetGrapplingHookMaxExtension8Force.field_q);
@@ -207,7 +207,7 @@ final class qr extends uda {
         if (param0 != 2543) {
           return;
         }
-        this.field_d.a(asa.field_a, true, asa.field_a);
+        this.field_d.a(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
     }
 
     final boolean a(byte param0) {

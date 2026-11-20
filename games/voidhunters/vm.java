@@ -155,7 +155,7 @@ final class vm extends TextureOperation {
           var5 = var4 >> 12;
           var6 = var5 + 1;
           for (var14 = 0; hob.field_d > var14; var14++) {
-            woa.field_b = 2147483647;
+            SoftwareDepthBuffer.field_b = 2147483647;
             qd.field_b = 2147483647;
             SetSalvoRepairTimeMultiplier.field_q = 2147483647;
             MissionListFactory.field_b = 2147483647;
@@ -247,22 +247,22 @@ final class vm extends TextureOperation {
                   var11 = var9 * var9 + var10 * var10 >> 12;
                 }
                 if (SetSalvoRepairTimeMultiplier.field_q > var11) {
-                  woa.field_b = qd.field_b;
+                  SoftwareDepthBuffer.field_b = qd.field_b;
                   qd.field_b = MissionListFactory.field_b;
                   MissionListFactory.field_b = SetSalvoRepairTimeMultiplier.field_q;
                   SetSalvoRepairTimeMultiplier.field_q = var11;
                 } else {
                   if (var11 >= MissionListFactory.field_b) {
                     if (qd.field_b <= var11) {
-                      if (var11 < woa.field_b) {
-                        woa.field_b = var11;
+                      if (var11 < SoftwareDepthBuffer.field_b) {
+                        SoftwareDepthBuffer.field_b = var11;
                       }
                     } else {
-                      woa.field_b = qd.field_b;
+                      SoftwareDepthBuffer.field_b = qd.field_b;
                       qd.field_b = var11;
                     }
                   } else {
-                    woa.field_b = qd.field_b;
+                    SoftwareDepthBuffer.field_b = qd.field_b;
                     qd.field_b = MissionListFactory.field_b;
                     MissionListFactory.field_b = var11;
                   }
@@ -282,7 +282,7 @@ final class vm extends TextureOperation {
                       var3[var14] = -SetSalvoRepairTimeMultiplier.field_q + MissionListFactory.field_b;
                     }
                   } else {
-                    var3[var14] = woa.field_b;
+                    var3[var14] = SoftwareDepthBuffer.field_b;
                   }
                 } else {
                   var3[var14] = qd.field_b;

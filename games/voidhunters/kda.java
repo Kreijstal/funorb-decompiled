@@ -160,7 +160,7 @@ final class kda {
               this.field_e = true;
               GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Now out of sync for server tick " + param3 + ", which is " + -var6_int + " ticks back, so dumping state");
               if (null == this.field_j) {
-                this.field_j = new ova(kha.field_v);
+                this.field_j = new ova(OpenGlPostProcessor.field_v);
               }
               if (this.field_j.a(param2 - 1000)) {
                 GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Sending the state dump to the server");

@@ -3,7 +3,7 @@
  */
 final class PlayerReadyFactory implements GameStateFactory {
     static int field_a;
-    static da[] field_b;
+    static ToolkitFont[] field_b;
 
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 != 11995) {

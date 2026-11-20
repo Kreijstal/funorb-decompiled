@@ -32,8 +32,8 @@ final class GetUseBackground extends ConsoleCommand {
     final static void a(int param0) {
         int var2;
         var2 = VoidHunters.field_G;
-        if (0 < lia.field_b) {
-          lia.field_b = lia.field_b - 1;
+        if (0 < SoftwareTransform3D.field_b) {
+          SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - 1;
         } else {
           if (CarouselPlayerEventFactory.field_a > 0) {
             CarouselPlayerEventFactory.field_a = CarouselPlayerEventFactory.field_a - 1;
@@ -43,7 +43,7 @@ final class GetUseBackground extends ConsoleCommand {
             }
           }
         }
-        if (~lia.field_b < param0) {
+        if (~SoftwareTransform3D.field_b < param0) {
           moa.a(true);
         }
         if (CarouselPlayerEventFactory.field_a > 0) {

@@ -11,7 +11,7 @@ final class ct {
           ct.a((ShipComponent) null, 95, (IntrusiveDeque) null);
         }
         if (li.field_i) {
-          return mmb.field_d[param1].a();
+          return mmb.field_d[param1].getHeight();
         }
         return 100;
     }

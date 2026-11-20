@@ -56,12 +56,12 @@ final class SetRepairModeRadius extends ConsoleCommand {
             }
             var1_ref = (mm) (kja.field_E.next((byte) 118));
           }
-          var1Lifetime1 = (jk) (mea.field_e.first(param0));
+          var1Lifetime1 = (jk) (OpenGlPostEffect.field_e.first(param0));
           while (var1Lifetime1 != null) {
             if (var1Lifetime1.field_yb > 0) {
               var1Lifetime1.field_yb = var1Lifetime1.field_yb - 1;
               if (0 != var1Lifetime1.field_yb) {
-                var1Lifetime1 = (jk) (mea.field_e.next((byte) 11));
+                var1Lifetime1 = (jk) (OpenGlPostEffect.field_e.next((byte) 11));
                 continue;
               }
               var1Lifetime1.field_Db = 0;
@@ -69,7 +69,7 @@ final class SetRepairModeRadius extends ConsoleCommand {
                 var1Lifetime1.unlink(-3846);
               }
             }
-            var1Lifetime1 = (jk) (mea.field_e.next((byte) 11));
+            var1Lifetime1 = (jk) (OpenGlPostEffect.field_e.next((byte) 11));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -681,7 +681,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    SetCountermeasureLauncherAimspeed.field_p = GetPedrosRepairMode.field_p.a(false, asa.field_c);
+                    SetCountermeasureLauncherAimspeed.field_p = GetPedrosRepairMode.field_p.a(false, OpenGlGlyphMask.field_c);
                     stackIn_95_0 = 0;
                   }
                   var3 = stackIn_95_0;

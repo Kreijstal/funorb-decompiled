@@ -6,7 +6,7 @@ final class GetShipPersistence extends ConsoleCommand {
 
     final static void a(String param0, int param1, int param2, int param3, int param4, byte param5) {
         try {
-          woa.a(param3, param2, param1, (byte) 74, param4, SetAutoaim.field_p, param0);
+          SoftwareDepthBuffer.a(param3, param2, param1, (byte) 74, param4, SetAutoaim.field_p, param0);
           if (param5 != -103) {
             field_o = (qrb) null;
           }

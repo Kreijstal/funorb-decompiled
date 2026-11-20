@@ -62,7 +62,7 @@ final class SetNumStars extends ConsoleCommand {
           return;
         }
         if (GetReadyRoomMutatorTime.field_p) {
-          GetDebrisGroupColour.field_r.a(Math.max(1, (int)param0), param2, param4, (byte) 97, -16777216 | param3);
+          GetDebrisGroupColour.field_r.drawCircle(Math.max(1, (int)param0), param2, param4, (byte) 97, -16777216 | param3);
           if (param1 < 52) {
             field_o = (int[]) null;
             return;

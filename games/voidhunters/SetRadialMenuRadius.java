@@ -30,7 +30,7 @@ final class SetRadialMenuRadius extends ConsoleCommand {
         SetTorpedoEnergyUsed.a(74, ata.field_K);
         bfb.e();
         dma.a();
-        pw.a((byte) 74);
+        Transform3D.a((byte) 74);
         if (var5 < 256) {
           dma.e(0, 0, dma.field_g, dma.field_j, 0, -var5 + 256);
         }

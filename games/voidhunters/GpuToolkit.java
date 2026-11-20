@@ -18,14 +18,14 @@ abstract class GpuToolkit extends GraphicsToolkit {
     jaclib.memory.heap.NativeHeapBuffer field_m;
     boolean field_ec;
     int field_Nb;
-    oj field_O;
+    GpuTransform3D field_O;
     int field_mb;
     int field_ob;
-    private oj field_t;
-    private oj field_f;
-    oj field_gb;
-    private oj field_yb;
-    private oj field_vc;
+    private GpuTransform3D field_t;
+    private GpuTransform3D field_f;
+    GpuTransform3D field_gb;
+    private GpuTransform3D field_yb;
+    private GpuTransform3D field_vc;
     int field_Bb;
     int field_pc;
     boolean field_X;
@@ -100,7 +100,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
     ura field_Q;
     private float field_xb;
     private boolean field_sb;
-    oj[] field_Eb;
+    GpuTransform3D[] field_Eb;
     private boolean field_N;
     boolean field_cc;
     boolean field_ub;
@@ -132,7 +132,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
     private vca field_T;
     boolean field_ac;
 
-    final boolean q() {
+    final boolean supportsShadows() {
         return true;
     }
 
@@ -141,11 +141,11 @@ abstract class GpuToolkit extends GraphicsToolkit {
     void n(int param0) {
         this.C((byte) 92);
         if (param0 < 106) {
-          this.q();
+          this.supportsShadows();
         }
     }
 
-    final void KA(int param0, int param1, int param2, int param3) {
+    final void setClip(int param0, int param1, int param2, int param3) {
         if (param0 <= 0 && -1 + this.field_db <= param2 && param1 <= 0 &&
           param3 >= -1 + this.field_i) {
           this.v(-120);
@@ -170,7 +170,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.a(0, bk.field_v, 2);
     }
 
-    final oj A(int param0) {
+    final GpuTransform3D A(int param0) {
         if (param0 != 11) {
           slb var3 = (slb) null;
           this.a(-91, (byte) 122, (slb) null);
@@ -178,7 +178,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return this.field_O;
     }
 
-    final void xa(float param0) {
+    final void setAmbientLight(float param0) {
         if (param0 != this.field_Rb) {
           this.field_Rb = param0;
           this.field_Zb.setAmbient(param0);
@@ -211,7 +211,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
         if (GetMassDriverFireForce.field_p == this.field_pb) {
           var2 = this.f((byte) -128);
-          this.field_O.a(0.0f, var2, var2, (byte) 13);
+          this.field_O.translate(0.0f, var2, var2, (byte) 13);
         }
         this.field_wb = false;
         this.p((byte) 98);
@@ -220,9 +220,9 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final oj E(int param0) {
+    final GpuTransform3D E(int param0) {
         if (!this.field_wb) {
-          this.field_vc.a(this.field_O, this.field_gb, true);
+          this.field_vc.setProduct(this.field_O, this.field_gb, true);
           this.field_wb = true;
         }
         if (param0 != 0) {
@@ -231,14 +231,14 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return this.field_vc;
     }
 
-    final void aa(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void fillRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
         this.d(false);
         this.e(-126, param4);
         this.a(0, pea.field_d, 7);
         this.a(0, (byte) -108, pea.field_d);
         this.c(99, param5);
-        this.field_O.a(5557, (float)param2, (float)param3, 1.0f);
-        this.field_O.a(param1, 16383, 0, param0);
+        this.field_O.setScale(5557, (float)param2, (float)param3, 1.0f);
+        this.field_O.translate(param1, 16383, 0, param0);
         this.h(20837);
         this.a(-44, false);
         this.r((byte) -64);
@@ -335,7 +335,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final boolean x() {
+    final boolean supportsOffscreenRendering() {
         return false;
     }
 
@@ -345,21 +345,21 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final oj p(int param0) {
+    final GpuTransform3D p(int param0) {
         if (param0 != 0) {
           this.field_sb = false;
         }
         return this.field_Eb[this.field_ab];
     }
 
-    final void za(int param0, int param1, int param2, int param3, int param4) {
+    final void fillCircle(int param0, int param1, int param2, int param3, int param4) {
         this.d(false);
         this.e(-128, param3);
         this.a(0, pea.field_d, 7);
         this.a(0, (byte) -65, pea.field_d);
         this.c(83, param4);
-        this.field_O.a(5557, (float)param2, (float)param2, 1.0f);
-        this.field_O.a(param1, 16383, 0, param0);
+        this.field_O.setScale(5557, (float)param2, (float)param2, 1.0f);
+        this.field_O.translate(param1, 16383, 0, param0);
         this.h(20837);
         this.a(-114, false);
         this.a((byte) -6, this.field_P, 0);
@@ -382,13 +382,13 @@ abstract class GpuToolkit extends GraphicsToolkit {
           this.a(MissionVariable.field_c, true, MissionVariable.field_c);
         } else {
           if (param1 == 0) {
-            this.a(asa.field_a, true, asa.field_a);
+            this.a(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
           } else {
             if (param1 == 2) {
               this.a(MissionVariable.field_c, true, SetThrusterBindingMoveAndTurnHasOppositeMove.field_o);
             } else {
               if (param1 == 3) {
-                this.a(asa.field_a, true, je.field_c);
+                this.a(OpenGlGlyphMask.field_a, true, je.field_c);
               } else {
                 if (param1 != 4) {
                   var3 = 106 / ((-56 - param0) / 59);
@@ -464,7 +464,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final void ZA(int param0, float param1, float param2, float param3, float param4, float param5) {
+    final void setDirectionalLighting(int param0, float param1, float param2, float param3, float param4, float param5) {
         int stackIn_3_0 = 0;
         int var7;
         float var8;
@@ -507,7 +507,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.i((byte) -120);
     }
 
-    final int i() {
+    final int getNearPlane() {
         return this.field_h;
     }
 
@@ -552,12 +552,12 @@ abstract class GpuToolkit extends GraphicsToolkit {
         RuntimeException var7_ref = null;
         this.field_s = new IntrusiveDeque();
         this.field_ec = true;
-        this.field_O = new oj();
-        this.field_t = new oj();
-        this.field_f = new oj();
-        this.field_gb = new oj();
-        this.field_yb = new oj();
-        this.field_vc = new oj();
+        this.field_O = new GpuTransform3D();
+        this.field_t = new GpuTransform3D();
+        this.field_f = new GpuTransform3D();
+        this.field_gb = new GpuTransform3D();
+        this.field_yb = new GpuTransform3D();
+        this.field_vc = new GpuTransform3D();
         this.field_Hb = false;
         this.field_X = false;
         this.field_Y = 0;
@@ -619,7 +619,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.field_fc = GetGrapplingHookRopeBreakLength.field_o;
         this.field_n = 128;
         this.field_kb = new jaclib.memory.Stream();
-        oj discarded$1 = new oj();
+        GpuTransform3D discarded$1 = new GpuTransform3D();
         try {
           try {
             this.field_Ab = param3;
@@ -648,7 +648,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
             decompiledCaughtException = decompiledCaughtParameter0;
             var7 = decompiledCaughtException;
             var7.printStackTrace();
-            this.a((byte) 30);
+            this.dispose((byte) 30);
             throw new RuntimeException("");
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
@@ -683,11 +683,11 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final int XA() {
+    final int getFarPlane() {
         return this.field_Wb;
     }
 
-    final boolean r() {
+    final boolean hasSlowOffscreenRendering() {
         return false;
     }
 
@@ -743,12 +743,12 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final void fillGradientTriangle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
     }
 
     private final void d(boolean param0) {
         if (param0) {
-          this.field_vc = (oj) null;
+          this.field_vc = (GpuTransform3D) null;
         }
         if (this.field_V != 1) {
           this.h((byte) -124);
@@ -774,14 +774,14 @@ abstract class GpuToolkit extends GraphicsToolkit {
     }
 
     final void c(boolean param0) {
-        this.field_O.c(1);
+        this.field_O.setIdentityWithZScale(1);
         this.field_ec = param0 ? true : false;
         this.l(0);
     }
 
-    final da a(sw param0, ima[] param1, boolean param2) {
+    final ToolkitFont createFont(ToolkitFontMetrics param0, IndexedSpriteData[] param1, boolean param2) {
         RuntimeException var4 = null;
-        rp stackIn_1_0 = null;
+        GpuFont stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -789,8 +789,8 @@ abstract class GpuToolkit extends GraphicsToolkit {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = new rp(this, param0, param1, param2);
-          return (da) ((Object) stackIn_1_0);
+          stackIn_1_0 = new GpuFont(this, param0, param1, param2);
+          return (ToolkitFont) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;
@@ -811,7 +811,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final boolean n() {
+    final boolean supportsResizableBackbuffer() {
         return true;
     }
 
@@ -833,17 +833,17 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.field_bc = new ura[this.field_L];
         this.field_A = new kba[this.field_L];
         this.field_z = new aba[this.field_L];
-        this.field_Eb = new oj[this.field_L];
+        this.field_Eb = new GpuTransform3D[this.field_L];
         this.field_U = new aba[this.field_L];
         for (var2 = 0; var2 < this.field_L; var2++) {
-          this.field_U[var2] = asa.field_a;
-          this.field_z[var2] = asa.field_a;
+          this.field_U[var2] = OpenGlGlyphMask.field_a;
+          this.field_z[var2] = OpenGlGlyphMask.field_a;
           this.field_A[var2] = SetGrappleDebris.field_o;
-          this.field_Eb[var2] = new oj();
+          this.field_Eb[var2] = new GpuTransform3D();
         }
         this.field_Lb = new fsb[-2 + this.field_qb];
         this.field_Q = (ura) ((Object) this.a(125, 1, 1, qua.field_d, mj.field_f));
-        this.a(new cba(262144));
+        this.setHeap(new GpuNativeHeap(262144));
         this.field_Vb = this.a(10, new qma[]{new qma(new pb[]{pb.field_k, pb.field_l})});
         this.a(10, new qma[]{new qma(new pb[]{pb.field_k, pb.field_d})});
         this.a(param0 ^ -31099, new qma[]{new qma(pb.field_k), new qma(pb.field_d), new qma(pb.field_l), new qma(pb.field_g)});
@@ -888,7 +888,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
         this.n(125);
         this.v(param0 + 31003);
-        this.v();
+        this.copyFrontToBackBuffer();
     }
 
     abstract void p(byte param0);
@@ -903,7 +903,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final boolean a() {
+    final boolean supportsMemoryPools() {
         return true;
     }
 
@@ -1010,7 +1010,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
           var9 = (kb) null;
           this.a(-31, -99, (byte[]) null, (kb) null, -65, -32);
         }
-        param0 = param0 & this.e();
+        param0 = param0 & this.supportsUnderwaterEffects();
         if (!param0 && (param2 == 4 ||
           param2 == 8 ||
           param2 == 9)) {
@@ -1063,7 +1063,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
           this.w(1);
         }
         if (param1) {
-          this.s(-21, -6, -111, -17, -121);
+          this.drawCircle(-21, -6, -111, -17, -121);
         }
     }
 
@@ -1101,7 +1101,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
             var3 = GetGrapplingHookRopeBreakLength.field_o;
           } else {
             if (2 == param1) {
-              var3 = oj.field_b;
+              var3 = GpuTransform3D.field_b;
               var4 = 1;
               var5 = 0;
             } else {
@@ -1161,7 +1161,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     abstract hdb a(boolean param0, int param1, int[][] param2, int param3);
 
-    final ka a(cbb param0, int param1, int param2, int param3, int param4) {
+    final ka createModel(cbb param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
         roa stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -1185,7 +1185,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawLine(int param0, int param1, int param2, int param3, int param4, int param5) {
         float var7;
         float var8;
         float var9;
@@ -1215,7 +1215,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
     }
 
-    final int[] Y() {
+    final int[] getProjectionParameters() {
         return new int[]{this.field_K, this.field_Gb, this.field_lb, this.field_k};
     }
 
@@ -1237,7 +1237,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     abstract eb a(int param0, byte[] param1, kb param2, int param3, int param4, int param5, boolean param6, int param7);
 
-    void o() {
+    void releaseResources() {
         IntrusiveNode var1 = null;
         Enumeration var1_ref = null;
         java.awt.Canvas var2 = null;
@@ -1245,7 +1245,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         if (!this.field_hc) {
           var1 = this.field_s.first(0);
           while (var1 != null) {
-            ((cba) (var1)).a(true);
+            ((GpuNativeHeap) (var1)).deallocate(true);
             var1 = this.field_s.next((byte) 116);
           }
           var1_ref = this.field_rb.keys();
@@ -1265,7 +1265,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     abstract void G(int param0);
 
-    final boolean l() {
+    final boolean supportsFastTexturedParticles() {
         return true;
     }
 
@@ -1324,7 +1324,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return this.field_jc.allocate(param2, param0);
     }
 
-    final void T(int param0, int param1, int param2, int param3) {
+    final void intersectClip(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         if (this.field_H < param0) {
           var5 = 1;
@@ -1352,25 +1352,25 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final oj g(byte param0) {
+    final GpuTransform3D g(byte param0) {
         if (param0 <= 5) {
-          this.l();
+          this.supportsFastTexturedParticles();
         }
         return this.field_gb;
     }
 
     abstract void y(byte param0);
 
-    final int t() {
+    final int getMaxPointLights() {
         return -2 + this.field_qb;
     }
 
-    final void P(int param0, int param1, int param2, int param3, int param4) {
-        this.b(param0, param1, param0, param2 + param1, param3, param4);
+    final void drawVerticalLine(int param0, int param1, int param2, int param3, int param4) {
+        this.drawLine(param0, param1, param0, param2 + param1, param3, param4);
     }
 
-    final pw d() {
-        return (pw) ((Object) new oj());
+    final Transform3D createTransform() {
+        return (Transform3D) ((Object) new GpuTransform3D());
     }
 
     private final void b(boolean param0) {
@@ -1486,7 +1486,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1) {
-            this.field_Eb = (oj[]) null;
+            this.field_Eb = (GpuTransform3D[]) null;
           }
           this.field_kb.setBuffer(param0);
           stackIn_3_0 = this.field_kb;
@@ -1554,7 +1554,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         try {
           this.a(false, param2 - 21122, false, param1, param0);
           if (param2 != 7) {
-            this.a();
+            this.supportsMemoryPools();
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pf.LF(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -1573,18 +1573,18 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     final void F(byte param0) {
         if (param0 <= 63) {
-          this.field_yb = (oj) null;
+          this.field_yb = (GpuTransform3D) null;
         }
         if (this.field_A[this.field_ab] != SetGrappleDebris.field_o) {
           this.field_A[this.field_ab] = SetGrappleDebris.field_o;
-          this.field_Eb[this.field_ab].c(1);
+          this.field_Eb[this.field_ab].setIdentityWithZScale(1);
           this.B((byte) 96);
         }
     }
 
     abstract void m(byte param0);
 
-    final boolean f() {
+    final boolean supportsAntialiasing() {
         return this.field_sc;
     }
 
@@ -1610,14 +1610,14 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return (uda) ((Object) new hab(this));
     }
 
-    final void s(int param0, int param1, int param2, int param3, int param4) {
+    final void drawCircle(int param0, int param1, int param2, int param3, int param4) {
         this.d(false);
         this.e(-126, param3);
         this.a(0, pea.field_d, 7);
         this.a(0, (byte) -65, pea.field_d);
         this.c(58, param4);
-        this.field_O.a(5557, (float)param2, (float)param2, 1.0f);
-        this.field_O.a(param1, 16383, 0, param0);
+        this.field_O.setScale(5557, (float)param2, (float)param2, 1.0f);
+        this.field_O.translate(param1, 16383, 0, param0);
         this.h(20837);
         this.a(-112, false);
         this.a((byte) -6, this.field_P, 0);
@@ -1636,7 +1636,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     abstract vca a(byte param0, boolean param1);
 
-    final void f(int param0, int param1) {
+    final void setDepthRange(int param0, int param1) {
         if (param0 != this.field_h ||
           param1 != this.field_Wb) {
           this.field_h = param0;
@@ -1647,7 +1647,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    void c(int param0) {
+    void updateFrame(int param0) {
         if (null != this.field_I) {
           this.field_I.a((byte) -106);
         }
@@ -1665,7 +1665,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
     final void a(ura param0, int param1) {
         try {
           if (param1 > -105) {
-            this.a(91, -101, true);
+            this.createSprite(91, -101, true);
           }
           if (param0 != this.field_bc[this.field_ab]) {
             this.field_bc[this.field_ab] = param0;
@@ -1743,11 +1743,11 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return;
     }
 
-    final void U(int param0, int param1, int param2, int param3, int param4) {
-        this.b(param0, param1, param2 + param0, param1, param3, param4);
+    final void drawHorizontalLine(int param0, int param1, int param2, int param3, int param4) {
+        this.drawLine(param0, param1, param2 + param0, param1, param3, param4);
     }
 
-    final boolean m() {
+    final boolean supportsMultipleCanvases() {
         return false;
     }
 
@@ -1765,7 +1765,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     abstract void C(int param0);
 
-    final void K(int[] param0) {
+    final void getClip(int[] param0) {
         try {
           param0[1] = this.field_xc;
           param0[0] = this.field_H;
@@ -1776,7 +1776,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final void DA(int param0, int param1, int param2, int param3) {
+    final void setProjectionParameters(int param0, int param1, int param2, int param3) {
         this.field_lb = param2;
         this.field_Gb = param1;
         this.field_k = param3;
@@ -1789,7 +1789,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     abstract gf a(int param0, int param1, byte[] param2, kb param3, int param4, int param5);
 
-    final oj H(byte param0) {
+    final GpuTransform3D H(byte param0) {
         int var2 = 34 % ((param0 + 63) / 51);
         return this.field_Eb[this.field_ab];
     }
@@ -1815,16 +1815,16 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     abstract void w(int param0);
 
-    final aja a(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final ToolkitSprite createSprite(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
         RuntimeException var7 = null;
-        mjb stackIn_1_0 = null;
+        GpuSprite stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = new mjb(this, param3, param4, param0, param1, param2);
-          return (aja) ((Object) stackIn_1_0);
+          stackIn_1_0 = new GpuSprite(this, param3, param4, param0, param1, param2);
+          return (ToolkitSprite) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
@@ -1839,11 +1839,11 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final boolean w() {
+    final boolean hasVolatileBackbuffer() {
         return true;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void drawThickLine(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         float var8 = (float)param2 - (float)param0;
         float var9 = (float)param3 - (float)param1;
         float var10 = 0.0f;
@@ -1858,10 +1858,10 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.a(0, pea.field_d, 7);
         this.a(0, (byte) -71, pea.field_d);
         this.c(99, param6);
-        this.field_O.a(5557, var11, (float)param5, 1.0f);
-        this.field_O.a(-param5 / 2, 16383, 0, 0);
-        this.field_O.a((int)((double)var10 * 2607.5945876176133) & 16383, 3);
-        this.field_O.a(param1, 16383, 0, param0);
+        this.field_O.setScale(5557, var11, (float)param5, 1.0f);
+        this.field_O.translate(-param5 / 2, 16383, 0, 0);
+        this.field_O.rotateZ((int)((double)var10 * 2607.5945876176133) & 16383, 3);
+        this.field_O.translate(param1, 16383, 0, param0);
         this.h(20837);
         this.a(-72, false);
         this.r((byte) -54);
@@ -1870,8 +1870,8 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
     }
 
-    final aja a(int param0, int param1, boolean param2) {
-        return (aja) ((Object) new mjb(this, param0, param1, param2));
+    final ToolkitSprite createSprite(int param0, int param1, boolean param2) {
+        return (ToolkitSprite) ((Object) new GpuSprite(this, param0, param1, param2));
     }
 
     abstract void r(int param0);
@@ -1906,7 +1906,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         opa var10;
         int var11;
         int var12;
-        oj var13;
+        GpuTransform3D var13;
         int var14;
         boolean decompiledFrameRemainder0 = true;
         var14 = VoidHunters.field_G;
@@ -1939,7 +1939,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
               var11 = stackIn_19_0;
               var12 = 50 * var11;
               var13 = this.H((byte) 24);
-              var13.a((float)(var10.field_p * (this.field_pc % var12)) / (float)var12, (float)(this.field_pc % var12 * var10.field_d) / (float)var12, 49, 0.0f);
+              var13.setTranslation((float)(var10.field_p * (this.field_pc % var12)) / (float)var12, (float)(this.field_pc % var12 * var10.field_d) / (float)var12, 49, 0.0f);
               this.a(vf.field_a, true);
             }
             var6 = var10.field_f;
@@ -2002,15 +2002,15 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return this.field_Nb + this.field_ob + this.field_mb;
     }
 
-    final void d(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final void drawRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
         float var7 = this.f((byte) -95);
         this.d(false);
         this.e(-123, param4);
         this.a(0, pea.field_d, 7);
         this.a(0, (byte) -113, pea.field_d);
         this.c(103, param5);
-        this.field_O.a(5557, (float)(-1 + param2), (float)(param3 - 1), 1.0f);
-        this.field_O.a(0.0f, (float)param0 - var7, -var7 + (float)param1, (byte) 13);
+        this.field_O.setScale(5557, (float)(-1 + param2), (float)(param3 - 1), 1.0f);
+        this.field_O.translate(0.0f, (float)param0 - var7, -var7 + (float)param1, (byte) 13);
         this.h(20837);
         this.a(-118, false);
         this.a(0, GetFightersPerPlayerMaximum.field_o, 4);
@@ -2021,14 +2021,14 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     abstract void m(int param0);
 
-    final oj z(byte param0) {
+    final GpuTransform3D z(byte param0) {
         if (param0 < 70) {
           this.field_pb = (mma) null;
         }
         return this.field_yb;
     }
 
-    final boolean c() {
+    final boolean isBloomSupported() {
         return false;
     }
 
@@ -2101,7 +2101,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final boolean h() {
+    final boolean supportsMultipleThreads() {
         return false;
     }
 
@@ -2150,7 +2150,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.field_T.a(-127);
     }
 
-    final boolean p() {
+    final boolean supportsFarClipPlane() {
         return true;
     }
 
@@ -2280,19 +2280,19 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.field_Ib.a(24, this);
     }
 
-    final aja a(ima param0, boolean param1) {
+    final ToolkitSprite createSprite(IndexedSpriteData param0, boolean param1) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int[] stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         int stackIn_13_2 = 0;
-        aja stackIn_23_0 = null;
+        ToolkitSprite stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        aja var3 = null;
+        ToolkitSprite var3 = null;
         RuntimeException var3_ref = null;
         int[] var4 = null;
         int var5 = 0;
@@ -2340,11 +2340,11 @@ abstract class GpuToolkit extends GraphicsToolkit {
                 }
               }
             }
-            var3 = this.a(param0.field_f, param0.field_f, var12, 0, (byte) 70, param0.field_e);
+            var3 = this.createSprite(param0.field_f, param0.field_f, var12, 0, (byte) 70, param0.field_e);
           } else {
-            var3 = this.a(1, 1, new int[]{0}, 0, (byte) 92, 1);
+            var3 = this.createSprite(1, 1, new int[]{0}, 0, (byte) 92, 1);
           }
-          var3.a(param0.field_c, param0.field_g, param0.field_i, param0.field_d);
+          var3.setPadding(param0.field_c, param0.field_g, param0.field_i, param0.field_d);
           stackIn_23_0 = var3;
           return stackIn_23_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2361,22 +2361,22 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final boolean k() {
+    final boolean supportsEnvironmentMaps() {
         return true;
     }
 
     abstract void h(boolean param0);
 
-    final boolean e() {
+    final boolean supportsUnderwaterEffects() {
         return this.field_dc[3].a((byte) 111);
     }
 
     abstract void j(byte param0);
 
-    final za e(int param0) {
-        cba var2 = new cba(param0);
+    final GraphicsHeap createHeap(int param0) {
+        GpuNativeHeap var2 = new GpuNativeHeap(param0);
         this.field_s.addLast(-10258, var2);
-        return (za) ((Object) var2);
+        return (GraphicsHeap) ((Object) var2);
     }
 
     final int a(boolean param0) {
@@ -2395,18 +2395,18 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return this.field_Pb;
     }
 
-    final void a(pw param0) {
+    final void setViewTransform(Transform3D param0) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          this.field_t = (oj) (param0);
-          this.field_gb.a(this.field_t, 16383);
-          this.field_gb.a(16489);
-          this.field_yb.a(-25609, this.field_gb);
-          this.field_f.a(-25609, this.field_t);
+          this.field_t = (GpuTransform3D) (param0);
+          this.field_gb.set(this.field_t, 16383);
+          this.field_gb.flipYZ(16489);
+          this.field_yb.setRigidInverse(-25609, this.field_gb);
+          this.field_f.setRigidInverse(-25609, this.field_t);
           if (this.field_pb.a(-12178)) {
             this.s(0);
           }
@@ -2425,9 +2425,9 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final void a(za param0) {
+    final void setHeap(GraphicsHeap param0) {
         try {
-          this.field_jc = ((cba) (param0)).field_f;
+          this.field_jc = ((GpuNativeHeap) (param0)).heap;
           this.field_m = this.field_jc.allocate(32768, false);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pf.GB(" + (param0 != null ? "{...}" : "null") + ')');

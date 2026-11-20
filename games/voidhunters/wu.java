@@ -13,7 +13,7 @@ final class wu extends uda {
         if (param0 != 5) {
           return;
         }
-        this.field_d.a(MissionVariable.field_c, true, asa.field_a);
+        this.field_d.a(MissionVariable.field_c, true, OpenGlGlyphMask.field_a);
     }
 
     final void a(int param0, int param1, int param2) {
@@ -114,7 +114,7 @@ final class wu extends uda {
 
     final void a(int param0) {
         this.field_d.g(1, -59);
-        this.field_d.a(asa.field_a, true, asa.field_a);
+        this.field_d.a(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
         this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, param0 ^ 2536);
         this.field_d.a(0, (byte) -101, SetGrapplingHookMaxExtension8Force.field_q);
         this.field_d.d(-70, 1);
@@ -163,7 +163,7 @@ final class wu extends uda {
                 qqa.a(true, (byte) -41);
               }
               vqa.field_g = new uca(false, var3, 0, false, var4, var5, param0);
-              mjb.field_e = param1;
+              GpuSprite.field_e = param1;
               di.field_l.a(false, -13027);
               var6 = mnb.field_d ? 1 : 0;
               stackIn_34_0 = (bqa.a(false)) ? 7 : 0;
@@ -187,7 +187,7 @@ final class wu extends uda {
               qqa.a(true, (byte) -41);
             }
             vqa.field_g = new uca(false, var3, 0, false, var4, var5Lifetime2, param0);
-            mjb.field_e = param1;
+            GpuSprite.field_e = param1;
             di.field_l.a(false, -13027);
             var6Lifetime2 = mnb.field_d ? 1 : 0;
             stackIn_22_0 = (bqa.a(false)) ? 7 : 0;
@@ -215,7 +215,7 @@ final class wu extends uda {
             qqa.a(true, (byte) -41);
           }
           vqa.field_g = new uca(false, var3, 0, false, var4, var5Lifetime1, param0);
-          mjb.field_e = param1;
+          GpuSprite.field_e = param1;
           di.field_l.a(false, -13027);
           var6Lifetime1 = mnb.field_d ? 1 : 0;
           stackIn_52_0 = (bqa.a(false)) ? 7 : 0;
@@ -228,7 +228,7 @@ final class wu extends uda {
               qqa.a(true, (byte) -41);
             }
             vqa.field_g = new uca(false, var3, 0, false, var4, var5Lifetime1, param0);
-            mjb.field_e = param1;
+            GpuSprite.field_e = param1;
             di.field_l.a(false, -13027);
             var6Lifetime1 = mnb.field_d ? 1 : 0;
             stackIn_77_0 = (bqa.a(false)) ? 7 : 0;
@@ -241,7 +241,7 @@ final class wu extends uda {
               qqa.a(true, (byte) -41);
             }
             vqa.field_g = new uca(false, var3, 0, false, var4, var5Lifetime1, param0);
-            mjb.field_e = param1;
+            GpuSprite.field_e = param1;
             di.field_l.a(false, -13027);
             var6Lifetime1 = mnb.field_d ? 1 : 0;
             stackIn_65_0 = (bqa.a(false)) ? 7 : 0;
@@ -259,15 +259,15 @@ final class wu extends uda {
     }
 
     final void d(int param0) {
-        oj var2 = null;
-        oj var3 = null;
+        GpuTransform3D var2 = null;
+        GpuTransform3D var3 = null;
         if (0 == this.field_d.t((byte) 9)) {
           var2 = this.field_d.p(0);
           this.field_d.g(1, -90);
           var3 = this.field_d.H((byte) 82);
-          var3.a(var2, 16383);
-          var3.b(-3286, 0.125f, 0.125f, 1.0f);
-          var3.a(this.field_f, 0.0f, 0.0f, (byte) 13);
+          var3.set(var2, 16383);
+          var3.scale(-3286, 0.125f, 0.125f, 1.0f);
+          var3.translate(this.field_f, 0.0f, 0.0f, (byte) 13);
           this.field_d.a(LoadSettings.field_o, true);
           this.field_d.g(0, -52);
         }

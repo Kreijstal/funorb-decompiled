@@ -127,7 +127,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
               var5 = 1;
             }
             if (2 == SetReverbDry.a(var5, (byte) 19)) {
-              mea.a(1, (byte) -76, param1, var5);
+              OpenGlPostEffect.a(1, (byte) -76, param1, var5);
             }
             SetBurstFireReload.a(var4_ref_String, param2 - 25634, -1, param0, ow.field_b, waa.field_x);
           } else {

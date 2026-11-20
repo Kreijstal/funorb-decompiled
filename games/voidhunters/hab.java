@@ -14,7 +14,7 @@ final class hab extends uda {
         if (param0 != 5) {
           return;
         }
-        this.field_d.a(MissionVariable.field_c, true, asa.field_a);
+        this.field_d.a(MissionVariable.field_c, true, OpenGlGlyphMask.field_a);
     }
 
     public static void clearSharedReferences(int param0) {
@@ -50,7 +50,7 @@ final class hab extends uda {
     }
 
     final void a(int param0, boolean param1) {
-        oj var4 = null;
+        GpuTransform3D var4 = null;
         if (param0 != 5) {
           return;
         }
@@ -68,7 +68,7 @@ final class hab extends uda {
           this.field_d.a(true, param0 ^ -21120, false, pja.field_l, 2);
           this.field_d.a(0, (byte) -97, GetArmageddonLength.field_q);
           var4 = this.field_d.H((byte) -125);
-          var4.b(param0 ^ 5, this.field_d.z((byte) 103));
+          var4.copyRotationWithXTranslation(param0 ^ 5, this.field_d.z((byte) 103));
           this.field_d.a(LoadSettings.field_o, true);
           this.field_d.g(0, -71);
           this.field_f = true;
@@ -85,7 +85,7 @@ final class hab extends uda {
     final void a(int param0) {
         if (!this.field_f) {
           this.field_d.a(0, (byte) -97, SetGrapplingHookMaxExtension8Force.field_q);
-          this.field_d.a(asa.field_a, true, asa.field_a);
+          this.field_d.a(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
           if (param0 != 2543) {
             field_i = -56;
             return;
@@ -94,14 +94,14 @@ final class hab extends uda {
         }
         this.field_d.g(1, -43);
         this.field_d.a((byte) -111, meb.field_d);
-        this.field_d.a(asa.field_a, true, asa.field_a);
+        this.field_d.a(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
         this.field_d.a(2, pea.field_d, param0 - 2536);
         this.field_d.a(0, (byte) -125, SetGrapplingHookMaxExtension8Force.field_q);
         this.field_d.F((byte) 116);
         this.field_d.a((ura) null, param0 - 2652);
         this.field_d.g(0, param0 ^ -2481);
         this.field_f = false;
-        this.field_d.a(asa.field_a, true, asa.field_a);
+        this.field_d.a(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
         if (param0 != 2543) {
           field_i = -56;
           return;

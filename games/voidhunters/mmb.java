@@ -5,7 +5,7 @@ final class mmb {
     int field_f;
     static int field_i;
     static String field_b;
-    static aja[] field_d;
+    static ToolkitSprite[] field_d;
     static int field_g;
     int field_c;
     int field_h;

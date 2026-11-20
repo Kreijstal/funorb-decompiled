@@ -13,12 +13,12 @@ final class lo {
         field_c = null;
         if (!param0) {
           lta var2 = (lta) null;
-          lo.a(20, 74, (aja) null, (lta) null);
+          lo.a(20, 74, (ToolkitSprite) null, (lta) null);
         }
         field_a = null;
     }
 
-    final static void a(int param0, int param1, aja param2, lta param3) {
+    final static void a(int param0, int param1, ToolkitSprite param2, lta param3) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -75,7 +75,7 @@ final class lo {
               var21 = param3.b(true, var15);
               var22 = param3.a(var18, (byte) 127);
               var23 = param3.b(true, var19);
-              param2.b(var20, var21, var22 - var20, -var21 + var23);
+              param2.drawScaled(var20, var21, var22 - var20, -var21 + var23);
               var15 = var15 + param1;
             }
             var14 = var14 + param1;

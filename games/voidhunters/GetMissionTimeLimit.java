@@ -50,8 +50,8 @@ final class GetMissionTimeLimit extends ConsoleCommand {
             GetTorpedoProjectileDamage.field_o = false;
           }
           if (param0) {
-            if (lia.field_b > 0) {
-              lia.field_b = lia.field_b - 1;
+            if (SoftwareTransform3D.field_b > 0) {
+              SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - 1;
             } else {
               if (CarouselPlayerEventFactory.field_a <= 0) {
                 if (SetExplosionPushMultiplier.field_p > 0) {
@@ -63,7 +63,7 @@ final class GetMissionTimeLimit extends ConsoleCommand {
             }
           } else {
             if (SetSpinningBladeSpindamageMultiplier.field_o != null) {
-              if (0 >= lia.field_b) {
+              if (0 >= SoftwareTransform3D.field_b) {
                 if (CarouselPlayerEventFactory.field_a <= 0) {
                   if (GetRepairModePower.field_o > SetExplosionPushMultiplier.field_p) {
                     if (SetExplosionPushMultiplier.field_p == 0) {
@@ -75,12 +75,12 @@ final class GetMissionTimeLimit extends ConsoleCommand {
                   CarouselPlayerEventFactory.field_a = CarouselPlayerEventFactory.field_a - 1;
                 }
               } else {
-                lia.field_b = lia.field_b - 1;
+                SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - 1;
               }
             } else {
               if (null != SetThrusterParticleSpeedDownshift.field_o) {
-                if (0 < lia.field_b) {
-                  lia.field_b = lia.field_b - 1;
+                if (0 < SoftwareTransform3D.field_b) {
+                  SoftwareTransform3D.field_b = SoftwareTransform3D.field_b - 1;
                 } else {
                   if (0 < SetExplosionPushMultiplier.field_p) {
                     SetExplosionPushMultiplier.field_p = SetExplosionPushMultiplier.field_p - 1;
@@ -99,11 +99,11 @@ final class GetMissionTimeLimit extends ConsoleCommand {
                   CarouselPlayerEventFactory.field_a = CarouselPlayerEventFactory.field_a - 1;
                 } else {
                   if (SetExplosionPushMultiplier.field_p <= 0) {
-                    if (lia.field_b < GetRepairModePower.field_o) {
-                      if (lia.field_b == 0) {
+                    if (SoftwareTransform3D.field_b < GetRepairModePower.field_o) {
+                      if (SoftwareTransform3D.field_b == 0) {
                         fma.l(8611);
                       }
-                      lia.field_b = lia.field_b + 1;
+                      SoftwareTransform3D.field_b = SoftwareTransform3D.field_b + 1;
                     }
                   } else {
                     SetExplosionPushMultiplier.field_p = SetExplosionPushMultiplier.field_p - 1;

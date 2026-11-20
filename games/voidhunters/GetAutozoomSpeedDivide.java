@@ -8,7 +8,7 @@ final class GetAutozoomSpeedDivide extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1, String param2, byte param3, int param4, int param5, da param6, GraphicsToolkit param7, sw param8, int param9, int param10) {
+    final static void a(int param0, int param1, String param2, byte param3, int param4, int param5, ToolkitFont param6, GraphicsToolkit param7, ToolkitFontMetrics param8, int param9, int param10) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -36,12 +36,12 @@ final class GetAutozoomSpeedDivide extends ConsoleCommand {
           if (param1 < var12 + (var14 + 6)) {
             var14 = -6 + param1 - var12;
           }
-          param7.a(114, var14, 6 + var11_int, -16777216 | param0, var13, 6 + var12);
+          param7.drawRectangleDefaultBlend(114, var14, 6 + var11_int, -16777216 | param0, var13, 6 + var12);
           if (param3 != 100) {
             var15 = (eab) null;
             GetAutozoomSpeedDivide.a(-53, -31, (eab) null, -44, -9, 98);
           }
-          param7.a(var11_int + 4, (byte) 120, -16777216 | param9, var12 + 4, 1 + var14, 1 + var13);
+          param7.fillRectangle(var11_int + 4, (byte) 120, -16777216 | param9, var12 + 4, 1 + var14, 1 + var13);
           param6.a(true, param0 | -16777216, -1, param2, var14 + 3 + param8.field_d, var13 + 3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

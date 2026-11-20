@@ -71,7 +71,7 @@ final class TeamShipComponentConditionFactory implements GameStateFactory {
         var2 = VoidHunters.field_G;
         RemoveEventActionFactory.field_b = false;
         hab.field_j = null;
-        if (tla.field_c) {
+        if (OpenGlSprite.field_c) {
           SetPointDefenceLaserAimarc.field_o.g(-123);
           if (param0 > 30) {
             return;

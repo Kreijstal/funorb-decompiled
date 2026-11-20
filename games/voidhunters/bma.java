@@ -18,7 +18,7 @@ final class bma extends uda {
     final void a(int param0) {
         this.field_d.g(1, -64);
         this.field_d.a((ura) null, -114);
-        this.field_d.a(asa.field_a, true, asa.field_a);
+        this.field_d.a(OpenGlGlyphMask.field_a, true, OpenGlGlyphMask.field_a);
         this.field_d.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
         this.field_d.a(2, pea.field_d, param0 - 2536);
         this.field_d.a(0, (byte) -72, SetGrapplingHookMaxExtension8Force.field_q);
@@ -91,8 +91,8 @@ final class bma extends uda {
         float var4 = 0.0f;
         float var5 = 0.0f;
         if (this.field_g) {
-          var2 = this.field_d.XA();
-          var3 = this.field_d.i();
+          var2 = this.field_d.getFarPlane();
+          var3 = this.field_d.getNearPlane();
           var4 = -((float)(var2 - var3) * 0.125f) + (float)var2;
           var5 = (float)var2 - (float)(var2 - var3) * 0.25f;
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.field_d.D(100), (float)this.field_d.a(!param0 ? true : false) / 255.0f);
@@ -190,7 +190,7 @@ final class bma extends uda {
 
     private final void e(int param0) {
         int var2 = this.field_d.u((byte) 127);
-        oj var3 = this.field_d.g((byte) 47);
+        GpuTransform3D var3 = this.field_d.g((byte) 47);
         if (this.field_i) {
           jaggl.OpenGL.glBindProgramARB(34336, var2 != 2147483647 ? this.field_j.field_c : this.field_k.field_c);
         } else {
@@ -198,7 +198,7 @@ final class bma extends uda {
         }
         jaggl.OpenGL.glEnable(34336);
         this.field_g = true;
-        var3.a(this.field_h, -1.0f, (byte) 67, (float)var2, (float)param0, 0.0f);
+        var3.transformPlane(this.field_h, -1.0f, (byte) 67, (float)var2, (float)param0, 0.0f);
         jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 1, this.field_h[0], this.field_h[1], this.field_h[2], this.field_h[3]);
         this.b(true);
     }

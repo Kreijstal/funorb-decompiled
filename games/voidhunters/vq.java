@@ -152,7 +152,7 @@ abstract class vq extends dqa implements lca {
               stackIn_37_0 = -1;
               return stackIn_37_0;
             }
-            GetAutozoomAmountMultiply.field_o.a(eu.field_h, sw.field_f, false);
+            GetAutozoomAmountMultiply.field_o.a(eu.field_h, ToolkitFontMetrics.field_f, false);
             gob.field_c = 0;
             eu.field_h = null;
             ija.field_b = null;

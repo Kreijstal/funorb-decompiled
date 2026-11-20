@@ -5,18 +5,18 @@ final class kla {
     private sja field_e;
     private int[] field_g;
     private GraphicsToolkit field_f;
-    private aja field_c;
+    private ToolkitSprite field_c;
     static dfa field_d;
     private sja field_a;
     static String field_b;
 
-    private final void a(aja param0, int param1, boolean param2) {
+    private final void a(ToolkitSprite param0, int param1, boolean param2) {
         try {
           this.b(-117);
           if (this.field_c != null) {
-            this.field_f.j();
+            this.field_f.restoreDefaultFramebuffer();
           }
-          this.field_f.a(param0, param2);
+          this.field_f.setRenderTarget(param0, param2);
           if (param1 != 4) {
             field_d = (dfa) null;
           }
@@ -40,7 +40,7 @@ final class kla {
         sja var3Lifetime1Lifetime1;
         sja var2Lifetime1Lifetime1;
         if (this.field_e.field_k == this.field_c) {
-          this.field_f.KA(this.field_e.field_h, this.field_e.field_f, this.field_e.field_l, this.field_e.field_a);
+          this.field_f.setClip(this.field_e.field_h, this.field_e.field_f, this.field_e.field_l, this.field_e.field_a);
           if (!param0) {
             this.b(0);
             var3 = this.field_e;
@@ -59,12 +59,12 @@ final class kla {
           this.field_a = var3Lifetime4;
           return;
         }
-        this.field_f.j();
+        this.field_f.restoreDefaultFramebuffer();
         if (null != this.field_e.field_k) {
-          this.field_f.a(this.field_e.field_k, true);
+          this.field_f.setRenderTarget(this.field_e.field_k, true);
         } else {
           this.field_c = this.field_e.field_k;
-          this.field_f.KA(this.field_e.field_h, this.field_e.field_f, this.field_e.field_l, this.field_e.field_a);
+          this.field_f.setClip(this.field_e.field_h, this.field_e.field_f, this.field_e.field_l, this.field_e.field_a);
           if (!param0) {
             this.b(0);
             var3Lifetime1 = this.field_e;
@@ -84,7 +84,7 @@ final class kla {
           return;
         }
         this.field_c = this.field_e.field_k;
-        this.field_f.KA(this.field_e.field_h, this.field_e.field_f, this.field_e.field_l, this.field_e.field_a);
+        this.field_f.setClip(this.field_e.field_h, this.field_e.field_f, this.field_e.field_l, this.field_e.field_a);
         if (param0) {
           var3Lifetime2 = this.field_e;
           var2Lifetime2 = var3Lifetime2;
@@ -108,12 +108,12 @@ final class kla {
           return;
         }
         this.b(-127);
-        this.field_f.T(param0, param2, param1, param3);
+        this.field_f.intersectClip(param0, param2, param1, param3);
     }
 
     private final void b(int param0) {
         sja var2 = null;
-        this.field_f.K(this.field_g);
+        this.field_f.getClip(this.field_g);
         if (null == this.field_a) {
           var2 = new sja();
         } else {
@@ -127,7 +127,7 @@ final class kla {
         }
     }
 
-    final void a(aja param0, int param1) {
+    final void a(ToolkitSprite param0, int param1) {
         try {
           this.a(param0, param1 + 4, false);
           if (param1 != 0) {

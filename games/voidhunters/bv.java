@@ -554,12 +554,12 @@ final class bv {
             }
             if (var13Lifetime1 != null) {
               var14 = ae.a((int[]) (var13Lifetime1), (byte) 56);
-              var14.h(17704, 1);
-              var14.a(new ShipAI(), 4);
+              var14.setTeam(17704, 1);
+              var14.setAi(new ShipAI(), 4);
               var15 = param1.world.a(0, param1.world.m(1) / 2, 0, 0, var14.getTeam((byte) 108), param1.world.getWidth((byte) -122) / 2);
               var14.a(var15.field_c, var15.field_b, (byte) 80);
               param1.world.a(var14, (byte) 72);
-              var14.r(-2);
+              var14.endSpawnProtection(-2);
               var16 = new MissionEvent();
               var16.addCondition((byte) -106, (MissionCondition) (new BodyDestroyedCondition(var14.getId(false))));
               var16.addAction(new IncrementVariableAction(0, 1), true);
@@ -639,7 +639,7 @@ final class bv {
         int[] var24_array = null;
         int var25 = 0;
         int var26_int = 0;
-        aja var26 = null;
+        ToolkitSprite var26 = null;
         int var27 = 0;
         int var28 = 0;
         int var29 = 0;
@@ -832,14 +832,14 @@ final class bv {
                         var24_intLifetime2 = PlayerGameData.field_b;
                         var25Lifetime1 = uia.field_b;
                         var26 = mmb.field_d[0];
-                        var26.a(-(var26.d() / 2) + var24_intLifetime2, -(var26.a() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.a(lu.field_f[1], 255) << 24, 1);
+                        var26.draw(-(var26.getWidth() / 2) + var24_intLifetime2, -(var26.getHeight() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.a(lu.field_f[1], 255) << 24, 1);
                       }
                     } else {
                       if (var22 != 0) {
                         var24_intLifetime2 = PlayerGameData.field_b;
                         var25Lifetime1 = uia.field_b;
                         var26 = mmb.field_d[0];
-                        var26.a(-(var26.d() / 2) + var24_intLifetime2, -(var26.a() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.a(lu.field_f[1], 255) << 24, 1);
+                        var26.draw(-(var26.getWidth() / 2) + var24_intLifetime2, -(var26.getHeight() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.a(lu.field_f[1], 255) << 24, 1);
                       }
                     }
                     var23_int = 1024;
@@ -995,7 +995,7 @@ final class bv {
                     }
                   }
                   if (param12.d(4, 72)) {
-                    if (param12.q(-50)) {
+                    if (param12.isRepairModeFullyCharged(-50)) {
                       this.a(-26476, 6);
                     }
                     if (!param12.getRepairModeOn(32)) {

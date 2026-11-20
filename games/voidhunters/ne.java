@@ -330,7 +330,7 @@ final class ne extends ka {
             !SetMachineGunAimarc.field_p.equals(param2.getParameter("session"))) {
             var5Lifetime1 = SetMachineGunAimarc.field_p;
           }
-          stackIn_8_0 = mpb.a(-1, param0, (byte) 50, (String) (var4), (String) (var5Lifetime1));
+          stackIn_8_0 = OpenGlBloomEffect.a(-1, param0, (byte) 50, (String) (var4), (String) (var5Lifetime1));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

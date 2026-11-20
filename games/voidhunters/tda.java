@@ -64,14 +64,14 @@ final class tda extends iw implements oo {
         shb var3 = null;
         try {
           this.field_L = wt.a(false);
-          var3 = new shb(al.field_a, (sba) null);
+          var3 = new shb(SoftwareFramebuffer.field_a, (sba) null);
           var3.field_g = 0;
           var3.field_h = this.field_h;
           var3.field_r = 50;
           var3.field_f = 100;
           var3.field_q = (wwa) ((Object) new bob(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b(-18756, var3);
-          this.field_J = new shb(al.field_a, (sba) null);
+          this.field_J = new shb(SoftwareFramebuffer.field_a, (sba) null);
           this.field_J.field_r = 20 + var3.field_r + var3.field_f;
           this.field_J.field_g = 0;
           this.field_J.field_h = this.field_h;

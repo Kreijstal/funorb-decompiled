@@ -133,7 +133,7 @@ final class uga extends qg {
           this.field_e.a(true, '\0');
           this.field_b.h(33984, 1);
           jaggl.OpenGL.glMatrixMode(5890);
-          jaggl.OpenGL.glLoadMatrixf(this.field_b.field_Bb.a(true), 0);
+          jaggl.OpenGL.glLoadMatrixf(this.field_b.field_Bb.getColumnMajorMatrix(true), 0);
           jaggl.OpenGL.glMatrixMode(5888);
           this.field_b.h(33984, 0);
           if (this.field_c != this.field_b.field_Mc) {

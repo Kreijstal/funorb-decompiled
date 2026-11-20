@@ -6,7 +6,7 @@ import java.util.*;
 final class djb extends qc {
     private ConsoleCommand[] field_t;
     static boolean field_r;
-    static ima[][] field_s;
+    static IndexedSpriteData[][] field_s;
 
     final void a(int param0) {
         StringBuilder discarded$0 = null;
@@ -369,7 +369,7 @@ final class djb extends qc {
 
     public static void clearSharedReferences(byte param0) {
         try {
-          field_s = (ima[][]) null;
+          field_s = (IndexedSpriteData[][]) null;
           int var1_int = -118 % ((83 - param0) / 35);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "djb.B(" + param0 + ')');

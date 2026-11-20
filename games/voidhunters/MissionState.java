@@ -1139,7 +1139,7 @@ final class MissionState implements DiffableState {
               var6_ref_Random = new Random((long)var5Lifetime1);
               var23 = this.a(param0, (byte) -96);
               for (var8 = 0; var23.length > var8; var8++) {
-                if (!tla.b(param2 ^ -110, var8)) {
+                if (!OpenGlSprite.b(param2 ^ -110, var8)) {
                   var23[var8] = -1;
                 }
               }

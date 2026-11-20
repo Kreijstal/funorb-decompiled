@@ -47,7 +47,7 @@ final class MovingObjectFactory implements GameStateFactory {
             kja.field_E.addLast(-10258, param1);
             return;
           }
-          al.a(param1, var2, 2);
+          SoftwareFramebuffer.insertBefore(param1, var2, 2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

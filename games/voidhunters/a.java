@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class a implements e {
+final class a implements NativeResource {
     private NativeSoftwareToolkit field_b;
     long field_nativeid;
     Runnable field_a;
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          pq.a(0, (e) (this));
+          NativeDisposalQueue.enqueue(0, (NativeResource) (this));
         }
     }
 
@@ -36,7 +36,7 @@ final class a implements e {
         this.HA(this.field_nativeid, param0, param1, param2);
     }
 
-    public final void w(boolean param0) {
+    public final void disposeNative(boolean param0) {
         this.E(this.field_nativeid, param0);
     }
 

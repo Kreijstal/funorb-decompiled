@@ -15,9 +15,9 @@ final class t {
         try {
           var4 = param1.field_g;
           var3 = var4;
-          var4.KA(this.field_b[0], this.field_b[1], this.field_b[2], this.field_b[3]);
-          var4.DA(this.field_d[0], this.field_d[param0], this.field_d[2], this.field_d[3]);
-          var3.f(this.field_f, this.field_a);
+          var4.setClip(this.field_b[0], this.field_b[1], this.field_b[2], this.field_b[3]);
+          var4.setProjectionParameters(this.field_d[0], this.field_d[param0], this.field_d[2], this.field_d[3]);
+          var3.setDepthRange(this.field_f, this.field_a);
           param1.field_e = this.field_c;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "t.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -31,10 +31,10 @@ final class t {
         }
         try {
           var3 = param1.field_g;
-          var3.K(this.field_b);
-          this.field_d = var3.Y();
-          this.field_f = var3.i();
-          this.field_a = var3.XA();
+          var3.getClip(this.field_b);
+          this.field_d = var3.getProjectionParameters();
+          this.field_f = var3.getNearPlane();
+          this.field_a = var3.getFarPlane();
           this.field_c = param1.field_e;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "t.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

@@ -87,7 +87,7 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
         if (param3 != 0) {
           IncrementVariableAction.a(125, 2, 96);
           if (li.field_i) {
-            mmb.field_d[param0].a(param4, param2, 0, 16777215 | param1 << 24, 1);
+            mmb.field_d[param0].draw(param4, param2, 0, 16777215 | param1 << 24, 1);
             return;
           }
           return;
@@ -95,7 +95,7 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
         if (!li.field_i) {
           return;
         }
-        mmb.field_d[param0].a(param4, param2, 0, 16777215 | param1 << 24, 1);
+        mmb.field_d[param0].draw(param4, param2, 0, 16777215 | param1 << 24, 1);
     }
 
     final void execute(int param0, int[] param1, GameSnapshot param2) {

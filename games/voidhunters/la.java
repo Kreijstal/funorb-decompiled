@@ -69,13 +69,13 @@ final class la extends qg {
     }
 
     final void e(int param0) {
-        epb var2 = this.field_b.field_F;
+        OpenGlTransform3D var2 = this.field_b.field_F;
         if (!this.field_l) {
           jaggl.OpenGL.glBindProgramARB(34336, this.field_b.field_V == 2147483647 ? this.field_d.field_b : this.field_g.field_b);
         } else {
           jaggl.OpenGL.glBindProgramARB(34336, this.field_b.field_V == 2147483647 ? this.field_c.field_b : this.field_i.field_b);
         }
-        var2.a(SetCountermeasureLauncherAimspeed.field_o, 0.0f, (float)this.field_b.field_V, 0.0f, param0 - 34323, -1.0f);
+        var2.transformPlane(SetCountermeasureLauncherAimspeed.field_o, 0.0f, (float)this.field_b.field_V, 0.0f, param0 - 34323, -1.0f);
         jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 1, SetCountermeasureLauncherAimspeed.field_o[0], SetCountermeasureLauncherAimspeed.field_o[1], SetCountermeasureLauncherAimspeed.field_o[2], SetCountermeasureLauncherAimspeed.field_o[3]);
         jaggl.OpenGL.glEnable(param0);
         this.field_e = true;
@@ -173,8 +173,8 @@ final class la extends qg {
         float var5Lifetime1;
         if (param0 > 108) {
           if (this.field_e) {
-            var2 = this.field_b.XA();
-            var3 = this.field_b.i();
+            var2 = this.field_b.getFarPlane();
+            var3 = this.field_b.getNearPlane();
             var4 = (float)var2 - (float)(var2 - var3) * 0.125f;
             var5 = -((float)(-var3 + var2) * 0.25f) + (float)var2;
             jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.field_b.field_Hc, (float)this.field_b.field_M / 255.0f);
@@ -186,8 +186,8 @@ final class la extends qg {
         }
         this.a(-111, -111, -119);
         if (this.field_e) {
-          var2Lifetime1 = this.field_b.XA();
-          var3Lifetime1 = this.field_b.i();
+          var2Lifetime1 = this.field_b.getFarPlane();
+          var3Lifetime1 = this.field_b.getNearPlane();
           var4Lifetime1 = (float)var2Lifetime1 - (float)(var2Lifetime1 - var3Lifetime1) * 0.125f;
           var5Lifetime1 = -((float)(-var3Lifetime1 + var2Lifetime1) * 0.25f) + (float)var2Lifetime1;
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5Lifetime1, var4Lifetime1, 1.0f / (float)this.field_b.field_Hc, (float)this.field_b.field_M / 255.0f);

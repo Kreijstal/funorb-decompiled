@@ -91,7 +91,7 @@ final class atb {
             this.field_c.a(var11, (long)param1, (byte) -117);
             return var11;
           }
-          if (!tka.a(param0 ^ 2, (int) var5.field_c)) {
+          if (!SoftwareGlyphMask.a(param0 ^ 2, (int) var5.field_c)) {
             var24 = this.field_e.a(103, var6, var6, false, param1, 0.699999988079071f);
             stackIn_20_0 = this.field_a;
             stackIn_20_1 = var6;
@@ -117,7 +117,7 @@ final class atb {
           this.field_c.a(var15, (long)param1, (byte) -117);
           return var15;
         }
-        if (this.field_a.s()) {
+        if (this.field_a.isBloomEnabled()) {
           var9 = this.field_e.a(0.699999988079071f, var6, param1, var6, 117, false);
           var7 = var9;
           stackIn_56_0 = this.field_a;
@@ -146,7 +146,7 @@ final class atb {
           this.field_c.a(var17, (long)param1, (byte) -117);
           return var17;
         }
-        if (!tka.a(param0 ^ 2, (int) var5.field_c)) {
+        if (!SoftwareGlyphMask.a(param0 ^ 2, (int) var5.field_c)) {
           var27 = this.field_e.a(103, var6, var6, false, param1, 0.699999988079071f);
           stackIn_43_0 = this.field_a;
           stackIn_43_1 = var6;

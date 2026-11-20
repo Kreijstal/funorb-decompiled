@@ -122,7 +122,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_chat_off", 23100);
                 if (var2 != null) {
-                  gpa.field_f = qpa.a((byte) -125, var2);
+                  OpenGlNativeHeap.field_f = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_chat_lobby", 23100);
                 if (var2 != null) {
@@ -302,7 +302,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_options_dontmind", 23100);
                 if (var2 != null) {
-                  mpb.field_k = qpa.a((byte) -125, var2);
+                  OpenGlBloomEffect.field_k = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_options_allow_spectate", 23100);
                 if (null != var2) {
@@ -638,7 +638,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("you_can_spectate", 23100);
                 if (var2 != null) {
-                  tla.field_h = qpa.a((byte) -125, var2);
+                  OpenGlSprite.field_h = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("you_can_not_spectate", 23100);
                 if (var2 != null) {
@@ -1040,7 +1040,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("tocustomersupport", 23100);
                 if (null != var2) {
-                  lia.field_c = qpa.a((byte) -125, var2);
+                  SoftwareTransform3D.field_c = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("changedisplayname", 23100);
                 if (var2 != null) {
@@ -2577,19 +2577,19 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("reconnect_lost_seq,0", 23100);
                 if (var2 != null) {
-                  mpb.field_l[0] = qpa.a((byte) -125, var2);
+                  OpenGlBloomEffect.field_l[0] = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("reconnect_lost_seq,1", 23100);
                 if (null != var2) {
-                  mpb.field_l[1] = qpa.a((byte) -125, var2);
+                  OpenGlBloomEffect.field_l[1] = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("reconnect_lost_seq,2", 23100);
                 if (var2 != null) {
-                  mpb.field_l[2] = qpa.a((byte) -125, var2);
+                  OpenGlBloomEffect.field_l[2] = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("reconnect_lost_seq,3", 23100);
                 if (null != var2) {
-                  mpb.field_l[3] = qpa.a((byte) -125, var2);
+                  OpenGlBloomEffect.field_l[3] = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("reconnect_lost", 23100);
                 if (null != var2) {

@@ -24,7 +24,7 @@ final class mf {
             return;
           }
           if (param1 + param5 <= hab.field_i) {
-            sw.a((byte) -117, param5, param1, param0, param4, param3);
+            ToolkitFontMetrics.a((byte) -117, param5, param1, param0, param4, param3);
             return;
           }
           SetGrapplingHookFireForce.a((byte) -126, param5, param4, param3, param1, param0);
@@ -43,7 +43,7 @@ final class mf {
           return;
         }
         if (param1 + param5 <= hab.field_i) {
-          sw.a((byte) -117, param5, param1, param0, param4, param3);
+          ToolkitFontMetrics.a((byte) -117, param5, param1, param0, param4, param3);
           return;
         }
         SetGrapplingHookFireForce.a((byte) -126, param5, param4, param3, param1, param0);

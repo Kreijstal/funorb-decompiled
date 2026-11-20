@@ -109,9 +109,9 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
         int var12 = 0;
         lta var13 = null;
         Random var14 = null;
-        aja var15 = null;
+        ToolkitSprite var15 = null;
         lta var16 = null;
-        aja var17 = null;
+        ToolkitSprite var17 = null;
         int var7Lifetime1;
         int var8Lifetime1;
         int var8Lifetime2;
@@ -167,10 +167,10 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
           var9Lifetime1 = param1.b(true, var5) + 1;
           if (li.field_i) {
             if (GetLaserAimarc.field_p) {
-              GetDebrisGroupColour.field_r.U(var6, var8Lifetime2, var7Lifetime1 - var6, 16777215, 0);
-              GetDebrisGroupColour.field_r.U(var6, var9Lifetime1, -var6 + var7Lifetime1, 16777215, 0);
-              GetDebrisGroupColour.field_r.P(var6, var8Lifetime2, -var8Lifetime2 + var9Lifetime1, 16777215, 0);
-              GetDebrisGroupColour.field_r.P(var7Lifetime1, var8Lifetime2, -var8Lifetime2 + var9Lifetime1, 16777215, 0);
+              GetDebrisGroupColour.field_r.drawHorizontalLine(var6, var8Lifetime2, var7Lifetime1 - var6, 16777215, 0);
+              GetDebrisGroupColour.field_r.drawHorizontalLine(var6, var9Lifetime1, -var6 + var7Lifetime1, 16777215, 0);
+              GetDebrisGroupColour.field_r.drawVerticalLine(var6, var8Lifetime2, -var8Lifetime2 + var9Lifetime1, 16777215, 0);
+              GetDebrisGroupColour.field_r.drawVerticalLine(var7Lifetime1, var8Lifetime2, -var8Lifetime2 + var9Lifetime1, 16777215, 0);
             }
           } else {
             dma.h(var6, var8Lifetime2, -var6 + var7Lifetime1, 16777215);
@@ -415,7 +415,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
             this.specialOrderSubmessage.blueprint != null) {
             var11 = var9.world.d(this.field_k, 80);
             if (var11 != null) {
-              var11.a((byte) 34, this.specialOrderSubmessage.blueprint);
+              var11.setTargetBlueprint((byte) 34, this.specialOrderSubmessage.blueprint);
               return;
             }
             if (!GetToggledScoreboard.a((byte) -128, var9.world.d(false))) {

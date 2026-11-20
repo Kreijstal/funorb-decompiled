@@ -410,11 +410,11 @@ final class WeaponBehaviour implements DiffableState {
             var25 = TimedSpecialOrderBehaviour.a(false);
             var25.a(var20Lifetime1, var21Lifetime1, (byte) 118);
             var25.a(param8, -122);
-            var25.h(17704, var22);
-            var25.g(-1, -111);
+            var25.setTeam(17704, var22);
+            var25.setOwner(-1, -111);
             var26 = new ShipAI();
             var26.a(var23, true);
-            var25.a(var26, 4);
+            var25.setAi(var26, 4);
             var25.a(var21Lifetime1, param8, var20Lifetime1, 500, 1948934248);
             param0.a(var25, (byte) 72);
             this.reload = var34.f((byte) 77);
@@ -457,7 +457,7 @@ final class WeaponBehaviour implements DiffableState {
           }
           var28Lifetime1 = var34.a(0);
           if (var24 != null &&
-            !((Ship) (var24)).a((byte) 11, var28Lifetime1)) {
+            !((Ship) (var24)).consumeEnergy((byte) 11, var28Lifetime1)) {
             if (fra.field_a != 1) {
               return;
             }

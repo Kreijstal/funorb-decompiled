@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.*;
 
 final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
-    static aja field_p;
+    static ToolkitSprite field_p;
     static boolean field_o;
 
     final static int a(int param0) {
@@ -60,7 +60,7 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
         File var1_ref = null;
         Object var1 = null;
         if (param0 != -120) {
-          field_p = (aja) null;
+          field_p = (ToolkitSprite) null;
         }
         try {
           var1_ref = lfb.a(ata.field_L, (byte) 34);
@@ -69,7 +69,7 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
         if (var1_ref == null) {
           return;
         }
-        Object var2 = asa.a(var1_ref, (byte) -48);
+        Object var2 = OpenGlGlyphMask.a(var1_ref, (byte) -48);
         if (var2 instanceof Hashtable) {
           wqb.field_e = (Hashtable) (var2);
           return;

@@ -193,7 +193,7 @@ public final class VoidHunters extends NetworkGameClient {
           GetDebrisThrowable.a(false, "Entering lobby");
           GetBombletSprayAimarc.a(shb.field_o, SetUseOffscreenRendering.a(0), GetSalvoaim.a(8, (byte) -99), GetSalvoaim.a(2000, (byte) -116), SetUseOffscreenRendering.b(false), true, NetworkGameClient.field_A.length, 150, 1024, GetMissilesAcceleration.a(207));
           GetPhasedEnergyBeamAimarc.a(SetBombletSprayPushMultiplier.a(0), dm.i((byte) -90), true);
-          jkb.field_a = true;
+          GraphicsPresentException.field_a = true;
           lu.field_d = false;
           if (vqa.field_g != null &&
             !vqa.field_g.field_N) {
@@ -216,7 +216,7 @@ public final class VoidHunters extends NetworkGameClient {
         if (decompiledFrameRemainder0) {
           if (param0 == 15) {
             GetDebrisThrowable.a(false, "Leaving lobby");
-            if (jkb.field_a) {
+            if (GraphicsPresentException.field_a) {
               olb.d(991426348);
               vjb.a((byte) 110);
               SettingsInstance.a(-15400);
@@ -226,7 +226,7 @@ public final class VoidHunters extends NetworkGameClient {
               SetMissionTerrainDebrisProbability.field_p = false;
               wgb.field_f = 0;
               aeb.field_a = true;
-              jkb.field_a = false;
+              GraphicsPresentException.field_a = false;
               HardpointDefinition.a(true);
             }
             lu.field_d = false;
@@ -234,7 +234,7 @@ public final class VoidHunters extends NetworkGameClient {
             return;
           }
           if (param0 == 10 &&
-            jkb.field_a) {
+            GraphicsPresentException.field_a) {
             GetTeamSelectionSpeedup.a(13);
             GetDebrisThrowable.a(false, "Lobby packet");
             return;
@@ -364,7 +364,7 @@ public final class VoidHunters extends NetworkGameClient {
             var8 = SetPointDefenceLaserProjectileDamage.a(param0, di.field_l, qga.field_b, (byte) 120);
             var3Lifetime1 = var8;
             if (var8 != null) {
-              mjb.field_e = false;
+              GpuSprite.field_e = false;
               GetSniperCannonProjectiles.field_p = false;
               if (param0 == 57) {
                 vqa.field_g = (uca) (var3Lifetime1);
@@ -535,7 +535,7 @@ public final class VoidHunters extends NetworkGameClient {
                 lu.field_d = true;
               }
             } else {
-              if (jkb.field_a) {
+              if (GraphicsPresentException.field_a) {
                 aeb.field_a = true;
                 enb.field_b = true;
                 GetMessageFadetime.field_o = false;
@@ -549,7 +549,7 @@ public final class VoidHunters extends NetworkGameClient {
                 }
                 olb.d(991426348);
                 lo.field_a[GetArmageddonTimerStart.field_o].a(false, 320, 0);
-                jkb.field_a = false;
+                GraphicsPresentException.field_a = false;
                 GetThrusterSmallForce.field_o = false;
                 SetMissionTerrainDebrisProbability.field_p = false;
                 HardpointDefinition.a(true);
@@ -565,7 +565,7 @@ public final class VoidHunters extends NetworkGameClient {
           if (var3Lifetime2 != 0) {
             var5 = 1;
           }
-          if (jkb.field_a ||
+          if (GraphicsPresentException.field_a ||
             lu.field_d ||
             SetMassDriverFireForce.field_o) {
             var5 = 1;
@@ -1131,21 +1131,21 @@ public final class VoidHunters extends NetworkGameClient {
         sha.clearSharedReferences(1);
         nga.clearSharedReferences((byte) -126);
         SecondaryNodeDeque.clearSharedReferences(!param0 ? true : false);
-        al.clearSharedReferences(true);
+        SoftwareFramebuffer.clearSharedReferences(true);
         rlb.clearSharedReferences(-120);
         fbb.clearSharedReferences(param0);
-        kha.clearSharedReferences(1);
-        mpb.clearSharedReferences(0);
+        OpenGlPostProcessor.clearSharedReferences(1);
+        OpenGlBloomEffect.clearSharedReferences(0);
         vf.clearSharedReferences((byte) -26);
-        tla.clearSharedReferences(1);
+        OpenGlSprite.clearSharedReferences(1);
         rpa.clearSharedReferences(1);
-        epb.clearSharedReferences(13);
+        OpenGlTransform3D.clearSharedReferences(13);
         rtb.clearSharedReferences((byte) 81);
         GpuToolkit.clearSharedReferences((byte) -101);
         pb.clearSharedReferences((byte) -84);
         mj.clearSharedReferences(17);
         rga.clearSharedReferences((byte) 108);
-        oj.clearSharedReferences(108);
+        GpuTransform3D.clearSharedReferences(108);
         kba.clearSharedReferences(17121);
         aba.clearSharedReferences(-3696);
         atb.clearSharedReferences(true);
@@ -1201,9 +1201,9 @@ public final class VoidHunters extends NetworkGameClient {
         oqb.clearSharedReferences((byte) -123);
         SoundFilter.clearSharedReferences();
         SecondaryNodeDequeIterator.clearSharedReferences((byte) -101);
-        lia.clearSharedReferences(97);
+        SoftwareTransform3D.clearSharedReferences(97);
         uva.clearSharedReferences();
-        woa.clearSharedReferences(-16777216);
+        SoftwareDepthBuffer.clearSharedReferences(-16777216);
         cs.clearSharedReferences((byte) 111);
         ImageProducerRasterBuffer.clearSharedReferences((byte) -128);
         r.clearSharedReferences((byte) -123);
@@ -1212,12 +1212,12 @@ public final class VoidHunters extends NetworkGameClient {
         of.clearSharedReferences(8345);
         ob.clearSharedReferences((byte) 42);
         nv.clearSharedReferences(33);
-        mea.clearSharedReferences(-95);
+        OpenGlPostEffect.clearSharedReferences(-95);
         qg.clearSharedReferences(-15081);
         jjb.clearSharedReferences(false);
         ne.clearSharedReferences(-2);
         uia.clearSharedReferences(-4353);
-        gpa.clearSharedReferences(-92);
+        OpenGlNativeHeap.clearSharedReferences(-92);
         im.clearSharedReferences((byte) 105);
         tob.clearSharedReferences(91);
         bt.clearSharedReferences(-4509);
@@ -1234,10 +1234,10 @@ public final class VoidHunters extends NetworkGameClient {
         mw.clearSharedReferences(13776);
         ts.clearSharedReferences((byte) 90);
         tu.clearSharedReferences((byte) 88);
-        cba.clearSharedReferences(!param0 ? true : false);
+        GpuNativeHeap.clearSharedReferences(!param0 ? true : false);
         gib.clearSharedReferences(15);
         ko.clearSharedReferences(-35);
-        mjb.clearSharedReferences(-81);
+        GpuSprite.clearSharedReferences(-81);
         sv.clearSharedReferences(0);
         wu.clearSharedReferences((byte) 46);
         hab.clearSharedReferences(-18951);
@@ -1259,7 +1259,7 @@ public final class VoidHunters extends NetworkGameClient {
         iob.clearSharedReferences(-5509);
         vhb.clearSharedReferences(21053);
         hla.clearSharedReferences((byte) 39);
-        asa.clearSharedReferences(20000000);
+        OpenGlGlyphMask.clearSharedReferences(20000000);
         OpenGlShader.clearSharedReferences((byte) 124);
         sja.clearSharedReferences((byte) 120);
         CarouselCommongameInfoFactory.clearSharedReferences(111);
@@ -1923,7 +1923,7 @@ public final class VoidHunters extends NetworkGameClient {
             if (tjb.field_wb == wp.field_a) {
               if (!GetPhasedEnergyBeamPulsetime.e((byte) 102)) {
                 SetMissionTerrainSpaceProbability.b(false);
-                wgb.field_f = pw.field_a;
+                wgb.field_f = Transform3D.field_a;
                 if (hpb.field_i) {
                   AwardVictoryToTeamAction.a(-356, false);
                 }
@@ -1989,18 +1989,18 @@ public final class VoidHunters extends NetworkGameClient {
                   }
                 }
               } else {
-                if (jkb.field_a) {
+                if (GraphicsPresentException.field_a) {
                   var3 = 1;
                   var4 = 1;
                 }
-                if (!jkb.field_a ||
+                if (!GraphicsPresentException.field_a ||
                   null != vqa.field_g &&
                   !vqa.field_g.field_N) {
                   stackIn_43_0 = vqa.field_g;
                   stackIn_43_1 = 81;
                   stackIn_44_2 = (var5 == 0);
                   ((uca) (Object) stackIn_43_0).a((byte) stackIn_43_1, stackIn_44_2);
-                  if (!jkb.field_a) {
+                  if (!GraphicsPresentException.field_a) {
                     while (ata.e(127)) {
                       stackOut_47_0 = GetSpinningBladeAimspeed.a(-22029);
                       stackIn_59_0 = stackOut_47_0 ? 1 : 0;
@@ -2033,7 +2033,7 @@ public final class VoidHunters extends NetworkGameClient {
             var3 = 0;
             var4 = 0;
           }
-          if (jkb.field_a &&
+          if (GraphicsPresentException.field_a &&
             !lu.field_d &&
             !SetMassDriverFireForce.field_o) {
             if (GetThrusterSmallForce.field_o &&
@@ -2069,32 +2069,32 @@ public final class VoidHunters extends NetworkGameClient {
                 SetBombletSprayProjectileDamage.field_o != 10 &&
                 SetBombletSprayProjectileDamage.field_o != 11) {
                 if (!SetFightersPerPlayerMaximum.field_p) {
-                  mjb.field_e = false;
+                  GpuSprite.field_e = false;
                 }
                 if (!SetFightersPerPlayerMaximum.field_p) {
                   if (!me.field_r) {
                     if (GetHealthBarWidth.field_q == SetBombletSprayProjectileDamage.field_o) {
                       var7Lifetime2 = 1;
-                      mjb.field_e = false;
+                      GpuSprite.field_e = false;
                       SetFightersPerPlayerMaximum.field_p = true;
                       continue;
                     }
                     if (~GetGrappleDebris.field_p == ~SetBombletSprayProjectileDamage.field_o) {
                       SetFightersPerPlayerMaximum.field_p = true;
-                      mjb.field_e = true;
+                      GpuSprite.field_e = true;
                       var7Lifetime2 = 1;
                       continue;
                     }
                   } else {
                     if (SetBombletSprayProjectileDamage.field_o == vu.field_Db) {
-                      mjb.field_e = false;
+                      GpuSprite.field_e = false;
                       SetFightersPerPlayerMaximum.field_p = true;
                       var7Lifetime2 = 1;
                       continue;
                     }
                     if (GetBombletSprayProjectiles.field_p == SetBombletSprayProjectileDamage.field_o) {
                       var7Lifetime2 = 1;
-                      mjb.field_e = true;
+                      GpuSprite.field_e = true;
                       SetFightersPerPlayerMaximum.field_p = true;
                       continue;
                     }
@@ -2104,7 +2104,7 @@ public final class VoidHunters extends NetworkGameClient {
                   RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 69);
                   stackIn_118_0 = RequestNewestBlackboxRecording.field_p;
                   stackIn_118_1 = 0;
-                  if (mjb.field_e) {
+                  if (GpuSprite.field_e) {
                     stackIn_119_2 = 1;
                   } else {
                     stackIn_119_2 = 0;
@@ -2130,7 +2130,7 @@ public final class VoidHunters extends NetworkGameClient {
               vqa.field_g.d((byte) -16);
             }
           }
-          stackIn_133_0Lifetime1 = jkb.field_a;
+          stackIn_133_0Lifetime1 = GraphicsPresentException.field_a;
           if (!stackIn_133_0Lifetime1) {
             VoidHunters.m(-29130);
           }
@@ -2227,7 +2227,7 @@ public final class VoidHunters extends NetworkGameClient {
             this.field_F.field_m = param2;
             this.field_F.field_p = param1;
             this.field_F.field_n = param1;
-            this.field_F.field_r = GetDebrisGroupColour.field_r.na(var4, var5, this.field_F.field_q, this.field_F.field_p);
+            this.field_F.field_r = GetDebrisGroupColour.field_r.readPixels(var4, var5, this.field_F.field_q, this.field_F.field_p);
           }
           this.field_F.c(dma.field_g / 2 - param2 / param0, dma.field_j / 2 - param1 / 2 - 1);
           return;
@@ -2253,7 +2253,7 @@ public final class VoidHunters extends NetworkGameClient {
           int var3_int = 0;
           hua var3 = null;
           int var4_int = 0;
-          jkb var4 = null;
+          GraphicsPresentException var4 = null;
           int var5_int = 0;
           String var5 = null;
           int var6 = 0;
@@ -2301,15 +2301,15 @@ public final class VoidHunters extends NetworkGameClient {
             return;
           }
           if (li.field_i) {
-            GetDebrisGroupColour.field_r.c((int)(-GetSalvoaim.field_q + wt.a(false)));
+            GetDebrisGroupColour.field_r.updateFrame((int)(-GetSalvoaim.field_q + wt.a(false)));
             if (ul.field_a == 1) {
-              if (!GetDebrisGroupColour.field_r.s()) {
-                GetDebrisGroupColour.field_r.b();
+              if (!GetDebrisGroupColour.field_r.isBloomEnabled()) {
+                GetDebrisGroupColour.field_r.enableBloom();
               }
-              GetDebrisGroupColour.field_r.a((float)pab.field_m / 100.0f, 1.0f, (float)oaa.field_i / 100.0f);
+              GetDebrisGroupColour.field_r.setBloomParameters((float)pab.field_m / 100.0f, 1.0f, (float)oaa.field_i / 100.0f);
             }
-            GetDebrisGroupColour.field_r.GA(0);
-            GetDebrisGroupColour.field_r.ya();
+            GetDebrisGroupColour.field_r.clearColor(0);
+            GetDebrisGroupColour.field_r.clearDepth();
           }
           dma.a();
           if (~wgb.field_f != ~GetArmageddonTimerStart.field_o) {
@@ -2356,7 +2356,7 @@ public final class VoidHunters extends NetworkGameClient {
             var4_int = (-dma.field_g + GetBombletSprayEnergyUsed.field_p.width) / 2;
             var5_intLifetime1 = (GetBombletSprayEnergyUsed.field_p.height - dma.field_j) / 2;
             if (li.field_i) {
-              GetDebrisGroupColour.field_r.GA(-16777216);
+              GetDebrisGroupColour.field_r.clearColor(-16777216);
             }
             SetMassDriverProjectileDamage.a(var4_int, var5_intLifetime1, 143);
             vfa.a(false, 20637);
@@ -2386,7 +2386,7 @@ public final class VoidHunters extends NetworkGameClient {
                 this.field_F.field_m = var5_intLifetime2;
                 this.field_F.field_p = var6;
                 this.field_F.field_n = var6;
-                this.field_F.field_r = GetDebrisGroupColour.field_r.na(var7, var8, this.field_F.field_q, this.field_F.field_p);
+                this.field_F.field_r = GetDebrisGroupColour.field_r.readPixels(var7, var8, this.field_F.field_q, this.field_F.field_p);
               }
               this.field_F.c(dma.field_g / 2 - var5_intLifetime2 / 2, dma.field_j / 2 - var6 / 2 - 1);
               SetMutatorVotes.f(-1321004447);
@@ -2421,7 +2421,7 @@ public final class VoidHunters extends NetworkGameClient {
             var8_ref_kla.a(var6Lifetime1, var6Lifetime1 + var4_int, var7Lifetime1, var7Lifetime1 + var5_intLifetime3, (byte) -76);
             var7Lifetime1Lifetime1 = (-dma.field_j + GetBombletSprayEnergyUsed.field_p.height) / 2;
             var6Lifetime1Lifetime1 = (GetBombletSprayEnergyUsed.field_p.width - dma.field_g) / 2;
-            GetDebrisGroupColour.field_r.SA(var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, dma.field_g, dma.field_j, dma.field_i, 0, dma.field_g);
+            GetDebrisGroupColour.field_r.writePixels(var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, dma.field_g, dma.field_j, dma.field_i, 0, dma.field_g);
             var8_ref_kla.a(true);
           }
           if (di.field_l.a(-28208)) {
@@ -2441,10 +2441,10 @@ public final class VoidHunters extends NetworkGameClient {
           }
           if (li.field_i) {
             try {
-              GetDebrisGroupColour.field_r.b(-122);
-            } catch (jkb decompiledCaughtParameter0) {
+              GetDebrisGroupColour.field_r.present(-122);
+            } catch (GraphicsPresentException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var4 = (jkb) (Object) decompiledCaughtException;
+              var4 = (GraphicsPresentException) (Object) decompiledCaughtException;
               var4.printStackTrace();
             }
           } else {

@@ -145,7 +145,7 @@ final class PcmStreamMixer extends PcmStream {
     private final void insertListener(IntrusiveNode param0, PcmMixerListener param1) {
         while (true) {
           if (param0 == this.listeners.sentinel) {
-            al.a(param1, param0, 2);
+            SoftwareFramebuffer.insertBefore(param1, param0, 2);
             this.nextListenerSample = ((PcmMixerListener) (this.listeners.sentinel.next)).remainingSamples;
             return;
           }
@@ -155,7 +155,7 @@ final class PcmStreamMixer extends PcmStream {
           }
           break;
         }
-        al.a(param1, param0, 2);
+        SoftwareFramebuffer.insertBefore(param1, param0, 2);
         this.nextListenerSample = ((PcmMixerListener) (this.listeners.sentinel.next)).remainingSamples;
         return;
     }

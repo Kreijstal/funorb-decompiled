@@ -16,7 +16,7 @@ final class es {
         field_a = null;
     }
 
-    final static void a(int param0, int param1, sw param2, int param3, da param4, int param5, GraphicsToolkit param6, int param7, int param8, BitmapFont param9, int param10) {
+    final static void a(int param0, int param1, ToolkitFontMetrics param2, int param3, ToolkitFont param4, int param5, GraphicsToolkit param6, int param7, int param8, BitmapFont param9, int param10) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;

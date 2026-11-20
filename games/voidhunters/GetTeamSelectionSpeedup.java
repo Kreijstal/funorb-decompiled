@@ -250,7 +250,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                     var7.field_Bb = var8 >> 1;
                     var7.field_vb = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -103);
                     var7.field_Ab = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -111);
-                    mea.field_e.addLast(-10258, var7);
+                    OpenGlPostEffect.field_e.addLast(-10258, var7);
                     return;
                   }
                   if (var2 == 19) {
@@ -345,11 +345,11 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
             }
             return;
           }
-          var3_ref_jk = (jk) (mea.field_e.first(0));
+          var3_ref_jk = (jk) (OpenGlPostEffect.field_e.first(0));
           while (var3_ref_jk != null) {
             var3_ref_jk.unlink(-3846);
             var3_ref_jk.unlinkSecondary((byte) -35);
-            var3_ref_jk = (jk) (mea.field_e.next((byte) 80));
+            var3_ref_jk = (jk) (OpenGlPostEffect.field_e.next((byte) 80));
           }
           var3_ref_jkLifetime1 = (jk) (GetReverbWet.field_o.c(-31));
           while (var3_ref_jkLifetime1 != null) {

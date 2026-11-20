@@ -52,7 +52,7 @@ final class npb {
             this.field_e = 0;
             return;
           }
-          var5_int = param3.s((byte) -90) ? 1 : 0;
+          var5_int = param3.isReloading((byte) -90) ? 1 : 0;
           if (this.field_g &&
             var5_int == 0) {
             GetNebulaFadesOutWhenClose.a(-112, fa.field_d[18]);
@@ -64,7 +64,7 @@ final class npb {
           }
           stackIn_15_1 = (var5_int != 0);
           this.field_g = stackIn_15_1;
-          var6 = param3.o(-55);
+          var6 = param3.getEnergyProgress(-55);
           var7 = 64;
           if (var6 < var7 &&
             var7 < this.field_d &&
@@ -134,7 +134,7 @@ final class npb {
           if (var11Lifetime1 == 0) {
             return;
           }
-          var12 = param3.y(8) / Particle.field_l;
+          var12 = param3.getTimeUntilSelfDestructEffect(8) / Particle.field_l;
           if (var12 < 0) {
             var12 = 0;
           }

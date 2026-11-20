@@ -301,9 +301,9 @@ final class AsteroidFactory implements GameStateFactory {
               var8Lifetime1 = -(var7Lifetime2 >> 1) + PlayerVote.field_f;
               var5Lifetime3 = var5Lifetime3 + ro.field_c;
               GetMissionTerrainSpaceProbability.field_o[var4Lifetime3] = new int[4];
-              GetMissionTerrainSpaceProbability.field_o[var4Lifetime3][0] = var8Lifetime1 - za.field_d;
+              GetMissionTerrainSpaceProbability.field_o[var4Lifetime3][0] = var8Lifetime1 - GraphicsHeap.field_d;
               GetMissionTerrainSpaceProbability.field_o[var4Lifetime3][1] = var5Lifetime3;
-              GetMissionTerrainSpaceProbability.field_o[var4Lifetime3][2] = var7Lifetime2 + (za.field_d << 1);
+              GetMissionTerrainSpaceProbability.field_o[var4Lifetime3][2] = var7Lifetime2 + (GraphicsHeap.field_d << 1);
               GetMissionTerrainSpaceProbability.field_o[var4Lifetime3][3] = (lfa.field_m << 1) + GetAngularVelocitySustain.field_p;
               var5Lifetime3 = var5Lifetime3 + ((lfa.field_m << 1) - (-ro.field_c - GetAngularVelocitySustain.field_p));
             }

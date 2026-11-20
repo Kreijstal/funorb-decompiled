@@ -6,7 +6,7 @@ final class SetMassDriverProjectileLife extends ConsoleCommand {
 
     final static void a(int param0, byte param1, int param2, int param3, int param4, int param5) {
         if (param5 != param3) {
-          GetDebrisGroupColour.field_r.c(param5, 1, param0, param4, param3, param2);
+          GetDebrisGroupColour.field_r.drawLineTo(param5, 1, param0, param4, param3, param2);
           if (param1 > 1) {
             return;
           }
@@ -14,7 +14,7 @@ final class SetMassDriverProjectileLife extends ConsoleCommand {
           return;
         }
         if (param2 != param4) {
-          GetDebrisGroupColour.field_r.c(param5, 1, param0, param4, param3, param2);
+          GetDebrisGroupColour.field_r.drawLineTo(param5, 1, param0, param4, param3, param2);
           if (param1 > 1) {
             return;
           }
@@ -22,7 +22,7 @@ final class SetMassDriverProjectileLife extends ConsoleCommand {
           return;
         }
         param5++;
-        GetDebrisGroupColour.field_r.c(param5, 1, param0, param4, param3, param2);
+        GetDebrisGroupColour.field_r.drawLineTo(param5, 1, param0, param4, param3, param2);
         if (param1 > 1) {
           return;
         }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ShipBodyFactory implements GameStateFactory {
-    static sw[] field_b;
+    static ToolkitFontMetrics[] field_b;
     static String field_a;
 
     final static void a(byte param0, boolean param1) {

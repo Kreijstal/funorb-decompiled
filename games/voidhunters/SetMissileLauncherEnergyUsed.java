@@ -49,7 +49,7 @@ final class SetMissileLauncherEnergyUsed extends ConsoleCommand {
             return;
           }
           if (lfa.field_j) {
-            GetDebrisGroupColour.field_r.a(param0 | param4 << 24, Math.max(1, (int)param3), param5, param2, (byte) -113);
+            GetDebrisGroupColour.field_r.fillCircle(param0 | param4 << 24, Math.max(1, (int)param3), param5, param2, (byte) -113);
             return;
           }
           return;
@@ -61,7 +61,7 @@ final class SetMissileLauncherEnergyUsed extends ConsoleCommand {
         if (!lfa.field_j) {
           return;
         }
-        GetDebrisGroupColour.field_r.a(param0 | param4 << 24, Math.max(1, (int)param3), param5, param2, (byte) -113);
+        GetDebrisGroupColour.field_r.fillCircle(param0 | param4 << 24, Math.max(1, (int)param3), param5, param2, (byte) -113);
     }
 
     public static void clearSharedReferences(int param0) {

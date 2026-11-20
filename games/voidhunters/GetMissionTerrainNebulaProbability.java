@@ -22,7 +22,7 @@ final class GetMissionTerrainNebulaProbability extends ConsoleCommand {
           bfb.e();
           dma.a();
           SetSalvoaim.field_r = 0;
-          pw.a((byte) 74);
+          Transform3D.a((byte) 74);
           var2 = var1.d();
           for (var3 = 0; var3 < 15; var3++) {
             var2.b(-2, -2, 16777215);

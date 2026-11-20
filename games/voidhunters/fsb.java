@@ -366,7 +366,7 @@ abstract class fsb extends IntrusiveNode {
                       if (var58_int < 1) {
                         var58_int = 1;
                       }
-                      GetDebrisGroupColour.field_r.a(var46, var47, var48, var49, var56, var58_int, var57);
+                      GetDebrisGroupColour.field_r.drawThickLine(var46, var47, var48, var49, var56, var58_int, var57);
                     } catch (java.lang.Exception decompiledCaughtParameter0) {
                       decompiledCaughtException = decompiledCaughtParameter0;
                       var58 = (Exception) (Object) decompiledCaughtException;

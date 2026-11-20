@@ -43,7 +43,7 @@ final class fbb {
     }
 
     final void a(boolean param0, boolean param1, int param2, int param3, int param4, int param5) {
-        param0 = param0 & this.field_h.e();
+        param0 = param0 & this.field_h.supportsUnderwaterEffects();
         if (!param0) {
           if (param4 == 4) {
             if (4 == param4) {

@@ -175,7 +175,7 @@ final class GetDebrisCarryOver extends ConsoleCommand {
           field_p = 5;
           if (li.field_i) {
             if (GetBurstFireMaxEnergy.field_o) {
-              GetDebrisGroupColour.field_r.a(param4, param7, param9, param6, param5, param1, param8, param3, param10, param2);
+              GetDebrisGroupColour.field_r.fillGradientTriangle(param4, param7, param9, param6, param5, param1, param8, param3, param10, param2);
               return;
             }
             return;
@@ -190,7 +190,7 @@ final class GetDebrisCarryOver extends ConsoleCommand {
         }
         if (li.field_i) {
           if (GetBurstFireMaxEnergy.field_o) {
-            GetDebrisGroupColour.field_r.a(param4, param7, param9, param6, param5, param1, param8, param3, param10, param2);
+            GetDebrisGroupColour.field_r.fillGradientTriangle(param4, param7, param9, param6, param5, param1, param8, param3, param10, param2);
             return;
           }
           return;

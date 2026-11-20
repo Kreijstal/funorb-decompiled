@@ -17,7 +17,7 @@ final class fa extends IntrusiveNode {
         try {
           RemoveEventActionFactory.field_b = true;
           kmb.field_c = param2 ? true : false;
-          SetPointDefenceLaserAimarc.field_o = new os(GetLagStandardDeviationIn.field_r, GetBoostersCooldown.field_r, param0, tla.field_c, kmb.field_c);
+          SetPointDefenceLaserAimarc.field_o = new os(GetLagStandardDeviationIn.field_r, GetBoostersCooldown.field_r, param0, OpenGlSprite.field_c, kmb.field_c);
           if (param1 >= -119) {
             field_d = (PcmSample[]) null;
           }

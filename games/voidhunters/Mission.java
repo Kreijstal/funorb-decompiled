@@ -240,9 +240,9 @@ final class Mission implements DiffableState {
               var8 = var6_ref_sg__[var7];
               if (var8 != null &&
                 var8.getOwner((byte) -117) >= 0 &&
-                !var8.l((byte) -10)) {
+                !var8.hasAi((byte) -10)) {
                 if (SetMachineGunAimspeed.field_o == 0) {
-                  var8.h(17704, 2);
+                  var8.setTeam(17704, 2);
                 }
                 var9 = param1.a(var8.getOwner((byte) -117), (byte) 59);
                 if (null == var9.savedShip) {

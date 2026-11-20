@@ -179,7 +179,7 @@ class os extends gea implements oo {
                   var6.a((byte) 111, GetCountermeasureLauncherProjectileLife.field_o, (sba) (this));
                 }
               } else {
-                var6.a(-126, lia.field_c, 9);
+                var6.a(-126, SoftwareTransform3D.field_c, 9);
               }
             }
           }

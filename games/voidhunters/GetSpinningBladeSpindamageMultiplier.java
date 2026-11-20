@@ -20,7 +20,7 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
         GetDebrisGroupColour.field_r = vq.field_x.field_e.field_g;
         SetUseBackground.field_o = feb.a(GetDebrisGroupColour.field_r, true);
         java.awt.Dimension var9 = vq.field_x.field_e.field_a.getSize();
-        GetDebrisGroupColour.field_r.KA(0, 0, var9.width, var9.height);
+        GetDebrisGroupColour.field_r.setClip(0, 0, var9.width, var9.height);
         ocb.f(-10150);
         if (param0 != -9934) {
           PcmStreamMixer var8 = (PcmStreamMixer) null;
@@ -48,21 +48,21 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
           jaggl.OpenGL.glGetIntegerv(3379, var27, 0);
           System.out.println("GL_MAX_TEXTURE_SIZE: " + var27[0]);
           if (ssa.b(param0 ^ -9936)) {
-            System.out.println("has_memorypools: " + GetDebrisGroupColour.field_r.a());
-            System.out.println("has_volatile_backbuffer: " + GetDebrisGroupColour.field_r.w());
-            System.out.println("has_resizable_backbuffer: " + GetDebrisGroupColour.field_r.n());
-            System.out.println("has_offscreen_rendering: " + GetDebrisGroupColour.field_r.x());
-            System.out.println("has_slow_offscreen_rendering: " + GetDebrisGroupColour.field_r.r());
-            System.out.println("has_shadows: " + GetDebrisGroupColour.field_r.q());
-            System.out.println("has_bloom: " + GetDebrisGroupColour.field_r.c());
-            System.out.println("has_envmap: " + GetDebrisGroupColour.field_r.k());
-            System.out.println("has_antialiasing: " + GetDebrisGroupColour.field_r.f());
-            System.out.println("has_multiplethreads: " + GetDebrisGroupColour.field_r.h());
-            System.out.println("has_fasttexturedparticles: " + GetDebrisGroupColour.field_r.l());
-            System.out.println("has_underwater: " + GetDebrisGroupColour.field_r.e());
-            System.out.println("has_farzclipplane: " + GetDebrisGroupColour.field_r.p());
-            System.out.println("has_multiple_canvases: " + GetDebrisGroupColour.field_r.m());
-            System.out.println("has_pointlights: " + GetDebrisGroupColour.field_r.a(-76));
+            System.out.println("has_memorypools: " + GetDebrisGroupColour.field_r.supportsMemoryPools());
+            System.out.println("has_volatile_backbuffer: " + GetDebrisGroupColour.field_r.hasVolatileBackbuffer());
+            System.out.println("has_resizable_backbuffer: " + GetDebrisGroupColour.field_r.supportsResizableBackbuffer());
+            System.out.println("has_offscreen_rendering: " + GetDebrisGroupColour.field_r.supportsOffscreenRendering());
+            System.out.println("has_slow_offscreen_rendering: " + GetDebrisGroupColour.field_r.hasSlowOffscreenRendering());
+            System.out.println("has_shadows: " + GetDebrisGroupColour.field_r.supportsShadows());
+            System.out.println("has_bloom: " + GetDebrisGroupColour.field_r.isBloomSupported());
+            System.out.println("has_envmap: " + GetDebrisGroupColour.field_r.supportsEnvironmentMaps());
+            System.out.println("has_antialiasing: " + GetDebrisGroupColour.field_r.supportsAntialiasing());
+            System.out.println("has_multiplethreads: " + GetDebrisGroupColour.field_r.supportsMultipleThreads());
+            System.out.println("has_fasttexturedparticles: " + GetDebrisGroupColour.field_r.supportsFastTexturedParticles());
+            System.out.println("has_underwater: " + GetDebrisGroupColour.field_r.supportsUnderwaterEffects());
+            System.out.println("has_farzclipplane: " + GetDebrisGroupColour.field_r.supportsFarClipPlane());
+            System.out.println("has_multiple_canvases: " + GetDebrisGroupColour.field_r.supportsMultipleCanvases());
+            System.out.println("has_pointlights: " + GetDebrisGroupColour.field_r.supportsPointLights(-76));
             return;
           }
           return;
@@ -87,21 +87,21 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
             jaggl.OpenGL.glGetIntegerv(3379, var28, 0);
             System.out.println("GL_MAX_TEXTURE_SIZE: " + var28[0]);
             if (ssa.b(param0 ^ -9936)) {
-              System.out.println("has_memorypools: " + GetDebrisGroupColour.field_r.a());
-              System.out.println("has_volatile_backbuffer: " + GetDebrisGroupColour.field_r.w());
-              System.out.println("has_resizable_backbuffer: " + GetDebrisGroupColour.field_r.n());
-              System.out.println("has_offscreen_rendering: " + GetDebrisGroupColour.field_r.x());
-              System.out.println("has_slow_offscreen_rendering: " + GetDebrisGroupColour.field_r.r());
-              System.out.println("has_shadows: " + GetDebrisGroupColour.field_r.q());
-              System.out.println("has_bloom: " + GetDebrisGroupColour.field_r.c());
-              System.out.println("has_envmap: " + GetDebrisGroupColour.field_r.k());
-              System.out.println("has_antialiasing: " + GetDebrisGroupColour.field_r.f());
-              System.out.println("has_multiplethreads: " + GetDebrisGroupColour.field_r.h());
-              System.out.println("has_fasttexturedparticles: " + GetDebrisGroupColour.field_r.l());
-              System.out.println("has_underwater: " + GetDebrisGroupColour.field_r.e());
-              System.out.println("has_farzclipplane: " + GetDebrisGroupColour.field_r.p());
-              System.out.println("has_multiple_canvases: " + GetDebrisGroupColour.field_r.m());
-              System.out.println("has_pointlights: " + GetDebrisGroupColour.field_r.a(-76));
+              System.out.println("has_memorypools: " + GetDebrisGroupColour.field_r.supportsMemoryPools());
+              System.out.println("has_volatile_backbuffer: " + GetDebrisGroupColour.field_r.hasVolatileBackbuffer());
+              System.out.println("has_resizable_backbuffer: " + GetDebrisGroupColour.field_r.supportsResizableBackbuffer());
+              System.out.println("has_offscreen_rendering: " + GetDebrisGroupColour.field_r.supportsOffscreenRendering());
+              System.out.println("has_slow_offscreen_rendering: " + GetDebrisGroupColour.field_r.hasSlowOffscreenRendering());
+              System.out.println("has_shadows: " + GetDebrisGroupColour.field_r.supportsShadows());
+              System.out.println("has_bloom: " + GetDebrisGroupColour.field_r.isBloomSupported());
+              System.out.println("has_envmap: " + GetDebrisGroupColour.field_r.supportsEnvironmentMaps());
+              System.out.println("has_antialiasing: " + GetDebrisGroupColour.field_r.supportsAntialiasing());
+              System.out.println("has_multiplethreads: " + GetDebrisGroupColour.field_r.supportsMultipleThreads());
+              System.out.println("has_fasttexturedparticles: " + GetDebrisGroupColour.field_r.supportsFastTexturedParticles());
+              System.out.println("has_underwater: " + GetDebrisGroupColour.field_r.supportsUnderwaterEffects());
+              System.out.println("has_farzclipplane: " + GetDebrisGroupColour.field_r.supportsFarClipPlane());
+              System.out.println("has_multiple_canvases: " + GetDebrisGroupColour.field_r.supportsMultipleCanvases());
+              System.out.println("has_pointlights: " + GetDebrisGroupColour.field_r.supportsPointLights(-76));
               return;
             }
             return;
@@ -124,21 +124,21 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
         jaggl.OpenGL.glGetIntegerv(3379, var29, 0);
         System.out.println("GL_MAX_TEXTURE_SIZE: " + var29[0]);
         if (ssa.b(param0 ^ -9936)) {
-          System.out.println("has_memorypools: " + GetDebrisGroupColour.field_r.a());
-          System.out.println("has_volatile_backbuffer: " + GetDebrisGroupColour.field_r.w());
-          System.out.println("has_resizable_backbuffer: " + GetDebrisGroupColour.field_r.n());
-          System.out.println("has_offscreen_rendering: " + GetDebrisGroupColour.field_r.x());
-          System.out.println("has_slow_offscreen_rendering: " + GetDebrisGroupColour.field_r.r());
-          System.out.println("has_shadows: " + GetDebrisGroupColour.field_r.q());
-          System.out.println("has_bloom: " + GetDebrisGroupColour.field_r.c());
-          System.out.println("has_envmap: " + GetDebrisGroupColour.field_r.k());
-          System.out.println("has_antialiasing: " + GetDebrisGroupColour.field_r.f());
-          System.out.println("has_multiplethreads: " + GetDebrisGroupColour.field_r.h());
-          System.out.println("has_fasttexturedparticles: " + GetDebrisGroupColour.field_r.l());
-          System.out.println("has_underwater: " + GetDebrisGroupColour.field_r.e());
-          System.out.println("has_farzclipplane: " + GetDebrisGroupColour.field_r.p());
-          System.out.println("has_multiple_canvases: " + GetDebrisGroupColour.field_r.m());
-          System.out.println("has_pointlights: " + GetDebrisGroupColour.field_r.a(-76));
+          System.out.println("has_memorypools: " + GetDebrisGroupColour.field_r.supportsMemoryPools());
+          System.out.println("has_volatile_backbuffer: " + GetDebrisGroupColour.field_r.hasVolatileBackbuffer());
+          System.out.println("has_resizable_backbuffer: " + GetDebrisGroupColour.field_r.supportsResizableBackbuffer());
+          System.out.println("has_offscreen_rendering: " + GetDebrisGroupColour.field_r.supportsOffscreenRendering());
+          System.out.println("has_slow_offscreen_rendering: " + GetDebrisGroupColour.field_r.hasSlowOffscreenRendering());
+          System.out.println("has_shadows: " + GetDebrisGroupColour.field_r.supportsShadows());
+          System.out.println("has_bloom: " + GetDebrisGroupColour.field_r.isBloomSupported());
+          System.out.println("has_envmap: " + GetDebrisGroupColour.field_r.supportsEnvironmentMaps());
+          System.out.println("has_antialiasing: " + GetDebrisGroupColour.field_r.supportsAntialiasing());
+          System.out.println("has_multiplethreads: " + GetDebrisGroupColour.field_r.supportsMultipleThreads());
+          System.out.println("has_fasttexturedparticles: " + GetDebrisGroupColour.field_r.supportsFastTexturedParticles());
+          System.out.println("has_underwater: " + GetDebrisGroupColour.field_r.supportsUnderwaterEffects());
+          System.out.println("has_farzclipplane: " + GetDebrisGroupColour.field_r.supportsFarClipPlane());
+          System.out.println("has_multiple_canvases: " + GetDebrisGroupColour.field_r.supportsMultipleCanvases());
+          System.out.println("has_pointlights: " + GetDebrisGroupColour.field_r.supportsPointLights(-76));
           return;
         }
     }

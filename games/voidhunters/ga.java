@@ -538,7 +538,7 @@ final class ga extends fnb {
           dma.e(param2, param3, param5, param4, param6, param0);
         } else {
           if (ne.field_v) {
-            GetDebrisGroupColour.field_r.a(param5, (byte) 120, param6 | param0 << 24, param4, param3, param2);
+            GetDebrisGroupColour.field_r.fillRectangle(param5, (byte) 120, param6 | param0 << 24, param4, param3, param2);
           }
         }
         if (param1) {

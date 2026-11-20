@@ -242,7 +242,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_machine_gun_aimspeed(" + dr.field_a + ")");
         System.out.println("set_grappling_hook_aimspeed(" + GetRepairModePower.field_q + ")");
         System.out.println("set_missile_launcher_aimspeed(" + GetMissileLauncherRandomness.field_p + ")");
-        System.out.println("set_point_defence_laser_aimspeed(" + asa.field_e + ")");
+        System.out.println("set_point_defence_laser_aimspeed(" + OpenGlGlyphMask.field_e + ")");
         System.out.println("set_countermeasure_launcher_aimspeed(" + ava.field_a + ")");
         System.out.println("set_mass_driver_aimarc(" + sib.field_i + ")");
         System.out.println("set_torpedo_aimarc(" + mmb.field_i + ")");

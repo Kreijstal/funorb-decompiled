@@ -617,7 +617,7 @@ final class me extends pja {
               if (var12.field_Bb != 2) {
                 stackIn_165_0 = CarouselSystemEventFactory.field_b;
               } else {
-                stackIn_165_0 = tla.field_h;
+                stackIn_165_0 = OpenGlSprite.field_h;
               }
               NebulaFieldFactory.field_a = stackIn_165_0;
             }

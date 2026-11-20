@@ -40,7 +40,7 @@ final class GetMissilesHitSourceTeam extends ConsoleCommand {
             return;
           }
           if (SetPointDefenceLaserReload.field_o) {
-            GetDebrisGroupColour.field_r.a(72, param1, param6, param4 << 24 | param5, param0, param3);
+            GetDebrisGroupColour.field_r.drawRectangleDefaultBlend(72, param1, param6, param4 << 24 | param5, param0, param3);
             return;
           }
           return;
@@ -52,7 +52,7 @@ final class GetMissilesHitSourceTeam extends ConsoleCommand {
         if (!SetPointDefenceLaserReload.field_o) {
           return;
         }
-        GetDebrisGroupColour.field_r.a(72, param1, param6, param4 << 24 | param5, param0, param3);
+        GetDebrisGroupColour.field_r.drawRectangleDefaultBlend(72, param1, param6, param4 << 24 | param5, param0, param3);
     }
 
     public static void clearSharedReferences(byte param0) {

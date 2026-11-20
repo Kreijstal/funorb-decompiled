@@ -313,7 +313,7 @@ class aia extends pib {
           this.field_g.a(100, (pib) (this));
           if (param5 &&
             this.field_b != 34037) {
-            co.a(param7, param2, param3, param1, param4, param6, -29702);
+            SoftwareRenderContext.a(param7, param2, param3, param1, param4, param6, -29702);
             this.a((byte) 62, true);
           } else {
             jaggl.OpenGL.glTexImage2Df(this.field_b, 0, this.field_d, this.field_h, this.field_j, 0, param7, 5126, param6, 0);

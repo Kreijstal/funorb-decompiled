@@ -130,7 +130,7 @@ final class ServerInfoFactory implements GameStateFactory {
             vqa.field_g != null) {
             if (GetThrusterSmallForce.field_o) {
               if (!vqa.field_g.field_N &&
-                !jkb.field_a) {
+                !GraphicsPresentException.field_a) {
                 stackIn_20_0 = 0;
               } else {
                 if (SetFightersPerPlayerMaximum.field_p) {
@@ -160,11 +160,11 @@ final class ServerInfoFactory implements GameStateFactory {
               if (dma.field_j > var4_int) {
                 var5 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
                 var6 = -dma.field_j + var4_int + MissionVariableFactory.field_a;
-                GetDebrisGroupColour.field_r.SA(var5, var6, dma.field_g, -var4_int + dma.field_j, dma.field_i, var4_int * dma.field_g, dma.field_g);
+                GetDebrisGroupColour.field_r.writePixels(var5, var6, dma.field_g, -var4_int + dma.field_j, dma.field_i, var4_int * dma.field_g, dma.field_g);
               }
             }
             if (var2 != 0) {
-              if (mjb.field_e) {
+              if (GpuSprite.field_e) {
                 stackIn_38_0 = SetFighterBayAimspeed.field_p;
               } else {
                 stackIn_38_0 = kia.field_b;
@@ -183,7 +183,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 var11 = var5Lifetime2 + var9;
                 var12 = var6Lifetime2 + var10;
                 var14.a(var11, var7 + var11, var12, var8 + var12, (byte) -70);
-                GetDebrisGroupColour.field_r.SA(var11 - var5Lifetime2, var12, dma.field_g, var8, dma.field_i, dma.field_g * var6Lifetime2, dma.field_g);
+                GetDebrisGroupColour.field_r.writePixels(var11 - var5Lifetime2, var12, dma.field_g, var8, dma.field_i, dma.field_g * var6Lifetime2, dma.field_g);
                 var14.a(true);
               }
             }
@@ -207,7 +207,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 stackIn_108_0 = 0;
               }
             } else {
-              if (jkb.field_a) {
+              if (GraphicsPresentException.field_a) {
                 if (SetFightersPerPlayerMaximum.field_p) {
                   stackIn_74_0 = (tob.g(0)) ? 1 : 0;
                 } else {
@@ -231,11 +231,11 @@ final class ServerInfoFactory implements GameStateFactory {
                   if (dma.field_j > var4_intLifetime1) {
                     var5Lifetime1 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
                     var6Lifetime1 = -dma.field_j + var4_intLifetime1 + MissionVariableFactory.field_a;
-                    GetDebrisGroupColour.field_r.SA(var5Lifetime1, var6Lifetime1, dma.field_g, -var4_intLifetime1 + dma.field_j, dma.field_i, var4_intLifetime1 * dma.field_g, dma.field_g);
+                    GetDebrisGroupColour.field_r.writePixels(var5Lifetime1, var6Lifetime1, dma.field_g, -var4_intLifetime1 + dma.field_j, dma.field_i, var4_intLifetime1 * dma.field_g, dma.field_g);
                   }
                 }
                 if (var2Lifetime1 != 0) {
-                  if (mjb.field_e) {
+                  if (GpuSprite.field_e) {
                     stackIn_92_0 = SetFighterBayAimspeed.field_p;
                   } else {
                     stackIn_92_0 = kia.field_b;
@@ -254,7 +254,7 @@ final class ServerInfoFactory implements GameStateFactory {
                     var11Lifetime1 = var5Lifetime1Lifetime3 + var9Lifetime1;
                     var12Lifetime1 = var6Lifetime1Lifetime3 + var10Lifetime1;
                     var16.a(var11Lifetime1, var7Lifetime1 + var11Lifetime1, var12Lifetime1, var8Lifetime1 + var12Lifetime1, (byte) -70);
-                    GetDebrisGroupColour.field_r.SA(var11Lifetime1 - var5Lifetime1Lifetime3, var12Lifetime1, dma.field_g, var8Lifetime1, dma.field_i, dma.field_g * var6Lifetime1Lifetime3, dma.field_g);
+                    GetDebrisGroupColour.field_r.writePixels(var11Lifetime1 - var5Lifetime1Lifetime3, var12Lifetime1, dma.field_g, var8Lifetime1, dma.field_i, dma.field_g * var6Lifetime1Lifetime3, dma.field_g);
                     var16.a(true);
                   }
                 }
@@ -281,10 +281,10 @@ final class ServerInfoFactory implements GameStateFactory {
               if (dma.field_j > var4_intLifetime1Lifetime1) {
                 var5Lifetime1Lifetime1 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
                 var6Lifetime1Lifetime1 = -dma.field_j + var4_intLifetime1Lifetime1 + MissionVariableFactory.field_a;
-                GetDebrisGroupColour.field_r.SA(var5Lifetime1Lifetime1, var6Lifetime1Lifetime1, dma.field_g, -var4_intLifetime1Lifetime1 + dma.field_j, dma.field_i, var4_intLifetime1Lifetime1 * dma.field_g, dma.field_g);
+                GetDebrisGroupColour.field_r.writePixels(var5Lifetime1Lifetime1, var6Lifetime1Lifetime1, dma.field_g, -var4_intLifetime1Lifetime1 + dma.field_j, dma.field_i, var4_intLifetime1Lifetime1 * dma.field_g, dma.field_g);
               }
               if (var2Lifetime1Lifetime1 != 0) {
-                if (mjb.field_e) {
+                if (GpuSprite.field_e) {
                   stackIn_122_0 = SetFighterBayAimspeed.field_p;
                 } else {
                   stackIn_122_0 = kia.field_b;
@@ -311,7 +311,7 @@ final class ServerInfoFactory implements GameStateFactory {
                   var11Lifetime1Lifetime1 = var5Lifetime1Lifetime1Lifetime4 + var9Lifetime1Lifetime1;
                   var12Lifetime1Lifetime1 = var6Lifetime1Lifetime1Lifetime4 + var10Lifetime1Lifetime1;
                   var18.a(var11Lifetime1Lifetime1, var7Lifetime1Lifetime1 + var11Lifetime1Lifetime1, var12Lifetime1Lifetime1, var8Lifetime1Lifetime1 + var12Lifetime1Lifetime1, (byte) -70);
-                  GetDebrisGroupColour.field_r.SA(var11Lifetime1Lifetime1 - var5Lifetime1Lifetime1Lifetime4, var12Lifetime1Lifetime1, dma.field_g, var8Lifetime1Lifetime1, dma.field_i, dma.field_g * var6Lifetime1Lifetime1Lifetime4, dma.field_g);
+                  GetDebrisGroupColour.field_r.writePixels(var11Lifetime1Lifetime1 - var5Lifetime1Lifetime1Lifetime4, var12Lifetime1Lifetime1, dma.field_g, var8Lifetime1Lifetime1, dma.field_i, dma.field_g * var6Lifetime1Lifetime1Lifetime4, dma.field_g);
                   var18.a(true);
                 }
               }
@@ -324,10 +324,10 @@ final class ServerInfoFactory implements GameStateFactory {
               if (dma.field_j > var4_intLifetime1Lifetime1) {
                 var5Lifetime1Lifetime1Lifetime1 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
                 var6Lifetime1Lifetime1Lifetime1 = -dma.field_j + var4_intLifetime1Lifetime1 + MissionVariableFactory.field_a;
-                GetDebrisGroupColour.field_r.SA(var5Lifetime1Lifetime1Lifetime1, var6Lifetime1Lifetime1Lifetime1, dma.field_g, -var4_intLifetime1Lifetime1 + dma.field_j, dma.field_i, var4_intLifetime1Lifetime1 * dma.field_g, dma.field_g);
+                GetDebrisGroupColour.field_r.writePixels(var5Lifetime1Lifetime1Lifetime1, var6Lifetime1Lifetime1Lifetime1, dma.field_g, -var4_intLifetime1Lifetime1 + dma.field_j, dma.field_i, var4_intLifetime1Lifetime1 * dma.field_g, dma.field_g);
               }
               if (var2Lifetime1Lifetime1 != 0) {
-                if (mjb.field_e) {
+                if (GpuSprite.field_e) {
                   stackIn_140_0 = SetFighterBayAimspeed.field_p;
                 } else {
                   stackIn_140_0 = kia.field_b;
@@ -351,7 +351,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 var11Lifetime1Lifetime1Lifetime1 = var5Lifetime1Lifetime1Lifetime1Lifetime1 + var9Lifetime1Lifetime1Lifetime1;
                 var12Lifetime1Lifetime1Lifetime1 = var6Lifetime1Lifetime1Lifetime1Lifetime1 + var10Lifetime1Lifetime1Lifetime1;
                 var18.a(var11Lifetime1Lifetime1Lifetime1, var7Lifetime1Lifetime1Lifetime1 + var11Lifetime1Lifetime1Lifetime1, var12Lifetime1Lifetime1Lifetime1, var8Lifetime1Lifetime1Lifetime1 + var12Lifetime1Lifetime1Lifetime1, (byte) -70);
-                GetDebrisGroupColour.field_r.SA(var11Lifetime1Lifetime1Lifetime1 - var5Lifetime1Lifetime1Lifetime1Lifetime1, var12Lifetime1Lifetime1Lifetime1, dma.field_g, var8Lifetime1Lifetime1Lifetime1, dma.field_i, dma.field_g * var6Lifetime1Lifetime1Lifetime1Lifetime1, dma.field_g);
+                GetDebrisGroupColour.field_r.writePixels(var11Lifetime1Lifetime1Lifetime1 - var5Lifetime1Lifetime1Lifetime1Lifetime1, var12Lifetime1Lifetime1Lifetime1, dma.field_g, var8Lifetime1Lifetime1Lifetime1, dma.field_i, dma.field_g * var6Lifetime1Lifetime1Lifetime1Lifetime1, dma.field_g);
                 var18.a(true);
               }
               if (param0 == -30428) {
@@ -364,7 +364,7 @@ final class ServerInfoFactory implements GameStateFactory {
             GetAiRepairTime.e(-22);
             if (dma.field_j <= var4_intLifetime1Lifetime1Lifetime1) {
               if (var2Lifetime1Lifetime1 != 0) {
-                if (mjb.field_e) {
+                if (GpuSprite.field_e) {
                   stackIn_158_0 = SetFighterBayAimspeed.field_p;
                 } else {
                   stackIn_158_0 = kia.field_b;
@@ -383,7 +383,7 @@ final class ServerInfoFactory implements GameStateFactory {
                   var11Lifetime1Lifetime1Lifetime2 = var5Lifetime1Lifetime1Lifetime2 + var9Lifetime1Lifetime1Lifetime2;
                   var12Lifetime1Lifetime1Lifetime2 = var6Lifetime1Lifetime1Lifetime2 + var10Lifetime1Lifetime1Lifetime2;
                   var18.a(var11Lifetime1Lifetime1Lifetime2, var7Lifetime1Lifetime1Lifetime2 + var11Lifetime1Lifetime1Lifetime2, var12Lifetime1Lifetime1Lifetime2, var8Lifetime1Lifetime1Lifetime2 + var12Lifetime1Lifetime1Lifetime2, (byte) -70);
-                  GetDebrisGroupColour.field_r.SA(var11Lifetime1Lifetime1Lifetime2 - var5Lifetime1Lifetime1Lifetime2, var12Lifetime1Lifetime1Lifetime2, dma.field_g, var8Lifetime1Lifetime1Lifetime2, dma.field_i, dma.field_g * var6Lifetime1Lifetime1Lifetime2, dma.field_g);
+                  GetDebrisGroupColour.field_r.writePixels(var11Lifetime1Lifetime1Lifetime2 - var5Lifetime1Lifetime1Lifetime2, var12Lifetime1Lifetime1Lifetime2, dma.field_g, var8Lifetime1Lifetime1Lifetime2, dma.field_i, dma.field_g * var6Lifetime1Lifetime1Lifetime2, dma.field_g);
                   var18.a(true);
                 }
               }
@@ -395,10 +395,10 @@ final class ServerInfoFactory implements GameStateFactory {
             }
             var5Lifetime1Lifetime1Lifetime3 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
             var6Lifetime1Lifetime1Lifetime3 = -dma.field_j + var4_intLifetime1Lifetime1Lifetime1 + MissionVariableFactory.field_a;
-            GetDebrisGroupColour.field_r.SA(var5Lifetime1Lifetime1Lifetime3, var6Lifetime1Lifetime1Lifetime3, dma.field_g, -var4_intLifetime1Lifetime1Lifetime1 + dma.field_j, dma.field_i, var4_intLifetime1Lifetime1Lifetime1 * dma.field_g, dma.field_g);
+            GetDebrisGroupColour.field_r.writePixels(var5Lifetime1Lifetime1Lifetime3, var6Lifetime1Lifetime1Lifetime3, dma.field_g, -var4_intLifetime1Lifetime1Lifetime1 + dma.field_j, dma.field_i, var4_intLifetime1Lifetime1Lifetime1 * dma.field_g, dma.field_g);
           }
           if (var2Lifetime1Lifetime1 != 0) {
-            if (mjb.field_e) {
+            if (GpuSprite.field_e) {
               stackIn_177_0 = SetFighterBayAimspeed.field_p;
             } else {
               stackIn_177_0 = kia.field_b;
@@ -423,7 +423,7 @@ final class ServerInfoFactory implements GameStateFactory {
             var11Lifetime1Lifetime2 = var5Lifetime1Lifetime2 + var9Lifetime1Lifetime2;
             var12Lifetime1Lifetime2 = var6Lifetime1Lifetime2 + var10Lifetime1Lifetime2;
             var18.a(var11Lifetime1Lifetime2, var7Lifetime1Lifetime2 + var11Lifetime1Lifetime2, var12Lifetime1Lifetime2, var8Lifetime1Lifetime2 + var12Lifetime1Lifetime2, (byte) -70);
-            GetDebrisGroupColour.field_r.SA(var11Lifetime1Lifetime2 - var5Lifetime1Lifetime2, var12Lifetime1Lifetime2, dma.field_g, var8Lifetime1Lifetime2, dma.field_i, dma.field_g * var6Lifetime1Lifetime2, dma.field_g);
+            GetDebrisGroupColour.field_r.writePixels(var11Lifetime1Lifetime2 - var5Lifetime1Lifetime2, var12Lifetime1Lifetime2, dma.field_g, var8Lifetime1Lifetime2, dma.field_i, dma.field_g * var6Lifetime1Lifetime2, dma.field_g);
             var18.a(true);
           }
         }

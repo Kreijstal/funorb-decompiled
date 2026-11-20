@@ -78,7 +78,7 @@ final class gib {
     }
 
     final static void a(int param0, int param1) {
-        asa.field_c = 1000000000L / (long)param1;
+        OpenGlGlyphMask.field_c = 1000000000L / (long)param1;
         int var2 = 38 % ((param0 + 37) / 54);
     }
 

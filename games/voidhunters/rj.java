@@ -279,7 +279,7 @@ final class rj {
         int var11;
         int[] var15;
         var15 = new int[4];
-        param0.K(var15);
+        param0.getClip(var15);
         if (param5 != null &&
           var15[3] - var15[1] != param5.length) {
           throw new IllegalStateException();
@@ -303,7 +303,7 @@ final class rj {
               continue;
             }
           }
-          param0.U(var8, var10, var9 - var8, param4, 1);
+          param0.drawHorizontalLine(var8, var10, var9 - var8, param4, 1);
         }
     }
 

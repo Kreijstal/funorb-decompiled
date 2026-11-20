@@ -70,7 +70,7 @@ abstract class mnb {
             break;
           }
           if (var2 != null) {
-            al.a(param0, var2, 2);
+            SoftwareFramebuffer.insertBefore(param0, var2, 2);
             return;
           }
           SetMachineGunAimarc.field_q.addLast(-10258, param0);

@@ -1041,7 +1041,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime126 = dqb.a((byte) -5, "COMPONENT_USE_ENERGY_SHIELD_DIRECTIONAL_TEXT");
           if (var2Lifetime126 != null) {
-            kha.field_d = qpa.a((byte) -125, var2Lifetime126);
+            OpenGlPostProcessor.field_d = qpa.a((byte) -125, var2Lifetime126);
           }
           var2Lifetime127 = dqb.a((byte) -38, "COMPONENT_USE_POINT_DEFENCE_LASER_TEXT");
           if (var2Lifetime127 != null) {
@@ -1225,7 +1225,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime172 = dqb.a((byte) -87, "COMPONENT_POINT_DEFENCE_LASER_TEXT");
           if (null != var2Lifetime172) {
-            woa.field_e = qpa.a((byte) -125, var2Lifetime172);
+            SoftwareDepthBuffer.field_e = qpa.a((byte) -125, var2Lifetime172);
           }
           var2Lifetime173 = dqb.a((byte) -2, "COMPONENT_COUNTERMEASURE_TEXT");
           if (var2Lifetime173 != null) {
@@ -1237,7 +1237,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime175 = dqb.a((byte) -71, "COMPONENT_SPECIAL_COMPONENT_TEXT");
           if (var2Lifetime175 != null) {
-            asa.field_d = qpa.a((byte) -125, var2Lifetime175);
+            OpenGlGlyphMask.field_d = qpa.a((byte) -125, var2Lifetime175);
           }
           var2Lifetime176 = dqb.a((byte) -97, "COMPONENT_ARMOUR_PLATE_TEXT");
           if (var2Lifetime176 != null) {
@@ -1931,7 +1931,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
             stackIn_7_0 = ita.a(param3, param0 + 8025).b(param1, param4, param2);
             return stackIn_7_0;
           }
-          stackIn_5_0 = SetTorpedoEnergyUsed.a(param3, 300).a(param1, param2, param4, (byte) 112, (aja[]) null);
+          stackIn_5_0 = SetTorpedoEnergyUsed.a(param3, 300).a(param1, param2, param4, (byte) 112, (ToolkitSprite[]) null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

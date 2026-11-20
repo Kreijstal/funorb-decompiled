@@ -4,7 +4,7 @@
 final class GetCountermeasureLauncherAimspeed extends ConsoleCommand {
     final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, String param6, int param7) {
         RuntimeException var8 = null;
-        da stackIn_8_0;
+        ToolkitFont stackIn_8_0;
         int stackIn_8_1;
         int stackIn_8_2;
         int stackIn_8_3;
@@ -15,7 +15,7 @@ final class GetCountermeasureLauncherAimspeed extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (255 <= param2) {
-            woa.a(param4, param1, param0, (byte) 74, param5, param7, param6);
+            SoftwareDepthBuffer.a(param4, param1, param0, (byte) 74, param5, param7, param6);
             return;
           }
           if (li.field_i) {
@@ -24,7 +24,7 @@ final class GetCountermeasureLauncherAimspeed extends ConsoleCommand {
             stackIn_8_2 = param1;
             stackIn_8_3 = param2 << 24 | param4;
             stackIn_9_4 = !(param3);
-            ((da) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_9_4, param0, param6);
+            ((ToolkitFont) (Object) stackIn_8_0).a(stackIn_8_1, stackIn_8_2, stackIn_8_3, stackIn_9_4, param0, param6);
           } else {
             ita.a(param7, 7988).c(param6, param0, param1, param4, param5, param2);
           }

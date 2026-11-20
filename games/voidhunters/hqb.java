@@ -340,13 +340,13 @@ final class hqb {
             PlayerVoteFactory.a(this.field_a, this.field_d, 63);
           } else {
             if (param1 == 11) {
-              mea.a(0, (byte) -118, param0, this.field_c);
+              OpenGlPostEffect.a(0, (byte) -118, param0, this.field_c);
             } else {
               if (param1 == 12) {
-                mea.a(1, (byte) -123, param0, this.field_c);
+                OpenGlPostEffect.a(1, (byte) -123, param0, this.field_c);
               } else {
                 if (param1 == 13) {
-                  mea.a(2, (byte) -105, param0, this.field_c);
+                  OpenGlPostEffect.a(2, (byte) -105, param0, this.field_c);
                 } else {
                   if (param1 != 14) {
                     if (param1 != 20) {

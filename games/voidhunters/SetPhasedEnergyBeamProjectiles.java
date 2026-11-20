@@ -162,7 +162,7 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
             var7 = var8.height;
             var6_int = var8.width;
           }
-          stackIn_6_0 = GraphicsToolkit.a(var7, param4, param2, var6_int, param3, param1, 111, param5);
+          stackIn_6_0 = GraphicsToolkit.create(var7, param4, param2, var6_int, param3, param1, 111, param5);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

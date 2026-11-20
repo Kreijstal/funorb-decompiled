@@ -98,7 +98,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetSpinningBladeSpinupSpeed.field_o[50] = GetPedrosRepairMode.field_o;
           SetSpinningBladeSpinupSpeed.field_o[41] = WeaponBehaviourFactory.field_a;
           SetSpinningBladeSpinupSpeed.field_o[27] = Lo.field_p;
-          SetSpinningBladeSpinupSpeed.field_o[47] = asa.field_d;
+          SetSpinningBladeSpinupSpeed.field_o[47] = OpenGlGlyphMask.field_d;
           SetSpinningBladeSpinupSpeed.field_o[35] = SetLaserProjectiles.field_p;
           SetSpinningBladeSpinupSpeed.field_o[37] = lm.field_a;
           SetSpinningBladeSpinupSpeed.field_o[33] = SetBombletSprayProjectileDamage.field_p;
@@ -106,7 +106,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetSpinningBladeSpinupSpeed.field_o[18] = SetPlayerRepairAmount.field_o;
           SetSpinningBladeSpinupSpeed.field_o[44] = GetPhasedEnergyBeamReload.field_r;
           SetSpinningBladeSpinupSpeed.field_o[24] = grb.field_i;
-          SetSpinningBladeSpinupSpeed.field_o[43] = woa.field_e;
+          SetSpinningBladeSpinupSpeed.field_o[43] = SoftwareDepthBuffer.field_e;
           SetSpinningBladeSpinupSpeed.field_o[17] = SetGrapplingHookMaxLength.field_o;
           SetSpinningBladeSpinupSpeed.field_o[20] = ubb.field_k;
           ShipSpawnedCondition.field_e = new String[56];
@@ -146,7 +146,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ShipSpawnedCondition.field_e[27] = DebrisFactory.field_b;
           ShipSpawnedCondition.field_e[47] = SetGrapplingHookSpringConstant.field_o;
           ShipSpawnedCondition.field_e[25] = RemoveEventActionFactory.field_c;
-          ShipSpawnedCondition.field_e[42] = kha.field_d;
+          ShipSpawnedCondition.field_e[42] = OpenGlPostProcessor.field_d;
           ShipSpawnedCondition.field_e[34] = fib.field_h;
           ShipSpawnedCondition.field_e[40] = fib.field_h;
           ShipSpawnedCondition.field_e[35] = SetSpecialOrderBoxHeight.field_q;
@@ -203,7 +203,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.field_o[25] = SetMinimapHeight.field_q;
           GetGrapplingHookSpringConstant.field_o[7] = SpecialOrderSubmessageFactory.field_a;
           GetGrapplingHookSpringConstant.field_o[20] = lh.field_b;
-          GetGrapplingHookSpringConstant.field_o[14] = tla.field_k;
+          GetGrapplingHookSpringConstant.field_o[14] = OpenGlSprite.field_k;
           GetGrapplingHookSpringConstant.field_o[48] = SetShieldsDirectionalIdleEnergyUsage.field_o;
           GetGrapplingHookSpringConstant.field_o[36] = SetUseExtraBackground.field_s;
           GetGrapplingHookSpringConstant.field_o[50] = GetThrusterBindingBalanceThreshold.field_o;

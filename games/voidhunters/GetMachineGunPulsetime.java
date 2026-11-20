@@ -74,7 +74,7 @@ final class GetMachineGunPulsetime extends ConsoleCommand {
             return;
           }
           if (ne.field_v) {
-            GetDebrisGroupColour.field_r.a(param2, (byte) 120, param0 | -16777216, param4, param3, param5);
+            GetDebrisGroupColour.field_r.fillRectangle(param2, (byte) 120, param0 | -16777216, param4, param3, param5);
             return;
           }
           return;
@@ -86,7 +86,7 @@ final class GetMachineGunPulsetime extends ConsoleCommand {
         if (!ne.field_v) {
           return;
         }
-        GetDebrisGroupColour.field_r.a(param2, (byte) 120, param0 | -16777216, param4, param3, param5);
+        GetDebrisGroupColour.field_r.fillRectangle(param2, (byte) 120, param0 | -16777216, param4, param3, param5);
     }
 
     public static void clearSharedReferences(byte param0) {

@@ -9,10 +9,10 @@ final class ta {
         wp.field_a = SetBombletSprayEnergyUsed.field_o;
         if (param0 > -101) {
           ta.clearSharedReferences((byte) -35);
-          pw.field_a = param1;
+          Transform3D.field_a = param1;
           return;
         }
-        pw.field_a = param1;
+        Transform3D.field_a = param1;
     }
 
     public static void clearSharedReferences(byte param0) {

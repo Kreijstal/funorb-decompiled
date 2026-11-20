@@ -256,11 +256,11 @@ final class MissionBuilder implements DiffableState {
           var7 = t.a(4, (byte) 101);
           var7.a(param0, param4, (byte) -68);
           var8 = 1;
-          var7.h(17704, var8);
+          var7.setTeam(17704, var8);
           var9 = this.a(param2, var8, 13145, param1);
-          var7.g(var9, 98);
+          var7.setOwner(var9, 98);
           if (var9 == -1) {
-            var7.a(new ShipAI(), 4);
+            var7.setAi(new ShipAI(), 4);
           }
           int var10 = -13 % ((22 - param3) / 62);
           var7.a(4096, -17);
@@ -387,8 +387,8 @@ final class MissionBuilder implements DiffableState {
             for (var15 = 0; var15 < 2; var15++) {
               for (var16 = 0; var16 < var14; var16++) {
                 var17 = t.a(var13Lifetime1, (byte) 101);
-                var17.h(17704, 2);
-                var17.a(new ShipAI(), 4);
+                var17.setTeam(17704, 2);
+                var17.setAi(new ShipAI(), 4);
                 for (var18 = 0; var18 < 1000; var18++) {
                   var19 = hob.a(param0, 8192, 117);
                   var20 = hob.a(param0, var12, 127) >> 8;
@@ -516,13 +516,13 @@ final class MissionBuilder implements DiffableState {
           for (var6_int = 0; var5.length > var6_int; var6_int++) {
             var21 = var5[var6_int];
             if (var21 != null) {
-              var8_int = mjb.b(21957, var21.getTeam((byte) 91));
-              var21.h(param0 + 17705, var8_int);
+              var8_int = GpuSprite.b(21957, var21.getTeam((byte) 91));
+              var21.setTeam(param0 + 17705, var8_int);
               if (var21.getOwner((byte) -117) >= 0) {
                 var9 = this.a(param2, var8_int, 13145, param1);
-                var21.g(var9, 98);
+                var21.setOwner(var9, 98);
                 if (-1 == var9) {
-                  var21.a(new ShipAI(), param0 ^ -5);
+                  var21.setAi(new ShipAI(), param0 ^ -5);
                 }
               }
             }
@@ -530,7 +530,7 @@ final class MissionBuilder implements DiffableState {
           var6 = var20.getSpawnPoints((byte) 24);
           var7 = (SpawnPoint) (var6.first(0));
           while (var7 != null) {
-            var7.a(mjb.b(param0 + 21958, var7.getTeam(121)), (byte) -96);
+            var7.a(GpuSprite.b(param0 + 21958, var7.getTeam(121)), (byte) -96);
             var7 = (SpawnPoint) (var6.next((byte) 66));
           }
           if (param0 != -1) {
@@ -788,13 +788,13 @@ final class MissionBuilder implements DiffableState {
                 var12.chassis.g(0);
                 var12.a(GameKeyHandler.a(22433, 4096 + var12.e(0)), -29);
                 var12.a(-var12.x, -var12.y, (byte) 45);
-                var9 = mjb.b(21957, var12.getTeam((byte) 64));
-                var12.h(17704, var9);
+                var9 = GpuSprite.b(21957, var12.getTeam((byte) 64));
+                var12.setTeam(17704, var9);
                 if (var12.getOwner((byte) -117) >= 0) {
                   var10 = this.a(param0, var9, 13145, param3);
-                  var12.g(var10, -97);
+                  var12.setOwner(var10, -97);
                   if (-1 == var10) {
-                    var12.a(new ShipAI(), 4);
+                    var12.setAi(new ShipAI(), 4);
                   }
                 }
                 param0.world.a(var12, (byte) 85);
@@ -899,8 +899,8 @@ final class MissionBuilder implements DiffableState {
             var21 = rpa.a(2, 1, true);
             var22 = 2048 * var20 / (var17 - 1) + 2048;
             var21.a(param1 + var18 * (GetNumStars.a(var22, (byte) 127) >> 8), (eu.a(var22, 50) >> 8) * var18 + param0, (byte) -95);
-            var21.a(new ShipAI(), 4);
-            var21.h(17704, 1);
+            var21.setAi(new ShipAI(), 4);
+            var21.setTeam(17704, 1);
             param2.a(var21, (byte) 81);
             var19 = (ShipBody[]) (ija.a(var21, (Object[]) (var19), 0, ebb.field_a));
           }
@@ -997,7 +997,7 @@ final class MissionBuilder implements DiffableState {
                 if (var15_ref instanceof AwardVictoryToTeamAction) {
                   var26 = (AwardVictoryToTeamAction) (var15_ref);
                   var17Lifetime1 = var26.getParameter(0, -118);
-                  var18Lifetime1 = mjb.b(21957, var17Lifetime1);
+                  var18Lifetime1 = GpuSprite.b(21957, var17Lifetime1);
                   var26.setParameter(param4, false, 0, var18Lifetime1);
                 }
                 var20++;
@@ -1196,8 +1196,8 @@ final class MissionBuilder implements DiffableState {
             var19 = rpa.a(2, 2, true);
             var20 = var18 * 2048 / (-1 + var15Lifetime1) + 2048;
             var19.a(param1 + (GetNumStars.a(var20, (byte) -107) >> 8) * var16Lifetime1, (eu.a(var20, 59) >> 8) * var16Lifetime1 + param3, (byte) -127);
-            var19.a(new ShipAI(), 4);
-            var19.h(17704, 1);
+            var19.setAi(new ShipAI(), 4);
+            var19.setTeam(17704, 1);
             param2.a(var19, (byte) 92);
             var17Lifetime2 = (ShipBody[]) (ija.a(var19, (Object[]) (var17Lifetime2), 0, ebb.field_a));
           }
@@ -1365,8 +1365,8 @@ final class MissionBuilder implements DiffableState {
         try {
           var5 = t.a(1, (byte) 47);
           var5.a(param3, param1, (byte) 95);
-          var5.a(new ShipAI(), 4);
-          var5.h(17704, 1);
+          var5.setAi(new ShipAI(), 4);
+          var5.setTeam(17704, 1);
           var7 = 7 % ((23 - param0) / 36);
           param2.a(var5, (byte) 99);
           var6 = new MissionEvent();
@@ -1516,7 +1516,7 @@ final class MissionBuilder implements DiffableState {
           if (param3 != 14276) {
             this.clearanceAreas = (MapClearanceArea[]) null;
           }
-          param0.setParameter(param1, -2, param2, mjb.b(21957, var5_int));
+          param0.setParameter(param1, -2, param2, GpuSprite.b(21957, var5_int));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bea.GA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -1841,7 +1841,7 @@ final class MissionBuilder implements DiffableState {
           var20 = new MissionEvent();
           for (var21 = 0; var18 > var21; var21++) {
             var22 = rpa.a(2, -1, true);
-            var22.h(17704, 2);
+            var22.setTeam(17704, 2);
             var23 = hob.a(param4, 8192, 122);
             var24 = hob.a(param4, var19, 126) >> 8;
             for (var25_int = 0; 1000 > var25_int; var25_int++) {
@@ -2525,8 +2525,8 @@ final class MissionBuilder implements DiffableState {
         try {
           var18 = rpa.a(1, 1, true);
           var18.a(param2, param3, (byte) -108);
-          var18.a(new ShipAI(), param0 ^ 4);
-          var18.h(17704, param0);
+          var18.setAi(new ShipAI(), param0 ^ 4);
+          var18.setTeam(17704, param0);
           param4.a(var18, (byte) 107);
           var7 = null;
           var8 = param4.f(24797);
@@ -3367,7 +3367,7 @@ final class MissionBuilder implements DiffableState {
         }
         try {
           var5_int = param0.getParameter(param3, -113);
-          param0.setParameter(param2, false, param3, mjb.b(21957, var5_int));
+          param0.setParameter(param2, false, param3, GpuSprite.b(21957, var5_int));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bea.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -3632,8 +3632,8 @@ final class MissionBuilder implements DiffableState {
             var13 = GetResourceNodeCaptureTime.a(var8, true, true);
             var10 = ae.a(var13, (byte) 65);
             var10.a(0, 0, (byte) 30);
-            var10.a(new ShipAI(), param5 - 2097148);
-            var10.h(param5 - 2079448, 1);
+            var10.setAi(new ShipAI(), param5 - 2097148);
+            var10.setTeam(param5 - 2079448, 1);
             param1.a(var10, (byte) 100);
             if (param5 != 2097152) {
               this.seed = 0;

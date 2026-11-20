@@ -20,7 +20,7 @@ final class SetLag extends ConsoleCommand {
           }
           GetSniperCannonFiringLeeway.field_o = param10;
           pr.field_d = param13;
-          kha.field_v = param9;
+          OpenGlPostProcessor.field_v = param9;
           GetMissionTimeLimit.field_o = param1;
           wc.field_a = param6;
           GetLoadingMissions.field_q = param4;

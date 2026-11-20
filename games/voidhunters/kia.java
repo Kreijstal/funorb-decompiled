@@ -7,7 +7,7 @@ final class kia {
 
     final static void a(byte param0) {
         String var1 = null;
-        if (!tla.field_c) {
+        if (!OpenGlSprite.field_c) {
           throw new IllegalStateException();
         }
         if (param0 == 63) {

@@ -65,10 +65,10 @@ final class SetDebrisCarryOver extends ConsoleCommand {
         int var24 = 0;
         var24 = VoidHunters.field_G;
         try {
-          if (null != mpb.field_h) {
+          if (null != OpenGlBloomEffect.field_h) {
             return;
           }
-          mpb.field_h = new int[65536];
+          OpenGlBloomEffect.field_h = new int[65536];
           var1_double = 0.7 + (-0.015 + 0.03 * Math.random());
           var3 = 0;
           var4 = -119 % ((-10 - param0) / 52);
@@ -131,7 +131,7 @@ final class SetDebrisCarryOver extends ConsoleCommand {
               var23 = var22 + (var21 << 8) + (-16777216 + (var20 << 16));
               incrementValue$0 = var3;
               var3++;
-              mpb.field_h[incrementValue$0] = var23;
+              OpenGlBloomEffect.field_h[incrementValue$0] = var23;
             }
           }
           return;

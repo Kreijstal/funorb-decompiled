@@ -12,10 +12,10 @@ final class sja {
     static int field_c;
     int field_f;
     static String field_j;
-    aja field_k;
+    ToolkitSprite field_k;
     int field_h;
 
-    final void a(int param0, sja param1, int param2, aja param3, int param4, int param5, int param6) {
+    final void a(int param0, sja param1, int param2, ToolkitSprite param3, int param4, int param5, int param6) {
         try {
           this.field_e = param1;
           this.field_k = param3;

@@ -260,7 +260,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
                 return;
               }
             }
-            var5.h(17704, this.team);
+            var5.setTeam(17704, this.team);
             if (var5.getOwner((byte) -117) >= 0 &&
               var5.getOwner((byte) -117) < param2.field_c.length) {
               param2.a(var5.getOwner((byte) -117), (byte) 59).selectedTeam = this.team;

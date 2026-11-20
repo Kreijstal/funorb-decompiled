@@ -1016,7 +1016,7 @@ final class asb {
           }
           var5 = new File("//contentfs/mgcontent_v4/WIP/voidhunters/src/freelevels/" + param4 + param1);
           try {
-            oj.a(var5, 3, param2, param0);
+            GpuTransform3D.writeFile(var5, 3, param2, param0);
           } catch (IOException iOException) {
             iOException.printStackTrace();
           }

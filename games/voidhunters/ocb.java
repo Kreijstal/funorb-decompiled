@@ -46,7 +46,7 @@ final class ocb extends eca {
             stackIn_8_0 = GetThrusterParticleSpeedDownshift.field_o;
             return stackIn_8_0;
           }
-          if (mea.a(126, var5)) {
+          if (OpenGlPostEffect.isRepeatedCharacter(126, var5)) {
             stackIn_11_0 = qab.field_a;
             return stackIn_11_0;
           }

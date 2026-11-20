@@ -78,7 +78,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
         int[] var30 = null;
         var14 = VoidHunters.field_G;
         try {
-          GetDebrisGroupColour.field_r.GA(0);
+          GetDebrisGroupColour.field_r.clearColor(0);
           if (param0 != 102) {
             return;
           }

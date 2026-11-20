@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class i extends ka implements e {
+final class i extends ka implements NativeResource {
     private qeb[] field_a;
     long field_nativeid;
-    private ya field_b;
+    private NativeSoftwareHeap field_b;
     private tn[] field_c;
     private NativeSoftwareToolkit field_d;
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          pq.a(0, (e) (this));
+          NativeDisposalQueue.enqueue(0, (NativeResource) (this));
         }
     }
 
@@ -20,19 +20,19 @@ final class i extends ka implements e {
 
     final native int HA();
 
-    private final native void R(NativeSoftwareToolkit param0, ya param1, int param2, int param3, int[] param4, int[] param5, int[] param6, int[] param7, short[] param8, int param9, short[] param10, short[] param11, short[] param12, byte[] param13, byte[] param14, byte[] param15, byte[] param16, short[] param17, short[] param18, int[] param19, byte param20, short[] param21, int param22, byte[] param23, short[] param24, short[] param25, short[] param26, int[] param27, int[] param28, int[] param29, byte[] param30, byte[] param31, int[] param32, int[] param33, int[] param34, int[] param35, int param36, int param37, int param38, int param39, int param40, int param41, int[] param42);
+    private final native void R(NativeSoftwareToolkit param0, NativeSoftwareHeap param1, int param2, int param3, int[] param4, int[] param5, int[] param6, int[] param7, short[] param8, int param9, short[] param10, short[] param11, short[] param12, byte[] param13, byte[] param14, byte[] param15, byte[] param16, short[] param17, short[] param18, int[] param19, byte param20, short[] param21, int param22, byte[] param23, short[] param24, short[] param25, short[] param26, int[] param27, int[] param28, int[] param29, byte[] param30, byte[] param31, int[] param32, int[] param33, int[] param34, int[] param35, int param36, int param37, int param38, int param39, int param40, int param41, int[] param42);
 
     final native int G();
 
     private final native void oa(NativeSoftwareToolkit param0);
 
-    public final native void w(boolean param0);
+    public final native void disposeNative(boolean param0);
 
     final native void H(int param0, int param1, int param2);
 
     final native int V();
 
-    i(NativeSoftwareToolkit param0, ya param1, cbb param2, int param3, int param4, int param5, int param6) {
+    i(NativeSoftwareToolkit param0, NativeSoftwareHeap param1, cbb param2, int param3, int param4, int param5, int param6) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;

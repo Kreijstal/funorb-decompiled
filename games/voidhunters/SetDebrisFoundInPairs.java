@@ -102,7 +102,7 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
           if (param2) {
             SetPedrosRepairMode.field_o = SetPedrosRepairMode.field_o - 1;
             if (0 == SetPedrosRepairMode.field_o) {
-              mpb.field_h = null;
+              OpenGlBloomEffect.field_h = null;
             }
           }
           var3_int = 78 % ((param0 - 24) / 63);

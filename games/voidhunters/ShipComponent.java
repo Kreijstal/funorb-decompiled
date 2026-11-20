@@ -345,7 +345,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           }
           if (var25.field_d > 0 &&
             param0) {
-            ((Ship) (param3)).e(-1, var25.field_d);
+            ((Ship) (param3)).addEnergy(-1, var25.field_d);
             return;
           }
           return;
@@ -864,11 +864,11 @@ final class ShipComponent implements DiffableState, CompactGameState {
                 }
               } else {
                 if (mmb.field_d[var17] != null) {
-                  mmb.field_d[var17].a(var20_float, var21_float, var14_float, var15_float, var19, var22, 0, var23, 1);
+                  mmb.field_d[var17].drawRotatedScaled(var20_float, var21_float, var14_float, var15_float, var19, var22, 0, var23, 1);
                 }
                 if (0 <= var18 &&
                   null != mmb.field_d[var18]) {
-                  mmb.field_d[var18].a(var20_float, var21_float, var14_float, var15_float, var19, var22, 0, var23, 2);
+                  mmb.field_d[var18].drawRotatedScaled(var20_float, var21_float, var14_float, var15_float, var19, var22, 0, var23, 2);
                 }
               }
               var13 = 0;

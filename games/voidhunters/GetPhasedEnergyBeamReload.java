@@ -35,7 +35,7 @@ final class GetPhasedEnergyBeamReload extends ConsoleCommand {
           }
           return;
         }
-        GetDebrisGroupColour.field_r.a(param4 | -16777216, Math.max(1, (int)param1), param3, param0, (byte) -123);
+        GetDebrisGroupColour.field_r.fillCircle(param4 | -16777216, Math.max(1, (int)param1), param3, param0, (byte) -123);
         if (param2 < -16) {
           return;
         }

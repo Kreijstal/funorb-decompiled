@@ -51,7 +51,7 @@ final class GetPedrosRepairModeSwitchtime extends ConsoleCommand {
             param6 = false;
           }
           jra.a(param4, param6, 19717);
-          oj.a((byte) -127, param6, param5);
+          GpuTransform3D.a((byte) -127, param6, param5);
           param6 = false;
         }
         return param6;
@@ -97,9 +97,9 @@ final class GetPedrosRepairModeSwitchtime extends ConsoleCommand {
             if (BlackBoxRecordingFactory.field_a != null) {
               BlackBoxRecordingFactory.field_a.a(23474);
             }
-            if (cba.field_e != null) {
+            if (GpuNativeHeap.field_e != null) {
               try {
-                cba.field_e.a(true);
+                GpuNativeHeap.field_e.a(true);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;

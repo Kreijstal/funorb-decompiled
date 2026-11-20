@@ -578,9 +578,9 @@ final class wf {
                                         aeb.field_a = true;
                                         GetMessageFadetime.field_o = false;
                                         if (wh.g(-118) &&
-                                          jkb.field_a) {
+                                          GraphicsPresentException.field_a) {
                                           RequestNewestBlackboxRecording.field_p.writeIsaacByte(param0 ^ 24343, 10);
-                                          jkb.field_a = false;
+                                          GraphicsPresentException.field_a = false;
                                           MessageLog.field_d = false;
                                         }
                                       }

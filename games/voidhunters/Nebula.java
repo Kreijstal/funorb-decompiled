@@ -235,7 +235,7 @@ final class Nebula implements DiffableState {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        aja var13 = null;
+        ToolkitSprite var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
@@ -262,7 +262,7 @@ final class Nebula implements DiffableState {
               -var17 + this.x < param3.field_f[1] &&
               this.y + var17 >= param3.field_f[2] &&
               param3.field_f[3] > this.y - var17) {
-              var13.a(var15, var16, var14, var14, 2, var11, 1);
+              var13.drawScaled(var15, var16, var14, var14, 2, var11, 1);
               return;
             }
             return;

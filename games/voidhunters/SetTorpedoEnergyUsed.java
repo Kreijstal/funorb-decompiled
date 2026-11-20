@@ -6,7 +6,7 @@ final class SetTorpedoEnergyUsed extends ConsoleCommand {
     static int field_p;
     static float field_o;
 
-    final static sw a(int param0, int param1) {
+    final static ToolkitFontMetrics a(int param0, int param1) {
         if (param1 != 300) {
           Sprite var3 = (Sprite) null;
           SetTorpedoEnergyUsed.a(86, (Sprite) null);

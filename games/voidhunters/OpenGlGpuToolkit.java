@@ -155,7 +155,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
 
     final void o(byte param0) {
         if (param0 != 81) {
-          this.ya();
+          this.clearDepth();
         }
         if (this.field_ac) {
           jaggl.OpenGL.glEnable(3089);
@@ -171,14 +171,14 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         return (vca) ((Object) new mq(this, mj.field_e, param1));
     }
 
-    final boolean b() {
+    final boolean enableBloom() {
         return false;
     }
 
     final synchronized void b(int param0, int param1, boolean param2) {
         if (param2) {
-          aja var5 = (aja) null;
-          this.a((aja) null, true);
+          ToolkitSprite var5 = (ToolkitSprite) null;
+          this.setRenderTarget((ToolkitSprite) null, true);
         }
         hua var4 = new hua(param1);
         var4.key = (long)param0;
@@ -196,13 +196,13 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void ya() {
+    final void clearDepth() {
         this.b((byte) -74, true);
         jaggl.OpenGL.glClear(256);
     }
 
-    final void o() {
-        super.o();
+    final void releaseResources() {
+        super.releaseResources();
         if (this.field_zc != null) {
           this.field_zc.detachFromCurrentThread();
           this.field_zc.release();
@@ -261,10 +261,10 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void beginPostProcessing(int param0, int param1, int param2, int param3) {
     }
 
-    final boolean s() {
+    final boolean isBloomEnabled() {
         return false;
     }
 
@@ -326,7 +326,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -5210) {
-            this.u();
+            this.applyPostProcessing();
           }
           stackIn_3_0 = new qva(this, param3, param0, param2);
           return (hdb) ((Object) stackIn_3_0);
@@ -411,19 +411,19 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           if (this.field_ec) {
             jaggl.OpenGL.glLoadIdentity();
           } else {
-            jaggl.OpenGL.glLoadMatrixf(this.field_O.b(GetDebrisMax.field_q, (byte) 114), 0);
+            jaggl.OpenGL.glLoadMatrixf(this.field_O.writeColumnMajorMatrix(GetDebrisMax.field_q, (byte) 114), 0);
           }
           this.field_Dc = false;
         } else {
           if (!this.field_cd) {
-            jaggl.OpenGL.glLoadMatrixf(this.field_gb.b(GetDebrisMax.field_q, (byte) 114), 0);
+            jaggl.OpenGL.glLoadMatrixf(this.field_gb.writeColumnMajorMatrix(GetDebrisMax.field_q, (byte) 114), 0);
             this.field_cd = true;
             this.m(3);
             this.f(73);
           }
           if (!this.field_ec) {
             jaggl.OpenGL.glPushMatrix();
-            jaggl.OpenGL.glMultMatrixf(this.field_O.b(GetDebrisMax.field_q, (byte) 114), 0);
+            jaggl.OpenGL.glMultMatrixf(this.field_O.writeColumnMajorMatrix(GetDebrisMax.field_q, (byte) 114), 0);
             this.field_Dc = true;
           } else {
             this.field_Dc = false;
@@ -431,7 +431,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void a(hf param0) {
+    final void bindFramebuffer(Framebuffer param0) {
     }
 
     final void h(boolean param0) {
@@ -454,7 +454,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         this.field_Uc.addLast(-10258, var4);
     }
 
-    final hf a(ekb param0, wib param1) {
+    final Framebuffer createFramebuffer(ColorBuffer param0, DepthBuffer param1) {
         RuntimeException var3 = null;
         Object stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
@@ -465,7 +465,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           stackIn_1_0 = null;
-          return (hf) (stackIn_1_0);
+          return (Framebuffer) (stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -486,12 +486,12 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void GA(int param0) {
+    final void clearColor(int param0) {
         jaggl.OpenGL.glClearColor((float)(param0 & 16711680) / 16711680.0f, (float)(param0 & 65280) / 65280.0f, (float)(param0 & 255) / 255.0f, (float)(param0 >>> 24) / 255.0f);
         jaggl.OpenGL.glClear(16384);
     }
 
-    final void SA(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
+    final void writePixels(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         try {
           this.h((byte) 101);
           this.a((ura) null, -111);
@@ -521,7 +521,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           jaggl.OpenGL.glEnable(3008);
         }
         if (param0 != 17634) {
-          this.o();
+          this.releaseResources();
         }
     }
 
@@ -677,7 +677,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
 
     final void w(int param0) {
         if (param0 != 1) {
-          this.a(0.3592780530452728f, 1.5894063711166382f, 0.25299444794654846f);
+          this.setBloomParameters(0.3592780530452728f, 1.5894063711166382f, 0.25299444794654846f);
         }
         if (this.field_cc &&
           this.field_ub &&
@@ -688,7 +688,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void a(aja param0, boolean param1) {
+    final void setRenderTarget(ToolkitSprite param0, boolean param1) {
     }
 
     final float f(byte param0) {
@@ -718,7 +718,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         this.field_cd = false;
         this.I((byte) -105);
         if (param0 != 17891) {
-          this.j();
+          this.restoreDefaultFramebuffer();
         }
     }
 
@@ -763,7 +763,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final synchronized void c(int param0) {
+    final synchronized void updateFrame(int param0) {
         int incrementValue$3 = 0;
         int incrementValue$2 = 0;
         int incrementValue$1 = 0;
@@ -865,7 +865,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           System.gc();
           this.field_Tc = wt.a(false);
         }
-        super.c(param0);
+        super.updateFrame(param0);
     }
 
     final gf a(int param0, int param1, byte[] param2, kb param3, int param4, int param5) {
@@ -956,7 +956,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final wib b(int param0, int param1) {
+    final DepthBuffer createDepthBuffer(int param0, int param1) {
         return null;
     }
 
@@ -1084,7 +1084,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         if (SetGrappleDebris.field_o == this.field_A[this.field_ab]) {
           jaggl.OpenGL.glLoadIdentity();
         } else {
-          jaggl.OpenGL.glLoadMatrixf(this.field_Eb[this.field_ab].b(GetDebrisMax.field_q, (byte) 114), 0);
+          jaggl.OpenGL.glLoadMatrixf(this.field_Eb[this.field_ab].writeColumnMajorMatrix(GetDebrisMax.field_q, (byte) 114), 0);
         }
         jaggl.OpenGL.glMatrixMode(5888);
     }
@@ -1108,10 +1108,10 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         jaggl.OpenGL.glTexEnvi(8960, 34162, tc.a(8448, this.field_U[this.field_ab]));
     }
 
-    final void a(float param0, float param1, float param2) {
+    final void setBloomParameters(float param0, float param1, float param2) {
     }
 
-    final void v() {
+    final void copyFrontToBackBuffer() {
         if (0 >= this.field_db &&
           !(0 < this.field_i)) {
           return;
@@ -1142,7 +1142,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         jaggl.OpenGL.glFlush();
         jaggl.OpenGL.glReadBuffer(1029);
         jaggl.OpenGL.glDrawBuffer(1029);
-        this.KA(var1, var3, var2, var4);
+        this.setClip(var1, var3, var2, var4);
     }
 
     final eb a(int param0, byte[] param1, kb param2, int param3, int param4, int param5, boolean param6, int param7) {
@@ -1400,7 +1400,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
             decompiledCaughtException = decompiledCaughtParameter3;
             var8 = decompiledCaughtException;
             var8.printStackTrace();
-            this.a((byte) 30);
+            this.dispose((byte) 30);
             throw new RuntimeException("");
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter4) {
@@ -1435,7 +1435,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final int[] na(int param0, int param1, int param2, int param3) {
+    final int[] readPixels(int param0, int param1, int param2, int param3) {
         int var6 = 0;
         int var7 = VoidHunters.field_G;
         int[] var8 = new int[param3 * param2];
@@ -1492,7 +1492,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         jaggl.OpenGL.glFogfv(2918, GetPhasedEnergyBeamFireForce.field_o, 0);
     }
 
-    final void u() {
+    final void applyPostProcessing() {
     }
 
     final eb a(int param0, int param1, int param2, kb param3, mj param4) {
@@ -1543,7 +1543,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void j() {
+    final void restoreDefaultFramebuffer() {
     }
 
     final void o(int param0) {
@@ -1601,7 +1601,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void a(int param0, int param1) throws jkb {
+    final void present(int param0, int param1) throws GraphicsPresentException {
         this.field_zc.swapBuffers();
     }
 
@@ -1786,7 +1786,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           return;
         }
         if (GetGrapplingHookRopeBreakLength.field_o != this.field_fc) {
-          if (this.field_fc == oj.field_b) {
+          if (this.field_fc == GpuTransform3D.field_b) {
             jaggl.OpenGL.glBlendFunc(1, 1);
           } else {
             if (DebugSendable.field_e == this.field_fc) {

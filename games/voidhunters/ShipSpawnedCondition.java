@@ -95,7 +95,7 @@ final class ShipSpawnedCondition extends MissionCondition implements DiffableSta
             var7 = var5[var6];
             if (var7 != null &&
               var7.getTeam((byte) 114) == this.teamId &&
-              !var7.l((byte) -10) &&
+              !var7.hasAi((byte) -10) &&
               var7.getOwner((byte) -117) >= 0 &&
               var7.field_D) {
               param2 = SetAutozoomSpeedDivide.a(var7.getId(false), true, param2, (byte) -14);

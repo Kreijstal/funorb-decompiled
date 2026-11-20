@@ -47,7 +47,7 @@ final class uv implements wwa {
           }
           return;
         }
-        GetDebrisGroupColour.field_r.a(-83, param3, param5, -16777216 | param4, param1, param2);
+        GetDebrisGroupColour.field_r.drawRectangleDefaultBlend(-83, param3, param5, -16777216 | param4, param1, param2);
         if (param0 >= 106) {
           return;
         }

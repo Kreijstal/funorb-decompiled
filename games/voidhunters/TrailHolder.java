@@ -148,10 +148,10 @@ final class TrailHolder implements DiffableState {
         SetSniperCannonFiringLeeway.field_q = var8.readLong(255);
         if (wja.field_a == 2) {
           SetSalvoUsesAllEnergy.field_o = var8.readUnsignedShort(1869);
-          jkb.field_b = var8.readUnsignedMedium((byte) -38);
+          GraphicsPresentException.field_b = var8.readUnsignedMedium((byte) -38);
         } else {
           SetSalvoUsesAllEnergy.field_o = 0;
-          jkb.field_b = 0;
+          GraphicsPresentException.field_b = 0;
         }
         stackIn_11_0 = (var8.readUnsignedByte((byte) -106) != 1) ? 0 : 1;
         var4 = stackIn_11_0;

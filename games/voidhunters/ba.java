@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba extends r implements e {
+final class ba extends r implements NativeResource {
     long field_nativeid;
 
-    public final native void w(boolean param0);
+    public final native void disposeNative(boolean param0);
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          pq.a(0, (e) (this));
+          NativeDisposalQueue.enqueue(0, (NativeResource) (this));
         }
     }
 

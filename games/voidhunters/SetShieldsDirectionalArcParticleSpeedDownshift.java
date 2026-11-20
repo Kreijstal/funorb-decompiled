@@ -36,11 +36,11 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
         }
     }
 
-    final static sw a(int param0, asb param1, String param2, String param3) {
+    final static ToolkitFontMetrics a(int param0, asb param1, String param2, String param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
-        sw stackIn_6_0 = null;
+        ToolkitFontMetrics stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -58,7 +58,7 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
           if (param0 != 14223) {
             field_r = (String) null;
           }
-          stackIn_6_0 = new sw(var5);
+          stackIn_6_0 = new ToolkitFontMetrics(var5);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

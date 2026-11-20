@@ -48,12 +48,12 @@ final class GetSniperCannonAimspeed extends ConsoleCommand {
         if (param0 != 100) {
           GetSniperCannonAimspeed.a(-120, -74);
           if (li.field_i) {
-            return mmb.field_d[param1].d();
+            return mmb.field_d[param1].getWidth();
           }
           return 100;
         }
         if (li.field_i) {
-          return mmb.field_d[param1].d();
+          return mmb.field_d[param1].getWidth();
         }
         return 100;
     }

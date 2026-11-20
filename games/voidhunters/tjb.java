@@ -90,7 +90,7 @@ final class tjb extends llb {
                 var6 = 1;
               }
               if (SetReverbDry.a(var6, (byte) 19) == 2) {
-                mea.a(1, (byte) -119, param2, var6);
+                OpenGlPostEffect.a(1, (byte) -119, param2, var6);
               }
               var8 = (String) null;
               SetBurstFireReload.a((String) null, -25719, var5, param3, ow.field_b, waa.field_x);

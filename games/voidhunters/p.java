@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class p extends IntrusiveNode implements e {
+final class p extends IntrusiveNode implements NativeResource {
     int field_g;
     private static boolean field_d;
     java.awt.Canvas field_f;
@@ -20,7 +20,7 @@ final class p extends IntrusiveNode implements e {
         }
     }
 
-    public final native void w(boolean param0);
+    public final native void disposeNative(boolean param0);
 
     private final native void oa(java.awt.Canvas param0, int param1, int param2);
 
@@ -53,7 +53,7 @@ final class p extends IntrusiveNode implements e {
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
-          pq.a(0, (e) (this));
+          NativeDisposalQueue.enqueue(0, (NativeResource) (this));
           return;
         }
     }

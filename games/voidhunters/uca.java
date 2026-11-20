@@ -163,7 +163,7 @@ final class uca {
         if (!li.field_i) {
           dma.f(param1, param4, param2, 0);
         } else {
-          GetDebrisGroupColour.field_r.za(param1, param4, param2, 0, 0);
+          GetDebrisGroupColour.field_r.fillCircle(param1, param4, param2, 0, 0);
         }
         return false;
     }
@@ -418,7 +418,7 @@ final class uca {
         var8 = VoidHunters.field_G;
         var2 = 97 / ((param0 - 43) / 43);
         if (!this.field_N &&
-          jkb.field_a) {
+          GraphicsPresentException.field_a) {
           var3 = feb.a(GetDebrisGroupColour.field_r, true);
           var4 = 30;
           for (var5 = 0; var5 < 100; var5++) {
@@ -619,11 +619,11 @@ final class uca {
           if (var6 == 0) {
             li.field_i = false;
           }
-          if (!li.field_i && (null == epb.field_m ||
-            epb.field_m.field_q != PartitionZoneFactory.field_a ||
-            epb.field_m.field_p != MissionVariableFactory.field_a)) {
+          if (!li.field_i && (null == OpenGlTransform3D.field_m ||
+            OpenGlTransform3D.field_m.field_q != PartitionZoneFactory.field_a ||
+            OpenGlTransform3D.field_m.field_p != MissionVariableFactory.field_a)) {
             GetDebrisThrowable.a(false, "Creating a new g1 fog of war sprite");
-            epb.field_m = (Sprite) ((Object) new jva(PartitionZoneFactory.field_a, MissionVariableFactory.field_a));
+            OpenGlTransform3D.field_m = (Sprite) ((Object) new jva(PartitionZoneFactory.field_a, MissionVariableFactory.field_a));
             if (var6 != 0) {
               GetGrapplingHooksDamageableBySourcePlayer.field_p = null;
             }
@@ -631,17 +631,17 @@ final class uca {
           if ((li.field_i ||
             var6 == 0) &&
             (GetGrapplingHooksDamageableBySourcePlayer.field_p == null ||
-            GetGrapplingHooksDamageableBySourcePlayer.field_p.c() != PartitionZoneFactory.field_a ||
-            GetGrapplingHooksDamageableBySourcePlayer.field_p.b() != MissionVariableFactory.field_a)) {
+            GetGrapplingHooksDamageableBySourcePlayer.field_p.getPaddedWidth() != PartitionZoneFactory.field_a ||
+            GetGrapplingHooksDamageableBySourcePlayer.field_p.getPaddedHeight() != MissionVariableFactory.field_a)) {
             GetDebrisThrowable.a(false, "Creating a new g2 fog of war sprite");
             GetGrapplingHooksDamageableBySourcePlayer.field_p = null;
             if (var6 != 0) {
-              epb.field_m = null;
+              OpenGlTransform3D.field_m = null;
             }
-            GetGrapplingHooksDamageableBySourcePlayer.field_p = GetDebrisGroupColour.field_r.a(PartitionZoneFactory.field_a, MissionVariableFactory.field_a, true);
+            GetGrapplingHooksDamageableBySourcePlayer.field_p = GetDebrisGroupColour.field_r.createSprite(PartitionZoneFactory.field_a, MissionVariableFactory.field_a, true);
             if (var6 == 0) {
               GetDebrisThrowable.a(false, "Setting area");
-              GetDebrisGroupColour.field_r.SA(0, 0, 1, 1, new int[]{1}, 0, 1);
+              GetDebrisGroupColour.field_r.writePixels(0, 0, 1, 1, new int[]{1}, 0, 1);
             }
             GetDebrisThrowable.a(false, "Done");
           }
@@ -649,11 +649,11 @@ final class uca {
             if (param3) {
               var7 = 0;
               if (!li.field_i) {
-                SetTorpedoEnergyUsed.a(107, epb.field_m);
+                SetTorpedoEnergyUsed.a(107, OpenGlTransform3D.field_m);
                 dma.d(0, 0, PartitionZoneFactory.field_a, MissionVariableFactory.field_a, -1442840576);
               } else {
                 SetUseBackground.field_o.a(GetGrapplingHooksDamageableBySourcePlayer.field_p, 0);
-                GetDebrisGroupColour.field_r.GA(-1442840576);
+                GetDebrisGroupColour.field_r.clearColor(-1442840576);
               }
               if (0 <= this.field_L) {
                 var8 = this.a((byte) -109);
@@ -739,10 +739,10 @@ final class uca {
                           bia.a((byte) 124);
                           if ((var7 == 0)) {
                             if (var6 != 0) {
-                              epb.field_m.a(0, 0);
+                              OpenGlTransform3D.field_m.a(0, 0);
                             } else {
-                              GetGrapplingHooksDamageableBySourcePlayer.field_p.a(0, 0, epb.field_m.field_q, epb.field_m.field_p, epb.field_m.field_r, 0, epb.field_m.field_q);
-                              GetGrapplingHooksDamageableBySourcePlayer.field_p.a(0, 0);
+                              GetGrapplingHooksDamageableBySourcePlayer.field_p.writePixels(0, 0, OpenGlTransform3D.field_m.field_q, OpenGlTransform3D.field_m.field_p, OpenGlTransform3D.field_m.field_r, 0, OpenGlTransform3D.field_m.field_q);
+                              GetGrapplingHooksDamageableBySourcePlayer.field_p.draw(0, 0);
                             }
                           }
                           break regionExit4;
@@ -790,10 +790,10 @@ final class uca {
                         bia.a((byte) 124);
                         if ((var7 == 0)) {
                           if (var6 != 0) {
-                            epb.field_m.a(0, 0);
+                            OpenGlTransform3D.field_m.a(0, 0);
                           } else {
-                            GetGrapplingHooksDamageableBySourcePlayer.field_p.a(0, 0, epb.field_m.field_q, epb.field_m.field_p, epb.field_m.field_r, 0, epb.field_m.field_q);
-                            GetGrapplingHooksDamageableBySourcePlayer.field_p.a(0, 0);
+                            GetGrapplingHooksDamageableBySourcePlayer.field_p.writePixels(0, 0, OpenGlTransform3D.field_m.field_q, OpenGlTransform3D.field_m.field_p, OpenGlTransform3D.field_m.field_r, 0, OpenGlTransform3D.field_m.field_q);
+                            GetGrapplingHooksDamageableBySourcePlayer.field_p.draw(0, 0);
                           }
                         }
                         break regionExit4;
@@ -801,7 +801,7 @@ final class uca {
                     }
                     SetUseBackground.field_o.a(true);
                     if (var7 == 0) {
-                      GetGrapplingHooksDamageableBySourcePlayer.field_p.a(0, 0);
+                      GetGrapplingHooksDamageableBySourcePlayer.field_p.draw(0, 0);
                     }
                   }
                   li.field_i = var5_int != 0;
@@ -825,16 +825,16 @@ final class uca {
               if (li.field_i) {
                 SetUseBackground.field_o.a(true);
                 if (var7 == 0) {
-                  GetGrapplingHooksDamageableBySourcePlayer.field_p.a(0, 0);
+                  GetGrapplingHooksDamageableBySourcePlayer.field_p.draw(0, 0);
                 }
               } else {
                 bia.a((byte) 124);
                 if (var7 == 0) {
                   if (var6 != 0) {
-                    epb.field_m.a(0, 0);
+                    OpenGlTransform3D.field_m.a(0, 0);
                   } else {
-                    GetGrapplingHooksDamageableBySourcePlayer.field_p.a(0, 0, epb.field_m.field_q, epb.field_m.field_p, epb.field_m.field_r, 0, epb.field_m.field_q);
-                    GetGrapplingHooksDamageableBySourcePlayer.field_p.a(0, 0);
+                    GetGrapplingHooksDamageableBySourcePlayer.field_p.writePixels(0, 0, OpenGlTransform3D.field_m.field_q, OpenGlTransform3D.field_m.field_p, OpenGlTransform3D.field_m.field_r, 0, OpenGlTransform3D.field_m.field_q);
+                    GetGrapplingHooksDamageableBySourcePlayer.field_p.draw(0, 0);
                   }
                 }
               }
@@ -909,9 +909,9 @@ final class uca {
         Ship var20;
         int var21;
         int var22;
-        pw var23;
+        Transform3D var23;
         GameSnapshot var24;
-        aja var25;
+        ToolkitSprite var25;
         Debris var26;
         int var13Lifetime1;
         int var14Lifetime1;
@@ -941,7 +941,7 @@ final class uca {
         if (0 == SetMinimapWidth.field_o % 50) {
           this.field_R = ffa.field_a;
         }
-        if (jkb.field_a) {
+        if (GraphicsPresentException.field_a) {
           ShipTeamConditionFactory.field_a.field_e = ShipTeamConditionFactory.field_a.field_e - (-SetToggledScoreboard.field_o.field_u + dma.field_j >> 1);
         }
         if (SetPhasedEnergyBeamAimspeed.field_q == 1 &&
@@ -962,19 +962,19 @@ final class uca {
         }
         if (1 == ul.field_a &&
           li.field_i &&
-          GetDebrisGroupColour.field_r.s()) {
-          GetDebrisGroupColour.field_r.a(0, 0, PartitionZoneFactory.field_a, MissionVariableFactory.field_a);
-          GetDebrisGroupColour.field_r.GA(0);
+          GetDebrisGroupColour.field_r.isBloomEnabled()) {
+          GetDebrisGroupColour.field_r.beginPostProcessing(0, 0, PartitionZoneFactory.field_a, MissionVariableFactory.field_a);
+          GetDebrisGroupColour.field_r.clearColor(0);
         }
         if (rma.field_b == 1) {
-          GetDebrisGroupColour.field_r.ya();
-          GetDebrisGroupColour.field_r.xa(1.0f);
-          GetDebrisGroupColour.field_r.ZA(14540253, 0.10000000149011612f, 0.20000000298023224f, -100.0f, -100.0f, 0.0f);
-          GetDebrisGroupColour.field_r.DA(SetMassDriverReload.field_p, GetLaserAimarc.field_q, 512, 512);
-          GetDebrisGroupColour.field_r.f(32, 524288);
-          var23 = GetDebrisGroupColour.field_r.d();
-          var23.a((int)(ShipTeamConditionFactory.field_a.field_c / 64.0f), (int)(-8.0f / ShipTeamConditionFactory.field_a.field_a), (int)(-ShipTeamConditionFactory.field_a.field_b / 64.0f), -4096, 0, 0);
-          GetDebrisGroupColour.field_r.a(var23);
+          GetDebrisGroupColour.field_r.clearDepth();
+          GetDebrisGroupColour.field_r.setAmbientLight(1.0f);
+          GetDebrisGroupColour.field_r.setDirectionalLighting(14540253, 0.10000000149011612f, 0.20000000298023224f, -100.0f, -100.0f, 0.0f);
+          GetDebrisGroupColour.field_r.setProjectionParameters(SetMassDriverReload.field_p, GetLaserAimarc.field_q, 512, 512);
+          GetDebrisGroupColour.field_r.setDepthRange(32, 524288);
+          var23 = GetDebrisGroupColour.field_r.createTransform();
+          var23.setCamera((int)(ShipTeamConditionFactory.field_a.field_c / 64.0f), (int)(-8.0f / ShipTeamConditionFactory.field_a.field_a), (int)(-ShipTeamConditionFactory.field_a.field_b / 64.0f), -4096, 0, 0);
+          GetDebrisGroupColour.field_r.setViewTransform(var23);
         }
         ShipTeamConditionFactory.field_a.a(MissionVariableFactory.field_a, 0, -116, PartitionZoneFactory.field_a, 0);
         var24 = this.field_m.b(1);
@@ -1054,7 +1054,7 @@ final class uca {
         var14Lifetime1 = 0;
         if (ul.field_a == 1 &&
           li.field_i) {
-          GetDebrisGroupColour.field_r.u();
+          GetDebrisGroupColour.field_r.applyPostProcessing();
         }
         this.a(var6, true);
         if (param0 < 73) {
@@ -1098,7 +1098,7 @@ final class uca {
             var18 = (-var13Lifetime1 + var17Lifetime1) * 255 / var16Lifetime1;
           }
           var25 = mmb.field_d[137];
-          var25.a(SetMassDriverReload.field_p - var25.c() / 2, 0, 0, 16777215 | var18 << 24, 1);
+          var25.draw(SetMassDriverReload.field_p - var25.getPaddedWidth() / 2, 0, 0, 16777215 | var18 << 24, 1);
         }
         this.b(var24, 1);
         this.c((byte) 70, (Ship) (var9));
@@ -2261,8 +2261,8 @@ final class uca {
         int var26 = 0;
         int var27 = 0;
         int var28_int = 0;
-        aja var28 = null;
-        aja var29_ref_aja = null;
+        ToolkitSprite var28 = null;
+        ToolkitSprite var29_ref_aja = null;
         int var29 = 0;
         int var30_int = 0;
         String var30 = null;
@@ -2428,7 +2428,7 @@ final class uca {
               var28_int = var11;
               var29_ref_aja = this.a(this.field_y, false, 0);
               if (var29_ref_aja != null) {
-                var29_ref_aja.a(var26 + 13, var27 + 11, 0, 16777215 | this.field_U << 24, 1);
+                var29_ref_aja.draw(var26 + 13, var27 + 11, 0, 16777215 | this.field_U << 24, 1);
               }
               SetBuildViewAutozoomTimeout.a(true, this.field_U, -36 + var26, var27 - 24, 30);
               var30_int = var26 + 160;
@@ -2499,7 +2499,7 @@ final class uca {
               if (0 <= this.field_L) {
                 var21Lifetime1 = param1.a(this.field_L, (byte) 59).selectedTeam;
                 if (GetDefaultFiringLeeway.a(param1, (byte) 116)) {
-                  var21Lifetime1 = mjb.b(21957, var21Lifetime1);
+                  var21Lifetime1 = GpuSprite.b(21957, var21Lifetime1);
                 }
               }
               this.a(GetPointDefenceLaserProjectiles.a(false, var16) * 7 / 4 + (var15 + var14), 255, var18Lifetime1, var21Lifetime1, 2);
@@ -2542,14 +2542,14 @@ final class uca {
                   if (var27Lifetime1 > 0) {
                     var28 = this.a(var26Lifetime1, false, 1);
                     if (var28 != null) {
-                      var29 = 2 * GetPointDefenceLaserProjectiles.a(false, var16) - (-GetPointDefenceLaserProjectiles.a(false, 4) - var14) - var28.a() / 2;
+                      var29 = 2 * GetPointDefenceLaserProjectiles.a(false, var16) - (-GetPointDefenceLaserProjectiles.a(false, 4) - var14) - var28.getHeight() / 2;
                       for (var30_intLifetime1 = 0; var30_intLifetime1 >= 0; var30_intLifetime1--) {
-                        var28.a(var25Lifetime1 + var30_intLifetime1 * 2, 4 * var30_intLifetime1 + var29, 0, 16777215 | -(var30_intLifetime1 * 255 / var27Lifetime1) + 255 << 24, 1);
+                        var28.draw(var25Lifetime1 + var30_intLifetime1 * 2, 4 * var30_intLifetime1 + var29, 0, 16777215 | -(var30_intLifetime1 * 255 / var27Lifetime1) + 255 << 24, 1);
                       }
                       if (!(GetUseDetailLines.field_o < var25Lifetime1) &&
-                        !(GetUseDetailLines.field_o > var28.d() + var25Lifetime1) &&
+                        !(GetUseDetailLines.field_o > var28.getWidth() + var25Lifetime1) &&
                         !(var29 > GetTorpedoReload.field_q) &&
-                        !(GetTorpedoReload.field_q > var28.a() + var29)) {
+                        !(GetTorpedoReload.field_q > var28.getHeight() + var29)) {
                         var47Lifetime1 = ShipTeamCondition.field_f[var26Lifetime1];
                         var30Lifetime1 = var47Lifetime1;
                         var19Lifetime2 = var30Lifetime1;
@@ -2659,7 +2659,7 @@ final class uca {
         int var31 = 0;
         int var32 = 0;
         int var33 = 0;
-        aja var34 = null;
+        ToolkitSprite var34 = null;
         String var34_ref = null;
         int var35 = 0;
         int var36 = 0;
@@ -2678,14 +2678,14 @@ final class uca {
         String var49 = null;
         PlayerAction var50 = null;
         String var51 = null;
-        aja var52 = null;
+        ToolkitSprite var52 = null;
         PlayerAction var53 = null;
         PlayerAction var54 = null;
         String var55 = null;
         int[][] var56 = null;
         int[] var59 = null;
-        aja var34Lifetime1;
-        aja var34Lifetime2;
+        ToolkitSprite var34Lifetime1;
+        ToolkitSprite var34Lifetime2;
         String var43_ref_StringLifetime1;
         String var43_ref_StringLifetime2;
         int var9Lifetime1;
@@ -2753,7 +2753,7 @@ final class uca {
                 var13 = SetMassDriverReload.field_p;
                 var14 = var13 - (var12 >> 1);
                 var15 = GetLaserAimarc.field_q - 170;
-                if (jkb.field_a) {
+                if (GraphicsPresentException.field_a) {
                   var15 = var15 - (dma.field_j - SetToggledScoreboard.field_o.field_u);
                 }
                 var16 = 260;
@@ -2814,7 +2814,7 @@ final class uca {
                 if (this.field_L >= 0) {
                   var27Lifetime1 = param0.a(this.field_L, (byte) 59).selectedTeam;
                   if (this.field_m.a((byte) 26).e((byte) -49)) {
-                    var27Lifetime1 = mjb.b(21957, var27Lifetime1);
+                    var27Lifetime1 = GpuSprite.b(21957, var27Lifetime1);
                   }
                 }
                 if (var26Lifetime1 >= 0 &&
@@ -2949,7 +2949,7 @@ final class uca {
                       kra.a(16711680, 2, 16994, var30Lifetime1 + var37 - 1 - 4, 255, 4 + var36, -5 + (var36 + var30Lifetime1), 4 + var37);
                     }
                     if (var20 <= var34_int) {
-                      mmb.field_d[111].a(var32 + 2, -mmb.field_d[111].b() + var33 + var30Lifetime1);
+                      mmb.field_d[111].draw(var32 + 2, -mmb.field_d[111].getPaddedHeight() + var33 + var30Lifetime1);
                     }
                     var32 = var32 + var29;
                   }
@@ -2962,11 +2962,11 @@ final class uca {
                   var34Lifetime2 = var52;
                   var35Lifetime1 = var30Lifetime1 + var33Lifetime1 + var11Lifetime1 * 2;
                   if (param2 &&
-                    GetUseDetailLines.field_o >= -(var52.d() / 2) + var13 &&
-                    GetUseDetailLines.field_o < var52.d() / 2 + var13) {
-                    if (GetTorpedoReload.field_q < -(var52.a() / 4) + var35Lifetime1) {
+                    GetUseDetailLines.field_o >= -(var52.getWidth() / 2) + var13 &&
+                    GetUseDetailLines.field_o < var52.getWidth() / 2 + var13) {
+                    if (GetTorpedoReload.field_q < -(var52.getHeight() / 4) + var35Lifetime1) {
                       stackIn_153_0 = 0;
-                    } else if (GetTorpedoReload.field_q < var52.a() / 4 + var35Lifetime1) {
+                    } else if (GetTorpedoReload.field_q < var52.getHeight() / 4 + var35Lifetime1) {
                       stackIn_153_0 = 1;
                     } else {
                       stackIn_153_0 = 0;
@@ -3009,7 +3009,7 @@ final class uca {
                     }
                     this.field_O = var37Lifetime1;
                   }
-                  var34Lifetime2.a(-(var34Lifetime2.d() / 2) + var13, -(var34Lifetime2.a() / 2) + var35Lifetime1);
+                  var34Lifetime2.draw(-(var34Lifetime2.getWidth() / 2) + var13, -(var34Lifetime2.getHeight() / 2) + var35Lifetime1);
                   var55 = mna.field_c;
                   stackIn_173_0 = var13 - tea.a(2, var55, 13879) / 2;
                   stackIn_173_1 = -1;
@@ -3028,7 +3028,7 @@ final class uca {
                   if (1 == var51.length()) {
                     var34_ref = "0" + var51;
                   }
-                  woa.a(16541441, -var11Lifetime1 + (var15 + var16), -var11Lifetime1 + (var13 + var12 / 2), (byte) 74, -1, 1, var34_ref);
+                  SoftwareDepthBuffer.a(16541441, -var11Lifetime1 + (var15 + var16), -var11Lifetime1 + (var13 + var12 / 2), (byte) 74, -1, 1, var34_ref);
                 }
                 if (var31Lifetime1 == 0) {
                   this.field_O = -1;
@@ -3349,7 +3349,7 @@ final class uca {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        aja var14 = null;
+        ToolkitSprite var14 = null;
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
@@ -3381,9 +3381,9 @@ final class uca {
                   decompiledFrameRemainder0 = !(SetMinimapWidth.field_o % 20 <= 10);
                 }
                 if (decompiledFrameRemainder0) {
-                  var7_int = var22.o(86);
-                  if (var22.s((byte) -90)) {
-                    var7_int = var22.m((byte) -64);
+                  var7_int = var22.getEnergyProgress(86);
+                  if (var22.isReloading((byte) -90)) {
+                    var7_int = var22.getReloadProgress((byte) -64);
                   }
                   var8 = var22.getMaxEnergy(true);
                   var9 = var7_int * var4_int / 255;
@@ -3401,20 +3401,20 @@ final class uca {
                   var12Lifetime1 = 2;
                   if (li.field_i) {
                     var13 = -1;
-                    if (var22.s((byte) -90)) {
+                    if (var22.isReloading((byte) -90)) {
                       var13 = -65536;
                     }
                     var14 = mmb.field_d[44];
-                    if (!var22.s((byte) -90)) {
-                      var14.a(var5 - var11Lifetime1, var6 - var12Lifetime1, 0, var13, 1);
+                    if (!var22.isReloading((byte) -90)) {
+                      var14.draw(var5 - var11Lifetime1, var6 - var12Lifetime1, 0, var13, 1);
                     } else {
                       var15 = 100 + Math.abs(-11 + SetMinimapWidth.field_o % 20);
-                      var16 = var14.d();
-                      var17 = var14.a();
+                      var16 = var14.getWidth();
+                      var17 = var14.getHeight();
                       var18 = var16 * var15 / 100;
                       var19 = var17 * var15 / 100;
-                      var14.a(-var11Lifetime1 + (var5 - (-var16 + var18) / 2), -((var19 - var17) / 2) + (-var12Lifetime1 + var6), var18, var19, 2, 16731136, 1);
-                      var14.a(var5 + (-var11Lifetime1 - (-var16 + var18) / 2), var6 - var12Lifetime1 - (-var17 + var19) / 2, var18, var19, 1, var13, 1);
+                      var14.drawScaled(-var11Lifetime1 + (var5 - (-var16 + var18) / 2), -((var19 - var17) / 2) + (-var12Lifetime1 + var6), var18, var19, 2, 16731136, 1);
+                      var14.drawScaled(var5 + (-var11Lifetime1 - (-var16 + var18) / 2), var6 - var12Lifetime1 - (-var17 + var19) / 2, var18, var19, 1, var13, 1);
                     }
                   }
                 }
@@ -3544,12 +3544,12 @@ final class uca {
             var28 = VariableConditionFactory.a(99);
             if (var24 != null) {
               var23 = ae.a(var28, (byte) 27);
-              var23.h(17704, 1);
-              var23.a(new ShipAI(), 4);
+              var23.setTeam(17704, 1);
+              var23.setAi(new ShipAI(), 4);
               this.field_m.b(1).world.a(var23, (byte) 92);
             } else {
               var22 = ae.a(var28, (byte) 27);
-              var22.g(0, -117);
+              var22.setOwner(0, -117);
               this.field_m.b(1).world.a(var22, (byte) 124);
               this.field_m.b(1).world.a(0);
             }
@@ -3577,7 +3577,7 @@ final class uca {
           } else {
             this.field_f = SetMachineGunEnergyUsed.field_o[var12];
           }
-          if (jkb.field_a) {
+          if (GraphicsPresentException.field_a) {
             if (!SetFightersPerPlayerMaximum.field_p &&
               !uga.field_d) {
               stackIn_38_0 = 1;
@@ -5134,7 +5134,7 @@ final class uca {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        aja var7 = null;
+        ToolkitSprite var7 = null;
         String var8 = null;
         if (this.e((byte) 126) &&
           li.field_i) {
@@ -5148,12 +5148,12 @@ final class uca {
           var5 = AdjustVariableActionFactory.field_a.field_K;
           var6 = 0;
           var7 = mmb.field_d[115];
-          var7.a(var4, var5);
+          var7.draw(var4, var5);
           if (AdjustVariableActionFactory.field_a.field_O) {
-            var7.a(var4, var5, 2, 1157627903, 1);
+            var7.draw(var4, var5, 2, 1157627903, 1);
           }
           var8 = SetWeaponProjectileSpeedMultiply.field_o;
-          SetSelfDestructPrepareToggleCooldown.a(var4 + (var7.d() / 2 - tea.a(var6, var8, param0 + 13920) / 2), 1, var7.a() / 2 + var5 + tib.a(true, var6) / 2, var8, var6, 16777215, (byte) -86);
+          SetSelfDestructPrepareToggleCooldown.a(var4 + (var7.getWidth() / 2 - tea.a(var6, var8, param0 + 13920) / 2), 1, var7.getHeight() / 2 + var5 + tib.a(true, var6) / 2, var8, var6, 16777215, (byte) -86);
         }
         if (param0 != -41) {
           this.field_U = -69;
@@ -5299,7 +5299,7 @@ final class uca {
               var14 = stackIn_67_0;
               if (var14 != 0 &&
                 GetFightersPerPlayerMaximum.field_p == 1) {
-                stackIn_72_0 = (!var15.q(-121)) ? 0 : 1;
+                stackIn_72_0 = (!var15.isRepairModeFullyCharged(-121)) ? 0 : 1;
                 var14 = stackIn_72_0;
               }
             }
@@ -5417,7 +5417,7 @@ final class uca {
         boolean decompiledFrameRemainder0 = true;
         var2 = 49 % ((56 - param0) / 56);
         if ((this.field_N ||
-          jkb.field_a) && null != AdjustVariableActionFactory.field_a) {
+          GraphicsPresentException.field_a) && null != AdjustVariableActionFactory.field_a) {
           stackIn_6_0 = true;
           decompiledFrameRemainder0 = false;
         }
@@ -5428,10 +5428,10 @@ final class uca {
     }
 
     private final void a(int param0, int param1, int param2) {
-        aja var4 = null;
+        ToolkitSprite var4 = null;
         if (li.field_i) {
           var4 = mmb.field_d[5];
-          var4.a(param0 - (var4.d() >> 1), -(var4.a() >> 1) + param2);
+          var4.draw(param0 - (var4.getWidth() >> 1), -(var4.getHeight() >> 1) + param2);
         }
         if (param1 <= 76) {
           this.field_n = true;
@@ -5490,7 +5490,7 @@ final class uca {
         return null;
     }
 
-    private final aja a(int param0, boolean param1, int param2) {
+    private final ToolkitSprite a(int param0, boolean param1, int param2) {
         if (param0 >= 14) {
           param0--;
         }
@@ -5619,7 +5619,7 @@ final class uca {
               var6 = MapClearanceRectangle.$cfr$intArgs$a$62abead39cee(-107, true, bra.field_f[var3_int]);
               var4 = var4 + ro.field_c;
               var7 = -(var6 >> 1) + PlayerVote.field_f;
-              if (SetMachineGunAimarc.a(var4, (za.field_d << 1) + var6, (lfa.field_m << 1) + GetAngularVelocitySustain.field_p, param1, (byte) -65, var7 - za.field_d, param2)) {
+              if (SetMachineGunAimarc.a(var4, (GraphicsHeap.field_d << 1) + var6, (lfa.field_m << 1) + GetAngularVelocitySustain.field_p, param1, (byte) -65, var7 - GraphicsHeap.field_d, param2)) {
                 stackIn_10_0 = var5;
                 return stackIn_10_0;
               }
@@ -5726,7 +5726,7 @@ final class uca {
         int var15 = 0;
         int var16 = 0;
         String var17 = null;
-        aja var18 = null;
+        ToolkitSprite var18 = null;
         Object var19_ref = null;
         int var19 = 0;
         Player var19_ref_tfa = null;
@@ -5739,17 +5739,17 @@ final class uca {
         int var26 = 0;
         int var27 = 0;
         int var28 = 0;
-        aja var29 = null;
+        ToolkitSprite var29 = null;
         int var30 = 0;
         int var31 = 0;
         String var32 = null;
-        aja var33 = null;
+        ToolkitSprite var33 = null;
         PlayerAction var34 = null;
         PlayerAction var35 = null;
-        aja var36 = null;
+        ToolkitSprite var36 = null;
         String var37 = null;
-        aja var29Lifetime1;
-        aja var29Lifetime2;
+        ToolkitSprite var29Lifetime1;
+        ToolkitSprite var29Lifetime2;
         int var20Lifetime1;
         int var21Lifetime1;
         int var27Lifetime1;
@@ -5800,7 +5800,7 @@ final class uca {
           var33 = mmb.field_d[param2];
           var29 = var33;
           var29Lifetime1 = var33;
-          var19 = 3 + var33.d();
+          var19 = 3 + var33.getWidth();
           var20Lifetime1 = -param5 + param9;
           var21Lifetime1 = param6 - param5;
           var22 = param5 + (param1 * param9 + param4);
@@ -5866,22 +5866,22 @@ final class uca {
             }
             if (li.field_i) {
               var27Lifetime1 = 3 + var22;
-              var28Lifetime1 = -(var21Lifetime1 / 2) + (var23 - var33.a() / 2);
+              var28Lifetime1 = -(var21Lifetime1 / 2) + (var23 - var33.getHeight() / 2);
               var29Lifetime2 = this.a(param0, false, 1);
               if (var29Lifetime2 != null) {
                 if (var15 <= 0) {
-                  var29Lifetime2.a(4 + var27Lifetime1, var28Lifetime1 + 4, 2, 577136230, 1);
+                  var29Lifetime2.draw(4 + var27Lifetime1, var28Lifetime1 + 4, 2, 577136230, 1);
                 } else {
-                  var29Lifetime2.a(var27Lifetime1 + 4, 4 + var28Lifetime1);
+                  var29Lifetime2.draw(var27Lifetime1 + 4, 4 + var28Lifetime1);
                 }
               }
-              var33.a(var27Lifetime1, var28Lifetime1);
+              var33.draw(var27Lifetime1, var28Lifetime1);
               if (this.field_a[param0] > 0) {
                 var36 = mmb.field_d[1 + param2];
                 var18 = var36;
                 var30 = this.field_a[param0];
-                SetUseBackground.field_o.a(var27Lifetime1, (var30 * var36.d() >> 8) + var27Lifetime1, var28Lifetime1, var28Lifetime1 + var36.a(), (byte) -105);
-                var18.a(var27Lifetime1, var28Lifetime1, 0, var30 << 24 | 16777215, 1);
+                SetUseBackground.field_o.a(var27Lifetime1, (var30 * var36.getWidth() >> 8) + var27Lifetime1, var28Lifetime1, var28Lifetime1 + var36.getHeight(), (byte) -105);
+                var18.draw(var27Lifetime1, var28Lifetime1, 0, var30 << 24 | 16777215, 1);
                 SetUseBackground.field_o.a(true);
               }
             }
@@ -6704,9 +6704,9 @@ final class uca {
                       var34_ref_String = GetBlueprintSaveTime.field_o[var15.field_l];
                       OpenGlShaderProgram.a(16777215, this.field_F, 1, var34_ref_String, (byte) -69, 3, var19, var16 / 2 + (var18 - tea.a(3, var34_ref_String, 13879) / 2));
                     } else {
-                      mmb.field_d[101].a(var18, var19, 0, var33Lifetime1, 1);
+                      mmb.field_d[101].draw(var18, var19, 0, var33Lifetime1, 1);
                       if (var25 != 0) {
-                        mmb.field_d[101].a(var18, var19, 0, -2004318072, 2);
+                        mmb.field_d[101].draw(var18, var19, 0, -2004318072, 2);
                       }
                     }
                   }
@@ -7012,7 +7012,7 @@ final class uca {
                   var12 = GetReloadBarWidth.field_o[var11_ref_et.label];
                   if (var11_ref_et.label == 4 ||
                     var11_ref_et.label == 5) {
-                    var12 = mjb.b(param0 ^ -7551, var12);
+                    var12 = GpuSprite.b(param0 ^ -7551, var12);
                   }
                   var13 = cna.field_zb[var11_ref_et.label];
                   var14 = var11_ref_et.value / var13;
@@ -7166,7 +7166,7 @@ final class uca {
             if (0 <= this.field_L) {
               var11Lifetime2 = param0.a(this.field_L, (byte) 59).selectedTeam;
               if (this.field_m.a((byte) 77).e((byte) -106)) {
-                var11Lifetime2 = mjb.b(21957, var11Lifetime2);
+                var11Lifetime2 = GpuSprite.b(21957, var11Lifetime2);
               }
             }
             this.a(-78 + GetLaserAimarc.field_q, var8, var4, var11Lifetime2, 2);
@@ -7196,7 +7196,7 @@ final class uca {
                 var15_ref_StringLifetime2 = dupTemp$0;
                 if (var14 == 2) {
                   var16 = var12.a(var13Lifetime1, (byte) -88);
-                  var17 = var12.a(mjb.b(21957, var13Lifetime1), (byte) -88);
+                  var17 = var12.a(GpuSprite.b(21957, var13Lifetime1), (byte) -88);
                   var18_int = -var16 + var17;
                   var19 = 1000 * var18_int / Particle.field_l;
                   var20 = SetPointDefenceLaserAimspeed.a((byte) 10, var19);
@@ -7286,7 +7286,7 @@ final class uca {
           if (param2.getTargetBlueprint((byte) 28) != null) {
             return false;
           }
-          if (0 >= param2.o(99)) {
+          if (0 >= param2.getEnergyProgress(99)) {
             return false;
           }
           if (param2.d(9, param3 + 7888)) {
@@ -7823,7 +7823,7 @@ final class uca {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        aja var10 = null;
+        ToolkitSprite var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -7859,12 +7859,12 @@ final class uca {
                 var18 = GameSnapshotFactory.a(var12, (byte) -77, var11);
                 var16 = var16 - (GetNumStars.a(var18, (byte) -122) * 28 >> 16);
                 var17 = var17 - (28 * eu.a(var18, 97) >> 16);
-                var10.a((float)var16, (float)var17, 20.0f, 23.0f, 4096, -var18 << 3, 0, -1, 1);
+                var10.drawRotatedScaled((float)var16, (float)var17, 20.0f, 23.0f, 4096, -var18 << 3, 0, -1, 1);
               }
               PlayerActionFactory.a(param3, -var9 + var16, (byte) 88, -var9 + var17);
             }
           } else {
-            var11 = var10.b();
+            var11 = var10.getPaddedHeight();
             var12 = ShipTeamConditionFactory.field_a.a(var6_int, (byte) 114);
             var13 = -(var11 / 2) + ShipTeamConditionFactory.field_a.b(true, param1[2]);
             var14 = (int)(0.32 / (double)ShipTeamConditionFactory.field_a.field_a);
@@ -7872,7 +7872,7 @@ final class uca {
               var14 = 255;
             }
             if (li.field_i) {
-              var10.a((float)var12, (float)var13, 20.0f, 23.0f, 4096, -16384, 0, var14 << 24 | 16777215, 1);
+              var10.drawRotatedScaled((float)var12, (float)var13, 20.0f, 23.0f, 4096, -16384, 0, var14 << 24 | 16777215, 1);
             }
             SetBuildViewAutozoomTimeout.a(true, var14, -var9 + var12, -var9 + var13, param3);
           }
@@ -8001,7 +8001,7 @@ final class uca {
           }
           var10Lifetime1 = param3.field_Sb.field_G + param3.field_Tb.field_G;
           param0.a(var5_int, var8 + var5_int, param2, var10Lifetime1 + param2, (byte) -30);
-          GetDebrisGroupColour.field_r.SA(0, param2, dma.field_g, var10Lifetime1, dma.field_i, param2 * dma.field_g, dma.field_g);
+          GetDebrisGroupColour.field_r.writePixels(0, param2, dma.field_g, var10Lifetime1, dma.field_i, param2 * dma.field_g, dma.field_g);
           param0.a(true);
           var11Lifetime1 = 6;
           var12 = 2;
@@ -8205,7 +8205,7 @@ final class uca {
                 var20Lifetime2 = qpb.a(false, var45.getTeam((byte) 66), 13894143);
                 var21Lifetime1 = tib.a(true, var9) + MidiNote.a(var9, (byte) -121);
                 var22Lifetime1 = var7 - (-var21Lifetime1 - var10);
-                woa.a(var20Lifetime2, -MidiNote.a(var9, (byte) -121) + var22Lifetime1, -3 + var6 - var12, (byte) 74, -1, var9, var18);
+                SoftwareDepthBuffer.a(var20Lifetime2, -MidiNote.a(var9, (byte) -121) + var22Lifetime1, -3 + var6 - var12, (byte) 74, -1, var9, var18);
                 var10 = var10 + (var21Lifetime1 - 1);
                 SetMissionTerrainDebrisProbability.a(var20Lifetime2, var19, var22Lifetime1 - var21Lifetime1 / 2 - 2, 4, false, var12, -var12 + (var6 + 1), 2);
                 if (var13 != null &&
@@ -8279,14 +8279,14 @@ final class uca {
             this.field_r != 0 &&
             param1 != null) {
             var3 = qd.field_c;
-            if (param1.q(-22)) {
+            if (param1.isRepairModeFullyCharged(-22)) {
               var4 = ShipTeamConditionFactory.field_a.a(true, GetUseDetailLines.field_o);
               var5_int = ShipTeamConditionFactory.field_a.a(0, GetTorpedoReload.field_q);
               if (!param1.chassis.b(32609, var5_int, GetMinimapWidth.field_o, var4)) {
                 var3 = SetPlayerRepairTime.field_o;
               }
             } else {
-              var4 = param1.w(108);
+              var4 = param1.getRepairModeReload(108);
               if (param1.getRepairModeOn(32)) {
                 var5_int = (-var4 + Particle.field_I) / (Particle.field_l / 10) + 1;
                 var3 = SetReverbGain.a(SetMessageFadetime.field_o, new String[]{Integer.toString(var5_int)}, 125);
@@ -8348,7 +8348,7 @@ final class uca {
                 if (var5_array[var7Lifetime1] != null &&
                   var5_array[var7Lifetime1].length() != 0) {
                   uv.a(116, -GetPhasedEnergyBeamProjectiles.a(-42, var5_array[var7Lifetime1]) + 27, -1 + GetPointDefenceLaserProjectiles.a(false, 0), var6 + 4 + GetPointDefenceLaserProjectiles.a(false, 0) * var7Lifetime1, 11184810, GetPhasedEnergyBeamProjectiles.a(-128, var5_array[var7Lifetime1]) + 5);
-                  woa.a(16777215, (var7Lifetime1 + 1) * GetPointDefenceLaserProjectiles.a(false, 0) + var6, 30, (byte) 74, -1, 0, var5_array[var7Lifetime1]);
+                  SoftwareDepthBuffer.a(16777215, (var7Lifetime1 + 1) * GetPointDefenceLaserProjectiles.a(false, 0) + var6, 30, (byte) 74, -1, 0, var5_array[var7Lifetime1]);
                 }
               }
             }
@@ -8821,7 +8821,7 @@ final class uca {
             }
           }
           if (var8 != null) {
-            ((Ship) (var8)).g(0, 114);
+            ((Ship) (var8)).setOwner(0, 114);
             this.field_m.b(1).world.a((Ship) (var8), (byte) 113);
             this.field_m.b(1).world.a(0);
           }

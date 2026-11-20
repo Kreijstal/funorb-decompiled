@@ -87,7 +87,7 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
                                         if (hab.field_i < param8) {
                                           ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                         } else {
-                                          lia.a(param4, param0, param5, param2, param6, param3, param8, param9, param1, (byte) -57);
+                                          SoftwareTransform3D.drawCubicBezier(param4, param0, param5, param2, param6, param3, param8, param9, param1, (byte) -57);
                                         }
                                       }
                                     }
@@ -152,7 +152,7 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
                                         ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                       } else {
                                         if (hab.field_i >= param8) {
-                                          lia.a(param4, param0, param5, param2, param6, param3, param8, param9, param1, (byte) -57);
+                                          SoftwareTransform3D.drawCubicBezier(param4, param0, param5, param2, param6, param3, param8, param9, param1, (byte) -57);
                                         } else {
                                           ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                         }

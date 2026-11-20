@@ -37,7 +37,7 @@ final class ShieldBehaviour extends ComponentBehaviour implements DiffableState 
           }
           if (!param0 &&
             var13.getShieldsOn(31390)) {
-            var13.t((byte) -112);
+            var13.consumeShieldEnergy((byte) -112);
             if (var13.getShieldsOn(31390)) {
               var10 = ShipFactory.field_a.a(0);
               var11 = 0;
@@ -90,7 +90,7 @@ final class ShieldBehaviour extends ComponentBehaviour implements DiffableState 
         Object var12 = null;
         if (param0 instanceof Ship) {
           var13 = (Ship) (param0);
-          var13.m(-13539);
+          var13.toggleShields(-13539);
         } else {
           return;
         }
@@ -249,7 +249,7 @@ final class ShieldBehaviour extends ComponentBehaviour implements DiffableState 
           if (param0 <= 73) {
             this.previousShieldY = 89;
           }
-          stackIn_3_0 = param1.l(-465);
+          stackIn_3_0 = param1.getShieldsToggleCooldown(-465);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -25,7 +25,7 @@ final class tc {
             stackIn_4_0 = 7681;
             return stackIn_4_0;
           }
-          if (param1 == asa.field_a) {
+          if (param1 == OpenGlGlyphMask.field_a) {
             stackIn_7_0 = 8448;
             return stackIn_7_0;
           }

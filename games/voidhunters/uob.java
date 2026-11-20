@@ -96,7 +96,7 @@ final class uob extends qg {
           this.field_b.h(33984, 1);
           this.field_b.a(83, var3);
           jaggl.OpenGL.glMatrixMode(5890);
-          jaggl.OpenGL.glLoadMatrixf(this.field_b.field_Bb.b((byte) 43), 0);
+          jaggl.OpenGL.glLoadMatrixf(this.field_b.field_Bb.getRotationMatrix((byte) 43), 0);
           jaggl.OpenGL.glMatrixMode(5888);
           this.field_b.h(33984, 0);
           this.field_d = true;
@@ -118,7 +118,7 @@ final class uob extends qg {
         this.field_b.h(33984, 1);
         this.field_b.a(83, var3);
         jaggl.OpenGL.glMatrixMode(5890);
-        jaggl.OpenGL.glLoadMatrixf(this.field_b.field_Bb.b((byte) 43), 0);
+        jaggl.OpenGL.glLoadMatrixf(this.field_b.field_Bb.getRotationMatrix((byte) 43), 0);
         jaggl.OpenGL.glMatrixMode(5888);
         this.field_b.h(33984, 0);
         this.field_d = true;

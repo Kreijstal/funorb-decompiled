@@ -26,7 +26,7 @@ final class qn extends IntrusiveNode {
         if (param1 != -25) {
           return true;
         }
-        if (!tla.b(111, param0)) {
+        if (!OpenGlSprite.b(111, param0)) {
           if (fwa.field_g.b(param0, param1 ^ -29)) {
             return fwa.field_g.a(param0, false) ? true : false;
           }

@@ -363,7 +363,7 @@ final class Projectile extends MovingObject implements DiffableState {
         if (param0 != -21) {
           field_r = (String) null;
         }
-        return tla.field_c;
+        return OpenGlSprite.field_c;
     }
 
     final int getTargetBody(byte param0) {

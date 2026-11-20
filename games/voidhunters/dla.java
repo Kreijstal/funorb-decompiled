@@ -27,14 +27,14 @@ final class dla {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = GetRepairModeRadius.a(-99, 0, za.c((byte) -93), param1);
+          var5_int = GetRepairModeRadius.a(-99, 0, GraphicsHeap.c((byte) -93), param1);
           if (!param0 && (var5_int == 2 ||
             var5_int == 1)) {
             var5_int = 2 + var5_int;
           }
           var6 = t.a(var5_int, (byte) 94);
-          var6.a(new ShipAI(), 4);
-          var6.h(17704, param3);
+          var6.setAi(new ShipAI(), 4);
+          var6.setTeam(17704, param3);
           if (param2 > -26) {
             return;
           }
@@ -207,7 +207,7 @@ final class dla {
               var10_ref_sg = var14[var9];
               if (var10_ref_sg != null &&
                 var10_ref_sg.getTeam((byte) 78) < SetMissionTerrainAsteroidProbability.field_p) {
-                var6 = mjb.b(param0 ^ 21957, var10_ref_sg.getTeam((byte) 102));
+                var6 = GpuSprite.b(param0 ^ 21957, var10_ref_sg.getTeam((byte) 102));
                 if (1 == var10_ref_sg.chassis.getComponentTypeId(0)) {
                   var7_int = 0;
                   break scanLoop1;
@@ -347,8 +347,8 @@ final class dla {
           try {
             var12 = es.field_b.blueprint.description;
             var5_ref_sg = ae.a(var12, (byte) 45);
-            var5_ref_sg.h(17704, 3);
-            var5_ref_sg.a(new ShipAI(), 4);
+            var5_ref_sg.setTeam(17704, 3);
+            var5_ref_sg.setAi(new ShipAI(), 4);
             var5_ref_sg.a(hob.a(var3, 8192, 122), -67);
             this.field_f.a(var5_ref_sg, (byte) 107);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
