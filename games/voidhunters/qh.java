@@ -72,7 +72,7 @@ final class qh extends iw implements UiActionListener {
           var2.height = 80;
           var2.y = 50;
           var2.width = this.width;
-          var2.renderer = (UiRenderer) ((Object) new bob(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var2.renderer = (UiRenderer) ((Object) new UiTextStyle(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(-18756, var2);
           if (GetPhasedEnergyBeamPulsetime.e((byte) 90)) {
             this.field_K = this.a((UiListener) (this), GetLaserBeamProjectileDamage.field_s, 125);

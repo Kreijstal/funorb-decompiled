@@ -54,10 +54,10 @@ final class gm extends kja {
         Sprite var31;
         Sprite var32;
         Sprite var33;
-        at var34;
-        at var35;
-        at var36;
-        at var37;
+        UiTextRenderer var34;
+        UiTextRenderer var35;
+        UiTextRenderer var36;
+        UiTextRenderer var37;
         int var9Lifetime1;
         int var9Lifetime2;
         int var10Lifetime1;
@@ -96,9 +96,9 @@ final class gm extends kja {
             this.field_L = (eeb) null;
             super.drawLayer(param0, param1, 111, param3);
             var6Lifetime1 = this.field_L.a((byte) 35);
-            var34 = (at) ((Object) this.renderer);
+            var34 = (UiTextRenderer) ((Object) this.renderer);
             var9 = param0 + this.x;
-            var10 = var34.b(-3, param3, (UiComponent) (this)) + (var34.a((UiComponent) (this), 3).a(29565) >> 1);
+            var10 = var34.getTextOriginY(-3, param3, (UiComponent) (this)) + (var34.getTextLayout((UiComponent) (this), 3).getHeight(29565) >> 1);
             if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p != var6Lifetime1 &&
               SetFighterRepairTime.field_q != var6Lifetime1) {
               if (SetArmageddonLength.field_o == var6Lifetime1) {
@@ -132,9 +132,9 @@ final class gm extends kja {
           }
           super.drawLayer(param0, param1, 111, param3);
           var6Lifetime1Lifetime1 = this.field_L.a((byte) 35);
-          var35 = (at) ((Object) this.renderer);
+          var35 = (UiTextRenderer) ((Object) this.renderer);
           var9Lifetime3 = param0 + this.x;
-          var10Lifetime3 = var35.b(-3, param3, (UiComponent) (this)) + (var35.a((UiComponent) (this), 3).a(29565) >> 1);
+          var10Lifetime3 = var35.getTextOriginY(-3, param3, (UiComponent) (this)) + (var35.getTextLayout((UiComponent) (this), 3).getHeight(29565) >> 1);
           if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p != var6Lifetime1Lifetime1 &&
             SetFighterRepairTime.field_q != var6Lifetime1Lifetime1) {
             if (SetArmageddonLength.field_o == var6Lifetime1Lifetime1) {
@@ -179,9 +179,9 @@ final class gm extends kja {
         if (param2 >= 47) {
           super.drawLayer(param0, param1, 111, param3);
           var6Lifetime2 = this.field_L.a((byte) 35);
-          var37 = (at) ((Object) this.renderer);
+          var37 = (UiTextRenderer) ((Object) this.renderer);
           var9Lifetime1 = param0 + this.x;
-          var10Lifetime1 = var37.b(-3, param3, (UiComponent) (this)) + (var37.a((UiComponent) (this), 3).a(29565) >> 1);
+          var10Lifetime1 = var37.getTextOriginY(-3, param3, (UiComponent) (this)) + (var37.getTextLayout((UiComponent) (this), 3).getHeight(29565) >> 1);
           if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p != var6Lifetime2 &&
             SetFighterRepairTime.field_q != var6Lifetime2) {
             if (SetArmageddonLength.field_o == var6Lifetime2) {
@@ -224,9 +224,9 @@ final class gm extends kja {
         this.field_L = (eeb) null;
         super.drawLayer(param0, param1, 111, param3);
         var6Lifetime3 = this.field_L.a((byte) 35);
-        var36 = (at) ((Object) this.renderer);
+        var36 = (UiTextRenderer) ((Object) this.renderer);
         var9Lifetime2 = param0 + this.x;
-        var10Lifetime2 = var36.b(-3, param3, (UiComponent) (this)) + (var36.a((UiComponent) (this), 3).a(29565) >> 1);
+        var10Lifetime2 = var36.getTextOriginY(-3, param3, (UiComponent) (this)) + (var36.getTextLayout((UiComponent) (this), 3).getHeight(29565) >> 1);
         if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p == var6Lifetime3) {
           var26 = ByteStorage.field_a[0];
           var11Lifetime2 = var26.paddedWidth << 1;

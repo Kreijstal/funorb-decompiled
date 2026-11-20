@@ -22,7 +22,7 @@ final class SpawnPoint extends IntrusiveNode implements DiffableState {
         if (param1 < -54) {
           var4 = param0 - this.x;
           var5 = param2 - this.y;
-          var6 = ar.a(var4, (byte) 106, var5);
+          var6 = TextLayout.approximateVectorLength(var4, (byte) 106, var5);
           return 51200 > var6 ? true : false;
         }
         return true;

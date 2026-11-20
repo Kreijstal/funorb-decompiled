@@ -333,7 +333,7 @@ final class fia {
                   var10 = var3[1 + var8];
                   var11 = var9 - var4;
                   var12 = var10 - var5;
-                  var13 = ar.a(var11, (byte) 106, var12);
+                  var13 = TextLayout.approximateVectorLength(var11, (byte) 106, var12);
                   if (var7Lifetime2 > var13) {
                     var6 = var8;
                     var7Lifetime2 = var13;
@@ -361,7 +361,7 @@ final class fia {
                     var8Lifetime1 = var5_ref_int__[var6Lifetime1 + 1];
                     var9Lifetime1 = var21.a(var7Lifetime1, (byte) 125);
                     var10Lifetime1 = var21.b(true, var8Lifetime1);
-                    var11Lifetime1 = ar.a(-GetUseDetailLines.field_o + var9Lifetime1, (byte) 119, var10Lifetime1 - GetTorpedoReload.field_q);
+                    var11Lifetime1 = TextLayout.approximateVectorLength(-GetUseDetailLines.field_o + var9Lifetime1, (byte) 119, var10Lifetime1 - GetTorpedoReload.field_q);
                     if (var11Lifetime1 < var4Lifetime1) {
                       var4Lifetime1 = var11Lifetime1;
                       var3_intLifetime1 = var6Lifetime1 >> 1;

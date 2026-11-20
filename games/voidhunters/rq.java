@@ -288,7 +288,7 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
         sca var4 = new sca(46, var3, -90 + this.width, 25, this.field_E, true, this.width - 120, 5, SetTorpedoProjectileLife.field_o, 11579568, UiComponent.field_m);
         this.addChild(-18756, var4);
         var3 = var3 + var4.height;
-        bob var5 = new bob(SetShipToShipRamDamage.field_o, 0, 0, 0, 0, 16777215, -1, 0, 0, SetShipToShipRamDamage.field_o.maxAscent, -1, 2147483647, true);
+        UiTextStyle var5 = new UiTextStyle(SetShipToShipRamDamage.field_o, 0, 0, 0, 0, 16777215, -1, 0, 0, SetShipToShipRamDamage.field_o.maxAscent, -1, 2147483647, true);
         this.field_w = new kja(var2, var5);
         this.field_w.tooltip = "";
         this.field_w.a(0, -1, SetBombletSprayProjectileDamage.field_q);
@@ -508,7 +508,7 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
         }
         try {
           var4 = param1;
-          ((uf) ((Object) var3)).a(false, 0, var4);
+          ((UiTextField) ((Object) var3)).setText(false, 0, var4);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rq.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -30,7 +30,7 @@ final class rm extends eca {
         return null;
     }
 
-    rm(uf param0) {
+    rm(UiTextField param0) {
         super(param0);
     }
 

@@ -22,7 +22,7 @@ final class kpb extends io {
         this(SetShipToShipRamDamage.field_o, param0);
     }
 
-    final String b(byte param0, UiComponent param1) {
+    final String getDisplayText(byte param0, UiComponent param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;

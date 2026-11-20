@@ -4,7 +4,7 @@
 abstract class qc implements kd {
     private int field_e;
     String field_c;
-    kw field_p;
+    TextInputWidget field_p;
     private Widget field_m;
     Widget field_o;
     BitmapFont field_n;
@@ -293,11 +293,11 @@ abstract class qc implements kd {
           }
         }
         boolean decompiledFrameRemainder0 = true;
-        if (this.field_p.l(-14453).equals(this.field_a)) {
-          decompiledFrameRemainder0 = (this.field_p.j(0) != this.field_l);
+        if (this.field_p.getText(-14453).equals(this.field_a)) {
+          decompiledFrameRemainder0 = (this.field_p.getCaretPosition(0) != this.field_l);
           if (decompiledFrameRemainder0) {
-            this.field_a = this.field_p.l(-14453);
-            this.field_l = this.field_p.j(0);
+            this.field_a = this.field_p.getText(-14453);
+            this.field_l = this.field_p.getCaretPosition(0);
             this.field_d = this.d(-85);
             if (this.field_d != null &&
               this.field_d.length == 0) {
@@ -305,8 +305,8 @@ abstract class qc implements kd {
             }
           }
         } else {
-          this.field_a = this.field_p.l(-14453);
-          this.field_l = this.field_p.j(0);
+          this.field_a = this.field_p.getText(-14453);
+          this.field_l = this.field_p.getCaretPosition(0);
           this.field_d = this.d(-85);
           if (this.field_d != null &&
             this.field_d.length == 0) {
@@ -328,7 +328,7 @@ abstract class qc implements kd {
         this.field_b = this.field_b + 1;
         this.field_m.updateInput(param0, 1332);
         this.field_h.updateScrolling(2 * (this.field_e * GetPointDefenceLaserPulsetime.field_o), true, this.field_e, 0);
-        this.field_p.f((byte) -6);
+        this.field_p.updateInputAndSelection((byte) -6);
     }
 
     private final void a(String param0, boolean param1, int param2) {
@@ -428,7 +428,7 @@ abstract class qc implements kd {
           if (param0 != 98) {
             if (99 != param0) {
               if (param0 != 80) {
-                this.field_p.a(param0, -1, param1);
+                this.field_p.handleKey(param0, -1, param1);
               } else {
                 this.a(-35);
               }
@@ -436,7 +436,7 @@ abstract class qc implements kd {
               if (null != this.field_k &&
                 this.field_i.sentinel != this.field_k.previous) {
                 this.field_k = (ila) (this.field_k.previous);
-                this.field_p.a(this.field_k.field_d, -114);
+                this.field_p.setText(this.field_k.field_d, -114);
               }
             }
           } else {
@@ -449,12 +449,12 @@ abstract class qc implements kd {
               }
               this.field_k = (ila) (stackIn_18_1);
               if (null != this.field_k) {
-                this.field_p.a(this.field_k.field_d, -121);
+                this.field_p.setText(this.field_k.field_d, -121);
               }
             }
           }
         } else {
-          var7 = this.field_p.l(-14453);
+          var7 = this.field_p.getText(-14453);
           if (var7.length() <= 0) {
             return true;
           }
@@ -463,7 +463,7 @@ abstract class qc implements kd {
           if (!this.a(-10278, var7)) {
             var5.field_Y = 16733525;
           }
-          this.field_p.a(true);
+          this.field_p.clearText(true);
           this.a(var7, param2 ^ 122);
           this.field_k = null;
         }
@@ -528,9 +528,9 @@ abstract class qc implements kd {
           var15.field_t = 5;
           var15.font = this.field_n;
           var15.field_v = 2;
-          this.field_p = new kw(0L, var7, var11, var15);
-          this.field_p.a(this.field_h.width, this.field_h.x, var3_int, this.field_h.height + (this.field_h.y + 5), true);
-          this.field_p.a(-20640, param1);
+          this.field_p = new TextInputWidget(0L, var7, var11, var15);
+          this.field_p.setBoundsAndLayout(this.field_h.width, this.field_h.x, var3_int, this.field_h.height + (this.field_h.y + 5), true);
+          this.field_p.setClipboardService(-20640, param1);
           this.field_m.addChild(-561, this.field_p);
           this.field_o = new Widget(0L, var12);
           this.field_o.x = 0;

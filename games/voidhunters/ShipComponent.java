@@ -281,7 +281,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                       var13 == 1)) {
                       var14_int = var12.x - this.finalx;
                       var15 = var12.y - this.finaly;
-                      var16 = ar.a(var14_int, (byte) 104, var15);
+                      var16 = TextLayout.approximateVectorLength(var14_int, (byte) 104, var15);
                       if (var11 > var16 &&
                         this.weaponbehaviour.canAimAtTarget(-26772, var12.y, var12.x, var23, this)) {
                         var10 = var12;
@@ -301,7 +301,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                       var14.getTeam((byte) 78) != var26.getTeam((byte) 124)) {
                       var15Lifetime1 = var14.x - this.finalx;
                       var16Lifetime1 = var14.y - this.finaly;
-                      var17 = ar.a(var15Lifetime1, (byte) 109, var16Lifetime1);
+                      var17 = TextLayout.approximateVectorLength(var15Lifetime1, (byte) 109, var16Lifetime1);
                       if (var17 < var11 &&
                         this.weaponbehaviour.canAimAtTarget(param1 ^ 26856, var14.y, var14.x, var23, this)) {
                         var11 = var17;
@@ -449,7 +449,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               var12 = this.hardpoints[var11];
               var13 = var12.worldx - param0;
               var14 = -param4 + var12.worldy;
-              var15 = ar.a(var13, (byte) 120, var14);
+              var15 = TextLayout.approximateVectorLength(var13, (byte) 120, var14);
               if (param2 > var15) {
                 param2 = var15;
                 var10Lifetime1 = var11;
@@ -517,7 +517,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               this.subcomponents[var7_int].collectCollisions((byte) -52, 1 + param1, var7_int + 1 << 4 * param1 | param2, param3, param4, param5);
             }
           }
-          if (ar.a(-param5.finalx + this.finalx, (byte) 115, -param5.finaly + this.finaly) > this.getDefinition((byte) -112).boundingRadius + param5.getDefinition((byte) -112).boundingRadius) {
+          if (TextLayout.approximateVectorLength(-param5.finalx + this.finalx, (byte) 115, -param5.finaly + this.finaly) > this.getDefinition((byte) -112).boundingRadius + param5.getDefinition((byte) -112).boundingRadius) {
             return;
           }
           var7 = this.getDefinition((byte) -112).field_A;
@@ -1439,7 +1439,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
     final int getBoundingRadius(int param0, int param1, int param2, int param3) {
         int var6 = 0;
         int var7 = VoidHunters.field_G;
-        int var5 = ar.a(param3 - this.finalx, (byte) 124, param1 - this.finaly) + this.getDefinition((byte) -112).boundingRadius;
+        int var5 = TextLayout.approximateVectorLength(param3 - this.finalx, (byte) 124, param1 - this.finaly) + this.getDefinition((byte) -112).boundingRadius;
         if (param2 > -61) {
           this.writePackedAttributes((IsaacPacketBuffer) null, (byte) -13);
         }
@@ -1733,7 +1733,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               this.subcomponents[var7_int].collectEdgeContacts(param0 + 1, param1, param2, param3 | 1 + var7_int << param0 * 4, 0, param5);
             }
           }
-          if (ar.a(this.finalx - param2.finalx, (byte) 119, this.finaly - param2.finaly) > this.getDefinition((byte) -112).boundingRadius + param2.getDefinition((byte) -112).boundingRadius) {
+          if (TextLayout.approximateVectorLength(this.finalx - param2.finalx, (byte) 119, this.finaly - param2.finaly) > this.getDefinition((byte) -112).boundingRadius + param2.getDefinition((byte) -112).boundingRadius) {
             return;
           }
           for (var7_intLifetime1 = param4; var7_intLifetime1 < this.finaloutline.length; var7_intLifetime1 += 2) {
@@ -3910,7 +3910,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           var8 = var13.getX(false) - this.finalx;
           var9 = var13.getY((byte) 126) - this.finaly;
           VariableCondition.a(this.finalx + var8, this.finaly + var9, this.finaly, this.finalx, (byte) -54);
-          var10 = ar.a(var8, (byte) 110, var9);
+          var10 = TextLayout.approximateVectorLength(var8, (byte) 110, var9);
           if (0 == var10) {
             var10 = 1;
           }
@@ -4444,7 +4444,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             var12 = param2.getX(false) - this.finalx;
             var13 = param2.getY((byte) -21) - this.finaly;
             VariableCondition.a(this.finalx + var12, this.finaly + var13, this.finaly, this.finalx, (byte) -54);
-            var14 = ar.a(var12, (byte) 120, var13);
+            var14 = TextLayout.approximateVectorLength(var12, (byte) 120, var13);
             if (var14 == 0) {
               var14 = 1;
             }

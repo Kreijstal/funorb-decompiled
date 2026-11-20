@@ -7,9 +7,9 @@ final class MissileLauncherWeaponDefinition extends WeaponDefinition {
     final static Widget i(byte param0) {
         if (param0 >= -75) {
           field_b = true;
-          return re.field_n.content;
+          return BitmapTextLayout.field_n.content;
         }
-        return re.field_n.content;
+        return BitmapTextLayout.field_n.content;
     }
 
     final int getProjectileLifetime(byte param0) {

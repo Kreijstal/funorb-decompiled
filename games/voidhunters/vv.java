@@ -64,17 +64,17 @@ final class vv {
           NanosecondClock.drawNineSlice(3, param3.height, param3.width, param4 + param3.y, this.field_b, param2 + param3.x);
           if (this.field_e != null) {
             var6_int = this.field_h + (param2 + param3.x);
-            if (param0.field_c == 1) {
+            if (param0.horizontalAlignment == 1) {
               var6_int = var6_int + (-this.field_e.paddedWidth + param3.width) / 2;
             }
             var7 = this.field_f + (param4 + param3.y);
-            if (2 == param0.field_c) {
+            if (2 == param0.horizontalAlignment) {
               var6_int = var6_int + (-this.field_e.paddedWidth + param3.width);
             }
-            if (param0.field_n == 1) {
+            if (param0.verticalAlignment == 1) {
               var7 = var7 + (-this.field_e.paddedHeight + param3.height) / 2;
             }
-            if (param0.field_n == 2) {
+            if (param0.verticalAlignment == 2) {
               var7 = var7 + (param3.height - this.field_e.paddedHeight);
             }
             this.field_e.draw(var6_int, var7);
@@ -82,29 +82,29 @@ final class vv {
           if (param1) {
             return;
           }
-          var6 = param0.b((byte) -110, param3);
+          var6 = param0.getDisplayText((byte) -110, param3);
           if (var6 != null &&
-            null != param0.field_d &&
+            null != param0.font &&
             this.field_j >= 0) {
-            stackIn_21_0 = param0.field_d;
+            stackIn_21_0 = param0.font;
             stackIn_21_1 = var6;
             if (this.field_h != -2147483648) {
               stackIn_22_2 = this.field_h;
             } else {
               stackIn_22_2 = 0;
             }
-            stackIn_24_2 = stackIn_22_2 + param0.field_f + (param2 + param3.x);
+            stackIn_24_2 = stackIn_22_2 + param0.paddingLeft + (param2 + param3.x);
             stackIn_24_3 = param4;
             stackIn_24_4 = param3.y;
-            stackIn_24_5 = -param0.field_k;
+            stackIn_24_5 = -param0.paddingTop;
             if (-2147483648 != this.field_f) {
               stackIn_25_6 = this.field_f;
             } else {
               stackIn_25_6 = 0;
             }
             stackIn_27_3 = stackIn_24_3 + (stackIn_24_4 - (stackIn_24_5 - stackIn_25_6));
-            stackIn_27_4 = param3.width - param0.field_f - param0.field_o;
-            stackIn_27_5 = -param0.field_k + (param3.height - param0.field_m);
+            stackIn_27_4 = param3.width - param0.paddingLeft - param0.paddingRight;
+            stackIn_27_5 = -param0.paddingTop + (param3.height - param0.paddingBottom);
             stackIn_27_6 = this.field_j;
             stackIn_27_7 = this.field_g;
             if (-2147483648 != this.field_i) {
@@ -112,7 +112,7 @@ final class vv {
             } else {
               stackIn_28_8 = 256;
             }
-            ((BitmapFont) (Object) stackIn_21_0).drawParagraph(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param0.field_c, param0.field_n, param0.field_h);
+            ((BitmapFont) (Object) stackIn_21_0).drawParagraph(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param0.horizontalAlignment, param0.verticalAlignment, param0.lineSpacing);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

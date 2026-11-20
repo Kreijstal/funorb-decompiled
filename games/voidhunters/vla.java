@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vla extends UiContainer implements en, UiActionListener {
+final class vla extends UiContainer implements UiTextFieldListener, UiActionListener {
     static String field_E;
     private UiFocusableComponent field_x;
     private boolean field_B;
     private UiFocusableComponent field_A;
     private String field_v;
-    private uf field_G;
+    private UiTextField field_G;
     private boolean field_F;
     private boolean field_w;
     static String field_C;
-    private uf field_y;
+    private UiTextField field_y;
     private UiFocusableComponent field_z;
 
     final void a(byte param0, String param1) {
-        uf var3 = null;
+        UiTextField var3 = null;
         String var4 = null;
         if (param0 != 9) {
           return;
@@ -23,8 +23,8 @@ final class vla extends UiContainer implements en, UiActionListener {
         try {
           var3 = this.field_y;
           var4 = param1;
-          var3.a(false, param0 ^ 9, var4);
-          this.field_G.e(82);
+          var3.setText(false, param0 ^ 9, var4);
+          this.field_G.clearText(82);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vla.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -85,24 +85,24 @@ final class vla extends UiContainer implements en, UiActionListener {
         }
         super.drawLayer(param0, param1, 58, param3);
         if (param2 < 47) {
-          uf var6 = (uf) null;
-          this.a((uf) null, (byte) 79);
+          UiTextField var6 = (UiTextField) null;
+          this.onTextChanged((UiTextField) null, (byte) 79);
         }
     }
 
     final void i(byte param0) {
-        this.field_y.e(82);
+        this.field_y.clearText(82);
         if (param0 != -29) {
           this.field_x = (UiFocusableComponent) null;
         }
-        this.field_G.e(82);
+        this.field_G.clearText(82);
     }
 
     private final void d(int param0) {
-        uf var3;
+        UiTextField var3;
         if (param0 != -1) {
-          var3 = (uf) null;
-          this.a((uf) null, (byte) -20);
+          var3 = (UiTextField) null;
+          this.onTextChanged((UiTextField) null, (byte) -20);
         }
         if (Projectile.f((byte) -21) ||
           !(this.field_y.text.length() <= 0) &&
@@ -193,8 +193,8 @@ final class vla extends UiContainer implements en, UiActionListener {
             this.field_w)) {
             throw new IllegalStateException();
           }
-          this.field_y = (uf) ((Object) new tga(param0, (UiListener) (this), 100));
-          this.field_G = (uf) ((Object) new tga("", (UiListener) (this), 20));
+          this.field_y = (UiTextField) ((Object) new tga(param0, (UiListener) (this), 100));
+          this.field_G = (UiTextField) ((Object) new tga("", (UiListener) (this), 20));
           if (this.field_B) {
             this.field_x = new UiFocusableComponent(SetSpecialOrderBoxHeight.field_p, (UiListener) null);
             this.field_A = new UiFocusableComponent(GetFighterBayAimspeed.field_q, (UiListener) null);
@@ -365,7 +365,7 @@ final class vla extends UiContainer implements en, UiActionListener {
         }
     }
 
-    public final void a(uf param0, byte param1) {
+    public final void onTextChanged(UiTextField param0, byte param1) {
         try {
           if (param1 != 100) {
             this.d(-74);
@@ -375,7 +375,7 @@ final class vla extends UiContainer implements en, UiActionListener {
         }
     }
 
-    public final void a(int param0, uf param1) {
+    public final void onSubmitted(int param0, UiTextField param1) {
         CharSequence var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;

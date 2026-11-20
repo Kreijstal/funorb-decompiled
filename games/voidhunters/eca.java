@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class eca extends sc implements en {
+abstract class eca extends sc implements UiTextFieldListener {
     static int field_e;
     static String field_d;
-    private uf field_c;
+    private UiTextField field_c;
 
     final String d(int param0) {
         if (param0 == 16384) {
@@ -23,7 +23,7 @@ abstract class eca extends sc implements en {
         return this.a(this.field_c.text, 16384);
     }
 
-    public final void a(uf param0, byte param1) {
+    public final void onTextChanged(UiTextField param0, byte param1) {
         if (param1 != 100) {
           return;
         }
@@ -36,7 +36,7 @@ abstract class eca extends sc implements en {
 
     public final boolean b(byte param0) {
         if (param0 > -100) {
-          this.field_c = (uf) null;
+          this.field_c = (UiTextField) null;
           if (this.field_c.text != null) {
             return this.field_c.text.length() == 0 ? true : false;
           }
@@ -60,18 +60,18 @@ abstract class eca extends sc implements en {
         field_d = null;
     }
 
-    public final void a(int param0, uf param1) {
+    public final void onSubmitted(int param0, UiTextField param1) {
         try {
           if (param0 != -12409) {
-            uf var4 = (uf) null;
-            this.a((uf) null, (byte) 43);
+            UiTextField var4 = (UiTextField) null;
+            this.onTextChanged((UiTextField) null, (byte) 43);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "eca.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    eca(uf param0) {
+    eca(UiTextField param0) {
         try {
           this.field_c = param0;
         } catch (RuntimeException runtimeException) {

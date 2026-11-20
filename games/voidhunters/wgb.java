@@ -62,7 +62,7 @@ final class wgb extends eca {
         field_h = null;
     }
 
-    wgb(uf param0) {
+    wgb(UiTextField param0) {
         super(param0);
     }
 

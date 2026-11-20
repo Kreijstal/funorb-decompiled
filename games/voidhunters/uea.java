@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uea extends bob {
+final class uea extends UiTextStyle {
     private vv field_r;
     private vv[] field_q;
     static String field_p;
@@ -88,7 +88,7 @@ final class uea extends bob {
         vv var6Lifetime2;
         var7 = VoidHunters.field_G;
         try {
-          super.a(param1 - 130, param0);
+          super.copyTo(param1 - 130, param0);
           if (param2) {
             for (var4_int = 0; var4_int < 6; var4_int++) {
               var5 = this.field_q[var4_int];

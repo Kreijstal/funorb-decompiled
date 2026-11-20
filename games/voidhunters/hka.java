@@ -43,7 +43,7 @@ final class hka extends uj {
         Widget var6 = null;
         Widget var3 = null;
         SetMissileLauncherRandomness.field_o = SetSniperCannonProjectiles.a(param0, "display_name_changed", "basic", true);
-        re.field_n = new ScrollableActionPanel(0L, rbb.field_k, SetMissileLauncherEnergyUsed.field_q, SetDefaultFiringLeeway.field_o);
+        BitmapTextLayout.field_n = new ScrollableActionPanel(0L, rbb.field_k, SetMissileLauncherEnergyUsed.field_q, SetDefaultFiringLeeway.field_o);
         vra.field_b = new ScrollableActionPanel(0L, rbb.field_k, SetMissilesTopSpeed.field_q, PlayerJoinFactory.field_a);
         PlayerJoinFactory.field_c = new Widget(0L, (Widget) null);
         OpenGlCubeTexture.field_h = new Widget(0L, qc.field_q);
@@ -58,11 +58,11 @@ final class hka extends uj {
           PlayerJoinFactory.field_c.addChild(-561, OpenGlCubeTexture.field_h);
           PlayerJoinFactory.field_c.addChild(-561, SetCountermeasureLauncherRandomness.field_o);
           PlayerJoinFactory.field_c.addChild(-561, GameKeyHandler.field_b);
-          PlayerJoinFactory.field_c.addChild(-561, re.field_n);
+          PlayerJoinFactory.field_c.addChild(-561, BitmapTextLayout.field_n);
           PlayerJoinFactory.field_c.addChild(-561, CarouselPlayerEventFactory.field_c);
-          re.field_n.scrollPane.viewport.applyStyle(18445, qc.field_q);
-          re.field_n.scrollPane.viewport.field_B = 1;
-          var5 = re.field_n.scrollPane.viewport;
+          BitmapTextLayout.field_n.scrollPane.viewport.applyStyle(18445, qc.field_q);
+          BitmapTextLayout.field_n.scrollPane.viewport.field_B = 1;
+          var5 = BitmapTextLayout.field_n.scrollPane.viewport;
           var6 = var5;
           var6.field_F = 1;
           vra.field_b.scrollPane.viewport.applyStyle(18445, qc.field_q);

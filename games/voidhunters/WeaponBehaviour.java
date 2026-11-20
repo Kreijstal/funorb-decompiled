@@ -481,7 +481,7 @@ final class WeaponBehaviour implements DiffableState {
             if (var29 != null) {
               var31 = -param3 + var29.x;
               var32 = var29.y - param6;
-              if (ar.a(var31, (byte) 112, var32) <= var29.getBoundingRadius(true) + 32768) {
+              if (TextLayout.approximateVectorLength(var31, (byte) 112, var32) <= var29.getBoundingRadius(true) + 32768) {
                 this.targetLock.targetId = var29.getId(false);
                 this.targetLock.targetX = param3 - var29.getX(false);
                 this.targetLock.targetY = -var29.getY((byte) -122) + param6;

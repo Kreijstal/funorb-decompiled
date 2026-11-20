@@ -6,7 +6,7 @@ import java.io.*;
 final class GetSelfDestructActivateCooldown extends ConsoleCommand {
     final static String a(int param0, int param1) {
         if (param0 == 0) {
-          return uf.field_F;
+          return UiTextField.field_F;
         }
         if (param0 == 1) {
           return GetBombletSprayProjectileLife.field_r;

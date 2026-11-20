@@ -146,7 +146,7 @@ final class Projectile extends MovingObject implements DiffableState {
                       var4 = 0;
                       var5 = -this.x + var16.x;
                       var6 = var16.y - this.y;
-                      if (ar.a(var5, (byte) 111, var6) < GetUseNiceTrails.field_p / 2 &&
+                      if (TextLayout.approximateVectorLength(var5, (byte) 111, var6) < GetUseNiceTrails.field_p / 2 &&
                         !param1.a(var16, param0 ^ 39)) {
                         var4 = 1;
                       }
@@ -173,13 +173,13 @@ final class Projectile extends MovingObject implements DiffableState {
                   }
                   var6Lifetime1 = var4Lifetime1 - this.x >> 6;
                   var7 = var5Lifetime1 - this.y >> 6;
-                  var8 = ar.a(var6Lifetime1, (byte) 120, var7);
+                  var8 = TextLayout.approximateVectorLength(var6Lifetime1, (byte) 120, var7);
                   if (var8 > 0) {
                     var6Lifetime1 = var6Lifetime1 * la.field_k / var8;
                     var7 = var7 * la.field_k / var8;
                     var9 = var6Lifetime1 - this.dx;
                     var10 = -this.dy + var7;
-                    var11 = ar.a(var9, (byte) 111, var10);
+                    var11 = TextLayout.approximateVectorLength(var9, (byte) 111, var10);
                     if (0 >= var11) {
                       this.y = this.y + this.dy;
                       this.x = this.x + this.dx;

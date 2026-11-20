@@ -211,7 +211,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
             this.chassis = (ShipComponent) null;
           }
           for (var8_int = 0; param6.length > var8_int; var8_int++) {
-            var9 = ar.a(param4[var8_int], (byte) 111, param1[var8_int]);
+            var9 = TextLayout.approximateVectorLength(param4[var8_int], (byte) 111, param1[var8_int]);
             stackIn_8_0 = (param2[var8_int] < 0) ? 0 : 1;
             if (param5 < 0) {
               stackIn_11_1 = 0;

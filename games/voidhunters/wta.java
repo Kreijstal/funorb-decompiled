@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wta extends sc implements en, UiComboBoxSelectionListener {
+final class wta extends sc implements UiTextFieldListener, UiComboBoxSelectionListener {
     vq field_c;
 
-    public final void a(uf param0, byte param1) {
+    public final void onTextChanged(UiTextField param0, byte param1) {
         try {
           this.a(18);
           if (param1 != 100) {
@@ -118,7 +118,7 @@ final class wta extends sc implements en, UiComboBoxSelectionListener {
         return GetShipPersistence.field_o;
     }
 
-    public final void a(int param0, uf param1) {
+    public final void onSubmitted(int param0, UiTextField param1) {
         try {
           if (param0 != -12409) {
             this.d(116);

@@ -434,7 +434,7 @@ public final class VoidHunters extends NetworkGameClient {
         } else {
           if (!Mission.b(-1)) {
             GetUseRectOutline.b(false);
-            if (ar.field_d &&
+            if (TextLayout.field_d &&
               this.l(0) &&
               !uc.b(-116)) {
               WaterNoiseGpuMaterialEffect.startOfflineGame(true, false);
@@ -651,7 +651,7 @@ public final class VoidHunters extends NetworkGameClient {
           GetMissileLauncherProjectileLife.graphicsQuality = GetLagIn.a(GetMissileLauncherProjectileLife.graphicsQuality, 68, "graphics_quality");
           PopupMenuWidget.applyGraphicsQualityPreset(false);
           nl.a(GetLagIn.a(kt.field_l, 93, "fx_volume"), -13205);
-          re.a(GetLagIn.a(GetMutatorVotes.field_p, 21, "music_volume"), (byte) -99);
+          BitmapTextLayout.setMusicVolume(GetLagIn.a(GetMutatorVotes.field_p, 21, "music_volume"), (byte) -99);
           GetMassDriverProjectiles.field_q = GetLagIn.a(GetMassDriverProjectiles.field_q, 36, "graphics_mode");
         }
     }
@@ -1028,7 +1028,7 @@ public final class VoidHunters extends NetworkGameClient {
         DualLinkNode.clearSharedReferences(-31049);
         qc.clearSharedReferences((byte) 78);
         ffb.clearSharedReferences(-106);
-        kw.clearSharedReferences((byte) 124);
+        TextInputWidget.clearSharedReferences((byte) 124);
         pia.clearSharedReferences(-89);
         bra.clearSharedReferences(true);
         cd.clearSharedReferences(5);
@@ -1049,10 +1049,10 @@ public final class VoidHunters extends NetworkGameClient {
         uea.clearSharedReferences((byte) -18);
         ei.clearSharedReferences(false);
         jba.clearSharedReferences(true);
-        bob.clearSharedReferences(22540);
+        UiTextStyle.clearSharedReferences(22540);
         UiComponent.clearSharedReferences((byte) 71);
         bl.clearSharedReferences((byte) -17);
-        ar.clearSharedReferences(54);
+        TextLayout.clearSharedReferences(54);
         hnb.clearSharedReferences(1);
         fm.clearSharedReferences((byte) -114);
         iw.clearSharedReferences(-27545);
@@ -1114,7 +1114,7 @@ public final class VoidHunters extends NetworkGameClient {
         CachedArchiveProvider.clearSharedReferences((byte) -110);
         SoundInstrument.clearSharedReferences();
         tga.clearSharedReferences(88);
-        uf.clearSharedReferences((byte) -128);
+        UiTextField.clearSharedReferences((byte) -128);
         ttb.clearSharedReferences(16711935);
         kja.clearSharedReferences(-30);
         gm.clearSharedReferences(-2459);
@@ -1159,7 +1159,7 @@ public final class VoidHunters extends NetworkGameClient {
         OpenGlGpuToolkit.clearSharedReferences(771);
         OpenGlVertexBuffer.clearSharedReferences(-118);
         hma.clearSharedReferences(-1);
-        re.clearSharedReferences(-2705);
+        BitmapTextLayout.clearSharedReferences(-2705);
         UiDraggableContainer.clearSharedReferences(-100);
         tda.clearSharedReferences(29914);
         qh.clearSharedReferences((byte) -123);

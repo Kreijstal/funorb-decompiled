@@ -52,7 +52,7 @@ final class CarouselPlayerInfoFactory implements GameStateFactory {
           var11 = param2 - param0;
           var12 = var11;
           var13 = -var10;
-          var14 = ar.a(var12, (byte) 103, var13);
+          var14 = TextLayout.approximateVectorLength(var12, (byte) 103, var13);
           var13 = (var13 << 8) / var14;
           var12 = (var12 << 8) / var14;
           var15 = 64;

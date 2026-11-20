@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tga extends uf implements lca {
+final class tga extends UiTextField implements lca {
     static boolean field_N;
     private eeb field_O;
     private int field_L;
@@ -14,8 +14,8 @@ final class tga extends uf implements lca {
         }
     }
 
-    final void i(byte param0) {
-        super.i(param0);
+    final void notifyTextChanged(byte param0) {
+        super.notifyTextChanged(param0);
         if (this.field_O != null) {
           this.field_O.a(99);
         }

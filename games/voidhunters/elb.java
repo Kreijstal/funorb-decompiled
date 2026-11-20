@@ -11,7 +11,7 @@ abstract class elb {
     private short[] field_d;
     private int field_g;
     private int field_h;
-    static bob field_f;
+    static UiTextStyle field_f;
 
     abstract void a(int param0, int param1, int param2);
 

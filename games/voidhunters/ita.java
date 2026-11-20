@@ -5,9 +5,9 @@ final class ita extends vq {
     private boolean field_F;
     static String field_A;
     static String field_D;
-    private uf field_E;
-    private uf field_B;
-    private uf field_C;
+    private UiTextField field_E;
+    private UiTextField field_B;
+    private UiTextField field_C;
 
     private final void a(UiComponent param0, int param1, String param2, int param3, int param4) {
         try {
@@ -182,9 +182,9 @@ final class ita extends vq {
     private ita(UiRenderer param0, boolean param1) {
         super(0, 0, 0, 0, (UiRenderer) null);
         try {
-          this.field_E = (uf) ((Object) new tga("", (UiListener) null, 2));
-          this.field_B = (uf) ((Object) new tga("", (UiListener) null, 2));
-          this.field_C = (uf) ((Object) new tga("", (UiListener) null, 4));
+          this.field_E = (UiTextField) ((Object) new tga("", (UiListener) null, 2));
+          this.field_B = (UiTextField) ((Object) new tga("", (UiListener) null, 2));
+          this.field_C = (UiTextField) ((Object) new tga("", (UiListener) null, 4));
           this.field_C.renderer = param0;
           this.field_B.renderer = param0;
           this.field_E.renderer = param0;

@@ -183,7 +183,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.field_o[30] = SystemNanoClock.field_d;
           GetGrapplingHookSpringConstant.field_o[28] = ti.field_k;
           GetGrapplingHookSpringConstant.field_o[56] = cd.field_a;
-          GetGrapplingHookSpringConstant.field_o[55] = bob.field_l;
+          GetGrapplingHookSpringConstant.field_o[55] = UiTextStyle.field_l;
           GetGrapplingHookSpringConstant.field_o[37] = GetMissileLauncherEnergyUsed.field_o;
           GetGrapplingHookSpringConstant.field_o[10] = jw.field_d;
           GetGrapplingHookSpringConstant.field_o[21] = hob.field_e;

@@ -4,7 +4,7 @@
 import java.util.*;
 
 class UiComponent extends IntrusiveNode {
-    int field_i;
+    int textOffsetY;
     String tooltip;
     static byte[] field_o;
     int width;
@@ -14,12 +14,12 @@ class UiComponent extends IntrusiveNode {
     int height;
     UiListener listener;
     UiRenderer renderer;
-    ar field_d;
+    TextLayout textLayout;
     int pressedButton;
     int y;
     int x;
     String text;
-    int field_s;
+    int textOffsetX;
 
     boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
@@ -139,7 +139,7 @@ class UiComponent extends IntrusiveNode {
 
     final void refreshLayout(boolean param0) {
         if (param0) {
-          this.field_s = 85;
+          this.textOffsetX = 85;
         }
         this.setBounds(this.x, this.width, this.height, 1, this.y);
     }
@@ -195,7 +195,7 @@ class UiComponent extends IntrusiveNode {
     boolean containsPoint(int param0, int param1, int param2, int param3, byte param4) {
         boolean stackIn_8_0 = false;
         if (param4 != 22) {
-          this.field_s = -9;
+          this.textOffsetX = -9;
         }
         stackIn_8_0 = (param2 >= param1 + this.x) && (param0 >= this.y + param3) && (param2 < this.width + this.x + param1) && (param0 < param3 - (-this.y - this.height));
         return stackIn_8_0;
@@ -478,27 +478,27 @@ class UiComponent extends IntrusiveNode {
           this.draw(-58, -39, -116);
         }
         jw.field_b = hu.field_b;
-        uf.a(this.getTooltip((byte) 125), 5757);
+        UiTextField.updateTooltip(this.getTooltip((byte) 125), 5757);
         return param3;
     }
 
     protected UiComponent() {
-        this.field_i = 0;
-        this.field_s = 0;
+        this.textOffsetY = 0;
+        this.textOffsetX = 0;
     }
 
     UiComponent(String param0, UiRenderer param1, UiListener param2) {
-        at var4 = null;
-        this.field_i = 0;
-        this.field_s = 0;
+        UiTextRenderer var4 = null;
+        this.textOffsetY = 0;
+        this.textOffsetX = 0;
         try {
           this.listener = param2;
           this.text = param0;
           this.renderer = param1;
-          if (this.renderer instanceof at) {
-            var4 = (at) ((Object) this.renderer);
-            this.width = var4.a(-2, this);
-            this.height = var4.a(this, (byte) 66);
+          if (this.renderer instanceof UiTextRenderer) {
+            var4 = (UiTextRenderer) ((Object) this.renderer);
+            this.width = var4.getPreferredWidth(-2, this);
+            this.height = var4.getPreferredHeight(this, (byte) 66);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "shb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -506,8 +506,8 @@ class UiComponent extends IntrusiveNode {
     }
 
     UiComponent(int param0, int param1, int param2, int param3, UiRenderer param4, UiListener param5) {
-        this.field_i = 0;
-        this.field_s = 0;
+        this.textOffsetY = 0;
+        this.textOffsetX = 0;
         try {
           this.y = param1;
           this.renderer = param4;

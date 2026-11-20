@@ -115,7 +115,7 @@ final class ShipComponentDefinition {
         }
         this.boundingRadius = 0;
         for (var2 = 0; this.outline.length > var2; var2 += 2) {
-          var3 = ar.a(this.outline[var2], (byte) 109, this.outline[var2 + 1]);
+          var3 = TextLayout.approximateVectorLength(this.outline[var2], (byte) 109, this.outline[var2 + 1]);
           if (var3 > this.boundingRadius) {
             this.boundingRadius = var3;
           }

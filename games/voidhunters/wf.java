@@ -752,10 +752,10 @@ final class wf {
                             } else {
                               var7 = GetMutatorVotes.field_p;
                               if (this.field_b.a(true)) {
-                                re.a(0, (byte) -109);
+                                BitmapTextLayout.setMusicVolume(0, (byte) -109);
                               }
                               if (this.field_b.d(param0 + 12441)) {
-                                re.a(256, (byte) -104);
+                                BitmapTextLayout.setMusicVolume(256, (byte) -104);
                               }
                               if (this.field_b.b((byte) 111)) {
                                 var10_int = this.b(31488, param2) + (this.a((byte) -76, param2) - GetSniperCannonAimspeed.a(100, 131)) >> 1;
@@ -763,19 +763,19 @@ final class wf {
                                 var12_int = 256 * var11 / GetSniperCannonAimspeed.a(100, 131);
                                 if (var12_int > 0) {
                                   if (var12_int < 256) {
-                                    re.a(var12_int, (byte) -111);
+                                    BitmapTextLayout.setMusicVolume(var12_int, (byte) -111);
                                   } else {
-                                    re.a(256, (byte) -112);
+                                    BitmapTextLayout.setMusicVolume(256, (byte) -112);
                                   }
                                 } else {
-                                  re.a(0, (byte) -127);
+                                  BitmapTextLayout.setMusicVolume(0, (byte) -127);
                                 }
                               }
                               if (this.field_b.d((byte) -7)) {
                                 GetWeaponProjectileSpeedMultiply.e((byte) -81);
                               }
                               if (this.field_b.b(-80)) {
-                                UiScrollBar.f(32);
+                                UiScrollBar.increaseMusicVolume(32);
                               }
                               if (GetMutatorVotes.field_p != var7 &&
                                 UiDraggableContainer.field_E) {

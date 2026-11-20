@@ -71,8 +71,8 @@ final class ta {
               param2.connectionY != 0) {
               var16 = param2.connectionX - var8;
               var17 = param2.connectionY - var9;
-              var18 = ar.a(var16, (byte) 119, var17);
-              var19 = ar.a(var10, (byte) 117, var11);
+              var18 = TextLayout.approximateVectorLength(var16, (byte) 119, var17);
+              var19 = TextLayout.approximateVectorLength(var10, (byte) 117, var11);
               if (var18 < var19 >> 1) {
                 var15 = 0;
               }

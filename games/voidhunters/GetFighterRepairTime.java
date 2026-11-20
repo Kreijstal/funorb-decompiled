@@ -145,7 +145,7 @@ final class GetFighterRepairTime extends ConsoleCommand {
         try {
           var11_int = 57 / ((param2 - 17) / 51);
           var12 = new byte[param5 * (param6 * param7)];
-          toa.a(param6, param8, param5, param10, param1, (byte) -61, param4, param9, 0, param0, param3, param7, var12);
+          TextLayoutLine.a(param6, param8, param5, param10, param1, (byte) -61, param4, param9, 0, param0, param3, param7, var12);
           stackIn_1_0 = var12;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

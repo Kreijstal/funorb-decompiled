@@ -7,7 +7,7 @@ final class vqa extends eca {
     static String field_f;
     static GameSession field_g;
     static String field_j;
-    private uf field_h;
+    private UiTextField field_h;
 
     final qrb a(String param0, int param1) {
         eeb var3 = null;
@@ -108,7 +108,7 @@ final class vqa extends eca {
         field_g = null;
     }
 
-    vqa(uf param0, uf param1) {
+    vqa(UiTextField param0, UiTextField param1) {
         super(param0);
         try {
           this.field_h = param1;

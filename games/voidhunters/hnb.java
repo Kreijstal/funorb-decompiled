@@ -318,7 +318,7 @@ final class hnb extends iw implements UiActionListener {
             var7.width = this.width;
             var7.y = 163;
             var7.height = 80;
-            var7.renderer = (UiRenderer) ((Object) new bob(SetShipToShipRamDamage.field_o, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
+            var7.renderer = (UiRenderer) ((Object) new UiTextStyle(SetShipToShipRamDamage.field_o, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
             this.addChild(-18756, var7);
           }
           this.field_M = false;

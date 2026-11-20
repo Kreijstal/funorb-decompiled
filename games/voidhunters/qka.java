@@ -101,7 +101,7 @@ final class qka extends Widget {
           return true;
         }
         if (this.field_yb.length() > 0) {
-          ServerTickFactory.a(this.field_yb.length() - 1, param0, this.field_yb, ' ');
+          ServerTickFactory.resizeStringBuilder(this.field_yb.length() - 1, param0, this.field_yb, ' ');
         }
         if (this.field_yb.length() >= 12) {
           if (SetBombletSprayProjectileDamage.field_o == 84) {
@@ -241,7 +241,7 @@ final class qka extends Widget {
           }
           if (SetBombletSprayProjectileDamage.field_o == 85 &&
             this.field_yb.length() > 0) {
-            ServerTickFactory.a(-1 + this.field_yb.length(), false, this.field_yb, ' ');
+            ServerTickFactory.resizeStringBuilder(-1 + this.field_yb.length(), false, this.field_yb, ' ');
           }
           if (MissionBuilderFactory.a(SetClientSideDragging.field_r, 109, (CharSequence) ((Object) this.field_yb))) {
             discarded$0 = this.field_yb.append(SetClientSideDragging.field_r);

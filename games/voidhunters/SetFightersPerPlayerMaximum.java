@@ -105,7 +105,7 @@ final class SetFightersPerPlayerMaximum extends ConsoleCommand {
                 var19Lifetime4 = -var16 + var15;
                 var20_intLifetime4 = var14 - var17;
                 var18Lifetime2 = (Math.abs(var19Lifetime4) >= Math.abs(var20_intLifetime4)) ? var20_intLifetime4 : var19Lifetime4;
-                var19Lifetime4Lifetime1 = ar.a(var12, (byte) 119, var13);
+                var19Lifetime4Lifetime1 = TextLayout.approximateVectorLength(var12, (byte) 119, var13);
                 if (!(var19Lifetime4Lifetime1 <= 0)) {
                   var20 = ((long)var18Lifetime2 << param5) / (long)var19Lifetime4Lifetime1;
                   if (!(Math.abs(var20) >= (long)Math.abs(param0))) {

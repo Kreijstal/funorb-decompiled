@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class bob implements UiRenderer, at {
-    private int field_j;
-    int field_f;
-    int field_a;
-    BitmapFont field_d;
-    int field_h;
-    private boolean field_g;
-    int field_i;
+class UiTextStyle implements UiRenderer, UiTextRenderer {
+    private int shadowColor;
+    int paddingLeft;
+    int caretColor;
+    BitmapFont font;
+    int lineSpacing;
+    private boolean wrapText;
+    int textColor;
     static GameStateFactory field_e;
-    int field_b;
+    int selectionColor;
     static String field_l;
-    int field_k;
-    int field_o;
-    int field_m;
-    int field_c;
-    int field_n;
+    int paddingTop;
+    int paddingRight;
+    int paddingBottom;
+    int horizontalAlignment;
+    int verticalAlignment;
 
-    private final void c(UiComponent param0, byte param1) {
+    private final void layoutSingleLine(UiComponent param0, byte param1) {
         int discarded$0 = 0;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
@@ -34,51 +34,51 @@ class bob implements UiRenderer, at {
         int var6Lifetime1;
         var7 = VoidHunters.field_G;
         try {
-          if (null == param0.field_d) {
-            param0.field_d = (ar) ((Object) new re());
+          if (null == param0.textLayout) {
+            param0.textLayout = (TextLayout) ((Object) new BitmapTextLayout());
           }
-          var3_int = this.b(param0, (byte) 110);
-          var4 = this.a((byte) 96, param0);
-          var6 = this.field_n;
+          var3_int = this.getContentWidth(param0, (byte) 110);
+          var4 = this.getContentHeight((byte) 96, param0);
+          var6 = this.verticalAlignment;
           if (var6 != 0) {
             if (var6 != 2) {
               if (var6 != 3 &&
                 var6 != 1) {
               }
-              var5 = this.field_d.maxAscent + (-this.field_d.maxDescent + (-this.field_d.maxAscent + var4) >> 1);
+              var5 = this.font.maxAscent + (-this.font.maxDescent + (-this.font.maxAscent + var4) >> 1);
             } else {
-              var5 = var4 - this.field_d.maxDescent;
+              var5 = var4 - this.font.maxDescent;
             }
           } else {
-            var5 = this.field_d.maxAscent;
+            var5 = this.font.maxAscent;
           }
           if (param1 <= 58) {
             var8 = (UiComponent) null;
-            discarded$0 = this.a(-103, (UiComponent) null, -65, (byte) 74);
+            discarded$0 = this.getTextXWithOffset(-103, (UiComponent) null, -65, (byte) 74);
           }
-          var6Lifetime1 = this.field_c;
+          var6Lifetime1 = this.horizontalAlignment;
           if (var6Lifetime1 != 0 &&
             var6Lifetime1 != 3) {
             if (var6Lifetime1 == 1) {
-              if (param0.field_d instanceof re) {
-                ((re) (param0.field_d)).a(-2661, var3_int >> 1, this.b((byte) -97, param0), var5, this.field_d);
+              if (param0.textLayout instanceof BitmapTextLayout) {
+                ((BitmapTextLayout) (param0.textLayout)).layoutCentered(-2661, var3_int >> 1, this.getDisplayText((byte) -97, param0), var5, this.font);
                 return;
               }
             } else {
               if (var6Lifetime1 != 2) {
                 return;
               }
-              if (param0.field_d instanceof re) {
-                ((re) (param0.field_d)).a(var5, this.field_d, 49, var3_int, this.b((byte) -56, param0));
+              if (param0.textLayout instanceof BitmapTextLayout) {
+                ((BitmapTextLayout) (param0.textLayout)).layoutRightAligned(var5, this.font, 49, var3_int, this.getDisplayText((byte) -56, param0));
                 return;
               }
             }
             return;
           }
-          if (!(param0.field_d instanceof re)) {
+          if (!(param0.textLayout instanceof BitmapTextLayout)) {
             return;
           }
-          ((re) (param0.field_d)).a(var5, this.field_d, -3, this.b((byte) -98, param0), 0);
+          ((BitmapTextLayout) (param0.textLayout)).layoutLeftAligned(var5, this.font, -3, this.getDisplayText((byte) -98, param0), 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -94,7 +94,7 @@ class bob implements UiRenderer, at {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, UiComponent param5, int param6, int param7) {
+    private final void drawText(int param0, int param1, int param2, int param3, int param4, UiComponent param5, int param6, int param7) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -109,43 +109,43 @@ class bob implements UiRenderer, at {
         var13 = VoidHunters.field_G;
         try {
           SelectableIconLabelWidget.pushClip(param5.width + param5.x + param6, param5.height + (param7 + param5.y), param5.x + param6, true, param5.y + param7);
-          var9_int = this.b(param5, (byte) 81);
-          var10 = this.a((byte) 56, param5);
+          var9_int = this.getContentWidth(param5, (byte) 81);
+          var10 = this.getContentHeight((byte) 56, param5);
           if (param3 != -13997) {
-            this.field_j = 65;
+            this.shadowColor = 65;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (!this.field_g) {
-            var12 = this.field_n;
+          if (!this.wrapText) {
+            var12 = this.verticalAlignment;
             if (var12 != 0) {
               if (var12 == 2) {
-                var11 = var10 - this.field_d.maxDescent;
+                var11 = var10 - this.font.maxDescent;
               } else {
                 if (3 != var12 &&
                   var12 == 1) {
                 }
-                var11 = this.field_d.maxAscent + (-this.field_d.maxDescent + var10 - this.field_d.maxAscent >> 1);
+                var11 = this.font.maxAscent + (-this.font.maxDescent + var10 - this.font.maxAscent >> 1);
               }
             } else {
-              var11 = this.field_d.maxAscent;
+              var11 = this.font.maxAscent;
             }
-            var12Lifetime1 = this.field_c;
+            var12Lifetime1 = this.horizontalAlignment;
             if (0 != var12Lifetime1 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_d.drawCentered(this.b((byte) -109, param5), (var9_int >> 1) + this.a(param6, param5, param0, (byte) -13), this.a(param7, -117, param5, param2) + var11, param4, param1);
+                this.font.drawCentered(this.getDisplayText((byte) -109, param5), (var9_int >> 1) + this.getTextXWithOffset(param6, param5, param0, (byte) -13), this.getTextYWithOffset(param7, -117, param5, param2) + var11, param4, param1);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_d.drawRightAligned(this.b((byte) -72, param5), var9_int + this.a(param6, param5, param0, (byte) -13), var11 + this.a(param7, -124, param5, param2), param4, param1);
+                  this.font.drawRightAligned(this.getDisplayText((byte) -72, param5), var9_int + this.getTextXWithOffset(param6, param5, param0, (byte) -13), var11 + this.getTextYWithOffset(param7, -124, param5, param2), param4, param1);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_d.draw(this.b((byte) -68, param5), this.a(param6, param5, param0, (byte) -13), this.a(param7, param3 ^ 14041, param5, param2) + var11, param4, param1);
+              this.font.draw(this.getDisplayText((byte) -68, param5), this.getTextXWithOffset(param6, param5, param0, (byte) -13), this.getTextYWithOffset(param7, param3 ^ 14041, param5, param2) + var11, param4, param1);
             }
           } else {
-            this.field_d.drawParagraph(this.b((byte) -112, param5), this.a(param6, param5, param0, (byte) -13), this.a(param7, -117, param5, param2), var9_int, var10, param4, param1, this.field_c, this.field_n, this.field_h);
+            this.font.drawParagraph(this.getDisplayText((byte) -112, param5), this.getTextXWithOffset(param6, param5, param0, (byte) -13), this.getTextYWithOffset(param7, -117, param5, param2), var9_int, var10, param4, param1, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
           }
           bia.popRasterState((byte) 124);
           return;
@@ -163,7 +163,7 @@ class bob implements UiRenderer, at {
         }
     }
 
-    private final int a(int param0, int param1, UiComponent param2, int param3) {
+    private final int getTextYWithOffset(int param0, int param1, UiComponent param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -172,9 +172,9 @@ class bob implements UiRenderer, at {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -116) {
-            this.field_g = true;
+            this.wrapText = true;
           }
-          stackIn_3_0 = param3 + (this.field_k + param0) - (-param2.y - param2.field_i);
+          stackIn_3_0 = param3 + (this.paddingTop + param0) - (-param2.y - param2.textOffsetY);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -190,11 +190,11 @@ class bob implements UiRenderer, at {
         }
     }
 
-    bob(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    UiTextStyle(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    private final int a(int param0, UiComponent param1, int param2, byte param3) {
+    private final int getTextXWithOffset(int param0, UiComponent param1, int param2, byte param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -203,9 +203,9 @@ class bob implements UiRenderer, at {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param3 != -13) {
-            this.field_n = -85;
+            this.verticalAlignment = -85;
           }
-          stackIn_3_0 = param2 + (this.field_f + param1.x + param0) + param1.field_s;
+          stackIn_3_0 = param2 + (this.paddingLeft + param1.x + param0) + param1.textOffsetX;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -221,7 +221,7 @@ class bob implements UiRenderer, at {
         }
     }
 
-    public final int a(UiComponent param0, byte param1) {
+    public final int getPreferredHeight(UiComponent param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -230,9 +230,9 @@ class bob implements UiRenderer, at {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(param0, 3);
+          this.getTextLayout(param0, 3);
           var3_int = -15 % ((param1 + 1) / 59);
-          stackIn_1_0 = param0.field_d.a(29565) - (-this.field_k - this.field_m);
+          stackIn_1_0 = param0.textLayout.getHeight(29565) - (-this.paddingTop - this.paddingBottom);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -248,7 +248,7 @@ class bob implements UiRenderer, at {
         }
     }
 
-    public final int b(UiComponent param0, byte param1) {
+    public final int getContentWidth(UiComponent param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -258,7 +258,7 @@ class bob implements UiRenderer, at {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= 66) {
-            stackIn_4_0 = param0.width + (-this.field_f - this.field_o);
+            stackIn_4_0 = param0.width + (-this.paddingLeft - this.paddingRight);
             return stackIn_4_0;
           }
           stackIn_2_0 = -93;
@@ -277,7 +277,7 @@ class bob implements UiRenderer, at {
         }
     }
 
-    public final int a(int param0, int param1, int param2, int param3, UiComponent param4, int param5) {
+    public final int getCaretIndexAtPoint(int param0, int param1, int param2, int param3, UiComponent param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -285,11 +285,11 @@ class bob implements UiRenderer, at {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(param4, 3);
+          this.getTextLayout(param4, 3);
           if (param5 != -1) {
-            bob.clearSharedReferences(38);
+            UiTextStyle.clearSharedReferences(38);
           }
-          stackIn_3_0 = param4.field_d.a(param1 - this.b(-3, param2, param4), -23381, param0 - this.a(0, param3, param4));
+          stackIn_3_0 = param4.textLayout.getCaretIndexAtPoint(param1 - this.getTextOriginY(-3, param2, param4), -23381, param0 - this.getTextOriginX(0, param3, param4));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -305,26 +305,26 @@ class bob implements UiRenderer, at {
         }
     }
 
-    public final ar a(UiComponent param0, int param1) {
+    public final TextLayout getTextLayout(UiComponent param0, int param1) {
         RuntimeException var3 = null;
-        ar stackIn_8_0 = null;
+        TextLayout stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 3) {
-            this.field_j = -104;
+            this.shadowColor = -104;
           }
-          if (param0.field_d == null) {
-            param0.field_d = (ar) ((Object) new re());
+          if (param0.textLayout == null) {
+            param0.textLayout = (TextLayout) ((Object) new BitmapTextLayout());
           }
-          if (this.field_g) {
-            ((re) (param0.field_d)).a(this.field_h, this.a((byte) 83, param0), this.b(param0, (byte) 117), this.b((byte) -94, param0), this.field_d, this.field_c, 3, this.field_n);
+          if (this.wrapText) {
+            ((BitmapTextLayout) (param0.textLayout)).layoutParagraph(this.lineSpacing, this.getContentHeight((byte) 83, param0), this.getContentWidth(param0, (byte) 117), this.getDisplayText((byte) -94, param0), this.font, this.horizontalAlignment, 3, this.verticalAlignment);
           } else {
-            this.c(param0, (byte) 87);
+            this.layoutSingleLine(param0, (byte) 87);
           }
-          stackIn_8_0 = param0.field_d;
+          stackIn_8_0 = param0.textLayout;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -340,43 +340,43 @@ class bob implements UiRenderer, at {
         }
     }
 
-    private final void a(int param0, UiComponent param1, int param2, int param3) {
+    private final void drawText(int param0, UiComponent param1, int param2, int param3) {
         int discarded$0 = 0;
         try {
-          this.a(0, this.field_j, 0, -13997, this.field_i, param1, param3, param2);
+          this.drawText(0, this.shadowColor, 0, -13997, this.textColor, param1, param3, param2);
           if (param0 != 340287457) {
             UiComponent var6 = (UiComponent) null;
-            discarded$0 = this.a(-125, (UiComponent) null, -85, (byte) -70);
+            discarded$0 = this.getTextXWithOffset(-125, (UiComponent) null, -85, (byte) -70);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bob.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final void a(int param0, bob param1) {
-        param1.field_b = this.field_b;
+    final void copyTo(int param0, UiTextStyle param1) {
+        param1.selectionColor = this.selectionColor;
         if (param0 >= -121) {
           return;
         }
         try {
-          param1.field_f = this.field_f;
-          param1.field_m = this.field_m;
-          param1.field_k = this.field_k;
-          param1.field_g = this.field_g;
-          param1.field_c = this.field_c;
-          param1.field_n = this.field_n;
-          param1.field_a = this.field_a;
-          param1.field_i = this.field_i;
-          param1.field_h = this.field_h;
-          param1.field_d = this.field_d;
-          param1.field_j = this.field_j;
-          param1.field_o = this.field_o;
+          param1.paddingLeft = this.paddingLeft;
+          param1.paddingBottom = this.paddingBottom;
+          param1.paddingTop = this.paddingTop;
+          param1.wrapText = this.wrapText;
+          param1.horizontalAlignment = this.horizontalAlignment;
+          param1.verticalAlignment = this.verticalAlignment;
+          param1.caretColor = this.caretColor;
+          param1.textColor = this.textColor;
+          param1.lineSpacing = this.lineSpacing;
+          param1.font = this.font;
+          param1.shadowColor = this.shadowColor;
+          param1.paddingRight = this.paddingRight;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bob.EA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void b(int param0, int param1, int param2, int param3, UiComponent param4, int param5) {
+    public final void drawSelection(int param0, int param1, int param2, int param3, UiComponent param4, int param5) {
         int var12 = 0;
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
@@ -389,18 +389,18 @@ class bob implements UiRenderer, at {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        toa var13 = null;
+        TextLayoutLine var13 = null;
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
         UiComponent var17 = null;
-        ar var18 = null;
-        ar var19 = null;
+        TextLayout var18 = null;
+        TextLayout var19 = null;
         var16 = VoidHunters.field_G;
         try {
           if (param2 != -24184) {
             var17 = (UiComponent) null;
-            this.b(-123, -97, 78, -103, (UiComponent) null, 79);
+            this.drawSelection(-123, -97, 78, -103, (UiComponent) null, 79);
           }
           if (param0 == param5) {
             return;
@@ -408,7 +408,7 @@ class bob implements UiRenderer, at {
           if (!param4.hasFocus((byte) -120)) {
             return;
           }
-          var18 = this.a(param4, 3);
+          var18 = this.getTextLayout(param4, 3);
           var19 = var18;
           if (param5 > param0) {
             var9 = param5;
@@ -417,28 +417,28 @@ class bob implements UiRenderer, at {
             var8 = param5;
             var9 = param0;
           }
-          var10 = var19.a(true, var8);
-          var11 = var19.a(true, var9);
+          var10 = var19.getLineIndexForCaret(true, var8);
+          var11 = var19.getLineIndexForCaret(true, var9);
           SelectableIconLabelWidget.pushClip(param4.x + param3 + param4.width, param4.y + param1 + param4.height, param4.x + param3, true, param1 + param4.y);
           for (var12 = var10; var11 >= var12; var12++) {
-            var13 = var18.field_c[var12];
+            var13 = var18.lines[var12];
             if (var10 == var12) {
-              stackIn_15_0 = var19.a(var8, -112);
+              stackIn_15_0 = var19.getCaretX(var8, -112);
             } else {
-              stackIn_15_0 = var13.field_c[0];
+              stackIn_15_0 = var13.caretXs[0];
             }
             var14 = stackIn_15_0;
             if (var12 == var11) {
-              stackIn_20_0 = var19.a(var9, -124);
+              stackIn_20_0 = var19.getCaretX(var9, -124);
             } else {
               if (var13 != null) {
-                stackIn_20_0 = var13.field_c[-1 + var13.field_c.length];
+                stackIn_20_0 = var13.caretXs[-1 + var13.caretXs.length];
               } else {
                 stackIn_20_0 = 0;
               }
             }
             var15 = stackIn_20_0;
-            GetDebrisMax.field_s.a(var13.field_b + (param4.field_i + this.field_k + (param4.y + param1)), this.field_b >>> 24, true, var15 - var14, this.field_b, this.a(param3, param4, var14, (byte) -13), var13.field_a);
+            GetDebrisMax.field_s.a(var13.top + (param4.textOffsetY + this.paddingTop + (param4.y + param1)), this.selectionColor >>> 24, true, var15 - var14, this.selectionColor, this.getTextXWithOffset(param3, param4, var14, (byte) -13), var13.bottom);
           }
           bia.popRasterState((byte) 124);
           return;
@@ -456,7 +456,7 @@ class bob implements UiRenderer, at {
         }
     }
 
-    public final int a(int param0, int param1, UiComponent param2) {
+    public final int getTextOriginX(int param0, int param1, UiComponent param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -465,9 +465,9 @@ class bob implements UiRenderer, at {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            this.field_f = -99;
+            this.paddingLeft = -99;
           }
-          stackIn_3_0 = this.a(param1, param2, 0, (byte) -13);
+          stackIn_3_0 = this.getTextXWithOffset(param1, param2, 0, (byte) -13);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -483,7 +483,7 @@ class bob implements UiRenderer, at {
         }
     }
 
-    public final int a(int param0, UiComponent param1) {
+    public final int getPreferredWidth(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -492,10 +492,10 @@ class bob implements UiRenderer, at {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -2) {
-            this.field_c = 43;
+            this.horizontalAlignment = 43;
           }
-          this.a(param1, 3);
-          stackIn_3_0 = param1.field_d.c(-18877) + this.field_f + this.field_o;
+          this.getTextLayout(param1, 3);
+          stackIn_3_0 = param1.textLayout.getRightEdge(-18877) + this.paddingLeft + this.paddingRight;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -511,7 +511,7 @@ class bob implements UiRenderer, at {
         }
     }
 
-    private final int a(byte param0, UiComponent param1) {
+    private final int getContentHeight(byte param0, UiComponent param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -520,9 +520,9 @@ class bob implements UiRenderer, at {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 50) {
-            this.field_j = 14;
+            this.shadowColor = 14;
           }
-          stackIn_3_0 = param1.height - (this.field_k + this.field_m);
+          stackIn_3_0 = param1.height - (this.paddingTop + this.paddingBottom);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -539,18 +539,18 @@ class bob implements UiRenderer, at {
     }
 
     public void drawComponent(int param0, UiComponent param1, int param2, int param3, boolean param4) {
-        if (this.field_d == null) {
+        if (this.font == null) {
           return;
         }
         try {
-          this.a(340287457, param1, param3, param2);
+          this.drawText(340287457, param1, param3, param2);
           int var6_int = 96 / ((param0 + 27) / 35);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bob.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public final int b(int param0, int param1, UiComponent param2) {
+    public final int getTextOriginY(int param0, int param1, UiComponent param2) {
         RuntimeException var4 = null;
         UiComponent var5 = null;
         int stackIn_3_0 = 0;
@@ -561,9 +561,9 @@ class bob implements UiRenderer, at {
         try {
           if (param0 != -3) {
             var5 = (UiComponent) null;
-            this.b((UiComponent) null, (byte) -80);
+            this.getContentWidth((UiComponent) null, (byte) -80);
           }
-          stackIn_3_0 = this.a(param1, param0 - 114, param2, 0);
+          stackIn_3_0 = this.getTextYWithOffset(param1, param0 - 114, param2, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -587,14 +587,14 @@ class bob implements UiRenderer, at {
         }
     }
 
-    public final int a(int param0) {
+    public final int getLineHeight(int param0) {
         if (param0 < 7) {
           return -64;
         }
-        return this.field_d.maxDescent + this.field_d.maxAscent;
+        return this.font.maxDescent + this.font.maxAscent;
     }
 
-    String b(byte param0, UiComponent param1) {
+    String getDisplayText(byte param0, UiComponent param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -603,7 +603,7 @@ class bob implements UiRenderer, at {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -53) {
-            this.field_n = 73;
+            this.verticalAlignment = 73;
           }
           stackIn_3_0 = param1.text;
           return stackIn_3_0;
@@ -621,27 +621,27 @@ class bob implements UiRenderer, at {
         }
     }
 
-    public final void a(UiComponent param0, int param1, byte param2, int param3, int param4) {
-        ar var13 = null;
-        ar var14 = null;
+    public final void drawCaret(UiComponent param0, int param1, byte param2, int param3, int param4) {
+        TextLayout var13 = null;
+        TextLayout var14 = null;
         int var7 = 0;
-        toa var8 = null;
+        TextLayoutLine var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
         try {
           if (param0.hasFocus((byte) -120)) {
-            var13 = this.a(param0, 3);
+            var13 = this.getTextLayout(param0, 3);
             var14 = var13;
-            var7 = var14.a(true, param4);
-            var8 = var13.field_c[var7];
-            var9 = var14.a(param4, -126);
-            var10 = this.a(param3, param0, var9, (byte) -13);
-            var11 = this.b(-3, param1, param0) + Math.max(0, var8.field_b);
-            var12 = this.b(-3, param1, param0) + Math.min(this.a((byte) 71, param0), Math.min(var8.field_a, 1 + var7 >= var14.field_c.length ? var8.field_a : var13.field_c[var7 + 1].field_b));
+            var7 = var14.getLineIndexForCaret(true, param4);
+            var8 = var13.lines[var7];
+            var9 = var14.getCaretX(param4, -126);
+            var10 = this.getTextXWithOffset(param3, param0, var9, (byte) -13);
+            var11 = this.getTextOriginY(-3, param1, param0) + Math.max(0, var8.top);
+            var12 = this.getTextOriginY(-3, param1, param0) + Math.min(this.getContentHeight((byte) 71, param0), Math.min(var8.bottom, 1 + var7 >= var14.lines.length ? var8.bottom : var13.lines[var7 + 1].top));
             SelectableIconLabelWidget.pushClip(param0.width + (param3 + param0.x), param0.height + param1 + param0.y, param0.x + param3, true, param0.y + param1);
-            GetDebrisMax.field_s.a(this.field_a, var11, var12, var10, var10, 11480);
+            GetDebrisMax.field_s.a(this.caretColor, var11, var12, var10, var10, 11480);
             bia.popRasterState((byte) 124);
           }
           int var6_int = -36 / ((6 - param2) / 58);
@@ -650,24 +650,24 @@ class bob implements UiRenderer, at {
         }
     }
 
-    protected bob() {
+    protected UiTextStyle() {
     }
 
-    bob(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
+    UiTextStyle(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, boolean param12) {
         try {
-          this.field_h = param9;
-          this.field_j = param6;
-          this.field_k = param3;
-          this.field_b = param11;
-          this.field_m = param4;
-          this.field_a = param10;
-          this.field_g = param12 ? true : false;
-          this.field_n = param8;
-          this.field_i = param5;
-          this.field_d = param0;
-          this.field_c = param7;
-          this.field_o = param2;
-          this.field_f = param1;
+          this.lineSpacing = param9;
+          this.shadowColor = param6;
+          this.paddingTop = param3;
+          this.selectionColor = param11;
+          this.paddingBottom = param4;
+          this.caretColor = param10;
+          this.wrapText = param12 ? true : false;
+          this.verticalAlignment = param8;
+          this.textColor = param5;
+          this.font = param0;
+          this.horizontalAlignment = param7;
+          this.paddingRight = param2;
+          this.paddingLeft = param1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + param12 + ')');
         }

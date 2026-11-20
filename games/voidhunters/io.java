@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class io extends bob {
+class io extends UiTextStyle {
     static int field_p;
 
     public final void drawComponent(int param0, UiComponent param1, int param2, int param3, boolean param4) {

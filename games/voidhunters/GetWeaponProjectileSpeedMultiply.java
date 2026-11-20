@@ -65,9 +65,9 @@ final class GetWeaponProjectileSpeedMultiply extends ConsoleCommand {
             if (0 == var1) {
               var1 = 32;
             }
-            re.a(-var1 + GetMutatorVotes.field_p, (byte) -125);
+            BitmapTextLayout.setMusicVolume(-var1 + GetMutatorVotes.field_p, (byte) -125);
           } else {
-            re.a(0, (byte) -126);
+            BitmapTextLayout.setMusicVolume(0, (byte) -126);
           }
         } else {
           GetWeaponProjectileSpeedMultiply.clearSharedReferences((byte) 52);
@@ -76,9 +76,9 @@ final class GetWeaponProjectileSpeedMultiply extends ConsoleCommand {
             if (0 == var1) {
               var1 = 32;
             }
-            re.a(-var1 + GetMutatorVotes.field_p, (byte) -125);
+            BitmapTextLayout.setMusicVolume(-var1 + GetMutatorVotes.field_p, (byte) -125);
           } else {
-            re.a(0, (byte) -126);
+            BitmapTextLayout.setMusicVolume(0, (byte) -126);
           }
         }
     }

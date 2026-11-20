@@ -120,7 +120,7 @@ final class ServerTickFactory implements GameStateFactory {
         }
     }
 
-    final static StringBuilder a(int param0, boolean param1, StringBuilder param2, char param3) {
+    final static StringBuilder resizeStringBuilder(int param0, boolean param1, StringBuilder param2, char param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;

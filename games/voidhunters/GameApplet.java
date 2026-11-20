@@ -290,30 +290,30 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 > -53) {
             return;
           }
-          if (uf.field_E == null) {
+          if (UiTextField.field_E == null) {
             if (PointDefenceLaserWeaponDefinition.field_c == null) {
               if (null == EnvironmentMapSource.field_b) {
                 var2 = TextureFilterMode.field_a;
                 if (var4 != 0) {
                   var2 = EnvironmentMapSource.field_b;
                   var2 = PointDefenceLaserWeaponDefinition.field_c;
-                  var2 = uf.field_E;
+                  var2 = UiTextField.field_E;
                 }
               } else {
                 var2 = EnvironmentMapSource.field_b;
                 if (var4 != 0) {
                   var2 = PointDefenceLaserWeaponDefinition.field_c;
-                  var2 = uf.field_E;
+                  var2 = UiTextField.field_E;
                 }
               }
             } else {
               var2 = PointDefenceLaserWeaponDefinition.field_c;
               if (var4 != 0) {
-                var2 = uf.field_E;
+                var2 = UiTextField.field_E;
               }
             }
           } else {
-            var2 = uf.field_E;
+            var2 = UiTextField.field_E;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
           igb.field_a = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
@@ -438,7 +438,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             igb.field_a.setSize(GetDebrisSurvives.field_p, SetPointDefenceLaserReload.field_p);
             igb.field_a.setVisible(true);
             if (PointDefenceLaserWeaponDefinition.field_c != null &&
-              null == uf.field_E) {
+              null == UiTextField.field_E) {
               var6 = PointDefenceLaserWeaponDefinition.field_c.getInsets();
               igb.field_a.setLocation(var6.left + GetCountermeasuresPulseRadius.field_o, hqb.field_f + var6.top);
               if (VoidHunters.field_G != 0) {

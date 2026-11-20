@@ -7,7 +7,7 @@ final class tib extends eca {
     static GpuProjectionMode field_h;
     static byte[] field_i;
 
-    tib(uf param0) {
+    tib(UiTextField param0) {
         super(param0);
         this.field_g = false;
     }

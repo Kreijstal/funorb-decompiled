@@ -430,19 +430,19 @@ final class ArchiveIndex {
         String var18Lifetime1;
         var19 = VoidHunters.field_G;
         try {
-          stackIn_4_0 = re.field_n.scrollPane;
+          stackIn_4_0 = BitmapTextLayout.field_n.scrollPane;
           stackIn_4_1 = 38;
           stackIn_4_2 = param1;
           stackIn_4_3 = param2 * (3 * (nna.field_w + 2));
-          stackIn_5_4 = (qg.field_a == re.field_n.scrollPane);
+          stackIn_5_4 = (qg.field_a == BitmapTextLayout.field_n.scrollPane);
           boolean decompiledFrameRemainder0 = true;
           var3_int = ((ScrollPaneWidget) (Object) stackIn_4_0).layoutAndUpdateScrolling((byte) stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, param0, nna.field_w + 2) ? 1 : 0;
-          var4 = re.field_n.content.children;
+          var4 = BitmapTextLayout.field_n.content.children;
           var5 = null;
           if (iwa.field_b == 2) {
             PlayerJoinFactory.field_c.enabled = true;
             OpenGlCubeTexture.field_h.text = SetReverbGain.a(SetVelocitySustain.field_o, new String[]{kbb.field_q}, param1 + 89);
-            re.field_n.scrollPane.viewport.text = null;
+            BitmapTextLayout.field_n.scrollPane.viewport.text = null;
             var6 = null;
             var7 = (vu) (var4.first(0));
             boolean decompiledNaturalLoopExit0 = false;
@@ -463,7 +463,7 @@ final class ArchiveIndex {
                   var8 = 1;
                   var7.inheritInteractionStateInDescendants(113);
                 }
-                var7.width = re.field_n.content.width;
+                var7.width = BitmapTextLayout.field_n.content.width;
                 var9 = 0;
                 if (null != var7.field_Ab) {
                   if (kbb.field_q != var7.field_Ab) {
@@ -522,14 +522,14 @@ final class ArchiveIndex {
                   var7.field_E = -var7.height + var9;
                 }
                 if (var8 != 0) {
-                  re.field_n.content.positionBelow((Widget) (var6), 2, var7, 40);
+                  BitmapTextLayout.field_n.content.positionBelow((Widget) (var6), 2, var7, 40);
                 }
                 var6 = var7;
                 if (null == var7.field_Bb ||
                   !var7.field_Bb.field_O) {
                   if (var7.field_o != 0) {
                     var16 = var7.field_Fb;
-                    pea.$cfr$intArgs$a$91f64d33677c(0L, var7, -1, (int[]) null, var16, re.field_n.scrollPane, (String) null, 87, -1);
+                    pea.$cfr$intArgs$a$91f64d33677c(0L, var7, -1, (int[]) null, var16, BitmapTextLayout.field_n.scrollPane, (String) null, 87, -1);
                     if (null != var7.field_Ab &&
                       !qs.a(0, GetLagStandardDeviationOut.field_o.field_a) &&
                       !GetBloomThresholdPercentage.field_p) {
@@ -556,14 +556,14 @@ final class ArchiveIndex {
               break;
             }
             if (decompiledNaturalLoopExit0) {
-              if (re.field_n.firstButton.field_o != 0) {
-                ola.field_p = new qka(re.field_n.firstButton.screenX, re.field_n.firstButton.screenY, re.field_n.firstButton.width, re.field_n.firstButton.height, hk.field_i, GetDebrisMax.field_o, qc.field_q, qc.field_q);
+              if (BitmapTextLayout.field_n.firstButton.field_o != 0) {
+                ola.field_p = new qka(BitmapTextLayout.field_n.firstButton.screenX, BitmapTextLayout.field_n.firstButton.screenY, BitmapTextLayout.field_n.firstButton.width, BitmapTextLayout.field_n.firstButton.height, hk.field_i, GetDebrisMax.field_o, qc.field_q, qc.field_q);
                 MissionGenerationDataFactory.field_b = 0;
               }
-              stackIn_89_0 = re.field_n.secondButton;
+              stackIn_89_0 = BitmapTextLayout.field_n.secondButton;
             }
             if (((Widget) (stackIn_89_0)).field_o != 0) {
-              ola.field_p = new qka(re.field_n.secondButton.screenX, re.field_n.secondButton.screenY, re.field_n.secondButton.width, re.field_n.secondButton.height, MissionEvent.field_e, GetDebrisMax.field_o, qc.field_q, qc.field_q);
+              ola.field_p = new qka(BitmapTextLayout.field_n.secondButton.screenX, BitmapTextLayout.field_n.secondButton.screenY, BitmapTextLayout.field_n.secondButton.width, BitmapTextLayout.field_n.secondButton.height, MissionEvent.field_e, GetDebrisMax.field_o, qc.field_q, qc.field_q);
               MissionGenerationDataFactory.field_b = 1;
             }
             decompiledFrameRemainder0 = false;
@@ -572,14 +572,14 @@ final class ArchiveIndex {
             OpenGlCubeTexture.field_h.text = SetUseModels.field_p;
             PlayerJoinFactory.field_c.enabled = false;
             if (iwa.field_b == 1) {
-              re.field_n.scrollPane.viewport.text = SetMachineGunPulsetime.field_o;
+              BitmapTextLayout.field_n.scrollPane.viewport.text = SetMachineGunPulsetime.field_o;
               if (var19 != 0) {
-                re.field_n.scrollPane.viewport.text = SetFighterRepairTime.field_o;
+                BitmapTextLayout.field_n.scrollPane.viewport.text = SetFighterRepairTime.field_o;
               }
             } else {
-              re.field_n.scrollPane.viewport.text = SetFighterRepairTime.field_o;
+              BitmapTextLayout.field_n.scrollPane.viewport.text = SetFighterRepairTime.field_o;
             }
-            igb.a(re.field_n.content, (byte) -100);
+            igb.a(BitmapTextLayout.field_n.content, (byte) -100);
           }
           stackIn_101_0 = var5;
           return (vu) (stackIn_101_0);

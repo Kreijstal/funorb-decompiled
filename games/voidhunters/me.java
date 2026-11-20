@@ -247,7 +247,7 @@ final class me extends pja {
               var12.addChild(-561, var12.field_Lb);
               var12.field_Zb = new Widget[ocb.field_l];
               var12.field_Wb = new Widget(0L, (Widget) null);
-              if ((1 << ar.field_b & var14) != 0) {
+              if ((1 << TextLayout.field_b & var14) != 0) {
                 var12.field_Lb.addChild(-561, var12.field_Wb);
               }
               var12.field_Eb = new Widget(0L, (Widget) null);
@@ -441,7 +441,7 @@ final class me extends pja {
               var33_intLifetime1 = stackIn_67_0;
               var12.field_Lb.setBounds(var33_intLifetime1, 28, -var33_intLifetime1 + 363, var31, nna.field_w);
               var34_int = MissionListFactory.field_a;
-              if ((1 << ar.field_b & var14Lifetime1) != 0) {
+              if ((1 << TextLayout.field_b & var14Lifetime1) != 0) {
                 var50_ref = SpriteDimensions.field_o[var12.field_Cb];
                 var12.field_Wb.field_tb = var50_ref;
                 var12.field_Wb.setBounds(var34_int, 32, var50_ref.paddedWidth, 0, var12.field_Lb.height);

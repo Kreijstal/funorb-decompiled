@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kab extends bob {
+final class kab extends UiTextStyle {
     static String field_p;
     private caa[] field_q;
 
@@ -52,7 +52,7 @@ final class kab extends bob {
           var13 = param3 + (param1.y + (-var10.field_e + param1.height) / 2);
           var14 = param1.x + param2 + param1.width / 2;
           var10.a(var11, var13);
-          this.field_d.drawCentered(this.b((byte) -82, param1), var14, param3, var9, -1);
+          this.font.drawCentered(this.getDisplayText((byte) -82, param1), var14, param3, var9, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,7 +70,7 @@ final class kab extends bob {
 
     kab(caa[] param0) {
         try {
-          this.field_d = SetShipToShipRamDamage.field_o;
+          this.font = SetShipToShipRamDamage.field_o;
           this.field_q = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kab.<init>(" + (param0 != null ? "{...}" : "null") + ')');

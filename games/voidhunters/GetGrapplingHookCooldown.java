@@ -78,7 +78,7 @@ final class GetGrapplingHookCooldown extends ConsoleCommand {
               !param0.a((ShipBody) (var8), 119)))) {
               var9 = var8.x - param3.x;
               var10 = var8.y - param3.y;
-              var11 = ar.a(var9, (byte) 107, var10);
+              var11 = TextLayout.approximateVectorLength(var9, (byte) 107, var10);
               if (var5 > var11) {
                 var5 = var11;
                 var6 = var8;

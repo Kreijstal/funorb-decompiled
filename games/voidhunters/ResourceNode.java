@@ -122,7 +122,7 @@ final class ResourceNode implements DiffableState {
         int var5 = 72 / ((8 - param1) / 57);
         int var4 = param0 - this.x;
         int var6 = param2 - this.y;
-        int var7 = ar.a(var4, (byte) 118, var6);
+        int var7 = TextLayout.approximateVectorLength(var4, (byte) 118, var6);
         return var7 <= this.radius ? true : false;
     }
 

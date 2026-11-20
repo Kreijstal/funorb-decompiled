@@ -85,7 +85,7 @@ final class SetServerinfoVotestate extends ConsoleCommand {
             return stackIn_28_0;
           }
           if (param0 == 11) {
-            stackIn_32_0 = SetReverbGain.a(ar.field_a, new String[]{param1}, 72);
+            stackIn_32_0 = SetReverbGain.a(TextLayout.field_a, new String[]{param1}, 72);
             return stackIn_32_0;
           }
           if (param0 == 12) {

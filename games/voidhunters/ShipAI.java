@@ -103,7 +103,7 @@ final class ShipAI implements DiffableState {
               var11 = var10.getBoundingExtent(-42) + var7 >> 6;
               var12 = var10.x - param1.x;
               var13 = var10.y - param1.y;
-              var14 = ar.a(var12, (byte) 122, var13) >> 9;
+              var14 = TextLayout.approximateVectorLength(var12, (byte) 122, var13) >> 9;
               if (var14 <= var11 / 2) {
                 if (var14 <= 0) {
                   var14 = 1;
@@ -332,7 +332,7 @@ final class ShipAI implements DiffableState {
             var11 = this.field_a.chassis.finaly;
             var12 = -param0.x + var10Lifetime1;
             var13 = var11 - param0.y;
-            var14 = ar.a(var12, (byte) 109, var13);
+            var14 = TextLayout.approximateVectorLength(var12, (byte) 109, var13);
             var15 = GameSnapshotFactory.a(var13, (byte) -77, var12);
             if (16384 + var8 >= var14) {
               var16 = 0;
@@ -386,7 +386,7 @@ final class ShipAI implements DiffableState {
                     var18_ref_tj.getTargetBody((byte) -119) == param0.id) {
                     var19 = var18_ref_tj.x - param0.x;
                     var20Lifetime2 = var18_ref_tj.y - param0.y;
-                    var21Lifetime2 = ar.a(var19, (byte) 115, var20Lifetime2);
+                    var21Lifetime2 = TextLayout.approximateVectorLength(var19, (byte) 115, var20Lifetime2);
                     if (var21Lifetime2 < UiComboBoxRenderer.field_a) {
                       var17Lifetime2 = 1;
                       decompiledFrameRemainder0 = false;
@@ -513,7 +513,7 @@ final class ShipAI implements DiffableState {
               var11 = var6 + var10.getBoundingExtent(-86) >> 6;
               var12 = -param2.x + var10.x;
               var13 = var10.y - param2.y;
-              var14 = ar.a(var12, (byte) 109, var13) >> 9;
+              var14 = TextLayout.approximateVectorLength(var12, (byte) 109, var13) >> 9;
               if (256 >= var14) {
                 if (var14 <= 0) {
                   var14 = 1;
@@ -578,7 +578,7 @@ final class ShipAI implements DiffableState {
             var12 = 256;
             var13 = -param2.x + var10;
             var14 = var11 - param2.y;
-            var15 = ar.a(var13, (byte) 120, var14);
+            var15 = TextLayout.approximateVectorLength(var13, (byte) 120, var14);
             if (var12 < var15) {
               var13 = var12 * var13 / (var15 >> 4);
               var14 = var14 * var12 / (var15 >> 4);

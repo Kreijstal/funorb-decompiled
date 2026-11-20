@@ -197,7 +197,7 @@ final class rbb {
     }
 
     final void a(BitmapFont param0, int param1) {
-        bob var17 = null;
+        UiTextStyle var17 = null;
         uea var4 = null;
         Sprite[] var5 = null;
         ArgbSprite var16 = null;
@@ -220,19 +220,19 @@ final class rbb {
         uea var14Lifetime1;
         uea var14Lifetime2;
         try {
-          var17 = new bob(param0, 2, 2, 2236962, 1, 1, 1, 2 + param0.maxDescent + param0.maxAscent);
-          var17.field_i = 16777215;
+          var17 = new UiTextStyle(param0, 2, 2, 2236962, 1, 1, 1, 2 + param0.maxDescent + param0.maxAscent);
+          var17.textColor = 16777215;
           this.field_n = (UiRenderer) ((Object) var17);
           var4 = new uea();
-          var17.a(param1 + 24639, var4);
+          var17.copyTo(param1 + 24639, var4);
           this.field_t = 15658734;
           this.field_b = 5592405;
-          var4.field_a = 15658734;
+          var4.caretColor = 15658734;
           this.field_p = param0;
           this.field_h = 3;
           this.field_m = 15658734;
           this.field_g = -1;
-          var4.field_b = 11711154;
+          var4.selectionColor = 11711154;
           this.field_j = 3;
           this.field_c = 3;
           this.field_u = 3;
@@ -253,16 +253,16 @@ final class rbb {
           var4.a(5, -1).a(true, SetCountermeasureLauncherFireForce.a(0, (byte) 119, 0, 65793, 0)).a(param1 + 24638, true).b(-1, param1 - 2147458885);
           this.field_a = (UiRenderer) ((Object) var4);
           var6 = new uea(var4, true);
-          var6.field_c = 0;
+          var6.horizontalAlignment = 0;
           var7 = new uea(var4, true);
-          var7.field_c = 0;
+          var7.horizontalAlignment = 0;
           var7.a(GetBurstFireRegenerationRate.a(true, 8947848), (byte) -54);
           var7.a(1, -1).a(true, GetBurstFireRegenerationRate.a(true, 11184810)).b(2236962, -2147483648);
           this.field_d = (UiRenderer) ((Object) new uv(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new ei(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new jba(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new uea();
-          var17.a(-122, var8);
+          var17.copyTo(-122, var8);
           var8.a(0, -1).a(true, vdb.a(7829367, 15658734, param1 + 24884, 10066329)).b(1118481, -2147483648).c(-1, param1 - 2147458885);
           var8.a(4, -1).a(param1 + 24635, true).a(true, var5);
           this.field_o = (UiRenderer) ((Object) var8);

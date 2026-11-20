@@ -48,7 +48,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
             var11 = param3 + (eu.a(param0, 85) * var9 >> 16);
             var12 = -var10 + var23.getX(false);
             var13 = -var11 + var23.getY((byte) 124);
-            var14 = ar.a(var12, (byte) 118, var13);
+            var14 = TextLayout.approximateVectorLength(var12, (byte) 118, var13);
             var15 = -this.ropeLength + var14;
             var16 = 39219;
             if (0 < var15) {
@@ -291,7 +291,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
             var12 = param2 + (var10 * eu.a(param6, 39) >> 16);
             var13 = var33.getX(false) - var11;
             var14 = var33.getY((byte) -54) - var12;
-            var15 = ar.a(var13, (byte) 114, var14);
+            var15 = TextLayout.approximateVectorLength(var13, (byte) 114, var14);
             var16 = var15 - this.ropeLength;
             if (var16 > 0) {
               var13 = (var13 << 8) / this.ropeLength;

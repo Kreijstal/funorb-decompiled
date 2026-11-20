@@ -28,7 +28,7 @@ final class LaserWeaponDefinition extends WeaponDefinition {
         return SetPointDefenceLaserReload.field_q;
     }
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isWordDelimiter(int param0, char param1) {
         if (param0 > -107) {
           LaserWeaponDefinition.a(-27, 5);
           if (param1 == 32) {

@@ -175,7 +175,7 @@ final class Nebula implements DiffableState {
         if (param0 == 100) {
           var4 = -this.x + param1;
           var5 = -this.y + param2;
-          var6 = ar.a(var4, (byte) 105, var5);
+          var6 = TextLayout.approximateVectorLength(var4, (byte) 105, var5);
           return var6 < 32768 ? true : false;
         }
         return true;

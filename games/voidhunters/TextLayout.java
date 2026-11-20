@@ -1,66 +1,66 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ar {
+abstract class TextLayout {
     static boolean field_d;
-    toa[] field_c;
+    TextLayoutLine[] lines;
     static int field_b;
     static String field_a;
 
-    final int a(int param0, int param1, int param2) {
+    final int getCaretIndexAtPoint(int param0, int param1, int param2) {
         int var5 = 0;
         int var4;
-        toa var6;
+        TextLayoutLine var6;
         int var7;
         int var8;
         var8 = VoidHunters.field_G;
-        if (this.field_c != null &&
-          0 != this.field_c.length &&
-          this.field_c[0].field_b <= param0) {
-          if (this.field_c[-1 + this.field_c.length].field_a < param0) {
+        if (this.lines != null &&
+          0 != this.lines.length &&
+          this.lines[0].top <= param0) {
+          if (this.lines[-1 + this.lines.length].bottom < param0) {
             return -1;
           }
           if (param1 != -23381) {
             return 25;
           }
-          if (1 == this.field_c.length) {
-            return this.field_c[0].a(-74, param2);
+          if (1 == this.lines.length) {
+            return this.lines[0].getCaretIndexAtX(-74, param2);
           }
           var4 = 0;
-          for (var5 = 0; var5 < this.field_c.length; var5++) {
-            var6 = this.field_c[var5];
-            if (var6.field_b <= param0 &&
-              param0 <= var6.field_a) {
-              var7 = var6.a(-88, param2);
+          for (var5 = 0; var5 < this.lines.length; var5++) {
+            var6 = this.lines[var5];
+            if (var6.top <= param0 &&
+              param0 <= var6.bottom) {
+              var7 = var6.getCaretIndexAtX(-88, param2);
               if (-1 != var7) {
                 return var4 + var7;
               }
               return -1;
             }
-            var4 = var4 + (-1 + var6.field_c.length);
+            var4 = var4 + (-1 + var6.caretXs.length);
           }
           return -1;
         }
         return -1;
     }
 
-    final int a(int param0) {
+    final int getHeight(int param0) {
         String var3;
         int stackIn_6_0 = 0;
         if (param0 != 29565) {
           var3 = (String) null;
-          this.a(true, -112, -23, (String) null);
+          this.computeJustificationSpacing(true, -112, -23, (String) null);
         }
-        if (this.field_c != null &&
-          this.field_c.length > 0) {
-          stackIn_6_0 = -this.field_c[0].field_b + this.field_c[this.field_c.length - 1].field_a;
+        if (this.lines != null &&
+          this.lines.length > 0) {
+          stackIn_6_0 = -this.lines[0].top + this.lines[this.lines.length - 1].bottom;
         } else {
           stackIn_6_0 = 0;
         }
         return stackIn_6_0;
     }
 
-    final int a(boolean param0, int param1, int param2, String param3) {
+    final int computeJustificationSpacing(boolean param0, int param1, int param2, String param3) {
         int var8 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -114,24 +114,24 @@ abstract class ar {
         }
     }
 
-    final int a(boolean param0, int param1) {
+    final int getLineIndexForCaret(boolean param0, int param1) {
         int var3 = 0;
-        toa var4 = null;
+        TextLayoutLine var4 = null;
         int var5 = VoidHunters.field_G;
         if (!param0) {
           return -43;
         }
-        for (var3 = 0; this.field_c.length > var3; var3++) {
-          var4 = this.field_c[var3];
-          if (!(param1 >= var4.field_c.length)) {
+        for (var3 = 0; this.lines.length > var3; var3++) {
+          var4 = this.lines[var3];
+          if (!(param1 >= var4.caretXs.length)) {
             return var3;
           }
-          param1 = param1 - (-1 + var4.field_c.length);
+          param1 = param1 - (-1 + var4.caretXs.length);
         }
-        return this.field_c.length;
+        return this.lines.length;
     }
 
-    final static int a(int param0, byte param1, int param2) {
+    final static int approximateVectorLength(int param0, byte param1, int param2) {
         int stackIn_47_0 = 0;
         int stackIn_52_0 = 0;
         int stackIn_56_0 = 0;
@@ -236,24 +236,24 @@ abstract class ar {
         return stackIn_52_0;
     }
 
-    final int c(int param0) {
+    final int getRightEdge(int param0) {
         int var4 = 0;
         int var2;
-        toa[] var3;
-        toa var5;
+        TextLayoutLine[] var3;
+        TextLayoutLine var5;
         int var7;
         int var6;
         var7 = VoidHunters.field_G;
         if (param0 != -18877) {
-          ar.a(-4, (byte) -85, -6);
+          TextLayout.approximateVectorLength(-4, (byte) -85, -6);
         }
         var2 = -1;
-        if (null != this.field_c) {
-          var3 = this.field_c;
+        if (null != this.lines) {
+          var3 = this.lines;
           for (var4 = 0; var4 < var3.length; var4++) {
             var5 = var3[var4];
             if (var5 != null) {
-              var6 = var5.a(0);
+              var6 = var5.getEndX(0);
               if (var6 > var2) {
                 var2 = var6;
               }
@@ -270,21 +270,21 @@ abstract class ar {
         }
     }
 
-    final int a(int param0, int param1) {
+    final int getCaretX(int param0, int param1) {
         int var4 = 0;
-        toa var5 = null;
+        TextLayoutLine var5 = null;
         int var6 = VoidHunters.field_G;
-        toa[] var7 = this.field_c;
-        toa[] var3 = var7;
+        TextLayoutLine[] var7 = this.lines;
+        TextLayoutLine[] var3 = var7;
         if (param1 > -107) {
-          this.c(-56);
+          this.getRightEdge(-56);
         }
         for (var4 = 0; var7.length > var4; var4++) {
           var5 = var7[var4];
-          if (var5.field_c.length > param0) {
-            return var5.field_c[param0];
+          if (var5.caretXs.length > param0) {
+            return var5.caretXs[param0];
           }
-          param0 = param0 - (-1 + var5.field_c.length);
+          param0 = param0 - (-1 + var5.caretXs.length);
         }
         return 0;
     }

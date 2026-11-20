@@ -202,7 +202,7 @@ final class GetUseRectOutline extends ConsoleCommand {
         if (param0) {
           GetUseRectOutline.a(true, 69, -111, -75, true, 23, 116, false, false, true);
         }
-        if (ar.field_d) {
+        if (TextLayout.field_d) {
           return;
         }
         if (MessageFactory.field_c == null) {
@@ -213,7 +213,7 @@ final class GetUseRectOutline extends ConsoleCommand {
         }
         fab.a(-29365, MessageFactory.field_c.field_f);
         MessageFactory.field_c = null;
-        ar.field_d = true;
+        TextLayout.field_d = true;
         ilb.a((byte) -114);
         SetKeepTeamColours.a(15334);
     }

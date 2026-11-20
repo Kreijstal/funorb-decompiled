@@ -95,7 +95,7 @@ final class bla extends eca {
         }
     }
 
-    bla(uf param0, uf param1) {
+    bla(UiTextField param0, UiTextField param1) {
         super(param0);
         this.field_g = "";
         this.field_h = false;

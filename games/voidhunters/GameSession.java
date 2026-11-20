@@ -145,11 +145,11 @@ final class GameSession {
         int var10;
         int var11;
         var11 = VoidHunters.field_G;
-        var6 = ar.a(param1, (byte) 111, param4);
+        var6 = TextLayout.approximateVectorLength(param1, (byte) 111, param4);
         var9 = -92 % ((param3 - 66) / 48);
-        var7 = ar.a(-param1 + PartitionZoneFactory.field_a, (byte) 114, param4);
-        var8 = ar.a(param1, (byte) 108, -param4 + MissionVariableFactory.field_a);
-        var10 = ar.a(PartitionZoneFactory.field_a - param1, (byte) 107, MissionVariableFactory.field_a - param4);
+        var7 = TextLayout.approximateVectorLength(-param1 + PartitionZoneFactory.field_a, (byte) 114, param4);
+        var8 = TextLayout.approximateVectorLength(param1, (byte) 108, -param4 + MissionVariableFactory.field_a);
+        var10 = TextLayout.approximateVectorLength(PartitionZoneFactory.field_a - param1, (byte) 107, MissionVariableFactory.field_a - param4);
         if (param2 > var6 &&
           var7 < param2 &&
           var8 < param2 &&
@@ -3983,7 +3983,7 @@ final class GameSession {
                       var28 = 1;
                       var32 = var31.getX(false) - param4.getX(false);
                       var33 = var31.getY((byte) -116) - param4.getY((byte) -15);
-                      var34 = ar.a(var32, (byte) 125, var33);
+                      var34 = TextLayout.approximateVectorLength(var32, (byte) 125, var33);
                       if (var34 < SettingsChangeFactory.field_c) {
                         var27 = 1;
                         break scanLoop1;
@@ -4527,10 +4527,10 @@ final class GameSession {
     }
 
     private final void a(int param0, byte param1, int param2, int param3) {
-        int var5 = ar.a(param2, (byte) 123, param0);
-        int var6 = ar.a(-param2 + PartitionZoneFactory.field_a, (byte) 104, param0);
-        int var7 = ar.a(param2, (byte) 112, MissionVariableFactory.field_a - param0);
-        int var8 = ar.a(PartitionZoneFactory.field_a - param2, (byte) 114, -param0 + MissionVariableFactory.field_a);
+        int var5 = TextLayout.approximateVectorLength(param2, (byte) 123, param0);
+        int var6 = TextLayout.approximateVectorLength(-param2 + PartitionZoneFactory.field_a, (byte) 104, param0);
+        int var7 = TextLayout.approximateVectorLength(param2, (byte) 112, MissionVariableFactory.field_a - param0);
+        int var8 = TextLayout.approximateVectorLength(PartitionZoneFactory.field_a - param2, (byte) 114, -param0 + MissionVariableFactory.field_a);
         if (param3 <= 20000) {
           if (var5 < param3 && var6 < param3 && param3 > var7 &&
             var8 < param3) {
@@ -4866,7 +4866,7 @@ final class GameSession {
           var8_int = -param2 + param1;
           var9 = -param0 + param5;
           var10 = 2048;
-          var11 = ar.a(var8_int, (byte) 114, var9);
+          var11 = TextLayout.approximateVectorLength(var8_int, (byte) 114, var9);
           var12 = param6;
           if (var11 <= param6) {
             var12 = var12 << 1;
@@ -4911,7 +4911,7 @@ final class GameSession {
           var30 = var26 - var24;
           var31 = var27 - var25;
           var32 = var10;
-          var33 = ar.a(var28, (byte) 110, var29) / 3;
+          var33 = TextLayout.approximateVectorLength(var28, (byte) 110, var29) / 3;
           var34 = var12 + 2 * var33 + var32 >> 4;
           if (0 >= var34) {
             var34 = 1;
@@ -5972,7 +5972,7 @@ final class GameSession {
                     var20 = ShipTeamConditionFactory.field_a.a(var13, (byte) 113);
                     var21 = ShipTeamConditionFactory.field_a.b(true, var14);
                     if (var10.weaponbehaviour.isReadyToFire((byte) 118)) {
-                      var22 = ar.a(var16, (byte) 116, var17);
+                      var22 = TextLayout.approximateVectorLength(var16, (byte) 116, var17);
                       var23 = SetShipDirectionArrow.weaponDefinitions[var10.weaponbehaviour.weapontype];
                       var24 = GetUseDetailLines.field_o;
                       var25 = GetTorpedoReload.field_q;
@@ -7041,7 +7041,7 @@ final class GameSession {
                 !var10.hasVisibilityFlag(1, (byte) 82)) {
                 var11 = var8.getX(false) - var10.getX(false);
                 var12Lifetime1 = var8.getY((byte) 119) - var10.getY((byte) -111);
-                var13Lifetime1 = ar.a(var11, (byte) 120, var12Lifetime1);
+                var13Lifetime1 = TextLayout.approximateVectorLength(var11, (byte) 120, var12Lifetime1);
                 if (GetUseNiceTrails.field_p > var13Lifetime1) {
                   return 1;
                 }
@@ -7376,7 +7376,7 @@ final class GameSession {
                 var11_ref_sg == param0)) {
                 var12_int = param2.x - var11_ref_sg.x;
                 var13 = param2.y - var11_ref_sg.y;
-                var14 = ar.a(var12_int, (byte) 109, var13);
+                var14 = TextLayout.approximateVectorLength(var12_int, (byte) 109, var13);
                 if (var14 < GetUseNiceTrails.field_p + var9) {
                   var8_int = 0;
                   break scanLoop1;
@@ -7397,7 +7397,7 @@ final class GameSession {
                 param4 == var20.team) {
                 var13Lifetime1 = -var20.x + param2.x;
                 var14Lifetime1 = -var20.y + param2.y;
-                var15 = ar.a(var13Lifetime1, (byte) 121, var14Lifetime1);
+                var15 = TextLayout.approximateVectorLength(var13Lifetime1, (byte) 121, var14Lifetime1);
                 if (var9 + GetUseNiceTrails.field_p > var15) {
                   var8_int = 0;
                   break;
@@ -7417,7 +7417,7 @@ final class GameSession {
                 param4 == var21.team) {
                 var13Lifetime2 = param2.x - var21.x;
                 var14Lifetime2 = param2.y - var21.y;
-                var15Lifetime1 = ar.a(var13Lifetime2, (byte) 115, var14Lifetime2);
+                var15Lifetime1 = TextLayout.approximateVectorLength(var13Lifetime2, (byte) 115, var14Lifetime2);
                 if (var15Lifetime1 < var9 + GetUseNiceTrails.field_p) {
                   var8_int = 0;
                   break;
@@ -8234,7 +8234,7 @@ final class GameSession {
         int var5 = GetUseDetailLines.field_o - this.radialMenuX;
         int var6 = GetTorpedoReload.field_q - this.radialMenuY;
         int var7 = GameSnapshotFactory.a(var6, (byte) -77, var5);
-        int var8 = ar.a(var5, (byte) 112, var6);
+        int var8 = TextLayout.approximateVectorLength(var5, (byte) 112, var6);
         int var9 = -41 / ((param1 - 48) / 45);
         if (var8 > param3 / 8 &&
           var8 < param3 &&

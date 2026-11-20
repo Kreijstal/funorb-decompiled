@@ -96,7 +96,7 @@ final class mr extends iw implements UiActionListener {
           var4.y = 50;
           var4.width = this.width;
           var4.x = 0;
-          var4.renderer = (UiRenderer) ((Object) new bob(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var4.renderer = (UiRenderer) ((Object) new UiTextStyle(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(-18756, var4);
           this.field_K = this.a((byte) 113, (UiListener) (this), MissionCondition.field_b);
           return;

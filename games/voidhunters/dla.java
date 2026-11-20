@@ -150,7 +150,7 @@ final class dla {
             var11 = -var5 + var10;
             var12 = var18Lifetime1.chassis.getFinaly((byte) 104);
             var13Lifetime1 = -var6 + var12;
-            var14Lifetime1 = ar.a(var11, (byte) 106, var13Lifetime1);
+            var14Lifetime1 = TextLayout.approximateVectorLength(var11, (byte) 106, var13Lifetime1);
             if (var14Lifetime1 <= var8Lifetime1) {
               var15Lifetime1 = this.field_b.a(var10, (byte) 116);
               GetLagStandardDeviationOut.a(1, var9, 16777215, this.field_b.b(true, -10000 + var12), -(GetPhasedEnergyBeamProjectiles.a(-51, var9) >> 1) + var15Lifetime1, 4266);

@@ -99,7 +99,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               var6_int = qga.field_b.readUnsignedByte((byte) -121);
               if (var6_int != 0) {
                 PartitioningManagerFactory.field_a = -1;
-                tc.field_c = kw.field_xb;
+                tc.field_c = TextInputWidget.field_xb;
                 ow.field_a = var6_int;
               } else {
                 tc.field_c = ida.field_w;
@@ -124,7 +124,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
                   PartitioningManagerFactory.field_a = -1;
-                  tc.field_c = kw.field_xb;
+                  tc.field_c = TextInputWidget.field_xb;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
@@ -217,7 +217,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               stackIn_77_0 = ow.field_a;
               return stackIn_77_0;
             }
-            if (tc.field_c == kw.field_xb &&
+            if (tc.field_c == TextInputWidget.field_xb &&
               PlayerJoinFactory.b((byte) 113)) {
               FighterBayWeaponDefinition.l(-117);
               if (ow.field_a == 7 &&

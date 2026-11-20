@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class toa {
-    int field_a;
-    int field_b;
-    int[] field_c;
+final class TextLayoutLine {
+    int bottom;
+    int top;
+    int[] caretXs;
 
     final static boolean a(int param0, int param1, int param2) {
         boolean stackIn_6_0 = false;
@@ -15,16 +15,16 @@ final class toa {
         return stackIn_6_0;
     }
 
-    final int a(int param0) {
+    final int getEndX(int param0) {
         byte[] var3;
         int stackIn_7_0 = 0;
         if (param0 != 0) {
           var3 = (byte[]) null;
-          toa.a(104, -1.1755644083023071f, 21, 1.4921725988388062f, -0.9892958402633667f, (byte) 76, (vjb) null, -0.3563171923160553f, -2, 1.3547749519348145f, 48, -53, (byte[]) null);
+          TextLayoutLine.a(104, -1.1755644083023071f, 21, 1.4921725988388062f, -0.9892958402633667f, (byte) 76, (vjb) null, -0.3563171923160553f, -2, 1.3547749519348145f, 48, -53, (byte[]) null);
         }
-        if (this.field_c != null &&
-          this.field_c.length != 0) {
-          stackIn_7_0 = this.field_c[this.field_c.length - 1];
+        if (this.caretXs != null &&
+          this.caretXs.length != 0) {
+          stackIn_7_0 = this.caretXs[this.caretXs.length - 1];
         } else {
           stackIn_7_0 = 0;
         }
@@ -44,7 +44,7 @@ final class toa {
         var14 = VoidHunters.field_G;
         try {
           if (param5 >= -38) {
-            toa.a(80, -3, -102);
+            TextLayoutLine.a(80, -3, -102);
           }
           for (var13_int = 0; param2 > var13_int; var13_int++) {
             GetMissilesTopSpeed.a(param7, param10, param1, param0, param11, var13_int, param9, param6, param2, param3, param8, param12, (byte) 126, param4);
@@ -71,26 +71,26 @@ final class toa {
         }
     }
 
-    toa(int param0, int param1, int param2) {
-        this.field_a = param1;
-        this.field_b = param0;
-        this.field_c = new int[1 + param2];
+    TextLayoutLine(int param0, int param1, int param2) {
+        this.bottom = param1;
+        this.top = param0;
+        this.caretXs = new int[1 + param2];
     }
 
-    final int a(int param0, int param1) {
+    final int getCaretIndexAtX(int param0, int param1) {
         int var4 = 0;
         int var3;
         int var5;
         var5 = VoidHunters.field_G;
         var3 = -63 / ((-8 - param0) / 54);
-        if (this.field_c != null &&
-          this.field_c.length != 0) {
-          for (var4 = 1; var4 < this.field_c.length; var4++) {
-            if (param1 < (this.field_c[var4 - 1] + this.field_c[var4] >> 1)) {
+        if (this.caretXs != null &&
+          this.caretXs.length != 0) {
+          for (var4 = 1; var4 < this.caretXs.length; var4++) {
+            if (param1 < (this.caretXs[var4 - 1] + this.caretXs[var4] >> 1)) {
               return var4 - 1;
             }
           }
-          return this.field_c.length - 1;
+          return this.caretXs.length - 1;
         }
         return 0;
     }

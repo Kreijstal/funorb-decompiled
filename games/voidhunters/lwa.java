@@ -97,7 +97,7 @@ final class lwa extends Widget {
           var17.field_F = 1;
           this.field_wb = new Widget(0L, param2);
           var8 = new Widget(0L, param3);
-          var9 = new Widget(0L, param3, kw.field_Jb);
+          var9 = new Widget(0L, param3, TextInputWidget.field_Jb);
           var9.field_F = 1;
           var10 = 50;
           var11 = 0;

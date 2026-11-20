@@ -69,14 +69,14 @@ final class tda extends iw implements UiActionListener {
           var3.width = this.width;
           var3.y = 50;
           var3.height = 100;
-          var3.renderer = (UiRenderer) ((Object) new bob(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          var3.renderer = (UiRenderer) ((Object) new UiTextStyle(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(-18756, var3);
           this.field_J = new UiComponent(SoftwareFramebuffer.field_a, (UiListener) null);
           this.field_J.y = 20 + var3.y + var3.height;
           this.field_J.x = 0;
           this.field_J.width = this.width;
           this.field_J.height = 80;
-          this.field_J.renderer = (UiRenderer) ((Object) new bob(GetBoostersCooldown.field_r, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.field_J.renderer = (UiRenderer) ((Object) new UiTextStyle(GetBoostersCooldown.field_r, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(-18756, this.field_J);
           this.field_N = this.a((byte) -104, (UiListener) (this), ServerInfoFactory.field_b);
           this.field_P = this.a((byte) -73, (UiListener) (this), GetFighterRepairAmount.field_r);

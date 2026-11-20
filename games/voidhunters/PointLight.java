@@ -311,7 +311,7 @@ abstract class PointLight extends IntrusiveNode {
                 var49 = param0.b(true, var43);
                 var50 = var42 - var39;
                 var51 = -var40 + var43;
-                var52 = ar.a(var50, (byte) 110, var51);
+                var52 = TextLayout.approximateVectorLength(var50, (byte) 110, var51);
                 var53 = var52 >> 6;
                 var54 = Math.min(var53, -(var36 / 4) + 64) * param7[var33] >> 8;
                 if (0 > var54) {

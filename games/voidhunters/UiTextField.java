@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class uf extends UiFocusableComponent {
-    private int field_B;
-    private boolean field_I;
-    private long field_D;
-    private long field_J;
-    private boolean field_G;
-    private int field_H;
+class UiTextField extends UiFocusableComponent {
+    private int doubleClickWordEnd;
+    private boolean doubleClickSelection;
+    private long lastClickTime;
+    private long caretBlinkEpoch;
+    private boolean keepCaretVisible;
+    private int selectionAnchor;
     static java.awt.Frame field_E;
-    private int field_C;
+    private int maximumLength;
     static String field_F;
-    private int field_K;
+    private int caretPosition;
 
-    private final void k(byte param0) {
-        if (this.listener instanceof en) {
-          ((en) (this.listener)).a(-12409, this);
+    private final void notifySubmitted(byte param0) {
+        if (this.listener instanceof UiTextFieldListener) {
+          ((UiTextFieldListener) (this.listener)).onSubmitted(-12409, this);
           if (param0 < 40) {
             field_E = (java.awt.Frame) null;
             return;
@@ -28,7 +28,7 @@ class uf extends UiFocusableComponent {
         field_E = (java.awt.Frame) null;
     }
 
-    final static void a(String param0, int param1) {
+    final static void updateTooltip(String param0, int param1) {
         int stackIn_17_0 = 0;
         RuntimeException stackIn_43_0 = null;
         StringBuilder stackIn_43_1 = null;
@@ -119,16 +119,16 @@ class uf extends UiFocusableComponent {
         }
     }
 
-    private final int i(int param0) {
+    private final int getNextWordBoundary(int param0) {
         int var2;
         int var3;
         int var4;
         var4 = VoidHunters.field_G;
         var2 = this.text.length();
-        if (var2 == this.field_K) {
-          return this.field_K;
+        if (var2 == this.caretPosition) {
+          return this.caretPosition;
         }
-        var3 = this.field_K + 1;
+        var3 = this.caretPosition + 1;
         while (true) {
           if (var2 <= var3) {
             if (param0 != 62) {
@@ -148,67 +148,67 @@ class uf extends UiFocusableComponent {
         return var3;
     }
 
-    private final void g(byte param0) {
+    private final void deleteSelection(byte param0) {
         int var3 = 0;
         int var2 = 0;
         int var2Lifetime1;
-        if (this.field_K != this.field_H) {
-          var2 = this.field_H < this.field_K ? this.field_H : this.field_K;
-          var3 = this.field_H < this.field_K ? this.field_K : this.field_H;
-          this.field_H = var2;
-          this.field_K = var2;
+        if (this.caretPosition != this.selectionAnchor) {
+          var2 = this.selectionAnchor < this.caretPosition ? this.selectionAnchor : this.caretPosition;
+          var3 = this.selectionAnchor < this.caretPosition ? this.caretPosition : this.selectionAnchor;
+          this.selectionAnchor = var2;
+          this.caretPosition = var2;
           this.text = this.text.substring(0, var2) + this.text.substring(var3, this.text.length());
-          this.i((byte) -55);
+          this.notifyTextChanged((byte) -55);
         }
         var2Lifetime1 = -86 / ((62 - param0) / 48);
     }
 
-    private final void h(int param0) {
-        ar var3;
+    private final void scrollCaretIntoView(int param0) {
+        TextLayout var3;
         int var4;
         int var5;
         int var6;
         int var7;
         int var8;
-        at var9;
+        UiTextRenderer var9;
         var8 = VoidHunters.field_G;
-        if (!this.field_G) {
-          this.field_s = 0;
-          this.field_i = 0;
+        if (!this.keepCaretVisible) {
+          this.textOffsetX = 0;
+          this.textOffsetY = 0;
           return;
         }
-        if (!(this.renderer instanceof at)) {
+        if (!(this.renderer instanceof UiTextRenderer)) {
           return;
         }
-        var9 = (at) ((Object) this.renderer);
-        var3 = var9.a((UiComponent) (this), 3);
-        var4 = var3.c(-18877);
-        var5 = var9.b((UiComponent) (this), (byte) 114);
-        var6 = var9.a(35) >> 1;
+        var9 = (UiTextRenderer) ((Object) this.renderer);
+        var3 = var9.getTextLayout((UiComponent) (this), 3);
+        var4 = var3.getRightEdge(-18877);
+        var5 = var9.getContentWidth((UiComponent) (this), (byte) 114);
+        var6 = var9.getLineHeight(35) >> 1;
         if (-var6 + var5 > var4) {
-          this.field_i = 0;
-          this.field_s = 0;
+          this.textOffsetY = 0;
+          this.textOffsetX = 0;
           return;
         }
         if (param0 != 27151) {
           return;
         }
-        var7 = this.field_s + var3.a(this.field_K, param0 ^ -27235);
+        var7 = this.textOffsetX + var3.getCaretX(this.caretPosition, param0 ^ -27235);
         if (var7 > var5 - var6) {
-          this.field_s = var5 - (var6 + (var7 - this.field_s));
+          this.textOffsetX = var5 - (var6 + (var7 - this.textOffsetX));
         } else {
           if (var6 > var7) {
-            this.field_s = this.field_s + var6 - var7;
+            this.textOffsetX = this.textOffsetX + var6 - var7;
           }
         }
-        if (this.field_s > 0) {
-          this.field_s = 0;
+        if (this.textOffsetX > 0) {
+          this.textOffsetX = 0;
           return;
         }
-        if (this.field_s >= var6 - var5) {
+        if (this.textOffsetX >= var6 - var5) {
           return;
         }
-        this.field_s = -var5 + var6;
+        this.textOffsetX = -var5 + var6;
         return;
     }
 
@@ -222,110 +222,110 @@ class uf extends UiFocusableComponent {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_J = wt.a(false);
+          this.caretBlinkEpoch = wt.a(false);
           if (param0 != -15834) {
-            this.field_H = 81;
+            this.selectionAnchor = 81;
           }
           if (param3 != 60 &&
             62 != param3) {
             if (param3 >= 32 &&
               param3 <= 126) {
-              if (this.field_K != this.field_H) {
-                this.g((byte) 120);
+              if (this.caretPosition != this.selectionAnchor) {
+                this.deleteSelection((byte) 120);
               }
-              if (-1 == this.field_C ||
-                !(this.text.length() >= this.field_C)) {
-                if (this.field_K < this.text.length()) {
-                  this.text = this.text.substring(0, this.field_K) + param3 + this.text.substring(this.field_K, this.text.length());
-                  this.field_K = this.field_K + 1;
-                  this.field_H = this.field_K;
+              if (-1 == this.maximumLength ||
+                !(this.text.length() >= this.maximumLength)) {
+                if (this.caretPosition < this.text.length()) {
+                  this.text = this.text.substring(0, this.caretPosition) + param3 + this.text.substring(this.caretPosition, this.text.length());
+                  this.caretPosition = this.caretPosition + 1;
+                  this.selectionAnchor = this.caretPosition;
                 } else {
                   this.text = this.text + param3;
                   dupTemp$0 = this.text.length();
-                  this.field_K = dupTemp$0;
-                  this.field_H = dupTemp$0;
+                  this.caretPosition = dupTemp$0;
+                  this.selectionAnchor = dupTemp$0;
                 }
-                this.i((byte) -55);
+                this.notifyTextChanged((byte) -55);
               }
               return true;
             }
             if (param1 == 85) {
-              if (this.field_K != this.field_H) {
-                this.g((byte) 120);
+              if (this.caretPosition != this.selectionAnchor) {
+                this.deleteSelection((byte) 120);
                 return true;
               }
-              if (0 < this.field_K) {
-                this.field_H = this.field_K - 1;
-                this.g((byte) 110);
+              if (0 < this.caretPosition) {
+                this.selectionAnchor = this.caretPosition - 1;
+                this.deleteSelection((byte) 110);
                 return true;
               }
             } else {
               if (param1 != 101) {
                 if (param1 == 13) {
-                  this.e(82);
+                  this.clearText(82);
                   return true;
                 }
                 if (param1 == 96) {
-                  if (0 < this.field_K) {
+                  if (0 < this.caretPosition) {
                     if (SetMachineGunEnergyUsed.field_o[82]) {
-                      stackIn_56_1 = this.g(param0 + 15834);
+                      stackIn_56_1 = this.getPreviousWordBoundary(param0 + 15834);
                     } else {
-                      stackIn_56_1 = -1 + this.field_K;
+                      stackIn_56_1 = -1 + this.caretPosition;
                     }
-                    this.a(stackIn_56_1, (byte) -74);
+                    this.moveCaret(stackIn_56_1, (byte) -74);
                     return true;
                   }
                 } else {
                   if (param1 != 97) {
                     if (param1 == 102) {
-                      this.a(0, (byte) -96);
+                      this.moveCaret(0, (byte) -96);
                       return true;
                     }
                     if (param1 == 103) {
-                      this.a(this.text.length(), (byte) -100);
+                      this.moveCaret(this.text.length(), (byte) -100);
                       return true;
                     }
                     if (param1 == 84) {
-                      this.k((byte) 68);
+                      this.notifySubmitted((byte) 68);
                       return true;
                     }
                     if (SetMachineGunEnergyUsed.field_o[82] &&
                       param1 == 65) {
-                      this.b(true);
+                      this.cutSelection(true);
                       return true;
                     }
                     if (SetMachineGunEnergyUsed.field_o[82] &&
                       param1 == 66) {
-                      this.l((byte) 24);
+                      this.copySelection((byte) 24);
                       return true;
                     }
                     if (SetMachineGunEnergyUsed.field_o[82]) {
                       if (param1 != 67) {
                         return false;
                       }
-                      this.f(7328);
+                      this.pasteClipboard(7328);
                       return true;
                     }
                   } else {
-                    if (this.field_K < this.text.length()) {
+                    if (this.caretPosition < this.text.length()) {
                       if (!SetMachineGunEnergyUsed.field_o[82]) {
-                        stackIn_27_1 = this.field_K + 1;
+                        stackIn_27_1 = this.caretPosition + 1;
                       } else {
-                        stackIn_27_1 = this.i(62);
+                        stackIn_27_1 = this.getNextWordBoundary(62);
                       }
-                      this.a(stackIn_27_1, (byte) -58);
+                      this.moveCaret(stackIn_27_1, (byte) -58);
                       return true;
                     }
                   }
                 }
               } else {
-                if (this.field_H != this.field_K) {
-                  this.g((byte) 112);
+                if (this.selectionAnchor != this.caretPosition) {
+                  this.deleteSelection((byte) 112);
                   return true;
                 }
-                if (this.field_K < this.text.length()) {
-                  this.field_H = 1 + this.field_K;
-                  this.g((byte) -38);
+                if (this.caretPosition < this.text.length()) {
+                  this.selectionAnchor = 1 + this.caretPosition;
+                  this.deleteSelection((byte) -38);
                   return true;
                 }
               }
@@ -347,7 +347,7 @@ class uf extends UiFocusableComponent {
         }
     }
 
-    final void a(boolean param0, int param1, String param2) {
+    final void setText(boolean param0, int param1, String param2) {
         int dupTemp$1 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -361,17 +361,17 @@ class uf extends UiFocusableComponent {
           }
           this.text = param2;
           var4_int = param2.length();
-          if (~this.field_C != param1 &&
-            this.field_C < var4_int) {
-            this.text = this.text.substring(0, this.field_C);
+          if (~this.maximumLength != param1 &&
+            this.maximumLength < var4_int) {
+            this.text = this.text.substring(0, this.maximumLength);
           }
           dupTemp$1 = this.text.length();
-          this.field_H = dupTemp$1;
-          this.field_K = dupTemp$1;
+          this.selectionAnchor = dupTemp$1;
+          this.caretPosition = dupTemp$1;
           if (param0) {
             return;
           }
-          this.i((byte) -55);
+          this.notifyTextChanged((byte) -55);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -387,7 +387,7 @@ class uf extends UiFocusableComponent {
         }
     }
 
-    private final void a(int param0, String param1) {
+    private final void insertText(int param0, String param1) {
         int var3_int = 0;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -396,22 +396,22 @@ class uf extends UiFocusableComponent {
         RuntimeException var3 = null;
         int var3_intLifetime1;
         try {
-          if (this.field_C != -1) {
-            var3_int = this.field_C - this.text.length();
+          if (this.maximumLength != -1) {
+            var3_int = this.maximumLength - this.text.length();
             if (0 <= var3_int) {
               return;
             }
             param1 = param1.substring(0, var3_int);
           }
-          if (this.field_K != this.text.length()) {
-            this.text = this.text.substring(0, this.field_K) + param1 + this.text.substring(this.field_K, this.text.length());
+          if (this.caretPosition != this.text.length()) {
+            this.text = this.text.substring(0, this.caretPosition) + param1 + this.text.substring(this.caretPosition, this.text.length());
           } else {
             this.text = this.text + param1;
           }
-          this.field_K = this.field_K + param1.length();
+          this.caretPosition = this.caretPosition + param1.length();
           var3_intLifetime1 = -69 % ((34 - param0) / 56);
-          this.field_H = this.field_K;
-          this.i((byte) -55);
+          this.selectionAnchor = this.caretPosition;
+          this.notifyTextChanged((byte) -55);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -429,9 +429,9 @@ class uf extends UiFocusableComponent {
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
         long var6;
-        at var8;
-        at var10;
-        at var11;
+        UiTextRenderer var8;
+        UiTextRenderer var10;
+        UiTextRenderer var11;
         long var6Lifetime1;
         if (param2 > 47) {
           if (this.renderer == null) {
@@ -441,21 +441,21 @@ class uf extends UiFocusableComponent {
             return;
           }
           this.renderer.drawComponent(29, (UiComponent) (this), param0, param3, this.enabled);
-          if (!(this.renderer instanceof at)) {
+          if (!(this.renderer instanceof UiTextRenderer)) {
             return;
           }
-          var11 = (at) ((Object) this.renderer);
-          if (this.field_H != this.field_K) {
-            var11.b(this.field_H, param3, -24184, param0, (UiComponent) (this), this.field_K);
+          var11 = (UiTextRenderer) ((Object) this.renderer);
+          if (this.selectionAnchor != this.caretPosition) {
+            var11.drawSelection(this.selectionAnchor, param3, -24184, param0, (UiComponent) (this), this.caretPosition);
           }
           var6 = wt.a(false);
-          if ((var6 - this.field_J) % 1000L >= 500L) {
+          if ((var6 - this.caretBlinkEpoch) % 1000L >= 500L) {
             return;
           }
-          var11.a((UiComponent) (this), param3, (byte) 99, param0, this.field_K);
+          var11.drawCaret((UiComponent) (this), param3, (byte) 99, param0, this.caretPosition);
           return;
         }
-        this.g((byte) 89);
+        this.deleteSelection((byte) 89);
         if (this.renderer == null) {
           return;
         }
@@ -463,33 +463,33 @@ class uf extends UiFocusableComponent {
           return;
         }
         this.renderer.drawComponent(29, (UiComponent) (this), param0, param3, this.enabled);
-        if (!(this.renderer instanceof at)) {
+        if (!(this.renderer instanceof UiTextRenderer)) {
           return;
         }
-        var10 = (at) ((Object) this.renderer);
+        var10 = (UiTextRenderer) ((Object) this.renderer);
         var8 = var10;
-        if (this.field_H != this.field_K) {
-          var10.b(this.field_H, param3, -24184, param0, (UiComponent) (this), this.field_K);
+        if (this.selectionAnchor != this.caretPosition) {
+          var10.drawSelection(this.selectionAnchor, param3, -24184, param0, (UiComponent) (this), this.caretPosition);
         }
         var6Lifetime1 = wt.a(false);
-        if ((var6Lifetime1 - this.field_J) % 1000L >= 500L) {
+        if ((var6Lifetime1 - this.caretBlinkEpoch) % 1000L >= 500L) {
           return;
         }
-        var10.a((UiComponent) (this), param3, (byte) 99, param0, this.field_K);
+        var10.drawCaret((UiComponent) (this), param3, (byte) 99, param0, this.caretPosition);
         return;
     }
 
-    uf(String param0, UiListener param1, int param2) {
+    UiTextField(String param0, UiListener param1, int param2) {
         super(param0, param1);
-        this.field_I = false;
-        this.field_B = -1;
-        this.field_D = 0L;
+        this.doubleClickSelection = false;
+        this.doubleClickWordEnd = -1;
+        this.lastClickTime = 0L;
         try {
-          this.field_C = param2;
+          this.maximumLength = param2;
           this.renderer = GetDebrisMax.field_s.field_o;
-          this.a(true, 0, param0);
-          this.field_G = true;
-          this.field_J = wt.a(false);
+          this.setText(true, 0, param0);
+          this.keepCaretVisible = true;
+          this.caretBlinkEpoch = wt.a(false);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -507,31 +507,31 @@ class uf extends UiFocusableComponent {
         RuntimeException var8 = null;
         try {
           if (super.handleMousePress(param0, param1, param2, param3, param4, param5, (byte) -61) &&
-            this.renderer instanceof at) {
-            var8_int = ((at) ((Object) this.renderer)).a(PlayerGameData.field_b, uia.field_b, param5, param1, (UiComponent) (this), -1);
+            this.renderer instanceof UiTextRenderer) {
+            var8_int = ((UiTextRenderer) ((Object) this.renderer)).getCaretIndexAtPoint(PlayerGameData.field_b, uia.field_b, param5, param1, (UiComponent) (this), -1);
             if (var8_int == -1) {
               stackIn_6_1 = 0;
             } else {
               stackIn_6_1 = var8_int;
             }
-            this.a(stackIn_6_1, (byte) -84);
+            this.moveCaret(stackIn_6_1, (byte) -84);
             var8_long = wt.a(false);
-            stackIn_9_1 = !(var8_long - this.field_D >= 250L);
-            this.field_I = stackIn_9_1;
-            if (this.field_I) {
-              this.field_H = this.g(0);
-              this.field_K = this.i(62);
-              if (this.field_K > 0 &&
-                this.text.charAt(this.field_K - 1) == 32) {
-                this.field_K = this.field_K - 1;
+            stackIn_9_1 = !(var8_long - this.lastClickTime >= 250L);
+            this.doubleClickSelection = stackIn_9_1;
+            if (this.doubleClickSelection) {
+              this.selectionAnchor = this.getPreviousWordBoundary(0);
+              this.caretPosition = this.getNextWordBoundary(62);
+              if (this.caretPosition > 0 &&
+                this.text.charAt(this.caretPosition - 1) == 32) {
+                this.caretPosition = this.caretPosition - 1;
               }
-              this.field_B = this.field_K;
+              this.doubleClickWordEnd = this.caretPosition;
             }
-            this.field_D = var8_long;
+            this.lastClickTime = var8_long;
             return true;
           }
           if (param6 >= -17) {
-            this.k((byte) 59);
+            this.notifySubmitted((byte) 59);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -548,14 +548,14 @@ class uf extends UiFocusableComponent {
         }
     }
 
-    private final int g(int param0) {
+    private final int getPreviousWordBoundary(int param0) {
         int var2;
         int var3;
         var3 = VoidHunters.field_G;
-        if (param0 == this.field_K) {
-          return this.field_K;
+        if (param0 == this.caretPosition) {
+          return this.caretPosition;
         }
-        for (var2 = -1 + this.field_K; var2 > 0; var2--) {
+        for (var2 = -1 + this.caretPosition; var2 > 0; var2--) {
           if (this.text.charAt(var2 - 1) == 32) {
             return var2;
           }
@@ -564,45 +564,45 @@ class uf extends UiFocusableComponent {
     }
 
     void updatePointer(int param0, int param1, int param2, UiComponent param3) {
-        at var7 = null;
+        UiTextRenderer var7 = null;
         int var6 = 0;
         try {
           super.updatePointer(param0, param1, param2 ^ 0, param3);
-          this.h(param2 ^ -27100);
+          this.scrollCaretIntoView(param2 ^ -27100);
           if (param2 != -981) {
-            this.field_J = -63L;
+            this.caretBlinkEpoch = -63L;
           }
           if (this.pressedButton == 1) {
-            if (this.renderer instanceof at) {
-              var7 = (at) ((Object) this.renderer);
-              var6 = var7.a(PlayerGameData.field_b, uia.field_b, param0, param1, (UiComponent) (this), param2 + 980);
+            if (this.renderer instanceof UiTextRenderer) {
+              var7 = (UiTextRenderer) ((Object) this.renderer);
+              var6 = var7.getCaretIndexAtPoint(PlayerGameData.field_b, uia.field_b, param0, param1, (UiComponent) (this), param2 + 980);
               if (var6 != -1) {
-                if (this.field_I && var6 < this.field_B &&
-                  this.field_H < var6) {
-                  var6 = this.field_B;
+                if (this.doubleClickSelection && var6 < this.doubleClickWordEnd &&
+                  this.selectionAnchor < var6) {
+                  var6 = this.doubleClickWordEnd;
                 }
-                this.field_K = var6;
+                this.caretPosition = var6;
               }
             }
-            this.field_J = wt.a(false);
+            this.caretBlinkEpoch = wt.a(false);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void f(int param0) {
+    private final void pasteClipboard(int param0) {
         try {
           Throwable decompiledCaughtException = null;
           String var2 = null;
           Exception var2_ref = null;
           try {
             var2 = (String) (java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().getContents((Object) null).getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
-            this.g((byte) -121);
+            this.deleteSelection((byte) -121);
             if (param0 != 7328) {
               return;
             }
-            this.a(96, var2);
+            this.insertText(96, var2);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var2_ref = (Exception) (Object) decompiledCaughtException;
@@ -620,24 +620,24 @@ class uf extends UiFocusableComponent {
         field_E = null;
     }
 
-    private final void l(byte param0) {
+    private final void copySelection(byte param0) {
         try {
           String var2 = null;
           String var2Lifetime1;
           if (param0 != 24) {
-            this.b(true);
-            var2 = this.j((byte) -96);
+            this.cutSelection(true);
+            var2 = this.getSelectedText((byte) -96);
             if (var2.length() > 0) {
-              java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.j((byte) -96))), (java.awt.datatransfer.ClipboardOwner) null);
+              java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.getSelectedText((byte) -96))), (java.awt.datatransfer.ClipboardOwner) null);
               return;
             }
             return;
           }
-          var2Lifetime1 = this.j((byte) -96);
+          var2Lifetime1 = this.getSelectedText((byte) -96);
           if (var2Lifetime1.length() <= 0) {
             return;
           }
-          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.j((byte) -96))), (java.awt.datatransfer.ClipboardOwner) null);
+          java.awt.Toolkit.getDefaultToolkit().getSystemClipboard().setContents((java.awt.datatransfer.Transferable) ((Object) new java.awt.datatransfer.StringSelection(this.getSelectedText((byte) -96))), (java.awt.datatransfer.ClipboardOwner) null);
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -645,59 +645,59 @@ class uf extends UiFocusableComponent {
         }
     }
 
-    private final void a(int param0, byte param1) {
-        this.field_K = param0;
+    private final void moveCaret(int param0, byte param1) {
+        this.caretPosition = param0;
         if (param1 <= -35) {
           if (!SetMachineGunEnergyUsed.field_o[81]) {
-            this.field_H = this.field_K;
+            this.selectionAnchor = this.caretPosition;
           }
           return;
         }
-        this.b(false);
+        this.cutSelection(false);
         if (!SetMachineGunEnergyUsed.field_o[81]) {
-          this.field_H = this.field_K;
+          this.selectionAnchor = this.caretPosition;
         }
     }
 
-    final void e(int param0) {
-        this.field_K = 0;
+    final void clearText(int param0) {
+        this.caretPosition = 0;
         if (param0 == 82) {
-          this.field_H = 0;
+          this.selectionAnchor = 0;
           this.text = "";
-          this.i((byte) -55);
+          this.notifyTextChanged((byte) -55);
           return;
         }
         String var3 = (String) null;
-        this.a(32, (String) null);
-        this.field_H = 0;
+        this.insertText(32, (String) null);
+        this.selectionAnchor = 0;
         this.text = "";
-        this.i((byte) -55);
+        this.notifyTextChanged((byte) -55);
     }
 
-    private final String j(byte param0) {
+    private final String getSelectedText(byte param0) {
         int var2 = 0;
         int var3 = 0;
         if (param0 == -96) {
-          var2 = this.field_H < this.field_K ? this.field_H : this.field_K;
-          var3 = this.field_H < this.field_K ? this.field_K : this.field_H;
+          var2 = this.selectionAnchor < this.caretPosition ? this.selectionAnchor : this.caretPosition;
+          var3 = this.selectionAnchor < this.caretPosition ? this.caretPosition : this.selectionAnchor;
           return this.text.substring(var2, var3);
         }
         return (String) null;
     }
 
-    void i(byte param0) {
-        if (this.listener instanceof en) {
-          ((en) (this.listener)).a(this, (byte) 100);
+    void notifyTextChanged(byte param0) {
+        if (this.listener instanceof UiTextFieldListener) {
+          ((UiTextFieldListener) (this.listener)).onTextChanged(this, (byte) 100);
         }
         if (param0 == -55) {
           return;
         }
-        this.field_H = -20;
+        this.selectionAnchor = -20;
     }
 
-    private final void b(boolean param0) {
-        this.l((byte) 24);
-        this.g((byte) 116);
+    private final void cutSelection(boolean param0) {
+        this.copySelection((byte) 24);
+        this.deleteSelection((byte) 116);
         if (!param0) {
           field_F = (String) null;
         }

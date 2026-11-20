@@ -4,9 +4,9 @@
 final class ocb extends eca {
     static String field_j;
     static String[] field_m;
-    private uf field_f;
+    private UiTextField field_f;
     static int[] field_h;
-    private uf field_k;
+    private UiTextField field_k;
     static String field_i;
     static String field_g;
     static int field_l;
@@ -166,7 +166,7 @@ final class ocb extends eca {
         }
     }
 
-    ocb(uf param0, uf param1, uf param2) {
+    ocb(UiTextField param0, UiTextField param1, UiTextField param2) {
         super(param0);
         try {
           this.field_k = param2;

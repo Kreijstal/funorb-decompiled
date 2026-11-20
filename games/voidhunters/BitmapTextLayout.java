@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class re extends ar {
-    private boolean field_f;
-    private int field_h;
-    private int field_e;
-    private int field_j;
-    private BitmapFont field_g;
+final class BitmapTextLayout extends TextLayout {
+    private boolean singleLine;
+    private int layoutHeight;
+    private int layoutWidth;
+    private int verticalAlignment;
+    private BitmapFont font;
     static GameStateFactory field_k;
-    private int field_l;
-    private String field_m;
-    private int field_i;
+    private int horizontalAlignment;
+    private String cachedText;
+    private int lineSpacing;
     static ScrollableActionPanel field_n;
 
     public static void clearSharedReferences(int param0) {
@@ -24,11 +24,11 @@ final class re extends ar {
         field_k = null;
     }
 
-    private final toa a(int param0, String param1, BitmapFont param2, int param3) {
-        toa var5 = null;
+    private final TextLayoutLine createSingleLine(int param0, String param1, BitmapFont param2, int param3) {
+        TextLayoutLine var5 = null;
         RuntimeException var5_ref = null;
-        toa var6 = null;
-        toa stackIn_3_0 = null;
+        TextLayoutLine var6 = null;
+        TextLayoutLine stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -37,11 +37,11 @@ final class re extends ar {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 77) {
-            re.a(-111, (byte) -91);
+            BitmapTextLayout.setMusicVolume(-111, (byte) -91);
           }
-          var6 = new toa(-param2.maxAscent + param3, param3 + param2.maxDescent, param1.length());
+          var6 = new TextLayoutLine(-param2.maxAscent + param3, param3 + param2.maxDescent, param1.length());
           var5 = var6;
-          this.field_c = new toa[]{var6};
+          this.lines = new TextLayoutLine[]{var6};
           stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -64,13 +64,13 @@ final class re extends ar {
         }
     }
 
-    final void a(int param0, int param1, int param2, String param3, BitmapFont param4, int param5, int param6, int param7) {
-        toa stackIn_35_0;
-        toa stackIn_35_1;
+    final void layoutParagraph(int param0, int param1, int param2, String param3, BitmapFont param4, int param5, int param6, int param7) {
+        TextLayoutLine stackIn_35_0;
+        TextLayoutLine stackIn_35_1;
         int stackIn_35_2;
         int stackIn_35_3;
-        toa stackIn_36_0 = null;
-        toa stackIn_36_1 = null;
+        TextLayoutLine stackIn_36_0 = null;
+        TextLayoutLine stackIn_36_1 = null;
         int stackIn_36_4 = 0;
         BitmapFont stackIn_39_0 = null;
         int stackIn_40_1 = 0;
@@ -85,7 +85,7 @@ final class re extends ar {
         int var11 = 0;
         int var12 = 0;
         String var13 = null;
-        toa var14 = null;
+        TextLayoutLine var14 = null;
         int var15 = 0;
         String[] var16 = null;
         String[] var17 = null;
@@ -96,54 +96,54 @@ final class re extends ar {
             param0 = param4.ascent;
           }
           if (param3 == null) {
-            this.field_c = null;
+            this.lines = null;
             return;
           }
-          if (this.field_g == param4 &&
-            !this.field_f &&
-            this.field_l == param5 &&
-            param7 == this.field_j &&
-            param0 == this.field_i &&
-            this.field_h == param1 &&
-            param2 == this.field_e &&
-            this.field_m != null &&
-            this.field_m.equals(param3)) {
+          if (this.font == param4 &&
+            !this.singleLine &&
+            this.horizontalAlignment == param5 &&
+            param7 == this.verticalAlignment &&
+            param0 == this.lineSpacing &&
+            this.layoutHeight == param1 &&
+            param2 == this.layoutWidth &&
+            this.cachedText != null &&
+            this.cachedText.equals(param3)) {
             return;
           }
-          this.field_e = param2;
-          this.field_l = param5;
-          this.field_f = false;
-          this.field_h = param1;
-          this.field_m = param3;
-          this.field_i = param0;
-          this.field_j = param7;
-          this.field_g = param4;
+          this.layoutWidth = param2;
+          this.horizontalAlignment = param5;
+          this.singleLine = false;
+          this.layoutHeight = param1;
+          this.cachedText = param3;
+          this.lineSpacing = param0;
+          this.verticalAlignment = param7;
+          this.font = param4;
           var16 = new String[param4.getLineCount(param3, param2) + 1];
           var17 = var16;
           var10 = Math.max(1, param4.wrapLines(param3, new int[]{param2}, var17));
-          if (this.field_j == param6 &&
+          if (this.verticalAlignment == param6 &&
             1 == var10) {
-            this.field_j = 1;
+            this.verticalAlignment = 1;
           }
-          if (0 == this.field_j) {
+          if (0 == this.verticalAlignment) {
             var11 = param4.maxAscent;
           } else {
-            if (this.field_j != 1) {
-              if (this.field_j != 2) {
-                var12 = (-(var10 * this.field_i) + this.field_h) / (var10 + 1);
+            if (this.verticalAlignment != 1) {
+              if (this.verticalAlignment != 2) {
+                var12 = (-(var10 * this.lineSpacing) + this.layoutHeight) / (var10 + 1);
                 if (var12 < 0) {
                   var12 = 0;
                 }
                 var11 = var12 + param4.maxAscent;
-                this.field_i = this.field_i + var12;
+                this.lineSpacing = this.lineSpacing + var12;
               } else {
-                var11 = -(var10 * this.field_i) + (this.field_h - param4.maxDescent);
+                var11 = -(var10 * this.lineSpacing) + (this.layoutHeight - param4.maxDescent);
               }
             } else {
-              var11 = param4.maxAscent + (this.field_h - this.field_i * var10 >> 1);
+              var11 = param4.maxAscent + (this.layoutHeight - this.lineSpacing * var10 >> 1);
             }
           }
-          this.field_c = new toa[var10];
+          this.lines = new TextLayoutLine[var10];
           for (var12Lifetime1 = 0; var10 > var12Lifetime1; var12Lifetime1++) {
             var13 = var16[var12Lifetime1];
             stackIn_35_0 = null;
@@ -159,20 +159,20 @@ final class re extends ar {
               stackIn_36_1 = null;
               stackIn_36_4 = 0;
             }
-            var14 = new toa(stackIn_35_2, stackIn_35_3, stackIn_36_4);
-            var14.field_c[0] = 0;
+            var14 = new TextLayoutLine(stackIn_35_2, stackIn_35_3, stackIn_36_4);
+            var14.caretXs[0] = 0;
             if (var13 != null) {
-              var14.field_c[var13.length()] = param4.getStringWidth(var13);
+              var14.caretXs[var13.length()] = param4.getStringWidth(var13);
               stackIn_39_0 = (BitmapFont) (param4);
               if (param5 != 3) {
                 stackIn_40_1 = 0;
               } else {
-                stackIn_40_1 = this.a(false, param2, param4.getStringWidth(var13), var13);
+                stackIn_40_1 = this.computeJustificationSpacing(false, param2, param4.getStringWidth(var13), var13);
               }
-              TrailHolder.a(stackIn_39_0, stackIn_40_1, var14, var13, 18126);
+              TrailHolder.fillCaretPositions(stackIn_39_0, stackIn_40_1, var14, var13, 18126);
             }
             var11 = var11 + param0;
-            this.field_c[var12Lifetime1] = var14;
+            this.lines[var12Lifetime1] = var14;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -195,110 +195,110 @@ final class re extends ar {
         }
     }
 
-    final void a(int param0, BitmapFont param1, int param2, String param3, int param4) {
-        toa var7 = null;
-        toa var8 = null;
+    final void layoutLeftAligned(int param0, BitmapFont param1, int param2, String param3, int param4) {
+        TextLayoutLine var7 = null;
+        TextLayoutLine var8 = null;
         if (param3 == null) {
-          this.field_c = null;
+          this.lines = null;
           return;
         }
-        if (this.field_g == param1 &&
-          this.field_f &&
-          0 == this.field_l &&
-          null != this.field_m &&
-          this.field_m.equals(param3)) {
+        if (this.font == param1 &&
+          this.singleLine &&
+          0 == this.horizontalAlignment &&
+          null != this.cachedText &&
+          this.cachedText.equals(param3)) {
           return;
         }
         try {
-          this.field_g = param1;
-          this.field_f = true;
-          this.field_m = param3;
-          this.field_l = 0;
-          var7 = this.a(param2 + 108, param3, param1, param0);
+          this.font = param1;
+          this.singleLine = true;
+          this.cachedText = param3;
+          this.horizontalAlignment = 0;
+          var7 = this.createSingleLine(param2 + 108, param3, param1, param0);
           var8 = var7;
-          var7.field_c[0] = param4;
-          var8.field_c[param3.length()] = param4 + param1.getStringWidth(param3);
+          var7.caretXs[0] = param4;
+          var8.caretXs[param3.length()] = param4 + param1.getStringWidth(param3);
           if (param2 != -3) {
             field_n = (ScrollableActionPanel) null;
           }
-          TrailHolder.a(param1, 0, var8, param3, 18126);
+          TrailHolder.fillCaretPositions(param1, 0, var8, param3, 18126);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "re.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    final void a(int param0, int param1, String param2, int param3, BitmapFont param4) {
-        toa var8 = null;
+    final void layoutCentered(int param0, int param1, String param2, int param3, BitmapFont param4) {
+        TextLayoutLine var8 = null;
         int var7 = 0;
         if (param2 == null) {
-          this.field_c = null;
+          this.lines = null;
           return;
         }
-        if (this.field_g == param4 &&
-          this.field_f &&
-          this.field_l == 1 &&
-          null != this.field_m &&
-          this.field_m.equals(param2)) {
+        if (this.font == param4 &&
+          this.singleLine &&
+          this.horizontalAlignment == 1 &&
+          null != this.cachedText &&
+          this.cachedText.equals(param2)) {
           return;
         }
-        this.field_g = param4;
-        this.field_l = 1;
-        this.field_f = true;
+        this.font = param4;
+        this.horizontalAlignment = 1;
+        this.singleLine = true;
         if (param0 != -2661) {
           return;
         }
         try {
-          var8 = this.a(113, param2, param4, param3);
+          var8 = this.createSingleLine(113, param2, param4, param3);
           var7 = param4.getStringWidth(param2);
-          var8.field_c[0] = -(var7 >> 1) + param1;
-          var8.field_c[param2.length()] = (var7 >> 1) + param1;
-          TrailHolder.a(param4, 0, var8, param2, 18126);
+          var8.caretXs[0] = -(var7 >> 1) + param1;
+          var8.caretXs[param2.length()] = (var7 >> 1) + param1;
+          TrailHolder.fillCaretPositions(param4, 0, var8, param2, 18126);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "re.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, BitmapFont param1, int param2, int param3, String param4) {
-        toa var8 = null;
-        toa var9 = null;
+    final void layoutRightAligned(int param0, BitmapFont param1, int param2, int param3, String param4) {
+        TextLayoutLine var8 = null;
+        TextLayoutLine var9 = null;
         if (param4 == null) {
-          this.field_c = null;
+          this.lines = null;
           return;
         }
-        if (this.field_g == param1 &&
-          this.field_f &&
-          this.field_l == 2 &&
-          null != this.field_m &&
-          this.field_m.equals(param4)) {
+        if (this.font == param1 &&
+          this.singleLine &&
+          this.horizontalAlignment == 2 &&
+          null != this.cachedText &&
+          this.cachedText.equals(param4)) {
           return;
         }
-        this.field_l = 2;
-        this.field_m = param4;
+        this.horizontalAlignment = 2;
+        this.cachedText = param4;
         if (param2 < 30) {
           return;
         }
         try {
-          this.field_f = true;
-          this.field_g = param1;
-          var8 = this.a(93, param4, param1, param0);
+          this.singleLine = true;
+          this.font = param1;
+          var8 = this.createSingleLine(93, param4, param1, param0);
           var9 = var8;
-          var9.field_c[0] = -param1.getStringWidth(param4) + param3;
-          var9.field_c[param4.length()] = param3;
-          TrailHolder.a(param1, 0, var9, param4, 18126);
+          var9.caretXs[0] = -param1.getStringWidth(param4) + param3;
+          var9.caretXs[param4.length()] = param3;
+          TrailHolder.fillCaretPositions(param1, 0, var9, param4, 18126);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "re.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public re() {
+    public BitmapTextLayout() {
     }
 
-    final static void a(int param0, byte param1) {
+    final static void setMusicVolume(int param0, byte param1) {
         GetMutatorVotes.field_p = param0;
         if (null != SetMassDriverRandomness.field_o) {
           SetMassDriverRandomness.field_o.setMasterVolume(param0, (byte) 14);
           if (param1 >= -93) {
-            re.clearSharedReferences(-100);
+            BitmapTextLayout.clearSharedReferences(-100);
             if (null != GetBurstFireMaxEnergy.field_p) {
               GetBurstFireMaxEnergy.field_p.b((byte) -108, param0);
             }
@@ -315,7 +315,7 @@ final class re extends ar {
           }
           return;
         }
-        re.clearSharedReferences(-100);
+        BitmapTextLayout.clearSharedReferences(-100);
         if (null != GetBurstFireMaxEnergy.field_p) {
           GetBurstFireMaxEnergy.field_p.b((byte) -108, param0);
         }

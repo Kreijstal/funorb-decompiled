@@ -182,7 +182,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_x_withdrew_request", 23100);
                 if (null != var2) {
-                  ar.field_a = Cp1252Strings.decode((byte) -125, var2);
+                  TextLayout.field_a = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_x_removed", 23100);
                 if (null != var2) {
@@ -2465,7 +2465,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("quickchat_help_title", 23100);
                 if (var2 != null) {
-                  kw.field_Jb = Cp1252Strings.decode((byte) -125, var2);
+                  TextInputWidget.field_Jb = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("quickchat_shortcut_help,0", 23100);
                 if (null != var2) {

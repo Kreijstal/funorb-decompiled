@@ -116,7 +116,7 @@ final class MissionEvent implements DiffableState {
             this.reportDifferences((SerializableGameState) null, 121);
           }
           var6 = new Class[]{SetVariableLabelAction.class, AdjustVariableAction.class, SetShipTeamAction.class, IncrementVariableAction.class, MissionAction.class, AwardVictoryToWinnerAction.class, RemoveEventAction.class, AdjustBodyComponentsAction.class, AwardVictoryToTeamAction.class, SetVariableAction.class};
-          var7 = new GameStateFactory[]{GetUseBackgroundInFullscreen.field_o, re.field_k, SetDebrisCarryOver.field_o, cwa.field_a, SetUseCircleOutline.field_o, GetLaserBeamProjectileDamage.field_r, SetShieldsDirectionalHalfarcCuts.field_o, GetFixedaim.field_q, SetBloomThresholdPercentage.field_o, DebugMessage.field_c};
+          var7 = new GameStateFactory[]{GetUseBackgroundInFullscreen.field_o, BitmapTextLayout.field_k, SetDebrisCarryOver.field_o, cwa.field_a, SetUseCircleOutline.field_o, GetLaserBeamProjectileDamage.field_r, SetShieldsDirectionalHalfarcCuts.field_o, GetFixedaim.field_q, SetBloomThresholdPercentage.field_o, DebugMessage.field_c};
           var9.actions = (MissionAction[]) (hla.a(var6, this.actions, var7, -120, var9.actions, 1, SetUseCircleOutline.field_o));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bba.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -231,7 +231,7 @@ final class MissionEvent implements DiffableState {
         }
         try {
           var5 = new Class[]{SetVariableLabelAction.class, AdjustVariableAction.class, SetShipTeamAction.class, IncrementVariableAction.class, MissionAction.class, AwardVictoryToWinnerAction.class, RemoveEventAction.class, AdjustBodyComponentsAction.class, AwardVictoryToTeamAction.class, SetVariableAction.class};
-          var6 = new GameStateFactory[]{GetUseBackgroundInFullscreen.field_o, re.field_k, SetDebrisCarryOver.field_o, cwa.field_a, SetUseCircleOutline.field_o, GetLaserBeamProjectileDamage.field_r, SetShieldsDirectionalHalfarcCuts.field_o, GetFixedaim.field_q, SetBloomThresholdPercentage.field_o, DebugMessage.field_c};
+          var6 = new GameStateFactory[]{GetUseBackgroundInFullscreen.field_o, BitmapTextLayout.field_k, SetDebrisCarryOver.field_o, cwa.field_a, SetUseCircleOutline.field_o, GetLaserBeamProjectileDamage.field_r, SetShieldsDirectionalHalfarcCuts.field_o, GetFixedaim.field_q, SetBloomThresholdPercentage.field_o, DebugMessage.field_c};
           this.actions = (MissionAction[]) (iq.a(var6, this.actions, var5, SetUseCircleOutline.field_o, 8, param0, 1, 119));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bba.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

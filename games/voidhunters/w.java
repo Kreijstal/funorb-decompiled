@@ -59,7 +59,7 @@ final class w extends UiContainer implements ln, UiActionListener {
         super(0, 0, 288, 0, (UiRenderer) null);
         String var7 = null;
         int var3 = 0;
-        bob var4 = null;
+        UiTextStyle var4 = null;
         int var5 = 0;
         int var6 = 0;
         try {
@@ -68,7 +68,7 @@ final class w extends UiContainer implements ln, UiActionListener {
           this.field_w.renderer = (UiRenderer) ((Object) new vva());
           var7 = SetReverbGain.a(SetCountermeasuresPulsetime.field_o, new String[]{this.c(true), this.j((byte) -30)}, 81);
           var3 = 20;
-          var4 = new bob(SetShipToShipRamDamage.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, SetShipToShipRamDamage.field_o.maxAscent, -1, 2147483647, true);
+          var4 = new UiTextStyle(SetShipToShipRamDamage.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, SetShipToShipRamDamage.field_o.maxAscent, -1, 2147483647, true);
           this.field_x = new kja(var7, var4);
           this.field_x.tooltip = "";
           this.field_x.a(0, -1, SetBombletSprayProjectileDamage.field_q);

@@ -78,7 +78,7 @@ class kja extends UiFocusableComponent {
           UiComponent var6 = (UiComponent) null;
           this.requestFocus(110, (UiComponent) null);
         }
-        this.setBounds(param2, param0, ((at) ((Object) this.renderer)).a((UiComponent) (this), (byte) 81), 1, param1);
+        this.setBounds(param2, param0, ((UiTextRenderer) ((Object) this.renderer)).getPreferredHeight((UiComponent) (this), (byte) 81), 1, param1);
     }
 
     final void a(int param0, int param1, String param2) {
@@ -175,12 +175,12 @@ class kja extends UiFocusableComponent {
         if (param2 < 47) {
           return;
         }
-        at var9 = (at) ((Object) this.renderer);
+        UiTextRenderer var9 = (UiTextRenderer) ((Object) this.renderer);
         hob var6 = this.field_F;
         if (var6 == null) {
         } else {
-          var7 = var9.a(0, param0, (UiComponent) (this));
-          var8 = var9.b(-3, param3, (UiComponent) (this));
+          var7 = var9.getTextOriginX(0, param0, (UiComponent) (this));
+          var8 = var9.getTextOriginY(-3, param3, (UiComponent) (this));
           do {
             SetCountermeasureLauncherRandomness.a(var6.field_k + var8 - 2, var6.field_g + 2, var7 + var6.field_h - 2, 2 + var6.field_j, (byte) -90);
             var6 = var6.field_f;
@@ -193,15 +193,15 @@ class kja extends UiFocusableComponent {
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
         int var2;
-        at var3;
-        ar var4;
+        UiTextRenderer var3;
+        TextLayout var4;
         int var5;
         String var6;
         int var7;
         int var8;
         int var9;
         Object var10;
-        toa var12;
+        TextLayoutLine var12;
         int var13;
         int var14;
         hob var15;
@@ -210,8 +210,8 @@ class kja extends UiFocusableComponent {
         var16 = VoidHunters.field_G;
         this.field_B = new IntrusiveDeque();
         var2 = 0;
-        var3 = (at) ((Object) this.renderer);
-        var4 = var3.a((UiComponent) (this), 3);
+        var3 = (UiTextRenderer) ((Object) this.renderer);
+        var4 = var3.getTextLayout((UiComponent) (this), 3);
         while (true) {
           var5 = this.text.indexOf("<hotspot=", var2);
           if (var5 == -1) {
@@ -224,28 +224,28 @@ class kja extends UiFocusableComponent {
           var6 = this.text.substring(var5 + 9, var7);
           var7Lifetime1 = Integer.parseInt(var6);
           var2 = this.text.indexOf("</hotspot>", var5);
-          var8 = var4.a(true, var5);
-          var9 = var4.a(true, var2);
+          var8 = var4.getLineIndexForCaret(true, var5);
+          var9 = var4.getLineIndexForCaret(true, var2);
           var10 = null;
           for (var11 = var8; var11 <= var9; var11++) {
-            var12 = var4.field_c[var11];
+            var12 = var4.lines[var11];
             if (var11 != var8) {
-              stackIn_7_0 = var12.field_c[0];
+              stackIn_7_0 = var12.caretXs[0];
             } else {
-              stackIn_7_0 = var4.a(var5, -125);
+              stackIn_7_0 = var4.getCaretX(var5, -125);
             }
             var13 = stackIn_7_0;
             if (var9 != var11) {
               if (var12 == null) {
                 stackIn_12_0 = 0;
               } else {
-                stackIn_12_0 = var12.field_c[-1 + var12.field_c.length];
+                stackIn_12_0 = var12.caretXs[-1 + var12.caretXs.length];
               }
             } else {
-              stackIn_12_0 = var4.a(var2, -114);
+              stackIn_12_0 = var4.getCaretX(var2, -114);
             }
             var14 = stackIn_12_0;
-            var15 = new hob(var7Lifetime1, var13, var12.field_b, var14 - var13, Math.max(var3.a(124), -var12.field_b + var12.field_a));
+            var15 = new hob(var7Lifetime1, var13, var12.top, var14 - var13, Math.max(var3.getLineHeight(124), -var12.top + var12.bottom));
             if (var10 != null) {
               ((hob) (var10)).field_f = var15;
             }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vva extends bob {
+final class vva extends UiTextStyle {
     static Widget field_r;
     private int field_s;
     private int field_p;
@@ -46,7 +46,7 @@ final class vva extends bob {
           SetPhysicsCollisionForceMultiplier.a(this.field_q, var8, param1.y + (param3 + (-this.field_q[0].paddedHeight + param1.height >> 1)), param1.width, param2 + param1.x, true);
           stackIn_17_0 = (!param4) ? 7105644 : 16777215;
           var9 = stackIn_17_0;
-          this.field_d.drawParagraph(param1.text, param2 + param1.x, param1.y + param3 - 2, param1.width, param1.height, var9, -1, 1, 1, this.field_d.maxAscent);
+          this.font.drawParagraph(param1.text, param2 + param1.x, param1.y + param3 - 2, param1.width, param1.height, var9, -1, 1, 1, this.font.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,7 +78,7 @@ final class vva extends bob {
         this.field_s = param0;
         this.field_q = GetBombletSprayProjectileLife.field_o;
         this.field_p = param2;
-        this.field_d = GetBoostersCooldown.field_r;
+        this.font = GetBoostersCooldown.field_r;
         this.field_t = param1;
     }
 

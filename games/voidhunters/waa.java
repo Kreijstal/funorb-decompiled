@@ -131,7 +131,7 @@ final class waa extends UiContainer implements jpb, UiActionListener {
     public waa() {
         super(0, 0, 496, 0, (UiRenderer) null);
         this.field_A = new tga("", (UiListener) null, 12);
-        bob var1 = new bob(SetTorpedoProjectileLife.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, SetShipToShipRamDamage.field_o.maxAscent, -1, 2147483647, true);
+        UiTextStyle var1 = new UiTextStyle(SetTorpedoProjectileLife.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, SetShipToShipRamDamage.field_o.maxAscent, -1, 2147483647, true);
         UiComponent var2 = new UiComponent(field_y, var1, (UiListener) null);
         this.field_z = new UiFocusableComponent(UiComboBoxList.field_K, (UiListener) null);
         this.field_C = new UiFocusableComponent(SetMissileLauncherProjectiles.field_p, (UiListener) null);
@@ -363,7 +363,7 @@ final class waa extends UiContainer implements jpb, UiActionListener {
         try {
           var3 = this.field_A;
           var4 = param1;
-          ((uf) ((Object) var3)).a(false, 0, var4);
+          ((UiTextField) ((Object) var3)).setText(false, 0, var4);
           if (param0 == 41) {
             return;
           }

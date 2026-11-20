@@ -28,7 +28,7 @@ final class MessageLog implements DiffableState {
           while (this.messages.length > var3) {
             var4 = param1 - this.messages[var3].tick;
             if (Particle.field_c <= var4) {
-              this.messages = (Message[]) (GetSalvoUsesAllEnergy.a(bob.field_e, var3, 15667, this.messages));
+              this.messages = (Message[]) (GetSalvoUsesAllEnergy.a(UiTextStyle.field_e, var3, 15667, this.messages));
               if (this.messages == null) {
                 break;
               }
@@ -45,7 +45,7 @@ final class MessageLog implements DiffableState {
           return;
         }
         try {
-          var3.messages = (Message[]) (SpriteDimensions.copyStateArrayByMode(var3.messages, this.messages, 1, bob.field_e, false));
+          var3.messages = (Message[]) (SpriteDimensions.copyStateArrayByMode(var3.messages, this.messages, 1, UiTextStyle.field_e, false));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nwa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -141,9 +141,9 @@ final class MessageLog implements DiffableState {
         RuntimeException var3 = null;
         try {
           param0.tick = IncrementVariableActionFactory.field_a;
-          this.messages = (Message[]) (ija.a(param0, this.messages, 0, bob.field_e));
+          this.messages = (Message[]) (ija.a(param0, this.messages, 0, UiTextStyle.field_e));
           if (hb.field_a < this.messages.length) {
-            this.messages = (Message[]) (GetSalvoUsesAllEnergy.a(bob.field_e, 0, 15667, this.messages));
+            this.messages = (Message[]) (GetSalvoUsesAllEnergy.a(UiTextStyle.field_e, 0, 15667, this.messages));
           }
           if (!param1) {
             field_a = 89;
@@ -193,7 +193,7 @@ final class MessageLog implements DiffableState {
 
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.messages = (Message[]) (SetAutoDetail.a(8, bob.field_e, param0, 1, -69, this.messages));
+          this.messages = (Message[]) (SetAutoDetail.a(8, UiTextStyle.field_e, param0, 1, -69, this.messages));
           if (param1) {
             SerializableGameState var4 = (SerializableGameState) null;
             this.differsFrom((byte) -113, (SerializableGameState) null);

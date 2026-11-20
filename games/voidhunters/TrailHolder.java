@@ -228,7 +228,7 @@ final class TrailHolder implements DiffableState {
         this.field_g = 0;
     }
 
-    final static void a(BitmapFont param0, int param1, toa param2, String param3, int param4) {
+    final static void fillCaretPositions(BitmapFont param0, int param1, TextLayoutLine param2, String param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -253,15 +253,15 @@ final class TrailHolder implements DiffableState {
           for (var7 = 1; param3.length() > var7; var7++) {
             var8 = param3.charAt(var7);
             if (var8 == 60) {
-              var6 = (var5_int >> 8) - (-param2.field_c[0] - param0.getStringWidth(param3.substring(0, var7)));
+              var6 = (var5_int >> 8) - (-param2.caretXs[0] - param0.getStringWidth(param3.substring(0, var7)));
             }
             if (-1 != var6) {
-              param2.field_c[var7] = var6;
+              param2.caretXs[var7] = var6;
             } else {
               if (32 == var8) {
                 var5_int = var5_int + param1;
               }
-              param2.field_c[var7] = param2.field_c[0] + ((var5_int >> 8) + (param0.getStringWidth(param3.substring(0, 1 + var7)) - param0.getCharacterAdvance((char) var8)));
+              param2.caretXs[var7] = param2.caretXs[0] + ((var5_int >> 8) + (param0.getStringWidth(param3.substring(0, 1 + var7)) - param0.getCharacterAdvance((char) var8)));
             }
             if (var8 == 62) {
               var6 = -1;

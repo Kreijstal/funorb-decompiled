@@ -144,7 +144,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
         if (SetBombletSprayProjectileDamage.field_o == 85) {
           if (var3 != 0 &&
             SetShipAimLines.field_p.length() > 0) {
-            ServerTickFactory.a(-1 + SetShipAimLines.field_p.length(), false, SetShipAimLines.field_p, ' ');
+            ServerTickFactory.resizeStringBuilder(-1 + SetShipAimLines.field_p.length(), false, SetShipAimLines.field_p, ' ');
           }
           return true;
         }
@@ -171,7 +171,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
             if (var5Lifetime1 >= DebrisFactory.field_c.getStringWidth(SetShipAimLines.field_p.toString())) {
               return true;
             }
-            ServerTickFactory.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
+            ServerTickFactory.resizeStringBuilder(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
             return true;
           }
           if (SetSpinningBladeSpindamageMultiplier.field_o == null) {
@@ -182,7 +182,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
                   var39 = var38 + var19 + ": ";
                   var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var39);
                   if (var5Lifetime1 < DebrisFactory.field_c.getStringWidth(SetShipAimLines.field_p.toString())) {
-                    ServerTickFactory.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
+                    ServerTickFactory.resizeStringBuilder(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
                   }
                   return true;
                 }
@@ -191,7 +191,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
                   var37 = var36 + var19 + ": ";
                   var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var37);
                   if (var5Lifetime1 < DebrisFactory.field_c.getStringWidth(SetShipAimLines.field_p.toString())) {
-                    ServerTickFactory.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
+                    ServerTickFactory.resizeStringBuilder(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
                   }
                   return true;
                 }
@@ -202,7 +202,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
               if (var5Lifetime1 >= DebrisFactory.field_c.getStringWidth(SetShipAimLines.field_p.toString())) {
                 return true;
               }
-              ServerTickFactory.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
+              ServerTickFactory.resizeStringBuilder(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
               return true;
             }
             var7 = "[" + UnsupportedGpuMaterialEffect.field_e + "] ";
@@ -215,7 +215,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
               if (var5Lifetime1 >= DebrisFactory.field_c.getStringWidth(SetShipAimLines.field_p.toString())) {
                 return true;
               }
-              ServerTickFactory.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
+              ServerTickFactory.resizeStringBuilder(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
               return true;
             }
             if (null == vla.field_E) {
@@ -225,7 +225,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
               if (var5Lifetime1 >= DebrisFactory.field_c.getStringWidth(SetShipAimLines.field_p.toString())) {
                 return true;
               }
-              ServerTickFactory.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
+              ServerTickFactory.resizeStringBuilder(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
               return true;
             }
             var7 = "[" + vla.field_E + "] ";
@@ -247,7 +247,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
         if (var5Lifetime1 >= DebrisFactory.field_c.getStringWidth(SetShipAimLines.field_p.toString())) {
           return true;
         }
-        ServerTickFactory.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
+        ServerTickFactory.resizeStringBuilder(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
         return true;
     }
 

@@ -43,8 +43,8 @@ final class djb extends qc {
         int var12Lifetime1;
         var14 = VoidHunters.field_G;
         try {
-          var2 = this.field_p.l(-14453);
-          var3 = this.field_p.j(param0 ^ param0);
+          var2 = this.field_p.getText(-14453);
+          var3 = this.field_p.getCaretPosition(param0 ^ param0);
           var4 = dib.a(var2, 90);
           var5 = SetMassDriverRandomness.a(var4, -25223, var3);
           var6 = "";
@@ -128,8 +128,8 @@ final class djb extends qc {
               var12Lifetime1++;
             }
           }
-          this.field_p.a(var2.substring(0, var3) + var8.toString() + var2.substring(var3), -110);
-          this.field_p.a((byte) -48, var12Lifetime1);
+          this.field_p.setText(var2.substring(0, var3) + var8.toString() + var2.substring(var3), -110);
+          this.field_p.collapseSelectionAt((byte) -48, var12Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -142,10 +142,10 @@ final class djb extends qc {
         String var3 = null;
         try {
           int var2_int = -15 / ((param0 - 44) / 43);
-          var3 = this.field_p.field_Fb.text;
-          this.field_p.field_Fb.text = OpenGlRenderbuffer.field_r;
+          var3 = this.field_p.textWidget.text;
+          this.field_p.textWidget.text = OpenGlRenderbuffer.field_r;
           super.b((byte) -74);
-          this.field_p.field_Fb.text = var3;
+          this.field_p.textWidget.text = var3;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "djb.A(" + param0 + ')');
         }
@@ -178,8 +178,8 @@ final class djb extends qc {
             djb.clearSharedReferences((byte) 38);
           }
           boolean decompiledFrameRemainder0 = true;
-          var2 = this.field_p.l(-14453);
-          var3 = this.field_p.j(0);
+          var2 = this.field_p.getText(-14453);
+          var3 = this.field_p.getCaretPosition(0);
           var4 = dib.a(var2, 83);
           var5 = SetMassDriverRandomness.a(var4, -25223, var3);
           this.field_o.x = 0;
@@ -407,8 +407,8 @@ final class djb extends qc {
             stackIn_3_0 = super.a(param0, param1, param2 + 0);
             return stackIn_3_0;
           }
-          var4 = this.field_p.l(-14453);
-          var5 = this.field_p.j(0);
+          var4 = this.field_p.getText(-14453);
+          var5 = this.field_p.getCaretPosition(0);
           if (param2 != -40) {
             this.a(87);
           }
@@ -483,7 +483,7 @@ final class djb extends qc {
             var7 == 0 &&
             param1 == 41 &&
             var10Lifetime1 == 41) {
-            this.field_p.a((byte) -73, 1 + var5);
+            this.field_p.collapseSelectionAt((byte) -73, 1 + var5);
           }
           if ((var6 == 0 ||
             var8 != 0 ||
@@ -505,31 +505,31 @@ final class djb extends qc {
               var7 != 0 &&
               var9Lifetime1 == 39 &&
               var10Lifetime1 == 39)) {
-              this.field_p.a(101, -1, '￿');
+              this.field_p.handleKey(101, -1, '￿');
             }
             discarded$0 = super.a(param0, param1, -40);
-            var4Lifetime1 = this.field_p.l(-14453);
-            var5Lifetime1 = this.field_p.j(0);
+            var4Lifetime1 = this.field_p.getText(-14453);
+            var5Lifetime1 = this.field_p.getCaretPosition(0);
             if (var6 == 0 &&
               var7 == 0 &&
               param1 == 40) {
-              this.field_p.a(-1, param2 ^ 39, ')');
-              this.field_p.a(var5Lifetime1, 31401, var5Lifetime1);
+              this.field_p.handleKey(-1, param2 ^ 39, ')');
+              this.field_p.setSelection(var5Lifetime1, 31401, var5Lifetime1);
             }
             if (var6 == 0 &&
               var7 == 0 &&
               param1 == 34) {
-              this.field_p.a(-1, param2 + 39, '"');
-              this.field_p.a(var5Lifetime1, 31401, var5Lifetime1);
+              this.field_p.handleKey(-1, param2 + 39, '"');
+              this.field_p.setSelection(var5Lifetime1, 31401, var5Lifetime1);
             }
             if (var6 == 0 &&
               var7 == 0 &&
               param1 == 39) {
-              this.field_p.a(-1, -1, '\'');
-              this.field_p.a(var5Lifetime1, 31401, var5Lifetime1);
+              this.field_p.handleKey(-1, -1, '\'');
+              this.field_p.setSelection(var5Lifetime1, 31401, var5Lifetime1);
             }
           }
-          OpenGlRenderbuffer.field_r = PlayerVoteFactory.a(this.field_p.l(param2 - 14413), 107);
+          OpenGlRenderbuffer.field_r = PlayerVoteFactory.a(this.field_p.getText(param2 - 14413), 107);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

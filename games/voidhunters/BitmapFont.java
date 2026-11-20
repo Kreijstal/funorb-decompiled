@@ -510,7 +510,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        ServerTickFactory.a(0, false, field_s, ' ');
+        ServerTickFactory.resizeStringBuilder(0, false, field_s, ' ');
         var4 = 0;
         var5 = 0;
         var6 = -1;

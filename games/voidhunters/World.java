@@ -78,7 +78,7 @@ final class World implements DiffableState, CompactGameState {
             var9 = var7[var8];
             var10 = param3 - var9.getX(true);
             var11 = param2 - var9.getY((byte) -118);
-            var12 = ar.a(var10, (byte) 121, var11);
+            var12 = TextLayout.approximateVectorLength(var10, (byte) 121, var11);
             if (var12 < 16384 + param4) {
               this.removeNebula(0, param1, var8);
               var6 = 1;
@@ -227,7 +227,7 @@ final class World implements DiffableState, CompactGameState {
               if (var4.getType((byte) -104) != var2_ref_tj.getType((byte) -104)) {
                 var5 = var2_ref_tj.d(107) - var4.d(118);
                 var6 = var2_ref_tj.e((byte) -107) - var4.e((byte) -107);
-                var7 = ar.a(var5, (byte) 103, var6);
+                var7 = TextLayout.approximateVectorLength(var5, (byte) 103, var6);
                 if (2048 > var7) {
                   if (var4.getType((byte) -104) != 3) {
                     var2_ref_tj.life = 0;
@@ -351,7 +351,7 @@ final class World implements DiffableState, CompactGameState {
                   var13_int == 257) {
                   var14_intLifetime1 = -var10_ref_uwa.field_g + param1;
                   var15Lifetime1 = param2 - var10_ref_uwa.field_f;
-                  var16 = ar.a(var14_intLifetime1, (byte) 121, var15Lifetime1);
+                  var16 = TextLayout.approximateVectorLength(var14_intLifetime1, (byte) 121, var15Lifetime1);
                   if (Math.abs(var16 - var10_ref_uwa.field_d) <= 256) {
                     var13_int = 255;
                   }
@@ -744,7 +744,7 @@ final class World implements DiffableState, CompactGameState {
               if (param4 > 0) {
                 var24 = -var16Lifetime1 + var20;
                 var25 = var21 - var17;
-                var26 = ar.a(var24, (byte) 122, var25);
+                var26 = TextLayout.approximateVectorLength(var24, (byte) 122, var25);
                 if (1 > var26) {
                   var26 = 1;
                 }
@@ -1163,7 +1163,7 @@ final class World implements DiffableState, CompactGameState {
             var13 = var9.finaly + var11;
             var14 = -var12 + param2.worldx;
             var15 = -var13 + param2.worldy;
-            var16 = ar.a(var14, (byte) 118, var15);
+            var16 = TextLayout.approximateVectorLength(var14, (byte) 118, var15);
             var17 = var16 >> 8;
             if (var17 <= 0) {
               var17 = 1;
@@ -2137,7 +2137,7 @@ final class World implements DiffableState, CompactGameState {
                   param1 != 3)) {
                   var14 = param7.dx - param5.dx;
                   var15 = param7.dy - param5.dy;
-                  var16 = ar.a(var14, (byte) 112, var15) >> 2;
+                  var16 = TextLayout.approximateVectorLength(var14, (byte) 112, var15) >> 2;
                   var17 = 48;
                   if (!param0) {
                     var17 = 52;
@@ -2599,7 +2599,7 @@ final class World implements DiffableState, CompactGameState {
                     var80 != var10) {
                     var16 = var80.x - var7;
                     var17 = -var8 + var80.y;
-                    var18 = ar.a(var16, (byte) 108, var17);
+                    var18 = TextLayout.approximateVectorLength(var16, (byte) 108, var17);
                     if (var12 > var18) {
                       var12 = var18;
                       var11 = var80;
@@ -3205,7 +3205,7 @@ final class World implements DiffableState, CompactGameState {
             var7_ref_sg.getTeam((byte) 73) < SetMissionTerrainAsteroidProbability.field_p) {
             var8 = -param3 + var7_ref_sg.x;
             var9 = -param1 + var7_ref_sg.y;
-            var10 = ar.a(var8, (byte) 123, var9);
+            var10 = TextLayout.approximateVectorLength(var8, (byte) 123, var9);
             if (var7_ref_sg.getBoundingExtent(-80) + param0 >= var10) {
               return true;
             }
@@ -3219,7 +3219,7 @@ final class World implements DiffableState, CompactGameState {
           if (var5_ref != null) {
             var6Lifetime1 = -param3 + var5_ref.getX(true);
             var7 = var5_ref.getY(82) - param1;
-            var8Lifetime1 = ar.a(var6Lifetime1, (byte) 104, var7);
+            var8Lifetime1 = TextLayout.approximateVectorLength(var6Lifetime1, (byte) 104, var7);
             if (var8Lifetime1 <= 51200 + param0) {
               return true;
             }
@@ -4019,7 +4019,7 @@ final class World implements DiffableState, CompactGameState {
                 var22_int = var7 + var21_ref_crb.getBoundingExtent(-39);
                 var23 = var21_ref_crb.x - var16;
                 var24 = var21_ref_crb.y - var17;
-                var25 = ar.a(var23, (byte) 126, var24);
+                var25 = TextLayout.approximateVectorLength(var23, (byte) 126, var24);
                 if (var22_int > var25) {
                   var18 = 0;
                   break scanLoop1;
@@ -4039,7 +4039,7 @@ final class World implements DiffableState, CompactGameState {
                 param4 != var22.getTeam((byte) 126)) {
                 var23Lifetime1 = var22.x - var16;
                 var24Lifetime1 = var22.y - var17;
-                var25Lifetime1 = ar.a(var23Lifetime1, (byte) 121, var24Lifetime1);
+                var25Lifetime1 = TextLayout.approximateVectorLength(var23Lifetime1, (byte) 121, var24Lifetime1);
                 if (var25Lifetime1 < var19) {
                   var19 = var25Lifetime1;
                 }
@@ -4803,11 +4803,11 @@ final class World implements DiffableState, CompactGameState {
             var13 = var11.getBoundingbox((byte) -37)[2] + var11.getBoundingbox((byte) -64)[3] >> 1;
             var14 = var12 - param3;
             var15 = -param4 + var13;
-            var16 = ar.a(var14, (byte) 127, var15);
+            var16 = TextLayout.approximateVectorLength(var14, (byte) 127, var15);
             if (var16 < var8) {
               var17 = var12 - param2;
               var18 = -param5 + var13;
-              if (ar.a(var17, (byte) 113, var18) < SettingsChangeFactory.field_c &&
+              if (TextLayout.approximateVectorLength(var17, (byte) 113, var18) < SettingsChangeFactory.field_c &&
                 !this.isDebrisBeingDragged(false, false, var11.id)) {
                 var7 = var11;
                 var8 = var16;
@@ -6207,7 +6207,7 @@ final class World implements DiffableState, CompactGameState {
               if (var10_ref_uwa.field_c == 1) {
                 var11_int = var10_ref_uwa.field_g - param3.x;
                 var12_int = -param3.y + var10_ref_uwa.field_f;
-                var13 = ar.a(var11_int, (byte) 126, var12_int);
+                var13 = TextLayout.approximateVectorLength(var11_int, (byte) 126, var12_int);
                 if (var10_ref_uwa.field_d > var13 &&
                   var8 > var13) {
                   var8 = var13;
@@ -6545,11 +6545,11 @@ final class World implements DiffableState, CompactGameState {
             var14 = (var12.getBoundingbox((byte) -70)[2] + var12.getBoundingbox((byte) -54)[3]) / 2;
             var15 = var13 - param0;
             var16 = -param2 + var14;
-            var17 = ar.a(var15, (byte) 104, var16);
+            var17 = TextLayout.approximateVectorLength(var15, (byte) 104, var16);
             if (var17 < var9) {
               var18 = -param1 + var13;
               var19 = -param4 + var14;
-              if (ar.a(var18, (byte) 108, var19) < SettingsChangeFactory.field_c &&
+              if (TextLayout.approximateVectorLength(var18, (byte) 108, var19) < SettingsChangeFactory.field_c &&
                 !this.isDebrisBeingDragged(false, false, var12.id)) {
                 var7 = var12;
                 var9 = var17;
@@ -6709,7 +6709,7 @@ final class World implements DiffableState, CompactGameState {
             param3 != var16.getTeam((byte) 110)) {
             var10 = -param2 + var16.getX(false);
             var11 = -param1 + var16.getY((byte) -103);
-            var12 = ar.a(var10, (byte) 107, var11);
+            var12 = TextLayout.approximateVectorLength(var10, (byte) 107, var11);
             if (var12 < var6) {
               var6 = var12;
               var5 = var16;
@@ -6728,7 +6728,7 @@ final class World implements DiffableState, CompactGameState {
               stackIn_25_2 = !(param0);
               var10Lifetime1 = stackIn_24_0 + ((Debris) (Object) stackIn_24_1).getX(stackIn_25_2);
               var11Lifetime1 = var18.getY((byte) 123) - param1;
-              var12Lifetime1 = ar.a(var10Lifetime1, (byte) 124, var11Lifetime1);
+              var12Lifetime1 = TextLayout.approximateVectorLength(var10Lifetime1, (byte) 124, var11Lifetime1);
               if (var6 > var12Lifetime1) {
                 var5 = var18;
                 var6 = var12Lifetime1;
@@ -7403,7 +7403,7 @@ final class World implements DiffableState, CompactGameState {
                     if (var18_ref_sg != null) {
                       var19_int = var14_ref_rdb.getX(true) - var18_ref_sg.x;
                       var20 = var14_ref_rdb.getY(74) - var18_ref_sg.y;
-                      var21 = ar.a(var19_int, (byte) 126, var20);
+                      var21 = TextLayout.approximateVectorLength(var19_int, (byte) 126, var20);
                       var22 = var18_ref_sg.getBoundingRadius(true) + 51200;
                       if (param3 != var18_ref_sg.getTeam((byte) 93) &&
                         !param2) {
@@ -7437,7 +7437,7 @@ final class World implements DiffableState, CompactGameState {
                     if (null != var19) {
                       var20Lifetime1 = var14_ref_rdb.getX(true) - var19.x;
                       var21Lifetime1 = var14_ref_rdb.getY(param0 ^ -200015) - var19.y;
-                      var22Lifetime1 = ar.a(var20Lifetime1, (byte) 125, var21Lifetime1);
+                      var22Lifetime1 = TextLayout.approximateVectorLength(var20Lifetime1, (byte) 125, var21Lifetime1);
                       if (51200 + var19.chassis.getDefinition((byte) -112).boundingRadius > var22Lifetime1) {
                         var15 = 0;
                         break scanLoop2;
@@ -8113,7 +8113,7 @@ final class World implements DiffableState, CompactGameState {
             }
             var5_int = -(int)param1.field_c + param0.x;
             var6 = -(int)param1.field_b + param0.y;
-            var7 = ar.a(var5_int, (byte) 110, var6);
+            var7 = TextLayout.approximateVectorLength(var5_int, (byte) 110, var6);
             var8 = (float)((param0.getBoundingExtent(-66) << 8) / var7);
             if (0.0f >= var8) {
               return;
@@ -8558,7 +8558,7 @@ final class World implements DiffableState, CompactGameState {
             if (null != var8) {
               var9 = param0 - var8.getX(false);
               var10 = param1 - var8.getY((byte) 118);
-              var11 = ar.a(var9, (byte) 121, var10);
+              var11 = TextLayout.approximateVectorLength(var9, (byte) 121, var10);
               if (var11 < param4 + var8.getBoundingExtent(-99)) {
                 return true;
               }
@@ -8803,7 +8803,7 @@ final class World implements DiffableState, CompactGameState {
                 var12_int = 131072;
                 var13 = -param3.getX(false) + var10_int;
                 var14 = -param3.getY((byte) -46) + var11;
-                var15 = ar.a(var13, (byte) 111, var14);
+                var15 = TextLayout.approximateVectorLength(var13, (byte) 111, var14);
                 if (var15 > var12_int) {
                   var16 = GameSnapshotFactory.a(var14, (byte) -77, var13);
                   var10_int = param3.getX(false) + (var12_int >> 8) * (GetNumStars.a(var16, (byte) -115) >> 8);
@@ -8952,7 +8952,7 @@ final class World implements DiffableState, CompactGameState {
           if (var7 != null) {
             var8 = param2 - var7.getX(false);
             var9 = -var7.getY((byte) 4) + param0;
-            var10 = ar.a(var8, (byte) 115, var9);
+            var10 = TextLayout.approximateVectorLength(var8, (byte) 115, var9);
             if (var7.chassis.getDefinition((byte) -112).boundingRadius + param3 > var10) {
               this.removeBody(-125, 2, var7);
             }

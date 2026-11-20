@@ -893,7 +893,7 @@ final class MissionBuilder implements DiffableState {
           var15.addAction(new AwardVictoryToTeamAction(1), true);
           param2.a(var15, -38);
           var17 = 4;
-          var18 = ar.a(param1 / 4, (byte) 115, param0 / 4) >> 8;
+          var18 = TextLayout.approximateVectorLength(param1 / 4, (byte) 115, param0 / 4) >> 8;
           var19 = null;
           for (var20 = 0; var17 > var20; var20++) {
             var21 = OpenGlFramebuffer.a(2, 1, true);
@@ -1190,7 +1190,7 @@ final class MissionBuilder implements DiffableState {
           var32.addAction(new SetVariableAction(var7, 0), true);
           param2.a(var32, -38);
           var15Lifetime1 = 2;
-          var16Lifetime1 = ar.a(param1 / 4, (byte) 116, param3 / 4) >> 8;
+          var16Lifetime1 = TextLayout.approximateVectorLength(param1 / 4, (byte) 116, param3 / 4) >> 8;
           var17Lifetime2 = null;
           for (var18 = 0; var15Lifetime1 > var18; var18++) {
             var19 = OpenGlFramebuffer.a(2, 2, true);
@@ -2660,7 +2660,7 @@ final class MissionBuilder implements DiffableState {
             var12 = var47[3];
             var13 = -var9 + var10;
             var14 = var12 - var11;
-            var15 = (long)ar.a(var13, (byte) 118, var14);
+            var15 = (long)TextLayout.approximateVectorLength(var13, (byte) 118, var14);
             var17 = var9 + hob.a(param2, var13, 116);
             var18 = var11 + hob.a(param2, var14, 126);
             var19 = hob.a(param2, 8192, 118);
@@ -3081,7 +3081,7 @@ final class MissionBuilder implements DiffableState {
                       if (var32 != null) {
                         var27_int = var21_ref_crb.getX(false) - var32.getX(false);
                         var28 = var21_ref_crb.getY((byte) 118) - var32.getY((byte) -124);
-                        var29 = ar.a(var27_int, (byte) 112, var28);
+                        var29 = TextLayout.approximateVectorLength(var27_int, (byte) 112, var28);
                         if (var29 < var21_ref_crb.chassis.getDefinition((byte) -112).boundingRadius + var32.chassis.getDefinition((byte) -112).boundingRadius) {
                           var23 = 1;
                           decompiledFrameRemainder0 = false;
@@ -3407,7 +3407,7 @@ final class MissionBuilder implements DiffableState {
           if (param1 != 30506) {
             this.seed = 72;
           }
-          var7 = ar.a(var5, (byte) 111, var6);
+          var7 = TextLayout.approximateVectorLength(var5, (byte) 111, var6);
           return !(param2 <= var7);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

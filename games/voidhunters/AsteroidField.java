@@ -961,7 +961,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime106 = HuffmanCodec.fetchLocalizedResource((byte) -125, "TYPE_WEAPON");
           if (var2Lifetime106 != null) {
-            uf.field_F = Cp1252Strings.decode((byte) -125, var2Lifetime106);
+            UiTextField.field_F = Cp1252Strings.decode((byte) -125, var2Lifetime106);
           }
           var2Lifetime107 = HuffmanCodec.fetchLocalizedResource((byte) -110, "TYPE_DEFENCE");
           if (null != var2Lifetime107) {

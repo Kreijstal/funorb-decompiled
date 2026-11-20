@@ -396,7 +396,7 @@ final class UiScrollBar extends UiArrayContainer implements UiActionListener {
         int var3 = null == this.downButton ? this.track.y + (this.track.height - this.thumb.height) : this.downButton.y - this.thumb.height;
         this.thumb.y = (this.verticalPosition * (-var2 + var3) >> 16) + var2;
         if (param0 != 0) {
-          UiScrollBar.f(-79);
+          UiScrollBar.increaseMusicVolume(-79);
         }
     }
 
@@ -630,16 +630,16 @@ final class UiScrollBar extends UiArrayContainer implements UiActionListener {
         this.updateThumbX((byte) -8);
     }
 
-    final static void f(int param0) {
+    final static void increaseMusicVolume(int param0) {
         int var1 = 0;
         if (param0 != 32) {
           UiScrollBar.clearSharedReferences((byte) -101);
         }
         if (GetMutatorVotes.field_p < 224) {
           var1 = GetMutatorVotes.field_p % 32;
-          re.a(-var1 + GetMutatorVotes.field_p + 32, (byte) -100);
+          BitmapTextLayout.setMusicVolume(-var1 + GetMutatorVotes.field_p + 32, (byte) -100);
         } else {
-          re.a(256, (byte) -126);
+          BitmapTextLayout.setMusicVolume(256, (byte) -126);
         }
     }
 
