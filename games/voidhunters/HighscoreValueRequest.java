@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ifa extends IntrusiveNode {
+final class HighscoreValueRequest extends IntrusiveNode {
     static String field_e;
     static int field_d;
     static String field_h;
-    int field_i;
+    int id;
     private static char[] field_f;
     static String[] field_g;
 
@@ -19,7 +19,7 @@ final class ifa extends IntrusiveNode {
         }
     }
 
-    private ifa() throws Throwable {
+    private HighscoreValueRequest() throws Throwable {
         throw new Error();
     }
 

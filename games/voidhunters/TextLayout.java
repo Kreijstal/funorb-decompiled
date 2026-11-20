@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class TextLayout {
-    static boolean field_d;
+    static boolean playerGameDataLoaded;
     TextLayoutLine[] lines;
     static int field_b;
     static String field_a;

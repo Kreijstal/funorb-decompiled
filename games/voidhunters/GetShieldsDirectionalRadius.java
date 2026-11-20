@@ -17,7 +17,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
           es.field_b = new PlayerGameData();
         }
         es.field_b.a(qd.field_a, -28855);
-        GetMissionResnetResourceTickTime.e((byte) -46);
+        GetMissionResnetResourceTickTime.savePlayerGameData((byte) -46);
         int var1 = -27 / ((1 - param0) / 32);
         GetBoostersCooldown.field_o = GetBots.a(GetBoostersCooldown.field_o, -31567, qd.field_a);
     }

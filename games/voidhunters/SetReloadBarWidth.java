@@ -17,10 +17,10 @@ final class SetReloadBarWidth extends ConsoleCommand {
         if (param0 >= -63) {
           return false;
         }
-        if (null == qn.field_h) {
+        if (null == HighscoreTableRequest.field_h) {
           return false;
         }
-        if (null != qn.field_h.g(0)) {
+        if (null != HighscoreTableRequest.field_h.g(0)) {
           return true;
         }
         return false;

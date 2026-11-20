@@ -433,8 +433,8 @@ public final class VoidHunters extends NetworkGameClient {
           }
         } else {
           if (!Mission.b(-1)) {
-            GetUseRectOutline.b(false);
-            if (TextLayout.field_d &&
+            GetUseRectOutline.updatePlayerGameDataLoading(false);
+            if (TextLayout.playerGameDataLoaded &&
               this.l(0) &&
               !uc.b(-116)) {
               WaterNoiseGpuMaterialEffect.startOfflineGame(true, false);
@@ -525,8 +525,8 @@ public final class VoidHunters extends NetworkGameClient {
             var4 == 1) {
             iwa.a((byte) -30, 2);
             GetSalvoDamageMultiplier.a(50, 4);
-            GetReverbGain.a(6, (byte) -52);
-            RasterShapesTextureOperation.b(5, 0);
+            GetReverbGain.resendClientDataRequests(6, (byte) -52);
+            RasterShapesTextureOperation.resendIntegerRecordRequests(5, 0);
             GetReverbDry.a(-115);
             if (1 == var4) {
               if (vqa.field_g == null ||
@@ -1118,7 +1118,7 @@ public final class VoidHunters extends NetworkGameClient {
         ttb.clearSharedReferences(16711935);
         kja.clearSharedReferences(-30);
         gm.clearSharedReferences(-2459);
-        jla.clearSharedReferences(-125);
+        UiToggleButton.clearSharedReferences(-125);
         eca.clearSharedReferences(-27183);
         reb.clearSharedReferences(false);
         w.clearSharedReferences((byte) 77);
@@ -1273,13 +1273,13 @@ public final class VoidHunters extends NetworkGameClient {
         dw.clearSharedReferences(118);
         qpb.clearSharedReferences(!param0 ? true : false);
         kab.clearSharedReferences(777);
-        qn.clearSharedReferences(true);
-        ifa.clearSharedReferences(95);
+        HighscoreTableRequest.clearSharedReferences(true);
+        HighscoreValueRequest.clearSharedReferences(95);
         vu.clearSharedReferences((byte) 113);
         fa.clearSharedReferences((byte) 119);
         ujb.clearSharedReferences((byte) -111);
         lw.clearSharedReferences(false);
-        kob.clearSharedReferences(127);
+        ClientDataReadRequest.clearSharedReferences(127);
         ConsoleCommand.clearSharedReferences(true);
         ConsoleEvaluationException.clearSharedReferences(true);
         ConsoleCharacterStream.clearSharedReferences(0);
@@ -1353,7 +1353,7 @@ public final class VoidHunters extends NetworkGameClient {
         cfa.clearSharedReferences((byte) 83);
         ea.clearSharedReferences(10);
         BlackBoxRecordingFactory.clearSharedReferences(false);
-        br.clearSharedReferences(true);
+        IntegerArrayReadRequest.clearSharedReferences(true);
         t.clearSharedReferences(1);
         UiVisualStyle.clearSharedReferences(24358);
         pbb.clearSharedReferences(-652030847);
@@ -1841,7 +1841,7 @@ public final class VoidHunters extends NetworkGameClient {
         }
         wgb.a(SetMissileLauncherEnergyUsed.field_p, GetMissileLauncherProjectiles.field_o, MapClearanceRectangleFactory.field_a, -131, ComponentAttachmentPlan.field_b, nl.field_n, CommonGameState.field_i);
         ComponentCollision.a("Initing audiohandler", (byte) -64);
-        qn.c((byte) 89);
+        HighscoreTableRequest.initializeSoundQueues((byte) 89);
         MidiNote.resetFrameTiming(2096);
         ComponentCollision.a("Finished loadloop", (byte) -128);
         if (this.l(0) &&

@@ -4,7 +4,7 @@
 final class aeb {
     static boolean field_a;
 
-    final static void a(int param0, int param1, ik param2) {
+    final static void sendIntegerRecordWrite(int param0, int param1, IntegerRecordWriteRequest param2) {
         IsaacPacketBuffer var5 = null;
         int var4 = 0;
         try {
@@ -13,8 +13,8 @@ final class aeb {
           var5.position = var5.position + 1;
           var4 = var5.position;
           var5.writeByte(0, 1);
-          var5.writeByte(0, param2.field_f);
-          var5.writeSignedSmart(param2.field_g, 120);
+          var5.writeByte(0, param2.recordType);
+          var5.writeSignedSmart(param2.recordId, 120);
           var5.writeInt(param2.field_h, param1 ^ -332603336);
           var5.writeInt(param2.field_d, param1 ^ -332603336);
           var5.writeInt(param2.field_e, 332614536);

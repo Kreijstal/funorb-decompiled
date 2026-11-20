@@ -66,14 +66,14 @@ final class uv implements UiRenderer {
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
-        jla var12 = null;
+        UiToggleButton var12 = null;
         try {
-          if (!(param1 instanceof jla)) {
+          if (!(param1 instanceof UiToggleButton)) {
             stackIn_3_0 = null;
           } else {
             stackIn_3_0 = (UiComponent) (param1);
           }
-          var12 = (jla) (stackIn_3_0);
+          var12 = (UiToggleButton) (stackIn_3_0);
           if (var12 != null) {
             param4 = param4 & var12.enabled;
           }

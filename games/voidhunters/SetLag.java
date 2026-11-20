@@ -38,16 +38,16 @@ final class SetLag extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0) {
+    final static void handleIntegerRecordReply(int param0) {
         int var7 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        br var4 = null;
+        IntegerArrayReadRequest var4 = null;
         int var4_int = 0;
         int var5 = 0;
-        ik var5_ref_ik = null;
+        IntegerRecordWriteRequest var5_ref_ik = null;
         int[] var6 = null;
         int var8 = 0;
         IsaacPacketBuffer var9 = null;
@@ -60,13 +60,13 @@ final class SetLag extends ConsoleCommand {
           var2 = var9.readUnsignedByte((byte) -117);
           var3 = var9.readUnsignedByte((byte) -94);
           if (0 == var2) {
-            var4 = (br) (SetDebugLineLife.field_p.first(param0 ^ -8999));
+            var4 = (IntegerArrayReadRequest) (SetDebugLineLife.pendingIntegerArrayReads.first(param0 ^ -8999));
             if (var4 == null) {
               FighterBayWeaponDefinition.l(-128);
               return;
             }
             var5 = -var9.position + PartitioningManagerFactory.field_a;
-            var11 = var4.field_d;
+            var11 = var4.values;
             var10 = var11;
             var6 = var10;
             if (var5 > var11.length << 2) {
@@ -79,11 +79,11 @@ final class SetLag extends ConsoleCommand {
           } else {
             if (var2 == 1) {
               var4_int = var9.readSignedSmart(0);
-              var5_ref_ik = (ik) (SetSalvoHoldable.field_o.first(0));
+              var5_ref_ik = (IntegerRecordWriteRequest) (SetSalvoHoldable.pendingIntegerRecordWrites.first(0));
               while (var5_ref_ik != null) {
-                if (var5_ref_ik.field_f != var3 ||
-                  var4_int != var5_ref_ik.field_g) {
-                  var5_ref_ik = (ik) (SetSalvoHoldable.field_o.next((byte) 11));
+                if (var5_ref_ik.recordType != var3 ||
+                  var4_int != var5_ref_ik.recordId) {
+                  var5_ref_ik = (IntegerRecordWriteRequest) (SetSalvoHoldable.pendingIntegerRecordWrites.next((byte) 11));
                   continue;
                 }
                 break;

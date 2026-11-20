@@ -5,23 +5,23 @@ final class RasterShapesTextureOperation extends TextureOperation {
     static IntrusiveDeque field_j;
     private TextureRasterShape[] shapes;
 
-    final static void b(int param0, int param1) {
+    final static void resendIntegerRecordRequests(int param0, int param1) {
         int var3 = 0;
-        ik var4 = null;
-        br var5 = null;
+        IntegerRecordWriteRequest var4 = null;
+        IntegerArrayReadRequest var5 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         var3 = VoidHunters.field_G;
         try {
-          var4 = (ik) (SetSalvoHoldable.field_o.first(0));
+          var4 = (IntegerRecordWriteRequest) (SetSalvoHoldable.pendingIntegerRecordWrites.first(0));
           while (var4 != null) {
-            aeb.a(param0, -21584, var4);
-            var4 = (ik) (SetSalvoHoldable.field_o.next((byte) 8));
+            aeb.sendIntegerRecordWrite(param0, -21584, var4);
+            var4 = (IntegerRecordWriteRequest) (SetSalvoHoldable.pendingIntegerRecordWrites.next((byte) 8));
           }
-          var5 = (br) (SetDebugLineLife.field_p.first(param1));
+          var5 = (IntegerArrayReadRequest) (SetDebugLineLife.pendingIntegerArrayReads.first(param1));
           while (var5 != null) {
-            GetMachineGunProjectileDamage.a(var5, -60, param0);
-            var5 = (br) (SetDebugLineLife.field_p.next((byte) 112));
+            GetMachineGunProjectileDamage.sendIntegerArrayRead(var5, -60, param0);
+            var5 = (IntegerArrayReadRequest) (SetDebugLineLife.pendingIntegerArrayReads.next((byte) 112));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

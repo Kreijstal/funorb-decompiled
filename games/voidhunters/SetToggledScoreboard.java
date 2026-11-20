@@ -75,7 +75,7 @@ final class SetToggledScoreboard extends ConsoleCommand {
             SetToggledScoreboard.a((byte) 73, (String) null);
           }
           if (0 == var2_int) {
-            stackIn_6_0 = br.field_f;
+            stackIn_6_0 = IntegerArrayReadRequest.field_f;
             return stackIn_6_0;
           }
           if (var2_int > 64) {

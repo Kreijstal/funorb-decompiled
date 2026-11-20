@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetGrapplingHookAimarc extends ConsoleCommand {
-    static IntrusiveDeque field_o;
+    static IntrusiveDeque pendingClientDataWrites;
     static int field_p;
 
     public static void clearSharedReferences(int param0) {
-        field_o = null;
+        pendingClientDataWrites = null;
         if (param0 != 0) {
-          field_o = (IntrusiveDeque) null;
+          pendingClientDataWrites = (IntrusiveDeque) null;
         }
     }
 
@@ -21,7 +21,7 @@ final class SetGrapplingHookAimarc extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            field_o = (IntrusiveDeque) null;
+            pendingClientDataWrites = (IntrusiveDeque) null;
           }
           SetMachineGunEnergyUsed.a(139, 62, arguments[0].intValue(54));
           stackIn_3_0 = new ConsoleValue("void");
@@ -72,6 +72,6 @@ final class SetGrapplingHookAimarc extends ConsoleCommand {
     }
 
     static {
-        field_o = new IntrusiveDeque();
+        pendingClientDataWrites = new IntrusiveDeque();
     }
 }

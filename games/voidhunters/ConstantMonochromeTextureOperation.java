@@ -13,14 +13,14 @@ final class ConstantMonochromeTextureOperation extends TextureOperation {
         }
     }
 
-    final static kob a(boolean param0, int param1) {
-        kob var2 = new kob();
+    final static ClientDataReadRequest requestClientData(boolean param0, int param1) {
+        ClientDataReadRequest var2 = new ClientDataReadRequest();
         if (param0) {
-          GetBoostersActiveTime.field_q.addLast(-10258, var2);
-          MatchResultsFactory.b(param1, 22681);
+          GetBoostersActiveTime.pendingClientDataReads.addLast(-10258, var2);
+          MatchResultsFactory.sendClientDataRead(param1, 22681);
           return var2;
         }
-        return (kob) null;
+        return (ClientDataReadRequest) null;
     }
 
     final int[] getMonochromeRow(int param0, boolean param1) {

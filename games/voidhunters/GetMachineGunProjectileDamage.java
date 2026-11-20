@@ -231,7 +231,7 @@ final class GetMachineGunProjectileDamage extends ConsoleCommand {
         }
     }
 
-    final static void a(br param0, int param1, int param2) {
+    final static void sendIntegerArrayRead(IntegerArrayReadRequest param0, int param1, int param2) {
         IsaacPacketBuffer var3 = null;
         try {
           var3 = RequestNewestBlackboxRecording.field_p;
@@ -239,7 +239,7 @@ final class GetMachineGunProjectileDamage extends ConsoleCommand {
           var3.writeIsaacByte(24335, param2);
           var3.writeByte(0, 2);
           var3.writeByte(0, 0);
-          var3.writeByte(0, param0.field_e);
+          var3.writeByte(0, param0.recordType);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "eva.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

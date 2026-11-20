@@ -20,22 +20,22 @@ final class glb {
           if (param0 != 17043) {
             field_a = (String) null;
           }
-          if (NetworkGameClient.field_y != null &&
-            !NetworkGameClient.field_y.isEmpty(-42)) {
-            var1 = (qw) (NetworkGameClient.field_y.first(0));
+          if (NetworkGameClient.activeOneShotSounds != null &&
+            !NetworkGameClient.activeOneShotSounds.isEmpty(-42)) {
+            var1 = (qw) (NetworkGameClient.activeOneShotSounds.first(0));
             while (var1 != null) {
               if (!var1.field_k.isLinked((byte) -63)) {
                 var1.unlink(-3846);
               }
-              var1 = (qw) (NetworkGameClient.field_y.next((byte) 77));
+              var1 = (qw) (NetworkGameClient.activeOneShotSounds.next((byte) 77));
             }
           }
-          if (null != PlayerReady.field_d) {
-            stackIn_13_0 = PlayerReady.field_d.isEmpty(-74);
+          if (null != PlayerReady.activeLoopingSounds) {
+            stackIn_13_0 = PlayerReady.activeLoopingSounds.isEmpty(-74);
             if (stackIn_13_0) {
               return;
             }
-            var1_ref = (nl) (PlayerReady.field_d.first(0));
+            var1_ref = (nl) (PlayerReady.activeLoopingSounds.first(0));
             while (var1_ref != null) {
               if (!var1_ref.field_h) {
                 nmb.a((byte) -91, var1_ref.field_d);
@@ -48,7 +48,7 @@ final class glb {
                 }
                 var1_ref.field_h = false;
               }
-              var1_ref = (nl) (PlayerReady.field_d.next((byte) 12));
+              var1_ref = (nl) (PlayerReady.activeLoopingSounds.next((byte) 12));
             }
             return;
           }

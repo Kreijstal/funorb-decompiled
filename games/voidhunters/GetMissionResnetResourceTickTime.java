@@ -89,7 +89,7 @@ final class GetMissionResnetResourceTickTime extends ConsoleCommand {
         }
     }
 
-    final static void e(byte param0) {
+    final static void savePlayerGameData(byte param0) {
         if (GetPhasedEnergyBeamPulsetime.e((byte) 104)) {
           return;
         }
@@ -118,10 +118,10 @@ final class GetMissionResnetResourceTickTime extends ConsoleCommand {
         if (param0 > -35) {
           field_o = -50;
         } else {
-          jla.a(var2, (byte) 64, 6);
+          UiToggleButton.submitClientData(var2, (byte) 64, 6);
           return;
         }
-        jla.a(var2, (byte) 64, 6);
+        UiToggleButton.submitClientData(var2, (byte) 64, 6);
     }
 
     static {

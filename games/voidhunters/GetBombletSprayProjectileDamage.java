@@ -78,7 +78,7 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
           var3.field_l = param1;
           var3.field_g = false;
           var3.field_k = param0;
-          PlayerReady.field_d.addLast(-10258, var3);
+          PlayerReady.activeLoopingSounds.addLast(-10258, var3);
           return;
         }
         if (var9 != null) {
@@ -98,7 +98,7 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
         var3Lifetime1.field_l = param1;
         var3Lifetime1.field_g = false;
         var3Lifetime1.field_k = param0;
-        PlayerReady.field_d.addLast(-10258, var3Lifetime1);
+        PlayerReady.activeLoopingSounds.addLast(-10258, var3Lifetime1);
     }
 
     public static void clearSharedReferences(byte param0) {

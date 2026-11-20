@@ -7109,7 +7109,7 @@ final class World implements DiffableState, CompactGameState {
                 var15Lifetime1 = param3.a(var11, (byte) 126) + 1;
                 var16Lifetime1 = param3.b(true, -var12) - 1;
                 var17Lifetime1 = param3.b(true, var12) + 1;
-                kob.a((byte) 17, var15Lifetime1, var17Lifetime1, var16Lifetime1, var14_intLifetime1);
+                ClientDataReadRequest.drawHighlightedBounds((byte) 17, var15Lifetime1, var17Lifetime1, var16Lifetime1, var14_intLifetime1);
               }
             }
           }

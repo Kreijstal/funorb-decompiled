@@ -1037,7 +1037,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime125 = HuffmanCodec.fetchLocalizedResource((byte) -47, "COMPONENT_USE_POWER_PLANT_TEXT");
           if (var2Lifetime125 != null) {
-            ifa.field_h = Cp1252Strings.decode((byte) -125, var2Lifetime125);
+            HighscoreValueRequest.field_h = Cp1252Strings.decode((byte) -125, var2Lifetime125);
           }
           var2Lifetime126 = HuffmanCodec.fetchLocalizedResource((byte) -5, "COMPONENT_USE_ENERGY_SHIELD_DIRECTIONAL_TEXT");
           if (var2Lifetime126 != null) {
@@ -1537,7 +1537,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime250 = HuffmanCodec.fetchLocalizedResource((byte) -9, "VOTE_SMALLER_MAP_WIDTH");
           if (null != var2Lifetime250) {
-            qn.field_d = Cp1252Strings.decode((byte) -125, var2Lifetime250);
+            HighscoreTableRequest.field_d = Cp1252Strings.decode((byte) -125, var2Lifetime250);
           }
           var2Lifetime251 = HuffmanCodec.fetchLocalizedResource((byte) -50, "VOTE_LARGER_MAP_HEIGHT");
           if (var2Lifetime251 != null) {

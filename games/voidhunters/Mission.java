@@ -43,7 +43,7 @@ final class Mission implements DiffableState {
         if (param0 != -1) {
           Mission.b(36);
         }
-        stackIn_7_0 = (TextLayout.field_d) || (GetPhasedEnergyBeamPulsetime.e((byte) 103));
+        stackIn_7_0 = (TextLayout.playerGameDataLoaded) || (GetPhasedEnergyBeamPulsetime.e((byte) 103));
         return stackIn_7_0;
     }
 

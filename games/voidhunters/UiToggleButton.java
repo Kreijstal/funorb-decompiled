@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jla extends UiFocusableComponent {
+final class UiToggleButton extends UiFocusableComponent {
     static String field_B;
 
     final void fireAction(int param0, int param1, int param2, int param3) {
@@ -9,7 +9,7 @@ final class jla extends UiFocusableComponent {
         super.fireAction(param0, param1, param2, param3);
     }
 
-    private jla(String param0, UiRenderer param1, UiListener param2) {
+    private UiToggleButton(String param0, UiRenderer param1, UiListener param2) {
         super(param0, param1, param2);
         try {
           this.renderer = GetDebrisMax.field_s.field_d;
@@ -23,7 +23,7 @@ final class jla extends UiFocusableComponent {
         field_B = null;
     }
 
-    private jla(String param0, UiListener param1) {
+    private UiToggleButton(String param0, UiListener param1) {
         this(param0, GetDebrisMax.field_s.field_a, param1);
         try {
           this.renderer = GetDebrisMax.field_s.field_d;
@@ -32,20 +32,20 @@ final class jla extends UiFocusableComponent {
         }
     }
 
-    final static dnb a(byte[] param0, byte param1, int param2) {
-        dnb var3 = null;
+    final static ClientDataWriteRequest submitClientData(byte[] param0, byte param1, int param2) {
+        ClientDataWriteRequest var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        dnb stackIn_1_0 = null;
+        ClientDataWriteRequest stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new dnb(param0);
+          var3 = new ClientDataWriteRequest(param0);
           var4 = -111 / ((param1 + 2) / 45);
-          SetGrapplingHookAimarc.field_o.addLast(-10258, var3);
-          OpenGlRenderbuffer.a((byte) -61, var3, param2);
+          SetGrapplingHookAimarc.pendingClientDataWrites.addLast(-10258, var3);
+          OpenGlRenderbuffer.sendClientDataWrite((byte) -61, var3, param2);
           stackIn_1_0 = var3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -62,7 +62,7 @@ final class jla extends UiFocusableComponent {
         }
     }
 
-    jla(String param0, UiListener param1, boolean param2) {
+    UiToggleButton(String param0, UiListener param1, boolean param2) {
         this(param0, param1);
         try {
           this.active = param2 ? true : false;

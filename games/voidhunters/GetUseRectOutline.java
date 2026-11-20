@@ -180,7 +180,7 @@ final class GetUseRectOutline extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetUseRectOutline.b(true);
+            GetUseRectOutline.updatePlayerGameDataLoading(true);
           }
           stackIn_3_0 = new ConsoleValue(SetPointDefenceLaserReload.field_o);
           return stackIn_3_0;
@@ -198,22 +198,22 @@ final class GetUseRectOutline extends ConsoleCommand {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void updatePlayerGameDataLoading(boolean param0) {
         if (param0) {
           GetUseRectOutline.a(true, 69, -111, -75, true, 23, 116, false, false, true);
         }
-        if (TextLayout.field_d) {
+        if (TextLayout.playerGameDataLoaded) {
           return;
         }
-        if (MessageFactory.field_c == null) {
-          MessageFactory.field_c = ConstantMonochromeTextureOperation.a(true, 6);
+        if (MessageFactory.playerGameDataRequest == null) {
+          MessageFactory.playerGameDataRequest = ConstantMonochromeTextureOperation.requestClientData(true, 6);
         }
-        if (!MessageFactory.field_c.field_d) {
+        if (!MessageFactory.playerGameDataRequest.complete) {
           return;
         }
-        fab.a(-29365, MessageFactory.field_c.field_f);
-        MessageFactory.field_c = null;
-        TextLayout.field_d = true;
+        fab.loadPlayerGameData(-29365, MessageFactory.playerGameDataRequest.data);
+        MessageFactory.playerGameDataRequest = null;
+        TextLayout.playerGameDataLoaded = true;
         ilb.a((byte) -114);
         SetKeepTeamColours.a(15334);
     }

@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ik extends IntrusiveNode {
+final class IntegerRecordWriteRequest extends IntrusiveNode {
     int field_h;
     int field_d;
     int field_e;
-    int field_f;
-    int field_g;
+    int recordType;
+    int recordId;
     int field_i;
 
-    final static int[] a(int param0) {
+    final static int[] captureSettingsValues(int param0) {
         int[] var2 = new int[235];
         int[] var1 = var2;
         var2[85] = GetLagStandardDeviationIn.field_p;
@@ -253,7 +253,7 @@ final class ik extends IntrusiveNode {
         return var2;
     }
 
-    private ik() throws Throwable {
+    private IntegerRecordWriteRequest() throws Throwable {
         throw new Error();
     }
 

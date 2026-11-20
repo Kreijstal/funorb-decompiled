@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class br extends IntrusiveNode {
-    int field_e;
+final class IntegerArrayReadRequest extends IntrusiveNode {
+    int recordType;
     static lkb field_f;
-    int[] field_d;
+    int[] values;
 
-    private br() throws Throwable {
+    private IntegerArrayReadRequest() throws Throwable {
         throw new Error();
     }
 
     public static void clearSharedReferences(boolean param0) {
         if (!param0) {
-          br.clearSharedReferences(true);
+          IntegerArrayReadRequest.clearSharedReferences(true);
           field_f = null;
           return;
         }

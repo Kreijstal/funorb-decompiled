@@ -24,7 +24,7 @@ final class MatchResultsFactory implements GameStateFactory {
         return (SerializableGameState[]) ((Object) new MatchResults[param1]);
     }
 
-    final static void b(int param0, int param1) {
+    final static void sendClientDataRead(int param0, int param1) {
         if (param1 != 22681) {
           MatchResultsFactory.b((byte) 45);
         }

@@ -802,7 +802,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_playernotmember", 23100);
                 if (null != var2) {
-                  jla.field_B = Cp1252Strings.decode((byte) -125, var2);
+                  UiToggleButton.field_B = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_younotmember", 23100);
                 if (null != var2) {
@@ -862,7 +862,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_playersdontqualify", 23100);
                 if (var2 != null) {
-                  kob.field_e = Cp1252Strings.decode((byte) -125, var2);
+                  ClientDataReadRequest.field_e = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_playersdontqualify_selectgametab", 23100);
                 if (var2 != null) {

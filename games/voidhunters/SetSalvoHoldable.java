@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetSalvoHoldable extends ConsoleCommand {
-    static IntrusiveDeque field_o;
+    static IntrusiveDeque pendingIntegerRecordWrites;
 
     final static SoftwareIndexedSprite2D a(int param0, SoftwareIndexedSprite2D param1, int[] param2) {
         SoftwareIndexedSprite2D var3 = null;
@@ -59,10 +59,10 @@ final class SetSalvoHoldable extends ConsoleCommand {
     public static void clearSharedReferences(byte param0) {
         if (param0 != -127) {
           SetSalvoHoldable.a(8, 67, -87);
-          field_o = null;
+          pendingIntegerRecordWrites = null;
           return;
         }
-        field_o = null;
+        pendingIntegerRecordWrites = null;
     }
 
     SetSalvoHoldable(String param0, Class[] param1, String param2) {
@@ -79,7 +79,7 @@ final class SetSalvoHoldable extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(30, 62, arguments[0].intValue(23));
           if (obfuscationGuard > -119) {
-            field_o = (IntrusiveDeque) null;
+            pendingIntegerRecordWrites = (IntrusiveDeque) null;
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -98,6 +98,6 @@ final class SetSalvoHoldable extends ConsoleCommand {
     }
 
     static {
-        field_o = new IntrusiveDeque();
+        pendingIntegerRecordWrites = new IntrusiveDeque();
     }
 }

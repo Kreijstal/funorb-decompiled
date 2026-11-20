@@ -5,7 +5,7 @@ final class PlayerReady implements DiffableState {
     static String field_a;
     private int field_b;
     static int field_c;
-    static IntrusiveDeque field_d;
+    static IntrusiveDeque activeLoopingSounds;
 
     public final boolean differsFrom(byte param0, SerializableGameState param1) {
         PlayerReady var3 = null;
@@ -39,10 +39,10 @@ final class PlayerReady implements DiffableState {
         field_a = null;
         if (param0 != -88) {
           field_c = -87;
-          field_d = null;
+          activeLoopingSounds = null;
           return;
         }
-        field_d = null;
+        activeLoopingSounds = null;
     }
 
     public final void copyTo(byte param0, SerializableGameState param1) {

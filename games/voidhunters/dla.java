@@ -355,7 +355,7 @@ final class dla {
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
             es.field_b.blueprint = null;
-            GetMissionResnetResourceTickTime.e((byte) -111);
+            GetMissionResnetResourceTickTime.savePlayerGameData((byte) -111);
             gna.a((Throwable) ((Object) exception), "player_gamedata version " + es.field_b.version + " blueprint is corrupted", 0);
           }
         } else {

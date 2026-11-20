@@ -10,11 +10,11 @@ final class GetExplosionProjectileOndamageParticles extends ConsoleCommand {
         if (!SetReloadBarWidth.isCachedFrameAvailable((byte) -113)) {
           return -1;
         }
-        if (null == qn.field_h.g(0)) {
+        if (null == HighscoreTableRequest.field_h.g(0)) {
           return -1;
         }
         if (param0 < -21) {
-          return qn.field_h.g(0).x;
+          return HighscoreTableRequest.field_h.g(0).x;
         }
         return -42;
     }

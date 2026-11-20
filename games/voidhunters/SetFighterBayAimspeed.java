@@ -60,7 +60,7 @@ final class SetFighterBayAimspeed extends ConsoleCommand {
         var9 = VoidHunters.field_G;
         try {
           var10 = (CharSequence) ((Object) param2);
-          var3_int = qn.a(param1, (byte) 58, var10);
+          var3_int = HighscoreTableRequest.countOccurrences(param1, (byte) 58, var10);
           var4 = new String[var3_int + 1];
           var5 = 0;
           var6 = 0;

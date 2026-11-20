@@ -70,7 +70,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_health_bar_width(" + TextureFilterMode.field_d + ")");
         System.out.println("set_health_bar_height(" + NebulaField.field_d + ")");
         System.out.println("set_reload_bar_width(" + GetSniperCannonAimarc.field_p + ")");
-        System.out.println("set_reload_bar_height(" + ifa.field_d + ")");
+        System.out.println("set_reload_bar_height(" + HighscoreValueRequest.field_d + ")");
         System.out.println("set_special_order_bar_x(" + SetFighterBayAimarc.field_o + ")");
         System.out.println("set_special_order_bar_y_offset(" + GetSalvoDamageMultiplier.field_p + ")");
         System.out.println("set_special_order_box_width(" + chb.field_a + ")");

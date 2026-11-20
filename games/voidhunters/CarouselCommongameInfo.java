@@ -807,10 +807,10 @@ final class CarouselCommongameInfo implements DiffableState {
             UiStatefulStyle.c(9487);
             var8 = SetTestActionLag.a(this.history[var5], (byte) -117);
             if (var8 != var7) {
-              var9 = dnb.c((byte) -39);
+              var9 = ClientDataWriteRequest.readCarouselState((byte) -39);
               UiStatefulStyle.c(9487);
               this.swapSlotsForDebug(var5, var6, 42);
-              this.history[var5] = dnb.c((byte) -39);
+              this.history[var5] = ClientDataWriteRequest.readCarouselState((byte) -39);
               if (!this.shallowCopyFailed) {
                 GetSniperCannonAimarc.a(-6940, "Carousel_commongame shallow copy check: A field was changed before it was prepared");
                 GetSniperCannonAimarc.a(-6940, "******************************************");

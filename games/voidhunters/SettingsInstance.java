@@ -171,7 +171,7 @@ final class SettingsInstance implements DiffableState {
 
     SettingsInstance() {
         GetPhasedEnergyBeamProjectiles.a(107, GetOndamageParticleSpeed.field_p);
-        this.values = ik.a(-21049);
+        this.values = IntegerRecordWriteRequest.captureSettingsValues(-21049);
     }
 
     public final boolean differsFrom(byte param0, SerializableGameState param1) {

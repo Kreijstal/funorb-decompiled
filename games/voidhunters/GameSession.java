@@ -384,7 +384,7 @@ final class GameSession {
               }
               es.field_b.blueprint = var4;
               if (!bqa.a(false)) {
-                GetMissionResnetResourceTickTime.e((byte) -39);
+                GetMissionResnetResourceTickTime.savePlayerGameData((byte) -39);
               }
             } else {
               this.field_d = 1;
@@ -3370,11 +3370,11 @@ final class GameSession {
           if (var22 != null) {
             if (5 == param0.missionState.getMissionPhase(8)) {
               if (GetSniperCannonAimarc.field_p > 0 &&
-                ifa.field_d > 0) {
+                HighscoreValueRequest.field_d > 0) {
                 boolean decompiledFrameRemainder0 = true;
                 var4_int = GetSniperCannonAimarc.field_p;
                 var5 = PartitionZoneFactory.field_a - (12 + var4_int);
-                var6 = -ifa.field_d - 12 + (MissionVariableFactory.field_a + SetToggledScoreboard.field_o.screenY - SoftwareRasterizer2D.height);
+                var6 = -HighscoreValueRequest.field_d - 12 + (MissionVariableFactory.field_a + SetToggledScoreboard.field_o.screenY - SoftwareRasterizer2D.height);
                 if ((this.field_v != null &&
                   !this.field_v.a(1, true)) &&
                   (decompiledFrameRemainder0 = !(!this.field_v.b(1, -34)))) {
@@ -3389,10 +3389,10 @@ final class GameSession {
                   var9 = var7_int * var4_int / 255;
                   var10 = 256 * var7_int + 65536 * (-var7_int + 255);
                   if (this.field_i < 255) {
-                    var6 = var6 + ((-this.field_i + 255) * (2 * ifa.field_d) >> 8);
+                    var6 = var6 + ((-this.field_i + 255) * (2 * HighscoreValueRequest.field_d) >> 8);
                     var5 = var5 + ((32 + var4_int) * (-this.field_i + 255) >> 8);
                   }
-                  PlayerJoinFactory.a(var6, ifa.field_d, GetGrapplingHookAimarc.a(param1 ^ -46080, var10), var9, var5, var10, 0);
+                  PlayerJoinFactory.a(var6, HighscoreValueRequest.field_d, GetGrapplingHookAimarc.a(param1 ^ -46080, var10), var9, var5, var10, 0);
                   for (var11 = 125; var11 < var8; var11 += 125) {
                     var12 = var11 * var4_int / var8 + var5;
                     c.a(var6 + 2, var12, var12, var6, -16777216, 4473924);
@@ -4724,7 +4724,7 @@ final class GameSession {
           var14_int = 0;
           var15 = 0;
           for (var16 = param6; var16 < param1; var16++) {
-            if (qn.a(var16, (byte) -25)) {
+            if (HighscoreTableRequest.isVoteOptionVisible(var16, (byte) -25)) {
               this.a(var16, var15, param10, param0, param5, param7, param3, 118, var14_int, param4, param8, param11, param12);
               var14_int++;
               if (param9 <= var14_int) {
@@ -6828,7 +6828,7 @@ final class GameSession {
             var17Lifetime1 = 0;
             for (var23 = 0; param10[var16].length > var23; var23++) {
               var24 = param10[var16][var23];
-              if (qn.a(var24, (byte) -25)) {
+              if (HighscoreTableRequest.isVoteOptionVisible(var24, (byte) -25)) {
                 this.a(var24, var15Lifetime1, param4, param3, param5, param6, param2, 109, var14_intLifetime1Lifetime1, param1, param11 + 18, var17Lifetime1 + param8, param9);
                 var14_intLifetime1Lifetime1++;
               }

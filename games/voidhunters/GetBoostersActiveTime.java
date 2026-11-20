@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetBoostersActiveTime extends ConsoleCommand {
-    static IntrusiveDeque field_q;
+    static IntrusiveDeque pendingClientDataReads;
     static int field_p;
     static int field_o;
 
     final static void f(byte param0) {
         if (param0 != -74) {
-          field_q = (IntrusiveDeque) null;
+          pendingClientDataReads = (IntrusiveDeque) null;
         }
         ArmBehaviour.a(GrapplingHook.field_x, true, -17833, SetResourceNodeCaptureTime.field_p);
         kmb.field_c = true;
@@ -266,11 +266,11 @@ final class GetBoostersActiveTime extends ConsoleCommand {
 
     public static void clearSharedReferences(byte param0) {
         int var1 = -18 % ((-34 - param0) / 59);
-        field_q = null;
+        pendingClientDataReads = null;
     }
 
     static {
-        field_q = new IntrusiveDeque();
+        pendingClientDataReads = new IntrusiveDeque();
         field_p = 100;
         field_o = 1;
     }

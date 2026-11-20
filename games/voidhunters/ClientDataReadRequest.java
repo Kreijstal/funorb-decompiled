@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kob extends IntrusiveNode {
-    byte[] field_f;
+final class ClientDataReadRequest extends IntrusiveNode {
+    byte[] data;
     static String field_e;
-    boolean field_d;
+    boolean complete;
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4) {
+    final static void drawHighlightedBounds(byte param0, int param1, int param2, int param3, int param4) {
         int var5 = 128 + (TextureLineShape.sinAngle(SetMinimapWidth.field_o * 128 % 8192, param0 + 90) * 127 >> 16);
         var5 = var5 / 4;
         int var6 = 16711680 | var5 << 8 | var5;
@@ -32,7 +32,7 @@ final class kob extends IntrusiveNode {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int alignToEight(int param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         if (param1 == -18262) {
@@ -46,7 +46,7 @@ final class kob extends IntrusiveNode {
         return -48;
     }
 
-    kob() {
+    ClientDataReadRequest() {
     }
 
     static {

@@ -105,7 +105,7 @@ final class jk extends Widget {
     }
 
     final static void h(int param0) {
-        GetOndamageParticleSpeed.field_p = ik.a(param0 - 21167);
+        GetOndamageParticleSpeed.field_p = IntegerRecordWriteRequest.captureSettingsValues(param0 - 21167);
         if (param0 != 118) {
           field_Cb = 85;
         }

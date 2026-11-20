@@ -277,7 +277,7 @@ final class ComponentCollision extends IntrusiveNode {
                     ObjectiveMarker.field_b.enabled = false;
                     if (!(!ObjectiveMarker.field_b.field_Q)) {
                       if (0 == GetReverbWidth.field_o.field_a.field_Ab) {
-                        NebulaFieldFactory.field_a = kob.field_e;
+                        NebulaFieldFactory.field_a = ClientDataReadRequest.field_e;
                       } else {
                         NebulaFieldFactory.field_a = SetReverbGain.a(SetInnateThrusters.field_p, new String[]{bd.field_a}, 121);
                       }

@@ -89,7 +89,7 @@ final class SetServerinfoComponentstate extends ConsoleCommand {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_3_0 = br.field_f;
+            stackIn_3_0 = IntegerArrayReadRequest.field_f;
             return stackIn_3_0;
           }
           if (var2_int > 255) {
@@ -98,7 +98,7 @@ final class SetServerinfoComponentstate extends ConsoleCommand {
           }
           var3 = SetFighterBayAimspeed.a((byte) -67, '.', param1);
           if (2 > var3.length) {
-            stackIn_10_0 = br.field_f;
+            stackIn_10_0 = IntegerArrayReadRequest.field_f;
             return stackIn_10_0;
           }
           var4 = var3;

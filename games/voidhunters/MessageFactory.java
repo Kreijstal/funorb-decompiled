@@ -6,7 +6,7 @@ import java.io.*;
 final class MessageFactory implements GameStateFactory {
     static String field_b;
     static String field_a;
-    static kob field_c;
+    static ClientDataReadRequest playerGameDataRequest;
 
     public final SerializableGameState create(byte param0) {
         int var2 = 124 % ((-64 - param0) / 50);
@@ -15,7 +15,7 @@ final class MessageFactory implements GameStateFactory {
 
     public static void clearSharedReferences(int param0) {
         field_a = null;
-        field_c = null;
+        playerGameDataRequest = null;
         field_b = null;
         if (param0 < 76) {
           field_b = (String) null;
@@ -24,7 +24,7 @@ final class MessageFactory implements GameStateFactory {
 
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 != 11995) {
-          field_c = (kob) null;
+          playerGameDataRequest = (ClientDataReadRequest) null;
           return (SerializableGameState[]) ((Object) new Message[param1]);
         }
         return (SerializableGameState[]) ((Object) new Message[param1]);

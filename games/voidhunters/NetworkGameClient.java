@@ -6,7 +6,7 @@ abstract class NetworkGameClient extends GameApplet {
     private int affiliateId;
     static int[] field_A;
     private int serverNumber;
-    static IntrusiveDeque field_y;
+    static IntrusiveDeque activeOneShotSounds;
     private int secondaryGamePort;
     private boolean member;
     private long instanceId;
@@ -18,7 +18,7 @@ abstract class NetworkGameClient extends GameApplet {
 
     private final void handleSessionCookiePacket(byte param0) {
         if (param0 != -116) {
-          this.e((byte) 92);
+          this.enableClientDataReplies((byte) 92);
         }
         String var2 = OpenGlPostEffect.readIncomingString(true);
         MatchResultsFactory.setSessionCookie(MissionList.b((byte) -119), (byte) 56, var2);
@@ -380,10 +380,10 @@ abstract class NetworkGameClient extends GameApplet {
           this.enableHighscoreReplies(30138);
         }
         if (param0) {
-          this.e(true);
+          this.enableIntegerRecordReplies(true);
         }
         if (param6) {
-          this.e((byte) -4);
+          this.enableClientDataReplies((byte) -4);
         }
         if (param2) {
           this.f((byte) -1);
@@ -440,7 +440,7 @@ abstract class NetworkGameClient extends GameApplet {
         SetBombletSprayProjectileLife.allowedCommonPackets[2] = true;
     }
 
-    private final void e(boolean param0) {
+    private final void enableIntegerRecordReplies(boolean param0) {
         SetBombletSprayProjectileLife.allowedCommonPackets[4] = param0;
     }
 
@@ -563,7 +563,7 @@ abstract class NetworkGameClient extends GameApplet {
                 je.a((byte) 113);
                 break;
               case 4:
-                SetLag.a(-8999);
+                SetLag.handleIntegerRecordReply(-8999);
                 break;
               case 7:
                 this.handleSessionCookiePacket((byte) -116);
@@ -602,13 +602,13 @@ abstract class NetworkGameClient extends GameApplet {
                 iw.k((byte) -38);
                 break;
               case 5:
-                GetArmageddonLength.e((byte) -128);
+                GetArmageddonLength.handleClientDataReply((byte) -128);
                 break;
               case 3:
                 SetSniperCannonRandomness.a(0);
                 break;
               case 2:
-                GetLaserAimspeed.a(1);
+                GetLaserAimspeed.handleHighscoreReply(1);
                 break;
             }
           }
@@ -647,7 +647,7 @@ abstract class NetworkGameClient extends GameApplet {
         SetBombletSprayProjectileLife.allowedCommonPackets[16] = true;
     }
 
-    private final void e(byte param0) {
+    private final void enableClientDataReplies(byte param0) {
         SetBombletSprayProjectileLife.allowedCommonPackets[5] = true;
         if (param0 != -4) {
           String var3 = (String) null;
@@ -795,9 +795,9 @@ abstract class NetworkGameClient extends GameApplet {
     }
 
     public static void clearSharedReferences(boolean param0) {
-        field_y = null;
+        activeOneShotSounds = null;
         if (param0) {
-          field_y = (IntrusiveDeque) null;
+          activeOneShotSounds = (IntrusiveDeque) null;
         }
         field_A = null;
     }

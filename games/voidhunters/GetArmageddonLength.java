@@ -18,18 +18,18 @@ final class GetArmageddonLength extends ConsoleCommand {
         }
     }
 
-    final static void e(byte param0) {
+    final static void handleClientDataReply(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        dnb var5_ref_dnb = null;
+        ClientDataWriteRequest var5_ref_dnb = null;
         Object var6 = null;
         int var7 = 0;
         byte[] var8 = null;
-        kob var9 = null;
+        ClientDataReadRequest var9 = null;
         IsaacPacketBuffer var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
@@ -45,10 +45,10 @@ final class GetArmageddonLength extends ConsoleCommand {
               return;
             }
             var4 = var10.readInt(100);
-            var5_ref_dnb = (dnb) (SetGrapplingHookAimarc.field_o.first(0));
+            var5_ref_dnb = (ClientDataWriteRequest) (SetGrapplingHookAimarc.pendingClientDataWrites.first(0));
             while (var5_ref_dnb != null) {
-              if (var5_ref_dnb.field_d != var4) {
-                var5_ref_dnb = (dnb) (SetGrapplingHookAimarc.field_o.next((byte) 78));
+              if (var5_ref_dnb.payloadCrc != var4) {
+                var5_ref_dnb = (ClientDataWriteRequest) (SetGrapplingHookAimarc.pendingClientDataWrites.next((byte) 78));
                 continue;
               }
               break;
@@ -60,7 +60,7 @@ final class GetArmageddonLength extends ConsoleCommand {
             FighterBayWeaponDefinition.l(-121);
             return;
           }
-          var9 = (kob) (GetBoostersActiveTime.field_q.first(0));
+          var9 = (ClientDataReadRequest) (GetBoostersActiveTime.pendingClientDataReads.first(0));
           if (var9 == null) {
             FighterBayWeaponDefinition.l(-126);
             return;
@@ -80,8 +80,8 @@ final class GetArmageddonLength extends ConsoleCommand {
             FighterBayWeaponDefinition.l(-126);
             return;
           }
-          var9.field_f = (byte[]) (var6);
-          var9.field_d = true;
+          var9.data = (byte[]) (var6);
+          var9.complete = true;
           var9.unlink(-3846);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

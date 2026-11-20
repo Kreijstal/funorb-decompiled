@@ -195,7 +195,7 @@ final class wf {
         var5 = 2;
         var6 = SetReloadBarWidth.field_p[this.field_c][param0];
         var7 = SetReloadBarWidth.field_p[this.field_c].length;
-        var8 = ifa.field_g[var6];
+        var8 = HighscoreValueRequest.field_g[var6];
         if (var6 == 6) {
           if (SetCountermeasureLauncherProjectileLife.field_o != 0 &&
             wgb.field_f != 0 &&
@@ -217,7 +217,7 @@ final class wf {
             decompiledFrameRemainder0 = false;
           }
           else {
-            var8 = ifa.field_g[5];
+            var8 = HighscoreValueRequest.field_g[5];
             var9_ref_String = var8;
             var9_ref_StringLifetime3 = var8;
           }

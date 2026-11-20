@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dnb extends IntrusiveNode {
-    int field_d;
-    byte[] field_e;
+final class ClientDataWriteRequest extends IntrusiveNode {
+    int payloadCrc;
+    byte[] data;
 
-    final static CarouselSlot c(byte param0) {
+    final static CarouselSlot readCarouselState(byte param0) {
         UiViewport.field_w.position = 0;
         if (param0 != -39) {
           return (CarouselSlot) null;
@@ -22,9 +22,9 @@ final class dnb extends IntrusiveNode {
         return var1;
     }
 
-    dnb(byte[] param0) {
+    ClientDataWriteRequest(byte[] param0) {
         try {
-          this.field_e = param0;
+          this.data = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dnb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

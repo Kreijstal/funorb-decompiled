@@ -37,26 +37,26 @@ final class GetReverbGain extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, byte param1) {
+    final static void resendClientDataRequests(int param0, byte param1) {
         IntrusiveNode var2 = null;
         int var3 = 0;
-        dnb var4 = null;
+        ClientDataWriteRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
         var3 = VoidHunters.field_G;
         try {
-          var4 = (dnb) (SetGrapplingHookAimarc.field_o.first(0));
+          var4 = (ClientDataWriteRequest) (SetGrapplingHookAimarc.pendingClientDataWrites.first(0));
           if (param1 != -52) {
             field_o = (TextureFormat) null;
           }
           while (var4 != null) {
-            OpenGlRenderbuffer.a((byte) 88, var4, param0);
-            var4 = (dnb) (SetGrapplingHookAimarc.field_o.next((byte) 89));
+            OpenGlRenderbuffer.sendClientDataWrite((byte) 88, var4, param0);
+            var4 = (ClientDataWriteRequest) (SetGrapplingHookAimarc.pendingClientDataWrites.next((byte) 89));
           }
-          var2 = GetBoostersActiveTime.field_q.first(0);
+          var2 = GetBoostersActiveTime.pendingClientDataReads.first(0);
           while (var2 != null) {
-            MatchResultsFactory.b(param0, 22681);
-            var2 = GetBoostersActiveTime.field_q.next((byte) 54);
+            MatchResultsFactory.sendClientDataRead(param0, 22681);
+            var2 = GetBoostersActiveTime.pendingClientDataReads.next((byte) 54);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

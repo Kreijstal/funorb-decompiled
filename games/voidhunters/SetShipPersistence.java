@@ -32,7 +32,7 @@ final class SetShipPersistence extends ConsoleCommand {
         try {
           var2_int = param1.length();
           if (var2_int == 0) {
-            stackIn_4_0 = br.field_f;
+            stackIn_4_0 = IntegerArrayReadRequest.field_f;
             return stackIn_4_0;
           }
           if (var2_int > 63) {

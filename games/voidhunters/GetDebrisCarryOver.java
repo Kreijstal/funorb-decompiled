@@ -36,7 +36,7 @@ final class GetDebrisCarryOver extends ConsoleCommand {
           }
           if (param0 != null &&
             param0.length() >= cd.field_b) {
-            if (param0.length() > qn.field_f) {
+            if (param0.length() > HighscoreTableRequest.field_f) {
               return true;
             }
             return false;

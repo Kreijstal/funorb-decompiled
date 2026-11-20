@@ -60,7 +60,7 @@ final class lkb {
             param0.length() != 0) {
             var2_int = param0.indexOf('@');
             if (-1 == var2_int) {
-              stackIn_10_0 = br.field_f;
+              stackIn_10_0 = IntegerArrayReadRequest.field_f;
               return stackIn_10_0;
             }
             var3 = param0.substring(0, var2_int);

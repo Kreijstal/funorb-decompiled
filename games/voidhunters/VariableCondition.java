@@ -226,7 +226,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
     final static void b(int param0) {
         int var2 = VoidHunters.field_G;
         if ((1 << vqa.field_g.localPlayerIndex & vqa.field_g.state.field_k) != 0) {
-          ifa.field_g[10] = !vqa.field_g.field_h ? GetMachineGunAimarc.field_o : csa.field_b;
+          HighscoreValueRequest.field_g[10] = !vqa.field_g.field_h ? GetMachineGunAimarc.field_o : csa.field_b;
           if (param0 > -76) {
             field_e = false;
             return;
@@ -235,21 +235,21 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         }
         if (vqa.field_g.state.field_k == 0) {
           if ((vqa.field_g.field_B | 1 << vqa.field_g.localPlayerIndex) != -1 + (1 << vqa.field_g.state.field_a)) {
-            ifa.field_g[10] = !vqa.field_g.field_h ? ffb.field_d : eua.field_a;
+            HighscoreValueRequest.field_g[10] = !vqa.field_g.field_h ? ffb.field_d : eua.field_a;
             if (param0 > -76) {
               field_e = false;
               return;
             }
             return;
           }
-          ifa.field_g[10] = vqa.field_g.field_h ? pva.field_e : SettingsChangeFactory.field_d;
+          HighscoreValueRequest.field_g[10] = vqa.field_g.field_h ? pva.field_e : SettingsChangeFactory.field_d;
           if (param0 <= -76) {
             return;
           }
           field_e = false;
           return;
         }
-        ifa.field_g[10] = !vqa.field_g.field_h ? SetBlueprintSaveTime.field_o : BufferedFile.field_d;
+        HighscoreValueRequest.field_g[10] = !vqa.field_g.field_h ? SetBlueprintSaveTime.field_o : BufferedFile.field_d;
         if (param0 <= -76) {
           return;
         }

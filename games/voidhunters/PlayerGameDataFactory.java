@@ -12,14 +12,14 @@ final class PlayerGameDataFactory implements GameStateFactory {
             if (null != psb.field_b &&
               psb.field_b.focusLost) {
               spb.a((byte) -95);
-              qn.field_h.a(false, new mr(qn.field_h, AdminMessageFactory.field_a));
+              HighscoreTableRequest.field_h.a(false, new mr(HighscoreTableRequest.field_h, AdminMessageFactory.field_a));
             }
             return;
           }
-          qn.field_h.processPointerInput((byte) -5, ata.field_H, SetOndamageParticleFadestart.field_o, param0);
-          qn.field_h.h(19976);
+          HighscoreTableRequest.field_h.processPointerInput((byte) -5, ata.field_H, SetOndamageParticleFadestart.field_o, param0);
+          HighscoreTableRequest.field_h.h(19976);
           while (ata.e(127)) {
-            qn.field_h.dispatchKey(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
+            HighscoreTableRequest.field_h.dispatchKey(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

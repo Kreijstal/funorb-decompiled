@@ -3,26 +3,26 @@
  */
 import java.util.*;
 
-final class qn extends IntrusiveNode {
+final class HighscoreTableRequest extends IntrusiveNode {
     static String field_d;
     static int field_f;
-    int field_e;
-    int field_i;
+    int id;
+    int rowLimit;
     static ida field_h;
-    int field_g;
+    int columnCount;
 
-    final static void c(byte param0) {
-        NetworkGameClient.field_y = new IntrusiveDeque();
-        PlayerReady.field_d = new IntrusiveDeque();
+    final static void initializeSoundQueues(byte param0) {
+        NetworkGameClient.activeOneShotSounds = new IntrusiveDeque();
+        PlayerReady.activeLoopingSounds = new IntrusiveDeque();
         if (param0 >= 52) {
           OpenGlGpuToolkit.field_Jc = new Random();
           return;
         }
-        qn.a(11, (byte) 95);
+        HighscoreTableRequest.isVoteOptionVisible(11, (byte) 95);
         OpenGlGpuToolkit.field_Jc = new Random();
     }
 
-    final static boolean a(int param0, byte param1) {
+    final static boolean isVoteOptionVisible(int param0, byte param1) {
         if (param1 != -25) {
           return true;
         }
@@ -38,7 +38,7 @@ final class qn extends IntrusiveNode {
         return false;
     }
 
-    final static int a(char param0, byte param1, CharSequence param2) {
+    final static int countOccurrences(char param0, byte param1, CharSequence param2) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;
@@ -81,7 +81,7 @@ final class qn extends IntrusiveNode {
 
     public static void clearSharedReferences(boolean param0) {
         if (!param0) {
-          qn.c((byte) -115);
+          HighscoreTableRequest.initializeSoundQueues((byte) -115);
           field_h = null;
           field_d = null;
           return;
@@ -90,7 +90,7 @@ final class qn extends IntrusiveNode {
         field_d = null;
     }
 
-    private qn() throws Throwable {
+    private HighscoreTableRequest() throws Throwable {
         throw new Error();
     }
 

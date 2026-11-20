@@ -29,7 +29,7 @@ final class SetReloadBarHeight extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ifa.field_d = arguments[0].intValue(51);
+          HighscoreValueRequest.field_d = arguments[0].intValue(51);
           if (obfuscationGuard >= -119) {
             field_o = (String) null;
           }

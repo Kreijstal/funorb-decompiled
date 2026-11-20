@@ -3,11 +3,11 @@
  */
 final class SetDebugLineLife extends ConsoleCommand {
     static String field_o;
-    static IntrusiveDeque field_p;
+    static IntrusiveDeque pendingIntegerArrayReads;
 
     public static void clearSharedReferences(byte param0) {
         field_o = null;
-        field_p = null;
+        pendingIntegerArrayReads = null;
         int var1 = -31 / ((44 - param0) / 52);
     }
 
@@ -20,7 +20,7 @@ final class SetDebugLineLife extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            field_p = (IntrusiveDeque) null;
+            pendingIntegerArrayReads = (IntrusiveDeque) null;
           }
           SetAutoaim.field_o = arguments[0].intValue(60);
           stackIn_3_0 = new ConsoleValue("void");
@@ -45,6 +45,6 @@ final class SetDebugLineLife extends ConsoleCommand {
 
     static {
         field_o = "Unable to connect to the data server. Please check any firewall you are using.";
-        field_p = new IntrusiveDeque();
+        pendingIntegerArrayReads = new IntrusiveDeque();
     }
 }

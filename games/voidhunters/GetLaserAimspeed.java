@@ -9,7 +9,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0) {
+    final static void handleHighscoreReply(int param0) {
         int var8_int = 0;
         int var19 = 0;
         int incrementValue$0 = 0;
@@ -19,8 +19,8 @@ final class GetLaserAimspeed extends ConsoleCommand {
         RuntimeException var1 = null;
         int var2 = 0;
         int var3 = 0;
-        ifa var4 = null;
-        qn var4_ref = null;
+        HighscoreValueRequest var4 = null;
+        HighscoreTableRequest var4_ref = null;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -54,10 +54,10 @@ final class GetLaserAimspeed extends ConsoleCommand {
           var2 = var27.readUnsignedByte((byte) -93);
           if (0 == var2) {
             var3 = var27.readUnsignedShort(param0 + 1868);
-            var4_ref = (qn) (RasterShapesTextureOperation.field_j.first(0));
+            var4_ref = (HighscoreTableRequest) (RasterShapesTextureOperation.field_j.first(0));
             while (var4_ref != null) {
-              if (var3 != var4_ref.field_e) {
-                var4_ref = (qn) (RasterShapesTextureOperation.field_j.next((byte) 17));
+              if (var3 != var4_ref.id) {
+                var4_ref = (HighscoreTableRequest) (RasterShapesTextureOperation.field_j.next((byte) 17));
                 continue;
               }
               break;
@@ -68,10 +68,10 @@ final class GetLaserAimspeed extends ConsoleCommand {
             }
             var5 = var27.readUnsignedByte((byte) -97);
             if (0 != var5) {
-              var6 = var4_ref.field_i;
+              var6 = var4_ref.rowLimit;
               OpenGlClientVertexBuffer.field_d[0].field_b = null;
               OpenGlClientVertexBuffer.field_d[0].field_a = IntIndexTable.field_a;
-              var7 = var4_ref.field_g;
+              var7 = var4_ref.columnCount;
               OpenGlClientVertexBuffer.field_d[0].field_c = false;
               for (var8_int = 1; var8_int < var5; var8_int++) {
                 OpenGlClientVertexBuffer.field_d[var8_int].field_a = var27.readString(param0 - 2);
@@ -148,10 +148,10 @@ final class GetLaserAimspeed extends ConsoleCommand {
           if (var2 == 1) {
             var3Lifetime1 = var27.readUnsignedShort(1869);
             var27.readLong(param0 ^ 254);
-            var4 = (ifa) (SetRespawnTime.field_p.first(param0 - 1));
+            var4 = (HighscoreValueRequest) (SetRespawnTime.field_p.first(param0 - 1));
             while (var4 != null) {
-              if (var3Lifetime1 != var4.field_i) {
-                var4 = (ifa) (SetRespawnTime.field_p.next((byte) 10));
+              if (var3Lifetime1 != var4.id) {
+                var4 = (HighscoreValueRequest) (SetRespawnTime.field_p.next((byte) 10));
                 continue;
               }
               break;
@@ -205,7 +205,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
     public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 <= 92) {
-          GetLaserAimspeed.a(-87);
+          GetLaserAimspeed.handleHighscoreReply(-87);
         }
     }
 

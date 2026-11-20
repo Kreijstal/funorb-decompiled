@@ -8,7 +8,7 @@ final class fab {
     private boolean field_d;
     private TextureProvider field_a;
 
-    final static void a(int param0, byte[] param1) {
+    final static void loadPlayerGameData(int param0, byte[] param1) {
         String var4 = null;
         PlayerGameData var2_ref = null;
         GetDebrisThrowable.a(false, "Reading gamedata from server");
@@ -18,7 +18,7 @@ final class fab {
         } catch (Exception exception) {
           var4 = TextNode.formatByteArray(param1, param0 ^ 29411);
           var2_ref = new PlayerGameData();
-          GetMissionResnetResourceTickTime.e((byte) -69);
+          GetMissionResnetResourceTickTime.savePlayerGameData((byte) -69);
           gna.a((Throwable) ((Object) exception), "Gamedata is corrupted - " + var4, 0);
         }
         if (var2_ref == null) {
@@ -349,7 +349,7 @@ final class fab {
         int var9Lifetime1;
         var10 = VoidHunters.field_G;
         try {
-          var7_int = kob.a(param1, -18262);
+          var7_int = ClientDataReadRequest.alignToEight(param1, -18262);
           if (PartitionZone.field_a == null) {
             PartitionZone.field_a = new java.security.SecureRandom();
           }

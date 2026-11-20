@@ -13,7 +13,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
         }
         ComponentCollision.a("Initing text...", (byte) -82);
         vjb.field_a = true;
-        if (null != ifa.field_g) {
+        if (null != HighscoreValueRequest.field_g) {
           return;
         }
         try {
@@ -30,33 +30,33 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
               ocb.field_m[var1_int] = ocb.field_m[var1_int].toUpperCase();
             }
           }
-          ifa.field_g = new String[25];
-          ifa.field_g[9] = PhasedEnergyBeamWeaponDefinition.field_b;
-          ifa.field_g[18] = ita.field_D;
-          ifa.field_g[22] = GetSalvoaim.field_p;
-          ifa.field_g[20] = veb.field_c;
-          ifa.field_g[6] = null;
-          ifa.field_g[21] = SetCountermeasureLauncherFireForce.field_q;
-          ifa.field_g[3] = SetMissilesExplosionPower.field_o;
-          ifa.field_g[24] = MissionEvent.field_f + ":";
-          ifa.field_g[11] = tua.field_b;
-          ifa.field_g[14] = fpa.field_d;
-          ifa.field_g[2] = nna.field_D;
-          ifa.field_g[15] = GetFightersPerPlayerMaximum.field_q;
-          ifa.field_g[13] = ujb.field_d;
-          ifa.field_g[19] = Widget.field_V + ":";
-          ifa.field_g[5] = ffb.field_b;
-          ifa.field_g[7] = bw.field_a;
-          ifa.field_g[4] = DebugRequest.field_j;
-          ifa.field_g[12] = SetBombletSprayRandomness.field_o;
-          ifa.field_g[1] = GetAiFiringRangeUpshift.field_p;
-          ifa.field_g[17] = SetUseLines.field_o;
-          ifa.field_g[16] = GetSniperCannonProjectileOndamageParticles.field_p;
-          ifa.field_g[0] = SetPhasedEnergyBeamPulsetime.field_p;
-          ifa.field_g[23] = SpawnChoiceFactory.field_b;
-          for (var1_int = 0; ifa.field_g.length > var1_int; var1_int++) {
-            if (null != ifa.field_g[var1_int]) {
-              ifa.field_g[var1_int] = SetFogOfWarSensorRange.a(-1, ifa.field_g[var1_int]);
+          HighscoreValueRequest.field_g = new String[25];
+          HighscoreValueRequest.field_g[9] = PhasedEnergyBeamWeaponDefinition.field_b;
+          HighscoreValueRequest.field_g[18] = ita.field_D;
+          HighscoreValueRequest.field_g[22] = GetSalvoaim.field_p;
+          HighscoreValueRequest.field_g[20] = veb.field_c;
+          HighscoreValueRequest.field_g[6] = null;
+          HighscoreValueRequest.field_g[21] = SetCountermeasureLauncherFireForce.field_q;
+          HighscoreValueRequest.field_g[3] = SetMissilesExplosionPower.field_o;
+          HighscoreValueRequest.field_g[24] = MissionEvent.field_f + ":";
+          HighscoreValueRequest.field_g[11] = tua.field_b;
+          HighscoreValueRequest.field_g[14] = fpa.field_d;
+          HighscoreValueRequest.field_g[2] = nna.field_D;
+          HighscoreValueRequest.field_g[15] = GetFightersPerPlayerMaximum.field_q;
+          HighscoreValueRequest.field_g[13] = ujb.field_d;
+          HighscoreValueRequest.field_g[19] = Widget.field_V + ":";
+          HighscoreValueRequest.field_g[5] = ffb.field_b;
+          HighscoreValueRequest.field_g[7] = bw.field_a;
+          HighscoreValueRequest.field_g[4] = DebugRequest.field_j;
+          HighscoreValueRequest.field_g[12] = SetBombletSprayRandomness.field_o;
+          HighscoreValueRequest.field_g[1] = GetAiFiringRangeUpshift.field_p;
+          HighscoreValueRequest.field_g[17] = SetUseLines.field_o;
+          HighscoreValueRequest.field_g[16] = GetSniperCannonProjectileOndamageParticles.field_p;
+          HighscoreValueRequest.field_g[0] = SetPhasedEnergyBeamPulsetime.field_p;
+          HighscoreValueRequest.field_g[23] = SpawnChoiceFactory.field_b;
+          for (var1_int = 0; HighscoreValueRequest.field_g.length > var1_int; var1_int++) {
+            if (null != HighscoreValueRequest.field_g[var1_int]) {
+              HighscoreValueRequest.field_g[var1_int] = SetFogOfWarSensorRange.a(-1, HighscoreValueRequest.field_g[var1_int]);
             }
           }
           SetSpinningBladeSpinupSpeed.field_o = new String[56];
@@ -151,7 +151,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ShipSpawnedCondition.field_e[40] = OpenGlEnvironmentMappedWaterEffect.field_h;
           ShipSpawnedCondition.field_e[35] = SetSpecialOrderBoxHeight.field_q;
           ShipSpawnedCondition.field_e[43] = GetMissionVariablesHudY.field_p;
-          ShipSpawnedCondition.field_e[45] = ifa.field_h;
+          ShipSpawnedCondition.field_e[45] = HighscoreValueRequest.field_h;
           ShipSpawnedCondition.field_e[36] = SetSpecialOrderBoxHeight.field_q;
           GetBlueprintSaveTime.field_o[6] = SetBloomCoefficientPercentage.field_p;
           GetBlueprintSaveTime.field_o[0] = SetDebrisFoundInPairs.field_o;
@@ -217,7 +217,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.field_o[4] = Widget.field_kb;
           GetGrapplingHookSpringConstant.field_o[47] = ScrollBarWidget.field_Db;
           GetGrapplingHookSpringConstant.field_o[15] = MidiNote.field_z;
-          GetGrapplingHookSpringConstant.field_o[29] = ifa.field_e;
+          GetGrapplingHookSpringConstant.field_o[29] = HighscoreValueRequest.field_e;
           GetGrapplingHookSpringConstant.field_o[6] = ssa.field_b;
           GetGrapplingHookSpringConstant.field_o[11] = ShipBlueprint.field_b;
           for (var1_int = 0; var1_int < SetSpinningBladeSpinupSpeed.field_o.length; var1_int++) {
@@ -238,7 +238,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ShipTeamCondition.field_f[3] = iwa.field_a;
           ShipTeamCondition.field_f[22] = kla.field_b;
           ShipTeamCondition.field_f[0] = ArchiveTextureProvider.field_a;
-          ShipTeamCondition.field_f[15] = qn.field_d;
+          ShipTeamCondition.field_f[15] = HighscoreTableRequest.field_d;
           ShipTeamCondition.field_f[27] = GetBombletSprayEnergyUsed.field_o;
           ShipTeamCondition.field_f[5] = GetReloadBarHeight.field_o;
           ShipTeamCondition.field_f[14] = GetSpecialOrderBarX.field_o;

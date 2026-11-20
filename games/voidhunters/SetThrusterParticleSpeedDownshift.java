@@ -55,24 +55,24 @@ final class SetThrusterParticleSpeedDownshift extends ConsoleCommand {
         var3 = null;
         var4 = VoidHunters.field_G;
         if (param1 <= -17) {
-          var3_ref = (nl) (PlayerReady.field_d.first(0));
+          var3_ref = (nl) (PlayerReady.activeLoopingSounds.first(0));
           while (var3_ref != null) {
             if (param0 == var3_ref.field_k &&
               param2 == var3_ref.field_l) {
               return var3_ref;
             }
-            var3_ref = (nl) (PlayerReady.field_d.next((byte) 59));
+            var3_ref = (nl) (PlayerReady.activeLoopingSounds.next((byte) 59));
           }
           return null;
         }
         SetThrusterParticleSpeedDownshift.clearSharedReferences((byte) -51);
-        var3_refLifetime1 = (nl) (PlayerReady.field_d.first(0));
+        var3_refLifetime1 = (nl) (PlayerReady.activeLoopingSounds.first(0));
         while (var3_refLifetime1 != null) {
           if (param0 == var3_refLifetime1.field_k &&
             param2 == var3_refLifetime1.field_l) {
             return var3_refLifetime1;
           }
-          var3_refLifetime1 = (nl) (PlayerReady.field_d.next((byte) 59));
+          var3_refLifetime1 = (nl) (PlayerReady.activeLoopingSounds.next((byte) 59));
         }
         return null;
     }

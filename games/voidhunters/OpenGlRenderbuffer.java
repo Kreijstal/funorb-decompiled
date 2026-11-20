@@ -56,7 +56,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements OpenGlFramebuffer
         }
     }
 
-    final static void a(byte param0, dnb param1, int param2) {
+    final static void sendClientDataWrite(byte param0, ClientDataWriteRequest param1, int param2) {
         IsaacPacketBuffer var4 = null;
         int var5 = 0;
         try {
@@ -66,15 +66,15 @@ final class OpenGlRenderbuffer extends DualLinkNode implements OpenGlFramebuffer
           var4.position = var4.position + 1;
           var5 = var4.position;
           var4.writeByte(0, 1);
-          if (null != param1.field_e) {
-            var4.writeByte(0, param1.field_e.length);
-            var4.writeBytes(0, param1.field_e, -1, param1.field_e.length);
+          if (null != param1.data) {
+            var4.writeByte(0, param1.data.length);
+            var4.writeBytes(0, param1.data, -1, param1.data.length);
           } else {
             var4.writeByte(0, 0);
           }
           var4.writeCrc(1595, var5);
           var4.position = var4.position - 4;
-          param1.field_d = var4.readInt(35);
+          param1.payloadCrc = var4.readInt(35);
           var4.writeLengthByte(var4.position - var5, -129);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nv.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

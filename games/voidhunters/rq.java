@@ -11,7 +11,7 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
     static String field_G;
     rcb field_C;
     private tga field_D;
-    private jla field_E;
+    private UiToggleButton field_E;
     private UiFocusableComponent field_B;
     private tga field_z;
 
@@ -249,7 +249,7 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
         this.field_A = new tga("", (UiListener) null, 20);
         this.field_D = new tga("", (UiListener) null, 3);
         int var1 = 1;
-        this.field_E = new jla("", (UiListener) null, var1 != 0);
+        this.field_E = new UiToggleButton("", (UiListener) null, var1 != 0);
         this.field_B = new UiFocusableComponent(SettingsChange.field_d, (UiListener) null);
         this.field_v = new UiFocusableComponent(SetTorpedoReload.field_p, (UiListener) null);
         this.field_F.tooltip = gna.field_m;

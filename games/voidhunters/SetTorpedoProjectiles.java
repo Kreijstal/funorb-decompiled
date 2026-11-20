@@ -346,7 +346,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               if (~var12.field_zb != ~BodyInZoneConditionFactory.field_a) {
                 if (var5_int != 0 &&
                   !var12.field_Lb) {
-                  var24Lifetime2 = SetReverbGain.a(jla.field_B, new String[]{var20}, 120);
+                  var24Lifetime2 = SetReverbGain.a(UiToggleButton.field_B, new String[]{var20}, 120);
                   var30Lifetime1 = var24Lifetime2;
                   var25 = var30Lifetime1;
                   var24Lifetime2 = var25;
