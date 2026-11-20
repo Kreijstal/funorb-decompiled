@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pa {
-    static llb field_a;
+    static Widget field_a;
     static String field_c;
     static int field_b;
 
@@ -37,7 +37,7 @@ final class pa {
         field_c = null;
         field_a = null;
         if (param0 != 2) {
-          field_a = (llb) null;
+          field_a = (Widget) null;
         }
     }
 

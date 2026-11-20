@@ -51,7 +51,7 @@ final class SetGrapplingHookAimarc extends ConsoleCommand {
           if (param1 >= -3) {
             field_p = -63;
           }
-          stackIn_9_0 = (GetSpinningBladeAimspeed.field_p == 0) || (param0.missionState.getMissionPhase(8) != 0) || !(param0.field_c.length > 1) || !(param0.a(-5358) <= 1);
+          stackIn_9_0 = (GetSpinningBladeAimspeed.field_p == 0) || (param0.missionState.getMissionPhase(8) != 0) || !(param0.field_c.length > 1) || !(param0.countConnectedPlayers(-5358) <= 1);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -6,7 +6,7 @@ import java.util.*;
 
 final class ProxySocketConnector extends SocketConnector {
     private java.net.ProxySelector proxySelector;
-    static llb field_e;
+    static Widget field_e;
     static int field_f;
 
     public static void clearSharedReferences(boolean param0) {

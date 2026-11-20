@@ -6,12 +6,12 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
     private IntrusiveDeque field_c;
     private NativeSoftwareHeap field_k;
     long field_nativeid;
-    private p field_e;
+    private NativeSoftwareSurface field_e;
     private Transform3D field_j;
     private int field_d;
     private int field_f;
     private NodeHashTable field_i;
-    private a[] field_g;
+    private NativeSoftwareRenderContext[] field_g;
     private boolean field_h;
     private int field_l;
 
@@ -21,7 +21,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
 
     final native void fillRectangle(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    private final native void wa(int param0, int param1, int param2, int param3, int param4, int param5);
+    private final native void drawLineNative(int param0, int param1, int param2, int param3, int param4, int param5);
 
     final boolean supportsEnvironmentMaps() {
         return false;
@@ -29,11 +29,11 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
 
     final native void setClip(int param0, int param1, int param2, int param3);
 
-    private final void a(java.awt.Canvas param0, int param1, int param2) {
+    private final void ensureCanvasSurface(java.awt.Canvas param0, int param1, int param2) {
         try {
           java.lang.reflect.Method var6 = null;
           Class var7 = null;
-          p var4 = (p) (this.field_i.get((long)param0.hashCode(), 122));
+          NativeSoftwareSurface var4 = (NativeSoftwareSurface) (this.field_i.get((long)param0.hashCode(), 122));
           if (var4 == null) {
             try {
               var7 = Class.forName("java.awt.Canvas");
@@ -41,12 +41,12 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
               var6.invoke((Object) (param0), new Object[]{Boolean.TRUE});
             } catch (Exception exception) {
             }
-            var4 = new p(this, param0, param1, param2);
+            var4 = new NativeSoftwareSurface(this, param0, param1, param2);
             this.field_i.put((long)param0.hashCode(), var4, (byte) -127);
           } else {
-            if (var4.field_e != param1 ||
-              var4.field_g != param2) {
-              var4.a(param0, param1, param2);
+            if (var4.width != param1 ||
+              var4.height != param2) {
+              var4.resize(param0, param1, param2);
             }
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
@@ -56,7 +56,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
         }
     }
 
-    private final native void CA(short param0, int[] param1, short param2, int param3, byte param4, byte param5, int param6, boolean param7, byte param8, byte param9, byte param10, byte param11, boolean param12, boolean param13, boolean param14, boolean param15, boolean param16, byte param17, boolean param18, boolean param19, int param20);
+    private final native void uploadTexturePixelsNative(short param0, int[] param1, short param2, int param3, byte param4, byte param5, int param6, boolean param7, byte param8, byte param9, byte param10, byte param11, boolean param12, boolean param13, boolean param14, boolean param15, boolean param16, byte param17, boolean param18, boolean param19, int param20);
 
     final native void getClip(int[] param0);
 
@@ -90,25 +90,25 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
           var1 = (NativeSoftwareHeap) (this.field_c.next((byte) 33));
         }
         this.field_c.clear(93);
-        this.FA();
+        this.disposeToolkitNative();
         if (this.field_h) {
           SetDebrisFoundInPairs.a((byte) -115, true, false);
           this.field_h = false;
         }
-        this.g();
+        this.collectNativeResources();
         NativeDisposalQueue.unregisterToolkit(true);
         this.field_m = true;
     }
 
     final void bindFramebuffer(Framebuffer param0) {
         NativeSoftwareFramebuffer var2 = (NativeSoftwareFramebuffer) (param0);
-        this.n(var2.field_a.field_nativeid, var2.field_b.field_nativeid);
+        this.bindRenderTargetsNative(var2.field_a.field_nativeid, var2.field_b.field_nativeid);
     }
 
-    private final native void AA(short param0, short param1, int param2, byte param3, byte param4, int param5, boolean param6, byte param7, byte param8, byte param9, byte param10, boolean param11, boolean param12, boolean param13, boolean param14, boolean param15, byte param16, boolean param17, boolean param18, int param19);
+    private final native void uploadTextureMetadataNative(short param0, short param1, int param2, byte param3, byte param4, int param5, boolean param6, byte param7, byte param8, byte param9, byte param10, boolean param11, boolean param12, boolean param13, boolean param14, boolean param15, byte param16, boolean param17, boolean param18, int param19);
 
     final void restoreDefaultFramebuffer() {
-        this.a(this.field_e.field_f);
+        this.selectCanvasSurface(this.field_e.canvas);
     }
 
     final native void intersectClip(int param0, int param1, int param2, int param3);
@@ -117,11 +117,11 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
         return (Transform3D) ((Object) new NativeSoftwareTransform3D());
     }
 
-    private final native void ma(long param0);
+    private final native void setViewTransformNative(long param0);
 
     final native void clearDepth();
 
-    private final native void va(GraphicsHeap param0);
+    private final native void setHeapNative(GraphicsHeap param0);
 
     final boolean supportsMultipleThreads() {
         return true;
@@ -135,16 +135,16 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
         return true;
     }
 
-    private final native void MA(TextureProvider param0, int param1, int param2);
+    private final native void initializeToolkitNative(TextureProvider param0, int param1, int param2);
 
     final int getMaxPointLights() {
         return 4;
     }
 
-    private final native void t(p param0);
+    private final native void selectCanvasSurfaceNative(NativeSoftwareSurface param0);
 
-    private final Object OA() {
-        return new ba(this);
+    private final Object createResourceHandle() {
+        return new NativeSoftwareResourceHandle(this);
     }
 
     final boolean isBloomSupported() {
@@ -197,7 +197,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
         return true;
     }
 
-    private final void g() {
+    private final void collectNativeResources() {
         System.gc();
         System.runFinalization();
         NativeDisposalQueue.drain((byte) -128);
@@ -217,17 +217,17 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
         return false;
     }
 
-    private final a y() {
+    private final NativeSoftwareRenderContext getCurrentRenderContext() {
         int var1 = 0;
         for (var1 = 0; var1 < this.field_l; var1++) {
-          if (this.field_g[var1].field_a == Thread.currentThread()) {
+          if (this.field_g[var1].ownerThread == Thread.currentThread()) {
             return this.field_g[var1];
           }
         }
         return null;
     }
 
-    private final native void FA();
+    private final native void disposeToolkitNative();
 
     final boolean isBloomEnabled() {
         return false;
@@ -237,7 +237,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
 
     final native void drawHorizontalLine(int param0, int param1, int param2, int param3, int param4);
 
-    private final native void n(long param0, long param1);
+    private final native void bindRenderTargetsNative(long param0, long param1);
 
     final DepthBuffer createDepthBuffer(int param0, int param1) {
         return (DepthBuffer) ((Object) new NativeSoftwareDepthBuffer(param0, param1));
@@ -245,7 +245,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
 
     final void updateFrame(int param0) {
         NativeDisposalQueue.drain((byte) -128);
-        this.d(param0);
+        this.updateFrameNative(param0);
         NativeSoftwareHeap var2 = (NativeSoftwareHeap) (this.field_c.first(0));
         while (var2 != null) {
           var2.r();
@@ -259,17 +259,17 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
 
     final void setViewTransform(Transform3D param0) {
         this.field_j = param0;
-        this.ma(((NativeSoftwareTransform3D) (param0)).field_nativeid);
+        this.setViewTransformNative(((NativeSoftwareTransform3D) (param0)).field_nativeid);
     }
 
-    private final native void d(int param0);
+    private final native void updateFrameNative(int param0);
 
-    private final void g(int param0) {
+    private final void createRenderContexts(int param0) {
         int var2 = 0;
         this.field_l = param0;
-        this.field_g = new a[this.field_l];
+        this.field_g = new NativeSoftwareRenderContext[this.field_l];
         for (var2 = 0; var2 < this.field_l; var2++) {
-          this.field_g[var2] = new a(this, this.field_d, this.field_f);
+          this.field_g[var2] = new NativeSoftwareRenderContext(this, this.field_d, this.field_f);
         }
     }
 
@@ -283,23 +283,23 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
         return (GraphicsHeap) ((Object) var2);
     }
 
-    private final void f(int param0) {
-        this.field_g[param0].a();
+    private final void bindRenderContext(int param0) {
+        this.field_g[param0].bindToCurrentThread();
     }
 
     final void setHeap(GraphicsHeap param0) {
         this.field_k = (NativeSoftwareHeap) (param0);
-        this.va(param0);
+        this.setHeapNative(param0);
     }
 
     public final native void disposeNative(boolean param0);
 
     final void drawLine(int param0, int param1, int param2, int param3, int param4, int param5) {
-        this.wa(param0, param1, param2, param3, param4, param5);
+        this.drawLineNative(param0, param1, param2, param3, param4, param5);
     }
 
     final void drawThickLine(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this.y().a((GraphicsToolkit) (this), param0, param1, param2, param3, param4, param5, param6);
+        this.getCurrentRenderContext().drawThickLine((GraphicsToolkit) (this), param0, param1, param2, param3, param4, param5, param6);
     }
 
     final boolean supportsMemoryPools() {
@@ -319,15 +319,15 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
 
     final native int[] readPixels(int param0, int param1, int param2, int param3);
 
-    private final void a(java.awt.Canvas param0) {
-        p var2 = null;
+    private final void selectCanvasSurface(java.awt.Canvas param0) {
+        NativeSoftwareSurface var2 = null;
         if (param0 != null) {
-          var2 = (p) (this.field_i.get((long)param0.hashCode(), 124));
+          var2 = (NativeSoftwareSurface) (this.field_i.get((long)param0.hashCode(), 124));
           this.field_e = var2;
-          this.t(var2);
+          this.selectCanvasSurfaceNative(var2);
         } else {
           this.field_e = null;
-          this.t((p) null);
+          this.selectCanvasSurfaceNative((NativeSoftwareSurface) null);
         }
     }
 
@@ -369,16 +369,16 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
             throw new RuntimeException("");
           }
           NativeDisposalQueue.registerToolkit((byte) -76);
-          this.MA(this.field_a, 0, 0);
+          this.initializeToolkitNative(this.field_a, 0, 0);
           ocb.a(false, (byte) 33, true);
           this.field_h = true;
           discarded$1 = new NativeSoftwareTransform3D();
           this.setViewTransform(new NativeSoftwareTransform3D());
-          this.g(1);
-          this.f(0);
+          this.createRenderContexts(1);
+          this.bindRenderContext(0);
           if (param0 != null) {
-            this.a(param0, param2, param3);
-            this.a(param0);
+            this.ensureCanvasSurface(param0, param2, param3);
+            this.selectCanvasSurface(param0);
           }
           return;
         } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -389,7 +389,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
         }
     }
 
-    private final boolean WA(short param0) {
+    private final boolean loadTexturePixels(short param0) {
         Object var2 = null;
         Object var2_ref = null;
         TextureMetadata var3 = null;
@@ -410,12 +410,12 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
           } else {
             var4 = this.field_a.generateRgbPixels(128, 0.699999988079071f, true, (int) param0, 128, true);
           }
-          this.CA(param0, var4, var3.field_l, var3.field_q, var3.field_c, var3.field_n, var3.field_o, var3.field_h, var3.field_b, var3.field_g, var3.field_p, var3.field_d, var3.field_r, var3.field_m, var3.field_a, var3.field_k, var3.field_s, var3.field_j, var3.field_i, var3.field_e, var3.field_f);
+          this.uploadTexturePixelsNative(param0, var4, var3.field_l, var3.field_q, var3.field_c, var3.field_n, var3.field_o, var3.field_h, var3.field_b, var3.field_g, var3.field_p, var3.field_d, var3.field_r, var3.field_m, var3.field_a, var3.field_k, var3.field_s, var3.field_j, var3.field_i, var3.field_e, var3.field_f);
         }
         return true;
     }
 
-    private final boolean c(short param0) {
+    private final boolean loadTextureMetadata(short param0) {
         Object var2 = null;
         Object var2_ref = null;
         TextureMetadata var3 = null;
@@ -427,7 +427,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
           if (var3 == null) {
             return false;
           }
-          this.AA(param0, var3.field_l, var3.field_q, var3.field_c, var3.field_n, var3.field_o, var3.field_h, var3.field_b, var3.field_g, var3.field_p, var3.field_d, var3.field_r, var3.field_m, var3.field_a, var3.field_k, var3.field_s, var3.field_j, var3.field_i, var3.field_e, var3.field_f);
+          this.uploadTextureMetadataNative(param0, var3.field_l, var3.field_q, var3.field_c, var3.field_n, var3.field_o, var3.field_h, var3.field_b, var3.field_g, var3.field_p, var3.field_d, var3.field_r, var3.field_m, var3.field_a, var3.field_k, var3.field_s, var3.field_j, var3.field_i, var3.field_e, var3.field_f);
         }
         return true;
     }
@@ -436,7 +436,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
         if (this.field_e == null) {
           throw new IllegalStateException("off");
         }
-        this.field_e.a(param0, param1);
+        this.field_e.present(param0, param1);
     }
 
     final boolean supportsAntialiasing() {
@@ -457,7 +457,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
     }
 
     final void setRenderTarget(ToolkitSprite param0, boolean param1) {
-        this.n(((NativeSoftwareSprite) (param0)).field_nativeid, 0L);
+        this.bindRenderTargetsNative(((NativeSoftwareSprite) (param0)).field_nativeid, 0L);
     }
 
     static {

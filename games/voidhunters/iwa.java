@@ -25,7 +25,7 @@ final class iwa {
         try {
           var4 = (lsa) (vfa.field_p.first(0));
           while (var4 != null) {
-            fgb.a(62, param1, var4);
+            WidgetNode.a(62, param1, var4);
             var4 = (lsa) (vfa.field_p.next((byte) 109));
           }
           if (param0 == -30) {

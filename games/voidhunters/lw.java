@@ -11,7 +11,7 @@ final class lw extends IntrusiveNode {
     int field_d;
     int field_j;
     static String field_e;
-    static llb field_i;
+    static Widget field_i;
 
     final void a(int param0) {
         this.field_g = 0;
@@ -26,7 +26,7 @@ final class lw extends IntrusiveNode {
     public static void clearSharedReferences(boolean param0) {
         field_e = null;
         if (param0) {
-          field_i = (llb) null;
+          field_i = (Widget) null;
           field_i = null;
           return;
         }

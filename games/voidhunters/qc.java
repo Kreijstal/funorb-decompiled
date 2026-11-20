@@ -5,13 +5,13 @@ abstract class qc implements kd {
     private int field_e;
     String field_c;
     kw field_p;
-    private llb field_m;
-    llb field_o;
+    private Widget field_m;
+    Widget field_o;
     BitmapFont field_n;
     soa field_h;
     private IntrusiveDeque field_i;
     static ri field_g;
-    static llb field_q;
+    static Widget field_q;
     private String[] field_d;
     private int field_l;
     private boolean field_j;
@@ -20,19 +20,19 @@ abstract class qc implements kd {
     private String field_a;
     private int field_b;
 
-    private final llb b(int param0, int param1, String param2) {
-        llb var4 = null;
+    private final Widget b(int param0, int param1, String param2) {
+        Widget var4 = null;
         RuntimeException var4_ref = null;
-        llb stackIn_1_0 = null;
+        Widget stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new llb((long)param1, (llb) null, param2);
-          var4.field_eb = this.field_n;
+          var4 = new Widget((long)param1, (Widget) null, param2);
+          var4.font = this.field_n;
           var4.field_Y = param0;
-          var4.a(5, param1 + 124, this.field_n.getStringWidth(var4.field_R), 0, this.field_e);
+          var4.setBounds(5, param1 + 124, this.field_n.getStringWidth(var4.text), 0, this.field_e);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -51,22 +51,22 @@ abstract class qc implements kd {
 
     private final void a(int param0, int param1, String param2) {
         int var4_int = 0;
-        llb var5 = null;
+        Widget var5 = null;
         int var6 = VoidHunters.field_G;
         try {
-          this.field_h.field_wb.b(-561, this.b(param1, 0, param2));
-          if (!(param0 <= ~this.field_h.field_wb.field_lb.size(3))) {
-            this.field_h.field_wb.field_lb.removeFirst(true);
+          this.field_h.field_wb.addChild(-561, this.b(param1, 0, param2));
+          if (!(param0 <= ~this.field_h.field_wb.children.size(3))) {
+            this.field_h.field_wb.children.removeFirst(true);
           }
           var4_int = 5;
-          var5 = (llb) (this.field_h.field_wb.field_lb.first(0));
+          var5 = (Widget) (this.field_h.field_wb.children.first(0));
           while (var5 != null) {
-            var5.field_K = var4_int;
+            var5.y = var4_int;
             var4_int = var4_int + this.field_e;
-            var5 = (llb) (this.field_h.field_wb.field_lb.next((byte) 30));
+            var5 = (Widget) (this.field_h.field_wb.children.next((byte) 30));
           }
-          this.field_h.field_wb.field_G = var4_int;
-          this.field_h.field_wb.field_K = -var4_int + this.field_h.field_G;
+          this.field_h.field_wb.height = var4_int;
+          this.field_h.field_wb.y = -var4_int + this.field_h.height;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qc.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -211,44 +211,44 @@ abstract class qc implements kd {
         int var2 = 59 / ((param0 - 44) / 43);
         int var3Lifetime1;
         int var4Lifetime1;
-        if (this.field_m.field_K + this.field_m.field_G > 0) {
-          SoftwareRasterizer2D.fillRectangleAlpha(this.field_m.field_M, this.field_m.field_u, this.field_h.field_L, this.field_m.field_G, 5592405, 230);
-          SoftwareRasterizer2D.fillRectangleAlpha(this.field_h.field_hb + this.field_h.field_M, this.field_m.field_u, this.field_h.field_L, this.field_m.field_G, 5592405, 230);
-          SoftwareRasterizer2D.fillRectangleAlpha(this.field_h.field_M, this.field_m.field_u, this.field_h.field_hb, this.field_h.field_K, 5592405, 230);
-          SoftwareRasterizer2D.fillRectangleAlpha(this.field_h.field_M, this.field_h.field_G + this.field_h.field_u, this.field_h.field_hb, -this.field_h.field_G + this.field_p.field_u - this.field_h.field_u, 5592405, 230);
-          SoftwareRasterizer2D.fillRectangleAlpha(this.field_h.field_M, this.field_p.field_G + this.field_p.field_u, this.field_h.field_hb, -this.field_p.field_G + (this.field_m.field_G - this.field_p.field_K), 5592405, 230);
-          SoftwareRasterizer2D.fillRectangleAlpha(this.field_h.field_M, this.field_h.field_u, this.field_h.field_hb, this.field_h.field_G, 2236962, 240);
-          SoftwareRasterizer2D.fillRectangleAlpha(this.field_p.field_M, this.field_p.field_u, this.field_p.field_hb, this.field_p.field_G, 2236962, 240);
-          var3 = this.field_m.field_K + 256;
+        if (this.field_m.y + this.field_m.height > 0) {
+          SoftwareRasterizer2D.fillRectangleAlpha(this.field_m.screenX, this.field_m.screenY, this.field_h.x, this.field_m.height, 5592405, 230);
+          SoftwareRasterizer2D.fillRectangleAlpha(this.field_h.width + this.field_h.screenX, this.field_m.screenY, this.field_h.x, this.field_m.height, 5592405, 230);
+          SoftwareRasterizer2D.fillRectangleAlpha(this.field_h.screenX, this.field_m.screenY, this.field_h.width, this.field_h.y, 5592405, 230);
+          SoftwareRasterizer2D.fillRectangleAlpha(this.field_h.screenX, this.field_h.height + this.field_h.screenY, this.field_h.width, -this.field_h.height + this.field_p.screenY - this.field_h.screenY, 5592405, 230);
+          SoftwareRasterizer2D.fillRectangleAlpha(this.field_h.screenX, this.field_p.height + this.field_p.screenY, this.field_h.width, -this.field_p.height + (this.field_m.height - this.field_p.y), 5592405, 230);
+          SoftwareRasterizer2D.fillRectangleAlpha(this.field_h.screenX, this.field_h.screenY, this.field_h.width, this.field_h.height, 2236962, 240);
+          SoftwareRasterizer2D.fillRectangleAlpha(this.field_p.screenX, this.field_p.screenY, this.field_p.width, this.field_p.height, 2236962, 240);
+          var3 = this.field_m.y + 256;
           if (0 > var3) {
             var3 = 0;
           }
-          SoftwareRasterizer2D.fillRectangleAlpha(this.field_m.field_M, this.field_m.field_G + this.field_m.field_u, this.field_m.field_hb, -this.field_m.field_G + SetPointDefenceLaserReload.field_p - this.field_m.field_u, 0, var3 >> 1);
-          var4 = 5 + (this.field_m.field_G + this.field_m.field_K);
+          SoftwareRasterizer2D.fillRectangleAlpha(this.field_m.screenX, this.field_m.height + this.field_m.screenY, this.field_m.width, -this.field_m.height + SetPointDefenceLaserReload.field_p - this.field_m.screenY, 0, var3 >> 1);
+          var4 = 5 + (this.field_m.height + this.field_m.y);
           for (var5 = 0; 6 > var5; var5++) {
             SoftwareRasterizer2D.drawHorizontalLineAlpha(0, var4, GetDebrisSurvives.field_p, 0, var5 << 5);
             var4--;
           }
-          this.field_m.b((8 & this.field_b) == 0 ? true : false, 111);
+          this.field_m.draw((8 & this.field_b) == 0 ? true : false, 111);
         }
         if (this.field_d != null &&
           this.field_j) {
-          var3Lifetime1 = this.field_m.field_G + this.field_m.field_K;
-          this.field_o.field_K = var3Lifetime1;
-          this.field_o.b(false, 43);
+          var3Lifetime1 = this.field_m.height + this.field_m.y;
+          this.field_o.y = var3Lifetime1;
+          this.field_o.draw(false, 43);
           var3Lifetime1 = var3Lifetime1 + (this.field_e + 5);
           for (var4Lifetime1 = 0; this.field_d.length > var4Lifetime1; var4Lifetime1++) {
-            this.field_n.draw(this.field_d[var4Lifetime1], this.field_o.field_M + 10, var3Lifetime1, 13421772, -1);
+            this.field_n.draw(this.field_d[var4Lifetime1], this.field_o.screenX + 10, var3Lifetime1, 13421772, -1);
             var3Lifetime1 = var3Lifetime1 + this.field_e;
           }
         }
     }
 
-    private final llb a(byte param0, int param1, int param2) {
+    private final Widget a(byte param0, int param1, int param2) {
         if (param0 > -57) {
           this.field_d = (String[]) null;
         }
-        llb var4 = new llb(0L, (llb) null);
+        Widget var4 = new Widget(0L, (Widget) null);
         var4.field_gb = SetBurstFireReload.a(-26998, param1, param2);
         return var4;
     }
@@ -259,16 +259,16 @@ abstract class qc implements kd {
 
     final static ResourceArchive b(int param0) {
         if (param0 != 0) {
-          field_q = (llb) null;
+          field_q = (Widget) null;
         }
         return SetBoostersCooldown.a((byte) 52, qw.field_e.field_a);
     }
 
-    private final llb a(int param0, int param1) {
+    private final Widget a(int param0, int param1) {
         if (param0 != 4) {
-          return (llb) null;
+          return (Widget) null;
         }
-        llb var3 = new llb(0L, (llb) null);
+        Widget var3 = new Widget(0L, (Widget) null);
         var3.field_gb = GetBurstFireRegenerationRate.a(true, param1);
         return var3;
     }
@@ -285,11 +285,11 @@ abstract class qc implements kd {
         if (this.field_j &&
           0 < this.field_f) {
           this.field_f = this.field_f - 1;
-          this.field_m.field_K = this.field_f * -200 * this.field_f / 225;
+          this.field_m.y = this.field_f * -200 * this.field_f / 225;
         } else {
           if (!this.field_j &&
-            0 < 200 + this.field_m.field_K) {
-            this.field_m.field_K = this.field_m.field_K - 28;
+            0 < 200 + this.field_m.y) {
+            this.field_m.y = this.field_m.y - 28;
           }
         }
         boolean decompiledFrameRemainder0 = true;
@@ -322,11 +322,11 @@ abstract class qc implements kd {
               var3 = var5;
             }
           }
-          this.field_o.field_hb = 20 + var3;
-          this.field_o.field_G = 15 + this.field_e * this.field_d.length;
+          this.field_o.width = 20 + var3;
+          this.field_o.height = 15 + this.field_e * this.field_d.length;
         }
         this.field_b = this.field_b + 1;
-        this.field_m.a(param0, 1332);
+        this.field_m.updateInput(param0, 1332);
         this.field_h.a(2 * (this.field_e * GetPointDefenceLaserPulsetime.field_o), true, this.field_e, 0);
         this.field_p.f((byte) -6);
     }
@@ -347,7 +347,7 @@ abstract class qc implements kd {
         RuntimeException var4 = null;
         var11 = VoidHunters.field_G;
         try {
-          var4_int = this.field_h.field_hb - 25;
+          var4_int = this.field_h.width - 25;
           var5 = SetFighterBayAimspeed.a((byte) -67, '\n', param0);
           var6 = var5;
           if (param1) {
@@ -381,9 +381,9 @@ abstract class qc implements kd {
         }
     }
 
-    private final llb a(int param0, byte param1) {
+    private final Widget a(int param0, byte param1) {
         int var3 = -103 / ((param1 + 68) / 35);
-        llb var4 = new llb();
+        Widget var4 = new Widget();
         var4.field_gb = SetBurstFireReload.a(-26998, 0, param0);
         return var4;
     }
@@ -395,11 +395,11 @@ abstract class qc implements kd {
         if (this.field_j) {
           this.field_f = 15;
           if (null != this.field_m) {
-            this.field_m.a(false, this.field_p);
+            this.field_m.setSelectedWidget(false, this.field_p);
           }
         } else {
           if (null != this.field_m) {
-            this.field_m.a(false, (llb) null);
+            this.field_m.setSelectedWidget(false, (Widget) null);
           }
         }
         if (!param0) {
@@ -408,9 +408,9 @@ abstract class qc implements kd {
     }
 
     boolean a(int param0, char param1, int param2) {
-        llb discarded$0 = null;
+        Widget discarded$0 = null;
         IntrusiveNode stackIn_18_1 = null;
-        llb var5;
+        Widget var5;
         int var6;
         String var7;
         var6 = VoidHunters.field_G;
@@ -459,7 +459,7 @@ abstract class qc implements kd {
             return true;
           }
           this.a(this.field_c + var7, false, 5635925);
-          var5 = (llb) (this.field_h.field_wb.field_lb.last((byte) 127));
+          var5 = (Widget) (this.field_h.field_wb.children.last((byte) 127));
           if (!this.a(-10278, var7)) {
             var5.field_Y = 16733525;
           }
@@ -483,18 +483,18 @@ abstract class qc implements kd {
 
     qc(BitmapFont param0, eab param1) {
         int var3_int = 0;
-        llb var4 = null;
-        llb var5 = null;
-        llb var6 = null;
-        llb var7 = null;
-        llb var8 = null;
-        llb var9 = null;
-        llb var10 = null;
-        llb var11 = null;
-        llb var12 = null;
+        Widget var4 = null;
+        Widget var5 = null;
+        Widget var6 = null;
+        Widget var7 = null;
+        Widget var8 = null;
+        Widget var9 = null;
+        Widget var10 = null;
+        Widget var11 = null;
+        Widget var12 = null;
         pjb var13 = null;
-        llb var14 = null;
-        llb var15 = null;
+        Widget var14 = null;
+        Widget var15 = null;
         this.field_c = "# ";
         this.field_i = new IntrusiveDeque();
         this.field_d = null;
@@ -514,26 +514,26 @@ abstract class qc implements kd {
           var10 = this.a((byte) -63, 3355443, 65793);
           var11 = this.a(4, 2263074);
           var12 = this.a((byte) -105, 2236962, 65793);
-          this.field_m = new llb(0L, var5);
-          this.field_m.a(0, 16, GetDebrisSurvives.field_p, -200, 200);
+          this.field_m = new Widget(0L, var5);
+          this.field_m.setBounds(0, 16, GetDebrisSurvives.field_p, -200, 200);
           var13 = new pjb(0L, var8, var8, var9, var10);
-          var14 = new llb();
-          var14.field_lb = new IntrusiveDeque();
+          var14 = new Widget();
+          var14.children = new IntrusiveDeque();
           this.field_h = new soa(0L, var14, var6, var13);
-          this.field_h.field_wb.field_lb = new IntrusiveDeque();
-          this.field_h.a(this.field_m.field_hb - 10, 0, -1, -var3_int + 185, 5, 5, 15);
-          this.field_m.b(-561, this.field_h);
-          var15 = new llb();
+          this.field_h.field_wb.children = new IntrusiveDeque();
+          this.field_h.a(this.field_m.width - 10, 0, -1, -var3_int + 185, 5, 5, 15);
+          this.field_m.addChild(-561, this.field_h);
+          var15 = new Widget();
           var15.field_Y = 13421772;
           var15.field_t = 5;
-          var15.field_eb = this.field_n;
+          var15.font = this.field_n;
           var15.field_v = 2;
           this.field_p = new kw(0L, var7, var11, var15);
-          this.field_p.a(this.field_h.field_hb, this.field_h.field_L, var3_int, this.field_h.field_G + (this.field_h.field_K + 5), true);
+          this.field_p.a(this.field_h.width, this.field_h.x, var3_int, this.field_h.height + (this.field_h.y + 5), true);
           this.field_p.a(-20640, param1);
-          this.field_m.b(-561, this.field_p);
-          this.field_o = new llb(0L, var12);
-          this.field_o.field_L = 0;
+          this.field_m.addChild(-561, this.field_p);
+          this.field_o = new Widget(0L, var12);
+          this.field_o.x = 0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qc.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class hqb {
-    llb field_b;
+    Widget field_b;
     private String field_g;
     private int field_c;
     static int field_f;
-    aw field_i;
+    PopupMenuWidget field_i;
     private long field_d;
     static String[][] field_k;
     int field_h;
@@ -50,7 +50,7 @@ final class hqb {
         if (17 != param1) {
           return false;
         }
-        Asteroid.field_v = new bwa(this.field_b.field_M, this.field_b.field_u, this.field_b.field_hb, this.field_b.field_G, param2, DualLinkNode.field_g, lo.field_b, GetFighterBayReload.field_p, qc.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o, this.field_a, this.field_d);
+        Asteroid.field_v = new bwa(this.field_b.screenX, this.field_b.screenY, this.field_b.width, this.field_b.height, param2, DualLinkNode.field_g, lo.field_b, GetFighterBayReload.field_p, qc.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o, this.field_a, this.field_d);
         return true;
     }
 
@@ -188,31 +188,31 @@ final class hqb {
             var6 = SetUseLines.a((byte) -94, this.field_a) ? 1 : 0;
             if (var5 == null &&
               var6 == 0) {
-              this.field_i.a(SetReverbGain.a(SetAngularForceDownshift.field_r, new String[]{var8}, 93), (byte) -53, 4);
-              this.field_i.a(SetReverbGain.a(GpuMaterialEffect.field_c, new String[]{var8}, 104), (byte) -53, 6);
+              this.field_i.addItem(SetReverbGain.a(SetAngularForceDownshift.field_r, new String[]{var8}, 93), (byte) -53, 4);
+              this.field_i.addItem(SetReverbGain.a(GpuMaterialEffect.field_c, new String[]{var8}, 104), (byte) -53, 6);
               if (param2 != null &&
                 param1 != 2 &&
                 !GetBloomThresholdPercentage.field_p) {
                 this.field_e = param2;
-                this.field_i.a(SetReverbGain.a(SetMachineGunFireForce.field_q, new String[]{var8}, 87), (byte) -53, 19);
+                this.field_i.addItem(SetReverbGain.a(SetMachineGunFireForce.field_q, new String[]{var8}, 87), (byte) -53, 19);
               }
             }
             if (var5 != null) {
               if (!qs.a(0, this.field_a) &&
                 !GetBloomThresholdPercentage.field_p) {
                 if (!hb.field_c) {
-                  this.field_i.a(SetReverbGain.a(SetSniperCannonProjectileLife.field_o, new String[]{var8}, 104), (byte) -53, 8);
+                  this.field_i.addItem(SetReverbGain.a(SetSniperCannonProjectileLife.field_o, new String[]{var8}, 104), (byte) -53, 8);
                 }
-                this.field_i.a(SetReverbGain.a(SetMissileLauncherFireForce.field_p, new String[]{var8}, 112), (byte) -53, 18);
+                this.field_i.addItem(SetReverbGain.a(SetMissileLauncherFireForce.field_p, new String[]{var8}, 112), (byte) -53, 18);
                 if (param2 != null) {
                   this.field_e = param2;
-                  this.field_i.a(SetReverbGain.a(SetMachineGunFireForce.field_q, new String[]{var8}, 73), (byte) -53, 19);
+                  this.field_i.addItem(SetReverbGain.a(SetMachineGunFireForce.field_q, new String[]{var8}, 73), (byte) -53, 19);
                 }
               }
-              this.field_i.a(SetReverbGain.a(GetAllowShipSaving.field_o, new String[]{var8}, 114), (byte) -53, 5);
+              this.field_i.addItem(SetReverbGain.a(GetAllowShipSaving.field_o, new String[]{var8}, 114), (byte) -53, 5);
             }
             if (var6 != 0) {
-              this.field_i.a(SetReverbGain.a(HardpointMatch.field_c, new String[]{var8}, 80), (byte) -53, 7);
+              this.field_i.addItem(SetReverbGain.a(HardpointMatch.field_c, new String[]{var8}, 80), (byte) -53, 7);
             }
           }
           if (param0 >= -13) {
@@ -323,7 +323,7 @@ final class hqb {
     }
 
     final void a(int param0, boolean param1) {
-        this.field_i.b(param1, 39);
+        this.field_i.draw(param1, 39);
         if (param0 != 1) {
           field_f = 4;
         }
@@ -377,7 +377,7 @@ final class hqb {
         jk var7;
         var6 = VoidHunters.field_G;
         if (param1 <= 1) {
-          this.field_b = (llb) null;
+          this.field_b = (Widget) null;
         }
         if (this.field_a != null &&
           BodyInZoneConditionFactory.field_a != this.field_d &&
@@ -393,19 +393,19 @@ final class hqb {
               if (!var7.field_Eb) {
                 if (param0 &&
                   var7.field_Fb) {
-                  this.field_i.a(SetReverbGain.a(SetWaitForPlayers.field_p, new String[]{var5}, 121), (byte) -53, 0);
-                  this.field_i.a(SetReverbGain.a(AsteroidField.field_b, new String[]{var5}, 75), (byte) -53, 1);
+                  this.field_i.addItem(SetReverbGain.a(SetWaitForPlayers.field_p, new String[]{var5}, 121), (byte) -53, 0);
+                  this.field_i.addItem(SetReverbGain.a(AsteroidField.field_b, new String[]{var5}, 75), (byte) -53, 1);
                 } else {
-                  this.field_i.a(SetReverbGain.a(GetSalvoHoldable.field_o, new String[]{var5}, 94), (byte) -53, 0);
+                  this.field_i.addItem(SetReverbGain.a(GetSalvoHoldable.field_o, new String[]{var5}, 94), (byte) -53, 0);
                 }
               } else {
-                this.field_i.a(SetReverbGain.a(ts.field_a, new String[]{var5}, 115), (byte) -53, 1);
+                this.field_i.addItem(SetReverbGain.a(ts.field_a, new String[]{var5}, 115), (byte) -53, 1);
               }
             }
           } else {
             if (!SetSpinningBladeSpindamageMultiplier.field_o.field_fc ||
               !(SetSpinningBladeSpindamageMultiplier.field_o.field_Ub < 0)) {
-              this.field_i.a(SetReverbGain.a(GetRepairModeRadius.field_o, new String[]{var5}, 106), (byte) -53, 1);
+              this.field_i.addItem(SetReverbGain.a(GetRepairModeRadius.field_o, new String[]{var5}, 106), (byte) -53, 1);
             }
           }
         }
@@ -423,21 +423,21 @@ final class hqb {
           this.field_c = param0.field_a;
           if (param0.field_a == 0) {
             if (kib.field_d == 0) {
-              this.field_i.a(vv.field_a, (byte) -53, 12);
+              this.field_i.addItem(vv.field_a, (byte) -53, 12);
             }
-            this.field_i.a(tda.field_M, (byte) -53, 13);
+            this.field_i.addItem(tda.field_M, (byte) -53, 13);
           }
           if (1 == param0.field_a) {
             if (0 == GetThrusterSmallForce.field_p) {
-              this.field_i.a(SetMassDriverEnergyUsed.field_p, (byte) -53, 12);
+              this.field_i.addItem(SetMassDriverEnergyUsed.field_p, (byte) -53, 12);
             }
-            this.field_i.a(ocb.field_j, (byte) -53, 13);
+            this.field_i.addItem(ocb.field_j, (byte) -53, 13);
           }
           if (param0.field_a == 2) {
             if (0 == lla.field_h) {
-              this.field_i.a(SetMissilesAcceleration.field_o, (byte) -53, 12);
+              this.field_i.addItem(SetMissilesAcceleration.field_o, (byte) -53, 12);
             }
-            this.field_i.a(SetMissionDebrisVotingChancestep.field_o, (byte) -53, 13);
+            this.field_i.addItem(SetMissionDebrisVotingChancestep.field_o, (byte) -53, 13);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hqb.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -460,7 +460,7 @@ final class hqb {
     final void a(boolean param0) {
         String var3;
         int var4;
-        mm var5;
+        LobbyGameEntry var5;
         var4 = VoidHunters.field_G;
         if (!param0) {
           return;
@@ -471,27 +471,27 @@ final class hqb {
             var3 = var5.field_Vb;
             if (!var5.field_ac) {
               if (var5.field_cc) {
-                this.field_i.a(SetReverbGain.a(ti.field_g, new String[]{var3}, 101), (byte) -53, 2);
+                this.field_i.addItem(SetReverbGain.a(ti.field_g, new String[]{var3}, 101), (byte) -53, 2);
               } else {
                 if (!var5.field_Qb &&
                   var5.field_Gb && (!var5.field_fc ||
                   var5.field_cc)) {
-                  this.field_i.a(SetReverbGain.a(OpenGlShader.field_c, new String[]{var3}, 107), (byte) -53, 2);
+                  this.field_i.addItem(SetReverbGain.a(OpenGlShader.field_c, new String[]{var3}, 107), (byte) -53, 2);
                 }
               }
               if (var5.field_Qb) {
-                this.field_i.a(SetReverbGain.a(t.field_e, new String[]{var3}, 126), (byte) -53, 3);
+                this.field_i.addItem(SetReverbGain.a(t.field_e, new String[]{var3}, 126), (byte) -53, 3);
               }
             } else {
-              this.field_i.a(SetReverbGain.a(SetDebrisCollision.field_o, new String[]{var3}, 127), (byte) -53, 2);
-              this.field_i.a(SetReverbGain.a(nrb.field_a, new String[]{var3}, 127), (byte) -53, 3);
+              this.field_i.addItem(SetReverbGain.a(SetDebrisCollision.field_o, new String[]{var3}, 127), (byte) -53, 2);
+              this.field_i.addItem(SetReverbGain.a(nrb.field_a, new String[]{var3}, 127), (byte) -53, 3);
             }
           }
         }
     }
 
     final boolean a(boolean param0, int param1, int param2, int param3, int param4) {
-        int var6 = this.field_i.a(param1 + 17, param0);
+        int var6 = this.field_i.updateAndGetSelection(param1 + 17, param0);
         if (var6 == -2) {
           return false;
         }
@@ -510,7 +510,7 @@ final class hqb {
         if (param0 != 0) {
           return true;
         }
-        stackIn_6_0 = (this.field_i != null) && (this.field_i.e((byte) -126));
+        stackIn_6_0 = (this.field_i != null) && (this.field_i.pollSelectionPending((byte) -126));
         return stackIn_6_0;
     }
 
@@ -520,16 +520,16 @@ final class hqb {
           BodyInZoneConditionFactory.field_a != this.field_d) {
           var3 = this.b((byte) -110);
           String var2 = var3;
-          this.field_i.a(SetReverbGain.a(NetworkArchiveClient.field_l, new String[]{var3}, 83), (byte) -53, 17);
+          this.field_i.addItem(SetReverbGain.a(NetworkArchiveClient.field_l, new String[]{var3}, 83), (byte) -53, 17);
         }
         if (param0 != -9923) {
           this.a(-125, false);
         }
     }
 
-    hqb(llb param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
+    hqb(Widget param0, long param1, String param2, String param3, int param4, int param5, int[] param6) {
         try {
-          this.field_i = new aw(TextureCombineOperation.field_a);
+          this.field_i = new PopupMenuWidget(TextureCombineOperation.field_a);
           this.field_d = param1;
           this.field_b = param0;
           this.field_g = param3;

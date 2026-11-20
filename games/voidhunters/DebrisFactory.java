@@ -3,7 +3,7 @@
  */
 final class DebrisFactory implements GameStateFactory {
     static String field_b;
-    static llb field_a;
+    static Widget field_a;
     static BitmapFont field_c;
 
     public static void clearSharedReferences(byte param0) {

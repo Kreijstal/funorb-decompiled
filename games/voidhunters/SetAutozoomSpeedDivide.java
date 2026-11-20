@@ -3,7 +3,7 @@
  */
 final class SetAutozoomSpeedDivide extends ConsoleCommand {
     static String field_o;
-    static llb field_p;
+    static Widget field_p;
 
     final static int[] a(int param0, boolean param1, int[] param2, byte param3) {
         RuntimeException var4 = null;

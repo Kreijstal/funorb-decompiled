@@ -203,7 +203,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_sniper_cannon_projectiles(" + fj.field_b + ")");
         System.out.println("set_missile_launcher_projectiles(" + GetPlayerRepairAmount.field_o + ")");
         System.out.println("set_point_defence_laser_projectiles(" + qh.field_J + ")");
-        System.out.println("set_countermeasure_launcher_projectiles(" + r.field_k + ")");
+        System.out.println("set_countermeasure_launcher_projectiles(" + RenderResourceNode.field_k + ")");
         System.out.println("set_mass_driver_projectile_life(" + Particle.field_x + ")");
         System.out.println("set_torpedo_projectile_life(" + SetGrapplingHookRopeChangeRate.field_o + ")");
         System.out.println("set_bomblet_spray_projectile_life(" + GetReadyRoomMissionTime.field_p + ")");

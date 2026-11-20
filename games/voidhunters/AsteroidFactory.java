@@ -123,7 +123,7 @@ final class AsteroidFactory implements GameStateFactory {
               GetMessageMax.field_o[var4 - 1] = 0;
               jeb.field_c[0] = 5;
             } else if (GetMassDriverAimspeed.field_o == 4) {
-              var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, ob.field_l, 0, r.field_m, ShipBlueprint.field_a);
+              var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, ob.field_l, 0, RenderResourceNode.field_m, ShipBlueprint.field_a);
               var4 = var3_int + 2;
               bra.field_f = new String[var4];
               GetMessageMax.field_o = new int[var4];

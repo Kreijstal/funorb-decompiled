@@ -14,7 +14,7 @@ final class MessageLog implements DiffableState {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void expireMessages(int param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -51,7 +51,7 @@ final class MessageLog implements DiffableState {
         }
     }
 
-    final static tjb a(llb param0, int[] param1, int param2, llb param3, llb param4) {
+    final static tjb a(Widget param0, int[] param1, int param2, Widget param3, Widget param4) {
         int var10_int = 0;
         int var5_int = 0;
         String[] var6 = null;
@@ -133,7 +133,7 @@ final class MessageLog implements DiffableState {
         }
     }
 
-    final void a(Message param0, boolean param1) {
+    final void addMessage(Message param0, boolean param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -225,7 +225,7 @@ final class MessageLog implements DiffableState {
           }
           if (obfuscationGuard > -19) {
             var5 = (Message) null;
-            this.a((Message) null, true);
+            this.addMessage((Message) null, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

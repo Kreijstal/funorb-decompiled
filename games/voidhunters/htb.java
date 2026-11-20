@@ -4,7 +4,7 @@
 import java.util.*;
 
 class htb extends shb {
-    static llb field_w;
+    static Widget field_w;
     boolean field_x;
     private boolean field_t;
     static gj field_A;

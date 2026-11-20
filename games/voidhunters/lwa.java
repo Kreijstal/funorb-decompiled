@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lwa extends llb {
-    private llb field_wb;
+final class lwa extends Widget {
+    private Widget field_wb;
     static String field_vb;
     static ResourceArchive field_xb;
 
@@ -12,7 +12,7 @@ final class lwa extends llb {
           this.a(false, true);
         }
         boolean decompiledFrameRemainder0 = true;
-        this.a(true, 1332);
+        this.updateInput(true, 1332);
         if ((0 == SetDebrisPartitioned.field_o ||
           this.field_o != 0) && 0 == this.field_wb.field_o) {
           stackIn_9_0 = false;
@@ -66,7 +66,7 @@ final class lwa extends llb {
         }
     }
 
-    lwa(llb param0, llb param1, llb param2, llb param3, llb param4, llb param5) {
+    lwa(Widget param0, Widget param1, Widget param2, Widget param3, Widget param4, Widget param5) {
         int var12 = 0;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -83,50 +83,50 @@ final class lwa extends llb {
         String stackIn_26_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        llb var8 = null;
-        llb var9 = null;
+        Widget var8 = null;
+        Widget var9 = null;
         int var10 = 0;
         int var11 = 0;
-        llb var13 = null;
-        llb var14 = null;
+        Widget var13 = null;
+        Widget var14 = null;
         int var15 = 0;
-        llb var17 = null;
+        Widget var17 = null;
         int var10Lifetime1;
         try {
-          var17 = new llb(0L, param1, SetPhasedEnergyBeamEnergyUsed.field_p.toUpperCase());
+          var17 = new Widget(0L, param1, SetPhasedEnergyBeamEnergyUsed.field_p.toUpperCase());
           var17.field_F = 1;
-          this.field_wb = new llb(0L, param2);
-          var8 = new llb(0L, param3);
-          var9 = new llb(0L, param3, kw.field_Jb);
+          this.field_wb = new Widget(0L, param2);
+          var8 = new Widget(0L, param3);
+          var9 = new Widget(0L, param3, kw.field_Jb);
           var9.field_F = 1;
           var10 = 50;
           var11 = 0;
           for (var12 = 0; var12 < Lo.field_q.length; var12++) {
-            var13 = new llb(0L, param3, GetKeepTeamColours.field_r[var12]);
-            var14 = new llb(0L, param3, Lo.field_q[var12]);
-            var15 = param3.field_eb.getStringWidth(Lo.field_q[var12]);
+            var13 = new Widget(0L, param3, GetKeepTeamColours.field_r[var12]);
+            var14 = new Widget(0L, param3, Lo.field_q[var12]);
+            var15 = param3.font.getStringWidth(Lo.field_q[var12]);
             if (var15 > var11) {
               var11 = var15;
             }
-            var13.a(20, 121, 65, var10, 15);
-            var14.a(90, 124, 640, var10, 15);
-            var8.b(-561, var13);
+            var13.setBounds(20, 121, 65, var10, 15);
+            var14.setBounds(90, 124, 640, var10, 15);
+            var8.addChild(-561, var13);
             var10 += 30;
-            var8.b(-561, var14);
+            var8.addChild(-561, var14);
           }
           var10 += 15;
-          var17.a(0, 116, 20 + (var11 + 90), 0, 24);
-          this.a(100, 23, var17.field_hb, 100, var10 + var17.field_G);
-          this.field_wb.a(-20 + var17.field_hb, 8, 15, 5, 15);
-          var8.a(0, 119, this.field_hb, var17.field_G, -var17.field_G + this.field_G);
-          var9.a(0, 121, this.field_hb, 20, 15);
-          var8.field_gb = uwa.a(11579568, var8.field_G, 2105376, 8421504, 119, 3);
-          var17.b(-561, this.field_wb);
-          var8.b(-561, var9);
-          this.b(-561, var17);
-          this.b(-561, var8);
-          var10Lifetime1 = -(this.field_G >> 1) + 240;
-          this.field_L = 320 - (this.field_hb >> 1);
+          var17.setBounds(0, 116, 20 + (var11 + 90), 0, 24);
+          this.setBounds(100, 23, var17.width, 100, var10 + var17.height);
+          this.field_wb.setBounds(-20 + var17.width, 8, 15, 5, 15);
+          var8.setBounds(0, 119, this.width, var17.height, -var17.height + this.height);
+          var9.setBounds(0, 121, this.width, 20, 15);
+          var8.field_gb = uwa.a(11579568, var8.height, 2105376, 8421504, 119, 3);
+          var17.addChild(-561, this.field_wb);
+          var8.addChild(-561, var9);
+          this.addChild(-561, var17);
+          this.addChild(-561, var8);
+          var10Lifetime1 = -(this.height >> 1) + 240;
+          this.x = 320 - (this.width >> 1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

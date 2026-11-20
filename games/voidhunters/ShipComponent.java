@@ -275,7 +275,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                   while (var12 != null) {
                     var13 = var12.getType((byte) -104);
                     if ((~var12.getFiredTeam(512) != ~var26.getTeam((byte) 73) ||
-                      !qab.a(33, param2.d(false)) &&
+                      !qab.a(33, param2.getObjectiveType(false)) &&
                       var12.b(false) != var26.getOwner((byte) -117)) &&
                       (var13 == 6 ||
                       var13 == 1)) {

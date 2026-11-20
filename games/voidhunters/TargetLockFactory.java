@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TargetLockFactory implements GameStateFactory {
-    static llb field_a;
+    static Widget field_a;
 
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 != 11995) {
@@ -20,7 +20,7 @@ final class TargetLockFactory implements GameStateFactory {
     public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 >= -48) {
-          field_a = (llb) null;
+          field_a = (Widget) null;
         }
     }
 

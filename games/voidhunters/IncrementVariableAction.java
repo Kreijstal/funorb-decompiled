@@ -103,7 +103,7 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
           if (param0 != 1) {
             this.index = 84;
           }
-          param2.missionState.a((byte) -45, this.valueAdded, this.index);
+          param2.missionState.adjustCustomVariable((byte) -45, this.valueAdded, this.index);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uoa.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

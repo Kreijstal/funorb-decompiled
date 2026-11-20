@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetMachineGunAimarc extends ConsoleCommand {
-    static llb field_q;
+    static Widget field_q;
     static String field_o;
     static boolean field_p;
 

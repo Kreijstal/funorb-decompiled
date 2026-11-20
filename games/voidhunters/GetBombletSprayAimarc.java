@@ -11,15 +11,15 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        llb var5 = null;
+        Widget var5 = null;
         int[] var6 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
         var4 = VoidHunters.field_G;
         try {
           if (param0 != -19689) {
-            var5 = (llb) null;
-            GetBombletSprayAimarc.a((byte[]) null, (llb) null, -17, -59, (llb) null, false, 76, 14, -115, (llb) null);
+            var5 = (Widget) null;
+            GetBombletSprayAimarc.a((byte[]) null, (Widget) null, -17, -59, (Widget) null, false, 76, 14, -115, (Widget) null);
           }
           var6 = bs.field_b;
           var1 = var6;
@@ -75,7 +75,7 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
         }
     }
 
-    final static void a(byte[] param0, llb param1, int param2, int param3, llb param4, boolean param5, int param6, int param7, int param8, llb param9) {
+    final static void a(byte[] param0, Widget param1, int param2, int param3, Widget param4, boolean param5, int param6, int param7, int param8, Widget param9) {
         int var11 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -106,26 +106,26 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
           }
           var10_int = (var10_int + 7) / 8;
           GetDebrisThrowable.field_p = new byte[var10_int];
-          if (param9.field_lb == null) {
-            param9.field_lb = new IntrusiveDeque();
+          if (param9.children == null) {
+            param9.children = new IntrusiveDeque();
           }
-          SetMachineGunAimarc.field_q = param9.field_lb;
+          SetMachineGunAimarc.field_q = param9.children;
           SetMachineGunAimarc.field_q.clear(109);
           GetReverbWet.field_o = new pr(param3);
           IncrementVariableActionFactory.field_b = -1;
           SetLaserRandomness.field_p = 0;
           GetMachineGunPulsetime.field_q = 0;
           SetShieldsDirectionalArcParticleSpeedDownshift.field_q = -1;
-          if (null == param4.field_lb) {
-            param4.field_lb = new IntrusiveDeque();
+          if (null == param4.children) {
+            param4.children = new IntrusiveDeque();
           }
-          kja.field_E = param4.field_lb;
+          kja.field_E = param4.children;
           kja.field_E.clear(118);
           GetLaserReload.field_r = new pr(param8);
-          if (null == param1.field_lb) {
-            param1.field_lb = new IntrusiveDeque();
+          if (null == param1.children) {
+            param1.children = new IntrusiveDeque();
           }
-          OpenGlPostEffect.field_e = param1.field_lb;
+          OpenGlPostEffect.field_e = param1.children;
           OpenGlPostEffect.field_e.clear(93);
           SetUseDetailLines.field_p = new pr(param2);
           GetMomentOfInertiaPredivideDownshift.field_p = param7;

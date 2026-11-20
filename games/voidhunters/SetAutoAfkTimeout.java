@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class SetAutoAfkTimeout extends ConsoleCommand {
-    static llb field_q;
+    static Widget field_q;
     static String field_o;
     static float[] field_s;
     static float[] field_p;

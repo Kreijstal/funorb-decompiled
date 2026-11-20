@@ -4,7 +4,7 @@
 final class dm extends mfb {
     static boolean field_b;
 
-    final static llb i(byte param0) {
+    final static Widget i(byte param0) {
         if (param0 >= -75) {
           field_b = true;
           return re.field_n.field_yb;

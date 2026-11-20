@@ -5,7 +5,7 @@ final class uga extends qg {
     private float field_k;
     private ArbProgram field_j;
     private float[] field_f;
-    static llb field_h;
+    static Widget field_h;
     private int field_c;
     static boolean field_d;
     private jjb field_i;

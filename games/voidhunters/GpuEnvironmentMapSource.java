@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class GpuEnvironmentMapSource extends EnvironmentMapSource {
-    static llb field_c;
+    static Widget field_c;
     static int field_d;
 
     private GpuEnvironmentMapSource() throws Throwable {

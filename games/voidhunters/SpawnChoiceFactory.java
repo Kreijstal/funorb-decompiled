@@ -4,7 +4,7 @@
 final class SpawnChoiceFactory implements GameStateFactory {
     static String field_a;
     static String field_b;
-    static llb field_c;
+    static Widget field_c;
 
     public static void clearSharedReferences(int param0) {
         field_b = null;

@@ -16,10 +16,10 @@ class dqa extends shb implements nea {
     }
 
     final boolean a(boolean param0, shb param1) {
-        wc var3 = null;
+        IntrusiveDequeIterator var3 = null;
         RuntimeException var3_ref = null;
         shb var4 = null;
-        wc var5 = null;
+        IntrusiveDequeIterator var5 = null;
         shb var6 = null;
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -34,21 +34,21 @@ class dqa extends shb implements nea {
           if (this.field_t.isEmpty(115)) {
             return false;
           }
-          var3 = new wc(this.field_t);
-          var4 = (shb) (var3.c(570));
+          var3 = new IntrusiveDequeIterator(this.field_t);
+          var4 = (shb) (var3.first(570));
           while (var4 != null) {
             if (var4.e((byte) -120)) {
-              var5 = new wc(this.field_t);
-              var5.a(var4, -28791);
-              var6 = (shb) (var5.a(19072));
+              var5 = new IntrusiveDequeIterator(this.field_t);
+              var5.startForward(var4, -28791);
+              var6 = (shb) (var5.next(19072));
               while (var6 != null) {
                 if (var6.a(0, param1)) {
                   return true;
                 }
-                var6 = (shb) (var5.a(19072));
+                var6 = (shb) (var5.next(19072));
               }
             }
-            var4 = (shb) (var3.a(19072));
+            var4 = (shb) (var3.next(19072));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -71,20 +71,20 @@ class dqa extends shb implements nea {
           null != this.field_q) {
           this.field_q.a(13, (shb) (this), param0, param3, true);
         }
-        wc var5 = new wc(this.field_t);
+        IntrusiveDequeIterator var5 = new IntrusiveDequeIterator(this.field_t);
         if (param2 < 47) {
           return;
         }
-        shb var6 = (shb) (var5.b((byte) 105));
+        shb var6 = (shb) (var5.last((byte) 105));
         while (var6 != null) {
           var6.b(param0 + this.field_g, param1, 112, param3 + this.field_r);
-          var6 = (shb) (var5.a((byte) 108));
+          var6 = (shb) (var5.previous((byte) 108));
         }
     }
 
     final void a(byte param0, int param1, int param2, int param3, shb param4, int param5) {
         RuntimeException runtimeException = null;
-        wc var7 = null;
+        IntrusiveDequeIterator var7 = null;
         int var8 = 0;
         shb var9 = null;
         int var10 = 0;
@@ -95,12 +95,12 @@ class dqa extends shb implements nea {
         var10 = VoidHunters.field_G;
         try {
           var8 = -69 % ((param0 - 52) / 52);
-          var7 = new wc(this.field_t);
-          var9 = (shb) (var7.c(570));
+          var7 = new IntrusiveDequeIterator(this.field_t);
+          var9 = (shb) (var7.first(570));
           while (var9 != null) {
             if (var9.isLinked((byte) -63)) {
               var9.a((byte) -109, param1 + this.field_g, param2, this.field_r + param3, param4, param5);
-              var9 = (shb) (var7.a(19072));
+              var9 = (shb) (var7.next(19072));
               continue;
             }
             break;
@@ -122,11 +122,11 @@ class dqa extends shb implements nea {
 
     void f(byte param0) {
         int var4 = VoidHunters.field_G;
-        wc var2 = new wc(this.field_t);
-        shb var3 = (shb) (var2.c(570));
+        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.field_t);
+        shb var3 = (shb) (var2.first(570));
         while (var3 != null) {
           var3.f((byte) -34);
-          var3 = (shb) (var2.a(param0 ^ -19106));
+          var3 = (shb) (var2.next(param0 ^ -19106));
         }
         if (param0 != -34) {
           field_u = (String) null;
@@ -144,21 +144,21 @@ class dqa extends shb implements nea {
         RuntimeException var8 = null;
         shb var9 = null;
         int var10 = 0;
-        wc var11 = null;
+        IntrusiveDequeIterator var11 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         var10 = VoidHunters.field_G;
         try {
-          var11 = new wc(this.field_t);
-          var9 = (shb) (var11.c(570));
+          var11 = new IntrusiveDequeIterator(this.field_t);
+          var9 = (shb) (var11.first(570));
           while (var9 != null) {
             if (var9.isLinked((byte) -63)) {
               if (var9.a(param0, param1 + this.field_g, param2, param3, param4, param5 + this.field_r, (byte) -61)) {
                 return true;
               }
-              var9 = (shb) (var11.a(19072));
+              var9 = (shb) (var11.next(19072));
               continue;
             }
             break;
@@ -186,14 +186,14 @@ class dqa extends shb implements nea {
         int var5 = 0;
         int var6 = VoidHunters.field_G;
         int var2 = param0;
-        wc var3 = new wc(this.field_t);
-        shb var4 = (shb) (var3.c(570));
+        IntrusiveDequeIterator var3 = new IntrusiveDequeIterator(this.field_t);
+        shb var4 = (shb) (var3.first(570));
         while (var4 != null) {
           var5 = var4.c(param0 ^ 0);
           if (var2 < var5) {
             var2 = var5;
           }
-          var4 = (shb) (var3.a(19072));
+          var4 = (shb) (var3.next(19072));
         }
         return var2;
     }
@@ -211,14 +211,14 @@ class dqa extends shb implements nea {
     String d(byte param0) {
         String var4 = null;
         int var5 = VoidHunters.field_G;
-        wc var2 = new wc(this.field_t);
-        shb var3 = (shb) (var2.c(570));
+        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.field_t);
+        shb var3 = (shb) (var2.first(570));
         while (var3 != null) {
           var4 = var3.d((byte) 125);
           if (var4 != null) {
             return var4;
           }
-          var3 = (shb) (var2.a(19072));
+          var3 = (shb) (var2.next(19072));
         }
         if (param0 == 125) {
           return null;
@@ -317,7 +317,7 @@ class dqa extends shb implements nea {
         StringBuilder discarded$2 = null;
         int var7 = 0;
         StringBuilder discarded$3 = null;
-        wc var5 = null;
+        IntrusiveDequeIterator var5 = null;
         shb var6 = null;
         int var8 = 0;
         shb var9 = null;
@@ -330,15 +330,15 @@ class dqa extends shb implements nea {
         RuntimeException var5_ref = null;
         var8 = VoidHunters.field_G;
         try {
-          var5 = new wc(this.field_t);
-          var6 = (shb) (var5.c(570));
+          var5 = new IntrusiveDequeIterator(this.field_t);
+          var6 = (shb) (var5.first(570));
           while (var6 != null) {
             discarded$2 = param2.append('\n');
             for (var7 = 0; param3 >= var7; var7++) {
               discarded$3 = param2.append(' ');
             }
             var6.a(false, param0, 1 + param3, param2);
-            var6 = (shb) (var5.a(19072));
+            var6 = (shb) (var5.next(19072));
           }
           if (param1 >= -8) {
             var9 = (shb) null;
@@ -366,7 +366,7 @@ class dqa extends shb implements nea {
     }
 
     boolean a(int param0, shb param1) {
-        wc var3 = null;
+        IntrusiveDequeIterator var3 = null;
         RuntimeException var3_ref = null;
         shb var4 = null;
         int var5 = 0;
@@ -379,13 +379,13 @@ class dqa extends shb implements nea {
           if (param0 != 0) {
             return true;
           }
-          var3 = new wc(this.field_t);
-          var4 = (shb) (var3.c(570));
+          var3 = new IntrusiveDequeIterator(this.field_t);
+          var4 = (shb) (var3.first(570));
           while (var4 != null) {
             if (var4.a(param0 ^ 0, param1)) {
               return true;
             }
-            var4 = (shb) (var3.a(param0 + 19072));
+            var4 = (shb) (var3.next(param0 + 19072));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -407,7 +407,7 @@ class dqa extends shb implements nea {
         shb var6_ref_shb = null;
         int var6 = 0;
         int var7 = 0;
-        wc var8 = null;
+        IntrusiveDequeIterator var8 = null;
         boolean stackIn_17_0 = false;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -415,15 +415,15 @@ class dqa extends shb implements nea {
         RuntimeException decompiledCaughtException = null;
         var7 = VoidHunters.field_G;
         try {
-          var8 = new wc(this.field_t);
-          var6_ref_shb = (shb) (var8.c(570));
+          var8 = new IntrusiveDequeIterator(this.field_t);
+          var6_ref_shb = (shb) (var8.first(570));
           while (var6_ref_shb != null) {
             if (var6_ref_shb.isLinked((byte) -63)) {
               if (var6_ref_shb.e((byte) -120) &&
                 var6_ref_shb.a(param0 ^ 0, param1, param2, param3)) {
                 return true;
               }
-              var6_ref_shb = (shb) (var8.a(param0 + 34906));
+              var6_ref_shb = (shb) (var8.next(param0 + 34906));
               continue;
             }
             break;
@@ -460,11 +460,11 @@ class dqa extends shb implements nea {
         if (param0 != 13) {
           return;
         }
-        wc var2 = new wc(this.field_t);
-        shb var3 = (shb) (var2.c(570));
+        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.field_t);
+        shb var3 = (shb) (var2.first(570));
         while (var3 != null) {
           var3.a(false);
-          var3 = (shb) (var2.a(param0 + 19059));
+          var3 = (shb) (var2.next(param0 + 19059));
         }
     }
 
@@ -472,7 +472,7 @@ class dqa extends shb implements nea {
         shb var6 = null;
         int var7 = 0;
         shb var8 = null;
-        wc var9 = null;
+        IntrusiveDequeIterator var9 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -481,12 +481,12 @@ class dqa extends shb implements nea {
         var7 = VoidHunters.field_G;
         try {
           super.a(param0, param1, param2 + 0, param3);
-          var9 = new wc(this.field_t);
-          var6 = (shb) (var9.c(param2 + 1551));
+          var9 = new IntrusiveDequeIterator(this.field_t);
+          var6 = (shb) (var9.first(param2 + 1551));
           while (var6 != null) {
             if (var6.isLinked((byte) -63)) {
               var6.a(this.field_r + param0, param1 + this.field_g, -981, param3);
-              var6 = (shb) (var9.a(19072));
+              var6 = (shb) (var9.next(19072));
               continue;
             }
             break;
@@ -550,7 +550,7 @@ class dqa extends shb implements nea {
     }
 
     final boolean a(int param0, int param1, int param2, shb param3, int param4, int param5, int param6) {
-        wc var8 = null;
+        IntrusiveDequeIterator var8 = null;
         RuntimeException var8_ref = null;
         shb var9 = null;
         int var10 = 0;
@@ -563,15 +563,15 @@ class dqa extends shb implements nea {
           if (param1 != -6006) {
             return true;
           }
-          var8 = new wc(this.field_t);
-          var9 = (shb) (var8.c(570));
+          var8 = new IntrusiveDequeIterator(this.field_t);
+          var9 = (shb) (var8.first(570));
           while (var9 != null) {
             if (var9.isLinked((byte) -63)) {
               if (var9.e((byte) -120) &&
                 var9.a(param0, -6006, param2, param3, param4, param5, param6)) {
                 return true;
               }
-              var9 = (shb) (var8.a(19072));
+              var9 = (shb) (var8.next(19072));
               continue;
             }
             break;
@@ -592,7 +592,7 @@ class dqa extends shb implements nea {
     }
 
     shb g(byte param0) {
-        wc var2;
+        IntrusiveDequeIterator var2;
         shb var3;
         int var4;
         shb var5;
@@ -601,22 +601,22 @@ class dqa extends shb implements nea {
           var5 = (shb) null;
           this.a(5, -105, 25, 32, (shb) null, 72, (byte) 42);
         }
-        var2 = new wc(this.field_t);
-        var3 = (shb) (var2.c(570));
+        var2 = new IntrusiveDequeIterator(this.field_t);
+        var3 = (shb) (var2.first(570));
         while (var3 != null) {
           if (var3.e((byte) -120)) {
             return var3;
           }
-          var3 = (shb) (var2.a(19072));
+          var3 = (shb) (var2.next(19072));
         }
         return null;
     }
 
     final boolean a(shb param0, int param1) {
-        wc var3 = null;
+        IntrusiveDequeIterator var3 = null;
         RuntimeException var3_ref = null;
         shb var4 = null;
-        wc var5 = null;
+        IntrusiveDequeIterator var5 = null;
         shb var6 = null;
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -631,22 +631,22 @@ class dqa extends shb implements nea {
           if (this.field_t.isEmpty(param1 ^ 113)) {
             return false;
           }
-          var3 = new wc(this.field_t);
-          var4 = (shb) (var3.b((byte) 70));
+          var3 = new IntrusiveDequeIterator(this.field_t);
+          var4 = (shb) (var3.last((byte) 70));
           while (var4 != null) {
             if (var4.e((byte) -120)) {
-              var5 = new wc(this.field_t);
-              var5.a((byte) 88, var4);
-              var6 = (shb) (var5.a((byte) 108));
+              var5 = new IntrusiveDequeIterator(this.field_t);
+              var5.startBackward((byte) 88, var4);
+              var6 = (shb) (var5.previous((byte) 108));
               while (var6 != null) {
                 if (!var6.a(0, param0)) {
-                  var6 = (shb) (var5.a((byte) 108));
+                  var6 = (shb) (var5.previous((byte) 108));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (shb) (var3.a((byte) 108));
+            var4 = (shb) (var3.previous((byte) 108));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

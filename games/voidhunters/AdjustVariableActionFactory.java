@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class AdjustVariableActionFactory implements GameStateFactory {
-    static llb field_a;
+    static Widget field_a;
 
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 != 11995) {
-          field_a = (llb) null;
+          field_a = (Widget) null;
           return (SerializableGameState[]) ((Object) new AdjustVariableAction[param1]);
         }
         return (SerializableGameState[]) ((Object) new AdjustVariableAction[param1]);
@@ -15,7 +15,7 @@ final class AdjustVariableActionFactory implements GameStateFactory {
     public static void clearSharedReferences(byte param0) {
         field_a = null;
         if (param0 != 27) {
-          field_a = (llb) null;
+          field_a = (Widget) null;
         }
     }
 

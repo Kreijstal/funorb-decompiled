@@ -47,7 +47,7 @@ final class SetVariableAction extends MissionAction implements DiffableState {
 
     final void execute(int param0, int[] param1, GameSnapshot param2) {
         try {
-          param2.missionState.b(2, this.value, this.index);
+          param2.missionState.setCustomVariableValue(2, this.value, this.index);
           if (param0 != 1) {
             this.value = -49;
           }

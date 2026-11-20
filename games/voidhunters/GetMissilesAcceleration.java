@@ -35,7 +35,7 @@ final class GetMissilesAcceleration extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static llb a(int param0) {
+    final static Widget a(int param0) {
         if (param0 != 207) {
           GetMissilesAcceleration.a(-66);
           return CarouselSlot.field_a.field_wb;

@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kw extends llb {
+final class kw extends Widget {
     private int field_vb;
     private eab field_Db;
-    private llb field_Cb;
+    private Widget field_Cb;
     private boolean field_zb;
     private StringBuilder field_Eb;
     private boolean field_Bb;
     private int field_Ab;
     private long field_wb;
     private int field_Hb;
-    llb field_Fb;
-    private llb field_Kb;
+    Widget field_Fb;
+    private Widget field_Kb;
     static gj field_xb;
     private int field_yb;
     static String field_Jb;
@@ -46,7 +46,7 @@ final class kw extends llb {
           dupTemp$1 = this.field_Eb.length();
           this.field_Gb = dupTemp$1;
           this.field_Ab = dupTemp$1;
-          this.field_Fb.field_R = this.field_Eb.toString();
+          this.field_Fb.text = this.field_Eb.toString();
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kw.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -100,7 +100,7 @@ final class kw extends llb {
           if (var3 < var5) {
             incrementValue$1 = var3;
             var3++;
-            var4 = var4 + this.field_Fb.field_eb.getCharacterAdvance(this.field_Eb.charAt(incrementValue$1));
+            var4 = var4 + this.field_Fb.font.getCharacterAdvance(this.field_Eb.charAt(incrementValue$1));
             continue;
           }
           break;
@@ -112,9 +112,9 @@ final class kw extends llb {
         if (!param4) {
           this.field_wb = 87L;
         }
-        this.a(param1, -119, param0, param3, param2);
-        this.field_Fb.a(0, -84, param0, 0, param2);
-        this.field_Cb.a(0, 123, param0, 0, param2);
+        this.setBounds(param1, -119, param0, param3, param2);
+        this.field_Fb.setBounds(0, -84, param0, 0, param2);
+        this.field_Cb.setBounds(0, 123, param0, 0, param2);
         this.field_Hb = -4 + param2;
     }
 
@@ -128,7 +128,7 @@ final class kw extends llb {
         }
     }
 
-    kw(long param0, llb param1, llb param2, llb param3) {
+    kw(long param0, Widget param1, Widget param2, Widget param3) {
         this(param0, param1, param2, param3, -1);
     }
 
@@ -177,7 +177,7 @@ final class kw extends llb {
           java.awt.datatransfer.Transferable var7 = null;
           String var8 = null;
           var6 = VoidHunters.field_G;
-          var2 = this.b(-this.field_Fb.field_t + (-this.field_M + PlayerGameData.field_b), param0 + 6);
+          var2 = this.b(-this.field_Fb.field_t + (-this.screenX + PlayerGameData.field_b), param0 + 6);
           if (1 == this.field_o) {
             this.a(var2, 3047);
             this.field_Bb = true;
@@ -212,22 +212,22 @@ final class kw extends llb {
             this.field_Gb = dupTemp$0;
             this.field_Ab = dupTemp$0;
           }
-          this.field_Cb.field_L = this.field_Fb.field_eb.getStringWidth(this.field_Eb.toString().substring(0, this.field_Ab));
+          this.field_Cb.x = this.field_Fb.font.getStringWidth(this.field_Eb.toString().substring(0, this.field_Ab));
           if (param0 != -6) {
             this.field_zb = true;
           }
           if (this.field_Gb != this.field_Ab) {
-            var3 = this.field_Fb.field_L + this.field_Fb.field_eb.getStringWidth(this.field_Eb.toString().substring(0, this.field_Gb));
-            if (this.field_Cb.field_L <= var3) {
-              stackIn_32_0 = this.field_Cb.field_L;
+            var3 = this.field_Fb.x + this.field_Fb.font.getStringWidth(this.field_Eb.toString().substring(0, this.field_Gb));
+            if (this.field_Cb.x <= var3) {
+              stackIn_32_0 = this.field_Cb.x;
             } else {
               stackIn_32_0 = var3;
             }
             var4_int = stackIn_32_0;
-            var5 = Math.abs(-this.field_Cb.field_L + var3);
-            this.field_Kb.a(this.field_Fb.field_t + var4_int, 116, var5, 2, this.field_Hb);
+            var5 = Math.abs(-this.field_Cb.x + var3);
+            this.field_Kb.setBounds(this.field_Fb.field_t + var4_int, 116, var5, 2, this.field_Hb);
           } else {
-            this.field_Kb.a(this.field_Cb.field_L, -30, 0, 2, this.field_Hb);
+            this.field_Kb.setBounds(this.field_Cb.x, -30, 0, 2, this.field_Hb);
           }
           if (this.field_Ib != null &&
             this.field_Ib.field_f != 0) {
@@ -277,7 +277,7 @@ final class kw extends llb {
           } else {
             discarded$7 = this.field_Eb.append(param0);
           }
-          this.field_Fb.field_R = this.field_Eb.toString();
+          this.field_Fb.text = this.field_Eb.toString();
           this.field_Ab = this.field_Eb.length();
           if (param1) {
             discarded$8 = this.i(-87);
@@ -305,7 +305,7 @@ final class kw extends llb {
         }
         this.field_Ab = 0;
         this.field_Gb = 0;
-        this.field_Fb.field_R = this.field_Eb.toString();
+        this.field_Fb.text = this.field_Eb.toString();
     }
 
     private final void a(int param0, int param1) {
@@ -349,7 +349,7 @@ final class kw extends llb {
           return false;
         }
         if (param1 != -1) {
-          this.field_Kb = (llb) null;
+          this.field_Kb = (Widget) null;
         }
         if (param2 >= 32 &&
           param2 <= 126) {
@@ -366,7 +366,7 @@ final class kw extends llb {
               discarded$1 = this.field_Eb.append(param2);
               discarded$2 = this.field_Eb.append(var5);
             }
-            this.field_Fb.field_R = this.field_Eb.toString();
+            this.field_Fb.text = this.field_Eb.toString();
             this.field_Ab = this.field_Ab + 1;
             this.field_Gb = this.field_Ab;
           }
@@ -462,7 +462,7 @@ final class kw extends llb {
         return var2.substring(var3, var4);
     }
 
-    private kw(long param0, llb param1, llb param2, llb param3, int param4) {
+    private kw(long param0, Widget param1, Widget param2, Widget param3, int param4) {
         super(param0, param1);
         StringBuilder stackIn_3_1 = null;
         StringBuilder stackIn_3_2 = null;
@@ -485,9 +485,9 @@ final class kw extends llb {
         this.field_zb = false;
         try {
           this.field_yb = param4;
-          this.field_Kb = new llb(0L, param2);
-          this.field_Fb = new llb(0L, param3);
-          this.field_Cb = new llb(0L, param3);
+          this.field_Kb = new Widget(0L, param2);
+          this.field_Fb = new Widget(0L, param3);
+          this.field_Cb = new Widget(0L, param3);
           this.field_T = true;
           stackIn_3_1 = null;
           stackIn_3_2 = null;
@@ -503,13 +503,13 @@ final class kw extends llb {
             stackIn_4_3 = this.field_yb;
           }
           this.field_Eb = new StringBuilder(stackIn_4_3);
-          this.field_Fb.field_R = this.field_Eb.toString();
+          this.field_Fb.text = this.field_Eb.toString();
           this.field_Cb.field_s = "|";
-          this.field_Cb.field_R = "";
-          this.field_lb = new IntrusiveDeque();
-          this.b(-561, this.field_Kb);
-          this.b(-561, this.field_Fb);
-          this.b(-561, this.field_Cb);
+          this.field_Cb.text = "";
+          this.children = new IntrusiveDeque();
+          this.addChild(-561, this.field_Kb);
+          this.addChild(-561, this.field_Fb);
+          this.addChild(-561, this.field_Cb);
           this.field_pb = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -594,7 +594,7 @@ final class kw extends llb {
           var4 = this.field_Eb.toString().substring(var3, this.field_Eb.length());
           ServerTickFactory.a(var2, !param0 ? true : false, this.field_Eb, ' ');
           discarded$0 = this.field_Eb.append(var4);
-          this.field_Fb.field_R = this.field_Eb.toString();
+          this.field_Fb.text = this.field_Eb.toString();
         }
         if (!param0) {
           this.field_vb = -102;

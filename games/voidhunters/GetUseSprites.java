@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetUseSprites extends ConsoleCommand {
-    static llb field_p;
+    static Widget field_p;
     static int field_o;
 
     public static void clearSharedReferences(int param0) {

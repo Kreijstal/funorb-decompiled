@@ -4,7 +4,7 @@
 final class cwa {
     static GameStateFactory field_a;
     static String field_b;
-    static llb field_c;
+    static Widget field_c;
     private static String field_z;
 
     public static void clearSharedReferences(byte param0) {

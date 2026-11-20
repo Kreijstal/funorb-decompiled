@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GrappleLauncherBehaviourFactory implements GameStateFactory {
-    static llb field_a;
+    static Widget field_a;
 
     public final SerializableGameState create(byte param0) {
         int var2 = 39 % ((-64 - param0) / 50);

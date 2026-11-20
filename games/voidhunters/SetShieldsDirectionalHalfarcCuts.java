@@ -3,7 +3,7 @@
  */
 final class SetShieldsDirectionalHalfarcCuts extends ConsoleCommand {
     static GameStateFactory field_o;
-    static llb field_p;
+    static Widget field_p;
 
     public static void clearSharedReferences(int param0) {
         field_o = null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ServerTick extends IntrusiveNode implements DiffableState {
-    static llb field_d;
+    static Widget field_d;
     int field_g;
     boolean field_e;
     int field_f;
@@ -74,7 +74,7 @@ final class ServerTick extends IntrusiveNode implements DiffableState {
           param0.writeBits(-632, this.field_f, 32);
           param0.writeBits(-632, this.field_g, 32);
           if (param1 > -109) {
-            field_d = (llb) null;
+            field_d = (Widget) null;
           }
           vq.writeBoolean(param0, 43, this.field_e);
         } catch (RuntimeException runtimeException) {

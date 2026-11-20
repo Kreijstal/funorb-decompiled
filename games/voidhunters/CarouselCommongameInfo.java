@@ -166,7 +166,7 @@ final class CarouselCommongameInfo implements DiffableState {
           return;
         }
         while (this.field_a.length > var3) {
-          this.field_a[var3].a(param0, 113);
+          this.field_a[var3].initializePlayers(param0, 113);
           var3++;
         }
     }
@@ -185,7 +185,7 @@ final class CarouselCommongameInfo implements DiffableState {
         }
         try {
           var3 = (CarouselCommongameInfo) (param0);
-          var3.field_f = SetBloomCoefficientPercentage.a(var3.field_f, this.field_f, 1, wc.field_a, 77);
+          var3.field_f = SetBloomCoefficientPercentage.a(var3.field_f, this.field_f, 1, IntrusiveDequeIterator.field_a, 77);
           var3.field_g = this.field_g;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mib.W(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -205,8 +205,8 @@ final class CarouselCommongameInfo implements DiffableState {
 
     private final void b(byte param0) {
         int var2;
-        wc var3_ref_wc;
-        wc var4;
+        IntrusiveDequeIterator var3_ref_wc;
+        IntrusiveDequeIterator var4;
         Object var5;
         Object var6;
         CarouselEvent var7;
@@ -217,14 +217,14 @@ final class CarouselCommongameInfo implements DiffableState {
         var2 = 0;
         do {
           var2 = 0;
-          var3_ref_wc = new wc(this.field_f);
-          var4 = new wc(this.field_f);
+          var3_ref_wc = new IntrusiveDequeIterator(this.field_f);
+          var4 = new IntrusiveDequeIterator(this.field_f);
           var5 = null;
           var6 = null;
-          var7 = (CarouselEvent) (var3_ref_wc.c(570));
+          var7 = (CarouselEvent) (var3_ref_wc.first(570));
           scanLoop1: while (true) {
             if (var7 != null) {
-              var8 = (CarouselEvent) (var4.c(570));
+              var8 = (CarouselEvent) (var4.first(570));
               while (var8 != null) {
                 if (var7 != var8 &&
                   !var7.differsFrom((byte) -51, var8)) {
@@ -232,9 +232,9 @@ final class CarouselCommongameInfo implements DiffableState {
                   var6 = var8;
                   break scanLoop1;
                 }
-                var8 = (CarouselEvent) (var4.a(19072));
+                var8 = (CarouselEvent) (var4.next(19072));
               }
-              var7 = (CarouselEvent) (var3_ref_wc.a(19072));
+              var7 = (CarouselEvent) (var3_ref_wc.next(19072));
               continue;
             }
             break;
@@ -451,7 +451,7 @@ final class CarouselCommongameInfo implements DiffableState {
         try {
           this.field_f = new IntrusiveDeque();
           var8 = (SerializableGameState[]) null;
-          var9 = (CarouselEvent[]) (SetAutoDetail.a(12, wc.field_a, param0, 1, -71, (SerializableGameState[]) null));
+          var9 = (CarouselEvent[]) (SetAutoDetail.a(12, IntrusiveDequeIterator.field_a, param0, 1, -71, (SerializableGameState[]) null));
           var3 = var9;
           if (var3 != null) {
             for (var4 = 0; var9.length > var4; var4++) {
@@ -656,7 +656,7 @@ final class CarouselCommongameInfo implements DiffableState {
         CarouselSlot var10;
         int var11;
         CarouselEvent var12;
-        wc var13;
+        IntrusiveDequeIterator var13;
         StringBuilder var14;
         int var4Lifetime1;
         var11 = VoidHunters.field_G;
@@ -688,15 +688,15 @@ final class CarouselCommongameInfo implements DiffableState {
             if (!var6_ref_uqb.field_f &&
               var5 > var6_ref_uqb.field_e) {
               var7_int = 0;
-              var13 = new wc(this.field_f);
-              var12 = (CarouselEvent) (var13.c(570));
+              var13 = new IntrusiveDequeIterator(this.field_f);
+              var12 = (CarouselEvent) (var13.first(570));
               while (true) {
                 if (var12 != null) {
                   if (var6_ref_uqb != var12 &&
                     !var12.differsFrom((byte) -55, var6_ref_uqb)) {
                     var7_int = 1;
                   } else {
-                    var12 = (CarouselEvent) (var13.a(19072));
+                    var12 = (CarouselEvent) (var13.next(19072));
                     continue;
                   }
                 }

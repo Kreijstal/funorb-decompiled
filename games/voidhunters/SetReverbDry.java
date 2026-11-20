@@ -20,36 +20,36 @@ final class SetReverbDry extends ConsoleCommand {
         var14 = VoidHunters.field_G;
         try {
           var6_int = 493 + param3 + (8 + (2 + param5));
-          kea.field_a.a(3, -18, var6_int - 6, 3, SetToggledScoreboard.field_o.field_G - 6);
-          var7 = -5 + kea.field_a.field_G;
-          jba.field_b.a(5, -73, param5 + (param3 + 487), var7 - param1, param1);
-          bpa.field_c.a(param3, -55, -fgb.field_l.field_hb + jba.field_b.field_hb - param3, 0, param1);
+          kea.field_a.setBounds(3, -18, var6_int - 6, 3, SetToggledScoreboard.field_o.height - 6);
+          var7 = -5 + kea.field_a.height;
+          jba.field_b.setBounds(5, -73, param5 + (param3 + 487), var7 - param1, param1);
+          bpa.field_c.setBounds(param3, -55, -WidgetNode.field_l.width + jba.field_b.width - param3, 0, param1);
           var7 = var7 - (2 + param1);
-          fgb.field_l.a(param3 + bpa.field_c.field_hb, 122, fgb.field_l.field_hb, 0, param1);
+          WidgetNode.field_l.setBounds(param3 + bpa.field_c.width, 122, WidgetNode.field_l.width, 0, param1);
           GetUseLines.field_p.a(487 + (param3 + param5), 2, -1, -5 + var7, 5, 5, param5);
           if (null != PartitionZoneListFactory.field_b) {
-            PartitionZoneListFactory.field_b.a(GetUseLines.field_p.field_L, GetUseLines.field_p.field_hb, GetUseLines.field_p.field_G, 1, GetUseLines.field_p.field_K);
+            PartitionZoneListFactory.field_b.a(GetUseLines.field_p.x, GetUseLines.field_p.width, GetUseLines.field_p.height, 1, GetUseLines.field_p.y);
           }
           if (param2 <= 91) {
             return;
           }
-          var8 = -var6_int - param3 + SetToggledScoreboard.field_o.field_hb;
+          var8 = -var6_int - param3 + SetToggledScoreboard.field_o.width;
           var9 = var8 / 2;
           var10 = param3 + param0 + var9;
           var11 = 0;
           for (var12 = 0; 6 > var12; var12++) {
             if (var12 >= 5 ||
               ul.field_b[var12] != null) {
-              var13 = var11 * (-4 + SetToggledScoreboard.field_o.field_G) / (1 + SetSniperCannonRandomness.field_o) + 3;
+              var13 = var11 * (-4 + SetToggledScoreboard.field_o.height) / (1 + SetSniperCannonRandomness.field_o) + 3;
               var11++;
-              var7Lifetime1 = 3 + (var11 * (2 + (SetToggledScoreboard.field_o.field_G - 6)) / (1 + SetSniperCannonRandomness.field_o) - 2) - var13;
+              var7Lifetime1 = 3 + (var11 * (2 + (SetToggledScoreboard.field_o.height - 6)) / (1 + SetSniperCannonRandomness.field_o) - 2) - var13;
               if (var12 < 5) {
-                ul.field_b[var12].a(var6_int, -100, var8, var13, var7Lifetime1);
-                SetMissionVariablesHudX.field_o[var12].a(param3, -110, -param3 + var9, 0, var7Lifetime1);
-                SecondaryNodeDeque.field_c[var12].a(var9, -27, param0, param4, -param4 + (var7Lifetime1 - param4));
-                NebulaFieldFactory.field_c[var12].a(var10, 127, -var10 + (-param3 + var8), param4, var7Lifetime1 - (param4 + param4));
+                ul.field_b[var12].setBounds(var6_int, -100, var8, var13, var7Lifetime1);
+                SetMissionVariablesHudX.field_o[var12].setBounds(param3, -110, -param3 + var9, 0, var7Lifetime1);
+                SecondaryNodeDeque.field_c[var12].setBounds(var9, -27, param0, param4, -param4 + (var7Lifetime1 - param4));
+                NebulaFieldFactory.field_c[var12].setBounds(var10, 127, -var10 + (-param3 + var8), param4, var7Lifetime1 - (param4 + param4));
               } else {
-                SetBombletSprayAimarc.field_o.a(var6_int, -120, var8, var13, var7Lifetime1);
+                SetBombletSprayAimarc.field_o.setBounds(var6_int, -120, var8, var13, var7Lifetime1);
               }
             }
           }

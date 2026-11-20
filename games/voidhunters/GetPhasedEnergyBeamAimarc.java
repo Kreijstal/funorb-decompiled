@@ -18,12 +18,12 @@ final class GetPhasedEnergyBeamAimarc extends ConsoleCommand {
         }
     }
 
-    final static void a(llb param0, llb param1, boolean param2) {
-        if (param1.field_lb == null) {
-          param1.field_lb = new IntrusiveDeque();
+    final static void a(Widget param0, Widget param1, boolean param2) {
+        if (param1.children == null) {
+          param1.children = new IntrusiveDeque();
         }
-        if (param0.field_lb == null) {
-          param0.field_lb = new IntrusiveDeque();
+        if (param0.children == null) {
+          param0.children = new IntrusiveDeque();
         }
         if (ae.field_f == null) {
           ae.field_f = new pr(64);
@@ -31,12 +31,12 @@ final class GetPhasedEnergyBeamAimarc extends ConsoleCommand {
         if (null == TeamNodeCondition.field_c) {
           TeamNodeCondition.field_c = new pr(64);
         }
-        mr.field_M = param1.field_lb;
+        mr.field_M = param1.children;
         if (!param2) {
           return;
         }
         try {
-          SetPointDefenceLaserProjectileOndamageParticles.field_o = param0.field_lb;
+          SetPointDefenceLaserProjectileOndamageParticles.field_o = param0.children;
           ija.a(85);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "plb.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

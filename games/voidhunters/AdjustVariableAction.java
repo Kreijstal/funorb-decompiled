@@ -98,13 +98,13 @@ final class AdjustVariableAction extends MissionAction implements DiffableState 
             var6 = this.mode;
             if (var6 == 0) {
               var5 = 1;
-              param2.missionState.a((byte) -93, var5, this.index);
+              param2.missionState.adjustCustomVariable((byte) -93, var5, this.index);
             } else {
               if (1 != var6) {
-                param2.missionState.a((byte) -93, var5, this.index);
+                param2.missionState.adjustCustomVariable((byte) -93, var5, this.index);
               } else {
                 var5 = -1;
-                param2.missionState.a((byte) -93, var5, this.index);
+                param2.missionState.adjustCustomVariable((byte) -93, var5, this.index);
               }
             }
           }

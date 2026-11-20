@@ -4,7 +4,7 @@
 final class SetAngularVelocitySustain extends ConsoleCommand {
     static ri field_o;
     static int field_p;
-    static llb field_q;
+    static Widget field_q;
 
     public static void clearSharedReferences(int param0) {
         if (param0 != -25544) {

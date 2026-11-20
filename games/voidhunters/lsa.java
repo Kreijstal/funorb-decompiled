@@ -5,7 +5,7 @@ final class lsa extends IntrusiveNode {
     static long field_f;
     int field_g;
     int field_d;
-    static llb field_e;
+    static Widget field_e;
 
     public static void clearSharedReferences(byte param0) {
         if (param0 != -92) {

@@ -4,7 +4,7 @@
 final class GetPointDefenceLaserProjectileInterceptDamage extends ConsoleCommand {
     static String field_p;
     static Sprite[] field_t;
-    static llb field_r;
+    static Widget field_r;
     static ShipComponent[] field_q;
     static String field_s;
     static boolean field_o;

@@ -4,7 +4,7 @@
 final class bpa implements wwa {
     private nva field_b;
     static int field_a;
-    static llb field_c;
+    static Widget field_c;
     static String field_d;
 
     public static void clearSharedReferences(byte param0) {

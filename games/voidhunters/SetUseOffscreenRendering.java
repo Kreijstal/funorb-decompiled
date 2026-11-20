@@ -5,9 +5,9 @@ final class SetUseOffscreenRendering extends ConsoleCommand {
     static String field_p;
     static int field_o;
 
-    final static llb a(int param0) {
+    final static Widget a(int param0) {
         if (param0 != 0) {
-          return (llb) null;
+          return (Widget) null;
         }
         return WaterTextures.field_f.field_wb;
     }
@@ -51,7 +51,7 @@ final class SetUseOffscreenRendering extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static llb b(boolean param0) {
+    final static Widget b(boolean param0) {
         if (param0) {
           SetUseOffscreenRendering.a(45);
           return MapClearanceCircle.field_f.field_wb;

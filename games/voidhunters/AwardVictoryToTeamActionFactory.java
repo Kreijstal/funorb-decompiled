@@ -44,7 +44,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ifa.field_g[2] = nna.field_D;
           ifa.field_g[15] = GetFightersPerPlayerMaximum.field_q;
           ifa.field_g[13] = ujb.field_d;
-          ifa.field_g[19] = llb.field_V + ":";
+          ifa.field_g[19] = Widget.field_V + ":";
           ifa.field_g[5] = ffb.field_b;
           ifa.field_g[7] = bw.field_a;
           ifa.field_g[4] = DebugRequest.field_j;
@@ -214,7 +214,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.field_o[46] = SetLaserEnergyUsed.field_o;
           GetGrapplingHookSpringConstant.field_o[22] = bi.field_g;
           GetGrapplingHookSpringConstant.field_o[39] = di.field_m;
-          GetGrapplingHookSpringConstant.field_o[4] = llb.field_kb;
+          GetGrapplingHookSpringConstant.field_o[4] = Widget.field_kb;
           GetGrapplingHookSpringConstant.field_o[47] = pjb.field_Db;
           GetGrapplingHookSpringConstant.field_o[15] = MidiNote.field_z;
           GetGrapplingHookSpringConstant.field_o[29] = ifa.field_e;

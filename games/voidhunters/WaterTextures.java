@@ -5,7 +5,7 @@ final class WaterTextures {
     GpuTexture3D normalMapVolume;
     static soa field_f;
     private GpuTexture2D[] field_c;
-    static llb field_g;
+    static Widget field_g;
     private GpuToolkit toolkit;
     GpuTexture2D[] noiseFrames;
     boolean usesVolumeTexture;
@@ -89,7 +89,7 @@ final class WaterTextures {
         field_f = null;
         field_g = null;
         if (param0 <= 20) {
-          field_g = (llb) null;
+          field_g = (Widget) null;
         }
     }
 

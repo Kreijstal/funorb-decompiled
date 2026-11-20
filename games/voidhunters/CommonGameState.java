@@ -223,7 +223,7 @@ final class CommonGameState implements DiffableState, mfa {
 
     public final String getPlayerName(int param0, int param1) {
         if (SetMissionResnetResourceTickTime.field_p == param0 &&
-          !this.b(1).a(param1, (byte) 59).field_a) {
+          !this.b(1).a(param1, (byte) 59).connected) {
           return "Bot " + param1;
         }
         if (this.field_h[param1] == null) {
@@ -389,14 +389,14 @@ final class CommonGameState implements DiffableState, mfa {
           if (this.field_g != 0 &&
             this.field_g != 1) {
             if (this.field_g == 2) {
-              var12.missionState.a(this.field_d, 1, 13);
+              var12.missionState.initializeMatch(this.field_d, 1, 13);
               var17 = new MissionBuilder();
               var17.seed = this.field_d;
-              var17.a(-89, var12);
-              var12.missionState.c(5, -7, 0);
+              var17.generateMission(-89, var12);
+              var12.missionState.setMissionPhase(5, -7, 0);
             } else if (this.field_g == 3) {
-              var12.missionState.c(5, -7, 0);
-              var12.world.b(13, (byte) 23);
+              var12.missionState.setMissionPhase(5, -7, 0);
+              var12.world.setObjectiveType(13, (byte) 23);
               var14 = new MissionEvent();
               var14.addCondition((byte) -117, (MissionCondition) (new TickCondition(1)));
               var14.addAction(new SetVariableLabelAction(0, 10), true);
@@ -420,7 +420,7 @@ final class CommonGameState implements DiffableState, mfa {
           for (var7 = 0; var7 < this.field_a; var7++) {
             stackIn_16_0 = var10.field_c[var7];
             stackIn_17_1 = (null != this.field_h[var7]) && (0 < this.field_h[var7].length()) && ((1 << var7 & this.field_j) == 0);
-            stackIn_16_0.field_a = stackIn_17_1;
+            stackIn_16_0.connected = stackIn_17_1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

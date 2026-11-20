@@ -14,7 +14,7 @@ class CarouselSlot implements DiffableState {
         field_a = null;
     }
 
-    final int a(int param0) {
+    final int countConnectedPlayers(int param0) {
         int var3 = 0;
         int var2;
         int var4;
@@ -29,7 +29,7 @@ class CarouselSlot implements DiffableState {
         }
         var2 = 0;
         for (var3 = 0; this.field_c.length > var3; var3++) {
-          if (this.field_c[var3].field_a) {
+          if (this.field_c[var3].connected) {
             var2++;
           }
         }
@@ -249,7 +249,7 @@ class CarouselSlot implements DiffableState {
     void a(CarouselSlot param0, int param1, int param2, boolean param3) {
         try {
           if (param2 != 1) {
-            this.a(-32);
+            this.countConnectedPlayers(-32);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tja.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -340,7 +340,7 @@ class CarouselSlot implements DiffableState {
         }
     }
 
-    void a(int param0, int param1) {
+    void initializePlayers(int param0, int param1) {
         int var3 = 0;
         int var4 = VoidHunters.field_G;
         if (param1 <= 93) {

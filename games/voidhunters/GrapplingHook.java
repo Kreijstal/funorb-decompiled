@@ -10,7 +10,7 @@ final class GrapplingHook extends ShipBody implements DiffableState, CompactGame
     private int grabbedComponentId;
     private int grabbedComponentOffsety;
     private int grabbedComponentOffsetx;
-    static llb field_C;
+    static Widget field_C;
 
     final void a(int param0, boolean param1) {
         int var3 = -47 / ((param0 - 56) / 50);

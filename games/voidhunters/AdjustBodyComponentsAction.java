@@ -132,7 +132,7 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
               } else {
                 var7 = var6.chassis.countComponents(param0 + 0);
               }
-              param2.missionState.a((byte) -11, var7, this.index);
+              param2.missionState.adjustCustomVariable((byte) -11, var7, this.index);
             }
           }
           if (param0 != 1) {

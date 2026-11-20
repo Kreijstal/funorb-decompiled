@@ -4,7 +4,7 @@
 final class GetLaserAimarc extends ConsoleCommand {
     static String field_r;
     static boolean field_p;
-    static llb[] field_o;
+    static Widget[] field_o;
     static int field_q;
 
     GetLaserAimarc(String param0, Class[] param1, String param2) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qpb extends mc {
-    static llb field_w;
+    static Widget field_w;
     int field_v;
 
     qpb(shb param0) {
@@ -71,7 +71,7 @@ final class qpb extends mc {
     public static void clearSharedReferences(boolean param0) {
         field_w = null;
         if (!param0) {
-          field_w = (llb) null;
+          field_w = (Widget) null;
         }
     }
 

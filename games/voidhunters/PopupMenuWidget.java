@@ -1,71 +1,71 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aw extends llb {
-    private llb field_Fb;
+final class PopupMenuWidget extends Widget {
+    private Widget field_Fb;
     private int field_yb;
     private Sprite[] field_xb;
-    private llb field_Cb;
+    private Widget field_Cb;
     private int field_wb;
     static gl field_Bb;
-    private int field_Ab;
+    private int selectionResult;
     private int field_zb;
-    private int[] field_Eb;
+    private int[] itemResults;
     private int field_Hb;
     private int field_vb;
-    private int field_Ib;
-    private cna[] field_Gb;
+    private int itemCount;
+    private IconTextWidget[] items;
     static String field_Db;
 
-    final boolean e(byte param0) {
-        if (this.field_Ab != -2) {
+    final boolean pollSelectionPending(byte param0) {
+        if (this.selectionResult != -2) {
           return false;
         }
         if (SetBombletSprayProjectileDamage.field_o == 13) {
-          this.field_Ab = -1;
+          this.selectionResult = -1;
         }
         int var2 = 108 % ((-69 - param0) / 48);
         return true;
     }
 
-    final int a(int param0, boolean param1) {
+    final int updateAndGetSelection(int param0, boolean param1) {
         int var3 = 0;
         int var5 = VoidHunters.field_G;
-        this.a(param1, 1332);
+        this.updateInput(param1, 1332);
         if (!param1) {
           return -2;
         }
-        for (var3 = 0; var3 < this.field_Ib; var3++) {
-          if (this.field_Gb[var3].field_o != 0) {
-            return this.field_Eb[var3];
+        for (var3 = 0; var3 < this.itemCount; var3++) {
+          if (this.items[var3].field_o != 0) {
+            return this.itemResults[var3];
           }
         }
         int var4 = -115 / ((param0 + 87) / 37);
         if (0 != SetDebrisPartitioned.field_o) {
           return -1;
         }
-        return this.field_Ab;
+        return this.selectionResult;
     }
 
-    final void a(String param0, byte param1, int param2) {
+    final void addItem(String param0, byte param1, int param2) {
         try {
-          this.field_Gb[this.field_Ib] = new cna(0L, (llb) null, (llb) null, this.field_Cb, (Sprite) null, param0);
-          this.field_Gb[this.field_Ib].field_mb = this.field_xb;
-          this.field_Gb[this.field_Ib].field_S = true;
-          this.field_Gb[this.field_Ib].field_B = 1;
-          this.b(-561, this.field_Gb[this.field_Ib]);
-          this.field_Eb[this.field_Ib] = param2;
-          this.field_Ib = this.field_Ib + 1;
+          this.items[this.itemCount] = new IconTextWidget(0L, (Widget) null, (Widget) null, this.field_Cb, (Sprite) null, param0);
+          this.items[this.itemCount].field_mb = this.field_xb;
+          this.items[this.itemCount].field_S = true;
+          this.items[this.itemCount].field_B = 1;
+          this.addChild(-561, this.items[this.itemCount]);
+          this.itemResults[this.itemCount] = param2;
+          this.itemCount = this.itemCount + 1;
           if (param1 != -53) {
             String var5 = (String) null;
-            this.a((String) null, (byte) -31, -41);
+            this.addItem((String) null, (byte) -31, -41);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aw.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3, int param4) {
+    final void layoutPopup(int param0, int param1, int param2, int param3, int param4) {
         int var10 = 0;
         int var6;
         int var7;
@@ -75,16 +75,16 @@ final class aw extends llb {
         int var7Lifetime1;
         int var8Lifetime1;
         var11 = VoidHunters.field_G;
-        if (0 == this.field_Ib) {
-          this.field_Gb[this.field_Ib] = new cna(0L, (llb) null, (llb) null, this.field_Fb, (Sprite) null, GetNumStars.field_o);
-          this.field_Gb[this.field_Ib].field_B = 1;
-          this.b(-561, this.field_Gb[this.field_Ib]);
-          this.field_Eb[this.field_Ib] = -1;
-          this.field_Ib = this.field_Ib + 1;
+        if (0 == this.itemCount) {
+          this.items[this.itemCount] = new IconTextWidget(0L, (Widget) null, (Widget) null, this.field_Fb, (Sprite) null, GetNumStars.field_o);
+          this.items[this.itemCount].field_B = 1;
+          this.addChild(-561, this.items[this.itemCount]);
+          this.itemResults[this.itemCount] = -1;
+          this.itemCount = this.itemCount + 1;
         }
         var6 = 0;
-        for (var7 = 0; var7 < this.field_Ib; var7++) {
-          var8 = this.field_Gb[var7].a(this.field_Hb, this.field_vb, -66);
+        for (var7 = 0; var7 < this.itemCount; var7++) {
+          var8 = this.items[var7].measurePreferredWidth(this.field_Hb, this.field_vb, -66);
           if (var8 > var6) {
             var6 = var8;
           }
@@ -93,17 +93,17 @@ final class aw extends llb {
         if (param1 != -29060) {
           return;
         }
-        var7Lifetime1 = this.field_yb + (this.field_yb + this.field_wb * this.field_Ib);
+        var7Lifetime1 = this.field_yb + (this.field_yb + this.field_wb * this.itemCount);
         var8Lifetime1 = jv.a((byte) -109, param0, param3, var6);
         var9 = lma.a(param4, param2, var7Lifetime1, (byte) -16);
-        this.a(var8Lifetime1, 32, var6, var9, var7Lifetime1);
-        for (var10 = 0; this.field_Ib > var10; var10++) {
-          this.field_Gb[var10].a(this.field_yb + this.field_wb * var10, this.field_zb, -124, this.field_vb, this.field_Hb, -(2 * this.field_zb) + var6, this.field_wb);
+        this.setBounds(var8Lifetime1, 32, var6, var9, var7Lifetime1);
+        for (var10 = 0; this.itemCount > var10; var10++) {
+          this.items[var10].setBoundsAndLayout(this.field_yb + this.field_wb * var10, this.field_zb, -124, this.field_vb, this.field_Hb, -(2 * this.field_zb) + var6, this.field_wb);
         }
         return;
     }
 
-    final static void a(boolean param0) {
+    final static void applyGraphicsQualityPreset(boolean param0) {
         rma.field_b = 0;
         GetMissilesExplosionPower.field_p = 1;
         GetSalvoDamageMultiplier.field_q = 1;
@@ -114,7 +114,7 @@ final class aw extends llb {
           return;
         }
         SetSalvoDamageMultiplier.field_o = 1;
-        if (GetMissileLauncherProjectileLife.field_p == 2) {
+        if (GetMissileLauncherProjectileLife.graphicsQuality == 2) {
           GetUseSprites.field_o = 0;
           GetSalvoDamageMultiplier.field_q = 0;
           SetSalvoDamageMultiplier.field_o = 0;
@@ -122,7 +122,7 @@ final class aw extends llb {
           SetVariableActionFactory.field_c = 0;
           GetMissilesExplosionPower.field_p = 0;
         } else {
-          if (1 == GetMissileLauncherProjectileLife.field_p) {
+          if (1 == GetMissileLauncherProjectileLife.graphicsQuality) {
             GetMissilesExplosionPower.field_p = 0;
             GetUseSprites.field_o = 0;
             SetSalvoDamageMultiplier.field_o = 0;
@@ -131,18 +131,18 @@ final class aw extends llb {
         }
     }
 
-    final void a(int param0, int param1, Sprite param2, String param3) {
+    final void addItem(int param0, int param1, Sprite param2, String param3) {
         if (param0 != -1) {
           return;
         }
         try {
-          this.field_Gb[this.field_Ib] = new cna(0L, (llb) null, (llb) null, this.field_Cb, param2, param3);
-          this.field_Gb[this.field_Ib].field_mb = this.field_xb;
-          this.field_Gb[this.field_Ib].field_S = true;
-          this.field_Gb[this.field_Ib].field_B = 1;
-          this.b(param0 ^ 560, this.field_Gb[this.field_Ib]);
-          this.field_Eb[this.field_Ib] = param1;
-          this.field_Ib = this.field_Ib + 1;
+          this.items[this.itemCount] = new IconTextWidget(0L, (Widget) null, (Widget) null, this.field_Cb, param2, param3);
+          this.items[this.itemCount].field_mb = this.field_xb;
+          this.items[this.itemCount].field_S = true;
+          this.items[this.itemCount].field_B = 1;
+          this.addChild(param0 ^ 560, this.items[this.itemCount]);
+          this.itemResults[this.itemCount] = param1;
+          this.itemCount = this.itemCount + 1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aw.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -156,15 +156,15 @@ final class aw extends llb {
         }
     }
 
-    aw(aw param0) {
+    PopupMenuWidget(PopupMenuWidget param0) {
         this(param0, param0.field_xb, param0.field_Fb, param0.field_Cb, param0.field_zb, param0.field_vb, param0.field_Hb, param0.field_yb, param0.field_wb);
     }
 
-    aw(llb param0, Sprite[] param1, llb param2, llb param3, int param4, int param5, int param6, int param7, int param8) {
+    PopupMenuWidget(Widget param0, Sprite[] param1, Widget param2, Widget param3, int param4, int param5, int param6, int param7, int param8) {
         super(0L, param0);
-        this.field_Eb = new int[256];
-        this.field_Ab = -2;
-        this.field_Gb = new cna[256];
+        this.itemResults = new int[256];
+        this.selectionResult = -2;
+        this.items = new IconTextWidget[256];
         try {
           this.field_wb = param8;
           this.field_Cb = param3;

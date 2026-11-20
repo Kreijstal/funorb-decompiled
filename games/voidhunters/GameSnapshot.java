@@ -96,7 +96,7 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
         var8 = var9;
         var4 = var8;
         for (var5 = 0; var5 < this.field_c.length; var5++) {
-          if (this.field_c[var5].field_a ||
+          if (this.field_c[var5].connected ||
             SetMissionResnetResourceTickTime.field_p == 1) {
             var10Lifetime1 = var9;
             var6 = ((Player) (this.field_c[var5])).selectedTeam;
@@ -180,8 +180,8 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
         }
     }
 
-    final void a(int param0, int param1) {
-        super.a(param0, 122);
+    final void initializePlayers(int param0, int param1) {
+        super.initializePlayers(param0, 122);
         if (param1 <= 93) {
           IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
           this.readCompactState((IsaacPacketBuffer) null, -44);
@@ -387,7 +387,7 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
           ka.a(param1, param2 ^ -19265);
           this.settings.a((byte) 125);
           this.world.a(1799937864, param3, this.messageLog, (Player[]) (param0.field_c), this.missionState, param1, (Player[]) (this.field_c));
-          this.missionState.a(this, param1, (byte) -19);
+          this.missionState.updateMissionPhases(this, param1, (byte) -19);
           if (param2 == fra.field_a) {
             for (var5_int = 0; this.field_c.length > var5_int; var5_int++) {
               var6 = (Player) (this.field_c[var5_int]);
@@ -399,7 +399,7 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
             var5_intLifetime1 = var8;
             while (this.field_c.length > var8) {
               if (this.field_c[var8] != null) {
-                ((Player) (this.field_c[var8])).c((byte) 11);
+                ((Player) (this.field_c[var8])).updateAutobalanceTimer((byte) 11);
               }
               var8++;
             }
@@ -624,7 +624,7 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
         if (param0) {
           this.missionState = (MissionState) null;
         }
-        this.messageLog.a(81, param1);
+        this.messageLog.expireMessages(81, param1);
     }
 
     static {

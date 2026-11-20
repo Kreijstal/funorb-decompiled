@@ -74,9 +74,9 @@ final class jeb extends mfb {
         if (param0) {
           String var3 = (String) null;
           jeb.a(31, (int[]) null, 36L, (String) null, (byte) 17);
-          return r.field_k;
+          return RenderResourceNode.field_k;
         }
-        return r.field_k;
+        return RenderResourceNode.field_k;
     }
 
     jeb() {

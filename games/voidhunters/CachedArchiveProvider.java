@@ -9,7 +9,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
     private ArchiveDisk archiveDisk;
     private int archiveId;
     private ArchiveDisk indexDisk;
-    static llb field_s;
+    static Widget field_s;
     private byte[] expectedIndexDigest;
     private int expectedIndexVersion;
     private NetworkArchiveClient field_g;
@@ -542,7 +542,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
           }
         }
         if (param1) {
-          field_s = (llb) null;
+          field_s = (Widget) null;
         }
     }
 

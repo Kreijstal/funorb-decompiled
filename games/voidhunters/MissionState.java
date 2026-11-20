@@ -15,12 +15,12 @@ final class MissionState implements DiffableState {
     static String field_h;
     MissionVariable[] customVariables;
 
-    final int d(byte param0) {
+    final int getRoundsLeft(byte param0) {
         int var2 = -14 / ((param0 + 56) / 40);
         return this.nextround.roundsLeft;
     }
 
-    final int g(byte param0) {
+    final int getWinner(byte param0) {
         if (param0 <= 39) {
           this.missionPhase = -39;
         }
@@ -120,7 +120,7 @@ final class MissionState implements DiffableState {
         }
     }
 
-    private final void a(int param0, GameSnapshot param1) {
+    private final void startMission(int param0, GameSnapshot param1) {
         int var5_int = 0;
         int var4 = 0;
         RuntimeException stackIn_17_0 = null;
@@ -139,16 +139,16 @@ final class MissionState implements DiffableState {
         try {
           var8 = new MissionBuilder();
           var9 = var8;
-          var9.seed = this.a((byte) 120);
-          if (qab.a(param0 + 92, this.d(6472))) {
+          var9.seed = this.getMissionGenerationSeed((byte) 120);
+          if (qab.a(param0 + 92, this.getVotedObjective(6472))) {
             var10 = new Random((long)var9.seed);
-            this.b(-1, param1);
-            this.a(var10, 2196, param1);
+            this.rebalanceTeams(-1, param1);
+            this.assignUnassignedPlayersToTeams(var10, 2196, param1);
           }
-          var9.optionTotals = this.c(true);
-          var9.a(91, param1);
+          var9.optionTotals = this.getVotedOptions(true);
+          var9.generateMission(91, param1);
           if (MissionList.a((byte) -125)) {
-            var11 = ShipTeamCondition.field_f[param1.missionState.d(6472)];
+            var11 = ShipTeamCondition.field_f[param1.missionState.getVotedObjective(6472)];
             SetGrapplingHookCooldown.a(202, "missions_started_" + var11, 1);
             SetGrapplingHookCooldown.a(param0 + 202, "missions_started", 1);
             for (var5_int = 0; var5_int < var9.optionTotals.length; var5_int++) {
@@ -158,14 +158,14 @@ final class MissionState implements DiffableState {
               }
             }
           }
-          this.b(-1);
-          this.c(5, -7, 0);
+          this.decrementRoundsLeft(-1);
+          this.setMissionPhase(5, -7, 0);
           this.winner = -1;
           this.phaseChangeCountdown = 0;
           for (var4 = param0; var4 < param1.field_c.length; var4++) {
             var5 = param1.a(var4, (byte) 59);
-            var5.b((byte) 127);
-            var5.b(-1);
+            var5.clearVotes((byte) 127);
+            var5.resetRoundStatistics(-1);
             var5.carriedOverComponents = null;
           }
           return;
@@ -183,7 +183,7 @@ final class MissionState implements DiffableState {
         }
     }
 
-    final boolean c(byte param0) {
+    final boolean isPreGamePhase(byte param0) {
         int var2;
         boolean stackIn_7_0 = false;
         var2 = -41 % ((14 - param0) / 41);
@@ -196,7 +196,7 @@ final class MissionState implements DiffableState {
         return this.phaseChangeCountdown;
     }
 
-    private final boolean a(boolean param0, GameSnapshot param1) {
+    private final boolean hasPhaseSkipRequest(boolean param0, GameSnapshot param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         Player var4 = null;
@@ -212,7 +212,7 @@ final class MissionState implements DiffableState {
           }
           for (var3_int = 0; var3_int < param1.field_c.length; var3_int++) {
             var4 = param1.a(var3_int, (byte) 59);
-            if (var4.field_a &&
+            if (var4.connected &&
               54 == var4.specialorder) {
               return true;
             }
@@ -232,7 +232,7 @@ final class MissionState implements DiffableState {
         }
     }
 
-    final void a(Random param0, int param1, GameSnapshot param2) {
+    final void assignUnassignedPlayersToTeams(Random param0, int param1, GameSnapshot param2) {
         int var8 = 0;
         int var12 = 0;
         RuntimeException stackIn_38_0 = null;
@@ -267,7 +267,7 @@ final class MissionState implements DiffableState {
           var6 = 0;
           for (var7 = 0; param2.field_c.length > var7; var7++) {
             var8_ref_tfa = param2.a(var7, (byte) 59);
-            if (var8_ref_tfa.field_a ||
+            if (var8_ref_tfa.connected ||
               SetMissionResnetResourceTickTime.field_p != 0) {
               var5++;
               var9 = var8_ref_tfa.selectedTeam;
@@ -289,7 +289,7 @@ final class MissionState implements DiffableState {
             for (var12 = 0; param2.field_c.length > var12; var12++) {
               var13 = param2.a(var12, (byte) 59);
               var14 = var13.selectedTeam;
-              if ((var13.field_a ||
+              if ((var13.connected ||
                 SetMissionResnetResourceTickTime.field_p != 0) && (var14 < 0 ||
                 var18.length <= var14)) {
                 if (var11 == var10) {
@@ -325,7 +325,7 @@ final class MissionState implements DiffableState {
         }
     }
 
-    final void b(boolean param0) {
+    final void skipPhaseCountdown(boolean param0) {
         GetDebrisThrowable.a(param0, "Skipping phase countdown for " + this.missionPhase);
         this.phaseChangeCountdown = 0;
         if (param0) {
@@ -424,11 +424,11 @@ final class MissionState implements DiffableState {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void setCustomVariableValue(int param0, int param1, int param2) {
         if (param0 != 2) {
           this.teamscores = (int[]) null;
         }
-        MissionVariable var6 = this.c(-1, param2);
+        MissionVariable var6 = this.getCustomVariableForWrite(-1, param2);
         MissionVariable var7 = var6;
         if (var7 != null) {
           var7.value = param1;
@@ -503,23 +503,23 @@ final class MissionState implements DiffableState {
         }
     }
 
-    final int d(int param0) {
+    final int getVotedObjective(int param0) {
         if (param0 != 6472) {
           int[] var3 = (int[]) null;
-          this.a((int[]) null, false);
+          this.setVotedOptions((int[]) null, false);
         }
         return this.nextround.votedObjective;
     }
 
-    final void a(byte param0, int param1, int param2) {
+    final void adjustCustomVariable(byte param0, int param1, int param2) {
         if (param0 > -8) {
-          this.b(54, -62, 111);
+          this.setCustomVariableValue(54, -62, 111);
         }
-        int var4 = this.b(7061, param2);
-        this.b(2, var4 + param1, param2);
+        int var4 = this.getCustomVariableValue(7061, param2);
+        this.setCustomVariableValue(2, var4 + param1, param2);
     }
 
-    private final void a(GameSnapshot param0, byte param1, int param2) {
+    private final void unassignPlayerFromTeam(GameSnapshot param0, byte param1, int param2) {
         int var6 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -539,7 +539,7 @@ final class MissionState implements DiffableState {
           var7 = 28 / ((-37 - param1) / 47);
           for (var6 = 0; param0.field_c.length > var6; var6++) {
             var8 = param0.a(var6, (byte) 59);
-            if (var8.a((byte) -43) &&
+            if (var8.isParticipating((byte) -43) &&
               param2 == var8.selectedTeam) {
               var9 = var8.assists + var8.kills;
               if (var4_int < var9) {
@@ -549,7 +549,7 @@ final class MissionState implements DiffableState {
             }
           }
           if (var5 >= 0) {
-            param0.a(var5, (byte) 59).a(255);
+            param0.a(var5, (byte) 59).unassignForAutobalance(255);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -566,7 +566,7 @@ final class MissionState implements DiffableState {
         }
     }
 
-    final void a(int param0) {
+    final void extendPhaseCountdown(int param0) {
         if (param0 < 125) {
           return;
         }
@@ -574,10 +574,10 @@ final class MissionState implements DiffableState {
         this.phaseChangeCountdown = this.phaseChangeCountdown + 600 * Particle.field_l;
     }
 
-    final MissionVariable a(int param0, int param1) {
+    final MissionVariable getCustomVariable(int param0, int param1) {
         if (param0 != -31634) {
           int[] var4 = (int[]) null;
-          this.a((int[]) null, false);
+          this.setVotedOptions((int[]) null, false);
         }
         if (null == this.customVariables) {
           return null;
@@ -594,7 +594,7 @@ final class MissionState implements DiffableState {
         return this.customVariables[param1];
     }
 
-    private final int[] a(byte param0, GameSnapshot param1) {
+    private final int[] countPlayersByTeam(byte param0, GameSnapshot param1) {
         int var4 = 0;
         int[] var3 = null;
         RuntimeException var3_ref = null;
@@ -612,7 +612,7 @@ final class MissionState implements DiffableState {
           var3 = new int[2];
           for (var4 = 0; param1.field_c.length > var4; var4++) {
             var5 = param1.a(var4, (byte) 59);
-            if (var5.a((byte) -119)) {
+            if (var5.isParticipating((byte) -119)) {
               var6 = var5.selectedTeam;
               if (var6 >= 0 &&
                 var6 < var3.length) {
@@ -640,10 +640,10 @@ final class MissionState implements DiffableState {
         }
     }
 
-    final int[] c(boolean param0) {
+    final int[] getVotedOptions(boolean param0) {
         if (!param0) {
           int[] var3 = (int[]) null;
-          this.a((int[]) null, true);
+          this.setVotedOptions((int[]) null, true);
         }
         return this.nextround.optionTotals;
     }
@@ -714,30 +714,30 @@ final class MissionState implements DiffableState {
         field_h = null;
     }
 
-    private final int a(byte param0) {
+    private final int getMissionGenerationSeed(byte param0) {
         if (param0 != 120) {
           return 73;
         }
         return this.nextround.missionGenerationSeed;
     }
 
-    final boolean c(int param0) {
+    final boolean isMultiRoundMatch(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 != 1) {
           return true;
         }
-        stackIn_6_0 = (this.f(24416)) && (GetTorqueDownshift.a(this.d(param0 + 6471), 103) > 1);
+        stackIn_6_0 = (this.hasNextRound(24416)) && (GetTorqueDownshift.a(this.getVotedObjective(param0 + 6471), 103) > 1);
         return stackIn_6_0;
     }
 
-    final boolean f(int param0) {
+    final boolean hasNextRound(int param0) {
         if (param0 != 24416) {
           field_h = (String) null;
         }
         return this.nextround != null ? true : false;
     }
 
-    private final void a(int param0, byte param1, int param2, GameSnapshot param3, int param4, int param5) {
+    private final void accelerateCompletedVoteCountdown(int param0, byte param1, int param2, GameSnapshot param3, int param4, int param5) {
         int var7_int = 0;
         int var8 = 0;
         int var9 = 0;
@@ -758,9 +758,9 @@ final class MissionState implements DiffableState {
           scanLoop1: while (true) {
             if (var8 < param3.field_c.length) {
               var10 = param3.a(var8, (byte) 59);
-              if (var10.field_a) {
-                var11 = var10.a(param5, 11863, param5);
-                var12 = var10.a(param4, 11863, param0);
+              if (var10.connected) {
+                var11 = var10.countVotesInRange(param5, 11863, param5);
+                var12 = var10.countVotesInRange(param4, 11863, param0);
                 if (var11 == 0 &&
                   param2 > var12) {
                   var7_int = 1;
@@ -793,7 +793,7 @@ final class MissionState implements DiffableState {
         }
     }
 
-    final void b(boolean param0, int param1) {
+    final void finishRound(boolean param0, int param1) {
         RoundResult var3 = null;
         if (this.missionPhase == 5) {
           this.winner = param1;
@@ -803,7 +803,7 @@ final class MissionState implements DiffableState {
             var3.winner = this.winner;
             this.currentMatch.a(126, var3);
           }
-          this.c(6, -7, Particle.field_l * 10);
+          this.setMissionPhase(6, -7, Particle.field_l * 10);
         }
         if (param0) {
           SerializableGameState var4 = (SerializableGameState) null;
@@ -811,7 +811,7 @@ final class MissionState implements DiffableState {
         }
     }
 
-    final int b(int param0, int param1) {
+    final int getCustomVariableValue(int param0, int param1) {
         if (param0 != 7061) {
           return -10;
         }
@@ -826,7 +826,7 @@ final class MissionState implements DiffableState {
         return 0;
     }
 
-    final int a(boolean param0, int param1) {
+    final int getTeamScore(boolean param0, int param1) {
         SerializableGameState var4;
         if (param0) {
           var4 = (SerializableGameState) null;
@@ -841,7 +841,7 @@ final class MissionState implements DiffableState {
         return 0;
     }
 
-    private final void b(int param0) {
+    private final void decrementRoundsLeft(int param0) {
         if (this.nextround == null) {
           return;
         }
@@ -851,7 +851,7 @@ final class MissionState implements DiffableState {
         }
     }
 
-    final MissionVariable c(int param0, int param1) {
+    final MissionVariable getCustomVariableForWrite(int param0, int param1) {
         int var4 = 0;
         int var5 = VoidHunters.field_G;
         if (~param1 > param0) {
@@ -876,7 +876,7 @@ final class MissionState implements DiffableState {
         return this.customVariables[param1];
     }
 
-    private final int[] a(GameSnapshot param0, byte param1) {
+    private final int[] countOptionVotes(GameSnapshot param0, byte param1) {
         int var7 = 0;
         int dupTemp$1 = 0;
         int[] var3 = null;
@@ -899,7 +899,7 @@ final class MissionState implements DiffableState {
           var5 = 126 / ((-8 - param1) / 48);
           while (var4 < param0.field_c.length) {
             var6 = param0.a(var4, (byte) 59);
-            if (var6.field_a &&
+            if (var6.connected &&
               var6.votes != null &&
               var6.votes.length > 0) {
               for (var7 = 0; var7 < var6.votes.length; var7++) {
@@ -927,9 +927,9 @@ final class MissionState implements DiffableState {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void initializeMatch(int param0, int param1, int param2) {
         if (param1 != 1) {
-          this.a(-126);
+          this.extendPhaseCountdown(-126);
         }
         this.nextround = new MissionGenerationData();
         this.nextround.missionGenerationSeed = param0;
@@ -945,7 +945,7 @@ final class MissionState implements DiffableState {
         return this.currentMatch;
     }
 
-    private final void b(int param0, GameSnapshot param1) {
+    private final void rebalanceTeams(int param0, GameSnapshot param1) {
         int var7 = 0;
         int[] var3 = null;
         int var4 = 0;
@@ -960,7 +960,7 @@ final class MissionState implements DiffableState {
         int var6 = 0;
         var8 = VoidHunters.field_G;
         try {
-          var9 = this.a((byte) -63, param1);
+          var9 = this.countPlayersByTeam((byte) -63, param1);
           var3 = var9;
           var4 = -var9[1] + var9[0];
           var5 = param0;
@@ -974,7 +974,7 @@ final class MissionState implements DiffableState {
           if (var5 != -1) {
             var6 = Math.abs(var4) / 2;
             for (var7 = 0; var7 < var6; var7++) {
-              this.a(param1, (byte) -128, var5);
+              this.unassignPlayerFromTeam(param1, (byte) -128, var5);
             }
             return;
           }
@@ -993,7 +993,7 @@ final class MissionState implements DiffableState {
         }
     }
 
-    private final void a(int[] param0, boolean param1) {
+    private final void setVotedOptions(int[] param0, boolean param1) {
         try {
           this.nextround.optionTotals = param0;
           if (param1) {
@@ -1014,7 +1014,7 @@ final class MissionState implements DiffableState {
 
     final MissionVariable[] getCustomVariables(boolean param0) {
         if (param0) {
-          this.d(53);
+          this.getVotedObjective(53);
         }
         return this.customVariables;
     }
@@ -1065,7 +1065,7 @@ final class MissionState implements DiffableState {
         }
     }
 
-    final void a(GameSnapshot param0, int param1, byte param2) {
+    final void updateMissionPhases(GameSnapshot param0, int param1, byte param2) {
         int var7 = 0;
         int stackIn_75_0 = 0;
         int stackIn_79_0 = 0;
@@ -1101,7 +1101,7 @@ final class MissionState implements DiffableState {
           this.phaseTimer = this.phaseTimer + 1;
           if (param2 != -19) {
             var10 = (GameSnapshot) null;
-            this.a((GameSnapshot) null, -55, (byte) 8);
+            this.updateMissionPhases((GameSnapshot) null, -55, (byte) 8);
           }
           if (qrb.field_a == 1 &&
             5 != this.missionPhase) {
@@ -1114,54 +1114,54 @@ final class MissionState implements DiffableState {
               stackIn_75_0 = (!SetGrapplingHookAimarc.a(param0, (byte) -106)) ? 0 : 1;
               var5Lifetime1 = stackIn_75_0;
               if (var5Lifetime1 == 0) {
-                stackIn_79_0 = (!this.a(false, param0)) ? 0 : 1;
+                stackIn_79_0 = (!this.hasPhaseSkipRequest(false, param0)) ? 0 : 1;
                 var5Lifetime1 = stackIn_79_0;
               }
               if (var5Lifetime1 == 0) {
                 return;
               }
-              if (this.f(24416)) {
-                this.c(3, -7, Particle.field_j);
+              if (this.hasNextRound(24416)) {
+                this.setMissionPhase(3, -7, Particle.field_j);
                 return;
               }
-              this.c(1, -7, Particle.field_h);
+              this.setMissionPhase(1, -7, Particle.field_h);
               return;
             }
           } else {
             if (this.missionPhase == 1) {
               if (this.phaseChangeCountdown > 0) {
-                this.a(13, (byte) -126, AsteroidFieldFactory.field_a, param0, 0, -1);
+                this.accelerateCompletedVoteCountdown(13, (byte) -126, AsteroidFieldFactory.field_a, param0, 0, -1);
               }
               if (this.phaseChangeCountdown != 0) {
                 return;
               }
               var5Lifetime1 = param1;
               var6_ref_Random = new Random((long)var5Lifetime1);
-              var23 = this.a(param0, (byte) -96);
+              var23 = this.countOptionVotes(param0, (byte) -96);
               for (var8 = 0; var23.length > var8; var8++) {
                 if (!OpenGlSprite.b(param2 ^ -110, var8)) {
                   var23[var8] = -1;
                 }
               }
               var8Lifetime2 = SetSalvoUsesAllEnergy.a(-126, 14, var6_ref_Random, true, var23);
-              this.a(var5Lifetime1, 1, var8Lifetime2);
-              this.c(2, -7, Particle.field_z);
+              this.initializeMatch(var5Lifetime1, 1, var8Lifetime2);
+              this.setMissionPhase(2, -7, Particle.field_z);
               return;
             }
             if (this.missionPhase == 2) {
               if (0 < this.phaseChangeCountdown) {
-                this.a(30, (byte) -128, GetPhasedEnergyBeamReload.field_q, param0, 14, -2);
+                this.accelerateCompletedVoteCountdown(30, (byte) -128, GetPhasedEnergyBeamReload.field_q, param0, 14, -2);
               }
               if (this.phaseChangeCountdown != 0) {
                 return;
               }
-              var24 = this.a(param0, (byte) -95);
-              this.a(var24, false);
+              var24 = this.countOptionVotes(param0, (byte) -95);
+              this.setVotedOptions(var24, false);
               if (qab.a(82, this.nextround.votedObjective)) {
-                this.c(3, -7, Particle.field_j);
+                this.setMissionPhase(3, -7, Particle.field_j);
                 return;
               }
-              this.c(3, -7, Particle.field_j);
+              this.setMissionPhase(3, -7, Particle.field_j);
               this.phaseChangeCountdown = 0;
               return;
             }
@@ -1173,7 +1173,7 @@ final class MissionState implements DiffableState {
                 var5_ref_int__ = var11;
                 var6 = 1;
                 for (var7 = 0; param0.field_c.length > var7; var7++) {
-                  if (param0.field_c[var7].field_a ||
+                  if (param0.field_c[var7].connected ||
                     SetMissionResnetResourceTickTime.field_p != 0) {
                     var8Lifetime1 = param0.a(var7, (byte) 59).selectedTeam;
                     if (var8Lifetime1 >= 0 &&
@@ -1190,7 +1190,7 @@ final class MissionState implements DiffableState {
                 }
               }
               if (this.phaseChangeCountdown == 0) {
-                this.a(0, param0);
+                this.startMission(0, param0);
               }
               var14.updateMissionLogic((byte) 127, param0);
               return;
@@ -1201,8 +1201,8 @@ final class MissionState implements DiffableState {
                   return;
                 }
                 if (null != this.currentMatch &&
-                  !this.f(24416) &&
-                  qab.a(81, var14.d(false))) {
+                  !this.hasNextRound(24416) &&
+                  qab.a(81, var14.getObjectiveType(false))) {
                   var5Lifetime1 = this.currentMatch.a(true);
                   if (0 <= var5Lifetime1 &&
                     this.teamscores.length > var5Lifetime1) {
@@ -1216,7 +1216,7 @@ final class MissionState implements DiffableState {
                   var15 = EnvironmentMapSource.createTeamSwitchingMission(0);
                   var15.a(true, param0, param2 ^ 104);
                 }
-                this.c(0, param2 ^ 20, Particle.field_l * 1);
+                this.setMissionPhase(0, param2 ^ 20, Particle.field_l * 1);
                 if (0 != SetMachineGunAimspeed.field_o) {
                   return;
                 }
@@ -1226,8 +1226,8 @@ final class MissionState implements DiffableState {
               }
             } else {
               var14.updateMissionLogic((byte) 127, param0);
-              if (this.a(false, param0)) {
-                this.b(false, -1);
+              if (this.hasPhaseSkipRequest(false, param0)) {
+                this.finishRound(false, -1);
                 return;
               }
             }
@@ -1256,7 +1256,7 @@ final class MissionState implements DiffableState {
         this.winner = -1;
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void setMissionPhase(int param0, int param1, int param2) {
         this.missionPhase = param0;
         this.phaseChangeCountdown = param2;
         if (param1 != ~this.missionPhase) {

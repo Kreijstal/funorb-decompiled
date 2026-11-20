@@ -3,7 +3,7 @@
  */
 final class dp {
     static GameStateFactory field_b;
-    static llb field_a;
+    static Widget field_a;
     private static String field_z;
 
     public static void clearSharedReferences(int param0) {

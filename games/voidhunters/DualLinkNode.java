@@ -4,11 +4,11 @@
 class DualLinkNode extends IntrusiveNode {
     static String field_h;
     DualLinkNode secondaryPrevious;
-    static llb field_f;
+    static Widget field_f;
     DualLinkNode secondaryNext;
     long secondaryKey;
     static String field_j;
-    static llb field_g;
+    static Widget field_g;
 
     final boolean isSecondaryLinked(byte param0) {
         if (param0 < 26) {
@@ -28,7 +28,7 @@ class DualLinkNode extends IntrusiveNode {
         if (param1 == 83) {
           return;
         }
-        field_g = (llb) null;
+        field_g = (Widget) null;
     }
 
     final long getSecondaryKey(int param0) {

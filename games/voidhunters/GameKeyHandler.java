@@ -3,7 +3,7 @@
  */
 final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event.FocusListener {
     static int field_a;
-    static llb field_b;
+    static Widget field_b;
 
     final static void a(byte param0) {
         int var1 = 56 / ((0 - param0) / 50);
@@ -13,7 +13,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         if (param0 == 22433) {
           return -4096 + (4096 ^ param1 & 8191);
         }
-        field_b = (llb) null;
+        field_b = (Widget) null;
         return -4096 + (4096 ^ param1 & 8191);
     }
 

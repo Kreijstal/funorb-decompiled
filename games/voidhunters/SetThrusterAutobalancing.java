@@ -4,7 +4,7 @@
 final class SetThrusterAutobalancing extends ConsoleCommand {
     static int field_q;
     static String field_o;
-    static llb field_p;
+    static Widget field_p;
     static int field_r;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -16,7 +16,7 @@ final class SetThrusterAutobalancing extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            field_p = (llb) null;
+            field_p = (Widget) null;
           }
           SetMachineGunEnergyUsed.a(22, 62, arguments[0].intValue(77));
           stackIn_3_0 = new ConsoleValue("void");

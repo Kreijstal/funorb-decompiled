@@ -3,7 +3,7 @@
  */
 abstract class oib {
     static String field_b;
-    static llb field_a;
+    static Widget field_a;
     static int field_c;
     private static String field_z;
 

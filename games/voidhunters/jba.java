@@ -9,9 +9,9 @@ final class jba implements wwa {
     private int field_f;
     private BitmapFont field_g;
     private int field_d;
-    static llb field_b;
+    static Widget field_b;
     private int field_c;
-    static llb field_h;
+    static Widget field_h;
     private int field_e;
 
     final static ShipComponentDefinition a(int[][] param0, long param1, int param2, Random param3, int param4, long param5) {
@@ -204,7 +204,7 @@ final class jba implements wwa {
         field_h = null;
         field_b = null;
         if (!param0) {
-          field_b = (llb) null;
+          field_b = (Widget) null;
         }
     }
 

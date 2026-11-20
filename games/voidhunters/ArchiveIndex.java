@@ -399,9 +399,9 @@ final class ArchiveIndex {
         int stackIn_4_3;
         boolean stackIn_5_4 = false;
         vu stackIn_9_0 = null;
-        llb stackIn_34_0 = null;
+        Widget stackIn_34_0 = null;
         String stackIn_35_1 = null;
-        llb stackIn_38_0 = null;
+        Widget stackIn_38_0 = null;
         String stackIn_39_1 = null;
         int stackIn_43_0 = 0;
         Object stackIn_89_0 = null;
@@ -437,12 +437,12 @@ final class ArchiveIndex {
           stackIn_5_4 = (qg.field_a == re.field_n.field_xb);
           boolean decompiledFrameRemainder0 = true;
           var3_int = ((soa) (Object) stackIn_4_0).a((byte) stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, param0, nna.field_w + 2) ? 1 : 0;
-          var4 = re.field_n.field_yb.field_lb;
+          var4 = re.field_n.field_yb.children;
           var5 = null;
           if (iwa.field_b == 2) {
-            PlayerJoinFactory.field_c.field_y = true;
-            OpenGlCubeTexture.field_h.field_R = SetReverbGain.a(SetVelocitySustain.field_o, new String[]{kbb.field_q}, param1 + 89);
-            re.field_n.field_xb.field_xb.field_R = null;
+            PlayerJoinFactory.field_c.enabled = true;
+            OpenGlCubeTexture.field_h.text = SetReverbGain.a(SetVelocitySustain.field_o, new String[]{kbb.field_q}, param1 + 89);
+            re.field_n.field_xb.field_xb.text = null;
             var6 = null;
             var7 = (vu) (var4.first(0));
             boolean decompiledNaturalLoopExit0 = false;
@@ -452,18 +452,18 @@ final class ArchiveIndex {
               stackIn_89_0 = stackOut_8_0;
               stackIn_9_0 = stackOut_8_0;
               if (var19 == 0) {
-                if (stackIn_9_0.field_lb == null) {
-                  var7.field_wb = new llb(0L, SetReverbDamp.field_q);
-                  var7.b(param1 - 563, var7.field_wb);
-                  var7.field_Eb = new llb(0L, SetShieldsDirectionalArc.field_o);
-                  var7.b(-561, var7.field_Eb);
-                  var7.field_Bb = new llb(0L, SetReverbDamp.field_q);
-                  var7.b(-561, var7.field_Bb);
+                if (stackIn_9_0.children == null) {
+                  var7.field_wb = new Widget(0L, SetReverbDamp.field_q);
+                  var7.addChild(param1 - 563, var7.field_wb);
+                  var7.field_Eb = new Widget(0L, SetShieldsDirectionalArc.field_o);
+                  var7.addChild(-561, var7.field_Eb);
+                  var7.field_Bb = new Widget(0L, SetReverbDamp.field_q);
+                  var7.addChild(-561, var7.field_Bb);
                   var7.field_Eb.field_F = 2;
                   var8 = 1;
-                  var7.g(113);
+                  var7.inheritInteractionStateInDescendants(113);
                 }
-                var7.field_hb = re.field_n.field_yb.field_hb;
+                var7.width = re.field_n.field_yb.width;
                 var9 = 0;
                 if (null != var7.field_Ab) {
                   if (kbb.field_q != var7.field_Ab) {
@@ -483,7 +483,7 @@ final class ArchiveIndex {
                   var7.field_Bb.field_tb = SetMissileLauncherRandomness.field_o;
                   var7.field_Bb.field_qb = var11;
                   var12 = 1;
-                  var7.field_Bb.a(0, 127, SetMissileLauncherRandomness.field_o.paddedWidth + 3, var9, nna.field_w);
+                  var7.field_Bb.setBounds(0, 127, SetMissileLauncherRandomness.field_o.paddedWidth + 3, var9, nna.field_w);
                 }
                 var7.field_Eb.field_Y = var10;
                 var7.field_wb.field_Y = var10;
@@ -494,35 +494,35 @@ final class ArchiveIndex {
                 var7.field_Eb.field_ib = var11;
                 var7.field_wb.field_ib = var11;
                 var13 = 0;
-                var14 = -80 + (var7.field_hb - 2);
+                var14 = -80 + (var7.width - 2);
                 if (var12 != 0) {
                   var13 = 3 + SetMissileLauncherRandomness.field_o.paddedWidth;
                   var14 = var14 - var13;
                 }
                 stackIn_34_0 = var7.field_wb;
                 if (var14 > 0) {
-                  stackIn_35_1 = BitmapFont.ellipsize(var7.field_wb.field_eb, var7.field_Fb, var14);
+                  stackIn_35_1 = BitmapFont.ellipsize(var7.field_wb.font, var7.field_Fb, var14);
                 } else {
                   stackIn_35_1 = var7.field_Fb;
                 }
-                stackIn_34_0.field_R = stackIn_35_1;
-                var7.field_wb.a(var13, param1 + 121, var14, var9, nna.field_w);
+                stackIn_34_0.text = stackIn_35_1;
+                var7.field_wb.setBounds(var13, param1 + 121, var14, var9, nna.field_w);
                 stackIn_38_0 = var7.field_Eb;
                 if (null != var7.field_Ab) {
                   stackIn_39_1 = var7.field_Ab;
                 } else {
                   stackIn_39_1 = SetCountermeasuresPulseRadius.field_o;
                 }
-                stackIn_38_0.field_R = stackIn_39_1;
-                var7.field_Eb.a(var7.field_hb - 80, -79, 80, var9, nna.field_w);
-                stackIn_43_0 = (var7.field_wb.field_R.equals(var7.field_Fb)) ? 0 : 1;
+                stackIn_38_0.text = stackIn_39_1;
+                var7.field_Eb.setBounds(var7.width - 80, -79, 80, var9, nna.field_w);
+                stackIn_43_0 = (var7.field_wb.text.equals(var7.field_Fb)) ? 0 : 1;
                 var15 = stackIn_43_0;
                 var9 = var9 + nna.field_w;
                 if (var3_int == 0) {
-                  var7.field_E = -var7.field_G + var9;
+                  var7.field_E = -var7.height + var9;
                 }
                 if (var8 != 0) {
-                  re.field_n.field_yb.a((llb) (var6), 2, var7, 40);
+                  re.field_n.field_yb.positionBelow((Widget) (var6), 2, var7, 40);
                 }
                 var6 = var7;
                 if (null == var7.field_Bb ||
@@ -536,11 +536,11 @@ final class ArchiveIndex {
                       if (!hb.field_c) {
                         var17 = GetLagStandardDeviationOut.field_o;
                         var18 = SetReverbGain.a(SetSniperCannonProjectileLife.field_o, new String[]{var16}, param1 + 122);
-                        var17.field_i.a(var18, (byte) -53, 8);
+                        var17.field_i.addItem(var18, (byte) -53, 8);
                       }
                       var17Lifetime1 = GetLagStandardDeviationOut.field_o;
                       var18Lifetime1 = SetReverbGain.a(SetMissileLauncherFireForce.field_p, new String[]{var16}, 115);
-                      var17Lifetime1.field_i.a(var18Lifetime1, (byte) -53, 18);
+                      var17Lifetime1.field_i.addItem(var18Lifetime1, (byte) -53, 18);
                     }
                     var5 = var7;
                   } else if (var7.field_wb.field_O &&
@@ -557,27 +557,27 @@ final class ArchiveIndex {
             }
             if (decompiledNaturalLoopExit0) {
               if (re.field_n.field_wb.field_o != 0) {
-                ola.field_p = new qka(re.field_n.field_wb.field_M, re.field_n.field_wb.field_u, re.field_n.field_wb.field_hb, re.field_n.field_wb.field_G, hk.field_i, GetDebrisMax.field_o, qc.field_q, qc.field_q);
+                ola.field_p = new qka(re.field_n.field_wb.screenX, re.field_n.field_wb.screenY, re.field_n.field_wb.width, re.field_n.field_wb.height, hk.field_i, GetDebrisMax.field_o, qc.field_q, qc.field_q);
                 MissionGenerationDataFactory.field_b = 0;
               }
               stackIn_89_0 = re.field_n.field_zb;
             }
-            if (((llb) (stackIn_89_0)).field_o != 0) {
-              ola.field_p = new qka(re.field_n.field_zb.field_M, re.field_n.field_zb.field_u, re.field_n.field_zb.field_hb, re.field_n.field_zb.field_G, MissionEvent.field_e, GetDebrisMax.field_o, qc.field_q, qc.field_q);
+            if (((Widget) (stackIn_89_0)).field_o != 0) {
+              ola.field_p = new qka(re.field_n.field_zb.screenX, re.field_n.field_zb.screenY, re.field_n.field_zb.width, re.field_n.field_zb.height, MissionEvent.field_e, GetDebrisMax.field_o, qc.field_q, qc.field_q);
               MissionGenerationDataFactory.field_b = 1;
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            OpenGlCubeTexture.field_h.field_R = SetUseModels.field_p;
-            PlayerJoinFactory.field_c.field_y = false;
+            OpenGlCubeTexture.field_h.text = SetUseModels.field_p;
+            PlayerJoinFactory.field_c.enabled = false;
             if (iwa.field_b == 1) {
-              re.field_n.field_xb.field_xb.field_R = SetMachineGunPulsetime.field_o;
+              re.field_n.field_xb.field_xb.text = SetMachineGunPulsetime.field_o;
               if (var19 != 0) {
-                re.field_n.field_xb.field_xb.field_R = SetFighterRepairTime.field_o;
+                re.field_n.field_xb.field_xb.text = SetFighterRepairTime.field_o;
               }
             } else {
-              re.field_n.field_xb.field_xb.field_R = SetFighterRepairTime.field_o;
+              re.field_n.field_xb.field_xb.text = SetFighterRepairTime.field_o;
             }
             igb.a(re.field_n.field_yb, (byte) -100);
           }

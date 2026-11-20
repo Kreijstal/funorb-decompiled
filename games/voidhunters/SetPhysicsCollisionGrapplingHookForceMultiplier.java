@@ -3,7 +3,7 @@
  */
 final class SetPhysicsCollisionGrapplingHookForceMultiplier extends ConsoleCommand {
     static boolean field_q;
-    static llb field_o;
+    static Widget field_o;
     static float field_p;
 
     public static void clearSharedReferences(byte param0) {

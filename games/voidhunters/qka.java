@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qka extends llb {
+final class qka extends Widget {
     private StringBuilder field_yb;
-    private llb field_vb;
+    private Widget field_vb;
     private int field_wb;
-    private llb field_xb;
+    private Widget field_xb;
 
     final boolean a(boolean param0) {
         StringBuilder discarded$6 = null;
@@ -52,7 +52,7 @@ final class qka extends llb {
                   if (this.field_yb.length() <= 0) {
                     this.field_wb = 1;
                   } else {
-                    this.field_R = this.field_yb.toString();
+                    this.text = this.field_yb.toString();
                     this.field_wb = 2;
                   }
                 }
@@ -70,7 +70,7 @@ final class qka extends llb {
                   if (this.field_yb.length() <= 0) {
                     this.field_wb = 1;
                   } else {
-                    this.field_R = this.field_yb.toString();
+                    this.text = this.field_yb.toString();
                     this.field_wb = 2;
                   }
                 }
@@ -88,7 +88,7 @@ final class qka extends llb {
             if (this.field_yb.length() <= 0) {
               this.field_wb = 1;
             } else {
-              this.field_R = this.field_yb.toString();
+              this.text = this.field_yb.toString();
               this.field_wb = 2;
             }
           }
@@ -108,7 +108,7 @@ final class qka extends llb {
             if (this.field_yb.length() <= 0) {
               this.field_wb = 1;
             } else {
-              this.field_R = this.field_yb.toString();
+              this.text = this.field_yb.toString();
               this.field_wb = 2;
             }
           }
@@ -137,7 +137,7 @@ final class qka extends llb {
               if (this.field_yb.length() <= 0) {
                 this.field_wb = 1;
               } else {
-                this.field_R = this.field_yb.toString();
+                this.text = this.field_yb.toString();
                 this.field_wb = 2;
               }
             }
@@ -157,7 +157,7 @@ final class qka extends llb {
             if (this.field_yb.length() <= 0) {
               this.field_wb = 1;
             } else {
-              this.field_R = this.field_yb.toString();
+              this.text = this.field_yb.toString();
               this.field_wb = 2;
             }
           }
@@ -174,7 +174,7 @@ final class qka extends llb {
             if (this.field_yb.length() <= 0) {
               this.field_wb = 1;
             } else {
-              this.field_R = this.field_yb.toString();
+              this.text = this.field_yb.toString();
               this.field_wb = 2;
             }
           }
@@ -191,7 +191,7 @@ final class qka extends llb {
           if (this.field_yb.length() <= 0) {
             this.field_wb = 1;
           } else {
-            this.field_R = this.field_yb.toString();
+            this.text = this.field_yb.toString();
             this.field_wb = 2;
           }
         }
@@ -212,11 +212,11 @@ final class qka extends llb {
         int var4;
         var4 = VoidHunters.field_G;
         if (param0 != 0) {
-          this.field_vb = (llb) null;
+          this.field_vb = (Widget) null;
         }
-        this.a(param1, 1332);
+        this.updateInput(param1, 1332);
         if (!param1) {
-          this.field_vb.field_R = this.field_yb.toString();
+          this.field_vb.text = this.field_yb.toString();
           if (param1 &&
             SetDebrisPartitioned.field_o != 0 &&
             this.field_o == 0) {
@@ -226,7 +226,7 @@ final class qka extends llb {
         }
         while (true) {
           if (!ata.e(127)) {
-            this.field_vb.field_R = this.field_yb.toString();
+            this.field_vb.text = this.field_yb.toString();
             if (!param1) {
               return this.field_wb;
             }
@@ -271,11 +271,11 @@ final class qka extends llb {
         if (0 >= this.field_yb.length()) {
           return 1;
         }
-        this.field_R = this.field_yb.toString();
+        this.text = this.field_yb.toString();
         return 2;
     }
 
-    qka(int param0, int param1, int param2, int param3, String param4, llb param5, llb param6, llb param7) {
+    qka(int param0, int param1, int param2, int param3, String param4, Widget param5, Widget param6, Widget param7) {
         super(0L, param5);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -295,21 +295,21 @@ final class qka extends llb {
         int var13 = 0;
         this.field_wb = 0;
         try {
-          this.field_xb = new llb(0L, param6, param4);
-          this.b(-561, this.field_xb);
-          this.field_vb = new llb(0L, param7);
+          this.field_xb = new Widget(0L, param6, param4);
+          this.addChild(-561, this.field_xb);
+          this.field_vb = new Widget(0L, param7);
           this.field_vb.field_Y = 16764006;
-          this.b(-561, this.field_vb);
+          this.addChild(-561, this.field_vb);
           this.field_vb.field_s = "|";
           this.field_yb = new StringBuilder(12);
-          var9_int = this.field_xb.e(57);
-          this.field_xb.a(5, 119, var9_int, 3, nna.field_w);
-          this.field_vb.a(5, 43, var9_int, 3 + nna.field_w, nna.field_w);
+          var9_int = this.field_xb.getPreferredWidth(57);
+          this.field_xb.setBounds(5, 119, var9_int, 3, nna.field_w);
+          this.field_vb.setBounds(5, 43, var9_int, 3 + nna.field_w, nna.field_w);
           var10 = 10 + var9_int;
           var11 = 3 + 2 * nna.field_w + 3;
           var12 = jv.a((byte) -109, param0, param2, var10);
           var13 = lma.a(param3, param1, var11, (byte) -16);
-          this.a(var12, 122, var10, var13, var11);
+          this.setBounds(var12, 122, var10, var13, var11);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

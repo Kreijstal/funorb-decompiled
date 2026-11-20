@@ -412,7 +412,7 @@ final class GameSession {
         int var2;
         kla var3;
         int var4;
-        mm var6;
+        LobbyGameEntry var6;
         int var8;
         int var7;
         var8 = VoidHunters.field_G;
@@ -942,7 +942,7 @@ final class GameSession {
           this.field_R = ffa.field_a;
         }
         if (GraphicsPresentException.field_a) {
-          ShipTeamConditionFactory.field_a.field_e = ShipTeamConditionFactory.field_a.field_e - (-SetToggledScoreboard.field_o.field_u + SoftwareRasterizer2D.height >> 1);
+          ShipTeamConditionFactory.field_a.field_e = ShipTeamConditionFactory.field_a.field_e - (-SetToggledScoreboard.field_o.screenY + SoftwareRasterizer2D.height >> 1);
         }
         if (SetPhasedEnergyBeamAimspeed.field_q == 1 &&
           ffa.field_a < 20 &&
@@ -1636,7 +1636,7 @@ final class GameSession {
         }
         var6 = 2;
         var7 = this.state.b(1);
-        var8 = var7.world.d(param0);
+        var8 = var7.world.getObjectiveType(param0);
         var9 = qab.a(74, var8) ? 1 : 0;
         var10 = new String[var32.length][1 + var3];
         var55 = new int[1 + var3];
@@ -1675,19 +1675,19 @@ final class GameSession {
               var11[1 + var17Lifetime1] = SetAngularForceDownshift.a(var11[1 + var17Lifetime1], GetBoostersActiveTime.field_o);
             }
             var35 = var7.a(var17Lifetime1, (byte) 59);
-            if (!var35.field_a &&
+            if (!var35.connected &&
               this.state.field_h[var17Lifetime1] == null &&
               SetMissionResnetResourceTickTime.field_p == 0) {
               var11[var17Lifetime1 + 1] = SetAngularForceDownshift.a(var11[var17Lifetime1 + 1], OpenGlGpuToolkit.field_Oc);
             } else {
-              if (!var7.missionState.c((byte) -126) &&
+              if (!var7.missionState.isPreGamePhase((byte) -126) &&
                 null == var7.world.findShipByOwner(var17Lifetime1, 92)) {
                 var11[var17Lifetime1 + 1] = SetAngularForceDownshift.a(var11[var17Lifetime1 + 1], bsb.field_a);
               }
               var19_int = var35.selectedTeam;
               var12[1 + var17Lifetime1] = qpb.a(false, var19_int, 13894143);
               if (var9 == 0 ||
-                var7.missionState.c((byte) -116)) {
+                var7.missionState.isPreGamePhase((byte) -116)) {
                 var19_int = 0;
                 if (var9 == 0) {
                   var12[1 + var17Lifetime1] = qpb.a(false, var17Lifetime1, 13894143);
@@ -1803,9 +1803,9 @@ final class GameSession {
           var4Lifetime1 = GetLaserAimarc.field_q - var14Lifetime1 / 2;
         }
         if (var9 != 0) {
-          var23Lifetime1 = var7.missionState.a(param0, 0);
+          var23Lifetime1 = var7.missionState.getTeamScore(param0, 0);
           var42 = VoidHunters.b(0, -1) + ": <col=ffffff>" + Integer.toString(var23Lifetime1) + "</col>";
-          var23Lifetime1 = var7.missionState.a(false, 1);
+          var23Lifetime1 = var7.missionState.getTeamScore(false, 1);
           var25_ref_String = VoidHunters.b(1, -1) + ": <col=ffffff>" + Integer.toString(var23Lifetime1) + "</col>";
           var26Lifetime1 = GetPointDefenceLaserProjectiles.a(false, 1);
           BlackBoxRecording.a((byte) -115, 200, var14Lifetime1 + var26Lifetime1, var6, -var26Lifetime1 + var4Lifetime1, var20Lifetime1);
@@ -2361,8 +2361,8 @@ final class GameSession {
                 var7 = var20 + var19_int;
                 var13 = var9 - var7 / 2;
                 var21 = GetPointDefenceLaserProjectiles.a(false, var16) * 2 + GetPointDefenceLaserProjectiles.a(false, 4);
-                if (var40.f(24416) &&
-                  var40.c(true) != null) {
+                if (var40.hasNextRound(24416) &&
+                  var40.getVotedOptions(true) != null) {
                   var21 += 24;
                 }
                 CachedArchiveProvider.a(200, false, var13, var14, var21, var7, 1);
@@ -2468,7 +2468,7 @@ final class GameSession {
               var34 = 0;
               for (var35_int = 0; param1.field_c.length > var35_int; var35_int++) {
                 var36_ref = (Player) (param1.field_c[var35_int]);
-                if (var36_ref.field_a &&
+                if (var36_ref.connected &&
                   var36_ref.votes != null) {
                   var37 = 0;
                   for (var38 = 0; var38 < var36_ref.votes.length; var38++) {
@@ -2486,13 +2486,13 @@ final class GameSession {
             }
           }
           if (param2) {
-            if (var40.f(24416)) {
-              var18Lifetime1 = var40.d(6472);
+            if (var40.hasNextRound(24416)) {
+              var18Lifetime1 = var40.getVotedObjective(6472);
               var45 = pfb.field_a + "<col=01b5cc>" + ShipTeamCondition.field_f[var18Lifetime1] + "</col>";
               var19 = var45;
               var20 = GetTorqueDownshift.a(var18Lifetime1, -58);
               if (var20 > 1) {
-                var19 = var45 + " (" + SetReverbGain.a(bw.field_c, new String[]{Integer.toString(var20 - (var40.d((byte) 28) - 1))}, 107) + ")";
+                var19 = var45 + " (" + SetReverbGain.a(bw.field_c, new String[]{Integer.toString(var20 - (var40.getRoundsLeft((byte) 28) - 1))}, 107) + ")";
               }
               SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - (tea.a(4, var19, 13879) >> 1), 1, GetPointDefenceLaserProjectiles.a(false, var16) * 7 / 4 + var14 + var15 - GetPointDefenceLaserProjectiles.a(false, 4), var19, 4, 16777215, (byte) -85);
               var21Lifetime1 = -1;
@@ -2503,7 +2503,7 @@ final class GameSession {
                 }
               }
               this.a(GetPointDefenceLaserProjectiles.a(false, var16) * 7 / 4 + (var15 + var14), 255, var18Lifetime1, var21Lifetime1, 2);
-              var49 = var40.c(true);
+              var49 = var40.getVotedOptions(true);
               var46 = var49;
               var22 = var46;
               if (var22 != null) {
@@ -2730,7 +2730,7 @@ final class GameSession {
                   stackIn_20_0 = 0;
                 }
                 var8 = stackIn_20_0;
-                if (pla.a(param0.world.d(false), -4)) {
+                if (pla.a(param0.world.getObjectiveType(false), -4)) {
                   var9_ref_hna = new PlayerAction();
                   var9_ref_hna.specialOrderSubmessage = new SpecialOrderSubmessage();
                   if (var8 == 0) {
@@ -2754,7 +2754,7 @@ final class GameSession {
                 var14 = var13 - (var12 >> 1);
                 var15 = GetLaserAimarc.field_q - 170;
                 if (GraphicsPresentException.field_a) {
-                  var15 = var15 - (SoftwareRasterizer2D.height - SetToggledScoreboard.field_o.field_u);
+                  var15 = var15 - (SoftwareRasterizer2D.height - SetToggledScoreboard.field_o.screenY);
                 }
                 var16 = 260;
                 BlackBoxRecording.a((byte) -115, 200, var16, var14, var15, var12);
@@ -2767,7 +2767,7 @@ final class GameSession {
                 var19 = SetRepairModeCooldown.e((byte) -124);
                 var20 = var18;
                 if (var8 != 0) {
-                  stackIn_39_0 = (param0.world.d(false) == 13) ? 1 : 0;
+                  stackIn_39_0 = (param0.world.getObjectiveType(false) == 13) ? 1 : 0;
                 } else {
                   stackIn_39_0 = 0;
                 }
@@ -2809,7 +2809,7 @@ final class GameSession {
                   var17 = 85000.0f / (float)var26;
                 }
                 this.drawShipPreview(16 * SetMinimapWidth.field_o % 8192, var15 + (var16 / 2 + 8), var17, var5, (byte) 100, var25, param0, (var12 >> 1) + var14);
-                var26Lifetime1 = this.state.a((byte) 70).d(false);
+                var26Lifetime1 = this.state.a((byte) 70).getObjectiveType(false);
                 var27Lifetime1 = -1;
                 if (this.localPlayerIndex >= 0) {
                   var27Lifetime1 = param0.a(this.localPlayerIndex, (byte) 59).selectedTeam;
@@ -2955,7 +2955,7 @@ final class GameSession {
                   }
                 }
                 var33Lifetime1 = var11Lifetime1 + (var16 + var15);
-                if (param0.world.d(false) == 13) {
+                if (param0.world.getObjectiveType(false) == 13) {
                   var52 = mmb.field_d[129];
                   var34 = var52;
                   var34Lifetime1 = var52;
@@ -3280,7 +3280,7 @@ final class GameSession {
             var5_ref = GetLaserReload.field_o;
           } else {
             if (var3_int == 0) {
-              var5_ref = SetReverbGain.a(llb.field_H, new String[]{glb.field_c[0]}, param1 + 74);
+              var5_ref = SetReverbGain.a(Widget.field_H, new String[]{glb.field_c[0]}, param1 + 74);
               var6 = qpb.a(false, 0, 13894143);
             } else {
               if (var4 != 0) {
@@ -3291,7 +3291,7 @@ final class GameSession {
                 }
                 return;
               }
-              var5_ref = SetReverbGain.a(llb.field_H, new String[]{glb.field_c[1]}, 99);
+              var5_ref = SetReverbGain.a(Widget.field_H, new String[]{glb.field_c[1]}, 99);
               var6 = qpb.a(false, 1, 13894143);
             }
           }
@@ -3374,7 +3374,7 @@ final class GameSession {
                 boolean decompiledFrameRemainder0 = true;
                 var4_int = GetSniperCannonAimarc.field_p;
                 var5 = PartitionZoneFactory.field_a - (12 + var4_int);
-                var6 = -ifa.field_d - 12 + (MissionVariableFactory.field_a + SetToggledScoreboard.field_o.field_u - SoftwareRasterizer2D.height);
+                var6 = -ifa.field_d - 12 + (MissionVariableFactory.field_a + SetToggledScoreboard.field_o.screenY - SoftwareRasterizer2D.height);
                 if ((this.field_v != null &&
                   !this.field_v.a(1, true)) &&
                   (decompiledFrameRemainder0 = !(!this.field_v.b(1, -34)))) {
@@ -4105,7 +4105,7 @@ final class GameSession {
             var3 = "";
             for (var4Lifetime1 = 0; var4Lifetime1 < var16.length; var4Lifetime1++) {
               stackIn_14_0 = new StringBuilder().append(var3).append(" ");
-              if (var16[var4Lifetime1].field_a) {
+              if (var16[var4Lifetime1].connected) {
                 stackIn_15_1 = 1;
               } else {
                 stackIn_15_1 = 0;
@@ -4550,7 +4550,7 @@ final class GameSession {
         if (this.localPlayerIndex >= 0) {
           var4 = this.state.b(1);
           var2 = ((Player) (var4.field_c[this.localPlayerIndex])).selectedTeam;
-          if (!qab.a(59, var4.world.d(false))) {
+          if (!qab.a(59, var4.world.getObjectiveType(false))) {
             var2 = this.localPlayerIndex;
           }
           var5 = this.state.a((byte) 33).findShipByOwner(this.localPlayerIndex, 83);
@@ -4766,7 +4766,7 @@ final class GameSession {
         try {
           if (param2.getMissionPhase(8) == 5) {
             var4_int = param2.getPhaseTimer((byte) -122);
-            var5 = lga.a((byte) -2, param1.d(false));
+            var5 = lga.a((byte) -2, param1.getObjectiveType(false));
             var6 = var5 - Particle.field_l * AsteroidFactory.field_a;
             if (var6 < var4_int &&
               var5 >= var4_int) {
@@ -5138,14 +5138,14 @@ final class GameSession {
         String var8 = null;
         if (this.isChatAvailable((byte) 126) &&
           li.field_i) {
-          var2 = -(AdjustVariableActionFactory.field_a.field_hb / 2) + SetMassDriverReload.field_p;
-          var3 = MissionVariableFactory.field_a + (SetToggledScoreboard.field_o.field_u - SoftwareRasterizer2D.height) - AdjustVariableActionFactory.field_a.field_G;
-          AdjustVariableActionFactory.field_a.field_L = var2;
-          AdjustVariableActionFactory.field_a.field_M = var2;
-          AdjustVariableActionFactory.field_a.field_K = var3;
-          AdjustVariableActionFactory.field_a.field_u = var3;
-          var4 = AdjustVariableActionFactory.field_a.field_L;
-          var5 = AdjustVariableActionFactory.field_a.field_K;
+          var2 = -(AdjustVariableActionFactory.field_a.width / 2) + SetMassDriverReload.field_p;
+          var3 = MissionVariableFactory.field_a + (SetToggledScoreboard.field_o.screenY - SoftwareRasterizer2D.height) - AdjustVariableActionFactory.field_a.height;
+          AdjustVariableActionFactory.field_a.x = var2;
+          AdjustVariableActionFactory.field_a.screenX = var2;
+          AdjustVariableActionFactory.field_a.y = var3;
+          AdjustVariableActionFactory.field_a.screenY = var3;
+          var4 = AdjustVariableActionFactory.field_a.x;
+          var5 = AdjustVariableActionFactory.field_a.y;
           var6 = 0;
           var7 = mmb.field_d[115];
           var7.draw(var4, var5);
@@ -5773,7 +5773,7 @@ final class GameSession {
           var17 = "";
           for (var18_int = 0; var18_int < param3.field_c.length; var18_int++) {
             var19_ref_tfa = (Player) (param3.field_c[var18_int]);
-            if (var19_ref_tfa.field_a &&
+            if (var19_ref_tfa.connected &&
               var19_ref_tfa.votes != null) {
               var20 = 0;
               for (var21 = 0; var19_ref_tfa.votes.length > var21; var21++) {
@@ -6460,7 +6460,7 @@ final class GameSession {
               var6 = stackIn_33_0;
               if (var6 != 0) {
                 if (!this.field_x &&
-                  13 == param2.world.d(false) && (!this.networked ||
+                  13 == param2.world.getObjectiveType(false) && (!this.networked ||
                   ComponentContact.field_d != 0)) {
                   this.field_E.addLast(-10258, new SpecialOrderStatus(10, 0));
                 }
@@ -6508,7 +6508,7 @@ final class GameSession {
             }
             var11 = 0;
             var12 = SetFighterBayAimarc.field_o;
-            var13 = MissionVariableFactory.field_a - SoftwareRasterizer2D.height + SetToggledScoreboard.field_o.field_u;
+            var13 = MissionVariableFactory.field_a - SoftwareRasterizer2D.height + SetToggledScoreboard.field_o.screenY;
             var14 = -GetSalvoDamageMultiplier.field_p + var13;
             if (this.field_i < 255) {
               var14 = var14 + (255 - this.field_i) / 4;
@@ -6573,7 +6573,7 @@ final class GameSession {
               }
               if (11 == var15.field_l) {
                 var18 = 6 + (var16 + var12);
-                if (13 != param2.world.d(false) ||
+                if (13 != param2.world.getObjectiveType(false) ||
                   this.networked &&
                   ComponentContact.field_d == 0 ||
                   this.field_x) {
@@ -6596,7 +6596,7 @@ final class GameSession {
               }
               if (var15.field_l == 12) {
                 var18 = 12 + (2 * var16 + var12);
-                if (param2.world.d(false) != 13 ||
+                if (param2.world.getObjectiveType(false) != 13 ||
                   this.networked &&
                   ComponentContact.field_d == 0 ||
                   this.field_x) {
@@ -6978,20 +6978,20 @@ final class GameSession {
         if (null != var16.missionState &&
           5 == var16.missionState.getMissionPhase(8)) {
           var3_int = var16.missionState.getPhaseTimer((byte) -125);
-          var4 = lga.a((byte) -2, var16.world.d(false));
+          var4 = lga.a((byte) -2, var16.world.getObjectiveType(false));
           if (var3_int > var4) {
             return 3;
           }
         }
         var3 = var16.world;
-        stackIn_8_0 = (qab.a(106, var3.d(false))) ? 0 : 1;
+        stackIn_8_0 = (qab.a(106, var3.getObjectiveType(false))) ? 0 : 1;
         var4Lifetime1 = stackIn_8_0;
         var5 = (GameSnapshot) (this.state.carouselInfo.a(20, param0 ^ 18637));
         if (this.localPlayerIndex >= 0) {
           var6_int = this.getLocalTeam((byte) 115);
           if (null != var5.missionState &&
             var5.missionState.getMissionPhase(8) == 6) {
-            var7 = var5.missionState.g((byte) 45);
+            var7 = var5.missionState.getWinner((byte) 45);
             if ((var4Lifetime1 == 0 ||
               this.localPlayerIndex != var7) && (var4Lifetime1 != 0 ||
               var6_int != var7)) {
@@ -7014,7 +7014,7 @@ final class GameSession {
                     var11_ref_et.label == 5) {
                     var12 = GpuSprite.b(param0 ^ -7551, var12);
                   }
-                  var13 = cna.field_zb[var11_ref_et.label];
+                  var13 = IconTextWidget.field_zb[var11_ref_et.label];
                   var14 = var11_ref_et.value / var13;
                   if (var8_int > var14) {
                     var8_int = var14;
@@ -7115,12 +7115,12 @@ final class GameSession {
             var7Lifetime2 = var4_ref_String;
             var5 = MissionVariableFactory.field_a;
             if (null != AdjustVariableActionFactory.field_a) {
-              var5 = AdjustVariableActionFactory.field_a.field_K;
+              var5 = AdjustVariableActionFactory.field_a.y;
             }
             SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - (tea.a(var3_int, var4_ref_String, 13879) >> 1), 1, -pib.b((byte) 118) + var5, var4_ref_String, var3_int, 16777215, (byte) -87);
           }
-          var4 = this.state.a((byte) 82).d(false);
-          this.a((byte) -117, var4);
+          var4 = this.state.a((byte) 82).getObjectiveType(false);
+          this.drawMissionStatusPanel((byte) -117, var4);
           var5Lifetime1 = param0.missionState.getPhaseTimer((byte) -123);
           if (param1 != 200) {
             var22 = (Ship) null;
@@ -7173,12 +7173,12 @@ final class GameSession {
           }
           var24 = this.state.b(param1 - 199).missionState;
           if (6 == var24.getMissionPhase(param1 ^ 192)) {
-            stackIn_38_0 = (!qab.a(36, param0.world.d(false))) ? 0 : 1;
+            stackIn_38_0 = (!qab.a(36, param0.world.getObjectiveType(false))) ? 0 : 1;
             var8Lifetime1 = stackIn_38_0;
-            var9Lifetime1 = var24.g((byte) 123);
+            var9Lifetime1 = var24.getWinner((byte) 123);
             var11Lifetime1 = 16777215;
             var12 = var24.getCurrentMatch((byte) -48);
-            if (!var24.f(24416) &&
+            if (!var24.hasNextRound(24416) &&
               var12 != null) {
               var13Lifetime1 = var12.a(true);
               if (var13Lifetime1 == -1) {
@@ -7481,12 +7481,12 @@ final class GameSession {
         int var4Lifetime1;
         if (this.isChatAvailable((byte) -103)) {
           if (!GetSniperCannonProjectiles.field_p) {
-            AdjustVariableActionFactory.field_a.field_R = VariableConditionFactory.field_b;
+            AdjustVariableActionFactory.field_a.text = VariableConditionFactory.field_b;
           } else {
-            AdjustVariableActionFactory.field_a.field_R = ita.field_A;
+            AdjustVariableActionFactory.field_a.text = ita.field_A;
           }
-          var3 = -(AdjustVariableActionFactory.field_a.field_hb / 2) + SetMassDriverReload.field_p;
-          var4 = -AdjustVariableActionFactory.field_a.field_G + (MissionVariableFactory.field_a + (SetToggledScoreboard.field_o.field_u - SoftwareRasterizer2D.height));
+          var3 = -(AdjustVariableActionFactory.field_a.width / 2) + SetMassDriverReload.field_p;
+          var4 = -AdjustVariableActionFactory.field_a.height + (MissionVariableFactory.field_a + (SetToggledScoreboard.field_o.screenY - SoftwareRasterizer2D.height));
           if (!SetFightersPerPlayerMaximum.field_p ||
             SetMissionTerrainDebrisProbability.field_p) {
             if (SetNebulaProximityFadeDownshift.field_o) {
@@ -7496,14 +7496,14 @@ final class GameSession {
               Particle.field_H = GetUseDetailLines.field_o;
             }
             var5 = -var3 + GetUseDetailLines.field_o;
-            AdjustVariableActionFactory.field_a.field_K = 0;
-            AdjustVariableActionFactory.field_a.field_L = 0;
+            AdjustVariableActionFactory.field_a.y = 0;
+            AdjustVariableActionFactory.field_a.x = 0;
             var6 = GetTorpedoReload.field_q - var4;
             PlayerGameData.field_b = var5;
             qs.field_a = var6;
             Particle.field_H = var5;
             uia.field_b = var6;
-            AdjustVariableActionFactory.field_a.a(param1, 1332);
+            AdjustVariableActionFactory.field_a.updateInput(param1, 1332);
             qs.field_a = GetTorpedoReload.field_q;
             Particle.field_H = GetUseDetailLines.field_o;
             PlayerGameData.field_b = GetUseDetailLines.field_o;
@@ -7513,7 +7513,7 @@ final class GameSession {
             }
             if ((-SoftwareRasterizer2D.width + PartitionZoneFactory.field_a) / 2 < GetUseDetailLines.field_o &&
               GetUseDetailLines.field_o < -((-SoftwareRasterizer2D.width + PartitionZoneFactory.field_a) / 2) + PartitionZoneFactory.field_a &&
-              GetTorpedoReload.field_q > -SoftwareRasterizer2D.height - (-SetToggledScoreboard.field_o.field_u - MissionVariableFactory.field_a)) {
+              GetTorpedoReload.field_q > -SoftwareRasterizer2D.height - (-SetToggledScoreboard.field_o.screenY - MissionVariableFactory.field_a)) {
               this.field_l = true;
             }
             if (AdjustVariableActionFactory.field_a.field_o == 1) {
@@ -7521,10 +7521,10 @@ final class GameSession {
               this.a(false);
             }
           }
-          AdjustVariableActionFactory.field_a.field_K = var4;
-          AdjustVariableActionFactory.field_a.field_L = var3;
-          AdjustVariableActionFactory.field_a.field_M = var3;
-          AdjustVariableActionFactory.field_a.field_u = var4;
+          AdjustVariableActionFactory.field_a.y = var4;
+          AdjustVariableActionFactory.field_a.x = var3;
+          AdjustVariableActionFactory.field_a.screenX = var3;
+          AdjustVariableActionFactory.field_a.screenY = var4;
         }
         if (param0 <= 32) {
           this.drawRadialMenuBackground(-112, -67, 51, 21);
@@ -7764,7 +7764,7 @@ final class GameSession {
             return false;
           }
           var4_intLifetime1 = param2.getPhaseTimer((byte) -116);
-          var5 = lga.a((byte) -2, param1.d(false));
+          var5 = lga.a((byte) -2, param1.getObjectiveType(false));
           return !(var5 >= var4_intLifetime1);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -7922,7 +7922,7 @@ final class GameSession {
         return this.field_H;
     }
 
-    private final int a(kla param0, byte param1, int param2, mm param3) {
+    private final int a(kla param0, byte param1, int param2, LobbyGameEntry param3) {
         int stackIn_27_0 = 0;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -7950,19 +7950,19 @@ final class GameSession {
         int var11Lifetime1;
         try {
           var5_int = 4;
-          param3.field_Sb.field_L = var5_int;
-          param3.field_Sb.field_K = param2;
-          param3.field_Sb.a(true, 1332);
+          param3.field_Sb.x = var5_int;
+          param3.field_Sb.y = param2;
+          param3.field_Sb.updateInput(true, 1332);
           if (param3.field_Sb.field_o != 0) {
             boolean decompiledFrameRemainder0 = true;
             if (param3.field_fc && (!param3.field_Gb ||
               !param3.field_cc &&
               !param3.field_ac)) {
-              ArmBehaviourFactory.a(param3.f((byte) -13), 11, 20694);
+              ArmBehaviourFactory.a(param3.getGameId((byte) -13), 11, 20694);
               decompiledFrameRemainder0 = false;
             }
             else {
-              pa.a(11, (byte) -123, param3.f((byte) -13));
+              pa.a(11, (byte) -123, param3.getGameId((byte) -13));
             }
             if (vqa.field_g != null) {
               this.field_v.a((byte) -111);
@@ -7975,20 +7975,20 @@ final class GameSession {
             GetSniperCannonProjectiles.field_p = true;
             HardpointDefinition.a(true);
           }
-          param3.field_Sb.b(false, 38);
-          param3.field_Tb.field_K = param3.field_Sb.field_G + param2;
-          param3.field_Tb.field_L = var5_int + 2;
-          param3.field_Tb.b(false, -88);
-          param3.field_dc.field_K = param2;
-          param3.field_dc.field_L = var5_int - (-param3.field_Sb.field_hb - 2);
-          param3.field_dc.b(false, -103);
+          param3.field_Sb.draw(false, 38);
+          param3.field_Tb.y = param3.field_Sb.height + param2;
+          param3.field_Tb.x = var5_int + 2;
+          param3.field_Tb.draw(false, -88);
+          param3.field_dc.y = param2;
+          param3.field_dc.x = var5_int - (-param3.field_Sb.width - 2);
+          param3.field_dc.draw(false, -103);
           var6 = param3.field_Pb[0];
           var7 = SetTorpedoProjectileDamage.field_p[0][var6];
-          var8 = 2 + param3.field_Tb.field_eb.getStringWidth(param3.field_Tb.field_R);
-          var9 = param3.field_dc.field_hb + param3.field_Sb.field_hb;
+          var8 = 2 + param3.field_Tb.font.getStringWidth(param3.field_Tb.text);
+          var9 = param3.field_dc.width + param3.field_Sb.width;
           if (var7 != null) {
             var9 = var9 + (4 + var7.width);
-            var10 = 8 + (param3.field_Sb.field_hb + var5_int) + param3.field_dc.field_L;
+            var10 = 8 + (param3.field_Sb.width + var5_int) + param3.field_dc.x;
             var11 = 1 + param2;
             var7.draw(var10, var11);
             if (var10 <= PlayerGameData.field_b &&
@@ -7999,7 +7999,7 @@ final class GameSession {
             }
             var8 = Math.max(var8, var9);
           }
-          var10Lifetime1 = param3.field_Sb.field_G + param3.field_Tb.field_G;
+          var10Lifetime1 = param3.field_Sb.height + param3.field_Tb.height;
           param0.a(var5_int, var8 + var5_int, param2, var10Lifetime1 + param2, (byte) -30);
           GetDebrisGroupColour.field_r.writePixels(0, param2, SoftwareRasterizer2D.width, var10Lifetime1, SoftwareRasterizer2D.pixels, param2 * SoftwareRasterizer2D.width, SoftwareRasterizer2D.width);
           param0.a(true);
@@ -8017,9 +8017,9 @@ final class GameSession {
             var15 <= GetTorpedoReload.field_q &&
             var17 >= GetTorpedoReload.field_q) {
             var18 = 16711680;
-            GetMassDriverReload.a(SetReverbGain.a(nrb.field_a, new String[]{param3.field_dc.field_R}, 78), -61);
+            GetMassDriverReload.a(SetReverbGain.a(nrb.field_a, new String[]{param3.field_dc.text}, 78), -61);
             if (ujb.field_c == 1) {
-              sh.a(param3.f((byte) -13), -1, 11);
+              sh.a(param3.getGameId((byte) -13), -1, 11);
             }
           }
           kra.a(var18, 2, 16994, var15, 255, var14, var16, var17);
@@ -8046,7 +8046,7 @@ final class GameSession {
         }
     }
 
-    private final void a(byte param0, int param1) {
+    private final void drawMissionStatusPanel(byte param0, int param1) {
         int var14 = 0;
         MissionVariable[] var4;
         int var5;
@@ -8110,7 +8110,7 @@ final class GameSession {
         var26 = VoidHunters.field_G;
         var33 = this.state.b(1).missionState;
         if (var33 != null &&
-          !var33.c((byte) 93)) {
+          !var33.isPreGamePhase((byte) 93)) {
           var4 = var33.getCustomVariables(false);
           var5 = 0;
           var6 = PartitionZoneFactory.field_a - 17;
@@ -8130,7 +8130,7 @@ final class GameSession {
                 var34.label < ParticleFactory.field_c.length) {
                 var35 = ParticleFactory.field_c[var28.label];
                 var36 = SetUseBackgroundInFullscreen.field_o[var28.label];
-                var17 = cna.field_zb[var28.label];
+                var17 = IconTextWidget.field_zb[var28.label];
                 var18_int = var4[var13_int].value;
                 if (var17 > 1) {
                   var18_int = var18_int / var17;
@@ -8171,7 +8171,7 @@ final class GameSession {
                 ParticleFactory.field_c.length > var39.label) {
                 var40 = ParticleFactory.field_c[var29.label];
                 var41 = SetUseBackgroundInFullscreen.field_o[var29.label];
-                var17Lifetime1 = cna.field_zb[var29.label];
+                var17Lifetime1 = IconTextWidget.field_zb[var29.label];
                 var18_intLifetime2 = var4[var13_intLifetime2].value;
                 if (var17Lifetime1 > 1) {
                   var18_intLifetime2 = var18_intLifetime2 / var17Lifetime1;
@@ -8780,11 +8780,11 @@ final class GameSession {
           this.state = new CommonGameState(param1, -1, param4, param5, false);
           PartitionZoneFactory.field_a = GetBombletSprayEnergyUsed.field_p.width;
           MissionVariableFactory.field_a = GetBombletSprayEnergyUsed.field_p.height;
-          AdjustVariableActionFactory.field_a = new llb("chat_toggle", (llb) null, 0, 440, 95, 20, ita.field_A);
-          AdjustVariableActionFactory.field_a.field_L = -(AdjustVariableActionFactory.field_a.field_hb / 2) + PartitionZoneFactory.field_a / 2;
+          AdjustVariableActionFactory.field_a = new Widget("chat_toggle", (Widget) null, 0, 440, 95, 20, ita.field_A);
+          AdjustVariableActionFactory.field_a.x = -(AdjustVariableActionFactory.field_a.width / 2) + PartitionZoneFactory.field_a / 2;
           AdjustVariableActionFactory.field_a.field_gb = ko.field_e;
-          AdjustVariableActionFactory.field_a.field_K = MissionVariableFactory.field_a - AdjustVariableActionFactory.field_a.field_G;
-          AdjustVariableActionFactory.field_a.field_eb = GrapplingHookFactory.field_a;
+          AdjustVariableActionFactory.field_a.y = MissionVariableFactory.field_a - AdjustVariableActionFactory.field_a.height;
+          AdjustVariableActionFactory.field_a.font = GrapplingHookFactory.field_a;
           AdjustVariableActionFactory.field_a.field_mb = vfa.field_d;
           ShipTeamConditionFactory.field_a = new lta();
           this.field_w = 0.001953125f;

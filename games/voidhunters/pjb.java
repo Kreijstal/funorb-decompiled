@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pjb extends llb {
-    private llb field_xb;
+final class pjb extends Widget {
+    private Widget field_xb;
     static Object field_vb;
-    private llb field_Ab;
-    private llb field_yb;
-    private llb field_wb;
+    private Widget field_Ab;
+    private Widget field_yb;
+    private Widget field_wb;
     private int field_zb;
-    private llb field_Bb;
-    private llb field_Cb;
+    private Widget field_Bb;
+    private Widget field_Cb;
     static String field_Db;
 
     final boolean j(int param0) {
@@ -18,7 +18,7 @@ final class pjb extends llb {
           return true;
         }
         if (param0 >= -2) {
-          this.field_xb = (llb) null;
+          this.field_xb = (Widget) null;
         }
         if (this.field_Cb.field_C == 0) {
           return false;
@@ -34,10 +34,10 @@ final class pjb extends llb {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        this.field_G = param5;
-        this.field_L = param0;
-        this.field_hb = param6;
-        this.field_K = param2;
+        this.height = param5;
+        this.x = param0;
+        this.width = param6;
+        this.y = param2;
         this.a(param1, param3, (byte) 88, param4);
         if (param7 != -1) {
           Class[] var10 = (Class[]) null;
@@ -136,9 +136,9 @@ final class pjb extends llb {
         int var9 = 0;
         int var5 = 50 % ((24 - param2) / 41);
         int var6 = 0;
-        int var7 = this.field_yb.field_G - this.field_Bb.field_G;
+        int var7 = this.field_yb.height - this.field_Bb.height;
         if (0 < var7) {
-          var8 = this.field_Bb.field_K;
+          var8 = this.field_Bb.y;
           var9 = param0 - param1;
           var6 = (var9 * var8 + var7 / 2) / var7;
         }
@@ -196,7 +196,7 @@ final class pjb extends llb {
           if (0 != this.field_zb) {
             return false;
           }
-          if (this.field_Bb.field_db + this.field_Bb.field_u > uia.field_b) {
+          if (this.field_Bb.field_db + this.field_Bb.screenY > uia.field_b) {
             this.field_zb = 3;
             return true;
           }
@@ -211,7 +211,7 @@ final class pjb extends llb {
         if (0 != this.field_zb) {
           return false;
         }
-        if (this.field_Bb.field_db + this.field_Bb.field_u > uia.field_b) {
+        if (this.field_Bb.field_db + this.field_Bb.screenY > uia.field_b) {
           this.field_zb = 3;
           return true;
         }
@@ -229,37 +229,37 @@ final class pjb extends llb {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        llb var15 = null;
-        llb var16 = null;
+        Widget var15 = null;
+        Widget var16 = null;
         int var14 = 0;
-        llb var17 = null;
-        llb var18 = null;
-        llb var19 = null;
-        llb var20 = null;
-        llb var15Lifetime1;
-        llb var16Lifetime1;
-        llb var17Lifetime1;
-        llb var18Lifetime1;
-        llb var19Lifetime1;
-        llb var20Lifetime1;
+        Widget var17 = null;
+        Widget var18 = null;
+        Widget var19 = null;
+        Widget var20 = null;
+        Widget var15Lifetime1;
+        Widget var16Lifetime1;
+        Widget var17Lifetime1;
+        Widget var18Lifetime1;
+        Widget var19Lifetime1;
+        Widget var20Lifetime1;
         int var9Lifetime1;
         int var10Lifetime1;
         int var11Lifetime1;
         int var12Lifetime1;
         int var14Lifetime1;
-        if (this.field_G < this.field_hb * 2) {
-          var6 = this.field_G / 2;
-          var5 = this.field_G / 2;
+        if (this.height < this.width * 2) {
+          var6 = this.height / 2;
+          var5 = this.height / 2;
         } else {
-          var6 = -this.field_hb + this.field_G;
-          var5 = this.field_hb;
+          var6 = -this.width + this.height;
+          var5 = this.width;
         }
         int var7 = -var5 + var6;
         int var8 = var7;
         if (param0 > 0) {
           var8 = var8 * param3 / param0;
-          if (!(this.field_hb <= var8)) {
-            var8 = this.field_hb;
+          if (!(this.width <= var8)) {
+            var8 = this.width;
           }
           if (var7 < var8) {
             var8 = var7;
@@ -272,39 +272,39 @@ final class pjb extends llb {
           }
           var12 = var11 + var8 / 2;
           var15 = this.field_wb;
-          var15.field_G = var5;
-          var15.field_hb = this.field_hb;
-          var15.field_L = 0;
-          var15.field_K = 0;
+          var15.height = var5;
+          var15.width = this.width;
+          var15.x = 0;
+          var15.y = 0;
           var16 = this.field_Cb;
-          var16.field_L = 0;
-          var16.field_G = this.field_G - var6;
-          var16.field_K = var6;
-          var16.field_hb = this.field_hb;
+          var16.x = 0;
+          var16.height = this.height - var6;
+          var16.y = var6;
+          var16.width = this.width;
           var14 = 60 / ((-68 - param2) / 40);
           var17 = this.field_yb;
-          var17.field_K = var5;
-          var17.field_G = var7;
-          var17.field_L = 0;
-          var17.field_hb = this.field_hb;
+          var17.y = var5;
+          var17.height = var7;
+          var17.x = 0;
+          var17.width = this.width;
           var18 = this.field_Ab;
-          var18.field_hb = this.field_hb;
-          var18.field_L = 0;
-          var18.field_G = var12;
-          var18.field_K = 0;
+          var18.width = this.width;
+          var18.x = 0;
+          var18.height = var12;
+          var18.y = 0;
           var19 = this.field_xb;
-          var19.field_hb = this.field_hb;
-          var19.field_L = 0;
-          var19.field_K = var12;
-          var19.field_G = -var12 + var7;
+          var19.width = this.width;
+          var19.x = 0;
+          var19.y = var12;
+          var19.height = -var12 + var7;
           var20 = this.field_Bb;
-          var20.field_G = var8;
-          this.field_yb.field_y = param3 < param0 ? true : false;
-          this.field_Cb.field_y = param3 < param0 ? true : false;
-          this.field_wb.field_y = param3 < param0 ? true : false;
-          var20.field_L = 0;
-          var20.field_hb = this.field_hb;
-          var20.field_K = var11;
+          var20.height = var8;
+          this.field_yb.enabled = param3 < param0 ? true : false;
+          this.field_Cb.enabled = param3 < param0 ? true : false;
+          this.field_wb.enabled = param3 < param0 ? true : false;
+          var20.x = 0;
+          var20.width = this.width;
+          var20.y = var11;
           return;
         }
         var9Lifetime1 = param0 - param3;
@@ -315,46 +315,46 @@ final class pjb extends llb {
         }
         var12Lifetime1 = var11Lifetime1 + var8 / 2;
         var15Lifetime1 = this.field_wb;
-        var15Lifetime1.field_G = var5;
-        var15Lifetime1.field_hb = this.field_hb;
-        var15Lifetime1.field_L = 0;
-        var15Lifetime1.field_K = 0;
+        var15Lifetime1.height = var5;
+        var15Lifetime1.width = this.width;
+        var15Lifetime1.x = 0;
+        var15Lifetime1.y = 0;
         var16Lifetime1 = this.field_Cb;
-        var16Lifetime1.field_L = 0;
-        var16Lifetime1.field_G = this.field_G - var6;
-        var16Lifetime1.field_K = var6;
-        var16Lifetime1.field_hb = this.field_hb;
+        var16Lifetime1.x = 0;
+        var16Lifetime1.height = this.height - var6;
+        var16Lifetime1.y = var6;
+        var16Lifetime1.width = this.width;
         var14Lifetime1 = 60 / ((-68 - param2) / 40);
         var17Lifetime1 = this.field_yb;
-        var17Lifetime1.field_K = var5;
-        var17Lifetime1.field_G = var7;
-        var17Lifetime1.field_L = 0;
-        var17Lifetime1.field_hb = this.field_hb;
+        var17Lifetime1.y = var5;
+        var17Lifetime1.height = var7;
+        var17Lifetime1.x = 0;
+        var17Lifetime1.width = this.width;
         var18Lifetime1 = this.field_Ab;
-        var18Lifetime1.field_hb = this.field_hb;
-        var18Lifetime1.field_L = 0;
-        var18Lifetime1.field_G = var12Lifetime1;
-        var18Lifetime1.field_K = 0;
+        var18Lifetime1.width = this.width;
+        var18Lifetime1.x = 0;
+        var18Lifetime1.height = var12Lifetime1;
+        var18Lifetime1.y = 0;
         var19Lifetime1 = this.field_xb;
-        var19Lifetime1.field_hb = this.field_hb;
-        var19Lifetime1.field_L = 0;
-        var19Lifetime1.field_K = var12Lifetime1;
-        var19Lifetime1.field_G = -var12Lifetime1 + var7;
+        var19Lifetime1.width = this.width;
+        var19Lifetime1.x = 0;
+        var19Lifetime1.y = var12Lifetime1;
+        var19Lifetime1.height = -var12Lifetime1 + var7;
         var20Lifetime1 = this.field_Bb;
-        var20Lifetime1.field_G = var8;
-        this.field_yb.field_y = param3 < param0 ? true : false;
-        this.field_Cb.field_y = param3 < param0 ? true : false;
-        this.field_wb.field_y = param3 < param0 ? true : false;
-        var20Lifetime1.field_L = 0;
-        var20Lifetime1.field_hb = this.field_hb;
-        var20Lifetime1.field_K = var11Lifetime1;
+        var20Lifetime1.height = var8;
+        this.field_yb.enabled = param3 < param0 ? true : false;
+        this.field_Cb.enabled = param3 < param0 ? true : false;
+        this.field_wb.enabled = param3 < param0 ? true : false;
+        var20Lifetime1.x = 0;
+        var20Lifetime1.width = this.width;
+        var20Lifetime1.y = var11Lifetime1;
     }
 
     final boolean a(boolean param0) {
         if (param0) {
           return 0 != this.field_Bb.field_C ? true : false;
         }
-        this.field_yb = (llb) null;
+        this.field_yb = (Widget) null;
         return 0 != this.field_Bb.field_C ? true : false;
     }
 
@@ -368,7 +368,7 @@ final class pjb extends llb {
             this.field_zb = this.field_zb - 1;
           }
           if (this.field_zb == 0 &&
-            uia.field_b >= this.field_Bb.field_E + (this.field_Bb.field_u + this.field_Bb.field_db + this.field_Bb.field_G)) {
+            uia.field_b >= this.field_Bb.field_E + (this.field_Bb.screenY + this.field_Bb.field_db + this.field_Bb.height)) {
             this.field_zb = 3;
             return true;
           }
@@ -376,7 +376,7 @@ final class pjb extends llb {
         if (param0) {
           return false;
         }
-        this.field_Ab = (llb) null;
+        this.field_Ab = (Widget) null;
         return false;
     }
 
@@ -403,8 +403,8 @@ final class pjb extends llb {
         return false;
     }
 
-    pjb(long param0, llb param1, llb param2, llb param3, llb param4) {
-        super(param0, (llb) null);
+    pjb(long param0, Widget param1, Widget param2, Widget param3, Widget param4) {
+        super(param0, (Widget) null);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -416,26 +416,26 @@ final class pjb extends llb {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        llb var9 = null;
-        llb var10 = null;
+        Widget var9 = null;
+        Widget var10 = null;
         try {
-          this.field_wb = new llb(0L, param1);
-          this.field_Cb = new llb(0L, param2);
-          this.b(-561, this.field_wb);
-          this.b(-561, this.field_Cb);
-          this.field_yb = new llb(0L, (llb) null);
-          this.b(-561, this.field_yb);
-          this.field_Ab = new llb(0L, param3);
-          this.field_xb = new llb(0L, param3);
+          this.field_wb = new Widget(0L, param1);
+          this.field_Cb = new Widget(0L, param2);
+          this.addChild(-561, this.field_wb);
+          this.addChild(-561, this.field_Cb);
+          this.field_yb = new Widget(0L, (Widget) null);
+          this.addChild(-561, this.field_yb);
+          this.field_Ab = new Widget(0L, param3);
+          this.field_xb = new Widget(0L, param3);
           this.field_xb.field_S = true;
           var9 = this.field_Ab;
           var10 = var9;
           var10.field_S = true;
-          this.field_yb.b(-561, this.field_Ab);
-          this.field_yb.b(-561, this.field_xb);
-          this.field_Bb = new llb(0L, param4);
-          this.field_Bb.field_Z = true;
-          this.field_yb.b(-561, this.field_Bb);
+          this.field_yb.addChild(-561, this.field_Ab);
+          this.field_yb.addChild(-561, this.field_xb);
+          this.field_Bb = new Widget(0L, param4);
+          this.field_Bb.draggable = true;
+          this.field_yb.addChild(-561, this.field_Bb);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

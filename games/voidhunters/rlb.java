@@ -5,14 +5,14 @@ final class rlb {
     private OpenGlToolkit field_b;
     static int[] field_d;
     static int field_e;
-    static llb field_a;
+    static Widget field_a;
     private TextureProvider field_c;
     private pfb field_f;
 
     final void b(int param0) {
         this.field_f.b((byte) 94);
         if (param0 >= 0) {
-          field_a = (llb) null;
+          field_a = (Widget) null;
         }
     }
 

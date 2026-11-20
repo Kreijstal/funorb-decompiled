@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetDebrisGrabbingRange extends ConsoleCommand {
-    static llb field_o;
+    static Widget field_o;
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 55) {
-          field_o = (llb) null;
+          field_o = (Widget) null;
           field_o = null;
           return;
         }

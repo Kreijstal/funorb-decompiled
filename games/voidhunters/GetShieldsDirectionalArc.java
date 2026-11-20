@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetShieldsDirectionalArc extends ConsoleCommand {
-    static llb field_o;
+    static Widget field_o;
     static String field_q;
     static ResourceArchive field_r;
     static int field_p;

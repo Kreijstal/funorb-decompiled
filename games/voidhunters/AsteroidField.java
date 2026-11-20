@@ -933,7 +933,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime99 = HuffmanCodec.fetchLocalizedResource((byte) -93, "team_cannot_respawn");
           if (var2Lifetime99 != null) {
-            llb.field_H = Cp1252Strings.decode((byte) -125, var2Lifetime99);
+            Widget.field_H = Cp1252Strings.decode((byte) -125, var2Lifetime99);
           }
           var2Lifetime100 = HuffmanCodec.fetchLocalizedResource((byte) -46, "all_teams_cannot_respawn");
           if (var2Lifetime100 != null) {
@@ -1293,7 +1293,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime189 = HuffmanCodec.fetchLocalizedResource((byte) -85, "ORDER_REPAIR_MODE");
           if (null != var2Lifetime189) {
-            llb.field_kb = Cp1252Strings.decode((byte) -125, var2Lifetime189);
+            Widget.field_kb = Cp1252Strings.decode((byte) -125, var2Lifetime189);
           }
           var2Lifetime190 = HuffmanCodec.fetchLocalizedResource((byte) -55, "ORDER_BOOSTERS_FIRE_SHORT");
           if (null != var2Lifetime190) {

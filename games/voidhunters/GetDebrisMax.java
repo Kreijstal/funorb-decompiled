@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetDebrisMax extends ConsoleCommand {
-    static llb field_o;
+    static Widget field_o;
     static float[] field_q;
     static rbb field_s;
     static String field_p;
@@ -133,7 +133,7 @@ final class GetDebrisMax extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            field_o = (llb) null;
+            field_o = (Widget) null;
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(56, 108));
           return stackIn_3_0;

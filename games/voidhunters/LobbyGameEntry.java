@@ -1,68 +1,68 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mm extends llb {
-    llb field_Wb;
-    llb field_wb;
+final class LobbyGameEntry extends Widget {
+    Widget field_Wb;
+    Widget field_wb;
     String field_Vb;
     byte[] field_Pb;
     boolean field_xb;
     int field_Db;
-    llb field_Jb;
+    Widget field_Jb;
     int field_Kb;
-    llb field_Hb;
+    Widget field_Hb;
     int field_ec;
     boolean field_Qb;
-    llb field_bc;
+    Widget field_bc;
     int field_Cb;
-    llb field_vb;
-    llb[] field_Zb;
-    llb field_Tb;
+    Widget field_vb;
+    Widget[] field_Zb;
+    Widget field_Tb;
     boolean field_cc;
-    llb field_Rb;
+    Widget field_Rb;
     boolean field_Gb;
     int field_Bb;
     boolean field_ac;
     int field_Fb;
     int field_zb;
-    llb field_Sb;
-    llb field_Mb;
-    llb field_Ab;
+    Widget field_Sb;
+    Widget field_Mb;
+    Widget field_Ab;
     long field_Ob;
-    llb field_Lb;
-    llb field_dc;
+    Widget field_Lb;
+    Widget field_dc;
     boolean field_fc;
-    llb field_Yb;
+    Widget field_Yb;
     long field_Nb;
     boolean field_Xb;
-    llb field_yb;
-    llb field_Eb;
+    Widget field_yb;
+    Widget field_Eb;
     String[] field_Ib;
     int field_Ub;
 
-    mm(int param0) {
-        super(0L, (llb) null);
+    LobbyGameEntry(int param0) {
+        super(0L, (Widget) null);
         this.field_Pb = new byte[param0];
     }
 
-    final int f(byte param0) {
+    final int getGameId(byte param0) {
         if (param0 == -13) {
           return (int)this.getSecondaryKey(26390);
         }
-        mm var3 = (mm) null;
-        this.a((mm) null, -117);
+        LobbyGameEntry var3 = (LobbyGameEntry) null;
+        this.comesBefore((LobbyGameEntry) null, -117);
         return (int)this.getSecondaryKey(26390);
     }
 
-    final boolean e(byte param0) {
+    final boolean isSecondaryDetached(byte param0) {
         if (param0 >= 21) {
           return !this.isSecondaryLinked((byte) 87) ? true : false;
         }
-        this.f((byte) -41);
+        this.getGameId((byte) -41);
         return !this.isSecondaryLinked((byte) 87) ? true : false;
     }
 
-    final boolean a(mm param0, int param1) {
+    final boolean comesBefore(LobbyGameEntry param0, int param1) {
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_17_0 = 0;
@@ -85,7 +85,7 @@ final class mm extends llb {
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
-        mm var7 = null;
+        LobbyGameEntry var7 = null;
         try {
           if (!this.field_ac) {
             stackIn_6_0 = (6 == this.field_ec) ? 1 : 0;
@@ -94,8 +94,8 @@ final class mm extends llb {
           }
           var3_int = stackIn_6_0;
           if (param1 >= -120) {
-            var7 = (mm) null;
-            this.a((mm) null, -66);
+            var7 = (LobbyGameEntry) null;
+            this.comesBefore((LobbyGameEntry) null, -66);
           }
           if (!param0.field_ac) {
             stackIn_14_0 = (param0.field_ec == 6) ? 1 : 0;

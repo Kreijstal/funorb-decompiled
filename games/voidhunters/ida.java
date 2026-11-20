@@ -26,34 +26,34 @@ final class ida extends mc {
     }
 
     final int f(int param0) {
-        wc var2;
+        IntrusiveDequeIterator var2;
         int var3;
         bl var4;
         int var5;
         var5 = VoidHunters.field_G;
-        var2 = new wc(this.field_v);
+        var2 = new IntrusiveDequeIterator(this.field_v);
         var3 = param0;
-        var4 = (bl) (var2.c(570));
+        var4 = (bl) (var2.first(570));
         while (var4 != null) {
           if (var4.field_z) {
             if (var3 >= var4.field_f) {
-              var4 = (bl) (var2.a(19072));
+              var4 = (bl) (var2.next(19072));
               continue;
             }
             var3 = var4.field_f;
           }
-          var4 = (bl) (var2.a(19072));
+          var4 = (bl) (var2.next(19072));
         }
         return var3;
     }
 
     final void g(byte param0) {
         int var4 = VoidHunters.field_G;
-        wc var2 = new wc(this.field_v);
-        bl var3 = (bl) (var2.c(570));
+        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.field_v);
+        bl var3 = (bl) (var2.first(570));
         while (var3 != null) {
           var3.field_z = false;
-          var3 = (bl) (var2.a(19072));
+          var3 = (bl) (var2.next(19072));
         }
         this.field_t = null;
         if (param0 != -17) {
@@ -62,20 +62,20 @@ final class ida extends mc {
     }
 
     final bl g(int param0) {
-        wc var2;
+        IntrusiveDequeIterator var2;
         bl var3;
         int var4;
         var4 = VoidHunters.field_G;
-        var2 = new wc(this.field_v);
+        var2 = new IntrusiveDequeIterator(this.field_v);
         if (param0 != 0) {
           this.g((byte) 100);
         }
-        var3 = (bl) (var2.c(param0 ^ 570));
+        var3 = (bl) (var2.first(param0 ^ 570));
         while (var3 != null) {
           if (var3.field_z) {
             return var3;
           }
-          var3 = (bl) (var2.a(19072));
+          var3 = (bl) (var2.next(19072));
         }
         return null;
     }
@@ -113,13 +113,13 @@ final class ida extends mc {
 
     final shb d(int param0) {
         int var4 = VoidHunters.field_G;
-        wc var2 = new wc(this.field_v);
-        bl var3 = (bl) (var2.c(570));
+        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.field_v);
+        bl var3 = (bl) (var2.first(570));
         while (var3 != null) {
           if (var3.field_z) {
             return var3.g((byte) -74);
           }
-          var3 = (bl) (var2.a(19072));
+          var3 = (bl) (var2.next(19072));
         }
         if (param0 == 6093) {
           return null;
@@ -130,14 +130,14 @@ final class ida extends mc {
 
     final void e(int param0) {
         int var5 = VoidHunters.field_G;
-        wc var2 = new wc(this.field_v);
+        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.field_v);
         int var3 = 74 % ((53 - param0) / 55);
-        bl var4 = (bl) (var2.c(570));
+        bl var4 = (bl) (var2.first(570));
         while (var4 != null) {
           if (var4.j((byte) 55)) {
             var4.unlink(-3846);
           }
-          var4 = (bl) (var2.a(19072));
+          var4 = (bl) (var2.next(19072));
         }
     }
 
@@ -149,11 +149,11 @@ final class ida extends mc {
         if (param2 < 47) {
           this.d(51);
         }
-        wc var5 = new wc(this.field_v);
-        shb var6 = (shb) (var5.b((byte) 83));
+        IntrusiveDequeIterator var5 = new IntrusiveDequeIterator(this.field_v);
+        shb var6 = (shb) (var5.last((byte) 83));
         while (var6 != null) {
           var6.b(param0 + this.field_g, param1, 111, this.field_r + param3);
-          var6 = (shb) (var5.a((byte) 108));
+          var6 = (shb) (var5.previous((byte) 108));
         }
     }
 
@@ -165,18 +165,18 @@ final class ida extends mc {
 
     final int i(int param0) {
         int var5 = VoidHunters.field_G;
-        wc var2 = new wc(this.field_v);
+        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.field_v);
         int var3 = -2147483648;
         if (param0 > -90) {
           return 20;
         }
-        bl var4 = (bl) (var2.c(570));
+        bl var4 = (bl) (var2.first(570));
         while (var4 != null) {
           if (var4.field_z &&
             var3 < var4.field_h) {
             var3 = var4.field_h;
           }
-          var4 = (bl) (var2.a(19072));
+          var4 = (bl) (var2.next(19072));
         }
         return var3;
     }
@@ -396,13 +396,13 @@ final class ida extends mc {
         if (param0 != 19976) {
           return;
         }
-        wc var2 = new wc(this.field_v);
-        bl var3 = (bl) (var2.c(570));
+        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.field_v);
+        bl var3 = (bl) (var2.first(570));
         while (var3 != null) {
           if (var3.a(248)) {
             var3.unlink(-3846);
           }
-          var3 = (bl) (var2.a(param0 ^ 1160));
+          var3 = (bl) (var2.next(param0 ^ 1160));
         }
         this.field_t = (shb) ((Object) this.g(0));
     }

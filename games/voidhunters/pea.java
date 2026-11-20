@@ -7,7 +7,7 @@ final class pea {
     static TextureCombineSource field_d;
     static String field_c;
 
-    final static void a(long param0, llb param1, int param2, int[] param3, String param4, soa param5, String param6, byte param7, int param8) {
+    final static void a(long param0, Widget param1, int param2, int[] param3, String param4, soa param5, String param6, byte param7, int param8) {
         qg.field_a = param5;
         if (param7 <= 21) {
           return;
@@ -38,7 +38,7 @@ final class pea {
     }
 
     /* Full JVM integer arguments; original narrow signature preserved. */
-    final static void $cfr$intArgs$a$91f64d33677c(long param0, llb param1, int param2, int[] param3, String param4, soa param5, String param6, int param7, int param8) {
+    final static void $cfr$intArgs$a$91f64d33677c(long param0, Widget param1, int param2, int[] param3, String param4, soa param5, String param6, int param7, int param8) {
         qg.field_a = param5;
         if (param7 <= 21) {
           return;

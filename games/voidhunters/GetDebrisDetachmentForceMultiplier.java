@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetDebrisDetachmentForceMultiplier extends ConsoleCommand {
-    static llb field_o;
+    static Widget field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -13,7 +13,7 @@ final class GetDebrisDetachmentForceMultiplier extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            field_o = (llb) null;
+            field_o = (Widget) null;
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(53, 105));
           return stackIn_3_0;

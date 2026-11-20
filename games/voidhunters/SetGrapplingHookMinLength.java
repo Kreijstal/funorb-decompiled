@@ -213,28 +213,28 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
         SetGrapplingHookRopeBreakLength.field_p = SoftwareRasterizer2D.height;
         GetShieldsDirectionalArcParticleLife.field_p = SoftwareRasterizer2D.width;
         moa.a(true);
-        lc.field_b.a(0, -83, -40 + (tb.field_a.field_G - 2), 0, tb.field_a.field_hb);
-        nna.field_v.a(0, -17, lw.field_i.field_hb, 0, nna.field_w);
+        lc.field_b.a(0, -83, -40 + (tb.field_a.height - 2), 0, tb.field_a.width);
+        nna.field_v.setBounds(0, -17, lw.field_i.width, 0, nna.field_w);
         int var1 = nna.field_w + 2;
-        DualLinkNode.field_f.a(0, -26, lw.field_i.field_hb, GetGrapplingHooksDamageableBySourcePlayer.field_o ? var1 : 0, lw.field_i.field_G - (GetGrapplingHooksDamageableBySourcePlayer.field_o ? var1 : 0));
+        DualLinkNode.field_f.setBounds(0, -26, lw.field_i.width, GetGrapplingHooksDamageableBySourcePlayer.field_o ? var1 : 0, lw.field_i.height - (GetGrapplingHooksDamageableBySourcePlayer.field_o ? var1 : 0));
         GetThrusterForce.a(0);
-        SpawnChoiceFactory.field_c.a(0, 124, tb.field_a.field_hb, -40 + tb.field_a.field_G, 40);
-        qpb.field_w.a(0, -65, bqa.field_d.field_hb, 0, 30);
-        sra.field_a.a(0, 124, bqa.field_d.field_hb, 30, -32 + bqa.field_d.field_G - 40);
-        ArchiveIndexLoader.field_a.a(5, param0 ^ 120, 68, 5, 30);
-        GetSniperCannonAimspeed.field_q.a(75, 18, 78, 5, 30);
-        SettingsChangeFactory.field_b.a(155, 124, 48, 5, 30);
-        GrapplingHook.field_C.a(205, param0 ^ 113, 48, 5, 30);
+        SpawnChoiceFactory.field_c.setBounds(0, 124, tb.field_a.width, -40 + tb.field_a.height, 40);
+        qpb.field_w.setBounds(0, -65, bqa.field_d.width, 0, 30);
+        sra.field_a.setBounds(0, 124, bqa.field_d.width, 30, -32 + bqa.field_d.height - 40);
+        ArchiveIndexLoader.field_a.setBounds(5, param0 ^ 120, 68, 5, 30);
+        GetSniperCannonAimspeed.field_q.setBounds(75, 18, 78, 5, 30);
+        SettingsChangeFactory.field_b.setBounds(155, 124, 48, 5, 30);
+        GrapplingHook.field_C.setBounds(205, param0 ^ 113, 48, 5, 30);
         int var2 = GetGrapplingHooksDamageableBySourcePlayer.field_o ? 250 : 200;
-        GetDebrisDetachmentForceMultiplier.field_o.a(var2 + 5, 123, -var2 + 363, 5, 30);
-        uga.field_h.a(370, 116, -365 + (bqa.field_d.field_hb - 10), 5, 30);
-        MapClearanceCircle.field_f.a(-5 + (sra.field_a.field_hb - 5), 2, -1, -5 + (-37 + sra.field_a.field_G), 37, param0, ResourceNode.field_a);
-        int var3 = (bqa.field_d.field_hb + 2) / 2;
-        GetMomentOfInertiaPerpointCalcDownshift.field_p.a(0, -116, -2 + var3, -40 + bqa.field_d.field_G, 40);
+        GetDebrisDetachmentForceMultiplier.field_o.setBounds(var2 + 5, 123, -var2 + 363, 5, 30);
+        uga.field_h.setBounds(370, 116, -365 + (bqa.field_d.width - 10), 5, 30);
+        MapClearanceCircle.field_f.a(-5 + (sra.field_a.width - 5), 2, -1, -5 + (-37 + sra.field_a.height), 37, param0, ResourceNode.field_a);
+        int var3 = (bqa.field_d.width + 2) / 2;
+        GetMomentOfInertiaPerpointCalcDownshift.field_p.setBounds(0, -116, -2 + var3, -40 + bqa.field_d.height, 40);
         if (!GetGrapplingHooksDamageableBySourcePlayer.field_o) {
           var3 = 0;
         }
-        oib.field_a.a(var3, 119, bqa.field_d.field_hb - var3, bqa.field_d.field_G - 40, 40);
+        oib.field_a.setBounds(var3, 119, bqa.field_d.width - var3, bqa.field_d.height - 40, 40);
     }
 
     static {

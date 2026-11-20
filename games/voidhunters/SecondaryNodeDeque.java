@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class SecondaryNodeDeque implements Iterable {
-    static llb[] field_c;
+    static Widget[] field_c;
     DualLinkNode sentinel;
     private DualLinkNode cursor;
 

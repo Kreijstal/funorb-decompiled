@@ -16,12 +16,12 @@ final class AudioPump implements Runnable {
     }
 
     final static void a(int param0, int param1, int param2) {
-        mm var6 = null;
-        mm var7 = null;
+        LobbyGameEntry var6 = null;
+        LobbyGameEntry var7 = null;
         IsaacPacketBuffer var4 = null;
         IsaacPacketBuffer var4Lifetime1;
         if (param1 != GetMachineGunPulsetime.field_q) {
-          var6 = (mm) (GetLaserReload.field_r.a(-1, (long)GetMachineGunPulsetime.field_q));
+          var6 = (LobbyGameEntry) (GetLaserReload.field_r.a(-1, (long)GetMachineGunPulsetime.field_q));
           var7 = var6;
           if (var7 != null) {
             var7.field_Ib = null;

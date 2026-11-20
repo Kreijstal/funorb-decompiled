@@ -108,7 +108,7 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
           if (param0 != 1) {
             this.label = 117;
           }
-          var6 = param2.missionState.c(-1, this.index);
+          var6 = param2.missionState.getCustomVariableForWrite(-1, this.index);
           var7 = var6;
           if (var7 == null) {
             return;

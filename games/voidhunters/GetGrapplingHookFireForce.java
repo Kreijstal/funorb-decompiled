@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetGrapplingHookFireForce extends ConsoleCommand {
-    static llb field_o;
+    static Widget field_o;
     static float[] field_p;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

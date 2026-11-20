@@ -6,7 +6,7 @@ final class Debris extends ShipBody implements DiffableState, ofa, CompactGameSt
     boolean field_x;
     boolean field_u;
     boolean phantom;
-    static llb field_y;
+    static Widget field_y;
 
     private final void a(boolean param0, Debris param1) {
         try {

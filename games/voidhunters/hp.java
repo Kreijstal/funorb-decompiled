@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class hp extends OutputStream {
-    static llb field_b;
+    static Widget field_b;
     private StringBuilder field_a;
 
     public final void write(int param0) {
@@ -12,7 +12,7 @@ final class hp extends OutputStream {
     }
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5, int param6) {
-        GetGrapplingHookFireForce.field_o.a(param5, -6, param0, param6, param1);
+        GetGrapplingHookFireForce.field_o.setBounds(param5, -6, param0, param6, param1);
         if (null != MidiNote.field_m) {
           MidiNote.field_m.a(12, param1, -GetLaserAimspeed.field_p + param2, param2, param1, param4);
           if (param3) {

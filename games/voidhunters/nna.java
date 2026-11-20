@@ -7,7 +7,7 @@ final class nna extends dqa implements oo {
     static String field_D;
     private os field_B;
     static int field_w;
-    static llb field_v;
+    static Widget field_v;
     static djb field_C;
     private BitmapFont field_H;
     private String field_x;

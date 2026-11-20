@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetReloadBarHeight extends ConsoleCommand {
-    static cna[][] field_q;
+    static IconTextWidget[][] field_q;
     static String field_p;
     static String field_o;
 
@@ -10,11 +10,11 @@ final class SetReloadBarHeight extends ConsoleCommand {
         field_p = null;
         field_o = null;
         if (param0) {
-          field_q = (cna[][]) null;
+          field_q = (IconTextWidget[][]) null;
           return;
         }
-        field_q = (cna[][]) null;
-        field_q = (cna[][]) null;
+        field_q = (IconTextWidget[][]) null;
+        field_q = (IconTextWidget[][]) null;
     }
 
     SetReloadBarHeight(String param0, Class[] param1, String param2) {

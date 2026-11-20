@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class vva extends bob {
-    static llb field_r;
+    static Widget field_r;
     private int field_s;
     private int field_p;
     static byte[] field_u;

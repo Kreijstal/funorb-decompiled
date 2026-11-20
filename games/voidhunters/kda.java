@@ -231,7 +231,7 @@ final class kda {
             param2 >= 0 &&
             !this.field_p) {
             GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Sending ready packet");
-            var5 = (CarouselEvent) (wc.field_a.create((byte) 77));
+            var5 = (CarouselEvent) (IntrusiveDequeIterator.field_a.create((byte) 77));
             var5.field_e = param1.field_g;
             var5.a(param2, -125);
             this.a(var5, param3, 1000);
@@ -313,7 +313,7 @@ final class kda {
             this.field_f = param1.field_e;
             if (param4) {
               if (param3) {
-                var8 = (CarouselEvent) (wc.field_a.create((byte) 49));
+                var8 = (CarouselEvent) (IntrusiveDequeIterator.field_a.create((byte) 49));
                 param1.copyTo((byte) 75, var8);
                 this.field_i.addLast(-10258, var8);
               } else {
@@ -475,7 +475,7 @@ final class kda {
             return true;
           }
           if (pr.field_d == param4) {
-            var17_ref = (CarouselEvent) (wc.field_a.create((byte) -126));
+            var17_ref = (CarouselEvent) (IntrusiveDequeIterator.field_a.create((byte) -126));
             param1.beginBitRead(-23497);
             var17_ref.readState(param1, false);
             param1.endBitRead((byte) -114);

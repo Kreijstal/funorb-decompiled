@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cna extends llb {
+final class IconTextWidget extends Widget {
     static String field_wb;
-    private llb field_vb;
+    private Widget iconWidget;
     static String field_xb;
-    llb field_yb;
+    Widget textWidget;
     static int[] field_zb;
 
     public static void clearSharedReferences(int param0) {
@@ -20,15 +20,15 @@ final class cna extends llb {
         field_wb = null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this.a(param1, -79, param5, param0, param6);
-        this.a((byte) -98, param3, param4);
+    final void setBoundsAndLayout(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        this.setBounds(param1, -79, param5, param0, param6);
+        this.layoutContents((byte) -98, param3, param4);
         if (param2 >= -114) {
-          this.a(14, -14, 125, -124, -11, -99, -44);
+          this.setBoundsAndLayout(14, -14, 125, -124, -11, -99, -44);
         }
     }
 
-    cna(long param0, llb param1, llb param2, llb param3, Sprite param4, String param5) {
+    IconTextWidget(long param0, Widget param1, Widget param2, Widget param3, Sprite param4, String param5) {
         super(param0, param1);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -45,16 +45,16 @@ final class cna extends llb {
         RuntimeException var8 = null;
         try {
           if (param4 != null) {
-            this.field_vb = new llb(0L, param2);
-            this.field_vb.field_tb = param4;
-            this.b(-561, this.field_vb);
+            this.iconWidget = new Widget(0L, param2);
+            this.iconWidget.field_tb = param4;
+            this.addChild(-561, this.iconWidget);
           }
           if (param5 != null) {
-            this.field_yb = new llb(0L, param3, param5);
-            this.b(-561, this.field_yb);
-            this.g(109);
+            this.textWidget = new Widget(0L, param3, param5);
+            this.addChild(-561, this.textWidget);
+            this.inheritInteractionStateInDescendants(109);
           } else {
-            this.g(109);
+            this.inheritInteractionStateInDescendants(109);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -95,23 +95,23 @@ final class cna extends llb {
         }
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int measurePreferredWidth(int param0, int param1, int param2) {
         int var5 = 0;
         int var4 = -param0;
-        if (this.field_vb != null) {
-          var4 = this.field_vb.e(58);
+        if (this.iconWidget != null) {
+          var4 = this.iconWidget.getPreferredWidth(58);
         }
         if (param2 < -52) {
           var5 = -param0;
-          if (null != this.field_yb) {
-            var5 = this.field_yb.e(17);
+          if (null != this.textWidget) {
+            var5 = this.textWidget.getPreferredWidth(17);
           }
           return var5 + (param0 + param1 + var4) + param1;
         }
         return 23;
     }
 
-    private final void a(byte param0, int param1, int param2) {
+    private final void layoutContents(byte param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -119,37 +119,37 @@ final class cna extends llb {
         var5 = 60 % ((param0 + 53) / 39);
         var4 = -param2;
         var6 = -param2;
-        if (null != this.field_vb) {
-          var4 = this.field_vb.e(6);
+        if (null != this.iconWidget) {
+          var4 = this.iconWidget.getPreferredWidth(6);
         }
-        if (this.field_yb != null) {
-          var6 = this.field_yb.a(-param1 - param2 + (-var4 - param1 + this.field_hb), (byte) 114);
+        if (this.textWidget != null) {
+          var6 = this.textWidget.getContentWidth(-param1 - param2 + (-var4 - param1 + this.width), (byte) 114);
         }
         var7 = var6 + (param1 + var4) + (param2 + param1);
-        if (this.field_hb < var7) {
-          var6 = var6 + (this.field_hb - var7);
-          var7 = this.field_hb;
+        if (this.width < var7) {
+          var6 = var6 + (this.width - var7);
+          var7 = this.width;
         }
         if (this.field_F == 1) {
-          param1 = param1 + (this.field_hb - var7) / 2;
+          param1 = param1 + (this.width - var7) / 2;
         }
         if (2 == this.field_F) {
-          param1 = param1 + (this.field_hb - var7);
+          param1 = param1 + (this.width - var7);
         }
-        if (null != this.field_vb) {
-          this.field_vb.a(param1, 126, var4, 0, this.field_G);
-          this.field_vb.field_B = this.field_B;
+        if (null != this.iconWidget) {
+          this.iconWidget.setBounds(param1, 126, var4, 0, this.height);
+          this.iconWidget.field_B = this.field_B;
         }
-        if (this.field_yb == null) {
+        if (this.textWidget == null) {
           return;
         }
-        this.field_yb.a(param2 + var4 + param1, 34, var6, 0, this.field_G);
-        if (null != this.field_vb) {
-          this.field_yb.field_F = 0;
+        this.textWidget.setBounds(param2 + var4 + param1, 34, var6, 0, this.height);
+        if (null != this.iconWidget) {
+          this.textWidget.field_F = 0;
         } else {
-          this.field_yb.field_F = this.field_F;
+          this.textWidget.field_F = this.field_F;
         }
-        this.field_yb.field_B = this.field_B;
+        this.textWidget.field_B = this.field_B;
     }
 
     static {

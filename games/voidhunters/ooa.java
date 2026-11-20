@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ooa extends llb {
-    private llb[] field_yb;
-    private llb[] field_vb;
+final class ooa extends Widget {
+    private Widget[] field_yb;
+    private Widget[] field_vb;
     int field_Ab;
-    private llb field_wb;
+    private Widget field_wb;
     static String field_zb;
     static int field_xb;
 
-    ooa(long param0, llb param1, String[] param2, llb param3, llb[] param4, int param5) {
-        super(param0, (llb) null);
+    ooa(long param0, Widget param1, String[] param2, Widget param3, Widget[] param4, int param5) {
+        super(param0, (Widget) null);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -23,24 +23,24 @@ final class ooa extends llb {
         RuntimeException decompiledCaughtException = null;
         int var8_int = 0;
         RuntimeException var8 = null;
-        llb var9 = null;
+        Widget var9 = null;
         int var11 = 0;
         int var8_intLifetime1;
         try {
-          this.field_yb = new llb[param2.length];
-          this.field_wb = new llb(0L, param3);
+          this.field_yb = new Widget[param2.length];
+          this.field_wb = new Widget(0L, param3);
           this.field_vb = param4;
           for (var8_int = 0; var8_int < param2.length; var8_int++) {
-            var9 = new llb(0L, param1);
-            var9.field_R = param2[var8_int];
+            var9 = new Widget(0L, param1);
+            var9.text = param2[var8_int];
             this.field_yb[var8_int] = var9;
-            this.b(-561, var9);
+            this.addChild(-561, var9);
           }
-          this.b(-561, this.field_wb);
+          this.addChild(-561, this.field_wb);
           var11 = 0;
           var8_intLifetime1 = var11;
           while (param4.length > var11) {
-            this.field_wb.b(-561, param4[var11]);
+            this.field_wb.addChild(-561, param4[var11]);
             var11++;
           }
           this.field_Ab = param5;
@@ -79,10 +79,10 @@ final class ooa extends llb {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this.field_hb = param1;
-        this.field_K = param0;
-        this.field_G = param5;
-        this.field_L = param6;
+        this.width = param1;
+        this.y = param0;
+        this.height = param5;
+        this.x = param6;
         this.a(param3, (byte) -107, param2);
         int var8 = -32 % ((param4 - 15) / 35);
     }
@@ -95,7 +95,7 @@ final class ooa extends llb {
     }
 
     private final void a(int param0, byte param1, int param2) {
-        llb dupTemp$0 = null;
+        Widget dupTemp$0 = null;
         int var4;
         int var5;
         int var6;
@@ -104,21 +104,21 @@ final class ooa extends llb {
         int var4Lifetime1;
         var7 = VoidHunters.field_G;
         for (var4 = 0; var4 < this.field_yb.length; var4++) {
-          var5 = this.field_hb * var4 / this.field_yb.length;
-          var6 = (var4 + 1) * this.field_hb / this.field_yb.length;
-          this.field_yb[var4].field_L = var5;
-          this.field_yb[var4].field_K = 0;
-          this.field_yb[var4].field_hb = -var5 + var6;
-          this.field_yb[var4].field_G = param2;
+          var5 = this.width * var4 / this.field_yb.length;
+          var6 = (var4 + 1) * this.width / this.field_yb.length;
+          this.field_yb[var4].x = var5;
+          this.field_yb[var4].y = 0;
+          this.field_yb[var4].width = -var5 + var6;
+          this.field_yb[var4].height = param2;
         }
-        this.field_wb.a(0, -65, this.field_hb, param2, this.field_G - param2);
+        this.field_wb.setBounds(0, -65, this.width, param2, this.height - param2);
         var8 = 0;
         var4Lifetime1 = var8;
         while (this.field_vb.length > var8) {
-          this.field_vb[var8].a(param0, -48, -(param0 * 2) + this.field_wb.field_hb, param0, -(2 * param0) + this.field_wb.field_G);
+          this.field_vb[var8].setBounds(param0, -48, -(param0 * 2) + this.field_wb.width, param0, -(2 * param0) + this.field_wb.height);
           if (~var8 != ~this.field_Ab) {
             dupTemp$0 = this.field_vb[var8];
-            dupTemp$0.field_L = dupTemp$0.field_L + 10000;
+            dupTemp$0.x = dupTemp$0.x + 10000;
           }
           var8++;
         }
@@ -207,23 +207,23 @@ final class ooa extends llb {
 
     final void i(int param0) {
         int var2 = 0;
-        llb dupTemp$0 = null;
-        llb dupTemp$1 = null;
+        Widget dupTemp$0 = null;
+        Widget dupTemp$1 = null;
         int var3;
         var3 = VoidHunters.field_G;
         if (param0 != 10000) {
-          this.field_vb = (llb[]) null;
+          this.field_vb = (Widget[]) null;
         }
         for (var2 = 0; var2 < this.field_yb.length; var2++) {
           if (var2 != this.field_Ab &&
             this.field_yb[var2].field_o != 0) {
             this.field_yb[this.field_Ab].field_J = false;
             dupTemp$0 = this.field_vb[this.field_Ab];
-            dupTemp$0.field_L = dupTemp$0.field_L + 10000;
+            dupTemp$0.x = dupTemp$0.x + 10000;
             this.field_Ab = var2;
             this.field_yb[var2].field_J = true;
             dupTemp$1 = this.field_vb[var2];
-            dupTemp$1.field_L = dupTemp$1.field_L - 10000;
+            dupTemp$1.x = dupTemp$1.x - 10000;
           }
         }
     }

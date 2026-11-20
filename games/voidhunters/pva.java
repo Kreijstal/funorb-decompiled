@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pva extends uj {
-    static llb field_d;
+    static Widget field_d;
     static String field_e;
     static String field_f;
     static int field_g;
@@ -24,7 +24,7 @@ final class pva extends uj {
 
     final int b(byte param0) {
         if (param0 <= 79) {
-          field_d = (llb) null;
+          field_d = (Widget) null;
           return 109;
         }
         return 109;
@@ -41,7 +41,7 @@ final class pva extends uj {
     public static void clearSharedReferences(int param0) {
         field_f = null;
         if (param0 != 109) {
-          field_d = (llb) null;
+          field_d = (Widget) null;
           field_e = null;
           field_d = null;
           return;

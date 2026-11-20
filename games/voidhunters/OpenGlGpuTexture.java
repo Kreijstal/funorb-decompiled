@@ -335,7 +335,7 @@ abstract class OpenGlGpuTexture implements GpuTexture {
         dp.field_a = null;
         GetMachineGunAimarc.field_q = null;
         if (lsa.field_e != null) {
-          fgb.field_l = ServerTick.field_d;
+          WidgetNode.field_l = ServerTick.field_d;
           bpa.field_c = lsa.field_e;
           lsa.field_e = null;
           ServerTick.field_d = null;

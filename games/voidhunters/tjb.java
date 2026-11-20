@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tjb extends llb {
+final class tjb extends Widget {
     private int field_Jb;
     static String field_Cb;
     static int field_wb;
@@ -15,7 +15,7 @@ final class tjb extends llb {
     private tjb[] field_Db;
     private int field_Fb;
     private tjb field_xb;
-    private cna[] field_Bb;
+    private IconTextWidget[] field_Bb;
     private int[] field_Ab;
 
     final boolean a(int param0, int param1, int param2) {
@@ -112,7 +112,7 @@ final class tjb extends llb {
         }
     }
 
-    tjb(long param0, llb param1, llb param2, llb param3, tjb[] param4, int[] param5, String[] param6, char[] param7) {
+    tjb(long param0, Widget param1, Widget param2, Widget param3, tjb[] param4, int[] param5, String[] param6, char[] param7) {
         super(param0, param1);
         int var13 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -144,11 +144,11 @@ final class tjb extends llb {
           this.field_Ab = param5;
           this.field_Db = param4;
           this.field_Gb = this.field_Ab.length;
-          var17 = param3.field_eb;
+          var17 = param3.font;
           var18 = var17;
           this.field_Ib = var18.maxDescent + (var18.maxAscent + 2);
           this.field_Jb = 0;
-          this.field_Bb = new cna[this.field_Gb];
+          this.field_Bb = new IconTextWidget[this.field_Gb];
           this.field_zb = this.field_Ib * this.field_Gb;
           var11 = "<col=999999>";
           var12 = "</col>";
@@ -161,8 +161,8 @@ final class tjb extends llb {
               this.field_Ab[var13] == -1) {
               var14 = GetTeamSelectionSpeedup.field_o;
             }
-            this.field_Bb[var13] = new cna(0L, param2, (llb) null, param3, (Sprite) (var14), param6[var13]);
-            this.b(-561, this.field_Bb[var13]);
+            this.field_Bb[var13] = new IconTextWidget(0L, param2, (Widget) null, param3, (Sprite) (var14), param6[var13]);
+            this.addChild(-561, this.field_Bb[var13]);
             var15 = var17.getStringWidth(param6[var13]);
             if (this.field_Jb < var15) {
               this.field_Jb = var15;
@@ -233,7 +233,7 @@ final class tjb extends llb {
         for (var5 = 0; var5 < this.field_Gb; var5++) {
           var4 = this.field_Fb * this.field_Fb;
           var3 = var5 * this.field_Ib;
-          this.field_Bb[var5].field_K = ((this.field_Hb - this.field_u) * var4 + (-var4 + 144) * var3) / 144;
+          this.field_Bb[var5].y = ((this.field_Hb - this.screenY) * var4 + (-var4 + 144) * var3) / 144;
         }
     }
 
@@ -253,10 +253,10 @@ final class tjb extends llb {
 
     final void j(int param0) {
         int var3 = 0;
-        cna var4 = null;
+        IconTextWidget var4 = null;
         int var5 = VoidHunters.field_G;
-        cna[] var6 = this.field_Bb;
-        cna[] var2 = var6;
+        IconTextWidget[] var6 = this.field_Bb;
+        IconTextWidget[] var2 = var6;
         if (param0 != 16384) {
           this.field_zb = -32;
         }
@@ -286,9 +286,9 @@ final class tjb extends llb {
     final void a(int param0, int param1, byte param2) {
         int var5 = 0;
         int var4_int;
-        cna var6;
+        IconTextWidget var6;
         int var7;
-        cna stackIn_7_0 = null;
+        IconTextWidget stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         tjb var4;
         tjb var8;
@@ -317,9 +317,9 @@ final class tjb extends llb {
 
     final boolean h(int param0) {
         int var2;
-        cna[] var3;
+        IconTextWidget[] var3;
         int var4;
-        cna var5;
+        IconTextWidget var5;
         int var6;
         int stackIn_5_0 = 0;
         int stackIn_5_1 = 0;
@@ -363,20 +363,20 @@ final class tjb extends llb {
         if (param0 != 12) {
           return;
         }
-        this.a(param2, param0 - 41, this.field_Eb, param1 - this.field_zb, this.field_zb);
+        this.setBounds(param2, param0 - 41, this.field_Eb, param1 - this.field_zb, this.field_zb);
         if (param4 != this.field_Hb) {
           this.field_Hb = param4;
           this.a((byte) 116, this.field_Fb);
         }
         for (var7 = 0; var7 < this.field_Gb; var7++) {
-          this.field_Bb[var7].a(this.field_Bb[var7].field_K, 0, -127, param3, param5, this.field_Eb, this.field_Ib);
+          this.field_Bb[var7].setBoundsAndLayout(this.field_Bb[var7].y, 0, -127, param3, param5, this.field_Eb, this.field_Ib);
         }
         if (this.field_vb != -1 &&
           this.field_Db[this.field_vb] != null) {
           var7Lifetime1 = this.field_Db[this.field_vb].field_Gb;
-          for (var8 = this.field_K + (this.field_vb + var7Lifetime1) * this.field_Ib; param1 < var8; var8 = var8 - this.field_Ib) {
+          for (var8 = this.y + (this.field_vb + var7Lifetime1) * this.field_Ib; param1 < var8; var8 = var8 - this.field_Ib) {
           }
-          this.field_Db[this.field_vb].a(12, var8, this.field_Eb + param2, param3, this.field_Bb[this.field_vb].field_u, param5);
+          this.field_Db[this.field_vb].a(12, var8, this.field_Eb + param2, param3, this.field_Bb[this.field_vb].screenY, param5);
           return;
         }
         return;

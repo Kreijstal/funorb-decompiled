@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetPointDefenceLaserProjectileDamage extends ConsoleCommand {
-    static llb field_o;
+    static Widget field_o;
 
     GetPointDefenceLaserProjectileDamage(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -11,7 +11,7 @@ final class GetPointDefenceLaserProjectileDamage extends ConsoleCommand {
     public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 >= -15) {
-          field_o = (llb) null;
+          field_o = (Widget) null;
         }
     }
 

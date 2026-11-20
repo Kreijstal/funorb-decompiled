@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetToggledScoreboard extends ConsoleCommand {
-    static llb field_o;
+    static Widget field_o;
 
     SetToggledScoreboard(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -40,7 +40,7 @@ final class SetToggledScoreboard extends ConsoleCommand {
 
     public static void clearSharedReferences(byte param0) {
         if (param0 < 91) {
-          field_o = (llb) null;
+          field_o = (Widget) null;
         }
         field_o = null;
     }

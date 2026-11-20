@@ -322,7 +322,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetLaserRandomness.field_q = param1[114];
           wja.field_b = param1[102];
           GetBombletSprayReload.field_s = param1[35];
-          r.field_k = param1[89];
+          RenderResourceNode.field_k = param1[89];
           GetMissileLauncherRandomness.field_p = param1[127];
           GrappleLauncherBehaviour.field_d = param1[39];
           SetArmageddonWarning.field_o = param1[54];

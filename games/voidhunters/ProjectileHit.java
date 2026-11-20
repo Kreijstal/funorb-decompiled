@@ -3,7 +3,7 @@
  */
 final class ProjectileHit {
     private int impactX;
-    static llb field_d;
+    static Widget field_d;
     private Projectile projectile;
     private ShipComponent component;
     private int impactY;
@@ -36,7 +36,7 @@ final class ProjectileHit {
 
     public static void clearSharedReferences(boolean param0) {
         if (param0) {
-          field_d = (llb) null;
+          field_d = (Widget) null;
         }
         field_d = null;
     }

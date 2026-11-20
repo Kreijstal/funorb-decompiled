@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetOndamageParticleLife extends ConsoleCommand {
-    static llb field_o;
+    static Widget field_o;
 
     final static int[] a(ShipComponent param0, int param1) {
         int incrementValue$1 = 0;
@@ -29,7 +29,7 @@ final class SetOndamageParticleLife extends ConsoleCommand {
           var4 = new int[var2.size(3)];
           var5 = 0;
           if (param1 >= -109) {
-            field_o = (llb) null;
+            field_o = (Widget) null;
           }
           var6 = (IntegerNode) (var2.first(0));
           while (var6 != null) {
@@ -57,7 +57,7 @@ final class SetOndamageParticleLife extends ConsoleCommand {
     public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != -1) {
-          field_o = (llb) null;
+          field_o = (Widget) null;
         }
     }
 
@@ -75,7 +75,7 @@ final class SetOndamageParticleLife extends ConsoleCommand {
         try {
           sva.field_m = arguments[0].intValue(72);
           if (obfuscationGuard > -119) {
-            field_o = (llb) null;
+            field_o = (Widget) null;
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

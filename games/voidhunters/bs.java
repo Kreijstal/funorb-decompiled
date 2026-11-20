@@ -7,12 +7,12 @@ final class bs {
     static int[] field_b;
     static int field_c;
 
-    bs(String param0, llb param1) {
+    bs(String param0, Widget param1) {
         String[] var3 = null;
-        llb[] var4 = null;
+        Widget[] var4 = null;
         try {
           var3 = new String[]{param0, GetBloomCoefficientPercentage.field_q, RequestNewestBlackboxRecording.field_o};
-          var4 = new llb[]{param1, PlayerJoinFactory.field_c, (llb) ((Object) vra.field_b)};
+          var4 = new Widget[]{param1, PlayerJoinFactory.field_c, (Widget) ((Object) vra.field_b)};
           this.field_a = new ooa(0L, vhb.field_c, var3, EscapePodFactory.field_a, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -35,10 +35,10 @@ final class bs {
         int var7 = 5;
         if (param1 <= -71) {
           this.field_a.a(param3, param4, var6, var7, 60, param2, param0);
-          OpenGlCubeTexture.field_h.a(0, 120, PlayerJoinFactory.field_c.field_hb, 0, nna.field_w);
-          SetCountermeasureLauncherRandomness.field_o.a(0, -25, PlayerJoinFactory.field_c.field_hb - ResourceNode.field_a - 84, 2 + nna.field_w, 18);
-          GameKeyHandler.field_b.a(-2 + (PlayerJoinFactory.field_c.field_hb - ResourceNode.field_a) - 80, 120, ResourceNode.field_a + 82, nna.field_w + 2, 18);
-          re.field_n.a(0, nna.field_w + 22, 20, ResourceNode.field_a, -2 + PlayerJoinFactory.field_c.field_G - (nna.field_w + 20), PlayerJoinFactory.field_c.field_hb, 0, 2);
+          OpenGlCubeTexture.field_h.setBounds(0, 120, PlayerJoinFactory.field_c.width, 0, nna.field_w);
+          SetCountermeasureLauncherRandomness.field_o.setBounds(0, -25, PlayerJoinFactory.field_c.width - ResourceNode.field_a - 84, 2 + nna.field_w, 18);
+          GameKeyHandler.field_b.setBounds(-2 + (PlayerJoinFactory.field_c.width - ResourceNode.field_a) - 80, 120, ResourceNode.field_a + 82, nna.field_w + 2, 18);
+          re.field_n.a(0, nna.field_w + 22, 20, ResourceNode.field_a, -2 + PlayerJoinFactory.field_c.height - (nna.field_w + 20), PlayerJoinFactory.field_c.width, 0, 2);
           vra.field_b.a(2, 20, ResourceNode.field_a, (byte) 63);
           return;
         }

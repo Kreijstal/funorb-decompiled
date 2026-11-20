@@ -4,7 +4,7 @@
 final class hnb extends iw implements oo {
     static Sprite[] field_U;
     private boolean field_M;
-    static llb field_X;
+    static Widget field_X;
     private htb field_L;
     private boolean field_K;
     private htb field_R;

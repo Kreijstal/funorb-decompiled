@@ -21,8 +21,8 @@ final class MovingObjectFactory implements GameStateFactory {
         return (SerializableGameState[]) ((Object) new MovingObject[param1]);
     }
 
-    final static void a(byte param0, mm param1) {
-        mm var2 = null;
+    final static void insertSortedLobbyGame(byte param0, LobbyGameEntry param1) {
+        LobbyGameEntry var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -32,13 +32,13 @@ final class MovingObjectFactory implements GameStateFactory {
         var3 = VoidHunters.field_G;
         try {
           param1.unlink(-3846);
-          var2 = (mm) (kja.field_E.first(0));
+          var2 = (LobbyGameEntry) (kja.field_E.first(0));
           if (param0 < 99) {
             return;
           }
           while (var2 != null) {
-            if (var2.a(param1, -128)) {
-              var2 = (mm) (kja.field_E.next((byte) 28));
+            if (var2.comesBefore(param1, -128)) {
+              var2 = (LobbyGameEntry) (kja.field_E.next((byte) 28));
               continue;
             }
             break;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class CarouselPlayerInfo implements DiffableState {
-    boolean field_a;
+    boolean connected;
 
     public boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
@@ -18,8 +18,8 @@ class CarouselPlayerInfo implements DiffableState {
         try {
           var3_int = -73 % ((param0 - 22) / 59);
           var4 = (CarouselPlayerInfo) (param1);
-          stackIn_3_0 = (this.field_a) ? 0 : 1;
-          if (var4.field_a) {
+          stackIn_3_0 = (this.connected) ? 0 : 1;
+          if (var4.connected) {
             stackIn_6_1 = 0;
           } else {
             stackIn_6_1 = 1;
@@ -40,11 +40,11 @@ class CarouselPlayerInfo implements DiffableState {
         }
     }
 
-    void a(boolean param0, CarouselSlot param1, int param2, int param3) {
+    void onLeave(boolean param0, CarouselSlot param1, int param2, int param3) {
         try {
           if (!param0) {
             CarouselSlot var6 = (CarouselSlot) null;
-            this.a(true, (CarouselSlot) null, -49, 117);
+            this.onLeave(true, (CarouselSlot) null, -49, 117);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bha.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -63,19 +63,19 @@ class CarouselPlayerInfo implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -19) {
-            this.field_a = true;
+            this.connected = true;
           }
           var3 = (CarouselPlayerInfo) (other);
           var4 = 0;
-          stackIn_4_0 = this.field_a;
-          if (var3.field_a) {
+          stackIn_4_0 = this.connected;
+          if (var3.connected) {
             stackIn_5_1 = 0;
           } else {
             stackIn_5_1 = 1;
           }
           if ((stackIn_4_0 ? 1 : 0) == stackIn_5_1) {
             var4 = 1;
-            GetSniperCannonAimarc.a(-6940, "boolean connected has changed. before=" + var3.field_a + ", now=" + this.field_a);
+            GetSniperCannonAimarc.a(-6940, "boolean connected has changed. before=" + var3.connected + ", now=" + this.connected);
           }
           if (var4 == 0) {
             return;
@@ -98,16 +98,16 @@ class CarouselPlayerInfo implements DiffableState {
 
     public void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.field_a = kv.readBoolean(param1, param0);
+          this.connected = kv.readBoolean(param1, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bha.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    void a(CarouselSlot param0, int param1, int param2, int param3) {
+    void onJoin(CarouselSlot param0, int param1, int param2, int param3) {
         try {
           if (param2 != -24354) {
-            this.field_a = true;
+            this.connected = true;
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bha.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
@@ -120,7 +120,7 @@ class CarouselPlayerInfo implements DiffableState {
             IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
             this.readState((IsaacPacketBuffer) null, true);
           }
-          vq.writeBoolean(param0, -82, this.field_a);
+          vq.writeBoolean(param0, -82, this.connected);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bha.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -135,7 +135,7 @@ class CarouselPlayerInfo implements DiffableState {
         try {
           var5 = (CarouselPlayerInfo) (param1);
           var6 = var5;
-          var6.field_a = this.field_a;
+          var6.connected = this.connected;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bha.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

@@ -83,11 +83,11 @@ final class SetExplosionProjectileDamage extends ConsoleCommand {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = hp.field_b.field_R;
+          var4 = hp.field_b.text;
           var3 = var4;
-          hp.field_b.field_R = param0;
-          qw.field_l.b(param2, 80);
-          hp.field_b.field_R = var4;
+          hp.field_b.text = param0;
+          qw.field_l.draw(param2, 80);
+          hp.field_b.text = var4;
           if (param1 == 0) {
             return;
           }

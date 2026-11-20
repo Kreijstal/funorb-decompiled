@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetMissionDebrisDefaultProbability extends ConsoleCommand {
-    static llb field_o;
+    static Widget field_o;
 
     public static void clearSharedReferences(boolean param0) {
         field_o = null;
         if (!param0) {
-          field_o = (llb) null;
+          field_o = (Widget) null;
         }
     }
 

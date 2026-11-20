@@ -79,7 +79,7 @@ final class mr extends iw implements oo {
           } else {
             if (param1 == AdminMessageFactory.field_a) {
               this.field_f = this.field_f + 10;
-              var3 = r.field_m;
+              var3 = RenderResourceNode.field_m;
               if (Particle.c((byte) 109)) {
                 var3 = WorldFactory.field_b;
                 this.field_f = this.field_f + 20;

@@ -17,20 +17,20 @@ final class ComponentCollision extends IntrusiveNode {
     }
 
     final static void a(int param0, byte param1, boolean param2, boolean param3, boolean param4) {
-        llb stackIn_20_0 = null;
+        Widget stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
         int stackIn_38_0 = 0;
-        llb stackIn_165_0 = null;
+        Widget stackIn_165_0 = null;
         boolean stackIn_166_1 = false;
-        llb stackIn_170_0 = null;
+        Widget stackIn_170_0 = null;
         boolean stackIn_171_1 = false;
-        llb stackIn_175_0 = null;
+        Widget stackIn_175_0 = null;
         boolean stackIn_176_1 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        llb var6 = null;
-        llb var7 = null;
-        llb var8 = null;
+        Widget var6 = null;
+        Widget var7 = null;
+        Widget var8 = null;
         int var9 = 0;
         String var9_ref_String = null;
         String var10_ref_String = null;
@@ -51,11 +51,11 @@ final class ComponentCollision extends IntrusiveNode {
         jk var18_ref = null;
         int var18_int = 0;
         int var19 = 0;
-        llb var21 = null;
+        Widget var21 = null;
         int[] var22 = null;
         String var23 = null;
         int[] var24 = null;
-        llb var25 = null;
+        Widget var25 = null;
         int var11Lifetime1;
         int var12Lifetime1;
         int var12Lifetime2;
@@ -73,27 +73,27 @@ final class ComponentCollision extends IntrusiveNode {
           lkb.a(SetExplosionPushMultiplier.field_p, (byte) -128);
           if (SetSpinningBladeSpindamageMultiplier.field_o != null) {
             boolean decompiledFrameRemainder0 = true;
-            GetShipToShipRamDamage.field_q.field_y = true;
-            vw.field_a.field_G = 0;
+            GetShipToShipRamDamage.field_q.enabled = true;
+            vw.field_a.height = 0;
             var21 = vw.field_a;
             var25 = var21;
-            var25.field_hb = 0;
+            var25.width = 0;
             var6 = ObjectiveMarker.field_b;
-            ObjectiveMarker.field_b.field_G = 0;
-            var6.field_hb = 0;
-            SetAutozoomSpeedDivide.field_p.field_G = 0;
+            ObjectiveMarker.field_b.height = 0;
+            var6.width = 0;
+            SetAutozoomSpeedDivide.field_p.height = 0;
             var7 = SetAutozoomSpeedDivide.field_p;
-            var7.field_hb = 0;
+            var7.width = 0;
             if (nmb.b(119)) {
-              GetWeaponParticleSpeedDownshift.field_q.field_R = GetLaserEnergyUsed.field_p.toUpperCase();
-              var9 = (2 + vva.field_r.field_hb) / 2;
-              vw.field_a.a(0, 116, -2 + var9, vva.field_r.field_G - 40, 40);
+              GetWeaponParticleSpeedDownshift.field_q.text = GetLaserEnergyUsed.field_p.toUpperCase();
+              var9 = (2 + vva.field_r.width) / 2;
+              vw.field_a.setBounds(0, 116, -2 + var9, vva.field_r.height - 40, 40);
               if (SetSpinningBladeSpindamageMultiplier.field_o.field_Fb <= SetSpinningBladeSpindamageMultiplier.field_o.field_zb) {
-                vw.field_a.field_R = SetPhasedEnergyBeamPulsetime.field_q.toUpperCase();
-                vw.field_a.field_y = false;
+                vw.field_a.text = SetPhasedEnergyBeamPulsetime.field_q.toUpperCase();
+                vw.field_a.enabled = false;
               } else {
-                vw.field_a.field_R = ko.field_d.toUpperCase();
-                vw.field_a.field_y = true;
+                vw.field_a.text = ko.field_d.toUpperCase();
+                vw.field_a.enabled = true;
               }
               vw.field_a.field_gb = SetGrapplingHookMaxExtension8Force.field_p.field_gb;
               if (0 < SetLaserRandomness.field_p) {
@@ -106,13 +106,13 @@ final class ComponentCollision extends IntrusiveNode {
                   !GetTorpedoProjectileDamage.field_o) {
                   vw.field_a.field_gb = SetGrapplingHookMaxExtension8Force.field_p.field_mb;
                 }
-                vw.field_a.field_R = vw.field_a.field_R + "<br>" + var10_ref_String;
+                vw.field_a.text = vw.field_a.text + "<br>" + var10_ref_String;
               }
-              ObjectiveMarker.field_b.a(var9, 119, vva.field_r.field_hb - var9, vva.field_r.field_G - 40, 40);
-              ObjectiveMarker.field_b.field_R = GetPhasedEnergyBeamAimspeed.field_o.toUpperCase();
+              ObjectiveMarker.field_b.setBounds(var9, 119, vva.field_r.width - var9, vva.field_r.height - 40, 40);
+              ObjectiveMarker.field_b.text = GetPhasedEnergyBeamAimspeed.field_o.toUpperCase();
               stackIn_20_0 = ObjectiveMarker.field_b;
               stackIn_21_1 = (param2) && (qga.field_a == 0L);
-              stackIn_20_0.field_y = stackIn_21_1;
+              stackIn_20_0.enabled = stackIn_21_1;
               var8 = ObjectiveMarker.field_b;
               var10 = 2;
               if (ncb.field_a != null) {
@@ -237,7 +237,7 @@ final class ComponentCollision extends IntrusiveNode {
                     }
                   }
                   var16Lifetime1Lifetime1 = 0;
-                  var17 = WaterTextures.field_f.field_wb.field_lb;
+                  var17 = WaterTextures.field_f.field_wb.children;
                   var18_ref = (jk) (var17.first(0));
                   scanLoop4: while (true) {
                     if (var18_ref != null) {
@@ -274,7 +274,7 @@ final class ComponentCollision extends IntrusiveNode {
                     var16Lifetime1Lifetime1 = 0;
                   }
                   if ((var16Lifetime1Lifetime1 != 0)) {
-                    ObjectiveMarker.field_b.field_y = false;
+                    ObjectiveMarker.field_b.enabled = false;
                     if (!(!ObjectiveMarker.field_b.field_Q)) {
                       if (0 == GetReverbWidth.field_o.field_a.field_Ab) {
                         NebulaFieldFactory.field_a = kob.field_e;
@@ -287,7 +287,7 @@ final class ComponentCollision extends IntrusiveNode {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                ObjectiveMarker.field_b.field_y = false;
+                ObjectiveMarker.field_b.enabled = false;
                 if (ObjectiveMarker.field_b.field_Q) {
                   var11_ref = null;
                   var12Lifetime2 = 0;
@@ -322,9 +322,9 @@ final class ComponentCollision extends IntrusiveNode {
               }
             } else {
               var9_ref_String = SetSpinningBladeSpindamageMultiplier.field_o.field_Vb;
-              GetWeaponParticleSpeedDownshift.field_q.field_R = SetReverbGain.a(wt.field_b, new String[]{var9_ref_String}, 118).toUpperCase();
-              SetAutozoomSpeedDivide.field_p.a(0, -127, vva.field_r.field_hb, -40 + vva.field_r.field_G, 40);
-              SetAutozoomSpeedDivide.field_p.field_R = SetReverbGain.a(DebugSendable.field_h, new String[]{var9_ref_String}, 79);
+              GetWeaponParticleSpeedDownshift.field_q.text = SetReverbGain.a(wt.field_b, new String[]{var9_ref_String}, 118).toUpperCase();
+              SetAutozoomSpeedDivide.field_p.setBounds(0, -127, vva.field_r.width, -40 + vva.field_r.height, 40);
+              SetAutozoomSpeedDivide.field_p.text = SetReverbGain.a(DebugSendable.field_h, new String[]{var9_ref_String}, 79);
               var8 = SetAutozoomSpeedDivide.field_p;
             }
             if (qga.field_a != 0L) {
@@ -333,26 +333,26 @@ final class ComponentCollision extends IntrusiveNode {
               if (1 > var9) {
                 var9 = 1;
               }
-              var8.field_R = SetReverbGain.a(SetPhasedEnergyBeamEnergyUsed.field_o, new String[]{Integer.toString(var9)}, 79);
+              var8.text = SetReverbGain.a(SetPhasedEnergyBeamEnergyUsed.field_o, new String[]{Integer.toString(var9)}, 79);
             }
-            SetPhasedEnergyBeamPulsetime.field_o.field_R = SetReverbGain.a(GetArmageddonLength.field_o, new String[]{Integer.toString(SetSpinningBladeSpindamageMultiplier.field_o.field_zb), Integer.toString(SetSpinningBladeSpindamageMultiplier.field_o.field_Fb)}, 124);
+            SetPhasedEnergyBeamPulsetime.field_o.text = SetReverbGain.a(GetArmageddonLength.field_o, new String[]{Integer.toString(SetSpinningBladeSpindamageMultiplier.field_o.field_zb), Integer.toString(SetSpinningBladeSpindamageMultiplier.field_o.field_Fb)}, 124);
           }
           if (param1 < 8) {
             ComponentCollision.a(-44, (byte) 40, true, false, true);
           }
           stackIn_165_0 = WaterTextures.field_g;
           stackIn_166_1 = (param3) && (!param4) && (!GetTorpedoProjectileDamage.field_o);
-          ((llb) (Object) stackIn_165_0).a(stackIn_166_1, 1332);
+          ((Widget) (Object) stackIn_165_0).updateInput(stackIn_166_1, 1332);
           stackIn_170_0 = vva.field_r;
           stackIn_171_1 = (param3) && (!param4) && (!GetTorpedoProjectileDamage.field_o);
-          ((llb) (Object) stackIn_170_0).a(stackIn_171_1, 1332);
+          ((Widget) (Object) stackIn_170_0).updateInput(stackIn_171_1, 1332);
           stackIn_175_0 = SetUseCircleFill.field_o;
           stackIn_176_1 = (param3) && (!param4) && (GetTorpedoProjectileDamage.field_o);
-          ((llb) (Object) stackIn_175_0).a(stackIn_176_1, 1332);
+          ((Widget) (Object) stackIn_175_0).updateInput(stackIn_176_1, 1332);
           GetReverbWidth.field_o.field_a.i(10000);
           if (null != SetSpinningBladeSpindamageMultiplier.field_o) {
             if (GetShipToShipRamDamage.field_q.field_o != 0) {
-              sh.a(SetSpinningBladeSpindamageMultiplier.field_o.f((byte) -13), -1, param0);
+              sh.a(SetSpinningBladeSpindamageMultiplier.field_o.getGameId((byte) -13), -1, param0);
             }
             if (vw.field_a.field_o != 0) {
               GetTorpedoProjectileDamage.field_o = true;

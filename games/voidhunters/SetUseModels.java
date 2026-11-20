@@ -4,7 +4,7 @@
 final class SetUseModels extends ConsoleCommand {
     static String field_p;
     static tsa[] field_q;
-    static llb field_o;
+    static Widget field_o;
 
     SetUseModels(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -32,7 +32,7 @@ final class SetUseModels extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(20, 62, arguments[0].intValue(31));
           if (obfuscationGuard >= -119) {
-            field_o = (llb) null;
+            field_o = (Widget) null;
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

@@ -47,17 +47,17 @@ final class SetSelfDestructTimer extends ConsoleCommand {
 
     final static void a(int param0, String param1, int param2, String param3, int param4) {
         try {
-          bpa.field_c.field_hb = bpa.field_c.field_hb + fgb.field_l.field_hb;
+          bpa.field_c.width = bpa.field_c.width + WidgetNode.field_l.width;
           bpa.field_c.field_Y = param4;
-          bpa.field_c.field_R = param1;
+          bpa.field_c.text = param1;
           bpa.field_c.field_s = param3;
-          fgb.field_l.field_L = fgb.field_l.field_L + fgb.field_l.field_hb;
-          fgb.field_l.field_hb = param2;
+          WidgetNode.field_l.x = WidgetNode.field_l.x + WidgetNode.field_l.width;
+          WidgetNode.field_l.width = param2;
           if (param0 != 19204) {
             SetSelfDestructTimer.clearSharedReferences(98);
           }
-          bpa.field_c.field_hb = bpa.field_c.field_hb - fgb.field_l.field_hb;
-          fgb.field_l.field_L = fgb.field_l.field_L - fgb.field_l.field_hb;
+          bpa.field_c.width = bpa.field_c.width - WidgetNode.field_l.width;
+          WidgetNode.field_l.x = WidgetNode.field_l.x - WidgetNode.field_l.width;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "flb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

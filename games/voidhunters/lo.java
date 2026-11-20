@@ -3,7 +3,7 @@
  */
 final class lo {
     static String field_d;
-    static llb field_b;
+    static Widget field_b;
     static wf[] field_a;
     static Sprite[] field_c;
 

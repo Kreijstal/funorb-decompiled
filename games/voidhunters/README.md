@@ -1,11 +1,15 @@
 # Reading Void Hunters
 
-Resolved declarations: 1064/1572 classes and 5033/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 508 opaque classes and 3182 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1074/1572 classes and 5150/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 498 opaque classes and 3065 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
 `GameApplet` drives `initializeGame`, `updateGameTick`, `renderGameFrame`, `shutdownGame` and `clearClientResources`. `NetworkGameClient` parses launch parameters and coordinates shared login/reconnection work; `VoidHunters.handleServerPacket` dispatches the game-specific replies.
+
+`GameSession.updateSession` processes input and advances the current state; `renderSession` draws the world and HUD. Radial-menu geometry, objective markers, player names/chat, scoreboard and debug overlays have separate entrypoints. `MissionState` exposes phase changes, next-round data, custom variables and round results; `MissionBuilder` passes the voted objective through to `World.objectiveType`.
+
+`Widget` owns clipped mouse processing, styled sprite/text drawing, child layout and selection. `IntrusiveDequeIterator` provides independent forward/backward traversal. `NativeSoftwareRenderContext` binds rendering to a thread; `NativeSoftwareSurface` separates canvas resizing and presentation. Native toolkit wrappers name texture uploads, render targets, heaps and context selection.
 
 `SerializableGameState` names `readState`, `writeState`, `copyTo` and `differsFrom` across the simulation. `CompactGameState` exposes its additional packed representation. `PacketBuffer`, `IsaacPacketBuffer` and `IsaacCipher` separate byte codecs, bit codecs and encoded protocol bytes.
 

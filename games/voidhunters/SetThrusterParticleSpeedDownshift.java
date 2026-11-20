@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetThrusterParticleSpeedDownshift extends ConsoleCommand {
-    static mm field_o;
+    static LobbyGameEntry field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -36,7 +36,7 @@ final class SetThrusterParticleSpeedDownshift extends ConsoleCommand {
 
     public static void clearSharedReferences(byte param0) {
         if (param0 != 84) {
-          field_o = (mm) null;
+          field_o = (LobbyGameEntry) null;
           field_o = null;
           return;
         }

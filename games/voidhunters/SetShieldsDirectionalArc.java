@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetShieldsDirectionalArc extends ConsoleCommand {
-    static llb field_o;
+    static Widget field_o;
 
     public static void clearSharedReferences(byte param0) {
         int var1 = 26 / ((43 - param0) / 39);
@@ -19,7 +19,7 @@ final class SetShieldsDirectionalArc extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(212, 62, arguments[0].intValue(110));
           if (obfuscationGuard > -119) {
-            field_o = (llb) null;
+            field_o = (Widget) null;
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

@@ -51,7 +51,7 @@ final class igb {
         RuntimeException decompiledCaughtException = null;
         var5 = VoidHunters.field_G;
         try {
-          if (r.field_l != param1) {
+          if (RenderResourceNode.field_l != param1) {
             for (var3_int = 0; var3_int < 256; var3_int++) {
               var4 = (int)(255.0 * Math.pow((double)var3_int / 255.0, param1));
               stackIn_7_0 = GetBloomCoefficientPercentage.field_o;
@@ -63,7 +63,7 @@ final class igb {
               }
               stackIn_7_0[stackIn_7_1] = stackIn_8_2;
             }
-            r.field_l = param1;
+            RenderResourceNode.field_l = param1;
           }
           if (param0) {
             return;
@@ -77,29 +77,29 @@ final class igb {
         }
     }
 
-    final static void a(llb param0, byte param1) {
-        llb var4 = null;
-        llb var2 = null;
+    final static void a(Widget param0, byte param1) {
+        Widget var4 = null;
+        Widget var2 = null;
         int var3 = VoidHunters.field_G;
-        llb var2Lifetime1;
+        Widget var2Lifetime1;
         try {
-          var4 = (llb) (param0.field_lb.first(0));
+          var4 = (Widget) (param0.children.first(0));
           var2 = var4;
           while (var4 != null) {
-            var4.field_K = 0;
-            var4.field_G = 0;
+            var4.y = 0;
+            var4.height = 0;
             var4.field_db = 0;
             var4.field_E = 0;
-            var4 = (llb) (param0.field_lb.next((byte) 108));
+            var4 = (Widget) (param0.children.next((byte) 108));
             var2Lifetime1 = var4;
           }
-          param0.field_K = 0;
+          param0.y = 0;
           param0.field_db = 0;
           if (param1 >= -22) {
             field_b = (String) null;
           }
           param0.field_E = 0;
-          param0.field_G = 0;
+          param0.height = 0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "igb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

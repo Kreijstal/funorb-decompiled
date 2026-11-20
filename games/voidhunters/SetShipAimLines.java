@@ -6,19 +6,19 @@ final class SetShipAimLines extends ConsoleCommand {
     static String[][] field_o;
     static int field_q;
 
-    final static void a(int param0, mm param1, boolean param2, PacketBuffer param3) {
+    final static void a(int param0, LobbyGameEntry param1, boolean param2, PacketBuffer param3) {
         int var9 = 0;
-        mm stackIn_5_0 = null;
+        LobbyGameEntry stackIn_5_0 = null;
         boolean stackIn_6_1 = false;
-        mm stackIn_8_0 = null;
+        LobbyGameEntry stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
-        mm stackIn_11_0 = null;
+        LobbyGameEntry stackIn_11_0 = null;
         int stackIn_12_1 = 0;
-        mm stackIn_15_0 = null;
+        LobbyGameEntry stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
-        mm stackIn_18_0 = null;
+        LobbyGameEntry stackIn_18_0 = null;
         boolean stackIn_19_1 = false;
-        mm stackIn_21_0 = null;
+        LobbyGameEntry stackIn_21_0 = null;
         boolean stackIn_22_1 = false;
         int stackIn_25_0 = 0;
         int stackIn_28_0 = 0;
@@ -43,26 +43,26 @@ final class SetShipAimLines extends ConsoleCommand {
           param1.field_Fb = param3.readUnsignedByte((byte) -109);
           param1.field_Cb = param3.readUnsignedByte((byte) -120);
           var4_int = param3.readUnsignedByte((byte) -113);
-          stackIn_5_0 = (mm) (param1);
+          stackIn_5_0 = (LobbyGameEntry) (param1);
           stackIn_6_1 = ((var4_int & 128) != 0);
           stackIn_5_0.field_Xb = stackIn_6_1;
-          stackIn_8_0 = (mm) (param1);
+          stackIn_8_0 = (LobbyGameEntry) (param1);
           stackIn_9_1 = (0 != (var4_int & 8));
           stackIn_8_0.field_Gb = stackIn_9_1;
-          stackIn_11_0 = (mm) (param1);
+          stackIn_11_0 = (LobbyGameEntry) (param1);
           if ((var4_int & 16) == 0) {
             stackIn_12_1 = 1;
           } else {
             stackIn_12_1 = 2;
           }
           stackIn_11_0.field_Bb = stackIn_12_1;
-          stackIn_15_0 = (mm) (param1);
+          stackIn_15_0 = (LobbyGameEntry) (param1);
           stackIn_16_1 = (param1.field_Xb) && (param1.field_zb < param1.field_Fb);
           stackIn_15_0.field_cc = stackIn_16_1;
-          stackIn_18_0 = (mm) (param1);
+          stackIn_18_0 = (LobbyGameEntry) (param1);
           stackIn_19_1 = ((64 & var4_int) != 0);
           stackIn_18_0.field_fc = stackIn_19_1;
-          stackIn_21_0 = (mm) (param1);
+          stackIn_21_0 = (LobbyGameEntry) (param1);
           stackIn_22_1 = ((var4_int & 32) != 0);
           stackIn_21_0.field_xb = stackIn_22_1;
           stackIn_25_0 = ((4 & var4_int) == 0) ? 0 : 1;

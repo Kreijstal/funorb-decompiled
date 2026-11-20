@@ -47,7 +47,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
         boolean stackIn_44_4 = false;
         int stackIn_47_0 = 0;
         int stackIn_59_0 = 0;
-        llb stackIn_95_0;
+        Widget stackIn_95_0;
         int stackIn_95_1;
         int stackIn_95_2;
         int stackIn_95_3;
@@ -68,11 +68,11 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
         Object var11 = null;
         jk var12 = null;
         int var13 = 0;
-        llb var14 = null;
-        llb var15 = null;
-        llb var16 = null;
-        llb var17 = null;
-        llb var18 = null;
+        Widget var14 = null;
+        Widget var15 = null;
+        Widget var16 = null;
+        Widget var17 = null;
+        Widget var18 = null;
         int var19 = 0;
         String var20 = null;
         int var21 = 0;
@@ -161,56 +161,56 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
           stackIn_44_4 = (param2 == qg.field_a);
           stackIn_47_0 = (!((soa) (Object) stackIn_43_0).a((byte) stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_44_4, param3, 2 * (2 + nna.field_w))) ? 0 : 1;
           var9Lifetime1 = stackIn_47_0;
-          var10 = param2.field_wb.field_lb;
+          var10 = param2.field_wb.children;
           var11 = null;
           var12 = (jk) (var10.first(0));
           while (var12 != null) {
             var13 = 0;
-            if (null == var12.field_lb) {
-              var12.field_Ib = new llb(0L, SetReverbDamp.field_q);
-              var12.b(param1 ^ -562, var12.field_Ib);
-              var12.field_Jb = new llb(0L, SetShieldsDirectionalArc.field_o);
+            if (null == var12.children) {
+              var12.field_Ib = new Widget(0L, SetReverbDamp.field_q);
+              var12.addChild(param1 ^ -562, var12.field_Ib);
+              var12.field_Jb = new Widget(0L, SetShieldsDirectionalArc.field_o);
               if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
-                var12.b(-561, var12.field_Jb);
+                var12.addChild(-561, var12.field_Jb);
               }
               var12.field_Jb.field_F = 2;
-              var12.field_Mb = new llb(0L, qc.field_q);
-              var12.b(-561, var12.field_Mb);
-              var12.g(121);
-              var12.field_wb = new llb(0L, jba.field_h);
-              var12.b(-561, var12.field_wb);
-              var12.field_Nb = new llb(0L, GrappleLauncherBehaviourFactory.field_a);
+              var12.field_Mb = new Widget(0L, qc.field_q);
+              var12.addChild(-561, var12.field_Mb);
+              var12.inheritInteractionStateInDescendants(121);
+              var12.field_wb = new Widget(0L, jba.field_h);
+              var12.addChild(-561, var12.field_wb);
+              var12.field_Nb = new Widget(0L, GrappleLauncherBehaviourFactory.field_a);
               var13 = 1;
-              var12.b(-561, var12.field_Nb);
+              var12.addChild(-561, var12.field_Nb);
             }
-            var12.field_Ib.field_R = null;
+            var12.field_Ib.text = null;
             var14 = var12.field_Ib;
-            var12.field_Ib.field_G = 0;
-            var14.field_hb = 0;
-            var12.field_Jb.field_R = null;
-            var12.field_Jb.field_G = 0;
+            var12.field_Ib.height = 0;
+            var14.width = 0;
+            var12.field_Jb.text = null;
+            var12.field_Jb.height = 0;
             var15 = var12.field_Jb;
-            var12.field_wb.field_R = null;
-            var15.field_hb = 0;
+            var12.field_wb.text = null;
+            var15.width = 0;
             var16 = var12.field_wb;
-            var12.field_wb.field_G = 0;
-            var12.field_Nb.field_R = null;
-            var16.field_hb = 0;
-            var12.field_Nb.field_G = 0;
+            var12.field_wb.height = 0;
+            var12.field_Nb.text = null;
+            var16.width = 0;
+            var12.field_Nb.height = 0;
             var17 = var12.field_Nb;
-            var12.field_Mb.field_R = null;
-            var17.field_hb = 0;
-            var12.field_Mb.field_G = 0;
+            var12.field_Mb.text = null;
+            var17.width = 0;
+            var12.field_Mb.height = 0;
             var18 = var12.field_Mb;
-            var18.field_hb = 0;
-            var12.field_hb = param2.field_wb.field_hb;
+            var18.width = 0;
+            var12.width = param2.field_wb.width;
             var19 = 0;
             var32 = var12.field_xb;
             var21 = 72;
             if (CarouselSlot.field_a == param2) {
               var21 += 42;
             }
-            var33 = BitmapFont.ellipsize(var12.field_Ib.field_eb, var32, var21);
+            var33 = BitmapFont.ellipsize(var12.field_Ib.font, var32, var21);
             var20 = var33;
             stackIn_59_0 = (var33.equals(var12.field_xb)) ? 0 : 1;
             var22 = stackIn_59_0;
@@ -221,7 +221,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                 var20 = "<img=" + (-1 + var12.field_vb) + ">" + var33;
               }
             }
-            var12.field_Ib.field_R = var20;
+            var12.field_Ib.text = var20;
             if (!var12.i(-120)) {
               var23_int = 16764006;
               var24_int = 16777215;
@@ -247,19 +247,19 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               var12.field_wb.field_qb = var24_int;
               if (WaterTextures.field_f == param2) {
                 if (!SetSpinningBladeSpindamageMultiplier.field_o.field_fc) {
-                  var12.field_Nb.field_R = GetBombletSprayRandomness.field_r;
+                  var12.field_Nb.text = GetBombletSprayRandomness.field_r;
                 }
               } else {
                 if (var12.field_Eb) {
-                  var12.field_Ib.field_R = SetReverbGain.a(gob.field_b, new String[]{var20}, 74);
-                  var12.field_Nb.field_R = SetMissileLauncherProjectiles.field_p;
+                  var12.field_Ib.text = SetReverbGain.a(gob.field_b, new String[]{var20}, 74);
+                  var12.field_Nb.text = SetMissileLauncherProjectiles.field_p;
                 } else {
                   if (var12.field_Fb) {
-                    var12.field_Ib.field_R = SetReverbGain.a(TeamShipComponentConditionFactory.field_a, new String[]{var20}, 100);
-                    var12.field_wb.field_R = SetAngularForceDownshift.field_q;
-                    var12.field_Nb.field_R = GetHealthBarWidth.field_o;
+                    var12.field_Ib.text = SetReverbGain.a(TeamShipComponentConditionFactory.field_a, new String[]{var20}, 100);
+                    var12.field_wb.text = SetAngularForceDownshift.field_q;
+                    var12.field_Nb.text = GetHealthBarWidth.field_o;
                   } else {
-                    var12.field_wb.field_R = GetGrappleDebris.field_o;
+                    var12.field_wb.text = GetGrappleDebris.field_o;
                   }
                 }
               }
@@ -267,18 +267,18 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               if (null != SetSpinningBladeSpindamageMultiplier.field_o &&
                 nmb.b(-91) &&
                 BodyInZoneConditionFactory.field_a != var12.field_zb) {
-                if (null != var12.field_wb.field_R) {
-                  var26 = var12.field_wb.e(param1 + 93) + 2 * qs.field_c;
-                  var12.field_wb.a(var25_int, 124, var26, var19, nna.field_w);
+                if (null != var12.field_wb.text) {
+                  var26 = var12.field_wb.getPreferredWidth(param1 + 93) + 2 * qs.field_c;
+                  var12.field_wb.setBounds(var25_int, 124, var26, var19, nna.field_w);
                   var25_int = var25_int + var26;
                 }
-                if (var12.field_Nb.field_R != null) {
+                if (var12.field_Nb.text != null) {
                   if (WaterTextures.field_f != param2) {
-                    var26Lifetime2 = var12.field_Nb.e(101) + qs.field_c * 2;
+                    var26Lifetime2 = var12.field_Nb.getPreferredWidth(101) + qs.field_c * 2;
                   } else {
                     var26Lifetime2 = 40;
                   }
-                  var12.field_Nb.a(var25_int, 127, var26Lifetime2, var19, nna.field_w);
+                  var12.field_Nb.setBounds(var25_int, 127, var26Lifetime2, var19, nna.field_w);
                   var25_int = var25_int + var26Lifetime2;
                 }
               }
@@ -291,9 +291,9 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               } else {
                 stackIn_96_4 = 42;
               }
-              ((llb) (Object) stackIn_95_0).a(stackIn_95_1, stackIn_95_2, stackIn_95_3 + (-stackIn_96_4 + var12.field_hb), var19, nna.field_w);
-              var12.field_Jb.field_R = Integer.toString(var12.field_Gb);
-              var12.field_Jb.a(-40 + var12.field_hb, param1 + 123, 40, var19, nna.field_w);
+              ((Widget) (Object) stackIn_95_0).setBounds(stackIn_95_1, stackIn_95_2, stackIn_95_3 + (-stackIn_96_4 + var12.width), var19, nna.field_w);
+              var12.field_Jb.text = Integer.toString(var12.field_Gb);
+              var12.field_Jb.setBounds(-40 + var12.width, param1 + 123, 40, var19, nna.field_w);
               if (var12.field_Ib.field_O &&
                 var22 != 0) {
                 NebulaFieldFactory.field_a = var12.field_xb;
@@ -316,17 +316,17 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_Mb.field_eb.getLineCount(var23, -qs.field_c + var12.field_hb - qs.field_c);
+              var24_intLifetime1 = var12.field_Mb.font.getLineCount(var23, -qs.field_c + var12.width - qs.field_c);
               var12.field_Mb.field_I = 256 * var12.field_yb / GetMomentOfInertiaPredivideDownshift.field_p;
-              var12.field_Mb.field_R = var23;
-              var12.field_Mb.a(qs.field_c, -102, var12.field_hb - qs.field_c * 2, var19, nna.field_w * var24_intLifetime1);
+              var12.field_Mb.text = var23;
+              var12.field_Mb.setBounds(qs.field_c, -102, var12.width - qs.field_c * 2, var19, nna.field_w * var24_intLifetime1);
               var19 = var19 + nna.field_w * var24_intLifetime1;
             }
             if (var9Lifetime1 == 0) {
-              var12.field_E = var19 - var12.field_G;
+              var12.field_E = var19 - var12.height;
             }
             if (var13 != 0) {
-              param2.field_wb.a((llb) (var11), 2, var12, 101);
+              param2.field_wb.positionBelow((Widget) (var11), 2, var12, 101);
             }
             if (var12.field_o != 0 &&
               !var12.i(61)) {
@@ -379,7 +379,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               } else {
                 if (var5_int != 0 &&
                   !var12.field_Lb) {
-                  var24Lifetime2 = aw.field_Db;
+                  var24Lifetime2 = PopupMenuWidget.field_Db;
                 } else {
                   if (var12.field_Bb >= var7) {
                     if (var6 > var12.field_Gb) {

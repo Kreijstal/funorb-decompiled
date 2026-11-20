@@ -4,7 +4,7 @@
 final class NebulaFieldFactory implements GameStateFactory {
     static int field_b;
     static String field_a;
-    static llb[] field_c;
+    static Widget[] field_c;
 
     public final SerializableGameState create(byte param0) {
         NebulaField stackIn_1_0 = null;

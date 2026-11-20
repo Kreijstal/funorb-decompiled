@@ -86,16 +86,16 @@ final class ocb extends eca {
         }
     }
 
-    final static llb a(int param0, int param1, int param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
-        llb var13 = null;
+    final static Widget a(int param0, int param1, int param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+        Widget var13 = null;
         RuntimeException var13_ref = null;
-        llb stackIn_3_0 = null;
+        Widget stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var13 = new llb(0L, (llb) null);
+          var13 = new Widget(0L, (Widget) null);
           if (param2 != 10204) {
             field_i = (String) null;
           }
@@ -105,7 +105,7 @@ final class ocb extends eca {
           var13.field_nb = SetBurstFireReload.a(-26998, param7, param1);
           var13.field_ub = SetBurstFireReload.a(param2 - 37202, param0, param8);
           var13.field_Y = param10;
-          var13.field_eb = param3;
+          var13.font = param3;
           stackIn_3_0 = var13;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -162,7 +162,7 @@ final class ocb extends eca {
         }
         if (RoundResultFactory.field_a != null) {
           SoftwareRasterizer2D.darkenRectangle(SoftwareRasterizer2D.clipLeft, SoftwareRasterizer2D.clipTop, -SoftwareRasterizer2D.clipLeft + SoftwareRasterizer2D.clipRight, -SoftwareRasterizer2D.clipTop + SoftwareRasterizer2D.clipBottom);
-          RoundResultFactory.field_a.b(param0, 22);
+          RoundResultFactory.field_a.draw(param0, 22);
         }
     }
 

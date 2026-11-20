@@ -397,18 +397,18 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
           if (this.specialOrderSubmessage != null &&
             this.specialOrderSubmessage.vote != null) {
             if (this.specialOrderSubmessage.vote.unvote) {
-              var5.a(this.specialOrderSubmessage.vote.option, (byte) -66);
+              var5.removeVote(this.specialOrderSubmessage.vote.option, (byte) -66);
               return;
             }
             var6 = var9.missionState.getMissionPhase(8);
             if (var6 == 1) {
-              var5.a(13, this.specialOrderSubmessage.vote.option, 30024, 0, AsteroidFieldFactory.field_a);
+              var5.castVote(13, this.specialOrderSubmessage.vote.option, 30024, 0, AsteroidFieldFactory.field_a);
               return;
             }
             if (2 != var6) {
               return;
             }
-            var5.a(30, this.specialOrderSubmessage.vote.option, 30024, 14, GetPhasedEnergyBeamReload.field_q);
+            var5.castVote(30, this.specialOrderSubmessage.vote.option, 30024, 14, GetPhasedEnergyBeamReload.field_q);
             return;
           }
           if (this.specialOrderSubmessage != null &&
@@ -418,7 +418,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
               var11.setTargetBlueprint((byte) 34, this.specialOrderSubmessage.blueprint);
               return;
             }
-            if (!GetToggledScoreboard.a((byte) -128, var9.world.d(false))) {
+            if (!GetToggledScoreboard.a((byte) -128, var9.world.getObjectiveType(false))) {
               return;
             }
             var10 = new Ship();

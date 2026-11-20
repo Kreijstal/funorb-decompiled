@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetTorpedoProjectileDamage extends ConsoleCommand {
-    static llb field_p;
+    static Widget field_p;
     static boolean field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

@@ -38,7 +38,7 @@ final class MissionBuilder implements DiffableState {
           }
           for (var6 = 0; param0.field_c.length > var6; var6++) {
             var7_ref_tfa = param0.a(var6, (byte) 59);
-            if ((var7_ref_tfa.field_a ||
+            if ((var7_ref_tfa.connected ||
               SetMissionResnetResourceTickTime.field_p == 1) && var7_ref_tfa.selectedTeam == param1) {
               var5_int++;
             }
@@ -51,7 +51,7 @@ final class MissionBuilder implements DiffableState {
           var5_intLifetime1 = 0;
           for (var7 = 0; param0.field_c.length > var7; var7++) {
             var8 = param0.a(var7, (byte) 59);
-            if ((var8.field_a ||
+            if ((var8.connected ||
               SetMissionResnetResourceTickTime.field_p == 1) && param1 == var8.selectedTeam) {
               if (var5_intLifetime1 == var6Lifetime1) {
                 stackIn_26_0 = var7;
@@ -351,7 +351,7 @@ final class MissionBuilder implements DiffableState {
         var24 = VoidHunters.field_G;
         try {
           if (param1 <= 58) {
-            this.a((GameSnapshot) null, (Random) null, (World) null, 72);
+            this.buildMissionWorld((GameSnapshot) null, (Random) null, (World) null, 72);
           }
           var4_int = param2.getWidth((byte) -122) / 2;
           var5 = param2.getHeight(1) / 2;
@@ -708,7 +708,7 @@ final class MissionBuilder implements DiffableState {
           if (param1 != 0) {
             stackIn_12_0 = -55;
             stackIn_12_1 = -57;
-            MissionBuilder.a(stackIn_12_0, stackIn_12_1, (mm) null, -12, 46, false, 71, -25);
+            MissionBuilder.a(stackIn_12_0, stackIn_12_1, (LobbyGameEntry) null, -12, 46, false, 71, -25);
           }
           stackIn_14_0 = param0;
           return stackIn_14_0;
@@ -732,8 +732,8 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final void a(GameSnapshot param0, Random param1, World param2, int param3) {
-        int var5_int = param0.missionState.d(6472);
+    private final void buildMissionWorld(GameSnapshot param0, Random param1, World param2, int param3) {
+        int var5_int = param0.missionState.getVotedObjective(6472);
         int var6 = GetDebrisPartitioned.a(var5_int, 9) ? 1 : 0;
         this.a(var5_int, false, param2);
         this.a(true, var5_int, param3 ^ 31938, true, param2, var6 != 0, param1);
@@ -742,7 +742,7 @@ final class MissionBuilder implements DiffableState {
           return;
         }
         try {
-          this.a(var5_int, var6 != 0, param1, param0, 95);
+          this.populateMissionWorld(var5_int, var6 != 0, param1, param0, 95);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bea.JA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -1522,7 +1522,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    final void a(int param0, GameSnapshot param1) {
+    final void generateMission(int param0, GameSnapshot param1) {
         Random var3 = null;
         World var4 = null;
         try {
@@ -1533,7 +1533,7 @@ final class MissionBuilder implements DiffableState {
           var4 = param1.world;
           var4.clearWorld(11184895);
           int var5 = -67 / ((param0 + 45) / 36);
-          this.a(param1, var3, var4, 4581);
+          this.buildMissionWorld(param1, var3, var4, 4581);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bea.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -1960,8 +1960,8 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    final static void a(int param0, int param1, mm param2, int param3, int param4, boolean param5, int param6, int param7) {
-        cna[][] stackIn_38_0 = null;
+    final static void a(int param0, int param1, LobbyGameEntry param2, int param3, int param4, boolean param5, int param6, int param7) {
+        IconTextWidget[][] stackIn_38_0 = null;
         int stackIn_39_1 = 0;
         int stackIn_59_0 = 0;
         int stackIn_74_0 = 0;
@@ -1970,7 +1970,7 @@ final class MissionBuilder implements DiffableState {
         StringBuilder stackIn_105_1 = null;
         String stackIn_106_2 = null;
         RuntimeException decompiledCaughtException = null;
-        cna[] var8 = null;
+        IconTextWidget[] var8 = null;
         int var8_int = 0;
         RuntimeException var8_ref = null;
         int var9 = 0;
@@ -1978,11 +1978,11 @@ final class MissionBuilder implements DiffableState {
         int[] var10_ref_int__ = null;
         int var11 = 0;
         int var12 = 0;
-        cna var13 = null;
+        IconTextWidget var13 = null;
         int var13_int = 0;
         int var14 = 0;
         int var15 = 0;
-        cna[] var16 = null;
+        IconTextWidget[] var16 = null;
         int var10Lifetime1;
         int var13_intLifetime1;
         int var10Lifetime2;
@@ -2125,7 +2125,7 @@ final class MissionBuilder implements DiffableState {
                 if (param5) {
                   if (!var13.field_J) {
                     if (var9 != 0) {
-                      stackIn_83_0 = (var13.field_y) ? 1 : 0;
+                      stackIn_83_0 = (var13.enabled) ? 1 : 0;
                     } else {
                       stackIn_83_0 = 0;
                     }
@@ -2292,7 +2292,7 @@ final class MissionBuilder implements DiffableState {
             }
           }
           if (param2 != 65) {
-            this.a(-89, (GameSnapshot) null);
+            this.generateMission(-89, (GameSnapshot) null);
           }
           stackIn_21_0 = var6;
           return stackIn_21_0;
@@ -2316,7 +2316,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final void a(int param0, boolean param1, Random param2, GameSnapshot param3, int param4) {
+    private final void populateMissionWorld(int param0, boolean param1, Random param2, GameSnapshot param3, int param4) {
         boolean discarded$1 = false;
         World var7 = null;
         RuntimeException stackIn_13_0 = null;
@@ -2328,7 +2328,7 @@ final class MissionBuilder implements DiffableState {
         RuntimeException var6 = null;
         try {
           var7 = param3.world;
-          var7.b(param0, (byte) 23);
+          var7.setObjectiveType(param0, (byte) 23);
           var7.makeNebulaFieldMutable((byte) 80);
           this.a(0, param1, param0, param2, param3);
           this.a(param1, param2, var7, 0);
@@ -2378,7 +2378,7 @@ final class MissionBuilder implements DiffableState {
         MapClearanceArea var8 = null;
         int var9 = VoidHunters.field_G;
         try {
-          var3_int = param0.d(false);
+          var3_int = param0.getObjectiveType(false);
           var4 = GetDebrisPartitioned.a(var3_int, 9) ? 1 : 0;
           var5 = new Random((long)this.seed);
           if (param1 != 0) {
@@ -2862,7 +2862,7 @@ final class MissionBuilder implements DiffableState {
           var15 = 0;
           for (var16_int = 0; param4.field_c.length > var16_int; var16_int++) {
             var23 = param4.field_c[var16_int];
-            if (var23.field_a ||
+            if (var23.connected ||
               1 == SetMissionResnetResourceTickTime.field_p) {
               var15++;
             }

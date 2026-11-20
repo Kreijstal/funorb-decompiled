@@ -24,7 +24,7 @@ final class SetRepairModeRadius extends ConsoleCommand {
     final static void a(int param0) {
         RuntimeException decompiledCaughtException = null;
         jk var1 = null;
-        mm var1_ref = null;
+        LobbyGameEntry var1_ref = null;
         RuntimeException var1_ref2 = null;
         int var2 = 0;
         jk var1Lifetime1;
@@ -43,18 +43,18 @@ final class SetRepairModeRadius extends ConsoleCommand {
             }
             var1 = (jk) (SetMachineGunAimarc.field_q.next((byte) 62));
           }
-          var1_ref = (mm) (kja.field_E.first(0));
+          var1_ref = (LobbyGameEntry) (kja.field_E.first(0));
           while (var1_ref != null) {
             if (var1_ref.field_Db > 0) {
               var1_ref.field_Db = var1_ref.field_Db - 1;
               if (var1_ref.field_Db == 0) {
                 var1_ref.field_ec = 0;
-                if (var1_ref.e((byte) 74)) {
+                if (var1_ref.isSecondaryDetached((byte) 74)) {
                   var1_ref.unlink(-3846);
                 }
               }
             }
-            var1_ref = (mm) (kja.field_E.next((byte) 118));
+            var1_ref = (LobbyGameEntry) (kja.field_E.next((byte) 118));
           }
           var1Lifetime1 = (jk) (OpenGlPostEffect.field_e.first(param0));
           while (var1Lifetime1 != null) {

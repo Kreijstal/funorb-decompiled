@@ -5,7 +5,7 @@ import java.util.*;
 
 final class dla {
     private lta field_b;
-    static llb field_e;
+    static Widget field_e;
     static int field_d;
     private int field_a;
     static int field_c;

@@ -83,7 +83,7 @@ final class AwardVictoryToWinnerAction extends MissionAction implements Diffable
           var5 = -1;
           for (var6 = 0; var6 < param2.field_c.length; var6++) {
             var7 = param2.a(var6, (byte) 59);
-            if (var7.field_a ||
+            if (var7.connected ||
               SetMissionResnetResourceTickTime.field_p != 0) {
               if (var4_int < var7.kills) {
                 var4_int = var7.kills;
@@ -96,7 +96,7 @@ final class AwardVictoryToWinnerAction extends MissionAction implements Diffable
             }
           }
           if (0 <= var5) {
-            param2.missionState.b(false, var5);
+            param2.missionState.finishRound(false, var5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

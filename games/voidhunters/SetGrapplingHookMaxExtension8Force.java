@@ -5,7 +5,7 @@ final class SetGrapplingHookMaxExtension8Force extends ConsoleCommand {
     static TextureCombineSource field_q;
     static boolean[][] field_o;
     static String field_r;
-    static llb field_p;
+    static Widget field_p;
 
     final static byte[] a(int param0, byte[] param1, int param2, int param3) {
         byte[] var4 = null;

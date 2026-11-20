@@ -3,7 +3,7 @@
  */
 final class GetFighterBayReload extends ConsoleCommand {
     static float[] field_r;
-    static llb field_p;
+    static Widget field_p;
     static float[] field_o;
     static GameStateFactory field_q;
 

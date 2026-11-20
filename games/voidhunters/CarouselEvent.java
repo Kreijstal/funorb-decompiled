@@ -71,8 +71,8 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
             if (param1 != null) {
               param1.a(var8.field_b, var5, (byte) -117);
             }
-            var9.field_a = true;
-            var9.a(param2, var5, -24354, this.field_e);
+            var9.connected = true;
+            var9.onJoin(param2, var5, -24354, this.field_e);
             GetSniperCannonAimarc.a(-6940, "CarouselEvent: Applied join for " + var8.field_b);
           } else {
             if (null != this.field_d &&
@@ -80,8 +80,8 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
               var10 = this.field_d.field_d;
               var5 = var10.field_d;
               var11 = param2.field_c[var5];
-              var11.field_a = false;
-              var11.a(true, param2, this.field_e, var5);
+              var11.connected = false;
+              var11.onLeave(true, param2, this.field_e, var5);
               GetSniperCannonAimarc.a(-6940, "CarouselEvent: Applied leave for player " + var5);
             }
           }

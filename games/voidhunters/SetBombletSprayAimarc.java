@@ -3,7 +3,7 @@
  */
 final class SetBombletSprayAimarc extends ConsoleCommand {
     static volatile int field_p;
-    static llb field_o;
+    static Widget field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;

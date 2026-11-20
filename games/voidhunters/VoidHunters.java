@@ -126,7 +126,7 @@ public final class VoidHunters extends NetworkGameClient {
           }
           if (SetFightersPerPlayerMaximum.field_p) {
             SetTorpedoRandomness.a(param0, param1, 20, param5, false, param3, param3, param4, param2);
-            qw.field_l.a(param7, 1332);
+            qw.field_l.updateInput(param7, 1332);
             if (!param7) {
               return;
             }
@@ -648,8 +648,8 @@ public final class VoidHunters extends NetworkGameClient {
         ncb.field_a = GetPointDefenceLaserAimspeed.field_o;
         if (ef.field_E) {
           GetGrapplingHooksDamageableBySourcePlayer.e((byte) -120);
-          GetMissileLauncherProjectileLife.field_p = GetLagIn.a(GetMissileLauncherProjectileLife.field_p, 68, "graphics_quality");
-          aw.a(false);
+          GetMissileLauncherProjectileLife.graphicsQuality = GetLagIn.a(GetMissileLauncherProjectileLife.graphicsQuality, 68, "graphics_quality");
+          PopupMenuWidget.applyGraphicsQualityPreset(false);
           nl.a(GetLagIn.a(kt.field_l, 93, "fx_volume"), -13205);
           re.a(GetLagIn.a(GetMutatorVotes.field_p, 21, "music_volume"), (byte) -99);
           GetMassDriverProjectiles.field_q = GetLagIn.a(GetMassDriverProjectiles.field_q, 36, "graphics_mode");
@@ -930,7 +930,7 @@ public final class VoidHunters extends NetworkGameClient {
         rj.clearSharedReferences();
         ncb.clearSharedReferences(500);
         cib.clearSharedReferences(-18013);
-        llb.clearSharedReferences(-2147483648);
+        Widget.clearSharedReferences(-2147483648);
         bv.clearSharedReferences(39);
         hw.clearSharedReferences(-1);
         bfb.clearSharedReferences();
@@ -992,7 +992,7 @@ public final class VoidHunters extends NetworkGameClient {
         ae.clearSharedReferences(-1);
         nl.clearSharedReferences(2128263208);
         mba.clearSharedReferences((byte) 26);
-        fgb.clearSharedReferences(8);
+        WidgetNode.clearSharedReferences(8);
         cwa.clearSharedReferences((byte) 74);
         wia.clearSharedReferences(9911);
         ida.clearSharedReferences((byte) -96);
@@ -1012,17 +1012,17 @@ public final class VoidHunters extends NetworkGameClient {
         psb.clearSharedReferences(false);
         oib.clearSharedReferences(124);
         vw.clearSharedReferences((byte) 55);
-        wc.clearSharedReferences(-20221);
+        IntrusiveDequeIterator.clearSharedReferences(-20221);
         NetworkArchiveClient.clearSharedReferences(125);
         ArchiveDiskWorker.clearSharedReferences(63);
         ArchiveIndexLoader.clearSharedReferences(5);
         ppb.clearSharedReferences(37);
         pjb.clearSharedReferences((byte) 22);
-        aw.clearSharedReferences(0);
+        PopupMenuWidget.clearSharedReferences(0);
         wdb.clearSharedReferences((byte) 127);
         hqb.clearSharedReferences((byte) -106);
         lwa.clearSharedReferences(0);
-        cna.clearSharedReferences(1);
+        IconTextWidget.clearSharedReferences(1);
         bs.clearSharedReferences((byte) 42);
         ooa.clearSharedReferences(126);
         DualLinkNode.clearSharedReferences(-31049);
@@ -1206,7 +1206,7 @@ public final class VoidHunters extends NetworkGameClient {
         SoftwareDepthBuffer.clearSharedReferences(-16777216);
         cs.clearSharedReferences((byte) 111);
         ImageProducerRasterBuffer.clearSharedReferences((byte) -128);
-        r.clearSharedReferences((byte) -123);
+        RenderResourceNode.clearSharedReferences((byte) -123);
         ct.clearSharedReferences((byte) -96);
         mb.clearSharedReferences((byte) -122);
         of.clearSharedReferences(8345);
@@ -2166,7 +2166,7 @@ public final class VoidHunters extends NetworkGameClient {
           SecondaryNodeQueue.field_b = GetRepairModePower.field_o;
         }
         if (-5 == wgb.field_f) {
-          sh.a(SetSpinningBladeSpindamageMultiplier.field_o.f((byte) -13), -1, 11);
+          sh.a(SetSpinningBladeSpindamageMultiplier.field_o.getGameId((byte) -13), -1, 11);
           SetMassDriverFireForce.field_o = true;
           wgb.field_f = GetArmageddonTimerStart.field_o;
         }

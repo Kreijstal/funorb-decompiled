@@ -11,7 +11,7 @@ final class ResourceArchive {
     private ArchiveProvider provider;
     private ArchiveIndex index;
     static int field_f;
-    static llb field_a;
+    static Widget field_a;
     private Object[] groups;
 
     final synchronized byte[] fetchSingleFile(byte param0, int param1) {
@@ -138,60 +138,60 @@ final class ResourceArchive {
         return this.provider.getGroupLoadPercent(param0, false);
     }
 
-    final static void a(int param0, mm param1, boolean param2, byte param3) {
-        cna dupTemp$0 = null;
+    final static void a(int param0, LobbyGameEntry param1, boolean param2, byte param3) {
+        IconTextWidget dupTemp$0 = null;
         int var17_int = 0;
         int var24 = 0;
         int stackIn_8_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_22_0 = 0;
-        cna stackIn_34_0 = null;
+        IconTextWidget stackIn_34_0 = null;
         boolean stackIn_35_1 = false;
-        cna stackIn_41_0 = null;
+        IconTextWidget stackIn_41_0 = null;
         boolean stackIn_42_1 = false;
         int stackIn_56_0 = 0;
         int stackIn_64_0 = 0;
         int stackIn_72_0 = 0;
-        cna stackIn_89_0 = null;
+        IconTextWidget stackIn_89_0 = null;
         boolean stackIn_90_1 = false;
-        cna stackIn_96_0 = null;
+        IconTextWidget stackIn_96_0 = null;
         boolean stackIn_96_1 = false;
         boolean stackIn_97_2 = false;
-        cna stackIn_99_0 = null;
+        IconTextWidget stackIn_99_0 = null;
         int stackIn_99_1 = 0;
         int stackIn_99_2 = 0;
         int stackIn_99_3 = 0;
         boolean stackIn_102_1 = false;
-        cna stackIn_106_0 = null;
+        IconTextWidget stackIn_106_0 = null;
         boolean stackIn_107_1 = false;
         int stackIn_111_0 = 0;
-        cna stackIn_123_0 = null;
+        IconTextWidget stackIn_123_0 = null;
         boolean stackIn_124_1 = false;
-        cna stackIn_128_0 = null;
+        IconTextWidget stackIn_128_0 = null;
         boolean stackIn_129_1 = false;
-        cna stackIn_132_0 = null;
+        IconTextWidget stackIn_132_0 = null;
         boolean stackIn_133_1 = false;
-        cna stackIn_136_0 = null;
+        IconTextWidget stackIn_136_0 = null;
         boolean stackIn_137_1 = false;
         String stackIn_153_0 = null;
-        cna stackIn_158_0 = null;
+        IconTextWidget stackIn_158_0 = null;
         boolean stackIn_159_1 = false;
-        cna stackIn_161_0 = null;
+        IconTextWidget stackIn_161_0 = null;
         boolean stackIn_162_1 = false;
         int stackIn_168_0 = 0;
         int stackIn_202_0 = 0;
         int stackIn_223_0 = 0;
-        cna stackIn_320_0 = null;
+        IconTextWidget stackIn_320_0 = null;
         boolean stackIn_321_1 = false;
-        cna stackIn_326_0 = null;
+        IconTextWidget stackIn_326_0 = null;
         boolean stackIn_326_1 = false;
         boolean stackIn_327_2 = false;
         int stackIn_330_1 = 0;
         byte stackIn_330_2 = 0;
         int stackIn_330_3 = 0;
-        cna stackIn_332_0 = null;
+        IconTextWidget stackIn_332_0 = null;
         boolean stackIn_333_1 = false;
-        cna stackIn_337_0 = null;
+        IconTextWidget stackIn_337_0 = null;
         boolean stackIn_338_1 = false;
         RuntimeException stackIn_347_0 = null;
         StringBuilder stackIn_347_1 = null;
@@ -204,7 +204,7 @@ final class ResourceArchive {
         int var7 = 0;
         int var8_int = 0;
         String var8 = null;
-        cna[] var8_array = null;
+        IconTextWidget[] var8_array = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -213,7 +213,7 @@ final class ResourceArchive {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        cna var17 = null;
+        IconTextWidget var17 = null;
         int var18 = 0;
         Object var18_ref = null;
         Object var19 = null;
@@ -225,11 +225,11 @@ final class ResourceArchive {
         Object var25 = null;
         String var25_ref = null;
         int var26 = 0;
-        mm var27 = null;
+        LobbyGameEntry var27 = null;
         int var28 = 0;
-        cna var29 = null;
-        cna var30 = null;
-        cna[] var31 = null;
+        IconTextWidget var29 = null;
+        IconTextWidget var30 = null;
+        IconTextWidget[] var31 = null;
         Object var32 = null;
         String var32_ref = null;
         String var33 = null;
@@ -286,10 +286,10 @@ final class ResourceArchive {
               }
               stackIn_34_0 = SetReloadBarHeight.field_q[0][var6 + 1];
               stackIn_35_1 = (var4_int != 0);
-              stackIn_34_0.field_y = stackIn_35_1;
+              stackIn_34_0.enabled = stackIn_35_1;
               if (!GetGrapplingHooksDamageableBySourcePlayer.field_o &&
                 var6 == 3) {
-                SetReloadBarHeight.field_q[0][var6 + 1].field_y = false;
+                SetReloadBarHeight.field_q[0][var6 + 1].enabled = false;
               }
               stackIn_41_0 = SetReloadBarHeight.field_q[0][1 + var6];
               stackIn_42_1 = (var6 == param1.field_Cb);
@@ -378,7 +378,7 @@ final class ResourceArchive {
               }
               stackIn_106_0 = SetReloadBarHeight.field_q[1][1 + var7];
               stackIn_107_1 = (var4_int != 0) && (var8_intLifetime1 == 0);
-              stackIn_106_0.field_y = stackIn_107_1;
+              stackIn_106_0.enabled = stackIn_107_1;
             }
           }
           stackIn_111_0 = (!param2) ? 1 : 0;
@@ -401,7 +401,7 @@ final class ResourceArchive {
             }
             stackIn_123_0 = var29;
             stackIn_124_1 = (var4_int != 0);
-            stackIn_123_0.field_y = stackIn_124_1;
+            stackIn_123_0.enabled = stackIn_124_1;
             if (!param2) {
               stackIn_136_0 = var29;
               stackIn_137_1 = (0 != (var6Lifetime1 & param1.field_Bb));
@@ -419,8 +419,8 @@ final class ResourceArchive {
             }
           }
           if (param3 != -67) {
-            var27 = (mm) null;
-            ResourceArchive.a(-90, (mm) null, true, (byte) -109);
+            var27 = (LobbyGameEntry) null;
+            ResourceArchive.a(-90, (LobbyGameEntry) null, true, (byte) -109);
           }
           if (param2 &&
             GetDebrisThrowable.field_r > 1) {
@@ -447,7 +447,7 @@ final class ResourceArchive {
               stackIn_158_0.field_J = stackIn_159_1;
               stackIn_161_0 = var30;
               stackIn_162_1 = (var4_int != 0);
-              stackIn_161_0.field_y = stackIn_162_1;
+              stackIn_161_0.enabled = stackIn_162_1;
             }
           }
           var6Lifetime3 = 0;
@@ -739,7 +739,7 @@ final class ResourceArchive {
               }
               stackIn_337_0 = var17;
               stackIn_338_1 = (var4_int != 0) && (var16Lifetime1 == 0);
-              stackIn_337_0.field_y = stackIn_338_1;
+              stackIn_337_0.enabled = stackIn_338_1;
             }
             var6Lifetime3 = var6Lifetime3 + (255 & vu.field_zb[var7]);
           }

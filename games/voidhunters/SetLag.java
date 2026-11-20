@@ -22,7 +22,7 @@ final class SetLag extends ConsoleCommand {
           pr.field_d = param13;
           OpenGlPostProcessor.field_v = param9;
           GetMissionTimeLimit.field_o = param1;
-          wc.field_a = param6;
+          IntrusiveDequeIterator.field_a = param6;
           GetLoadingMissions.field_q = param4;
           PrintSettings.field_o = param3;
           SetPointDefenceLaserProjectileDamage.field_o = param0 ? true : false;

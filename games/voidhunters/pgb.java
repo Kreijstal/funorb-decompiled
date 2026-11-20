@@ -3,7 +3,7 @@
  */
 final class pgb {
     int[] field_m;
-    llb field_j;
+    Widget field_j;
     static gl field_b;
     String field_n;
     int field_h;

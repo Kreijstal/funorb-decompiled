@@ -3,7 +3,7 @@
  */
 final class ArchiveIndexLoader {
     private ArchiveDiskWorker field_i;
-    static llb field_a;
+    static Widget field_a;
     static ServerInfo field_g;
     private java.math.BigInteger signatureModulus;
     static int field_h;

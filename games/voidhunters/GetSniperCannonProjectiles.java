@@ -7,7 +7,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
 
     final static void a(pgb param0, int param1) {
         long stackIn_2_0;
-        llb stackIn_2_1;
+        Widget stackIn_2_1;
         int stackIn_2_2;
         Object stackIn_2_3;
         String stackIn_2_4;
@@ -53,24 +53,24 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
             if (!hb.field_c) {
               var5 = GetLagStandardDeviationOut.field_o;
               var6 = di.field_k;
-              var5.field_i.a(var6, (byte) -53, 14);
+              var5.field_i.addItem(var6, (byte) -53, 14);
             }
             var7 = GetLagStandardDeviationOut.field_o;
             var8 = GameSession.field_D;
-            var7.field_i.a(var8, (byte) -53, 20);
+            var7.field_i.addItem(var8, (byte) -53, 20);
           }
           if (param0.field_a == 1 &&
             !spb.a(-78) &&
             null != SetSpinningBladeSpindamageMultiplier.field_o &&
-            param0.field_q == SetSpinningBladeSpindamageMultiplier.field_o.f((byte) -13)) {
+            param0.field_q == SetSpinningBladeSpindamageMultiplier.field_o.getGameId((byte) -13)) {
             if (!hb.field_c) {
               var9 = GetLagStandardDeviationOut.field_o;
               var10 = kia.field_b;
-              var9.field_i.a(var10, (byte) -53, 14);
+              var9.field_i.addItem(var10, (byte) -53, 14);
             }
             var11 = GetLagStandardDeviationOut.field_o;
             var12 = oqb.field_k;
-            var11.field_i.a(var12, (byte) -53, 20);
+            var11.field_i.addItem(var12, (byte) -53, 20);
           }
           if (param1 != 22859) {
             field_o = (int[]) null;
@@ -83,7 +83,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
           var13 = GetLagStandardDeviationOut.field_o;
           var3 = Particle.field_H;
           var4 = qs.field_a;
-          var13.field_i.b(var3, -29060, var4, 0, 0);
+          var13.field_i.layoutPopup(var3, -29060, var4, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

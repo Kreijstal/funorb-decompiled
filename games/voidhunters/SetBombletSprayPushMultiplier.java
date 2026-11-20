@@ -47,9 +47,9 @@ final class SetBombletSprayPushMultiplier extends ConsoleCommand {
         }
     }
 
-    final static llb a(int param0) {
+    final static Widget a(int param0) {
         if (param0 != 0) {
-          return (llb) null;
+          return (Widget) null;
         }
         return vra.field_b.field_yb;
     }

@@ -8,7 +8,7 @@ final class mn {
         int var4_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
-        llb var5 = null;
+        Widget var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
@@ -27,10 +27,10 @@ final class mn {
             return;
           }
           cs.b((byte) 71);
-          SetToggledScoreboard.field_o.a(param0, 1332);
+          SetToggledScoreboard.field_o.updateInput(param0, 1332);
           if (PartitionZoneListFactory.field_b != null) {
             if (GetBloomThresholdPercentage.field_p) {
-              PartitionZoneListFactory.field_b.a((byte) -5, SetToggledScoreboard.field_o.field_M, SetToggledScoreboard.field_o.field_u, param0);
+              PartitionZoneListFactory.field_b.a((byte) -5, SetToggledScoreboard.field_o.screenX, SetToggledScoreboard.field_o.screenY, param0);
             } else {
               PartitionZoneListFactory.field_b = null;
             }
@@ -43,11 +43,11 @@ final class mn {
               }
               var6 = SetReverbDry.a(var4_int, (byte) 19);
               SecondaryNodeDeque.field_c[var4_int].field_tb = GetGrapplingHookAimspeed.field_o[var6];
-              NebulaFieldFactory.field_c[var4_int].field_R = SetMissileLauncherProjectiles.field_o[var6];
+              NebulaFieldFactory.field_c[var4_int].text = SetMissileLauncherProjectiles.field_o[var6];
             }
           }
           if (SetBombletSprayAimarc.field_o.field_o != 0) {
-            Asteroid.field_v = new bwa(SetBombletSprayAimarc.field_o.field_M, SetBombletSprayAimarc.field_o.field_u, SetBombletSprayAimarc.field_o.field_hb, SetBombletSprayAimarc.field_o.field_G, param2, DualLinkNode.field_g, lo.field_b, GetFighterBayReload.field_p, qc.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o, (String) null, 0L);
+            Asteroid.field_v = new bwa(SetBombletSprayAimarc.field_o.screenX, SetBombletSprayAimarc.field_o.screenY, SetBombletSprayAimarc.field_o.width, SetBombletSprayAimarc.field_o.height, param2, DualLinkNode.field_g, lo.field_b, GetFighterBayReload.field_p, qc.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o, (String) null, 0L);
           }
           var9 = SetMissionDebrisDefaultProbability.b(nna.field_w, qs.field_c, param1, -123);
           if (var9 != null) {

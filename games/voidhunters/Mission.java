@@ -95,7 +95,7 @@ final class Mission implements DiffableState {
         if (param0 != 0) {
           Mission.b(29);
         }
-        return this.savedState.d(false);
+        return this.savedState.getObjectiveType(false);
     }
 
     public final void readState(IsaacPacketBuffer param0, boolean param1) {

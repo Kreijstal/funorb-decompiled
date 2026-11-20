@@ -107,7 +107,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
             }
           }
           if (param1 >= -12) {
-            GetExplosionProjectileDamage.a((llb) null, -42, (llb) null, (BitmapFont) null, (llb) null, (llb) null, (llb) null, true, (llb) null, (llb) null, (llb) null, (pjb) null);
+            GetExplosionProjectileDamage.a((Widget) null, -42, (Widget) null, (BitmapFont) null, (Widget) null, (Widget) null, (Widget) null, true, (Widget) null, (Widget) null, (Widget) null, (pjb) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -124,7 +124,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
         }
     }
 
-    final static void a(llb param0, int param1, llb param2, BitmapFont param3, llb param4, llb param5, llb param6, boolean param7, llb param8, llb param9, llb param10, pjb param11) {
+    final static void a(Widget param0, int param1, Widget param2, BitmapFont param3, Widget param4, Widget param5, Widget param6, boolean param7, Widget param8, Widget param9, Widget param10, pjb param11) {
         String stackIn_24_0 = null;
         int stackIn_28_0 = 0;
         RuntimeException stackIn_38_0 = null;
@@ -155,7 +155,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
         int[] var14 = null;
         int[] var15 = null;
         Sprite[] var16 = null;
-        llb var17 = null;
+        Widget var17 = null;
         int var18 = 0;
         String var19 = null;
         int var20 = 0;
@@ -185,26 +185,26 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
           var14[5] = 7368816;
           var16 = new Sprite[9];
           var16[4] = var12;
-          SetToggledScoreboard.field_o = new llb(0L, param2);
-          kea.field_a = new llb((long)param1, param10);
-          SetToggledScoreboard.field_o.b(param1 ^ -561, kea.field_a);
-          var17 = new llb(0L, (llb) null);
-          var17.field_lb = new IntrusiveDeque();
+          SetToggledScoreboard.field_o = new Widget(0L, param2);
+          kea.field_a = new Widget((long)param1, param10);
+          SetToggledScoreboard.field_o.addChild(param1 ^ -561, kea.field_a);
+          var17 = new Widget(0L, (Widget) null);
+          var17.children = new IntrusiveDeque();
           GetUseLines.field_p = new soa(0L, var17, param9, param11);
-          kea.field_a.b(-561, GetUseLines.field_p);
-          jba.field_b = new llb(0L, param4);
-          kea.field_a.b(-561, jba.field_b);
-          bpa.field_c = new llb(0L, param0);
-          bpa.field_c.field_eb = DebrisFactory.field_c;
-          jba.field_b.b(-561, bpa.field_c);
-          jba.field_b.g(119);
-          fgb.field_l = new llb(0L, (llb) null);
-          fgb.field_l.field_gb = var16;
-          jba.field_b.b(-561, fgb.field_l);
-          ul.field_b = new llb[5];
-          NebulaFieldFactory.field_c = new llb[5];
-          SetMissionVariablesHudX.field_o = new llb[5];
-          SecondaryNodeDeque.field_c = new llb[5];
+          kea.field_a.addChild(-561, GetUseLines.field_p);
+          jba.field_b = new Widget(0L, param4);
+          kea.field_a.addChild(-561, jba.field_b);
+          bpa.field_c = new Widget(0L, param0);
+          bpa.field_c.font = DebrisFactory.field_c;
+          jba.field_b.addChild(-561, bpa.field_c);
+          jba.field_b.inheritInteractionStateInDescendants(119);
+          WidgetNode.field_l = new Widget(0L, (Widget) null);
+          WidgetNode.field_l.field_gb = var16;
+          jba.field_b.addChild(-561, WidgetNode.field_l);
+          ul.field_b = new Widget[5];
+          NebulaFieldFactory.field_c = new Widget[5];
+          SetMissionVariablesHudX.field_o = new Widget[5];
+          SecondaryNodeDeque.field_c = new Widget[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var18 >= 5))) {
@@ -230,17 +230,17 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
                 var19 = stackIn_24_0;
               }
               if (decompiledFrameRemainder0) {
-                ul.field_b[var18] = new llb(0L, param8);
-                SetMissionVariablesHudX.field_o[var18] = new llb(0L, TargetLock.field_b, var19);
-                SecondaryNodeDeque.field_c[var18] = new llb(0L, (llb) null);
+                ul.field_b[var18] = new Widget(0L, param8);
+                SetMissionVariablesHudX.field_o[var18] = new Widget(0L, TargetLock.field_b, var19);
+                SecondaryNodeDeque.field_c[var18] = new Widget(0L, (Widget) null);
                 SecondaryNodeDeque.field_c[var18].field_B = 1;
-                NebulaFieldFactory.field_c[var18] = new llb(0L, TargetLock.field_b);
+                NebulaFieldFactory.field_c[var18] = new Widget(0L, TargetLock.field_b);
                 NebulaFieldFactory.field_c[var18].field_B = 1;
-                ul.field_b[var18].b(-561, SetMissionVariablesHudX.field_o[var18]);
-                ul.field_b[var18].b(-561, SecondaryNodeDeque.field_c[var18]);
-                ul.field_b[var18].b(-561, NebulaFieldFactory.field_c[var18]);
-                ul.field_b[var18].g(112);
-                SetToggledScoreboard.field_o.b(param1 ^ -561, ul.field_b[var18]);
+                ul.field_b[var18].addChild(-561, SetMissionVariablesHudX.field_o[var18]);
+                ul.field_b[var18].addChild(-561, SecondaryNodeDeque.field_c[var18]);
+                ul.field_b[var18].addChild(-561, NebulaFieldFactory.field_c[var18]);
+                ul.field_b[var18].inheritInteractionStateInDescendants(112);
+                SetToggledScoreboard.field_o.addChild(param1 ^ -561, ul.field_b[var18]);
                 SetSniperCannonRandomness.field_o = SetSniperCannonRandomness.field_o + 1;
               }
               var18++;
@@ -249,9 +249,9 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
             break;
           }
           if (decompiledNaturalLoopExit0) {
-            SetBombletSprayAimarc.field_o = new llb(0L, param5);
-            SetBombletSprayAimarc.field_o.field_R = SetShieldsDirectionalArcParticleSpeedDownshift.field_r;
-            SetToggledScoreboard.field_o.b(-561, SetBombletSprayAimarc.field_o);
+            SetBombletSprayAimarc.field_o = new Widget(0L, param5);
+            SetBombletSprayAimarc.field_o.text = SetShieldsDirectionalArcParticleSpeedDownshift.field_r;
+            SetToggledScoreboard.field_o.addChild(-561, SetBombletSprayAimarc.field_o);
             stackIn_28_0 = SocketNetworkArchiveClient.g(-126) ? 1 : 0;
           }
           if (stackIn_28_0 != 0 &&

@@ -3,7 +3,7 @@
  */
 final class tia extends mu {
     int field_D;
-    static llb field_M;
+    static Widget field_M;
     private nva field_F;
     static String field_G;
     int field_H;

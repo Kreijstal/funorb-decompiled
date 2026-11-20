@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jwa extends TextureOperation {
-    static llb field_k;
+    static Widget field_k;
     static int field_l;
     private int field_j;
     private int field_i;

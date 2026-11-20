@@ -4,7 +4,7 @@
 final class MissionConditionFactory implements GameStateFactory {
     static vfa field_b;
     static ri field_c;
-    static llb field_a;
+    static Widget field_a;
 
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 != 11995) {

@@ -3,7 +3,7 @@
  */
 final class SetReverbDamp extends ConsoleCommand {
     static String field_p;
-    static llb field_q;
+    static Widget field_q;
     static boolean field_o;
 
     public static void clearSharedReferences(byte param0) {

@@ -116,8 +116,8 @@ abstract class mc extends shb implements nea {
     final static void a(int param0, boolean param1) {
         if (!(SoftwareTransform3D.field_b <= 0) &&
           bv.field_d) {
-          SoftwareRasterizer2D.darkenRectangle(0, 0, SoftwareRasterizer2D.width, SetToggledScoreboard.field_o.field_u);
-          GetTorpedoProjectiles.field_o.b(param1, 45);
+          SoftwareRasterizer2D.darkenRectangle(0, 0, SoftwareRasterizer2D.width, SetToggledScoreboard.field_o.screenY);
+          GetTorpedoProjectiles.field_o.draw(param1, 45);
         }
         if (param0 >= -117) {
           ShipComponent var3 = (ShipComponent) null;
@@ -125,8 +125,8 @@ abstract class mc extends shb implements nea {
         }
         if ((CarouselPlayerEventFactory.field_a > 0 || SetExplosionPushMultiplier.field_p > 0) &&
           GetTorpedoProjectileDamage.field_o) {
-          SoftwareRasterizer2D.darkenRectangle(0, 0, SoftwareRasterizer2D.width, SetToggledScoreboard.field_o.field_u);
-          SetUseCircleFill.field_o.b(param1, -91);
+          SoftwareRasterizer2D.darkenRectangle(0, 0, SoftwareRasterizer2D.width, SetToggledScoreboard.field_o.screenY);
+          SetUseCircleFill.field_o.draw(param1, -91);
         }
     }
 

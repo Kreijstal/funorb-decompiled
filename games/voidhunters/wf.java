@@ -223,8 +223,8 @@ final class wf {
           }
         }
         if (19 == var6) {
-          if (2 != GetMissileLauncherProjectileLife.field_p) {
-            if (GetMissileLauncherProjectileLife.field_p == 1) {
+          if (2 != GetMissileLauncherProjectileLife.graphicsQuality) {
+            if (GetMissileLauncherProjectileLife.graphicsQuality == 1) {
               var9_ref_StringLifetime1 = SetMissileLauncherAimspeed.field_o;
             } else {
               var9_ref_StringLifetime1 = MatchResultsFactory.field_a;
@@ -507,7 +507,7 @@ final class wf {
           if (var10_int == 1) {
             if (this.field_b.e((byte) -126)) {
               if (GetPhasedEnergyBeamPulsetime.e((byte) 85)) {
-                GetAutoDetail.a(SetMpSandboxEnemySpawnLimit.field_p, 2, (byte) -115, 320, SetDebrisGroupColour.field_o, param1, wc.field_d, 0, 8, true, SetMpSandboxEnemySpawnLimit.field_p.capHeight, dra.field_v, 240, 8, SetMpSandboxEnemySpawnLimit.field_p.maxDescent + SetMpSandboxEnemySpawnLimit.field_p.capHeight);
+                GetAutoDetail.a(SetMpSandboxEnemySpawnLimit.field_p, 2, (byte) -115, 320, SetDebrisGroupColour.field_o, param1, IntrusiveDequeIterator.field_d, 0, 8, true, SetMpSandboxEnemySpawnLimit.field_p.capHeight, dra.field_v, 240, 8, SetMpSandboxEnemySpawnLimit.field_p.maxDescent + SetMpSandboxEnemySpawnLimit.field_p.capHeight);
               } else {
                 var10_int = param1 ? 1 : 0;
                 GetNebulaFadesOutWhenClose.a(wgb.field_f, var10_int != 0, (byte) -85, -4);
@@ -548,23 +548,23 @@ final class wf {
                                 if (19 == var10_int) {
                                   var8 = 0;
                                   if (this.field_b.c((byte) -45)) {
-                                    GetMissileLauncherProjectileLife.field_p = GetMissileLauncherProjectileLife.field_p + 1;
+                                    GetMissileLauncherProjectileLife.graphicsQuality = GetMissileLauncherProjectileLife.graphicsQuality + 1;
                                     var8 = 1;
                                   }
                                   if (this.field_b.a(42)) {
-                                    GetMissileLauncherProjectileLife.field_p = GetMissileLauncherProjectileLife.field_p - 1;
+                                    GetMissileLauncherProjectileLife.graphicsQuality = GetMissileLauncherProjectileLife.graphicsQuality - 1;
                                     var8 = 1;
                                   }
-                                  if (3 <= GetMissileLauncherProjectileLife.field_p) {
-                                    GetMissileLauncherProjectileLife.field_p = 0;
+                                  if (3 <= GetMissileLauncherProjectileLife.graphicsQuality) {
+                                    GetMissileLauncherProjectileLife.graphicsQuality = 0;
                                   }
-                                  if (GetMissileLauncherProjectileLife.field_p < 0) {
-                                    GetMissileLauncherProjectileLife.field_p = 2;
+                                  if (GetMissileLauncherProjectileLife.graphicsQuality < 0) {
+                                    GetMissileLauncherProjectileLife.graphicsQuality = 2;
                                   }
                                   if (var8 != 0) {
-                                    aw.a(false);
+                                    PopupMenuWidget.applyGraphicsQualityPreset(false);
                                     if (ef.field_E) {
-                                      MissionBuilder.a((byte) 114, "graphics_quality", GetMissileLauncherProjectileLife.field_p);
+                                      MissionBuilder.a((byte) 114, "graphics_quality", GetMissileLauncherProjectileLife.graphicsQuality);
                                       SetLaserAimarc.a(-96);
                                     }
                                   }

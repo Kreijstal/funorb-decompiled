@@ -3,7 +3,7 @@
  */
 final class TargetLock implements DiffableState {
     int targetId;
-    static llb field_b;
+    static Widget field_b;
     int targetX;
     int targetY;
 

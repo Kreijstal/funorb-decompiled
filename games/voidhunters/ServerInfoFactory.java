@@ -147,7 +147,7 @@ final class ServerInfoFactory implements GameStateFactory {
             SpawnPointFactory.a(stackIn_25_0, true);
             var14 = feb.a(GetDebrisGroupColour.field_r, true);
             if (li.field_i) {
-              var4_int = SetToggledScoreboard.field_o.field_u;
+              var4_int = SetToggledScoreboard.field_o.screenY;
               if (!uga.field_d) {
                 if (GetReverbDry.e((byte) 105)) {
                   var4_int = SoftwareRasterizer2D.height;
@@ -218,7 +218,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 SpawnPointFactory.a(stackIn_79_0, true);
                 var16 = feb.a(GetDebrisGroupColour.field_r, true);
                 if (li.field_i) {
-                  var4_intLifetime1 = SetToggledScoreboard.field_o.field_u;
+                  var4_intLifetime1 = SetToggledScoreboard.field_o.screenY;
                   if (!uga.field_d) {
                     if (GetReverbDry.e((byte) 105)) {
                       var4_intLifetime1 = SoftwareRasterizer2D.height;
@@ -274,7 +274,7 @@ final class ServerInfoFactory implements GameStateFactory {
           var18 = feb.a(GetDebrisGroupColour.field_r, true);
           var3 = var18;
           if (li.field_i) {
-            var4_intLifetime1Lifetime1 = SetToggledScoreboard.field_o.field_u;
+            var4_intLifetime1Lifetime1 = SetToggledScoreboard.field_o.screenY;
             if (uga.field_d) {
               var4_intLifetime1Lifetime1 = SoftwareRasterizer2D.height;
               GetAiRepairTime.e(-97);

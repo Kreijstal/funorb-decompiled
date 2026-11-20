@@ -215,7 +215,7 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
     final void execute(int param0, int[] param1, GameSnapshot param2) {
         try {
           SetGrapplingHookCooldown.a(202, "wins_for_team_" + this.team, param0);
-          param2.missionState.b(false, this.team);
+          param2.missionState.finishRound(false, this.team);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ika.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

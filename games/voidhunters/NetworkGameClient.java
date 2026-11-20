@@ -189,7 +189,7 @@ abstract class NetworkGameClient extends GameApplet {
                     SetMessageFadetime.a(MissionControl.field_f, (byte) 110, 256);
                   }
                 } else {
-                  SetMessageFadetime.a(cna.field_wb, (byte) 17, 256);
+                  SetMessageFadetime.a(IconTextWidget.field_wb, (byte) 17, 256);
                 }
               }
               GetSpinningBladeAimarc.field_o = true;
@@ -533,7 +533,7 @@ abstract class NetworkGameClient extends GameApplet {
     }
 
     final void a(boolean param0, int param1, int param2) {
-        this.a(-119, cp.field_q.field_a, SetShipPersistence.field_r.field_a, param2, aw.field_Bb.field_a, pgb.field_b.field_a, param0, SoftwareFramebuffer.field_f.field_a);
+        this.a(-119, cp.field_q.field_a, SetShipPersistence.field_r.field_a, param2, PopupMenuWidget.field_Bb.field_a, pgb.field_b.field_a, param0, SoftwareFramebuffer.field_f.field_a);
         int var4 = -37 % ((param1 - 30) / 50);
     }
 

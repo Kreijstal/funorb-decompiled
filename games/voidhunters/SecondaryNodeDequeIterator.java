@@ -5,7 +5,7 @@ import java.util.*;
 
 final class SecondaryNodeDequeIterator implements Iterator {
     private SecondaryNodeDeque deque;
-    static llb field_a;
+    static Widget field_a;
     private DualLinkNode lastReturned;
     static String field_c;
     private DualLinkNode nextNode;

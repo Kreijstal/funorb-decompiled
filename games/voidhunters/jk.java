@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jk extends llb {
+final class jk extends Widget {
     static int field_Cb;
-    llb field_Ib;
+    Widget field_Ib;
     boolean field_Lb;
-    llb field_wb;
+    Widget field_wb;
     String field_xb;
     long field_zb;
     int field_yb;
     int field_Db;
     String field_Hb;
     boolean field_Eb;
-    llb field_Jb;
+    Widget field_Jb;
     boolean field_Fb;
     int field_Gb;
     long field_Kb;
-    llb field_Nb;
+    Widget field_Nb;
     int field_Ab;
     int field_vb;
     int field_Bb;
-    llb field_Mb;
+    Widget field_Mb;
 
     final boolean a(int param0, jk param1) {
         RuntimeException var3 = null;
@@ -91,7 +91,7 @@ final class jk extends llb {
     }
 
     jk(String param0, String param1, long param2) {
-        super(0L, (llb) null);
+        super(0L, (Widget) null);
         CharSequence var6 = null;
         try {
           this.field_zb = param2;

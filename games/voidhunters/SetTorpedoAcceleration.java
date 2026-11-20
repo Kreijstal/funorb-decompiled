@@ -3,7 +3,7 @@
  */
 final class SetTorpedoAcceleration extends ConsoleCommand {
     static PacketBuffer field_p;
-    static llb field_o;
+    static Widget field_o;
 
     SetTorpedoAcceleration(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);

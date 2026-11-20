@@ -7,10 +7,10 @@ final class ShipBodyFactory implements GameStateFactory {
 
     final static void a(byte param0, boolean param1) {
         int var6 = 0;
-        llb dupTemp$0 = null;
+        Widget dupTemp$0 = null;
         int var11 = 0;
         int stackIn_4_0 = 0;
-        llb stackIn_6_0;
+        Widget stackIn_6_0;
         int stackIn_6_1;
         int stackIn_6_2;
         int stackIn_6_3;
@@ -22,17 +22,17 @@ final class ShipBodyFactory implements GameStateFactory {
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        llb var7_ref_llb = null;
+        Widget var7_ref_llb = null;
         int var7 = 0;
         int var8 = 0;
-        llb var8_ref_llb = null;
-        cna var9_ref_cna = null;
+        Widget var8_ref_llb = null;
+        IconTextWidget var9_ref_cna = null;
         int var9 = 0;
         int var10 = 0;
-        cna var10_ref_cna = null;
+        IconTextWidget var10_ref_cna = null;
         int var12 = 0;
         int var13 = 0;
-        llb var14 = null;
+        Widget var14 = null;
         var13 = VoidHunters.field_G;
         try {
           GetShieldsDirectionalArcParticleLife.field_p = SoftwareRasterizer2D.width;
@@ -43,26 +43,26 @@ final class ShipBodyFactory implements GameStateFactory {
             stackIn_4_0 = SetExplosionPushMultiplier.field_p;
           }
           lkb.a(stackIn_4_0, (byte) -106);
-          GetReverbWidth.field_o.a(0, -92, -2 + WaterTextures.field_g.field_G - 40, 0, WaterTextures.field_g.field_hb);
-          SetPhasedEnergyBeamPulsetime.field_o.a(0, -11, SetOndamageParticleLife.field_o.field_hb, 0, nna.field_w);
+          GetReverbWidth.field_o.a(0, -92, -2 + WaterTextures.field_g.height - 40, 0, WaterTextures.field_g.width);
+          SetPhasedEnergyBeamPulsetime.field_o.setBounds(0, -11, SetOndamageParticleLife.field_o.width, 0, nna.field_w);
           stackIn_6_0 = SecondaryNodeDequeIterator.field_a;
           stackIn_6_1 = 0;
           stackIn_6_2 = param0 + 25;
-          stackIn_6_3 = SetOndamageParticleLife.field_o.field_hb;
+          stackIn_6_3 = SetOndamageParticleLife.field_o.width;
           if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
             stackIn_7_4 = 2 + (40 + ResourceNode.field_a + 2);
           } else {
             stackIn_7_4 = 0;
           }
-          ((llb) (Object) stackIn_6_0).a(stackIn_6_1, stackIn_6_2, stackIn_6_3 - stackIn_7_4, 2 + nna.field_w, 18);
-          GetPointDefenceLaserProjectileDamage.field_o.a(-40 + (-2 + SetOndamageParticleLife.field_o.field_hb) - ResourceNode.field_a, param0 + 18, ResourceNode.field_a + 42, nna.field_w + 2, 18);
-          WaterTextures.field_f.a(SetOndamageParticleLife.field_o.field_hb, 2, -1, -nna.field_w + (SetOndamageParticleLife.field_o.field_G - 2) - 20, 2 + (nna.field_w + 20), 0, ResourceNode.field_a);
-          GetShipToShipRamDamage.field_q.a(0, -41, WaterTextures.field_g.field_hb, WaterTextures.field_g.field_G - 40, 40);
-          GetWeaponParticleSpeedDownshift.field_q.a(0, 121, vva.field_r.field_hb, 0, 30);
+          ((Widget) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2, stackIn_6_3 - stackIn_7_4, 2 + nna.field_w, 18);
+          GetPointDefenceLaserProjectileDamage.field_o.setBounds(-40 + (-2 + SetOndamageParticleLife.field_o.width) - ResourceNode.field_a, param0 + 18, ResourceNode.field_a + 42, nna.field_w + 2, 18);
+          WaterTextures.field_f.a(SetOndamageParticleLife.field_o.width, 2, -1, -nna.field_w + (SetOndamageParticleLife.field_o.height - 2) - 20, 2 + (nna.field_w + 20), 0, ResourceNode.field_a);
+          GetShipToShipRamDamage.field_q.setBounds(0, -41, WaterTextures.field_g.width, WaterTextures.field_g.height - 40, 40);
+          GetWeaponParticleSpeedDownshift.field_q.setBounds(0, 121, vva.field_r.width, 0, 30);
           if (param0 != 100) {
             ShipBodyFactory.a((byte) -23, true);
           }
-          SetPhysicsCollisionGrapplingHookForceMultiplier.field_o.a(0, 124, vva.field_r.field_hb, 30, -32 + vva.field_r.field_G - 40);
+          SetPhysicsCollisionGrapplingHookForceMultiplier.field_o.setBounds(0, 124, vva.field_r.width, 30, -32 + vva.field_r.height - 40);
           var2_int = 3 + ocb.field_l;
           if (SetMutatorVotes.field_o.length < 2) {
             var2_int--;
@@ -70,15 +70,15 @@ final class ShipBodyFactory implements GameStateFactory {
           if (param1) {
             var2_int--;
           }
-          var3 = -2 + ((1 + var2_int) / 2 - 13 + (SetPhysicsCollisionGrapplingHookForceMultiplier.field_o.field_G - 5)) / (var2_int + 1);
+          var3 = -2 + ((1 + var2_int) / 2 - 13 + (SetPhysicsCollisionGrapplingHookForceMultiplier.field_o.height - 5)) / (var2_int + 1);
           if (var3 > 30) {
             var3 = 30;
           }
-          var4 = -10 + (SetPhysicsCollisionGrapplingHookForceMultiplier.field_o.field_G - (var3 + 2) * var2_int);
+          var4 = -10 + (SetPhysicsCollisionGrapplingHookForceMultiplier.field_o.height - (var3 + 2) * var2_int);
           if (40 < var4) {
             var4 = 40;
           }
-          ProxySocketConnector.field_e.a(5, param0 + 19, -5 + (-5 + SetPhysicsCollisionGrapplingHookForceMultiplier.field_o.field_hb), 5, var4);
+          ProxySocketConnector.field_e.setBounds(5, param0 + 19, -5 + (-5 + SetPhysicsCollisionGrapplingHookForceMultiplier.field_o.width), 5, var4);
           var5 = 5 + (var4 + 2);
           for (var6 = 0; ocb.field_l + 4 > var6; var6++) {
             if ((1 != var6 ||
@@ -87,13 +87,13 @@ final class ShipBodyFactory implements GameStateFactory {
               if (!param1 &&
                 var6 == 3) {
                 var7_ref_llb = GetLaserAimarc.field_o[var6];
-                GetLaserAimarc.field_o[var6].field_G = 0;
-                var7_ref_llb.field_hb = 0;
+                GetLaserAimarc.field_o[var6].height = 0;
+                var7_ref_llb.width = 0;
                 for (var8 = 0; var8 < SetReloadBarHeight.field_q[var6].length; var8++) {
                   if (SetReloadBarHeight.field_q[var6][var8] != null) {
                     var9_ref_cna = SetReloadBarHeight.field_q[var6][var8];
-                    SetReloadBarHeight.field_q[var6][var8].field_G = 0;
-                    var9_ref_cna.field_hb = 0;
+                    SetReloadBarHeight.field_q[var6][var8].height = 0;
+                    var9_ref_cna.width = 0;
                   }
                 }
               } else if (param1 &&
@@ -101,13 +101,13 @@ final class ShipBodyFactory implements GameStateFactory {
                 dupTemp$0 = GetLaserAimarc.field_o[var6];
                 var14 = dupTemp$0;
                 var7_ref_llb = dupTemp$0;
-                GetLaserAimarc.field_o[var6].field_G = 0;
-                var14.field_hb = 0;
+                GetLaserAimarc.field_o[var6].height = 0;
+                var14.width = 0;
                 for (var8 = 0; SetReloadBarHeight.field_q[var6].length > var8; var8++) {
                   if (SetReloadBarHeight.field_q[var6][var8] != null) {
                     var9_ref_cna = SetReloadBarHeight.field_q[var6][var8];
-                    SetReloadBarHeight.field_q[var6][var8].field_G = 0;
-                    var9_ref_cna.field_hb = 0;
+                    SetReloadBarHeight.field_q[var6][var8].height = 0;
+                    var9_ref_cna.width = 0;
                   }
                 }
               } else {
@@ -127,45 +127,45 @@ final class ShipBodyFactory implements GameStateFactory {
                 var7 = stackIn_58_0;
                 if (var7 != 0) {
                   var8_ref_llb = GetLaserAimarc.field_o[var6];
-                  GetLaserAimarc.field_o[var6].field_G = 0;
-                  var8_ref_llb.field_hb = 0;
+                  GetLaserAimarc.field_o[var6].height = 0;
+                  var8_ref_llb.width = 0;
                   for (var9 = 0; SetReloadBarHeight.field_q[var6].length > var9; var9++) {
                     if (SetReloadBarHeight.field_q[var6][var9] != null) {
                       var10_ref_cna = SetReloadBarHeight.field_q[var6][var9];
-                      SetReloadBarHeight.field_q[var6][var9].field_G = 0;
-                      var10_ref_cna.field_hb = 0;
+                      SetReloadBarHeight.field_q[var6][var9].height = 0;
+                      var10_ref_cna.width = 0;
                     }
                   }
                 } else {
-                  GetLaserAimarc.field_o[var6].a(5, 118, 103, var5, var3);
+                  GetLaserAimarc.field_o[var6].setBounds(5, 118, 103, var5, var3);
                   var8 = 110;
                   if (param1) {
-                    SetReloadBarHeight.field_q[var6][0].a(var5, var8, -118, 2, MissionListFactory.field_a, 38, var3);
+                    SetReloadBarHeight.field_q[var6][0].setBoundsAndLayout(var5, var8, -118, 2, MissionListFactory.field_a, 38, var3);
                     var8 += 40;
                   } else {
                     if (SetReloadBarHeight.field_q[var6][0] != null) {
                       var9_ref_cna = SetReloadBarHeight.field_q[var6][0];
-                      SetReloadBarHeight.field_q[var6][0].field_G = 0;
-                      var9_ref_cna.field_hb = 0;
+                      SetReloadBarHeight.field_q[var6][0].height = 0;
+                      var9_ref_cna.width = 0;
                     }
                   }
-                  var9 = -var8 + (-5 + vva.field_r.field_hb + 2);
+                  var9 = -var8 + (-5 + vva.field_r.width + 2);
                   var10 = -1 + SetReloadBarHeight.field_q[var6].length;
                   for (var11 = 0; var11 < var10; var11++) {
                     var12 = var9 * var11 / var10;
-                    SetReloadBarHeight.field_q[var6][var11 + 1].a(var5, var8 + var12, -122, 2, MissionListFactory.field_a, var9 * (var11 + 1) / var10 - 2 - var12, var3);
+                    SetReloadBarHeight.field_q[var6][var11 + 1].setBoundsAndLayout(var5, var8 + var12, -122, 2, MissionListFactory.field_a, var9 * (var11 + 1) / var10 - 2 - var12, var3);
                   }
                   var5 = var5 + (2 + var3);
                 }
               }
             }
           }
-          SetUseCircleFill.field_o.a(-360 + SoftwareRasterizer2D.width >> 1, 117, 360, 10, -130 + (SoftwareRasterizer2D.height - 14));
-          ProjectileHit.field_d.a(0, 124, SetUseCircleFill.field_o.field_hb, 0, 24);
-          SetUseModels.field_o.a(0, 124, SetUseCircleFill.field_o.field_hb, 24, -24 + SetUseCircleFill.field_o.field_G);
-          SetUseModels.field_o.field_gb = uwa.a(11579568, SetUseModels.field_o.field_G, 1, 8421504, 92, 3);
-          DualLinkNode.field_f.a(5, 124, SetUseModels.field_o.field_hb - 10, 5, -2 + (-24 + SetUseModels.field_o.field_G) - 10);
-          rlb.field_a.a((SetUseModels.field_o.field_hb - 80) / 2, 24, 80, -29 + SetUseModels.field_o.field_G, 24);
+          SetUseCircleFill.field_o.setBounds(-360 + SoftwareRasterizer2D.width >> 1, 117, 360, 10, -130 + (SoftwareRasterizer2D.height - 14));
+          ProjectileHit.field_d.setBounds(0, 124, SetUseCircleFill.field_o.width, 0, 24);
+          SetUseModels.field_o.setBounds(0, 124, SetUseCircleFill.field_o.width, 24, -24 + SetUseCircleFill.field_o.height);
+          SetUseModels.field_o.field_gb = uwa.a(11579568, SetUseModels.field_o.height, 1, 8421504, 92, 3);
+          DualLinkNode.field_f.setBounds(5, 124, SetUseModels.field_o.width - 10, 5, -2 + (-24 + SetUseModels.field_o.height) - 10);
+          rlb.field_a.setBounds((SetUseModels.field_o.width - 80) / 2, 24, 80, -29 + SetUseModels.field_o.height, 24);
           GetThrusterForce.a(0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

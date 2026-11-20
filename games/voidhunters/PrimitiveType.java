@@ -19,14 +19,14 @@ final class PrimitiveType {
           var3 = ola.field_p.a(0, param1);
           if (0 != var3) {
             if (var3 == 2 &&
-              ola.field_p.field_R != null &&
-              !ola.field_p.field_R.equals("")) {
-              if (91 == ola.field_p.field_R.charAt(0)) {
-                var4 = ola.field_p.field_R;
+              ola.field_p.text != null &&
+              !ola.field_p.text.equals("")) {
+              if (91 == ola.field_p.text.charAt(0)) {
+                var4 = ola.field_p.text;
                 var5 = var4;
                 var5Lifetime2 = var4;
               } else {
-                var11 = (CharSequence) ((Object) ola.field_p.field_R);
+                var11 = (CharSequence) ((Object) ola.field_p.text);
                 var4 = jwa.a(false, var11);
               }
               var5Lifetime1 = null;

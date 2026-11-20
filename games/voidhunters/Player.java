@@ -75,7 +75,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
         }
     }
 
-    final void c(byte param0) {
+    final void updateAutobalanceTimer(byte param0) {
         if (this.unassignedForAutobalanceTimer > 0) {
           this.unassignedForAutobalanceTimer = this.unassignedForAutobalanceTimer - 1;
         }
@@ -85,7 +85,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
         }
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int countVotesInRange(int param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -110,7 +110,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
         return var4;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void castVote(int param0, int param1, int param2, int param3, int param4) {
         int var11 = 0;
         int var6;
         int var7;
@@ -124,14 +124,14 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
         int[] var15Lifetime1;
         var13 = VoidHunters.field_G;
         if (0 > param1) {
-          if (this.a(param3, 11863, param0) == param4) {
+          if (this.countVotesInRange(param3, 11863, param0) == param4) {
             return;
           }
           this.votes = SetAutozoomSpeedDivide.a(param1, true, this.votes, (byte) -14);
           return;
         }
         this.votes = SetMinimapWidth.a(this.votes, param1, (byte) -99);
-        var6 = this.a(param3, param2 - 18161, param0);
+        var6 = this.countVotesInRange(param3, param2 - 18161, param0);
         if (param4 < var6) {
           var7 = var6 - param4;
           var15 = new int[this.votes.length - var7];
@@ -165,18 +165,18 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
         }
     }
 
-    final void a(int param0) {
+    final void unassignForAutobalance(int param0) {
         this.unassignedForAutobalanceTimer = param0;
         this.selectedTeam = sja.field_c;
     }
 
-    final void a(boolean param0, CarouselSlot param1, int param2, int param3) {
+    final void onLeave(boolean param0, CarouselSlot param1, int param2, int param3) {
         GameSnapshot var5 = null;
         Message var6 = null;
         try {
           var5 = (GameSnapshot) (param1);
           var6 = new Message(2, param3, param3);
-          var5.messageLog.a(var6, param0);
+          var5.messageLog.addMessage(var6, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tfa.L(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -281,7 +281,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
         }
     }
 
-    final void a(int param0, byte param1) {
+    final void removeVote(int param0, byte param1) {
         int var4_int = 0;
         int var6 = 0;
         int var3;
@@ -301,7 +301,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
           break;
         }
         if (param1 >= -10) {
-          this.a(-58, (byte) 29);
+          this.removeVote(-58, (byte) 29);
         }
         if (var3 != -1) {
           if (1 < this.votes.length) {
@@ -338,7 +338,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
           param0.writeBits(-632, this.triggers, 4);
           param0.writeBits(-632, this.aimtargetx, 32);
           if (param1 >= -109) {
-            this.b((byte) 107);
+            this.clearVotes((byte) 107);
           }
           param0.writeBits(-632, this.aimtargety, 32);
           param0.writeBits(-632, 1 + this.specialorder, 8);
@@ -415,7 +415,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
         }
     }
 
-    final void b(byte param0) {
+    final void clearVotes(byte param0) {
         if (param0 <= 124) {
           this.selectedTeam = 69;
         }
@@ -465,15 +465,15 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
         }
     }
 
-    final boolean a(byte param0) {
+    final boolean isParticipating(byte param0) {
         int var2;
         boolean stackIn_5_0 = false;
         var2 = 81 % ((param0 - 12) / 41);
-        stackIn_5_0 = (this.field_a) || (SetMissionResnetResourceTickTime.field_p == 1);
+        stackIn_5_0 = (this.connected) || (SetMissionResnetResourceTickTime.field_p == 1);
         return stackIn_5_0;
     }
 
-    final void b(int param0) {
+    final void resetRoundStatistics(int param0) {
         this.deaths = 0;
         if (param0 != -1) {
           IsaacPacketBuffer var3 = (IsaacPacketBuffer) null;
@@ -483,7 +483,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
         this.kills = 0;
     }
 
-    final void a(CarouselSlot param0, int param1, int param2, int param3) {
+    final void onJoin(CarouselSlot param0, int param1, int param2, int param3) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -497,15 +497,15 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
         try {
           this.selectedTeam = -1;
           var10 = (GameSnapshot) (param0);
-          if (!var10.missionState.c((byte) 125) &&
-            !qab.a(param2 + 24476, var10.world.d(false))) {
+          if (!var10.missionState.isPreGamePhase((byte) 125) &&
+            !qab.a(param2 + 24476, var10.world.getObjectiveType(false))) {
             this.selectedTeam = param1;
           }
           var6 = new Message(1, param1, param1);
-          var10.messageLog.a(var6, true);
+          var10.messageLog.addMessage(var6, true);
           if (param2 != -24354) {
             var9 = (CarouselSlot) null;
-            this.a(false, (CarouselSlot) null, -66, -35);
+            this.onLeave(false, (CarouselSlot) null, -66, -35);
           }
           var7 = var10.world.findShipByOwner(param1, 92);
           if (var7 != null) {
@@ -513,9 +513,9 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
             return;
           }
           if (var10.missionState.getMissionPhase(8) == 5 &&
-            qab.a(34, var10.world.d(false))) {
+            qab.a(34, var10.world.getObjectiveType(false))) {
             var8 = new Random((long)param3);
-            var10.missionState.a(var8, 2196, var10);
+            var10.missionState.assignUnassignedPlayersToTeams(var8, 2196, var10);
           }
           this.unassignedForAutobalanceTimer = 0;
           return;

@@ -4,7 +4,7 @@
 final class GetWeaponParticleSpeedDownshift extends ConsoleCommand {
     static byte[] field_o;
     static String field_p;
-    static llb field_q;
+    static Widget field_q;
 
     final static byte[] decompressContainer(int param0, byte[] param1) {
         RuntimeException var2 = null;

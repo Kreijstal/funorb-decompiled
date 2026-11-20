@@ -11,7 +11,7 @@ final class qw extends IntrusiveNode {
     static gl field_e;
     static lkb field_j;
     static ri field_g;
-    static llb field_l;
+    static Widget field_l;
     private static String field_z;
 
     public static void clearSharedReferences(boolean param0) {

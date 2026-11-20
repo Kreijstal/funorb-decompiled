@@ -5,7 +5,7 @@ final class GetMomentOfInertiaPerpointCalcDownshift extends ConsoleCommand {
     static ri field_r;
     static int field_o;
     static GameKeyHandler field_q;
-    static llb field_p;
+    static Widget field_p;
 
     GetMomentOfInertiaPerpointCalcDownshift(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);

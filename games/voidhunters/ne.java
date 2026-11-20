@@ -85,7 +85,7 @@ final class ne extends ka {
           for (var15 = var12_int; var15 < var13; var15++) {
             var16 = this.field_c[var15];
             if (var16 != 0) {
-              if (fgb.field_m[var15] != param6) {
+              if (WidgetNode.field_m[var15] != param6) {
                 continue;
               }
               stackIn_7_0 = (short)(-1 + var16);
@@ -95,7 +95,7 @@ final class ne extends ka {
             break;
           }
           this.field_c[var14] = (short)(this.field_x + 1);
-          fgb.field_m[var14] = param6;
+          WidgetNode.field_m[var14] = param6;
           this.field_I[this.field_x] = (short)param1;
           this.field_h[this.field_x] = (short)param2;
           this.field_A[this.field_x] = (short)param5;
@@ -765,7 +765,7 @@ final class ne extends ka {
           this.field_h = new short[var12Lifetime2];
           this.field_c = new short[var12Lifetime2];
           this.field_q = new byte[this.field_B];
-          fgb.field_m = new long[var12Lifetime2];
+          WidgetNode.field_m = new long[var12Lifetime2];
           this.field_E = new short[this.field_B];
           this.field_J = new float[var12Lifetime2];
           this.field_l = new short[this.field_B];
@@ -1154,7 +1154,7 @@ final class ne extends ka {
             }
           }
           this.field_F[var16Lifetime5] = this.field_d;
-          fgb.field_m = null;
+          WidgetNode.field_m = null;
           this.field_I = GetBombletSprayProjectileDamage.a(this.field_I, 125, this.field_x);
           this.field_h = GetBombletSprayProjectileDamage.a(this.field_h, 99, this.field_x);
           this.field_A = GetBombletSprayProjectileDamage.a(this.field_A, 73, this.field_x);

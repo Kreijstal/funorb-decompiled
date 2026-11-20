@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PlayerJoinFactory implements GameStateFactory {
-    static llb field_c;
+    static Widget field_c;
     static int field_b;
     static String field_a;
 

@@ -49,68 +49,68 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
     }
 
     final static void a(int param0, boolean param1) {
-        llb stackIn_9_0 = null;
+        Widget stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
-        llb stackIn_13_0 = null;
+        Widget stackIn_13_0 = null;
         boolean stackIn_14_1 = false;
-        llb stackIn_20_0 = null;
+        Widget stackIn_20_0 = null;
         boolean stackIn_21_1 = false;
-        llb stackIn_24_0 = null;
+        Widget stackIn_24_0 = null;
         boolean stackIn_25_1 = false;
-        llb stackIn_29_0 = null;
+        Widget stackIn_29_0 = null;
         boolean stackIn_30_1 = false;
-        llb stackIn_33_0 = null;
+        Widget stackIn_33_0 = null;
         boolean stackIn_34_1 = false;
-        llb stackIn_42_0 = null;
+        Widget stackIn_42_0 = null;
         boolean stackIn_43_1 = false;
-        llb stackIn_46_0 = null;
+        Widget stackIn_46_0 = null;
         boolean stackIn_47_1 = false;
-        llb stackIn_51_0 = null;
+        Widget stackIn_51_0 = null;
         boolean stackIn_52_1 = false;
-        llb stackIn_55_0 = null;
+        Widget stackIn_55_0 = null;
         boolean stackIn_56_1 = false;
-        llb stackIn_66_0 = null;
+        Widget stackIn_66_0 = null;
         boolean stackIn_67_1 = false;
-        llb stackIn_70_0 = null;
+        Widget stackIn_70_0 = null;
         boolean stackIn_71_1 = false;
-        llb stackIn_79_0 = null;
+        Widget stackIn_79_0 = null;
         boolean stackIn_80_1 = false;
-        llb stackIn_83_0 = null;
+        Widget stackIn_83_0 = null;
         boolean stackIn_84_1 = false;
-        llb stackIn_88_0 = null;
+        Widget stackIn_88_0 = null;
         boolean stackIn_89_1 = false;
-        llb stackIn_92_0 = null;
+        Widget stackIn_92_0 = null;
         boolean stackIn_93_1 = false;
         if (param0 < -111) {
           qca.a(SoftwareRasterizer2D.width + 640 >> 1, SoftwareRasterizer2D.height, SoftwareRasterizer2D.width - 640 >> 1, true, 0);
           if (0 < SoftwareTransform3D.field_b) {
             if (null != kl.field_c) {
-              kl.field_c.drawOpaque(tb.field_a.field_L, 0);
+              kl.field_c.drawOpaque(tb.field_a.x, 0);
             }
             stackIn_66_0 = tb.field_a;
             stackIn_67_1 = (param1) && (!bv.field_d);
-            ((llb) (Object) stackIn_66_0).b(stackIn_67_1, -109);
+            ((Widget) (Object) stackIn_66_0).draw(stackIn_67_1, -109);
             stackIn_70_0 = bqa.field_d;
             stackIn_71_1 = (param1) && (!bv.field_d);
-            ((llb) (Object) stackIn_70_0).b(stackIn_71_1, 113);
+            ((Widget) (Object) stackIn_70_0).draw(stackIn_71_1, 113);
           }
           if (!(CarouselPlayerEventFactory.field_a <= 0) ||
             !(SetExplosionPushMultiplier.field_p <= 0)) {
             if (null == kl.field_c) {
               stackIn_79_0 = WaterTextures.field_g;
               stackIn_80_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
-              ((llb) (Object) stackIn_79_0).b(stackIn_80_1, 101);
+              ((Widget) (Object) stackIn_79_0).draw(stackIn_80_1, 101);
               stackIn_83_0 = vva.field_r;
               stackIn_84_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
-              ((llb) (Object) stackIn_83_0).b(stackIn_84_1, 101);
+              ((Widget) (Object) stackIn_83_0).draw(stackIn_84_1, 101);
             } else {
-              kl.field_c.drawOpaque(WaterTextures.field_g.field_L, 0);
+              kl.field_c.drawOpaque(WaterTextures.field_g.x, 0);
               stackIn_88_0 = WaterTextures.field_g;
               stackIn_89_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
-              ((llb) (Object) stackIn_88_0).b(stackIn_89_1, 101);
+              ((Widget) (Object) stackIn_88_0).draw(stackIn_89_1, 101);
               stackIn_92_0 = vva.field_r;
               stackIn_93_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
-              ((llb) (Object) stackIn_92_0).b(stackIn_93_1, 101);
+              ((Widget) (Object) stackIn_92_0).draw(stackIn_93_1, 101);
             }
           }
         } else {
@@ -118,49 +118,49 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
           qca.a(SoftwareRasterizer2D.width + 640 >> 1, SoftwareRasterizer2D.height, SoftwareRasterizer2D.width - 640 >> 1, true, 0);
           if (0 < SoftwareTransform3D.field_b) {
             if (null != kl.field_c) {
-              kl.field_c.drawOpaque(tb.field_a.field_L, 0);
+              kl.field_c.drawOpaque(tb.field_a.x, 0);
             }
             stackIn_9_0 = tb.field_a;
             stackIn_10_1 = (param1) && (!bv.field_d);
-            ((llb) (Object) stackIn_9_0).b(stackIn_10_1, -109);
+            ((Widget) (Object) stackIn_9_0).draw(stackIn_10_1, -109);
             stackIn_13_0 = bqa.field_d;
             stackIn_14_1 = (param1) && (!bv.field_d);
-            ((llb) (Object) stackIn_13_0).b(stackIn_14_1, 113);
+            ((Widget) (Object) stackIn_13_0).draw(stackIn_14_1, 113);
           }
           if (CarouselPlayerEventFactory.field_a > 0) {
             if (null == kl.field_c) {
               stackIn_20_0 = WaterTextures.field_g;
               stackIn_21_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
-              ((llb) (Object) stackIn_20_0).b(stackIn_21_1, 101);
+              ((Widget) (Object) stackIn_20_0).draw(stackIn_21_1, 101);
               stackIn_24_0 = vva.field_r;
               stackIn_25_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
-              ((llb) (Object) stackIn_24_0).b(stackIn_25_1, 101);
+              ((Widget) (Object) stackIn_24_0).draw(stackIn_25_1, 101);
             } else {
-              kl.field_c.drawOpaque(WaterTextures.field_g.field_L, 0);
+              kl.field_c.drawOpaque(WaterTextures.field_g.x, 0);
               stackIn_29_0 = WaterTextures.field_g;
               stackIn_30_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
-              ((llb) (Object) stackIn_29_0).b(stackIn_30_1, 101);
+              ((Widget) (Object) stackIn_29_0).draw(stackIn_30_1, 101);
               stackIn_33_0 = vva.field_r;
               stackIn_34_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
-              ((llb) (Object) stackIn_33_0).b(stackIn_34_1, 101);
+              ((Widget) (Object) stackIn_33_0).draw(stackIn_34_1, 101);
             }
           } else {
             if (SetExplosionPushMultiplier.field_p > 0) {
               if (null == kl.field_c) {
                 stackIn_42_0 = WaterTextures.field_g;
                 stackIn_43_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
-                ((llb) (Object) stackIn_42_0).b(stackIn_43_1, 101);
+                ((Widget) (Object) stackIn_42_0).draw(stackIn_43_1, 101);
                 stackIn_46_0 = vva.field_r;
                 stackIn_47_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
-                ((llb) (Object) stackIn_46_0).b(stackIn_47_1, 101);
+                ((Widget) (Object) stackIn_46_0).draw(stackIn_47_1, 101);
               } else {
-                kl.field_c.drawOpaque(WaterTextures.field_g.field_L, 0);
+                kl.field_c.drawOpaque(WaterTextures.field_g.x, 0);
                 stackIn_51_0 = WaterTextures.field_g;
                 stackIn_52_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
-                ((llb) (Object) stackIn_51_0).b(stackIn_52_1, 101);
+                ((Widget) (Object) stackIn_51_0).draw(stackIn_52_1, 101);
                 stackIn_55_0 = vva.field_r;
                 stackIn_56_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
-                ((llb) (Object) stackIn_55_0).b(stackIn_56_1, 101);
+                ((Widget) (Object) stackIn_55_0).draw(stackIn_56_1, 101);
               }
             }
           }

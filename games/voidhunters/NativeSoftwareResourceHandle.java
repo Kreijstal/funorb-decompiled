@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ba extends r implements NativeResource {
+final class NativeSoftwareResourceHandle extends RenderResourceNode implements NativeResource {
     long field_nativeid;
 
     public final native void disposeNative(boolean param0);
@@ -12,6 +12,6 @@ final class ba extends r implements NativeResource {
         }
     }
 
-    ba(NativeSoftwareToolkit param0) {
+    NativeSoftwareResourceHandle(NativeSoftwareToolkit param0) {
     }
 }

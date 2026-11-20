@@ -3,7 +3,7 @@
  */
 final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
     static String field_o;
-    static llb field_p;
+    static Widget field_p;
 
     final static String a(int param0) {
         String stackIn_56_0 = null;
@@ -63,7 +63,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
             if (var6 == 2) {
               var4 = SetReverbGain.a(tia.field_G, new String[]{waa.field_x}, 91);
               var8 = SetReverbGain.a(GetLaserAimspeed.field_o, new String[]{var3}, 79);
-              var7 = fgb.field_l.field_hb + (bpa.field_c.field_hb - 485 + DebrisFactory.field_c.getStringWidth(var8)) - DebrisFactory.field_c.getStringWidth(var4);
+              var7 = WidgetNode.field_l.width + (bpa.field_c.width - 485 + DebrisFactory.field_c.getStringWidth(var8)) - DebrisFactory.field_c.getStringWidth(var4);
               if (0 > var7) {
                 var7 = 0;
               }
@@ -111,7 +111,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
               var9 = DebrisFactory.field_c.getStringWidth(var4);
               if (!tob.g(0)) {
                 if (bpa.field_c.field_O &&
-                  -bpa.field_c.field_M + PlayerGameData.field_b < var9) {
+                  -bpa.field_c.screenX + PlayerGameData.field_b < var9) {
                   if (!GetBloomThresholdPercentage.field_p) {
                     var1 = vq.field_y;
                   } else {
@@ -127,9 +127,9 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
             }
             SetSelfDestructTimer.a(19204, var4 + BitmapFont.escapeMarkup(SetShipAimLines.field_p.toString()), var7, var5, ConsoleCommand.field_m[var6]);
             if (!SetFightersPerPlayerMaximum.field_p) {
-              fgb.field_l.field_O = false;
+              WidgetNode.field_l.field_O = false;
             }
-            if (fgb.field_l.field_O) {
+            if (WidgetNode.field_l.field_O) {
               var1 = SetReverbGain.a(MissionGenerationDataFactory.field_a, new String[]{var3, waa.field_x}, 100);
             }
           }

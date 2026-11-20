@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bwa extends llb {
-    private llb field_vb;
+final class bwa extends Widget {
+    private Widget field_vb;
     private StringBuilder field_Fb;
-    private llb field_Cb;
+    private Widget field_Cb;
     long field_yb;
     private int field_xb;
-    private llb field_Ab;
-    private llb field_Bb;
+    private Widget field_Ab;
+    private Widget field_Bb;
     private qca field_wb;
-    private llb field_zb;
-    private llb[] field_Db;
-    private llb field_Eb;
+    private Widget field_zb;
+    private Widget[] field_Db;
+    private Widget field_Eb;
 
     final boolean e(byte param0) {
         int discarded$1 = 0;
-        llb var3;
+        Widget var3;
         boolean stackIn_6_0 = false;
         if (param0 >= -59) {
-          var3 = (llb) null;
-          discarded$1 = this.a(44, (llb) null, (String) null, 120, 54, (llb) null);
+          var3 = (Widget) null;
+          discarded$1 = this.a(44, (Widget) null, (String) null, 120, 54, (Widget) null);
         }
         stackIn_6_0 = (null != this.field_wb) && (this.field_wb.field_J);
         return stackIn_6_0;
@@ -47,7 +47,7 @@ final class bwa extends llb {
         return true;
     }
 
-    private final int a(llb param0, int param1, int param2, llb param3, int param4) {
+    private final int a(Widget param0, int param1, int param2, Widget param3, int param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int stackIn_3_0 = 0;
@@ -59,13 +59,13 @@ final class bwa extends llb {
         RuntimeException decompiledCaughtException = null;
         try {
           param1 += 8;
-          var6_int = param3.field_eb.getParagraphHeight(param3.field_R, -(param3.field_w * 2) + param2, param3.field_D);
-          param3.a(0, 125, param2, param1, var6_int);
+          var6_int = param3.font.getParagraphHeight(param3.text, -(param3.field_w * 2) + param2, param3.field_D);
+          param3.setBounds(0, 125, param2, param1, var6_int);
           param1 = param1 + (var6_int - 0);
           if (param4 != 28488) {
-            this.field_Eb = (llb) null;
+            this.field_Eb = (Widget) null;
           }
-          param0.b(param4 ^ -28025, param3);
+          param0.addChild(param4 ^ -28025, param3);
           stackIn_3_0 = param1;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -88,11 +88,11 @@ final class bwa extends llb {
         }
     }
 
-    bwa(int param0, int param1, int param2, int param3, int param4, llb param5, llb param6, llb param7, llb param8, qca param9, llb param10, String param11, long param12) {
+    bwa(int param0, int param1, int param2, int param3, int param4, Widget param5, Widget param6, Widget param7, Widget param8, qca param9, Widget param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$1 = null;
         int var15_int = 0;
-        llb[] var15 = null;
+        Widget[] var15 = null;
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
@@ -104,7 +104,7 @@ final class bwa extends llb {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        llb[] var28 = null;
+        Widget[] var28 = null;
         Object stackIn_8_0;
         qca stackIn_8_1;
         qca stackIn_8_2;
@@ -114,7 +114,7 @@ final class bwa extends llb {
         qca stackIn_9_1;
         qca stackIn_9_2;
         String stackIn_9_5;
-        llb stackIn_15_0 = null;
+        Widget stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
         RuntimeException stackIn_51_0 = null;
         StringBuilder stackIn_51_1 = null;
@@ -159,25 +159,25 @@ final class bwa extends llb {
         this.field_xb = -2;
         try {
           this.field_yb = param12;
-          this.field_Cb = new llb(0L, param6, hpb.field_j.toUpperCase());
+          this.field_Cb = new Widget(0L, param6, hpb.field_j.toUpperCase());
           this.field_Cb.field_F = 1;
-          this.b(-561, this.field_Cb);
-          this.field_zb = new llb(0L, param7);
-          this.field_Cb.b(-561, this.field_zb);
-          this.field_Ab = new llb(0L, (llb) null);
-          this.b(-561, this.field_Ab);
+          this.addChild(-561, this.field_Cb);
+          this.field_zb = new Widget(0L, param7);
+          this.field_Cb.addChild(-561, this.field_zb);
+          this.field_Ab = new Widget(0L, (Widget) null);
+          this.addChild(-561, this.field_Ab);
           if (param11 != null) {
-            this.field_Bb = new llb(0L, param8, GetPointDefenceLaserProjectileInterceptDamage.field_p);
+            this.field_Bb = new Widget(0L, param8, GetPointDefenceLaserProjectileInterceptDamage.field_p);
             this.field_Bb.field_Y = 11184810;
             this.field_Bb.field_F = 1;
-            this.field_Ab.b(-561, this.field_Bb);
-            this.field_vb = new llb(0L, param8, DualLinkNode.field_j);
+            this.field_Ab.addChild(-561, this.field_Bb);
+            this.field_vb = new Widget(0L, param8, DualLinkNode.field_j);
             this.field_vb.field_Y = 11184810;
             this.field_vb.field_F = 1;
-            this.field_Ab.b(-561, this.field_vb);
-            this.field_Eb = new llb(0L, param8);
+            this.field_Ab.addChild(-561, this.field_vb);
+            this.field_Eb = new Widget(0L, param8);
             this.field_Eb.field_Y = 16764006;
-            this.field_Ab.b(-561, this.field_Eb);
+            this.field_Ab.addChild(-561, this.field_Eb);
             this.field_Eb.field_s = "|";
             if (!(nfa.field_d < 5) ||
               !(SetAngularVelocitySustain.field_p < 2)) {
@@ -205,25 +205,25 @@ final class bwa extends llb {
                 stackIn_9_5 = GetPointDefenceLaserProjectiles.field_p;
               }
               this.field_wb = new qca(stackIn_8_3, stackIn_8_4, stackIn_9_5);
-              this.field_Ab.b(-561, this.field_wb);
+              this.field_Ab.addChild(-561, this.field_wb);
             }
-            var28 = new llb[3];
+            var28 = new Widget[3];
             var15 = var28;
-            var28[0] = new llb(0L, (llb) null);
-            this.field_Ab.b(-561, var28[0]);
-            var28[1] = new llb(0L, (llb) null);
-            this.field_Ab.b(-561, var28[1]);
-            var28[2] = new llb(0L, (llb) null);
-            this.field_Ab.b(-561, var28[2]);
-            this.field_Db = new llb[SetFightersPerPlayerMaximum.field_o];
+            var28[0] = new Widget(0L, (Widget) null);
+            this.field_Ab.addChild(-561, var28[0]);
+            var28[1] = new Widget(0L, (Widget) null);
+            this.field_Ab.addChild(-561, var28[1]);
+            var28[2] = new Widget(0L, (Widget) null);
+            this.field_Ab.addChild(-561, var28[2]);
+            this.field_Db = new Widget[SetFightersPerPlayerMaximum.field_o];
             for (var16 = 0; SetFightersPerPlayerMaximum.field_o > var16; var16++) {
               if (GetSniperCannonEnergyUsed.field_o[var16] != null) {
-                this.field_Db[var16] = new llb(0L, param10, GetSniperCannonEnergyUsed.field_o[var16]);
+                this.field_Db[var16] = new Widget(0L, param10, GetSniperCannonEnergyUsed.field_o[var16]);
                 this.field_Db[var16].field_F = 0;
                 stackIn_15_0 = this.field_Db[var16];
                 stackIn_16_1 = (param11 != null);
-                stackIn_15_0.field_y = stackIn_16_1;
-                this.field_Ab.b(-561, this.field_Db[var16]);
+                stackIn_15_0.enabled = stackIn_16_1;
+                this.field_Ab.addChild(-561, this.field_Db[var16]);
               }
             }
             this.field_Fb = new StringBuilder(12);
@@ -231,21 +231,21 @@ final class bwa extends llb {
               discarded$1 = this.field_Fb.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_eb.getStringWidth(GetGrapplingHookCooldown.field_p);
+            var17 = param6.font.getStringWidth(GetGrapplingHookCooldown.field_p);
             if (var16Lifetime2 < var17) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_eb.getStringWidth(oqb.field_n);
+            var17Lifetime2 = param6.font.getStringWidth(oqb.field_n);
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_eb.getStringWidth(SetUseOffscreenRendering.field_p);
+            var17Lifetime3 = param6.font.getStringWidth(SetUseOffscreenRendering.field_p);
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
             for (var17Lifetime4 = 0; var17Lifetime4 < SetFightersPerPlayerMaximum.field_o; var17Lifetime4++) {
               if (null != this.field_Db[var17Lifetime4]) {
-                var18 = this.field_Db[var17Lifetime4].e(80);
+                var18 = this.field_Db[var17Lifetime4].getPreferredWidth(80);
                 if (var16Lifetime2 < var18) {
                   var16Lifetime2 = var18;
                 }
@@ -286,7 +286,7 @@ final class bwa extends llb {
               var17Lifetime5 = var18Lifetime5;
             }
             var19 = var16Lifetime2 * 3 + 26;
-            var20 = this.field_Cb.e(112);
+            var20 = this.field_Cb.getPreferredWidth(112);
             if (var19 < var20) {
               var19 = var20;
             }
@@ -296,49 +296,49 @@ final class bwa extends llb {
                 var19 = var20Lifetime2;
               }
             }
-            this.field_Cb.a(0, 35, 13 + (var19 + 13), 0, 24);
-            this.field_zb.a(this.field_Cb.field_hb - 20, 119, 15, 5, 15);
+            this.field_Cb.setBounds(0, 35, 13 + (var19 + 13), 0, 24);
+            this.field_zb.setBounds(this.field_Cb.width - 20, 119, 15, 5, 15);
             var21 = 10;
-            this.field_Bb.a(13, 118, var19, var21, nna.field_w * 2);
+            this.field_Bb.setBounds(13, 118, var19, var21, nna.field_w * 2);
             var21 = var21 + 2 * nna.field_w;
-            this.field_vb.a(13, 122, var19, var21, nna.field_w * 2);
+            this.field_vb.setBounds(13, 122, var19, var21, nna.field_w * 2);
             var21 = var21 + (nna.field_w * 2 + 10);
-            this.field_Eb.a(0, -104, 0, var21, nna.field_w);
+            this.field_Eb.setBounds(0, -104, 0, var21, nna.field_w);
             var21 = var21 + (10 + nna.field_w);
             if (this.field_wb != null) {
               var20Lifetime3 = this.field_wb.b(4, 0);
               this.field_wb.a((-var20Lifetime3 + var19) / 2 + 13, nna.field_w, 4, var21, var20Lifetime3, false);
               var21 = var21 + (nna.field_w + 10);
             }
-            var28[0].a(13, 122, var16Lifetime2, var21, var17Lifetime5);
-            var28[1].a(13 + (13 + var16Lifetime2), -106, var16Lifetime2, var21, var17Lifetime5);
-            var28[2].a(39 + 2 * var16Lifetime2, -128, var16Lifetime2, var21, var17Lifetime5);
+            var28[0].setBounds(13, 122, var16Lifetime2, var21, var17Lifetime5);
+            var28[1].setBounds(13 + (13 + var16Lifetime2), -106, var16Lifetime2, var21, var17Lifetime5);
+            var28[2].setBounds(39 + 2 * var16Lifetime2, -128, var16Lifetime2, var21, var17Lifetime5);
             var22 = var21;
-            this.field_Ab.a(0, -94, var19 + 13 + 13, 24, 10 + var17Lifetime5 + var22);
-            this.field_Ab.field_gb = uwa.a(11579568, this.field_Ab.field_G, 2105376, 8421504, 104, 3);
+            this.field_Ab.setBounds(0, -94, var19 + 13 + 13, 24, 10 + var17Lifetime5 + var22);
+            this.field_Ab.field_gb = uwa.a(11579568, this.field_Ab.height, 2105376, 8421504, 104, 3);
             var23 = 26 + var19;
             var24 = 10 + (24 + (var22 + var17Lifetime5));
             var25 = jv.a((byte) -109, param0, param2, var23);
             var26 = lma.a(param3, param1, var24, (byte) -16);
-            this.a(var25, 0, var23, var26, var24);
+            this.setBounds(var25, 0, var23, var26, var24);
             return;
           }
-          this.field_Bb = new llb(0L, param8, GetPhysicsCollisionPhantomForceMultiplier.field_q);
+          this.field_Bb = new Widget(0L, param8, GetPhysicsCollisionPhantomForceMultiplier.field_q);
           this.field_Bb.field_Y = 11184810;
           this.field_Bb.field_F = 1;
-          this.field_Ab.b(-561, this.field_Bb);
+          this.field_Ab.addChild(-561, this.field_Bb);
           var15_int = 226;
           var16Lifetime1 = 10;
-          var17Lifetime1 = this.field_Bb.field_eb.getLineCount(this.field_Bb.field_R, var15_int);
-          this.field_Bb.a(13, -65, var15_int, var16Lifetime1, nna.field_w * var17Lifetime1);
+          var17Lifetime1 = this.field_Bb.font.getLineCount(this.field_Bb.text, var15_int);
+          this.field_Bb.setBounds(13, -65, var15_int, var16Lifetime1, nna.field_w * var17Lifetime1);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * nna.field_w;
-          this.field_Ab.a(0, 116, 13 + var15_int + 13, 24, var16Lifetime1 + 10);
-          this.field_Ab.field_gb = uwa.a(11579568, this.field_Ab.field_G, 2105376, 8421504, 117, 3);
+          this.field_Ab.setBounds(0, 116, 13 + var15_int + 13, 24, var16Lifetime1 + 10);
+          this.field_Ab.field_gb = uwa.a(11579568, this.field_Ab.height, 2105376, 8421504, 117, 3);
           var18Lifetime1 = 13 + (var15_int + 13);
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = jv.a((byte) -109, param0, param2, var18Lifetime1);
           var21Lifetime1 = lma.a(param3, param1, var19Lifetime1, (byte) -16);
-          this.a(var20Lifetime1, -77, var18Lifetime1, var21Lifetime1, var19Lifetime1);
+          this.setBounds(var20Lifetime1, -77, var18Lifetime1, var21Lifetime1, var19Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -397,11 +397,11 @@ final class bwa extends llb {
         return (32 & param0) != 0 ? true : false;
     }
 
-    private final int a(int param0, llb param1, String param2, int param3, int param4, llb param5) {
+    private final int a(int param0, Widget param1, String param2, int param3, int param4, Widget param5) {
         int discarded$1 = 0;
-        llb var7 = null;
+        Widget var7 = null;
         RuntimeException var7_ref = null;
-        llb var8 = null;
+        Widget var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -412,12 +412,12 @@ final class bwa extends llb {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = new llb(0L, param5, 0, param4, param3, 24, param2);
+          var7 = new Widget(0L, param5, 0, param4, param3, 24, param2);
           if (param0 != 6300) {
-            var8 = (llb) null;
-            discarded$1 = this.a(-27, (llb) null, (String) null, -91, 109, (llb) null);
+            var8 = (Widget) null;
+            discarded$1 = this.a(-27, (Widget) null, (String) null, -91, 109, (Widget) null);
           }
-          param1.b(-561, var7);
+          param1.addChild(-561, var7);
           param4 += 32;
           stackIn_3_0 = param4;
           return stackIn_3_0;
@@ -451,15 +451,15 @@ final class bwa extends llb {
         int var3 = 0;
         qca stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
-        llb stackIn_16_0 = null;
+        Widget stackIn_16_0 = null;
         boolean stackIn_17_1 = false;
         int var4;
         var4 = VoidHunters.field_G;
-        this.a(param0, 1332);
+        this.updateInput(param0, 1332);
         if (null != this.field_Eb) {
-          this.field_Eb.field_R = this.field_Fb.toString();
-          this.field_Eb.field_L = (this.field_hb - this.field_Eb.field_eb.getStringWidth(this.field_Eb.field_R)) / 2;
-          this.field_Eb.field_hb = this.field_hb - this.field_Eb.field_L;
+          this.field_Eb.text = this.field_Fb.toString();
+          this.field_Eb.x = (this.width - this.field_Eb.font.getStringWidth(this.field_Eb.text)) / 2;
+          this.field_Eb.width = this.width - this.field_Eb.x;
           if (this.field_wb != null &&
             this.field_wb.field_o != 0) {
             stackIn_7_0 = this.field_wb;
@@ -470,8 +470,8 @@ final class bwa extends llb {
             if (null != this.field_Db[var3]) {
               stackIn_16_0 = this.field_Db[var3];
               stackIn_17_1 = !(0 >= this.field_Fb.length());
-              stackIn_16_0.field_y = stackIn_17_1;
-              if (this.field_Db[var3].field_y &&
+              stackIn_16_0.enabled = stackIn_17_1;
+              if (this.field_Db[var3].enabled &&
                 this.field_Db[var3].field_o != 0) {
                 return var3;
               }

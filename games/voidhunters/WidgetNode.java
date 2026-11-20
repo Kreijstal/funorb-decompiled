@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class fgb extends DualLinkNode {
+class WidgetNode extends DualLinkNode {
     static NodeHashTable field_k;
-    static llb field_l;
+    static Widget field_l;
     static long[] field_m;
 
     public static void clearSharedReferences(int param0) {
@@ -18,7 +18,7 @@ class fgb extends DualLinkNode {
         field_m = null;
     }
 
-    fgb() {
+    WidgetNode() {
     }
 
     final static void a(int param0, int param1, lsa param2) {
@@ -26,7 +26,7 @@ class fgb extends DualLinkNode {
         try {
           if (param0 <= 13) {
             lsa var4 = (lsa) null;
-            fgb.a(-2, -20, (lsa) null);
+            WidgetNode.a(-2, -20, (lsa) null);
           }
           var3 = RequestNewestBlackboxRecording.field_p;
           var3.writeIsaacByte(24335, param1);

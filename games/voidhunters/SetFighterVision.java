@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetFighterVision extends ConsoleCommand {
-    final static void a(llb param0, int param1, llb param2, llb param3, llb param4) {
+    final static void a(Widget param0, int param1, Widget param2, Widget param3, Widget param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -29,12 +29,12 @@ final class SetFighterVision extends ConsoleCommand {
             if (hb.field_c) {
               var5 = bw.field_b;
             } else {
-              var5 = cna.field_xb;
+              var5 = IconTextWidget.field_xb;
             }
           }
           var7 = (String) null;
           SetSelfDestructTimer.a(19204, var5, 0, (String) null, kmb.field_a);
-          ServerTick.field_d = fgb.field_l;
+          ServerTick.field_d = WidgetNode.field_l;
           bpa.field_c.field_ib = (8355711 & TargetLock.field_b.field_ib >> 1) + (-((16711423 & kmb.field_a) >> 1) + kmb.field_a);
           bpa.field_c.field_qb = kmb.field_a - (((16711422 & kmb.field_a) >> 1) - ((TargetLock.field_b.field_qb & 16711423) >> 1));
           bpa.field_c.field_U = -(kmb.field_a >> 1 & 8355711) + kmb.field_a + ((TargetLock.field_b.field_U & 16711423) >> 1);
@@ -42,22 +42,22 @@ final class SetFighterVision extends ConsoleCommand {
             return;
           }
           lsa.field_e = bpa.field_c;
-          qw.field_l = new llb(0L, param3);
-          hp.field_b = new llb(0L, param2);
-          me.field_s = new llb(0L, (llb) null);
-          SetThrusterAutobalancing.field_p = new llb(0L, param0);
-          bpa.field_c = new llb(0L, param4);
-          bpa.field_c.field_eb = DebrisFactory.field_c;
-          SetThrusterAutobalancing.field_p.b(-561, bpa.field_c);
-          fgb.field_l = new llb(0L, ServerTick.field_d);
-          SetThrusterAutobalancing.field_p.b(-561, fgb.field_l);
-          GetMachineGunAimarc.field_q = new llb(0L, TargetLock.field_b, GetMissionTerrainVotingChancestep.field_o);
-          dp.field_a = new llb(0L, TargetLock.field_b);
-          qw.field_l.b(-561, hp.field_b);
-          qw.field_l.b(-561, me.field_s);
-          me.field_s.b(-561, SetThrusterAutobalancing.field_p);
-          me.field_s.b(param1 + 19588, GetMachineGunAimarc.field_q);
-          me.field_s.b(-561, dp.field_a);
+          qw.field_l = new Widget(0L, param3);
+          hp.field_b = new Widget(0L, param2);
+          me.field_s = new Widget(0L, (Widget) null);
+          SetThrusterAutobalancing.field_p = new Widget(0L, param0);
+          bpa.field_c = new Widget(0L, param4);
+          bpa.field_c.font = DebrisFactory.field_c;
+          SetThrusterAutobalancing.field_p.addChild(-561, bpa.field_c);
+          WidgetNode.field_l = new Widget(0L, ServerTick.field_d);
+          SetThrusterAutobalancing.field_p.addChild(-561, WidgetNode.field_l);
+          GetMachineGunAimarc.field_q = new Widget(0L, TargetLock.field_b, GetMissionTerrainVotingChancestep.field_o);
+          dp.field_a = new Widget(0L, TargetLock.field_b);
+          qw.field_l.addChild(-561, hp.field_b);
+          qw.field_l.addChild(-561, me.field_s);
+          me.field_s.addChild(-561, SetThrusterAutobalancing.field_p);
+          me.field_s.addChild(param1 + 19588, GetMachineGunAimarc.field_q);
+          me.field_s.addChild(-561, dp.field_a);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

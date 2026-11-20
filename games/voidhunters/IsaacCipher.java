@@ -15,7 +15,7 @@ final class IsaacCipher {
         int stackIn_5_2;
         int stackIn_5_3;
         boolean stackIn_6_4 = false;
-        llb stackIn_22_0 = null;
+        Widget stackIn_22_0 = null;
         String stackIn_23_1 = null;
         int stackIn_26_0 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -46,40 +46,40 @@ final class IsaacCipher {
           stackIn_5_3 = param1 * (2 + nna.field_w) * 3;
           stackIn_6_4 = (qg.field_a == vra.field_b.field_xb);
           var3_int = ((soa) (Object) stackIn_5_0).a((byte) stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, param2, 2 + nna.field_w) ? 1 : 0;
-          var4 = vra.field_b.field_yb.field_lb;
+          var4 = vra.field_b.field_yb.children;
           if (iwa.field_b != 2 &&
             1 != iwa.field_b) {
-            vra.field_b.field_xb.field_xb.field_R = SetFighterRepairTime.field_o;
-            vra.field_b.field_y = false;
+            vra.field_b.field_xb.field_xb.text = SetFighterRepairTime.field_o;
+            vra.field_b.enabled = false;
             igb.a(vra.field_b.field_yb, (byte) -25);
             return;
           }
-          vra.field_b.field_xb.field_xb.field_R = null;
-          vra.field_b.field_y = true;
+          vra.field_b.field_xb.field_xb.text = null;
+          vra.field_b.enabled = true;
           var5 = null;
           var6 = (vu) (var4.first(0));
           while (var6 != null) {
             var7 = 0;
-            if (var6.field_lb == null) {
-              var6.field_wb = new llb(0L, SetReverbDamp.field_q);
-              var6.b(-561, var6.field_wb);
-              var6.field_Bb = new llb(0L, SetReverbDamp.field_q);
-              var6.b(-561, var6.field_Bb);
+            if (var6.children == null) {
+              var6.field_wb = new Widget(0L, SetReverbDamp.field_q);
+              var6.addChild(-561, var6.field_wb);
+              var6.field_Bb = new Widget(0L, SetReverbDamp.field_q);
+              var6.addChild(-561, var6.field_Bb);
               var7 = 1;
-              var6.g(127);
+              var6.inheritInteractionStateInDescendants(127);
             }
-            var6.field_hb = vra.field_b.field_yb.field_hb;
-            var6.field_wb.a(0, -55, var6.field_hb, 0, nna.field_w);
+            var6.width = vra.field_b.field_yb.width;
+            var6.field_wb.setBounds(0, -55, var6.width, 0, nna.field_w);
             var8 = 0;
             if (null != var6.field_vb &&
               !var6.field_vb.equals("")) {
               var6.field_Bb.field_tb = SetMissileLauncherRandomness.field_o;
               var6.field_Bb.field_qb = 16737894;
               var8 = 1;
-              var6.field_Bb.a(0, -87, SetMissileLauncherRandomness.field_o.paddedWidth + 3, 0, nna.field_w);
+              var6.field_Bb.setBounds(0, -87, SetMissileLauncherRandomness.field_o.paddedWidth + 3, 0, nna.field_w);
             }
             var9 = 0;
-            var10 = var6.field_hb;
+            var10 = var6.width;
             if (var8 != 0) {
               var9 = 3 + SetMissileLauncherRandomness.field_o.paddedWidth;
               var10 = var10 - var9;
@@ -88,17 +88,17 @@ final class IsaacCipher {
             if (var10 <= 0) {
               stackIn_23_1 = var6.field_Fb;
             } else {
-              stackIn_23_1 = BitmapFont.ellipsize(var6.field_wb.field_eb, var6.field_Fb, var10);
+              stackIn_23_1 = BitmapFont.ellipsize(var6.field_wb.font, var6.field_Fb, var10);
             }
-            stackIn_22_0.field_R = stackIn_23_1;
-            stackIn_26_0 = (var6.field_wb.field_R.equals(var6.field_Fb)) ? 0 : 1;
+            stackIn_22_0.text = stackIn_23_1;
+            stackIn_26_0 = (var6.field_wb.text.equals(var6.field_Fb)) ? 0 : 1;
             var11 = stackIn_26_0;
-            var6.field_wb.a(var9, 117, var10, 0, nna.field_w);
+            var6.field_wb.setBounds(var9, 117, var10, 0, nna.field_w);
             if (var3_int == 0) {
-              var6.field_E = -var6.field_G + nna.field_w;
+              var6.field_E = -var6.height + nna.field_w;
             }
             if (var7 != 0) {
-              vra.field_b.field_yb.a((llb) (var5), 2, var6, -113);
+              vra.field_b.field_yb.positionBelow((Widget) (var5), 2, var6, -113);
             }
             if (var6.field_Bb != null &&
               var6.field_Bb.field_O) {
@@ -114,22 +114,22 @@ final class IsaacCipher {
               pea.$cfr$intArgs$a$91f64d33677c(0L, var6, -1, (int[]) null, var6.field_Cb, vra.field_b.field_xb, var6.field_Fb, 72, -1);
               var16 = GetLagStandardDeviationOut.field_o;
               var13_ref_String = PlayerJoinFactory.field_a;
-              var16.field_i.a(var13_ref_String, (byte) -53, 7);
+              var16.field_i.addItem(var13_ref_String, (byte) -53, 7);
               var17 = GetLagStandardDeviationOut.field_o;
               var13 = Particle.field_H;
               var14 = qs.field_a;
-              var17.field_i.b(var13, -29060, var14, 0, 0);
+              var17.field_i.layoutPopup(var13, -29060, var14, 0, 0);
             }
             var6 = (vu) (var4.next((byte) 66));
           }
           if (0 != vra.field_b.field_wb.field_o) {
-            ola.field_p = new qka(vra.field_b.field_wb.field_M, vra.field_b.field_wb.field_u, vra.field_b.field_wb.field_hb, vra.field_b.field_wb.field_G, mw.field_d, GetDebrisMax.field_o, qc.field_q, qc.field_q);
+            ola.field_p = new qka(vra.field_b.field_wb.screenX, vra.field_b.field_wb.screenY, vra.field_b.field_wb.width, vra.field_b.field_wb.height, mw.field_d, GetDebrisMax.field_o, qc.field_q, qc.field_q);
             MissionGenerationDataFactory.field_b = 2;
           }
           if (0 == vra.field_b.field_zb.field_o) {
             return;
           }
-          ola.field_p = new qka(vra.field_b.field_zb.field_M, vra.field_b.field_zb.field_u, vra.field_b.field_zb.field_hb, vra.field_b.field_zb.field_G, GetUseNiceTrails.field_q, GetDebrisMax.field_o, qc.field_q, qc.field_q);
+          ola.field_p = new qka(vra.field_b.field_zb.screenX, vra.field_b.field_zb.screenY, vra.field_b.field_zb.width, vra.field_b.field_zb.height, GetUseNiceTrails.field_q, GetDebrisMax.field_o, qc.field_q, qc.field_q);
           MissionGenerationDataFactory.field_b = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

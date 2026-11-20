@@ -3,7 +3,7 @@
  */
 final class SetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
     static Sprite[] field_p;
-    static mm field_o;
+    static LobbyGameEntry field_o;
 
     SetSpinningBladeSpindamageMultiplier(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);

@@ -4,7 +4,7 @@
 final class GetSniperCannonAimspeed extends ConsoleCommand {
     static int[] field_p;
     static String[] field_r;
-    static llb field_q;
+    static Widget field_q;
     static String field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -16,7 +16,7 @@ final class GetSniperCannonAimspeed extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            field_q = (llb) null;
+            field_q = (Widget) null;
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(122, 118));
           return stackIn_3_0;

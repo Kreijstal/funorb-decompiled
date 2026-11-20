@@ -4,7 +4,7 @@
 final class SettingsChangeFactory implements GameStateFactory {
     static oe field_e;
     static String field_d;
-    static llb field_b;
+    static Widget field_b;
     static apb[] field_a;
     static int field_c;
 

@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vu extends llb {
+final class vu extends Widget {
     static byte[] field_zb;
     int field_yb;
-    llb field_wb;
+    Widget field_wb;
     static boolean field_xb;
-    llb field_Eb;
+    Widget field_Eb;
     String field_Cb;
     String field_Ab;
-    llb field_Bb;
+    Widget field_Bb;
     String field_vb;
     static int field_Db;
     String field_Fb;
@@ -73,7 +73,7 @@ final class vu extends llb {
     }
 
     vu() {
-        super(0L, (llb) null);
+        super(0L, (Widget) null);
     }
 
     static {

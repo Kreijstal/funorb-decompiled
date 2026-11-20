@@ -3,7 +3,7 @@
  */
 final class SetMissionVariablesHudX extends ConsoleCommand {
     static int field_p;
-    static llb[] field_o;
+    static Widget[] field_o;
 
     public static void clearSharedReferences(int param0) {
         int var1 = 64 % ((param0 + 58) / 53);

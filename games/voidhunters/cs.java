@@ -10,7 +10,7 @@ final class cs {
         int var1 = GetRepairModePower.field_o * GetRepairModePower.field_o;
         int var2 = var1 - tb.field_b * tb.field_b;
         int var3 = (-GetPhasedEnergyBeamProjectiles.field_o + GetAngularForceDownshift.field_p) * var2 / var1 + GetPhasedEnergyBeamProjectiles.field_o;
-        SetToggledScoreboard.field_o.a(SetUseDetailLines.field_o, 118, 640, var3, 120);
+        SetToggledScoreboard.field_o.setBounds(SetUseDetailLines.field_o, 118, 640, var3, 120);
         int var4 = 81 / ((31 - param0) / 40);
         hp.a(640, -24 + GetAngularForceDownshift.field_p, qs.field_c, false, MissionListFactory.field_a, 5, 0);
     }

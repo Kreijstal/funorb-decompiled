@@ -13,7 +13,7 @@ final class aaa {
         field_a = null;
     }
 
-    final static void a(byte param0, mm param1, String param2, boolean param3) {
+    final static void a(byte param0, LobbyGameEntry param1, String param2, boolean param3) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -31,23 +31,23 @@ final class aaa {
         String var12 = null;
         hqb var13 = null;
         try {
-          pea.$cfr$intArgs$a$91f64d33677c(0L, param1, -1, (int[]) null, (String) null, MapClearanceCircle.field_f, (String) null, 50, param1.f((byte) -13));
+          pea.$cfr$intArgs$a$91f64d33677c(0L, param1, -1, (int[]) null, (String) null, MapClearanceCircle.field_f, (String) null, 50, param1.getGameId((byte) -13));
           if (param1.field_fc && (param1.field_Bb == 2 ||
             !(SetAngularVelocitySustain.field_p < 2))) {
             var7 = GetLagStandardDeviationOut.field_o;
             var8 = SetReverbGain.a(GetMassDriverProjectileLife.field_o, new String[]{param2}, 113);
-            var7.field_i.a(var8, (byte) -53, 10);
+            var7.field_i.addItem(var8, (byte) -53, 10);
           }
           GetLagStandardDeviationOut.field_o.a(true);
           if (param3) {
             if (GetLagStandardDeviationOut.field_o.field_h != GetMachineGunPulsetime.field_q) {
               var11 = GetLagStandardDeviationOut.field_o;
               var12 = SetReverbGain.a(nga.field_a, new String[]{param2}, param0 ^ 57);
-              var11.field_i.a(var12, (byte) -53, 15);
+              var11.field_i.addItem(var12, (byte) -53, 15);
             } else {
               var9 = GetLagStandardDeviationOut.field_o;
               var10 = SetReverbGain.a(ot.field_c, new String[]{param2}, 120);
-              var9.field_i.a(var10, (byte) -53, 16);
+              var9.field_i.addItem(var10, (byte) -53, 16);
             }
           }
           var13 = GetLagStandardDeviationOut.field_o;
@@ -56,7 +56,7 @@ final class aaa {
           if (param0 != 112) {
             field_a = (String) null;
           }
-          var13.field_i.b(var5, -29060, var6, 0, 0);
+          var13.field_i.layoutPopup(var5, -29060, var6, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

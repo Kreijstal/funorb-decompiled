@@ -21,12 +21,12 @@ final class GetUseRectOutline extends ConsoleCommand {
           }
           if (GetTorpedoProjectileDamage.field_o &&
             SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
-            DualLinkNode.field_f.field_y = false;
-            CarouselSlot.field_a.field_xb.field_R = SetPhasedEnergyBeamPulsetime.field_q;
+            DualLinkNode.field_f.enabled = false;
+            CarouselSlot.field_a.field_xb.text = SetPhasedEnergyBeamPulsetime.field_q;
             igb.a(CarouselSlot.field_a.field_wb, (byte) -93);
           } else {
-            CarouselSlot.field_a.field_xb.field_R = null;
-            DualLinkNode.field_f.field_y = true;
+            CarouselSlot.field_a.field_xb.text = null;
+            DualLinkNode.field_f.enabled = true;
             SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
           }
         } else {
@@ -59,12 +59,12 @@ final class GetUseRectOutline extends ConsoleCommand {
               }
               if (GetTorpedoProjectileDamage.field_o &&
                 SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
-                DualLinkNode.field_f.field_y = false;
-                CarouselSlot.field_a.field_xb.field_R = SetPhasedEnergyBeamPulsetime.field_q;
+                DualLinkNode.field_f.enabled = false;
+                CarouselSlot.field_a.field_xb.text = SetPhasedEnergyBeamPulsetime.field_q;
                 igb.a(CarouselSlot.field_a.field_wb, (byte) -93);
               } else {
-                CarouselSlot.field_a.field_xb.field_R = null;
-                DualLinkNode.field_f.field_y = true;
+                CarouselSlot.field_a.field_xb.text = null;
+                DualLinkNode.field_f.enabled = true;
                 SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
               }
             } else {
@@ -83,12 +83,12 @@ final class GetUseRectOutline extends ConsoleCommand {
               }
               if (GetTorpedoProjectileDamage.field_o &&
                 SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
-                DualLinkNode.field_f.field_y = false;
-                CarouselSlot.field_a.field_xb.field_R = SetPhasedEnergyBeamPulsetime.field_q;
+                DualLinkNode.field_f.enabled = false;
+                CarouselSlot.field_a.field_xb.text = SetPhasedEnergyBeamPulsetime.field_q;
                 igb.a(CarouselSlot.field_a.field_wb, (byte) -93);
               } else {
-                CarouselSlot.field_a.field_xb.field_R = null;
-                DualLinkNode.field_f.field_y = true;
+                CarouselSlot.field_a.field_xb.text = null;
+                DualLinkNode.field_f.enabled = true;
                 SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
               }
             }
@@ -122,12 +122,12 @@ final class GetUseRectOutline extends ConsoleCommand {
               }
               if (GetTorpedoProjectileDamage.field_o &&
                 SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
-                DualLinkNode.field_f.field_y = false;
-                CarouselSlot.field_a.field_xb.field_R = SetPhasedEnergyBeamPulsetime.field_q;
+                DualLinkNode.field_f.enabled = false;
+                CarouselSlot.field_a.field_xb.text = SetPhasedEnergyBeamPulsetime.field_q;
                 igb.a(CarouselSlot.field_a.field_wb, (byte) -93);
               } else {
-                CarouselSlot.field_a.field_xb.field_R = null;
-                DualLinkNode.field_f.field_y = true;
+                CarouselSlot.field_a.field_xb.text = null;
+                DualLinkNode.field_f.enabled = true;
                 SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
               }
             } else {
@@ -145,17 +145,17 @@ final class GetUseRectOutline extends ConsoleCommand {
                 ComponentCollision.a(param5, (byte) 105, param8, param0, param7);
               }
               if (!GetTorpedoProjectileDamage.field_o) {
-                CarouselSlot.field_a.field_xb.field_R = null;
-                DualLinkNode.field_f.field_y = true;
+                CarouselSlot.field_a.field_xb.text = null;
+                DualLinkNode.field_f.enabled = true;
                 SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
               } else {
                 if (SetSpinningBladeSpindamageMultiplier.field_o.field_zb < SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
-                  CarouselSlot.field_a.field_xb.field_R = null;
-                  DualLinkNode.field_f.field_y = true;
+                  CarouselSlot.field_a.field_xb.text = null;
+                  DualLinkNode.field_f.enabled = true;
                   SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
                 } else {
-                  DualLinkNode.field_f.field_y = false;
-                  CarouselSlot.field_a.field_xb.field_R = SetPhasedEnergyBeamPulsetime.field_q;
+                  DualLinkNode.field_f.enabled = false;
+                  CarouselSlot.field_a.field_xb.text = SetPhasedEnergyBeamPulsetime.field_q;
                   igb.a(CarouselSlot.field_a.field_wb, (byte) -93);
                 }
               }

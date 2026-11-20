@@ -52,27 +52,27 @@ final class fdb extends MidiPcmStream {
     }
 
     final static void a(boolean param0, boolean param1, int param2, byte param3) {
-        llb stackIn_9_0 = null;
+        Widget stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
-        llb stackIn_16_0 = null;
+        Widget stackIn_16_0 = null;
         boolean stackIn_17_1 = false;
-        llb stackIn_21_0 = null;
+        Widget stackIn_21_0 = null;
         boolean stackIn_22_1 = false;
         moa.a(true);
         if (0 > SetShieldsDirectionalArcParticleSpeedDownshift.field_q) {
-          nna.field_v.field_R = null;
+          nna.field_v.text = null;
         } else {
-          nna.field_v.field_R = SetReverbGain.a(SetUseExtraBackground.field_t, new String[]{Integer.toString(SetShieldsDirectionalArcParticleSpeedDownshift.field_q)}, 78);
+          nna.field_v.text = SetReverbGain.a(SetUseExtraBackground.field_t, new String[]{Integer.toString(SetShieldsDirectionalArcParticleSpeedDownshift.field_q)}, 78);
         }
         stackIn_9_0 = tb.field_a;
         stackIn_10_1 = (param0) && (!param1) && (!bv.field_d) && (SetSpinningBladeSpindamageMultiplier.field_o == null) && (null == SetThrusterParticleSpeedDownshift.field_o);
-        ((llb) (Object) stackIn_9_0).a(stackIn_10_1, 1332);
+        ((Widget) (Object) stackIn_9_0).updateInput(stackIn_10_1, 1332);
         stackIn_16_0 = bqa.field_d;
         stackIn_17_1 = (param0) && (!param1) && (!bv.field_d) && (null == SetSpinningBladeSpindamageMultiplier.field_o) && (null == SetThrusterParticleSpeedDownshift.field_o);
-        ((llb) (Object) stackIn_16_0).a(stackIn_17_1, 1332);
+        ((Widget) (Object) stackIn_16_0).updateInput(stackIn_17_1, 1332);
         stackIn_21_0 = GetTorpedoProjectiles.field_o;
         stackIn_22_1 = (param0) && (!param1) && (bv.field_d);
-        ((llb) (Object) stackIn_21_0).a(stackIn_22_1, 1332);
+        ((Widget) (Object) stackIn_21_0).updateInput(stackIn_22_1, 1332);
         lc.field_b.field_a.i(10000);
         if (SpawnChoiceFactory.field_c.field_o != 0) {
           MessageLog.field_d = true;

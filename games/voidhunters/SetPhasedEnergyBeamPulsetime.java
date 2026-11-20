@@ -3,7 +3,7 @@
  */
 final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
     static String field_q;
-    static llb field_o;
+    static Widget field_o;
     static String field_p;
 
     final static String a(String param0, int param1, int param2) {
@@ -91,8 +91,8 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
         try {
           var2_int = PlayerGameData.field_b;
           var3 = uia.field_b;
-          var4 = qc.field_q.field_eb.getLineCount(param0, 500);
-          var5 = 6 + qc.field_q.field_eb.getParagraphWidth(param0, 500);
+          var4 = qc.field_q.font.getLineCount(param0, 500);
+          var5 = 6 + qc.field_q.font.getParagraphWidth(param0, 500);
           var6 = 2 + nna.field_w * var4;
           var7 = jv.a((byte) -109, var2_int, 12, var5);
           var8 = lma.a(20, var3, var6, (byte) -16);
@@ -101,7 +101,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
             SetPhasedEnergyBeamPulsetime.clearSharedReferences((byte) 26);
           }
           SoftwareRasterizer2D.fillRectangle(1 + var7, 1 + var8, var5 - 2, -2 + var6, 16777088);
-          qc.field_q.field_eb.drawParagraph(param0, 3 + var7, var8 + 1 + atb.field_d - qc.field_q.field_eb.maxAscent, 500, 1000, 0, -1, 0, 0, nna.field_w);
+          qc.field_q.font.drawParagraph(param0, 3 + var7, var8 + 1 + atb.field_d - qc.field_q.font.maxAscent, 500, 1000, 0, -1, 0, 0, nna.field_w);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ukb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

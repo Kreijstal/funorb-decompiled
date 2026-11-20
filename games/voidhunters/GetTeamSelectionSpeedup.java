@@ -57,9 +57,9 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
         int var3 = 0;
         jk var3_ref_jk = null;
         int var4 = 0;
-        mm var4_ref_mm = null;
+        LobbyGameEntry var4_ref_mm = null;
         int var5 = 0;
-        mm var6 = null;
+        LobbyGameEntry var6 = null;
         jk var7 = null;
         int var8 = 0;
         jk var8_ref_jk = null;
@@ -67,9 +67,9 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
         int var10 = 0;
         int var11 = 0;
         jk var12 = null;
-        mm var13 = null;
-        mm var14 = null;
-        mm var15 = null;
+        LobbyGameEntry var13 = null;
+        LobbyGameEntry var14 = null;
+        LobbyGameEntry var15 = null;
         Object var16 = null;
         String var17 = null;
         String var18 = null;
@@ -82,10 +82,10 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
         String var25 = null;
         String var26 = null;
         Object var27 = null;
-        mm var27_ref = null;
-        mm var28 = null;
+        LobbyGameEntry var27_ref = null;
+        LobbyGameEntry var28 = null;
         jk var29 = null;
-        mm var30 = null;
+        LobbyGameEntry var30 = null;
         jk var31 = null;
         jk var3_ref_jkLifetime1;
         long var3_longLifetime1;
@@ -176,19 +176,19 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
             }
             if (var2 == 8) {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
-              var4_ref_mm = (mm) (GetLaserReload.field_r.a(-1, (long)var3));
+              var4_ref_mm = (LobbyGameEntry) (GetLaserReload.field_r.a(-1, (long)var3));
               if (var4_ref_mm == null) {
-                var4_ref_mm = new mm(ocb.field_l);
+                var4_ref_mm = new LobbyGameEntry(ocb.field_l);
                 GetLaserReload.field_r.a(var4_ref_mm, (byte) -115, (long)var3);
               }
               SetShipAimLines.a(118, var4_ref_mm, true, var1);
-              MovingObjectFactory.a((byte) 109, var4_ref_mm);
+              MovingObjectFactory.insertSortedLobbyGame((byte) 109, var4_ref_mm);
               return;
             }
             if (var2 == 9) {
               var3Lifetime4 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
               var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -127);
-              var30 = (mm) (GetLaserReload.field_r.a(-1, (long)var3Lifetime4));
+              var30 = (LobbyGameEntry) (GetLaserReload.field_r.a(-1, (long)var3Lifetime4));
               if (var30 != null) {
                 if (var4 != 0) {
                   var30.field_Db = GetMomentOfInertiaPredivideDownshift.field_p;
@@ -201,11 +201,11 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
               return;
             }
             if (var2 == 10) {
-              var15 = (mm) (kja.field_E.first(0));
+              var15 = (LobbyGameEntry) (kja.field_E.first(0));
               while (var15 != null) {
                 var15.unlink(-3846);
                 var15.unlinkSecondary((byte) -35);
-                var15 = (mm) (kja.field_E.next((byte) 106));
+                var15 = (LobbyGameEntry) (kja.field_E.next((byte) 106));
               }
               return;
             }
@@ -214,7 +214,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
               if (13 == var2) {
                 var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
                 var4Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -97);
-                var27_ref = (mm) (GetLaserReload.field_r.a(-1, (long)var3Lifetime5));
+                var27_ref = (LobbyGameEntry) (GetLaserReload.field_r.a(-1, (long)var3Lifetime5));
                 if (var27_ref != null) {
                   var13 = var27_ref;
                   var6 = var13;
@@ -224,7 +224,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                     var27_ref.field_Db = GetMomentOfInertiaPredivideDownshift.field_p;
                   }
                   var13.field_ac = false;
-                  MovingObjectFactory.a((byte) 109, var27_ref);
+                  MovingObjectFactory.insertSortedLobbyGame((byte) 109, var27_ref);
                 }
                 return;
               }
@@ -333,7 +333,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
               return;
             }
             var3Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
-            var14 = (mm) (GetLaserReload.field_r.a(-1, (long)var3Lifetime6));
+            var14 = (LobbyGameEntry) (GetLaserReload.field_r.a(-1, (long)var3Lifetime6));
             var28 = var14;
             if (var14 != null) {
               if (var2 != 11) {
@@ -341,7 +341,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
               } else {
                 var14.field_ac = true;
               }
-              MovingObjectFactory.a((byte) 102, var28);
+              MovingObjectFactory.insertSortedLobbyGame((byte) 102, var28);
             }
             return;
           }
@@ -372,7 +372,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
             SetSpinningBladeSpindamageMultiplier.field_o = null;
           } else {
             var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
-            SetSpinningBladeSpindamageMultiplier.field_o = new mm(ocb.field_l);
+            SetSpinningBladeSpindamageMultiplier.field_o = new LobbyGameEntry(ocb.field_l);
             SetSpinningBladeSpindamageMultiplier.field_o.setSecondaryKey((long)var3Lifetime1, (byte) 83);
             SetShipAimLines.a(-123, SetSpinningBladeSpindamageMultiplier.field_o, false, var1);
             qga.field_a = 0L;
@@ -382,7 +382,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
             SetThrusterParticleSpeedDownshift.field_o = null;
           } else {
             if (SetThrusterParticleSpeedDownshift.field_o == null) {
-              SetThrusterParticleSpeedDownshift.field_o = new mm(ocb.field_l);
+              SetThrusterParticleSpeedDownshift.field_o = new LobbyGameEntry(ocb.field_l);
             }
           }
           if (3 != var2) {

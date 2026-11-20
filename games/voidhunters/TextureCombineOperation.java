@@ -3,7 +3,7 @@
  */
 final class TextureCombineOperation {
     static GameStateFactory field_b;
-    static aw field_a;
+    static PopupMenuWidget field_a;
 
     final static void a(MissionState param0, MissionCondition[] param1, lta param2, int param3, byte param4, int param5, GameSnapshot param6) {
         int var8 = 0;

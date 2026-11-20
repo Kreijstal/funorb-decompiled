@@ -1,81 +1,81 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wc {
-    private IntrusiveDeque field_c;
+final class IntrusiveDequeIterator {
+    private IntrusiveDeque deque;
     static String field_d;
     static GameStateFactory field_a;
-    private IntrusiveNode field_b;
+    private IntrusiveNode cursor;
 
-    final IntrusiveNode a(byte param0) {
-        IntrusiveNode var2 = this.field_b;
+    final IntrusiveNode previous(byte param0) {
+        IntrusiveNode var2 = this.cursor;
         if (param0 != 108) {
           return (IntrusiveNode) null;
         }
-        if (var2 != this.field_c.sentinel) {
-          this.field_b = var2.previous;
+        if (var2 != this.deque.sentinel) {
+          this.cursor = var2.previous;
           return var2;
         }
-        this.field_b = null;
+        this.cursor = null;
         return null;
     }
 
-    final IntrusiveNode b(byte param0) {
+    final IntrusiveNode last(byte param0) {
         if (param0 <= 61) {
           return (IntrusiveNode) null;
         }
-        IntrusiveNode var2 = this.field_c.sentinel.previous;
-        if (this.field_c.sentinel != var2) {
-          this.field_b = var2.previous;
+        IntrusiveNode var2 = this.deque.sentinel.previous;
+        if (this.deque.sentinel != var2) {
+          this.cursor = var2.previous;
           return var2;
         }
-        this.field_b = null;
+        this.cursor = null;
         return null;
     }
 
-    final IntrusiveNode c(int param0) {
-        IntrusiveNode var2 = this.field_c.sentinel.next;
+    final IntrusiveNode first(int param0) {
+        IntrusiveNode var2 = this.deque.sentinel.next;
         if (param0 != 570) {
-          this.field_c = (IntrusiveDeque) null;
-          if (var2 == this.field_c.sentinel) {
-            this.field_b = null;
+          this.deque = (IntrusiveDeque) null;
+          if (var2 == this.deque.sentinel) {
+            this.cursor = null;
             return null;
           }
-          this.field_b = var2.next;
+          this.cursor = var2.next;
           return var2;
         }
-        if (var2 == this.field_c.sentinel) {
-          this.field_b = null;
+        if (var2 == this.deque.sentinel) {
+          this.cursor = null;
           return null;
         }
-        this.field_b = var2.next;
+        this.cursor = var2.next;
         return var2;
     }
 
-    final IntrusiveNode a(int param0) {
+    final IntrusiveNode next(int param0) {
         IntrusiveNode var2 = null;
         IntrusiveNode var2Lifetime1;
         if (param0 != 19072) {
           IntrusiveNode var3 = (IntrusiveNode) null;
-          this.a((IntrusiveNode) null, 109);
-          var2 = this.field_b;
-          if (this.field_c.sentinel != var2) {
-            this.field_b = var2.next;
+          this.startForward((IntrusiveNode) null, 109);
+          var2 = this.cursor;
+          if (this.deque.sentinel != var2) {
+            this.cursor = var2.next;
             return var2;
           }
-          this.field_b = null;
+          this.cursor = null;
           return null;
         }
-        var2Lifetime1 = this.field_b;
-        if (this.field_c.sentinel != var2Lifetime1) {
-          this.field_b = var2Lifetime1.next;
+        var2Lifetime1 = this.cursor;
+        if (this.deque.sentinel != var2Lifetime1) {
+          this.cursor = var2Lifetime1.next;
           return var2Lifetime1;
         }
-        this.field_b = null;
+        this.cursor = null;
         return null;
     }
 
-    final IntrusiveNode a(byte param0, IntrusiveNode param1) {
+    final IntrusiveNode startBackward(byte param0, IntrusiveNode param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_8_0 = null;
@@ -86,19 +86,19 @@ final class wc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 87) {
-            this.a(73);
+            this.next(73);
           }
           if (param1 != null) {
             var3 = param1;
           } else {
-            var3 = this.field_c.sentinel.previous;
+            var3 = this.deque.sentinel.previous;
           }
-          if (var3 == this.field_c.sentinel) {
-            this.field_b = null;
+          if (var3 == this.deque.sentinel) {
+            this.cursor = null;
             stackIn_8_0 = null;
             return (IntrusiveNode) (stackIn_8_0);
           }
-          this.field_b = var3.previous;
+          this.cursor = var3.previous;
           stackIn_10_0 = var3;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -117,7 +117,7 @@ final class wc {
 
     public static void clearSharedReferences(int param0) {
         if (param0 != -20221) {
-          wc.clearSharedReferences(-115);
+          IntrusiveDequeIterator.clearSharedReferences(-115);
           field_d = null;
           field_a = null;
           return;
@@ -126,7 +126,7 @@ final class wc {
         field_a = null;
     }
 
-    final IntrusiveNode a(IntrusiveNode param0, int param1) {
+    final IntrusiveNode startForward(IntrusiveNode param0, int param1) {
         IntrusiveNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_5_0 = null;
@@ -137,16 +137,16 @@ final class wc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == null) {
-            var3 = this.field_c.sentinel.next;
+            var3 = this.deque.sentinel.next;
           } else {
             var3 = param0;
           }
-          if (var3 == this.field_c.sentinel) {
-            this.field_b = null;
+          if (var3 == this.deque.sentinel) {
+            this.cursor = null;
             stackIn_5_0 = null;
             return (IntrusiveNode) (stackIn_5_0);
           }
-          this.field_b = var3.next;
+          this.cursor = var3.next;
           if (param1 != -28791) {
             field_d = (String) null;
           }
@@ -166,9 +166,9 @@ final class wc {
         }
     }
 
-    wc(IntrusiveDeque param0) {
+    IntrusiveDequeIterator(IntrusiveDeque param0) {
         try {
-          this.field_c = param0;
+          this.deque = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

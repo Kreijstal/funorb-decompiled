@@ -39,7 +39,7 @@ final class ik extends IntrusiveNode {
         var2[40] = ComponentContact.field_d;
         var2[25] = SetMissilesTopSpeed.field_o;
         var2[203] = PacketBuffer.field_d;
-        var2[89] = r.field_k;
+        var2[89] = RenderResourceNode.field_k;
         var2[178] = ge.field_c;
         var2[100] = WorldFactory.field_a;
         var2[49] = kmb.field_f;

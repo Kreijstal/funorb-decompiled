@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class r extends DualLinkNode {
+abstract class RenderResourceNode extends DualLinkNode {
     static String field_m;
     static double field_l;
     static int field_k;
     private static String field_z;
 
-    protected r() {
+    protected RenderResourceNode() {
     }
 
     public static void clearSharedReferences(byte param0) {
         field_m = null;
         if (param0 != -123) {
-          r.clearSharedReferences((byte) -19);
+          RenderResourceNode.clearSharedReferences((byte) -19);
         }
     }
 

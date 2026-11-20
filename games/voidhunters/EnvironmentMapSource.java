@@ -15,7 +15,7 @@ abstract class EnvironmentMapSource {
         World var10 = new World(1);
         var10.setWidth(var10.getWidth((byte) -122) / 2, (byte) -66);
         var10.setHeight(var10.getHeight(1) / 2, 0);
-        var10.b(-1, (byte) 23);
+        var10.setObjectiveType(-1, (byte) 23);
         int var2 = 131072;
         int var3 = var2;
         int var4 = 4096;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetShipToShipRamDamage extends ConsoleCommand {
-    static llb field_q;
+    static Widget field_q;
     static int field_o;
     static String field_p;
 
@@ -46,7 +46,7 @@ final class GetShipToShipRamDamage extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            field_q = (llb) null;
+            field_q = (Widget) null;
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(3, 77));
           return stackIn_3_0;

@@ -196,7 +196,7 @@ final class PartitionZoneListFactory implements GameStateFactory {
                 }
                 var13 = (IncrementVariableAction) (var6);
                 var8 = var13.getParameter(0, -103);
-                var9 = param1.a(-31634, var8);
+                var9 = param1.getCustomVariable(-31634, var8);
                 if (var9 != null) {
                   var10 = var9.label;
                   var4_int = GetReloadBarWidth.field_o[var10];

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ul {
-    static llb[] field_b;
+    static Widget[] field_b;
     static int field_a;
 
     final static Sprite[] a(int param0, int param1, int param2, int param3, boolean param4) {
@@ -19,7 +19,7 @@ final class ul {
         var5[7] = dupTemp$1;
         var5[5] = dupTemp$1;
         if (!param4) {
-          field_b = (llb[]) null;
+          field_b = (Widget[]) null;
         }
         if (param1 != 0) {
           var6[4] = SetMaxShipSize.a(param1, (byte) -116, 64);
@@ -71,7 +71,7 @@ final class ul {
     public static void clearSharedReferences(int param0) {
         field_b = null;
         if (param0 != -23460) {
-          field_b = (llb[]) null;
+          field_b = (Widget[]) null;
         }
     }
 

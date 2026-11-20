@@ -19,7 +19,7 @@ final class SetLaserReload extends ConsoleCommand {
           return;
         }
         if (null != ola.field_p) {
-          ola.field_p.b(param1, -96);
+          ola.field_p.draw(param1, -96);
         }
     }
 

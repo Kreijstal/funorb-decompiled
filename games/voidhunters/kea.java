@@ -5,7 +5,7 @@ import java.io.*;
 
 final class kea {
     static boolean field_b;
-    static llb field_a;
+    static Widget field_a;
 
     final static boolean a(boolean param0, Class param1, String param2) {
         try {

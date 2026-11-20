@@ -196,7 +196,7 @@ final class vcb extends oda implements oo {
         this.e(0);
         if (param0 != -3393) {
           var5 = (rn) null;
-          vcb.a(33, (llb) null, (llb) null, (llb) null, (rn) null);
+          vcb.a(33, (Widget) null, (Widget) null, (Widget) null, (rn) null);
         }
     }
 
@@ -263,7 +263,7 @@ final class vcb extends oda implements oo {
         this.e(0);
         if (param2 < 126) {
           rn var5 = (rn) null;
-          vcb.a(-91, (llb) null, (llb) null, (llb) null, (rn) null);
+          vcb.a(-91, (Widget) null, (Widget) null, (Widget) null, (rn) null);
         }
     }
 
@@ -409,7 +409,7 @@ final class vcb extends oda implements oo {
         this.field_P.field_g = ((var3 - var2) * this.field_M >> 16) + var2;
     }
 
-    final static tjb a(int param0, llb param1, llb param2, llb param3, rn param4) {
+    final static tjb a(int param0, Widget param1, Widget param2, Widget param3, rn param4) {
         int var14 = 0;
         Object stackIn_3_0 = null;
         int stackIn_7_0 = 0;

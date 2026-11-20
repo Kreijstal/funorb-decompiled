@@ -19,12 +19,12 @@ final class meb implements wwa {
         field_c = null;
     }
 
-    final static mm a(int param0, int param1) {
+    final static LobbyGameEntry a(int param0, int param1) {
         if (param1 == 1) {
-          return GetLaserReload.field_r == null ? null : (mm) (GetLaserReload.field_r.a(-1, (long)param0));
+          return GetLaserReload.field_r == null ? null : (LobbyGameEntry) (GetLaserReload.field_r.a(-1, (long)param0));
         }
         meb.a(-8, 53);
-        return GetLaserReload.field_r == null ? null : (mm) (GetLaserReload.field_r.a(-1, (long)param0));
+        return GetLaserReload.field_r == null ? null : (LobbyGameEntry) (GetLaserReload.field_r.a(-1, (long)param0));
     }
 
     public final void a(int param0, shb param1, int param2, int param3, boolean param4) {

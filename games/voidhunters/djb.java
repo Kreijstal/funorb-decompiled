@@ -142,10 +142,10 @@ final class djb extends qc {
         String var3 = null;
         try {
           int var2_int = -15 / ((param0 - 44) / 43);
-          var3 = this.field_p.field_Fb.field_R;
-          this.field_p.field_Fb.field_R = nv.field_r;
+          var3 = this.field_p.field_Fb.text;
+          this.field_p.field_Fb.text = nv.field_r;
           super.b((byte) -74);
-          this.field_p.field_Fb.field_R = var3;
+          this.field_p.field_Fb.text = var3;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "djb.A(" + param0 + ')');
         }
@@ -182,7 +182,7 @@ final class djb extends qc {
           var3 = this.field_p.j(0);
           var4 = dib.a(var2, 83);
           var5 = SetMassDriverRandomness.a(var4, -25223, var3);
-          this.field_o.field_L = 0;
+          this.field_o.x = 0;
           var6 = "";
           if (var5 >= 0) {
             var7 = var4[var5];
@@ -216,13 +216,13 @@ final class djb extends qc {
               if (stackIn_25_0 < stackIn_25_1 &&
                 SetMissionVariablesHudX.field_p == var4[var9 - 1].field_e) {
                 var6 = var4[var9 - 1].field_d;
-                this.field_o.field_L = this.field_n.getStringWidth(var2.substring(0, var4[-1 + var9].field_g));
+                this.field_o.x = this.field_n.getStringWidth(var2.substring(0, var4[-1 + var9].field_g));
               }
               decompiledFrameRemainder0 = (var11 != 0);
             }
             if (decompiledFrameRemainder0) {
               var6 = var7.field_d.substring(0, Math.min(var7.field_d.length(), var8_int));
-              this.field_o.field_L = this.field_n.getStringWidth(var2.substring(0, var7.field_g));
+              this.field_o.x = this.field_n.getStringWidth(var2.substring(0, var7.field_g));
             }
           }
           var7_ref = this.a(var6, (byte) 28);
@@ -315,7 +315,7 @@ final class djb extends qc {
           ojb var3_ref = null;
           RuntimeException var3_ref2 = null;
           ipb var4 = null;
-          llb var4_ref = null;
+          Widget var4_ref = null;
           tsa var5 = null;
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
@@ -340,8 +340,8 @@ final class djb extends qc {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = (ojb) (Object) decompiledCaughtException;
               param1 = "<col=55ff55>" + param1.substring(0, var3_ref.field_a) + "</col>" + param1.substring(var3_ref.field_a);
-              var4_ref = (llb) (this.field_h.field_wb.field_lb.last((byte) 122));
-              var4_ref.field_R = this.field_c + param1;
+              var4_ref = (Widget) (this.field_h.field_wb.children.last((byte) 122));
+              var4_ref.text = this.field_c + param1;
             } catch (gva decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3_ref3 = (gva) (Object) decompiledCaughtException;

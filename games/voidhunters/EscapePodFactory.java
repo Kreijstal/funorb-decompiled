@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class EscapePodFactory implements GameStateFactory {
-    static llb field_a;
+    static Widget field_a;
 
     final static Object storeBytes(boolean param0, byte[] param1, int param2) {
         DirectByteStorage var3 = null;

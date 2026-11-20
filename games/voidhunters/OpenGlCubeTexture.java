@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class OpenGlCubeTexture extends pib {
-    static llb field_h;
+    static Widget field_h;
     private int field_j;
     private int field_i;
 
     final static boolean a(int param0, int param1, int param2, int param3) {
         if (param1 >= -37) {
-          field_h = (llb) null;
+          field_h = (Widget) null;
           if (GetBloomThresholdPercentage.field_p) {
             return PartitionZoneListFactory.field_b.a(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
           }
@@ -41,7 +41,7 @@ final class OpenGlCubeTexture extends pib {
     public static void clearSharedReferences(byte param0) {
         field_h = null;
         if (param0 < 40) {
-          field_h = (llb) null;
+          field_h = (Widget) null;
         }
     }
 

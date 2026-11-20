@@ -3,8 +3,8 @@
  */
 final class me extends pja {
     static boolean field_r;
-    static llb field_s;
-    static llb field_q;
+    static Widget field_s;
+    static Widget field_q;
 
     public static void clearSharedReferences(boolean param0) {
         field_q = null;
@@ -65,7 +65,7 @@ final class me extends pja {
         int var9 = 0;
         int var10 = VoidHunters.field_G;
         if (param0 != 255) {
-          field_s = (llb) null;
+          field_s = (Widget) null;
         }
         int[][] var13 = this.field_d.getRow(param1, (byte) -98);
         int[][] var12 = var13;
@@ -90,7 +90,7 @@ final class me extends pja {
     final static void a(int param0, int param1, boolean param2, boolean param3, int param4, int param5, byte param6) {
         int var18_int = 0;
         int var22_int = 0;
-        llb dupTemp$0 = null;
+        Widget dupTemp$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
@@ -102,20 +102,20 @@ final class me extends pja {
         boolean stackIn_4_4 = false;
         int stackIn_10_0 = 0;
         int stackIn_10_1 = 0;
-        mm stackIn_12_0;
-        llb stackIn_12_1;
-        llb stackIn_12_2;
+        LobbyGameEntry stackIn_12_0;
+        Widget stackIn_12_1;
+        Widget stackIn_12_2;
         long stackIn_12_3;
-        llb stackIn_13_1 = null;
-        llb stackIn_13_2 = null;
-        llb stackIn_13_4 = null;
-        mm stackIn_29_0;
-        llb stackIn_29_1;
-        llb stackIn_29_2;
+        Widget stackIn_13_1 = null;
+        Widget stackIn_13_2 = null;
+        Widget stackIn_13_4 = null;
+        LobbyGameEntry stackIn_29_0;
+        Widget stackIn_29_1;
+        Widget stackIn_29_2;
         long stackIn_29_3;
-        llb stackIn_30_1;
-        llb stackIn_30_2;
-        llb stackIn_30_4;
+        Widget stackIn_30_1;
+        Widget stackIn_30_2;
+        Widget stackIn_30_4;
         int stackIn_34_0 = 0;
         int stackIn_67_0 = 0;
         int stackIn_77_0 = 0;
@@ -132,22 +132,22 @@ final class me extends pja {
         IntrusiveDeque var8 = null;
         long var9 = 0L;
         Object var11 = null;
-        mm var12 = null;
+        LobbyGameEntry var12 = null;
         int var13 = 0;
         int var14 = 0;
-        llb var18 = null;
-        llb var19 = null;
-        llb var20 = null;
-        llb var21 = null;
-        llb var22 = null;
-        llb var23 = null;
-        llb var24 = null;
-        llb var25 = null;
-        llb var26 = null;
-        llb var27 = null;
-        llb var28 = null;
-        llb var29 = null;
-        llb var30 = null;
+        Widget var18 = null;
+        Widget var19 = null;
+        Widget var20 = null;
+        Widget var21 = null;
+        Widget var22 = null;
+        Widget var23 = null;
+        Widget var24 = null;
+        Widget var25 = null;
+        Widget var26 = null;
+        Widget var27 = null;
+        Widget var28 = null;
+        Widget var29 = null;
+        Widget var30 = null;
         int var31 = 0;
         String var32 = null;
         int var33_int = 0;
@@ -164,13 +164,13 @@ final class me extends pja {
         int var40 = 0;
         int var41 = 0;
         Sprite var42 = null;
-        llb var43 = null;
-        llb var44 = null;
-        llb var45 = null;
-        llb var46 = null;
-        llb var47 = null;
-        llb var48 = null;
-        llb var49 = null;
+        Widget var43 = null;
+        Widget var44 = null;
+        Widget var45 = null;
+        Widget var46 = null;
+        Widget var47 = null;
+        Widget var48 = null;
+        Widget var49 = null;
         Object var50 = null;
         Sprite var50_ref = null;
         Object var51 = null;
@@ -206,29 +206,29 @@ final class me extends pja {
           if (param6 <= 108) {
             me.clearSharedReferences(false);
           }
-          var8 = MapClearanceCircle.field_f.field_wb.field_lb;
+          var8 = MapClearanceCircle.field_f.field_wb.children;
           var9 = wt.a(false);
           var11 = null;
-          var12 = (mm) (var8.first(0));
+          var12 = (LobbyGameEntry) (var8.first(0));
           while (var12 != null) {
             var13 = 0;
-            if (null == var12.field_lb) {
-              var12.field_Mb = new llb(0L, SetShieldsDirectionalArc.field_o);
+            if (null == var12.children) {
+              var12.field_Mb = new Widget(0L, SetShieldsDirectionalArc.field_o);
               stackIn_10_0 = param0;
               stackIn_10_1 = param5;
               var14 = stackIn_10_0 | stackIn_10_1;
-              var12.b(-561, var12.field_Mb);
+              var12.addChild(-561, var12.field_Mb);
               var12.field_Mb.field_F = 1;
-              var12.field_dc = new llb(0L, SetReverbDamp.field_q);
-              var12.b(-561, var12.field_dc);
-              var12.field_yb = new llb(0L, SetShieldsDirectionalArc.field_o);
-              var12.b(-561, var12.field_yb);
+              var12.field_dc = new Widget(0L, SetReverbDamp.field_q);
+              var12.addChild(-561, var12.field_dc);
+              var12.field_yb = new Widget(0L, SetShieldsDirectionalArc.field_o);
+              var12.addChild(-561, var12.field_yb);
               var12.field_yb.field_w = 0;
-              var12.field_wb = new llb(0L, SetShieldsDirectionalArc.field_o);
-              var12.b(-561, var12.field_wb);
+              var12.field_wb = new Widget(0L, SetShieldsDirectionalArc.field_o);
+              var12.addChild(-561, var12.field_wb);
               var12.field_wb.field_w = 0;
-              var12.field_Hb = new llb(0L, SetReverbDamp.field_q);
-              var12.b(-561, var12.field_Hb);
+              var12.field_Hb = new Widget(0L, SetReverbDamp.field_q);
+              var12.addChild(-561, var12.field_Hb);
               var12.field_Hb.field_F = 2;
               stackIn_12_0 = var12;
               stackIn_12_1 = null;
@@ -243,24 +243,24 @@ final class me extends pja {
                 stackIn_13_2 = null;
                 stackIn_13_4 = SetShieldsDirectionalArc.field_o;
               }
-              stackIn_12_0.field_Lb = new llb(stackIn_12_3, stackIn_13_4);
-              var12.b(-561, var12.field_Lb);
-              var12.field_Zb = new llb[ocb.field_l];
-              var12.field_Wb = new llb(0L, (llb) null);
+              stackIn_12_0.field_Lb = new Widget(stackIn_12_3, stackIn_13_4);
+              var12.addChild(-561, var12.field_Lb);
+              var12.field_Zb = new Widget[ocb.field_l];
+              var12.field_Wb = new Widget(0L, (Widget) null);
               if ((1 << ar.field_b & var14) != 0) {
-                var12.field_Lb.b(-561, var12.field_Wb);
+                var12.field_Lb.addChild(-561, var12.field_Wb);
               }
-              var12.field_Eb = new llb(0L, (llb) null);
+              var12.field_Eb = new Widget(0L, (Widget) null);
               if (0 != (var14 & 1 << ujb.field_g)) {
-                var12.field_Lb.b(-561, var12.field_Eb);
+                var12.field_Lb.addChild(-561, var12.field_Eb);
               }
-              var12.field_Ab = new llb(0L, (llb) null);
+              var12.field_Ab = new Widget(0L, (Widget) null);
               if ((var14 & 1 << GetShipToShipRamDamage.field_o) != 0) {
-                var12.field_Lb.b(-561, var12.field_Ab);
+                var12.field_Lb.addChild(-561, var12.field_Ab);
               }
-              var12.field_Rb = new llb(0L, (llb) null);
+              var12.field_Rb = new Widget(0L, (Widget) null);
               if (0 != (var14 & 1 << GetFighterVision.field_o)) {
-                var12.field_Lb.b(-561, var12.field_Rb);
+                var12.field_Lb.addChild(-561, var12.field_Rb);
               }
               var45 = var12.field_Wb;
               var44 = var12.field_Rb;
@@ -270,9 +270,9 @@ final class me extends pja {
               var44.field_B = 1;
               var45.field_B = 1;
               for (var18_int = 0; ocb.field_l > var18_int; var18_int++) {
-                var12.field_Zb[var18_int] = new llb(0L, (llb) null);
+                var12.field_Zb[var18_int] = new Widget(0L, (Widget) null);
                 if (0 != (1 << var18_int + TextureFormat.field_b & var14)) {
-                  var12.field_Lb.b(-561, var12.field_Zb[var18_int]);
+                  var12.field_Lb.addChild(-561, var12.field_Zb[var18_int]);
                 }
                 var12.field_Zb[var18_int].field_B = 1;
               }
@@ -289,162 +289,162 @@ final class me extends pja {
                 stackIn_30_2 = null;
                 stackIn_30_4 = SetReverbDamp.field_q;
               }
-              stackIn_29_0.field_Yb = new llb(stackIn_29_3, stackIn_30_4);
-              var12.b(-561, var12.field_Yb);
+              stackIn_29_0.field_Yb = new Widget(stackIn_29_3, stackIn_30_4);
+              var12.addChild(-561, var12.field_Yb);
               var12.field_Yb.field_F = 2;
-              var12.field_Jb = new llb(0L, SetReverbDamp.field_q);
-              var12.b(-561, var12.field_Jb);
-              var12.field_Tb = new llb(0L, GetMissionDebrisDefaultProbability.field_o);
-              var12.b(-561, var12.field_Tb);
-              var12.field_vb = new llb(0L, GetMissionDebrisDefaultProbability.field_o);
-              var12.b(-561, var12.field_vb);
-              var12.field_bc = new llb(0L, qc.field_q);
-              var12.b(-561, var12.field_bc);
-              var12.g(127);
-              var12.field_Sb = new llb(0L, jba.field_h);
-              var12.b(-561, var12.field_Sb);
+              var12.field_Jb = new Widget(0L, SetReverbDamp.field_q);
+              var12.addChild(-561, var12.field_Jb);
+              var12.field_Tb = new Widget(0L, GetMissionDebrisDefaultProbability.field_o);
+              var12.addChild(-561, var12.field_Tb);
+              var12.field_vb = new Widget(0L, GetMissionDebrisDefaultProbability.field_o);
+              var12.addChild(-561, var12.field_vb);
+              var12.field_bc = new Widget(0L, qc.field_q);
+              var12.addChild(-561, var12.field_bc);
+              var12.inheritInteractionStateInDescendants(127);
+              var12.field_Sb = new Widget(0L, jba.field_h);
+              var12.addChild(-561, var12.field_Sb);
               var13 = 1;
             }
             stackIn_34_0 = (var12.field_fc) ? param0 : param5;
             var14Lifetime1 = stackIn_34_0;
-            var12.field_Mb.field_R = null;
-            var12.field_Mb.field_G = 0;
+            var12.field_Mb.text = null;
+            var12.field_Mb.height = 0;
             var46 = var12.field_Mb;
-            var46.field_hb = 0;
-            var12.field_Sb.field_R = null;
+            var46.width = 0;
+            var12.field_Sb.text = null;
             var47 = var12.field_Sb;
-            var12.field_Sb.field_G = 0;
-            var12.field_dc.field_R = null;
-            var47.field_hb = 0;
-            var12.field_dc.field_G = 0;
+            var12.field_Sb.height = 0;
+            var12.field_dc.text = null;
+            var47.width = 0;
+            var12.field_dc.height = 0;
             var48 = var12.field_dc;
-            var12.field_yb.field_R = null;
-            var48.field_hb = 0;
-            var12.field_yb.field_G = 0;
+            var12.field_yb.text = null;
+            var48.width = 0;
+            var12.field_yb.height = 0;
             var18 = var12.field_yb;
-            var18.field_hb = 0;
-            var12.field_wb.field_R = null;
-            var12.field_wb.field_G = 0;
+            var18.width = 0;
+            var12.field_wb.text = null;
+            var12.field_wb.height = 0;
             var19 = var12.field_wb;
-            var12.field_Hb.field_R = null;
-            var19.field_hb = 0;
+            var12.field_Hb.text = null;
+            var19.width = 0;
             var20 = var12.field_Hb;
-            var12.field_Hb.field_G = 0;
-            var20.field_hb = 0;
-            var12.field_Lb.field_R = null;
-            var12.field_Lb.field_G = 0;
+            var12.field_Hb.height = 0;
+            var20.width = 0;
+            var12.field_Lb.text = null;
+            var12.field_Lb.height = 0;
             var21 = var12.field_Lb;
-            var21.field_hb = 0;
+            var21.width = 0;
             for (var22_int = 0; ocb.field_l > var22_int; var22_int++) {
               var12.field_Zb[var22_int].field_tb = null;
               var23 = var12.field_Zb[var22_int];
-              var12.field_Zb[var22_int].field_G = 0;
-              var23.field_hb = 0;
+              var12.field_Zb[var22_int].height = 0;
+              var23.width = 0;
             }
             var12.field_Wb.field_tb = null;
-            var12.field_Wb.field_G = 0;
+            var12.field_Wb.height = 0;
             var22 = var12.field_Wb;
             var12.field_Rb.field_tb = null;
-            var22.field_hb = 0;
+            var22.width = 0;
             var49 = var12.field_Rb;
-            var12.field_Rb.field_G = 0;
+            var12.field_Rb.height = 0;
             var12.field_Eb.field_tb = null;
-            var49.field_hb = 0;
+            var49.width = 0;
             var24 = var12.field_Eb;
-            var12.field_Eb.field_G = 0;
+            var12.field_Eb.height = 0;
             var12.field_Ab.field_tb = null;
-            var24.field_hb = 0;
+            var24.width = 0;
             var25 = var12.field_Ab;
-            var12.field_Ab.field_G = 0;
-            var25.field_hb = 0;
-            var12.field_Yb.field_R = null;
-            var12.field_Yb.field_G = 0;
+            var12.field_Ab.height = 0;
+            var25.width = 0;
+            var12.field_Yb.text = null;
+            var12.field_Yb.height = 0;
             var26 = var12.field_Yb;
-            var26.field_hb = 0;
-            var12.field_Jb.field_R = null;
-            var12.field_Jb.field_G = 0;
+            var26.width = 0;
+            var12.field_Jb.text = null;
+            var12.field_Jb.height = 0;
             var27 = var12.field_Jb;
-            var12.field_Tb.field_R = null;
-            var27.field_hb = 0;
+            var12.field_Tb.text = null;
+            var27.width = 0;
             var28 = var12.field_Tb;
-            var12.field_Tb.field_G = 0;
-            var12.field_vb.field_R = null;
-            var28.field_hb = 0;
-            var12.field_vb.field_G = 0;
+            var12.field_Tb.height = 0;
+            var12.field_vb.text = null;
+            var28.width = 0;
+            var12.field_vb.height = 0;
             var29 = var12.field_vb;
-            var29.field_hb = 0;
-            var12.field_bc.field_R = null;
-            var12.field_bc.field_G = 0;
+            var29.width = 0;
+            var12.field_bc.text = null;
+            var12.field_bc.height = 0;
             var30 = var12.field_bc;
-            var30.field_hb = 0;
-            var12.field_hb = MapClearanceCircle.field_f.field_wb.field_hb;
+            var30.width = 0;
+            var12.width = MapClearanceCircle.field_f.field_wb.width;
             var31 = 0;
             var32 = var12.field_Vb;
-            if (!var12.e((byte) 58)) {
+            if (!var12.isSecondaryDetached((byte) 58)) {
               boolean decompiledFrameRemainder1 = true;
               if (!var12.field_fc) {
                 if (!var12.field_cc &&
                   !var12.field_ac) {
                   if (var12.field_Xb) {
-                    var12.field_Mb.field_R = wt.field_c;
+                    var12.field_Mb.text = wt.field_c;
                   } else {
-                    var12.field_Mb.field_R = MouseWheelInput.field_a;
+                    var12.field_Mb.text = MouseWheelInput.field_a;
                   }
                   decompiledFrameRemainder1 = false;
                 }
                 else {
-                  var12.field_Sb.field_R = di.field_j;
+                  var12.field_Sb.text = di.field_j;
                 }
               } else {
                 if (0 <= var12.field_Ub) {
-                  var12.field_Mb.field_R = SetTorpedoAimarc.field_o;
+                  var12.field_Mb.text = SetTorpedoAimarc.field_o;
                 } else {
                   if (var12.field_Gb && (var12.field_cc ||
                     var12.field_ac)) {
-                    var12.field_Sb.field_R = di.field_j;
+                    var12.field_Sb.text = di.field_j;
                     decompiledFrameRemainder1 = false;
                   }
                   else {
                     if (var12.field_Bb == 2) {
-                      var12.field_Sb.field_R = glb.field_a;
+                      var12.field_Sb.text = glb.field_a;
                     } else {
-                      var12.field_Mb.field_R = vq.field_w;
+                      var12.field_Mb.text = vq.field_w;
                     }
                   }
                 }
               }
-              if (null != var12.field_Sb.field_R) {
-                var12.field_Sb.a(0, -76, 68, var31, nna.field_w);
+              if (null != var12.field_Sb.text) {
+                var12.field_Sb.setBounds(0, -76, 68, var31, nna.field_w);
               } else {
-                var12.field_Mb.a(0, 5, 68, var31, nna.field_w);
+                var12.field_Mb.setBounds(0, 5, 68, var31, nna.field_w);
               }
-              var12.field_dc.field_R = BitmapFont.ellipsize(var12.field_dc.field_eb, var32, 78);
-              var12.field_dc.a(70, -40, 78, var31, nna.field_w);
+              var12.field_dc.text = BitmapFont.ellipsize(var12.field_dc.font, var32, 78);
+              var12.field_dc.setBounds(70, -40, 78, var31, nna.field_w);
               if (var12.field_dc.field_O &&
-                !var12.field_dc.field_R.equals(var32)) {
+                !var12.field_dc.text.equals(var32)) {
                 NebulaFieldFactory.field_a = var32;
               }
-              var12.field_yb.field_R = Integer.toString(var12.field_zb);
+              var12.field_yb.text = Integer.toString(var12.field_zb);
               if (!var12.field_Gb) {
                 var12.field_yb.field_F = 1;
-                var12.field_yb.a(150, 125, 48, var31, nna.field_w);
+                var12.field_yb.setBounds(150, 125, 48, var31, nna.field_w);
               } else {
                 var12.field_yb.field_F = 2;
-                var12.field_wb.field_R = "/" + var12.field_Fb;
-                var33_int = (-var12.field_wb.field_eb.getStringWidth("/") + 348) / 2;
-                var12.field_yb.a(150, 127, -150 + var33_int, var31, nna.field_w);
-                var12.field_wb.a(var33_int, 121, -var33_int + 198, var31, nna.field_w);
+                var12.field_wb.text = "/" + var12.field_Fb;
+                var33_int = (-var12.field_wb.font.getStringWidth("/") + 348) / 2;
+                var12.field_yb.setBounds(150, 127, -150 + var33_int, var31, nna.field_w);
+                var12.field_wb.setBounds(var33_int, 121, -var33_int + 198, var31, nna.field_w);
               }
-              var12.field_Hb.field_R = Integer.toString(var12.field_Kb);
-              var12.field_Hb.a(200, 39, 48, var31, nna.field_w);
+              var12.field_Hb.text = Integer.toString(var12.field_Kb);
+              var12.field_Hb.setBounds(200, 39, 48, var31, nna.field_w);
               stackIn_67_0 = (GetGrapplingHooksDamageableBySourcePlayer.field_o) ? 250 : 200;
               var33_intLifetime1 = stackIn_67_0;
-              var12.field_Lb.a(var33_intLifetime1, 28, -var33_intLifetime1 + 363, var31, nna.field_w);
+              var12.field_Lb.setBounds(var33_intLifetime1, 28, -var33_intLifetime1 + 363, var31, nna.field_w);
               var34_int = MissionListFactory.field_a;
               if ((1 << ar.field_b & var14Lifetime1) != 0) {
                 var50_ref = SpriteDimensions.field_o[var12.field_Cb];
                 var12.field_Wb.field_tb = var50_ref;
-                var12.field_Wb.a(var34_int, 32, var50_ref.paddedWidth, 0, var12.field_Lb.field_G);
+                var12.field_Wb.setBounds(var34_int, 32, var50_ref.paddedWidth, 0, var12.field_Lb.height);
                 var34_int = var34_int + (MissionListFactory.field_a + var50_ref.paddedWidth);
               }
               if ((var14Lifetime1 & 1 << ujb.field_g) != 0) {
@@ -462,13 +462,13 @@ final class me extends pja {
                 }
                 var51_ref = stackIn_79_0[stackIn_80_1];
                 var12.field_Eb.field_tb = var51_ref;
-                var12.field_Eb.a(var34_int, 35, var51_ref.paddedWidth, 0, var12.field_Lb.field_G);
+                var12.field_Eb.setBounds(var34_int, 35, var51_ref.paddedWidth, 0, var12.field_Lb.height);
                 var34_int = var34_int + (var51_ref.paddedWidth + MissionListFactory.field_a);
               }
               if ((1 << GetShipToShipRamDamage.field_o & var14Lifetime1) != 0) {
                 var52_ref = GetPointDefenceLaserProjectileInterceptDamage.field_t[var12.field_Bb - 1];
                 var12.field_Ab.field_tb = var52_ref;
-                var12.field_Ab.a(var34_int, 117, var52_ref.paddedWidth, 0, var12.field_Lb.field_G);
+                var12.field_Ab.setBounds(var34_int, 117, var52_ref.paddedWidth, 0, var12.field_Lb.height);
                 var34_int = var34_int + (var52_ref.paddedWidth + MissionListFactory.field_a);
               }
               if (0 != (1 << GetFighterVision.field_o & var14Lifetime1)) {
@@ -480,7 +480,7 @@ final class me extends pja {
                 }
                 var53_ref = stackIn_87_0[stackIn_88_1];
                 var12.field_Rb.field_tb = var53_ref;
-                var12.field_Rb.a(var34_int, 121, var53_ref.paddedWidth, 0, var12.field_Lb.field_G);
+                var12.field_Rb.setBounds(var34_int, 121, var53_ref.paddedWidth, 0, var12.field_Lb.height);
                 var34_int = var34_int + (var53_ref.paddedWidth + MissionListFactory.field_a);
               }
               if (null != SetPointDefenceLaserAimarc.field_p) {
@@ -490,20 +490,20 @@ final class me extends pja {
                     var42 = SetPointDefenceLaserAimarc.field_p[var36Lifetime1][var12.field_Pb[var36Lifetime1] & 255];
                     var54 = var42;
                     var12.field_Zb[var36Lifetime1].field_tb = var42;
-                    var12.field_Zb[var36Lifetime1].a(var34_int, 120, var54.paddedWidth, 0, var12.field_Lb.field_G);
+                    var12.field_Zb[var36Lifetime1].setBounds(var34_int, 120, var54.paddedWidth, 0, var12.field_Lb.height);
                     var34_int = var34_int + (var54.paddedWidth + MissionListFactory.field_a);
                   }
                 }
               }
-              var36Lifetime2 = (var12.field_Lb.field_hb - var34_int) / 2;
+              var36Lifetime2 = (var12.field_Lb.width - var34_int) / 2;
               if (var36Lifetime2 > 0) {
-                var12.field_Wb.field_L = var12.field_Wb.field_L + var36Lifetime2;
-                var12.field_Eb.field_L = var12.field_Eb.field_L + var36Lifetime2;
-                var12.field_Ab.field_L = var12.field_Ab.field_L + var36Lifetime2;
-                var12.field_Rb.field_L = var12.field_Rb.field_L + var36Lifetime2;
+                var12.field_Wb.x = var12.field_Wb.x + var36Lifetime2;
+                var12.field_Eb.x = var12.field_Eb.x + var36Lifetime2;
+                var12.field_Ab.x = var12.field_Ab.x + var36Lifetime2;
+                var12.field_Rb.x = var12.field_Rb.x + var36Lifetime2;
                 for (var37_int = 0; ocb.field_l > var37_int; var37_int++) {
                   dupTemp$0 = var12.field_Zb[var37_int];
-                  dupTemp$0.field_L = dupTemp$0.field_L + var36Lifetime2;
+                  dupTemp$0.x = dupTemp$0.x + var36Lifetime2;
                 }
               }
               if (var12.field_fc) {
@@ -517,12 +517,12 @@ final class me extends pja {
                 if (60 <= var39) {
                   var40 = var39 / 60;
                   var39 = var39 % 60;
-                  var12.field_Yb.field_R = var40 + ":" + var39 / 10 + var39 % 10 + ":" + var38_int / 10 + var38_int % 10;
+                  var12.field_Yb.text = var40 + ":" + var39 / 10 + var39 % 10 + ":" + var38_int / 10 + var38_int % 10;
                 } else {
-                  var12.field_Yb.field_R = var39 + ":" + var38_int / 10 + var38_int % 10;
+                  var12.field_Yb.text = var39 + ":" + var38_int / 10 + var38_int % 10;
                 }
               }
-              var12.field_Yb.a(365, 43, var12.field_hb - 365, var31, nna.field_w);
+              var12.field_Yb.setBounds(365, 43, var12.width - 365, var31, nna.field_w);
               var31 = var31 + nna.field_w;
               if (var12.field_Ib != null) {
                 var31 += 2;
@@ -534,19 +534,19 @@ final class me extends pja {
                   discarded$4 = var37.append(var12.field_Ib[var38_intLifetime1]);
                 }
                 var38 = var37.toString();
-                var12.field_Jb.field_R = var38;
-                var39Lifetime1 = var12.field_Jb.field_eb.getLineCount(var38, var12.field_hb - var12.field_Jb.field_w * 2);
-                var12.field_Jb.a(0, -9, var12.field_hb, var31, var39Lifetime1 * nna.field_w);
+                var12.field_Jb.text = var38;
+                var39Lifetime1 = var12.field_Jb.font.getLineCount(var38, var12.width - var12.field_Jb.field_w * 2);
+                var12.field_Jb.setBounds(0, -9, var12.width, var31, var39Lifetime1 * nna.field_w);
                 var31 = var31 + nna.field_w * var39Lifetime1;
               }
               if (var12.field_ac) {
-                var12.field_Tb.field_R = SetReverbGain.a(GetDebrisGroupColour.field_o, new String[]{var32}, 104);
-                var12.field_Tb.a(qs.field_c, 122, var12.field_hb - qs.field_c * 2, var31, nna.field_w);
+                var12.field_Tb.text = SetReverbGain.a(GetDebrisGroupColour.field_o, new String[]{var32}, 104);
+                var12.field_Tb.setBounds(qs.field_c, 122, var12.width - qs.field_c * 2, var31, nna.field_w);
                 var31 = var31 + nna.field_w;
               }
               if (var12.field_Qb) {
-                var12.field_vb.field_R = SetReverbGain.a(bna.field_m, new String[]{var32}, 79);
-                var12.field_vb.a(qs.field_c, 0, var12.field_hb - 2 * qs.field_c, var31, nna.field_w);
+                var12.field_vb.text = SetReverbGain.a(bna.field_m, new String[]{var32}, 79);
+                var12.field_vb.setBounds(qs.field_c, 0, var12.width - 2 * qs.field_c, var31, nna.field_w);
                 var31 = var31 + nna.field_w;
               }
             }
@@ -554,17 +554,17 @@ final class me extends pja {
             var34 = var33;
             var34Lifetime1 = var33;
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_bc.field_eb.getLineCount(var33, -qs.field_c + (var12.field_hb - qs.field_c));
+              var34_intLifetime1 = var12.field_bc.font.getLineCount(var33, -qs.field_c + (var12.width - qs.field_c));
               var12.field_bc.field_I = var12.field_Db * 256 / GetMomentOfInertiaPredivideDownshift.field_p;
-              var12.field_bc.field_R = var33;
-              var12.field_bc.a(qs.field_c, 126, -(2 * qs.field_c) + var12.field_hb, var31, nna.field_w * var34_intLifetime1);
+              var12.field_bc.text = var33;
+              var12.field_bc.setBounds(qs.field_c, 126, -(2 * qs.field_c) + var12.width, var31, nna.field_w * var34_intLifetime1);
               var31 = var31 + nna.field_w * var34_intLifetime1;
             }
             if (var7_int == 0) {
-              var12.field_E = var31 - var12.field_G;
+              var12.field_E = var31 - var12.height;
             }
             if (var13 != 0) {
-              MapClearanceCircle.field_f.field_wb.a((llb) (var11), 2, var12, -25);
+              MapClearanceCircle.field_f.field_wb.positionBelow((Widget) (var11), 2, var12, -25);
             }
             for (var34_intLifetime2 = 0; var34_intLifetime2 < ocb.field_l; var34_intLifetime2++) {
               if (var12.field_Zb[var34_intLifetime2].field_O) {
@@ -623,22 +623,22 @@ final class me extends pja {
             }
             boolean decompiledFrameRemainder0 = true;
             if (var12.field_o != 0 &&
-              !var12.e((byte) 34)) {
+              !var12.isSecondaryDetached((byte) 34)) {
               if (var12.field_Sb.field_o == 0) {
                 aaa.a((byte) 112, var12, var32, param3);
               } else {
                 if (var12.field_fc && (!var12.field_Gb ||
                   !var12.field_cc &&
                   !var12.field_ac)) {
-                  ArmBehaviourFactory.a(var12.f((byte) -13), param4, 20694);
+                  ArmBehaviourFactory.a(var12.getGameId((byte) -13), param4, 20694);
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  pa.a(param4, (byte) -88, var12.f((byte) -13));
+                  pa.a(param4, (byte) -88, var12.getGameId((byte) -13));
                 }
               }
             }
-            var12 = (mm) (var8.next((byte) 92));
+            var12 = (LobbyGameEntry) (var8.next((byte) 92));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -54,7 +54,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("error_js5io", 23100);
                 if (null != var2) {
-                  cna.field_wb = Cp1252Strings.decode((byte) -125, var2);
+                  IconTextWidget.field_wb = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("error_js5connect_full", 23100);
                 if (null != var2) {
@@ -698,7 +698,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("presstabtochat", 23100);
                 if (var2 != null) {
-                  cna.field_xb = Cp1252Strings.decode((byte) -125, var2);
+                  IconTextWidget.field_xb = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("pressf10toquickchat", 23100);
                 if (var2 != null) {
@@ -806,7 +806,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_younotmember", 23100);
                 if (null != var2) {
-                  aw.field_Db = Cp1252Strings.decode((byte) -125, var2);
+                  PopupMenuWidget.field_Db = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_playerneedsrating", 23100);
                 if (null != var2) {
@@ -1736,7 +1736,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("text_lobby_pleaselogin_free", 23100);
                 if (var2 != null) {
-                  wc.field_d = Cp1252Strings.decode((byte) -125, var2);
+                  IntrusiveDequeIterator.field_d = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("opengl", 23100);
                 if (var2 != null) {
@@ -2142,7 +2142,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("quality", 23100);
                 if (null != var2) {
-                  llb.field_V = Cp1252Strings.decode((byte) -125, var2);
+                  Widget.field_V = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("keys", 23100);
                 if (var2 != null) {
@@ -2691,7 +2691,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("fs_focus", 23100);
                 if (null != var2) {
-                  r.field_m = Cp1252Strings.decode((byte) -125, var2);
+                  RenderResourceNode.field_m = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("fs_focus_or_resolution", 23100);
                 if (null != var2) {

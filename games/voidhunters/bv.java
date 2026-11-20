@@ -4,7 +4,7 @@
 final class bv {
     private int field_c;
     static int[] field_a;
-    static llb field_b;
+    static Widget field_b;
     static boolean field_d;
     static int field_e;
 
@@ -540,7 +540,7 @@ final class bv {
           }
           if (this.b((byte) 11, 1) &&
             param1.world.countShips(0) <= 1) {
-            var11 = param1.missionState.b(7061, 0);
+            var11 = param1.missionState.getCustomVariableValue(7061, 0);
             stackIn_28_0 = (0 != param1.world.countDebris(true)) ? 0 : 1;
             var12Lifetime1 = stackIn_28_0;
             var13Lifetime1 = null;

@@ -3,7 +3,7 @@
  */
 final class bqa {
     static String field_f;
-    static llb field_d;
+    static Widget field_d;
     int field_a;
     int field_c;
     int field_b;

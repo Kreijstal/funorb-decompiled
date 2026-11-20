@@ -61,7 +61,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
           if (param0 != 0) {
             this.value = 113;
           }
-          stackIn_5_0 = !(param1.b(7061, this.index) < this.value);
+          stackIn_5_0 = !(param1.getCustomVariableValue(7061, this.index) < this.value);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

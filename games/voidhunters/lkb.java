@@ -22,16 +22,16 @@ final class lkb {
           var2 = (-640 + GetShieldsDirectionalArcParticleLife.field_p) / 2;
           var3 = GetRepairModePower.field_o * GetRepairModePower.field_o;
           var4 = var3 - param0 * param0;
-          WaterTextures.field_g.a(var2 - 199 * var4 / var3, 122, 199, 90, -94 + (-120 + SoftwareRasterizer2D.height));
-          vva.field_r.a(var2 + 202 + 438 * var4 / var3, 26, 438, 0, -124 + SoftwareRasterizer2D.height);
+          WaterTextures.field_g.setBounds(var2 - 199 * var4 / var3, 122, 199, 90, -94 + (-120 + SoftwareRasterizer2D.height));
+          vva.field_r.setBounds(var2 + 202 + 438 * var4 / var3, 26, 438, 0, -124 + SoftwareRasterizer2D.height);
           return;
         }
         lkb.clearSharedReferences(92);
         var2Lifetime1 = (-640 + GetShieldsDirectionalArcParticleLife.field_p) / 2;
         var3Lifetime1 = GetRepairModePower.field_o * GetRepairModePower.field_o;
         var4Lifetime1 = var3Lifetime1 - param0 * param0;
-        WaterTextures.field_g.a(var2Lifetime1 - 199 * var4Lifetime1 / var3Lifetime1, 122, 199, 90, -94 + (-120 + SoftwareRasterizer2D.height));
-        vva.field_r.a(var2Lifetime1 + 202 + 438 * var4Lifetime1 / var3Lifetime1, 26, 438, 0, -124 + SoftwareRasterizer2D.height);
+        WaterTextures.field_g.setBounds(var2Lifetime1 - 199 * var4Lifetime1 / var3Lifetime1, 122, 199, 90, -94 + (-120 + SoftwareRasterizer2D.height));
+        vva.field_r.setBounds(var2Lifetime1 + 202 + 438 * var4Lifetime1 / var3Lifetime1, 26, 438, 0, -124 + SoftwareRasterizer2D.height);
     }
 
     public final String toString() {

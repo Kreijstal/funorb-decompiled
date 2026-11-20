@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ObjectiveMarker {
-    static llb field_b;
-    static llb field_d;
+    static Widget field_b;
+    static Widget field_d;
     Object target;
     int markerType;
     private static String field_z;

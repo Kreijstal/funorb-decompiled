@@ -23,11 +23,11 @@ final class chb {
             GetLagStandardDeviationOut.field_o.a(false, 115);
             var4 = GetLagStandardDeviationOut.field_o;
             var5_ref_String = SetDefaultFiringLeeway.field_o;
-            var4.field_i.a(var5_ref_String, (byte) -53, 5);
+            var4.field_i.addItem(var5_ref_String, (byte) -53, 5);
             var4Lifetime2 = GetLagStandardDeviationOut.field_o;
             var5 = Particle.field_H;
             var6 = qs.field_a;
-            var4Lifetime2.field_i.b(var5, -29060, var6, 0, 0);
+            var4Lifetime2.field_i.layoutPopup(var5, -29060, var6, 0, 0);
           }
           IsaacCipher.a((byte) 44, param1, param2);
           return;
@@ -38,11 +38,11 @@ final class chb {
           GetLagStandardDeviationOut.field_o.a(false, 115);
           var4Lifetime1 = GetLagStandardDeviationOut.field_o;
           var5_ref_StringLifetime1 = SetDefaultFiringLeeway.field_o;
-          var4Lifetime1.field_i.a(var5_ref_StringLifetime1, (byte) -53, 5);
+          var4Lifetime1.field_i.addItem(var5_ref_StringLifetime1, (byte) -53, 5);
           var4Lifetime1Lifetime1 = GetLagStandardDeviationOut.field_o;
           var5Lifetime1 = Particle.field_H;
           var6Lifetime1 = qs.field_a;
-          var4Lifetime1Lifetime1.field_i.b(var5Lifetime1, -29060, var6Lifetime1, 0, 0);
+          var4Lifetime1Lifetime1.field_i.layoutPopup(var5Lifetime1, -29060, var6Lifetime1, 0, 0);
         }
         IsaacCipher.a((byte) 44, param1, param2);
     }
