@@ -22,7 +22,7 @@ final class Lo extends ConsoleCommand {
         java.awt.Graphics var10 = null;
         try {
           try {
-            var9 = igb.field_a.getGraphics();
+            var9 = GammaCorrection.field_a.getGraphics();
             if (null == GetPhasedEnergyBeamPulsetime.field_p) {
               GetPhasedEnergyBeamPulsetime.field_p = new java.awt.Font("Helvetica", 1, 13);
             }
@@ -35,7 +35,7 @@ final class Lo extends ConsoleCommand {
             }
             try {
               if (SetPhasedEnergyBeamAimspeed.field_p == null) {
-                SetPhasedEnergyBeamAimspeed.field_p = igb.field_a.createImage(304, 34);
+                SetPhasedEnergyBeamAimspeed.field_p = GammaCorrection.field_a.createImage(304, 34);
               }
               var10 = SetPhasedEnergyBeamAimspeed.field_p.getGraphics();
               var10.setColor(param0);
@@ -76,7 +76,7 @@ final class Lo extends ConsoleCommand {
           } catch (java.lang.Exception decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
             var5 = (Exception) (Object) decompiledCaughtException;
-            igb.field_a.repaint();
+            GammaCorrection.field_a.repaint();
             return;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

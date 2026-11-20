@@ -59,7 +59,7 @@ final class joa {
         if ((stackIn_6_0 ^ stackIn_9_1) != 0) {
           return -1;
         }
-        var10 = -vma.a(124, var9) + 30;
+        var10 = -IntegerLogarithms.floorLog2Magnitude(124, var9) + 30;
         if (var10 >= param4) {
           var11 = (var9 << param4) / var8;
         } else {

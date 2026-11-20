@@ -1053,7 +1053,7 @@ final class GameMenuScreen {
           stackIn_10_0 = !(GetBombletSprayRandomness.a(-75));
           var2 = GetGrapplingHooksDamageableBySourcePlayer.a(stackIn_10_0, (byte) 40);
           if (3 == var2) {
-            if (null != psb.field_b) {
+            if (null != EmailAvailabilityChecks.fullscreenCanvas) {
               VariableCondition.b((byte) -42);
             }
             SetMaxShipSize.a(MissionList.b((byte) -105), 0);

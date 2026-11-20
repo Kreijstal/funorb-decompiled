@@ -2184,7 +2184,7 @@ final class MissionBuilder implements DiffableState {
           }
           var4 = new Class[]{MapClearanceCircle.class, MapClearanceRectangle.class};
           var5 = new GameStateFactory[]{MachineGunWeaponDefinition.field_d, GetFighterBayReload.field_q};
-          var3.clearanceAreas = (MapClearanceArea[]) (hla.a(var4, this.clearanceAreas, var5, -115, var3.clearanceAreas, 1, SetCountermeasureLauncherFireForce.field_o));
+          var3.clearanceAreas = (MapClearanceArea[]) (TypedStateArrayCopier.copyArray(var4, this.clearanceAreas, var5, -115, var3.clearanceAreas, 1, SetCountermeasureLauncherFireForce.field_o));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bea.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

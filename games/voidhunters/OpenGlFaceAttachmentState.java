@@ -198,7 +198,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("mu_game_is_full", 23100);
                 if (null != resourceBytes) {
-                  tda.field_O = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  FullscreenConfirmationDialog.field_O = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("mu_game_has_started", 23100);
                 if (resourceBytes != null) {
@@ -422,7 +422,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("mu_chat_lobby_hide", 23100);
                 if (resourceBytes != null) {
-                  tda.field_M = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  FullscreenConfirmationDialog.field_M = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("mu_chat_game_show_all", 23100);
                 if (null != resourceBytes) {
@@ -550,7 +550,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("message_game", 23100);
                 if (null != resourceBytes) {
-                  kia.field_b = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  OpenGlByteTextureFactory.field_b = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("message_team", 23100);
                 if (null != resourceBytes) {
@@ -818,7 +818,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("gameopt_playerneedsratedgames", 23100);
                 if (null != resourceBytes) {
-                  iwa.field_c = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  PendingRequestResender.field_c = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("gameopt_youneedratedgames", 23100);
                 if (resourceBytes != null) {

@@ -3,7 +3,7 @@
  */
 abstract class RenderResourceNode extends DualLinkNode {
     static String field_m;
-    static double field_l;
+    static double gamma;
     static int field_k;
     private static String field_z;
 
@@ -21,6 +21,6 @@ abstract class RenderResourceNode extends DualLinkNode {
         field_z = "r.A(";
         field_m = "Unfortunately there was a focus problem while setting fullscreen mode. You could try disabling any multiple monitor drivers or window enhancements, if you have any enabled.";
         field_k = 1;
-        field_l = -1.0;
+        gamma = -1.0;
     }
 }

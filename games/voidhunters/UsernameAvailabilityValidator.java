@@ -90,7 +90,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           var5 = (CharSequence) ((Object) param0);
-          var3 = igb.a(var5, (byte) 119);
+          var3 = GammaCorrection.getNameValidationError(var5, (byte) 119);
           if (var3 != null) {
             stackIn_6_0 = var3;
             return stackIn_6_0;

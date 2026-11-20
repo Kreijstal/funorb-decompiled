@@ -539,7 +539,7 @@ final class OpenGlModel extends Model3D {
         OpenGlVertexNormal var72 = null;
         OpenGlVertexNormal var73 = null;
         TextureMetadata var74 = null;
-        kua var75 = null;
+        TextureMappingData var75 = null;
         OpenGlVertexNormal var77 = null;
         OpenGlVertexNormal var78 = null;
         OpenGlVertexNormal var79 = null;
@@ -898,10 +898,10 @@ final class OpenGlModel extends Model3D {
                   var32_int = param1.faceVertexA[var17Lifetime2];
                   var33_int = param1.faceVertexB[var17Lifetime2];
                   var34 = param1.faceVertexC[var17Lifetime2];
-                  var35 = var75.field_d[var19_intLifetime2];
-                  var36 = var75.field_b[var19_intLifetime2];
-                  var37 = var75.field_f[var19_intLifetime2];
-                  var86 = var75.field_c[var19_intLifetime2];
+                  var35 = var75.originX[var19_intLifetime2];
+                  var36 = var75.originY[var19_intLifetime2];
+                  var37 = var75.originZ[var19_intLifetime2];
+                  var86 = var75.transforms[var19_intLifetime2];
                   var39 = param1.field_n[var19_intLifetime2];
                   var40 = (float)param1.field_L[var19_intLifetime2] / 256.0f;
                   if (var31 != 1) {

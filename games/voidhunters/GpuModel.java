@@ -200,7 +200,7 @@ final class GpuModel extends Model3D {
         GpuVertexNormal var72 = null;
         GpuVertexNormal var73 = null;
         TextureMetadata var74 = null;
-        kua var75 = null;
+        TextureMappingData var75 = null;
         GpuVertexNormal var77 = null;
         GpuVertexNormal var78 = null;
         GpuVertexNormal var79 = null;
@@ -591,10 +591,10 @@ final class GpuModel extends Model3D {
                   var32_int = param1.faceVertexA[var17_intLifetime2];
                   var33_int = param1.faceVertexB[var17_intLifetime2];
                   var34 = param1.faceVertexC[var17_intLifetime2];
-                  var35 = var75.field_d[var19Lifetime2];
-                  var36 = var75.field_b[var19Lifetime2];
-                  var37 = var75.field_f[var19Lifetime2];
-                  var86 = var75.field_c[var19Lifetime2];
+                  var35 = var75.originX[var19Lifetime2];
+                  var36 = var75.originY[var19Lifetime2];
+                  var37 = var75.originZ[var19Lifetime2];
+                  var86 = var75.transforms[var19Lifetime2];
                   var39_int = param1.field_n[var19Lifetime2];
                   var40 = (float)param1.field_L[var19Lifetime2] / 256.0f;
                   if (1 != var31) {

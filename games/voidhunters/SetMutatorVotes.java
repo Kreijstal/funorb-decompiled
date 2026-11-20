@@ -46,7 +46,7 @@ final class SetMutatorVotes extends ConsoleCommand {
             stackIn_12_0 = var6;
             stackIn_12_1 = -37;
             stackIn_13_2 = !(0 > var4);
-            var7 = lsa.a(stackIn_12_0, stackIn_12_1, stackIn_13_2);
+            var7 = PendingRequest.getStringWidth(stackIn_12_0, stackIn_12_1, stackIn_13_2);
             var8 = -(var7 >> 1) + LobbyInviteSuggestionText.field_b;
             if (0 <= var4) {
               if (UiAngleDialRenderer.field_c.selectedIndex == var4) {

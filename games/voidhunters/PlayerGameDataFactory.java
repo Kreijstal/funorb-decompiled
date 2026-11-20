@@ -9,8 +9,8 @@ final class PlayerGameDataFactory implements GameStateFactory {
         var2 = VoidHunters.field_G;
         try {
           if (!SetReloadBarWidth.isCachedFrameAvailable((byte) -124)) {
-            if (null != psb.field_b &&
-              psb.field_b.focusLost) {
+            if (null != EmailAvailabilityChecks.fullscreenCanvas &&
+              EmailAvailabilityChecks.fullscreenCanvas.focusLost) {
               FullscreenExit.exitFullscreen((byte) -95);
               HighscoreTableRequest.field_h.pushPanel(false, new DisplayModeErrorDialog(HighscoreTableRequest.field_h, AdminMessageFactory.focusOrResolutionFailure));
             }

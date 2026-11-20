@@ -11,9 +11,9 @@ final class OpenGlPbuffer extends DualLinkNode {
     final static boolean isChatInputDialogInitialized(int param0) {
         if (param0 != 0) {
           field_l = (String) null;
-          return lsa.savedChatInputWidget != null ? true : false;
+          return PendingRequest.savedChatInputWidget != null ? true : false;
         }
-        return lsa.savedChatInputWidget != null ? true : false;
+        return PendingRequest.savedChatInputWidget != null ? true : false;
     }
 
     protected final void finalize() throws Throwable {

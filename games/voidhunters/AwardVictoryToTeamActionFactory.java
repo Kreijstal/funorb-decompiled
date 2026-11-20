@@ -155,7 +155,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ShipSpawnedCondition.field_e[36] = SetSpecialOrderBoxHeight.field_q;
           GetBlueprintSaveTime.specialOrderShortLabels[6] = SetBloomCoefficientPercentage.field_p;
           GetBlueprintSaveTime.specialOrderShortLabels[0] = SetDebrisFoundInPairs.field_o;
-          GetBlueprintSaveTime.specialOrderShortLabels[4] = hla.field_b;
+          GetBlueprintSaveTime.specialOrderShortLabels[4] = TypedStateArrayCopier.field_b;
           GetBlueprintSaveTime.specialOrderShortLabels[3] = CommonArchiveId.field_c;
           GetBlueprintSaveTime.specialOrderShortLabels[5] = NormalMapTextureOperation.field_j;
           GetBlueprintSaveTime.specialOrderShortLabels[2] = Cp1252Strings.field_a;
@@ -235,7 +235,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ShipTeamCondition.field_f[4] = GetTorpedoAcceleration.field_o;
           ShipTeamCondition.field_f[7] = SetCarouselConstant.field_o;
           ShipTeamCondition.field_f[6] = GetSniperCannonAimspeed.field_o;
-          ShipTeamCondition.field_f[3] = iwa.field_a;
+          ShipTeamCondition.field_f[3] = PendingRequestResender.field_a;
           ShipTeamCondition.field_f[22] = ToolkitRasterStateStack.field_b;
           ShipTeamCondition.field_f[0] = ArchiveTextureProvider.field_a;
           ShipTeamCondition.field_f[15] = HighscoreTableRequest.field_d;
@@ -278,11 +278,11 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetPhasedEnergyBeamProjectiles.field_o = new String[9];
           SetPhasedEnergyBeamProjectiles.field_o[1] = MapClearanceRectangle.field_f;
           SetPhasedEnergyBeamProjectiles.field_o[2] = GetDebrisCollisionDamage.field_o;
-          SetPhasedEnergyBeamProjectiles.field_o[8] = igb.field_b + " " + LegacyOpenGlEnvironmentMappedWaterEffect.field_i;
+          SetPhasedEnergyBeamProjectiles.field_o[8] = GammaCorrection.field_b + " " + LegacyOpenGlEnvironmentMappedWaterEffect.field_i;
           SetPhasedEnergyBeamProjectiles.field_o[4] = ppb.field_d;
           SetPhasedEnergyBeamProjectiles.field_o[5] = QuickChatDynamicCommand.field_b;
           SetPhasedEnergyBeamProjectiles.field_o[0] = DualLinkNode.field_h;
-          SetPhasedEnergyBeamProjectiles.field_o[3] = igb.field_b;
+          SetPhasedEnergyBeamProjectiles.field_o[3] = GammaCorrection.field_b;
           SetPhasedEnergyBeamProjectiles.field_o[6] = MapClearanceRectangle.field_f + " " + LegacyOpenGlEnvironmentMappedWaterEffect.field_i;
           SetPhasedEnergyBeamProjectiles.field_o[7] = GetDebrisCollisionDamage.field_o + " " + LegacyOpenGlEnvironmentMappedWaterEffect.field_i;
         } catch (RuntimeException runtimeException) {

@@ -126,8 +126,8 @@ final class SetFighterRepairAmount extends ConsoleCommand {
               SetSpinningBladeSpindamageMultiplier.field_o != null) {
               var5 = 1;
             }
-            if (2 == SetReverbDry.a(var5, (byte) 19)) {
-              OpenGlPostEffect.a(1, (byte) -76, param1, var5);
+            if (2 == SetReverbDry.getChatFilter(var5, (byte) 19)) {
+              OpenGlPostEffect.setChatFilter(1, (byte) -76, param1, var5);
             }
             SetBurstFireReload.a(var4_ref_String, param2 - 25634, -1, param0, NetworkMessageState.chatChannel, ChoosePlayerNameForm.privateChatTargetDisplayName);
           } else {

@@ -16,13 +16,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             MouseActivityState.changed = true;
             var2_int = param0.getModifiers();
             if ((var2_int & 16) != 0) {
-              tda.field_K = tda.field_K & -2;
+              FullscreenConfirmationDialog.field_K = FullscreenConfirmationDialog.field_K & -2;
             }
             if ((var2_int & 8) != 0) {
-              tda.field_K = tda.field_K & -3;
+              FullscreenConfirmationDialog.field_K = FullscreenConfirmationDialog.field_K & -3;
             }
             if ((var2_int & 4) != 0) {
-              tda.field_K = tda.field_K & -5;
+              FullscreenConfirmationDialog.field_K = FullscreenConfirmationDialog.field_K & -5;
             }
           }
           if (!param0.isPopupTrigger()) {
@@ -144,13 +144,13 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
             }
             var2_int = param0.getModifiers();
             if (0 != (var2_int & 16)) {
-              tda.field_K = tda.field_K | 1;
+              FullscreenConfirmationDialog.field_K = FullscreenConfirmationDialog.field_K | 1;
             }
             if ((var2_int & 8) != 0) {
-              tda.field_K = tda.field_K | 2;
+              FullscreenConfirmationDialog.field_K = FullscreenConfirmationDialog.field_K | 2;
             }
             if (0 != (var2_int & 4)) {
-              tda.field_K = tda.field_K | 4;
+              FullscreenConfirmationDialog.field_K = FullscreenConfirmationDialog.field_K | 4;
             }
             MouseActivityState.changed = true;
           }

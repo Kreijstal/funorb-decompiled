@@ -198,7 +198,7 @@ final class SoftwareModel extends Model3D {
         long[] var9;
         int var10;
         int var11_int;
-        kua var11;
+        TextureMappingData var11;
         int var12;
         Object var13;
         int var14;
@@ -452,10 +452,10 @@ final class SoftwareModel extends Model3D {
                 var23 = this.field_l[var16Lifetime1];
                 var24 = this.field_m[var16Lifetime1];
                 var25 = this.field_s[var16Lifetime1];
-                var26 = var11.field_d[var17Lifetime1];
-                var27 = var11.field_b[var17Lifetime1];
-                var28 = var11.field_f[var17Lifetime1];
-                var75 = var11.field_c[var17Lifetime1];
+                var26 = var11.originX[var17Lifetime1];
+                var27 = var11.originY[var17Lifetime1];
+                var28 = var11.originZ[var17Lifetime1];
+                var75 = var11.transforms[var17Lifetime1];
                 var30 = param1.field_n[var17Lifetime1];
                 var31 = (float)param1.field_L[var17Lifetime1] / 256.0f;
                 if (var22 != 1) {

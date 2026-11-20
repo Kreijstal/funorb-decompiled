@@ -71,9 +71,9 @@ final class SetMassDriverProjectileLife extends ConsoleCommand {
     final static boolean a(int param0) {
         if (param0 != 0) {
           field_o = (String) null;
-          return psb.field_b != null ? true : SetReverbDamp.field_o;
+          return EmailAvailabilityChecks.fullscreenCanvas != null ? true : SetReverbDamp.field_o;
         }
-        return psb.field_b != null ? true : SetReverbDamp.field_o;
+        return EmailAvailabilityChecks.fullscreenCanvas != null ? true : SetReverbDamp.field_o;
     }
 
     static {

@@ -358,7 +358,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                     if (var25_int == 1) {
                       var24Lifetime2 = SetReverbGain.a(GetAllowShipSaving.field_p, new String[]{var20}, 124);
                     }
-                    var24Lifetime2 = SetReverbGain.a(iwa.field_c, new String[]{var20, Integer.toString(var25_int)}, 124);
+                    var24Lifetime2 = SetReverbGain.a(PendingRequestResender.field_c, new String[]{var20, Integer.toString(var25_int)}, 124);
                   } else {
                     if (var6 <= var12.field_Gb) {
                       if ((var8 & ~var12.field_Ab) != 0) {

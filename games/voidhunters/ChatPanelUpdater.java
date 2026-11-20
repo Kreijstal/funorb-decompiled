@@ -41,7 +41,7 @@ final class ChatPanelUpdater {
               if (var5.field_o != 0) {
                 SetShieldsDirectionalArcParticleSpeedDownshift.a(101, var5, var4_int);
               }
-              var6 = SetReverbDry.a(var4_int, (byte) 19);
+              var6 = SetReverbDry.getChatFilter(var4_int, (byte) 19);
               SecondaryNodeDeque.field_c[var4_int].field_tb = GetGrapplingHookAimspeed.field_o[var6];
               NebulaFieldFactory.field_c[var4_int].text = SetMissileLauncherProjectiles.field_o[var6];
             }

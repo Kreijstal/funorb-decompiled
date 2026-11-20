@@ -73,7 +73,7 @@ final class ServerTickFactory implements GameStateFactory {
             stackIn_4_0 = QuickChatMenuWidget.field_Cb;
             return stackIn_4_0;
           }
-          if (iwa.field_b != 2) {
+          if (PendingRequestResender.field_b != 2) {
             stackIn_8_0 = UiAngleDialRenderer.field_e;
             return stackIn_8_0;
           }

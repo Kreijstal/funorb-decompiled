@@ -20,7 +20,7 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
         var4 = VoidHunters.field_G;
         try {
           if (param0 < 112) {
-            OpenGlPostEffect.a(-5, (byte) 121, 58, -64);
+            OpenGlPostEffect.setChatFilter(-5, (byte) 121, 58, -64);
           }
           var2_int = param1.charAt(0);
           var3 = 1;
@@ -91,7 +91,7 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
         return this.enabled;
     }
 
-    final static void a(int param0, byte param1, int param2, int param3) {
+    final static void setChatFilter(int param0, byte param1, int param2, int param3) {
         if (param3 == 0) {
           if (param0 == ActivateSelfDestructOrderDefinition.field_d) {
             if (param1 > -69) {
@@ -101,7 +101,7 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
               GetThrusterSmallForce.field_p != param0) {
               ShipBodyFactoryHolder.field_b = true;
               GetThrusterSmallForce.field_p = param0;
-              LaserWeaponDefinition.a(40, param2);
+              LaserWeaponDefinition.sendChatFilters(40, param2);
             }
             if (2 != param3) {
               return;
@@ -111,19 +111,19 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
             }
             ShipBodyFactoryHolder.field_b = true;
             GzipCodec.field_h = param0;
-            LaserWeaponDefinition.a(40, param2);
+            LaserWeaponDefinition.sendChatFilters(40, param2);
             return;
           }
           ActivateSelfDestructOrderDefinition.field_d = param0;
           ShipBodyFactoryHolder.field_b = true;
-          LaserWeaponDefinition.a(40, param2);
+          LaserWeaponDefinition.sendChatFilters(40, param2);
         }
         if (param1 <= -69) {
           if (param3 == 1 &&
             GetThrusterSmallForce.field_p != param0) {
             ShipBodyFactoryHolder.field_b = true;
             GetThrusterSmallForce.field_p = param0;
-            LaserWeaponDefinition.a(40, param2);
+            LaserWeaponDefinition.sendChatFilters(40, param2);
           }
         } else {
           field_e = (IntrusiveDeque) null;
@@ -137,12 +137,12 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
               }
               ShipBodyFactoryHolder.field_b = true;
               GzipCodec.field_h = param0;
-              LaserWeaponDefinition.a(40, param2);
+              LaserWeaponDefinition.sendChatFilters(40, param2);
               return;
             }
             ShipBodyFactoryHolder.field_b = true;
             GetThrusterSmallForce.field_p = param0;
-            LaserWeaponDefinition.a(40, param2);
+            LaserWeaponDefinition.sendChatFilters(40, param2);
           }
         }
         if (2 == param3) {
@@ -151,7 +151,7 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
           }
           ShipBodyFactoryHolder.field_b = true;
           GzipCodec.field_h = param0;
-          LaserWeaponDefinition.a(40, param2);
+          LaserWeaponDefinition.sendChatFilters(40, param2);
         }
     }
 

@@ -246,7 +246,7 @@ final class ScreenSizeController {
     final void update(int param0) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
-        if (null != psb.field_b) {
+        if (null != EmailAvailabilityChecks.fullscreenCanvas) {
           return;
         }
         if (0 < GetDebrisCarryOver.field_o) {

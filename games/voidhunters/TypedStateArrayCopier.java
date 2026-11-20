@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hla {
+final class TypedStateArrayCopier {
     static int[] field_a;
     static String field_b;
 
-    final static SerializableGameState[] a(Class[] param0, SerializableGameState[] param1, GameStateFactory[] param2, int param3, SerializableGameState[] param4, int param5, GameStateFactory param6) {
+    final static SerializableGameState[] copyArray(Class[] param0, SerializableGameState[] param1, GameStateFactory[] param2, int param3, SerializableGameState[] param4, int param5, GameStateFactory param6) {
         int var8 = 0;
         SerializableGameState dupTemp$0 = null;
         Object stackIn_3_0 = null;

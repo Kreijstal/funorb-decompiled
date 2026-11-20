@@ -701,7 +701,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime41 = HuffmanCodec.fetchLocalizedResource((byte) -36, "option_state_limited_time_only");
           if (null != var2Lifetime41) {
-            igb.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime41);
+            GammaCorrection.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime41);
           }
           var2Lifetime42 = HuffmanCodec.fetchLocalizedResource((byte) -59, "option_state_invisible");
           if (var2Lifetime42 != null) {
@@ -1289,7 +1289,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime188 = HuffmanCodec.fetchLocalizedResource((byte) -126, "ORDER_REPAIR_MODE_SHORT");
           if (var2Lifetime188 != null) {
-            hla.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime188);
+            TypedStateArrayCopier.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime188);
           }
           var2Lifetime189 = HuffmanCodec.fetchLocalizedResource((byte) -85, "ORDER_REPAIR_MODE");
           if (null != var2Lifetime189) {
@@ -1461,7 +1461,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime231 = HuffmanCodec.fetchLocalizedResource((byte) -34, "VOTE_BLITZ");
           if (var2Lifetime231 != null) {
-            iwa.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime231);
+            PendingRequestResender.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime231);
           }
           var2Lifetime232 = HuffmanCodec.fetchLocalizedResource((byte) -40, "VOTE_BLITZ_DESC");
           if (null != var2Lifetime232) {
@@ -1621,7 +1621,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime271 = HuffmanCodec.fetchLocalizedResource((byte) -13, "win_round_message");
           if (null != var2Lifetime271) {
-            kia.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime271);
+            OpenGlByteTextureFactory.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime271);
           }
           var2Lifetime272 = HuffmanCodec.fetchLocalizedResource((byte) -79, "win_match_message");
           if (null != var2Lifetime272) {

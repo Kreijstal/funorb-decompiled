@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kua {
-    int[] field_b;
+final class TextureMappingData {
+    int[] originY;
     static Sprite field_a;
     static boolean field_e;
-    int[] field_f;
-    float[][] field_c;
-    int[] field_d;
+    int[] originZ;
+    float[][] transforms;
+    int[] originX;
 
-    final static int a(byte param0) {
+    final static int packChatFilters(byte param0) {
         if (param0 == 75) {
           return (ActivateSelfDestructOrderDefinition.field_d << 4) + ((GetThrusterSmallForce.field_p << 2) + GzipCodec.field_h);
         }
-        kua.clearSharedReferences(108);
+        TextureMappingData.clearSharedReferences(108);
         return (ActivateSelfDestructOrderDefinition.field_d << 4) + ((GetThrusterSmallForce.field_p << 2) + GzipCodec.field_h);
     }
 
@@ -24,12 +24,12 @@ final class kua {
         }
     }
 
-    kua(int[] param0, int[] param1, int[] param2, float[][] param3) {
+    TextureMappingData(int[] param0, int[] param1, int[] param2, float[][] param3) {
         try {
-          this.field_b = param1;
-          this.field_f = param2;
-          this.field_c = param3;
-          this.field_d = param0;
+          this.originY = param1;
+          this.originZ = param2;
+          this.transforms = param3;
+          this.originX = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kua.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

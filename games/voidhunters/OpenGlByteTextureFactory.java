@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kia {
+final class OpenGlByteTextureFactory {
     static String field_a;
     static String field_b;
 
-    final static void a(byte param0) {
+    final static void showReconnectLogin(byte param0) {
         String var1 = null;
         if (!OpenGlSprite.reconnecting) {
           throw new IllegalStateException();
@@ -23,7 +23,7 @@ final class kia {
         }
     }
 
-    final static OpenGlSpriteTexture a(int param0, OpenGlToolkit param1, int param2, byte[] param3, int param4, boolean param5, int param6, int param7) {
+    final static OpenGlSpriteTexture createByteTexture(int param0, OpenGlToolkit param1, int param2, byte[] param3, int param4, boolean param5, int param6, int param7) {
         RuntimeException var8 = null;
         OpenGlSpriteTexture stackIn_2_0 = null;
         OpenGlSpriteTexture stackIn_9_0 = null;

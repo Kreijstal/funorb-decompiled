@@ -44,7 +44,7 @@ final class SetUseSprites extends ConsoleCommand {
           var17 = var16;
           var17.position = -2 + param1.length;
           GpuProjectionMode.field_a = var17.readUnsignedShort(1869);
-          hla.field_a = new int[GpuProjectionMode.field_a];
+          TypedStateArrayCopier.field_a = new int[GpuProjectionMode.field_a];
           SetInnateThrusters.field_o = new byte[GpuProjectionMode.field_a][];
           LiteralStrings.field_a = new byte[GpuProjectionMode.field_a][];
           SetBurstFireMaxEnergy.field_o = new boolean[GpuProjectionMode.field_a];
@@ -65,7 +65,7 @@ final class SetUseSprites extends ConsoleCommand {
             SetMissionTerrainDebrisProbability.field_o[var4Lifetime2] = var17.readUnsignedShort(1869);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < GpuProjectionMode.field_a; var4Lifetime3++) {
-            hla.field_a[var4Lifetime3] = var17.readUnsignedShort(1869);
+            TypedStateArrayCopier.field_a[var4Lifetime3] = var17.readUnsignedShort(1869);
           }
           var17.position = -7 + param1.length - 8 * GpuProjectionMode.field_a - (-1 + var3) * 3;
           LegacyOpenGlTextureCache.field_d = new int[var3];
@@ -78,7 +78,7 @@ final class SetUseSprites extends ConsoleCommand {
           var17.position = 0;
           for (var4Lifetime5 = 0; GpuProjectionMode.field_a > var4Lifetime5; var4Lifetime5++) {
             var5 = SetMissionTerrainDebrisProbability.field_o[var4Lifetime5];
-            var6 = hla.field_a[var4Lifetime5];
+            var6 = TypedStateArrayCopier.field_a[var4Lifetime5];
             var7 = var6 * var5;
             var20 = new byte[var7];
             var18 = var20;

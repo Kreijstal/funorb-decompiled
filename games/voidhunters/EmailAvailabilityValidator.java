@@ -30,7 +30,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (!param0.equals(this.checkedEmail)) {
-            var3 = psb.getEmailAvailabilityCheck(param0, param1 ^ 16384);
+            var3 = EmailAvailabilityChecks.getEmailAvailabilityCheck(param0, param1 ^ 16384);
             if (!var3.isComplete(4)) {
               stackIn_8_0 = SetFighterRepairTime.pendingValidation;
               return stackIn_8_0;

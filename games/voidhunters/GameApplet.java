@@ -282,10 +282,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
         RuntimeException decompiledCaughtException = null;
         var4 = VoidHunters.field_G;
         try {
-          if (igb.field_a != null) {
-            igb.field_a.removeFocusListener((java.awt.event.FocusListener) (this));
-            igb.field_a.getParent().setBackground(java.awt.Color.black);
-            igb.field_a.getParent().remove((java.awt.Component) ((Object) igb.field_a));
+          if (GammaCorrection.field_a != null) {
+            GammaCorrection.field_a.removeFocusListener((java.awt.event.FocusListener) (this));
+            GammaCorrection.field_a.getParent().setBackground(java.awt.Color.black);
+            GammaCorrection.field_a.getParent().remove((java.awt.Component) ((Object) GammaCorrection.field_a));
           }
           if (param0 > -53) {
             return;
@@ -316,21 +316,21 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             var2 = UiTextField.field_E;
           }
           ((java.awt.Container) (var2)).setLayout((java.awt.LayoutManager) null);
-          igb.field_a = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
-          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) igb.field_a));
-          igb.field_a.setSize(GetDebrisSurvives.field_p, SetPointDefenceLaserReload.field_p);
-          igb.field_a.setVisible(true);
+          GammaCorrection.field_a = (java.awt.Canvas) ((Object) new DelegatingCanvas((java.awt.Component) (this)));
+          ((java.awt.Container) (var2)).add((java.awt.Component) ((Object) GammaCorrection.field_a));
+          GammaCorrection.field_a.setSize(GetDebrisSurvives.field_p, SetPointDefenceLaserReload.field_p);
+          GammaCorrection.field_a.setVisible(true);
           if (var2 == PointDefenceLaserWeaponDefinition.field_c) {
             var3 = PointDefenceLaserWeaponDefinition.field_c.getInsets();
-            igb.field_a.setLocation(GetCountermeasuresPulseRadius.field_o + var3.left, var3.top + PlayerContextMenu.field_f);
+            GammaCorrection.field_a.setLocation(GetCountermeasuresPulseRadius.field_o + var3.left, var3.top + PlayerContextMenu.field_f);
             if (var4 != 0) {
-              igb.field_a.setLocation(GetCountermeasuresPulseRadius.field_o, PlayerContextMenu.field_f);
+              GammaCorrection.field_a.setLocation(GetCountermeasuresPulseRadius.field_o, PlayerContextMenu.field_f);
             }
           } else {
-            igb.field_a.setLocation(GetCountermeasuresPulseRadius.field_o, PlayerContextMenu.field_f);
+            GammaCorrection.field_a.setLocation(GetCountermeasuresPulseRadius.field_o, PlayerContextMenu.field_f);
           }
-          igb.field_a.addFocusListener((java.awt.event.FocusListener) (this));
-          igb.field_a.requestFocus();
+          GammaCorrection.field_a.addFocusListener((java.awt.event.FocusListener) (this));
+          GammaCorrection.field_a.requestFocus();
           SetReverbDamp.field_o = true;
           DequeReferenceTracker.field_a = true;
           GetShowTutorial.field_o = true;
@@ -435,17 +435,17 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (50 < fieldTemp$1) {
             GetShowTutorial.field_o = true;
             LobbyOptionCompatibilityRules.field_b = LobbyOptionCompatibilityRules.field_b - 50;
-            igb.field_a.setSize(GetDebrisSurvives.field_p, SetPointDefenceLaserReload.field_p);
-            igb.field_a.setVisible(true);
+            GammaCorrection.field_a.setSize(GetDebrisSurvives.field_p, SetPointDefenceLaserReload.field_p);
+            GammaCorrection.field_a.setVisible(true);
             if (PointDefenceLaserWeaponDefinition.field_c != null &&
               null == UiTextField.field_E) {
               var6 = PointDefenceLaserWeaponDefinition.field_c.getInsets();
-              igb.field_a.setLocation(var6.left + GetCountermeasuresPulseRadius.field_o, PlayerContextMenu.field_f + var6.top);
+              GammaCorrection.field_a.setLocation(var6.left + GetCountermeasuresPulseRadius.field_o, PlayerContextMenu.field_f + var6.top);
               if (VoidHunters.field_G != 0) {
-                igb.field_a.setLocation(GetCountermeasuresPulseRadius.field_o, PlayerContextMenu.field_f);
+                GammaCorrection.field_a.setLocation(GetCountermeasuresPulseRadius.field_o, PlayerContextMenu.field_f);
               }
             } else {
-              igb.field_a.setLocation(GetCountermeasuresPulseRadius.field_o, PlayerContextMenu.field_f);
+              GammaCorrection.field_a.setLocation(GetCountermeasuresPulseRadius.field_o, PlayerContextMenu.field_f);
             }
           }
           this.renderGameFrame(-105);
@@ -667,7 +667,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 MovingObject.readMaximumHeapMemory(27671);
                 this.rebuildCanvas(-78);
-                SetClientSideDragging.field_q = SetBurstFireRegenerationRate.createAppletRasterBuffer((byte) 3, (java.awt.Component) ((Object) igb.field_a), SetPointDefenceLaserReload.field_p, GetDebrisSurvives.field_p);
+                SetClientSideDragging.field_q = SetBurstFireRegenerationRate.createAppletRasterBuffer((byte) 3, (java.awt.Component) ((Object) GammaCorrection.field_a), SetPointDefenceLaserReload.field_p, GetDebrisSurvives.field_p);
                 this.initializeGame(false);
                 GetPedrosRepairMode.field_p = DisplayModeErrorDialog.createTickClock(46);
                 do {
@@ -688,7 +688,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                   do {
                     if (!(var3 < SetCountermeasureLauncherAimspeed.field_p)) {
                       this.renderFrame((byte) -5);
-                      LegacyOpenGlShader.pumpEventQueue((byte) 61, SetTorpedoProjectiles.field_o, igb.field_a);
+                      LegacyOpenGlShader.pumpEventQueue((byte) 61, SetTorpedoProjectiles.field_o, GammaCorrection.field_a);
                       break;
                     }
                     this.runGameTick((byte) -83);
@@ -850,10 +850,10 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
           }
-          if (igb.field_a != null) {
+          if (GammaCorrection.field_a != null) {
             try {
-              igb.field_a.removeFocusListener((java.awt.event.FocusListener) (this));
-              igb.field_a.getParent().remove((java.awt.Component) ((Object) igb.field_a));
+              GammaCorrection.field_a.removeFocusListener((java.awt.event.FocusListener) (this));
+              GammaCorrection.field_a.getParent().remove((java.awt.Component) ((Object) GammaCorrection.field_a));
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               exception = (Exception) (Object) decompiledCaughtException;

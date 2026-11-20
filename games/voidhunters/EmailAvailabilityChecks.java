@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class psb {
+final class EmailAvailabilityChecks {
     static int field_a;
-    static FullscreenCanvas field_b;
+    static FullscreenCanvas fullscreenCanvas;
 
     final static EmailAvailabilityCheck getEmailAvailabilityCheck(String param0, int param1) {
         RuntimeException var2 = null;
@@ -38,7 +38,7 @@ final class psb {
         }
     }
 
-    final static int a(byte[] param0, int param1, int param2) {
+    final static int crc32(byte[] param0, int param1, int param2) {
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_3_0 = 0;
@@ -49,9 +49,9 @@ final class psb {
         try {
           if (param2 != 0) {
             var4 = (String) null;
-            psb.getEmailAvailabilityCheck((String) null, 28);
+            EmailAvailabilityChecks.getEmailAvailabilityCheck((String) null, 28);
           }
-          stackIn_3_0 = GetMessageMaxage.a((byte) -69, param1, param0, 0);
+          stackIn_3_0 = GetMessageMaxage.crc32((byte) -69, param1, param0, 0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -68,10 +68,10 @@ final class psb {
     }
 
     public static void clearSharedReferences(boolean param0) {
-        field_b = null;
+        fullscreenCanvas = null;
         if (param0) {
           String var2 = (String) null;
-          psb.getEmailAvailabilityCheck((String) null, -33);
+          EmailAvailabilityChecks.getEmailAvailabilityCheck((String) null, -33);
         }
     }
 

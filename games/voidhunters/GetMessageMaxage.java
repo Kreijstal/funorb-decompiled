@@ -14,7 +14,7 @@ final class GetMessageMaxage extends ConsoleCommand {
         field_p = null;
     }
 
-    final static int a(byte param0, int param1, byte[] param2, int param3) {
+    final static int crc32(byte param0, int param1, byte[] param2, int param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -159,7 +159,7 @@ final class GetMessageMaxage extends ConsoleCommand {
             stackIn_25_0 = GetWorldWidthUpshift.field_o[var8Lifetime1];
             stackIn_25_1 = -42;
             stackIn_26_2 = !(GetSniperCannonProjectiles.field_o[var8Lifetime1] < 0);
-            var9Lifetime1 = lsa.a(stackIn_25_0, stackIn_25_1, stackIn_26_2);
+            var9Lifetime1 = PendingRequest.getStringWidth(stackIn_25_0, stackIn_25_1, stackIn_26_2);
             if (GetSniperCannonProjectiles.field_o[var8Lifetime1] != -1) {
               var9Lifetime1 = var9Lifetime1 + ShipTeamCondition.field_e * 2;
             }

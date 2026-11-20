@@ -43,7 +43,7 @@ final class SetAutozoomAmountMultiply extends ConsoleCommand {
         if (param0 != 0) {
           SetAutozoomAmountMultiply.f(118);
         }
-        return PointDefenceLaserWeaponDefinition.a(lsa.privateChatRecipientKey, GetDebrisThrowable.privateChatTarget, 41);
+        return PointDefenceLaserWeaponDefinition.a(PendingRequest.privateChatRecipientKey, GetDebrisThrowable.privateChatTarget, 41);
     }
 
     final static boolean f(int param0) {

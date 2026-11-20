@@ -181,7 +181,7 @@ final class PlayerContextMenu {
         String var8 = null;
         try {
           if (this.targetName != null && (~BodyInZoneConditionFactory.field_a != ~this.targetPlayerKey ||
-            param1 == 2) && iwa.field_b == 2) {
+            param1 == 2) && PendingRequestResender.field_b == 2) {
             var8 = this.getTargetDisplayName((byte) -63);
             var4 = var8;
             var5 = FlipTextureOperation.a(this.targetName, 0);
@@ -340,13 +340,13 @@ final class PlayerContextMenu {
             PlayerVoteFactory.a(this.targetName, this.targetPlayerKey, 63);
           } else {
             if (param1 == 11) {
-              OpenGlPostEffect.a(0, (byte) -118, param0, this.channelType);
+              OpenGlPostEffect.setChatFilter(0, (byte) -118, param0, this.channelType);
             } else {
               if (param1 == 12) {
-                OpenGlPostEffect.a(1, (byte) -123, param0, this.channelType);
+                OpenGlPostEffect.setChatFilter(1, (byte) -123, param0, this.channelType);
               } else {
                 if (param1 == 13) {
-                  OpenGlPostEffect.a(2, (byte) -105, param0, this.channelType);
+                  OpenGlPostEffect.setChatFilter(2, (byte) -105, param0, this.channelType);
                 } else {
                   if (param1 != 14) {
                     if (param1 != 20) {
@@ -425,7 +425,7 @@ final class PlayerContextMenu {
             if (ActivateSelfDestructOrderDefinition.field_d == 0) {
               this.menu.addItem(UiVisualStyle.field_a, (byte) -53, 12);
             }
-            this.menu.addItem(tda.field_M, (byte) -53, 13);
+            this.menu.addItem(FullscreenConfirmationDialog.field_M, (byte) -53, 13);
           }
           if (1 == param0.channelType) {
             if (0 == GetThrusterSmallForce.field_p) {

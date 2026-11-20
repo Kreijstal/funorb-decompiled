@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vma {
+final class IntegerLogarithms {
     private static String field_z;
 
-    final static int a(int param0, int param1) {
+    final static int floorLog2Magnitude(int param0, int param1) {
         int var2;
         if (param1 < 0) {
           param1 = -param1;

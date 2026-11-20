@@ -246,7 +246,7 @@ final class ProceduralTexture extends DualLinkNode {
           for (var9_int = 0; this.field_q.length > var9_int; var9_int++) {
             this.field_q[var9_int].initializeCache(-9163, param0, param2);
           }
-          igb.a(true, param6);
+          GammaCorrection.updateGammaTable(true, param6);
           SetPhasedEnergyBeamProjectiles.setTextureDimensions(param2, param0, -99);
           var9 = new int[param2 * param0];
           var10 = 0;
@@ -293,12 +293,12 @@ final class ProceduralTexture extends DualLinkNode {
               if (255 < var19) {
                 var19 = 255;
               }
-              var17 = GetBloomCoefficientPercentage.field_o[var17];
-              var18 = GetBloomCoefficientPercentage.field_o[var18];
+              var17 = GetBloomCoefficientPercentage.gammaTable[var17];
+              var18 = GetBloomCoefficientPercentage.gammaTable[var18];
               if (var19 < 0) {
                 var19 = 0;
               }
-              var19 = GetBloomCoefficientPercentage.field_o[var19];
+              var19 = GetBloomCoefficientPercentage.gammaTable[var19];
               if (var17 == 0 &&
                 var18 == 0 &&
                 var19 == 0) {
@@ -387,7 +387,7 @@ final class ProceduralTexture extends DualLinkNode {
           for (var10_int = 0; this.field_q.length > var10_int; var10_int++) {
             this.field_q[var10_int].initializeCache(-9163, param5, param7);
           }
-          igb.a(true, param6);
+          GammaCorrection.updateGammaTable(true, param6);
           SetPhasedEnergyBeamProjectiles.setTextureDimensions(param7, param5, -128);
           var26 = new int[param5 * param7];
           var10 = var26;
@@ -440,9 +440,9 @@ final class ProceduralTexture extends DualLinkNode {
               if (0 > var22) {
                 var22 = 0;
               }
-              var20 = GetBloomCoefficientPercentage.field_o[var20];
-              var21 = GetBloomCoefficientPercentage.field_o[var21];
-              var22 = GetBloomCoefficientPercentage.field_o[var22];
+              var20 = GetBloomCoefficientPercentage.gammaTable[var20];
+              var21 = GetBloomCoefficientPercentage.gammaTable[var21];
+              var22 = GetBloomCoefficientPercentage.gammaTable[var22];
               var23 = var22 + (var20 << 16) + (var21 << 8);
               if (var23 != 0) {
                 var23 = var23 | -16777216;

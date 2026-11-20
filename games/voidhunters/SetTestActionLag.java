@@ -57,7 +57,7 @@ final class SetTestActionLag extends ConsoleCommand {
             ((CompactGameState) ((Object) param0)).writeCompactState(UiViewport.field_w, (byte) -116);
           }
           UiViewport.field_w.endBitWrite(32712);
-          stackIn_6_0 = psb.a(UiViewport.field_w.payload, UiViewport.field_w.position, 0);
+          stackIn_6_0 = EmailAvailabilityChecks.crc32(UiViewport.field_w.payload, UiViewport.field_w.position, 0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

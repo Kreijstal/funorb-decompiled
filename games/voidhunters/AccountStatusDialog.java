@@ -15,7 +15,7 @@ class AccountStatusDialog extends ContentTransitionDialog implements UiActionLis
         }
         this.active = false;
         if (this.field_W) {
-          kia.a((byte) 63);
+          OpenGlByteTextureFactory.showReconnectLogin((byte) 63);
           if (param0 != -106) {
             this.field_V = true;
             return;

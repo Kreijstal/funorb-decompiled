@@ -19,7 +19,7 @@ final class SetFighterVision extends ConsoleCommand {
         String var7 = null;
         var6 = VoidHunters.field_G;
         try {
-          if (lsa.savedChatInputWidget != null) {
+          if (PendingRequest.savedChatInputWidget != null) {
             return;
           }
           SetFightersPerPlayerMaximum.chatInputActive = false;
@@ -41,7 +41,7 @@ final class SetFighterVision extends ConsoleCommand {
           if (param1 != -20149) {
             return;
           }
-          lsa.savedChatInputWidget = UiComboBoxRenderer.field_c;
+          PendingRequest.savedChatInputWidget = UiComboBoxRenderer.field_c;
           OneShotSound.field_l = new Widget(0L, param3);
           StringBuilderOutputStream.field_b = new Widget(0L, param2);
           TiledSpriteTextureOperation.field_s = new Widget(0L, (Widget) null);

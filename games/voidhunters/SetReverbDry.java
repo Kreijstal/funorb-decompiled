@@ -95,7 +95,7 @@ final class SetReverbDry extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static int a(int param0, byte param1) {
+    final static int getChatFilter(int param0, byte param1) {
         int var2 = 0;
         if (param0 == 0) {
           var2 = ActivateSelfDestructOrderDefinition.field_d;

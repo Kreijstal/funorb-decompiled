@@ -439,7 +439,7 @@ final class ArchiveIndex {
           var3_int = ((ScrollPaneWidget) (Object) stackIn_4_0).layoutAndUpdateScrolling((byte) stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, param0, DialogMessagePanel.field_w + 2) ? 1 : 0;
           var4 = BitmapTextLayout.field_n.content.children;
           var5 = null;
-          if (iwa.field_b == 2) {
+          if (PendingRequestResender.field_b == 2) {
             PlayerJoinFactory.field_c.enabled = true;
             OpenGlCubeTexture.field_h.text = SetReverbGain.a(SetVelocitySustain.field_o, new String[]{HslAdjustTextureOperation.field_q}, param1 + 89);
             BitmapTextLayout.field_n.scrollPane.viewport.text = null;
@@ -571,7 +571,7 @@ final class ArchiveIndex {
           else {
             OpenGlCubeTexture.field_h.text = SetUseModels.field_p;
             PlayerJoinFactory.field_c.enabled = false;
-            if (iwa.field_b == 1) {
+            if (PendingRequestResender.field_b == 1) {
               BitmapTextLayout.field_n.scrollPane.viewport.text = SetMachineGunPulsetime.field_o;
               if (var19 != 0) {
                 BitmapTextLayout.field_n.scrollPane.viewport.text = SetFighterRepairTime.field_o;
@@ -579,7 +579,7 @@ final class ArchiveIndex {
             } else {
               BitmapTextLayout.field_n.scrollPane.viewport.text = SetFighterRepairTime.field_o;
             }
-            igb.a(BitmapTextLayout.field_n.content, (byte) -100);
+            GammaCorrection.collapseWidgetAndChildren(BitmapTextLayout.field_n.content, (byte) -100);
           }
           stackIn_101_0 = var5;
           return (SocialListEntry) (stackIn_101_0);
@@ -654,7 +654,7 @@ final class ArchiveIndex {
         int var4_int = 0;
         var5 = VoidHunters.field_G;
         try {
-          this.crc = psb.a(param0, param0.length, 0);
+          this.crc = EmailAvailabilityChecks.crc32(param0, param0.length, 0);
           if (param1 != this.crc) {
             throw new RuntimeException();
           }

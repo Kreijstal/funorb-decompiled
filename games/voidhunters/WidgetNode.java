@@ -21,12 +21,12 @@ class WidgetNode extends DualLinkNode {
     WidgetNode() {
     }
 
-    final static void a(int param0, int param1, lsa param2) {
+    final static void writePendingRequest(int param0, int param1, PendingRequest param2) {
         IsaacPacketBuffer var3 = null;
         try {
           if (param0 <= 13) {
-            lsa var4 = (lsa) null;
-            WidgetNode.a(-2, -20, (lsa) null);
+            PendingRequest var4 = (PendingRequest) null;
+            WidgetNode.writePendingRequest(-2, -20, (PendingRequest) null);
           }
           var3 = RequestNewestBlackboxRecording.field_p;
           var3.writeIsaacByte(24335, param1);

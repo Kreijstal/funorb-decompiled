@@ -293,8 +293,8 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           WaterNoiseGpuMaterialEffect.field_h = SetSniperCannonProjectiles.a(var11, "orbcoin", "basic", true);
           AlternateNumericLoginCredentials.alignSpriteToFourPixels(OpenGlGpuTexture2D.field_j, 121);
           AlternateNumericLoginCredentials.alignSpriteToFourPixels(WaterNoiseGpuMaterialEffect.field_h, 126);
-          kua.field_a = new Sprite(32, 32);
-          kua.field_a.setRasterTarget();
+          TextureMappingData.field_a = new Sprite(32, 32);
+          TextureMappingData.field_a.setRasterTarget();
           WaterNoiseGpuMaterialEffect.field_h.drawDownscaled(0, 0, 32, 32);
           SetClientSideDragging.field_q.bind((byte) -108);
           WaterNoiseGpuMaterialEffect.field_h = null;

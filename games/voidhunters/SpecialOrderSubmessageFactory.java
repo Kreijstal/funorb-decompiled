@@ -57,13 +57,13 @@ final class SpecialOrderSubmessageFactory implements GameStateFactory {
         param8 = param8 - param6;
         param1 = param1 - param6;
         param3 = param3 - param7;
-        int var10 = -14 + Math.max(Math.max(vma.a(112, param3), vma.a(119, param5)), vma.a(112, param4));
+        int var10 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(112, param3), IntegerLogarithms.floorLog2Magnitude(119, param5)), IntegerLogarithms.floorLog2Magnitude(112, param4));
         if (var10 > 0) {
           param5 = param5 >> var10;
           param4 = param4 >> var10;
           param3 = param3 >> var10;
         }
-        var10 = -14 + Math.max(Math.max(vma.a(116, param1), vma.a(123, param9)), vma.a(111, param8));
+        var10 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(116, param1), IntegerLogarithms.floorLog2Magnitude(123, param9)), IntegerLogarithms.floorLog2Magnitude(111, param8));
         if (0 < var10) {
           param9 = param9 >> var10;
           param1 = param1 >> var10;

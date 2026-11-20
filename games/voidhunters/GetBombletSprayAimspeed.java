@@ -81,7 +81,7 @@ final class GetBombletSprayAimspeed extends ConsoleCommand {
             field_o = (String) null;
           }
           if (param2 == 6) {
-            stackIn_7_0 = tda.field_O;
+            stackIn_7_0 = FullscreenConfirmationDialog.field_O;
             return stackIn_7_0;
           }
           if (param2 == 7) {

@@ -16,7 +16,7 @@ class SpriteTextureOperation extends TextureOperation {
           return;
         }
         if (param0 <= -42) {
-          if (psb.field_b != null) {
+          if (EmailAvailabilityChecks.fullscreenCanvas != null) {
             FullscreenExit.exitFullscreen((byte) -95);
             GetBombletSprayEnergyUsed.field_p.height = MovingObjectFactory.field_a.height;
             GetBombletSprayEnergyUsed.field_p.width = MovingObjectFactory.field_a.width;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetBloomCoefficientPercentage extends ConsoleCommand {
-    static int[] field_o;
+    static int[] gammaTable;
     static String field_q;
     static String field_p;
 
@@ -15,11 +15,11 @@ final class GetBloomCoefficientPercentage extends ConsoleCommand {
         if (param0 != 256) {
           GetBloomCoefficientPercentage.clearSharedReferences(79);
           field_p = null;
-          field_o = null;
+          gammaTable = null;
           return;
         }
         field_p = null;
-        field_o = null;
+        gammaTable = null;
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -54,6 +54,6 @@ final class GetBloomCoefficientPercentage extends ConsoleCommand {
     static {
         field_q = "Friends";
         field_p = "Unpacking music";
-        field_o = new int[256];
+        gammaTable = new int[256];
     }
 }

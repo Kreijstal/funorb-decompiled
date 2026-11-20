@@ -1426,7 +1426,7 @@ final class ResourceArchive {
             stackIn_36_0 = var11_ref_RuntimeException;
             stackIn_36_1 = new StringBuilder();
             stackIn_37_2 = (param3 != null);
-            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(psb.a(var9, var9.length, 0)).append(" ").append(psb.a(var9, -2 + var9.length, 0)).append(" ").append(this.index.groupCrcs[param2]).append(" ").append(this.index.crc).toString());
+            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_36_0), ((StringBuilder) (Object) stackIn_36_1).append(stackIn_37_2).append(" ").append(param2).append(" ").append(var9.length).append(" ").append(EmailAvailabilityChecks.crc32(var9, var9.length, 0)).append(" ").append(EmailAvailabilityChecks.crc32(var9, -2 + var9.length, 0)).append(" ").append(this.index.groupCrcs[param2]).append(" ").append(this.index.crc).toString());
           }
           if (this.releasePackedGroups) {
             this.groups[param2] = null;

@@ -47,11 +47,11 @@ final class IsaacCipher {
           stackIn_6_4 = (LegacyOpenGlMaterialEffect.field_a == AttachmentInputState.field_b.scrollPane);
           var3_int = ((ScrollPaneWidget) (Object) stackIn_5_0).layoutAndUpdateScrolling((byte) stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, param2, 2 + DialogMessagePanel.field_w) ? 1 : 0;
           var4 = AttachmentInputState.field_b.content.children;
-          if (iwa.field_b != 2 &&
-            1 != iwa.field_b) {
+          if (PendingRequestResender.field_b != 2 &&
+            1 != PendingRequestResender.field_b) {
             AttachmentInputState.field_b.scrollPane.viewport.text = SetFighterRepairTime.field_o;
             AttachmentInputState.field_b.enabled = false;
-            igb.a(AttachmentInputState.field_b.content, (byte) -25);
+            GammaCorrection.collapseWidgetAndChildren(AttachmentInputState.field_b.content, (byte) -25);
             return;
           }
           AttachmentInputState.field_b.scrollPane.viewport.text = null;

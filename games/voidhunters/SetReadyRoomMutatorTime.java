@@ -89,19 +89,19 @@ final class SetReadyRoomMutatorTime extends ConsoleCommand {
           }
         } else {
           if (null == MissionConditionFactory.field_b) {
-            psb.field_b = OpenGlTexture3D.createFullscreenCanvas(0, SetTorpedoProjectiles.field_o, 640, 480, 0, 0);
-            if (psb.field_b != null) {
+            EmailAvailabilityChecks.fullscreenCanvas = OpenGlTexture3D.createFullscreenCanvas(0, SetTorpedoProjectiles.field_o, 640, 480, 0, 0);
+            if (EmailAvailabilityChecks.fullscreenCanvas != null) {
               var2 = 2;
-              SetGrapplingHookCooldown.a((byte) 77, psb.field_b);
+              SetGrapplingHookCooldown.a((byte) 77, EmailAvailabilityChecks.fullscreenCanvas);
             } else {
               var2 = 3;
             }
           } else {
-            psb.field_b = MissionConditionFactory.field_b.createFullscreenCanvas((byte) 124);
+            EmailAvailabilityChecks.fullscreenCanvas = MissionConditionFactory.field_b.createFullscreenCanvas((byte) 124);
             FloatPacketBuffer.notifyBrowserResizeState(2, 117);
-            if (psb.field_b != null) {
+            if (EmailAvailabilityChecks.fullscreenCanvas != null) {
               var2 = 2;
-              SetGrapplingHookCooldown.a((byte) 77, psb.field_b);
+              SetGrapplingHookCooldown.a((byte) 77, EmailAvailabilityChecks.fullscreenCanvas);
             } else {
               var2 = 3;
             }

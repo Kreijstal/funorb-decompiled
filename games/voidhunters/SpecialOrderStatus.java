@@ -114,7 +114,7 @@ final class SpecialOrderStatus extends IntrusiveNode {
           if (var3_int <= var6 && (var4 >= var5 &&
             var7 <= var10 &&
             var9 <= var8)) {
-            var11Lifetime2 = Math.max(0, -14 + vma.a(125, Math.max(Math.max(var4, var6) - Math.min(var3_int, var5), Math.max(var8, var10) - Math.min(var7, var9))));
+            var11Lifetime2 = Math.max(0, -14 + IntegerLogarithms.floorLog2Magnitude(125, Math.max(Math.max(var4, var6) - Math.min(var3_int, var5), Math.max(var8, var10) - Math.min(var7, var9))));
             var12Lifetime2 = 2147483647;
             var14 = -var6 + var3_int;
             var15 = var4 - var5;

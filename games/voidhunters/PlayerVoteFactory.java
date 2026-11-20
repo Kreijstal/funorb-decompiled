@@ -105,7 +105,7 @@ final class PlayerVoteFactory implements GameStateFactory {
           NetworkMessageState.chatChannel = 2;
           var5 = (CharSequence) ((Object) param0);
           GetDebrisThrowable.privateChatTarget = ConstantColorTextureOperation.normalizeName(false, var5);
-          lsa.privateChatRecipientKey = param1;
+          PendingRequest.privateChatRecipientKey = param1;
           CommonGameState.selectDefaultQuickChatMenu(true);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bab.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');

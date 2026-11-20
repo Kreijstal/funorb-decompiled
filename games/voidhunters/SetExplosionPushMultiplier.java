@@ -47,7 +47,7 @@ final class SetExplosionPushMultiplier extends ConsoleCommand {
             stackIn_6_0 = GetUsePolygonFill.field_o;
             return stackIn_6_0;
           }
-          if (iwa.field_b != 2) {
+          if (PendingRequestResender.field_b != 2) {
             stackIn_10_0 = SetSniperCannonProjectileOndamageParticles.field_o;
             return stackIn_10_0;
           }

@@ -29,7 +29,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
             stackIn_3_0 = QuickChatMenuWidget.field_Cb;
             return stackIn_3_0;
           }
-          if (iwa.field_b != 2) {
+          if (PendingRequestResender.field_b != 2) {
             stackIn_7_0 = GetReverbWet.field_p;
             return stackIn_7_0;
           }

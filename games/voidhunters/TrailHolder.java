@@ -162,14 +162,14 @@ final class TrailHolder implements DiffableState {
           TextureCoordinateMode.field_a = LegacyOpenGlEnvironmentMappedWaterEffect.field_h;
         }
         if (wja.field_a == 1) {
-          psb.field_a = var8.readUnsignedShort(1869);
+          EmailAvailabilityChecks.field_a = var8.readUnsignedShort(1869);
           SpawnEnemyShipOrderDefinition.field_f = var8.readString(-1);
         } else {
           if (wja.field_a != 4) {
-            psb.field_a = 0;
+            EmailAvailabilityChecks.field_a = 0;
             SpawnEnemyShipOrderDefinition.field_f = null;
           } else {
-            psb.field_a = var8.readUnsignedShort(1869);
+            EmailAvailabilityChecks.field_a = var8.readUnsignedShort(1869);
             SpawnEnemyShipOrderDefinition.field_f = var8.readString(-1);
           }
         }

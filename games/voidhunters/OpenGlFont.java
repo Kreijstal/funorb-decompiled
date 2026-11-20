@@ -168,7 +168,7 @@ final class OpenGlFont extends ToolkitFont {
               }
             }
           }
-          this.field_e = kia.a(var6Lifetime1, param0, var6Lifetime1, var30, 6406, false, 21989, 6406);
+          this.field_e = OpenGlByteTextureFactory.createByteTexture(var6Lifetime1, param0, var6Lifetime1, var30, 6406, false, 21989, 6406);
           this.field_c = true;
         }
         this.field_e.setLinearFiltering(107, false);

@@ -65,7 +65,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
             param0.field_q == SetSpinningBladeSpindamageMultiplier.field_o.getGameId((byte) -13)) {
             if (!ConsoleSettingsScript.quickChatOnly) {
               var9 = GetLagStandardDeviationOut.field_o;
-              var10 = kia.field_b;
+              var10 = OpenGlByteTextureFactory.field_b;
               var9.menu.addItem(var10, (byte) -53, 14);
             }
             var11 = GetLagStandardDeviationOut.field_o;

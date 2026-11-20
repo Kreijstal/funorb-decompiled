@@ -144,13 +144,13 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               param4 = param4 - param3;
               param6 = param6 - param7;
               param9 = param9 - param7;
-              var10 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
+              var10 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(120, param2), IntegerLogarithms.floorLog2Magnitude(param0 ^ 123, param9)), IntegerLogarithms.floorLog2Magnitude(115, param6));
               if (var10 > param0) {
                 param2 = param2 >> var10;
                 param6 = param6 >> var10;
                 param9 = param9 >> var10;
               }
-              var10Lifetime15 = Math.max(Math.max(vma.a(123, param1), vma.a(111, param4)), vma.a(124, param8)) - 14;
+              var10Lifetime15 = Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(123, param1), IntegerLogarithms.floorLog2Magnitude(111, param4)), IntegerLogarithms.floorLog2Magnitude(124, param8)) - 14;
               if (0 < var10Lifetime15) {
                 param4 = param4 >> var10Lifetime15;
                 param1 = param1 >> var10Lifetime15;
@@ -184,13 +184,13 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               param4 = param4 - param3;
               param6 = param6 - param7;
               param9 = param9 - param7;
-              var10Lifetime6 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
+              var10Lifetime6 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(120, param2), IntegerLogarithms.floorLog2Magnitude(param0 ^ 123, param9)), IntegerLogarithms.floorLog2Magnitude(115, param6));
               if (var10Lifetime6 > param0) {
                 param2 = param2 >> var10Lifetime6;
                 param6 = param6 >> var10Lifetime6;
                 param9 = param9 >> var10Lifetime6;
               }
-              var10Lifetime6Lifetime1 = Math.max(Math.max(vma.a(123, param1), vma.a(111, param4)), vma.a(124, param8)) - 14;
+              var10Lifetime6Lifetime1 = Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(123, param1), IntegerLogarithms.floorLog2Magnitude(111, param4)), IntegerLogarithms.floorLog2Magnitude(124, param8)) - 14;
               if (0 < var10Lifetime6Lifetime1) {
                 param4 = param4 >> var10Lifetime6Lifetime1;
                 param1 = param1 >> var10Lifetime6Lifetime1;
@@ -224,13 +224,13 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               param4 = param4 - param3;
               param6 = param6 - param7;
               param9 = param9 - param7;
-              var10Lifetime7 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
+              var10Lifetime7 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(120, param2), IntegerLogarithms.floorLog2Magnitude(param0 ^ 123, param9)), IntegerLogarithms.floorLog2Magnitude(115, param6));
               if (var10Lifetime7 > param0) {
                 param2 = param2 >> var10Lifetime7;
                 param6 = param6 >> var10Lifetime7;
                 param9 = param9 >> var10Lifetime7;
               }
-              var10Lifetime7Lifetime1 = Math.max(Math.max(vma.a(123, param1), vma.a(111, param4)), vma.a(124, param8)) - 14;
+              var10Lifetime7Lifetime1 = Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(123, param1), IntegerLogarithms.floorLog2Magnitude(111, param4)), IntegerLogarithms.floorLog2Magnitude(124, param8)) - 14;
               if (0 < var10Lifetime7Lifetime1) {
                 param4 = param4 >> var10Lifetime7Lifetime1;
                 param1 = param1 >> var10Lifetime7Lifetime1;
@@ -264,13 +264,13 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               param4 = param4 - param3;
               param6 = param6 - param7;
               param9 = param9 - param7;
-              var10Lifetime8 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
+              var10Lifetime8 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(120, param2), IntegerLogarithms.floorLog2Magnitude(param0 ^ 123, param9)), IntegerLogarithms.floorLog2Magnitude(115, param6));
               if (var10Lifetime8 > param0) {
                 param2 = param2 >> var10Lifetime8;
                 param6 = param6 >> var10Lifetime8;
                 param9 = param9 >> var10Lifetime8;
               }
-              var10Lifetime8Lifetime1 = Math.max(Math.max(vma.a(123, param1), vma.a(111, param4)), vma.a(124, param8)) - 14;
+              var10Lifetime8Lifetime1 = Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(123, param1), IntegerLogarithms.floorLog2Magnitude(111, param4)), IntegerLogarithms.floorLog2Magnitude(124, param8)) - 14;
               if (0 < var10Lifetime8Lifetime1) {
                 param4 = param4 >> var10Lifetime8Lifetime1;
                 param1 = param1 >> var10Lifetime8Lifetime1;
@@ -304,13 +304,13 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               param4 = param4 - param3;
               param6 = param6 - param7;
               param9 = param9 - param7;
-              var10Lifetime9 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
+              var10Lifetime9 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(120, param2), IntegerLogarithms.floorLog2Magnitude(param0 ^ 123, param9)), IntegerLogarithms.floorLog2Magnitude(115, param6));
               if (var10Lifetime9 > param0) {
                 param2 = param2 >> var10Lifetime9;
                 param6 = param6 >> var10Lifetime9;
                 param9 = param9 >> var10Lifetime9;
               }
-              var10Lifetime9Lifetime1 = Math.max(Math.max(vma.a(123, param1), vma.a(111, param4)), vma.a(124, param8)) - 14;
+              var10Lifetime9Lifetime1 = Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(123, param1), IntegerLogarithms.floorLog2Magnitude(111, param4)), IntegerLogarithms.floorLog2Magnitude(124, param8)) - 14;
               if (0 < var10Lifetime9Lifetime1) {
                 param4 = param4 >> var10Lifetime9Lifetime1;
                 param1 = param1 >> var10Lifetime9Lifetime1;
@@ -344,13 +344,13 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               param4 = param4 - param3;
               param6 = param6 - param7;
               param9 = param9 - param7;
-              var10Lifetime10 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
+              var10Lifetime10 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(120, param2), IntegerLogarithms.floorLog2Magnitude(param0 ^ 123, param9)), IntegerLogarithms.floorLog2Magnitude(115, param6));
               if (var10Lifetime10 > param0) {
                 param2 = param2 >> var10Lifetime10;
                 param6 = param6 >> var10Lifetime10;
                 param9 = param9 >> var10Lifetime10;
               }
-              var10Lifetime10Lifetime1 = Math.max(Math.max(vma.a(123, param1), vma.a(111, param4)), vma.a(124, param8)) - 14;
+              var10Lifetime10Lifetime1 = Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(123, param1), IntegerLogarithms.floorLog2Magnitude(111, param4)), IntegerLogarithms.floorLog2Magnitude(124, param8)) - 14;
               if (0 < var10Lifetime10Lifetime1) {
                 param4 = param4 >> var10Lifetime10Lifetime1;
                 param1 = param1 >> var10Lifetime10Lifetime1;
@@ -384,13 +384,13 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               param4 = param4 - param3;
               param6 = param6 - param7;
               param9 = param9 - param7;
-              var10Lifetime11 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
+              var10Lifetime11 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(120, param2), IntegerLogarithms.floorLog2Magnitude(param0 ^ 123, param9)), IntegerLogarithms.floorLog2Magnitude(115, param6));
               if (var10Lifetime11 > param0) {
                 param2 = param2 >> var10Lifetime11;
                 param6 = param6 >> var10Lifetime11;
                 param9 = param9 >> var10Lifetime11;
               }
-              var10Lifetime11Lifetime1 = Math.max(Math.max(vma.a(123, param1), vma.a(111, param4)), vma.a(124, param8)) - 14;
+              var10Lifetime11Lifetime1 = Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(123, param1), IntegerLogarithms.floorLog2Magnitude(111, param4)), IntegerLogarithms.floorLog2Magnitude(124, param8)) - 14;
               if (0 < var10Lifetime11Lifetime1) {
                 param4 = param4 >> var10Lifetime11Lifetime1;
                 param1 = param1 >> var10Lifetime11Lifetime1;
@@ -426,13 +426,13 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
             param4 = param4 - param3;
             param6 = param6 - param7;
             param9 = param9 - param7;
-            var10Lifetime12 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
+            var10Lifetime12 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(120, param2), IntegerLogarithms.floorLog2Magnitude(param0 ^ 123, param9)), IntegerLogarithms.floorLog2Magnitude(115, param6));
             if (var10Lifetime12 > param0) {
               param2 = param2 >> var10Lifetime12;
               param6 = param6 >> var10Lifetime12;
               param9 = param9 >> var10Lifetime12;
             }
-            var10Lifetime13 = Math.max(Math.max(vma.a(123, param1), vma.a(111, param4)), vma.a(124, param8)) - 14;
+            var10Lifetime13 = Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(123, param1), IntegerLogarithms.floorLog2Magnitude(111, param4)), IntegerLogarithms.floorLog2Magnitude(124, param8)) - 14;
             if (0 < var10Lifetime13) {
               param4 = param4 >> var10Lifetime13;
               param1 = param1 >> var10Lifetime13;
@@ -476,13 +476,13 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               param4 = param4 - param3;
               param6 = param6 - param7;
               param9 = param9 - param7;
-              var10Lifetime1 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
+              var10Lifetime1 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(120, param2), IntegerLogarithms.floorLog2Magnitude(param0 ^ 123, param9)), IntegerLogarithms.floorLog2Magnitude(115, param6));
               if (var10Lifetime1 > param0) {
                 param2 = param2 >> var10Lifetime1;
                 param6 = param6 >> var10Lifetime1;
                 param9 = param9 >> var10Lifetime1;
               }
-              var10Lifetime1Lifetime10 = Math.max(Math.max(vma.a(123, param1), vma.a(111, param4)), vma.a(124, param8)) - 14;
+              var10Lifetime1Lifetime10 = Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(123, param1), IntegerLogarithms.floorLog2Magnitude(111, param4)), IntegerLogarithms.floorLog2Magnitude(124, param8)) - 14;
               if (0 < var10Lifetime1Lifetime10) {
                 param4 = param4 >> var10Lifetime1Lifetime10;
                 param1 = param1 >> var10Lifetime1Lifetime10;
@@ -516,13 +516,13 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               param4 = param4 - param3;
               param6 = param6 - param7;
               param9 = param9 - param7;
-              var10Lifetime1Lifetime1 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
+              var10Lifetime1Lifetime1 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(120, param2), IntegerLogarithms.floorLog2Magnitude(param0 ^ 123, param9)), IntegerLogarithms.floorLog2Magnitude(115, param6));
               if (var10Lifetime1Lifetime1 > param0) {
                 param2 = param2 >> var10Lifetime1Lifetime1;
                 param6 = param6 >> var10Lifetime1Lifetime1;
                 param9 = param9 >> var10Lifetime1Lifetime1;
               }
-              var10Lifetime1Lifetime1Lifetime1 = Math.max(Math.max(vma.a(123, param1), vma.a(111, param4)), vma.a(124, param8)) - 14;
+              var10Lifetime1Lifetime1Lifetime1 = Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(123, param1), IntegerLogarithms.floorLog2Magnitude(111, param4)), IntegerLogarithms.floorLog2Magnitude(124, param8)) - 14;
               if (0 < var10Lifetime1Lifetime1Lifetime1) {
                 param4 = param4 >> var10Lifetime1Lifetime1Lifetime1;
                 param1 = param1 >> var10Lifetime1Lifetime1Lifetime1;
@@ -556,13 +556,13 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               param4 = param4 - param3;
               param6 = param6 - param7;
               param9 = param9 - param7;
-              var10Lifetime1Lifetime2 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
+              var10Lifetime1Lifetime2 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(120, param2), IntegerLogarithms.floorLog2Magnitude(param0 ^ 123, param9)), IntegerLogarithms.floorLog2Magnitude(115, param6));
               if (var10Lifetime1Lifetime2 > param0) {
                 param2 = param2 >> var10Lifetime1Lifetime2;
                 param6 = param6 >> var10Lifetime1Lifetime2;
                 param9 = param9 >> var10Lifetime1Lifetime2;
               }
-              var10Lifetime1Lifetime2Lifetime1 = Math.max(Math.max(vma.a(123, param1), vma.a(111, param4)), vma.a(124, param8)) - 14;
+              var10Lifetime1Lifetime2Lifetime1 = Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(123, param1), IntegerLogarithms.floorLog2Magnitude(111, param4)), IntegerLogarithms.floorLog2Magnitude(124, param8)) - 14;
               if (0 < var10Lifetime1Lifetime2Lifetime1) {
                 param4 = param4 >> var10Lifetime1Lifetime2Lifetime1;
                 param1 = param1 >> var10Lifetime1Lifetime2Lifetime1;
@@ -596,13 +596,13 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               param4 = param4 - param3;
               param6 = param6 - param7;
               param9 = param9 - param7;
-              var10Lifetime1Lifetime3 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
+              var10Lifetime1Lifetime3 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(120, param2), IntegerLogarithms.floorLog2Magnitude(param0 ^ 123, param9)), IntegerLogarithms.floorLog2Magnitude(115, param6));
               if (var10Lifetime1Lifetime3 > param0) {
                 param2 = param2 >> var10Lifetime1Lifetime3;
                 param6 = param6 >> var10Lifetime1Lifetime3;
                 param9 = param9 >> var10Lifetime1Lifetime3;
               }
-              var10Lifetime1Lifetime3Lifetime1 = Math.max(Math.max(vma.a(123, param1), vma.a(111, param4)), vma.a(124, param8)) - 14;
+              var10Lifetime1Lifetime3Lifetime1 = Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(123, param1), IntegerLogarithms.floorLog2Magnitude(111, param4)), IntegerLogarithms.floorLog2Magnitude(124, param8)) - 14;
               if (0 < var10Lifetime1Lifetime3Lifetime1) {
                 param4 = param4 >> var10Lifetime1Lifetime3Lifetime1;
                 param1 = param1 >> var10Lifetime1Lifetime3Lifetime1;
@@ -636,13 +636,13 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               param4 = param4 - param3;
               param6 = param6 - param7;
               param9 = param9 - param7;
-              var10Lifetime1Lifetime4 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
+              var10Lifetime1Lifetime4 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(120, param2), IntegerLogarithms.floorLog2Magnitude(param0 ^ 123, param9)), IntegerLogarithms.floorLog2Magnitude(115, param6));
               if (var10Lifetime1Lifetime4 > param0) {
                 param2 = param2 >> var10Lifetime1Lifetime4;
                 param6 = param6 >> var10Lifetime1Lifetime4;
                 param9 = param9 >> var10Lifetime1Lifetime4;
               }
-              var10Lifetime1Lifetime4Lifetime1 = Math.max(Math.max(vma.a(123, param1), vma.a(111, param4)), vma.a(124, param8)) - 14;
+              var10Lifetime1Lifetime4Lifetime1 = Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(123, param1), IntegerLogarithms.floorLog2Magnitude(111, param4)), IntegerLogarithms.floorLog2Magnitude(124, param8)) - 14;
               if (0 < var10Lifetime1Lifetime4Lifetime1) {
                 param4 = param4 >> var10Lifetime1Lifetime4Lifetime1;
                 param1 = param1 >> var10Lifetime1Lifetime4Lifetime1;
@@ -676,13 +676,13 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               param4 = param4 - param3;
               param6 = param6 - param7;
               param9 = param9 - param7;
-              var10Lifetime1Lifetime5 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
+              var10Lifetime1Lifetime5 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(120, param2), IntegerLogarithms.floorLog2Magnitude(param0 ^ 123, param9)), IntegerLogarithms.floorLog2Magnitude(115, param6));
               if (var10Lifetime1Lifetime5 > param0) {
                 param2 = param2 >> var10Lifetime1Lifetime5;
                 param6 = param6 >> var10Lifetime1Lifetime5;
                 param9 = param9 >> var10Lifetime1Lifetime5;
               }
-              var10Lifetime1Lifetime5Lifetime1 = Math.max(Math.max(vma.a(123, param1), vma.a(111, param4)), vma.a(124, param8)) - 14;
+              var10Lifetime1Lifetime5Lifetime1 = Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(123, param1), IntegerLogarithms.floorLog2Magnitude(111, param4)), IntegerLogarithms.floorLog2Magnitude(124, param8)) - 14;
               if (0 < var10Lifetime1Lifetime5Lifetime1) {
                 param4 = param4 >> var10Lifetime1Lifetime5Lifetime1;
                 param1 = param1 >> var10Lifetime1Lifetime5Lifetime1;
@@ -716,13 +716,13 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               param4 = param4 - param3;
               param6 = param6 - param7;
               param9 = param9 - param7;
-              var10Lifetime1Lifetime6 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
+              var10Lifetime1Lifetime6 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(120, param2), IntegerLogarithms.floorLog2Magnitude(param0 ^ 123, param9)), IntegerLogarithms.floorLog2Magnitude(115, param6));
               if (var10Lifetime1Lifetime6 > param0) {
                 param2 = param2 >> var10Lifetime1Lifetime6;
                 param6 = param6 >> var10Lifetime1Lifetime6;
                 param9 = param9 >> var10Lifetime1Lifetime6;
               }
-              var10Lifetime1Lifetime6Lifetime1 = Math.max(Math.max(vma.a(123, param1), vma.a(111, param4)), vma.a(124, param8)) - 14;
+              var10Lifetime1Lifetime6Lifetime1 = Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(123, param1), IntegerLogarithms.floorLog2Magnitude(111, param4)), IntegerLogarithms.floorLog2Magnitude(124, param8)) - 14;
               if (0 < var10Lifetime1Lifetime6Lifetime1) {
                 param4 = param4 >> var10Lifetime1Lifetime6Lifetime1;
                 param1 = param1 >> var10Lifetime1Lifetime6Lifetime1;
@@ -758,13 +758,13 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
             param4 = param4 - param3;
             param6 = param6 - param7;
             param9 = param9 - param7;
-            var10Lifetime1Lifetime7 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
+            var10Lifetime1Lifetime7 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(120, param2), IntegerLogarithms.floorLog2Magnitude(param0 ^ 123, param9)), IntegerLogarithms.floorLog2Magnitude(115, param6));
             if (var10Lifetime1Lifetime7 > param0) {
               param2 = param2 >> var10Lifetime1Lifetime7;
               param6 = param6 >> var10Lifetime1Lifetime7;
               param9 = param9 >> var10Lifetime1Lifetime7;
             }
-            var10Lifetime1Lifetime8 = Math.max(Math.max(vma.a(123, param1), vma.a(111, param4)), vma.a(124, param8)) - 14;
+            var10Lifetime1Lifetime8 = Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(123, param1), IntegerLogarithms.floorLog2Magnitude(111, param4)), IntegerLogarithms.floorLog2Magnitude(124, param8)) - 14;
             if (0 < var10Lifetime1Lifetime8) {
               param4 = param4 >> var10Lifetime1Lifetime8;
               param1 = param1 >> var10Lifetime1Lifetime8;
@@ -811,13 +811,13 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
               param4 = param4 - param3;
               param6 = param6 - param7;
               param9 = param9 - param7;
-              var10Lifetime2 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
+              var10Lifetime2 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(120, param2), IntegerLogarithms.floorLog2Magnitude(param0 ^ 123, param9)), IntegerLogarithms.floorLog2Magnitude(115, param6));
               if (var10Lifetime2 > param0) {
                 param2 = param2 >> var10Lifetime2;
                 param6 = param6 >> var10Lifetime2;
                 param9 = param9 >> var10Lifetime2;
               }
-              var10Lifetime2Lifetime1 = Math.max(Math.max(vma.a(123, param1), vma.a(111, param4)), vma.a(124, param8)) - 14;
+              var10Lifetime2Lifetime1 = Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(123, param1), IntegerLogarithms.floorLog2Magnitude(111, param4)), IntegerLogarithms.floorLog2Magnitude(124, param8)) - 14;
               if (0 < var10Lifetime2Lifetime1) {
                 param4 = param4 >> var10Lifetime2Lifetime1;
                 param1 = param1 >> var10Lifetime2Lifetime1;
@@ -884,13 +884,13 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
         param4 = param4 - param3;
         param6 = param6 - param7;
         param9 = param9 - param7;
-        var10Lifetime3 = -14 + Math.max(Math.max(vma.a(120, param2), vma.a(param0 ^ 123, param9)), vma.a(115, param6));
+        var10Lifetime3 = -14 + Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(120, param2), IntegerLogarithms.floorLog2Magnitude(param0 ^ 123, param9)), IntegerLogarithms.floorLog2Magnitude(115, param6));
         if (var10Lifetime3 > param0) {
           param2 = param2 >> var10Lifetime3;
           param6 = param6 >> var10Lifetime3;
           param9 = param9 >> var10Lifetime3;
         }
-        var10Lifetime4 = Math.max(Math.max(vma.a(123, param1), vma.a(111, param4)), vma.a(124, param8)) - 14;
+        var10Lifetime4 = Math.max(Math.max(IntegerLogarithms.floorLog2Magnitude(123, param1), IntegerLogarithms.floorLog2Magnitude(111, param4)), IntegerLogarithms.floorLog2Magnitude(124, param8)) - 14;
         if (0 < var10Lifetime4) {
           param4 = param4 >> var10Lifetime4;
           param1 = param1 >> var10Lifetime4;

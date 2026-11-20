@@ -30,7 +30,7 @@ final class LaserWeaponDefinition extends WeaponDefinition {
 
     final static boolean isWordDelimiter(int param0, char param1) {
         if (param0 > -107) {
-          LaserWeaponDefinition.a(-27, 5);
+          LaserWeaponDefinition.sendChatFilters(-27, 5);
           if (param1 == 32) {
             return true;
           }
@@ -101,7 +101,7 @@ final class LaserWeaponDefinition extends WeaponDefinition {
         return GpuMaterialEffect.field_b;
     }
 
-    final static void a(int param0, int param1) {
+    final static void sendChatFilters(int param0, int param1) {
         IsaacPacketBuffer var2 = null;
         IsaacPacketBuffer var2Lifetime1;
         if (param0 == 40) {
@@ -109,7 +109,7 @@ final class LaserWeaponDefinition extends WeaponDefinition {
           var2.writeIsaacByte(24335, param1);
           var2.writeByte(0, 2);
           var2.writeByte(0, 4);
-          var2.writeByte(0, kua.a((byte) 75));
+          var2.writeByte(0, TextureMappingData.packChatFilters((byte) 75));
           return;
         }
         LaserWeaponDefinition.clearSharedReferences((byte) 62);
@@ -117,7 +117,7 @@ final class LaserWeaponDefinition extends WeaponDefinition {
         var2Lifetime1.writeIsaacByte(24335, param1);
         var2Lifetime1.writeByte(0, 2);
         var2Lifetime1.writeByte(0, 4);
-        var2Lifetime1.writeByte(0, kua.a((byte) 75));
+        var2Lifetime1.writeByte(0, TextureMappingData.packChatFilters((byte) 75));
     }
 
     final int getFiringSoundId(boolean param0) {
@@ -129,7 +129,7 @@ final class LaserWeaponDefinition extends WeaponDefinition {
 
     final int getReloadTime(byte param0) {
         if (param0 <= 0) {
-          LaserWeaponDefinition.a(-4, 20);
+          LaserWeaponDefinition.sendChatFilters(-4, 20);
           return SetSniperCannonAimspeed.field_o;
         }
         return SetSniperCannonAimspeed.field_o;

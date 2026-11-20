@@ -101,7 +101,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
           if (param0 != 39) {
             field_o = (String) null;
           }
-          lsa.privateChatRecipientKey = param1;
+          PendingRequest.privateChatRecipientKey = param1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ir.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

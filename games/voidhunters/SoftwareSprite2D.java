@@ -34,7 +34,7 @@ abstract class SoftwareSprite2D {
             var2Lifetime1.unlinkSecondary((byte) -35);
             var2Lifetime1 = TeamNodeCondition.field_c.next(-1);
           }
-          iwa.field_b = 0;
+          PendingRequestResender.field_b = 0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ija.G(" + param0 + ')');
         }

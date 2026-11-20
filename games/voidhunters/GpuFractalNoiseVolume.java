@@ -32,14 +32,14 @@ final class GpuFractalNoiseVolume extends FractalNoiseVolumeGenerator {
         } else {
           var1 = new SoftwareIndexedSprite2D[GpuProjectionMode.field_a];
           for (var2 = 0; GpuProjectionMode.field_a > var2; var2++) {
-            var1[var2] = new SoftwareIndexedSprite2D(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], LiteralStrings.field_a[var2], LegacyOpenGlTextureCache.field_d);
+            var1[var2] = new SoftwareIndexedSprite2D(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], TypedStateArrayCopier.field_a[var2], LiteralStrings.field_a[var2], LegacyOpenGlTextureCache.field_d);
           }
           MatchResults.clearDecodedSpriteData(94);
           return var1;
         }
         var1Lifetime1 = new SoftwareIndexedSprite2D[GpuProjectionMode.field_a];
         for (var2Lifetime1 = 0; GpuProjectionMode.field_a > var2Lifetime1; var2Lifetime1++) {
-          var1Lifetime1[var2Lifetime1] = new SoftwareIndexedSprite2D(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2Lifetime1], SettingsChange.field_f[var2Lifetime1], SetMissionTerrainDebrisProbability.field_o[var2Lifetime1], hla.field_a[var2Lifetime1], LiteralStrings.field_a[var2Lifetime1], LegacyOpenGlTextureCache.field_d);
+          var1Lifetime1[var2Lifetime1] = new SoftwareIndexedSprite2D(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2Lifetime1], SettingsChange.field_f[var2Lifetime1], SetMissionTerrainDebrisProbability.field_o[var2Lifetime1], TypedStateArrayCopier.field_a[var2Lifetime1], LiteralStrings.field_a[var2Lifetime1], LegacyOpenGlTextureCache.field_d);
         }
         MatchResults.clearDecodedSpriteData(94);
         return var1Lifetime1;

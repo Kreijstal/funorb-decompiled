@@ -5,21 +5,21 @@ final class FullscreenExit {
     static String field_a;
 
     final static void exitFullscreen(byte param0) {
-        if (null == psb.field_b) {
+        if (null == EmailAvailabilityChecks.fullscreenCanvas) {
           return;
         }
         if (param0 != -95) {
           return;
         }
-        ShieldInfoPool.detachCanvasInput(psb.field_b, -28);
-        psb.field_b.exitFullscreen(SetTorpedoProjectiles.field_o, -32335);
-        psb.field_b = null;
+        ShieldInfoPool.detachCanvasInput(EmailAvailabilityChecks.fullscreenCanvas, -28);
+        EmailAvailabilityChecks.fullscreenCanvas.exitFullscreen(SetTorpedoProjectiles.field_o, -32335);
+        EmailAvailabilityChecks.fullscreenCanvas = null;
         if (MissionConditionFactory.field_b == null) {
-          igb.field_a.requestFocus();
+          GammaCorrection.field_a.requestFocus();
           return;
         }
         MissionConditionFactory.field_b.restorePreviousSize(param0 - 29579);
-        igb.field_a.requestFocus();
+        GammaCorrection.field_a.requestFocus();
     }
 
     public static void clearSharedReferences(int param0) {

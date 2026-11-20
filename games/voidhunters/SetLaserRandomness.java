@@ -79,7 +79,7 @@ final class SetLaserRandomness extends ConsoleCommand {
         if (NetworkMessageState.chatChannel == 2) {
           var7 = GetReadyRoomTeamTime.field_o;
         } else {
-          var7 = kia.field_b;
+          var7 = OpenGlByteTextureFactory.field_b;
         }
         VoidHunters.updateChatInputDialog(param4, param3, param6, param0, var7, param5, true, param2);
     }

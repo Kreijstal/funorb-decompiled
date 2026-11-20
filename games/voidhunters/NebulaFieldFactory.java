@@ -94,14 +94,14 @@ final class NebulaFieldFactory implements GameStateFactory {
           }
           if (var2 != 1) {
             if (var2 == 2) {
-              if (iwa.field_b == 1) {
-                iwa.field_b = 2;
+              if (PendingRequestResender.field_b == 1) {
+                PendingRequestResender.field_b = 2;
               }
               return;
             }
             if (var2 == 3) {
-              if (iwa.field_b == 2) {
-                iwa.field_b = 1;
+              if (PendingRequestResender.field_b == 2) {
+                PendingRequestResender.field_b = 1;
               }
               return;
             }
@@ -110,11 +110,11 @@ final class NebulaFieldFactory implements GameStateFactory {
               FighterBayWeaponDefinition.l(-125);
               return;
             }
-            iwa.field_b = 1;
+            PendingRequestResender.field_b = 1;
             var3 = var1.readString(-1);
             HslAdjustTextureOperation.field_q = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte((byte) -126);
-            MachineGunWeaponDefinition.b(var4, (byte) 71);
+            MachineGunWeaponDefinition.unpackChatFilters(var4, (byte) 71);
             return;
           }
           if (MenuInputState.field_f == null) {

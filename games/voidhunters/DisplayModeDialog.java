@@ -285,7 +285,7 @@ final class DisplayModeDialog extends ResizableModalPanel implements UiActionLis
             var6_int = var5_ref_String__.length - 1;
             for (var7_int = 0; this.displayModes.length > var7_int; var7_int++) {
               var8 = this.displayModes[var7_int];
-              if (psb.field_b != null &&
+              if (EmailAvailabilityChecks.fullscreenCanvas != null &&
                 var8.width == MissionConditionFactory.field_b.fullscreenWidth &&
                 var8.height == MissionConditionFactory.field_b.fullscreenHeight) {
                 var6_int = var7_int;
@@ -639,7 +639,7 @@ final class DisplayModeDialog extends ResizableModalPanel implements UiActionLis
     }
 
     private final UiFocusableComponent getCurrentModeButton(byte param0) {
-        if (psb.field_b != null) {
+        if (EmailAvailabilityChecks.fullscreenCanvas != null) {
           return this.fullscreenButton;
         }
         if (param0 <= 45) {
@@ -685,10 +685,10 @@ final class DisplayModeDialog extends ResizableModalPanel implements UiActionLis
                   MissionConditionFactory.field_b.setFullscreenSize(this.displayModes[var2].height, 480, this.displayModes[var2].width);
                 }
                 SetReadyRoomMutatorTime.a(2, true);
-                this.modalStack.pushPanel(false, new tda(this.modalStack));
+                this.modalStack.pushPanel(false, new FullscreenConfirmationDialog(this.modalStack));
               } else {
                 SetReadyRoomMutatorTime.a(2, true);
-                this.modalStack.pushPanel(false, new tda(this.modalStack));
+                this.modalStack.pushPanel(false, new FullscreenConfirmationDialog(this.modalStack));
               }
             }
           }

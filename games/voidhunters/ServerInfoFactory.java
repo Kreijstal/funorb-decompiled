@@ -167,7 +167,7 @@ final class ServerInfoFactory implements GameStateFactory {
               if (GpuSprite.field_e) {
                 stackIn_38_0 = SetFighterBayAimspeed.field_p;
               } else {
-                stackIn_38_0 = kia.field_b;
+                stackIn_38_0 = OpenGlByteTextureFactory.field_b;
               }
               var13 = stackIn_38_0;
               var4 = var13;
@@ -238,7 +238,7 @@ final class ServerInfoFactory implements GameStateFactory {
                   if (GpuSprite.field_e) {
                     stackIn_92_0 = SetFighterBayAimspeed.field_p;
                   } else {
-                    stackIn_92_0 = kia.field_b;
+                    stackIn_92_0 = OpenGlByteTextureFactory.field_b;
                   }
                   var15 = stackIn_92_0;
                   var4Lifetime1 = var15;
@@ -287,7 +287,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 if (GpuSprite.field_e) {
                   stackIn_122_0 = SetFighterBayAimspeed.field_p;
                 } else {
-                  stackIn_122_0 = kia.field_b;
+                  stackIn_122_0 = OpenGlByteTextureFactory.field_b;
                 }
                 var17 = stackIn_122_0;
                 var19 = var17;
@@ -330,7 +330,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 if (GpuSprite.field_e) {
                   stackIn_140_0 = SetFighterBayAimspeed.field_p;
                 } else {
-                  stackIn_140_0 = kia.field_b;
+                  stackIn_140_0 = OpenGlByteTextureFactory.field_b;
                 }
                 var19Lifetime1 = stackIn_140_0;
                 var4Lifetime1Lifetime1 = var19Lifetime1;
@@ -367,7 +367,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 if (GpuSprite.field_e) {
                   stackIn_158_0 = SetFighterBayAimspeed.field_p;
                 } else {
-                  stackIn_158_0 = kia.field_b;
+                  stackIn_158_0 = OpenGlByteTextureFactory.field_b;
                 }
                 var20 = stackIn_158_0;
                 var4Lifetime1Lifetime1 = var20;
@@ -401,7 +401,7 @@ final class ServerInfoFactory implements GameStateFactory {
             if (GpuSprite.field_e) {
               stackIn_177_0 = SetFighterBayAimspeed.field_p;
             } else {
-              stackIn_177_0 = kia.field_b;
+              stackIn_177_0 = OpenGlByteTextureFactory.field_b;
             }
             var21 = stackIn_177_0;
             var4Lifetime1Lifetime2 = var21;

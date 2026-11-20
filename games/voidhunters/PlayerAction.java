@@ -144,7 +144,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
             var16.screenOriginX = param1.screenOriginX;
             var16.screenOriginY = param1.screenOriginY;
             if (1 == GetMissilesExplosionPower.field_p ||
-              null == psb.field_b) {
+              null == EmailAvailabilityChecks.fullscreenCanvas) {
               var16.worldCenterY = param1.worldCenterY;
               var16.scale = param1.scale / 32.0f + 0.00011081559932790697f;
               var13.worldCenterX = param1.worldCenterX;

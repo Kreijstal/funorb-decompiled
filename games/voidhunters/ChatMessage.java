@@ -93,7 +93,7 @@ final class ChatMessage {
           if (~this.senderKey == ~BodyInZoneConditionFactory.field_a) {
             return 1;
           }
-          if (iwa.field_b == 2 &&
+          if (PendingRequestResender.field_b == 2 &&
             GetTorqueDownshift.a(this.senderName, (byte) -105)) {
             return 1;
           }
@@ -124,7 +124,7 @@ final class ChatMessage {
         } else {
           this.field_m = AlternateNumericLoginCredentials.field_h;
         }
-        this.field_q = psb.field_a;
+        this.field_q = EmailAvailabilityChecks.field_a;
         this.field_c = ModalPanel.field_A;
         this.channelType = wja.field_a;
         this.unfiltered = TickCondition.field_e;

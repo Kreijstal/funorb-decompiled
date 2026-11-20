@@ -38,7 +38,7 @@ final class UiValueTrack extends UiFocusableComponent {
         var1 = new Sprite[GpuProjectionMode.field_a];
         if (!param0) {
           for (var2 = 0; GpuProjectionMode.field_a > var2; var2++) {
-            var3 = hla.field_a[var2] * SetMissionTerrainDebrisProbability.field_o[var2];
+            var3 = TypedStateArrayCopier.field_a[var2] * SetMissionTerrainDebrisProbability.field_o[var2];
             var25 = LiteralStrings.field_a[var2];
             if (!SetBurstFireMaxEnergy.field_o[var2]) {
               var10 = new int[var3];
@@ -46,7 +46,7 @@ final class UiValueTrack extends UiFocusableComponent {
               for (var6 = 0; var3 > var6; var6++) {
                 var10[var6] = LegacyOpenGlTextureCache.field_d[MenuBackgroundBattle.andBits((int) var25[var6], 255)];
               }
-              var1[var2] = new Sprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var26);
+              var1[var2] = new Sprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], TypedStateArrayCopier.field_a[var2], var26);
             } else {
               var15 = SetInnateThrusters.field_o[var2];
               var11 = var15;
@@ -58,13 +58,13 @@ final class UiValueTrack extends UiFocusableComponent {
               for (var7 = 0; var3 > var7; var7++) {
                 var6_ref_int__[var7] = SetAngularForceDownshift.orBits(MenuBackgroundBattle.andBits(var15[var7] << 24, -16777216), LegacyOpenGlTextureCache.field_d[MenuBackgroundBattle.andBits((int) var25[var7], 255)]);
               }
-              var1[var2] = (Sprite) ((Object) new ArgbSprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var17));
+              var1[var2] = (Sprite) ((Object) new ArgbSprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], TypedStateArrayCopier.field_a[var2], var17));
             }
           }
         } else {
           UiValueTrack.createDecodedSprites(true);
           for (var2 = 0; GpuProjectionMode.field_a > var2; var2++) {
-            var3 = hla.field_a[var2] * SetMissionTerrainDebrisProbability.field_o[var2];
+            var3 = TypedStateArrayCopier.field_a[var2] * SetMissionTerrainDebrisProbability.field_o[var2];
             var23 = LiteralStrings.field_a[var2];
             if (!SetBurstFireMaxEnergy.field_o[var2]) {
               var10 = new int[var3];
@@ -72,7 +72,7 @@ final class UiValueTrack extends UiFocusableComponent {
               for (var6 = 0; var3 > var6; var6++) {
                 var10[var6] = LegacyOpenGlTextureCache.field_d[MenuBackgroundBattle.andBits((int) var23[var6], 255)];
               }
-              var1[var2] = new Sprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var24);
+              var1[var2] = new Sprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], TypedStateArrayCopier.field_a[var2], var24);
             } else {
               var15 = SetInnateThrusters.field_o[var2];
               var11 = var15;
@@ -84,7 +84,7 @@ final class UiValueTrack extends UiFocusableComponent {
               for (var7 = 0; var3 > var7; var7++) {
                 var6_ref_int__[var7] = SetAngularForceDownshift.orBits(MenuBackgroundBattle.andBits(var15[var7] << 24, -16777216), LegacyOpenGlTextureCache.field_d[MenuBackgroundBattle.andBits((int) var23[var7], 255)]);
               }
-              var1[var2] = (Sprite) ((Object) new ArgbSprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var17));
+              var1[var2] = (Sprite) ((Object) new ArgbSprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], TypedStateArrayCopier.field_a[var2], var17));
             }
           }
         }

@@ -47,7 +47,7 @@ final class SetUseFilledPolygons extends ConsoleCommand {
         if (param0 > param3) {
           return false;
         }
-        int var6 = Math.max(vma.a(114, param3), Math.max(vma.a(122, param5), vma.a(122, param0))) - 13;
+        int var6 = Math.max(IntegerLogarithms.floorLog2Magnitude(114, param3), Math.max(IntegerLogarithms.floorLog2Magnitude(122, param5), IntegerLogarithms.floorLog2Magnitude(122, param0))) - 13;
         if (var6 > 0) {
           param0 = param0 >> var6;
           param3 = param3 >> var6;

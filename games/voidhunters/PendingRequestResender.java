@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class iwa {
+final class PendingRequestResender {
     static String field_a;
     static int field_b;
     static String field_c;
@@ -9,24 +9,24 @@ final class iwa {
     public static void clearSharedReferences(byte param0) {
         field_a = null;
         if (param0 >= -68) {
-          iwa.a((byte) -94, 6);
+          PendingRequestResender.resendPendingRequests((byte) -94, 6);
           field_c = null;
           return;
         }
         field_c = null;
     }
 
-    final static void a(byte param0, int param1) {
+    final static void resendPendingRequests(byte param0, int param1) {
         RuntimeException var2 = null;
         int var3 = 0;
-        lsa var4 = null;
+        PendingRequest var4 = null;
         RuntimeException decompiledCaughtException = null;
         var3 = VoidHunters.field_G;
         try {
-          var4 = (lsa) (ScreenSizeController.field_p.first(0));
+          var4 = (PendingRequest) (ScreenSizeController.field_p.first(0));
           while (var4 != null) {
-            WidgetNode.a(62, param1, var4);
-            var4 = (lsa) (ScreenSizeController.field_p.next((byte) 109));
+            WidgetNode.writePendingRequest(62, param1, var4);
+            var4 = (PendingRequest) (ScreenSizeController.field_p.next((byte) 109));
           }
           if (param0 == -30) {
             return;

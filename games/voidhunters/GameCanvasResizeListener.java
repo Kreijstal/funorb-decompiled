@@ -40,7 +40,7 @@ final class GameCanvasResizeListener implements CanvasResizeListener {
             stackIn_3_0 = QuickChatMenuWidget.field_Cb;
             return stackIn_3_0;
           }
-          if (2 != iwa.field_b) {
+          if (2 != PendingRequestResender.field_b) {
             stackIn_6_0 = CarouselPlayerEventFactory.field_b;
             return stackIn_6_0;
           }

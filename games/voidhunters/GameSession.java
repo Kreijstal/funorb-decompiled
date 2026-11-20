@@ -2443,7 +2443,7 @@ final class GameSession {
               if (!ArchiveIndexLoader.field_g.isVoteOptionNew(this.hoveredVoteOptionId, (byte) -118)) {
                 if (!ArchiveIndexLoader.field_g.isVoteOptionComingSoon(this.hoveredVoteOptionId, 4)) {
                   if (ArchiveIndexLoader.field_g.isVoteOptionLimitedTime(this.hoveredVoteOptionId, (byte) -43)) {
-                    var33 = igb.field_b;
+                    var33 = GammaCorrection.field_b;
                   }
                 } else {
                   var33 = GetDebrisCollisionDamage.field_o;
@@ -7232,7 +7232,7 @@ final class GameSession {
                 } else {
                   var13_ref_String = this.getPlayerName(var9Lifetime1, (byte) -92);
                 }
-                var10 = SetReverbGain.a(kia.field_a, new String[]{var13_ref_String}, param1 ^ 147).toUpperCase();
+                var10 = SetReverbGain.a(OpenGlByteTextureFactory.field_a, new String[]{var13_ref_String}, param1 ^ 147).toUpperCase();
               }
               var11Lifetime1Lifetime1 = AlphaContainer.getTeamColor(false, var9Lifetime1, 13894143);
             }

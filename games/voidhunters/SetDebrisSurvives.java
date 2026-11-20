@@ -53,7 +53,7 @@ final class SetDebrisSurvives extends ConsoleCommand {
     final static Sprite a(int param0) {
         int var4_int = 0;
         int var5 = VoidHunters.field_G;
-        int var1 = hla.field_a[0] * SetMissionTerrainDebrisProbability.field_o[0];
+        int var1 = TypedStateArrayCopier.field_a[0] * SetMissionTerrainDebrisProbability.field_o[0];
         byte[] var2 = LiteralStrings.field_a[0];
         if (param0 >= -65) {
           SetDebrisSurvives.e((byte) 85);
@@ -62,7 +62,7 @@ final class SetDebrisSurvives extends ConsoleCommand {
         for (var4_int = 0; var4_int < var1; var4_int++) {
           var3[var4_int] = LegacyOpenGlTextureCache.field_d[MenuBackgroundBattle.andBits((int) var2[var4_int], 255)];
         }
-        Sprite var4 = new Sprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[0], SettingsChange.field_f[0], SetMissionTerrainDebrisProbability.field_o[0], hla.field_a[0], var3);
+        Sprite var4 = new Sprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[0], SettingsChange.field_f[0], SetMissionTerrainDebrisProbability.field_o[0], TypedStateArrayCopier.field_a[0], var3);
         MatchResults.clearDecodedSpriteData(58);
         return var4;
     }

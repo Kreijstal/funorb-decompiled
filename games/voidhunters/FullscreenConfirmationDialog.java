@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tda extends ResizableModalPanel implements UiActionListener {
+final class FullscreenConfirmationDialog extends ResizableModalPanel implements UiActionListener {
     static String field_O;
-    private UiFocusableComponent field_P;
-    private UiComponent field_J;
+    private UiFocusableComponent cancelButton;
+    private UiComponent countdownWidget;
     static String field_M;
-    private long field_L;
-    private UiFocusableComponent field_N;
+    private long startedAtMillis;
+    private UiFocusableComponent acceptButton;
     static volatile int field_K;
 
     final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
@@ -23,25 +23,25 @@ final class tda extends ResizableModalPanel implements UiActionListener {
           if (VariableConditionFactory.field_c) {
             param3.clearFocus((byte) -34);
           }
-          var5_long = -this.field_L + MonotonicMillisClock.currentTimeMillis(false);
+          var5_long = -this.startedAtMillis + MonotonicMillisClock.currentTimeMillis(false);
           var7 = (int)((-var5_long + 10999L) / 1000L);
           if (var7 > 0) {
-            this.field_J.text = "" + var7;
+            this.countdownWidget.text = "" + var7;
           } else {
             FullscreenExit.exitFullscreen((byte) -95);
-            this.l((byte) -98);
+            this.finishConfirmation((byte) -98);
             this.modalStack.pushPanel(false, new DisplayModeErrorDialog(this.modalStack, RemoveEventAction.confirmationTimeout));
           }
           if (this.active &&
-            psb.field_b == null) {
-            this.l((byte) -98);
+            EmailAvailabilityChecks.fullscreenCanvas == null) {
+            this.finishConfirmation((byte) -98);
             this.modalStack.pushPanel(false, new DisplayModeErrorDialog(this.modalStack, AdminMessageFactory.focusOrResolutionFailure));
           }
-          if (psb.field_b != null) {
-            if (!psb.field_b.focusLost) {
+          if (EmailAvailabilityChecks.fullscreenCanvas != null) {
+            if (!EmailAvailabilityChecks.fullscreenCanvas.focusLost) {
               return;
             }
-            this.l((byte) -98);
+            this.finishConfirmation((byte) -98);
             this.modalStack.pushPanel(false, new DisplayModeErrorDialog(this.modalStack, AdminMessageFactory.focusOrResolutionFailure));
           }
           return;
@@ -59,11 +59,11 @@ final class tda extends ResizableModalPanel implements UiActionListener {
         }
     }
 
-    tda(ModalStack param0) {
+    FullscreenConfirmationDialog(ModalStack param0) {
         super(param0, 200, 200);
         UiComponent var3 = null;
         try {
-          this.field_L = MonotonicMillisClock.currentTimeMillis(false);
+          this.startedAtMillis = MonotonicMillisClock.currentTimeMillis(false);
           var3 = new UiComponent(SoftwareFramebuffer.field_a, (UiListener) null);
           var3.x = 0;
           var3.width = this.width;
@@ -71,15 +71,15 @@ final class tda extends ResizableModalPanel implements UiActionListener {
           var3.height = 100;
           var3.renderer = (UiRenderer) ((Object) new UiTextStyle(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(-18756, var3);
-          this.field_J = new UiComponent(SoftwareFramebuffer.field_a, (UiListener) null);
-          this.field_J.y = 20 + var3.y + var3.height;
-          this.field_J.x = 0;
-          this.field_J.width = this.width;
-          this.field_J.height = 80;
-          this.field_J.renderer = (UiRenderer) ((Object) new UiTextStyle(GetBoostersCooldown.field_r, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.addChild(-18756, this.field_J);
-          this.field_N = this.a((byte) -104, (UiListener) (this), ServerInfoFactory.field_b);
-          this.field_P = this.a((byte) -73, (UiListener) (this), GetFighterRepairAmount.field_r);
+          this.countdownWidget = new UiComponent(SoftwareFramebuffer.field_a, (UiListener) null);
+          this.countdownWidget.y = 20 + var3.y + var3.height;
+          this.countdownWidget.x = 0;
+          this.countdownWidget.width = this.width;
+          this.countdownWidget.height = 80;
+          this.countdownWidget.renderer = (UiRenderer) ((Object) new UiTextStyle(GetBoostersCooldown.field_r, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(-18756, this.countdownWidget);
+          this.acceptButton = this.addConfirmationButton((byte) -104, (UiListener) (this), ServerInfoFactory.field_b);
+          this.cancelButton = this.addConfirmationButton((byte) -73, (UiListener) (this), GetFighterRepairAmount.field_r);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tda.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -95,15 +95,15 @@ final class tda extends ResizableModalPanel implements UiActionListener {
           if (param0 != 11) {
             field_O = (String) null;
           }
-          if (param3 == this.field_N) {
-            this.l((byte) -98);
+          if (param3 == this.acceptButton) {
+            this.finishConfirmation((byte) -98);
             return;
           }
-          if (this.field_P != param3) {
+          if (this.cancelButton != param3) {
             return;
           }
           FullscreenExit.exitFullscreen((byte) -95);
-          this.l((byte) -98);
+          this.finishConfirmation((byte) -98);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -119,7 +119,7 @@ final class tda extends ResizableModalPanel implements UiActionListener {
         }
     }
 
-    private final UiFocusableComponent a(byte param0, UiListener param1, String param2) {
+    private final UiFocusableComponent addConfirmationButton(byte param0, UiListener param1, String param2) {
         UiFocusableComponent var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -177,18 +177,18 @@ final class tda extends ResizableModalPanel implements UiActionListener {
         var6 = VoidHunters.field_G;
         try {
           if (param0 != -15834) {
-            this.field_J = (UiComponent) null;
+            this.countdownWidget = (UiComponent) null;
           }
           var5_int = param1;
           if (var5_int == 99) {
-            this.field_P.requestFocus(param0 + 15834, (UiComponent) (this));
+            this.cancelButton.requestFocus(param0 + 15834, (UiComponent) (this));
             return true;
           }
           if (var5_int != 98) {
             stackIn_12_0 = super.handleKey(param0 ^ 0, param1, param2, param3);
             return stackIn_12_0;
           }
-          this.field_N.requestFocus(param0 ^ -15834, (UiComponent) (this));
+          this.acceptButton.requestFocus(param0 ^ -15834, (UiComponent) (this));
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -214,7 +214,7 @@ final class tda extends ResizableModalPanel implements UiActionListener {
         field_O = null;
     }
 
-    private final void l(byte param0) {
+    private final void finishConfirmation(byte param0) {
         if (!this.active) {
           return;
         }

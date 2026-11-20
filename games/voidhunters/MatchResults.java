@@ -164,7 +164,7 @@ final class MatchResults implements DiffableState {
     }
 
     final static void clearDecodedSpriteData(int param0) {
-        hla.field_a = null;
+        TypedStateArrayCopier.field_a = null;
         if (param0 <= 36) {
           return;
         }

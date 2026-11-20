@@ -25,7 +25,7 @@ final class LegacyOpenGlShader {
           }
           AppletCookieWriter.field_a = SetBombletSprayAimarc.field_p;
           AppletCookieReader.field_a = 0;
-          PacketBuffer.field_g = tda.field_K;
+          PacketBuffer.field_g = FullscreenConfirmationDialog.field_K;
         }
     }
 

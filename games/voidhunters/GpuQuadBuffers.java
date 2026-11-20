@@ -60,7 +60,7 @@ final class GpuQuadBuffers {
                 return false;
               }
               if (param0 != -31) {
-                GpuQuadBuffers.a((byte) 82);
+                GpuQuadBuffers.handlePendingRequestReply((byte) 82);
               }
               return true;
             }
@@ -88,8 +88,8 @@ final class GpuQuadBuffers {
         }
     }
 
-    final static void a(byte param0) {
-        lsa var1 = (lsa) (ScreenSizeController.field_p.first(0));
+    final static void handlePendingRequestReply(byte param0) {
+        PendingRequest var1 = (PendingRequest) (ScreenSizeController.field_p.first(0));
         if (param0 <= 108) {
           GpuQuadBuffers.clearSharedReferences((byte) -96);
         }

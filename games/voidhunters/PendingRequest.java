@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class lsa extends IntrusiveNode {
+final class PendingRequest extends IntrusiveNode {
     static long privateChatRecipientKey;
     int field_g;
     int field_d;
@@ -16,11 +16,11 @@ final class lsa extends IntrusiveNode {
         savedChatInputWidget = null;
     }
 
-    private lsa() throws Throwable {
+    private PendingRequest() throws Throwable {
         throw new Error();
     }
 
-    final static int a(String param0, int param1, boolean param2) {
+    final static int getStringWidth(String param0, int param1, boolean param2) {
         RuntimeException var3 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
@@ -30,7 +30,7 @@ final class lsa extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -2) {
-            lsa.clearSharedReferences((byte) -36);
+            PendingRequest.clearSharedReferences((byte) -36);
           }
           if (param2) {
             stackIn_6_0 = ModalPanel.field_x.getStringWidth(param0);

@@ -96,7 +96,7 @@ abstract class NetworkGameClient extends GameApplet {
         } else {
           stackIn_5_1 = -102;
           stackIn_5_2 = false;
-          if (psb.field_b == null) {
+          if (EmailAvailabilityChecks.fullscreenCanvas == null) {
             stackIn_6_0 = this;
             stackIn_6_3 = false;
           } else {
@@ -121,7 +121,7 @@ abstract class NetworkGameClient extends GameApplet {
         int var3Lifetime2;
         var5 = VoidHunters.field_G;
         if (MissionConditionFactory.field_b != null) {
-          if (psb.field_b == null) {
+          if (EmailAvailabilityChecks.fullscreenCanvas == null) {
             var6 = ThrusterBehaviourFactory.b(-28941);
             var4 = var6.getSize();
             MissionConditionFactory.field_b.setAvailableSize(param1 ^ 109, var4.width, var4.height);
@@ -326,9 +326,9 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (!param0 &&
           GetDebrisSurvives.field_q) {
-          ShieldInfoPool.detachCanvasInput(igb.field_a, -125);
+          ShieldInfoPool.detachCanvasInput(GammaCorrection.field_a, -125);
           this.rebuildCanvas(-81);
-          SetGrapplingHookCooldown.a((byte) -62, igb.field_a);
+          SetGrapplingHookCooldown.a((byte) -62, GammaCorrection.field_a);
         }
         if (SetBombletSprayProjectileLife.allowedCommonPackets[8]) {
           GetCountermeasureLauncherFireForce.sendReflectionCheckResponses(param1 ^ 1);
@@ -522,7 +522,7 @@ abstract class NetworkGameClient extends GameApplet {
         UiScrollPane.initializeArchiveSystem(param3, this.host, this.primaryGamePort, this.secondaryGamePort, (byte) -2, SetGrapplingHookAimarc.field_p, this.gameCrc, SetTorpedoProjectiles.field_o, this.serverNumber);
         ProxyAuthenticationException.initializePunctuationKeyCodes(47);
         GetWaitForPlayers.field_o = ByteArrayNode.createMouseWheelInput((byte) -127);
-        SetGrapplingHookCooldown.a((byte) 122, igb.field_a);
+        SetGrapplingHookCooldown.a((byte) 122, GammaCorrection.field_a);
         GetShieldsDirectionalArc.field_p = param7;
         SetFighterRepairAmount.field_p = param5;
         GetFullMissionSet.field_o = param4;
@@ -560,7 +560,7 @@ abstract class NetworkGameClient extends GameApplet {
           regionExit1: {
             switch (var2) {
               case 1:
-                GpuQuadBuffers.a((byte) 113);
+                GpuQuadBuffers.handlePendingRequestReply((byte) 113);
                 break;
               case 4:
                 SetLag.handleIntegerRecordReply(-8999);

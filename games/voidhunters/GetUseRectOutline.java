@@ -23,7 +23,7 @@ final class GetUseRectOutline extends ConsoleCommand {
             SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
             DualLinkNode.field_f.enabled = false;
             CarouselSlot.field_a.viewport.text = SetPhasedEnergyBeamPulsetime.field_q;
-            igb.a(CarouselSlot.field_a.content, (byte) -93);
+            GammaCorrection.collapseWidgetAndChildren(CarouselSlot.field_a.content, (byte) -93);
           } else {
             CarouselSlot.field_a.viewport.text = null;
             DualLinkNode.field_f.enabled = true;
@@ -61,7 +61,7 @@ final class GetUseRectOutline extends ConsoleCommand {
                 SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
                 DualLinkNode.field_f.enabled = false;
                 CarouselSlot.field_a.viewport.text = SetPhasedEnergyBeamPulsetime.field_q;
-                igb.a(CarouselSlot.field_a.content, (byte) -93);
+                GammaCorrection.collapseWidgetAndChildren(CarouselSlot.field_a.content, (byte) -93);
               } else {
                 CarouselSlot.field_a.viewport.text = null;
                 DualLinkNode.field_f.enabled = true;
@@ -85,7 +85,7 @@ final class GetUseRectOutline extends ConsoleCommand {
                 SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
                 DualLinkNode.field_f.enabled = false;
                 CarouselSlot.field_a.viewport.text = SetPhasedEnergyBeamPulsetime.field_q;
-                igb.a(CarouselSlot.field_a.content, (byte) -93);
+                GammaCorrection.collapseWidgetAndChildren(CarouselSlot.field_a.content, (byte) -93);
               } else {
                 CarouselSlot.field_a.viewport.text = null;
                 DualLinkNode.field_f.enabled = true;
@@ -124,7 +124,7 @@ final class GetUseRectOutline extends ConsoleCommand {
                 SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
                 DualLinkNode.field_f.enabled = false;
                 CarouselSlot.field_a.viewport.text = SetPhasedEnergyBeamPulsetime.field_q;
-                igb.a(CarouselSlot.field_a.content, (byte) -93);
+                GammaCorrection.collapseWidgetAndChildren(CarouselSlot.field_a.content, (byte) -93);
               } else {
                 CarouselSlot.field_a.viewport.text = null;
                 DualLinkNode.field_f.enabled = true;
@@ -156,7 +156,7 @@ final class GetUseRectOutline extends ConsoleCommand {
                 } else {
                   DualLinkNode.field_f.enabled = false;
                   CarouselSlot.field_a.viewport.text = SetPhasedEnergyBeamPulsetime.field_q;
-                  igb.a(CarouselSlot.field_a.content, (byte) -93);
+                  GammaCorrection.collapseWidgetAndChildren(CarouselSlot.field_a.content, (byte) -93);
                 }
               }
             }

@@ -36,9 +36,9 @@ final class SetSpecialOrderBoxWidth extends ConsoleCommand {
         }
     }
 
-    final static kua a(ModelData param0, int[] param1, int param2, int param3) {
+    final static TextureMappingData a(ModelData param0, int[] param1, int param2, int param3) {
         int var18_int = 0;
-        kua stackIn_50_0 = null;
+        TextureMappingData stackIn_50_0 = null;
         Object stackIn_53_0 = null;
         StringBuilder stackIn_53_1 = null;
         String stackIn_54_2 = null;
@@ -180,7 +180,7 @@ final class SetSpecialOrderBoxWidth extends ConsoleCommand {
               }
             }
           }
-          stackIn_50_0 = new kua((int[]) (var4), (int[]) (var5), (int[]) (var6), (float[][]) (var7));
+          stackIn_50_0 = new TextureMappingData((int[]) (var4), (int[]) (var5), (int[]) (var6), (float[][]) (var7));
           return stackIn_50_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

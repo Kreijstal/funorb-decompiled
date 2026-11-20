@@ -125,7 +125,7 @@ final class CommonGameState implements DiffableState, PlayerNameRegistry {
           param1.beginBitRead(-23497);
           this.readState(param1, false);
           param1.endBitRead((byte) -47);
-          var4 = GetMessageMaxage.a((byte) -69, param1.position, param1.payload, var3_int);
+          var4 = GetMessageMaxage.crc32((byte) -69, param1.position, param1.payload, var3_int);
           var5 = param1.readInt(97);
           if (var5 == var4) {
             GetDebrisThrowable.a(false, "cg readstate: Hmm, it seems correct");

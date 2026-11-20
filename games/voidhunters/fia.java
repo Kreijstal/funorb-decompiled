@@ -80,7 +80,7 @@ final class fia {
           NetworkMessageState.chatChannel = param1;
           var8 = (CharSequence) ((Object) param4);
           GetDebrisThrowable.privateChatTarget = ConstantColorTextureOperation.normalizeName(false, var8);
-          lsa.privateChatRecipientKey = param3;
+          PendingRequest.privateChatRecipientKey = param3;
           var7 = MessageLog.createQuickChatPhraseMenu(ConstantColorTextureOperation.field_k, param0, 0, DebrisFactory.field_a, ScrollableActionPanel.field_Ab);
           AsteroidFieldFactory.setQuickChatMenu((byte) -28, var7);
           return true;

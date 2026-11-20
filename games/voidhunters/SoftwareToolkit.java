@@ -1294,20 +1294,20 @@ final class SoftwareToolkit extends GraphicsToolkit {
     }
 
     final void updateFrame(int param0) {
-        uva var4 = null;
+        ScrollingTexturePixels var4 = null;
         int var5 = 0;
         TextureMetadata var6 = null;
         int var2 = param0 - this.field_E;
         Object var3 = this.field_f.first((byte) 67);
         while (var3 != null) {
-          var4 = (uva) (var3);
+          var4 = (ScrollingTexturePixels) (var3);
           if (var4.field_h) {
-            var4.field_g = var4.field_g + var2;
-            var5 = var4.field_g / 20;
+            var4.animationElapsedMillis = var4.animationElapsedMillis + var2;
+            var5 = var4.animationElapsedMillis / 20;
             if (var5 > 0) {
-              var6 = this.field_a.getTextureMetadata(-20292, var4.field_d);
-              var4.a(var6.field_p * var2 * 50 / 1000, var6.field_d * var2 * 50 / 1000);
-              var4.field_g = var4.field_g - var5 * 20;
+              var6 = this.field_a.getTextureMetadata(-20292, var4.textureId);
+              var4.scroll(var6.field_p * var2 * 50 / 1000, var6.field_d * var2 * 50 / 1000);
+              var4.animationElapsedMillis = var4.animationElapsedMillis - var5 * 20;
             }
             var4.field_h = false;
           }

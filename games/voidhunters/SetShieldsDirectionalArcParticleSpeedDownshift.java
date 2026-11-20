@@ -148,7 +148,7 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
             var19 = GetGrapplingHookAimspeed.field_o[2];
             var22Lifetime5 = var19;
             var22Lifetime6 = var19;
-            var20 = tda.field_M;
+            var20 = FullscreenConfirmationDialog.field_M;
             var18.menu.addItem(-1, 13, var19, var20);
           }
           if (param2 == 1) {

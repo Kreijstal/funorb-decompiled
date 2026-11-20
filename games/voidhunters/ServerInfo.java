@@ -494,7 +494,7 @@ final class ServerInfo implements DiffableState {
           if (param0 == null) {
             return null;
           }
-          var2 = new SoftwareMonochromeBitmapFont(param0, LegacyOpenGlScrollingNoiseEffect.field_e, SettingsChange.field_f, SetMissionTerrainDebrisProbability.field_o, hla.field_a, LiteralStrings.field_a);
+          var2 = new SoftwareMonochromeBitmapFont(param0, LegacyOpenGlScrollingNoiseEffect.field_e, SettingsChange.field_f, SetMissionTerrainDebrisProbability.field_o, TypedStateArrayCopier.field_a, LiteralStrings.field_a);
           if (param1 != 11) {
             var3 = (byte[]) null;
             ServerInfo.createFontFromDecodedSprites((byte[]) null, -100);

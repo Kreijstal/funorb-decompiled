@@ -71,10 +71,10 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                 GetUseDetailLines.field_o = GetUseDetailLines.field_o + (PlayerGameData.field_b - CarouselEvent.field_h);
                 GetUseDetailLines.field_o = Math.max(0, Math.min(param2 - 1, GetUseDetailLines.field_o));
                 GetTorpedoReload.field_q = Math.max(0, Math.min(param3 - 1, GetTorpedoReload.field_q));
-                if (null != psb.field_b) {
-                  stackIn_15_0 = psb.field_b;
+                if (null != EmailAvailabilityChecks.fullscreenCanvas) {
+                  stackIn_15_0 = EmailAvailabilityChecks.fullscreenCanvas;
                 } else {
-                  stackIn_15_0 = igb.field_a;
+                  stackIn_15_0 = GammaCorrection.field_a;
                 }
                 var4 = stackIn_15_0;
                 SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
@@ -98,10 +98,10 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
               GetUseDetailLines.field_o = GetUseDetailLines.field_o + (PlayerGameData.field_b - CarouselEvent.field_h);
               GetUseDetailLines.field_o = Math.max(0, Math.min(param2 - 1, GetUseDetailLines.field_o));
               GetTorpedoReload.field_q = Math.max(0, Math.min(param3 - 1, GetTorpedoReload.field_q));
-              if (null != psb.field_b) {
-                stackIn_28_0 = psb.field_b;
+              if (null != EmailAvailabilityChecks.fullscreenCanvas) {
+                stackIn_28_0 = EmailAvailabilityChecks.fullscreenCanvas;
               } else {
-                stackIn_28_0 = igb.field_a;
+                stackIn_28_0 = GammaCorrection.field_a;
               }
               var4 = stackIn_28_0;
               SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
@@ -121,10 +121,10 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                 GetUseDetailLines.field_o = GetUseDetailLines.field_o + (PlayerGameData.field_b - CarouselEvent.field_h);
                 GetUseDetailLines.field_o = Math.max(0, Math.min(param2 - 1, GetUseDetailLines.field_o));
                 GetTorpedoReload.field_q = Math.max(0, Math.min(param3 - 1, GetTorpedoReload.field_q));
-                if (null != psb.field_b) {
-                  stackIn_41_0 = psb.field_b;
+                if (null != EmailAvailabilityChecks.fullscreenCanvas) {
+                  stackIn_41_0 = EmailAvailabilityChecks.fullscreenCanvas;
                 } else {
-                  stackIn_41_0 = igb.field_a;
+                  stackIn_41_0 = GammaCorrection.field_a;
                 }
                 var4 = stackIn_41_0;
                 SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
@@ -151,10 +151,10 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
               GetUseDetailLines.field_o = GetUseDetailLines.field_o + (PlayerGameData.field_b - CarouselEvent.field_h);
               GetUseDetailLines.field_o = Math.max(0, Math.min(param2 - 1, GetUseDetailLines.field_o));
               GetTorpedoReload.field_q = Math.max(0, Math.min(param3 - 1, GetTorpedoReload.field_q));
-              if (null != psb.field_b) {
-                stackIn_83_0 = psb.field_b;
+              if (null != EmailAvailabilityChecks.fullscreenCanvas) {
+                stackIn_83_0 = EmailAvailabilityChecks.fullscreenCanvas;
               } else {
-                stackIn_83_0 = igb.field_a;
+                stackIn_83_0 = GammaCorrection.field_a;
               }
               var4 = stackIn_83_0;
               SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
@@ -173,10 +173,10 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                   GetUseDetailLines.field_o = GetUseDetailLines.field_o + (PlayerGameData.field_b - CarouselEvent.field_h);
                   GetUseDetailLines.field_o = Math.max(0, Math.min(param2 - 1, GetUseDetailLines.field_o));
                   GetTorpedoReload.field_q = Math.max(0, Math.min(param3 - 1, GetTorpedoReload.field_q));
-                  if (null != psb.field_b) {
-                    stackIn_57_0 = psb.field_b;
+                  if (null != EmailAvailabilityChecks.fullscreenCanvas) {
+                    stackIn_57_0 = EmailAvailabilityChecks.fullscreenCanvas;
                   } else {
-                    stackIn_57_0 = igb.field_a;
+                    stackIn_57_0 = GammaCorrection.field_a;
                   }
                   var4 = stackIn_57_0;
                   SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
@@ -194,10 +194,10 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                     GetUseDetailLines.field_o = GetUseDetailLines.field_o + (PlayerGameData.field_b - CarouselEvent.field_h);
                     GetUseDetailLines.field_o = Math.max(0, Math.min(param2 - 1, GetUseDetailLines.field_o));
                     GetTorpedoReload.field_q = Math.max(0, Math.min(param3 - 1, GetTorpedoReload.field_q));
-                    if (null != psb.field_b) {
-                      stackIn_70_0 = psb.field_b;
+                    if (null != EmailAvailabilityChecks.fullscreenCanvas) {
+                      stackIn_70_0 = EmailAvailabilityChecks.fullscreenCanvas;
                     } else {
-                      stackIn_70_0 = igb.field_a;
+                      stackIn_70_0 = GammaCorrection.field_a;
                     }
                     var4 = stackIn_70_0;
                     SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
@@ -214,10 +214,10 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                     GetUseDetailLines.field_o = GetUseDetailLines.field_o + (PlayerGameData.field_b - CarouselEvent.field_h);
                     GetUseDetailLines.field_o = Math.max(0, Math.min(param2 - 1, GetUseDetailLines.field_o));
                     GetTorpedoReload.field_q = Math.max(0, Math.min(param3 - 1, GetTorpedoReload.field_q));
-                    if (null != psb.field_b) {
-                      stackIn_93_0 = psb.field_b;
+                    if (null != EmailAvailabilityChecks.fullscreenCanvas) {
+                      stackIn_93_0 = EmailAvailabilityChecks.fullscreenCanvas;
                     } else {
-                      stackIn_93_0 = igb.field_a;
+                      stackIn_93_0 = GammaCorrection.field_a;
                     }
                     var4 = stackIn_93_0;
                     SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
@@ -227,10 +227,10 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                       GetUseDetailLines.field_o = GetUseDetailLines.field_o + (PlayerGameData.field_b - CarouselEvent.field_h);
                       GetUseDetailLines.field_o = Math.max(0, Math.min(param2 - 1, GetUseDetailLines.field_o));
                       GetTorpedoReload.field_q = Math.max(0, Math.min(param3 - 1, GetTorpedoReload.field_q));
-                      if (null != psb.field_b) {
-                        stackIn_98_0 = psb.field_b;
+                      if (null != EmailAvailabilityChecks.fullscreenCanvas) {
+                        stackIn_98_0 = EmailAvailabilityChecks.fullscreenCanvas;
                       } else {
-                        stackIn_98_0 = igb.field_a;
+                        stackIn_98_0 = GammaCorrection.field_a;
                       }
                       var4 = stackIn_98_0;
                       SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);

@@ -46,7 +46,7 @@ final class MachineGunWeaponDefinition extends WeaponDefinition {
         return OpenGlVertexNormal.field_g;
     }
 
-    final static void b(int param0, byte param1) {
+    final static void unpackChatFilters(int param0, byte param1) {
         if (param1 != 71) {
           return;
         }
@@ -88,7 +88,7 @@ final class MachineGunWeaponDefinition extends WeaponDefinition {
     public static void clearSharedReferences(int param0) {
         field_c = null;
         if (param0 != 3) {
-          MachineGunWeaponDefinition.b(-77, (byte) 54);
+          MachineGunWeaponDefinition.unpackChatFilters(-77, (byte) 54);
           field_d = null;
           return;
         }

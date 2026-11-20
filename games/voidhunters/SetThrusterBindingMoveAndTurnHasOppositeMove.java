@@ -18,10 +18,10 @@ final class SetThrusterBindingMoveAndTurnHasOppositeMove extends ConsoleCommand 
 
     final static java.awt.Canvas e(byte param0) {
         if (param0 > 62) {
-          return null == psb.field_b ? igb.field_a : (java.awt.Canvas) ((Object) psb.field_b);
+          return null == EmailAvailabilityChecks.fullscreenCanvas ? GammaCorrection.field_a : (java.awt.Canvas) ((Object) EmailAvailabilityChecks.fullscreenCanvas);
         }
         field_p = 24;
-        return null == psb.field_b ? igb.field_a : (java.awt.Canvas) ((Object) psb.field_b);
+        return null == EmailAvailabilityChecks.fullscreenCanvas ? GammaCorrection.field_a : (java.awt.Canvas) ((Object) EmailAvailabilityChecks.fullscreenCanvas);
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

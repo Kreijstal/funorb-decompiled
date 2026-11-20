@@ -304,7 +304,7 @@ class PacketBuffer extends IntrusiveNode {
     }
 
     final int writeCrc(int param0, int param1) {
-        int var3 = GetMessageMaxage.a((byte) -69, this.position, this.payload, param1);
+        int var3 = GetMessageMaxage.crc32((byte) -69, this.position, this.payload, param1);
         this.writeInt(var3, 332614536);
         if (param0 != 1595) {
           this.checkCrc(-60);
@@ -616,7 +616,7 @@ class PacketBuffer extends IntrusiveNode {
         if (param0 != -2780) {
           return false;
         }
-        int var2 = GetMessageMaxage.a((byte) -69, this.position, this.payload, 0);
+        int var2 = GetMessageMaxage.crc32((byte) -69, this.position, this.payload, 0);
         int var3 = this.readInt(26);
         if (var3 != var2) {
           return false;
