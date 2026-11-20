@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class OpenGlCubeTexture extends pib {
+final class OpenGlCubeTexture extends OpenGlTexture {
     static Widget field_h;
     private int field_j;
     private int field_i;
@@ -45,7 +45,7 @@ final class OpenGlCubeTexture extends pib {
         }
     }
 
-    public final void a(int param0) {
+    public final void detachFromFramebuffer(int param0) {
         if (param0 == 31294) {
           jaggl.OpenGL.glFramebufferTexture2DEXT(this.field_i, this.field_j, 3553, 0, 0);
           this.field_i = -1;
@@ -60,11 +60,11 @@ final class OpenGlCubeTexture extends pib {
         this.field_j = -1;
         this.field_i = -1;
         try {
-          this.field_g.a(80, (pib) (this));
+          this.toolkit.bindTexture(80, (OpenGlTexture) (this));
           for (var7_int = 0; 6 > var7_int; var7_int++) {
-            jaggl.OpenGL.glTexImage2Dub(34069 + var7_int, 0, this.field_d, param2, param2, 0, param5, 5121, param4[var7_int], 0);
+            jaggl.OpenGL.glTexImage2Dub(34069 + var7_int, 0, this.internalFormat, param2, param2, 0, param5, 5121, param4[var7_int], 0);
           }
-          this.a(87, true);
+          this.setLinearFiltering(87, true);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rtb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }

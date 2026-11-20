@@ -15,30 +15,30 @@ final class uob extends qg {
           if (param0.field_S) {
             this.field_c = new bt(param0, 2);
             this.field_c.a(-97, 0);
-            this.field_b.h(33984, 1);
-            this.field_b.b(34165, 7681, false);
-            this.field_b.c(2, 34192, 770, 34168);
-            this.field_b.b(0, 770, 34167, 34184);
+            this.field_b.setActiveTextureUnit(33984, 1);
+            this.field_b.setTextureCombineOperations(34165, 7681, false);
+            this.field_b.setRgbCombineArgument(2, 34192, 770, 34168);
+            this.field_b.setAlphaCombineArgument(0, 770, 34167, 34184);
             jaggl.OpenGL.glTexGeni(8192, 9472, 34066);
             jaggl.OpenGL.glTexGeni(8193, 9472, 34066);
             jaggl.OpenGL.glTexGeni(8194, 9472, 34066);
             jaggl.OpenGL.glEnable(3168);
             jaggl.OpenGL.glEnable(3169);
             jaggl.OpenGL.glEnable(3170);
-            this.field_b.h(33984, 0);
+            this.field_b.setActiveTextureUnit(33984, 0);
             this.field_c.b(4864);
             this.field_c.a(-95, 1);
-            this.field_b.h(33984, 1);
-            this.field_b.b(8448, 8448, false);
-            this.field_b.c(2, 34192, 770, 34166);
-            this.field_b.b(0, 770, 5890, 34184);
+            this.field_b.setActiveTextureUnit(33984, 1);
+            this.field_b.setTextureCombineOperations(8448, 8448, false);
+            this.field_b.setRgbCombineArgument(2, 34192, 770, 34166);
+            this.field_b.setAlphaCombineArgument(0, 770, 5890, 34184);
             jaggl.OpenGL.glDisable(3168);
             jaggl.OpenGL.glDisable(3169);
             jaggl.OpenGL.glDisable(3170);
             jaggl.OpenGL.glMatrixMode(5890);
             jaggl.OpenGL.glLoadIdentity();
             jaggl.OpenGL.glMatrixMode(5888);
-            this.field_b.h(33984, 0);
+            this.field_b.setActiveTextureUnit(33984, 0);
             this.field_c.b(4864);
           }
         } catch (RuntimeException runtimeException) {
@@ -54,10 +54,10 @@ final class uob extends qg {
         return true;
     }
 
-    final void a(int param0, byte param1, pib param2) {
+    final void a(int param0, byte param1, OpenGlTexture param2) {
         try {
-          this.field_b.a(param1 - 67, param2);
-          this.field_b.c(0, param0);
+          this.field_b.bindTexture(param1 - 67, param2);
+          this.field_b.setTextureCombineMode(0, param0);
           if (param1 != 125) {
             field_f = (String) null;
           }
@@ -77,50 +77,50 @@ final class uob extends qg {
     }
 
     final void a(boolean param0, int param1) {
-        OpenGlCubeTexture var3 = this.field_b.a(false);
+        OpenGlCubeTexture var3 = this.field_b.getEnvironmentCubeTexture(false);
         if (param1 < 18) {
           field_f = (String) null;
           if (this.field_c == null) {
-            this.field_b.b(0, 770, 34168, 34184);
+            this.field_b.setAlphaCombineArgument(0, 770, 34168, 34184);
             return;
           }
           if (var3 == null) {
-            this.field_b.b(0, 770, 34168, 34184);
+            this.field_b.setAlphaCombineArgument(0, 770, 34168, 34184);
             return;
           }
           if (!param0) {
-            this.field_b.b(0, 770, 34168, 34184);
+            this.field_b.setAlphaCombineArgument(0, 770, 34168, 34184);
             return;
           }
           this.field_c.a(true, '\0');
-          this.field_b.h(33984, 1);
-          this.field_b.a(83, var3);
+          this.field_b.setActiveTextureUnit(33984, 1);
+          this.field_b.bindTexture(83, var3);
           jaggl.OpenGL.glMatrixMode(5890);
           jaggl.OpenGL.glLoadMatrixf(this.field_b.field_Bb.getRotationMatrix((byte) 43), 0);
           jaggl.OpenGL.glMatrixMode(5888);
-          this.field_b.h(33984, 0);
+          this.field_b.setActiveTextureUnit(33984, 0);
           this.field_d = true;
           return;
         }
         if (this.field_c == null) {
-          this.field_b.b(0, 770, 34168, 34184);
+          this.field_b.setAlphaCombineArgument(0, 770, 34168, 34184);
           return;
         }
         if (var3 == null) {
-          this.field_b.b(0, 770, 34168, 34184);
+          this.field_b.setAlphaCombineArgument(0, 770, 34168, 34184);
           return;
         }
         if (!param0) {
-          this.field_b.b(0, 770, 34168, 34184);
+          this.field_b.setAlphaCombineArgument(0, 770, 34168, 34184);
           return;
         }
         this.field_c.a(true, '\0');
-        this.field_b.h(33984, 1);
-        this.field_b.a(83, var3);
+        this.field_b.setActiveTextureUnit(33984, 1);
+        this.field_b.bindTexture(83, var3);
         jaggl.OpenGL.glMatrixMode(5890);
         jaggl.OpenGL.glLoadMatrixf(this.field_b.field_Bb.getRotationMatrix((byte) 43), 0);
         jaggl.OpenGL.glMatrixMode(5888);
-        this.field_b.h(33984, 0);
+        this.field_b.setActiveTextureUnit(33984, 0);
         this.field_d = true;
     }
 
@@ -149,11 +149,11 @@ final class uob extends qg {
 
     final void a(boolean param0, boolean param1) {
         if (param0) {
-          this.field_b.b(8448, 7681, false);
+          this.field_b.setTextureCombineOperations(8448, 7681, false);
           return;
         }
         this.a(-110);
-        this.field_b.b(8448, 7681, false);
+        this.field_b.setTextureCombineOperations(8448, 7681, false);
     }
 
     final void a(int param0) {
@@ -161,16 +161,16 @@ final class uob extends qg {
           this.a(false, 47);
         }
         if (!this.field_d) {
-          this.field_b.b(0, 770, 5890, 34184);
-          this.field_b.b(8448, 8448, false);
+          this.field_b.setAlphaCombineArgument(0, 770, 5890, 34184);
+          this.field_b.setTextureCombineOperations(8448, 8448, false);
           this.field_d = false;
           return;
         }
         this.field_c.a(true, '\001');
-        this.field_b.h(33984, 1);
-        this.field_b.a(69, (pib) null);
-        this.field_b.h(33984, 0);
-        this.field_b.b(8448, 8448, false);
+        this.field_b.setActiveTextureUnit(33984, 1);
+        this.field_b.bindTexture(69, (OpenGlTexture) null);
+        this.field_b.setActiveTextureUnit(33984, 0);
+        this.field_b.setTextureCombineOperations(8448, 8448, false);
         this.field_d = false;
     }
 

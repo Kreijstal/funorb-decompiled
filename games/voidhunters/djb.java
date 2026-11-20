@@ -201,7 +201,7 @@ final class djb extends qc {
                   if (stackIn_25_0 == stackIn_25_1) {
                     var10_int++;
                   }
-                  if (wdb.field_vb == var4[var9].field_e) {
+                  if (ScrollableActionPanel.field_vb == var4[var9].field_e) {
                     var10_int--;
                   }
                   if (var10_int >= 0) {
@@ -340,7 +340,7 @@ final class djb extends qc {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = (ojb) (Object) decompiledCaughtException;
               param1 = "<col=55ff55>" + param1.substring(0, var3_ref.field_a) + "</col>" + param1.substring(var3_ref.field_a);
-              var4_ref = (Widget) (this.field_h.field_wb.children.last((byte) 122));
+              var4_ref = (Widget) (this.field_h.content.children.last((byte) 122));
               var4_ref.text = this.field_c + param1;
             } catch (gva decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;

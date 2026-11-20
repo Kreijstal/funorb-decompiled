@@ -7,9 +7,9 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
     private int textureHeight;
     private int textureWidth;
     private int sourceWidth;
-    private rpa downsampleFramebuffer;
+    private OpenGlFramebuffer downsampleFramebuffer;
     static String[] field_l;
-    private rpa bloomFramebuffer;
+    private OpenGlFramebuffer bloomFramebuffer;
     static String field_k;
     private aia blurTexture;
     private of rectangleThresholdProgram;
@@ -192,7 +192,7 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
           jaggl.OpenGL.glLoadIdentity();
           jaggl.OpenGL.glOrtho(0.0, 1.0, 0.0, 1.0, -1.0, 1.0);
           if (this.downsampleTextures != null) {
-            this.toolkit.a((byte) -123, (jaa) (this.downsampleFramebuffer));
+            this.toolkit.pushFramebuffer((byte) -123, (OpenGlFramebufferBinding) (this.downsampleFramebuffer));
             var5_int = wsb.a(this.sourceWidth, 1302374146);
             var6 = wsb.a(this.sourceHeight, 1302374146);
             var7_int = 0;
@@ -200,7 +200,7 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
               while ((!(256 >= var5_int) ||
                 !(var6 <= 256))) {
                 jaggl.OpenGL.glViewport(0, 0, var5_int, var6);
-                this.downsampleFramebuffer.a(0, (byte) -127, this.downsampleTextures[var7_int]);
+                this.downsampleFramebuffer.attachTexture(0, (byte) -127, this.downsampleTextures[var7_int]);
                 if (var5_int > 256) {
                   var5_int = var5_int >> 1;
                 }
@@ -208,7 +208,7 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
                   var6 = var6 >> 1;
                 }
                 if (var7_int != 0) {
-                  this.toolkit.a(80, this.downsampleTextures[var7_int - 1]);
+                  this.toolkit.bindTexture(80, this.downsampleTextures[var7_int - 1]);
                   jaggl.OpenGL.glBegin(7);
                   jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
                   jaggl.OpenGL.glVertex2i(0, 0);
@@ -220,7 +220,7 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
                   jaggl.OpenGL.glVertex2i(0, 1);
                   jaggl.OpenGL.glEnd();
                 } else {
-                  this.toolkit.a(40, param0);
+                  this.toolkit.bindTexture(40, param0);
                   jaggl.OpenGL.glBegin(7);
                   jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
                   jaggl.OpenGL.glVertex2i(0, 0);
@@ -235,10 +235,10 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
                 var7_int++;
               }
               {
-                this.toolkit.a(this.downsampleFramebuffer, 2896);
-                this.toolkit.a(107, this.downsampleTextures[var7_int - 1]);
-                this.toolkit.a((byte) -124, (jaa) (this.bloomFramebuffer));
-                this.bloomFramebuffer.a(0, 0);
+                this.toolkit.popFramebuffer(this.downsampleFramebuffer, 2896);
+                this.toolkit.bindTexture(107, this.downsampleTextures[var7_int - 1]);
+                this.toolkit.pushFramebuffer((byte) -124, (OpenGlFramebufferBinding) (this.bloomFramebuffer));
+                this.bloomFramebuffer.setDrawBuffer(0, 0);
                 jaggl.OpenGL.glViewport(0, 0, 256, 256);
                 var8 = this.thresholdProgram.field_c;
                 jaggl.OpenGL.glUseProgramObjectARB(var8);
@@ -259,9 +259,9 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
             }
           }
           if (decompiledFrameCompleted0) {
-            this.toolkit.a(97, param0);
-            this.toolkit.a((byte) -109, (jaa) (this.bloomFramebuffer));
-            this.bloomFramebuffer.a(0, 0);
+            this.toolkit.bindTexture(97, param0);
+            this.toolkit.pushFramebuffer((byte) -109, (OpenGlFramebufferBinding) (this.bloomFramebuffer));
+            this.bloomFramebuffer.setDrawBuffer(0, 0);
             jaggl.OpenGL.glViewport(0, 0, 256, 256);
             var5_long = this.rectangleThresholdProgram.field_c;
             jaggl.OpenGL.glUseProgramObjectARB(var5_long);
@@ -278,8 +278,8 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
             jaggl.OpenGL.glVertex2i(0, 1);
             jaggl.OpenGL.glEnd();
           }
-          this.bloomFramebuffer.a(0, 1);
-          this.toolkit.a(param1 + 3097, this.bloomTexture);
+          this.bloomFramebuffer.setDrawBuffer(0, 1);
+          this.toolkit.bindTexture(param1 + 3097, this.bloomTexture);
           var5_longLifetime1 = this.blurProgram.field_c;
           jaggl.OpenGL.glUseProgramObjectARB(var5_longLifetime1);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5_longLifetime1, "baseTex"), 0);
@@ -294,8 +294,8 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
           jaggl.OpenGL.glTexCoord2f(0.0f, 1.0f);
           jaggl.OpenGL.glVertex2i(0, 1);
           jaggl.OpenGL.glEnd();
-          this.bloomFramebuffer.a(0, 0);
-          this.toolkit.a(53, this.blurTexture);
+          this.bloomFramebuffer.setDrawBuffer(0, 0);
+          this.toolkit.bindTexture(53, this.blurTexture);
           jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var5_longLifetime1, "step"), 0.0f, 0.00390625f, 0.0f);
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
@@ -310,7 +310,7 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
           jaggl.OpenGL.glPopAttrib();
           jaggl.OpenGL.glPopMatrix();
           jaggl.OpenGL.glMatrixMode(5888);
-          this.toolkit.a(this.bloomFramebuffer, 2896);
+          this.toolkit.popFramebuffer(this.bloomFramebuffer, 2896);
           var7 = this.compositeProgram.field_c;
           if (param1 != -3009) {
             return;
@@ -319,10 +319,10 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "sceneTex"), 0);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "bloomTex"), 1);
           jaggl.OpenGL.glUniform3fARB(jaggl.OpenGL.glGetUniformLocationARB(var7, "params"), SetDebrisPartitioned.field_q, GetSniperCannonProjectileLife.field_q, 0.0f);
-          this.toolkit.h(33984, 1);
-          this.toolkit.a(57, this.bloomTexture);
-          this.toolkit.h(33984, 0);
-          this.toolkit.a(73, param0);
+          this.toolkit.setActiveTextureUnit(33984, 1);
+          this.toolkit.bindTexture(57, this.bloomTexture);
+          this.toolkit.setActiveTextureUnit(33984, 0);
+          this.toolkit.bindTexture(73, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -367,7 +367,7 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
           var5 != this.textureHeight) {
           if (null != this.downsampleTextures) {
             for (var6 = 0; var6 < this.downsampleTextures.length; var6++) {
-              this.downsampleTextures[var6].e(0);
+              this.downsampleTextures[var6].dispose(0);
             }
             this.downsampleTextures = null;
           }
@@ -379,7 +379,7 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
             var7 = var5;
             var8 = 0;
             if (this.downsampleFramebuffer == null) {
-              this.downsampleFramebuffer = new rpa(this.toolkit);
+              this.downsampleFramebuffer = new OpenGlFramebuffer(this.toolkit);
             }
             scanLoop1: while (true) {
               if (var6Lifetime1 <= 256 &&
@@ -436,20 +436,20 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
         if (this.toolkit.field_U &&
           this.toolkit.field_B &&
           this.toolkit.field_I) {
-          this.bloomFramebuffer = new rpa(this.toolkit);
+          this.bloomFramebuffer = new OpenGlFramebuffer(this.toolkit);
           this.bloomTexture = new aia(this.toolkit, 3553, 34842, 256, 256);
           this.bloomTexture.a(false, false, 10497);
           this.blurTexture = new aia(this.toolkit, 3553, 34842, 256, 256);
           this.blurTexture.a(false, false, 10497);
-          this.toolkit.a((byte) -122, (jaa) (this.bloomFramebuffer));
-          this.bloomFramebuffer.a(0, (byte) -125, this.bloomTexture);
-          this.bloomFramebuffer.a(1, (byte) -128, this.blurTexture);
-          this.bloomFramebuffer.a(0, 0);
-          if (!this.bloomFramebuffer.g(92)) {
-            this.toolkit.a(this.bloomFramebuffer, 2896);
+          this.toolkit.pushFramebuffer((byte) -122, (OpenGlFramebufferBinding) (this.bloomFramebuffer));
+          this.bloomFramebuffer.attachTexture(0, (byte) -125, this.bloomTexture);
+          this.bloomFramebuffer.attachTexture(1, (byte) -128, this.blurTexture);
+          this.bloomFramebuffer.setDrawBuffer(0, 0);
+          if (!this.bloomFramebuffer.isComplete(92)) {
+            this.toolkit.popFramebuffer(this.bloomFramebuffer, 2896);
             return false;
           }
-          this.toolkit.a(this.bloomFramebuffer, 2896);
+          this.toolkit.popFramebuffer(this.bloomFramebuffer, 2896);
           this.rectangleThresholdProgram = GetTorpedoAcceleration.a(new ts[]{ShipFactory.a(35632, this.toolkit, 18753, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")}, (byte) 107, this.toolkit);
           this.thresholdProgram = GetTorpedoAcceleration.a(new ts[]{ShipFactory.a(35632, this.toolkit, 18753, "uniform vec3 params;\nuniform sampler2D sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n    vec4 col = texture2D(sceneTex, gl_TexCoord[0].xy);\n    gl_FragColor = col*step(params.x, dot(lumCoef, col.rgb));\n}\n")}, (byte) 107, this.toolkit);
           this.compositeProgram = GetTorpedoAcceleration.a(new ts[]{ShipFactory.a(35632, this.toolkit, 18753, "#extension GL_ARB_texture_rectangle : enable\nuniform vec3 params;\nuniform vec3 dimScale;\nuniform sampler2D bloomTex;\nuniform sampler2DRect sceneTex;\nconst vec3 lumCoef = vec3(0.2126, 0.7152, 0.0722);\nvoid main() {\n\t vec4 bloomCol = texture2D(bloomTex, gl_TexCoord[1].xy);\n\t vec4 sceneCol = texture2DRect(sceneTex, gl_TexCoord[0].xy);\n\t float preLum = 0.99*dot(lumCoef, sceneCol.rgb)+0.01;\n    float postLum = preLum*(1.0+(preLum/params.y))/(preLum+1.0);\n\t gl_FragColor = sceneCol*(postLum/preLum)+bloomCol*params.x;\n}\n")}, (byte) 107, this.toolkit);
@@ -474,9 +474,9 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
 
     final void finishPass(int param0, int param1) {
         jaggl.OpenGL.glUseProgramObjectARB(0L);
-        this.toolkit.h(33984, param1);
-        this.toolkit.a(77, (pib) null);
-        this.toolkit.h(33984, 0);
+        this.toolkit.setActiveTextureUnit(33984, param1);
+        this.toolkit.bindTexture(77, (OpenGlTexture) null);
+        this.toolkit.setActiveTextureUnit(33984, 0);
     }
 
     final void releaseResources(byte param0) {

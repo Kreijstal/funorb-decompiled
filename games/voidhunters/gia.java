@@ -126,9 +126,9 @@ final class gia extends TextureOperation {
     final static int d(int param0) {
         if (param0 != -2) {
           field_j = (String) null;
-          return rpa.field_b;
+          return OpenGlFramebuffer.field_b;
         }
-        return rpa.field_b;
+        return OpenGlFramebuffer.field_b;
     }
 
     static {

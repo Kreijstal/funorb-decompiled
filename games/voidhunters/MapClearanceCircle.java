@@ -5,7 +5,7 @@ final class MapClearanceCircle extends MapClearanceArea implements DiffableState
     private int x;
     private int y;
     private int radius;
-    static soa field_f;
+    static ScrollPaneWidget field_f;
 
     public final boolean differsFrom(byte param0, SerializableGameState param1) {
         MapClearanceCircle var3 = null;
@@ -40,7 +40,7 @@ final class MapClearanceCircle extends MapClearanceArea implements DiffableState
         MapClearanceCircle var6 = null;
         try {
           if (param0 < 54) {
-            field_f = (soa) null;
+            field_f = (ScrollPaneWidget) null;
           }
           super.copyTo((byte) 98, param1);
           var5 = (MapClearanceCircle) (param1);
@@ -55,7 +55,7 @@ final class MapClearanceCircle extends MapClearanceArea implements DiffableState
 
     public static void clearSharedReferences(boolean param0) {
         if (!param0) {
-          field_f = (soa) null;
+          field_f = (ScrollPaneWidget) null;
           field_f = null;
           return;
         }

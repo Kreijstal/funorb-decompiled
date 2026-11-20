@@ -56,7 +56,7 @@ final class ShipBodyFactory implements GameStateFactory {
           }
           ((Widget) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2, stackIn_6_3 - stackIn_7_4, 2 + nna.field_w, 18);
           GetPointDefenceLaserProjectileDamage.field_o.setBounds(-40 + (-2 + SetOndamageParticleLife.field_o.width) - ResourceNode.field_a, param0 + 18, ResourceNode.field_a + 42, nna.field_w + 2, 18);
-          WaterTextures.field_f.a(SetOndamageParticleLife.field_o.width, 2, -1, -nna.field_w + (SetOndamageParticleLife.field_o.height - 2) - 20, 2 + (nna.field_w + 20), 0, ResourceNode.field_a);
+          WaterTextures.field_f.setBoundsAndLayout(SetOndamageParticleLife.field_o.width, 2, -1, -nna.field_w + (SetOndamageParticleLife.field_o.height - 2) - 20, 2 + (nna.field_w + 20), 0, ResourceNode.field_a);
           GetShipToShipRamDamage.field_q.setBounds(0, -41, WaterTextures.field_g.width, WaterTextures.field_g.height - 40, 40);
           GetWeaponParticleSpeedDownshift.field_q.setBounds(0, 121, vva.field_r.width, 0, 30);
           if (param0 != 100) {

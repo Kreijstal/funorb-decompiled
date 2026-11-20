@@ -134,7 +134,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
           }
           jka.a(var4, (byte) -111);
           var12 = (BitmapFont) null;
-          wdb.field_Ab = ocb.a(65793, 4020342, 10204, (BitmapFont) null, 1513239, 8947848, 1513239, 5138823, 65793, 1127256, 0, 65793, 2245737);
+          ScrollableActionPanel.field_Ab = ocb.a(65793, 4020342, 10204, (BitmapFont) null, 1513239, 8947848, 1513239, 5138823, 65793, 1127256, 0, 65793, 2245737);
           DebrisFactory.field_a = ocb.a(0, 0, param0 ^ -10239, param2, 0, 0, 0, 0, 0, 0, 16764006, 0, 0);
           jwa.field_k = ocb.a(0, 0, 10204, param2, 0, 0, 0, 0, 0, 0, 16777215, 0, 0);
           var5 = SoftwareRasterizer2D.width;
@@ -146,7 +146,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
             SoftwareRasterizer2D.drawVerticalLine(var8, 1 + var8, 14 - (var8 << 1), 16777215);
           }
           SoftwareRasterizer2D.setTarget(var16, var5, var6);
-          GetShieldsDamageEnergyConversion.field_o = vcb.a(0, jwa.field_k, wdb.field_Ab, DebrisFactory.field_a, var4);
+          GetShieldsDamageEnergyConversion.field_o = vcb.a(0, jwa.field_k, ScrollableActionPanel.field_Ab, DebrisFactory.field_a, var4);
           if (param0 != -35) {
             return;
           }

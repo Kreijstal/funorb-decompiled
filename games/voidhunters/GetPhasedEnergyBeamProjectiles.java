@@ -276,7 +276,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetUseLines.field_p = param1[66];
           MissionEvent.field_a = param1[112];
           SetSpinningBladeAimarc.field_o = param1[113];
-          qca.field_wb = param1[117];
+          SelectableIconLabelWidget.field_wb = param1[117];
           fj.field_b = param1[86];
           Particle.field_m = param1[205];
           qh.field_J = param1[88];
@@ -330,7 +330,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           rla.field_x = param1[19];
           Particle.field_A = param1[46];
           rn.field_o = param1[162];
-          qca.field_yb = param1[76];
+          SelectableIconLabelWidget.field_yb = param1[76];
           ShieldBehaviourFactory.field_a = param1[165];
           bra.field_d = param1[3];
         } catch (RuntimeException runtimeException) {

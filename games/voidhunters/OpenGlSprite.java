@@ -19,13 +19,13 @@ final class OpenGlSprite extends ToolkitSprite {
         if (param0 != -27568) {
           this.field_e = (im) null;
         }
-        this.toolkit.h(33984, 1);
-        this.toolkit.a(65, (pib) null);
-        this.toolkit.b(8448, 8448, false);
-        this.toolkit.c(1, param0 + 61760, 768, 34168);
-        this.toolkit.b(0, 770, 5890, 34184);
-        this.toolkit.h(33984, 0);
-        this.toolkit.c(1, 34192, 768, 34168);
+        this.toolkit.setActiveTextureUnit(33984, 1);
+        this.toolkit.bindTexture(65, (OpenGlTexture) null);
+        this.toolkit.setTextureCombineOperations(8448, 8448, false);
+        this.toolkit.setRgbCombineArgument(1, param0 + 61760, 768, 34168);
+        this.toolkit.setAlphaCombineArgument(0, 770, 5890, 34184);
+        this.toolkit.setActiveTextureUnit(33984, 0);
+        this.toolkit.setRgbCombineArgument(1, 34192, 768, 34168);
     }
 
     final static boolean b(int param0, int param1) {
@@ -36,15 +36,15 @@ final class OpenGlSprite extends ToolkitSprite {
     }
 
     final void draw(int param0, int param1, int param2, int param3, int param4) {
-        this.texture.a(-78, false);
+        this.texture.setLinearFiltering(-78, false);
         this.toolkit.n(27841);
-        this.toolkit.d(param4, 73);
+        this.toolkit.setBlendMode(param4, 73);
         jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
         param1 = param1 + this.paddingTop;
         param0 = param0 + this.paddingLeft;
         if (this.field_e != null) {
           this.a(true, param2);
-          this.field_e.a(-77, false);
+          this.field_e.setLinearFiltering(-77, false);
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.texture.field_o);
           jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.field_o);
@@ -61,8 +61,8 @@ final class OpenGlSprite extends ToolkitSprite {
           jaggl.OpenGL.glEnd();
           this.a(-27568);
         } else {
-          this.toolkit.a(117, this.texture);
-          this.toolkit.c(0, param2);
+          this.toolkit.bindTexture(117, this.texture);
+          this.toolkit.setTextureCombineMode(0, param2);
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.field_o);
           jaggl.OpenGL.glVertex2i(param0, param1);
@@ -94,31 +94,31 @@ final class OpenGlSprite extends ToolkitSprite {
         if (!param0) {
           this.drawTiled(10, 76, -118, 126, -96, -43, 86);
         }
-        this.toolkit.h(33984, 1);
-        this.toolkit.a(55, this.texture);
-        this.toolkit.b(this.toolkit.j(param1, 25887), 7681, false);
-        this.toolkit.c(1, 34192, 768, 34167);
-        this.toolkit.b(0, 770, 34168, 34184);
-        this.toolkit.h(33984, 0);
-        this.toolkit.a(63, this.field_e);
-        this.toolkit.b(34479, 7681, false);
-        this.toolkit.c(1, 34192, 768, 34166);
+        this.toolkit.setActiveTextureUnit(33984, 1);
+        this.toolkit.bindTexture(55, this.texture);
+        this.toolkit.setTextureCombineOperations(this.toolkit.getTextureCombineOperation(param1, 25887), 7681, false);
+        this.toolkit.setRgbCombineArgument(1, 34192, 768, 34167);
+        this.toolkit.setAlphaCombineArgument(0, 770, 34168, 34184);
+        this.toolkit.setActiveTextureUnit(33984, 0);
+        this.toolkit.bindTexture(63, this.field_e);
+        this.toolkit.setTextureCombineOperations(34479, 7681, false);
+        this.toolkit.setRgbCombineArgument(1, 34192, 768, 34166);
         if (this.field_j == 0) {
           stackIn_12_0 = this.toolkit;
           stackIn_12_1 = 0.0f;
           stackIn_12_2 = 0.5f;
           stackIn_13_3 = (param0) ? false : true;
-          ((OpenGlToolkit) (Object) stackIn_12_0).a(stackIn_12_1, stackIn_12_2, stackIn_13_3, 0.5f, 1.0f);
+          ((OpenGlToolkit) (Object) stackIn_12_0).setTextureEnvironmentColor(stackIn_12_1, stackIn_12_2, stackIn_13_3, 0.5f, 1.0f);
         } else {
           if (this.field_j == 1) {
-            this.toolkit.a(0.0f, 1.0f, false, 0.5f, 0.5f);
+            this.toolkit.setTextureEnvironmentColor(0.0f, 1.0f, false, 0.5f, 0.5f);
           } else {
             if (this.field_j != 2) {
               if (this.field_j == 3) {
-                this.toolkit.a(0.0f, 128.5f, false, 128.5f, 128.5f);
+                this.toolkit.setTextureEnvironmentColor(0.0f, 128.5f, false, 128.5f, 128.5f);
               }
             } else {
-              this.toolkit.a(0.0f, 0.5f, false, 1.0f, 0.5f);
+              this.toolkit.setTextureEnvironmentColor(0.0f, 0.5f, false, 1.0f, 0.5f);
             }
           }
         }
@@ -147,14 +147,14 @@ final class OpenGlSprite extends ToolkitSprite {
         stackIn_2_0 = this.texture;
         stackIn_2_1 = -124;
         stackIn_3_2 = ((param7 & 1) == 0) ? false : true;
-        ((im) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_3_2);
+        ((im) (Object) stackIn_2_0).setLinearFiltering(stackIn_2_1, stackIn_3_2);
         this.toolkit.n(27841);
-        this.toolkit.d(param6, 115);
+        this.toolkit.setBlendMode(param6, 115);
         jaggl.OpenGL.glColor4ub((byte)(param5 >> 16), (byte)(param5 >> 8), (byte)param5, (byte)(param5 >> 24));
         if (!this.field_l) {
           if (null != this.field_e) {
             this.a(true, param4);
-            this.field_e.a(-112, true);
+            this.field_e.setLinearFiltering(-112, true);
             jaggl.OpenGL.glBegin(7);
             jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.texture.field_o);
             jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.field_o);
@@ -171,8 +171,8 @@ final class OpenGlSprite extends ToolkitSprite {
             jaggl.OpenGL.glEnd();
             this.a(-27568);
           } else {
-            this.toolkit.a(103, this.texture);
-            this.toolkit.c(0, param4);
+            this.toolkit.bindTexture(103, this.texture);
+            this.toolkit.setTextureCombineMode(0, param4);
             jaggl.OpenGL.glBegin(7);
             jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.field_o);
             jaggl.OpenGL.glVertex2i(param0, param1);
@@ -193,7 +193,7 @@ final class OpenGlSprite extends ToolkitSprite {
           var14 = (float)this.texture.field_p * var10 + var12;
           if (this.field_e != null) {
             this.a(true, param4);
-            this.field_e.a(-128, true);
+            this.field_e.setLinearFiltering(-128, true);
             jaggl.OpenGL.glBegin(7);
             jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.texture.field_o);
             jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.field_o);
@@ -210,8 +210,8 @@ final class OpenGlSprite extends ToolkitSprite {
             jaggl.OpenGL.glEnd();
             this.a(-27568);
           } else {
-            this.toolkit.a(120, this.texture);
-            this.toolkit.c(0, param4);
+            this.toolkit.bindTexture(120, this.texture);
+            this.toolkit.setTextureCombineMode(0, param4);
             jaggl.OpenGL.glBegin(7);
             jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.field_o);
             jaggl.OpenGL.glVertex2f(var11, var12);
@@ -245,12 +245,12 @@ final class OpenGlSprite extends ToolkitSprite {
         int var15Lifetime1;
         var18 = VoidHunters.field_G;
         var8 = param2 + param0;
-        this.texture.a(-122, false);
+        this.texture.setLinearFiltering(-122, false);
         var9 = param1 + param3;
         this.toolkit.n(27841);
-        this.toolkit.a(31, this.texture);
-        this.toolkit.d(param6, 111);
-        this.toolkit.c(0, param4);
+        this.toolkit.bindTexture(31, this.texture);
+        this.toolkit.setBlendMode(param6, 111);
+        this.toolkit.setTextureCombineMode(0, param4);
         jaggl.OpenGL.glColor4ub((byte)(param5 >> 16), (byte)(param5 >> 8), (byte)param5, (byte)(param5 >> 24));
         if (this.texture.field_l &&
           !this.field_l) {
@@ -423,12 +423,12 @@ final class OpenGlSprite extends ToolkitSprite {
           param5 = var24 + (var20 + param5);
         }
         var11Lifetime1 = param4 + (param2 - param0);
-        this.texture.a(109, (1 & param9) != 0 ? true : false);
+        this.texture.setLinearFiltering(109, (1 & param9) != 0 ? true : false);
         var12Lifetime1 = -param1 + param5 + param3;
         this.toolkit.n(27841);
-        this.toolkit.a(54, this.texture);
-        this.toolkit.d(param8, 122);
-        this.toolkit.c(0, param6);
+        this.toolkit.bindTexture(54, this.texture);
+        this.toolkit.setBlendMode(param8, 122);
+        this.toolkit.setTextureCombineMode(0, param6);
         jaggl.OpenGL.glColor4ub((byte)(param7 >> 16), (byte)(param7 >> 8), (byte)param7, (byte)(param7 >> 24));
         jaggl.OpenGL.glBegin(7);
         jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.field_o);

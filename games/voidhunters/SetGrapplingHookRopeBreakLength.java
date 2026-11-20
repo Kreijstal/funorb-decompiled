@@ -49,7 +49,7 @@ final class SetGrapplingHookRopeBreakLength extends ConsoleCommand {
         try {
           var4_int = param0.getGroupId(param2, -94);
           var5 = param0.getFileId(param1, var4_int, param3);
-          stackIn_1_0 = pib.a(param0, var5, var4_int, 0);
+          stackIn_1_0 = OpenGlTexture.a(param0, var5, var4_int, 0);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

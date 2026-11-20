@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ob extends pib {
+final class ob extends OpenGlTexture {
     static String field_m;
     private int field_n;
     int field_h;
@@ -24,8 +24,8 @@ final class ob extends pib {
 
     final void a(int param0, int param1, int param2, int param3, int param4, byte param5, int param6, int param7) {
         if (param5 == 115) {
-          this.field_g.a(114, (pib) (this));
-          jaggl.OpenGL.glCopyTexSubImage3D(this.field_b, 0, param0, param7, param3, param1, param2, param6, param4);
+          this.toolkit.bindTexture(114, (OpenGlTexture) (this));
+          jaggl.OpenGL.glCopyTexSubImage3D(this.target, 0, param0, param7, param3, param1, param2, param6, param4);
           jaggl.OpenGL.glFlush();
           return;
         }
@@ -39,16 +39,16 @@ final class ob extends pib {
           this.field_h = param4;
           this.field_i = param2;
           this.field_k = param3;
-          this.field_g.a(62, (pib) (this));
-          jaggl.OpenGL.glTexImage3Dub(this.field_b, 0, this.field_d, this.field_i, this.field_k, this.field_h, 0, PointLight.toOpenGlExternalFormat(this.field_d, false), 5121, (byte[]) null, 0);
-          this.a(-95, true);
+          this.toolkit.bindTexture(62, (OpenGlTexture) (this));
+          jaggl.OpenGL.glTexImage3Dub(this.target, 0, this.internalFormat, this.field_i, this.field_k, this.field_h, 0, PointLight.toOpenGlExternalFormat(this.internalFormat, false), 5121, (byte[]) null, 0);
+          this.setLinearFiltering(-95, true);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    public final void a(int param0) {
-        jaggl.OpenGL.glFramebufferTexture3DEXT(this.field_o, this.field_n, this.field_b, 0, 0, 0);
+    public final void detachFromFramebuffer(int param0) {
+        jaggl.OpenGL.glFramebufferTexture3DEXT(this.field_o, this.field_n, this.target, 0, 0, 0);
         this.field_o = -1;
         this.field_n = -1;
         if (param0 != 31294) {
@@ -64,11 +64,11 @@ final class ob extends pib {
           this.field_h = param4;
           this.field_i = param2;
           this.field_k = param3;
-          this.field_g.a(41, (pib) (this));
+          this.toolkit.bindTexture(41, (OpenGlTexture) (this));
           jaggl.OpenGL.glPixelStorei(3317, 1);
-          jaggl.OpenGL.glTexImage3Dub(this.field_b, 0, this.field_d, this.field_i, this.field_k, this.field_h, 0, param6, 5121, param5, 0);
+          jaggl.OpenGL.glTexImage3Dub(this.target, 0, this.internalFormat, this.field_i, this.field_k, this.field_h, 0, param6, 5121, param5, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
-          this.a(99, true);
+          this.setLinearFiltering(99, true);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ob.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ')');
         }

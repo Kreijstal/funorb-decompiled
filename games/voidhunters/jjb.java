@@ -62,14 +62,14 @@ final class jjb {
             }
             this.field_c = new aia[16];
             for (var2_intLifetime1 = 0; 16 > var2_intLifetime1; var2_intLifetime1++) {
-              var24 = ppb.a(pjb.field_vb, var2_intLifetime1 * 32768, true, 32768);
+              var24 = ppb.a(ScrollBarWidget.field_vb, var2_intLifetime1 * 32768, true, 32768);
               this.field_c[var2_intLifetime1] = new aia(param0, 3553, 6410, 128, 128, true, var24, 6410, false);
             }
             return;
           }
           var20 = ffb.extractBytes(false, GetMissionTimeLimit.field_p, true);
           this.field_b = new ob(param0, 6410, 128, 128, 16, var20, 6410);
-          var21 = ffb.extractBytes(false, pjb.field_vb, true);
+          var21 = ffb.extractBytes(false, ScrollBarWidget.field_vb, true);
           this.field_g = new ob(param0, 6410, 128, 128, 16, var21, 6410);
           var10 = param0.field_yb;
           if (var10.a(92)) {
@@ -77,13 +77,13 @@ final class jjb {
             this.field_a = new ob(param0, 6408, 128, 128, 16);
             var4 = new ob(param0, 6409, 128, 128, 16, var22, 6409);
             if (var10.a(2.0f, -28279, var4, this.field_a)) {
-              this.field_a.c(9729);
-              var4.e(0);
+              this.field_a.generateMipmaps(9729);
+              var4.dispose(0);
               return;
             }
-            this.field_a.e(0);
+            this.field_a.dispose(0);
             this.field_a = null;
-            var4.e(0);
+            var4.dispose(0);
             return;
           }
           return;

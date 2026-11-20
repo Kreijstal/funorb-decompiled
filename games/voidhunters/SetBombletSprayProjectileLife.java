@@ -100,10 +100,10 @@ final class SetBombletSprayProjectileLife extends ConsoleCommand {
             var19 = var7.b(128, (byte) -66, 128, 16);
             GetMissionTimeLimit.field_p = EscapePodFactory.storeBytes(false, var19, -12445);
           }
-          if (pjb.field_vb == null) {
+          if (ScrollBarWidget.field_vb == null) {
             var9 = new krb();
             var20 = var9.b(128, (byte) -29, 128, 16);
-            pjb.field_vb = EscapePodFactory.storeBytes(false, var20, -12445);
+            ScrollBarWidget.field_vb = EscapePodFactory.storeBytes(false, var20, -12445);
           }
           var11 = param0.field_yb;
           if (var11.a(param1 + 77) &&

@@ -64,7 +64,7 @@ final class ik extends IntrusiveNode {
         var2[37] = GetMomentOfInertiaPredivideDownshift.field_q;
         var2[127] = GetMissileLauncherRandomness.field_p;
         var2[165] = ShieldBehaviourFactory.field_a;
-        var2[117] = qca.field_wb;
+        var2[117] = SelectableIconLabelWidget.field_wb;
         var2[197] = bia.field_c;
         var2[114] = SetLaserRandomness.field_q;
         var2[177] = TextureCombineSource.field_a;
@@ -204,7 +204,7 @@ final class ik extends IntrusiveNode {
         var2[226] = GetTorpedoAcceleration.field_p;
         var2[60] = aea.field_b;
         var2[171] = enb.field_c;
-        var2[76] = qca.field_yb;
+        var2[76] = SelectableIconLabelWidget.field_yb;
         var2[23] = SetMissionResnetResourceTickTime.field_p;
         var2[15] = SetThrusterAutobalancing.field_r;
         var2[234] = Particle.field_j;

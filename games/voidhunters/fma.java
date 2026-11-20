@@ -35,9 +35,9 @@ final class fma extends mfb {
     final int g(byte param0) {
         if (param0 > -12) {
           field_b = (String) null;
-          return qca.field_yb;
+          return SelectableIconLabelWidget.field_yb;
         }
-        return qca.field_yb;
+        return SelectableIconLabelWidget.field_yb;
     }
 
     final int g(int param0) {

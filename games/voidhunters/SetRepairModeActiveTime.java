@@ -122,16 +122,16 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           DualLinkNode.field_f = new Widget(0L, (Widget) null);
           me.field_q = new Widget(0L, GetThrusterBindingBalanceThreshold.field_p, kpb.field_r);
           GetDebrisGrabbingRange.field_o = new Widget(0L, ObjectiveMarker.field_d, GetMessageMaxage.field_p);
-          CarouselSlot.field_a = new soa(0L, new Widget(0L, (Widget) null), htb.field_w, GetUseNiceTrails.field_o);
+          CarouselSlot.field_a = new ScrollPaneWidget(0L, new Widget(0L, (Widget) null), htb.field_w, GetUseNiceTrails.field_o);
           DualLinkNode.field_f.addChild(-561, me.field_q);
           if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
             DualLinkNode.field_f.addChild(param1 - 10792, GetDebrisGrabbingRange.field_o);
           }
           DualLinkNode.field_f.addChild(param1 - 10792, CarouselSlot.field_a);
-          CarouselSlot.field_a.field_xb.applyStyle(param1 + 8214, qc.field_q);
-          var23 = CarouselSlot.field_a.field_xb;
+          CarouselSlot.field_a.viewport.applyStyle(param1 + 8214, qc.field_q);
+          var23 = CarouselSlot.field_a.viewport;
           var24 = var23;
-          CarouselSlot.field_a.field_xb.field_B = 1;
+          CarouselSlot.field_a.viewport.field_B = 1;
           var24.field_F = 1;
           nna.field_v = new Widget(0L, qc.field_q);
           nna.field_v.field_F = 1;
@@ -144,7 +144,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           GrapplingHook.field_C = new Widget(0L, GetUseSprites.field_p, MissionGenerationData.field_e);
           GetDebrisDetachmentForceMultiplier.field_o = new Widget(0L, GetUseSprites.field_p, SetTrapMouse.field_o);
           uga.field_h = new Widget(0L, ObjectiveMarker.field_d, tea.field_c);
-          MapClearanceCircle.field_f = new soa(0L, new Widget(0L, (Widget) null), htb.field_w, GetUseNiceTrails.field_o);
+          MapClearanceCircle.field_f = new ScrollPaneWidget(0L, new Widget(0L, (Widget) null), htb.field_w, GetUseNiceTrails.field_o);
           GetMomentOfInertiaPerpointCalcDownshift.field_p = new Widget(0L, SetGrapplingHookMaxExtension8Force.field_p, ev.field_b.toUpperCase());
           GetMomentOfInertiaPerpointCalcDownshift.field_p.enabled = GetGrapplingHooksDamageableBySourcePlayer.field_o;
           stackIn_6_0 = null;
@@ -197,7 +197,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           SetPhasedEnergyBeamPulsetime.field_o.field_F = 1;
           SecondaryNodeDequeIterator.field_a = new Widget(0L, GetThrusterBindingBalanceThreshold.field_p, kpb.field_r);
           GetPointDefenceLaserProjectileDamage.field_o = new Widget(0L, ObjectiveMarker.field_d, GetMessageMaxage.field_p);
-          WaterTextures.field_f = new soa(0L, new Widget(0L, (Widget) null), htb.field_w, GetUseNiceTrails.field_o);
+          WaterTextures.field_f = new ScrollPaneWidget(0L, new Widget(0L, (Widget) null), htb.field_w, GetUseNiceTrails.field_o);
           SetOndamageParticleLife.field_o.addChild(-561, SetPhasedEnergyBeamPulsetime.field_o);
           SetOndamageParticleLife.field_o.addChild(-561, SecondaryNodeDequeIterator.field_a);
           if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {

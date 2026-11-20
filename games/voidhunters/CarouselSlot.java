@@ -4,7 +4,7 @@
 class CarouselSlot implements DiffableState {
     static String field_b;
     CarouselPlayerInfo[] players;
-    static soa field_a;
+    static ScrollPaneWidget field_a;
 
     public static void clearSharedReferences(boolean param0) {
         if (param0) {
@@ -191,7 +191,7 @@ class CarouselSlot implements DiffableState {
         RuntimeException var3_ref = null;
         try {
           if (obfuscationGuard >= -19) {
-            field_a = (soa) null;
+            field_a = (ScrollPaneWidget) null;
           }
           var3 = (CarouselSlot) (other);
           var4 = 0;
@@ -344,7 +344,7 @@ class CarouselSlot implements DiffableState {
         int var3 = 0;
         int var4 = VoidHunters.field_G;
         if (param1 <= 93) {
-          field_a = (soa) null;
+          field_a = (ScrollPaneWidget) null;
         }
         this.players = (CarouselPlayerInfo[]) (GetLoadingMissions.field_q.createArray(11995, param0));
         for (var3 = 0; var3 < param0; var3++) {

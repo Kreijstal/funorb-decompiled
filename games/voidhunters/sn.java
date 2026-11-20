@@ -38,7 +38,7 @@ final class sn extends os implements oo {
         }
     }
 
-    final static void a(int param0, int param1, jk param2, byte param3, int param4, soa param5, int param6) {
+    final static void a(int param0, int param1, jk param2, byte param3, int param4, ScrollPaneWidget param5, int param6) {
         hqb var13 = null;
         int var8 = 0;
         int var9 = 0;
@@ -73,7 +73,7 @@ final class sn extends os implements oo {
         RuntimeException var4_ref = null;
         nna var5 = null;
         int var6 = 0;
-        soa var7 = null;
+        ScrollPaneWidget var7 = null;
         var6 = VoidHunters.field_G;
         try {
           this.field_Z = true;
@@ -123,8 +123,8 @@ final class sn extends os implements oo {
             }
           }
           if (param1) {
-            var7 = (soa) null;
-            sn.a(-93, 7, (jk) null, (byte) 42, -22, (soa) null, 46);
+            var7 = (ScrollPaneWidget) null;
+            sn.a(-93, 7, (jk) null, (byte) 42, -22, (ScrollPaneWidget) null, 46);
           }
           this.b(var5, 99);
           return;

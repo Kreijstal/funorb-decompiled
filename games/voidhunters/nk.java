@@ -32,7 +32,7 @@ final class nk {
         float var9 = 0.0f;
         int var10 = 0;
         ob var11 = null;
-        rpa var12 = null;
+        OpenGlFramebuffer var12 = null;
         int stackIn_13_0 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -47,10 +47,10 @@ final class nk {
           }
           var12 = this.field_b.field_pb;
           var6 = new nv(this.field_b, 6408, param3.field_i, param3.field_k);
-          this.field_b.a((byte) -121, (jaa) (var12));
+          this.field_b.pushFramebuffer((byte) -121, (OpenGlFramebufferBinding) (var12));
           var7 = 0;
-          var12.a(0, var6, (byte) -20);
-          if (var12.g(120)) {
+          var12.attachRenderbuffer(0, var6, (byte) -20);
+          if (var12.isComplete(120)) {
             jaggl.OpenGL.glPushMatrix();
             jaggl.OpenGL.glLoadIdentity();
             jaggl.OpenGL.glMatrixMode(5889);
@@ -65,7 +65,7 @@ final class nk {
             jaggl.OpenGL.glUniform2fARB(jaggl.OpenGL.glGetUniformLocationARB(this.field_a.field_c, "sampleSize"), 1.0f / (float)param2.field_i, 1.0f / (float)param2.field_k);
             for (var8 = 0; param3.field_h > var8; var8++) {
               var9 = (float)var8 / (float)param3.field_h;
-              this.field_b.a(param1 ^ -28269, param2);
+              this.field_b.bindTexture(param1 ^ -28269, param2);
               jaggl.OpenGL.glBegin(7);
               jaggl.OpenGL.glTexCoord3f(0.0f, 0.0f, var9);
               jaggl.OpenGL.glVertex2f(0.0f, 0.0f);
@@ -85,12 +85,12 @@ final class nk {
             jaggl.OpenGL.glPopMatrix();
             var7 = 1;
           }
-          var12.a(0, (byte) -84);
+          var12.detachAttachment(0, (byte) -84);
           if (param1 != -28279) {
             var11 = (ob) null;
             this.a(1.2867883443832397f, -18, (ob) null, (ob) null);
           }
-          this.field_b.a(var12, 2896);
+          this.field_b.popFramebuffer(var12, 2896);
           stackIn_13_0 = var7;
           return stackIn_13_0 != 0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

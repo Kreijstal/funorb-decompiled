@@ -6,7 +6,7 @@ final class vra {
     int field_e;
     int field_a;
     int field_d;
-    static wdb field_b;
+    static ScrollableActionPanel field_b;
     private static String field_z;
 
     public static void clearSharedReferences(byte param0) {

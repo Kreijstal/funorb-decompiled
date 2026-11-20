@@ -1139,7 +1139,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         if (tea.field_d == param1) {
           var3 = 65536;
         } else {
-          if (rpa.field_c != param1) {
+          if (OpenGlFramebuffer.field_c != param1) {
             if (param1 == GetArmageddonLength.field_p) {
               var3 = 196608;
             }

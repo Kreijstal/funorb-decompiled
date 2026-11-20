@@ -45,7 +45,7 @@ final class t {
         if (param1 < 34) {
           return (Ship) null;
         }
-        return rpa.a(param0, 0, true);
+        return OpenGlFramebuffer.a(param0, 0, true);
     }
 
     public static void clearSharedReferences(int param0) {

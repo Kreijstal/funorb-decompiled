@@ -8,7 +8,7 @@ abstract class qc implements kd {
     private Widget field_m;
     Widget field_o;
     BitmapFont field_n;
-    soa field_h;
+    ScrollPaneWidget field_h;
     private IntrusiveDeque field_i;
     static QuickChatDynamicCommand field_g;
     static Widget field_q;
@@ -54,19 +54,19 @@ abstract class qc implements kd {
         Widget var5 = null;
         int var6 = VoidHunters.field_G;
         try {
-          this.field_h.field_wb.addChild(-561, this.b(param1, 0, param2));
-          if (!(param0 <= ~this.field_h.field_wb.children.size(3))) {
-            this.field_h.field_wb.children.removeFirst(true);
+          this.field_h.content.addChild(-561, this.b(param1, 0, param2));
+          if (!(param0 <= ~this.field_h.content.children.size(3))) {
+            this.field_h.content.children.removeFirst(true);
           }
           var4_int = 5;
-          var5 = (Widget) (this.field_h.field_wb.children.first(0));
+          var5 = (Widget) (this.field_h.content.children.first(0));
           while (var5 != null) {
             var5.y = var4_int;
             var4_int = var4_int + this.field_e;
-            var5 = (Widget) (this.field_h.field_wb.children.next((byte) 30));
+            var5 = (Widget) (this.field_h.content.children.next((byte) 30));
           }
-          this.field_h.field_wb.height = var4_int;
-          this.field_h.field_wb.y = -var4_int + this.field_h.height;
+          this.field_h.content.height = var4_int;
+          this.field_h.content.y = -var4_int + this.field_h.height;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qc.L(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -327,7 +327,7 @@ abstract class qc implements kd {
         }
         this.field_b = this.field_b + 1;
         this.field_m.updateInput(param0, 1332);
-        this.field_h.a(2 * (this.field_e * GetPointDefenceLaserPulsetime.field_o), true, this.field_e, 0);
+        this.field_h.updateScrolling(2 * (this.field_e * GetPointDefenceLaserPulsetime.field_o), true, this.field_e, 0);
         this.field_p.f((byte) -6);
     }
 
@@ -459,7 +459,7 @@ abstract class qc implements kd {
             return true;
           }
           this.a(this.field_c + var7, false, 5635925);
-          var5 = (Widget) (this.field_h.field_wb.children.last((byte) 127));
+          var5 = (Widget) (this.field_h.content.children.last((byte) 127));
           if (!this.a(-10278, var7)) {
             var5.field_Y = 16733525;
           }
@@ -492,7 +492,7 @@ abstract class qc implements kd {
         Widget var10 = null;
         Widget var11 = null;
         Widget var12 = null;
-        pjb var13 = null;
+        ScrollBarWidget var13 = null;
         Widget var14 = null;
         Widget var15 = null;
         this.field_c = "# ";
@@ -516,12 +516,12 @@ abstract class qc implements kd {
           var12 = this.a((byte) -105, 2236962, 65793);
           this.field_m = new Widget(0L, var5);
           this.field_m.setBounds(0, 16, GetDebrisSurvives.field_p, -200, 200);
-          var13 = new pjb(0L, var8, var8, var9, var10);
+          var13 = new ScrollBarWidget(0L, var8, var8, var9, var10);
           var14 = new Widget();
           var14.children = new IntrusiveDeque();
-          this.field_h = new soa(0L, var14, var6, var13);
-          this.field_h.field_wb.children = new IntrusiveDeque();
-          this.field_h.a(this.field_m.width - 10, 0, -1, -var3_int + 185, 5, 5, 15);
+          this.field_h = new ScrollPaneWidget(0L, var14, var6, var13);
+          this.field_h.content.children = new IntrusiveDeque();
+          this.field_h.setBoundsAndLayout(this.field_m.width - 10, 0, -1, -var3_int + 185, 5, 5, 15);
           this.field_m.addChild(-561, this.field_h);
           var15 = new Widget();
           var15.field_Y = 13421772;

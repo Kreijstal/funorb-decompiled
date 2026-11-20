@@ -26,7 +26,7 @@ final class ti extends qg {
         return false;
     }
 
-    final void a(int param0, byte param1, pib param2) {
+    final void a(int param0, byte param1, OpenGlTexture param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -39,8 +39,8 @@ final class ti extends qg {
           if (this.field_j) {
             return;
           }
-          this.field_b.a(72, param2);
-          this.field_b.c(0, param0);
+          this.field_b.bindTexture(72, param2);
+          this.field_b.setTextureCombineMode(0, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -59,22 +59,22 @@ final class ti extends qg {
     final void a(int param0) {
         if (param0 == 5890) {
           if (this.field_j) {
-            this.field_b.h(33984, 1);
-            this.field_b.a(25, (pib) null);
-            this.field_b.h(param0 ^ 37826, 0);
-            this.field_b.a(59, (pib) null);
+            this.field_b.setActiveTextureUnit(33984, 1);
+            this.field_b.bindTexture(25, (OpenGlTexture) null);
+            this.field_b.setActiveTextureUnit(param0 ^ 37826, 0);
+            this.field_b.bindTexture(59, (OpenGlTexture) null);
             jaggl.OpenGL.glUseProgramObjectARB(0L);
             this.field_j = false;
           }
           return;
         }
-        pib var3 = (pib) null;
-        this.a(115, (byte) 3, (pib) null);
+        OpenGlTexture var3 = (OpenGlTexture) null;
+        this.a(115, (byte) 3, (OpenGlTexture) null);
         if (this.field_j) {
-          this.field_b.h(33984, 1);
-          this.field_b.a(25, (pib) null);
-          this.field_b.h(param0 ^ 37826, 0);
-          this.field_b.a(59, (pib) null);
+          this.field_b.setActiveTextureUnit(33984, 1);
+          this.field_b.bindTexture(25, (OpenGlTexture) null);
+          this.field_b.setActiveTextureUnit(param0 ^ 37826, 0);
+          this.field_b.bindTexture(59, (OpenGlTexture) null);
           jaggl.OpenGL.glUseProgramObjectARB(0L);
           this.field_j = false;
         }
@@ -145,15 +145,15 @@ final class ti extends qg {
         if (param1 < 18) {
           return;
         }
-        OpenGlCubeTexture var3 = this.field_b.a(false);
+        OpenGlCubeTexture var3 = this.field_b.getEnvironmentCubeTexture(false);
         if (!this.field_e) {
           return;
         }
         if (var3 != null) {
-          this.field_b.h(33984, 1);
-          this.field_b.a(106, var3);
-          this.field_b.h(33984, 0);
-          this.field_b.a(106, this.field_d.field_a);
+          this.field_b.setActiveTextureUnit(33984, 1);
+          this.field_b.bindTexture(106, var3);
+          this.field_b.setActiveTextureUnit(33984, 0);
+          this.field_b.bindTexture(106, this.field_d.field_a);
           var4 = this.field_f.field_c;
           jaggl.OpenGL.glUseProgramObjectARB(var4);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var4, "normalSampler"), 0);

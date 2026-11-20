@@ -3,15 +3,15 @@
  */
 final class OpenGlPostProcessor {
     private int height;
-    private rpa field_o;
+    private OpenGlFramebuffer field_o;
     private int captureY;
     private IntrusiveDeque effects;
-    private rpa field_s;
+    private OpenGlFramebuffer field_s;
     private OpenGlToolkit toolkit;
     private boolean captureActive;
     private int width;
     static int field_v;
-    private rpa field_h;
+    private OpenGlFramebuffer field_h;
     private int captureX;
     static String field_d;
     private aia field_w;
@@ -89,7 +89,7 @@ final class OpenGlPostProcessor {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 2998) {
-            this.field_h = (rpa) null;
+            this.field_h = (OpenGlFramebuffer) null;
           }
           if (null != this.field_h) {
             if (param1.isInitialized(-257) ||
@@ -150,9 +150,9 @@ final class OpenGlPostProcessor {
           this.captureY = param1;
           this.captureX = param0;
           this.captureActive = true;
-          this.toolkit.a((byte) -120, (jaa) (this.field_h));
-          this.field_h.a(0, 0);
-          this.toolkit.c(this.height + this.captureY - this.toolkit.field_Y, -this.captureX, 0);
+          this.toolkit.pushFramebuffer((byte) -120, (OpenGlFramebufferBinding) (this.field_h));
+          this.field_h.setDrawBuffer(0, 0);
+          this.toolkit.setViewportOrigin(this.height + this.captureY - this.toolkit.field_Y, -this.captureX, 0);
           return true;
         }
         return false;
@@ -173,7 +173,7 @@ final class OpenGlPostProcessor {
             this.field_u = null;
           }
           if (null != this.field_w) {
-            this.field_w.e(0);
+            this.field_w.dispose(0);
             this.field_w = null;
           }
           if (null != this.field_s) {
@@ -200,11 +200,11 @@ final class OpenGlPostProcessor {
             this.field_n = null;
           }
           if (null != this.field_l[0]) {
-            this.field_l[0].e(0);
+            this.field_l[0].dispose(0);
             this.field_l[0] = null;
           }
           if (null != this.field_l[1]) {
-            this.field_l[1].e(0);
+            this.field_l[1].dispose(0);
             this.field_l[1] = null;
           }
           if (this.field_s != null) {
@@ -225,48 +225,48 @@ final class OpenGlPostProcessor {
         }
         if (this.field_j) {
           if (this.field_s != null) {
-            this.toolkit.a((byte) -126, (jaa) (this.field_o));
-            this.field_o.a(0, (byte) -27);
-            this.field_o.a(1, (byte) -27);
-            this.field_o.a(8, (byte) 110);
-            this.field_o.a(0, (byte) -126, this.field_l[0]);
+            this.toolkit.pushFramebuffer((byte) -126, (OpenGlFramebufferBinding) (this.field_o));
+            this.field_o.detachAttachment(0, (byte) -27);
+            this.field_o.detachAttachment(1, (byte) -27);
+            this.field_o.detachAttachment(8, (byte) 110);
+            this.field_o.attachTexture(0, (byte) -126, this.field_l[0]);
             if (this.passCount > 1) {
-              this.field_o.a(1, (byte) -126, this.field_l[1]);
+              this.field_o.attachTexture(1, (byte) -126, this.field_l[1]);
             }
             if (this.needsDepthTexture) {
-              this.field_o.a(8, (byte) -128, this.field_w);
+              this.field_o.attachTexture(8, (byte) -128, this.field_w);
             }
-            this.toolkit.a(this.field_o, 2896);
-            this.toolkit.a((byte) -122, (jaa) (this.field_s));
-            this.field_s.a(0, (byte) -48);
-            this.field_s.a(8, (byte) -80);
-            this.field_s.a(0, this.field_n, (byte) -20);
-            this.field_s.a(8, this.field_u, (byte) -20);
-            this.toolkit.a(this.field_s, 2896);
+            this.toolkit.popFramebuffer(this.field_o, 2896);
+            this.toolkit.pushFramebuffer((byte) -122, (OpenGlFramebufferBinding) (this.field_s));
+            this.field_s.detachAttachment(0, (byte) -48);
+            this.field_s.detachAttachment(8, (byte) -80);
+            this.field_s.attachRenderbuffer(0, this.field_n, (byte) -20);
+            this.field_s.attachRenderbuffer(8, this.field_u, (byte) -20);
+            this.toolkit.popFramebuffer(this.field_s, 2896);
           } else {
-            this.toolkit.a((byte) -125, (jaa) (this.field_o));
-            this.field_o.a(0, (byte) -36);
-            this.field_o.a(1, (byte) -61);
-            this.field_o.a(8, (byte) -5);
-            this.field_o.a(0, (byte) -127, this.field_l[0]);
+            this.toolkit.pushFramebuffer((byte) -125, (OpenGlFramebufferBinding) (this.field_o));
+            this.field_o.detachAttachment(0, (byte) -36);
+            this.field_o.detachAttachment(1, (byte) -61);
+            this.field_o.detachAttachment(8, (byte) -5);
+            this.field_o.attachTexture(0, (byte) -127, this.field_l[0]);
             if (this.passCount > 1) {
-              this.field_o.a(1, (byte) -127, this.field_l[1]);
+              this.field_o.attachTexture(1, (byte) -127, this.field_l[1]);
             }
             if (!this.needsDepthTexture) {
-              this.field_o.a(8, this.field_u, (byte) -20);
+              this.field_o.attachRenderbuffer(8, this.field_u, (byte) -20);
             } else {
-              this.field_o.a(8, (byte) -126, this.field_w);
+              this.field_o.attachTexture(8, (byte) -126, this.field_w);
             }
-            this.toolkit.a(this.field_o, 2896);
+            this.toolkit.popFramebuffer(this.field_o, 2896);
           }
           this.field_j = false;
           this.field_a = true;
         }
         if (this.field_a) {
-          this.toolkit.a((byte) -121, (jaa) (this.field_h));
-          stackIn_55_1 = !(this.field_h.g(93));
+          this.toolkit.pushFramebuffer((byte) -121, (OpenGlFramebufferBinding) (this.field_h));
+          stackIn_55_1 = !(this.field_h.isComplete(93));
           this.field_a = stackIn_55_1;
-          this.toolkit.a(this.field_h, 2896);
+          this.toolkit.popFramebuffer(this.field_h, 2896);
         }
         stackIn_59_0 = !(this.field_a);
         return stackIn_59_0;
@@ -288,21 +288,21 @@ final class OpenGlPostProcessor {
         }
         if (null != this.field_s) {
           var2 = 16384;
-          this.toolkit.b((byte) 101, (jaa) (this.field_s));
-          this.toolkit.b(0, this.field_o);
-          this.field_s.b(119, 0);
-          this.field_o.a(0, 0);
+          this.toolkit.popDrawFramebuffer((byte) 101, (OpenGlFramebufferBinding) (this.field_s));
+          this.toolkit.pushDrawFramebuffer(0, this.field_o);
+          this.field_s.setReadBuffer(119, 0);
+          this.field_o.setDrawBuffer(0, 0);
           if (this.needsDepthTexture) {
             var2 = var2 | 256;
           }
           jaggl.OpenGL.glBlitFramebufferEXT(0, 0, this.width, this.height, 0, 0, this.width, this.height, var2, 9728);
-          this.toolkit.a((jaa) (this.field_s), (byte) -94);
-          this.toolkit.a(56, this.field_o);
+          this.toolkit.popReadFramebuffer((OpenGlFramebufferBinding) (this.field_s), (byte) -94);
+          this.toolkit.pushReadFramebuffer(56, this.field_o);
         }
         this.toolkit.n(27841);
-        this.toolkit.d(0, 127);
-        this.toolkit.c(0, 1);
-        this.toolkit.t(110);
+        this.toolkit.setBlendMode(0, 127);
+        this.toolkit.setTextureCombineMode(0, 1);
+        this.toolkit.resetClipRectangle(110);
         var2Lifetime1 = 0;
         var3 = 1;
         var4_ref_mea = (OpenGlPostEffect) (this.effects.first(0));
@@ -313,8 +313,8 @@ final class OpenGlPostProcessor {
             var4_ref_mea.setupPass(this.field_l[var2Lifetime1], -3009, this.field_w, var7);
             if (null == var5 &&
               -1 + var6 == var7) {
-              this.toolkit.a(this.field_o, 2896);
-              this.toolkit.c(0, 0, 0);
+              this.toolkit.popFramebuffer(this.field_o, 2896);
+              this.toolkit.setViewportOrigin(0, 0, 0);
               jaggl.OpenGL.glBegin(7);
               jaggl.OpenGL.glTexCoord2f(0.0f, (float)this.height);
               jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 1.0f);
@@ -330,7 +330,7 @@ final class OpenGlPostProcessor {
               jaggl.OpenGL.glVertex2i(this.width + this.captureX, this.captureY);
               jaggl.OpenGL.glEnd();
             } else {
-              this.field_o.a(0, 0 + var3);
+              this.field_o.setDrawBuffer(0, 0 + var3);
               jaggl.OpenGL.glBegin(7);
               jaggl.OpenGL.glTexCoord2f(0.0f, (float)this.height);
               jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 1.0f);
@@ -396,8 +396,8 @@ final class OpenGlPostProcessor {
     }
 
     OpenGlPostProcessor(OpenGlToolkit param0) {
-        rpa dupTemp$2 = null;
-        rpa dupTemp$3 = null;
+        OpenGlFramebuffer dupTemp$2 = null;
+        OpenGlFramebuffer dupTemp$3 = null;
         RuntimeException runtimeException = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -420,7 +420,7 @@ final class OpenGlPostProcessor {
           this.toolkit = param0;
           if (this.toolkit.field_U &&
             this.toolkit.field_g) {
-            dupTemp$2 = new rpa(this.toolkit);
+            dupTemp$2 = new OpenGlFramebuffer(this.toolkit);
             this.field_o = dupTemp$2;
             this.field_h = dupTemp$2;
             if (1 < this.toolkit.field_Kc &&
@@ -428,7 +428,7 @@ final class OpenGlPostProcessor {
               if (!this.toolkit.field_gb) {
                 return;
               }
-              dupTemp$3 = new rpa(this.toolkit);
+              dupTemp$3 = new OpenGlFramebuffer(this.toolkit);
               this.field_s = dupTemp$3;
               this.field_h = dupTemp$3;
             }

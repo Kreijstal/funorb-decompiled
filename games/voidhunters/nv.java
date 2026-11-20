@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nv extends DualLinkNode implements mda {
+final class nv extends DualLinkNode implements OpenGlFramebufferAttachment {
     private OpenGlToolkit field_t;
     private int field_l;
     private int field_q;
@@ -88,7 +88,7 @@ final class nv extends DualLinkNode implements mda {
 
     final void e(byte param0) {
         if (this.field_l > 0) {
-          this.field_t.a(this.field_m, this.field_l, (byte) 77);
+          this.field_t.enqueueRenderbufferDisposal(this.field_m, this.field_l, (byte) 77);
           this.field_l = 0;
           if (param0 >= 106) {
             return;
@@ -102,7 +102,7 @@ final class nv extends DualLinkNode implements mda {
         }
     }
 
-    public final void a(int param0) {
+    public final void detachFromFramebuffer(int param0) {
         if (param0 != 31294) {
           this.field_k = -106;
           jaggl.OpenGL.glFramebufferRenderbufferEXT(this.field_q, this.field_s, 36161, 0);
@@ -201,7 +201,7 @@ final class nv extends DualLinkNode implements mda {
           this.field_l = SetMachineGunReload.field_p[0];
           jaggl.OpenGL.glBindRenderbufferEXT(36161, this.field_l);
           jaggl.OpenGL.glRenderbufferStorageEXT(36161, this.field_k, this.field_w, this.field_u);
-          this.field_m = this.field_u * this.field_w * this.field_t.e(this.field_k, 2);
+          this.field_m = this.field_u * this.field_w * this.field_t.getTextureFormatByteSize(this.field_k, 2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -219,7 +219,7 @@ final class nv extends DualLinkNode implements mda {
           this.field_l = SetMachineGunReload.field_p[0];
           jaggl.OpenGL.glBindRenderbufferEXT(36161, this.field_l);
           jaggl.OpenGL.glRenderbufferStorageMultisampleEXT(36161, param4, this.field_k, this.field_w, this.field_u);
-          this.field_m = this.field_w * (this.field_u * this.field_t.e(this.field_k, 2));
+          this.field_m = this.field_w * (this.field_u * this.field_t.getTextureFormatByteSize(this.field_k, 2));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

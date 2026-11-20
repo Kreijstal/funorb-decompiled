@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class soa extends Widget {
-    Widget field_xb;
-    Widget field_wb;
-    pjb field_vb;
+final class ScrollPaneWidget extends Widget {
+    Widget viewport;
+    Widget content;
+    ScrollBarWidget scrollbar;
 
     final static int[][] a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7, float param8) {
         int var11 = 0;
@@ -30,22 +30,22 @@ final class soa extends Widget {
         return var9;
     }
 
-    private final void a(int param0, int param1, int param2) {
-        this.field_xb.height = this.height;
-        this.field_wb.x = 0;
-        this.field_xb.width = -param0 + (this.width - param2);
-        this.field_wb.width = -param2 + this.width - param0;
+    private final void layoutViewportAndScrollbar(int param0, int param1, int param2) {
+        this.viewport.height = this.height;
+        this.content.x = 0;
+        this.viewport.width = -param0 + (this.width - param2);
+        this.content.width = -param2 + this.width - param0;
         if (param1 <= 84) {
-          soa.a(92, -71, 109, -69, true, 40, 47, 70, -1.1040540933609009f);
+          ScrollPaneWidget.a(92, -71, 109, -69, true, 40, 47, 70, -1.1040540933609009f);
         }
-        this.field_vb.a(-param0 + this.width, this.field_wb.height, 0, -this.field_wb.y, this.field_xb.height, this.height, param0, -1);
+        this.scrollbar.setBoundsAndGeometry(-param0 + this.width, this.content.height, 0, -this.content.y, this.viewport.height, this.height, param0, -1);
     }
 
-    final boolean a(byte param0, int param1, int param2, boolean param3, boolean param4, int param5) {
+    final boolean layoutAndUpdateScrolling(byte param0, int param1, int param2, boolean param3, boolean param4, int param5) {
         if (param0 != 38) {
-          this.field_vb = (pjb) null;
+          this.scrollbar = (ScrollBarWidget) null;
         }
-        return this.a(param3, param4, this.field_xb.height, param2, param1, param5, -120);
+        return this.layoutAndUpdateScrolling(param3, param4, this.viewport.height, param2, param1, param5, -120);
     }
 
     final static void a(boolean param0, int param1, boolean param2, int param3) {
@@ -254,77 +254,77 @@ final class soa extends Widget {
         }
     }
 
-    soa(long param0, Widget param1, Widget param2, pjb param3) {
+    ScrollPaneWidget(long param0, Widget param1, Widget param2, ScrollBarWidget param3) {
         super(param0, (Widget) null);
         try {
-          this.field_xb = new Widget(0L, param2);
-          this.field_vb = new pjb(0L, param3);
-          this.addChild(-561, this.field_xb);
-          this.addChild(-561, this.field_vb);
-          this.field_wb = param1;
-          this.field_xb.addChild(-561, param1);
+          this.viewport = new Widget(0L, param2);
+          this.scrollbar = new ScrollBarWidget(0L, param3);
+          this.addChild(-561, this.viewport);
+          this.addChild(-561, this.scrollbar);
+          this.content = param1;
+          this.viewport.addChild(-561, param1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "soa.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void setBoundsAndLayout(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.width = param0;
         this.y = param4;
         this.height = param3;
         this.x = param5;
-        this.a(param6, 87, param1);
+        this.layoutViewportAndScrollbar(param6, 87, param1);
         if (param2 != -1) {
-          this.field_vb = (pjb) null;
+          this.scrollbar = (ScrollBarWidget) null;
         }
     }
 
-    private final void a(int param0, int param1, boolean param2, int param3, int param4) {
-        if (this.field_vb.h(0)) {
-          this.field_wb.field_db = this.field_wb.field_db + param3;
+    private final void processScrollInput(int param0, int param1, boolean param2, int param3, int param4) {
+        if (this.scrollbar.pollScrollUp(0)) {
+          this.content.field_db = this.content.field_db + param3;
         }
-        if (this.field_vb.j(-6)) {
-          this.field_wb.field_db = this.field_wb.field_db - param3;
+        if (this.scrollbar.pollScrollDown(-6)) {
+          this.content.field_db = this.content.field_db - param3;
         }
-        if (this.field_vb.i(20)) {
-          this.field_wb.field_db = this.field_wb.field_db + param0;
+        if (this.scrollbar.pollPageUp(20)) {
+          this.content.field_db = this.content.field_db + param0;
         }
-        if (this.field_vb.b(true)) {
-          this.field_wb.field_db = this.field_wb.field_db - param0;
+        if (this.scrollbar.pollPageDown(true)) {
+          this.content.field_db = this.content.field_db - param0;
         }
         if (this.field_O) {
-          this.field_wb.field_db = this.field_wb.field_db - param4;
+          this.content.field_db = this.content.field_db - param4;
         }
         if (!param2) {
-          if (this.field_wb.height + (this.field_wb.field_E - this.field_xb.height) < -(this.field_wb.y + this.field_wb.field_db)) {
-            this.field_wb.field_db = -this.field_wb.y - (this.field_wb.field_E + (this.field_wb.height - this.field_xb.height));
+          if (this.content.height + (this.content.field_E - this.viewport.height) < -(this.content.y + this.content.field_db)) {
+            this.content.field_db = -this.content.y - (this.content.field_E + (this.content.height - this.viewport.height));
           }
-          if (-(this.field_wb.y + this.field_wb.field_db) < 0) {
-            this.field_wb.field_db = -this.field_wb.y;
+          if (-(this.content.y + this.content.field_db) < 0) {
+            this.content.field_db = -this.content.y;
           }
         } else {
-          if (-(this.field_wb.y + this.field_wb.field_db) < 0) {
-            this.field_wb.field_db = -this.field_wb.y;
+          if (-(this.content.y + this.content.field_db) < 0) {
+            this.content.field_db = -this.content.y;
           }
-          if (-this.field_xb.height + (this.field_wb.field_E + this.field_wb.height) < -(this.field_wb.y + this.field_wb.field_db)) {
-            this.field_wb.field_db = -(-this.field_xb.height + this.field_wb.field_E + this.field_wb.height) - this.field_wb.y;
+          if (-this.viewport.height + (this.content.field_E + this.content.height) < -(this.content.y + this.content.field_db)) {
+            this.content.field_db = -(-this.viewport.height + this.content.field_E + this.content.height) - this.content.y;
           }
         }
         if (param1 != 48) {
-          this.field_xb = (Widget) null;
+          this.viewport = (Widget) null;
         }
-        if (this.field_vb.a(true)) {
-          this.field_wb.y = -this.field_vb.a(this.field_wb.height, this.field_xb.height, (byte) -123, param2);
-          this.field_wb.field_db = 0;
+        if (this.scrollbar.isThumbDragging(true)) {
+          this.content.y = -this.scrollbar.getScrollPosition(this.content.height, this.viewport.height, (byte) -123, param2);
+          this.content.field_db = 0;
         }
-        this.field_vb.a(this.field_wb.height, -this.field_wb.y, (byte) -126, this.field_xb.height);
+        this.scrollbar.updateGeometry(this.content.height, -this.content.y, (byte) -126, this.viewport.height);
     }
 
-    private final boolean a(boolean param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
+    private final boolean layoutAndUpdateScrolling(boolean param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
         int var8;
         int stackIn_10_0 = 0;
         if (param6 >= -46) {
-          this.field_wb = (Widget) null;
+          this.content = (Widget) null;
         }
         if (!param0) {
           if (this.field_O) {
@@ -336,16 +336,16 @@ final class soa extends Widget {
           stackIn_10_0 = 1;
         }
         var8 = stackIn_10_0;
-        this.field_wb.layoutVerticalChildren(param4, -91, this.field_xb.height, var8 != 0);
-        this.a(param2, 48, false, param5, param3);
+        this.content.layoutVerticalChildren(param4, -91, this.viewport.height, var8 != 0);
+        this.processScrollInput(param2, 48, false, param5, param3);
         return var8 != 0;
     }
 
-    final void a(int param0, boolean param1, int param2, int param3) {
+    final void updateScrolling(int param0, boolean param1, int param2, int param3) {
         if (param3 != 0) {
-          this.field_wb = (Widget) null;
+          this.content = (Widget) null;
         }
-        this.a(this.field_xb.height, param3 + 48, param1, param2, param0);
+        this.processScrollInput(this.viewport.height, param3 + 48, param1, param2, param0);
     }
 
     static {

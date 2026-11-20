@@ -72,7 +72,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
         if (param3 > -70) {
           return (pgb) null;
         }
-        GetUseLines.field_p.field_wb.children.clear(122);
+        GetUseLines.field_p.content.children.clear(122);
         var5 = 0;
         var6 = 0;
         for (var7 = -1 + SetRepairModePower.field_q; 0 <= var7; var7--) {
@@ -110,7 +110,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
         for (var8 = 0; SetRepairModePower.field_q > var8; var8++) {
           var9_ref_pgb = nrb.field_b[var8];
           if (null != var9_ref_pgb.field_j) {
-            GetUseLines.field_p.field_wb.addChild(-561, var9_ref_pgb.field_j);
+            GetUseLines.field_p.content.addChild(-561, var9_ref_pgb.field_j);
             var9_ref_pgb.field_j.setBounds(param1, 122, var9_ref_pgb.field_j.getPreferredWidth(66), var7Lifetime1, param0);
             var7Lifetime1 = var7Lifetime1 + param0;
             if (var9_ref_pgb.field_j.field_o != 0) {
@@ -118,79 +118,79 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
             }
           }
         }
-        var8Lifetime1 = -var7Lifetime1 - (-var6 - (GetUseLines.field_p.field_wb.height + GetUseLines.field_p.field_wb.field_E));
-        GetUseLines.field_p.field_wb.y = GetUseLines.field_p.field_wb.y + var8Lifetime1;
-        GetUseLines.field_p.field_wb.height = GetUseLines.field_p.field_wb.height - var8Lifetime1;
+        var8Lifetime1 = -var7Lifetime1 - (-var6 - (GetUseLines.field_p.content.height + GetUseLines.field_p.content.field_E));
+        GetUseLines.field_p.content.y = GetUseLines.field_p.content.y + var8Lifetime1;
+        GetUseLines.field_p.content.height = GetUseLines.field_p.content.height - var8Lifetime1;
         if (!ebb.field_b) {
           if (ebb.field_b) {
             ebb.field_b = false;
-            GetUseLines.field_p.field_wb.field_db = 0;
+            GetUseLines.field_p.content.field_db = 0;
             GetReverbDamp.field_o = true;
-            GetUseLines.field_p.field_wb.y = GetUseLines.field_p.field_xb.height - GetUseLines.field_p.field_wb.height;
+            GetUseLines.field_p.content.y = GetUseLines.field_p.viewport.height - GetUseLines.field_p.content.height;
           }
-          GetUseLines.field_p.field_wb.field_E = -GetUseLines.field_p.field_wb.height + var7Lifetime1;
+          GetUseLines.field_p.content.field_E = -GetUseLines.field_p.content.height + var7Lifetime1;
           if (!SetFightersPerPlayerMaximum.field_p) {
-            var9Lifetime1 = -GetUseLines.field_p.field_wb.field_E - GetUseLines.field_p.field_wb.height + GetUseLines.field_p.field_xb.height;
+            var9Lifetime1 = -GetUseLines.field_p.content.field_E - GetUseLines.field_p.content.height + GetUseLines.field_p.viewport.height;
             if (GetReverbDamp.field_o) {
-              GetUseLines.field_p.field_wb.field_db = -GetUseLines.field_p.field_wb.y + var9Lifetime1;
+              GetUseLines.field_p.content.field_db = -GetUseLines.field_p.content.y + var9Lifetime1;
             }
-            GetUseLines.field_p.a(2 * param0 * param2, true, param0, 0);
-            stackIn_73_0 = (var9Lifetime1 == GetUseLines.field_p.field_wb.y + GetUseLines.field_p.field_wb.field_db);
+            GetUseLines.field_p.updateScrolling(2 * param0 * param2, true, param0, 0);
+            stackIn_73_0 = (var9Lifetime1 == GetUseLines.field_p.content.y + GetUseLines.field_p.content.field_db);
             GetReverbDamp.field_o = stackIn_73_0;
           } else {
             if (null == qw.field_l) {
-              var9Lifetime1 = -GetUseLines.field_p.field_wb.field_E - GetUseLines.field_p.field_wb.height + GetUseLines.field_p.field_xb.height;
+              var9Lifetime1 = -GetUseLines.field_p.content.field_E - GetUseLines.field_p.content.height + GetUseLines.field_p.viewport.height;
               if (GetReverbDamp.field_o) {
-                GetUseLines.field_p.field_wb.field_db = -GetUseLines.field_p.field_wb.y + var9Lifetime1;
+                GetUseLines.field_p.content.field_db = -GetUseLines.field_p.content.y + var9Lifetime1;
               }
-              GetUseLines.field_p.a(2 * param0 * param2, true, param0, 0);
-              stackIn_81_0 = (var9Lifetime1 == GetUseLines.field_p.field_wb.y + GetUseLines.field_p.field_wb.field_db);
+              GetUseLines.field_p.updateScrolling(2 * param0 * param2, true, param0, 0);
+              stackIn_81_0 = (var9Lifetime1 == GetUseLines.field_p.content.y + GetUseLines.field_p.content.field_db);
               GetReverbDamp.field_o = stackIn_81_0;
             } else {
               GetReverbDamp.field_o = true;
-              var9Lifetime1 = -GetUseLines.field_p.field_wb.field_E - GetUseLines.field_p.field_wb.height + GetUseLines.field_p.field_xb.height;
+              var9Lifetime1 = -GetUseLines.field_p.content.field_E - GetUseLines.field_p.content.height + GetUseLines.field_p.viewport.height;
               if (GetReverbDamp.field_o) {
-                GetUseLines.field_p.field_wb.field_db = -GetUseLines.field_p.field_wb.y + var9Lifetime1;
+                GetUseLines.field_p.content.field_db = -GetUseLines.field_p.content.y + var9Lifetime1;
               }
-              GetUseLines.field_p.a(2 * param0 * param2, true, param0, 0);
-              stackIn_88_0 = (var9Lifetime1 == GetUseLines.field_p.field_wb.y + GetUseLines.field_p.field_wb.field_db);
+              GetUseLines.field_p.updateScrolling(2 * param0 * param2, true, param0, 0);
+              stackIn_88_0 = (var9Lifetime1 == GetUseLines.field_p.content.y + GetUseLines.field_p.content.field_db);
               GetReverbDamp.field_o = stackIn_88_0;
             }
           }
         } else {
-          GetUseLines.field_p.field_wb.height = var7Lifetime1;
+          GetUseLines.field_p.content.height = var7Lifetime1;
           if (ebb.field_b) {
             ebb.field_b = false;
-            GetUseLines.field_p.field_wb.field_db = 0;
+            GetUseLines.field_p.content.field_db = 0;
             GetReverbDamp.field_o = true;
-            GetUseLines.field_p.field_wb.y = GetUseLines.field_p.field_xb.height - GetUseLines.field_p.field_wb.height;
+            GetUseLines.field_p.content.y = GetUseLines.field_p.viewport.height - GetUseLines.field_p.content.height;
           }
-          GetUseLines.field_p.field_wb.field_E = -GetUseLines.field_p.field_wb.height + var7Lifetime1;
+          GetUseLines.field_p.content.field_E = -GetUseLines.field_p.content.height + var7Lifetime1;
           if (!SetFightersPerPlayerMaximum.field_p) {
-            var9Lifetime1 = -GetUseLines.field_p.field_wb.field_E - GetUseLines.field_p.field_wb.height + GetUseLines.field_p.field_xb.height;
+            var9Lifetime1 = -GetUseLines.field_p.content.field_E - GetUseLines.field_p.content.height + GetUseLines.field_p.viewport.height;
             if (GetReverbDamp.field_o) {
-              GetUseLines.field_p.field_wb.field_db = -GetUseLines.field_p.field_wb.y + var9Lifetime1;
+              GetUseLines.field_p.content.field_db = -GetUseLines.field_p.content.y + var9Lifetime1;
             }
-            GetUseLines.field_p.a(2 * param0 * param2, true, param0, 0);
-            stackIn_46_0 = (var9Lifetime1 == GetUseLines.field_p.field_wb.y + GetUseLines.field_p.field_wb.field_db);
+            GetUseLines.field_p.updateScrolling(2 * param0 * param2, true, param0, 0);
+            stackIn_46_0 = (var9Lifetime1 == GetUseLines.field_p.content.y + GetUseLines.field_p.content.field_db);
             GetReverbDamp.field_o = stackIn_46_0;
           } else {
             if (null == qw.field_l) {
-              var9Lifetime1 = -GetUseLines.field_p.field_wb.field_E - GetUseLines.field_p.field_wb.height + GetUseLines.field_p.field_xb.height;
+              var9Lifetime1 = -GetUseLines.field_p.content.field_E - GetUseLines.field_p.content.height + GetUseLines.field_p.viewport.height;
               if (GetReverbDamp.field_o) {
-                GetUseLines.field_p.field_wb.field_db = -GetUseLines.field_p.field_wb.y + var9Lifetime1;
+                GetUseLines.field_p.content.field_db = -GetUseLines.field_p.content.y + var9Lifetime1;
               }
-              GetUseLines.field_p.a(2 * param0 * param2, true, param0, 0);
-              stackIn_61_0 = (var9Lifetime1 == GetUseLines.field_p.field_wb.y + GetUseLines.field_p.field_wb.field_db);
+              GetUseLines.field_p.updateScrolling(2 * param0 * param2, true, param0, 0);
+              stackIn_61_0 = (var9Lifetime1 == GetUseLines.field_p.content.y + GetUseLines.field_p.content.field_db);
               GetReverbDamp.field_o = stackIn_61_0;
             } else {
               GetReverbDamp.field_o = true;
-              var9Lifetime1 = -GetUseLines.field_p.field_wb.field_E - GetUseLines.field_p.field_wb.height + GetUseLines.field_p.field_xb.height;
+              var9Lifetime1 = -GetUseLines.field_p.content.field_E - GetUseLines.field_p.content.height + GetUseLines.field_p.viewport.height;
               if (GetReverbDamp.field_o) {
-                GetUseLines.field_p.field_wb.field_db = -GetUseLines.field_p.field_wb.y + var9Lifetime1;
+                GetUseLines.field_p.content.field_db = -GetUseLines.field_p.content.y + var9Lifetime1;
               }
-              GetUseLines.field_p.a(2 * param0 * param2, true, param0, 0);
-              stackIn_54_0 = (var9Lifetime1 == GetUseLines.field_p.field_wb.y + GetUseLines.field_p.field_wb.field_db);
+              GetUseLines.field_p.updateScrolling(2 * param0 * param2, true, param0, 0);
+              stackIn_54_0 = (var9Lifetime1 == GetUseLines.field_p.content.y + GetUseLines.field_p.content.field_db);
               GetReverbDamp.field_o = stackIn_54_0;
             }
           }

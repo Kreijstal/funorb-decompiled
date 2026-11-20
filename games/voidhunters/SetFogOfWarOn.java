@@ -190,7 +190,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_torpedo_randomness(" + GetBombletSprayProjectileDamage.field_p + ")");
         System.out.println("set_laser_randomness(" + tea.field_b + ")");
         System.out.println("set_bomblet_spray_randomness(" + GetSalvoRepairTimeMultiplier.field_o + ")");
-        System.out.println("set_phased_energy_beam_randomness(" + qca.field_yb + ")");
+        System.out.println("set_phased_energy_beam_randomness(" + SelectableIconLabelWidget.field_yb + ")");
         System.out.println("set_sniper_cannon_randomness(" + SetPhasedEnergyBeamPulseFadetime.field_o + ")");
         System.out.println("set_missile_launcher_randomness(" + LoadSettings.field_s + ")");
         System.out.println("set_point_defence_laser_randomness(" + GetRadialMenuRadius.field_p + ")");
@@ -231,7 +231,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_sniper_cannon_reload(" + SetLaserRandomness.field_q + ")");
         System.out.println("set_fighter_bay_reload(" + MapClearanceRectangleFactory.field_b + ")");
         System.out.println("set_point_defence_laser_reload(" + GetFighterRepairAmount.field_o + ")");
-        System.out.println("set_mass_driver_aimspeed(" + qca.field_wb + ")");
+        System.out.println("set_mass_driver_aimspeed(" + SelectableIconLabelWidget.field_wb + ")");
         System.out.println("set_torpedo_aimspeed(" + OpenGlUnderwaterMaterialEffect.field_n + ")");
         System.out.println("set_laser_aimspeed(" + GpuMaterialEffect.field_b + ")");
         System.out.println("set_fighter_bay_aimspeed(" + SetThrusterBindingMoveAndTurnHasOppositeMove.field_p + ")");

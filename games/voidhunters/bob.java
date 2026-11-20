@@ -108,7 +108,7 @@ class bob implements wwa, at {
         int var12Lifetime1;
         var13 = VoidHunters.field_G;
         try {
-          qca.a(param5.field_h + param5.field_g + param6, param5.field_f + (param7 + param5.field_r), param5.field_g + param6, true, param5.field_r + param7);
+          SelectableIconLabelWidget.a(param5.field_h + param5.field_g + param6, param5.field_f + (param7 + param5.field_r), param5.field_g + param6, true, param5.field_r + param7);
           var9_int = this.b(param5, (byte) 81);
           var10 = this.a((byte) 56, param5);
           if (param3 != -13997) {
@@ -419,7 +419,7 @@ class bob implements wwa, at {
           }
           var10 = var19.a(true, var8);
           var11 = var19.a(true, var9);
-          qca.a(param4.field_g + param3 + param4.field_h, param4.field_r + param1 + param4.field_f, param4.field_g + param3, true, param1 + param4.field_r);
+          SelectableIconLabelWidget.a(param4.field_g + param3 + param4.field_h, param4.field_r + param1 + param4.field_f, param4.field_g + param3, true, param1 + param4.field_r);
           for (var12 = var10; var11 >= var12; var12++) {
             var13 = var18.field_c[var12];
             if (var10 == var12) {
@@ -640,7 +640,7 @@ class bob implements wwa, at {
             var10 = this.a(param3, param0, var9, (byte) -13);
             var11 = this.b(-3, param1, param0) + Math.max(0, var8.field_b);
             var12 = this.b(-3, param1, param0) + Math.min(this.a((byte) 71, param0), Math.min(var8.field_a, 1 + var7 >= var14.field_c.length ? var8.field_a : var13.field_c[var7 + 1].field_b));
-            qca.a(param0.field_h + (param3 + param0.field_g), param0.field_f + param1 + param0.field_r, param0.field_g + param3, true, param0.field_r + param1);
+            SelectableIconLabelWidget.a(param0.field_h + (param3 + param0.field_g), param0.field_f + param1 + param0.field_r, param0.field_g + param3, true, param0.field_r + param1);
             GetDebrisMax.field_s.a(this.field_a, var11, var12, var10, var10, 11480);
             bia.a((byte) 124);
           }

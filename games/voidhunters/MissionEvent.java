@@ -185,9 +185,9 @@ final class MissionEvent implements DiffableState {
             this.toggleConditionNegation(-43, -72);
           }
           var5 = new Class[]{VariableCondition.class, ShipSpawnedCondition.class, TeamNodeCondition.class, MissionCondition.class, BodyInZoneCondition.class, TeamShipComponentCondition.class, TickCondition.class, ShipTeamCondition.class, BodyDestroyedCondition.class};
-          pjb.a(param0, this.conditions, 8, 1, var5, 122);
+          ScrollBarWidget.writePolymorphicStateArray(param0, this.conditions, 8, 1, var5, 122);
           var4 = new Class[]{SetVariableLabelAction.class, AdjustVariableAction.class, SetShipTeamAction.class, IncrementVariableAction.class, MissionAction.class, AwardVictoryToWinnerAction.class, RemoveEventAction.class, AdjustBodyComponentsAction.class, AwardVictoryToTeamAction.class, SetVariableAction.class};
-          pjb.a(param0, this.actions, 8, 1, var4, 118);
+          ScrollBarWidget.writePolymorphicStateArray(param0, this.actions, 8, 1, var4, 118);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bba.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

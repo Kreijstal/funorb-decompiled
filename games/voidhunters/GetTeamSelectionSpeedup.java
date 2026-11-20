@@ -236,7 +236,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                     var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(255);
                     var25 = ((PacketBuffer) ((Object) var1)).readString(-1);
                     var26 = ((PacketBuffer) ((Object) var1)).readString(param0 ^ -14);
-                    var7 = pjb.a(var3_longLifetime2, true);
+                    var7 = ScrollBarWidget.a(var3_longLifetime2, true);
                     if (var7 == null) {
                       var7 = new jk(var25, var26, var3_longLifetime2);
                       SetUseDetailLines.field_p.a(var7, (byte) -76, var3_longLifetime2);
@@ -256,7 +256,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                   if (var2 == 19) {
                     var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(255);
                     var5Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -120);
-                    var24 = pjb.a(var3_longLifetime2, true);
+                    var24 = ScrollBarWidget.a(var3_longLifetime2, true);
                     if (var24 != null) {
                       if (var5Lifetime1 != 0) {
                         var24.field_yb = GetMomentOfInertiaPredivideDownshift.field_p;

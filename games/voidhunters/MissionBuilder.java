@@ -896,7 +896,7 @@ final class MissionBuilder implements DiffableState {
           var18 = ar.a(param1 / 4, (byte) 115, param0 / 4) >> 8;
           var19 = null;
           for (var20 = 0; var17 > var20; var20++) {
-            var21 = rpa.a(2, 1, true);
+            var21 = OpenGlFramebuffer.a(2, 1, true);
             var22 = 2048 * var20 / (var17 - 1) + 2048;
             var21.setPosition(param1 + var18 * (GetNumStars.a(var22, (byte) 127) >> 8), (eu.a(var22, 50) >> 8) * var18 + param0, (byte) -95);
             var21.setAi(new ShipAI(), 4);
@@ -1193,7 +1193,7 @@ final class MissionBuilder implements DiffableState {
           var16Lifetime1 = ar.a(param1 / 4, (byte) 116, param3 / 4) >> 8;
           var17Lifetime2 = null;
           for (var18 = 0; var15Lifetime1 > var18; var18++) {
-            var19 = rpa.a(2, 2, true);
+            var19 = OpenGlFramebuffer.a(2, 2, true);
             var20 = var18 * 2048 / (-1 + var15Lifetime1) + 2048;
             var19.setPosition(param1 + (GetNumStars.a(var20, (byte) -107) >> 8) * var16Lifetime1, (eu.a(var20, 59) >> 8) * var16Lifetime1 + param3, (byte) -127);
             var19.setAi(new ShipAI(), 4);
@@ -1840,7 +1840,7 @@ final class MissionBuilder implements DiffableState {
           var19 = Math.min(param5.getWidth((byte) -122), param5.getHeight(1)) / 16;
           var20 = new MissionEvent();
           for (var21 = 0; var18 > var21; var21++) {
-            var22 = rpa.a(2, -1, true);
+            var22 = OpenGlFramebuffer.a(2, -1, true);
             var22.setTeam(17704, 2);
             var23 = hob.a(param4, 8192, 122);
             var24 = hob.a(param4, var19, 126) >> 8;
@@ -2523,7 +2523,7 @@ final class MissionBuilder implements DiffableState {
         int var11Lifetime1;
         var17 = VoidHunters.field_G;
         try {
-          var18 = rpa.a(1, 1, true);
+          var18 = OpenGlFramebuffer.a(1, 1, true);
           var18.setPosition(param2, param3, (byte) -108);
           var18.setAi(new ShipAI(), param0 ^ 4);
           var18.setTeam(17704, param0);
@@ -3382,7 +3382,7 @@ final class MissionBuilder implements DiffableState {
           }
           pgb.a(8, this.optionTotals != null ? this.optionTotals.length : 0, 21, param0, this.optionTotals);
           var3 = new Class[]{MapClearanceCircle.class, MapClearanceRectangle.class};
-          pjb.a(param0, this.clearanceAreas, 8, 1, var3, 126);
+          ScrollBarWidget.writePolymorphicStateArray(param0, this.clearanceAreas, 8, 1, var3, 126);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bea.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

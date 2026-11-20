@@ -237,7 +237,7 @@ final class ComponentCollision extends IntrusiveNode {
                     }
                   }
                   var16Lifetime1Lifetime1 = 0;
-                  var17 = WaterTextures.field_f.field_wb.children;
+                  var17 = WaterTextures.field_f.content.children;
                   var18_ref = (jk) (var17.first(0));
                   scanLoop4: while (true) {
                     if (var18_ref != null) {

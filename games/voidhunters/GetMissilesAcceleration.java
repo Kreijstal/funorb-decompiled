@@ -38,9 +38,9 @@ final class GetMissilesAcceleration extends ConsoleCommand {
     final static Widget a(int param0) {
         if (param0 != 207) {
           GetMissilesAcceleration.a(-66);
-          return CarouselSlot.field_a.field_wb;
+          return CarouselSlot.field_a.content;
         }
-        return CarouselSlot.field_a.field_wb;
+        return CarouselSlot.field_a.content;
     }
 
     static {

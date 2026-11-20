@@ -6,7 +6,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
-        soa var4 = null;
+        ScrollPaneWidget var4 = null;
         ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -15,8 +15,8 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(85, 62, arguments[0].intValue(90));
           if (obfuscationGuard >= -119) {
-            var4 = (soa) null;
-            SetTorpedoProjectiles.a(13, (byte) -15, (soa) null, true, 117);
+            var4 = (ScrollPaneWidget) null;
+            SetTorpedoProjectiles.a(13, (byte) -15, (ScrollPaneWidget) null, true, 117);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -38,9 +38,9 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, byte param1, soa param2, boolean param3, int param4) {
+    final static void a(int param0, byte param1, ScrollPaneWidget param2, boolean param3, int param4) {
         int var27_int = 0;
-        soa stackIn_43_0;
+        ScrollPaneWidget stackIn_43_0;
         int stackIn_43_1;
         int stackIn_43_2;
         int stackIn_43_3;
@@ -154,14 +154,14 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               }
             }
           }
-          stackIn_43_0 = (soa) (param2);
+          stackIn_43_0 = (ScrollPaneWidget) (param2);
           stackIn_43_1 = 38;
           stackIn_43_2 = 2;
           stackIn_43_3 = (8 + nna.field_w * 4) * param0;
           stackIn_44_4 = (param2 == qg.field_a);
-          stackIn_47_0 = (!((soa) (Object) stackIn_43_0).a((byte) stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_44_4, param3, 2 * (2 + nna.field_w))) ? 0 : 1;
+          stackIn_47_0 = (!((ScrollPaneWidget) (Object) stackIn_43_0).layoutAndUpdateScrolling((byte) stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_44_4, param3, 2 * (2 + nna.field_w))) ? 0 : 1;
           var9Lifetime1 = stackIn_47_0;
-          var10 = param2.field_wb.children;
+          var10 = param2.content.children;
           var11 = null;
           var12 = (jk) (var10.first(0));
           while (var12 != null) {
@@ -203,7 +203,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
             var12.field_Mb.height = 0;
             var18 = var12.field_Mb;
             var18.width = 0;
-            var12.width = param2.field_wb.width;
+            var12.width = param2.content.width;
             var19 = 0;
             var32 = var12.field_xb;
             var21 = 72;
@@ -326,7 +326,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               var12.field_E = var19 - var12.height;
             }
             if (var13 != 0) {
-              param2.field_wb.positionBelow((Widget) (var11), 2, var12, 101);
+              param2.content.positionBelow((Widget) (var11), 2, var12, 101);
             }
             if (var12.field_o != 0 &&
               !var12.i(61)) {

@@ -107,7 +107,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
             }
           }
           if (param1 >= -12) {
-            GetExplosionProjectileDamage.a((Widget) null, -42, (Widget) null, (BitmapFont) null, (Widget) null, (Widget) null, (Widget) null, true, (Widget) null, (Widget) null, (Widget) null, (pjb) null);
+            GetExplosionProjectileDamage.a((Widget) null, -42, (Widget) null, (BitmapFont) null, (Widget) null, (Widget) null, (Widget) null, true, (Widget) null, (Widget) null, (Widget) null, (ScrollBarWidget) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -124,7 +124,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
         }
     }
 
-    final static void a(Widget param0, int param1, Widget param2, BitmapFont param3, Widget param4, Widget param5, Widget param6, boolean param7, Widget param8, Widget param9, Widget param10, pjb param11) {
+    final static void a(Widget param0, int param1, Widget param2, BitmapFont param3, Widget param4, Widget param5, Widget param6, boolean param7, Widget param8, Widget param9, Widget param10, ScrollBarWidget param11) {
         String stackIn_24_0 = null;
         int stackIn_28_0 = 0;
         RuntimeException stackIn_38_0 = null;
@@ -190,7 +190,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
           SetToggledScoreboard.field_o.addChild(param1 ^ -561, kea.field_a);
           var17 = new Widget(0L, (Widget) null);
           var17.children = new IntrusiveDeque();
-          GetUseLines.field_p = new soa(0L, var17, param9, param11);
+          GetUseLines.field_p = new ScrollPaneWidget(0L, var17, param9, param11);
           kea.field_a.addChild(-561, GetUseLines.field_p);
           jba.field_b = new Widget(0L, param4);
           kea.field_a.addChild(-561, jba.field_b);

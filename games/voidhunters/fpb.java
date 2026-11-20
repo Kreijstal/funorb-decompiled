@@ -151,7 +151,7 @@ final class fpb extends mfb {
         if (param0 != 0) {
           return 14;
         }
-        return qca.field_wb;
+        return SelectableIconLabelWidget.field_wb;
     }
 
     final int g(int param0) {

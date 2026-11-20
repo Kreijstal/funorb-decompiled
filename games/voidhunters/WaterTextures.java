@@ -3,7 +3,7 @@
  */
 final class WaterTextures {
     GpuTexture3D normalMapVolume;
-    static soa field_f;
+    static ScrollPaneWidget field_f;
     private GpuTexture2D[] field_c;
     static Widget field_g;
     private GpuToolkit toolkit;

@@ -13,7 +13,7 @@ final class ts {
         var1_ref = GetDebrisFoundInPairs.field_q;
         synchronized (var1_ref) {
           hu.field_b = GetBombletSprayAimarc.field_q;
-          rpa.field_b = rpa.field_b + 1;
+          OpenGlFramebuffer.field_b = OpenGlFramebuffer.field_b + 1;
           PlayerGameData.field_b = wt.field_a;
           uia.field_b = kv.field_e;
           VariableConditionFactory.field_c = hda.field_a;
@@ -126,7 +126,7 @@ final class ts {
     }
 
     protected final void finalize() throws Throwable {
-        this.field_b.a((byte) 18, this.field_c);
+        this.field_b.enqueueShaderObjectDisposal((byte) 18, this.field_c);
         super.finalize();
     }
 

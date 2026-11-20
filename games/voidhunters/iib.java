@@ -8,21 +8,21 @@ final class iib extends qg {
 
     final void a(int param0) {
         this.field_d.a(true, '\001');
-        this.field_b.h(33984, 1);
+        this.field_b.setActiveTextureUnit(33984, 1);
         if (param0 == 5890) {
-          this.field_b.a(54, (pib) null);
-          this.field_b.h(33984, 0);
+          this.field_b.bindTexture(54, (OpenGlTexture) null);
+          this.field_b.setActiveTextureUnit(33984, 0);
           return;
         }
     }
 
-    final void a(int param0, byte param1, pib param2) {
+    final void a(int param0, byte param1, OpenGlTexture param2) {
         if (param1 != 125) {
           return;
         }
         try {
-          this.field_b.a(param1 ^ 77, param2);
-          this.field_b.c(0, param0);
+          this.field_b.bindTexture(param1 ^ 77, param2);
+          this.field_b.setTextureCombineMode(0, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "iib.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -49,7 +49,7 @@ final class iib extends qg {
           this.field_c = param1;
           this.field_d = new bt(param0, 2);
           this.field_d.a(-109, 0);
-          this.field_b.h(33984, 1);
+          this.field_b.setActiveTextureUnit(33984, 1);
           if (this.field_c.field_d) {
             jaggl.OpenGL.glTexGeni(8194, 9472, 9217);
             jaggl.OpenGL.glEnable(3170);
@@ -58,16 +58,16 @@ final class iib extends qg {
           jaggl.OpenGL.glTexGeni(8193, 9472, 9216);
           jaggl.OpenGL.glEnable(3168);
           jaggl.OpenGL.glEnable(3169);
-          this.field_b.h(33984, 0);
+          this.field_b.setActiveTextureUnit(33984, 0);
           this.field_d.b(4864);
           this.field_d.a(-89, 1);
-          this.field_b.h(33984, 1);
+          this.field_b.setActiveTextureUnit(33984, 1);
           if (this.field_c.field_d) {
             jaggl.OpenGL.glDisable(3170);
           }
           jaggl.OpenGL.glDisable(3168);
           jaggl.OpenGL.glDisable(3169);
-          this.field_b.h(33984, 0);
+          this.field_b.setActiveTextureUnit(33984, 0);
           this.field_d.b(4864);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "iib.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -90,7 +90,7 @@ final class iib extends qg {
         float var6 = (64 & param0) != 0 ? 0.0009765625f : 0.00048828125f;
         int var7 = (param0 & 128) != 0 ? 1 : 0;
         int var8Lifetime1;
-        this.field_b.h(33984, 1);
+        this.field_b.setActiveTextureUnit(33984, 1);
         if (var7 != 0) {
           wk.field_b[2] = 0.0f;
           wk.field_b[1] = 0.0f;
@@ -111,9 +111,9 @@ final class iib extends qg {
               jaggl.OpenGL.glTexGenfv(8194, 9473, wk.field_b, 0);
             } else {
               var8 = (int)((float)this.field_b.field_Mc * var5 * 16.0f);
-              this.field_b.a(25, this.field_c.field_c[var8 % 16]);
+              this.field_b.bindTexture(25, this.field_c.field_c[var8 % 16]);
             }
-            this.field_b.h(33984, 0);
+            this.field_b.setActiveTextureUnit(33984, 0);
             return;
           }
           return;
@@ -137,9 +137,9 @@ final class iib extends qg {
             jaggl.OpenGL.glTexGenfv(8194, 9473, wk.field_b, 0);
           } else {
             var8Lifetime1 = (int)((float)this.field_b.field_Mc * var5 * 16.0f);
-            this.field_b.a(25, this.field_c.field_c[var8Lifetime1 % 16]);
+            this.field_b.bindTexture(25, this.field_c.field_c[var8Lifetime1 % 16]);
           }
-          this.field_b.h(33984, 0);
+          this.field_b.setActiveTextureUnit(33984, 0);
           return;
         }
     }
@@ -149,9 +149,9 @@ final class iib extends qg {
         if (param1 < 18) {
           this.b(31);
           if (this.field_c.field_d) {
-            this.field_b.h(33984, 1);
-            this.field_b.a(58, this.field_c.field_g);
-            this.field_b.h(33984, 0);
+            this.field_b.setActiveTextureUnit(33984, 1);
+            this.field_b.bindTexture(58, this.field_c.field_g);
+            this.field_b.setActiveTextureUnit(33984, 0);
             return;
           }
           return;
@@ -159,9 +159,9 @@ final class iib extends qg {
         if (!this.field_c.field_d) {
           return;
         }
-        this.field_b.h(33984, 1);
-        this.field_b.a(58, this.field_c.field_g);
-        this.field_b.h(33984, 0);
+        this.field_b.setActiveTextureUnit(33984, 1);
+        this.field_b.bindTexture(58, this.field_c.field_g);
+        this.field_b.setActiveTextureUnit(33984, 0);
     }
 
     static {

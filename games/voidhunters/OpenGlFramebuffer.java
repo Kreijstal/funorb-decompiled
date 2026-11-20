@@ -1,30 +1,30 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rpa implements jaa {
-    private int field_e;
-    private int field_a;
-    private OpenGlToolkit field_f;
+final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
+    private int framebufferId;
+    private int bindingMask;
+    private OpenGlToolkit toolkit;
     private int field_i;
     private int field_j;
     static TextureCoordinateMode field_c;
-    private int field_d;
-    private int field_g;
+    private int boundTarget;
+    private int attachmentMask;
     static volatile int field_b;
-    private mda[] field_h;
+    private OpenGlFramebufferAttachment[] attachments;
 
-    final void b(int param0, int param1) {
+    final void setReadBuffer(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (this.field_d == -1) {
+          if (this.boundTarget == -1) {
             throw new RuntimeException();
           }
           jaggl.OpenGL.glReadBuffer(SetOndamageParticleSpeed.field_o[param1]);
           if (param0 > 118) {
             return;
           }
-          this.field_g = 14;
+          this.attachmentMask = 14;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -33,27 +33,27 @@ final class rpa implements jaa {
         }
     }
 
-    public final void d(int param0) {
+    public final void unbindReadFramebuffer(int param0) {
         try {
           if (param0 <= 7) {
             this.field_i = -33;
           }
           jaggl.OpenGL.glBindFramebufferEXT(36008, 0);
-          this.field_a = this.field_a & -2;
-          this.field_d = this.e(2);
+          this.bindingMask = this.bindingMask & -2;
+          this.boundTarget = this.getBoundTarget(2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.E(" + param0 + ')');
         }
     }
 
-    public final void b(int param0) {
+    public final void bindFramebuffer(int param0) {
         if (param0 != -5574) {
           return;
         }
         try {
-          jaggl.OpenGL.glBindFramebufferEXT(36160, this.field_e);
-          this.field_a = this.field_a | 4;
-          this.field_d = this.e(2);
+          jaggl.OpenGL.glBindFramebufferEXT(36160, this.framebufferId);
+          this.bindingMask = this.bindingMask | 4;
+          this.boundTarget = this.getBoundTarget(2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.F(" + param0 + ')');
         }
@@ -151,11 +151,11 @@ final class rpa implements jaa {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void setDrawBuffer(int param0, int param1) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (~this.field_d == param0) {
+          if (~this.boundTarget == param0) {
             throw new RuntimeException();
           }
           jaggl.OpenGL.glDrawBuffer(SetOndamageParticleSpeed.field_o[param1]);
@@ -167,13 +167,13 @@ final class rpa implements jaa {
         }
     }
 
-    final boolean g(int param0) {
+    final boolean isComplete(int param0) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = jaggl.OpenGL.glCheckFramebufferStatusEXT(this.field_d);
+          var2_int = jaggl.OpenGL.glCheckFramebufferStatusEXT(this.boundTarget);
           var3 = 10 % ((28 - param0) / 58);
           if (var2_int == 36053) {
             return true;
@@ -186,33 +186,33 @@ final class rpa implements jaa {
         }
     }
 
-    public final void c(int param0) {
+    public final void bindDrawFramebuffer(int param0) {
         if (param0 != 31636) {
           return;
         }
         try {
-          jaggl.OpenGL.glBindFramebufferEXT(36009, this.field_e);
-          this.field_a = this.field_a | 2;
-          this.field_d = this.e(param0 - 31634);
+          jaggl.OpenGL.glBindFramebufferEXT(36009, this.framebufferId);
+          this.bindingMask = this.bindingMask | 2;
+          this.boundTarget = this.getBoundTarget(param0 - 31634);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.B(" + param0 + ')');
         }
     }
 
-    public final void b(byte param0) {
+    public final void unbindFramebuffer(byte param0) {
         try {
           jaggl.OpenGL.glBindFramebufferEXT(36160, 0);
           if (param0 > -42) {
-            this.field_e = 16;
+            this.framebufferId = 16;
           }
-          this.field_a = this.field_a & -5;
-          this.field_d = this.e(2);
+          this.bindingMask = this.bindingMask & -5;
+          this.boundTarget = this.getBoundTarget(2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.A(" + param0 + ')');
         }
     }
 
-    private final void a(aia param0, int param1, int param2, int param3) {
+    private final void attachTexture(aia param0, int param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -220,14 +220,14 @@ final class rpa implements jaa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          if (this.field_d == -1) {
+          if (this.boundTarget == -1) {
             throw new RuntimeException();
           }
           if (param3 <= 23) {
-            this.c(-123);
+            this.bindDrawFramebuffer(-123);
           }
           var5_int = 1 << param2;
-          if ((~var5_int & this.field_g) != 0) {
+          if ((~var5_int & this.attachmentMask) != 0) {
             if (param0.field_h != this.field_j ||
               param0.field_j != this.field_i) {
               throw new RuntimeException();
@@ -236,9 +236,9 @@ final class rpa implements jaa {
             this.field_i = param0.field_j;
             this.field_j = param0.field_h;
           }
-          param0.a(this.field_d, SetOndamageParticleSpeed.field_o[param2], param1, false);
-          this.field_h[param2] = (mda) ((Object) param0);
-          this.field_g = this.field_g | var5_int;
+          param0.a(this.boundTarget, SetOndamageParticleSpeed.field_o[param2], param1, false);
+          this.attachments[param2] = (OpenGlFramebufferAttachment) ((Object) param0);
+          this.attachmentMask = this.attachmentMask | var5_int;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -256,14 +256,14 @@ final class rpa implements jaa {
 
     protected final void finalize() throws Throwable {
         try {
-          this.field_f.a((byte) 107, this.field_e);
+          this.toolkit.enqueueFramebufferDisposal((byte) 107, this.framebufferId);
           super.finalize();
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.finalize()");
         }
     }
 
-    final void a(int param0, nv param1, byte param2) {
+    final void attachRenderbuffer(int param0, nv param1, byte param2) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -271,14 +271,14 @@ final class rpa implements jaa {
         int var4_int = 0;
         RuntimeException var4 = null;
         try {
-          if (-1 == this.field_d) {
+          if (-1 == this.boundTarget) {
             throw new RuntimeException();
           }
           if (param2 != -20) {
             return;
           }
           var4_int = 1 << param0;
-          if ((~var4_int & this.field_g) != 0) {
+          if ((~var4_int & this.attachmentMask) != 0) {
             if (param1.field_w != this.field_j ||
               this.field_i != param1.field_u) {
               throw new RuntimeException();
@@ -287,9 +287,9 @@ final class rpa implements jaa {
             this.field_i = param1.field_u;
             this.field_j = param1.field_w;
           }
-          param1.a(1, SetOndamageParticleSpeed.field_o[param0], this.field_d);
-          this.field_h[param0] = (mda) ((Object) param1);
-          this.field_g = this.field_g | var4_int;
+          param1.a(1, SetOndamageParticleSpeed.field_o[param0], this.boundTarget);
+          this.attachments[param0] = (OpenGlFramebufferAttachment) ((Object) param1);
+          this.attachmentMask = this.attachmentMask | var4_int;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -305,26 +305,26 @@ final class rpa implements jaa {
         }
     }
 
-    final void a(int param0, byte param1) {
+    final void detachAttachment(int param0, byte param1) {
         try {
-          if (this.field_h[param0] != null) {
-            this.field_h[param0].a(31294);
+          if (this.attachments[param0] != null) {
+            this.attachments[param0].detachFromFramebuffer(31294);
           }
           int var3_int = 115 / ((53 - param1) / 55);
-          this.field_g = this.field_g & ~(1 << param0);
-          this.field_h[param0] = null;
+          this.attachmentMask = this.attachmentMask & ~(1 << param0);
+          this.attachments[param0] = null;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.I(" + param0 + ',' + param1 + ')');
         }
     }
 
-    public final void a(byte param0) {
+    public final void unbindDrawFramebuffer(byte param0) {
         try {
           jaggl.OpenGL.glBindFramebufferEXT(36009, 0);
-          this.field_a = this.field_a & -3;
-          this.field_d = this.e(2);
+          this.bindingMask = this.bindingMask & -3;
+          this.boundTarget = this.getBoundTarget(2);
           if (param0 <= 52) {
-            this.field_d = 85;
+            this.boundTarget = 85;
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.D(" + param0 + ')');
@@ -342,18 +342,18 @@ final class rpa implements jaa {
         }
     }
 
-    public final void a(int param0) {
+    public final void bindReadFramebuffer(int param0) {
         try {
-          jaggl.OpenGL.glBindFramebufferEXT(36008, this.field_e);
+          jaggl.OpenGL.glBindFramebufferEXT(36008, this.framebufferId);
           int var2_int = 32 / ((param0 - 3) / 57);
-          this.field_a = this.field_a | 1;
-          this.field_d = this.e(2);
+          this.bindingMask = this.bindingMask | 1;
+          this.boundTarget = this.getBoundTarget(2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.C(" + param0 + ')');
         }
     }
 
-    private final int e(int param0) {
+    private final int getBoundTarget(int param0) {
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
@@ -361,15 +361,15 @@ final class rpa implements jaa {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         try {
-          if ((4 & this.field_a) != 0) {
+          if ((4 & this.bindingMask) != 0) {
             stackIn_4_0 = 36160;
             return stackIn_4_0;
           }
-          if ((param0 & this.field_a) != 0) {
+          if ((param0 & this.bindingMask) != 0) {
             stackIn_7_0 = 36009;
             return stackIn_7_0;
           }
-          if ((1 & this.field_a) != 0) {
+          if ((1 & this.bindingMask) != 0) {
             stackIn_12_0 = 36008;
             return stackIn_12_0;
           }
@@ -382,16 +382,16 @@ final class rpa implements jaa {
         }
     }
 
-    final void a(int param0, byte param1, aia param2) {
+    final void attachTexture(int param0, byte param1, aia param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(param2, 0, param0, 77);
+          this.attachTexture(param2, 0, param0, 77);
           if (param1 > -124) {
-            this.field_e = -30;
+            this.framebufferId = -30;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -408,22 +408,22 @@ final class rpa implements jaa {
         }
     }
 
-    rpa(OpenGlToolkit param0) {
+    OpenGlFramebuffer(OpenGlToolkit param0) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_a = 0;
-        this.field_d = -1;
-        this.field_h = new mda[9];
+        this.bindingMask = 0;
+        this.boundTarget = -1;
+        this.attachments = new OpenGlFramebufferAttachment[9];
         try {
           if (!param0.field_U) {
             throw new IllegalStateException("");
           }
-          this.field_f = param0;
+          this.toolkit = param0;
           jaggl.OpenGL.glGenFramebuffersEXT(1, SetLaserRandomness.field_r, 0);
-          this.field_e = SetLaserRandomness.field_r[0];
+          this.framebufferId = SetLaserRandomness.field_r[0];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

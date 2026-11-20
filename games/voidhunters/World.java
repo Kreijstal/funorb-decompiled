@@ -8689,7 +8689,7 @@ final class World implements DiffableState, CompactGameState {
           var4_int = 22 % ((-27 - param0) / 42);
           if (GetPointDefenceLaserProjectiles.a(8, 11284)) {
             var5 = param2.a(param1.getX(false), (byte) 127);
-            var6 = param2.b(true, param1.getBoundingbox((byte) -53)[2]) - pib.b((byte) 118) / 2;
+            var6 = param2.b(true, param1.getBoundingbox((byte) -53)[2]) - OpenGlTexture.b((byte) 118) / 2;
             var7 = Integer.toString(param1.id);
             GetLagStandardDeviationOut.a(-1, var7, 16711935, var6, -(GetPhasedEnergyBeamProjectiles.a(-118, var7) >> 1) + var5, 4266);
           }

@@ -7,7 +7,7 @@ final class ArbProgram {
     private OpenGlToolkit field_c;
 
     protected final void finalize() throws Throwable {
-        this.field_c.g(this.field_b, -92);
+        this.field_c.enqueueProgramDisposal(this.field_b, -92);
         super.finalize();
     }
 

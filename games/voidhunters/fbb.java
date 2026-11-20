@@ -244,7 +244,7 @@ final class fbb {
         }
     }
 
-    final boolean a(pib param0, int param1, int param2) {
+    final boolean a(OpenGlTexture param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_7_0 = null;

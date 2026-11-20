@@ -7,7 +7,7 @@ final class of {
     private OpenGlToolkit field_b;
 
     protected final void finalize() throws Throwable {
-        this.field_b.a((byte) 18, this.field_c);
+        this.field_b.enqueueShaderObjectDisposal((byte) 18, this.field_c);
         super.finalize();
     }
 

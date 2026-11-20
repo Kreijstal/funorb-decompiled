@@ -10,7 +10,7 @@ final class rbb {
     int field_r;
     int field_s;
     wwa field_e;
-    static wdb field_k;
+    static ScrollableActionPanel field_k;
     private boolean field_f;
     int field_m;
     wwa field_o;
@@ -193,7 +193,7 @@ final class rbb {
         if (param1 <= 103) {
           this.field_b = -4;
         }
-        qca.a(param2, param0, param4, true, param3);
+        SelectableIconLabelWidget.a(param2, param0, param4, true, param3);
     }
 
     final void a(BitmapFont param0, int param1) {

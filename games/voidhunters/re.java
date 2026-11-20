@@ -11,11 +11,11 @@ final class re extends ar {
     private int field_l;
     private String field_m;
     private int field_i;
-    static wdb field_n;
+    static ScrollableActionPanel field_n;
 
     public static void clearSharedReferences(int param0) {
         if (param0 != -2705) {
-          field_n = (wdb) null;
+          field_n = (ScrollableActionPanel) null;
           field_n = null;
           field_k = null;
           return;
@@ -219,7 +219,7 @@ final class re extends ar {
           var7.field_c[0] = param4;
           var8.field_c[param3.length()] = param4 + param1.getStringWidth(param3);
           if (param2 != -3) {
-            field_n = (wdb) null;
+            field_n = (ScrollableActionPanel) null;
           }
           TrailHolder.a(param1, 0, var8, param3, 18126);
         } catch (RuntimeException runtimeException) {

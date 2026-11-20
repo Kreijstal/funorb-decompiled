@@ -17,7 +17,7 @@ abstract class OpenGlBufferObject {
           super.finalize();
           return;
         }
-        this.toolkit.b(-100, this.byteSize, this.bufferId);
+        this.toolkit.enqueueBufferDisposal(-100, this.byteSize, this.bufferId);
         this.disposed = true;
         super.finalize();
     }
@@ -32,7 +32,7 @@ abstract class OpenGlBufferObject {
           this.bufferId = SetLaserAimarc.field_p[0];
           this.bind(34962);
           jaggl.OpenGL.glBufferDataARBub(param1, this.byteSize, param2, 0, !this.streamDraw ? 35044 : 35040);
-          this.toolkit.field_mc = this.toolkit.field_mc + this.byteSize;
+          this.toolkit.bufferBytes = this.toolkit.bufferBytes + this.byteSize;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mnb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }

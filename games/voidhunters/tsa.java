@@ -24,7 +24,7 @@ final class tsa extends IntrusiveNode {
         if (dla.field_d == this.field_e) {
           return "String{" + this.field_d + "}";
         }
-        if (this.field_e == wdb.field_vb) {
+        if (this.field_e == ScrollableActionPanel.field_vb) {
           return "ArgStart";
         }
         if (SetMissionTerrainVotingChancestep.field_o == this.field_e) {

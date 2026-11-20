@@ -11,7 +11,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         try {
           if (GetDebrisFoundInPairs.field_q != null) {
-            rpa.field_b = 0;
+            OpenGlFramebuffer.field_b = 0;
             GetBombletSprayAimarc.field_q = 0;
             hda.field_a = true;
             var2_int = param0.getModifiers();
@@ -47,7 +47,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
           if (GetDebrisFoundInPairs.field_q != null) {
-            rpa.field_b = 0;
+            OpenGlFramebuffer.field_b = 0;
             wt.field_a = -1;
             kv.field_e = -1;
             hda.field_a = true;
@@ -60,7 +60,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
           if (null != GetDebrisFoundInPairs.field_q) {
-            rpa.field_b = 0;
+            OpenGlFramebuffer.field_b = 0;
             wt.field_a = param0.getX();
             kv.field_e = param0.getY();
             hda.field_a = true;
@@ -73,7 +73,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
           if (GetDebrisFoundInPairs.field_q != null) {
-            rpa.field_b = 0;
+            OpenGlFramebuffer.field_b = 0;
             wt.field_a = param0.getX();
             kv.field_e = param0.getY();
             hda.field_a = true;
@@ -131,7 +131,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != GetDebrisFoundInPairs.field_q) {
-            rpa.field_b = 0;
+            OpenGlFramebuffer.field_b = 0;
             cma.field_a = param0.getX();
             SetBombletSprayAimarc.field_p = param0.getY();
             wt.a(false);
@@ -176,7 +176,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
           if (GetDebrisFoundInPairs.field_q != null) {
-            rpa.field_b = 0;
+            OpenGlFramebuffer.field_b = 0;
             wt.field_a = param0.getX();
             kv.field_e = param0.getY();
             hda.field_a = true;

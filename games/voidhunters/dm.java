@@ -7,9 +7,9 @@ final class dm extends mfb {
     final static Widget i(byte param0) {
         if (param0 >= -75) {
           field_b = true;
-          return re.field_n.field_yb;
+          return re.field_n.content;
         }
-        return re.field_n.field_yb;
+        return re.field_n.content;
     }
 
     final int a(byte param0) {

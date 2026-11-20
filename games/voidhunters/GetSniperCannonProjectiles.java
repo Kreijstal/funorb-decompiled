@@ -45,7 +45,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
           } else {
             stackIn_3_8 = param0.field_q;
           }
-          pea.$cfr$intArgs$a$91f64d33677c(stackIn_2_0, stackIn_2_1, stackIn_2_2, (int[]) (stackIn_2_3), stackIn_2_4, (soa) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
+          pea.$cfr$intArgs$a$91f64d33677c(stackIn_2_0, stackIn_2_1, stackIn_2_2, (int[]) (stackIn_2_3), stackIn_2_4, (ScrollPaneWidget) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
           if (0 == param0.field_a &&
             !spb.a(-121) &&
             SetSpinningBladeSpindamageMultiplier.field_o == null &&

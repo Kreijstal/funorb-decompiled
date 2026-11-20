@@ -9,7 +9,7 @@ final class SetUseOffscreenRendering extends ConsoleCommand {
         if (param0 != 0) {
           return (Widget) null;
         }
-        return WaterTextures.field_f.field_wb;
+        return WaterTextures.field_f.content;
     }
 
     public static void clearSharedReferences(int param0) {
@@ -54,9 +54,9 @@ final class SetUseOffscreenRendering extends ConsoleCommand {
     final static Widget b(boolean param0) {
         if (param0) {
           SetUseOffscreenRendering.a(45);
-          return MapClearanceCircle.field_f.field_wb;
+          return MapClearanceCircle.field_f.content;
         }
-        return MapClearanceCircle.field_f.field_wb;
+        return MapClearanceCircle.field_f.content;
     }
 
     static {

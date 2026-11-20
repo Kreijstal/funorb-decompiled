@@ -95,7 +95,7 @@ final class me extends pja {
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
         StringBuilder discarded$4 = null;
-        soa stackIn_3_0;
+        ScrollPaneWidget stackIn_3_0;
         int stackIn_3_1;
         int stackIn_3_2;
         int stackIn_3_3;
@@ -202,11 +202,11 @@ final class me extends pja {
           stackIn_3_2 = 2;
           stackIn_3_3 = (nna.field_w * 4 + 8) * param1;
           stackIn_4_4 = (qg.field_a == MapClearanceCircle.field_f);
-          var7_int = ((soa) (Object) stackIn_3_0).a((byte) stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param2, nna.field_w * 2 + 4) ? 1 : 0;
+          var7_int = ((ScrollPaneWidget) (Object) stackIn_3_0).layoutAndUpdateScrolling((byte) stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param2, nna.field_w * 2 + 4) ? 1 : 0;
           if (param6 <= 108) {
             me.clearSharedReferences(false);
           }
-          var8 = MapClearanceCircle.field_f.field_wb.children;
+          var8 = MapClearanceCircle.field_f.content.children;
           var9 = wt.a(false);
           var11 = null;
           var12 = (LobbyGameEntry) (var8.first(0));
@@ -377,7 +377,7 @@ final class me extends pja {
             var12.field_bc.height = 0;
             var30 = var12.field_bc;
             var30.width = 0;
-            var12.width = MapClearanceCircle.field_f.field_wb.width;
+            var12.width = MapClearanceCircle.field_f.content.width;
             var31 = 0;
             var32 = var12.field_Vb;
             if (!var12.isSecondaryDetached((byte) 58)) {
@@ -564,7 +564,7 @@ final class me extends pja {
               var12.field_E = var31 - var12.height;
             }
             if (var13 != 0) {
-              MapClearanceCircle.field_f.field_wb.positionBelow((Widget) (var11), 2, var12, -25);
+              MapClearanceCircle.field_f.content.positionBelow((Widget) (var11), 2, var12, -25);
             }
             for (var34_intLifetime2 = 0; var34_intLifetime2 < ocb.field_l; var34_intLifetime2++) {
               if (var12.field_Zb[var34_intLifetime2].field_O) {

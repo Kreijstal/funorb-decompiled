@@ -240,7 +240,7 @@ final class bd {
           TargetLockFactory.field_a.field_nb = dupTemp$3;
           TargetLockFactory.field_a.field_A = dupTemp$3;
           var18 = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "checkbox");
-          SetShieldsDirectionalArcParticleLife.field_o = new qca(0L, var18[1], var18[0], 1, GetMissionDebrisDefaultProbability.field_o, (String) null);
+          SetShieldsDirectionalArcParticleLife.field_o = new SelectableIconLabelWidget(0L, var18[1], var18[0], 1, GetMissionDebrisDefaultProbability.field_o, (String) null);
           CachedArchiveProvider.field_s = new Widget(0L, (Widget) null);
           CachedArchiveProvider.field_s.field_gb = SetBombletSprayProjectileLife.a(false, SetSniperCannonProjectiles.a(param3, "slideregion", "lobby", true));
           CachedArchiveProvider.field_s.field_mb = SetBombletSprayProjectileLife.a(false, SetSniperCannonProjectiles.a(param3, "slideregion_mouseover", "lobby", true));
@@ -261,8 +261,8 @@ final class bd {
           SetAngularVelocitySustain.field_q.field_cb = SetSniperCannonProjectiles.a(param3, "downbutton_mouseover", "lobby", true);
           SetAngularVelocitySustain.field_q.field_ob = SetSniperCannonProjectiles.a(param3, "downbutton_mouseheld", "lobby", true);
           SetAngularVelocitySustain.field_q.field_z = SetSniperCannonProjectiles.a(param3, "downbutton_disabled", "lobby", true);
-          GetUseNiceTrails.field_o = new pjb(0L, MissionConditionFactory.field_a, SetAngularVelocitySustain.field_q, CachedArchiveProvider.field_s, GetPointDefenceLaserProjectileInterceptDamage.field_r);
-          rbb.field_k = new wdb(0L, (Widget) null, htb.field_w, GetUseNiceTrails.field_o, GetShieldsDirectionalArc.field_o, (String) null, (String) null);
+          GetUseNiceTrails.field_o = new ScrollBarWidget(0L, MissionConditionFactory.field_a, SetAngularVelocitySustain.field_q, CachedArchiveProvider.field_s, GetPointDefenceLaserProjectileInterceptDamage.field_r);
+          rbb.field_k = new ScrollableActionPanel(0L, (Widget) null, htb.field_w, GetUseNiceTrails.field_o, GetShieldsDirectionalArc.field_o, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

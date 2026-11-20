@@ -171,7 +171,7 @@ final class OpenGlFont extends ToolkitFont {
           this.field_e = kia.a(var6Lifetime1, param0, var6Lifetime1, var30, 6406, false, 21989, 6406);
           this.field_c = true;
         }
-        this.field_e.a(107, false);
+        this.field_e.setLinearFiltering(107, false);
         this.field_d = new bt(param0, 256);
         var7 = this.field_e.field_n / (float)this.field_e.field_m;
         var8 = this.field_e.field_o / (float)this.field_e.field_p;
@@ -204,13 +204,13 @@ final class OpenGlFont extends ToolkitFont {
 
     final void drawGlyph(char param0, int param1, int param2, int param3, boolean param4) {
         this.toolkit.c(false);
-        this.toolkit.a(115, this.field_e);
+        this.toolkit.bindTexture(115, this.field_e);
         if (!this.field_c &&
           !param4) {
-          this.toolkit.b(7681, 7681, false);
+          this.toolkit.setTextureCombineOperations(7681, 7681, false);
         } else {
-          this.toolkit.b(7681, 8448, false);
-          this.toolkit.c(0, 34192, 768, 34168);
+          this.toolkit.setTextureCombineOperations(7681, 8448, false);
+          this.toolkit.setRgbCombineArgument(0, 34192, 768, 34168);
         }
         jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
         jaggl.OpenGL.glTranslatef((float)param1, (float)param2, 0.0f);
@@ -218,7 +218,7 @@ final class OpenGlFont extends ToolkitFont {
         jaggl.OpenGL.glLoadIdentity();
         if (this.field_c ||
           param4) {
-          this.toolkit.c(0, 34192, 768, 5890);
+          this.toolkit.setRgbCombineArgument(0, 34192, 768, 5890);
         }
     }
 
@@ -230,18 +230,18 @@ final class OpenGlFont extends ToolkitFont {
         var9 = (OpenGlGlyphMask) (param5);
         var10 = var9.texture;
         this.toolkit.c(false);
-        this.toolkit.a(34, this.field_e);
+        this.toolkit.bindTexture(34, this.field_e);
         if (!this.field_c &&
           !param4) {
-          this.toolkit.b(7681, 7681, false);
+          this.toolkit.setTextureCombineOperations(7681, 7681, false);
         } else {
-          this.toolkit.b(7681, 8448, false);
-          this.toolkit.c(0, 34192, 768, 34168);
+          this.toolkit.setTextureCombineOperations(7681, 8448, false);
+          this.toolkit.setRgbCombineArgument(0, 34192, 768, 34168);
         }
-        this.toolkit.h(33984, 1);
-        this.toolkit.a(126, var10);
-        this.toolkit.b(7681, 8448, false);
-        this.toolkit.c(0, 34192, 768, 34168);
+        this.toolkit.setActiveTextureUnit(33984, 1);
+        this.toolkit.bindTexture(126, var10);
+        this.toolkit.setTextureCombineOperations(7681, 8448, false);
+        this.toolkit.setRgbCombineArgument(0, 34192, 768, 34168);
         jaggl.OpenGL.glTexGeni(8192, 9472, 9216);
         jaggl.OpenGL.glTexGeni(8193, 9472, 9216);
         var11 = var10.field_n / (float)var10.field_m;
@@ -256,13 +256,13 @@ final class OpenGlFont extends ToolkitFont {
         jaggl.OpenGL.glLoadIdentity();
         jaggl.OpenGL.glDisable(3168);
         jaggl.OpenGL.glDisable(3169);
-        this.toolkit.c(0, 34192, 768, 5890);
-        this.toolkit.b(8448, 8448, false);
-        this.toolkit.a(109, (pib) null);
-        this.toolkit.h(33984, 0);
+        this.toolkit.setRgbCombineArgument(0, 34192, 768, 5890);
+        this.toolkit.setTextureCombineOperations(8448, 8448, false);
+        this.toolkit.bindTexture(109, (OpenGlTexture) null);
+        this.toolkit.setActiveTextureUnit(33984, 0);
         if (this.field_c ||
           param4) {
-          this.toolkit.c(0, 34192, 768, 5890);
+          this.toolkit.setRgbCombineArgument(0, 34192, 768, 5890);
         }
     }
 }

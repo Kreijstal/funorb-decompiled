@@ -105,7 +105,7 @@ final class ira extends mfb {
             null != var4.field_Ab) {
             return true;
           }
-          stackIn_11_0 = (null != SetSpinningBladeSpindamageMultiplier.field_o) && (null != pjb.a(param0, true));
+          stackIn_11_0 = (null != SetSpinningBladeSpindamageMultiplier.field_o) && (null != ScrollBarWidget.a(param0, true));
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

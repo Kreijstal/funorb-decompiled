@@ -9,7 +9,7 @@ final class bwa extends Widget {
     private int field_xb;
     private Widget field_Ab;
     private Widget field_Bb;
-    private qca field_wb;
+    private SelectableIconLabelWidget field_wb;
     private Widget field_zb;
     private Widget[] field_Db;
     private Widget field_Eb;
@@ -88,7 +88,7 @@ final class bwa extends Widget {
         }
     }
 
-    bwa(int param0, int param1, int param2, int param3, int param4, Widget param5, Widget param6, Widget param7, Widget param8, qca param9, Widget param10, String param11, long param12) {
+    bwa(int param0, int param1, int param2, int param3, int param4, Widget param5, Widget param6, Widget param7, Widget param8, SelectableIconLabelWidget param9, Widget param10, String param11, long param12) {
         super(0L, param5);
         StringBuilder discarded$1 = null;
         int var15_int = 0;
@@ -106,13 +106,13 @@ final class bwa extends Widget {
         int var26 = 0;
         Widget[] var28 = null;
         Object stackIn_8_0;
-        qca stackIn_8_1;
-        qca stackIn_8_2;
+        SelectableIconLabelWidget stackIn_8_1;
+        SelectableIconLabelWidget stackIn_8_2;
         long stackIn_8_3;
-        qca stackIn_8_4;
+        SelectableIconLabelWidget stackIn_8_4;
         Object stackIn_9_0;
-        qca stackIn_9_1;
-        qca stackIn_9_2;
+        SelectableIconLabelWidget stackIn_9_1;
+        SelectableIconLabelWidget stackIn_9_2;
         String stackIn_9_5;
         Widget stackIn_15_0 = null;
         boolean stackIn_16_1 = false;
@@ -134,11 +134,11 @@ final class bwa extends Widget {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var15_ref = null;
         Object stackIn_8_0Lifetime1;
-        qca stackIn_8_1Lifetime1;
-        qca stackIn_8_2Lifetime1;
+        SelectableIconLabelWidget stackIn_8_1Lifetime1;
+        SelectableIconLabelWidget stackIn_8_2Lifetime1;
         Object stackIn_9_0Lifetime1;
-        qca stackIn_9_1Lifetime1;
-        qca stackIn_9_2Lifetime1;
+        SelectableIconLabelWidget stackIn_9_1Lifetime1;
+        SelectableIconLabelWidget stackIn_9_2Lifetime1;
         int var16Lifetime1;
         int var17Lifetime1;
         int var18Lifetime1;
@@ -186,7 +186,7 @@ final class bwa extends Widget {
                 stackIn_8_1 = null;
                 stackIn_8_2 = null;
                 stackIn_8_3 = 0L;
-                stackIn_8_4 = (qca) (param9);
+                stackIn_8_4 = (SelectableIconLabelWidget) (param9);
                 if (nfa.field_d < 7) {
                   stackIn_8_0Lifetime1 = this;
                   stackIn_8_1Lifetime1 = null;
@@ -204,7 +204,7 @@ final class bwa extends Widget {
                 stackIn_9_2Lifetime1 = null;
                 stackIn_9_5 = GetPointDefenceLaserProjectiles.field_p;
               }
-              this.field_wb = new qca(stackIn_8_3, stackIn_8_4, stackIn_9_5);
+              this.field_wb = new SelectableIconLabelWidget(stackIn_8_3, stackIn_8_4, stackIn_9_5);
               this.field_Ab.addChild(-561, this.field_wb);
             }
             var28 = new Widget[3];
@@ -291,7 +291,7 @@ final class bwa extends Widget {
               var19 = var20;
             }
             if (this.field_wb != null) {
-              var20Lifetime2 = this.field_wb.b(4, 0);
+              var20Lifetime2 = this.field_wb.measurePreferredWidth(4, 0);
               if (var19 < var20Lifetime2) {
                 var19 = var20Lifetime2;
               }
@@ -306,8 +306,8 @@ final class bwa extends Widget {
             this.field_Eb.setBounds(0, -104, 0, var21, nna.field_w);
             var21 = var21 + (10 + nna.field_w);
             if (this.field_wb != null) {
-              var20Lifetime3 = this.field_wb.b(4, 0);
-              this.field_wb.a((-var20Lifetime3 + var19) / 2 + 13, nna.field_w, 4, var21, var20Lifetime3, false);
+              var20Lifetime3 = this.field_wb.measurePreferredWidth(4, 0);
+              this.field_wb.setBoundsAndLayout((-var20Lifetime3 + var19) / 2 + 13, nna.field_w, 4, var21, var20Lifetime3, false);
               var21 = var21 + (nna.field_w + 10);
             }
             var28[0].setBounds(13, 122, var16Lifetime2, var21, var17Lifetime5);
@@ -449,7 +449,7 @@ final class bwa extends Widget {
 
     final int c(boolean param0, int param1) {
         int var3 = 0;
-        qca stackIn_7_0 = null;
+        SelectableIconLabelWidget stackIn_7_0 = null;
         boolean stackIn_8_1 = false;
         Widget stackIn_16_0 = null;
         boolean stackIn_17_1 = false;

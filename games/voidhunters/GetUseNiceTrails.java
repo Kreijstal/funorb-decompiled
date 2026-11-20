@@ -5,7 +5,7 @@ final class GetUseNiceTrails extends ConsoleCommand {
     static int field_p;
     static int field_r;
     static String field_q;
-    static pjb field_o;
+    static ScrollBarWidget field_o;
 
     GetUseNiceTrails(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);

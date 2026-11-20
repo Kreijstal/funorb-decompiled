@@ -1,51 +1,51 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pjb extends Widget {
-    private Widget field_xb;
+final class ScrollBarWidget extends Widget {
+    private Widget pageDownRegion;
     static Object field_vb;
-    private Widget field_Ab;
-    private Widget field_yb;
-    private Widget field_wb;
-    private int field_zb;
-    private Widget field_Bb;
-    private Widget field_Cb;
+    private Widget pageUpRegion;
+    private Widget track;
+    private Widget upButton;
+    private int repeatDelay;
+    private Widget thumb;
+    private Widget downButton;
     static String field_Db;
 
-    final boolean j(int param0) {
-        if (0 != this.field_Cb.field_o) {
-          this.field_zb = 20;
+    final boolean pollScrollDown(int param0) {
+        if (0 != this.downButton.field_o) {
+          this.repeatDelay = 20;
           return true;
         }
         if (param0 >= -2) {
-          this.field_xb = (Widget) null;
+          this.pageDownRegion = (Widget) null;
         }
-        if (this.field_Cb.field_C == 0) {
+        if (this.downButton.field_C == 0) {
           return false;
         }
-        if (this.field_zb > 0) {
-          this.field_zb = this.field_zb - 1;
+        if (this.repeatDelay > 0) {
+          this.repeatDelay = this.repeatDelay - 1;
         }
-        if (this.field_zb != 0) {
+        if (this.repeatDelay != 0) {
           return false;
         }
-        this.field_zb = 3;
+        this.repeatDelay = 3;
         return true;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final void setBoundsAndGeometry(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         this.height = param5;
         this.x = param0;
         this.width = param6;
         this.y = param2;
-        this.a(param1, param3, (byte) 88, param4);
+        this.updateGeometry(param1, param3, (byte) 88, param4);
         if (param7 != -1) {
           Class[] var10 = (Class[]) null;
-          pjb.a((IsaacPacketBuffer) null, (SerializableGameState[]) null, -91, 37, (Class[]) null, 13);
+          ScrollBarWidget.writePolymorphicStateArray((IsaacPacketBuffer) null, (SerializableGameState[]) null, -91, 37, (Class[]) null, 13);
         }
     }
 
-    final static void a(IsaacPacketBuffer param0, SerializableGameState[] param1, int param2, int param3, Class[] param4, int param5) {
+    final static void writePolymorphicStateArray(IsaacPacketBuffer param0, SerializableGameState[] param1, int param2, int param3, Class[] param4, int param5) {
         int var9 = 0;
         int stackIn_4_0 = 0;
         IsaacPacketBuffer stackIn_10_0 = null;
@@ -131,14 +131,14 @@ final class pjb extends Widget {
         }
     }
 
-    final int a(int param0, int param1, byte param2, boolean param3) {
+    final int getScrollPosition(int param0, int param1, byte param2, boolean param3) {
         int var8 = 0;
         int var9 = 0;
         int var5 = 50 % ((24 - param2) / 41);
         int var6 = 0;
-        int var7 = this.field_yb.height - this.field_Bb.height;
+        int var7 = this.track.height - this.thumb.height;
         if (0 < var7) {
-          var8 = this.field_Bb.y;
+          var8 = this.thumb.y;
           var9 = param0 - param1;
           var6 = (var9 * var8 + var7 / 2) / var7;
         }
@@ -169,7 +169,7 @@ final class pjb extends Widget {
           return;
         }
         Class[] var2 = (Class[]) null;
-        pjb.a((IsaacPacketBuffer) null, (SerializableGameState[]) null, 92, 41, (Class[]) null, -34);
+        ScrollBarWidget.writePolymorphicStateArray((IsaacPacketBuffer) null, (SerializableGameState[]) null, 92, 41, (Class[]) null, -34);
         field_Db = null;
     }
 
@@ -180,49 +180,49 @@ final class pjb extends Widget {
         return (jk) (SetUseDetailLines.field_p.a(-1, param0));
     }
 
-    final boolean i(int param0) {
-        if (this.field_Ab.field_o != 0) {
-          this.field_zb = 20;
+    final boolean pollPageUp(int param0) {
+        if (this.pageUpRegion.field_o != 0) {
+          this.repeatDelay = 20;
           return true;
         }
         if (param0 != 20) {
-          this.a(false);
-          if (this.field_Ab.field_C == 0) {
+          this.isThumbDragging(false);
+          if (this.pageUpRegion.field_C == 0) {
             return false;
           }
-          if (this.field_zb > 0) {
-            this.field_zb = this.field_zb - 1;
+          if (this.repeatDelay > 0) {
+            this.repeatDelay = this.repeatDelay - 1;
           }
-          if (0 != this.field_zb) {
+          if (0 != this.repeatDelay) {
             return false;
           }
-          if (this.field_Bb.field_db + this.field_Bb.screenY > uia.field_b) {
-            this.field_zb = 3;
+          if (this.thumb.field_db + this.thumb.screenY > uia.field_b) {
+            this.repeatDelay = 3;
             return true;
           }
           return false;
         }
-        if (this.field_Ab.field_C == 0) {
+        if (this.pageUpRegion.field_C == 0) {
           return false;
         }
-        if (this.field_zb > 0) {
-          this.field_zb = this.field_zb - 1;
+        if (this.repeatDelay > 0) {
+          this.repeatDelay = this.repeatDelay - 1;
         }
-        if (0 != this.field_zb) {
+        if (0 != this.repeatDelay) {
           return false;
         }
-        if (this.field_Bb.field_db + this.field_Bb.screenY > uia.field_b) {
-          this.field_zb = 3;
+        if (this.thumb.field_db + this.thumb.screenY > uia.field_b) {
+          this.repeatDelay = 3;
           return true;
         }
         return false;
     }
 
-    pjb(long param0, pjb param1) {
-        this(param0, param1.field_wb, param1.field_Cb, param1.field_Ab, param1.field_Bb);
+    ScrollBarWidget(long param0, ScrollBarWidget param1) {
+        this(param0, param1.upButton, param1.downButton, param1.pageUpRegion, param1.thumb);
     }
 
-    final void a(int param0, int param1, byte param2, int param3) {
+    final void updateGeometry(int param0, int param1, byte param2, int param3) {
         int var6 = 0;
         int var5 = 0;
         int var9 = 0;
@@ -271,37 +271,37 @@ final class pjb extends Widget {
             var11 = (var10 * param1 + var9 / 2) / var9;
           }
           var12 = var11 + var8 / 2;
-          var15 = this.field_wb;
+          var15 = this.upButton;
           var15.height = var5;
           var15.width = this.width;
           var15.x = 0;
           var15.y = 0;
-          var16 = this.field_Cb;
+          var16 = this.downButton;
           var16.x = 0;
           var16.height = this.height - var6;
           var16.y = var6;
           var16.width = this.width;
           var14 = 60 / ((-68 - param2) / 40);
-          var17 = this.field_yb;
+          var17 = this.track;
           var17.y = var5;
           var17.height = var7;
           var17.x = 0;
           var17.width = this.width;
-          var18 = this.field_Ab;
+          var18 = this.pageUpRegion;
           var18.width = this.width;
           var18.x = 0;
           var18.height = var12;
           var18.y = 0;
-          var19 = this.field_xb;
+          var19 = this.pageDownRegion;
           var19.width = this.width;
           var19.x = 0;
           var19.y = var12;
           var19.height = -var12 + var7;
-          var20 = this.field_Bb;
+          var20 = this.thumb;
           var20.height = var8;
-          this.field_yb.enabled = param3 < param0 ? true : false;
-          this.field_Cb.enabled = param3 < param0 ? true : false;
-          this.field_wb.enabled = param3 < param0 ? true : false;
+          this.track.enabled = param3 < param0 ? true : false;
+          this.downButton.enabled = param3 < param0 ? true : false;
+          this.upButton.enabled = param3 < param0 ? true : false;
           var20.x = 0;
           var20.width = this.width;
           var20.y = var11;
@@ -314,96 +314,96 @@ final class pjb extends Widget {
           var11Lifetime1 = (var10Lifetime1 * param1 + var9Lifetime1 / 2) / var9Lifetime1;
         }
         var12Lifetime1 = var11Lifetime1 + var8 / 2;
-        var15Lifetime1 = this.field_wb;
+        var15Lifetime1 = this.upButton;
         var15Lifetime1.height = var5;
         var15Lifetime1.width = this.width;
         var15Lifetime1.x = 0;
         var15Lifetime1.y = 0;
-        var16Lifetime1 = this.field_Cb;
+        var16Lifetime1 = this.downButton;
         var16Lifetime1.x = 0;
         var16Lifetime1.height = this.height - var6;
         var16Lifetime1.y = var6;
         var16Lifetime1.width = this.width;
         var14Lifetime1 = 60 / ((-68 - param2) / 40);
-        var17Lifetime1 = this.field_yb;
+        var17Lifetime1 = this.track;
         var17Lifetime1.y = var5;
         var17Lifetime1.height = var7;
         var17Lifetime1.x = 0;
         var17Lifetime1.width = this.width;
-        var18Lifetime1 = this.field_Ab;
+        var18Lifetime1 = this.pageUpRegion;
         var18Lifetime1.width = this.width;
         var18Lifetime1.x = 0;
         var18Lifetime1.height = var12Lifetime1;
         var18Lifetime1.y = 0;
-        var19Lifetime1 = this.field_xb;
+        var19Lifetime1 = this.pageDownRegion;
         var19Lifetime1.width = this.width;
         var19Lifetime1.x = 0;
         var19Lifetime1.y = var12Lifetime1;
         var19Lifetime1.height = -var12Lifetime1 + var7;
-        var20Lifetime1 = this.field_Bb;
+        var20Lifetime1 = this.thumb;
         var20Lifetime1.height = var8;
-        this.field_yb.enabled = param3 < param0 ? true : false;
-        this.field_Cb.enabled = param3 < param0 ? true : false;
-        this.field_wb.enabled = param3 < param0 ? true : false;
+        this.track.enabled = param3 < param0 ? true : false;
+        this.downButton.enabled = param3 < param0 ? true : false;
+        this.upButton.enabled = param3 < param0 ? true : false;
         var20Lifetime1.x = 0;
         var20Lifetime1.width = this.width;
         var20Lifetime1.y = var11Lifetime1;
     }
 
-    final boolean a(boolean param0) {
+    final boolean isThumbDragging(boolean param0) {
         if (param0) {
-          return 0 != this.field_Bb.field_C ? true : false;
+          return 0 != this.thumb.field_C ? true : false;
         }
-        this.field_yb = (Widget) null;
-        return 0 != this.field_Bb.field_C ? true : false;
+        this.track = (Widget) null;
+        return 0 != this.thumb.field_C ? true : false;
     }
 
-    final boolean b(boolean param0) {
-        if (this.field_xb.field_o != 0) {
-          this.field_zb = 20;
+    final boolean pollPageDown(boolean param0) {
+        if (this.pageDownRegion.field_o != 0) {
+          this.repeatDelay = 20;
           return true;
         }
-        if (this.field_xb.field_C != 0) {
-          if (this.field_zb > 0) {
-            this.field_zb = this.field_zb - 1;
+        if (this.pageDownRegion.field_C != 0) {
+          if (this.repeatDelay > 0) {
+            this.repeatDelay = this.repeatDelay - 1;
           }
-          if (this.field_zb == 0 &&
-            uia.field_b >= this.field_Bb.field_E + (this.field_Bb.screenY + this.field_Bb.field_db + this.field_Bb.height)) {
-            this.field_zb = 3;
+          if (this.repeatDelay == 0 &&
+            uia.field_b >= this.thumb.field_E + (this.thumb.screenY + this.thumb.field_db + this.thumb.height)) {
+            this.repeatDelay = 3;
             return true;
           }
         }
         if (param0) {
           return false;
         }
-        this.field_Ab = (Widget) null;
+        this.pageUpRegion = (Widget) null;
         return false;
     }
 
-    final boolean h(int param0) {
-        if (this.field_wb.field_o != param0) {
-          this.field_zb = 20;
+    final boolean pollScrollUp(int param0) {
+        if (this.upButton.field_o != param0) {
+          this.repeatDelay = 20;
           return true;
         }
-        if (0 == this.field_wb.field_C) {
+        if (0 == this.upButton.field_C) {
           return false;
         }
-        if (0 < this.field_zb) {
-          this.field_zb = this.field_zb - 1;
-          if (this.field_zb == 0) {
-            this.field_zb = 3;
+        if (0 < this.repeatDelay) {
+          this.repeatDelay = this.repeatDelay - 1;
+          if (this.repeatDelay == 0) {
+            this.repeatDelay = 3;
             return true;
           }
           return false;
         }
-        if (this.field_zb == 0) {
-          this.field_zb = 3;
+        if (this.repeatDelay == 0) {
+          this.repeatDelay = 3;
           return true;
         }
         return false;
     }
 
-    pjb(long param0, Widget param1, Widget param2, Widget param3, Widget param4) {
+    ScrollBarWidget(long param0, Widget param1, Widget param2, Widget param3, Widget param4) {
         super(param0, (Widget) null);
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -419,23 +419,23 @@ final class pjb extends Widget {
         Widget var9 = null;
         Widget var10 = null;
         try {
-          this.field_wb = new Widget(0L, param1);
-          this.field_Cb = new Widget(0L, param2);
-          this.addChild(-561, this.field_wb);
-          this.addChild(-561, this.field_Cb);
-          this.field_yb = new Widget(0L, (Widget) null);
-          this.addChild(-561, this.field_yb);
-          this.field_Ab = new Widget(0L, param3);
-          this.field_xb = new Widget(0L, param3);
-          this.field_xb.field_S = true;
-          var9 = this.field_Ab;
+          this.upButton = new Widget(0L, param1);
+          this.downButton = new Widget(0L, param2);
+          this.addChild(-561, this.upButton);
+          this.addChild(-561, this.downButton);
+          this.track = new Widget(0L, (Widget) null);
+          this.addChild(-561, this.track);
+          this.pageUpRegion = new Widget(0L, param3);
+          this.pageDownRegion = new Widget(0L, param3);
+          this.pageDownRegion.field_S = true;
+          var9 = this.pageUpRegion;
           var10 = var9;
           var10.field_S = true;
-          this.field_yb.addChild(-561, this.field_Ab);
-          this.field_yb.addChild(-561, this.field_xb);
-          this.field_Bb = new Widget(0L, param4);
-          this.field_Bb.draggable = true;
-          this.field_yb.addChild(-561, this.field_Bb);
+          this.track.addChild(-561, this.pageUpRegion);
+          this.track.addChild(-561, this.pageDownRegion);
+          this.thumb = new Widget(0L, param4);
+          this.thumb.draggable = true;
+          this.track.addChild(-561, this.thumb);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

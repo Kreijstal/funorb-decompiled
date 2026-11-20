@@ -162,7 +162,7 @@ final class SetDebrisGroupColour extends ConsoleCommand {
             if (var4 != 34 &&
               var4 != 39) {
               if (var4 == 40) {
-                var2.addLast(param0 - 10257, new tsa(wdb.field_vb, var3.field_b - 1));
+                var2.addLast(param0 - 10257, new tsa(ScrollableActionPanel.field_vb, var3.field_b - 1));
                 continue;
               }
               if (var4 == 41) {

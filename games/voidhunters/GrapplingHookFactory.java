@@ -34,7 +34,7 @@ final class GrapplingHookFactory implements GameStateFactory {
               throw new ojb(var5.field_g);
             }
             var6 = param1.a((byte) -67);
-            if (var6.field_e != wdb.field_vb) {
+            if (var6.field_e != ScrollableActionPanel.field_vb) {
               throw new ojb(var6.field_g);
             }
             var5.field_f = new IntrusiveDeque();

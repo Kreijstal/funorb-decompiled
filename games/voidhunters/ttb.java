@@ -136,7 +136,7 @@ final class ttb extends shb {
         int var6 = this.field_r + param3;
         this.a(2, var6, this.field_C[0], var5);
         if (this.field_v < 65536) {
-          qca.a(this.field_h + var5, this.field_f + var6, var5 + (this.field_h * this.field_v >> 16), true, var6);
+          SelectableIconLabelWidget.a(this.field_h + var5, this.field_f + var6, var5 + (this.field_h * this.field_v >> 16), true, var6);
           this.a(2, var6, this.field_C[1], var5);
           bia.a((byte) 124);
         }
@@ -186,7 +186,7 @@ final class ttb extends shb {
         var8 = VoidHunters.field_G;
         try {
           var5_int = this.field_h + param3;
-          qca.a(var5_int - this.field_y.width, this.field_f + param1, param3 + this.field_y.width, true, param1);
+          SelectableIconLabelWidget.a(var5_int - this.field_y.width, this.field_f + param1, param3 + this.field_y.width, true, param1);
           var6 = param3 - this.field_w;
           if (param0 != 2) {
             this.field_w = 28;

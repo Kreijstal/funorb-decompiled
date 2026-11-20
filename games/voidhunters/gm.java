@@ -329,7 +329,7 @@ final class gm extends kja {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (rpa.field_c == param0) {
+          if (OpenGlFramebuffer.field_c == param0) {
             stackIn_2_0 = 9216;
             return stackIn_2_0;
           }

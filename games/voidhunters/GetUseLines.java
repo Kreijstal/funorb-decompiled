@@ -3,7 +3,7 @@
  */
 final class GetUseLines extends ConsoleCommand {
     private static long[] field_o;
-    static soa field_p;
+    static ScrollPaneWidget field_p;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;

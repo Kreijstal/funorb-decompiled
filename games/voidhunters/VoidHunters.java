@@ -1017,9 +1017,9 @@ public final class VoidHunters extends NetworkGameClient {
         ArchiveDiskWorker.clearSharedReferences(63);
         ArchiveIndexLoader.clearSharedReferences(5);
         ppb.clearSharedReferences(37);
-        pjb.clearSharedReferences((byte) 22);
+        ScrollBarWidget.clearSharedReferences((byte) 22);
         PopupMenuWidget.clearSharedReferences(0);
-        wdb.clearSharedReferences((byte) 127);
+        ScrollableActionPanel.clearSharedReferences((byte) 127);
         hqb.clearSharedReferences((byte) -106);
         lwa.clearSharedReferences(0);
         IconTextWidget.clearSharedReferences(1);
@@ -1138,7 +1138,7 @@ public final class VoidHunters extends NetworkGameClient {
         OpenGlBloomEffect.clearSharedReferences(0);
         OpenGlInterleavedVertexBuffer.clearSharedReferences((byte) -26);
         OpenGlSprite.clearSharedReferences(1);
-        rpa.clearSharedReferences(1);
+        OpenGlFramebuffer.clearSharedReferences(1);
         OpenGlTransform3D.clearSharedReferences(13);
         OpenGlCubeTexture.clearSharedReferences((byte) 81);
         GpuToolkit.clearSharedReferences((byte) -101);

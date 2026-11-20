@@ -795,7 +795,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var5 = localTemp$231;
                                 var41 = new int[]{localTemp$215, localTemp$217, localTemp$216, localTemp$218, localTemp$219, localTemp$220, localTemp$221, localTemp$222, localTemp$223, localTemp$224, localTemp$225, localTemp$227, localTemp$226, localTemp$228, localTemp$229, localTemp$230, var4, localTemp$231};
                                 var90 = GetGrapplingHookCooldown.a((byte) 104, var41);
-                                var91 = OpenGlToolkit.a(1, var90);
+                                var91 = OpenGlToolkit.reflectXAndReversePoints(1, var90);
                                 var44_ref = new ShipComponentDefinition(var91, 0, 0);
                                 ta.a(var91, 114, var44_ref);
                                 var44_ref.scaleMassDown(param0 ^ 49, 15);

@@ -3,12 +3,12 @@
  */
 abstract class qg {
     OpenGlToolkit field_b;
-    static soa field_a;
+    static ScrollPaneWidget field_a;
 
     public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != -15081) {
-          field_a = (soa) null;
+          field_a = (ScrollPaneWidget) null;
         }
     }
 
@@ -77,7 +77,7 @@ abstract class qg {
 
     abstract void a(int param0, int param1, int param2);
 
-    abstract void a(int param0, byte param1, pib param2);
+    abstract void a(int param0, byte param1, OpenGlTexture param2);
 
     static {
         PartitioningManagerFactory discarded$0 = new PartitioningManagerFactory();

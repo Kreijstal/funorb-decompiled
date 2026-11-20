@@ -38,8 +38,8 @@ final class bs {
           OpenGlCubeTexture.field_h.setBounds(0, 120, PlayerJoinFactory.field_c.width, 0, nna.field_w);
           SetCountermeasureLauncherRandomness.field_o.setBounds(0, -25, PlayerJoinFactory.field_c.width - ResourceNode.field_a - 84, 2 + nna.field_w, 18);
           GameKeyHandler.field_b.setBounds(-2 + (PlayerJoinFactory.field_c.width - ResourceNode.field_a) - 80, 120, ResourceNode.field_a + 82, nna.field_w + 2, 18);
-          re.field_n.a(0, nna.field_w + 22, 20, ResourceNode.field_a, -2 + PlayerJoinFactory.field_c.height - (nna.field_w + 20), PlayerJoinFactory.field_c.width, 0, 2);
-          vra.field_b.a(2, 20, ResourceNode.field_a, (byte) 63);
+          re.field_n.setBoundsAndLayout(0, nna.field_w + 22, 20, ResourceNode.field_a, -2 + PlayerJoinFactory.field_c.height - (nna.field_w + 20), PlayerJoinFactory.field_c.width, 0, 2);
+          vra.field_b.layoutContents(2, 20, ResourceNode.field_a, (byte) 63);
           return;
         }
     }

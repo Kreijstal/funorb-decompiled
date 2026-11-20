@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class aia extends pib {
+class aia extends OpenGlTexture {
     int field_h;
     int field_j;
     private int field_k;
@@ -39,20 +39,20 @@ class aia extends pib {
             }
             param6 = var17;
           }
-          this.field_g.a(57, (pib) (this));
-          if (34037 != this.field_b &&
+          this.toolkit.bindTexture(57, (OpenGlTexture) (this));
+          if (34037 != this.target &&
             param5 &&
             0 == param7 &&
             param8 == 0) {
-            SetVariableLabelActionFactory.a(param6, this.field_g.field_cc, 29175, this.field_d, this.field_b, 32993, this.field_j, this.field_h);
-            this.a((byte) 62, true);
+            SetVariableLabelActionFactory.a(param6, this.toolkit.field_cc, 29175, this.internalFormat, this.target, 32993, this.field_j, this.field_h);
+            this.markMipmapsPresent((byte) 62, true);
           } else {
             jaggl.OpenGL.glPixelStorei(3314, param7);
-            jaggl.OpenGL.glTexImage2Di(this.field_b, 0, this.field_d, this.field_h, this.field_j, 0, 32993, this.field_g.field_cc, param6, param8 * 4);
+            jaggl.OpenGL.glTexImage2Di(this.target, 0, this.internalFormat, this.field_h, this.field_j, 0, 32993, this.toolkit.field_cc, param6, param8 * 4);
             jaggl.OpenGL.glPixelStorei(3314, 0);
-            this.a((byte) 62, false);
+            this.markMipmapsPresent((byte) 62, false);
           }
-          this.a(62, true);
+          this.setLinearFiltering(62, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,10 +78,10 @@ class aia extends pib {
         if (param2 != 10497) {
           return;
         }
-        if (this.field_b == 3553) {
-          this.field_g.a(116, (pib) (this));
-          jaggl.OpenGL.glTexParameteri(this.field_b, 10242, !param1 ? 33071 : 10497);
-          jaggl.OpenGL.glTexParameteri(this.field_b, 10243, !param0 ? 33071 : 10497);
+        if (this.target == 3553) {
+          this.toolkit.bindTexture(116, (OpenGlTexture) (this));
+          jaggl.OpenGL.glTexParameteri(this.target, 10242, !param1 ? 33071 : 10497);
+          jaggl.OpenGL.glTexParameteri(this.target, 10243, !param0 ? 33071 : 10497);
         }
     }
 
@@ -116,11 +116,11 @@ class aia extends pib {
           if (param0 != 32) {
             return;
           }
-          this.field_g.a(97, (pib) (this));
+          this.toolkit.bindTexture(97, (OpenGlTexture) (this));
           if (param2 != param1) {
             jaggl.OpenGL.glPixelStorei(3314, param1);
           }
-          jaggl.OpenGL.glTexSubImage2Di(this.field_b, 0, param5, this.field_j - param3 - param4, param2, param4, 32993, this.field_g.field_cc, param8, param6);
+          jaggl.OpenGL.glTexSubImage2Di(this.target, 0, param5, this.field_j - param3 - param4, param2, param4, 32993, this.toolkit.field_cc, param8, param6);
           if (param1 != param2) {
             jaggl.OpenGL.glPixelStorei(3314, 0);
           }
@@ -139,8 +139,8 @@ class aia extends pib {
         }
     }
 
-    public final void a(int param0) {
-        jaggl.OpenGL.glFramebufferTexture2DEXT(this.field_i, this.field_k, this.field_b, 0, 0);
+    public final void detachFromFramebuffer(int param0) {
+        jaggl.OpenGL.glFramebufferTexture2DEXT(this.field_i, this.field_k, this.target, 0, 0);
         if (param0 != 31294) {
           this.a(3, 70, -60, -31, 85, 83, 30);
         }
@@ -149,7 +149,7 @@ class aia extends pib {
     }
 
     final void a(int param0, int param1, int param2, boolean param3) {
-        jaggl.OpenGL.glFramebufferTexture2DEXT(param0, param1, this.field_b, this.field_c, param2);
+        jaggl.OpenGL.glFramebufferTexture2DEXT(param0, param1, this.target, this.textureId, param2);
         this.field_k = param1;
         this.field_i = param0;
         if (param3) {
@@ -189,18 +189,18 @@ class aia extends pib {
             }
             param6 = var16;
           }
-          this.field_g.a(118, (pib) (this));
+          this.toolkit.bindTexture(118, (OpenGlTexture) (this));
           jaggl.OpenGL.glPixelStorei(3317, 1);
           if (param5 &&
-            this.field_b != 34037) {
+            this.target != 34037) {
             OpenGlShader.uploadByteTextureMipmaps(param6, 0, param7, param1, param2, param3, param4);
-            this.a((byte) 62, true);
+            this.markMipmapsPresent((byte) 62, true);
           } else {
-            jaggl.OpenGL.glTexImage2Dub(this.field_b, 0, this.field_d, this.field_h, this.field_j, 0, param7, 5121, param6, 0);
-            this.a((byte) 62, false);
+            jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.internalFormat, this.field_h, this.field_j, 0, param7, 5121, param6, 0);
+            this.markMipmapsPresent((byte) 62, false);
           }
           jaggl.OpenGL.glPixelStorei(3317, 4);
-          this.a(-79, true);
+          this.setLinearFiltering(-79, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -256,12 +256,12 @@ class aia extends pib {
             }
             param3 = var14;
           }
-          this.field_g.a(95, (pib) (this));
+          this.toolkit.bindTexture(95, (OpenGlTexture) (this));
           jaggl.OpenGL.glPixelStorei(3317, param9);
           if (param5 != param4) {
             jaggl.OpenGL.glPixelStorei(3314, param4);
           }
-          jaggl.OpenGL.glTexSubImage2Dub(this.field_b, 0, param7, param6, param5, param0, param1, 5121, param3, param2);
+          jaggl.OpenGL.glTexSubImage2Dub(this.target, 0, param7, param6, param5, param0, param1, 5121, param3, param2);
           if (param4 != param5) {
             jaggl.OpenGL.glPixelStorei(3314, 0);
           }
@@ -288,9 +288,9 @@ class aia extends pib {
         try {
           this.field_j = param4;
           this.field_h = param3;
-          this.field_g.a(102, (pib) (this));
-          jaggl.OpenGL.glTexImage2Dub(this.field_b, 0, this.field_d, param3, param4, 0, PointLight.toOpenGlExternalFormat(this.field_d, false), 5121, (byte[]) null, 0);
-          this.a(-96, true);
+          this.toolkit.bindTexture(102, (OpenGlTexture) (this));
+          jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.internalFormat, param3, param4, 0, PointLight.toOpenGlExternalFormat(this.internalFormat, false), 5121, (byte[]) null, 0);
+          this.setLinearFiltering(-96, true);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
@@ -310,16 +310,16 @@ class aia extends pib {
         try {
           this.field_j = param4;
           this.field_h = param3;
-          this.field_g.a(100, (pib) (this));
+          this.toolkit.bindTexture(100, (OpenGlTexture) (this));
           if (param5 &&
-            this.field_b != 34037) {
+            this.target != 34037) {
             SoftwareRenderContext.a(param7, param2, param3, param1, param4, param6, -29702);
-            this.a((byte) 62, true);
+            this.markMipmapsPresent((byte) 62, true);
           } else {
-            jaggl.OpenGL.glTexImage2Df(this.field_b, 0, this.field_d, this.field_h, this.field_j, 0, param7, 5126, param6, 0);
-            this.a((byte) 62, false);
+            jaggl.OpenGL.glTexImage2Df(this.target, 0, this.internalFormat, this.field_h, this.field_j, 0, param7, 5126, param6, 0);
+            this.markMipmapsPresent((byte) 62, false);
           }
-          this.a(-86, true);
+          this.setLinearFiltering(-86, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -342,9 +342,9 @@ class aia extends pib {
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        int var8 = -param6 - (param3 - this.field_g.field_Y);
-        this.field_g.a(121, (pib) (this));
-        jaggl.OpenGL.glCopyTexSubImage2D(this.field_b, 0, param2, this.field_j - param3 - param1, param5, var8, param4, param3);
+        int var8 = -param6 - (param3 - this.toolkit.field_Y);
+        this.toolkit.bindTexture(121, (OpenGlTexture) (this));
+        jaggl.OpenGL.glCopyTexSubImage2D(this.target, 0, param2, this.field_j - param3 - param1, param5, var8, param4, param3);
         int var9 = -33 / ((-65 - param0) / 43);
         jaggl.OpenGL.glFlush();
     }

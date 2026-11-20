@@ -18,10 +18,10 @@ final class mw extends qg {
 
     final void a(int param0) {
         if (this.field_h) {
-          this.field_b.h(33984, 1);
-          this.field_b.a(124, (pib) null);
-          this.field_b.h(param0 ^ 37826, 0);
-          this.field_b.a(param0 - 5788, (pib) null);
+          this.field_b.setActiveTextureUnit(33984, 1);
+          this.field_b.bindTexture(124, (OpenGlTexture) null);
+          this.field_b.setActiveTextureUnit(param0 ^ 37826, 0);
+          this.field_b.bindTexture(param0 - 5788, (OpenGlTexture) null);
           jaggl.OpenGL.glUseProgramObjectARB(0L);
           this.field_h = false;
         }
@@ -73,7 +73,7 @@ final class mw extends qg {
         }
     }
 
-    final void a(int param0, byte param1, pib param2) {
+    final void a(int param0, byte param1, OpenGlTexture param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -86,8 +86,8 @@ final class mw extends qg {
           if (this.field_h) {
             return;
           }
-          this.field_b.a(param1 ^ 14, param2);
-          this.field_b.c(param1 ^ 125, param0);
+          this.field_b.bindTexture(param1 ^ 14, param2);
+          this.field_b.setTextureCombineMode(param1 ^ 125, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -137,7 +137,7 @@ final class mw extends qg {
     final void a(boolean param0, int param1) {
         float var4 = 0.0f;
         long var5 = 0L;
-        OpenGlCubeTexture var3 = this.field_b.a(false);
+        OpenGlCubeTexture var3 = this.field_b.getEnvironmentCubeTexture(false);
         float var4Lifetime1;
         long var5Lifetime1;
         if (param1 <= 18) {
@@ -145,10 +145,10 @@ final class mw extends qg {
           if (this.field_f) {
             if (var3 != null) {
               var4 = 2.0f * (-Math.abs(this.field_b.field_Eb[1]) + 1.0f) + 1.0f;
-              this.field_b.h(33984, 1);
-              this.field_b.a(54, var3);
-              this.field_b.h(33984, 0);
-              this.field_b.a(113, this.field_g.field_a);
+              this.field_b.setActiveTextureUnit(33984, 1);
+              this.field_b.bindTexture(54, var3);
+              this.field_b.setActiveTextureUnit(33984, 0);
+              this.field_b.bindTexture(113, this.field_g.field_a);
               var5 = this.field_c.field_c;
               jaggl.OpenGL.glUseProgramObjectARB(var5);
               jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5, "normalSampler"), 0);
@@ -167,10 +167,10 @@ final class mw extends qg {
         }
         if (var3 != null) {
           var4Lifetime1 = 2.0f * (-Math.abs(this.field_b.field_Eb[1]) + 1.0f) + 1.0f;
-          this.field_b.h(33984, 1);
-          this.field_b.a(54, var3);
-          this.field_b.h(33984, 0);
-          this.field_b.a(113, this.field_g.field_a);
+          this.field_b.setActiveTextureUnit(33984, 1);
+          this.field_b.bindTexture(54, var3);
+          this.field_b.setActiveTextureUnit(33984, 0);
+          this.field_b.bindTexture(113, this.field_g.field_a);
           var5Lifetime1 = this.field_c.field_c;
           jaggl.OpenGL.glUseProgramObjectARB(var5Lifetime1);
           jaggl.OpenGL.glUniform1iARB(jaggl.OpenGL.glGetUniformLocationARB(var5Lifetime1, "normalSampler"), 0);

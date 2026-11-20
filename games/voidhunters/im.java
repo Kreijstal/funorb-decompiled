@@ -13,7 +13,7 @@ final class im extends aia {
         super(param0, param1, 6408, param2, param3, param4, param5, param6, param7, true);
         try {
           this.field_m = param2;
-          if (this.field_b == 34037) {
+          if (this.target == 34037) {
             this.field_o = (float)param3;
             this.field_n = (float)param2;
             this.field_l = false;
@@ -47,7 +47,7 @@ final class im extends aia {
         super(param0, param1, param2, param3, param4, param5, param6, param7, true);
         try {
           this.field_m = param3;
-          if (this.field_b == 34037) {
+          if (this.target == 34037) {
             this.field_o = (float)param4;
             this.field_l = false;
             this.field_n = (float)param3;
@@ -87,7 +87,7 @@ final class im extends aia {
         try {
           this.field_m = param3;
           this.field_p = param4;
-          if (this.field_b != 34037) {
+          if (this.target != 34037) {
             this.field_n = 1.0f;
             this.field_l = true;
             this.field_o = 1.0f;

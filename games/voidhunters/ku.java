@@ -15,25 +15,25 @@ final class ku extends qg {
 
     final void a(boolean param0, int param1) {
         if (param1 >= 18) {
-          this.field_b.c(32925, true);
+          this.field_b.setLightingSuppressed(32925, true);
           return;
         }
-        pib var4 = (pib) null;
-        this.a(-92, (byte) 78, (pib) null);
-        this.field_b.c(32925, true);
+        OpenGlTexture var4 = (OpenGlTexture) null;
+        this.a(-92, (byte) 78, (OpenGlTexture) null);
+        this.field_b.setLightingSuppressed(32925, true);
     }
 
     ku(OpenGlToolkit param0) {
         super(param0);
     }
 
-    final void a(int param0, byte param1, pib param2) {
+    final void a(int param0, byte param1, OpenGlTexture param2) {
         try {
-          this.field_b.a(80, param2);
+          this.field_b.bindTexture(80, param2);
           if (param1 != 125) {
             field_c = -10;
           }
-          this.field_b.c(0, param0);
+          this.field_b.setTextureCombineMode(0, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ku.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -111,7 +111,7 @@ final class ku extends qg {
     }
 
     final void a(int param0) {
-        this.field_b.c(32925, false);
+        this.field_b.setLightingSuppressed(32925, false);
         if (param0 != 5890) {
           String var3 = (String) null;
           ku.a((String) null, -94, (rq) null, true, -26, (String) null, (String) null);

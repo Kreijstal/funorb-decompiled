@@ -3,7 +3,7 @@
  */
 final class SetShieldsDirectionalArcParticleLife extends ConsoleCommand {
     static String field_p;
-    static qca field_o;
+    static SelectableIconLabelWidget field_o;
 
     SetShieldsDirectionalArcParticleLife(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -27,7 +27,7 @@ final class SetShieldsDirectionalArcParticleLife extends ConsoleCommand {
         try {
           LoadSettings.field_q = arguments[0].intValue(124);
           if (obfuscationGuard > -119) {
-            field_o = (qca) null;
+            field_o = (SelectableIconLabelWidget) null;
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

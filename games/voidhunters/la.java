@@ -145,20 +145,20 @@ final class la extends qg {
 
     final void a(boolean param0, int param1) {
         this.field_l = param0 ? true : false;
-        this.field_b.h(33984, 1);
-        this.field_b.a(55, this.field_h);
-        this.field_b.b(34165, 7681, false);
-        this.field_b.c(0, 34192, 768, 34166);
-        this.field_b.c(2, 34192, 770, 5890);
+        this.field_b.setActiveTextureUnit(33984, 1);
+        this.field_b.bindTexture(55, this.field_h);
+        this.field_b.setTextureCombineOperations(34165, 7681, false);
+        this.field_b.setRgbCombineArgument(0, 34192, 768, 34166);
+        this.field_b.setRgbCombineArgument(2, 34192, 770, 5890);
         if (param1 >= 18) {
-          this.field_b.b(0, 770, 34168, 34184);
-          this.field_b.h(33984, 0);
+          this.field_b.setAlphaCombineArgument(0, 770, 34168, 34184);
+          this.field_b.setActiveTextureUnit(33984, 0);
           this.e(34336);
           return;
         }
         field_k = -59;
-        this.field_b.b(0, 770, 34168, 34184);
-        this.field_b.h(33984, 0);
+        this.field_b.setAlphaCombineArgument(0, 770, 34168, 34184);
+        this.field_b.setActiveTextureUnit(33984, 0);
         this.e(34336);
     }
 
@@ -178,9 +178,9 @@ final class la extends qg {
             var4 = (float)var2 - (float)(var2 - var3) * 0.125f;
             var5 = -((float)(-var3 + var2) * 0.25f) + (float)var2;
             jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5, var4, 1.0f / (float)this.field_b.field_Hc, (float)this.field_b.field_M / 255.0f);
-            this.field_b.h(33984, 1);
-            this.field_b.b(true, this.field_b.field_Fc);
-            this.field_b.h(33984, 0);
+            this.field_b.setActiveTextureUnit(33984, 1);
+            this.field_b.setTextureEnvironmentColor(true, this.field_b.field_Fc);
+            this.field_b.setActiveTextureUnit(33984, 0);
           }
           return;
         }
@@ -191,9 +191,9 @@ final class la extends qg {
           var4Lifetime1 = (float)var2Lifetime1 - (float)(var2Lifetime1 - var3Lifetime1) * 0.125f;
           var5Lifetime1 = -((float)(-var3Lifetime1 + var2Lifetime1) * 0.25f) + (float)var2Lifetime1;
           jaggl.OpenGL.glProgramLocalParameter4fARB(34336, 0, var5Lifetime1, var4Lifetime1, 1.0f / (float)this.field_b.field_Hc, (float)this.field_b.field_M / 255.0f);
-          this.field_b.h(33984, 1);
-          this.field_b.b(true, this.field_b.field_Fc);
-          this.field_b.h(33984, 0);
+          this.field_b.setActiveTextureUnit(33984, 1);
+          this.field_b.setTextureEnvironmentColor(true, this.field_b.field_Fc);
+          this.field_b.setActiveTextureUnit(33984, 0);
         }
     }
 
@@ -203,33 +203,33 @@ final class la extends qg {
           jaggl.OpenGL.glDisable(34820);
           jaggl.OpenGL.glDisable(34336);
           this.field_e = false;
-          this.field_b.h(param0 ^ 37826, 1);
-          this.field_b.a(43, (pib) null);
-          this.field_b.b(8448, 8448, false);
-          this.field_b.c(0, 34192, 768, param0);
-          this.field_b.c(2, 34192, 770, 34166);
-          this.field_b.b(0, 770, 5890, 34184);
-          this.field_b.h(param0 ^ 37826, 0);
+          this.field_b.setActiveTextureUnit(param0 ^ 37826, 1);
+          this.field_b.bindTexture(43, (OpenGlTexture) null);
+          this.field_b.setTextureCombineOperations(8448, 8448, false);
+          this.field_b.setRgbCombineArgument(0, 34192, 768, param0);
+          this.field_b.setRgbCombineArgument(2, 34192, 770, 34166);
+          this.field_b.setAlphaCombineArgument(0, 770, 5890, 34184);
+          this.field_b.setActiveTextureUnit(param0 ^ 37826, 0);
           if (this.field_f) {
-            this.field_b.c(0, 34192, 768, 5890);
-            this.field_b.b(0, 770, 5890, 34184);
+            this.field_b.setRgbCombineArgument(0, 34192, 768, 5890);
+            this.field_b.setAlphaCombineArgument(0, 770, 5890, 34184);
             this.field_f = false;
             return;
           }
           return;
         }
-        this.field_b.h(param0 ^ 37826, 1);
-        this.field_b.a(43, (pib) null);
-        this.field_b.b(8448, 8448, false);
-        this.field_b.c(0, 34192, 768, param0);
-        this.field_b.c(2, 34192, 770, 34166);
-        this.field_b.b(0, 770, 5890, 34184);
-        this.field_b.h(param0 ^ 37826, 0);
+        this.field_b.setActiveTextureUnit(param0 ^ 37826, 1);
+        this.field_b.bindTexture(43, (OpenGlTexture) null);
+        this.field_b.setTextureCombineOperations(8448, 8448, false);
+        this.field_b.setRgbCombineArgument(0, 34192, 768, param0);
+        this.field_b.setRgbCombineArgument(2, 34192, 770, 34166);
+        this.field_b.setAlphaCombineArgument(0, 770, 5890, 34184);
+        this.field_b.setActiveTextureUnit(param0 ^ 37826, 0);
         if (!this.field_f) {
           return;
         }
-        this.field_b.c(0, 34192, 768, 5890);
-        this.field_b.b(0, 770, 5890, 34184);
+        this.field_b.setRgbCombineArgument(0, 34192, 768, 5890);
+        this.field_b.setAlphaCombineArgument(0, 770, 5890, 34184);
         this.field_f = false;
     }
 
@@ -247,7 +247,7 @@ final class la extends qg {
         return this.field_j;
     }
 
-    final void a(int param0, byte param1, pib param2) {
+    final void a(int param0, byte param1, OpenGlTexture param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -259,18 +259,18 @@ final class la extends qg {
           }
           if (param2 != null) {
             if (this.field_f) {
-              this.field_b.c(0, 34192, 768, 5890);
-              this.field_b.b(0, 770, 5890, 34184);
+              this.field_b.setRgbCombineArgument(0, 34192, 768, 5890);
+              this.field_b.setAlphaCombineArgument(0, 770, 5890, 34184);
               this.field_f = false;
             }
-            this.field_b.a(48, param2);
-            this.field_b.c(param1 ^ 125, param0);
+            this.field_b.bindTexture(48, param2);
+            this.field_b.setTextureCombineMode(param1 ^ 125, param0);
           } else {
             if (!this.field_f) {
-              this.field_b.a(58, this.field_b.field_qb);
-              this.field_b.c(0, 1);
-              this.field_b.c(0, 34192, 768, 34168);
-              this.field_b.b(0, 770, 34168, 34184);
+              this.field_b.bindTexture(58, this.field_b.field_qb);
+              this.field_b.setTextureCombineMode(0, 1);
+              this.field_b.setRgbCombineArgument(0, 34192, 768, 34168);
+              this.field_b.setAlphaCombineArgument(0, 770, 34168, 34184);
               this.field_f = true;
               return;
             }

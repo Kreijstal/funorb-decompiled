@@ -10,7 +10,7 @@ final class IsaacCipher {
     private int[] results;
 
     final static void a(byte param0, int param1, boolean param2) {
-        soa stackIn_5_0;
+        ScrollPaneWidget stackIn_5_0;
         int stackIn_5_1;
         int stackIn_5_2;
         int stackIn_5_3;
@@ -40,21 +40,21 @@ final class IsaacCipher {
           if (param0 < 17) {
             return;
           }
-          stackIn_5_0 = vra.field_b.field_xb;
+          stackIn_5_0 = vra.field_b.scrollPane;
           stackIn_5_1 = 38;
           stackIn_5_2 = 2;
           stackIn_5_3 = param1 * (2 + nna.field_w) * 3;
-          stackIn_6_4 = (qg.field_a == vra.field_b.field_xb);
-          var3_int = ((soa) (Object) stackIn_5_0).a((byte) stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, param2, 2 + nna.field_w) ? 1 : 0;
-          var4 = vra.field_b.field_yb.children;
+          stackIn_6_4 = (qg.field_a == vra.field_b.scrollPane);
+          var3_int = ((ScrollPaneWidget) (Object) stackIn_5_0).layoutAndUpdateScrolling((byte) stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, param2, 2 + nna.field_w) ? 1 : 0;
+          var4 = vra.field_b.content.children;
           if (iwa.field_b != 2 &&
             1 != iwa.field_b) {
-            vra.field_b.field_xb.field_xb.text = SetFighterRepairTime.field_o;
+            vra.field_b.scrollPane.viewport.text = SetFighterRepairTime.field_o;
             vra.field_b.enabled = false;
-            igb.a(vra.field_b.field_yb, (byte) -25);
+            igb.a(vra.field_b.content, (byte) -25);
             return;
           }
-          vra.field_b.field_xb.field_xb.text = null;
+          vra.field_b.scrollPane.viewport.text = null;
           vra.field_b.enabled = true;
           var5 = null;
           var6 = (vu) (var4.first(0));
@@ -68,7 +68,7 @@ final class IsaacCipher {
               var7 = 1;
               var6.inheritInteractionStateInDescendants(127);
             }
-            var6.width = vra.field_b.field_yb.width;
+            var6.width = vra.field_b.content.width;
             var6.field_wb.setBounds(0, -55, var6.width, 0, nna.field_w);
             var8 = 0;
             if (null != var6.field_vb &&
@@ -98,7 +98,7 @@ final class IsaacCipher {
               var6.field_E = -var6.height + nna.field_w;
             }
             if (var7 != 0) {
-              vra.field_b.field_yb.positionBelow((Widget) (var5), 2, var6, -113);
+              vra.field_b.content.positionBelow((Widget) (var5), 2, var6, -113);
             }
             if (var6.field_Bb != null &&
               var6.field_Bb.field_O) {
@@ -111,7 +111,7 @@ final class IsaacCipher {
             }
             var5 = var6;
             if (var6.field_o != 0) {
-              pea.$cfr$intArgs$a$91f64d33677c(0L, var6, -1, (int[]) null, var6.field_Cb, vra.field_b.field_xb, var6.field_Fb, 72, -1);
+              pea.$cfr$intArgs$a$91f64d33677c(0L, var6, -1, (int[]) null, var6.field_Cb, vra.field_b.scrollPane, var6.field_Fb, 72, -1);
               var16 = GetLagStandardDeviationOut.field_o;
               var13_ref_String = PlayerJoinFactory.field_a;
               var16.field_i.addItem(var13_ref_String, (byte) -53, 7);
@@ -122,14 +122,14 @@ final class IsaacCipher {
             }
             var6 = (vu) (var4.next((byte) 66));
           }
-          if (0 != vra.field_b.field_wb.field_o) {
-            ola.field_p = new qka(vra.field_b.field_wb.screenX, vra.field_b.field_wb.screenY, vra.field_b.field_wb.width, vra.field_b.field_wb.height, mw.field_d, GetDebrisMax.field_o, qc.field_q, qc.field_q);
+          if (0 != vra.field_b.firstButton.field_o) {
+            ola.field_p = new qka(vra.field_b.firstButton.screenX, vra.field_b.firstButton.screenY, vra.field_b.firstButton.width, vra.field_b.firstButton.height, mw.field_d, GetDebrisMax.field_o, qc.field_q, qc.field_q);
             MissionGenerationDataFactory.field_b = 2;
           }
-          if (0 == vra.field_b.field_zb.field_o) {
+          if (0 == vra.field_b.secondButton.field_o) {
             return;
           }
-          ola.field_p = new qka(vra.field_b.field_zb.screenX, vra.field_b.field_zb.screenY, vra.field_b.field_zb.width, vra.field_b.field_zb.height, GetUseNiceTrails.field_q, GetDebrisMax.field_o, qc.field_q, qc.field_q);
+          ola.field_p = new qka(vra.field_b.secondButton.screenX, vra.field_b.secondButton.screenY, vra.field_b.secondButton.width, vra.field_b.secondButton.height, GetUseNiceTrails.field_q, GetDebrisMax.field_o, qc.field_q, qc.field_q);
           MissionGenerationDataFactory.field_b = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
