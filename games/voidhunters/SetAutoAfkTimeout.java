@@ -10,39 +10,39 @@ final class SetAutoAfkTimeout extends ConsoleCommand {
     static float[] field_p;
     static String field_r;
 
-    final static asb a(boolean param0, boolean param1, int param2, boolean param3, int param4, int param5) {
+    final static ResourceArchive a(boolean param0, boolean param1, int param2, boolean param3, int param4, int param5) {
         try {
           Object var6 = null;
           Object var7 = null;
           CachedArchiveProvider var8 = null;
-          asb stackIn_15_0 = null;
+          ResourceArchive stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
             if (gia.field_k.field_d != null) {
-              GpuNativeHeap.field_e = new gdb(gia.field_k.field_d, 5200, 0);
+              GpuNativeHeap.field_e = new BufferedFile(gia.field_k.field_d, 5200, 0);
               gia.field_k.field_d = null;
-              var6 = new fo(255, GpuNativeHeap.field_e, new gdb(gia.field_k.field_t, 12000, 0), 2097152);
+              var6 = new ArchiveDisk(255, GpuNativeHeap.field_e, new BufferedFile(gia.field_k.field_t, 12000, 0), 2097152);
             }
             var7 = null;
             if (null != GpuNativeHeap.field_e) {
               if (null == btb.field_d) {
-                btb.field_d = new gdb[gia.field_k.field_l.length];
+                btb.field_d = new BufferedFile[gia.field_k.field_l.length];
               }
               if (null == btb.field_d[param4]) {
-                btb.field_d[param4] = new gdb(gia.field_k.field_l[param4], 12000, 0);
+                btb.field_d[param4] = new BufferedFile(gia.field_k.field_l[param4], 12000, 0);
                 gia.field_k.field_l[param4] = null;
               }
-              var7 = new fo(param4, GpuNativeHeap.field_e, btb.field_d[param4], 2097152);
+              var7 = new ArchiveDisk(param4, GpuNativeHeap.field_e, btb.field_d[param4], 2097152);
             }
-            var8 = ho.field_a.getArchiveProvider(param4, 5, (fo) (var6), (fo) (var7), param3);
+            var8 = ho.field_a.getArchiveProvider(param4, 5, (ArchiveDisk) (var6), (ArchiveDisk) (var7), param3);
             if (param1) {
-              var8.b((byte) -82);
+              var8.prefetchAllGroups((byte) -82);
             }
             if (param2 > -48) {
               SetAutoAfkTimeout.a(false, false, 36, false, -48, -32);
             }
-            stackIn_15_0 = new asb(var8, param0, param5);
+            stackIn_15_0 = new ResourceArchive(var8, param0, param5);
             return stackIn_15_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

@@ -117,9 +117,9 @@ abstract class TextureOperation extends IntrusiveNode {
         throw new IllegalStateException("This operation does not have a colour output");
     }
 
-    final static arb a(asb param0, byte param1, asb param2, int param3, int param4) {
+    final static arb a(ResourceArchive param0, byte param1, ResourceArchive param2, int param3, int param4) {
         RuntimeException var5 = null;
-        asb var6 = null;
+        ResourceArchive var6 = null;
         Object stackIn_4_0 = null;
         arb stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -130,11 +130,11 @@ abstract class TextureOperation extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -21) {
-            var6 = (asb) null;
-            TextureOperation.a((asb) null, (byte) 32, (asb) null, -82, 9);
+            var6 = (ResourceArchive) null;
+            TextureOperation.a((ResourceArchive) null, (byte) 32, (ResourceArchive) null, -82, 9);
           }
           if (pa.a(param4, 2, param0, param3)) {
-            stackIn_6_0 = ServerInfo.a(param2.a(param4, param3, (byte) 13), 11);
+            stackIn_6_0 = ServerInfo.a(param2.fetchFile(param4, param3, (byte) 13), 11);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

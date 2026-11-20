@@ -224,7 +224,7 @@ final class cbb {
         return var4;
     }
 
-    final static void a(asb param0, int param1, asb param2) {
+    final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {
         jva var8 = null;
         IndexedSpriteData[] var9 = null;
         IndexedSpriteData[] var10 = null;
@@ -233,7 +233,7 @@ final class cbb {
         IndexedSpriteData[] var6 = null;
         IndexedSpriteData[] var7 = null;
         try {
-          var8 = new jva(param0.a("box_bottom.png", true, ""), (java.awt.Component) ((Object) SetThrusterBindingMoveAndTurnHasOppositeMove.e((byte) 75)));
+          var8 = new jva(param0.fetchNamedFile("box_bottom.png", true, ""), (java.awt.Component) ((Object) SetThrusterBindingMoveAndTurnHasOppositeMove.e((byte) 75)));
           var8.e();
           oaa.field_j = (Sprite) ((Object) var8);
           SetPointDefenceLaserAimarc.field_r = new IndexedSpriteData[138];

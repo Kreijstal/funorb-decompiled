@@ -135,7 +135,7 @@ final class SetBlueprintSaveTime extends ConsoleCommand {
         }
     }
 
-    final static asb a(int param0, int param1) {
+    final static ResourceArchive a(int param0, int param1) {
         if (param1 != 11835) {
           field_o = (String) null;
           if (MissionEventFactory.field_a == null) {

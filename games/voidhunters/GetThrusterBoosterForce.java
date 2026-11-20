@@ -6,7 +6,7 @@ final class GetThrusterBoosterForce extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static caa a(int param0, asb param1, int param2, int param3) {
+    final static caa a(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
         caa stackIn_5_0 = null;
         caa stackIn_7_0 = null;

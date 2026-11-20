@@ -106,7 +106,7 @@ final class bma extends uda {
         this.field_i = true;
     }
 
-    bma(OpenGlGpuToolkit param0, asb param1) {
+    bma(OpenGlGpuToolkit param0, ResourceArchive param1) {
         super(param0);
         int stackIn_7_0 = 0;
         int stackIn_10_1 = 0;
@@ -125,10 +125,10 @@ final class bma extends uda {
         try {
           if (param1 != null &&
             param0.field_Ac) {
-            this.field_p = mha.a(0, param1.a("uw_ground_unlit", true, "gl"), 34336, param0);
-            this.field_k = mha.a(0, param1.a("uw_ground_lit", true, "gl"), 34336, param0);
-            this.field_m = mha.a(0, param1.a("uw_model_unlit", true, "gl"), 34336, param0);
-            this.field_j = mha.a(0, param1.a("uw_model_lit", true, "gl"), 34336, param0);
+            this.field_p = mha.a(0, param1.fetchNamedFile("uw_ground_unlit", true, "gl"), 34336, param0);
+            this.field_k = mha.a(0, param1.fetchNamedFile("uw_ground_lit", true, "gl"), 34336, param0);
+            this.field_m = mha.a(0, param1.fetchNamedFile("uw_model_unlit", true, "gl"), 34336, param0);
+            this.field_j = mha.a(0, param1.fetchNamedFile("uw_model_lit", true, "gl"), 34336, param0);
             stackIn_7_0 = (this.field_j == null) ? 0 : 1;
             if (this.field_k == null) {
               stackIn_10_1 = 0;

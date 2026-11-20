@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetAngularVelocitySustainMax extends ConsoleCommand {
-    static asb field_o;
+    static ResourceArchive field_o;
 
     final static boolean a(String param0, int param1, String param2) {
         String var3 = null;

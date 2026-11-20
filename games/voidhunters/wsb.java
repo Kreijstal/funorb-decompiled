@@ -22,25 +22,25 @@ final class wsb {
         while (this.field_h > this.field_j) {
           var5 = this.field_i[this.field_j];
           var2 = var5;
-          if (!var5.field_f.b((byte) 123)) {
+          if (!var5.field_f.loadIndex((byte) 123)) {
             this.a(var5, 0, (byte) 125);
             return false;
           }
           if (0 <= var5.field_b &&
-            !var5.field_f.c(68, var5.field_b)) {
-            this.a(var2, var5.field_f.a(var5.field_b, 1045), (byte) 118);
+            !var5.field_f.isGroupReady(68, var5.field_b)) {
+            this.a(var2, var5.field_f.getGroupLoadPercent(var5.field_b, 1045), (byte) 118);
             return false;
           }
           if (var5.field_e != null &&
-            !var5.field_f.a(32171, var5.field_e)) {
-            this.a(var2, var5.field_f.a(var5.field_e, -2118), (byte) 25);
+            !var5.field_f.isNamedGroupReady(32171, var5.field_e)) {
+            this.a(var2, var5.field_f.getNamedGroupLoadPercent(var5.field_e, -2118), (byte) 25);
             return false;
           }
           if (var5.field_b < 0 &&
             var5.field_e == null &&
             var5.field_a != null &&
-            !var5.field_f.a(105)) {
-            this.a(var2, var5.field_f.b(-107), (byte) 120);
+            !var5.field_f.loadAllGroups(105)) {
+            this.a(var2, var5.field_f.getLoadPercent(-107), (byte) 120);
             return false;
           }
           this.field_j = this.field_j + 1;
@@ -49,7 +49,7 @@ final class wsb {
           return true;
         }
         var4 = (String) null;
-        this.a((asb) null, (String) null, false, (String) null, (String) null);
+        this.a((ResourceArchive) null, (String) null, false, (String) null, (String) null);
         return true;
     }
 
@@ -66,7 +66,7 @@ final class wsb {
         return -70;
     }
 
-    private final void a(String param0, byte param1, int param2, String param3, String param4, asb param5) {
+    private final void a(String param0, byte param1, int param2, String param3, String param4, ResourceArchive param5) {
         ujb[] var10 = null;
         ujb var9 = null;
         ujb var11 = null;
@@ -79,8 +79,8 @@ final class wsb {
             this.field_i = var10;
           }
           if (param1 != -62) {
-            asb var8 = (asb) null;
-            this.a((String) null, 126, (String) null, (asb) null);
+            ResourceArchive var8 = (ResourceArchive) null;
+            this.a((String) null, 126, (String) null, (ResourceArchive) null);
           }
           var9 = new ujb();
           var11 = var9;
@@ -98,7 +98,7 @@ final class wsb {
         }
     }
 
-    final void a(asb param0, String param1, boolean param2, String param3, String param4) {
+    final void a(ResourceArchive param0, String param1, boolean param2, String param3, String param4) {
         try {
           this.a(param1, (byte) -62, -1, param3, param4, param0);
           if (param2) {
@@ -109,7 +109,7 @@ final class wsb {
         }
     }
 
-    final void a(String param0, int param1, String param2, asb param3) {
+    final void a(String param0, int param1, String param2, ResourceArchive param3) {
         try {
           this.a(param0, (byte) -62, param1, (String) null, param2, param3);
         } catch (RuntimeException runtimeException) {

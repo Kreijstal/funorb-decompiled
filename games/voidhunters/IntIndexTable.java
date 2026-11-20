@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kca {
+final class IntIndexTable {
     static String field_a;
-    private int[] field_b;
+    private int[] entries;
 
     final static int a(int param0, int param1, int param2, int param3, int param4, int param5, String param6, int param7, int param8, int param9, int param10, byte param11, int param12) {
         RuntimeException var13 = null;
@@ -46,7 +46,7 @@ final class kca {
         field_a = null;
     }
 
-    final int a(int param0, int param1) {
+    final int get(int param0, int param1) {
         int var3;
         int var4;
         int var5;
@@ -55,23 +55,23 @@ final class kca {
         var6 = VoidHunters.field_G;
         if (param0 != -123454015) {
           var7 = (String) null;
-          kca.a(114, -24, -99, -33, 59, -105, (String) null, 97, -95, -68, -115, (byte) 21, -117);
+          IntIndexTable.a(114, -24, -99, -33, 59, -105, (String) null, 97, -95, -68, -115, (byte) 21, -117);
         }
-        var3 = (this.field_b.length >> 1) - 1;
+        var3 = (this.entries.length >> 1) - 1;
         var4 = var3 & param1;
         while (true) {
-          var5 = this.field_b[1 + (var4 + var4)];
+          var5 = this.entries[1 + (var4 + var4)];
           if (var5 == -1) {
             return -1;
           }
-          if (param1 == this.field_b[var4 + var4]) {
+          if (param1 == this.entries[var4 + var4]) {
             return var5;
           }
           var4 = var3 & var4 + 1;
         }
     }
 
-    kca(int[] param0) {
+    IntIndexTable(int[] param0) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -86,17 +86,17 @@ final class kca {
           while ((param0.length >> 1) + param0.length >= var2_int) {
             var2_int = var2_int << 1;
           }
-          this.field_b = new int[var2_int + var2_int];
+          this.entries = new int[var2_int + var2_int];
           for (var3 = 0; var3 < var2_int + var2_int; var3++) {
-            this.field_b[var3] = -1;
+            this.entries[var3] = -1;
           }
           for (var3Lifetime1 = 0; param0.length > var3Lifetime1; var3Lifetime1++) {
             var4 = param0[var3Lifetime1] & -1 + var2_int;
-            while (this.field_b[1 + var4 + var4] != -1) {
+            while (this.entries[1 + var4 + var4] != -1) {
               var4 = 1 + var4 & var2_int - 1;
             }
-            this.field_b[var4 + var4] = param0[var3Lifetime1];
-            this.field_b[var4 + var4 + 1] = var3Lifetime1;
+            this.entries[var4 + var4] = param0[var3Lifetime1];
+            this.entries[var4 + var4 + 1] = var3Lifetime1;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

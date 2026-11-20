@@ -73,7 +73,7 @@ abstract class GraphicsToolkit {
 
     abstract void clearDepth();
 
-    final synchronized static GraphicsToolkit create(int param0, asb param1, int param2, int param3, TextureProvider param4, java.awt.Canvas param5, int param6, int param7) {
+    final synchronized static GraphicsToolkit create(int param0, ResourceArchive param1, int param2, int param3, TextureProvider param4, java.awt.Canvas param5, int param6, int param7) {
         RuntimeException var8 = null;
         GraphicsToolkit stackIn_3_0 = null;
         GraphicsToolkit stackIn_7_0 = null;

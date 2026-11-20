@@ -102,7 +102,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetSpinningBladeSpinupSpeed.field_o[35] = SetLaserProjectiles.field_p;
           SetSpinningBladeSpinupSpeed.field_o[37] = lm.field_a;
           SetSpinningBladeSpinupSpeed.field_o[33] = SetBombletSprayProjectileDamage.field_p;
-          SetSpinningBladeSpinupSpeed.field_o[4] = pfa.field_a;
+          SetSpinningBladeSpinupSpeed.field_o[4] = ArchiveDiskWorker.field_a;
           SetSpinningBladeSpinupSpeed.field_o[18] = SetPlayerRepairAmount.field_o;
           SetSpinningBladeSpinupSpeed.field_o[44] = GetPhasedEnergyBeamReload.field_r;
           SetSpinningBladeSpinupSpeed.field_o[24] = grb.field_i;

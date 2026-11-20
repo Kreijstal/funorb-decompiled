@@ -38,7 +38,7 @@ final class SetServerinfoComponentstate extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static Sprite a(int param0, int param1, asb param2, int param3) {
+    final static Sprite a(int param0, int param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_2_0 = null;
         Sprite stackIn_4_0 = null;

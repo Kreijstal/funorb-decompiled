@@ -160,7 +160,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
         }
         discarded$0 = SetShipAimLines.field_p.append((char) var4);
         var5Lifetime1 = 485;
-        var17 = kca.field_a;
+        var17 = IntIndexTable.field_a;
         var16 = EscapePodFactory.a(1, var17);
         var19 = var16;
         if (ow.field_b != 2) {

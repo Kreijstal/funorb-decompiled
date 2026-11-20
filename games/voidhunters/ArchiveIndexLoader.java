@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ArchiveIndexLoader {
-    private pfa field_i;
+    private ArchiveDiskWorker field_i;
     static llb field_a;
     static ServerInfo field_g;
     private java.math.BigInteger signatureModulus;
@@ -10,7 +10,7 @@ final class ArchiveIndexLoader {
     private CachedArchiveProvider[] archiveProviders;
     private java.math.BigInteger signatureExponent;
     private ona field_j;
-    private km field_d;
+    private NetworkArchiveRequest field_d;
     private PacketBuffer masterIndex;
 
     public static void clearSharedReferences(int param0) {
@@ -44,10 +44,10 @@ final class ArchiveIndexLoader {
           }
           this.field_d = this.field_j.a(true, -21, 255, (byte) 0, 255);
         }
-        if (this.field_d.field_n) {
+        if (this.field_d.pending) {
           return false;
         }
-        var10 = new PacketBuffer(this.field_d.a(-94));
+        var10 = new PacketBuffer(this.field_d.getData(-94));
         var10.position = 5;
         var3 = var10.readUnsignedByte((byte) -108);
         var10.position = var10.position + 72 * var3;
@@ -66,7 +66,7 @@ final class ArchiveIndexLoader {
         if (var5.length != 65) {
           throw new RuntimeException();
         }
-        var15 = SetMissileLauncherProjectiles.a((byte) 25, -var13.length + (var10.position - 5), var10.payload, 5);
+        var15 = SetMissileLauncherProjectiles.computeArchiveDigest((byte) 25, -var13.length + (var10.position - 5), var10.payload, 5);
         if (!param0) {
           return true;
         }
@@ -91,21 +91,21 @@ final class ArchiveIndexLoader {
         }
         for (var2 = param0; this.archiveProviders.length > var2; var2++) {
           if (null != this.archiveProviders[var2]) {
-            this.archiveProviders[var2].c(param0 + 0);
+            this.archiveProviders[var2].processQueuedPrefetches(param0 + 0);
           }
         }
         var4 = 0;
         var2Lifetime1 = var4;
         while (var4 < this.archiveProviders.length) {
           if (this.archiveProviders[var4] != null) {
-            this.archiveProviders[var4].b(-83);
+            this.archiveProviders[var4].processBackgroundRequests(-83);
           }
           var4++;
         }
         return;
     }
 
-    final CachedArchiveProvider getArchiveProvider(int param0, int param1, fo param2, fo param3, boolean param4) {
+    final CachedArchiveProvider getArchiveProvider(int param0, int param1, ArchiveDisk param2, ArchiveDisk param3, boolean param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -215,11 +215,11 @@ final class ArchiveIndexLoader {
         }
     }
 
-    ArchiveIndexLoader(ona param0, pfa param1) {
+    ArchiveIndexLoader(ona param0, ArchiveDiskWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    private ArchiveIndexLoader(ona param0, pfa param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private ArchiveIndexLoader(ona param0, ArchiveDiskWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.signatureModulus = param3;
           this.signatureExponent = param2;

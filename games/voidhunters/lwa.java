@@ -4,7 +4,7 @@
 final class lwa extends llb {
     private llb field_wb;
     static String field_vb;
-    static asb field_xb;
+    static ResourceArchive field_xb;
 
     final boolean a(boolean param0, boolean param1) {
         boolean stackIn_9_0 = false;

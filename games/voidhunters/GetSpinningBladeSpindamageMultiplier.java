@@ -24,7 +24,7 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
         ocb.f(-10150);
         if (param0 != -9934) {
           PcmStreamMixer var8 = (PcmStreamMixer) null;
-          GetSpinningBladeSpindamageMultiplier.a((byte) 16, (asb) null, -27, (PcmStreamMixer) null);
+          GetSpinningBladeSpindamageMultiplier.a((byte) 16, (ResourceArchive) null, -27, (PcmStreamMixer) null);
           SetBombletSprayProjectiles.a(-126);
           var2 = GetMassDriverProjectiles.field_q;
           GetMassDriverProjectiles.field_q = vq.field_x.field_e.field_b.field_a;
@@ -172,10 +172,10 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
         }
     }
 
-    final static void a(byte param0, asb param1, int param2, PcmStreamMixer param3) {
+    final static void a(byte param0, ResourceArchive param1, int param2, PcmStreamMixer param3) {
         GetShieldsDamageEnergyConversion.field_p = param2 * SetGrapplingHookRopeBreakLength.e(204) / 1000;
         GetPlayerRepairTime.a(param1, false);
-        km.a(param1, (byte) 36);
+        NetworkArchiveRequest.a(param1, (byte) 36);
         hob.a(param0 ^ 107, param1);
         SetSelfDestructPrepareToggleCooldown.e((byte) -39);
         if (param0 != 55) {

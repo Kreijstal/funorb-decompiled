@@ -3,14 +3,14 @@
  */
 import java.util.*;
 
-abstract class fnb {
+abstract class ArchiveProvider {
     static int field_a;
     static int field_b;
     static Hashtable field_c;
 
-    abstract int a(int param0, boolean param1);
+    abstract int getGroupLoadPercent(int param0, boolean param1);
 
-    abstract byte[] a(int param0, int param1);
+    abstract byte[] fetchGroup(int param0, int param1);
 
     final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         RuntimeException decompiledCaughtException = null;
@@ -28,7 +28,7 @@ abstract class fnb {
         var11 = VoidHunters.field_G;
         try {
           if (param3) {
-            fnb.a(-3, 82, -123, true, 37, 119);
+            ArchiveProvider.a(-3, 82, -123, true, 37, 119);
           }
           if (null != NetworkGameClient.field_y &&
             null != kba.field_a) {
@@ -87,7 +87,7 @@ abstract class fnb {
         field_c = null;
     }
 
-    abstract qp a(byte param0);
+    abstract ArchiveIndex fetchIndex(byte param0);
 
     static {
         field_b = 5120;

@@ -67,7 +67,7 @@ final class GetSelfDestructActivateCooldown extends ConsoleCommand {
 
     final static void a(byte param0, String param1, File param2) {
         try {
-          jma.field_q.put(param1, param2);
+          DiskArchiveRequest.field_q.put(param1, param2);
           int var3_int = 97 / ((63 - param0) / 59);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "td.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

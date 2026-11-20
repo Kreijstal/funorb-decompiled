@@ -57,7 +57,7 @@ final class ik extends IntrusiveNode {
         var2[191] = GetWorldWidthUpshift.field_q;
         var2[56] = kva.field_g;
         var2[154] = pea.field_b;
-        var2[147] = jtb.field_m;
+        var2[147] = ArchiveRequest.field_m;
         var2[144] = voa.field_b;
         var2[195] = SetMissionDebrisDefaultProbability.field_o;
         var2[193] = ComponentBehaviourFactory.field_c;
@@ -232,7 +232,7 @@ final class ik extends IntrusiveNode {
         var2[77] = SetPhasedEnergyBeamPulseFadetime.field_o;
         var2[214] = Particle.field_q;
         var2[6] = GetSpinningBladeAimspeed.field_p;
-        var2[156] = km.field_o;
+        var2[156] = NetworkArchiveRequest.field_o;
         var2[141] = GetMaxShipSize.field_o;
         var2[172] = ConsoleCommandRegistry.field_a;
         var2[126] = GetRepairModePower.field_q;

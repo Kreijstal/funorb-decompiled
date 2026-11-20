@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class BlackBoxRecordingFactory implements GameStateFactory {
-    static pfa field_a;
+    static ArchiveDiskWorker field_a;
 
     final static String a(int param0, int param1, int param2, CharSequence[] param3) {
         int var6_int = 0;

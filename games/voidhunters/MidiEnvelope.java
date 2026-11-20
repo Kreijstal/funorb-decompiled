@@ -3,7 +3,7 @@
  */
 final class MidiEnvelope {
     byte[] amplitudeEnvelope;
-    static asb field_j;
+    static ResourceArchive field_j;
     int decayPitchScale;
     int envelopePitchScale;
     int vibratoSpeed;

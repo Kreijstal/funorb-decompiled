@@ -92,7 +92,7 @@ final class lc {
             try {
               var3 = new java.net.URL(param1.getCodeBase(), param2);
               var3 = ne.a(var3, (byte) -118, param1);
-              qp.a(true, 0, param1, var3.toString());
+              ArchiveIndex.openExternalUrl(true, 0, param1, var3.toString());
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

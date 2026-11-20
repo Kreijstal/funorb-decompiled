@@ -15,7 +15,7 @@ final class wh extends ona {
           int stackIn_78_0 = 0;
           Throwable decompiledCaughtException = null;
           long var2_long = 0L;
-          km var2 = null;
+          NetworkArchiveRequest var2 = null;
           IOException var2_ref = null;
           int var3_int = 0;
           Exception var3 = null;
@@ -30,10 +30,10 @@ final class wh extends ona {
           int var11 = 0;
           long var12 = 0L;
           Object var14 = null;
-          km var14_ref = null;
+          NetworkArchiveRequest var14_ref = null;
           int var15 = 0;
           int var16 = 0;
-          km var2Lifetime1;
+          NetworkArchiveRequest var2Lifetime1;
           var16 = VoidHunters.field_G;
           if (this.field_p != null) {
             var2_long = wt.a(false);
@@ -64,23 +64,23 @@ final class wh extends ona {
           }
           try {
             this.field_p.a((byte) 115);
-            var2 = (km) (this.field_a.a((byte) -54));
+            var2 = (NetworkArchiveRequest) (this.field_a.a((byte) -54));
             while (var2 != null) {
               this.field_e.position = 0;
               this.field_e.writeByte(0, 1);
               this.field_e.writeLong40(117, var2.secondaryKey);
               this.field_p.a(0, this.field_e.payload, this.field_e.payload.length, 0);
               this.field_d.a(var2, -84);
-              var2 = (km) (this.field_a.a(param0 + 1900));
+              var2 = (NetworkArchiveRequest) (this.field_a.a(param0 + 1900));
             }
-            var2Lifetime1 = (km) (this.field_c.a((byte) -54));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.field_c.a((byte) -54));
             while (var2Lifetime1 != null) {
               this.field_e.position = 0;
               this.field_e.writeByte(0, 0);
               this.field_e.writeLong40(100, var2Lifetime1.secondaryKey);
               this.field_p.a(0, this.field_e.payload, this.field_e.payload.length, 0);
               this.field_f.a(var2Lifetime1, -65);
-              var2Lifetime1 = (km) (this.field_c.a(1900));
+              var2Lifetime1 = (NetworkArchiveRequest) (this.field_c.a(1900));
             }
             for (var2_int = param0; var2_int < 100; var2_int++) {
               var3_int = this.field_p.c(0);
@@ -134,24 +134,24 @@ final class wh extends ona {
                       var12 = (long)var7 + ((long)var6 << 32);
                       var14 = null;
                       if (var11 == 0) {
-                        var14_ref = (km) (this.field_d.a((byte) -54));
+                        var14_ref = (NetworkArchiveRequest) (this.field_d.a((byte) -54));
                         while (var14_ref != null) {
                           if (~var14_ref.secondaryKey == ~var12) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (km) (this.field_d.a(1900));
+                          var14_ref = (NetworkArchiveRequest) (this.field_d.a(1900));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (km) (this.field_f.a((byte) -54));
+                        var14_ref = (NetworkArchiveRequest) (this.field_f.a((byte) -54));
                         while (var14_ref != null) {
                           if (var14_ref.secondaryKey == var12) {
                             break;
                           }
-                          var14_ref = (km) (this.field_f.a(1900));
+                          var14_ref = (NetworkArchiveRequest) (this.field_f.a(1900));
                         }
                       }
                       if (var14_ref == null) {
@@ -160,37 +160,37 @@ final class wh extends ona {
                       stackIn_78_0 = (var10 != 0) ? 9 : 5;
                       var15 = stackIn_78_0;
                       this.field_b = var14_ref;
-                      this.field_b.field_p = new PacketBuffer(this.field_b.field_q + var9 + var15);
-                      this.field_b.field_p.writeByte(0, var10);
-                      this.field_b.field_p.writeInt(var9, param0 + 332614536);
+                      this.field_b.buffer = new PacketBuffer(this.field_b.padding + var9 + var15);
+                      this.field_b.buffer.writeByte(0, var10);
+                      this.field_b.buffer.writeInt(var9, param0 + 332614536);
                       this.field_i.position = 0;
                       this.field_b.field_r = 10;
                     }
                   }
                 } else {
-                  var5 = -this.field_b.field_q + this.field_b.field_p.payload.length;
+                  var5 = -this.field_b.padding + this.field_b.buffer.payload.length;
                   var6 = 512 - this.field_b.field_r;
-                  if (var6 > var5 - this.field_b.field_p.position) {
-                    var6 = -this.field_b.field_p.position + var5;
+                  if (var6 > var5 - this.field_b.buffer.position) {
+                    var6 = -this.field_b.buffer.position + var5;
                   }
                   if (var6 > var3_int) {
                     var6 = var3_int;
                   }
-                  this.field_p.a(param0 ^ -126, this.field_b.field_p.position, var6, this.field_b.field_p.payload);
+                  this.field_p.a(param0 ^ -126, this.field_b.buffer.position, var6, this.field_b.buffer.payload);
                   if (this.field_j != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_b.field_p.payload[var7 + this.field_b.field_p.position] = (byte)SetFixedaim.a((int) this.field_b.field_p.payload[var7 + this.field_b.field_p.position], (int) this.field_j);
+                      this.field_b.buffer.payload[var7 + this.field_b.buffer.position] = (byte)SetFixedaim.a((int) this.field_b.buffer.payload[var7 + this.field_b.buffer.position], (int) this.field_j);
                     }
                   }
                   this.field_b.field_r = this.field_b.field_r + var6;
-                  this.field_b.field_p.position = this.field_b.field_p.position + var6;
-                  if (var5 != this.field_b.field_p.position) {
+                  this.field_b.buffer.position = this.field_b.buffer.position + var6;
+                  if (var5 != this.field_b.buffer.position) {
                     if (this.field_b.field_r == 512) {
                       this.field_b.field_r = 0;
                     }
                   } else {
                     this.field_b.unlinkSecondary((byte) -35);
-                    this.field_b.field_n = false;
+                    this.field_b.pending = false;
                     this.field_b = null;
                   }
                 }
@@ -362,12 +362,12 @@ final class wh extends ona {
           String stackIn_28_2 = null;
           Throwable decompiledCaughtException = null;
           Exception var4 = null;
-          km var4_ref = null;
+          NetworkArchiveRequest var4_ref = null;
           IOException var4_ref2 = null;
           RuntimeException var4_ref3 = null;
           Exception var5 = null;
           int var6 = 0;
-          km var4_refLifetime1;
+          NetworkArchiveRequest var4_refLifetime1;
           var6 = VoidHunters.field_G;
           try {
             if (null != this.field_p) {
@@ -385,7 +385,7 @@ final class wh extends ona {
             this.field_b = null;
             this.field_i.position = 0;
             while (true) {
-              var4_ref = (km) (this.field_d.b((byte) 87));
+              var4_ref = (NetworkArchiveRequest) (this.field_d.b((byte) 87));
               if (var4_ref != null) {
                 this.field_a.a(var4_ref, -116);
                 continue;
@@ -393,7 +393,7 @@ final class wh extends ona {
               break;
             }
             while (true) {
-              var4_refLifetime1 = (km) (this.field_f.b((byte) 109));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_f.b((byte) 109));
               if (var4_refLifetime1 != null) {
                 this.field_c.a(var4_refLifetime1, -86);
                 continue;

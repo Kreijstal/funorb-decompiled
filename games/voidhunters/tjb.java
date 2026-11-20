@@ -98,7 +98,7 @@ final class tjb extends llb {
               stackIn_15_1 = var5;
               stackIn_15_2 = lsa.field_f;
               stackIn_16_3 = (param1) ? false : true;
-              jtb.a(stackIn_15_0, stackIn_15_1, stackIn_15_2, stackIn_16_3, waa.field_x);
+              ArchiveRequest.a(stackIn_15_0, stackIn_15_1, stackIn_15_2, stackIn_16_3, waa.field_x);
               GetUseExtraBackground.a(-1);
               SetSalvoRepairTimeMultiplier.a(4907);
             } else {

@@ -81,7 +81,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
           return;
         }
         var2 = 1;
-        var3 = km.field_s;
+        var3 = NetworkArchiveRequest.field_s;
         var15 = var3;
         var3Lifetime1 = var15;
         var15Lifetime1 = var3Lifetime1;
@@ -111,7 +111,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             var16.setAngle(SetMinimapWidth.field_o * 10 % 8192, -82);
             if (vqa.field_g != null &&
               !vqa.field_g.field_N &&
-              vqa.field_g.field_m.b(param0 + 1).world.d(vqa.field_g.field_L, 76) != null) {
+              vqa.field_g.field_m.b(param0 + 1).world.findShipByOwner(vqa.field_g.field_L, 76) != null) {
               var16.setTeam(17704, 1);
               var16.integrateMotion(false, true, (World) null);
               var16.draw(var18, 121, (World) null);
@@ -197,7 +197,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             var19.setAngle(SetMinimapWidth.field_o * 10 % 8192, -82);
             if (vqa.field_g != null &&
               !vqa.field_g.field_N &&
-              vqa.field_g.field_m.b(param0 + 1).world.d(vqa.field_g.field_L, 76) != null) {
+              vqa.field_g.field_m.b(param0 + 1).world.findShipByOwner(vqa.field_g.field_L, 76) != null) {
               var19.setTeam(17704, 1);
             }
             var19.integrateMotion(false, true, (World) null);
@@ -287,7 +287,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
               SetFixedaim.field_o = true;
             }
           } else {
-            if (vqa.field_g.field_m.b(param0 + 1).world.d(vqa.field_g.field_L, 76) != null) {
+            if (vqa.field_g.field_m.b(param0 + 1).world.findShipByOwner(vqa.field_g.field_L, 76) != null) {
               var22.setTeam(17704, 1);
               var22.integrateMotion(false, true, (World) null);
               var22.draw(var24, 121, (World) null);

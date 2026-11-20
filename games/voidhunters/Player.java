@@ -507,7 +507,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
             var9 = (CarouselSlot) null;
             this.a(false, (CarouselSlot) null, -66, -35);
           }
-          var7 = var10.world.d(param1, 92);
+          var7 = var10.world.findShipByOwner(param1, 92);
           if (var7 != null) {
             this.selectedTeam = var7.getTeam((byte) 65);
             return;

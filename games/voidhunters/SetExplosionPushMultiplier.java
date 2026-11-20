@@ -4,7 +4,7 @@
 final class SetExplosionPushMultiplier extends ConsoleCommand {
     static int field_o;
     static int field_p;
-    static asb field_q;
+    static ResourceArchive field_q;
 
     SetExplosionPushMultiplier(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);

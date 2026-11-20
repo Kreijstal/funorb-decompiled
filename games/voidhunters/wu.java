@@ -141,7 +141,7 @@ final class wu extends uda {
         int var6Lifetime1;
         int var5Lifetime2;
         int var6Lifetime2;
-        var2 = kca.field_a;
+        var2 = IntIndexTable.field_a;
         if (var2 == null) {
           var2 = "You";
         }

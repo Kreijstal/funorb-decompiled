@@ -102,18 +102,18 @@ final class gm extends kja {
             if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p != var6Lifetime1 &&
               SetFighterRepairTime.field_q != var6Lifetime1) {
               if (SetArmageddonLength.field_o == var6Lifetime1) {
-                var18 = ps.field_a[2];
+                var18 = ByteStorage.field_a[2];
                 var18.c(var9, var10 - (var18.field_p >> 1), 256);
                 return;
               }
               if (var6Lifetime1 != GetShipPersistence.field_o) {
                 return;
               }
-              var19 = ps.field_a[1];
+              var19 = ByteStorage.field_a[1];
               var19.c(var9, var10 - (var19.field_p >> 1), 256);
               return;
             }
-            var20 = ps.field_a[0];
+            var20 = ByteStorage.field_a[0];
             var11 = var20.field_m << 1;
             var12 = var20.field_n << 1;
             if (this.field_N != null &&
@@ -138,18 +138,18 @@ final class gm extends kja {
           if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p != var6Lifetime1Lifetime1 &&
             SetFighterRepairTime.field_q != var6Lifetime1Lifetime1) {
             if (SetArmageddonLength.field_o == var6Lifetime1Lifetime1) {
-              var22 = ps.field_a[2];
+              var22 = ByteStorage.field_a[2];
               var22.c(var9Lifetime3, var10Lifetime3 - (var22.field_p >> 1), 256);
               return;
             }
             if (var6Lifetime1Lifetime1 != GetShipPersistence.field_o) {
               return;
             }
-            var23 = ps.field_a[1];
+            var23 = ByteStorage.field_a[1];
             var23.c(var9Lifetime3, var10Lifetime3 - (var23.field_p >> 1), 256);
             return;
           }
-          var24 = ps.field_a[0];
+          var24 = ByteStorage.field_a[0];
           var11Lifetime4 = var24.field_m << 1;
           var12Lifetime4 = var24.field_n << 1;
           if (this.field_N == null) {
@@ -185,18 +185,18 @@ final class gm extends kja {
           if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p != var6Lifetime2 &&
             SetFighterRepairTime.field_q != var6Lifetime2) {
             if (SetArmageddonLength.field_o == var6Lifetime2) {
-              var31 = ps.field_a[2];
+              var31 = ByteStorage.field_a[2];
               var31.c(var9Lifetime1, var10Lifetime1 - (var31.field_p >> 1), 256);
               return;
             }
             if (var6Lifetime2 != GetShipPersistence.field_o) {
               return;
             }
-            var32 = ps.field_a[1];
+            var32 = ByteStorage.field_a[1];
             var32.c(var9Lifetime1, var10Lifetime1 - (var32.field_p >> 1), 256);
             return;
           }
-          var33 = ps.field_a[0];
+          var33 = ByteStorage.field_a[0];
           var11Lifetime1 = var33.field_m << 1;
           var12Lifetime1 = var33.field_n << 1;
           if (this.field_N == null) {
@@ -228,7 +228,7 @@ final class gm extends kja {
         var9Lifetime2 = param0 + this.field_g;
         var10Lifetime2 = var36.b(-3, param3, (shb) (this)) + (var36.a((shb) (this), 3).a(29565) >> 1);
         if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p == var6Lifetime3) {
-          var26 = ps.field_a[0];
+          var26 = ByteStorage.field_a[0];
           var11Lifetime2 = var26.field_m << 1;
           var12Lifetime2 = var26.field_n << 1;
           if (this.field_N != null &&
@@ -247,18 +247,18 @@ final class gm extends kja {
         }
         if (SetFighterRepairTime.field_q != var6Lifetime3) {
           if (SetArmageddonLength.field_o == var6Lifetime3) {
-            var27 = ps.field_a[2];
+            var27 = ByteStorage.field_a[2];
             var27.c(var9Lifetime2, var10Lifetime2 - (var27.field_p >> 1), 256);
             return;
           }
           if (var6Lifetime3 != GetShipPersistence.field_o) {
             return;
           }
-          var28 = ps.field_a[1];
+          var28 = ByteStorage.field_a[1];
           var28.c(var9Lifetime2, var10Lifetime2 - (var28.field_p >> 1), 256);
           return;
         }
-        var29 = ps.field_a[0];
+        var29 = ByteStorage.field_a[0];
         var16 = var29;
         var11Lifetime3 = var29.field_m << 1;
         var12Lifetime3 = var29.field_n << 1;

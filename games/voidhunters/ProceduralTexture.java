@@ -10,7 +10,7 @@ final class ProceduralTexture extends DualLinkNode {
     private TextureOperation field_k;
     private TextureOperation field_p;
 
-    final float[] generateFloatRgba(int param0, int param1, TextureProvider param2, boolean param3, asb param4, int param5) {
+    final float[] generateFloatRgba(int param0, int param1, TextureProvider param2, boolean param3, ResourceArchive param4, int param5) {
         int var7_int = 0;
         int var15 = 0;
         int incrementValue$0 = 0;
@@ -141,7 +141,7 @@ final class ProceduralTexture extends DualLinkNode {
         }
     }
 
-    final boolean isReady(int param0, asb param1, TextureProvider param2) {
+    final boolean isReady(int param0, ResourceArchive param1, TextureProvider param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_25_0 = null;
@@ -156,14 +156,14 @@ final class ProceduralTexture extends DualLinkNode {
         try {
           if (GetFighterRepairTime.field_o >= 0) {
             for (var4_int = 0; var4_int < this.field_n.length; var4_int++) {
-              if (!param1.a((byte) 67, this.field_n[var4_int], GetFighterRepairTime.field_o)) {
+              if (!param1.isFileReady((byte) 67, this.field_n[var4_int], GetFighterRepairTime.field_o)) {
                 return false;
               }
             }
           } else {
             var4_int = 0;
             while (var4_int < this.field_n.length) {
-              if (param1.a(this.field_n[var4_int], true)) {
+              if (param1.isSingleFileReady(this.field_n[var4_int], true)) {
                 var4_int++;
                 continue;
               }
@@ -202,7 +202,7 @@ final class ProceduralTexture extends DualLinkNode {
         }
     }
 
-    final int[] generateArgbPixels(int param0, boolean param1, int param2, boolean param3, asb param4, TextureProvider param5, double param6) {
+    final int[] generateArgbPixels(int param0, boolean param1, int param2, boolean param3, ResourceArchive param4, TextureProvider param5, double param6) {
         int var9_int = 0;
         int var16 = 0;
         int incrementValue$0 = 0;
@@ -239,7 +239,7 @@ final class ProceduralTexture extends DualLinkNode {
         try {
           if (param1) {
             var22 = (TextureProvider) null;
-            this.isReady(45, (asb) null, (TextureProvider) null);
+            this.isReady(45, (ResourceArchive) null, (TextureProvider) null);
           }
           nl.field_e = param5;
           GetAngularVelocitySustainMax.field_o = param4;
@@ -348,7 +348,7 @@ final class ProceduralTexture extends DualLinkNode {
         }
     }
 
-    final int[] generateRgbPixels(boolean param0, TextureProvider param1, asb param2, int param3, boolean param4, int param5, double param6, int param7) {
+    final int[] generateRgbPixels(boolean param0, TextureProvider param1, ResourceArchive param2, int param3, boolean param4, int param5, double param6, int param7) {
         int var10_int = 0;
         int[][] dupTemp$0 = null;
         int var19 = 0;

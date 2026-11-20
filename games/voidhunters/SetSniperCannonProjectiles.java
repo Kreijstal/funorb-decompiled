@@ -125,7 +125,7 @@ final class SetSniperCannonProjectiles extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static Sprite a(asb param0, String param1, String param2, boolean param3) {
+    final static Sprite a(ResourceArchive param0, String param1, String param2, boolean param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -139,8 +139,8 @@ final class SetSniperCannonProjectiles extends ConsoleCommand {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param0.b(param2, -124);
-          var5 = param0.a(param3, var4_int, param1);
+          var4_int = param0.getGroupId(param2, -124);
+          var5 = param0.getFileId(param3, var4_int, param1);
           stackIn_1_0 = SetServerinfoComponentstate.a(var4_int, var5, param0, 2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

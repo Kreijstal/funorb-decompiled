@@ -3,13 +3,13 @@
  */
 import java.io.*;
 
-final class fo {
-    private int field_d;
-    private int field_a;
-    private gdb field_c;
-    private gdb field_b;
+final class ArchiveDisk {
+    private int archiveId;
+    private int maxEntrySize;
+    private BufferedFile dataFile;
+    private BufferedFile indexFile;
 
-    private final boolean a(byte[] param0, byte param1, boolean param2, int param3, int param4) {
+    private final boolean writeSectorChain(byte[] param0, byte param1, boolean param2, int param3, int param4) {
         try {
           RuntimeException stackIn_74_0 = null;
           StringBuilder stackIn_74_1 = null;
@@ -31,22 +31,22 @@ final class fo {
           int var16 = 0;
           var16 = VoidHunters.field_G;
           try {
-            var6 = this.field_c;
+            var6 = this.dataFile;
             synchronized (var6) {
               try {
                 if (param2) {
-                  if ((long)(param4 * 6 + 6) > this.field_b.b(0)) {
+                  if ((long)(param4 * 6 + 6) > this.indexFile.length(0)) {
                     return false;
                   }
-                  this.field_b.a(0, (long)(6 * param4));
-                  this.field_b.a(MidiPcmStream.field_N, 6, 0, -30541);
+                  this.indexFile.seek(0, (long)(6 * param4));
+                  this.indexFile.readFully(MidiPcmStream.field_N, 6, 0, -30541);
                   var7_int = (MidiPcmStream.field_N[5] & 255) + (65280 & MidiPcmStream.field_N[4] << 8) + ((255 & MidiPcmStream.field_N[3]) << 16);
                   if (var7_int <= 0 ||
-                    !((this.field_c.b(0) / 520L) >= (long)var7_int)) {
+                    !((this.dataFile.length(0) / 520L) >= (long)var7_int)) {
                     return false;
                   }
                 } else {
-                  var7_int = (int)((this.field_c.b(0) + 519L) / 520L);
+                  var7_int = (int)((this.dataFile.length(0) + 519L) / 520L);
                   if (var7_int == 0) {
                     var7_int = 1;
                   }
@@ -57,8 +57,8 @@ final class fo {
                 MidiPcmStream.field_N[1] = (byte)(param3 >> 8);
                 MidiPcmStream.field_N[3] = (byte)(var7_int >> 16);
                 MidiPcmStream.field_N[4] = (byte)(var7_int >> 8);
-                this.field_b.a(0, (long)(param4 * 6));
-                this.field_b.a(6, 0, (byte) -117, MidiPcmStream.field_N);
+                this.indexFile.seek(0, (long)(param4 * 6));
+                this.indexFile.write(6, 0, (byte) -117, MidiPcmStream.field_N);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -66,10 +66,10 @@ final class fo {
                     boolean decompiledFrameRemainder0 = true;
                     var10 = 0;
                     if (param2) {
-                      this.field_c.a(0, (long)(520 * var7_int));
+                      this.dataFile.seek(0, (long)(520 * var7_int));
                       if (param4 <= 65535) {
                         try {
-                          this.field_c.a(MidiPcmStream.field_N, 8, 0, -30541);
+                          this.dataFile.readFully(MidiPcmStream.field_N, 8, 0, -30541);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -85,7 +85,7 @@ final class fo {
                         var12 = ((MidiPcmStream.field_N[2] & 255) << 8) + (255 & MidiPcmStream.field_N[3]);
                       } else {
                         try {
-                          this.field_c.a(MidiPcmStream.field_N, 10, 0, -30541);
+                          this.dataFile.readFully(MidiPcmStream.field_N, 10, 0, -30541);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -102,9 +102,9 @@ final class fo {
                       }
                       if ((var11 == param4 &&
                         var12 == var9 &&
-                        var13 == this.field_d) &&
+                        var13 == this.archiveId) &&
                         (decompiledFrameRemainder0 = (!(var10 >= 0) ||
-                        !(this.field_c.b(0) / 520L >= (long)var10)))) {
+                        !(this.dataFile.length(0) / 520L >= (long)var10)))) {
                         return false;
                       }
                       if (decompiledFrameRemainder0) {
@@ -112,7 +112,7 @@ final class fo {
                       }
                     }
                     if (0 == var10) {
-                      var10 = (int)((519L + this.field_c.b(0)) / 520L);
+                      var10 = (int)((519L + this.dataFile.length(0)) / 520L);
                       param2 = false;
                       if (0 == var10) {
                         var10++;
@@ -130,18 +130,18 @@ final class fo {
                       MidiPcmStream.field_N[5] = (byte)var9;
                       MidiPcmStream.field_N[0] = (byte)(param4 >> 24);
                       MidiPcmStream.field_N[6] = (byte)(var10 >> 16);
-                      MidiPcmStream.field_N[9] = (byte)this.field_d;
+                      MidiPcmStream.field_N[9] = (byte)this.archiveId;
                       MidiPcmStream.field_N[4] = (byte)(var9 >> 8);
                       MidiPcmStream.field_N[1] = (byte)(param4 >> 16);
                       MidiPcmStream.field_N[2] = (byte)(param4 >> 8);
                       MidiPcmStream.field_N[3] = (byte)param4;
-                      this.field_c.a(0, (long)(var7_int * 520));
-                      this.field_c.a(10, 0, (byte) -120, MidiPcmStream.field_N);
+                      this.dataFile.seek(0, (long)(var7_int * 520));
+                      this.dataFile.write(10, 0, (byte) -120, MidiPcmStream.field_N);
                       var11 = -var8 + param3;
                       if (var11 > 510) {
                         var11 = 510;
                       }
-                      this.field_c.a(var11, var8, (byte) -106, param0);
+                      this.dataFile.write(var11, var8, (byte) -106, param0);
                       var8 = var8 + var11;
                     } else {
                       MidiPcmStream.field_N[3] = (byte)var9;
@@ -149,16 +149,16 @@ final class fo {
                       MidiPcmStream.field_N[0] = (byte)(param4 >> 8);
                       MidiPcmStream.field_N[4] = (byte)(var10 >> 16);
                       MidiPcmStream.field_N[5] = (byte)(var10 >> 8);
-                      MidiPcmStream.field_N[7] = (byte)this.field_d;
+                      MidiPcmStream.field_N[7] = (byte)this.archiveId;
                       MidiPcmStream.field_N[1] = (byte)param4;
                       MidiPcmStream.field_N[2] = (byte)(var9 >> 8);
-                      this.field_c.a(0, (long)(520 * var7_int));
-                      this.field_c.a(8, 0, (byte) -114, MidiPcmStream.field_N);
+                      this.dataFile.seek(0, (long)(520 * var7_int));
+                      this.dataFile.write(8, 0, (byte) -114, MidiPcmStream.field_N);
                       var11 = param3 - var8;
                       if (var11 > 512) {
                         var11 = 512;
                       }
-                      this.field_c.a(var11, var8, (byte) -102, param0);
+                      this.dataFile.write(var11, var8, (byte) -102, param0);
                       var8 = var8 + var11;
                     }
                     var7_int = var10;
@@ -172,7 +172,7 @@ final class fo {
                 decompiledCaughtException = decompiledCaughtParameter2;
                 var7 = (IOException) (Object) decompiledCaughtException;
                 if (param1 > -62) {
-                  this.field_a = 31;
+                  this.maxEntrySize = 31;
                 }
                 return false;
               }
@@ -196,7 +196,7 @@ final class fo {
         }
     }
 
-    final boolean a(int param0, int param1, byte[] param2, int param3) {
+    final boolean write(int param0, int param1, byte[] param2, int param3) {
         Object var5 = null;
         RuntimeException var5_ref = null;
         int var6 = 0;
@@ -207,16 +207,16 @@ final class fo {
         String stackIn_16_2 = null;
         Throwable decompiledCaughtException = null;
         try {
-          var5 = this.field_c;
+          var5 = this.dataFile;
           synchronized (var5) {
             if (0 <= param3 &&
-              param3 <= this.field_a) {
+              param3 <= this.maxEntrySize) {
               if (param1 != 520) {
-                this.a((byte) -30, -43);
+                this.read((byte) -30, -43);
               }
-              var6 = this.a(param2, (byte) -93, true, param3, param0) ? 1 : 0;
+              var6 = this.writeSectorChain(param2, (byte) -93, true, param3, param0) ? 1 : 0;
               if (var6 == 0) {
-                var6 = this.a(param2, (byte) -112, false, param3, param0) ? 1 : 0;
+                var6 = this.writeSectorChain(param2, (byte) -112, false, param3, param0) ? 1 : 0;
               }
               stackIn_10_0 = var6;
             } else {
@@ -239,10 +239,10 @@ final class fo {
     }
 
     public final String toString() {
-        return "" + this.field_d;
+        return "" + this.archiveId;
     }
 
-    final byte[] a(byte param0, int param1) {
+    final byte[] read(byte param0, int param1) {
         try {
           int var16 = 0;
           int incrementValue$2 = 0;
@@ -269,27 +269,27 @@ final class fo {
           Object stackIn_57_0 = null;
           Throwable decompiledCaughtException = null;
           var18 = VoidHunters.field_G;
-          var3_ref = this.field_c;
+          var3_ref = this.dataFile;
           synchronized (var3_ref) {
             try {
-              if ((long)(6 + param1 * 6) > this.field_b.b(0)) {
+              if ((long)(6 + param1 * 6) > this.indexFile.length(0)) {
                 stackIn_3_0 = null;
                 return (byte[]) (stackIn_3_0);
               }
-              this.field_b.a(0, (long)(6 * param1));
-              this.field_b.a(MidiPcmStream.field_N, 6, 0, -30541);
+              this.indexFile.seek(0, (long)(6 * param1));
+              this.indexFile.readFully(MidiPcmStream.field_N, 6, 0, -30541);
               var4_int = (255 & MidiPcmStream.field_N[2]) + (((255 & MidiPcmStream.field_N[0]) << 16) + ((255 & MidiPcmStream.field_N[1]) << 8));
               var5 = (MidiPcmStream.field_N[3] << 16 & 16711680) + (MidiPcmStream.field_N[4] << 8 & 65280) + (MidiPcmStream.field_N[5] & 255);
               if (var4_int < 0) {
                 return null;
               }
-              if (this.field_a < var4_int) {
+              if (this.maxEntrySize < var4_int) {
                 return null;
               }
               if (0 >= var5) {
                 return null;
               }
-              if ((this.field_c.b(0) / 520L) < (long)var5) {
+              if ((this.dataFile.length(0) / 520L) < (long)var5) {
                 return null;
               }
               var6 = new byte[var4_int];
@@ -303,14 +303,14 @@ final class fo {
                 if (var5 == 0) {
                   return null;
                 }
-                this.field_c.a(0, (long)(var5 * 520));
+                this.dataFile.seek(0, (long)(var5 * 520));
                 var9 = var4_int - var7;
                 if (65535 < param1) {
                   var14 = 10;
                   if (var9 > 510) {
                     var9 = 510;
                   }
-                  this.field_c.a(MidiPcmStream.field_N, var9 + var14, 0, -30541);
+                  this.dataFile.readFully(MidiPcmStream.field_N, var9 + var14, 0, -30541);
                   var10 = (255 & MidiPcmStream.field_N[3]) + (((MidiPcmStream.field_N[2] & 255) << 8) + ((MidiPcmStream.field_N[0] & 255) << 24) + ((255 & MidiPcmStream.field_N[1]) << 16));
                   var12 = ((MidiPcmStream.field_N[7] & 255) << 8) + (16711680 & MidiPcmStream.field_N[6] << 16) + (MidiPcmStream.field_N[8] & 255);
                   var13 = MidiPcmStream.field_N[9] & 255;
@@ -320,7 +320,7 @@ final class fo {
                   if (512 < var9) {
                     var9 = 512;
                   }
-                  this.field_c.a(MidiPcmStream.field_N, var14 + var9, 0, -30541);
+                  this.dataFile.readFully(MidiPcmStream.field_N, var14 + var9, 0, -30541);
                   var13 = MidiPcmStream.field_N[7] & 255;
                   var11 = (255 & MidiPcmStream.field_N[3]) + ((MidiPcmStream.field_N[2] & 255) << 8);
                   var12 = (255 & MidiPcmStream.field_N[6]) + ((255 & MidiPcmStream.field_N[4]) << 16) + (65280 & MidiPcmStream.field_N[5] << 8);
@@ -332,13 +332,13 @@ final class fo {
                 if (var8 != var11) {
                   return null;
                 }
-                if (this.field_d != var13) {
+                if (this.archiveId != var13) {
                   return null;
                 }
                 if (var12 < 0) {
                   return null;
                 }
-                if (this.field_c.b(0) / 520L < (long)var12) {
+                if (this.dataFile.length(0) / 520L < (long)var12) {
                   return null;
                 }
                 var15 = var14 + var9;
@@ -366,15 +366,15 @@ final class fo {
         }
     }
 
-    fo(int param0, gdb param1, gdb param2, int param3) {
-        this.field_a = 65000;
-        this.field_c = null;
-        this.field_b = null;
+    ArchiveDisk(int param0, BufferedFile param1, BufferedFile param2, int param3) {
+        this.maxEntrySize = 65000;
+        this.dataFile = null;
+        this.indexFile = null;
         try {
-          this.field_d = param0;
-          this.field_a = param3;
-          this.field_b = param2;
-          this.field_c = param1;
+          this.archiveId = param0;
+          this.maxEntrySize = param3;
+          this.indexFile = param2;
+          this.dataFile = param1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fo.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

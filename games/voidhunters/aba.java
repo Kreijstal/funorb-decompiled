@@ -75,7 +75,7 @@ final class aba {
                 }
               }
               var11 = var14.getParameter((byte) -124, 1);
-              var18 = param6.world.e((byte) -79, var11);
+              var18 = param6.world.getMapZone((byte) -79, var11);
               if (var18 != null) {
                 if (param0.getMissionPhase(8) == 3) {
                   var18.a(32, qpb.a(false, param3, 13894143), param2);

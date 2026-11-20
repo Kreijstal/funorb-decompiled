@@ -20,7 +20,7 @@ final class SetTorpedoProjectileLife extends ConsoleCommand {
           var2.beginBitWrite(-122);
           var1.writeState(var2, -110);
           var2.endBitWrite(32712);
-          asb.a(var2.position, "missions.dat", var2.payload, -107, "");
+          ResourceArchive.writeDevelopmentLevelFile(var2.position, "missions.dat", var2.payload, -107, "");
           GetDebrisThrowable.a(false, "Saved out mission list");
           return;
         }
@@ -32,7 +32,7 @@ final class SetTorpedoProjectileLife extends ConsoleCommand {
         var2Lifetime1.beginBitWrite(-122);
         var1Lifetime1.writeState(var2Lifetime1, -110);
         var2Lifetime1.endBitWrite(32712);
-        asb.a(var2Lifetime1.position, "missions.dat", var2Lifetime1.payload, -107, "");
+        ResourceArchive.writeDevelopmentLevelFile(var2Lifetime1.position, "missions.dat", var2Lifetime1.payload, -107, "");
         GetDebrisThrowable.a(false, "Saved out mission list");
     }
 

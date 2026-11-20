@@ -4,7 +4,7 @@
 final class ppb {
     static ri field_c;
     static String field_d;
-    static asb field_a;
+    static ResourceArchive field_a;
     static PartitionZoneList field_b;
 
     public static void clearSharedReferences(int param0) {
@@ -18,7 +18,7 @@ final class ppb {
     final static byte[] a(Object param0, int param1, boolean param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
-        ps var5 = null;
+        ByteStorage var5 = null;
         byte[] stackIn_6_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_13_0 = null;
@@ -39,11 +39,11 @@ final class ppb {
             stackIn_9_0 = (byte[]) null;
             return stackIn_9_0;
           }
-          if (!(param0 instanceof ps)) {
+          if (!(param0 instanceof ByteStorage)) {
             throw new IllegalArgumentException();
           }
-          var5 = (ps) (param0);
-          stackIn_13_0 = var5.a(param3, -106, param1);
+          var5 = (ByteStorage) (param0);
+          stackIn_13_0 = var5.getRange(param3, -106, param1);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

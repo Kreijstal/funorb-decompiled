@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class jtb extends DualLinkNode {
+abstract class ArchiveRequest extends DualLinkNode {
     boolean field_k;
-    volatile boolean field_n;
+    volatile boolean pending;
     boolean field_l;
     static int field_m;
 
-    abstract byte[] a(int param0);
+    abstract byte[] getData(int param0);
 
-    abstract int e(byte param0);
+    abstract int getLoadPercent(byte param0);
 
-    jtb() {
-        this.field_n = true;
+    ArchiveRequest() {
+        this.pending = true;
     }
 
     final static void a(int param0, int param1, long param2, boolean param3, String param4) {
@@ -24,7 +24,7 @@ abstract class jtb extends DualLinkNode {
           gi.field_a = param0;
           if (param3) {
             String var7 = (String) null;
-            jtb.a(50, -52, 121L, false, (String) null);
+            ArchiveRequest.a(50, -52, 121L, false, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jtb.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');

@@ -41,7 +41,7 @@ final class MissionBuilderFactory implements GameStateFactory {
           }
           var8 = param0.d(85);
           while (var8.field_f == 0) {
-            gdb.b(127, 10L);
+            BufferedFile.sleep(127, 10L);
           }
           if (2 == var8.field_f) {
             stackIn_10_0 = new fm[]{};

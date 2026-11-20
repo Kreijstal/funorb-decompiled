@@ -59,13 +59,13 @@ final class dla {
     }
 
     final static String c(int param0) {
-        if (null == kca.field_a) {
+        if (null == IntIndexTable.field_a) {
           return "";
         }
         if (param0 <= 106) {
           field_d = 106;
         }
-        return kca.field_a;
+        return IntIndexTable.field_a;
     }
 
     final void a(boolean param0, byte param1) {
@@ -102,11 +102,11 @@ final class dla {
         var3 = this.field_b.a(true, GetBombletSprayEnergyUsed.field_p.width) - this.field_b.a(true, 0);
         var4 = this.field_b.a(0, GetBombletSprayEnergyUsed.field_p.height) - this.field_b.a(0, 0);
         if (var3 != this.field_f.getWidth((byte) -122)) {
-          this.field_f.a(var3, (byte) 113);
+          this.field_f.setWidth(var3, (byte) 113);
           this.field_f.e(var4, 0);
         } else {
           if (this.field_f.m(1) != var4) {
-            this.field_f.a(var3, (byte) 113);
+            this.field_f.setWidth(var3, (byte) 113);
             this.field_f.e(var4, 0);
           }
         }
@@ -194,8 +194,8 @@ final class dla {
         var4 = new MessageLog();
         this.field_f.a(1799937864, true, var4, var16, var3, this.field_a, var16);
         this.field_a = this.field_a + 1;
-        if (this.field_f.f(0, param0 - 13766) == 0 ||
-          this.field_f.f(1, -13766) == 0) {
+        if (this.field_f.countTeamShips(0, param0 - 13766) == 0 ||
+          this.field_f.countTeamShips(1, -13766) == 0) {
           var5 = this.field_f.getShips(1000);
           var6 = 0;
           var7_int = 1;
@@ -339,7 +339,7 @@ final class dla {
         this.field_b = new lta();
         var1 = this.field_b.a(true, GetBombletSprayEnergyUsed.field_p.width) - this.field_b.a(true, 0);
         var2 = this.field_b.a(0, GetBombletSprayEnergyUsed.field_p.height) - this.field_b.a(0, 0);
-        this.field_f.a(var1, (byte) -93);
+        this.field_f.setWidth(var1, (byte) -93);
         this.field_f.e(var2, 0);
         var3 = new Random();
         if (null != es.field_b &&

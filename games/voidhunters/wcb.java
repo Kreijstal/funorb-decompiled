@@ -47,14 +47,14 @@ final class wcb extends uda {
         this.field_e = (Direct3DToolkit) null;
     }
 
-    wcb(Direct3DToolkit param0, asb param1, rga param2) {
+    wcb(Direct3DToolkit param0, ResourceArchive param1, rga param2) {
         super(param0);
         this.field_f = param2;
         this.field_e = param0;
         if (param1 != null &&
           this.field_f.c((byte) 60) &&
           (65535 & this.field_e.field_Hc.VertexShaderVersion) >= 257) {
-          this.field_g = this.field_e.field_Mc.createVertexShader(param1.a("transparent_water", true, "dx"));
+          this.field_g = this.field_e.field_Mc.createVertexShader(param1.fetchNamedFile("transparent_water", true, "dx"));
         } else {
           this.field_g = null;
         }

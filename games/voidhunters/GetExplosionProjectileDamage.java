@@ -4,7 +4,7 @@
 final class GetExplosionProjectileDamage extends ConsoleCommand {
     static boolean field_o;
 
-    final static caa[] a(int param0, String param1, String param2, asb param3) {
+    final static caa[] a(int param0, String param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -20,8 +20,8 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           var4_int = 3 % ((param0 + 36) / 49);
-          var5 = param3.b(param1, -80);
-          var6 = param3.a(true, var5, param2);
+          var5 = param3.getGroupId(param1, -80);
+          var6 = param3.getFileId(true, var5, param2);
           stackIn_1_0 = SpecialOrderSubmessageFactory.a(var5, (byte) 104, var6, param3);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

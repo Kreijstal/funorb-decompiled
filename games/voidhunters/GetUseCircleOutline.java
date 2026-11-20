@@ -6,7 +6,7 @@ final class GetUseCircleOutline extends ConsoleCommand {
     static int field_p;
     static volatile int field_q;
 
-    final static void a(boolean param0, asb param1, asb param2, asb param3, boolean param4) {
+    final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, boolean param4) {
         try {
           GetBombletSprayPushMultiplier.field_p = gi.a("", (byte) 110);
           GetBombletSprayPushMultiplier.field_p.a(7861, param4);
@@ -55,8 +55,8 @@ final class GetUseCircleOutline extends ConsoleCommand {
     public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 != -47) {
-          asb var2 = (asb) null;
-          GetUseCircleOutline.a(true, (asb) null, (asb) null, (asb) null, false);
+          ResourceArchive var2 = (ResourceArchive) null;
+          GetUseCircleOutline.a(true, (ResourceArchive) null, (ResourceArchive) null, (ResourceArchive) null, false);
         }
     }
 

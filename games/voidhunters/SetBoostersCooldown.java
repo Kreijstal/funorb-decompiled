@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetBoostersCooldown extends ConsoleCommand {
-    final static asb a(byte param0, int param1) {
+    final static ResourceArchive a(byte param0, int param1) {
         int var2 = 59 / ((7 - param0) / 45);
         if (lwa.field_xb != null) {
           return lwa.field_xb;

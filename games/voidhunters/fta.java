@@ -21,7 +21,7 @@ final class fta extends uda {
         }
     }
 
-    fta(Direct3DToolkit param0, asb param1) {
+    fta(Direct3DToolkit param0, ResourceArchive param1) {
         super(param0);
         int stackIn_6_0 = 0;
         int stackIn_9_1 = 0;
@@ -32,10 +32,10 @@ final class fta extends uda {
         this.field_m = param0;
         if (param1 != null &&
           257 <= (this.field_m.field_Hc.VertexShaderVersion & 65535)) {
-          this.field_e = this.field_m.field_Mc.createVertexShader(param1.a("uw_ground_unlit", true, "dx"));
-          this.field_l = this.field_m.field_Mc.createVertexShader(param1.a("uw_ground_lit", true, "dx"));
-          this.field_i = this.field_m.field_Mc.createVertexShader(param1.a("uw_model_unlit", true, "dx"));
-          this.field_g = this.field_m.field_Mc.createVertexShader(param1.a("uw_model_lit", true, "dx"));
+          this.field_e = this.field_m.field_Mc.createVertexShader(param1.fetchNamedFile("uw_ground_unlit", true, "dx"));
+          this.field_l = this.field_m.field_Mc.createVertexShader(param1.fetchNamedFile("uw_ground_lit", true, "dx"));
+          this.field_i = this.field_m.field_Mc.createVertexShader(param1.fetchNamedFile("uw_model_unlit", true, "dx"));
+          this.field_g = this.field_m.field_Mc.createVertexShader(param1.fetchNamedFile("uw_model_lit", true, "dx"));
           stackIn_6_0 = (null == this.field_g) ? 0 : 1;
           stackIn_9_1 = (null == this.field_e) ? 0 : 1;
           stackIn_12_2 = (null == this.field_l) ? 0 : 1;

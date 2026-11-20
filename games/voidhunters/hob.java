@@ -56,10 +56,10 @@ final class hob extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, asb param1) {
+    final static void a(int param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
-        Sprite var2 = new Sprite(param1.a("", true, "final_frame.jpg"), (java.awt.Component) ((Object) igb.field_a));
+        Sprite var2 = new Sprite(param1.fetchNamedFile("", true, "final_frame.jpg"), (java.awt.Component) ((Object) igb.field_a));
         if (param0 <= 23) {
           return;
         }

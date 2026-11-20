@@ -1,30 +1,30 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class km extends jtb {
-    PacketBuffer field_p;
+final class NetworkArchiveRequest extends ArchiveRequest {
+    PacketBuffer buffer;
     int field_r;
     static int field_o;
-    byte field_q;
+    byte padding;
     static String field_s;
 
     public static void clearSharedReferences(byte param0) {
         field_s = null;
         if (param0 != 114) {
-          km.clearSharedReferences((byte) -103);
+          NetworkArchiveRequest.clearSharedReferences((byte) -103);
         }
     }
 
-    final byte[] a(int param0) {
+    final byte[] getData(int param0) {
         int var2;
-        if (this.field_n) {
+        if (this.pending) {
           throw new RuntimeException();
         }
-        if (this.field_p.position < this.field_p.payload.length - this.field_q) {
+        if (this.buffer.position < this.buffer.payload.length - this.padding) {
           throw new RuntimeException();
         }
         var2 = 9 / ((17 - param0) / 58);
-        return this.field_p.payload;
+        return this.buffer.payload;
     }
 
     final static void e(int param0) {
@@ -35,7 +35,7 @@ final class km extends jtb {
         }
     }
 
-    final static void a(asb param0, byte param1) {
+    final static void a(ResourceArchive param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
         wma var5 = null;
@@ -52,7 +52,7 @@ final class km extends jtb {
         int var4Lifetime1;
         var7 = VoidHunters.field_G;
         try {
-          var8 = new IsaacPacketBuffer(param0.a("", true, "logo.fo3d"));
+          var8 = new IsaacPacketBuffer(param0.fetchNamedFile("", true, "logo.fo3d"));
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) -87);
           var10.beginBitRead(-23497);
@@ -94,7 +94,7 @@ final class km extends jtb {
 
     final static void f(byte param0) {
         if (param0 != -119) {
-          km.clearSharedReferences((byte) 33);
+          NetworkArchiveRequest.clearSharedReferences((byte) 33);
         }
         if (GetSpinningBladeAimspeed.field_q == 10) {
           SpawnChoice.b(param0 ^ -108);
@@ -108,17 +108,17 @@ final class km extends jtb {
         dga.field_a = true;
     }
 
-    km() {
+    NetworkArchiveRequest() {
     }
 
-    final int e(byte param0) {
-        if (null == this.field_p) {
+    final int getLoadPercent(byte param0) {
+        if (null == this.buffer) {
           return 0;
         }
         if (param0 != -4) {
           return -96;
         }
-        return this.field_p.position * 100 / (this.field_p.payload.length - this.field_q);
+        return this.buffer.position * 100 / (this.buffer.payload.length - this.padding);
     }
 
     static {

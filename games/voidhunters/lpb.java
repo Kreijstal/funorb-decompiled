@@ -32,7 +32,7 @@ final class lpb implements Runnable {
           }
           if (this.field_g != null) {
             while (this.field_g.field_f == 0) {
-              gdb.b(-94, 1L);
+              BufferedFile.sleep(-94, 1L);
             }
             if (this.field_g.field_f == 1) {
               try {

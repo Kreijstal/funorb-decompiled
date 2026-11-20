@@ -22,7 +22,7 @@ final class hma {
         }
     }
 
-    final static Sprite[] a(String param0, int param1, asb param2, String param3) {
+    final static Sprite[] a(String param0, int param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -37,9 +37,9 @@ final class hma {
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = param2.b(param0, -112);
+          var4_int = param2.getGroupId(param0, -112);
           var6 = -104 / ((-47 - param1) / 40);
-          var5 = param2.a(true, var4_int, param3);
+          var5 = param2.getFileId(true, var4_int, param3);
           stackIn_1_0 = MapClearanceArea.a(var5, (byte) 75, param2, var4_int);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

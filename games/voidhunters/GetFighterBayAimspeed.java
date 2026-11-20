@@ -29,7 +29,7 @@ final class GetFighterBayAimspeed extends ConsoleCommand {
         }
     }
 
-    final static ngb a(int param0, String param1, asb param2, asb param3, String param4) {
+    final static ngb a(int param0, String param1, ResourceArchive param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -48,8 +48,8 @@ final class GetFighterBayAimspeed extends ConsoleCommand {
           if (param0 != 0) {
             field_o = (String) null;
           }
-          var5_int = param2.b(param1, -127);
-          var6 = param2.a(true, var5_int, param4);
+          var5_int = param2.getGroupId(param1, -127);
+          var6 = param2.getFileId(true, var5_int, param4);
           stackIn_3_0 = GetMissionTerrainAsteroidProbability.a(320, var6, param3, var5_int, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

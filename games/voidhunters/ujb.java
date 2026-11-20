@@ -9,7 +9,7 @@ final class ujb {
     static int field_h;
     String field_e;
     int field_b;
-    asb field_f;
+    ResourceArchive field_f;
     static String field_d;
     static int field_c;
 

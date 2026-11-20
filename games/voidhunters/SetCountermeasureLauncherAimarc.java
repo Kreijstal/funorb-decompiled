@@ -3,7 +3,7 @@
  */
 final class SetCountermeasureLauncherAimarc extends ConsoleCommand {
     static Sprite[] field_p;
-    static gdb field_r;
+    static BufferedFile field_r;
     static String field_o;
     static String field_q;
     static String field_s;

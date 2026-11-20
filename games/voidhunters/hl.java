@@ -205,7 +205,7 @@ final class hl extends uda {
         this.field_e = (Direct3DToolkit) null;
     }
 
-    hl(Direct3DToolkit param0, asb param1, rga param2) {
+    hl(Direct3DToolkit param0, ResourceArchive param1, rga param2) {
         super(param0);
         boolean stackIn_9_1 = false;
         this.field_e = param0;
@@ -234,8 +234,8 @@ final class hl extends uda {
           this.field_g = null;
           return;
         }
-        this.field_g = this.field_e.field_Mc.createVertexShader(param1.a("environment_mapped_water_v", true, "dx"));
-        this.field_h = this.field_e.field_Mc.createPixelShader(param1.a("environment_mapped_water_f", true, "dx"));
+        this.field_g = this.field_e.field_Mc.createVertexShader(param1.fetchNamedFile("environment_mapped_water_v", true, "dx"));
+        this.field_h = this.field_e.field_Mc.createPixelShader(param1.fetchNamedFile("environment_mapped_water_f", true, "dx"));
         stackIn_9_1 = (null != this.field_g) && (null != this.field_h) && (this.field_i.b((byte) 107));
         this.field_j = stackIn_9_1;
     }

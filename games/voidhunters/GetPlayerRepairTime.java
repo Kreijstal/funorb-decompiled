@@ -64,13 +64,13 @@ final class GetPlayerRepairTime extends ConsoleCommand {
         }
     }
 
-    final static void a(asb param0, boolean param1) {
+    final static void a(ResourceArchive param0, boolean param1) {
         VorbisSample var2 = null;
         try {
-          VorbisSample.decodeSetup(param0.a("", true, "headers.packvorbis"));
+          VorbisSample.decodeSetup(param0.fetchNamedFile("", true, "headers.packvorbis"));
           if (param1) {
-            asb var3 = (asb) null;
-            GetPlayerRepairTime.a((asb) null, false);
+            ResourceArchive var3 = (ResourceArchive) null;
+            GetPlayerRepairTime.a((ResourceArchive) null, false);
           }
           var2 = VorbisSample.loadByName(param0, "jagex logo2.packvorbis", "");
           var2.decodeFully();

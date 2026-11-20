@@ -2,18 +2,18 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class fcb implements oob {
-    private asb field_d;
+    private ResourceArchive field_d;
     private SoundCache field_c;
-    private asb field_e;
-    private asb field_i;
-    private asb field_j;
-    private asb field_l;
-    private asb field_f;
-    private asb field_h;
-    private asb field_b;
-    private asb field_m;
-    private asb field_k;
-    private asb field_a;
+    private ResourceArchive field_e;
+    private ResourceArchive field_i;
+    private ResourceArchive field_j;
+    private ResourceArchive field_l;
+    private ResourceArchive field_f;
+    private ResourceArchive field_h;
+    private ResourceArchive field_b;
+    private ResourceArchive field_m;
+    private ResourceArchive field_k;
+    private ResourceArchive field_a;
     static String field_g;
 
     final void b(byte param0) {
@@ -46,8 +46,8 @@ final class fcb implements oob {
         this.field_a = MissionBuilder.a(1, 25);
         ComponentCollision.a("jpegj", (byte) -52);
         this.field_d = MissionBuilder.a(param0 ^ 0, 26);
-        asb var4 = GetMassDriverReload.field_o;
-        asb var3 = GetShieldsDirectionalArc.field_r;
+        ResourceArchive var4 = GetMassDriverReload.field_o;
+        ResourceArchive var3 = GetShieldsDirectionalArc.field_r;
         ComponentCollision.a("creating request queue", (byte) -84);
         rab.field_m = new wsb(82);
         ComponentCollision.a("requesting basic common graphics group", (byte) -68);
@@ -70,7 +70,7 @@ final class fcb implements oob {
         rab.field_m.a(GetBombletSprayProjectiles.field_o, -1, CarouselSlotFactory.field_a, this.field_h);
         ComponentCollision.a("requesting basic graphics", (byte) -108);
         if (param0 != 1) {
-          this.field_a = (asb) null;
+          this.field_a = (ResourceArchive) null;
         }
         rab.field_m.a(this.field_i, drb.field_k, false, "basic", SetTorpedoProjectileOndamageParticles.field_o);
         ComponentCollision.a("requesting jpeg graphics", (byte) -87);
@@ -93,8 +93,8 @@ final class fcb implements oob {
         int var5 = 0;
         int var7 = 0;
         int var8;
-        asb var11;
-        asb var12;
+        ResourceArchive var11;
+        ResourceArchive var12;
         Object var3;
         ArchiveTextureProvider var4;
         Sprite[][] var9;
@@ -329,7 +329,7 @@ final class fcb implements oob {
         }
         if (this.field_f != null) {
           ComponentCollision.a("Loading huffman wordpack", (byte) -123);
-          spb.a((byte) -22, new dqb(this.field_f.a("huffman", true, "")));
+          spb.a((byte) -22, new dqb(this.field_f.fetchNamedFile("huffman", true, "")));
           this.field_f = null;
           MidiNote.resetFrameTiming(2096);
           return false;

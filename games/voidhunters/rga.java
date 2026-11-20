@@ -46,9 +46,9 @@ final class rga {
             var20 = var23;
             var19 = var20;
             var3 = var19;
-            ti.field_c = EscapePodFactory.a(false, var23, -12445);
+            ti.field_c = EscapePodFactory.storeBytes(false, var23, -12445);
           }
-          var24 = ffb.a(false, ti.field_c, true);
+          var24 = ffb.extractBytes(false, ti.field_c, true);
           var21 = var24;
           var18 = var21;
           var3Lifetime1 = var18;
@@ -139,9 +139,9 @@ final class rga {
             }
             return;
           }
-          var17 = ffb.a(false, PlayerVote.field_b, true);
+          var17 = ffb.extractBytes(false, PlayerVote.field_b, true);
           this.field_d = this.field_h.a(128, 16, var17, wh.field_o, 128, -16539);
-          var18 = ffb.a(false, GetPointDefenceLaserRandomness.field_q, true);
+          var18 = ffb.extractBytes(false, GetPointDefenceLaserRandomness.field_q, true);
           this.field_h.a(128, 16, var18, wh.field_o, 128, -16539);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -249,7 +249,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
           field_e = false;
           return;
         }
-        ifa.field_g[10] = !vqa.field_g.field_h ? SetBlueprintSaveTime.field_o : gdb.field_d;
+        ifa.field_g[10] = !vqa.field_g.field_h ? SetBlueprintSaveTime.field_o : BufferedFile.field_d;
         if (param0 <= -76) {
           return;
         }

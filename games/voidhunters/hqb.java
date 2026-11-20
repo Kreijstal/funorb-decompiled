@@ -358,7 +358,7 @@ final class hqb {
                     }
                     or.a(0);
                   } else {
-                    km.e(1);
+                    NetworkArchiveRequest.e(1);
                   }
                 }
               }

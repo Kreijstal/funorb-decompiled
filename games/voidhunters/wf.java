@@ -283,7 +283,7 @@ final class wf {
             var8 = SpawnChoiceFactory.field_b.toUpperCase();
             if (SetTorpedoProjectiles.field_o == null ||
               null == vqa.field_g ||
-              null == vqa.field_g.field_m.b(1).world.d(vqa.field_g.field_L, 107)) {
+              null == vqa.field_g.field_m.b(1).world.findShipByOwner(vqa.field_g.field_L, 107)) {
               var9 = 1;
             }
           }
@@ -642,7 +642,7 @@ final class wf {
                                                         if (vqa.field_g != null &&
                                                           wh.field_n <= 0 && (!ArchiveIndexLoader.field_g.copyToClipboardHidden ||
                                                           ssa.b(2))) {
-                                                          var10 = vqa.field_g.field_m.b(1).world.d(vqa.field_g.field_L, 93);
+                                                          var10 = vqa.field_g.field_m.b(1).world.findShipByOwner(vqa.field_g.field_L, 93);
                                                           if (var10 != null) {
                                                             if (SetTorpedoProjectiles.field_o == null) {
                                                               return;
@@ -694,7 +694,7 @@ final class wf {
                                                             SetTorpedoProjectiles.field_o.a((byte) -45, (java.awt.datatransfer.Transferable) ((Object) var13_ref));
                                                             wh.field_n = 100;
                                                             var4 = 1;
-                                                            qp.a(true, 0, MissionList.b((byte) -92), var20);
+                                                            ArchiveIndex.openExternalUrl(true, 0, MissionList.b((byte) -92), var20);
                                                           }
                                                         }
                                                       }

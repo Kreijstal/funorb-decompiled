@@ -89,7 +89,7 @@ final class wca extends mfb {
         if (param0 != 2769) {
           return -80;
         }
-        return jtb.field_m;
+        return ArchiveRequest.field_m;
     }
 
     static {

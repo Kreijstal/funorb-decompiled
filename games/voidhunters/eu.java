@@ -71,7 +71,7 @@ final class eu extends ev {
         this.field_g = param0;
     }
 
-    final static void a(eab param0, byte param1, asb param2) {
+    final static void a(eab param0, byte param1, ResourceArchive param2) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;

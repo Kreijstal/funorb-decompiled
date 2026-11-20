@@ -49,7 +49,7 @@ final class SetLaserEnergyUsed extends ConsoleCommand {
 
     final static int e(byte param0) {
         int var1 = 57 % ((param0 - 65) / 52);
-        return SetBombletSprayProjectileOndamageParticles.e((byte) 96) - se.a(false) / 2;
+        return SetBombletSprayProjectileOndamageParticles.e((byte) 96) - DirectByteStorage.a(false) / 2;
     }
 
     static {

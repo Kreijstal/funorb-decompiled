@@ -912,7 +912,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                 var16Lifetime1Lifetime1 = 1342177280;
               }
               var17_ref_int____ = var47.field_w;
-              if (0 != asb.field_f) {
+              if (0 != ResourceArchive.field_f) {
                 if (var17_ref_int____ != null) {
                   stackIn_74_0 = (var47.field_m) ? 1 : 0;
                 } else {
@@ -937,7 +937,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                   c.a(var24Lifetime1, var23Lifetime1Lifetime1, var21Lifetime1, var22Lifetime1Lifetime1, -16777216, var12);
                 }
               }
-              if (asb.field_f == 1 &&
+              if (ResourceArchive.field_f == 1 &&
                 var17_ref_int____ != null) {
                 for (var19Lifetime1Lifetime1 = 0; var19Lifetime1Lifetime1 < var17_ref_int____.length; var19Lifetime1Lifetime1++) {
                   var20_ref_int__ = GetLaserBeamProjectileDamage.field_p;

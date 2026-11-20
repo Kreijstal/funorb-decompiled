@@ -7,11 +7,11 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
     final static TextureOperation a(boolean param0, int param1) {
         int var2;
         int var3;
-        asb var4;
+        ResourceArchive var4;
         var3 = VoidHunters.field_G;
         if (param0) {
-          var4 = (asb) null;
-          SetPhasedEnergyBeamProjectiles.a(true, (java.awt.Canvas) null, -80, (TextureProvider) null, (asb) null, 58);
+          var4 = (ResourceArchive) null;
+          SetPhasedEnergyBeamProjectiles.a(true, (java.awt.Canvas) null, -80, (TextureProvider) null, (ResourceArchive) null, 58);
         }
         var2 = param1;
         if (0 == var2) {
@@ -137,7 +137,7 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
         return null;
     }
 
-    final static GraphicsToolkit a(boolean param0, java.awt.Canvas param1, int param2, TextureProvider param3, asb param4, int param5) {
+    final static GraphicsToolkit a(boolean param0, java.awt.Canvas param1, int param2, TextureProvider param3, ResourceArchive param4, int param5) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;

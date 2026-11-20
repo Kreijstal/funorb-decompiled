@@ -263,7 +263,7 @@ final class waa extends dqa implements jpb, oo {
         }
     }
 
-    final static MusicPatch a(asb param0, byte param1, int param2) {
+    final static MusicPatch a(ResourceArchive param0, byte param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -274,7 +274,7 @@ final class waa extends dqa implements jpb, oo {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param0.c((byte) 9, param2);
+          var5 = param0.fetchSingleFile((byte) 9, param2);
           var3 = var5;
           if (var5 == null) {
             return null;
@@ -311,8 +311,8 @@ final class waa extends dqa implements jpb, oo {
           param0.attachToHardpoint(1, 15, new ShipComponent(15));
           param0.attachToHardpoint(param1 ^ 18633, 14, new ShipComponent(15));
           if (param1 != 18632) {
-            asb var3 = (asb) null;
-            waa.a((asb) null, (byte) -43, -58);
+            ResourceArchive var3 = (ResourceArchive) null;
+            waa.a((ResourceArchive) null, (byte) -43, -58);
           }
           param0.attachToHardpoint(param1 - 18631, 5, new ShipComponent(13));
           param0.attachToHardpoint(1, 6, new ShipComponent(13));

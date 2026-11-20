@@ -33,7 +33,7 @@ final class SetMomentOfInertiaPerpointCalcDownshift extends ConsoleCommand {
         }
     }
 
-    final static String a(int param0, asb param1, String param2, String param3) {
+    final static String a(int param0, ResourceArchive param1, String param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         String stackIn_2_0 = null;
@@ -47,12 +47,12 @@ final class SetMomentOfInertiaPerpointCalcDownshift extends ConsoleCommand {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!param1.b((byte) 100)) {
+          if (!param1.loadIndex((byte) 100)) {
             stackIn_2_0 = (String) (param2);
             return stackIn_2_0;
           }
           var4_int = 110 / ((param0 - 72) / 43);
-          stackIn_4_0 = param3 + " - " + param1.b(-124) + "%";
+          stackIn_4_0 = param3 + " - " + param1.getLoadPercent(-124) + "%";
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -84,7 +84,7 @@ final class SetMomentOfInertiaPerpointCalcDownshift extends ConsoleCommand {
         field_o = null;
         if (param0 <= 71) {
           String var2 = (String) null;
-          SetMomentOfInertiaPerpointCalcDownshift.a(-36, (asb) null, (String) null, (String) null);
+          SetMomentOfInertiaPerpointCalcDownshift.a(-36, (ResourceArchive) null, (String) null, (String) null);
         }
     }
 

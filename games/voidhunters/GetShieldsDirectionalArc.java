@@ -4,7 +4,7 @@
 final class GetShieldsDirectionalArc extends ConsoleCommand {
     static llb field_o;
     static String field_q;
-    static asb field_r;
+    static ResourceArchive field_r;
     static int field_p;
 
     public static void clearSharedReferences(int param0) {

@@ -17,8 +17,8 @@ final class pa {
           var3.writeShort(param2, true);
           return;
         }
-        asb var4 = (asb) null;
-        pa.a(-92, -5, (asb) null, 15);
+        ResourceArchive var4 = (ResourceArchive) null;
+        pa.a(-92, -5, (ResourceArchive) null, 15);
         var3Lifetime1 = RequestNewestBlackboxRecording.field_p;
         var3Lifetime1.writeIsaacByte(24335, param0);
         var3Lifetime1.writeByte(0, 3);
@@ -41,7 +41,7 @@ final class pa {
         }
     }
 
-    final static boolean a(int param0, int param1, asb param2, int param3) {
+    final static boolean a(int param0, int param1, ResourceArchive param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -53,7 +53,7 @@ final class pa {
           if (param1 != 2) {
             pa.clearSharedReferences(36);
           }
-          var5 = param2.a(param0, param3, (byte) 13);
+          var5 = param2.fetchFile(param0, param3, (byte) 13);
           var4 = var5;
           if (var5 == null) {
             return false;

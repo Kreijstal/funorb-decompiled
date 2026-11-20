@@ -43,7 +43,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
         }
     }
 
-    final static void a(byte[] param0, int param1, int param2, asb param3, String[] param4, String[][] param5, Sprite[][] param6, int param7, Sprite[][] param8, String[][] param9, String[] param10, byte[] param11, int param12, String[] param13, int[] param14) {
+    final static void a(byte[] param0, int param1, int param2, ResourceArchive param3, String[] param4, String[][] param5, Sprite[][] param6, int param7, Sprite[][] param8, String[][] param9, String[] param10, byte[] param11, int param12, String[] param13, int[] param14) {
         cna[] array$0 = null;
         cna[] array$1 = null;
         cna[] array$2 = null;

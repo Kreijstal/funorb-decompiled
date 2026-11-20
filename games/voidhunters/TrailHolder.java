@@ -182,7 +182,7 @@ final class TrailHolder implements DiffableState {
         try {
           var9 = GetTorpedoAimarc.field_o.a(var5, -119);
           SetCountermeasureLauncherProjectiles.field_p = var9.a(80);
-          if (uja.field_a.equals(kca.field_a)) {
+          if (uja.field_a.equals(IntIndexTable.field_a)) {
             stackIn_26_0 = null;
           } else {
             stackIn_26_0 = var9.field_n;

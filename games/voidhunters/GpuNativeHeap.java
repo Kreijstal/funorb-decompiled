@@ -3,7 +3,7 @@
  */
 final class GpuNativeHeap extends GraphicsHeap {
     jaclib.memory.heap.NativeHeap heap;
-    static gdb field_e;
+    static BufferedFile field_e;
 
     final void deallocate(boolean param0) {
         this.heap.deallocate();

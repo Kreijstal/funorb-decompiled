@@ -217,7 +217,7 @@ abstract class iw extends bl {
           }
           var4 = var14.readUnsignedByte((byte) -118);
           if (var4 != 0) {
-            SetAudioRangeCutoff.field_o[0] = kca.field_a;
+            SetAudioRangeCutoff.field_o[0] = IntIndexTable.field_a;
             var5 = var3.field_g;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
               SetAudioRangeCutoff.field_o[var6_int] = var14.readString(param0 + 37);

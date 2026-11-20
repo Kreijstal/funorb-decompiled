@@ -37,7 +37,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
           }
           var5 = param0.d((byte) -27, this.bodyId);
           var3 = var5;
-          var4 = param0.e((byte) -126, this.zoneId);
+          var4 = param0.getMapZone((byte) -126, this.zoneId);
           if (var3 != null &&
             var4 != null) {
             stackIn_5_0 = new WorldPoint[]{new WorldPoint(var5.getX(false), var5.getY((byte) 124)), new WorldPoint(var4.x, var4.y)};
@@ -174,7 +174,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
           if (param1 <= 16) {
             this.zoneId = 118;
           }
-          var4 = param0.e((byte) -74, this.zoneId);
+          var4 = param0.getMapZone((byte) -74, this.zoneId);
           if (var4 == null) {
             stackIn_6_0 = (int[]) (param2);
             return stackIn_6_0;
@@ -305,7 +305,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
               if (var7 == var8) {
                 return;
               }
-              if (null == param0.e((byte) -99, var8)) {
+              if (null == param0.getMapZone((byte) -99, var8)) {
                 var8 = var8 + var5_int;
                 continue;
               }
@@ -429,7 +429,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
         RuntimeException decompiledCaughtException = null;
         var9 = VoidHunters.field_G;
         try {
-          var4 = param2.e((byte) -121, this.zoneId);
+          var4 = param2.getMapZone((byte) -121, this.zoneId);
           if (var4 == null) {
             return false;
           }

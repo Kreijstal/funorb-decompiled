@@ -1,52 +1,52 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class se extends ps {
-    private java.nio.ByteBuffer field_c;
+final class DirectByteStorage extends ByteStorage {
+    private java.nio.ByteBuffer buffer;
     static String field_b;
 
-    se() {
+    DirectByteStorage() {
     }
 
     final static int a(boolean param0) {
         if (param0) {
-          se.clearSharedReferences(-109);
+          DirectByteStorage.clearSharedReferences(-109);
           return 495;
         }
         return 495;
     }
 
-    final void a(byte param0, byte[] param1) {
+    final void setBytes(byte param0, byte[] param1) {
         if (param0 != -28) {
           return;
         }
         try {
-          this.field_c = java.nio.ByteBuffer.allocateDirect(param1.length);
-          this.field_c.position(0);
-          this.field_c.put(param1);
+          this.buffer = java.nio.ByteBuffer.allocateDirect(param1.length);
+          this.buffer.position(0);
+          this.buffer.put(param1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "se.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final byte[] a(int param0, int param1, int param2) {
+    final byte[] getRange(int param0, int param1, int param2) {
         byte[] var5 = new byte[param0];
         byte[] var4 = var5;
-        this.field_c.position(param2);
+        this.buffer.position(param2);
         if (param1 <= -97) {
-          this.field_c.get(var5, 0, param0);
+          this.buffer.get(var5, 0, param0);
           return var5;
         }
-        se.a(false);
-        this.field_c.get(var5, 0, param0);
+        DirectByteStorage.a(false);
+        this.buffer.get(var5, 0, param0);
         return var5;
     }
 
-    final byte[] b(int param0) {
-        byte[] var3 = new byte[this.field_c.capacity()];
+    final byte[] getBytes(int param0) {
+        byte[] var3 = new byte[this.buffer.capacity()];
         byte[] var2 = var3;
-        this.field_c.position(0);
-        this.field_c.get(var3);
+        this.buffer.position(0);
+        this.buffer.get(var3);
         if (param0 == 3) {
           return var3;
         }

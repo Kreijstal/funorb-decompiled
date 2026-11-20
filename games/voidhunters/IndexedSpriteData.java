@@ -12,16 +12,16 @@ final class IndexedSpriteData {
     int field_g;
     int field_c;
 
-    final static IndexedSpriteData a(asb param0, int param1, int param2) {
-        byte[] var3 = param0.a(param1, param2, (byte) 13);
+    final static IndexedSpriteData a(ResourceArchive param0, int param1, int param2) {
+        byte[] var3 = param0.fetchFile(param1, param2, (byte) 13);
         if (var3 == null) {
           return null;
         }
         return IndexedSpriteData.a(var3)[0];
     }
 
-    final static IndexedSpriteData b(asb param0, String param1, String param2) {
-        byte[] var3 = param0.a(param2, true, param1);
+    final static IndexedSpriteData b(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.fetchNamedFile(param2, true, param1);
         if (var3 == null) {
           return null;
         }
@@ -271,8 +271,8 @@ final class IndexedSpriteData {
         return var3;
     }
 
-    final static IndexedSpriteData a(asb param0, int param1) {
-        byte[] var2 = param0.c((byte) 9, param1);
+    final static IndexedSpriteData a(ResourceArchive param0, int param1) {
+        byte[] var2 = param0.fetchSingleFile((byte) 9, param1);
         if (var2 == null) {
           return null;
         }
@@ -283,8 +283,8 @@ final class IndexedSpriteData {
         return this.field_e + this.field_g + this.field_d;
     }
 
-    final static IndexedSpriteData[] a(asb param0, String param1, String param2) {
-        byte[] var3 = param0.a(param2, true, param1);
+    final static IndexedSpriteData[] a(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.fetchNamedFile(param2, true, param1);
         if (var3 == null) {
           return null;
         }

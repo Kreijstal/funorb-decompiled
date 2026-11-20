@@ -18,7 +18,7 @@ final class chb {
         int var5Lifetime1;
         int var6Lifetime1;
         if (param0 == 0) {
-          var3 = qp.a(param2, param0 ^ 2, param1);
+          var3 = ArchiveIndex.a(param2, param0 ^ 2, param1);
           if (var3 != null) {
             GetLagStandardDeviationOut.field_o.a(false, 115);
             var4 = GetLagStandardDeviationOut.field_o;
@@ -33,7 +33,7 @@ final class chb {
           return;
         }
         field_a = 126;
-        var3Lifetime1 = qp.a(param2, param0 ^ 2, param1);
+        var3Lifetime1 = ArchiveIndex.a(param2, param0 ^ 2, param1);
         if (var3Lifetime1 != null) {
           GetLagStandardDeviationOut.field_o.a(false, 115);
           var4Lifetime1 = GetLagStandardDeviationOut.field_o;

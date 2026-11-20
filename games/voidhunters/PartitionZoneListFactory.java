@@ -51,7 +51,7 @@ final class PartitionZoneListFactory implements GameStateFactory {
             stackIn_3_0 = -1;
             return stackIn_3_0;
           }
-          if (jma.field_q.containsKey(param0)) {
+          if (DiskArchiveRequest.field_q.containsKey(param0)) {
             stackIn_7_0 = 100;
             return stackIn_7_0;
           }
@@ -61,15 +61,15 @@ final class PartitionZoneListFactory implements GameStateFactory {
             return stackIn_10_0;
           }
           var3 = SetSniperCannonEnergyUsed.field_p + var10;
-          if (!SetExplosionPushMultiplier.field_q.a((byte) -107, "", var3)) {
+          if (!SetExplosionPushMultiplier.field_q.containsNamedFile((byte) -107, "", var3)) {
             stackIn_14_0 = -1;
             return stackIn_14_0;
           }
-          if (!SetExplosionPushMultiplier.field_q.a(32171, var3)) {
-            stackIn_17_0 = SetExplosionPushMultiplier.field_q.a(var3, -2118);
+          if (!SetExplosionPushMultiplier.field_q.isNamedGroupReady(32171, var3)) {
+            stackIn_17_0 = SetExplosionPushMultiplier.field_q.getNamedGroupLoadPercent(var3, -2118);
             return stackIn_17_0;
           }
-          var14 = SetExplosionPushMultiplier.field_q.a("", param1, var3);
+          var14 = SetExplosionPushMultiplier.field_q.fetchNamedFile("", param1, var3);
           var12 = var14;
           var4 = var12;
           var5 = null;

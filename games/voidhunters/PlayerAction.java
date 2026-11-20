@@ -388,7 +388,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
           if (this.specialOrderSubmessage != null &&
             this.specialOrderSubmessage.spawnchoice != null) {
             if (var5.spawnChoice == this.specialOrderSubmessage.spawnchoice.choice) {
-              var9.world.g(-1, this.field_k);
+              var9.world.resetRespawnTimer(-1, this.field_k);
               return;
             }
             var5.spawnChoice = this.specialOrderSubmessage.spawnchoice.choice;
@@ -413,7 +413,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
           }
           if (this.specialOrderSubmessage != null &&
             this.specialOrderSubmessage.blueprint != null) {
-            var11 = var9.world.d(this.field_k, 80);
+            var11 = var9.world.findShipByOwner(this.field_k, 80);
             if (var11 != null) {
               var11.setTargetBlueprint((byte) 34, this.specialOrderSubmessage.blueprint);
               return;
@@ -427,7 +427,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
               var10.recalculateMassProperties((byte) 119);
               var10.chassis.configureThrusterBindings((byte) 0, (ShipBody) (var10));
               var5.savedShip = var10;
-              var9.world.g(param1 - 1, this.field_k);
+              var9.world.resetRespawnTimer(param1 - 1, this.field_k);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var7 = (Exception) (Object) decompiledCaughtException;

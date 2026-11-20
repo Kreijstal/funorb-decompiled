@@ -38,7 +38,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
         GrapplingHook var23 = null;
         int var17Lifetime1;
         try {
-          var23 = param4.h(this.hookId, -125);
+          var23 = param4.getGrapplingHookById(this.hookId, -125);
           if (param6 < 73) {
             this.ropeLength = 55;
           }
@@ -191,7 +191,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
             this.targetRopeLength = this.ropeLength;
             return;
           }
-          var25 = param8.h(this.hookId, -103);
+          var25 = param8.getGrapplingHookById(this.hookId, -103);
           if (var25 != null) {
             if (-1 != var25.l((byte) 123)) {
               qba.a(20382, var25.getX(false), 13, var25.getY((byte) -69), 50);
@@ -274,7 +274,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
         int var20Lifetime1;
         var32 = VoidHunters.field_G;
         try {
-          var33 = param1.h(this.hookId, -126);
+          var33 = param1.getGrapplingHookById(this.hookId, -126);
           if (var33 == null) {
             if (this.hookId != -1) {
               this.hookId = -1;
@@ -437,7 +437,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
             var4 = (World) null;
             this.a(-123, (lta) null, (int[]) null, -18, (World) null, 75, 40);
           }
-          var3 = param0.h(this.hookId, 101);
+          var3 = param0.getGrapplingHookById(this.hookId, 101);
           if (var3 != null) {
             var3.n(620);
             this.hookId = -1;

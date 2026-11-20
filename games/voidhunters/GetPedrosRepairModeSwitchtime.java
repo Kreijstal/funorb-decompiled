@@ -95,11 +95,11 @@ final class GetPedrosRepairModeSwitchtime extends ConsoleCommand {
               GetAutozoomAmountMultiply.field_o.a(116);
             }
             if (BlackBoxRecordingFactory.field_a != null) {
-              BlackBoxRecordingFactory.field_a.a(23474);
+              BlackBoxRecordingFactory.field_a.shutdown(23474);
             }
             if (GpuNativeHeap.field_e != null) {
               try {
-                GpuNativeHeap.field_e.a(true);
+                GpuNativeHeap.field_e.close(true);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
@@ -109,7 +109,7 @@ final class GetPedrosRepairModeSwitchtime extends ConsoleCommand {
               for (var1_int = 0; var1_int < btb.field_d.length; var1_int++) {
                 if (null != btb.field_d[var1_int]) {
                   try {
-                    btb.field_d[var1_int].a(true);
+                    btb.field_d[var1_int].close(true);
                   } catch (java.io.IOException decompiledCaughtParameter1) {
                     decompiledCaughtException = decompiledCaughtParameter1;
                     var2 = (IOException) (Object) decompiledCaughtException;

@@ -121,8 +121,8 @@ final class GetMissilesTopSpeed extends ConsoleCommand {
             }
             if (SetCountermeasureLauncherAimarc.field_r != null) {
               try {
-                SetCountermeasureLauncherAimarc.field_r.a(0, 0L);
-                SetCountermeasureLauncherAimarc.field_r.a(-112, var6);
+                SetCountermeasureLauncherAimarc.field_r.seek(0, 0L);
+                SetCountermeasureLauncherAimarc.field_r.readFully(-112, var6);
                 for (var3_int = 0; var3_int < 24; var3_int++) {
                   if (0 == var6[var3_int]) {
                     continue;

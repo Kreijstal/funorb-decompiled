@@ -83,7 +83,7 @@ final class ts {
           }
           while (var3_int < 50) {
             if (param1.field_n.peekEvent() != null) {
-              gdb.b(-84, 1L);
+              BufferedFile.sleep(-84, 1L);
               var3_int++;
               continue;
             }

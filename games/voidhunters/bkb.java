@@ -13,7 +13,7 @@ abstract class bkb {
 
     final static Mission a(int param0) {
         World var10 = new World(1);
-        var10.a(var10.getWidth((byte) -122) / 2, (byte) -66);
+        var10.setWidth(var10.getWidth((byte) -122) / 2, (byte) -66);
         var10.e(var10.m(1) / 2, 0);
         var10.b(-1, (byte) 23);
         int var2 = 131072;

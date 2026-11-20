@@ -4,7 +4,7 @@
 final class bd {
     static String field_a;
 
-    final static void a(int param0, int[] param1, asb param2, asb param3, caa[] param4) {
+    final static void a(int param0, int[] param1, ResourceArchive param2, ResourceArchive param3, caa[] param4) {
         Sprite[] dupTemp$0 = null;
         Sprite[] dupTemp$1 = null;
         Sprite[] dupTemp$2 = null;
@@ -110,8 +110,8 @@ final class bd {
           pa.field_a.field_gb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "heading"), (byte) 55);
           cwa.field_c = new llb(0L, (llb) null);
           cwa.field_c.field_gb = GetFighterVision.a(false, false, 4210752, 24436, 8421504, 120);
-          asb.field_a = new llb(0L, (llb) null);
-          asb.field_a.field_gb = uwa.a(6316128, 114, 1, 6316128, 113, 3);
+          ResourceArchive.field_a = new llb(0L, (llb) null);
+          ResourceArchive.field_a.field_gb = uwa.a(6316128, 114, 1, 6316128, 113, 3);
           GetDebrisMax.field_o = new llb(0L, (llb) null);
           GetDebrisMax.field_o.field_gb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "popup"), (byte) 111);
           var12 = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "popup_mouseover"), (byte) 106);

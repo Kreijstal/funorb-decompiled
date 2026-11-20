@@ -49,12 +49,12 @@ final class MissionFactory implements GameStateFactory {
           if (null == PlayerVote.field_b) {
             var1 = new ft();
             var3 = var1.a(128, 16, false, 128);
-            PlayerVote.field_b = EscapePodFactory.a(false, var3, -12445);
+            PlayerVote.field_b = EscapePodFactory.storeBytes(false, var3, -12445);
           }
           if (null == GetPointDefenceLaserRandomness.field_q) {
             var1_ref = new ola();
             var4 = var1_ref.a(128, 16, -15281, 128);
-            GetPointDefenceLaserRandomness.field_q = EscapePodFactory.a(false, var4, -12445);
+            GetPointDefenceLaserRandomness.field_q = EscapePodFactory.storeBytes(false, var4, -12445);
           }
           return;
         }
@@ -62,12 +62,12 @@ final class MissionFactory implements GameStateFactory {
         if (null == PlayerVote.field_b) {
           var1Lifetime1 = new ft();
           var3Lifetime1 = var1Lifetime1.a(128, 16, false, 128);
-          PlayerVote.field_b = EscapePodFactory.a(false, var3Lifetime1, -12445);
+          PlayerVote.field_b = EscapePodFactory.storeBytes(false, var3Lifetime1, -12445);
         }
         if (null == GetPointDefenceLaserRandomness.field_q) {
           var1_refLifetime1 = new ola();
           var4Lifetime1 = var1_refLifetime1.a(128, 16, -15281, 128);
-          GetPointDefenceLaserRandomness.field_q = EscapePodFactory.a(false, var4Lifetime1, -12445);
+          GetPointDefenceLaserRandomness.field_q = EscapePodFactory.storeBytes(false, var4Lifetime1, -12445);
         }
     }
 

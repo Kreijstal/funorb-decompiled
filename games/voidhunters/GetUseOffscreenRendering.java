@@ -37,7 +37,7 @@ final class GetUseOffscreenRendering extends ConsoleCommand {
         }
     }
 
-    final static boolean a(int param0, asb param1) {
+    final static boolean a(int param0, ResourceArchive param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -46,7 +46,7 @@ final class GetUseOffscreenRendering extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == -20230) {
-            stackIn_4_0 = param1.a(78);
+            stackIn_4_0 = param1.loadAllGroups(78);
             return stackIn_4_0;
           }
           return true;

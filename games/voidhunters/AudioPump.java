@@ -77,7 +77,7 @@ final class AudioPump implements Runnable {
                   var2.service();
                 }
               }
-              gdb.b(-106, 10L);
+              BufferedFile.sleep(-106, 10L);
               var5 = (Object) null;
               ts.a((byte) 97, this.platform, (Object) null);
             }

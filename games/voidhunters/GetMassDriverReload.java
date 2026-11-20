@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetMassDriverReload extends ConsoleCommand {
-    static asb field_o;
+    static ResourceArchive field_o;
 
     public static void clearSharedReferences(boolean param0) {
         if (!param0) {
-          field_o = (asb) null;
+          field_o = (ResourceArchive) null;
           field_o = null;
           return;
         }

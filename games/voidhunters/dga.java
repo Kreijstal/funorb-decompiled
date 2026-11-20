@@ -7,7 +7,7 @@ final class dga {
     dga(int param0) {
     }
 
-    final static void a(boolean param0, asb param1) {
+    final static void a(boolean param0, ResourceArchive param1) {
         class $CfrPartitionedBody {
             RuntimeException stackIn_2596_0;
             StringBuilder stackIn_2596_1;
@@ -17,9 +17,9 @@ final class dga {
             RuntimeException var2_ref;
             int var3;
             boolean param0;
-            asb param1;
+            ResourceArchive param1;
             boolean finished;
-            $CfrPartitionedBody(boolean initialParam0, asb initialParam1) {
+            $CfrPartitionedBody(boolean initialParam0, ResourceArchive initialParam1) {
                 this.param0 = initialParam0;
                 this.param1 = initialParam1;
                 this.stackIn_2596_0 = null;
@@ -2341,7 +2341,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mp_acceptrematch_unrated", 23100);
                 if (var2 != null) {
-                  gdb.field_d = qpa.a((byte) -125, var2);
+                  BufferedFile.field_d = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mp_cancelrematch", 23100);
                 if (null != var2) {

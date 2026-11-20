@@ -114,9 +114,9 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
         }
     }
 
-    final static asb a(int param0, int param1, int param2, boolean param3, boolean param4) {
+    final static ResourceArchive a(int param0, int param1, int param2, boolean param3, boolean param4) {
         RuntimeException var5 = null;
-        asb stackIn_4_0 = null;
+        ResourceArchive stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 < 38) {

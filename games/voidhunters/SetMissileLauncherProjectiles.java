@@ -34,7 +34,7 @@ final class SetMissileLauncherProjectiles extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static byte[] a(byte param0, int param1, byte[] param2, int param3) {
+    final static byte[] computeArchiveDigest(byte param0, int param1, byte[] param2, int param3) {
         int var5_int = 0;
         byte[] var4 = null;
         int var7 = 0;

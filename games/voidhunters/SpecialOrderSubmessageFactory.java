@@ -4,7 +4,7 @@
 final class SpecialOrderSubmessageFactory implements GameStateFactory {
     static String field_a;
 
-    final static caa[] a(int param0, byte param1, int param2, asb param3) {
+    final static caa[] a(int param0, byte param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         caa[] stackIn_4_0 = null;
@@ -79,8 +79,8 @@ final class SpecialOrderSubmessageFactory implements GameStateFactory {
     public static void clearSharedReferences(boolean param0) {
         field_a = null;
         if (param0) {
-          asb var2 = (asb) null;
-          SpecialOrderSubmessageFactory.a(-49, (byte) -68, 33, (asb) null);
+          ResourceArchive var2 = (ResourceArchive) null;
+          SpecialOrderSubmessageFactory.a(-49, (byte) -68, 33, (ResourceArchive) null);
         }
     }
 

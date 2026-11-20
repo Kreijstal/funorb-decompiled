@@ -6,8 +6,8 @@ import java.io.*;
 final class SoundCache {
     private NodeHashTable pendingMusicSamples;
     static String field_b;
-    private asb soundEffectArchive;
-    private asb musicSampleArchive;
+    private ResourceArchive soundEffectArchive;
+    private ResourceArchive musicSampleArchive;
     private NodeHashTable decodedSamples;
 
     private final PcmSample loadMusicSample(byte param0, int param1, int[] param2, int param3) {
@@ -98,12 +98,12 @@ final class SoundCache {
             var7 = (int[]) null;
             discarded$1 = this.loadSoundEffect(-78, (byte) 66, -88, (int[]) null);
           }
-          var5_int = this.musicSampleArchive.b(param0, -75);
+          var5_int = this.musicSampleArchive.getGroupId(param0, -75);
           if (var5_int < 0) {
             stackIn_4_0 = null;
             return (PcmSample) (stackIn_4_0);
           }
-          var6 = this.musicSampleArchive.a(true, var5_int, param3);
+          var6 = this.musicSampleArchive.getFileId(true, var5_int, param3);
           if (var6 >= 0) {
             stackIn_9_0 = this.loadMusicSample((byte) 123, var6, param1, var5_int);
             return stackIn_9_0;
@@ -167,7 +167,7 @@ final class SoundCache {
               return;
             }
             try {
-              SetCountermeasureLauncherAimarc.field_r = new gdb(cp.field_n.field_o, 64, 0);
+              SetCountermeasureLauncherAimarc.field_r = new BufferedFile(cp.field_n.field_o, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
@@ -304,11 +304,11 @@ final class SoundCache {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.musicSampleArchive.c((byte) 95) == 1) {
+          if (this.musicSampleArchive.getGroupCapacity((byte) 95) == 1) {
             stackIn_3_0 = this.loadMusicSample((byte) 101, param1, param2, 0);
             return stackIn_3_0;
           }
-          if (this.musicSampleArchive.b(param1, param0 - 7069) == 1) {
+          if (this.musicSampleArchive.getGroupFileCapacity(param1, param0 - 7069) == 1) {
             stackIn_7_0 = this.loadMusicSample((byte) 112, 0, param2, param1);
             return stackIn_7_0;
           }
@@ -340,14 +340,14 @@ final class SoundCache {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.soundEffectArchive.c((byte) 68) == 1) {
+          if (this.soundEffectArchive.getGroupCapacity((byte) 68) == 1) {
             stackIn_2_0 = this.loadSoundEffect(0, (byte) -68, param2, param1);
             return stackIn_2_0;
           }
           if (param0 != -16) {
             field_b = (String) null;
           }
-          if (this.soundEffectArchive.b(param2, param0 ^ 6930) != 1) {
+          if (this.soundEffectArchive.getGroupFileCapacity(param2, param0 ^ 6930) != 1) {
             throw new RuntimeException();
           }
           stackIn_8_0 = this.loadSoundEffect(param2, (byte) -93, 0, param1);
@@ -371,7 +371,7 @@ final class SoundCache {
         field_b = null;
     }
 
-    SoundCache(asb param0, asb param1) {
+    SoundCache(ResourceArchive param0, ResourceArchive param1) {
         this.pendingMusicSamples = new NodeHashTable(256);
         this.decodedSamples = new NodeHashTable(256);
         try {

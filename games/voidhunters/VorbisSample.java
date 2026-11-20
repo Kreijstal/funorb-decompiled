@@ -39,14 +39,14 @@ final class VorbisSample extends IntrusiveNode {
     private static VorbisFloor[] floors;
     private byte[] decodedPcm;
 
-    final static VorbisSample load(asb param0, int param1, int param2) {
+    final static VorbisSample load(ResourceArchive param0, int param1, int param2) {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.ensureSetup(param0)) {
-            param0.a((byte) 87, param2, param1);
+            param0.isFileReady((byte) 87, param2, param1);
             return null;
           }
-          byte[] var3 = param0.a(param1, param2, (byte) 13);
+          byte[] var3 = param0.fetchFile(param1, param2, (byte) 13);
           if (var3 == null) {
             return null;
           }
@@ -180,10 +180,10 @@ final class VorbisSample extends IntrusiveNode {
         setupLoaded = true;
     }
 
-    private final static boolean ensureSetup(asb param0) {
+    private final static boolean ensureSetup(ResourceArchive param0) {
         byte[] var1 = null;
         if (!setupLoaded) {
-          var1 = param0.a(0, 0, (byte) 13);
+          var1 = param0.fetchFile(0, 0, (byte) 13);
           if (var1 == null) {
             return false;
           }
@@ -327,14 +327,14 @@ final class VorbisSample extends IntrusiveNode {
         return new PcmSample(this.sampleRate, var1, this.loopStart, this.loopEnd, this.pingPong);
     }
 
-    final static VorbisSample loadByName(asb param0, String param1, String param2) {
+    final static VorbisSample loadByName(ResourceArchive param0, String param1, String param2) {
         try {
           VorbisSample var4_ref = null;
           if (!VorbisSample.ensureSetup(param0)) {
-            param0.a(false, param2, param1);
+            param0.isNamedFileReady(false, param2, param1);
             return null;
           }
-          byte[] var3 = param0.a(param2, true, param1);
+          byte[] var3 = param0.fetchNamedFile(param2, true, param1);
           if (var3 == null) {
             return null;
           }

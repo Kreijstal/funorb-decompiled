@@ -3,8 +3,8 @@
  */
 final class jv {
     static GameStateFactory field_d;
-    private asb field_e;
-    private asb field_a;
+    private ResourceArchive field_e;
+    private ResourceArchive field_a;
     private pfb field_c;
     static int field_b;
     static String field_f;
@@ -19,9 +19,9 @@ final class jv {
           return (rn) null;
         }
         if (param1 >= 32768) {
-          var4 = this.field_e.a(0, 32767 & param1, (byte) 13);
+          var4 = this.field_e.fetchFile(0, 32767 & param1, (byte) 13);
         } else {
-          var4 = this.field_a.a(0, param1, (byte) 13);
+          var4 = this.field_a.fetchFile(0, param1, (byte) 13);
         }
         rn var5 = new rn();
         if (var4 != null) {
@@ -68,7 +68,7 @@ final class jv {
         }
     }
 
-    jv(int param0, asb param1, asb param2) {
+    jv(int param0, ResourceArchive param1, ResourceArchive param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -81,12 +81,12 @@ final class jv {
           this.field_a = param1;
           this.field_e = param2;
           if (this.field_a != null) {
-            this.field_a.b(0, -6942);
+            this.field_a.getGroupFileCapacity(0, -6942);
           }
           if (null == this.field_e) {
             return;
           }
-          this.field_e.b(0, -6942);
+          this.field_e.getGroupFileCapacity(0, -6942);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

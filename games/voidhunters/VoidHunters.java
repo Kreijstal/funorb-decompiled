@@ -574,7 +574,7 @@ public final class VoidHunters extends NetworkGameClient {
             var5 = 0;
           }
           if (var5 != 0) {
-            km.f((byte) -119);
+            NetworkArchiveRequest.f((byte) -119);
           }
         }
     }
@@ -870,7 +870,7 @@ public final class VoidHunters extends NetworkGameClient {
         bi.clearSharedReferences(-19766);
         MouseWheelInput.clearSharedReferences(-25692);
         dma.clearSharedReferences();
-        asb.clearSharedReferences((byte) 112);
+        ResourceArchive.clearSharedReferences((byte) 112);
         PacketBuffer.clearSharedReferences(-38);
         wt.clearSharedReferences(-101);
         tc.clearSharedReferences((byte) 40);
@@ -1007,14 +1007,14 @@ public final class VoidHunters extends NetworkGameClient {
         RemoveEventAction.clearSharedReferences(-125);
         qpa.clearSharedReferences(!param0 ? true : false);
         bc.clearSharedReferences(-22113);
-        gdb.clearSharedReferences(-73);
+        BufferedFile.clearSharedReferences(-73);
         lo.clearSharedReferences(true);
         psb.clearSharedReferences(false);
         oib.clearSharedReferences(124);
         vw.clearSharedReferences((byte) 55);
         wc.clearSharedReferences(-20221);
         ona.clearSharedReferences(125);
-        pfa.clearSharedReferences(63);
+        ArchiveDiskWorker.clearSharedReferences(63);
         ArchiveIndexLoader.clearSharedReferences(5);
         ppb.clearSharedReferences(37);
         pjb.clearSharedReferences((byte) 22);
@@ -1070,7 +1070,7 @@ public final class VoidHunters extends NetworkGameClient {
         PlayerLeave.clearSharedReferences(false);
         PlayerReady.clearSharedReferences((byte) -88);
         hp.clearSharedReferences(false);
-        fnb.clearSharedReferences(-19);
+        ArchiveProvider.clearSharedReferences(-19);
         AudioPump.clearSharedReferences(-11954);
         PlayerVote.clearSharedReferences((byte) -98);
         sa.clearSharedReferences();
@@ -1083,8 +1083,8 @@ public final class VoidHunters extends NetworkGameClient {
         cjb.clearSharedReferences(0);
         bd.clearSharedReferences((byte) -103);
         kea.clearSharedReferences(115);
-        kca.clearSharedReferences((byte) 127);
-        ps.clearSharedReferences(1);
+        IntIndexTable.clearSharedReferences((byte) 127);
+        ByteStorage.clearSharedReferences(1);
         cv.clearSharedReferences();
         dha.clearSharedReferences(53);
         fia.clearSharedReferences((byte) -28);
@@ -1109,8 +1109,8 @@ public final class VoidHunters extends NetworkGameClient {
         AwardVictoryToWinnerAction.clearSharedReferences(0);
         qw.clearSharedReferences(true);
         wh.clearSharedReferences(0);
-        km.clearSharedReferences((byte) 114);
-        jma.clearSharedReferences(100);
+        NetworkArchiveRequest.clearSharedReferences((byte) 114);
+        DiskArchiveRequest.clearSharedReferences(100);
         CachedArchiveProvider.clearSharedReferences((byte) -110);
         SoundInstrument.clearSharedReferences();
         tga.clearSharedReferences(88);
@@ -1166,7 +1166,7 @@ public final class VoidHunters extends NetworkGameClient {
         bk.clearSharedReferences(80);
         vcb.clearSharedReferences((byte) -7);
         ta.clearSharedReferences((byte) -109);
-        se.clearSharedReferences(-27982);
+        DirectByteStorage.clearSharedReferences(-27982);
         ri.clearSharedReferences(41);
         ska.clearSharedReferences(5697);
         bna.clearSharedReferences(!param0 ? true : false);

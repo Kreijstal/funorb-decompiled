@@ -363,7 +363,7 @@ final class ComponentCollision extends IntrusiveNode {
             if (rlb.field_a.field_o != 0) {
               GetTorpedoProjectileDamage.field_o = false;
             }
-            asb.a(param0, SetSpinningBladeSpindamageMultiplier.field_o, false, (byte) -67);
+            ResourceArchive.a(param0, SetSpinningBladeSpindamageMultiplier.field_o, false, (byte) -67);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

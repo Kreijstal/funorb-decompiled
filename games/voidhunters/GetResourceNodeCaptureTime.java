@@ -55,7 +55,7 @@ final class GetResourceNodeCaptureTime extends ConsoleCommand {
         int[] var13 = null;
         var7 = VoidHunters.field_G;
         try {
-          var12 = ps.a(param0, 1);
+          var12 = ByteStorage.decodeBase64(param0, 1);
           var10 = var12;
           var9 = var10;
           var3 = var9;

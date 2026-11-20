@@ -2,8 +2,8 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class btb {
-    static asb field_b;
-    static gdb[] field_d;
+    static ResourceArchive field_b;
+    static BufferedFile[] field_d;
     static String field_c;
     static boolean field_a;
     private static String field_z;

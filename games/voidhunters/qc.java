@@ -257,7 +257,7 @@ abstract class qc implements kd {
 
     abstract void a(int param0);
 
-    final static asb b(int param0) {
+    final static ResourceArchive b(int param0) {
         if (param0 != 0) {
           field_q = (llb) null;
         }

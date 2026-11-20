@@ -215,11 +215,11 @@ final class ef extends mc {
         int var1 = 124 % ((-23 - param0) / 44);
     }
 
-    final static caa a(String param0, String param1, int param2, asb param3) {
+    final static caa a(String param0, String param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
-        asb var6 = null;
+        ResourceArchive var6 = null;
         caa stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -231,11 +231,11 @@ final class ef extends mc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 >= -47) {
-            var6 = (asb) null;
-            ef.a((String) null, (String) null, 4, (asb) null);
+            var6 = (ResourceArchive) null;
+            ef.a((String) null, (String) null, 4, (ResourceArchive) null);
           }
-          var4_int = param3.b(param1, -97);
-          var5 = param3.a(true, var4_int, param0);
+          var4_int = param3.getGroupId(param1, -97);
+          var5 = param3.getFileId(true, var4_int, param0);
           stackIn_3_0 = GetThrusterBoosterForce.a(-32431, param3, var4_int, var5);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

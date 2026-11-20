@@ -5,8 +5,8 @@ final class voa {
     static int field_d;
     static int field_b;
     private pfb field_c;
-    private asb field_e;
-    private asb field_a;
+    private ResourceArchive field_e;
+    private ResourceArchive field_a;
 
     final pi a(int param0, int param1) {
         pi var3;
@@ -20,9 +20,9 @@ final class voa {
         }
         if (param1 < -99) {
           if (32768 > param0) {
-            var4 = this.field_a.a(1, param0, (byte) 13);
+            var4 = this.field_a.fetchFile(1, param0, (byte) 13);
           } else {
-            var4 = this.field_e.a(1, param0 & 32767, (byte) 13);
+            var4 = this.field_e.fetchFile(1, param0 & 32767, (byte) 13);
           }
           var6 = new pi();
           if (var4 != null) {
@@ -36,9 +36,9 @@ final class voa {
         }
         this.field_c = (pfb) null;
         if (32768 > param0) {
-          var4Lifetime1 = this.field_a.a(1, param0, (byte) 13);
+          var4Lifetime1 = this.field_a.fetchFile(1, param0, (byte) 13);
         } else {
-          var4Lifetime1 = this.field_e.a(1, param0 & 32767, (byte) 13);
+          var4Lifetime1 = this.field_e.fetchFile(1, param0 & 32767, (byte) 13);
         }
         var5 = new pi();
         if (var4Lifetime1 != null) {
@@ -51,7 +51,7 @@ final class voa {
         return var5;
     }
 
-    voa(int param0, asb param1, asb param2, rs param3) {
+    voa(int param0, ResourceArchive param1, ResourceArchive param2, rs param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -66,12 +66,12 @@ final class voa {
           this.field_a = param1;
           this.field_e = param2;
           if (this.field_a != null) {
-            this.field_a.b(1, -6942);
+            this.field_a.getGroupFileCapacity(1, -6942);
           }
           if (null == this.field_e) {
             return;
           }
-          this.field_e.b(1, -6942);
+          this.field_e.getGroupFileCapacity(1, -6942);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

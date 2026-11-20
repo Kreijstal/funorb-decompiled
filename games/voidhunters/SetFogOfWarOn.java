@@ -109,7 +109,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_auto_detail(" + SetPhasedEnergyBeamAimspeed.field_q + ")");
         System.out.println("set_debug_line_life(" + SetAutoaim.field_o + ")");
         System.out.println("set_use_filled_polygons(" + SetVariableActionFactory.field_c + ")");
-        System.out.println("set_use_detail_lines(" + asb.field_f + ")");
+        System.out.println("set_use_detail_lines(" + ResourceArchive.field_f + ")");
         System.out.println("set_bloom_threshold_percentage(" + pab.field_m + ")");
         System.out.println("set_bloom_coefficient_percentage(" + oaa.field_i + ")");
         System.out.println("set_autozoom_speed_divide(" + SetMassDriverProjectileDamage.field_o + ")");
@@ -261,7 +261,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_torpedo_projectile_damage(" + voa.field_b + ")");
         System.out.println("set_laser_beam_projectile_damage(" + hrb.field_a + ")");
         System.out.println("set_machine_gun_projectile_damage(" + ServerInfo.field_f + ")");
-        System.out.println("set_sniper_cannon_projectile_damage(" + jtb.field_m + ")");
+        System.out.println("set_sniper_cannon_projectile_damage(" + ArchiveRequest.field_m + ")");
         System.out.println("set_bomblet_spray_projectile_damage(" + GetMissionTerrainAsteroidProbability.field_o + ")");
         System.out.println("set_explosion_projectile_damage(" + pea.field_a + ")");
         System.out.println("set_point_defence_laser_projectile_damage(" + GetAngularForceDownshift.field_q + ")");
@@ -270,7 +270,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_torpedo_projectile_ondamage_particles(" + mc.field_u + ")");
         System.out.println("set_phased_energy_beam_projectile_ondamage_particles(" + pea.field_b + ")");
         System.out.println("set_sniper_cannon_projectile_ondamage_particles(" + GetShipAimLines.field_p + ")");
-        System.out.println("set_bomblet_spray_projectile_ondamage_particles(" + km.field_o + ")");
+        System.out.println("set_bomblet_spray_projectile_ondamage_particles(" + NetworkArchiveRequest.field_o + ")");
         System.out.println("set_explosion_projectile_ondamage_particles(" + GetLaserEnergyUsed.field_r + ")");
         System.out.println("set_point_defence_laser_projectile_ondamage_particles(" + BodyDestroyedConditionFactory.field_b + ")");
         System.out.println("set_mass_driver_energy_used(" + GetPointDefenceLaserAimspeed.field_p + ")");

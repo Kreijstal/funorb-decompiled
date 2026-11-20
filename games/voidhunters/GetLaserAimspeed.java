@@ -70,7 +70,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
             if (0 != var5) {
               var6 = var4_ref.field_i;
               dda.field_d[0].field_b = null;
-              dda.field_d[0].field_a = kca.field_a;
+              dda.field_d[0].field_a = IntIndexTable.field_a;
               var7 = var4_ref.field_g;
               dda.field_d[0].field_c = false;
               for (var8_int = 1; var8_int < var5; var8_int++) {
@@ -112,7 +112,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
                   }
                   if (var21 != null &&
                     SetPhysicsCollisionPhantomForceMultiplier.a((byte) -75, var21)) {
-                    var8[1][var13] = kca.field_a;
+                    var8[1][var13] = IntIndexTable.field_a;
                     var9[1][var13] = null;
                     var34[1][var13] = var22;
                     var13++;

@@ -174,8 +174,8 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
                   GetRepairModeActiveTime.field_o[var8] = qga.field_b.readByte((byte) -114);
                 }
               }
-              kca.field_a = qga.field_b.readString(param3 ^ -14);
-              var13 = (CharSequence) ((Object) kca.field_a);
+              IntIndexTable.field_a = qga.field_b.readString(param3 ^ -14);
+              var13 = (CharSequence) ((Object) IntIndexTable.field_a);
               ffb.field_e = jwa.a(false, var13);
               SetClientSideDragging.field_p = qga.field_b.readUnsignedByte((byte) -94);
               tc.field_c = GetOndamageParticleSpeed.field_o;

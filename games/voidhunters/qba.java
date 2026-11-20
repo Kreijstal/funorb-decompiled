@@ -6,7 +6,7 @@ final class qba extends TextureOperation {
         if (param0 != 20382) {
           return;
         }
-        fnb.a(param4, param3, param1, false, param2, 256);
+        ArchiveProvider.a(param4, param3, param1, false, param2, 256);
     }
 
     final void decodeParameter(int param0, int param1, PacketBuffer param2) {

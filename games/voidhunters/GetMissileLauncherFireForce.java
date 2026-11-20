@@ -37,51 +37,51 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
         }
         if (SetGrapplingHookAimarc.field_p != 0) {
           if (ppb.field_a != null) {
-            if (!ppb.field_a.b((byte) -118)) {
+            if (!ppb.field_a.loadIndex((byte) -118)) {
               return 14;
             }
-            if (!ppb.field_a.a(true, "")) {
+            if (!ppb.field_a.containsNamedGroup(true, "")) {
               return 29;
             }
-            if (!ppb.field_a.a(32171, "")) {
+            if (!ppb.field_a.isNamedGroupReady(32171, "")) {
               return 29;
             }
           }
-          if (!btb.field_b.b((byte) -47)) {
+          if (!btb.field_b.loadIndex((byte) -47)) {
             return 43;
           }
-          if (!btb.field_b.a(32171, "commonui")) {
+          if (!btb.field_b.isNamedGroupReady(32171, "commonui")) {
             return 57;
           }
-          if (!GetSalvoUsesAllEnergy.field_o.b((byte) 124)) {
+          if (!GetSalvoUsesAllEnergy.field_o.loadIndex((byte) 124)) {
             return 71;
           }
-          if (!GetSalvoUsesAllEnergy.field_o.a(32171, "commonui")) {
+          if (!GetSalvoUsesAllEnergy.field_o.isNamedGroupReady(32171, "commonui")) {
             return 80;
           }
-          if (!gdb.field_i.b((byte) -103)) {
+          if (!BufferedFile.field_i.loadIndex((byte) -103)) {
             return 82;
           }
-          if (!gdb.field_i.a(120)) {
+          if (!BufferedFile.field_i.loadAllGroups(120)) {
             return 86;
           }
         } else {
-          if (!btb.field_b.b((byte) 94)) {
+          if (!btb.field_b.loadIndex((byte) 94)) {
             return 20;
           }
-          if (!btb.field_b.a(32171, "commonui")) {
+          if (!btb.field_b.isNamedGroupReady(32171, "commonui")) {
             return 40;
           }
-          if (!GetSalvoUsesAllEnergy.field_o.b((byte) -97)) {
+          if (!GetSalvoUsesAllEnergy.field_o.loadIndex((byte) -97)) {
             return 50;
           }
-          if (!GetSalvoUsesAllEnergy.field_o.a(32171, "commonui")) {
+          if (!GetSalvoUsesAllEnergy.field_o.isNamedGroupReady(32171, "commonui")) {
             return 60;
           }
-          if (!gdb.field_i.b((byte) 127)) {
+          if (!BufferedFile.field_i.loadIndex((byte) 127)) {
             return 70;
           }
-          if (!gdb.field_i.a(54)) {
+          if (!BufferedFile.field_i.loadAllGroups(54)) {
             return 80;
           }
         }
@@ -95,7 +95,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(byte param0, asb param1, BitmapFont param2) {
+    final static void a(byte param0, ResourceArchive param1, BitmapFont param2) {
         int var8 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -122,8 +122,8 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
             gna.a((Throwable) null, "QC1", 0);
             return;
           }
-          param1.field_e = false;
-          param1.field_h = 0;
+          param1.releasePackedGroups = false;
+          param1.fileRetentionMode = 0;
           lnb.field_i = new jv(var3_int, param1, param1);
           GetTorpedoAimarc.field_o = new voa(var3_int, param1, param1, new wk());
           var4 = VariableCondition.d(10);

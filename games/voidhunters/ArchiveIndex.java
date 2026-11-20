@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qp {
-    int[] field_i;
-    kca field_a;
-    kca[] field_p;
-    int field_l;
-    int field_k;
-    int[] field_j;
-    int[] field_m;
-    int[][] field_g;
-    private int field_f;
-    private int[] field_n;
-    int[] field_d;
-    byte[][] field_c;
-    int[] field_h;
-    private int[][] field_o;
-    int field_e;
-    private byte[] field_b;
+final class ArchiveIndex {
+    int[] groupIds;
+    IntIndexTable groupNameLookup;
+    IntIndexTable[] fileNameLookups;
+    int groupCapacity;
+    int crc;
+    int[] groupFileCounts;
+    int[] groupFileCapacities;
+    int[][] fileIds;
+    private int groupCount;
+    private int[] groupNameHashes;
+    int[] groupCrcs;
+    byte[][] groupDigests;
+    int[] groupVersions;
+    private int[][] fileNameHashes;
+    int version;
+    private byte[] digest;
 
-    private final void a(byte param0, byte[] param1) {
+    private final void decode(byte param0, byte[] param1) {
         int dupTemp$0 = 0;
         int dupTemp$1 = 0;
         int[] array$2 = null;
@@ -68,16 +68,16 @@ final class qp {
         int stackIn_137_1Lifetime1;
         var16 = VoidHunters.field_G;
         try {
-          var3 = new PacketBuffer(GetWeaponParticleSpeedDownshift.a(0, param1));
+          var3 = new PacketBuffer(GetWeaponParticleSpeedDownshift.decompressContainer(0, param1));
           var4 = var3.readUnsignedByte((byte) -87);
           if (var4 >= 5 &&
             7 >= var4) {
             if (var4 >= 6) {
-              this.field_e = var3.readInt(106);
+              this.version = var3.readInt(106);
             }
             if (var4 < 6 ||
               var16 != 0) {
-              this.field_e = 0;
+              this.version = 0;
             }
             var5 = var3.readUnsignedByte((byte) -117);
             stackIn_18_0 = (0 == (1 & var5)) ? 0 : 1;
@@ -85,11 +85,11 @@ final class qp {
             stackIn_22_0 = ((var5 & 2) == 0) ? 0 : 1;
             var7 = stackIn_22_0;
             if (var4 < 7) {
-              this.field_f = var3.readUnsignedShort(1869);
+              this.groupCount = var3.readUnsignedShort(1869);
             }
             if (var4 >= 7 ||
               var16 != 0) {
-              this.field_f = var3.readLargeSmart(-24099);
+              this.groupCount = var3.readLargeSmart(-24099);
             }
             boolean decompiledFrameCompleted2 = true;
             boolean decompiledFrameCompleted5 = true;
@@ -100,21 +100,21 @@ final class qp {
             boolean decompiledFrameCompleted7 = true;
             var8 = 0;
             var9 = -1;
-            this.field_i = new int[this.field_f];
+            this.groupIds = new int[this.groupCount];
             if (var4 >= 7) {
               var10 = 0;
-              while (this.field_f > var10) {
+              while (this.groupCount > var10) {
                 dupTemp$0 = var8 + var3.readLargeSmart(-24099);
                 var8 = dupTemp$0;
-                this.field_i[var10] = dupTemp$0;
+                this.groupIds[var10] = dupTemp$0;
                 stackIn_69_0 = var9;
-                stackIn_69_1 = this.field_i[var10];
+                stackIn_69_1 = this.groupIds[var10];
                 if (var16 != 0) {
                   decompiledFrameCompleted7 = false;
                   break;
                 }
                 if (stackIn_69_0 < stackIn_69_1) {
-                  var9 = this.field_i[var10];
+                  var9 = this.groupIds[var10];
                 }
                 var10++;
               }
@@ -126,17 +126,17 @@ final class qp {
               (decompiledFrameCompleted7)) {
               var10 = 0;
               boolean decompiledNaturalLoopExit0 = false;
-              while (!(decompiledNaturalLoopExit0 = (var10 >= this.field_f))) {
+              while (!(decompiledNaturalLoopExit0 = (var10 >= this.groupCount))) {
                 dupTemp$1 = var8 + var3.readUnsignedShort(1869);
                 var8 = dupTemp$1;
-                this.field_i[var10] = dupTemp$1;
-                stackIn_69_0 = this.field_i[var10];
+                this.groupIds[var10] = dupTemp$1;
+                stackIn_69_0 = this.groupIds[var10];
                 stackIn_69_1 = var9;
                 if (var16 != 0) {
                   break;
                 }
                 if (stackIn_69_0 > stackIn_69_1) {
-                  var9 = this.field_i[var10];
+                  var9 = this.groupIds[var10];
                 }
                 var10++;
               }
@@ -147,35 +147,35 @@ final class qp {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted6)) {
               while (stackIn_69_0 < stackIn_69_1) {
-                this.field_d[this.field_i[var10]] = var3.readInt(122);
+                this.groupCrcs[this.groupIds[var10]] = var3.readInt(122);
                 var10++;
                 if (var16 != 0) {
                   decompiledFrameCompleted5 = false;
                   break;
                 }
                 stackIn_69_0 = var10;
-                stackIn_69_1 = this.field_f;
+                stackIn_69_1 = this.groupCount;
               }
               decompiledFrameRemainder1 = !(decompiledFrameCompleted5);
             }
             if ((decompiledFrameRemainder1) &&
               (decompiledFrameCompleted5)) {
-              this.field_l = 1 + var9;
-              this.field_h = new int[this.field_l];
+              this.groupCapacity = 1 + var9;
+              this.groupVersions = new int[this.groupCapacity];
               if (var7 != 0) {
-                this.field_c = new byte[this.field_l][];
+                this.groupDigests = new byte[this.groupCapacity][];
               }
               boolean decompiledFrameCompleted4 = true;
-              this.field_m = new int[this.field_l];
-              this.field_j = new int[this.field_l];
-              this.field_d = new int[this.field_l];
-              this.field_g = new int[this.field_l][];
+              this.groupFileCapacities = new int[this.groupCapacity];
+              this.groupFileCounts = new int[this.groupCapacity];
+              this.groupCrcs = new int[this.groupCapacity];
+              this.fileIds = new int[this.groupCapacity][];
               if (var6 != 0) {
-                this.field_n = new int[this.field_l];
+                this.groupNameHashes = new int[this.groupCapacity];
                 var10 = 0;
                 while (true) {
-                  if (var10 < this.field_l) {
-                    this.field_n[var10] = -1;
+                  if (var10 < this.groupCapacity) {
+                    this.groupNameHashes[var10] = -1;
                     var10++;
                     if (var16 == 0) {
                       continue;
@@ -185,8 +185,8 @@ final class qp {
                   }
                   break;
                 }
-                while (var10 < this.field_f) {
-                  this.field_n[this.field_i[var10]] = var3.readInt(25);
+                while (var10 < this.groupCount) {
+                  this.groupNameHashes[this.groupIds[var10]] = var3.readInt(25);
                   var10++;
                   if (var16 != 0) {
                     decompiledFrameCompleted4 = false;
@@ -194,17 +194,17 @@ final class qp {
                   }
                 }
                 if (decompiledFrameCompleted4) {
-                  this.field_a = new kca(this.field_n);
+                  this.groupNameLookup = new IntIndexTable(this.groupNameHashes);
                 }
               }
               var10 = 0;
               while (true) {
                 stackIn_69_0Lifetime1 = var10;
-                stackIn_69_1Lifetime1 = this.field_f;
+                stackIn_69_1Lifetime1 = this.groupCount;
                 if (stackIn_69_0Lifetime1 >= stackIn_69_1Lifetime1) {
                   break;
                 }
-                this.field_d[this.field_i[var10]] = var3.readInt(122);
+                this.groupCrcs[this.groupIds[var10]] = var3.readInt(122);
                 var10++;
                 if (var16 != 0) {
                   decompiledFrameCompleted3 = false;
@@ -216,10 +216,10 @@ final class qp {
               (decompiledFrameCompleted3) &&
               (var7 != 0)) {
               var10 = 0;
-              while (this.field_f > var10) {
+              while (this.groupCount > var10) {
                 var11_ref_byte__ = new byte[64];
                 var3.readBytes(0, var11_ref_byte__, (byte) -59, 64);
-                this.field_c[this.field_i[var10]] = var11_ref_byte__;
+                this.groupDigests[this.groupIds[var10]] = var11_ref_byte__;
                 var10++;
                 if (var16 != 0) {
                   decompiledFrameCompleted2 = false;
@@ -231,13 +231,13 @@ final class qp {
               var10 = 0;
             }
             do {
-              if (this.field_f <= var10) {
+              if (this.groupCount <= var10) {
                 if (param0 < 0) {
-                  qp.a(false, 91, -58);
+                  ArchiveIndex.a(false, 91, -58);
                 }
                 break;
               }
-              this.field_h[this.field_i[var10]] = var3.readInt(56);
+              this.groupVersions[this.groupIds[var10]] = var3.readInt(56);
               var10++;
             } while (var16 == 0);
             boolean decompiledFrameCompleted1 = true;
@@ -245,20 +245,20 @@ final class qp {
             if (var4 >= 7) {
               var10 = 0;
               do {
-                if (this.field_f <= var10) {
+                if (this.groupCount <= var10) {
                   var10 = 0;
                   break;
                 }
-                this.field_j[this.field_i[var10]] = var3.readLargeSmart(-24099);
+                this.groupFileCounts[this.groupIds[var10]] = var3.readLargeSmart(-24099);
                 var10++;
               } while (var16 == 0);
-              while (var10 < this.field_f) {
-                var11 = this.field_i[var10];
-                var12 = this.field_j[var11];
+              while (var10 < this.groupCount) {
+                var11 = this.groupIds[var10];
+                var12 = this.groupFileCounts[var11];
                 var8 = 0;
                 var13 = -1;
                 array$2 = new int[var12];
-                this.field_g[var11] = array$2;
+                this.fileIds[var11] = array$2;
                 stackIn_142_0 = 0;
                 if (var16 != 0) {
                   decompiledFrameCompleted1 = false;
@@ -268,7 +268,7 @@ final class qp {
                 while (var14 < var12) {
                   dupTemp$3 = var8 + var3.readLargeSmart(-24099);
                   var8 = dupTemp$3;
-                  dupTemp$4 = this.field_g[var11];
+                  dupTemp$4 = this.fileIds[var11];
                   dupTemp$4[var14] = dupTemp$3;
                   var15 = dupTemp$3;
                   stackIn_113_0 = ~var15;
@@ -278,11 +278,11 @@ final class qp {
                   }
                   var14++;
                 }
-                this.field_m[var11] = var13 + 1;
+                this.groupFileCapacities[var11] = var13 + 1;
                 stackIn_113_0Lifetime1 = var13 + 1;
                 stackIn_113_1Lifetime1 = var12;
                 if (stackIn_113_0Lifetime1 == stackIn_113_1Lifetime1) {
-                  this.field_g[var11] = null;
+                  this.fileIds[var11] = null;
                 }
                 var10++;
               }
@@ -292,20 +292,20 @@ final class qp {
                 var16 != 0) {
                 var10 = 0;
                 do {
-                  if (var10 >= this.field_f) {
+                  if (var10 >= this.groupCount) {
                     var10 = 0;
                     break;
                   }
-                  this.field_j[this.field_i[var10]] = var3.readUnsignedShort(1869);
+                  this.groupFileCounts[this.groupIds[var10]] = var3.readUnsignedShort(1869);
                   var10++;
                 } while (var16 == 0);
-                while (this.field_f > var10) {
-                  var11 = this.field_i[var10];
+                while (this.groupCount > var10) {
+                  var11 = this.groupIds[var10];
                   var8 = 0;
-                  var12 = this.field_j[var11];
+                  var12 = this.groupFileCounts[var11];
                   var13 = -1;
                   array$5 = new int[var12];
-                  this.field_g[var11] = array$5;
+                  this.fileIds[var11] = array$5;
                   stackIn_142_0 = 0;
                   if (var16 != 0) {
                     decompiledFrameCompleted0 = false;
@@ -315,7 +315,7 @@ final class qp {
                   while (var14 < var12) {
                     dupTemp$6 = var8 + var3.readUnsignedShort(1869);
                     var8 = dupTemp$6;
-                    dupTemp$7 = this.field_g[var11];
+                    dupTemp$7 = this.fileIds[var11];
                     dupTemp$7[var14] = dupTemp$6;
                     var15 = dupTemp$6;
                     stackIn_137_0 = ~var13;
@@ -325,11 +325,11 @@ final class qp {
                     }
                     var14++;
                   }
-                  this.field_m[var11] = 1 + var13;
+                  this.groupFileCapacities[var11] = 1 + var13;
                   stackIn_137_0Lifetime1 = var12;
                   stackIn_137_1Lifetime1 = 1 + var13;
                   if (stackIn_137_0Lifetime1 == stackIn_137_1Lifetime1) {
-                    this.field_g[var11] = null;
+                    this.fileIds[var11] = null;
                   }
                   var10++;
                 }
@@ -339,38 +339,38 @@ final class qp {
               }
             }
             if (stackIn_142_0 != 0) {
-              this.field_p = new kca[var9 + 1];
-              this.field_o = new int[1 + var9][];
+              this.fileNameLookups = new IntIndexTable[var9 + 1];
+              this.fileNameHashes = new int[1 + var9][];
               var10 = 0;
               while (true) {
-                if (var10 >= this.field_f) {
+                if (var10 >= this.groupCount) {
                   return;
                 }
-                var11 = this.field_i[var10];
-                stackIn_147_0 = this.field_j;
+                var11 = this.groupIds[var10];
+                stackIn_147_0 = this.groupFileCounts;
                 var12 = stackIn_147_0[var11];
-                array$8 = new int[this.field_m[var11]];
-                this.field_o[var11] = array$8;
+                array$8 = new int[this.groupFileCapacities[var11]];
+                this.fileNameHashes[var11] = array$8;
                 if (var16 != 0) {
                   return;
                 }
                 var13 = 0;
-                while (this.field_m[var11] > var13) {
-                  this.field_o[var11][var13] = -1;
+                while (this.groupFileCapacities[var11] > var13) {
+                  this.fileNameHashes[var11][var13] = -1;
                   var13++;
                 }
                 var13 = 0;
                 while (var12 > var13) {
-                  stackIn_147_0Lifetime1 = this.field_g[var11];
+                  stackIn_147_0Lifetime1 = this.fileIds[var11];
                   if (stackIn_147_0Lifetime1 == null) {
                     var14 = var13;
                   } else {
-                    var14 = this.field_g[var11][var13];
+                    var14 = this.fileIds[var11][var13];
                   }
-                  this.field_o[var11][var14] = var3.readInt(38);
+                  this.fileNameHashes[var11][var14] = var3.readInt(38);
                   var13++;
                 }
-                this.field_p[var11] = new kca(this.field_o[var11]);
+                this.fileNameLookups[var11] = new IntIndexTable(this.fileNameHashes[var11]);
                 var10++;
                 continue;
               }
@@ -590,7 +590,7 @@ final class qp {
         }
     }
 
-    final static void a(boolean param0, int param1, java.applet.Applet param2, String param3) {
+    final static void openExternalUrl(boolean param0, int param1, java.applet.Applet param2, String param3) {
         try {
           RuntimeException runtimeException = null;
           RuntimeException stackIn_15_0 = null;
@@ -642,7 +642,7 @@ final class qp {
         }
     }
 
-    qp(byte[] param0, int param1, byte[] param2) {
+    ArchiveIndex(byte[] param0, int param1, byte[] param2) {
         RuntimeException runtimeException = null;
         int var5 = 0;
         RuntimeException stackIn_25_0 = null;
@@ -654,27 +654,27 @@ final class qp {
         int var4_int = 0;
         var5 = VoidHunters.field_G;
         try {
-          this.field_k = psb.a(param0, param0.length, 0);
-          if (param1 != this.field_k) {
+          this.crc = psb.a(param0, param0.length, 0);
+          if (param1 != this.crc) {
             throw new RuntimeException();
           }
           if (null != param2) {
             if (param2.length != 64) {
               throw new RuntimeException();
             }
-            this.field_b = SetMissileLauncherProjectiles.a((byte) 25, param0.length, param0, 0);
+            this.digest = SetMissileLauncherProjectiles.computeArchiveDigest((byte) 25, param0.length, param0, 0);
             var4_int = 0;
             while (var4_int < 64) {
               if (var5 != 0) {
                 return;
               }
-              if (~param2[var4_int] != ~this.field_b[var4_int]) {
+              if (~param2[var4_int] != ~this.digest[var4_int]) {
                 throw new RuntimeException();
               }
               var4_int++;
             }
           }
-          this.a((byte) 27, param0);
+          this.decode((byte) 27, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

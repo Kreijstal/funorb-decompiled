@@ -4,12 +4,12 @@
 final class EscapePodFactory implements GameStateFactory {
     static llb field_a;
 
-    final static Object a(boolean param0, byte[] param1, int param2) {
-        se var3 = null;
+    final static Object storeBytes(boolean param0, byte[] param1, int param2) {
+        DirectByteStorage var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_2_0 = null;
         Object stackIn_5_0 = null;
-        se stackIn_9_0 = null;
+        DirectByteStorage stackIn_9_0 = null;
         byte[] stackIn_12_0 = null;
         byte[] stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
@@ -26,8 +26,8 @@ final class EscapePodFactory implements GameStateFactory {
             return stackIn_5_0;
           }
           if (param1.length > 136) {
-            var3 = new se();
-            ((ps) ((Object) var3)).a((byte) -28, param1);
+            var3 = new DirectByteStorage();
+            ((ByteStorage) ((Object) var3)).setBytes((byte) -28, param1);
             stackIn_9_0 = var3;
             return stackIn_9_0;
           }

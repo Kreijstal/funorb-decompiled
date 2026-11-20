@@ -380,7 +380,7 @@ class AudioOutput {
           if (var1 != 0) {
             pump.stopRequested = true;
             while (pump.running) {
-              gdb.b(-109, 50L);
+              BufferedFile.sleep(-109, 50L);
             }
             pump = null;
           }

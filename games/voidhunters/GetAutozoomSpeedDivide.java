@@ -121,7 +121,7 @@ final class GetAutozoomSpeedDivide extends ConsoleCommand {
           }
           var11 = param2.a(param3, 4, param1, param5, param4);
           while (0 == var11.field_f) {
-            gdb.b(121, 10L);
+            BufferedFile.sleep(121, 10L);
           }
           var7 = (java.awt.Frame) (var11.field_d);
           if (var7 == null) {

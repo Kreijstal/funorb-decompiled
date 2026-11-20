@@ -67,13 +67,13 @@ final class jjb {
             }
             return;
           }
-          var20 = ffb.a(false, GetMissionTimeLimit.field_p, true);
+          var20 = ffb.extractBytes(false, GetMissionTimeLimit.field_p, true);
           this.field_b = new ob(param0, 6410, 128, 128, 16, var20, 6410);
-          var21 = ffb.a(false, pjb.field_vb, true);
+          var21 = ffb.extractBytes(false, pjb.field_vb, true);
           this.field_g = new ob(param0, 6410, 128, 128, 16, var21, 6410);
           var10 = param0.field_yb;
           if (var10.a(92)) {
-            var22 = ffb.a(false, SetPhasedEnergyBeamProjectileOndamageParticles.field_o, true);
+            var22 = ffb.extractBytes(false, SetPhasedEnergyBeamProjectileOndamageParticles.field_o, true);
             this.field_a = new ob(param0, 6408, 128, 128, 16);
             var4 = new ob(param0, 6409, 128, 128, 16, var22, 6409);
             if (var10.a(2.0f, -28279, var4, this.field_a)) {

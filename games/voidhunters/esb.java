@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class esb extends qq implements mkb {
-    static asb field_j;
+    static ResourceArchive field_j;
     private byte field_i;
 
     final int b(byte param0) {
@@ -56,7 +56,7 @@ final class esb extends qq implements mkb {
           var7 = var8;
           var3 = var7;
           if (param0 <= 2) {
-            field_j = (asb) null;
+            field_j = (ResourceArchive) null;
           }
           for (var4 = 0; var2_int > var4; var4++) {
             var5 = param1.charAt(var4);

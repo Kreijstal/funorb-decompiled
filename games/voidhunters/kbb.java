@@ -14,7 +14,7 @@ final class kbb extends TextureOperation {
     private int field_r;
     private int field_m;
 
-    final static void a(asb param0, asb param1, asb param2, byte param3, asb param4) {
+    final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, byte param3, ResourceArchive param4) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

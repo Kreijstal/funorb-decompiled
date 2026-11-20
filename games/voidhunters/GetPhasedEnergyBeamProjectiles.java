@@ -179,7 +179,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetVelocitySustain.field_o = param1[38];
           SetGrapplingHookMaxLength.field_p = param1[186];
           kva.field_g = param1[56];
-          jtb.field_m = param1[147];
+          ArchiveRequest.field_m = param1[147];
           tea.field_b = param1[74];
           GetMissilesHitSourceTeam.field_o = param1[69];
           GetShipAimLines.field_p = param1[155];
@@ -300,7 +300,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetTorpedoAimspeed.field_o = param1[53];
           GetGrapplingHookAimspeed.field_p = param1[16];
           OpenGlShaderProgram.field_a = param1[173];
-          km.field_o = param1[156];
+          NetworkArchiveRequest.field_o = param1[156];
           SetShipPersistence.field_s = param1[106];
           LoadSettings.field_s = param1[78];
           SetKeepTeamColours.field_o = param1[231];

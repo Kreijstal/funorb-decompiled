@@ -45,7 +45,7 @@ abstract class pib implements mda {
         return GetPointDefenceLaserProjectiles.a(false, SetAutoaim.field_p);
     }
 
-    final static Sprite[] a(asb param0, int param1, int param2, int param3) {
+    final static Sprite[] a(ResourceArchive param0, int param1, int param2, int param3) {
         RuntimeException var4 = null;
         Sprite[] stackIn_2_0 = null;
         RuntimeException stackIn_9_0 = null;

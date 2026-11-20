@@ -30,7 +30,7 @@ final class SetBombletSprayEnergyUsed extends ConsoleCommand {
           var8 = 20;
           var9 = param0 + GetBombletSprayEnergyUsed.field_p.height / 2 - var7 / 2;
           BlackBoxRecording.a((byte) -115, param4, 2 * var8 + var7, -(var6 / 2) + (GetBombletSprayEnergyUsed.field_p.width / 2 - var8), -var8 + var9, var6 + 2 * var8);
-          kca.a(var9, var7, -(var6 / 2) + GetBombletSprayEnergyUsed.field_p.width / 2, 0, param4, 1, param3, param2, 16777215, var6, 0, (byte) -99, 1);
+          IntIndexTable.a(var9, var7, -(var6 / 2) + GetBombletSprayEnergyUsed.field_p.width / 2, 0, param4, 1, param3, param2, 16777215, var6, 0, (byte) -99, 1);
           stackIn_3_0 = var8 * 2 + var7;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -47,7 +47,7 @@ final class SetBombletSprayEnergyUsed extends ConsoleCommand {
         }
     }
 
-    final static boolean a(asb param0, int param1, asb param2, asb param3) {
+    final static boolean a(ResourceArchive param0, int param1, ResourceArchive param2, ResourceArchive param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -58,14 +58,14 @@ final class SetBombletSprayEnergyUsed extends ConsoleCommand {
         String stackIn_29_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3.b((byte) -43) &&
-            param3.a(32171, "commonui")) {
-            if (param0.b((byte) 114) &&
-              param0.a(param1 + 32169, "commonui")) {
-              if (!param2.b((byte) 127)) {
+          if (param3.loadIndex((byte) -43) &&
+            param3.isNamedGroupReady(32171, "commonui")) {
+            if (param0.loadIndex((byte) 114) &&
+              param0.isNamedGroupReady(param1 + 32169, "commonui")) {
+              if (!param2.loadIndex((byte) 127)) {
                 return false;
               }
-              if (!param2.a(32171, "button.gif")) {
+              if (!param2.isNamedGroupReady(32171, "button.gif")) {
                 return false;
               }
               if (param1 == 2) {

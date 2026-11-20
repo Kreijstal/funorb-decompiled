@@ -11,7 +11,7 @@ abstract class hrb {
         if (!param0) {
           var4 = this.a((byte) -81);
           if (0L < var4) {
-            gdb.b(-96, var4);
+            BufferedFile.sleep(-96, var4);
           }
           return this.a(0, param1);
         }

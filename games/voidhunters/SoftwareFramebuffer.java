@@ -13,14 +13,14 @@ final class SoftwareFramebuffer implements Framebuffer {
     final static void a(int param0) {
         CharSequence var3 = null;
         if (param0 < -84) {
-          kca.field_a = qga.field_b.readString(-1);
-          var3 = (CharSequence) ((Object) kca.field_a);
+          IntIndexTable.field_a = qga.field_b.readString(-1);
+          var3 = (CharSequence) ((Object) IntIndexTable.field_a);
           ffb.field_e = jwa.a(false, var3);
           return;
         }
         field_a = (String) null;
-        kca.field_a = qga.field_b.readString(-1);
-        CharSequence var2 = (CharSequence) ((Object) kca.field_a);
+        IntIndexTable.field_a = qga.field_b.readString(-1);
+        CharSequence var2 = (CharSequence) ((Object) IntIndexTable.field_a);
         ffb.field_e = jwa.a(false, var2);
     }
 

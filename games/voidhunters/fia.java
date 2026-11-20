@@ -153,7 +153,7 @@ final class fia {
           boolean decompiledFrameRemainder1 = true;
           if (SetMachineGunEnergyUsed.field_o[80]) {
             if (!khb.field_b) {
-              au.field_c = (1 + au.field_c) % 3;
+              BoundedRandomAccessFile.field_c = (1 + BoundedRandomAccessFile.field_c) % 3;
             }
             khb.field_b = true;
           } else {
@@ -200,7 +200,7 @@ final class fia {
                         if (SetMachineGunEnergyUsed.field_o[85]) {
                           if (!khb.field_b &&
                             SetMissileLauncherProjectileLife.field_p >= 0 &&
-                            au.field_c == 2) {
+                            BoundedRandomAccessFile.field_c == 2) {
                             var17 = uob.field_g[uob.field_g.length - 1];
                             if (1 < var17.length) {
                               var26 = new int[var17.length - 2];
@@ -219,7 +219,7 @@ final class fia {
                           } else {
                             if (!khb.field_b &&
                               SetMissileLauncherProjectileLife.field_p >= 0) {
-                              if (au.field_c == 1) {
+                              if (BoundedRandomAccessFile.field_c == 1) {
                                 System.out.print("int[][] convex_outlines=new int[][]{");
                                 for (var1_int = 0; var1_int < hw.field_d.length; var1_int++) {
                                   if (var1_int > 0) {
@@ -237,7 +237,7 @@ final class fia {
                                 }
                                 GetDebrisThrowable.a(false, "};");
                               } else {
-                                if (au.field_c == 2) {
+                                if (BoundedRandomAccessFile.field_c == 2) {
                                   System.out.print("int[][] detail_lines=new int[][]{");
                                   for (var1_int = 0; uob.field_g.length > var1_int; var1_int++) {
                                     if (var1_int > 0) {
@@ -302,8 +302,8 @@ final class fia {
               var21.field_b = SetTorpedoEnergyUsed.field_o;
               var21.field_c = SetPhysicsCollisionGrapplingHookForceMultiplier.field_p;
               var21.field_a = GetUseTrails.field_o;
-              if (au.field_c != 1) {
-                if (au.field_c != 2) {
+              if (BoundedRandomAccessFile.field_c != 1) {
+                if (BoundedRandomAccessFile.field_c != 2) {
                   return;
                 }
                 var23 = uob.field_g[-1 + uob.field_g.length];
@@ -341,7 +341,7 @@ final class fia {
                 }
                 if ((var6 != -1)) {
                   if (SetMachineGunEnergyUsed.field_o[83]) {
-                    var8Lifetime2 = fnb.field_b / 2;
+                    var8Lifetime2 = ArchiveProvider.field_b / 2;
                     var5 = var8Lifetime2 * (var5 / var8Lifetime2);
                   }
                   var23[var6] = var4;

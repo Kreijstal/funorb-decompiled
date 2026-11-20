@@ -54,7 +54,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
           if (var2 != null) {
             SetSelfDestructTimer.a(19204, (String) (var2), 0, (String) null, kmb.field_a);
           } else {
-            var3 = kca.field_a;
+            var3 = IntIndexTable.field_a;
             var3 = EscapePodFactory.a(1, var3);
             var4 = "";
             var5 = "|";

@@ -244,7 +244,7 @@ final class soa extends llb {
                 GpuSprite.a((byte) 108, param3);
               }
             }
-            asb.a(param3, SetThrusterParticleSpeedDownshift.field_o, true, (byte) -67);
+            ResourceArchive.a(param3, SetThrusterParticleSpeedDownshift.field_o, true, (byte) -67);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

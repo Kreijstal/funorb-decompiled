@@ -26,7 +26,7 @@ final class pla extends htb {
         }
         qrb var8 = this.field_C.a((byte) 35);
         if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p == var8) {
-          var15 = ps.field_a[0];
+          var15 = ByteStorage.field_a[0];
           var9 = var15.field_m << 1;
           var10 = var15.field_n << 1;
           if (GetWeaponProjectileSpeedMultiply.field_o == null) {
@@ -61,7 +61,7 @@ final class pla extends htb {
           return;
         }
         if (SetFighterRepairTime.field_q == var8) {
-          var16 = ps.field_a[0];
+          var16 = ByteStorage.field_a[0];
           var9Lifetime1 = var16.field_m << 1;
           var10Lifetime1 = var16.field_n << 1;
           if (GetWeaponProjectileSpeedMultiply.field_o == null) {
@@ -96,12 +96,12 @@ final class pla extends htb {
           return;
         }
         if (var8 == SetArmageddonLength.field_o) {
-          var13 = ps.field_a[2];
+          var13 = ByteStorage.field_a[2];
           var13.c(var5 - (var13.field_q >> 1), var6 - (var13.field_p >> 1), 256);
           return;
         }
         if (GetShipPersistence.field_o == var8) {
-          var12 = ps.field_a[1];
+          var12 = ByteStorage.field_a[1];
           var12.c(var5 - (var12.field_q >> 1), var6 - (var12.field_p >> 1), 256);
           return;
         }

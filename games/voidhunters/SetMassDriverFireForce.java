@@ -53,31 +53,31 @@ final class SetMassDriverFireForce extends ConsoleCommand {
           return GetSpinningBladeTopSpeed.field_p;
         }
         if (ppb.field_a != null) {
-          if (!ppb.field_a.b((byte) -37)) {
+          if (!ppb.field_a.loadIndex((byte) -37)) {
             return ocb.field_i;
           }
           return lo.field_d;
         }
-        if (!btb.field_b.b((byte) 115)) {
+        if (!btb.field_b.loadIndex((byte) 115)) {
           return SetTorpedoProjectileOndamageParticles.field_o;
         }
-        if (!btb.field_b.a(32171, "commonui")) {
-          return drb.field_k + " - " + btb.field_b.a("commonui", -2118) + "%";
+        if (!btb.field_b.isNamedGroupReady(32171, "commonui")) {
+          return drb.field_k + " - " + btb.field_b.getNamedGroupLoadPercent("commonui", -2118) + "%";
         }
-        if (!GetSalvoUsesAllEnergy.field_o.b((byte) 122)) {
+        if (!GetSalvoUsesAllEnergy.field_o.loadIndex((byte) 122)) {
           return wqb.field_b;
         }
-        if (!GetSalvoUsesAllEnergy.field_o.a(32171, "commonui")) {
-          return GetBombletSprayAimarc.field_p + " - " + GetSalvoUsesAllEnergy.field_o.a("commonui", -2118) + "%";
+        if (!GetSalvoUsesAllEnergy.field_o.isNamedGroupReady(32171, "commonui")) {
+          return GetBombletSprayAimarc.field_p + " - " + GetSalvoUsesAllEnergy.field_o.getNamedGroupLoadPercent("commonui", -2118) + "%";
         }
         if (param0 >= -18) {
           field_o = true;
         }
-        if (!gdb.field_i.b((byte) -41)) {
+        if (!BufferedFile.field_i.loadIndex((byte) -41)) {
           return SetUseLines.field_q;
         }
-        if (!gdb.field_i.a(35)) {
-          return lwa.field_vb + " - " + gdb.field_i.b(-115) + "%";
+        if (!BufferedFile.field_i.loadAllGroups(35)) {
+          return lwa.field_vb + " - " + BufferedFile.field_i.getLoadPercent(-115) + "%";
         }
         return SetUseModels.field_p;
     }

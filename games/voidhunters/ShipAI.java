@@ -94,7 +94,7 @@ final class ShipAI implements DiffableState {
         try {
           var4_int = 0;
           var5 = param0;
-          var6 = param2.a(true);
+          var6 = param2.getAsteroids(true);
           var7 = param1.getBoundingExtent(-101);
           var8 = var6;
           for (var9 = 0; var9 < var8.length; var9++) {
@@ -320,7 +320,7 @@ final class ShipAI implements DiffableState {
               var10 = 4000;
             }
             if (hob.a(var9_ref_Random, var10, 125) == 0) {
-              fnb.a(50, param0.y, param0.x, false, 94, 512);
+              ArchiveProvider.a(50, param0.y, param0.x, false, 94, 512);
             }
           }
           this.a(false, var8, param0, param2);

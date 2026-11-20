@@ -539,9 +539,9 @@ final class bv {
             var12++;
           }
           if (this.b((byte) 11, 1) &&
-            param1.world.c(0) <= 1) {
+            param1.world.countShips(0) <= 1) {
             var11 = param1.missionState.b(7061, 0);
-            stackIn_28_0 = (0 != param1.world.b(true)) ? 0 : 1;
+            stackIn_28_0 = (0 != param1.world.countDebris(true)) ? 0 : 1;
             var12Lifetime1 = stackIn_28_0;
             var13Lifetime1 = null;
             if (var11 != 0) {
@@ -860,8 +860,8 @@ final class bv {
                   if (var20_ref != null ||
                     param12.getDragging(-96) != -1) {
                     this.a(-26476, 3);
-                    if (param2 && (!(param0.world.b(true) > 0) ||
-                      !(param0.world.b(true) > 1) &&
+                    if (param2 && (!(param0.world.countDebris(true) > 0) ||
+                      !(param0.world.countDebris(true) > 1) &&
                       param12.getDragging(46) != -1)) {
                       this.a((byte) 99, 3);
                       HardpointMatch.field_f[3] = 0;

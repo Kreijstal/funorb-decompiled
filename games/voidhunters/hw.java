@@ -3,7 +3,7 @@
  */
 final class hw {
     private int field_a;
-    static asb field_e;
+    static ResourceArchive field_e;
     private long[] field_c;
     static int[][] field_d;
     static int field_b;

@@ -38,7 +38,7 @@ final class hka extends uj {
         return 111;
     }
 
-    final static void a(asb param0, int param1) {
+    final static void a(ResourceArchive param0, int param1) {
         llb var5 = null;
         llb var6 = null;
         llb var3 = null;

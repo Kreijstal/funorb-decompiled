@@ -3,42 +3,42 @@
  */
 import java.util.*;
 
-final class jma extends jtb {
-    int field_r;
+final class DiskArchiveRequest extends ArchiveRequest {
+    int operation;
     static Hashtable field_q;
-    fo field_o;
-    byte[] field_p;
+    ArchiveDisk archiveDisk;
+    byte[] data;
 
-    final byte[] a(int param0) {
+    final byte[] getData(int param0) {
         int var2 = -61 % ((17 - param0) / 58);
-        if (this.field_n) {
+        if (this.pending) {
           throw new RuntimeException();
         }
-        return this.field_p;
+        return this.data;
     }
 
     public static void clearSharedReferences(int param0) {
         field_q = null;
         if (param0 != 100) {
-          jma.clearSharedReferences(-2);
+          DiskArchiveRequest.clearSharedReferences(-2);
         }
     }
 
-    final int e(byte param0) {
+    final int getLoadPercent(byte param0) {
         if (param0 != -4) {
-          jma.clearSharedReferences(-40);
-          if (!this.field_n) {
+          DiskArchiveRequest.clearSharedReferences(-40);
+          if (!this.pending) {
             return 100;
           }
           return 0;
         }
-        if (!this.field_n) {
+        if (!this.pending) {
           return 100;
         }
         return 0;
     }
 
-    jma() {
+    DiskArchiveRequest() {
     }
 
     static {

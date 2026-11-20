@@ -46,9 +46,9 @@ final class GetAiRepairAmount extends ConsoleCommand {
         }
     }
 
-    final static asb a(int param0) {
+    final static ResourceArchive a(int param0) {
         if (param0 != 0) {
-          return (asb) null;
+          return (ResourceArchive) null;
         }
         return SetBlueprintSaveTime.a(SetBombletSprayReload.field_o.field_a, 11835);
     }

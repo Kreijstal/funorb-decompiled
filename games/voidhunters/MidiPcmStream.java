@@ -280,7 +280,7 @@ class MidiPcmStream extends PcmStream {
         }
     }
 
-    final synchronized boolean loadMusicPatches(SoundCache param0, int param1, asb param2, int param3, MusicTrack param4) {
+    final synchronized boolean loadMusicPatches(SoundCache param0, int param1, ResourceArchive param2, int param3, MusicTrack param4) {
         int stackIn_20_0 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;

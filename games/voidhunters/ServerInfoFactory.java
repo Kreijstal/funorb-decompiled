@@ -176,7 +176,7 @@ final class ServerInfoFactory implements GameStateFactory {
               if (li.field_i) {
                 var5Lifetime2 = SetLaserEnergyUsed.e((byte) -47);
                 var6Lifetime2 = fra.a((byte) 120);
-                var7 = se.a(false);
+                var7 = DirectByteStorage.a(false);
                 var8 = SetArmageddonWarning.a(param0 + 57974);
                 var9 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
                 var10 = (-dma.field_j + MissionVariableFactory.field_a) / 2;
@@ -247,7 +247,7 @@ final class ServerInfoFactory implements GameStateFactory {
                   if (li.field_i) {
                     var5Lifetime1Lifetime3 = SetLaserEnergyUsed.e((byte) -47);
                     var6Lifetime1Lifetime3 = fra.a((byte) 120);
-                    var7Lifetime1 = se.a(false);
+                    var7Lifetime1 = DirectByteStorage.a(false);
                     var8Lifetime1 = SetArmageddonWarning.a(param0 + 57974);
                     var9Lifetime1 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
                     var10Lifetime1 = (-dma.field_j + MissionVariableFactory.field_a) / 2;
@@ -304,7 +304,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 if (li.field_i) {
                   var5Lifetime1Lifetime1Lifetime4 = SetLaserEnergyUsed.e((byte) -47);
                   var6Lifetime1Lifetime1Lifetime4 = fra.a((byte) 120);
-                  var7Lifetime1Lifetime1 = se.a(false);
+                  var7Lifetime1Lifetime1 = DirectByteStorage.a(false);
                   var8Lifetime1Lifetime1 = SetArmageddonWarning.a(param0 + 57974);
                   var9Lifetime1Lifetime1 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
                   var10Lifetime1Lifetime1 = (-dma.field_j + MissionVariableFactory.field_a) / 2;
@@ -344,7 +344,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 }
                 var5Lifetime1Lifetime1Lifetime1Lifetime1 = SetLaserEnergyUsed.e((byte) -47);
                 var6Lifetime1Lifetime1Lifetime1Lifetime1 = fra.a((byte) 120);
-                var7Lifetime1Lifetime1Lifetime1 = se.a(false);
+                var7Lifetime1Lifetime1Lifetime1 = DirectByteStorage.a(false);
                 var8Lifetime1Lifetime1Lifetime1 = SetArmageddonWarning.a(param0 + 57974);
                 var9Lifetime1Lifetime1Lifetime1 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
                 var10Lifetime1Lifetime1Lifetime1 = (-dma.field_j + MissionVariableFactory.field_a) / 2;
@@ -376,7 +376,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 if (li.field_i) {
                   var5Lifetime1Lifetime1Lifetime2 = SetLaserEnergyUsed.e((byte) -47);
                   var6Lifetime1Lifetime1Lifetime2 = fra.a((byte) 120);
-                  var7Lifetime1Lifetime1Lifetime2 = se.a(false);
+                  var7Lifetime1Lifetime1Lifetime2 = DirectByteStorage.a(false);
                   var8Lifetime1Lifetime1Lifetime2 = SetArmageddonWarning.a(param0 + 57974);
                   var9Lifetime1Lifetime1Lifetime2 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
                   var10Lifetime1Lifetime1Lifetime2 = (-dma.field_j + MissionVariableFactory.field_a) / 2;
@@ -416,7 +416,7 @@ final class ServerInfoFactory implements GameStateFactory {
             }
             var5Lifetime1Lifetime2 = SetLaserEnergyUsed.e((byte) -47);
             var6Lifetime1Lifetime2 = fra.a((byte) 120);
-            var7Lifetime1Lifetime2 = se.a(false);
+            var7Lifetime1Lifetime2 = DirectByteStorage.a(false);
             var8Lifetime1Lifetime2 = SetArmageddonWarning.a(param0 + 57974);
             var9Lifetime1Lifetime2 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
             var10Lifetime1Lifetime2 = (-dma.field_j + MissionVariableFactory.field_a) / 2;

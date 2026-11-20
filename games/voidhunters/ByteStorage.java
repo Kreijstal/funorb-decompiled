@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ps {
+abstract class ByteStorage {
     static Sprite[] field_a;
 
-    final static byte[] a(String param0, int param1) {
+    final static byte[] decodeBase64(String param0, int param1) {
         int var2_int = 0;
         int var3 = 0;
         int var4 = 0;
@@ -60,9 +60,9 @@ abstract class ps {
         }
     }
 
-    abstract void a(byte param0, byte[] param1);
+    abstract void setBytes(byte param0, byte[] param1);
 
-    abstract byte[] a(int param0, int param1, int param2);
+    abstract byte[] getRange(int param0, int param1, int param2);
 
     public static void clearSharedReferences(int param0) {
         field_a = null;
@@ -71,7 +71,7 @@ abstract class ps {
         }
     }
 
-    abstract byte[] b(int param0);
+    abstract byte[] getBytes(int param0);
 
     static {
     }

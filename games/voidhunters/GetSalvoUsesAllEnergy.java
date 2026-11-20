@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetSalvoUsesAllEnergy extends ConsoleCommand {
-    static asb field_o;
+    static ResourceArchive field_o;
 
     GetSalvoUsesAllEnergy(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);

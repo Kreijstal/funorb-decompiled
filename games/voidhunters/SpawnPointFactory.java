@@ -50,10 +50,10 @@ final class SpawnPointFactory implements GameStateFactory {
         var13 = VoidHunters.field_G;
         try {
           var3 = "Normal mode";
-          if (au.field_c == 1) {
+          if (BoundedRandomAccessFile.field_c == 1) {
             var3 = "Convex polygons mode";
           } else {
-            if (au.field_c == 2) {
+            if (BoundedRandomAccessFile.field_c == 2) {
               var3 = "Detail lines mode";
             }
           }
@@ -65,7 +65,7 @@ final class SpawnPointFactory implements GameStateFactory {
             return;
           }
           if (0 <= SetMissileLauncherProjectileLife.field_p &&
-            au.field_c == 2) {
+            BoundedRandomAccessFile.field_c == 2) {
             try {
               var15 = new ShipComponent(SetMissileLauncherProjectileLife.field_p);
               var15.drawComponent((World) null, (byte) 84, 16777215, param0, false);
@@ -98,11 +98,11 @@ final class SpawnPointFactory implements GameStateFactory {
             var8Lifetime1 = param0.a(var6Lifetime1, (byte) 120);
             var9Lifetime1 = param0.b(true, var7Lifetime1);
             MouseWheelInput.a(16777215, var9Lifetime1, var8Lifetime1, 63);
-            if (au.field_c != 2) {
+            if (BoundedRandomAccessFile.field_c != 2) {
               GetLagStandardDeviationOut.a(1, "" + (var5Lifetime1 >> 1), 16777215, var9Lifetime1, var8Lifetime1, 4266);
             }
           }
-          if (au.field_c == 0) {
+          if (BoundedRandomAccessFile.field_c == 0) {
             var5_ref_lsb__ = param1.hardpoints;
             if (var5_ref_lsb__ != null) {
               for (var6Lifetime2 = 0; var5_ref_lsb__.length > var6Lifetime2; var6Lifetime2++) {

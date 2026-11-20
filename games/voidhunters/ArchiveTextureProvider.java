@@ -6,8 +6,8 @@ final class ArchiveTextureProvider implements TextureProvider {
     static GameStateFactory field_d;
     private TextureMetadata[] metadata;
     private ehb field_f;
-    private asb spriteArchive;
-    private asb textureArchive;
+    private ResourceArchive spriteArchive;
+    private ResourceArchive textureArchive;
     static boolean field_h;
     private int textureCount;
     static String field_a;
@@ -26,14 +26,14 @@ final class ArchiveTextureProvider implements TextureProvider {
 
     public final int[] generateArgbPixels(int param0, int param1, int param2, boolean param3, int param4, float param5) {
         if (param0 <= 78) {
-          this.spriteArchive = (asb) null;
+          this.spriteArchive = (ResourceArchive) null;
         }
         return this.getProceduralTexture(-2, param4).generateArgbPixels(param1, false, param2, this.metadata[param4].field_e, this.spriteArchive, (TextureProvider) (this), (double)param5);
     }
 
     public final TextureMetadata getTextureMetadata(int param0, int param1) {
         if (param0 != -20292) {
-          this.textureArchive = (asb) null;
+          this.textureArchive = (ResourceArchive) null;
         }
         return this.metadata[param1];
     }
@@ -46,7 +46,7 @@ final class ArchiveTextureProvider implements TextureProvider {
         if (var3 != null) {
           return (ProceduralTexture) (var3);
         }
-        byte[] var4 = this.textureArchive.c((byte) 9, param1);
+        byte[] var4 = this.textureArchive.fetchSingleFile((byte) 9, param1);
         if (var4 == null) {
           return null;
         }
@@ -82,7 +82,7 @@ final class ArchiveTextureProvider implements TextureProvider {
         return this.getProceduralTexture(-2, param3).generateRgbPixels(param5, (TextureProvider) (this), this.spriteArchive, 0, this.metadata[param3].field_e, param4, (double)param1, param0);
     }
 
-    ArchiveTextureProvider(asb param0, asb param1, asb param2) {
+    ArchiveTextureProvider(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2) {
         TextureMetadata stackIn_11_0 = null;
         boolean stackIn_12_1 = false;
         TextureMetadata stackIn_19_0 = null;
@@ -133,7 +133,7 @@ final class ArchiveTextureProvider implements TextureProvider {
         try {
           this.spriteArchive = param2;
           this.textureArchive = param1;
-          var7 = new PacketBuffer(param0.a(0, 0, (byte) 13));
+          var7 = new PacketBuffer(param0.fetchFile(0, 0, (byte) 13));
           this.textureCount = var7.readUnsignedShort(1869);
           this.metadata = new TextureMetadata[this.textureCount];
           for (var5 = 0; var5 < this.textureCount; var5++) {

@@ -57,7 +57,7 @@ final class pbb implements wwa {
         }
     }
 
-    final static GraphicsToolkit a(asb param0, int param1, int param2, TextureProvider param3, java.awt.Canvas param4) {
+    final static GraphicsToolkit a(ResourceArchive param0, int param1, int param2, TextureProvider param3, java.awt.Canvas param4) {
         RuntimeException var5 = null;
         long var6 = 0L;
         OpenGlGpuToolkit var8 = null;
@@ -122,7 +122,7 @@ final class pbb implements wwa {
         field_a = null;
         if (param0 != -652030847) {
           java.awt.Canvas var2 = (java.awt.Canvas) null;
-          pbb.a((asb) null, 54, 122, (TextureProvider) null, (java.awt.Canvas) null);
+          pbb.a((ResourceArchive) null, 54, 122, (TextureProvider) null, (java.awt.Canvas) null);
           return;
         }
     }

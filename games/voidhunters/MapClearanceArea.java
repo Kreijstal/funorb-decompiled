@@ -44,8 +44,8 @@ abstract class MapClearanceArea implements DiffableState {
     public void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
-            asb var4 = (asb) null;
-            MapClearanceArea.a(-64, (byte) 110, (asb) null, -56);
+            ResourceArchive var4 = (ResourceArchive) null;
+            MapClearanceArea.a(-64, (byte) 110, (ResourceArchive) null, -56);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dmb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -64,8 +64,8 @@ abstract class MapClearanceArea implements DiffableState {
 
     public static void clearSharedReferences(byte param0) {
         if (param0 > -99) {
-          asb var2 = (asb) null;
-          MapClearanceArea.a(-84, (byte) -24, (asb) null, 25);
+          ResourceArchive var2 = (ResourceArchive) null;
+          MapClearanceArea.a(-84, (byte) -24, (ResourceArchive) null, 25);
           field_b = null;
           return;
         }
@@ -75,15 +75,15 @@ abstract class MapClearanceArea implements DiffableState {
     public void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 > -109) {
-            asb var4 = (asb) null;
-            MapClearanceArea.a(34, (byte) -8, (asb) null, 110);
+            ResourceArchive var4 = (ResourceArchive) null;
+            MapClearanceArea.a(34, (byte) -8, (ResourceArchive) null, 110);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dmb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final static Sprite[] a(int param0, byte param1, asb param2, int param3) {
+    final static Sprite[] a(int param0, byte param1, ResourceArchive param2, int param3) {
         RuntimeException var4 = null;
         Object stackIn_4_0 = null;
         Sprite[] stackIn_6_0 = null;

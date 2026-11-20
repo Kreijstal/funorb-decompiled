@@ -26,7 +26,7 @@ final class kea {
           java.lang.reflect.Method var8 = null;
           File var9 = null;
           try {
-            var3 = (Class) (fnb.field_c.get(param2));
+            var3 = (Class) (ArchiveProvider.field_c.get(param2));
             if (var3 != null) {
               if (var3.getClassLoader() == param1.getClassLoader()) {
                 return true;
@@ -38,7 +38,7 @@ final class kea {
             }
             var4 = null;
             if (var4 == null) {
-              var4 = (File) (jma.field_q.get(param2));
+              var4 = (File) (DiskArchiveRequest.field_q.get(param2));
             }
             if (var4 == null) {
               return false;
@@ -53,13 +53,13 @@ final class kea {
               var7.invoke((Object) (var8), new Object[]{Boolean.TRUE});
               var8.invoke((Object) (Runtime.getRuntime()), new Object[]{param1, var9.getPath()});
               var7.invoke((Object) (var8), new Object[]{Boolean.FALSE});
-              fnb.field_c.put(param2, param1);
+              ArchiveProvider.field_c.put(param2, param1);
               return true;
             } catch (java.lang.NoSuchMethodException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var5_ref = (NoSuchMethodException) (Object) decompiledCaughtException;
               System.load(((File) (var4)).getPath());
-              fnb.field_c.put(param2, cd.class);
+              ArchiveProvider.field_c.put(param2, cd.class);
               return true;
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;

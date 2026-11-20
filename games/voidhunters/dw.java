@@ -28,7 +28,7 @@ final class dw implements wwa {
           var6_int = param1.field_g + param2;
           var7 = param3 + param1.field_r;
           ServerTickFactory.a(var7, (byte) 115, param1.field_f, param1.field_h, var6_int);
-          var8 = ps.field_a[1];
+          var8 = ByteStorage.field_a[1];
           if (param1 instanceof htb &&
             ((htb) (param1)).field_u) {
             var8.c((-var8.field_m + param1.field_h >> 1) + (1 + var6_int), 1 + (var7 + (-var8.field_n + param1.field_f >> 1)), 256);

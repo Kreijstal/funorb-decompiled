@@ -23,10 +23,10 @@ final class GetWorldWidthUpshift extends ConsoleCommand {
           while (true) {
             var3 = param1.a(param0, (byte) 102);
             while (0 == var3.field_f) {
-              gdb.b(68, 10L);
+              BufferedFile.sleep(68, 10L);
             }
             if (var3.field_f != 1) {
-              gdb.b(-58, 100L);
+              BufferedFile.sleep(-58, 100L);
               continue;
             }
             break;
@@ -108,7 +108,7 @@ final class GetWorldWidthUpshift extends ConsoleCommand {
         }
     }
 
-    final static void a(String[] args, byte[] param1, asb param2, asb param3, asb param4, Sprite[][] param5, String[] param6, int param7, String[][] param8, byte[] param9, int param10, int param11, boolean param12, int[] param13, int param14, int[] param15, String[][] param16, Sprite[][] param17, caa[] param18) {
+    final static void a(String[] args, byte[] param1, ResourceArchive param2, ResourceArchive param3, ResourceArchive param4, Sprite[][] param5, String[] param6, int param7, String[][] param8, byte[] param9, int param10, int param11, boolean param12, int[] param13, int param14, int[] param15, String[][] param16, Sprite[][] param17, caa[] param18) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

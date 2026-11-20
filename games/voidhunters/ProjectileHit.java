@@ -129,7 +129,7 @@ final class ProjectileHit {
                     var7 = pea.field_b;
                   }
                 } else {
-                  var7 = km.field_o;
+                  var7 = NetworkArchiveRequest.field_o;
                 }
               }
             } else {

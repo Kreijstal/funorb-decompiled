@@ -43,7 +43,7 @@ final class fab {
         }
     }
 
-    final static arb a(asb param0, String param1, int param2, asb param3, String param4) {
+    final static arb a(ResourceArchive param0, String param1, int param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
@@ -59,8 +59,8 @@ final class fab {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = param3.b(param4, -95);
-          var6 = param3.a(true, var5_int, param1);
+          var5_int = param3.getGroupId(param4, -95);
+          var6 = param3.getFileId(true, var5_int, param1);
           if (param2 != 0) {
             field_b = (String) null;
           }
@@ -129,7 +129,7 @@ final class fab {
               if (var7_int != 0) {
                 if (var7_int != 5) {
                   if (var7_int == 1) {
-                    if (!MissionEventFactory.field_a.b((byte) 87)) {
+                    if (!MissionEventFactory.field_a.loadIndex((byte) 87)) {
                       return;
                     }
                     var7_int = PartitionZoneListFactory.a("jaclib", true);
@@ -154,7 +154,7 @@ final class fab {
                     }
                   } else {
                     if (3 == var7_int) {
-                      if (!MissionEventFactory.field_a.b((byte) -57)) {
+                      if (!MissionEventFactory.field_a.loadIndex((byte) -57)) {
                         return;
                       }
                       var7_int = PartitionZoneListFactory.a("jaclib", true);
@@ -191,7 +191,7 @@ final class fab {
                       if (var7_int != 2) {
                         throw new IllegalStateException("UT" + var6.field_a);
                       }
-                      if (!MissionEventFactory.field_a.b((byte) -83)) {
+                      if (!MissionEventFactory.field_a.loadIndex((byte) -83)) {
                         return;
                       }
                       var7_int = PartitionZoneListFactory.a("jaclib", true);
@@ -217,7 +217,7 @@ final class fab {
                     }
                   }
                 } else {
-                  if (!MissionEventFactory.field_a.b((byte) 121)) {
+                  if (!MissionEventFactory.field_a.loadIndex((byte) 121)) {
                     return;
                   }
                   var7_int = PartitionZoneListFactory.a("hw3d", true);
@@ -455,7 +455,7 @@ final class fab {
         this(GetAiRepairAmount.a(0), qc.b(0), param0, SetTorpedoProjectiles.field_o, param1);
     }
 
-    private fab(asb param0, asb param1, TextureProvider param2, eab param3, fs[] param4) {
+    private fab(ResourceArchive param0, ResourceArchive param1, TextureProvider param2, eab param3, fs[] param4) {
         this.field_d = false;
         try {
           lwa.field_xb = param1;

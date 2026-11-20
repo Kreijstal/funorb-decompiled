@@ -5,8 +5,8 @@ final class MusicTrack extends IntrusiveNode {
     NodeHashTable instrumentUsage;
     byte[] midi;
 
-    final static MusicTrack load(asb param0, String param1, String param2) {
-        byte[] var3 = param0.a(param2, true, param1);
+    final static MusicTrack load(ResourceArchive param0, String param1, String param2) {
+        byte[] var3 = param0.fetchNamedFile(param2, true, param1);
         if (var3 == null) {
           return null;
         }

@@ -36,7 +36,7 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
         }
     }
 
-    final static ToolkitFontMetrics a(int param0, asb param1, String param2, String param3) {
+    final static ToolkitFontMetrics a(int param0, ResourceArchive param1, String param2, String param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -50,7 +50,7 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = param1.a(param3, true, param2);
+          var5 = param1.fetchNamedFile(param3, true, param2);
           var4 = var5;
           if (var5 == null) {
             return null;

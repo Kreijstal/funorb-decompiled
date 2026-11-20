@@ -492,7 +492,7 @@ final class kda {
                   var9_int = ((CarouselPlayerEvent) (var17_ref)).field_k;
                 }
                 var18 = param5.e(param3 + 101).a(param3 ^ 6, var9_int);
-                SetDebrisGrabbingRange.a((byte) -92, "I'm " + kca.field_a + ", and an action from " + var18 + " is off carousel so dropping connection");
+                SetDebrisGrabbingRange.a((byte) -92, "I'm " + IntIndexTable.field_a + ", and an action from " + var18 + " is off carousel so dropping connection");
                 ifb.l(-118);
               }
             } else if (!var17_ref.c(120) ||

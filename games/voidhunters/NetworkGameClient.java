@@ -56,7 +56,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (!SetAudioRangeCutoff.field_q) {
             this.showGameError("reconnect", 0);
           }
-          km.f((byte) -119);
+          NetworkArchiveRequest.f((byte) -119);
           SetMessageFadetime.a(dgb.field_b, (byte) 72, var2);
           GetSpinningBladeAimarc.field_o = true;
           ska.field_p = wt.a(false) + 15000L;
@@ -147,7 +147,7 @@ abstract class NetworkGameClient extends GameApplet {
             !(gia.d(-2) <= var3)) {
             this.field_s = false;
             ifb.l(-123);
-            km.f((byte) -119);
+            NetworkArchiveRequest.f((byte) -119);
             SetMessageFadetime.a(GetSpinningBladeSpindamageMultiplier.field_o, (byte) 105, 2);
             GetSniperCannonFiringLeeway.a(-10560);
             GetSpinningBladeAimarc.field_o = true;
@@ -174,7 +174,7 @@ abstract class NetworkGameClient extends GameApplet {
           MapClearanceArea.field_a != 0) {
           if (10 <= ef.field_z) {
             if (10 <= GetSpinningBladeAimspeed.field_q) {
-              km.f((byte) -119);
+              NetworkArchiveRequest.f((byte) -119);
               if (MapClearanceArea.field_a == 3) {
                 SetMessageFadetime.a(GetUseFilledPolygons.field_o, (byte) 84, 256);
               } else {
@@ -239,16 +239,16 @@ abstract class NetworkGameClient extends GameApplet {
           }
           btb.field_b = SetDebrisFoundInPairs.a(1, GetShieldsDirectionalArc.field_p, 106, true, false);
           GetSalvoUsesAllEnergy.field_o = SetDebrisFoundInPairs.a(1, SetFighterRepairAmount.field_p, 97, true, false);
-          gdb.field_i = SetDebrisFoundInPairs.a(1, GetThrusterBindingMoveAndTurnHasOppositeMove.field_p, 81, true, false);
+          BufferedFile.field_i = SetDebrisFoundInPairs.a(1, GetThrusterBindingMoveAndTurnHasOppositeMove.field_p, 81, true, false);
           ef.field_z = 2;
           GetMassDriverReload.field_o = btb.field_b;
           GetShieldsDirectionalArc.field_r = GetSalvoUsesAllEnergy.field_o;
         }
         if (ef.field_z == 2) {
           if (null != ppb.field_a &&
-            ppb.field_a.b((byte) -81)) {
-            if (ppb.field_a.a(true, "")) {
-              if (ppb.field_a.a(32171, "")) {
+            ppb.field_a.loadIndex((byte) -81)) {
+            if (ppb.field_a.containsNamedGroup(true, "")) {
+              if (ppb.field_a.isNamedGroupReady(32171, "")) {
                 dga.a(true, ppb.field_a);
                 ppb.field_a = null;
                 MidiNote.resetFrameTiming(2096);
@@ -262,13 +262,13 @@ abstract class NetworkGameClient extends GameApplet {
           }
         }
         if (ef.field_z == 3 &&
-          SetBombletSprayEnergyUsed.a(GetSalvoUsesAllEnergy.field_o, 2, gdb.field_i, btb.field_b) &&
-          GetUseOffscreenRendering.a(-20230, gdb.field_i)) {
+          SetBombletSprayEnergyUsed.a(GetSalvoUsesAllEnergy.field_o, 2, BufferedFile.field_i, btb.field_b) &&
+          GetUseOffscreenRendering.a(-20230, BufferedFile.field_i)) {
           MissionFactory.b((byte) 123);
           GetPhasedEnergyBeamFireForce.b(false);
           mnb.field_g = SetFighterRepairTime.field_o;
           djb.field_r = false;
-          GetUseCircleOutline.a(GetRespawnTime.field_o, GetSalvoUsesAllEnergy.field_o, btb.field_b, gdb.field_i, false);
+          GetUseCircleOutline.a(GetRespawnTime.field_o, GetSalvoUsesAllEnergy.field_o, btb.field_b, BufferedFile.field_i, false);
           if (jb.field_a ||
             PlayerReady.field_a != null) {
             stackIn_102_0 = !(jb.field_a);
@@ -283,9 +283,9 @@ abstract class NetworkGameClient extends GameApplet {
             SetReverbFeedback.field_p = bia.a(true);
             EscapePod.field_j = lwa.e((byte) 73);
           }
-          GetSpinningBladeSpindamageMultiplier.a((byte) 55, gdb.field_i, EscapePod.field_j, SetReverbFeedback.field_p);
+          GetSpinningBladeSpindamageMultiplier.a((byte) 55, BufferedFile.field_i, EscapePod.field_j, SetReverbFeedback.field_p);
           GetSalvoUsesAllEnergy.field_o = null;
-          gdb.field_i = null;
+          BufferedFile.field_i = null;
           btb.field_b = null;
           qd.a(0, (java.applet.Applet) (this));
           MidiNote.resetFrameTiming(2096);
@@ -299,8 +299,8 @@ abstract class NetworkGameClient extends GameApplet {
         }
         boolean decompiledFrameRemainder0 = true;
         if (ef.field_z == 11) {
-          if (esb.field_j != null && (!esb.field_j.b((byte) -38) ||
-            !esb.field_j.a(param1 ^ 113))) {
+          if (esb.field_j != null && (!esb.field_j.loadIndex((byte) -38) ||
+            !esb.field_j.loadAllGroups(param1 ^ 113))) {
             IncrementVariableAction.a(SetMomentOfInertiaPerpointCalcDownshift.a(-93, esb.field_j, ocb.field_i, lo.field_d), -1, 0.0f);
             decompiledFrameRemainder0 = false;
           }
@@ -416,7 +416,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (param1 != 23100) {
             NetworkGameClient.clearSharedReferences(true);
           }
-          stackIn_3_0 = hw.field_e.a(param0, true, "");
+          stackIn_3_0 = hw.field_e.fetchNamedFile(param0, true, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -631,7 +631,7 @@ abstract class NetworkGameClient extends GameApplet {
         int var4 = -1 + PartitioningManagerFactory.field_a;
         byte[] var5 = new byte[var4];
         qga.field_b.readIsaacBytes(var4, 0, (byte) -50, var5);
-        qp.a(var3 != 0, param0 ^ param0, MissionList.b((byte) -117), qpa.a((byte) -125, var5));
+        ArchiveIndex.openExternalUrl(var3 != 0, param0 ^ param0, MissionList.b((byte) -117), qpa.a((byte) -125, var5));
     }
 
     private final void a(byte param0, boolean param1) {

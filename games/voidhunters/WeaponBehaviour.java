@@ -404,7 +404,7 @@ final class WeaponBehaviour implements DiffableState {
           }
           if (2 == this.weapontype) {
             if (var23 >= 0 &&
-              param0.e(var23, (byte) -99) >= wk.field_a) {
+              param0.countAiShipsByType(var23, (byte) -99) >= wk.field_a) {
               return;
             }
             var25 = TimedSpecialOrderBehaviour.a(false);

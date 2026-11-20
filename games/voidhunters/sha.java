@@ -96,7 +96,7 @@ final class sha extends oda {
           SetDefaultFiringLeeway.field_p = param2;
           GetLaserProjectiles.field_p = param3;
           GetAutozoomAmountMultiply.field_o = (ona) ((Object) new wh());
-          BlackBoxRecordingFactory.field_a = new pfa(param7);
+          BlackBoxRecordingFactory.field_a = new ArchiveDiskWorker(param7);
           ho.field_a = new ArchiveIndexLoader(GetAutozoomAmountMultiply.field_o, BlackBoxRecordingFactory.field_a);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sha.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');

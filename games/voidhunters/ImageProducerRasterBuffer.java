@@ -58,8 +58,8 @@ final class ImageProducerRasterBuffer extends RasterBuffer implements java.awt.i
           Throwable decompiledCaughtException = null;
           if (SetCountermeasureLauncherAimarc.field_r != null) {
             try {
-              SetCountermeasureLauncherAimarc.field_r.a(0, 0L);
-              SetCountermeasureLauncherAimarc.field_r.a(24, qga.field_b.position, (byte) -88, qga.field_b.payload);
+              SetCountermeasureLauncherAimarc.field_r.seek(0, 0L);
+              SetCountermeasureLauncherAimarc.field_r.write(24, qga.field_b.position, (byte) -88, qga.field_b.payload);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var1 = (Exception) (Object) decompiledCaughtException;

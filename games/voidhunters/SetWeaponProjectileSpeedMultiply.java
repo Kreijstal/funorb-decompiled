@@ -89,8 +89,8 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
           var2.field_c = SetPhysicsCollisionGrapplingHookForceMultiplier.field_p;
           var2.field_a = GetUseTrails.field_o;
           if (SetMissileLauncherProjectileLife.field_p == -1) {
-            var3 = 4 * -fnb.field_b;
-            var4 = fnb.field_b / 2;
+            var3 = 4 * -ArchiveProvider.field_b;
+            var4 = ArchiveProvider.field_b / 2;
             var30 = uca.a(var4, (byte) 9, new int[]{3, 4, 6, 8, 6, 4, 6, 8, 6, 4, 6, 8, 9, 10, 0, 2, 0, 10, 0, 2, 0, 10, 0}, var3);
             var22 = new ShipComponentDefinition(var30, 0, 0);
             ta.a(var30, param0 + 12, var22);
@@ -101,7 +101,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
             if (var3_ref_wfb != null) {
               SpawnPointFactory.a(var2, var3_ref_wfb, false);
               try {
-                if (au.field_c == 1) {
+                if (BoundedRandomAccessFile.field_c == 1) {
                   for (var4 = 0; var4 < hw.field_d.length; var4++) {
                     var29 = hw.field_d[var4];
                     if (var29.length > 0) {
@@ -124,7 +124,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
                     }
                   }
                 } else {
-                  if (au.field_c == 2) {
+                  if (BoundedRandomAccessFile.field_c == 2) {
                     var4 = 0;
                     if (var3_ref_wfb.field_k) {
                       var4 = -2;

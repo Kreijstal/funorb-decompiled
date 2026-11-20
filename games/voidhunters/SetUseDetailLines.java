@@ -25,7 +25,7 @@ final class SetUseDetailLines extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          asb.field_f = arguments[0].intValue(58);
+          ResourceArchive.field_f = arguments[0].intValue(58);
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

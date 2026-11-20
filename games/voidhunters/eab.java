@@ -9,10 +9,10 @@ final class eab implements Runnable {
     boolean field_j;
     private mob field_u;
     private Thread field_p;
-    au field_d;
-    au field_o;
+    BoundedRandomAccessFile field_d;
+    BoundedRandomAccessFile field_o;
     private static int field_b;
-    au field_t;
+    BoundedRandomAccessFile field_t;
     private static String field_v;
     private mob field_f;
     private Object field_a;
@@ -25,7 +25,7 @@ final class eab implements Runnable {
     private static String field_i;
     static String field_w;
     boolean field_k;
-    au[] field_l;
+    BoundedRandomAccessFile[] field_l;
     private boolean field_g;
     java.awt.EventQueue field_n;
 
@@ -95,7 +95,7 @@ final class eab implements Runnable {
           }
           if (this.field_d != null) {
             try {
-              this.field_d.a(false);
+              this.field_d.close(false);
             } catch (java.io.IOException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -103,7 +103,7 @@ final class eab implements Runnable {
           }
           if (this.field_t != null) {
             try {
-              this.field_t.a(false);
+              this.field_t.close(false);
             } catch (java.io.IOException decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -113,7 +113,7 @@ final class eab implements Runnable {
             for (var2_int = 0; this.field_l.length > var2_int; var2_int++) {
               if (this.field_l[var2_int] != null) {
                 try {
-                  this.field_l[var2_int].a(false);
+                  this.field_l[var2_int].close(false);
                 } catch (java.io.IOException decompiledCaughtParameter3) {
                   decompiledCaughtException = decompiledCaughtParameter3;
                   var3 = (IOException) (Object) decompiledCaughtException;
@@ -122,11 +122,11 @@ final class eab implements Runnable {
             }
           }
           if (param0 != 0) {
-            this.field_d = (au) null;
+            this.field_d = (BoundedRandomAccessFile) null;
           }
           if (null != this.field_o) {
             try {
-              this.field_o.a(false);
+              this.field_o.close(false);
             } catch (java.io.IOException decompiledCaughtParameter4) {
               decompiledCaughtException = decompiledCaughtParameter4;
               var2_ref2 = (IOException) (Object) decompiledCaughtException;
@@ -214,7 +214,7 @@ final class eab implements Runnable {
           ProxyAuthenticationException var3_ref = null;
           int var3_int = 0;
           Exception var3_ref2 = null;
-          au var3_ref3 = null;
+          BoundedRandomAccessFile var3_ref3 = null;
           int var4 = 0;
           String var4_ref_String = null;
           java.awt.datatransfer.Transferable var7 = null;
@@ -451,18 +451,18 @@ final class eab implements Runnable {
         }
     }
 
-    private final static au a(int param0, String param1, byte param2, String param3) {
+    private final static BoundedRandomAccessFile a(int param0, String param1, byte param2, String param3) {
         try {
           int var6 = 0;
-          au stackIn_15_0 = null;
+          BoundedRandomAccessFile stackIn_15_0 = null;
           Throwable decompiledCaughtException = null;
           String var4 = null;
           String[] var5 = null;
           String var7 = null;
-          au var8 = null;
+          BoundedRandomAccessFile var8 = null;
           Exception var8_ref = null;
           if (param2 >= -126) {
-            return (au) null;
+            return (BoundedRandomAccessFile) null;
           }
           if (param0 == 33) {
             var4 = "jagex_" + param1 + "_preferences" + param3 + "_rc.dat";
@@ -479,7 +479,7 @@ final class eab implements Runnable {
             if (!(var7.length() > 0) ||
               new File(var7).exists()) {
               try {
-                var8 = new au(new File(var7, var4), "rw", 10000L);
+                var8 = new BoundedRandomAccessFile(new File(var7, var4), "rw", 10000L);
                 stackIn_15_0 = var8;
                 return stackIn_15_0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -634,12 +634,12 @@ final class eab implements Runnable {
         }
         lfb.a(field_b, -109, field_m);
         if (this.field_k) {
-          this.field_o = new au(lfb.a("random.dat", -1, (String) null, field_b), "rw", 25L);
-          this.field_d = new au(lfb.a("main_file_cache.dat2", (byte) 34), "rw", 314572800L);
-          this.field_t = new au(lfb.a("main_file_cache.idx255", (byte) 34), "rw", 1048576L);
-          this.field_l = new au[param2];
+          this.field_o = new BoundedRandomAccessFile(lfb.a("random.dat", -1, (String) null, field_b), "rw", 25L);
+          this.field_d = new BoundedRandomAccessFile(lfb.a("main_file_cache.dat2", (byte) 34), "rw", 314572800L);
+          this.field_t = new BoundedRandomAccessFile(lfb.a("main_file_cache.idx255", (byte) 34), "rw", 1048576L);
+          this.field_l = new BoundedRandomAccessFile[param2];
           for (var5_int = 0; var5_int < param2; var5_int++) {
-            this.field_l[var5_int] = new au(lfb.a("main_file_cache.idx" + var5_int, (byte) 34), "rw", 1048576L);
+            this.field_l[var5_int] = new BoundedRandomAccessFile(lfb.a("main_file_cache.idx" + var5_int, (byte) 34), "rw", 1048576L);
           }
           if (this.field_j) {
             try {

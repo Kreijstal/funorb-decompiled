@@ -14,7 +14,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
     long field_peer;
     int field_i;
     private jagex3.graphics2.hw.NativeInterface field_Zb;
-    asb field_Ab;
+    ResourceArchive field_Ab;
     jaclib.memory.heap.NativeHeapBuffer field_m;
     boolean field_ec;
     int field_Nb;
@@ -533,7 +533,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    GpuToolkit(java.awt.Canvas param0, Object param1, TextureProvider param2, asb param3, int param4, int param5) {
+    GpuToolkit(java.awt.Canvas param0, Object param1, TextureProvider param2, ResourceArchive param3, int param4, int param5) {
         super(param2);
         int var8 = 0;
         TextureMetadata var9 = null;

@@ -983,7 +983,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           if (5 < incrementValue$0) {
             throw new RuntimeException("");
           }
-          gdb.b(50, 1000L);
+          BufferedFile.sleep(50, 1000L);
         }
     }
 

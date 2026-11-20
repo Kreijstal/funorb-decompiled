@@ -13,7 +13,7 @@ final class rw extends TextureOperation {
     static int field_q;
     int field_r;
     private byte[] field_p;
-    static asb field_l;
+    static ResourceArchive field_l;
 
     private final void d(int param0) {
         int var2;

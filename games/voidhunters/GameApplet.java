@@ -39,7 +39,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (this == tu.field_a &&
             !mb.field_i) {
             GetCountermeasureLauncherAimarc.field_p = wt.a(false);
-            gdb.b(-65, 5000L);
+            BufferedFile.sleep(-65, 5000L);
             MissionList.field_b = null;
             this.shutdownApplet(false, 10);
             return;
@@ -514,7 +514,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               var9 = SetTorpedoProjectiles.field_o.a(0, 1, (Runnable) (this));
               while (true) {
                 if (var9.field_f == 0) {
-                  gdb.b(-94, 10L);
+                  BufferedFile.sleep(-94, 10L);
                   if (var10 == 0) {
                     continue;
                   }

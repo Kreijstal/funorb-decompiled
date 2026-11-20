@@ -1,59 +1,59 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pfa implements Runnable {
+final class ArchiveDiskWorker implements Runnable {
     private vga field_d;
-    private boolean field_c;
-    int field_e;
+    private boolean stopped;
+    int pendingCount;
     static String field_a;
-    private Thread field_b;
+    private Thread thread;
 
-    private final void a(int param0, jma param1) {
+    private final void enqueue(int param0, DiskArchiveRequest param1) {
         synchronized (this.field_d) {
           if (param0 != 0) {
-            pfa.clearSharedReferences(102);
+            ArchiveDiskWorker.clearSharedReferences(102);
           }
           this.field_d.a(param1, param0 ^ -108);
-          this.field_e = this.field_e + 1;
+          this.pendingCount = this.pendingCount + 1;
           this.field_d.notifyAll();
         }
     }
 
-    final jma a(int param0, fo param1, byte param2) {
-        jma var4 = null;
+    final DiskArchiveRequest readSynchronously(int param0, ArchiveDisk param1, byte param2) {
+        DiskArchiveRequest var4 = null;
         RuntimeException var4_ref = null;
         Object var5_ref_Object = null;
         int var5 = 0;
-        jma var6 = null;
+        DiskArchiveRequest var6 = null;
         int var8 = 0;
-        jma stackIn_8_0 = null;
-        jma stackIn_15_0 = null;
+        DiskArchiveRequest stackIn_8_0 = null;
+        DiskArchiveRequest stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
         Throwable decompiledCaughtException = null;
         var8 = VoidHunters.field_G;
         try {
-          var4 = new jma();
-          var4.field_r = 1;
+          var4 = new DiskArchiveRequest();
+          var4.operation = 1;
           var5_ref_Object = this.field_d;
           synchronized (var5_ref_Object) {
-            var6 = (jma) (this.field_d.a((byte) -54));
+            var6 = (DiskArchiveRequest) (this.field_d.a((byte) -54));
             while (var6 != null) {
               if (~var6.secondaryKey == ~(long)param0 &&
-                var6.field_o == param1 &&
-                2 == var6.field_r) {
-                var4.field_n = false;
-                var4.field_p = var6.field_p;
+                var6.archiveDisk == param1 &&
+                2 == var6.operation) {
+                var4.pending = false;
+                var4.data = var6.data;
                 stackIn_8_0 = var4;
                 return stackIn_8_0;
               }
-              var6 = (jma) (this.field_d.a(1900));
+              var6 = (DiskArchiveRequest) (this.field_d.a(1900));
             }
           }
-          var4.field_p = param1.a((byte) 64, param0);
+          var4.data = param1.read((byte) 64, param0);
           var5 = 91 / ((param2 - 0) / 60);
-          var4.field_n = false;
+          var4.pending = false;
           var4.field_l = true;
           stackIn_15_0 = var4;
           return stackIn_15_0;
@@ -71,10 +71,10 @@ final class pfa implements Runnable {
         }
     }
 
-    final jma a(fo param0, byte[] param1, byte param2, int param3) {
-        jma var5 = null;
+    final DiskArchiveRequest enqueueWrite(ArchiveDisk param0, byte[] param1, byte param2, int param3) {
+        DiskArchiveRequest var5 = null;
         RuntimeException var5_ref = null;
-        jma stackIn_3_0 = null;
+        DiskArchiveRequest stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -85,13 +85,13 @@ final class pfa implements Runnable {
           if (param2 <= 73) {
             field_a = (String) null;
           }
-          var5 = new jma();
-          var5.field_o = param0;
-          var5.field_r = 2;
+          var5 = new DiskArchiveRequest();
+          var5.archiveDisk = param0;
+          var5.operation = 2;
           var5.field_l = false;
-          var5.field_p = param1;
+          var5.data = param1;
           var5.secondaryKey = (long)param3;
-          this.a(0, var5);
+          this.enqueue(0, var5);
           stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -114,27 +114,27 @@ final class pfa implements Runnable {
         }
     }
 
-    final jma a(byte param0, fo param1, int param2) {
-        jma var4 = null;
+    final DiskArchiveRequest enqueueRead(byte param0, ArchiveDisk param1, int param2) {
+        DiskArchiveRequest var4 = null;
         RuntimeException var4_ref = null;
-        jma stackIn_2_0 = null;
-        jma stackIn_4_0 = null;
+        DiskArchiveRequest stackIn_2_0 = null;
+        DiskArchiveRequest stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new jma();
-          var4.field_r = 3;
-          var4.field_o = param1;
+          var4 = new DiskArchiveRequest();
+          var4.operation = 3;
+          var4.archiveDisk = param1;
           var4.field_l = false;
           var4.secondaryKey = (long)param2;
-          this.a(param0 - 121, var4);
+          this.enqueue(param0 - 121, var4);
           if (param0 == 121) {
             stackIn_4_0 = var4;
             return stackIn_4_0;
           }
-          stackIn_2_0 = (jma) null;
+          stackIn_2_0 = (DiskArchiveRequest) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -150,9 +150,9 @@ final class pfa implements Runnable {
         }
     }
 
-    final void a(int param0) {
+    final void shutdown(int param0) {
         try {
-          this.field_c = true;
+          this.stopped = true;
           synchronized (this.field_d) {
             if (param0 != 23474) {
               field_a = (String) null;
@@ -160,10 +160,10 @@ final class pfa implements Runnable {
             this.field_d.notifyAll();
           }
           try {
-            this.field_b.join();
+            this.thread.join();
           } catch (InterruptedException interruptedException) {
           }
-          this.field_b = null;
+          this.thread = null;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {
@@ -174,24 +174,24 @@ final class pfa implements Runnable {
     public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 <= 62) {
-          pfa.clearSharedReferences(-80);
+          ArchiveDiskWorker.clearSharedReferences(-80);
         }
     }
 
-    pfa(eab param0) {
+    ArchiveDiskWorker(eab param0) {
         mob var2 = null;
         this.field_d = new vga();
-        this.field_e = 0;
-        this.field_c = false;
+        this.pendingCount = 0;
+        this.stopped = false;
         try {
           var2 = param0.a(0, 5, (Runnable) (this));
           while (0 == var2.field_f) {
-            gdb.b(-52, 10L);
+            BufferedFile.sleep(-52, 10L);
           }
           if (var2.field_f == 2) {
             throw new RuntimeException();
           }
-          this.field_b = (Thread) (var2.field_d);
+          this.thread = (Thread) (var2.field_d);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pfa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -201,7 +201,7 @@ final class pfa implements Runnable {
         try {
           InterruptedException interruptedException = null;
           int var5 = 0;
-          jma var7 = null;
+          DiskArchiveRequest var7 = null;
           int decompiledRegionSelector0 = 0;
           int decompiledRegionSelector1 = 0;
           Throwable decompiledCaughtException = null;
@@ -209,12 +209,12 @@ final class pfa implements Runnable {
           Exception var2_ref = null;
           String var6 = null;
           var5 = VoidHunters.field_G;
-          while (!this.field_c) {
+          while (!this.stopped) {
             var2 = this.field_d;
             synchronized (var2) {
-              var7 = (jma) (this.field_d.b((byte) -120));
+              var7 = (DiskArchiveRequest) (this.field_d.b((byte) -120));
               if (var7 != null) {
-                this.field_e = this.field_e - 1;
+                this.pendingCount = this.pendingCount - 1;
                 decompiledRegionSelector0 = 1;
               } else {
                 try {
@@ -231,17 +231,17 @@ final class pfa implements Runnable {
             }
             try {
               boolean decompiledFrameRemainder0 = true;
-              if (var7.field_r == 2) {
-                var7.field_o.a((int)var7.secondaryKey, 520, var7.field_p, var7.field_p.length);
-                var7.field_n = false;
+              if (var7.operation == 2) {
+                var7.archiveDisk.write((int)var7.secondaryKey, 520, var7.data, var7.data.length);
+                var7.pending = false;
               } else {
-                if (var7.field_r != 3) {
+                if (var7.operation != 3) {
                   decompiledRegionSelector1 = 0;
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  var7.field_p = var7.field_o.a((byte) 120, (int)var7.secondaryKey);
-                  var7.field_n = false;
+                  var7.data = var7.archiveDisk.read((byte) 120, (int)var7.secondaryKey);
+                  var7.pending = false;
                 }
               }
               if (decompiledFrameRemainder0) {
@@ -257,7 +257,7 @@ final class pfa implements Runnable {
             if (decompiledRegionSelector1 != 0) {
               continue;
             }
-            var7.field_n = false;
+            var7.pending = false;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

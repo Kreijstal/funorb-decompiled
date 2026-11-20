@@ -71,7 +71,7 @@ class gna extends elb {
             }
             var4 = ((eab) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(eab.field_w).append("&v2=").append(eab.field_r).append("&e=").append(var10).toString()), 108);
             while (var4.field_f == 0) {
-              gdb.b(120, 1L);
+              BufferedFile.sleep(120, 1L);
             }
             if (var4.field_f == 1) {
               var5 = (DataInputStream) (var4.field_d);

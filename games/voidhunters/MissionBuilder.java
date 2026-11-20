@@ -311,9 +311,9 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    final static asb a(int param0, int param1) {
+    final static ResourceArchive a(int param0, int param1) {
         if (param0 != 1) {
-          return (asb) null;
+          return (ResourceArchive) null;
         }
         return SetAutoAfkTimeout.a(true, false, -61, false, param1, 1);
     }
@@ -1855,11 +1855,11 @@ final class MissionBuilder implements DiffableState {
             param5.a(var22, (byte) 90);
             var20.addCondition((byte) -112, (MissionCondition) (new BodyDestroyedCondition(var22.getId(false))));
             var25 = new MissionEvent();
-            var25.addCondition((byte) -123, (MissionCondition) (new BodyInZoneCondition(var22.getId(false), -2 + param5.e(true))));
+            var25.addCondition((byte) -123, (MissionCondition) (new BodyInZoneCondition(var22.getId(false), -2 + param5.getMapZoneCount(true))));
             var25.addAction(new IncrementVariableAction(var12, -1), true);
             param5.a(var25, -38);
             var26 = new MissionEvent();
-            var26.addCondition((byte) -120, (MissionCondition) (new BodyInZoneCondition(var22.getId(false), -1 + param5.e(true))));
+            var26.addCondition((byte) -120, (MissionCondition) (new BodyInZoneCondition(var22.getId(false), -1 + param5.getMapZoneCount(true))));
             var26.addAction(new IncrementVariableAction(var11, -1), true);
             param5.a(var26, -38);
           }
@@ -2329,7 +2329,7 @@ final class MissionBuilder implements DiffableState {
         try {
           var7 = param3.world;
           var7.b(param0, (byte) 23);
-          var7.b((byte) 80);
+          var7.makeNebulaFieldMutable((byte) 80);
           this.a(0, param1, param0, param2, param3);
           this.a(param1, param2, var7, 0);
           if (qab.a(33, param0)) {
@@ -2344,9 +2344,9 @@ final class MissionBuilder implements DiffableState {
           }
           if (GetDefaultFiringLeeway.a(param3, (byte) -24)) {
             this.a(-1, param2, param3);
-            var7.a(48, true);
+            var7.setTeamsSwapped(48, true);
           } else {
-            var7.a(48, false);
+            var7.setTeamsSwapped(48, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -2529,7 +2529,7 @@ final class MissionBuilder implements DiffableState {
           var18.setTeam(17704, param0);
           param4.a(var18, (byte) 107);
           var7 = null;
-          var8 = param4.f(24797);
+          var8 = param4.getPlayerSlotCount(24797);
           for (var9 = 0; var8 > var9; var9++) {
             var10 = 8192 * var9 / var8;
             var11 = 2 * var18.getBoundingExtent(-123);
@@ -2559,7 +2559,7 @@ final class MissionBuilder implements DiffableState {
           var21.addAction(new AwardVictoryToTeamAction(1), true);
           param4.a(var21, -38);
           var22 = new MissionEvent();
-          var22.addCondition((byte) -107, (MissionCondition) (new BodyInZoneCondition(var18.getId(false), param4.e(true) - 1)));
+          var22.addCondition((byte) -107, (MissionCondition) (new BodyInZoneCondition(var18.getId(false), param4.getMapZoneCount(true) - 1)));
           var22.addAction(new AwardVictoryToTeamAction(0), true);
           param4.a(var22, param0 - 38);
           stackIn_8_0 = var7;
@@ -2967,7 +2967,7 @@ final class MissionBuilder implements DiffableState {
               var6 = param0[var5_int];
               if (var6 instanceof BodyInZoneCondition) {
                 var7 = (BodyInZoneCondition) (var6);
-                var8 = param3.e((byte) -61, var7.getParameter((byte) -123, 1));
+                var8 = param3.getMapZone((byte) -61, var7.getParameter((byte) -123, 1));
                 if (var8 != null) {
                   param1 = (MapZone[]) (GetFighterBayReload.a(param1, var8, true, wsb.field_e, -102));
                 }
@@ -3070,7 +3070,7 @@ final class MissionBuilder implements DiffableState {
                   var21_ref_crb = new Asteroid(new ShipComponent(NodeHashTable.chooseRandomAsteroidType(param0, (byte) 97)));
                   var21_ref_crb.setPosition(var19, var20, (byte) -97);
                   var21_ref_crb.setAngle(hob.a(param0, 8192, 116), -64);
-                  var22_ref_crb__ = param1.a(true);
+                  var22_ref_crb__ = param1.getAsteroids(true);
                   var23 = 0;
                   var24_ref_crb__ = var22_ref_crb__;
                   var25 = 0;
@@ -3587,7 +3587,7 @@ final class MissionBuilder implements DiffableState {
             var5 < 2097152) {
             var5 = 2097152;
           }
-          param2.a(var5, (byte) 36);
+          param2.setWidth(var5, (byte) 36);
           var7 = 2097152;
           var8 = this.optionTotals[16] - this.optionTotals[17];
           var7 = var7 + var4_int * var8;

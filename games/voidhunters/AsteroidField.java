@@ -194,7 +194,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
         }
     }
 
-    final static void a(byte param0, asb param1) {
+    final static void a(byte param0, ResourceArchive param1) {
         RuntimeException stackIn_1173_0 = null;
         StringBuilder stackIn_1173_1 = null;
         String stackIn_1174_2 = null;
@@ -601,7 +601,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime16 = dqb.a((byte) -38, "external_ship_design_loaded");
           if (var2Lifetime16 != null) {
-            km.field_s = qpa.a((byte) -125, var2Lifetime16);
+            NetworkArchiveRequest.field_s = qpa.a((byte) -125, var2Lifetime16);
           }
           var2Lifetime17 = dqb.a((byte) -66, "need_to_be_in_menu_or_sandbox");
           if (var2Lifetime17 != null) {
@@ -633,7 +633,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime24 = dqb.a((byte) -76, "zoom");
           if (var2Lifetime24 != null) {
-            se.field_b = qpa.a((byte) -125, var2Lifetime24);
+            DirectByteStorage.field_b = qpa.a((byte) -125, var2Lifetime24);
           }
           var2Lifetime25 = dqb.a((byte) -90, "you_are_spectating");
           if (null != var2Lifetime25) {
@@ -685,7 +685,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime37 = dqb.a((byte) -3, "teams_have_been_balanced");
           if (null != var2Lifetime37) {
-            asb.field_b = qpa.a((byte) -125, var2Lifetime37);
+            ResourceArchive.field_b = qpa.a((byte) -125, var2Lifetime37);
           }
           var2Lifetime38 = dqb.a((byte) -87, "option_state_free");
           if (null != var2Lifetime38) {
@@ -1077,7 +1077,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime135 = dqb.a((byte) -9, "COMPONENT_CHASSIS_CONVOY_TEXT");
           if (var2Lifetime135 != null) {
-            pfa.field_a = qpa.a((byte) -125, var2Lifetime135);
+            ArchiveDiskWorker.field_a = qpa.a((byte) -125, var2Lifetime135);
           }
           var2Lifetime136 = dqb.a((byte) -4, "COMPONENT_CHASSIS_DRAGON_TEXT");
           if (null != var2Lifetime136) {
@@ -2024,7 +2024,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
         try {
           hua.a(this, (byte) 96);
           if (!param0) {
-            AsteroidField.a((byte) 105, (asb) null);
+            AsteroidField.a((byte) 105, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aib.O(" + param0 + ')');

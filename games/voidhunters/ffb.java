@@ -8,10 +8,10 @@ final class ffb {
     static String field_b;
     static String field_c;
 
-    final static byte[] a(boolean param0, Object param1, boolean param2) {
+    final static byte[] extractBytes(boolean param0, Object param1, boolean param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
-        ps var4 = null;
+        ByteStorage var4 = null;
         byte[] stackIn_7_0 = null;
         byte[] stackIn_9_0 = null;
         byte[] stackIn_13_0 = null;
@@ -33,9 +33,9 @@ final class ffb {
             stackIn_7_0 = SetPointDefenceLaserProjectileDamage.a(var3, (byte) -116);
             return stackIn_7_0;
           }
-          if (param1 instanceof ps) {
-            var4 = (ps) (param1);
-            stackIn_13_0 = var4.b(3);
+          if (param1 instanceof ByteStorage) {
+            var4 = (ByteStorage) (param1);
+            stackIn_13_0 = var4.getBytes(3);
             return stackIn_13_0;
           }
           if (param2) {

@@ -10,7 +10,7 @@ final class GetMissionTerrainAsteroidProbability extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static ngb a(int param0, int param1, asb param2, int param3, asb param4) {
+    final static ngb a(int param0, int param1, ResourceArchive param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
         ngb stackIn_2_0 = null;
         ngb stackIn_7_0 = null;
@@ -28,7 +28,7 @@ final class GetMissionTerrainAsteroidProbability extends ConsoleCommand {
           if (!pa.a(param3, 2, param4, param1)) {
             return null;
           }
-          stackIn_7_0 = lpb.a((byte) 19, param2.a(param3, param1, (byte) 13));
+          stackIn_7_0 = lpb.a((byte) 19, param2.fetchFile(param3, param1, (byte) 13));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

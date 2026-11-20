@@ -14,7 +14,7 @@ abstract class ona {
     byte field_j;
     volatile int field_k;
     volatile int field_g;
-    km field_b;
+    NetworkArchiveRequest field_b;
 
     abstract void a(int param0);
 
@@ -55,15 +55,15 @@ abstract class ona {
 
     abstract void a(byte param0);
 
-    final km a(boolean param0, int param1, int param2, byte param3, int param4) {
+    final NetworkArchiveRequest a(boolean param0, int param1, int param2, byte param3, int param4) {
         if (param1 != -21) {
-          return (km) null;
+          return (NetworkArchiveRequest) null;
         }
         long var6 = ((long)param4 << 32) + (long)param2;
-        km var8 = new km();
+        NetworkArchiveRequest var8 = new NetworkArchiveRequest();
         var8.secondaryKey = var6;
         var8.field_l = param0 ? true : false;
-        var8.field_q = param3;
+        var8.padding = param3;
         if (param0) {
           if (!(this.f(13223) < 20)) {
             throw new RuntimeException();

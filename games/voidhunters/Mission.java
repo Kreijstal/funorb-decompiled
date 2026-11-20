@@ -253,11 +253,11 @@ final class Mission implements DiffableState {
               }
             }
           }
-          var5 = var11.f(24797);
+          var5 = var11.getPlayerSlotCount(24797);
           this.savedState.copyTo((byte) 58, var11);
           var6 = -74 / ((param2 - 66) / 59);
-          var11.b(-123, false);
-          var11.a(0, var5);
+          var11.setDebug(-123, false);
+          var11.initializeRespawnTimers(0, var5);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

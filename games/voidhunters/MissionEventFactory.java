@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MissionEventFactory implements GameStateFactory {
-    static asb field_a;
+    static ResourceArchive field_a;
 
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 != 11995) {
