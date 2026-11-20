@@ -5,7 +5,7 @@ final class kab extends bob {
     static String field_p;
     private caa[] field_q;
 
-    public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
+    public final void drawComponent(int param0, UiComponent param1, int param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
         int stackIn_12_0 = 0;
         int stackIn_15_0 = 0;
@@ -24,15 +24,15 @@ final class kab extends bob {
         int var13 = 0;
         int var14 = 0;
         try {
-          SoftwareRasterizer2D.drawRectangle(param2 + param1.field_g, param1.field_r + param3, param1.field_h, param1.field_f, 10197915);
+          SoftwareRasterizer2D.drawRectangle(param2 + param1.x, param1.y + param3, param1.width, param1.height, 10197915);
           if (param4) {
-            stackIn_6_0 = (((htb) (param1)).field_u) ? 1 : 0;
+            stackIn_6_0 = (((UiFocusableComponent) (param1)).active) ? 1 : 0;
           } else {
             stackIn_6_0 = 0;
           }
           var6_int = stackIn_6_0;
           if (param4) {
-            stackIn_12_0 = (param1.e((byte) -120)) ? 1 : 0;
+            stackIn_12_0 = (param1.hasFocus((byte) -120)) ? 1 : 0;
           } else {
             stackIn_12_0 = 0;
           }
@@ -48,9 +48,9 @@ final class kab extends bob {
           }
           var10 = this.field_q[var8];
           var12 = -89 % ((-27 - param0) / 35);
-          var11 = param2 - (-param1.field_g - (-var10.field_h + param1.field_h) / 2);
-          var13 = param3 + (param1.field_r + (-var10.field_e + param1.field_f) / 2);
-          var14 = param1.field_g + param2 + param1.field_h / 2;
+          var11 = param2 - (-param1.x - (-var10.field_h + param1.width) / 2);
+          var13 = param3 + (param1.y + (-var10.field_e + param1.height) / 2);
+          var14 = param1.x + param2 + param1.width / 2;
           var10.a(var11, var13);
           this.field_d.drawCentered(this.b((byte) -82, param1), var14, param3, var9, -1);
           return;

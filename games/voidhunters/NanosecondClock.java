@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class abb {
+abstract class NanosecondClock {
     static int field_a;
     static String field_b;
 
-    final static void a(int param0, int param1, int param2, int param3, Sprite[] param4, int param5) {
+    final static void drawNineSlice(int param0, int param1, int param2, int param3, Sprite[] param4, int param5) {
         int var21 = 0;
         int stackIn_11_0 = 0;
         int stackIn_14_0 = 0;
@@ -174,7 +174,7 @@ abstract class abb {
         }
     }
 
-    abstract long a(byte param0);
+    abstract long nanoTime(byte param0);
 
     static {
         field_b = "Scrambler";

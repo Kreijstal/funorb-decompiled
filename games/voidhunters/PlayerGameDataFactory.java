@@ -16,10 +16,10 @@ final class PlayerGameDataFactory implements GameStateFactory {
             }
             return;
           }
-          qn.field_h.a((byte) -5, ata.field_H, SetOndamageParticleFadestart.field_o, param0);
+          qn.field_h.processPointerInput((byte) -5, ata.field_H, SetOndamageParticleFadestart.field_o, param0);
           qn.field_h.h(19976);
           while (ata.e(127)) {
-            qn.field_h.a(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
+            qn.field_h.dispatchKey(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nna extends dqa implements oo {
+final class nna extends UiContainer implements UiActionListener {
     static String field_F;
     private int[] field_E;
     static String field_D;
@@ -13,9 +13,9 @@ final class nna extends dqa implements oo {
     private String field_x;
     static ae field_z;
     private int field_A;
-    private htb[] field_y;
+    private UiFocusableComponent[] field_y;
 
-    public final void a(int param0, int param1, int param2, htb param3, int param4) {
+    public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -64,18 +64,18 @@ final class nna extends dqa implements oo {
           if (param0 > -113) {
             field_D = (String) null;
           }
-          this.field_y[var4_int] = this.a((byte) 62, param1, (sba) (this));
+          this.field_y[var4_int] = this.a((byte) 62, param1, (UiListener) (this));
           this.field_E[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nna.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final htb a(byte param0, String param1, sba param2) {
-        htb var4 = null;
+    final UiFocusableComponent a(byte param0, String param1, UiListener param2) {
+        UiFocusableComponent var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        htb stackIn_3_0 = null;
+        UiFocusableComponent stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -84,14 +84,14 @@ final class nna extends dqa implements oo {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 59) {
-            this.b(78, -29, 18, 90);
+            this.drawLayer(78, -29, 18, 90);
           }
-          var4 = new htb(param1, param2);
-          var4.field_q = (wwa) ((Object) new vva());
-          var5 = -2 + this.field_f;
-          this.a(0, this.field_h, this.field_f + 34, 1, 0);
-          var4.a(7, this.field_h - 14, 30, 1, var5);
-          this.b(-18756, var4);
+          var4 = new UiFocusableComponent(param1, param2);
+          var4.renderer = (UiRenderer) ((Object) new vva());
+          var5 = -2 + this.height;
+          this.setBounds(0, this.width, this.height + 34, 1, 0);
+          var4.setBounds(7, this.width - 14, 30, 1, var5);
+          this.addChild(-18756, var4);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -126,7 +126,7 @@ final class nna extends dqa implements oo {
     }
 
     nna(os param0, BitmapFont param1, String param2) {
-        super(0, 0, 288, 0, (wwa) null);
+        super(0, 0, 288, 0, (UiRenderer) null);
         int var4_int = 0;
         this.field_A = 0;
         try {
@@ -134,19 +134,19 @@ final class nna extends dqa implements oo {
           this.field_B = param0;
           this.field_H = param1;
           var4_int = null != this.field_x ? this.field_H.getParagraphHeight(this.field_x, 260, this.field_H.maxAscent) : 0;
-          this.a(0, 288, var4_int + 22, 1, 0);
+          this.setBounds(0, 288, var4_int + 22, 1, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (param2 < 47) {
-          sba var6 = (sba) null;
-          this.a((byte) -58, (String) null, (sba) null);
+          UiListener var6 = (UiListener) null;
+          this.a((byte) -58, (String) null, (UiListener) null);
         }
-        super.b(param0, param1, 61, param3);
-        this.field_H.drawParagraph(this.field_x, param0 + this.field_g + 14, 10 + (param3 + this.field_r), this.field_h - 28, this.field_f, 16777215, -1, 0, 0, this.field_H.maxAscent);
+        super.drawLayer(param0, param1, 61, param3);
+        this.field_H.drawParagraph(this.field_x, param0 + this.x + 14, 10 + (param3 + this.y), this.width - 28, this.height, 16777215, -1, 0, 0, this.field_H.maxAscent);
     }
 
     private final void a(int param0, int param1) {
@@ -155,8 +155,8 @@ final class nna extends dqa implements oo {
         if (param1 <= this.field_A) {
           return;
         }
-        htb[] var7 = new htb[param1];
-        htb[] var3 = var7;
+        UiFocusableComponent[] var7 = new UiFocusableComponent[param1];
+        UiFocusableComponent[] var3 = var7;
         if (param0 != -4349) {
           return;
         }

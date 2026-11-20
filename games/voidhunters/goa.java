@@ -21,7 +21,7 @@ final class goa extends iw {
           this.field_N.field_x = true;
           this.field_L = false;
           this.field_M = false;
-          this.b(-18756, this.field_N);
+          this.addChild(-18756, this.field_N);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "goa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -29,7 +29,7 @@ final class goa extends iw {
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, param1, param2);
-        GetBoostersCooldown.field_r.drawCentered(this.field_J, (this.field_h >> 1) + param2, 103 + param0, 16777215, -1);
+        GetBoostersCooldown.field_r.drawCentered(this.field_J, (this.width >> 1) + param2, 103 + param0, 16777215, -1);
         if (null != this.field_K) {
           SoftwareRasterizer2D.drawHorizontalLine(param2 + 20, 113 + param0, 260, 8421504);
           GetBoostersCooldown.field_r.drawParagraph(this.field_K, 20 + param2, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, GetBoostersCooldown.field_r.maxAscent);

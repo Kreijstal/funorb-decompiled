@@ -21,20 +21,20 @@ final class tga extends uf implements lca {
         }
     }
 
-    final String d(byte param0) {
-        if (!this.field_e) {
+    final String getTooltip(byte param0) {
+        if (!this.hovered) {
           return null;
         }
-        if (this.field_p == null) {
+        if (this.tooltip == null) {
           return null;
         }
         if (param0 == 125) {
-          SetExplosionPushMultiplier.a(PlayerGameData.field_b + (this.field_h - this.field_L), (byte) -114, uia.field_b);
-          return this.field_p;
+          SetExplosionPushMultiplier.a(PlayerGameData.field_b + (this.width - this.field_L), (byte) -114, uia.field_b);
+          return this.tooltip;
         }
         field_M = (String[]) null;
-        SetExplosionPushMultiplier.a(PlayerGameData.field_b + (this.field_h - this.field_L), (byte) -114, uia.field_b);
-        return this.field_p;
+        SetExplosionPushMultiplier.a(PlayerGameData.field_b + (this.width - this.field_L), (byte) -114, uia.field_b);
+        return this.tooltip;
     }
 
     final void a(int param0, eeb param1) {
@@ -57,7 +57,7 @@ final class tga extends uf implements lca {
         return this.field_O;
     }
 
-    tga(String param0, sba param1, int param2) {
+    tga(String param0, UiListener param1, int param2) {
         super(param0, param1, param2);
     }
 
@@ -124,10 +124,10 @@ final class tga extends uf implements lca {
         }
     }
 
-    final void a(int param0, int param1, int param2, shb param3) {
+    final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         try {
-          super.a(param0, param1, param2, param3);
-          this.field_L = -param1 + (PlayerGameData.field_b - this.field_g);
+          super.updatePointer(param0, param1, param2, param3);
+          this.field_L = -param1 + (PlayerGameData.field_b - this.x);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tga.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

@@ -21,14 +21,14 @@ final class SetPointDefenceLaserAimspeed extends ConsoleCommand {
           var5 = var5 + var4 + iw.field_D + ":";
         }
         if (0 < var4) {
-          var5 = var5 + var3 + htb.field_v;
+          var5 = var5 + var3 + UiFocusableComponent.field_v;
           return var5;
         }
         if (0 >= var3) {
           var5 = var5 + var2 + GetFps.field_p;
           return var5;
         }
-        var5 = var5 + var3 + htb.field_v;
+        var5 = var5 + var3 + UiFocusableComponent.field_v;
         return var5;
     }
 

@@ -34,7 +34,7 @@ final class SetRadialMenuRadius extends ConsoleCommand {
         if (var5 < 256) {
           SoftwareRasterizer2D.fillRectangleAlpha(0, 0, SoftwareRasterizer2D.width, SoftwareRasterizer2D.height, 0, -var5 + 256);
         }
-        bia.a((byte) 124);
+        bia.popRasterState((byte) 124);
         if (SetSalvoaim.field_r < 150) {
           ata.field_K.drawHalfSize(var3, var4);
         } else {

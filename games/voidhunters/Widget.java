@@ -677,9 +677,9 @@ class Widget extends WidgetNode {
         var21 = var19 + this.field_t;
         var22 = this.field_v + var20;
         if (!this.field_S) {
-          abb.a(3, this.height, this.width, this.screenY, var16, this.screenX);
+          NanosecondClock.drawNineSlice(3, this.height, this.width, this.screenY, var16, this.screenX);
         } else {
-          abb.a(3, param1, param3, param10, var16, param9);
+          NanosecondClock.drawNineSlice(3, param1, param3, param10, var16, param9);
         }
         if (var17 != null) {
           var23_int = var21 + this.screenX;

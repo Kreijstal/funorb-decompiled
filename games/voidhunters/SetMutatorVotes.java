@@ -9,7 +9,7 @@ final class SetMutatorVotes extends ConsoleCommand {
         String stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         boolean stackIn_13_2 = false;
-        bc stackIn_18_0 = null;
+        NineSliceSprite stackIn_18_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -19,7 +19,7 @@ final class SetMutatorVotes extends ConsoleCommand {
         String var6 = null;
         int var7 = 0;
         int var8 = 0;
-        bc var9 = null;
+        NineSliceSprite var9 = null;
         int var10 = 0;
         var10 = VoidHunters.field_G;
         try {
@@ -57,7 +57,7 @@ final class SetMutatorVotes extends ConsoleCommand {
               var9 = stackIn_18_0;
               var2 = var2 + pva.field_g;
               if (var9 != null) {
-                var9.a((byte) 54, var8 - ShipTeamCondition.field_e, (ShipTeamCondition.field_e << 1) + var7, var2, SetExplosionPushMultiplier.field_o + (SetPointDefenceLaserAimarc.field_q << 1));
+                var9.draw((byte) 54, var8 - ShipTeamCondition.field_e, (ShipTeamCondition.field_e << 1) + var7, var2, SetExplosionPushMultiplier.field_o + (SetPointDefenceLaserAimarc.field_q << 1));
               }
               var2 = var2 + SetPointDefenceLaserAimarc.field_q;
             }

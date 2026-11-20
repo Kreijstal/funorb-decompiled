@@ -43,7 +43,7 @@ final class ik extends IntrusiveNode {
         var2[178] = ge.field_c;
         var2[100] = WorldFactory.field_a;
         var2[49] = kmb.field_f;
-        var2[153] = mc.field_u;
+        var2[153] = UiSingleChildContainer.field_u;
         var2[135] = SetThrusterBindingBalanceThreshold.field_p;
         var2[41] = OpenGlShader.field_a;
         var2[90] = Particle.field_x;

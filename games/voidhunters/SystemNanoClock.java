@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tgb extends abb {
+final class SystemNanoClock extends NanosecondClock {
     static int[] field_c;
     static String field_d;
 
@@ -9,18 +9,18 @@ final class tgb extends abb {
         field_c = null;
         field_d = null;
         if (param0 != -58) {
-          tgb.clearSharedReferences((byte) 51);
+          SystemNanoClock.clearSharedReferences((byte) 51);
         }
     }
 
-    final long a(byte param0) {
+    final long nanoTime(byte param0) {
         if (param0 != -110) {
           return 75L;
         }
         return System.nanoTime();
     }
 
-    tgb() {
+    SystemNanoClock() {
         System.nanoTime();
     }
 

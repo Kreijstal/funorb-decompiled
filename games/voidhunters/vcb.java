@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vcb extends oda implements oo {
-    private htb field_A;
+final class vcb extends UiArrayContainer implements UiActionListener {
+    private UiFocusableComponent field_A;
     private boolean field_G;
     private boolean field_y;
-    private htb field_N;
+    private UiFocusableComponent field_N;
     private int field_J;
     int field_K;
-    private htb field_C;
+    private UiFocusableComponent field_C;
     private int field_F;
     private int field_x;
     private boolean field_w;
@@ -16,13 +16,13 @@ final class vcb extends oda implements oo {
     int field_L;
     private ef field_P;
     private int field_H;
-    private htb field_D;
+    private UiFocusableComponent field_D;
     static byte[][] field_E;
     static GameStateFactory field_z;
     int field_M;
-    private htb field_v;
+    private UiFocusableComponent field_v;
 
-    public final void a(int param0, int param1, int param2, htb param3, int param4) {
+    public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -71,7 +71,7 @@ final class vcb extends oda implements oo {
         }
     }
 
-    final void a(int param0, int param1, int param2, shb param3) {
+    final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         String stackIn_40_2 = null;
@@ -84,15 +84,15 @@ final class vcb extends oda implements oo {
         int var5_intLifetime2;
         var7 = VoidHunters.field_G;
         try {
-          super.a(param0, param1, param2, param3);
-          if ((!(this.field_P.field_t instanceof htb) ||
-            ((htb) (this.field_P.field_t)).field_x) && this.field_P.field_n == 1) {
+          super.updatePointer(param0, param1, param2, param3);
+          if ((!(this.field_P.child instanceof UiFocusableComponent) ||
+            ((UiFocusableComponent) (this.field_P.child)).enabled) && this.field_P.pressedButton == 1) {
             if (this.field_w) {
               var5_int = this.field_M;
               this.h((byte) 79);
               if (var5_int != this.field_M &&
-                this.field_l instanceof lt) {
-                ((lt) (this.field_l)).a(this, this.field_M, this.field_M, true);
+                this.listener instanceof lt) {
+                ((lt) (this.listener)).a(this, this.field_M, this.field_M, true);
               }
             } else {
               this.i((byte) -8);
@@ -103,24 +103,24 @@ final class vcb extends oda implements oo {
               var5_intLifetime2 = this.field_L;
               this.g(127);
               if (var5_intLifetime2 != this.field_L &&
-                this.field_l instanceof lt) {
-                ((lt) (this.field_l)).a(this, this.field_L, this.field_M, true);
+                this.listener instanceof lt) {
+                ((lt) (this.listener)).a(this, this.field_L, this.field_M, true);
               }
             }
           }
-          if (this.field_N.field_x &&
-            1 == this.field_N.field_z) {
+          if (this.field_N.enabled &&
+            1 == this.field_N.activatedButton) {
             if (this.field_G) {
               if (!this.field_w) {
-                if (uia.field_b <= param0 - (-this.field_P.field_r - (this.field_P.field_f >> 1))) {
+                if (uia.field_b <= param0 - (-this.field_P.y - (this.field_P.height >> 1))) {
                   this.a((byte) -17, this.field_L - this.field_F);
                   return;
                 }
                 this.a((byte) -17, this.field_L + this.field_F);
                 return;
               }
-              var5_intLifetime1 = -this.field_P.field_g - (this.field_P.field_h >> 1) + (-param1 + PlayerGameData.field_b) - this.field_g;
-              var6 = uia.field_b - param0 + (-this.field_r - (this.field_P.field_r + (this.field_P.field_f >> 1)));
+              var5_intLifetime1 = -this.field_P.x - (this.field_P.width >> 1) + (-param1 + PlayerGameData.field_b) - this.x;
+              var6 = uia.field_b - param0 + (-this.y - (this.field_P.y + (this.field_P.height >> 1)));
               if (Math.abs(var6) <= Math.abs(var5_intLifetime1)) {
                 if (var5_intLifetime1 <= 0) {
                   this.a(-116, this.field_M - this.field_x);
@@ -137,7 +137,7 @@ final class vcb extends oda implements oo {
               return;
             }
             if (this.field_w) {
-              if ((this.field_P.field_h >> 1) + (this.field_P.field_g + param1) >= PlayerGameData.field_b) {
+              if ((this.field_P.width >> 1) + (this.field_P.x + param1) >= PlayerGameData.field_b) {
                 this.a(107, -this.field_x + this.field_M);
                 return;
               }
@@ -163,18 +163,18 @@ final class vcb extends oda implements oo {
     final void b(int param0, int param1, int param2) {
         int var4 = 0;
         if (param1 != 21944) {
-          shb var5 = (shb) null;
-          this.a(-20, -95, (shb) null, 'J');
+          UiComponent var5 = (UiComponent) null;
+          this.handleKey(-20, -95, (UiComponent) null, 'J');
         }
         if (param0 < param2) {
-          var4 = this.field_N.field_h * param0 / param2;
+          var4 = this.field_N.width * param0 / param2;
           if (var4 < this.field_J) {
             var4 = this.field_J;
           }
-          this.field_P.a(this.field_P.field_g, var4, this.field_P.field_f, 1, this.field_P.field_r);
+          this.field_P.setBounds(this.field_P.x, var4, this.field_P.height, 1, this.field_P.y);
           this.a((byte) -63, true);
         } else {
-          this.field_P.a(this.field_P.field_g, this.field_N.field_h, this.field_P.field_f, param1 ^ 21945, this.field_P.field_r);
+          this.field_P.setBounds(this.field_P.x, this.field_N.width, this.field_P.height, param1 ^ 21945, this.field_P.y);
           this.a((byte) -110, false);
         }
         this.i((byte) -8);
@@ -201,63 +201,63 @@ final class vcb extends oda implements oo {
     }
 
     private final void g(int param0) {
-        int var2 = this.field_A == null ? this.field_N.field_r : this.field_A.field_f + this.field_A.field_r;
-        int var3 = null != this.field_v ? -this.field_P.field_f + this.field_v.field_r : this.field_N.field_f + this.field_N.field_r - this.field_P.field_f;
+        int var2 = this.field_A == null ? this.field_N.y : this.field_A.height + this.field_A.y;
+        int var3 = null != this.field_v ? -this.field_P.height + this.field_v.y : this.field_N.height + this.field_N.y - this.field_P.height;
         int var4 = 68 / ((9 - param0) / 59);
-        this.c(-3393, var3 <= var2 ? 0 : (this.field_P.field_r - var2 << 16) / (var3 - var2));
+        this.c(-3393, var3 <= var2 ? 0 : (this.field_P.y - var2 << 16) / (var3 - var2));
     }
 
     private final void a(int param0, int param1) {
         this.b(param1, 65536);
         int var3 = -73 % ((param0 - 35) / 49);
-        if (this.field_l instanceof lt) {
-          ((lt) (this.field_l)).a(this.field_M, this.field_L, this, -125);
+        if (this.listener instanceof lt) {
+          ((lt) (this.listener)).a(this.field_M, this.field_L, this, -125);
         }
     }
 
     private final void a(int param0, boolean param1) {
-        htb stackIn_5_0 = null;
+        UiFocusableComponent stackIn_5_0 = null;
         boolean stackIn_7_1 = false;
-        htb stackIn_12_0 = null;
+        UiFocusableComponent stackIn_12_0 = null;
         boolean stackIn_14_1 = false;
-        htb stackIn_18_0 = null;
+        UiFocusableComponent stackIn_18_0 = null;
         boolean stackIn_19_1 = false;
-        htb stackIn_23_0 = null;
+        UiFocusableComponent stackIn_23_0 = null;
         boolean stackIn_24_1 = false;
         if (param0 != 0) {
           this.h((byte) -20);
         }
         stackIn_5_0 = this.field_N;
         stackIn_7_1 = (param1) || (this.field_w);
-        stackIn_5_0.field_x = stackIn_7_1;
-        if (this.field_P.field_t instanceof htb) {
-          stackIn_12_0 = (htb) (this.field_P.field_t);
+        stackIn_5_0.enabled = stackIn_7_1;
+        if (this.field_P.child instanceof UiFocusableComponent) {
+          stackIn_12_0 = (UiFocusableComponent) (this.field_P.child);
           stackIn_14_1 = (param1) || (this.field_w);
-          stackIn_12_0.field_x = stackIn_14_1;
+          stackIn_12_0.enabled = stackIn_14_1;
         }
         if (this.field_A != null) {
           stackIn_18_0 = this.field_A;
           stackIn_19_1 = (!param1) ? false : true;
-          stackIn_18_0.field_x = stackIn_19_1;
+          stackIn_18_0.enabled = stackIn_19_1;
         }
         if (null != this.field_v) {
           stackIn_23_0 = this.field_v;
           stackIn_24_1 = (!param1) ? false : true;
-          stackIn_23_0.field_x = stackIn_24_1;
+          stackIn_23_0.enabled = stackIn_24_1;
         }
     }
 
     final void c(int param0, int param1, int param2) {
         int var4 = 0;
         if (param1 > param0) {
-          var4 = this.field_N.field_f * param0 / param1;
+          var4 = this.field_N.height * param0 / param1;
           if (this.field_B > var4) {
             var4 = this.field_B;
           }
-          this.field_P.a(this.field_P.field_g, this.field_P.field_h, var4, 1, this.field_P.field_r);
+          this.field_P.setBounds(this.field_P.x, this.field_P.width, var4, 1, this.field_P.y);
           this.a(0, true);
         } else {
-          this.field_P.a(this.field_P.field_g, this.field_P.field_h, this.field_N.field_f, 1, this.field_P.field_r);
+          this.field_P.setBounds(this.field_P.x, this.field_P.width, this.field_N.height, 1, this.field_P.y);
           this.a(0, false);
         }
         this.e(0);
@@ -271,15 +271,15 @@ final class vcb extends oda implements oo {
         if (param0 <= 49) {
           this.c(17, -59, -81);
         }
-        int var2 = null != this.field_D ? this.field_D.field_g + this.field_D.field_h : this.field_N.field_g;
-        int var3 = this.field_C != null ? this.field_C.field_g - this.field_P.field_h : this.field_N.field_h + this.field_N.field_g - this.field_P.field_h;
-        this.b(var3 <= var2 ? 0 : (this.field_P.field_g - var2 << 16) / (var3 - var2), 65536);
+        int var2 = null != this.field_D ? this.field_D.x + this.field_D.width : this.field_N.x;
+        int var3 = this.field_C != null ? this.field_C.x - this.field_P.width : this.field_N.width + this.field_N.x - this.field_P.width;
+        this.b(var3 <= var2 ? 0 : (this.field_P.x - var2 << 16) / (var3 - var2), 65536);
     }
 
-    vcb(int param0, int param1, int param2, int param3, wwa param4, wwa param5, wwa param6, int param7, int param8, int param9, int param10, boolean param11, boolean param12, int param13, int param14) {
+    vcb(int param0, int param1, int param2, int param3, UiRenderer param4, UiRenderer param5, UiRenderer param6, int param7, int param8, int param9, int param10, boolean param11, boolean param12, int param13, int param14) {
         super(param0, param1, param2, param3, param4);
         ef dupTemp$0 = null;
-        htb dupTemp$1 = null;
+        UiFocusableComponent dupTemp$1 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_11_0 = null;
@@ -301,13 +301,13 @@ final class vcb extends oda implements oo {
         this.field_K = 1024;
         this.field_M = 32768;
         try {
-          this.field_u = new shb[6];
-          dupTemp$0 = new ef(param0, param1, param7, param8, (wwa) null, (sba) null, new htb(0, 0, param7, param8, param6, (sba) null), false, false);
+          this.children = new UiComponent[6];
+          dupTemp$0 = new ef(param0, param1, param7, param8, (UiRenderer) null, (UiListener) null, new UiFocusableComponent(0, 0, param7, param8, param6, (UiListener) null), false, false);
           this.field_P = dupTemp$0;
-          this.field_u[0] = (shb) ((Object) dupTemp$0);
-          dupTemp$1 = new htb(param0, param1, param7, param8, param5, (sba) null);
+          this.children[0] = (UiComponent) ((Object) dupTemp$0);
+          dupTemp$1 = new UiFocusableComponent(param0, param1, param7, param8, param5, (UiListener) null);
           this.field_N = dupTemp$1;
-          this.field_u[1] = (shb) ((Object) dupTemp$1);
+          this.children[1] = (UiComponent) ((Object) dupTemp$1);
           stackIn_4_1 = (param11);
           this.field_w = stackIn_4_1;
           stackIn_7_1 = (param12);
@@ -316,7 +316,7 @@ final class vcb extends oda implements oo {
           this.field_B = param10;
           this.b(param13, 65536);
           this.c(-3393, param14);
-          this.a(param0, param2, param3, 1, param1);
+          this.setBounds(param0, param2, param3, 1, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -356,45 +356,45 @@ final class vcb extends oda implements oo {
         if (param0 != 110) {
           this.field_M = 17;
         }
-        return (this.field_P.field_f << 16) / this.field_N.field_f;
+        return (this.field_P.height << 16) / this.field_N.height;
     }
 
     private final void a(byte param0, boolean param1) {
-        htb stackIn_3_0 = null;
+        UiFocusableComponent stackIn_3_0 = null;
         boolean stackIn_5_1 = false;
-        htb stackIn_11_0 = null;
+        UiFocusableComponent stackIn_11_0 = null;
         boolean stackIn_13_1 = false;
-        htb stackIn_17_0 = null;
+        UiFocusableComponent stackIn_17_0 = null;
         boolean stackIn_18_1 = false;
-        htb stackIn_22_0 = null;
+        UiFocusableComponent stackIn_22_0 = null;
         boolean stackIn_23_1 = false;
         stackIn_3_0 = this.field_N;
         stackIn_5_1 = (param1) || (this.field_G);
-        stackIn_3_0.field_x = stackIn_5_1;
+        stackIn_3_0.enabled = stackIn_5_1;
         if (param0 > -34) {
           return;
         }
-        if (this.field_P.field_t instanceof htb) {
-          stackIn_11_0 = (htb) (this.field_P.field_t);
+        if (this.field_P.child instanceof UiFocusableComponent) {
+          stackIn_11_0 = (UiFocusableComponent) (this.field_P.child);
           stackIn_13_1 = (param1) || (this.field_G);
-          stackIn_11_0.field_x = stackIn_13_1;
+          stackIn_11_0.enabled = stackIn_13_1;
         }
         if (this.field_D != null) {
           stackIn_17_0 = this.field_D;
           stackIn_18_1 = (!param1) ? false : true;
-          stackIn_17_0.field_x = stackIn_18_1;
+          stackIn_17_0.enabled = stackIn_18_1;
         }
         if (this.field_C != null) {
           stackIn_22_0 = this.field_C;
           stackIn_23_1 = (!param1) ? false : true;
-          stackIn_22_0.field_x = stackIn_23_1;
+          stackIn_22_0.enabled = stackIn_23_1;
         }
     }
 
     private final void e(int param0) {
-        int var2 = null == this.field_A ? this.field_N.field_r : this.field_A.field_f + this.field_A.field_r;
-        int var3 = null == this.field_v ? this.field_N.field_r + (this.field_N.field_f - this.field_P.field_f) : this.field_v.field_r - this.field_P.field_f;
-        this.field_P.field_r = (this.field_L * (-var2 + var3) >> 16) + var2;
+        int var2 = null == this.field_A ? this.field_N.y : this.field_A.height + this.field_A.y;
+        int var3 = null == this.field_v ? this.field_N.y + (this.field_N.height - this.field_P.height) : this.field_v.y - this.field_P.height;
+        this.field_P.y = (this.field_L * (-var2 + var3) >> 16) + var2;
         if (param0 != 0) {
           vcb.f(-79);
         }
@@ -404,9 +404,9 @@ final class vcb extends oda implements oo {
         if (param0 != -8) {
           this.d(116);
         }
-        int var2 = null == this.field_D ? this.field_N.field_g : this.field_D.field_h + this.field_D.field_g;
-        int var3 = null != this.field_C ? -this.field_P.field_h + this.field_C.field_g : this.field_N.field_h + (this.field_N.field_g - this.field_P.field_h);
-        this.field_P.field_g = ((var3 - var2) * this.field_M >> 16) + var2;
+        int var2 = null == this.field_D ? this.field_N.x : this.field_D.width + this.field_D.x;
+        int var3 = null != this.field_C ? -this.field_P.width + this.field_C.x : this.field_N.width + (this.field_N.x - this.field_P.width);
+        this.field_P.x = ((var3 - var2) * this.field_M >> 16) + var2;
     }
 
     final static QuickChatMenuWidget a(int param0, Widget param1, Widget param2, Widget param3, rn param4) {
@@ -541,47 +541,47 @@ final class vcb extends oda implements oo {
         int var3;
         var3 = VoidHunters.field_G;
         if (null != this.field_D) {
-          this.field_D.field_g = 0;
-          this.field_D.field_r = this.field_f - this.field_D.field_f >> 1;
-          this.field_N.field_g = this.field_D.field_g + this.field_D.field_h;
+          this.field_D.x = 0;
+          this.field_D.y = this.height - this.field_D.height >> 1;
+          this.field_N.x = this.field_D.x + this.field_D.width;
         } else {
-          this.field_N.field_g = 0;
+          this.field_N.x = 0;
         }
         if (this.field_C != null) {
-          this.field_C.field_g = this.field_h - this.field_C.field_h;
-          this.field_C.field_r = this.field_f - this.field_C.field_f >> 1;
-          this.field_N.field_h = this.field_h + (-this.field_N.field_g - this.field_C.field_h);
+          this.field_C.x = this.width - this.field_C.width;
+          this.field_C.y = this.height - this.field_C.height >> 1;
+          this.field_N.width = this.width + (-this.field_N.x - this.field_C.width);
         } else {
-          this.field_N.field_h = -this.field_N.field_g + this.field_h;
+          this.field_N.width = -this.field_N.x + this.width;
         }
         this.i((byte) -8);
         if (this.field_A == null) {
-          this.field_N.field_r = 0;
+          this.field_N.y = 0;
         } else {
-          this.field_A.field_r = 0;
-          this.field_A.field_g = this.field_h - this.field_A.field_h >> 1;
-          this.field_N.field_r = this.field_A.field_r + this.field_A.field_f;
+          this.field_A.y = 0;
+          this.field_A.x = this.width - this.field_A.width >> 1;
+          this.field_N.y = this.field_A.y + this.field_A.height;
         }
         if (this.field_v != null) {
-          this.field_v.field_r = this.field_f - this.field_v.field_f;
-          this.field_v.field_g = -this.field_v.field_h + this.field_h >> 1;
-          this.field_N.field_f = -this.field_N.field_r + (this.field_f - this.field_v.field_f);
+          this.field_v.y = this.height - this.field_v.height;
+          this.field_v.x = -this.field_v.width + this.width >> 1;
+          this.field_N.height = -this.field_N.y + (this.height - this.field_v.height);
         } else {
-          this.field_N.field_f = this.field_f - this.field_N.field_r;
+          this.field_N.height = this.height - this.field_N.y;
         }
         this.e(param0 ^ param0);
         if (!this.field_G) {
-          this.field_P.field_f = this.field_N.field_f;
-          this.field_P.field_r = 0;
+          this.field_P.height = this.field_N.height;
+          this.field_P.y = 0;
         }
         if (!this.field_w) {
-          this.field_P.field_h = this.field_N.field_h;
-          this.field_P.field_g = 0;
+          this.field_P.width = this.field_N.width;
+          this.field_P.x = 0;
         }
-        this.field_P.a(false);
+        this.field_P.refreshLayout(false);
     }
 
-    final boolean a(int param0, shb param1) {
+    final boolean requestFocus(int param0, UiComponent param1) {
         ef var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_10_0 = null;
@@ -594,7 +594,7 @@ final class vcb extends oda implements oo {
           }
           var3 = this.field_P;
           if (var3 != null &&
-            ((shb) ((Object) var3)).a(param0 ^ 0, param1)) {
+            ((UiComponent) ((Object) var3)).requestFocus(param0 ^ 0, param1)) {
             return true;
           }
           return false;
@@ -645,26 +645,26 @@ final class vcb extends oda implements oo {
 
     private final void a(byte param0, int param1) {
         this.c(-3393, param1);
-        if (this.field_l instanceof lt) {
-          ((lt) (this.field_l)).a(this.field_L, this.field_L, this, param0 ^ 106);
+        if (this.listener instanceof lt) {
+          ((lt) (this.listener)).a(this.field_L, this.field_L, this, param0 ^ 106);
         }
         if (param0 != -17) {
           this.i((byte) 62);
         }
     }
 
-    final boolean a(int param0, int param1, shb param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException stackIn_44_0 = null;
         StringBuilder stackIn_44_1 = null;
         String stackIn_45_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (this.field_y &&
-            this.field_P.e((byte) -120)) {
+            this.field_P.hasFocus((byte) -120)) {
             if (98 == param1) {
               this.a((byte) -17, this.field_L - this.field_K);
               return true;

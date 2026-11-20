@@ -16,30 +16,30 @@ class bia extends tb {
         return ArchiveIndexLoader.field_g.isVoteOptionAvailable(param2, 11, param0);
     }
 
-    final static void a(byte param0) {
-        ajb var1_ref = null;
+    final static void popRasterState(byte param0) {
+        SoftwareRasterState var1_ref = null;
         Object var1 = null;
-        ajb var1_refLifetime1;
+        SoftwareRasterState var1_refLifetime1;
         if (param0 != 124) {
-          bia.a((byte) -88);
-          var1_ref = (ajb) (bc.field_b.removeLast((byte) -126));
+          bia.popRasterState((byte) -88);
+          var1_ref = (SoftwareRasterState) (NineSliceSprite.rasterStateStack.removeLast((byte) -126));
           if (var1_ref == null) {
             throw new IllegalStateException();
           }
-          SoftwareRasterizer2D.setTarget(var1_ref.field_k, var1_ref.field_d, var1_ref.field_i);
-          SoftwareRasterizer2D.setClip(var1_ref.field_j, var1_ref.field_g, var1_ref.field_h, var1_ref.field_e);
-          var1_ref.field_k = null;
-          GetPlayerRepairTime.field_p.addLast(-10258, var1_ref);
+          SoftwareRasterizer2D.setTarget(var1_ref.pixels, var1_ref.width, var1_ref.height);
+          SoftwareRasterizer2D.setClip(var1_ref.clipLeft, var1_ref.clipTop, var1_ref.clipRight, var1_ref.clipBottom);
+          var1_ref.pixels = null;
+          GetPlayerRepairTime.rasterStatePool.addLast(-10258, var1_ref);
           return;
         }
-        var1_refLifetime1 = (ajb) (bc.field_b.removeLast((byte) -126));
+        var1_refLifetime1 = (SoftwareRasterState) (NineSliceSprite.rasterStateStack.removeLast((byte) -126));
         if (var1_refLifetime1 == null) {
           throw new IllegalStateException();
         }
-        SoftwareRasterizer2D.setTarget(var1_refLifetime1.field_k, var1_refLifetime1.field_d, var1_refLifetime1.field_i);
-        SoftwareRasterizer2D.setClip(var1_refLifetime1.field_j, var1_refLifetime1.field_g, var1_refLifetime1.field_h, var1_refLifetime1.field_e);
-        var1_refLifetime1.field_k = null;
-        GetPlayerRepairTime.field_p.addLast(-10258, var1_refLifetime1);
+        SoftwareRasterizer2D.setTarget(var1_refLifetime1.pixels, var1_refLifetime1.width, var1_refLifetime1.height);
+        SoftwareRasterizer2D.setClip(var1_refLifetime1.clipLeft, var1_refLifetime1.clipTop, var1_refLifetime1.clipRight, var1_refLifetime1.clipBottom);
+        var1_refLifetime1.pixels = null;
+        GetPlayerRepairTime.rasterStatePool.addLast(-10258, var1_refLifetime1);
     }
 
     final static PcmStreamMixer a(boolean param0) {

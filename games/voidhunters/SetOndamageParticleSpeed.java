@@ -107,7 +107,7 @@ final class SetOndamageParticleSpeed extends ConsoleCommand {
           var16 = var12 * var12;
           var17 = var14 << 1;
           if (param0 != 2051507073) {
-            SetOndamageParticleSpeed.e(-74);
+            SetOndamageParticleSpeed.pushRasterState(-74);
           }
           var18 = var13 << 1;
           var19 = var16 << 1;
@@ -233,16 +233,16 @@ final class SetOndamageParticleSpeed extends ConsoleCommand {
         }
     }
 
-    final static void e(int param0) {
-        ajb var1 = (ajb) (GetPlayerRepairTime.field_p.removeLast((byte) -113));
+    final static void pushRasterState(int param0) {
+        SoftwareRasterState var1 = (SoftwareRasterState) (GetPlayerRepairTime.rasterStatePool.removeLast((byte) -113));
         if (var1 == null) {
-          var1 = new ajb();
+          var1 = new SoftwareRasterState();
         }
         if (param0 != 3) {
-          SetOndamageParticleSpeed.e(15);
+          SetOndamageParticleSpeed.pushRasterState(15);
         }
-        var1.a(SoftwareRasterizer2D.height, SoftwareRasterizer2D.pixels, SoftwareRasterizer2D.clipTop, (byte) -88, SoftwareRasterizer2D.clipRight, SoftwareRasterizer2D.clipBottom, SoftwareRasterizer2D.width, SoftwareRasterizer2D.clipLeft);
-        bc.field_b.addLast(-10258, var1);
+        var1.setState(SoftwareRasterizer2D.height, SoftwareRasterizer2D.pixels, SoftwareRasterizer2D.clipTop, (byte) -88, SoftwareRasterizer2D.clipRight, SoftwareRasterizer2D.clipBottom, SoftwareRasterizer2D.width, SoftwareRasterizer2D.clipLeft);
+        NineSliceSprite.rasterStateStack.addLast(-10258, var1);
     }
 
     static {

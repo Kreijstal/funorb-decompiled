@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class vq extends dqa implements lca {
+abstract class vq extends UiContainer implements lca {
     static int field_v;
     static fab field_x;
     private wta field_z;
@@ -22,7 +22,7 @@ abstract class vq extends dqa implements lca {
         }
     }
 
-    vq(int param0, int param1, int param2, int param3, wwa param4) {
+    vq(int param0, int param1, int param2, int param3, UiRenderer param4) {
         super(param0, param1, param2, param3, param4);
     }
 

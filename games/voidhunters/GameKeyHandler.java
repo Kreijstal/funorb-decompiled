@@ -142,12 +142,12 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    final static abb b(int param0) {
+    final static NanosecondClock b(int param0) {
         if (param0 >= -37) {
           field_a = 79;
-          return (abb) ((Object) new tgb());
+          return (NanosecondClock) ((Object) new SystemNanoClock());
         }
-        return (abb) ((Object) new tgb());
+        return (NanosecondClock) ((Object) new SystemNanoClock());
     }
 
     final static int a(byte param0, int param1, int param2, int param3, String param4) {

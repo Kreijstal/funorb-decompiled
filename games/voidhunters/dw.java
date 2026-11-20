@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dw implements wwa {
+final class dw implements UiRenderer {
     static int field_b;
     static int[] field_a;
     static dfa field_c;
@@ -14,7 +14,7 @@ final class dw implements wwa {
         }
     }
 
-    public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
+    public final void drawComponent(int param0, UiComponent param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -25,16 +25,16 @@ final class dw implements wwa {
         Sprite var8 = null;
         int var9 = 0;
         try {
-          var6_int = param1.field_g + param2;
-          var7 = param3 + param1.field_r;
-          ServerTickFactory.a(var7, (byte) 115, param1.field_f, param1.field_h, var6_int);
+          var6_int = param1.x + param2;
+          var7 = param3 + param1.y;
+          ServerTickFactory.a(var7, (byte) 115, param1.height, param1.width, var6_int);
           var8 = ByteStorage.field_a[1];
-          if (param1 instanceof htb &&
-            ((htb) (param1)).field_u) {
-            var8.drawAdditive((-var8.paddedWidth + param1.field_h >> 1) + (1 + var6_int), 1 + (var7 + (-var8.paddedHeight + param1.field_f >> 1)), 256);
+          if (param1 instanceof UiFocusableComponent &&
+            ((UiFocusableComponent) (param1)).active) {
+            var8.drawAdditive((-var8.paddedWidth + param1.width >> 1) + (1 + var6_int), 1 + (var7 + (-var8.paddedHeight + param1.height >> 1)), 256);
           }
-          if (param1.e((byte) -120)) {
-            SetCountermeasureLauncherRandomness.a(var7 + 2, param1.field_h - 4, var6_int + 2, -4 + param1.field_f, (byte) -62);
+          if (param1.hasFocus((byte) -120)) {
+            SetCountermeasureLauncherRandomness.a(var7 + 2, param1.width - 4, var6_int + 2, -4 + param1.height, (byte) -62);
           }
           var9 = -1 / ((-27 - param0) / 35);
           return;

@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tda extends iw implements oo {
+final class tda extends iw implements UiActionListener {
     static String field_O;
-    private htb field_P;
-    private shb field_J;
+    private UiFocusableComponent field_P;
+    private UiComponent field_J;
     static String field_M;
     private long field_L;
-    private htb field_N;
+    private UiFocusableComponent field_N;
     static volatile int field_K;
 
-    final void a(int param0, int param1, int param2, shb param3) {
+    final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -19,14 +19,14 @@ final class tda extends iw implements oo {
         RuntimeException var5 = null;
         int var7 = 0;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           if (VariableConditionFactory.field_c) {
-            param3.f((byte) -34);
+            param3.clearFocus((byte) -34);
           }
           var5_long = -this.field_L + wt.a(false);
           var7 = (int)((-var5_long + 10999L) / 1000L);
           if (var7 > 0) {
-            this.field_J.field_j = "" + var7;
+            this.field_J.text = "" + var7;
           } else {
             spb.a((byte) -95);
             this.l((byte) -98);
@@ -61,31 +61,31 @@ final class tda extends iw implements oo {
 
     tda(ida param0) {
         super(param0, 200, 200);
-        shb var3 = null;
+        UiComponent var3 = null;
         try {
           this.field_L = wt.a(false);
-          var3 = new shb(SoftwareFramebuffer.field_a, (sba) null);
-          var3.field_g = 0;
-          var3.field_h = this.field_h;
-          var3.field_r = 50;
-          var3.field_f = 100;
-          var3.field_q = (wwa) ((Object) new bob(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.b(-18756, var3);
-          this.field_J = new shb(SoftwareFramebuffer.field_a, (sba) null);
-          this.field_J.field_r = 20 + var3.field_r + var3.field_f;
-          this.field_J.field_g = 0;
-          this.field_J.field_h = this.field_h;
-          this.field_J.field_f = 80;
-          this.field_J.field_q = (wwa) ((Object) new bob(GetBoostersCooldown.field_r, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.b(-18756, this.field_J);
-          this.field_N = this.a((byte) -104, (sba) (this), ServerInfoFactory.field_b);
-          this.field_P = this.a((byte) -73, (sba) (this), GetFighterRepairAmount.field_r);
+          var3 = new UiComponent(SoftwareFramebuffer.field_a, (UiListener) null);
+          var3.x = 0;
+          var3.width = this.width;
+          var3.y = 50;
+          var3.height = 100;
+          var3.renderer = (UiRenderer) ((Object) new bob(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(-18756, var3);
+          this.field_J = new UiComponent(SoftwareFramebuffer.field_a, (UiListener) null);
+          this.field_J.y = 20 + var3.y + var3.height;
+          this.field_J.x = 0;
+          this.field_J.width = this.width;
+          this.field_J.height = 80;
+          this.field_J.renderer = (UiRenderer) ((Object) new bob(GetBoostersCooldown.field_r, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(-18756, this.field_J);
+          this.field_N = this.a((byte) -104, (UiListener) (this), ServerInfoFactory.field_b);
+          this.field_P = this.a((byte) -73, (UiListener) (this), GetFighterRepairAmount.field_r);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tda.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void a(int param0, int param1, int param2, htb param3, int param4) {
+    public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -119,12 +119,12 @@ final class tda extends iw implements oo {
         }
     }
 
-    private final htb a(byte param0, sba param1, String param2) {
-        htb var4 = null;
+    private final UiFocusableComponent a(byte param0, UiListener param1, String param2) {
+        UiFocusableComponent var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        htb stackIn_2_0 = null;
-        htb stackIn_4_0 = null;
+        UiFocusableComponent stackIn_2_0 = null;
+        UiFocusableComponent stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -133,16 +133,16 @@ final class tda extends iw implements oo {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -21) {
-            stackIn_2_0 = (htb) null;
+            stackIn_2_0 = (UiFocusableComponent) null;
             return stackIn_2_0;
           }
-          var4 = new htb(param2, param1);
-          var4.field_q = (wwa) ((Object) new vva());
-          var5 = this.field_f - 6;
-          this.field_f = this.field_f + 38;
-          var4.a(15, -16 + this.field_h - 14, 30, 1, var5);
-          this.b(-18756, var4);
-          this.a(false);
+          var4 = new UiFocusableComponent(param2, param1);
+          var4.renderer = (UiRenderer) ((Object) new vva());
+          var5 = this.height - 6;
+          this.height = this.height + 38;
+          var4.setBounds(15, -16 + this.width - 14, 30, 1, var5);
+          this.addChild(-18756, var4);
+          this.refreshLayout(false);
           stackIn_4_0 = var4;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -165,7 +165,7 @@ final class tda extends iw implements oo {
         }
     }
 
-    final boolean a(int param0, int param1, shb param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         int var5_int = 0;
         int var6 = 0;
         boolean stackIn_12_0 = false;
@@ -177,18 +177,18 @@ final class tda extends iw implements oo {
         var6 = VoidHunters.field_G;
         try {
           if (param0 != -15834) {
-            this.field_J = (shb) null;
+            this.field_J = (UiComponent) null;
           }
           var5_int = param1;
           if (var5_int == 99) {
-            this.field_P.a(param0 + 15834, (shb) (this));
+            this.field_P.requestFocus(param0 + 15834, (UiComponent) (this));
             return true;
           }
           if (var5_int != 98) {
-            stackIn_12_0 = super.a(param0 ^ 0, param1, param2, param3);
+            stackIn_12_0 = super.handleKey(param0 ^ 0, param1, param2, param3);
             return stackIn_12_0;
           }
-          this.field_N.a(param0 ^ -15834, (shb) (this));
+          this.field_N.requestFocus(param0 ^ -15834, (UiComponent) (this));
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

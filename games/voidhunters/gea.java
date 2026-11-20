@@ -3,7 +3,7 @@
  */
 abstract class gea extends iw {
     private int field_J;
-    private shb field_K;
+    private UiComponent field_K;
     private int field_M;
     private int field_P;
     private int field_O;
@@ -11,7 +11,7 @@ abstract class gea extends iw {
     private int field_Q;
     private oe field_N;
 
-    void b(shb param0, int param1) {
+    void b(UiComponent param0, int param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -21,7 +21,7 @@ abstract class gea extends iw {
         try {
           this.field_K = param0;
           if (iab.field_a == this.field_N) {
-            this.c(116, this.field_K.field_h + 12, this.field_K.field_f + this.field_O + 12, this.field_M);
+            this.c(116, this.field_K.width + 12, this.field_K.height + this.field_O + 12, this.field_M);
             this.field_Q = 0;
           } else {
             if (this.field_N != SettingsChangeFactory.field_e) {
@@ -45,24 +45,24 @@ abstract class gea extends iw {
         }
     }
 
-    boolean a(int param0, int param1, shb param2, char param3) {
+    boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (null == this.field_L) {
             return false;
           }
           if (param1 == 98) {
-            this.field_L.a(0, param2);
+            this.field_L.requestFocus(0, param2);
           }
           if (param1 == 99) {
-            this.field_L.a(0, param2);
+            this.field_L.requestFocus(0, param2);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -95,7 +95,7 @@ abstract class gea extends iw {
           return;
         }
         if (this.field_N != SetBloomCoefficientPercentage.field_o) {
-          this.c(this.field_K.field_h + 12, -1860440319, this.field_K.field_f + (this.field_O + 12));
+          this.c(this.field_K.width + 12, -1860440319, this.field_K.height + (this.field_O + 12));
           this.a(this.field_K, (byte) 71);
         } else {
           this.field_L.field_v = 256;
@@ -122,7 +122,7 @@ abstract class gea extends iw {
             this.field_Q = this.field_Q + 1;
             if (this.field_P == fieldTemp$0) {
               this.field_N = iab.field_a;
-              this.c(96, this.field_K.field_h + 12, this.field_K.field_f + (this.field_O + 12), this.field_M);
+              this.c(96, this.field_K.width + 12, this.field_K.height + (this.field_O + 12), this.field_M);
               this.field_L.field_v = 0;
               this.field_Q = 0;
               return super.a(248);
@@ -143,8 +143,8 @@ abstract class gea extends iw {
           this.field_L.field_v = (this.field_Q << 8) / this.field_J;
           return super.a(248);
         }
-        shb var4 = (shb) null;
-        this.b((shb) null, 57);
+        UiComponent var4 = (UiComponent) null;
+        this.b((UiComponent) null, 57);
         if (this.field_N == null) {
           return super.a(248);
         }
@@ -153,7 +153,7 @@ abstract class gea extends iw {
           this.field_Q = this.field_Q + 1;
           if (this.field_P == fieldTemp$2) {
             this.field_N = iab.field_a;
-            this.c(96, this.field_K.field_h + 12, this.field_K.field_f + (this.field_O + 12), this.field_M);
+            this.c(96, this.field_K.width + 12, this.field_K.height + (this.field_O + 12), this.field_M);
             this.field_L.field_v = 0;
             this.field_Q = 0;
             return super.a(248);
@@ -191,7 +191,7 @@ abstract class gea extends iw {
         this.field_L.field_v = 0;
     }
 
-    private final void a(shb param0, byte param1) {
+    private final void a(UiComponent param0, byte param1) {
         try {
           if (null != this.field_L) {
             this.field_L.unlink(param1 - 3917);
@@ -199,10 +199,10 @@ abstract class gea extends iw {
           if (param0 == null) {
             this.field_L = new qpb();
           } else {
-            param0.a(6, param0.field_h, param0.field_f, 1, this.field_O + 6);
+            param0.setBounds(6, param0.width, param0.height, 1, this.field_O + 6);
             this.field_L = new qpb(param0);
           }
-          this.b(-18756, this.field_L);
+          this.addChild(-18756, this.field_L);
           if (param1 != 71) {
             this.e(85);
           }
@@ -212,8 +212,8 @@ abstract class gea extends iw {
         }
     }
 
-    gea(ida param0, shb param1, int param2, int param3, int param4) {
-        super(param0, 12 + param1.field_h, param1.field_f + (12 + param2));
+    gea(ida param0, UiComponent param1, int param2, int param3, int param4) {
+        super(param0, 12 + param1.width, param1.height + (12 + param2));
         try {
           this.field_M = param4;
           this.field_J = param3;

@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vla extends dqa implements en, oo {
+final class vla extends UiContainer implements en, UiActionListener {
     static String field_E;
-    private htb field_x;
+    private UiFocusableComponent field_x;
     private boolean field_B;
-    private htb field_A;
+    private UiFocusableComponent field_A;
     private String field_v;
     private uf field_G;
     private boolean field_F;
     private boolean field_w;
     static String field_C;
     private uf field_y;
-    private htb field_z;
+    private UiFocusableComponent field_z;
 
     final void a(byte param0, String param1) {
         uf var3 = null;
@@ -30,7 +30,7 @@ final class vla extends dqa implements en, oo {
         }
     }
 
-    public final void a(int param0, int param1, int param2, htb param3, int param4) {
+    public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -76,14 +76,14 @@ final class vla extends dqa implements en, oo {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (this.field_v != null) {
-          SetShipToShipRamDamage.field_o.drawParagraph(this.field_v, this.field_g + (param0 + 20), 15 + (param3 + this.field_r), -40 + this.field_h, this.field_f, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.maxAscent);
+          SetShipToShipRamDamage.field_o.drawParagraph(this.field_v, this.x + (param0 + 20), 15 + (param3 + this.y), -40 + this.width, this.height, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.maxAscent);
         }
         if (this.field_z != null) {
-          SoftwareRasterizer2D.drawHorizontalLine(param0 + 10, param3 + 134, -20 + this.field_h, 4210752);
+          SoftwareRasterizer2D.drawHorizontalLine(param0 + 10, param3 + 134, -20 + this.width, 4210752);
         }
-        super.b(param0, param1, 58, param3);
+        super.drawLayer(param0, param1, 58, param3);
         if (param2 < 47) {
           uf var6 = (uf) null;
           this.a((uf) null, (byte) 79);
@@ -93,7 +93,7 @@ final class vla extends dqa implements en, oo {
     final void i(byte param0) {
         this.field_y.e(82);
         if (param0 != -29) {
-          this.field_x = (htb) null;
+          this.field_x = (UiFocusableComponent) null;
         }
         this.field_G.e(82);
     }
@@ -105,13 +105,13 @@ final class vla extends dqa implements en, oo {
           this.a((uf) null, (byte) -20);
         }
         if (Projectile.f((byte) -21) ||
-          !(this.field_y.field_j.length() <= 0) &&
-          !(this.field_G.field_j.length() <= 0)) {
-          PartitionZoneList.a(-41, this.field_G.field_j, this.field_y.field_j);
+          !(this.field_y.text.length() <= 0) &&
+          !(this.field_G.text.length() <= 0)) {
+          PartitionZoneList.a(-41, this.field_G.text, this.field_y.text);
         }
     }
 
-    final boolean a(int param0, int param1, shb param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_9_0 = false;
@@ -120,17 +120,17 @@ final class vla extends dqa implements en, oo {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
-            stackIn_6_0 = this.a(param2, 0);
+            stackIn_6_0 = this.focusPreviousChild(param2, 0);
             return stackIn_6_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_9_0 = this.a(true, param2);
+          stackIn_9_0 = this.focusNextChild(true, param2);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -147,26 +147,26 @@ final class vla extends dqa implements en, oo {
     }
 
     final String a(int param0) {
-        if (null == this.field_y.field_j) {
+        if (null == this.field_y.text) {
           return "";
         }
         if (param0 != 30) {
           return (String) null;
         }
-        return this.field_y.field_j;
+        return this.field_y.text;
     }
 
     vla(String param0, String param1, boolean param2, boolean param3, boolean param4) {
-        super(0, 0, 310, 190, (wwa) null);
+        super(0, 0, 310, 190, (UiRenderer) null);
         sca dupTemp$0 = null;
         sca dupTemp$1 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        htb stackIn_17_1 = null;
-        htb stackIn_17_2 = null;
-        htb stackIn_18_1 = null;
-        htb stackIn_18_2 = null;
+        UiFocusableComponent stackIn_17_1 = null;
+        UiFocusableComponent stackIn_17_2 = null;
+        UiFocusableComponent stackIn_18_1 = null;
+        UiFocusableComponent stackIn_18_2 = null;
         String stackIn_18_3 = null;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
@@ -193,14 +193,14 @@ final class vla extends dqa implements en, oo {
             this.field_w)) {
             throw new IllegalStateException();
           }
-          this.field_y = (uf) ((Object) new tga(param0, (sba) (this), 100));
-          this.field_G = (uf) ((Object) new tga("", (sba) (this), 20));
+          this.field_y = (uf) ((Object) new tga(param0, (UiListener) (this), 100));
+          this.field_G = (uf) ((Object) new tga("", (UiListener) (this), 20));
           if (this.field_B) {
-            this.field_x = new htb(SetSpecialOrderBoxHeight.field_p, (sba) null);
-            this.field_A = new htb(GetFighterBayAimspeed.field_q, (sba) null);
-            this.field_y.field_x = false;
+            this.field_x = new UiFocusableComponent(SetSpecialOrderBoxHeight.field_p, (UiListener) null);
+            this.field_A = new UiFocusableComponent(GetFighterBayAimspeed.field_q, (UiListener) null);
+            this.field_y.enabled = false;
           } else {
-            this.field_x = new htb(GetBombletSprayProjectiles.field_s, (sba) null);
+            this.field_x = new UiFocusableComponent(GetBombletSprayProjectiles.field_s, (UiListener) null);
             stackIn_17_1 = null;
             stackIn_17_2 = null;
             if (this.field_w) {
@@ -212,39 +212,39 @@ final class vla extends dqa implements en, oo {
               stackIn_18_2 = null;
               stackIn_18_3 = ArbProgram.field_a;
             }
-            this.field_A = new htb(stackIn_18_3, (sba) null);
+            this.field_A = new UiFocusableComponent(stackIn_18_3, (UiListener) null);
             if (this.field_F) {
-              this.field_z = new htb(TimedSpecialOrderBehaviour.field_b, (sba) (this));
+              this.field_z = new UiFocusableComponent(TimedSpecialOrderBehaviour.field_b, (UiListener) (this));
             }
           }
-          this.field_y.field_q = (wwa) ((Object) new io(10000536));
-          this.field_G.field_q = (wwa) ((Object) new kpb(10000536));
+          this.field_y.renderer = (UiRenderer) ((Object) new io(10000536));
+          this.field_G.renderer = (UiRenderer) ((Object) new kpb(10000536));
           var6 = new vva();
-          this.field_x.field_q = (wwa) ((Object) var6);
+          this.field_x.renderer = (UiRenderer) ((Object) var6);
           if (null != this.field_A) {
-            this.field_A.field_q = (wwa) ((Object) var6);
+            this.field_A.renderer = (UiRenderer) ((Object) var6);
           }
-          this.field_y.field_p = sja.field_j;
+          this.field_y.tooltip = sja.field_j;
           if (this.field_z != null) {
-            this.field_z.field_q = (wwa) ((Object) var6);
+            this.field_z.renderer = (UiRenderer) ((Object) var6);
           }
           if (this.field_z != null) {
-            this.field_z.field_p = AdjustBodyComponentsAction.field_a;
+            this.field_z.tooltip = AdjustBodyComponentsAction.field_a;
           }
           if (this.field_B) {
-            this.field_A.field_p = GetSpecialOrderBoxHeight.field_o;
+            this.field_A.tooltip = GetSpecialOrderBoxHeight.field_o;
           } else {
             if (!this.field_w) {
-              this.field_A.field_q = (wwa) ((Object) new meb());
+              this.field_A.renderer = (UiRenderer) ((Object) new meb());
             } else {
-              this.field_A.field_p = dqa.field_u;
-              this.field_A.field_q = (wwa) ((Object) new meb());
+              this.field_A.tooltip = UiContainer.field_u;
+              this.field_A.renderer = (UiRenderer) ((Object) new meb());
             }
           }
-          this.field_r = 15;
+          this.y = 15;
           var7 = SetShipToShipRamDamage.field_o;
           if (null != this.field_v) {
-            this.field_r = this.field_r + (var7.getParagraphHeight(this.field_v, this.field_h - 40, var7.maxAscent) + 5);
+            this.y = this.y + (var7.getParagraphHeight(this.field_v, this.width - 40, var7.maxAscent) + 5);
           }
           var8 = RemoveEventActionFactory.field_a;
           var9 = gib.a(19314, MissionList.b((byte) -86));
@@ -255,49 +255,49 @@ final class vla extends dqa implements en, oo {
           } else {
             var8 = fj.field_a;
           }
-          dupTemp$0 = new sca(10, this.field_r, this.field_h - 20, 25, this.field_y, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new sca(10, this.y, this.width - 20, 25, this.field_y, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
-          this.b(-18756, dupTemp$0);
-          this.field_r = this.field_r + (((shb) ((Object) var12)).field_f + 5);
-          dupTemp$1 = new sca(10, this.field_r, -20 + this.field_h, 25, this.field_G, false, 80, 3, var7, 16777215, RequestNewestBlackboxRecording.field_q);
+          this.addChild(-18756, dupTemp$0);
+          this.y = this.y + (((UiComponent) ((Object) var12)).height + 5);
+          dupTemp$1 = new sca(10, this.y, -20 + this.width, 25, this.field_G, false, 80, 3, var7, 16777215, RequestNewestBlackboxRecording.field_q);
           var13 = dupTemp$1;
-          this.b(-18756, dupTemp$1);
-          this.field_r = this.field_r + (((shb) ((Object) var13)).field_f + 5);
-          this.field_x.field_l = (sba) (this);
+          this.addChild(-18756, dupTemp$1);
+          this.y = this.y + (((UiComponent) ((Object) var13)).height + 5);
+          this.field_x.listener = (UiListener) (this);
           if (this.field_z != null) {
-            this.field_z.field_l = (sba) (this);
+            this.field_z.listener = (UiListener) (this);
           }
           if (this.field_A != null) {
-            this.field_A.field_l = (sba) (this);
+            this.field_A.listener = (UiListener) (this);
           }
           if (null == this.field_z) {
-            this.field_x.a(8, this.field_h - 16, 30, 1, this.field_r);
-            this.field_r = this.field_r + 35;
+            this.field_x.setBounds(8, this.width - 16, 30, 1, this.y);
+            this.y = this.y + 35;
           } else {
-            this.field_x.a(85, this.field_h - 95, 30, 1, this.field_r);
-            this.field_r = this.field_r + 60;
+            this.field_x.setBounds(85, this.width - 95, 30, 1, this.y);
+            this.y = this.y + 60;
           }
           if (null != this.field_z) {
-            this.field_z.a(8, -16 + this.field_h, 30, 1, this.field_r);
-            this.field_r = this.field_r + 35;
+            this.field_z.setBounds(8, -16 + this.width, 30, 1, this.y);
+            this.y = this.y + 35;
           }
           if (null != this.field_A) {
             if (!this.field_B &&
               !this.field_w) {
-              this.field_A.a(8, 40, 20, 1, this.field_r);
-              this.field_r = this.field_r + 25;
+              this.field_A.setBounds(8, 40, 20, 1, this.y);
+              this.y = this.y + 25;
             } else {
-              this.field_A.a(8, -10 + (-6 + this.field_h), 30, 1, this.field_r);
-              this.field_r = this.field_r + 35;
+              this.field_A.setBounds(8, -10 + (-6 + this.width), 30, 1, this.y);
+              this.y = this.y + 35;
             }
           }
-          this.a(0, this.field_h, 3 + this.field_r, 1, 0);
-          this.b(-18756, this.field_x);
+          this.setBounds(0, this.width, 3 + this.y, 1, 0);
+          this.addChild(-18756, this.field_x);
           if (this.field_z != null) {
-            this.b(-18756, this.field_z);
+            this.addChild(-18756, this.field_z);
           }
           if (null != this.field_A) {
-            this.b(-18756, this.field_A);
+            this.addChild(-18756, this.field_A);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -388,7 +388,7 @@ final class vla extends dqa implements en, oo {
             vla.a((byte) -119, (CharSequence) null);
           }
           if (param1 == this.field_y) {
-            this.field_G.a(param0 ^ -12409, (shb) (this));
+            this.field_G.requestFocus(param0 ^ -12409, (UiComponent) (this));
           }
           if (param1 == this.field_G) {
             this.d(-1);

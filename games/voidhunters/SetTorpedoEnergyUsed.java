@@ -17,7 +17,7 @@ final class SetTorpedoEnergyUsed extends ConsoleCommand {
 
     final static void a(int param0, Sprite param1) {
         try {
-          SetOndamageParticleSpeed.e(3);
+          SetOndamageParticleSpeed.pushRasterState(3);
           SoftwareRasterizer2D.setTarget(param1.pixels, param1.paddedWidth, param1.paddedHeight);
           if (param0 <= 22) {
             field_q = -37;

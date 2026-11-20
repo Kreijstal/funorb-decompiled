@@ -1,46 +1,46 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hnb extends iw implements oo {
+final class hnb extends iw implements UiActionListener {
     static Sprite[] field_U;
     private boolean field_M;
     static Widget field_X;
-    private htb field_L;
+    private UiFocusableComponent field_L;
     private boolean field_K;
-    private htb field_R;
-    private htb field_Q;
-    private htb field_W;
-    private htb[] field_T;
+    private UiFocusableComponent field_R;
+    private UiFocusableComponent field_Q;
+    private UiFocusableComponent field_W;
+    private UiFocusableComponent[] field_T;
     private fm[] field_N;
-    private htb field_V;
+    private UiFocusableComponent field_V;
     private nva field_P;
-    private htb field_O;
+    private UiFocusableComponent field_O;
     private usb field_S;
     private boolean field_J;
 
-    final void a(int param0, int param1, int param2, shb param3) {
+    final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         int var6 = 0;
         int stackIn_16_0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
-        htb[] var5 = null;
+        UiFocusableComponent[] var5 = null;
         RuntimeException var5_ref = null;
-        htb var7 = null;
+        UiFocusableComponent var7 = null;
         int var8 = 0;
-        htb[] var9 = null;
+        UiFocusableComponent[] var9 = null;
         var8 = VoidHunters.field_G;
         try {
-          super.a(param0, param1, param2 ^ 0, param3);
+          super.updatePointer(param0, param1, param2 ^ 0, param3);
           if (VariableConditionFactory.field_c) {
-            param3.f((byte) -34);
+            param3.clearFocus((byte) -34);
             var9 = this.field_T;
             var5 = var9;
             for (var6 = 0; var9.length > var6; var6++) {
               var7 = var9[var6];
-              if (var7.field_e) {
-                var7.a(0, (shb) (this));
+              if (var7.hovered) {
+                var7.requestFocus(0, (UiComponent) (this));
               }
             }
           }
@@ -75,11 +75,11 @@ final class hnb extends iw implements oo {
         }
     }
 
-    private final void a(boolean param0, htb param1) {
-        htb var3 = null;
+    private final void a(boolean param0, UiFocusableComponent param1) {
+        UiFocusableComponent var3 = null;
         int var4 = 0;
         fm var5 = null;
-        htb stackIn_4_0 = null;
+        UiFocusableComponent stackIn_4_0 = null;
         boolean stackIn_5_1 = false;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -91,11 +91,11 @@ final class hnb extends iw implements oo {
           if (!param0) {
             return;
           }
-          param1.a(0, (shb) (this));
+          param1.requestFocus(0, (UiComponent) (this));
           var3 = this.m((byte) 62);
           stackIn_4_0 = this.field_W;
           stackIn_5_1 = (var3 != param1);
-          stackIn_4_0.field_x = stackIn_5_1;
+          stackIn_4_0.enabled = stackIn_5_1;
           if (param1 == this.field_L) {
             if (var3 == param1) {
               if (this.field_P != null) {
@@ -106,7 +106,7 @@ final class hnb extends iw implements oo {
                   this.g(-99);
                   return;
                 }
-                this.field_W.field_x = true;
+                this.field_W.enabled = true;
               }
               this.g(-99);
             } else {
@@ -172,8 +172,8 @@ final class hnb extends iw implements oo {
         String[] var5_ref_String__ = null;
         int var6_int = 0;
         String var6 = null;
-        htb var6_ref = null;
-        shb var7 = null;
+        UiFocusableComponent var6_ref = null;
+        UiComponent var7 = null;
         fm var8 = null;
         String var10 = null;
         Object stackIn_50_0Lifetime1;
@@ -259,21 +259,21 @@ final class hnb extends iw implements oo {
             stackIn_52_2Lifetime1 = null;
             stackIn_52_4 = 58;
           }
-          this.field_S = new usb(stackIn_50_3, stackIn_52_4, 410, 105, (wwa) null, var3Lifetime1, 1);
+          this.field_S = new usb(stackIn_50_3, stackIn_52_4, 410, 105, (UiRenderer) null, var3Lifetime1, 1);
           this.field_S.field_w = 83;
           this.field_S.c(-6, 5, 5);
-          this.b(-18756, this.field_S);
-          this.field_O = this.a(SetMissilesDamageSourceTeam.field_q, (byte) 111, (sba) (this), GetFighterRepairAmount.field_q);
+          this.addChild(-18756, this.field_S);
+          this.field_O = this.a(SetMissilesDamageSourceTeam.field_q, (byte) 111, (UiListener) (this), GetFighterRepairAmount.field_q);
           if (var2_intLifetime1 != 0) {
-            this.field_R = this.a(SoundCache.field_b, (byte) 106, (sba) (this), SetUseBackground.field_p);
+            this.field_R = this.a(SoundCache.field_b, (byte) 106, (UiListener) (this), SetUseBackground.field_p);
           }
-          this.field_L = this.a(GetPointDefenceLaserReload.field_o, (byte) 110, (sba) (this), SpecialOrderSubmessage.field_f);
+          this.field_L = this.a(GetPointDefenceLaserReload.field_o, (byte) 110, (UiListener) (this), SpecialOrderSubmessage.field_f);
           if (var2_intLifetime1 == 0) {
             stackIn_57_1 = 2;
           } else {
             stackIn_57_1 = 3;
           }
-          this.field_T = new htb[stackIn_57_1];
+          this.field_T = new UiFocusableComponent[stackIn_57_1];
           this.field_T[1] = this.field_L;
           if (var2_intLifetime1 != 0) {
             this.field_T[2] = this.field_R;
@@ -293,17 +293,17 @@ final class hnb extends iw implements oo {
               var5_ref_String__[var7_int] = var8.field_c + "<times>" + var8.field_a;
             }
             this.field_P = new nva(var5_ref_String__, var6_int, 150);
-            this.field_P.a(this.field_L.field_g + this.field_S.field_g, 126, 18, 1, -19 + (this.field_L.field_f + this.field_S.field_r + this.field_L.field_r));
-            this.field_t.addFirst(this.field_P, (byte) -55);
+            this.field_P.setBounds(this.field_L.x + this.field_S.x, 126, 18, 1, -19 + (this.field_L.height + this.field_S.y + this.field_L.y));
+            this.children.addFirst(this.field_P, (byte) -55);
           }
-          this.field_Q = this.a(wv.field_l, (sba) (this), -14);
-          var5Lifetime1 = this.field_Q.field_h / 2 + this.field_Q.field_g;
-          this.field_Q.field_h = 150;
-          this.field_Q.field_g = -this.field_Q.field_h + (var5Lifetime1 - 20);
-          this.field_W = this.a(SetVariableLabelActionFactory.field_a, (sba) (this), -14);
-          this.field_W.field_h = this.field_Q.field_h;
-          this.field_W.field_x = false;
-          this.field_W.field_g = var5Lifetime1 + 20;
+          this.field_Q = this.a(wv.field_l, (UiListener) (this), -14);
+          var5Lifetime1 = this.field_Q.width / 2 + this.field_Q.x;
+          this.field_Q.width = 150;
+          this.field_Q.x = -this.field_Q.width + (var5Lifetime1 - 20);
+          this.field_W = this.a(SetVariableLabelActionFactory.field_a, (UiListener) (this), -14);
+          this.field_W.width = this.field_Q.width;
+          this.field_W.enabled = false;
+          this.field_W.x = var5Lifetime1 + 20;
           if (var2_intLifetime1 != 0 ||
             var4Lifetime1 != 0) {
             if (var2_intLifetime1 != 0) {
@@ -313,18 +313,18 @@ final class hnb extends iw implements oo {
             }
             var10 = stackIn_74_0;
             var6 = var10;
-            var7 = new shb(var10, (sba) null);
-            var7.field_g = 0;
-            var7.field_h = this.field_h;
-            var7.field_r = 163;
-            var7.field_f = 80;
-            var7.field_q = (wwa) ((Object) new bob(SetShipToShipRamDamage.field_o, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
-            this.b(-18756, var7);
+            var7 = new UiComponent(var10, (UiListener) null);
+            var7.x = 0;
+            var7.width = this.width;
+            var7.y = 163;
+            var7.height = 80;
+            var7.renderer = (UiRenderer) ((Object) new bob(SetShipToShipRamDamage.field_o, 20, 20, 0, 10, 16777215, -1, 0, 0, 16, 0, 0, true));
+            this.addChild(-18756, var7);
           }
           this.field_M = false;
           var6_ref = this.m((byte) 80);
           if (var6_ref != null) {
-            var6_ref.field_u = true;
+            var6_ref.active = true;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -341,12 +341,12 @@ final class hnb extends iw implements oo {
         }
     }
 
-    private final htb a(String param0, byte param1, sba param2, caa[] param3) {
-        htb var5 = null;
+    private final UiFocusableComponent a(String param0, byte param1, UiListener param2, caa[] param3) {
+        UiFocusableComponent var5 = null;
         RuntimeException var5_ref = null;
         usb var6 = null;
-        htb var7 = null;
-        htb stackIn_3_0 = null;
+        UiFocusableComponent var7 = null;
+        UiFocusableComponent stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -356,15 +356,15 @@ final class hnb extends iw implements oo {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5 = new htb(param0, param2);
-          var5.field_q = (wwa) ((Object) new kab(param3));
+          var5 = new UiFocusableComponent(param0, param2);
+          var5.renderer = (UiRenderer) ((Object) new kab(param3));
           if (param1 < 105) {
-            this.field_T = (htb[]) null;
+            this.field_T = (UiFocusableComponent[]) null;
           }
           var6 = this.field_S;
           var7 = var5;
-          var6.a((shb) (var7), (byte) -58, var6.field_w);
-          this.field_S.a(false);
+          var6.a((UiComponent) (var7), (byte) -58, var6.field_w);
+          this.field_S.refreshLayout(false);
           stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -401,8 +401,8 @@ final class hnb extends iw implements oo {
         field_X = null;
     }
 
-    public final void a(int param0, int param1, int param2, htb param3, int param4) {
-        htb discarded$0 = null;
+    public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
+        UiFocusableComponent discarded$0 = null;
         int stackIn_13_0 = 0;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
@@ -411,12 +411,12 @@ final class hnb extends iw implements oo {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        sba var8 = null;
+        UiListener var8 = null;
         var7 = VoidHunters.field_G;
         try {
           if (param0 != 11) {
-            var8 = (sba) null;
-            discarded$0 = this.a((String) null, (sba) null, 51);
+            var8 = (UiListener) null;
+            discarded$0 = this.a((String) null, (UiListener) null, 51);
           }
           if (param3 == this.field_Q) {
             this.l((byte) -31);
@@ -431,7 +431,7 @@ final class hnb extends iw implements oo {
                   this.a(true, param3);
                 } else {
                   if (null != this.field_P) {
-                    stackIn_13_0 = (this.field_P.field_e) ? 1 : 0;
+                    stackIn_13_0 = (this.field_P.hovered) ? 1 : 0;
                   } else {
                     stackIn_13_0 = 0;
                   }
@@ -468,7 +468,7 @@ final class hnb extends iw implements oo {
         }
     }
 
-    final boolean a(int param0, int param1, shb param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         boolean stackIn_76_0 = false;
         Object stackIn_79_0 = null;
         StringBuilder stackIn_79_1 = null;
@@ -481,26 +481,26 @@ final class hnb extends iw implements oo {
         try {
           var5 = null;
           if (param0 != -15834) {
-            this.field_T = (htb[]) null;
+            this.field_T = (UiFocusableComponent[]) null;
           }
-          if (!this.field_O.e((byte) -120)) {
+          if (!this.field_O.hasFocus((byte) -120)) {
             if (null != this.field_R &&
-              this.field_R.e((byte) -120)) {
+              this.field_R.hasFocus((byte) -120)) {
               var5 = this.field_R;
             } else {
-              if (!this.field_L.e((byte) -120)) {
-                if (this.field_Q.e((byte) -120)) {
+              if (!this.field_L.hasFocus((byte) -120)) {
+                if (this.field_Q.hasFocus((byte) -120)) {
                   var5 = this.field_Q;
                 } else {
-                  if (this.field_W.e((byte) -120)) {
+                  if (this.field_W.hasFocus((byte) -120)) {
                     var5 = this.field_W;
                   } else {
-                    if (!this.field_O.field_u) {
+                    if (!this.field_O.active) {
                       if (null != this.field_R &&
-                        this.field_R.field_u) {
+                        this.field_R.active) {
                         var5 = this.field_R;
                       } else {
-                        if (this.field_L.field_u) {
+                        if (this.field_L.active) {
                           var5 = this.field_L;
                         }
                       }
@@ -521,19 +521,19 @@ final class hnb extends iw implements oo {
             case 97:
               if (this.field_O == var5) {
                 if (null != this.field_R) {
-                  this.field_R.a(param0 ^ -15834, (shb) (this));
+                  this.field_R.requestFocus(param0 ^ -15834, (UiComponent) (this));
                 } else {
-                  this.field_L.a(0, (shb) (this));
+                  this.field_L.requestFocus(0, (UiComponent) (this));
                 }
                 return true;
               }
               if (var5 == this.field_R) {
-                this.field_L.a(0, (shb) (this));
+                this.field_L.requestFocus(0, (UiComponent) (this));
                 return true;
               }
               if (var5 == this.field_Q &&
-                this.field_W.field_x) {
-                this.field_W.a(0, (shb) (this));
+                this.field_W.enabled) {
+                this.field_W.requestFocus(0, (UiComponent) (this));
                 return true;
               }
               break;
@@ -543,47 +543,47 @@ final class hnb extends iw implements oo {
                 if (this.field_L != var5) {
                   break;
                 }
-                if (this.field_W.field_x) {
-                  this.field_W.a(param0 + 15834, (shb) (this));
+                if (this.field_W.enabled) {
+                  this.field_W.requestFocus(param0 + 15834, (UiComponent) (this));
                 } else {
-                  this.field_Q.a(param0 ^ -15834, (shb) (this));
+                  this.field_Q.requestFocus(param0 ^ -15834, (UiComponent) (this));
                 }
                 return true;
               }
-              this.field_Q.a(0, (shb) (this));
+              this.field_Q.requestFocus(0, (UiComponent) (this));
               return true;
             case 98:
               if (this.field_Q == var5) {
-                this.field_O.a(0, (shb) (this));
+                this.field_O.requestFocus(0, (UiComponent) (this));
                 return true;
               }
               if (this.field_W == var5) {
-                this.field_L.a(0, (shb) (this));
+                this.field_L.requestFocus(0, (UiComponent) (this));
                 return true;
               }
               break;
             case 96:
               if (var5 == this.field_L) {
                 if (this.field_R != null) {
-                  this.field_R.a(0, (shb) (this));
+                  this.field_R.requestFocus(0, (UiComponent) (this));
                   return true;
                 }
-                this.field_O.a(0, (shb) (this));
+                this.field_O.requestFocus(0, (UiComponent) (this));
                 return true;
               }
               if (this.field_R == var5) {
-                this.field_O.a(0, (shb) (this));
+                this.field_O.requestFocus(0, (UiComponent) (this));
                 return true;
               }
               if (var5 == this.field_W) {
-                this.field_Q.a(0, (shb) (this));
+                this.field_Q.requestFocus(0, (UiComponent) (this));
                 return true;
               }
               break;
             default:
               break;
           }
-          stackIn_76_0 = super.a(-15834, param1, param2, param3);
+          stackIn_76_0 = super.handleKey(-15834, param1, param2, param3);
           return stackIn_76_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -599,11 +599,11 @@ final class hnb extends iw implements oo {
         }
     }
 
-    private final htb a(String param0, sba param1, int param2) {
-        htb var4 = null;
+    private final UiFocusableComponent a(String param0, UiListener param1, int param2) {
+        UiFocusableComponent var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        htb stackIn_1_0 = null;
+        UiFocusableComponent stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -611,11 +611,11 @@ final class hnb extends iw implements oo {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new htb(param0, param1);
-          var4.field_q = (wwa) ((Object) new vva());
-          var5 = this.field_f - 46;
-          var4.a(15, -16 + (param2 + this.field_h), 30, 1, var5);
-          this.b(param2 ^ 18766, var4);
+          var4 = new UiFocusableComponent(param0, param1);
+          var4.renderer = (UiRenderer) ((Object) new vva());
+          var5 = this.height - 46;
+          var4.setBounds(15, -16 + (param2 + this.width), 30, 1, var5);
+          this.addChild(param2 ^ 18766, var4);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -638,7 +638,7 @@ final class hnb extends iw implements oo {
         }
     }
 
-    private final htb m(byte param0) {
+    private final UiFocusableComponent m(byte param0) {
         if (psb.field_b != null) {
           return this.field_L;
         }
@@ -654,17 +654,17 @@ final class hnb extends iw implements oo {
     }
 
     private final void g(int param0) {
-        htb discarded$0 = null;
-        htb var4 = null;
+        UiFocusableComponent discarded$0 = null;
+        UiFocusableComponent var4 = null;
         int var5 = VoidHunters.field_G;
-        htb[] var2 = this.field_T;
+        UiFocusableComponent[] var2 = this.field_T;
         int var3 = 0;
         if (param0 != -99) {
           discarded$0 = this.m((byte) -52);
         }
         while (var3 < var2.length) {
           var4 = var2[var3];
-          var4.field_u = this.field_V == var4 ? true : false;
+          var4.active = this.field_V == var4 ? true : false;
           var3++;
         }
     }
@@ -699,7 +699,7 @@ final class hnb extends iw implements oo {
         if (param0 >= -18) {
           return;
         }
-        this.field_W.field_x = false;
+        this.field_W.enabled = false;
     }
 
     final static boolean a(byte param0, String param1) {

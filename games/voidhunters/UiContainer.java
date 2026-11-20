@@ -3,24 +3,24 @@
  */
 import java.util.*;
 
-class dqa extends shb implements nea {
-    IntrusiveDeque field_t;
+class UiContainer extends UiComponent implements UiContainerMarker {
+    IntrusiveDeque children;
     static String field_u;
 
-    boolean e(byte param0) {
+    boolean hasFocus(byte param0) {
         if (param0 != -120) {
-          shb var3 = (shb) null;
-          this.a((shb) null, -32);
+          UiComponent var3 = (UiComponent) null;
+          this.focusPreviousChild((UiComponent) null, -32);
         }
-        return null != this.g((byte) -123) ? true : false;
+        return null != this.getFocusedChild((byte) -123) ? true : false;
     }
 
-    final boolean a(boolean param0, shb param1) {
+    final boolean focusNextChild(boolean param0, UiComponent param1) {
         IntrusiveDequeIterator var3 = null;
         RuntimeException var3_ref = null;
-        shb var4 = null;
+        UiComponent var4 = null;
         IntrusiveDequeIterator var5 = null;
-        shb var6 = null;
+        UiComponent var6 = null;
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -29,26 +29,26 @@ class dqa extends shb implements nea {
         var7 = VoidHunters.field_G;
         try {
           if (!param0) {
-            dqa.clearSharedReferences(false);
+            UiContainer.clearSharedReferences(false);
           }
-          if (this.field_t.isEmpty(115)) {
+          if (this.children.isEmpty(115)) {
             return false;
           }
-          var3 = new IntrusiveDequeIterator(this.field_t);
-          var4 = (shb) (var3.first(570));
+          var3 = new IntrusiveDequeIterator(this.children);
+          var4 = (UiComponent) (var3.first(570));
           while (var4 != null) {
-            if (var4.e((byte) -120)) {
-              var5 = new IntrusiveDequeIterator(this.field_t);
+            if (var4.hasFocus((byte) -120)) {
+              var5 = new IntrusiveDequeIterator(this.children);
               var5.startForward(var4, -28791);
-              var6 = (shb) (var5.next(19072));
+              var6 = (UiComponent) (var5.next(19072));
               while (var6 != null) {
-                if (var6.a(0, param1)) {
+                if (var6.requestFocus(0, param1)) {
                   return true;
                 }
-                var6 = (shb) (var5.next(19072));
+                var6 = (UiComponent) (var5.next(19072));
               }
             }
-            var4 = (shb) (var3.next(19072));
+            var4 = (UiComponent) (var3.next(19072));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -65,28 +65,28 @@ class dqa extends shb implements nea {
         }
     }
 
-    void b(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = VoidHunters.field_G;
         if (param1 == 0 &&
-          null != this.field_q) {
-          this.field_q.a(13, (shb) (this), param0, param3, true);
+          null != this.renderer) {
+          this.renderer.drawComponent(13, (UiComponent) (this), param0, param3, true);
         }
-        IntrusiveDequeIterator var5 = new IntrusiveDequeIterator(this.field_t);
+        IntrusiveDequeIterator var5 = new IntrusiveDequeIterator(this.children);
         if (param2 < 47) {
           return;
         }
-        shb var6 = (shb) (var5.last((byte) 105));
+        UiComponent var6 = (UiComponent) (var5.last((byte) 105));
         while (var6 != null) {
-          var6.b(param0 + this.field_g, param1, 112, param3 + this.field_r);
-          var6 = (shb) (var5.previous((byte) 108));
+          var6.drawLayer(param0 + this.x, param1, 112, param3 + this.y);
+          var6 = (UiComponent) (var5.previous((byte) 108));
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3, shb param4, int param5) {
+    final void handleMouseRelease(byte param0, int param1, int param2, int param3, UiComponent param4, int param5) {
         RuntimeException runtimeException = null;
         IntrusiveDequeIterator var7 = null;
         int var8 = 0;
-        shb var9 = null;
+        UiComponent var9 = null;
         int var10 = 0;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -95,12 +95,12 @@ class dqa extends shb implements nea {
         var10 = VoidHunters.field_G;
         try {
           var8 = -69 % ((param0 - 52) / 52);
-          var7 = new IntrusiveDequeIterator(this.field_t);
-          var9 = (shb) (var7.first(570));
+          var7 = new IntrusiveDequeIterator(this.children);
+          var9 = (UiComponent) (var7.first(570));
           while (var9 != null) {
             if (var9.isLinked((byte) -63)) {
-              var9.a((byte) -109, param1 + this.field_g, param2, this.field_r + param3, param4, param5);
-              var9 = (shb) (var7.next(19072));
+              var9.handleMouseRelease((byte) -109, param1 + this.x, param2, this.y + param3, param4, param5);
+              var9 = (UiComponent) (var7.next(19072));
               continue;
             }
             break;
@@ -120,13 +120,13 @@ class dqa extends shb implements nea {
         }
     }
 
-    void f(byte param0) {
+    void clearFocus(byte param0) {
         int var4 = VoidHunters.field_G;
-        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.field_t);
-        shb var3 = (shb) (var2.first(570));
+        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.children);
+        UiComponent var3 = (UiComponent) (var2.first(570));
         while (var3 != null) {
-          var3.f((byte) -34);
-          var3 = (shb) (var2.next(param0 ^ -19106));
+          var3.clearFocus((byte) -34);
+          var3 = (UiComponent) (var2.next(param0 ^ -19106));
         }
         if (param0 != -34) {
           field_u = (String) null;
@@ -140,9 +140,9 @@ class dqa extends shb implements nea {
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, shb param4, int param5, byte param6) {
+    boolean handleMousePress(int param0, int param1, int param2, int param3, UiComponent param4, int param5, byte param6) {
         RuntimeException var8 = null;
-        shb var9 = null;
+        UiComponent var9 = null;
         int var10 = 0;
         IntrusiveDequeIterator var11 = null;
         RuntimeException stackIn_15_0 = null;
@@ -151,14 +151,14 @@ class dqa extends shb implements nea {
         RuntimeException decompiledCaughtException = null;
         var10 = VoidHunters.field_G;
         try {
-          var11 = new IntrusiveDequeIterator(this.field_t);
-          var9 = (shb) (var11.first(570));
+          var11 = new IntrusiveDequeIterator(this.children);
+          var9 = (UiComponent) (var11.first(570));
           while (var9 != null) {
             if (var9.isLinked((byte) -63)) {
-              if (var9.a(param0, param1 + this.field_g, param2, param3, param4, param5 + this.field_r, (byte) -61)) {
+              if (var9.handleMousePress(param0, param1 + this.x, param2, param3, param4, param5 + this.y, (byte) -61)) {
                 return true;
               }
-              var9 = (shb) (var11.next(19072));
+              var9 = (UiComponent) (var11.next(19072));
               continue;
             }
             break;
@@ -166,7 +166,7 @@ class dqa extends shb implements nea {
           if (param6 <= -17) {
             return false;
           }
-          this.d((byte) -101);
+          this.getTooltip((byte) -101);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -182,48 +182,48 @@ class dqa extends shb implements nea {
         }
     }
 
-    final int c(int param0) {
+    final int getMaxDrawLayer(int param0) {
         int var5 = 0;
         int var6 = VoidHunters.field_G;
         int var2 = param0;
-        IntrusiveDequeIterator var3 = new IntrusiveDequeIterator(this.field_t);
-        shb var4 = (shb) (var3.first(570));
+        IntrusiveDequeIterator var3 = new IntrusiveDequeIterator(this.children);
+        UiComponent var4 = (UiComponent) (var3.first(570));
         while (var4 != null) {
-          var5 = var4.c(param0 ^ 0);
+          var5 = var4.getMaxDrawLayer(param0 ^ 0);
           if (var2 < var5) {
             var2 = var5;
           }
-          var4 = (shb) (var3.next(19072));
+          var4 = (UiComponent) (var3.next(19072));
         }
         return var2;
     }
 
-    dqa(int param0, int param1, int param2, int param3, wwa param4) {
-        super(param0, param1, param2, param3, param4, (sba) null);
-        this.field_t = new IntrusiveDeque();
+    UiContainer(int param0, int param1, int param2, int param3, UiRenderer param4) {
+        super(param0, param1, param2, param3, param4, (UiListener) null);
+        this.children = new IntrusiveDeque();
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
-        this.h((byte) 13);
+    void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
+        this.refreshChildLayouts((byte) 13);
     }
 
-    String d(byte param0) {
+    String getTooltip(byte param0) {
         String var4 = null;
         int var5 = VoidHunters.field_G;
-        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.field_t);
-        shb var3 = (shb) (var2.first(570));
+        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.children);
+        UiComponent var3 = (UiComponent) (var2.first(570));
         while (var3 != null) {
-          var4 = var3.d((byte) 125);
+          var4 = var3.getTooltip((byte) 125);
           if (var4 != null) {
             return var4;
           }
-          var3 = (shb) (var2.next(19072));
+          var3 = (UiComponent) (var2.next(19072));
         }
         if (param0 == 125) {
           return null;
         }
-        this.field_t = (IntrusiveDeque) null;
+        this.children = (IntrusiveDeque) null;
         return null;
     }
 
@@ -302,25 +302,25 @@ class dqa extends shb implements nea {
         }
     }
 
-    final void b(int param0, shb param1) {
+    final void addChild(int param0, UiComponent param1) {
         try {
-          this.field_t.addLast(-10258, param1);
+          this.children.addLast(-10258, param1);
           if (param0 != -18756) {
-            this.field_t = (IntrusiveDeque) null;
+            this.children = (IntrusiveDeque) null;
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dqa.PA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(Hashtable param0, byte param1, StringBuilder param2, int param3) {
+    private final void appendChildDebugTrees(Hashtable param0, byte param1, StringBuilder param2, int param3) {
         StringBuilder discarded$2 = null;
         int var7 = 0;
         StringBuilder discarded$3 = null;
         IntrusiveDequeIterator var5 = null;
-        shb var6 = null;
+        UiComponent var6 = null;
         int var8 = 0;
-        shb var9 = null;
+        UiComponent var9 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -330,19 +330,19 @@ class dqa extends shb implements nea {
         RuntimeException var5_ref = null;
         var8 = VoidHunters.field_G;
         try {
-          var5 = new IntrusiveDequeIterator(this.field_t);
-          var6 = (shb) (var5.first(570));
+          var5 = new IntrusiveDequeIterator(this.children);
+          var6 = (UiComponent) (var5.first(570));
           while (var6 != null) {
             discarded$2 = param2.append('\n');
             for (var7 = 0; param3 >= var7; var7++) {
               discarded$3 = param2.append(' ');
             }
-            var6.a(false, param0, 1 + param3, param2);
-            var6 = (shb) (var5.next(19072));
+            var6.appendDebugTree(false, param0, 1 + param3, param2);
+            var6 = (UiComponent) (var5.next(19072));
           }
           if (param1 >= -8) {
-            var9 = (shb) null;
-            this.a(false, (shb) null);
+            var9 = (UiComponent) null;
+            this.focusNextChild(false, (UiComponent) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -365,10 +365,10 @@ class dqa extends shb implements nea {
         }
     }
 
-    boolean a(int param0, shb param1) {
+    boolean requestFocus(int param0, UiComponent param1) {
         IntrusiveDequeIterator var3 = null;
         RuntimeException var3_ref = null;
-        shb var4 = null;
+        UiComponent var4 = null;
         int var5 = 0;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -379,13 +379,13 @@ class dqa extends shb implements nea {
           if (param0 != 0) {
             return true;
           }
-          var3 = new IntrusiveDequeIterator(this.field_t);
-          var4 = (shb) (var3.first(570));
+          var3 = new IntrusiveDequeIterator(this.children);
+          var4 = (UiComponent) (var3.first(570));
           while (var4 != null) {
-            if (var4.a(param0 ^ 0, param1)) {
+            if (var4.requestFocus(param0 ^ 0, param1)) {
               return true;
             }
-            var4 = (shb) (var3.next(param0 + 19072));
+            var4 = (UiComponent) (var3.next(param0 + 19072));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -402,9 +402,9 @@ class dqa extends shb implements nea {
         }
     }
 
-    boolean a(int param0, int param1, shb param2, char param3) {
+    boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
-        shb var6_ref_shb = null;
+        UiComponent var6_ref_shb = null;
         int var6 = 0;
         int var7 = 0;
         IntrusiveDequeIterator var8 = null;
@@ -415,30 +415,30 @@ class dqa extends shb implements nea {
         RuntimeException decompiledCaughtException = null;
         var7 = VoidHunters.field_G;
         try {
-          var8 = new IntrusiveDequeIterator(this.field_t);
-          var6_ref_shb = (shb) (var8.first(570));
+          var8 = new IntrusiveDequeIterator(this.children);
+          var6_ref_shb = (UiComponent) (var8.first(570));
           while (var6_ref_shb != null) {
             if (var6_ref_shb.isLinked((byte) -63)) {
-              if (var6_ref_shb.e((byte) -120) &&
-                var6_ref_shb.a(param0 ^ 0, param1, param2, param3)) {
+              if (var6_ref_shb.hasFocus((byte) -120) &&
+                var6_ref_shb.handleKey(param0 ^ 0, param1, param2, param3)) {
                 return true;
               }
-              var6_ref_shb = (shb) (var8.next(param0 + 34906));
+              var6_ref_shb = (UiComponent) (var8.next(param0 + 34906));
               continue;
             }
             break;
           }
           if (param0 != -15834) {
-            this.field_t = (IntrusiveDeque) null;
+            this.children = (IntrusiveDeque) null;
           }
           var6 = param1;
           if (var6 != 80) {
             return false;
           }
           if (!SetMachineGunEnergyUsed.field_o[81]) {
-            stackIn_17_0 = this.a(true, param2);
+            stackIn_17_0 = this.focusNextChild(true, param2);
           } else {
-            stackIn_17_0 = this.a(param2, 0);
+            stackIn_17_0 = this.focusPreviousChild(param2, 0);
           }
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -455,23 +455,23 @@ class dqa extends shb implements nea {
         }
     }
 
-    private final void h(byte param0) {
+    private final void refreshChildLayouts(byte param0) {
         int var4 = VoidHunters.field_G;
         if (param0 != 13) {
           return;
         }
-        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.field_t);
-        shb var3 = (shb) (var2.first(570));
+        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.children);
+        UiComponent var3 = (UiComponent) (var2.first(570));
         while (var3 != null) {
-          var3.a(false);
-          var3 = (shb) (var2.next(param0 + 19059));
+          var3.refreshLayout(false);
+          var3 = (UiComponent) (var2.next(param0 + 19059));
         }
     }
 
-    void a(int param0, int param1, int param2, shb param3) {
-        shb var6 = null;
+    void updatePointer(int param0, int param1, int param2, UiComponent param3) {
+        UiComponent var6 = null;
         int var7 = 0;
-        shb var8 = null;
+        UiComponent var8 = null;
         IntrusiveDequeIterator var9 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -480,20 +480,20 @@ class dqa extends shb implements nea {
         RuntimeException var5 = null;
         var7 = VoidHunters.field_G;
         try {
-          super.a(param0, param1, param2 + 0, param3);
-          var9 = new IntrusiveDequeIterator(this.field_t);
-          var6 = (shb) (var9.first(param2 + 1551));
+          super.updatePointer(param0, param1, param2 + 0, param3);
+          var9 = new IntrusiveDequeIterator(this.children);
+          var6 = (UiComponent) (var9.first(param2 + 1551));
           while (var6 != null) {
             if (var6.isLinked((byte) -63)) {
-              var6.a(this.field_r + param0, param1 + this.field_g, -981, param3);
-              var6 = (shb) (var9.next(19072));
+              var6.updatePointer(this.y + param0, param1 + this.x, -981, param3);
+              var6 = (UiComponent) (var9.next(19072));
               continue;
             }
             break;
           }
           if (param2 != -981) {
-            var8 = (shb) null;
-            this.a(-120, 53, 71, (shb) null, 57, 10, 54);
+            var8 = (UiComponent) null;
+            this.handleMouseWheel(-120, 53, 71, (UiComponent) null, 57, 10, 54);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -510,7 +510,7 @@ class dqa extends shb implements nea {
         }
     }
 
-    final StringBuilder a(boolean param0, Hashtable param1, int param2, StringBuilder param3) {
+    final StringBuilder appendDebugTree(boolean param0, Hashtable param1, int param2, StringBuilder param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
@@ -520,12 +520,12 @@ class dqa extends shb implements nea {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param1, param2, (byte) 123, param3)) {
-            this.a(90, param2, param1, param3);
-            this.a(param1, (byte) -89, param3, param2);
+          if (this.beginDebugVisit(param1, param2, (byte) 123, param3)) {
+            this.appendDebugProperties(90, param2, param1, param3);
+            this.appendChildDebugTrees(param1, (byte) -89, param3, param2);
           }
           if (param0) {
-            this.e((byte) -25);
+            this.hasFocus((byte) -25);
           }
           stackIn_5_0 = (StringBuilder) (param3);
           return stackIn_5_0;
@@ -549,10 +549,10 @@ class dqa extends shb implements nea {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, shb param3, int param4, int param5, int param6) {
+    final boolean handleMouseWheel(int param0, int param1, int param2, UiComponent param3, int param4, int param5, int param6) {
         IntrusiveDequeIterator var8 = null;
         RuntimeException var8_ref = null;
-        shb var9 = null;
+        UiComponent var9 = null;
         int var10 = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -563,15 +563,15 @@ class dqa extends shb implements nea {
           if (param1 != -6006) {
             return true;
           }
-          var8 = new IntrusiveDequeIterator(this.field_t);
-          var9 = (shb) (var8.first(570));
+          var8 = new IntrusiveDequeIterator(this.children);
+          var9 = (UiComponent) (var8.first(570));
           while (var9 != null) {
             if (var9.isLinked((byte) -63)) {
-              if (var9.e((byte) -120) &&
-                var9.a(param0, -6006, param2, param3, param4, param5, param6)) {
+              if (var9.hasFocus((byte) -120) &&
+                var9.handleMouseWheel(param0, -6006, param2, param3, param4, param5, param6)) {
                 return true;
               }
-              var9 = (shb) (var8.next(19072));
+              var9 = (UiComponent) (var8.next(19072));
               continue;
             }
             break;
@@ -591,33 +591,33 @@ class dqa extends shb implements nea {
         }
     }
 
-    shb g(byte param0) {
+    UiComponent getFocusedChild(byte param0) {
         IntrusiveDequeIterator var2;
-        shb var3;
+        UiComponent var3;
         int var4;
-        shb var5;
+        UiComponent var5;
         var4 = VoidHunters.field_G;
         if (param0 > -3) {
-          var5 = (shb) null;
-          this.a(5, -105, 25, 32, (shb) null, 72, (byte) 42);
+          var5 = (UiComponent) null;
+          this.handleMousePress(5, -105, 25, 32, (UiComponent) null, 72, (byte) 42);
         }
-        var2 = new IntrusiveDequeIterator(this.field_t);
-        var3 = (shb) (var2.first(570));
+        var2 = new IntrusiveDequeIterator(this.children);
+        var3 = (UiComponent) (var2.first(570));
         while (var3 != null) {
-          if (var3.e((byte) -120)) {
+          if (var3.hasFocus((byte) -120)) {
             return var3;
           }
-          var3 = (shb) (var2.next(19072));
+          var3 = (UiComponent) (var2.next(19072));
         }
         return null;
     }
 
-    final boolean a(shb param0, int param1) {
+    final boolean focusPreviousChild(UiComponent param0, int param1) {
         IntrusiveDequeIterator var3 = null;
         RuntimeException var3_ref = null;
-        shb var4 = null;
+        UiComponent var4 = null;
         IntrusiveDequeIterator var5 = null;
-        shb var6 = null;
+        UiComponent var6 = null;
         int var7 = 0;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
@@ -628,25 +628,25 @@ class dqa extends shb implements nea {
           if (param1 != 0) {
             return false;
           }
-          if (this.field_t.isEmpty(param1 ^ 113)) {
+          if (this.children.isEmpty(param1 ^ 113)) {
             return false;
           }
-          var3 = new IntrusiveDequeIterator(this.field_t);
-          var4 = (shb) (var3.last((byte) 70));
+          var3 = new IntrusiveDequeIterator(this.children);
+          var4 = (UiComponent) (var3.last((byte) 70));
           while (var4 != null) {
-            if (var4.e((byte) -120)) {
-              var5 = new IntrusiveDequeIterator(this.field_t);
+            if (var4.hasFocus((byte) -120)) {
+              var5 = new IntrusiveDequeIterator(this.children);
               var5.startBackward((byte) 88, var4);
-              var6 = (shb) (var5.previous((byte) 108));
+              var6 = (UiComponent) (var5.previous((byte) 108));
               while (var6 != null) {
-                if (!var6.a(0, param0)) {
-                  var6 = (shb) (var5.previous((byte) 108));
+                if (!var6.requestFocus(0, param0)) {
+                  var6 = (UiComponent) (var5.previous((byte) 108));
                   continue;
                 }
                 return true;
               }
             }
-            var4 = (shb) (var3.previous((byte) 108));
+            var4 = (UiComponent) (var3.previous((byte) 108));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

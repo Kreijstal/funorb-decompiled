@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class bob implements wwa, at {
+class bob implements UiRenderer, at {
     private int field_j;
     int field_f;
     int field_a;
@@ -18,7 +18,7 @@ class bob implements wwa, at {
     int field_c;
     int field_n;
 
-    private final void c(shb param0, byte param1) {
+    private final void c(UiComponent param0, byte param1) {
         int discarded$0 = 0;
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
@@ -30,7 +30,7 @@ class bob implements wwa, at {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        shb var8 = null;
+        UiComponent var8 = null;
         int var6Lifetime1;
         var7 = VoidHunters.field_G;
         try {
@@ -53,8 +53,8 @@ class bob implements wwa, at {
             var5 = this.field_d.maxAscent;
           }
           if (param1 <= 58) {
-            var8 = (shb) null;
-            discarded$0 = this.a(-103, (shb) null, -65, (byte) 74);
+            var8 = (UiComponent) null;
+            discarded$0 = this.a(-103, (UiComponent) null, -65, (byte) 74);
           }
           var6Lifetime1 = this.field_c;
           if (var6Lifetime1 != 0 &&
@@ -94,7 +94,7 @@ class bob implements wwa, at {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, shb param5, int param6, int param7) {
+    private final void a(int param0, int param1, int param2, int param3, int param4, UiComponent param5, int param6, int param7) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -108,7 +108,7 @@ class bob implements wwa, at {
         int var12Lifetime1;
         var13 = VoidHunters.field_G;
         try {
-          SelectableIconLabelWidget.a(param5.field_h + param5.field_g + param6, param5.field_f + (param7 + param5.field_r), param5.field_g + param6, true, param5.field_r + param7);
+          SelectableIconLabelWidget.pushClip(param5.width + param5.x + param6, param5.height + (param7 + param5.y), param5.x + param6, true, param5.y + param7);
           var9_int = this.b(param5, (byte) 81);
           var10 = this.a((byte) 56, param5);
           if (param3 != -13997) {
@@ -147,7 +147,7 @@ class bob implements wwa, at {
           } else {
             this.field_d.drawParagraph(this.b((byte) -112, param5), this.a(param6, param5, param0, (byte) -13), this.a(param7, -117, param5, param2), var9_int, var10, param4, param1, this.field_c, this.field_n, this.field_h);
           }
-          bia.a((byte) 124);
+          bia.popRasterState((byte) 124);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -163,7 +163,7 @@ class bob implements wwa, at {
         }
     }
 
-    private final int a(int param0, int param1, shb param2, int param3) {
+    private final int a(int param0, int param1, UiComponent param2, int param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -174,7 +174,7 @@ class bob implements wwa, at {
           if (param1 > -116) {
             this.field_g = true;
           }
-          stackIn_3_0 = param3 + (this.field_k + param0) - (-param2.field_r - param2.field_i);
+          stackIn_3_0 = param3 + (this.field_k + param0) - (-param2.y - param2.field_i);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -194,7 +194,7 @@ class bob implements wwa, at {
         this(param0, param1, param1, param2, param2, param3, param4, param5, param6, param7, -1, 2147483647, false);
     }
 
-    private final int a(int param0, shb param1, int param2, byte param3) {
+    private final int a(int param0, UiComponent param1, int param2, byte param3) {
         RuntimeException var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -205,7 +205,7 @@ class bob implements wwa, at {
           if (param3 != -13) {
             this.field_n = -85;
           }
-          stackIn_3_0 = param2 + (this.field_f + param1.field_g + param0) + param1.field_s;
+          stackIn_3_0 = param2 + (this.field_f + param1.x + param0) + param1.field_s;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -221,7 +221,7 @@ class bob implements wwa, at {
         }
     }
 
-    public final int a(shb param0, byte param1) {
+    public final int a(UiComponent param0, byte param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -248,7 +248,7 @@ class bob implements wwa, at {
         }
     }
 
-    public final int b(shb param0, byte param1) {
+    public final int b(UiComponent param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -258,7 +258,7 @@ class bob implements wwa, at {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 >= 66) {
-            stackIn_4_0 = param0.field_h + (-this.field_f - this.field_o);
+            stackIn_4_0 = param0.width + (-this.field_f - this.field_o);
             return stackIn_4_0;
           }
           stackIn_2_0 = -93;
@@ -277,7 +277,7 @@ class bob implements wwa, at {
         }
     }
 
-    public final int a(int param0, int param1, int param2, int param3, shb param4, int param5) {
+    public final int a(int param0, int param1, int param2, int param3, UiComponent param4, int param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -305,7 +305,7 @@ class bob implements wwa, at {
         }
     }
 
-    public final ar a(shb param0, int param1) {
+    public final ar a(UiComponent param0, int param1) {
         RuntimeException var3 = null;
         ar stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
@@ -340,13 +340,13 @@ class bob implements wwa, at {
         }
     }
 
-    private final void a(int param0, shb param1, int param2, int param3) {
+    private final void a(int param0, UiComponent param1, int param2, int param3) {
         int discarded$0 = 0;
         try {
           this.a(0, this.field_j, 0, -13997, this.field_i, param1, param3, param2);
           if (param0 != 340287457) {
-            shb var6 = (shb) null;
-            discarded$0 = this.a(-125, (shb) null, -85, (byte) -70);
+            UiComponent var6 = (UiComponent) null;
+            discarded$0 = this.a(-125, (UiComponent) null, -85, (byte) -70);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bob.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
@@ -376,7 +376,7 @@ class bob implements wwa, at {
         }
     }
 
-    public final void b(int param0, int param1, int param2, int param3, shb param4, int param5) {
+    public final void b(int param0, int param1, int param2, int param3, UiComponent param4, int param5) {
         int var12 = 0;
         int stackIn_15_0 = 0;
         int stackIn_20_0 = 0;
@@ -393,19 +393,19 @@ class bob implements wwa, at {
         int var14 = 0;
         int var15 = 0;
         int var16 = 0;
-        shb var17 = null;
+        UiComponent var17 = null;
         ar var18 = null;
         ar var19 = null;
         var16 = VoidHunters.field_G;
         try {
           if (param2 != -24184) {
-            var17 = (shb) null;
-            this.b(-123, -97, 78, -103, (shb) null, 79);
+            var17 = (UiComponent) null;
+            this.b(-123, -97, 78, -103, (UiComponent) null, 79);
           }
           if (param0 == param5) {
             return;
           }
-          if (!param4.e((byte) -120)) {
+          if (!param4.hasFocus((byte) -120)) {
             return;
           }
           var18 = this.a(param4, 3);
@@ -419,7 +419,7 @@ class bob implements wwa, at {
           }
           var10 = var19.a(true, var8);
           var11 = var19.a(true, var9);
-          SelectableIconLabelWidget.a(param4.field_g + param3 + param4.field_h, param4.field_r + param1 + param4.field_f, param4.field_g + param3, true, param1 + param4.field_r);
+          SelectableIconLabelWidget.pushClip(param4.x + param3 + param4.width, param4.y + param1 + param4.height, param4.x + param3, true, param1 + param4.y);
           for (var12 = var10; var11 >= var12; var12++) {
             var13 = var18.field_c[var12];
             if (var10 == var12) {
@@ -438,9 +438,9 @@ class bob implements wwa, at {
               }
             }
             var15 = stackIn_20_0;
-            GetDebrisMax.field_s.a(var13.field_b + (param4.field_i + this.field_k + (param4.field_r + param1)), this.field_b >>> 24, true, var15 - var14, this.field_b, this.a(param3, param4, var14, (byte) -13), var13.field_a);
+            GetDebrisMax.field_s.a(var13.field_b + (param4.field_i + this.field_k + (param4.y + param1)), this.field_b >>> 24, true, var15 - var14, this.field_b, this.a(param3, param4, var14, (byte) -13), var13.field_a);
           }
-          bia.a((byte) 124);
+          bia.popRasterState((byte) 124);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -456,7 +456,7 @@ class bob implements wwa, at {
         }
     }
 
-    public final int a(int param0, int param1, shb param2) {
+    public final int a(int param0, int param1, UiComponent param2) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -483,7 +483,7 @@ class bob implements wwa, at {
         }
     }
 
-    public final int a(int param0, shb param1) {
+    public final int a(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -511,7 +511,7 @@ class bob implements wwa, at {
         }
     }
 
-    private final int a(byte param0, shb param1) {
+    private final int a(byte param0, UiComponent param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -522,7 +522,7 @@ class bob implements wwa, at {
           if (param0 < 50) {
             this.field_j = 14;
           }
-          stackIn_3_0 = param1.field_f - (this.field_k + this.field_m);
+          stackIn_3_0 = param1.height - (this.field_k + this.field_m);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -538,7 +538,7 @@ class bob implements wwa, at {
         }
     }
 
-    public void a(int param0, shb param1, int param2, int param3, boolean param4) {
+    public void drawComponent(int param0, UiComponent param1, int param2, int param3, boolean param4) {
         if (this.field_d == null) {
           return;
         }
@@ -550,9 +550,9 @@ class bob implements wwa, at {
         }
     }
 
-    public final int b(int param0, int param1, shb param2) {
+    public final int b(int param0, int param1, UiComponent param2) {
         RuntimeException var4 = null;
-        shb var5 = null;
+        UiComponent var5 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -560,8 +560,8 @@ class bob implements wwa, at {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -3) {
-            var5 = (shb) null;
-            this.b((shb) null, (byte) -80);
+            var5 = (UiComponent) null;
+            this.b((UiComponent) null, (byte) -80);
           }
           stackIn_3_0 = this.a(param1, param0 - 114, param2, 0);
           return stackIn_3_0;
@@ -594,7 +594,7 @@ class bob implements wwa, at {
         return this.field_d.maxDescent + this.field_d.maxAscent;
     }
 
-    String b(byte param0, shb param1) {
+    String b(byte param0, UiComponent param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -605,7 +605,7 @@ class bob implements wwa, at {
           if (param0 >= -53) {
             this.field_n = 73;
           }
-          stackIn_3_0 = param1.field_j;
+          stackIn_3_0 = param1.text;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -621,7 +621,7 @@ class bob implements wwa, at {
         }
     }
 
-    public final void a(shb param0, int param1, byte param2, int param3, int param4) {
+    public final void a(UiComponent param0, int param1, byte param2, int param3, int param4) {
         ar var13 = null;
         ar var14 = null;
         int var7 = 0;
@@ -631,7 +631,7 @@ class bob implements wwa, at {
         int var11 = 0;
         int var12 = 0;
         try {
-          if (param0.e((byte) -120)) {
+          if (param0.hasFocus((byte) -120)) {
             var13 = this.a(param0, 3);
             var14 = var13;
             var7 = var14.a(true, param4);
@@ -640,9 +640,9 @@ class bob implements wwa, at {
             var10 = this.a(param3, param0, var9, (byte) -13);
             var11 = this.b(-3, param1, param0) + Math.max(0, var8.field_b);
             var12 = this.b(-3, param1, param0) + Math.min(this.a((byte) 71, param0), Math.min(var8.field_a, 1 + var7 >= var14.field_c.length ? var8.field_a : var13.field_c[var7 + 1].field_b));
-            SelectableIconLabelWidget.a(param0.field_h + (param3 + param0.field_g), param0.field_f + param1 + param0.field_r, param0.field_g + param3, true, param0.field_r + param1);
+            SelectableIconLabelWidget.pushClip(param0.width + (param3 + param0.x), param0.height + param1 + param0.y, param0.x + param3, true, param0.y + param1);
             GetDebrisMax.field_s.a(this.field_a, var11, var12, var10, var10, 11480);
-            bia.a((byte) 124);
+            bia.popRasterState((byte) 124);
           }
           int var6_int = -36 / ((6 - param2) / 58);
         } catch (RuntimeException runtimeException) {

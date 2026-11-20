@@ -3,18 +3,18 @@
  */
 import java.util.*;
 
-abstract class mc extends shb implements nea {
-    shb field_t;
+abstract class UiSingleChildContainer extends UiComponent implements UiContainerMarker {
+    UiComponent child;
     static int field_u;
 
-    final int c(int param0) {
+    final int getMaxDrawLayer(int param0) {
         if (param0 != 0) {
           field_u = 110;
         }
-        return null == this.field_t ? 0 : this.field_t.c(0);
+        return null == this.child ? 0 : this.child.getMaxDrawLayer(0);
     }
 
-    boolean a(int param0, int param1, int param2, int param3, shb param4, int param5, byte param6) {
+    boolean handleMousePress(int param0, int param1, int param2, int param3, UiComponent param4, int param5, byte param6) {
         RuntimeException var8 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -25,7 +25,7 @@ abstract class mc extends shb implements nea {
           if (param6 >= -17) {
             field_u = -57;
           }
-          stackIn_6_0 = (this.field_t != null) && (this.field_t.a(param0, this.field_g + param1, param2, param3, param4, param5 + this.field_r, (byte) -109));
+          stackIn_6_0 = (this.child != null) && (this.child.handleMousePress(param0, this.x + param1, param2, param3, param4, param5 + this.y, (byte) -109));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -41,11 +41,11 @@ abstract class mc extends shb implements nea {
         }
     }
 
-    String d(byte param0) {
+    String getTooltip(byte param0) {
         String var3 = null;
-        String var2 = super.d(param0);
-        if (null != this.field_t) {
-          var3 = this.field_t.d((byte) 125);
+        String var2 = super.getTooltip(param0);
+        if (null != this.child) {
+          var3 = this.child.getTooltip((byte) 125);
           if (var3 != null) {
             return var3;
           }
@@ -53,7 +53,7 @@ abstract class mc extends shb implements nea {
         return var2;
     }
 
-    final boolean a(int param0, shb param1) {
+    final boolean requestFocus(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -64,7 +64,7 @@ abstract class mc extends shb implements nea {
           if (param0 != 0) {
             return false;
           }
-          stackIn_7_0 = (this.field_t != null) && (this.field_t.a(param0 ^ 0, param1));
+          stackIn_7_0 = (this.child != null) && (this.child.requestFocus(param0 ^ 0, param1));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,23 +80,23 @@ abstract class mc extends shb implements nea {
         }
     }
 
-    final boolean e(byte param0) {
+    final boolean hasFocus(byte param0) {
         if (param0 != -120) {
           return true;
         }
-        return this.d(param0 ^ -6075) != null ? true : false;
+        return this.getFocusedChild(param0 ^ -6075) != null ? true : false;
     }
 
-    void a(int param0, int param1, int param2, shb param3) {
+    void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, param1, param2, param3);
-          if (null != this.field_t) {
-            this.field_t.a(this.field_r + param0, this.field_g + param1, param2 + 0, param3);
+          super.updatePointer(param0, param1, param2, param3);
+          if (null != this.child) {
+            this.child.updatePointer(this.y + param0, this.x + param1, param2 + 0, param3);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -121,7 +121,7 @@ abstract class mc extends shb implements nea {
         }
         if (param0 >= -117) {
           ShipComponent var3 = (ShipComponent) null;
-          mc.a((ShipComponent) null, -56);
+          UiSingleChildContainer.a((ShipComponent) null, -56);
         }
         if ((CarouselPlayerEventFactory.field_a > 0 || SetExplosionPushMultiplier.field_p > 0) &&
           GetTorpedoProjectileDamage.field_o) {
@@ -153,14 +153,14 @@ abstract class mc extends shb implements nea {
         }
     }
 
-    void a(int param0) {
+    void refreshChildLayout(int param0) {
         int var2 = -14 % ((param0 + 80) / 42);
-        if (null != this.field_t) {
-          this.field_t.a(false);
+        if (null != this.child) {
+          this.child.refreshLayout(false);
         }
     }
 
-    StringBuilder a(boolean param0, Hashtable param1, int param2, StringBuilder param3) {
+    StringBuilder appendDebugTree(boolean param0, Hashtable param1, int param2, StringBuilder param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
@@ -170,12 +170,12 @@ abstract class mc extends shb implements nea {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param1, param2, (byte) 115, param3)) {
-            this.a(71, param2, param1, param3);
-            this.a(param2, 13, param3, param1);
+          if (this.beginDebugVisit(param1, param2, (byte) 115, param3)) {
+            this.appendDebugProperties(71, param2, param1, param3);
+            this.appendChildDebugTree(param2, 13, param3, param1);
           }
           if (param0) {
-            this.field_t = (shb) null;
+            this.child = (UiComponent) null;
           }
           stackIn_5_0 = (StringBuilder) (param3);
           return stackIn_5_0;
@@ -199,10 +199,10 @@ abstract class mc extends shb implements nea {
         }
     }
 
-    void a(byte param0, int param1, int param2, int param3, shb param4, int param5) {
+    void handleMouseRelease(byte param0, int param1, int param2, int param3, UiComponent param4, int param5) {
         try {
-          if (null != this.field_t) {
-            this.field_t.a((byte) 122, param1 + this.field_g, param2, this.field_r + param3, param4, param5);
+          if (null != this.child) {
+            this.child.handleMouseRelease((byte) 122, param1 + this.x, param2, this.y + param3, param4, param5);
           }
           int var7_int = -98 % ((52 - param0) / 52);
         } catch (RuntimeException runtimeException) {
@@ -210,20 +210,20 @@ abstract class mc extends shb implements nea {
         }
     }
 
-    void b(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         if (param2 <= 47) {
-          this.d(-117);
+          this.getFocusedChild(-117);
         }
         if (0 == param1 &&
-          null != this.field_q) {
-          this.field_q.a(103, (shb) (this), param0, param3, true);
+          null != this.renderer) {
+          this.renderer.drawComponent(103, (UiComponent) (this), param0, param3, true);
         }
-        if (null != this.field_t) {
-          this.field_t.b(this.field_g + param0, param1, 127, param3 + this.field_r);
+        if (null != this.child) {
+          this.child.drawLayer(this.x + param0, param1, 127, param3 + this.y);
         }
     }
 
-    private final boolean b(int param0, shb param1) {
+    private final boolean focusPreviousChild(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -232,9 +232,9 @@ abstract class mc extends shb implements nea {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 >= -83) {
-            this.e((byte) 65);
+            this.hasFocus((byte) 65);
           }
-          stackIn_7_0 = (null != this.field_t) && (!this.field_t.e((byte) -120)) && (this.field_t.a(0, param1));
+          stackIn_7_0 = (null != this.child) && (!this.child.hasFocus((byte) -120)) && (this.child.requestFocus(0, param1));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -250,7 +250,7 @@ abstract class mc extends shb implements nea {
         }
     }
 
-    final void a(int param0, int param1, StringBuilder param2, Hashtable param3) {
+    final void appendChildDebugTree(int param0, int param1, StringBuilder param2, Hashtable param3) {
         StringBuilder discarded$4 = null;
         int var5_int = 0;
         StringBuilder discarded$6 = null;
@@ -269,13 +269,13 @@ abstract class mc extends shb implements nea {
           for (var5_int = 0; var5_int <= param0; var5_int++) {
             discarded$6 = param2.append(' ');
           }
-          if (null != this.field_t) {
-            this.field_t.a(false, param3, param0 + 1, param2);
+          if (null != this.child) {
+            this.child.appendDebugTree(false, param3, param0 + 1, param2);
           } else {
             discarded$5 = param2.append("null");
           }
           if (param1 != 13) {
-            this.field_t = (shb) null;
+            this.child = (UiComponent) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -298,7 +298,7 @@ abstract class mc extends shb implements nea {
         }
     }
 
-    private final boolean a(byte param0, shb param1) {
+    private final boolean focusNextChild(byte param0, UiComponent param1) {
         RuntimeException var3 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -309,7 +309,7 @@ abstract class mc extends shb implements nea {
           if (param0 != -47) {
             field_u = 81;
           }
-          stackIn_7_0 = (null != this.field_t) && (!this.field_t.e((byte) -120)) && (this.field_t.a(0, param1));
+          stackIn_7_0 = (null != this.child) && (!this.child.hasFocus((byte) -120)) && (this.child.requestFocus(0, param1));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -325,10 +325,10 @@ abstract class mc extends shb implements nea {
         }
     }
 
-    final boolean a(int param0, int param1, shb param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
-        shb var6 = null;
+        UiComponent var6 = null;
         boolean stackIn_12_0 = false;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -336,12 +336,12 @@ abstract class mc extends shb implements nea {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -15834) {
-            var6 = (shb) null;
-            this.a(-72, 29, -110, -50, (shb) null, 73, (byte) 9);
+            var6 = (UiComponent) null;
+            this.handleMousePress(-72, 29, -110, -50, (UiComponent) null, 73, (byte) 9);
           }
-          if (this.field_t != null &&
-            this.field_t.e((byte) -120) &&
-            this.field_t.a(-15834, param1, param2, param3)) {
+          if (this.child != null &&
+            this.child.hasFocus((byte) -120) &&
+            this.child.handleKey(-15834, param1, param2, param3)) {
             return true;
           }
           var5_int = param1;
@@ -349,9 +349,9 @@ abstract class mc extends shb implements nea {
             return false;
           }
           if (!SetMachineGunEnergyUsed.field_o[81]) {
-            stackIn_12_0 = this.a((byte) -47, param2);
+            stackIn_12_0 = this.focusNextChild((byte) -47, param2);
           } else {
-            stackIn_12_0 = this.b(-125, param2);
+            stackIn_12_0 = this.focusPreviousChild(-125, param2);
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -368,42 +368,42 @@ abstract class mc extends shb implements nea {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3 + 0, param4);
-        this.a(-124);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3 + 0, param4);
+        this.refreshChildLayout(-124);
         if (param3 != 1) {
           field_u = 87;
         }
     }
 
-    final void f(byte param0) {
+    final void clearFocus(byte param0) {
         if (param0 != -34) {
           field_u = -111;
         }
-        if (null != this.field_t) {
-          this.field_t.f((byte) -34);
+        if (null != this.child) {
+          this.child.clearFocus((byte) -34);
         }
     }
 
-    mc(int param0, int param1, int param2, int param3, wwa param4, sba param5) {
+    UiSingleChildContainer(int param0, int param1, int param2, int param3, UiRenderer param4, UiListener param5) {
         super(param0, param1, param2, param3, param4, param5);
     }
 
-    shb d(int param0) {
+    UiComponent getFocusedChild(int param0) {
         if (param0 != 6093) {
-          this.field_t = (shb) null;
+          this.child = (UiComponent) null;
         }
-        shb var2 = this.field_t;
+        UiComponent var2 = this.child;
         if (var2 == null) {
           return null;
         }
-        if (!var2.e((byte) -120)) {
+        if (!var2.hasFocus((byte) -120)) {
           return null;
         }
         return var2;
     }
 
-    final boolean a(int param0, int param1, int param2, shb param3, int param4, int param5, int param6) {
+    final boolean handleMouseWheel(int param0, int param1, int param2, UiComponent param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         boolean stackIn_8_0 = false;
         RuntimeException stackIn_11_0 = null;
@@ -414,7 +414,7 @@ abstract class mc extends shb implements nea {
           if (param1 != -6006) {
             return true;
           }
-          stackIn_8_0 = (null != this.field_t) && (this.field_t.e((byte) -120)) && (this.field_t.a(param0, -6006, param2, param3, param4, param5, param6));
+          stackIn_8_0 = (null != this.child) && (this.child.hasFocus((byte) -120)) && (this.child.handleMouseWheel(param0, -6006, param2, param3, param4, param5, param6));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

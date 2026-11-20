@@ -3,24 +3,24 @@
  */
 import java.util.*;
 
-abstract class oda extends shb implements nea {
+abstract class UiArrayContainer extends UiComponent implements UiContainerMarker {
     static String field_t;
-    shb[] field_u;
+    UiComponent[] children;
 
-    final int c(int param0) {
+    final int getMaxDrawLayer(int param0) {
         int var4 = 0;
         int var2;
-        shb[] var3;
-        shb var5;
+        UiComponent[] var3;
+        UiComponent var5;
         int var7;
         int var6;
         var7 = VoidHunters.field_G;
         var2 = 0;
-        var3 = this.field_u;
+        var3 = this.children;
         for (var4 = param0; var4 < var3.length; var4++) {
           var5 = var3[var4];
           if (var5 != null) {
-            var6 = var5.c(0);
+            var6 = var5.getMaxDrawLayer(0);
             if (var6 > var2) {
               var2 = var6;
             }
@@ -29,21 +29,21 @@ abstract class oda extends shb implements nea {
         return var2;
     }
 
-    final String d(byte param0) {
+    final String getTooltip(byte param0) {
         int var3 = 0;
-        shb[] var2;
-        shb var4;
+        UiComponent[] var2;
+        UiComponent var4;
         int var6;
         String var5;
         var6 = VoidHunters.field_G;
-        if (this.field_u == null) {
+        if (this.children == null) {
           return null;
         }
-        var2 = this.field_u;
+        var2 = this.children;
         for (var3 = 0; var2.length > var3; var3++) {
           var4 = var2[var3];
           if (var4 != null) {
-            var5 = var4.d((byte) 125);
+            var5 = var4.getTooltip((byte) 125);
             if (var5 != null) {
               return var5;
             }
@@ -55,22 +55,22 @@ abstract class oda extends shb implements nea {
         return null;
     }
 
-    void a(int param0, int param1, int param2, shb param3) {
-        shb[] var9 = null;
+    void updatePointer(int param0, int param1, int param2, UiComponent param3) {
+        UiComponent[] var9 = null;
         int var6 = 0;
-        shb var7 = null;
+        UiComponent var7 = null;
         int var8 = VoidHunters.field_G;
-        super.a(param0, param1, param2 ^ 0, param3);
-        if (null == this.field_u) {
+        super.updatePointer(param0, param1, param2 ^ 0, param3);
+        if (null == this.children) {
           return;
         }
         try {
-          var9 = this.field_u;
-          shb[] var5 = var9;
+          var9 = this.children;
+          UiComponent[] var5 = var9;
           for (var6 = 0; var6 < var9.length; var6++) {
             var7 = var9[var6];
             if (var7 != null) {
-              var7.a(param0 + this.field_r, this.field_g + param1, -981, param3);
+              var7.updatePointer(param0 + this.y, this.x + param1, -981, param3);
             }
           }
           if (param2 != -981) {
@@ -83,7 +83,7 @@ abstract class oda extends shb implements nea {
 
     abstract void d(int param0);
 
-    final StringBuilder a(boolean param0, Hashtable param1, int param2, StringBuilder param3) {
+    final StringBuilder appendDebugTree(boolean param0, Hashtable param1, int param2, StringBuilder param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
@@ -96,8 +96,8 @@ abstract class oda extends shb implements nea {
           if (param0) {
             field_t = (String) null;
           }
-          if (this.a(param1, param2, (byte) -113, param3)) {
-            this.a(72, param2, param1, param3);
+          if (this.beginDebugVisit(param1, param2, (byte) -113, param3)) {
+            this.appendDebugProperties(72, param2, param1, param3);
             this.a(false, param3, param1, param2);
           }
           stackIn_5_0 = (StringBuilder) (param3);
@@ -122,11 +122,11 @@ abstract class oda extends shb implements nea {
         }
     }
 
-    boolean a(int param0, int param1, int param2, shb param3, int param4, int param5, int param6) {
-        shb[] var8 = null;
+    boolean handleMouseWheel(int param0, int param1, int param2, UiComponent param3, int param4, int param5, int param6) {
+        UiComponent[] var8 = null;
         RuntimeException var8_ref = null;
         int var9 = 0;
-        shb var10 = null;
+        UiComponent var10 = null;
         int var11 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -134,10 +134,10 @@ abstract class oda extends shb implements nea {
         RuntimeException decompiledCaughtException = null;
         var11 = VoidHunters.field_G;
         try {
-          if (this.field_u == null) {
+          if (this.children == null) {
             return false;
           }
-          var8 = this.field_u;
+          var8 = this.children;
           var9 = 0;
           if (param1 != -6006) {
             field_t = (String) null;
@@ -145,8 +145,8 @@ abstract class oda extends shb implements nea {
           while (var9 < var8.length) {
             var10 = var8[var9];
             if (var10 != null &&
-              var10.e((byte) -120) &&
-              var10.a(param0, -6006, param2, param3, param4, param5, param6)) {
+              var10.hasFocus((byte) -120) &&
+              var10.handleMouseWheel(param0, -6006, param2, param3, param4, param5, param6)) {
               return true;
             }
             var9++;
@@ -166,11 +166,11 @@ abstract class oda extends shb implements nea {
         }
     }
 
-    final boolean a(int param0, shb param1, int param2) {
+    final boolean a(int param0, UiComponent param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        shb var5 = null;
-        shb var6 = null;
+        UiComponent var5 = null;
+        UiComponent var6 = null;
         int var7 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -178,18 +178,18 @@ abstract class oda extends shb implements nea {
         RuntimeException decompiledCaughtException = null;
         var7 = VoidHunters.field_G;
         try {
-          if (null == this.field_u) {
+          if (null == this.children) {
             return false;
           }
           var4_int = param2;
-          while (var4_int < this.field_u.length) {
-            var5 = this.field_u[var4_int];
+          while (var4_int < this.children.length) {
+            var5 = this.children[var4_int];
             if (var5 != null &&
-              var5.e((byte) -120)) {
-              for (var4_int = var4_int + param0; var4_int < this.field_u.length; var4_int = var4_int + param0) {
-                var6 = this.field_u[var4_int];
+              var5.hasFocus((byte) -120)) {
+              for (var4_int = var4_int + param0; var4_int < this.children.length; var4_int = var4_int + param0) {
+                var6 = this.children[var4_int];
                 if (var6 != null &&
-                  var6.a(param2 + 0, param1)) {
+                  var6.requestFocus(param2 + 0, param1)) {
                   return true;
                 }
               }
@@ -211,14 +211,14 @@ abstract class oda extends shb implements nea {
         }
     }
 
-    boolean a(int param0, int param1, shb param2, char param3) {
+    boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         int var6 = 0;
-        shb[] var5 = null;
+        UiComponent[] var5 = null;
         int var5_int = 0;
         RuntimeException var5_ref = null;
-        shb var7 = null;
+        UiComponent var7 = null;
         int var8 = 0;
-        shb[] var9 = null;
+        UiComponent[] var9 = null;
         boolean stackIn_19_0 = false;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -226,19 +226,19 @@ abstract class oda extends shb implements nea {
         RuntimeException decompiledCaughtException = null;
         var8 = VoidHunters.field_G;
         try {
-          if (null == this.field_u) {
+          if (null == this.children) {
             return false;
           }
-          var9 = this.field_u;
+          var9 = this.children;
           var5 = var9;
           if (param0 != -15834) {
-            this.field_u = (shb[]) null;
+            this.children = (UiComponent[]) null;
           }
           for (var6 = 0; var9.length > var6; var6++) {
             var7 = var9[var6];
             if (var7 != null &&
-              var7.e((byte) -120) &&
-              var7.a(-15834, param1, param2, param3)) {
+              var7.hasFocus((byte) -120) &&
+              var7.handleKey(-15834, param1, param2, param3)) {
               return true;
             }
           }
@@ -266,37 +266,37 @@ abstract class oda extends shb implements nea {
         }
     }
 
-    final boolean a(shb param0, int param1, int param2) {
+    final boolean a(UiComponent param0, int param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        shb var5 = null;
-        shb var6 = null;
+        UiComponent var5 = null;
+        UiComponent var6 = null;
         int var7 = 0;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
         RuntimeException decompiledCaughtException = null;
-        shb var6Lifetime1;
-        shb var6Lifetime2;
+        UiComponent var6Lifetime1;
+        UiComponent var6Lifetime2;
         var7 = VoidHunters.field_G;
         try {
-          if (this.field_u == null) {
+          if (this.children == null) {
             return false;
           }
           if (param1 <= 34) {
             return true;
           }
-          var4_int = this.field_u.length - 1;
+          var4_int = this.children.length - 1;
           while (var4_int >= 0) {
-            var5 = this.field_u[var4_int];
+            var5 = this.children[var4_int];
             var6 = var5;
             var6Lifetime1 = var5;
             if (var5 != null &&
-              var5.e((byte) -120)) {
+              var5.hasFocus((byte) -120)) {
               for (var4_int = var4_int - param2; var4_int >= 0; var4_int = var4_int - param2) {
-                var6Lifetime2 = this.field_u[var4_int];
+                var6Lifetime2 = this.children[var4_int];
                 if (var6Lifetime2 != null &&
-                  var6Lifetime2.a(0, param0)) {
+                  var6Lifetime2.requestFocus(0, param0)) {
                   return true;
                 }
               }
@@ -318,33 +318,33 @@ abstract class oda extends shb implements nea {
         }
     }
 
-    private final shb g(byte param0) {
+    private final UiComponent g(byte param0) {
         int var3 = 0;
-        shb[] var2;
-        shb var4;
+        UiComponent[] var2;
+        UiComponent var4;
         int var5;
-        shb[] var6;
+        UiComponent[] var6;
         var5 = VoidHunters.field_G;
-        if (null == this.field_u) {
+        if (null == this.children) {
           return null;
         }
-        var6 = this.field_u;
+        var6 = this.children;
         var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
           if (var4 != null &&
-            var4.e((byte) -120)) {
+            var4.hasFocus((byte) -120)) {
             return var4;
           }
         }
         if (param0 < -102) {
           return null;
         }
-        this.field_u = (shb[]) null;
+        this.children = (UiComponent[]) null;
         return null;
     }
 
-    final boolean b(shb param0, byte param1) {
+    final boolean b(UiComponent param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -371,36 +371,36 @@ abstract class oda extends shb implements nea {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.d(16777215);
     }
 
-    oda(int param0, int param1, int param2, int param3, wwa param4) {
-        super(param0, param1, param2, param3, param4, (sba) null);
+    UiArrayContainer(int param0, int param1, int param2, int param3, UiRenderer param4) {
+        super(param0, param1, param2, param3, param4, (UiListener) null);
     }
 
     public static void clearSharedReferences(int param0) {
         field_t = null;
         if (param0 != 0) {
-          oda.clearSharedReferences(68);
+          UiArrayContainer.clearSharedReferences(68);
         }
     }
 
-    final boolean e(byte param0) {
+    final boolean hasFocus(byte param0) {
         if (param0 != -120) {
           return false;
         }
         return this.g((byte) -127) != null ? true : false;
     }
 
-    final void a(byte param0, int param1, int param2, int param3, shb param4, int param5) {
+    final void handleMouseRelease(byte param0, int param1, int param2, int param3, UiComponent param4, int param5) {
         int var9 = 0;
-        shb[] var7 = null;
+        UiComponent[] var7 = null;
         int var8 = 0;
-        shb var10 = null;
+        UiComponent var10 = null;
         int var11 = 0;
-        shb[] var12 = null;
+        UiComponent[] var12 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -408,16 +408,16 @@ abstract class oda extends shb implements nea {
         RuntimeException var7_ref = null;
         var11 = VoidHunters.field_G;
         try {
-          if (this.field_u == null) {
+          if (this.children == null) {
             return;
           }
-          var12 = this.field_u;
+          var12 = this.children;
           var7 = var12;
           var8 = 62 / ((52 - param0) / 52);
           for (var9 = 0; var12.length > var9; var9++) {
             var10 = var12[var9];
             if (var10 != null) {
-              var10.a((byte) 118, this.field_g + param1, param2, this.field_r + param3, param4, param5);
+              var10.handleMouseRelease((byte) 118, this.x + param1, param2, this.y + param3, param4, param5);
             }
           }
           return;
@@ -435,25 +435,25 @@ abstract class oda extends shb implements nea {
         }
     }
 
-    boolean a(int param0, shb param1) {
+    boolean requestFocus(int param0, UiComponent param1) {
         int var4 = 0;
-        shb[] var3 = null;
+        UiComponent[] var3 = null;
         RuntimeException var3_ref = null;
-        shb var5 = null;
+        UiComponent var5 = null;
         int var6 = 0;
-        shb[] var7 = null;
+        UiComponent[] var7 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         var6 = VoidHunters.field_G;
         try {
-          var7 = this.field_u;
+          var7 = this.children;
           var3 = var7;
           for (var4 = param0; var4 < var7.length; var4++) {
             var5 = var7[var4];
             if (var5 != null &&
-              var5.a(0, param1)) {
+              var5.requestFocus(0, param1)) {
               return true;
             }
           }
@@ -472,23 +472,23 @@ abstract class oda extends shb implements nea {
         }
     }
 
-    void b(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         int var5 = 0;
-        shb var6;
+        UiComponent var6;
         int var7;
         var7 = VoidHunters.field_G;
         if (param1 == 0 &&
-          this.field_q != null) {
-          this.field_q.a(-127, (shb) (this), param0, param3, true);
+          this.renderer != null) {
+          this.renderer.drawComponent(-127, (UiComponent) (this), param0, param3, true);
         }
         if (param2 < 47) {
           return;
         }
-        if (this.field_u != null) {
-          for (var5 = -1 + this.field_u.length; var5 >= 0; var5--) {
-            var6 = this.field_u[var5];
+        if (this.children != null) {
+          for (var5 = -1 + this.children.length; var5 >= 0; var5--) {
+            var6 = this.children[var5];
             if (var6 != null) {
-              var6.b(param0 + this.field_g, param1, 90, param3 + this.field_r);
+              var6.drawLayer(param0 + this.x, param1, 90, param3 + this.y);
             }
           }
         }
@@ -500,9 +500,9 @@ abstract class oda extends shb implements nea {
         int var8 = 0;
         StringBuilder discarded$5 = null;
         StringBuilder discarded$4 = null;
-        shb var7 = null;
+        UiComponent var7 = null;
         int var9 = 0;
-        shb[] var10 = null;
+        UiComponent[] var10 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -512,10 +512,10 @@ abstract class oda extends shb implements nea {
         RuntimeException var5 = null;
         var9 = VoidHunters.field_G;
         try {
-          if (null == this.field_u) {
+          if (null == this.children) {
             return;
           }
-          var10 = this.field_u;
+          var10 = this.children;
           for (var6 = 0; var10.length > var6; var6++) {
             var7 = var10[var6];
             discarded$3 = param1.append('\n');
@@ -525,11 +525,11 @@ abstract class oda extends shb implements nea {
             if (var7 == null) {
               discarded$4 = param1.append("null");
             } else {
-              var7.a(false, param2, param3 + 1, param1);
+              var7.appendDebugTree(false, param2, param3 + 1, param1);
             }
           }
           if (param0) {
-            this.a(9, 45, 27, 51, 117);
+            this.setBounds(9, 45, 27, 51, 117);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -552,57 +552,57 @@ abstract class oda extends shb implements nea {
         }
     }
 
-    final void f(byte param0) {
+    final void clearFocus(byte param0) {
         int var3 = 0;
-        shb[] var2;
-        shb var4;
+        UiComponent[] var2;
+        UiComponent var4;
         int var5;
-        shb[] var6;
+        UiComponent[] var6;
         var5 = VoidHunters.field_G;
         if (param0 != -34) {
           field_t = (String) null;
         }
-        var6 = this.field_u;
+        var6 = this.children;
         var2 = var6;
         for (var3 = 0; var3 < var6.length; var3++) {
           var4 = var6[var3];
           if (var4 != null) {
-            var4.f((byte) -34);
+            var4.clearFocus((byte) -34);
           }
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, shb param4, int param5, byte param6) {
+    boolean handleMousePress(int param0, int param1, int param2, int param3, UiComponent param4, int param5, byte param6) {
         int var9 = 0;
-        shb[] var8 = null;
+        UiComponent[] var8 = null;
         RuntimeException var8_ref = null;
-        shb var10 = null;
+        UiComponent var10 = null;
         int var11 = 0;
-        shb var12 = null;
-        shb[] var13 = null;
+        UiComponent var12 = null;
+        UiComponent[] var13 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         var11 = VoidHunters.field_G;
         try {
-          if (null == this.field_u) {
+          if (null == this.children) {
             return false;
           }
-          var13 = this.field_u;
+          var13 = this.children;
           var8 = var13;
           for (var9 = 0; var13.length > var9; var9++) {
             var10 = var13[var9];
             if (var10 != null &&
-              var10.a(param0, param1 + this.field_g, param2, param3, param4, param5 + this.field_r, (byte) -116)) {
+              var10.handleMousePress(param0, param1 + this.x, param2, param3, param4, param5 + this.y, (byte) -116)) {
               return true;
             }
           }
           if (param6 < -17) {
             return false;
           }
-          var12 = (shb) null;
-          this.b((shb) null, (byte) -24);
+          var12 = (UiComponent) null;
+          this.b((UiComponent) null, (byte) -24);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -618,7 +618,7 @@ abstract class oda extends shb implements nea {
         }
     }
 
-    final boolean a(shb param0, byte param1) {
+    final boolean a(UiComponent param0, byte param1) {
         RuntimeException var3 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;

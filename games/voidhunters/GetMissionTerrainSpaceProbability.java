@@ -12,14 +12,14 @@ final class GetMissionTerrainSpaceProbability extends ConsoleCommand {
             feb.a(GetDebrisGroupColour.field_r, true).a(true);
             return;
           }
-          bia.a((byte) 124);
+          bia.popRasterState((byte) 124);
           return;
         }
         if (OpenGlTexture1D.field_i) {
           feb.a(GetDebrisGroupColour.field_r, true).a(true);
           return;
         }
-        bia.a((byte) 124);
+        bia.popRasterState((byte) 124);
     }
 
     GetMissionTerrainSpaceProbability(String param0, Class[] param1, String param2) {

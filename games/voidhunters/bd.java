@@ -262,7 +262,7 @@ final class bd {
           SetAngularVelocitySustain.field_q.field_ob = SetSniperCannonProjectiles.a(param3, "downbutton_mouseheld", "lobby", true);
           SetAngularVelocitySustain.field_q.field_z = SetSniperCannonProjectiles.a(param3, "downbutton_disabled", "lobby", true);
           GetUseNiceTrails.field_o = new ScrollBarWidget(0L, MissionConditionFactory.field_a, SetAngularVelocitySustain.field_q, CachedArchiveProvider.field_s, GetPointDefenceLaserProjectileInterceptDamage.field_r);
-          rbb.field_k = new ScrollableActionPanel(0L, (Widget) null, htb.field_w, GetUseNiceTrails.field_o, GetShieldsDirectionalArc.field_o, (String) null, (String) null);
+          rbb.field_k = new ScrollableActionPanel(0L, (Widget) null, UiFocusableComponent.field_w, GetUseNiceTrails.field_o, GetShieldsDirectionalArc.field_o, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

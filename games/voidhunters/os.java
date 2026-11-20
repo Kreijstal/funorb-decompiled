@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class os extends gea implements oo {
+class os extends gea implements UiActionListener {
     private boolean field_V;
     private ttb field_R;
     private BitmapFont field_T;
@@ -46,7 +46,7 @@ class os extends gea implements oo {
           this.field_V = false;
           this.field_R = new ttb(13, 50, 274, 30, 15, 2113632, 4210752);
           this.field_R.field_x = true;
-          this.b(-18756, this.field_R);
+          this.addChild(-18756, this.field_R);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "os.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ')');
         }
@@ -60,7 +60,7 @@ class os extends gea implements oo {
         this.b(var3, -53);
     }
 
-    final boolean a(int param0, int param1, shb param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         RuntimeException stackIn_10_0 = null;
@@ -73,7 +73,7 @@ class os extends gea implements oo {
             return true;
           }
           if (param0 == -15834) {
-            stackIn_7_0 = super.a(-15834, param1, param2, param3);
+            stackIn_7_0 = super.handleKey(-15834, param1, param2, param3);
             return stackIn_7_0;
           }
           return false;
@@ -91,7 +91,7 @@ class os extends gea implements oo {
         }
     }
 
-    public void a(int param0, int param1, int param2, htb param3, int param4) {
+    public void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         RuntimeException var6 = null;
         String var7 = null;
         RuntimeException stackIn_8_0 = null;
@@ -156,7 +156,7 @@ class os extends gea implements oo {
             var6.a(-115, GetFighterBayAimspeed.field_q, 17);
           } else {
             if (param2 == 256) {
-              var6.a((byte) 127, SetSpecialOrderBoxHeight.field_p, (sba) (this));
+              var6.a((byte) 127, SetSpecialOrderBoxHeight.field_p, (UiListener) (this));
             } else {
               stackIn_14_0 = var6;
               stackIn_14_1 = -128;
@@ -176,7 +176,7 @@ class os extends gea implements oo {
             } else {
               if (6 != param2) {
                 if (param2 == 9) {
-                  var6.a((byte) 111, GetCountermeasureLauncherProjectileLife.field_o, (sba) (this));
+                  var6.a((byte) 111, GetCountermeasureLauncherProjectileLife.field_o, (UiListener) (this));
                 }
               } else {
                 var6.a(-126, SoftwareTransform3D.field_c, 9);

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nrb implements wwa {
+final class nrb implements UiRenderer {
     static pgb[] field_b;
     static String field_a;
 
-    public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
+    public final void drawComponent(int param0, UiComponent param1, int param2, int param3, boolean param4) {
         try {
           int var6_int = 34 % ((-27 - param0) / 35);
         } catch (RuntimeException runtimeException) {

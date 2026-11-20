@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qh extends iw implements oo {
-    private htb field_M;
+final class qh extends iw implements UiActionListener {
+    private UiFocusableComponent field_M;
     static String field_L;
     static String field_N;
-    private htb field_K;
+    private UiFocusableComponent field_K;
     static int field_J;
 
     private final void m(byte param0) {
@@ -14,11 +14,11 @@ final class qh extends iw implements oo {
         }
         this.field_z = false;
         if (param0 != -10) {
-          this.field_M = (htb) null;
+          this.field_M = (UiFocusableComponent) null;
         }
     }
 
-    final boolean a(int param0, int param1, shb param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_11_0 = false;
         RuntimeException stackIn_14_0 = null;
@@ -28,20 +28,20 @@ final class qh extends iw implements oo {
         try {
           if (param1 == 98) {
             if (null != this.field_K) {
-              this.field_K.a(0, (shb) (this));
+              this.field_K.requestFocus(0, (UiComponent) (this));
               return true;
             }
-            this.field_M.a(0, (shb) (this));
+            this.field_M.requestFocus(0, (UiComponent) (this));
             return true;
           }
           if (param0 != -15834) {
             qh.clearSharedReferences((byte) 46);
           }
           if (param1 != 99) {
-            stackIn_11_0 = super.a(-15834, param1, param2, param3);
+            stackIn_11_0 = super.handleKey(-15834, param1, param2, param3);
             return stackIn_11_0;
           }
-          this.field_M.a(0, (shb) (this));
+          this.field_M.requestFocus(0, (UiComponent) (this));
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -65,29 +65,29 @@ final class qh extends iw implements oo {
 
     qh(ida param0) {
         super(param0, 200, 130);
-        shb var2 = null;
+        UiComponent var2 = null;
         try {
-          var2 = new shb(dib.field_j, (sba) null);
-          var2.field_g = 0;
-          var2.field_f = 80;
-          var2.field_r = 50;
-          var2.field_h = this.field_h;
-          var2.field_q = (wwa) ((Object) new bob(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.b(-18756, var2);
+          var2 = new UiComponent(dib.field_j, (UiListener) null);
+          var2.x = 0;
+          var2.height = 80;
+          var2.y = 50;
+          var2.width = this.width;
+          var2.renderer = (UiRenderer) ((Object) new bob(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(-18756, var2);
           if (GetPhasedEnergyBeamPulsetime.e((byte) 90)) {
-            this.field_K = this.a((sba) (this), GetLaserBeamProjectileDamage.field_s, 125);
+            this.field_K = this.a((UiListener) (this), GetLaserBeamProjectileDamage.field_s, 125);
           }
-          this.field_M = this.a((sba) (this), MissionCondition.field_b, 125);
+          this.field_M = this.a((UiListener) (this), MissionCondition.field_b, 125);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final htb a(sba param0, String param1, int param2) {
-        htb var4 = null;
+    private final UiFocusableComponent a(UiListener param0, String param1, int param2) {
+        UiFocusableComponent var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        htb stackIn_3_0 = null;
+        UiFocusableComponent stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -95,16 +95,16 @@ final class qh extends iw implements oo {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new htb(param1, param0);
-          var4.field_q = (wwa) ((Object) new vva());
+          var4 = new UiFocusableComponent(param1, param0);
+          var4.renderer = (UiRenderer) ((Object) new vva());
           if (param2 <= 123) {
             field_L = (String) null;
           }
-          var5 = -6 + this.field_f;
-          this.field_f = this.field_f + 38;
-          var4.a(15, -14 + (this.field_h - 16), 30, 1, var5);
-          this.b(-18756, var4);
-          this.a(false);
+          var5 = -6 + this.height;
+          this.height = this.height + 38;
+          var4.setBounds(15, -14 + (this.width - 16), 30, 1, var5);
+          this.addChild(-18756, var4);
+          this.refreshLayout(false);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -127,7 +127,7 @@ final class qh extends iw implements oo {
         }
     }
 
-    public final void a(int param0, int param1, int param2, htb param3, int param4) {
+    public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;

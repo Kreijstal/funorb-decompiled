@@ -30,7 +30,7 @@ final class mn {
           SetToggledScoreboard.field_o.updateInput(param0, 1332);
           if (PartitionZoneListFactory.field_b != null) {
             if (GetBloomThresholdPercentage.field_p) {
-              PartitionZoneListFactory.field_b.a((byte) -5, SetToggledScoreboard.field_o.screenX, SetToggledScoreboard.field_o.screenY, param0);
+              PartitionZoneListFactory.field_b.processPointerInput((byte) -5, SetToggledScoreboard.field_o.screenX, SetToggledScoreboard.field_o.screenY, param0);
             } else {
               PartitionZoneListFactory.field_b = null;
             }

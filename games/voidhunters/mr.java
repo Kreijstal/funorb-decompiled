@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mr extends iw implements oo {
+final class mr extends iw implements UiActionListener {
     static String field_L;
     static IntrusiveDeque field_M;
-    private htb field_K;
+    private UiFocusableComponent field_K;
     static String field_J;
 
-    public final void a(int param0, int param1, int param2, htb param3, int param4) {
+    public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         RuntimeException var6 = null;
-        htb var7 = null;
+        UiFocusableComponent var7 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -21,8 +21,8 @@ final class mr extends iw implements oo {
           if (param0 == 11) {
             return;
           }
-          var7 = (htb) null;
-          this.a(-125, -106, 11, (htb) null, 127);
+          var7 = (UiFocusableComponent) null;
+          this.onAction(-125, -106, 11, (UiFocusableComponent) null, 127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -71,34 +71,34 @@ final class mr extends iw implements oo {
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
-        shb var4 = null;
+        UiComponent var4 = null;
         try {
           var3 = null;
           if (param1 == ComponentAttachmentPlan.field_a) {
-            var3 = oda.field_t;
+            var3 = UiArrayContainer.field_t;
           } else {
             if (param1 == AdminMessageFactory.field_a) {
-              this.field_f = this.field_f + 10;
+              this.height = this.height + 10;
               var3 = RenderResourceNode.field_m;
               if (Particle.c((byte) 109)) {
                 var3 = WorldFactory.field_b;
-                this.field_f = this.field_f + 20;
+                this.height = this.height + 20;
               }
             } else {
               if (param1 == RemoveEventAction.field_a) {
-                this.field_f = this.field_f + 30;
+                this.height = this.height + 30;
                 var3 = SetFighterRepairAmount.field_o;
               }
             }
           }
-          var4 = new shb((String) (var3), (sba) null);
-          var4.field_f = 80;
-          var4.field_r = 50;
-          var4.field_h = this.field_h;
-          var4.field_g = 0;
-          var4.field_q = (wwa) ((Object) new bob(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
-          this.b(-18756, var4);
-          this.field_K = this.a((byte) 113, (sba) (this), MissionCondition.field_b);
+          var4 = new UiComponent((String) (var3), (UiListener) null);
+          var4.height = 80;
+          var4.y = 50;
+          var4.width = this.width;
+          var4.x = 0;
+          var4.renderer = (UiRenderer) ((Object) new bob(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
+          this.addChild(-18756, var4);
+          this.field_K = this.a((byte) 113, (UiListener) (this), MissionCondition.field_b);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -143,12 +143,12 @@ final class mr extends iw implements oo {
         return (hrb) ((Object) new nmb());
     }
 
-    private final htb a(byte param0, sba param1, String param2) {
-        htb var4 = null;
+    private final UiFocusableComponent a(byte param0, UiListener param1, String param2) {
+        UiFocusableComponent var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         int var6 = 0;
-        htb stackIn_1_0 = null;
+        UiFocusableComponent stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -156,14 +156,14 @@ final class mr extends iw implements oo {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4 = new htb(param2, param1);
-          var4.field_q = (wwa) ((Object) new vva());
+          var4 = new UiFocusableComponent(param2, param1);
+          var4.renderer = (UiRenderer) ((Object) new vva());
           var5 = -79 / ((6 - param0) / 32);
-          var6 = -6 + this.field_f;
-          this.field_f = this.field_f + 38;
-          var4.a(15, this.field_h - 14 - 16, 30, 1, var6);
-          this.b(-18756, var4);
-          this.a(false);
+          var6 = -6 + this.height;
+          this.height = this.height + 38;
+          var4.setBounds(15, this.width - 14 - 16, 30, 1, var6);
+          this.addChild(-18756, var4);
+          this.refreshLayout(false);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

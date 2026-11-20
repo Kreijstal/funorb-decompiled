@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uv implements wwa {
+final class uv implements UiRenderer {
     private int field_c;
     private int field_m;
     private int field_l;
@@ -54,8 +54,8 @@ final class uv implements wwa {
         field_f = (String) null;
     }
 
-    public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
-        shb stackIn_3_0 = null;
+    public final void drawComponent(int param0, UiComponent param1, int param2, int param3, boolean param4) {
+        UiComponent stackIn_3_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -71,22 +71,22 @@ final class uv implements wwa {
           if (!(param1 instanceof jla)) {
             stackIn_3_0 = null;
           } else {
-            stackIn_3_0 = (shb) (param1);
+            stackIn_3_0 = (UiComponent) (param1);
           }
           var12 = (jla) (stackIn_3_0);
           if (var12 != null) {
-            param4 = param4 & var12.field_x;
+            param4 = param4 & var12.enabled;
           }
           var7 = 5592405;
           if (param4) {
             var7 = 16777215;
           }
-          SoftwareRasterizer2D.fillRectangle(param2 + param1.field_g, param3 + param1.field_r, param1.field_h, param1.field_f, this.field_k);
-          var8 = this.field_d + (param2 + param1.field_g);
-          var9 = param1.field_r + param3 + this.field_n;
+          SoftwareRasterizer2D.fillRectangle(param2 + param1.x, param3 + param1.y, param1.width, param1.height, this.field_k);
+          var8 = this.field_d + (param2 + param1.x);
+          var9 = param1.y + param3 + this.field_n;
           SoftwareRasterizer2D.drawRectangleDropShadow(var8, var9, this.field_l, this.field_i, 5592405);
           SoftwareRasterizer2D.fillRectangle(var8, var9, this.field_l, this.field_i, var7);
-          if (var12.field_u) {
+          if (var12.active) {
             SoftwareRasterizer2D.drawLine(var8, var9, var8 + this.field_l, this.field_i + var9, 1);
             SoftwareRasterizer2D.drawLine(var8 + this.field_l, var9, var8, this.field_i + var9, 1);
           }
@@ -95,7 +95,7 @@ final class uv implements wwa {
             return;
           }
           var11 = this.field_l + this.field_d + this.field_m;
-          this.field_j.drawParagraph(param1.field_j, var11 + (param2 + param1.field_g), this.field_c + param3 + param1.field_r, -this.field_m + (-var11 + param1.field_h), -(this.field_m << 1) + param1.field_f, this.field_g, this.field_h, this.field_b, this.field_e, 0);
+          this.field_j.drawParagraph(param1.text, var11 + (param2 + param1.x), this.field_c + param3 + param1.y, -this.field_m + (-var11 + param1.width), -(this.field_m << 1) + param1.height, this.field_g, this.field_h, this.field_b, this.field_e, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

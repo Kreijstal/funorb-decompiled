@@ -6,7 +6,7 @@ final class StrongCacheReference extends CacheReference {
     static int[] field_m;
     static long field_p;
     private Object value;
-    static bc field_o;
+    static NineSliceSprite field_o;
 
     final Object getValue(int param0) {
         if (param0 < 85) {

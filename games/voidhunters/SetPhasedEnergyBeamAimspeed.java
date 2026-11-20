@@ -82,7 +82,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
         Widget stackIn_92_0 = null;
         boolean stackIn_93_1 = false;
         if (param0 < -111) {
-          SelectableIconLabelWidget.a(SoftwareRasterizer2D.width + 640 >> 1, SoftwareRasterizer2D.height, SoftwareRasterizer2D.width - 640 >> 1, true, 0);
+          SelectableIconLabelWidget.pushClip(SoftwareRasterizer2D.width + 640 >> 1, SoftwareRasterizer2D.height, SoftwareRasterizer2D.width - 640 >> 1, true, 0);
           if (0 < SoftwareTransform3D.field_b) {
             if (null != kl.field_c) {
               kl.field_c.drawOpaque(tb.field_a.x, 0);
@@ -115,7 +115,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
           }
         } else {
           field_p = (java.awt.Image) null;
-          SelectableIconLabelWidget.a(SoftwareRasterizer2D.width + 640 >> 1, SoftwareRasterizer2D.height, SoftwareRasterizer2D.width - 640 >> 1, true, 0);
+          SelectableIconLabelWidget.pushClip(SoftwareRasterizer2D.width + 640 >> 1, SoftwareRasterizer2D.height, SoftwareRasterizer2D.width - 640 >> 1, true, 0);
           if (0 < SoftwareTransform3D.field_b) {
             if (null != kl.field_c) {
               kl.field_c.drawOpaque(tb.field_a.x, 0);
@@ -165,7 +165,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
             }
           }
         }
-        bia.a((byte) 124);
+        bia.popRasterState((byte) 124);
     }
 
     static {

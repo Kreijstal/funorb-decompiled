@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ttb extends shb {
+final class ttb extends UiComponent {
     private Sprite field_F;
     private int field_t;
     private int field_E;
@@ -25,17 +25,17 @@ final class ttb extends shb {
         int var11 = 0;
         int var12 = 0;
         int var13 = VoidHunters.field_G;
-        Sprite var14 = new Sprite(this.field_E * 2, this.field_f);
+        Sprite var14 = new Sprite(this.field_E * 2, this.height);
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
         SetTorpedoEnergyUsed.a(105, var14);
-        int var5 = this.field_f >> 1;
+        int var5 = this.height >> 1;
         int var6 = 0;
         if (!param0) {
           this.field_G = -72;
         }
-        while (this.field_f > var6) {
+        while (this.height > var6) {
           var7 = (var6 >> 1) * (2 * this.field_E - 1) % (this.field_E * 2);
           var8 = param1 & 16711935;
           var9 = 65280 & param1;
@@ -51,7 +51,7 @@ final class ttb extends shb {
           SoftwareRasterizer2D.drawHorizontalLine(-this.field_E + var7, var6, this.field_E, var12Lifetime1);
           var6++;
         }
-        bia.a((byte) 124);
+        bia.popRasterState((byte) 124);
         return var14;
     }
 
@@ -66,7 +66,7 @@ final class ttb extends shb {
         this.a(107);
     }
 
-    final void a(int param0, int param1, int param2, shb param3) {
+    final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -103,16 +103,16 @@ final class ttb extends shb {
         double var6 = 0.0;
         int var8 = 0;
         int var9 = VoidHunters.field_G;
-        int var2 = this.field_f >> 1;
-        Sprite var3 = new Sprite(var2, this.field_f);
+        int var2 = this.height >> 1;
+        Sprite var3 = new Sprite(var2, this.height);
         SetTorpedoEnergyUsed.a(78, var3);
         if (param0) {
           Sprite var10 = (Sprite) null;
           this.a(-50, -55, (Sprite) null, -43);
         }
-        for (var4 = 0; this.field_f > var4; var4++) {
+        for (var4 = 0; this.height > var4; var4++) {
           for (var5 = 0; var5 < var2; var5++) {
-            var6 = (double)var5 * (double)var5 / (double)(var4 * (this.field_f - var4));
+            var6 = (double)var5 * (double)var5 / (double)(var4 * (this.height - var4));
             var8 = 1;
             if (1.0 > var6) {
               var6 = Math.sqrt(1.0 - var6);
@@ -121,24 +121,24 @@ final class ttb extends shb {
             SoftwareRasterizer2D.drawPixel(var5, var4, var8 << 16 | (var8 << 8 | var8));
           }
         }
-        bia.a((byte) 124);
+        bia.popRasterState((byte) 124);
         return var3;
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (param1 != 0) {
           return;
         }
         if (param2 < 47) {
-          this.a(48, -94, 68, 84, -83);
+          this.setBounds(48, -94, 68, 84, -83);
         }
-        int var5 = param0 + this.field_g;
-        int var6 = this.field_r + param3;
+        int var5 = param0 + this.x;
+        int var6 = this.y + param3;
         this.a(2, var6, this.field_C[0], var5);
         if (this.field_v < 65536) {
-          SelectableIconLabelWidget.a(this.field_h + var5, this.field_f + var6, var5 + (this.field_h * this.field_v >> 16), true, var6);
+          SelectableIconLabelWidget.pushClip(this.width + var5, this.height + var6, var5 + (this.width * this.field_v >> 16), true, var6);
           this.a(2, var6, this.field_C[1], var5);
-          bia.a((byte) 124);
+          bia.popRasterState((byte) 124);
         }
     }
 
@@ -156,11 +156,11 @@ final class ttb extends shb {
         this.field_C = new Sprite[]{this.a(true, this.field_H, this.field_t), this.a(true, this.field_G, this.field_A)};
         this.field_y = this.b(false);
         this.field_u = this.field_y.mirroredCopy();
-        this.field_F = new Sprite(this.field_f >> 1, this.field_f);
+        this.field_F = new Sprite(this.height >> 1, this.height);
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.a(param3 ^ 125);
     }
 
@@ -170,7 +170,7 @@ final class ttb extends shb {
         this.field_H = param5;
         this.field_E = param4;
         this.field_G = param7;
-        this.a(param0, param2, param3, 1, param1);
+        this.setBounds(param0, param2, param3, 1, param1);
     }
 
     private final void a(int param0, int param1, Sprite param2, int param3) {
@@ -185,8 +185,8 @@ final class ttb extends shb {
         int var8 = 0;
         var8 = VoidHunters.field_G;
         try {
-          var5_int = this.field_h + param3;
-          SelectableIconLabelWidget.a(var5_int - this.field_y.width, this.field_f + param1, param3 + this.field_y.width, true, param1);
+          var5_int = this.width + param3;
+          SelectableIconLabelWidget.pushClip(var5_int - this.field_y.width, this.height + param1, param3 + this.field_y.width, true, param1);
           var6 = param3 - this.field_w;
           if (param0 != 2) {
             this.field_w = 28;
@@ -195,23 +195,23 @@ final class ttb extends shb {
             param2.draw(var6, param1);
             var6 = var6 + param2.width;
           }
-          bia.a((byte) 124);
+          bia.popRasterState((byte) 124);
           if (param3 + this.field_y.width >= SoftwareRasterizer2D.clipLeft) {
             SetTorpedoEnergyUsed.a(param0 ^ 66, this.field_F);
             param2.draw(-this.field_w, 0);
             param2.draw(this.field_E * 2 - this.field_w, 0);
             this.field_u.drawMultiply(0, 0);
-            bia.a((byte) 124);
+            bia.popRasterState((byte) 124);
             this.field_F.draw(param3, param1);
           }
           if (SoftwareRasterizer2D.clipRight >= var5_int - this.field_y.width) {
             SetTorpedoEnergyUsed.a(param0 + 22, this.field_F);
-            for (var7 = this.field_h - this.field_y.width + this.field_w; var7 > 2 * this.field_E; var7 = var7 - this.field_E * 2) {
+            for (var7 = this.width - this.field_y.width + this.field_w; var7 > 2 * this.field_E; var7 = var7 - this.field_E * 2) {
             }
             param2.draw(-var7, 0);
             param2.draw(this.field_E * 2 - var7, 0);
             this.field_y.drawMultiply(0, 0);
-            bia.a((byte) 124);
+            bia.popRasterState((byte) 124);
             this.field_F.draw(-this.field_y.width + var5_int, param1);
             return;
           }

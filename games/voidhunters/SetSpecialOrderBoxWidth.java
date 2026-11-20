@@ -206,7 +206,7 @@ final class SetSpecialOrderBoxWidth extends ConsoleCommand {
         if (GetReverbDry.e((byte) 105)) {
           param1 = false;
         }
-        mc.a(-119, param1);
+        UiSingleChildContainer.a(-119, param1);
         SetPedrosRepairModeSwitchtime.e((byte) 89);
         int var2 = 103 / ((param0 + 19) / 55);
     }

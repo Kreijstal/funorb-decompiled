@@ -785,63 +785,63 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           var5 = (IntegerNode) (this.field_Ic.removeFirst(true));
           incrementValue$3 = var2;
           var2++;
-          tgb.field_c[incrementValue$3] = (int)var5.key;
+          SystemNanoClock.field_c[incrementValue$3] = (int)var5.key;
           this.field_ob = this.field_ob - var5.value;
           if (1000 != var2) {
             continue;
           }
-          jaggl.OpenGL.glDeleteBuffersARB(var2, tgb.field_c, 0);
+          jaggl.OpenGL.glDeleteBuffersARB(var2, SystemNanoClock.field_c, 0);
           var2 = 0;
         }
         if (var2 > 0) {
-          jaggl.OpenGL.glDeleteBuffersARB(var2, tgb.field_c, 0);
+          jaggl.OpenGL.glDeleteBuffersARB(var2, SystemNanoClock.field_c, 0);
           var2 = 0;
         }
         while (!this.field_Uc.isEmpty(120)) {
           var6 = (IntegerNode) (this.field_Uc.removeFirst(true));
           incrementValue$2 = var2;
           var2++;
-          tgb.field_c[incrementValue$2] = (int)var6.key;
+          SystemNanoClock.field_c[incrementValue$2] = (int)var6.key;
           this.field_Nb = this.field_Nb - var6.value;
           if (var2 != 1000) {
             continue;
           }
-          jaggl.OpenGL.glDeleteTextures(var2, tgb.field_c, 0);
+          jaggl.OpenGL.glDeleteTextures(var2, SystemNanoClock.field_c, 0);
           var2 = 0;
         }
         if (var2 > 0) {
-          jaggl.OpenGL.glDeleteTextures(var2, tgb.field_c, 0);
+          jaggl.OpenGL.glDeleteTextures(var2, SystemNanoClock.field_c, 0);
           var2 = 0;
         }
         while (!this.field_Cc.isEmpty(112)) {
           var7 = (IntegerNode) (this.field_Cc.removeFirst(true));
           incrementValue$1 = var2;
           var2++;
-          tgb.field_c[incrementValue$1] = var7.value;
+          SystemNanoClock.field_c[incrementValue$1] = var7.value;
           if (1000 != var2) {
             continue;
           }
-          jaggl.OpenGL.glDeleteFramebuffersEXT(var2, tgb.field_c, 0);
+          jaggl.OpenGL.glDeleteFramebuffersEXT(var2, SystemNanoClock.field_c, 0);
           var2 = 0;
         }
         if (var2 > 0) {
-          jaggl.OpenGL.glDeleteFramebuffersEXT(var2, tgb.field_c, 0);
+          jaggl.OpenGL.glDeleteFramebuffersEXT(var2, SystemNanoClock.field_c, 0);
           var2 = 0;
         }
         while (!this.field_bd.isEmpty(123)) {
           var8 = (IntegerNode) (this.field_bd.removeFirst(true));
           incrementValue$0 = var2;
           var2++;
-          tgb.field_c[incrementValue$0] = (int)var8.key;
+          SystemNanoClock.field_c[incrementValue$0] = (int)var8.key;
           this.field_mb = this.field_mb - var8.value;
           if (var2 != 1000) {
             continue;
           }
-          jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, tgb.field_c, 0);
+          jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, SystemNanoClock.field_c, 0);
           var2 = 0;
         }
         if (var2 > 0) {
-          jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, tgb.field_c, 0);
+          jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, SystemNanoClock.field_c, 0);
           var2 = 0;
         }
         while (!this.field_yc.isEmpty(-94)) {

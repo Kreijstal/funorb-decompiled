@@ -46,7 +46,7 @@ abstract class iw extends bl {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = VoidHunters.field_G;
-        SoftwareRasterizer2D.fillGradientRectangle(6 + param2, param0 + 35, this.field_h - 12, -40 + this.field_f, 2105376, 0);
+        SoftwareRasterizer2D.fillGradientRectangle(6 + param2, param0 + 35, this.width - 12, -40 + this.height, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
@@ -57,7 +57,7 @@ abstract class iw extends bl {
             var8 < SoftwareRasterizer2D.clipBottom) {
             var9 = var5 + (-var5 + var6) * var7 / var4;
             var10 = 0;
-            var11 = this.field_h;
+            var11 = this.width;
             if (20 >= var7) {
               while (var10 <= 20) {
                 var12 = (20 - var10) * (-var10 + 20) + (20 - var7) * (20 - var7);
@@ -107,26 +107,26 @@ abstract class iw extends bl {
           var9Lifetime1 = var5Lifetime1 + (var6Lifetime1 - var5Lifetime1) * var7Lifetime1 / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
           SoftwareRasterizer2D.drawHorizontalLine(param2, var8Lifetime1, 6, var9Lifetime1);
-          SoftwareRasterizer2D.drawHorizontalLine(-6 + (param2 + this.field_h), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer2D.drawHorizontalLine(-6 + (param2 + this.width), var8Lifetime1, 6, var9Lifetime1);
           var8Lifetime1++;
           var7Lifetime1++;
         }
-        wf.field_a.draw(-90 + this.field_h + param2, 10 + param0);
-        GetMissionResnetResourceTickTime.a(param1 ^ 1630174240, 35 + param0, SetCountermeasureLauncherAimarc.field_p, 5 + param2, this.field_h - 10);
+        wf.field_a.draw(-90 + this.width + param2, 10 + param0);
+        GetMissionResnetResourceTickTime.a(param1 ^ 1630174240, 35 + param0, SetCountermeasureLauncherAimarc.field_p, 5 + param2, this.width - 10);
         if (param1 != 1630174241) {
           this.a(59);
         }
-        GetMissionResnetResourceTickTime.a(1, this.field_f + param0 - 22, SetPedrosRepairMode.field_q, param2, this.field_h);
+        GetMissionResnetResourceTickTime.a(1, this.height + param0 - 22, SetPedrosRepairMode.field_q, param2, this.width);
         var5Lifetime2 = 169;
         var6Lifetime2 = 127;
-        var4Lifetime2 = -79 + this.field_f;
+        var4Lifetime2 = -79 + this.height;
         var7Lifetime2 = 0;
         var8Lifetime2 = param0 + 57;
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
           SoftwareRasterizer2D.drawHorizontalLine(param2, var8Lifetime2, 6, var9Lifetime2);
-          SoftwareRasterizer2D.drawHorizontalLine(-6 + this.field_h + param2, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer2D.drawHorizontalLine(-6 + this.width + param2, var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }
@@ -294,8 +294,8 @@ abstract class iw extends bl {
           this.c(-109, 54, 31, -22);
         }
         this.field_G = param3;
-        this.field_E = this.field_h;
-        this.field_B = this.field_f;
+        this.field_E = this.width;
+        this.field_B = this.height;
     }
 
     boolean j(byte param0) {

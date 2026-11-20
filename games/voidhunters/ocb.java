@@ -31,7 +31,7 @@ final class ocb extends eca {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_f.field_j.toLowerCase();
+          var3 = this.field_f.text.toLowerCase();
           var4 = param0.toLowerCase();
           if (var4.length() == 0) {
             stackIn_2_0 = null;
@@ -190,7 +190,7 @@ final class ocb extends eca {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_f.field_j.toLowerCase();
+          var3 = this.field_f.text.toLowerCase();
           if (param1 != 16384) {
             stackIn_2_0 = (qrb) null;
             return stackIn_2_0;
@@ -237,7 +237,7 @@ final class ocb extends eca {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_k.field_j.toLowerCase();
+          var3 = this.field_k.text.toLowerCase();
           var4 = param0.toLowerCase();
           if (param1) {
             return true;

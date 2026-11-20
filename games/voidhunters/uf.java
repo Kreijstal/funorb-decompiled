@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class uf extends htb {
+class uf extends UiFocusableComponent {
     private int field_B;
     private boolean field_I;
     private long field_D;
@@ -14,8 +14,8 @@ class uf extends htb {
     private int field_K;
 
     private final void k(byte param0) {
-        if (this.field_l instanceof en) {
-          ((en) (this.field_l)).a(-12409, this);
+        if (this.listener instanceof en) {
+          ((en) (this.listener)).a(-12409, this);
           if (param0 < 40) {
             field_E = (java.awt.Frame) null;
             return;
@@ -124,7 +124,7 @@ class uf extends htb {
         int var3;
         int var4;
         var4 = VoidHunters.field_G;
-        var2 = this.field_j.length();
+        var2 = this.text.length();
         if (var2 == this.field_K) {
           return this.field_K;
         }
@@ -136,7 +136,7 @@ class uf extends htb {
             }
             return var3;
           }
-          if (this.field_j.charAt(var3 - 1) != 32) {
+          if (this.text.charAt(var3 - 1) != 32) {
             var3++;
             continue;
           }
@@ -157,7 +157,7 @@ class uf extends htb {
           var3 = this.field_H < this.field_K ? this.field_K : this.field_H;
           this.field_H = var2;
           this.field_K = var2;
-          this.field_j = this.field_j.substring(0, var2) + this.field_j.substring(var3, this.field_j.length());
+          this.text = this.text.substring(0, var2) + this.text.substring(var3, this.text.length());
           this.i((byte) -55);
         }
         var2Lifetime1 = -86 / ((62 - param0) / 48);
@@ -177,13 +177,13 @@ class uf extends htb {
           this.field_i = 0;
           return;
         }
-        if (!(this.field_q instanceof at)) {
+        if (!(this.renderer instanceof at)) {
           return;
         }
-        var9 = (at) ((Object) this.field_q);
-        var3 = var9.a((shb) (this), 3);
+        var9 = (at) ((Object) this.renderer);
+        var3 = var9.a((UiComponent) (this), 3);
         var4 = var3.c(-18877);
-        var5 = var9.b((shb) (this), (byte) 114);
+        var5 = var9.b((UiComponent) (this), (byte) 114);
         var6 = var9.a(35) >> 1;
         if (-var6 + var5 > var4) {
           this.field_i = 0;
@@ -212,7 +212,7 @@ class uf extends htb {
         return;
     }
 
-    final boolean a(int param0, int param1, shb param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         int dupTemp$0 = 0;
         int stackIn_27_1 = 0;
         int stackIn_56_1 = 0;
@@ -234,14 +234,14 @@ class uf extends htb {
                 this.g((byte) 120);
               }
               if (-1 == this.field_C ||
-                !(this.field_j.length() >= this.field_C)) {
-                if (this.field_K < this.field_j.length()) {
-                  this.field_j = this.field_j.substring(0, this.field_K) + param3 + this.field_j.substring(this.field_K, this.field_j.length());
+                !(this.text.length() >= this.field_C)) {
+                if (this.field_K < this.text.length()) {
+                  this.text = this.text.substring(0, this.field_K) + param3 + this.text.substring(this.field_K, this.text.length());
                   this.field_K = this.field_K + 1;
                   this.field_H = this.field_K;
                 } else {
-                  this.field_j = this.field_j + param3;
-                  dupTemp$0 = this.field_j.length();
+                  this.text = this.text + param3;
+                  dupTemp$0 = this.text.length();
                   this.field_K = dupTemp$0;
                   this.field_H = dupTemp$0;
                 }
@@ -282,7 +282,7 @@ class uf extends htb {
                       return true;
                     }
                     if (param1 == 103) {
-                      this.a(this.field_j.length(), (byte) -100);
+                      this.a(this.text.length(), (byte) -100);
                       return true;
                     }
                     if (param1 == 84) {
@@ -307,7 +307,7 @@ class uf extends htb {
                       return true;
                     }
                   } else {
-                    if (this.field_K < this.field_j.length()) {
+                    if (this.field_K < this.text.length()) {
                       if (!SetMachineGunEnergyUsed.field_o[82]) {
                         stackIn_27_1 = this.field_K + 1;
                       } else {
@@ -323,7 +323,7 @@ class uf extends htb {
                   this.g((byte) 112);
                   return true;
                 }
-                if (this.field_K < this.field_j.length()) {
+                if (this.field_K < this.text.length()) {
                   this.field_H = 1 + this.field_K;
                   this.g((byte) -38);
                   return true;
@@ -359,13 +359,13 @@ class uf extends htb {
           if (param2 == null) {
             param2 = "";
           }
-          this.field_j = param2;
+          this.text = param2;
           var4_int = param2.length();
           if (~this.field_C != param1 &&
             this.field_C < var4_int) {
-            this.field_j = this.field_j.substring(0, this.field_C);
+            this.text = this.text.substring(0, this.field_C);
           }
-          dupTemp$1 = this.field_j.length();
+          dupTemp$1 = this.text.length();
           this.field_H = dupTemp$1;
           this.field_K = dupTemp$1;
           if (param0) {
@@ -397,16 +397,16 @@ class uf extends htb {
         int var3_intLifetime1;
         try {
           if (this.field_C != -1) {
-            var3_int = this.field_C - this.field_j.length();
+            var3_int = this.field_C - this.text.length();
             if (0 <= var3_int) {
               return;
             }
             param1 = param1.substring(0, var3_int);
           }
-          if (this.field_K != this.field_j.length()) {
-            this.field_j = this.field_j.substring(0, this.field_K) + param1 + this.field_j.substring(this.field_K, this.field_j.length());
+          if (this.field_K != this.text.length()) {
+            this.text = this.text.substring(0, this.field_K) + param1 + this.text.substring(this.field_K, this.text.length());
           } else {
-            this.field_j = this.field_j + param1;
+            this.text = this.text + param1;
           }
           this.field_K = this.field_K + param1.length();
           var3_intLifetime1 = -69 % ((34 - param0) / 56);
@@ -427,66 +427,66 @@ class uf extends htb {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         long var6;
         at var8;
         at var10;
         at var11;
         long var6Lifetime1;
         if (param2 > 47) {
-          if (this.field_q == null) {
+          if (this.renderer == null) {
             return;
           }
           if (param1 != 0) {
             return;
           }
-          this.field_q.a(29, (shb) (this), param0, param3, this.field_x);
-          if (!(this.field_q instanceof at)) {
+          this.renderer.drawComponent(29, (UiComponent) (this), param0, param3, this.enabled);
+          if (!(this.renderer instanceof at)) {
             return;
           }
-          var11 = (at) ((Object) this.field_q);
+          var11 = (at) ((Object) this.renderer);
           if (this.field_H != this.field_K) {
-            var11.b(this.field_H, param3, -24184, param0, (shb) (this), this.field_K);
+            var11.b(this.field_H, param3, -24184, param0, (UiComponent) (this), this.field_K);
           }
           var6 = wt.a(false);
           if ((var6 - this.field_J) % 1000L >= 500L) {
             return;
           }
-          var11.a((shb) (this), param3, (byte) 99, param0, this.field_K);
+          var11.a((UiComponent) (this), param3, (byte) 99, param0, this.field_K);
           return;
         }
         this.g((byte) 89);
-        if (this.field_q == null) {
+        if (this.renderer == null) {
           return;
         }
         if (param1 != 0) {
           return;
         }
-        this.field_q.a(29, (shb) (this), param0, param3, this.field_x);
-        if (!(this.field_q instanceof at)) {
+        this.renderer.drawComponent(29, (UiComponent) (this), param0, param3, this.enabled);
+        if (!(this.renderer instanceof at)) {
           return;
         }
-        var10 = (at) ((Object) this.field_q);
+        var10 = (at) ((Object) this.renderer);
         var8 = var10;
         if (this.field_H != this.field_K) {
-          var10.b(this.field_H, param3, -24184, param0, (shb) (this), this.field_K);
+          var10.b(this.field_H, param3, -24184, param0, (UiComponent) (this), this.field_K);
         }
         var6Lifetime1 = wt.a(false);
         if ((var6Lifetime1 - this.field_J) % 1000L >= 500L) {
           return;
         }
-        var10.a((shb) (this), param3, (byte) 99, param0, this.field_K);
+        var10.a((UiComponent) (this), param3, (byte) 99, param0, this.field_K);
         return;
     }
 
-    uf(String param0, sba param1, int param2) {
+    uf(String param0, UiListener param1, int param2) {
         super(param0, param1);
         this.field_I = false;
         this.field_B = -1;
         this.field_D = 0L;
         try {
           this.field_C = param2;
-          this.field_q = GetDebrisMax.field_s.field_o;
+          this.renderer = GetDebrisMax.field_s.field_o;
           this.a(true, 0, param0);
           this.field_G = true;
           this.field_J = wt.a(false);
@@ -495,7 +495,7 @@ class uf extends htb {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, shb param4, int param5, byte param6) {
+    final boolean handleMousePress(int param0, int param1, int param2, int param3, UiComponent param4, int param5, byte param6) {
         int stackIn_6_1 = 0;
         boolean stackIn_9_1 = false;
         RuntimeException stackIn_23_0 = null;
@@ -506,9 +506,9 @@ class uf extends htb {
         long var8_long = 0L;
         RuntimeException var8 = null;
         try {
-          if (super.a(param0, param1, param2, param3, param4, param5, (byte) -61) &&
-            this.field_q instanceof at) {
-            var8_int = ((at) ((Object) this.field_q)).a(PlayerGameData.field_b, uia.field_b, param5, param1, (shb) (this), -1);
+          if (super.handleMousePress(param0, param1, param2, param3, param4, param5, (byte) -61) &&
+            this.renderer instanceof at) {
+            var8_int = ((at) ((Object) this.renderer)).a(PlayerGameData.field_b, uia.field_b, param5, param1, (UiComponent) (this), -1);
             if (var8_int == -1) {
               stackIn_6_1 = 0;
             } else {
@@ -522,7 +522,7 @@ class uf extends htb {
               this.field_H = this.g(0);
               this.field_K = this.i(62);
               if (this.field_K > 0 &&
-                this.field_j.charAt(this.field_K - 1) == 32) {
+                this.text.charAt(this.field_K - 1) == 32) {
                 this.field_K = this.field_K - 1;
               }
               this.field_B = this.field_K;
@@ -556,26 +556,26 @@ class uf extends htb {
           return this.field_K;
         }
         for (var2 = -1 + this.field_K; var2 > 0; var2--) {
-          if (this.field_j.charAt(var2 - 1) == 32) {
+          if (this.text.charAt(var2 - 1) == 32) {
             return var2;
           }
         }
         return var2;
     }
 
-    void a(int param0, int param1, int param2, shb param3) {
+    void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         at var7 = null;
         int var6 = 0;
         try {
-          super.a(param0, param1, param2 ^ 0, param3);
+          super.updatePointer(param0, param1, param2 ^ 0, param3);
           this.h(param2 ^ -27100);
           if (param2 != -981) {
             this.field_J = -63L;
           }
-          if (this.field_n == 1) {
-            if (this.field_q instanceof at) {
-              var7 = (at) ((Object) this.field_q);
-              var6 = var7.a(PlayerGameData.field_b, uia.field_b, param0, param1, (shb) (this), param2 + 980);
+          if (this.pressedButton == 1) {
+            if (this.renderer instanceof at) {
+              var7 = (at) ((Object) this.renderer);
+              var6 = var7.a(PlayerGameData.field_b, uia.field_b, param0, param1, (UiComponent) (this), param2 + 980);
               if (var6 != -1) {
                 if (this.field_I && var6 < this.field_B &&
                   this.field_H < var6) {
@@ -663,14 +663,14 @@ class uf extends htb {
         this.field_K = 0;
         if (param0 == 82) {
           this.field_H = 0;
-          this.field_j = "";
+          this.text = "";
           this.i((byte) -55);
           return;
         }
         String var3 = (String) null;
         this.a(32, (String) null);
         this.field_H = 0;
-        this.field_j = "";
+        this.text = "";
         this.i((byte) -55);
     }
 
@@ -680,14 +680,14 @@ class uf extends htb {
         if (param0 == -96) {
           var2 = this.field_H < this.field_K ? this.field_H : this.field_K;
           var3 = this.field_H < this.field_K ? this.field_K : this.field_H;
-          return this.field_j.substring(var2, var3);
+          return this.text.substring(var2, var3);
         }
         return (String) null;
     }
 
     void i(byte param0) {
-        if (this.field_l instanceof en) {
-          ((en) (this.field_l)).a(this, (byte) 100);
+        if (this.listener instanceof en) {
+          ((en) (this.listener)).a(this, (byte) 100);
         }
         if (param0 == -55) {
           return;

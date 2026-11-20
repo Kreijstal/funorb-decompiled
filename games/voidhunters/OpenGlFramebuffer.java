@@ -82,7 +82,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
           } else {
             if (var5 != 7) {
               if (var5 == 8) {
-                mc.a(var4, 27);
+                UiSingleChildContainer.a(var4, 27);
               } else {
                 if (var5 != 9) {
                   if (10 == var5) {

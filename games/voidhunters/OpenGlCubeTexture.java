@@ -10,7 +10,7 @@ final class OpenGlCubeTexture extends OpenGlTexture {
         if (param1 >= -37) {
           field_h = (Widget) null;
           if (GetBloomThresholdPercentage.field_p) {
-            return PartitionZoneListFactory.field_b.a(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
+            return PartitionZoneListFactory.field_b.dispatchKey(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
           }
           if (uga.field_d) {
             return GetDetachmentMode.a(param3, -9307, param2);
@@ -24,7 +24,7 @@ final class OpenGlCubeTexture extends OpenGlTexture {
           return SetFighterRepairAmount.b(param0, param3, -85);
         }
         if (GetBloomThresholdPercentage.field_p) {
-          return PartitionZoneListFactory.field_b.a(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
+          return PartitionZoneListFactory.field_b.dispatchKey(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
         }
         if (uga.field_d) {
           return GetDetachmentMode.a(param3, -9307, param2);

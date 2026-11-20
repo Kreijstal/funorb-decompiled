@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class w extends dqa implements ln, oo {
+final class w extends UiContainer implements ln, UiActionListener {
     static int field_y;
-    private htb field_w;
+    private UiFocusableComponent field_w;
     static GameStateFactory field_v;
     private sn field_z;
     private kja field_x;
@@ -56,7 +56,7 @@ final class w extends dqa implements ln, oo {
     }
 
     w(sn param0) {
-        super(0, 0, 288, 0, (wwa) null);
+        super(0, 0, 288, 0, (UiRenderer) null);
         String var7 = null;
         int var3 = 0;
         bob var4 = null;
@@ -64,26 +64,26 @@ final class w extends dqa implements ln, oo {
         int var6 = 0;
         try {
           this.field_z = param0;
-          this.field_w = new htb(tn.field_b, (sba) null);
-          this.field_w.field_q = (wwa) ((Object) new vva());
+          this.field_w = new UiFocusableComponent(tn.field_b, (UiListener) null);
+          this.field_w.renderer = (UiRenderer) ((Object) new vva());
           var7 = SetReverbGain.a(SetCountermeasuresPulsetime.field_o, new String[]{this.c(true), this.j((byte) -30)}, 81);
           var3 = 20;
           var4 = new bob(SetShipToShipRamDamage.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, SetShipToShipRamDamage.field_o.maxAscent, -1, 2147483647, true);
           this.field_x = new kja(var7, var4);
-          this.field_x.field_p = "";
+          this.field_x.tooltip = "";
           this.field_x.a(0, -1, SetBombletSprayProjectileDamage.field_q);
           this.field_x.a(1, -1, SetBombletSprayProjectileDamage.field_q);
-          this.field_x.field_l = (sba) (this);
-          this.field_x.field_h = -40 + this.field_h;
-          this.field_x.a(-40 + this.field_h, var3, 26, (byte) -23);
-          var3 = var3 + (15 + this.field_x.field_f);
-          this.b(-18756, this.field_x);
+          this.field_x.listener = (UiListener) (this);
+          this.field_x.width = -40 + this.width;
+          this.field_x.a(-40 + this.width, var3, 26, (byte) -23);
+          var3 = var3 + (15 + this.field_x.height);
+          this.addChild(-18756, this.field_x);
           var5 = 4;
           var6 = 200;
-          this.field_w.a(-var6 + 300 >> 1, var6, 40, 1, var3);
-          this.field_w.field_l = (sba) (this);
-          this.b(-18756, this.field_w);
-          this.a(0, 300, var3 - (-55 - var5), 1, 0);
+          this.field_w.setBounds(-var6 + 300 >> 1, var6, 40, 1, var3);
+          this.field_w.listener = (UiListener) (this);
+          this.addChild(-18756, this.field_w);
+          this.setBounds(0, 300, var3 - (-55 - var5), 1, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "w.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -97,7 +97,7 @@ final class w extends dqa implements ln, oo {
         var2.writeByte(0, 0);
     }
 
-    final boolean a(int param0, int param1, shb param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_6_0 = false;
         boolean stackIn_10_0 = false;
@@ -106,17 +106,17 @@ final class w extends dqa implements ln, oo {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
-            stackIn_6_0 = this.a(param2, 0);
+            stackIn_6_0 = this.focusPreviousChild(param2, 0);
             return stackIn_6_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_10_0 = this.a(true, param2);
+          stackIn_10_0 = this.focusNextChild(true, param2);
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -132,7 +132,7 @@ final class w extends dqa implements ln, oo {
         }
     }
 
-    public final void a(int param0, int param1, int param2, htb param3, int param4) {
+    public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         RuntimeException var6 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

@@ -110,7 +110,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               ShipBlueprint.a(8, param3 ^ 30013)) {
               SetMissileLauncherRandomness.field_p = qga.field_b.readLong(255);
               qga.field_b.position = 0;
-              dqa.a(-87, param0, param4, OpenGlGpuCubeTexture.field_j, param1);
+              UiContainer.a(-87, param0, param4, OpenGlGpuCubeTexture.field_j, param1);
               tc.field_c = of.field_a;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -136,10 +136,10 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               }
               if (decompiledFrameRemainder0) {
                 PartitioningManagerFactory.field_a = -1;
-                tc.field_c = htb.field_A;
+                tc.field_c = UiFocusableComponent.field_A;
               }
             }
-            if (tc.field_c == htb.field_A &&
+            if (tc.field_c == UiFocusableComponent.field_A &&
               PlayerJoinFactory.b((byte) 113)) {
               SetTorpedoAimarc.field_p = qga.field_b.readLong(255);
               SetLagVariant.field_p = param5;

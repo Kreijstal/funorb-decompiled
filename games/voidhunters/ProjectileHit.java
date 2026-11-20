@@ -133,7 +133,7 @@ final class ProjectileHit {
                 }
               }
             } else {
-              var7 = mc.field_u;
+              var7 = UiSingleChildContainer.field_u;
             }
             var8Lifetime1 = this.component.applyScaledDamage(this.projectile.getDamage((byte) 68), (byte) 40);
             if (var8Lifetime1 > 0) {

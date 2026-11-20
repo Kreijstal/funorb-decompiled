@@ -9,7 +9,7 @@ final class vva extends bob {
     private int field_t;
     private Sprite[] field_q;
 
-    public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
+    public final void drawComponent(int param0, UiComponent param1, int param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
         int stackIn_14_0 = 0;
         int stackIn_17_0 = 0;
@@ -24,14 +24,14 @@ final class vva extends bob {
         int var9 = 0;
         try {
           var7 = 112 / ((param0 + 27) / 35);
-          if (!param1.field_e) {
-            stackIn_6_0 = (param1.e((byte) -120)) ? 1 : 0;
+          if (!param1.hovered) {
+            stackIn_6_0 = (param1.hasFocus((byte) -120)) ? 1 : 0;
           } else {
             stackIn_6_0 = 1;
           }
           var6_int = stackIn_6_0;
-          if (param1 instanceof htb) {
-            param4 = param4 & ((htb) (param1)).field_x;
+          if (param1 instanceof UiFocusableComponent) {
+            param4 = param4 & ((UiFocusableComponent) (param1)).enabled;
           }
           if (!param4) {
             stackIn_14_0 = this.field_p;
@@ -43,10 +43,10 @@ final class vva extends bob {
             }
           }
           var8 = stackIn_14_0;
-          SetPhysicsCollisionForceMultiplier.a(this.field_q, var8, param1.field_r + (param3 + (-this.field_q[0].paddedHeight + param1.field_f >> 1)), param1.field_h, param2 + param1.field_g, true);
+          SetPhysicsCollisionForceMultiplier.a(this.field_q, var8, param1.y + (param3 + (-this.field_q[0].paddedHeight + param1.height >> 1)), param1.width, param2 + param1.x, true);
           stackIn_17_0 = (!param4) ? 7105644 : 16777215;
           var9 = stackIn_17_0;
-          this.field_d.drawParagraph(param1.field_j, param2 + param1.field_g, param1.field_r + param3 - 2, param1.field_h, param1.field_f, var9, -1, 1, 1, this.field_d.maxAscent);
+          this.field_d.drawParagraph(param1.text, param2 + param1.x, param1.y + param3 - 2, param1.width, param1.height, var9, -1, 1, 1, this.field_d.maxAscent);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

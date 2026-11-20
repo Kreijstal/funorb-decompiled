@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sca extends mc {
+final class sca extends UiSingleChildContainer {
     private String field_A;
     private int field_z;
     private BitmapFont field_v;
@@ -9,8 +9,8 @@ final class sca extends mc {
     private boolean field_y;
     private int field_x;
 
-    sca(int param0, int param1, int param2, int param3, shb param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
-        super(param0, param1, param2, param3, (wwa) null, (sba) null);
+    sca(int param0, int param1, int param2, int param3, UiComponent param4, boolean param5, int param6, int param7, BitmapFont param8, int param9, String param10) {
+        super(param0, param1, param2, param3, (UiRenderer) null, (UiListener) null);
         boolean stackIn_4_1 = false;
         int stackIn_10_0 = 0;
         RuntimeException stackIn_14_0 = null;
@@ -27,7 +27,7 @@ final class sca extends mc {
         int var14 = 0;
         try {
           this.field_z = param9;
-          this.field_t = param4;
+          this.child = param4;
           this.field_v = param8;
           this.field_w = param6;
           stackIn_4_1 = (param5);
@@ -39,7 +39,7 @@ final class sca extends mc {
           if (var13 <= param3) {
             var13 = param3;
           } else {
-            this.a(param0, param2, var13, 1, param1);
+            this.setBounds(param0, param2, var13, 1, param1);
           }
           if (!this.field_y) {
             stackIn_10_0 = this.field_w + this.field_x * 2;
@@ -47,7 +47,7 @@ final class sca extends mc {
             stackIn_10_0 = 0;
           }
           var14 = stackIn_10_0;
-          this.field_t.a(var14, -this.field_w + (param2 - 3 * this.field_x), param3 - this.field_x * 2, 1, this.field_x + (var13 - param3 >> 1));
+          this.child.setBounds(var14, -this.field_w + (param2 - 3 * this.field_x), param3 - this.field_x * 2, 1, this.field_x + (var13 - param3 >> 1));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -75,25 +75,25 @@ final class sca extends mc {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
-        int var5 = this.field_g + param0;
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        int var5 = this.x + param0;
         if (param2 <= 47) {
           return;
         }
-        int var6 = this.field_r + param3;
-        super.b(param0, param1, 121, param3);
+        int var6 = this.y + param3;
+        super.drawLayer(param0, param1, 121, param3);
         if (param1 != 0) {
           return;
         }
-        int var7 = this.field_y ? this.field_h - this.field_w - this.field_x * 2 : 0;
-        this.field_v.drawParagraph(this.field_A, this.field_x + (var7 + var5), var6 + this.field_x, this.field_w - this.field_x, -(this.field_x * 2) + this.field_f, this.field_z, -1, this.field_y ? 0 : 2, 1, this.field_v.maxAscent);
+        int var7 = this.field_y ? this.width - this.field_w - this.field_x * 2 : 0;
+        this.field_v.drawParagraph(this.field_A, this.field_x + (var7 + var5), var6 + this.field_x, this.field_w - this.field_x, -(this.field_x * 2) + this.height, this.field_z, -1, this.field_y ? 0 : 2, 1, this.field_v.maxAscent);
     }
 
-    final String d(byte param0) {
-        int var2 = this.field_t.field_e ? 1 : 0;
-        this.field_t.field_e = this.field_e;
-        String var3 = this.field_t.d(param0);
-        this.field_t.field_e = var2 != 0 ? true : false;
+    final String getTooltip(byte param0) {
+        int var2 = this.child.hovered ? 1 : 0;
+        this.child.hovered = this.hovered;
+        String var3 = this.child.getTooltip(param0);
+        this.child.hovered = var2 != 0 ? true : false;
         return var3;
     }
 

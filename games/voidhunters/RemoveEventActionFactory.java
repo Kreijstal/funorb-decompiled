@@ -17,7 +17,7 @@ final class RemoveEventActionFactory implements GameStateFactory {
           null == qn.field_h.g(0)) {
           return -1;
         }
-        return qn.field_h.g(0).field_r;
+        return qn.field_h.g(0).y;
     }
 
     public final SerializableGameState[] createArray(int param0, int param1) {

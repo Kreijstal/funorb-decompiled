@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bl extends dqa {
+abstract class bl extends UiContainer {
     static BitmapFont field_x;
     private int field_w;
     static int field_A;
@@ -17,15 +17,15 @@ abstract class bl extends dqa {
         return this.field_z ? this.field_v.g(0) != this ? 0 : 256 : 0;
     }
 
-    final shb g(byte param0) {
-        shb var2 = super.g((byte) -123);
+    final UiComponent getFocusedChild(byte param0) {
+        UiComponent var2 = super.getFocusedChild((byte) -123);
         if (param0 > -3) {
-          return (shb) null;
+          return (UiComponent) null;
         }
         if (var2 != null) {
           return var2;
         }
-        return (shb) (this);
+        return (UiComponent) (this);
     }
 
     boolean a(int param0) {
@@ -56,7 +56,7 @@ abstract class bl extends dqa {
         return false;
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (this.field_w == 0) {
           return;
         }
@@ -64,70 +64,70 @@ abstract class bl extends dqa {
           if (param1 != 0) {
             return;
           }
-          this.b(param3 + this.field_r, 1630174241, param0 + this.field_g);
-          super.b(param0, param1, 101, param3);
+          this.b(param3 + this.y, 1630174241, param0 + this.x);
+          super.drawLayer(param0, param1, 101, param3);
           return;
         }
         if (null == vib.field_b) {
-          vib.field_b = new Sprite(this.field_h, this.field_f);
+          vib.field_b = new Sprite(this.width, this.height);
           SetTorpedoEnergyUsed.a(111, vib.field_b);
           SoftwareRasterizer2D.clear();
           this.b(0, 1630174241, 0);
-          super.b(-param0 - this.field_g, param1, 127, -this.field_r - param3);
+          super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
           if (param2 > 47) {
-            bia.a((byte) 124);
-            vib.field_b.drawAlpha(param0 + this.field_g, this.field_r + param3, this.field_w);
+            bia.popRasterState((byte) 124);
+            vib.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
             return;
           }
           this.j((byte) 123);
-          bia.a((byte) 124);
-          vib.field_b.drawAlpha(param0 + this.field_g, this.field_r + param3, this.field_w);
+          bia.popRasterState((byte) 124);
+          vib.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
           return;
         }
-        if (vib.field_b.width < this.field_h) {
-          vib.field_b = new Sprite(this.field_h, this.field_f);
+        if (vib.field_b.width < this.width) {
+          vib.field_b = new Sprite(this.width, this.height);
           SetTorpedoEnergyUsed.a(111, vib.field_b);
           SoftwareRasterizer2D.clear();
           this.b(0, 1630174241, 0);
-          super.b(-param0 - this.field_g, param1, 127, -this.field_r - param3);
+          super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
           if (param2 > 47) {
-            bia.a((byte) 124);
-            vib.field_b.drawAlpha(param0 + this.field_g, this.field_r + param3, this.field_w);
+            bia.popRasterState((byte) 124);
+            vib.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
             return;
           }
           this.j((byte) 123);
-          bia.a((byte) 124);
-          vib.field_b.drawAlpha(param0 + this.field_g, this.field_r + param3, this.field_w);
+          bia.popRasterState((byte) 124);
+          vib.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
           return;
         }
-        if (this.field_f > vib.field_b.height) {
-          vib.field_b = new Sprite(this.field_h, this.field_f);
+        if (this.height > vib.field_b.height) {
+          vib.field_b = new Sprite(this.width, this.height);
           SetTorpedoEnergyUsed.a(111, vib.field_b);
           SoftwareRasterizer2D.clear();
           this.b(0, 1630174241, 0);
-          super.b(-param0 - this.field_g, param1, 127, -this.field_r - param3);
+          super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
           if (param2 > 47) {
-            bia.a((byte) 124);
-            vib.field_b.drawAlpha(param0 + this.field_g, this.field_r + param3, this.field_w);
+            bia.popRasterState((byte) 124);
+            vib.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
             return;
           }
           this.j((byte) 123);
-          bia.a((byte) 124);
-          vib.field_b.drawAlpha(param0 + this.field_g, this.field_r + param3, this.field_w);
+          bia.popRasterState((byte) 124);
+          vib.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
           return;
         }
         SetTorpedoEnergyUsed.a(111, vib.field_b);
         SoftwareRasterizer2D.clear();
         this.b(0, 1630174241, 0);
-        super.b(-param0 - this.field_g, param1, 127, -this.field_r - param3);
+        super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
         if (param2 > 47) {
-          bia.a((byte) 124);
-          vib.field_b.drawAlpha(param0 + this.field_g, this.field_r + param3, this.field_w);
+          bia.popRasterState((byte) 124);
+          vib.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
           return;
         }
         this.j((byte) 123);
-        bia.a((byte) 124);
-        vib.field_b.drawAlpha(param0 + this.field_g, this.field_r + param3, this.field_w);
+        bia.popRasterState((byte) 124);
+        vib.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
     }
 
     boolean j(byte param0) {
@@ -147,7 +147,7 @@ abstract class bl extends dqa {
     abstract void b(int param0, int param1, int param2);
 
     final void c(int param0, int param1, int param2) {
-        this.a(-param0 + ComponentBehaviourFactory.field_a >> 1, param0, param2, 1, GetSniperCannonFiringLeeway.field_p - param2 >> 1);
+        this.setBounds(-param0 + ComponentBehaviourFactory.field_a >> 1, param0, param2, 1, GetSniperCannonFiringLeeway.field_p - param2 >> 1);
         if (param1 != -1860440319) {
           this.field_z = false;
         }
@@ -199,7 +199,7 @@ abstract class bl extends dqa {
     }
 
     bl(ida param0, int param1, int param2) {
-        super(ComponentBehaviourFactory.field_a - param1 >> 1, -param2 + GetSniperCannonFiringLeeway.field_p >> 1, param1, param2, (wwa) null);
+        super(ComponentBehaviourFactory.field_a - param1 >> 1, -param2 + GetSniperCannonFiringLeeway.field_p >> 1, param1, param2, (UiRenderer) null);
         try {
           this.field_w = 0;
           this.field_v = param0;

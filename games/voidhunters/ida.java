@@ -3,12 +3,12 @@
  */
 import java.io.*;
 
-final class ida extends mc {
+final class ida extends UiSingleChildContainer {
     static TextureTransformMode field_x;
     static gj field_w;
     private IntrusiveDeque field_v;
 
-    final void a(boolean param0, shb param1) {
+    final void a(boolean param0, UiComponent param1) {
         if (!(param1 instanceof bl)) {
           throw new IllegalArgumentException();
         }
@@ -19,7 +19,7 @@ final class ida extends mc {
           return;
         }
         try {
-          var3.a(0, (shb) (this));
+          var3.requestFocus(0, (UiComponent) (this));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ida.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -36,11 +36,11 @@ final class ida extends mc {
         var4 = (bl) (var2.first(570));
         while (var4 != null) {
           if (var4.field_z) {
-            if (var3 >= var4.field_f) {
+            if (var3 >= var4.height) {
               var4 = (bl) (var2.next(19072));
               continue;
             }
-            var3 = var4.field_f;
+            var3 = var4.height;
           }
           var4 = (bl) (var2.next(19072));
         }
@@ -55,7 +55,7 @@ final class ida extends mc {
           var3.field_z = false;
           var3 = (bl) (var2.next(19072));
         }
-        this.field_t = null;
+        this.child = null;
         if (param0 != -17) {
           field_w = (gj) null;
         }
@@ -111,13 +111,13 @@ final class ida extends mc {
         }
     }
 
-    final shb d(int param0) {
+    final UiComponent getFocusedChild(int param0) {
         int var4 = VoidHunters.field_G;
         IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.field_v);
         bl var3 = (bl) (var2.first(570));
         while (var3 != null) {
           if (var3.field_z) {
-            return var3.g((byte) -74);
+            return var3.getFocusedChild((byte) -74);
           }
           var3 = (bl) (var2.next(19072));
         }
@@ -141,19 +141,19 @@ final class ida extends mc {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = VoidHunters.field_G;
-        if (this.field_q != null) {
-          this.field_q.a(-93, (shb) (this), param0, param3, true);
+        if (this.renderer != null) {
+          this.renderer.drawComponent(-93, (UiComponent) (this), param0, param3, true);
         }
         if (param2 < 47) {
-          this.d(51);
+          this.getFocusedChild(51);
         }
         IntrusiveDequeIterator var5 = new IntrusiveDequeIterator(this.field_v);
-        shb var6 = (shb) (var5.last((byte) 83));
+        UiComponent var6 = (UiComponent) (var5.last((byte) 83));
         while (var6 != null) {
-          var6.b(param0 + this.field_g, param1, 111, this.field_r + param3);
-          var6 = (shb) (var5.previous((byte) 108));
+          var6.drawLayer(param0 + this.x, param1, 111, this.y + param3);
+          var6 = (UiComponent) (var5.previous((byte) 108));
         }
     }
 
@@ -173,8 +173,8 @@ final class ida extends mc {
         bl var4 = (bl) (var2.first(570));
         while (var4 != null) {
           if (var4.field_z &&
-            var3 < var4.field_h) {
-            var3 = var4.field_h;
+            var3 < var4.width) {
+            var3 = var4.width;
           }
           var4 = (bl) (var2.next(19072));
         }
@@ -182,7 +182,7 @@ final class ida extends mc {
     }
 
     public ida() {
-        super(0, 0, ComponentBehaviourFactory.field_a, GetSniperCannonFiringLeeway.field_p, (wwa) null, (sba) null);
+        super(0, 0, ComponentBehaviourFactory.field_a, GetSniperCannonFiringLeeway.field_p, (UiRenderer) null, (UiListener) null);
         this.field_v = new IntrusiveDeque();
     }
 
@@ -404,7 +404,7 @@ final class ida extends mc {
           }
           var3 = (bl) (var2.next(param0 ^ 1160));
         }
-        this.field_t = (shb) ((Object) this.g(0));
+        this.child = (UiComponent) ((Object) this.g(0));
     }
 
     static {

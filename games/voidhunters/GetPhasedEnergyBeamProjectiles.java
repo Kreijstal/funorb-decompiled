@@ -223,7 +223,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           PartitionZone.field_e = param1[43];
           SetMissileLauncherFireForce.field_q = param1[212];
           GetTorqueDownshift.field_o = param1[188];
-          mc.field_u = param1[153];
+          UiSingleChildContainer.field_u = param1[153];
           SetShipTeamAction.field_e = param1[28];
           pea.field_b = param1[154];
           GetBombletSprayRandomness.field_p = param1[29];

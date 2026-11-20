@@ -22,7 +22,7 @@ final class kpb extends io {
         this(SetShipToShipRamDamage.field_o, param0);
     }
 
-    final String b(byte param0, shb param1) {
+    final String b(byte param0, UiComponent param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -32,7 +32,7 @@ final class kpb extends io {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= -53) {
-            stackIn_4_0 = nva.a('*', true, param1.field_j.length());
+            stackIn_4_0 = nva.a('*', true, param1.text.length());
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

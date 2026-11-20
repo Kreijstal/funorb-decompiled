@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class v extends htb {
+final class v extends UiFocusableComponent {
     private int field_E;
     int field_F;
     private hma field_G;
@@ -112,7 +112,7 @@ final class v extends htb {
         return -1;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, shb param4, int param5, byte param6) {
+    final boolean handleMousePress(int param0, int param1, int param2, int param3, UiComponent param4, int param5, byte param6) {
         int var12 = 0;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -127,14 +127,14 @@ final class v extends htb {
         int var14 = 0;
         var14 = VoidHunters.field_G;
         try {
-          if (!super.a(param0, param1, param2, param3, param4, param5, (byte) -67)) {
+          if (!super.handleMousePress(param0, param1, param2, param3, param4, param5, (byte) -67)) {
             if (param6 >= -17) {
               this.e(-69);
             }
             return false;
           }
           var8_int = -this.field_C + (-param1 + param0);
-          var9 = -(this.field_C * 2) + this.field_h;
+          var9 = -(this.field_C * 2) + this.width;
           if (var9 < var8_int) {
             var8_int = var9;
           }

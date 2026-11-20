@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bpa implements wwa {
+final class bpa implements UiRenderer {
     private nva field_b;
     static int field_a;
     static Widget field_c;
@@ -34,7 +34,7 @@ final class bpa implements wwa {
         }
     }
 
-    public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
+    public final void drawComponent(int param0, UiComponent param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -47,22 +47,22 @@ final class bpa implements wwa {
         String var10 = null;
         int var11 = 0;
         try {
-          var6_int = param1.field_g + param2;
-          var7 = param3 + param1.field_r;
-          ServerTickFactory.a(var7, (byte) 115, param1.field_f, param1.field_h, var6_int);
-          if (param1.e((byte) -120)) {
-            SetCountermeasureLauncherRandomness.a(var7 + 2, param1.field_h - 4, 2 + var6_int, param1.field_f - 4, (byte) -100);
+          var6_int = param1.x + param2;
+          var7 = param3 + param1.y;
+          ServerTickFactory.a(var7, (byte) 115, param1.height, param1.width, var6_int);
+          if (param1.hasFocus((byte) -120)) {
+            SetCountermeasureLauncherRandomness.a(var7 + 2, param1.width - 4, 2 + var6_int, param1.height - 4, (byte) -100);
           }
-          SoftwareRasterizer2D.setClip(var6_int, var7, param1.field_h + (var6_int - 2), param1.field_f + var7);
+          SoftwareRasterizer2D.setClip(var6_int, var7, param1.width + (var6_int - 2), param1.height + var7);
           var9 = 78 % ((-27 - param0) / 35);
           var8 = this.field_b.field_w.g((byte) 96);
           if (var8 != null) {
             var10 = var8.toString();
-            this.field_b.field_v.draw(var10, 2 + var6_int, -1 + ((this.field_b.field_v.maxAscent + param1.field_f >> 1) + var7), 10000536, -1);
-            if (this.field_b.e((byte) -120) &&
+            this.field_b.field_v.draw(var10, 2 + var6_int, -1 + ((this.field_b.field_v.maxAscent + param1.height >> 1) + var7), 10000536, -1);
+            if (this.field_b.hasFocus((byte) -120) &&
               var10.startsWith(this.field_b.field_E)) {
               var11 = this.field_b.field_v.getStringWidth(this.field_b.field_E);
-              SoftwareRasterizer2D.fillRectangleAlpha(var6_int + 2, var7 + 2, var11, -4 + param1.field_f, 2188450, 100);
+              SoftwareRasterizer2D.fillRectangleAlpha(var6_int + 2, var7 + 2, var11, -4 + param1.height, 2188450, 100);
             }
           }
           SoftwareRasterizer2D.resetClip();

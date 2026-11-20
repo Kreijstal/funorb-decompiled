@@ -5,23 +5,23 @@ final class rbb {
     int field_c;
     int field_h;
     int field_u;
-    wwa field_a;
-    wwa field_l;
+    UiRenderer field_a;
+    UiRenderer field_l;
     int field_r;
     int field_s;
-    wwa field_e;
+    UiRenderer field_e;
     static ScrollableActionPanel field_k;
     private boolean field_f;
     int field_m;
-    wwa field_o;
-    wwa field_d;
+    UiRenderer field_o;
+    UiRenderer field_d;
     int field_j;
     private int field_t;
     int field_b;
-    wwa field_n;
+    UiRenderer field_n;
     int field_i;
     int field_g;
-    wwa field_q;
+    UiRenderer field_q;
     BitmapFont field_p;
 
     final void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
@@ -129,7 +129,7 @@ final class rbb {
     }
 
     final void a(byte param0) {
-        bia.a((byte) 124);
+        bia.popRasterState((byte) 124);
         if (param0 < 82) {
           rbb.clearSharedReferences((byte) 6);
         }
@@ -193,7 +193,7 @@ final class rbb {
         if (param1 <= 103) {
           this.field_b = -4;
         }
-        SelectableIconLabelWidget.a(param2, param0, param4, true, param3);
+        SelectableIconLabelWidget.pushClip(param2, param0, param4, true, param3);
     }
 
     final void a(BitmapFont param0, int param1) {
@@ -222,7 +222,7 @@ final class rbb {
         try {
           var17 = new bob(param0, 2, 2, 2236962, 1, 1, 1, 2 + param0.maxDescent + param0.maxAscent);
           var17.field_i = 16777215;
-          this.field_n = (wwa) ((Object) var17);
+          this.field_n = (UiRenderer) ((Object) var17);
           var4 = new uea();
           var17.a(param1 + 24639, var4);
           this.field_t = 15658734;
@@ -251,21 +251,21 @@ final class rbb {
           var5[4] = (Sprite) ((Object) var18);
           var4.a(4, -1).a(-123, true).a(true, var5);
           var4.a(5, -1).a(true, SetCountermeasureLauncherFireForce.a(0, (byte) 119, 0, 65793, 0)).a(param1 + 24638, true).b(-1, param1 - 2147458885);
-          this.field_a = (wwa) ((Object) var4);
+          this.field_a = (UiRenderer) ((Object) var4);
           var6 = new uea(var4, true);
           var6.field_c = 0;
           var7 = new uea(var4, true);
           var7.field_c = 0;
           var7.a(GetBurstFireRegenerationRate.a(true, 8947848), (byte) -54);
           var7.a(1, -1).a(true, GetBurstFireRegenerationRate.a(true, 11184810)).b(2236962, -2147483648);
-          this.field_d = (wwa) ((Object) new uv(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_d = (UiRenderer) ((Object) new uv(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new ei(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new jba(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new uea();
           var17.a(-122, var8);
           var8.a(0, -1).a(true, vdb.a(7829367, 15658734, param1 + 24884, 10066329)).b(1118481, -2147483648).c(-1, param1 - 2147458885);
           var8.a(4, -1).a(param1 + 24635, true).a(true, var5);
-          this.field_o = (wwa) ((Object) var8);
+          this.field_o = (UiRenderer) ((Object) var8);
           var9 = new Sprite[9];
           var9[4] = new Sprite(2, 1);
           var10 = new Sprite[9];
@@ -277,8 +277,8 @@ final class rbb {
           var12 = new uea();
           var11.a(0, var9, 15486);
           var12.a(0, var10, param1 ^ -23749);
-          this.field_l = (wwa) ((Object) var4);
-          this.field_e = (wwa) ((Object) var12);
+          this.field_l = (UiRenderer) ((Object) var4);
+          this.field_e = (UiRenderer) ((Object) var12);
           var13 = new Sprite(7, 4);
           this.field_s = 10;
           var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};

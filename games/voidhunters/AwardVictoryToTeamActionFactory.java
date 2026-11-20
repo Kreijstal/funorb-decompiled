@@ -69,7 +69,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetSpinningBladeSpinupSpeed.field_o[5] = GetAngularForceDownshift.field_r;
           SetSpinningBladeSpinupSpeed.field_o[28] = SetPhysicsCollisionForceMultiplier.field_o;
           SetSpinningBladeSpinupSpeed.field_o[22] = SetAutoAfkTimeout.field_o;
-          SetSpinningBladeSpinupSpeed.field_o[16] = bc.field_a;
+          SetSpinningBladeSpinupSpeed.field_o[16] = NineSliceSprite.field_a;
           SetSpinningBladeSpinupSpeed.field_o[12] = ne.field_m;
           SetSpinningBladeSpinupSpeed.field_o[30] = wsb.field_c;
           SetSpinningBladeSpinupSpeed.field_o[0] = ev.field_c;
@@ -159,7 +159,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetBlueprintSaveTime.field_o[3] = gl.field_c;
           GetBlueprintSaveTime.field_o[5] = gia.field_j;
           GetBlueprintSaveTime.field_o[2] = Cp1252Strings.field_a;
-          GetBlueprintSaveTime.field_o[7] = abb.field_b;
+          GetBlueprintSaveTime.field_o[7] = NanosecondClock.field_b;
           GetGrapplingHookSpringConstant.field_o = new String[SetSpinningBladeSpinupSpeed.field_o.length + 72];
           GetGrapplingHookSpringConstant.field_o[12] = GetSalvoDamageMultiplier.field_o;
           GetGrapplingHookSpringConstant.field_o[2] = SetBombletSprayAimspeed.field_p;
@@ -180,7 +180,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.field_o[17] = GetShieldsToggleCooldown.field_o;
           GetGrapplingHookSpringConstant.field_o[58] = nnb.field_f;
           GetGrapplingHookSpringConstant.field_o[31] = SetMassDriverReload.field_q;
-          GetGrapplingHookSpringConstant.field_o[30] = tgb.field_d;
+          GetGrapplingHookSpringConstant.field_o[30] = SystemNanoClock.field_d;
           GetGrapplingHookSpringConstant.field_o[28] = ti.field_k;
           GetGrapplingHookSpringConstant.field_o[56] = cd.field_a;
           GetGrapplingHookSpringConstant.field_o[55] = bob.field_l;

@@ -72,7 +72,7 @@ final class GetMassDriverEnergyUsed extends ConsoleCommand {
 
     final static vcb a(int param0) {
         if (param0 == 0) {
-          return new vcb(0, 0, GetDebrisMax.field_s.field_s, 0, (wwa) null, GetDebrisMax.field_s.field_e, GetDebrisMax.field_s.field_l, GetDebrisMax.field_s.field_s, GetDebrisMax.field_s.field_s, GetDebrisMax.field_s.field_r, GetDebrisMax.field_s.field_i, false, true, 32768, 0);
+          return new vcb(0, 0, GetDebrisMax.field_s.field_s, 0, (UiRenderer) null, GetDebrisMax.field_s.field_e, GetDebrisMax.field_s.field_l, GetDebrisMax.field_s.field_s, GetDebrisMax.field_s.field_s, GetDebrisMax.field_s.field_r, GetDebrisMax.field_s.field_i, false, true, 32768, 0);
         }
         return (vcb) null;
     }

@@ -3,7 +3,7 @@
  */
 class vhb extends tb {
     static Widget field_c;
-    static bc field_d;
+    static NineSliceSprite field_d;
     private static String field_z;
 
     vhb() {

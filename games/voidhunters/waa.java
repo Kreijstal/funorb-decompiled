@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class waa extends dqa implements jpb, oo {
+final class waa extends UiContainer implements jpb, UiActionListener {
     rcb field_v;
     private tga field_A;
     static String field_y;
     static String[] field_w;
     static String field_x;
     static String[] field_D;
-    private htb field_z;
-    private htb field_C;
+    private UiFocusableComponent field_z;
+    private UiFocusableComponent field_C;
 
-    private final int a(int param0, int param1, String param2, String param3, int param4, shb param5) {
+    private final int a(int param0, int param1, String param2, String param3, int param4, UiComponent param5) {
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -54,7 +54,7 @@ final class waa extends dqa implements jpb, oo {
         }
     }
 
-    public final void a(int param0, int param1, int param2, htb param3, int param4) {
+    public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
         lca var7 = null;
@@ -90,7 +90,7 @@ final class waa extends dqa implements jpb, oo {
         }
     }
 
-    final boolean a(int param0, int param1, shb param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_8_0 = false;
         boolean stackIn_12_0 = false;
@@ -102,17 +102,17 @@ final class waa extends dqa implements jpb, oo {
           if (param0 != -15834) {
             field_D = (String[]) null;
           }
-          if (super.a(param0 ^ 0, param1, param2, param3)) {
+          if (super.handleKey(param0 ^ 0, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
-            stackIn_8_0 = this.a(param2, 0);
+            stackIn_8_0 = this.focusPreviousChild(param2, 0);
             return stackIn_8_0;
           }
           if (param1 != 99) {
             return false;
           }
-          stackIn_12_0 = this.a(true, param2);
+          stackIn_12_0 = this.focusNextChild(true, param2);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -129,41 +129,41 @@ final class waa extends dqa implements jpb, oo {
     }
 
     public waa() {
-        super(0, 0, 496, 0, (wwa) null);
-        this.field_A = new tga("", (sba) null, 12);
+        super(0, 0, 496, 0, (UiRenderer) null);
+        this.field_A = new tga("", (UiListener) null, 12);
         bob var1 = new bob(SetTorpedoProjectileLife.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, SetShipToShipRamDamage.field_o.maxAscent, -1, 2147483647, true);
-        shb var2 = new shb(field_y, var1, (sba) null);
-        this.field_z = new htb(tia.field_K, (sba) null);
-        this.field_C = new htb(SetMissileLauncherProjectiles.field_p, (sba) null);
-        this.field_A.field_p = gna.field_m;
+        UiComponent var2 = new UiComponent(field_y, var1, (UiListener) null);
+        this.field_z = new UiFocusableComponent(tia.field_K, (UiListener) null);
+        this.field_C = new UiFocusableComponent(SetMissileLauncherProjectiles.field_p, (UiListener) null);
+        this.field_A.tooltip = gna.field_m;
         this.field_A.a(6614, new tib(this.field_A));
-        this.field_z.field_x = false;
-        this.field_z.field_q = (wwa) ((Object) new vva());
-        this.field_C.field_q = (wwa) ((Object) new meb());
-        this.field_A.field_q = (wwa) ((Object) new io(10000536));
+        this.field_z.enabled = false;
+        this.field_z.renderer = (UiRenderer) ((Object) new vva());
+        this.field_C.renderer = (UiRenderer) ((Object) new meb());
+        this.field_A.renderer = (UiRenderer) ((Object) new io(10000536));
         int var3 = 20;
         int var4 = 4;
         int var5 = 200;
-        var2.a(20, 270, 50, 1, var3);
-        this.b(-18756, var2);
+        var2.setBounds(20, 270, 50, 1, var3);
+        this.addChild(-18756, var2);
         var3 += 50;
         var3 = var3 + (5 + this.a(35, var3, ffb.field_c, Projectile.field_r, 170, this.field_A));
-        this.field_z.a(-var5 + 496 >> 1, var5, 40, 1, var3);
-        this.field_C.a(var4 + 3, 60, 40, 1, 15 + var3);
-        this.field_C.field_l = (sba) (this);
-        this.field_z.field_l = (sba) (this);
-        this.b(-18756, this.field_z);
-        this.b(-18756, this.field_C);
+        this.field_z.setBounds(-var5 + 496 >> 1, var5, 40, 1, var3);
+        this.field_C.setBounds(var4 + 3, 60, 40, 1, 15 + var3);
+        this.field_C.listener = (UiListener) (this);
+        this.field_z.listener = (UiListener) (this);
+        this.addChild(-18756, this.field_z);
+        this.addChild(-18756, this.field_C);
         this.field_v = new rcb((jpb) (this));
-        this.field_v.a(60 + (this.field_A.field_g + this.field_A.field_h), -60 - this.field_A.field_g + (this.field_h - this.field_A.field_h), 150, 1, 20);
-        this.b(-18756, this.field_v);
-        this.a(0, 496, var4 + var3 + 55, 1, 0);
+        this.field_v.setBounds(60 + (this.field_A.x + this.field_A.width), -60 - this.field_A.x + (this.width - this.field_A.width), 150, 1, 20);
+        this.addChild(-18756, this.field_v);
+        this.setBounds(0, 496, var4 + var3 + 55, 1, 0);
     }
 
-    final void a(int param0, int param1, int param2, shb param3) {
+    final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         try {
-          super.a(param0, param1, param2, param3);
-          this.field_z.field_x = this.d(-31927);
+          super.updatePointer(param0, param1, param2, param3);
+          this.field_z.enabled = this.d(-31927);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "waa.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -184,7 +184,7 @@ final class waa extends dqa implements jpb, oo {
         eeb var3 = null;
         RuntimeException var3_ref = null;
         qrb var4 = null;
-        shb var5 = null;
+        UiComponent var5 = null;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -196,8 +196,8 @@ final class waa extends dqa implements jpb, oo {
             return true;
           }
           if (param1 != -92) {
-            var5 = (shb) null;
-            this.a(-39, -53, -80, (shb) null);
+            var5 = (UiComponent) null;
+            this.updatePointer(-39, -53, -80, (UiComponent) null);
           }
           var4 = var3.a((byte) 35);
           stackIn_9_0 = (var4 == GetShipPersistence.field_o);
@@ -216,7 +216,7 @@ final class waa extends dqa implements jpb, oo {
         }
     }
 
-    private final int a(int param0, int param1, String param2, shb param3, String param4, int param5, int param6) {
+    private final int a(int param0, int param1, String param2, UiComponent param3, String param4, int param5, int param6) {
         RuntimeException var8 = null;
         gm var9 = null;
         sca var10 = null;
@@ -231,11 +231,11 @@ final class waa extends dqa implements jpb, oo {
         RuntimeException decompiledCaughtException = null;
         try {
           var10 = new sca(20, param0, 120 + param6, 25, param3, false, 120, 3, SetShipToShipRamDamage.field_o, 16777215, param2);
-          this.b(-18756, var10);
-          var9 = new gm(((lca) ((Object) param3)).a(-782444220), param4, param5, param0 + var10.field_f, 25 + param6, param1);
-          var9.field_l = (sba) (this);
-          this.b(-18756, var9);
-          stackIn_1_0 = var10.field_f + var9.field_f;
+          this.addChild(-18756, var10);
+          var9 = new gm(((lca) ((Object) param3)).a(-782444220), param4, param5, param0 + var10.height, 25 + param6, param1);
+          var9.listener = (UiListener) (this);
+          this.addChild(-18756, var9);
+          stackIn_1_0 = var10.height + var9.height;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -337,15 +337,15 @@ final class waa extends dqa implements jpb, oo {
         int discarded$0 = 0;
         ((tib) (this.field_A.a(-782444220))).d((byte) 127);
         if (param0 != 1546) {
-          shb var3 = (shb) null;
-          discarded$0 = this.a(25, 1, (String) null, (String) null, 83, (shb) null);
+          UiComponent var3 = (UiComponent) null;
+          discarded$0 = this.a(25, 1, (String) null, (String) null, 83, (UiComponent) null);
         }
     }
 
     private final void e(int param0) {
         int var2 = 71 / ((78 - param0) / 41);
         if (this.d(-31927)) {
-          GetMachineGunAimspeed.a(this.field_A.field_j, -127);
+          GetMachineGunAimspeed.a(this.field_A.text, -127);
           return;
         }
     }
@@ -368,7 +368,7 @@ final class waa extends dqa implements jpb, oo {
             return;
           }
           var5 = (String) null;
-          discarded$1 = this.a(37, 125, (String) null, (shb) null, (String) null, 67, -21);
+          discarded$1 = this.a(37, 125, (String) null, (UiComponent) null, (String) null, 67, -21);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

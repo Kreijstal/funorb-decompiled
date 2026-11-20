@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class ef extends mc {
+final class ef extends UiSingleChildContainer {
     private int field_C;
     static String field_A;
     private int field_D;
@@ -15,7 +15,7 @@ final class ef extends mc {
     private int field_w;
     private boolean field_v;
 
-    final StringBuilder a(boolean param0, Hashtable param1, int param2, StringBuilder param3) {
+    final StringBuilder appendDebugTree(boolean param0, Hashtable param1, int param2, StringBuilder param3) {
         StringBuilder discarded$64 = null;
         StringBuilder discarded$65 = null;
         RuntimeException var5 = null;
@@ -27,9 +27,9 @@ final class ef extends mc {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param1, param2, (byte) 115, param3)) {
-            this.a(124, param2, param1, param3);
-            this.a(param2, 13, param3, param1);
+          if (this.beginDebugVisit(param1, param2, (byte) 115, param3)) {
+            this.appendDebugProperties(124, param2, param1, param3);
+            this.appendChildDebugTree(param2, 13, param3, param1);
             discarded$64 = param3.append(" revert=").append(this.field_B);
             if (this.field_w != 2147483647 &&
               2147483647 != this.field_C) {
@@ -61,30 +61,30 @@ final class ef extends mc {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3, shb param4, int param5) {
+    final void handleMouseRelease(byte param0, int param1, int param2, int param3, UiComponent param4, int param5) {
         try {
-          super.a((byte) 124, param1, param2, param3, param4, param5);
+          super.handleMouseRelease((byte) 124, param1, param2, param3, param4, param5);
           int var7_int = -8 / ((param0 - 52) / 52);
-          this.field_n = 0;
+          this.pressedButton = 0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ef.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
-    ef(int param0, int param1, int param2, int param3, wwa param4, sba param5, shb param6, boolean param7, boolean param8) {
+    ef(int param0, int param1, int param2, int param3, UiRenderer param4, UiListener param5, UiComponent param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
         this.field_C = 2147483647;
         this.field_w = 2147483647;
         try {
           this.field_B = param7 ? true : false;
           this.field_v = param8 ? true : false;
-          this.field_t = param6;
+          this.child = param6;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ef.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
         }
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, shb param4, int param5, byte param6) {
+    final boolean handleMousePress(int param0, int param1, int param2, int param3, UiComponent param4, int param5, byte param6) {
         int var8_int = 0;
         RuntimeException var8 = null;
         int stackIn_12_0 = 0;
@@ -96,21 +96,21 @@ final class ef extends mc {
           if (param6 >= -17) {
             this.field_B = false;
           }
-          var8_int = super.a(param0, param1, param2, param3, param4, param5, (byte) -100) ? 1 : 0;
+          var8_int = super.handleMousePress(param0, param1, param2, param3, param4, param5, (byte) -100) ? 1 : 0;
           if (var8_int != 0 &&
             this.field_v) {
             return true;
           }
-          if (!this.a(param2, param1, param0, param5, (byte) 22)) {
+          if (!this.containsPoint(param2, param1, param0, param5, (byte) 22)) {
             stackIn_12_0 = var8_int;
             return stackIn_12_0 != 0;
           }
-          this.field_n = param3;
+          this.pressedButton = param3;
           if (param3 != 1) {
             return true;
           }
-          this.field_D = -this.field_g + (param0 - param1);
-          this.field_x = -this.field_r + param2 - param5;
+          this.field_D = -this.x + (param0 - param1);
+          this.field_x = -this.y + param2 - param5;
           SetBombletSprayRandomness.field_p = this;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -127,7 +127,7 @@ final class ef extends mc {
         }
     }
 
-    final void a(int param0, int param1, int param2, shb param3) {
+    final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         int stackIn_15_1 = 0;
         int stackIn_18_2 = 0;
         int stackIn_25_1 = 0;
@@ -140,24 +140,24 @@ final class ef extends mc {
         RuntimeException var5 = null;
         int var6 = 0;
         try {
-          if ((!(this.field_t instanceof htb) ||
-            ((htb) (this.field_t)).field_x) &&
-            this.field_n == 1) {
+          if ((!(this.child instanceof UiFocusableComponent) ||
+            ((UiFocusableComponent) (this.child)).enabled) &&
+            this.pressedButton == 1) {
             var5_int = -this.field_D + (PlayerGameData.field_b - param1);
             var6 = -this.field_x + uia.field_b - param0;
-            if (this.field_g != var5_int ||
-              this.field_r != var6) {
-              this.field_g = var5_int;
-              this.field_r = var6;
-              if (this.field_l instanceof l) {
-                ((l) (this.field_l)).a(false, param1, param0, this);
+            if (this.x != var5_int ||
+              this.y != var6) {
+              this.x = var5_int;
+              this.y = var6;
+              if (this.listener instanceof l) {
+                ((l) (this.listener)).a(false, param1, param0, this);
               }
             }
           } else {
             if (this.field_B) {
-              if (this.field_w != this.field_g) {
-                var5_int = -this.field_g + this.field_w;
-                stackIn_15_1 = this.field_g;
+              if (this.field_w != this.x) {
+                var5_int = -this.x + this.field_w;
+                stackIn_15_1 = this.x;
                 if (Math.abs(var5_int) <= 2) {
                   if (var5_int <= 0) {
                     stackIn_18_2 = -1;
@@ -167,11 +167,11 @@ final class ef extends mc {
                 } else {
                   stackIn_18_2 = var5_int >> 1;
                 }
-                this.field_g = stackIn_15_1 + stackIn_18_2;
+                this.x = stackIn_15_1 + stackIn_18_2;
               }
-              if (this.field_C != this.field_r) {
-                var5_int = -this.field_r + this.field_C;
-                stackIn_25_1 = this.field_r;
+              if (this.field_C != this.y) {
+                var5_int = -this.y + this.field_C;
+                stackIn_25_1 = this.y;
                 if (Math.abs(var5_int) > 2) {
                   stackIn_26_2 = var5_int >> 1;
                 } else {
@@ -181,11 +181,11 @@ final class ef extends mc {
                     stackIn_26_2 = 1;
                   }
                 }
-                this.field_r = stackIn_25_1 + stackIn_26_2;
+                this.y = stackIn_25_1 + stackIn_26_2;
               }
             }
           }
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -201,12 +201,12 @@ final class ef extends mc {
         }
     }
 
-    final void a(int param0) {
-        super.a(120);
-        this.field_t.a(0, this.field_h, this.field_f, 1, 0);
-        this.field_w = this.field_g;
+    final void refreshChildLayout(int param0) {
+        super.refreshChildLayout(120);
+        this.child.setBounds(0, this.width, this.height, 1, 0);
+        this.field_w = this.x;
         int var2 = -102 / ((param0 + 80) / 42);
-        this.field_C = this.field_r;
+        this.field_C = this.y;
     }
 
     public static void clearSharedReferences(int param0) {

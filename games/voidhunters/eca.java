@@ -8,19 +8,19 @@ abstract class eca extends sc implements en {
 
     final String d(int param0) {
         if (param0 == 16384) {
-          return this.b(this.field_c.field_j, -1);
+          return this.b(this.field_c.text, -1);
         }
         String var3 = (String) null;
         this.a((String) null, -101);
-        return this.b(this.field_c.field_j, -1);
+        return this.b(this.field_c.text, -1);
     }
 
     final qrb b(int param0) {
         if (param0 == -1) {
-          return this.a(this.field_c.field_j, 16384);
+          return this.a(this.field_c.text, 16384);
         }
         field_d = (String) null;
-        return this.a(this.field_c.field_j, 16384);
+        return this.a(this.field_c.text, 16384);
     }
 
     public final void a(uf param0, byte param1) {
@@ -37,15 +37,15 @@ abstract class eca extends sc implements en {
     public final boolean b(byte param0) {
         if (param0 > -100) {
           this.field_c = (uf) null;
-          if (this.field_c.field_j != null) {
-            return this.field_c.field_j.length() == 0 ? true : false;
+          if (this.field_c.text != null) {
+            return this.field_c.text.length() == 0 ? true : false;
           }
           return true;
         }
-        if (this.field_c.field_j == null) {
+        if (this.field_c.text == null) {
           return true;
         }
-        if (this.field_c.field_j.length() != 0) {
+        if (this.field_c.text.length() != 0) {
           return false;
         }
         return true;

@@ -265,8 +265,8 @@ final class uea extends bob {
         }
     }
 
-    public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
-        shb stackIn_3_0 = null;
+    public final void drawComponent(int param0, UiComponent param1, int param2, int param3, boolean param4) {
+        UiComponent stackIn_3_0 = null;
         RuntimeException stackIn_32_0 = null;
         StringBuilder stackIn_32_1 = null;
         String stackIn_33_2 = null;
@@ -275,36 +275,36 @@ final class uea extends bob {
         vv var7 = null;
         int var8 = 0;
         vv var10 = null;
-        htb var11 = null;
+        UiFocusableComponent var11 = null;
         vv var12 = null;
         vv var13 = null;
         vv var14 = null;
         vv var15 = null;
         try {
-          if (param1 instanceof htb) {
-            stackIn_3_0 = (shb) (param1);
+          if (param1 instanceof UiFocusableComponent) {
+            stackIn_3_0 = (UiComponent) (param1);
           } else {
             stackIn_3_0 = null;
           }
-          var11 = (htb) (stackIn_3_0);
-          SelectableIconLabelWidget.a(param1.field_h + param2 + param1.field_g, param3 + param1.field_r + param1.field_f, param2 + param1.field_g, true, param3 + param1.field_r);
+          var11 = (UiFocusableComponent) (stackIn_3_0);
+          SelectableIconLabelWidget.pushClip(param1.width + param2 + param1.x, param3 + param1.y + param1.height, param2 + param1.x, true, param3 + param1.y);
           if (var11 != null) {
-            param4 = param4 & var11.field_x;
+            param4 = param4 & var11.enabled;
           }
           var8 = 14 % ((param0 + 27) / 35);
           var7 = this.field_q[0];
           this.field_r.a(120);
           var7.a(this.field_r, param2, param1, param3, -2879, this);
           if (var11 != null) {
-            if (var11.field_u) {
+            if (var11.active) {
               var12 = this.field_q[1];
               if (var12 != null) {
                 var12.a(this.field_r, param2, param1, param3, -2879, this);
               }
             }
-            if (var11.field_e) {
+            if (var11.hovered) {
               var13 = this.field_q[3];
-              if (var11.field_n != 0 &&
+              if (var11.pressedButton != 0 &&
                 var13 != null) {
                 var13.a(this.field_r, param2, param1, param3, -2879, this);
               } else {
@@ -315,7 +315,7 @@ final class uea extends bob {
               }
             }
           }
-          if (param1.e((byte) -120)) {
+          if (param1.hasFocus((byte) -120)) {
             var14 = this.field_q[5];
             if (var14 != null) {
               var14.a(this.field_r, param2, param1, param3, -2879, this);
@@ -328,7 +328,7 @@ final class uea extends bob {
             }
           }
           this.field_r.a(this, false, param2, param1, param3);
-          bia.a((byte) 124);
+          bia.popRasterState((byte) 124);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

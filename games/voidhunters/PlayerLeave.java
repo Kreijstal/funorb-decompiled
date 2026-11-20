@@ -121,7 +121,7 @@ final class PlayerLeave implements DiffableState {
           if (param1.field_m != null) {
             SetPhasedEnergyBeamPulseFadetime.field_p = param1.field_i;
             rea.field_d = param1.field_n;
-            abb.field_a = param1.field_a;
+            NanosecondClock.field_a = param1.field_a;
             GetSniperCannonAimspeed.field_p = param1.field_m;
           }
           fpb.a(param1, 0);

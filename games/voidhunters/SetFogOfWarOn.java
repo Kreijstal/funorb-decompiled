@@ -267,7 +267,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_point_defence_laser_projectile_damage(" + GetAngularForceDownshift.field_q + ")");
         System.out.println("set_point_defence_laser_projectile_intercept_damage(" + ooa.field_xb + ")");
         System.out.println("set_mass_driver_projectile_ondamage_particles(" + ehb.field_e + ")");
-        System.out.println("set_torpedo_projectile_ondamage_particles(" + mc.field_u + ")");
+        System.out.println("set_torpedo_projectile_ondamage_particles(" + UiSingleChildContainer.field_u + ")");
         System.out.println("set_phased_energy_beam_projectile_ondamage_particles(" + pea.field_b + ")");
         System.out.println("set_sniper_cannon_projectile_ondamage_particles(" + GetShipAimLines.field_p + ")");
         System.out.println("set_bomblet_spray_projectile_ondamage_particles(" + NetworkArchiveRequest.field_o + ")");

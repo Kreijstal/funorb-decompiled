@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pbb implements wwa {
+final class pbb implements UiRenderer {
     static String field_a;
 
-    public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
+    public final void drawComponent(int param0, UiComponent param1, int param2, int param3, boolean param4) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -21,15 +21,15 @@ final class pbb implements wwa {
         int var8Lifetime1;
         var10 = VoidHunters.field_G;
         try {
-          for (var6_int = 0; param1.field_f >= var6_int; var6_int++) {
-            var7 = 152 + 48 * var6_int / param1.field_f;
+          for (var6_int = 0; param1.height >= var6_int; var6_int++) {
+            var7 = 152 + 48 * var6_int / param1.height;
             var8 = var7 | (var7 << 8 | var7 << 16);
-            SoftwareRasterizer2D.drawHorizontalLine(param1.field_g + param2, var6_int + param1.field_r + param3, param1.field_h, var8);
+            SoftwareRasterizer2D.drawHorizontalLine(param1.x + param2, var6_int + param1.y + param3, param1.width, var8);
           }
           for (var6_intLifetime1 = 1; 5 >= var6_intLifetime1; var6_intLifetime1++) {
-            var7Lifetime1 = var6_intLifetime1 - 5 + (param1.field_g + param2 + (param1.field_h - (param1.field_h >> 1)));
-            var8Lifetime1 = -(2 * var6_intLifetime1) + (param1.field_h >> 1);
-            var9 = (param1.field_f - 4 >> 1) + (param3 - (-param1.field_r - var6_intLifetime1));
+            var7Lifetime1 = var6_intLifetime1 - 5 + (param1.x + param2 + (param1.width - (param1.width >> 1)));
+            var8Lifetime1 = -(2 * var6_intLifetime1) + (param1.width >> 1);
+            var9 = (param1.height - 4 >> 1) + (param3 - (-param1.y - var6_intLifetime1));
             if (SoftwareRasterizer2D.clipTop <= var9 &&
               var9 < SoftwareRasterizer2D.clipBottom) {
               if (var7Lifetime1 > SoftwareRasterizer2D.clipLeft) {

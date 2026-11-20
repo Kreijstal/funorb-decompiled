@@ -1107,7 +1107,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
             } else {
               if (param1 != 128) {
                 var4 = 0;
-                var3 = ajb.field_f;
+                var3 = SoftwareRasterState.field_f;
                 var5 = 0;
               } else {
                 var5 = 1;

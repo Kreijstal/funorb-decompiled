@@ -341,11 +341,11 @@ final class vfa {
           SoftwareRasterizer2D.fillRectangleAlpha(0, 0, SoftwareRasterizer2D.width, SoftwareRasterizer2D.height, 0, 192);
         }
         if (param1 == 20637) {
-          qn.field_h.a(0, 0, 0);
+          qn.field_h.draw(0, 0, 0);
           return;
         }
         field_d = (Sprite[]) null;
-        qn.field_h.a(0, 0, 0);
+        qn.field_h.draw(0, 0, 0);
     }
 
     private vfa(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, nka param8) {

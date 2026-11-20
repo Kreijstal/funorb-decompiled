@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ata extends htb {
+final class ata extends UiFocusableComponent {
     int field_J;
     int field_B;
     int field_I;
@@ -45,7 +45,7 @@ final class ata extends htb {
         return stackIn_5_0;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, shb param4, int param5, byte param6) {
+    final boolean handleMousePress(int param0, int param1, int param2, int param3, UiComponent param4, int param5, byte param6) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -60,11 +60,11 @@ final class ata extends htb {
           if (param6 >= -17) {
             this.field_E = 45;
           }
-          if (!super.a(param0, param1, param2, param3, param4, param5, (byte) -99)) {
+          if (!super.handleMousePress(param0, param1, param2, param3, param4, param5, (byte) -99)) {
             return false;
           }
-          var8_int = param0 + (-this.field_g + (-param1 - this.field_J));
-          var9 = param2 + (-this.field_B - this.field_r - param5);
+          var8_int = param0 + (-this.x + (-param1 - this.field_J));
+          var9 = param2 + (-this.field_B - this.y - param5);
           if (this.field_F * this.field_F <= var9 * var9 + var8_int * var8_int) {
             return true;
           }

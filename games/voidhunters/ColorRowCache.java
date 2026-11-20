@@ -101,10 +101,10 @@ final class ColorRowCache {
         RuntimeException decompiledCaughtException = null;
         var2 = VoidHunters.field_G;
         try {
-          GetLagStandardDeviationIn.field_r.a((byte) -5, wua.field_k, MapClearanceArea.field_c, true);
+          GetLagStandardDeviationIn.field_r.processPointerInput((byte) -5, wua.field_k, MapClearanceArea.field_c, true);
           GetLagStandardDeviationIn.field_r.h(19976);
           while (ata.e(127)) {
-            GetLagStandardDeviationIn.field_r.a(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
+            GetLagStandardDeviationIn.field_r.dispatchKey(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
           }
           if (PlayerJoinFactory.field_b != -1) {
             var1_int = PlayerJoinFactory.field_b;

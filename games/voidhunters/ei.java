@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ei implements wwa {
+final class ei implements UiRenderer {
     private int field_b;
     private int field_k;
     private int field_g;
@@ -26,7 +26,7 @@ final class ei implements wwa {
         field_f = null;
     }
 
-    public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
+    public final void drawComponent(int param0, UiComponent param1, int param2, int param3, boolean param4) {
         ata var15 = null;
         int var7 = 0;
         int var8 = 0;
@@ -39,12 +39,12 @@ final class ei implements wwa {
         int var13Lifetime1;
         try {
           var15 = !(param1 instanceof ata) ? null : (ata) (param1);
-          SoftwareRasterizer2D.fillRectangle(param1.field_g + param2, param1.field_r + param3, param1.field_h, param1.field_f, this.field_h);
+          SoftwareRasterizer2D.fillRectangle(param1.x + param2, param1.y + param3, param1.width, param1.height, this.field_h);
           if (var15 != null) {
           }
-          var7 = var15.field_J + param2 + param1.field_g;
+          var7 = var15.field_J + param2 + param1.x;
           int var9 = 127 / ((-27 - param0) / 35);
-          var8 = var15.field_B + (param1.field_r + param3);
+          var8 = var15.field_B + (param1.y + param3);
           SoftwareRasterizer2D.fillCircle(var7, var8, var15.field_F, this.field_m);
           if (var15.field_E != -1) {
             var10 = 3.141592653589793 * (double)var15.field_E * 2.0 / (double)var15.field_I;
@@ -59,7 +59,7 @@ final class ei implements wwa {
           SoftwareRasterizer2D.drawLine(var7, var8, var7 + var12Lifetime1, var8 + var13Lifetime1, 1);
           if (null != this.field_j) {
             var14 = var15.field_J + var15.field_F + this.field_k;
-            this.field_j.drawParagraph(param1.field_j, var14 + param1.field_g + param2, param1.field_r + (param3 + this.field_g), param1.field_h - var14 - this.field_k, -(this.field_k << 1) + param1.field_f, this.field_l, this.field_b, 1, 1, 0);
+            this.field_j.drawParagraph(param1.text, var14 + param1.x + param2, param1.y + (param3 + this.field_g), param1.width - var14 - this.field_k, -(this.field_k << 1) + param1.height, this.field_l, this.field_b, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ei.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');

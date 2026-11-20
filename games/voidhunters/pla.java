@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pla extends htb {
+final class pla extends UiFocusableComponent {
     private int field_B;
     private eeb field_C;
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         Sprite var15 = null;
         Sprite var16 = null;
         Sprite var13 = null;
@@ -15,12 +15,12 @@ final class pla extends htb {
         int var11 = VoidHunters.field_G;
         int var9Lifetime1;
         int var10Lifetime1;
-        super.b(param0, param1, 56, param3);
+        super.drawLayer(param0, param1, 56, param3);
         if (param1 != 0) {
           return;
         }
-        int var5 = param0 - (-this.field_g - (this.field_h >> 1));
-        int var6 = (this.field_f >> 1) + (this.field_r + param3);
+        int var5 = param0 - (-this.x - (this.width >> 1));
+        int var6 = (this.height >> 1) + (this.y + param3);
         if (param2 < 47) {
           return;
         }
@@ -33,7 +33,7 @@ final class pla extends htb {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9, var10);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var15.drawRotatedScaledBilinear(112, 144, var15.paddedWidth << 4, var15.paddedHeight << 4, -this.field_B << 10, 4096);
-            bia.a((byte) 124);
+            bia.popRasterState((byte) 124);
             GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var15.paddedWidth + var5, -var15.paddedHeight + var6, 256);
             return;
           }
@@ -41,7 +41,7 @@ final class pla extends htb {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9, var10);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var15.drawRotatedScaledBilinear(112, 144, var15.paddedWidth << 4, var15.paddedHeight << 4, -this.field_B << 10, 4096);
-            bia.a((byte) 124);
+            bia.popRasterState((byte) 124);
             GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var15.paddedWidth + var5, -var15.paddedHeight + var6, 256);
             return;
           }
@@ -49,14 +49,14 @@ final class pla extends htb {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9, var10);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var15.drawRotatedScaledBilinear(112, 144, var15.paddedWidth << 4, var15.paddedHeight << 4, -this.field_B << 10, 4096);
-            bia.a((byte) 124);
+            bia.popRasterState((byte) 124);
             GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var15.paddedWidth + var5, -var15.paddedHeight + var6, 256);
             return;
           }
           SetTorpedoEnergyUsed.a(85, GetWeaponProjectileSpeedMultiply.field_o);
           SoftwareRasterizer2D.clear();
           var15.drawRotatedScaledBilinear(112, 144, var15.paddedWidth << 4, var15.paddedHeight << 4, -this.field_B << 10, 4096);
-          bia.a((byte) 124);
+          bia.popRasterState((byte) 124);
           GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var15.paddedWidth + var5, -var15.paddedHeight + var6, 256);
           return;
         }
@@ -68,7 +68,7 @@ final class pla extends htb {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var16.drawRotatedScaledBilinear(112, 144, var16.paddedWidth << 4, var16.paddedHeight << 4, -this.field_B << 10, 4096);
-            bia.a((byte) 124);
+            bia.popRasterState((byte) 124);
             GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var16.paddedWidth + var5, -var16.paddedHeight + var6, 256);
             return;
           }
@@ -76,7 +76,7 @@ final class pla extends htb {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var16.drawRotatedScaledBilinear(112, 144, var16.paddedWidth << 4, var16.paddedHeight << 4, -this.field_B << 10, 4096);
-            bia.a((byte) 124);
+            bia.popRasterState((byte) 124);
             GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var16.paddedWidth + var5, -var16.paddedHeight + var6, 256);
             return;
           }
@@ -84,14 +84,14 @@ final class pla extends htb {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var16.drawRotatedScaledBilinear(112, 144, var16.paddedWidth << 4, var16.paddedHeight << 4, -this.field_B << 10, 4096);
-            bia.a((byte) 124);
+            bia.popRasterState((byte) 124);
             GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var16.paddedWidth + var5, -var16.paddedHeight + var6, 256);
             return;
           }
           SetTorpedoEnergyUsed.a(85, GetWeaponProjectileSpeedMultiply.field_o);
           SoftwareRasterizer2D.clear();
           var16.drawRotatedScaledBilinear(112, 144, var16.paddedWidth << 4, var16.paddedHeight << 4, -this.field_B << 10, 4096);
-          bia.a((byte) 124);
+          bia.popRasterState((byte) 124);
           GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var16.paddedWidth + var5, -var16.paddedHeight + var6, 256);
           return;
         }
@@ -116,8 +116,8 @@ final class pla extends htb {
         GetSpinningBladeAimspeed.field_q = param0;
     }
 
-    final String d(byte param0) {
-        if (this.field_e) {
+    final String getTooltip(byte param0) {
+        if (this.hovered) {
           return this.field_C.c((byte) -79);
         }
         if (param0 == 125) {
@@ -126,7 +126,7 @@ final class pla extends htb {
         return (String) null;
     }
 
-    final boolean a(int param0, shb param1) {
+    final boolean requestFocus(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -151,10 +151,10 @@ final class pla extends htb {
         }
     }
 
-    final void a(int param0, int param1, int param2, shb param3) {
+    final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         try {
           this.field_B = this.field_B + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pla.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

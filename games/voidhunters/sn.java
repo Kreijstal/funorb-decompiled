@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sn extends os implements oo {
+final class sn extends os implements UiActionListener {
     static boolean field_Y;
     private boolean field_ab;
     private boolean field_Z;
     private rq field_X;
 
-    public final void a(int param0, int param1, int param2, htb param3, int param4) {
+    public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         if (this.field_ab) {
           WaterTextures.a(false, true, false);
           return;
@@ -102,10 +102,10 @@ final class sn extends os implements oo {
               this.b(new w(this), -99);
               return;
             }
-            var5.a((byte) 107, tn.field_b, (sba) (this));
+            var5.a((byte) 107, tn.field_b, (UiListener) (this));
           } else {
             if (this.field_ab) {
-              var5.a((byte) 98, tn.field_b, (sba) (this));
+              var5.a((byte) 98, tn.field_b, (UiListener) (this));
             } else {
               if (param2.field_d == 5) {
                 var5.a(-128, fma.field_c, 11);

@@ -1,43 +1,43 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bk extends mc {
+final class bk extends UiSingleChildContainer {
     static IsaacPacketBuffer field_w;
     static PrimitiveType field_v;
 
-    final void a(int param0) {
+    final void refreshChildLayout(int param0) {
         int var2 = 43 / ((-80 - param0) / 42);
-        this.field_t.a(false);
+        this.child.refreshLayout(false);
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         if (param1 == 0) {
-          if (null == this.field_q) {
+          if (null == this.renderer) {
             if (param2 < 47) {
               return;
             }
-            if (this.field_h == 0) {
+            if (this.width == 0) {
               return;
             }
-            if (this.field_f != 0) {
-              GetDebrisMax.field_s.a(this.field_r + param3 + this.field_f, (byte) 123, this.field_h + this.field_g + param0, param3 + this.field_r, param0 + this.field_g);
-              this.field_t.b(param0 + this.field_g, param1, 63, param3 + this.field_r);
+            if (this.height != 0) {
+              GetDebrisMax.field_s.a(this.y + param3 + this.height, (byte) 123, this.width + this.x + param0, param3 + this.y, param0 + this.x);
+              this.child.drawLayer(param0 + this.x, param1, 63, param3 + this.y);
               GetDebrisMax.field_s.a((byte) 92);
               return;
             }
             return;
           }
-          this.field_q.a(92, (shb) (this), param0, param3, true);
+          this.renderer.drawComponent(92, (UiComponent) (this), param0, param3, true);
         }
         if (param2 < 47) {
           return;
         }
-        if (this.field_h == 0) {
+        if (this.width == 0) {
           return;
         }
-        if (this.field_f != 0) {
-          GetDebrisMax.field_s.a(this.field_r + param3 + this.field_f, (byte) 123, this.field_h + this.field_g + param0, param3 + this.field_r, param0 + this.field_g);
-          this.field_t.b(param0 + this.field_g, param1, 63, param3 + this.field_r);
+        if (this.height != 0) {
+          GetDebrisMax.field_s.a(this.y + param3 + this.height, (byte) 123, this.width + this.x + param0, param3 + this.y, param0 + this.x);
+          this.child.drawLayer(param0 + this.x, param1, 63, param3 + this.y);
           GetDebrisMax.field_s.a((byte) 92);
           return;
         }
@@ -53,7 +53,7 @@ final class bk extends mc {
         field_w = null;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, shb param4, int param5, byte param6) {
+    final boolean handleMousePress(int param0, int param1, int param2, int param3, UiComponent param4, int param5, byte param6) {
         RuntimeException var8 = null;
         boolean stackIn_6_0 = false;
         RuntimeException stackIn_9_0 = null;
@@ -62,9 +62,9 @@ final class bk extends mc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param6 >= -17) {
-            this.b(90, -56, -39, 108);
+            this.drawLayer(90, -56, -39, 108);
           }
-          stackIn_6_0 = (this.a(param2, param1, param0, param5, (byte) 22)) && (super.a(param0, param1, param2, param3, param4, param5, (byte) -123));
+          stackIn_6_0 = (this.containsPoint(param2, param1, param0, param5, (byte) 22)) && (super.handleMousePress(param0, param1, param2, param3, param4, param5, (byte) -123));
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -80,10 +80,10 @@ final class bk extends mc {
         }
     }
 
-    bk(int param0, int param1, int param2, int param3, wwa param4, shb param5) {
-        super(param0, param1, param2, param3, param4, (sba) null);
+    bk(int param0, int param1, int param2, int param3, UiRenderer param4, UiComponent param5) {
+        super(param0, param1, param2, param3, param4, (UiListener) null);
         try {
-          this.field_t = param5;
+          this.child = param5;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bk.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

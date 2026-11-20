@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetPlayerRepairTime extends ConsoleCommand {
-    static IntrusiveDeque field_p;
+    static IntrusiveDeque rasterStatePool;
     static byte[] field_o;
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 8) {
-          field_p = (IntrusiveDeque) null;
-          field_p = null;
+          rasterStatePool = (IntrusiveDeque) null;
+          rasterStatePool = null;
           field_o = null;
           return;
         }
-        field_p = null;
+        rasterStatePool = null;
         field_o = null;
     }
 
@@ -84,6 +84,6 @@ final class GetPlayerRepairTime extends ConsoleCommand {
     }
 
     static {
-        field_p = new IntrusiveDeque();
+        rasterStatePool = new IntrusiveDeque();
     }
 }

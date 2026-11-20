@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class mu extends htb {
-    private shb field_B;
+class mu extends UiFocusableComponent {
+    private UiComponent field_B;
 
     final static String a(int param0, int param1) {
         if (param0 != -18879) {
@@ -11,9 +11,9 @@ class mu extends htb {
         return Integer.toHexString(param1);
     }
 
-    final boolean a(int param0, shb param1) {
+    final boolean requestFocus(int param0, UiComponent param1) {
         RuntimeException var3 = null;
-        shb var4 = null;
+        UiComponent var4 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -21,10 +21,10 @@ class mu extends htb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            var4 = (shb) null;
-            this.a(107, (shb) null);
+            var4 = (UiComponent) null;
+            this.requestFocus(107, (UiComponent) null);
           }
-          stackIn_3_0 = this.field_B.a(param0 ^ 0, param1);
+          stackIn_3_0 = this.field_B.requestFocus(param0 ^ 0, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -40,7 +40,7 @@ class mu extends htb {
         }
     }
 
-    mu(shb param0) {
+    mu(UiComponent param0) {
         try {
           this.field_B = param0;
         } catch (RuntimeException runtimeException) {

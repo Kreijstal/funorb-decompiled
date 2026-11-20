@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pia extends oda implements oo {
+final class pia extends UiArrayContainer implements UiActionListener {
     private ita field_v;
-    private htb field_w;
+    private UiFocusableComponent field_w;
     static GpuProjectionMode field_x;
 
     public static void clearSharedReferences(int param0) {
@@ -14,41 +14,41 @@ final class pia extends oda implements oo {
     final void d(int param0) {
         int var2 = 250;
         if (param0 == 16777215) {
-          this.field_v.a(-var2 + this.field_h >> 1, 140, 25, param0 - 16777214, this.field_f + 20 - 25 >> 1);
-          this.field_w.a((-var2 + this.field_h >> 1) + 150, 100, 30, 1, (20 + (this.field_f - 30) >> 1) + 2);
+          this.field_v.setBounds(-var2 + this.width >> 1, 140, 25, param0 - 16777214, this.height + 20 - 25 >> 1);
+          this.field_w.setBounds((-var2 + this.width >> 1) + 150, 100, 30, 1, (20 + (this.height - 30) >> 1) + 2);
           return;
         }
     }
 
-    final void a(int param0, int param1, int param2, shb param3) {
+    final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         try {
-          super.a(param0, param1, param2, param3);
-          this.field_w.field_x = this.field_v.a(param2 ^ 782443887).a((byte) 35) == GetShipPersistence.field_o ? true : false;
+          super.updatePointer(param0, param1, param2, param3);
+          this.field_w.enabled = this.field_v.a(param2 ^ 782443887).a((byte) 35) == GetShipPersistence.field_o ? true : false;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pia.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
     pia(int param0, int param1, int param2, int param3) {
-        super(param0, param1, param2, param3, (wwa) null);
+        super(param0, param1, param2, param3, (UiRenderer) null);
         this.field_v = new ita(new io(10000536), SetMissilesHitSourceTeam.field_p, 0, 0, 140, 25);
         this.field_v.a(99, new wta());
-        this.field_w = new htb(tn.field_b, (sba) (this));
-        this.field_u = new shb[]{(shb) ((Object) this.field_v), (shb) ((Object) this.field_w)};
-        this.field_w.field_q = (wwa) ((Object) new vva());
-        this.a(false);
+        this.field_w = new UiFocusableComponent(tn.field_b, (UiListener) (this));
+        this.children = new UiComponent[]{(UiComponent) ((Object) this.field_v), (UiComponent) ((Object) this.field_w)};
+        this.field_w.renderer = (UiRenderer) ((Object) new vva());
+        this.refreshLayout(false);
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
-        super.b(param0, param1, 80, param3);
-        SetTorpedoProjectileLife.field_o.draw(pea.field_c, 4 + (param0 + this.field_g), 4 + param3 + (this.field_r + SetTorpedoProjectileLife.field_o.maxAscent), 16777215, -1);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1, 80, param3);
+        SetTorpedoProjectileLife.field_o.draw(pea.field_c, 4 + (param0 + this.x), 4 + param3 + (this.y + SetTorpedoProjectileLife.field_o.maxAscent), 16777215, -1);
         if (param2 < 47) {
-          htb var6 = (htb) null;
-          this.a(46, -102, -40, (htb) null, -107);
+          UiFocusableComponent var6 = (UiFocusableComponent) null;
+          this.onAction(46, -102, -40, (UiFocusableComponent) null, -107);
         }
     }
 
-    public final void a(int param0, int param1, int param2, htb param3, int param4) {
+    public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         if (param0 != 11) {
           this.field_v = (ita) null;
         }

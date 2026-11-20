@@ -1,27 +1,27 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rcb extends dqa implements oo {
-    private htb[] field_v;
+final class rcb extends UiContainer implements UiActionListener {
+    private UiFocusableComponent[] field_v;
     private jpb field_x;
     private String[] field_w;
 
-    final void b(int param0, int param1, int param2, int param3) {
-        super.b(param0, param1, 96, param3);
+    final void drawLayer(int param0, int param1, int param2, int param3) {
+        super.drawLayer(param0, param1, 96, param3);
         if (param2 < 47) {
-          htb var6 = (htb) null;
-          this.a(47, 33, 22, (htb) null, 15);
+          UiFocusableComponent var6 = (UiFocusableComponent) null;
+          this.onAction(47, 33, 22, (UiFocusableComponent) null, 15);
         }
         if (param1 != 0) {
           return;
         }
         BitmapFont var5 = SetShipToShipRamDamage.field_o;
         if (null != this.field_w) {
-          var5.drawParagraph(SetShipTeamAction.field_a, this.field_g + param0, this.field_r + param3, this.field_h, 20, 16777215, -1, 0, 0, var5.maxAscent + var5.maxDescent);
+          var5.drawParagraph(SetShipTeamAction.field_a, this.x + param0, this.y + param3, this.width, 20, 16777215, -1, 0, 0, var5.maxAscent + var5.maxDescent);
         }
     }
 
-    public final void a(int param0, int param1, int param2, htb param3, int param4) {
+    public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         int var6_int = 0;
         int var7 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -70,7 +70,7 @@ final class rcb extends dqa implements oo {
         int var6 = 0;
         var6 = VoidHunters.field_G;
         try {
-          this.field_t.clear(101);
+          this.children.clear(101);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;
@@ -79,18 +79,18 @@ final class rcb extends dqa implements oo {
               this.field_w[var4_int] = joa.a((CharSequence) ((Object) param0[var4_int]), false).replace(' ', ' ');
             }
             var4 = new meb(SetShipToShipRamDamage.field_o, param1, 1);
-            this.field_v = new htb[1 + var3_int];
+            this.field_v = new UiFocusableComponent[1 + var3_int];
             for (var5 = 0; var5 < var3_int; var5++) {
-              this.field_v[var5] = new htb(this.field_w[var5], (sba) (this));
-              this.field_v[var5].field_q = (wwa) ((Object) var4);
-              this.field_v[var5].field_p = OpenGlRenderbuffer.field_p;
-              this.field_v[var5].a(0, 80, 15, 1, var5 * 16 + 20);
-              this.b(-18756, this.field_v[var5]);
+              this.field_v[var5] = new UiFocusableComponent(this.field_w[var5], (UiListener) (this));
+              this.field_v[var5].renderer = (UiRenderer) ((Object) var4);
+              this.field_v[var5].tooltip = OpenGlRenderbuffer.field_p;
+              this.field_v[var5].setBounds(0, 80, 15, 1, var5 * 16 + 20);
+              this.addChild(-18756, this.field_v[var5]);
             }
-            this.field_v[var3_int] = new htb(GetPointDefenceLaserRandomness.field_o, (sba) (this));
-            this.field_v[var3_int].field_q = (wwa) ((Object) var4);
-            this.field_v[var3_int].a(0, 100, 15, 1, 16 + var3_int * 16 + 20);
-            this.b(-18756, this.field_v[var3_int]);
+            this.field_v[var3_int] = new UiFocusableComponent(GetPointDefenceLaserRandomness.field_o, (UiListener) (this));
+            this.field_v[var3_int].renderer = (UiRenderer) ((Object) var4);
+            this.field_v[var3_int].setBounds(0, 100, 15, 1, 16 + var3_int * 16 + 20);
+            this.addChild(-18756, this.field_v[var3_int]);
             return;
           }
           this.field_w = null;
@@ -110,7 +110,7 @@ final class rcb extends dqa implements oo {
     }
 
     rcb(jpb param0) {
-        super(0, 0, 0, 0, (wwa) null);
+        super(0, 0, 0, 0, (UiRenderer) null);
         try {
           this.field_x = param0;
         } catch (RuntimeException runtimeException) {
@@ -118,7 +118,7 @@ final class rcb extends dqa implements oo {
         }
     }
 
-    final boolean a(int param0, int param1, shb param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_5_0 = false;
         boolean stackIn_9_0 = false;
@@ -127,17 +127,17 @@ final class rcb extends dqa implements oo {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0, param1, param2, param3)) {
+          if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
           if (98 == param1) {
-            stackIn_5_0 = this.a(param2, param0 + 15834);
+            stackIn_5_0 = this.focusPreviousChild(param2, param0 + 15834);
             return stackIn_5_0;
           }
           if (99 != param1) {
             return false;
           }
-          stackIn_9_0 = this.a(true, param2);
+          stackIn_9_0 = this.focusNextChild(true, param2);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

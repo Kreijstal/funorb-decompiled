@@ -30,7 +30,7 @@ final class vqa extends eca {
           if (param1 != 16384) {
             field_k = -96;
           }
-          if (param0.equals(this.field_h.field_j)) {
+          if (param0.equals(this.field_h.text)) {
             stackIn_12_0 = GetShipPersistence.field_o;
           } else {
             stackIn_12_0 = SetArmageddonLength.field_o;
@@ -66,7 +66,7 @@ final class vqa extends eca {
             var3 = ((lca) ((Object) this.field_h)).a(-782444220);
             if (var3 != null) {
               if (var3.a((byte) 35) == GetShipPersistence.field_o &&
-                !param0.equals(this.field_h.field_j)) {
+                !param0.equals(this.field_h.text)) {
                 stackIn_6_0 = lmb.field_a;
                 return stackIn_6_0;
               }
@@ -74,7 +74,7 @@ final class vqa extends eca {
               return stackIn_8_0;
             }
           }
-          if (!param0.equals(this.field_h.field_j)) {
+          if (!param0.equals(this.field_h.text)) {
             stackIn_11_0 = lmb.field_a;
             return stackIn_11_0;
           }

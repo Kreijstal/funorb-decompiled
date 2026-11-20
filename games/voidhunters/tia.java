@@ -22,23 +22,23 @@ final class tia extends mu {
         field_K = null;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, byte param4) {
+    final boolean containsPoint(int param0, int param1, int param2, int param3, byte param4) {
         this.field_D = -1;
         if (!this.field_F.field_H) {
           return false;
         }
-        if (!this.field_F.field_G.field_y.field_e) {
+        if (!this.field_F.field_G.field_y.hovered) {
           return false;
         }
         if (this.field_L == null) {
-          return super.a(param0, param1, param2, param3, (byte) 22);
+          return super.containsPoint(param0, param1, param2, param3, (byte) 22);
         }
-        param0 = param0 - (this.field_r + param3);
-        param2 = param2 - (param1 + this.field_g);
+        param0 = param0 - (this.y + param3);
+        param2 = param2 - (param1 + this.x);
         if (param2 >= 0 &&
           0 <= param0 &&
-          param2 <= this.field_h &&
-          this.field_f >= param0) {
+          param2 <= this.width &&
+          this.height >= param0) {
           if (param4 != 22) {
             ((byte[]) (((Object[]) (this.field_L[16]))[0]))[25] = (byte) 98;
           }
@@ -52,11 +52,11 @@ final class tia extends mu {
         return false;
     }
 
-    final void c(int param0, int param1, int param2, int param3) {
+    final void fireAction(int param0, int param1, int param2, int param3) {
         int var5 = 0;
-        super.c(param0, param1, param2, param3);
-        param3 = param3 - this.field_r;
-        param1 = param1 - this.field_g;
+        super.fireAction(param0, param1, param2, param3);
+        param3 = param3 - this.y;
+        param1 = param1 - this.x;
         if (null != this.field_L) {
           var5 = param3 / this.field_I;
           if (var5 >= 0 &&
@@ -67,7 +67,7 @@ final class tia extends mu {
         }
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var8 = 0;
         Object var9 = null;
         String var10 = null;
@@ -75,9 +75,9 @@ final class tia extends mu {
         if (param1 != 0) {
           return;
         }
-        int var5 = this.field_g + param0;
-        int var6 = this.field_r + param3;
-        SoftwareRasterizer2D.fillRectangle(var5, var6, this.field_h, this.field_f, 0);
+        int var5 = this.x + param0;
+        int var6 = this.y + param3;
+        SoftwareRasterizer2D.fillRectangle(var5, var6, this.width, this.height, 0);
         if (param2 <= 47) {
           return;
         }
@@ -90,7 +90,7 @@ final class tia extends mu {
             var9 = this.field_L[var8];
             var10 = var9.toString();
             if (var8 == var7) {
-              SoftwareRasterizer2D.fillRectangleAlpha(2 + var5, var6 + 4, this.field_h - 4, this.field_I, 2188450, 128);
+              SoftwareRasterizer2D.fillRectangleAlpha(2 + var5, var6 + 4, this.width - 4, this.field_I, 2188450, 128);
             }
             var6 = var6 + this.field_I;
             this.field_E.draw(var10, 2 + var5, var6, 10000536, -1);
@@ -127,7 +127,7 @@ final class tia extends mu {
     final Object g(byte param0) {
         Object stackIn_7_0 = null;
         if (param0 != 96) {
-          this.b(-103, 101, 5, -59);
+          this.drawLayer(-103, 101, 5, -59);
         }
         if (null != this.field_L &&
           -1 != this.field_H) {

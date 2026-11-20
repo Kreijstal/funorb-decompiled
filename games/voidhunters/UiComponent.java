@@ -3,25 +3,25 @@
  */
 import java.util.*;
 
-class shb extends IntrusiveNode {
+class UiComponent extends IntrusiveNode {
     int field_i;
-    String field_p;
+    String tooltip;
     static byte[] field_o;
-    int field_h;
-    boolean field_e;
+    int width;
+    boolean hovered;
     static String field_m;
     static int field_k;
-    int field_f;
-    sba field_l;
-    wwa field_q;
+    int height;
+    UiListener listener;
+    UiRenderer renderer;
     ar field_d;
-    int field_n;
-    int field_r;
-    int field_g;
-    String field_j;
+    int pressedButton;
+    int y;
+    int x;
+    String text;
     int field_s;
 
-    boolean a(int param0, int param1, shb param2, char param3) {
+    boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -46,14 +46,14 @@ class shb extends IntrusiveNode {
         }
     }
 
-    String d(byte param0) {
+    String getTooltip(byte param0) {
         if (param0 != 125) {
-          this.field_f = -57;
+          this.height = -57;
         }
-        return !this.field_e ? null : this.field_p;
+        return !this.hovered ? null : this.tooltip;
     }
 
-    final boolean a(Hashtable param0, int param1, byte param2, StringBuilder param3) {
+    final boolean beginDebugVisit(Hashtable param0, int param1, byte param2, StringBuilder param3) {
         StringBuilder discarded$1 = null;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -91,7 +91,7 @@ class shb extends IntrusiveNode {
         }
     }
 
-    void a(int param0, int param1, int param2, shb param3) {
+    void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         int var5_int = 0;
         int stackIn_5_0 = 0;
         int stackIn_8_1 = 0;
@@ -102,11 +102,11 @@ class shb extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.a(uia.field_b, param1, PlayerGameData.field_b, param0, (byte) 22) ? 1 : 0;
+          var5_int = this.containsPoint(uia.field_b, param1, PlayerGameData.field_b, param0, (byte) 22) ? 1 : 0;
           if (param2 != -981) {
-            this.field_e = true;
+            this.hovered = true;
           }
-          stackIn_5_0 = (this.field_e) ? 0 : 1;
+          stackIn_5_0 = (this.hovered) ? 0 : 1;
           if (var5_int != 0) {
             stackIn_8_1 = 0;
           } else {
@@ -114,12 +114,12 @@ class shb extends IntrusiveNode {
           }
           if (stackIn_5_0 != stackIn_8_1) {
             stackIn_13_1 = (var5_int != 0);
-            this.field_e = stackIn_13_1;
-            if (this.field_l != null) {
-              if (!(this.field_l instanceof cfb)) {
+            this.hovered = stackIn_13_1;
+            if (this.listener != null) {
+              if (!(this.listener instanceof UiHoverListener)) {
                 return;
               }
-              ((cfb) (this.field_l)).a(var5_int != 0, -18572, this);
+              ((UiHoverListener) (this.listener)).onHoverChanged(var5_int != 0, -18572, this);
             }
           }
           return;
@@ -137,14 +137,14 @@ class shb extends IntrusiveNode {
         }
     }
 
-    final void a(boolean param0) {
+    final void refreshLayout(boolean param0) {
         if (param0) {
           this.field_s = 85;
         }
-        this.a(this.field_g, this.field_h, this.field_f, 1, this.field_r);
+        this.setBounds(this.x, this.width, this.height, 1, this.y);
     }
 
-    boolean a(int param0, int param1, int param2, int param3, shb param4, int param5, byte param6) {
+    boolean handleMousePress(int param0, int param1, int param2, int param3, UiComponent param4, int param5, byte param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -154,10 +154,10 @@ class shb extends IntrusiveNode {
           if (param6 >= -17) {
             return true;
           }
-          if (!this.a(param2, param1, param0, param5, (byte) 22)) {
+          if (!this.containsPoint(param2, param1, param0, param5, (byte) 22)) {
             return false;
           }
-          this.field_n = param3;
+          this.pressedButton = param3;
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -173,43 +173,43 @@ class shb extends IntrusiveNode {
         }
     }
 
-    void b(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         if (param2 < 47) {
           this.toString();
         }
         if (param1 == 0 &&
-          this.field_q != null) {
-          this.field_q.a(95, this, param0, param3, true);
+          this.renderer != null) {
+          this.renderer.drawComponent(95, this, param0, param3, true);
         }
     }
 
-    void a(byte param0, int param1, int param2, int param3, shb param4, int param5) {
+    void handleMouseRelease(byte param0, int param1, int param2, int param3, UiComponent param4, int param5) {
         try {
           int var7_int = -47 % ((52 - param0) / 52);
-          this.field_n = 0;
+          this.pressedButton = 0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "shb.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 
-    boolean a(int param0, int param1, int param2, int param3, byte param4) {
+    boolean containsPoint(int param0, int param1, int param2, int param3, byte param4) {
         boolean stackIn_8_0 = false;
         if (param4 != 22) {
           this.field_s = -9;
         }
-        stackIn_8_0 = (param2 >= param1 + this.field_g) && (param0 >= this.field_r + param3) && (param2 < this.field_h + this.field_g + param1) && (param0 < param3 - (-this.field_r - this.field_f));
+        stackIn_8_0 = (param2 >= param1 + this.x) && (param0 >= this.y + param3) && (param2 < this.width + this.x + param1) && (param0 < param3 - (-this.y - this.height));
         return stackIn_8_0;
     }
 
-    void f(byte param0) {
+    void clearFocus(byte param0) {
         if (param0 != -34) {
           field_m = (String) null;
         }
     }
 
-    boolean e(byte param0) {
+    boolean hasFocus(byte param0) {
         if (param0 != -120) {
-          this.a(82, -5, -122, (shb) null, 99, 29, -31);
+          this.handleMouseWheel(82, -5, -122, (UiComponent) null, 99, 29, -31);
           return false;
         }
         return false;
@@ -223,7 +223,7 @@ class shb extends IntrusiveNode {
         field_m = null;
     }
 
-    boolean a(int param0, int param1, int param2, shb param3, int param4, int param5, int param6) {
+    boolean handleMouseWheel(int param0, int param1, int param2, UiComponent param3, int param4, int param5, int param6) {
         RuntimeException var8 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -231,7 +231,7 @@ class shb extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -6006) {
-            this.a(false);
+            this.refreshLayout(false);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -248,26 +248,26 @@ class shb extends IntrusiveNode {
         }
     }
 
-    void a(int param0, int param1, int param2, int param3, int param4) {
-        this.field_r = param4;
-        this.field_f = param2;
-        this.field_g = param0;
+    void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        this.y = param4;
+        this.height = param2;
+        this.x = param0;
         if (param3 != 1) {
-          this.a(123, 5, 45, (shb) null);
+          this.updatePointer(123, 5, 45, (UiComponent) null);
         }
-        this.field_h = param1;
+        this.width = param1;
     }
 
-    shb(String param0, sba param1) {
+    UiComponent(String param0, UiListener param1) {
         this(param0, GetDebrisMax.field_s.field_n, param1);
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void draw(int param0, int param1, int param2) {
         int var5_int = 0;
         int var6 = VoidHunters.field_G;
-        int var4 = this.c(param0 ^ 0);
+        int var4 = this.getMaxDrawLayer(param0 ^ 0);
         for (var5_int = param0; var5_int <= var4; var5_int++) {
-          this.b(param2, var5_int, param0 + 93, param1);
+          this.drawLayer(param2, var5_int, param0 + 93, param1);
         }
         String var5 = rm.d((byte) 106);
         if (var5 != null) {
@@ -275,7 +275,7 @@ class shb extends IntrusiveNode {
         }
     }
 
-    boolean a(int param0, shb param1) {
+    boolean requestFocus(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -285,7 +285,7 @@ class shb extends IntrusiveNode {
           if (param0 == 0) {
             return false;
           }
-          this.a(true, (Hashtable) null, -65, (StringBuilder) null);
+          this.appendDebugTree(true, (Hashtable) null, -65, (StringBuilder) null);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -301,7 +301,7 @@ class shb extends IntrusiveNode {
         }
     }
 
-    StringBuilder a(boolean param0, Hashtable param1, int param2, StringBuilder param3) {
+    StringBuilder appendDebugTree(boolean param0, Hashtable param1, int param2, StringBuilder param3) {
         RuntimeException var5 = null;
         StringBuilder stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
@@ -311,11 +311,11 @@ class shb extends IntrusiveNode {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param1, param2, (byte) 122, param3)) {
-            this.a(95, param2, param1, param3);
+          if (this.beginDebugVisit(param1, param2, (byte) 122, param3)) {
+            this.appendDebugProperties(95, param2, param1, param3);
           }
           if (param0) {
-            this.c(103);
+            this.getMaxDrawLayer(103);
           }
           stackIn_6_0 = (StringBuilder) (param3);
           return stackIn_6_0;
@@ -339,35 +339,35 @@ class shb extends IntrusiveNode {
         }
     }
 
-    int c(int param0) {
+    int getMaxDrawLayer(int param0) {
         if (param0 != 0) {
-          this.a((Hashtable) null, -120, (byte) 105, (StringBuilder) null);
+          this.beginDebugVisit((Hashtable) null, -120, (byte) 105, (StringBuilder) null);
           return 0;
         }
         return 0;
     }
 
-    final boolean a(int param0, int param1, char param2) {
-        if (this.e((byte) -120) &&
-          this.a(-15834, param1, this, param2)) {
+    final boolean dispatchKey(int param0, int param1, char param2) {
+        if (this.hasFocus((byte) -120) &&
+          this.handleKey(-15834, param1, this, param2)) {
           return true;
         }
         int var4 = param1;
         if (var4 == 80) {
-          return this.a(param0 ^ -9445, this);
+          return this.requestFocus(param0 ^ -9445, this);
         }
         if (param0 != -9445) {
-          this.a((byte) 31, 104, -76, false);
+          this.processPointerInput((byte) 31, 104, -76, false);
           return false;
         }
         return false;
     }
 
     public final String toString() {
-        return this.a(false, new Hashtable(), 0, new StringBuilder()).toString();
+        return this.appendDebugTree(false, new Hashtable(), 0, new StringBuilder()).toString();
     }
 
-    final void a(int param0, int param1, Hashtable param2, StringBuilder param3) {
+    final void appendDebugProperties(int param0, int param1, Hashtable param2, StringBuilder param3) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -386,33 +386,33 @@ class shb extends IntrusiveNode {
         int var6 = 0;
         var6 = VoidHunters.field_G;
         try {
-          discarded$0 = param3.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.field_g).append(",").append(this.field_r).append(" ").append(this.field_h).append("x").append(this.field_f);
-          if (null != this.field_j) {
-            discarded$1 = param3.append(" text=\"").append(this.field_j).append('"');
+          discarded$0 = param3.append(this.getClass().getName()).append("[0x").append(Integer.toHexString(this.hashCode())).append("] @").append(this.x).append(",").append(this.y).append(" ").append(this.width).append("x").append(this.height);
+          if (null != this.text) {
+            discarded$1 = param3.append(" text=\"").append(this.text).append('"');
           }
-          if (this.field_e) {
+          if (this.hovered) {
             discarded$2 = param3.append(" mouseover");
           }
-          if (this.e((byte) -120)) {
+          if (this.hasFocus((byte) -120)) {
             discarded$3 = param3.append(" focused");
           }
-          if (null != this.field_q) {
+          if (null != this.renderer) {
             discarded$4 = param3.append(" renderer=");
-            if (!(this.field_q instanceof shb)) {
-              discarded$5 = param3.append(this.field_q);
+            if (!(this.renderer instanceof UiComponent)) {
+              discarded$5 = param3.append(this.renderer);
             } else {
-              param3 = this.a(false, param2, 1 + param1, param3);
+              param3 = this.appendDebugTree(false, param2, 1 + param1, param3);
             }
           }
           if (param0 < 59) {
-            this.a(-49, 49, 80, 34, (byte) -121);
+            this.containsPoint(-49, 49, 80, 34, (byte) -121);
           }
-          if (this.field_l != null) {
+          if (this.listener != null) {
             discarded$6 = param3.append(" listener=");
-            if (!(this.field_l instanceof shb)) {
-              discarded$7 = param3.append(this.field_l);
+            if (!(this.listener instanceof UiComponent)) {
+              discarded$7 = param3.append(this.listener);
             } else {
-              param3 = this.a(false, param2, 1 + param1, param3);
+              param3 = this.appendDebugTree(false, param2, 1 + param1, param3);
             }
           }
           return;
@@ -436,22 +436,22 @@ class shb extends IntrusiveNode {
         }
     }
 
-    final boolean a(byte param0, int param1, int param2, boolean param3) {
+    final boolean processPointerInput(byte param0, int param1, int param2, boolean param3) {
         int var5;
         ef var6;
         int var7;
         var7 = VoidHunters.field_G;
-        this.a(param2, param1, -981, this);
-        var5 = this.e((byte) -120) ? 1 : 0;
+        this.updatePointer(param2, param1, -981, this);
+        var5 = this.hasFocus((byte) -120) ? 1 : 0;
         if (param3) {
           if (GetPointDefenceLaserPulsetime.field_o != 0 &&
             var5 != 0) {
-            this.a(param1, -6006, GetPointDefenceLaserPulsetime.field_o, this, PlayerGameData.field_b, param2, uia.field_b);
+            this.handleMouseWheel(param1, -6006, GetPointDefenceLaserPulsetime.field_o, this, PlayerGameData.field_b, param2, uia.field_b);
           }
           if (SetDebrisPartitioned.field_o != 0) {
-            if (!this.a(Particle.field_H, param1, qs.field_a, SetDebrisPartitioned.field_o, this, param2, (byte) -105)) {
+            if (!this.handleMousePress(Particle.field_H, param1, qs.field_a, SetDebrisPartitioned.field_o, this, param2, (byte) -105)) {
               if (var5 != 0) {
-                this.f((byte) -34);
+                this.clearFocus((byte) -34);
               }
             } else {
               param3 = false;
@@ -459,11 +459,11 @@ class shb extends IntrusiveNode {
           }
           if (hu.field_b == 0 &&
             jw.field_b != 0) {
-            this.a((byte) 118, param1, uia.field_b, param2, this, PlayerGameData.field_b);
+            this.handleMouseRelease((byte) 118, param1, uia.field_b, param2, this, PlayerGameData.field_b);
             var6 = SetBombletSprayRandomness.field_p;
             if (var6 != null) {
-              if (var6.field_l instanceof ol) {
-                ((ol) (var6.field_l)).a((byte) -70, var6, (gga) null);
+              if (var6.listener instanceof ol) {
+                ((ol) (var6.listener)).a((byte) -70, var6, (gga) null);
               }
               SetBombletSprayRandomness.field_p = null;
             }
@@ -471,50 +471,50 @@ class shb extends IntrusiveNode {
         } else {
           if (var5 != 0 &&
             SetDebrisPartitioned.field_o != 0) {
-            this.f((byte) -34);
+            this.clearFocus((byte) -34);
           }
         }
         if (param0 != -5) {
-          this.a(-58, -39, -116);
+          this.draw(-58, -39, -116);
         }
         jw.field_b = hu.field_b;
-        uf.a(this.d((byte) 125), 5757);
+        uf.a(this.getTooltip((byte) 125), 5757);
         return param3;
     }
 
-    protected shb() {
+    protected UiComponent() {
         this.field_i = 0;
         this.field_s = 0;
     }
 
-    shb(String param0, wwa param1, sba param2) {
+    UiComponent(String param0, UiRenderer param1, UiListener param2) {
         at var4 = null;
         this.field_i = 0;
         this.field_s = 0;
         try {
-          this.field_l = param2;
-          this.field_j = param0;
-          this.field_q = param1;
-          if (this.field_q instanceof at) {
-            var4 = (at) ((Object) this.field_q);
-            this.field_h = var4.a(-2, this);
-            this.field_f = var4.a(this, (byte) 66);
+          this.listener = param2;
+          this.text = param0;
+          this.renderer = param1;
+          if (this.renderer instanceof at) {
+            var4 = (at) ((Object) this.renderer);
+            this.width = var4.a(-2, this);
+            this.height = var4.a(this, (byte) 66);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "shb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    shb(int param0, int param1, int param2, int param3, wwa param4, sba param5) {
+    UiComponent(int param0, int param1, int param2, int param3, UiRenderer param4, UiListener param5) {
         this.field_i = 0;
         this.field_s = 0;
         try {
-          this.field_r = param1;
-          this.field_q = param4;
-          this.field_g = param0;
-          this.field_f = param3;
-          this.field_h = param2;
-          this.field_l = param5;
+          this.y = param1;
+          this.renderer = param4;
+          this.x = param0;
+          this.height = param3;
+          this.width = param2;
+          this.listener = param5;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "shb.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ')');
         }

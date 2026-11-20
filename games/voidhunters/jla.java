@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jla extends htb {
+final class jla extends UiFocusableComponent {
     static String field_B;
 
-    final void c(int param0, int param1, int param2, int param3) {
-        this.field_u = !this.field_u ? true : false;
-        super.c(param0, param1, param2, param3);
+    final void fireAction(int param0, int param1, int param2, int param3) {
+        this.active = !this.active ? true : false;
+        super.fireAction(param0, param1, param2, param3);
     }
 
-    private jla(String param0, wwa param1, sba param2) {
+    private jla(String param0, UiRenderer param1, UiListener param2) {
         super(param0, param1, param2);
         try {
-          this.field_q = GetDebrisMax.field_s.field_d;
+          this.renderer = GetDebrisMax.field_s.field_d;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -23,10 +23,10 @@ final class jla extends htb {
         field_B = null;
     }
 
-    private jla(String param0, sba param1) {
+    private jla(String param0, UiListener param1) {
         this(param0, GetDebrisMax.field_s.field_a, param1);
         try {
-          this.field_q = GetDebrisMax.field_s.field_d;
+          this.renderer = GetDebrisMax.field_s.field_d;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -62,10 +62,10 @@ final class jla extends htb {
         }
     }
 
-    jla(String param0, sba param1, boolean param2) {
+    jla(String param0, UiListener param1, boolean param2) {
         this(param0, param1);
         try {
-          this.field_u = param2 ? true : false;
+          this.active = param2 ? true : false;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

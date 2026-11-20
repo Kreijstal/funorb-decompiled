@@ -1452,7 +1452,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_optin_news", 23100);
                 if (null != var2) {
-                  shb.field_m = Cp1252Strings.decode((byte) -125, var2);
+                  UiComponent.field_m = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_agreeterms", 23100);
                 if (var2 != null) {
@@ -1492,7 +1492,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("login_justplay_tooltip", 23100);
                 if (null != var2) {
-                  dqa.field_u = Cp1252Strings.decode((byte) -125, var2);
+                  UiContainer.field_u = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("login_back_tooltip", 23100);
                 if (null != var2) {
@@ -2687,7 +2687,7 @@ final class dga {
             }
             void runChunk3() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  oda.field_t = Cp1252Strings.decode((byte) -125, var2);
+                  UiArrayContainer.field_t = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("fs_focus", 23100);
                 if (null != var2) {

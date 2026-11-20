@@ -104,7 +104,7 @@ final class AsteroidFactory implements GameStateFactory {
           } else if (GetMassDriverAimspeed.field_o != 2) {
             if (GetMassDriverAimspeed.field_o == 3) {
               if (!SetTorpedoProjectiles.field_o.field_k) {
-                var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, oda.field_t, ShipBlueprint.field_a);
+                var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, UiArrayContainer.field_t, ShipBlueprint.field_a);
               } else {
                 var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, param0 ^ 2, moa.field_n, ShipBlueprint.field_a);
               }

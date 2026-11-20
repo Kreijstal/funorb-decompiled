@@ -3,7 +3,7 @@
  */
 final class Lo extends ConsoleCommand {
     static String field_p;
-    static bc field_o;
+    static NineSliceSprite field_o;
     static String[] field_q;
 
     final static void a(java.awt.Color param0, int param1, int param2, boolean param3, String param4) {
@@ -43,7 +43,7 @@ final class Lo extends ConsoleCommand {
               var10.fillRect(2, 2, 3 * param2, 30);
               var10.setColor(java.awt.Color.black);
               if (param1 != 13) {
-                field_o = (bc) null;
+                field_o = (NineSliceSprite) null;
               }
               var10.drawRect(1, 1, 301, 31);
               var10.fillRect(2 + param2 * 3, 2, 300 - 3 * param2, 30);

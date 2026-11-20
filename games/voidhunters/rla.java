@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rla extends dqa implements oo {
-    private htb field_w;
-    private htb field_z;
-    private htb field_y;
+final class rla extends UiContainer implements UiActionListener {
+    private UiFocusableComponent field_w;
+    private UiFocusableComponent field_z;
+    private UiFocusableComponent field_y;
     static GameStateFactory field_v;
     static int field_x;
 
@@ -34,20 +34,20 @@ final class rla extends dqa implements oo {
         return true;
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         int var6 = 0;
-        int var5 = param0 + this.field_g;
+        int var5 = param0 + this.x;
         int var6Lifetime1;
         if (param2 > 47) {
-          var6 = param3 + this.field_r;
-          SetShipToShipRamDamage.field_o.drawParagraph(NebulaFactory.field_a, 20 + var5, var6 + 20, this.field_h - 40, this.field_f - 50, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.maxAscent);
-          super.b(param0, param1, 94, param3);
+          var6 = param3 + this.y;
+          SetShipToShipRamDamage.field_o.drawParagraph(NebulaFactory.field_a, 20 + var5, var6 + 20, this.width - 40, this.height - 50, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.maxAscent);
+          super.drawLayer(param0, param1, 94, param3);
           return;
         }
-        this.field_z = (htb) null;
-        var6Lifetime1 = param3 + this.field_r;
-        SetShipToShipRamDamage.field_o.drawParagraph(NebulaFactory.field_a, 20 + var5, var6Lifetime1 + 20, this.field_h - 40, this.field_f - 50, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.maxAscent);
-        super.b(param0, param1, 94, param3);
+        this.field_z = (UiFocusableComponent) null;
+        var6Lifetime1 = param3 + this.y;
+        SetShipToShipRamDamage.field_o.drawParagraph(NebulaFactory.field_a, 20 + var5, var6Lifetime1 + 20, this.width - 40, this.height - 50, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.maxAscent);
+        super.drawLayer(param0, param1, 94, param3);
     }
 
     public static void clearSharedReferences(byte param0) {
@@ -58,31 +58,31 @@ final class rla extends dqa implements oo {
     }
 
     public rla() {
-        super(0, 0, 476, 225, (wwa) null);
-        this.field_w = new htb(TimedSpecialOrderBehaviour.field_b, (sba) null);
-        this.field_y = new htb(SetTorpedoReload.field_p, (sba) null);
-        this.field_z = new htb(cjb.field_a, (sba) null);
+        super(0, 0, 476, 225, (UiRenderer) null);
+        this.field_w = new UiFocusableComponent(TimedSpecialOrderBehaviour.field_b, (UiListener) null);
+        this.field_y = new UiFocusableComponent(SetTorpedoReload.field_p, (UiListener) null);
+        this.field_z = new UiFocusableComponent(cjb.field_a, (UiListener) null);
         vva var1 = new vva();
-        this.field_w.field_q = (wwa) ((Object) var1);
-        this.field_y.field_q = (wwa) ((Object) var1);
-        this.field_z.field_q = (wwa) ((Object) var1);
+        this.field_w.renderer = (UiRenderer) ((Object) var1);
+        this.field_y.renderer = (UiRenderer) ((Object) var1);
+        this.field_z.renderer = (UiRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_y.a(this.field_h - var3 >> 1, var4, 30, 1, -48 + this.field_f - var2);
-        this.field_z.a(var4 + ((this.field_h - var3 >> 1) + var2), var4, 30, 1, -var2 - 48 + this.field_f);
-        this.field_w.a(this.field_h - var3 >> 1, var3, 30, 1, -78 + (this.field_f - var2 * 2));
-        this.field_y.field_l = (sba) (this);
-        this.field_w.field_l = (sba) (this);
-        this.field_z.field_l = (sba) (this);
-        this.field_w.field_p = AdjustBodyComponentsAction.field_a;
-        this.field_z.field_p = dqa.field_u;
-        this.b(-18756, this.field_y);
-        this.b(-18756, this.field_w);
-        this.b(-18756, this.field_z);
+        this.field_y.setBounds(this.width - var3 >> 1, var4, 30, 1, -48 + this.height - var2);
+        this.field_z.setBounds(var4 + ((this.width - var3 >> 1) + var2), var4, 30, 1, -var2 - 48 + this.height);
+        this.field_w.setBounds(this.width - var3 >> 1, var3, 30, 1, -78 + (this.height - var2 * 2));
+        this.field_y.listener = (UiListener) (this);
+        this.field_w.listener = (UiListener) (this);
+        this.field_z.listener = (UiListener) (this);
+        this.field_w.tooltip = AdjustBodyComponentsAction.field_a;
+        this.field_z.tooltip = UiContainer.field_u;
+        this.addChild(-18756, this.field_y);
+        this.addChild(-18756, this.field_w);
+        this.addChild(-18756, this.field_z);
     }
 
-    final boolean a(int param0, int param1, shb param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         RuntimeException var5 = null;
         boolean stackIn_7_0 = false;
         boolean stackIn_10_0 = false;
@@ -91,15 +91,15 @@ final class rla extends dqa implements oo {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (super.a(param0 + 0, param1, param2, param3)) {
+          if (super.handleKey(param0 + 0, param1, param2, param3)) {
             return true;
           }
           if (param1 == 98) {
-            stackIn_7_0 = this.a(param2, param0 ^ -15834);
+            stackIn_7_0 = this.focusPreviousChild(param2, param0 ^ -15834);
             return stackIn_7_0;
           }
           if (param1 == 99) {
-            stackIn_10_0 = this.a(true, param2);
+            stackIn_10_0 = this.focusNextChild(true, param2);
             return stackIn_10_0;
           }
           if (param0 == -15834) {
@@ -121,7 +121,7 @@ final class rla extends dqa implements oo {
         }
     }
 
-    public final void a(int param0, int param1, int param2, htb param3, int param4) {
+    public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -144,7 +144,7 @@ final class rla extends dqa implements oo {
           if (param0 == 11) {
             return;
           }
-          this.field_y = (htb) null;
+          this.field_y = (UiFocusableComponent) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

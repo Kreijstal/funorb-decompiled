@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class kja extends htb {
+class kja extends UiFocusableComponent {
     static String field_C;
     private hob field_F;
     private IntrusiveDeque field_B;
@@ -9,23 +9,23 @@ class kja extends htb {
     private String[] field_D;
     static IntrusiveDeque field_E;
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
         this.g((byte) 122);
     }
 
-    final void c(int param0, int param1, int param2, int param3) {
-        super.c(param0, param1, param2 + 0, param3);
-        int var5 = param1 - this.field_g;
-        int var6 = param3 - this.field_r;
+    final void fireAction(int param0, int param1, int param2, int param3) {
+        super.fireAction(param0, param1, param2 + 0, param3);
+        int var5 = param1 - this.x;
+        int var6 = param3 - this.y;
         hob var7 = this.b(var5, var6, param2 ^ param2);
         if (var7 != null &&
-          null != this.field_l) {
-          ((ln) ((Object) this.field_l)).a(-1, param0, var7.field_i, this);
+          null != this.listener) {
+          ((ln) ((Object) this.listener)).a(-1, param0, var7.field_i, this);
         }
     }
 
-    String d(byte param0) {
+    String getTooltip(byte param0) {
         if (null == this.field_F) {
           return null;
         }
@@ -63,11 +63,11 @@ class kja extends htb {
         return null;
     }
 
-    kja(String param0, wwa param1) {
-        super(param0, (sba) null);
+    kja(String param0, UiRenderer param1) {
+        super(param0, (UiListener) null);
         this.field_F = null;
         try {
-          this.field_q = param1;
+          this.renderer = param1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kja.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -75,10 +75,10 @@ class kja extends htb {
 
     final void a(int param0, int param1, int param2, byte param3) {
         if (param3 != -23) {
-          shb var6 = (shb) null;
-          this.a(110, (shb) null);
+          UiComponent var6 = (UiComponent) null;
+          this.requestFocus(110, (UiComponent) null);
         }
-        this.a(param2, param0, ((at) ((Object) this.field_q)).a((shb) (this), (byte) 81), 1, param1);
+        this.setBounds(param2, param0, ((at) ((Object) this.renderer)).a((UiComponent) (this), (byte) 81), 1, param1);
     }
 
     final void a(int param0, int param1, String param2) {
@@ -100,7 +100,7 @@ class kja extends htb {
             this.field_D = var8;
           }
           if (param1 != -1) {
-            this.a(87, 68, 4, -44, 106);
+            this.setBounds(87, 68, 4, -44, 106);
           }
           this.field_D[param0] = param2;
         } catch (RuntimeException runtimeException) {
@@ -108,7 +108,7 @@ class kja extends htb {
         }
     }
 
-    boolean a(int param0, shb param1) {
+    boolean requestFocus(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -134,7 +134,7 @@ class kja extends htb {
         }
     }
 
-    void a(int param0, int param1, int param2, shb param3) {
+    void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -143,11 +143,11 @@ class kja extends htb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
           this.field_F = null;
-          if (this.field_e) {
-            var5_int = -this.field_g + PlayerGameData.field_b - param1;
-            var6 = -param0 + (uia.field_b - this.field_r);
+          if (this.hovered) {
+            var5_int = -this.x + PlayerGameData.field_b - param1;
+            var6 = -param0 + (uia.field_b - this.y);
             this.field_F = this.b(var5_int, var6, 0);
           }
           return;
@@ -165,22 +165,22 @@ class kja extends htb {
         }
     }
 
-    void b(int param0, int param1, int param2, int param3) {
+    void drawLayer(int param0, int param1, int param2, int param3) {
         int var7 = 0;
         int var8 = 0;
-        super.b(param0, param1, 52, param3);
+        super.drawLayer(param0, param1, 52, param3);
         if (0 != param1) {
           return;
         }
         if (param2 < 47) {
           return;
         }
-        at var9 = (at) ((Object) this.field_q);
+        at var9 = (at) ((Object) this.renderer);
         hob var6 = this.field_F;
         if (var6 == null) {
         } else {
-          var7 = var9.a(0, param0, (shb) (this));
-          var8 = var9.b(-3, param3, (shb) (this));
+          var7 = var9.a(0, param0, (UiComponent) (this));
+          var8 = var9.b(-3, param3, (UiComponent) (this));
           do {
             SetCountermeasureLauncherRandomness.a(var6.field_k + var8 - 2, var6.field_g + 2, var7 + var6.field_h - 2, 2 + var6.field_j, (byte) -90);
             var6 = var6.field_f;
@@ -210,20 +210,20 @@ class kja extends htb {
         var16 = VoidHunters.field_G;
         this.field_B = new IntrusiveDeque();
         var2 = 0;
-        var3 = (at) ((Object) this.field_q);
-        var4 = var3.a((shb) (this), 3);
+        var3 = (at) ((Object) this.renderer);
+        var4 = var3.a((UiComponent) (this), 3);
         while (true) {
-          var5 = this.field_j.indexOf("<hotspot=", var2);
+          var5 = this.text.indexOf("<hotspot=", var2);
           if (var5 == -1) {
             if (param0 <= 110) {
               this.field_D = (String[]) null;
             }
             return;
           }
-          var7 = this.field_j.indexOf(">", var5);
-          var6 = this.field_j.substring(var5 + 9, var7);
+          var7 = this.text.indexOf(">", var5);
+          var6 = this.text.substring(var5 + 9, var7);
           var7Lifetime1 = Integer.parseInt(var6);
-          var2 = this.field_j.indexOf("</hotspot>", var5);
+          var2 = this.text.indexOf("</hotspot>", var5);
           var8 = var4.a(true, var5);
           var9 = var4.a(true, var2);
           var10 = null;

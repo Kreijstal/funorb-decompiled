@@ -96,7 +96,7 @@ final class GetPointDefenceLaserProjectileDamage extends ConsoleCommand {
     }
 
     final static void a(boolean param0, int param1) {
-        GetLagStandardDeviationIn.field_r.a(0, 0, 0);
+        GetLagStandardDeviationIn.field_r.draw(0, 0, 0);
         int var2 = 100 % ((-38 - param1) / 39);
     }
 

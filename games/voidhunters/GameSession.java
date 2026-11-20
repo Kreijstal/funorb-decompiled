@@ -736,7 +736,7 @@ final class GameSession {
                           if (OpenGlTexture1D.field_i) {
                             break regionExit5;
                           }
-                          bia.a((byte) 124);
+                          bia.popRasterState((byte) 124);
                           if ((var7 == 0)) {
                             if (var6 != 0) {
                               OpenGlTransform3D.field_m.draw(0, 0);
@@ -787,7 +787,7 @@ final class GameSession {
                         break;
                       }
                       if (!OpenGlTexture1D.field_i) {
-                        bia.a((byte) 124);
+                        bia.popRasterState((byte) 124);
                         if ((var7 == 0)) {
                           if (var6 != 0) {
                             OpenGlTransform3D.field_m.draw(0, 0);
@@ -828,7 +828,7 @@ final class GameSession {
                   GetGrapplingHooksDamageableBySourcePlayer.field_p.draw(0, 0);
                 }
               } else {
-                bia.a((byte) 124);
+                bia.popRasterState((byte) 124);
                 if (var7 == 0) {
                   if (var6 != 0) {
                     OpenGlTransform3D.field_m.draw(0, 0);
@@ -920,7 +920,7 @@ final class GameSession {
         int var18Lifetime1;
         var18_ref = null;
         var22 = VoidHunters.field_G;
-        var3 = SetUseTriFill.field_o.a((byte) -110);
+        var3 = SetUseTriFill.field_o.nanoTime((byte) -110);
         PartitionZoneFactory.field_a = GetBombletSprayEnergyUsed.field_p.width;
         MissionVariableFactory.field_a = GetBombletSprayEnergyUsed.field_p.height;
         SetMassDriverReload.field_p = PartitionZoneFactory.field_a >> 1;
@@ -1131,7 +1131,7 @@ final class GameSession {
         this.a(true, (Ship) (var9));
         this.field_K.a(this.localPlayerIndex, 84, var24, (Ship) (var9));
         this.a(91);
-        var19 = SetUseTriFill.field_o.a((byte) -110);
+        var19 = SetUseTriFill.field_o.nanoTime((byte) -110);
         if (GetPointDefenceLaserProjectiles.a(8192, 11284)) {
           this.field_b.a(var19 - var3, (byte) -115);
           this.field_Z.a(200, 99, 200, 0, 0);
@@ -3636,9 +3636,9 @@ final class GameSession {
         }
         var12Lifetime1 = stackIn_70_0;
         if (var12Lifetime1 == 0) {
-          var13_long = SetUseTriFill.field_o.a((byte) -110);
+          var13_long = SetUseTriFill.field_o.nanoTime((byte) -110);
           this.state.c(125);
-          var15 = SetUseTriFill.field_o.a((byte) -110);
+          var15 = SetUseTriFill.field_o.nanoTime((byte) -110);
           this.field_Z.a(var15 - var13_long, (byte) -115);
           this.field_K.a(this.localPlayerIndex, var9, (byte) 70, var9.world.findShipByOwner(this.localPlayerIndex, 88));
         }

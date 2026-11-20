@@ -10,10 +10,10 @@ final class gm extends kja {
     static String field_I;
     private String field_J;
 
-    final void a(int param0, int param1, int param2, shb param3) {
+    final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         try {
           this.field_K = this.field_K + 1;
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gm.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -28,7 +28,7 @@ final class gm extends kja {
         field_H = null;
     }
 
-    final void b(int param0, int param1, int param2, int param3) {
+    final void drawLayer(int param0, int param1, int param2, int param3) {
         String var5;
         qrb var6;
         int var13;
@@ -91,14 +91,14 @@ final class gm extends kja {
         } else {
           var5 = IntrusiveNodeHashTable.field_c;
         }
-        if (var5.equals(this.field_j)) {
+        if (var5.equals(this.text)) {
           if (param2 < 47) {
             this.field_L = (eeb) null;
-            super.b(param0, param1, 111, param3);
+            super.drawLayer(param0, param1, 111, param3);
             var6Lifetime1 = this.field_L.a((byte) 35);
-            var34 = (at) ((Object) this.field_q);
-            var9 = param0 + this.field_g;
-            var10 = var34.b(-3, param3, (shb) (this)) + (var34.a((shb) (this), 3).a(29565) >> 1);
+            var34 = (at) ((Object) this.renderer);
+            var9 = param0 + this.x;
+            var10 = var34.b(-3, param3, (UiComponent) (this)) + (var34.a((UiComponent) (this), 3).a(29565) >> 1);
             if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p != var6Lifetime1 &&
               SetFighterRepairTime.field_q != var6Lifetime1) {
               if (SetArmageddonLength.field_o == var6Lifetime1) {
@@ -126,15 +126,15 @@ final class gm extends kja {
               SetTorpedoEnergyUsed.a(99, this.field_N);
             }
             var20.drawRotatedScaledBilinear(112, 144, var20.paddedWidth << 4, var20.paddedHeight << 4, -this.field_K << 10, 4096);
-            bia.a((byte) 124);
+            bia.popRasterState((byte) 124);
             this.field_N.drawAdditive(var9 - (var20.paddedWidth >> 1), -var20.paddedHeight + var10, 256);
             return;
           }
-          super.b(param0, param1, 111, param3);
+          super.drawLayer(param0, param1, 111, param3);
           var6Lifetime1Lifetime1 = this.field_L.a((byte) 35);
-          var35 = (at) ((Object) this.field_q);
-          var9Lifetime3 = param0 + this.field_g;
-          var10Lifetime3 = var35.b(-3, param3, (shb) (this)) + (var35.a((shb) (this), 3).a(29565) >> 1);
+          var35 = (at) ((Object) this.renderer);
+          var9Lifetime3 = param0 + this.x;
+          var10Lifetime3 = var35.b(-3, param3, (UiComponent) (this)) + (var35.a((UiComponent) (this), 3).a(29565) >> 1);
           if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p != var6Lifetime1Lifetime1 &&
             SetFighterRepairTime.field_q != var6Lifetime1Lifetime1) {
             if (SetArmageddonLength.field_o == var6Lifetime1Lifetime1) {
@@ -170,18 +170,18 @@ final class gm extends kja {
             }
           }
           var24.drawRotatedScaledBilinear(112, 144, var24.paddedWidth << 4, var24.paddedHeight << 4, -this.field_K << 10, 4096);
-          bia.a((byte) 124);
+          bia.popRasterState((byte) 124);
           this.field_N.drawAdditive(var9Lifetime3 - (var24.paddedWidth >> 1), -var24.paddedHeight + var10Lifetime3, 256);
           return;
         }
-        this.field_j = var5;
+        this.text = var5;
         this.g((byte) 115);
         if (param2 >= 47) {
-          super.b(param0, param1, 111, param3);
+          super.drawLayer(param0, param1, 111, param3);
           var6Lifetime2 = this.field_L.a((byte) 35);
-          var37 = (at) ((Object) this.field_q);
-          var9Lifetime1 = param0 + this.field_g;
-          var10Lifetime1 = var37.b(-3, param3, (shb) (this)) + (var37.a((shb) (this), 3).a(29565) >> 1);
+          var37 = (at) ((Object) this.renderer);
+          var9Lifetime1 = param0 + this.x;
+          var10Lifetime1 = var37.b(-3, param3, (UiComponent) (this)) + (var37.a((UiComponent) (this), 3).a(29565) >> 1);
           if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p != var6Lifetime2 &&
             SetFighterRepairTime.field_q != var6Lifetime2) {
             if (SetArmageddonLength.field_o == var6Lifetime2) {
@@ -217,16 +217,16 @@ final class gm extends kja {
             }
           }
           var33.drawRotatedScaledBilinear(112, 144, var33.paddedWidth << 4, var33.paddedHeight << 4, -this.field_K << 10, 4096);
-          bia.a((byte) 124);
+          bia.popRasterState((byte) 124);
           this.field_N.drawAdditive(var9Lifetime1 - (var33.paddedWidth >> 1), -var33.paddedHeight + var10Lifetime1, 256);
           return;
         }
         this.field_L = (eeb) null;
-        super.b(param0, param1, 111, param3);
+        super.drawLayer(param0, param1, 111, param3);
         var6Lifetime3 = this.field_L.a((byte) 35);
-        var36 = (at) ((Object) this.field_q);
-        var9Lifetime2 = param0 + this.field_g;
-        var10Lifetime2 = var36.b(-3, param3, (shb) (this)) + (var36.a((shb) (this), 3).a(29565) >> 1);
+        var36 = (at) ((Object) this.renderer);
+        var9Lifetime2 = param0 + this.x;
+        var10Lifetime2 = var36.b(-3, param3, (UiComponent) (this)) + (var36.a((UiComponent) (this), 3).a(29565) >> 1);
         if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p == var6Lifetime3) {
           var26 = ByteStorage.field_a[0];
           var11Lifetime2 = var26.paddedWidth << 1;
@@ -241,7 +241,7 @@ final class gm extends kja {
             SetTorpedoEnergyUsed.a(99, this.field_N);
           }
           var26.drawRotatedScaledBilinear(112, 144, var26.paddedWidth << 4, var26.paddedHeight << 4, -this.field_K << 10, 4096);
-          bia.a((byte) 124);
+          bia.popRasterState((byte) 124);
           this.field_N.drawAdditive(var9Lifetime2 - (var26.paddedWidth >> 1), -var26.paddedHeight + var10Lifetime2, 256);
           return;
         }
@@ -280,12 +280,12 @@ final class gm extends kja {
           }
         }
         var29.drawRotatedScaledBilinear(112, 144, var29.paddedWidth << 4, var29.paddedHeight << 4, -this.field_K << 10, 4096);
-        bia.a((byte) 124);
+        bia.popRasterState((byte) 124);
         this.field_N.drawAdditive(var9Lifetime2 - (var29.paddedWidth >> 1), -var29.paddedHeight + var10Lifetime2, 256);
         return;
     }
 
-    final boolean a(int param0, shb param1) {
+    final boolean requestFocus(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -311,7 +311,7 @@ final class gm extends kja {
         }
     }
 
-    final String d(byte param0) {
+    final String getTooltip(byte param0) {
         if (param0 == 125) {
           return null;
         }
@@ -364,7 +364,7 @@ final class gm extends kja {
         try {
           this.field_J = param1;
           this.field_L = param0;
-          this.a(param2, param4, param5, 1, param3);
+          this.setBounds(param2, param4, param5, 1, param3);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

@@ -28,7 +28,7 @@ final class SetReverbDry extends ConsoleCommand {
           WidgetNode.field_l.setBounds(param3 + bpa.field_c.width, 122, WidgetNode.field_l.width, 0, param1);
           GetUseLines.field_p.setBoundsAndLayout(487 + (param3 + param5), 2, -1, -5 + var7, 5, 5, param5);
           if (null != PartitionZoneListFactory.field_b) {
-            PartitionZoneListFactory.field_b.a(GetUseLines.field_p.x, GetUseLines.field_p.width, GetUseLines.field_p.height, 1, GetUseLines.field_p.y);
+            PartitionZoneListFactory.field_b.setBounds(GetUseLines.field_p.x, GetUseLines.field_p.width, GetUseLines.field_p.height, 1, GetUseLines.field_p.y);
           }
           if (param2 <= 91) {
             return;

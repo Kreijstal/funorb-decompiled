@@ -14,7 +14,7 @@ final class GetExplosionProjectileOndamageParticles extends ConsoleCommand {
           return -1;
         }
         if (param0 < -21) {
-          return qn.field_h.g(0).field_g;
+          return qn.field_h.g(0).x;
         }
         return -42;
     }

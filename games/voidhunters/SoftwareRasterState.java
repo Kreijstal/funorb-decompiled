@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ajb extends IntrusiveNode {
-    int[] field_k;
-    int field_j;
-    int field_h;
-    int field_g;
+final class SoftwareRasterState extends IntrusiveNode {
+    int[] pixels;
+    int clipLeft;
+    int clipRight;
+    int clipTop;
     static ConsoleCommandRegistry field_f;
-    int field_i;
-    int field_d;
-    int field_e;
+    int height;
+    int width;
+    int clipBottom;
 
     final static void a(byte param0, String param1) {
         try {
           GetFighterBayAimspeed.field_o = param1;
           if (param0 != -74) {
             String var3 = (String) null;
-            ajb.a((byte) 76, (String) null);
+            SoftwareRasterState.a((byte) 76, (String) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ajb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -26,28 +26,28 @@ final class ajb extends IntrusiveNode {
     public static void clearSharedReferences(byte param0) {
         field_f = null;
         if (param0 != 44) {
-          ajb.clearSharedReferences((byte) 98);
+          SoftwareRasterState.clearSharedReferences((byte) 98);
         }
     }
 
-    final void a(int param0, int[] param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
+    final void setState(int param0, int[] param1, int param2, byte param3, int param4, int param5, int param6, int param7) {
         try {
-          this.field_g = param2;
-          this.field_e = param5;
-          this.field_d = param6;
-          this.field_k = param1;
+          this.clipTop = param2;
+          this.clipBottom = param5;
+          this.width = param6;
+          this.pixels = param1;
           if (param3 >= -84) {
-            this.field_j = -65;
+            this.clipLeft = -65;
           }
-          this.field_i = param0;
-          this.field_h = param4;
-          this.field_j = param7;
+          this.height = param0;
+          this.clipRight = param4;
+          this.clipLeft = param7;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ajb.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
-    ajb() {
+    SoftwareRasterState() {
     }
 
     static {

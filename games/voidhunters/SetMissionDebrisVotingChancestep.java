@@ -52,13 +52,13 @@ final class SetMissionDebrisVotingChancestep extends ConsoleCommand {
         pia var2 = PartitionZoneListFactory.field_b;
         if (param1 == 4095) {
           if (var2 != null) {
-            var2.a(0, SetToggledScoreboard.field_o.screenY, SetToggledScoreboard.field_o.screenX);
+            var2.draw(0, SetToggledScoreboard.field_o.screenY, SetToggledScoreboard.field_o.screenX);
           }
           return;
         }
         SetMissionDebrisVotingChancestep.a(true, 28);
         if (var2 != null) {
-          var2.a(0, SetToggledScoreboard.field_o.screenY, SetToggledScoreboard.field_o.screenX);
+          var2.draw(0, SetToggledScoreboard.field_o.screenY, SetToggledScoreboard.field_o.screenX);
         }
     }
 

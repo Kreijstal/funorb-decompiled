@@ -20,7 +20,7 @@ final class gj {
         if (of.field_a == this) {
           return true;
         }
-        if (htb.field_A == this) {
+        if (UiFocusableComponent.field_A == this) {
           return true;
         }
         if (this != GetOndamageParticleSpeed.field_o) {

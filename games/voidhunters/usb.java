@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class usb extends oda {
+final class usb extends UiArrayContainer {
     private int[] field_v;
     private int[] field_y;
     private int field_B;
@@ -13,8 +13,8 @@ final class usb extends oda {
     private final void a(int param0, byte param1, int param2) {
         int stackIn_3_0 = 0;
         int var4;
-        shb[] var5;
-        shb[] var5Lifetime1;
+        UiComponent[] var5;
+        UiComponent[] var5Lifetime1;
         if (null != this.field_y) {
           stackIn_3_0 = this.field_y.length;
         } else {
@@ -22,25 +22,25 @@ final class usb extends oda {
         }
         var4 = stackIn_3_0;
         if (param1 == -83) {
-          var5 = new shb[var4 * param0];
-          if (null != this.field_u &&
-            0 < this.field_u.length &&
+          var5 = new UiComponent[var4 * param0];
+          if (null != this.children &&
+            0 < this.children.length &&
             var5.length > 0 &&
             param2 > 0) {
-            cua.a(this.field_u, 0, var5, 0, Math.min(param2, param0) * var4);
+            cua.a(this.children, 0, var5, 0, Math.min(param2, param0) * var4);
           }
-          this.field_u = var5;
+          this.children = var5;
           return;
         }
         this.field_z = 55;
-        var5Lifetime1 = new shb[var4 * param0];
-        if (null != this.field_u &&
-          0 < this.field_u.length &&
+        var5Lifetime1 = new UiComponent[var4 * param0];
+        if (null != this.children &&
+          0 < this.children.length &&
           var5Lifetime1.length > 0 &&
           param2 > 0) {
-          cua.a(this.field_u, 0, var5Lifetime1, 0, Math.min(param2, param0) * var4);
+          cua.a(this.children, 0, var5Lifetime1, 0, Math.min(param2, param0) * var4);
         }
-        this.field_u = var5Lifetime1;
+        this.children = var5Lifetime1;
     }
 
     private final void b(int param0, int param1, int param2) {
@@ -100,7 +100,7 @@ final class usb extends oda {
         return;
     }
 
-    usb(int param0, int param1, int param2, int param3, wwa param4, int param5, int param6) {
+    usb(int param0, int param1, int param2, int param3, UiRenderer param4, int param5, int param6) {
         super(param0, param1, param2, param3, param4);
         int[] var10 = null;
         int[] var9 = null;
@@ -125,23 +125,23 @@ final class usb extends oda {
         int var3;
         int var4;
         int var6;
-        shb var5;
+        UiComponent var5;
         var6 = VoidHunters.field_G;
         var2 = 0;
         if (param0 != 16777215) {
           return;
         }
         var3 = 0;
-        while (this.field_u.length > var2) {
+        while (this.children.length > var2) {
           if (var3 >= this.field_A.length) {
             return;
           }
           var4 = 0;
-          while (var2 < this.field_u.length) {
+          while (var2 < this.children.length) {
             if (var4 < this.field_y.length) {
               incrementValue$0 = var2;
               var2++;
-              var5 = this.field_u[incrementValue$0];
+              var5 = this.children[incrementValue$0];
               if (var5 != null) {
                 this.a(var3, (byte) 72, var4, var5);
               }
@@ -154,11 +154,11 @@ final class usb extends oda {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param0, param1, param2, param3, param4);
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
+        super.setBounds(param0, param1, param2, param3, param4);
     }
 
-    final void a(shb param0, byte param1, int param2) {
+    final void a(UiComponent param0, byte param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         try {
@@ -168,7 +168,7 @@ final class usb extends oda {
           }
           var5 = this.field_B / this.field_y.length;
           this.field_v[this.field_B] = param2;
-          this.field_u[this.field_B] = param0;
+          this.children[this.field_B] = param0;
           if (param0 != null) {
             this.a(var5, (byte) 104, var4_int, param0);
           }
@@ -213,8 +213,8 @@ final class usb extends oda {
           this.field_z = param2;
           return;
         }
-        shb var5 = (shb) null;
-        this.a(-108, 52, 75, -20, (shb) null, -91, (byte) 106);
+        UiComponent var5 = (UiComponent) null;
+        this.handleMousePress(-108, 52, 75, -20, (UiComponent) null, -91, (byte) 106);
         this.field_x = param1;
         this.field_z = param2;
     }
@@ -243,7 +243,7 @@ final class usb extends oda {
         this.field_v = var5;
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, shb param4, int param5, byte param6) {
+    final boolean handleMousePress(int param0, int param1, int param2, int param3, UiComponent param4, int param5, byte param6) {
         RuntimeException var8 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -254,7 +254,7 @@ final class usb extends oda {
           if (param6 > -17) {
             this.field_x = 25;
           }
-          stackIn_3_0 = super.a(param0, param1, param2, param3, param4, param5, (byte) -120);
+          stackIn_3_0 = super.handleMousePress(param0, param1, param2, param3, param4, param5, (byte) -120);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -298,7 +298,7 @@ final class usb extends oda {
         }
     }
 
-    private final void a(int param0, byte param1, int param2, shb param3) {
+    private final void a(int param0, byte param1, int param2, UiComponent param3) {
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_7_1 = 0;
@@ -334,26 +334,26 @@ final class usb extends oda {
           } else {
             stackIn_4_0 = this.field_y[param2 - 1];
           }
-          var7 = stackIn_4_0 * this.field_h / var5_int;
-          stackIn_6_0 = this.field_f;
+          var7 = stackIn_4_0 * this.width / var5_int;
+          stackIn_6_0 = this.height;
           if (0 >= param0) {
             stackIn_7_1 = 0;
           } else {
             stackIn_7_1 = this.field_A[param0 - 1];
           }
           var8 = stackIn_6_0 * stackIn_7_1 / var6;
-          var9 = this.field_y[param2] * this.field_h / var5_int;
-          var10 = this.field_f * this.field_A[param0] / var6;
+          var9 = this.field_y[param2] * this.width / var5_int;
+          var10 = this.height * this.field_A[param0] / var6;
           var11 = param0 * this.field_y.length + param2;
           var12 = this.field_v[var11] & 48;
           var13 = 192 & this.field_v[var11];
-          var14 = param3.field_g;
+          var14 = param3.x;
           if (param1 <= 45) {
             this.c(14, 96, 93);
           }
-          var15 = param3.field_r;
-          var16 = param3.field_h;
-          var17 = param3.field_f;
+          var15 = param3.y;
+          var16 = param3.width;
+          var17 = param3.height;
           if (var16 < -var7 + var9 &&
             (1 & this.field_v[var11]) != 0) {
             var16 = -var7 + var9;
@@ -394,7 +394,7 @@ final class usb extends oda {
           }
           var18 = this.field_z;
           var19 = this.field_x;
-          param3.a(var18 + var14Lifetime1, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15Lifetime1 + var19);
+          param3.setBounds(var18 + var14Lifetime1, -(var18 * 2) + var16, -(2 * var19) + var17, 1, var15Lifetime1 + var19);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -410,7 +410,7 @@ final class usb extends oda {
         }
     }
 
-    final boolean a(int param0, int param1, shb param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         int var5_int = 0;
         boolean stackIn_11_0 = false;
         boolean stackIn_13_0 = false;
@@ -423,7 +423,7 @@ final class usb extends oda {
         RuntimeException var5 = null;
         String var6 = null;
         try {
-          if (super.a(param0 + 0, param1, param2, param3)) {
+          if (super.handleKey(param0 + 0, param1, param2, param3)) {
             return true;
           }
           var5_int = param1;
@@ -511,7 +511,7 @@ final class usb extends oda {
 
     private final void c(int param0, byte param1, int param2) {
         int var4;
-        shb[] var5;
+        UiComponent[] var5;
         int var6;
         int var7;
         int stackIn_3_0 = 0;
@@ -523,16 +523,16 @@ final class usb extends oda {
           stackIn_3_0 = 0;
         }
         var4 = stackIn_3_0;
-        var5 = new shb[param2 * var4];
-        if (null != this.field_u &&
-          this.field_u.length > 0 &&
+        var5 = new UiComponent[param2 * var4];
+        if (null != this.children &&
+          this.children.length > 0 &&
           var5.length > 0 &&
           param0 > 0) {
           for (var6 = 0; var4 > var6; var6++) {
-            cua.a(this.field_u, param0 * var6, var5, param2 * var6, Math.min(param0, param2));
+            cua.a(this.children, param0 * var6, var5, param2 * var6, Math.min(param0, param2));
           }
         }
-        this.field_u = var5;
+        this.children = var5;
         var6Lifetime1 = -67 % ((param1 - 32) / 58);
     }
 

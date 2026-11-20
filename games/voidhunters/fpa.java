@@ -54,7 +54,7 @@ final class fpa extends uj {
           }
           return;
         }
-        SelectableIconLabelWidget.a(param3, param1, param4, true, param0);
+        SelectableIconLabelWidget.pushClip(param3, param1, param4, true, param0);
         if (!param2) {
           fpa.a(117, -125, true, -70, 61);
           return;

@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class jba implements wwa {
+final class jba implements UiRenderer {
     private int field_i;
     private int field_a;
     private int field_f;
@@ -147,8 +147,8 @@ final class jba implements wwa {
         }
     }
 
-    public final void a(int param0, shb param1, int param2, int param3, boolean param4) {
-        shb stackIn_4_0 = null;
+    public final void drawComponent(int param0, UiComponent param1, int param2, int param3, boolean param4) {
+        UiComponent stackIn_4_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -166,15 +166,15 @@ final class jba implements wwa {
           if (!(param1 instanceof v)) {
             stackIn_4_0 = null;
           } else {
-            stackIn_4_0 = (shb) (param1);
+            stackIn_4_0 = (UiComponent) (param1);
           }
           var13 = (v) (stackIn_4_0);
-          SoftwareRasterizer2D.fillRectangle(param2 + param1.field_g, param1.field_r + param3, param1.field_h, param1.field_f, this.field_e);
+          SoftwareRasterizer2D.fillRectangle(param2 + param1.x, param1.y + param3, param1.width, param1.height, this.field_e);
           if (var13 == null) {
           }
-          var7 = param1.field_h - var13.field_C * 2;
-          var8 = var13.field_C + (param1.field_g + param2);
-          var9 = var13.field_F + (param1.field_r + param3);
+          var7 = param1.width - var13.field_C * 2;
+          var8 = var13.field_C + (param1.x + param2);
+          var9 = var13.field_F + (param1.y + param3);
           SoftwareRasterizer2D.drawLine(var8, var9, var8 + var7, var9, this.field_f);
           var10 = var13.a(0) - 1;
           var11 = 112 / ((-27 - param0) / 35);
@@ -183,7 +183,7 @@ final class jba implements wwa {
             var10--;
           }
           if (null != this.field_g) {
-            this.field_g.drawCentered(var13.field_j, var7 / 2 + var8, var13.field_F + (this.field_g.ascent + var9), this.field_a, this.field_i);
+            this.field_g.drawCentered(var13.text, var7 / 2 + var8, var13.field_F + (this.field_g.ascent + var9), this.field_a, this.field_i);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

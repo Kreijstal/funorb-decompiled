@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nva extends dqa implements oo {
-    private htb field_x;
+final class nva extends UiContainer implements UiActionListener {
+    private UiFocusableComponent field_x;
     private int field_y;
     boolean field_H;
     sha field_G;
-    private htb field_A;
+    private UiFocusableComponent field_A;
     tia field_w;
     static String field_D;
     static String field_I;
@@ -32,7 +32,7 @@ final class nva extends dqa implements oo {
         }
         try {
           if (param0 != 40) {
-            this.f((byte) 41);
+            this.clearFocus((byte) 41);
           }
           this.field_w.field_H = var3_int;
           this.e(125);
@@ -43,11 +43,11 @@ final class nva extends dqa implements oo {
     }
 
     private final void b(int param0, int param1, int param2, int param3, int param4) {
-        super.a(param3, param0, param4, 1, param1);
-        this.field_A.a(0, param2 + param0, this.field_B, param2 + 21, 0);
-        this.field_x.a(-20 + param0, 20, this.field_B, 1, 0);
+        super.setBounds(param3, param0, param4, 1, param1);
+        this.field_A.setBounds(0, param2 + param0, this.field_B, param2 + 21, 0);
+        this.field_x.setBounds(-20 + param0, 20, this.field_B, 1, 0);
         if (this.field_H) {
-          this.field_G.a(0, param0, -this.field_B + param4, 1, this.field_B);
+          this.field_G.setBounds(0, param0, -this.field_B + param4, 1, this.field_B);
         }
     }
 
@@ -66,15 +66,15 @@ final class nva extends dqa implements oo {
           this.field_w.field_H != -1 &&
           null != this.field_w.field_L &&
           null != this.field_G.field_B) {
-          var2 = this.field_G.field_y.field_f;
+          var2 = this.field_G.field_y.height;
           var3 = this.field_w.field_I;
-          var4 = -var2 + this.field_w.field_f;
+          var4 = -var2 + this.field_w.height;
           if (var4 <= 0) {
             return;
           }
           var5 = -93 / ((72 - param0) / 35);
           var6 = var3 * this.field_w.field_H;
-          var7 = var6 + this.field_G.field_y.field_t.field_r;
+          var7 = var6 + this.field_G.field_y.child.y;
           var8 = var2 >> 2;
           if (var7 < var8) {
             var9 = -(var8 - var6 << 16) / var4;
@@ -103,19 +103,19 @@ final class nva extends dqa implements oo {
           var3 = this.field_y;
           var4 = 1;
         }
-        this.b(this.field_h, this.field_r, -20, this.field_g, this.field_B + var3);
-        this.field_w.a(0, this.field_h, var2, 1, 0);
-        this.field_G = new sha(0, 0, 0, 0, new nrb(), this.field_w, (wwa) null);
+        this.b(this.width, this.y, -20, this.x, this.field_B + var3);
+        this.field_w.setBounds(0, this.width, var2, 1, 0);
+        this.field_G = new sha(0, 0, 0, 0, new nrb(), this.field_w, (UiRenderer) null);
         if (var4 != 0) {
           this.field_G.a(true, GetMassDriverEnergyUsed.a(0), (byte) -99);
         }
-        this.field_G.a(0, this.field_h, this.field_f - this.field_B, 1, this.field_B);
+        this.field_G.setBounds(0, this.width, this.height - this.field_B, 1, this.field_B);
         this.field_H = true;
-        this.b(param0 ^ -6447, this.field_G);
+        this.addChild(param0 ^ -6447, this.field_G);
         this.e(param0 ^ 20500);
         if (param0 != 20589) {
-          shb var5 = (shb) null;
-          this.a(76, 36, (shb) null, '3');
+          UiComponent var5 = (UiComponent) null;
+          this.handleKey(76, 36, (UiComponent) null, '3');
         }
     }
 
@@ -123,32 +123,32 @@ final class nva extends dqa implements oo {
         if (param0 != 21694) {
           this.field_H = false;
         }
-        if (this.field_l instanceof aca) {
-          ((aca) ((Object) this.field_l)).a(-3, this);
+        if (this.listener instanceof aca) {
+          ((aca) ((Object) this.listener)).a(-3, this);
         }
     }
 
     nva(Object[] param0, int param1, int param2) {
-        super(0, 0, 0, 0, (wwa) null);
+        super(0, 0, 0, 0, (UiRenderer) null);
         this.field_E = "";
         this.field_v = SetShipToShipRamDamage.field_o;
         try {
           this.field_w = new tia(this, this.field_v, param0, param1);
           this.field_y = param2;
-          this.field_w.field_l = (sba) (this);
+          this.field_w.listener = (UiListener) (this);
           this.field_H = false;
-          this.field_A = new htb("", new bpa(this), (sba) (this));
-          this.field_x = new htb();
-          this.field_x.field_q = (wwa) ((Object) new pbb());
-          this.field_x.field_l = (sba) (this);
-          this.b(-18756, this.field_A);
-          this.b(-18756, this.field_x);
+          this.field_A = new UiFocusableComponent("", new bpa(this), (UiListener) (this));
+          this.field_x = new UiFocusableComponent();
+          this.field_x.renderer = (UiRenderer) ((Object) new pbb());
+          this.field_x.listener = (UiListener) (this);
+          this.addChild(-18756, this.field_A);
+          this.addChild(-18756, this.field_x);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nva.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    public final void a(int param0, int param1, int param2, htb param3, int param4) {
+    public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -186,14 +186,14 @@ final class nva extends dqa implements oo {
         field_I = null;
     }
 
-    final boolean e(byte param0) {
-        shb var3;
+    final boolean hasFocus(byte param0) {
+        UiComponent var3;
         boolean stackIn_7_0 = false;
         if (param0 != -120) {
-          var3 = (shb) null;
-          this.a(27, 77, (shb) null, 'ￔ');
+          var3 = (UiComponent) null;
+          this.handleKey(27, 77, (UiComponent) null, 'ￔ');
         }
-        stackIn_7_0 = (this.field_z) || (super.e((byte) -120));
+        stackIn_7_0 = (this.field_z) || (super.hasFocus((byte) -120));
         return stackIn_7_0;
     }
 
@@ -201,32 +201,32 @@ final class nva extends dqa implements oo {
         if (!this.h(param0 ^ param0)) {
           return;
         }
-        this.b(this.field_h, this.field_r, -20, this.field_g, this.field_B);
+        this.b(this.width, this.y, -20, this.x, this.field_B);
         this.field_H = false;
         this.field_G.unlink(param0 - 9493);
     }
 
-    final void f(byte param0) {
+    final void clearFocus(byte param0) {
         this.field_z = false;
-        super.f(param0);
+        super.clearFocus(param0);
     }
 
-    final boolean a(int param0, shb param1) {
+    final boolean requestFocus(int param0, UiComponent param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param1.f((byte) -34);
+          param1.clearFocus((byte) -34);
           if (param0 != 0) {
-            this.a(-101, -112, (shb) null, '￭');
+            this.handleKey(-101, -112, (UiComponent) null, '￭');
           }
           this.field_z = true;
           this.field_E = "";
-          if (null != this.field_l &&
-            this.field_l instanceof dta) {
-            ((dta) (this.field_l)).a(this.field_z, (shb) (this), true);
+          if (null != this.listener &&
+            this.listener instanceof UiFocusListener) {
+            ((UiFocusListener) (this.listener)).onFocusChanged(this.field_z, (UiComponent) (this), true);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -243,21 +243,21 @@ final class nva extends dqa implements oo {
         }
     }
 
-    final void a(int param0, int param1, int param2, shb param3) {
+    final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         try {
-          super.a(param0, param1, param2, param3);
+          super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nva.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final String d(byte param0) {
+    final String getTooltip(byte param0) {
         int discarded$0 = 0;
-        if (!this.field_e) {
+        if (!this.hovered) {
           return null;
         }
         if (this.h(0) &&
-          this.field_G.field_e &&
+          this.field_G.hovered &&
           this.field_w.field_D != -1) {
           return this.field_w.field_L[this.field_w.field_D].toString();
         }
@@ -268,10 +268,10 @@ final class nva extends dqa implements oo {
           String var3 = (String) null;
           discarded$0 = this.a((String) null, -80);
         }
-        return super.d((byte) 125);
+        return super.getTooltip((byte) 125);
     }
 
-    final boolean a(int param0, int param1, int param2, int param3, shb param4, int param5, byte param6) {
+    final boolean handleMousePress(int param0, int param1, int param2, int param3, UiComponent param4, int param5, byte param6) {
         RuntimeException var8 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;
@@ -282,7 +282,7 @@ final class nva extends dqa implements oo {
           if (param6 >= -17) {
             this.field_v = (BitmapFont) null;
           }
-          stackIn_3_0 = super.a(param0, param1, param2, param3, param4, param5, (byte) -93);
+          stackIn_3_0 = super.handleMousePress(param0, param1, param2, param3, param4, param5, (byte) -93);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -298,7 +298,7 @@ final class nva extends dqa implements oo {
         }
     }
 
-    final boolean a(int param0, int param1, shb param2, char param3) {
+    final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
         boolean stackIn_61_0 = false;
         RuntimeException stackIn_64_0 = null;
         StringBuilder stackIn_64_1 = null;
@@ -312,7 +312,7 @@ final class nva extends dqa implements oo {
         int var6_intLifetime1;
         var7 = VoidHunters.field_G;
         try {
-          if (!this.e((byte) -120)) {
+          if (!this.hasFocus((byte) -120)) {
             return false;
           }
           if (param0 != -15834) {
@@ -353,7 +353,7 @@ final class nva extends dqa implements oo {
                 if (!this.h(0)) {
                   this.d(20589);
                 }
-                var6_intLifetime1 = this.field_G.field_y.field_f / this.field_w.field_I;
+                var6_intLifetime1 = this.field_G.field_y.height / this.field_w.field_I;
                 if (param1 == 105) {
                   this.field_w.field_H = this.field_w.field_H + var6_intLifetime1;
                 } else {
@@ -389,7 +389,7 @@ final class nva extends dqa implements oo {
             }
           }
           if (80 != param1) {
-            stackIn_61_0 = super.a(-15834, param1, param2, param3);
+            stackIn_61_0 = super.handleKey(-15834, param1, param2, param3);
             return stackIn_61_0;
           }
           this.g(5647);
@@ -447,7 +447,7 @@ final class nva extends dqa implements oo {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         this.field_B = param2;
         if (param3 != 1) {
           this.field_B = 17;

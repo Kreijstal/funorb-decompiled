@@ -105,7 +105,7 @@ final class OpenGlShader {
         }
     }
 
-    final static void a(int param0, byte param1, bc param2, int param3) {
+    final static void a(int param0, byte param1, NineSliceSprite param2, int param3) {
         try {
           if (param1 != 111) {
             byte[] var5 = (byte[]) null;

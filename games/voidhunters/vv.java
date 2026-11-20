@@ -35,7 +35,7 @@ final class vv {
         return this;
     }
 
-    final void a(uea param0, boolean param1, int param2, shb param3, int param4) {
+    final void a(uea param0, boolean param1, int param2, UiComponent param3, int param4) {
         BitmapFont stackIn_21_0 = null;
         String stackIn_21_1 = null;
         int stackIn_22_2 = 0;
@@ -61,21 +61,21 @@ final class vv {
         RuntimeException var6_ref = null;
         int var7 = 0;
         try {
-          abb.a(3, param3.field_f, param3.field_h, param4 + param3.field_r, this.field_b, param2 + param3.field_g);
+          NanosecondClock.drawNineSlice(3, param3.height, param3.width, param4 + param3.y, this.field_b, param2 + param3.x);
           if (this.field_e != null) {
-            var6_int = this.field_h + (param2 + param3.field_g);
+            var6_int = this.field_h + (param2 + param3.x);
             if (param0.field_c == 1) {
-              var6_int = var6_int + (-this.field_e.paddedWidth + param3.field_h) / 2;
+              var6_int = var6_int + (-this.field_e.paddedWidth + param3.width) / 2;
             }
-            var7 = this.field_f + (param4 + param3.field_r);
+            var7 = this.field_f + (param4 + param3.y);
             if (2 == param0.field_c) {
-              var6_int = var6_int + (-this.field_e.paddedWidth + param3.field_h);
+              var6_int = var6_int + (-this.field_e.paddedWidth + param3.width);
             }
             if (param0.field_n == 1) {
-              var7 = var7 + (-this.field_e.paddedHeight + param3.field_f) / 2;
+              var7 = var7 + (-this.field_e.paddedHeight + param3.height) / 2;
             }
             if (param0.field_n == 2) {
-              var7 = var7 + (param3.field_f - this.field_e.paddedHeight);
+              var7 = var7 + (param3.height - this.field_e.paddedHeight);
             }
             this.field_e.draw(var6_int, var7);
           }
@@ -93,9 +93,9 @@ final class vv {
             } else {
               stackIn_22_2 = 0;
             }
-            stackIn_24_2 = stackIn_22_2 + param0.field_f + (param2 + param3.field_g);
+            stackIn_24_2 = stackIn_22_2 + param0.field_f + (param2 + param3.x);
             stackIn_24_3 = param4;
-            stackIn_24_4 = param3.field_r;
+            stackIn_24_4 = param3.y;
             stackIn_24_5 = -param0.field_k;
             if (-2147483648 != this.field_f) {
               stackIn_25_6 = this.field_f;
@@ -103,8 +103,8 @@ final class vv {
               stackIn_25_6 = 0;
             }
             stackIn_27_3 = stackIn_24_3 + (stackIn_24_4 - (stackIn_24_5 - stackIn_25_6));
-            stackIn_27_4 = param3.field_h - param0.field_f - param0.field_o;
-            stackIn_27_5 = -param0.field_k + (param3.field_f - param0.field_m);
+            stackIn_27_4 = param3.width - param0.field_f - param0.field_o;
+            stackIn_27_5 = -param0.field_k + (param3.height - param0.field_m);
             stackIn_27_6 = this.field_j;
             stackIn_27_7 = this.field_g;
             if (-2147483648 != this.field_i) {
@@ -144,7 +144,7 @@ final class vv {
         field_a = null;
     }
 
-    final void a(vv param0, int param1, shb param2, int param3, int param4, uea param5) {
+    final void a(vv param0, int param1, UiComponent param2, int param3, int param4, uea param5) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -261,8 +261,8 @@ final class vv {
           this.field_f = param0;
           return this;
         }
-        shb var4 = (shb) null;
-        this.a((uea) null, false, 1, (shb) null, -23);
+        UiComponent var4 = (UiComponent) null;
+        this.a((uea) null, false, 1, (UiComponent) null, -23);
         this.field_f = param0;
         return this;
     }

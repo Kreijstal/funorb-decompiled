@@ -1,34 +1,34 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bc {
-    static IntrusiveDeque field_b;
-    private Sprite[] field_c;
+final class NineSliceSprite {
+    static IntrusiveDeque rasterStateStack;
+    private Sprite[] slices;
     static String field_a;
 
     public static void clearSharedReferences(int param0) {
         field_a = null;
-        field_b = null;
+        rasterStateStack = null;
         if (param0 != -22113) {
-          bc.clearSharedReferences(70);
+          NineSliceSprite.clearSharedReferences(70);
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3, int param4) {
+    final void draw(byte param0, int param1, int param2, int param3, int param4) {
         int var6 = 48 / ((param0 + 8) / 58);
-        abb.a(3, param4, param2, param3, this.field_c, param1);
+        NanosecondClock.drawNineSlice(3, param4, param2, param3, this.slices, param1);
     }
 
-    bc(Sprite[] param0) {
+    NineSliceSprite(Sprite[] param0) {
         try {
-          this.field_c = param0;
+          this.slices = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
     static {
-        field_b = new IntrusiveDeque();
+        rasterStateStack = new IntrusiveDeque();
         field_a = "Plasma ball";
     }
 }

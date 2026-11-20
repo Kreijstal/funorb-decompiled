@@ -133,7 +133,7 @@ final class CarouselGameClient {
           var8 = GetBombletSprayProjectileOndamageParticles.field_p * var7 / param2;
           var9 = SetMissionResnetResourceTickTime.field_q / 2 + 2 * var8;
           if (-var9 > var6_int) {
-            var10 = -var6_int + shb.field_k;
+            var10 = -var6_int + UiComponent.field_k;
             if (var10 >= param0.getHistoryLength((byte) 114)) {
               GetSniperCannonAimarc.a(param2 ^ -6388, "Carousel_clientgame_Info.check_servercrc_against_clientcrc was going to look " + var10 + " steps back");
               return;

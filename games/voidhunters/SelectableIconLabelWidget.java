@@ -21,14 +21,14 @@ final class SelectableIconLabelWidget extends Widget {
         }
     }
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4) {
+    final static void pushClip(int param0, int param1, int param2, boolean param3, int param4) {
         if (param3) {
-          SetOndamageParticleSpeed.e(3);
+          SetOndamageParticleSpeed.pushRasterState(3);
           SoftwareRasterizer2D.intersectClip(param2, param4, param0, param1);
           return;
         }
         field_yb = 104;
-        SetOndamageParticleSpeed.e(3);
+        SetOndamageParticleSpeed.pushRasterState(3);
         SoftwareRasterizer2D.intersectClip(param2, param4, param0, param1);
     }
 

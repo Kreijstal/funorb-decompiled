@@ -4,7 +4,7 @@
 final class ud extends gea {
     static String field_R;
 
-    ud(ida param0, shb param1) {
+    ud(ida param0, UiComponent param1) {
         super(param0, param1, 33, 20, 30);
     }
 
@@ -15,7 +15,7 @@ final class ud extends gea {
         }
     }
 
-    final void b(shb param0, int param1) {
+    final void b(UiComponent param0, int param1) {
         try {
           super.b(param0, -57);
           int var3_int = 47 % ((6 - param1) / 46);
