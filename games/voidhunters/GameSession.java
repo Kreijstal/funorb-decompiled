@@ -532,7 +532,7 @@ final class GameSession {
           GameSnapshot var8 = (GameSnapshot) null;
           discarded$0 = this.a((GameSnapshot) null, false, false);
         }
-        rj.a(GetDebrisGroupColour.field_r, var9, param4 << 24 | param1);
+        ToolkitPolygonRasterizer.fillPolygon(GetDebrisGroupColour.field_r, var9, param4 << 24 | param1);
     }
 
     private final void a(Ship param0, int param1, GameSnapshot param2, boolean param3) {
@@ -5444,7 +5444,7 @@ final class GameSession {
         String var4;
         int var5;
         int var6;
-        pgb var8;
+        ChatMessage var8;
         String var9;
         int var10;
         var10 = VoidHunters.field_G;
@@ -5465,11 +5465,11 @@ final class GameSession {
               if (var6 > 0) {
                 var4 = var4 + "\n";
               }
-              if (var8.field_a == 4) {
+              if (var8.channelType == 4) {
                 var9 = VoidHunters.b(param1, -1);
-                var4 = var4 + "<col=" + UiFocusProxy.toHexString(-18879, AlphaContainer.getTeamColor(false, param1, 13894143)) + ">(" + var9 + ") " + var8.field_d + "</col>";
+                var4 = var4 + "<col=" + UiFocusProxy.toHexString(-18879, AlphaContainer.getTeamColor(false, param1, 13894143)) + ">(" + var9 + ") " + var8.text + "</col>";
               } else {
-                var4 = var4 + var8.field_d;
+                var4 = var4 + var8.text;
               }
               var6++;
             }
@@ -7541,7 +7541,7 @@ final class GameSession {
           if (GetLagStandardDeviationOut.field_p != var3Lifetime1) {
             GetLagStandardDeviationOut.field_p = var3Lifetime1;
             var4Lifetime1 = AlphaContainer.getTeamColor(false, var3Lifetime1, 13894143);
-            FireMissilesOrderDefinition.a(var4Lifetime1, 124);
+            FireMissilesOrderDefinition.setTeamChatColor(var4Lifetime1, 124);
             var9 = VoidHunters.b(var3Lifetime1, -1);
             GetBurstFireMaxEnergy.a(1043, var9);
           }

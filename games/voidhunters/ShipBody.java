@@ -562,7 +562,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
           param0.writeBits(-632, this.centreofmassy, 32);
           param0.writeBits(-632, this.mass, 32);
           param0.writeBits(-632, this.momentofinertia, 32);
-          pgb.a(8, null != this.boundingbox ? this.boundingbox.length : 0, 84, param0, this.boundingbox);
+          ChatMessage.writePackedIntArray(8, null != this.boundingbox ? this.boundingbox.length : 0, 84, param0, this.boundingbox);
           param0.writeBits(-632, this.id, 16);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "anb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

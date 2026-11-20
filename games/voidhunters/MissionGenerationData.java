@@ -130,7 +130,7 @@ final class MissionGenerationData implements DiffableState {
         try {
           param0.writeBits(-632, this.votedObjective, 8);
           param0.writeBits(-632, this.missionGenerationSeed, 32);
-          pgb.a(8, this.optionTotals != null ? this.optionTotals.length : 0, 49, param0, this.optionTotals);
+          ChatMessage.writePackedIntArray(8, this.optionTotals != null ? this.optionTotals.length : 0, 49, param0, this.optionTotals);
           param0.writeBits(-632, this.roundsLeft, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qdb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

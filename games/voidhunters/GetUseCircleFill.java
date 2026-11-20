@@ -47,9 +47,9 @@ final class GetUseCircleFill extends ConsoleCommand {
             !(param1 <= SetPhasedEnergyBeamRandomness.field_o.length)) {
             SetPhasedEnergyBeamRandomness.field_o = new int[param1 * 2];
           }
-          if (hma.field_d == null ||
-            !(hma.field_d.length >= param1)) {
-            hma.field_d = new int[2 * param1];
+          if (GrowableIntArray.field_d == null ||
+            !(GrowableIntArray.field_d.length >= param1)) {
+            GrowableIntArray.field_d = new int[2 * param1];
           }
           if (null == GetMissionVariablesHudY.field_o) {
             GetMissionVariablesHudY.field_o = new int[2 * param1];
@@ -133,9 +133,9 @@ final class GetUseCircleFill extends ConsoleCommand {
               !(param1 <= SetPhasedEnergyBeamRandomness.field_o.length)) {
               SetPhasedEnergyBeamRandomness.field_o = new int[param1 * 2];
             }
-            if (hma.field_d == null ||
-              !(hma.field_d.length >= param1)) {
-              hma.field_d = new int[2 * param1];
+            if (GrowableIntArray.field_d == null ||
+              !(GrowableIntArray.field_d.length >= param1)) {
+              GrowableIntArray.field_d = new int[2 * param1];
             }
             if (null == GetMissionVariablesHudY.field_o) {
               GetMissionVariablesHudY.field_o = new int[2 * param1];
@@ -219,9 +219,9 @@ final class GetUseCircleFill extends ConsoleCommand {
               !(param1 <= SetPhasedEnergyBeamRandomness.field_o.length)) {
               SetPhasedEnergyBeamRandomness.field_o = new int[param1 * 2];
             }
-            if (hma.field_d == null ||
-              !(hma.field_d.length >= param1)) {
-              hma.field_d = new int[2 * param1];
+            if (GrowableIntArray.field_d == null ||
+              !(GrowableIntArray.field_d.length >= param1)) {
+              GrowableIntArray.field_d = new int[2 * param1];
             }
             if (null == GetMissionVariablesHudY.field_o) {
               GetMissionVariablesHudY.field_o = new int[2 * param1];

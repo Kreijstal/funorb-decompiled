@@ -77,7 +77,7 @@ final class SettingsInstance implements DiffableState {
           } else {
             stackIn_3_1 = this.values.length;
           }
-          pgb.a(stackIn_2_0, stackIn_3_1, -118, param0, this.values);
+          ChatMessage.writePackedIntArray(stackIn_2_0, stackIn_3_1, -118, param0, this.values);
           if (param1 <= -109) {
             return;
           }

@@ -1,37 +1,37 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cv {
-    private static dha field_a;
+final class Bzip2Decompressor {
+    private static Bzip2State state;
 
-    private final static void a(dha param0) {
+    private final static void buildSymbolMap(Bzip2State param0) {
         int var1 = 0;
-        param0.field_t = 0;
+        param0.alphabetSize = 0;
         for (var1 = 0; var1 < 256; var1++) {
-          if (param0.field_l[var1]) {
-            param0.field_D[param0.field_t] = (byte)var1;
-            param0.field_t = param0.field_t + 1;
+          if (param0.inUse[var1]) {
+            param0.usedSymbols[param0.alphabetSize] = (byte)var1;
+            param0.alphabetSize = param0.alphabetSize + 1;
           }
         }
     }
 
-    private final static int a(int param0, dha param1) {
+    private final static int readBits(int param0, Bzip2State param1) {
         int var2;
-        while (param1.field_v < param0) {
-          param1.field_H = param1.field_H << 8 | param1.field_w[param1.field_n] & 255;
-          param1.field_v = param1.field_v + 8;
-          param1.field_n = param1.field_n + 1;
-          param1.field_o = param1.field_o + 1;
-          if (param1.field_o != 0) {
+        while (param1.bitCount < param0) {
+          param1.bitBuffer = param1.bitBuffer << 8 | param1.input[param1.inputPosition] & 255;
+          param1.bitCount = param1.bitCount + 8;
+          param1.inputPosition = param1.inputPosition + 1;
+          param1.totalInput = param1.totalInput + 1;
+          if (param1.totalInput != 0) {
             continue;
           }
         }
-        var2 = param1.field_H >> param1.field_v - param0 & (1 << param0) - 1;
-        param1.field_v = param1.field_v - param0;
+        var2 = param1.bitBuffer >> param1.bitCount - param0 & (1 << param0) - 1;
+        param1.bitCount = param1.bitCount - param0;
         return var2;
     }
 
-    private final static void b(dha param0) {
+    private final static void emitRunLengthDecodedOutput(Bzip2State param0) {
         int var1;
         int var2;
         int var3;
@@ -48,19 +48,19 @@ final class cv {
         int[] var14;
         int[] var15;
         int[] var15Lifetime1;
-        var2 = param0.field_c;
-        var3 = param0.field_a;
-        var4 = param0.field_p;
-        var5 = param0.field_A;
-        var15 = SetMinimapHeight.field_p;
+        var2 = param0.runByte;
+        var3 = param0.runLength;
+        var4 = param0.bwtBytesUsed;
+        var5 = param0.currentByte;
+        var15 = SetMinimapHeight.bzip2Table;
         var14 = var15;
         var6 = var14;
-        var7 = param0.field_e;
-        var8 = param0.field_j;
-        var9 = param0.field_y;
-        var10 = param0.field_F;
+        var7 = param0.bwtPosition;
+        var8 = param0.output;
+        var9 = param0.outputPosition;
+        var10 = param0.outputRemaining;
         var11 = var10;
-        var12 = param0.field_k + 1;
+        var12 = param0.blockLength + 1;
         scanLoop1: while (true) {
           if (var3 > 0) {
             while (true) {
@@ -146,59 +146,59 @@ final class cv {
           var3 = 0;
           break;
         }
-        var13 = param0.field_r;
-        param0.field_r = param0.field_r + (var11 - var10);
-        if (param0.field_r >= var13) {
+        var13 = param0.totalOutput;
+        param0.totalOutput = param0.totalOutput + (var11 - var10);
+        if (param0.totalOutput >= var13) {
         }
-        param0.field_c = (byte) var2;
-        param0.field_a = var3;
-        param0.field_p = var4;
-        param0.field_A = var5;
-        SetMinimapHeight.field_p = var6;
-        param0.field_e = var7;
-        param0.field_j = var8;
-        param0.field_y = var9;
-        param0.field_F = var10;
+        param0.runByte = (byte) var2;
+        param0.runLength = var3;
+        param0.bwtBytesUsed = var4;
+        param0.currentByte = var5;
+        SetMinimapHeight.bzip2Table = var6;
+        param0.bwtPosition = var7;
+        param0.output = var8;
+        param0.outputPosition = var9;
+        param0.outputRemaining = var10;
         return;
     }
 
-    final static int a(byte[] param0, int param1, byte[] param2, int param3, int param4) {
+    final static int decompress(byte[] param0, int param1, byte[] param2, int param3, int param4) {
         int stackIn_2_0 = 0;
         Throwable decompiledCaughtException = null;
         Object var5 = null;
-        var5 = field_a;
+        var5 = state;
         synchronized (var5) {
-          field_a.field_w = param2;
-          field_a.field_n = param4;
-          field_a.field_j = param0;
-          field_a.field_y = 0;
-          field_a.field_F = param1;
-          field_a.field_v = 0;
-          field_a.field_H = 0;
-          field_a.field_o = 0;
-          field_a.field_r = 0;
-          cv.e(field_a);
-          param1 = param1 - field_a.field_F;
-          field_a.field_w = null;
-          field_a.field_j = null;
+          state.input = param2;
+          state.inputPosition = param4;
+          state.output = param0;
+          state.outputPosition = 0;
+          state.outputRemaining = param1;
+          state.bitCount = 0;
+          state.bitBuffer = 0;
+          state.totalInput = 0;
+          state.totalOutput = 0;
+          Bzip2Decompressor.decodeBlocks(state);
+          param1 = param1 - state.outputRemaining;
+          state.input = null;
+          state.output = null;
           stackIn_2_0 = param1;
         }
         return stackIn_2_0;
     }
 
-    private final static byte d(dha param0) {
-        return (byte)cv.a(8, param0);
+    private final static byte readByte(Bzip2State param0) {
+        return (byte)Bzip2Decompressor.readBits(8, param0);
     }
 
-    private final static byte c(dha param0) {
-        return (byte)cv.a(1, param0);
+    private final static byte readBit(Bzip2State param0) {
+        return (byte)Bzip2Decompressor.readBits(1, param0);
     }
 
     public static void clearSharedReferences() {
-        field_a = null;
+        state = null;
     }
 
-    private final static void e(dha param0) {
+    private final static void decodeBlocks(Bzip2State param0) {
         int dupTemp$1 = 0;
         int dupTemp$0 = 0;
         int var1;
@@ -261,75 +261,75 @@ final class cv {
         var23 = null;
         var24 = null;
         var25 = null;
-        param0.field_b = 1;
-        if (SetMinimapHeight.field_p == null) {
-          SetMinimapHeight.field_p = new int[param0.field_b * 100000];
+        param0.blockSize100k = 1;
+        if (SetMinimapHeight.bzip2Table == null) {
+          SetMinimapHeight.bzip2Table = new int[param0.blockSize100k * 100000];
         }
         var26 = 1;
         while (true) {
           if (var26 == 0) {
             return;
           }
-          var1 = cv.d(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
           if (var1 == 23) {
             return;
           }
-          var1 = cv.d(param0);
-          var1 = cv.d(param0);
-          var1 = cv.d(param0);
-          var1 = cv.d(param0);
-          var1 = cv.d(param0);
-          var1 = cv.d(param0);
-          var1 = cv.d(param0);
-          var1 = cv.d(param0);
-          var1 = cv.d(param0);
-          var1 = cv.c(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readByte(param0);
+          var1 = Bzip2Decompressor.readBit(param0);
           if (var1 == 0) {
           }
-          param0.field_x = 0;
-          var1 = cv.d(param0);
-          param0.field_x = param0.field_x << 8 | var1 & 255;
-          var1 = cv.d(param0);
-          param0.field_x = param0.field_x << 8 | var1 & 255;
-          var1 = cv.d(param0);
-          param0.field_x = param0.field_x << 8 | var1 & 255;
+          param0.originalPointer = 0;
+          var1 = Bzip2Decompressor.readByte(param0);
+          param0.originalPointer = param0.originalPointer << 8 | var1 & 255;
+          var1 = Bzip2Decompressor.readByte(param0);
+          param0.originalPointer = param0.originalPointer << 8 | var1 & 255;
+          var1 = Bzip2Decompressor.readByte(param0);
+          param0.originalPointer = param0.originalPointer << 8 | var1 & 255;
           for (var4 = 0; var4 < 16; var4++) {
-            var1 = cv.c(param0);
+            var1 = Bzip2Decompressor.readBit(param0);
             if (var1 != 1) {
-              param0.field_m[var4] = false;
+              param0.inUseGroups[var4] = false;
             } else {
-              param0.field_m[var4] = true;
+              param0.inUseGroups[var4] = true;
             }
           }
           for (var4 = 0; var4 < 256; var4++) {
-            param0.field_l[var4] = false;
+            param0.inUse[var4] = false;
           }
           for (var4 = 0; var4 < 16; var4++) {
-            if (param0.field_m[var4]) {
+            if (param0.inUseGroups[var4]) {
               for (var5 = 0; var5 < 16; var5++) {
-                var1 = cv.c(param0);
+                var1 = Bzip2Decompressor.readBit(param0);
                 if (var1 == 1) {
-                  param0.field_l[var4 * 16 + var5] = true;
+                  param0.inUse[var4 * 16 + var5] = true;
                 }
               }
             }
           }
-          cv.a(param0);
-          var7 = param0.field_t + 2;
-          var8 = cv.a(3, param0);
-          var9 = cv.a(15, param0);
+          Bzip2Decompressor.buildSymbolMap(param0);
+          var7 = param0.alphabetSize + 2;
+          var8 = Bzip2Decompressor.readBits(3, param0);
+          var9 = Bzip2Decompressor.readBits(15, param0);
           var4 = 0;
           while (var4 < var9) {
             var5 = 0;
             while (true) {
-              var1 = cv.c(param0);
+              var1 = Bzip2Decompressor.readBit(param0);
               if (var1 != 0) {
                 var5++;
                 continue;
               }
               break;
             }
-            param0.field_i[var4] = (byte)var5;
+            param0.selectorMtf[var4] = (byte)var5;
             var4++;
           }
           var37 = new byte[6];
@@ -341,18 +341,18 @@ final class cv {
             var29 = (byte)(var29 + 1);
           }
           for (var4 = 0; var4 < var9; var4++) {
-            var29 = param0.field_i[var4];
+            var29 = param0.selectorMtf[var4];
             var28 = var37[var29];
             while (var29 > 0) {
               var27_ref_byte__[var29] = var27_ref_byte__[var29 - 1];
               var29 = (byte)(var29 - 1);
             }
             var27_ref_byte__[0] = (byte)var28;
-            param0.field_h[var4] = (byte)var28;
+            param0.selectors[var4] = (byte)var28;
           }
           var6 = 0;
           while (var6 < var8) {
-            var17 = cv.a(5, param0);
+            var17 = Bzip2Decompressor.readBits(5, param0);
             var4 = 0;
             while (true) {
               if (var4 >= var7) {
@@ -360,13 +360,13 @@ final class cv {
                 break;
               }
               while (true) {
-                var1 = cv.c(param0);
+                var1 = Bzip2Decompressor.readBit(param0);
                 if (var1 == 0) {
-                  param0.field_G[var6][var4] = (byte)var17;
+                  param0.codeLengths[var6][var4] = (byte)var17;
                   var4++;
                   break;
                 }
-                var1 = cv.c(param0);
+                var1 = Bzip2Decompressor.readBit(param0);
                 if (var1 != 0) {
                   var17--;
                   continue;
@@ -379,76 +379,76 @@ final class cv {
             var2 = 32;
             var3 = 0;
             for (var4 = 0; var4 < var7; var4++) {
-              if (param0.field_G[var6][var4] > var3) {
-                var3 = param0.field_G[var6][var4];
+              if (param0.codeLengths[var6][var4] > var3) {
+                var3 = param0.codeLengths[var6][var4];
               }
-              if (param0.field_G[var6][var4] < var2) {
-                var2 = param0.field_G[var6][var4];
+              if (param0.codeLengths[var6][var4] < var2) {
+                var2 = param0.codeLengths[var6][var4];
               }
             }
-            cv.a(param0.field_f[var6], param0.field_B[var6], param0.field_E[var6], param0.field_G[var6], var2, var3, var7);
-            param0.field_z[var6] = var2;
+            Bzip2Decompressor.buildHuffmanTables(param0.codeLimits[var6], param0.codeBases[var6], param0.permutations[var6], param0.codeLengths[var6], var2, var3, var7);
+            param0.minimumCodeLengths[var6] = var2;
           }
-          var10 = param0.field_t + 1;
+          var10 = param0.alphabetSize + 1;
           var11 = -1;
           var12 = 0;
           for (var4 = 0; var4 <= 255; var4++) {
-            param0.field_d[var4] = 0;
+            param0.frequencies[var4] = 0;
           }
           var29 = 4095;
           for (var27 = 15; var27 >= 0; var27--) {
             for (var28 = 15; var28 >= 0; var28--) {
-              param0.field_g[var29] = (byte)(var27 * 16 + var28);
+              param0.mtfBuffer[var29] = (byte)(var27 * 16 + var28);
               var29--;
             }
-            param0.field_C[var27] = var29 + 1;
+            param0.mtfBases[var27] = var29 + 1;
           }
           var14 = 0;
           if (var12 == 0) {
             var11++;
             var12 = 50;
-            var21 = param0.field_h[var11];
-            var22 = param0.field_z[var21];
-            var23 = param0.field_f[var21];
-            var25 = param0.field_E[var21];
-            var24 = param0.field_B[var21];
+            var21 = param0.selectors[var11];
+            var22 = param0.minimumCodeLengths[var21];
+            var23 = param0.codeLimits[var21];
+            var25 = param0.permutations[var21];
+            var24 = param0.codeBases[var21];
           }
           var12--;
           var18 = var22;
-          var19 = cv.a(var18, param0);
+          var19 = Bzip2Decompressor.readBits(var18, param0);
           while (var19 > ((int[]) (var23))[var18]) {
             var18++;
-            var20 = cv.c(param0);
+            var20 = Bzip2Decompressor.readBit(param0);
             var19 = var19 << 1 | var20;
           }
           var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
           while (true) {
             if (var13 == var10) {
-              param0.field_a = 0;
-              param0.field_c = (byte) 0;
-              param0.field_s[0] = 0;
+              param0.runLength = 0;
+              param0.runByte = (byte) 0;
+              param0.cumulativeFrequencies[0] = 0;
               for (var4 = 1; var4 <= 256; var4++) {
-                param0.field_s[var4] = param0.field_d[var4 - 1];
+                param0.cumulativeFrequencies[var4] = param0.frequencies[var4 - 1];
               }
               for (var4 = 1; var4 <= 256; var4++) {
-                param0.field_s[var4] = param0.field_s[var4] + param0.field_s[var4 - 1];
+                param0.cumulativeFrequencies[var4] = param0.cumulativeFrequencies[var4] + param0.cumulativeFrequencies[var4 - 1];
               }
               for (var4 = 0; var4 < var14; var4++) {
-                var1 = (byte)(SetMinimapHeight.field_p[var4] & 255);
-                dupTemp$1 = param0.field_s[var1 & 255];
-                SetMinimapHeight.field_p[dupTemp$1] = SetMinimapHeight.field_p[dupTemp$1] | var4 << 8;
-                param0.field_s[var1 & 255] = param0.field_s[var1 & 255] + 1;
+                var1 = (byte)(SetMinimapHeight.bzip2Table[var4] & 255);
+                dupTemp$1 = param0.cumulativeFrequencies[var1 & 255];
+                SetMinimapHeight.bzip2Table[dupTemp$1] = SetMinimapHeight.bzip2Table[dupTemp$1] | var4 << 8;
+                param0.cumulativeFrequencies[var1 & 255] = param0.cumulativeFrequencies[var1 & 255] + 1;
               }
-              param0.field_e = SetMinimapHeight.field_p[param0.field_x] >> 8;
-              param0.field_p = 0;
-              param0.field_e = SetMinimapHeight.field_p[param0.field_e];
-              param0.field_A = (byte)(param0.field_e & 255);
-              param0.field_e = param0.field_e >> 8;
-              param0.field_p = param0.field_p + 1;
-              param0.field_k = var14;
-              cv.b(param0);
-              if (param0.field_p == param0.field_k + 1 &&
-                param0.field_a == 0) {
+              param0.bwtPosition = SetMinimapHeight.bzip2Table[param0.originalPointer] >> 8;
+              param0.bwtBytesUsed = 0;
+              param0.bwtPosition = SetMinimapHeight.bzip2Table[param0.bwtPosition];
+              param0.currentByte = (byte)(param0.bwtPosition & 255);
+              param0.bwtPosition = param0.bwtPosition >> 8;
+              param0.bwtBytesUsed = param0.bwtBytesUsed + 1;
+              param0.blockLength = var14;
+              Bzip2Decompressor.emitRunLengthDecodedOutput(param0);
+              if (param0.bwtBytesUsed == param0.blockLength + 1 &&
+                param0.runLength == 0) {
                 var26 = 1;
                 break;
               }
@@ -459,69 +459,69 @@ final class cv {
               var13 != 1) {
               var33 = var13 - 1;
               if (var33 < 16) {
-                var30 = param0.field_C[0];
-                var1 = param0.field_g[var30 + var33];
+                var30 = param0.mtfBases[0];
+                var1 = param0.mtfBuffer[var30 + var33];
                 while (var33 > 3) {
                   var34 = var30 + var33;
-                  param0.field_g[var34] = param0.field_g[var34 - 1];
-                  param0.field_g[var34 - 1] = param0.field_g[var34 - 2];
-                  param0.field_g[var34 - 2] = param0.field_g[var34 - 3];
-                  param0.field_g[var34 - 3] = param0.field_g[var34 - 4];
+                  param0.mtfBuffer[var34] = param0.mtfBuffer[var34 - 1];
+                  param0.mtfBuffer[var34 - 1] = param0.mtfBuffer[var34 - 2];
+                  param0.mtfBuffer[var34 - 2] = param0.mtfBuffer[var34 - 3];
+                  param0.mtfBuffer[var34 - 3] = param0.mtfBuffer[var34 - 4];
                   var33 -= 4;
                 }
                 while (var33 > 0) {
-                  param0.field_g[var30 + var33] = param0.field_g[var30 + var33 - 1];
+                  param0.mtfBuffer[var30 + var33] = param0.mtfBuffer[var30 + var33 - 1];
                   var33--;
                 }
-                param0.field_g[var30] = (byte)var1;
+                param0.mtfBuffer[var30] = (byte)var1;
               } else {
                 var31 = var33 / 16;
                 var32 = var33 % 16;
-                var35 = param0.field_C[var31] + var32;
+                var35 = param0.mtfBases[var31] + var32;
                 var30 = var35;
-                var1 = param0.field_g[var35];
-                while (var35 > param0.field_C[var31]) {
-                  param0.field_g[var35] = param0.field_g[var35 - 1];
+                var1 = param0.mtfBuffer[var35];
+                while (var35 > param0.mtfBases[var31]) {
+                  param0.mtfBuffer[var35] = param0.mtfBuffer[var35 - 1];
                   var35--;
                 }
-                param0.field_C[var31] = param0.field_C[var31] + 1;
+                param0.mtfBases[var31] = param0.mtfBases[var31] + 1;
                 while (var31 > 0) {
-                  param0.field_C[var31] = param0.field_C[var31] - 1;
-                  param0.field_g[param0.field_C[var31]] = param0.field_g[param0.field_C[var31 - 1] + 16 - 1];
+                  param0.mtfBases[var31] = param0.mtfBases[var31] - 1;
+                  param0.mtfBuffer[param0.mtfBases[var31]] = param0.mtfBuffer[param0.mtfBases[var31 - 1] + 16 - 1];
                   var31--;
                 }
-                param0.field_C[0] = param0.field_C[0] - 1;
-                param0.field_g[param0.field_C[0]] = (byte)var1;
-                if (param0.field_C[0] == 0) {
+                param0.mtfBases[0] = param0.mtfBases[0] - 1;
+                param0.mtfBuffer[param0.mtfBases[0]] = (byte)var1;
+                if (param0.mtfBases[0] == 0) {
                   var29 = 4095;
                   for (var27 = 15; var27 >= 0; var27--) {
                     for (var28 = 15; var28 >= 0; var28--) {
-                      param0.field_g[var29] = param0.field_g[param0.field_C[var27] + var28];
+                      param0.mtfBuffer[var29] = param0.mtfBuffer[param0.mtfBases[var27] + var28];
                       var29--;
                     }
-                    param0.field_C[var27] = var29 + 1;
+                    param0.mtfBases[var27] = var29 + 1;
                   }
                 }
               }
-              dupTemp$0 = param0.field_D[var1 & 255] & 255;
-              param0.field_d[dupTemp$0] = param0.field_d[dupTemp$0] + 1;
-              SetMinimapHeight.field_p[var14] = param0.field_D[var1 & 255] & 255;
+              dupTemp$0 = param0.usedSymbols[var1 & 255] & 255;
+              param0.frequencies[dupTemp$0] = param0.frequencies[dupTemp$0] + 1;
+              SetMinimapHeight.bzip2Table[var14] = param0.usedSymbols[var1 & 255] & 255;
               var14++;
               if (var12 == 0) {
                 var11++;
                 var12 = 50;
-                var21 = param0.field_h[var11];
-                var22 = param0.field_z[var21];
-                var23 = param0.field_f[var21];
-                var25 = param0.field_E[var21];
-                var24 = param0.field_B[var21];
+                var21 = param0.selectors[var11];
+                var22 = param0.minimumCodeLengths[var21];
+                var23 = param0.codeLimits[var21];
+                var25 = param0.permutations[var21];
+                var24 = param0.codeBases[var21];
               }
               var12--;
               var18 = var22;
-              var19 = cv.a(var18, param0);
+              var19 = Bzip2Decompressor.readBits(var18, param0);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
-                var20 = cv.c(param0);
+                var20 = Bzip2Decompressor.readBit(param0);
                 var19 = var19 << 1 | var20;
               }
               var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
@@ -541,28 +541,28 @@ final class cv {
               if (var12 == 0) {
                 var11++;
                 var12 = 50;
-                var21 = param0.field_h[var11];
-                var22 = param0.field_z[var21];
-                var23 = param0.field_f[var21];
-                var25 = param0.field_E[var21];
-                var24 = param0.field_B[var21];
+                var21 = param0.selectors[var11];
+                var22 = param0.minimumCodeLengths[var21];
+                var23 = param0.codeLimits[var21];
+                var25 = param0.permutations[var21];
+                var24 = param0.codeBases[var21];
               }
               var12--;
               var18 = var22;
-              var19 = cv.a(var18, param0);
+              var19 = Bzip2Decompressor.readBits(var18, param0);
               while (var19 > ((int[]) (var23))[var18]) {
                 var18++;
-                var20 = cv.c(param0);
+                var20 = Bzip2Decompressor.readBit(param0);
                 var19 = var19 << 1 | var20;
               }
               var13 = ((int[]) (var25))[var19 - ((int[]) (var24))[var18]];
             } while (var13 == 0 ||
               var13 == 1);
             var15++;
-            var1 = param0.field_D[param0.field_g[param0.field_C[0]] & 255];
-            param0.field_d[var1 & 255] = param0.field_d[var1 & 255] + var15;
+            var1 = param0.usedSymbols[param0.mtfBuffer[param0.mtfBases[0]] & 255];
+            param0.frequencies[var1 & 255] = param0.frequencies[var1 & 255] + var15;
             while (var15 > 0) {
-              SetMinimapHeight.field_p[var14] = var1 & 255;
+              SetMinimapHeight.bzip2Table[var14] = var1 & 255;
               var14++;
               var15--;
             }
@@ -570,7 +570,7 @@ final class cv {
         }
     }
 
-    private final static void a(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
+    private final static void buildHuffmanTables(int[] param0, int[] param1, int[] param2, byte[] param3, int param4, int param5, int param6) {
         int var9 = 0;
         int dupTemp$0 = 0;
         int var7;
@@ -616,6 +616,6 @@ final class cv {
     }
 
     static {
-        field_a = new dha();
+        state = new Bzip2State();
     }
 }

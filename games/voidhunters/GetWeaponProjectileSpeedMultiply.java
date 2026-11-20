@@ -21,14 +21,14 @@ final class GetWeaponProjectileSpeedMultiply extends ConsoleCommand {
             var4_ref = SetSelfDestructTimer.field_o;
             synchronized (var4_ref) {
               SetMassDriverRandomness.field_o.setChannelGain(param2, (byte) 18, -1);
-              if (param0 == dha.field_u) {
+              if (param0 == Bzip2State.field_u) {
                 return;
               }
               SetMassDriverRandomness.field_o.stop(true);
               SetSelfDestructTimer.field_o.flush();
-              dha.field_u = param0;
-              if (null != dha.field_u) {
-                SetMassDriverRandomness.field_o.playTrack(param1, dha.field_u, -1);
+              Bzip2State.field_u = param0;
+              if (null != Bzip2State.field_u) {
+                SetMassDriverRandomness.field_o.playTrack(param1, Bzip2State.field_u, -1);
               }
             }
           }

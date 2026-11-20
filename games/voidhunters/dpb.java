@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dpb {
-    final static String a(boolean param0, pgb param1) {
+    final static String a(boolean param0, ChatMessage param1) {
         String stackIn_3_0 = null;
         String stackIn_35_0 = null;
         Object stackIn_38_0 = null;
@@ -39,26 +39,26 @@ final class dpb {
             }
           }
           var3Lifetime1 = "";
-          if (param1.field_a != 2) {
-            if (0 == param1.field_a &&
+          if (param1.channelType != 2) {
+            if (0 == param1.channelType &&
               VariableCondition.field_e) {
               var3Lifetime1 = "[" + UnsupportedGpuMaterialEffect.field_e + "] ";
             }
-            if (param1.field_a == 1) {
+            if (param1.channelType == 1) {
               var3Lifetime1 = "[" + SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{param1.field_o}, 107) + "] ";
             }
-            if (param1.field_a == 4 &&
+            if (param1.channelType == 4 &&
               null != LoginForm.field_E) {
               var3Lifetime1 = "[" + LoginForm.field_E + "] ";
             }
-            if (3 == param1.field_a) {
+            if (3 == param1.channelType) {
               var3Lifetime1 = "[#" + param1.field_o + "] ";
             }
-            if (!param1.field_k) {
+            if (!param1.unfiltered) {
               var3Lifetime1 = var3Lifetime1 + (String) (var2) + ": ";
             }
           } else {
-            if (!param1.field_k) {
+            if (!param1.unfiltered) {
               if (0 == param1.field_f &&
                 param1.field_h == 0) {
                 var3Lifetime1 = SetReverbGain.a(UiComboBoxList.field_G, new String[]{(String) (var2)}, 119);

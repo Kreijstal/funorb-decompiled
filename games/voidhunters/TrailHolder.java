@@ -121,7 +121,7 @@ final class TrailHolder implements DiffableState {
         }
     }
 
-    final static pgb a(int param0, boolean param1) {
+    final static ChatMessage a(int param0, boolean param1) {
         boolean stackIn_5_0 = false;
         int stackIn_11_0 = 0;
         int[] stackIn_26_0 = null;
@@ -138,7 +138,7 @@ final class TrailHolder implements DiffableState {
         var8 = qga.field_b;
         var2 = var8;
         if (param0 < 4) {
-          return (pgb) null;
+          return (ChatMessage) null;
         }
         var3 = var8.readUnsignedByte((byte) -121);
         wja.field_a = 127 & var3;
@@ -176,7 +176,7 @@ final class TrailHolder implements DiffableState {
         if (!param1) {
           SetCountermeasureLauncherProjectiles.field_p = sib.a(80, var8, (byte) 112);
           un.field_h = null;
-          return new pgb(param1);
+          return new ChatMessage(param1);
         }
         var5 = var8.readUnsignedShort(1869);
         try {
@@ -194,9 +194,9 @@ final class TrailHolder implements DiffableState {
           gna.a((Throwable) ((Object) var6), "CC1", 0);
           un.field_h = null;
           SetCountermeasureLauncherProjectiles.field_p = null;
-          return new pgb(param1);
+          return new ChatMessage(param1);
         }
-        return new pgb(param1);
+        return new ChatMessage(param1);
     }
 
     public final void readState(IsaacPacketBuffer param0, boolean param1) {

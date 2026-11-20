@@ -41,7 +41,7 @@ final class SetTorpedoRandomness extends ConsoleCommand {
         if (ow.field_b != 2) {
           dp.field_a.text = SetReverbWet.field_o;
         } else {
-          dp.field_a.text = pgb.field_l;
+          dp.field_a.text = ChatMessage.field_l;
         }
         int var9_int = 495;
         int var10 = 5;

@@ -3719,7 +3719,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           } else {
             stackIn_58_1 = this.finaloutline.length;
           }
-          pgb.a(stackIn_57_0, stackIn_58_1, -96, param0, this.finaloutline);
+          ChatMessage.writePackedIntArray(stackIn_57_0, stackIn_58_1, -96, param0, this.finaloutline);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

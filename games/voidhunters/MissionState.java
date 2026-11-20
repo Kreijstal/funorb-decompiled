@@ -402,7 +402,7 @@ final class MissionState implements DiffableState {
           } else {
             stackIn_26_1 = 0;
           }
-          pgb.a(stackIn_25_0, stackIn_26_1, 76, param0, this.teamscores);
+          ChatMessage.writePackedIntArray(stackIn_25_0, stackIn_26_1, 76, param0, this.teamscores);
           stackIn_28_0 = (IsaacPacketBuffer) (param0);
           stackIn_28_1 = 84;
           stackIn_29_2 = (this.currentMatch != null);

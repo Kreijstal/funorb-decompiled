@@ -880,7 +880,7 @@ public final class VoidHunters extends NetworkGameClient {
         bsb.clearSharedReferences(23870);
         dp.clearSharedReferences(8);
         lmb.clearSharedReferences((byte) -53);
-        pgb.clearSharedReferences((byte) 75);
+        ChatMessage.clearSharedReferences((byte) 75);
         nqa.clearSharedReferences((byte) -30);
         mab.clearSharedReferences(-23483);
         wsb.clearSharedReferences((byte) -108);
@@ -927,7 +927,7 @@ public final class VoidHunters extends NetworkGameClient {
         SettingsChange.clearSharedReferences((byte) 61);
         SpawnChoice.clearSharedReferences(32);
         SpecialOrderSubmessage.clearSharedReferences(-120);
-        rj.clearSharedReferences();
+        ToolkitPolygonRasterizer.clearSharedReferences();
         ncb.clearSharedReferences(500);
         cib.clearSharedReferences(-18013);
         Widget.clearSharedReferences(-2147483648);
@@ -1073,7 +1073,7 @@ public final class VoidHunters extends NetworkGameClient {
         ArchiveProvider.clearSharedReferences(-19);
         AudioPump.clearSharedReferences(-11954);
         PlayerVote.clearSharedReferences((byte) -98);
-        sa.clearSharedReferences();
+        SoftwarePolygonRasterizer.clearSharedReferences();
         ComponentBehaviour.clearSharedReferences(0);
         TimedSpecialOrderBehaviour.clearSharedReferences(126);
         uab.clearSharedReferences(0);
@@ -1085,8 +1085,8 @@ public final class VoidHunters extends NetworkGameClient {
         kea.clearSharedReferences(115);
         IntIndexTable.clearSharedReferences((byte) 127);
         ByteStorage.clearSharedReferences(1);
-        cv.clearSharedReferences();
-        dha.clearSharedReferences(53);
+        Bzip2Decompressor.clearSharedReferences();
+        Bzip2State.clearSharedReferences(53);
         fia.clearSharedReferences((byte) -28);
         VorbisFloor.clearSharedReferences();
         TutorialProgressState.clearSharedReferences((byte) 66);
@@ -1158,7 +1158,7 @@ public final class VoidHunters extends NetworkGameClient {
         PrimitiveType.clearSharedReferences((byte) -125);
         OpenGlGpuToolkit.clearSharedReferences(771);
         OpenGlVertexBuffer.clearSharedReferences(-118);
-        hma.clearSharedReferences(-1);
+        GrowableIntArray.clearSharedReferences(-1);
         BitmapTextLayout.clearSharedReferences(-2705);
         UiDraggableContainer.clearSharedReferences(-100);
         tda.clearSharedReferences(29914);
@@ -1839,7 +1839,7 @@ public final class VoidHunters extends NetworkGameClient {
         for (var2Lifetime1 = 0; var2Lifetime1 < 16; var2Lifetime1++) {
           GetThrusterParticleLife.field_o.setChannelGain(0, (byte) 18, var2Lifetime1);
         }
-        AgeValidator.a(SetMissileLauncherEnergyUsed.field_p, GetMissileLauncherProjectiles.field_o, MapClearanceRectangleFactory.field_a, -131, ComponentAttachmentPlan.field_b, LoopingSound.field_n, CommonGameState.field_i);
+        AgeValidator.configureReverb(SetMissileLauncherEnergyUsed.field_p, GetMissileLauncherProjectiles.field_o, MapClearanceRectangleFactory.field_a, -131, ComponentAttachmentPlan.field_b, LoopingSound.field_n, CommonGameState.field_i);
         ComponentCollision.a("Initing audiohandler", (byte) -64);
         HighscoreTableRequest.initializeSoundQueues((byte) 89);
         MidiNote.resetFrameTiming(2096);
@@ -1895,7 +1895,7 @@ public final class VoidHunters extends NetworkGameClient {
         int var7Lifetime2;
         var10 = field_G;
         if (ssa.b(2)) {
-          AgeValidator.a(SetMissileLauncherEnergyUsed.field_p, GetMissileLauncherProjectiles.field_o, MapClearanceRectangleFactory.field_a, -131, ComponentAttachmentPlan.field_b, LoopingSound.field_n, CommonGameState.field_i);
+          AgeValidator.configureReverb(SetMissileLauncherEnergyUsed.field_p, GetMissileLauncherProjectiles.field_o, MapClearanceRectangleFactory.field_a, -131, ComponentAttachmentPlan.field_b, LoopingSound.field_n, CommonGameState.field_i);
           if (SetMachineGunEnergyUsed.field_o[81] &&
             SetMachineGunEnergyUsed.field_o[102]) {
             SetInnateThrusters.a(0, new int[]{4});

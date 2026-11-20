@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hma {
-    private int field_b;
-    private boolean field_e;
-    private int field_a;
-    private int[] field_c;
+final class GrowableIntArray {
+    private int growthRate;
+    private boolean geometricGrowth;
+    private int lastIndex;
+    private int[] values;
     static int[] field_d;
 
     public static void clearSharedReferences(int param0) {
@@ -15,14 +15,14 @@ final class hma {
         }
     }
 
-    final void a(byte param0, int param1) {
-        this.a(this.field_a + 1, -15220, param1);
+    final void add(byte param0, int param1) {
+        this.set(this.lastIndex + 1, -15220, param1);
         if (param0 >= -66) {
           field_d = (int[]) null;
         }
     }
 
-    final static Sprite[] a(String param0, int param1, ResourceArchive param2, String param3) {
+    final static Sprite[] loadNamedSprites(String param0, int param1, ResourceArchive param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -68,95 +68,95 @@ final class hma {
         }
     }
 
-    private final int a(int param0, int param1) {
+    private final int capacityForIndex(int param0, int param1) {
         int var3;
         int var4;
         var4 = VoidHunters.field_G;
-        var3 = this.field_c.length;
+        var3 = this.values.length;
         while (param1 >= var3) {
-          if (!this.field_e) {
-            var3 = var3 + this.field_b;
+          if (!this.geometricGrowth) {
+            var3 = var3 + this.growthRate;
             continue;
           }
           if (var3 == 0) {
             var3 = 1;
             continue;
           }
-          var3 = var3 * this.field_b;
+          var3 = var3 * this.growthRate;
         }
         if (param0 == 0) {
           return var3;
         }
-        this.field_a = 102;
+        this.lastIndex = 102;
         return var3;
     }
 
-    private final void b(byte param0, int param1) {
+    private final void growForIndex(byte param0, int param1) {
         int[] var4 = null;
         int[] var3 = null;
         int[] var4Lifetime1;
         int[] var3Lifetime1;
         if (param0 > 110) {
-          var4 = new int[this.a(0, param1)];
+          var4 = new int[this.capacityForIndex(0, param1)];
           var3 = var4;
-          ArrayOperations.copy(this.field_c, 0, var4, 0, this.field_c.length);
-          this.field_c = var4;
+          ArrayOperations.copy(this.values, 0, var4, 0, this.values.length);
+          this.values = var4;
           return;
         }
         field_d = (int[]) null;
-        var4Lifetime1 = new int[this.a(0, param1)];
+        var4Lifetime1 = new int[this.capacityForIndex(0, param1)];
         var3Lifetime1 = var4Lifetime1;
-        ArrayOperations.copy(this.field_c, 0, var4Lifetime1, 0, this.field_c.length);
-        this.field_c = var4Lifetime1;
+        ArrayOperations.copy(this.values, 0, var4Lifetime1, 0, this.values.length);
+        this.values = var4Lifetime1;
     }
 
-    final int b(int param0, byte param1) {
-        if (param0 > this.field_a) {
+    final int get(int param0, byte param1) {
+        if (param0 > this.lastIndex) {
           throw new ArrayIndexOutOfBoundsException(param0);
         }
         if (param1 == 106) {
-          return this.field_c[param0];
+          return this.values[param0];
         }
         return -67;
     }
 
-    final void a(int param0, byte param1) {
+    final void removeAt(int param0, byte param1) {
         if (param0 < 0) {
           throw new ArrayIndexOutOfBoundsException(param0);
         }
-        if (param0 > this.field_a) {
+        if (param0 > this.lastIndex) {
           throw new ArrayIndexOutOfBoundsException(param0);
         }
         if (param1 == 70) {
-          if (param0 != this.field_a) {
-            ArrayOperations.copy(this.field_c, 1 + param0, this.field_c, param0, this.field_a - param0);
+          if (param0 != this.lastIndex) {
+            ArrayOperations.copy(this.values, 1 + param0, this.values, param0, this.lastIndex - param0);
           }
-          this.field_a = this.field_a - 1;
+          this.lastIndex = this.lastIndex - 1;
           return;
         }
     }
 
-    final int a(byte param0) {
+    final int size(byte param0) {
         int var2 = -107 / ((param0 + 16) / 43);
-        return 1 + this.field_a;
+        return 1 + this.lastIndex;
     }
 
-    private final void a(int param0, int param1, int param2) {
-        if (param0 > this.field_a) {
-          this.field_a = param0;
+    private final void set(int param0, int param1, int param2) {
+        if (param0 > this.lastIndex) {
+          this.lastIndex = param0;
         }
         if (param1 != -15220) {
           return;
         }
-        if (param0 < this.field_c.length) {
-          this.field_c[param0] = param2;
+        if (param0 < this.values.length) {
+          this.values[param0] = param2;
           return;
         }
-        this.b((byte) 116, param0);
-        this.field_c[param0] = param2;
+        this.growForIndex((byte) 116, param0);
+        this.values[param0] = param2;
     }
 
-    private hma() throws Throwable {
+    private GrowableIntArray() throws Throwable {
         throw new Error();
     }
 

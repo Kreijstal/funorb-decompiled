@@ -533,7 +533,7 @@ abstract class NetworkGameClient extends GameApplet {
     }
 
     final void initializeNetworkClient(boolean param0, int param1, int param2) {
-        this.initializeNetworkClient(-119, TextureBezierShape.field_q.field_a, SetShipPersistence.field_r.field_a, param2, PopupMenuWidget.field_Bb.field_a, pgb.field_b.field_a, param0, SoftwareFramebuffer.field_f.field_a);
+        this.initializeNetworkClient(-119, TextureBezierShape.field_q.field_a, SetShipPersistence.field_r.field_a, param2, PopupMenuWidget.field_Bb.field_a, ChatMessage.field_b.field_a, param0, SoftwareFramebuffer.field_f.field_a);
         int var4 = -37 % ((param1 - 30) / 50);
     }
 
@@ -548,7 +548,7 @@ abstract class NetworkGameClient extends GameApplet {
         int stackIn_31_0 = 0;
         boolean stackIn_32_1 = false;
         int var2;
-        pgb var3;
+        ChatMessage var3;
         int var4;
         var4 = VoidHunters.field_G;
         var2 = ow.field_a;

@@ -161,7 +161,7 @@ final class World implements DiffableState, CompactGameState {
             }
             this.partitioningManager.readState(param0, false);
           }
-          this.escapePods = (EscapePod[]) (SetAutoDetail.a(4, pgb.field_g, param0, 1, -62, this.escapePods));
+          this.escapePods = (EscapePod[]) (SetAutoDetail.a(4, ChatMessage.field_g, param0, 1, -62, this.escapePods));
           if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.missionBuilder = null;
           } else {
@@ -3730,7 +3730,7 @@ final class World implements DiffableState, CompactGameState {
           } else {
             var6_ref.partitioningManager = null;
           }
-          var6_ref.escapePods = (EscapePod[]) (SpriteDimensions.copyStateArrayByMode(var6_ref.escapePods, this.escapePods, 1, pgb.field_g, false));
+          var6_ref.escapePods = (EscapePod[]) (SpriteDimensions.copyStateArrayByMode(var6_ref.escapePods, this.escapePods, 1, ChatMessage.field_g, false));
           if (this.debug) {
             if (VoidHunters.checkDuplicateReference(true, this.escapePods)) {
               System.err.println("EscapePod[] escape_pods the actual object has a duplicate reference");
@@ -4506,7 +4506,7 @@ final class World implements DiffableState, CompactGameState {
           } else {
             stackIn_101_1 = 0;
           }
-          pgb.a(stackIn_100_0, stackIn_101_1, 68, param0, this.respawntimers);
+          ChatMessage.writePackedIntArray(stackIn_100_0, stackIn_101_1, 68, param0, this.respawntimers);
           vq.writeBoolean(param0, -88, this.debug);
           param0.writeBits(-632, this.objectiveType, 32);
           vq.writeBoolean(param0, 88, this.swappedTeams);
@@ -5251,7 +5251,7 @@ final class World implements DiffableState, CompactGameState {
           this.resNodes = (ResourceNode[]) (SetAutoDetail.a(4, SetShipDirectionArrow.field_p, param0, 1, -71, this.resNodes));
           this.width = param0.readBits(0, 28);
           this.height = param0.readBits(0, 28);
-          this.escapePods = (EscapePod[]) (SetAutoDetail.a(4, pgb.field_g, param0, 1, -83, this.escapePods));
+          this.escapePods = (EscapePod[]) (SetAutoDetail.a(4, ChatMessage.field_g, param0, 1, -83, this.escapePods));
           if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.missionBuilder = null;
           } else {
@@ -5523,7 +5523,7 @@ final class World implements DiffableState, CompactGameState {
     }
 
     private final void removeEscapePodAtIndex(byte param0, int param1) {
-        this.escapePods = (EscapePod[]) (GetSalvoUsesAllEnergy.a(pgb.field_g, param1, param0 ^ 15642, this.escapePods));
+        this.escapePods = (EscapePod[]) (GetSalvoUsesAllEnergy.a(ChatMessage.field_g, param1, param0 ^ 15642, this.escapePods));
         if (param0 != 41) {
           this.countShips(88);
         }
@@ -6465,7 +6465,7 @@ final class World implements DiffableState, CompactGameState {
             this.escapePods.length >= 15) {
             return;
           }
-          this.escapePods = (EscapePod[]) (SoftwareSprite2D.a(param0, this.escapePods, 0, pgb.field_g));
+          this.escapePods = (EscapePod[]) (SoftwareSprite2D.a(param0, this.escapePods, 0, ChatMessage.field_g));
           if (param1 != 107) {
             discarded$0 = this.a(78, (Debris) null, (Ship) null, (byte) -99, 119);
           }
@@ -7786,7 +7786,7 @@ final class World implements DiffableState, CompactGameState {
           } else {
             stackIn_99_1 = this.respawntimers.length;
           }
-          pgb.a(stackIn_98_0, stackIn_99_1, -114, param0, this.respawntimers);
+          ChatMessage.writePackedIntArray(stackIn_98_0, stackIn_99_1, -114, param0, this.respawntimers);
           vq.writeBoolean(param0, 56, this.debug);
           param0.writeBits(-632, this.objectiveType, 32);
           vq.writeBoolean(param0, 39, this.swappedTeams);

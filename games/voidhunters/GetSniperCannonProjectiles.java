@@ -5,7 +5,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
     static boolean field_p;
     static int[] field_o;
 
-    final static void a(pgb param0, int param1) {
+    final static void a(ChatMessage param0, int param1) {
         long stackIn_2_0;
         Widget stackIn_2_1;
         int stackIn_2_2;
@@ -32,21 +32,21 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
         String var12 = null;
         PlayerContextMenu var13 = null;
         try {
-          stackIn_2_0 = param0.field_i;
-          stackIn_2_1 = param0.field_j;
-          stackIn_2_2 = param0.field_a;
+          stackIn_2_0 = param0.senderKey;
+          stackIn_2_1 = param0.widget;
+          stackIn_2_2 = param0.channelType;
           stackIn_2_3 = null;
-          stackIn_2_4 = param0.field_n;
+          stackIn_2_4 = param0.senderName;
           stackIn_2_5 = null;
           stackIn_2_6 = param0.field_e;
           stackIn_2_7 = 117;
-          if (1 != param0.field_a) {
+          if (1 != param0.channelType) {
             stackIn_3_8 = 0;
           } else {
             stackIn_3_8 = param0.field_q;
           }
           pea.$cfr$intArgs$a$91f64d33677c(stackIn_2_0, stackIn_2_1, stackIn_2_2, (int[]) (stackIn_2_3), stackIn_2_4, (ScrollPaneWidget) (stackIn_2_5), stackIn_2_6, stackIn_2_7, stackIn_3_8);
-          if (0 == param0.field_a &&
+          if (0 == param0.channelType &&
             !spb.a(-121) &&
             SetSpinningBladeSpindamageMultiplier.field_o == null &&
             SetThrusterParticleSpeedDownshift.field_o == null) {
@@ -59,7 +59,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
             var8 = GameSession.field_D;
             var7.menu.addItem(var8, (byte) -53, 20);
           }
-          if (param0.field_a == 1 &&
+          if (param0.channelType == 1 &&
             !spb.a(-78) &&
             null != SetSpinningBladeSpindamageMultiplier.field_o &&
             param0.field_q == SetSpinningBladeSpindamageMultiplier.field_o.getGameId((byte) -13)) {
@@ -77,7 +77,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
           }
           GetLagStandardDeviationOut.field_o.addGameJoinOptions(true);
           GetLagStandardDeviationOut.field_o.addLobbyOwnerOptions(false, param1 ^ 22797);
-          GetLagStandardDeviationOut.field_o.addSocialOptions(-63, param0.field_a, param0.field_m);
+          GetLagStandardDeviationOut.field_o.addSocialOptions(-63, param0.channelType, param0.field_m);
           GetLagStandardDeviationOut.field_o.addReportOption(-9923);
           GetLagStandardDeviationOut.field_o.addChatFilterOptions(param0, param1 ^ 22805);
           var13 = GetLagStandardDeviationOut.field_o;

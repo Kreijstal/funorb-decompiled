@@ -31,7 +31,7 @@ final class GetReverbFeedback extends ConsoleCommand {
         }
     }
 
-    final static int a(int param0, pgb param1) {
+    final static int getChatMessageColor(int param0, ChatMessage param1) {
         int var2_int = 0;
         int var3 = 0;
         int stackIn_14_0 = 0;
@@ -44,25 +44,25 @@ final class GetReverbFeedback extends ConsoleCommand {
         var3 = VoidHunters.field_G;
         try {
           var2_int = kmb.field_a;
-          if (param1.field_a != param0) {
-            if (param1.field_a == 4) {
-              var2_intLifetime1 = SetLaserEnergyUsed.field_p[param1.field_a];
+          if (param1.channelType != param0) {
+            if (param1.channelType == 4) {
+              var2_intLifetime1 = SetLaserEnergyUsed.field_p[param1.channelType];
             } else {
-              if (param1.field_i == BodyInZoneConditionFactory.field_a) {
-                var2_intLifetime1 = ConsoleCommand.field_m[param1.field_a];
+              if (param1.senderKey == BodyInZoneConditionFactory.field_a) {
+                var2_intLifetime1 = ConsoleCommand.field_m[param1.channelType];
               } else {
-                var2_intLifetime1 = SetLaserEnergyUsed.field_p[param1.field_a];
+                var2_intLifetime1 = SetLaserEnergyUsed.field_p[param1.channelType];
               }
             }
           } else {
-            if (param1.field_k) {
+            if (param1.unfiltered) {
               var2_intLifetime1 = kmb.field_a;
             } else {
               if (0 == param1.field_f &&
                 param1.field_h == 0) {
-                var2_intLifetime1 = ConsoleCommand.field_m[param1.field_a];
+                var2_intLifetime1 = ConsoleCommand.field_m[param1.channelType];
               } else {
-                var2_intLifetime1 = SetLaserEnergyUsed.field_p[param1.field_a];
+                var2_intLifetime1 = SetLaserEnergyUsed.field_p[param1.channelType];
               }
             }
           }

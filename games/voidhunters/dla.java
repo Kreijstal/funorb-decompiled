@@ -312,8 +312,8 @@ final class dla {
           }
         }
         var4 = -73 / ((param0 - 73) / 52);
-        var5 = GetMissionVariablesHudY.field_o[param3] + hma.field_d[param3] + SetPhasedEnergyBeamRandomness.field_o[param3];
-        var6 = SetPhasedEnergyBeamRandomness.field_o[param2] - (-hma.field_d[param2] - GetMissionVariablesHudY.field_o[param2]);
+        var5 = GetMissionVariablesHudY.field_o[param3] + GrowableIntArray.field_d[param3] + SetPhasedEnergyBeamRandomness.field_o[param3];
+        var6 = SetPhasedEnergyBeamRandomness.field_o[param2] - (-GrowableIntArray.field_d[param2] - GetMissionVariablesHudY.field_o[param2]);
         if (var6 > var5) {
           return true;
         }

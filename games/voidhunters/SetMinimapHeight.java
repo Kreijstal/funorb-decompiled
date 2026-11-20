@@ -4,7 +4,7 @@
 final class SetMinimapHeight extends ConsoleCommand {
     static String field_o;
     static String field_q;
-    static int[] field_p;
+    static int[] bzip2Table;
 
     final static int a(int param0, int param1, boolean param2) {
         if (param2) {
@@ -57,7 +57,7 @@ final class SetMinimapHeight extends ConsoleCommand {
     }
 
     public static void clearSharedReferences(boolean param0) {
-        field_p = null;
+        bzip2Table = null;
         field_o = null;
         if (param0) {
           field_o = (String) null;

@@ -81,7 +81,7 @@ final class EdgeMagnitudeTextureOperation extends TextureOperation {
     }
 
     final static void b(int param0, int param1) {
-        nrb.field_b = new pgb[param0 * 15];
+        nrb.field_b = new ChatMessage[param0 * 15];
         if (param1 > -90) {
           field_i = (String) null;
         }

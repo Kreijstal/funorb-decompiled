@@ -120,7 +120,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
                         var11 = var6[(3 + var7) % var24.length];
                         c.a(var11, var10, var8, var9, -16777216, 16711935);
                       }
-                      rj.a(GetDebrisGroupColour.field_r, var24, -16777216 | (1 + var4) * 16436957);
+                      ToolkitPolygonRasterizer.fillPolygon(GetDebrisGroupColour.field_r, var24, -16777216 | (1 + var4) * 16436957);
                     }
                   }
                 } else {

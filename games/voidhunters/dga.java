@@ -718,7 +718,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("esc_cancelprivatemessage", 23100);
                 if (var2 != null) {
-                  pgb.field_l = Cp1252Strings.decode((byte) -125, var2);
+                  ChatMessage.field_l = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("esc_cancelthisline", 23100);
                 if (var2 != null) {

@@ -3380,7 +3380,7 @@ final class MissionBuilder implements DiffableState {
           if (param1 >= -109) {
             field_f = (float[]) null;
           }
-          pgb.a(8, this.optionTotals != null ? this.optionTotals.length : 0, 21, param0, this.optionTotals);
+          ChatMessage.writePackedIntArray(8, this.optionTotals != null ? this.optionTotals.length : 0, 21, param0, this.optionTotals);
           var3 = new Class[]{MapClearanceCircle.class, MapClearanceRectangle.class};
           ScrollBarWidget.writePolymorphicStateArray(param0, this.clearanceAreas, 8, 1, var3, 126);
         } catch (RuntimeException runtimeException) {

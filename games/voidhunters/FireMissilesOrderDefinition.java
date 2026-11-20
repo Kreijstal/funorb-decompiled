@@ -11,7 +11,7 @@ final class FireMissilesOrderDefinition extends SpecialOrderDefinition {
 
     final int getCooldown(byte param0) {
         if (param0 != 64) {
-          FireMissilesOrderDefinition.a(-124, -42);
+          FireMissilesOrderDefinition.setTeamChatColor(-124, -42);
           return Particle.field_m;
         }
         return Particle.field_m;
@@ -35,7 +35,7 @@ final class FireMissilesOrderDefinition extends SpecialOrderDefinition {
         return GetResourceNodeCaptureTime.field_o;
     }
 
-    final static void a(int param0, int param1) {
+    final static void setTeamChatColor(int param0, int param1) {
         int var2 = -18 % ((param1 - 36) / 36);
         SetLaserEnergyUsed.field_p[4] = param0;
     }

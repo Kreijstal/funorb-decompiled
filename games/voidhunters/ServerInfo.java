@@ -406,14 +406,14 @@ final class ServerInfo implements DiffableState {
           } else {
             stackIn_3_1 = this.voteoptionStates.length;
           }
-          pgb.a(stackIn_2_0, stackIn_3_1, 44, param0, this.voteoptionStates);
+          ChatMessage.writePackedIntArray(stackIn_2_0, stackIn_3_1, 44, param0, this.voteoptionStates);
           stackIn_5_0 = 8;
           if (this.componentoptionStates != null) {
             stackIn_6_1 = this.componentoptionStates.length;
           } else {
             stackIn_6_1 = 0;
           }
-          pgb.a(stackIn_5_0, stackIn_6_1, 60, param0, this.componentoptionStates);
+          ChatMessage.writePackedIntArray(stackIn_5_0, stackIn_6_1, 60, param0, this.componentoptionStates);
           vq.writeBoolean(param0, -110, this.copyToClipboardHidden);
           if (param1 >= -109) {
             this.field_e = (lc) null;

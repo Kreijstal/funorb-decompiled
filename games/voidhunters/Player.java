@@ -350,7 +350,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
           } else {
             stackIn_5_1 = 0;
           }
-          pgb.a(stackIn_4_0, stackIn_5_1, 49, param0, this.votes);
+          ChatMessage.writePackedIntArray(stackIn_4_0, stackIn_5_1, 49, param0, this.votes);
           stackIn_7_0 = (IsaacPacketBuffer) (param0);
           stackIn_7_1 = 85;
           stackIn_8_2 = (this.savedShip != null);
@@ -363,7 +363,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
           } else {
             stackIn_14_1 = this.carriedOverComponents.length;
           }
-          pgb.a(stackIn_13_0, stackIn_14_1, 63, param0, this.carriedOverComponents);
+          ChatMessage.writePackedIntArray(stackIn_13_0, stackIn_14_1, 63, param0, this.carriedOverComponents);
           param0.writeBits(-632, this.kills, 16);
           param0.writeBits(-632, this.assists, 16);
           param0.writeBits(-632, this.deaths, 16);

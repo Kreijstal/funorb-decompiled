@@ -82,7 +82,7 @@ final class SetReverbFeedback extends ConsoleCommand {
           if (SetMassDriverRandomness.field_o != null) {
             stackIn_20_0 = SetMassDriverRandomness.field_o.isPlaying(-100);
             if (!stackIn_20_0) {
-              dha.field_u = null;
+              Bzip2State.field_u = null;
               return;
             }
           }

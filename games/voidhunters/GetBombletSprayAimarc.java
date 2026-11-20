@@ -54,10 +54,10 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
             field_q = -69;
           }
           if (!OpenGlTexture1D.field_i) {
-            sa.a(param4, param1, param2, param3 & 16777215, param3 >>> 24);
+            SoftwarePolygonRasterizer.fillPolygon(param4, param1, param2, param3 & 16777215, param3 >>> 24);
           } else {
             if (OpenGlModel.field_v) {
-              rj.a(GetDebrisGroupColour.field_r, param4, param1, param2, param3);
+              ToolkitPolygonRasterizer.fillPolygon(GetDebrisGroupColour.field_r, param4, param1, param2, param3);
             }
           }
           return;

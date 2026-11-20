@@ -190,7 +190,7 @@ final class ShipBlueprint implements DiffableState {
           } else {
             stackIn_3_1 = this.description.length;
           }
-          pgb.a(stackIn_2_0, stackIn_3_1, 55, param0, this.description);
+          ChatMessage.writePackedIntArray(stackIn_2_0, stackIn_3_1, 55, param0, this.description);
           if (param1 <= -109) {
             return;
           }

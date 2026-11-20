@@ -208,7 +208,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.specialOrderLabels[36] = SetUseExtraBackground.field_s;
           GetGrapplingHookSpringConstant.specialOrderLabels[50] = GetThrusterBindingBalanceThreshold.field_o;
           GetGrapplingHookSpringConstant.specialOrderLabels[34] = ffb.field_a;
-          GetGrapplingHookSpringConstant.specialOrderLabels[44] = pgb.field_p;
+          GetGrapplingHookSpringConstant.specialOrderLabels[44] = ChatMessage.field_p;
           GetGrapplingHookSpringConstant.specialOrderLabels[41] = EnvironmentReflectionGpuMaterialEffect.field_e;
           GetGrapplingHookSpringConstant.specialOrderLabels[0] = qh.field_L;
           GetGrapplingHookSpringConstant.specialOrderLabels[46] = SetLaserEnergyUsed.field_o;

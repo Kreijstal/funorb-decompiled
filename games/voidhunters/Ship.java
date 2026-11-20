@@ -835,7 +835,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           } else {
             stackIn_10_1 = 0;
           }
-          pgb.a(stackIn_9_0, stackIn_10_1, -125, param0, this.lastAttackers);
+          ChatMessage.writePackedIntArray(stackIn_9_0, stackIn_10_1, -125, param0, this.lastAttackers);
           stackIn_12_0 = (IsaacPacketBuffer) (param0);
           stackIn_12_1 = 78;
           stackIn_13_2 = (null != this.targetBlueprint);
@@ -994,7 +994,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           } else {
             stackIn_9_1 = this.lastAttackers.length;
           }
-          pgb.a(stackIn_8_0, stackIn_9_1, -90, param0, this.lastAttackers);
+          ChatMessage.writePackedIntArray(stackIn_8_0, stackIn_9_1, -90, param0, this.lastAttackers);
           if (param1 > -91) {
             this.canSpawnEscapePod(57);
           }

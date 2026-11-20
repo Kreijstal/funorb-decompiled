@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pgb {
+final class ChatMessage {
     int[] field_m;
-    Widget field_j;
+    Widget widget;
     static gl field_b;
-    String field_n;
+    String senderName;
     int field_h;
-    long field_i;
+    long senderKey;
     int field_q;
-    String field_d;
-    boolean field_k;
+    String text;
+    boolean unfiltered;
     String field_e;
     int field_f;
     String field_o;
-    int field_a;
+    int channelType;
     int field_c;
     static GameStateFactory field_g;
     static String field_l;
     static String field_p;
 
-    final static void a(int param0, int param1, int param2, IsaacPacketBuffer param3, int[] param4) {
+    final static void writePackedIntArray(int param0, int param1, int param2, IsaacPacketBuffer param3, int[] param4) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -87,14 +87,14 @@ final class pgb {
         }
     }
 
-    final int a(int param0) {
-        if (!this.field_k && (this.field_a != 2 ||
+    final int getVisibilityPriority(int param0) {
+        if (!this.unfiltered && (this.channelType != 2 ||
           0 >= this.field_c)) {
-          if (~this.field_i == ~BodyInZoneConditionFactory.field_a) {
+          if (~this.senderKey == ~BodyInZoneConditionFactory.field_a) {
             return 1;
           }
           if (iwa.field_b == 2 &&
-            GetTorqueDownshift.a(this.field_n, (byte) -105)) {
+            GetTorqueDownshift.a(this.senderName, (byte) -105)) {
             return 1;
           }
           if (param0 == 1) {
@@ -115,10 +115,10 @@ final class pgb {
         field_p = null;
     }
 
-    pgb(boolean param0) {
+    ChatMessage(boolean param0) {
         this.field_f = SetSalvoUsesAllEnergy.field_o;
         this.field_o = SpawnEnemyShipOrderDefinition.field_f;
-        this.field_i = SetSniperCannonFiringLeeway.field_q;
+        this.senderKey = SetSniperCannonFiringLeeway.field_q;
         if (!param0) {
           this.field_m = null;
         } else {
@@ -126,28 +126,28 @@ final class pgb {
         }
         this.field_q = psb.field_a;
         this.field_c = ModalPanel.field_A;
-        this.field_a = wja.field_a;
-        this.field_k = TickCondition.field_e;
+        this.channelType = wja.field_a;
+        this.unfiltered = TickCondition.field_e;
         this.field_e = LegacyOpenGlEnvironmentMappedWaterEffect.field_h;
         this.field_h = GraphicsPresentException.field_b;
-        this.field_n = TextureCoordinateMode.field_a;
-        this.field_d = SetCountermeasureLauncherProjectiles.field_p;
+        this.senderName = TextureCoordinateMode.field_a;
+        this.text = SetCountermeasureLauncherProjectiles.field_p;
     }
 
-    pgb(int param0, String param1, int param2, String param3, String param4) {
+    ChatMessage(int param0, String param1, int param2, String param3, String param4) {
         try {
-          this.field_n = param1;
+          this.senderName = param1;
           this.field_e = param1;
           this.field_q = param2;
-          this.field_d = param4;
+          this.text = param4;
           this.field_f = 0;
-          this.field_a = param0;
+          this.channelType = param0;
           this.field_c = 0;
-          this.field_k = true;
+          this.unfiltered = true;
           this.field_h = 0;
           this.field_m = null;
           this.field_o = param3;
-          this.field_i = 0L;
+          this.senderKey = 0L;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pgb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');
         }

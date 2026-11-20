@@ -148,7 +148,7 @@ final class MissionControl implements DiffableState {
           }
           param0.writeBits(-632, this.selectedEvent, 32);
           param0.writeBits(-632, this.selectedConditionOrAction, 32);
-          pgb.a(8, null == this.reservedIds ? 0 : this.reservedIds.length, -120, param0, this.reservedIds);
+          ChatMessage.writePackedIntArray(8, null == this.reservedIds ? 0 : this.reservedIds.length, -120, param0, this.reservedIds);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "una.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

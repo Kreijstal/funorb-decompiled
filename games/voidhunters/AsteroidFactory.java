@@ -190,14 +190,14 @@ final class AsteroidFactory implements GameStateFactory {
             if (var4 == -1) {
               throw new IllegalStateException();
             }
-            dha.field_q = new String[var4];
-            ArrayOperations.copy(OpenGlTexture3D.field_l, 0, dha.field_q, 0, var4);
+            Bzip2State.field_q = new String[var4];
+            ArrayOperations.copy(OpenGlTexture3D.field_l, 0, Bzip2State.field_q, 0, var4);
             GetMissileLauncherProjectileLife.field_o = new String[-var4 + (var3_int - 1)];
             ArrayOperations.copy(OpenGlTexture3D.field_l, var4 + 1, GetMissileLauncherProjectileLife.field_o, 0, -1 - var4 + var3_int);
-            if (Projectile.field_k.length >= dha.field_q.length) {
+            if (Projectile.field_k.length >= Bzip2State.field_q.length) {
               stackIn_49_0 = Projectile.field_k.length;
             } else {
-              stackIn_49_0 = dha.field_q.length;
+              stackIn_49_0 = Bzip2State.field_q.length;
             }
             var5 = stackIn_49_0;
             if (GetMissileLauncherProjectileLife.field_o.length <= GetFogOfWarSensorRange.field_p.length) {
@@ -226,10 +226,10 @@ final class AsteroidFactory implements GameStateFactory {
             for (var8Lifetime2 = 0; var5 > var8Lifetime2; var8Lifetime2++) {
               stackIn_59_0 = bra.field_f;
               stackIn_59_1 = var8Lifetime2 + 6;
-              if (0 > -var5 + var8Lifetime2 + dha.field_q.length) {
+              if (0 > -var5 + var8Lifetime2 + Bzip2State.field_q.length) {
                 stackIn_60_2 = "";
               } else {
-                stackIn_60_2 = dha.field_q[dha.field_q.length + var8Lifetime2 - var5];
+                stackIn_60_2 = Bzip2State.field_q[Bzip2State.field_q.length + var8Lifetime2 - var5];
               }
               stackIn_59_0[stackIn_59_1] = stackIn_60_2;
             }

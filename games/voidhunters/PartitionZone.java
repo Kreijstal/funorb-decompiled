@@ -73,7 +73,7 @@ final class PartitionZone implements DiffableState, ofa, SortableValue {
 
     public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          pgb.a(8, null != this.ids ? this.ids.length : 0, 73, param0, this.ids);
+          ChatMessage.writePackedIntArray(8, null != this.ids ? this.ids.length : 0, 73, param0, this.ids);
           param0.writeBits(-632, this.gridx, 8);
           if (param1 > -109) {
             this.gridy = -39;

@@ -12,7 +12,7 @@ final class mn {
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
-        pgb var9 = null;
+        ChatMessage var9 = null;
         int var6Lifetime1;
         var7 = VoidHunters.field_G;
         try {

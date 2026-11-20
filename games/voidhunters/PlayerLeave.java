@@ -93,9 +93,9 @@ final class PlayerLeave implements DiffableState {
         }
     }
 
-    final static void a(byte param0, pgb param1) {
+    final static void a(byte param0, ChatMessage param1) {
         int var2_int = 0;
-        pgb var3 = null;
+        ChatMessage var3 = null;
         int var4 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -104,14 +104,14 @@ final class PlayerLeave implements DiffableState {
         RuntimeException var2 = null;
         var4 = VoidHunters.field_G;
         try {
-          if (param1.field_d == null) {
+          if (param1.text == null) {
             return;
           }
           if (param1.field_f != 0 ||
             param1.field_h != 0) {
             for (var2_int = 0; var2_int < SetRepairModePower.field_q; var2_int++) {
               var3 = nrb.field_b[var2_int];
-              if (var3.field_a == 2 &&
+              if (var3.channelType == 2 &&
                 param1.field_f == var3.field_f &&
                 param1.field_h == var3.field_h) {
                 return;
@@ -119,9 +119,9 @@ final class PlayerLeave implements DiffableState {
             }
           }
           if (param1.field_m != null) {
-            SetPhasedEnergyBeamPulseFadetime.field_p = param1.field_i;
-            RecallGrapplesOrderDefinition.field_d = param1.field_n;
-            NanosecondClock.field_a = param1.field_a;
+            SetPhasedEnergyBeamPulseFadetime.field_p = param1.senderKey;
+            RecallGrapplesOrderDefinition.field_d = param1.senderName;
+            NanosecondClock.field_a = param1.channelType;
             GetSniperCannonAimspeed.field_p = param1.field_m;
           }
           MassDriverWeaponDefinition.a(param1, 0);

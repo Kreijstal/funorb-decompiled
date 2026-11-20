@@ -44,12 +44,12 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
         }
     }
 
-    final static pgb b(int param0, int param1, int param2, int param3) {
+    final static ChatMessage b(int param0, int param1, int param2, int param3) {
         Object var4;
         int var5;
         int var6;
         int var7;
-        pgb var8_ref_pgb;
+        ChatMessage var8_ref_pgb;
         int var9;
         int var10_int;
         int var13;
@@ -60,7 +60,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
         boolean stackIn_81_0 = false;
         boolean stackIn_88_0 = false;
         int var8;
-        pgb var9_ref_pgb;
+        ChatMessage var9_ref_pgb;
         String var10;
         String var11;
         int var12;
@@ -70,7 +70,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
         var13 = VoidHunters.field_G;
         var4 = null;
         if (param3 > -70) {
-          return (pgb) null;
+          return (ChatMessage) null;
         }
         GetUseLines.field_p.content.children.clear(122);
         var5 = 0;
@@ -80,40 +80,40 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
           var9 = 0;
           if (!GetBloomThresholdPercentage.field_p &&
             var5 < EnvironmentReflectionGpuMaterialEffect.field_k) {
-            var10_int = SetReverbDry.a(var8_ref_pgb.field_a, (byte) 19);
-            if (var10_int <= var8_ref_pgb.a(1) && (var8_ref_pgb.field_k ||
-              !SetUseLines.a((byte) -94, var8_ref_pgb.field_n))) {
+            var10_int = SetReverbDry.a(var8_ref_pgb.channelType, (byte) 19);
+            if (var10_int <= var8_ref_pgb.getVisibilityPriority(1) && (var8_ref_pgb.unfiltered ||
+              !SetUseLines.a((byte) -94, var8_ref_pgb.senderName))) {
               var9 = 1;
             }
           }
           if (var9 != 0) {
-            if (null == var8_ref_pgb.field_j ||
+            if (null == var8_ref_pgb.widget ||
               ebb.field_b) {
-              if (null != var8_ref_pgb.field_j) {
+              if (null != var8_ref_pgb.widget) {
               }
               var10 = dpb.a(true, var8_ref_pgb);
-              var11 = var10 + BitmapFont.escapeMarkup(var8_ref_pgb.field_d);
-              var12 = GetReverbFeedback.a(2, var8_ref_pgb);
-              var8_ref_pgb.field_j = new Widget(0L, TargetLock.field_b, var11);
-              var8_ref_pgb.field_j.field_ib = ((TargetLock.field_b.field_ib & 16711422) >> 1) - (var12 >> 1 & 8355711) + var12;
-              var8_ref_pgb.field_j.field_Y = var12;
-              var8_ref_pgb.field_j.field_qb = ((TargetLock.field_b.field_qb & 16711422) >> 1) + var12 - (8355711 & var12 >> 1);
+              var11 = var10 + BitmapFont.escapeMarkup(var8_ref_pgb.text);
+              var12 = GetReverbFeedback.getChatMessageColor(2, var8_ref_pgb);
+              var8_ref_pgb.widget = new Widget(0L, TargetLock.field_b, var11);
+              var8_ref_pgb.widget.field_ib = ((TargetLock.field_b.field_ib & 16711422) >> 1) - (var12 >> 1 & 8355711) + var12;
+              var8_ref_pgb.widget.field_Y = var12;
+              var8_ref_pgb.widget.field_qb = ((TargetLock.field_b.field_qb & 16711422) >> 1) + var12 - (8355711 & var12 >> 1);
               var6 = var6 + param0;
-              var8_ref_pgb.field_j.font = DebrisFactory.field_c;
+              var8_ref_pgb.widget.font = DebrisFactory.field_c;
             }
             var5++;
           } else {
-            var8_ref_pgb.field_j = null;
+            var8_ref_pgb.widget = null;
           }
         }
         var7Lifetime1 = 0;
         for (var8 = 0; SetRepairModePower.field_q > var8; var8++) {
           var9_ref_pgb = nrb.field_b[var8];
-          if (null != var9_ref_pgb.field_j) {
-            GetUseLines.field_p.content.addChild(-561, var9_ref_pgb.field_j);
-            var9_ref_pgb.field_j.setBounds(param1, 122, var9_ref_pgb.field_j.getPreferredWidth(66), var7Lifetime1, param0);
+          if (null != var9_ref_pgb.widget) {
+            GetUseLines.field_p.content.addChild(-561, var9_ref_pgb.widget);
+            var9_ref_pgb.widget.setBounds(param1, 122, var9_ref_pgb.widget.getPreferredWidth(66), var7Lifetime1, param0);
             var7Lifetime1 = var7Lifetime1 + param0;
-            if (var9_ref_pgb.field_j.field_o != 0) {
+            if (var9_ref_pgb.widget.field_o != 0) {
               var4 = var9_ref_pgb;
             }
           }
@@ -195,7 +195,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
             }
           }
         }
-        return (pgb) (var4);
+        return (ChatMessage) (var4);
     }
 
     static {

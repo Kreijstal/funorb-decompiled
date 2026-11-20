@@ -4,15 +4,15 @@
 final class v extends UiFocusableComponent {
     private int field_E;
     int field_F;
-    private hma field_G;
+    private GrowableIntArray field_G;
     int field_C;
 
     final int a(int param0) {
         if (param0 != 0) {
           this.a(-12);
-          return this.field_G.a((byte) -118);
+          return this.field_G.size((byte) -118);
         }
-        return this.field_G.a((byte) -118);
+        return this.field_G.size((byte) -118);
     }
 
     final static Sprite[] b(boolean param0) {
@@ -98,16 +98,16 @@ final class v extends UiFocusableComponent {
           if (0 > param1) {
             return -1;
           }
-          if (param1 < this.field_G.a((byte) 108)) {
-            return this.field_G.b(param1, (byte) 106);
+          if (param1 < this.field_G.size((byte) 108)) {
+            return this.field_G.get(param1, (byte) 106);
           }
           return -1;
         }
         if (0 > param1) {
           return -1;
         }
-        if (param1 < this.field_G.a((byte) 108)) {
-          return this.field_G.b(param1, (byte) 106);
+        if (param1 < this.field_G.size((byte) 108)) {
+          return this.field_G.get(param1, (byte) 106);
         }
         return -1;
     }
@@ -143,13 +143,13 @@ final class v extends UiFocusableComponent {
           }
           var8_int = this.field_E * var8_int / var9;
           if (1 == param3) {
-            this.field_G.a((byte) -73, var8_int);
+            this.field_G.add((byte) -73, var8_int);
           } else {
             if (param3 == 2) {
               var10 = 2147483647;
               var11 = -1;
-              for (var12 = 0; this.field_G.a((byte) -102) > var12; var12++) {
-                var13 = this.field_G.b(var12, (byte) 106) - var8_int;
+              for (var12 = 0; this.field_G.size((byte) -102) > var12; var12++) {
+                var13 = this.field_G.get(var12, (byte) 106) - var8_int;
                 var13 = var13 * var13;
                 if (var13 < var10) {
                   var11 = var12;
@@ -159,7 +159,7 @@ final class v extends UiFocusableComponent {
               if (0 > var11) {
                 return true;
               }
-              this.field_G.a(var11, (byte) 70);
+              this.field_G.removeAt(var11, (byte) 70);
             }
           }
           return true;

@@ -412,28 +412,28 @@ final class PlayerContextMenu {
 
     }
 
-    final void addChatFilterOptions(pgb param0, int param1) {
-        if (param0.field_k) {
+    final void addChatFilterOptions(ChatMessage param0, int param1) {
+        if (param0.unfiltered) {
           return;
         }
         if (param1 <= 73) {
           return;
         }
         try {
-          this.channelType = param0.field_a;
-          if (param0.field_a == 0) {
+          this.channelType = param0.channelType;
+          if (param0.channelType == 0) {
             if (ActivateSelfDestructOrderDefinition.field_d == 0) {
               this.menu.addItem(UiVisualStyle.field_a, (byte) -53, 12);
             }
             this.menu.addItem(tda.field_M, (byte) -53, 13);
           }
-          if (1 == param0.field_a) {
+          if (1 == param0.channelType) {
             if (0 == GetThrusterSmallForce.field_p) {
               this.menu.addItem(SetMassDriverEnergyUsed.field_p, (byte) -53, 12);
             }
             this.menu.addItem(PasswordValidator.field_j, (byte) -53, 13);
           }
-          if (param0.field_a == 2) {
+          if (param0.channelType == 2) {
             if (0 == lla.field_h) {
               this.menu.addItem(SetMissilesAcceleration.field_o, (byte) -53, 12);
             }

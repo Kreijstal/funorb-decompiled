@@ -61,7 +61,7 @@ final class SetOndamageParticleFadestart extends ConsoleCommand {
           SetPedrosRepairMode.field_q = SetGrapplingHookRopeBreakLength.a(param1, true, "commonui", "frame_bottom");
           GameMenuScreen.field_a = SetSniperCannonProjectiles.a(param1, "jagex_logo_grey", "commonui", true);
           GetBombletSprayProjectileLife.field_o = SetGrapplingHookRopeBreakLength.a(param1, true, "commonui", "button");
-          ByteStorage.field_a = hma.a("commonui", -90, param1, "validation");
+          ByteStorage.field_a = GrowableIntArray.loadNamedSprites("commonui", -90, param1, "validation");
           SetTorpedoProjectileLife.field_o = (BitmapFont) ((Object) GetFighterBayAimspeed.a(0, "commonui", param1, param2, "arezzo12"));
           SetShipToShipRamDamage.field_o = (BitmapFont) ((Object) GetFighterBayAimspeed.a(0, "commonui", param1, param2, "arezzo14"));
           GetBoostersCooldown.field_r = (BitmapFont) ((Object) GetFighterBayAimspeed.a(0, "commonui", param1, param2, "arezzo14bold"));

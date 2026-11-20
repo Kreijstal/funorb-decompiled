@@ -30,7 +30,7 @@ final class AgeValidator extends TextFieldValidator {
           if (var3_int > 0 &&
             var3_int <= 130) {
             if (param1 != 16384) {
-              AgeValidator.a(-0.8688769340515137f, 0.8470385074615479f, 1.5502856969833374f, 23, 0.4921734631061554f, 0.5438073873519897f, -1.1896488666534424f);
+              AgeValidator.configureReverb(-0.8688769340515137f, 0.8470385074615479f, 1.5502856969833374f, 23, 0.4921734631061554f, 0.5438073873519897f, -1.1896488666534424f);
             }
             stackIn_11_0 = GetShipPersistence.validInput;
             return stackIn_11_0;
@@ -98,38 +98,38 @@ final class AgeValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(float param0, float param1, float param2, int param3, float param4, float param5, float param6) {
+    final static void configureReverb(float param0, float param1, float param2, int param3, float param4, float param5, float param6) {
         if (vjb.field_b == null) {
-          vjb.field_b = new sfb(kpb.field_q);
+          vjb.field_b = new ReverbPcmStream(kpb.field_q);
           aaa.field_b.setStream(vjb.field_b);
-          vjb.field_b.d(param0);
-          vjb.field_b.c(param4);
-          vjb.field_b.b(param2);
+          vjb.field_b.setInputGain(param0);
+          vjb.field_b.setFeedback(param4);
+          vjb.field_b.setDampingTime(param2);
           if (param3 != -131) {
             field_h = (String) null;
-            vjb.field_b.a(param5);
-            vjb.field_b.e(param1);
-            vjb.field_b.f(param6);
+            vjb.field_b.setWetGain(param5);
+            vjb.field_b.setDryGain(param1);
+            vjb.field_b.setStereoWidth(param6);
             return;
           }
-          vjb.field_b.a(param5);
-          vjb.field_b.e(param1);
-          vjb.field_b.f(param6);
+          vjb.field_b.setWetGain(param5);
+          vjb.field_b.setDryGain(param1);
+          vjb.field_b.setStereoWidth(param6);
           return;
         }
-        vjb.field_b.d(param0);
-        vjb.field_b.c(param4);
-        vjb.field_b.b(param2);
+        vjb.field_b.setInputGain(param0);
+        vjb.field_b.setFeedback(param4);
+        vjb.field_b.setDampingTime(param2);
         if (param3 == -131) {
-          vjb.field_b.a(param5);
-          vjb.field_b.e(param1);
-          vjb.field_b.f(param6);
+          vjb.field_b.setWetGain(param5);
+          vjb.field_b.setDryGain(param1);
+          vjb.field_b.setStereoWidth(param6);
           return;
         }
         field_h = (String) null;
-        vjb.field_b.a(param5);
-        vjb.field_b.e(param1);
-        vjb.field_b.f(param6);
+        vjb.field_b.setWetGain(param5);
+        vjb.field_b.setDryGain(param1);
+        vjb.field_b.setStereoWidth(param6);
     }
 
     static {

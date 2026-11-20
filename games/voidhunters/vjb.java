@@ -3,7 +3,7 @@
  */
 abstract class vjb {
     static boolean field_a;
-    static sfb field_b;
+    static ReverbPcmStream field_b;
     static String field_c;
 
     final static void a(byte param0) {

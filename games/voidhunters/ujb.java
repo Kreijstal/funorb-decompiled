@@ -117,7 +117,7 @@ final class ujb {
         }
         if (param1 >= Message.field_d) {
           SetPhasedEnergyBeamRandomness.field_o[MissionBuilder.field_e] = param0;
-          hma.field_d[MissionBuilder.field_e] = param2;
+          GrowableIntArray.field_d[MissionBuilder.field_e] = param2;
           GetMissionVariablesHudY.field_o[MissionBuilder.field_e] = param5;
           var6 = param0 + param2 + param5;
           if (param3 == 13336) {
@@ -158,7 +158,7 @@ final class ujb {
         }
         ServerTickFactory.field_d = param1;
         SetPhasedEnergyBeamRandomness.field_o[MissionBuilder.field_e] = param0;
-        hma.field_d[MissionBuilder.field_e] = param2;
+        GrowableIntArray.field_d[MissionBuilder.field_e] = param2;
         GetMissionVariablesHudY.field_o[MissionBuilder.field_e] = param5;
         var6Lifetime1 = param0 + param2 + param5;
         if (param3 == 13336) {
