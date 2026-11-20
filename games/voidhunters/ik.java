@@ -150,7 +150,7 @@ final class ik extends IntrusiveNode {
         var2[97] = GetAutoAfkTimeout.field_o;
         var2[24] = GetInnateThrusters.field_p;
         var2[163] = bv.field_e;
-        var2[162] = rn.field_o;
+        var2[162] = QuickChatCategoryDefinition.field_o;
         var2[169] = SetShieldsDirectionalRadius.field_o;
         var2[224] = Particle.field_e;
         if (param0 != -21049) {
@@ -158,7 +158,7 @@ final class ik extends IntrusiveNode {
         }
         var2[166] = SetShipAimLines.field_q;
         var2[101] = GetMachineGunAimspeed.field_p;
-        var2[222] = bpa.field_a;
+        var2[222] = UiComboBoxRenderer.field_a;
         var2[207] = iea.field_d;
         var2[47] = GetUseNiceTrails.field_p;
         var2[208] = la.field_k;

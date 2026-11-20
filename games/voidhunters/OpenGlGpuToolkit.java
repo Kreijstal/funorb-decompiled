@@ -105,7 +105,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
                 var6 = 4;
                 var7 = 3 * param2;
               } else {
-                if (param0 != bk.field_v) {
+                if (param0 != UiViewport.field_v) {
                   if (param0 != GetUseTriFill.field_o) {
                     var7 = param2;
                     var6 = 0;

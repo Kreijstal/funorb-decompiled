@@ -1,32 +1,32 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nva extends UiContainer implements UiActionListener {
-    private UiFocusableComponent field_x;
-    private int field_y;
-    boolean field_H;
-    sha field_G;
-    private UiFocusableComponent field_A;
-    tia field_w;
+final class UiComboBox extends UiContainer implements UiActionListener {
+    private UiFocusableComponent arrowButton;
+    private int maximumDropdownHeight;
+    boolean dropdownOpen;
+    UiScrollPane dropdownPane;
+    private UiFocusableComponent displayButton;
+    UiComboBoxList list;
     static String field_D;
     static String field_I;
-    BitmapFont field_v;
-    private int field_B;
-    String field_E;
-    private boolean field_z;
+    BitmapFont font;
+    private int collapsedHeight;
+    String typedPrefix;
+    private boolean focused;
 
-    final boolean h(int param0) {
+    final boolean isDropdownOpen(int param0) {
         if (param0 != 0) {
           return true;
         }
-        return this.field_H;
+        return this.dropdownOpen;
     }
 
-    private final void a(byte param0, String param1) {
-        if (null == this.field_w.field_L) {
+    private final void selectByPrefix(byte param0, String param1) {
+        if (null == this.list.items) {
           return;
         }
-        int var3_int = this.a(param1.toLowerCase(), param0 - 108);
+        int var3_int = this.findPrefixMatch(param1.toLowerCase(), param0 - 108);
         if (var3_int == -1) {
           return;
         }
@@ -34,24 +34,24 @@ final class nva extends UiContainer implements UiActionListener {
           if (param0 != 40) {
             this.clearFocus((byte) 41);
           }
-          this.field_w.field_H = var3_int;
-          this.e(125);
-          this.field_E = param1;
+          this.list.selectedIndex = var3_int;
+          this.scrollSelectionIntoView(125);
+          this.typedPrefix = param1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nva.P(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void b(int param0, int param1, int param2, int param3, int param4) {
+    private final void setBoundsAndLayout(int param0, int param1, int param2, int param3, int param4) {
         super.setBounds(param3, param0, param4, 1, param1);
-        this.field_A.setBounds(0, param2 + param0, this.field_B, param2 + 21, 0);
-        this.field_x.setBounds(-20 + param0, 20, this.field_B, 1, 0);
-        if (this.field_H) {
-          this.field_G.setBounds(0, param0, -this.field_B + param4, 1, this.field_B);
+        this.displayButton.setBounds(0, param2 + param0, this.collapsedHeight, param2 + 21, 0);
+        this.arrowButton.setBounds(-20 + param0, 20, this.collapsedHeight, 1, 0);
+        if (this.dropdownOpen) {
+          this.dropdownPane.setBounds(0, param0, -this.collapsedHeight + param4, 1, this.collapsedHeight);
         }
     }
 
-    private final void e(int param0) {
+    private final void scrollSelectionIntoView(int param0) {
         int var2;
         int var3;
         int var4;
@@ -62,26 +62,26 @@ final class nva extends UiContainer implements UiActionListener {
         int var9;
         int var8Lifetime1;
         int var9Lifetime1;
-        if (this.h(0) &&
-          this.field_w.field_H != -1 &&
-          null != this.field_w.field_L &&
-          null != this.field_G.field_B) {
-          var2 = this.field_G.field_y.height;
-          var3 = this.field_w.field_I;
-          var4 = -var2 + this.field_w.height;
+        if (this.isDropdownOpen(0) &&
+          this.list.selectedIndex != -1 &&
+          null != this.list.items &&
+          null != this.dropdownPane.verticalScrollbar) {
+          var2 = this.dropdownPane.viewport.height;
+          var3 = this.list.rowHeight;
+          var4 = -var2 + this.list.height;
           if (var4 <= 0) {
             return;
           }
           var5 = -93 / ((72 - param0) / 35);
-          var6 = var3 * this.field_w.field_H;
-          var7 = var6 + this.field_G.field_y.child.y;
+          var6 = var3 * this.list.selectedIndex;
+          var7 = var6 + this.dropdownPane.viewport.child.y;
           var8 = var2 >> 2;
           if (var7 < var8) {
             var9 = -(var8 - var6 << 16) / var4;
             if (var9 < 0) {
               var9 = 0;
             }
-            this.field_G.field_B.field_L = var9;
+            this.dropdownPane.verticalScrollbar.verticalPosition = var9;
           }
           var8Lifetime1 = -var3 + (3 * var2 >> 2);
           if (var8Lifetime1 < var7) {
@@ -89,60 +89,60 @@ final class nva extends UiContainer implements UiActionListener {
             if (var9Lifetime1 > 65536) {
               var9Lifetime1 = 65536;
             }
-            this.field_G.field_B.field_L = var9Lifetime1;
+            this.dropdownPane.verticalScrollbar.verticalPosition = var9Lifetime1;
           }
           return;
         }
     }
 
-    private final void d(int param0) {
-        int var2 = this.field_w.e(4);
+    private final void openDropdown(int param0) {
+        int var2 = this.list.getPreferredListHeight(4);
         int var3 = var2;
         int var4 = 0;
-        if (this.field_y < var3) {
-          var3 = this.field_y;
+        if (this.maximumDropdownHeight < var3) {
+          var3 = this.maximumDropdownHeight;
           var4 = 1;
         }
-        this.b(this.width, this.y, -20, this.x, this.field_B + var3);
-        this.field_w.setBounds(0, this.width, var2, 1, 0);
-        this.field_G = new sha(0, 0, 0, 0, new nrb(), this.field_w, (UiRenderer) null);
+        this.setBoundsAndLayout(this.width, this.y, -20, this.x, this.collapsedHeight + var3);
+        this.list.setBounds(0, this.width, var2, 1, 0);
+        this.dropdownPane = new UiScrollPane(0, 0, 0, 0, new nrb(), this.list, (UiRenderer) null);
         if (var4 != 0) {
-          this.field_G.a(true, GetMassDriverEnergyUsed.a(0), (byte) -99);
+          this.dropdownPane.setVerticalScrollbar(true, GetMassDriverEnergyUsed.a(0), (byte) -99);
         }
-        this.field_G.setBounds(0, this.width, this.height - this.field_B, 1, this.field_B);
-        this.field_H = true;
-        this.addChild(param0 ^ -6447, this.field_G);
-        this.e(param0 ^ 20500);
+        this.dropdownPane.setBounds(0, this.width, this.height - this.collapsedHeight, 1, this.collapsedHeight);
+        this.dropdownOpen = true;
+        this.addChild(param0 ^ -6447, this.dropdownPane);
+        this.scrollSelectionIntoView(param0 ^ 20500);
         if (param0 != 20589) {
           UiComponent var5 = (UiComponent) null;
           this.handleKey(76, 36, (UiComponent) null, '3');
         }
     }
 
-    final void i(int param0) {
+    final void notifySelectionChanged(int param0) {
         if (param0 != 21694) {
-          this.field_H = false;
+          this.dropdownOpen = false;
         }
-        if (this.listener instanceof aca) {
-          ((aca) ((Object) this.listener)).a(-3, this);
+        if (this.listener instanceof UiComboBoxSelectionListener) {
+          ((UiComboBoxSelectionListener) ((Object) this.listener)).onSelectionChanged(-3, this);
         }
     }
 
-    nva(Object[] param0, int param1, int param2) {
+    UiComboBox(Object[] param0, int param1, int param2) {
         super(0, 0, 0, 0, (UiRenderer) null);
-        this.field_E = "";
-        this.field_v = SetShipToShipRamDamage.field_o;
+        this.typedPrefix = "";
+        this.font = SetShipToShipRamDamage.field_o;
         try {
-          this.field_w = new tia(this, this.field_v, param0, param1);
-          this.field_y = param2;
-          this.field_w.listener = (UiListener) (this);
-          this.field_H = false;
-          this.field_A = new UiFocusableComponent("", new bpa(this), (UiListener) (this));
-          this.field_x = new UiFocusableComponent();
-          this.field_x.renderer = (UiRenderer) ((Object) new pbb());
-          this.field_x.listener = (UiListener) (this);
-          this.addChild(-18756, this.field_A);
-          this.addChild(-18756, this.field_x);
+          this.list = new UiComboBoxList(this, this.font, param0, param1);
+          this.maximumDropdownHeight = param2;
+          this.list.listener = (UiListener) (this);
+          this.dropdownOpen = false;
+          this.displayButton = new UiFocusableComponent("", new UiComboBoxRenderer(this), (UiListener) (this));
+          this.arrowButton = new UiFocusableComponent();
+          this.arrowButton.renderer = (UiRenderer) ((Object) new pbb());
+          this.arrowButton.listener = (UiListener) (this);
+          this.addChild(-18756, this.displayButton);
+          this.addChild(-18756, this.arrowButton);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nva.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -158,10 +158,10 @@ final class nva extends UiContainer implements UiActionListener {
           if (param0 != 11) {
             return;
           }
-          if (!this.h(0)) {
-            this.d(20589);
+          if (!this.isDropdownOpen(0)) {
+            this.openDropdown(20589);
           } else {
-            this.g(5647);
+            this.closeDropdown(5647);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -193,21 +193,21 @@ final class nva extends UiContainer implements UiActionListener {
           var3 = (UiComponent) null;
           this.handleKey(27, 77, (UiComponent) null, 'ￔ');
         }
-        stackIn_7_0 = (this.field_z) || (super.hasFocus((byte) -120));
+        stackIn_7_0 = (this.focused) || (super.hasFocus((byte) -120));
         return stackIn_7_0;
     }
 
-    private final void g(int param0) {
-        if (!this.h(param0 ^ param0)) {
+    private final void closeDropdown(int param0) {
+        if (!this.isDropdownOpen(param0 ^ param0)) {
           return;
         }
-        this.b(this.width, this.y, -20, this.x, this.field_B);
-        this.field_H = false;
-        this.field_G.unlink(param0 - 9493);
+        this.setBoundsAndLayout(this.width, this.y, -20, this.x, this.collapsedHeight);
+        this.dropdownOpen = false;
+        this.dropdownPane.unlink(param0 - 9493);
     }
 
     final void clearFocus(byte param0) {
-        this.field_z = false;
+        this.focused = false;
         super.clearFocus(param0);
     }
 
@@ -222,11 +222,11 @@ final class nva extends UiContainer implements UiActionListener {
           if (param0 != 0) {
             this.handleKey(-101, -112, (UiComponent) null, '￭');
           }
-          this.field_z = true;
-          this.field_E = "";
+          this.focused = true;
+          this.typedPrefix = "";
           if (null != this.listener &&
             this.listener instanceof UiFocusListener) {
-            ((UiFocusListener) (this.listener)).onFocusChanged(this.field_z, (UiComponent) (this), true);
+            ((UiFocusListener) (this.listener)).onFocusChanged(this.focused, (UiComponent) (this), true);
           }
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -256,17 +256,17 @@ final class nva extends UiContainer implements UiActionListener {
         if (!this.hovered) {
           return null;
         }
-        if (this.h(0) &&
-          this.field_G.hovered &&
-          this.field_w.field_D != -1) {
-          return this.field_w.field_L[this.field_w.field_D].toString();
+        if (this.isDropdownOpen(0) &&
+          this.dropdownPane.hovered &&
+          this.list.hoveredIndex != -1) {
+          return this.list.items[this.list.hoveredIndex].toString();
         }
-        if (null != this.field_w.g((byte) 96)) {
-          return this.field_w.g((byte) 96).toString();
+        if (null != this.list.getSelectedItem((byte) 96)) {
+          return this.list.getSelectedItem((byte) 96).toString();
         }
         if (param0 != 125) {
           String var3 = (String) null;
-          discarded$0 = this.a((String) null, -80);
+          discarded$0 = this.findPrefixMatch((String) null, -80);
         }
         return super.getTooltip((byte) 125);
     }
@@ -280,7 +280,7 @@ final class nva extends UiContainer implements UiActionListener {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param6 >= -17) {
-            this.field_v = (BitmapFont) null;
+            this.font = (BitmapFont) null;
           }
           stackIn_3_0 = super.handleMousePress(param0, param1, param2, param3, param4, param5, (byte) -93);
           return stackIn_3_0;
@@ -319,72 +319,72 @@ final class nva extends UiContainer implements UiActionListener {
             return true;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (null != this.field_w.field_L) {
-            var5_int = this.field_w.field_L.length;
+          if (null != this.list.items) {
+            var5_int = this.list.items.length;
             if (param1 != 99 &&
               param1 != 98) {
               if (param1 != 105 &&
                 param1 != 104) {
                 if (84 == param1) {
-                  if (this.field_H) {
-                    this.g(5647);
+                  if (this.dropdownOpen) {
+                    this.closeDropdown(5647);
                   } else {
-                    this.d(20589);
+                    this.openDropdown(20589);
                   }
                   return true;
                 }
                 if (85 == param1) {
-                  var6_int = this.field_E.length();
+                  var6_int = this.typedPrefix.length();
                   if (var6_int <= 0) {
                     return true;
                   }
-                  this.field_E = this.field_E.substring(0, -1 + var6_int);
+                  this.typedPrefix = this.typedPrefix.substring(0, -1 + var6_int);
                   return true;
                 }
                 decompiledFrameRemainder0 = !(param3 < 32);
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = !(param3 >= 128))) {
-                  var6 = this.field_E + param3;
-                  this.a((byte) 40, var6);
+                  var6 = this.typedPrefix + param3;
+                  this.selectByPrefix((byte) 40, var6);
                   return true;
                 }
               }
               if (decompiledFrameRemainder0) {
-                if (!this.h(0)) {
-                  this.d(20589);
+                if (!this.isDropdownOpen(0)) {
+                  this.openDropdown(20589);
                 }
-                var6_intLifetime1 = this.field_G.field_y.height / this.field_w.field_I;
+                var6_intLifetime1 = this.dropdownPane.viewport.height / this.list.rowHeight;
                 if (param1 == 105) {
-                  this.field_w.field_H = this.field_w.field_H + var6_intLifetime1;
+                  this.list.selectedIndex = this.list.selectedIndex + var6_intLifetime1;
                 } else {
-                  this.field_w.field_H = this.field_w.field_H - var6_intLifetime1;
+                  this.list.selectedIndex = this.list.selectedIndex - var6_intLifetime1;
                 }
-                if (0 > this.field_w.field_H) {
-                  this.field_w.field_H = 0;
+                if (0 > this.list.selectedIndex) {
+                  this.list.selectedIndex = 0;
                 }
-                if (this.field_w.field_H >= var5_int) {
-                  this.field_w.field_H = -1 + var5_int;
+                if (this.list.selectedIndex >= var5_int) {
+                  this.list.selectedIndex = -1 + var5_int;
                 }
-                this.e(120);
+                this.scrollSelectionIntoView(120);
                 return true;
               }
             }
             if (decompiledFrameRemainder0) {
-              if (!this.h(0)) {
-                this.d(20589);
+              if (!this.isDropdownOpen(0)) {
+                this.openDropdown(20589);
               }
               if (param1 == 99) {
-                this.field_w.field_H = this.field_w.field_H + 1;
+                this.list.selectedIndex = this.list.selectedIndex + 1;
               } else {
-                this.field_w.field_H = this.field_w.field_H - 1;
+                this.list.selectedIndex = this.list.selectedIndex - 1;
               }
-              if (this.field_w.field_H < 0) {
-                this.field_w.field_H = 0;
+              if (this.list.selectedIndex < 0) {
+                this.list.selectedIndex = 0;
               }
-              if (var5_int <= this.field_w.field_H) {
-                this.field_w.field_H = -1 + var5_int;
+              if (var5_int <= this.list.selectedIndex) {
+                this.list.selectedIndex = -1 + var5_int;
               }
-              this.e(115);
+              this.scrollSelectionIntoView(115);
               return true;
             }
           }
@@ -392,7 +392,7 @@ final class nva extends UiContainer implements UiActionListener {
             stackIn_61_0 = super.handleKey(-15834, param1, param2, param3);
             return stackIn_61_0;
           }
-          this.g(5647);
+          this.closeDropdown(5647);
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -408,7 +408,7 @@ final class nva extends UiContainer implements UiActionListener {
         }
     }
 
-    private final int a(String param0, int param1) {
+    private final int findPrefixMatch(String param0, int param1) {
         int var4 = 0;
         int var3_int = 0;
         RuntimeException var3 = null;
@@ -424,8 +424,8 @@ final class nva extends UiContainer implements UiActionListener {
         try {
           var3_int = -55 / ((45 - param1) / 53);
           param0 = param0.toLowerCase();
-          for (var4 = 0; this.field_w.field_L.length > var4; var4++) {
-            var5 = this.field_w.field_L[var4].toString().toLowerCase();
+          for (var4 = 0; this.list.items.length > var4; var4++) {
+            var5 = this.list.items[var4].toString().toLowerCase();
             if (var5.startsWith(param0)) {
               stackIn_6_0 = var4;
               return stackIn_6_0;
@@ -448,27 +448,27 @@ final class nva extends UiContainer implements UiActionListener {
     }
 
     final void setBounds(int param0, int param1, int param2, int param3, int param4) {
-        this.field_B = param2;
+        this.collapsedHeight = param2;
         if (param3 != 1) {
-          this.field_B = 17;
+          this.collapsedHeight = 17;
         }
-        this.b(param1, param4, -20, param0, param2);
+        this.setBoundsAndLayout(param1, param4, -20, param0, param2);
     }
 
-    final int a(int param0) {
+    final int getSelectedIndex(int param0) {
         if (param0 != 0) {
-          this.field_y = 67;
+          this.maximumDropdownHeight = 67;
         }
-        return this.field_w.field_H;
+        return this.list.selectedIndex;
     }
 
-    final static String a(char param0, boolean param1, int param2) {
+    final static String repeatCharacter(char param0, boolean param1, int param2) {
         int var4 = 0;
         int var5 = VoidHunters.field_G;
         char[] var6 = new char[param2];
         char[] var3 = var6;
         if (!param1) {
-          nva.clearSharedReferences(-90);
+          UiComboBox.clearSharedReferences(-90);
         }
         for (var4 = 0; var4 < param2; var4++) {
           var6[var4] = param0;
@@ -476,13 +476,13 @@ final class nva extends UiContainer implements UiActionListener {
         return new String(var6);
     }
 
-    final static void a(int param0, boolean param1, int param2, int param3) {
-        GetPhasedEnergyBeamPulsetime.field_o = param2;
-        mb.field_j = param0;
+    final static void setMenuTextColors(int param0, boolean param1, int param2, int param3) {
+        GetPhasedEnergyBeamPulsetime.menuHeadingColor = param2;
+        mb.menuSelectedItemColor = param0;
         if (!param1) {
-          nva.a('W', true, -7);
+          UiComboBox.repeatCharacter('W', true, -7);
         }
-        SetUsePolygonFill.field_o = param3;
+        SetUsePolygonFill.menuItemColor = param3;
     }
 
     static {

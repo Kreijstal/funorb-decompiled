@@ -5,7 +5,7 @@ import java.io.*;
 
 final class lnb extends TextureOperation {
     private int field_j;
-    static jv field_i;
+    static QuickChatCategoryLoader field_i;
     private int field_k;
 
     final int[] getMonochromeRow(int param0, boolean param1) {
@@ -184,7 +184,7 @@ final class lnb extends TextureOperation {
 
     final static boolean a(int param0, int param1, boolean param2) {
         if (param2) {
-          field_i = (jv) null;
+          field_i = (QuickChatCategoryLoader) null;
         }
         return (1024 & param0) != 0 ? true : false;
     }
@@ -204,7 +204,7 @@ final class lnb extends TextureOperation {
     public static void clearSharedReferences(int param0) {
         field_i = null;
         if (param0 != 1) {
-          field_i = (jv) null;
+          field_i = (QuickChatCategoryLoader) null;
         }
     }
 

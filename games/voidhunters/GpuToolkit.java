@@ -167,7 +167,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         if (param0 > -51) {
           this.field_kc = (GpuEnvironmentMapSource) null;
         }
-        this.drawUnitQuad(0, bk.field_v, 2);
+        this.drawUnitQuad(0, UiViewport.field_v, 2);
     }
 
     final GpuTransform3D getModelTransform(int param0) {
@@ -364,7 +364,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.setMultisampleEnabled(-114, false);
         this.setVertexBuffer((byte) -6, this.circleVertexBuffer, 0);
         this.setVertexDeclaration(-51, this.circleVertexDeclaration);
-        this.drawPrimitive(bk.field_v, 0, 256, 66);
+        this.drawPrimitive(UiViewport.field_v, 0, 256, 66);
         this.setMultisampleEnabled(-82, true);
         this.setAlphaCombineSource(0, (byte) -122, SetGrapplingHookMaxExtension8Force.field_q);
         this.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, 7);

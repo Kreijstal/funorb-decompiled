@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetUsePolygonFill extends ConsoleCommand {
-    static int field_o;
+    static int menuItemColor;
 
     SetUsePolygonFill(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -18,7 +18,7 @@ final class SetUsePolygonFill extends ConsoleCommand {
         try {
           SetServerinfoComponentstate.field_o = arguments[0].booleanValue(false);
           if (obfuscationGuard >= -119) {
-            field_o = 52;
+            menuItemColor = 52;
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

@@ -676,7 +676,7 @@ final class WeaponBehaviour implements DiffableState {
             Particle.field_a - Particle.field_n < this.reload) {
             var10_int = Particle.field_a - this.reload;
             var11 = ShipFactory.field_a.a(0);
-            var11.a(-1, param4, param0, bpa.field_a / Particle.field_n * var10_int, 1, 0, (byte) 69, param1, param7, 0);
+            var11.a(-1, param4, param0, UiComboBoxRenderer.field_a / Particle.field_n * var10_int, 1, 0, (byte) 69, param1, param7, 0);
           }
           var12 = this.getDefinition((byte) 24);
           if (var12.hasSustainedPulse(1024) &&

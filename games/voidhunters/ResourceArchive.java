@@ -616,7 +616,7 @@ final class ResourceArchive {
                   var22 = var21;
                 } else {
                   if (var10 != 0) {
-                    var21 = bpa.field_d;
+                    var21 = UiComboBoxRenderer.field_d;
                   } else {
                     if (var11 != 0) {
                       var22_int = GetPhasedEnergyBeamRandomness.field_p[var7][var9] - IncrementVariableActionFactory.field_b;

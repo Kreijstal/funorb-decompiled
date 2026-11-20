@@ -4,7 +4,7 @@
 final class mb extends PacketBuffer {
     static String[] field_k;
     static boolean field_i;
-    static int field_j;
+    static int menuSelectedItemColor;
 
     public static void clearSharedReferences(byte param0) {
         field_k = null;

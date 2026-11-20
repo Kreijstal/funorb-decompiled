@@ -133,7 +133,7 @@ final class waa extends UiContainer implements jpb, UiActionListener {
         this.field_A = new tga("", (UiListener) null, 12);
         bob var1 = new bob(SetTorpedoProjectileLife.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, SetShipToShipRamDamage.field_o.maxAscent, -1, 2147483647, true);
         UiComponent var2 = new UiComponent(field_y, var1, (UiListener) null);
-        this.field_z = new UiFocusableComponent(tia.field_K, (UiListener) null);
+        this.field_z = new UiFocusableComponent(UiComboBoxList.field_K, (UiListener) null);
         this.field_C = new UiFocusableComponent(SetMissileLauncherProjectiles.field_p, (UiListener) null);
         this.field_A.tooltip = gna.field_m;
         this.field_A.a(6614, new tib(this.field_A));

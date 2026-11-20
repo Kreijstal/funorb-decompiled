@@ -99,7 +99,7 @@ final class hka extends uj {
         RuntimeException var3 = null;
         var4 = VoidHunters.field_G;
         try {
-          if (ef.field_z >= 10) {
+          if (UiDraggableContainer.field_z >= 10) {
             if (!lm.a(true)) {
               SoftwareRasterizer2D.clear();
               SetRadialMenuRadius.a((byte) 82, 320, 240);

@@ -61,7 +61,7 @@ final class dpb {
             if (!param1.field_k) {
               if (0 == param1.field_f &&
                 param1.field_h == 0) {
-                var3Lifetime1 = SetReverbGain.a(tia.field_G, new String[]{(String) (var2)}, 119);
+                var3Lifetime1 = SetReverbGain.a(UiComboBoxList.field_G, new String[]{(String) (var2)}, 119);
               } else {
                 var3Lifetime1 = SetReverbGain.a(GetLaserAimspeed.field_o, new String[]{(String) (var2)}, 123);
               }

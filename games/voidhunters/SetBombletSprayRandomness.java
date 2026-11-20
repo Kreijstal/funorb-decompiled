@@ -3,7 +3,7 @@
  */
 final class SetBombletSprayRandomness extends ConsoleCommand {
     static String field_o;
-    static ef field_p;
+    static UiDraggableContainer field_p;
 
     final static int a(int param0, int param1) {
         param0 = (param1 & param0) + (1431655765 & param0 >>> 1);
@@ -21,7 +21,7 @@ final class SetBombletSprayRandomness extends ConsoleCommand {
           var3 = param0 >>> 31;
           return -var3 + (param0 + var3) / param1;
         }
-        field_p = (ef) null;
+        field_p = (UiDraggableContainer) null;
         var3Lifetime1 = param0 >>> 31;
         return -var3Lifetime1 + (param0 + var3Lifetime1) / param1;
     }

@@ -387,7 +387,7 @@ final class ShipAI implements DiffableState {
                     var19 = var18_ref_tj.x - param0.x;
                     var20Lifetime2 = var18_ref_tj.y - param0.y;
                     var21Lifetime2 = ar.a(var19, (byte) 115, var20Lifetime2);
-                    if (var21Lifetime2 < bpa.field_a) {
+                    if (var21Lifetime2 < UiComboBoxRenderer.field_a) {
                       var17Lifetime2 = 1;
                       decompiledFrameRemainder0 = false;
                     }

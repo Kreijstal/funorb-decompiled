@@ -98,7 +98,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
         var21 = VoidHunters.field_G;
         try {
           wja.field_c = param4;
-          sha.field_w = param2;
+          UiScrollPane.field_w = param2;
           GetDebrisThrowable.field_r = param7;
           hqb.field_k = param9;
           SetMutatorVotes.field_o = param14;
@@ -180,7 +180,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           Debris.field_y = new Widget(0L, qc.field_q);
           Debris.field_y.field_F = 1;
           Debris.field_y.field_B = 0;
-          SetTorpedoAcceleration.field_o = new Widget(0L, hnb.field_X, tia.field_K.toUpperCase());
+          SetTorpedoAcceleration.field_o = new Widget(0L, hnb.field_X, UiComboBoxList.field_K.toUpperCase());
           GetTorpedoProjectiles.field_o = new Widget(0L, DualLinkNode.field_g);
           GetTorpedoProjectiles.field_o.addChild(-561, Debris.field_y);
           GetTorpedoProjectiles.field_o.addChild(-561, SetTorpedoAcceleration.field_o);
@@ -213,33 +213,33 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           GetLaserAimarc.field_o[0] = new Widget(0L, SetShieldsDirectionalHalfarcCuts.field_p, GetMissionTerrainSpaceProbability.field_p);
           SetReloadBarHeight.field_q[0] = new IconTextWidget[6];
           for (var17_int = 0; var17_int < 5; var17_int++) {
-            SetReloadBarHeight.field_q[0][1 + var17_int] = new IconTextWidget(0L, tia.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, SpriteDimensions.field_o[var17_int], SetHealthBarHeight.field_p[var17_int]);
+            SetReloadBarHeight.field_q[0][1 + var17_int] = new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, SpriteDimensions.field_o[var17_int], SetHealthBarHeight.field_p[var17_int]);
           }
           if (SetMutatorVotes.field_o.length >= 2) {
             GetLaserAimarc.field_o[1] = new Widget(0L, SetShieldsDirectionalHalfarcCuts.field_p, GpuMaterialEffect.field_a);
             array$0 = new IconTextWidget[1 + SetMutatorVotes.field_o.length];
             SetReloadBarHeight.field_q[1] = array$0;
-            SetReloadBarHeight.field_q[1][0] = new IconTextWidget(0L, tia.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, OpenGlBloomEffect.field_k);
+            SetReloadBarHeight.field_q[1][0] = new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, OpenGlBloomEffect.field_k);
             for (var17_intLifetime1 = 0; var17_intLifetime1 < SetMutatorVotes.field_o.length; var17_intLifetime1++) {
-              SetReloadBarHeight.field_q[1][var17_intLifetime1 + 1] = new IconTextWidget(0L, tia.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, Integer.toString(SetMutatorVotes.field_o[var17_intLifetime1]));
+              SetReloadBarHeight.field_q[1][var17_intLifetime1 + 1] = new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, Integer.toString(SetMutatorVotes.field_o[var17_intLifetime1]));
             }
           }
           GetLaserAimarc.field_o[2] = new Widget(0L, SetShieldsDirectionalHalfarcCuts.field_p, kra.field_b);
-          SetReloadBarHeight.field_q[2] = new IconTextWidget[]{new IconTextWidget(0L, tia.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, OpenGlBloomEffect.field_k), new IconTextWidget(0L, tia.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, GetPointDefenceLaserProjectileInterceptDamage.field_t[0], nl.field_j), new IconTextWidget(0L, tia.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, GetPointDefenceLaserProjectileInterceptDamage.field_t[1], SettingsInstanceFactory.field_a)};
+          SetReloadBarHeight.field_q[2] = new IconTextWidget[]{new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, OpenGlBloomEffect.field_k), new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, GetPointDefenceLaserProjectileInterceptDamage.field_t[0], nl.field_j), new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, GetPointDefenceLaserProjectileInterceptDamage.field_t[1], SettingsInstanceFactory.field_a)};
           if (GetDebrisThrowable.field_r > 1) {
             GetLaserAimarc.field_o[3] = new Widget(0L, SetShieldsDirectionalHalfarcCuts.field_p, GetMassDriverProjectileOndamageParticles.field_o);
             array$1 = new IconTextWidget[1 + GetDebrisThrowable.field_r];
             SetReloadBarHeight.field_q[3] = array$1;
-            SetReloadBarHeight.field_q[3][0] = new IconTextWidget(0L, tia.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, OpenGlBloomEffect.field_k);
+            SetReloadBarHeight.field_q[3][0] = new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, OpenGlBloomEffect.field_k);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < GetDebrisThrowable.field_r; var17_intLifetime2++) {
-              SetReloadBarHeight.field_q[3][var17_intLifetime2 + 1] = new IconTextWidget(0L, tia.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, wja.field_c[var17_intLifetime2]);
+              SetReloadBarHeight.field_q[3][var17_intLifetime2 + 1] = new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, wja.field_c[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param12 > var17_intLifetime3; var17_intLifetime3++) {
             GetLaserAimarc.field_o[var17_intLifetime3 + 4] = new Widget(0L, SetShieldsDirectionalHalfarcCuts.field_p, ClientException.field_c[var17_intLifetime3]);
             array$2 = new IconTextWidget[dla.a(255, (int) gm.field_M[var17_intLifetime3]) + 1];
             SetReloadBarHeight.field_q[var17_intLifetime3 + 4] = array$2;
-            SetReloadBarHeight.field_q[var17_intLifetime3 + 4][0] = new IconTextWidget(0L, tia.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, OpenGlBloomEffect.field_k);
+            SetReloadBarHeight.field_q[var17_intLifetime3 + 4][0] = new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, OpenGlBloomEffect.field_k);
             for (var18 = 0; var18 < (gm.field_M[var17_intLifetime3] & 255); var18++) {
               if (SetRepairModeRadius.field_o == null) {
                 var19_ref = null;
@@ -259,7 +259,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
                   var20 = hqb.field_k[var17_intLifetime3][var18];
                 }
               }
-              SetReloadBarHeight.field_q[4 + var17_intLifetime3][1 + var18] = new IconTextWidget(0L, tia.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) (var19_ref), (String) (var20));
+              SetReloadBarHeight.field_q[4 + var17_intLifetime3][1 + var18] = new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) (var19_ref), (String) (var20));
             }
           }
           for (var17_intLifetime4 = 0; var17_intLifetime4 < 4 + param12; var17_intLifetime4++) {

@@ -32,7 +32,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
     }
 
     final static int e(byte param0) {
-        if (2 > ef.field_z) {
+        if (2 > UiDraggableContainer.field_z) {
           return 0;
         }
         if (SetGrapplingHookAimarc.field_p != 0) {
@@ -105,7 +105,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        rn var4 = null;
+        QuickChatCategoryDefinition var4 = null;
         int var5 = 0;
         int var6 = 0;
         int var9 = 0;
@@ -124,7 +124,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
           }
           param1.releasePackedGroups = false;
           param1.fileRetentionMode = 0;
-          lnb.field_i = new jv(var3_int, param1, param1);
+          lnb.field_i = new QuickChatCategoryLoader(var3_int, param1, param1);
           GetTorpedoAimarc.field_o = new QuickChatPhraseLoader(var3_int, param1, param1, new wk());
           var4 = VariableCondition.d(10);
           if (var4 == null) {
@@ -146,7 +146,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
             SoftwareRasterizer2D.drawVerticalLine(var8, 1 + var8, 14 - (var8 << 1), 16777215);
           }
           SoftwareRasterizer2D.setTarget(var16, var5, var6);
-          GetShieldsDamageEnergyConversion.field_o = vcb.a(0, jwa.field_k, ScrollableActionPanel.field_Ab, DebrisFactory.field_a, var4);
+          GetShieldsDamageEnergyConversion.field_o = UiScrollBar.createQuickChatCategoryMenu(0, jwa.field_k, ScrollableActionPanel.field_Ab, DebrisFactory.field_a, var4);
           if (param0 != -35) {
             return;
           }

@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tia extends mu {
-    int field_D;
+final class UiComboBoxList extends UiFocusProxy {
+    int hoveredIndex;
     static Widget field_M;
-    private nva field_F;
+    private UiComboBox comboBox;
     static String field_G;
-    int field_H;
+    int selectedIndex;
     static int[] field_J;
     static long field_C;
-    Object[] field_L;
+    Object[] items;
     static String field_K;
-    int field_I;
-    private BitmapFont field_E;
+    int rowHeight;
+    private BitmapFont font;
 
     public static void clearSharedReferences(int param0) {
         field_J = null;
@@ -23,14 +23,14 @@ final class tia extends mu {
     }
 
     final boolean containsPoint(int param0, int param1, int param2, int param3, byte param4) {
-        this.field_D = -1;
-        if (!this.field_F.field_H) {
+        this.hoveredIndex = -1;
+        if (!this.comboBox.dropdownOpen) {
           return false;
         }
-        if (!this.field_F.field_G.field_y.hovered) {
+        if (!this.comboBox.dropdownPane.viewport.hovered) {
           return false;
         }
-        if (this.field_L == null) {
+        if (this.items == null) {
           return super.containsPoint(param0, param1, param2, param3, (byte) 22);
         }
         param0 = param0 - (this.y + param3);
@@ -40,13 +40,13 @@ final class tia extends mu {
           param2 <= this.width &&
           this.height >= param0) {
           if (param4 != 22) {
-            ((byte[]) (((Object[]) (this.field_L[16]))[0]))[25] = (byte) 98;
+            ((byte[]) (((Object[]) (this.items[16]))[0]))[25] = (byte) 98;
           }
-          this.field_D = param0 / this.field_I;
-          if (this.field_L.length > this.field_D) {
+          this.hoveredIndex = param0 / this.rowHeight;
+          if (this.items.length > this.hoveredIndex) {
             return true;
           }
-          this.field_D = -1;
+          this.hoveredIndex = -1;
           return true;
         }
         return false;
@@ -57,12 +57,12 @@ final class tia extends mu {
         super.fireAction(param0, param1, param2, param3);
         param3 = param3 - this.y;
         param1 = param1 - this.x;
-        if (null != this.field_L) {
-          var5 = param3 / this.field_I;
+        if (null != this.items) {
+          var5 = param3 / this.rowHeight;
           if (var5 >= 0 &&
-            this.field_L.length > var5) {
-            this.field_H = var5;
-            this.field_F.i(21694);
+            this.items.length > var5) {
+            this.selectedIndex = var5;
+            this.comboBox.notifySelectionChanged(21694);
           }
         }
     }
@@ -81,79 +81,79 @@ final class tia extends mu {
         if (param2 <= 47) {
           return;
         }
-        int var7 = this.field_H;
-        if (-1 != this.field_D) {
-          var7 = this.field_D;
+        int var7 = this.selectedIndex;
+        if (-1 != this.hoveredIndex) {
+          var7 = this.hoveredIndex;
         }
-        if (this.field_L != null) {
-          for (var8 = 0; var8 < this.field_L.length; var8++) {
-            var9 = this.field_L[var8];
+        if (this.items != null) {
+          for (var8 = 0; var8 < this.items.length; var8++) {
+            var9 = this.items[var8];
             var10 = var9.toString();
             if (var8 == var7) {
-              SoftwareRasterizer2D.fillRectangleAlpha(2 + var5, var6 + 4, this.width - 4, this.field_I, 2188450, 128);
+              SoftwareRasterizer2D.fillRectangleAlpha(2 + var5, var6 + 4, this.width - 4, this.rowHeight, 2188450, 128);
             }
-            var6 = var6 + this.field_I;
-            this.field_E.draw(var10, 2 + var5, var6, 10000536, -1);
+            var6 = var6 + this.rowHeight;
+            this.font.draw(var10, 2 + var5, var6, 10000536, -1);
           }
         }
     }
 
     final static int a(boolean param0, int param1, int param2, boolean param3) {
         if (param0) {
-          tia.clearSharedReferences(-64);
+          UiComboBoxList.clearSharedReferences(-64);
         }
         return ColorRowCache.c(1);
     }
 
-    final int e(int param0) {
+    final int getPreferredListHeight(int param0) {
         if (param0 != 4) {
-          this.field_E = (BitmapFont) (((Object[]) (this.field_L[1]))[15]);
+          this.font = (BitmapFont) (((Object[]) (this.items[1]))[15]);
         }
-        return null != this.field_L ? this.field_I * (1 + this.field_L.length * 2) >> 1 : 200;
+        return null != this.items ? this.rowHeight * (1 + this.items.length * 2) >> 1 : 200;
     }
 
-    tia(nva param0, BitmapFont param1, Object[] param2, int param3) {
+    UiComboBoxList(UiComboBox param0, BitmapFont param1, Object[] param2, int param3) {
         super(param0);
         try {
-          this.field_E = param1;
-          this.field_F = param0;
-          this.field_I = this.field_E.maxDescent + this.field_E.maxAscent;
-          this.a(param3, 28, param2);
+          this.font = param1;
+          this.comboBox = param0;
+          this.rowHeight = this.font.maxDescent + this.font.maxAscent;
+          this.setItems(param3, 28, param2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
-    final Object g(byte param0) {
+    final Object getSelectedItem(byte param0) {
         Object stackIn_7_0 = null;
         if (param0 != 96) {
           this.drawLayer(-103, 101, 5, -59);
         }
-        if (null != this.field_L &&
-          -1 != this.field_H) {
-          stackIn_7_0 = this.field_L[this.field_H];
+        if (null != this.items &&
+          -1 != this.selectedIndex) {
+          stackIn_7_0 = this.items[this.selectedIndex];
         } else {
           stackIn_7_0 = null;
         }
         return stackIn_7_0;
     }
 
-    private final void a(int param0, int param1, Object[] param2) {
+    private final void setItems(int param0, int param1, Object[] param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_L = param2;
-          this.field_H = param0;
-          this.field_D = -1;
+          this.items = param2;
+          this.selectedIndex = param0;
+          this.hoveredIndex = -1;
           if (param1 != 28) {
             return;
           }
           if (param2 != null) {
-            if (this.field_H >= -1 &&
-              this.field_H < this.field_L.length) {
+            if (this.selectedIndex >= -1 &&
+              this.selectedIndex < this.items.length) {
               return;
             }
             throw new IllegalStateException();

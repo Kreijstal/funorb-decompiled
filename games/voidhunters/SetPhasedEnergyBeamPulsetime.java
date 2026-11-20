@@ -94,7 +94,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
           var4 = qc.field_q.font.getLineCount(param0, 500);
           var5 = 6 + qc.field_q.font.getParagraphWidth(param0, 500);
           var6 = 2 + nna.field_w * var4;
-          var7 = jv.a((byte) -109, var2_int, 12, var5);
+          var7 = QuickChatCategoryLoader.adjustPopupX((byte) -109, var2_int, 12, var5);
           var8 = lma.a(20, var3, var6, (byte) -16);
           SoftwareRasterizer2D.drawRectangle(var7, var8, var5, var6, 0);
           if (param1 <= 9) {

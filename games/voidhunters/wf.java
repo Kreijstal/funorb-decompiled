@@ -563,7 +563,7 @@ final class wf {
                                   }
                                   if (var8 != 0) {
                                     PopupMenuWidget.applyGraphicsQualityPreset(false);
-                                    if (ef.field_E) {
+                                    if (UiDraggableContainer.field_E) {
                                       MissionBuilder.a((byte) 114, "graphics_quality", GetMissileLauncherProjectileLife.graphicsQuality);
                                       SetLaserAimarc.a(-96);
                                     }
@@ -775,10 +775,10 @@ final class wf {
                                 GetWeaponProjectileSpeedMultiply.e((byte) -81);
                               }
                               if (this.field_b.b(-80)) {
-                                vcb.f(32);
+                                UiScrollBar.f(32);
                               }
                               if (GetMutatorVotes.field_p != var7 &&
-                                ef.field_E) {
+                                UiDraggableContainer.field_E) {
                                 MissionBuilder.a((byte) -22, "music_volume", GetMutatorVotes.field_p);
                                 SetLaserAimarc.a(-122);
                               }
@@ -826,7 +826,7 @@ final class wf {
                                 GetNebulaFadesOutWhenClose.a(-124, fa.field_d[1]);
                                 mba.field_b = 20 + SetMinimapWidth.field_o;
                               }
-                              if (ef.field_E) {
+                              if (UiDraggableContainer.field_E) {
                                 MissionBuilder.a((byte) 3, "fx_volume", kt.field_l);
                                 SetLaserAimarc.a(-108);
                               }

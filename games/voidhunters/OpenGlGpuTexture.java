@@ -336,11 +336,11 @@ abstract class OpenGlGpuTexture implements GpuTexture {
         GetMachineGunAimarc.field_q = null;
         if (lsa.field_e != null) {
           WidgetNode.field_l = ServerTick.field_d;
-          bpa.field_c = lsa.field_e;
+          UiComboBoxRenderer.field_c = lsa.field_e;
           lsa.field_e = null;
           ServerTick.field_d = null;
-          bpa.field_c.field_qb = -1;
-          bpa.field_c.field_ib = -1;
+          UiComboBoxRenderer.field_c.field_qb = -1;
+          UiComboBoxRenderer.field_c.field_ib = -1;
         }
         hp.field_b = null;
         SetThrusterAutobalancing.field_p = null;

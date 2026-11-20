@@ -13,7 +13,7 @@ final class hnb extends iw implements UiActionListener {
     private UiFocusableComponent[] field_T;
     private fm[] field_N;
     private UiFocusableComponent field_V;
-    private nva field_P;
+    private UiComboBox field_P;
     private UiFocusableComponent field_O;
     private usb field_S;
     private boolean field_J;
@@ -53,12 +53,12 @@ final class hnb extends iw implements UiActionListener {
             field_U = (Sprite[]) null;
           }
           if (null != this.field_P) {
-            stackIn_16_0 = (this.field_P.h(0)) ? 0 : 1;
+            stackIn_16_0 = (this.field_P.isDropdownOpen(0)) ? 0 : 1;
             if (stackIn_16_0 != (this.field_M ? 1 : 0)) {
               return;
             }
             this.a(true, this.field_L);
-            this.field_M = this.field_P.h(0);
+            this.field_M = this.field_P.isDropdownOpen(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -99,7 +99,7 @@ final class hnb extends iw implements UiActionListener {
           if (param1 == this.field_L) {
             if (var3 == param1) {
               if (this.field_P != null) {
-                var4 = this.field_P.a(0);
+                var4 = this.field_P.getSelectedIndex(0);
                 var5 = this.field_N[var4];
                 if (MissionConditionFactory.field_b.field_q == var5.field_c &&
                   MissionConditionFactory.field_b.field_e == var5.field_a) {
@@ -292,7 +292,7 @@ final class hnb extends iw implements UiActionListener {
               }
               var5_ref_String__[var7_int] = var8.field_c + "<times>" + var8.field_a;
             }
-            this.field_P = new nva(var5_ref_String__, var6_int, 150);
+            this.field_P = new UiComboBox(var5_ref_String__, var6_int, 150);
             this.field_P.setBounds(this.field_L.x + this.field_S.x, 126, 18, 1, -19 + (this.field_L.height + this.field_S.y + this.field_L.y));
             this.children.addFirst(this.field_P, (byte) -55);
           }
@@ -680,7 +680,7 @@ final class hnb extends iw implements UiActionListener {
           } else {
             if (this.field_L == this.field_V) {
               if (null != this.field_P) {
-                var2 = this.field_P.a(0);
+                var2 = this.field_P.getSelectedIndex(0);
                 if (var2 >= 0) {
                   MissionConditionFactory.field_b.a(this.field_N[var2].field_a, 480, this.field_N[var2].field_c);
                 }

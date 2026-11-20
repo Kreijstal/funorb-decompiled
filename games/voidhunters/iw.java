@@ -226,9 +226,9 @@ abstract class iw extends bl {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               GetShieldsToggleCooldown.a(var14, true);
               if (var6_intLifetime1 != 0) {
-                ujb.a(SetCountermeasuresPulseRadius.field_q, GetCountermeasureLauncherFireForce.field_o, SecondaryNodeQueue.field_d, 13336, var6_intLifetime1, jv.field_b);
+                ujb.a(SetCountermeasuresPulseRadius.field_q, GetCountermeasureLauncherFireForce.field_o, SecondaryNodeQueue.field_d, 13336, var6_intLifetime1, QuickChatCategoryLoader.field_b);
               } else {
-                ujb.a(SetCountermeasuresPulseRadius.field_q, GetCountermeasureLauncherFireForce.field_o, SecondaryNodeQueue.field_d, 13336, var6_intLifetime1, jv.field_b);
+                ujb.a(SetCountermeasuresPulseRadius.field_q, GetCountermeasureLauncherFireForce.field_o, SecondaryNodeQueue.field_d, 13336, var6_intLifetime1, QuickChatCategoryLoader.field_b);
               }
             }
             SetLaserRandomness.a((byte) -29, var5);

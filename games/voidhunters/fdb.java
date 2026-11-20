@@ -96,10 +96,10 @@ final class fdb extends MidiPcmStream {
         }
         if (0 != oib.field_a.field_o) {
           if (SetMutatorVotes.field_o.length == 1 &&
-            sha.field_w != SetMutatorVotes.field_o[0]) {
-            sha.field_w = SetMutatorVotes.field_o[0];
+            UiScrollPane.field_w != SetMutatorVotes.field_o[0]) {
+            UiScrollPane.field_w = SetMutatorVotes.field_o[0];
           }
-          GetMassDriverProjectiles.a((byte) 127, true, vva.field_u, 0, sha.field_w, param2);
+          GetMassDriverProjectiles.a((byte) 127, true, vva.field_u, 0, UiScrollPane.field_w, param2);
         }
         if (SetTorpedoAcceleration.field_o.field_o != 0) {
           bv.field_d = false;

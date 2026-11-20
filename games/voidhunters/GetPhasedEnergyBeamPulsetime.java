@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetPhasedEnergyBeamPulsetime extends ConsoleCommand {
-    static int field_o;
+    static int menuHeadingColor;
     static java.awt.Font field_p;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

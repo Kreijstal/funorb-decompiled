@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vcb extends UiArrayContainer implements UiActionListener {
-    private UiFocusableComponent field_A;
-    private boolean field_G;
-    private boolean field_y;
-    private UiFocusableComponent field_N;
-    private int field_J;
-    int field_K;
-    private UiFocusableComponent field_C;
-    private int field_F;
-    private int field_x;
-    private boolean field_w;
-    private int field_B;
-    int field_L;
-    private ef field_P;
-    private int field_H;
-    private UiFocusableComponent field_D;
+final class UiScrollBar extends UiArrayContainer implements UiActionListener {
+    private UiFocusableComponent upButton;
+    private boolean verticalScrolling;
+    private boolean arrowAndKeyboardInputEnabled;
+    private UiFocusableComponent track;
+    private int minimumThumbWidth;
+    int verticalLineStep;
+    private UiFocusableComponent rightButton;
+    private int verticalPageStep;
+    private int horizontalPageStep;
+    private boolean horizontalScrolling;
+    private int minimumThumbHeight;
+    int verticalPosition;
+    private UiDraggableContainer thumb;
+    private int horizontalLineStep;
+    private UiFocusableComponent leftButton;
     static byte[][] field_E;
     static GameStateFactory field_z;
-    int field_M;
-    private UiFocusableComponent field_v;
+    int horizontalPosition;
+    private UiFocusableComponent downButton;
 
     public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         int var7 = 0;
@@ -32,29 +32,29 @@ final class vcb extends UiArrayContainer implements UiActionListener {
         var7 = VoidHunters.field_G;
         try {
           if (param1 == 1 &&
-            this.field_y) {
-            if (this.field_G &&
-              this.field_A == param3) {
-              this.a((byte) -17, -this.field_K + this.field_L);
+            this.arrowAndKeyboardInputEnabled) {
+            if (this.verticalScrolling &&
+              this.upButton == param3) {
+              this.setVerticalPositionAndNotify((byte) -17, -this.verticalLineStep + this.verticalPosition);
             } else {
-              if (this.field_G &&
-                this.field_v == param3) {
-                this.a((byte) -17, this.field_K + this.field_L);
+              if (this.verticalScrolling &&
+                this.downButton == param3) {
+                this.setVerticalPositionAndNotify((byte) -17, this.verticalLineStep + this.verticalPosition);
               } else {
-                if (this.field_w &&
-                  this.field_D == param3) {
-                  this.a(-51, this.field_M - this.field_H);
+                if (this.horizontalScrolling &&
+                  this.leftButton == param3) {
+                  this.setHorizontalPositionAndNotify(-51, this.horizontalPosition - this.horizontalLineStep);
                 } else {
-                  if (this.field_w &&
-                    this.field_C == param3) {
-                    this.a(-23, this.field_M + this.field_H);
+                  if (this.horizontalScrolling &&
+                    this.rightButton == param3) {
+                    this.setHorizontalPositionAndNotify(-23, this.horizontalPosition + this.horizontalLineStep);
                   }
                 }
               }
             }
           }
           if (param0 != 11) {
-            this.field_G = false;
+            this.verticalScrolling = false;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -85,63 +85,63 @@ final class vcb extends UiArrayContainer implements UiActionListener {
         var7 = VoidHunters.field_G;
         try {
           super.updatePointer(param0, param1, param2, param3);
-          if ((!(this.field_P.child instanceof UiFocusableComponent) ||
-            ((UiFocusableComponent) (this.field_P.child)).enabled) && this.field_P.pressedButton == 1) {
-            if (this.field_w) {
-              var5_int = this.field_M;
-              this.h((byte) 79);
-              if (var5_int != this.field_M &&
-                this.listener instanceof lt) {
-                ((lt) (this.listener)).a(this, this.field_M, this.field_M, true);
+          if ((!(this.thumb.child instanceof UiFocusableComponent) ||
+            ((UiFocusableComponent) (this.thumb.child)).enabled) && this.thumb.pressedButton == 1) {
+            if (this.horizontalScrolling) {
+              var5_int = this.horizontalPosition;
+              this.readHorizontalPositionFromThumb((byte) 79);
+              if (var5_int != this.horizontalPosition &&
+                this.listener instanceof UiScrollListener) {
+                ((UiScrollListener) (this.listener)).onScrollDragged(this, this.horizontalPosition, this.horizontalPosition, true);
               }
             } else {
-              this.i((byte) -8);
+              this.updateThumbX((byte) -8);
             }
-            if (!this.field_G) {
-              this.e(param2 ^ -981);
+            if (!this.verticalScrolling) {
+              this.updateThumbY(param2 ^ -981);
             } else {
-              var5_intLifetime2 = this.field_L;
-              this.g(127);
-              if (var5_intLifetime2 != this.field_L &&
-                this.listener instanceof lt) {
-                ((lt) (this.listener)).a(this, this.field_L, this.field_M, true);
+              var5_intLifetime2 = this.verticalPosition;
+              this.readVerticalPositionFromThumb(127);
+              if (var5_intLifetime2 != this.verticalPosition &&
+                this.listener instanceof UiScrollListener) {
+                ((UiScrollListener) (this.listener)).onScrollDragged(this, this.verticalPosition, this.horizontalPosition, true);
               }
             }
           }
-          if (this.field_N.enabled &&
-            1 == this.field_N.activatedButton) {
-            if (this.field_G) {
-              if (!this.field_w) {
-                if (uia.field_b <= param0 - (-this.field_P.y - (this.field_P.height >> 1))) {
-                  this.a((byte) -17, this.field_L - this.field_F);
+          if (this.track.enabled &&
+            1 == this.track.activatedButton) {
+            if (this.verticalScrolling) {
+              if (!this.horizontalScrolling) {
+                if (uia.field_b <= param0 - (-this.thumb.y - (this.thumb.height >> 1))) {
+                  this.setVerticalPositionAndNotify((byte) -17, this.verticalPosition - this.verticalPageStep);
                   return;
                 }
-                this.a((byte) -17, this.field_L + this.field_F);
+                this.setVerticalPositionAndNotify((byte) -17, this.verticalPosition + this.verticalPageStep);
                 return;
               }
-              var5_intLifetime1 = -this.field_P.x - (this.field_P.width >> 1) + (-param1 + PlayerGameData.field_b) - this.x;
-              var6 = uia.field_b - param0 + (-this.y - (this.field_P.y + (this.field_P.height >> 1)));
+              var5_intLifetime1 = -this.thumb.x - (this.thumb.width >> 1) + (-param1 + PlayerGameData.field_b) - this.x;
+              var6 = uia.field_b - param0 + (-this.y - (this.thumb.y + (this.thumb.height >> 1)));
               if (Math.abs(var6) <= Math.abs(var5_intLifetime1)) {
                 if (var5_intLifetime1 <= 0) {
-                  this.a(-116, this.field_M - this.field_x);
+                  this.setHorizontalPositionAndNotify(-116, this.horizontalPosition - this.horizontalPageStep);
                   return;
                 }
-                this.a(-15, this.field_x + this.field_M);
+                this.setHorizontalPositionAndNotify(-15, this.horizontalPageStep + this.horizontalPosition);
                 return;
               }
               if (0 < var6) {
-                this.a((byte) -17, this.field_L + this.field_F);
+                this.setVerticalPositionAndNotify((byte) -17, this.verticalPosition + this.verticalPageStep);
                 return;
               }
-              this.a((byte) -17, -this.field_F + this.field_L);
+              this.setVerticalPositionAndNotify((byte) -17, -this.verticalPageStep + this.verticalPosition);
               return;
             }
-            if (this.field_w) {
-              if ((this.field_P.width >> 1) + (this.field_P.x + param1) >= PlayerGameData.field_b) {
-                this.a(107, -this.field_x + this.field_M);
+            if (this.horizontalScrolling) {
+              if ((this.thumb.width >> 1) + (this.thumb.x + param1) >= PlayerGameData.field_b) {
+                this.setHorizontalPositionAndNotify(107, -this.horizontalPageStep + this.horizontalPosition);
                 return;
               }
-              this.a(-102, this.field_M + this.field_x);
+              this.setHorizontalPositionAndNotify(-102, this.horizontalPosition + this.horizontalPageStep);
               return;
             }
           }
@@ -160,62 +160,62 @@ final class vcb extends UiArrayContainer implements UiActionListener {
         }
     }
 
-    final void b(int param0, int param1, int param2) {
+    final void updateHorizontalThumbSize(int param0, int param1, int param2) {
         int var4 = 0;
         if (param1 != 21944) {
           UiComponent var5 = (UiComponent) null;
           this.handleKey(-20, -95, (UiComponent) null, 'J');
         }
         if (param0 < param2) {
-          var4 = this.field_N.width * param0 / param2;
-          if (var4 < this.field_J) {
-            var4 = this.field_J;
+          var4 = this.track.width * param0 / param2;
+          if (var4 < this.minimumThumbWidth) {
+            var4 = this.minimumThumbWidth;
           }
-          this.field_P.setBounds(this.field_P.x, var4, this.field_P.height, 1, this.field_P.y);
-          this.a((byte) -63, true);
+          this.thumb.setBounds(this.thumb.x, var4, this.thumb.height, 1, this.thumb.y);
+          this.setHorizontalControlsEnabled((byte) -63, true);
         } else {
-          this.field_P.setBounds(this.field_P.x, this.field_N.width, this.field_P.height, param1 ^ 21945, this.field_P.y);
-          this.a((byte) -110, false);
+          this.thumb.setBounds(this.thumb.x, this.track.width, this.thumb.height, param1 ^ 21945, this.thumb.y);
+          this.setHorizontalControlsEnabled((byte) -110, false);
         }
-        this.i((byte) -8);
+        this.updateThumbX((byte) -8);
     }
 
-    final void c(int param0, int param1) {
+    final void setVerticalPosition(int param0, int param1) {
         int var4;
-        rn var5;
+        QuickChatCategoryDefinition var5;
         var4 = VoidHunters.field_G;
         if (param1 < 0) {
-          this.field_L = 0;
+          this.verticalPosition = 0;
         } else {
           if (param1 > 65536) {
-            this.field_L = 65536;
+            this.verticalPosition = 65536;
           } else {
-            this.field_L = param1;
+            this.verticalPosition = param1;
           }
         }
-        this.e(0);
+        this.updateThumbY(0);
         if (param0 != -3393) {
-          var5 = (rn) null;
-          vcb.a(33, (Widget) null, (Widget) null, (Widget) null, (rn) null);
+          var5 = (QuickChatCategoryDefinition) null;
+          UiScrollBar.createQuickChatCategoryMenu(33, (Widget) null, (Widget) null, (Widget) null, (QuickChatCategoryDefinition) null);
         }
     }
 
-    private final void g(int param0) {
-        int var2 = this.field_A == null ? this.field_N.y : this.field_A.height + this.field_A.y;
-        int var3 = null != this.field_v ? -this.field_P.height + this.field_v.y : this.field_N.height + this.field_N.y - this.field_P.height;
+    private final void readVerticalPositionFromThumb(int param0) {
+        int var2 = this.upButton == null ? this.track.y : this.upButton.height + this.upButton.y;
+        int var3 = null != this.downButton ? -this.thumb.height + this.downButton.y : this.track.height + this.track.y - this.thumb.height;
         int var4 = 68 / ((9 - param0) / 59);
-        this.c(-3393, var3 <= var2 ? 0 : (this.field_P.y - var2 << 16) / (var3 - var2));
+        this.setVerticalPosition(-3393, var3 <= var2 ? 0 : (this.thumb.y - var2 << 16) / (var3 - var2));
     }
 
-    private final void a(int param0, int param1) {
-        this.b(param1, 65536);
+    private final void setHorizontalPositionAndNotify(int param0, int param1) {
+        this.setHorizontalPosition(param1, 65536);
         int var3 = -73 % ((param0 - 35) / 49);
-        if (this.listener instanceof lt) {
-          ((lt) (this.listener)).a(this.field_M, this.field_L, this, -125);
+        if (this.listener instanceof UiScrollListener) {
+          ((UiScrollListener) (this.listener)).onScrollChanged(this.horizontalPosition, this.verticalPosition, this, -125);
         }
     }
 
-    private final void a(int param0, boolean param1) {
+    private final void setVerticalControlsEnabled(int param0, boolean param1) {
         UiFocusableComponent stackIn_5_0 = null;
         boolean stackIn_7_1 = false;
         UiFocusableComponent stackIn_12_0 = null;
@@ -225,60 +225,60 @@ final class vcb extends UiArrayContainer implements UiActionListener {
         UiFocusableComponent stackIn_23_0 = null;
         boolean stackIn_24_1 = false;
         if (param0 != 0) {
-          this.h((byte) -20);
+          this.readHorizontalPositionFromThumb((byte) -20);
         }
-        stackIn_5_0 = this.field_N;
-        stackIn_7_1 = (param1) || (this.field_w);
+        stackIn_5_0 = this.track;
+        stackIn_7_1 = (param1) || (this.horizontalScrolling);
         stackIn_5_0.enabled = stackIn_7_1;
-        if (this.field_P.child instanceof UiFocusableComponent) {
-          stackIn_12_0 = (UiFocusableComponent) (this.field_P.child);
-          stackIn_14_1 = (param1) || (this.field_w);
+        if (this.thumb.child instanceof UiFocusableComponent) {
+          stackIn_12_0 = (UiFocusableComponent) (this.thumb.child);
+          stackIn_14_1 = (param1) || (this.horizontalScrolling);
           stackIn_12_0.enabled = stackIn_14_1;
         }
-        if (this.field_A != null) {
-          stackIn_18_0 = this.field_A;
+        if (this.upButton != null) {
+          stackIn_18_0 = this.upButton;
           stackIn_19_1 = (!param1) ? false : true;
           stackIn_18_0.enabled = stackIn_19_1;
         }
-        if (null != this.field_v) {
-          stackIn_23_0 = this.field_v;
+        if (null != this.downButton) {
+          stackIn_23_0 = this.downButton;
           stackIn_24_1 = (!param1) ? false : true;
           stackIn_23_0.enabled = stackIn_24_1;
         }
     }
 
-    final void c(int param0, int param1, int param2) {
+    final void updateVerticalThumbSize(int param0, int param1, int param2) {
         int var4 = 0;
         if (param1 > param0) {
-          var4 = this.field_N.height * param0 / param1;
-          if (this.field_B > var4) {
-            var4 = this.field_B;
+          var4 = this.track.height * param0 / param1;
+          if (this.minimumThumbHeight > var4) {
+            var4 = this.minimumThumbHeight;
           }
-          this.field_P.setBounds(this.field_P.x, this.field_P.width, var4, 1, this.field_P.y);
-          this.a(0, true);
+          this.thumb.setBounds(this.thumb.x, this.thumb.width, var4, 1, this.thumb.y);
+          this.setVerticalControlsEnabled(0, true);
         } else {
-          this.field_P.setBounds(this.field_P.x, this.field_P.width, this.field_N.height, 1, this.field_P.y);
-          this.a(0, false);
+          this.thumb.setBounds(this.thumb.x, this.thumb.width, this.track.height, 1, this.thumb.y);
+          this.setVerticalControlsEnabled(0, false);
         }
-        this.e(0);
+        this.updateThumbY(0);
         if (param2 < 126) {
-          rn var5 = (rn) null;
-          vcb.a(-91, (Widget) null, (Widget) null, (Widget) null, (rn) null);
+          QuickChatCategoryDefinition var5 = (QuickChatCategoryDefinition) null;
+          UiScrollBar.createQuickChatCategoryMenu(-91, (Widget) null, (Widget) null, (Widget) null, (QuickChatCategoryDefinition) null);
         }
     }
 
-    private final void h(byte param0) {
+    private final void readHorizontalPositionFromThumb(byte param0) {
         if (param0 <= 49) {
-          this.c(17, -59, -81);
+          this.updateVerticalThumbSize(17, -59, -81);
         }
-        int var2 = null != this.field_D ? this.field_D.x + this.field_D.width : this.field_N.x;
-        int var3 = this.field_C != null ? this.field_C.x - this.field_P.width : this.field_N.width + this.field_N.x - this.field_P.width;
-        this.b(var3 <= var2 ? 0 : (this.field_P.x - var2 << 16) / (var3 - var2), 65536);
+        int var2 = null != this.leftButton ? this.leftButton.x + this.leftButton.width : this.track.x;
+        int var3 = this.rightButton != null ? this.rightButton.x - this.thumb.width : this.track.width + this.track.x - this.thumb.width;
+        this.setHorizontalPosition(var3 <= var2 ? 0 : (this.thumb.x - var2 << 16) / (var3 - var2), 65536);
     }
 
-    vcb(int param0, int param1, int param2, int param3, UiRenderer param4, UiRenderer param5, UiRenderer param6, int param7, int param8, int param9, int param10, boolean param11, boolean param12, int param13, int param14) {
+    UiScrollBar(int param0, int param1, int param2, int param3, UiRenderer param4, UiRenderer param5, UiRenderer param6, int param7, int param8, int param9, int param10, boolean param11, boolean param12, int param13, int param14) {
         super(param0, param1, param2, param3, param4);
-        ef dupTemp$0 = null;
+        UiDraggableContainer dupTemp$0 = null;
         UiFocusableComponent dupTemp$1 = null;
         boolean stackIn_4_1 = false;
         boolean stackIn_7_1 = false;
@@ -291,31 +291,31 @@ final class vcb extends UiArrayContainer implements UiActionListener {
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var16 = null;
-        this.field_F = 8192;
-        this.field_x = 8192;
-        this.field_B = 0;
-        this.field_y = true;
-        this.field_L = 32768;
-        this.field_H = 1024;
-        this.field_J = 0;
-        this.field_K = 1024;
-        this.field_M = 32768;
+        this.verticalPageStep = 8192;
+        this.horizontalPageStep = 8192;
+        this.minimumThumbHeight = 0;
+        this.arrowAndKeyboardInputEnabled = true;
+        this.verticalPosition = 32768;
+        this.horizontalLineStep = 1024;
+        this.minimumThumbWidth = 0;
+        this.verticalLineStep = 1024;
+        this.horizontalPosition = 32768;
         try {
           this.children = new UiComponent[6];
-          dupTemp$0 = new ef(param0, param1, param7, param8, (UiRenderer) null, (UiListener) null, new UiFocusableComponent(0, 0, param7, param8, param6, (UiListener) null), false, false);
-          this.field_P = dupTemp$0;
+          dupTemp$0 = new UiDraggableContainer(param0, param1, param7, param8, (UiRenderer) null, (UiListener) null, new UiFocusableComponent(0, 0, param7, param8, param6, (UiListener) null), false, false);
+          this.thumb = dupTemp$0;
           this.children[0] = (UiComponent) ((Object) dupTemp$0);
           dupTemp$1 = new UiFocusableComponent(param0, param1, param7, param8, param5, (UiListener) null);
-          this.field_N = dupTemp$1;
+          this.track = dupTemp$1;
           this.children[1] = (UiComponent) ((Object) dupTemp$1);
           stackIn_4_1 = (param11);
-          this.field_w = stackIn_4_1;
+          this.horizontalScrolling = stackIn_4_1;
           stackIn_7_1 = (param12);
-          this.field_G = stackIn_7_1;
-          this.field_J = param9;
-          this.field_B = param10;
-          this.b(param13, 65536);
-          this.c(-3393, param14);
+          this.verticalScrolling = stackIn_7_1;
+          this.minimumThumbWidth = param9;
+          this.minimumThumbHeight = param10;
+          this.setHorizontalPosition(param13, 65536);
+          this.setVerticalPosition(-3393, param14);
           this.setBounds(param0, param2, param3, 1, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -352,14 +352,14 @@ final class vcb extends UiArrayContainer implements UiActionListener {
         field_z = null;
     }
 
-    private final int k(byte param0) {
+    private final int getVerticalThumbFraction(byte param0) {
         if (param0 != 110) {
-          this.field_M = 17;
+          this.horizontalPosition = 17;
         }
-        return (this.field_P.height << 16) / this.field_N.height;
+        return (this.thumb.height << 16) / this.track.height;
     }
 
-    private final void a(byte param0, boolean param1) {
+    private final void setHorizontalControlsEnabled(byte param0, boolean param1) {
         UiFocusableComponent stackIn_3_0 = null;
         boolean stackIn_5_1 = false;
         UiFocusableComponent stackIn_11_0 = null;
@@ -368,48 +368,48 @@ final class vcb extends UiArrayContainer implements UiActionListener {
         boolean stackIn_18_1 = false;
         UiFocusableComponent stackIn_22_0 = null;
         boolean stackIn_23_1 = false;
-        stackIn_3_0 = this.field_N;
-        stackIn_5_1 = (param1) || (this.field_G);
+        stackIn_3_0 = this.track;
+        stackIn_5_1 = (param1) || (this.verticalScrolling);
         stackIn_3_0.enabled = stackIn_5_1;
         if (param0 > -34) {
           return;
         }
-        if (this.field_P.child instanceof UiFocusableComponent) {
-          stackIn_11_0 = (UiFocusableComponent) (this.field_P.child);
-          stackIn_13_1 = (param1) || (this.field_G);
+        if (this.thumb.child instanceof UiFocusableComponent) {
+          stackIn_11_0 = (UiFocusableComponent) (this.thumb.child);
+          stackIn_13_1 = (param1) || (this.verticalScrolling);
           stackIn_11_0.enabled = stackIn_13_1;
         }
-        if (this.field_D != null) {
-          stackIn_17_0 = this.field_D;
+        if (this.leftButton != null) {
+          stackIn_17_0 = this.leftButton;
           stackIn_18_1 = (!param1) ? false : true;
           stackIn_17_0.enabled = stackIn_18_1;
         }
-        if (this.field_C != null) {
-          stackIn_22_0 = this.field_C;
+        if (this.rightButton != null) {
+          stackIn_22_0 = this.rightButton;
           stackIn_23_1 = (!param1) ? false : true;
           stackIn_22_0.enabled = stackIn_23_1;
         }
     }
 
-    private final void e(int param0) {
-        int var2 = null == this.field_A ? this.field_N.y : this.field_A.height + this.field_A.y;
-        int var3 = null == this.field_v ? this.field_N.y + (this.field_N.height - this.field_P.height) : this.field_v.y - this.field_P.height;
-        this.field_P.y = (this.field_L * (-var2 + var3) >> 16) + var2;
+    private final void updateThumbY(int param0) {
+        int var2 = null == this.upButton ? this.track.y : this.upButton.height + this.upButton.y;
+        int var3 = null == this.downButton ? this.track.y + (this.track.height - this.thumb.height) : this.downButton.y - this.thumb.height;
+        this.thumb.y = (this.verticalPosition * (-var2 + var3) >> 16) + var2;
         if (param0 != 0) {
-          vcb.f(-79);
+          UiScrollBar.f(-79);
         }
     }
 
-    private final void i(byte param0) {
+    private final void updateThumbX(byte param0) {
         if (param0 != -8) {
           this.layoutChildren(116);
         }
-        int var2 = null == this.field_D ? this.field_N.x : this.field_D.width + this.field_D.x;
-        int var3 = null != this.field_C ? -this.field_P.width + this.field_C.x : this.field_N.width + (this.field_N.x - this.field_P.width);
-        this.field_P.x = ((var3 - var2) * this.field_M >> 16) + var2;
+        int var2 = null == this.leftButton ? this.track.x : this.leftButton.width + this.leftButton.x;
+        int var3 = null != this.rightButton ? -this.thumb.width + this.rightButton.x : this.track.width + (this.track.x - this.thumb.width);
+        this.thumb.x = ((var3 - var2) * this.horizontalPosition >> 16) + var2;
     }
 
-    final static QuickChatMenuWidget a(int param0, Widget param1, Widget param2, Widget param3, rn param4) {
+    final static QuickChatMenuWidget createQuickChatCategoryMenu(int param0, Widget param1, Widget param2, Widget param3, QuickChatCategoryDefinition param4) {
         int var14 = 0;
         Object stackIn_3_0 = null;
         int stackIn_7_0 = 0;
@@ -434,7 +434,7 @@ final class vcb extends UiArrayContainer implements UiActionListener {
         int[] var10 = null;
         QuickChatMenuWidget[] var11 = null;
         int var12 = 0;
-        rn var13_ref_rn = null;
+        QuickChatCategoryDefinition var13_ref_rn = null;
         int var13 = 0;
         int var15 = 0;
         QuickChatPhraseDefinition var16 = null;
@@ -450,22 +450,22 @@ final class vcb extends UiArrayContainer implements UiActionListener {
             stackIn_3_0 = null;
             return (QuickChatMenuWidget) (stackIn_3_0);
           }
-          if (param4.field_l != null) {
-            stackIn_7_0 = param4.field_l.length;
+          if (param4.categoryIds != null) {
+            stackIn_7_0 = param4.categoryIds.length;
           } else {
             stackIn_7_0 = 0;
           }
           var5_int = stackIn_7_0;
-          if (null == param4.field_n) {
+          if (null == param4.phraseIds) {
             stackIn_10_0 = 0;
           } else {
-            stackIn_10_0 = param4.field_n.length;
+            stackIn_10_0 = param4.phraseIds.length;
           }
           var6 = stackIn_10_0;
           var7 = var5_int + var6;
           var8 = new String[var7];
           if (param0 != 0) {
-            vcb.clearSharedReferences((byte) 98);
+            UiScrollBar.clearSharedReferences((byte) 98);
           }
           var21 = new char[var7];
           var19 = var21;
@@ -474,32 +474,32 @@ final class vcb extends UiArrayContainer implements UiActionListener {
           var18 = var20;
           var10 = var18;
           var11 = new QuickChatMenuWidget[var7];
-          if (null != param4.field_l) {
-            for (var12 = 0; var12 < param4.field_l.length; var12++) {
-              var13_ref_rn = lnb.field_i.a((byte) -72, param4.field_l[var12]);
-              var8[var12] = var13_ref_rn.field_p;
-              var9[var12] = param4.field_q[var12];
-              var11[var12] = vcb.a(0, param1, param2, param3, var13_ref_rn);
+          if (null != param4.categoryIds) {
+            for (var12 = 0; var12 < param4.categoryIds.length; var12++) {
+              var13_ref_rn = lnb.field_i.getCategory((byte) -72, param4.categoryIds[var12]);
+              var8[var12] = var13_ref_rn.label;
+              var9[var12] = param4.categoryShortcuts[var12];
+              var11[var12] = UiScrollBar.createQuickChatCategoryMenu(0, param1, param2, param3, var13_ref_rn);
             }
           }
-          if (param4.field_n != null) {
+          if (param4.phraseIds != null) {
             var12Lifetime1 = var5_int;
             var13 = 49;
-            for (var14 = 0; var14 < param4.field_n.length; var14++) {
-              var15 = param4.field_n[var14];
+            for (var14 = 0; var14 < param4.phraseIds.length; var14++) {
+              var15 = param4.phraseIds[var14];
               if (var15 == -1) {
                 var8[var14 + var12Lifetime1] = SetPhasedEnergyBeamEnergyUsed.field_p;
-                var9[var14 + var12Lifetime1] = param4.field_m[var14];
-                var10[var12Lifetime1 + var14] = param4.field_n[var14];
+                var9[var14 + var12Lifetime1] = param4.phraseShortcuts[var14];
+                var10[var12Lifetime1 + var14] = param4.phraseIds[var14];
               } else {
                 var16 = GetTorpedoAimarc.field_o.getPhrase(var15, -118);
                 var8[var14 + var12Lifetime1] = var16.getPreviewText(80);
-                var9[var14 + var12Lifetime1] = param4.field_m[var14];
+                var9[var14 + var12Lifetime1] = param4.phraseShortcuts[var14];
                 if (var9[var12Lifetime1 + var14] <= 0) {
                   var13 = (char)(var13 + 1);
                   var9[var14 + var12Lifetime1] = (char)var13;
                 }
-                var10[var14 + var12Lifetime1] = param4.field_n[var14];
+                var10[var14 + var12Lifetime1] = param4.phraseIds[var14];
               }
             }
           }
@@ -540,49 +540,49 @@ final class vcb extends UiArrayContainer implements UiActionListener {
     final void layoutChildren(int param0) {
         int var3;
         var3 = VoidHunters.field_G;
-        if (null != this.field_D) {
-          this.field_D.x = 0;
-          this.field_D.y = this.height - this.field_D.height >> 1;
-          this.field_N.x = this.field_D.x + this.field_D.width;
+        if (null != this.leftButton) {
+          this.leftButton.x = 0;
+          this.leftButton.y = this.height - this.leftButton.height >> 1;
+          this.track.x = this.leftButton.x + this.leftButton.width;
         } else {
-          this.field_N.x = 0;
+          this.track.x = 0;
         }
-        if (this.field_C != null) {
-          this.field_C.x = this.width - this.field_C.width;
-          this.field_C.y = this.height - this.field_C.height >> 1;
-          this.field_N.width = this.width + (-this.field_N.x - this.field_C.width);
+        if (this.rightButton != null) {
+          this.rightButton.x = this.width - this.rightButton.width;
+          this.rightButton.y = this.height - this.rightButton.height >> 1;
+          this.track.width = this.width + (-this.track.x - this.rightButton.width);
         } else {
-          this.field_N.width = -this.field_N.x + this.width;
+          this.track.width = -this.track.x + this.width;
         }
-        this.i((byte) -8);
-        if (this.field_A == null) {
-          this.field_N.y = 0;
+        this.updateThumbX((byte) -8);
+        if (this.upButton == null) {
+          this.track.y = 0;
         } else {
-          this.field_A.y = 0;
-          this.field_A.x = this.width - this.field_A.width >> 1;
-          this.field_N.y = this.field_A.y + this.field_A.height;
+          this.upButton.y = 0;
+          this.upButton.x = this.width - this.upButton.width >> 1;
+          this.track.y = this.upButton.y + this.upButton.height;
         }
-        if (this.field_v != null) {
-          this.field_v.y = this.height - this.field_v.height;
-          this.field_v.x = -this.field_v.width + this.width >> 1;
-          this.field_N.height = -this.field_N.y + (this.height - this.field_v.height);
+        if (this.downButton != null) {
+          this.downButton.y = this.height - this.downButton.height;
+          this.downButton.x = -this.downButton.width + this.width >> 1;
+          this.track.height = -this.track.y + (this.height - this.downButton.height);
         } else {
-          this.field_N.height = this.height - this.field_N.y;
+          this.track.height = this.height - this.track.y;
         }
-        this.e(param0 ^ param0);
-        if (!this.field_G) {
-          this.field_P.height = this.field_N.height;
-          this.field_P.y = 0;
+        this.updateThumbY(param0 ^ param0);
+        if (!this.verticalScrolling) {
+          this.thumb.height = this.track.height;
+          this.thumb.y = 0;
         }
-        if (!this.field_w) {
-          this.field_P.width = this.field_N.width;
-          this.field_P.x = 0;
+        if (!this.horizontalScrolling) {
+          this.thumb.width = this.track.width;
+          this.thumb.x = 0;
         }
-        this.field_P.refreshLayout(false);
+        this.thumb.refreshLayout(false);
     }
 
     final boolean requestFocus(int param0, UiComponent param1) {
-        ef var3 = null;
+        UiDraggableContainer var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -590,9 +590,9 @@ final class vcb extends UiArrayContainer implements UiActionListener {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 0) {
-            this.field_L = -9;
+            this.verticalPosition = -9;
           }
-          var3 = this.field_P;
+          var3 = this.thumb;
           if (var3 != null &&
             ((UiComponent) ((Object) var3)).requestFocus(param0 ^ 0, param1)) {
             return true;
@@ -612,28 +612,28 @@ final class vcb extends UiArrayContainer implements UiActionListener {
         }
     }
 
-    private final void b(int param0, int param1) {
+    private final void setHorizontalPosition(int param0, int param1) {
         int var4;
         var4 = VoidHunters.field_G;
         if (param0 < 0) {
-          this.field_M = 0;
+          this.horizontalPosition = 0;
         } else {
           if (param0 <= 65536) {
-            this.field_M = param0;
+            this.horizontalPosition = param0;
           } else {
-            this.field_M = 65536;
+            this.horizontalPosition = 65536;
           }
         }
         if (param1 != 65536) {
           return;
         }
-        this.i((byte) -8);
+        this.updateThumbX((byte) -8);
     }
 
     final static void f(int param0) {
         int var1 = 0;
         if (param0 != 32) {
-          vcb.clearSharedReferences((byte) -101);
+          UiScrollBar.clearSharedReferences((byte) -101);
         }
         if (GetMutatorVotes.field_p < 224) {
           var1 = GetMutatorVotes.field_p % 32;
@@ -643,13 +643,13 @@ final class vcb extends UiArrayContainer implements UiActionListener {
         }
     }
 
-    private final void a(byte param0, int param1) {
-        this.c(-3393, param1);
-        if (this.listener instanceof lt) {
-          ((lt) (this.listener)).a(this.field_L, this.field_L, this, param0 ^ 106);
+    private final void setVerticalPositionAndNotify(byte param0, int param1) {
+        this.setVerticalPosition(-3393, param1);
+        if (this.listener instanceof UiScrollListener) {
+          ((UiScrollListener) (this.listener)).onScrollChanged(this.verticalPosition, this.verticalPosition, this, param0 ^ 106);
         }
         if (param0 != -17) {
-          this.i((byte) 62);
+          this.updateThumbX((byte) 62);
         }
     }
 
@@ -663,52 +663,52 @@ final class vcb extends UiArrayContainer implements UiActionListener {
           if (super.handleKey(param0, param1, param2, param3)) {
             return true;
           }
-          if (this.field_y &&
-            this.field_P.hasFocus((byte) -120)) {
+          if (this.arrowAndKeyboardInputEnabled &&
+            this.thumb.hasFocus((byte) -120)) {
             if (98 == param1) {
-              this.a((byte) -17, this.field_L - this.field_K);
+              this.setVerticalPositionAndNotify((byte) -17, this.verticalPosition - this.verticalLineStep);
               return true;
             }
             if (param1 == 99) {
-              this.a((byte) -17, this.field_K + this.field_L);
+              this.setVerticalPositionAndNotify((byte) -17, this.verticalLineStep + this.verticalPosition);
               return true;
             }
             if (96 == param1) {
-              this.a(param0 + 15923, this.field_M - this.field_H);
+              this.setHorizontalPositionAndNotify(param0 + 15923, this.horizontalPosition - this.horizontalLineStep);
               return true;
             }
             if (param1 == 97) {
-              this.a(116, this.field_M + this.field_H);
+              this.setHorizontalPositionAndNotify(116, this.horizontalPosition + this.horizontalLineStep);
               return true;
             }
             if (param1 == 104) {
-              this.a((byte) -17, this.field_L - this.k((byte) 110));
+              this.setVerticalPositionAndNotify((byte) -17, this.verticalPosition - this.getVerticalThumbFraction((byte) 110));
               return true;
             }
             if (param1 == 105) {
-              this.a((byte) -17, this.field_L + this.k((byte) 110));
+              this.setVerticalPositionAndNotify((byte) -17, this.verticalPosition + this.getVerticalThumbFraction((byte) 110));
               return true;
             }
             if (102 == param1) {
-              if (this.field_G &&
+              if (this.verticalScrolling &&
                 SetMachineGunEnergyUsed.field_o[82]) {
-                this.a((byte) -17, 0);
+                this.setVerticalPositionAndNotify((byte) -17, 0);
                 return true;
               }
-              if (!this.field_w) {
+              if (!this.horizontalScrolling) {
                 return false;
               }
-              this.a(-119, 0);
+              this.setHorizontalPositionAndNotify(-119, 0);
               return true;
             }
             if (103 == param1) {
-              if (this.field_G &&
+              if (this.verticalScrolling &&
                 SetMachineGunEnergyUsed.field_o[82]) {
-                this.a((byte) -17, 65536);
+                this.setVerticalPositionAndNotify((byte) -17, 65536);
                 return true;
               }
-              if (this.field_w) {
-                this.a(param0 + 15790, 65536);
+              if (this.horizontalScrolling) {
+                this.setHorizontalPositionAndNotify(param0 + 15790, 65536);
                 return true;
               }
             }

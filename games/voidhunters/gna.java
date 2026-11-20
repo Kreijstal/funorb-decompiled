@@ -67,7 +67,7 @@ class gna extends elb {
             } else {
               stackIn_14_1 = null;
               stackIn_14_2 = null;
-              stackIn_14_5 = "" + tia.field_C;
+              stackIn_14_5 = "" + UiComboBoxList.field_C;
             }
             var4 = ((eab) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(eab.field_w).append("&v2=").append(eab.field_r).append("&e=").append(var10).toString()), 108);
             while (var4.field_f == 0) {

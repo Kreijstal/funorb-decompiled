@@ -288,7 +288,7 @@ final class GpuFont extends ToolkitFont {
         this.toolkit.markModelTransformChanged(20837);
         this.toolkit.setVertexBuffer((byte) -6, this.field_e, 0);
         this.toolkit.setVertexDeclaration(106, this.toolkit.field_Vb);
-        this.toolkit.drawPrimitive(bk.field_v, param0 * 4, 2, 56);
+        this.toolkit.drawPrimitive(UiViewport.field_v, param0 * 4, 2, 56);
         if (this.field_c ||
           param4) {
           this.toolkit.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, 7);

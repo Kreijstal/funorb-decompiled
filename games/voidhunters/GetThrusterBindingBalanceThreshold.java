@@ -61,9 +61,9 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
             var6 = ow.field_b;
             var7 = 0;
             if (var6 == 2) {
-              var4 = SetReverbGain.a(tia.field_G, new String[]{waa.field_x}, 91);
+              var4 = SetReverbGain.a(UiComboBoxList.field_G, new String[]{waa.field_x}, 91);
               var8 = SetReverbGain.a(GetLaserAimspeed.field_o, new String[]{var3}, 79);
-              var7 = WidgetNode.field_l.width + (bpa.field_c.width - 485 + DebrisFactory.field_c.getStringWidth(var8)) - DebrisFactory.field_c.getStringWidth(var4);
+              var7 = WidgetNode.field_l.width + (UiComboBoxRenderer.field_c.width - 485 + DebrisFactory.field_c.getStringWidth(var8)) - DebrisFactory.field_c.getStringWidth(var4);
               if (0 > var7) {
                 var7 = 0;
               }
@@ -110,16 +110,16 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
               }
               var9 = DebrisFactory.field_c.getStringWidth(var4);
               if (!tob.g(0)) {
-                if (bpa.field_c.field_O &&
-                  -bpa.field_c.screenX + PlayerGameData.field_b < var9) {
+                if (UiComboBoxRenderer.field_c.field_O &&
+                  -UiComboBoxRenderer.field_c.screenX + PlayerGameData.field_b < var9) {
                   if (!GetBloomThresholdPercentage.field_p) {
                     var1 = vq.field_y;
                   } else {
                     var1 = "Broken!";
                   }
                 }
-                if (bpa.field_c.field_o != 0 &&
-                  var9 > bpa.field_c.field_r &&
+                if (UiComboBoxRenderer.field_c.field_o != 0 &&
+                  var9 > UiComboBoxRenderer.field_c.field_r &&
                   !GetBloomThresholdPercentage.field_p) {
                   or.a(param0 + 8037);
                 }

@@ -66,7 +66,7 @@ final class SetOndamageParticleFadestart extends ConsoleCommand {
           SetShipToShipRamDamage.field_o = (BitmapFont) ((Object) GetFighterBayAimspeed.a(0, "commonui", param1, param2, "arezzo14"));
           GetBoostersCooldown.field_r = (BitmapFont) ((Object) GetFighterBayAimspeed.a(0, "commonui", param1, param2, "arezzo14bold"));
           var17 = new Sprite(param0.fetchNamedFile("", true, "button.gif"), (java.awt.Component) ((Object) igb.field_a));
-          ef.a("dropdown", "commonui", param3 ^ -60, param1);
+          UiDraggableContainer.a("dropdown", "commonui", param3 ^ -60, param1);
           var5 = GetExplosionProjectileDamage.a(-124, "commonui", "screen_options", param1);
           SetUseBackground.field_p = new caa[4];
           SpecialOrderSubmessage.field_f = new caa[4];

@@ -307,7 +307,7 @@ final class qka extends Widget {
           this.field_vb.setBounds(5, 43, var9_int, 3 + nna.field_w, nna.field_w);
           var10 = 10 + var9_int;
           var11 = 3 + 2 * nna.field_w + 3;
-          var12 = jv.a((byte) -109, param0, param2, var10);
+          var12 = QuickChatCategoryLoader.adjustPopupX((byte) -109, param0, param2, var10);
           var13 = lma.a(param3, param1, var11, (byte) -16);
           this.setBounds(var12, 122, var10, var13, var11);
           return;

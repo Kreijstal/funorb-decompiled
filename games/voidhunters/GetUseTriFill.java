@@ -34,7 +34,7 @@ final class GetUseTriFill extends ConsoleCommand {
     final static boolean a(int param0) {
         if (param0 < 43) {
           field_o = (PrimitiveType) null;
-          if (ef.field_z < 20) {
+          if (UiDraggableContainer.field_z < 20) {
             return true;
           }
           if (!eu.a(true)) {
@@ -48,7 +48,7 @@ final class GetUseTriFill extends ConsoleCommand {
           }
           return false;
         }
-        if (ef.field_z < 20) {
+        if (UiDraggableContainer.field_z < 20) {
           return true;
         }
         if (!eu.a(true)) {

@@ -7,12 +7,12 @@ final class GetCountermeasuresPulsetime extends ConsoleCommand {
           return -81;
         }
         if (param2 != 1) {
-          return tia.field_J[param2];
+          return UiComboBoxList.field_J[param2];
         }
         if (ServerInfo.isLeapYear((byte) -117, param0)) {
           return 29;
         }
-        return tia.field_J[param2];
+        return UiComboBoxList.field_J[param2];
     }
 
     GetCountermeasuresPulsetime(String param0, Class[] param1, String param2) {

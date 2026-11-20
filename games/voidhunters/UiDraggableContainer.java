@@ -3,17 +3,17 @@
  */
 import java.util.*;
 
-final class ef extends UiSingleChildContainer {
-    private int field_C;
+final class UiDraggableContainer extends UiSingleChildContainer {
+    private int originY;
     static String field_A;
-    private int field_D;
+    private int grabOffsetX;
     static int field_z;
-    private boolean field_B;
-    private int field_x;
+    private boolean revertToOrigin;
+    private int grabOffsetY;
     static boolean field_E;
     static SoftwareMonochromeBitmapFont field_y;
-    private int field_w;
-    private boolean field_v;
+    private int originX;
+    private boolean childConsumesDrag;
 
     final StringBuilder appendDebugTree(boolean param0, Hashtable param1, int param2, StringBuilder param3) {
         StringBuilder discarded$64 = null;
@@ -30,14 +30,14 @@ final class ef extends UiSingleChildContainer {
           if (this.beginDebugVisit(param1, param2, (byte) 115, param3)) {
             this.appendDebugProperties(124, param2, param1, param3);
             this.appendChildDebugTree(param2, 13, param3, param1);
-            discarded$64 = param3.append(" revert=").append(this.field_B);
-            if (this.field_w != 2147483647 &&
-              2147483647 != this.field_C) {
-              discarded$65 = param3.append(" to ").append(this.field_w).append(',').append(this.field_C);
+            discarded$64 = param3.append(" revert=").append(this.revertToOrigin);
+            if (this.originX != 2147483647 &&
+              2147483647 != this.originY) {
+              discarded$65 = param3.append(" to ").append(this.originX).append(',').append(this.originY);
             }
           }
           if (param0) {
-            this.field_x = 60;
+            this.grabOffsetY = 60;
           }
           stackIn_7_0 = (StringBuilder) (param3);
           return stackIn_7_0;
@@ -71,13 +71,13 @@ final class ef extends UiSingleChildContainer {
         }
     }
 
-    ef(int param0, int param1, int param2, int param3, UiRenderer param4, UiListener param5, UiComponent param6, boolean param7, boolean param8) {
+    UiDraggableContainer(int param0, int param1, int param2, int param3, UiRenderer param4, UiListener param5, UiComponent param6, boolean param7, boolean param8) {
         super(param0, param1, param2, param3, param4, param5);
-        this.field_C = 2147483647;
-        this.field_w = 2147483647;
+        this.originY = 2147483647;
+        this.originX = 2147483647;
         try {
-          this.field_B = param7 ? true : false;
-          this.field_v = param8 ? true : false;
+          this.revertToOrigin = param7 ? true : false;
+          this.childConsumesDrag = param8 ? true : false;
           this.child = param6;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ef.<init>(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ')');
@@ -94,11 +94,11 @@ final class ef extends UiSingleChildContainer {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param6 >= -17) {
-            this.field_B = false;
+            this.revertToOrigin = false;
           }
           var8_int = super.handleMousePress(param0, param1, param2, param3, param4, param5, (byte) -100) ? 1 : 0;
           if (var8_int != 0 &&
-            this.field_v) {
+            this.childConsumesDrag) {
             return true;
           }
           if (!this.containsPoint(param2, param1, param0, param5, (byte) 22)) {
@@ -109,8 +109,8 @@ final class ef extends UiSingleChildContainer {
           if (param3 != 1) {
             return true;
           }
-          this.field_D = -this.x + (param0 - param1);
-          this.field_x = -this.y + param2 - param5;
+          this.grabOffsetX = -this.x + (param0 - param1);
+          this.grabOffsetY = -this.y + param2 - param5;
           SetBombletSprayRandomness.field_p = this;
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -143,20 +143,20 @@ final class ef extends UiSingleChildContainer {
           if ((!(this.child instanceof UiFocusableComponent) ||
             ((UiFocusableComponent) (this.child)).enabled) &&
             this.pressedButton == 1) {
-            var5_int = -this.field_D + (PlayerGameData.field_b - param1);
-            var6 = -this.field_x + uia.field_b - param0;
+            var5_int = -this.grabOffsetX + (PlayerGameData.field_b - param1);
+            var6 = -this.grabOffsetY + uia.field_b - param0;
             if (this.x != var5_int ||
               this.y != var6) {
               this.x = var5_int;
               this.y = var6;
-              if (this.listener instanceof l) {
-                ((l) (this.listener)).a(false, param1, param0, this);
+              if (this.listener instanceof UiDragListener) {
+                ((UiDragListener) (this.listener)).onDragged(false, param1, param0, this);
               }
             }
           } else {
-            if (this.field_B) {
-              if (this.field_w != this.x) {
-                var5_int = -this.x + this.field_w;
+            if (this.revertToOrigin) {
+              if (this.originX != this.x) {
+                var5_int = -this.x + this.originX;
                 stackIn_15_1 = this.x;
                 if (Math.abs(var5_int) <= 2) {
                   if (var5_int <= 0) {
@@ -169,8 +169,8 @@ final class ef extends UiSingleChildContainer {
                 }
                 this.x = stackIn_15_1 + stackIn_18_2;
               }
-              if (this.field_C != this.y) {
-                var5_int = -this.y + this.field_C;
+              if (this.originY != this.y) {
+                var5_int = -this.y + this.originY;
                 stackIn_25_1 = this.y;
                 if (Math.abs(var5_int) > 2) {
                   stackIn_26_2 = var5_int >> 1;
@@ -204,9 +204,9 @@ final class ef extends UiSingleChildContainer {
     final void refreshChildLayout(int param0) {
         super.refreshChildLayout(120);
         this.child.setBounds(0, this.width, this.height, 1, 0);
-        this.field_w = this.x;
+        this.originX = this.x;
         int var2 = -102 / ((param0 + 80) / 42);
-        this.field_C = this.y;
+        this.originY = this.y;
     }
 
     public static void clearSharedReferences(int param0) {
@@ -232,7 +232,7 @@ final class ef extends UiSingleChildContainer {
         try {
           if (param2 >= -47) {
             var6 = (ResourceArchive) null;
-            ef.a((String) null, (String) null, 4, (ResourceArchive) null);
+            UiDraggableContainer.a((String) null, (String) null, 4, (ResourceArchive) null);
           }
           var4_int = param3.getGroupId(param1, -97);
           var5 = param3.getFileId(true, var4_int, param0);

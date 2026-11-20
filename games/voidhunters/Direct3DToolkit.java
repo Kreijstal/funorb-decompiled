@@ -491,7 +491,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         if (di.field_i == param0) {
           return 4;
         }
-        if (bk.field_v == param0) {
+        if (UiViewport.field_v == param0) {
           return 6;
         }
         if (param0 != GetUseTriFill.field_o) {

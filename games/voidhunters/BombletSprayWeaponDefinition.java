@@ -92,9 +92,9 @@ final class BombletSprayWeaponDefinition extends WeaponDefinition {
     final int getEnergyCost(int param0) {
         if (param0 != 0) {
           BombletSprayWeaponDefinition.clearSharedReferences((byte) 50);
-          return rn.field_o;
+          return QuickChatCategoryDefinition.field_o;
         }
-        return rn.field_o;
+        return QuickChatCategoryDefinition.field_o;
     }
 
     BombletSprayWeaponDefinition() {

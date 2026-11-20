@@ -38,7 +38,7 @@ final class SetMinimapWidth extends ConsoleCommand {
           param0 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
           param4 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param4);
           param1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param1);
-          bpa.a(param3, param0, (byte) -25, param4, param1);
+          UiComboBoxRenderer.fillHorizontalSpan(param3, param0, (byte) -25, param4, param1);
         }
         int var5 = 54 % ((param2 - 59) / 49);
     }

@@ -438,7 +438,7 @@ class UiComponent extends IntrusiveNode {
 
     final boolean processPointerInput(byte param0, int param1, int param2, boolean param3) {
         int var5;
-        ef var6;
+        UiDraggableContainer var6;
         int var7;
         var7 = VoidHunters.field_G;
         this.updatePointer(param2, param1, -981, this);

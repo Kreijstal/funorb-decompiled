@@ -1,54 +1,54 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jv {
+final class QuickChatCategoryLoader {
     static GameStateFactory field_d;
-    private ResourceArchive field_e;
-    private ResourceArchive field_a;
-    private SoftLruCache field_c;
+    private ResourceArchive alternateArchive;
+    private ResourceArchive primaryArchive;
+    private SoftLruCache cache;
     static int field_b;
     static String field_f;
 
-    final rn a(byte param0, int param1) {
+    final QuickChatCategoryDefinition getCategory(byte param0, int param1) {
         byte[] var4 = null;
-        rn var3 = (rn) (this.field_c.get(0, (long)param1));
+        QuickChatCategoryDefinition var3 = (QuickChatCategoryDefinition) (this.cache.get(0, (long)param1));
         if (var3 != null) {
           return var3;
         }
         if (param0 != -72) {
-          return (rn) null;
+          return (QuickChatCategoryDefinition) null;
         }
         if (param1 >= 32768) {
-          var4 = this.field_e.fetchFile(0, 32767 & param1, (byte) 13);
+          var4 = this.alternateArchive.fetchFile(0, 32767 & param1, (byte) 13);
         } else {
-          var4 = this.field_a.fetchFile(0, param1, (byte) 13);
+          var4 = this.primaryArchive.fetchFile(0, param1, (byte) 13);
         }
-        rn var5 = new rn();
+        QuickChatCategoryDefinition var5 = new QuickChatCategoryDefinition();
         if (var4 != null) {
-          var5.a(new PacketBuffer(var4), param0 + 8524);
+          var5.decode(new PacketBuffer(var4), param0 + 8524);
           if (32768 <= param1) {
-            var5.a(0);
-            this.field_c.put(var5, (long)param1, (byte) -117);
+            var5.markAlternateArchiveReferences(0);
+            this.cache.put(var5, (long)param1, (byte) -117);
             return var5;
           }
-          this.field_c.put(var5, (long)param1, (byte) -117);
+          this.cache.put(var5, (long)param1, (byte) -117);
           return var5;
         }
         if (32768 > param1) {
-          this.field_c.put(var5, (long)param1, (byte) -117);
+          this.cache.put(var5, (long)param1, (byte) -117);
           return var5;
         }
-        var5.a(0);
-        this.field_c.put(var5, (long)param1, (byte) -117);
+        var5.markAlternateArchiveReferences(0);
+        this.cache.put(var5, (long)param1, (byte) -117);
         return var5;
     }
 
-    final static int a(byte param0, int param1, int param2, int param3) {
+    final static int adjustPopupX(byte param0, int param1, int param2, int param3) {
         if (!(SoftwareRasterizer2D.width < param3 + param1)) {
           return param1;
         }
         if (param0 != -109) {
-          jv.clearSharedReferences((byte) 16);
+          QuickChatCategoryLoader.clearSharedReferences((byte) 16);
           if (0 <= param2 + param1 - param3) {
             return param2 + (param1 - param3);
           }
@@ -68,7 +68,7 @@ final class jv {
         }
     }
 
-    jv(int param0, ResourceArchive param1, ResourceArchive param2) {
+    QuickChatCategoryLoader(int param0, ResourceArchive param1, ResourceArchive param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -76,17 +76,17 @@ final class jv {
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
-        this.field_c = new SoftLruCache(64);
+        this.cache = new SoftLruCache(64);
         try {
-          this.field_a = param1;
-          this.field_e = param2;
-          if (this.field_a != null) {
-            this.field_a.getGroupFileCapacity(0, -6942);
+          this.primaryArchive = param1;
+          this.alternateArchive = param2;
+          if (this.primaryArchive != null) {
+            this.primaryArchive.getGroupFileCapacity(0, -6942);
           }
-          if (null == this.field_e) {
+          if (null == this.alternateArchive) {
             return;
           }
-          this.field_e.getGroupFileCapacity(0, -6942);
+          this.alternateArchive.getGroupFileCapacity(0, -6942);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

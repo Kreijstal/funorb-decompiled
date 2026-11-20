@@ -137,7 +137,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetDebrisFoundInPairs.field_o = param1[64];
           WeaponBehaviour.field_d = param1[18];
           GetMomentOfInertiaPredivideDownshift.field_q = param1[37];
-          bpa.field_a = param1[222];
+          UiComboBoxRenderer.field_a = param1[222];
           tua.field_a = param1[180];
           CarouselPlayerEvent.field_m = param1[30];
           GetShieldsDirectionalRadius.field_p = param1[167];
@@ -329,7 +329,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           bia.field_c = param1[197];
           rla.field_x = param1[19];
           Particle.field_A = param1[46];
-          rn.field_o = param1[162];
+          QuickChatCategoryDefinition.field_o = param1[162];
           SelectableIconLabelWidget.field_yb = param1[76];
           ShieldBehaviourFactory.field_a = param1[165];
           bra.field_d = param1[3];

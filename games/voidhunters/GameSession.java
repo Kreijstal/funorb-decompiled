@@ -5467,7 +5467,7 @@ final class GameSession {
               }
               if (var8.field_a == 4) {
                 var9 = VoidHunters.b(param1, -1);
-                var4 = var4 + "<col=" + mu.a(-18879, qpb.a(false, param1, 13894143)) + ">(" + var9 + ") " + var8.field_d + "</col>";
+                var4 = var4 + "<col=" + UiFocusProxy.toHexString(-18879, qpb.a(false, param1, 13894143)) + ">(" + var9 + ") " + var8.field_d + "</col>";
               } else {
                 var4 = var4 + var8.field_d;
               }

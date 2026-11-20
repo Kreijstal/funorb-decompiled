@@ -29,7 +29,7 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
           var2 = GetMassDriverProjectiles.field_q;
           GetMassDriverProjectiles.field_q = vq.field_x.field_e.field_b.field_a;
           if (var2 != GetMassDriverProjectiles.field_q &&
-            ef.field_E) {
+            UiDraggableContainer.field_E) {
             MissionBuilder.a((byte) 44, "graphics_mode", GetMassDriverProjectiles.field_q);
             SetLaserAimarc.a(-123);
           }
@@ -71,7 +71,7 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
         var2Lifetime1 = GetMassDriverProjectiles.field_q;
         GetMassDriverProjectiles.field_q = vq.field_x.field_e.field_b.field_a;
         if (var2Lifetime1 != GetMassDriverProjectiles.field_q) {
-          if (!ef.field_E) {
+          if (!UiDraggableContainer.field_E) {
             if (GetMassDriverProjectiles.field_q != 1) {
               return;
             }

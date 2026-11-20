@@ -1,39 +1,39 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rn extends DualLinkNode {
-    int[] field_n;
-    String field_p;
+final class QuickChatCategoryDefinition extends DualLinkNode {
+    int[] phraseIds;
+    String label;
     static int field_o;
-    char[] field_q;
-    char[] field_m;
+    char[] categoryShortcuts;
+    char[] phraseShortcuts;
     boolean field_k;
-    int[] field_l;
+    int[] categoryIds;
 
-    final void a(int param0) {
+    final void markAlternateArchiveReferences(int param0) {
         int var4 = 0;
         int var2 = 0;
         int var3 = VoidHunters.field_G;
         int var2Lifetime1;
-        if (this.field_n != null) {
-          for (var2 = 0; this.field_n.length > var2; var2++) {
-            this.field_n[var2] = SetAngularForceDownshift.a(this.field_n[var2], 32768);
+        if (this.phraseIds != null) {
+          for (var2 = 0; this.phraseIds.length > var2; var2++) {
+            this.phraseIds[var2] = SetAngularForceDownshift.a(this.phraseIds[var2], 32768);
           }
         }
-        if (this.field_l != null) {
+        if (this.categoryIds != null) {
           var4 = 0;
           var2Lifetime1 = var4;
-          while (this.field_l.length > var4) {
-            this.field_l[var4] = SetAngularForceDownshift.a(this.field_l[var4], 32768);
+          while (this.categoryIds.length > var4) {
+            this.categoryIds[var4] = SetAngularForceDownshift.a(this.categoryIds[var4], 32768);
             var4++;
           }
         }
         if (param0 != 0) {
-          this.a(63);
+          this.markAlternateArchiveReferences(63);
         }
     }
 
-    final void a(PacketBuffer param0, int param1) {
+    final void decode(PacketBuffer param0, int param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -51,7 +51,7 @@ final class rn extends DualLinkNode {
             if (0 == var3_int) {
               return;
             }
-            this.a(var3_int, (byte) 19, param0);
+            this.decodeOpcode(var3_int, (byte) 19, param0);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -67,7 +67,7 @@ final class rn extends DualLinkNode {
         }
     }
 
-    private final void a(int param0, byte param1, PacketBuffer param2) {
+    private final void decodeOpcode(int param0, byte param1, PacketBuffer param2) {
         char[] stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         char stackIn_9_2 = 0;
@@ -88,12 +88,12 @@ final class rn extends DualLinkNode {
           if (1 != param0) {
             if (param0 == 2) {
               var4_int = param2.readUnsignedByte((byte) -122);
-              this.field_q = new char[var4_int];
-              this.field_l = new int[var4_int];
+              this.categoryShortcuts = new char[var4_int];
+              this.categoryIds = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_l[var5] = param2.readUnsignedShort(SetFixedaim.a((int) param1, 1886));
+                this.categoryIds[var5] = param2.readUnsignedShort(SetFixedaim.a((int) param1, 1886));
                 var6 = param2.readByte((byte) -114);
-                stackIn_8_0 = this.field_q;
+                stackIn_8_0 = this.categoryShortcuts;
                 stackIn_8_1 = var5;
                 if (var6 == 0) {
                   stackIn_9_2 = (char)0;
@@ -105,12 +105,12 @@ final class rn extends DualLinkNode {
             } else {
               if (param0 == 3) {
                 var4_int = param2.readUnsignedByte((byte) -106);
-                this.field_n = new int[var4_int];
-                this.field_m = new char[var4_int];
+                this.phraseIds = new int[var4_int];
+                this.phraseShortcuts = new char[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  this.field_n[var5] = param2.readUnsignedShort(1869);
+                  this.phraseIds[var5] = param2.readUnsignedShort(1869);
                   var6 = param2.readByte((byte) -114);
-                  stackIn_15_0 = this.field_m;
+                  stackIn_15_0 = this.phraseShortcuts;
                   stackIn_15_1 = var5;
                   if (0 == var6) {
                     stackIn_16_2 = (char)0;
@@ -126,10 +126,10 @@ final class rn extends DualLinkNode {
               }
             }
           } else {
-            this.field_p = param2.readString(param1 - 20);
+            this.label = param2.readString(param1 - 20);
           }
           if (param1 != 19) {
-            this.field_n = (int[]) null;
+            this.phraseIds = (int[]) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -146,7 +146,7 @@ final class rn extends DualLinkNode {
         }
     }
 
-    rn() {
+    QuickChatCategoryDefinition() {
         this.field_k = false;
     }
 

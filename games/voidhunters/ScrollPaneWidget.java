@@ -146,7 +146,7 @@ final class ScrollPaneWidget extends Widget {
               stackIn_39_0.text = SetReverbGain.a(stackIn_40_1, new String[]{ObjectiveMarker.field_b.text}, 76);
               hrb.field_b = true;
               GetShipToShipRamDamage.field_q.enabled = true;
-              SetAutozoomSpeedDivide.field_p.text = nva.field_D;
+              SetAutozoomSpeedDivide.field_p.text = UiComboBox.field_D;
               if (ncb.field_a != null) {
                 if (null == tib.field_i) {
                   AudioPump.field_a = new boolean[ocb.field_l];

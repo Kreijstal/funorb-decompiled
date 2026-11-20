@@ -58,12 +58,12 @@ final class uea extends bob {
     }
 
     final static void c(int param0) {
-        IsaacPacketBuffer var2 = bk.field_w;
+        IsaacPacketBuffer var2 = UiViewport.field_w;
         IsaacPacketBuffer var1 = var2;
-        bk.field_w = im.field_q;
+        UiViewport.field_w = im.field_q;
         im.field_q = var2;
-        if (null == bk.field_w) {
-          bk.field_w = new IsaacPacketBuffer(1048576);
+        if (null == UiViewport.field_w) {
+          UiViewport.field_w = new IsaacPacketBuffer(1048576);
         }
         if (param0 != 9487) {
           field_p = (String) null;

@@ -56,11 +56,11 @@ class IntrusiveNode {
 
     final static IsaacPacketBuffer a(byte param0) {
         if (param0 == -6) {
-          return new IsaacPacketBuffer(GameApplet.copyWrittenBytes((byte) 73, bk.field_w));
+          return new IsaacPacketBuffer(GameApplet.copyWrittenBytes((byte) 73, UiViewport.field_w));
         }
         BitmapFont var2 = (BitmapFont) null;
         IntrusiveNode.a((Sprite[]) null, 27, -49, (Sprite[]) null, (Sprite[]) null, 58, 92, 102, -42, (BitmapFont) null, 125, 6, -7, 73, -90);
-        return new IsaacPacketBuffer(GameApplet.copyWrittenBytes((byte) 73, bk.field_w));
+        return new IsaacPacketBuffer(GameApplet.copyWrittenBytes((byte) 73, UiViewport.field_w));
     }
 
     static {

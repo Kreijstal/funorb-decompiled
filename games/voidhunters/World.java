@@ -114,7 +114,7 @@ final class World implements DiffableState, CompactGameState {
               this.projectiles.addLast(param1 ^ -10290, var7[var4_int]);
             }
           }
-          this.debris = (Debris[]) (GetAutoAfkTimeout.a(param1 ^ -11, 1, this.debris, vcb.field_z, 10, param0));
+          this.debris = (Debris[]) (GetAutoAfkTimeout.a(param1 ^ -11, 1, this.debris, UiScrollBar.field_z, 10, param0));
           if (kv.readBoolean(false, param0)) {
             if (this.asteroidField == null) {
               this.asteroidField = new AsteroidField();
@@ -5218,7 +5218,7 @@ final class World implements DiffableState, CompactGameState {
               this.projectiles.addLast(-10258, var7[var4_int]);
             }
           }
-          this.debris = (Debris[]) (SetAutoDetail.a(10, vcb.field_z, param0, 1, -68, this.debris));
+          this.debris = (Debris[]) (SetAutoDetail.a(10, UiScrollBar.field_z, param0, 1, -68, this.debris));
           if (!kv.readBoolean(param1, param0)) {
             this.asteroidField = null;
           } else {

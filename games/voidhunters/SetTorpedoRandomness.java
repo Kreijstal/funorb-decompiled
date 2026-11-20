@@ -46,9 +46,9 @@ final class SetTorpedoRandomness extends ConsoleCommand {
         int var9_int = 495;
         int var10 = 5;
         SetThrusterAutobalancing.field_p.setBounds(5, 117, -10 + var9_int, var10, param6);
-        bpa.field_c.setBounds(0, 118, -WidgetNode.field_l.width + SetThrusterAutobalancing.field_p.width, 0, param6);
+        UiComboBoxRenderer.field_c.setBounds(0, 118, -WidgetNode.field_l.width + SetThrusterAutobalancing.field_p.width, 0, param6);
         var10 = var10 + (param8 + param6);
-        WidgetNode.field_l.setBounds(bpa.field_c.width, 125, WidgetNode.field_l.width, 0, param6);
+        WidgetNode.field_l.setBounds(UiComboBoxRenderer.field_c.width, 125, WidgetNode.field_l.width, 0, param6);
         GetMachineGunAimarc.field_q.setBounds(5, 118, GetMachineGunAimarc.field_q.getPreferredWidth(26), var10, param5);
         int var11 = dp.field_a.getPreferredWidth(49);
         dp.field_a.setBounds(-5 + (var9_int - var11), 29, var11, var10, param5);

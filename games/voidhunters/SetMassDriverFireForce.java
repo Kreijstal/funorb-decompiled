@@ -49,7 +49,7 @@ final class SetMassDriverFireForce extends ConsoleCommand {
     }
 
     final static String e(byte param0) {
-        if (ef.field_z < 2) {
+        if (UiDraggableContainer.field_z < 2) {
           return GetSpinningBladeTopSpeed.field_p;
         }
         if (ppb.field_a != null) {

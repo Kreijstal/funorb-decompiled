@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class mu extends UiFocusableComponent {
-    private UiComponent field_B;
+class UiFocusProxy extends UiFocusableComponent {
+    private UiComponent focusOwner;
 
-    final static String a(int param0, int param1) {
+    final static String toHexString(int param0, int param1) {
         if (param0 != -18879) {
           return (String) null;
         }
@@ -24,7 +24,7 @@ class mu extends UiFocusableComponent {
             var4 = (UiComponent) null;
             this.requestFocus(107, (UiComponent) null);
           }
-          stackIn_3_0 = this.field_B.requestFocus(param0 ^ 0, param1);
+          stackIn_3_0 = this.focusOwner.requestFocus(param0 ^ 0, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -40,9 +40,9 @@ class mu extends UiFocusableComponent {
         }
     }
 
-    mu(UiComponent param0) {
+    UiFocusProxy(UiComponent param0) {
         try {
-          this.field_B = param0;
+          this.focusOwner = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mu.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

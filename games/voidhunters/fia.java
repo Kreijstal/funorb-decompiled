@@ -28,8 +28,8 @@ final class fia {
           0 < SetExplosionProjectileDamage.field_o) {
           fieldTemp$4 = SetExplosionProjectileDamage.field_o - 1;
           SetExplosionProjectileDamage.field_o = SetExplosionProjectileDamage.field_o - 1;
-          var2_ref_byte__Lifetime1 = vcb.field_E[fieldTemp$4];
-          vcb.field_E[SetExplosionProjectileDamage.field_o] = null;
+          var2_ref_byte__Lifetime1 = UiScrollBar.field_E[fieldTemp$4];
+          UiScrollBar.field_E[SetExplosionProjectileDamage.field_o] = null;
           return var2_ref_byte__Lifetime1;
         }
         var2 = -5 % ((51 - param0) / 54);

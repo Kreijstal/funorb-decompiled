@@ -32,7 +32,7 @@ final class kpb extends io {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= -53) {
-            stackIn_4_0 = nva.a('*', true, param1.text.length());
+            stackIn_4_0 = UiComboBox.repeatCharacter('*', true, param1.text.length());
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

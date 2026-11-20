@@ -121,7 +121,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ShipSpawnedCondition.field_e[39] = OpenGlEnvironmentMappedWaterEffect.field_h;
           ShipSpawnedCondition.field_e[20] = OpenGlEnvironmentMappedWaterEffect.field_h;
           ShipSpawnedCondition.field_e[24] = Hardpoint.field_b;
-          ShipSpawnedCondition.field_e[44] = nva.field_I;
+          ShipSpawnedCondition.field_e[44] = UiComboBox.field_I;
           ShipSpawnedCondition.field_e[22] = SetPhysicsCollisionPhantomForceMultiplier.field_o;
           ShipSpawnedCondition.field_e[46] = jjb.field_f;
           ShipSpawnedCondition.field_e[16] = jw.field_a;

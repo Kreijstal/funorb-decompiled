@@ -6,19 +6,19 @@ final class dnb extends IntrusiveNode {
     byte[] field_e;
 
     final static CarouselSlot c(byte param0) {
-        bk.field_w.position = 0;
+        UiViewport.field_w.position = 0;
         if (param0 != -39) {
           return (CarouselSlot) null;
         }
-        bk.field_w.beginBitRead(-23497);
+        UiViewport.field_w.beginBitRead(-23497);
         CarouselSlot var1 = (CarouselSlot) (gva.field_a.create((byte) 69));
         if (!(var1 instanceof CompactGameState)) {
-          var1.readState(bk.field_w, false);
-          bk.field_w.endBitRead((byte) -92);
+          var1.readState(UiViewport.field_w, false);
+          UiViewport.field_w.endBitRead((byte) -92);
           return var1;
         }
-        ((CompactGameState) ((Object) var1)).readCompactState(bk.field_w, 32);
-        bk.field_w.endBitRead((byte) -92);
+        ((CompactGameState) ((Object) var1)).readCompactState(UiViewport.field_w, 32);
+        UiViewport.field_w.endBitRead((byte) -92);
         return var1;
     }
 

@@ -83,19 +83,19 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         }
     }
 
-    final static rn d(int param0) {
+    final static QuickChatCategoryDefinition d(int param0) {
         int var1_int = 0;
-        rn var2 = null;
-        rn stackIn_6_0 = null;
+        QuickChatCategoryDefinition var2 = null;
+        QuickChatCategoryDefinition stackIn_6_0 = null;
         Throwable decompiledCaughtException = null;
         IllegalArgumentException var1 = null;
         if (param0 != 10) {
-          return (rn) null;
+          return (QuickChatCategoryDefinition) null;
         }
         try {
           var1_int = 0;
           while (true) {
-            var2 = lnb.field_i.a((byte) -72, var1_int);
+            var2 = lnb.field_i.getCategory((byte) -72, var1_int);
             if (var2.field_k) {
               stackIn_6_0 = var2;
               return stackIn_6_0;

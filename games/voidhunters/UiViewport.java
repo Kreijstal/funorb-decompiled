@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bk extends UiSingleChildContainer {
+final class UiViewport extends UiSingleChildContainer {
     static IsaacPacketBuffer field_w;
     static PrimitiveType field_v;
 
@@ -46,7 +46,7 @@ final class bk extends UiSingleChildContainer {
     public static void clearSharedReferences(int param0) {
         field_v = null;
         if (param0 <= 40) {
-          bk.clearSharedReferences(87);
+          UiViewport.clearSharedReferences(87);
           field_w = null;
           return;
         }
@@ -80,7 +80,7 @@ final class bk extends UiSingleChildContainer {
         }
     }
 
-    bk(int param0, int param1, int param2, int param3, UiRenderer param4, UiComponent param5) {
+    UiViewport(int param0, int param1, int param2, int param3, UiRenderer param4, UiComponent param5) {
         super(param0, param1, param2, param3, param4, (UiListener) null);
         try {
           this.child = param5;

@@ -318,7 +318,7 @@ final class bwa extends Widget {
             this.field_Ab.field_gb = uwa.a(11579568, this.field_Ab.height, 2105376, 8421504, 104, 3);
             var23 = 26 + var19;
             var24 = 10 + (24 + (var22 + var17Lifetime5));
-            var25 = jv.a((byte) -109, param0, param2, var23);
+            var25 = QuickChatCategoryLoader.adjustPopupX((byte) -109, param0, param2, var23);
             var26 = lma.a(param3, param1, var24, (byte) -16);
             this.setBounds(var25, 0, var23, var26, var24);
             return;
@@ -336,7 +336,7 @@ final class bwa extends Widget {
           this.field_Ab.field_gb = uwa.a(11579568, this.field_Ab.height, 2105376, 8421504, 117, 3);
           var18Lifetime1 = 13 + (var15_int + 13);
           var19Lifetime1 = 34 + var16Lifetime1;
-          var20Lifetime1 = jv.a((byte) -109, param0, param2, var18Lifetime1);
+          var20Lifetime1 = QuickChatCategoryLoader.adjustPopupX((byte) -109, param0, param2, var18Lifetime1);
           var21Lifetime1 = lma.a(param3, param1, var19Lifetime1, (byte) -16);
           this.setBounds(var20Lifetime1, -77, var18Lifetime1, var21Lifetime1, var19Lifetime1);
           return;

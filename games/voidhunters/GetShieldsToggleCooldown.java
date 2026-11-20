@@ -18,11 +18,11 @@ final class GetShieldsToggleCooldown extends ConsoleCommand {
           SecondaryNodeQueue.field_d = (7 & var2_int) << 18;
           SecondaryNodeQueue.field_d = SecondaryNodeQueue.field_d + (param0.readUnsignedShort(1869) << 2);
           var2_intLifetime1 = param0.readUnsignedByte((byte) -118);
-          jv.field_b = var2_intLifetime1 << 15 & 2064384;
+          QuickChatCategoryLoader.field_b = var2_intLifetime1 << 15 & 2064384;
           SecondaryNodeQueue.field_d = SecondaryNodeQueue.field_d + (var2_intLifetime1 >> 6);
-          jv.field_b = jv.field_b + (param0.readUnsignedByte((byte) -98) << 7);
+          QuickChatCategoryLoader.field_b = QuickChatCategoryLoader.field_b + (param0.readUnsignedByte((byte) -98) << 7);
           var2_intLifetime2 = param0.readUnsignedByte((byte) -126);
-          jv.field_b = jv.field_b + (var2_intLifetime2 >> 1);
+          QuickChatCategoryLoader.field_b = QuickChatCategoryLoader.field_b + (var2_intLifetime2 >> 1);
           GetCountermeasureLauncherFireForce.field_o = 65536 & var2_intLifetime2 << 16;
           GetCountermeasureLauncherFireForce.field_o = GetCountermeasureLauncherFireForce.field_o + param0.readUnsignedShort(1869);
         } catch (RuntimeException runtimeException) {

@@ -506,7 +506,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("waiting_to_start_hint", 23100);
                 if (var2 != null) {
-                  nva.field_D = Cp1252Strings.decode((byte) -125, var2);
+                  UiComboBox.field_D = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("your_game", 23100);
                 if (var2 != null) {
@@ -730,7 +730,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("privatequickchat_to_x", 23100);
                 if (null != var2) {
-                  tia.field_G = Cp1252Strings.decode((byte) -125, var2);
+                  UiComboBoxList.field_G = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("privatechat_blankarea_explanation", 23100);
                 if (null != var2) {
@@ -770,7 +770,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_membersonly", 23100);
                 if (null != var2) {
-                  bpa.field_d = Cp1252Strings.decode((byte) -125, var2);
+                  UiComboBoxRenderer.field_d = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_1moreratedgame", 23100);
                 if (var2 != null) {
@@ -884,7 +884,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_badnumplayers", 23100);
                 if (var2 != null) {
-                  ef.field_A = Cp1252Strings.decode((byte) -125, var2);
+                  UiDraggableContainer.field_A = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_inviteplayers_or_trychanging1", 23100);
                 if (null != var2) {
@@ -1520,7 +1520,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_password_tooltip", 23100);
                 if (var2 != null) {
-                  sha.field_x = Cp1252Strings.decode((byte) -125, var2);
+                  UiScrollPane.field_x = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_password_hint", 23100);
                 if (null != var2) {
@@ -1544,7 +1544,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_optin_news_tooltip", 23100);
                 if (null != var2) {
-                  jv.field_f = Cp1252Strings.decode((byte) -125, var2);
+                  QuickChatCategoryLoader.field_f = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_u13_email_tooltip", 23100);
                 if (null != var2) {
@@ -2018,7 +2018,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("ok", 23100);
                 if (null != var2) {
-                  tia.field_K = Cp1252Strings.decode((byte) -125, var2);
+                  UiComboBoxList.field_K = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("on", 23100);
                 if (null != var2) {

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bpa implements UiRenderer {
-    private nva field_b;
+final class UiComboBoxRenderer implements UiRenderer {
+    private UiComboBox comboBox;
     static int field_a;
     static Widget field_c;
     static String field_d;
@@ -11,11 +11,11 @@ final class bpa implements UiRenderer {
         field_c = null;
         field_d = null;
         if (param0 <= 44) {
-          bpa.clearSharedReferences((byte) 122);
+          UiComboBoxRenderer.clearSharedReferences((byte) 122);
         }
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4) {
+    final static void fillHorizontalSpan(int param0, int param1, byte param2, int param3, int param4) {
         if (param2 != -25) {
           return;
         }
@@ -26,9 +26,9 @@ final class bpa implements UiRenderer {
         GetSalvoRepairTimeMultiplier.a(param0, param3, ResourceNode.field_b[param1], (byte) 75, param4);
     }
 
-    bpa(nva param0) {
+    UiComboBoxRenderer(UiComboBox param0) {
         try {
-          this.field_b = param0;
+          this.comboBox = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bpa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -55,13 +55,13 @@ final class bpa implements UiRenderer {
           }
           SoftwareRasterizer2D.setClip(var6_int, var7, param1.width + (var6_int - 2), param1.height + var7);
           var9 = 78 % ((-27 - param0) / 35);
-          var8 = this.field_b.field_w.g((byte) 96);
+          var8 = this.comboBox.list.getSelectedItem((byte) 96);
           if (var8 != null) {
             var10 = var8.toString();
-            this.field_b.field_v.draw(var10, 2 + var6_int, -1 + ((this.field_b.field_v.maxAscent + param1.height >> 1) + var7), 10000536, -1);
-            if (this.field_b.hasFocus((byte) -120) &&
-              var10.startsWith(this.field_b.field_E)) {
-              var11 = this.field_b.field_v.getStringWidth(this.field_b.field_E);
+            this.comboBox.font.draw(var10, 2 + var6_int, -1 + ((this.comboBox.font.maxAscent + param1.height >> 1) + var7), 10000536, -1);
+            if (this.comboBox.hasFocus((byte) -120) &&
+              var10.startsWith(this.comboBox.typedPrefix)) {
+              var11 = this.comboBox.font.getStringWidth(this.comboBox.typedPrefix);
               SoftwareRasterizer2D.fillRectangleAlpha(var6_int + 2, var7 + 2, var11, -4 + param1.height, 2188450, 100);
             }
           }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wta extends sc implements en, aca {
+final class wta extends sc implements en, UiComboBoxSelectionListener {
     vq field_c;
 
     public final void a(uf param0, byte param1) {
@@ -15,7 +15,7 @@ final class wta extends sc implements en, aca {
         }
     }
 
-    public final void a(int param0, nva param1) {
+    public final void onSelectionChanged(int param0, UiComboBox param1) {
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;

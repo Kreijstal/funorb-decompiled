@@ -125,7 +125,7 @@ final class SetOndamageParticleLife extends ConsoleCommand {
             return;
           }
           if (var6_int == 0) {
-            bpa.a(param0, param3, (byte) -25, param5, param1);
+            UiComboBoxRenderer.fillHorizontalSpan(param0, param3, (byte) -25, param5, param1);
             return;
           }
           if (0 > var7) {

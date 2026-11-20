@@ -12,7 +12,7 @@ final class gga extends UiSingleChildContainer {
     }
 
     final void handleMouseRelease(byte param0, int param1, int param2, int param3, UiComponent param4, int param5) {
-        ef var9 = null;
+        UiDraggableContainer var9 = null;
         try {
           super.handleMouseRelease((byte) -124, param1, param2, param3, param4, param5);
           var9 = SetBombletSprayRandomness.field_p;

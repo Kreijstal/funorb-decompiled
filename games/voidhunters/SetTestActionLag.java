@@ -45,19 +45,19 @@ final class SetTestActionLag extends ConsoleCommand {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          bk.field_w.position = 0;
+          UiViewport.field_w.position = 0;
           if (param1 >= -5) {
             var3 = (SerializableGameState) null;
             SetTestActionLag.a((SerializableGameState) null, (byte) 16);
           }
-          bk.field_w.beginBitWrite(-81);
+          UiViewport.field_w.beginBitWrite(-81);
           if (!(param0 instanceof CompactGameState)) {
-            param0.writeState(bk.field_w, -111);
+            param0.writeState(UiViewport.field_w, -111);
           } else {
-            ((CompactGameState) ((Object) param0)).writeCompactState(bk.field_w, (byte) -116);
+            ((CompactGameState) ((Object) param0)).writeCompactState(UiViewport.field_w, (byte) -116);
           }
-          bk.field_w.endBitWrite(32712);
-          stackIn_6_0 = psb.a(bk.field_w.payload, bk.field_w.position, 0);
+          UiViewport.field_w.endBitWrite(32712);
+          stackIn_6_0 = psb.a(UiViewport.field_w.payload, UiViewport.field_w.position, 0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

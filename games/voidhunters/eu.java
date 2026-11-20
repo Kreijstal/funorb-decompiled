@@ -21,7 +21,7 @@ final class eu extends ev {
           if (GetSpinningBladeAimspeed.field_q < 10) {
             return false;
           }
-          if (ef.field_z >= 13) {
+          if (UiDraggableContainer.field_z >= 13) {
             return true;
           }
           return false;
@@ -29,7 +29,7 @@ final class eu extends ev {
         if (GetSpinningBladeAimspeed.field_q < 10) {
           return false;
         }
-        if (ef.field_z >= 13) {
+        if (UiDraggableContainer.field_z >= 13) {
           return true;
         }
         return false;

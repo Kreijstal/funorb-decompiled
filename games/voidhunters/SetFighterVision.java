@@ -35,20 +35,20 @@ final class SetFighterVision extends ConsoleCommand {
           var7 = (String) null;
           SetSelfDestructTimer.a(19204, var5, 0, (String) null, kmb.field_a);
           ServerTick.field_d = WidgetNode.field_l;
-          bpa.field_c.field_ib = (8355711 & TargetLock.field_b.field_ib >> 1) + (-((16711423 & kmb.field_a) >> 1) + kmb.field_a);
-          bpa.field_c.field_qb = kmb.field_a - (((16711422 & kmb.field_a) >> 1) - ((TargetLock.field_b.field_qb & 16711423) >> 1));
-          bpa.field_c.field_U = -(kmb.field_a >> 1 & 8355711) + kmb.field_a + ((TargetLock.field_b.field_U & 16711423) >> 1);
+          UiComboBoxRenderer.field_c.field_ib = (8355711 & TargetLock.field_b.field_ib >> 1) + (-((16711423 & kmb.field_a) >> 1) + kmb.field_a);
+          UiComboBoxRenderer.field_c.field_qb = kmb.field_a - (((16711422 & kmb.field_a) >> 1) - ((TargetLock.field_b.field_qb & 16711423) >> 1));
+          UiComboBoxRenderer.field_c.field_U = -(kmb.field_a >> 1 & 8355711) + kmb.field_a + ((TargetLock.field_b.field_U & 16711423) >> 1);
           if (param1 != -20149) {
             return;
           }
-          lsa.field_e = bpa.field_c;
+          lsa.field_e = UiComboBoxRenderer.field_c;
           qw.field_l = new Widget(0L, param3);
           hp.field_b = new Widget(0L, param2);
           me.field_s = new Widget(0L, (Widget) null);
           SetThrusterAutobalancing.field_p = new Widget(0L, param0);
-          bpa.field_c = new Widget(0L, param4);
-          bpa.field_c.font = DebrisFactory.field_c;
-          SetThrusterAutobalancing.field_p.addChild(-561, bpa.field_c);
+          UiComboBoxRenderer.field_c = new Widget(0L, param4);
+          UiComboBoxRenderer.field_c.font = DebrisFactory.field_c;
+          SetThrusterAutobalancing.field_p.addChild(-561, UiComboBoxRenderer.field_c);
           WidgetNode.field_l = new Widget(0L, ServerTick.field_d);
           SetThrusterAutobalancing.field_p.addChild(-561, WidgetNode.field_l);
           GetMachineGunAimarc.field_q = new Widget(0L, TargetLock.field_b, GetMissionTerrainVotingChancestep.field_o);

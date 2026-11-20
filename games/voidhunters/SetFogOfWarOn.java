@@ -276,7 +276,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_mass_driver_energy_used(" + GetPointDefenceLaserAimspeed.field_p + ")");
         System.out.println("set_torpedo_energy_used(" + SetLaserAimarc.field_o + ")");
         System.out.println("set_laser_energy_used(" + ffa.field_b + ")");
-        System.out.println("set_bomblet_spray_energy_used(" + rn.field_o + ")");
+        System.out.println("set_bomblet_spray_energy_used(" + QuickChatCategoryDefinition.field_o + ")");
         System.out.println("set_phased_energy_beam_energy_used(" + bv.field_e + ")");
         System.out.println("set_machine_gun_energy_used(" + mmb.field_g + ")");
         System.out.println("set_sniper_cannon_energy_used(" + ShieldBehaviourFactory.field_a + ")");
@@ -336,7 +336,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_boosters_active_time(" + Particle.field_p + ")");
         System.out.println("set_countermeasures_pulsetime(" + Particle.field_n + ")");
         System.out.println("set_countermeasures_cooldown(" + Particle.field_a + ")");
-        System.out.println("set_countermeasures_pulse_radius(" + bpa.field_a + ")");
+        System.out.println("set_countermeasures_pulse_radius(" + UiComboBoxRenderer.field_a + ")");
         System.out.println("set_self_destruct_prepare_toggle_cooldown(" + Particle.field_o + ")");
         System.out.println("set_self_destruct_activate_cooldown(" + Particle.field_e + ")");
         System.out.println("set_self_destruct_timer(" + Particle.field_y + ")");

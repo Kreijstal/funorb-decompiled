@@ -57,7 +57,7 @@ final class VertexStreamLayout {
           BodyInZoneConditionFactory.a(param17, param12, 114, param3, param18, param11);
           var20_int = 20 % ((param16 + 14) / 55);
           SetFighterRepairAmount.a(param4, -22699, param7);
-          nva.a(param13, true, param2, param14);
+          UiComboBox.setMenuTextColors(param13, true, param2, param14);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

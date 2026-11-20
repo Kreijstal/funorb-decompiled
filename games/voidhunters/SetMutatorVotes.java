@@ -35,12 +35,12 @@ final class SetMutatorVotes extends ConsoleCommand {
             var4 = GetSniperCannonProjectiles.field_o[var3];
             if (0 <= var4) {
               if (var4 == ei.field_c.field_j) {
-                var5 = mb.field_j;
+                var5 = mb.menuSelectedItemColor;
               } else {
-                var5 = SetUsePolygonFill.field_o;
+                var5 = SetUsePolygonFill.menuItemColor;
               }
             } else {
-              var5 = GetPhasedEnergyBeamPulsetime.field_o;
+              var5 = GetPhasedEnergyBeamPulsetime.menuHeadingColor;
             }
             var6 = GetWorldWidthUpshift.field_o[var3];
             stackIn_12_0 = var6;

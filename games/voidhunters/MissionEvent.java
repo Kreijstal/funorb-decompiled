@@ -109,8 +109,8 @@ final class MissionEvent implements DiffableState {
         try {
           var9 = (MissionEvent) (param1);
           var4 = new Class[]{VariableCondition.class, ShipSpawnedCondition.class, TeamNodeCondition.class, MissionCondition.class, BodyInZoneCondition.class, TeamShipComponentCondition.class, TickCondition.class, ShipTeamCondition.class, BodyDestroyedCondition.class};
-          var5 = new GameStateFactory[]{lq.field_i, GetFps.field_o, GetUseCircleOutline.field_o, jv.field_d, GetNebulaProximityFadeDownshift.field_o, SetSalvoaim.field_s, GetMachineGunEnergyUsed.field_q, rla.field_v, oua.field_b};
-          var9.conditions = (MissionCondition[]) (hla.a(var4, this.conditions, var5, -118, var9.conditions, 1, jv.field_d));
+          var5 = new GameStateFactory[]{lq.field_i, GetFps.field_o, GetUseCircleOutline.field_o, QuickChatCategoryLoader.field_d, GetNebulaProximityFadeDownshift.field_o, SetSalvoaim.field_s, GetMachineGunEnergyUsed.field_q, rla.field_v, oua.field_b};
+          var9.conditions = (MissionCondition[]) (hla.a(var4, this.conditions, var5, -118, var9.conditions, 1, QuickChatCategoryLoader.field_d));
           if (param0 <= 54) {
             SerializableGameState var8 = (SerializableGameState) null;
             this.reportDifferences((SerializableGameState) null, 121);
@@ -211,7 +211,7 @@ final class MissionEvent implements DiffableState {
 
     final void addCondition(byte param0, MissionCondition param1) {
         try {
-          this.conditions = (MissionCondition[]) (ija.a(param1, this.conditions, 0, jv.field_d));
+          this.conditions = (MissionCondition[]) (ija.a(param1, this.conditions, 0, QuickChatCategoryLoader.field_d));
           if (param0 >= -97) {
             field_f = (String) null;
           }
@@ -224,8 +224,8 @@ final class MissionEvent implements DiffableState {
         Class[] var5 = null;
         GameStateFactory[] var6 = null;
         Class[] var7 = new Class[]{VariableCondition.class, ShipSpawnedCondition.class, TeamNodeCondition.class, MissionCondition.class, BodyInZoneCondition.class, TeamShipComponentCondition.class, TickCondition.class, ShipTeamCondition.class, BodyDestroyedCondition.class};
-        GameStateFactory[] var4 = new GameStateFactory[]{lq.field_i, GetFps.field_o, GetUseCircleOutline.field_o, jv.field_d, GetNebulaProximityFadeDownshift.field_o, SetSalvoaim.field_s, GetMachineGunEnergyUsed.field_q, rla.field_v, oua.field_b};
-        this.conditions = (MissionCondition[]) (iq.a(var4, this.conditions, var7, jv.field_d, 8, param0, 1, 108));
+        GameStateFactory[] var4 = new GameStateFactory[]{lq.field_i, GetFps.field_o, GetUseCircleOutline.field_o, QuickChatCategoryLoader.field_d, GetNebulaProximityFadeDownshift.field_o, SetSalvoaim.field_s, GetMachineGunEnergyUsed.field_q, rla.field_v, oua.field_b};
+        this.conditions = (MissionCondition[]) (iq.a(var4, this.conditions, var7, QuickChatCategoryLoader.field_d, 8, param0, 1, 108));
         if (param1) {
           return;
         }
@@ -253,7 +253,7 @@ final class MissionEvent implements DiffableState {
           var3 = stackIn_6_0;
           if (this.conditions != null &&
             param0 < this.conditions.length) {
-            this.conditions = (MissionCondition[]) (GetSalvoUsesAllEnergy.a(jv.field_d, param0, 15667, this.conditions));
+            this.conditions = (MissionCondition[]) (GetSalvoUsesAllEnergy.a(QuickChatCategoryLoader.field_d, param0, 15667, this.conditions));
           } else {
             if (null != this.actions &&
               -var3 + param0 < this.actions.length) {

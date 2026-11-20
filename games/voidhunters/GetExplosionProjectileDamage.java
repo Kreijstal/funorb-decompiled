@@ -194,9 +194,9 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
           kea.field_a.addChild(-561, GetUseLines.field_p);
           jba.field_b = new Widget(0L, param4);
           kea.field_a.addChild(-561, jba.field_b);
-          bpa.field_c = new Widget(0L, param0);
-          bpa.field_c.font = DebrisFactory.field_c;
-          jba.field_b.addChild(-561, bpa.field_c);
+          UiComboBoxRenderer.field_c = new Widget(0L, param0);
+          UiComboBoxRenderer.field_c.font = DebrisFactory.field_c;
+          jba.field_b.addChild(-561, UiComboBoxRenderer.field_c);
           jba.field_b.inheritInteractionStateInDescendants(119);
           WidgetNode.field_l = new Widget(0L, (Widget) null);
           WidgetNode.field_l.field_gb = var16;

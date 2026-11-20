@@ -82,7 +82,7 @@ abstract class NetworkGameClient extends GameApplet {
           this.a((byte) 6, false);
         }
         if (!eu.a(true)) {
-          if (ef.field_z >= 10) {
+          if (UiDraggableContainer.field_z >= 10) {
             if (!lm.a(true)) {
               SetVariableActionFactory.b((byte) 6);
             } else {
@@ -172,7 +172,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (-1 != MapClearanceArea.field_a &&
           MapClearanceArea.field_a != 0) {
-          if (10 <= ef.field_z) {
+          if (10 <= UiDraggableContainer.field_z) {
             if (10 <= GetSpinningBladeAimspeed.field_q) {
               NetworkArchiveRequest.f((byte) -119);
               if (MapClearanceArea.field_a == 3) {
@@ -229,22 +229,22 @@ abstract class NetworkGameClient extends GameApplet {
           !SetWeaponProjectileSpeedMultiply.b(true)) {
           dga.field_a = false;
         }
-        if (0 == ef.field_z &&
+        if (0 == UiDraggableContainer.field_z &&
           ThrusterBehaviour.loadMasterIndex(param1 - 90)) {
-          ef.field_z = 1;
+          UiDraggableContainer.field_z = 1;
         }
-        if (1 == ef.field_z) {
+        if (1 == UiDraggableContainer.field_z) {
           if (0 != SetGrapplingHookAimarc.field_p) {
             ppb.field_a = MissionBuilder.a(1, GrappleLauncherBehaviour.field_f);
           }
           btb.field_b = SetDebrisFoundInPairs.a(1, GetShieldsDirectionalArc.field_p, 106, true, false);
           GetSalvoUsesAllEnergy.field_o = SetDebrisFoundInPairs.a(1, SetFighterRepairAmount.field_p, 97, true, false);
           BufferedFile.field_i = SetDebrisFoundInPairs.a(1, GetThrusterBindingMoveAndTurnHasOppositeMove.field_p, 81, true, false);
-          ef.field_z = 2;
+          UiDraggableContainer.field_z = 2;
           GetMassDriverReload.field_o = btb.field_b;
           GetShieldsDirectionalArc.field_r = GetSalvoUsesAllEnergy.field_o;
         }
-        if (ef.field_z == 2) {
+        if (UiDraggableContainer.field_z == 2) {
           if (null != ppb.field_a &&
             ppb.field_a.loadIndex((byte) -81)) {
             if (ppb.field_a.containsNamedGroup(true, "")) {
@@ -258,10 +258,10 @@ abstract class NetworkGameClient extends GameApplet {
             }
           }
           if (null == ppb.field_a) {
-            ef.field_z = 3;
+            UiDraggableContainer.field_z = 3;
           }
         }
-        if (ef.field_z == 3 &&
+        if (UiDraggableContainer.field_z == 3 &&
           SetBombletSprayEnergyUsed.a(GetSalvoUsesAllEnergy.field_o, 2, BufferedFile.field_i, btb.field_b) &&
           GetUseOffscreenRendering.a(-20230, BufferedFile.field_i)) {
           MissionFactory.b((byte) 123);
@@ -289,16 +289,16 @@ abstract class NetworkGameClient extends GameApplet {
           btb.field_b = null;
           qd.a(0, (java.applet.Applet) (this));
           MidiNote.resetFrameTiming(2096);
-          ef.field_z = 10;
+          UiDraggableContainer.field_z = 10;
         }
-        if (10 == ef.field_z) {
+        if (10 == UiDraggableContainer.field_z) {
           if (0 != SetGrapplingHookAimarc.field_p) {
             OpenGlVertexBuffer.field_j = MissionBuilder.a(1, GetFullMissionSet.field_o);
           }
-          ef.field_z = 11;
+          UiDraggableContainer.field_z = 11;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (ef.field_z == 11) {
+        if (UiDraggableContainer.field_z == 11) {
           if (OpenGlVertexBuffer.field_j != null && (!OpenGlVertexBuffer.field_j.loadIndex((byte) -38) ||
             !OpenGlVertexBuffer.field_j.loadAllGroups(param1 ^ 113))) {
             IncrementVariableAction.a(SetMomentOfInertiaPerpointCalcDownshift.a(-93, OpenGlVertexBuffer.field_j, ocb.field_i, lo.field_d), -1, 0.0f);
@@ -306,14 +306,14 @@ abstract class NetworkGameClient extends GameApplet {
           }
           else {
             GetMissionTerrainDebrisProbability.field_o = true;
-            ef.field_z = 12;
+            UiDraggableContainer.field_z = 12;
           }
         }
-        if (ef.field_z == 12 &&
+        if (UiDraggableContainer.field_z == 12 &&
           !GetMissionTerrainDebrisProbability.field_o) {
-          ef.field_z = 13;
+          UiDraggableContainer.field_z = 13;
         }
-        if (ef.field_z == 13) {
+        if (UiDraggableContainer.field_z == 13) {
           var3Lifetime2 = 1;
           if (null != OpenGlGpuTexture3D.field_m) {
             stackIn_133_0 = (!OpenGlGpuTexture3D.field_m.a((byte) 87)) ? 0 : 1;
@@ -321,7 +321,7 @@ abstract class NetworkGameClient extends GameApplet {
             IncrementVariableAction.a(OpenGlGpuTexture3D.field_m.field_a, -1, OpenGlGpuTexture3D.field_m.field_g);
           }
           if (var3Lifetime2 != 0) {
-            ef.field_z = 20;
+            UiDraggableContainer.field_z = 20;
           }
         }
         if (!param0 &&
@@ -519,7 +519,7 @@ abstract class NetworkGameClient extends GameApplet {
         aeb.a(SetGrapplingHookAimarc.field_p, 1);
         int var10 = -52 / ((-72 - param0) / 33);
         SoundCache.initializeClientProtocol(5000, this.secondaryGamePort, 60, this.serverNumber, SetTorpedoProjectiles.field_o, this.instanceId, this.host, this.member, this.primaryGamePort, this.gameCrc, param6, SetGrapplingHookAimarc.field_p, param3, 5000);
-        sha.a(param3, this.host, this.primaryGamePort, this.secondaryGamePort, (byte) -2, SetGrapplingHookAimarc.field_p, this.gameCrc, SetTorpedoProjectiles.field_o, this.serverNumber);
+        UiScrollPane.initializeArchiveSystem(param3, this.host, this.primaryGamePort, this.secondaryGamePort, (byte) -2, SetGrapplingHookAimarc.field_p, this.gameCrc, SetTorpedoProjectiles.field_o, this.serverNumber);
         ProxyAuthenticationException.initializePunctuationKeyCodes(47);
         GetWaitForPlayers.field_o = ByteArrayNode.createMouseWheelInput((byte) -127);
         SetGrapplingHookCooldown.a((byte) 122, igb.field_a);
@@ -671,7 +671,7 @@ abstract class NetworkGameClient extends GameApplet {
           int var5Lifetime1;
           int var6_intLifetime1;
           var9 = VoidHunters.field_G;
-          var4 = tia.a(false, GetPointDefenceLaserPulsetime.field_o, SetGrapplingHookAimarc.field_p, param2);
+          var4 = UiComboBoxList.a(false, GetPointDefenceLaserPulsetime.field_o, SetGrapplingHookAimarc.field_p, param2);
           if (0 == var4) {
             throw new IllegalStateException();
           }
@@ -711,7 +711,7 @@ abstract class NetworkGameClient extends GameApplet {
                   SetMessageFadetime.a(dgb.field_b, (byte) 110, var6_intLifetime1);
                   dgb.field_b = null;
                 } else {
-                  tia.field_C = SetTorpedoAimarc.field_p;
+                  UiComboBoxList.field_C = SetTorpedoAimarc.field_p;
                   TeamShipComponentConditionFactory.b((byte) 49);
                   cgb.field_a = false;
                   GetSpinningBladeAimspeed.field_q = 10;
