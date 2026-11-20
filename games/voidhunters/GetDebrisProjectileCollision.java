@@ -39,9 +39,9 @@ final class GetDebrisProjectileCollision extends ConsoleCommand {
         int var2 = 0;
         int var3 = 0;
         GetPhasedEnergyBeamProjectiles.field_o = param1;
-        if (GetRepairModePower.field_o != tb.field_b) {
+        if (GetRepairModePower.field_o != SocialPanelState.chatPanelProgress) {
           var2 = GetRepairModePower.field_o * GetRepairModePower.field_o;
-          var3 = -(tb.field_b * tb.field_b) + var2;
+          var3 = -(SocialPanelState.chatPanelProgress * SocialPanelState.chatPanelProgress) + var2;
           param1 = param1 + (-param1 + GetAngularForceDownshift.field_p) * var3 / var2;
         }
         SetToggledScoreboard.field_o.setBounds(SetUseDetailLines.field_o, param0 + 123, 640, param1, 120);

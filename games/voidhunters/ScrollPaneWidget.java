@@ -85,9 +85,9 @@ final class ScrollPaneWidget extends Widget {
         try {
           EmailValidationError.layoutSlidingLobbyPanels(CarouselPlayerEventFactory.field_a, (byte) -101);
           if (null != SetThrusterParticleSpeedDownshift.field_o) {
-            var15 = vw.field_a;
+            var15 = LobbyInviteControls.inviteButton;
             var17 = var15;
-            vw.field_a.height = 0;
+            LobbyInviteControls.inviteButton.height = 0;
             var17.width = 0;
             var5 = ObjectiveMarker.field_b;
             ObjectiveMarker.field_b.height = 0;

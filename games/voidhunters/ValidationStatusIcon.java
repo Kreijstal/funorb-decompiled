@@ -33,7 +33,7 @@ final class ValidationStatusIcon extends UiFocusableComponent {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9, var10);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var15.drawRotatedScaledBilinear(112, 144, var15.paddedWidth << 4, var15.paddedHeight << 4, -this.animationTick << 10, 4096);
-            bia.popRasterState((byte) 124);
+            SoftwareRasterStateRestorer.popRasterState((byte) 124);
             GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var15.paddedWidth + var5, -var15.paddedHeight + var6, 256);
             return;
           }
@@ -41,7 +41,7 @@ final class ValidationStatusIcon extends UiFocusableComponent {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9, var10);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var15.drawRotatedScaledBilinear(112, 144, var15.paddedWidth << 4, var15.paddedHeight << 4, -this.animationTick << 10, 4096);
-            bia.popRasterState((byte) 124);
+            SoftwareRasterStateRestorer.popRasterState((byte) 124);
             GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var15.paddedWidth + var5, -var15.paddedHeight + var6, 256);
             return;
           }
@@ -49,14 +49,14 @@ final class ValidationStatusIcon extends UiFocusableComponent {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9, var10);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var15.drawRotatedScaledBilinear(112, 144, var15.paddedWidth << 4, var15.paddedHeight << 4, -this.animationTick << 10, 4096);
-            bia.popRasterState((byte) 124);
+            SoftwareRasterStateRestorer.popRasterState((byte) 124);
             GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var15.paddedWidth + var5, -var15.paddedHeight + var6, 256);
             return;
           }
           SetTorpedoEnergyUsed.a(85, GetWeaponProjectileSpeedMultiply.field_o);
           SoftwareRasterizer2D.clear();
           var15.drawRotatedScaledBilinear(112, 144, var15.paddedWidth << 4, var15.paddedHeight << 4, -this.animationTick << 10, 4096);
-          bia.popRasterState((byte) 124);
+          SoftwareRasterStateRestorer.popRasterState((byte) 124);
           GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var15.paddedWidth + var5, -var15.paddedHeight + var6, 256);
           return;
         }
@@ -68,7 +68,7 @@ final class ValidationStatusIcon extends UiFocusableComponent {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var16.drawRotatedScaledBilinear(112, 144, var16.paddedWidth << 4, var16.paddedHeight << 4, -this.animationTick << 10, 4096);
-            bia.popRasterState((byte) 124);
+            SoftwareRasterStateRestorer.popRasterState((byte) 124);
             GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var16.paddedWidth + var5, -var16.paddedHeight + var6, 256);
             return;
           }
@@ -76,7 +76,7 @@ final class ValidationStatusIcon extends UiFocusableComponent {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var16.drawRotatedScaledBilinear(112, 144, var16.paddedWidth << 4, var16.paddedHeight << 4, -this.animationTick << 10, 4096);
-            bia.popRasterState((byte) 124);
+            SoftwareRasterStateRestorer.popRasterState((byte) 124);
             GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var16.paddedWidth + var5, -var16.paddedHeight + var6, 256);
             return;
           }
@@ -84,14 +84,14 @@ final class ValidationStatusIcon extends UiFocusableComponent {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
             var16.drawRotatedScaledBilinear(112, 144, var16.paddedWidth << 4, var16.paddedHeight << 4, -this.animationTick << 10, 4096);
-            bia.popRasterState((byte) 124);
+            SoftwareRasterStateRestorer.popRasterState((byte) 124);
             GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var16.paddedWidth + var5, -var16.paddedHeight + var6, 256);
             return;
           }
           SetTorpedoEnergyUsed.a(85, GetWeaponProjectileSpeedMultiply.field_o);
           SoftwareRasterizer2D.clear();
           var16.drawRotatedScaledBilinear(112, 144, var16.paddedWidth << 4, var16.paddedHeight << 4, -this.animationTick << 10, 4096);
-          bia.popRasterState((byte) 124);
+          SoftwareRasterStateRestorer.popRasterState((byte) 124);
           GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var16.paddedWidth + var5, -var16.paddedHeight + var6, 256);
           return;
         }

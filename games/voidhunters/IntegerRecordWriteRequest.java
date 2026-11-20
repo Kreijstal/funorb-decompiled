@@ -53,7 +53,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[186] = SetGrapplingHookMaxLength.field_p;
         var2[116] = GetFighterRepairAmount.field_o;
         var2[230] = GetDebrisFoundInPairs.field_p;
-        var2[102] = wja.field_b;
+        var2[102] = IncomingChatState.field_b;
         var2[191] = GetWorldWidthUpshift.field_q;
         var2[56] = OpenGlGpuTexture.field_g;
         var2[154] = PlayerContextMenus.field_b;
@@ -65,7 +65,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[127] = GetMissileLauncherRandomness.field_p;
         var2[165] = ShieldBehaviourFactory.field_a;
         var2[117] = SelectableIconLabelWidget.field_wb;
-        var2[197] = bia.field_c;
+        var2[197] = SoftwareRasterStateRestorer.field_c;
         var2[114] = SetLaserRandomness.field_q;
         var2[177] = TextureCombineSource.field_a;
         var2[124] = PlayerActionFactory.field_a;
@@ -182,7 +182,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[34] = SetMaxShipSize.field_o;
         var2[217] = LoadSettings.field_p;
         var2[79] = GetRadialMenuRadius.field_p;
-        var2[84] = uab.field_b;
+        var2[84] = MouseInputUtilities.field_b;
         var2[183] = SetFps.field_p;
         var2[78] = LoadSettings.field_s;
         var2[104] = GetMassDriverAimarc.field_o;

@@ -1244,6 +1244,14 @@
       "renamedSymbol": "C:UrlJaggrabRequest"
     },
     {
+      "symbol": "C:bia",
+      "originalName": "bia",
+      "to": "SoftwareRasterStateRestorer",
+      "evidence": "Full class reviewed:static popRasterState restores target/clip and returns frames to pool. Unrelated vote-option and mixer access helpers remain;preserve otherwise empty original inheritance chain and constructors.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:SoftwareRasterStateRestorer"
+    },
+    {
       "symbol": "C:bib",
       "originalName": "bib",
       "to": "UnsupportedGpuMaterialEffect",
@@ -5092,6 +5100,14 @@
       "renamedSymbol": "C:GetBombletSprayProjectileDamage"
     },
     {
+      "symbol": "C:iob",
+      "originalName": "iob",
+      "to": "SoftwareProjectionSettings",
+      "evidence": "Full class plus fixed-point projection consumers and raster initializer reviewed:projection fraction-bit setting9/11,with unrelated catchup mask/chassis text. Preserve otherwise empty inheritance chain and scalar defaults.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:SoftwareProjectionSettings"
+    },
+    {
       "symbol": "C:ip",
       "originalName": "ip",
       "to": "GetBombletSprayEnergyUsed",
@@ -8748,6 +8764,14 @@
       "renamedSymbol": "C:GetUseModels"
     },
     {
+      "symbol": "C:pl",
+      "originalName": "pl",
+      "to": "LoginMethodCatalog",
+      "evidence": "Full class reviewed:static getLoginMethods returns three original login methods. Preserve label,cleanup arithmetic and otherwise empty inherited type chain.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:LoginMethodCatalog"
+    },
+    {
       "symbol": "C:pla",
       "originalName": "pla",
       "to": "ValidationStatusIcon",
@@ -10612,6 +10636,14 @@
       "renamedSymbol": "C:GetPhasedEnergyBeamRandomness"
     },
     {
+      "symbol": "C:tb",
+      "originalName": "tb",
+      "to": "SocialPanelState",
+      "evidence": "Full class and root construction/layout/draw plus chat counter consumers reviewed:static social-panel root and panel animation progress. Class has no instance fields/methods;preserve its otherwise empty original inheritance chain.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:SocialPanelState"
+    },
+    {
       "symbol": "C:tba",
       "originalName": "tba",
       "to": "SetExplosionPushMultiplier",
@@ -11106,6 +11138,14 @@
       "evidence": "Developer console command registered by name \"GetTorqueDownshift\" in ConsoleCommandRegistry.",
       "confidence": "reviewed",
       "renamedSymbol": "C:GetTorqueDownshift"
+    },
+    {
+      "symbol": "C:uab",
+      "originalName": "uab",
+      "to": "MouseInputUtilities",
+      "evidence": "Full class reviewed:detach mouse/motion/focus listeners and expose menu-initialization flag. Full333-line menu builder and only flag writes reviewed;getter reports initialization started,not whether a menu is active or closed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:MouseInputUtilities"
     },
     {
       "symbol": "C:ub",
@@ -11796,6 +11836,14 @@
       "renamedSymbol": "C:SetUseRectFill"
     },
     {
+      "symbol": "C:vhb",
+      "originalName": "vhb",
+      "to": "SocialTabResources",
+      "evidence": "Full class plus LobbyThemeBuilder/SocialTabsPanel consumers reviewed:static social tab Widget template,with unrelated NineSliceSprite reference. Preserve original empty inherited type chain and all resource aliases.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:SocialTabResources"
+    },
+    {
       "symbol": "C:vi",
       "originalName": "vi",
       "to": "GetSniperCannonFiringLeeway",
@@ -12108,6 +12156,14 @@
       "renamedSymbol": "C:ThreeSliceButtonStyle"
     },
     {
+      "symbol": "C:vw",
+      "originalName": "vw",
+      "to": "LobbyInviteControls",
+      "evidence": "Full static holder and local-lobby-owner label/input consumers reviewed:single button shows Invite players or Game full and opens player-invite controls. Preserve original shared Widget,cleanup and all behavior;no allocations found.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:LobbyInviteControls"
+    },
+    {
       "symbol": "C:vwa",
       "originalName": "vwa",
       "to": "GetLaserProjectiles",
@@ -12346,6 +12402,14 @@
       "evidence": "Developer console command registered by name \"GetDebrisFoundInPairs\" in ConsoleCommandRegistry.",
       "confidence": "reviewed",
       "renamedSymbol": "C:GetDebrisFoundInPairs"
+    },
+    {
+      "symbol": "C:wja",
+      "originalName": "wja",
+      "to": "IncomingChatState",
+      "evidence": "Full static holder and chat header/message constructor consumers reviewed:parsed incoming channel type plus unrelated option labels/scalar. Preserve all field values and cleanup recursion;no class allocations found.",
+      "confidence": "reviewed",
+      "renamedSymbol": "C:IncomingChatState"
     },
     {
       "symbol": "C:wjb",
@@ -20212,6 +20276,14 @@
       "renamedSymbol": "F:GradientBorderTextStyle.booleanTokenType:I"
     },
     {
+      "symbol": "F:iob.field_f:I",
+      "originalName": "field_f",
+      "to": "projectionFractionBits",
+      "evidence": "Original projection fractional precision used in16-minus-bits and final bits shifts;default9,raster initialization11.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SoftwareProjectionSettings.projectionFractionBits:I"
+    },
+    {
       "symbol": "F:ipb.field_a:I",
       "originalName": "field_a",
       "to": "position",
@@ -20298,6 +20370,14 @@
       "evidence": "Original constructor flag places month before day in child order and horizontal layout.",
       "confidence": "reviewed",
       "renamedSymbol": "F:DateOfBirthTextFields.monthFirst:Z"
+    },
+    {
+      "symbol": "F:iv.field_o:I",
+      "originalName": "field_o",
+      "to": "canvasMenuMode",
+      "evidence": "Original selected canvas menu mode0..5 in builder and menu input consumers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:GetMassDriverAimspeed.canvasMenuMode:I"
     },
     {
       "symbol": "F:iw.field_B:I",
@@ -21410,6 +21490,14 @@
       "evidence": "Reviewed complete network archive request framing, reconnect, progress and queue operations.",
       "confidence": "reviewed",
       "renamedSymbol": "F:NetworkArchiveRequest.blockPosition:I"
+    },
+    {
+      "symbol": "F:knb.field_o:Z",
+      "originalName": "field_o",
+      "to": "menuInitializationStarted",
+      "evidence": "Original false default and true assignment on entry to buildCanvasMenu;no false reset writes in source.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SetAngularForceDownshift.menuInitializationStarted:Z"
     },
     {
       "symbol": "F:ko.field_f:[I",
@@ -22618,6 +22706,14 @@
       "evidence": "Original five instructions strings for movement,play,combat,ship building and blueprints.",
       "confidence": "reviewed",
       "renamedSymbol": "F:FloatPacketBuffer.helpPages:[Ljava/lang/String;"
+    },
+    {
+      "symbol": "F:mba.field_a:Lae;",
+      "originalName": "field_a",
+      "to": "menuInputState",
+      "evidence": "Original MenuInputState(1) configured with action count and resetSelection by menu builder.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:ReferenceTrackingControl.menuInputState:LMenuInputState;"
     },
     {
       "symbol": "F:mc.field_t:Lshb;",
@@ -30268,6 +30364,22 @@
       "renamedSymbol": "F:HardpointGeometry.serverPacketLengths:[I"
     },
     {
+      "symbol": "F:tb.field_a:Lllb;",
+      "originalName": "field_a",
+      "to": "socialPanelRoot",
+      "evidence": "Original Widget containing social tabs and lower social-panel controls.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SocialPanelState.socialPanelRoot:LWidget;"
+    },
+    {
+      "symbol": "F:tb.field_b:I",
+      "originalName": "field_b",
+      "to": "chatPanelProgress",
+      "evidence": "Original incremented chat panel input/layout progress counter.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SocialPanelState.chatPanelProgress:I"
+    },
+    {
       "symbol": "F:tc.field_c:Lgj;",
       "originalName": "field_c",
       "to": "loginStage",
@@ -32596,6 +32708,14 @@
       "renamedSymbol": "F:SecondaryNodeDeque.cursor:LDualLinkNode;"
     },
     {
+      "symbol": "F:vhb.field_c:Lllb;",
+      "originalName": "field_c",
+      "to": "tabTemplate",
+      "evidence": "Original lobby tab_inactive/tab_mouseover Widget template used by SocialTabsPanel.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SocialTabResources.tabTemplate:LWidget;"
+    },
+    {
       "symbol": "F:vib.field_a:I",
       "originalName": "field_a",
       "to": "x",
@@ -33164,6 +33284,14 @@
       "renamedSymbol": "F:ThreeSliceButtonStyle.highlightTint:I"
     },
     {
+      "symbol": "F:vw.field_a:Lllb;",
+      "originalName": "field_a",
+      "to": "inviteButton",
+      "evidence": "Original local-lobby-owner Invite players/Game full Widget.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:LobbyInviteControls.inviteButton:LWidget;"
+    },
+    {
       "symbol": "F:w.field_w:Lhtb;",
       "originalName": "field_w",
       "to": "continueButton",
@@ -33458,6 +33586,14 @@
       "evidence": "Original message-box open flag set by message-box construction and cleared by selected-option/lobby transitions.",
       "confidence": "reviewed",
       "renamedSymbol": "F:MessageBoxState.open:Z"
+    },
+    {
+      "symbol": "F:wja.field_a:I",
+      "originalName": "field_a",
+      "to": "channelType",
+      "evidence": "Original incoming chat header low7bits copied into ChatMessage.channelType.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:IncomingChatState.channelType:I"
     },
     {
       "symbol": "F:wk.field_a:I",
@@ -37721,7 +37857,7 @@
       "to": "popRasterState",
       "evidence": "Remove the most recently pushed snapshot, restore target and clipping, clear its pixel reference and return it to the pool; preserve underflow exception.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:bia.popRasterState(B)V"
+      "renamedSymbol": "M:SoftwareRasterStateRestorer.popRasterState(B)V"
     },
     {
       "symbol": "M:bia.a(Z)Lqkb;",
@@ -37729,7 +37865,7 @@
       "to": "getPcmStreamMixer",
       "evidence": "Return original shared PcmStreamMixer when boolean true,otherwise null;no ownership/lifetime changes.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:bia.getPcmStreamMixer(Z)LPcmStreamMixer;"
+      "renamedSymbol": "M:SoftwareRasterStateRestorer.getPcmStreamMixer(Z)LPcmStreamMixer;"
     },
     {
       "symbol": "M:bia.a(ZBI)Z",
@@ -37737,7 +37873,7 @@
       "to": "isVoteOptionAvailable",
       "evidence": "Delegate original server option availability with membership argument;preserve wrong-guard recursion and no added validation.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:bia.isVoteOptionAvailable(ZBI)Z"
+      "renamedSymbol": "M:SoftwareRasterStateRestorer.isVoteOptionAvailable(ZBI)Z"
     },
     {
       "symbol": "M:bib.a(B)Z",
@@ -48756,6 +48892,14 @@
       "renamedSymbol": "M:SetMissionTimeLimit.execute([LConsoleValue;I)LConsoleValue;"
     },
     {
+      "symbol": "M:gva.a(B)V",
+      "originalName": "a",
+      "to": "rebuildInitializedCanvasMenu",
+      "evidence": "Full body reviewed:if initialization flag true,run original guard arithmetic and rebuild canvas menu in original mode4. Preserve original resetSelection boolean/arguments and early return.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ConsoleEvaluationException.rebuildInitializedCanvasMenu(B)V"
+    },
+    {
       "symbol": "M:gva.a(Z)V",
       "originalName": "a",
       "to": "clearSharedReferences",
@@ -52825,7 +52969,7 @@
       "to": "clearSharedReferences",
       "evidence": "Only clears own static reference fields field_e; complete body contains only null assignments, returns and simple guard/arithmetic statements. Original guards are preserved.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:iob.clearSharedReferences(I)V"
+      "renamedSymbol": "M:SoftwareProjectionSettings.clearSharedReferences(I)V"
     },
     {
       "symbol": "M:ip.a([Lnc;I)Lnc;",
@@ -60108,6 +60252,14 @@
       "renamedSymbol": "M:PendingRequest.clearSharedReferences(B)V"
     },
     {
+      "symbol": "M:lsb.a(Z)V",
+      "originalName": "a",
+      "to": "closeChatInputDialog",
+      "evidence": "Full wrapper reviewed:delegate existing disposeChatInputDialog only for original true guard;preserve false no-op.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:HardpointDefinition.closeChatInputDialog(Z)V"
+    },
+    {
       "symbol": "M:lt.a(IILvcb;I)V",
       "originalName": "a",
       "to": "onScrollChanged",
@@ -63266,6 +63418,14 @@
       "evidence": "Every console command subclass returns an nc result from an nc argument array. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SetMaxShipSize.execute([LConsoleValue;I)LConsoleValue;"
+    },
+    {
+      "symbol": "M:mra.e(B)D",
+      "originalName": "e",
+      "to": "getIncomingLagStdDevMillis",
+      "evidence": "Full wrapper reviewed:return already named incomingLagStdDevMillis,retaining original wrong-guard negative constant.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SetMaxShipSize.getIncomingLagStdDevMillis(B)D"
     },
     {
       "symbol": "M:mrb.a([Lnc;I)Lnc;",
@@ -66810,6 +66970,14 @@
       "evidence": "Software fills radius-squared scanline spans; OpenGL uses point or triangle fan based on radius. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:NativeSoftwareToolkit.fillCircle(IIIII)V"
+    },
+    {
+      "symbol": "M:oaa.a(B)Z",
+      "originalName": "a",
+      "to": "isNameEntryDialogOpen",
+      "evidence": "Full body reviewed:check existing activeNameEntryDialog reference,retaining original bad-guardfalse.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlVertexBufferObject.isNameEntryDialogOpen(B)Z"
     },
     {
       "symbol": "M:oaa.a(I)V",
@@ -72273,7 +72441,7 @@
       "to": "clearSharedReferences",
       "evidence": "Only clears own static reference fields field_e; complete body contains only null assignments, returns and simple guard/arithmetic statements. Original guards are preserved.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:pl.clearSharedReferences(B)V"
+      "renamedSymbol": "M:LoginMethodCatalog.clearSharedReferences(B)V"
     },
     {
       "symbol": "M:pl.c(B)[Lkhb;",
@@ -72281,7 +72449,7 @@
       "to": "getLoginMethods",
       "evidence": "Return original three registered LoginMethod instances in existing order in both branches;retain text clear on guard failure.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:pl.getLoginMethods(B)[LLoginMethod;"
+      "renamedSymbol": "M:LoginMethodCatalog.getLoginMethods(B)[LLoginMethod;"
     },
     {
       "symbol": "M:pla.a(I)V",
@@ -77116,6 +77284,14 @@
       "renamedSymbol": "M:MachineGunWeaponDefinition.getEnergyCost(I)I"
     },
     {
+      "symbol": "M:rma.a(IB)V",
+      "originalName": "a",
+      "to": "sendNumericDebugRequest",
+      "evidence": "Full body reviewed:if original session exists send original integer converted to decimal string through sendDebugRequest. Preserve null-session no-op,wrong-guard recursion and buffer argument.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MachineGunWeaponDefinition.sendNumericDebugRequest(IB)V"
+    },
+    {
       "symbol": "M:rma.a(Z)I",
       "originalName": "a",
       "to": "getFiringSoundId",
@@ -81169,7 +81345,7 @@
       "to": "clearSharedReferences",
       "evidence": "Only clears own static reference fields field_a; complete body contains only null assignments, returns and simple guard/arithmetic statements. Original guards are preserved.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:tb.clearSharedReferences(I)V"
+      "renamedSymbol": "M:SocialPanelState.clearSharedReferences(I)V"
     },
     {
       "symbol": "M:tba.a([Lnc;I)Lnc;",
@@ -83204,12 +83380,20 @@
       "renamedSymbol": "M:GetTorqueDownshift.sendRecordReadRequest(II)V"
     },
     {
+      "symbol": "M:uab.a(B)Z",
+      "originalName": "a",
+      "to": "hasMenuInitializationStarted",
+      "evidence": "Full getter,defaultfalse and sole true-writer reviewed:report flag set on entry to canvas menu builder. Preserve wrong-guard cleanup;do not interpret as active/closed/successfully completed.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MouseInputUtilities.hasMenuInitializationStarted(B)Z"
+    },
+    {
       "symbol": "M:uab.a(BLjava/awt/Component;)V",
       "originalName": "a",
       "to": "detachMouseListeners",
       "evidence": "Remove shared mouse/motion/focus listeners and reset original mouse state;retain bad-byte predicate side call and ordering.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:uab.detachMouseListeners(BLjava/awt/Component;)V"
+      "renamedSymbol": "M:MouseInputUtilities.detachMouseListeners(BLjava/awt/Component;)V"
     },
     {
       "symbol": "M:uab.a(I)V",
@@ -83217,7 +83401,7 @@
       "to": "clearSharedReferences",
       "evidence": "Clears own static reference fields field_a. The reviewed body retains its original guard-dependent helper calls, recursion and scalar assignments without changing their behavior.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:uab.clearSharedReferences(I)V"
+      "renamedSymbol": "M:MouseInputUtilities.clearSharedReferences(I)V"
     },
     {
       "symbol": "M:ub.a(BLtv;)Z",
@@ -86889,7 +87073,7 @@
       "to": "clearSharedReferences",
       "evidence": "Clears own static reference fields field_c, field_d. The reviewed body retains its original guard-dependent helper calls, recursion and scalar assignments without changing their behavior.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:vhb.clearSharedReferences(I)V"
+      "renamedSymbol": "M:SocialTabResources.clearSharedReferences(I)V"
     },
     {
       "symbol": "M:vi.a(I)V",
@@ -87426,6 +87610,14 @@
       "evidence": "Factory contract creating an array with the requested length and concrete component state type. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:TrailHolderFactory.createArray(II)[LSerializableGameState;"
+    },
+    {
+      "symbol": "M:vna.b(B)I",
+      "originalName": "b",
+      "to": "getOutgoingLagMillis",
+      "evidence": "Full wrapper reviewed:return already named outgoingLagMillis after original guard arithmetic.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TrailHolderFactory.getOutgoingLagMillis(B)I"
     },
     {
       "symbol": "M:vnb.a(I)V",
@@ -88025,7 +88217,7 @@
       "to": "clearSharedReferences",
       "evidence": "Only clears own static reference fields field_a; complete body contains only null assignments, returns and simple guard/arithmetic statements. Original guards are preserved.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:vw.clearSharedReferences(B)V"
+      "renamedSymbol": "M:LobbyInviteControls.clearSharedReferences(B)V"
     },
     {
       "symbol": "M:vwa.a(I)V",
@@ -88972,12 +89164,28 @@
       "renamedSymbol": "M:AsteroidFactory.create(B)LSerializableGameState;"
     },
     {
+      "symbol": "M:wha.a(I)V",
+      "originalName": "a",
+      "to": "createQuickChatHelpWindow",
+      "evidence": "Full body reviewed:construct original QuickChatHelpWindow with retained templates and assign shared reference. Preserve wrong-guard armageddon warning mutation;do not add display/push behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AsteroidFactory.createQuickChatHelpWindow(I)V"
+    },
+    {
       "symbol": "M:wha.a(II)[Ltv;",
       "originalName": "a",
       "to": "createArray",
       "evidence": "Factory contract creating an array with the requested length and concrete component state type. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AsteroidFactory.createArray(II)[LSerializableGameState;"
+    },
+    {
+      "symbol": "M:wha.a(IZI)V",
+      "originalName": "a",
+      "to": "buildCanvasMenu",
+      "evidence": "Complete333-line class and whole builder reviewed:generate original labels/actions for modes0..5,layout clickable bounds and reset input selection. Preserve early flag setting,mode2 template placeholders,width calculations,exceptions and parameter-dependent selection.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AsteroidFactory.buildCanvasMenu(IZI)V"
     },
     {
       "symbol": "M:whb.a(BLtv;)Z",
@@ -89169,7 +89377,7 @@
       "to": "clearSharedReferences",
       "evidence": "Clears own static reference fields field_c. The reviewed body retains its original guard-dependent helper calls, recursion and scalar assignments without changing their behavior.",
       "confidence": "reviewed",
-      "renamedSymbol": "M:wja.clearSharedReferences(Z)V"
+      "renamedSymbol": "M:IncomingChatState.clearSharedReferences(Z)V"
     },
     {
       "symbol": "M:wjb.a(I)V",
@@ -103406,9 +103614,9 @@
     },
     {
       "symbol": "C:bia",
-      "renamedSymbol": "C:bia",
+      "renamedSymbol": "C:SoftwareRasterStateRestorer",
       "originalName": "bia",
-      "renamedName": "bia",
+      "renamedName": "SoftwareRasterStateRestorer",
       "declaration": {
         "file": "bia.java",
         "start": 44,
@@ -108730,9 +108938,9 @@
     },
     {
       "symbol": "C:iob",
-      "renamedSymbol": "C:iob",
+      "renamedSymbol": "C:SoftwareProjectionSettings",
       "originalName": "iob",
-      "renamedName": "iob",
+      "renamedName": "SoftwareProjectionSettings",
       "declaration": {
         "file": "iob.java",
         "start": 50,
@@ -114164,9 +114372,9 @@
     },
     {
       "symbol": "C:pl",
-      "renamedSymbol": "C:pl",
+      "renamedSymbol": "C:LoginMethodCatalog",
       "originalName": "pl",
-      "renamedName": "pl",
+      "renamedName": "LoginMethodCatalog",
       "declaration": {
         "file": "pl.java",
         "start": 50,
@@ -116760,9 +116968,9 @@
     },
     {
       "symbol": "C:tb",
-      "renamedSymbol": "C:tb",
+      "renamedSymbol": "C:SocialPanelState",
       "originalName": "tb",
-      "renamedName": "tb",
+      "renamedName": "SocialPanelState",
       "declaration": {
         "file": "tb.java",
         "start": 44,
@@ -117475,9 +117683,9 @@
     },
     {
       "symbol": "C:uab",
-      "renamedSymbol": "C:uab",
+      "renamedSymbol": "C:MouseInputUtilities",
       "originalName": "uab",
-      "renamedName": "uab",
+      "renamedName": "MouseInputUtilities",
       "declaration": {
         "file": "uab.java",
         "start": 50,
@@ -118432,9 +118640,9 @@
     },
     {
       "symbol": "C:vhb",
-      "renamedSymbol": "C:vhb",
+      "renamedSymbol": "C:SocialTabResources",
       "originalName": "vhb",
-      "renamedName": "vhb",
+      "renamedName": "SocialTabResources",
       "declaration": {
         "file": "vhb.java",
         "start": 44,
@@ -118872,9 +119080,9 @@
     },
     {
       "symbol": "C:vw",
-      "renamedSymbol": "C:vw",
+      "renamedSymbol": "C:LobbyInviteControls",
       "originalName": "vw",
-      "renamedName": "vw",
+      "renamedName": "LobbyInviteControls",
       "declaration": {
         "file": "vw.java",
         "start": 50,
@@ -119213,9 +119421,9 @@
     },
     {
       "symbol": "C:wja",
-      "renamedSymbol": "C:wja",
+      "renamedSymbol": "C:IncomingChatState",
       "originalName": "wja",
-      "renamedName": "wja",
+      "renamedName": "IncomingChatState",
       "declaration": {
         "file": "wja.java",
         "start": 50,
@@ -122843,7 +123051,7 @@
     },
     {
       "symbol": "F:bia.field_c:I",
-      "renamedSymbol": "F:bia.field_c:I",
+      "renamedSymbol": "F:SoftwareRasterStateRestorer.field_c:I",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -122854,7 +123062,7 @@
     },
     {
       "symbol": "F:bia.field_d:I",
-      "renamedSymbol": "F:bia.field_d:I",
+      "renamedSymbol": "F:SoftwareRasterStateRestorer.field_d:I",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -140729,7 +140937,7 @@
     },
     {
       "symbol": "F:iob.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:iob.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:SoftwareProjectionSettings.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -140740,9 +140948,9 @@
     },
     {
       "symbol": "F:iob.field_f:I",
-      "renamedSymbol": "F:iob.field_f:I",
+      "renamedSymbol": "F:SoftwareProjectionSettings.projectionFractionBits:I",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "projectionFractionBits",
       "declaration": {
         "file": "iob.java",
         "start": 83,
@@ -140751,7 +140959,7 @@
     },
     {
       "symbol": "F:iob.field_g:I",
-      "renamedSymbol": "F:iob.field_g:I",
+      "renamedSymbol": "F:SoftwareProjectionSettings.field_g:I",
       "originalName": "field_g",
       "renamedName": "field_g",
       "declaration": {
@@ -140762,7 +140970,7 @@
     },
     {
       "symbol": "F:iob.field_z:Ljava/lang/String;",
-      "renamedSymbol": "F:iob.field_z:Ljava/lang/String;",
+      "renamedSymbol": "F:SoftwareProjectionSettings.field_z:Ljava/lang/String;",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -141103,9 +141311,9 @@
     },
     {
       "symbol": "F:iv.field_o:I",
-      "renamedSymbol": "F:GetMassDriverAimspeed.field_o:I",
+      "renamedSymbol": "F:GetMassDriverAimspeed.canvasMenuMode:I",
       "originalName": "field_o",
-      "renamedName": "field_o",
+      "renamedName": "canvasMenuMode",
       "declaration": {
         "file": "iv.java",
         "start": 109,
@@ -146658,9 +146866,9 @@
     },
     {
       "symbol": "F:knb.field_o:Z",
-      "renamedSymbol": "F:SetAngularForceDownshift.field_o:Z",
+      "renamedSymbol": "F:SetAngularForceDownshift.menuInitializationStarted:Z",
       "originalName": "field_o",
-      "renamedName": "field_o",
+      "renamedName": "menuInitializationStarted",
       "declaration": {
         "file": "knb.java",
         "start": 168,
@@ -150574,9 +150782,9 @@
     },
     {
       "symbol": "F:mba.field_a:Lae;",
-      "renamedSymbol": "F:ReferenceTrackingControl.field_a:LMenuInputState;",
+      "renamedSymbol": "F:ReferenceTrackingControl.menuInputState:LMenuInputState;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "menuInputState",
       "declaration": {
         "file": "mba.java",
         "start": 70,
@@ -162751,7 +162959,7 @@
     },
     {
       "symbol": "F:pl.field_e:Ljava/lang/String;",
-      "renamedSymbol": "F:pl.field_e:Ljava/lang/String;",
+      "renamedSymbol": "F:LoginMethodCatalog.field_e:Ljava/lang/String;",
       "originalName": "field_e",
       "renamedName": "field_e",
       "declaration": {
@@ -173586,9 +173794,9 @@
     },
     {
       "symbol": "F:tb.field_a:Lllb;",
-      "renamedSymbol": "F:tb.field_a:LWidget;",
+      "renamedSymbol": "F:SocialPanelState.socialPanelRoot:LWidget;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "socialPanelRoot",
       "declaration": {
         "file": "tb.java",
         "start": 64,
@@ -173597,9 +173805,9 @@
     },
     {
       "symbol": "F:tb.field_b:I",
-      "renamedSymbol": "F:tb.field_b:I",
+      "renamedSymbol": "F:SocialPanelState.chatPanelProgress:I",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "chatPanelProgress",
       "declaration": {
         "file": "tb.java",
         "start": 88,
@@ -173608,7 +173816,7 @@
     },
     {
       "symbol": "F:tb.field_z:Ljava/lang/String;",
-      "renamedSymbol": "F:tb.field_z:Ljava/lang/String;",
+      "renamedSymbol": "F:SocialPanelState.field_z:Ljava/lang/String;",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -176160,7 +176368,7 @@
     },
     {
       "symbol": "F:uab.field_a:Ljava/lang/String;",
-      "renamedSymbol": "F:uab.field_a:Ljava/lang/String;",
+      "renamedSymbol": "F:MouseInputUtilities.field_a:Ljava/lang/String;",
       "originalName": "field_a",
       "renamedName": "field_a",
       "declaration": {
@@ -176171,7 +176379,7 @@
     },
     {
       "symbol": "F:uab.field_b:I",
-      "renamedSymbol": "F:uab.field_b:I",
+      "renamedSymbol": "F:MouseInputUtilities.field_b:I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -179757,9 +179965,9 @@
     },
     {
       "symbol": "F:vhb.field_c:Lllb;",
-      "renamedSymbol": "F:vhb.field_c:LWidget;",
+      "renamedSymbol": "F:SocialTabResources.tabTemplate:LWidget;",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "tabTemplate",
       "declaration": {
         "file": "vhb.java",
         "start": 76,
@@ -179768,7 +179976,7 @@
     },
     {
       "symbol": "F:vhb.field_d:Lbc;",
-      "renamedSymbol": "F:vhb.field_d:LNineSliceSprite;",
+      "renamedSymbol": "F:SocialTabResources.field_d:LNineSliceSprite;",
       "originalName": "field_d",
       "renamedName": "field_d",
       "declaration": {
@@ -179779,7 +179987,7 @@
     },
     {
       "symbol": "F:vhb.field_z:Ljava/lang/String;",
-      "renamedSymbol": "F:vhb.field_z:Ljava/lang/String;",
+      "renamedSymbol": "F:SocialTabResources.field_z:Ljava/lang/String;",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -181374,9 +181582,9 @@
     },
     {
       "symbol": "F:vw.field_a:Lllb;",
-      "renamedSymbol": "F:vw.field_a:LWidget;",
+      "renamedSymbol": "F:LobbyInviteControls.inviteButton:LWidget;",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "inviteButton",
       "declaration": {
         "file": "vw.java",
         "start": 70,
@@ -181385,7 +181593,7 @@
     },
     {
       "symbol": "F:vw.field_z:Ljava/lang/String;",
-      "renamedSymbol": "F:vw.field_z:Ljava/lang/String;",
+      "renamedSymbol": "F:LobbyInviteControls.field_z:Ljava/lang/String;",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -182661,9 +182869,9 @@
     },
     {
       "symbol": "F:wja.field_a:I",
-      "renamedSymbol": "F:wja.field_a:I",
+      "renamedSymbol": "F:IncomingChatState.channelType:I",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "channelType",
       "declaration": {
         "file": "wja.java",
         "start": 95,
@@ -182672,7 +182880,7 @@
     },
     {
       "symbol": "F:wja.field_b:I",
-      "renamedSymbol": "F:wja.field_b:I",
+      "renamedSymbol": "F:IncomingChatState.field_b:I",
       "originalName": "field_b",
       "renamedName": "field_b",
       "declaration": {
@@ -182683,7 +182891,7 @@
     },
     {
       "symbol": "F:wja.field_c:[Ljava/lang/String;",
-      "renamedSymbol": "F:wja.field_c:[Ljava/lang/String;",
+      "renamedSymbol": "F:IncomingChatState.field_c:[Ljava/lang/String;",
       "originalName": "field_c",
       "renamedName": "field_c",
       "declaration": {
@@ -182694,7 +182902,7 @@
     },
     {
       "symbol": "F:wja.field_z:Ljava/lang/String;",
-      "renamedSymbol": "F:wja.field_z:Ljava/lang/String;",
+      "renamedSymbol": "F:IncomingChatState.field_z:Ljava/lang/String;",
       "originalName": "field_z",
       "renamedName": "field_z",
       "declaration": {
@@ -230797,7 +231005,7 @@
     },
     {
       "symbol": "L:bia.a(B)V#0",
-      "renamedSymbol": "L:bia.popRasterState(B)V#0",
+      "renamedSymbol": "L:SoftwareRasterStateRestorer.popRasterState(B)V#0",
       "originalName": "var1_ref",
       "renamedName": "var1_ref",
       "declaration": {
@@ -230808,7 +231016,7 @@
     },
     {
       "symbol": "L:bia.a(B)V#1",
-      "renamedSymbol": "L:bia.popRasterState(B)V#1",
+      "renamedSymbol": "L:SoftwareRasterStateRestorer.popRasterState(B)V#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -230819,7 +231027,7 @@
     },
     {
       "symbol": "L:bia.a(B)V#2",
-      "renamedSymbol": "L:bia.popRasterState(B)V#2",
+      "renamedSymbol": "L:SoftwareRasterStateRestorer.popRasterState(B)V#2",
       "originalName": "var1_refLifetime1",
       "renamedName": "var1_refLifetime1",
       "declaration": {
@@ -317708,7 +317916,7 @@
     },
     {
       "symbol": "L:gva.a(B)V#0",
-      "renamedSymbol": "L:ConsoleEvaluationException.a(B)V#0",
+      "renamedSymbol": "L:ConsoleEvaluationException.rebuildInitializedCanvasMenu(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -498328,7 +498536,7 @@
     },
     {
       "symbol": "L:pl.b(B)V#0",
-      "renamedSymbol": "L:pl.clearSharedReferences(B)V#0",
+      "renamedSymbol": "L:LoginMethodCatalog.clearSharedReferences(B)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -588176,7 +588384,7 @@
     },
     {
       "symbol": "L:uab.a(BLjava/awt/Component;)V#0",
-      "renamedSymbol": "L:uab.detachMouseListeners(BLjava/awt/Component;)V#0",
+      "renamedSymbol": "L:MouseInputUtilities.detachMouseListeners(BLjava/awt/Component;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -631274,7 +631482,7 @@
     },
     {
       "symbol": "L:vna.b(B)I#0",
-      "renamedSymbol": "L:TrailHolderFactory.b(B)I#0",
+      "renamedSymbol": "L:TrailHolderFactory.getOutgoingLagMillis(B)I#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -647059,7 +647267,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#0",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#0",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#0",
       "originalName": "stackIn_49_0",
       "renamedName": "stackIn_49_0",
       "declaration": {
@@ -647070,7 +647278,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#1",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#1",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#1",
       "originalName": "stackIn_52_0",
       "renamedName": "stackIn_52_0",
       "declaration": {
@@ -647081,7 +647289,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#10",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#10",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#10",
       "originalName": "stackIn_87_0",
       "renamedName": "stackIn_87_0",
       "declaration": {
@@ -647092,7 +647300,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#11",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#11",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#11",
       "originalName": "stackIn_88_1",
       "renamedName": "stackIn_88_1",
       "declaration": {
@@ -647103,7 +647311,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#12",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#12",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#12",
       "originalName": "stackIn_111_0",
       "renamedName": "stackIn_111_0",
       "declaration": {
@@ -647114,7 +647322,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#13",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#13",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#13",
       "originalName": "stackIn_112_1",
       "renamedName": "stackIn_112_1",
       "declaration": {
@@ -647125,7 +647333,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#14",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#14",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#14",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -647136,7 +647344,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#15",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#15",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#15",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -647147,7 +647355,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#16",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#16",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#16",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -647158,7 +647366,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#17",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#17",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#17",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -647169,7 +647377,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#18",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#18",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#18",
       "originalName": "var4_ref_String__",
       "renamedName": "var4_ref_String__",
       "declaration": {
@@ -647180,7 +647388,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#19",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#19",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#19",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -647191,7 +647399,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#2",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#2",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#2",
       "originalName": "stackIn_59_0",
       "renamedName": "stackIn_59_0",
       "declaration": {
@@ -647202,7 +647410,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#20",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#20",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#20",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -647213,7 +647421,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#21",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#21",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#21",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -647224,7 +647432,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#22",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#22",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#22",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -647235,7 +647443,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#23",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#23",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#23",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -647246,7 +647454,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#24",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#24",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#24",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -647257,7 +647465,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#25",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#25",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#25",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -647268,7 +647476,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#26",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#26",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#26",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -647279,7 +647487,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#27",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#27",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#27",
       "originalName": "var4_ref_String__Lifetime1",
       "renamedName": "var4_ref_String__Lifetime1",
       "declaration": {
@@ -647290,7 +647498,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#28",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#28",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#28",
       "originalName": "var5Lifetime1",
       "renamedName": "var5Lifetime1",
       "declaration": {
@@ -647301,7 +647509,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#29",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#29",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#29",
       "originalName": "var5Lifetime2",
       "renamedName": "var5Lifetime2",
       "declaration": {
@@ -647312,7 +647520,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#3",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#3",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#3",
       "originalName": "stackIn_59_1",
       "renamedName": "stackIn_59_1",
       "declaration": {
@@ -647323,7 +647531,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#30",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#30",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#30",
       "originalName": "var5Lifetime3",
       "renamedName": "var5Lifetime3",
       "declaration": {
@@ -647334,7 +647542,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#31",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#31",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#31",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -647345,7 +647553,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#32",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#32",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#32",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -647356,7 +647564,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#33",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#33",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#33",
       "originalName": "var3_intLifetime1",
       "renamedName": "var3_intLifetime1",
       "declaration": {
@@ -647367,7 +647575,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#34",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#34",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#34",
       "originalName": "var4Lifetime1",
       "renamedName": "var4Lifetime1",
       "declaration": {
@@ -647378,7 +647586,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#35",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#35",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#35",
       "originalName": "var4Lifetime2",
       "renamedName": "var4Lifetime2",
       "declaration": {
@@ -647389,7 +647597,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#36",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#36",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#36",
       "originalName": "var4Lifetime3",
       "renamedName": "var4Lifetime3",
       "declaration": {
@@ -647400,7 +647608,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#37",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#37",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#37",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -647411,7 +647619,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#38",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#38",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#38",
       "originalName": "var7Lifetime2",
       "renamedName": "var7Lifetime2",
       "declaration": {
@@ -647422,7 +647630,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#39",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#39",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#39",
       "originalName": "var8Lifetime2",
       "renamedName": "var8Lifetime2",
       "declaration": {
@@ -647433,7 +647641,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#4",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#4",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#4",
       "originalName": "stackIn_60_2",
       "renamedName": "stackIn_60_2",
       "declaration": {
@@ -647444,7 +647652,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#40",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#40",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#40",
       "originalName": "var8Lifetime3",
       "renamedName": "var8Lifetime3",
       "declaration": {
@@ -647455,7 +647663,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#41",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#41",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#41",
       "originalName": "var5Lifetime2Lifetime1",
       "renamedName": "var5Lifetime2Lifetime1",
       "declaration": {
@@ -647466,7 +647674,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#42",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#42",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#42",
       "originalName": "var7Lifetime1Lifetime1",
       "renamedName": "var7Lifetime1Lifetime1",
       "declaration": {
@@ -647477,7 +647685,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#43",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#43",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#43",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -647488,7 +647696,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#5",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#5",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#5",
       "originalName": "stackIn_64_0",
       "renamedName": "stackIn_64_0",
       "declaration": {
@@ -647499,7 +647707,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#6",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#6",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#6",
       "originalName": "stackIn_64_1",
       "renamedName": "stackIn_64_1",
       "declaration": {
@@ -647510,7 +647718,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#7",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#7",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#7",
       "originalName": "stackIn_64_2",
       "renamedName": "stackIn_64_2",
       "declaration": {
@@ -647521,7 +647729,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#8",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#8",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#8",
       "originalName": "stackIn_64_3",
       "renamedName": "stackIn_64_3",
       "declaration": {
@@ -647532,7 +647740,7 @@
     },
     {
       "symbol": "L:wha.a(IZI)V#9",
-      "renamedSymbol": "L:AsteroidFactory.a(IZI)V#9",
+      "renamedSymbol": "L:AsteroidFactory.buildCanvasMenu(IZI)V#9",
       "originalName": "stackIn_67_2",
       "renamedName": "stackIn_67_2",
       "declaration": {
@@ -665088,9 +665296,9 @@
     },
     {
       "symbol": "M:bia.<init>()V",
-      "renamedSymbol": "M:bia.<init>()V",
+      "renamedSymbol": "M:SoftwareRasterStateRestorer.<init>()V",
       "originalName": "bia",
-      "renamedName": "bia",
+      "renamedName": "SoftwareRasterStateRestorer",
       "declaration": {
         "file": "bia.java",
         "start": 114,
@@ -665099,7 +665307,7 @@
     },
     {
       "symbol": "M:bia.a(B)V",
-      "renamedSymbol": "M:bia.popRasterState(B)V",
+      "renamedSymbol": "M:SoftwareRasterStateRestorer.popRasterState(B)V",
       "originalName": "a",
       "renamedName": "popRasterState",
       "declaration": {
@@ -665110,7 +665318,7 @@
     },
     {
       "symbol": "M:bia.a(Z)Lqkb;",
-      "renamedSymbol": "M:bia.getPcmStreamMixer(Z)LPcmStreamMixer;",
+      "renamedSymbol": "M:SoftwareRasterStateRestorer.getPcmStreamMixer(Z)LPcmStreamMixer;",
       "originalName": "a",
       "renamedName": "getPcmStreamMixer",
       "declaration": {
@@ -665121,7 +665329,7 @@
     },
     {
       "symbol": "M:bia.a(ZBI)Z",
-      "renamedSymbol": "M:bia.isVoteOptionAvailable(ZBI)Z",
+      "renamedSymbol": "M:SoftwareRasterStateRestorer.isVoteOptionAvailable(ZBI)Z",
       "originalName": "a",
       "renamedName": "isVoteOptionAvailable",
       "declaration": {
@@ -685372,9 +685580,9 @@
     },
     {
       "symbol": "M:gva.a(B)V",
-      "renamedSymbol": "M:ConsoleEvaluationException.a(B)V",
+      "renamedSymbol": "M:ConsoleEvaluationException.rebuildInitializedCanvasMenu(B)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "rebuildInitializedCanvasMenu",
       "declaration": {
         "file": "gva.java",
         "start": 266,
@@ -692907,7 +693115,7 @@
     },
     {
       "symbol": "M:iob.c(I)V",
-      "renamedSymbol": "M:iob.clearSharedReferences(I)V",
+      "renamedSymbol": "M:SoftwareProjectionSettings.clearSharedReferences(I)V",
       "originalName": "c",
       "renamedName": "clearSharedReferences",
       "declaration": {
@@ -709957,9 +710165,9 @@
     },
     {
       "symbol": "M:lsb.a(Z)V",
-      "renamedSymbol": "M:HardpointDefinition.a(Z)V",
+      "renamedSymbol": "M:HardpointDefinition.closeChatInputDialog(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "closeChatInputDialog",
       "declaration": {
         "file": "lsb.java",
         "start": 130,
@@ -715281,9 +715489,9 @@
     },
     {
       "symbol": "M:mra.e(B)D",
-      "renamedSymbol": "M:SetMaxShipSize.e(B)D",
+      "renamedSymbol": "M:SetMaxShipSize.getIncomingLagStdDevMillis(B)D",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "getIncomingLagStdDevMillis",
       "declaration": {
         "file": "mra.java",
         "start": 1827,
@@ -721386,9 +721594,9 @@
     },
     {
       "symbol": "M:oaa.a(B)Z",
-      "renamedSymbol": "M:OpenGlVertexBufferObject.a(B)Z",
+      "renamedSymbol": "M:OpenGlVertexBufferObject.isNameEntryDialogOpen(B)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isNameEntryDialogOpen",
       "declaration": {
         "file": "oaa.java",
         "start": 729,
@@ -730417,7 +730625,7 @@
     },
     {
       "symbol": "M:pl.b(B)V",
-      "renamedSymbol": "M:pl.clearSharedReferences(B)V",
+      "renamedSymbol": "M:LoginMethodCatalog.clearSharedReferences(B)V",
       "originalName": "b",
       "renamedName": "clearSharedReferences",
       "declaration": {
@@ -730428,7 +730636,7 @@
     },
     {
       "symbol": "M:pl.c(B)[Lkhb;",
-      "renamedSymbol": "M:pl.getLoginMethods(B)[LLoginMethod;",
+      "renamedSymbol": "M:LoginMethodCatalog.getLoginMethods(B)[LLoginMethod;",
       "originalName": "c",
       "renamedName": "getLoginMethods",
       "declaration": {
@@ -739404,9 +739612,9 @@
     },
     {
       "symbol": "M:rma.a(IB)V",
-      "renamedSymbol": "M:MachineGunWeaponDefinition.a(IB)V",
+      "renamedSymbol": "M:MachineGunWeaponDefinition.sendNumericDebugRequest(IB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "sendNumericDebugRequest",
       "declaration": {
         "file": "rma.java",
         "start": 163,
@@ -746719,7 +746927,7 @@
     },
     {
       "symbol": "M:tb.a(I)V",
-      "renamedSymbol": "M:tb.clearSharedReferences(I)V",
+      "renamedSymbol": "M:SocialPanelState.clearSharedReferences(I)V",
       "originalName": "a",
       "renamedName": "clearSharedReferences",
       "declaration": {
@@ -750789,9 +750997,9 @@
     },
     {
       "symbol": "M:uab.a(B)Z",
-      "renamedSymbol": "M:uab.a(B)Z",
+      "renamedSymbol": "M:MouseInputUtilities.hasMenuInitializationStarted(B)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "hasMenuInitializationStarted",
       "declaration": {
         "file": "uab.java",
         "start": 309,
@@ -750800,7 +751008,7 @@
     },
     {
       "symbol": "M:uab.a(BLjava/awt/Component;)V",
-      "renamedSymbol": "M:uab.detachMouseListeners(BLjava/awt/Component;)V",
+      "renamedSymbol": "M:MouseInputUtilities.detachMouseListeners(BLjava/awt/Component;)V",
       "originalName": "a",
       "renamedName": "detachMouseListeners",
       "declaration": {
@@ -750811,7 +751019,7 @@
     },
     {
       "symbol": "M:uab.a(I)V",
-      "renamedSymbol": "M:uab.clearSharedReferences(I)V",
+      "renamedSymbol": "M:MouseInputUtilities.clearSharedReferences(I)V",
       "originalName": "a",
       "renamedName": "clearSharedReferences",
       "declaration": {
@@ -757136,9 +757344,9 @@
     },
     {
       "symbol": "M:vhb.<init>()V",
-      "renamedSymbol": "M:vhb.<init>()V",
+      "renamedSymbol": "M:SocialTabResources.<init>()V",
       "originalName": "vhb",
-      "renamedName": "vhb",
+      "renamedName": "SocialTabResources",
       "declaration": {
         "file": "vhb.java",
         "start": 148,
@@ -757147,7 +757355,7 @@
     },
     {
       "symbol": "M:vhb.b(I)V",
-      "renamedSymbol": "M:vhb.clearSharedReferences(I)V",
+      "renamedSymbol": "M:SocialTabResources.clearSharedReferences(I)V",
       "originalName": "b",
       "renamedName": "clearSharedReferences",
       "declaration": {
@@ -758060,9 +758268,9 @@
     },
     {
       "symbol": "M:vna.b(B)I",
-      "renamedSymbol": "M:TrailHolderFactory.b(B)I",
+      "renamedSymbol": "M:TrailHolderFactory.getOutgoingLagMillis(B)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "getOutgoingLagMillis",
       "declaration": {
         "file": "vna.java",
         "start": 92,
@@ -759248,7 +759456,7 @@
     },
     {
       "symbol": "M:vw.a(B)V",
-      "renamedSymbol": "M:vw.clearSharedReferences(B)V",
+      "renamedSymbol": "M:LobbyInviteControls.clearSharedReferences(B)V",
       "originalName": "a",
       "renamedName": "clearSharedReferences",
       "declaration": {
@@ -760953,9 +761161,9 @@
     },
     {
       "symbol": "M:wha.a(I)V",
-      "renamedSymbol": "M:AsteroidFactory.a(I)V",
+      "renamedSymbol": "M:AsteroidFactory.createQuickChatHelpWindow(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "createQuickChatHelpWindow",
       "declaration": {
         "file": "wha.java",
         "start": 296,
@@ -760975,9 +761183,9 @@
     },
     {
       "symbol": "M:wha.a(IZI)V",
-      "renamedSymbol": "M:AsteroidFactory.a(IZI)V",
+      "renamedSymbol": "M:AsteroidFactory.buildCanvasMenu(IZI)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "buildCanvasMenu",
       "declaration": {
         "file": "wha.java",
         "start": 511,
@@ -761492,7 +761700,7 @@
     },
     {
       "symbol": "M:wja.a(Z)V",
-      "renamedSymbol": "M:wja.clearSharedReferences(Z)V",
+      "renamedSymbol": "M:IncomingChatState.clearSharedReferences(Z)V",
       "originalName": "a",
       "renamedName": "clearSharedReferences",
       "declaration": {
@@ -780654,7 +780862,7 @@
     },
     {
       "symbol": "P:bia.a(B)V#0",
-      "renamedSymbol": "P:bia.popRasterState(B)V#0",
+      "renamedSymbol": "P:SoftwareRasterStateRestorer.popRasterState(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -780665,7 +780873,7 @@
     },
     {
       "symbol": "P:bia.a(Z)Lqkb;#0",
-      "renamedSymbol": "P:bia.getPcmStreamMixer(Z)LPcmStreamMixer;#0",
+      "renamedSymbol": "P:SoftwareRasterStateRestorer.getPcmStreamMixer(Z)LPcmStreamMixer;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -780676,7 +780884,7 @@
     },
     {
       "symbol": "P:bia.a(ZBI)Z#0",
-      "renamedSymbol": "P:bia.isVoteOptionAvailable(ZBI)Z#0",
+      "renamedSymbol": "P:SoftwareRasterStateRestorer.isVoteOptionAvailable(ZBI)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -780687,7 +780895,7 @@
     },
     {
       "symbol": "P:bia.a(ZBI)Z#1",
-      "renamedSymbol": "P:bia.isVoteOptionAvailable(ZBI)Z#1",
+      "renamedSymbol": "P:SoftwareRasterStateRestorer.isVoteOptionAvailable(ZBI)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -780698,7 +780906,7 @@
     },
     {
       "symbol": "P:bia.a(ZBI)Z#2",
-      "renamedSymbol": "P:bia.isVoteOptionAvailable(ZBI)Z#2",
+      "renamedSymbol": "P:SoftwareRasterStateRestorer.isVoteOptionAvailable(ZBI)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -828889,7 +829097,7 @@
     },
     {
       "symbol": "P:gva.a(B)V#0",
-      "renamedSymbol": "P:ConsoleEvaluationException.a(B)V#0",
+      "renamedSymbol": "P:ConsoleEvaluationException.rebuildInitializedCanvasMenu(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -846181,7 +846389,7 @@
     },
     {
       "symbol": "P:iob.c(I)V#0",
-      "renamedSymbol": "P:iob.clearSharedReferences(I)V#0",
+      "renamedSymbol": "P:SoftwareProjectionSettings.clearSharedReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -886980,7 +887188,7 @@
     },
     {
       "symbol": "P:lsb.a(Z)V#0",
-      "renamedSymbol": "P:HardpointDefinition.a(Z)V#0",
+      "renamedSymbol": "P:HardpointDefinition.closeChatInputDialog(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -898893,7 +899101,7 @@
     },
     {
       "symbol": "P:mra.e(B)D#0",
-      "renamedSymbol": "P:SetMaxShipSize.e(B)D#0",
+      "renamedSymbol": "P:SetMaxShipSize.getIncomingLagStdDevMillis(B)D#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -913556,7 +913764,7 @@
     },
     {
       "symbol": "P:oaa.a(B)Z#0",
-      "renamedSymbol": "P:OpenGlVertexBufferObject.a(B)Z#0",
+      "renamedSymbol": "P:OpenGlVertexBufferObject.isNameEntryDialogOpen(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -936931,7 +937139,7 @@
     },
     {
       "symbol": "P:pl.b(B)V#0",
-      "renamedSymbol": "P:pl.clearSharedReferences(B)V#0",
+      "renamedSymbol": "P:LoginMethodCatalog.clearSharedReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -936942,7 +937150,7 @@
     },
     {
       "symbol": "P:pl.c(B)[Lkhb;#0",
-      "renamedSymbol": "P:pl.getLoginMethods(B)[LLoginMethod;#0",
+      "renamedSymbol": "P:LoginMethodCatalog.getLoginMethods(B)[LLoginMethod;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -955565,7 +955773,7 @@
     },
     {
       "symbol": "P:rma.a(IB)V#0",
-      "renamedSymbol": "P:MachineGunWeaponDefinition.a(IB)V#0",
+      "renamedSymbol": "P:MachineGunWeaponDefinition.sendNumericDebugRequest(IB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -955576,7 +955784,7 @@
     },
     {
       "symbol": "P:rma.a(IB)V#1",
-      "renamedSymbol": "P:MachineGunWeaponDefinition.a(IB)V#1",
+      "renamedSymbol": "P:MachineGunWeaponDefinition.sendNumericDebugRequest(IB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -972351,7 +972559,7 @@
     },
     {
       "symbol": "P:tb.a(I)V#0",
-      "renamedSymbol": "P:tb.clearSharedReferences(I)V#0",
+      "renamedSymbol": "P:SocialPanelState.clearSharedReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -981327,7 +981535,7 @@
     },
     {
       "symbol": "P:uab.a(B)Z#0",
-      "renamedSymbol": "P:uab.a(B)Z#0",
+      "renamedSymbol": "P:MouseInputUtilities.hasMenuInitializationStarted(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -981338,7 +981546,7 @@
     },
     {
       "symbol": "P:uab.a(BLjava/awt/Component;)V#0",
-      "renamedSymbol": "P:uab.detachMouseListeners(BLjava/awt/Component;)V#0",
+      "renamedSymbol": "P:MouseInputUtilities.detachMouseListeners(BLjava/awt/Component;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -981349,7 +981557,7 @@
     },
     {
       "symbol": "P:uab.a(BLjava/awt/Component;)V#1",
-      "renamedSymbol": "P:uab.detachMouseListeners(BLjava/awt/Component;)V#1",
+      "renamedSymbol": "P:MouseInputUtilities.detachMouseListeners(BLjava/awt/Component;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -981360,7 +981568,7 @@
     },
     {
       "symbol": "P:uab.a(I)V#0",
-      "renamedSymbol": "P:uab.clearSharedReferences(I)V#0",
+      "renamedSymbol": "P:MouseInputUtilities.clearSharedReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -996716,7 +996924,7 @@
     },
     {
       "symbol": "P:vhb.b(I)V#0",
-      "renamedSymbol": "P:vhb.clearSharedReferences(I)V#0",
+      "renamedSymbol": "P:SocialTabResources.clearSharedReferences(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -998311,7 +998519,7 @@
     },
     {
       "symbol": "P:vna.b(B)I#0",
-      "renamedSymbol": "P:TrailHolderFactory.b(B)I#0",
+      "renamedSymbol": "P:TrailHolderFactory.getOutgoingLagMillis(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -1001050,7 +1001258,7 @@
     },
     {
       "symbol": "P:vw.a(B)V#0",
-      "renamedSymbol": "P:vw.clearSharedReferences(B)V#0",
+      "renamedSymbol": "P:LobbyInviteControls.clearSharedReferences(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -1004757,7 +1004965,7 @@
     },
     {
       "symbol": "P:wha.a(I)V#0",
-      "renamedSymbol": "P:AsteroidFactory.a(I)V#0",
+      "renamedSymbol": "P:AsteroidFactory.createQuickChatHelpWindow(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -1004790,7 +1004998,7 @@
     },
     {
       "symbol": "P:wha.a(IZI)V#0",
-      "renamedSymbol": "P:AsteroidFactory.a(IZI)V#0",
+      "renamedSymbol": "P:AsteroidFactory.buildCanvasMenu(IZI)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -1004801,7 +1005009,7 @@
     },
     {
       "symbol": "P:wha.a(IZI)V#1",
-      "renamedSymbol": "P:AsteroidFactory.a(IZI)V#1",
+      "renamedSymbol": "P:AsteroidFactory.buildCanvasMenu(IZI)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -1004812,7 +1005020,7 @@
     },
     {
       "symbol": "P:wha.a(IZI)V#2",
-      "renamedSymbol": "P:AsteroidFactory.a(IZI)V#2",
+      "renamedSymbol": "P:AsteroidFactory.buildCanvasMenu(IZI)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -1005428,7 +1005636,7 @@
     },
     {
       "symbol": "P:wja.a(Z)V#0",
-      "renamedSymbol": "P:wja.clearSharedReferences(Z)V#0",
+      "renamedSymbol": "P:IncomingChatState.clearSharedReferences(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -1009931,7 +1010139,7 @@
       "original": "VoidHunters.java",
       "renamed": "VoidHunters.java",
       "inputSha256": "69cc4b9b8186f4765c6d34781d7b497712847d6d0020d8b54c038b1e406427f1",
-      "outputSha256": "3c0110dc9630472bd7ad480de085389e6178b99b5847615dedeb7c4bebe11bf9",
+      "outputSha256": "9c1bfd5b55ace912deabec75833bc21faeb44a7b8c57d6728de0242090ab3b37",
       "edits": [
         {
           "start": 77,
@@ -1010641,6 +1010849,13 @@
           "renamed": "HardpointDefinition"
         },
         {
+          "start": 7327,
+          "end": 7328,
+          "symbol": "M:lsb.a(Z)V",
+          "original": "a",
+          "renamed": "closeChatInputDialog"
+        },
+        {
           "start": 7537,
           "end": 7540,
           "symbol": "C:nkb",
@@ -1010744,6 +1010959,13 @@
           "symbol": "C:lsb",
           "original": "lsb",
           "renamed": "HardpointDefinition"
+        },
+        {
+          "start": 7948,
+          "end": 7949,
+          "symbol": "M:lsb.a(Z)V",
+          "original": "a",
+          "renamed": "closeChatInputDialog"
         },
         {
           "start": 7983,
@@ -1010954,6 +1011176,13 @@
           "symbol": "C:lsb",
           "original": "lsb",
           "renamed": "HardpointDefinition"
+        },
+        {
+          "start": 9152,
+          "end": 9153,
+          "symbol": "M:lsb.a(Z)V",
+          "original": "a",
+          "renamed": "closeChatInputDialog"
         },
         {
           "start": 9191,
@@ -1011640,6 +1011869,13 @@
           "symbol": "C:gva",
           "original": "gva",
           "renamed": "ConsoleEvaluationException"
+        },
+        {
+          "start": 13709,
+          "end": 13710,
+          "symbol": "M:gva.a(B)V",
+          "original": "a",
+          "renamed": "rebuildInitializedCanvasMenu"
         },
         {
           "start": 13758,
@@ -1012627,6 +1012863,13 @@
           "symbol": "C:lsb",
           "original": "lsb",
           "renamed": "HardpointDefinition"
+        },
+        {
+          "start": 18216,
+          "end": 18217,
+          "symbol": "M:lsb.a(Z)V",
+          "original": "a",
+          "renamed": "closeChatInputDialog"
         },
         {
           "start": 18255,
@@ -1014498,6 +1014741,13 @@
           "symbol": "M:kmb.a(I)V",
           "original": "a",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 28828,
+          "end": 28831,
+          "symbol": "C:wja",
+          "original": "wja",
+          "renamed": "IncomingChatState"
         },
         {
           "start": 28832,
@@ -1016383,6 +1016633,13 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 31926,
+          "end": 31928,
+          "symbol": "C:vw",
+          "original": "vw",
+          "renamed": "LobbyInviteControls"
+        },
+        {
           "start": 31929,
           "end": 31930,
           "symbol": "M:vw.a(B)V",
@@ -1017284,6 +1017541,13 @@
           "symbol": "M:gqb.a(I)V",
           "original": "a",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 33365,
+          "end": 33368,
+          "symbol": "C:uab",
+          "original": "uab",
+          "renamed": "MouseInputUtilities"
         },
         {
           "start": 33369,
@@ -1019743,11 +1020007,25 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 37393,
+          "end": 37395,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
           "start": 37396,
           "end": 37397,
           "symbol": "M:tb.a(I)V",
           "original": "a",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 37412,
+          "end": 37414,
+          "symbol": "C:pl",
+          "original": "pl",
+          "renamed": "LoginMethodCatalog"
         },
         {
           "start": 37415,
@@ -1019771,11 +1020049,25 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 37464,
+          "end": 37467,
+          "symbol": "C:iob",
+          "original": "iob",
+          "renamed": "SoftwareProjectionSettings"
+        },
+        {
           "start": 37468,
           "end": 37469,
           "symbol": "M:iob.c(I)V",
           "original": "c",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 37486,
+          "end": 37489,
+          "symbol": "C:vhb",
+          "original": "vhb",
+          "renamed": "SocialTabResources"
         },
         {
           "start": 37490,
@@ -1040602,7 +1040894,7 @@
       "original": "ah.java",
       "renamed": "SetReadyRoomMutatorTime.java",
       "inputSha256": "108913c1a578a9c321c0da1ec8b24559b68f6bb2ca5e9809b0c1df487c29016c",
-      "outputSha256": "d25d2826ee4633c712bad9ae315f43f2f18016c2a7bcbe1344a01ea52f6c115e",
+      "outputSha256": "6b5a748d31538fa888c80c6e8f8cf6eda81c3d6ecf48a61dbd107dffe88448f5",
       "edits": [
         {
           "start": 50,
@@ -1041051,6 +1041343,13 @@
           "symbol": "C:wha",
           "original": "wha",
           "renamed": "AsteroidFactory"
+        },
+        {
+          "start": 3605,
+          "end": 3606,
+          "symbol": "M:wha.a(IZI)V",
+          "original": "a",
+          "renamed": "buildCanvasMenu"
         }
       ]
     },
@@ -1043036,7 +1043335,7 @@
       "original": "aib.java",
       "renamed": "AsteroidField.java",
       "inputSha256": "af391265e3d1a3ba3cfe402208328b0b7f61cbd852cb21191b5b2d4dc85f76c7",
-      "outputSha256": "81a916e43ab285aac25d5ba7f1c802458f34d1ca68aa260d634dda1b1ed4c7ad",
+      "outputSha256": "41917b58851e999a1659124e0c4fdbf7037efcc613c19f40a86188118e74ffc7",
       "edits": [
         {
           "start": 50,
@@ -1047818,6 +1048117,13 @@
           "symbol": "M:dqb.a(BLjava/lang/String;)[B",
           "original": "a",
           "renamed": "fetchLocalizedResource"
+        },
+        {
+          "start": 42169,
+          "end": 42172,
+          "symbol": "C:iob",
+          "original": "iob",
+          "renamed": "SoftwareProjectionSettings"
         },
         {
           "start": 42183,
@@ -1057772,7 +1058078,7 @@
       "original": "ala.java",
       "renamed": "GetLagOut.java",
       "inputSha256": "74ff0f2aaf8d35e1efe3b61a35b4cdb2350c9210a08d81108f1d865293d6caf1",
-      "outputSha256": "a9ce8d0740333ddede7d8d2f902ff4c2d9501c8bc94483c2734e374f51212f3c",
+      "outputSha256": "f466386152390385a7898d7a49bfcf7fe7d5e50898c758b76e9adc67585acba9",
       "edits": [
         {
           "start": 50,
@@ -1057878,6 +1058184,13 @@
           "symbol": "C:vna",
           "original": "vna",
           "renamed": "TrailHolderFactory"
+        },
+        {
+          "start": 716,
+          "end": 717,
+          "symbol": "M:vna.b(B)I",
+          "original": "b",
+          "renamed": "getOutgoingLagMillis"
         },
         {
           "start": 800,
@@ -1088690,7 +1089003,7 @@
       "original": "bd.java",
       "renamed": "LobbyThemeBuilder.java",
       "inputSha256": "a510aac308bd18c5052543c4b1d2691f224d0d5014d5edfde6a66cb8fddd18fe",
-      "outputSha256": "c4c911d47e0db8e54714bf7895d5910f3ac6ed78bbd67f948dd8e5c527196225",
+      "outputSha256": "be50acd7960925a702a71220ef06609c56cbc60379777e5e8b67e0be5434c386",
       "edits": [
         {
           "start": 50,
@@ -1090051,6 +1090364,20 @@
           "renamed": "MenuBackgroundBattle"
         },
         {
+          "start": 7464,
+          "end": 7467,
+          "symbol": "C:vhb",
+          "original": "vhb",
+          "renamed": "SocialTabResources"
+        },
+        {
+          "start": 7468,
+          "end": 7475,
+          "symbol": "F:vhb.field_c:Lllb;",
+          "original": "field_c",
+          "renamed": "tabTemplate"
+        },
+        {
           "start": 7482,
           "end": 7485,
           "symbol": "C:llb",
@@ -1090063,6 +1090390,34 @@
           "symbol": "C:iga",
           "original": "iga",
           "renamed": "GetMissionDebrisDefaultProbability"
+        },
+        {
+          "start": 7514,
+          "end": 7517,
+          "symbol": "C:vhb",
+          "original": "vhb",
+          "renamed": "SocialTabResources"
+        },
+        {
+          "start": 7518,
+          "end": 7525,
+          "symbol": "F:vhb.field_c:Lllb;",
+          "original": "field_c",
+          "renamed": "tabTemplate"
+        },
+        {
+          "start": 7549,
+          "end": 7552,
+          "symbol": "C:vhb",
+          "original": "vhb",
+          "renamed": "SocialTabResources"
+        },
+        {
+          "start": 7553,
+          "end": 7560,
+          "symbol": "F:vhb.field_c:Lllb;",
+          "original": "field_c",
+          "renamed": "tabTemplate"
         },
         {
           "start": 7572,
@@ -1090086,6 +1090441,20 @@
           "renamed": "SetGrapplingHookRopeBreakLength"
         },
         {
+          "start": 7648,
+          "end": 7651,
+          "symbol": "C:vhb",
+          "original": "vhb",
+          "renamed": "SocialTabResources"
+        },
+        {
+          "start": 7652,
+          "end": 7659,
+          "symbol": "F:vhb.field_c:Lllb;",
+          "original": "field_c",
+          "renamed": "tabTemplate"
+        },
+        {
           "start": 7671,
           "end": 7674,
           "symbol": "C:bbb",
@@ -1090105,6 +1090474,20 @@
           "symbol": "C:wjb",
           "original": "wjb",
           "renamed": "SetGrapplingHookRopeBreakLength"
+        },
+        {
+          "start": 7746,
+          "end": 7749,
+          "symbol": "C:vhb",
+          "original": "vhb",
+          "renamed": "SocialTabResources"
+        },
+        {
+          "start": 7750,
+          "end": 7757,
+          "symbol": "F:vhb.field_c:Lllb;",
+          "original": "field_c",
+          "renamed": "tabTemplate"
         },
         {
           "start": 7786,
@@ -1108630,10 +1109013,31 @@
     },
     {
       "original": "bia.java",
-      "renamed": "bia.java",
+      "renamed": "SoftwareRasterStateRestorer.java",
       "inputSha256": "6d5d27f77fd3c9374d3ffb0fc149051a39a3d0c8a4b3b96b83997f38b181cefe",
-      "outputSha256": "4d2e7a49e73aaf918c8b512ca8c1906708a6cb4f14bd43f0d41f9e1aa01f9ca5",
+      "outputSha256": "96e41141d703d4f05c961a54e891fbe7340bcd3102269d8c09cf5af619d82c5b",
       "edits": [
+        {
+          "start": 44,
+          "end": 47,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
+          "start": 56,
+          "end": 58,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 114,
+          "end": 117,
+          "symbol": "M:bia.<init>()V",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
         {
           "start": 154,
           "end": 155,
@@ -1108654,6 +1109058,13 @@
           "symbol": "M:coa.a(IIZ)Z",
           "original": "a",
           "renamed": "isVoteOptionAvailable"
+        },
+        {
+          "start": 298,
+          "end": 301,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 302,
@@ -1108696,6 +1109107,13 @@
           "symbol": "C:ajb",
           "original": "ajb",
           "renamed": "SoftwareRasterState"
+        },
+        {
+          "start": 549,
+          "end": 552,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 553,
@@ -1111482,7 +1111900,7 @@
       "original": "bl.java",
       "renamed": "ModalPanel.java",
       "inputSha256": "e800f48fb9afe09525e063612e07d98b1e9c6f61133d519dd819a7153138d230",
-      "outputSha256": "c8eee1f98203adf1f91ba68b5dcfb63d808d6b7cc51c6d65697aebc52b023655",
+      "outputSha256": "19393134e520fc973dd689075ee4953e4ceb1fec320722c999d6d79c76a1d704",
       "edits": [
         {
           "start": 53,
@@ -1111856,6 +1112274,13 @@
           "renamed": "y"
         },
         {
+          "start": 2099,
+          "end": 2102,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 2103,
           "end": 2104,
           "symbol": "M:bia.a(B)V",
@@ -1111903,6 +1112328,13 @@
           "symbol": "M:bl.j(B)Z",
           "original": "j",
           "renamed": "finishAnimationsAndCheckClosed"
+        },
+        {
+          "start": 2277,
+          "end": 2280,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 2281,
@@ -1112052,6 +1112484,13 @@
           "renamed": "y"
         },
         {
+          "start": 2730,
+          "end": 2733,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 2734,
           "end": 2735,
           "symbol": "M:bia.a(B)V",
@@ -1112099,6 +1112538,13 @@
           "symbol": "M:bl.j(B)Z",
           "original": "j",
           "renamed": "finishAnimationsAndCheckClosed"
+        },
+        {
+          "start": 2908,
+          "end": 2911,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 2912,
@@ -1112248,6 +1112694,13 @@
           "renamed": "y"
         },
         {
+          "start": 3361,
+          "end": 3364,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 3365,
           "end": 3366,
           "symbol": "M:bia.a(B)V",
@@ -1112295,6 +1112748,13 @@
           "symbol": "M:bl.j(B)Z",
           "original": "j",
           "renamed": "finishAnimationsAndCheckClosed"
+        },
+        {
+          "start": 3539,
+          "end": 3542,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 3543,
@@ -1112395,6 +1112855,13 @@
           "renamed": "y"
         },
         {
+          "start": 3869,
+          "end": 3872,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 3873,
           "end": 3874,
           "symbol": "M:bia.a(B)V",
@@ -1112442,6 +1112909,13 @@
           "symbol": "M:bl.j(B)Z",
           "original": "j",
           "renamed": "finishAnimationsAndCheckClosed"
+        },
+        {
+          "start": 4037,
+          "end": 4040,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 4041,
@@ -1115911,7 +1116385,7 @@
       "original": "bmb.java",
       "renamed": "SoundCache.java",
       "inputSha256": "578557b77897f04acc594f5cefaef30d5a50b48ff1e99bc4e791d38de4a4ddb7",
-      "outputSha256": "c8b40ddb737a6e42c09cc0a76a48fa75137bb89e79b55c7eb38adcd3ca7bcf0c",
+      "outputSha256": "62a19d0df92e7f6053fe06a4938018c46b120a76af3abbad8247a3d5a5b10bcf",
       "edits": [
         {
           "start": 69,
@@ -1116297,6 +1116771,13 @@
           "symbol": "C:faa",
           "original": "faa",
           "renamed": "IsaacPacketBuffer"
+        },
+        {
+          "start": 5730,
+          "end": 5733,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 5764,
@@ -1118185,7 +1118666,7 @@
       "original": "bob.java",
       "renamed": "UiTextStyle.java",
       "inputSha256": "e54ea4bd5f91a3d8753a886a2ee1655bcb41229114b8e99305a19f23207248cb",
-      "outputSha256": "6d449624bc95d4b6c5274d6b5866f47a5120f7999e528a1f7452b997df38065f",
+      "outputSha256": "28a7641dfb5aa933da8fc1a5ed40ff518aab355ba6f32f8a18e972e8bc21428e",
       "edits": [
         {
           "start": 44,
@@ -1118977,6 +1119458,13 @@
           "symbol": "F:bob.field_h:I",
           "original": "field_h",
           "renamed": "lineSpacing"
+        },
+        {
+          "start": 5699,
+          "end": 5702,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 5703,
@@ -1119966,6 +1120454,13 @@
           "renamed": "bottom"
         },
         {
+          "start": 17888,
+          "end": 17891,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 17892,
           "end": 17893,
           "symbol": "M:bia.a(B)V",
@@ -1120512,6 +1121007,13 @@
           "renamed": "caretColor"
         },
         {
+          "start": 26116,
+          "end": 26119,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 26120,
           "end": 26121,
           "symbol": "M:bia.a(B)V",
@@ -1120664,7 +1121166,7 @@
       "original": "bp.java",
       "renamed": "SetGrapplingHookMinLength.java",
       "inputSha256": "c3e78e9b85a35dbbbb7db88b1a85a1192f86dda19956a69fd74595680e9b44f1",
-      "outputSha256": "feb3a6086e3128a34d689de9dfc0112c9769d1fe6b72fefee16a0ca896eb6999",
+      "outputSha256": "afff008bc3526533bf4495ab666ca0201ee04d76f60d4b517a692145ffe4bf68",
       "edits": [
         {
           "start": 50,
@@ -1121738,11 +1122240,39 @@
           "renamed": "layout"
         },
         {
+          "start": 8836,
+          "end": 8838,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 8839,
+          "end": 8846,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
+        },
+        {
           "start": 8847,
           "end": 8854,
           "symbol": "F:llb.field_G:I",
           "original": "field_G",
           "renamed": "height"
+        },
+        {
+          "start": 8864,
+          "end": 8866,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 8867,
+          "end": 8874,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
         },
         {
           "start": 8875,
@@ -1121871,11 +1122401,39 @@
           "renamed": "setBounds"
         },
         {
+          "start": 9158,
+          "end": 9160,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 9161,
+          "end": 9168,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
+        },
+        {
           "start": 9169,
           "end": 9177,
           "symbol": "F:llb.field_hb:I",
           "original": "field_hb",
           "renamed": "width"
+        },
+        {
+          "start": 9185,
+          "end": 9187,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 9188,
+          "end": 9195,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
         },
         {
           "start": 9196,
@@ -1126105,7 +1126663,7 @@
       "original": "bs.java",
       "renamed": "SocialTabsPanel.java",
       "inputSha256": "63063e8daed5f8e5773b41dcf8b816c0076d1f6fe8874de15a45aea0981fc758",
-      "outputSha256": "4e48bf26cecbb1d2ad57a5982653b2218b4d1f84ae87aca0636f96c941916be0",
+      "outputSha256": "3bff8524c84b573a5f7aace9633f9bf825a1556d06ea0a3864cd450891e627e5",
       "edits": [
         {
           "start": 50,
@@ -1126211,6 +1126769,20 @@
           "symbol": "C:ooa",
           "original": "ooa",
           "renamed": "TabbedWidget"
+        },
+        {
+          "start": 432,
+          "end": 435,
+          "symbol": "C:vhb",
+          "original": "vhb",
+          "renamed": "SocialTabResources"
+        },
+        {
+          "start": 436,
+          "end": 443,
+          "symbol": "F:vhb.field_c:Lllb;",
+          "original": "field_c",
+          "renamed": "tabTemplate"
         },
         {
           "start": 451,
@@ -1158232,7 +1158804,7 @@
       "original": "cnb.java",
       "renamed": "GetBoostersActiveTime.java",
       "inputSha256": "05172b2b5e07b4e41fc898adeae96cad3ae4c2c3199f2e825e6b9be97f228674",
-      "outputSha256": "fa449dc4e4fdc56744f0fd0507b07c0df23e2d52f04b25f71d6085867e5856e8",
+      "outputSha256": "27f2ad40b26cac3df91e295f4ba75ef273bc1d4114af38ba0f05cce5393bdc7f",
       "edits": [
         {
           "start": 50,
@@ -1159640,6 +1160212,20 @@
           "symbol": "C:pcb",
           "original": "pcb",
           "renamed": "SetNebulaProximityFadeDownshift"
+        },
+        {
+          "start": 8646,
+          "end": 8649,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
+          "start": 8671,
+          "end": 8674,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 8712,
@@ -1166105,7 +1166691,7 @@
       "original": "cs.java",
       "renamed": "SoftwareFaceAttachmentState.java",
       "inputSha256": "7642af7bfa68d1431e6ac643426fd91f9cc4a473dec987dd6de89933e6d6ac3d",
-      "outputSha256": "77646c1dd02663b2eed1e4b1bcd4b655604e0ab3736ca5db4f875d93ccb5c61c",
+      "outputSha256": "884288d76b85e00ba8af3664f5a00c455432906bf755f1db07ed13396ff0900e",
       "edits": [
         {
           "start": 50,
@@ -1166148,6 +1166734,34 @@
           "symbol": "C:ldb",
           "original": "ldb",
           "renamed": "GetRepairModePower"
+        },
+        {
+          "start": 241,
+          "end": 243,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 244,
+          "end": 251,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
+        },
+        {
+          "start": 254,
+          "end": 256,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 257,
+          "end": 264,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
         },
         {
           "start": 287,
@@ -1176906,7 +1177520,7 @@
       "original": "dga.java",
       "renamed": "OpenGlFaceAttachmentState.java",
       "inputSha256": "1fbb7d63cbe9b5f113d89da09c3e6753929ecc074941d2064c23490a7e3d7557",
-      "outputSha256": "83f60349a407db0b2203b43fafd57fa5f27b84b413d0f9fb8783d44fbc7ce64c",
+      "outputSha256": "d7a8067b183adbd9469e52d678fd3c432d1072dcc6d5f69c68cb9d2ddeb2178c",
       "edits": [
         {
           "start": 50,
@@ -1180554,6 +1181168,13 @@
           "symbol": "F:dga$1$CfrPartitionedBody.var2:[B",
           "original": "var2",
           "renamed": "resourceBytes"
+        },
+        {
+          "start": 11737,
+          "end": 11740,
+          "symbol": "C:uab",
+          "original": "uab",
+          "renamed": "MouseInputUtilities"
         },
         {
           "start": 11751,
@@ -1280143,7 +1280764,7 @@
       "original": "fdb.java",
       "renamed": "FadingMidiPcmStream.java",
       "inputSha256": "3525ca8ae531aacefe2d2b63d3c7a3f5b227735a5276094115a6c0727c2de8b8",
-      "outputSha256": "e6d8db59ea7fc91317766440b9244059ea9b8cd0f67001327e4aa8c5d45326c6",
+      "outputSha256": "bc7dd7f6c6c2faedb5c5526da1b3de321a0f9a4ad49736220580c16a3e628e97",
       "edits": [
         {
           "start": 50,
@@ -1280417,6 +1281038,20 @@
           "symbol": "C:tg",
           "original": "tg",
           "renamed": "SetShieldsDirectionalArcParticleSpeedDownshift"
+        },
+        {
+          "start": 2022,
+          "end": 2024,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 2025,
+          "end": 2032,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
         },
         {
           "start": 2084,
@@ -1294120,7 +1294755,7 @@
       "original": "fk.java",
       "renamed": "PanelWidthQuery.java",
       "inputSha256": "f9cf4feaa80c37ca064a367b71abf68d9acd6cf4494ce88640c9082f50cb28be",
-      "outputSha256": "3e96d19791705aa4c084ba28d2b91c4047a59bf1a7660a2844ccfd65fc19fa63",
+      "outputSha256": "85de036a711135394344ff299e40176e23b1a785308bb1d2b4528108e73b0712",
       "edits": [
         {
           "start": 50,
@@ -1294128,6 +1294763,13 @@
           "symbol": "C:fk",
           "original": "fk",
           "renamed": "PanelWidthQuery"
+        },
+        {
+          "start": 61,
+          "end": 63,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
         },
         {
           "start": 165,
@@ -1294163,7 +1294805,7 @@
       "original": "fka.java",
       "renamed": "ComponentCollision.java",
       "inputSha256": "e1c5efd6eb5b2f33124a3f7870a117e03198aee0e5e8107a9a654009486c7539",
-      "outputSha256": "cda2713da73cc72caa16a61da429523d5501afa18293c2205ea7132dd1a8dbac",
+      "outputSha256": "dbc634360e03f12c1233908b0422a72e1724c2d35970299422db5fb5a26f2ad3",
       "edits": [
         {
           "start": 50,
@@ -1294348,11 +1294990,39 @@
           "renamed": "enabled"
         },
         {
+          "start": 2369,
+          "end": 2371,
+          "symbol": "C:vw",
+          "original": "vw",
+          "renamed": "LobbyInviteControls"
+        },
+        {
+          "start": 2372,
+          "end": 2379,
+          "symbol": "F:vw.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "inviteButton"
+        },
+        {
           "start": 2380,
           "end": 2387,
           "symbol": "F:llb.field_G:I",
           "original": "field_G",
           "renamed": "height"
+        },
+        {
+          "start": 2413,
+          "end": 2415,
+          "symbol": "C:vw",
+          "original": "vw",
+          "renamed": "LobbyInviteControls"
+        },
+        {
+          "start": 2416,
+          "end": 2423,
+          "symbol": "F:vw.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "inviteButton"
         },
         {
           "start": 2470,
@@ -1294467,6 +1295137,20 @@
           "renamed": "width"
         },
         {
+          "start": 2842,
+          "end": 2844,
+          "symbol": "C:vw",
+          "original": "vw",
+          "renamed": "LobbyInviteControls"
+        },
+        {
+          "start": 2845,
+          "end": 2852,
+          "symbol": "F:vw.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "inviteButton"
+        },
+        {
           "start": 2853,
           "end": 2854,
           "symbol": "M:llb.a(IIIII)V",
@@ -1294502,6 +1295186,20 @@
           "renamed": "SetSpinningBladeSpindamageMultiplier"
         },
         {
+          "start": 2987,
+          "end": 2989,
+          "symbol": "C:vw",
+          "original": "vw",
+          "renamed": "LobbyInviteControls"
+        },
+        {
+          "start": 2990,
+          "end": 2997,
+          "symbol": "F:vw.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "inviteButton"
+        },
+        {
           "start": 2998,
           "end": 3005,
           "symbol": "F:llb.field_R:Ljava/lang/String;",
@@ -1294516,11 +1295214,39 @@
           "renamed": "SetPhasedEnergyBeamPulsetime"
         },
         {
+          "start": 3051,
+          "end": 3053,
+          "symbol": "C:vw",
+          "original": "vw",
+          "renamed": "LobbyInviteControls"
+        },
+        {
+          "start": 3054,
+          "end": 3061,
+          "symbol": "F:vw.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "inviteButton"
+        },
+        {
           "start": 3062,
           "end": 3069,
           "symbol": "F:llb.field_y:Z",
           "original": "field_y",
           "renamed": "enabled"
+        },
+        {
+          "start": 3118,
+          "end": 3120,
+          "symbol": "C:vw",
+          "original": "vw",
+          "renamed": "LobbyInviteControls"
+        },
+        {
+          "start": 3121,
+          "end": 3128,
+          "symbol": "F:vw.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "inviteButton"
         },
         {
           "start": 3129,
@@ -1294537,11 +1295263,39 @@
           "renamed": "FloatGradientNoiseSliceGenerator"
         },
         {
+          "start": 3181,
+          "end": 3183,
+          "symbol": "C:vw",
+          "original": "vw",
+          "renamed": "LobbyInviteControls"
+        },
+        {
+          "start": 3184,
+          "end": 3191,
+          "symbol": "F:vw.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "inviteButton"
+        },
+        {
           "start": 3192,
           "end": 3199,
           "symbol": "F:llb.field_y:Z",
           "original": "field_y",
           "renamed": "enabled"
+        },
+        {
+          "start": 3238,
+          "end": 3240,
+          "symbol": "C:vw",
+          "original": "vw",
+          "renamed": "LobbyInviteControls"
+        },
+        {
+          "start": 3241,
+          "end": 3248,
+          "symbol": "F:vw.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "inviteButton"
         },
         {
           "start": 3260,
@@ -1294607,6 +1295361,20 @@
           "renamed": "GetTorpedoProjectileDamage"
         },
         {
+          "start": 3655,
+          "end": 3657,
+          "symbol": "C:vw",
+          "original": "vw",
+          "renamed": "LobbyInviteControls"
+        },
+        {
+          "start": 3658,
+          "end": 3665,
+          "symbol": "F:vw.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "inviteButton"
+        },
+        {
           "start": 3677,
           "end": 3680,
           "symbol": "C:qcb",
@@ -1294614,11 +1295382,39 @@
           "renamed": "SetGrapplingHookMaxExtension8Force"
         },
         {
+          "start": 3733,
+          "end": 3735,
+          "symbol": "C:vw",
+          "original": "vw",
+          "renamed": "LobbyInviteControls"
+        },
+        {
+          "start": 3736,
+          "end": 3743,
+          "symbol": "F:vw.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "inviteButton"
+        },
+        {
           "start": 3744,
           "end": 3751,
           "symbol": "F:llb.field_R:Ljava/lang/String;",
           "original": "field_R",
           "renamed": "text"
+        },
+        {
+          "start": 3754,
+          "end": 3756,
+          "symbol": "C:vw",
+          "original": "vw",
+          "renamed": "LobbyInviteControls"
+        },
+        {
+          "start": 3757,
+          "end": 3764,
+          "symbol": "F:vw.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "inviteButton"
         },
         {
           "start": 3765,
@@ -1295739,6 +1296535,20 @@
           "symbol": "M:mm.f(B)I",
           "original": "f",
           "renamed": "getGameId"
+        },
+        {
+          "start": 14788,
+          "end": 14790,
+          "symbol": "C:vw",
+          "original": "vw",
+          "renamed": "LobbyInviteControls"
+        },
+        {
+          "start": 14791,
+          "end": 14798,
+          "symbol": "F:vw.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "inviteButton"
         },
         {
           "start": 14829,
@@ -1297067,7 +1297877,7 @@
       "original": "fma.java",
       "renamed": "PhasedEnergyBeamWeaponDefinition.java",
       "inputSha256": "df956db19fd19fc32185f174137f42c9d2ff2ea29d7f0ef5d9e7784ff6c0087f",
-      "outputSha256": "a8c4b5f3c0e341dc66da0f7ac522813c78566c68c600f5667f1d71015346f0de",
+      "outputSha256": "1c618cb58a80030c9b7ec6e9285621c19694bf6609e99f12ac61fb810cce481f",
       "edits": [
         {
           "start": 50,
@@ -1297189,6 +1297999,20 @@
           "renamed": "getProjectileSpeed"
         },
         {
+          "start": 1072,
+          "end": 1075,
+          "symbol": "C:wja",
+          "original": "wja",
+          "renamed": "IncomingChatState"
+        },
+        {
+          "start": 1110,
+          "end": 1113,
+          "symbol": "C:wja",
+          "original": "wja",
+          "renamed": "IncomingChatState"
+        },
+        {
           "start": 1148,
           "end": 1149,
           "symbol": "M:fma.h(B)Z",
@@ -1297301,6 +1298125,20 @@
           "renamed": "SpecialOrderButtonState"
         },
         {
+          "start": 1708,
+          "end": 1710,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 1711,
+          "end": 1718,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
+        },
+        {
           "start": 1725,
           "end": 1728,
           "symbol": "C:llb",
@@ -1297313,6 +1298151,20 @@
           "symbol": "C:llb",
           "original": "llb",
           "renamed": "Widget"
+        },
+        {
+          "start": 1756,
+          "end": 1758,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 1759,
+          "end": 1766,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
         },
         {
           "start": 1767,
@@ -1297334,6 +1298186,20 @@
           "symbol": "F:bs.field_a:Looa;",
           "original": "field_a",
           "renamed": "tabs"
+        },
+        {
+          "start": 1816,
+          "end": 1818,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 1819,
+          "end": 1826,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
         },
         {
           "start": 1827,
@@ -1297420,6 +1298286,20 @@
           "renamed": "SpecialOrderButtonState"
         },
         {
+          "start": 2103,
+          "end": 2105,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 2106,
+          "end": 2113,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
+        },
+        {
           "start": 2120,
           "end": 2123,
           "symbol": "C:llb",
@@ -1297432,6 +1298312,20 @@
           "symbol": "C:llb",
           "original": "llb",
           "renamed": "Widget"
+        },
+        {
+          "start": 2149,
+          "end": 2151,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 2152,
+          "end": 2159,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
         },
         {
           "start": 2160,
@@ -1297453,6 +1298347,20 @@
           "symbol": "F:bs.field_a:Looa;",
           "original": "field_a",
           "renamed": "tabs"
+        },
+        {
+          "start": 2207,
+          "end": 2209,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 2210,
+          "end": 2217,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
         },
         {
           "start": 2218,
@@ -1297551,6 +1298459,20 @@
           "symbol": "M:fma.b(Z)I",
           "original": "b",
           "renamed": "getProjectileCount"
+        },
+        {
+          "start": 2897,
+          "end": 2900,
+          "symbol": "C:uab",
+          "original": "uab",
+          "renamed": "MouseInputUtilities"
+        },
+        {
+          "start": 2935,
+          "end": 2938,
+          "symbol": "C:uab",
+          "original": "uab",
+          "renamed": "MouseInputUtilities"
         },
         {
           "start": 2973,
@@ -1318235,7 +1319157,7 @@
       "original": "gib.java",
       "renamed": "GpuFaceAttachmentState.java",
       "inputSha256": "b80f23d0334a33f4d237f2618374185826900de0ee40e2cf0f4c0f5392b15f1d",
-      "outputSha256": "56008e27e23ff0c370b344d11a802df6c6141abe6d353ebcf590b1fcaab52a93",
+      "outputSha256": "22b2be51a878289e8d8ea1623bfa4f8d6d627a000a1262a62319f881a373732c",
       "edits": [
         {
           "start": 50,
@@ -1318439,6 +1319361,13 @@
           "symbol": "C:dua",
           "original": "dua",
           "renamed": "SetMassDriverFireForce"
+        },
+        {
+          "start": 1491,
+          "end": 1493,
+          "symbol": "C:pl",
+          "original": "pl",
+          "renamed": "LoginMethodCatalog"
         },
         {
           "start": 1494,
@@ -1320002,7 +1320931,7 @@
       "original": "gm.java",
       "renamed": "ValidationStatusWidget.java",
       "inputSha256": "303e55f88fedf79f0ecc5f7a3b6120fd96db69d1d3bc23afc0b8f5fa5b74a3ae",
-      "outputSha256": "86867566d27c45b07bb4af21acbfe939e9412bdae6b18ebf5bbd860c1749aede",
+      "outputSha256": "c945e5c014a9d349d778701c99db2b5a39261a258ed1f45538f949b4c59d634d",
       "edits": [
         {
           "start": 50,
@@ -1320691,6 +1321620,13 @@
           "renamed": "animationTick"
         },
         {
+          "start": 3840,
+          "end": 3843,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 3844,
           "end": 3845,
           "symbol": "M:bia.a(B)V",
@@ -1321095,6 +1322031,13 @@
           "symbol": "F:gm.field_K:I",
           "original": "field_K",
           "renamed": "animationTick"
+        },
+        {
+          "start": 5729,
+          "end": 5732,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 5733,
@@ -1321517,6 +1322460,13 @@
           "renamed": "animationTick"
         },
         {
+          "start": 7671,
+          "end": 7674,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 7675,
           "end": 7676,
           "symbol": "M:bia.a(B)V",
@@ -1321795,6 +1322745,13 @@
           "symbol": "F:gm.field_K:I",
           "original": "field_K",
           "renamed": "animationTick"
+        },
+        {
+          "start": 8762,
+          "end": 8765,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 8766,
@@ -1322110,6 +1323067,13 @@
           "symbol": "F:gm.field_K:I",
           "original": "field_K",
           "renamed": "animationTick"
+        },
+        {
+          "start": 10225,
+          "end": 10228,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 10229,
@@ -1330026,7 +1330990,7 @@
       "original": "gva.java",
       "renamed": "ConsoleEvaluationException.java",
       "inputSha256": "185bdb1511e38a4a064537507b51c96b42593c9f863e5f87a24f4dec59af1ca9",
-      "outputSha256": "d621600bc281c1f67e76cfdd04f95c2916292750894c766c6269bafa9ae993ef",
+      "outputSha256": "80aa36c4cd679524d523949fd6ff77d92011be787d32dcf0c997ff2f993528e6",
       "edits": [
         {
           "start": 50,
@@ -1330057,11 +1331021,39 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 266,
+          "end": 267,
+          "symbol": "M:gva.a(B)V",
+          "original": "a",
+          "renamed": "rebuildInitializedCanvasMenu"
+        },
+        {
+          "start": 296,
+          "end": 299,
+          "symbol": "C:uab",
+          "original": "uab",
+          "renamed": "MouseInputUtilities"
+        },
+        {
+          "start": 300,
+          "end": 301,
+          "symbol": "M:uab.a(B)Z",
+          "original": "a",
+          "renamed": "hasMenuInitializationStarted"
+        },
+        {
           "start": 400,
           "end": 403,
           "symbol": "C:wha",
           "original": "wha",
           "renamed": "AsteroidFactory"
+        },
+        {
+          "start": 404,
+          "end": 405,
+          "symbol": "M:wha.a(IZI)V",
+          "original": "a",
+          "renamed": "buildCanvasMenu"
         },
         {
           "start": 431,
@@ -1357352,7 +1358344,7 @@
       "original": "hob.java",
       "renamed": "TextHotspotRegion.java",
       "inputSha256": "96677b2bb69239d1174e4a911e8c7cdf3758e0c3a85557b5b76fb15e33d6cd26",
-      "outputSha256": "5f924225daa2290a6a6eb3620a9d1f7922320274c6a983f121775b4f5517de9c",
+      "outputSha256": "0c0ec277df56f118eb039bfa35d01a0e8062306e48c58bd1e79195bfd73940d5",
       "edits": [
         {
           "start": 71,
@@ -1357731,6 +1358723,13 @@
           "symbol": "F:sqb.field_p:I",
           "original": "field_p",
           "renamed": "height"
+        },
+        {
+          "start": 2450,
+          "end": 2453,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 2454,
@@ -1372880,7 +1373879,7 @@
       "original": "ieb.java",
       "renamed": "SetMutatorVotes.java",
       "inputSha256": "5efb92c186468567b4f76d5716dd729cc3eca45b5e879b90d27bef469d57f064",
-      "outputSha256": "3d257e8acd211778a7ec875958e742000e18157a9cb0a9293c494a828ea15de5",
+      "outputSha256": "fa3a5582ce7b5f54b41882fcfe90de696ba87775a7ed8b441191d9c215712aed",
       "edits": [
         {
           "start": 50,
@@ -1373098,6 +1374097,13 @@
           "symbol": "C:ska",
           "original": "ska",
           "renamed": "StrongCacheReference"
+        },
+        {
+          "start": 1762,
+          "end": 1765,
+          "symbol": "C:vhb",
+          "original": "vhb",
+          "renamed": "SocialTabResources"
         },
         {
           "start": 1854,
@@ -1373583,7 +1374589,7 @@
       "original": "ig.java",
       "renamed": "GetDebrisProjectileCollision.java",
       "inputSha256": "1c22b861a46bea856549fad2df2ec8f16a2db27e665ff9eb40c2eede3d4e5b94",
-      "outputSha256": "aa5cbac34bcb88b793ecb263ec11efcf0d36a7b5528320bdd695ea8143107f9e",
+      "outputSha256": "3af8bd3cadf95d33e4939758c680df4c85fbcfbf88d42db633126f086e8ec6e3",
       "edits": [
         {
           "start": 50,
@@ -1373719,6 +1374725,20 @@
           "renamed": "GetRepairModePower"
         },
         {
+          "start": 1439,
+          "end": 1441,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 1442,
+          "end": 1449,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
+        },
+        {
           "start": 1470,
           "end": 1473,
           "symbol": "C:ldb",
@@ -1373731,6 +1374751,34 @@
           "symbol": "C:ldb",
           "original": "ldb",
           "renamed": "GetRepairModePower"
+        },
+        {
+          "start": 1516,
+          "end": 1518,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 1519,
+          "end": 1526,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
+        },
+        {
+          "start": 1529,
+          "end": 1531,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 1532,
+          "end": 1539,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
         },
         {
           "start": 1588,
@@ -1380910,7 +1381958,7 @@
       "original": "ik.java",
       "renamed": "IntegerRecordWriteRequest.java",
       "inputSha256": "500040f0cd59f9dd02a838b261390e0ad21b05526d7c582b7fc4c3e7e36fc0db",
-      "outputSha256": "dfd62a6422d38595b26f216de0942bb90b8464269ce4e11184e4d5deffa15bad",
+      "outputSha256": "670e86e41de8ce07357ab0874b73af5023d95e0062c64a86597c67b5535d43da",
       "edits": [
         {
           "start": 50,
@@ -1381242,6 +1382290,13 @@
           "renamed": "GetDebrisFoundInPairs"
         },
         {
+          "start": 1606,
+          "end": 1609,
+          "symbol": "C:wja",
+          "original": "wja",
+          "renamed": "IncomingChatState"
+        },
+        {
           "start": 1639,
           "end": 1641,
           "symbol": "C:db",
@@ -1381317,6 +1382372,13 @@
           "symbol": "C:qca",
           "original": "qca",
           "renamed": "SelectableIconLabelWidget"
+        },
+        {
+          "start": 1999,
+          "end": 2002,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 2032,
@@ -1382122,6 +1383184,13 @@
           "symbol": "C:nob",
           "original": "nob",
           "renamed": "GetRadialMenuRadius"
+        },
+        {
+          "start": 5741,
+          "end": 5744,
+          "symbol": "C:uab",
+          "original": "uab",
+          "renamed": "MouseInputUtilities"
         },
         {
           "start": 5774,
@@ -1387733,16 +1388802,44 @@
     },
     {
       "original": "iob.java",
-      "renamed": "iob.java",
+      "renamed": "SoftwareProjectionSettings.java",
       "inputSha256": "c6f9070eaac21f2a49ec26a2fcb4f6b2f15f9b25d618830564bb663af8c7ed74",
-      "outputSha256": "9e71ae94b063c0ae9b295a5b5bc8794e59af344ccab9fbda2e29dc2f5ebb71b0",
+      "outputSha256": "ab20890458f9779c72de0d3b144f9cab6d5b938a692c71e63b039786c157f37c",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:iob",
+          "original": "iob",
+          "renamed": "SoftwareProjectionSettings"
+        },
+        {
+          "start": 62,
+          "end": 65,
+          "symbol": "C:vhb",
+          "original": "vhb",
+          "renamed": "SocialTabResources"
+        },
+        {
+          "start": 83,
+          "end": 90,
+          "symbol": "F:iob.field_f:I",
+          "original": "field_f",
+          "renamed": "projectionFractionBits"
+        },
         {
           "start": 202,
           "end": 203,
           "symbol": "M:iob.c(I)V",
           "original": "c",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 357,
+          "end": 364,
+          "symbol": "F:iob.field_f:I",
+          "original": "field_f",
+          "renamed": "projectionFractionBits"
         }
       ]
     },
@@ -1392933,7 +1394030,7 @@
       "original": "iv.java",
       "renamed": "GetMassDriverAimspeed.java",
       "inputSha256": "f55bb752d1633f1b8ae300b32e21a4db8ad3ceccac27077899099ecf7041a402",
-      "outputSha256": "5582302bdaba28f42d797d0af679753c3b87b31ea44f5123a3381263b9f0a58a",
+      "outputSha256": "4e0ac00a1398ce12dcd60c90e98c71cb66e6010fa8d310dd6319fba1d2e54fb8",
       "edits": [
         {
           "start": 50,
@@ -1392948,6 +1394045,13 @@
           "symbol": "C:rqa",
           "original": "rqa",
           "renamed": "ConsoleCommand"
+        },
+        {
+          "start": 109,
+          "end": 116,
+          "symbol": "F:iv.field_o:I",
+          "original": "field_o",
+          "renamed": "canvasMenuMode"
         },
         {
           "start": 123,
@@ -1393060,6 +1394164,13 @@
           "symbol": "M:iv.a(I)V",
           "original": "a",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 1444,
+          "end": 1451,
+          "symbol": "F:iv.field_o:I",
+          "original": "field_o",
+          "renamed": "canvasMenuMode"
         }
       ]
     },
@@ -1419879,7 +1420990,7 @@
       "original": "ju.java",
       "renamed": "GetPhasedEnergyBeamPulseFadetime.java",
       "inputSha256": "b153f26847f7de60f6f5961e1fbf23370cd126d56def89a9d4c996116e496778",
-      "outputSha256": "64d2ccd3eb500ef4b6d8f54831680e9359df94b1b5bda0c690aa345d13a1d626",
+      "outputSha256": "1dec07ace87d5676fec64df4a3bbe8da8a7053db9fe4a875af2c7f88fcb846ff",
       "edits": [
         {
           "start": 50,
@@ -1421539,6 +1422650,20 @@
           "symbol": "C:pcb",
           "original": "pcb",
           "renamed": "SetNebulaProximityFadeDownshift"
+        },
+        {
+          "start": 9535,
+          "end": 9538,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
+          "start": 9562,
+          "end": 9565,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 9609,
@@ -1433338,7 +1434463,7 @@
       "original": "kga.java",
       "renamed": "GetPhasedEnergyBeamProjectiles.java",
       "inputSha256": "e0f6ffcc06d3731ffd30fb145b901ad91633b75d7729131877d9e2409af41d67",
-      "outputSha256": "78bad35336d5cedc6b24264d1bc1de7f835d5812244cae743ea1b65467e44247",
+      "outputSha256": "7de8fbb37fe001540cd05bd2fd927336f9c0a749cbb4b052bc8cd6258b803fc6",
       "edits": [
         {
           "start": 50,
@@ -1435119,6 +1436244,13 @@
           "renamed": "OpenGlVertexNormal"
         },
         {
+          "start": 11010,
+          "end": 11013,
+          "symbol": "C:uab",
+          "original": "uab",
+          "renamed": "MouseInputUtilities"
+        },
+        {
           "start": 11046,
           "end": 11048,
           "symbol": "C:oq",
@@ -1435196,6 +1436328,13 @@
           "renamed": "SetLaserRandomness"
         },
         {
+          "start": 11444,
+          "end": 11447,
+          "symbol": "C:wja",
+          "original": "wja",
+          "renamed": "IncomingChatState"
+        },
+        {
           "start": 11481,
           "end": 11483,
           "symbol": "C:js",
@@ -1435229,6 +1436368,13 @@
           "symbol": "C:seb",
           "original": "seb",
           "renamed": "SetArmageddonWarning"
+        },
+        {
+          "start": 11659,
+          "end": 11662,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 11696,
@@ -1441465,7 +1442611,7 @@
       "original": "kl.java",
       "renamed": "ShieldInfoPool.java",
       "inputSha256": "aece1cb7aa836993fafdbbe1d01caabcb66dbcacfb7f6f44d451b72365c6719a",
-      "outputSha256": "9194a1db219b4b9aac7a6ba23ad6e20e053223196e7c30d338a08d70b791bc48",
+      "outputSha256": "31f358faeb5790a157f7700085afa5b7d89e88444d5e508e7491392ae33bc833",
       "edits": [
         {
           "start": 50,
@@ -1441522,6 +1442668,13 @@
           "symbol": "M:rib.a(Ljava/awt/Component;B)V",
           "original": "a",
           "renamed": "detachKeyboardListeners"
+        },
+        {
+          "start": 570,
+          "end": 573,
+          "symbol": "C:uab",
+          "original": "uab",
+          "renamed": "MouseInputUtilities"
         },
         {
           "start": 574,
@@ -1443056,7 +1444209,7 @@
       "original": "klb.java",
       "renamed": "GetLagStandardDeviationIn.java",
       "inputSha256": "3effe2b3efbabf67bdfa1174249fe757c8819e2bd6fb51884f5e4ccc0c7c2a2e",
-      "outputSha256": "c0ea86564692cee5d3679c479c4f7087a3d41f18be6ae546f36f37d83da646ef",
+      "outputSha256": "746cbedb0429e19f59f3019cc7311f4484a67c755818b84adeeb294ec18a9c3e",
       "edits": [
         {
           "start": 50,
@@ -1443204,6 +1444357,13 @@
           "symbol": "C:mra",
           "original": "mra",
           "renamed": "SetMaxShipSize"
+        },
+        {
+          "start": 864,
+          "end": 865,
+          "symbol": "M:mra.e(B)D",
+          "original": "e",
+          "renamed": "getIncomingLagStdDevMillis"
         },
         {
           "start": 1200,
@@ -1444574,7 +1445734,7 @@
       "original": "knb.java",
       "renamed": "SetAngularForceDownshift.java",
       "inputSha256": "ad299bdb86a0596c2e04dffec71d6d720b2c9b00d8eea06f6bc2b40266bb7c2f",
-      "outputSha256": "e0692c9b6ce7136fdbfe13f049f29e962c307ac85b65129df3a6acca2d571268",
+      "outputSha256": "bab78ae9d141cf94dd91986ea01279ee3775ac4cf85576e66b8c088e03db3b68",
       "edits": [
         {
           "start": 50,
@@ -1444589,6 +1445749,13 @@
           "symbol": "C:rqa",
           "original": "rqa",
           "renamed": "ConsoleCommand"
+        },
+        {
+          "start": 168,
+          "end": 175,
+          "symbol": "F:knb.field_o:Z",
+          "original": "field_o",
+          "renamed": "menuInitializationStarted"
         },
         {
           "start": 182,
@@ -1444722,6 +1445889,13 @@
           "symbol": "M:knb.a(II)I",
           "original": "a",
           "renamed": "orBits"
+        },
+        {
+          "start": 1808,
+          "end": 1815,
+          "symbol": "F:knb.field_o:Z",
+          "original": "field_o",
+          "renamed": "menuInitializationStarted"
         }
       ]
     },
@@ -1466251,7 +1467425,7 @@
       "original": "lja.java",
       "renamed": "GrappleLauncherBehaviour.java",
       "inputSha256": "6e6dbc4b549219d777f2fe96f68a590e5c61ebe846644713cd88f1b53a075e97",
-      "outputSha256": "eb83bce161edb7459f2f0ee13ae0e9ebad9308cfd0ae3380e2f48c2cb04206f3",
+      "outputSha256": "872f03b64e1409120dd7f95f537dc3d3286c4472ebfb3b44097c78ae77b7b005",
       "edits": [
         {
           "start": 50,
@@ -1466805,6 +1467979,13 @@
           "symbol": "F:lja.field_a:I",
           "original": "field_a",
           "renamed": "ropeLength"
+        },
+        {
+          "start": 6076,
+          "end": 6079,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 6148,
@@ -1467556,11 +1468737,25 @@
           "renamed": "targetRopeLength"
         },
         {
+          "start": 12297,
+          "end": 12300,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 12338,
           "end": 12345,
           "symbol": "F:lja.field_h:I",
           "original": "field_h",
           "renamed": "targetRopeLength"
+        },
+        {
+          "start": 12348,
+          "end": 12351,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 12413,
@@ -1479922,7 +1481117,7 @@
       "original": "ls.java",
       "renamed": "GetMissionTerrainNebulaProbability.java",
       "inputSha256": "72e991d78da5248d3a5315f4b023c37bad23c0a0dda2b13eeb7d16600c9b6a03",
-      "outputSha256": "3bf4bff7f5a0f7b2e286f9c242d585bfa8c944e967404d7f1aab23ac692dcdea",
+      "outputSha256": "2bfc756fe90408e9e182b1b5abbaa76d697378c66f80a68c8fc4b0ed3cbf6c12",
       "edits": [
         {
           "start": 50,
@@ -1480098,6 +1481293,13 @@
           "symbol": "M:phb.d(II)V",
           "original": "d",
           "renamed": "drawHalfSize"
+        },
+        {
+          "start": 881,
+          "end": 884,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 885,
@@ -1480365,7 +1481567,7 @@
       "original": "lsb.java",
       "renamed": "HardpointDefinition.java",
       "inputSha256": "fdb9f826397ce40b1c3db3d1e855338b13c4c02a9578cd6ef595af88b25ba08e",
-      "outputSha256": "615bfacebd467789985d81499eb8c964a71ae3f5953089b2fdf1b9df0b062b45",
+      "outputSha256": "c9abaf17b762b114a7483c4f37820e3e2318eec7b619b72ecd3881f6a6865d03",
       "edits": [
         {
           "start": 50,
@@ -1480373,6 +1481575,13 @@
           "symbol": "C:lsb",
           "original": "lsb",
           "renamed": "HardpointDefinition"
+        },
+        {
+          "start": 130,
+          "end": 131,
+          "symbol": "M:lsb.a(Z)V",
+          "original": "a",
+          "renamed": "closeChatInputDialog"
         },
         {
           "start": 209,
@@ -1485455,7 +1486664,7 @@
       "original": "mba.java",
       "renamed": "ReferenceTrackingControl.java",
       "inputSha256": "334bc8feda484fb2d63d747f7adc7d9457781d96f8c961f92c7dfc78054c5f5e",
-      "outputSha256": "2ec8453d1d650b5ef60a1edd0a04546cd4e51851e4a08f5801817d857ea9aa00",
+      "outputSha256": "d75d5d59bbb9da1dab07d0026cc8380947edc6b1574e441ddd186e6cd8f46754",
       "edits": [
         {
           "start": 50,
@@ -1485470,6 +1486679,13 @@
           "symbol": "C:ae",
           "original": "ae",
           "renamed": "MenuInputState"
+        },
+        {
+          "start": 70,
+          "end": 77,
+          "symbol": "F:mba.field_a:Lae;",
+          "original": "field_a",
+          "renamed": "menuInputState"
         },
         {
           "start": 126,
@@ -1485514,11 +1486730,32 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 336,
+          "end": 343,
+          "symbol": "F:mba.field_a:Lae;",
+          "original": "field_a",
+          "renamed": "menuInputState"
+        },
+        {
+          "start": 390,
+          "end": 397,
+          "symbol": "F:mba.field_a:Lae;",
+          "original": "field_a",
+          "renamed": "menuInputState"
+        },
+        {
           "start": 401,
           "end": 403,
           "symbol": "C:ae",
           "original": "ae",
           "renamed": "MenuInputState"
+        },
+        {
+          "start": 449,
+          "end": 456,
+          "symbol": "F:mba.field_a:Lae;",
+          "original": "field_a",
+          "renamed": "menuInputState"
         },
         {
           "start": 463,
@@ -1495060,7 +1496297,7 @@
       "original": "mib.java",
       "renamed": "CarouselCommongameInfo.java",
       "inputSha256": "fdf0cb05033e8340a592e7c6e19f004fd6391d964d7eca9941607832dbf1f495",
-      "outputSha256": "1a5e0be08d87e9d9bd99dc9529ccce4e249ddaa892a4eff8415591c72dfdadfe",
+      "outputSha256": "f51358202ebd63308819075b68229dfe9f4555cba4a4e0ae14d651b5828ea088",
       "edits": [
         {
           "start": 97,
@@ -1498136,6 +1499373,20 @@
           "symbol": "F:mib.field_c:I",
           "original": "field_c",
           "renamed": "ticksBehind"
+        },
+        {
+          "start": 24402,
+          "end": 24405,
+          "symbol": "C:iob",
+          "original": "iob",
+          "renamed": "SoftwareProjectionSettings"
+        },
+        {
+          "start": 24444,
+          "end": 24447,
+          "symbol": "C:iob",
+          "original": "iob",
+          "renamed": "SoftwareProjectionSettings"
         },
         {
           "start": 24483,
@@ -1521178,7 +1522429,7 @@
       "original": "mn.java",
       "renamed": "ChatPanelUpdater.java",
       "inputSha256": "db4103c40b47856ecd2a276c1f399868c373116638e316f616f3df61a046e950",
-      "outputSha256": "a53110f83cacb88d7502468e08ca71e0f4a4d2bbaa9e263ffb55aecf57a1e6b6",
+      "outputSha256": "fbb8bb5331998a95e3300b43af88c8dbac7e8d92f2ac8fecacc4141145ebc33b",
       "edits": [
         {
           "start": 50,
@@ -1521293,11 +1522544,67 @@
           "renamed": "height"
         },
         {
+          "start": 679,
+          "end": 681,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 682,
+          "end": 689,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
+        },
+        {
           "start": 692,
           "end": 695,
           "symbol": "C:ldb",
           "original": "ldb",
           "renamed": "GetRepairModePower"
+        },
+        {
+          "start": 719,
+          "end": 721,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 722,
+          "end": 729,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
+        },
+        {
+          "start": 732,
+          "end": 734,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 735,
+          "end": 742,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
+        },
+        {
+          "start": 774,
+          "end": 776,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 777,
+          "end": 784,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
         },
         {
           "start": 835,
@@ -1522757,7 +1524064,7 @@
       "original": "moa.java",
       "renamed": "StripesTextureOperation.java",
       "inputSha256": "814fd2355004e8fb005ba38957dc0ecddb8482522be4f895d4e3e3f6d5f44f77",
-      "outputSha256": "052b8856ed52080155eef5e834e5379cb0fab8c361009489e3f7f30c24f64e58",
+      "outputSha256": "48af10735ed5a800e5cfc9380b38d8d6ff302dab6aaddd8ac2f289042d66f290",
       "edits": [
         {
           "start": 50,
@@ -1523275,6 +1524582,20 @@
           "symbol": "C:lia",
           "original": "lia",
           "renamed": "SoftwareTransform3D"
+        },
+        {
+          "start": 5730,
+          "end": 5732,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 5733,
+          "end": 5740,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
         },
         {
           "start": 5741,
@@ -1528185,7 +1529506,7 @@
       "original": "mra.java",
       "renamed": "SetMaxShipSize.java",
       "inputSha256": "12528f636bed34412e454e12b66f5597a3710fa8916b894d819caeeef4df479b",
-      "outputSha256": "36e65e7bda2e8544db788f2c62108f704aef524f3574dee0a55b8d847bd9acf3",
+      "outputSha256": "300f945d20fa07c05a85b348002d7f0e3fd626cae9dc55a475cf2f0f27e26f7f",
       "edits": [
         {
           "start": 50,
@@ -1528382,6 +1529703,13 @@
           "symbol": "P:mra.a([Lnc;I)Lnc;#1",
           "original": "param1",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1827,
+          "end": 1828,
+          "symbol": "M:mra.e(B)D",
+          "original": "e",
+          "renamed": "getIncomingLagStdDevMillis"
         },
         {
           "start": 1936,
@@ -1528887,7 +1530215,7 @@
       "original": "ms.java",
       "renamed": "NetworkGameClient.java",
       "inputSha256": "d7f28737ad996a612a78ae8f91d55de6a86e0f27408afec83e88af55c38e0b74",
-      "outputSha256": "af41fa5110261278d5f0186f140be14097495b1714cfd1d0bd0038adefd007d9",
+      "outputSha256": "3c0bc4e47293636d33d43aabbec0f9880f50fb3ab96c4174439e301093343e4b",
       "edits": [
         {
           "start": 53,
@@ -1530470,6 +1531798,13 @@
           "symbol": "C:ji",
           "original": "ji",
           "renamed": "SetReverbFeedback"
+        },
+        {
+          "start": 8240,
+          "end": 8243,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 8244,
@@ -1539722,7 +1541057,7 @@
       "original": "nda.java",
       "renamed": "SetPhasedEnergyBeamAimspeed.java",
       "inputSha256": "35e64dc3199f4e7cfd098781ba9d117862f760556d6140d62dd67652b166ad47",
-      "outputSha256": "a1f562f1047249a8f5e181578e0fc41aa9221671580c262e13fb0a1c420df93f",
+      "outputSha256": "7d8193cdd0c35daa0b40d0f8372f18671bb924d5ab25752980f18e5bcf63c78b",
       "edits": [
         {
           "start": 50,
@@ -1540068,11 +1541403,39 @@
           "renamed": "drawOpaque"
         },
         {
+          "start": 2942,
+          "end": 2944,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 2945,
+          "end": 2952,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
+        },
+        {
           "start": 2953,
           "end": 2960,
           "symbol": "F:llb.field_L:I",
           "original": "field_L",
           "renamed": "x"
+        },
+        {
+          "start": 3007,
+          "end": 3009,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 3010,
+          "end": 3017,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
         },
         {
           "start": 3060,
@@ -1540369,11 +1541732,39 @@
           "renamed": "drawOpaque"
         },
         {
+          "start": 4417,
+          "end": 4419,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 4420,
+          "end": 4427,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
+        },
+        {
           "start": 4428,
           "end": 4435,
           "symbol": "F:llb.field_L:I",
           "original": "field_L",
           "renamed": "x"
+        },
+        {
+          "start": 4481,
+          "end": 4483,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 4484,
+          "end": 4491,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
         },
         {
           "start": 4534,
@@ -1540731,6 +1542122,13 @@
           "symbol": "M:llb.b(ZI)V",
           "original": "b",
           "renamed": "draw"
+        },
+        {
+          "start": 6505,
+          "end": 6508,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 6509,
@@ -1559855,7 +1561253,7 @@
       "original": "nra.java",
       "renamed": "AwardVictoryToTeamActionFactory.java",
       "inputSha256": "9217383abf4eac5dac83b5c849002fa0540806a6608069ff51ac9c12ec8defda",
-      "outputSha256": "07739199b07eb8c8ac0a5fe547fcf67ab56124933559a39686040f82334bbbfd",
+      "outputSha256": "1d18965ba147afeb198ed8224ab6e2527c88a2e3d5f30fd4f3b83040380d0acb",
       "edits": [
         {
           "start": 50,
@@ -1561062,6 +1562460,13 @@
           "renamed": "SetSpinningBladeSpinupSpeed"
         },
         {
+          "start": 3483,
+          "end": 3486,
+          "symbol": "C:iob",
+          "original": "iob",
+          "renamed": "SoftwareProjectionSettings"
+        },
+        {
           "start": 3506,
           "end": 3509,
           "symbol": "C:obb",
@@ -1562222,6 +1563627,13 @@
           "symbol": "F:tq.field_o:[Ljava/lang/String;",
           "original": "field_o",
           "renamed": "specialOrderLabels"
+        },
+        {
+          "start": 6603,
+          "end": 6605,
+          "symbol": "C:pl",
+          "original": "pl",
+          "renamed": "LoginMethodCatalog"
         },
         {
           "start": 6625,
@@ -1571407,7 +1572819,7 @@
       "original": "oaa.java",
       "renamed": "OpenGlVertexBufferObject.java",
       "inputSha256": "7ef74f18622447069101054f6ecf87e8b6ce1064ca0e534fb73cfc04980dae12",
-      "outputSha256": "c5be86d63d6b4ff0936b1075d4c44dd55338aa609b9430fed2b908f7bf02055d",
+      "outputSha256": "23161873f227f62c4f9d32725f835a237f285e739f01a9daaa5e5638808a3cd4",
       "edits": [
         {
           "start": 50,
@@ -1571529,6 +1572941,13 @@
           "renamed": "OpenGlVertexBufferBinding"
         },
         {
+          "start": 729,
+          "end": 730,
+          "symbol": "M:oaa.a(B)Z",
+          "original": "a",
+          "renamed": "isNameEntryDialogOpen"
+        },
+        {
           "start": 823,
           "end": 826,
           "symbol": "C:ola",
@@ -1571548,6 +1572967,13 @@
           "symbol": "C:oaa",
           "original": "oaa",
           "renamed": "OpenGlVertexBufferObject"
+        },
+        {
+          "start": 950,
+          "end": 951,
+          "symbol": "M:oaa.a(B)Z",
+          "original": "a",
+          "renamed": "isNameEntryDialogOpen"
         },
         {
           "start": 981,
@@ -1644525,7 +1645951,7 @@
       "original": "pgb.java",
       "renamed": "ChatMessage.java",
       "inputSha256": "565b11fc6b0c573ff73d9b68012094735afae38c13f95d285be2f6bddf7660fd",
-      "outputSha256": "ba3a34cbd0a34eedc725456869e8f00afbbfebb59c3ba3617391c5c6f140098b",
+      "outputSha256": "09735463462617e5adda44604ac85be2940593a0fb1b947f02d1bcbd073e7042",
       "edits": [
         {
           "start": 50,
@@ -1644783,6 +1646209,20 @@
           "start": 3897,
           "end": 3904,
           "symbol": "F:pgb.field_a:I",
+          "original": "field_a",
+          "renamed": "channelType"
+        },
+        {
+          "start": 3907,
+          "end": 3910,
+          "symbol": "C:wja",
+          "original": "wja",
+          "renamed": "IncomingChatState"
+        },
+        {
+          "start": 3911,
+          "end": 3918,
+          "symbol": "F:wja.field_a:I",
           "original": "field_a",
           "renamed": "channelType"
         },
@@ -1655429,10 +1656869,24 @@
     },
     {
       "original": "pl.java",
-      "renamed": "pl.java",
+      "renamed": "LoginMethodCatalog.java",
       "inputSha256": "e0817b6fb5eaff4bdf0d1aa812779a1d3e31bba3c5b2ae131e258918d7eac81c",
-      "outputSha256": "3e975e0328ada38c0fc1880a72d8d9d25a2c9c080e23ecb4f0047471fe8fe209",
+      "outputSha256": "9bc30efeec502e74185758831a4c2ff6b867d9eaa7b367d2611c9b1c36748efd",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:pl",
+          "original": "pl",
+          "renamed": "LoginMethodCatalog"
+        },
+        {
+          "start": 61,
+          "end": 64,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
         {
           "start": 112,
           "end": 115,
@@ -1655516,7 +1656970,7 @@
       "original": "pla.java",
       "renamed": "ValidationStatusIcon.java",
       "inputSha256": "9fa1eabb2464734cda4ac9cf7251ff0eb0f4444e59de72c81895275f1912716c",
-      "outputSha256": "042b1eb3e2471385e7f2b610ecae7fe5737091527912faf2c9a316e661dc7b03",
+      "outputSha256": "b7e3952876ba95cd06d9e40a36c8286fceff64210b4073229292c869b2fbe51c",
       "edits": [
         {
           "start": 50,
@@ -1655743,6 +1657197,13 @@
           "renamed": "animationTick"
         },
         {
+          "start": 1134,
+          "end": 1137,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 1138,
           "end": 1139,
           "symbol": "M:bia.a(B)V",
@@ -1655846,6 +1657307,13 @@
           "symbol": "F:pla.field_B:I",
           "original": "field_B",
           "renamed": "animationTick"
+        },
+        {
+          "start": 1496,
+          "end": 1499,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 1500,
@@ -1655953,6 +1657421,13 @@
           "renamed": "animationTick"
         },
         {
+          "start": 1859,
+          "end": 1862,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 1863,
           "end": 1864,
           "symbol": "M:bia.a(B)V",
@@ -1656042,6 +1657517,13 @@
           "symbol": "F:pla.field_B:I",
           "original": "field_B",
           "renamed": "animationTick"
+        },
+        {
+          "start": 2144,
+          "end": 2147,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 2148,
@@ -1656177,6 +1657659,13 @@
           "renamed": "animationTick"
         },
         {
+          "start": 2672,
+          "end": 2675,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 2676,
           "end": 2677,
           "symbol": "M:bia.a(B)V",
@@ -1656280,6 +1657769,13 @@
           "symbol": "F:pla.field_B:I",
           "original": "field_B",
           "renamed": "animationTick"
+        },
+        {
+          "start": 3061,
+          "end": 3064,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 3065,
@@ -1656387,6 +1657883,13 @@
           "renamed": "animationTick"
         },
         {
+          "start": 3451,
+          "end": 3454,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 3455,
           "end": 3456,
           "symbol": "M:bia.a(B)V",
@@ -1656476,6 +1657979,13 @@
           "symbol": "F:pla.field_B:I",
           "original": "field_B",
           "renamed": "animationTick"
+        },
+        {
+          "start": 3736,
+          "end": 3739,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 3740,
@@ -1657037,7 +1658547,7 @@
       "original": "pm.java",
       "renamed": "SetSelfDestructPrepareToggleCooldown.java",
       "inputSha256": "f595f851cb9127406366ea8837a83a13b1ab07073418b56f6697aff55d0df157",
-      "outputSha256": "7e9ebf921cc224c29588b551b28a87e8b8e41756219df01c359d527d425407ee",
+      "outputSha256": "61eab42d52bb04999d68c2580c30a7ee47f8a6a64140196b701e5be833c733f3",
       "edits": [
         {
           "start": 50,
@@ -1657073,6 +1658583,20 @@
           "symbol": "C:ap",
           "original": "ap",
           "renamed": "GetRepairModeActiveTime"
+        },
+        {
+          "start": 509,
+          "end": 512,
+          "symbol": "C:iob",
+          "original": "iob",
+          "renamed": "SoftwareProjectionSettings"
+        },
+        {
+          "start": 513,
+          "end": 520,
+          "symbol": "F:iob.field_f:I",
+          "original": "field_f",
+          "renamed": "projectionFractionBits"
         },
         {
           "start": 623,
@@ -1697451,7 +1698975,7 @@
       "original": "qpb.java",
       "renamed": "AlphaContainer.java",
       "inputSha256": "c07280c6a4be7766541faacda77e5c9c29390ae5a5cfe66f5011dc7d4c7b2243",
-      "outputSha256": "e61372a4262744db2f50042c6449d0a7235abaa4983b0c94560b8214521beb51",
+      "outputSha256": "bcb1b9bb46a9f95acb08dc53f22fb54d2e82cc23bc41e325f7c0e608bc7977b5",
       "edits": [
         {
           "start": 50,
@@ -1697755,6 +1699279,13 @@
           "renamed": "drawLayer"
         },
         {
+          "start": 2629,
+          "end": 2632,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 2633,
           "end": 2634,
           "symbol": "M:bia.a(B)V",
@@ -1697900,6 +1699431,13 @@
           "symbol": "M:shb.b(IIII)V",
           "original": "b",
           "renamed": "drawLayer"
+        },
+        {
+          "start": 3136,
+          "end": 3139,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 3140,
@@ -1707349,7 +1708887,7 @@
       "original": "rbb.java",
       "renamed": "UiTheme.java",
       "inputSha256": "25fa5bb65858ab5c6f9c7c4615e594417fcc1180dee578d8df246d60cf5c15d7",
-      "outputSha256": "f35b716fbcad665f0c06a861e428f8d3993e3429bc312a84587866dabdb73380",
+      "outputSha256": "a177da515a5f01346e468f3a8d772eae111a3a350229f8e8a4f514107080e502",
       "edits": [
         {
           "start": 50,
@@ -1707889,6 +1709427,13 @@
           "symbol": "M:rbb.a(B)V",
           "original": "a",
           "renamed": "popRasterState"
+        },
+        {
+          "start": 4423,
+          "end": 4426,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 4427,
@@ -1722501,7 +1724046,7 @@
       "original": "rma.java",
       "renamed": "MachineGunWeaponDefinition.java",
       "inputSha256": "e4e743dfa8650b827217a3ebb3147f3f4e648d97aebb44e39dd3ea4066b4cfe9",
-      "outputSha256": "339cc0711c6013ea6cf0e1387074afe208313669a01ab8a6ebd9c2c0a8e17285",
+      "outputSha256": "d0e7e5e7e3afc091f6f452fb0f96d6f90d751264a30f8f7184405fdef7e391cb",
       "edits": [
         {
           "start": 50,
@@ -1722530,6 +1724075,13 @@
           "symbol": "C:dja",
           "original": "dja",
           "renamed": "GameStateFactory"
+        },
+        {
+          "start": 163,
+          "end": 164,
+          "symbol": "M:rma.a(IB)V",
+          "original": "a",
+          "renamed": "sendNumericDebugRequest"
         },
         {
           "start": 204,
@@ -1722567,11 +1724119,25 @@
           "renamed": "MachineGunWeaponDefinition"
         },
         {
+          "start": 346,
+          "end": 347,
+          "symbol": "M:rma.a(IB)V",
+          "original": "a",
+          "renamed": "sendNumericDebugRequest"
+        },
+        {
           "start": 490,
           "end": 493,
           "symbol": "C:rma",
           "original": "rma",
           "renamed": "MachineGunWeaponDefinition"
+        },
+        {
+          "start": 494,
+          "end": 495,
+          "symbol": "M:rma.a(IB)V",
+          "original": "a",
+          "renamed": "sendNumericDebugRequest"
         },
         {
           "start": 535,
@@ -1722831,6 +1724397,20 @@
           "symbol": "M:rma.b(Z)I",
           "original": "b",
           "renamed": "getProjectileCount"
+        },
+        {
+          "start": 2600,
+          "end": 2603,
+          "symbol": "C:uab",
+          "original": "uab",
+          "renamed": "MouseInputUtilities"
+        },
+        {
+          "start": 2638,
+          "end": 2641,
+          "symbol": "C:uab",
+          "original": "uab",
+          "renamed": "MouseInputUtilities"
         },
         {
           "start": 2672,
@@ -1771148,7 +1772728,7 @@
       "original": "soa.java",
       "renamed": "ScrollPaneWidget.java",
       "inputSha256": "8480a02bc2970b59adf384e4464dc1a4b26a6b1b6fddb80cbf341f7e78f3210d",
-      "outputSha256": "5e60423054e15ee8d7860692c1c86f6642e295687cf3586c1449eab846ad35f6",
+      "outputSha256": "134ede729fe79b48aa3af6109a22f56ef7f433de23262ef0ec18c0a9f2ea72e6",
       "edits": [
         {
           "start": 50,
@@ -1771576,6 +1773156,34 @@
           "symbol": "C:ohb",
           "original": "ohb",
           "renamed": "SetThrusterParticleSpeedDownshift"
+        },
+        {
+          "start": 3012,
+          "end": 3014,
+          "symbol": "C:vw",
+          "original": "vw",
+          "renamed": "LobbyInviteControls"
+        },
+        {
+          "start": 3015,
+          "end": 3022,
+          "symbol": "F:vw.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "inviteButton"
+        },
+        {
+          "start": 3063,
+          "end": 3065,
+          "symbol": "C:vw",
+          "original": "vw",
+          "renamed": "LobbyInviteControls"
+        },
+        {
+          "start": 3066,
+          "end": 3073,
+          "symbol": "F:vw.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "inviteButton"
         },
         {
           "start": 3074,
@@ -1787851,16 +1789459,37 @@
     },
     {
       "original": "tb.java",
-      "renamed": "tb.java",
+      "renamed": "SocialPanelState.java",
       "inputSha256": "07fd72bad149c9cfb14a9037cf94d10abee4485fc16ea9928919056b03508eb7",
-      "outputSha256": "66431d70b0eb38d792c2cbe447d0838ff2b493303871fc1d45ac81a35333cba1",
+      "outputSha256": "50e2313093c0c285dc4a252bef8be0081e8b8596fd3ce30a82be10d5334ed5b9",
       "edits": [
+        {
+          "start": 44,
+          "end": 46,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
         {
           "start": 60,
           "end": 63,
           "symbol": "C:llb",
           "original": "llb",
           "renamed": "Widget"
+        },
+        {
+          "start": 64,
+          "end": 71,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
+        },
+        {
+          "start": 88,
+          "end": 95,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
         },
         {
           "start": 156,
@@ -1787870,11 +1789499,32 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 210,
+          "end": 217,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
+        },
+        {
           "start": 221,
           "end": 224,
           "symbol": "C:llb",
           "original": "llb",
           "renamed": "Widget"
+        },
+        {
+          "start": 242,
+          "end": 249,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
+        },
+        {
+          "start": 294,
+          "end": 301,
+          "symbol": "F:tb.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "socialPanelRoot"
         }
       ]
     },
@@ -1788268,7 +1789918,7 @@
       "original": "tbb.java",
       "renamed": "TrailHolder.java",
       "inputSha256": "9ab8f69544ecca8478460da445d646d4df1dd47a1e6f80ae9d45c0121e4babd4",
-      "outputSha256": "d5e3ef082f0f6c982a25df996132f71164aae8c5757f4345870a6d277454ffda",
+      "outputSha256": "f33c11ca4b6b3616e1ee7fa326b77148e287809b60186341a6636bf2cace496b",
       "edits": [
         {
           "start": 50,
@@ -1788579,6 +1790229,20 @@
           "renamed": "readUnsignedByte"
         },
         {
+          "start": 4671,
+          "end": 4674,
+          "symbol": "C:wja",
+          "original": "wja",
+          "renamed": "IncomingChatState"
+        },
+        {
+          "start": 4675,
+          "end": 4682,
+          "symbol": "F:wja.field_a:I",
+          "original": "field_a",
+          "renamed": "channelType"
+        },
+        {
           "start": 4748,
           "end": 4751,
           "symbol": "C:dab",
@@ -1788612,6 +1790276,20 @@
           "symbol": "M:ds.k(I)J",
           "original": "k",
           "renamed": "readLong"
+        },
+        {
+          "start": 4864,
+          "end": 4867,
+          "symbol": "C:wja",
+          "original": "wja",
+          "renamed": "IncomingChatState"
+        },
+        {
+          "start": 4868,
+          "end": 4875,
+          "symbol": "F:wja.field_a:I",
+          "original": "field_a",
+          "renamed": "channelType"
         },
         {
           "start": 4894,
@@ -1788705,6 +1790383,20 @@
           "renamed": "LegacyOpenGlEnvironmentMappedWaterEffect"
         },
         {
+          "start": 5302,
+          "end": 5305,
+          "symbol": "C:wja",
+          "original": "wja",
+          "renamed": "IncomingChatState"
+        },
+        {
+          "start": 5306,
+          "end": 5313,
+          "symbol": "F:wja.field_a:I",
+          "original": "field_a",
+          "renamed": "channelType"
+        },
+        {
           "start": 5332,
           "end": 5335,
           "symbol": "C:psb",
@@ -1788731,6 +1790423,20 @@
           "symbol": "M:ds.a(I)Ljava/lang/String;",
           "original": "a",
           "renamed": "readString"
+        },
+        {
+          "start": 5427,
+          "end": 5430,
+          "symbol": "C:wja",
+          "original": "wja",
+          "renamed": "IncomingChatState"
+        },
+        {
+          "start": 5431,
+          "end": 5438,
+          "symbol": "F:wja.field_a:I",
+          "original": "field_a",
+          "renamed": "channelType"
         },
         {
           "start": 5459,
@@ -1801718,7 +1803424,7 @@
       "original": "tjb.java",
       "renamed": "QuickChatMenuWidget.java",
       "inputSha256": "55fe2b4d2291ac8c495f9f9c950ed12c8a933807fcf5b0957625c489e4fad43d",
-      "outputSha256": "7a0c1cd9a3d68d1b225458cc29b04ffe54ebad10d3a4212c0282041d0963bec2",
+      "outputSha256": "e30ad1de98ad9075fa8f1f79dff0404cc626bbcf5473fe69622bee997c150776",
       "edits": [
         {
           "start": 50,
@@ -1802251,6 +1803957,13 @@
           "symbol": "C:wha",
           "original": "wha",
           "renamed": "AsteroidFactory"
+        },
+        {
+          "start": 3149,
+          "end": 3150,
+          "symbol": "M:wha.a(I)V",
+          "original": "a",
+          "renamed": "createQuickChatHelpWindow"
         },
         {
           "start": 3173,
@@ -1807983,7 +1809696,7 @@
       "original": "tm.java",
       "renamed": "GetMissionTerrainSpaceProbability.java",
       "inputSha256": "bbd82ea598a89e37eec0e2b68ba69f77f17d15eacfba5caf1f601d373f84b6dd",
-      "outputSha256": "73917491d45cc8719ab79afd3f10bdccc8fb965dc477c8c64e3dd6a3d0a8fdbb",
+      "outputSha256": "88e8c96953764efdab84ac1c9a5549730a2d22659757fb10b878ef62c4e3654b",
       "edits": [
         {
           "start": 50,
@@ -1808042,6 +1809755,13 @@
           "renamed": "pop"
         },
         {
+          "start": 324,
+          "end": 327,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 328,
           "end": 329,
           "symbol": "M:bia.a(B)V",
@@ -1808082,6 +1809802,13 @@
           "symbol": "M:kla.a(Z)V",
           "original": "a",
           "renamed": "pop"
+        },
+        {
+          "start": 476,
+          "end": 479,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 480,
@@ -1814130,7 +1815857,7 @@
       "original": "ttb.java",
       "renamed": "StripedProgressBar.java",
       "inputSha256": "31397dca9f142f3678e4647aee08e0f79126ab032424650f0ce4bfbd9a89b39f",
-      "outputSha256": "341a2d589e442597a30cb9378986d877a272398c33a82e5016a9ae93a74619ac",
+      "outputSha256": "104c7376f3274c17ad3746f88f39c9f1fed00d8ab779197ec2e1bb649154d3e2",
       "edits": [
         {
           "start": 50,
@@ -1814448,6 +1816175,13 @@
           "renamed": "stripeWidth"
         },
         {
+          "start": 1915,
+          "end": 1918,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 1919,
           "end": 1920,
           "symbol": "M:bia.a(B)V",
@@ -1814707,6 +1816441,13 @@
           "renamed": "drawPixel"
         },
         {
+          "start": 4364,
+          "end": 4367,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 4368,
           "end": 4369,
           "symbol": "M:bia.a(B)V",
@@ -1814817,6 +1816558,13 @@
           "symbol": "F:ttb.field_C:[Lphb;",
           "original": "field_C",
           "renamed": "stripePatterns"
+        },
+        {
+          "start": 4953,
+          "end": 4956,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 4957,
@@ -1815141,6 +1816889,13 @@
           "renamed": "width"
         },
         {
+          "start": 6849,
+          "end": 6852,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 6853,
           "end": 6854,
           "symbol": "M:bia.a(B)V",
@@ -1815237,6 +1816992,13 @@
           "symbol": "M:phb.b(II)V",
           "original": "b",
           "renamed": "drawMultiply"
+        },
+        {
+          "start": 7119,
+          "end": 7122,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 7123,
@@ -1815377,6 +1817139,13 @@
           "symbol": "M:phb.b(II)V",
           "original": "b",
           "renamed": "drawMultiply"
+        },
+        {
+          "start": 7580,
+          "end": 7583,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 7584,
@@ -1818317,16 +1820086,37 @@
     },
     {
       "original": "uab.java",
-      "renamed": "uab.java",
+      "renamed": "MouseInputUtilities.java",
       "inputSha256": "1603f464bdd6d37b5486afad8b8cfcb28a0ed24f6270b16770e1d2c91e7cdf3c",
-      "outputSha256": "c8c0aaccfbc0d0bd5e06a80f8bccf8f3c4243f711d8d5bf4dcc64b7e253d0beb",
+      "outputSha256": "c6b8d58fae4bf6fa9c69840e8daa76bf97883b240e8e3b8d3cefecfa6f123c2f",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:uab",
+          "original": "uab",
+          "renamed": "MouseInputUtilities"
+        },
         {
           "start": 131,
           "end": 132,
           "symbol": "M:uab.a(I)V",
           "original": "a",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 309,
+          "end": 310,
+          "symbol": "M:uab.a(B)Z",
+          "original": "a",
+          "renamed": "hasMenuInitializationStarted"
+        },
+        {
+          "start": 364,
+          "end": 367,
+          "symbol": "C:uab",
+          "original": "uab",
+          "renamed": "MouseInputUtilities"
         },
         {
           "start": 368,
@@ -1818343,11 +1820133,25 @@
           "renamed": "SetAngularForceDownshift"
         },
         {
+          "start": 396,
+          "end": 403,
+          "symbol": "F:knb.field_o:Z",
+          "original": "field_o",
+          "renamed": "menuInitializationStarted"
+        },
+        {
           "start": 430,
           "end": 433,
           "symbol": "C:knb",
           "original": "knb",
           "renamed": "SetAngularForceDownshift"
+        },
+        {
+          "start": 434,
+          "end": 441,
+          "symbol": "F:knb.field_o:Z",
+          "original": "field_o",
+          "renamed": "menuInitializationStarted"
         },
         {
           "start": 472,
@@ -1818369,6 +1820173,20 @@
           "symbol": "C:wj",
           "original": "wj",
           "renamed": "GetDebrisFoundInPairs"
+        },
+        {
+          "start": 677,
+          "end": 680,
+          "symbol": "C:uab",
+          "original": "uab",
+          "renamed": "MouseInputUtilities"
+        },
+        {
+          "start": 681,
+          "end": 682,
+          "symbol": "M:uab.a(B)Z",
+          "original": "a",
+          "renamed": "hasMenuInitializationStarted"
         },
         {
           "start": 744,
@@ -1818678,7 +1820496,7 @@
       "original": "uba.java",
       "renamed": "SetRadialMenuRadius.java",
       "inputSha256": "9d33fc185a257f8bb7556865b9490c0760cb50652739c0dc6fd393ef9e8a0104",
-      "outputSha256": "e47946e9cc062ad520f3748ad478df0f6923fe281dce1ecfcf94dfef7dae75dc",
+      "outputSha256": "f76e3977c050ed61aaeabe31815b35e8313fdb452d707fff1d9ab8707683ca14",
       "edits": [
         {
           "start": 50,
@@ -1818882,6 +1820700,13 @@
           "symbol": "F:dma.field_j:I",
           "original": "field_j",
           "renamed": "height"
+        },
+        {
+          "start": 913,
+          "end": 916,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 917,
@@ -1820347,7 +1822172,7 @@
       "original": "uca.java",
       "renamed": "GameSession.java",
       "inputSha256": "6411540835dfa3b22b2bd717fb0fa6399b771ecbf519ebf16dcb3d8f7f24035c",
-      "outputSha256": "f32482817939d338a52ac939488a42d4ca3e9060e2db45b153d5a8869f5d9a6e",
+      "outputSha256": "ac78d755bf3c214501372085ff6b3649f07062905e436126bb5b1ea6e7983e0a",
       "edits": [
         {
           "start": 71,
@@ -1823150,6 +1824975,13 @@
           "kind": "label"
         },
         {
+          "start": 25970,
+          "end": 25973,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 25974,
           "end": 25975,
           "symbol": "M:bia.a(B)V",
@@ -1823465,6 +1825297,13 @@
           "symbol": "C:li",
           "original": "li",
           "renamed": "OpenGlTexture1D"
+        },
+        {
+          "start": 28960,
+          "end": 28963,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 28964,
@@ -1823789,6 +1825628,13 @@
           "symbol": "M:aja.a(II)V",
           "original": "a",
           "renamed": "draw"
+        },
+        {
+          "start": 30848,
+          "end": 30851,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 30852,
@@ -1842677,6 +1844523,13 @@
           "renamed": "localPlayerIndex"
         },
         {
+          "start": 232186,
+          "end": 232189,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
+        },
+        {
           "start": 232190,
           "end": 232191,
           "symbol": "M:bia.a(ZBI)Z",
@@ -1849378,6 +1851231,13 @@
           "renamed": "HardpointDefinition"
         },
         {
+          "start": 304868,
+          "end": 304869,
+          "symbol": "M:lsb.a(Z)V",
+          "original": "a",
+          "renamed": "closeChatInputDialog"
+        },
+        {
           "start": 304915,
           "end": 304916,
           "symbol": "M:llb.b(ZI)V",
@@ -1853861,7 +1855721,7 @@
       "original": "uea.java",
       "renamed": "UiStatefulStyle.java",
       "inputSha256": "873935c5780362b8f45d12a3b08af0bdd0cec9ef803970409b242cb459a42c43",
-      "outputSha256": "0ae038187bf98d563c42cd727309ecef1ec140d48c15f89b4c03f5697dffcc56",
+      "outputSha256": "0808204dccfaa17ef4755e0572d9a296b4369a43bae1ca052e053c34d639ded5",
       "edits": [
         {
           "start": 50,
@@ -1855073,6 +1856933,13 @@
           "symbol": "M:vv.a(Luea;ZILshb;I)V",
           "original": "a",
           "renamed": "draw"
+        },
+        {
+          "start": 11467,
+          "end": 11470,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 11471,
@@ -1858367,7 +1860234,7 @@
       "original": "ug.java",
       "renamed": "SetFogOfWarOn.java",
       "inputSha256": "4bf494d1caa130b0cf8ee14e0a4e5a826a1c7d159152f51b8f502d41dc05c948",
-      "outputSha256": "b4d2de540be7fed0302d244e15ee18d91d38a754069ffffaa1ed32bbcc20f53a",
+      "outputSha256": "893599f7f5c3d053eef6ffd6d72950920f270bc2e80d95d7c099c6b204749f45",
       "edits": [
         {
           "start": 50,
@@ -1859616,6 +1861483,13 @@
           "renamed": "LegacyOpenGlUnderwaterEffect"
         },
         {
+          "start": 13378,
+          "end": 13381,
+          "symbol": "C:uab",
+          "original": "uab",
+          "renamed": "MouseInputUtilities"
+        },
+        {
           "start": 13454,
           "end": 13457,
           "symbol": "C:klb",
@@ -1859740,6 +1861614,13 @@
           "symbol": "C:lr",
           "original": "lr",
           "renamed": "GetMachineGunAimspeed"
+        },
+        {
+          "start": 14867,
+          "end": 14870,
+          "symbol": "C:wja",
+          "original": "wja",
+          "renamed": "IncomingChatState"
         },
         {
           "start": 14946,
@@ -1860398,6 +1862279,13 @@
           "symbol": "C:oq",
           "original": "oq",
           "renamed": "Particle"
+        },
+        {
+          "start": 22694,
+          "end": 22697,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 22776,
@@ -1870494,7 +1872382,7 @@
       "original": "uo.java",
       "renamed": "SetOndamageParticleFadestart.java",
       "inputSha256": "13845432fe9f658bb90ebea08b0e72b0f62934874f5dafaca692449f6f6424a3",
-      "outputSha256": "07b1282fff969e55cbf5e51f3e9d0fb201e8202a0914db16d61395f21614aa54",
+      "outputSha256": "8bb12cddab807ac57baf5b49fa2d999b303ae4d62129cfdcc37c47d306988b35",
       "edits": [
         {
           "start": 50,
@@ -1871160,6 +1873048,13 @@
           "symbol": "M:phb.c(II)V",
           "original": "c",
           "renamed": "drawOpaque"
+        },
+        {
+          "start": 4201,
+          "end": 4204,
+          "symbol": "C:bia",
+          "original": "bia",
+          "renamed": "SoftwareRasterStateRestorer"
         },
         {
           "start": 4205,
@@ -1892022,16 +1893917,37 @@
     },
     {
       "original": "vhb.java",
-      "renamed": "vhb.java",
+      "renamed": "SocialTabResources.java",
       "inputSha256": "e9ccd18a6b6bac53b167dc5c19ad842ab74b6f06a4e4b891ea72cb26e6902743",
-      "outputSha256": "836eeebff3cc2ba99b56d0cb84b3c269c0e6a04ff26c5a79a5e973d5bfeed8f0",
+      "outputSha256": "0da98ffc10dbc89f9e9fcaec2910adc92c670be06c70aeeea04e5bfe2c85624c",
       "edits": [
+        {
+          "start": 44,
+          "end": 47,
+          "symbol": "C:vhb",
+          "original": "vhb",
+          "renamed": "SocialTabResources"
+        },
+        {
+          "start": 56,
+          "end": 58,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
         {
           "start": 72,
           "end": 75,
           "symbol": "C:llb",
           "original": "llb",
           "renamed": "Widget"
+        },
+        {
+          "start": 76,
+          "end": 83,
+          "symbol": "F:vhb.field_c:Lllb;",
+          "original": "field_c",
+          "renamed": "tabTemplate"
         },
         {
           "start": 96,
@@ -1892041,6 +1893957,13 @@
           "renamed": "NineSliceSprite"
         },
         {
+          "start": 148,
+          "end": 151,
+          "symbol": "M:vhb.<init>()V",
+          "original": "vhb",
+          "renamed": "SocialTabResources"
+        },
+        {
           "start": 186,
           "end": 187,
           "symbol": "M:vhb.b(I)V",
@@ -1892048,11 +1893971,32 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 243,
+          "end": 246,
+          "symbol": "C:vhb",
+          "original": "vhb",
+          "renamed": "SocialTabResources"
+        },
+        {
           "start": 247,
           "end": 248,
           "symbol": "M:vhb.b(I)V",
           "original": "b",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 291,
+          "end": 298,
+          "symbol": "F:vhb.field_c:Lllb;",
+          "original": "field_c",
+          "renamed": "tabTemplate"
+        },
+        {
+          "start": 367,
+          "end": 374,
+          "symbol": "F:vhb.field_c:Lllb;",
+          "original": "field_c",
+          "renamed": "tabTemplate"
         }
       ]
     },
@@ -1892707,7 +1894651,7 @@
       "original": "vj.java",
       "renamed": "SetPlayerRepairAmount.java",
       "inputSha256": "ab3d323cccb0e05b283979bc9c5163486f464724aaf912a1845e3d8099294983",
-      "outputSha256": "86de9b1c049b1d3804eee1aeed76fafa37054b083f9f8b560abb9057bb637ee1",
+      "outputSha256": "3cf54c4080f94c9834082bf4a57b902294a845e814782b42232d8af488fac812",
       "edits": [
         {
           "start": 50,
@@ -1892815,6 +1894759,62 @@
           "renamed": "height"
         },
         {
+          "start": 473,
+          "end": 475,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 476,
+          "end": 483,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
+        },
+        {
+          "start": 499,
+          "end": 501,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 502,
+          "end": 509,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
+        },
+        {
+          "start": 512,
+          "end": 514,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 515,
+          "end": 522,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
+        },
+        {
+          "start": 546,
+          "end": 548,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 549,
+          "end": 556,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
+        },
+        {
           "start": 580,
           "end": 582,
           "symbol": "C:cs",
@@ -1892827,6 +1894827,20 @@
           "symbol": "M:cs.b(B)V",
           "original": "b",
           "renamed": "updateAnimatedPanelLayout"
+        },
+        {
+          "start": 660,
+          "end": 662,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 663,
+          "end": 670,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
         },
         {
           "start": 692,
@@ -1892843,6 +1894857,34 @@
           "renamed": "updateAnimatedPanelLayout"
         },
         {
+          "start": 773,
+          "end": 775,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 776,
+          "end": 783,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
+        },
+        {
+          "start": 803,
+          "end": 805,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 806,
+          "end": 813,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
+        },
+        {
           "start": 835,
           "end": 837,
           "symbol": "C:cs",
@@ -1892855,6 +1894897,48 @@
           "symbol": "M:cs.b(B)V",
           "original": "b",
           "renamed": "updateAnimatedPanelLayout"
+        },
+        {
+          "start": 901,
+          "end": 903,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 904,
+          "end": 911,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
+        },
+        {
+          "start": 914,
+          "end": 916,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 917,
+          "end": 924,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
+        },
+        {
+          "start": 944,
+          "end": 946,
+          "symbol": "C:tb",
+          "original": "tb",
+          "renamed": "SocialPanelState"
+        },
+        {
+          "start": 947,
+          "end": 954,
+          "symbol": "F:tb.field_b:I",
+          "original": "field_b",
+          "renamed": "chatPanelProgress"
         },
         {
           "start": 974,
@@ -1899295,7 +1901379,7 @@
       "original": "vna.java",
       "renamed": "TrailHolderFactory.java",
       "inputSha256": "00ef2260643ad1c5872449f870e91ed5b4926f61359fb9e1d9feca922e77ca47",
-      "outputSha256": "a13fe71a008d1e95d06cd6d9ae0b6be289d5338d215ef6a8b16f08e1f28130a9",
+      "outputSha256": "37c66c9755683e75e97acdd0fbf4ecdb26199b80167365a37c25fbffda7ae317",
       "edits": [
         {
           "start": 50,
@@ -1899310,6 +1901394,13 @@
           "symbol": "C:dja",
           "original": "dja",
           "renamed": "GameStateFactory"
+        },
+        {
+          "start": 92,
+          "end": 93,
+          "symbol": "M:vna.b(B)I",
+          "original": "b",
+          "renamed": "getOutgoingLagMillis"
         },
         {
           "start": 169,
@@ -1899373,6 +1901464,13 @@
           "symbol": "C:vna",
           "original": "vna",
           "renamed": "TrailHolderFactory"
+        },
+        {
+          "start": 417,
+          "end": 418,
+          "symbol": "M:vna.b(B)I",
+          "original": "b",
+          "renamed": "getOutgoingLagMillis"
         },
         {
           "start": 449,
@@ -1903907,7 +1906005,7 @@
       "original": "vrb.java",
       "renamed": "SetRepairModeActiveTime.java",
       "inputSha256": "fffdb75e26ac2da28d443d1ecb59b592e16ea0bfcefe74d3140aa4599891c3fe",
-      "outputSha256": "4093ca8da0e8f03150ca3af097285c19880c16ebc956d8af3c75bb2ab5e8b1f8",
+      "outputSha256": "f80d265e6dd545c13b6e1f653f1787dc18167a9c42542444fa7f3925f64727be",
       "edits": [
         {
           "start": 50,
@@ -1904160,6 +1906258,13 @@
           "symbol": "C:llb",
           "original": "llb",
           "renamed": "Widget"
+        },
+        {
+          "start": 3567,
+          "end": 3570,
+          "symbol": "C:wja",
+          "original": "wja",
+          "renamed": "IncomingChatState"
         },
         {
           "start": 3599,
@@ -1905014,6 +1907119,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "GetGrapplingHooksDamageableBySourcePlayer"
+        },
+        {
+          "start": 6207,
+          "end": 6210,
+          "symbol": "C:uab",
+          "original": "uab",
+          "renamed": "MouseInputUtilities"
         },
         {
           "start": 6329,
@@ -1906486,6 +1908598,13 @@
           "renamed": "Sprite"
         },
         {
+          "start": 10365,
+          "end": 10368,
+          "symbol": "C:wja",
+          "original": "wja",
+          "renamed": "IncomingChatState"
+        },
+        {
           "start": 10530,
           "end": 10533,
           "symbol": "C:ceb",
@@ -1906752,6 +1908871,20 @@
           "renamed": "textWidget"
         },
         {
+          "start": 12530,
+          "end": 12532,
+          "symbol": "C:vw",
+          "original": "vw",
+          "renamed": "LobbyInviteControls"
+        },
+        {
+          "start": 12533,
+          "end": 12540,
+          "symbol": "F:vw.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "inviteButton"
+        },
+        {
           "start": 12547,
           "end": 12550,
           "symbol": "C:llb",
@@ -1907009,6 +1909142,20 @@
           "symbol": "M:llb.b(ILllb;)V",
           "original": "b",
           "renamed": "addChild"
+        },
+        {
+          "start": 13602,
+          "end": 13604,
+          "symbol": "C:vw",
+          "original": "vw",
+          "renamed": "LobbyInviteControls"
+        },
+        {
+          "start": 13605,
+          "end": 13612,
+          "symbol": "F:vw.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "inviteButton"
         },
         {
           "start": 13625,
@@ -1910187,10 +1912334,17 @@
     },
     {
       "original": "vw.java",
-      "renamed": "vw.java",
+      "renamed": "LobbyInviteControls.java",
       "inputSha256": "6ad4a66e84618f95fcf178f590199608b748f52fe2db01b99ce14f84eba0a935",
-      "outputSha256": "4899c89777a39bdc164d8f8551b3d0c5264787a2716c8ddaecafaa95c2abbee9",
+      "outputSha256": "e9f68694b5b6878d767c39dd36eb733cfeb2d1154d1eedd591ef64e44b812da6",
       "edits": [
+        {
+          "start": 50,
+          "end": 52,
+          "symbol": "C:vw",
+          "original": "vw",
+          "renamed": "LobbyInviteControls"
+        },
         {
           "start": 66,
           "end": 69,
@@ -1910199,11 +1912353,32 @@
           "renamed": "Widget"
         },
         {
+          "start": 70,
+          "end": 77,
+          "symbol": "F:vw.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "inviteButton"
+        },
+        {
           "start": 138,
           "end": 139,
           "symbol": "M:vw.a(B)V",
           "original": "a",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 163,
+          "end": 170,
+          "symbol": "F:vw.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "inviteButton"
+        },
+        {
+          "start": 217,
+          "end": 224,
+          "symbol": "F:vw.field_a:Lllb;",
+          "original": "field_a",
+          "renamed": "inviteButton"
         },
         {
           "start": 228,
@@ -1929065,7 +1931240,7 @@
       "original": "wha.java",
       "renamed": "AsteroidFactory.java",
       "inputSha256": "8ad6da0189e2732fffaae3a6f59fc33d8aa4292e00d3286f353ec02856a38843",
-      "outputSha256": "119ddbfbe405f7fea7dfd47b5d9a8913837fb93993c6fc1b95c5dbfc06aa404e",
+      "outputSha256": "144d533829678600cbc729104ee71d8594ee42c55a256002f0c0b3b1b55eea53",
       "edits": [
         {
           "start": 50,
@@ -1929122,6 +1931297,13 @@
           "symbol": "C:crb",
           "original": "crb",
           "renamed": "Asteroid"
+        },
+        {
+          "start": 296,
+          "end": 297,
+          "symbol": "M:wha.a(I)V",
+          "original": "a",
+          "renamed": "createQuickChatHelpWindow"
         },
         {
           "start": 353,
@@ -1929187,11 +1931369,25 @@
           "renamed": "GetMissionDebrisDefaultProbability"
         },
         {
+          "start": 511,
+          "end": 512,
+          "symbol": "M:wha.a(IZI)V",
+          "original": "a",
+          "renamed": "buildCanvasMenu"
+        },
+        {
           "start": 1932,
           "end": 1934,
           "symbol": "C:iv",
           "original": "iv",
           "renamed": "GetMassDriverAimspeed"
+        },
+        {
+          "start": 1935,
+          "end": 1942,
+          "symbol": "F:iv.field_o:I",
+          "original": "field_o",
+          "renamed": "canvasMenuMode"
         },
         {
           "start": 1963,
@@ -1929201,11 +1931397,25 @@
           "renamed": "SetAngularForceDownshift"
         },
         {
+          "start": 1967,
+          "end": 1974,
+          "symbol": "F:knb.field_o:Z",
+          "original": "field_o",
+          "renamed": "menuInitializationStarted"
+        },
+        {
           "start": 1997,
           "end": 1999,
           "symbol": "C:iv",
           "original": "iv",
           "renamed": "GetMassDriverAimspeed"
+        },
+        {
+          "start": 2000,
+          "end": 2007,
+          "symbol": "F:iv.field_o:I",
+          "original": "field_o",
+          "renamed": "canvasMenuMode"
         },
         {
           "start": 2039,
@@ -1929418,6 +1931628,13 @@
           "renamed": "GetMassDriverAimspeed"
         },
         {
+          "start": 2786,
+          "end": 2793,
+          "symbol": "F:iv.field_o:I",
+          "original": "field_o",
+          "renamed": "canvasMenuMode"
+        },
+        {
           "start": 2820,
           "end": 2823,
           "symbol": "C:wva",
@@ -1929586,11 +1931803,25 @@
           "renamed": "GetMassDriverAimspeed"
         },
         {
+          "start": 3444,
+          "end": 3451,
+          "symbol": "F:iv.field_o:I",
+          "original": "field_o",
+          "renamed": "canvasMenuMode"
+        },
+        {
           "start": 3476,
           "end": 3478,
           "symbol": "C:iv",
           "original": "iv",
           "renamed": "GetMassDriverAimspeed"
+        },
+        {
+          "start": 3479,
+          "end": 3486,
+          "symbol": "F:iv.field_o:I",
+          "original": "field_o",
+          "renamed": "canvasMenuMode"
         },
         {
           "start": 3514,
@@ -1929810,6 +1932041,13 @@
           "renamed": "GetMassDriverAimspeed"
         },
         {
+          "start": 4351,
+          "end": 4358,
+          "symbol": "F:iv.field_o:I",
+          "original": "field_o",
+          "renamed": "canvasMenuMode"
+        },
+        {
           "start": 4392,
           "end": 4395,
           "symbol": "C:wva",
@@ -1929976,6 +1932214,13 @@
           "symbol": "C:iv",
           "original": "iv",
           "renamed": "GetMassDriverAimspeed"
+        },
+        {
+          "start": 5064,
+          "end": 5071,
+          "symbol": "F:iv.field_o:I",
+          "original": "field_o",
+          "renamed": "canvasMenuMode"
         },
         {
           "start": 5170,
@@ -1930797,6 +1933042,13 @@
           "renamed": "ReferenceTrackingControl"
         },
         {
+          "start": 9564,
+          "end": 9571,
+          "symbol": "F:mba.field_a:Lae;",
+          "original": "field_a",
+          "renamed": "menuInputState"
+        },
+        {
           "start": 9572,
           "end": 9579,
           "symbol": "F:ae.field_c:I",
@@ -1930874,6 +1933126,13 @@
           "renamed": "GetMassDriverAimspeed"
         },
         {
+          "start": 10081,
+          "end": 10088,
+          "symbol": "F:iv.field_o:I",
+          "original": "field_o",
+          "renamed": "canvasMenuMode"
+        },
+        {
           "start": 10117,
           "end": 10119,
           "symbol": "C:tj",
@@ -1930942,6 +1933201,13 @@
           "symbol": "C:mba",
           "original": "mba",
           "renamed": "ReferenceTrackingControl"
+        },
+        {
+          "start": 11095,
+          "end": 11102,
+          "symbol": "F:mba.field_a:Lae;",
+          "original": "field_a",
+          "renamed": "menuInputState"
         },
         {
           "start": 11103,
@@ -1931224,11 +1933490,25 @@
           "renamed": "GetMassDriverAimspeed"
         },
         {
+          "start": 12638,
+          "end": 12645,
+          "symbol": "F:iv.field_o:I",
+          "original": "field_o",
+          "renamed": "canvasMenuMode"
+        },
+        {
           "start": 12661,
           "end": 12664,
           "symbol": "C:mba",
           "original": "mba",
           "renamed": "ReferenceTrackingControl"
+        },
+        {
+          "start": 12665,
+          "end": 12672,
+          "symbol": "F:mba.field_a:Lae;",
+          "original": "field_a",
+          "renamed": "menuInputState"
         },
         {
           "start": 12673,
@@ -1931271,6 +1933551,13 @@
           "symbol": "C:mba",
           "original": "mba",
           "renamed": "ReferenceTrackingControl"
+        },
+        {
+          "start": 12764,
+          "end": 12771,
+          "symbol": "F:mba.field_a:Lae;",
+          "original": "field_a",
+          "renamed": "menuInputState"
         },
         {
           "start": 12772,
@@ -1934298,16 +1936585,37 @@
     },
     {
       "original": "wja.java",
-      "renamed": "wja.java",
+      "renamed": "IncomingChatState.java",
       "inputSha256": "0e3167a3f8b682cc47377bac6f52b9804e8d221bec036226c3f4e9258feda84a",
-      "outputSha256": "cce7eb7b7b1e1a49590d0949c9db72b3770eed2204a2a0596eeee5852b4a5fcd",
+      "outputSha256": "05d231f242dacd286e800c26a8e635c90be233fec3db29d54b9768866e04284e",
       "edits": [
+        {
+          "start": 50,
+          "end": 53,
+          "symbol": "C:wja",
+          "original": "wja",
+          "renamed": "IncomingChatState"
+        },
+        {
+          "start": 95,
+          "end": 102,
+          "symbol": "F:wja.field_a:I",
+          "original": "field_a",
+          "renamed": "channelType"
+        },
         {
           "start": 192,
           "end": 193,
           "symbol": "M:wja.a(Z)V",
           "original": "a",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 244,
+          "end": 247,
+          "symbol": "C:wja",
+          "original": "wja",
+          "renamed": "IncomingChatState"
         },
         {
           "start": 248,
@@ -1935110,7 +1937418,7 @@
       "original": "wl.java",
       "renamed": "SetCountermeasuresPulseRadius.java",
       "inputSha256": "a727533e1f264835a27c4da171848cbb89a323dcaa036acccd88516430e7e3ae",
-      "outputSha256": "8351a2e4efff3c04c4f124c6facf912f1077ed203005c448da194a3dd64e73b1",
+      "outputSha256": "3f19a3bd78c462d00b5b36d603616e95403d05c1b4833eb24ca877d9b18cd4bc",
       "edits": [
         {
           "start": 50,
@@ -1935295,6 +1937603,34 @@
           "renamed": "SetCountermeasuresPulseRadius"
         },
         {
+          "start": 5509,
+          "end": 5512,
+          "symbol": "C:iob",
+          "original": "iob",
+          "renamed": "SoftwareProjectionSettings"
+        },
+        {
+          "start": 5513,
+          "end": 5520,
+          "symbol": "F:iob.field_f:I",
+          "original": "field_f",
+          "renamed": "projectionFractionBits"
+        },
+        {
+          "start": 5754,
+          "end": 5757,
+          "symbol": "C:iob",
+          "original": "iob",
+          "renamed": "SoftwareProjectionSettings"
+        },
+        {
+          "start": 5758,
+          "end": 5765,
+          "symbol": "F:iob.field_f:I",
+          "original": "field_f",
+          "renamed": "projectionFractionBits"
+        },
+        {
           "start": 5794,
           "end": 5797,
           "symbol": "C:bfb",
@@ -1935359,6 +1937695,34 @@
           "renamed": "vertexZ"
         },
         {
+          "start": 6268,
+          "end": 6271,
+          "symbol": "C:iob",
+          "original": "iob",
+          "renamed": "SoftwareProjectionSettings"
+        },
+        {
+          "start": 6272,
+          "end": 6279,
+          "symbol": "F:iob.field_f:I",
+          "original": "field_f",
+          "renamed": "projectionFractionBits"
+        },
+        {
+          "start": 6399,
+          "end": 6402,
+          "symbol": "C:iob",
+          "original": "iob",
+          "renamed": "SoftwareProjectionSettings"
+        },
+        {
+          "start": 6403,
+          "end": 6410,
+          "symbol": "F:iob.field_f:I",
+          "original": "field_f",
+          "renamed": "projectionFractionBits"
+        },
+        {
           "start": 6719,
           "end": 6721,
           "symbol": "C:cl",
@@ -1935394,11 +1937758,39 @@
           "renamed": "SpinningBladeWeaponDefinition"
         },
         {
+          "start": 7387,
+          "end": 7390,
+          "symbol": "C:iob",
+          "original": "iob",
+          "renamed": "SoftwareProjectionSettings"
+        },
+        {
+          "start": 7391,
+          "end": 7398,
+          "symbol": "F:iob.field_f:I",
+          "original": "field_f",
+          "renamed": "projectionFractionBits"
+        },
+        {
           "start": 7418,
           "end": 7420,
           "symbol": "C:gw",
           "original": "gw",
           "renamed": "WeaveTextureOperation"
+        },
+        {
+          "start": 7465,
+          "end": 7468,
+          "symbol": "C:iob",
+          "original": "iob",
+          "renamed": "SoftwareProjectionSettings"
+        },
+        {
+          "start": 7469,
+          "end": 7476,
+          "symbol": "F:iob.field_f:I",
+          "original": "field_f",
+          "renamed": "projectionFractionBits"
         },
         {
           "start": 7496,
@@ -1941916,7 +1944308,7 @@
       "original": "wnb.java",
       "renamed": "LoadBlackboxRecording.java",
       "inputSha256": "603cf8ad3d19eddf23d639b870692de61174172fc28cc10386d4350edf633232",
-      "outputSha256": "6d0566fb03766e1ea850e158bf059964ba740d83d03e2eeb93b78b8afa65f127",
+      "outputSha256": "be2afe38a459b9ad371f1aa9cd227aaa23ab397246570d05ce0cea095981f645",
       "edits": [
         {
           "start": 50,
@@ -1942260,6 +1944652,13 @@
           "symbol": "C:rma",
           "original": "rma",
           "renamed": "MachineGunWeaponDefinition"
+        },
+        {
+          "start": 2889,
+          "end": 2890,
+          "symbol": "M:rma.a(IB)V",
+          "original": "a",
+          "renamed": "sendNumericDebugRequest"
         },
         {
           "start": 2891,
@@ -1943428,7 +1945827,7 @@
       "original": "wq.java",
       "renamed": "GetReverbDry.java",
       "inputSha256": "a2f8e8f44d9463dde95dd8777e818d1cc3fbced259a1c026d91b0453b6e78d4b",
-      "outputSha256": "cb3a0098f3a7c957c6f510aecc3cb3d05e6d43128abd714c25a03976f52531f9",
+      "outputSha256": "6f75dcf3759681da2d7a33d4c3e629856e326d9b53f6ac9b165a33dbd3bff599",
       "edits": [
         {
           "start": 50,
@@ -1943606,6 +1946005,13 @@
           "renamed": "OpenGlVertexBufferObject"
         },
         {
+          "start": 1525,
+          "end": 1526,
+          "symbol": "M:oaa.a(B)Z",
+          "original": "a",
+          "renamed": "isNameEntryDialogOpen"
+        },
+        {
           "start": 1602,
           "end": 1605,
           "symbol": "C:crb",
@@ -1943641,6 +1946047,13 @@
           "renamed": "OpenGlVertexBufferObject"
         },
         {
+          "start": 1841,
+          "end": 1842,
+          "symbol": "M:oaa.a(B)Z",
+          "original": "a",
+          "renamed": "isNameEntryDialogOpen"
+        },
+        {
           "start": 1912,
           "end": 1915,
           "symbol": "C:crb",
@@ -1943667,7 +1946080,7 @@
       "original": "wqa.java",
       "renamed": "BodyInZoneConditionFactory.java",
       "inputSha256": "0f681e9c6f8904d1b6bb38ff973dea97cc474b230a1c18d292a32cb58609e8fd",
-      "outputSha256": "ddf37b909cac5a003ed7883e5d9577d93ce4ac7174c2f326a06558a55798a719",
+      "outputSha256": "5c9a312c87907026210ada30d8e2b517e96527d8fbb630937dec79390927893c",
       "edits": [
         {
           "start": 50,
@@ -1943787,6 +1946200,13 @@
           "symbol": "C:pva",
           "original": "pva",
           "renamed": "SpawnEnemyShipOrderDefinition"
+        },
+        {
+          "start": 881,
+          "end": 884,
+          "symbol": "C:vhb",
+          "original": "vhb",
+          "renamed": "SocialTabResources"
         },
         {
           "start": 913,
@@ -1950040,10 +1952460,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/voidhunters"
     },
-    "rulesSha256": "c9ea88034f697d0f812c71adefb8ab8598c95acfcfc4d28d61b8313684d73024",
+    "rulesSha256": "3b0eb8743d2b504b06fb31c1c627e6764fe384aff65e3651888c6f2d55656729",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "edb5cead5405f544aad442e989958b12eb4352744ef4e2311bc767342c35118c",
-    "outputTreeSha256": "1d41d5037dac250d5b6647bebdf943ab133582596848ab44fb6e16a78eade6e0",
+    "outputTreeSha256": "61faa5b1551ff99ccbf09465a1c755dbc1f6535822da6d5d83b4fbd3d911e61c",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

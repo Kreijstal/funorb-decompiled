@@ -51,9 +51,9 @@ final class PhasedEnergyBeamWeaponDefinition extends WeaponDefinition {
     final int getProjectileSpeed(byte param0) {
         if (param0 >= -52) {
           field_b = (String) null;
-          return wja.field_b;
+          return IncomingChatState.field_b;
         }
-        return wja.field_b;
+        return IncomingChatState.field_b;
     }
 
     final boolean hasRecoil(byte param0) {
@@ -78,9 +78,9 @@ final class PhasedEnergyBeamWeaponDefinition extends WeaponDefinition {
           SpecialOrderButtonState.field_i.addChild(-561, DialogMessagePanel.field_v);
           SpecialOrderButtonState.field_i.addChild(param0 ^ -9108, DualLinkNode.field_f);
           GameReleaseStatistics.field_b = new SocialTabsPanel(UnsupportedGpuMaterialEffect.field_e, SpecialOrderButtonState.field_i);
-          tb.field_a = new Widget(0L, (Widget) null);
-          tb.field_a.addChild(param0 ^ -9108, GameReleaseStatistics.field_b.tabs);
-          tb.field_a.addChild(-561, SpawnChoiceFactory.field_c);
+          SocialPanelState.socialPanelRoot = new Widget(0L, (Widget) null);
+          SocialPanelState.socialPanelRoot.addChild(param0 ^ -9108, GameReleaseStatistics.field_b.tabs);
+          SocialPanelState.socialPanelRoot.addChild(-561, SpawnChoiceFactory.field_c);
           SetGrapplingHookMinLength.a(5);
           if (param0 != 8611) {
             PhasedEnergyBeamWeaponDefinition.clearSharedReferences((byte) -29);
@@ -90,9 +90,9 @@ final class PhasedEnergyBeamWeaponDefinition extends WeaponDefinition {
         }
         SpecialOrderButtonState.field_i.addChild(param0 ^ -9108, DualLinkNode.field_f);
         GameReleaseStatistics.field_b = new SocialTabsPanel(UnsupportedGpuMaterialEffect.field_e, SpecialOrderButtonState.field_i);
-        tb.field_a = new Widget(0L, (Widget) null);
-        tb.field_a.addChild(param0 ^ -9108, GameReleaseStatistics.field_b.tabs);
-        tb.field_a.addChild(-561, SpawnChoiceFactory.field_c);
+        SocialPanelState.socialPanelRoot = new Widget(0L, (Widget) null);
+        SocialPanelState.socialPanelRoot.addChild(param0 ^ -9108, GameReleaseStatistics.field_b.tabs);
+        SocialPanelState.socialPanelRoot.addChild(-561, SpawnChoiceFactory.field_c);
         SetGrapplingHookMinLength.a(5);
         if (param0 == 8611) {
           return;
@@ -127,9 +127,9 @@ final class PhasedEnergyBeamWeaponDefinition extends WeaponDefinition {
     final int getProjectileCount(boolean param0) {
         if (param0) {
           field_c = (String) null;
-          return uab.field_b;
+          return MouseInputUtilities.field_b;
         }
-        return uab.field_b;
+        return MouseInputUtilities.field_b;
     }
 
     final boolean hasSustainedPulse(int param0) {

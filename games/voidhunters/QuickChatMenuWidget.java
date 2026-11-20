@@ -102,7 +102,7 @@ final class QuickChatMenuWidget extends Widget {
               GetUseExtraBackground.closeQuickChatMenu(-1);
               SetSalvoRepairTimeMultiplier.a(4907);
             } else {
-              AsteroidFactory.a(29012);
+              AsteroidFactory.createQuickChatHelpWindow(29012);
               GetUseExtraBackground.closeQuickChatMenu(-1);
             }
           }

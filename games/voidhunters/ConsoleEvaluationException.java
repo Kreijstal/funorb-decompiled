@@ -12,12 +12,12 @@ final class ConsoleEvaluationException extends Exception {
         field_a = null;
     }
 
-    final static void a(byte param0) {
-        if (!uab.a((byte) 44)) {
+    final static void rebuildInitializedCanvasMenu(byte param0) {
+        if (!MouseInputUtilities.hasMenuInitializationStarted((byte) 44)) {
           return;
         }
         int var1 = -35 / ((-45 - param0) / 50);
-        AsteroidFactory.a(2, false, 4);
+        AsteroidFactory.buildCanvasMenu(2, false, 4);
     }
 
     ConsoleEvaluationException(String param0) {

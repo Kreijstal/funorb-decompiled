@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uab {
+final class MouseInputUtilities {
     static String field_a;
     static int field_b;
 
@@ -14,12 +14,12 @@ final class uab {
         field_a = null;
     }
 
-    final static boolean a(byte param0) {
+    final static boolean hasMenuInitializationStarted(byte param0) {
         if (param0 != 44) {
-          uab.clearSharedReferences(54);
-          return SetAngularForceDownshift.field_o;
+          MouseInputUtilities.clearSharedReferences(54);
+          return SetAngularForceDownshift.menuInitializationStarted;
         }
-        return SetAngularForceDownshift.field_o;
+        return SetAngularForceDownshift.menuInitializationStarted;
     }
 
     final static void detachMouseListeners(byte param0, java.awt.Component param1) {
@@ -27,7 +27,7 @@ final class uab {
           param1.removeMouseListener(GetDebrisFoundInPairs.field_q);
           param1.removeMouseMotionListener(GetDebrisFoundInPairs.field_q);
           if (param0 != 1) {
-            uab.a((byte) 73);
+            MouseInputUtilities.hasMenuInitializationStarted((byte) 73);
           }
           param1.removeFocusListener(GetDebrisFoundInPairs.field_q);
           GetBombletSprayAimarc.field_q = 0;

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class PanelWidthQuery extends tb {
+final class PanelWidthQuery extends SocialPanelState {
     static int field_c;
     static int field_e;
     static String field_d;

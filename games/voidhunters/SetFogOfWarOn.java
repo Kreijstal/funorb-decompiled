@@ -198,7 +198,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_mass_driver_projectiles(" + SetSalvoRepairTimeMultiplier.field_p + ")");
         System.out.println("set_laser_projectiles(" + GetLaserBeamProjectileDamage.field_o + ")");
         System.out.println("set_bomblet_spray_projectiles(" + LegacyOpenGlUnderwaterEffect.field_m + ")");
-        System.out.println("set_phased_energy_beam_projectiles(" + uab.field_b + ")");
+        System.out.println("set_phased_energy_beam_projectiles(" + MouseInputUtilities.field_b + ")");
         System.out.println("set_torpedo_projectiles(" + GetLagStandardDeviationIn.field_p + ")");
         System.out.println("set_sniper_cannon_projectiles(" + WhirlpoolDigest.field_b + ")");
         System.out.println("set_missile_launcher_projectiles(" + GetPlayerRepairAmount.field_o + ")");
@@ -216,7 +216,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_torpedo_fire_force(" + SetArmageddonLength.field_p + ")");
         System.out.println("set_laser_fire_force(" + WorldFactory.field_a + ")");
         System.out.println("set_bomblet_spray_fire_force(" + GetMachineGunAimspeed.field_p + ")");
-        System.out.println("set_phased_energy_beam_fire_force(" + wja.field_b + ")");
+        System.out.println("set_phased_energy_beam_fire_force(" + IncomingChatState.field_b + ")");
         System.out.println("set_machine_gun_fire_force(" + TextFieldValidator.field_e + ")");
         System.out.println("set_sniper_cannon_fire_force(" + GetMassDriverAimarc.field_o + ")");
         System.out.println("set_missile_launcher_fire_force(" + SoundPlayback.field_f + ")");
@@ -311,7 +311,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_weapon_particle_speed_downshift(" + MovingObjectFactory.field_b + ")");
         System.out.println("set_weapon_projectile_speed_multiply(" + SetMissionDebrisDefaultProbability.field_o + ")");
         System.out.println("set_respawn_time(" + Particle.field_C + ")");
-        System.out.println("set_grappling_hook_max_length(" + bia.field_c + ")");
+        System.out.println("set_grappling_hook_max_length(" + SoftwareRasterStateRestorer.field_c + ")");
         System.out.println("set_grappling_hook_min_length(" + GetMissionTerrainNebulaProbability.field_r + ")");
         System.out.println("set_grappling_hook_fire_force(" + SegmentIntersections.field_a + ")");
         System.out.println("set_grappling_hook_spring_constant(" + SetPointDefenceLaserEnergyUsed.field_o + ")");

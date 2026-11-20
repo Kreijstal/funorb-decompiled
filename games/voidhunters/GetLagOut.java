@@ -23,7 +23,7 @@ final class GetLagOut extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < -119) {
-            stackIn_4_0 = new ConsoleValue(TrailHolderFactory.b((byte) 95));
+            stackIn_4_0 = new ConsoleValue(TrailHolderFactory.getOutgoingLagMillis((byte) 95));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

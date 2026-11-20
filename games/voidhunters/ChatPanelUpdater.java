@@ -20,10 +20,10 @@ final class ChatPanelUpdater {
             GetPhasedEnergyBeamProjectiles.field_o = GetPhasedEnergyBeamProjectiles.field_o + (SetClientSideDragging.field_q.height - GetAngularForceDownshift.field_p);
             GetAngularForceDownshift.field_p = SetClientSideDragging.field_q.height;
           }
-          if (tb.field_b < GetRepairModePower.field_o) {
-            tb.field_b = tb.field_b + 1;
+          if (SocialPanelState.chatPanelProgress < GetRepairModePower.field_o) {
+            SocialPanelState.chatPanelProgress = SocialPanelState.chatPanelProgress + 1;
           }
-          if (tb.field_b <= 0) {
+          if (SocialPanelState.chatPanelProgress <= 0) {
             return;
           }
           SoftwareFaceAttachmentState.updateAnimatedPanelLayout((byte) 71);

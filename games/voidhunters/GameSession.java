@@ -736,7 +736,7 @@ final class GameSession {
                           if (OpenGlTexture1D.field_i) {
                             break regionExit5;
                           }
-                          bia.popRasterState((byte) 124);
+                          SoftwareRasterStateRestorer.popRasterState((byte) 124);
                           if ((var7 == 0)) {
                             if (var6 != 0) {
                               OpenGlTransform3D.field_m.draw(0, 0);
@@ -787,7 +787,7 @@ final class GameSession {
                         break;
                       }
                       if (!OpenGlTexture1D.field_i) {
-                        bia.popRasterState((byte) 124);
+                        SoftwareRasterStateRestorer.popRasterState((byte) 124);
                         if ((var7 == 0)) {
                           if (var6 != 0) {
                             OpenGlTransform3D.field_m.draw(0, 0);
@@ -828,7 +828,7 @@ final class GameSession {
                   GetGrapplingHooksDamageableBySourcePlayer.field_p.draw(0, 0);
                 }
               } else {
-                bia.popRasterState((byte) 124);
+                SoftwareRasterStateRestorer.popRasterState((byte) 124);
                 if (var7 == 0) {
                   if (var6 != 0) {
                     OpenGlTransform3D.field_m.draw(0, 0);
@@ -6066,7 +6066,7 @@ final class GameSession {
           if (var14 != null) {
             var7 = 1;
             for (var8 = param4; var8 < param3; var8++) {
-              if (bia.isVoteOptionAvailable(ArchiveLoadRequest.a(param2 ^ 127), (byte) -31, var8)) {
+              if (SoftwareRasterStateRestorer.isVoteOptionAvailable(ArchiveLoadRequest.a(param2 ^ 127), (byte) -31, var8)) {
                 var7 = 0;
               }
             }
@@ -7973,7 +7973,7 @@ final class GameSession {
             ColorKeyScaleTextureOperation.d(991426348);
             AgeValidator.field_f = -2;
             GetSniperCannonProjectiles.chatVisible = true;
-            HardpointDefinition.a(true);
+            HardpointDefinition.closeChatInputDialog(true);
           }
           param3.field_Sb.draw(false, 38);
           param3.field_Tb.y = param3.field_Sb.height + param2;

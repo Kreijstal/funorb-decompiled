@@ -17,7 +17,7 @@ final class SetSelfDestructPrepareToggleCooldown extends ConsoleCommand {
           }
           SoftwareFlatTriangleRasterizer.setClipFromRaster();
           GetRepairModeActiveTime.field_p = new int[260];
-          iob.field_f = 11;
+          SoftwareProjectionSettings.projectionFractionBits = 11;
           for (var1_int = 0; var1_int < 256; var1_int++) {
             var2 = 15.0;
             GetRepairModeActiveTime.field_p[var1_int] = (int)(255.0 * Math.pow((double)((float)var1_int / 256.0f), var2));

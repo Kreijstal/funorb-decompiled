@@ -141,12 +141,12 @@ final class TrailHolder implements DiffableState {
           return (ChatMessage) null;
         }
         var3 = var8.readUnsignedByte((byte) -121);
-        wja.field_a = 127 & var3;
+        IncomingChatState.channelType = 127 & var3;
         stackIn_5_0 = ((128 & var3) != 0);
         TickCondition.field_e = stackIn_5_0;
         ModalPanel.field_A = var8.readUnsignedByte((byte) -106);
         SetSniperCannonFiringLeeway.field_q = var8.readLong(255);
-        if (wja.field_a == 2) {
+        if (IncomingChatState.channelType == 2) {
           SetSalvoUsesAllEnergy.field_o = var8.readUnsignedShort(1869);
           GraphicsPresentException.field_b = var8.readUnsignedMedium((byte) -38);
         } else {
@@ -161,11 +161,11 @@ final class TrailHolder implements DiffableState {
         } else {
           TextureCoordinateMode.field_a = LegacyOpenGlEnvironmentMappedWaterEffect.field_h;
         }
-        if (wja.field_a == 1) {
+        if (IncomingChatState.channelType == 1) {
           EmailAvailabilityChecks.field_a = var8.readUnsignedShort(1869);
           SpawnEnemyShipOrderDefinition.field_f = var8.readString(-1);
         } else {
-          if (wja.field_a != 4) {
+          if (IncomingChatState.channelType != 4) {
             EmailAvailabilityChecks.field_a = 0;
             SpawnEnemyShipOrderDefinition.field_f = null;
           } else {

@@ -206,7 +206,7 @@ public final class VoidHunters extends NetworkGameClient {
             ColorKeyScaleTextureOperation.d(param1 ^ 991426336);
             AgeValidator.field_f = -2;
             GetSniperCannonProjectiles.chatVisible = true;
-            HardpointDefinition.a(true);
+            HardpointDefinition.closeChatInputDialog(true);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -227,7 +227,7 @@ public final class VoidHunters extends NetworkGameClient {
               AgeValidator.field_f = 0;
               IntegerRecordWritePackets.field_a = true;
               GraphicsPresentException.field_a = false;
-              HardpointDefinition.a(true);
+              HardpointDefinition.closeChatInputDialog(true);
             }
             HardpointMatch.field_d = false;
             SetMassDriverFireForce.field_o = false;
@@ -264,7 +264,7 @@ public final class VoidHunters extends NetworkGameClient {
                 SetMissionTerrainDebrisProbability.field_p = false;
                 IntegerRecordWritePackets.field_a = true;
                 GetSniperCannonProjectiles.chatVisible = true;
-                HardpointDefinition.a(true);
+                HardpointDefinition.closeChatInputDialog(true);
               }
               FlipTextureOperation.field_l.handleGameStopped(true);
               SetMassDriverFireForce.field_o = false;
@@ -407,7 +407,7 @@ public final class VoidHunters extends NetworkGameClient {
         if (EmailAvailabilityChecks.fullscreenCanvas != null &&
           EmailAvailabilityChecks.fullscreenCanvas.focusLost) {
           VariableCondition.b((byte) 116);
-          ConsoleEvaluationException.a((byte) -115);
+          ConsoleEvaluationException.rebuildInitializedCanvasMenu((byte) -115);
         }
         stackIn_7_1 = (EmailAvailabilityChecks.fullscreenCanvas != null);
         this.updateClientServices(stackIn_7_1, 9);
@@ -552,7 +552,7 @@ public final class VoidHunters extends NetworkGameClient {
                 GraphicsPresentException.field_a = false;
                 GetThrusterSmallForce.field_o = false;
                 SetMissionTerrainDebrisProbability.field_p = false;
-                HardpointDefinition.a(true);
+                HardpointDefinition.closeChatInputDialog(true);
               }
               HardpointMatch.field_d = false;
               SetMassDriverFireForce.field_o = false;
@@ -876,7 +876,7 @@ public final class VoidHunters extends NetworkGameClient {
         TextureCombineMappings.clearSharedReferences((byte) 40);
         OpenGlByteTextureFactory.clearSharedReferences(3553);
         CarouselConstantRequests.clearSharedReferences(32768);
-        wja.clearSharedReferences(false);
+        IncomingChatState.clearSharedReferences(false);
         GpuVertexKeyBuffer.clearSharedReferences(23870);
         PartitionZoneFactoryHolder.clearSharedReferences(8);
         ChatPermissions.clearSharedReferences((byte) -53);
@@ -1011,7 +1011,7 @@ public final class VoidHunters extends NetworkGameClient {
         WorldSpriteTiler.clearSharedReferences(true);
         EmailAvailabilityChecks.clearSharedReferences(false);
         LoginCredentials.clearSharedReferences(124);
-        vw.clearSharedReferences((byte) 55);
+        LobbyInviteControls.clearSharedReferences((byte) 55);
         IntrusiveDequeIterator.clearSharedReferences(-20221);
         NetworkArchiveClient.clearSharedReferences(125);
         ArchiveDiskWorker.clearSharedReferences(63);
@@ -1076,7 +1076,7 @@ public final class VoidHunters extends NetworkGameClient {
         SoftwarePolygonRasterizer.clearSharedReferences();
         ComponentBehaviour.clearSharedReferences(0);
         TimedSpecialOrderBehaviour.clearSharedReferences(126);
-        uab.clearSharedReferences(0);
+        MouseInputUtilities.clearSharedReferences(0);
         VorbisSample.clearSharedReferences();
         LogoMesh.clearSharedReferences(118);
         ConvoyObjectiveText.clearSharedReferences((byte) 124);
@@ -1253,11 +1253,11 @@ public final class VoidHunters extends NetworkGameClient {
         OpenGlArbProgram.clearSharedReferences(-5709);
         OpenGlEnvironmentMappedWaterEffect.clearSharedReferences(-113);
         OpenGlVertexDeclaration.clearSharedReferences(23008);
-        tb.clearSharedReferences(-75);
-        pl.clearSharedReferences((byte) -109);
+        SocialPanelState.clearSharedReferences(-75);
+        LoginMethodCatalog.clearSharedReferences((byte) -109);
         PanelWidthQuery.clearSharedReferences((byte) 80);
-        iob.clearSharedReferences(-5509);
-        vhb.clearSharedReferences(21053);
+        SoftwareProjectionSettings.clearSharedReferences(-5509);
+        SocialTabResources.clearSharedReferences(21053);
         TypedStateArrayCopier.clearSharedReferences((byte) 39);
         OpenGlGlyphMask.clearSharedReferences(20000000);
         OpenGlShader.clearSharedReferences((byte) 124);

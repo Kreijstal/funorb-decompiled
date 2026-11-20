@@ -53,7 +53,7 @@ final class SetMaxShipSize extends ConsoleCommand {
         }
     }
 
-    final static double e(byte param0) {
+    final static double getIncomingLagStdDevMillis(byte param0) {
         if (param0 != -97) {
           return -0.6867473510386889;
         }

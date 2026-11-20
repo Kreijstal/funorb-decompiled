@@ -31,7 +31,7 @@ final class OpenGlVertexBufferObject extends OpenGlBufferObject implements OpenG
         this.toolkit.bindVertexBuffer(param0, (OpenGlVertexBufferBinding) (this));
     }
 
-    final static boolean a(byte param0) {
+    final static boolean isNameEntryDialogOpen(byte param0) {
         if (param0 > -33) {
           return false;
         }
@@ -40,7 +40,7 @@ final class OpenGlVertexBufferObject extends OpenGlBufferObject implements OpenG
 
     final static double b(byte param0) {
         if (param0 >= -43) {
-          OpenGlVertexBufferObject.a((byte) 83);
+          OpenGlVertexBufferObject.isNameEntryDialogOpen((byte) 83);
           return ServerTickFactory.outgoingLagStdDevMillis;
         }
         return ServerTickFactory.outgoingLagStdDevMillis;

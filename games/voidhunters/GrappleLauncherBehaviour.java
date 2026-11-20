@@ -169,7 +169,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
             if (Math.abs(var20) > 256) {
               return;
             }
-            this.ropeLength = bia.field_c;
+            this.ropeLength = SoftwareRasterStateRestorer.field_c;
             var21 = -1;
             if (param10 instanceof Ship) {
               var21 = ((Ship) (param10)).getOwner((byte) -117);
@@ -326,8 +326,8 @@ final class GrappleLauncherBehaviour implements DiffableState {
                 var33.clearGrabbedObject(true);
                 return;
               }
-              if (this.targetRopeLength > bia.field_c >> 1) {
-                this.targetRopeLength = bia.field_c >> 1;
+              if (this.targetRopeLength > SoftwareRasterStateRestorer.field_c >> 1) {
+                this.targetRopeLength = SoftwareRasterStateRestorer.field_c >> 1;
               }
               var19Lifetime1 = TextureLineShape.sinAngle(var18.finalangle, 126);
               var20Lifetime1 = GetNumStars.cosAngle(var18.finalangle, (byte) -76);

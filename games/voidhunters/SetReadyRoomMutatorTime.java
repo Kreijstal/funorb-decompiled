@@ -114,7 +114,7 @@ final class SetReadyRoomMutatorTime extends ConsoleCommand {
           return;
         }
         if (SetOndamageParticleSpeed.field_p) {
-          AsteroidFactory.a(2, param1, var2);
+          AsteroidFactory.buildCanvasMenu(2, param1, var2);
         }
     }
 

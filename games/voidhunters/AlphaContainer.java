@@ -95,7 +95,7 @@ final class AlphaContainer extends UiSingleChildContainer {
           var8 = new Sprite(this.child.width, this.child.height);
           SetTorpedoEnergyUsed.a(117, var8);
           this.child.drawLayer(0, param1, 115, 0);
-          bia.popRasterState((byte) 124);
+          SoftwareRasterStateRestorer.popRasterState((byte) 124);
           var8.drawAlpha(param0 + this.x, this.y + param3, this.alpha);
           return;
         }
@@ -110,7 +110,7 @@ final class AlphaContainer extends UiSingleChildContainer {
         var7 = new Sprite(this.child.width, this.child.height);
         SetTorpedoEnergyUsed.a(117, var7);
         this.child.drawLayer(0, param1, 115, 0);
-        bia.popRasterState((byte) 124);
+        SoftwareRasterStateRestorer.popRasterState((byte) 124);
         var7.drawAlpha(param0 + this.x, this.y + param3, this.alpha);
         return;
     }

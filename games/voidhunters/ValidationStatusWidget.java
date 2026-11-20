@@ -126,7 +126,7 @@ final class ValidationStatusWidget extends HotspotTextWidget {
               SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
             }
             var20.drawRotatedScaledBilinear(112, 144, var20.paddedWidth << 4, var20.paddedHeight << 4, -this.animationTick << 10, 4096);
-            bia.popRasterState((byte) 124);
+            SoftwareRasterStateRestorer.popRasterState((byte) 124);
             this.spinnerSprite.drawAdditive(var9 - (var20.paddedWidth >> 1), -var20.paddedHeight + var10, 256);
             return;
           }
@@ -170,7 +170,7 @@ final class ValidationStatusWidget extends HotspotTextWidget {
             }
           }
           var24.drawRotatedScaledBilinear(112, 144, var24.paddedWidth << 4, var24.paddedHeight << 4, -this.animationTick << 10, 4096);
-          bia.popRasterState((byte) 124);
+          SoftwareRasterStateRestorer.popRasterState((byte) 124);
           this.spinnerSprite.drawAdditive(var9Lifetime3 - (var24.paddedWidth >> 1), -var24.paddedHeight + var10Lifetime3, 256);
           return;
         }
@@ -217,7 +217,7 @@ final class ValidationStatusWidget extends HotspotTextWidget {
             }
           }
           var33.drawRotatedScaledBilinear(112, 144, var33.paddedWidth << 4, var33.paddedHeight << 4, -this.animationTick << 10, 4096);
-          bia.popRasterState((byte) 124);
+          SoftwareRasterStateRestorer.popRasterState((byte) 124);
           this.spinnerSprite.drawAdditive(var9Lifetime1 - (var33.paddedWidth >> 1), -var33.paddedHeight + var10Lifetime1, 256);
           return;
         }
@@ -241,7 +241,7 @@ final class ValidationStatusWidget extends HotspotTextWidget {
             SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
           }
           var26.drawRotatedScaledBilinear(112, 144, var26.paddedWidth << 4, var26.paddedHeight << 4, -this.animationTick << 10, 4096);
-          bia.popRasterState((byte) 124);
+          SoftwareRasterStateRestorer.popRasterState((byte) 124);
           this.spinnerSprite.drawAdditive(var9Lifetime2 - (var26.paddedWidth >> 1), -var26.paddedHeight + var10Lifetime2, 256);
           return;
         }
@@ -280,7 +280,7 @@ final class ValidationStatusWidget extends HotspotTextWidget {
           }
         }
         var29.drawRotatedScaledBilinear(112, 144, var29.paddedWidth << 4, var29.paddedHeight << 4, -this.animationTick << 10, 4096);
-        bia.popRasterState((byte) 124);
+        SoftwareRasterStateRestorer.popRasterState((byte) 124);
         this.spinnerSprite.drawAdditive(var9Lifetime2 - (var29.paddedWidth >> 1), -var29.paddedHeight + var10Lifetime2, 256);
         return;
     }

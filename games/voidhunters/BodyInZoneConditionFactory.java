@@ -32,7 +32,7 @@ final class BodyInZoneConditionFactory implements GameStateFactory {
           return;
         }
         try {
-          vhb.field_d = param1;
+          SocialTabResources.field_d = param1;
           SetPointDefenceLaserAimarc.field_q = param3;
           StrongCacheReference.field_o = param4;
         } catch (RuntimeException runtimeException) {

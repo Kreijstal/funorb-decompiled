@@ -286,7 +286,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("mu_create_unrated", 23100);
                 if (resourceBytes != null) {
-                  uab.field_a = Cp1252Strings.decode((byte) -125, resourceBytes);
+                  MouseInputUtilities.field_a = Cp1252Strings.decode((byte) -125, resourceBytes);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("mu_options", 23100);
                 if (resourceBytes != null) {

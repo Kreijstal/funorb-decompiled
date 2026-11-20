@@ -14,26 +14,26 @@ final class SetPlayerRepairAmount extends ConsoleCommand {
         if (GetAngularForceDownshift.field_p != SetClientSideDragging.field_q.height) {
           GetPhasedEnergyBeamProjectiles.field_o = GetPhasedEnergyBeamProjectiles.field_o + (SetClientSideDragging.field_q.height - GetAngularForceDownshift.field_p);
           GetAngularForceDownshift.field_p = SetClientSideDragging.field_q.height;
-          if (param0 > ~tb.field_b) {
-            tb.field_b = tb.field_b - 1;
-            if (!(tb.field_b <= 0)) {
+          if (param0 > ~SocialPanelState.chatPanelProgress) {
+            SocialPanelState.chatPanelProgress = SocialPanelState.chatPanelProgress - 1;
+            if (!(SocialPanelState.chatPanelProgress <= 0)) {
               SoftwareFaceAttachmentState.updateAnimatedPanelLayout((byte) -31);
             }
             return;
           }
-          if (!(tb.field_b <= 0)) {
+          if (!(SocialPanelState.chatPanelProgress <= 0)) {
             SoftwareFaceAttachmentState.updateAnimatedPanelLayout((byte) -31);
           }
           return;
         }
-        if (param0 <= ~tb.field_b) {
-          if (!(tb.field_b <= 0)) {
+        if (param0 <= ~SocialPanelState.chatPanelProgress) {
+          if (!(SocialPanelState.chatPanelProgress <= 0)) {
             SoftwareFaceAttachmentState.updateAnimatedPanelLayout((byte) -31);
           }
           return;
         }
-        tb.field_b = tb.field_b - 1;
-        if (!(tb.field_b <= 0)) {
+        SocialPanelState.chatPanelProgress = SocialPanelState.chatPanelProgress - 1;
+        if (!(SocialPanelState.chatPanelProgress <= 0)) {
           SoftwareFaceAttachmentState.updateAnimatedPanelLayout((byte) -31);
         }
     }

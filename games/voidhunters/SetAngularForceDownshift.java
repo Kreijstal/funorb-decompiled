@@ -5,7 +5,7 @@ final class SetAngularForceDownshift extends ConsoleCommand {
     static String field_q;
     static String field_p;
     static String field_r;
-    static boolean field_o;
+    static boolean menuInitializationStarted;
 
     SetAngularForceDownshift(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -56,6 +56,6 @@ final class SetAngularForceDownshift extends ConsoleCommand {
         field_q = "Accept";
         field_p = "Type your password again to make sure it's correct";
         field_r = "Add <%0> to friend list";
-        field_o = false;
+        menuInitializationStarted = false;
     }
 }

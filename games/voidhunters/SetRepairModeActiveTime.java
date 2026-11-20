@@ -97,7 +97,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
         int var17_intLifetime4;
         var21 = VoidHunters.field_G;
         try {
-          wja.field_c = param4;
+          IncomingChatState.field_c = param4;
           UiScrollPane.field_w = param2;
           GetDebrisThrowable.field_r = param7;
           PlayerContextMenu.field_k = param9;
@@ -154,7 +154,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
             stackIn_7_0 = null;
             stackIn_7_1 = null;
-            stackIn_7_4 = uab.field_a;
+            stackIn_7_4 = MouseInputUtilities.field_a;
           } else {
             stackIn_7_0 = null;
             stackIn_7_1 = null;
@@ -232,7 +232,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
             SetReloadBarHeight.field_q[3] = array$1;
             SetReloadBarHeight.field_q[3][0] = new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, OpenGlBloomEffect.field_k);
             for (var17_intLifetime2 = 0; var17_intLifetime2 < GetDebrisThrowable.field_r; var17_intLifetime2++) {
-              SetReloadBarHeight.field_q[3][var17_intLifetime2 + 1] = new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, wja.field_c[var17_intLifetime2]);
+              SetReloadBarHeight.field_q[3][var17_intLifetime2 + 1] = new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, IncomingChatState.field_c[var17_intLifetime2]);
             }
           }
           for (var17_intLifetime3 = 0; param12 > var17_intLifetime3; var17_intLifetime3++) {
@@ -275,7 +275,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
               }
             }
           }
-          vw.field_a = new Widget(0L, SetGrapplingHookMaxExtension8Force.field_p);
+          LobbyInviteControls.inviteButton = new Widget(0L, SetGrapplingHookMaxExtension8Force.field_p);
           ObjectiveMarker.field_b = new Widget(0L, SetGrapplingHookMaxExtension8Force.field_p);
           SetAutozoomSpeedDivide.field_p = new Widget(0L, SetAutoAfkTimeout.field_q);
           SetAutozoomSpeedDivide.field_p.applyStyle(18445, DeveloperConsole.field_q);
@@ -298,7 +298,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
               }
             }
           }
-          ThreeSliceButtonStyle.field_r.addChild(param1 - 10792, vw.field_a);
+          ThreeSliceButtonStyle.field_r.addChild(param1 - 10792, LobbyInviteControls.inviteButton);
           ThreeSliceButtonStyle.field_r.addChild(-561, ObjectiveMarker.field_b);
           ThreeSliceButtonStyle.field_r.addChild(-561, SetAutozoomSpeedDivide.field_p);
           ProjectileHit.field_d = new Widget(0L, WorldSpriteTiler.field_b, FloatGradientNoiseSliceGenerator.field_d.toUpperCase());

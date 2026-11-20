@@ -328,7 +328,7 @@ final class UiStatefulStyle extends UiTextStyle {
             }
           }
           this.accumulatedStyle.draw(this, false, param2, param1, param3);
-          bia.popRasterState((byte) 124);
+          SoftwareRasterStateRestorer.popRasterState((byte) 124);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

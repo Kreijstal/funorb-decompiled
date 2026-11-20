@@ -31,7 +31,7 @@ final class GetLagStandardDeviationIn extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             pendingRecordReads = (IntrusiveDeque) null;
           }
-          stackIn_3_0 = new ConsoleValue(SetMaxShipSize.e((byte) -97));
+          stackIn_3_0 = new ConsoleValue(SetMaxShipSize.getIncomingLagStdDevMillis((byte) -97));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

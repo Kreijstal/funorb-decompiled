@@ -6,11 +6,11 @@ final class MachineGunWeaponDefinition extends WeaponDefinition {
     static int field_b;
     static GameStateFactory field_c;
 
-    final static void a(int param0, byte param1) {
+    final static void sendNumericDebugRequest(int param0, byte param1) {
         if (FlipTextureOperation.field_l != null) {
           FlipTextureOperation.field_l.sendDebugRequest((byte) 76, Integer.toString(param0), RequestNewestBlackboxRecording.field_p);
           if (param1 != 47) {
-            MachineGunWeaponDefinition.a(112, (byte) -50);
+            MachineGunWeaponDefinition.sendNumericDebugRequest(112, (byte) -50);
             return;
           }
           return;
@@ -18,7 +18,7 @@ final class MachineGunWeaponDefinition extends WeaponDefinition {
         if (param1 == 47) {
           return;
         }
-        MachineGunWeaponDefinition.a(112, (byte) -50);
+        MachineGunWeaponDefinition.sendNumericDebugRequest(112, (byte) -50);
     }
 
     final int getProjectileDamage(int param0) {
@@ -120,9 +120,9 @@ final class MachineGunWeaponDefinition extends WeaponDefinition {
     final int getProjectileCount(boolean param0) {
         if (param0) {
           field_b = 40;
-          return uab.field_b;
+          return MouseInputUtilities.field_b;
         }
-        return uab.field_b;
+        return MouseInputUtilities.field_b;
     }
 
     final int getProjectileLifetime(byte param0) {

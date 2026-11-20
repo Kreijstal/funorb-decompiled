@@ -85,9 +85,9 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
           SelectableIconLabelWidget.pushClip(SoftwareRasterizer2D.width + 640 >> 1, SoftwareRasterizer2D.height, SoftwareRasterizer2D.width - 640 >> 1, true, 0);
           if (0 < SoftwareTransform3D.field_b) {
             if (null != ShieldInfoPool.field_c) {
-              ShieldInfoPool.field_c.drawOpaque(tb.field_a.x, 0);
+              ShieldInfoPool.field_c.drawOpaque(SocialPanelState.socialPanelRoot.x, 0);
             }
-            stackIn_66_0 = tb.field_a;
+            stackIn_66_0 = SocialPanelState.socialPanelRoot;
             stackIn_67_1 = (param1) && (!TutorialController.field_d);
             ((Widget) (Object) stackIn_66_0).draw(stackIn_67_1, -109);
             stackIn_70_0 = ModelFaceAttachment.field_d;
@@ -118,9 +118,9 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
           SelectableIconLabelWidget.pushClip(SoftwareRasterizer2D.width + 640 >> 1, SoftwareRasterizer2D.height, SoftwareRasterizer2D.width - 640 >> 1, true, 0);
           if (0 < SoftwareTransform3D.field_b) {
             if (null != ShieldInfoPool.field_c) {
-              ShieldInfoPool.field_c.drawOpaque(tb.field_a.x, 0);
+              ShieldInfoPool.field_c.drawOpaque(SocialPanelState.socialPanelRoot.x, 0);
             }
-            stackIn_9_0 = tb.field_a;
+            stackIn_9_0 = SocialPanelState.socialPanelRoot;
             stackIn_10_1 = (param1) && (!TutorialController.field_d);
             ((Widget) (Object) stackIn_9_0).draw(stackIn_10_1, -109);
             stackIn_13_0 = ModelFaceAttachment.field_d;
@@ -165,7 +165,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
             }
           }
         }
-        bia.popRasterState((byte) 124);
+        SoftwareRasterStateRestorer.popRasterState((byte) 124);
     }
 
     static {

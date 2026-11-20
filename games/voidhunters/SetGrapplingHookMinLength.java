@@ -213,12 +213,12 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
         SetGrapplingHookRopeBreakLength.field_p = SoftwareRasterizer2D.height;
         GetShieldsDirectionalArcParticleLife.field_p = SoftwareRasterizer2D.width;
         StripesTextureOperation.a(true);
-        GameReleaseStatistics.field_b.layout(0, -83, -40 + (tb.field_a.height - 2), 0, tb.field_a.width);
+        GameReleaseStatistics.field_b.layout(0, -83, -40 + (SocialPanelState.socialPanelRoot.height - 2), 0, SocialPanelState.socialPanelRoot.width);
         DialogMessagePanel.field_v.setBounds(0, -17, SpecialOrderButtonState.field_i.width, 0, DialogMessagePanel.field_w);
         int var1 = DialogMessagePanel.field_w + 2;
         DualLinkNode.field_f.setBounds(0, -26, SpecialOrderButtonState.field_i.width, GetGrapplingHooksDamageableBySourcePlayer.field_o ? var1 : 0, SpecialOrderButtonState.field_i.height - (GetGrapplingHooksDamageableBySourcePlayer.field_o ? var1 : 0));
         GetThrusterForce.a(0);
-        SpawnChoiceFactory.field_c.setBounds(0, 124, tb.field_a.width, -40 + tb.field_a.height, 40);
+        SpawnChoiceFactory.field_c.setBounds(0, 124, SocialPanelState.socialPanelRoot.width, -40 + SocialPanelState.socialPanelRoot.height, 40);
         AlphaContainer.field_w.setBounds(0, -65, ModelFaceAttachment.field_d.width, 0, 30);
         LobbyGameListWidgets.panel.setBounds(0, 124, ModelFaceAttachment.field_d.width, 30, -32 + ModelFaceAttachment.field_d.height - 40);
         ArchiveIndexLoader.field_a.setBounds(5, param0 ^ 120, 68, 5, 30);

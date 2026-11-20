@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ReferenceTrackingControl {
-    static MenuInputState field_a;
+    static MenuInputState menuInputState;
     static int field_b;
 
     final static void endReferenceTracking(int param0) {
@@ -15,14 +15,14 @@ final class ReferenceTrackingControl {
     }
 
     public static void clearSharedReferences(byte param0) {
-        field_a = null;
+        menuInputState = null;
         if (param0 != 26) {
-          field_a = (MenuInputState) null;
+          menuInputState = (MenuInputState) null;
         }
     }
 
     static {
-        field_a = new MenuInputState(1);
+        menuInputState = new MenuInputState(1);
         field_b = 0;
     }
 }

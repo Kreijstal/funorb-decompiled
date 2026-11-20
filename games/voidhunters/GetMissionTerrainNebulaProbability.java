@@ -33,7 +33,7 @@ final class GetMissionTerrainNebulaProbability extends ConsoleCommand {
           }
           GetWorldWidthUpshift.field_p.setRasterTarget();
           var1.drawHalfSize(0, 0);
-          bia.popRasterState((byte) 124);
+          SoftwareRasterStateRestorer.popRasterState((byte) 124);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ls.C(" + param0 + ')');
         }

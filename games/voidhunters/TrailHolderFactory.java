@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TrailHolderFactory implements GameStateFactory {
-    final static int b(byte param0) {
+    final static int getOutgoingLagMillis(byte param0) {
         int var1 = 41 % ((5 - param0) / 52);
         return PerlinNoiseTextureOperation.outgoingLagMillis;
     }
@@ -14,7 +14,7 @@ final class TrailHolderFactory implements GameStateFactory {
 
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 != 11995) {
-          TrailHolderFactory.b((byte) 55);
+          TrailHolderFactory.getOutgoingLagMillis((byte) 55);
           return (SerializableGameState[]) ((Object) new TrailHolder[param1]);
         }
         return (SerializableGameState[]) ((Object) new TrailHolder[param1]);

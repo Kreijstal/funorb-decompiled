@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class tb {
-    static Widget field_a;
-    static int field_b;
+class SocialPanelState {
+    static Widget socialPanelRoot;
+    static int chatPanelProgress;
     private static String field_z;
 
     public static void clearSharedReferences(int param0) {
         if (param0 >= -1) {
-          field_a = (Widget) null;
-          field_a = null;
+          socialPanelRoot = (Widget) null;
+          socialPanelRoot = null;
           return;
         }
-        field_a = null;
+        socialPanelRoot = null;
     }
 
     static {

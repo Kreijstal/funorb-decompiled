@@ -75,12 +75,12 @@ abstract class ModalPanel extends UiContainer {
           this.drawFrame(0, 1630174241, 0);
           super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
           if (param2 > 47) {
-            bia.popRasterState((byte) 124);
+            SoftwareRasterStateRestorer.popRasterState((byte) 124);
             GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.opacity);
             return;
           }
           this.finishAnimationsAndCheckClosed((byte) 123);
-          bia.popRasterState((byte) 124);
+          SoftwareRasterStateRestorer.popRasterState((byte) 124);
           GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.opacity);
           return;
         }
@@ -91,12 +91,12 @@ abstract class ModalPanel extends UiContainer {
           this.drawFrame(0, 1630174241, 0);
           super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
           if (param2 > 47) {
-            bia.popRasterState((byte) 124);
+            SoftwareRasterStateRestorer.popRasterState((byte) 124);
             GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.opacity);
             return;
           }
           this.finishAnimationsAndCheckClosed((byte) 123);
-          bia.popRasterState((byte) 124);
+          SoftwareRasterStateRestorer.popRasterState((byte) 124);
           GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.opacity);
           return;
         }
@@ -107,12 +107,12 @@ abstract class ModalPanel extends UiContainer {
           this.drawFrame(0, 1630174241, 0);
           super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
           if (param2 > 47) {
-            bia.popRasterState((byte) 124);
+            SoftwareRasterStateRestorer.popRasterState((byte) 124);
             GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.opacity);
             return;
           }
           this.finishAnimationsAndCheckClosed((byte) 123);
-          bia.popRasterState((byte) 124);
+          SoftwareRasterStateRestorer.popRasterState((byte) 124);
           GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.opacity);
           return;
         }
@@ -121,12 +121,12 @@ abstract class ModalPanel extends UiContainer {
         this.drawFrame(0, 1630174241, 0);
         super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
         if (param2 > 47) {
-          bia.popRasterState((byte) 124);
+          SoftwareRasterStateRestorer.popRasterState((byte) 124);
           GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.opacity);
           return;
         }
         this.finishAnimationsAndCheckClosed((byte) 123);
-        bia.popRasterState((byte) 124);
+        SoftwareRasterStateRestorer.popRasterState((byte) 124);
         GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.opacity);
     }
 

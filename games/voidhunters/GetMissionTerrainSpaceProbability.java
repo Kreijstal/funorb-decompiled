@@ -12,14 +12,14 @@ final class GetMissionTerrainSpaceProbability extends ConsoleCommand {
             ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true).pop(true);
             return;
           }
-          bia.popRasterState((byte) 124);
+          SoftwareRasterStateRestorer.popRasterState((byte) 124);
           return;
         }
         if (OpenGlTexture1D.field_i) {
           ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true).pop(true);
           return;
         }
-        bia.popRasterState((byte) 124);
+        SoftwareRasterStateRestorer.popRasterState((byte) 124);
     }
 
     GetMissionTerrainSpaceProbability(String param0, Class[] param1, String param2) {

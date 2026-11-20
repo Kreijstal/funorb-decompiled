@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pl extends bia {
+final class LoginMethodCatalog extends SoftwareRasterStateRestorer {
     static String field_e;
 
     final static LoginMethod[] getLoginMethods(byte param0) {

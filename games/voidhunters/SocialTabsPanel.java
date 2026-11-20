@@ -13,7 +13,7 @@ final class SocialTabsPanel {
         try {
           var3 = new String[]{param0, GetBloomCoefficientPercentage.field_q, RequestNewestBlackboxRecording.field_o};
           var4 = new Widget[]{param1, PlayerJoinFactory.field_c, (Widget) ((Object) AttachmentInputState.field_b)};
-          this.tabs = new TabbedWidget(0L, vhb.field_c, var3, EscapePodFactory.field_a, var4, 0);
+          this.tabs = new TabbedWidget(0L, SocialTabResources.tabTemplate, var3, EscapePodFactory.field_a, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

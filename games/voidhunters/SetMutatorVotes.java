@@ -52,7 +52,7 @@ final class SetMutatorVotes extends ConsoleCommand {
               if (UiAngleDialRenderer.field_c.selectedIndex == var4) {
                 stackIn_18_0 = StrongCacheReference.field_o;
               } else {
-                stackIn_18_0 = vhb.field_d;
+                stackIn_18_0 = SocialTabResources.field_d;
               }
               var9 = stackIn_18_0;
               var2 = var2 + SpawnEnemyShipOrderDefinition.field_g;

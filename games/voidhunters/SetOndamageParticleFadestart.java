@@ -104,7 +104,7 @@ final class SetOndamageParticleFadestart extends ConsoleCommand {
           var12 = new Sprite(var17.width - var9Lifetime1 * 2, var9Lifetime1);
           var12.setRasterTarget();
           var17.drawOpaque(-var9Lifetime1, param3);
-          bia.popRasterState((byte) 124);
+          SoftwareRasterStateRestorer.popRasterState((byte) 124);
           GetBombletSprayProjectileLife.field_o = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uo.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

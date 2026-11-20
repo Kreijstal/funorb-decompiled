@@ -46,7 +46,7 @@ final class GetReverbDry extends ConsoleCommand {
           if (null != GetLagStandardDeviationOut.field_o) {
             return true;
           }
-          if (OpenGlVertexBufferObject.a((byte) -128)) {
+          if (OpenGlVertexBufferObject.isNameEntryDialogOpen((byte) -128)) {
             return true;
           }
           if (null != Asteroid.activeReportDialog) {
@@ -60,7 +60,7 @@ final class GetReverbDry extends ConsoleCommand {
         if (null != GetLagStandardDeviationOut.field_o) {
           return true;
         }
-        if (OpenGlVertexBufferObject.a((byte) -128)) {
+        if (OpenGlVertexBufferObject.isNameEntryDialogOpen((byte) -128)) {
           return true;
         }
         if (null != Asteroid.activeReportDialog) {

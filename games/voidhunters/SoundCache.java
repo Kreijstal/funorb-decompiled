@@ -149,7 +149,7 @@ final class SoundCache {
           try {
             AccountNameAvailabilityReplies.field_b = new IsaacPacketBuffer(param13);
             RequestNewestBlackboxRecording.field_p = new IsaacPacketBuffer(param0);
-            bia.field_d = param1;
+            SoftwareRasterStateRestorer.field_d = param1;
             GetAutozoomAmountMultiply.field_p = param6;
             TextureBezierShape.field_n = param4;
             ChatPermissions.field_b = param11;

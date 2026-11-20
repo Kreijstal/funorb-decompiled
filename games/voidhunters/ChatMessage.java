@@ -126,7 +126,7 @@ final class ChatMessage {
         }
         this.field_q = EmailAvailabilityChecks.field_a;
         this.field_c = ModalPanel.field_A;
-        this.channelType = wja.field_a;
+        this.channelType = IncomingChatState.channelType;
         this.unfiltered = TickCondition.field_e;
         this.field_e = LegacyOpenGlEnvironmentMappedWaterEffect.field_h;
         this.field_h = GraphicsPresentException.field_b;

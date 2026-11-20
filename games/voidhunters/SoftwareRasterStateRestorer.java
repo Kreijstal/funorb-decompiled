@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class bia extends tb {
+class SoftwareRasterStateRestorer extends SocialPanelState {
     static int field_d;
     static int field_c;
 
-    bia() {
+    SoftwareRasterStateRestorer() {
     }
 
     final static boolean isVoteOptionAvailable(boolean param0, byte param1, int param2) {
         if (param1 == -31) {
           return ArchiveIndexLoader.field_g.isVoteOptionAvailable(param2, 11, param0);
         }
-        bia.isVoteOptionAvailable(true, (byte) 77, 66);
+        SoftwareRasterStateRestorer.isVoteOptionAvailable(true, (byte) 77, 66);
         return ArchiveIndexLoader.field_g.isVoteOptionAvailable(param2, 11, param0);
     }
 
@@ -21,7 +21,7 @@ class bia extends tb {
         Object var1 = null;
         SoftwareRasterState var1_refLifetime1;
         if (param0 != 124) {
-          bia.popRasterState((byte) -88);
+          SoftwareRasterStateRestorer.popRasterState((byte) -88);
           var1_ref = (SoftwareRasterState) (NineSliceSprite.rasterStateStack.removeLast((byte) -126));
           if (var1_ref == null) {
             throw new IllegalStateException();

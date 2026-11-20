@@ -51,7 +51,7 @@ final class StripedProgressBar extends UiComponent {
           SoftwareRasterizer2D.drawHorizontalLine(-this.stripeWidth + var7, var6, this.stripeWidth, var12Lifetime1);
           var6++;
         }
-        bia.popRasterState((byte) 124);
+        SoftwareRasterStateRestorer.popRasterState((byte) 124);
         return var14;
     }
 
@@ -121,7 +121,7 @@ final class StripedProgressBar extends UiComponent {
             SoftwareRasterizer2D.drawPixel(var5, var4, var8 << 16 | (var8 << 8 | var8));
           }
         }
-        bia.popRasterState((byte) 124);
+        SoftwareRasterStateRestorer.popRasterState((byte) 124);
         return var3;
     }
 
@@ -138,7 +138,7 @@ final class StripedProgressBar extends UiComponent {
         if (this.progress16 < 65536) {
           SelectableIconLabelWidget.pushClip(this.width + var5, this.height + var6, var5 + (this.width * this.progress16 >> 16), true, var6);
           this.drawStripedBar(2, var6, this.stripePatterns[1], var5);
-          bia.popRasterState((byte) 124);
+          SoftwareRasterStateRestorer.popRasterState((byte) 124);
         }
     }
 
@@ -195,13 +195,13 @@ final class StripedProgressBar extends UiComponent {
             param2.draw(var6, param1);
             var6 = var6 + param2.width;
           }
-          bia.popRasterState((byte) 124);
+          SoftwareRasterStateRestorer.popRasterState((byte) 124);
           if (param3 + this.rightCapMask.width >= SoftwareRasterizer2D.clipLeft) {
             SetTorpedoEnergyUsed.a(param0 ^ 66, this.capScratch);
             param2.draw(-this.stripeOffset, 0);
             param2.draw(this.stripeWidth * 2 - this.stripeOffset, 0);
             this.leftCapMask.drawMultiply(0, 0);
-            bia.popRasterState((byte) 124);
+            SoftwareRasterStateRestorer.popRasterState((byte) 124);
             this.capScratch.draw(param3, param1);
           }
           if (SoftwareRasterizer2D.clipRight >= var5_int - this.rightCapMask.width) {
@@ -211,7 +211,7 @@ final class StripedProgressBar extends UiComponent {
             param2.draw(-var7, 0);
             param2.draw(this.stripeWidth * 2 - var7, 0);
             this.rightCapMask.drawMultiply(0, 0);
-            bia.popRasterState((byte) 124);
+            SoftwareRasterStateRestorer.popRasterState((byte) 124);
             this.capScratch.draw(-this.rightCapMask.width + var5_int, param1);
             return;
           }

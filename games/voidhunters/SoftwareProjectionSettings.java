@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class iob extends vhb {
-    static int field_f;
+final class SoftwareProjectionSettings extends SocialTabResources {
+    static int projectionFractionBits;
     static String field_e;
     static int field_g;
     private static String field_z;
@@ -16,7 +16,7 @@ final class iob extends vhb {
 
     static {
         field_z = "iob.B(";
-        field_f = 9;
+        projectionFractionBits = 9;
         field_e = "Large defence chassis";
         field_g = 0;
     }

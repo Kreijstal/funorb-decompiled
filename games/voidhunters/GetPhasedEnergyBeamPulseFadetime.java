@@ -250,8 +250,8 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
                 return stackIn_100_0;
               }
               var6_intLifetime2 = SetNebulaProximityFadeDownshift.field_p;
-              SetNebulaProximityFadeDownshift.field_p = bia.field_d;
-              bia.field_d = var6_intLifetime2;
+              SetNebulaProximityFadeDownshift.field_p = SoftwareRasterStateRestorer.field_d;
+              SoftwareRasterStateRestorer.field_d = var6_intLifetime2;
               SetShowTutorial.field_o = true;
             }
             stackIn_102_0 = -1;

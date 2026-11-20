@@ -171,11 +171,11 @@ final class LobbyThemeBuilder {
           MenuBackgroundBattle.field_e.field_nb = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "button_active");
           MenuBackgroundBattle.field_e.field_ub = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "button_disabled");
           MenuBackgroundBattle.field_e.field_F = 1;
-          vhb.field_c = new Widget(0L, GetMissionDebrisDefaultProbability.field_o);
-          vhb.field_c.field_F = 1;
-          vhb.field_c.field_gb = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "tab_inactive"), (byte) -124);
-          vhb.field_c.field_mb = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "tab_mouseover"), (byte) 72);
-          vhb.field_c.field_nb = var14;
+          SocialTabResources.tabTemplate = new Widget(0L, GetMissionDebrisDefaultProbability.field_o);
+          SocialTabResources.tabTemplate.field_F = 1;
+          SocialTabResources.tabTemplate.field_gb = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "tab_inactive"), (byte) -124);
+          SocialTabResources.tabTemplate.field_mb = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "tab_mouseover"), (byte) 72);
+          SocialTabResources.tabTemplate.field_nb = var14;
           EscapePodFactory.field_a = new Widget(0L, (Widget) null);
           EscapePodFactory.field_a.field_gb = ShieldInfo.createGradientNineSliceSprites(1856141, 206, -1, 1127256, 105, 3);
           GpuEnvironmentMapSource.field_c = new Widget(0L, (Widget) null);

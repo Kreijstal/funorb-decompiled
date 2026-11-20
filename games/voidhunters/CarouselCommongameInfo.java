@@ -723,8 +723,8 @@ final class CarouselCommongameInfo implements DiffableState {
           this.replayFromStepsAgo(-var4Lifetime1 + this.tick, 113);
           this.tick = this.tick + 1;
           if (var5 > this.tick - this.history.length &&
-            this.ticksBehind > 0 && (iob.field_g == 0 ||
-            (param0 & iob.field_g) != 0)) {
+            this.ticksBehind > 0 && (SoftwareProjectionSettings.field_g == 0 ||
+            (param0 & SoftwareProjectionSettings.field_g) != 0)) {
             this.replayFromStepsAgo(0, 124);
             this.tick = this.tick + 1;
             this.ticksBehind = this.ticksBehind - 1;

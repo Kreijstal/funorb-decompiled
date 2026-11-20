@@ -129,7 +129,7 @@ final class UiTheme {
     }
 
     final void popRasterState(byte param0) {
-        bia.popRasterState((byte) 124);
+        SoftwareRasterStateRestorer.popRasterState((byte) 124);
         if (param0 < 82) {
           UiTheme.clearSharedReferences((byte) 6);
         }

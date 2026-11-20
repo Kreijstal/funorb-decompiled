@@ -17,7 +17,7 @@ final class ShieldInfoPool {
         RuntimeException decompiledCaughtException = null;
         try {
           SetDebrisCollision.detachKeyboardListeners((java.awt.Component) ((Object) param0), (byte) 121);
-          uab.detachMouseListeners((byte) 1, (java.awt.Component) ((Object) param0));
+          MouseInputUtilities.detachMouseListeners((byte) 1, (java.awt.Component) ((Object) param0));
           var2_int = 105 / ((41 - param1) / 39);
           if (GetWaitForPlayers.field_o == null) {
             return;

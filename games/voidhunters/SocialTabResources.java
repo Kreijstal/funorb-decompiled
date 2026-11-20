@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class vhb extends tb {
-    static Widget field_c;
+class SocialTabResources extends SocialPanelState {
+    static Widget tabTemplate;
     static NineSliceSprite field_d;
     private static String field_z;
 
-    vhb() {
+    SocialTabResources() {
     }
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 21053) {
-          vhb.clearSharedReferences(-96);
+          SocialTabResources.clearSharedReferences(-96);
           field_d = null;
-          field_c = null;
+          tabTemplate = null;
           return;
         }
         field_d = null;
-        field_c = null;
+        tabTemplate = null;
     }
 
     static {

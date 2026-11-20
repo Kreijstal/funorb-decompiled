@@ -64,7 +64,7 @@ final class FadingMidiPcmStream extends MidiPcmStream {
         } else {
           DialogMessagePanel.field_v.text = SetReverbGain.a(SetUseExtraBackground.field_t, new String[]{Integer.toString(SetShieldsDirectionalArcParticleSpeedDownshift.field_q)}, 78);
         }
-        stackIn_9_0 = tb.field_a;
+        stackIn_9_0 = SocialPanelState.socialPanelRoot;
         stackIn_10_1 = (param0) && (!param1) && (!TutorialController.field_d) && (SetSpinningBladeSpindamageMultiplier.field_o == null) && (null == SetThrusterParticleSpeedDownshift.field_o);
         ((Widget) (Object) stackIn_9_0).updateInput(stackIn_10_1, 1332);
         stackIn_16_0 = ModelFaceAttachment.field_d;

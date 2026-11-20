@@ -53,7 +53,7 @@ final class GpuFaceAttachmentState {
             stackIn_6_0 = SetMassDriverFireForce.field_p;
             return stackIn_6_0;
           }
-          var3 = pl.getLoginMethods((byte) 123);
+          var3 = LoginMethodCatalog.getLoginMethods((byte) 123);
           for (var4 = 0; var3.length > var4; var4++) {
             var5 = var3[var4];
             if (var5.matchesCookieValue(0, var2)) {

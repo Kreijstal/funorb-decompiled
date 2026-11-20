@@ -147,7 +147,7 @@ class UiTextStyle implements UiRenderer, UiTextRenderer {
           } else {
             this.font.drawParagraph(this.getDisplayText((byte) -112, param5), this.getTextXWithOffset(param6, param5, param0, (byte) -13), this.getTextYWithOffset(param7, -117, param5, param2), var9_int, var10, param4, param1, this.horizontalAlignment, this.verticalAlignment, this.lineSpacing);
           }
-          bia.popRasterState((byte) 124);
+          SoftwareRasterStateRestorer.popRasterState((byte) 124);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -440,7 +440,7 @@ class UiTextStyle implements UiRenderer, UiTextRenderer {
             var15 = stackIn_20_0;
             GetDebrisMax.field_s.fillRectangleAlpha(var13.top + (param4.textOffsetY + this.paddingTop + (param4.y + param1)), this.selectionColor >>> 24, true, var15 - var14, this.selectionColor, this.getTextXWithOffset(param3, param4, var14, (byte) -13), var13.bottom);
           }
-          bia.popRasterState((byte) 124);
+          SoftwareRasterStateRestorer.popRasterState((byte) 124);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -642,7 +642,7 @@ class UiTextStyle implements UiRenderer, UiTextRenderer {
             var12 = this.getTextOriginY(-3, param1, param0) + Math.min(this.getContentHeight((byte) 71, param0), Math.min(var8.bottom, 1 + var7 >= var14.lines.length ? var8.bottom : var13.lines[var7 + 1].top));
             SelectableIconLabelWidget.pushClip(param0.width + (param3 + param0.x), param0.height + param1 + param0.y, param0.x + param3, true, param0.y + param1);
             GetDebrisMax.field_s.drawLine(this.caretColor, var11, var12, var10, var10, 11480);
-            bia.popRasterState((byte) 124);
+            SoftwareRasterStateRestorer.popRasterState((byte) 124);
           }
           int var6_int = -36 / ((6 - param2) / 58);
         } catch (RuntimeException runtimeException) {

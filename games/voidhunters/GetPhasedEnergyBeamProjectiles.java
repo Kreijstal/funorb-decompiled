@@ -308,7 +308,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetMissileLauncherEnergyUsed.field_o = param1[107];
           LoadSettings.field_p = param1[217];
           OpenGlVertexNormal.field_g = param1[164];
-          uab.field_b = param1[84];
+          MouseInputUtilities.field_b = param1[84];
           Particle.field_j = param1[234];
           GetToggledScoreboard.field_r = param1[67];
           ServerInfo.field_f = param1[146];
@@ -320,13 +320,13 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetSniperCannonAimspeed.field_o = param1[110];
           TextureCoordinateMode.field_b = param1[228];
           SetLaserRandomness.field_q = param1[114];
-          wja.field_b = param1[102];
+          IncomingChatState.field_b = param1[102];
           GetBombletSprayReload.field_s = param1[35];
           RenderResourceNode.field_k = param1[89];
           GetMissileLauncherRandomness.field_p = param1[127];
           GrappleLauncherBehaviour.field_d = param1[39];
           SetArmageddonWarning.field_o = param1[54];
-          bia.field_c = param1[197];
+          SoftwareRasterStateRestorer.field_c = param1[197];
           GuestPlayNoticePanel.fogOfWarOn = param1[19];
           Particle.field_A = param1[46];
           QuickChatCategoryDefinition.field_o = param1[162];

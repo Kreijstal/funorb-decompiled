@@ -232,8 +232,8 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               return stackIn_63_0;
             }
             var9Lifetime3 = SetNebulaProximityFadeDownshift.field_p;
-            SetNebulaProximityFadeDownshift.field_p = bia.field_d;
-            bia.field_d = var9Lifetime3;
+            SetNebulaProximityFadeDownshift.field_p = SoftwareRasterStateRestorer.field_d;
+            SoftwareRasterStateRestorer.field_d = var9Lifetime3;
             SetShowTutorial.field_o = true;
           }
           stackIn_65_0 = -1;

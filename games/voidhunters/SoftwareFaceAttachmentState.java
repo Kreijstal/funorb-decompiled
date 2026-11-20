@@ -8,7 +8,7 @@ final class SoftwareFaceAttachmentState {
 
     final static void updateAnimatedPanelLayout(byte param0) {
         int var1 = GetRepairModePower.field_o * GetRepairModePower.field_o;
-        int var2 = var1 - tb.field_b * tb.field_b;
+        int var2 = var1 - SocialPanelState.chatPanelProgress * SocialPanelState.chatPanelProgress;
         int var3 = (-GetPhasedEnergyBeamProjectiles.field_o + GetAngularForceDownshift.field_p) * var2 / var1 + GetPhasedEnergyBeamProjectiles.field_o;
         SetToggledScoreboard.field_o.setBounds(SetUseDetailLines.field_o, 118, 640, var3, 120);
         int var4 = 81 / ((31 - param0) / 40);

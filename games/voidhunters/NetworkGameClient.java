@@ -280,7 +280,7 @@ abstract class NetworkGameClient extends GameApplet {
             SecondaryNodeHashTable.continueAsGuest(param1 + 17487);
           }
           if (null == SetReverbFeedback.field_p) {
-            SetReverbFeedback.field_p = bia.getPcmStreamMixer(true);
+            SetReverbFeedback.field_p = SoftwareRasterStateRestorer.getPcmStreamMixer(true);
             EscapePod.field_j = QuickChatHelpWindow.getEffectsBufferSize((byte) 73);
           }
           GetSpinningBladeSpindamageMultiplier.a((byte) 55, BufferedFile.field_i, EscapePod.field_j, SetReverbFeedback.field_p);

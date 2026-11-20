@@ -3,7 +3,7 @@
  */
 final class GetMassDriverAimspeed extends ConsoleCommand {
     static String field_p;
-    static int field_o;
+    static int canvasMenuMode;
 
     GetMassDriverAimspeed(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -41,7 +41,7 @@ final class GetMassDriverAimspeed extends ConsoleCommand {
     public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 != 117) {
-          field_o = -117;
+          canvasMenuMode = -117;
         }
     }
 

@@ -11,14 +11,14 @@ final class AsteroidFactory implements GameStateFactory {
         return (SerializableGameState[]) ((Object) new Asteroid[param1]);
     }
 
-    final static void a(int param0) {
+    final static void createQuickChatHelpWindow(int param0) {
         if (param0 != 29012) {
           armageddonWarning = 71;
         }
         RoundResultFactory.field_a = new QuickChatHelpWindow(DualLinkNode.field_g, WorldSpriteTiler.field_b, GetFighterBayReload.field_p, DeveloperConsole.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o);
     }
 
-    final static void a(int param0, boolean param1, int param2) {
+    final static void buildCanvasMenu(int param0, boolean param1, int param2) {
         int stackIn_49_0 = 0;
         int stackIn_52_0 = 0;
         String[] stackIn_59_0 = null;
@@ -64,9 +64,9 @@ final class AsteroidFactory implements GameStateFactory {
         int var7Lifetime1Lifetime1;
         var9 = VoidHunters.field_G;
         try {
-          GetMassDriverAimspeed.field_o = param2;
-          SetAngularForceDownshift.field_o = true;
-          if (GetMassDriverAimspeed.field_o == 0) {
+          GetMassDriverAimspeed.canvasMenuMode = param2;
+          SetAngularForceDownshift.menuInitializationStarted = true;
+          if (GetMassDriverAimspeed.canvasMenuMode == 0) {
             var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, TextureRectangleShape.field_j, ShipBlueprint.field_a);
             var4 = var3_int + 3;
             ToolkitCanvasContext.menuLabels = new String[var4];
@@ -85,7 +85,7 @@ final class AsteroidFactory implements GameStateFactory {
             ToolkitCanvasContext.menuLabels[var4 - 1] = MissionCondition.field_b;
             GetMessageMax.menuActionIds[-1 + var4] = 1;
             CountermeasureLauncherWeaponDefinition.field_c[1] = 5;
-          } else if (1 == GetMassDriverAimspeed.field_o) {
+          } else if (1 == GetMassDriverAimspeed.canvasMenuMode) {
             var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, TextureRectangleShape.field_j, ShipBlueprint.field_a);
             var4 = 2 + var3_int;
             ToolkitCanvasContext.menuLabels = new String[var4];
@@ -101,8 +101,8 @@ final class AsteroidFactory implements GameStateFactory {
             ToolkitCanvasContext.menuLabels[-1 + var4] = MissionCondition.field_b;
             GetMessageMax.menuActionIds[var4 - 1] = 0;
             CountermeasureLauncherWeaponDefinition.field_c[0] = 5;
-          } else if (GetMassDriverAimspeed.field_o != 2) {
-            if (GetMassDriverAimspeed.field_o == 3) {
+          } else if (GetMassDriverAimspeed.canvasMenuMode != 2) {
+            if (GetMassDriverAimspeed.canvasMenuMode == 3) {
               if (!SetTorpedoProjectiles.field_o.privilegedAccess) {
                 var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, UiArrayContainer.field_t, ShipBlueprint.field_a);
               } else {
@@ -122,7 +122,7 @@ final class AsteroidFactory implements GameStateFactory {
               ToolkitCanvasContext.menuLabels[var4 - 1] = MissionCondition.field_b;
               GetMessageMax.menuActionIds[var4 - 1] = 0;
               CountermeasureLauncherWeaponDefinition.field_c[0] = 5;
-            } else if (GetMassDriverAimspeed.field_o == 4) {
+            } else if (GetMassDriverAimspeed.canvasMenuMode == 4) {
               var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, RenderResourceNode.field_m, ShipBlueprint.field_a);
               var4 = var3_int + 2;
               ToolkitCanvasContext.menuLabels = new String[var4];
@@ -139,7 +139,7 @@ final class AsteroidFactory implements GameStateFactory {
               GetMessageMax.menuActionIds[-1 + var4] = 0;
               CountermeasureLauncherWeaponDefinition.field_c[0] = 5;
             } else {
-              if (5 != GetMassDriverAimspeed.field_o) {
+              if (5 != GetMassDriverAimspeed.canvasMenuMode) {
                 throw new IllegalArgumentException();
               }
               var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, param0 - 2, SetFighterRepairAmount.field_o, ShipBlueprint.field_a);
@@ -249,7 +249,7 @@ final class AsteroidFactory implements GameStateFactory {
             }
             MonotonicMillisClock.currentTimeMillis(false);
           }
-          ReferenceTrackingControl.field_a.itemCount = CountermeasureLauncherWeaponDefinition.field_c.length;
+          ReferenceTrackingControl.menuInputState.itemCount = CountermeasureLauncherWeaponDefinition.field_c.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; ToolkitCanvasContext.menuLabels.length > var4Lifetime1; var4Lifetime1++) {
             stackIn_87_0 = -107;
@@ -259,7 +259,7 @@ final class AsteroidFactory implements GameStateFactory {
               var3_intLifetime1 = var5Lifetime1;
             }
           }
-          if (GetMassDriverAimspeed.field_o == 2) {
+          if (GetMassDriverAimspeed.canvasMenuMode == 2) {
             var10 = Projectile.field_k;
             var4_ref_String__ = var10;
             for (var5Lifetime2 = 0; var5Lifetime2 < var10.length; var5Lifetime2++) {
@@ -278,7 +278,7 @@ final class AsteroidFactory implements GameStateFactory {
               }
             }
           }
-          Ship.field_E = (ColorizeTextureOperation.field_m + AppletCookieReader.field_c << 1) * ReferenceTrackingControl.field_a.itemCount;
+          Ship.field_E = (ColorizeTextureOperation.field_m + AppletCookieReader.field_c << 1) * ReferenceTrackingControl.menuInputState.itemCount;
           for (var4Lifetime2 = 0; ToolkitCanvasContext.menuLabels.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_111_0 = Ship.field_E;
             if (GetMessageMax.menuActionIds[var4Lifetime2] >= 0) {
@@ -309,10 +309,10 @@ final class AsteroidFactory implements GameStateFactory {
             }
             var4Lifetime3++;
           }
-          if (param0 != GetMassDriverAimspeed.field_o) {
-            ReferenceTrackingControl.field_a.resetSelection(param1, -1, 0, GameSession.getMenuActionAtPoint(true, PlayerGameData.field_b, OpenGlFaceAttachment.field_b));
+          if (param0 != GetMassDriverAimspeed.canvasMenuMode) {
+            ReferenceTrackingControl.menuInputState.resetSelection(param1, -1, 0, GameSession.getMenuActionAtPoint(true, PlayerGameData.field_b, OpenGlFaceAttachment.field_b));
           } else {
-            ReferenceTrackingControl.field_a.resetSelection(param1, -1, -1, -1);
+            ReferenceTrackingControl.menuInputState.resetSelection(param1, -1, -1, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

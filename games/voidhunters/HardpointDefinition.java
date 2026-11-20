@@ -6,7 +6,7 @@ final class HardpointDefinition {
     int field_a;
     int field_b;
 
-    final static void a(boolean param0) {
+    final static void closeChatInputDialog(boolean param0) {
         if (!param0) {
           return;
         }

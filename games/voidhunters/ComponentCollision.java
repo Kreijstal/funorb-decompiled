@@ -74,8 +74,8 @@ final class ComponentCollision extends IntrusiveNode {
           if (SetSpinningBladeSpindamageMultiplier.field_o != null) {
             boolean decompiledFrameRemainder0 = true;
             GetShipToShipRamDamage.field_q.enabled = true;
-            vw.field_a.height = 0;
-            var21 = vw.field_a;
+            LobbyInviteControls.inviteButton.height = 0;
+            var21 = LobbyInviteControls.inviteButton;
             var25 = var21;
             var25.width = 0;
             var6 = ObjectiveMarker.field_b;
@@ -87,15 +87,15 @@ final class ComponentCollision extends IntrusiveNode {
             if (SmoothedNanoTickClock.isLocalLobbyOwner(119)) {
               GetWeaponParticleSpeedDownshift.field_q.text = GetLaserEnergyUsed.field_p.toUpperCase();
               var9 = (2 + ThreeSliceButtonStyle.field_r.width) / 2;
-              vw.field_a.setBounds(0, 116, -2 + var9, ThreeSliceButtonStyle.field_r.height - 40, 40);
+              LobbyInviteControls.inviteButton.setBounds(0, 116, -2 + var9, ThreeSliceButtonStyle.field_r.height - 40, 40);
               if (SetSpinningBladeSpindamageMultiplier.field_o.field_Fb <= SetSpinningBladeSpindamageMultiplier.field_o.field_zb) {
-                vw.field_a.text = SetPhasedEnergyBeamPulsetime.field_q.toUpperCase();
-                vw.field_a.enabled = false;
+                LobbyInviteControls.inviteButton.text = SetPhasedEnergyBeamPulsetime.field_q.toUpperCase();
+                LobbyInviteControls.inviteButton.enabled = false;
               } else {
-                vw.field_a.text = FloatGradientNoiseSliceGenerator.field_d.toUpperCase();
-                vw.field_a.enabled = true;
+                LobbyInviteControls.inviteButton.text = FloatGradientNoiseSliceGenerator.field_d.toUpperCase();
+                LobbyInviteControls.inviteButton.enabled = true;
               }
-              vw.field_a.field_gb = SetGrapplingHookMaxExtension8Force.field_p.field_gb;
+              LobbyInviteControls.inviteButton.field_gb = SetGrapplingHookMaxExtension8Force.field_p.field_gb;
               if (0 < SetLaserRandomness.field_p) {
                 if (SetLaserRandomness.field_p != 1) {
                   var10_ref_String = SetReverbGain.a(SetUseCircleOutline.field_p, new String[]{Integer.toString(SetLaserRandomness.field_p)}, 99);
@@ -104,9 +104,9 @@ final class ComponentCollision extends IntrusiveNode {
                 }
                 if ((16 & GetMissionTerrainNebulaProbability.field_o) == 0 &&
                   !GetTorpedoProjectileDamage.field_o) {
-                  vw.field_a.field_gb = SetGrapplingHookMaxExtension8Force.field_p.field_mb;
+                  LobbyInviteControls.inviteButton.field_gb = SetGrapplingHookMaxExtension8Force.field_p.field_mb;
                 }
-                vw.field_a.text = vw.field_a.text + "<br>" + var10_ref_String;
+                LobbyInviteControls.inviteButton.text = LobbyInviteControls.inviteButton.text + "<br>" + var10_ref_String;
               }
               ObjectiveMarker.field_b.setBounds(var9, 119, ThreeSliceButtonStyle.field_r.width - var9, ThreeSliceButtonStyle.field_r.height - 40, 40);
               ObjectiveMarker.field_b.text = GetPhasedEnergyBeamAimspeed.field_o.toUpperCase();
@@ -354,7 +354,7 @@ final class ComponentCollision extends IntrusiveNode {
             if (GetShipToShipRamDamage.field_q.field_o != 0) {
               LiteralStrings.a(SetSpinningBladeSpindamageMultiplier.field_o.getGameId((byte) -13), -1, param0);
             }
-            if (vw.field_a.field_o != 0) {
+            if (LobbyInviteControls.inviteButton.field_o != 0) {
               GetTorpedoProjectileDamage.field_o = true;
             }
             if (ObjectiveMarker.field_b.field_o != 0) {

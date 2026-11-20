@@ -145,9 +145,9 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
           var21Lifetime1 = -param5[0] + param1[0];
           var22Lifetime1 = param1[1] - param5[1];
           var23Lifetime1 = -param5[2] + param1[2];
-          var9 = param5[5] * var23Lifetime1 + (param5[4] * var22Lifetime1 + var21Lifetime1 * param5[3]) >> -iob.field_f + 16;
+          var9 = param5[5] * var23Lifetime1 + (param5[4] * var22Lifetime1 + var21Lifetime1 * param5[3]) >> -SoftwareProjectionSettings.projectionFractionBits + 16;
           var11 = var23Lifetime1 * param5[11] + (var21Lifetime1 * param5[9] + var22Lifetime1 * param5[10]) >> 16;
-          var10 = var22Lifetime1 * param5[7] + (var21Lifetime1 * param5[6] + param5[8] * var23Lifetime1) >> 16 - iob.field_f;
+          var10 = var22Lifetime1 * param5[7] + (var21Lifetime1 * param5[6] + param5[8] * var23Lifetime1) >> 16 - SoftwareProjectionSettings.projectionFractionBits;
           var21Lifetime2 = SoftwareFlatTriangleRasterizer.centerX;
           var22Lifetime2 = SoftwareFlatTriangleRasterizer.centerY;
           var23Lifetime2 = 0;
@@ -156,8 +156,8 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
               var24Lifetime1 = param0.vertexX[var23Lifetime2];
               var25Lifetime1 = param0.vertexY[var23Lifetime2];
               var26Lifetime1 = param0.vertexZ[var23Lifetime2];
-              var27Lifetime1 = var9 + (var26Lifetime1 * var18 + (var15 * var25Lifetime1 + var24Lifetime1 * var12) >> 16 - iob.field_f);
-              var28Lifetime1 = var10 + (var25Lifetime1 * var16 + var24Lifetime1 * var13 + var26Lifetime1 * var19 >> -iob.field_f + 16);
+              var27Lifetime1 = var9 + (var26Lifetime1 * var18 + (var15 * var25Lifetime1 + var24Lifetime1 * var12) >> 16 - SoftwareProjectionSettings.projectionFractionBits);
+              var28Lifetime1 = var10 + (var25Lifetime1 * var16 + var24Lifetime1 * var13 + var26Lifetime1 * var19 >> -SoftwareProjectionSettings.projectionFractionBits + 16);
               var29Lifetime1 = (var24Lifetime1 * var14 + var25Lifetime1 * var17 + var26Lifetime1 * var20 >> 16) + var11;
               stackIn_65_0 = var29Lifetime1;
               stackIn_65_1 = 50;
@@ -176,8 +176,8 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
                   SpriteTextureOperation.field_n[var23Lifetime2] = -2147483648;
                 }
                 if (param6) {
-                  SpinningBladeWeaponDefinition.field_b[var23Lifetime2] = var27Lifetime1 >> iob.field_f;
-                  WeaveTextureOperation.field_i[var23Lifetime2] = var28Lifetime1 >> iob.field_f;
+                  SpinningBladeWeaponDefinition.field_b[var23Lifetime2] = var27Lifetime1 >> SoftwareProjectionSettings.projectionFractionBits;
+                  WeaveTextureOperation.field_i[var23Lifetime2] = var28Lifetime1 >> SoftwareProjectionSettings.projectionFractionBits;
                   HardpointFactory.field_a[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
