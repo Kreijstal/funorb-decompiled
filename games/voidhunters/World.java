@@ -262,7 +262,7 @@ final class World implements DiffableState, CompactGameState {
 
     final void resetRespawnTimer(int param0, int param1) {
         if (~param1 <= param0 && this.respawntimers.length > param1 && (13 == this.getObjectiveType(false) ||
-          pla.a(this.getObjectiveType(false), -4))) {
+          ValidationStatusIcon.isBlueprintObjective(this.getObjectiveType(false), -4))) {
           this.respawntimers[param1] = Particle.field_C;
         }
     }
@@ -4149,7 +4149,7 @@ final class World implements DiffableState, CompactGameState {
                       var11 = null;
                       var12 = 0;
                       if (null != param2[var5_int].savedShip && (param3.isPreGamePhase((byte) -51) ||
-                        GetToggledScoreboard.a((byte) -104, this.getObjectiveType(false)) ||
+                        GetToggledScoreboard.isBlueprintOrSandboxObjective((byte) -104, this.getObjectiveType(false)) ||
                         ValidationState.field_a == 1 &&
                         param2[var5_int].savedShip.chassis.getComponentTypeId(0) == var10)) {
                         var26 = new Ship();
@@ -4158,7 +4158,7 @@ final class World implements DiffableState, CompactGameState {
                         param2[var5_int].savedShip.copyTo((byte) 74, var26);
                         var12 = 1;
                         if (((param3.isPreGamePhase((byte) -42) ||
-                          GetToggledScoreboard.a((byte) -95, this.getObjectiveType(false)))) && ((ValidationState.field_a == 0))) {
+                          GetToggledScoreboard.isBlueprintOrSandboxObjective((byte) -95, this.getObjectiveType(false)))) && ((ValidationState.field_a == 0))) {
                           param2[var5_int].savedShip = null;
                         }
                         decompiledFrameRemainder0 = false;

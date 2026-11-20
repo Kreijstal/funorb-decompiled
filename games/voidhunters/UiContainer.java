@@ -227,7 +227,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
         return null;
     }
 
-    final static void a(int param0, boolean param1, boolean param2, oib param3, int param4) {
+    final static void a(int param0, boolean param1, boolean param2, LoginCredentials param3, int param4) {
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -248,7 +248,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           SetTorpedoAcceleration.field_p.writeInt(FireGrapplesOrderDefinition.field_e[3], 332614536);
           GetMissilesTopSpeed.a((byte) -91, SetTorpedoAcceleration.field_p);
           SetTorpedoAcceleration.field_p.writeShort(param4, true);
-          param3.a(SetTorpedoAcceleration.field_p, -26216);
+          param3.write(SetTorpedoAcceleration.field_p, -26216);
           RequestNewestBlackboxRecording.field_p.position = 0;
           if (!param2) {
             RequestNewestBlackboxRecording.field_p.writeByte(0, 16);

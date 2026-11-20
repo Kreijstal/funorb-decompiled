@@ -4,7 +4,7 @@
 final class SetThrusterBindingBalanceThreshold extends ConsoleCommand {
     static boolean field_o;
     static int field_p;
-    static dka field_q;
+    static LoginCredentialType alternateNumericCredentialType;
     static String field_r;
 
     SetThrusterBindingBalanceThreshold(String param0, Class[] param1, String param2) {
@@ -42,13 +42,13 @@ final class SetThrusterBindingBalanceThreshold extends ConsoleCommand {
     public static void clearSharedReferences(byte param0) {
         int var1 = 23 / ((param0 + 46) / 55);
         field_r = null;
-        field_q = null;
+        alternateNumericCredentialType = null;
     }
 
     static {
         field_o = false;
         field_p = 1024;
-        field_q = new dka(0);
+        alternateNumericCredentialType = new LoginCredentialType(0);
         field_r = "Add action (Add body info to custom variable)";
     }
 }

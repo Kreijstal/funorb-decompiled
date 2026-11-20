@@ -18,13 +18,13 @@ final class SetMissileLauncherProjectileLife extends ConsoleCommand {
         field_o = null;
     }
 
-    final static oib a(String param0, String param1, boolean param2, byte param3) {
+    final static LoginCredentials createLoginCredentials(String param0, String param1, boolean param2, byte param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         Object var6 = null;
         int var7 = 0;
         CharSequence var8 = null;
-        oib stackIn_4_0 = null;
+        LoginCredentials stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -41,7 +41,7 @@ final class SetMissileLauncherProjectileLife extends ConsoleCommand {
           } else {
             var6 = param0;
           }
-          stackIn_4_0 = SetFullMissionSet.a(90, var4_long, (String) (var6), param2, param1);
+          stackIn_4_0 = SetFullMissionSet.createLoginCredentials(90, var4_long, (String) (var6), param2, param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

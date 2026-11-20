@@ -200,7 +200,7 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
 
     private final int addFieldWithStatusIcon(int param0, UiComponent param1, byte param2, String param3, int param4) {
         RuntimeException var6 = null;
-        pla var7 = null;
+        ValidationStatusIcon var7 = null;
         LabeledInputContainer var8 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -212,7 +212,7 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
         try {
           var8 = new LabeledInputContainer(20, param4, param0 + 120, 25, param1, false, 120, 3, SetShipToShipRamDamage.field_o, 16777215, param3);
           this.addChild(param2 - 18860, var8);
-          var7 = new pla(((ValidatableInput) ((Object) param1)).getValidator(-782444220));
+          var7 = new ValidationStatusIcon(((ValidatableInput) ((Object) param1)).getValidator(-782444220));
           this.addChild(-18756, var7);
           if (param2 != 104) {
             field_G = (String) null;

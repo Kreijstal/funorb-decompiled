@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class un extends us {
+final class AlternateNumericLoginCredentials extends NumericLoginCredentials {
     static int[] field_h;
 
-    final static void a(Sprite param0, int param1) {
+    final static void alignSpriteToFourPixels(Sprite param0, int param1) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -68,17 +68,17 @@ final class un extends us {
     public static void clearSharedReferences(boolean param0) {
         if (param0) {
           Sprite var2 = (Sprite) null;
-          un.a((Sprite) null, 3);
+          AlternateNumericLoginCredentials.alignSpriteToFourPixels((Sprite) null, 3);
         }
         field_h = null;
     }
 
-    final dka a(byte param0) {
+    final LoginCredentialType getType(byte param0) {
         int var2 = -52 % ((param0 + 7) / 56);
-        return SetThrusterBindingBalanceThreshold.field_q;
+        return SetThrusterBindingBalanceThreshold.alternateNumericCredentialType;
     }
 
-    un(long param0, String param1) {
+    AlternateNumericLoginCredentials(long param0, String param1) {
         super(param0, param1);
     }
 

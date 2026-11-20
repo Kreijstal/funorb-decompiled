@@ -876,7 +876,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
               this.forceX = var9Lifetime1;
               var16Lifetime1 = var15 / Math.max(this.momentofinertia >> GameMenuScreen.field_e, 1);
               if (var15 != 0 &&
-                Math.abs(var16Lifetime1) > us.field_f) {
+                Math.abs(var16Lifetime1) > NumericLoginCredentials.field_f) {
                 var49 = new int[var7_ref_ml__.length];
                 var18 = new boolean[var7_ref_ml__.length];
                 this.calculateThrusterBalanceScores(var49, var44, var42, 3, var43, var15, var7_ref_ml__);

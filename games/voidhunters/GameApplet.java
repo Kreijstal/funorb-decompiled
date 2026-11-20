@@ -669,7 +669,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 this.rebuildCanvas(-78);
                 SetClientSideDragging.field_q = SetBurstFireRegenerationRate.a((byte) 3, (java.awt.Component) ((Object) igb.field_a), SetPointDefenceLaserReload.field_p, GetDebrisSurvives.field_p);
                 this.initializeGame(false);
-                GetPedrosRepairMode.field_p = mr.createTickClock(46);
+                GetPedrosRepairMode.field_p = DisplayModeErrorDialog.createTickClock(46);
                 do {
                   boolean decompiledFrameRemainder0 = true;
                   if (0L != GetCountermeasureLauncherAimarc.field_p) {

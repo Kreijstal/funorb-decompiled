@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetSalvoDamageMultiplier extends ConsoleCommand {
-    static dka field_r;
+    static LoginCredentialType emailCredentialType;
     static int field_q;
     static String field_o;
     static int field_p;
@@ -68,7 +68,7 @@ final class GetSalvoDamageMultiplier extends ConsoleCommand {
     }
 
     public static void clearSharedReferences(byte param0) {
-        field_r = null;
+        emailCredentialType = null;
         if (param0 > -31) {
           return;
         }
@@ -77,7 +77,7 @@ final class GetSalvoDamageMultiplier extends ConsoleCommand {
 
     static {
         field_q = 1;
-        field_r = new dka(3);
+        emailCredentialType = new LoginCredentialType(3);
         field_o = "Attempt to build blueprint";
         field_p = 50;
     }

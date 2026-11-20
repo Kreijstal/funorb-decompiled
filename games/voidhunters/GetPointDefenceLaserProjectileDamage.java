@@ -54,7 +54,7 @@ final class GetPointDefenceLaserProjectileDamage extends ConsoleCommand {
         if (param0 <= -75) {
           GetSniperCannonEnergyUsed.reportReasonLabels[11] = fk.field_d;
           GetSniperCannonEnergyUsed.reportReasonLabels[7] = SetUseExtraBackground.field_o;
-          GetSniperCannonEnergyUsed.reportReasonLabels[19] = cfa.field_e;
+          GetSniperCannonEnergyUsed.reportReasonLabels[19] = EmailLoginCredentials.field_e;
           GetSniperCannonEnergyUsed.reportReasonLabels[20] = GetSelfDestructTimer.field_o;
           GetSniperCannonEnergyUsed.reportReasonLabels[4] = GetDebrisCarryOver.field_q;
           GetSniperCannonEnergyUsed.reportReasonLabels[16] = SetExplosionProjectileDamage.field_p;

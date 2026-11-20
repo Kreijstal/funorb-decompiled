@@ -11,7 +11,7 @@ abstract class PerlinNoiseVolumeGenerator {
     private short[] permutation;
     private int zScale;
     private int xScale;
-    static UiTextStyle field_f;
+    static UiTextStyle validationStatusStyle;
 
     abstract void accumulateOctave(int param0, int param1, int param2);
 
@@ -219,7 +219,7 @@ abstract class PerlinNoiseVolumeGenerator {
     }
 
     public static void clearSharedReferences(byte param0) {
-        field_f = null;
+        validationStatusStyle = null;
         if (param0 < 35) {
           PerlinNoiseVolumeGenerator.clearSharedReferences((byte) 62);
         }

@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class us extends oib {
+class NumericLoginCredentials extends LoginCredentials {
     static int field_f;
-    private long field_g;
+    private long encodedIdentifier;
     static SoftLruCache field_d;
-    private String field_e;
+    private String password;
 
     public static void clearSharedReferences(byte param0) {
         if (param0 < 27) {
@@ -14,27 +14,27 @@ class us extends oib {
         field_d = null;
     }
 
-    dka a(byte param0) {
+    LoginCredentialType getType(byte param0) {
         int var2 = -127 % ((param0 + 7) / 56);
-        return GetTorpedoReload.field_p;
+        return GetTorpedoReload.numericCredentialType;
     }
 
-    us(long param0, String param1) {
+    NumericLoginCredentials(long param0, String param1) {
         try {
-          this.field_g = param0;
-          this.field_e = param1;
+          this.encodedIdentifier = param0;
+          this.password = param1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "us.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(PacketBuffer param0, int param1) {
+    final void write(PacketBuffer param0, int param1) {
         try {
           if (param1 != -26216) {
             field_f = 54;
           }
-          param0.writeLong(this.field_g, 90);
-          param0.writeBase38Name((byte) -53, this.field_e);
+          param0.writeLong(this.encodedIdentifier, 90);
+          param0.writeBase38Name((byte) -53, this.password);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "us.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

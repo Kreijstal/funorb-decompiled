@@ -30,19 +30,19 @@ final class tda extends ResizableModalPanel implements UiActionListener {
           } else {
             spb.a((byte) -95);
             this.l((byte) -98);
-            this.modalStack.pushPanel(false, new mr(this.modalStack, RemoveEventAction.field_a));
+            this.modalStack.pushPanel(false, new DisplayModeErrorDialog(this.modalStack, RemoveEventAction.field_a));
           }
           if (this.active &&
             psb.field_b == null) {
             this.l((byte) -98);
-            this.modalStack.pushPanel(false, new mr(this.modalStack, AdminMessageFactory.field_a));
+            this.modalStack.pushPanel(false, new DisplayModeErrorDialog(this.modalStack, AdminMessageFactory.field_a));
           }
           if (psb.field_b != null) {
             if (!psb.field_b.focusLost) {
               return;
             }
             this.l((byte) -98);
-            this.modalStack.pushPanel(false, new mr(this.modalStack, AdminMessageFactory.field_a));
+            this.modalStack.pushPanel(false, new DisplayModeErrorDialog(this.modalStack, AdminMessageFactory.field_a));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

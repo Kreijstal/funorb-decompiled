@@ -74,7 +74,7 @@ final class qh extends ResizableModalPanel implements UiActionListener {
           var2.width = this.width;
           var2.renderer = (UiRenderer) ((Object) new UiTextStyle(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(-18756, var2);
-          if (GetPhasedEnergyBeamPulsetime.e((byte) 90)) {
+          if (GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 90)) {
             this.field_K = this.a((UiListener) (this), GetLaserBeamProjectileDamage.field_s, 125);
           }
           this.field_M = this.a((UiListener) (this), MissionCondition.field_b, 125);
@@ -139,7 +139,7 @@ final class qh extends ResizableModalPanel implements UiActionListener {
               this.m((byte) -10);
             }
           } else {
-            NodeHashTable.a(0);
+            NodeHashTable.transitionGuestClientState(0);
             this.m((byte) -10);
           }
           if (param0 == 11) {

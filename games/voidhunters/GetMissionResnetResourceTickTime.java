@@ -90,7 +90,7 @@ final class GetMissionResnetResourceTickTime extends ConsoleCommand {
     }
 
     final static void savePlayerGameData(byte param0) {
-        if (GetPhasedEnergyBeamPulsetime.e((byte) 104)) {
+        if (GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 104)) {
           return;
         }
         if (!SocketNetworkArchiveClient.g(-127)) {

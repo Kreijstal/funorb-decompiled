@@ -83,14 +83,14 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
             }
             if (tc.field_c == SetBombletSprayReload.field_p) {
               if (!param4) {
-                OpenGlGpuCubeTexture.field_j = SetMissileLauncherProjectileLife.a(param2, param5, false, (byte) -70);
+                OpenGlGpuCubeTexture.loginCredentials = SetMissileLauncherProjectileLife.createLoginCredentials(param2, param5, false, (byte) -70);
               } else {
                 var11 = (String) null;
-                OpenGlGpuCubeTexture.field_j = SetFullMissionSet.a(96, SetTorpedoAimarc.field_p, (String) null, false, param5);
+                OpenGlGpuCubeTexture.loginCredentials = SetFullMissionSet.createLoginCredentials(96, SetTorpedoAimarc.field_p, (String) null, false, param5);
               }
               RequestNewestBlackboxRecording.field_p.position = 0;
               RequestNewestBlackboxRecording.field_p.writeByte(param3 ^ 13, 14);
-              RequestNewestBlackboxRecording.field_p.writeByte(0, OpenGlGpuCubeTexture.field_j.a((byte) 56).field_a);
+              RequestNewestBlackboxRecording.field_p.writeByte(0, OpenGlGpuCubeTexture.loginCredentials.getType((byte) 56).wireId);
               TileTextureOperation.b(-1, 117);
               tc.field_c = SetSpecialOrderBoxHeight.field_o;
             }
@@ -110,7 +110,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               ShipBlueprint.a(8, param3 ^ 30013)) {
               SetMissileLauncherRandomness.field_p = qga.field_b.readLong(255);
               qga.field_b.position = 0;
-              UiContainer.a(-87, param0, param4, OpenGlGpuCubeTexture.field_j, param1);
+              UiContainer.a(-87, param0, param4, OpenGlGpuCubeTexture.loginCredentials, param1);
               tc.field_c = LegacyOpenGlShaderProgram.field_a;
             }
             boolean decompiledFrameRemainder0 = true;
@@ -179,10 +179,10 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               ffb.field_e = ConstantColorTextureOperation.normalizeName(false, var13);
               SetClientSideDragging.field_p = qga.field_b.readUnsignedByte((byte) -94);
               tc.field_c = GetOndamageParticleSpeed.field_o;
-              if (OpenGlGpuCubeTexture.field_j.a((byte) 124) == GetSalvoDamageMultiplier.field_r) {
+              if (OpenGlGpuCubeTexture.loginCredentials.getType((byte) 124) == GetSalvoDamageMultiplier.emailCredentialType) {
                 SetFighterBayAimspeed.field_o.a(MissionList.b((byte) -106), param3 ^ 13);
               } else {
-                if (OpenGlGpuCubeTexture.field_j.a((byte) 112) == GetTorpedoReload.field_p) {
+                if (OpenGlGpuCubeTexture.loginCredentials.getType((byte) 112) == GetTorpedoReload.numericCredentialType) {
                   SetShowTutorial.field_p.a(MissionList.b((byte) -103), 0);
                 }
               }

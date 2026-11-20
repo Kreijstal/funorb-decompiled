@@ -131,7 +131,7 @@ final class MissionBuilder implements DiffableState {
           if (this.optionTotals[19] > 0) {
             var17[0] = var17[0] + var6;
           }
-          var7 = pla.a(param0, -4) ? 1 : 0;
+          var7 = ValidationStatusIcon.isBlueprintObjective(param0, -4) ? 1 : 0;
           if (var7 != 0) {
             var17[2] = 0;
           }

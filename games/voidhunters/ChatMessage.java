@@ -122,7 +122,7 @@ final class ChatMessage {
         if (!param0) {
           this.field_m = null;
         } else {
-          this.field_m = un.field_h;
+          this.field_m = AlternateNumericLoginCredentials.field_h;
         }
         this.field_q = psb.field_a;
         this.field_c = ModalPanel.field_A;

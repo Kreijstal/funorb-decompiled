@@ -4,7 +4,7 @@
 final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleCommand {
     static ValidationState debouncingInput;
     static int field_q;
-    static int field_o;
+    static int blockedShipTeam;
     static String field_s;
     static String field_r;
 
@@ -180,7 +180,7 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
             var36.menu.addItem(-1, 13, var37, var38);
           }
           if (param0 < 35) {
-            field_o = -28;
+            blockedShipTeam = -28;
           }
           var39 = GetLagStandardDeviationOut.field_o;
           var4 = param1.screenX;
@@ -196,7 +196,7 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
     public static void clearSharedReferences(int param0) {
         field_s = null;
         if (param0 != -32514) {
-          field_o = 71;
+          blockedShipTeam = 71;
           debouncingInput = null;
           field_r = null;
           return;

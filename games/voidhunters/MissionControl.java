@@ -157,7 +157,7 @@ final class MissionControl implements DiffableState {
     final void processEvents(int param0, GameSnapshot param1) {
         int var4 = VoidHunters.field_G;
         try {
-          GetAngleset.b(false);
+          GetAngleset.clearTeamChangeGuard(false);
           if (param0 != -2374) {
             this.selectedConditionOrAction = 104;
           }

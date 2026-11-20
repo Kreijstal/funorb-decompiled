@@ -138,13 +138,13 @@ final class ServerInfo implements DiffableState {
         }
         var3 = SecondaryNodeHashTable.field_c.field_g;
         if (var3 != 1) {
-          if (pla.a(param0, -4)) {
+          if (ValidationStatusIcon.isBlueprintObjective(param0, -4)) {
             return false;
           }
           return true;
         }
-        if (OpenGlGpuBuffer.a(param0, true) &&
-          !pla.a(param0, -4)) {
+        if (OpenGlGpuBuffer.isObjectiveVoteOption(param0, true) &&
+          !ValidationStatusIcon.isBlueprintObjective(param0, -4)) {
           return false;
         }
         return true;

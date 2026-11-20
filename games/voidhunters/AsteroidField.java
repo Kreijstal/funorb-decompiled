@@ -1409,7 +1409,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime218 = HuffmanCodec.fetchLocalizedResource((byte) -31, "VOTE_DESTROY_BASE_BALANCED_DESC");
           if (var2Lifetime218 != null) {
-            oib.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime218);
+            LoginCredentials.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime218);
           }
           var2Lifetime219 = HuffmanCodec.fetchLocalizedResource((byte) -38, "VOTE_CONVOY");
           if (var2Lifetime219 != null) {

@@ -234,7 +234,7 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
         if (!GetGrapplingHooksDamageableBySourcePlayer.field_o) {
           var3 = 0;
         }
-        oib.field_a.setBounds(var3, 119, ModelFaceAttachment.field_d.width - var3, ModelFaceAttachment.field_d.height - 40, 40);
+        LoginCredentials.field_a.setBounds(var3, 119, ModelFaceAttachment.field_d.width - var3, ModelFaceAttachment.field_d.height - 40, 40);
     }
 
     static {

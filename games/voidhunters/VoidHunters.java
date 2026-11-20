@@ -476,7 +476,7 @@ public final class VoidHunters extends NetworkGameClient {
           }
         }
         FlipTextureOperation.field_l.updateNetwork(RequestNewestBlackboxRecording.field_p, -114);
-        if (!GetPhasedEnergyBeamPulsetime.e((byte) 111)) {
+        if (!GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 111)) {
           while (true) {
             var7 = (ea) (SetGrapplingHookCooldown.field_o.removeFirst(true));
             if (var7 == null) {
@@ -1010,7 +1010,7 @@ public final class VoidHunters extends NetworkGameClient {
         BufferedFile.clearSharedReferences(-73);
         lo.clearSharedReferences(true);
         psb.clearSharedReferences(false);
-        oib.clearSharedReferences(124);
+        LoginCredentials.clearSharedReferences(124);
         vw.clearSharedReferences((byte) 55);
         IntrusiveDequeIterator.clearSharedReferences(-20221);
         NetworkArchiveClient.clearSharedReferences(125);
@@ -1034,7 +1034,7 @@ public final class VoidHunters extends NetworkGameClient {
         cd.clearSharedReferences(5);
         ebb.clearSharedReferences(23357);
         SpriteDimensions.clearSharedReferences(!param0 ? true : false);
-        mr.clearSharedReferences((byte) -16);
+        DisplayModeErrorDialog.clearSharedReferences((byte) -16);
         SoftwareSprite2D.clearSharedReferences(true);
         uc.clearSharedReferences(0);
         lm.clearSharedReferences(127);
@@ -1348,9 +1348,9 @@ public final class VoidHunters extends NetworkGameClient {
         CarouselEventFactory.clearSharedReferences((byte) 43);
         DialogMessagePanel.clearSharedReferences(true);
         RemoveEventActionFactory.clearSharedReferences(-117);
-        us.clearSharedReferences((byte) 32);
-        un.clearSharedReferences(false);
-        cfa.clearSharedReferences((byte) 83);
+        NumericLoginCredentials.clearSharedReferences((byte) 32);
+        AlternateNumericLoginCredentials.clearSharedReferences(false);
+        EmailLoginCredentials.clearSharedReferences((byte) 83);
         ea.clearSharedReferences(10);
         BlackBoxRecordingFactory.clearSharedReferences(false);
         IntegerArrayReadRequest.clearSharedReferences(true);
@@ -1845,7 +1845,7 @@ public final class VoidHunters extends NetworkGameClient {
         MidiNote.resetFrameTiming(2096);
         ComponentCollision.a("Finished loadloop", (byte) -128);
         if (this.l(0) &&
-          GetPhasedEnergyBeamPulsetime.e((byte) 116)) {
+          GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 116)) {
           WaterNoiseGpuMaterialEffect.startOfflineGame(true, false);
         }
         return true;
@@ -1913,15 +1913,15 @@ public final class VoidHunters extends NetworkGameClient {
             ScreenTransitionFade.progress = ScreenTransitionFade.progress + 1;
             if (16 == ScreenTransitionFade.progress) {
               if (!KaleidoscopeTextureOperation.field_i) {
-                NodeHashTable.a(0);
+                NodeHashTable.transitionGuestClientState(0);
               } else {
-                pla.a(0);
+                ValidationStatusIcon.transitionGuestClientState(0);
               }
               wp.field_a = QuickChatMenuWidget.field_wb;
             }
           } else {
             if (QuickChatMenuWidget.field_wb == wp.field_a) {
-              if (!GetPhasedEnergyBeamPulsetime.e((byte) 102)) {
+              if (!GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 102)) {
                 SetMissionTerrainSpaceProbability.b(false);
                 AgeValidator.field_f = Transform3D.field_a;
                 if (KaleidoscopeTextureOperation.field_i) {

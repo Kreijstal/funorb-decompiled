@@ -291,8 +291,8 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           lo.field_c = SetGrapplingHookRopeBreakLength.a(this.graphicsArchive, true, "basic", "achievements_large");
           OpenGlGpuTexture2D.field_j = SetSniperCannonProjectiles.a(var11, "unachieved", "basic", true);
           WaterNoiseGpuMaterialEffect.field_h = SetSniperCannonProjectiles.a(var11, "orbcoin", "basic", true);
-          un.a(OpenGlGpuTexture2D.field_j, 121);
-          un.a(WaterNoiseGpuMaterialEffect.field_h, 126);
+          AlternateNumericLoginCredentials.alignSpriteToFourPixels(OpenGlGpuTexture2D.field_j, 121);
+          AlternateNumericLoginCredentials.alignSpriteToFourPixels(WaterNoiseGpuMaterialEffect.field_h, 126);
           kua.field_a = new Sprite(32, 32);
           kua.field_a.setRasterTarget();
           WaterNoiseGpuMaterialEffect.field_h.drawDownscaled(0, 0, 32, 32);

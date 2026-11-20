@@ -82,9 +82,9 @@ final class ServerTickFactory implements GameStateFactory {
             stackIn_12_0 = SetReverbGain.a(SetSniperCannonAimarc.field_q, new String[]{param1}, 118);
             return stackIn_12_0;
           }
-          mr.field_M.startAt(3, var8);
+          DisplayModeErrorDialog.field_M.startAt(3, var8);
           while (true) {
-            var7 = (vu) (mr.field_M.next((byte) 72));
+            var7 = (vu) (DisplayModeErrorDialog.field_M.next((byte) 72));
             if (var7 != null) {
               var7.field_yb = var7.field_yb - 1;
               continue;

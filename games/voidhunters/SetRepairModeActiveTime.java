@@ -11,7 +11,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
         if (param0 >= -89) {
           return false;
         }
-        stackIn_7_0 = (GetPhasedEnergyBeamPulsetime.e((byte) 120)) || !(GetDebrisCarryOver.field_o > 0);
+        stackIn_7_0 = (GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 120)) || !(GetDebrisCarryOver.field_o > 0);
         return stackIn_7_0;
     }
 
@@ -160,7 +160,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
             stackIn_7_1 = null;
             stackIn_7_4 = SetMessageMax.field_o;
           }
-          oib.field_a = new Widget(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
+          LoginCredentials.field_a = new Widget(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
           ModelFaceAttachment.field_d = new Widget(0L, (Widget) null);
           ModelFaceAttachment.field_d.addChild(-561, AlphaContainer.field_w);
           ModelFaceAttachment.field_d.addChild(param1 - 10792, sra.field_a);
@@ -176,7 +176,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
             ModelFaceAttachment.field_d.addChild(-561, GetMomentOfInertiaPerpointCalcDownshift.field_p);
           }
-          ModelFaceAttachment.field_d.addChild(-561, oib.field_a);
+          ModelFaceAttachment.field_d.addChild(-561, LoginCredentials.field_a);
           Debris.field_y = new Widget(0L, DeveloperConsole.field_q);
           Debris.field_y.field_F = 1;
           Debris.field_y.field_B = 0;
@@ -207,7 +207,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           GetShipToShipRamDamage.field_q = new Widget(0L, SetPlayerRepairAmount.field_q, tua.field_b.toUpperCase());
           GetWeaponParticleSpeedDownshift.field_q = new Widget(0L, pa.field_a);
           SetPhysicsCollisionGrapplingHookForceMultiplier.field_o = new Widget(0L, GpuEnvironmentMapSource.field_c);
-          ProxySocketConnector.field_e = new Widget(0L, TutorialController.field_b, mr.field_J.toUpperCase());
+          ProxySocketConnector.field_e = new Widget(0L, TutorialController.field_b, DisplayModeErrorDialog.field_J.toUpperCase());
           GetLaserAimarc.field_o = new Widget[4 + param12];
           SetReloadBarHeight.field_q = new IconTextWidget[4 + param12][];
           GetLaserAimarc.field_o[0] = new Widget(0L, SetShieldsDirectionalHalfarcCuts.field_p, GetMissionTerrainSpaceProbability.field_p);

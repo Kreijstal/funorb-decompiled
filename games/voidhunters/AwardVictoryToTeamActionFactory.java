@@ -268,7 +268,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ThrusterBehaviour.field_a[10] = MassDriverWeaponDefinition.field_c;
           ThrusterBehaviour.field_a[6] = GrappleLauncherBehaviour.field_c;
           kr.field_a = new String[5];
-          ThrusterBehaviour.field_a[4] = oib.field_b;
+          ThrusterBehaviour.field_a[4] = LoginCredentials.field_b;
           ThrusterBehaviour.field_a[12] = qeb.field_c;
           ThrusterBehaviour.field_a[11] = GetPhasedEnergyBeamAimarc.field_o;
           kr.field_a[1] = SetReverbDamp.field_p;

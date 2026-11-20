@@ -95,7 +95,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
 
     final static void a(int param0, int[] param1) {
         try {
-          us.field_f = param1[48];
+          NumericLoginCredentials.field_f = param1[48];
           MapClearanceRectangleFactory.field_b = param1[115];
           GetSalvoRepairTimeMultiplier.field_o = param1[75];
           CarouselSlotStateDump.field_i = param1[204];

@@ -418,7 +418,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
               var11.setTargetBlueprint((byte) 34, this.specialOrderSubmessage.blueprint);
               return;
             }
-            if (!GetToggledScoreboard.a((byte) -128, var9.world.getObjectiveType(false))) {
+            if (!GetToggledScoreboard.isBlueprintOrSandboxObjective((byte) -128, var9.world.getObjectiveType(false))) {
               return;
             }
             var10 = new Ship();

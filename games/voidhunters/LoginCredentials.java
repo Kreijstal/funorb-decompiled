@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class oib {
+abstract class LoginCredentials {
     static String field_b;
     static Widget field_a;
     static int fontJustificationRemainder;
@@ -15,9 +15,9 @@ abstract class oib {
         field_b = null;
     }
 
-    abstract dka a(byte param0);
+    abstract LoginCredentialType getType(byte param0);
 
-    abstract void a(PacketBuffer param0, int param1);
+    abstract void write(PacketBuffer param0, int param1);
 
     static {
         field_z = "oib.D(";

@@ -3,7 +3,7 @@
  */
 final class OpenGlGpuCubeTexture extends OpenGlGpuTexture implements GpuCubeTexture {
     static gj field_k;
-    static oib field_j;
+    static LoginCredentials loginCredentials;
 
     public final void bind(int param0) {
         super.bind(param0);
@@ -65,7 +65,7 @@ final class OpenGlGpuCubeTexture extends OpenGlGpuTexture implements GpuCubeText
     }
 
     public static void clearSharedReferences(int param0) {
-        field_j = null;
+        loginCredentials = null;
         if (param0 != 6) {
           OpenGlGpuCubeTexture.clearSharedReferences(-55);
           field_k = null;
@@ -76,6 +76,6 @@ final class OpenGlGpuCubeTexture extends OpenGlGpuTexture implements GpuCubeText
 
     static {
         field_k = new gj();
-        field_j = null;
+        loginCredentials = null;
     }
 }

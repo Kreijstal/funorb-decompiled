@@ -88,7 +88,7 @@ abstract class OpenGlGpuBuffer implements GpuBuffer {
         }
     }
 
-    final static boolean a(int param0, boolean param1) {
+    final static boolean isObjectiveVoteOption(int param0, boolean param1) {
         if (!param1) {
           return true;
         }
@@ -99,7 +99,7 @@ abstract class OpenGlGpuBuffer implements GpuBuffer {
         if (param0 == 2) {
           return 0 == this.bufferId ? this.clientBuffer.getAddress() : 0L;
         }
-        OpenGlGpuBuffer.a(127, true);
+        OpenGlGpuBuffer.isObjectiveVoteOption(127, true);
         return 0 == this.bufferId ? this.clientBuffer.getAddress() : 0L;
     }
 
@@ -247,7 +247,7 @@ abstract class OpenGlGpuBuffer implements GpuBuffer {
           if (!param0) {
             return null;
           }
-          OpenGlGpuBuffer.a(7, true);
+          OpenGlGpuBuffer.isObjectiveVoteOption(7, true);
           stackIn_20_0 = null;
           return (jaclib.memory.Buffer) (stackIn_20_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

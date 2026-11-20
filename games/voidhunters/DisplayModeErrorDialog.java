@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mr extends ResizableModalPanel implements UiActionListener {
+final class DisplayModeErrorDialog extends ResizableModalPanel implements UiActionListener {
     static String field_L;
     static IntrusiveDeque field_M;
-    private UiFocusableComponent field_K;
+    private UiFocusableComponent closeButton;
     static String field_J;
 
     public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
@@ -15,8 +15,8 @@ final class mr extends ResizableModalPanel implements UiActionListener {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_K == param3) {
-            this.h(-95);
+          if (this.closeButton == param3) {
+            this.closeDialog(-95);
           }
           if (param0 == 11) {
             return;
@@ -38,7 +38,7 @@ final class mr extends ResizableModalPanel implements UiActionListener {
         }
     }
 
-    final static String m(byte param0) {
+    final static String getLoginNameOrFallback(byte param0) {
         String var1 = "";
         if (null != SetAiFiringRangeUpshift.field_o) {
           var1 = SetAiFiringRangeUpshift.field_o.getLoginName(30);
@@ -58,11 +58,11 @@ final class mr extends ResizableModalPanel implements UiActionListener {
         field_M = null;
         field_J = null;
         if (param0 != -16) {
-          mr.createTickClock(-102);
+          DisplayModeErrorDialog.createTickClock(-102);
         }
     }
 
-    mr(ModalStack param0, dpb param1) {
+    DisplayModeErrorDialog(ModalStack param0, dpb param1) {
         super(param0, 200, 150);
         Object var3 = null;
         Object stackIn_12_0 = null;
@@ -98,7 +98,7 @@ final class mr extends ResizableModalPanel implements UiActionListener {
           var4.x = 0;
           var4.renderer = (UiRenderer) ((Object) new UiTextStyle(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(-18756, var4);
-          this.field_K = this.a((byte) 113, (UiListener) (this), MissionCondition.field_b);
+          this.closeButton = this.addFooterButton((byte) 113, (UiListener) (this), MissionCondition.field_b);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -120,7 +120,7 @@ final class mr extends ResizableModalPanel implements UiActionListener {
         }
     }
 
-    private final void h(int param0) {
+    private final void closeDialog(int param0) {
         if (param0 >= -39) {
           field_J = (String) null;
           if (this.active) {
@@ -137,13 +137,13 @@ final class mr extends ResizableModalPanel implements UiActionListener {
 
     final static TickClock createTickClock(int param0) {
         if (param0 <= 37) {
-          mr.createTickClock(84);
+          DisplayModeErrorDialog.createTickClock(84);
           return (TickClock) ((Object) new SmoothedNanoTickClock());
         }
         return (TickClock) ((Object) new SmoothedNanoTickClock());
     }
 
-    private final UiFocusableComponent a(byte param0, UiListener param1, String param2) {
+    private final UiFocusableComponent addFooterButton(byte param0, UiListener param1, String param2) {
         UiFocusableComponent var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;

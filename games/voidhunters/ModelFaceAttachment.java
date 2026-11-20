@@ -22,7 +22,7 @@ final class ModelFaceAttachment {
         if (param0) {
           return false;
         }
-        if (GetPhasedEnergyBeamPulsetime.e((byte) 119)) {
+        if (GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 119)) {
           stackIn_7_0 = true;
         } else {
           if (GetDebrisCarryOver.field_o <= 0) {

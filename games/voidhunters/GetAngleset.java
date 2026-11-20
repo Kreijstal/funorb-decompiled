@@ -4,15 +4,15 @@
 final class GetAngleset extends ConsoleCommand {
     static int field_o;
 
-    final static void b(boolean param0) {
+    final static void clearTeamChangeGuard(boolean param0) {
         if (param0) {
           field_o = 95;
-          fw.field_a = -1;
-          SetShieldsDirectionalArcParticleSpeedDownshift.field_o = -1;
+          TeamChangeGuardState.blockedShipId = -1;
+          SetShieldsDirectionalArcParticleSpeedDownshift.blockedShipTeam = -1;
           return;
         }
-        fw.field_a = -1;
-        SetShieldsDirectionalArcParticleSpeedDownshift.field_o = -1;
+        TeamChangeGuardState.blockedShipId = -1;
+        SetShieldsDirectionalArcParticleSpeedDownshift.blockedShipTeam = -1;
     }
 
     GetAngleset(String param0, Class[] param1, String param2) {

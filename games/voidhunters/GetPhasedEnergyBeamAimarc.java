@@ -31,7 +31,7 @@ final class GetPhasedEnergyBeamAimarc extends ConsoleCommand {
         if (null == TeamNodeCondition.field_c) {
           TeamNodeCondition.field_c = new SecondaryNodeHashTable(64);
         }
-        mr.field_M = param1.children;
+        DisplayModeErrorDialog.field_M = param1.children;
         if (!param2) {
           return;
         }

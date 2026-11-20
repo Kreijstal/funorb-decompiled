@@ -21,7 +21,7 @@ abstract class SoftwareSprite2D {
           GetBoostersCooldown.field_p = 0;
           OpenGlIndexBuffer.field_k = 0;
           HslAdjustTextureOperation.field_q = null;
-          mr.field_M.clear(120);
+          DisplayModeErrorDialog.field_M.clear(120);
           int var1_int = -31 % ((param0 + 31) / 39);
           SetPointDefenceLaserProjectileOndamageParticles.field_o.clear(97);
           var2 = MenuInputState.field_f.first(-43);

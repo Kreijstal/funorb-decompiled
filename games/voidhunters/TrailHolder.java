@@ -175,7 +175,7 @@ final class TrailHolder implements DiffableState {
         }
         if (!param1) {
           SetCountermeasureLauncherProjectiles.field_p = sib.a(80, var8, (byte) 112);
-          un.field_h = null;
+          AlternateNumericLoginCredentials.field_h = null;
           return new ChatMessage(param1);
         }
         var5 = var8.readUnsignedShort(1869);
@@ -187,12 +187,12 @@ final class TrailHolder implements DiffableState {
           } else {
             stackIn_26_0 = var9.linkedPhraseIds;
           }
-          un.field_h = stackIn_26_0;
+          AlternateNumericLoginCredentials.field_h = stackIn_26_0;
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = (Exception) (Object) decompiledCaughtException;
           FractalNoiseVolumeGenerator.reportClientError((Throwable) ((Object) var6), "CC1", 0);
-          un.field_h = null;
+          AlternateNumericLoginCredentials.field_h = null;
           SetCountermeasureLauncherProjectiles.field_p = null;
           return new ChatMessage(param1);
         }

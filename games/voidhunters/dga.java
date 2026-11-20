@@ -290,7 +290,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_options", 23100);
                 if (var2 != null) {
-                  mr.field_J = Cp1252Strings.decode((byte) -125, var2);
+                  DisplayModeErrorDialog.field_J = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_options_whocanjoin", 23100);
                 if (var2 != null) {
@@ -972,7 +972,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("rule_1_3", 23100);
                 if (null != var2) {
-                  cfa.field_e = Cp1252Strings.decode((byte) -125, var2);
+                  EmailLoginCredentials.field_e = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("rule_1_4", 23100);
                 if (null != var2) {
@@ -1704,7 +1704,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("ignorenotfound", 23100);
                 if (var2 != null) {
-                  mr.field_L = Cp1252Strings.decode((byte) -125, var2);
+                  DisplayModeErrorDialog.field_L = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("removeignorefirst", 23100);
                 if (var2 != null) {

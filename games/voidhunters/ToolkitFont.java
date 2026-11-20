@@ -13,7 +13,7 @@ abstract class ToolkitFont {
         CarouselPlayerInfoFactory.fontDefaultColor = param2;
         TimedSpecialOrderBehaviour.fontColor = param2;
         ConstantMonochromeTextureOperation.fontJustificationStep = param1;
-        oib.fontJustificationRemainder = 0;
+        LoginCredentials.fontJustificationRemainder = 0;
         SetGrapplingHookRopeChangeRate.fontStrikethroughColor = -1;
         MapClearanceAreaFactory.fontDefaultShadowColor = param0;
         SetThrusterAutobalancing.fontShadowColor = param0;
@@ -365,9 +365,9 @@ abstract class ToolkitFont {
                 }
                 if (var15 == 32) {
                   if (ConstantMonochromeTextureOperation.fontJustificationStep > 0) {
-                    oib.fontJustificationRemainder = oib.fontJustificationRemainder + ConstantMonochromeTextureOperation.fontJustificationStep;
-                    param5 = param5 + (oib.fontJustificationRemainder >> 8);
-                    oib.fontJustificationRemainder = oib.fontJustificationRemainder & 255;
+                    LoginCredentials.fontJustificationRemainder = LoginCredentials.fontJustificationRemainder + ConstantMonochromeTextureOperation.fontJustificationStep;
+                    param5 = param5 + (LoginCredentials.fontJustificationRemainder >> 8);
+                    LoginCredentials.fontJustificationRemainder = LoginCredentials.fontJustificationRemainder & 255;
                   }
                 } else {
                   if (param7 == null) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetTorpedoReload extends ConsoleCommand {
-    static dka field_p;
+    static LoginCredentialType numericCredentialType;
     static int field_o;
     static int field_q;
 
@@ -15,7 +15,7 @@ final class GetTorpedoReload extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            field_p = (dka) null;
+            numericCredentialType = (LoginCredentialType) null;
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(109, 96));
           return stackIn_3_0;
@@ -38,13 +38,13 @@ final class GetTorpedoReload extends ConsoleCommand {
     }
 
     public static void clearSharedReferences(int param0) {
-        field_p = null;
+        numericCredentialType = null;
         if (param0 != 194) {
-          field_p = (dka) null;
+          numericCredentialType = (LoginCredentialType) null;
         }
     }
 
     static {
-        field_p = new dka(2);
+        numericCredentialType = new LoginCredentialType(2);
     }
 }

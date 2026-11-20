@@ -162,7 +162,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_burst_fire_reload(" + LaunchFightersOrderDefinition.field_d + ")");
         System.out.println("set_ship_spawn_invulnerability_time(" + Particle.field_A + ")");
         System.out.println("set_fog_of_war_sensor_range(" + GetUseNiceTrails.field_p + ")");
-        System.out.println("set_thruster_binding_balance_threshold(" + us.field_f + ")");
+        System.out.println("set_thruster_binding_balance_threshold(" + NumericLoginCredentials.field_f + ")");
         System.out.println("set_component_breaking_explosion_force_multiplier(" + kmb.field_f + ")");
         System.out.println("set_physics_collision_force_multiplier(" + SetPointDefenceLaserProjectiles.field_o + ")");
         System.out.println("set_physics_collision_grappling_hook_force_multiplier(" + ToolkitRasterState.field_i + ")");

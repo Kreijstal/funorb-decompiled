@@ -23,15 +23,15 @@ final class GetToggledScoreboard extends ConsoleCommand {
         return SetTabForScores.field_p;
     }
 
-    final static boolean a(byte param0, int param1) {
+    final static boolean isBlueprintOrSandboxObjective(byte param0, int param1) {
         if (param0 >= -63) {
           field_p = (IntrusiveDeque) null;
-          if (!pla.a(param1, -4)) {
+          if (!ValidationStatusIcon.isBlueprintObjective(param1, -4)) {
             return 13 == param1 ? true : false;
           }
           return true;
         }
-        if (pla.a(param1, -4)) {
+        if (ValidationStatusIcon.isBlueprintObjective(param1, -4)) {
           return true;
         }
         if (13 != param1) {

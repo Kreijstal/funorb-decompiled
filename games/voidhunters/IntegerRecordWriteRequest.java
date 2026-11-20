@@ -78,7 +78,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[145] = TickClock.field_a;
         var2[179] = SetMassDriverEnergyUsed.field_o;
         var2[59] = SetTorpedoEnergyUsed.field_p;
-        var2[48] = us.field_f;
+        var2[48] = NumericLoginCredentials.field_f;
         var2[94] = SetTorpedoEnergyUsed.field_q;
         var2[225] = Particle.field_y;
         var2[196] = Particle.field_C;

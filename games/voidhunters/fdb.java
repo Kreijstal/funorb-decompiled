@@ -94,7 +94,7 @@ final class fdb extends MidiPcmStream {
             }
           }
         }
-        if (0 != oib.field_a.field_o) {
+        if (0 != LoginCredentials.field_a.field_o) {
           if (SetMutatorVotes.field_o.length == 1 &&
             UiScrollPane.field_w != SetMutatorVotes.field_o[0]) {
             UiScrollPane.field_w = SetMutatorVotes.field_o[0];

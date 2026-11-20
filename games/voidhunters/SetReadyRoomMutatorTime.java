@@ -82,7 +82,7 @@ final class SetReadyRoomMutatorTime extends ConsoleCommand {
         int var3;
         var3 = VoidHunters.field_G;
         if (0 >= GetDebrisCarryOver.field_o) {
-          if (GetPhasedEnergyBeamPulsetime.e((byte) 120)) {
+          if (GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 120)) {
             var2 = 0;
           } else {
             var2 = 1;

@@ -231,8 +231,8 @@ final class NodeHashTable {
         }
     }
 
-    final static void a(int param0) {
-        if (!cgb.field_a) {
+    final static void transitionGuestClientState(int param0) {
+        if (!GuestModeState.guestMode) {
           throw new IllegalStateException();
         }
         CommandConsole.field_r = true;

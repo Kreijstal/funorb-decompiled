@@ -251,12 +251,12 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, Bo
             var4 instanceof Ship) {
             var5 = (Ship) (var4);
             if (!param2.canSelectTeam(this.team, 0, var5.getTeam((byte) 110))) {
-              if (-1 != fw.field_a &&
-                SetShieldsDirectionalArcParticleSpeedDownshift.field_o != var5.getTeam((byte) 122)) {
-                GetAngleset.b(false);
+              if (-1 != TeamChangeGuardState.blockedShipId &&
+                SetShieldsDirectionalArcParticleSpeedDownshift.blockedShipTeam != var5.getTeam((byte) 122)) {
+                GetAngleset.clearTeamChangeGuard(false);
               } else {
-                fw.field_a = param0;
-                SetShieldsDirectionalArcParticleSpeedDownshift.field_o = var5.getTeam((byte) 90);
+                TeamChangeGuardState.blockedShipId = param0;
+                SetShieldsDirectionalArcParticleSpeedDownshift.blockedShipTeam = var5.getTeam((byte) 90);
                 return;
               }
             }

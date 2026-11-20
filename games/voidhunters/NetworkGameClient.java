@@ -713,7 +713,7 @@ abstract class NetworkGameClient extends GameApplet {
                 } else {
                   UiComboBoxList.field_C = SetTorpedoAimarc.field_p;
                   TeamShipComponentConditionFactory.b((byte) 49);
-                  cgb.field_a = false;
+                  GuestModeState.guestMode = false;
                   GetSpinningBladeAimspeed.field_q = 10;
                 }
               }
@@ -722,7 +722,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (4 == var4) {
             if (!GetRespawnTime.field_o) {
               GetSpinningBladeAimspeed.field_q = 10;
-              cgb.field_a = true;
+              GuestModeState.guestMode = true;
             } else {
               SetGrapplingHookRopeChangeRate.a(MissionList.b((byte) -84), -18209);
             }

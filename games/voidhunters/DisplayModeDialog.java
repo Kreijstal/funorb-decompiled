@@ -45,7 +45,7 @@ final class DisplayModeDialog extends ResizableModalPanel implements UiActionLis
             }
           }
           if (!this.field_J &&
-            !GetPhasedEnergyBeamPulsetime.e((byte) 124)) {
+            !GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 124)) {
             this.closeDialog((byte) -118);
             this.modalStack.pushPanel(false, new DisplayModeDialog(this.modalStack));
           }
@@ -227,7 +227,7 @@ final class DisplayModeDialog extends ResizableModalPanel implements UiActionLis
           var2_intLifetime1 = stackIn_34_0;
           stackIn_37_0 = (var2_intLifetime1 == 0) ? 2 : 3;
           var3Lifetime1 = stackIn_37_0;
-          stackIn_40_1 = !(GetPhasedEnergyBeamPulsetime.e((byte) 110));
+          stackIn_40_1 = !(GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 110));
           this.field_J = stackIn_40_1;
           if (var2_intLifetime1 == 0) {
             if (MissionConditionFactory.field_b != null) {
@@ -439,7 +439,7 @@ final class DisplayModeDialog extends ResizableModalPanel implements UiActionLis
                   if (var6_int == 0 &&
                     this.fullscreenButton == param3) {
                     if (!this.hasDisplayModes) {
-                      this.modalStack.pushPanel(false, new mr(this.modalStack, ComponentAttachmentPlan.field_a));
+                      this.modalStack.pushPanel(false, new DisplayModeErrorDialog(this.modalStack, ComponentAttachmentPlan.field_a));
                       return;
                     }
                     if (GetDebrisCarryOver.field_o <= 0) {

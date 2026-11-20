@@ -2730,7 +2730,7 @@ final class GameSession {
                   stackIn_20_0 = 0;
                 }
                 var8 = stackIn_20_0;
-                if (pla.a(param0.world.getObjectiveType(false), -4)) {
+                if (ValidationStatusIcon.isBlueprintObjective(param0.world.getObjectiveType(false), -4)) {
                   var9_ref_hna = new PlayerAction();
                   var9_ref_hna.specialOrderSubmessage = new SpecialOrderSubmessage();
                   if (var8 == 0) {
@@ -5170,7 +5170,7 @@ final class GameSession {
         this.field_v.saveHintProgress((byte) 111);
         if (this.networked) {
         } else {
-          if (GetPhasedEnergyBeamPulsetime.e((byte) 118)) {
+          if (GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 118)) {
             var3 = param0 ? 1 : 0;
             GetNebulaFadesOutWhenClose.a(!ModelFaceAttachment.a(false) ? 0 : 7, var3 != 0, (byte) -85, 0);
           } else {

@@ -12,18 +12,18 @@ final class GetBombletSprayAimspeed extends ConsoleCommand {
     }
 
     final static ModelFaceAttachmentDefinition getFaceAttachmentDefinition(int param0, int param1) {
-        ModelFaceAttachmentDefinition var2 = (ModelFaceAttachmentDefinition) (us.field_d.get(param1, (long)param0));
+        ModelFaceAttachmentDefinition var2 = (ModelFaceAttachmentDefinition) (NumericLoginCredentials.field_d.get(param1, (long)param0));
         if (var2 != null) {
           return var2;
         }
         byte[] var3 = PerlinNoiseTextureOperation.field_l.fetchFile(0, param0, (byte) 13);
         var2 = new ModelFaceAttachmentDefinition();
         if (var3 == null) {
-          us.field_d.put(var2, (long)param0, (byte) -117);
+          NumericLoginCredentials.field_d.put(var2, (long)param0, (byte) -117);
           return var2;
         }
         var2.decode(param0, new PacketBuffer(var3), (byte) 11);
-        us.field_d.put(var2, (long)param0, (byte) -117);
+        NumericLoginCredentials.field_d.put(var2, (long)param0, (byte) -117);
         return var2;
     }
 

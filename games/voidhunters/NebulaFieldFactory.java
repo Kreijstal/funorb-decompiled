@@ -140,7 +140,7 @@ final class NebulaFieldFactory implements GameStateFactory {
             fieldTemp$1 = GetBoostersCooldown.field_p;
             GetBoostersCooldown.field_p = GetBoostersCooldown.field_p + 1;
             var6Lifetime1.field_yb = fieldTemp$1;
-            mr.field_M.addLast(-10258, var6Lifetime1);
+            DisplayModeErrorDialog.field_M.addLast(-10258, var6Lifetime1);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -149,7 +149,7 @@ final class NebulaFieldFactory implements GameStateFactory {
           var6Lifetime1.field_vb = var5Lifetime1;
           var6Lifetime1.field_Ab = (String) (var3Lifetime1);
           var6Lifetime1.unlink(-3846);
-          var7_ref = (vu) (mr.field_M.first(0));
+          var7_ref = (vu) (DisplayModeErrorDialog.field_M.first(0));
           scanLoop1: while (true) {
             if (var7_ref != null) {
               stackIn_66_0 = var7_ref;
@@ -157,12 +157,12 @@ final class NebulaFieldFactory implements GameStateFactory {
                 break scanLoop1;
               }
               if (Nebula.a(stackIn_66_0, 7569, var6Lifetime1)) {
-                var7_ref = (vu) (mr.field_M.next((byte) 78));
+                var7_ref = (vu) (DisplayModeErrorDialog.field_M.next((byte) 78));
                 continue;
               }
             }
             if (null == var7_ref) {
-              mr.field_M.addLast(-10258, var6Lifetime1);
+              DisplayModeErrorDialog.field_M.addLast(-10258, var6Lifetime1);
               if (var9 == 0) {
                 return;
               }

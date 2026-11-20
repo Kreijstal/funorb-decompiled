@@ -360,7 +360,7 @@ final class ValidationStatusWidget extends HotspotTextWidget {
     }
 
     ValidationStatusWidget(InputValidator param0, String param1, int param2, int param3, int param4, int param5) {
-        super(param1, cfa.b((byte) -111));
+        super(param1, EmailLoginCredentials.getValidationStatusStyle((byte) -111));
         try {
           this.defaultMessage = param1;
           this.validator = param0;

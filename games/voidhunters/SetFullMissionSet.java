@@ -36,12 +36,12 @@ final class SetFullMissionSet extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static oib a(int param0, long param1, String param2, boolean param3, String param4) {
+    final static LoginCredentials createLoginCredentials(int param0, long param1, String param2, boolean param3, String param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
-        cfa stackIn_3_0 = null;
-        un stackIn_6_0 = null;
-        us stackIn_8_0 = null;
+        EmailLoginCredentials stackIn_3_0 = null;
+        AlternateNumericLoginCredentials stackIn_6_0 = null;
+        NumericLoginCredentials stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -52,15 +52,15 @@ final class SetFullMissionSet extends ConsoleCommand {
           var6_int = -121 / ((46 - param0) / 42);
           if (param1 == 0L &&
             param2 != null) {
-            stackIn_3_0 = new cfa(param2, param4);
-            return (oib) ((Object) stackIn_3_0);
+            stackIn_3_0 = new EmailLoginCredentials(param2, param4);
+            return (LoginCredentials) ((Object) stackIn_3_0);
           }
           if (!param3) {
-            stackIn_8_0 = new us(param1, param4);
-            return (oib) ((Object) stackIn_8_0);
+            stackIn_8_0 = new NumericLoginCredentials(param1, param4);
+            return (LoginCredentials) ((Object) stackIn_8_0);
           }
-          stackIn_6_0 = new un(param1, param4);
-          return (oib) ((Object) stackIn_6_0);
+          stackIn_6_0 = new AlternateNumericLoginCredentials(param1, param4);
+          return (LoginCredentials) ((Object) stackIn_6_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
