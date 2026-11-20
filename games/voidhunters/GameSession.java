@@ -1042,7 +1042,7 @@ final class GameSession {
           } else {
             stackIn_59_3 = null;
           }
-          ((World) (Object) stackIn_58_0).a(stackIn_58_1, stackIn_58_2, stackIn_59_3, ShipTeamConditionFactory.field_a, (byte) 19, (Ship) (var9), SetMinimapWidth.field_o, var16, var13);
+          ((World) (Object) stackIn_58_0).drawPlayerShip(stackIn_58_1, stackIn_58_2, stackIn_59_3, ShipTeamConditionFactory.field_a, (byte) 19, (Ship) (var9), SetMinimapWidth.field_o, var16, var13);
         }
         var13Lifetime1 = this.state.carouselInfo.tick;
         var24.world.drawWorld(ShipTeamConditionFactory.field_a, (byte) 122, var13Lifetime1, (Ship) (var9));
@@ -2182,7 +2182,7 @@ final class GameSession {
                     DelayedPacket.drawLine(-8 + var6, 8 + var5_int, var5_int - 8, var6 + 8, -16777216, var7);
                   } else {
                     if (param0 != 1) {
-                      SetNumStars.a(6.0f, (byte) 95, var6, var7, var5_int);
+                      SetNumStars.drawCircle(6.0f, (byte) 95, var6, var7, var5_int);
                     } else {
                       DelayedPacket.drawLine(var6, 8 + var5_int, -8 + var5_int, var6, -16777216, var7);
                       DelayedPacket.drawLine(var6 + 8, var5_int, var5_int, -8 + var6, -16777216, var7);
@@ -2192,12 +2192,12 @@ final class GameSession {
                   var7 = 16746496;
                   DelayedPacket.drawLine(var6, var5_int + 8, var5_int - 8, var6, -16777216, var7);
                   DelayedPacket.drawLine(var6 + 8, var5_int, var5_int, -8 + var6, -16777216, var7);
-                  SetNumStars.a(6.0f, (byte) 83, var6, var7, var5_int);
+                  SetNumStars.drawCircle(6.0f, (byte) 83, var6, var7, var5_int);
                 }
               } else {
                 DelayedPacket.drawLine(var6, var5_int + 8, -8 + var5_int, var6, -16777216, var7);
                 DelayedPacket.drawLine(8 + var6, var5_int, var5_int, -8 + var6, -16777216, var7);
-                SetNumStars.a(6.0f, (byte) 98, var6, var7, var5_int);
+                SetNumStars.drawCircle(6.0f, (byte) 98, var6, var7, var5_int);
               }
               return;
             }
@@ -4537,7 +4537,7 @@ final class GameSession {
             return;
           }
           int var9 = 36 / ((param1 + 64) / 44);
-          SetNumStars.a((float)(1 + param3), (byte) 98, param0, -7829368, param2);
+          SetNumStars.drawCircle((float)(1 + param3), (byte) 98, param0, -7829368, param2);
           return;
         }
     }

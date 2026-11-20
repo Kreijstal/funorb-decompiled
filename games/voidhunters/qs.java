@@ -6,7 +6,7 @@ final class qs {
     static int field_a;
     static int field_c;
 
-    final static void a(java.applet.Applet param0, int param1, String param2, String param3, long param4) {
+    final static void writeCookie(java.applet.Applet param0, int param1, String param2, String param3, long param4) {
         try {
           RuntimeException stackIn_11_0 = null;
           StringBuilder stackIn_11_1 = null;

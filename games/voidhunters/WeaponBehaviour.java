@@ -665,7 +665,7 @@ final class WeaponBehaviour implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         int var10_int = 0;
         RuntimeException var10 = null;
-        uwa var11 = null;
+        ShieldInfo var11 = null;
         WeaponDefinition var12 = null;
         try {
           if (0 < this.reload) {
@@ -675,8 +675,8 @@ final class WeaponBehaviour implements DiffableState {
           if (this.weapontype == 10 &&
             Particle.field_a - Particle.field_n < this.reload) {
             var10_int = Particle.field_a - this.reload;
-            var11 = ShipFactory.field_a.a(0);
-            var11.a(-1, param4, param0, UiComboBoxRenderer.field_a / Particle.field_n * var10_int, 1, 0, (byte) 69, param1, param7, 0);
+            var11 = ShipFactory.shieldInfoPool.acquire(0);
+            var11.configure(-1, param4, param0, UiComboBoxRenderer.field_a / Particle.field_n * var10_int, 1, 0, (byte) 69, param1, param7, 0);
           }
           var12 = this.getDefinition((byte) 24);
           if (var12.hasSustainedPulse(1024) &&

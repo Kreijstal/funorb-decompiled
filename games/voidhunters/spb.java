@@ -11,7 +11,7 @@ final class spb {
         if (param0 != -95) {
           return;
         }
-        kl.a(psb.field_b, -28);
+        ShieldInfoPool.detachCanvasInput(psb.field_b, -28);
         psb.field_b.exitFullscreen(SetTorpedoProjectiles.field_o, -32335);
         psb.field_b = null;
         if (MissionConditionFactory.field_b == null) {

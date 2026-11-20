@@ -326,7 +326,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (!param0 &&
           GetDebrisSurvives.field_q) {
-          kl.a(igb.field_a, -125);
+          ShieldInfoPool.detachCanvasInput(igb.field_a, -125);
           this.rebuildCanvas(-81);
           SetGrapplingHookCooldown.a((byte) -62, igb.field_a);
         }

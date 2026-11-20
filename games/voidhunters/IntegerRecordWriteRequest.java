@@ -224,7 +224,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[184] = SetUseRectFill.field_p;
         var2[158] = BodyDestroyedConditionFactory.field_b;
         var2[19] = GuestPlayNoticePanel.fogOfWarOn;
-        var2[125] = dr.field_a;
+        var2[125] = ChatInputResetter.field_a;
         var2[46] = Particle.field_A;
         var2[45] = LaunchFightersOrderDefinition.field_d;
         var2[42] = FeatheredLineRasterizer.fightersPerPlayerMaximum;

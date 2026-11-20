@@ -112,11 +112,11 @@ final class SetFighterRepairAmount extends ConsoleCommand {
             if (NetworkMessageState.chatChannel == 0) {
               return true;
             }
-            dr.a(26718);
+            ChatInputResetter.clearChatInput(26718);
             return true;
           }
           if (SetShipAimLines.field_p.length() <= 0) {
-            dr.a(26718);
+            ChatInputResetter.clearChatInput(26718);
             return true;
           }
           var4_ref_String = SetShipAimLines.field_p.toString();
@@ -138,7 +138,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
             var14 = (String) null;
             lh.a((byte) -62, 0, (String) null, (String) null, SetShieldsDamageEnergyConversion.field_o, 2);
           }
-          dr.a(26718);
+          ChatInputResetter.clearChatInput(26718);
           return true;
         }
         if (SetBombletSprayProjectileDamage.field_o == 85) {

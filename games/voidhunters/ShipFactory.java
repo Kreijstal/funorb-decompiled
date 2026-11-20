@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class ShipFactory implements GameStateFactory {
-    static kl field_a;
+    static ShieldInfoPool shieldInfoPool;
 
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 == 11995) {
@@ -16,7 +16,7 @@ final class ShipFactory implements GameStateFactory {
     }
 
     public static void clearSharedReferences(byte param0) {
-        field_a = null;
+        shieldInfoPool = null;
         if (param0 <= 65) {
           int[] var2 = (int[]) null;
           ShipFactory.a((Random) null, (int[]) null, (byte) -97, false);
@@ -34,7 +34,7 @@ final class ShipFactory implements GameStateFactory {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != -21) {
-            field_a = (kl) null;
+            shieldInfoPool = (ShieldInfoPool) null;
           }
           stackIn_3_0 = SetSalvoUsesAllEnergy.a(-71, param1.length, param0, param3, param1);
           return stackIn_3_0;
@@ -124,6 +124,6 @@ final class ShipFactory implements GameStateFactory {
     }
 
     static {
-        field_a = new kl();
+        shieldInfoPool = new ShieldInfoPool();
     }
 }

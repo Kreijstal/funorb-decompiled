@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dr {
+final class ChatInputResetter {
     static int field_a;
     private static String field_z;
 
-    final static void a(int param0) {
+    final static void clearChatInput(int param0) {
         SetShipAimLines.field_p.setLength(0);
         NetworkMessageState.chatChannel = 0;
         if (param0 != 26718) {

@@ -136,7 +136,7 @@ public final class VoidHunters extends NetworkGameClient {
             if (dp.field_a.field_o == 0) {
               return;
             }
-            dr.a(26718);
+            ChatInputResetter.clearChatInput(26718);
             SetFightersPerPlayerMaximum.field_p = false;
           }
           return;
@@ -963,7 +963,7 @@ public final class VoidHunters extends NetworkGameClient {
         ComponentContact.clearSharedReferences((byte) 18);
         HardpointMatch.clearSharedReferences((byte) 87);
         AttachmentInputState.clearSharedReferences((byte) -66);
-        kl.clearSharedReferences(-127);
+        ShieldInfoPool.clearSharedReferences(-127);
         AsteroidField.clearSharedReferences((byte) 48);
         GrapplingHook.clearSharedReferences((byte) -116);
         SpawnPoint.clearSharedReferences(51200);

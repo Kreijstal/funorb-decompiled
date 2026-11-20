@@ -154,8 +154,8 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
           }
         }
         BodyDestroyedCondition.b(-1);
-        kl.field_c.yOffset = 0;
-        kl.field_c.xOffset = 0;
+        ShieldInfoPool.field_c.yOffset = 0;
+        ShieldInfoPool.field_c.xOffset = 0;
         if (GetExplosionProjectileDamage.field_o) {
           RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 57);
           GetExplosionProjectileDamage.field_o = false;

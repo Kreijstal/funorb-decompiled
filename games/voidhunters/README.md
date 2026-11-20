@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1427/1572 classes and 7154/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 145 opaque classes and 1061 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1432/1572 classes and 7200/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 140 opaque classes and 1015 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -98,6 +98,10 @@ All forty texture-operation factory products have descriptive class names, inclu
 `FloatNoiseSliceGenerator` and `FloatGradientNoiseSliceGenerator` identify float-array noise slices, their gradient table and fractal accumulation helper. `OpenGlPbuffer` exposes native offscreen-buffer ownership. `PlayerRequestPackets` names targeted player-request framing. Chat-input initialization/disposal and transient-menu closing helpers have named entrypoints. Original gradient values, permutation swaps, per-octave signed-byte wrapping, random.dat fallbacks, native guards and dialog state changes remain unchanged.
 
 `World.updateSimulation` exposes the original tick sequence, with named ship controls/repairs, player respawning, ship placement, destroyed-entity processing, terrain clearance and rendering helpers. Armageddon processing separates shrinking-boundary simulation from boundary drawing and names its duration lookup. Original RNG seeding, repeated hook-force application, copy-on-write, respawn policy, integer division and guarded side effects remain unchanged.
+
+`ShieldInfo` and `ShieldInfoPool` expose the per-tick shield/countermeasure records, circular or directional bounds and center displacement. `World` names projectile shield hits, countermeasure redirection, interception, contact damage/forces, hook contacts, blueprint assembly and dragged-debris attachment. Rendering and input/cookie helpers also have named entrypoints. Original collision order, integer geometry, shared trace state, attachment return values, native rendering dispatch and guards remain unchanged.
+
+`World` now names every method, including its remaining collision passes, player-ship/drag-preview rendering and sandbox/editor command dispatcher. `BufferedImageRasterBuffer`, `AwtRobotCursorController` and `ChatInputResetter` identify additional raster, cursor and chat helpers. Owned cursor-controller class-name literals follow the rename while reflected public method names remain intact. Original editor action IDs, random sequences, clipping, constructor failures and cursor/null behavior remain unchanged.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

@@ -153,7 +153,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
                         for (var9 = 0; var9 < var25.length; var9 += 2) {
                           var10 = var25[var9];
                           var11 = var6[var9 + 1];
-                          SetNumStars.a(2.0f, (byte) 64, var2.worldToScreenY(true, var11), 16711935, var2.worldToScreenX(var10, (byte) 126));
+                          SetNumStars.drawCircle(2.0f, (byte) 64, var2.worldToScreenY(true, var11), 16711935, var2.worldToScreenX(var10, (byte) 126));
                         }
                       }
                     }

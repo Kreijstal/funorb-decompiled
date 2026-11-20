@@ -124,7 +124,7 @@ final class SpawnPointFactory implements GameStateFactory {
           stackIn_40_0 = (Camera2D) (param0);
           stackIn_41_1 = !(param2);
           var6Lifetime3 = ((Camera2D) (Object) stackIn_40_0).worldToScreenY(stackIn_41_1, param1.connectionY);
-          SetNumStars.a(2.0f, (byte) 115, var6Lifetime3, 255, var5Lifetime2);
+          SetNumStars.drawCircle(2.0f, (byte) 115, var6Lifetime3, 255, var5Lifetime2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;

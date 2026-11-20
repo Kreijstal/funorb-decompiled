@@ -13,7 +13,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
     final static void a(int param0) {
         spb.a((byte) -95);
         if (null != igb.field_a) {
-          kl.a(igb.field_a, param0 ^ 92);
+          ShieldInfoPool.detachCanvasInput(igb.field_a, param0 ^ 92);
         }
         if (param0 != 1) {
           SecondaryNodeDequeIterator.a(121);

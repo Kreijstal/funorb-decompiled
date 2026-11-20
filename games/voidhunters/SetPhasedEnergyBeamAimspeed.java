@@ -84,8 +84,8 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
         if (param0 < -111) {
           SelectableIconLabelWidget.pushClip(SoftwareRasterizer2D.width + 640 >> 1, SoftwareRasterizer2D.height, SoftwareRasterizer2D.width - 640 >> 1, true, 0);
           if (0 < SoftwareTransform3D.field_b) {
-            if (null != kl.field_c) {
-              kl.field_c.drawOpaque(tb.field_a.x, 0);
+            if (null != ShieldInfoPool.field_c) {
+              ShieldInfoPool.field_c.drawOpaque(tb.field_a.x, 0);
             }
             stackIn_66_0 = tb.field_a;
             stackIn_67_1 = (param1) && (!TutorialController.field_d);
@@ -96,7 +96,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
           }
           if (!(CarouselPlayerEventFactory.field_a <= 0) ||
             !(SetExplosionPushMultiplier.field_p <= 0)) {
-            if (null == kl.field_c) {
+            if (null == ShieldInfoPool.field_c) {
               stackIn_79_0 = WaterTextures.field_g;
               stackIn_80_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((Widget) (Object) stackIn_79_0).draw(stackIn_80_1, 101);
@@ -104,7 +104,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
               stackIn_84_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((Widget) (Object) stackIn_83_0).draw(stackIn_84_1, 101);
             } else {
-              kl.field_c.drawOpaque(WaterTextures.field_g.x, 0);
+              ShieldInfoPool.field_c.drawOpaque(WaterTextures.field_g.x, 0);
               stackIn_88_0 = WaterTextures.field_g;
               stackIn_89_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((Widget) (Object) stackIn_88_0).draw(stackIn_89_1, 101);
@@ -117,8 +117,8 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
           field_p = (java.awt.Image) null;
           SelectableIconLabelWidget.pushClip(SoftwareRasterizer2D.width + 640 >> 1, SoftwareRasterizer2D.height, SoftwareRasterizer2D.width - 640 >> 1, true, 0);
           if (0 < SoftwareTransform3D.field_b) {
-            if (null != kl.field_c) {
-              kl.field_c.drawOpaque(tb.field_a.x, 0);
+            if (null != ShieldInfoPool.field_c) {
+              ShieldInfoPool.field_c.drawOpaque(tb.field_a.x, 0);
             }
             stackIn_9_0 = tb.field_a;
             stackIn_10_1 = (param1) && (!TutorialController.field_d);
@@ -128,7 +128,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
             ((Widget) (Object) stackIn_13_0).draw(stackIn_14_1, 113);
           }
           if (CarouselPlayerEventFactory.field_a > 0) {
-            if (null == kl.field_c) {
+            if (null == ShieldInfoPool.field_c) {
               stackIn_20_0 = WaterTextures.field_g;
               stackIn_21_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((Widget) (Object) stackIn_20_0).draw(stackIn_21_1, 101);
@@ -136,7 +136,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
               stackIn_25_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((Widget) (Object) stackIn_24_0).draw(stackIn_25_1, 101);
             } else {
-              kl.field_c.drawOpaque(WaterTextures.field_g.x, 0);
+              ShieldInfoPool.field_c.drawOpaque(WaterTextures.field_g.x, 0);
               stackIn_29_0 = WaterTextures.field_g;
               stackIn_30_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((Widget) (Object) stackIn_29_0).draw(stackIn_30_1, 101);
@@ -146,7 +146,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
             }
           } else {
             if (SetExplosionPushMultiplier.field_p > 0) {
-              if (null == kl.field_c) {
+              if (null == ShieldInfoPool.field_c) {
                 stackIn_42_0 = WaterTextures.field_g;
                 stackIn_43_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
                 ((Widget) (Object) stackIn_42_0).draw(stackIn_43_1, 101);
@@ -154,7 +154,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
                 stackIn_47_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
                 ((Widget) (Object) stackIn_46_0).draw(stackIn_47_1, 101);
               } else {
-                kl.field_c.drawOpaque(WaterTextures.field_g.x, 0);
+                ShieldInfoPool.field_c.drawOpaque(WaterTextures.field_g.x, 0);
                 stackIn_51_0 = WaterTextures.field_g;
                 stackIn_52_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
                 ((Widget) (Object) stackIn_51_0).draw(stackIn_52_1, 101);

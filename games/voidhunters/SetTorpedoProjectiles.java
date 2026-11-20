@@ -332,7 +332,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               !var12.i(61)) {
               if (var12.field_wb.field_o == 0) {
                 if (0 != var12.field_Nb.field_o) {
-                  World.a(param4, var12.field_zb, -125);
+                  World.sendLobbyPlayerRemovalRequest(param4, var12.field_zb, -125);
                 } else {
                   AccountCreationDialog.showPlayerContextMenu(qs.field_a, 0, var12, (byte) 71, Particle.field_H, param2, 0);
                 }

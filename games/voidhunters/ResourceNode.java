@@ -14,7 +14,7 @@ final class ResourceNode implements DiffableState {
 
     final void b(Camera2D param0, int param1) {
         try {
-          SetNumStars.a((float)this.radius * param0.scale, (byte) 55, param0.worldToScreenY(true, this.y), AlphaContainer.getTeamColor(false, this.team, 13894143), param0.worldToScreenX(this.x, (byte) 124));
+          SetNumStars.drawCircle((float)this.radius * param0.scale, (byte) 55, param0.worldToScreenY(true, this.y), AlphaContainer.getTeamColor(false, this.team, 13894143), param0.worldToScreenX(this.x, (byte) 124));
           this.a(param0, 8947848);
           int var3_int = 97 % ((55 - param1) / 49);
         } catch (RuntimeException runtimeException) {
@@ -201,7 +201,7 @@ final class ResourceNode implements DiffableState {
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("du");
+              var4 = Class.forName("BufferedImageRasterBuffer");
               if (!param1) {
                 var6 = (java.awt.Canvas) null;
                 ResourceNode.a(102, true, (java.awt.Canvas) null, -4);

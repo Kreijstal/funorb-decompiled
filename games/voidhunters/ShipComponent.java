@@ -149,7 +149,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (null != this.grapplebehaviour) {
             this.grapplebehaviour.destroyHook(param0, 19278);
           }
-          param0.a(15520, this, param2);
+          param0.destroyHooksOnComponent(15520, this, param2);
           if (this.weaponbehaviour != null) {
             if (this.weaponbehaviour.isFiring(true)) {
               this.weaponbehaviour.reload = this.weaponbehaviour.getDefinition((byte) 24).getReloadTime((byte) 12) - this.weaponbehaviour.getDefinition((byte) 24).getPulseDuration((byte) 122);
@@ -772,7 +772,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             SetMissileLauncherEnergyUsed.a(13412864, (byte) 7, param3.worldToScreenY(true, this.finaly), (float)(int)(param3.scale * 4096.0f), 128 + (TextureLineShape.sinAngle(100 * SetMinimapWidth.field_o, param1 ^ 122) >> 8) / 8, param3.worldToScreenX(this.finalx, (byte) 127));
           }
           if (GetPointDefenceLaserProjectiles.a(16, param1 + 11200)) {
-            SetNumStars.a(param3.scale * (float)var47.boundingRadius, (byte) 113, param3.worldToScreenY(true, this.finaly), 16711680, param3.worldToScreenX(this.finalx, (byte) 126));
+            SetNumStars.drawCircle(param3.scale * (float)var47.boundingRadius, (byte) 113, param3.worldToScreenY(true, this.finaly), 16711680, param3.worldToScreenX(this.finalx, (byte) 126));
           }
           var13 = 1;
           if (1 == GetUseSprites.field_o) {
@@ -1631,7 +1631,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         RuntimeException var3 = null;
         try {
           if (this.hasAdjustableConnection((byte) -94)) {
-            this.currentconnectedangle = uwa.a(14, param1, (byte) 20);
+            this.currentconnectedangle = ShieldInfo.readSignedBits(14, param1, (byte) 20);
           }
           if (!LegacyOpenGlSpecularEffect.readBoolean(false, param1)) {
             this.health = this.getDefinition((byte) -112).maxHealth;
@@ -2974,7 +2974,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           this.subcomponents = (ShipComponent[]) (GetAutoAfkTimeout.a(127, 1, this.subcomponents, ArchiveTextureProvider.field_d, 5, param0));
           this.hardpoints = (Hardpoint[]) (GetAutoAfkTimeout.a(param1 ^ 93, 1, this.hardpoints, ta.field_a, 5, param0));
           this.connectedangle = param0.readBits(0, 32);
-          this.currentconnectedangle = uwa.a(14, param0, (byte) 20);
+          this.currentconnectedangle = ShieldInfo.readSignedBits(14, param0, (byte) 20);
           this.health = param0.readBits(0, 32);
           this.finalx = param0.readBits(0, 32);
           this.finaly = param0.readBits(0, 32);
@@ -4439,7 +4439,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             var11Lifetime1 = ((Ship) (param2)).getTeam((byte) 71);
             param2 = null;
           }
-          param1.a(var11Lifetime1, var8, 100, 50, 1000, var6 << 1, var7, this.finaloutline, (byte) 84);
+          param1.spawnPolygonParticles(var11Lifetime1, var8, 100, 50, 1000, var6 << 1, var7, this.finaloutline, (byte) 84);
           if (param2 != null) {
             var12 = param2.getX(false) - this.finalx;
             var13 = param2.getY((byte) -21) - this.finaly;

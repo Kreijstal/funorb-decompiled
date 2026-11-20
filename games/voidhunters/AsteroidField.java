@@ -1141,7 +1141,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime151 = HuffmanCodec.fetchLocalizedResource((byte) -105, "COMPONENT_WEAPON_BOMBLET_SPRAY_TEXT");
           if (var2Lifetime151 != null) {
-            kl.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime151);
+            ShieldInfoPool.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime151);
           }
           var2Lifetime152 = HuffmanCodec.fetchLocalizedResource((byte) -49, "COMPONENT_WEAPON_LASER_BEAM_TEXT");
           if (null != var2Lifetime152) {
@@ -1321,7 +1321,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime196 = HuffmanCodec.fetchLocalizedResource((byte) -60, "ORDER_SELF_DESTRUCT_PREPARE_TOGGLE");
           if (null != var2Lifetime196) {
-            kl.field_e = Cp1252Strings.decode((byte) -125, var2Lifetime196);
+            ShieldInfoPool.field_e = Cp1252Strings.decode((byte) -125, var2Lifetime196);
           }
           var2Lifetime197 = HuffmanCodec.fetchLocalizedResource((byte) -124, "ORDER_SELF_DESTRUCT_ACTIVATE");
           if (var2Lifetime197 != null) {

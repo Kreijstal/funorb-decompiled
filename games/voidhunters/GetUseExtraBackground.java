@@ -11,7 +11,7 @@ final class GetUseExtraBackground extends ConsoleCommand {
         if (null != MidiNote.field_m) {
           MidiNote.field_m.closeSubmenu(16384);
           if (~NetworkMessageState.chatChannel != param0) {
-            dr.a(26718);
+            ChatInputResetter.clearChatInput(26718);
             GetLaserAimspeed.field_p = 0;
             return;
           }
@@ -22,7 +22,7 @@ final class GetUseExtraBackground extends ConsoleCommand {
           GetLaserAimspeed.field_p = 0;
           return;
         }
-        dr.a(26718);
+        ChatInputResetter.clearChatInput(26718);
         GetLaserAimspeed.field_p = 0;
     }
 

@@ -4,7 +4,7 @@
 final class SetDebrisCollision extends ConsoleCommand {
     static String field_o;
 
-    final static void a(java.awt.Component param0, byte param1) {
+    final static void detachKeyboardListeners(java.awt.Component param0, byte param1) {
         try {
           param0.removeKeyListener(GetMomentOfInertiaPerpointCalcDownshift.field_q);
           int var2_int = -92 % ((param1 - 64) / 56);

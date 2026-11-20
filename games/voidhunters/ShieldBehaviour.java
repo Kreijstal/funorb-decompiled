@@ -18,7 +18,7 @@ final class ShieldBehaviour extends ComponentBehaviour implements DiffableState 
         RuntimeException decompiledCaughtException = null;
         Object var9 = null;
         RuntimeException var9_ref = null;
-        uwa var10 = null;
+        ShieldInfo var10 = null;
         int var11 = 0;
         int var12 = 0;
         Ship var13 = null;
@@ -39,14 +39,14 @@ final class ShieldBehaviour extends ComponentBehaviour implements DiffableState 
             var13.getShieldsOn(31390)) {
             var13.consumeShieldEnergy((byte) -112);
             if (var13.getShieldsOn(31390)) {
-              var10 = ShipFactory.field_a.a(0);
+              var10 = ShipFactory.shieldInfoPool.acquire(0);
               var11 = 0;
               var12 = 0;
               if (this.operationalLastFrame) {
                 var11 = -this.previousShieldX + param7;
                 var12 = -this.previousShieldY + param1;
               }
-              var10.a(SetMissileLauncherFireForce.field_q, param1, param7, LegacyRidgedNoiseVolume.field_u, 0, var11, (byte) 38, param2, param5, var12);
+              var10.configure(SetMissileLauncherFireForce.field_q, param1, param7, LegacyRidgedNoiseVolume.field_u, 0, var11, (byte) 38, param2, param5, var12);
               this.operationalLastFrame = true;
               this.previousShieldY = param1;
               this.previousShieldX = param7;

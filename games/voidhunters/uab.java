@@ -22,7 +22,7 @@ final class uab {
         return SetAngularForceDownshift.field_o;
     }
 
-    final static void a(byte param0, java.awt.Component param1) {
+    final static void detachMouseListeners(byte param0, java.awt.Component param1) {
         try {
           param1.removeMouseListener(GetDebrisFoundInPairs.field_q);
           param1.removeMouseMotionListener(GetDebrisFoundInPairs.field_q);

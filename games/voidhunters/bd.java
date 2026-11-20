@@ -111,7 +111,7 @@ final class bd {
           cwa.field_c = new Widget(0L, (Widget) null);
           cwa.field_c.field_gb = GetFighterVision.a(false, false, 4210752, 24436, 8421504, 120);
           ResourceArchive.field_a = new Widget(0L, (Widget) null);
-          ResourceArchive.field_a.field_gb = uwa.a(6316128, 114, 1, 6316128, 113, 3);
+          ResourceArchive.field_a.field_gb = ShieldInfo.createGradientNineSliceSprites(6316128, 114, 1, 6316128, 113, 3);
           GetDebrisMax.field_o = new Widget(0L, (Widget) null);
           GetDebrisMax.field_o.field_gb = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "popup"), (byte) 111);
           var12 = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "popup_mouseover"), (byte) 106);
@@ -177,10 +177,10 @@ final class bd {
           vhb.field_c.field_mb = SpritePadding.discardSpritePadding(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "tab_mouseover"), (byte) 72);
           vhb.field_c.field_nb = var14;
           EscapePodFactory.field_a = new Widget(0L, (Widget) null);
-          EscapePodFactory.field_a.field_gb = uwa.a(1856141, 206, -1, 1127256, 105, 3);
+          EscapePodFactory.field_a.field_gb = ShieldInfo.createGradientNineSliceSprites(1856141, 206, -1, 1127256, 105, 3);
           GpuEnvironmentMapSource.field_c = new Widget(0L, (Widget) null);
           var17 = -115 % ((param0 + 71) / 37);
-          GpuEnvironmentMapSource.field_c.field_gb = uwa.a(11579568, 290, -1, 6052956, 120, 3);
+          GpuEnvironmentMapSource.field_c.field_gb = ShieldInfo.createGradientNineSliceSprites(11579568, 290, -1, 6052956, 120, 3);
           SetGrapplingHookMaxExtension8Force.field_p = new Widget(0L, var15);
           SetGrapplingHookMaxExtension8Force.field_p.field_rb = 1;
           SetGrapplingHookMaxExtension8Force.field_p.field_P = 1;

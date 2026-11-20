@@ -113,7 +113,7 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
           }
         }
         if (SetBombletSprayProjectileDamage.field_o == 13) {
-          dr.a(26718);
+          ChatInputResetter.clearChatInput(26718);
           var4 = 1;
           SetFightersPerPlayerMaximum.field_p = false;
         }

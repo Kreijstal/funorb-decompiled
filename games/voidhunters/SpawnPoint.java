@@ -45,7 +45,7 @@ final class SpawnPoint extends IntrusiveNode implements DiffableState {
         int var3_int = 0;
         try {
           var3_int = AlphaContainer.getTeamColor(param1, this.team, 13894143);
-          SetNumStars.a(param0.scale * 51200.0f, (byte) 89, param0.worldToScreenY(true, this.y), var3_int, param0.worldToScreenX(this.x, (byte) 121));
+          SetNumStars.drawCircle(param0.scale * 51200.0f, (byte) 89, param0.worldToScreenY(true, this.y), var3_int, param0.worldToScreenX(this.x, (byte) 121));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rdb.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

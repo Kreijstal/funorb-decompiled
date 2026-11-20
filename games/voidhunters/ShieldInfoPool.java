@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kl {
+final class ShieldInfoPool {
     static Sprite field_c;
     static String field_e;
-    uwa[] field_b;
+    ShieldInfo[] entries;
     static String field_a;
-    int field_d;
+    int size;
 
-    final static void a(java.awt.Canvas param0, int param1) {
+    final static void detachCanvasInput(java.awt.Canvas param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         RuntimeException stackIn_5_0 = null;
@@ -16,8 +16,8 @@ final class kl {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetDebrisCollision.a((java.awt.Component) ((Object) param0), (byte) 121);
-          uab.a((byte) 1, (java.awt.Component) ((Object) param0));
+          SetDebrisCollision.detachKeyboardListeners((java.awt.Component) ((Object) param0), (byte) 121);
+          uab.detachMouseListeners((byte) 1, (java.awt.Component) ((Object) param0));
           var2_int = 105 / ((41 - param1) / 39);
           if (GetWaitForPlayers.field_o == null) {
             return;
@@ -38,33 +38,33 @@ final class kl {
         }
     }
 
-    final void c(int param0) {
+    final void reset(int param0) {
         if (param0 < 26) {
-          this.field_b = (uwa[]) null;
-          this.field_d = 0;
+          this.entries = (ShieldInfo[]) null;
+          this.size = 0;
           return;
         }
-        this.field_d = 0;
+        this.size = 0;
     }
 
-    final uwa a(int param0) {
+    final ShieldInfo acquire(int param0) {
         int fieldTemp$0 = 0;
         if (param0 != 0) {
-          return (uwa) null;
+          return (ShieldInfo) null;
         }
-        if (this.field_d >= this.field_b.length) {
+        if (this.size >= this.entries.length) {
           GetDebrisThrowable.a(false, "We've run out of shieldinfo slots");
           return null;
         }
-        if (null != this.field_b[this.field_d]) {
-          fieldTemp$0 = this.field_d;
-          this.field_d = this.field_d + 1;
-          return this.field_b[fieldTemp$0];
+        if (null != this.entries[this.size]) {
+          fieldTemp$0 = this.size;
+          this.size = this.size + 1;
+          return this.entries[fieldTemp$0];
         }
-        this.field_b[this.field_d] = new uwa();
-        int fieldTemp$1 = this.field_d;
-        this.field_d = this.field_d + 1;
-        return this.field_b[fieldTemp$1];
+        this.entries[this.size] = new ShieldInfo();
+        int fieldTemp$1 = this.size;
+        this.size = this.size + 1;
+        return this.entries[fieldTemp$1];
     }
 
     public static void clearSharedReferences(int param0) {
@@ -75,13 +75,13 @@ final class kl {
           return;
         }
         java.awt.Canvas var2 = (java.awt.Canvas) null;
-        kl.a((java.awt.Canvas) null, 125);
+        ShieldInfoPool.detachCanvasInput((java.awt.Canvas) null, 125);
         field_a = null;
         field_e = null;
         field_c = null;
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void writeSessionMarkerCookie(java.applet.Applet param0, int param1) {
         String var2 = null;
         RuntimeException var2_ref = null;
         String var3 = null;
@@ -95,7 +95,7 @@ final class kl {
           var2 = "tuhstatbut";
           var3 = "rvnadlm";
           var4 = -1L;
-          qs.a(param0, -125, var3, var2, var4);
+          qs.writeCookie(param0, -125, var3, var2, var4);
           if (param1 == 0) {
             return;
           }
@@ -115,8 +115,8 @@ final class kl {
         }
     }
 
-    public kl() {
-        this.field_b = new uwa[128];
+    public ShieldInfoPool() {
+        this.entries = new ShieldInfo[128];
     }
 
     static {

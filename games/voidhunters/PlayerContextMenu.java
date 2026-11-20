@@ -81,7 +81,7 @@ final class PlayerContextMenu {
               pa.a(param1, (byte) -128, this.targetGameId);
             }
           } else {
-            World.a(param1, this.targetPlayerKey, param0 ^ -25);
+            World.sendLobbyPlayerRemovalRequest(param1, this.targetPlayerKey, param0 ^ -25);
           }
         } else {
           PlayerRequestPackets.sendPlayerRequest(6, this.targetPlayerKey, param1);

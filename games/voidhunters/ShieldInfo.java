@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uwa {
-    int field_c;
-    int field_i;
-    int field_f;
-    int field_g;
-    int field_h;
-    int field_d;
-    int field_b;
-    int field_a;
-    ShipBody field_e;
+final class ShieldInfo {
+    int kind;
+    int arcHalfAngle;
+    int y;
+    int x;
+    int deltaY;
+    int radius;
+    int angle;
+    int deltaX;
+    ShipBody body;
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static Sprite[] createGradientNineSliceSprites(int param0, int param1, int param2, int param3, int param4, int param5) {
         Sprite var11 = null;
         Sprite var12 = null;
         Sprite var13 = null;
@@ -53,26 +53,26 @@ final class uwa {
         return (Sprite[]) null;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, ShipBody param7, int param8, int param9) {
+    final void configure(int param0, int param1, int param2, int param3, int param4, int param5, byte param6, ShipBody param7, int param8, int param9) {
         try {
           if (param6 < 7) {
-            this.field_e = (ShipBody) null;
+            this.body = (ShipBody) null;
           }
-          this.field_h = param9;
-          this.field_a = param5;
-          this.field_b = param8;
-          this.field_f = param1;
-          this.field_g = param2;
-          this.field_c = param4;
-          this.field_e = param7;
-          this.field_d = param3;
-          this.field_i = param0;
+          this.deltaY = param9;
+          this.deltaX = param5;
+          this.angle = param8;
+          this.y = param1;
+          this.x = param2;
+          this.kind = param4;
+          this.body = param7;
+          this.radius = param3;
+          this.arcHalfAngle = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uwa.A(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ',' + param9 + ')');
         }
     }
 
-    final static int a(int param0, IsaacPacketBuffer param1, byte param2) {
+    final static int readSignedBits(int param0, IsaacPacketBuffer param1, byte param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;

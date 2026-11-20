@@ -163,7 +163,7 @@ final class ShipBodyFactory implements GameStateFactory {
           SetUseCircleFill.field_o.setBounds(-360 + SoftwareRasterizer2D.width >> 1, 117, 360, 10, -130 + (SoftwareRasterizer2D.height - 14));
           ProjectileHit.field_d.setBounds(0, 124, SetUseCircleFill.field_o.width, 0, 24);
           SetUseModels.field_o.setBounds(0, 124, SetUseCircleFill.field_o.width, 24, -24 + SetUseCircleFill.field_o.height);
-          SetUseModels.field_o.field_gb = uwa.a(11579568, SetUseModels.field_o.height, 1, 8421504, 92, 3);
+          SetUseModels.field_o.field_gb = ShieldInfo.createGradientNineSliceSprites(11579568, SetUseModels.field_o.height, 1, 8421504, 92, 3);
           DualLinkNode.field_f.setBounds(5, 124, SetUseModels.field_o.width - 10, 5, -2 + (-24 + SetUseModels.field_o.height) - 10);
           LegacyOpenGlTextureCache.field_a.setBounds((SetUseModels.field_o.width - 80) / 2, 24, 80, -29 + SetUseModels.field_o.height, 24);
           GetThrusterForce.a(0);

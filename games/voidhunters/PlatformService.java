@@ -329,7 +329,7 @@ final class PlatformService implements Runnable {
                           var3_int = var8.primaryIntArgument;
                           var4 = var8.secondaryIntArgument;
                           if (!this.microsoftJvm) {
-                            Class.forName("jg").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.reflectedCursorHelper, new Object[]{new Integer(var3_int), new Integer(var4)});
+                            Class.forName("AwtRobotCursorController").getDeclaredMethod("movemouse", new Class[]{Integer.TYPE, Integer.TYPE}).invoke(this.reflectedCursorHelper, new Object[]{new Integer(var3_int), new Integer(var4)});
                           } else {
                             this.microsoftCursorHelper.movePointer(var4, var3_int, (byte) -122);
                           }
@@ -341,7 +341,7 @@ final class PlatformService implements Runnable {
                           var3_int = stackIn_81_0;
                           var13 = (java.awt.Component) (var8.objectArgument);
                           if (!this.microsoftJvm) {
-                            Class.forName("jg").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.reflectedCursorHelper, new Object[]{var13, new Boolean(var3_int != 0)});
+                            Class.forName("AwtRobotCursorController").getDeclaredMethod("showcursor", new Class[]{java.awt.Component.class, Boolean.TYPE}).invoke(this.reflectedCursorHelper, new Object[]{var13, new Boolean(var3_int != 0)});
                           } else {
                             this.microsoftCursorHelper.setCursorVisible(var13, -4, var3_int != 0);
                           }
@@ -350,7 +350,7 @@ final class PlatformService implements Runnable {
                         if (!this.microsoftJvm &&
                           17 == var2_int) {
                           var11 = (Object[]) (var8.objectArgument);
-                          Class.forName("jg").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.reflectedCursorHelper, new Object[]{var11[0], var11[1], new Integer(var8.primaryIntArgument), new Integer(var8.secondaryIntArgument), var11[2]});
+                          Class.forName("AwtRobotCursorController").getDeclaredMethod("setcustomcursor", new Class[]{java.awt.Component.class, int[].class, Integer.TYPE, Integer.TYPE, java.awt.Point.class}).invoke(this.reflectedCursorHelper, new Object[]{var11[0], var11[1], new Integer(var8.primaryIntArgument), new Integer(var8.secondaryIntArgument), var11[2]});
                         } else {
                           if (var2_int != 16) {
                             throw PlatformService.<RuntimeException>rethrowUnchecked(new Exception(""));
@@ -664,7 +664,7 @@ final class PlatformService implements Runnable {
             if (this.microsoftJvm) {
               this.microsoftCursorHelper = new MicrosoftJvmCursorController();
             } else {
-              this.reflectedCursorHelper = Class.forName("jg").newInstance();
+              this.reflectedCursorHelper = Class.forName("AwtRobotCursorController").newInstance();
             }
           } catch (java.lang.Throwable decompiledCaughtParameter10) {
             decompiledCaughtException = decompiledCaughtParameter10;

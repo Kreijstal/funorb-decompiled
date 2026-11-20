@@ -120,7 +120,7 @@ final class lwa extends Widget {
           this.field_wb.setBounds(-20 + var17.width, 8, 15, 5, 15);
           var8.setBounds(0, 119, this.width, var17.height, -var17.height + this.height);
           var9.setBounds(0, 121, this.width, 20, 15);
-          var8.field_gb = uwa.a(11579568, var8.height, 2105376, 8421504, 119, 3);
+          var8.field_gb = ShieldInfo.createGradientNineSliceSprites(11579568, var8.height, 2105376, 8421504, 119, 3);
           var17.addChild(-561, this.field_wb);
           var8.addChild(-561, var9);
           this.addChild(-561, var17);

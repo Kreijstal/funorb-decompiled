@@ -15,7 +15,7 @@ final class kqb {
           var4 = Debris.field_y.font.getParagraphHeight(param0, 272, Debris.field_y.field_D);
           var5 = -(var4 / 2) + 7 - 110 + var3 / 2;
           GetTorpedoProjectiles.field_o.setBounds((-320 + var2_int) / 2, 125, 320, var5, -(var5 * 2) + var3 - 120);
-          GetTorpedoProjectiles.field_o.field_gb = uwa.a(11579568, GetTorpedoProjectiles.field_o.height, 2105376, 8421504, param1 ^ 77, 3);
+          GetTorpedoProjectiles.field_o.field_gb = ShieldInfo.createGradientNineSliceSprites(11579568, GetTorpedoProjectiles.field_o.height, 2105376, 8421504, param1 ^ 77, 3);
           Debris.field_y.setBounds(24, -54, -24 + (GetTorpedoProjectiles.field_o.width - 24), param1, -24 + (-20 + GetTorpedoProjectiles.field_o.height));
           SetTorpedoAcceleration.field_o.setBounds(120, -72, 80, -24 + (-20 + GetTorpedoProjectiles.field_o.height), 24);
         } catch (RuntimeException runtimeException) {

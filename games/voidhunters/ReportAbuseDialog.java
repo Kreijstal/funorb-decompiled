@@ -315,7 +315,7 @@ final class ReportAbuseDialog extends Widget {
             var28[2].setBounds(39 + 2 * var16Lifetime2, -128, var16Lifetime2, var21, var17Lifetime5);
             var22 = var21;
             this.body.setBounds(0, -94, var19 + 13 + 13, 24, 10 + var17Lifetime5 + var22);
-            this.body.field_gb = uwa.a(11579568, this.body.height, 2105376, 8421504, 104, 3);
+            this.body.field_gb = ShieldInfo.createGradientNineSliceSprites(11579568, this.body.height, 2105376, 8421504, 104, 3);
             var23 = 26 + var19;
             var24 = 10 + (24 + (var22 + var17Lifetime5));
             var25 = QuickChatCategoryLoader.adjustPopupX((byte) -109, param0, param2, var23);
@@ -333,7 +333,7 @@ final class ReportAbuseDialog extends Widget {
           this.instructions.setBounds(13, -65, var15_int, var16Lifetime1, DialogMessagePanel.field_w * var17Lifetime1);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * DialogMessagePanel.field_w;
           this.body.setBounds(0, 116, 13 + var15_int + 13, 24, var16Lifetime1 + 10);
-          this.body.field_gb = uwa.a(11579568, this.body.height, 2105376, 8421504, 117, 3);
+          this.body.field_gb = ShieldInfo.createGradientNineSliceSprites(11579568, this.body.height, 2105376, 8421504, 117, 3);
           var18Lifetime1 = 13 + (var15_int + 13);
           var19Lifetime1 = 34 + var16Lifetime1;
           var20Lifetime1 = QuickChatCategoryLoader.adjustPopupX((byte) -109, param0, param2, var18Lifetime1);

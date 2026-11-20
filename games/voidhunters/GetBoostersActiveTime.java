@@ -167,7 +167,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               gob.field_a = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
-                kl.a(MissionList.b((byte) -124), param4 ^ 0);
+                ShieldInfoPool.writeSessionMarkerCookie(MissionList.b((byte) -124), param4 ^ 0);
                 dgb.field_b = CurveTextureOperation.field_j;
                 FighterBayWeaponDefinition.l(param4 - 125);
                 SetShowTutorial.field_o = false;

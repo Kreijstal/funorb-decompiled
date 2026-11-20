@@ -314,7 +314,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
             var19[var7] = 9;
           }
           cma.a(var12, var14, var19, true, (byte) -127, ResourceNode.field_g, GetBombletSprayRandomness.field_q, NetworkGameClient.field_A, GetDebugLineLife.field_o, 8, SetTorpedoProjectileDamage.field_p, var11, 1, this.quickChatArchive, var15, UiComponent.field_o, DebugSendable.field_d);
-          kl.field_c = SetSniperCannonProjectiles.a(this.graphicsArchive, "lobby_game_logo", "basic", true);
+          ShieldInfoPool.field_c = SetSniperCannonProjectiles.a(this.graphicsArchive, "lobby_game_logo", "basic", true);
           EdgeMagnitudeTextureOperation.b(200, -100);
           SetMissilesExplosionPower.a(var11, param0 - 68, var12);
           SetMomentOfInertiaPredivideDownshift.a(AppletRasterBuffer.field_a, 2141, GetShieldsDirectionalArcParticleSpeedDownshift.field_o, 16777215, 0, 0);

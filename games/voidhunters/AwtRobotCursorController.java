@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jg {
-    private java.awt.Robot field_b;
-    private java.awt.Component field_a;
+final class AwtRobotCursorController {
+    private java.awt.Robot robot;
+    private java.awt.Component hiddenCursorComponent;
 
     public final void movemouse(int param0, int param1) {
-        this.field_b.mouseMove(param0, param1);
+        this.robot.mouseMove(param0, param1);
     }
 
-    public jg() throws Exception {
+    public AwtRobotCursorController() throws Exception {
         java.awt.Robot var2 = new java.awt.Robot();
-        this.field_b = var2;
+        this.robot = var2;
     }
 
     public final void setcustomcursor(java.awt.Component param0, int[] param1, int param2, int param3, java.awt.Point param4) {
@@ -29,22 +29,22 @@ final class jg {
         try {
           if (param1) {
             param0 = null;
-            if (param0 == this.field_a) {
+            if (param0 == this.hiddenCursorComponent) {
               return;
             }
-            if (this.field_a == null) {
+            if (this.hiddenCursorComponent == null) {
               if (param0 == null) {
                 return;
               }
               param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) new java.awt.image.BufferedImage(1, 1, 2)), new java.awt.Point(0, 0), (String) null));
-              this.field_a = param0;
+              this.hiddenCursorComponent = param0;
               return;
             }
-            this.field_a.setCursor((java.awt.Cursor) null);
-            this.field_a = null;
+            this.hiddenCursorComponent.setCursor((java.awt.Cursor) null);
+            this.hiddenCursorComponent = null;
             if (param0 != null) {
               param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) new java.awt.image.BufferedImage(1, 1, 2)), new java.awt.Point(0, 0), (String) null));
-              this.field_a = param0;
+              this.hiddenCursorComponent = param0;
               return;
             }
             return;
@@ -52,24 +52,24 @@ final class jg {
           if (param0 == null) {
             throw new NullPointerException();
           }
-          if (param0 == this.field_a) {
+          if (param0 == this.hiddenCursorComponent) {
             return;
           }
-          if (this.field_a != null) {
-            this.field_a.setCursor((java.awt.Cursor) null);
-            this.field_a = null;
+          if (this.hiddenCursorComponent != null) {
+            this.hiddenCursorComponent.setCursor((java.awt.Cursor) null);
+            this.hiddenCursorComponent = null;
             if (param0 == null) {
               return;
             }
             param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) new java.awt.image.BufferedImage(1, 1, 2)), new java.awt.Point(0, 0), (String) null));
-            this.field_a = param0;
+            this.hiddenCursorComponent = param0;
             return;
           }
           if (param0 == null) {
             return;
           }
           param0.setCursor(param0.getToolkit().createCustomCursor((java.awt.Image) ((Object) new java.awt.image.BufferedImage(1, 1, 2)), new java.awt.Point(0, 0), (String) null));
-          this.field_a = param0;
+          this.hiddenCursorComponent = param0;
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
         } catch (Throwable decompiledCheckedException) {

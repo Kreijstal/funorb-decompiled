@@ -89,7 +89,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetSpinningBladeSpinupSpeed.field_o[40] = kab.field_p;
           SetSpinningBladeSpinupSpeed.field_o[31] = GetWorldWidthUpshift.field_r;
           SetSpinningBladeSpinupSpeed.field_o[48] = GetPedrosRepairMode.field_o;
-          SetSpinningBladeSpinupSpeed.field_o[23] = kl.field_a;
+          SetSpinningBladeSpinupSpeed.field_o[23] = ShieldInfoPool.field_a;
           SetSpinningBladeSpinupSpeed.field_o[21] = GetPedrosRepairMode.field_o;
           SetSpinningBladeSpinupSpeed.field_o[1] = iob.field_e;
           SetSpinningBladeSpinupSpeed.field_o[25] = SetShieldsDirectionalArcParticleLife.field_p;
@@ -172,7 +172,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.specialOrderLabels[52] = pl.field_e;
           GetGrapplingHookSpringConstant.specialOrderLabels[27] = ArchiveTextureProvider.field_g;
           GetGrapplingHookSpringConstant.specialOrderLabels[43] = GetUseCircleFill.field_p;
-          GetGrapplingHookSpringConstant.specialOrderLabels[8] = kl.field_e;
+          GetGrapplingHookSpringConstant.specialOrderLabels[8] = ShieldInfoPool.field_e;
           GetGrapplingHookSpringConstant.specialOrderLabels[54] = SetMissilesDamageSourceTeam.field_p;
           GetGrapplingHookSpringConstant.specialOrderLabels[35] = World.field_d;
           GetGrapplingHookSpringConstant.specialOrderLabels[3] = ComponentBehaviourFactory.field_b;

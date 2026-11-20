@@ -273,14 +273,14 @@ final class Projectile extends MovingObject implements DiffableState {
               return;
             }
             if (1 == this.type) {
-              SetNumStars.a(2400.0f * param1.scale, (byte) 96, var4, 65280, var3_int);
+              SetNumStars.drawCircle(2400.0f * param1.scale, (byte) 96, var4, 65280, var3_int);
               GetPhasedEnergyBeamReload.a(var4, 1600.0f * param1.scale, -110, var3_int, 65280);
               return;
             }
             if (6 != this.type) {
               return;
             }
-            SetNumStars.a(1200.0f * param1.scale, (byte) 80, var4, 16776960, var3_int);
+            SetNumStars.drawCircle(1200.0f * param1.scale, (byte) 80, var4, 16776960, var3_int);
             if (this.targetBody >= 0) {
               return;
             }

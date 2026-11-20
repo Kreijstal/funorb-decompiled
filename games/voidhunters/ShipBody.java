@@ -171,8 +171,8 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
           } else {
             this.chassis = null;
           }
-          this.angle = uwa.a(24, param0, (byte) 20);
-          this.angularvelocity = uwa.a(24, param0, (byte) 20);
+          this.angle = ShieldInfo.readSignedBits(24, param0, (byte) 20);
+          this.angularvelocity = ShieldInfo.readSignedBits(24, param0, (byte) 20);
           this.centreofmassx = param0.readBits(0, 32);
           this.centreofmassy = param0.readBits(param1 - 32, 32);
           this.mass = param0.readBits(0, param1);
@@ -420,8 +420,8 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
           } else {
             this.chassis = null;
           }
-          this.angle = uwa.a(24, param0, (byte) 20);
-          this.angularvelocity = uwa.a(24, param0, (byte) 20);
+          this.angle = ShieldInfo.readSignedBits(24, param0, (byte) 20);
+          this.angularvelocity = ShieldInfo.readSignedBits(24, param0, (byte) 20);
           this.id = param0.readBits(0, 16);
           this.rebuildGeometry((byte) 63);
         } catch (RuntimeException runtimeException) {
@@ -471,7 +471,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
             GetPhasedEnergyBeamReload.a(var8, param0.scale * 1024.0f, -81, var7, 16711680);
             var9 = param0.worldToScreenX(-var5_int + this.x, (byte) 122);
             var10 = param0.worldToScreenY(true, -var6 + this.y);
-            SetNumStars.a(1024.0f * param0.scale, (byte) 90, var10, 16777215, var9);
+            SetNumStars.drawCircle(1024.0f * param0.scale, (byte) 90, var10, 16777215, var9);
           }
           if (GetPointDefenceLaserProjectiles.a(param3, param3 ^ 11268)) {
             var5_intLifetime1 = param0.worldToScreenX(this.boundingbox[0], (byte) 121);

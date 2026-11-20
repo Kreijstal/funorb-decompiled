@@ -150,7 +150,7 @@ final class MapClearanceAreaFactory implements GameStateFactory {
         if (param0 != -75) {
           MapClearanceAreaFactory.b((byte) 0);
         }
-        kl.a(MissionList.b((byte) -119), 0);
+        ShieldInfoPool.writeSessionMarkerCookie(MissionList.b((byte) -119), 0);
     }
 
     public final SerializableGameState[] createArray(int param0, int param1) {

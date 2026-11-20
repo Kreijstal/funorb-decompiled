@@ -166,9 +166,9 @@ final class MachineGunWeaponDefinition extends WeaponDefinition {
     final int getAimSpeed(int param0) {
         if (param0 != 0) {
           field_c = (GameStateFactory) null;
-          return dr.field_a;
+          return ChatInputResetter.field_a;
         }
-        return dr.field_a;
+        return ChatInputResetter.field_a;
     }
 
     static {
