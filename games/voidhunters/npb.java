@@ -92,7 +92,7 @@ final class npb {
                 if (!ConsoleCharacterStream.a(param1 ^ 57, param2.world.getObjectiveType(false))) {
                   if (var12_ref_sg.getOwner((byte) -117) != param3.getOwner((byte) -117)) {
                     if (null != var12_ref_sg.getAi((byte) -108)) {
-                      stackIn_44_0 = (var12_ref_sg.getAi((byte) -108).a((byte) 127) != param0) ? 1 : 0;
+                      stackIn_44_0 = (var12_ref_sg.getAi((byte) -108).getParentPlayerId((byte) 127) != param0) ? 1 : 0;
                     } else {
                       stackIn_44_0 = 1;
                     }

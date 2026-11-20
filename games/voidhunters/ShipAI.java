@@ -4,14 +4,14 @@
 import java.util.*;
 
 final class ShipAI implements DiffableState {
-    private ShipBody field_a;
-    private int field_d;
+    private ShipBody targetBody;
+    private int desiredVelocityY;
     private int parentPlayer;
-    private int field_e;
+    private int desiredVelocityX;
     static int[] field_c;
-    private int field_f;
+    private int desiredAngularVelocity;
 
-    private final int a(ShipComponent[] param0, int param1, int param2) {
+    private final int computeCombatRange(ShipComponent[] param0, int param1, int param2) {
         int var5 = 0;
         int var4_int = 0;
         ShipComponent var6 = null;
@@ -60,16 +60,16 @@ final class ShipAI implements DiffableState {
         }
     }
 
-    final void a(Ship param0, int param1, lta param2, World param3) {
+    final void drawSteeringDebug(Ship param0, int param1, lta param2, World param3) {
         try {
           int var5_int = -5 / ((-71 - param1) / 50);
-          c.a(param2.b(true, param0.y + this.field_d), param2.a(param0.x + this.field_e, (byte) 124), param2.a(param0.x, (byte) 127), param2.b(true, param0.y), -16777216, 16776960);
+          c.a(param2.b(true, param0.y + this.desiredVelocityY), param2.a(param0.x + this.desiredVelocityX, (byte) 124), param2.a(param0.x, (byte) 127), param2.b(true, param0.y), -16777216, 16776960);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aoa.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(int param0, Ship param1, World param2) {
+    private final void addAsteroidAvoidance(int param0, Ship param1, World param2) {
         int var9 = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -109,13 +109,13 @@ final class ShipAI implements DiffableState {
                   var14 = 1;
                 }
                 var15 = GameSnapshotFactory.a(-var13, (byte) -77, -var12);
-                var4_int = var4_int + GetNumStars.a(var15, (byte) -106) * var11 / (var14 * var14);
-                var5 = var5 + var11 * TextureLineShape.a(var15, 40) / (var14 * var14);
+                var4_int = var4_int + GetNumStars.cosAngle(var15, (byte) -106) * var11 / (var14 * var14);
+                var5 = var5 + var11 * TextureLineShape.sinAngle(var15, 40) / (var14 * var14);
               }
             }
           }
-          this.field_d = this.field_d + var5;
-          this.field_e = this.field_e + var4_int;
+          this.desiredVelocityY = this.desiredVelocityY + var5;
+          this.desiredVelocityX = this.desiredVelocityX + var4_int;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -156,7 +156,7 @@ final class ShipAI implements DiffableState {
         }
     }
 
-    private final void a(boolean param0, int param1, Ship param2, World param3) {
+    private final void updateSteering(boolean param0, int param1, Ship param2, World param3) {
         int var5_int = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -166,19 +166,19 @@ final class ShipAI implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          this.field_d = 0;
+          this.desiredVelocityY = 0;
           if (param0) {
             field_c = (int[]) null;
           }
-          this.field_a = null;
-          this.field_e = 0;
-          this.field_f = 0;
-          this.a(param3, (byte) -89, param2, param1);
+          this.targetBody = null;
+          this.desiredVelocityX = 0;
+          this.desiredAngularVelocity = 0;
+          this.computeTargetSteering(param3, (byte) -89, param2, param1);
           if (!param2.isFighter(param0)) {
             var5_int = param2.chassis.countActiveThrusters(-8913);
             if (var5_int > 0) {
-              this.a(0, param2, param3);
-              this.a(param3, (byte) -103, param2);
+              this.addAsteroidAvoidance(0, param2, param3);
+              this.addFriendlyShipAvoidance(param3, (byte) -103, param2);
             }
           }
           return;
@@ -206,7 +206,7 @@ final class ShipAI implements DiffableState {
         try {
           if (param1) {
             World var4 = (World) null;
-            this.a((Ship) null, 11, (lta) null, (World) null);
+            this.drawSteeringDebug((Ship) null, 11, (lta) null, (World) null);
           }
           this.parentPlayer = param0.readBits(0, 4);
         } catch (RuntimeException runtimeException) {
@@ -249,7 +249,7 @@ final class ShipAI implements DiffableState {
         field_c = null;
     }
 
-    final boolean a(Ship param0, byte param1, World param2) {
+    final boolean applyAiControls(Ship param0, byte param1, World param2) {
         RuntimeException stackIn_93_0 = null;
         StringBuilder stackIn_93_1 = null;
         String stackIn_94_2 = null;
@@ -309,27 +309,27 @@ final class ShipAI implements DiffableState {
           var5 = param0.dy;
           var6 = param0.angularvelocity;
           var7 = param0.chassis.collectWeapons(127, 0);
-          var8 = this.a(GetPointDefenceLaserProjectileInterceptDamage.field_q, -18, var7);
+          var8 = this.computeCombatRange(GetPointDefenceLaserProjectileInterceptDamage.field_q, -18, var7);
           if (var8 > GetUseNiceTrails.field_p) {
             var8 = GetUseNiceTrails.field_p;
           }
           if (param0.isFighter(false)) {
             var9_ref_Random = new Random((long)(param0.id * GetSniperCannonFireForce.field_o));
             var10 = 1000;
-            if (this.field_a == null) {
+            if (this.targetBody == null) {
               var10 = 4000;
             }
             if (hob.a(var9_ref_Random, var10, 125) == 0) {
               ArchiveProvider.a(50, param0.y, param0.x, false, 94, 512);
             }
           }
-          this.a(false, var8, param0, param2);
+          this.updateSteering(false, var8, param0, param2);
           var9 = 0;
           var10Lifetime1 = 0;
           var11 = 0;
-          if (this.field_a != null) {
-            var10Lifetime1 = this.field_a.chassis.finalx;
-            var11 = this.field_a.chassis.finaly;
+          if (this.targetBody != null) {
+            var10Lifetime1 = this.targetBody.chassis.finalx;
+            var11 = this.targetBody.chassis.finaly;
             var12 = -param0.x + var10Lifetime1;
             var13 = var11 - param0.y;
             var14 = TextLayout.approximateVectorLength(var12, (byte) 109, var13);
@@ -355,17 +355,17 @@ final class ShipAI implements DiffableState {
                 }
               }
               if (var17 < 2147483647) {
-                this.field_f = var16 << 8;
+                this.desiredAngularVelocity = var16 << 8;
               }
               if (FlipTextureOperation.field_p == 0) {
                 param0.aimAt(8, var11, var10Lifetime1);
               }
               var9 = var9 | 16;
             } else {
-              if (0 != this.field_e &&
-                this.field_d != 0) {
-                var16 = GameSnapshotFactory.a(this.field_d, (byte) -77, this.field_e);
-                this.field_f = GameKeyHandler.a(22433, var16 - param0.getAngle(param1 ^ -73)) << 8;
+              if (0 != this.desiredVelocityX &&
+                this.desiredVelocityY != 0) {
+                var16 = GameSnapshotFactory.a(this.desiredVelocityY, (byte) -77, this.desiredVelocityX);
+                this.desiredAngularVelocity = GameKeyHandler.a(22433, var16 - param0.getAngle(param1 ^ -73)) << 8;
               }
             }
             if (GetUseNiceTrails.field_p > var14) {
@@ -407,9 +407,9 @@ final class ShipAI implements DiffableState {
           }
           var12Lifetime1 = 1024;
           var13Lifetime1 = 1024;
-          var14Lifetime1 = this.field_e - var4_int;
-          var15Lifetime1 = -var5 + this.field_d;
-          var16Lifetime1 = this.field_f - var6;
+          var14Lifetime1 = this.desiredVelocityX - var4_int;
+          var15Lifetime1 = -var5 + this.desiredVelocityY;
+          var16Lifetime1 = this.desiredAngularVelocity - var6;
           if (var14Lifetime1 != 0 ||
             var15Lifetime1 != 0 ||
             var16Lifetime1 != 0) {
@@ -469,12 +469,12 @@ final class ShipAI implements DiffableState {
         }
     }
 
-    final int a(byte param0) {
+    final int getParentPlayerId(byte param0) {
         int var2 = -17 / ((param0 + 52) / 54);
         return -1 + this.parentPlayer;
     }
 
-    private final void a(World param0, byte param1, Ship param2) {
+    private final void addFriendlyShipAvoidance(World param0, byte param1, Ship param2) {
         int var9 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -519,13 +519,13 @@ final class ShipAI implements DiffableState {
                   var14 = 1;
                 }
                 var15 = GameSnapshotFactory.a(-var13, (byte) -77, -var12);
-                var4_int = var4_int + var11 * GetNumStars.a(var15, (byte) 85) / (var14 * var14);
-                var5 = var5 + TextureLineShape.a(var15, 107) * var11 / (var14 * var14);
+                var4_int = var4_int + var11 * GetNumStars.cosAngle(var15, (byte) 85) / (var14 * var14);
+                var5 = var5 + TextureLineShape.sinAngle(var15, 107) * var11 / (var14 * var14);
               }
             }
           }
-          this.field_d = this.field_d + var5;
-          this.field_e = this.field_e + var4_int;
+          this.desiredVelocityY = this.desiredVelocityY + var5;
+          this.desiredVelocityX = this.desiredVelocityX + var4_int;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -547,7 +547,7 @@ final class ShipAI implements DiffableState {
         }
     }
 
-    private final void a(World param0, byte param1, Ship param2, int param3) {
+    private final void computeTargetSteering(World param0, byte param1, Ship param2, int param3) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -567,14 +567,14 @@ final class ShipAI implements DiffableState {
         int var15 = 0;
         Ship var16 = null;
         try {
-          var16 = GetGrapplingHookCooldown.a(param0, (byte) 63, this.a((byte) 70), param2);
+          var16 = GetGrapplingHookCooldown.findNearestAiTarget(param0, (byte) 63, this.getParentPlayerId((byte) 70), param2);
           if (var16 != null) {
             var6 = var16.chassis.finalx;
             var7 = var16.chassis.finaly;
             var8 = GameSnapshotFactory.a(param2.y - var7, (byte) -77, -var6 + param2.x);
             var9 = param3;
-            var10 = var6 + (GetNumStars.a(var8, (byte) 38) >> 8) * (var9 >> 8);
-            var11 = (var9 >> 8) * (TextureLineShape.a(var8, 127) >> 8) + var7;
+            var10 = var6 + (GetNumStars.cosAngle(var8, (byte) 38) >> 8) * (var9 >> 8);
+            var11 = (var9 >> 8) * (TextureLineShape.sinAngle(var8, 127) >> 8) + var7;
             var12 = 256;
             var13 = -param2.x + var10;
             var14 = var11 - param2.y;
@@ -583,12 +583,12 @@ final class ShipAI implements DiffableState {
               var13 = var12 * var13 / (var15 >> 4);
               var14 = var14 * var12 / (var15 >> 4);
             }
-            this.field_d = var14;
-            this.field_a = (ShipBody) ((Object) var16);
-            this.field_e = var13;
+            this.desiredVelocityY = var14;
+            this.targetBody = (ShipBody) ((Object) var16);
+            this.desiredVelocityX = var13;
           }
           if (param1 >= -76) {
-            this.field_a = (ShipBody) null;
+            this.targetBody = (ShipBody) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -611,7 +611,7 @@ final class ShipAI implements DiffableState {
         }
     }
 
-    final void a(int param0, boolean param1) {
+    final void setParentPlayerId(int param0, boolean param1) {
         this.parentPlayer = param0 + 1;
         if (!param1) {
           field_c = (int[]) null;

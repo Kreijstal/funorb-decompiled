@@ -20,7 +20,7 @@ final class DebugRequestFactory implements GameStateFactory {
     }
 
     final static void a(byte param0, int[] param1, NetworkGameClient param2) {
-        param2.a(false, true, true, false, -4590, true, true);
+        param2.configureCommonPacketHandlers(false, true, true, false, -4590, true, true);
         param1[66] = 1;
         param1[72] = -2;
         param1[58] = -2;

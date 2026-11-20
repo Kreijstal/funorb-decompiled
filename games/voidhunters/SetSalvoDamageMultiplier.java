@@ -19,7 +19,7 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
         return stackIn_6_0;
     }
 
-    final static void a(PlatformService param0, int param1, PacketBuffer param2, boolean param3) {
+    final static void decodeReflectionCheck(PlatformService param0, int param1, PacketBuffer param2, boolean param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -48,7 +48,7 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
           String var16 = null;
           String var17 = null;
           int var18 = 0;
-          mv var19 = null;
+          ReflectionCheck var19 = null;
           byte[][] var20 = null;
           String var21 = null;
           String var22 = null;
@@ -58,18 +58,18 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
           try {
             if (param3) {
               var15 = (PacketBuffer) null;
-              SetSalvoDamageMultiplier.a((PlatformService) null, 59, (PacketBuffer) null, false);
+              SetSalvoDamageMultiplier.decodeReflectionCheck((PlatformService) null, 59, (PacketBuffer) null, false);
             }
-            var19 = new mv();
-            var19.field_i = param2.readUnsignedByte((byte) -90);
-            var19.field_d = param2.readInt(26);
-            var19.field_e = new PlatformRequest[var19.field_i];
-            var19.field_j = new int[var19.field_i];
-            var19.field_f = new byte[var19.field_i][][];
-            var19.field_g = new PlatformRequest[var19.field_i];
-            var19.field_h = new int[var19.field_i];
-            var19.field_k = new int[var19.field_i];
-            for (var5 = 0; var19.field_i > var5; var5++) {
+            var19 = new ReflectionCheck();
+            var19.operationCount = param2.readUnsignedByte((byte) -90);
+            var19.id = param2.readInt(26);
+            var19.methodRequests = new PlatformRequest[var19.operationCount];
+            var19.fieldValues = new int[var19.operationCount];
+            var19.serializedArguments = new byte[var19.operationCount][][];
+            var19.fieldRequests = new PlatformRequest[var19.operationCount];
+            var19.operationTypes = new int[var19.operationCount];
+            var19.lookupErrors = new int[var19.operationCount];
+            for (var5 = 0; var19.operationCount > var5; var5++) {
               try {
                 var6_int = param2.readUnsignedByte((byte) -114);
                 if (0 != var6_int &&
@@ -95,7 +95,7 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
                         param2.readBytes(0, var23[var12_int], (byte) -59, var13);
                       }
                     }
-                    var19.field_h[var5] = var6_int;
+                    var19.operationTypes[var5] = var6_int;
                     var12 = new Class[var9];
                     var18 = 0;
                     var13Lifetime1 = var18;
@@ -103,8 +103,8 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
                       var12[var18] = ProjectileFactory.a(var10[var18], (byte) 99);
                       var18++;
                     }
-                    var19.field_e[var5] = param0.lookupDeclaredMethod(var12, (byte) 95, ProjectileFactory.a(var21, (byte) 99), var22);
-                    var19.field_f[var5] = var23;
+                    var19.methodRequests[var5] = param0.lookupDeclaredMethod(var12, (byte) 95, ProjectileFactory.a(var21, (byte) 99), var22);
+                    var19.serializedArguments[var5] = var23;
                   }
                 } else {
                   var17 = param2.readString(-1);
@@ -113,33 +113,33 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
                   if (var6_int == 1) {
                     var9 = param2.readInt(40);
                   }
-                  var19.field_h[var5] = var6_int;
-                  var19.field_j[var5] = var9;
-                  var19.field_g[var5] = param0.lookupDeclaredField(var16, ProjectileFactory.a(var17, (byte) 99), -6576);
+                  var19.operationTypes[var5] = var6_int;
+                  var19.fieldValues[var5] = var9;
+                  var19.fieldRequests[var5] = param0.lookupDeclaredField(var16, ProjectileFactory.a(var17, (byte) 99), -6576);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var6 = (ClassNotFoundException) (Object) decompiledCaughtException;
-                var19.field_k[var5] = -1;
+                var19.lookupErrors[var5] = -1;
               } catch (java.lang.SecurityException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var6_ref = (SecurityException) (Object) decompiledCaughtException;
-                var19.field_k[var5] = -2;
+                var19.lookupErrors[var5] = -2;
               } catch (java.lang.NullPointerException decompiledCaughtParameter2) {
                 decompiledCaughtException = decompiledCaughtParameter2;
                 var6_ref2 = (NullPointerException) (Object) decompiledCaughtException;
-                var19.field_k[var5] = -3;
+                var19.lookupErrors[var5] = -3;
               } catch (java.lang.Exception decompiledCaughtParameter3) {
                 decompiledCaughtException = decompiledCaughtParameter3;
                 var6_ref3 = (Exception) (Object) decompiledCaughtException;
-                var19.field_k[var5] = -4;
+                var19.lookupErrors[var5] = -4;
               } catch (java.lang.Throwable decompiledCaughtParameter4) {
                 decompiledCaughtException = decompiledCaughtParameter4;
                 var6_ref4 = decompiledCaughtException;
-                var19.field_k[var5] = -5;
+                var19.lookupErrors[var5] = -5;
               }
             }
-            GetArmageddonLength.field_r.addLast(-10258, var19);
+            GetArmageddonLength.pendingReflectionChecks.addLast(-10258, var19);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;

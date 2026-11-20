@@ -224,7 +224,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
               SetReloadBarHeight.field_q[1][var17_intLifetime1 + 1] = new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, Integer.toString(SetMutatorVotes.field_o[var17_intLifetime1]));
             }
           }
-          GetLaserAimarc.field_o[2] = new Widget(0L, SetShieldsDirectionalHalfarcCuts.field_p, kra.field_b);
+          GetLaserAimarc.field_o[2] = new Widget(0L, SetShieldsDirectionalHalfarcCuts.field_p, FixedPointTrigonometry.field_b);
           SetReloadBarHeight.field_q[2] = new IconTextWidget[]{new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, OpenGlBloomEffect.field_k), new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, GetPointDefenceLaserProjectileInterceptDamage.field_t[0], nl.field_j), new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, GetPointDefenceLaserProjectileInterceptDamage.field_t[1], SettingsInstanceFactory.field_a)};
           if (GetDebrisThrowable.field_r > 1) {
             GetLaserAimarc.field_o[3] = new Widget(0L, SetShieldsDirectionalHalfarcCuts.field_p, GetMassDriverProjectileOndamageParticles.field_o);

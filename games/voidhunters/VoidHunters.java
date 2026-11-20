@@ -343,7 +343,7 @@ public final class VoidHunters extends NetworkGameClient {
                 if (FlipTextureOperation.field_l.handlePacket(RequestNewestBlackboxRecording.field_p, qga.field_b, GetThrusterSmallForce.field_o, (byte) 7, param0, (CarouselCommongameInfo) (var5))) {
                   return;
                 }
-                this.e(97);
+                this.dispatchCommonServerPacket(97);
                 return;
               }
               var4Lifetime2 = qga.field_b.readUnsignedByte((byte) -90);
@@ -410,7 +410,7 @@ public final class VoidHunters extends NetworkGameClient {
           ConsoleEvaluationException.a((byte) -115);
         }
         stackIn_7_1 = (psb.field_b != null);
-        this.b(stackIn_7_1, 9);
+        this.updateClientServices(stackIn_7_1, 9);
         if (GetMissionTerrainDebrisProbability.field_o) {
           TextureLineShape.field_i.b((byte) 1);
           GetMissionTerrainDebrisProbability.field_o = false;
@@ -419,7 +419,7 @@ public final class VoidHunters extends NetworkGameClient {
         SetMinimapWidth.field_o = SetMinimapWidth.field_o + 1;
         if (GetUseTriFill.a(51)) {
           ComponentCollision.a("Servicing login...", (byte) -86);
-          this.h(0);
+          this.updateLoginUi(0);
           if (GetUseTriFill.a(119)) {
             return;
           }
@@ -442,7 +442,7 @@ public final class VoidHunters extends NetworkGameClient {
           } else {
             if (QuickChatMenuWidget.l(0)) {
               stackIn_27_1 = (psb.field_b != null);
-              var3 = this.c(stackIn_27_1, -9288);
+              var3 = this.processLoginUi(stackIn_27_1, -9288);
               if (1 == var3 ||
                 var3 == 2) {
                 if (psb.field_b != null) {
@@ -485,7 +485,7 @@ public final class VoidHunters extends NetworkGameClient {
             SetLaserReload.a(4, var7, 0);
           }
         }
-        while (GetSelfDestructTimer.a(0, ta.field_b)) {
+        while (GetSelfDestructTimer.a(0, ta.serverPacketLengths)) {
           var3Lifetime1 = ow.field_a;
           this.handleServerPacket(var3Lifetime1, 12);
         }
@@ -520,7 +520,7 @@ public final class VoidHunters extends NetworkGameClient {
         }
         if (SetWeaponProjectileSpeedMultiply.b(true)) {
           FlipTextureOperation.field_l.suspendServerUpdates((byte) -94);
-          var4 = this.f(109);
+          var4 = this.pollReconnect(109);
           if (var4 == 0 ||
             var4 == 1) {
             iwa.a((byte) -30, 2);
@@ -623,7 +623,7 @@ public final class VoidHunters extends NetworkGameClient {
     }
 
     final void initializeGame(boolean param0) {
-        this.a(false, 110, 92);
+        this.initializeNetworkClient(false, 110, 92);
         TextureLineShape.field_i = new fcb();
         MidiPcmStream var6 = new MidiPcmStream();
         var6.setDefaultProgram(128, (byte) 96, 9);
@@ -636,7 +636,7 @@ public final class VoidHunters extends NetworkGameClient {
         var5.minimumMemoryMegabytes = 0;
         var5.resizable = false;
         SetMissionTimeLimit.a(var5, 20);
-        DebugRequestFactory.a((byte) 90, ta.field_b, (NetworkGameClient) (this));
+        DebugRequestFactory.a((byte) 90, ta.serverPacketLengths, (NetworkGameClient) (this));
         SetNebulaProximityFadeDownshift.a(114, param0, false);
         FlipTextureOperation.field_l = new CarouselGameClient();
         GetCountermeasureLauncherAimarc.e((byte) 117);
@@ -969,7 +969,7 @@ public final class VoidHunters extends NetworkGameClient {
         SpawnPoint.clearSharedReferences(51200);
         SpawnLocation.clearSharedReferences(12035);
         Hardpoint.clearSharedReferences(64);
-        kra.clearSharedReferences((byte) 70);
+        FixedPointTrigonometry.clearSharedReferences((byte) 70);
         pea.clearSharedReferences(true);
         sra.clearSharedReferences(96);
         ArchiveTextureProvider.clearSharedReferences(25498);

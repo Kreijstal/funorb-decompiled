@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1225/1572 classes and 6126/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 347 opaque classes and 2089 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1227/1572 classes and 6159/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 345 opaque classes and 2056 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -34,6 +34,8 @@ Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionCo
 Named texture operations identify constants, coordinate gradients, box blur, clamping, curves, colorization, flipping, waveforms, hash noise, weave and brick patterns, polar displacement, tiling, blending, inversion, kaleidoscope sampling, grayscale, color-key scaling, thresholds, range mapping, Mandelbrot iteration, normal maps, edge magnitude and sprite/texture sources. Their factory ids, fixed-point arithmetic and cache behavior are preserved. `UiStatefulStyle` combines `UiVisualStyle` layers for interaction states; `ScreenSizeController`, `CanvasResizeListener`, `FullscreenCanvas` and `DisplayMode` name resize and fullscreen contracts. Small `World` helpers identify mission events, map-zone lookup, escape pods, body overlap and projectile tests.
 
 All forty texture-operation factory products have descriptive class names, including blend modes, HSL adjustment, color gradients, cellular/Perlin noise, stripes, crossed waves, random lines, irregular bricks, directional lighting and raster shapes. `TextureRasterShape` distinguishes line, cubic Bezier, rectangle and ellipse drawing contracts. `ConsoleCharacterStream`, `ConsoleTokenStream` and `ConsoleExpressionToken` expose tokenization, recursive method-call parsing and evaluation; syntax/evaluation exception records retain their original offsets and message payloads. Unrelated static helpers remain in the overall naming audit.
+
+`ShipAI` exposes target seeking, obstacle/friendly avoidance, combat controls and desired motion. `FixedPointTrigonometry` names the original quarter-wave lookup and sine/cosine wrappers. `NetworkGameClient` identifies initialization, staged resource updates, login actions, packet dispatch and reconnection; `ReflectionCheck` retains queued lookup requests and protocol response data. Their original guards, timing, reflection behavior and wire formats are preserved.
 
 `ShipBody` names force accumulation, motion integration, mass properties, bounds and controls. `ShipComponent` exposes its tree, transforms, aiming, health, attachment and collision operations. `ComponentAttachmentPlan` records the chosen `HardpointMatch` and obstructions; `ComponentCollision` and `ComponentContact` separate polygon overlaps from contact points. `ProjectileHit` resolves impact effects and damage, while `ProjectileTraceResult` retains the nearest intersection.
 

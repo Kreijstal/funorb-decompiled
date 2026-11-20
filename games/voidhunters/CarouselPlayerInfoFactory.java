@@ -57,8 +57,8 @@ final class CarouselPlayerInfoFactory implements GameStateFactory {
           var12 = (var12 << 8) / var14;
           var15 = 64;
           for (var16 = param1; var15 + 1 > var16; var16++) {
-            var17 = GetNumStars.a(512 * SetMinimapWidth.field_o - (var16 << 8), (byte) -65) >> 14;
-            var18 = GetNumStars.a(-(var16 << 8) + SetMinimapWidth.field_o * 500, (byte) 59) >> 14;
+            var17 = GetNumStars.cosAngle(512 * SetMinimapWidth.field_o - (var16 << 8), (byte) -65) >> 14;
+            var18 = GetNumStars.cosAngle(-(var16 << 8) + SetMinimapWidth.field_o * 500, (byte) 59) >> 14;
             var19 = var12 * var17 + var10 * var16 / var15 + param5;
             var20 = var17 * var13 + var16 * var11 / var15 + param0;
             var21 = param5 + var10 * var16 / var15 - var18 * var12;

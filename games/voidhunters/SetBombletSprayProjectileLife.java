@@ -3,7 +3,7 @@
  */
 final class SetBombletSprayProjectileLife extends ConsoleCommand {
     static String field_p;
-    static boolean[] field_o;
+    static boolean[] allowedCommonPackets;
 
     final static Sprite[] a(boolean param0, Sprite param1) {
         Sprite[] var2 = null;
@@ -42,10 +42,10 @@ final class SetBombletSprayProjectileLife extends ConsoleCommand {
         if (param0 >= -113) {
           OpenGlToolkit var2 = (OpenGlToolkit) null;
           SetBombletSprayProjectileLife.a((OpenGlToolkit) null, 103);
-          field_o = null;
+          allowedCommonPackets = null;
           return;
         }
-        field_o = null;
+        allowedCommonPackets = null;
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -132,6 +132,6 @@ final class SetBombletSprayProjectileLife extends ConsoleCommand {
 
     static {
         field_p = "This password is part of your Player Name, and would be easy to guess";
-        field_o = new boolean[64];
+        allowedCommonPackets = new boolean[64];
     }
 }

@@ -41,7 +41,7 @@ final class SetGrapplingHookCooldown extends ConsoleCommand {
 
     final static void a(byte param0, java.awt.Canvas param1) {
         try {
-          mv.a(10009, (java.awt.Component) ((Object) param1));
+          ReflectionCheck.installKeyboardListeners(10009, (java.awt.Component) ((Object) param1));
           ts.a((java.awt.Component) ((Object) param1), 1);
           if (GetWaitForPlayers.field_o != null) {
             GetWaitForPlayers.field_o.attach(-16, (java.awt.Component) ((Object) param1));

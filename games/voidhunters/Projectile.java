@@ -168,8 +168,8 @@ final class Projectile extends MovingObject implements DiffableState {
                     var4Lifetime1 = ((ShipBody) (var3)).chassis.finalx;
                     var5Lifetime1 = ((ShipBody) (var3)).chassis.finaly;
                   } else {
-                    var4Lifetime1 = this.x + (iea.field_d * GetNumStars.a(this.angle, (byte) 28) >> 8);
-                    var5Lifetime1 = this.y + (iea.field_d * TextureLineShape.a(this.angle, 70) >> 8);
+                    var4Lifetime1 = this.x + (iea.field_d * GetNumStars.cosAngle(this.angle, (byte) 28) >> 8);
+                    var5Lifetime1 = this.y + (iea.field_d * TextureLineShape.sinAngle(this.angle, 70) >> 8);
                   }
                   var6Lifetime1 = var4Lifetime1 - this.x >> 6;
                   var7 = var5Lifetime1 - this.y >> 6;
@@ -192,8 +192,8 @@ final class Projectile extends MovingObject implements DiffableState {
                   }
                 }
               } else {
-                this.dx = this.dx + (SetShieldsDirectionalRadius.field_o * GetNumStars.a(this.angle, (byte) 89) >> 16);
-                this.dy = this.dy + (SetShieldsDirectionalRadius.field_o * TextureLineShape.a(this.angle, 96) >> 16);
+                this.dx = this.dx + (SetShieldsDirectionalRadius.field_o * GetNumStars.cosAngle(this.angle, (byte) 89) >> 16);
+                this.dy = this.dy + (SetShieldsDirectionalRadius.field_o * TextureLineShape.sinAngle(this.angle, 96) >> 16);
                 var3_int = 128;
                 param1.a(20, this.y, this.x, var3_int, param0 + 11184802, 1, 10);
               }
@@ -254,7 +254,7 @@ final class Projectile extends MovingObject implements DiffableState {
               var6 = param1.b(true, this.y - this.dy);
               var7 = qpb.a(false, this.firedTeam, 13894143);
               var8 = 255 * this.damage / hrb.field_a;
-              kra.a(var7, 3, 16994, var4, var8 >> 1, var3_int, var5, var6);
+              FixedPointTrigonometry.drawThickLine(var7, 3, 16994, var4, var8 >> 1, var3_int, var5, var6);
               if (0 < this.angle) {
                 SetMissileLauncherEnergyUsed.a(var7, (byte) 7, var4, Math.max(3.0f, (float)var8 * (11.0f * param1.field_a)), var8 >> 1, var3_int);
                 SetMissileLauncherEnergyUsed.a(var7, (byte) 7, var4, Math.max(2.0f, 8.0f * param1.field_a * (float)var8), var8, var3_int);
@@ -286,8 +286,8 @@ final class Projectile extends MovingObject implements DiffableState {
             }
             var5 = GetUseNiceTrails.field_p / 2 >> 8;
             for (var6 = 0; var6 < 8; var6++) {
-              var7Lifetime1 = (int)((float)(var5 * (GetNumStars.a(this.life + var6 << 5, (byte) 33) >> 8)) * param1.field_a) + var3_int;
-              var8Lifetime1 = (int)((float)((TextureLineShape.a(this.life + var6 << 5, 62) >> 8) * var5) * param1.field_a) + var4;
+              var7Lifetime1 = (int)((float)(var5 * (GetNumStars.cosAngle(this.life + var6 << 5, (byte) 33) >> 8)) * param1.field_a) + var3_int;
+              var8Lifetime1 = (int)((float)((TextureLineShape.sinAngle(this.life + var6 << 5, 62) >> 8) * var5) * param1.field_a) + var4;
               SetShowTutorial.a(var3_int, (byte) 66, var7Lifetime1, var4, 65280, var8Lifetime1, 23);
             }
           } else {

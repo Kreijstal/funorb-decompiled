@@ -814,8 +814,8 @@ final class GameSession {
                     var11Lifetime2 = SetMinimapWidth.field_o * 10 % 8192;
                     for (var12Lifetime2 = 0; var12Lifetime2 < 100; var12Lifetime2++) {
                       var13Lifetime3 = var11Lifetime2 + var12Lifetime2 * 8192 / 100;
-                      var14Lifetime3 = var8 + (GetNumStars.a(var13Lifetime3, (byte) 118) * var10 >> 16);
-                      var15Lifetime4 = (var10 * TextureLineShape.a(var13Lifetime3, 48) >> 16) + var9;
+                      var14Lifetime3 = var8 + (GetNumStars.cosAngle(var13Lifetime3, (byte) 118) * var10 >> 16);
+                      var15Lifetime4 = (var10 * TextureLineShape.sinAngle(var13Lifetime3, 48) >> 16) + var9;
                       CachedArchiveProvider.a(128, false, var14Lifetime3, var15Lifetime4, 1, 1, 16777215);
                     }
                   }
@@ -849,8 +849,8 @@ final class GameSession {
                   var11Lifetime1 = SetMinimapWidth.field_o * 10 % 8192;
                   for (var12Lifetime1 = 0; var12Lifetime1 < 100; var12Lifetime1++) {
                     var13Lifetime1 = var11Lifetime1 + var12Lifetime1 * 8192 / 100;
-                    var14Lifetime1 = var8Lifetime1 + (GetNumStars.a(var13Lifetime1, (byte) 118) * var10Lifetime1 >> 16);
-                    var15Lifetime1 = (var10Lifetime1 * TextureLineShape.a(var13Lifetime1, 48) >> 16) + var9Lifetime1;
+                    var14Lifetime1 = var8Lifetime1 + (GetNumStars.cosAngle(var13Lifetime1, (byte) 118) * var10Lifetime1 >> 16);
+                    var15Lifetime1 = (var10Lifetime1 * TextureLineShape.sinAngle(var13Lifetime1, 48) >> 16) + var9Lifetime1;
                     CachedArchiveProvider.a(128, false, var14Lifetime1, var15Lifetime1, 1, 1, 16777215);
                   }
                 }
@@ -2945,8 +2945,8 @@ final class GameSession {
                     }
                     this.drawShipPreview(stackIn_131_1, stackIn_131_2, stackIn_131_3, stackIn_132_4, (byte) -54, var23[var34_int], param0, var32 + var43);
                     if (var38 == 0) {
-                      kra.a(16711680, 2, 16994, 4 + var37, 255, var36 + 4, -4 + (var30Lifetime1 + (var36 - 1)), -4 + var30Lifetime1 + (var37 - 1));
-                      kra.a(16711680, 2, 16994, var30Lifetime1 + var37 - 1 - 4, 255, 4 + var36, -5 + (var36 + var30Lifetime1), 4 + var37);
+                      FixedPointTrigonometry.drawThickLine(16711680, 2, 16994, 4 + var37, 255, var36 + 4, -4 + (var30Lifetime1 + (var36 - 1)), -4 + var30Lifetime1 + (var37 - 1));
+                      FixedPointTrigonometry.drawThickLine(16711680, 2, 16994, var30Lifetime1 + var37 - 1 - 4, 255, 4 + var36, -5 + (var36 + var30Lifetime1), 4 + var37);
                     }
                     if (var20 <= var34_int) {
                       mmb.field_d[111].draw(var32 + 2, -mmb.field_d[111].getPaddedHeight() + var33 + var30Lifetime1);
@@ -4310,11 +4310,11 @@ final class GameSession {
         int var10 = 0;
         int var11 = 0;
         int var3_int = 2 * param1.getBoundingExtent(-42);
-        int var4 = var3_int * (GetNumStars.a(param1.getAngle(0), (byte) 91) >> 8) >> 8;
-        int var5 = (TextureLineShape.a(param1.getAngle(0), 43) >> 8) * var3_int >> 8;
+        int var4 = var3_int * (GetNumStars.cosAngle(param1.getAngle(0), (byte) 91) >> 8) >> 8;
+        int var5 = (TextureLineShape.sinAngle(param1.getAngle(0), 43) >> 8) * var3_int >> 8;
         var3_int = (int)(24.0f / ShipTeamConditionFactory.field_a.field_a) + var3_int;
-        int var6 = (GetNumStars.a(param1.getAngle(0), (byte) -99) >> 8) * var3_int >> 8;
-        int var7 = var3_int * (TextureLineShape.a(param1.getAngle(0), 102) >> 8) >> 8;
+        int var6 = (GetNumStars.cosAngle(param1.getAngle(0), (byte) -99) >> 8) * var3_int >> 8;
+        int var7 = var3_int * (TextureLineShape.sinAngle(param1.getAngle(0), 102) >> 8) >> 8;
         int var8 = (int)(0.05000000074505806f / ShipTeamConditionFactory.field_a.field_a);
         if (param0 > -56) {
           return;
@@ -4772,7 +4772,7 @@ final class GameSession {
               var5 >= var4_int) {
               var7 = (-var4_int + var5) / Particle.field_l;
               var8 = SetReverbGain.a(bt.field_b, new String[]{Integer.toString(var7)}, 118).toUpperCase();
-              var9 = 128 + (TextureLineShape.a(SetMinimapWidth.field_o * 128 % 8192, 44) * 127 >> 16);
+              var9 = 128 + (TextureLineShape.sinAngle(SetMinimapWidth.field_o * 128 % 8192, 44) * 127 >> 16);
               var10 = var9 << 8 | 16711680 | var9;
               SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - tea.a(1, var8, 13879) / 2, 1, GetLaserAimarc.field_q / 2, var8, 1, var10, (byte) -92);
             }
@@ -4875,8 +4875,8 @@ final class GameSession {
             for (var15 = 1; var15 < 1 + var13; var15++) {
               var16 = (var15 * var14 + SetMinimapWidth.field_o * 160) % var12;
               var16 = 8192 * var16 / var12;
-              var17 = (GetNumStars.a(var16, (byte) 68) >> 8) * param6 >> 8;
-              var18 = param6 * (TextureLineShape.a(var16, 96) >> 8) >> 8;
+              var17 = (GetNumStars.cosAngle(var16, (byte) 68) >> 8) * param6 >> 8;
+              var18 = param6 * (TextureLineShape.sinAngle(var16, 96) >> 8) >> 8;
               var19 = var17 + param1;
               var20 = var18 + param5;
               this.b(-7178, var19, var15, var20);
@@ -4894,14 +4894,14 @@ final class GameSession {
             var49 = (lw) null;
             this.a((lw) null, (byte) 103, -86, false);
           }
-          var16Lifetime1 = GetNumStars.a(var15Lifetime1, (byte) 53) >> 8;
-          var17Lifetime1 = TextureLineShape.a(var15Lifetime1, 44) >> 8;
+          var16Lifetime1 = GetNumStars.cosAngle(var15Lifetime1, (byte) 53) >> 8;
+          var17Lifetime1 = TextureLineShape.sinAngle(var15Lifetime1, 44) >> 8;
           var18Lifetime1 = param1 + (param6 >> 8) * var16Lifetime1;
           var19Lifetime1 = (param6 >> 8) * var17Lifetime1 + param5;
           var20Lifetime1 = param2 + (var10 >> 8) * var16Lifetime1;
           var21 = param0 + var17Lifetime1 * (var10 >> 8);
-          var22 = GetNumStars.a(var14Lifetime1, (byte) 105) >> 8;
-          var23 = TextureLineShape.a(var14Lifetime1, 54) >> 8;
+          var22 = GetNumStars.cosAngle(var14Lifetime1, (byte) 105) >> 8;
+          var23 = TextureLineShape.sinAngle(var14Lifetime1, 54) >> 8;
           var24 = param2 + (var10 >> 8) * var22;
           var25 = var23 * (var10 >> 8) + param0;
           var26 = (param6 >> 8) * var22 + param1;
@@ -4933,8 +4933,8 @@ final class GameSession {
             var43 = (SetMinimapWidth.field_o * 160 + var42 * var41) % var39;
             if (var36 > var43) {
               var43 = var14Lifetime1 + var43 * 4096 / var12;
-              var44 = (GetNumStars.a(var43, (byte) -80) >> 8) * (param6 >> 8);
-              var45 = (param6 >> 8) * (TextureLineShape.a(var43, 114) >> 8);
+              var44 = (GetNumStars.cosAngle(var43, (byte) -80) >> 8) * (param6 >> 8);
+              var45 = (param6 >> 8) * (TextureLineShape.sinAngle(var43, 114) >> 8);
               var46 = param1 + var44;
               var47 = var45 + param5;
               this.b(-7178, var46, var42, var47);
@@ -4947,8 +4947,8 @@ final class GameSession {
                   this.b(-7178, var45, var42, var46);
                 } else {
                   var43 = (-var37 + var43) * 4096 / var32 + var15Lifetime1;
-                  var44 = (GetNumStars.a(var43, (byte) 94) >> 8) * (var10 >> 8);
-                  var45 = (TextureLineShape.a(var43, 91) >> 8) * (var10 >> 8);
+                  var44 = (GetNumStars.cosAngle(var43, (byte) 94) >> 8) * (var10 >> 8);
+                  var45 = (TextureLineShape.sinAngle(var43, 91) >> 8) * (var10 >> 8);
                   var46 = param2 + var44;
                   var47 = param0 + var45;
                   this.b(-7178, var46, var42, var47);
@@ -5663,16 +5663,16 @@ final class GameSession {
         for (var10 = 0; var6 > var10; var10++) {
           var11 = var10 << 1;
           var12 = GameKeyHandler.a(param3 + 22551, param2 * (-1 + (var6 - var10)) / var6 + var5);
-          var13 = this.radialMenuX + (GetNumStars.a(var12, (byte) -99) * var9 >> 16);
-          var14 = this.radialMenuY + (var9 * TextureLineShape.a(var12, 69) >> 16);
+          var13 = this.radialMenuX + (GetNumStars.cosAngle(var12, (byte) -99) * var9 >> 16);
+          var14 = this.radialMenuY + (var9 * TextureLineShape.sinAngle(var12, 69) >> 16);
           var17[var11] = var13;
           var8[var11 + 1] = var14;
         }
         for (var10Lifetime1 = 0; var6 > var10Lifetime1; var10Lifetime1++) {
           var11Lifetime1 = (var10Lifetime1 << 1) + var7;
           var12Lifetime1 = GameKeyHandler.a(22433, var5 + var10Lifetime1 * param2 / var6);
-          var13Lifetime1 = this.radialMenuX + (param1 * GetNumStars.a(var12Lifetime1, (byte) -106) >> 16);
-          var14Lifetime1 = this.radialMenuY + (param1 * TextureLineShape.a(var12Lifetime1, param3 + 188) >> 16);
+          var13Lifetime1 = this.radialMenuX + (param1 * GetNumStars.cosAngle(var12Lifetime1, (byte) -106) >> 16);
+          var14Lifetime1 = this.radialMenuY + (param1 * TextureLineShape.sinAngle(var12Lifetime1, param3 + 188) >> 16);
           var17[var11Lifetime1] = var13Lifetime1;
           var8[var11Lifetime1 + 1] = var14Lifetime1;
         }
@@ -6323,10 +6323,10 @@ final class GameSession {
                   var20 = GameKeyHandler.a(22433, var12 - var8);
                   var21 = GameKeyHandler.a(22433, var12 + var8);
                   var22 = var7.weaponbehaviour.getDefinition((byte) 24).getProjectileRange(123) << 3;
-                  var23 = var10 + (GetNumStars.a(var20, (byte) 44) >> 8) * (var22 >> 8);
-                  var24 = (var22 >> 8) * (TextureLineShape.a(var20, 70) >> 8) + var11;
-                  var25 = (GetNumStars.a(var21, (byte) 61) >> 8) * (var22 >> 8) + var10;
-                  var26 = (var22 >> 8) * (TextureLineShape.a(var21, 86) >> 8) + var11;
+                  var23 = var10 + (GetNumStars.cosAngle(var20, (byte) 44) >> 8) * (var22 >> 8);
+                  var24 = (var22 >> 8) * (TextureLineShape.sinAngle(var20, 70) >> 8) + var11;
+                  var25 = (GetNumStars.cosAngle(var21, (byte) 61) >> 8) * (var22 >> 8) + var10;
+                  var26 = (var22 >> 8) * (TextureLineShape.sinAngle(var21, 86) >> 8) + var11;
                   c.a(ShipTeamConditionFactory.field_a.b(true, var24), ShipTeamConditionFactory.field_a.a(var23, (byte) 124), var17, var18, -16777216, var19);
                   stackIn_18_0 = ShipTeamConditionFactory.field_a;
                   stackIn_19_1 = !(param1);
@@ -6522,8 +6522,8 @@ final class GameSession {
               var19 = var14;
               var20 = this.getRadialSegmentAngle(false, var9, var15.field_l);
               if (this.radialMenuAlpha > 0) {
-                var21 = this.radialMenuX + (GetNumStars.a(var20, (byte) 47) * var7Lifetime1 >> 16) - var16 / 2;
-                var22 = -(var17 / 2) + this.radialMenuY + (TextureLineShape.a(var20, 95) * var7Lifetime1 >> 16);
+                var21 = this.radialMenuX + (GetNumStars.cosAngle(var20, (byte) 47) * var7Lifetime1 >> 16) - var16 / 2;
+                var22 = -(var17 / 2) + this.radialMenuY + (TextureLineShape.sinAngle(var20, 95) * var7Lifetime1 >> 16);
                 if (this.radialMenuAlpha < 255) {
                   var23_int = -var18 + var21;
                   var24 = var22 - var19;
@@ -7857,8 +7857,8 @@ final class GameSession {
               var17 = ShipTeamConditionFactory.field_a.b(true, var15);
               if (OpenGlTexture1D.field_i) {
                 var18 = GameSnapshotFactory.a(var12, (byte) -77, var11);
-                var16 = var16 - (GetNumStars.a(var18, (byte) -122) * 28 >> 16);
-                var17 = var17 - (28 * TextureLineShape.a(var18, 97) >> 16);
+                var16 = var16 - (GetNumStars.cosAngle(var18, (byte) -122) * 28 >> 16);
+                var17 = var17 - (28 * TextureLineShape.sinAngle(var18, 97) >> 16);
                 var10.drawRotatedScaled((float)var16, (float)var17, 20.0f, 23.0f, 4096, -var18 << 3, 0, -1, 1);
               }
               PlayerActionFactory.a(param3, -var9 + var16, (byte) 88, -var9 + var17);
@@ -8022,8 +8022,8 @@ final class GameSession {
               sh.a(param3.getGameId((byte) -13), -1, 11);
             }
           }
-          kra.a(var18, 2, 16994, var15, 255, var14, var16, var17);
-          kra.a(var18, 2, 16994, var15, 255, var16, var14, var17);
+          FixedPointTrigonometry.drawThickLine(var18, 2, 16994, var15, 255, var14, var16, var17);
+          FixedPointTrigonometry.drawThickLine(var18, 2, 16994, var15, 255, var16, var14, var17);
           stackIn_27_0 = var10Lifetime1;
           return stackIn_27_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -8184,7 +8184,7 @@ final class GameSession {
                 var24 = qpb.a(false, var23_int, 13894143);
                 if (var18_intLifetime2 > 0 &&
                   var18_intLifetime2 < 60) {
-                  var25 = TextureLineShape.a(128 * SetMinimapWidth.field_o, 96) >> 9;
+                  var25 = TextureLineShape.sinAngle(128 * SetMinimapWidth.field_o, 96) >> 9;
                   var24 = TextureRectangleShape.a((byte) 66, 16711680, var25, var24);
                 }
                 SetSelfDestructPrepareToggleCooldown.a(var20Lifetime1, -1, -MidiNote.a(var9, (byte) -121) + var22, var42, var9, var24, (byte) -117);

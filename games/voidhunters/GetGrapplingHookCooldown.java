@@ -40,7 +40,7 @@ final class GetGrapplingHookCooldown extends ConsoleCommand {
         }
     }
 
-    final static Ship a(World param0, byte param1, int param2, Ship param3) {
+    final static Ship findNearestAiTarget(World param0, byte param1, int param2, Ship param3) {
         int var7 = 0;
         Object stackIn_24_0 = null;
         RuntimeException stackIn_27_0 = null;
@@ -73,7 +73,7 @@ final class GetGrapplingHookCooldown extends ConsoleCommand {
               var8.getTeam((byte) 86) == sja.field_c &&
               var8.getOwner((byte) -117) != param2 &&
               (null == var8.getAi((byte) -108) ||
-              var8.getAi((byte) -108).a((byte) 66) != param2)) &&
+              var8.getAi((byte) -108).getParentPlayerId((byte) 66) != param2)) &&
               (!param3.isFighter(false) ||
               !param0.isBodyCenterInNebula((ShipBody) (var8), 119)))) {
               var9 = var8.x - param3.x;
@@ -119,7 +119,7 @@ final class GetGrapplingHookCooldown extends ConsoleCommand {
           return;
         }
         Ship var2 = (Ship) null;
-        GetGrapplingHookCooldown.a((World) null, (byte) -124, 125, (Ship) null);
+        GetGrapplingHookCooldown.findNearestAiTarget((World) null, (byte) -124, 125, (Ship) null);
         field_p = null;
         field_q = null;
         field_r = null;

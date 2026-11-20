@@ -189,7 +189,7 @@ final class Particle implements DiffableState {
               SetShowTutorial.a(var3_int, (byte) 66, var10, var4, var6, var11, var8);
               return;
             }
-            kra.a(var6, var9, 16994, var4, var8, var3_int, var10, var11);
+            FixedPointTrigonometry.drawThickLine(var6, var9, 16994, var4, var8, var3_int, var10, var11);
             return;
           }
           if (SetPhasedEnergyBeamReload.field_o > this.type) {
@@ -201,8 +201,8 @@ final class Particle implements DiffableState {
           if (this.fadestart > 135) {
             var8Lifetime1 = -var8Lifetime1;
           }
-          var9Lifetime1 = GetNumStars.a(var8Lifetime1, (byte) -60);
-          var10Lifetime1 = TextureLineShape.a(var8Lifetime1, 82);
+          var9Lifetime1 = GetNumStars.cosAngle(var8Lifetime1, (byte) -60);
+          var10Lifetime1 = TextureLineShape.sinAngle(var8Lifetime1, 82);
           var11Lifetime1 = -var6Lifetime1;
           var12 = -var7_int;
           var13 = -var6Lifetime1;

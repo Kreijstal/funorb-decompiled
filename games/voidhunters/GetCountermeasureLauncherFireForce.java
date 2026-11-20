@@ -31,7 +31,7 @@ final class GetCountermeasureLauncherFireForce extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0) {
+    final static void sendReflectionCheckResponses(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
         IsaacPacketBuffer var1 = null;
@@ -44,12 +44,12 @@ final class GetCountermeasureLauncherFireForce extends ConsoleCommand {
             field_o = 71;
           }
           var1 = RequestNewestBlackboxRecording.field_p;
-          while (apb.a(57)) {
+          while (apb.isReflectionCheckReady(57)) {
             var1.writeIsaacByte(param0 + 24327, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            ida.a(var1, (byte) 127);
+            ida.writeReflectionCheckResponse(var1, (byte) 127);
             RequestNewestBlackboxRecording.field_p.writeLengthByte(var1.position - var2, -129);
           }
           return;

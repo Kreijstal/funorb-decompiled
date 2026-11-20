@@ -4,13 +4,13 @@
 final class GetNumStars extends ConsoleCommand {
     static String field_o;
 
-    final static int a(int param0, byte param1) {
+    final static int cosAngle(int param0, byte param1) {
         param0 = param0 & 8191;
         int var2 = 34 / ((param1 + 19) / 38);
         if (param0 >= 4096) {
-          return param0 >= 6144 ? kra.field_a[param0 - 6144] : -kra.field_a[6144 - param0];
+          return param0 >= 6144 ? FixedPointTrigonometry.quarterSine[param0 - 6144] : -FixedPointTrigonometry.quarterSine[6144 - param0];
         }
-        return param0 >= 2048 ? -kra.field_a[-2048 + param0] : kra.field_a[-param0 + 2048];
+        return param0 >= 2048 ? -FixedPointTrigonometry.quarterSine[-2048 + param0] : FixedPointTrigonometry.quarterSine[-param0 + 2048];
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

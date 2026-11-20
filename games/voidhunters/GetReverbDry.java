@@ -6,7 +6,7 @@ final class GetReverbDry extends ConsoleCommand {
         if (param0 > -108) {
           return;
         }
-        GetArmageddonLength.field_r = new IntrusiveDeque();
+        GetArmageddonLength.pendingReflectionChecks = new IntrusiveDeque();
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

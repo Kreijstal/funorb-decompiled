@@ -11,29 +11,29 @@ final class apb {
         int var1 = -97 % ((62 - param0) / 54);
     }
 
-    final static boolean a(int param0) {
+    final static boolean isReflectionCheckReady(int param0) {
         int var2 = 0;
-        mv var1 = null;
+        ReflectionCheck var1 = null;
         RuntimeException var1_ref = null;
         int var3 = 0;
         int var4 = 0;
-        mv var5 = null;
+        ReflectionCheck var5 = null;
         RuntimeException decompiledCaughtException = null;
         var4 = VoidHunters.field_G;
         try {
-          var5 = (mv) (GetArmageddonLength.field_r.first(0));
+          var5 = (ReflectionCheck) (GetArmageddonLength.pendingReflectionChecks.first(0));
           var1 = var5;
           if (var1 == null) {
             return false;
           }
           var3 = 58 % ((param0 + 10) / 48);
-          for (var2 = 0; var2 < var1.field_i; var2++) {
-            if (null != var5.field_g[var2] &&
-              var5.field_g[var2].status == 0) {
+          for (var2 = 0; var2 < var1.operationCount; var2++) {
+            if (null != var5.fieldRequests[var2] &&
+              var5.fieldRequests[var2].status == 0) {
               return false;
             }
-            if (null != var5.field_e[var2] &&
-              0 == var5.field_e[var2].status) {
+            if (null != var5.methodRequests[var2] &&
+              0 == var5.methodRequests[var2].status) {
               return false;
             }
           }

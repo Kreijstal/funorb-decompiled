@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetArmageddonLength extends ConsoleCommand {
-    static IntrusiveDeque field_r;
+    static IntrusiveDeque pendingReflectionChecks;
     static TextureCombineSource field_q;
     static String field_o;
     static TextureCoordinateMode field_p;
 
     public static void clearSharedReferences(byte param0) {
         field_q = null;
-        field_r = null;
+        pendingReflectionChecks = null;
         field_p = null;
         field_o = null;
         if (param0 != 66) {
@@ -156,7 +156,7 @@ final class GetArmageddonLength extends ConsoleCommand {
     }
 
     static {
-        field_r = new IntrusiveDeque();
+        pendingReflectionChecks = new IntrusiveDeque();
         field_o = "Players: <%0>/<%1>";
         field_q = new TextureCombineSource();
         field_p = new TextureCoordinateMode();

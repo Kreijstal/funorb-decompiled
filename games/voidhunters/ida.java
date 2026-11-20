@@ -94,7 +94,7 @@ final class ida extends UiSingleChildContainer {
           }
           if (param2 > -66) {
             var4 = (IsaacPacketBuffer) null;
-            ida.a((IsaacPacketBuffer) null, (byte) -6);
+            ida.writeReflectionCheckResponse((IsaacPacketBuffer) null, (byte) -6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -186,7 +186,7 @@ final class ida extends UiSingleChildContainer {
         this.field_v = new IntrusiveDeque();
     }
 
-    final static void a(IsaacPacketBuffer param0, byte param1) {
+    final static void writeReflectionCheckResponse(IsaacPacketBuffer param0, byte param1) {
         try {
           int var5 = 0;
           int var10_int = 0;
@@ -215,12 +215,12 @@ final class ida extends UiSingleChildContainer {
           Object var10 = null;
           ObjectInputStream var11 = null;
           int var12 = 0;
-          mv var13 = null;
+          ReflectionCheck var13 = null;
           java.lang.reflect.Field var15 = null;
           Object var16 = null;
           Object var17 = null;
           java.lang.reflect.Field var17_ref = null;
-          mv var18 = null;
+          ReflectionCheck var18 = null;
           java.lang.reflect.Field var19 = null;
           Object var20 = null;
           Object var22 = null;
@@ -235,26 +235,26 @@ final class ida extends UiSingleChildContainer {
           var22 = null;
           var12 = VoidHunters.field_G;
           try {
-            var13 = (mv) (GetArmageddonLength.field_r.first(0));
+            var13 = (ReflectionCheck) (GetArmageddonLength.pendingReflectionChecks.first(0));
             var18 = var13;
             if (var18 == null) {
               return;
             }
             var3 = 0;
-            for (var4 = 0; var4 < var18.field_i; var4++) {
-              if (var13.field_g[var4] != null) {
-                if (var13.field_g[var4].status == 2) {
-                  var13.field_k[var4] = -5;
+            for (var4 = 0; var4 < var18.operationCount; var4++) {
+              if (var13.fieldRequests[var4] != null) {
+                if (var13.fieldRequests[var4].status == 2) {
+                  var13.lookupErrors[var4] = -5;
                 }
-                if (0 == var13.field_g[var4].status) {
+                if (0 == var13.fieldRequests[var4].status) {
                   var3 = 1;
                 }
               }
-              if (null != var13.field_e[var4]) {
-                if (var13.field_e[var4].status == 2) {
-                  var13.field_k[var4] = -6;
+              if (null != var13.methodRequests[var4]) {
+                if (var13.methodRequests[var4].status == 2) {
+                  var13.lookupErrors[var4] = -6;
                 }
-                if (var13.field_e[var4].status == 0) {
+                if (var13.methodRequests[var4].status == 0) {
                   var3 = 1;
                 }
               }
@@ -263,34 +263,34 @@ final class ida extends UiSingleChildContainer {
               return;
             }
             var4 = param0.position;
-            param0.writeInt(var18.field_d, 332614536);
-            for (var5 = 0; var5 < var18.field_i; var5++) {
-              if (var18.field_k[var5] == 0) {
+            param0.writeInt(var18.id, 332614536);
+            for (var5 = 0; var5 < var18.operationCount; var5++) {
+              if (var18.lookupErrors[var5] == 0) {
                 try {
-                  var6_int = var18.field_h[var5];
+                  var6_int = var18.operationTypes[var5];
                   if (var6_int == 0) {
-                    var15 = (java.lang.reflect.Field) (var18.field_g[var5].result);
+                    var15 = (java.lang.reflect.Field) (var18.fieldRequests[var5].result);
                     var8 = var15.getInt((Object) null);
                     param0.writeByte(0, 0);
                     param0.writeInt(var8, 332614536);
                   } else {
                     if (var6_int != 1) {
                       if (var6_int == 2) {
-                        var26 = (java.lang.reflect.Field) (var18.field_g[var5].result);
+                        var26 = (java.lang.reflect.Field) (var18.fieldRequests[var5].result);
                         var8 = var26.getModifiers();
                         param0.writeByte(0, 0);
                         param0.writeInt(var8, 332614536);
                       }
                     } else {
-                      var17_ref = (java.lang.reflect.Field) (var18.field_g[var5].result);
+                      var17_ref = (java.lang.reflect.Field) (var18.fieldRequests[var5].result);
                       var19 = var17_ref;
-                      var19.setInt((Object) null, var18.field_j[var5]);
+                      var19.setInt((Object) null, var18.fieldValues[var5]);
                       param0.writeByte(0, 0);
                     }
                   }
                   if (var6_int == 3) {
-                    var28 = (java.lang.reflect.Method) (var18.field_e[var5].result);
-                    var25 = var18.field_f[var5];
+                    var28 = (java.lang.reflect.Method) (var18.methodRequests[var5].result);
+                    var25 = var18.serializedArguments[var5];
                     var9 = new Object[var25.length];
                     for (var10_int = 0; var10_int < var25.length; var10_int++) {
                       var11 = new ObjectInputStream((InputStream) ((Object) new ByteArrayInputStream(var25[var10_int])));
@@ -310,7 +310,7 @@ final class ida extends UiSingleChildContainer {
                     }
                   } else {
                     if (var6_int == 4) {
-                      var27 = (java.lang.reflect.Method) (var18.field_e[var5].result);
+                      var27 = (java.lang.reflect.Method) (var18.methodRequests[var5].result);
                       var8Lifetime1 = var27.getModifiers();
                       param0.writeByte(0, 0);
                       param0.writeInt(var8Lifetime1, 332614536);
@@ -366,7 +366,7 @@ final class ida extends UiSingleChildContainer {
                   param0.writeByte(0, -21);
                 }
               } else {
-                param0.writeByte(0, var18.field_k[var5]);
+                param0.writeByte(0, var18.lookupErrors[var5]);
               }
             }
             param0.writeCrc(1595, var4);

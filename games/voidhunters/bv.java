@@ -790,10 +790,10 @@ final class bv {
                             var28 = var24.getWorldConnectionX(var24.getDefinition((byte) -112), (byte) -69);
                             var29 = var24.getWorldConnectionY(125, var24.getDefinition((byte) -112));
                             var30 = 8;
-                            var31 = var28 + (GetNumStars.a(var26_int, (byte) -96) * var30 >> 1);
-                            var32 = (TextureLineShape.a(var26_int, 44) * var30 >> 1) + var29;
-                            var33 = (var30 * GetNumStars.a(var27, (byte) 109) >> 1) + var28;
-                            var34 = (var30 * TextureLineShape.a(var27, 87) >> 1) + var29;
+                            var31 = var28 + (GetNumStars.cosAngle(var26_int, (byte) -96) * var30 >> 1);
+                            var32 = (TextureLineShape.sinAngle(var26_int, 44) * var30 >> 1) + var29;
+                            var33 = (var30 * GetNumStars.cosAngle(var27, (byte) 109) >> 1) + var28;
+                            var34 = (var30 * TextureLineShape.sinAngle(var27, 87) >> 1) + var29;
                             var35 = param3.a(var31, (byte) 118);
                             var36 = param3.b(true, var32);
                             var37 = param3.a(var33, (byte) 115);

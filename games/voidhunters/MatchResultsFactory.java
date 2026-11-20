@@ -34,7 +34,7 @@ final class MatchResultsFactory implements GameStateFactory {
         var2.writeByte(0, 0);
     }
 
-    final static void a(java.applet.Applet param0, byte param1, String param2) {
+    final static void setSessionCookie(java.applet.Applet param0, byte param1, String param2) {
         try {
           String var3 = null;
           String var5 = null;

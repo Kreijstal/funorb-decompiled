@@ -377,8 +377,8 @@ final class WeaponBehaviour implements DiffableState {
               return;
             }
           }
-          var15 = GetNumStars.a(param8, (byte) 123);
-          var16 = TextureLineShape.a(param8, 96);
+          var15 = GetNumStars.cosAngle(param8, (byte) 123);
+          var16 = TextureLineShape.sinAngle(param8, 96);
           var17 = (-(param10 * var16) + var15 * param2 >> 16) + param9;
           var18 = (var15 * param10 + var16 * param2 >> 16) + param7;
           var19 = 0;
@@ -399,7 +399,7 @@ final class WeaponBehaviour implements DiffableState {
             var22 = var35_ref.getTeam((byte) 86);
             var23 = var35_ref.getOwner((byte) -117);
             if (null != var35_ref.getAi((byte) -108)) {
-              var23 = var35_ref.getAi((byte) -108).a((byte) 80);
+              var23 = var35_ref.getAi((byte) -108).getParentPlayerId((byte) 80);
             }
           }
           if (2 == this.weapontype) {
@@ -413,7 +413,7 @@ final class WeaponBehaviour implements DiffableState {
             var25.setTeam(17704, var22);
             var25.setOwner(-1, -111);
             var26 = new ShipAI();
-            var26.a(var23, true);
+            var26.setParentPlayerId(var23, true);
             var25.setAi(var26, 4);
             var25.addDirectionalForce(var21Lifetime1, param8, var20Lifetime1, 500, 1948934248);
             param0.addShip(var25, (byte) 72);

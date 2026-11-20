@@ -3,7 +3,7 @@
  */
 final class ta {
     static GameStateFactory field_a;
-    static int[] field_b;
+    static int[] serverPacketLengths;
 
     final static void a(byte param0, int param1) {
         wp.field_a = SetBombletSprayEnergyUsed.field_o;
@@ -17,9 +17,9 @@ final class ta {
 
     public static void clearSharedReferences(byte param0) {
         field_a = null;
-        field_b = null;
+        serverPacketLengths = null;
         if (param0 != -109) {
-          field_b = (int[]) null;
+          serverPacketLengths = (int[]) null;
         }
     }
 
@@ -104,6 +104,6 @@ final class ta {
 
     static {
         field_a = (GameStateFactory) ((Object) new HardpointFactory());
-        field_b = new int[256];
+        serverPacketLengths = new int[256];
     }
 }

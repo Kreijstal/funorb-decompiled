@@ -35,15 +35,15 @@ final class TextureLineShape extends TextureRasterShape {
         return false;
     }
 
-    final static int a(int param0, int param1) {
+    final static int sinAngle(int param0, int param1) {
         if (param1 <= 36) {
           return 103;
         }
         param0 = param0 & 8191;
         if (param0 >= 4096) {
-          return 6144 <= param0 ? -kra.field_a[8192 - param0] : -kra.field_a[param0 - 4096];
+          return 6144 <= param0 ? -FixedPointTrigonometry.quarterSine[8192 - param0] : -FixedPointTrigonometry.quarterSine[param0 - 4096];
         }
-        return 2048 > param0 ? kra.field_a[param0] : kra.field_a[-param0 + 4096];
+        return 2048 > param0 ? FixedPointTrigonometry.quarterSine[param0] : FixedPointTrigonometry.quarterSine[-param0 + 4096];
     }
 
     public static void clearSharedReferences(int param0) {

@@ -582,8 +582,8 @@ final class World implements DiffableState, CompactGameState {
                       BlendTextureOperation.a(20382, param0.getX(false), 8, param0.getY((byte) 120), 5);
                     }
                   }
-                  var17Lifetime1Lifetime1 = var10.getDefaultConnectionX(-24) * GetNumStars.a(param0.getAngle(0), (byte) -119) - var10.getDefaultConnectionY((byte) 100) * TextureLineShape.a(param0.getAngle(0), 96) >> 16;
-                  var18Lifetime1 = var10.getDefaultConnectionX(126) * TextureLineShape.a(param0.getAngle(0), 41) + var10.getDefaultConnectionY((byte) 100) * GetNumStars.a(param0.getAngle(0), (byte) 77) >> 16;
+                  var17Lifetime1Lifetime1 = var10.getDefaultConnectionX(-24) * GetNumStars.cosAngle(param0.getAngle(0), (byte) -119) - var10.getDefaultConnectionY((byte) 100) * TextureLineShape.sinAngle(param0.getAngle(0), 96) >> 16;
+                  var18Lifetime1 = var10.getDefaultConnectionX(126) * TextureLineShape.sinAngle(param0.getAngle(0), 41) + var10.getDefaultConnectionY((byte) 100) * GetNumStars.cosAngle(param0.getAngle(0), (byte) 77) >> 16;
                   param0.setPosition(var14.worldx - var17Lifetime1Lifetime1, -var18Lifetime1 + var14.worldy, (byte) -104);
                   param0.dy = 0;
                   param0.dx = 0;
@@ -1157,8 +1157,8 @@ final class World implements DiffableState, CompactGameState {
             var8_int = -field_c[1] + param6.id;
             param6 = this.getMutableDebris(var8_int, false);
             var9 = param6.chassis;
-            var10 = var9.getDefaultConnectionX(125) * GetNumStars.a(param6.getAngle(0), (byte) 78) - var9.getDefaultConnectionY((byte) 100) * TextureLineShape.a(param6.getAngle(0), 58) >> 16;
-            var11 = var9.getDefaultConnectionX(125) * TextureLineShape.a(param6.getAngle(0), 85) + var9.getDefaultConnectionY((byte) 100) * GetNumStars.a(param6.getAngle(0), (byte) -120) >> 16;
+            var10 = var9.getDefaultConnectionX(125) * GetNumStars.cosAngle(param6.getAngle(0), (byte) 78) - var9.getDefaultConnectionY((byte) 100) * TextureLineShape.sinAngle(param6.getAngle(0), 58) >> 16;
+            var11 = var9.getDefaultConnectionX(125) * TextureLineShape.sinAngle(param6.getAngle(0), 85) + var9.getDefaultConnectionY((byte) 100) * GetNumStars.cosAngle(param6.getAngle(0), (byte) -120) >> 16;
             var12 = var10 + var9.finalx;
             var13 = var9.finaly + var11;
             var14 = -var12 + param2.worldx;
@@ -1175,7 +1175,7 @@ final class World implements DiffableState, CompactGameState {
             if (param6.chassis.thrusterbehaviour != null) {
               var19 += 4096;
             }
-            VariableCondition.a(param2.worldx + GetNumStars.a(var19, (byte) -81), param2.worldy + TextureLineShape.a(var19, 54), param2.worldy, param2.worldx, (byte) -54);
+            VariableCondition.a(param2.worldx + GetNumStars.cosAngle(var19, (byte) -81), param2.worldy + TextureLineShape.sinAngle(var19, 54), param2.worldy, param2.worldx, (byte) -54);
             param6.addForceAtPoint(param6.getMass(false) * var15 * 4, param6.getX(false), param6.getY((byte) 124), (byte) -121, param6.getMass(false) * (var14 * 4));
             param6.dx = 180 * param6.dx >> 8;
             param6.dy = param6.dy * 180 >> 8;
@@ -1859,7 +1859,7 @@ final class World implements DiffableState, CompactGameState {
                   SetMissionResnetResourceTickTime.field_p == 1) {
                   var14_ref_aoa = new ShipAI();
                   var11.updateTick(this, true, (byte) 67, true);
-                  var14_ref_aoa.a(var11, (byte) -73, this);
+                  var14_ref_aoa.applyAiControls(var11, (byte) -73, this);
                   if (GetPointDefenceLaserProjectiles.a(4096, 11284)) {
                     var11.setAi(var14_ref_aoa, param1 + 3);
                   }
@@ -1882,7 +1882,7 @@ final class World implements DiffableState, CompactGameState {
                       }
                       if (var15 != 0) {
                         if (1 == SetMissilesTopSpeed.field_o) {
-                          var16Lifetime2 = GetGrapplingHookCooldown.a(this, (byte) 63, var11.getOwner((byte) -117), var11);
+                          var16Lifetime2 = GetGrapplingHookCooldown.findNearestAiTarget(this, (byte) 63, var11.getOwner((byte) -117), var11);
                           if (var16Lifetime2 != null) {
                             var12.aimtargetx = var16Lifetime2.getX(false);
                             var12.aimtargety = var16Lifetime2.getY((byte) -19);
@@ -4214,8 +4214,8 @@ final class World implements DiffableState, CompactGameState {
                             var18 = new ShipComponent(var17);
                             var19 = new Debris(var18, false);
                             var20 = hob.a(GetFogOfWarSensorRange.field_o, 8192, 122);
-                            var21 = (GetNumStars.a(var20, (byte) -115) >> 8) * (var15 >> 8);
-                            var22 = (TextureLineShape.a(var20, 107) >> 8) * (var15 >> 8);
+                            var21 = (GetNumStars.cosAngle(var20, (byte) -115) >> 8) * (var15 >> 8);
+                            var22 = (TextureLineShape.sinAngle(var20, 107) >> 8) * (var15 >> 8);
                             var19.setPosition(var11_ref.getX(false) + var21, var11_ref.getY((byte) 118) + var22, (byte) -70);
                             var19.setAngle(hob.a(GetFogOfWarSensorRange.field_o, 8192, 124), -66);
                             this.addDebris(var19, (byte) 90);
@@ -4752,7 +4752,7 @@ final class World implements DiffableState, CompactGameState {
         for (var4 = 0; var4 < this.ships.length; var4++) {
           if (null != this.ships[var4] &&
             this.ships[var4].getAi((byte) -108) != null &&
-            this.ships[var4].getAi((byte) -108).a((byte) 92) == param0) {
+            this.ships[var4].getAi((byte) -108).getParentPlayerId((byte) 92) == param0) {
             var3++;
           }
         }
@@ -5357,7 +5357,7 @@ final class World implements DiffableState, CompactGameState {
                 (var20.getTeam((byte) 84) != sja.field_c ||
                 var20.getOwner((byte) -117) == var3_ref.b(false) ||
                 var20.getAi((byte) -108) != null &&
-                var20.getAi((byte) -108).a((byte) 28) == var3_ref.b(false)) ||
+                var20.getAi((byte) -108).getParentPlayerId((byte) 28) == var3_ref.b(false)) ||
                 (!this.a(var3_ref, var20, -46) ||
                 !this.testProjectileAgainstBody(var20, 46, var3_ref))) {
                 var13++;
@@ -5772,8 +5772,8 @@ final class World implements DiffableState, CompactGameState {
               var13 = GameKeyHandler.a(22433, var13 + 4096);
             }
             param3.setAngle(var13, -86);
-            var14 = var22.getDefaultConnectionX(38) * GetNumStars.a(param3.getAngle(0), (byte) -99) - var22.getDefaultConnectionY((byte) 100) * TextureLineShape.a(param3.getAngle(0), 125) >> 16;
-            var15 = var22.getDefaultConnectionX(37) * TextureLineShape.a(param3.getAngle(0), 63) + var22.getDefaultConnectionY((byte) 100) * GetNumStars.a(param3.getAngle(0), (byte) -67) >> 16;
+            var14 = var22.getDefaultConnectionX(38) * GetNumStars.cosAngle(param3.getAngle(0), (byte) -99) - var22.getDefaultConnectionY((byte) 100) * TextureLineShape.sinAngle(param3.getAngle(0), 125) >> 16;
+            var15 = var22.getDefaultConnectionX(37) * TextureLineShape.sinAngle(param3.getAngle(0), 63) + var22.getDefaultConnectionY((byte) 100) * GetNumStars.cosAngle(param3.getAngle(0), (byte) -67) >> 16;
             param3.setPosition(var11_ref_imb.worldx - var14 + param3.getCenterOfMassOffsetX(995401160), var11_ref_imb.worldy + (-var15 + param3.getCenterOfMassOffsetY((byte) 5)), (byte) -107);
             param3.dy = 0;
             param3.dx = 0;
@@ -5783,8 +5783,8 @@ final class World implements DiffableState, CompactGameState {
             param0.setAttachmentPreviewOutline(var9.component.finaloutline, -48);
             var16 = param0.x - param0.getCenterOfMassOffsetX(995401160);
             var17 = param0.y - param0.getCenterOfMassOffsetY((byte) 5);
-            var18 = GetNumStars.a(param0.getAngle(0), (byte) 44);
-            var19 = TextureLineShape.a(param0.getAngle(0), 68);
+            var18 = GetNumStars.cosAngle(param0.getAngle(0), (byte) 44);
+            var19 = TextureLineShape.sinAngle(param0.getAngle(0), 68);
             var20 = new ShipComponent();
             param0.chassis.copyTo((byte) 119, var20);
             param0.chassis.updateWeaponTransforms(var19, param0.getAngle(0), var18, var17, true, true, false, var16, (int[]) null);
@@ -5795,8 +5795,8 @@ final class World implements DiffableState, CompactGameState {
             }
           }
           if (var8 != 0) {
-            var10 = var22.getDefaultConnectionX(-48) * GetNumStars.a(param3.getAngle(0), (byte) -120) - var22.getDefaultConnectionY((byte) 100) * TextureLineShape.a(param3.getAngle(0), 118) >> 16;
-            var11 = var22.getDefaultConnectionX(124) * TextureLineShape.a(param3.getAngle(0), 82) + var22.getDefaultConnectionY((byte) 100) * GetNumStars.a(param3.getAngle(0), (byte) 87) >> 16;
+            var10 = var22.getDefaultConnectionX(-48) * GetNumStars.cosAngle(param3.getAngle(0), (byte) -120) - var22.getDefaultConnectionY((byte) 100) * TextureLineShape.sinAngle(param3.getAngle(0), 118) >> 16;
+            var11 = var22.getDefaultConnectionX(124) * TextureLineShape.sinAngle(param3.getAngle(0), 82) + var22.getDefaultConnectionY((byte) 100) * GetNumStars.cosAngle(param3.getAngle(0), (byte) 87) >> 16;
             var12 = param3.getCenterOfMassOffsetX(995401160);
             var13Lifetime1 = param3.getX(false) - var12;
             var14Lifetime1 = param3.getCenterOfMassOffsetY((byte) 5);
@@ -5920,17 +5920,17 @@ final class World implements DiffableState, CompactGameState {
                 var8 = SetBuildViewAutozoomEndOnAction.field_o;
                 var9 = 0;
                 var10 = 0;
-                var11 = 128 + (TextureLineShape.a(100 * param2, 58) >> 9) | 11184640;
+                var11 = 128 + (TextureLineShape.sinAngle(100 * param2, 58) >> 9) | 11184640;
                 for (var12 = 0; var12 < 10; var12++) {
-                  var13 = (TextureLineShape.a(var12 * (10 * param2), 78) >> 8) * (var5.field_i >> 8) + var5.field_b;
-                  var14 = (GetNumStars.a(var13, (byte) 105) >> 8) * (var5.field_d >> 8);
-                  var15 = (TextureLineShape.a(var13, 45) >> 8) * (var5.field_d >> 8);
+                  var13 = (TextureLineShape.sinAngle(var12 * (10 * param2), 78) >> 8) * (var5.field_i >> 8) + var5.field_b;
+                  var14 = (GetNumStars.cosAngle(var13, (byte) 105) >> 8) * (var5.field_d >> 8);
+                  var15 = (TextureLineShape.sinAngle(var13, 45) >> 8) * (var5.field_d >> 8);
                   c.a(param1.b(true, var15 + var5.field_f), param1.a(var14 + var5.field_g, (byte) 120), var6, var7, -16777216, 4473924);
                 }
                 for (var12Lifetime1 = -var8; var8 >= var12Lifetime1; var12Lifetime1++) {
                   var13Lifetime1 = var5.field_b + var5.field_i * var12Lifetime1 / var8;
-                  var14Lifetime1 = (GetNumStars.a(var13Lifetime1, (byte) -106) >> 8) * (var5.field_d >> 8);
-                  var15Lifetime1 = (TextureLineShape.a(var13Lifetime1, 98) >> 8) * (var5.field_d >> 8);
+                  var14Lifetime1 = (GetNumStars.cosAngle(var13Lifetime1, (byte) -106) >> 8) * (var5.field_d >> 8);
+                  var15Lifetime1 = (TextureLineShape.sinAngle(var13Lifetime1, 98) >> 8) * (var5.field_d >> 8);
                   var16 = var5.field_g + var14Lifetime1;
                   var17 = var5.field_f + var15Lifetime1;
                   if (-var8 < var12Lifetime1) {
@@ -6817,8 +6817,8 @@ final class World implements DiffableState, CompactGameState {
             return;
           }
           var11 = GameSnapshotFactory.a(var10Lifetime1, (byte) -77, var9Lifetime1);
-          var12 = var8_int * GetNumStars.a(var11, (byte) 101) >> 16;
-          var13 = var8_int * TextureLineShape.a(var11, 65) >> 16;
+          var12 = var8_int * GetNumStars.cosAngle(var11, (byte) 101) >> 16;
+          var13 = var8_int * TextureLineShape.sinAngle(var11, 65) >> 16;
           var14 = 4;
           var15 = -var13 / var14;
           var16 = var12 / var14;
@@ -8015,8 +8015,8 @@ final class World implements DiffableState, CompactGameState {
                 var18 = (long)(var26.getX(false) - var11.finalx);
                 var20 = (long)(var26.getY((byte) 118) - var11.finaly);
                 var22 = -var11.finalangle;
-                var23 = (int)((long)GetNumStars.a(var22, (byte) 29) * var18 - var20 * (long)TextureLineShape.a(var22, 39) >> 16);
-                var24 = (int)((long)TextureLineShape.a(var22, 58) * var18 + var20 * (long)GetNumStars.a(var22, (byte) 75) >> 16);
+                var23 = (int)((long)GetNumStars.cosAngle(var22, (byte) 29) * var18 - var20 * (long)TextureLineShape.sinAngle(var22, 39) >> 16);
+                var24 = (int)((long)TextureLineShape.sinAngle(var22, 58) * var18 + var20 * (long)GetNumStars.cosAngle(var22, (byte) 75) >> 16);
                 BlendTextureOperation.a(20382, var26.getX(false), 11, var26.getY((byte) 124), 50);
                 var26.d(param7, var23, var24, 122, var17.id);
               }
@@ -8139,7 +8139,7 @@ final class World implements DiffableState, CompactGameState {
             var5Lifetime1 = var17;
             var5Lifetime2 = var17;
             if (param0.hasAi((byte) -10)) {
-              var5Lifetime2 = var17 + " parent=" + param0.getAi((byte) -108).a((byte) -125);
+              var5Lifetime2 = var17 + " parent=" + param0.getAi((byte) -108).getParentPlayerId((byte) -125);
             }
             var6Lifetime1 = param1.a(param0.getX(false), (byte) 123);
             var7Lifetime1 = param1.b(true, param0.getY((byte) -54) - 16384);
@@ -8147,7 +8147,7 @@ final class World implements DiffableState, CompactGameState {
           }
           if (GetPointDefenceLaserProjectiles.a(4096, 11284) &&
             param0.hasAi((byte) -10)) {
-            param0.getAi((byte) -108).a(param0, -11, param1, this);
+            param0.getAi((byte) -108).drawSteeringDebug(param0, -11, param1, this);
           }
           this.a((byte) 69, param0, param1);
           return;
@@ -8602,7 +8602,7 @@ final class World implements DiffableState, CompactGameState {
         var9 = param1;
         for (var10 = 0; var9 > var10; var10++) {
           var11 = 8192 * var10 / var9;
-          var12 = new Projectile(param5, param6, GetNumStars.a(var11, (byte) 114) * 1000 >> 16, 1000 * TextureLineShape.a(var11, 93) >> 16, var11, 2 * param1, param2, param3, 5, pea.field_a);
+          var12 = new Projectile(param5, param6, GetNumStars.cosAngle(var11, (byte) 114) * 1000 >> 16, 1000 * TextureLineShape.sinAngle(var11, 93) >> 16, var11, 2 * param1, param2, param3, 5, pea.field_a);
           this.addProjectile(var12, false);
         }
     }
@@ -8806,8 +8806,8 @@ final class World implements DiffableState, CompactGameState {
                 var15 = TextLayout.approximateVectorLength(var13, (byte) 111, var14);
                 if (var15 > var12_int) {
                   var16 = GameSnapshotFactory.a(var14, (byte) -77, var13);
-                  var10_int = param3.getX(false) + (var12_int >> 8) * (GetNumStars.a(var16, (byte) -115) >> 8);
-                  var11 = param3.getY((byte) 123) + (var12_int >> 8) * (TextureLineShape.a(var16, 47) >> 8);
+                  var10_int = param3.getX(false) + (var12_int >> 8) * (GetNumStars.cosAngle(var16, (byte) -115) >> 8);
+                  var11 = param3.getY((byte) 123) + (var12_int >> 8) * (TextureLineShape.sinAngle(var16, 47) >> 8);
                 }
               }
               var12 = new Debris();
@@ -8869,8 +8869,8 @@ final class World implements DiffableState, CompactGameState {
             }
             var13Lifetime3 = var9.getX(false) - var9.getCenterOfMassOffsetX(995401160);
             var14Lifetime2 = var9.getY((byte) -16) - var9.getCenterOfMassOffsetY((byte) 5);
-            var15Lifetime1 = var10.getDefaultConnectionX(127) * GetNumStars.a(var9.getAngle(0), (byte) 99) - var10.getDefaultConnectionY((byte) 100) * TextureLineShape.a(var9.getAngle(0), 124) >> 16;
-            var16Lifetime2 = var10.getDefaultConnectionX(-25) * TextureLineShape.a(var9.getAngle(0), 62) + var10.getDefaultConnectionY((byte) 100) * GetNumStars.a(var9.getAngle(0), (byte) 64) >> 16;
+            var15Lifetime1 = var10.getDefaultConnectionX(127) * GetNumStars.cosAngle(var9.getAngle(0), (byte) 99) - var10.getDefaultConnectionY((byte) 100) * TextureLineShape.sinAngle(var9.getAngle(0), 124) >> 16;
+            var16Lifetime2 = var10.getDefaultConnectionX(-25) * TextureLineShape.sinAngle(var9.getAngle(0), 62) + var10.getDefaultConnectionY((byte) 100) * GetNumStars.cosAngle(var9.getAngle(0), (byte) 64) >> 16;
             CarouselPlayerInfoFactory.a(param3.chassis.finaly, 1, var14Lifetime2 + var16Lifetime2, var13Lifetime3 + var15Lifetime1, param7, param3.chassis.finalx);
             var17 = TiledSpriteTextureOperation.a(var10, (byte) -84);
             GetLagStandardDeviationOut.a(-1, var17, 16777215, param7.b(true, -10000 + var9.getY((byte) -109)), param7.a(var9.getX(false), (byte) 118) - (GetPhasedEnergyBeamProjectiles.a(94, var17) >> 1), 4266);

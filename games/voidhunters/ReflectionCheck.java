@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mv extends IntrusiveNode {
-    int field_d;
-    int[] field_h;
-    int field_i;
-    int[] field_j;
-    PlatformRequest[] field_e;
-    byte[][][] field_f;
-    PlatformRequest[] field_g;
-    int[] field_k;
+final class ReflectionCheck extends IntrusiveNode {
+    int id;
+    int[] operationTypes;
+    int operationCount;
+    int[] fieldValues;
+    PlatformRequest[] methodRequests;
+    byte[][][] serializedArguments;
+    PlatformRequest[] fieldRequests;
+    int[] lookupErrors;
 
-    final static void a(int param0, java.awt.Component param1) {
+    final static void installKeyboardListeners(int param0, java.awt.Component param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -36,7 +36,7 @@ final class mv extends IntrusiveNode {
         }
     }
 
-    mv() {
+    ReflectionCheck() {
     }
 
     static {

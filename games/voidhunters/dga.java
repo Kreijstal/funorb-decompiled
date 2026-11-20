@@ -306,7 +306,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_options_allow_spectate", 23100);
                 if (null != var2) {
-                  kra.field_b = Cp1252Strings.decode((byte) -125, var2);
+                  FixedPointTrigonometry.field_b = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_options_ratedgametype", 23100);
                 if (var2 != null) {

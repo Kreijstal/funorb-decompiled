@@ -16,18 +16,18 @@ abstract class NetworkGameClient extends GameApplet {
     private int languageId;
     private int primaryGamePort;
 
-    private final void d(byte param0) {
+    private final void handleSessionCookiePacket(byte param0) {
         if (param0 != -116) {
           this.e((byte) 92);
         }
         String var2 = OpenGlPostEffect.readIncomingString(true);
-        MatchResultsFactory.a(MissionList.b((byte) -119), (byte) 56, var2);
+        MatchResultsFactory.setSessionCookie(MissionList.b((byte) -119), (byte) 56, var2);
     }
 
-    final int f(int param0) {
+    final int pollReconnect(int param0) {
         int var2;
         if (param0 < 34) {
-          this.a(83, 93, -32, 71, -33, -12, false, -123);
+          this.initializeNetworkClient(83, 93, -32, 71, -33, -12, false, -123);
         }
         if (this.errorShown) {
           return -1;
@@ -69,7 +69,7 @@ abstract class NetworkGameClient extends GameApplet {
         return var2;
     }
 
-    final void h(int param0) {
+    final void updateLoginUi(int param0) {
         int discarded$28 = 0;
         int discarded$29 = 0;
         int var3;
@@ -79,7 +79,7 @@ abstract class NetworkGameClient extends GameApplet {
         boolean stackIn_6_3;
         var3 = VoidHunters.field_G;
         if (param0 != 0) {
-          this.a((byte) 6, false);
+          this.enableCorePacketHandlers((byte) 6, false);
         }
         if (!TextureLineShape.a(true)) {
           if (UiDraggableContainer.field_z >= 10) {
@@ -89,7 +89,7 @@ abstract class NetworkGameClient extends GameApplet {
               if (GetSpinningBladeAimspeed.field_q != 0) {
                 GetLagOut.a(GetPointDefenceLaserPulsetime.field_o, param0 ^ 15877);
               } else {
-                discarded$28 = this.a((byte) -96, false, false);
+                discarded$28 = this.processLoginUi((byte) -96, false, false);
               }
             }
           }
@@ -103,11 +103,11 @@ abstract class NetworkGameClient extends GameApplet {
             stackIn_6_0 = this;
             stackIn_6_3 = true;
           }
-          discarded$29 = this.a((byte) stackIn_5_1, stackIn_5_2, stackIn_6_3);
+          discarded$29 = this.processLoginUi((byte) stackIn_5_1, stackIn_5_2, stackIn_6_3);
         }
     }
 
-    final void b(boolean param0, int param1) {
+    final void updateClientServices(boolean param0, int param1) {
         int stackIn_23_0 = 0;
         boolean stackIn_102_0 = false;
         int stackIn_104_1 = 0;
@@ -330,54 +330,54 @@ abstract class NetworkGameClient extends GameApplet {
           this.rebuildCanvas(-81);
           SetGrapplingHookCooldown.a((byte) -62, igb.field_a);
         }
-        if (SetBombletSprayProjectileLife.field_o[8]) {
-          GetCountermeasureLauncherFireForce.a(param1 ^ 1);
+        if (SetBombletSprayProjectileLife.allowedCommonPackets[8]) {
+          GetCountermeasureLauncherFireForce.sendReflectionCheckResponses(param1 ^ 1);
         }
     }
 
     private final void g(int param0) {
-        SetBombletSprayProjectileLife.field_o[11] = true;
-        SetBombletSprayProjectileLife.field_o[12] = true;
-        SetBombletSprayProjectileLife.field_o[13] = true;
+        SetBombletSprayProjectileLife.allowedCommonPackets[11] = true;
+        SetBombletSprayProjectileLife.allowedCommonPackets[12] = true;
+        SetBombletSprayProjectileLife.allowedCommonPackets[13] = true;
         int var2 = -95 % ((param0 - 24) / 37);
     }
 
-    final int c(boolean param0, int param1) {
+    final int processLoginUi(boolean param0, int param1) {
         if (param1 != -9288) {
           this.g(-79);
         }
-        return this.a((byte) 60, true, param0);
+        return this.processLoginUi((byte) 60, true, param0);
     }
 
-    private final void k(int param0) {
-        ta.field_b[12] = -1;
-        ta.field_b[18] = 1;
-        ta.field_b[10] = -1;
-        ta.field_b[4] = -1;
-        ta.field_b[1] = 16;
-        ta.field_b[6] = -2;
-        ta.field_b[3] = -1;
-        ta.field_b[8] = -2;
-        ta.field_b[2] = -2;
-        ta.field_b[9] = -1;
+    private final void initializeCommonPacketLengths(int param0) {
+        ta.serverPacketLengths[12] = -1;
+        ta.serverPacketLengths[18] = 1;
+        ta.serverPacketLengths[10] = -1;
+        ta.serverPacketLengths[4] = -1;
+        ta.serverPacketLengths[1] = 16;
+        ta.serverPacketLengths[6] = -2;
+        ta.serverPacketLengths[3] = -1;
+        ta.serverPacketLengths[8] = -2;
+        ta.serverPacketLengths[2] = -2;
+        ta.serverPacketLengths[9] = -1;
         if (param0 >= -80) {
           this.field_s = true;
         }
-        ta.field_b[11] = -1;
-        ta.field_b[7] = -1;
-        ta.field_b[13] = -1;
-        ta.field_b[17] = -1;
-        ta.field_b[16] = -1;
-        ta.field_b[5] = -1;
+        ta.serverPacketLengths[11] = -1;
+        ta.serverPacketLengths[7] = -1;
+        ta.serverPacketLengths[13] = -1;
+        ta.serverPacketLengths[17] = -1;
+        ta.serverPacketLengths[16] = -1;
+        ta.serverPacketLengths[5] = -1;
     }
 
-    final void a(boolean param0, boolean param1, boolean param2, boolean param3, int param4, boolean param5, boolean param6) {
-        this.a((byte) 119, true);
+    final void configureCommonPacketHandlers(boolean param0, boolean param1, boolean param2, boolean param3, int param4, boolean param5, boolean param6) {
+        this.enableCorePacketHandlers((byte) 119, true);
         if (param3) {
           this.c(true);
         }
         if (param1) {
-          this.i(30138);
+          this.enableHighscoreReplies(30138);
         }
         if (param0) {
           this.e(true);
@@ -432,16 +432,16 @@ abstract class NetworkGameClient extends GameApplet {
         }
     }
 
-    private final void i(int param0) {
+    private final void enableHighscoreReplies(int param0) {
         if (param0 != 30138) {
           String var3 = (String) null;
           this.startClient((String) null, 57, -40);
         }
-        SetBombletSprayProjectileLife.field_o[2] = true;
+        SetBombletSprayProjectileLife.allowedCommonPackets[2] = true;
     }
 
     private final void e(boolean param0) {
-        SetBombletSprayProjectileLife.field_o[4] = param0;
+        SetBombletSprayProjectileLife.allowedCommonPackets[4] = param0;
     }
 
     private final void initializeFromAppletParameters(int param0, int param1, int param2, String param3, int param4) {
@@ -510,7 +510,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7) {
+    private final void initializeNetworkClient(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6, int param7) {
         java.awt.Frame var11 = new java.awt.Frame("Jagex");
         var11.pack();
         var11.dispose();
@@ -528,12 +528,12 @@ abstract class NetworkGameClient extends GameApplet {
         GetFullMissionSet.field_o = param4;
         GrappleLauncherBehaviour.field_f = param2;
         GetThrusterBindingMoveAndTurnHasOppositeMove.field_p = param1;
-        this.k(-92);
+        this.initializeCommonPacketLengths(-92);
         GameKeyHandler.a((byte) 101);
     }
 
-    final void a(boolean param0, int param1, int param2) {
-        this.a(-119, TextureBezierShape.field_q.field_a, SetShipPersistence.field_r.field_a, param2, PopupMenuWidget.field_Bb.field_a, pgb.field_b.field_a, param0, SoftwareFramebuffer.field_f.field_a);
+    final void initializeNetworkClient(boolean param0, int param1, int param2) {
+        this.initializeNetworkClient(-119, TextureBezierShape.field_q.field_a, SetShipPersistence.field_r.field_a, param2, PopupMenuWidget.field_Bb.field_a, pgb.field_b.field_a, param0, SoftwareFramebuffer.field_f.field_a);
         int var4 = -37 % ((param1 - 30) / 50);
     }
 
@@ -541,10 +541,10 @@ abstract class NetworkGameClient extends GameApplet {
         if (param0 != -1) {
           return;
         }
-        SetBombletSprayProjectileLife.field_o[6] = true;
+        SetBombletSprayProjectileLife.allowedCommonPackets[6] = true;
     }
 
-    final void e(int param0) {
+    final void dispatchCommonServerPacket(int param0) {
         int stackIn_31_0 = 0;
         boolean stackIn_32_1 = false;
         int var2;
@@ -553,7 +553,7 @@ abstract class NetworkGameClient extends GameApplet {
         var4 = VoidHunters.field_G;
         var2 = ow.field_a;
         if (64 > var2 &&
-          SetBombletSprayProjectileLife.field_o[var2]) {
+          SetBombletSprayProjectileLife.allowedCommonPackets[var2]) {
           if (var2 == 0) {
             return;
           }
@@ -566,7 +566,7 @@ abstract class NetworkGameClient extends GameApplet {
                 SetLag.a(-8999);
                 break;
               case 7:
-                this.d((byte) -116);
+                this.handleSessionCookiePacket((byte) -116);
                 break;
               default:
                 if (var2 != 11 &&
@@ -576,7 +576,7 @@ abstract class NetworkGameClient extends GameApplet {
                       NebulaFieldFactory.a(true);
                       break regionExit1;
                     case 17:
-                      this.j(3);
+                      this.handleOpenUrlPacket(3);
                       break regionExit1;
                     case 18:
                       GetAiRepairAmount.e(-96);
@@ -596,7 +596,7 @@ abstract class NetworkGameClient extends GameApplet {
                 SoftwareFramebuffer.a(-113);
                 break;
               case 8:
-                SetSalvoDamageMultiplier.a(SetTorpedoProjectiles.field_o, PartitioningManagerFactory.field_a, qga.field_b, false);
+                SetSalvoDamageMultiplier.decodeReflectionCheck(SetTorpedoProjectiles.field_o, PartitioningManagerFactory.field_a, qga.field_b, false);
                 break;
               case 6:
                 iw.k((byte) -38);
@@ -613,7 +613,7 @@ abstract class NetworkGameClient extends GameApplet {
             }
           }
           if (param0 <= 57) {
-            this.f(-115);
+            this.pollReconnect(-115);
           }
           return;
         }
@@ -622,10 +622,10 @@ abstract class NetworkGameClient extends GameApplet {
     }
 
     private final void c(boolean param0) {
-        SetBombletSprayProjectileLife.field_o[1] = param0;
+        SetBombletSprayProjectileLife.allowedCommonPackets[1] = param0;
     }
 
-    private final void j(int param0) {
+    private final void handleOpenUrlPacket(int param0) {
         int var2 = qga.field_b.readUnsignedByte((byte) -124);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = -1 + PartitioningManagerFactory.field_a;
@@ -634,28 +634,28 @@ abstract class NetworkGameClient extends GameApplet {
         ArchiveIndex.openExternalUrl(var3 != 0, param0 ^ param0, MissionList.b((byte) -117), Cp1252Strings.decode((byte) -125, var5));
     }
 
-    private final void a(byte param0, boolean param1) {
-        SetBombletSprayProjectileLife.field_o[0] = true;
-        SetBombletSprayProjectileLife.field_o[18] = true;
-        SetBombletSprayProjectileLife.field_o[3] = true;
+    private final void enableCorePacketHandlers(byte param0, boolean param1) {
+        SetBombletSprayProjectileLife.allowedCommonPackets[0] = true;
+        SetBombletSprayProjectileLife.allowedCommonPackets[18] = true;
+        SetBombletSprayProjectileLife.allowedCommonPackets[3] = true;
         if (param0 <= 40) {
-          this.c(false, 74);
+          this.processLoginUi(false, 74);
         }
-        SetBombletSprayProjectileLife.field_o[7] = true;
-        SetBombletSprayProjectileLife.field_o[17] = true;
-        SetBombletSprayProjectileLife.field_o[8] = param1;
-        SetBombletSprayProjectileLife.field_o[16] = true;
+        SetBombletSprayProjectileLife.allowedCommonPackets[7] = true;
+        SetBombletSprayProjectileLife.allowedCommonPackets[17] = true;
+        SetBombletSprayProjectileLife.allowedCommonPackets[8] = param1;
+        SetBombletSprayProjectileLife.allowedCommonPackets[16] = true;
     }
 
     private final void e(byte param0) {
-        SetBombletSprayProjectileLife.field_o[5] = true;
+        SetBombletSprayProjectileLife.allowedCommonPackets[5] = true;
         if (param0 != -4) {
           String var3 = (String) null;
           NetworkGameClient.loadNamedResource((String) null, -15);
         }
     }
 
-    private final int a(byte param0, boolean param1, boolean param2) {
+    private final int processLoginUi(byte param0, boolean param1, boolean param2) {
         try {
           Throwable decompiledCaughtException = null;
           int var4 = 0;

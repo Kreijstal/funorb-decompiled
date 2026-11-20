@@ -53,8 +53,8 @@ final class SoftwareGlyphMask extends GlyphMask {
           for (var8 = 0; var19.length > var8; var8 += 2) {
             var9 = (1 + (var8 >> 1)) * 8192 / param3;
             var10 = param2 + (long)hob.a(param4, (int)param0, 126);
-            var12 = (long)GetNumStars.a(var9, (byte) -124) * var10 >> 16;
-            var14 = var10 * (long)TextureLineShape.a(var9, 67) >> 16;
+            var12 = (long)GetNumStars.cosAngle(var9, (byte) -124) * var10 >> 16;
+            var14 = var10 * (long)TextureLineShape.sinAngle(var9, 67) >> 16;
             var17[var8] = (int)var12;
             var17[var8 + 1] = (int)var14;
           }

@@ -242,8 +242,8 @@ final class Nebula implements DiffableState {
         int var17 = 0;
         try {
           var6_int = param4 % 16 - 8;
-          var7 = param3.b(this.x + (GetNumStars.a(param2 * var6_int << 1, (byte) -127) >> 4), -125);
-          var8 = param3.c(0, this.y + (TextureLineShape.a(param2 * var6_int << 1, 116) >> 4));
+          var7 = param3.b(this.x + (GetNumStars.cosAngle(param2 * var6_int << 1, (byte) -127) >> 4), -125);
+          var8 = param3.c(0, this.y + (TextureLineShape.sinAngle(param2 * var6_int << 1, 116) >> 4));
           if (param1 <= 42) {
             return;
           }

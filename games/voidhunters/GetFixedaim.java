@@ -947,8 +947,8 @@ final class GetFixedaim extends ConsoleCommand {
                                     /* Inlined CFG state: 11. */
                                     {
                                         var9 = (8192 * (var8 >> 1) + 8192) / var6_int;
-                                        var10 = (long)GetNumStars.a(var9, (byte) -86) * var4_long >> 8;
-                                        var12 = var4_long * (long)TextureLineShape.a(var9, param0 ^ 12) >> 8;
+                                        var10 = (long)GetNumStars.cosAngle(var9, (byte) -86) * var4_long >> 8;
+                                        var12 = var4_long * (long)TextureLineShape.sinAngle(var9, param0 ^ 12) >> 8;
                                         var7_ref_int__[var8] = (int)var10;
                                         var7_ref_int__[var8 + 1] = (int)var12;
                                         var8 += 2;
