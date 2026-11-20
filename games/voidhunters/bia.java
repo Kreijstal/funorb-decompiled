@@ -10,10 +10,10 @@ class bia extends tb {
 
     final static boolean a(boolean param0, byte param1, int param2) {
         if (param1 == -31) {
-          return ArchiveIndexLoader.field_g.a(param2, 11, param0);
+          return ArchiveIndexLoader.field_g.isVoteOptionAvailable(param2, 11, param0);
         }
         bia.a(true, (byte) 77, 66);
-        return ArchiveIndexLoader.field_g.a(param2, 11, param0);
+        return ArchiveIndexLoader.field_g.isVoteOptionAvailable(param2, 11, param0);
     }
 
     final static void a(byte param0) {

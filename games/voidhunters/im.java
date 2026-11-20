@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class im extends aia {
+final class im extends OpenGlTexture2D {
     float field_o;
     static IsaacPacketBuffer field_q;
     int field_p;
@@ -33,11 +33,11 @@ final class im extends aia {
         try {
           this.field_p = param3;
           this.field_m = param2;
-          this.a(param3, param7, 0, param6, 0, param2, 0, 0, true, 1);
+          this.updatePixels(param3, param7, 0, param6, 0, param2, 0, 0, true, 1);
           this.field_o = (float)param3 / (float)param5;
           this.field_l = false;
           this.field_n = (float)param2 / (float)param4;
-          this.a(false, false, 10497);
+          this.setWrap(false, false, 10497);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
@@ -67,11 +67,11 @@ final class im extends aia {
         try {
           this.field_m = param1;
           this.field_p = param2;
-          this.a((byte) 32, 0, param1, 0, param2, 0, 0, true, param5);
+          this.updatePixels((byte) 32, 0, param1, 0, param2, 0, 0, true, param5);
           this.field_n = (float)param1 / (float)param3;
           this.field_o = (float)param2 / (float)param4;
           this.field_l = false;
-          this.a(false, false, 10497);
+          this.setWrap(false, false, 10497);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
@@ -126,7 +126,7 @@ final class im extends aia {
           this.field_p = param3;
           this.field_m = param2;
           this.field_l = false;
-          this.a(false, false, 10497);
+          this.setWrap(false, false, 10497);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

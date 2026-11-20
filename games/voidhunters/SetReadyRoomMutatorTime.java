@@ -89,7 +89,7 @@ final class SetReadyRoomMutatorTime extends ConsoleCommand {
           }
         } else {
           if (null == MissionConditionFactory.field_b) {
-            psb.field_b = ob.a(0, SetTorpedoProjectiles.field_o, 640, 480, 0, 0);
+            psb.field_b = OpenGlTexture3D.a(0, SetTorpedoProjectiles.field_o, 640, 480, 0, 0);
             if (psb.field_b != null) {
               var2 = 2;
               SetGrapplingHookCooldown.a((byte) 77, psb.field_b);

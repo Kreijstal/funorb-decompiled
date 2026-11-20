@@ -69,7 +69,7 @@ final class GetMachineGunPulsetime extends ConsoleCommand {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (param1 > -44) {
           field_q = 86;
-          if (!li.field_i) {
+          if (!OpenGlTexture1D.field_i) {
             SoftwareRasterizer2D.fillRectangle(param5, param3, param2, param4, param0);
             return;
           }
@@ -79,7 +79,7 @@ final class GetMachineGunPulsetime extends ConsoleCommand {
           }
           return;
         }
-        if (!li.field_i) {
+        if (!OpenGlTexture1D.field_i) {
           SoftwareRasterizer2D.fillRectangle(param5, param3, param2, param4, param0);
           return;
         }

@@ -9,7 +9,7 @@ final class SetMachineGunProjectileDamage extends ConsoleCommand {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
-        if (param5 < ob.field_j) {
+        if (param5 < OpenGlTexture3D.field_j) {
           MissionGenerationData.a(param1, param0, 0, param2, param5, param3, param4, param6);
         } else {
           if (GetCountermeasureLauncherProjectiles.field_o < param1) {

@@ -35,7 +35,7 @@ final class SetPointDefenceLaserProjectileDamage extends ConsoleCommand {
         }
     }
 
-    final static GameSession a(int param0, kda param1, IsaacPacketBuffer param2, byte param3) {
+    final static GameSession a(int param0, CarouselGameClient param1, IsaacPacketBuffer param2, byte param3) {
         int var11_int = 0;
         GameSession stackIn_3_0 = null;
         int stackIn_9_0 = 0;
@@ -69,7 +69,7 @@ final class SetPointDefenceLaserProjectileDamage extends ConsoleCommand {
             stackIn_3_0 = (GameSession) null;
             return stackIn_3_0;
           }
-          var16 = param1.b(param2, 1000);
+          var16 = param1.receiveGameStateChunk(param2, 1000);
           var15 = var16;
           var14 = var15;
           var4 = var14;
@@ -101,10 +101,10 @@ final class SetPointDefenceLaserProjectileDamage extends ConsoleCommand {
             var5.beginBitRead(-23497);
             var11.state.a(-62, var5);
             var5.endBitRead((byte) -81);
-            param1.a(0, GetThrusterSmallForce.field_o, var11.state.carouselInfo);
+            param1.applyBufferedEventsAndCatchUp(0, GetThrusterSmallForce.field_o, var11.state.carouselInfo);
           }
-          var11.state.field_j = param1.a(true, -13027);
-          if (!param1.b((byte) 85)) {
+          var11.state.disconnectedPlayerMask = param1.startGame(true, -13027);
+          if (!param1.pollStoppedWhileReceivingGameState((byte) 85)) {
             return var11;
           }
           return null;

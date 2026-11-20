@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class li extends OpenGlTexture {
+final class OpenGlTexture1D extends OpenGlTexture {
     static boolean field_i;
-    private int field_h;
+    private int width;
 
-    final void a(boolean param0, boolean param1) {
+    final void setWrap(boolean param0, boolean param1) {
         if (param1) {
           this.toolkit.bindTexture(86, (OpenGlTexture) (this));
           jaggl.OpenGL.glTexParameteri(this.target, 10242, param0 ? 10497 : 33071);
           return;
         }
-        this.a(false, true);
+        this.setWrap(false, true);
         this.toolkit.bindTexture(86, (OpenGlTexture) (this));
         jaggl.OpenGL.glTexParameteri(this.target, 10242, param0 ? 10497 : 33071);
     }
@@ -22,13 +22,13 @@ final class li extends OpenGlTexture {
         }
     }
 
-    li(OpenGlToolkit param0, int param1, int param2, byte[] param3, int param4) {
+    OpenGlTexture1D(OpenGlToolkit param0, int param1, int param2, byte[] param3, int param4) {
         super(param0, 3552, param1, param2, false);
         try {
-          this.field_h = param2;
+          this.width = param2;
           this.toolkit.bindTexture(104, (OpenGlTexture) (this));
           jaggl.OpenGL.glPixelStorei(3317, 1);
-          jaggl.OpenGL.glTexImage1Dub(this.target, 0, this.internalFormat, this.field_h, 0, param4, 5121, param3, 0);
+          jaggl.OpenGL.glTexImage1Dub(this.target, 0, this.internalFormat, this.width, 0, param4, 5121, param3, 0);
           jaggl.OpenGL.glPixelStorei(3317, 4);
           this.setLinearFiltering(-125, true);
         } catch (RuntimeException runtimeException) {

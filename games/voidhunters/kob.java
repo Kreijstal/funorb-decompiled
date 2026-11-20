@@ -13,7 +13,7 @@ final class kob extends IntrusiveNode {
         if (param0 != 17) {
           return;
         }
-        if (li.field_i) {
+        if (OpenGlTexture1D.field_i) {
           wk.a(4.0f, (float)param3, var6, 255, (float)GetBombletSprayEnergyUsed.field_p.width, -1520350600, (float)param3, 0.0f);
           wk.a(4.0f, (float)param2, var6, 255, (float)GetBombletSprayEnergyUsed.field_p.width, -1520350600, (float)param2, 0.0f);
           wk.a(4.0f, 0.0f, var6, 255, (float)param4, -1520350600, (float)GetBombletSprayEnergyUsed.field_p.height, (float)param4);

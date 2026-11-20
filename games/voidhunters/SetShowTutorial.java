@@ -51,14 +51,14 @@ final class SetShowTutorial extends ConsoleCommand {
         }
         if (param1 != 66) {
           SetShowTutorial.a(38, (byte) -85, -31, 24, 124, 91, -113);
-          if (li.field_i) {
+          if (OpenGlTexture1D.field_i) {
             SetMassDriverProjectileLife.a(param6 << 24 | param4, (byte) 73, param3, param0, param5, param2);
             return;
           }
           SoftwareRasterizer2D.drawLineAlpha(param0, param3, param2, param5, param4, param6);
           return;
         }
-        if (li.field_i) {
+        if (OpenGlTexture1D.field_i) {
           SetMassDriverProjectileLife.a(param6 << 24 | param4, (byte) 73, param3, param0, param5, param2);
           return;
         }

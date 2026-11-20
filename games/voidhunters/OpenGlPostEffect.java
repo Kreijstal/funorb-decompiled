@@ -155,7 +155,7 @@ abstract class OpenGlPostEffect extends IntrusiveNode {
         }
     }
 
-    abstract void setupPass(aia param0, int param1, aia param2, int param3);
+    abstract void setupPass(OpenGlTexture2D param0, int param1, OpenGlTexture2D param2, int param3);
 
     abstract boolean isInitialized(int param0);
 

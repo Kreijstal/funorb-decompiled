@@ -8,7 +8,7 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
     final static int a(boolean param0, int param1) {
         if (param0) {
           field_o = (mob) null;
-          if (!li.field_i) {
+          if (!OpenGlTexture1D.field_i) {
             return ita.a(param1, 7988).ascent;
           }
           if (param1 == 3) {
@@ -16,7 +16,7 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
           }
           return SetTorpedoEnergyUsed.a(param1, 300).field_a;
         }
-        if (!li.field_i) {
+        if (!OpenGlTexture1D.field_i) {
           return ita.a(param1, 7988).ascent;
         }
         if (param1 == 3) {
@@ -39,25 +39,25 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         if (param7 >= 59) {
-          if (param2 < ob.field_j) {
+          if (param2 < OpenGlTexture3D.field_j) {
             ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
           } else {
             if (GetCountermeasureLauncherProjectiles.field_o < param2) {
               ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
             } else {
-              if (param4 < ob.field_j) {
+              if (param4 < OpenGlTexture3D.field_j) {
                 ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
               } else {
                 if (param4 > GetCountermeasureLauncherProjectiles.field_o) {
                   ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                 } else {
-                  if (param6 < ob.field_j) {
+                  if (param6 < OpenGlTexture3D.field_j) {
                     ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                   } else {
                     if (param6 > GetCountermeasureLauncherProjectiles.field_o) {
                       ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                     } else {
-                      if (param9 < ob.field_j) {
+                      if (param9 < OpenGlTexture3D.field_j) {
                         ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                       } else {
                         if (GetCountermeasureLauncherProjectiles.field_o < param9) {
@@ -106,25 +106,25 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
           }
         } else {
           field_p = (String) null;
-          if (param2 < ob.field_j) {
+          if (param2 < OpenGlTexture3D.field_j) {
             ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
           } else {
             if (GetCountermeasureLauncherProjectiles.field_o < param2) {
               ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
             } else {
-              if (param4 < ob.field_j) {
+              if (param4 < OpenGlTexture3D.field_j) {
                 ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
               } else {
                 if (param4 > GetCountermeasureLauncherProjectiles.field_o) {
                   ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                 } else {
-                  if (param6 < ob.field_j) {
+                  if (param6 < OpenGlTexture3D.field_j) {
                     ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                   } else {
                     if (param6 > GetCountermeasureLauncherProjectiles.field_o) {
                       ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                     } else {
-                      if (param9 < ob.field_j) {
+                      if (param9 < OpenGlTexture3D.field_j) {
                         ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                       } else {
                         if (GetCountermeasureLauncherProjectiles.field_o < param9) {

@@ -67,7 +67,7 @@ final class AsteroidFactory implements GameStateFactory {
           GetMassDriverAimspeed.field_o = param2;
           SetAngularForceDownshift.field_o = true;
           if (GetMassDriverAimspeed.field_o == 0) {
-            var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, ob.field_l, 0, dib.field_j, ShipBlueprint.field_a);
+            var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, dib.field_j, ShipBlueprint.field_a);
             var4 = var3_int + 3;
             bra.field_f = new String[var4];
             GetMessageMax.field_o = new int[var4];
@@ -76,7 +76,7 @@ final class AsteroidFactory implements GameStateFactory {
             }
             jeb.field_c = new int[2];
             for (var5 = 0; var5 < var3_int; var5++) {
-              bra.field_f[var5] = ob.field_l[var5];
+              bra.field_f[var5] = OpenGlTexture3D.field_l[var5];
             }
             bra.field_f[var4 - 3] = "";
             bra.field_f[var4 - 2] = GetLaserBeamProjectileDamage.field_s;
@@ -86,7 +86,7 @@ final class AsteroidFactory implements GameStateFactory {
             GetMessageMax.field_o[-1 + var4] = 1;
             jeb.field_c[1] = 5;
           } else if (1 == GetMassDriverAimspeed.field_o) {
-            var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, ob.field_l, 0, dib.field_j, ShipBlueprint.field_a);
+            var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, dib.field_j, ShipBlueprint.field_a);
             var4 = 2 + var3_int;
             bra.field_f = new String[var4];
             GetMessageMax.field_o = new int[var4];
@@ -95,7 +95,7 @@ final class AsteroidFactory implements GameStateFactory {
             }
             jeb.field_c = new int[1];
             for (var5 = 0; var3_int > var5; var5++) {
-              bra.field_f[var5] = ob.field_l[var5];
+              bra.field_f[var5] = OpenGlTexture3D.field_l[var5];
             }
             bra.field_f[-2 + var4] = "";
             bra.field_f[-1 + var4] = MissionCondition.field_b;
@@ -104,9 +104,9 @@ final class AsteroidFactory implements GameStateFactory {
           } else if (GetMassDriverAimspeed.field_o != 2) {
             if (GetMassDriverAimspeed.field_o == 3) {
               if (!SetTorpedoProjectiles.field_o.field_k) {
-                var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, ob.field_l, 0, oda.field_t, ShipBlueprint.field_a);
+                var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, oda.field_t, ShipBlueprint.field_a);
               } else {
-                var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, ob.field_l, param0 ^ 2, moa.field_n, ShipBlueprint.field_a);
+                var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, param0 ^ 2, moa.field_n, ShipBlueprint.field_a);
               }
               var4 = 2 + var3_int;
               GetMessageMax.field_o = new int[var4];
@@ -116,14 +116,14 @@ final class AsteroidFactory implements GameStateFactory {
               }
               jeb.field_c = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                bra.field_f[var5] = ob.field_l[var5];
+                bra.field_f[var5] = OpenGlTexture3D.field_l[var5];
               }
               bra.field_f[var4 - 2] = "";
               bra.field_f[var4 - 1] = MissionCondition.field_b;
               GetMessageMax.field_o[var4 - 1] = 0;
               jeb.field_c[0] = 5;
             } else if (GetMassDriverAimspeed.field_o == 4) {
-              var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, ob.field_l, 0, RenderResourceNode.field_m, ShipBlueprint.field_a);
+              var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, RenderResourceNode.field_m, ShipBlueprint.field_a);
               var4 = var3_int + 2;
               bra.field_f = new String[var4];
               GetMessageMax.field_o = new int[var4];
@@ -132,7 +132,7 @@ final class AsteroidFactory implements GameStateFactory {
               }
               jeb.field_c = new int[1];
               for (var5 = 0; var3_int > var5; var5++) {
-                bra.field_f[var5] = ob.field_l[var5];
+                bra.field_f[var5] = OpenGlTexture3D.field_l[var5];
               }
               bra.field_f[var4 - 2] = "";
               bra.field_f[var4 - 1] = MissionCondition.field_b;
@@ -142,7 +142,7 @@ final class AsteroidFactory implements GameStateFactory {
               if (5 != GetMassDriverAimspeed.field_o) {
                 throw new IllegalArgumentException();
               }
-              var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, ob.field_l, param0 - 2, SetFighterRepairAmount.field_o, ShipBlueprint.field_a);
+              var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, param0 - 2, SetFighterRepairAmount.field_o, ShipBlueprint.field_a);
               var4 = 3 + var3_int;
               bra.field_f = new String[var4];
               GetMessageMax.field_o = new int[var4];
@@ -151,7 +151,7 @@ final class AsteroidFactory implements GameStateFactory {
               }
               jeb.field_c = new int[2];
               for (var5 = 0; var3_int > var5; var5++) {
-                bra.field_f[var5] = ob.field_l[var5];
+                bra.field_f[var5] = OpenGlTexture3D.field_l[var5];
               }
               bra.field_f[-3 + var4] = "";
               bra.field_f[-2 + var4] = GetShipToShipRamDamage.field_p;
@@ -162,10 +162,10 @@ final class AsteroidFactory implements GameStateFactory {
               jeb.field_c[1] = 5;
             }
           } else {
-            var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, ob.field_l, 0, SetReverbGain.a(wma.field_M, new String[]{"<br><%0><br>"}, param0 + 93), ShipBlueprint.field_a);
+            var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, SetReverbGain.a(wma.field_M, new String[]{"<br><%0><br>"}, param0 + 93), ShipBlueprint.field_a);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
-              if (!"<%0>".equals(ob.field_l[var5])) {
+              if (!"<%0>".equals(OpenGlTexture3D.field_l[var5])) {
                 continue;
               }
               var4 = var5;
@@ -175,13 +175,13 @@ final class AsteroidFactory implements GameStateFactory {
               throw new IllegalStateException();
             }
             Projectile.field_k = new String[var4];
-            cua.a(ob.field_l, 0, Projectile.field_k, 0, var4);
+            cua.a(OpenGlTexture3D.field_l, 0, Projectile.field_k, 0, var4);
             GetFogOfWarSensorRange.field_p = new String[-var4 + (var3_int - 1)];
-            cua.a(ob.field_l, var4 + 1, GetFogOfWarSensorRange.field_p, 0, -1 - var4 + var3_int);
-            var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, ob.field_l, 0, SetReverbGain.a(SetPhasedEnergyBeamAimspeed.field_o, new String[]{"<br><%0><br>"}, 88), ShipBlueprint.field_a);
+            cua.a(OpenGlTexture3D.field_l, var4 + 1, GetFogOfWarSensorRange.field_p, 0, -1 - var4 + var3_int);
+            var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, SetReverbGain.a(SetPhasedEnergyBeamAimspeed.field_o, new String[]{"<br><%0><br>"}, 88), ShipBlueprint.field_a);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
-              if (!"<%0>".equals(ob.field_l[var5])) {
+              if (!"<%0>".equals(OpenGlTexture3D.field_l[var5])) {
                 continue;
               }
               var4 = var5;
@@ -191,9 +191,9 @@ final class AsteroidFactory implements GameStateFactory {
               throw new IllegalStateException();
             }
             dha.field_q = new String[var4];
-            cua.a(ob.field_l, 0, dha.field_q, 0, var4);
+            cua.a(OpenGlTexture3D.field_l, 0, dha.field_q, 0, var4);
             GetMissileLauncherProjectileLife.field_o = new String[-var4 + (var3_int - 1)];
-            cua.a(ob.field_l, var4 + 1, GetMissileLauncherProjectileLife.field_o, 0, -1 - var4 + var3_int);
+            cua.a(OpenGlTexture3D.field_l, var4 + 1, GetMissileLauncherProjectileLife.field_o, 0, -1 - var4 + var3_int);
             if (Projectile.field_k.length >= dha.field_q.length) {
               stackIn_49_0 = Projectile.field_k.length;
             } else {
@@ -214,7 +214,7 @@ final class AsteroidFactory implements GameStateFactory {
             }
             bra.field_f[1] = ServerInfoFactory.field_b;
             jeb.field_c = new int[2];
-            bra.field_f[0] = kda.field_g;
+            bra.field_f[0] = CarouselGameClient.field_g;
             GetMessageMax.field_o[1] = 0;
             bra.field_f[4] = SetReloadBarHeight.field_p;
             GetMessageMax.field_o[3] = 1;

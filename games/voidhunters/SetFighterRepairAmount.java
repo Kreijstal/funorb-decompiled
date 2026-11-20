@@ -177,7 +177,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
           if (SetSpinningBladeSpindamageMultiplier.field_o == null) {
             if (!VariableCondition.field_e) {
               if (SetSpinningBladeSpindamageMultiplier.field_o != null) {
-                if (!nv.field_n) {
+                if (!OpenGlRenderbuffer.field_n) {
                   var38 = "[" + SetReverbGain.a(wt.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
                   var39 = var38 + var19 + ": ";
                   var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var39);
@@ -208,7 +208,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
             var7 = "[" + UnsupportedGpuMaterialEffect.field_e + "] ";
           }
           if (SetSpinningBladeSpindamageMultiplier.field_o != null) {
-            if (!nv.field_n) {
+            if (!OpenGlRenderbuffer.field_n) {
               var43 = "[" + SetReverbGain.a(wt.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
               var44 = var43 + var19 + ": ";
               var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.getStringWidth(var44);

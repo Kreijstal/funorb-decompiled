@@ -37,7 +37,7 @@ final class Message implements DiffableState {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        if (ob.field_j <= param1) {
+        if (OpenGlTexture3D.field_j <= param1) {
           if (param1 > GetCountermeasureLauncherProjectiles.field_o) {
             if (param0 > -18) {
               Message.a(72, 80, 26, 93, -92);

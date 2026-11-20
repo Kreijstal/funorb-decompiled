@@ -126,7 +126,7 @@ abstract class OpenGlGpuBuffer implements GpuBuffer {
           if (null != ArchiveIndexLoader.field_g) {
             var3_int = 0;
             for (var4 = param1; var4 < 56; var4++) {
-              if (ArchiveIndexLoader.field_g.c(var4, (byte) 34)) {
+              if (ArchiveIndexLoader.field_g.isComponentOptionVisible(var4, (byte) 34)) {
                 if (param2 <= var3_int) {
                   stackIn_11_0 = var4;
                   return stackIn_11_0;

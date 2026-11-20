@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1099/1572 classes and 5352/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 473 opaque classes and 2863 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1106/1572 classes and 5415/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 466 opaque classes and 2800 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -18,6 +18,8 @@ Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionCo
 `QuickChatPhraseLoader` caches `QuickChatPhraseDefinition` records from primary and alternate archives. Definitions expose text previews, placeholder segments, linked phrases and `QuickChatDynamicCommand` configuration. `QuickChatMenuWidget` separates layout, shortcut handling, submenu activation and click updates. The standalone `OpenGlToolkit` vertex path uses `OpenGlVertexBufferBinding` with buffer-object and client-memory implementations.
 
 `ScrollBarWidget` names thumb geometry, position conversion, dragging and repeated arrow/page input. `ScrollPaneWidget` coordinates content layout, clipping and scrolling; `SelectableIconLabelWidget` and `ScrollableActionPanel` expose their child layout. `OpenGlFramebufferBinding` separates combined/read/draw targets, while `OpenGlFramebufferAttachment` names image detachment. `OpenGlTexture` exposes filtering, mipmap generation and allocation accounting; `OpenGlToolkit` names native state application, framebuffer stacks and deferred disposal queues.
+
+`CarouselGameClient` names readiness, incoming/outgoing event buffering, server ticks/checksums and black-box replay requests. `ChunkedDataReceiver` and `ChunkedDataSender` expose transfer progress and throttled packet chunks. `ServerInfo` separates option visibility, availability, membership and new/coming-soon/limited-time badges. The legacy OpenGL texture classes distinguish one-, two- and three-dimensional storage from `OpenGlRenderbuffer`, with explicit upload, wrapping, attachment and disposal operations.
 
 `ShipBody` names force accumulation, motion integration, mass properties, bounds and controls. `ShipComponent` exposes its tree, transforms, aiming, health, attachment and collision operations. `ComponentAttachmentPlan` records the chosen `HardpointMatch` and obstructions; `ComponentCollision` and `ComponentContact` separate polygon overlaps from contact points. `ProjectileHit` resolves impact effects and damage, while `ProjectileTraceResult` retains the nearest intersection.
 

@@ -22,7 +22,7 @@ final class kmb {
           if (di.field_l == null) {
             return;
           }
-          di.field_l.a(RequestNewestBlackboxRecording.field_p, param1 ^ -17690, param0);
+          di.field_l.sendCarouselConstant(RequestNewestBlackboxRecording.field_p, param1 ^ -17690, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

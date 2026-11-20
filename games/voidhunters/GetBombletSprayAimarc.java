@@ -53,7 +53,7 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
           if (param0 > -107) {
             field_q = -69;
           }
-          if (!li.field_i) {
+          if (!OpenGlTexture1D.field_i) {
             sa.a(param4, param1, param2, param3 & 16777215, param3 >>> 24);
           } else {
             if (ne.field_v) {

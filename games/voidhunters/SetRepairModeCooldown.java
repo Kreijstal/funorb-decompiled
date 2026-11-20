@@ -58,8 +58,8 @@ final class SetRepairModeCooldown extends ConsoleCommand {
           var1_intLifetime1 = 0;
           for (var2 = 3; 12 > var2; var2++) {
             var3 = ArchiveIndexLoader.field_g.componentoptionStates[var2];
-            if (ArchiveIndexLoader.field_g.a(var3, true, false) ||
-              ArchiveIndexLoader.field_g.c(var3, 78)) {
+            if (ArchiveIndexLoader.field_g.isOptionStateAvailable(var3, true, false) ||
+              ArchiveIndexLoader.field_g.isComingSoonOptionState(var3, 78)) {
               var1_intLifetime1++;
             }
           }

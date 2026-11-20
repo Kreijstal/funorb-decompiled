@@ -10,7 +10,7 @@ final class la extends qg {
     static int field_k;
     private boolean field_f;
     private boolean field_e;
-    private aia field_h;
+    private OpenGlTexture2D field_h;
     static int field_m;
     private boolean field_j;
 
@@ -125,8 +125,8 @@ final class la extends qg {
             this.field_j = false;
             return;
           }
-          this.field_h = new aia(param0, 3553, 6406, 2, 1, false, new byte[]{(byte) 0, (byte)-1}, 6406, false);
-          this.field_h.a(false, false, 10497);
+          this.field_h = new OpenGlTexture2D(param0, 3553, 6406, 2, 1, false, new byte[]{(byte) 0, (byte)-1}, 6406, false);
+          this.field_h.setWrap(false, false, 10497);
           this.field_j = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

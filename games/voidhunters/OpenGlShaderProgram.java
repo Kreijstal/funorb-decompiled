@@ -14,7 +14,7 @@ final class OpenGlShaderProgram {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (li.field_i) {
+          if (OpenGlTexture1D.field_i) {
             PlayerReadyFactory.field_b[param5].a(true, param0 | param1 << 24, param2 | param1 << 24, param3, param6, param7);
           } else {
             ita.a(param5, 7988).draw(param3, param7, param6, param0, param2, param1);

@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jjb {
-    ob field_a;
-    ob field_g;
+    OpenGlTexture3D field_a;
+    OpenGlTexture3D field_g;
     boolean field_d;
     static String field_f;
-    aia[] field_e;
-    aia[] field_c;
-    ob field_b;
+    OpenGlTexture2D[] field_e;
+    OpenGlTexture2D[] field_c;
+    OpenGlTexture3D field_b;
 
     public static void clearSharedReferences(boolean param0) {
         field_f = null;
@@ -18,7 +18,7 @@ final class jjb {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        if (!li.field_i) {
+        if (!OpenGlTexture1D.field_i) {
           SoftwareRasterizer2D.fillRectangle(param4, param3, param5, param1, param0);
         } else {
           if (ne.field_v) {
@@ -38,7 +38,7 @@ final class jjb {
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
         RuntimeException var2 = null;
-        ob var4 = null;
+        OpenGlTexture3D var4 = null;
         nk var10 = null;
         byte[] var20 = null;
         byte[] var21 = null;
@@ -55,27 +55,27 @@ final class jjb {
           this.field_d = param0.field_tc;
           SetBombletSprayProjectileLife.a(param0, 16);
           if (!this.field_d) {
-            this.field_e = new aia[16];
+            this.field_e = new OpenGlTexture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
               var23 = ppb.a(GetMissionTimeLimit.field_p, 32768 * var2_int, true, 32768);
-              this.field_e[var2_int] = new aia(param0, 3553, 6410, 128, 128, true, var23, 6410, false);
+              this.field_e[var2_int] = new OpenGlTexture2D(param0, 3553, 6410, 128, 128, true, var23, 6410, false);
             }
-            this.field_c = new aia[16];
+            this.field_c = new OpenGlTexture2D[16];
             for (var2_intLifetime1 = 0; 16 > var2_intLifetime1; var2_intLifetime1++) {
               var24 = ppb.a(ScrollBarWidget.field_vb, var2_intLifetime1 * 32768, true, 32768);
-              this.field_c[var2_intLifetime1] = new aia(param0, 3553, 6410, 128, 128, true, var24, 6410, false);
+              this.field_c[var2_intLifetime1] = new OpenGlTexture2D(param0, 3553, 6410, 128, 128, true, var24, 6410, false);
             }
             return;
           }
           var20 = ffb.extractBytes(false, GetMissionTimeLimit.field_p, true);
-          this.field_b = new ob(param0, 6410, 128, 128, 16, var20, 6410);
+          this.field_b = new OpenGlTexture3D(param0, 6410, 128, 128, 16, var20, 6410);
           var21 = ffb.extractBytes(false, ScrollBarWidget.field_vb, true);
-          this.field_g = new ob(param0, 6410, 128, 128, 16, var21, 6410);
+          this.field_g = new OpenGlTexture3D(param0, 6410, 128, 128, 16, var21, 6410);
           var10 = param0.field_yb;
           if (var10.a(92)) {
             var22 = ffb.extractBytes(false, SetPhasedEnergyBeamProjectileOndamageParticles.field_o, true);
-            this.field_a = new ob(param0, 6408, 128, 128, 16);
-            var4 = new ob(param0, 6409, 128, 128, 16, var22, 6409);
+            this.field_a = new OpenGlTexture3D(param0, 6408, 128, 128, 16);
+            var4 = new OpenGlTexture3D(param0, 6409, 128, 128, 16, var22, 6409);
             if (var10.a(2.0f, -28279, var4, this.field_a)) {
               this.field_a.generateMipmaps(9729);
               var4.dispose(0);

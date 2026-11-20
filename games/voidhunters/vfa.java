@@ -136,7 +136,7 @@ final class vfa {
           vfa.a(false, -4);
           this.field_a.a(65, this.field_q, this.field_e);
           GetDebrisSurvives.field_q = false;
-          var2 = ob.a(0, SetTorpedoProjectiles.field_o, this.field_q, this.field_e, 0, 0);
+          var2 = OpenGlTexture3D.a(0, SetTorpedoProjectiles.field_o, this.field_q, this.field_e, 0, 0);
           if (var2 == null) {
             this.c(-29674);
             return var2;
@@ -145,7 +145,7 @@ final class vfa {
         }
         this.field_a.a(65, this.field_q, this.field_e);
         GetDebrisSurvives.field_q = false;
-        var2Lifetime1 = ob.a(0, SetTorpedoProjectiles.field_o, this.field_q, this.field_e, 0, 0);
+        var2Lifetime1 = OpenGlTexture3D.a(0, SetTorpedoProjectiles.field_o, this.field_q, this.field_e, 0, 0);
         if (var2Lifetime1 != null) {
           return var2Lifetime1;
         }

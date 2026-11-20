@@ -36,8 +36,8 @@ final class SetMinimapWidth extends ConsoleCommand {
     final static void a(int param0, int param1, byte param2, int param3, int param4) {
         if (NebulaField.field_c <= param0 &&
           param0 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
-          param4 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4);
-          param1 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param1);
+          param4 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param4);
+          param1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param1);
           bpa.a(param3, param0, (byte) -25, param4, param1);
         }
         int var5 = 54 % ((param2 - 59) / 49);

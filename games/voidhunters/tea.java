@@ -32,7 +32,7 @@ final class tea {
           if (param2 != 13879) {
             field_a = (String) null;
           }
-          if (li.field_i) {
+          if (OpenGlTexture1D.field_i) {
             stackIn_6_0 = SetTorpedoEnergyUsed.a(param0, param2 ^ 14107).a(param1, param2 - 13878);
             return stackIn_6_0;
           }

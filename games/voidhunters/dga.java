@@ -1448,7 +1448,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_select_alternative", 23100);
                 if (var2 != null) {
-                  nv.field_p = Cp1252Strings.decode((byte) -125, var2);
+                  OpenGlRenderbuffer.field_p = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_optin_news", 23100);
                 if (null != var2) {
@@ -2641,7 +2641,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("fs_accept_beforeaccept", 23100);
                 if (var2 != null) {
-                  kda.field_g = Cp1252Strings.decode((byte) -125, var2);
+                  CarouselGameClient.field_g = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("fs_button_accept", 23100);
                 if (var2 != null) {

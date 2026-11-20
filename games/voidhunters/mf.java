@@ -11,7 +11,7 @@ final class mf {
         }
         if (param2 != 17000) {
           mf.a(-92, -40, -47, 44, 16, -23);
-          if (ob.field_j > -param3 + param0) {
+          if (OpenGlTexture3D.field_j > -param3 + param0) {
             SetGrapplingHookFireForce.a((byte) -126, param5, param4, param3, param1, param0);
             return;
           }
@@ -30,7 +30,7 @@ final class mf {
           SetGrapplingHookFireForce.a((byte) -126, param5, param4, param3, param1, param0);
           return;
         }
-        if (ob.field_j > -param3 + param0) {
+        if (OpenGlTexture3D.field_j > -param3 + param0) {
           SetGrapplingHookFireForce.a((byte) -126, param5, param4, param3, param1, param0);
           return;
         }

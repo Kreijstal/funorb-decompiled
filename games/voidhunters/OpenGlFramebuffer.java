@@ -212,7 +212,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
         }
     }
 
-    private final void attachTexture(aia param0, int param1, int param2, int param3) {
+    private final void attachTexture(OpenGlTexture2D param0, int param1, int param2, int param3) {
         int var5_int = 0;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
@@ -228,15 +228,15 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
           }
           var5_int = 1 << param2;
           if ((~var5_int & this.attachmentMask) != 0) {
-            if (param0.field_h != this.field_j ||
-              param0.field_j != this.field_i) {
+            if (param0.width != this.field_j ||
+              param0.height != this.field_i) {
               throw new RuntimeException();
             }
           } else {
-            this.field_i = param0.field_j;
-            this.field_j = param0.field_h;
+            this.field_i = param0.height;
+            this.field_j = param0.width;
           }
-          param0.a(this.boundTarget, SetOndamageParticleSpeed.field_o[param2], param1, false);
+          param0.attachToFramebuffer(this.boundTarget, SetOndamageParticleSpeed.field_o[param2], param1, false);
           this.attachments[param2] = (OpenGlFramebufferAttachment) ((Object) param0);
           this.attachmentMask = this.attachmentMask | var5_int;
           return;
@@ -263,7 +263,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
         }
     }
 
-    final void attachRenderbuffer(int param0, nv param1, byte param2) {
+    final void attachRenderbuffer(int param0, OpenGlRenderbuffer param1, byte param2) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -279,15 +279,15 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
           }
           var4_int = 1 << param0;
           if ((~var4_int & this.attachmentMask) != 0) {
-            if (param1.field_w != this.field_j ||
-              this.field_i != param1.field_u) {
+            if (param1.width != this.field_j ||
+              this.field_i != param1.height) {
               throw new RuntimeException();
             }
           } else {
-            this.field_i = param1.field_u;
-            this.field_j = param1.field_w;
+            this.field_i = param1.height;
+            this.field_j = param1.width;
           }
-          param1.a(1, SetOndamageParticleSpeed.field_o[param0], this.boundTarget);
+          param1.attachToFramebuffer(1, SetOndamageParticleSpeed.field_o[param0], this.boundTarget);
           this.attachments[param0] = (OpenGlFramebufferAttachment) ((Object) param1);
           this.attachmentMask = this.attachmentMask | var4_int;
           return;
@@ -382,7 +382,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
         }
     }
 
-    final void attachTexture(int param0, byte param1, aia param2) {
+    final void attachTexture(int param0, byte param1, OpenGlTexture2D param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

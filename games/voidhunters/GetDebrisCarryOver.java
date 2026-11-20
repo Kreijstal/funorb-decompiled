@@ -173,7 +173,7 @@ final class GetDebrisCarryOver extends ConsoleCommand {
         int var11Lifetime1;
         if (param0 != 8) {
           field_p = 5;
-          if (li.field_i) {
+          if (OpenGlTexture1D.field_i) {
             if (GetBurstFireMaxEnergy.field_o) {
               GetDebrisGroupColour.field_r.fillGradientTriangle(param4, param7, param9, param6, param5, param1, param8, param3, param10, param2);
               return;
@@ -188,7 +188,7 @@ final class GetDebrisCarryOver extends ConsoleCommand {
           }
           return;
         }
-        if (li.field_i) {
+        if (OpenGlTexture1D.field_i) {
           if (GetBurstFireMaxEnergy.field_o) {
             GetDebrisGroupColour.field_r.fillGradientTriangle(param4, param7, param9, param6, param5, param1, param8, param3, param10, param2);
             return;

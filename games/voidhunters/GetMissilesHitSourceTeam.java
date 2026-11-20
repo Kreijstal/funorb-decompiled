@@ -35,7 +35,7 @@ final class GetMissilesHitSourceTeam extends ConsoleCommand {
     final static void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
         if (param2 != -128) {
           field_o = -36;
-          if (!li.field_i) {
+          if (!OpenGlTexture1D.field_i) {
             SoftwareRasterizer2D.drawRectangleAlpha(param0, param1, param6, param3, param5, param4);
             return;
           }
@@ -45,7 +45,7 @@ final class GetMissilesHitSourceTeam extends ConsoleCommand {
           }
           return;
         }
-        if (!li.field_i) {
+        if (!OpenGlTexture1D.field_i) {
           SoftwareRasterizer2D.drawRectangleAlpha(param0, param1, param6, param3, param5, param4);
           return;
         }

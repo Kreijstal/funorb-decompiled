@@ -228,7 +228,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ThrusterBehaviour.field_a = new String[31];
           ShipTeamCondition.field_f[24] = GetComponentBreakingExplosionForceMultiplier.field_o;
           ShipTeamCondition.field_f[30] = GetMachineGunPulsetime.field_o;
-          ShipTeamCondition.field_f[29] = ob.field_m;
+          ShipTeamCondition.field_f[29] = OpenGlTexture3D.field_m;
           ShipTeamCondition.field_f[20] = ThrusterBehaviourFactory.field_a;
           ShipTeamCondition.field_f[26] = tob.field_l;
           ShipTeamCondition.field_f[8] = GetFightersPerPlayerMaximum.field_s;

@@ -9,7 +9,7 @@ final class GetCountermeasuresPulsetime extends ConsoleCommand {
         if (param2 != 1) {
           return tia.field_J[param2];
         }
-        if (ServerInfo.b((byte) -117, param0)) {
+        if (ServerInfo.isLeapYear((byte) -117, param0)) {
           return 29;
         }
         return tia.field_J[param2];

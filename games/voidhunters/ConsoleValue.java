@@ -97,7 +97,7 @@ final class ConsoleValue {
         if (param0 > -79) {
           ConsoleValue.b(-58);
         }
-        if (ob.field_j > param3 - param4) {
+        if (OpenGlTexture3D.field_j > param3 - param4) {
           ffb.a(param4, (byte) -89, param1, param2, param3);
         } else {
           if (param3 + param4 > GetCountermeasureLauncherProjectiles.field_o) {

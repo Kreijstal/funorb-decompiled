@@ -146,7 +146,7 @@ final class ServerInfoFactory implements GameStateFactory {
             stackIn_25_0 = (param1) && (SetSalvoDamageMultiplier.e(51)) && (var2 == 0);
             SpawnPointFactory.a(stackIn_25_0, true);
             var14 = feb.a(GetDebrisGroupColour.field_r, true);
-            if (li.field_i) {
+            if (OpenGlTexture1D.field_i) {
               var4_int = SetToggledScoreboard.field_o.screenY;
               if (!uga.field_d) {
                 if (GetReverbDry.e((byte) 105)) {
@@ -173,7 +173,7 @@ final class ServerInfoFactory implements GameStateFactory {
               var4 = var13;
               stackIn_42_0 = (param1) && (SetSalvoDamageMultiplier.e(param0 + 30499));
               ida.a(stackIn_42_0, var13, -73);
-              if (li.field_i) {
+              if (OpenGlTexture1D.field_i) {
                 var5Lifetime2 = SetLaserEnergyUsed.e((byte) -47);
                 var6Lifetime2 = fra.a((byte) 120);
                 var7 = DirectByteStorage.a(false);
@@ -217,7 +217,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 stackIn_79_0 = (param1) && (SetSalvoDamageMultiplier.e(51)) && (var2Lifetime1 == 0);
                 SpawnPointFactory.a(stackIn_79_0, true);
                 var16 = feb.a(GetDebrisGroupColour.field_r, true);
-                if (li.field_i) {
+                if (OpenGlTexture1D.field_i) {
                   var4_intLifetime1 = SetToggledScoreboard.field_o.screenY;
                   if (!uga.field_d) {
                     if (GetReverbDry.e((byte) 105)) {
@@ -244,7 +244,7 @@ final class ServerInfoFactory implements GameStateFactory {
                   var4Lifetime1 = var15;
                   stackIn_96_0 = (param1) && (SetSalvoDamageMultiplier.e(param0 + 30499));
                   ida.a(stackIn_96_0, var15, -73);
-                  if (li.field_i) {
+                  if (OpenGlTexture1D.field_i) {
                     var5Lifetime1Lifetime3 = SetLaserEnergyUsed.e((byte) -47);
                     var6Lifetime1Lifetime3 = fra.a((byte) 120);
                     var7Lifetime1 = DirectByteStorage.a(false);
@@ -273,7 +273,7 @@ final class ServerInfoFactory implements GameStateFactory {
           SpawnPointFactory.a(stackIn_113_0, true);
           var18 = feb.a(GetDebrisGroupColour.field_r, true);
           var3 = var18;
-          if (li.field_i) {
+          if (OpenGlTexture1D.field_i) {
             var4_intLifetime1Lifetime1 = SetToggledScoreboard.field_o.screenY;
             if (uga.field_d) {
               var4_intLifetime1Lifetime1 = SoftwareRasterizer2D.height;
@@ -301,7 +301,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 var4Lifetime1Lifetime1 = var19Lifetime4;
                 stackIn_126_0 = (param1) && (SetSalvoDamageMultiplier.e(param0 + 30499));
                 ida.a(stackIn_126_0, var17, -73);
-                if (li.field_i) {
+                if (OpenGlTexture1D.field_i) {
                   var5Lifetime1Lifetime1Lifetime4 = SetLaserEnergyUsed.e((byte) -47);
                   var6Lifetime1Lifetime1Lifetime4 = fra.a((byte) 120);
                   var7Lifetime1Lifetime1 = DirectByteStorage.a(false);
@@ -336,7 +336,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 var4Lifetime1Lifetime1 = var19Lifetime1;
                 stackIn_144_0 = (param1) && (SetSalvoDamageMultiplier.e(param0 + 30499));
                 ida.a(stackIn_144_0, var19Lifetime1, -73);
-                if (!li.field_i) {
+                if (!OpenGlTexture1D.field_i) {
                   if (param0 != -30428) {
                     field_b = (String) null;
                   }
@@ -373,7 +373,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 var4Lifetime1Lifetime1 = var20;
                 stackIn_162_0 = (param1) && (SetSalvoDamageMultiplier.e(param0 + 30499));
                 ida.a(stackIn_162_0, var20, -73);
-                if (li.field_i) {
+                if (OpenGlTexture1D.field_i) {
                   var5Lifetime1Lifetime1Lifetime2 = SetLaserEnergyUsed.e((byte) -47);
                   var6Lifetime1Lifetime1Lifetime2 = fra.a((byte) 120);
                   var7Lifetime1Lifetime1Lifetime2 = DirectByteStorage.a(false);
@@ -407,7 +407,7 @@ final class ServerInfoFactory implements GameStateFactory {
             var4Lifetime1Lifetime2 = var21;
             stackIn_181_0 = (param1) && (SetSalvoDamageMultiplier.e(param0 + 30499));
             ida.a(stackIn_181_0, var21, -73);
-            if (!li.field_i) {
+            if (!OpenGlTexture1D.field_i) {
               if (param0 == -30428) {
                 return;
               }

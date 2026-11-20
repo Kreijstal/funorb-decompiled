@@ -53,7 +53,7 @@ final class SetNumStars extends ConsoleCommand {
     }
 
     final static void a(float param0, byte param1, int param2, int param3, int param4) {
-        if (!li.field_i) {
+        if (!OpenGlTexture1D.field_i) {
           SoftwareRasterizer2D.drawCircle(param4, param2, (int)param0, param3);
           if (param1 < 52) {
             field_o = (int[]) null;

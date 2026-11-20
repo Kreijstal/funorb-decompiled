@@ -32,7 +32,7 @@ final class OpenGlSprite extends ToolkitSprite {
         if (param0 < 92) {
           return false;
         }
-        return ArchiveIndexLoader.field_g.a(param1, 11, true);
+        return ArchiveIndexLoader.field_g.isVoteOptionAvailable(param1, 11, true);
     }
 
     final void draw(int param0, int param1, int param2, int param3, int param4) {
@@ -126,7 +126,7 @@ final class OpenGlSprite extends ToolkitSprite {
 
     final void writePixels(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6) {
         try {
-          this.texture.a((byte) 32, param6, param2, param1, param3, param0, param5, true, param4);
+          this.texture.updatePixels((byte) 32, param6, param2, param1, param3, param0, param5, true, param4);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tla.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
@@ -364,7 +364,7 @@ final class OpenGlSprite extends ToolkitSprite {
           field_h = (String) null;
         }
         if (!this.toolkit.field_eb) {
-          this.texture.a(112, param2, param0, param6, param1, param3, param5);
+          this.texture.copyFromFramebuffer(112, param2, param0, param6, param1, param3, param5);
         } else {
           var14 = this.toolkit.readPixels(param3, param5, param1, param6);
           var12 = var14;

@@ -354,7 +354,7 @@ final class fcb implements oob {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, byte param5) {
-        if (param3 >= ob.field_j &&
+        if (param3 >= OpenGlTexture3D.field_j &&
           GetCountermeasureLauncherProjectiles.field_o >= param4 &&
           NebulaField.field_c <= param2 &&
           param1 <= EnvironmentReflectionGpuMaterialEffect.field_i) {

@@ -204,7 +204,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
                   var24Lifetime1 = param0.field_t[var23Lifetime2];
                   var25Lifetime1 = param0.field_C[var23Lifetime2];
                   var26Lifetime1 = param0.field_H[var23Lifetime2];
-                  um.field_c[var23Lifetime2] = (var25Lifetime1 * var15 + (var24Lifetime1 * var12 + var18 * var26Lifetime1) >> 16) + var9;
+                  ChunkedDataReceiver.field_c[var23Lifetime2] = (var25Lifetime1 * var15 + (var24Lifetime1 * var12 + var18 * var26Lifetime1) >> 16) + var9;
                   SetReverbFeedback.field_o[var23Lifetime2] = (var19 * var26Lifetime1 + (var24Lifetime1 * var13 + var25Lifetime1 * var16) >> 16) + var10;
                   GpuVertexDeclaration.field_a[var23Lifetime2] = (var20 * var26Lifetime1 + (var14 * var24Lifetime1 + var25Lifetime1 * var17) >> 16) + var11;
                   var24Lifetime1 = param0.field_e[var23Lifetime2];

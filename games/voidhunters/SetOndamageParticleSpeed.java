@@ -133,10 +133,10 @@ final class SetOndamageParticleSpeed extends ConsoleCommand {
           if (param2 >= NebulaField.field_c &&
             param2 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
             var57 = ResourceNode.field_b[param2];
-            var40 = IntrusiveNode.clamp(param0 ^ 2051537426, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, -param5 + param6);
-            var41 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param5 + param6);
-            var42 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param6 - var11);
-            var43 = IntrusiveNode.clamp(param0 ^ 2051537426, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param6 + var11);
+            var40 = IntrusiveNode.clamp(param0 ^ 2051537426, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, -param5 + param6);
+            var41 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param5 + param6);
+            var42 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param6 - var11);
+            var43 = IntrusiveNode.clamp(param0 ^ 2051537426, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param6 + var11);
             GetSalvoRepairTimeMultiplier.a(param1, var42, var57, (byte) 75, var40);
             GetSalvoRepairTimeMultiplier.a(param4, var43, var57, (byte) 75, var42);
             GetSalvoRepairTimeMultiplier.a(param1, var41, var57, (byte) 75, var43);
@@ -198,8 +198,8 @@ final class SetOndamageParticleSpeed extends ConsoleCommand {
             if (var40Lifetime1 > EnvironmentReflectionGpuMaterialEffect.field_i) {
               continue;
             }
-            var42Lifetime1 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, var8_int + param6);
-            var43Lifetime1 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param6 - var8_int);
+            var42Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, var8_int + param6);
+            var43Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param6 - var8_int);
             if (var39 == 0) {
               if (var40Lifetime1 >= NebulaField.field_c) {
                 GetSalvoRepairTimeMultiplier.a(param1, var42Lifetime1, ResourceNode.field_b[var40Lifetime1], (byte) 75, var43Lifetime1);
@@ -210,8 +210,8 @@ final class SetOndamageParticleSpeed extends ConsoleCommand {
               GetSalvoRepairTimeMultiplier.a(param1, var42Lifetime1, ResourceNode.field_b[var41Lifetime1], (byte) 75, var43Lifetime1);
               continue;
             }
-            var44 = IntrusiveNode.clamp(param0 - 2051475950, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, var10 + param6);
-            var45 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param6 - var10);
+            var44 = IntrusiveNode.clamp(param0 - 2051475950, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, var10 + param6);
+            var45 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param6 - var10);
             if (var40Lifetime1 >= NebulaField.field_c) {
               var58 = ResourceNode.field_b[var40Lifetime1];
               GetSalvoRepairTimeMultiplier.a(param1, var45, var58, (byte) 75, var43Lifetime1);

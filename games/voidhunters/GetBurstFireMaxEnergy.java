@@ -92,12 +92,12 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
         }
         var12 = (var7 << 12) / var6;
         var13 = param0 - (var12 * param3 >> 12);
-        if (param3 < ob.field_j) {
-          var8 = ob.field_j;
-          var10 = var13 + (ob.field_j * var12 >> 12);
-          if (ob.field_j > param1) {
-            var11 = (ob.field_j * var12 >> 12) + var13;
-            var9 = ob.field_j;
+        if (param3 < OpenGlTexture3D.field_j) {
+          var8 = OpenGlTexture3D.field_j;
+          var10 = var13 + (OpenGlTexture3D.field_j * var12 >> 12);
+          if (OpenGlTexture3D.field_j > param1) {
+            var11 = (OpenGlTexture3D.field_j * var12 >> 12) + var13;
+            var9 = OpenGlTexture3D.field_j;
           } else {
             if (GetCountermeasureLauncherProjectiles.field_o < param1) {
               var11 = var13 + (GetCountermeasureLauncherProjectiles.field_o * var12 >> 12);
@@ -131,9 +131,9 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
         if (GetCountermeasureLauncherProjectiles.field_o < param3) {
           var10Lifetime1 = var13 + (var12 * GetCountermeasureLauncherProjectiles.field_o >> 12);
           var8Lifetime1 = GetCountermeasureLauncherProjectiles.field_o;
-          if (ob.field_j > param1) {
-            var11Lifetime1 = (ob.field_j * var12 >> 12) + var13;
-            var9Lifetime1 = ob.field_j;
+          if (OpenGlTexture3D.field_j > param1) {
+            var11Lifetime1 = (OpenGlTexture3D.field_j * var12 >> 12) + var13;
+            var9Lifetime1 = OpenGlTexture3D.field_j;
           } else {
             if (GetCountermeasureLauncherProjectiles.field_o < param1) {
               var11Lifetime1 = var13 + (GetCountermeasureLauncherProjectiles.field_o * var12 >> 12);
@@ -166,9 +166,9 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
         }
         var8Lifetime2 = param3;
         var10Lifetime2 = param0;
-        if (ob.field_j > param1) {
-          var11Lifetime2 = (ob.field_j * var12 >> 12) + var13;
-          var9Lifetime2 = ob.field_j;
+        if (OpenGlTexture3D.field_j > param1) {
+          var11Lifetime2 = (OpenGlTexture3D.field_j * var12 >> 12) + var13;
+          var9Lifetime2 = OpenGlTexture3D.field_j;
           if (NebulaField.field_c > var11Lifetime2) {
             var11Lifetime2 = NebulaField.field_c;
             var9Lifetime2 = (NebulaField.field_c - var13 << 12) / var12;

@@ -18,7 +18,7 @@ final class GetCountermeasureLauncherAimspeed extends ConsoleCommand {
             SoftwareDepthBuffer.a(param4, param1, param0, (byte) 74, param5, param7, param6);
             return;
           }
-          if (li.field_i) {
+          if (OpenGlTexture1D.field_i) {
             stackIn_8_0 = PlayerReadyFactory.field_b[param7];
             stackIn_8_1 = param5;
             stackIn_8_2 = param1;

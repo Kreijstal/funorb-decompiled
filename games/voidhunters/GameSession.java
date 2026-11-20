@@ -160,7 +160,7 @@ final class GameSession {
         if (param2 > 20000) {
           return false;
         }
-        if (!li.field_i) {
+        if (!OpenGlTexture1D.field_i) {
           SoftwareRasterizer2D.fillCircle(param1, param4, param2, 0);
         } else {
           GetDebrisGroupColour.field_r.fillCircle(param1, param4, param2, 0, 0);
@@ -257,7 +257,7 @@ final class GameSession {
         var3 = 15;
         var4 = this.state.carouselInfo.tick;
         var5 = this.state.carouselInfo.ticksBehind;
-        var6 = di.field_l.c(0);
+        var6 = di.field_l.getPingMillis(0);
         SetSelfDestructPrepareToggleCooldown.a(var2, -1, var3, "Tick=" + var4 + ", ticksbehind=" + var5 + ", lag=" + var6, 3, 16711935, (byte) -121);
         var7 = this.state.carouselInfo.getHistoryLength((byte) 110);
         var8 = -var7 + var4;
@@ -609,17 +609,17 @@ final class GameSession {
         int var17Lifetime2Lifetime1;
         var19 = VoidHunters.field_G;
         try {
-          var5_int = li.field_i ? 1 : 0;
+          var5_int = OpenGlTexture1D.field_i ? 1 : 0;
           stackIn_4_0 = (!jw.field_c) ? 0 : 1;
           var6 = stackIn_4_0;
-          if (li.field_i &&
+          if (OpenGlTexture1D.field_i &&
             !GetWorldWidthUpshift.a(param1 + 15684)) {
             var6 = 1;
           }
           if (var6 == 0) {
-            li.field_i = false;
+            OpenGlTexture1D.field_i = false;
           }
-          if (!li.field_i && (null == OpenGlTransform3D.field_m ||
+          if (!OpenGlTexture1D.field_i && (null == OpenGlTransform3D.field_m ||
             OpenGlTransform3D.field_m.width != PartitionZoneFactory.field_a ||
             OpenGlTransform3D.field_m.height != MissionVariableFactory.field_a)) {
             GetDebrisThrowable.a(false, "Creating a new g1 fog of war sprite");
@@ -628,7 +628,7 @@ final class GameSession {
               GetGrapplingHooksDamageableBySourcePlayer.field_p = null;
             }
           }
-          if ((li.field_i ||
+          if ((OpenGlTexture1D.field_i ||
             var6 == 0) &&
             (GetGrapplingHooksDamageableBySourcePlayer.field_p == null ||
             GetGrapplingHooksDamageableBySourcePlayer.field_p.getPaddedWidth() != PartitionZoneFactory.field_a ||
@@ -648,7 +648,7 @@ final class GameSession {
           regionExit1: {
             if (param3) {
               var7 = 0;
-              if (!li.field_i) {
+              if (!OpenGlTexture1D.field_i) {
                 SetTorpedoEnergyUsed.a(107, OpenGlTransform3D.field_m);
                 SoftwareRasterizer2D.fillRectangle(0, 0, PartitionZoneFactory.field_a, MissionVariableFactory.field_a, -1442840576);
               } else {
@@ -733,7 +733,7 @@ final class GameSession {
                           if (var10_ref_it__ == null) {
                             break;
                           }
-                          if (li.field_i) {
+                          if (OpenGlTexture1D.field_i) {
                             break regionExit5;
                           }
                           bia.a((byte) 124);
@@ -786,7 +786,7 @@ final class GameSession {
                         }
                         break;
                       }
-                      if (!li.field_i) {
+                      if (!OpenGlTexture1D.field_i) {
                         bia.a((byte) 124);
                         if ((var7 == 0)) {
                           if (var6 != 0) {
@@ -804,7 +804,7 @@ final class GameSession {
                       GetGrapplingHooksDamageableBySourcePlayer.field_p.draw(0, 0);
                     }
                   }
-                  li.field_i = var5_int != 0;
+                  OpenGlTexture1D.field_i = var5_int != 0;
                   if (((null != this.field_v)) &&
                     ((param0 != null)) &&
                     (!(!this.field_v.b(4, -53)))) {
@@ -822,7 +822,7 @@ final class GameSession {
                   break regionExit1;
                 }
               }
-              if (li.field_i) {
+              if (OpenGlTexture1D.field_i) {
                 SetUseBackground.field_o.a(true);
                 if (var7 == 0) {
                   GetGrapplingHooksDamageableBySourcePlayer.field_p.draw(0, 0);
@@ -838,7 +838,7 @@ final class GameSession {
                   }
                 }
               }
-              li.field_i = var5_int != 0;
+              OpenGlTexture1D.field_i = var5_int != 0;
               if (null != this.field_v) {
                 stackIn_144_0 = (Ship) (param0);
                 if (stackIn_144_0 != null &&
@@ -860,7 +860,7 @@ final class GameSession {
           if (param1 != -15614) {
             this.networked = false;
           }
-          li.field_i = var5_int != 0;
+          OpenGlTexture1D.field_i = var5_int != 0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -961,7 +961,7 @@ final class GameSession {
           }
         }
         if (1 == ul.field_a &&
-          li.field_i &&
+          OpenGlTexture1D.field_i &&
           GetDebrisGroupColour.field_r.isBloomEnabled()) {
           GetDebrisGroupColour.field_r.beginPostProcessing(0, 0, PartitionZoneFactory.field_a, MissionVariableFactory.field_a);
           GetDebrisGroupColour.field_r.clearColor(0);
@@ -1053,7 +1053,7 @@ final class GameSession {
         }
         var14Lifetime1 = 0;
         if (ul.field_a == 1 &&
-          li.field_i) {
+          OpenGlTexture1D.field_i) {
           GetDebrisGroupColour.field_r.applyPostProcessing();
         }
         this.drawShipHealthBars(var6, true);
@@ -1090,7 +1090,7 @@ final class GameSession {
         }
         var16Lifetime1 = 2 * Particle.field_l;
         var17Lifetime1 = Particle.field_l * 5;
-        if (li.field_i &&
+        if (OpenGlTexture1D.field_i &&
           this.field_x &&
           var13Lifetime1 < var17Lifetime1) {
           var18 = 255;
@@ -1667,7 +1667,7 @@ final class GameSession {
           var48[var17] = 1;
         }
         for (var17Lifetime1 = 0; var3 > var17Lifetime1; var17Lifetime1++) {
-          if ((1 << var17Lifetime1 & this.state.field_j) != 0 &&
+          if ((1 << var17Lifetime1 & this.state.disconnectedPlayerMask) != 0 &&
             SetMissionResnetResourceTickTime.field_p == 0) {
             var11[1 + var17Lifetime1] = SetAngularForceDownshift.a(var11[1 + var17Lifetime1], OpenGlGpuToolkit.field_Oc);
           } else {
@@ -1712,9 +1712,9 @@ final class GameSession {
                           var23_ref_String = Integer.toString(var35.deaths);
                         } else {
                           if (var26 == 5) {
-                            var25 = di.field_l.b(true, var17Lifetime1);
+                            var25 = di.field_l.getPlayerPingMillis(true, var17Lifetime1);
                             if (var17Lifetime1 == this.localPlayerIndex) {
-                              var25 = di.field_l.c(0);
+                              var25 = di.field_l.getPingMillis(0);
                             }
                             if (var25 < 0) {
                               var23_ref_String = "-";
@@ -2422,7 +2422,7 @@ final class GameSession {
             if (param2 &&
               this.field_y != -1 &&
               this.field_U > 0 &&
-              li.field_i) {
+              OpenGlTexture1D.field_i) {
               var26 = SetMassDriverReload.field_p - var12 / 2;
               var27 = var8 + var14 + 8;
               var28_int = var11;
@@ -2440,9 +2440,9 @@ final class GameSession {
                 IntIndexTable.a(var31, var28_int, var30_int, GetPointDefenceLaserProjectiles.a(false, 4), this.field_U, 0, var32, 4, 56035, -var15 - var30_int + var12 + var26, 0, (byte) -74, -1);
               }
               var33 = null;
-              if (!ArchiveIndexLoader.field_g.a(this.field_y, (byte) -118)) {
-                if (!ArchiveIndexLoader.field_g.b(this.field_y, 4)) {
-                  if (ArchiveIndexLoader.field_g.d(this.field_y, (byte) -43)) {
+              if (!ArchiveIndexLoader.field_g.isVoteOptionNew(this.field_y, (byte) -118)) {
+                if (!ArchiveIndexLoader.field_g.isVoteOptionComingSoon(this.field_y, 4)) {
+                  if (ArchiveIndexLoader.field_g.isVoteOptionLimitedTime(this.field_y, (byte) -43)) {
                     var33 = igb.field_b;
                   }
                 } else {
@@ -2451,7 +2451,7 @@ final class GameSession {
               } else {
                 var33 = MapClearanceRectangle.field_f;
               }
-              if (ArchiveIndexLoader.field_g.a((byte) -126, this.field_y)) {
+              if (ArchiveIndexLoader.field_g.isVoteOptionMembersOnly((byte) -126, this.field_y)) {
                 if (var33 != null) {
                   var33 = (String) (var33) + " " + ti.field_i;
                 } else {
@@ -2779,7 +2779,7 @@ final class GameSession {
                 var22 = 0;
                 var23 = new Ship[var18];
                 for (var24_int = 0; SetWaitForPlayers.a(9) > var24_int; var24_int++) {
-                  stackIn_47_0 = (!ArchiveIndexLoader.field_g.c(var24_int + 3, (byte) 34)) ? 0 : 1;
+                  stackIn_47_0 = (!ArchiveIndexLoader.field_g.isComponentOptionVisible(var24_int + 3, (byte) 34)) ? 0 : 1;
                   var25_int = stackIn_47_0;
                   if (var25_int != 0) {
                     var23[var24_int] = t.a(var24_int + 3, (byte) 72);
@@ -2819,7 +2819,7 @@ final class GameSession {
                 }
                 if (var26Lifetime1 >= 0 &&
                   ShipTeamCondition.field_f.length > var26Lifetime1) {
-                  var48 = nv.a(var26Lifetime1, var27Lifetime1, true);
+                  var48 = OpenGlRenderbuffer.a(var26Lifetime1, var27Lifetime1, true);
                   SetSelfDestructPrepareToggleCooldown.a(var13 - (tea.a(3, var48, 13879) >> 1), -1, var15 + (var11Lifetime1 + GetPointDefenceLaserProjectiles.a(false, 2) + 2), var48, 4, 56035, (byte) -103);
                   var29_ref_String = ShipTeamCondition.field_f[var26Lifetime1].toUpperCase();
                   var30 = -(tea.a(1, var29_ref_String, 13879) >> 1) + var13;
@@ -2842,7 +2842,7 @@ final class GameSession {
                 for (var34_int = 0; var34_int < var18; var34_int++) {
                   var35 = 1;
                   if (var20 > var34_int) {
-                    stackIn_82_0 = (!ArchiveIndexLoader.field_g.c(3 + var34_int, (byte) 34)) ? 0 : 1;
+                    stackIn_82_0 = (!ArchiveIndexLoader.field_g.isComponentOptionVisible(3 + var34_int, (byte) 34)) ? 0 : 1;
                     var35 = stackIn_82_0;
                   } else {
                     var33 = var33 - (var30Lifetime1 + var11Lifetime1);
@@ -2851,9 +2851,9 @@ final class GameSession {
                   if (var35 != 0) {
                     var36 = var32 - (var30Lifetime1 >> 1);
                     var37 = var33;
-                    var38 = ArchiveIndexLoader.field_g.a(ujb.a(-116), 3 + var34_int, (byte) -84) ? 1 : 0;
-                    var39 = ArchiveIndexLoader.field_g.d(-22549, 3 + var34_int) ? 1 : 0;
-                    var40 = ArchiveIndexLoader.field_g.b(3 + var34_int, (byte) 24) ? 1 : 0;
+                    var38 = ArchiveIndexLoader.field_g.isComponentOptionAvailable(ujb.a(-116), 3 + var34_int, (byte) -84) ? 1 : 0;
+                    var39 = ArchiveIndexLoader.field_g.isComponentOptionComingSoon(-22549, 3 + var34_int) ? 1 : 0;
+                    var40 = ArchiveIndexLoader.field_g.isComponentOptionMembersOnly(3 + var34_int, (byte) 24) ? 1 : 0;
                     BlackBoxRecording.a((byte) -115, 200, var30Lifetime1, var36, var37, var30Lifetime1);
                     if (param2) {
                       if (GetUseDetailLines.field_o >= var36) {
@@ -3399,7 +3399,7 @@ final class GameSession {
                   }
                   var11Lifetime1 = 17;
                   var12Lifetime1 = 2;
-                  if (li.field_i) {
+                  if (OpenGlTexture1D.field_i) {
                     var13 = -1;
                     if (var22.isReloading((byte) -90)) {
                       var13 = -65536;
@@ -3622,7 +3622,7 @@ final class GameSession {
         if (this.state.carouselInfo.isReplay(1) &&
           SetMachineGunEnergyUsed.field_o[35] &&
           !this.previousKeyStates[35]) {
-          di.field_l.b(this.state.carouselInfo, -128);
+          di.field_l.startBlackBoxReplay(this.state.carouselInfo, -128);
         }
         if (param0 < 61) {
           return;
@@ -3630,7 +3630,7 @@ final class GameSession {
         this.c((byte) 110);
         GetReverbWidth.a(ShipTeamConditionFactory.field_a, -8077);
         if (this.networked) {
-          stackIn_70_0 = (di.field_l.a((byte) 110, this.state.carouselInfo, this.localPlayerIndex, RequestNewestBlackboxRecording.field_p)) ? 1 : 0;
+          stackIn_70_0 = (di.field_l.sendReadyIfNeeded((byte) 110, this.state.carouselInfo, this.localPlayerIndex, RequestNewestBlackboxRecording.field_p)) ? 1 : 0;
         } else {
           stackIn_70_0 = 0;
         }
@@ -4126,7 +4126,7 @@ final class GameSession {
           var3Lifetime1 = var20;
           var3Lifetime1Lifetime1 = var20;
           SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - tea.a(2, var20, 13879) / 2, 1, 180, var20, 2, 16711935, (byte) -126);
-          if (null == di.field_l.field_j) {
+          if (null == di.field_l.dataSender) {
             var3Lifetime1Lifetime2 = GetPhasedEnergyBeamPulseFadetime.field_o.toUpperCase();
           } else {
             var3Lifetime1Lifetime2 = SetWeaponParticleSpeedDownshift.field_o.toUpperCase();
@@ -4520,7 +4520,7 @@ final class GameSession {
         }
         try {
           param2.field_k = this.localPlayerIndex;
-          di.field_l.a(true, param2, this.state.carouselInfo, false, this.networked, nsb.field_a, RequestNewestBlackboxRecording.field_p);
+          di.field_l.submitLocalEvent(true, param2, this.state.carouselInfo, false, this.networked, nsb.field_a, RequestNewestBlackboxRecording.field_p);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uca.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -5137,7 +5137,7 @@ final class GameSession {
         ToolkitSprite var7 = null;
         String var8 = null;
         if (this.isChatAvailable((byte) 126) &&
-          li.field_i) {
+          OpenGlTexture1D.field_i) {
           var2 = -(AdjustVariableActionFactory.field_a.width / 2) + SetMassDriverReload.field_p;
           var3 = MissionVariableFactory.field_a + (SetToggledScoreboard.field_o.screenY - SoftwareRasterizer2D.height) - AdjustVariableActionFactory.field_a.height;
           AdjustVariableActionFactory.field_a.x = var2;
@@ -5429,7 +5429,7 @@ final class GameSession {
 
     private final void a(int param0, int param1, int param2) {
         ToolkitSprite var4 = null;
-        if (li.field_i) {
+        if (OpenGlTexture1D.field_i) {
           var4 = mmb.field_d[5];
           var4.draw(param0 - (var4.getWidth() >> 1), -(var4.getHeight() >> 1) + param2);
         }
@@ -5553,7 +5553,7 @@ final class GameSession {
                 if (0 <= var9 &&
                   SetWaitForPlayers.a(9) > var9 &&
                   var8 != var9 &&
-                  ArchiveIndexLoader.field_g.a(ujb.a(-114), 3 + var9, (byte) -84)) {
+                  ArchiveIndexLoader.field_g.isComponentOptionAvailable(ujb.a(-114), 3 + var9, (byte) -84)) {
                   var10 = new PlayerAction();
                   var10.mousey = param1;
                   var10.mousex = param0;
@@ -5811,7 +5811,7 @@ final class GameSession {
             GetTorpedoReload.field_q < var23 &&
             !param12) {
             this.field_y = param0;
-            if (!ArchiveIndexLoader.field_g.b(param0, 4)) {
+            if (!ArchiveIndexLoader.field_g.isVoteOptionComingSoon(param0, 4)) {
               if (var15 == 0) {
                 GetMassDriverReload.a(PartitioningManager.field_c, -46);
               } else {
@@ -5820,7 +5820,7 @@ final class GameSession {
             } else {
               GetMassDriverReload.a(GetDebrisCollisionDamage.field_o, -64);
             }
-            if (ArchiveIndexLoader.field_g.a(param0, 11, ujb.a(-113))) {
+            if (ArchiveIndexLoader.field_g.isVoteOptionAvailable(param0, 11, ujb.a(-113))) {
               this.field_a[param0] = Math.min(255, 64 + this.field_a[param0]);
               if (SetDebrisPartitioned.field_o != 1) {
                 if (SetDebrisPartitioned.field_o == 2) {
@@ -5842,11 +5842,11 @@ final class GameSession {
               var25 = 16763938;
             }
             var26 = -1;
-            if (ArchiveIndexLoader.field_g.a(param0, (byte) 41)) {
+            if (ArchiveIndexLoader.field_g.isVoteOptionNew(param0, (byte) 41)) {
               var26 = 16755200;
             } else {
-              if (!ArchiveIndexLoader.field_g.b(param0, 4)) {
-                if (ArchiveIndexLoader.field_g.d(param0, (byte) -43)) {
+              if (!ArchiveIndexLoader.field_g.isVoteOptionComingSoon(param0, 4)) {
+                if (ArchiveIndexLoader.field_g.isVoteOptionLimitedTime(param0, (byte) -43)) {
                   var26 = 16776960;
                 }
               } else {
@@ -5864,7 +5864,7 @@ final class GameSession {
                 GetPhasedEnergyBeamReload.a(var28 + (-var21Lifetime1 + var23), (float)var27, -102, -var28 + var20Lifetime1 + var22 - var29_int * (var28 + var27), var24);
               }
             }
-            if (li.field_i) {
+            if (OpenGlTexture1D.field_i) {
               var27Lifetime1 = 3 + var22;
               var28Lifetime1 = -(var21Lifetime1 / 2) + (var23 - var33.getHeight() / 2);
               var29Lifetime2 = this.a(param0, false, 1);
@@ -6686,7 +6686,7 @@ final class GameSession {
                   if (var26 == 0) {
                     GetMachineGunPulsetime.a(1907488, -55, var16 + 3, -2 + var19, 4 + var17, -2 + var18);
                   }
-                  if (li.field_i) {
+                  if (OpenGlTexture1D.field_i) {
                     var33Lifetime1 = -65536;
                     if (var31Lifetime1 == 0 &&
                       var15.field_l != this.field_p) {
@@ -7855,7 +7855,7 @@ final class GameSession {
               var15 = (int)(ShipTeamConditionFactory.field_a.field_b + (float)var13 * ((float)var12 * 1.0f) / 65536.0f);
               var16 = ShipTeamConditionFactory.field_a.a(var14, (byte) 114);
               var17 = ShipTeamConditionFactory.field_a.b(true, var15);
-              if (li.field_i) {
+              if (OpenGlTexture1D.field_i) {
                 var18 = GameSnapshotFactory.a(var12, (byte) -77, var11);
                 var16 = var16 - (GetNumStars.a(var18, (byte) -122) * 28 >> 16);
                 var17 = var17 - (28 * eu.a(var18, 97) >> 16);
@@ -7871,7 +7871,7 @@ final class GameSession {
             if (255 < var14) {
               var14 = 255;
             }
-            if (li.field_i) {
+            if (OpenGlTexture1D.field_i) {
               var10.drawRotatedScaled((float)var12, (float)var13, 20.0f, 23.0f, 4096, -16384, 0, var14 << 24 | 16777215, 1);
             }
             SetBuildViewAutozoomTimeout.a(true, var14, -var9 + var12, -var9 + var13, param3);
@@ -8506,7 +8506,7 @@ final class GameSession {
         if (!(param2 < ThrusterBehaviour.field_a.length)) {
           return;
         }
-        String var6 = nv.a(param2, param3, true);
+        String var6 = OpenGlRenderbuffer.a(param2, param3, true);
         if (this.field_x) {
           var6 = SetPointDefenceLaserProjectileInterceptDamage.field_o;
         }

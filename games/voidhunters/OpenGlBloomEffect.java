@@ -11,13 +11,13 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
     static String[] field_l;
     private OpenGlFramebuffer bloomFramebuffer;
     static String field_k;
-    private aia blurTexture;
+    private OpenGlTexture2D blurTexture;
     private of rectangleThresholdProgram;
     private of compositeProgram;
     private of blurProgram;
     private of thresholdProgram;
-    private aia bloomTexture;
-    private aia[] downsampleTextures;
+    private OpenGlTexture2D bloomTexture;
+    private OpenGlTexture2D[] downsampleTextures;
 
     final boolean isSupported(byte param0) {
         boolean stackIn_7_0 = false;
@@ -167,7 +167,7 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
         }
     }
 
-    final void setupPass(aia param0, int param1, aia param2, int param3) {
+    final void setupPass(OpenGlTexture2D param0, int param1, OpenGlTexture2D param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7_int = 0;
@@ -385,7 +385,7 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
               if (var6Lifetime1 <= 256 &&
                 var7 <= 256) {
                 var6Lifetime1 = var4;
-                this.downsampleTextures = new aia[var8];
+                this.downsampleTextures = new OpenGlTexture2D[var8];
                 var7 = var5;
                 var8 = 0;
                 while (true) {
@@ -398,7 +398,7 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
                   }
                   incrementValue$0 = var8;
                   var8++;
-                  this.downsampleTextures[incrementValue$0] = new aia(this.toolkit, 3553, 34842, var6Lifetime1, var7);
+                  this.downsampleTextures[incrementValue$0] = new OpenGlTexture2D(this.toolkit, 3553, 34842, var6Lifetime1, var7);
                   if (var7 > 256) {
                     var7 = var7 >> 1;
                   }
@@ -437,10 +437,10 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
           this.toolkit.field_B &&
           this.toolkit.field_I) {
           this.bloomFramebuffer = new OpenGlFramebuffer(this.toolkit);
-          this.bloomTexture = new aia(this.toolkit, 3553, 34842, 256, 256);
-          this.bloomTexture.a(false, false, 10497);
-          this.blurTexture = new aia(this.toolkit, 3553, 34842, 256, 256);
-          this.blurTexture.a(false, false, 10497);
+          this.bloomTexture = new OpenGlTexture2D(this.toolkit, 3553, 34842, 256, 256);
+          this.bloomTexture.setWrap(false, false, 10497);
+          this.blurTexture = new OpenGlTexture2D(this.toolkit, 3553, 34842, 256, 256);
+          this.blurTexture.setWrap(false, false, 10497);
           this.toolkit.pushFramebuffer((byte) -122, (OpenGlFramebufferBinding) (this.bloomFramebuffer));
           this.bloomFramebuffer.attachTexture(0, (byte) -125, this.bloomTexture);
           this.bloomFramebuffer.attachTexture(1, (byte) -128, this.blurTexture);
@@ -463,7 +463,7 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
 
     final boolean isInitialized(int param0) {
         if (param0 != -257) {
-          this.downsampleTextures = (aia[]) null;
+          this.downsampleTextures = (OpenGlTexture2D[]) null;
         }
         return null != this.bloomFramebuffer ? true : false;
     }

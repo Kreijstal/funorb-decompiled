@@ -9,7 +9,7 @@ final class CommonGameState implements DiffableState, PlayerNameRegistry {
     int field_a;
     static String field_b;
     CarouselCommongameInfo carouselInfo;
-    int field_j;
+    int disconnectedPlayerMask;
     static String field_c;
     int field_f;
     String[] field_h;
@@ -419,7 +419,7 @@ final class CommonGameState implements DiffableState, PlayerNameRegistry {
           }
           for (var7 = 0; var7 < this.field_a; var7++) {
             stackIn_16_0 = var10.players[var7];
-            stackIn_17_1 = (null != this.field_h[var7]) && (0 < this.field_h[var7].length()) && ((1 << var7 & this.field_j) == 0);
+            stackIn_17_1 = (null != this.field_h[var7]) && (0 < this.field_h[var7].length()) && ((1 << var7 & this.disconnectedPlayerMask) == 0);
             stackIn_16_0.connected = stackIn_17_1;
           }
           return;

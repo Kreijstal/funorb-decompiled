@@ -11,7 +11,7 @@ final class AwardVictoryToWinnerActionFactory implements GameStateFactory {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (-param3 + param0 < ob.field_j) {
+        if (-param3 + param0 < OpenGlTexture3D.field_j) {
           SetGrapplingHookMinLength.a(param0, param3, param1, -8, param5, param2, param6);
         } else {
           if (GetCountermeasureLauncherProjectiles.field_o < param0 + param3) {

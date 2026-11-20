@@ -9,25 +9,25 @@ final class ServerInfo implements DiffableState {
     private int[] voteoptionStates;
     static int field_f;
 
-    final void a(byte param0) {
+    final void resetOptionStates(byte param0) {
         int[] discarded$0 = null;
         if (param0 != -65) {
-          discarded$0 = this.b(-107);
+          discarded$0 = this.createDefaultVoteOptionStates(-107);
         }
-        this.voteoptionStates = this.b(param0 ^ -64);
-        this.componentoptionStates = this.c(0);
+        this.voteoptionStates = this.createDefaultVoteOptionStates(param0 ^ -64);
+        this.componentoptionStates = this.createDefaultComponentOptionStates(0);
         this.copyToClipboardHidden = true;
     }
 
-    final boolean d(int param0, byte param1) {
+    final boolean isVoteOptionLimitedTime(int param0, byte param1) {
         int var3 = this.voteoptionStates[param0];
         if (param1 != -43) {
           return true;
         }
-        return this.b(var3, false);
+        return this.isLimitedTimeOptionState(var3, false);
     }
 
-    final boolean c(int param0, int param1) {
+    final boolean isComingSoonOptionState(int param0, int param1) {
         int var3;
         boolean stackIn_5_0 = false;
         var3 = -81 / ((param1 - 16) / 49);
@@ -35,12 +35,12 @@ final class ServerInfo implements DiffableState {
         return stackIn_5_0;
     }
 
-    private final boolean b(int param0, boolean param1) {
+    private final boolean isLimitedTimeOptionState(int param0, boolean param1) {
         PcmSample var4;
         boolean stackIn_7_0 = false;
         if (param1) {
           var4 = (PcmSample) null;
-          ServerInfo.a(-94, -103, 25, (PcmSample) null);
+          ServerInfo.playPannedSample(-94, -103, 25, (PcmSample) null);
         }
         stackIn_7_0 = (param0 == 3) || (param0 == 8);
         return stackIn_7_0;
@@ -59,7 +59,7 @@ final class ServerInfo implements DiffableState {
           var3.componentoptionStates = SetTeamSelectionSpeedup.a(var3.componentoptionStates, (byte) -38, this.componentoptionStates);
           var3.copyToClipboardHidden = this.copyToClipboardHidden;
           if (param0 < 54) {
-            this.d(-67, (byte) -39);
+            this.isVoteOptionLimitedTime(-67, (byte) -39);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -128,7 +128,7 @@ final class ServerInfo implements DiffableState {
         }
     }
 
-    final boolean a(int param0, boolean param1) {
+    final boolean isVoteOptionAllowedInCurrentMode(int param0, boolean param1) {
         int var3;
         if (param1) {
           return false;
@@ -150,41 +150,41 @@ final class ServerInfo implements DiffableState {
         return true;
     }
 
-    private final void a(int param0) {
+    private final void ensureOptionStateArrays(int param0) {
         int[] var3 = null;
         int[] var4 = null;
         int[] var2 = null;
         int[] var2Lifetime1;
         if (null == this.voteoptionStates) {
-          this.voteoptionStates = this.b(119);
+          this.voteoptionStates = this.createDefaultVoteOptionStates(119);
           return;
         }
         if (this.voteoptionStates.length != 31) {
-          var3 = this.b(param0 - 13424);
+          var3 = this.createDefaultVoteOptionStates(param0 - 13424);
           var2 = var3;
-          this.a(this.voteoptionStates, (byte) 117, var3);
+          this.copyOptionStates(this.voteoptionStates, (byte) 117, var3);
           this.voteoptionStates = var3;
         }
         if (this.componentoptionStates == null) {
-          this.componentoptionStates = this.c(param0 - 13546);
+          this.componentoptionStates = this.createDefaultComponentOptionStates(param0 - 13546);
           return;
         }
         if (param0 != 13546) {
-          this.d(-88, (byte) 56);
+          this.isVoteOptionLimitedTime(-88, (byte) 56);
         }
         if (56 != this.componentoptionStates.length) {
-          var4 = this.c(0);
+          var4 = this.createDefaultComponentOptionStates(0);
           var2Lifetime1 = var4;
-          this.a(this.componentoptionStates, (byte) 108, var4);
+          this.copyOptionStates(this.componentoptionStates, (byte) 108, var4);
           this.componentoptionStates = var4;
         }
     }
 
-    final boolean a(int param0, boolean param1, boolean param2) {
+    final boolean isOptionStateAvailable(int param0, boolean param1, boolean param2) {
         int[] discarded$1 = null;
         boolean stackIn_12_0 = false;
         if (param2) {
-          discarded$1 = this.c(66);
+          discarded$1 = this.createDefaultComponentOptionStates(66);
         }
         boolean decompiledFrameRemainder0 = true;
         if (param0 != 0 &&
@@ -206,12 +206,12 @@ final class ServerInfo implements DiffableState {
         return "Voteoption states=" + SetFightersPerPlayerMaximum.a(this.voteoptionStates, false) + "\nComponentoption states=" + SetFightersPerPlayerMaximum.a(this.componentoptionStates, false) + "\ncopy_to_clipboard_hidden=" + this.copyToClipboardHidden + "\nServerside: " + this.field_e;
     }
 
-    final boolean d(int param0, int param1) {
+    final boolean isComponentOptionComingSoon(int param0, int param1) {
         if (param0 != -22549) {
           this.field_e = (lc) null;
         }
         int var3 = this.componentoptionStates[param1];
-        return this.c(var3, param0 + 22645);
+        return this.isComingSoonOptionState(var3, param0 + 22645);
     }
 
     public static void clearSharedReferences(boolean param0) {
@@ -221,7 +221,7 @@ final class ServerInfo implements DiffableState {
         }
     }
 
-    private final void a(int[] param0, byte param1, int[] param2) {
+    private final void copyOptionStates(int[] param0, byte param1, int[] param2) {
         int var5 = 0;
         boolean discarded$1 = false;
         int var4_int = 0;
@@ -240,7 +240,7 @@ final class ServerInfo implements DiffableState {
             param2[var5] = param0[var5];
           }
           if (param1 < 103) {
-            discarded$1 = this.a(36, 79);
+            discarded$1 = this.isMembersOptionState(36, 79);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -263,40 +263,40 @@ final class ServerInfo implements DiffableState {
         }
     }
 
-    final boolean a(int param0, byte param1) {
+    final boolean isVoteOptionNew(int param0, byte param1) {
         int var3 = this.voteoptionStates[param0];
         int var4 = 22 % ((-29 - param1) / 48);
-        return this.a(true, var3);
+        return this.isNewOptionState(true, var3);
     }
 
-    final boolean b(int param0, int param1) {
+    final boolean isVoteOptionComingSoon(int param0, int param1) {
         if (param1 != 4) {
           SerializableGameState var4 = (SerializableGameState) null;
           this.copyTo((byte) 119, (SerializableGameState) null);
         }
         int var3 = this.voteoptionStates[param0];
-        return this.c(var3, -52);
+        return this.isComingSoonOptionState(var3, -52);
     }
 
-    private final boolean a(int param0, int param1) {
+    private final boolean isMembersOptionState(int param0, int param1) {
         int[] discarded$1 = null;
         boolean stackIn_9_0 = false;
         if (param1 != -8) {
-          discarded$1 = this.b(-5);
+          discarded$1 = this.createDefaultVoteOptionStates(-5);
         }
         stackIn_9_0 = (5 == param0) || (6 == param0) || (param0 == 7) || (param0 == 8);
         return stackIn_9_0;
     }
 
-    final boolean a(boolean param0, int param1, byte param2) {
+    final boolean isComponentOptionAvailable(boolean param0, int param1, byte param2) {
         if (param2 != -84) {
           return true;
         }
         int var4 = this.componentoptionStates[param1];
-        return this.a(var4, param0, false);
+        return this.isOptionStateAvailable(var4, param0, false);
     }
 
-    final static ana a(int param0, int param1, int param2, PcmSample param3) {
+    final static ana playPannedSample(int param0, int param1, int param2, PcmSample param3) {
         RuntimeException var4 = null;
         ana stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -323,7 +323,7 @@ final class ServerInfo implements DiffableState {
         }
     }
 
-    private final int[] b(int param0) {
+    private final int[] createDefaultVoteOptionStates(int param0) {
         int var3 = 0;
         int var4 = VoidHunters.field_G;
         int[] var5 = new int[31];
@@ -352,11 +352,11 @@ final class ServerInfo implements DiffableState {
         return var2;
     }
 
-    private final void b(boolean param0) {
+    private final void ensureOptionStateArrays(boolean param0) {
         if (!param0) {
           field_d = (int[]) null;
         }
-        this.a(13546);
+        this.ensureOptionStateArrays(13546);
     }
 
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
@@ -364,29 +364,29 @@ final class ServerInfo implements DiffableState {
           this.voteoptionStates = SetVariableActionFactory.a((byte) 37, this.voteoptionStates, param0, 8);
           this.componentoptionStates = SetVariableActionFactory.a((byte) 37, this.componentoptionStates, param0, 8);
           this.copyToClipboardHidden = kv.readBoolean(param1, param0);
-          this.b(true);
+          this.ensureOptionStateArrays(true);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "coa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final boolean a(byte param0, int param1) {
+    final boolean isVoteOptionMembersOnly(byte param0, int param1) {
         if (param0 > -116) {
-          this.c(-38, (byte) 32);
+          this.isComponentOptionVisible(-38, (byte) 32);
         }
         int var3 = this.voteoptionStates[param1];
-        return this.a(var3, -8);
+        return this.isMembersOptionState(var3, -8);
     }
 
-    final boolean a(int param0, int param1, boolean param2) {
+    final boolean isVoteOptionAvailable(int param0, int param1, boolean param2) {
         int var4 = this.voteoptionStates[param0];
         if (param1 != 11) {
           this.componentoptionStates = (int[]) null;
         }
-        if (!this.a(param0, false)) {
+        if (!this.isVoteOptionAllowedInCurrentMode(param0, false)) {
           return false;
         }
-        return this.a(var4, param2, false);
+        return this.isOptionStateAvailable(var4, param2, false);
     }
 
     public final void writeState(IsaacPacketBuffer param0, int param1) {
@@ -433,15 +433,15 @@ final class ServerInfo implements DiffableState {
         }
     }
 
-    final boolean b(int param0, byte param1) {
+    final boolean isComponentOptionMembersOnly(int param0, byte param1) {
         if (param1 != 24) {
-          this.a((byte) 119);
+          this.resetOptionStates((byte) 119);
         }
         int var3 = this.componentoptionStates[param0];
-        return this.a(var3, param1 ^ -32);
+        return this.isMembersOptionState(var3, param1 ^ -32);
     }
 
-    private final int[] c(int param0) {
+    private final int[] createDefaultComponentOptionStates(int param0) {
         int var3 = 0;
         int var4 = VoidHunters.field_G;
         int[] var5 = new int[56];
@@ -459,7 +459,7 @@ final class ServerInfo implements DiffableState {
         return var2;
     }
 
-    final static boolean b(byte param0, int param1) {
+    final static boolean isLeapYear(byte param0, int param1) {
         if (param0 != -117) {
           return true;
         }
@@ -481,7 +481,7 @@ final class ServerInfo implements DiffableState {
         return false;
     }
 
-    final static SoftwareMonochromeBitmapFont a(byte[] param0, int param1) {
+    final static SoftwareMonochromeBitmapFont createFontFromDecodedSprites(byte[] param0, int param1) {
         SoftwareMonochromeBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
@@ -497,7 +497,7 @@ final class ServerInfo implements DiffableState {
           var2 = new SoftwareMonochromeBitmapFont(param0, iib.field_e, SettingsChange.field_f, SetMissionTerrainDebrisProbability.field_o, hla.field_a, sh.field_a);
           if (param1 != 11) {
             var3 = (byte[]) null;
-            ServerInfo.a((byte[]) null, -100);
+            ServerInfo.createFontFromDecodedSprites((byte[]) null, -100);
           }
           MatchResults.a(69);
           stackIn_6_0 = var2;
@@ -516,7 +516,7 @@ final class ServerInfo implements DiffableState {
         }
     }
 
-    private final boolean a(boolean param0, int param1) {
+    private final boolean isNewOptionState(boolean param0, int param1) {
         boolean stackIn_7_0 = false;
         if (!param0) {
           return true;
@@ -525,7 +525,7 @@ final class ServerInfo implements DiffableState {
         return stackIn_7_0;
     }
 
-    final boolean c(int param0, byte param1) {
+    final boolean isComponentOptionVisible(int param0, byte param1) {
         if (param1 != 34) {
           field_d = (int[]) null;
         }

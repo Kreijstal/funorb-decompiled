@@ -14,16 +14,16 @@ final class OpenGlPostProcessor {
     private OpenGlFramebuffer field_h;
     private int captureX;
     static String field_d;
-    private aia field_w;
+    private OpenGlTexture2D field_w;
     private boolean field_e;
-    private aia[] field_l;
-    private nv field_n;
+    private OpenGlTexture2D[] field_l;
+    private OpenGlRenderbuffer field_n;
     private int passCount;
     private boolean field_f;
     private boolean field_a;
     private int colorFormat;
     private boolean needsDepthTexture;
-    private nv field_u;
+    private OpenGlRenderbuffer field_u;
     private boolean field_j;
 
     private final void removeEffect(OpenGlPostEffect param0, boolean param1) {
@@ -159,9 +159,9 @@ final class OpenGlPostProcessor {
     }
 
     private final boolean ensureAttachments(boolean param0) {
-        aia[] stackIn_33_0 = null;
+        OpenGlTexture2D[] stackIn_33_0 = null;
         int stackIn_33_1 = 0;
-        aia stackIn_34_2 = null;
+        OpenGlTexture2D stackIn_34_2 = null;
         boolean stackIn_55_1 = false;
         boolean stackIn_59_0 = false;
         int var3;
@@ -169,7 +169,7 @@ final class OpenGlPostProcessor {
         var3 = VoidHunters.field_G;
         if (this.field_f) {
           if (null != this.field_u) {
-            this.field_u.e((byte) 119);
+            this.field_u.dispose((byte) 119);
             this.field_u = null;
           }
           if (null != this.field_w) {
@@ -177,14 +177,14 @@ final class OpenGlPostProcessor {
             this.field_w = null;
           }
           if (null != this.field_s) {
-            this.field_u = new nv(this.toolkit, 6402, this.width, this.height, this.toolkit.field_Kc);
+            this.field_u = new OpenGlRenderbuffer(this.toolkit, 6402, this.width, this.height, this.toolkit.field_Kc);
           }
           if (!this.needsDepthTexture) {
             if (this.field_u == null) {
-              this.field_u = new nv(this.toolkit, 6402, this.width, this.height);
+              this.field_u = new OpenGlRenderbuffer(this.toolkit, 6402, this.width, this.height);
             }
           } else {
-            this.field_w = new aia(this.toolkit, 34037, 6402, this.width, this.height);
+            this.field_w = new OpenGlTexture2D(this.toolkit, 34037, 6402, this.width, this.height);
           }
           this.field_j = true;
           this.field_f = false;
@@ -196,7 +196,7 @@ final class OpenGlPostProcessor {
         }
         if (this.field_e) {
           if (this.field_n != null) {
-            this.field_n.e((byte) 110);
+            this.field_n.dispose((byte) 110);
             this.field_n = null;
           }
           if (null != this.field_l[0]) {
@@ -208,15 +208,15 @@ final class OpenGlPostProcessor {
             this.field_l[1] = null;
           }
           if (this.field_s != null) {
-            this.field_n = new nv(this.toolkit, this.colorFormat, this.width, this.height, this.toolkit.field_Kc);
+            this.field_n = new OpenGlRenderbuffer(this.toolkit, this.colorFormat, this.width, this.height, this.toolkit.field_Kc);
           }
-          this.field_l[0] = new aia(this.toolkit, 34037, this.colorFormat, this.width, this.height);
+          this.field_l[0] = new OpenGlTexture2D(this.toolkit, 34037, this.colorFormat, this.width, this.height);
           stackIn_33_0 = this.field_l;
           stackIn_33_1 = 1;
           if (1 >= this.passCount) {
             stackIn_34_2 = null;
           } else {
-            stackIn_34_2 = new aia(this.toolkit, 34037, this.colorFormat, this.width, this.height);
+            stackIn_34_2 = new OpenGlTexture2D(this.toolkit, 34037, this.colorFormat, this.width, this.height);
           }
           stackIn_33_0[stackIn_33_1] = stackIn_34_2;
           this.field_j = true;
@@ -408,7 +408,7 @@ final class OpenGlPostProcessor {
         this.height = 1;
         this.captureX = 0;
         this.effects = new IntrusiveDeque();
-        this.field_l = new aia[2];
+        this.field_l = new OpenGlTexture2D[2];
         this.passCount = 0;
         this.field_a = true;
         this.field_f = true;

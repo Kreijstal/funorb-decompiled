@@ -18,7 +18,7 @@ final class SoftwareDepthBuffer implements DepthBuffer {
           if (param3 != 74) {
             return;
           }
-          if (li.field_i) {
+          if (OpenGlTexture1D.field_i) {
             PlayerReadyFactory.field_b[param5].a(param4, param1, -16777216 | param0, true, param2, param6);
             return;
           }

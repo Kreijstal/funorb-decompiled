@@ -534,7 +534,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
     }
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
-        if (!li.field_i) {
+        if (!OpenGlTexture1D.field_i) {
           SoftwareRasterizer2D.fillRectangleAlpha(param2, param3, param5, param4, param6, param0);
         } else {
           if (ne.field_v) {

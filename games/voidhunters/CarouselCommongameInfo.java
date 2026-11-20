@@ -714,8 +714,8 @@ final class CarouselCommongameInfo implements DiffableState {
           }
           var6_ref_uqb = (CarouselEvent) (this.events.next((byte) 52));
         }
-        if (0 > this.ticksBehind && (nv.field_o == 0 ||
-          (param0 & nv.field_o) != 0)) {
+        if (0 > this.ticksBehind && (OpenGlRenderbuffer.field_o == 0 ||
+          (param0 & OpenGlRenderbuffer.field_o) != 0)) {
           this.ticksBehind = this.ticksBehind + 1;
           return;
         }

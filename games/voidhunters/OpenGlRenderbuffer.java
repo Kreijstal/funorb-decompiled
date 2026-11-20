@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nv extends DualLinkNode implements OpenGlFramebufferAttachment {
-    private OpenGlToolkit field_t;
-    private int field_l;
-    private int field_q;
+final class OpenGlRenderbuffer extends DualLinkNode implements OpenGlFramebufferAttachment {
+    private OpenGlToolkit toolkit;
+    private int renderbufferId;
+    private int framebufferTarget;
     static int field_o;
     static int field_v;
     static boolean field_n;
-    private int field_s;
+    private int framebufferAttachment;
     static String field_r;
-    int field_w;
+    int width;
     static String field_p;
-    int field_m;
-    int field_u;
-    private int field_k;
+    int byteSize;
+    int height;
+    private int internalFormat;
 
     public static void clearSharedReferences(int param0) {
         field_p = null;
         field_r = null;
         if (param0 < 30) {
-          nv.clearSharedReferences(-90);
+          OpenGlRenderbuffer.clearSharedReferences(-90);
         }
     }
 
@@ -82,48 +82,48 @@ final class nv extends DualLinkNode implements OpenGlFramebufferAttachment {
     }
 
     protected final void finalize() throws Throwable {
-        this.e((byte) 116);
+        this.dispose((byte) 116);
         super.finalize();
     }
 
-    final void e(byte param0) {
-        if (this.field_l > 0) {
-          this.field_t.enqueueRenderbufferDisposal(this.field_m, this.field_l, (byte) 77);
-          this.field_l = 0;
+    final void dispose(byte param0) {
+        if (this.renderbufferId > 0) {
+          this.toolkit.enqueueRenderbufferDisposal(this.byteSize, this.renderbufferId, (byte) 77);
+          this.renderbufferId = 0;
           if (param0 >= 106) {
             return;
           }
-          this.field_t = (OpenGlToolkit) null;
+          this.toolkit = (OpenGlToolkit) null;
           return;
         }
         if (param0 < 106) {
-          this.field_t = (OpenGlToolkit) null;
+          this.toolkit = (OpenGlToolkit) null;
           return;
         }
     }
 
     public final void detachFromFramebuffer(int param0) {
         if (param0 != 31294) {
-          this.field_k = -106;
-          jaggl.OpenGL.glFramebufferRenderbufferEXT(this.field_q, this.field_s, 36161, 0);
-          this.field_q = -1;
-          this.field_s = -1;
+          this.internalFormat = -106;
+          jaggl.OpenGL.glFramebufferRenderbufferEXT(this.framebufferTarget, this.framebufferAttachment, 36161, 0);
+          this.framebufferTarget = -1;
+          this.framebufferAttachment = -1;
           return;
         }
-        jaggl.OpenGL.glFramebufferRenderbufferEXT(this.field_q, this.field_s, 36161, 0);
-        this.field_q = -1;
-        this.field_s = -1;
+        jaggl.OpenGL.glFramebufferRenderbufferEXT(this.framebufferTarget, this.framebufferAttachment, 36161, 0);
+        this.framebufferTarget = -1;
+        this.framebufferAttachment = -1;
     }
 
-    final void a(int param0, int param1, int param2) {
-        jaggl.OpenGL.glFramebufferRenderbufferEXT(param2, param1, 36161, this.field_l);
-        this.field_s = param1;
+    final void attachToFramebuffer(int param0, int param1, int param2) {
+        jaggl.OpenGL.glFramebufferRenderbufferEXT(param2, param1, 36161, this.renderbufferId);
+        this.framebufferAttachment = param1;
         if (param0 != 1) {
-          this.field_u = -15;
-          this.field_q = param2;
+          this.height = -15;
+          this.framebufferTarget = param2;
           return;
         }
-        this.field_q = param2;
+        this.framebufferTarget = param2;
     }
 
     final static String a(int param0, int param1, boolean param2) {
@@ -189,37 +189,37 @@ final class nv extends DualLinkNode implements OpenGlFramebufferAttachment {
         return stackIn_34_0;
     }
 
-    nv(OpenGlToolkit param0, int param1, int param2, int param3) {
-        this.field_s = -1;
-        this.field_q = -1;
+    OpenGlRenderbuffer(OpenGlToolkit param0, int param1, int param2, int param3) {
+        this.framebufferAttachment = -1;
+        this.framebufferTarget = -1;
         try {
-          this.field_t = param0;
-          this.field_k = param1;
-          this.field_u = param3;
-          this.field_w = param2;
+          this.toolkit = param0;
+          this.internalFormat = param1;
+          this.height = param3;
+          this.width = param2;
           jaggl.OpenGL.glGenRenderbuffersEXT(1, SetMachineGunReload.field_p, 0);
-          this.field_l = SetMachineGunReload.field_p[0];
-          jaggl.OpenGL.glBindRenderbufferEXT(36161, this.field_l);
-          jaggl.OpenGL.glRenderbufferStorageEXT(36161, this.field_k, this.field_w, this.field_u);
-          this.field_m = this.field_u * this.field_w * this.field_t.getTextureFormatByteSize(this.field_k, 2);
+          this.renderbufferId = SetMachineGunReload.field_p[0];
+          jaggl.OpenGL.glBindRenderbufferEXT(36161, this.renderbufferId);
+          jaggl.OpenGL.glRenderbufferStorageEXT(36161, this.internalFormat, this.width, this.height);
+          this.byteSize = this.height * this.width * this.toolkit.getTextureFormatByteSize(this.internalFormat, 2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    nv(OpenGlToolkit param0, int param1, int param2, int param3, int param4) {
-        this.field_s = -1;
-        this.field_q = -1;
+    OpenGlRenderbuffer(OpenGlToolkit param0, int param1, int param2, int param3, int param4) {
+        this.framebufferAttachment = -1;
+        this.framebufferTarget = -1;
         try {
-          this.field_k = param1;
-          this.field_t = param0;
-          this.field_u = param3;
-          this.field_w = param2;
+          this.internalFormat = param1;
+          this.toolkit = param0;
+          this.height = param3;
+          this.width = param2;
           jaggl.OpenGL.glGenRenderbuffersEXT(1, SetMachineGunReload.field_p, 0);
-          this.field_l = SetMachineGunReload.field_p[0];
-          jaggl.OpenGL.glBindRenderbufferEXT(36161, this.field_l);
-          jaggl.OpenGL.glRenderbufferStorageMultisampleEXT(36161, param4, this.field_k, this.field_w, this.field_u);
-          this.field_m = this.field_w * (this.field_u * this.field_t.getTextureFormatByteSize(this.field_k, 2));
+          this.renderbufferId = SetMachineGunReload.field_p[0];
+          jaggl.OpenGL.glBindRenderbufferEXT(36161, this.renderbufferId);
+          jaggl.OpenGL.glRenderbufferStorageMultisampleEXT(36161, param4, this.internalFormat, this.width, this.height);
+          this.byteSize = this.width * (this.height * this.toolkit.getTextureFormatByteSize(this.internalFormat, 2));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }

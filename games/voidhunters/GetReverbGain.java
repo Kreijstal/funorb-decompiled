@@ -50,7 +50,7 @@ final class GetReverbGain extends ConsoleCommand {
             field_o = (TextureFormat) null;
           }
           while (var4 != null) {
-            nv.a((byte) 88, var4, param0);
+            OpenGlRenderbuffer.a((byte) 88, var4, param0);
             var4 = (dnb) (SetGrapplingHookAimarc.field_o.next((byte) 89));
           }
           var2 = GetBoostersActiveTime.field_q.first(0);

@@ -7,7 +7,7 @@ final class c extends IntrusiveNode {
     int field_d;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        if (li.field_i) {
+        if (OpenGlTexture1D.field_i) {
           SetMassDriverProjectileLife.a(-16777216 | param5, (byte) 103, param3, param2, param0, param1);
           return;
         }

@@ -29,8 +29,8 @@ abstract class CacheReference extends DualLinkNode {
           }
           var11 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param5);
           var12 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param6);
-          var13 = IntrusiveNode.clamp(param4 + 10715, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param2);
-          var14 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param0);
+          var13 = IntrusiveNode.clamp(param4 + 10715, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param2);
+          var14 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0);
           var7_int = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, param5 + param3);
           var8 = IntrusiveNode.clamp(31123, NebulaField.field_c, EnvironmentReflectionGpuMaterialEffect.field_i, -param3 + param6);
           for (var15 = var11; var15 < var7_int; var15++) {
@@ -39,8 +39,8 @@ abstract class CacheReference extends DualLinkNode {
           for (var15Lifetime1 = var12; var8 < var15Lifetime1; var15Lifetime1--) {
             GetSalvoRepairTimeMultiplier.a(param1, var14, ResourceNode.field_b[var15Lifetime1], (byte) 75, var13);
           }
-          var9 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param3 + param2);
-          var10 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, -param3 + param0);
+          var9 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param3 + param2);
+          var10 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, -param3 + param0);
           for (var15Lifetime2 = var7_int; var8 >= var15Lifetime2; var15Lifetime2++) {
             var21 = ResourceNode.field_b[var15Lifetime2];
             GetSalvoRepairTimeMultiplier.a(param1, var9, var21, (byte) 75, var13);

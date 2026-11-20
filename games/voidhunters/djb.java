@@ -143,7 +143,7 @@ final class djb extends qc {
         try {
           int var2_int = -15 / ((param0 - 44) / 43);
           var3 = this.field_p.field_Fb.text;
-          this.field_p.field_Fb.text = nv.field_r;
+          this.field_p.field_Fb.text = OpenGlRenderbuffer.field_r;
           super.b((byte) -74);
           this.field_p.field_Fb.text = var3;
         } catch (RuntimeException runtimeException) {
@@ -529,7 +529,7 @@ final class djb extends qc {
               this.field_p.a(var5Lifetime1, 31401, var5Lifetime1);
             }
           }
-          nv.field_r = PlayerVoteFactory.a(this.field_p.l(param2 - 14413), 107);
+          OpenGlRenderbuffer.field_r = PlayerVoteFactory.a(this.field_p.l(param2 - 14413), 107);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

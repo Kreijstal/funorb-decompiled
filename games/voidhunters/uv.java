@@ -32,7 +32,7 @@ final class uv implements wwa {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        if (!li.field_i) {
+        if (!OpenGlTexture1D.field_i) {
           SoftwareRasterizer2D.drawRectangle(param1, param3, param5, param2, param4);
           if (param0 < 106) {
             field_f = (String) null;

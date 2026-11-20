@@ -8,7 +8,7 @@ final class rma extends mfb {
 
     final static void a(int param0, byte param1) {
         if (di.field_l != null) {
-          di.field_l.a((byte) 76, Integer.toString(param0), RequestNewestBlackboxRecording.field_p);
+          di.field_l.sendDebugRequest((byte) 76, Integer.toString(param0), RequestNewestBlackboxRecording.field_p);
           if (param1 != 47) {
             rma.a(112, (byte) -50);
             return;

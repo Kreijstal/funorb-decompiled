@@ -11,7 +11,7 @@ final class GetTorpedoEnergyUsed extends ConsoleCommand {
         if (param4 != -2) {
           return;
         }
-        if (ob.field_j > param1) {
+        if (OpenGlTexture3D.field_j > param1) {
           if (param6 != 1) {
             CacheReference.drawClippedRectangleBorder(param5, param2, param1, param6, 20408, param3, param0);
             return;
@@ -47,7 +47,7 @@ final class GetTorpedoEnergyUsed extends ConsoleCommand {
           RemoveEventActionFactory.a(param5, param0, param1, param2, param3, param6, 120);
           return;
         }
-        nv.a(param2, 102, param3, param0, param1, param5);
+        OpenGlRenderbuffer.a(param2, 102, param3, param0, param1, param5);
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

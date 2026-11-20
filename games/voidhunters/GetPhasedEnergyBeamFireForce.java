@@ -34,11 +34,11 @@ final class GetPhasedEnergyBeamFireForce extends ConsoleCommand {
 
     final static void b(boolean param0) {
         if (!param0) {
-          SoftwareFramebuffer.field_a = kda.field_g + " <b>" + ServerInfoFactory.field_b + "</b> " + GetFighterBayAimspeed.field_p + " <b>" + GetFighterRepairAmount.field_r + "</b> " + SetReloadBarHeight.field_p + "<br>" + "<br>" + GetDebrisMax.field_r;
+          SoftwareFramebuffer.field_a = CarouselGameClient.field_g + " <b>" + ServerInfoFactory.field_b + "</b> " + GetFighterBayAimspeed.field_p + " <b>" + GetFighterRepairAmount.field_r + "</b> " + SetReloadBarHeight.field_p + "<br>" + "<br>" + GetDebrisMax.field_r;
           return;
         }
         field_p = -73;
-        SoftwareFramebuffer.field_a = kda.field_g + " <b>" + ServerInfoFactory.field_b + "</b> " + GetFighterBayAimspeed.field_p + " <b>" + GetFighterRepairAmount.field_r + "</b> " + SetReloadBarHeight.field_p + "<br>" + "<br>" + GetDebrisMax.field_r;
+        SoftwareFramebuffer.field_a = CarouselGameClient.field_g + " <b>" + ServerInfoFactory.field_b + "</b> " + GetFighterBayAimspeed.field_p + " <b>" + GetFighterRepairAmount.field_r + "</b> " + SetReloadBarHeight.field_p + "<br>" + "<br>" + GetDebrisMax.field_r;
     }
 
     final static int b(int param0, int param1, int param2) {

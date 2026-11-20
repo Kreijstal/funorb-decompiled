@@ -14,7 +14,7 @@ final class GetShipToShipRamDamage extends ConsoleCommand {
           AwardVictoryToWinnerActionFactory.a(param6, param7, param2, param5, param0 + 1512, param4, param3);
           return;
         }
-        if (ob.field_j > -param5 + param6) {
+        if (OpenGlTexture3D.field_j > -param5 + param6) {
           SetOndamageParticleSpeed.a(2051507073, param4, param7, param3, param2, param5, param6, param1);
           return;
         }

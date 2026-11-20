@@ -31,12 +31,12 @@ final class MidiNote extends IntrusiveNode {
     final static int a(int param0, byte param1) {
         if (param1 != -121) {
           field_z = (String) null;
-          if (!li.field_i) {
+          if (!OpenGlTexture1D.field_i) {
             return ita.a(param0, param1 ^ -8013).maxDescent;
           }
           return SetTorpedoEnergyUsed.a(param0, 300).field_e;
         }
-        if (!li.field_i) {
+        if (!OpenGlTexture1D.field_i) {
           return ita.a(param0, param1 ^ -8013).maxDescent;
         }
         return SetTorpedoEnergyUsed.a(param0, 300).field_e;

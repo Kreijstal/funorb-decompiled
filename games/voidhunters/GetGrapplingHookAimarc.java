@@ -69,7 +69,7 @@ final class GetGrapplingHookAimarc extends ConsoleCommand {
             var8 = hob.a(OpenGlGpuToolkit.field_Jc, fbb.field_j[param2], 121) + param2;
           }
           var9 = fa.field_d[var8];
-          var10 = ServerInfo.a(var7, 100, var6, var9);
+          var10 = ServerInfo.playPannedSample(var7, 100, var6, var9);
           var10.field_e.setLoopCount(-1);
           var5 = new nl();
           var5.field_i = param4;

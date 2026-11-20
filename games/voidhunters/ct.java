@@ -10,7 +10,7 @@ final class ct {
           IntrusiveDeque var3 = (IntrusiveDeque) null;
           ct.a((ShipComponent) null, 95, (IntrusiveDeque) null);
         }
-        if (li.field_i) {
+        if (OpenGlTexture1D.field_i) {
           return mmb.field_d[param1].getHeight();
         }
         return 100;

@@ -83,7 +83,7 @@ final class rcb extends dqa implements oo {
             for (var5 = 0; var5 < var3_int; var5++) {
               this.field_v[var5] = new htb(this.field_w[var5], (sba) (this));
               this.field_v[var5].field_q = (wwa) ((Object) var4);
-              this.field_v[var5].field_p = nv.field_p;
+              this.field_v[var5].field_p = OpenGlRenderbuffer.field_p;
               this.field_v[var5].a(0, 80, 15, 1, var5 * 16 + 20);
               this.b(-18756, this.field_v[var5]);
             }

@@ -48,7 +48,7 @@ final class SetAutoaim extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           var12_int = -16 / ((param8 - 32) / 48);
-          if (!li.field_i) {
+          if (!OpenGlTexture1D.field_i) {
             stackIn_4_0 = ita.a(param11, 7988).drawParagraph(param5, param2, param9, param7, param1, param6, param0, param10, param4, param3);
             return stackIn_4_0;
           }

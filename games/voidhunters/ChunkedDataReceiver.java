@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class um {
-    private byte[] field_a;
+final class ChunkedDataReceiver {
+    private byte[] data;
     static int[] field_c;
-    private boolean field_d;
-    private int field_b;
+    private boolean complete;
+    private int receivedBytes;
 
-    final byte[] b(int param0) {
+    final byte[] takeCompletedData(int param0) {
         byte[] var3 = null;
-        if (this.field_d) {
-          var3 = this.field_a;
+        if (this.complete) {
+          var3 = this.data;
           byte[] var2 = var3;
-          this.field_a = null;
+          this.data = null;
           return var3;
         }
         if (param0 != -30223) {
-          this.field_a = (byte[]) null;
+          this.data = (byte[]) null;
           return null;
         }
         return null;
     }
 
-    final void a(PacketBuffer param0, int param1, boolean param2) {
+    final void receiveChunk(PacketBuffer param0, int param1, boolean param2) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -36,35 +36,35 @@ final class um {
           if (param2) {
             System.out.println("data_len received: " + var4_int + " (hex " + Integer.toHexString(var4_int) + ")");
           }
-          if (this.field_d ||
-            null == this.field_a ||
-            this.field_a.length != var4_int) {
+          if (this.complete ||
+            null == this.data ||
+            this.data.length != var4_int) {
             if (param2) {
               System.out.println("allocating new buffer");
             }
-            this.field_b = 0;
-            this.field_d = false;
-            this.field_a = new byte[var4_int];
+            this.receivedBytes = 0;
+            this.complete = false;
+            this.data = new byte[var4_int];
           }
           var5 = param0.readInt(90);
           if (param2) {
             System.out.println("offset received: " + var5 + " (hex " + Integer.toHexString(var5) + ")");
           }
           if (param2 &&
-            this.field_b != var5) {
-            throw new IllegalStateException("had received " + this.field_b + ", got offset " + var5 + " total len: " + var4_int);
+            this.receivedBytes != var5) {
+            throw new IllegalStateException("had received " + this.receivedBytes + ", got offset " + var5 + " total len: " + var4_int);
           }
           var6 = param0.readUnsignedShort(1869);
           if (param2) {
             System.out.println("Receiving: " + var6);
           }
-          param0.readBytes(var5, this.field_a, (byte) -59, var6);
-          this.field_b = this.field_b + var6;
-          if (this.field_a.length <= this.field_b) {
-            this.field_d = true;
+          param0.readBytes(var5, this.data, (byte) -59, var6);
+          this.receivedBytes = this.receivedBytes + var6;
+          if (this.data.length <= this.receivedBytes) {
+            this.complete = true;
           }
           if (param2 &&
-            this.field_d) {
+            this.complete) {
             System.out.println("Ready!");
           }
           if (param1 > 68) {
@@ -93,15 +93,15 @@ final class um {
         field_c = null;
     }
 
-    final int c(int param0) {
+    final int getProgressPercent(int param0) {
         if (param0 != 0) {
           return -31;
         }
-        if (this.field_d) {
+        if (this.complete) {
           return 0;
         }
-        if (null != this.field_a) {
-          return this.field_b * 100 / this.field_a.length;
+        if (null != this.data) {
+          return this.receivedBytes * 100 / this.data.length;
         }
         return 0;
     }

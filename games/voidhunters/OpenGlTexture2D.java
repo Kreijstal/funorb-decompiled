@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class aia extends OpenGlTexture {
-    int field_h;
-    int field_j;
-    private int field_k;
-    private int field_i;
+class OpenGlTexture2D extends OpenGlTexture {
+    int width;
+    int height;
+    private int framebufferAttachment;
+    private int framebufferTarget;
 
-    aia(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, int[] param6, int param7, int param8, boolean param9) {
+    OpenGlTexture2D(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, int[] param6, int param7, int param8, boolean param9) {
         super(param0, param1, param2, param3 * param4, param5);
         int var12 = 0;
         int var15 = 0;
@@ -22,11 +22,11 @@ class aia extends OpenGlTexture {
         int var13 = 0;
         int var14 = 0;
         int[] var17 = null;
-        this.field_k = -1;
-        this.field_i = -1;
+        this.framebufferAttachment = -1;
+        this.framebufferTarget = -1;
         try {
-          this.field_h = param3;
-          this.field_j = param4;
+          this.width = param3;
+          this.height = param4;
           if (param9) {
             var17 = new int[param6.length];
             var11 = var17;
@@ -44,11 +44,11 @@ class aia extends OpenGlTexture {
             param5 &&
             0 == param7 &&
             param8 == 0) {
-            SetVariableLabelActionFactory.a(param6, this.toolkit.field_cc, 29175, this.internalFormat, this.target, 32993, this.field_j, this.field_h);
+            SetVariableLabelActionFactory.a(param6, this.toolkit.field_cc, 29175, this.internalFormat, this.target, 32993, this.height, this.width);
             this.markMipmapsPresent((byte) 62, true);
           } else {
             jaggl.OpenGL.glPixelStorei(3314, param7);
-            jaggl.OpenGL.glTexImage2Di(this.target, 0, this.internalFormat, this.field_h, this.field_j, 0, 32993, this.toolkit.field_cc, param6, param8 * 4);
+            jaggl.OpenGL.glTexImage2Di(this.target, 0, this.internalFormat, this.width, this.height, 0, 32993, this.toolkit.field_cc, param6, param8 * 4);
             jaggl.OpenGL.glPixelStorei(3314, 0);
             this.markMipmapsPresent((byte) 62, false);
           }
@@ -74,7 +74,7 @@ class aia extends OpenGlTexture {
         }
     }
 
-    final void a(boolean param0, boolean param1, int param2) {
+    final void setWrap(boolean param0, boolean param1, int param2) {
         if (param2 != 10497) {
           return;
         }
@@ -85,7 +85,7 @@ class aia extends OpenGlTexture {
         }
     }
 
-    final void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, int[] param8) {
+    final void updatePixels(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7, int[] param8) {
         int var11 = 0;
         int var14 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -120,7 +120,7 @@ class aia extends OpenGlTexture {
           if (param2 != param1) {
             jaggl.OpenGL.glPixelStorei(3314, param1);
           }
-          jaggl.OpenGL.glTexSubImage2Di(this.target, 0, param5, this.field_j - param3 - param4, param2, param4, 32993, this.toolkit.field_cc, param8, param6);
+          jaggl.OpenGL.glTexSubImage2Di(this.target, 0, param5, this.height - param3 - param4, param2, param4, 32993, this.toolkit.field_cc, param8, param6);
           if (param1 != param2) {
             jaggl.OpenGL.glPixelStorei(3314, 0);
           }
@@ -140,24 +140,24 @@ class aia extends OpenGlTexture {
     }
 
     public final void detachFromFramebuffer(int param0) {
-        jaggl.OpenGL.glFramebufferTexture2DEXT(this.field_i, this.field_k, this.target, 0, 0);
+        jaggl.OpenGL.glFramebufferTexture2DEXT(this.framebufferTarget, this.framebufferAttachment, this.target, 0, 0);
         if (param0 != 31294) {
-          this.a(3, 70, -60, -31, 85, 83, 30);
+          this.copyFromFramebuffer(3, 70, -60, -31, 85, 83, 30);
         }
-        this.field_i = -1;
-        this.field_k = -1;
+        this.framebufferTarget = -1;
+        this.framebufferAttachment = -1;
     }
 
-    final void a(int param0, int param1, int param2, boolean param3) {
+    final void attachToFramebuffer(int param0, int param1, int param2, boolean param3) {
         jaggl.OpenGL.glFramebufferTexture2DEXT(param0, param1, this.target, this.textureId, param2);
-        this.field_k = param1;
-        this.field_i = param0;
+        this.framebufferAttachment = param1;
+        this.framebufferTarget = param0;
         if (param3) {
-          this.field_k = -5;
+          this.framebufferAttachment = -5;
         }
     }
 
-    aia(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7, boolean param8) {
+    OpenGlTexture2D(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7, boolean param8) {
         super(param0, param1, param2, param4 * param3, param5);
         int var11 = 0;
         int var14 = 0;
@@ -172,11 +172,11 @@ class aia extends OpenGlTexture {
         int var12 = 0;
         int var13 = 0;
         byte[] var16 = null;
-        this.field_k = -1;
-        this.field_i = -1;
+        this.framebufferAttachment = -1;
+        this.framebufferTarget = -1;
         try {
-          this.field_h = param3;
-          this.field_j = param4;
+          this.width = param3;
+          this.height = param4;
           if (param8) {
             var16 = new byte[param6.length];
             var10 = var16;
@@ -196,7 +196,7 @@ class aia extends OpenGlTexture {
             OpenGlShader.uploadByteTextureMipmaps(param6, 0, param7, param1, param2, param3, param4);
             this.markMipmapsPresent((byte) 62, true);
           } else {
-            jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.internalFormat, this.field_h, this.field_j, 0, param7, 5121, param6, 0);
+            jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.internalFormat, this.width, this.height, 0, param7, 5121, param6, 0);
             this.markMipmapsPresent((byte) 62, false);
           }
           jaggl.OpenGL.glPixelStorei(3317, 4);
@@ -222,7 +222,7 @@ class aia extends OpenGlTexture {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3, int param4, int param5, int param6, int param7, boolean param8, int param9) {
+    final void updatePixels(int param0, int param1, int param2, byte[] param3, int param4, int param5, int param6, int param7, boolean param8, int param9) {
         int var15 = 0;
         int var18 = 0;
         RuntimeException stackIn_21_0 = null;
@@ -281,13 +281,13 @@ class aia extends OpenGlTexture {
         }
     }
 
-    aia(OpenGlToolkit param0, int param1, int param2, int param3, int param4) {
+    OpenGlTexture2D(OpenGlToolkit param0, int param1, int param2, int param3, int param4) {
         super(param0, param1, param2, param4 * param3, false);
-        this.field_k = -1;
-        this.field_i = -1;
+        this.framebufferAttachment = -1;
+        this.framebufferTarget = -1;
         try {
-          this.field_j = param4;
-          this.field_h = param3;
+          this.height = param4;
+          this.width = param3;
           this.toolkit.bindTexture(102, (OpenGlTexture) (this));
           jaggl.OpenGL.glTexImage2Dub(this.target, 0, this.internalFormat, param3, param4, 0, PointLight.toOpenGlExternalFormat(this.internalFormat, false), 5121, (byte[]) null, 0);
           this.setLinearFiltering(-96, true);
@@ -296,7 +296,7 @@ class aia extends OpenGlTexture {
         }
     }
 
-    aia(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, float[] param6, int param7) {
+    OpenGlTexture2D(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, float[] param6, int param7) {
         super(param0, param1, param2, param3 * param4, param5);
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -305,18 +305,18 @@ class aia extends OpenGlTexture {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var9 = null;
-        this.field_k = -1;
-        this.field_i = -1;
+        this.framebufferAttachment = -1;
+        this.framebufferTarget = -1;
         try {
-          this.field_j = param4;
-          this.field_h = param3;
+          this.height = param4;
+          this.width = param3;
           this.toolkit.bindTexture(100, (OpenGlTexture) (this));
           if (param5 &&
             this.target != 34037) {
             SoftwareRenderContext.a(param7, param2, param3, param1, param4, param6, -29702);
             this.markMipmapsPresent((byte) 62, true);
           } else {
-            jaggl.OpenGL.glTexImage2Df(this.target, 0, this.internalFormat, this.field_h, this.field_j, 0, param7, 5126, param6, 0);
+            jaggl.OpenGL.glTexImage2Df(this.target, 0, this.internalFormat, this.width, this.height, 0, param7, 5126, param6, 0);
             this.markMipmapsPresent((byte) 62, false);
           }
           this.setLinearFiltering(-86, true);
@@ -341,10 +341,10 @@ class aia extends OpenGlTexture {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void copyFromFramebuffer(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var8 = -param6 - (param3 - this.toolkit.field_Y);
         this.toolkit.bindTexture(121, (OpenGlTexture) (this));
-        jaggl.OpenGL.glCopyTexSubImage2D(this.target, 0, param2, this.field_j - param3 - param1, param5, var8, param4, param3);
+        jaggl.OpenGL.glCopyTexSubImage2D(this.target, 0, param2, this.height - param3 - param1, param5, var8, param4, param3);
         int var9 = -33 / ((-65 - param0) / 43);
         jaggl.OpenGL.glFlush();
     }

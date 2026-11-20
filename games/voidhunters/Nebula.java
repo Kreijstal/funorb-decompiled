@@ -250,7 +250,7 @@ final class Nebula implements DiffableState {
           var9 = this.getParticleRadius(param4, true);
           var10 = 200;
           var11 = 7842355;
-          if (li.field_i &&
+          if (OpenGlTexture1D.field_i &&
             1 == GetUseSprites.field_o) {
             var12 = param4 % 3 + 8;
             var13 = mmb.field_d[var12];

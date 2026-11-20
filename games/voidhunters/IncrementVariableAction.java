@@ -86,13 +86,13 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         if (param3 != 0) {
           IncrementVariableAction.a(125, 2, 96);
-          if (li.field_i) {
+          if (OpenGlTexture1D.field_i) {
             mmb.field_d[param0].draw(param4, param2, 0, 16777215 | param1 << 24, 1);
             return;
           }
           return;
         }
-        if (!li.field_i) {
+        if (!OpenGlTexture1D.field_i) {
           return;
         }
         mmb.field_d[param0].draw(param4, param2, 0, 16777215 | param1 << 24, 1);

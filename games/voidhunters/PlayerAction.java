@@ -137,7 +137,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
               SetMissileLauncherEnergyUsed.a(8947865, (byte) 7, param1.b(true, var9), (float)(int)((float)var10 * param1.field_a), var11, param1.a(var8, (byte) 121));
             }
           }
-          if (li.field_i &&
+          if (OpenGlTexture1D.field_i &&
             AwardVictoryToWinnerAction.field_b == 1) {
             var13 = new lta();
             var16 = var13;
@@ -165,7 +165,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
           var7Lifetime1 = param1.a(var4_int, (byte) 123) + 1;
           var8Lifetime2 = -1 + param1.b(true, -var5);
           var9Lifetime1 = param1.b(true, var5) + 1;
-          if (li.field_i) {
+          if (OpenGlTexture1D.field_i) {
             if (GetLaserAimarc.field_p) {
               GetDebrisGroupColour.field_r.drawHorizontalLine(var6, var8Lifetime2, var7Lifetime1 - var6, 16777215, 0);
               GetDebrisGroupColour.field_r.drawHorizontalLine(var6, var9Lifetime1, -var6 + var7Lifetime1, 16777215, 0);

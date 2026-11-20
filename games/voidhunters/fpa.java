@@ -46,7 +46,7 @@ final class fpa extends uj {
     }
 
     final static void a(int param0, int param1, boolean param2, int param3, int param4) {
-        if (li.field_i) {
+        if (OpenGlTexture1D.field_i) {
           feb.a(GetDebrisGroupColour.field_r, true).a(param4, param3, param0, param1, (byte) -45);
           if (!param2) {
             fpa.a(117, -125, true, -70, 61);

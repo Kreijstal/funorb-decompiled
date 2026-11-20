@@ -62,7 +62,7 @@ final class SetAiFiringRangeUpshift extends ConsoleCommand {
         ToolkitSprite var20 = null;
         ToolkitSprite var21 = null;
         int var7 = -51 % ((-20 - param3) / 43);
-        if (!li.field_i) {
+        if (!OpenGlTexture1D.field_i) {
           GetMachineGunPulsetime.a(3377322, -77, param1, param0, param2, param6);
           uv.a(116, param6, param2, param0, 16777215, param1);
         } else {

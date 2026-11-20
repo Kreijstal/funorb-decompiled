@@ -218,7 +218,7 @@ final class uea extends bob {
         }
         var5 = 1;
         var6 = 13421772;
-        if (li.field_i) {
+        if (OpenGlTexture1D.field_i) {
           var7 = 3;
           SetBoostersCooldown.a(GetDebrisGroupColour.field_r, SetTorpedoEnergyUsed.a(var7, 300), PlayerReadyFactory.field_b[var7], -125, var6, GetBombletSprayEnergyUsed.field_p.width, GetUseDetailLines.field_o, var5, GetTorpedoReload.field_q, GetBombletSprayEnergyUsed.field_p.height);
         }

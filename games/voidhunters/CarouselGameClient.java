@@ -1,73 +1,73 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kda {
-    private IntrusiveDeque field_i;
-    private int field_d;
-    private boolean field_l;
-    private int field_b;
-    private int field_n;
-    private IntrusiveDeque field_c;
-    ova field_j;
-    private boolean field_o;
-    private boolean field_p;
-    private boolean field_a;
-    private boolean field_e;
-    private int[] field_k;
-    private int field_h;
-    um field_m;
-    private boolean field_q;
-    private int field_f;
+final class CarouselGameClient {
+    private IntrusiveDeque bufferedOutgoing;
+    private int pingMillis;
+    private boolean ready;
+    private int eventFlushCounter;
+    private int pendingDisconnectedPlayerMask;
+    private IntrusiveDeque bufferedIncoming;
+    ChunkedDataSender dataSender;
+    private boolean serverUpdatesSuspended;
+    private boolean readyEventSent;
+    private boolean receivingGameState;
+    private boolean checksumFailureReported;
+    private int[] playerPingMillis;
+    private int readyTick;
+    ChunkedDataReceiver dataReceiver;
+    private boolean stoppedWhileReceivingGameState;
+    private int lastSubmittedEventTick;
     static String field_g;
 
-    final int b(boolean param0, int param1) {
+    final int getPlayerPingMillis(boolean param0, int param1) {
         if (param1 >= 0 &&
-          null != this.field_k &&
-          param1 < this.field_k.length) {
+          null != this.playerPingMillis &&
+          param1 < this.playerPingMillis.length) {
           if (param0) {
-            return this.field_k[param1];
+            return this.playerPingMillis[param1];
           }
           return 123;
         }
         return -1;
     }
 
-    final void a(byte param0) {
-        this.field_a = false;
+    final void finishReceivingGameState(byte param0) {
+        this.receivingGameState = false;
         int var2 = -6 % ((param0 + 48) / 43);
     }
 
-    final int a(boolean param0, int param1) {
-        this.field_a = false;
-        this.field_o = false;
-        this.field_c.clear(110);
-        int var3 = this.field_n;
-        this.field_n = 0;
-        this.field_i = new IntrusiveDeque();
+    final int startGame(boolean param0, int param1) {
+        this.receivingGameState = false;
+        this.serverUpdatesSuspended = false;
+        this.bufferedIncoming.clear(110);
+        int var3 = this.pendingDisconnectedPlayerMask;
+        this.pendingDisconnectedPlayerMask = 0;
+        this.bufferedOutgoing = new IntrusiveDeque();
         if (param1 != -13027) {
-          this.field_m = (um) null;
+          this.dataReceiver = (ChunkedDataReceiver) null;
         }
         GetSniperCannonAimarc.a(-6940, "Called Carousel_clientgame.start_game(), resetting any buffered events");
-        this.field_b = 0;
-        this.field_h = 2147483647;
+        this.eventFlushCounter = 0;
+        this.readyTick = 2147483647;
         if (!param0) {
-          this.field_k = null;
-          this.field_d = 0;
+          this.playerPingMillis = null;
+          this.pingMillis = 0;
         }
-        this.field_f = 0;
-        this.field_p = false;
-        this.field_e = false;
+        this.lastSubmittedEventTick = 0;
+        this.readyEventSent = false;
+        this.checksumFailureReported = false;
         return var3;
     }
 
-    private final void a(byte param0, int param1) {
+    private final void setPingMillis(byte param0, int param1) {
         if (param0 != 85) {
-          this.field_i = (IntrusiveDeque) null;
+          this.bufferedOutgoing = (IntrusiveDeque) null;
         }
-        this.field_d = param1;
+        this.pingMillis = param1;
     }
 
-    final byte[] b(IsaacPacketBuffer param0, int param1) {
+    final byte[] receiveGameStateChunk(IsaacPacketBuffer param0, int param1) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -77,12 +77,12 @@ final class kda {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_m.a(param0, param1 ^ 900, SetPointDefenceLaserProjectileDamage.field_o);
+          this.dataReceiver.receiveChunk(param0, param1 ^ 900, SetPointDefenceLaserProjectileDamage.field_o);
           if (param1 != 1000) {
-            this.a(-52);
+            this.isReceivingGameState(-52);
           }
-          this.field_a = true;
-          var4 = this.field_m.b(-30223);
+          this.receivingGameState = true;
+          var4 = this.dataReceiver.takeCompletedData(-30223);
           var3 = var4;
           stackIn_3_0 = var4;
           return stackIn_3_0;
@@ -100,7 +100,7 @@ final class kda {
         }
     }
 
-    private final void a(CarouselCommongameInfo param0, int param1, int param2, int param3, boolean param4) {
+    private final void checkServerChecksum(CarouselCommongameInfo param0, int param1, int param2, int param3, boolean param4) {
         CarouselCommongameInfo stackIn_22_0 = null;
         boolean stackIn_23_1 = false;
         RuntimeException stackIn_35_0 = null;
@@ -125,11 +125,11 @@ final class kda {
           if (param4) {
             param3 = param3 - lla.field_e;
           }
-          if (this.field_h >= param3) {
+          if (this.readyTick >= param3) {
             return;
           }
           var6_int = -param0.tick + param3;
-          var7 = this.c(param2 - 1000) / 2;
+          var7 = this.getPingMillis(param2 - 1000) / 2;
           var8 = GetBombletSprayProjectileOndamageParticles.field_p * var7 / param2;
           var9 = SetMissionResnetResourceTickTime.field_q / 2 + 2 * var8;
           if (-var9 > var6_int) {
@@ -153,22 +153,22 @@ final class kda {
             stackIn_23_1 = (var12 != param1);
             stackIn_22_0.outOfSync = stackIn_23_1;
             if (param0.outOfSync &&
-              !this.field_e) {
+              !this.checksumFailureReported) {
               if (!lw.field_f) {
                 return;
               }
-              this.field_e = true;
+              this.checksumFailureReported = true;
               GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Now out of sync for server tick " + param3 + ", which is " + -var6_int + " ticks back, so dumping state");
-              if (null == this.field_j) {
-                this.field_j = new ova(OpenGlPostProcessor.field_v);
+              if (null == this.dataSender) {
+                this.dataSender = new ChunkedDataSender(OpenGlPostProcessor.field_v);
               }
-              if (this.field_j.a(param2 - 1000)) {
+              if (this.dataSender.isIdle(param2 - 1000)) {
                 GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Sending the state dump to the server");
                 var13 = new CarouselSlotStateDump(-var10 + param0.tick, bk.field_w);
                 var14 = new lla();
                 var14.a(84, 0, var13.field_d, var13.field_d.length);
                 var20 = GameApplet.copyWrittenBytes((byte) 10, var14.field_f);
-                this.field_j.a(var20, 0);
+                this.dataSender.setData(var20, 0);
               }
             }
             return;
@@ -188,7 +188,7 @@ final class kda {
         }
     }
 
-    private final boolean a(CarouselCommongameInfo param0, int param1) {
+    private final boolean isTooFarBehind(CarouselCommongameInfo param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -197,7 +197,7 @@ final class kda {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3_int = this.c(0) * GetBombletSprayProjectileOndamageParticles.field_p / param1;
+          var3_int = this.getPingMillis(0) * GetBombletSprayProjectileOndamageParticles.field_p / param1;
           var4 = wsb.field_f - var3_int;
           if (param0.ticksBehind <= var4) {
             return false;
@@ -217,7 +217,7 @@ final class kda {
         }
     }
 
-    final boolean a(byte param0, CarouselCommongameInfo param1, int param2, IsaacPacketBuffer param3) {
+    final boolean sendReadyIfNeeded(byte param0, CarouselCommongameInfo param1, int param2, IsaacPacketBuffer param3) {
         CarouselEvent var5 = null;
         RuntimeException var5_ref = null;
         RuntimeException stackIn_12_0 = null;
@@ -227,15 +227,15 @@ final class kda {
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_l &&
+          if (this.ready &&
             param2 >= 0 &&
-            !this.field_p) {
+            !this.readyEventSent) {
             GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Sending ready packet");
             var5 = (CarouselEvent) (IntrusiveDequeIterator.field_a.create((byte) 77));
             var5.tick = param1.tick;
             var5.setPlayerReadyEvent(param2, -125);
-            this.a(var5, param3, 1000);
-            this.field_p = true;
+            this.sendEvent(var5, param3, 1000);
+            this.readyEventSent = true;
           }
           if (param0 == 110) {
             return false;
@@ -261,7 +261,7 @@ final class kda {
         }
     }
 
-    final void a(int param0, IsaacPacketBuffer param1) {
+    final void requestNewestBlackBoxRecording(int param0, IsaacPacketBuffer param1) {
         DebugMessage var3 = null;
         if (param0 != -32339) {
           return;
@@ -275,7 +275,7 @@ final class kda {
         }
     }
 
-    final void a(boolean param0, CarouselEvent param1, CarouselCommongameInfo param2, boolean param3, boolean param4, int param5, IsaacPacketBuffer param6) {
+    final void submitLocalEvent(boolean param0, CarouselEvent param1, CarouselCommongameInfo param2, boolean param3, boolean param4, int param5, IsaacPacketBuffer param6) {
         CarouselEvent stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
         RuntimeException stackIn_27_0 = null;
@@ -291,7 +291,7 @@ final class kda {
         CarouselCommongameInfo var9 = null;
         try {
           if (param4 &&
-            !this.field_l) {
+            !this.ready) {
             return;
           }
           if (!param2.isReplay(1)) {
@@ -300,24 +300,24 @@ final class kda {
             stackIn_8_0.confirmed = stackIn_9_1;
             if (!param0) {
               var9 = (CarouselCommongameInfo) null;
-              this.b((CarouselCommongameInfo) null, 33);
+              this.startBlackBoxReplay((CarouselCommongameInfo) null, 33);
             }
             param1.tick = -param5 + param2.tick;
             if (PlayerAction.field_s == 1 &&
-              this.field_f >= param1.tick) {
+              this.lastSubmittedEventTick >= param1.tick) {
               return;
             }
-            if (this.a(param2, 1000)) {
+            if (this.isTooFarBehind(param2, 1000)) {
               return;
             }
-            this.field_f = param1.tick;
+            this.lastSubmittedEventTick = param1.tick;
             if (param4) {
               if (param3) {
                 var8 = (CarouselEvent) (IntrusiveDequeIterator.field_a.create((byte) 49));
                 param1.copyTo((byte) 75, var8);
-                this.field_i.addLast(-10258, var8);
+                this.bufferedOutgoing.addLast(-10258, var8);
               } else {
-                this.a(param1, param6, 1000);
+                this.sendEvent(param1, param6, 1000);
               }
             }
             if (!param2.addEvent(1, param1)) {
@@ -352,10 +352,10 @@ final class kda {
         }
     }
 
-    private final void a(CarouselEvent param0, IsaacPacketBuffer param1, int param2) {
+    private final void sendEvent(CarouselEvent param0, IsaacPacketBuffer param1, int param2) {
         try {
           if (param2 != 1000) {
-            this.field_a = true;
+            this.receivingGameState = true;
           }
           SetDebrisProjectileCollision.field_o = false;
           SetBuildViewAutozoomEndOnAction.a(0, param0, param1, GetMissionTimeLimit.field_o);
@@ -368,18 +368,18 @@ final class kda {
     public static void clearSharedReferences(int param0) {
         field_g = null;
         if (param0 <= 4) {
-          kda.clearSharedReferences(-77);
+          CarouselGameClient.clearSharedReferences(-77);
         }
     }
 
-    final int c(int param0) {
+    final int getPingMillis(int param0) {
         if (param0 != 0) {
           field_g = (String) null;
         }
-        return this.field_d;
+        return this.pingMillis;
     }
 
-    final boolean a(IsaacPacketBuffer param0, IsaacPacketBuffer param1, boolean param2, byte param3, int param4, CarouselCommongameInfo param5) {
+    final boolean handlePacket(IsaacPacketBuffer param0, IsaacPacketBuffer param1, boolean param2, byte param3, int param4, CarouselCommongameInfo param5) {
         boolean discarded$0 = false;
         int var10 = 0;
         Object stackIn_22_0;
@@ -436,8 +436,8 @@ final class kda {
               return true;
             }
             if (param5 != null &&
-              !this.field_a) {
-              if (this.field_o) {
+              !this.receivingGameState) {
+              if (this.serverUpdatesSuspended) {
                 return true;
               }
               var8_int = var16.field_f;
@@ -446,7 +446,7 @@ final class kda {
               }
               param5.requestCatchUpToTick(var8_int, var16.field_e, 0);
               if (!var16.field_e) {
-                if (this.field_l) {
+                if (this.ready) {
                   stackIn_22_0 = this;
                   stackIn_22_1 = (CarouselCommongameInfo) (param5);
                   stackIn_22_2 = var16.field_g;
@@ -459,17 +459,17 @@ final class kda {
                     stackIn_23_0 = this;
                     stackIn_23_5 = true;
                   }
-                  this.a(stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_22_4, stackIn_23_5);
+                  this.checkServerChecksum(stackIn_22_1, stackIn_22_2, stackIn_22_3, stackIn_22_4, stackIn_23_5);
                 }
               } else {
                 GetSniperCannonAimarc.a(param3 ^ -6941, "Carousel_clientgame: Handling catchup packet here, where targettick=" + var8_int + ",(+ " + (-param5.tick + var8_int) + "), playinggame=" + param2);
                 param5.catchUp(-1);
                 GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Tick is now " + param5.tick);
-                if (!this.field_l) {
+                if (!this.ready) {
                   GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Is ready");
                 }
-                this.field_h = param5.tick;
-                this.field_l = true;
+                this.readyTick = param5.tick;
+                this.ready = true;
               }
             }
             return true;
@@ -484,8 +484,8 @@ final class kda {
               return true;
             }
             if (param5 != null &&
-              !this.field_a &&
-              !this.field_o) {
+              !this.receivingGameState &&
+              !this.serverUpdatesSuspended) {
               if (!param5.addEvent(1, var17_ref)) {
                 var9_int = -1;
                 if (var17_ref instanceof CarouselPlayerEvent) {
@@ -497,19 +497,19 @@ final class kda {
               }
             } else if (!var17_ref.isSystemEvent(120) ||
               !var17_ref.systemEvent.field_c) {
-              this.field_c.addLast(-10258, var17_ref);
+              this.bufferedIncoming.addLast(-10258, var17_ref);
             }
             return true;
           }
           if (param3 != 7) {
             var14 = (CarouselCommongameInfo) null;
-            discarded$0 = this.a((CarouselCommongameInfo) null, -70);
+            discarded$0 = this.isTooFarBehind((CarouselCommongameInfo) null, -70);
           }
           if (ehb.field_g == param4) {
             var7_int = param1.readInt(94);
             if (param5 != null &&
-              !this.field_a &&
-              !this.field_o) {
+              !this.receivingGameState &&
+              !this.serverUpdatesSuspended) {
               param0.writeIsaacByte(24335, PrintSettings.field_o);
               param0.writeInt(var7_int, 332614536);
               param0.writeInt(param5.tick, 332614536);
@@ -524,19 +524,19 @@ final class kda {
               var11 = param1.readInt(95);
               var12 = param1.readInt(95);
               if (param5 != null &&
-                !this.field_a &&
-                !this.field_o &&
+                !this.receivingGameState &&
+                !this.serverUpdatesSuspended &&
                 !param5.isReplay(1)) {
-                this.a(var12, false, var11);
+                this.setPlayerPingMillis(var12, false, var11);
               }
             }
             if (param5 != null &&
-              !this.field_a &&
-              !this.field_o) {
+              !this.receivingGameState &&
+              !this.serverUpdatesSuspended) {
               stackIn_76_0 = (CarouselCommongameInfo) (param5);
               if (!((CarouselCommongameInfo) (Object) stackIn_76_0).isReplay(1)) {
                 param5.adjustTickOffset(false, var7_intLifetime1);
-                this.a((byte) 85, var8_intLifetime1);
+                this.setPingMillis((byte) 85, var8_intLifetime1);
               }
             }
             return true;
@@ -544,8 +544,8 @@ final class kda {
           if (param4 != GetAngleset.field_o) {
             return false;
           }
-          this.field_m.a(param1, 90, SetPointDefenceLaserProjectileDamage.field_o);
-          var22 = this.field_m.b(param3 ^ -30218);
+          this.dataReceiver.receiveChunk(param1, 90, SetPointDefenceLaserProjectileDamage.field_o);
+          var22 = this.dataReceiver.takeCompletedData(param3 ^ -30218);
           var19 = var22;
           var7 = var19;
           if (var7 != null) {
@@ -559,7 +559,7 @@ final class kda {
                 GetSniperCannonAimarc.a(param3 - 6947, "Received black box recording");
                 var15 = (BlackBoxRecording) (var20.field_b);
                 param5.recording = var15;
-                this.b(param5, -125);
+                this.startBlackBoxReplay(param5, -125);
               } else {
                 if (var20.field_b instanceof DebugRequest) {
                   var21_ref = (DebugRequest) (var20.field_b);
@@ -600,45 +600,45 @@ final class kda {
         }
     }
 
-    final boolean b(byte param0) {
-        int var2 = this.field_q ? 1 : 0;
-        this.field_q = false;
+    final boolean pollStoppedWhileReceivingGameState(byte param0) {
+        int var2 = this.stoppedWhileReceivingGameState ? 1 : 0;
+        this.stoppedWhileReceivingGameState = false;
         int var3 = -118 / ((-41 - param0) / 55);
         return var2 != 0;
     }
 
-    final void a(int param0, int param1) {
+    final void bufferDisconnectedPlayerMask(int param0, int param1) {
         if (param0 != -29804) {
           return;
         }
-        this.field_n = param1;
+        this.pendingDisconnectedPlayerMask = param1;
     }
 
-    final void c(byte param0) {
-        this.field_o = true;
+    final void suspendServerUpdates(byte param0) {
+        this.serverUpdatesSuspended = true;
         if (param0 != -94) {
           IsaacPacketBuffer var3 = (IsaacPacketBuffer) null;
-          this.a(-3, (IsaacPacketBuffer) null);
+          this.requestNewestBlackBoxRecording(-3, (IsaacPacketBuffer) null);
         }
     }
 
-    final void a(boolean param0) {
-        if (this.field_a) {
-          this.field_q = true;
+    final void handleGameStopped(boolean param0) {
+        if (this.receivingGameState) {
+          this.stoppedWhileReceivingGameState = true;
         }
         if (!param0) {
-          this.field_k = (int[]) null;
+          this.playerPingMillis = (int[]) null;
         }
     }
 
-    final boolean a(int param0) {
+    final boolean isReceivingGameState(int param0) {
         if (param0 != -28208) {
-          this.field_h = 115;
+          this.readyTick = 115;
         }
-        return this.field_a;
+        return this.receivingGameState;
     }
 
-    final void a(int param0, boolean param1, CarouselCommongameInfo param2) {
+    final void applyBufferedEventsAndCatchUp(int param0, boolean param1, CarouselCommongameInfo param2) {
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -655,14 +655,14 @@ final class kda {
         CarouselEvent var13 = null;
         var10 = VoidHunters.field_G;
         try {
-          if (this.field_l) {
+          if (this.ready) {
             GetSniperCannonAimarc.a(-6940, "Carousel_clientgame:Not ready");
           }
-          this.field_l = false;
-          this.field_h = 2147483647;
+          this.ready = false;
+          this.readyTick = 2147483647;
           var4_int = 0;
           var5 = 0;
-          var6 = this.field_c.first(param0);
+          var6 = this.bufferedIncoming.first(param0);
           while (var6 != null) {
             if (!(var6 instanceof CarouselEvent)) {
               if (var6 instanceof ServerTick) {
@@ -688,7 +688,7 @@ final class kda {
               var4_int++;
               param2.addEvent(param0 ^ 1, (CarouselEvent) (var6));
             }
-            var6 = this.field_c.next((byte) 62);
+            var6 = this.bufferedIncoming.next((byte) 62);
           }
           GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Adding all the way with " + var4_int + " actions, and " + var5 + " server ticks. Tick=" + param2.tick + ", Ticks behind=" + param2.ticksBehind);
           param2.catchUp(param0 - 1);
@@ -708,7 +708,7 @@ final class kda {
         }
     }
 
-    final void a(IsaacPacketBuffer param0, int param1, String param2) {
+    final void sendCarouselConstant(IsaacPacketBuffer param0, int param1, String param2) {
         DebugMessage var4 = null;
         try {
           var4 = new DebugMessage();
@@ -719,7 +719,7 @@ final class kda {
         }
     }
 
-    private final void a(int param0, boolean param1, int param2) {
+    private final void setPlayerPingMillis(int param0, boolean param1, int param2) {
         int var5 = 0;
         int[] var4;
         int var6;
@@ -729,28 +729,28 @@ final class kda {
           return;
         }
         if (param1) {
-          this.field_d = 52;
+          this.pingMillis = 52;
         }
-        if (null == this.field_k) {
-          this.field_k = new int[1 + param2];
+        if (null == this.playerPingMillis) {
+          this.playerPingMillis = new int[1 + param2];
         } else {
-          if (this.field_k.length <= param2) {
+          if (this.playerPingMillis.length <= param2) {
             var7 = new int[param2 + 1];
             var4 = var7;
-            for (var5 = 0; this.field_k.length > var5; var5++) {
-              var7[var5] = this.field_k[var5];
+            for (var5 = 0; this.playerPingMillis.length > var5; var5++) {
+              var7[var5] = this.playerPingMillis[var5];
             }
-            this.field_k = var4;
+            this.playerPingMillis = var4;
           }
         }
-        this.field_k[param2] = param0;
+        this.playerPingMillis[param2] = param0;
     }
 
-    final void a(byte param0, String param1, IsaacPacketBuffer param2) {
+    final void sendDebugRequest(byte param0, String param1, IsaacPacketBuffer param2) {
         DebugMessage var4 = null;
         try {
           if (param0 < 63) {
-            this.a((byte) -70, -117);
+            this.setPingMillis((byte) -70, -117);
           }
           var4 = new DebugMessage();
           var4.field_b = (DebugSendable) ((Object) new DebugRequest(param1));
@@ -760,7 +760,7 @@ final class kda {
         }
     }
 
-    final void a(IsaacPacketBuffer param0, int param1) {
+    final void updateNetwork(IsaacPacketBuffer param0, int param1) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -772,33 +772,33 @@ final class kda {
         var5 = VoidHunters.field_G;
         try {
           if (!SocketNetworkArchiveClient.g(-121)) {
-            if (this.field_l) {
+            if (this.ready) {
               GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Not ready");
             }
-            this.field_l = false;
+            this.ready = false;
           }
           var3_int = 80 / ((-42 - param1) / 46);
-          if (this.field_a) {
-            if (this.field_l) {
+          if (this.receivingGameState) {
+            if (this.ready) {
               GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Not ready");
             }
-            this.field_l = false;
+            this.ready = false;
           }
-          if (null != this.field_j) {
-            this.field_j.a(param0, SetPointDefenceLaserProjectileDamage.field_o, 126);
-            if (this.field_j.a(0)) {
-              this.field_j = null;
+          if (null != this.dataSender) {
+            this.dataSender.sendNextChunk(param0, SetPointDefenceLaserProjectileDamage.field_o, 126);
+            if (this.dataSender.isIdle(0)) {
+              this.dataSender = null;
               GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Finished sending from Carousel_clientgame.dataSender");
             }
           }
-          this.field_b = (1 + this.field_b) % 5;
-          if (this.field_i.size(3) > 0 &&
-            this.field_b == 0) {
-            var4 = (CarouselEvent) (this.field_i.first(0));
+          this.eventFlushCounter = (1 + this.eventFlushCounter) % 5;
+          if (this.bufferedOutgoing.size(3) > 0 &&
+            this.eventFlushCounter == 0) {
+            var4 = (CarouselEvent) (this.bufferedOutgoing.first(0));
             while (var4 != null) {
-              this.a(var4, param0, 1000);
+              this.sendEvent(var4, param0, 1000);
               var4.unlink(-3846);
-              var4 = (CarouselEvent) (this.field_i.next((byte) 100));
+              var4 = (CarouselEvent) (this.bufferedOutgoing.next((byte) 100));
             }
             return;
           }
@@ -817,7 +817,7 @@ final class kda {
         }
     }
 
-    final void b(CarouselCommongameInfo param0, int param1) {
+    final void startBlackBoxReplay(CarouselCommongameInfo param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -847,18 +847,18 @@ final class kda {
         }
     }
 
-    public kda() {
-        this.field_h = 2147483647;
-        this.field_c = new IntrusiveDeque();
-        this.field_m = new um();
-        this.field_o = true;
-        this.field_l = false;
-        this.field_a = false;
-        this.field_i = new IntrusiveDeque();
-        this.field_b = 0;
-        this.field_q = false;
-        this.field_f = 0;
-        this.field_p = false;
+    public CarouselGameClient() {
+        this.readyTick = 2147483647;
+        this.bufferedIncoming = new IntrusiveDeque();
+        this.dataReceiver = new ChunkedDataReceiver();
+        this.serverUpdatesSuspended = true;
+        this.ready = false;
+        this.receivingGameState = false;
+        this.bufferedOutgoing = new IntrusiveDeque();
+        this.eventFlushCounter = 0;
+        this.stoppedWhileReceivingGameState = false;
+        this.lastSubmittedEventTick = 0;
+        this.readyEventSent = false;
     }
 
     static {

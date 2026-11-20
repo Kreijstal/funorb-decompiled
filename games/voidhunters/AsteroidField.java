@@ -1593,7 +1593,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime264 = HuffmanCodec.fetchLocalizedResource((byte) -98, "VOTE_MORE_NEUTRALS");
           if (null != var2Lifetime264) {
-            ob.field_m = Cp1252Strings.decode((byte) -125, var2Lifetime264);
+            OpenGlTexture3D.field_m = Cp1252Strings.decode((byte) -125, var2Lifetime264);
           }
           var2Lifetime265 = HuffmanCodec.fetchLocalizedResource((byte) -72, "VOTE_LESS_NEUTRALS");
           if (null != var2Lifetime265) {
@@ -1927,7 +1927,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           if (param0 != -37) {
             AsteroidField.getParagraphHeight((byte) 0, (String) null, -53, 66, 33);
           }
-          if (!li.field_i) {
+          if (!OpenGlTexture1D.field_i) {
             stackIn_7_0 = ita.a(param3, param0 + 8025).getParagraphHeight(param1, param4, param2);
             return stackIn_7_0;
           }

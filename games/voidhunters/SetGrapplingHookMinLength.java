@@ -61,10 +61,10 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
           if (param2 >= NebulaField.field_c &&
             EnvironmentReflectionGpuMaterialEffect.field_i >= param2) {
             var39 = ResourceNode.field_b[param2];
-            var16 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 - param1);
-            var17 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param1 + param0);
-            var18 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, -var8 + param0);
-            var19 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 + var8);
+            var16 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 - param1);
+            var17 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param1 + param0);
+            var18 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, -var8 + param0);
+            var19 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 + var8);
             GetSalvoRepairTimeMultiplier.a(param4, var18, var39, (byte) 75, var16);
             GetSalvoRepairTimeMultiplier.a(param5, var19, var39, (byte) 75, var18);
             GetSalvoRepairTimeMultiplier.a(param4, var17, var39, (byte) 75, var19);
@@ -94,10 +94,10 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
                 var15 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
                 if (var9 < var8) {
                   var17Lifetime1 = dw.field_a[var9];
-                  var18Lifetime1 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 + var7_int);
-                  var19Lifetime1 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 - var7_int);
-                  var20 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, var17Lifetime1 + param0);
-                  var21 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, -var17Lifetime1 + param0);
+                  var18Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 + var7_int);
+                  var19Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 - var7_int);
+                  var20 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, var17Lifetime1 + param0);
+                  var21 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, -var17Lifetime1 + param0);
                   if (var16Lifetime1 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
                     var40 = ResourceNode.field_b[var16Lifetime1];
                     GetSalvoRepairTimeMultiplier.a(param4, var21, var40, (byte) 75, var19Lifetime1);
@@ -111,8 +111,8 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
                     GetSalvoRepairTimeMultiplier.a(param4, var18Lifetime1, var41, (byte) 75, var20);
                   }
                 } else {
-                  var17Lifetime1 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 + var7_int);
-                  var18Lifetime1 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 - var7_int);
+                  var17Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 + var7_int);
+                  var18Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param0 - var7_int);
                   if (EnvironmentReflectionGpuMaterialEffect.field_i >= var16Lifetime1) {
                     GetSalvoRepairTimeMultiplier.a(param4, var17Lifetime1, ResourceNode.field_b[var16Lifetime1], (byte) 75, var18Lifetime1);
                   }
@@ -132,14 +132,14 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
             }
             var17Lifetime1Lifetime1 = var9 + param0;
             var18Lifetime1Lifetime1 = -var9 + param0;
-            if (ob.field_j > var17Lifetime1Lifetime1) {
+            if (OpenGlTexture3D.field_j > var17Lifetime1Lifetime1) {
               continue;
             }
             if (var18Lifetime1Lifetime1 > GetCountermeasureLauncherProjectiles.field_o) {
               continue;
             }
-            var17Lifetime1Lifetime1 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, var17Lifetime1Lifetime1);
-            var18Lifetime1Lifetime1 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, var18Lifetime1Lifetime1);
+            var17Lifetime1Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, var17Lifetime1Lifetime1);
+            var18Lifetime1Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, var18Lifetime1Lifetime1);
             if (var8 <= var7_int) {
               if (var16Lifetime1Lifetime1 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
                 GetSalvoRepairTimeMultiplier.a(param4, var17Lifetime1Lifetime1, ResourceNode.field_b[var16Lifetime1Lifetime1], (byte) 75, var18Lifetime1Lifetime1);
@@ -156,8 +156,8 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
               stackIn_42_0 = dw.field_a[var7_int];
             }
             var19Lifetime1Lifetime1 = stackIn_42_0;
-            var20Lifetime1 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, var19Lifetime1Lifetime1 + param0);
-            var21Lifetime1 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, -var19Lifetime1Lifetime1 + param0);
+            var20Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, var19Lifetime1Lifetime1 + param0);
+            var21Lifetime1 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, -var19Lifetime1Lifetime1 + param0);
             if (var16Lifetime1Lifetime1 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
               var42 = ResourceNode.field_b[var16Lifetime1Lifetime1];
               GetSalvoRepairTimeMultiplier.a(param4, var21Lifetime1, var42, (byte) 75, var18Lifetime1Lifetime1);

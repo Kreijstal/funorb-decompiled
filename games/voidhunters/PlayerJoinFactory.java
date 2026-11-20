@@ -7,7 +7,7 @@ final class PlayerJoinFactory implements GameStateFactory {
     static String field_a;
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        if (li.field_i) {
+        if (OpenGlTexture1D.field_i) {
           param5 = param5 | -16777216;
           param2 = param2 | -16777216;
           GetDebrisCarryOver.a(8, param0 + param1, 1, param2, param4, param3 + param4, param1 + param0, param0, param2, param4, param5);

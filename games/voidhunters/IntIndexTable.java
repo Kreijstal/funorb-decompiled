@@ -19,7 +19,7 @@ final class IntIndexTable {
             stackIn_2_0 = 46;
             return stackIn_2_0;
           }
-          if (!li.field_i) {
+          if (!OpenGlTexture1D.field_i) {
             stackIn_7_0 = ita.a(param7, 7988).drawParagraph(param6, param2, param0, param9, param1, param8, param12, param4, param5, param10, param3);
             return stackIn_7_0;
           }

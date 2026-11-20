@@ -5,7 +5,7 @@ final class di extends TextureOperation {
     private boolean field_n;
     private boolean field_o;
     static String field_k;
-    static kda field_l;
+    static CarouselGameClient field_l;
     static PrimitiveType field_i;
     static String field_m;
     static String field_j;

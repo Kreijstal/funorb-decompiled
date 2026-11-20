@@ -197,8 +197,8 @@ final class NebulaFieldFactory implements GameStateFactory {
           boolean decompiledFrameCompleted0 = true;
           if (EnvironmentReflectionGpuMaterialEffect.field_i >= param4 &&
             param5 >= NebulaField.field_c) {
-            if (ob.field_j > param2) {
-              param2 = ob.field_j;
+            if (OpenGlTexture3D.field_j > param2) {
+              param2 = OpenGlTexture3D.field_j;
               var6_int = 0;
               if (var10 != 0) {
                 if (param2 > GetCountermeasureLauncherProjectiles.field_o) {
@@ -220,8 +220,8 @@ final class NebulaFieldFactory implements GameStateFactory {
                 var6_int = 1;
               }
             }
-            if (ob.field_j > param0) {
-              param0 = ob.field_j;
+            if (OpenGlTexture3D.field_j > param0) {
+              param0 = OpenGlTexture3D.field_j;
               var7 = 0;
               if (var10 != 0) {
                 if (GetCountermeasureLauncherProjectiles.field_o >= param0) {

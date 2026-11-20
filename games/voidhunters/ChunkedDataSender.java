@@ -1,33 +1,33 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ova {
-    private int field_a;
-    private byte[] field_c;
-    private int field_e;
-    private int field_d;
-    private int field_b;
-    private int field_f;
+final class ChunkedDataSender {
+    private int sendDelay;
+    private byte[] data;
+    private int packetOpcode;
+    private int outputReserve;
+    private int offset;
+    private int sendInterval;
 
-    final boolean a(int param0) {
+    final boolean isIdle(int param0) {
         if (param0 == 0) {
-          return this.field_c == null ? true : false;
+          return this.data == null ? true : false;
         }
         byte[] var3 = (byte[]) null;
-        this.a((byte[]) null, 29);
-        return this.field_c == null ? true : false;
+        this.setData((byte[]) null, 29);
+        return this.data == null ? true : false;
     }
 
-    final void a(byte[] param0, int param1) {
+    final void setData(byte[] param0, int param1) {
         try {
-          this.field_c = param0;
-          this.field_b = param1;
+          this.data = param0;
+          this.offset = param1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ova.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(IsaacPacketBuffer param0, boolean param1, int param2) {
+    final void sendNextChunk(IsaacPacketBuffer param0, boolean param1, int param2) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -38,43 +38,43 @@ final class ova {
         int var5 = 0;
         int var6 = 0;
         try {
-          if (null == this.field_c) {
+          if (null == this.data) {
             return;
           }
-          fieldTemp$0 = this.field_a - 1;
-          this.field_a = this.field_a - 1;
+          fieldTemp$0 = this.sendDelay - 1;
+          this.sendDelay = this.sendDelay - 1;
           if (fieldTemp$0 > 0) {
             return;
           }
-          this.field_a = this.field_a + this.field_f;
+          this.sendDelay = this.sendDelay + this.sendInterval;
           if (param1) {
-            System.out.println("updating datasender, total " + this.field_c.length);
+            System.out.println("updating datasender, total " + this.data.length);
           }
           var4_int = param0.payload.length - param0.position;
           if (param2 <= 121) {
-            this.field_e = 8;
+            this.packetOpcode = 8;
           }
-          var5 = -this.field_d + var4_int;
+          var5 = -this.outputReserve + var4_int;
           if (param1) {
             System.out.println("sendable_now " + var5);
           }
           if (var5 <= 0) {
             return;
           }
-          param0.writeIsaacByte(24335, this.field_e);
+          param0.writeIsaacByte(24335, this.packetOpcode);
           param0.position = param0.position + 2;
           var6 = param0.position;
-          param0.writeInt(this.field_c.length, 332614536);
-          param0.writeInt(this.field_b, 332614536);
-          if (var5 > this.field_c.length - this.field_b) {
-            var5 = -this.field_b + this.field_c.length;
+          param0.writeInt(this.data.length, 332614536);
+          param0.writeInt(this.offset, 332614536);
+          if (var5 > this.data.length - this.offset) {
+            var5 = -this.offset + this.data.length;
           }
           param0.writeShort(var5, true);
-          param0.writeBytes(this.field_b, this.field_c, -1, var5);
+          param0.writeBytes(this.offset, this.data, -1, var5);
           param0.writeLengthShort(param0.position - var6, -124);
-          this.field_b = this.field_b + var5;
-          if (this.field_b >= this.field_c.length) {
-            this.field_c = null;
+          this.offset = this.offset + var5;
+          if (this.offset >= this.data.length) {
+            this.data = null;
             if (!param1) {
               return;
             }
@@ -95,11 +95,11 @@ final class ova {
         }
     }
 
-    ova(int param0) {
-        this.field_d = 1024;
-        this.field_f = 8;
-        this.field_a = 0;
-        this.field_e = param0;
+    ChunkedDataSender(int param0) {
+        this.outputReserve = 1024;
+        this.sendInterval = 8;
+        this.sendDelay = 0;
+        this.packetOpcode = param0;
     }
 
     static {

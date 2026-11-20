@@ -162,7 +162,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (param0 <= 23) {
             GameKeyHandler.clearSharedReferences(115);
           }
-          if (!li.field_i) {
+          if (!OpenGlTexture1D.field_i) {
             stackIn_6_0 = ita.a(param2, 7988).getParagraphWidth(param4, param3);
             return stackIn_6_0;
           }

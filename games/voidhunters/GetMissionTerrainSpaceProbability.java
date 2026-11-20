@@ -8,14 +8,14 @@ final class GetMissionTerrainSpaceProbability extends ConsoleCommand {
     final static void a(int param0) {
         if (param0 <= 48) {
           GetMissionTerrainSpaceProbability.a(45);
-          if (li.field_i) {
+          if (OpenGlTexture1D.field_i) {
             feb.a(GetDebrisGroupColour.field_r, true).a(true);
             return;
           }
           bia.a((byte) 124);
           return;
         }
-        if (li.field_i) {
+        if (OpenGlTexture1D.field_i) {
           feb.a(GetDebrisGroupColour.field_r, true).a(true);
           return;
         }

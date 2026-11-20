@@ -85,7 +85,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     boolean field_g;
     private boolean field_Yb;
     private float field_Wb;
-    aia field_qb;
+    OpenGlTexture2D field_qb;
     boolean field_n;
     int field_V;
     private boolean field_l;
@@ -581,12 +581,12 @@ final class OpenGlToolkit extends GraphicsToolkit {
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
         tob var3 = null;
-        nv var3_ref = null;
+        OpenGlRenderbuffer var3_ref = null;
         RuntimeException var3_ref2 = null;
         DualLinkNode var4 = null;
         int var6 = 0;
-        nv var7 = null;
-        nv var8 = null;
+        OpenGlRenderbuffer var7 = null;
+        OpenGlRenderbuffer var8 = null;
         tob var9 = null;
         tob var10 = null;
         var6 = VoidHunters.field_G;
@@ -626,19 +626,19 @@ final class OpenGlToolkit extends GraphicsToolkit {
             }
             this.pushFramebuffer((byte) -109, (OpenGlFramebufferBinding) (this.field_jb));
             if (param1) {
-              var3_ref = (nv) (this.field_Ic.get((long)(this.field_qc.getWidth() << 16 | this.field_qc.getHeight()), 100));
+              var3_ref = (OpenGlRenderbuffer) (this.field_Ic.get((long)(this.field_qc.getWidth() << 16 | this.field_qc.getHeight()), 100));
               if (var3_ref == null) {
-                var7 = new nv(this, 6402, this.field_qc.getWidth(), this.field_qc.getHeight());
+                var7 = new OpenGlRenderbuffer(this, 6402, this.field_qc.getWidth(), this.field_qc.getHeight());
                 var3_ref = var7;
-                this.field_Gc = this.field_Gc + var7.field_m;
+                this.field_Gc = this.field_Gc + var7.byteSize;
                 while (this.field_Gc > 2097152) {
                   var4 = this.field_E.removeLast(1);
                   if (var4 != null) {
-                    var8 = (nv) (var4);
+                    var8 = (OpenGlRenderbuffer) (var4);
                     var8.unlinkSecondary((byte) -35);
                     var8.unlink(-3846);
-                    var8.e((byte) 124);
-                    this.field_Gc = this.field_Gc - var8.field_m;
+                    var8.dispose((byte) 124);
+                    this.field_Gc = this.field_Gc - var8.byteSize;
                     continue;
                   }
                   break;
@@ -1282,9 +1282,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private final void initializeDefaultResources(byte param0) {
         OpenGlFramebuffer discarded$16 = null;
         this.field_wc = new OpenGlTexture[this.field_Dc];
-        this.field_qb = new aia(this, 3553, 6408, 1, 1);
-        aia discarded$0 = new aia(this, 3553, 6408, 1, 1);
-        aia discarded$1 = new aia(this, 3553, 6408, 1, 1);
+        this.field_qb = new OpenGlTexture2D(this, 3553, 6408, 1, 1);
+        OpenGlTexture2D discarded$0 = new OpenGlTexture2D(this, 3553, 6408, 1, 1);
+        OpenGlTexture2D discarded$1 = new OpenGlTexture2D(this, 3553, 6408, 1, 1);
         ne discarded$2 = new ne(this);
         ne discarded$3 = new ne(this);
         ne discarded$4 = new ne(this);

@@ -849,7 +849,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               var21_float = param3.c(0, this.finaly);
               var22 = -(2048 + this.finalangle) << 3;
               var23 = var12 | -16777216;
-              if (!li.field_i) {
+              if (!OpenGlTexture1D.field_i) {
                 if (null != LoadBlackboxRecording.field_o) {
                   var18 -= 11;
                   var17 -= 11;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ssb extends qg {
-    private li field_c;
+    private OpenGlTexture1D field_c;
     private bt field_d;
     private jjb field_e;
 
@@ -18,8 +18,8 @@ final class ssb extends qg {
         try {
           this.field_e = param1;
           this.d(34163);
-          this.field_c = new li(this.field_b, 6406, 2, new byte[]{(byte) 0, (byte)-1}, 6406);
-          this.field_c.a(false, true);
+          this.field_c = new OpenGlTexture1D(this.field_b, 6406, 2, new byte[]{(byte) 0, (byte)-1}, 6406);
+          this.field_c.setWrap(false, true);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ssb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -28,7 +28,7 @@ final class ssb extends qg {
     final void a(int param0, byte param1, OpenGlTexture param2) {
         try {
           if (param1 != 125) {
-            this.field_c = (li) null;
+            this.field_c = (OpenGlTexture1D) null;
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ssb.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');

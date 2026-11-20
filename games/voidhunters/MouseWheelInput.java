@@ -6,7 +6,7 @@ abstract class MouseWheelInput {
 
     final static void a(int param0, int param1, int param2, int param3) {
         int var4 = -107 % ((0 - param3) / 34);
-        if (!li.field_i) {
+        if (!OpenGlTexture1D.field_i) {
           SoftwareRasterizer2D.drawPixel(param2, param1, param0);
           return;
         }
