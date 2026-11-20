@@ -48,7 +48,7 @@ final class GetPointDefenceLaserProjectileDamage extends ConsoleCommand {
         GetSniperCannonEnergyUsed.field_o = new String[SetFightersPerPlayerMaximum.field_o];
         GetSniperCannonEnergyUsed.field_o[5] = GetMachineGunAimspeed.field_q;
         GetSniperCannonEnergyUsed.field_o[21] = bda.field_a;
-        GetSniperCannonEnergyUsed.field_o[15] = rq.field_G;
+        GetSniperCannonEnergyUsed.field_o[15] = AccountCreationForm.field_G;
         GetSniperCannonEnergyUsed.field_o[17] = SetBots.field_p;
         GetSniperCannonEnergyUsed.field_o[9] = vqa.field_j;
         if (param0 <= -75) {

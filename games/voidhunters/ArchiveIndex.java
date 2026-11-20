@@ -433,10 +433,10 @@ final class ArchiveIndex {
           stackIn_4_0 = BitmapTextLayout.field_n.scrollPane;
           stackIn_4_1 = 38;
           stackIn_4_2 = param1;
-          stackIn_4_3 = param2 * (3 * (nna.field_w + 2));
+          stackIn_4_3 = param2 * (3 * (DialogMessagePanel.field_w + 2));
           stackIn_5_4 = (qg.field_a == BitmapTextLayout.field_n.scrollPane);
           boolean decompiledFrameRemainder0 = true;
-          var3_int = ((ScrollPaneWidget) (Object) stackIn_4_0).layoutAndUpdateScrolling((byte) stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, param0, nna.field_w + 2) ? 1 : 0;
+          var3_int = ((ScrollPaneWidget) (Object) stackIn_4_0).layoutAndUpdateScrolling((byte) stackIn_4_1, stackIn_4_2, stackIn_4_3, stackIn_5_4, param0, DialogMessagePanel.field_w + 2) ? 1 : 0;
           var4 = BitmapTextLayout.field_n.content.children;
           var5 = null;
           if (iwa.field_b == 2) {
@@ -483,7 +483,7 @@ final class ArchiveIndex {
                   var7.field_Bb.field_tb = SetMissileLauncherRandomness.field_o;
                   var7.field_Bb.field_qb = var11;
                   var12 = 1;
-                  var7.field_Bb.setBounds(0, 127, SetMissileLauncherRandomness.field_o.paddedWidth + 3, var9, nna.field_w);
+                  var7.field_Bb.setBounds(0, 127, SetMissileLauncherRandomness.field_o.paddedWidth + 3, var9, DialogMessagePanel.field_w);
                 }
                 var7.field_Eb.field_Y = var10;
                 var7.field_wb.field_Y = var10;
@@ -506,7 +506,7 @@ final class ArchiveIndex {
                   stackIn_35_1 = var7.field_Fb;
                 }
                 stackIn_34_0.text = stackIn_35_1;
-                var7.field_wb.setBounds(var13, param1 + 121, var14, var9, nna.field_w);
+                var7.field_wb.setBounds(var13, param1 + 121, var14, var9, DialogMessagePanel.field_w);
                 stackIn_38_0 = var7.field_Eb;
                 if (null != var7.field_Ab) {
                   stackIn_39_1 = var7.field_Ab;
@@ -514,10 +514,10 @@ final class ArchiveIndex {
                   stackIn_39_1 = SetCountermeasuresPulseRadius.field_o;
                 }
                 stackIn_38_0.text = stackIn_39_1;
-                var7.field_Eb.setBounds(var7.width - 80, -79, 80, var9, nna.field_w);
+                var7.field_Eb.setBounds(var7.width - 80, -79, 80, var9, DialogMessagePanel.field_w);
                 stackIn_43_0 = (var7.field_wb.text.equals(var7.field_Fb)) ? 0 : 1;
                 var15 = stackIn_43_0;
-                var9 = var9 + nna.field_w;
+                var9 = var9 + DialogMessagePanel.field_w;
                 if (var3_int == 0) {
                   var7.field_E = -var7.height + var9;
                 }

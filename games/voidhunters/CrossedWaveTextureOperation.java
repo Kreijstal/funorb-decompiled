@@ -85,7 +85,7 @@ final class CrossedWaveTextureOperation extends TextureOperation {
         var3 = var12;
         if (this.field_f.field_e) {
           var4 = SetSalvoUsesAllEnergy.textureYCoordinates[param0] - 2048;
-          for (var5 = 0; var5 < hob.textureWidth; var5++) {
+          for (var5 = 0; var5 < TextHotspotRegion.textureWidth; var5++) {
             var6 = -2048 + BoxBlurTextureOperation.textureXCoordinates[var5];
             var7 = this.firstOffsetX + var6;
             if (var7 >= -2048) {

@@ -60,7 +60,7 @@ final class EdgeMagnitudeTextureOperation extends TextureOperation {
           var25 = this.getInputMonochromeRow(0, wf.textureHeightMask & -1 + param0, 255);
           var5 = this.getInputMonochromeRow(0, param0, 255);
           var24 = this.getInputMonochromeRow(0, wf.textureHeightMask & param0 + 1, 255);
-          for (var7 = 0; var7 < hob.textureWidth; var7++) {
+          for (var7 = 0; var7 < TextHotspotRegion.textureWidth; var7++) {
             var8 = this.heightScale * (var24[var7] - var25[var7]);
             var9 = (-var5[SetMassDriverEnergyUsed.field_q & -1 + var7] + var5[var7 + 1 & SetMassDriverEnergyUsed.field_q]) * this.heightScale;
             var10 = var9 >> 12;

@@ -69,7 +69,7 @@ final class RangeTextureOperation extends TextureOperation {
         int[] var3 = var7;
         if (this.field_f.field_e) {
           var4 = this.getInputMonochromeRow(0, param0, 255);
-          for (var5 = 0; var5 < hob.textureWidth; var5++) {
+          for (var5 = 0; var5 < TextHotspotRegion.textureWidth; var5++) {
             var7[var5] = (var4[var5] * this.range >> 12) + this.lowerBound;
           }
         }
@@ -101,7 +101,7 @@ final class RangeTextureOperation extends TextureOperation {
           var8 = var20[0];
           var9 = var20[1];
           var10 = var20[2];
-          for (var11 = 0; var11 < hob.textureWidth; var11++) {
+          for (var11 = 0; var11 < TextHotspotRegion.textureWidth; var11++) {
             var8[var11] = (var29[var11] * this.range >> 12) + this.lowerBound;
             var9[var11] = (this.range * var30[var11] >> 12) + this.lowerBound;
             var10[var11] = (this.range * var31[var11] >> 12) + this.lowerBound;

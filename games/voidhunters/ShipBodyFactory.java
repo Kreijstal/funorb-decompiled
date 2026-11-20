@@ -44,7 +44,7 @@ final class ShipBodyFactory implements GameStateFactory {
           }
           lkb.a(stackIn_4_0, (byte) -106);
           GetReverbWidth.field_o.a(0, -92, -2 + WaterTextures.field_g.height - 40, 0, WaterTextures.field_g.width);
-          SetPhasedEnergyBeamPulsetime.field_o.setBounds(0, -11, SetOndamageParticleLife.field_o.width, 0, nna.field_w);
+          SetPhasedEnergyBeamPulsetime.field_o.setBounds(0, -11, SetOndamageParticleLife.field_o.width, 0, DialogMessagePanel.field_w);
           stackIn_6_0 = SecondaryNodeDequeIterator.field_a;
           stackIn_6_1 = 0;
           stackIn_6_2 = param0 + 25;
@@ -54,9 +54,9 @@ final class ShipBodyFactory implements GameStateFactory {
           } else {
             stackIn_7_4 = 0;
           }
-          ((Widget) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2, stackIn_6_3 - stackIn_7_4, 2 + nna.field_w, 18);
-          GetPointDefenceLaserProjectileDamage.field_o.setBounds(-40 + (-2 + SetOndamageParticleLife.field_o.width) - ResourceNode.field_a, param0 + 18, ResourceNode.field_a + 42, nna.field_w + 2, 18);
-          WaterTextures.field_f.setBoundsAndLayout(SetOndamageParticleLife.field_o.width, 2, -1, -nna.field_w + (SetOndamageParticleLife.field_o.height - 2) - 20, 2 + (nna.field_w + 20), 0, ResourceNode.field_a);
+          ((Widget) (Object) stackIn_6_0).setBounds(stackIn_6_1, stackIn_6_2, stackIn_6_3 - stackIn_7_4, 2 + DialogMessagePanel.field_w, 18);
+          GetPointDefenceLaserProjectileDamage.field_o.setBounds(-40 + (-2 + SetOndamageParticleLife.field_o.width) - ResourceNode.field_a, param0 + 18, ResourceNode.field_a + 42, DialogMessagePanel.field_w + 2, 18);
+          WaterTextures.field_f.setBoundsAndLayout(SetOndamageParticleLife.field_o.width, 2, -1, -DialogMessagePanel.field_w + (SetOndamageParticleLife.field_o.height - 2) - 20, 2 + (DialogMessagePanel.field_w + 20), 0, ResourceNode.field_a);
           GetShipToShipRamDamage.field_q.setBounds(0, -41, WaterTextures.field_g.width, WaterTextures.field_g.height - 40, 40);
           GetWeaponParticleSpeedDownshift.field_q.setBounds(0, 121, vva.field_r.width, 0, 30);
           if (param0 != 100) {

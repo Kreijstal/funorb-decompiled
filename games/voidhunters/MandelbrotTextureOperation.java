@@ -212,7 +212,7 @@ final class MandelbrotTextureOperation extends TextureOperation {
         var15 = this.field_f.getRow((byte) 16, param0);
         var3 = var15;
         if (this.field_f.field_e) {
-          for (var4 = 0; var4 < hob.textureWidth; var4++) {
+          for (var4 = 0; var4 < TextHotspotRegion.textureWidth; var4++) {
             var5 = this.offsetX + (BoxBlurTextureOperation.textureXCoordinates[var4] << 12) / this.coordinateDivisor;
             var6 = this.offsetY + (SetSalvoUsesAllEnergy.textureYCoordinates[param0] << 12) / this.coordinateDivisor;
             var7 = var5;

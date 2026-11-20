@@ -43,7 +43,7 @@ final class SetRepairModeRadius extends ConsoleCommand {
             }
             var1 = (jk) (SetMachineGunAimarc.field_q.next((byte) 62));
           }
-          var1_ref = (LobbyGameEntry) (kja.field_E.first(0));
+          var1_ref = (LobbyGameEntry) (HotspotTextWidget.field_E.first(0));
           while (var1_ref != null) {
             if (var1_ref.field_Db > 0) {
               var1_ref.field_Db = var1_ref.field_Db - 1;
@@ -54,7 +54,7 @@ final class SetRepairModeRadius extends ConsoleCommand {
                 }
               }
             }
-            var1_ref = (LobbyGameEntry) (kja.field_E.next((byte) 118));
+            var1_ref = (LobbyGameEntry) (HotspotTextWidget.field_E.next((byte) 118));
           }
           var1Lifetime1 = (jk) (OpenGlPostEffect.field_e.first(param0));
           while (var1Lifetime1 != null) {

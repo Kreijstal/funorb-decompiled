@@ -144,7 +144,7 @@ final class TrailHolder implements DiffableState {
         wja.field_a = 127 & var3;
         stackIn_5_0 = ((128 & var3) != 0);
         TickCondition.field_e = stackIn_5_0;
-        bl.field_A = var8.readUnsignedByte((byte) -106);
+        ModalPanel.field_A = var8.readUnsignedByte((byte) -106);
         SetSniperCannonFiringLeeway.field_q = var8.readLong(255);
         if (wja.field_a == 2) {
           SetSalvoUsesAllEnergy.field_o = var8.readUnsignedShort(1869);

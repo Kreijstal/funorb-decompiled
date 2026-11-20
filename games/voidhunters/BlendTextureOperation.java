@@ -60,7 +60,7 @@ final class BlendTextureOperation extends TextureOperation {
           var14 = this.getInputMonochromeRow(0, param0, 255);
           var15 = this.getInputMonochromeRow(1, param0, 255);
           var13 = this.getInputMonochromeRow(2, param0, 255);
-          for (var7 = 0; var7 < hob.textureWidth; var7++) {
+          for (var7 = 0; var7 < TextHotspotRegion.textureWidth; var7++) {
             var8 = var13[var7];
             if (var8 != 4096) {
               if (var8 != 0) {
@@ -119,7 +119,7 @@ final class BlendTextureOperation extends TextureOperation {
           var56 = var51[0];
           var57 = var51[1];
           var58 = var51[2];
-          for (var16 = 0; hob.textureWidth > var16; var16++) {
+          for (var16 = 0; TextHotspotRegion.textureWidth > var16; var16++) {
             var17 = var52[var16];
             if (var17 != 4096) {
               var56Lifetime1 = var51[0];

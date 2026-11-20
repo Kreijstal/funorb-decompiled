@@ -83,7 +83,7 @@ final class bd {
           }
           MissionListFactory.field_a = 2;
           qs.field_c = 4;
-          nna.field_w = 15;
+          DialogMessagePanel.field_w = 15;
           atb.field_d = 11;
           jk.field_Cb = 2;
           var7 = fab.a(param2, "largefont", 0, param3, "lobby");
@@ -94,13 +94,13 @@ final class bd {
           UiDraggableContainer.field_y.setInlineSprites(var5, var25);
           var8 = new Widget(0L, (Widget) null);
           var8.field_Y = 16777215;
-          var8.field_D = nna.field_w;
+          var8.field_D = DialogMessagePanel.field_w;
           var8.font = (BitmapFont) ((Object) var7);
           var8.field_B = 1;
           var9 = var8;
           var9.field_F = 1;
           var10 = new Widget(0L, (Widget) null);
-          var10.field_D = nna.field_w;
+          var10.field_D = DialogMessagePanel.field_w;
           var10.field_Y = 16777215;
           var10.font = (BitmapFont) ((Object) GetDebrisCarryOverPercentage.field_o);
           var11 = var10;
@@ -137,7 +137,7 @@ final class bd {
           DeveloperConsole.field_q.field_B = 1;
           DeveloperConsole.field_q.font = (BitmapFont) ((Object) GetDebrisCarryOverPercentage.field_o);
           DeveloperConsole.field_q.field_Y = 13421772;
-          DeveloperConsole.field_q.field_D = nna.field_w;
+          DeveloperConsole.field_q.field_D = DialogMessagePanel.field_w;
           GetMissionDebrisDefaultProbability.field_o = new Widget(0L, DeveloperConsole.field_q);
           GetMissionDebrisDefaultProbability.field_o.field_jb = 8421504;
           GetMissionDebrisDefaultProbability.field_o.field_U = 16777215;
@@ -145,7 +145,7 @@ final class bd {
           GetMissionDebrisDefaultProbability.field_o.field_Y = 16764006;
           GetMissionDebrisDefaultProbability.field_o.field_qb = 16777215;
           var15 = new Widget(0L, GetMissionDebrisDefaultProbability.field_o);
-          var15.field_D = nna.field_w;
+          var15.field_D = DialogMessagePanel.field_w;
           var15.field_Y = 16777215;
           var15.font = (BitmapFont) ((Object) var7);
           SetAutoAfkTimeout.field_q = new Widget(0L, DeveloperConsole.field_q);
@@ -159,7 +159,7 @@ final class bd {
           SetReverbDamp.field_q = new Widget(0L, SetShieldsDirectionalHalfarcCuts.field_p);
           SetReverbDamp.field_q.applyStyle(18445, GetMissionDebrisDefaultProbability.field_o);
           var16 = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "button_mouseover");
-          TextureCombineOperation.field_a = new PopupMenuWidget(GetDebrisMax.field_o, var12, DeveloperConsole.field_q, GetMissionDebrisDefaultProbability.field_o, 3, 2, MissionListFactory.field_a, 3, nna.field_w);
+          TextureCombineOperation.field_a = new PopupMenuWidget(GetDebrisMax.field_o, var12, DeveloperConsole.field_q, GetMissionDebrisDefaultProbability.field_o, 3, 2, MissionListFactory.field_a, 3, DialogMessagePanel.field_w);
           dla.field_e = new Widget(0L, GetMissionDebrisDefaultProbability.field_o);
           dla.field_e.field_mb = var16;
           dla.field_e.field_gb = var13;

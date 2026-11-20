@@ -68,7 +68,7 @@ final class SetMachineGunFireForce extends ConsoleCommand {
           }
           var2 = (pd) (SocketConnector.field_c.first(0));
           while (var2 != null) {
-            sn.a(var2.field_e, (byte) 83, var2.field_h, var2.field_f, var2.field_i, 16711935, param1);
+            AccountCreationDialog.drawWorldArrow(var2.field_e, (byte) 83, var2.field_h, var2.field_f, var2.field_i, 16711935, param1);
             var2 = (pd) (SocketConnector.field_c.next((byte) 108));
           }
           if (param0 == -99) {

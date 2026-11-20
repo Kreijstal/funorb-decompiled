@@ -214,12 +214,12 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
         GetShieldsDirectionalArcParticleLife.field_p = SoftwareRasterizer2D.width;
         StripesTextureOperation.a(true);
         lc.field_b.a(0, -83, -40 + (tb.field_a.height - 2), 0, tb.field_a.width);
-        nna.field_v.setBounds(0, -17, lw.field_i.width, 0, nna.field_w);
-        int var1 = nna.field_w + 2;
+        DialogMessagePanel.field_v.setBounds(0, -17, lw.field_i.width, 0, DialogMessagePanel.field_w);
+        int var1 = DialogMessagePanel.field_w + 2;
         DualLinkNode.field_f.setBounds(0, -26, lw.field_i.width, GetGrapplingHooksDamageableBySourcePlayer.field_o ? var1 : 0, lw.field_i.height - (GetGrapplingHooksDamageableBySourcePlayer.field_o ? var1 : 0));
         GetThrusterForce.a(0);
         SpawnChoiceFactory.field_c.setBounds(0, 124, tb.field_a.width, -40 + tb.field_a.height, 40);
-        qpb.field_w.setBounds(0, -65, ModelFaceAttachment.field_d.width, 0, 30);
+        AlphaContainer.field_w.setBounds(0, -65, ModelFaceAttachment.field_d.width, 0, 30);
         sra.field_a.setBounds(0, 124, ModelFaceAttachment.field_d.width, 30, -32 + ModelFaceAttachment.field_d.height - 40);
         ArchiveIndexLoader.field_a.setBounds(5, param0 ^ 120, 68, 5, 30);
         GetSniperCannonAimspeed.field_q.setBounds(75, 18, 78, 5, 30);

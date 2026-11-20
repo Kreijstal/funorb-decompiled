@@ -175,14 +175,14 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
     final static void a(byte param0, ResourceArchive param1, int param2, PcmStreamMixer param3) {
         GetShieldsDamageEnergyConversion.field_p = param2 * SetGrapplingHookRopeBreakLength.e(204) / 1000;
         GetPlayerRepairTime.a(param1, false);
-        NetworkArchiveRequest.a(param1, (byte) 36);
-        hob.a(param0 ^ 107, param1);
+        NetworkArchiveRequest.loadLogoMeshes(param1, (byte) 36);
+        TextHotspotRegion.loadLogoFinalFrame(param0 ^ 107, param1);
         SetSelfDestructPrepareToggleCooldown.e((byte) -39);
         if (param0 != 55) {
           return;
         }
         try {
-          GetMissionTerrainNebulaProbability.a(121);
+          GetMissionTerrainNebulaProbability.buildLogoGlowSprite(121);
           SetSalvoaim.field_r = 0 - GetShieldsDamageEnergyConversion.field_p;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jc.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

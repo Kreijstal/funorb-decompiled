@@ -47,7 +47,7 @@ final class MissionBuilder implements DiffableState {
             stackIn_13_0 = -1;
             return stackIn_13_0;
           }
-          var6Lifetime1 = hob.a(param3, var5_int, 118);
+          var6Lifetime1 = TextHotspotRegion.randomBoundedInt(param3, var5_int, 118);
           var5_intLifetime1 = 0;
           for (var7 = 0; param0.players.length > var7; var7++) {
             var8 = param0.getPlayer(var7, (byte) 59);
@@ -160,7 +160,7 @@ final class MissionBuilder implements DiffableState {
             var8 != 0)) {
             var13 = var12Lifetime1 - var11;
             for (var14 = 0; var14 < var13; var14++) {
-              var15 = hob.a(param1, param3.length, 120);
+              var15 = TextHotspotRegion.randomBoundedInt(param1, param3.length, 120);
               var10[var15] = 2;
             }
           }
@@ -355,7 +355,7 @@ final class MissionBuilder implements DiffableState {
           }
           var4_int = param2.getWidth((byte) -122) / 2;
           var5 = param2.getHeight(1) / 2;
-          var6 = hob.a(param0, 2, 118);
+          var6 = TextHotspotRegion.randomBoundedInt(param0, 2, 118);
           var7 = this.optionTotals[29];
           var8 = this.optionTotals[30];
           if (var7 > 0) {
@@ -375,23 +375,23 @@ final class MissionBuilder implements DiffableState {
             var11 = 0;
             var12 = 262144;
             for (var13 = 0; 1000 > var13; var13++) {
-              var10 = hob.a(param0, var4_int, 118) - var4_int / 2;
-              var11 = -(var5 / 2) + hob.a(param0, var5, 122);
+              var10 = TextHotspotRegion.randomBoundedInt(param0, var4_int, 118) - var4_int / 2;
+              var11 = -(var5 / 2) + TextHotspotRegion.randomBoundedInt(param0, var5, 122);
               if (param2.a(var12 + GetUseNiceTrails.field_p, var11, false, var10)) {
                 continue;
               }
               break;
             }
             var13Lifetime1 = GetBoostersCooldown.a(param0, (byte) 72);
-            var14 = 1 + hob.a(param0, 3, 127);
+            var14 = 1 + TextHotspotRegion.randomBoundedInt(param0, 3, 127);
             for (var15 = 0; var15 < 2; var15++) {
               for (var16 = 0; var16 < var14; var16++) {
                 var17 = t.a(var13Lifetime1, (byte) 101);
                 var17.setTeam(17704, 2);
                 var17.setAi(new ShipAI(), 4);
                 for (var18 = 0; var18 < 1000; var18++) {
-                  var19 = hob.a(param0, 8192, 117);
-                  var20 = hob.a(param0, var12, 127) >> 8;
+                  var19 = TextHotspotRegion.randomBoundedInt(param0, 8192, 117);
+                  var20 = TextHotspotRegion.randomBoundedInt(param0, var12, 127) >> 8;
                   var21 = var20 * (GetNumStars.cosAngle(var19, (byte) 81) >> 8) + var10;
                   if (var21 < -var4_int) {
                     var21 = -var4_int;
@@ -407,7 +407,7 @@ final class MissionBuilder implements DiffableState {
                     var22 = var5;
                   }
                   var17.setPosition(var21, var22, (byte) -55);
-                  var23 = hob.a(param0, 8192, 124);
+                  var23 = TextHotspotRegion.randomBoundedInt(param0, 8192, 124);
                   var17.setAngle(var23, -21);
                   var17.updateBounds(0);
                   if (param2.overlapsAnyBodyBoundingCircle(-11924, var17)) {
@@ -648,7 +648,7 @@ final class MissionBuilder implements DiffableState {
           }
           var6Lifetime1 = var5;
           if (var6Lifetime1 == -1) {
-            var6Lifetime1 = hob.a(param1, param2.length, 125);
+            var6Lifetime1 = TextHotspotRegion.randomBoundedInt(param1, param2.length, 125);
           }
           stackIn_14_0 = var6Lifetime1;
           return stackIn_14_0;
@@ -1842,8 +1842,8 @@ final class MissionBuilder implements DiffableState {
           for (var21 = 0; var18 > var21; var21++) {
             var22 = OpenGlFramebuffer.a(2, -1, true);
             var22.setTeam(17704, 2);
-            var23 = hob.a(param4, 8192, 122);
-            var24 = hob.a(param4, var19, 126) >> 8;
+            var23 = TextHotspotRegion.randomBoundedInt(param4, 8192, 122);
+            var24 = TextHotspotRegion.randomBoundedInt(param4, var19, 126) >> 8;
             for (var25_int = 0; 1000 > var25_int; var25_int++) {
               var22.setPosition((GetNumStars.cosAngle(var23, (byte) -108) >> 8) * var24, (TextureLineShape.sinAngle(var23, 127) >> 8) * var24, (byte) -112);
               var22.updateBounds(0);
@@ -2209,7 +2209,7 @@ final class MissionBuilder implements DiffableState {
         try {
           var6 = -78 / ((-30 - param3) / 39);
           var5_int = 0;
-          var7 = hob.a(param1, param0, 124);
+          var7 = TextHotspotRegion.randomBoundedInt(param1, param0, 124);
           for (var8 = 0; param2.length > var8; var8++) {
             var9 = param2[var8];
             if (var9 <= var7) {
@@ -2538,7 +2538,7 @@ final class MissionBuilder implements DiffableState {
             var14 = (var11 >> 8) * (GetNumStars.cosAngle(var10, (byte) 115) >> 8);
             var15 = (TextureLineShape.sinAngle(var10, 119) >> 8) * (var11 >> 8);
             var19.setPosition(var14 + param2, param3 + var15, (byte) -61);
-            var16 = hob.a(param1, 8192, 126);
+            var16 = TextHotspotRegion.randomBoundedInt(param1, 8192, 126);
             var19.setAngle(var16, -107);
             param4.addDebris(var19, (byte) 99);
             var7 = (ShipBody[]) (SoftwareSprite2D.a(var19, (Object[]) (var7), param0 ^ 0, ebb.field_a));
@@ -2661,9 +2661,9 @@ final class MissionBuilder implements DiffableState {
             var13 = -var9 + var10;
             var14 = var12 - var11;
             var15 = (long)TextLayout.approximateVectorLength(var13, (byte) 118, var14);
-            var17 = var9 + hob.a(param2, var13, 116);
-            var18 = var11 + hob.a(param2, var14, 126);
-            var19 = hob.a(param2, 8192, 118);
+            var17 = var9 + TextHotspotRegion.randomBoundedInt(param2, var13, 116);
+            var18 = var11 + TextHotspotRegion.randomBoundedInt(param2, var14, 126);
+            var19 = TextHotspotRegion.randomBoundedInt(param2, 8192, 118);
             var20 = (int)((long)(GetNumStars.cosAngle(var19, (byte) -84) >> 8) * (var15 >> 8));
             var21 = (int)((var15 >> 8) * (long)(TextureLineShape.sinAngle(var19, 62) >> 8));
             var17 = var17 - var20;
@@ -3064,12 +3064,12 @@ final class MissionBuilder implements DiffableState {
             if (var16 == 1) {
               var17 = var13 / 16;
               for (var18_int = 0; var18_int < var17; var18_int++) {
-                var19 = hob.a(param0, var14, 123) + var9;
-                var20 = var11 + hob.a(param0, var15, 118);
+                var19 = TextHotspotRegion.randomBoundedInt(param0, var14, 123) + var9;
+                var20 = var11 + TextHotspotRegion.randomBoundedInt(param0, var15, 118);
                 if (fra.a(var7, var20, 2, var19)) {
                   var21_ref_crb = new Asteroid(new ShipComponent(NodeHashTable.chooseRandomAsteroidType(param0, (byte) 97)));
                   var21_ref_crb.setPosition(var19, var20, (byte) -97);
-                  var21_ref_crb.setAngle(hob.a(param0, 8192, 116), -64);
+                  var21_ref_crb.setAngle(TextHotspotRegion.randomBoundedInt(param0, 8192, 116), -64);
                   var22_ref_crb__ = param1.getAsteroids(true);
                   var23 = 0;
                   var24_ref_crb__ = var22_ref_crb__;
@@ -3174,8 +3174,8 @@ final class MissionBuilder implements DiffableState {
                 var21 = -1;
                 var22 = 0;
                 while (var22 < var17) {
-                  var23 = hob.a(param0, var14, 117) + var9;
-                  var24 = var11 + hob.a(param0, var15, 119);
+                  var23 = TextHotspotRegion.randomBoundedInt(param0, var14, 117) + var9;
+                  var24 = var11 + TextHotspotRegion.randomBoundedInt(param0, var15, 119);
                   if (fra.a(var7, var24, 2, var23)) {
                     var25 = var21;
                     if (-1 != var25) {
@@ -3203,7 +3203,7 @@ final class MissionBuilder implements DiffableState {
                     var33 = new ShipComponent(var25);
                     var27 = new Debris(var33, false);
                     var27.setPosition(var23, var24, (byte) 85);
-                    var27.setAngle(hob.a(param0, 8192, param3 ^ 119), -47);
+                    var27.setAngle(TextHotspotRegion.randomBoundedInt(param0, 8192, param3 ^ 119), -47);
                     param1.addDebris(var27, (byte) 104);
                   }
                   if (var17 - 1 <= var22 &&
@@ -3627,7 +3627,7 @@ final class MissionBuilder implements DiffableState {
         try {
           this.a(param1, param3, 1, lga.a((byte) -2, 3), param5 - 2097150, param0, param2);
           try {
-            var7_int = hob.a(param4, field_a.length, 127);
+            var7_int = TextHotspotRegion.randomBoundedInt(param4, field_a.length, 127);
             var8 = field_a[var7_int];
             var13 = GetResourceNodeCaptureTime.a(var8, true, true);
             var10 = ae.a(var13, (byte) 65);
@@ -3772,8 +3772,8 @@ final class MissionBuilder implements DiffableState {
               var19 = (var28[0] + var28[1]) / 2;
               var20 = (var28[2] + var28[3]) / 2;
               for (var21 = 0; var21 < var18; var21++) {
-                var22 = hob.a(param0, var15, 116) + var10;
-                var23 = hob.a(param0, var16, 120) + var12;
+                var22 = TextHotspotRegion.randomBoundedInt(param0, var15, 116) + var10;
+                var23 = TextHotspotRegion.randomBoundedInt(param0, var16, 120) + var12;
                 if (fra.a(var8, var23, 2, var22) &&
                   this.a(var19, var22, var8, var23, (byte) 105, var20)) {
                   var25 = new Nebula(var22, var23);

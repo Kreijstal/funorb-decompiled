@@ -249,7 +249,7 @@ final class wf {
                 var8 = var9_ref_StringLifetime2;
                 var8 = var9_ref_StringLifetime2;
               } else {
-                var9_ref_StringLifetime2 = kja.field_C;
+                var9_ref_StringLifetime2 = HotspotTextWidget.field_C;
               }
             } else {
               var9_ref_StringLifetime2 = ot.field_a;

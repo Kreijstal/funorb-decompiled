@@ -196,7 +196,7 @@ final class SpecialOrderStatus extends IntrusiveNode {
           }
           for (var5Lifetime1 = 0; 255 > var5Lifetime1; var5Lifetime1++) {
             var6 = -var5Lifetime1 + 255;
-            var7 = hob.a(var4, var6, 124);
+            var7 = TextHotspotRegion.randomBoundedInt(var4, var6, 124);
             var8 = var11[var7];
             var3_ref_byte__[var7] = var11[var6];
             var3_ref_byte__[511 - var5Lifetime1] = (byte) var8;

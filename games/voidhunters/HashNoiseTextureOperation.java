@@ -33,7 +33,7 @@ final class HashNoiseTextureOperation extends TextureOperation {
         int[] var3 = var7;
         if (this.field_f.field_e) {
           var4 = SetSalvoUsesAllEnergy.textureYCoordinates[param0];
-          for (var5 = 0; var5 < hob.textureWidth; var5++) {
+          for (var5 = 0; var5 < TextHotspotRegion.textureWidth; var5++) {
             var7[var5] = this.hashCoordinates(BoxBlurTextureOperation.textureXCoordinates[var5], var4, 789221) % 4096;
           }
         }

@@ -98,16 +98,16 @@ final class TextureSourceOperation extends TextureOperation {
           var5 = var14[0];
           var6 = var14[1];
           var7 = var14[2];
-          if (this.sourceWidth != hob.textureWidth) {
-            for (var8 = 0; var8 < hob.textureWidth; var8++) {
-              var9 = var8 * this.sourceWidth / hob.textureWidth;
+          if (this.sourceWidth != TextHotspotRegion.textureWidth) {
+            for (var8 = 0; var8 < TextHotspotRegion.textureWidth; var8++) {
+              var9 = var8 * this.sourceWidth / TextHotspotRegion.textureWidth;
               var10 = this.sourcePixels[var4 + var9];
               var7[var8] = dla.a(255, var10) << 4;
               var6[var8] = dla.a(var10 >> 4, 4080);
               var5[var8] = dla.a(16711680, var10) >> 12;
             }
           } else {
-            for (var8 = 0; hob.textureWidth > var8; var8++) {
+            for (var8 = 0; TextHotspotRegion.textureWidth > var8; var8++) {
               incrementValue$0 = var4;
               var4++;
               var9 = this.sourcePixels[incrementValue$0];

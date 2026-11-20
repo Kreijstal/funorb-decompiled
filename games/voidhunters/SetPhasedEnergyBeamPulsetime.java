@@ -93,7 +93,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
           var3 = uia.field_b;
           var4 = DeveloperConsole.field_q.font.getLineCount(param0, 500);
           var5 = 6 + DeveloperConsole.field_q.font.getParagraphWidth(param0, 500);
-          var6 = 2 + nna.field_w * var4;
+          var6 = 2 + DialogMessagePanel.field_w * var4;
           var7 = QuickChatCategoryLoader.adjustPopupX((byte) -109, var2_int, 12, var5);
           var8 = lma.a(20, var3, var6, (byte) -16);
           SoftwareRasterizer2D.drawRectangle(var7, var8, var5, var6, 0);
@@ -101,7 +101,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
             SetPhasedEnergyBeamPulsetime.clearSharedReferences((byte) 26);
           }
           SoftwareRasterizer2D.fillRectangle(1 + var7, 1 + var8, var5 - 2, -2 + var6, 16777088);
-          DeveloperConsole.field_q.font.drawParagraph(param0, 3 + var7, var8 + 1 + atb.field_d - DeveloperConsole.field_q.font.maxAscent, 500, 1000, 0, -1, 0, 0, nna.field_w);
+          DeveloperConsole.field_q.font.drawParagraph(param0, 3 + var7, var8 + 1 + atb.field_d - DeveloperConsole.field_q.font.maxAscent, 500, 1000, 0, -1, 0, 0, DialogMessagePanel.field_w);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ukb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -20,7 +20,7 @@ final class SetReloadBarWidth extends ConsoleCommand {
         if (null == HighscoreTableRequest.field_h) {
           return false;
         }
-        if (null != HighscoreTableRequest.field_h.g(0)) {
+        if (null != HighscoreTableRequest.field_h.getTopPanel(0)) {
           return true;
         }
         return false;

@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class bl extends UiContainer {
+abstract class ModalPanel extends UiContainer {
     static BitmapFont field_x;
-    private int field_w;
+    private int opacity;
     static int field_A;
     static String field_y;
-    boolean field_z;
-    ida field_v;
+    boolean active;
+    ModalStack modalStack;
 
-    private final int c(boolean param0) {
+    private final int getTargetOpacity(boolean param0) {
         if (!param0) {
-          return this.field_z ? this.field_v.g(0) != this ? 0 : 256 : 0;
+          return this.active ? this.modalStack.getTopPanel(0) != this ? 0 : 256 : 0;
         }
-        this.c(-88, 94, 112);
-        return this.field_z ? this.field_v.g(0) != this ? 0 : 256 : 0;
+        this.setCenteredSize(-88, 94, 112);
+        return this.active ? this.modalStack.getTopPanel(0) != this ? 0 : 256 : 0;
     }
 
     final UiComponent getFocusedChild(byte param0) {
@@ -28,43 +28,43 @@ abstract class bl extends UiContainer {
         return (UiComponent) (this);
     }
 
-    boolean a(int param0) {
+    boolean updateAndCheckClosed(int param0) {
         if (param0 != 248) {
-          bl.d(true);
+          ModalPanel.d(true);
         }
-        int var2 = this.c(false);
-        int var3 = var2 - this.field_w;
+        int var2 = this.getTargetOpacity(false);
+        int var3 = var2 - this.opacity;
         if (0 < var3) {
-          this.field_w = this.field_w + (-1 + var3 + 8) / 8;
+          this.opacity = this.opacity + (-1 + var3 + 8) / 8;
         }
         if (var3 >= 0) {
-          if (this.field_w != 0) {
+          if (this.opacity != 0) {
             return false;
           }
           if (var2 == 0) {
-            return !this.field_z ? true : false;
+            return !this.active ? true : false;
           }
           return false;
         }
-        this.field_w = this.field_w + (1 + (var3 - 16)) / 16;
-        if (this.field_w != 0) {
+        this.opacity = this.opacity + (1 + (var3 - 16)) / 16;
+        if (this.opacity != 0) {
           return false;
         }
         if (var2 == 0) {
-          return !this.field_z ? true : false;
+          return !this.active ? true : false;
         }
         return false;
     }
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
-        if (this.field_w == 0) {
+        if (this.opacity == 0) {
           return;
         }
-        if (this.field_w >= 256) {
+        if (this.opacity >= 256) {
           if (param1 != 0) {
             return;
           }
-          this.b(param3 + this.y, 1630174241, param0 + this.x);
+          this.drawFrame(param3 + this.y, 1630174241, param0 + this.x);
           super.drawLayer(param0, param1, 101, param3);
           return;
         }
@@ -72,91 +72,91 @@ abstract class bl extends UiContainer {
           GpuFaceNormal.field_b = new Sprite(this.width, this.height);
           SetTorpedoEnergyUsed.a(111, GpuFaceNormal.field_b);
           SoftwareRasterizer2D.clear();
-          this.b(0, 1630174241, 0);
+          this.drawFrame(0, 1630174241, 0);
           super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
           if (param2 > 47) {
             bia.popRasterState((byte) 124);
-            GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
+            GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.opacity);
             return;
           }
-          this.j((byte) 123);
+          this.finishAnimationsAndCheckClosed((byte) 123);
           bia.popRasterState((byte) 124);
-          GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
+          GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.opacity);
           return;
         }
         if (GpuFaceNormal.field_b.width < this.width) {
           GpuFaceNormal.field_b = new Sprite(this.width, this.height);
           SetTorpedoEnergyUsed.a(111, GpuFaceNormal.field_b);
           SoftwareRasterizer2D.clear();
-          this.b(0, 1630174241, 0);
+          this.drawFrame(0, 1630174241, 0);
           super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
           if (param2 > 47) {
             bia.popRasterState((byte) 124);
-            GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
+            GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.opacity);
             return;
           }
-          this.j((byte) 123);
+          this.finishAnimationsAndCheckClosed((byte) 123);
           bia.popRasterState((byte) 124);
-          GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
+          GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.opacity);
           return;
         }
         if (this.height > GpuFaceNormal.field_b.height) {
           GpuFaceNormal.field_b = new Sprite(this.width, this.height);
           SetTorpedoEnergyUsed.a(111, GpuFaceNormal.field_b);
           SoftwareRasterizer2D.clear();
-          this.b(0, 1630174241, 0);
+          this.drawFrame(0, 1630174241, 0);
           super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
           if (param2 > 47) {
             bia.popRasterState((byte) 124);
-            GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
+            GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.opacity);
             return;
           }
-          this.j((byte) 123);
+          this.finishAnimationsAndCheckClosed((byte) 123);
           bia.popRasterState((byte) 124);
-          GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
+          GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.opacity);
           return;
         }
         SetTorpedoEnergyUsed.a(111, GpuFaceNormal.field_b);
         SoftwareRasterizer2D.clear();
-        this.b(0, 1630174241, 0);
+        this.drawFrame(0, 1630174241, 0);
         super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
         if (param2 > 47) {
           bia.popRasterState((byte) 124);
-          GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
+          GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.opacity);
           return;
         }
-        this.j((byte) 123);
+        this.finishAnimationsAndCheckClosed((byte) 123);
         bia.popRasterState((byte) 124);
-        GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
+        GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.opacity);
     }
 
-    boolean j(byte param0) {
-        this.field_w = this.c(false);
+    boolean finishAnimationsAndCheckClosed(byte param0) {
+        this.opacity = this.getTargetOpacity(false);
         if (param0 != 55) {
           return false;
         }
-        if (0 != this.field_w) {
+        if (0 != this.opacity) {
           return false;
         }
-        if (!this.field_z) {
+        if (!this.active) {
           return true;
         }
         return false;
     }
 
-    abstract void b(int param0, int param1, int param2);
+    abstract void drawFrame(int param0, int param1, int param2);
 
-    final void c(int param0, int param1, int param2) {
+    final void setCenteredSize(int param0, int param1, int param2) {
         this.setBounds(-param0 + ComponentBehaviourFactory.field_a >> 1, param0, param2, 1, GetSniperCannonFiringLeeway.field_p - param2 >> 1);
         if (param1 != -1860440319) {
-          this.field_z = false;
+          this.active = false;
         }
     }
 
     public static void clearSharedReferences(byte param0) {
         field_y = null;
         if (param0 != -17) {
-          bl.d(false);
+          ModalPanel.d(false);
           field_x = null;
           return;
         }
@@ -176,7 +176,7 @@ abstract class bl extends UiContainer {
           var5 = GetAngularVelocitySustain.field_q;
           var1 = var5;
           if (param0) {
-            bl.clearSharedReferences((byte) 60);
+            ModalPanel.clearSharedReferences((byte) 60);
           }
           var2 = 0;
           var3 = var5.length;
@@ -198,12 +198,12 @@ abstract class bl extends UiContainer {
         }
     }
 
-    bl(ida param0, int param1, int param2) {
+    ModalPanel(ModalStack param0, int param1, int param2) {
         super(ComponentBehaviourFactory.field_a - param1 >> 1, -param2 + GetSniperCannonFiringLeeway.field_p >> 1, param1, param2, (UiRenderer) null);
         try {
-          this.field_w = 0;
-          this.field_v = param0;
-          this.field_z = false;
+          this.opacity = 0;
+          this.modalStack = param0;
+          this.active = false;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

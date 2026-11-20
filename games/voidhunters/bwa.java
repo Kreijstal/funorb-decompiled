@@ -299,16 +299,16 @@ final class bwa extends Widget {
             this.field_Cb.setBounds(0, 35, 13 + (var19 + 13), 0, 24);
             this.field_zb.setBounds(this.field_Cb.width - 20, 119, 15, 5, 15);
             var21 = 10;
-            this.field_Bb.setBounds(13, 118, var19, var21, nna.field_w * 2);
-            var21 = var21 + 2 * nna.field_w;
-            this.field_vb.setBounds(13, 122, var19, var21, nna.field_w * 2);
-            var21 = var21 + (nna.field_w * 2 + 10);
-            this.field_Eb.setBounds(0, -104, 0, var21, nna.field_w);
-            var21 = var21 + (10 + nna.field_w);
+            this.field_Bb.setBounds(13, 118, var19, var21, DialogMessagePanel.field_w * 2);
+            var21 = var21 + 2 * DialogMessagePanel.field_w;
+            this.field_vb.setBounds(13, 122, var19, var21, DialogMessagePanel.field_w * 2);
+            var21 = var21 + (DialogMessagePanel.field_w * 2 + 10);
+            this.field_Eb.setBounds(0, -104, 0, var21, DialogMessagePanel.field_w);
+            var21 = var21 + (10 + DialogMessagePanel.field_w);
             if (this.field_wb != null) {
               var20Lifetime3 = this.field_wb.measurePreferredWidth(4, 0);
-              this.field_wb.setBoundsAndLayout((-var20Lifetime3 + var19) / 2 + 13, nna.field_w, 4, var21, var20Lifetime3, false);
-              var21 = var21 + (nna.field_w + 10);
+              this.field_wb.setBoundsAndLayout((-var20Lifetime3 + var19) / 2 + 13, DialogMessagePanel.field_w, 4, var21, var20Lifetime3, false);
+              var21 = var21 + (DialogMessagePanel.field_w + 10);
             }
             var28[0].setBounds(13, 122, var16Lifetime2, var21, var17Lifetime5);
             var28[1].setBounds(13 + (13 + var16Lifetime2), -106, var16Lifetime2, var21, var17Lifetime5);
@@ -330,8 +330,8 @@ final class bwa extends Widget {
           var15_int = 226;
           var16Lifetime1 = 10;
           var17Lifetime1 = this.field_Bb.font.getLineCount(this.field_Bb.text, var15_int);
-          this.field_Bb.setBounds(13, -65, var15_int, var16Lifetime1, nna.field_w * var17Lifetime1);
-          var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * nna.field_w;
+          this.field_Bb.setBounds(13, -65, var15_int, var16Lifetime1, DialogMessagePanel.field_w * var17Lifetime1);
+          var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * DialogMessagePanel.field_w;
           this.field_Ab.setBounds(0, 116, 13 + var15_int + 13, 24, var16Lifetime1 + 10);
           this.field_Ab.field_gb = uwa.a(11579568, this.field_Ab.height, 2105376, 8421504, 117, 3);
           var18Lifetime1 = 13 + (var15_int + 13);

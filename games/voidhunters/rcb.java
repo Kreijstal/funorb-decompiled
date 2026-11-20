@@ -3,7 +3,7 @@
  */
 final class rcb extends UiContainer implements UiActionListener {
     private UiFocusableComponent[] field_v;
-    private jpb field_x;
+    private NameSuggestionTarget field_x;
     private String[] field_w;
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
@@ -36,11 +36,11 @@ final class rcb extends UiContainer implements UiActionListener {
           }
           for (var6_int = 0; this.field_w.length > var6_int; var6_int++) {
             if (this.field_v[var6_int] == param3) {
-              this.field_x.a((byte) 41, this.field_w[var6_int]);
+              this.field_x.setSuggestedName((byte) 41, this.field_w[var6_int]);
             }
           }
           if (param3 == this.field_v[this.field_w.length]) {
-            this.field_x.a(1546);
+            this.field_x.invalidateNameAvailability(1546);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -109,7 +109,7 @@ final class rcb extends UiContainer implements UiActionListener {
         }
     }
 
-    rcb(jpb param0) {
+    rcb(NameSuggestionTarget param0) {
         super(0, 0, 0, 0, (UiRenderer) null);
         try {
           this.field_x = param0;

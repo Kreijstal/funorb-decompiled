@@ -26,7 +26,7 @@ final class TileTextureOperation extends TextureOperation {
         var10 = this.field_f.getRow((byte) -112, param0);
         var3 = var10;
         if (this.field_f.field_e) {
-          var5 = hob.textureWidth / this.horizontalRepeatCount;
+          var5 = TextHotspotRegion.textureWidth / this.horizontalRepeatCount;
           var6 = GetTorpedoReload.field_o / this.verticalRepeatCount;
           if (var6 <= 0) {
             var4 = this.getInputMonochromeRow(0, 0, 255);
@@ -36,12 +36,12 @@ final class TileTextureOperation extends TextureOperation {
           }
           var11 = 0;
           var7Lifetime1 = var11;
-          while (hob.textureWidth > var11) {
+          while (TextHotspotRegion.textureWidth > var11) {
             if (var5 <= 0) {
               var10[var11] = var4[0];
             } else {
               var8 = var11 % var5;
-              var10[var11] = var4[var8 * hob.textureWidth / var5];
+              var10[var11] = var4[var8 * TextHotspotRegion.textureWidth / var5];
             }
             var11++;
           }
@@ -77,7 +77,7 @@ final class TileTextureOperation extends TextureOperation {
         var17 = var18;
         var3 = var17;
         if (this.field_d.field_g) {
-          var5 = hob.textureWidth / this.horizontalRepeatCount;
+          var5 = TextHotspotRegion.textureWidth / this.horizontalRepeatCount;
           var6 = GetTorpedoReload.field_o / this.verticalRepeatCount;
           if (var6 <= 0) {
             var4 = this.getInputColorRow((byte) 69, 0, 0);
@@ -91,12 +91,12 @@ final class TileTextureOperation extends TextureOperation {
           var10 = var19[0];
           var11 = var19[1];
           var12 = var19[2];
-          for (var13 = 0; var13 < hob.textureWidth; var13++) {
+          for (var13 = 0; var13 < TextHotspotRegion.textureWidth; var13++) {
             if (0 >= var5) {
               var14 = 0;
             } else {
               var15 = var13 % var5;
-              var14 = hob.textureWidth * var15 / var5;
+              var14 = TextHotspotRegion.textureWidth * var15 / var5;
             }
             var10[var13] = var7[var14];
             var11[var13] = var8[var14];

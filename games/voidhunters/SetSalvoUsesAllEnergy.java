@@ -30,7 +30,7 @@ final class SetSalvoUsesAllEnergy extends ConsoleCommand {
         var11 = VoidHunters.field_G;
         try {
           if (param4 == null) {
-            stackIn_4_0 = hob.a(param2, param1, 123);
+            stackIn_4_0 = TextHotspotRegion.randomBoundedInt(param2, param1, 123);
             return stackIn_4_0;
           }
           if (param0 >= -36) {
@@ -58,7 +58,7 @@ final class SetSalvoUsesAllEnergy extends ConsoleCommand {
             }
           }
           if (1 < var7) {
-            var8Lifetime1 = hob.a(param2, var7, 123);
+            var8Lifetime1 = TextHotspotRegion.randomBoundedInt(param2, var7, 123);
             var9 = 0;
             for (var10 = 0; param1 > var10; var10++) {
               if (param4[var10] == var6) {

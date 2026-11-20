@@ -27,7 +27,7 @@ final class InvertTextureOperation extends TextureOperation {
           var8 = var20[0];
           var9 = var20[1];
           var10 = var20[2];
-          for (var11 = 0; var11 < hob.textureWidth; var11++) {
+          for (var11 = 0; var11 < TextHotspotRegion.textureWidth; var11++) {
             var8[var11] = 4096 - var21[var11];
             var9[var11] = -var22[var11] + 4096;
             var10[var11] = -var23[var11] + 4096;
@@ -77,7 +77,7 @@ final class InvertTextureOperation extends TextureOperation {
         int[] var3 = var7;
         if (this.field_f.field_e) {
           var4 = this.getInputMonochromeRow(0, param0, 255);
-          for (var5 = 0; hob.textureWidth > var5; var5++) {
+          for (var5 = 0; TextHotspotRegion.textureWidth > var5; var5++) {
             var7[var5] = 4096 - var4[var5];
           }
         }

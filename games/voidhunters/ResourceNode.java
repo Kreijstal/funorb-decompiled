@@ -14,7 +14,7 @@ final class ResourceNode implements DiffableState {
 
     final void b(Camera2D param0, int param1) {
         try {
-          SetNumStars.a((float)this.radius * param0.scale, (byte) 55, param0.worldToScreenY(true, this.y), qpb.a(false, this.team, 13894143), param0.worldToScreenX(this.x, (byte) 124));
+          SetNumStars.a((float)this.radius * param0.scale, (byte) 55, param0.worldToScreenY(true, this.y), AlphaContainer.getTeamColor(false, this.team, 13894143), param0.worldToScreenX(this.x, (byte) 124));
           this.a(param0, 8947848);
           int var3_int = 97 % ((55 - param1) / 49);
         } catch (RuntimeException runtimeException) {
@@ -167,7 +167,7 @@ final class ResourceNode implements DiffableState {
           var5 = (int)(2.0f * (param0.scale * (float)this.radius));
           var6 = (int)(8192.0f * param0.scale);
           UiToggleButtonRenderer.drawRectangle(126, var3_int - 1, var6 + 2, -1 + var4, 8947848, var5 + 2);
-          var7 = qpb.a(false, this.field_h, 13894143);
+          var7 = AlphaContainer.getTeamColor(false, this.field_h, 13894143);
           var8 = GetGrapplingHookAimarc.a(-16777216, var7);
           PlayerJoinFactory.a(var4, var6, var8, this.captureTimer * var5 / Particle.field_G, var3_int, var7, 0);
           return;

@@ -8,7 +8,7 @@ final class GetAllowShipSaving extends ConsoleCommand {
 
     final static void a(int param0) {
         if (null != GetLagStandardDeviationIn.field_r) {
-          GetLagStandardDeviationIn.field_r.e(param0 - 4299);
+          GetLagStandardDeviationIn.field_r.finishPanelAnimations(param0 - 4299);
           if (param0 == 4410) {
             if (null == vqa.field_i) {
               GetDebugLineLife.e(95);

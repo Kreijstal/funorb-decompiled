@@ -798,7 +798,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_cannotbecombined2", 23100);
                 if (null != var2) {
-                  nna.field_F = Cp1252Strings.decode((byte) -125, var2);
+                  DialogMessagePanel.field_F = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_playernotmember", 23100);
                 if (null != var2) {
@@ -948,7 +948,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("rule_0_4", 23100);
                 if (null != var2) {
-                  rq.field_G = Cp1252Strings.decode((byte) -125, var2);
+                  AccountCreationForm.field_G = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("rule_0_5", 23100);
                 if (var2 != null) {
@@ -2058,7 +2058,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("returntogame", 23100);
                 if (var2 != null) {
-                  nna.field_D = Cp1252Strings.decode((byte) -125, var2);
+                  DialogMessagePanel.field_D = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("endgameresign", 23100);
                 if (var2 != null) {
@@ -2118,7 +2118,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("graphics_java", 23100);
                 if (var2 != null) {
-                  kja.field_C = Cp1252Strings.decode((byte) -125, var2);
+                  HotspotTextWidget.field_C = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("graphics_quality_high", 23100);
                 if (null != var2) {
@@ -2843,31 +2843,31 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin2,1", 23100);
                 if (null != var2) {
-                  iw.field_F[1] = Cp1252Strings.decode((byte) -125, var2);
+                  ResizableModalPanel.field_F[1] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin2,2", 23100);
                 if (null != var2) {
-                  iw.field_F[2] = Cp1252Strings.decode((byte) -125, var2);
+                  ResizableModalPanel.field_F[2] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin2,3", 23100);
                 if (var2 != null) {
-                  iw.field_F[3] = Cp1252Strings.decode((byte) -125, var2);
+                  ResizableModalPanel.field_F[3] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin2,4", 23100);
                 if (null != var2) {
-                  iw.field_F[4] = Cp1252Strings.decode((byte) -125, var2);
+                  ResizableModalPanel.field_F[4] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin2,5", 23100);
                 if (var2 != null) {
-                  iw.field_F[5] = Cp1252Strings.decode((byte) -125, var2);
+                  ResizableModalPanel.field_F[5] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin2,6", 23100);
                 if (null != var2) {
-                  iw.field_F[6] = Cp1252Strings.decode((byte) -125, var2);
+                  ResizableModalPanel.field_F[6] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin2,7", 23100);
                 if (null != var2) {
-                  iw.field_F[7] = Cp1252Strings.decode((byte) -125, var2);
+                  ResizableModalPanel.field_F[7] = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mustlogin3,1", 23100);
                 if (null != var2) {

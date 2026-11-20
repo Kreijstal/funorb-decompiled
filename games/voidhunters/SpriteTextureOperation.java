@@ -172,16 +172,16 @@ class SpriteTextureOperation extends TextureOperation {
             stackIn_10_1 = param1;
           }
           var7 = stackIn_9_0 * stackIn_10_1;
-          if (this.sourceWidth != hob.textureWidth) {
-            for (var8 = 0; hob.textureWidth > var8; var8++) {
-              var9 = this.sourceWidth * var8 / hob.textureWidth;
+          if (this.sourceWidth != TextHotspotRegion.textureWidth) {
+            for (var8 = 0; TextHotspotRegion.textureWidth > var8; var8++) {
+              var9 = this.sourceWidth * var8 / TextHotspotRegion.textureWidth;
               var10 = this.sourcePixels[var9 + var7];
               var6[var8] = dla.a(var10, 255) << 4;
               var5[var8] = dla.a(4080, var10 >> 4);
               var4[var8] = dla.a(var10 >> 12, 4080);
             }
           } else {
-            for (var8 = 0; hob.textureWidth > var8; var8++) {
+            for (var8 = 0; TextHotspotRegion.textureWidth > var8; var8++) {
               incrementValue$2 = var7;
               var7++;
               var9 = this.sourcePixels[incrementValue$2];
@@ -212,16 +212,16 @@ class SpriteTextureOperation extends TextureOperation {
           stackIn_27_1 = param1;
         }
         var7Lifetime1 = stackIn_26_0 * stackIn_27_1;
-        if (this.sourceWidth != hob.textureWidth) {
-          for (var8Lifetime1 = 0; hob.textureWidth > var8Lifetime1; var8Lifetime1++) {
-            var9Lifetime1 = this.sourceWidth * var8Lifetime1 / hob.textureWidth;
+        if (this.sourceWidth != TextHotspotRegion.textureWidth) {
+          for (var8Lifetime1 = 0; TextHotspotRegion.textureWidth > var8Lifetime1; var8Lifetime1++) {
+            var9Lifetime1 = this.sourceWidth * var8Lifetime1 / TextHotspotRegion.textureWidth;
             var10Lifetime1 = this.sourcePixels[var9Lifetime1 + var7Lifetime1];
             var6Lifetime1[var8Lifetime1] = dla.a(var10Lifetime1, 255) << 4;
             var5Lifetime1[var8Lifetime1] = dla.a(4080, var10Lifetime1 >> 4);
             var4Lifetime1[var8Lifetime1] = dla.a(var10Lifetime1 >> 12, 4080);
           }
         } else {
-          for (var8Lifetime1 = 0; hob.textureWidth > var8Lifetime1; var8Lifetime1++) {
+          for (var8Lifetime1 = 0; TextHotspotRegion.textureWidth > var8Lifetime1; var8Lifetime1++) {
             incrementValue$1 = var7Lifetime1;
             var7Lifetime1++;
             var9Lifetime1 = this.sourcePixels[incrementValue$1];

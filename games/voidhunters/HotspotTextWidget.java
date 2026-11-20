@@ -1,71 +1,71 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class kja extends UiFocusableComponent {
+class HotspotTextWidget extends UiFocusableComponent {
     static String field_C;
-    private hob field_F;
-    private IntrusiveDeque field_B;
+    private TextHotspotRegion hoveredHotspot;
+    private IntrusiveDeque hotspots;
     static String field_G;
-    private String[] field_D;
+    private String[] hotspotTooltips;
     static IntrusiveDeque field_E;
 
     final void setBounds(int param0, int param1, int param2, int param3, int param4) {
         super.setBounds(param0, param1, param2, param3, param4);
-        this.g((byte) 122);
+        this.rebuildHotspots((byte) 122);
     }
 
     final void fireAction(int param0, int param1, int param2, int param3) {
         super.fireAction(param0, param1, param2 + 0, param3);
         int var5 = param1 - this.x;
         int var6 = param3 - this.y;
-        hob var7 = this.b(var5, var6, param2 ^ param2);
+        TextHotspotRegion var7 = this.findHotspot(var5, var6, param2 ^ param2);
         if (var7 != null &&
           null != this.listener) {
-          ((ln) ((Object) this.listener)).a(-1, param0, var7.field_i, this);
+          ((UiHotspotListener) ((Object) this.listener)).onHotspotClicked(-1, param0, var7.id, this);
         }
     }
 
     String getTooltip(byte param0) {
-        if (null == this.field_F) {
+        if (null == this.hoveredHotspot) {
           return null;
         }
-        if (null == this.field_D) {
+        if (null == this.hotspotTooltips) {
           return null;
         }
-        if (this.field_F.field_i >= this.field_D.length) {
+        if (this.hoveredHotspot.id >= this.hotspotTooltips.length) {
           return null;
         }
         if (param0 != 125) {
           return (String) null;
         }
-        return this.field_D[this.field_F.field_i];
+        return this.hotspotTooltips[this.hoveredHotspot.id];
     }
 
-    private final hob b(int param0, int param1, int param2) {
-        hob var4;
-        hob var5;
+    private final TextHotspotRegion findHotspot(int param0, int param1, int param2) {
+        TextHotspotRegion var4;
+        TextHotspotRegion var5;
         int var6;
         var6 = VoidHunters.field_G;
-        var4 = (hob) (this.field_B.first(param2 + param2));
+        var4 = (TextHotspotRegion) (this.hotspots.first(param2 + param2));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
-            if (param0 >= var5.field_h &&
-              var5.field_k <= param1 &&
-              var5.field_g + var5.field_h > param0 &&
-              var5.field_k + var5.field_j >= param1) {
+            if (param0 >= var5.x &&
+              var5.y <= param1 &&
+              var5.width + var5.x > param0 &&
+              var5.y + var5.height >= param1) {
               return var4;
             }
-            var5 = var5.field_f;
+            var5 = var5.continuation;
           }
-          var4 = (hob) (this.field_B.next((byte) 95));
+          var4 = (TextHotspotRegion) (this.hotspots.next((byte) 95));
         }
         return null;
     }
 
-    kja(String param0, UiRenderer param1) {
+    HotspotTextWidget(String param0, UiRenderer param1) {
         super(param0, (UiListener) null);
-        this.field_F = null;
+        this.hoveredHotspot = null;
         try {
           this.renderer = param1;
         } catch (RuntimeException runtimeException) {
@@ -73,7 +73,7 @@ class kja extends UiFocusableComponent {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte param3) {
+    final void fitTextBounds(int param0, int param1, int param2, byte param3) {
         if (param3 != -23) {
           UiComponent var6 = (UiComponent) null;
           this.requestFocus(110, (UiComponent) null);
@@ -81,28 +81,28 @@ class kja extends UiFocusableComponent {
         this.setBounds(param2, param0, ((UiTextRenderer) ((Object) this.renderer)).getPreferredHeight((UiComponent) (this), (byte) 81), 1, param1);
     }
 
-    final void a(int param0, int param1, String param2) {
+    final void setHotspotTooltip(int param0, int param1, String param2) {
         String[] var7 = null;
         String[] var8 = null;
         int var5 = 0;
         int var6 = VoidHunters.field_G;
         try {
-          if (null == this.field_D ||
-            param0 >= this.field_D.length) {
+          if (null == this.hotspotTooltips ||
+            param0 >= this.hotspotTooltips.length) {
             var7 = new String[param0 + 1];
             var8 = var7;
             String[] var4 = var8;
-            if (this.field_D != null) {
-              for (var5 = 0; this.field_D.length > var5; var5++) {
-                var7[var5] = this.field_D[var5];
+            if (this.hotspotTooltips != null) {
+              for (var5 = 0; this.hotspotTooltips.length > var5; var5++) {
+                var7[var5] = this.hotspotTooltips[var5];
               }
             }
-            this.field_D = var8;
+            this.hotspotTooltips = var8;
           }
           if (param1 != -1) {
             this.setBounds(87, 68, 4, -44, 106);
           }
-          this.field_D[param0] = param2;
+          this.hotspotTooltips[param0] = param2;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kja.I(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -144,11 +144,11 @@ class kja extends UiFocusableComponent {
         RuntimeException var5 = null;
         try {
           super.updatePointer(param0, param1, param2, param3);
-          this.field_F = null;
+          this.hoveredHotspot = null;
           if (this.hovered) {
             var5_int = -this.x + PlayerGameData.field_b - param1;
             var6 = -param0 + (uia.field_b - this.y);
-            this.field_F = this.b(var5_int, var6, 0);
+            this.hoveredHotspot = this.findHotspot(var5_int, var6, 0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -176,19 +176,19 @@ class kja extends UiFocusableComponent {
           return;
         }
         UiTextRenderer var9 = (UiTextRenderer) ((Object) this.renderer);
-        hob var6 = this.field_F;
+        TextHotspotRegion var6 = this.hoveredHotspot;
         if (var6 == null) {
         } else {
           var7 = var9.getTextOriginX(0, param0, (UiComponent) (this));
           var8 = var9.getTextOriginY(-3, param3, (UiComponent) (this));
           do {
-            SetCountermeasureLauncherRandomness.a(var6.field_k + var8 - 2, var6.field_g + 2, var7 + var6.field_h - 2, 2 + var6.field_j, (byte) -90);
-            var6 = var6.field_f;
+            SetCountermeasureLauncherRandomness.a(var6.y + var8 - 2, var6.width + 2, var7 + var6.x - 2, 2 + var6.height, (byte) -90);
+            var6 = var6.continuation;
           } while (var6 != null);
         }
     }
 
-    final void g(byte param0) {
+    final void rebuildHotspots(byte param0) {
         int var11 = 0;
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
@@ -204,11 +204,11 @@ class kja extends UiFocusableComponent {
         TextLayoutLine var12;
         int var13;
         int var14;
-        hob var15;
+        TextHotspotRegion var15;
         int var16;
         int var7Lifetime1;
         var16 = VoidHunters.field_G;
-        this.field_B = new IntrusiveDeque();
+        this.hotspots = new IntrusiveDeque();
         var2 = 0;
         var3 = (UiTextRenderer) ((Object) this.renderer);
         var4 = var3.getTextLayout((UiComponent) (this), 3);
@@ -216,7 +216,7 @@ class kja extends UiFocusableComponent {
           var5 = this.text.indexOf("<hotspot=", var2);
           if (var5 == -1) {
             if (param0 <= 110) {
-              this.field_D = (String[]) null;
+              this.hotspotTooltips = (String[]) null;
             }
             return;
           }
@@ -245,11 +245,11 @@ class kja extends UiFocusableComponent {
               stackIn_12_0 = var4.getCaretX(var2, -114);
             }
             var14 = stackIn_12_0;
-            var15 = new hob(var7Lifetime1, var13, var12.top, var14 - var13, Math.max(var3.getLineHeight(124), -var12.top + var12.bottom));
+            var15 = new TextHotspotRegion(var7Lifetime1, var13, var12.top, var14 - var13, Math.max(var3.getLineHeight(124), -var12.top + var12.bottom));
             if (var10 != null) {
-              ((hob) (var10)).field_f = var15;
+              ((TextHotspotRegion) (var10)).continuation = var15;
             }
-            this.field_B.addLast(-10258, var15);
+            this.hotspots.addLast(-10258, var15);
             var10 = var15;
           }
         }

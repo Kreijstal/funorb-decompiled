@@ -177,7 +177,7 @@ abstract class elb {
         }
         for (var3Lifetime1 = 0; var3Lifetime1 < 255; var3Lifetime1++) {
           var4 = 255 - var3Lifetime1;
-          var5 = hob.a(var2, var4, 116);
+          var5 = TextHotspotRegion.randomBoundedInt(var2, var4, 116);
           var6 = this.field_d[var5];
           this.field_d[var5] = this.field_d[var4];
           this.field_d[var4 + 256] = (short) var6;

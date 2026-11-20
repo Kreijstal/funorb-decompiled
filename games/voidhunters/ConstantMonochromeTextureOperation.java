@@ -32,7 +32,7 @@ final class ConstantMonochromeTextureOperation extends TextureOperation {
         if (!this.field_f.field_e) {
           return var4;
         }
-        ArrayOperations.fill(var4, 0, hob.textureWidth, this.value);
+        ArrayOperations.fill(var4, 0, TextHotspotRegion.textureWidth, this.value);
         return var4;
     }
 

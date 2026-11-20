@@ -77,7 +77,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
           var5 = var13[1];
           var6 = var13[2];
           var7 = this.sourceHeight * (param1 % this.sourceHeight);
-          for (var8 = 0; var8 < hob.textureWidth; var8++) {
+          for (var8 = 0; var8 < TextHotspotRegion.textureWidth; var8++) {
             var9 = this.sourcePixels[var8 % this.sourceWidth + var7];
             var6[var8] = dla.a(4080, var9 << 4);
             var5[var8] = dla.a(4080, var9 >> 4);
@@ -200,9 +200,9 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
           stackIn_3_0 = MapClearanceCircle.field_f;
           stackIn_3_1 = 38;
           stackIn_3_2 = 2;
-          stackIn_3_3 = (nna.field_w * 4 + 8) * param1;
+          stackIn_3_3 = (DialogMessagePanel.field_w * 4 + 8) * param1;
           stackIn_4_4 = (qg.field_a == MapClearanceCircle.field_f);
-          var7_int = ((ScrollPaneWidget) (Object) stackIn_3_0).layoutAndUpdateScrolling((byte) stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param2, nna.field_w * 2 + 4) ? 1 : 0;
+          var7_int = ((ScrollPaneWidget) (Object) stackIn_3_0).layoutAndUpdateScrolling((byte) stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param2, DialogMessagePanel.field_w * 2 + 4) ? 1 : 0;
           if (param6 <= 108) {
             TiledSpriteTextureOperation.clearSharedReferences(false);
           }
@@ -414,12 +414,12 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
                 }
               }
               if (null != var12.field_Sb.text) {
-                var12.field_Sb.setBounds(0, -76, 68, var31, nna.field_w);
+                var12.field_Sb.setBounds(0, -76, 68, var31, DialogMessagePanel.field_w);
               } else {
-                var12.field_Mb.setBounds(0, 5, 68, var31, nna.field_w);
+                var12.field_Mb.setBounds(0, 5, 68, var31, DialogMessagePanel.field_w);
               }
               var12.field_dc.text = BitmapFont.ellipsize(var12.field_dc.font, var32, 78);
-              var12.field_dc.setBounds(70, -40, 78, var31, nna.field_w);
+              var12.field_dc.setBounds(70, -40, 78, var31, DialogMessagePanel.field_w);
               if (var12.field_dc.field_O &&
                 !var12.field_dc.text.equals(var32)) {
                 NebulaFieldFactory.field_a = var32;
@@ -427,19 +427,19 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
               var12.field_yb.text = Integer.toString(var12.field_zb);
               if (!var12.field_Gb) {
                 var12.field_yb.field_F = 1;
-                var12.field_yb.setBounds(150, 125, 48, var31, nna.field_w);
+                var12.field_yb.setBounds(150, 125, 48, var31, DialogMessagePanel.field_w);
               } else {
                 var12.field_yb.field_F = 2;
                 var12.field_wb.text = "/" + var12.field_Fb;
                 var33_int = (-var12.field_wb.font.getStringWidth("/") + 348) / 2;
-                var12.field_yb.setBounds(150, 127, -150 + var33_int, var31, nna.field_w);
-                var12.field_wb.setBounds(var33_int, 121, -var33_int + 198, var31, nna.field_w);
+                var12.field_yb.setBounds(150, 127, -150 + var33_int, var31, DialogMessagePanel.field_w);
+                var12.field_wb.setBounds(var33_int, 121, -var33_int + 198, var31, DialogMessagePanel.field_w);
               }
               var12.field_Hb.text = Integer.toString(var12.field_Kb);
-              var12.field_Hb.setBounds(200, 39, 48, var31, nna.field_w);
+              var12.field_Hb.setBounds(200, 39, 48, var31, DialogMessagePanel.field_w);
               stackIn_67_0 = (GetGrapplingHooksDamageableBySourcePlayer.field_o) ? 250 : 200;
               var33_intLifetime1 = stackIn_67_0;
-              var12.field_Lb.setBounds(var33_intLifetime1, 28, -var33_intLifetime1 + 363, var31, nna.field_w);
+              var12.field_Lb.setBounds(var33_intLifetime1, 28, -var33_intLifetime1 + 363, var31, DialogMessagePanel.field_w);
               var34_int = MissionListFactory.field_a;
               if ((1 << TextLayout.field_b & var14Lifetime1) != 0) {
                 var50_ref = SpriteDimensions.field_o[var12.field_Cb];
@@ -522,8 +522,8 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
                   var12.field_Yb.text = var39 + ":" + var38_int / 10 + var38_int % 10;
                 }
               }
-              var12.field_Yb.setBounds(365, 43, var12.width - 365, var31, nna.field_w);
-              var31 = var31 + nna.field_w;
+              var12.field_Yb.setBounds(365, 43, var12.width - 365, var31, DialogMessagePanel.field_w);
+              var31 = var31 + DialogMessagePanel.field_w;
               if (var12.field_Ib != null) {
                 var31 += 2;
                 var37 = new StringBuilder(64);
@@ -536,18 +536,18 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
                 var38 = var37.toString();
                 var12.field_Jb.text = var38;
                 var39Lifetime1 = var12.field_Jb.font.getLineCount(var38, var12.width - var12.field_Jb.field_w * 2);
-                var12.field_Jb.setBounds(0, -9, var12.width, var31, var39Lifetime1 * nna.field_w);
-                var31 = var31 + nna.field_w * var39Lifetime1;
+                var12.field_Jb.setBounds(0, -9, var12.width, var31, var39Lifetime1 * DialogMessagePanel.field_w);
+                var31 = var31 + DialogMessagePanel.field_w * var39Lifetime1;
               }
               if (var12.field_ac) {
                 var12.field_Tb.text = SetReverbGain.a(GetDebrisGroupColour.field_o, new String[]{var32}, 104);
-                var12.field_Tb.setBounds(qs.field_c, 122, var12.width - qs.field_c * 2, var31, nna.field_w);
-                var31 = var31 + nna.field_w;
+                var12.field_Tb.setBounds(qs.field_c, 122, var12.width - qs.field_c * 2, var31, DialogMessagePanel.field_w);
+                var31 = var31 + DialogMessagePanel.field_w;
               }
               if (var12.field_Qb) {
                 var12.field_vb.text = SetReverbGain.a(SoftCacheReference.field_m, new String[]{var32}, 79);
-                var12.field_vb.setBounds(qs.field_c, 0, var12.width - 2 * qs.field_c, var31, nna.field_w);
-                var31 = var31 + nna.field_w;
+                var12.field_vb.setBounds(qs.field_c, 0, var12.width - 2 * qs.field_c, var31, DialogMessagePanel.field_w);
+                var31 = var31 + DialogMessagePanel.field_w;
               }
             }
             var33 = GetBombletSprayAimspeed.a((byte) -126, var32, var12.field_ec);
@@ -557,8 +557,8 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
               var34_intLifetime1 = var12.field_bc.font.getLineCount(var33, -qs.field_c + (var12.width - qs.field_c));
               var12.field_bc.field_I = var12.field_Db * 256 / GetMomentOfInertiaPredivideDownshift.field_p;
               var12.field_bc.text = var33;
-              var12.field_bc.setBounds(qs.field_c, 126, -(2 * qs.field_c) + var12.width, var31, nna.field_w * var34_intLifetime1);
-              var31 = var31 + nna.field_w * var34_intLifetime1;
+              var12.field_bc.setBounds(qs.field_c, 126, -(2 * qs.field_c) + var12.width, var31, DialogMessagePanel.field_w * var34_intLifetime1);
+              var31 = var31 + DialogMessagePanel.field_w * var34_intLifetime1;
             }
             if (var7_int == 0) {
               var12.field_E = var31 - var12.height;

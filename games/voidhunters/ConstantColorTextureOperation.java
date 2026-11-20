@@ -31,7 +31,7 @@ final class ConstantColorTextureOperation extends TextureOperation {
           var4 = var9[0];
           var5 = var9[1];
           var6 = var9[2];
-          for (var7 = 0; var7 < hob.textureWidth; var7++) {
+          for (var7 = 0; var7 < TextHotspotRegion.textureWidth; var7++) {
             var4[var7] = this.red;
             var5[var7] = this.green;
             var6[var7] = this.blue;

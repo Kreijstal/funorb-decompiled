@@ -22,7 +22,7 @@ final class KaleidoscopeTextureOperation extends TextureOperation {
           var4 = var10[0];
           var5 = var10[1];
           var6 = var10[2];
-          for (var7 = 0; var7 < hob.textureWidth; var7++) {
+          for (var7 = 0; var7 < TextHotspotRegion.textureWidth; var7++) {
             this.mapSampleCoordinates(-117, var7, param1);
             var8 = this.getInputColorRow((byte) 95, 0, GetToggledScoreboard.field_q);
             var4[var7] = var8[0][OpenGlGpuTexture3D.field_n];
@@ -80,7 +80,7 @@ final class KaleidoscopeTextureOperation extends TextureOperation {
           field_j = (String) null;
         }
         if (this.field_f.field_e) {
-          for (var4 = 0; hob.textureWidth > var4; var4++) {
+          for (var4 = 0; TextHotspotRegion.textureWidth > var4; var4++) {
             this.mapSampleCoordinates(-95, var4, param0);
             var5 = this.getInputMonochromeRow(0, GetToggledScoreboard.field_q, 255);
             var7[var4] = var5[OpenGlGpuTexture3D.field_n];
@@ -112,7 +112,7 @@ final class KaleidoscopeTextureOperation extends TextureOperation {
         } else if (-0.7853981633974483 >= (double)var6 &&
           -1.5707963267948966 <= (double)var6) {
           GetToggledScoreboard.field_q = param1;
-          OpenGlGpuTexture3D.field_n = hob.textureWidth - param2;
+          OpenGlGpuTexture3D.field_n = TextHotspotRegion.textureWidth - param2;
         } else if (var6 <= 0.0f &&
           (double)var6 >= -0.7853981633974483) {
           OpenGlGpuTexture3D.field_n = param1;
@@ -120,11 +120,11 @@ final class KaleidoscopeTextureOperation extends TextureOperation {
         } else if (0.0f <= var6 &&
           (double)var6 <= 0.7853981633974483) {
           GetToggledScoreboard.field_q = GetTorpedoReload.field_o - param2;
-          OpenGlGpuTexture3D.field_n = -param1 + hob.textureWidth;
+          OpenGlGpuTexture3D.field_n = -param1 + TextHotspotRegion.textureWidth;
         } else if (0.7853981633974483 <= (double)var6 &&
           1.5707963267948966 >= (double)var6) {
           GetToggledScoreboard.field_q = GetTorpedoReload.field_o - param1;
-          OpenGlGpuTexture3D.field_n = hob.textureWidth - param2;
+          OpenGlGpuTexture3D.field_n = TextHotspotRegion.textureWidth - param2;
         } else if (1.5707963267948966 <= (double)var6 &&
           2.356194490192345 >= (double)var6) {
           GetToggledScoreboard.field_q = -param1 + GetTorpedoReload.field_o;
@@ -133,7 +133,7 @@ final class KaleidoscopeTextureOperation extends TextureOperation {
           if ((double)var6 >= 2.356194490192345 &&
             3.141592653589793 >= (double)var6) {
             GetToggledScoreboard.field_q = param2;
-            OpenGlGpuTexture3D.field_n = hob.textureWidth - param1;
+            OpenGlGpuTexture3D.field_n = TextHotspotRegion.textureWidth - param1;
           }
         }
         GetToggledScoreboard.field_q = GetToggledScoreboard.field_q & wf.textureHeightMask;

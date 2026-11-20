@@ -119,8 +119,8 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
           if (null == param4.children) {
             param4.children = new IntrusiveDeque();
           }
-          kja.field_E = param4.children;
-          kja.field_E.clear(118);
+          HotspotTextWidget.field_E = param4.children;
+          HotspotTextWidget.field_E.clear(118);
           GetLaserReload.field_r = new pr(param8);
           if (null == param1.children) {
             param1.children = new IntrusiveDeque();

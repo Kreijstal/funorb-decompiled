@@ -60,9 +60,9 @@ final class fdb extends MidiPcmStream {
         boolean stackIn_22_1 = false;
         StripesTextureOperation.a(true);
         if (0 > SetShieldsDirectionalArcParticleSpeedDownshift.field_q) {
-          nna.field_v.text = null;
+          DialogMessagePanel.field_v.text = null;
         } else {
-          nna.field_v.text = SetReverbGain.a(SetUseExtraBackground.field_t, new String[]{Integer.toString(SetShieldsDirectionalArcParticleSpeedDownshift.field_q)}, 78);
+          DialogMessagePanel.field_v.text = SetReverbGain.a(SetUseExtraBackground.field_t, new String[]{Integer.toString(SetShieldsDirectionalArcParticleSpeedDownshift.field_q)}, 78);
         }
         stackIn_9_0 = tb.field_a;
         stackIn_10_1 = (param0) && (!param1) && (!bv.field_d) && (SetSpinningBladeSpindamageMultiplier.field_o == null) && (null == SetThrusterParticleSpeedDownshift.field_o);
@@ -82,14 +82,14 @@ final class fdb extends MidiPcmStream {
         }
         if (GetMomentOfInertiaPerpointCalcDownshift.field_p.field_o != 0) {
           if (GetOndamageParticleLife.field_o) {
-            w.a(param2, (byte) 92);
+            Under13AccountNoticePanel.a(param2, (byte) 92);
           } else {
             if (GetDebrisCarryOver.field_o > 0) {
-              w.a(param2, (byte) 92);
+              Under13AccountNoticePanel.a(param2, (byte) 92);
             } else {
               if (SetAngularVelocitySustain.field_p >= 2 &&
                 SetMachineGunEnergyUsed.field_o[12]) {
-                w.a(param2, (byte) 92);
+                Under13AccountNoticePanel.a(param2, (byte) 92);
               }
             }
           }

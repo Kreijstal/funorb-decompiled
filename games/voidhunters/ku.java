@@ -9,7 +9,7 @@ final class ku extends qg {
         field_d = null;
         if (param0 <= 105) {
           String var2 = (String) null;
-          ku.a((String) null, 66, (rq) null, true, -92, (String) null, (String) null);
+          ku.startAccountCreation((String) null, 66, (AccountCreationForm) null, true, -92, (String) null, (String) null);
         }
     }
 
@@ -39,11 +39,11 @@ final class ku extends qg {
         }
     }
 
-    final static boolean a(String param0, int param1, rq param2, boolean param3, int param4, String param5, String param6) {
-        sn var7 = null;
+    final static boolean startAccountCreation(String param0, int param1, AccountCreationForm param2, boolean param3, int param4, String param5, String param6) {
+        AccountCreationDialog var7 = null;
         RuntimeException var7_ref = null;
         String var8 = null;
-        sn var9 = null;
+        AccountCreationDialog var9 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -58,11 +58,11 @@ final class ku extends qg {
           if (SetCountermeasureLauncherAimspeed.field_r != kla.field_d) {
             return false;
           }
-          var9 = new sn(GetLagStandardDeviationIn.field_r, param2);
+          var9 = new AccountCreationDialog(GetLagStandardDeviationIn.field_r, param2);
           var7 = var9;
-          GetLagStandardDeviationIn.field_r.a(false, var9);
+          GetLagStandardDeviationIn.field_r.pushPanel(false, var9);
           if (SetAutozoomAmountMultiply.f(0)) {
-            var9.e(false);
+            var9.showAccountIneligible(false);
           } else {
             SetCountermeasureLauncherAimspeed.field_r = dw.field_c;
             SetResourceNodeCaptureTime.field_p = param6;
@@ -76,7 +76,7 @@ final class ku extends qg {
             return true;
           }
           var8 = (String) null;
-          ku.a((String) null, 104, (rq) null, true, 77, (String) null, (String) null);
+          ku.startAccountCreation((String) null, 104, (AccountCreationForm) null, true, 77, (String) null, (String) null);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -114,7 +114,7 @@ final class ku extends qg {
         this.field_b.setLightingSuppressed(32925, false);
         if (param0 != 5890) {
           String var3 = (String) null;
-          ku.a((String) null, -94, (rq) null, true, -26, (String) null, (String) null);
+          ku.startAccountCreation((String) null, -94, (AccountCreationForm) null, true, -26, (String) null, (String) null);
         }
     }
 

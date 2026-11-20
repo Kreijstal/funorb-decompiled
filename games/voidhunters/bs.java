@@ -35,10 +35,10 @@ final class bs {
         int var7 = 5;
         if (param1 <= -71) {
           this.field_a.a(param3, param4, var6, var7, 60, param2, param0);
-          OpenGlCubeTexture.field_h.setBounds(0, 120, PlayerJoinFactory.field_c.width, 0, nna.field_w);
-          SetCountermeasureLauncherRandomness.field_o.setBounds(0, -25, PlayerJoinFactory.field_c.width - ResourceNode.field_a - 84, 2 + nna.field_w, 18);
-          GameKeyHandler.field_b.setBounds(-2 + (PlayerJoinFactory.field_c.width - ResourceNode.field_a) - 80, 120, ResourceNode.field_a + 82, nna.field_w + 2, 18);
-          BitmapTextLayout.field_n.setBoundsAndLayout(0, nna.field_w + 22, 20, ResourceNode.field_a, -2 + PlayerJoinFactory.field_c.height - (nna.field_w + 20), PlayerJoinFactory.field_c.width, 0, 2);
+          OpenGlCubeTexture.field_h.setBounds(0, 120, PlayerJoinFactory.field_c.width, 0, DialogMessagePanel.field_w);
+          SetCountermeasureLauncherRandomness.field_o.setBounds(0, -25, PlayerJoinFactory.field_c.width - ResourceNode.field_a - 84, 2 + DialogMessagePanel.field_w, 18);
+          GameKeyHandler.field_b.setBounds(-2 + (PlayerJoinFactory.field_c.width - ResourceNode.field_a) - 80, 120, ResourceNode.field_a + 82, DialogMessagePanel.field_w + 2, 18);
+          BitmapTextLayout.field_n.setBoundsAndLayout(0, DialogMessagePanel.field_w + 22, 20, ResourceNode.field_a, -2 + PlayerJoinFactory.field_c.height - (DialogMessagePanel.field_w + 20), PlayerJoinFactory.field_c.width, 0, 2);
           vra.field_b.layoutContents(2, 20, ResourceNode.field_a, (byte) 63);
           return;
         }

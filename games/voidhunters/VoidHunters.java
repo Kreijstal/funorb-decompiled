@@ -995,9 +995,9 @@ public final class VoidHunters extends NetworkGameClient {
         WidgetNode.clearSharedReferences(8);
         cwa.clearSharedReferences((byte) 74);
         wia.clearSharedReferences(9911);
-        ida.clearSharedReferences((byte) -96);
+        ModalStack.clearSharedReferences((byte) -96);
         ud.clearSharedReferences(false);
-        rq.clearSharedReferences(112);
+        AccountCreationForm.clearSharedReferences(112);
         rla.clearSharedReferences((byte) 61);
         vla.clearSharedReferences(3);
         waa.clearSharedReferences((byte) 115);
@@ -1051,11 +1051,11 @@ public final class VoidHunters extends NetworkGameClient {
         jba.clearSharedReferences(true);
         UiTextStyle.clearSharedReferences(22540);
         UiComponent.clearSharedReferences((byte) 71);
-        bl.clearSharedReferences((byte) -17);
+        ModalPanel.clearSharedReferences((byte) -17);
         TextLayout.clearSharedReferences(54);
         hnb.clearSharedReferences(1);
         DisplayMode.clearSharedReferences((byte) -114);
-        iw.clearSharedReferences(-27545);
+        ResizableModalPanel.clearSharedReferences(-27545);
         UiComboBox.clearSharedReferences(-104);
         UiFocusableComponent.clearSharedReferences(124);
         UiContainer.clearSharedReferences(param0);
@@ -1116,12 +1116,12 @@ public final class VoidHunters extends NetworkGameClient {
         tga.clearSharedReferences(88);
         UiTextField.clearSharedReferences((byte) -128);
         ttb.clearSharedReferences(16711935);
-        kja.clearSharedReferences(-30);
+        HotspotTextWidget.clearSharedReferences(-30);
         gm.clearSharedReferences(-2459);
         UiToggleButton.clearSharedReferences(-125);
         eca.clearSharedReferences(-27183);
         reb.clearSharedReferences(false);
-        w.clearSharedReferences((byte) 77);
+        Under13AccountNoticePanel.clearSharedReferences((byte) 77);
         ut.clearSharedReferences(-72);
         MidiEnvelope.clearSharedReferences(-17719);
         ata.clearSharedReferences(6344);
@@ -1271,7 +1271,7 @@ public final class VoidHunters extends NetworkGameClient {
         meb.clearSharedReferences((byte) -52);
         kpb.clearSharedReferences(17433);
         dw.clearSharedReferences(118);
-        qpb.clearSharedReferences(!param0 ? true : false);
+        AlphaContainer.clearSharedReferences(!param0 ? true : false);
         kab.clearSharedReferences(777);
         HighscoreTableRequest.clearSharedReferences(true);
         HighscoreValueRequest.clearSharedReferences(95);
@@ -1344,9 +1344,9 @@ public final class VoidHunters extends NetworkGameClient {
         HardpointFactory.clearSharedReferences(8192);
         lsa.clearSharedReferences((byte) -92);
         dfa.clearSharedReferences((byte) 112);
-        tpa.clearSharedReferences(2);
+        AccountRequestResult.clearSharedReferences(2);
         CarouselEventFactory.clearSharedReferences((byte) 43);
-        nna.clearSharedReferences(true);
+        DialogMessagePanel.clearSharedReferences(true);
         RemoveEventActionFactory.clearSharedReferences(-117);
         us.clearSharedReferences((byte) 32);
         un.clearSharedReferences(false);
@@ -1794,8 +1794,8 @@ public final class VoidHunters extends NetworkGameClient {
         rm.clearSharedReferences(2);
         wgb.clearSharedReferences(68);
         vqa.clearSharedReferences(1);
-        oe.clearSharedReferences((byte) 94);
-        hob.clearSharedReferences((byte) -63);
+        ContentTransitionPhase.clearSharedReferences((byte) 94);
+        TextHotspotRegion.clearSharedReferences((byte) -63);
         sc.clearSharedReferences(123);
         ola.clearSharedReferences(2);
         GpuVertexBufferOwner.clearSharedReferences(-17471);
@@ -1945,11 +1945,11 @@ public final class VoidHunters extends NetworkGameClient {
         } else {
           var3 = 0;
           var4 = 0;
-          if (nna.field_C != null) {
-            nna.field_C.update(true, (byte) 77);
+          if (DialogMessagePanel.field_C != null) {
+            DialogMessagePanel.field_C.update(true, (byte) 77);
           }
-          if (null != nna.field_C &&
-            nna.field_C.isOpen(13462)) {
+          if (null != DialogMessagePanel.field_C &&
+            DialogMessagePanel.field_C.isOpen(13462)) {
             stackIn_18_0 = 1;
           } else {
             stackIn_18_0 = 0;
@@ -2020,8 +2020,8 @@ public final class VoidHunters extends NetworkGameClient {
           if (null != SniperCannonWeaponDefinition.field_b) {
             SniperCannonWeaponDefinition.field_b.b(0);
           }
-          if (null != nna.field_C &&
-            nna.field_C.isOpen(13462)) {
+          if (null != DialogMessagePanel.field_C &&
+            DialogMessagePanel.field_C.isOpen(13462)) {
             var3 = 0;
             var4 = 0;
           }
@@ -2346,9 +2346,9 @@ public final class VoidHunters extends NetworkGameClient {
           if (param0 >= -79) {
             return;
           }
-          if (nna.field_C != null) {
-            nna.field_C.draw((byte) 95);
-            if (nna.field_C.isOpen(13462)) {
+          if (DialogMessagePanel.field_C != null) {
+            DialogMessagePanel.field_C.draw((byte) 95);
+            if (DialogMessagePanel.field_C.isOpen(13462)) {
               RoundResult.field_e = true;
             }
           }

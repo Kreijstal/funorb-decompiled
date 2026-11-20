@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qh extends iw implements UiActionListener {
+final class qh extends ResizableModalPanel implements UiActionListener {
     private UiFocusableComponent field_M;
     static String field_L;
     static String field_N;
@@ -9,10 +9,10 @@ final class qh extends iw implements UiActionListener {
     static int field_J;
 
     private final void m(byte param0) {
-        if (!this.field_z) {
+        if (!this.active) {
           return;
         }
-        this.field_z = false;
+        this.active = false;
         if (param0 != -10) {
           this.field_M = (UiFocusableComponent) null;
         }
@@ -63,7 +63,7 @@ final class qh extends iw implements UiActionListener {
         field_L = null;
     }
 
-    qh(ida param0) {
+    qh(ModalStack param0) {
         super(param0, 200, 130);
         UiComponent var2 = null;
         try {

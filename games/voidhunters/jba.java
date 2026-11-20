@@ -91,8 +91,8 @@ final class jba implements UiRenderer {
             var24.field_w = new int[3][];
             var10_ref = var8;
             var11 = new Random((long)((int[]) (var8))[0]);
-            var12Lifetime1 = hob.a(var11, (int)param5, 121) - ((int)param5 >> 1) << 3;
-            var13Lifetime1 = hob.a(var11, (int)param5, 119) - ((int)param5 >> 1) << 3;
+            var12Lifetime1 = TextHotspotRegion.randomBoundedInt(var11, (int)param5, 121) - ((int)param5 >> 1) << 3;
+            var13Lifetime1 = TextHotspotRegion.randomBoundedInt(var11, (int)param5, 119) - ((int)param5 >> 1) << 3;
             for (var14Lifetime1 = 0; 3 > var14Lifetime1; var14Lifetime1++) {
               var15 = new Random((long)((int[]) (var10_ref))[1]);
               var27 = SoftwareGlyphMask.a(param1, (byte) 55, param5 * 2L / (long)(2 + var14Lifetime1), param2, var15);

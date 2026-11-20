@@ -59,7 +59,7 @@ final class GetRepairModeRadius extends ConsoleCommand {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var4_int = hob.a(param3, param2, 121);
+          var4_int = TextHotspotRegion.randomBoundedInt(param3, param2, 121);
           var6 = 84 / ((7 - param0) / 49);
           var5 = OpenGlGpuBuffer.a(true, param1, var4_int);
           stackIn_1_0 = var5;

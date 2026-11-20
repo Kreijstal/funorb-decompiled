@@ -52,7 +52,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_toggled_scoreboard(" + SetRepairModeCooldown.field_o + ")");
         System.out.println("set_debris_group_colour(" + btb.field_a + ")");
         System.out.println("set_ship_direction_arrow(" + GetPointDefenceLaserProjectileInterceptDamage.field_o + ")");
-        System.out.println("set_ship_aim_lines(" + sn.field_Y + ")");
+        System.out.println("set_ship_aim_lines(" + AccountCreationDialog.field_Y + ")");
         System.out.println("set_allow_ship_saving(" + SetShipTeamActionFactory.field_b + ")");
         System.out.println("set_use_offscreen_rendering(" + jw.field_c + ")");
         System.out.println("set_use_circle_fill(" + ColorizeTextureOperation.field_j + ")");

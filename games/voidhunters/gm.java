@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gm extends kja {
+final class gm extends HotspotTextWidget {
     private Sprite field_N;
     static IntrusiveDeque field_H;
     private int field_K;
@@ -175,7 +175,7 @@ final class gm extends kja {
           return;
         }
         this.text = var5;
-        this.g((byte) 115);
+        this.rebuildHotspots((byte) 115);
         if (param2 >= 47) {
           super.drawLayer(param0, param1, 111, param3);
           var6Lifetime2 = this.field_L.a((byte) 35);

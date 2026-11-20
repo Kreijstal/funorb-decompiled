@@ -111,7 +111,7 @@ abstract class vq extends UiContainer implements lca {
           }
           try {
             if (0 == gob.field_c) {
-              SoftwareSprite2D.field_b = NormalMapTextureOperation.field_k.openSocket(SetDefaultFiringLeeway.field_p, hob.field_l, param0 ^ -6201);
+              SoftwareSprite2D.field_b = NormalMapTextureOperation.field_k.openSocket(SetDefaultFiringLeeway.field_p, TextHotspotRegion.field_l, param0 ^ -6201);
               gob.field_c = gob.field_c + 1;
             }
             if (1 == gob.field_c) {

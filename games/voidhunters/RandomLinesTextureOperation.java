@@ -54,12 +54,12 @@ final class RandomLinesTextureOperation extends TextureOperation {
             if (this.angleRange <= 0) {
               stackIn_7_0 = this.baseAngle;
             } else {
-              stackIn_7_0 = this.baseAngle + (-var4 + hob.a(var6, this.angleRange, 124));
+              stackIn_7_0 = this.baseAngle + (-var4 + TextHotspotRegion.randomBoundedInt(var6, this.angleRange, 124));
             }
             var8 = stackIn_7_0;
             var8 = var8 >> 4 & 255;
-            var9 = hob.a(var6, hob.textureWidth, 127);
-            var10 = hob.a(var6, GetTorpedoReload.field_o, 117);
+            var9 = TextHotspotRegion.randomBoundedInt(var6, TextHotspotRegion.textureWidth, 127);
+            var10 = TextHotspotRegion.randomBoundedInt(var6, GetTorpedoReload.field_o, 117);
             var11 = var9 + (GetBombletSprayProjectiles.field_q[var8] * this.lineLength >> 12);
             var12 = var10 + (GetDebrisPartitioned.field_o[var8] * this.lineLength >> 12);
             var13 = -var10 + var12;
@@ -95,7 +95,7 @@ final class RandomLinesTextureOperation extends TextureOperation {
               var18 = var12 - var10;
               var19 = -var17Lifetime2 / 2;
               var20 = 2048 / var17Lifetime2;
-              var21 = 1024 - (hob.a(var6, 4096, 127) >> 2);
+              var21 = 1024 - (TextHotspotRegion.randomBoundedInt(var6, 4096, 127) >> 2);
               stackIn_27_0 = (var12 > var10) ? 1 : -1;
               var22 = stackIn_27_0;
               if (var18 < 0) {

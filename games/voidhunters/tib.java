@@ -13,7 +13,7 @@ final class tib extends eca {
     }
 
     final qrb a(String param0, int param1) {
-        tpa var3 = null;
+        AccountRequestResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
         qrb stackIn_3_0 = null;
@@ -33,11 +33,11 @@ final class tib extends eca {
             field_i = (byte[]) null;
           }
           if (!param0.equals(this.field_f)) {
-            var3 = ComponentAttachmentPlan.a(false, param0);
+            var3 = ComponentAttachmentPlan.pollNameAvailability(false, param0);
             if (var3 != null &&
-              null == var3.field_f) {
+              null == var3.message) {
               this.field_f = param0;
-              this.field_g = var3.field_g;
+              this.field_g = var3.success;
             } else {
               stackIn_12_0 = SetFighterRepairTime.field_q;
               return stackIn_12_0;
@@ -73,7 +73,7 @@ final class tib extends eca {
     final String b(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
-        tpa var4 = null;
+        AccountRequestResult var4 = null;
         CharSequence var5 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -96,15 +96,15 @@ final class tib extends eca {
             return stackIn_6_0;
           }
           if (!param0.equals(this.field_f)) {
-            var4 = ComponentAttachmentPlan.a(false, param0);
+            var4 = ComponentAttachmentPlan.pollNameAvailability(false, param0);
             if (var4 == null) {
               return null;
             }
-            if (null != var4.field_f) {
+            if (null != var4.message) {
               stackIn_13_0 = null;
               return (String) (stackIn_13_0);
             }
-            this.field_g = var4.field_g;
+            this.field_g = var4.success;
             this.field_f = param0;
           }
           if (this.field_g) {

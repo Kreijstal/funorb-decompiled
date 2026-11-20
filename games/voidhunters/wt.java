@@ -25,7 +25,7 @@ final class wt {
         return var1 + GetFighterVision.field_p;
     }
 
-    final static void a(int param0, int param1, String[] param2, String param3) {
+    final static void handleAccountCreationReply(int param0, int param1, String[] param2, String param3) {
         int var5 = 0;
         boolean stackIn_11_0 = false;
         RuntimeException stackIn_17_0 = null;
@@ -40,15 +40,15 @@ final class wt {
           SetCountermeasureLauncherAimspeed.field_r = SetSniperCannonFireForce.field_o;
           if (param0 == 255) {
             stackIn_11_0 = !(SetDebrisCarryOverPercentage.field_p >= 13);
-            cjb.field_b = GpuIndexBufferOwner.a(stackIn_11_0, param1 ^ -19341);
+            cjb.field_b = GpuIndexBufferOwner.createSuccessfulAccountResult(stackIn_11_0, param1 ^ -19341);
           } else {
             if (param0 < 100) {
-              cjb.field_b = GetArmageddonLength.a(param0, param3, (byte) -124);
+              cjb.field_b = GetArmageddonLength.createAccountErrorResult(param0, param3, (byte) -124);
             } else {
               if (param0 <= 105) {
-                cjb.field_b = MissionCondition.a(param2, (byte) -122);
+                cjb.field_b = MissionCondition.createAccountNameSuggestions(param2, (byte) -122);
               } else {
-                cjb.field_b = GetArmageddonLength.a(param0, param3, (byte) -124);
+                cjb.field_b = GetArmageddonLength.createAccountErrorResult(param0, param3, (byte) -124);
               }
             }
           }

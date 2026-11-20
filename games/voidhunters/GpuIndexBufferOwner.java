@@ -5,7 +5,7 @@ final class GpuIndexBufferOwner {
     static String field_b;
     private GpuIndexBuffer indexBuffer;
 
-    final static void a(int param0, int param1) {
+    final static void updateLogoPieceTransform(int param0, int param1) {
         int var2;
         int var3;
         int var4;
@@ -72,7 +72,7 @@ final class GpuIndexBufferOwner {
             var4 = 1;
             var5 = 1;
           }
-          GetMissileLauncherAimspeed.field_p = OpenGlTexture1D.a(91, var2 * var4, var2 * var5);
+          GetMissileLauncherAimspeed.field_p = OpenGlTexture1D.createRotationMatrix(91, var2 * var4, var2 * var5);
           return;
         }
         if (var3 < 105) {
@@ -126,7 +126,7 @@ final class GpuIndexBufferOwner {
             var4Lifetime1 = 1;
             var5Lifetime1 = 1;
           }
-          GetMissileLauncherAimspeed.field_p = OpenGlTexture1D.a(91, var2 * var4Lifetime1, var2 * var5Lifetime1);
+          GetMissileLauncherAimspeed.field_p = OpenGlTexture1D.createRotationMatrix(91, var2 * var4Lifetime1, var2 * var5Lifetime1);
           return;
         }
         if (var3 >= 120) {
@@ -175,7 +175,7 @@ final class GpuIndexBufferOwner {
             var4Lifetime2 = 1;
             var5Lifetime2 = 1;
           }
-          GetMissileLauncherAimspeed.field_p = OpenGlTexture1D.a(91, var2 * var4Lifetime2, var2 * var5Lifetime2);
+          GetMissileLauncherAimspeed.field_p = OpenGlTexture1D.createRotationMatrix(91, var2 * var4Lifetime2, var2 * var5Lifetime2);
           return;
         }
         var3 = -var3 + 120;
@@ -225,14 +225,14 @@ final class GpuIndexBufferOwner {
           var4Lifetime3 = 1;
           var5Lifetime3 = 1;
         }
-        GetMissileLauncherAimspeed.field_p = OpenGlTexture1D.a(91, var2Lifetime1 * var4Lifetime3, var2Lifetime1 * var5Lifetime3);
+        GetMissileLauncherAimspeed.field_p = OpenGlTexture1D.createRotationMatrix(91, var2Lifetime1 * var4Lifetime3, var2Lifetime1 * var5Lifetime3);
         return;
     }
 
     public static void clearSharedReferences(int param0) {
         field_b = null;
         if (param0 != -1) {
-          GpuIndexBufferOwner.a(-69, 55);
+          GpuIndexBufferOwner.updateLogoPieceTransform(-69, 55);
         }
     }
 
@@ -251,13 +251,13 @@ final class GpuIndexBufferOwner {
         this.indexBuffer.release(param0 - 51);
     }
 
-    final static tpa a(boolean param0, int param1) {
-        tpa var2 = new tpa(true);
-        var2.field_c = param0 ? true : false;
+    final static AccountRequestResult createSuccessfulAccountResult(boolean param0, int param1) {
+        AccountRequestResult var2 = new AccountRequestResult(true);
+        var2.under13 = param0 ? true : false;
         if (param1 == 1) {
           return var2;
         }
-        return (tpa) null;
+        return (AccountRequestResult) null;
     }
 
     GpuIndexBufferOwner(boolean param0) {

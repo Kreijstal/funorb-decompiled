@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cjb {
-    static tpa field_b;
+    static AccountRequestResult field_b;
     static String field_a;
     private static String field_z;
 

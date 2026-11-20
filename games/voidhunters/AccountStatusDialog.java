@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class os extends gea implements UiActionListener {
+class AccountStatusDialog extends ContentTransitionDialog implements UiActionListener {
     private boolean field_V;
     private ttb field_R;
     private BitmapFont field_T;
@@ -9,11 +9,11 @@ class os extends gea implements UiActionListener {
     private boolean field_W;
     private boolean field_U;
 
-    final void l(byte param0) {
-        if (!this.field_z) {
+    final void closeDialog(byte param0) {
+        if (!this.active) {
           return;
         }
-        this.field_z = false;
+        this.active = false;
         if (this.field_W) {
           kia.a((byte) 63);
           if (param0 != -106) {
@@ -36,8 +36,8 @@ class os extends gea implements UiActionListener {
         this.field_V = true;
     }
 
-    os(ida param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
-        super(param0, new nna((os) null, param1, param2), 77, 10, 10);
+    AccountStatusDialog(ModalStack param0, BitmapFont param1, String param2, boolean param3, boolean param4) {
+        super(param0, new DialogMessagePanel((AccountStatusDialog) null, param1, param2), 77, 10, 10);
         try {
           this.field_W = param3 ? true : false;
           this.field_S = false;
@@ -52,12 +52,12 @@ class os extends gea implements UiActionListener {
         }
     }
 
-    final void g(int param0) {
+    final void showConnectionRestored(int param0) {
         int var2 = 102 % ((param0 - 24) / 59);
         this.field_R.b(2121792, -21202, 4210752);
-        nna var3 = new nna(this, this.field_T, GetPointDefenceLaserAimarc.field_o);
-        var3.a(-123, nna.field_D, 15);
-        this.b(var3, -53);
+        DialogMessagePanel var3 = new DialogMessagePanel(this, this.field_T, GetPointDefenceLaserAimarc.field_o);
+        var3.addButton(-123, DialogMessagePanel.field_D, 15);
+        this.transitionToContent(var3, -53);
     }
 
     final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
@@ -69,7 +69,7 @@ class os extends gea implements UiActionListener {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 13) {
-            this.l((byte) -106);
+            this.closeDialog((byte) -106);
             return true;
           }
           if (param0 == -15834) {
@@ -101,7 +101,7 @@ class os extends gea implements UiActionListener {
         try {
           if (this.field_V) {
             GetSelfDestructPrepareToggleCooldown.a(-123, 3);
-            this.l((byte) -106);
+            this.closeDialog((byte) -106);
           } else {
             lc.a((byte) 86, MissionList.b((byte) -92), "tochangedisplayname.ws");
           }
@@ -109,7 +109,7 @@ class os extends gea implements UiActionListener {
             return;
           }
           var7 = (String) null;
-          this.a(false, (String) null, 35);
+          this.showStatusMessage(false, (String) null, 35);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -125,20 +125,20 @@ class os extends gea implements UiActionListener {
         }
     }
 
-    final void a(boolean param0, String param1, int param2) {
+    final void showStatusMessage(boolean param0, String param1, int param2) {
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
-        nna stackIn_14_0 = null;
+        DialogMessagePanel stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         String stackIn_15_2 = null;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
         String stackIn_31_2 = null;
         RuntimeException decompiledCaughtException = null;
-        nna var4 = null;
+        DialogMessagePanel var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
-        nna var6 = null;
+        DialogMessagePanel var6 = null;
         var5 = VoidHunters.field_G;
         try {
           if (this.field_S) {
@@ -149,14 +149,14 @@ class os extends gea implements UiActionListener {
           stackIn_10_1 = (param0);
           this.field_S = stackIn_10_1;
           this.field_R.b(8405024, -21202, 4210752);
-          var6 = new nna(this, this.field_T, param1);
+          var6 = new DialogMessagePanel(this, this.field_T, param1);
           var4 = var6;
           if (param2 == 5) {
-            var6.a(-123, PhasedEnergyBeamWeaponDefinition.field_c, 11);
-            var6.a(-115, GetFighterBayAimspeed.field_q, 17);
+            var6.addButton(-123, PhasedEnergyBeamWeaponDefinition.field_c, 11);
+            var6.addButton(-115, GetFighterBayAimspeed.field_q, 17);
           } else {
             if (param2 == 256) {
-              var6.a((byte) 127, SetSpecialOrderBoxHeight.field_p, (UiListener) (this));
+              var6.addButton((byte) 127, SetSpecialOrderBoxHeight.field_p, (UiListener) (this));
             } else {
               stackIn_14_0 = var6;
               stackIn_14_1 = -128;
@@ -165,25 +165,25 @@ class os extends gea implements UiActionListener {
               } else {
                 stackIn_15_2 = ArbProgram.field_a;
               }
-              ((nna) (Object) stackIn_14_0).a(stackIn_14_1, stackIn_15_2, -1);
+              ((DialogMessagePanel) (Object) stackIn_14_0).addButton(stackIn_14_1, stackIn_15_2, -1);
             }
           }
           if (param2 == 3) {
-            var6.a(-125, mab.field_h, 7);
+            var6.addButton(-125, mab.field_h, 7);
           } else {
             if (param2 == 4) {
-              var6.a(-119, GetBombletSprayProjectileLife.field_p, 8);
+              var6.addButton(-119, GetBombletSprayProjectileLife.field_p, 8);
             } else {
               if (6 != param2) {
                 if (param2 == 9) {
-                  var6.a((byte) 111, GetCountermeasureLauncherProjectileLife.field_o, (UiListener) (this));
+                  var6.addButton((byte) 111, GetCountermeasureLauncherProjectileLife.field_o, (UiListener) (this));
                 }
               } else {
-                var6.a(-126, SoftwareTransform3D.field_c, 9);
+                var6.addButton(-126, SoftwareTransform3D.field_c, 9);
               }
             }
           }
-          this.b(var6, 94);
+          this.transitionToContent(var6, 94);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

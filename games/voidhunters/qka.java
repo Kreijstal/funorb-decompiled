@@ -303,10 +303,10 @@ final class qka extends Widget {
           this.field_vb.field_s = "|";
           this.field_yb = new StringBuilder(12);
           var9_int = this.field_xb.getPreferredWidth(57);
-          this.field_xb.setBounds(5, 119, var9_int, 3, nna.field_w);
-          this.field_vb.setBounds(5, 43, var9_int, 3 + nna.field_w, nna.field_w);
+          this.field_xb.setBounds(5, 119, var9_int, 3, DialogMessagePanel.field_w);
+          this.field_vb.setBounds(5, 43, var9_int, 3 + DialogMessagePanel.field_w, DialogMessagePanel.field_w);
           var10 = 10 + var9_int;
-          var11 = 3 + 2 * nna.field_w + 3;
+          var11 = 3 + 2 * DialogMessagePanel.field_w + 3;
           var12 = QuickChatCategoryLoader.adjustPopupX((byte) -109, param0, param2, var10);
           var13 = lma.a(param3, param1, var11, (byte) -16);
           this.setBounds(var12, 122, var10, var13, var11);

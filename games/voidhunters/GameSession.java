@@ -1398,7 +1398,7 @@ final class GameSession {
               !var4.hasVisibilityFlag(2, (byte) -120) ||
               var10 != 0)) {
               stackIn_23_0 = (var4.getOwner((byte) -117) == this.localPlayerIndex);
-              var12 = qpb.a(stackIn_23_0, var4.getTeam((byte) 98), 13894143);
+              var12 = AlphaContainer.getTeamColor(stackIn_23_0, var4.getTeam((byte) 98), 13894143);
               GetLagStandardDeviationOut.a(-1, var11_ref_String, var12, var8, var7 - (GetPhasedEnergyBeamProjectiles.a(95, var11_ref_String) >> 1), param0 + 170);
             }
           }
@@ -1685,12 +1685,12 @@ final class GameSession {
                 var11[var17Lifetime1 + 1] = SetAngularForceDownshift.a(var11[var17Lifetime1 + 1], bsb.field_a);
               }
               var19_int = var35.selectedTeam;
-              var12[1 + var17Lifetime1] = qpb.a(false, var19_int, 13894143);
+              var12[1 + var17Lifetime1] = AlphaContainer.getTeamColor(false, var19_int, 13894143);
               if (var9 == 0 ||
                 var7.missionState.isPreGamePhase((byte) -116)) {
                 var19_int = 0;
                 if (var9 == 0) {
-                  var12[1 + var17Lifetime1] = qpb.a(false, var17Lifetime1, 13894143);
+                  var12[1 + var17Lifetime1] = AlphaContainer.getTeamColor(false, var17Lifetime1, 13894143);
                 }
               }
               var13[var17Lifetime1 + 1] = var35.kills;
@@ -1809,8 +1809,8 @@ final class GameSession {
           var25_ref_String = VoidHunters.b(1, -1) + ": <col=ffffff>" + Integer.toString(var23Lifetime1) + "</col>";
           var26Lifetime1 = GetPointDefenceLaserProjectiles.a(false, 1);
           BlackBoxRecording.a((byte) -115, 200, var14Lifetime1 + var26Lifetime1, var6, -var26Lifetime1 + var4Lifetime1, var20Lifetime1);
-          SetSelfDestructPrepareToggleCooldown.a((var20Lifetime1 >> 1) + (var6 - tea.a(1, var42, 13879) / 2 - var20Lifetime1 / 4), 1, var4Lifetime1 - 10, var42, 1, qpb.a(false, 0, 13894143), (byte) -124);
-          SetSelfDestructPrepareToggleCooldown.a(-(tea.a(1, var25_ref_String, 13879) / 2) + var6 - (-(var20Lifetime1 >> 1) - var20Lifetime1 / 4), 1, -10 + var4Lifetime1, var25_ref_String, 1, qpb.a(false, 1, 13894143), (byte) -95);
+          SetSelfDestructPrepareToggleCooldown.a((var20Lifetime1 >> 1) + (var6 - tea.a(1, var42, 13879) / 2 - var20Lifetime1 / 4), 1, var4Lifetime1 - 10, var42, 1, AlphaContainer.getTeamColor(false, 0, 13894143), (byte) -124);
+          SetSelfDestructPrepareToggleCooldown.a(-(tea.a(1, var25_ref_String, 13879) / 2) + var6 - (-(var20Lifetime1 >> 1) - var20Lifetime1 / 4), 1, -10 + var4Lifetime1, var25_ref_String, 1, AlphaContainer.getTeamColor(false, 1, 13894143), (byte) -95);
         } else {
           var23Lifetime1 = 4;
           BlackBoxRecording.a((byte) -115, 200, var14Lifetime1 + 2 * var23Lifetime1, var6, -var23Lifetime1 + (var4Lifetime1 - 5), var20Lifetime1);
@@ -2126,7 +2126,7 @@ final class GameSession {
         var11 = VoidHunters.field_G;
         try {
           if (param0 != 3) {
-            if (!sn.field_Y &&
+            if (!AccountCreationDialog.field_Y &&
               !rla.c(false)) {
               return;
             }
@@ -2735,7 +2735,7 @@ final class GameSession {
                   var9_ref_hna.specialOrderSubmessage = new SpecialOrderSubmessage();
                   if (var8 == 0) {
                     var10_ref_Random = new Random();
-                    var11 = hob.a(var10_ref_Random, fa.field_e.length, 122);
+                    var11 = TextHotspotRegion.randomBoundedInt(var10_ref_Random, fa.field_e.length, 122);
                     var12_ref_String = fa.field_e[var11];
                     var13_ref_int__ = GetResourceNodeCaptureTime.a(var12_ref_String, false, true);
                     var9_ref_hna.specialOrderSubmessage.blueprint = new ShipBlueprint();
@@ -2981,8 +2981,8 @@ final class GameSession {
                     var34Lifetime2 = OpenGlVertexNormal.field_d[130];
                     if ((1 == GetBots.field_o ||
                       SetMachineGunEnergyUsed.field_o[84] &&
-                      (null == nna.field_C ||
-                      !nna.field_C.isOpen(13462))) && !this.field_X) {
+                      (null == DialogMessagePanel.field_C ||
+                      !DialogMessagePanel.field_C.isOpen(13462))) && !this.field_X) {
                       if (var9Lifetime1 >= var20) {
                         var54 = new PlayerAction();
                         var54.mousex = ShipTeamConditionFactory.field_a.screenToWorldX(true, GetUseDetailLines.field_o);
@@ -3281,7 +3281,7 @@ final class GameSession {
           } else {
             if (var3_int == 0) {
               var5_ref = SetReverbGain.a(Widget.field_H, new String[]{GpuVertexBufferOwner.field_c[0]}, param1 + 74);
-              var6 = qpb.a(false, 0, 13894143);
+              var6 = AlphaContainer.getTeamColor(false, 0, 13894143);
             } else {
               if (var4 != 0) {
                 if (var5 != null) {
@@ -3292,7 +3292,7 @@ final class GameSession {
                 return;
               }
               var5_ref = SetReverbGain.a(Widget.field_H, new String[]{GpuVertexBufferOwner.field_c[1]}, 99);
-              var6 = qpb.a(false, 1, 13894143);
+              var6 = AlphaContainer.getTeamColor(false, 1, 13894143);
             }
           }
           if (var5_ref != null) {
@@ -4326,7 +4326,7 @@ final class GameSession {
             }
             var9 = param1.chassis.getFinalx(true);
             var10 = param1.chassis.getFinaly((byte) 55);
-            var11 = qpb.a(false, param1.getTeam((byte) 69), 13894143);
+            var11 = AlphaContainer.getTeamColor(false, param1.getTeam((byte) 69), 13894143);
             GetCountermeasureLauncherAimarc.a(var4 + var9, ShipTeamConditionFactory.field_a, var10 + var7, 3, var10 + var5, var11, var8, var6 + var9);
           }
         } catch (RuntimeException runtimeException) {
@@ -4455,7 +4455,7 @@ final class GameSession {
             var15 = var14;
             if (var15 != null &&
               var15 != param4.chassis) {
-              var15.drawTree((byte) 100, ShipTeamConditionFactory.field_a, true, param5, qpb.a(true, param4.getTeam((byte) 105), 13894143));
+              var15.drawTree((byte) 100, ShipTeamConditionFactory.field_a, true, param5, AlphaContainer.getTeamColor(true, param4.getTeam((byte) 105), 13894143));
               var8_int = 26 + ShipTeamConditionFactory.field_a.worldToScreenX(param2, (byte) 120);
               var9 = ShipTeamConditionFactory.field_a.worldToScreenY(true, param1) + 10;
               this.a(var8_int, 92, var9);
@@ -5054,7 +5054,7 @@ final class GameSession {
                 var16 = var6 + var8.worldToScreenX(var24.getX(false), (byte) 114);
                 var17 = var8.worldToScreenY(true, var24.getY((byte) 124)) + var7;
                 stackIn_12_0 = (var24.getOwner((byte) -117) == this.localPlayerIndex);
-                var18 = qpb.a(stackIn_12_0, var24.getTeam((byte) 95), param1 ^ 13894143);
+                var18 = AlphaContainer.getTeamColor(stackIn_12_0, var24.getTeam((byte) 95), param1 ^ 13894143);
                 MouseWheelInput.a(var18, var17, var16, -119);
               }
             }
@@ -5122,7 +5122,7 @@ final class GameSession {
           param5.setPosition(0, 0, (byte) 92);
           param5.setAngle(param0, -116);
           param5.integrateMotion(false, true, param6.world);
-          param5.draw(var11, qpb.a(false, param3, 13894143), param6.world, 16);
+          param5.draw(var11, AlphaContainer.getTeamColor(false, param3, 13894143), param6.world, 16);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uca.S(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
@@ -5467,7 +5467,7 @@ final class GameSession {
               }
               if (var8.field_a == 4) {
                 var9 = VoidHunters.b(param1, -1);
-                var4 = var4 + "<col=" + UiFocusProxy.toHexString(-18879, qpb.a(false, param1, 13894143)) + ">(" + var9 + ") " + var8.field_d + "</col>";
+                var4 = var4 + "<col=" + UiFocusProxy.toHexString(-18879, AlphaContainer.getTeamColor(false, param1, 13894143)) + ">(" + var9 + ") " + var8.field_d + "</col>";
               } else {
                 var4 = var4 + var8.field_d;
               }
@@ -5963,7 +5963,7 @@ final class GameSession {
                   var19 = GameKeyHandler.a(param3 + 22433, var18 - var15);
                   if (var11 >= Math.abs(var19)) {
                     param2 = 2;
-                    if (!sn.field_Y) {
+                    if (!AccountCreationDialog.field_Y) {
                       break scanLoop1;
                     }
                     if ((1 & PacketBuffer.field_g) != 0) {
@@ -7217,7 +7217,7 @@ final class GameSession {
                   }
                 }
               }
-              var11Lifetime1Lifetime1 = qpb.a(false, var13Lifetime1, 13894143);
+              var11Lifetime1Lifetime1 = AlphaContainer.getTeamColor(false, var13Lifetime1, 13894143);
             } else {
               if (var9Lifetime1 == -1) {
                 var10 = SetGrapplingHookMaxExtension8Force.field_r.toUpperCase();
@@ -7234,7 +7234,7 @@ final class GameSession {
                 }
                 var10 = SetReverbGain.a(kia.field_a, new String[]{var13_ref_String}, param1 ^ 147).toUpperCase();
               }
-              var11Lifetime1Lifetime1 = qpb.a(false, var9Lifetime1, 13894143);
+              var11Lifetime1Lifetime1 = AlphaContainer.getTeamColor(false, var9Lifetime1, 13894143);
             }
             var13Lifetime1Lifetime1 = 1;
             var14Lifetime1 = GetPointDefenceLaserProjectiles.a(false, var13Lifetime1Lifetime1);
@@ -7540,7 +7540,7 @@ final class GameSession {
           }
           if (GetLagStandardDeviationOut.field_p != var3Lifetime1) {
             GetLagStandardDeviationOut.field_p = var3Lifetime1;
-            var4Lifetime1 = qpb.a(false, var3Lifetime1, 13894143);
+            var4Lifetime1 = AlphaContainer.getTeamColor(false, var3Lifetime1, 13894143);
             mcb.a(var4Lifetime1, 124);
             var9 = VoidHunters.b(var3Lifetime1, -1);
             GetBurstFireMaxEnergy.a(1043, var9);
@@ -8181,7 +8181,7 @@ final class GameSession {
                 var21 = tib.a(true, var9) + MidiNote.a(var9, (byte) -121);
                 var22 = var7 + var21 + var10;
                 var23_int = GetReloadBarWidth.field_o[var29.label];
-                var24 = qpb.a(false, var23_int, 13894143);
+                var24 = AlphaContainer.getTeamColor(false, var23_int, 13894143);
                 if (var18_intLifetime2 > 0 &&
                   var18_intLifetime2 < 60) {
                   var25 = TextureLineShape.sinAngle(128 * SetMinimapWidth.field_o, 96) >> 9;
@@ -8202,7 +8202,7 @@ final class GameSession {
                 var45 = (Ship) (var16);
                 var18 = GetSniperCannonAimarc.a((byte) -38, param1, var45) + ":";
                 var19 = var45.getHealthProgress(0);
-                var20Lifetime2 = qpb.a(false, var45.getTeam((byte) 66), 13894143);
+                var20Lifetime2 = AlphaContainer.getTeamColor(false, var45.getTeam((byte) 66), 13894143);
                 var21Lifetime1 = tib.a(true, var9) + MidiNote.a(var9, (byte) -121);
                 var22Lifetime1 = var7 - (-var21Lifetime1 - var10);
                 SoftwareDepthBuffer.a(var20Lifetime2, -MidiNote.a(var9, (byte) -121) + var22Lifetime1, -3 + var6 - var12, (byte) 74, -1, var9, var18);

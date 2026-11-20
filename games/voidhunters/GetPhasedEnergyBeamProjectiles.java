@@ -56,8 +56,8 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
     }
 
     final static void a(int param0) {
-        GetFighterRepairAmount.field_p = new rq();
-        GetMissionVariablesHudX.field_o.b(GetFighterRepairAmount.field_p, 99);
+        GetFighterRepairAmount.field_p = new AccountCreationForm();
+        GetMissionVariablesHudX.field_o.transitionToContent(GetFighterRepairAmount.field_p, 99);
         if (param0 != 70) {
           field_o = 121;
         }

@@ -93,26 +93,26 @@ final class IrregularBricksTextureOperation extends TextureOperation {
           var11 = 1;
           var12 = 0;
           var13 = 0;
-          var14 = hob.textureWidth * this.minimumWidth >> 12;
-          var15 = this.maximumWidth * hob.textureWidth >> 12;
+          var14 = TextHotspotRegion.textureWidth * this.minimumWidth >> 12;
+          var15 = this.maximumWidth * TextHotspotRegion.textureWidth >> 12;
           var16 = this.minimumHeight * GetTorpedoReload.field_o >> 12;
           var17 = GetTorpedoReload.field_o * this.maximumHeight >> 12;
           if (var17 <= 1) {
             return var47[param0];
           }
-          this.baseBevelWidth = this.bevelWidthScale * (hob.textureWidth / 8) >> 12;
-          var18 = hob.textureWidth / var14 + 1;
+          this.baseBevelWidth = this.bevelWidthScale * (TextHotspotRegion.textureWidth / 8) >> 12;
+          var18 = TextHotspotRegion.textureWidth / var14 + 1;
           var19 = new int[var18][3];
           var48 = new int[var18][3];
           var20 = var48;
           var21 = new Random((long)this.seed);
           while (true) {
-            var23 = var14 + hob.a(var21, -var14 + var15, 122);
-            var24 = var16 + hob.a(var21, -var16 + var17, 127);
+            var23 = var14 + TextHotspotRegion.randomBoundedInt(var21, -var14 + var15, 122);
+            var24 = var16 + TextHotspotRegion.randomBoundedInt(var21, -var16 + var17, 127);
             var25 = var23 + var8;
-            if (var25 > hob.textureWidth) {
-              var25 = hob.textureWidth;
-              var23 = -var8 + hob.textureWidth;
+            if (var25 > TextHotspotRegion.textureWidth) {
+              var25 = TextHotspotRegion.textureWidth;
+              var23 = -var8 + TextHotspotRegion.textureWidth;
             }
             regionExit1: {
               if (var11 == 0) {
@@ -122,10 +122,10 @@ final class IrregularBricksTextureOperation extends TextureOperation {
                 var28 = 0;
                 var29_int = var5 + var25;
                 if (var29_int < 0) {
-                  var29_int = var29_int + hob.textureWidth;
+                  var29_int = var29_int + TextHotspotRegion.textureWidth;
                 }
-                if (hob.textureWidth < var29_int) {
-                  var29_int = var29_int - hob.textureWidth;
+                if (TextHotspotRegion.textureWidth < var29_int) {
+                  var29_int = var29_int - TextHotspotRegion.textureWidth;
                 }
                 while (true) {
                   var53 = var48Lifetime1[var26_int];
@@ -135,10 +135,10 @@ final class IrregularBricksTextureOperation extends TextureOperation {
                     if (var26_int != var9) {
                       var30 = var5 + var8;
                       if (var30 < 0) {
-                        var30 = var30 + hob.textureWidth;
+                        var30 = var30 + TextHotspotRegion.textureWidth;
                       }
-                      if (var30 > hob.textureWidth) {
-                        var30 = var30 - hob.textureWidth;
+                      if (var30 > TextHotspotRegion.textureWidth) {
+                        var30 = var30 - TextHotspotRegion.textureWidth;
                       }
                       for (var31 = 1; var31 <= var28; var31++) {
                         var42 = var20[(var31 + var9) % var12];
@@ -158,7 +158,7 @@ final class IrregularBricksTextureOperation extends TextureOperation {
                           } else {
                             if (var36 != 0) {
                               var34 = Math.max(var30, var36);
-                              var35 = hob.textureWidth;
+                              var35 = TextHotspotRegion.textureWidth;
                             } else {
                               var35 = Math.min(var29_int, var37);
                               var34 = 0;
@@ -189,7 +189,7 @@ final class IrregularBricksTextureOperation extends TextureOperation {
             } else {
               var10 = 0;
             }
-            if (var25 != hob.textureWidth) {
+            if (var25 != TextHotspotRegion.textureWidth) {
               incrementValue$1 = var13;
               var13++;
               var44 = var19[incrementValue$1];
@@ -219,15 +219,15 @@ final class IrregularBricksTextureOperation extends TextureOperation {
             var12 = var13;
             var7 = var6;
             var13 = 0;
-            var6 = hob.a(var21, hob.textureWidth, 124);
+            var6 = TextHotspotRegion.randomBoundedInt(var21, TextHotspotRegion.textureWidth, 124);
             var5 = -var7 + var6;
             var8 = 0;
             var28Lifetime1 = var5;
             if (var28Lifetime1 < 0) {
-              var28Lifetime1 = var28Lifetime1 + hob.textureWidth;
+              var28Lifetime1 = var28Lifetime1 + TextHotspotRegion.textureWidth;
             }
-            if (var28Lifetime1 > hob.textureWidth) {
-              var28Lifetime1 = var28Lifetime1 - hob.textureWidth;
+            if (var28Lifetime1 > TextHotspotRegion.textureWidth) {
+              var28Lifetime1 = var28Lifetime1 - TextHotspotRegion.textureWidth;
             }
             var9 = 0;
             while (true) {
@@ -434,7 +434,7 @@ final class IrregularBricksTextureOperation extends TextureOperation {
         var23 = VoidHunters.field_G;
         try {
           if (this.brightnessRandomness > 0) {
-            stackIn_4_0 = 4096 - hob.a(param5, this.brightnessRandomness, 123);
+            stackIn_4_0 = 4096 - TextHotspotRegion.randomBoundedInt(param5, this.brightnessRandomness, 123);
           } else {
             stackIn_4_0 = 4096;
           }
@@ -444,24 +444,24 @@ final class IrregularBricksTextureOperation extends TextureOperation {
           if (0 >= var9) {
             stackIn_7_1 = 0;
           } else {
-            stackIn_7_1 = hob.a(param5, var9, param0 ^ 3439);
+            stackIn_7_1 = TextHotspotRegion.randomBoundedInt(param5, var9, param0 ^ 3439);
           }
           var10 = stackIn_6_0 - stackIn_7_1;
           if (param0 != 3349) {
             var24 = (Random) null;
             this.drawBeveledBrick(-48, 78, (int[][]) null, 42, 103, (Random) null, -25);
           }
-          if (param3 >= hob.textureWidth) {
-            param3 = param3 - hob.textureWidth;
+          if (param3 >= TextHotspotRegion.textureWidth) {
+            param3 = param3 - TextHotspotRegion.textureWidth;
           }
           if (var10 <= 0) {
-            if (hob.textureWidth >= param3 + param1) {
+            if (TextHotspotRegion.textureWidth >= param3 + param1) {
               for (var11 = 0; var11 < param4; var11++) {
                 ArrayOperations.fill(param2[var11 + param6], param3, param1, var8_int);
               }
               return;
             }
-            var11Lifetime2 = -param3 + hob.textureWidth;
+            var11Lifetime2 = -param3 + TextHotspotRegion.textureWidth;
             for (var12 = 0; var12 < param4; var12++) {
               var13_ref_int__ = param2[param6 + var12];
               ArrayOperations.fill(var13_ref_int__, param3, var11Lifetime2, var8_int);
@@ -507,10 +507,10 @@ final class IrregularBricksTextureOperation extends TextureOperation {
                     stackIn_41_0[stackIn_41_1] = stackIn_42_4;
                   }
                 }
-                if (var16 + var15 <= hob.textureWidth) {
+                if (var16 + var15 <= TextHotspotRegion.textureWidth) {
                   ArrayOperations.fill(var18, var15, var16, var19);
                 } else {
-                  var20 = -var15 + hob.textureWidth;
+                  var20 = -var15 + TextHotspotRegion.textureWidth;
                   ArrayOperations.fill(var18, var15, var20, var19);
                   ArrayOperations.fill(var18, 0, -var20 + var16, var19);
                 }
@@ -522,10 +522,10 @@ final class IrregularBricksTextureOperation extends TextureOperation {
                     var18[dupTemp$2] = var8_int * var20 / var13;
                     var18[dla.a(var20 + param3, SetMassDriverEnergyUsed.field_q)] = var8_int * var20 / var13;
                   }
-                  if (hob.textureWidth >= var15 + var16) {
+                  if (TextHotspotRegion.textureWidth >= var15 + var16) {
                     ArrayOperations.fill(var18, var15, var16, var8_int);
                   } else {
-                    var20 = hob.textureWidth - var15;
+                    var20 = TextHotspotRegion.textureWidth - var15;
                     ArrayOperations.fill(var18, var15, var20, var8_int);
                     ArrayOperations.fill(var18, 0, -var20 + var16, var8_int);
                   }
@@ -556,10 +556,10 @@ final class IrregularBricksTextureOperation extends TextureOperation {
                       stackIn_53_0[stackIn_53_1] = stackIn_54_4;
                     }
                   }
-                  if (hob.textureWidth >= var16 + var15) {
+                  if (TextHotspotRegion.textureWidth >= var16 + var15) {
                     ArrayOperations.fill(var18, var15, var16, var20);
                   } else {
-                    var21 = -var15 + hob.textureWidth;
+                    var21 = -var15 + TextHotspotRegion.textureWidth;
                     ArrayOperations.fill(var18, var15, var21, var20);
                     ArrayOperations.fill(var18, 0, var16 - var21, var20);
                   }

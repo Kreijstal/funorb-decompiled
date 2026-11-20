@@ -17,11 +17,11 @@ final class fa extends IntrusiveNode {
         try {
           RemoveEventActionFactory.field_b = true;
           kmb.field_c = param2 ? true : false;
-          SetPointDefenceLaserAimarc.field_o = new os(GetLagStandardDeviationIn.field_r, GetBoostersCooldown.field_r, param0, OpenGlSprite.field_c, kmb.field_c);
+          SetPointDefenceLaserAimarc.field_o = new AccountStatusDialog(GetLagStandardDeviationIn.field_r, GetBoostersCooldown.field_r, param0, OpenGlSprite.field_c, kmb.field_c);
           if (param1 >= -119) {
             field_d = (PcmSample[]) null;
           }
-          GetLagStandardDeviationIn.field_r.a(false, SetPointDefenceLaserAimarc.field_o);
+          GetLagStandardDeviationIn.field_r.pushPanel(false, SetPointDefenceLaserAimarc.field_o);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

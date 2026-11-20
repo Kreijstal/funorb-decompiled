@@ -127,9 +127,9 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
           if (MidiPcmStream.field_z > 0) {
             var14 = new Random(234890L);
             for (var7 = 0; var7 < MidiPcmStream.field_z; var7++) {
-              var8 = hob.a(var14, param0.getWidth((byte) -122), 127) - var4_int;
-              var9 = -var5 + hob.a(var14, param0.getHeight(1), param3 + 175);
-              var10 = hob.a(var14, 800, param3 + 179) + 200;
+              var8 = TextHotspotRegion.randomBoundedInt(var14, param0.getWidth((byte) -122), 127) - var4_int;
+              var9 = -var5 + TextHotspotRegion.randomBoundedInt(var14, param0.getHeight(1), param3 + 175);
+              var10 = TextHotspotRegion.randomBoundedInt(var14, 800, param3 + 179) + 200;
               var11 = (int)(param1.scale * (float)(var10 << 8));
               if (var11 > 255) {
                 var11 = 255;

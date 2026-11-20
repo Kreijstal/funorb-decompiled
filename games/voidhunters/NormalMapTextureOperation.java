@@ -84,7 +84,7 @@ final class NormalMapTextureOperation extends TextureOperation {
           var42 = var29[0];
           var43 = var29[1];
           var44 = var29[2];
-          for (var10 = 0; hob.textureWidth > var10; var10++) {
+          for (var10 = 0; TextHotspotRegion.textureWidth > var10; var10++) {
             var14 = this.heightScale * (var40[var10] - var41[var10]);
             var15 = (var5[SetMassDriverEnergyUsed.field_q & var10 + 1] - var5[SetMassDriverEnergyUsed.field_q & -1 + var10]) * this.heightScale;
             var16 = var15 >> 12;

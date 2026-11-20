@@ -36,7 +36,7 @@ final class OpenGlTexture1D extends OpenGlTexture {
         }
     }
 
-    final static int[] a(int param0, int param1, int param2) {
+    final static int[] createRotationMatrix(int param0, int param1, int param2) {
         int var3 = TextureLineShape.sinAngle(param1, 53);
         int var4 = GetNumStars.cosAngle(param1, (byte) 106);
         int var5 = TextureLineShape.sinAngle(param2, 108);

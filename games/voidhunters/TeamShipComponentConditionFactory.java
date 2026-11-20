@@ -72,7 +72,7 @@ final class TeamShipComponentConditionFactory implements GameStateFactory {
         RemoveEventActionFactory.field_b = false;
         EnvironmentReflectionGpuMaterialEffect.field_j = null;
         if (OpenGlSprite.field_c) {
-          SetPointDefenceLaserAimarc.field_o.g(-123);
+          SetPointDefenceLaserAimarc.field_o.showConnectionRestored(-123);
           if (param0 > 30) {
             return;
           }
@@ -88,7 +88,7 @@ final class TeamShipComponentConditionFactory implements GameStateFactory {
           }
           EnvironmentReflectionGpuMaterialEffect.field_j = SetShieldsDirectionalArc.a(0, new CharSequence[]{(CharSequence) ((Object) EnvironmentReflectionGpuMaterialEffect.field_j), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) GetMassDriverProjectileDamage.field_o)});
         }
-        SetPointDefenceLaserAimarc.field_o.l((byte) -106);
+        SetPointDefenceLaserAimarc.field_o.closeDialog((byte) -106);
         gib.a((byte) -89);
         if (param0 > 30) {
           return;

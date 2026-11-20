@@ -8,7 +8,7 @@ final class HighscoreTableRequest extends IntrusiveNode {
     static int field_f;
     int id;
     int rowLimit;
-    static ida field_h;
+    static ModalStack field_h;
     int columnCount;
 
     final static void initializeSoundQueues(byte param0) {

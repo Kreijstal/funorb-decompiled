@@ -46,7 +46,7 @@ final class GetGrapplingHookRopeBreakLength extends ConsoleCommand {
         if (param0 >= -14) {
           return;
         }
-        GetMissionVariablesHudX.field_o.b(new rla(), 90);
+        GetMissionVariablesHudX.field_o.transitionToContent(new rla(), 90);
     }
 
     GetGrapplingHookRopeBreakLength(String param0, Class[] param1, String param2) {

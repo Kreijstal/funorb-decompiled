@@ -201,11 +201,11 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
               return;
             }
             if (var2 == 10) {
-              var15 = (LobbyGameEntry) (kja.field_E.first(0));
+              var15 = (LobbyGameEntry) (HotspotTextWidget.field_E.first(0));
               while (var15 != null) {
                 var15.unlink(-3846);
                 var15.unlinkSecondary((byte) -35);
-                var15 = (LobbyGameEntry) (kja.field_E.next((byte) 106));
+                var15 = (LobbyGameEntry) (HotspotTextWidget.field_E.next((byte) 106));
               }
               return;
             }

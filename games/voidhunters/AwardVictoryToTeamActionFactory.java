@@ -41,7 +41,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           HighscoreValueRequest.field_g[24] = MissionEvent.field_f + ":";
           HighscoreValueRequest.field_g[11] = tua.field_b;
           HighscoreValueRequest.field_g[14] = fpa.field_d;
-          HighscoreValueRequest.field_g[2] = nna.field_D;
+          HighscoreValueRequest.field_g[2] = DialogMessagePanel.field_D;
           HighscoreValueRequest.field_g[15] = GetFightersPerPlayerMaximum.field_q;
           HighscoreValueRequest.field_g[13] = ujb.field_d;
           HighscoreValueRequest.field_g[19] = Widget.field_V + ":";
@@ -186,13 +186,13 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.field_o[55] = UiTextStyle.field_l;
           GetGrapplingHookSpringConstant.field_o[37] = GetMissileLauncherEnergyUsed.field_o;
           GetGrapplingHookSpringConstant.field_o[10] = jw.field_d;
-          GetGrapplingHookSpringConstant.field_o[21] = hob.field_e;
+          GetGrapplingHookSpringConstant.field_o[21] = TextHotspotRegion.field_e;
           GetGrapplingHookSpringConstant.field_o[40] = SetThrusterBindingBalanceThreshold.field_r;
-          GetGrapplingHookSpringConstant.field_o[16] = bl.field_y;
+          GetGrapplingHookSpringConstant.field_o[16] = ModalPanel.field_y;
           GetGrapplingHookSpringConstant.field_o[5] = jb.field_b;
           GetGrapplingHookSpringConstant.field_o[24] = MissionState.field_c;
           GetGrapplingHookSpringConstant.field_o[1] = dfa.field_c;
-          GetGrapplingHookSpringConstant.field_o[19] = kja.field_G;
+          GetGrapplingHookSpringConstant.field_o[19] = HotspotTextWidget.field_G;
           GetGrapplingHookSpringConstant.field_o[57] = ImageProducerRasterBuffer.field_i;
           GetGrapplingHookSpringConstant.field_o[26] = SetShipPersistence.field_p;
           GetGrapplingHookSpringConstant.field_o[49] = fj.field_c;
@@ -250,7 +250,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ShipTeamCondition.field_f[16] = SetPointDefenceLaserEnergyUsed.field_p;
           ShipTeamCondition.field_f[9] = GetMessageMaxage.field_o;
           ShipTeamCondition.field_f[12] = PartitionZone.field_g;
-          ShipTeamCondition.field_f[21] = oe.field_a;
+          ShipTeamCondition.field_f[21] = ContentTransitionPhase.field_a;
           ShipTeamCondition.field_f[11] = SetReloadBarHeight.field_o;
           ShipTeamCondition.field_f[18] = SetMinimapHeight.field_o;
           ShipTeamCondition.field_f[28] = CarouselPlayerEvent.field_l;

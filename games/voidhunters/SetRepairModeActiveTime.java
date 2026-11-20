@@ -133,10 +133,10 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           var24 = var23;
           CarouselSlot.field_a.viewport.field_B = 1;
           var24.field_F = 1;
-          nna.field_v = new Widget(0L, DeveloperConsole.field_q);
-          nna.field_v.field_F = 1;
+          DialogMessagePanel.field_v = new Widget(0L, DeveloperConsole.field_q);
+          DialogMessagePanel.field_v.field_F = 1;
           SpawnChoiceFactory.field_c = new Widget(0L, SetPlayerRepairAmount.field_q, bw.field_a.toUpperCase());
-          qpb.field_w = new Widget(0L, pa.field_a, SetMachineGunAimarc.field_o.toUpperCase());
+          AlphaContainer.field_w = new Widget(0L, pa.field_a, SetMachineGunAimarc.field_o.toUpperCase());
           sra.field_a = new Widget(0L, GpuEnvironmentMapSource.field_c);
           ArchiveIndexLoader.field_a = new Widget(0L, GetThrusterBindingBalanceThreshold.field_p, GetLaserRandomness.field_o);
           GetSniperCannonAimspeed.field_q = new Widget(0L, GetUseSprites.field_p, lw.field_e);
@@ -162,7 +162,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           }
           oib.field_a = new Widget(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
           ModelFaceAttachment.field_d = new Widget(0L, (Widget) null);
-          ModelFaceAttachment.field_d.addChild(-561, qpb.field_w);
+          ModelFaceAttachment.field_d.addChild(-561, AlphaContainer.field_w);
           ModelFaceAttachment.field_d.addChild(param1 - 10792, sra.field_a);
           sra.field_a.addChild(-561, ArchiveIndexLoader.field_a);
           sra.field_a.addChild(-561, GetSniperCannonAimspeed.field_q);

@@ -157,7 +157,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
               var4 = 1;
             }
             if (!ssa.b(2)) {
-              var5 = hob.a(new Random(), 2147483647, 117);
+              var5 = TextHotspotRegion.randomBoundedInt(new Random(), 2147483647, 117);
               if (param0) {
                 var4 = 3;
                 GrayscaleTextureOperation.a(true, (byte) -41);
@@ -181,7 +181,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
             if (SetMachineGunEnergyUsed.field_o[86]) {
               param0 = true;
             }
-            var5Lifetime2 = hob.a(new Random(), 2147483647, 117);
+            var5Lifetime2 = TextHotspotRegion.randomBoundedInt(new Random(), 2147483647, 117);
             if (param0) {
               var4 = 3;
               GrayscaleTextureOperation.a(true, (byte) -41);
@@ -209,7 +209,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
           var4 = 1;
         }
         if (!ssa.b(2)) {
-          var5Lifetime1 = hob.a(new Random(), 2147483647, 117);
+          var5Lifetime1 = TextHotspotRegion.randomBoundedInt(new Random(), 2147483647, 117);
           if (param0) {
             var4 = 3;
             GrayscaleTextureOperation.a(true, (byte) -41);
@@ -222,7 +222,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
           GetNebulaFadesOutWhenClose.a(stackIn_52_0, var6Lifetime1 != 0, (byte) -85, -1);
         } else {
           if (!SetMachineGunEnergyUsed.field_o[86]) {
-            var5Lifetime1 = hob.a(new Random(), 2147483647, 117);
+            var5Lifetime1 = TextHotspotRegion.randomBoundedInt(new Random(), 2147483647, 117);
             if (param0) {
               var4 = 3;
               GrayscaleTextureOperation.a(true, (byte) -41);
@@ -235,7 +235,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
             GetNebulaFadesOutWhenClose.a(stackIn_77_0, var6Lifetime1 != 0, (byte) -85, -1);
           } else {
             param0 = true;
-            var5Lifetime1 = hob.a(new Random(), 2147483647, 117);
+            var5Lifetime1 = TextHotspotRegion.randomBoundedInt(new Random(), 2147483647, 117);
             if (param0) {
               var4 = 3;
               GrayscaleTextureOperation.a(true, (byte) -41);

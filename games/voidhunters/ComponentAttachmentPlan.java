@@ -43,7 +43,7 @@ final class ComponentAttachmentPlan {
           }
           if (param0 != 108) {
             var6 = (String) null;
-            ComponentAttachmentPlan.a(false, (String) null);
+            ComponentAttachmentPlan.pollNameAvailability(false, (String) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -270,11 +270,11 @@ final class ComponentAttachmentPlan {
         }
     }
 
-    final static tpa a(boolean param0, String param1) {
+    final static AccountRequestResult pollNameAvailability(boolean param0, String param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         Object stackIn_9_0 = null;
-        tpa stackIn_11_0 = null;
+        AccountRequestResult stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -297,7 +297,7 @@ final class ComponentAttachmentPlan {
           PrimitiveType.field_a = null;
           SetCountermeasureLauncherAimarc.field_q = param1;
           stackIn_9_0 = null;
-          return (tpa) (stackIn_9_0);
+          return (AccountRequestResult) (stackIn_9_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -316,7 +316,7 @@ final class ComponentAttachmentPlan {
         field_d = null;
         if (param0 != 16606) {
           String var2 = (String) null;
-          ComponentAttachmentPlan.a(false, (String) null);
+          ComponentAttachmentPlan.pollNameAvailability(false, (String) null);
         }
         field_a = null;
     }

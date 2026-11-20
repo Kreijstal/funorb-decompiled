@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rq extends UiContainer implements ln, UiActionListener, jpb {
+final class AccountCreationForm extends UiContainer implements UiHotspotListener, UiActionListener, NameSuggestionTarget {
     private UiFocusableComponent field_v;
-    private kja field_w;
+    private HotspotTextWidget field_w;
     private tga field_F;
     private tga field_A;
     private tga field_x;
@@ -15,7 +15,7 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
     private UiFocusableComponent field_B;
     private tga field_z;
 
-    private final int a(int param0, String param1, int param2, String param3, int param4, UiComponent param5) {
+    private final int addFieldWithHelp(int param0, String param1, int param2, String param3, int param4, UiComponent param5) {
         boolean discarded$1 = false;
         RuntimeException var7 = null;
         int stackIn_3_0 = 0;
@@ -29,9 +29,9 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 > -40) {
-            discarded$1 = this.d(45);
+            discarded$1 = this.submitAccountCreation(45);
           }
-          stackIn_3_0 = this.a(param5, param4, param2, param3, false, 35, param1);
+          stackIn_3_0 = this.addFieldWithHelp(param5, param4, param2, param3, false, 35, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -59,7 +59,7 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
         }
     }
 
-    private final int a(UiComponent param0, int param1, String param2, int param3, byte param4) {
+    private final int addFieldRow(UiComponent param0, int param1, String param2, int param3, byte param4) {
         sca var6 = null;
         RuntimeException var6_ref = null;
         String var7 = null;
@@ -75,7 +75,7 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
           this.addChild(-18756, var6);
           if (param4 > -27) {
             var7 = (String) null;
-            this.a((byte) 37, (String) null);
+            this.setSuggestedName((byte) 37, (String) null);
           }
           stackIn_3_0 = var6.height;
           return stackIn_3_0;
@@ -117,7 +117,7 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
           if (this.field_B != param3) {
             return;
           }
-          discarded$1 = this.d(param0 - 7);
+          discarded$1 = this.submitAccountCreation(param0 - 7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,7 +133,7 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
         }
     }
 
-    private final boolean a(int param0, lca param1) {
+    private final boolean isFieldValid(int param0, lca param1) {
         eeb var3 = null;
         RuntimeException var3_ref = null;
         qrb var4 = null;
@@ -177,14 +177,14 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
     final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         try {
           super.updatePointer(param0, param1, param2, param3);
-          this.field_B.enabled = this.e(-122);
+          this.field_B.enabled = this.validateFields(-122);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rq.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final boolean d(int param0) {
-        if (!this.e(-119)) {
+    private final boolean submitAccountCreation(int param0) {
+        if (!this.validateFields(-119)) {
           return false;
         }
         int var2 = -1;
@@ -195,10 +195,10 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
           var2 = Integer.parseInt(this.field_D.text);
         } catch (NumberFormatException numberFormatException) {
         }
-        return ku.a(this.field_x.text, var2, this, this.field_E.active, param0 - 3, this.field_F.text, this.field_z.text);
+        return ku.startAccountCreation(this.field_x.text, var2, this, this.field_E.active, param0 - 3, this.field_F.text, this.field_z.text);
     }
 
-    private final int a(int param0, UiComponent param1, byte param2, String param3, int param4) {
+    private final int addFieldWithStatusIcon(int param0, UiComponent param1, byte param2, String param3, int param4) {
         RuntimeException var6 = null;
         pla var7 = null;
         sca var8 = null;
@@ -240,7 +240,7 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
         }
     }
 
-    public rq() {
+    public AccountCreationForm() {
         super(0, 0, 496, 0, (UiRenderer) null);
         this.field_F = new tga("", (UiListener) null, 12);
         this.field_z = new tga("", (UiListener) null, 100);
@@ -277,24 +277,24 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
         kpb dupTemp$1 = new kpb(10000536);
         this.field_A.renderer = (UiRenderer) ((Object) dupTemp$1);
         this.field_x.renderer = (UiRenderer) ((Object) dupTemp$1);
-        String var2 = SetReverbGain.a(GetLaserProjectiles.field_o, new String[]{this.j((byte) 50), this.i((byte) -121)}, 109);
+        String var2 = SetReverbGain.a(GetLaserProjectiles.field_o, new String[]{this.getLinkMarkupStart((byte) 50), this.getLinkMarkupEnd((byte) -121)}, 109);
         int var3 = 20;
-        var3 = var3 + this.a(this.field_z, var3, MissionState.field_h, 170, (byte) -42);
-        var3 = var3 + (5 + this.a(this.field_y, var3, 170, qs.field_b, false, 20, ""));
-        var3 = var3 + this.a(this.field_x, var3, RequestNewestBlackboxRecording.field_q, 170, (byte) -36);
-        var3 = var3 + (this.a(-41, OpenGlVertexNormal.field_e, 170, lg.field_d, var3, this.field_A) + 5);
-        var3 = var3 + (5 + this.a(-103, Projectile.field_r, 170, ffb.field_c, var3, this.field_F));
-        var3 = var3 + this.a(170, this.field_D, (byte) 104, CarouselSystemEventFactory.field_a, var3);
+        var3 = var3 + this.addFieldRow(this.field_z, var3, MissionState.field_h, 170, (byte) -42);
+        var3 = var3 + (5 + this.addFieldWithHelp(this.field_y, var3, 170, qs.field_b, false, 20, ""));
+        var3 = var3 + this.addFieldRow(this.field_x, var3, RequestNewestBlackboxRecording.field_q, 170, (byte) -36);
+        var3 = var3 + (this.addFieldWithHelp(-41, OpenGlVertexNormal.field_e, 170, lg.field_d, var3, this.field_A) + 5);
+        var3 = var3 + (5 + this.addFieldWithHelp(-103, Projectile.field_r, 170, ffb.field_c, var3, this.field_F));
+        var3 = var3 + this.addFieldWithStatusIcon(170, this.field_D, (byte) 104, CarouselSystemEventFactory.field_a, var3);
         sca var4 = new sca(46, var3, -90 + this.width, 25, this.field_E, true, this.width - 120, 5, SetTorpedoProjectileLife.field_o, 11579568, UiComponent.field_m);
         this.addChild(-18756, var4);
         var3 = var3 + var4.height;
         UiTextStyle var5 = new UiTextStyle(SetShipToShipRamDamage.field_o, 0, 0, 0, 0, 16777215, -1, 0, 0, SetShipToShipRamDamage.field_o.maxAscent, -1, 2147483647, true);
-        this.field_w = new kja(var2, var5);
+        this.field_w = new HotspotTextWidget(var2, var5);
         this.field_w.tooltip = "";
-        this.field_w.a(0, -1, SetBombletSprayProjectileDamage.field_q);
-        this.field_w.a(1, -1, SetBombletSprayProjectileDamage.field_q);
+        this.field_w.setHotspotTooltip(0, -1, SetBombletSprayProjectileDamage.field_q);
+        this.field_w.setHotspotTooltip(1, -1, SetBombletSprayProjectileDamage.field_q);
         this.field_w.listener = (UiListener) (this);
-        this.field_w.a(this.width - 90, var3, 46, (byte) -23);
+        this.field_w.fitTextBounds(this.width - 90, var3, 46, (byte) -23);
         var3 = var3 + (15 + this.field_w.height);
         this.addChild(-18756, this.field_w);
         int var6 = 4;
@@ -305,64 +305,64 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
         this.field_B.listener = (UiListener) (this);
         this.addChild(-18756, this.field_B);
         this.addChild(-18756, this.field_v);
-        this.field_C = new rcb((jpb) (this));
+        this.field_C = new rcb((NameSuggestionTarget) (this));
         this.field_C.setBounds(60 + (this.field_F.width + this.field_F.x), -60 + (-this.field_F.width + this.width) - this.field_F.x, 150, 1, 20 + this.field_F.y);
         this.addChild(-18756, this.field_C);
         this.setBounds(0, 496, var3 + 55 + var6, 1, 0);
     }
 
-    private final boolean e(int param0) {
+    private final boolean validateFields(int param0) {
         if (param0 >= -57) {
-          this.field_w = (kja) null;
-          if (!this.a(22239, (lca) (this.field_F))) {
+          this.field_w = (HotspotTextWidget) null;
+          if (!this.isFieldValid(22239, (lca) (this.field_F))) {
             return false;
           }
-          if (!this.a(22239, (lca) (this.field_z))) {
+          if (!this.isFieldValid(22239, (lca) (this.field_z))) {
             return false;
           }
-          if (!this.a(22239, (lca) (this.field_y))) {
+          if (!this.isFieldValid(22239, (lca) (this.field_y))) {
             return false;
           }
-          if (!this.a(22239, (lca) (this.field_x))) {
+          if (!this.isFieldValid(22239, (lca) (this.field_x))) {
             return false;
           }
-          if (!this.a(22239, (lca) (this.field_A))) {
+          if (!this.isFieldValid(22239, (lca) (this.field_A))) {
             return false;
           }
-          if (this.a(22239, (lca) (this.field_D))) {
+          if (this.isFieldValid(22239, (lca) (this.field_D))) {
             return true;
           }
           return false;
         }
-        if (!this.a(22239, (lca) (this.field_F))) {
+        if (!this.isFieldValid(22239, (lca) (this.field_F))) {
           return false;
         }
-        if (!this.a(22239, (lca) (this.field_z))) {
+        if (!this.isFieldValid(22239, (lca) (this.field_z))) {
           return false;
         }
-        if (!this.a(22239, (lca) (this.field_y))) {
+        if (!this.isFieldValid(22239, (lca) (this.field_y))) {
           return false;
         }
-        if (!this.a(22239, (lca) (this.field_x))) {
+        if (!this.isFieldValid(22239, (lca) (this.field_x))) {
           return false;
         }
-        if (!this.a(22239, (lca) (this.field_A))) {
+        if (!this.isFieldValid(22239, (lca) (this.field_A))) {
           return false;
         }
-        if (this.a(22239, (lca) (this.field_D))) {
+        if (this.isFieldValid(22239, (lca) (this.field_D))) {
           return true;
         }
         return false;
     }
 
-    private final String i(byte param0) {
+    private final String getLinkMarkupEnd(byte param0) {
         if (param0 >= -97) {
           return (String) null;
         }
         return "</col></u>";
     }
 
-    private final int a(UiComponent param0, int param1, int param2, String param3, boolean param4, int param5, String param6) {
+    private final int addFieldWithHelp(UiComponent param0, int param1, int param2, String param3, boolean param4, int param5, String param6) {
         RuntimeException var8 = null;
         gm var9 = null;
         sca var10 = null;
@@ -444,7 +444,7 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
         }
     }
 
-    public final void a(int param0, int param1, int param2, kja param3) {
+    public final void onHotspotClicked(int param0, int param1, int param2, HotspotTextWidget param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -480,7 +480,7 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
         }
     }
 
-    private final String j(byte param0) {
+    private final String getLinkMarkupStart(byte param0) {
         if (param0 != 50) {
           this.field_v = (UiFocusableComponent) null;
           return "<u=2164A2><col=2164A2>";
@@ -488,7 +488,7 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
         return "<u=2164A2><col=2164A2>";
     }
 
-    public final void a(int param0) {
+    public final void invalidateNameAvailability(int param0) {
         if (param0 != 1546) {
           return;
         }
@@ -500,7 +500,7 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
         field_G = null;
     }
 
-    public final void a(byte param0, String param1) {
+    public final void setSuggestedName(byte param0, String param1) {
         String var4 = null;
         tga var3 = this.field_F;
         if (param0 != 41) {

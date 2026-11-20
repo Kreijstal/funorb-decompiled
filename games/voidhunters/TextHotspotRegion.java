@@ -3,18 +3,18 @@
  */
 import java.util.*;
 
-final class hob extends IntrusiveNode {
-    int field_j;
+final class TextHotspotRegion extends IntrusiveNode {
+    int height;
     static String field_l;
     static String field_e;
-    hob field_f;
-    int field_i;
+    TextHotspotRegion continuation;
+    int id;
     static int textureWidth;
-    int field_h;
-    int field_k;
-    int field_g;
+    int x;
+    int y;
+    int width;
 
-    final static SerializableGameState[] a(IntrusiveDeque param0, int param1) {
+    final static SerializableGameState[] dequeToStateArray(IntrusiveDeque param0, int param1) {
         int var4 = 0;
         IntrusiveNode[] var2 = null;
         RuntimeException var2_ref = null;
@@ -35,7 +35,7 @@ final class hob extends IntrusiveNode {
           var2 = var6;
           var3 = new SerializableGameState[var6.length];
           if (param1 != 210377952) {
-            hob.a(-49, (byte) -17);
+            TextHotspotRegion.a(-49, (byte) -17);
           }
           for (var4 = 0; var6.length > var4; var4++) {
             var3[var4] = (SerializableGameState) ((Object) var6[var4]);
@@ -56,7 +56,7 @@ final class hob extends IntrusiveNode {
         }
     }
 
-    final static void a(int param0, ResourceArchive param1) {
+    final static void loadLogoFinalFrame(int param0, ResourceArchive param1) {
         int var3 = 0;
         int var4 = 0;
         Sprite var2 = new Sprite(param1.fetchNamedFile("", true, "final_frame.jpg"), (java.awt.Component) ((Object) igb.field_a));
@@ -112,7 +112,7 @@ final class hob extends IntrusiveNode {
         return -2048 + SetDebrisGrabbingRange.field_o[134217728 / -param0];
     }
 
-    final static int a(Random param0, int param1, int param2) {
+    final static int randomBoundedInt(Random param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -153,12 +153,12 @@ final class hob extends IntrusiveNode {
         }
     }
 
-    hob(int param0, int param1, int param2, int param3, int param4) {
-        this.field_h = param1;
-        this.field_k = param2;
-        this.field_g = param3;
-        this.field_i = param0;
-        this.field_j = param4;
+    TextHotspotRegion(int param0, int param1, int param2, int param3, int param4) {
+        this.x = param1;
+        this.y = param2;
+        this.width = param3;
+        this.id = param0;
+        this.height = param4;
     }
 
     static {

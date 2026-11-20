@@ -5,7 +5,7 @@ final class qga {
     static IsaacPacketBuffer field_b;
     static long field_a;
 
-    final static void a(String param0, int param1, byte param2, String[] param3) {
+    final static void handleNameAvailabilityReply(String param0, int param1, byte param2, String[] param3) {
         String[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -25,22 +25,22 @@ final class qga {
           SetShipTeamAction.field_b = SetSniperCannonFireForce.field_o;
           if (param1 == 255) {
             stackIn_12_0 = !(SetDebrisCarryOverPercentage.field_p >= 13);
-            PrimitiveType.field_a = GpuIndexBufferOwner.a(stackIn_12_0, 1);
+            PrimitiveType.field_a = GpuIndexBufferOwner.createSuccessfulAccountResult(stackIn_12_0, 1);
             var6 = (String[]) null;
             WeaponDefinition.a((String[]) null, 11113);
             return;
           }
           if (param1 < 100) {
-            PrimitiveType.field_a = GetArmageddonLength.a(param1, param0, (byte) -124);
+            PrimitiveType.field_a = GetArmageddonLength.createAccountErrorResult(param1, param0, (byte) -124);
             return;
           }
           if (param1 > 105) {
-            PrimitiveType.field_a = GetArmageddonLength.a(param1, param0, (byte) -124);
+            PrimitiveType.field_a = GetArmageddonLength.createAccountErrorResult(param1, param0, (byte) -124);
             return;
           }
           var4 = param3;
           WeaponDefinition.a(var4, 11113);
-          PrimitiveType.field_a = MissionCondition.a(param3, (byte) -123);
+          PrimitiveType.field_a = MissionCondition.createAccountNameSuggestions(param3, (byte) -123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

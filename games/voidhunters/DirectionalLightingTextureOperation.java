@@ -95,11 +95,11 @@ final class DirectionalLightingTextureOperation extends TextureOperation {
         int[] var18 = this.field_f.getRow((byte) 127, param0);
         int[] var3 = var18;
         if (this.field_f.field_e) {
-          var7 = this.heightScale * tpa.field_b >> 12;
+          var7 = this.heightScale * AccountRequestResult.field_b >> 12;
           var25 = this.getInputMonochromeRow(0, -1 + param0 & wf.textureHeightMask, 255);
           var9 = this.getInputMonochromeRow(0, param0, 255);
           var26 = this.getInputMonochromeRow(0, 1 + param0 & wf.textureHeightMask, 255);
-          for (var11 = 0; var11 < hob.textureWidth; var11++) {
+          for (var11 = 0; var11 < TextHotspotRegion.textureWidth; var11++) {
             var12 = var7 * (-var25[var11] + var26[var11]) >> 12;
             var13 = (var9[-1 + var11 & SetMassDriverEnergyUsed.field_q] - var9[var11 + 1 & SetMassDriverEnergyUsed.field_q]) * var7 >> 12;
             var14 = var13 >> 4;

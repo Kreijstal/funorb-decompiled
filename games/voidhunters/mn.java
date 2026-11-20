@@ -49,7 +49,7 @@ final class mn {
           if (SetBombletSprayAimarc.field_o.field_o != 0) {
             Asteroid.field_v = new bwa(SetBombletSprayAimarc.field_o.screenX, SetBombletSprayAimarc.field_o.screenY, SetBombletSprayAimarc.field_o.width, SetBombletSprayAimarc.field_o.height, param2, DualLinkNode.field_g, lo.field_b, GetFighterBayReload.field_p, DeveloperConsole.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o, (String) null, 0L);
           }
-          var9 = SetMissionDebrisDefaultProbability.b(nna.field_w, qs.field_c, param1, -123);
+          var9 = SetMissionDebrisDefaultProbability.b(DialogMessagePanel.field_w, qs.field_c, param1, -123);
           if (var9 != null) {
             GetSniperCannonProjectiles.a(var9, 22859);
           }

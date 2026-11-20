@@ -78,13 +78,13 @@ final class TextureCombineOperation {
               var18 = param6.world.getMapZone((byte) -79, var11);
               if (var18 != null) {
                 if (param0.getMissionPhase(8) == 3) {
-                  var18.a(32, qpb.a(false, param3, 13894143), param2);
+                  var18.a(32, AlphaContainer.getTeamColor(false, param3, 13894143), param2);
                 } else {
                   if (param5 == param3) {
                     SetRadialMenuRadius.addObjectiveMarker((byte) -100, 2, var18);
-                    var18.a(32, qpb.a(false, param3, 13894143), param2);
+                    var18.a(32, AlphaContainer.getTeamColor(false, param3, 13894143), param2);
                   } else {
-                    var18.a(32, qpb.a(false, param3, 13894143), param2);
+                    var18.a(32, AlphaContainer.getTeamColor(false, param3, 13894143), param2);
                   }
                 }
               }

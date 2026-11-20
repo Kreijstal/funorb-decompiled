@@ -5,7 +5,7 @@ final class GetFighterRepairAmount extends ConsoleCommand {
     static int field_o;
     static String field_r;
     static SoftwareIndexedSprite2D[] field_q;
-    static rq field_p;
+    static AccountCreationForm field_p;
 
     GetFighterRepairAmount(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);

@@ -53,7 +53,7 @@ final class GrayscaleTextureOperation extends TextureOperation {
           var5 = var4[0];
           var6 = var4[1];
           var7 = var4[2];
-          for (var8 = 0; hob.textureWidth > var8; var8++) {
+          for (var8 = 0; TextHotspotRegion.textureWidth > var8; var8++) {
             var10[var8] = (var6[var8] + var5[var8] + var7[var8]) / 3;
           }
         }

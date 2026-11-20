@@ -322,7 +322,7 @@ final class fcb implements oob {
           this.field_e = null;
           MidiNote.resetFrameTiming(param0 ^ 2164);
           if (ssa.b(2)) {
-            nna.field_C = new CommandConsole(ConsoleCommandRegistry.a(16), GrapplingHookFactory.field_a, SetTorpedoProjectiles.field_o);
+            DialogMessagePanel.field_C = new CommandConsole(ConsoleCommandRegistry.a(16), GrapplingHookFactory.field_a, SetTorpedoProjectiles.field_o);
           }
           MidiNote.resetFrameTiming(2096);
           return false;

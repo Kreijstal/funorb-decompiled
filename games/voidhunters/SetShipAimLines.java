@@ -166,7 +166,7 @@ final class SetShipAimLines extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          sn.field_Y = arguments[0].booleanValue(false);
+          AccountCreationDialog.field_Y = arguments[0].booleanValue(false);
           if (obfuscationGuard > -119) {
             field_p = (StringBuilder) null;
           }

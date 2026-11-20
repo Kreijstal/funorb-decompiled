@@ -18,7 +18,7 @@ final class SetPointDefenceLaserAimspeed extends ConsoleCommand {
         var3 = var3 % 60;
         String var5 = "";
         if (var4 > 0) {
-          var5 = var5 + var4 + iw.field_D + ":";
+          var5 = var5 + var4 + ResizableModalPanel.field_D + ":";
         }
         if (0 < var4) {
           var5 = var5 + var3 + UiFocusableComponent.field_v;

@@ -395,7 +395,7 @@ final class CarouselCommongameInfo implements DiffableState {
             var5 = (IsaacPacketBuffer) null;
             this.writeCurrentState(87, (IsaacPacketBuffer) null);
           }
-          if (SetCountermeasureLauncherAimspeed.a(hob.a(var6.events, 210377952), false, 1, hob.a(this.events, 210377952), 121)) {
+          if (SetCountermeasureLauncherAimspeed.a(TextHotspotRegion.dequeToStateArray(var6.events, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.events, 210377952), 121)) {
             var4 = 1;
             GetSniperCannonAimarc.a(-6940, "linklist eventqueue has changed. ");
           }
@@ -507,7 +507,7 @@ final class CarouselCommongameInfo implements DiffableState {
         try {
           var4 = 1 / ((param0 - 22) / 59);
           var3 = (CarouselCommongameInfo) (param1);
-          stackIn_5_0 = (SetCountermeasureLauncherAimspeed.a(hob.a(var3.events, 210377952), false, 1, hob.a(this.events, 210377952), 122)) || (var3.tick != this.tick);
+          stackIn_5_0 = (SetCountermeasureLauncherAimspeed.a(TextHotspotRegion.dequeToStateArray(var3.events, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.events, 210377952), 122)) || (var3.tick != this.tick);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -605,7 +605,7 @@ final class CarouselCommongameInfo implements DiffableState {
         try {
           var11 = param0;
           var3 = var11;
-          var10 = hob.a(this.events, 210377952);
+          var10 = TextHotspotRegion.dequeToStateArray(this.events, 210377952);
           var4 = var10;
           var5 = var4 == null ? 0 : var10.length;
           var11.writeBits(-632, var5, 12);

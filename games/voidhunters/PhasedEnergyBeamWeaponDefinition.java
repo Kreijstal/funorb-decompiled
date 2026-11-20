@@ -75,7 +75,7 @@ final class PhasedEnergyBeamWeaponDefinition extends WeaponDefinition {
     final static void l(int param0) {
         lw.field_i = new Widget(0L, (Widget) null);
         if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
-          lw.field_i.addChild(-561, nna.field_v);
+          lw.field_i.addChild(-561, DialogMessagePanel.field_v);
           lw.field_i.addChild(param0 ^ -9108, DualLinkNode.field_f);
           lc.field_b = new bs(UnsupportedGpuMaterialEffect.field_e, lw.field_i);
           tb.field_a = new Widget(0L, (Widget) null);

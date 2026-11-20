@@ -125,7 +125,7 @@ final class pgb {
           this.field_m = un.field_h;
         }
         this.field_q = psb.field_a;
-        this.field_c = bl.field_A;
+        this.field_c = ModalPanel.field_A;
         this.field_a = wja.field_a;
         this.field_k = TickCondition.field_e;
         this.field_e = ti.field_h;

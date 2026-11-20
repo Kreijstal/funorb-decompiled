@@ -71,7 +71,7 @@ final class NodeHashTable {
         RuntimeException decompiledCaughtException = null;
         var4 = VoidHunters.field_G;
         try {
-          var2_int = hob.a(param0, SetSniperCannonEnergyUsed.field_o, 120);
+          var2_int = TextHotspotRegion.randomBoundedInt(param0, SetSniperCannonEnergyUsed.field_o, 120);
           for (var3 = 0; 56 > var3; var3++) {
             if (SettingsInstance.a(108, var3)) {
               if (0 == var2_int) {

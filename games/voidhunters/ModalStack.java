@@ -3,18 +3,18 @@
  */
 import java.io.*;
 
-final class ida extends UiSingleChildContainer {
+final class ModalStack extends UiSingleChildContainer {
     static TextureTransformMode field_x;
     static gj field_w;
-    private IntrusiveDeque field_v;
+    private IntrusiveDeque panels;
 
-    final void a(boolean param0, UiComponent param1) {
-        if (!(param1 instanceof bl)) {
+    final void pushPanel(boolean param0, UiComponent param1) {
+        if (!(param1 instanceof ModalPanel)) {
           throw new IllegalArgumentException();
         }
-        bl var3 = (bl) (param1);
-        this.field_v.addFirst(var3, (byte) -55);
-        var3.field_z = true;
+        ModalPanel var3 = (ModalPanel) (param1);
+        this.panels.addFirst(var3, (byte) -55);
+        var3.active = true;
         if (param0) {
           return;
         }
@@ -25,35 +25,35 @@ final class ida extends UiSingleChildContainer {
         }
     }
 
-    final int f(int param0) {
+    final int getMaximumPanelHeight(int param0) {
         IntrusiveDequeIterator var2;
         int var3;
-        bl var4;
+        ModalPanel var4;
         int var5;
         var5 = VoidHunters.field_G;
-        var2 = new IntrusiveDequeIterator(this.field_v);
+        var2 = new IntrusiveDequeIterator(this.panels);
         var3 = param0;
-        var4 = (bl) (var2.first(570));
+        var4 = (ModalPanel) (var2.first(570));
         while (var4 != null) {
-          if (var4.field_z) {
+          if (var4.active) {
             if (var3 >= var4.height) {
-              var4 = (bl) (var2.next(19072));
+              var4 = (ModalPanel) (var2.next(19072));
               continue;
             }
             var3 = var4.height;
           }
-          var4 = (bl) (var2.next(19072));
+          var4 = (ModalPanel) (var2.next(19072));
         }
         return var3;
     }
 
-    final void g(byte param0) {
+    final void closeAllPanels(byte param0) {
         int var4 = VoidHunters.field_G;
-        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.field_v);
-        bl var3 = (bl) (var2.first(570));
+        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.panels);
+        ModalPanel var3 = (ModalPanel) (var2.first(570));
         while (var3 != null) {
-          var3.field_z = false;
-          var3 = (bl) (var2.next(19072));
+          var3.active = false;
+          var3 = (ModalPanel) (var2.next(19072));
         }
         this.child = null;
         if (param0 != -17) {
@@ -61,21 +61,21 @@ final class ida extends UiSingleChildContainer {
         }
     }
 
-    final bl g(int param0) {
+    final ModalPanel getTopPanel(int param0) {
         IntrusiveDequeIterator var2;
-        bl var3;
+        ModalPanel var3;
         int var4;
         var4 = VoidHunters.field_G;
-        var2 = new IntrusiveDequeIterator(this.field_v);
+        var2 = new IntrusiveDequeIterator(this.panels);
         if (param0 != 0) {
-          this.g((byte) 100);
+          this.closeAllPanels((byte) 100);
         }
-        var3 = (bl) (var2.first(param0 ^ 570));
+        var3 = (ModalPanel) (var2.first(param0 ^ 570));
         while (var3 != null) {
-          if (var3.field_z) {
+          if (var3.active) {
             return var3;
           }
-          var3 = (bl) (var2.next(19072));
+          var3 = (ModalPanel) (var2.next(19072));
         }
         return null;
     }
@@ -94,7 +94,7 @@ final class ida extends UiSingleChildContainer {
           }
           if (param2 > -66) {
             var4 = (IsaacPacketBuffer) null;
-            ida.writeReflectionCheckResponse((IsaacPacketBuffer) null, (byte) -6);
+            ModalStack.writeReflectionCheckResponse((IsaacPacketBuffer) null, (byte) -6);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -113,13 +113,13 @@ final class ida extends UiSingleChildContainer {
 
     final UiComponent getFocusedChild(int param0) {
         int var4 = VoidHunters.field_G;
-        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.field_v);
-        bl var3 = (bl) (var2.first(570));
+        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.panels);
+        ModalPanel var3 = (ModalPanel) (var2.first(570));
         while (var3 != null) {
-          if (var3.field_z) {
+          if (var3.active) {
             return var3.getFocusedChild((byte) -74);
           }
-          var3 = (bl) (var2.next(19072));
+          var3 = (ModalPanel) (var2.next(19072));
         }
         if (param0 == 6093) {
           return null;
@@ -128,16 +128,16 @@ final class ida extends UiSingleChildContainer {
         return null;
     }
 
-    final void e(int param0) {
+    final void finishPanelAnimations(int param0) {
         int var5 = VoidHunters.field_G;
-        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.field_v);
+        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.panels);
         int var3 = 74 % ((53 - param0) / 55);
-        bl var4 = (bl) (var2.first(570));
+        ModalPanel var4 = (ModalPanel) (var2.first(570));
         while (var4 != null) {
-          if (var4.j((byte) 55)) {
+          if (var4.finishAnimationsAndCheckClosed((byte) 55)) {
             var4.unlink(-3846);
           }
-          var4 = (bl) (var2.next(19072));
+          var4 = (ModalPanel) (var2.next(19072));
         }
     }
 
@@ -149,7 +149,7 @@ final class ida extends UiSingleChildContainer {
         if (param2 < 47) {
           this.getFocusedChild(51);
         }
-        IntrusiveDequeIterator var5 = new IntrusiveDequeIterator(this.field_v);
+        IntrusiveDequeIterator var5 = new IntrusiveDequeIterator(this.panels);
         UiComponent var6 = (UiComponent) (var5.last((byte) 83));
         while (var6 != null) {
           var6.drawLayer(param0 + this.x, param1, 111, this.y + param3);
@@ -163,27 +163,27 @@ final class ida extends UiSingleChildContainer {
         field_w = null;
     }
 
-    final int i(int param0) {
+    final int getMaximumPanelWidth(int param0) {
         int var5 = VoidHunters.field_G;
-        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.field_v);
+        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.panels);
         int var3 = -2147483648;
         if (param0 > -90) {
           return 20;
         }
-        bl var4 = (bl) (var2.first(570));
+        ModalPanel var4 = (ModalPanel) (var2.first(570));
         while (var4 != null) {
-          if (var4.field_z &&
+          if (var4.active &&
             var3 < var4.width) {
             var3 = var4.width;
           }
-          var4 = (bl) (var2.next(19072));
+          var4 = (ModalPanel) (var2.next(19072));
         }
         return var3;
     }
 
-    public ida() {
+    public ModalStack() {
         super(0, 0, ComponentBehaviourFactory.field_a, GetSniperCannonFiringLeeway.field_p, (UiRenderer) null, (UiListener) null);
-        this.field_v = new IntrusiveDeque();
+        this.panels = new IntrusiveDeque();
     }
 
     final static void writeReflectionCheckResponse(IsaacPacketBuffer param0, byte param1) {
@@ -391,20 +391,20 @@ final class ida extends UiSingleChildContainer {
         }
     }
 
-    final void h(int param0) {
+    final void updatePanels(int param0) {
         int var4 = VoidHunters.field_G;
         if (param0 != 19976) {
           return;
         }
-        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.field_v);
-        bl var3 = (bl) (var2.first(570));
+        IntrusiveDequeIterator var2 = new IntrusiveDequeIterator(this.panels);
+        ModalPanel var3 = (ModalPanel) (var2.first(570));
         while (var3 != null) {
-          if (var3.a(248)) {
+          if (var3.updateAndCheckClosed(248)) {
             var3.unlink(-3846);
           }
-          var3 = (bl) (var2.next(param0 ^ 1160));
+          var3 = (ModalPanel) (var2.next(param0 ^ 1160));
         }
-        this.child = (UiComponent) ((Object) this.g(0));
+        this.child = (UiComponent) ((Object) this.getTopPanel(0));
     }
 
     static {

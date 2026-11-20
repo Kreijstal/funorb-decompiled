@@ -102,11 +102,11 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
                 tc.field_c = TextInputWidget.field_xb;
                 ow.field_a = var6_int;
               } else {
-                tc.field_c = ida.field_w;
+                tc.field_c = ModalStack.field_w;
               }
               qga.field_b.position = 0;
             }
-            if (ida.field_w == tc.field_c &&
+            if (ModalStack.field_w == tc.field_c &&
               ShipBlueprint.a(8, param3 ^ 30013)) {
               SetMissileLauncherRandomness.field_p = qga.field_b.readLong(255);
               qga.field_b.position = 0;

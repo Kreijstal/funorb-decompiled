@@ -63,7 +63,7 @@ final class ThresholdTextureOperation extends TextureOperation {
           return var8;
         }
         var4 = this.getInputMonochromeRow(0, param0, 255);
-        for (var5 = 0; hob.textureWidth > var5; var5++) {
+        for (var5 = 0; TextHotspotRegion.textureWidth > var5; var5++) {
           var6 = var4[var5];
           stackIn_10_0 = var8;
           stackIn_10_1 = var5;

@@ -599,7 +599,7 @@ abstract class NetworkGameClient extends GameApplet {
                 SetSalvoDamageMultiplier.decodeReflectionCheck(SetTorpedoProjectiles.field_o, PartitioningManagerFactory.field_a, qga.field_b, false);
                 break;
               case 6:
-                iw.k((byte) -38);
+                ResizableModalPanel.k((byte) -38);
                 break;
               case 5:
                 GetArmageddonLength.handleClientDataReply((byte) -128);
@@ -678,7 +678,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (var4 == 1) {
             var5 = ComponentAttachmentPlan.a(GetFixedaim.g((byte) -65), true, SetMachineGunFireForce.e(120));
             if (var5 != -1) {
-              qga.a(dgb.field_b, var5, (byte) 70, gob.field_a);
+              qga.handleNameAvailabilityReply(dgb.field_b, var5, (byte) 70, gob.field_a);
               gob.field_a = null;
               dgb.field_b = null;
             }
@@ -691,7 +691,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (var4 == 2) {
             var6_int = RoundResult.a(SetVariableAction.b(119), GetPointDefenceLaserRandomness.a(52), this.affiliateId, (byte) 111, LoadBlackboxRecording.a(88), ThrusterBehaviourFactory.a(31065), MassDriverWeaponDefinition.d(true));
             if (-1 != var6_int) {
-              wt.a(var6_int, -19342, gob.field_a, dgb.field_b);
+              wt.handleAccountCreationReply(var6_int, -19342, gob.field_a, dgb.field_b);
               gob.field_a = null;
               dgb.field_b = null;
             }

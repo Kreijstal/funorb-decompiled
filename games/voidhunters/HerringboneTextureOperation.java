@@ -74,7 +74,7 @@ final class HerringboneTextureOperation extends TextureOperation {
         var12 = var13;
         var3 = var12;
         if (this.field_f.field_e) {
-          for (var4 = 0; var4 < hob.textureWidth; var4++) {
+          for (var4 = 0; var4 < TextHotspotRegion.textureWidth; var4++) {
             boolean decompiledFrameRemainder0 = true;
             var5 = BoxBlurTextureOperation.textureXCoordinates[var4];
             var6 = SetSalvoUsesAllEnergy.textureYCoordinates[param0];

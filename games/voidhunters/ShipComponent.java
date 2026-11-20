@@ -2221,7 +2221,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           }
           if (null != this.subcomponents) {
             for (var4_int = 0; var4_int < this.subcomponents.length; var4_int++) {
-              var5 = hob.a(param1, 100, 122);
+              var5 = TextHotspotRegion.randomBoundedInt(param1, 100, 122);
               if (GetBombletSprayReload.field_s > var5 &&
                 this.subcomponents[var4_int].componentTypeId != 47) {
                 this.subcomponents[var4_int].health = 0;
@@ -3920,7 +3920,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             var13.dy = param5.dy;
             var13.dx = param5.dx;
           }
-          var13.addDirectionalForce(this.finaly, GameKeyHandler.a(22433, -100 + (var11 + hob.a(param0, 200, 118))), this.finalx, var12, 1948934248);
+          var13.addDirectionalForce(this.finaly, GameKeyHandler.a(22433, -100 + (var11 + TextHotspotRegion.randomBoundedInt(param0, 200, 118))), this.finalx, var12, 1948934248);
           param1.addDebris(var13, (byte) 50);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4450,7 +4450,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             }
             var15 = GameSnapshotFactory.a(var13, (byte) -77, var12);
             var16 = param2.getMass(false) * var9 / var14;
-            param2.addDirectionalForce(this.finaly, GameKeyHandler.a(22433, -100 + (var15 + hob.a(var10, 200, 123))), this.finalx, var16, 1948934248);
+            param2.addDirectionalForce(this.finaly, GameKeyHandler.a(22433, -100 + (var15 + TextHotspotRegion.randomBoundedInt(var10, 200, 123))), this.finalx, var16, 1948934248);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

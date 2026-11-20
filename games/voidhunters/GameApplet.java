@@ -503,7 +503,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               GetCountermeasuresPulseRadius.field_o = 0;
               hqb.field_f = 0;
               var8_int = -70 / ((-74 - param3) / 41);
-              w.field_y = param0;
+              Under13AccountNoticePanel.field_y = param0;
               GetDebrisSurvives.field_p = param4;
               GetPhasedEnergyBeamFireForce.field_p = param4;
               TextureFilterMode.field_a = this;

@@ -178,7 +178,7 @@ final class CurveTextureOperation extends TextureOperation {
         int[] var3 = var8;
         if (this.field_f.field_e) {
           var5 = this.getInputMonochromeRow(0, param0, 255);
-          for (var6 = 0; hob.textureWidth > var6; var6++) {
+          for (var6 = 0; TextHotspotRegion.textureWidth > var6; var6++) {
             var4 = var5[var6] >> 4;
             if (0 > var4) {
               var4 = 0;

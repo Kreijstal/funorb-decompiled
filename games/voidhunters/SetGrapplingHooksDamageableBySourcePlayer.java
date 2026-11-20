@@ -24,9 +24,9 @@ final class SetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
             SetMachineGunAimarc.field_q = null;
           }
           GetReverbWet.field_o = null;
-          if (null != kja.field_E) {
-            kja.field_E.clear(104);
-            kja.field_E = null;
+          if (null != HotspotTextWidget.field_E) {
+            HotspotTextWidget.field_E.clear(104);
+            HotspotTextWidget.field_E = null;
           }
           GetLaserReload.field_r = null;
           if (OpenGlPostEffect.field_e != null) {

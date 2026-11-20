@@ -12,14 +12,14 @@ final class SetNumStars extends ConsoleCommand {
         if (param2 != 11105) {
           field_o = (int[]) null;
           if (param0 > param1) {
-            return 2048 - hob.a((param1 << 16) / param0, (byte) -126);
+            return 2048 - TextHotspotRegion.a((param1 << 16) / param0, (byte) -126);
           }
-          return hob.a((param0 << 16) / param1, (byte) -127);
+          return TextHotspotRegion.a((param0 << 16) / param1, (byte) -127);
         }
         if (param0 > param1) {
-          return 2048 - hob.a((param1 << 16) / param0, (byte) -126);
+          return 2048 - TextHotspotRegion.a((param1 << 16) / param0, (byte) -126);
         }
-        return hob.a((param0 << 16) / param1, (byte) -127);
+        return TextHotspotRegion.a((param0 << 16) / param1, (byte) -127);
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

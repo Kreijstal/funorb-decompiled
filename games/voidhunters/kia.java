@@ -12,13 +12,13 @@ final class kia {
         }
         if (param0 == 63) {
           if (null != SetPointDefenceLaserAimarc.field_o) {
-            SetPointDefenceLaserAimarc.field_o.l((byte) -106);
+            SetPointDefenceLaserAimarc.field_o.closeDialog((byte) -106);
           }
           var1 = mr.m((byte) -118);
           SetAiFiringRangeUpshift.field_o = new vla(var1, (String) null, true, false, false);
-          GetLagStandardDeviationIn.field_r.a(false, GetMissionVariablesHudX.field_o);
-          GetMissionVariablesHudX.field_o.b(SetAiFiringRangeUpshift.field_o, -110);
-          GetMissionVariablesHudX.field_o.e(param0 - 10394);
+          GetLagStandardDeviationIn.field_r.pushPanel(false, GetMissionVariablesHudX.field_o);
+          GetMissionVariablesHudX.field_o.transitionToContent(SetAiFiringRangeUpshift.field_o, -110);
+          GetMissionVariablesHudX.field_o.finishResize(param0 - 10394);
           return;
         }
     }

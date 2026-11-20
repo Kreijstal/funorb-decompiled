@@ -7,7 +7,7 @@ abstract class Transform3D {
 
     abstract void setCamera(int param0, int param1, int param2, int param3, int param4, int param5);
 
-    final static void a(byte param0) {
+    final static void renderLogoMeshes(byte param0) {
         int var15 = 0;
         int var17_int = 0;
         int var18 = 0;
@@ -57,7 +57,7 @@ abstract class Transform3D {
             var17 = var4_ref_wma;
             var17Lifetime2 = var4_ref_wma;
             var4_ref_wma.a(84);
-            GpuIndexBufferOwner.a(-37, var3);
+            GpuIndexBufferOwner.updateLogoPieceTransform(-37, var3);
             var5 = var4_ref_wma.field_B + var4_ref_wma.field_d >> 1;
             var6 = var4_ref_wma.field_u + var4_ref_wma.field_a >> 1;
             var7 = var4_ref_wma.field_s + var4_ref_wma.field_q >> 1;
@@ -70,7 +70,7 @@ abstract class Transform3D {
             var2[var3] = var13 * var7 + var5 * var11 + var6 * var12 >> 16;
           }
           if (param0 != 74) {
-            Transform3D.a((byte) 57);
+            Transform3D.renderLogoMeshes((byte) 57);
           }
           var3Lifetime1 = SetBloomThresholdPercentage.field_p[9] >> 8;
           var4 = SetBloomThresholdPercentage.field_p[10] >> 8;
@@ -105,7 +105,7 @@ abstract class Transform3D {
             }
             var21[var16] = -2147483648;
             var17Lifetime1 = SetMissileLauncherFireForce.field_o[var16];
-            GpuIndexBufferOwner.a(param0 ^ -34, var16);
+            GpuIndexBufferOwner.updateLogoPieceTransform(param0 ^ -34, var16);
             for (var18 = 0; var18 < 3; var18++) {
               GetMissileLauncherAimspeed.field_p[var18] = GetMissileLauncherAimspeed.field_p[var18] + SetMachineGunFireForce.field_p[var15][var18];
             }

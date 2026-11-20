@@ -235,7 +235,7 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
 
     final static void b(int param0) {
         GetDebrisMax.field_s = SetSpinningBladeAimarc.f((byte) 62);
-        HighscoreTableRequest.field_h = new ida();
+        HighscoreTableRequest.field_h = new ModalStack();
         GetPhasedEnergyBeamFireForce.e((byte) 117);
         if (param0 != 32) {
           SetVariableLabelAction.b(3);

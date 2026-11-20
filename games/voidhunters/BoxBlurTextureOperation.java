@@ -54,7 +54,7 @@ final class BoxBlurTextureOperation extends TextureOperation {
           var8 = var17;
           for (var9 = param0 - this.verticalRadius; var9 <= this.verticalRadius + param0; var9++) {
             var10_ref_int__ = this.getInputMonochromeRow(0, var9 & wf.textureHeightMask, 255);
-            var18 = new int[hob.textureWidth];
+            var18 = new int[TextHotspotRegion.textureWidth];
             var16 = var18;
             var11_ref_int__ = var16;
             var12 = 0;
@@ -63,7 +63,7 @@ final class BoxBlurTextureOperation extends TextureOperation {
             }
             var15 = 0;
             var13Lifetime1 = var15;
-            while (hob.textureWidth > var15) {
+            while (TextHotspotRegion.textureWidth > var15) {
               var11_ref_int__[var15] = var12 * var7 >> 16;
               var12 = var12 - var10_ref_int__[SetMassDriverEnergyUsed.field_q & var15 - this.horizontalRadius];
               var15++;
@@ -71,7 +71,7 @@ final class BoxBlurTextureOperation extends TextureOperation {
             }
             var8[-param0 + (var9 + this.verticalRadius)] = var18;
           }
-          for (var9Lifetime1 = 0; var9Lifetime1 < hob.textureWidth; var9Lifetime1++) {
+          for (var9Lifetime1 = 0; var9Lifetime1 < TextHotspotRegion.textureWidth; var9Lifetime1++) {
             var10 = 0;
             for (var11 = 0; var4 > var11; var11++) {
               var10 = var10 + var19[var11][var9Lifetime1];
@@ -178,7 +178,7 @@ final class BoxBlurTextureOperation extends TextureOperation {
           var8 = var30;
           for (var9_int = -this.verticalRadius + param1; param1 + this.verticalRadius >= var9_int; var9_int++) {
             var46 = this.getInputColorRow((byte) 110, 0, wf.textureHeightMask & var9_int);
-            var50 = new int[3][hob.textureWidth];
+            var50 = new int[3][TextHotspotRegion.textureWidth];
             var12 = 0;
             var13 = 0;
             var14 = 0;
@@ -195,7 +195,7 @@ final class BoxBlurTextureOperation extends TextureOperation {
             var19 = var50[1];
             var20 = var50[2];
             var21 = 0;
-            while (hob.textureWidth > var21) {
+            while (TextHotspotRegion.textureWidth > var21) {
               var18[var21] = var7 * var12 >> 16;
               var19[var21] = var7 * var13 >> 16;
               var20[var21] = var7 * var14 >> 16;
@@ -214,7 +214,7 @@ final class BoxBlurTextureOperation extends TextureOperation {
           var9 = var37[0];
           var10 = var37[1];
           var11 = var37[2];
-          for (var12Lifetime1 = 0; var12Lifetime1 < hob.textureWidth; var12Lifetime1++) {
+          for (var12Lifetime1 = 0; var12Lifetime1 < TextHotspotRegion.textureWidth; var12Lifetime1++) {
             var13Lifetime1 = 0;
             var14Lifetime1 = 0;
             var15 = 0;

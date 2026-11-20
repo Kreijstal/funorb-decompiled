@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qpb extends UiSingleChildContainer {
+final class AlphaContainer extends UiSingleChildContainer {
     static Widget field_w;
-    int field_v;
+    int alpha;
 
-    qpb(UiComponent param0) {
+    AlphaContainer(UiComponent param0) {
         super(param0.x, param0.y, param0.width, param0.height, (UiRenderer) null, (UiListener) null);
         try {
           param0.setBounds(0, this.width, this.height, 1, 0);
           this.child = param0;
-          this.field_v = 256;
+          this.alpha = 256;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qpb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static int a(boolean param0, int param1, int param2) {
+    final static int getTeamColor(boolean param0, int param1, int param2) {
         int var3;
         int var4;
         int var5;
@@ -63,9 +63,9 @@ final class qpb extends UiSingleChildContainer {
         return var3;
     }
 
-    public qpb() {
+    public AlphaContainer() {
         super(0, 0, 0, 0, (UiRenderer) null, (UiListener) null);
-        this.field_v = 256;
+        this.alpha = 256;
     }
 
     public static void clearSharedReferences(boolean param0) {
@@ -85,10 +85,10 @@ final class qpb extends UiSingleChildContainer {
           return;
         }
         if (param2 > 47) {
-          if (this.field_v == 0) {
+          if (this.alpha == 0) {
             return;
           }
-          if (256 == this.field_v) {
+          if (256 == this.alpha) {
             this.child.drawLayer(param0 + this.x, param1, 74, param3 + this.y);
             return;
           }
@@ -96,14 +96,14 @@ final class qpb extends UiSingleChildContainer {
           SetTorpedoEnergyUsed.a(117, var8);
           this.child.drawLayer(0, param1, 115, 0);
           bia.popRasterState((byte) 124);
-          var8.drawAlpha(param0 + this.x, this.y + param3, this.field_v);
+          var8.drawAlpha(param0 + this.x, this.y + param3, this.alpha);
           return;
         }
-        qpb.a(false, 44, 54);
-        if (this.field_v == 0) {
+        AlphaContainer.getTeamColor(false, 44, 54);
+        if (this.alpha == 0) {
           return;
         }
-        if (256 == this.field_v) {
+        if (256 == this.alpha) {
           this.child.drawLayer(param0 + this.x, param1, 74, param3 + this.y);
           return;
         }
@@ -111,7 +111,7 @@ final class qpb extends UiSingleChildContainer {
         SetTorpedoEnergyUsed.a(117, var7);
         this.child.drawLayer(0, param1, 115, 0);
         bia.popRasterState((byte) 124);
-        var7.drawAlpha(param0 + this.x, this.y + param3, this.field_v);
+        var7.drawAlpha(param0 + this.x, this.y + param3, this.alpha);
         return;
     }
 

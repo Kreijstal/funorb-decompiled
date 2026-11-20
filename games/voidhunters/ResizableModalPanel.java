@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class iw extends bl {
+abstract class ResizableModalPanel extends ModalPanel {
     static String[] field_F;
-    private int field_H;
-    private int field_I;
-    private int field_B;
-    private int field_C;
-    private int field_E;
+    private int resizeElapsed;
+    private int resizeTargetWidth;
+    private int resizeStartHeight;
+    private int resizeTargetHeight;
+    private int resizeStartWidth;
     static String field_D;
-    private int field_G;
+    private int resizeDuration;
 
-    void d(int param0) {
+    void onResizeComplete(int param0) {
         if (param0 != 15435) {
-          iw.k((byte) -22);
+          ResizableModalPanel.k((byte) -22);
         }
     }
 
-    void b(int param0, int param1, int param2) {
+    void drawFrame(int param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -114,7 +114,7 @@ abstract class iw extends bl {
         wf.field_a.draw(-90 + this.width + param2, 10 + param0);
         GetMissionResnetResourceTickTime.a(param1 ^ 1630174240, 35 + param0, SetCountermeasureLauncherAimarc.field_p, 5 + param2, this.width - 10);
         if (param1 != 1630174241) {
-          this.a(59);
+          this.updateAndCheckClosed(59);
         }
         GetMissionResnetResourceTickTime.a(1, this.height + param0 - 22, SetPedrosRepairMode.field_q, param2, this.width);
         var5Lifetime2 = 169;
@@ -132,21 +132,21 @@ abstract class iw extends bl {
         }
     }
 
-    iw(ida param0, int param1, int param2) {
+    ResizableModalPanel(ModalStack param0, int param1, int param2) {
         super(param0, param1, param2);
-        this.field_H = 0;
-        this.field_G = 0;
+        this.resizeElapsed = 0;
+        this.resizeDuration = 0;
     }
 
     public static void clearSharedReferences(int param0) {
         field_F = null;
         field_D = null;
         if (param0 != -27545) {
-          iw.clearSharedReferences(28);
+          ResizableModalPanel.clearSharedReferences(28);
         }
     }
 
-    boolean a(int param0) {
+    boolean updateAndCheckClosed(int param0) {
         int var2 = 0;
         int var3 = 0;
         int fieldTemp$0 = 0;
@@ -155,24 +155,24 @@ abstract class iw extends bl {
         if (param0 != 248) {
           return false;
         }
-        if (this.field_G <= 0) {
+        if (this.resizeDuration <= 0) {
         } else {
-          var2 = this.field_I;
-          var3 = this.field_C;
-          fieldTemp$0 = this.field_H + 1;
-          this.field_H = this.field_H + 1;
-          if (this.field_G <= fieldTemp$0) {
-            this.field_G = 0;
-            this.d(param0 + 15187);
+          var2 = this.resizeTargetWidth;
+          var3 = this.resizeTargetHeight;
+          fieldTemp$0 = this.resizeElapsed + 1;
+          this.resizeElapsed = this.resizeElapsed + 1;
+          if (this.resizeDuration <= fieldTemp$0) {
+            this.resizeDuration = 0;
+            this.onResizeComplete(param0 + 15187);
           } else {
-            var4 = (-this.field_H + this.field_G * 2) * this.field_H;
-            var5 = this.field_G * this.field_G;
-            var3 = this.field_B + (this.field_C - this.field_B) * var4 / var5;
-            var2 = this.field_E + (-this.field_E + this.field_I) * var4 / var5;
+            var4 = (-this.resizeElapsed + this.resizeDuration * 2) * this.resizeElapsed;
+            var5 = this.resizeDuration * this.resizeDuration;
+            var3 = this.resizeStartHeight + (this.resizeTargetHeight - this.resizeStartHeight) * var4 / var5;
+            var2 = this.resizeStartWidth + (-this.resizeStartWidth + this.resizeTargetWidth) * var4 / var5;
           }
-          this.c(var2, -1860440319, var3);
+          this.setCenteredSize(var2, -1860440319, var3);
         }
-        return super.a(248);
+        return super.updateAndCheckClosed(248);
     }
 
     final static void k(byte param0) {
@@ -282,39 +282,39 @@ abstract class iw extends bl {
         }
     }
 
-    final void c(int param0, int param1, int param2, int param3) {
+    final void animateSize(int param0, int param1, int param2, int param3) {
         if (param3 <= 0) {
-          this.c(param1, -1860440319, param2);
+          this.setCenteredSize(param1, -1860440319, param2);
           return;
         }
-        this.field_I = param1;
-        this.field_C = param2;
-        this.field_H = 0;
+        this.resizeTargetWidth = param1;
+        this.resizeTargetHeight = param2;
+        this.resizeElapsed = 0;
         if (param0 <= 71) {
-          this.c(-109, 54, 31, -22);
+          this.animateSize(-109, 54, 31, -22);
         }
-        this.field_G = param3;
-        this.field_E = this.width;
-        this.field_B = this.height;
+        this.resizeDuration = param3;
+        this.resizeStartWidth = this.width;
+        this.resizeStartHeight = this.height;
     }
 
-    boolean j(byte param0) {
+    boolean finishAnimationsAndCheckClosed(byte param0) {
         if (param0 != 55) {
-          this.field_C = -52;
+          this.resizeTargetHeight = -52;
         }
-        this.e(-10331);
-        return super.j((byte) 55);
+        this.finishResize(-10331);
+        return super.finishAnimationsAndCheckClosed((byte) 55);
     }
 
-    void e(int param0) {
-        if (this.field_G <= 0) {
+    void finishResize(int param0) {
+        if (this.resizeDuration <= 0) {
           return;
         }
-        this.c(this.field_I, param0 ^ 1860450468, this.field_C);
-        this.field_G = 0;
-        this.d(param0 + 25766);
+        this.setCenteredSize(this.resizeTargetWidth, param0 ^ 1860450468, this.resizeTargetHeight);
+        this.resizeDuration = 0;
+        this.onResizeComplete(param0 + 25766);
         if (param0 != -10331) {
-          iw.k((byte) 34);
+          ResizableModalPanel.k((byte) 34);
         }
     }
 

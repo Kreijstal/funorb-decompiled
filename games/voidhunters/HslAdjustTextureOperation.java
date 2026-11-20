@@ -369,7 +369,7 @@ final class HslAdjustTextureOperation extends TextureOperation {
         var8 = var20[0];
         var9 = var20[1];
         var10 = var20[2];
-        for (var11 = 0; hob.textureWidth > var11; var11++) {
+        for (var11 = 0; TextHotspotRegion.textureWidth > var11; var11++) {
           this.convertRgbToHsl((byte) -44, var29[var11], var30[var11], var31[var11]);
           this.lightness = this.lightness + this.lightnessOffset;
           this.saturation = this.saturation + this.saturationOffset;

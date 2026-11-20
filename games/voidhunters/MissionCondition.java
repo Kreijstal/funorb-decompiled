@@ -48,22 +48,22 @@ class MissionCondition implements DiffableState {
         }
     }
 
-    final static tpa a(String[] args, byte param1) {
-        tpa var2 = null;
+    final static AccountRequestResult createAccountNameSuggestions(String[] args, byte param1) {
+        AccountRequestResult var2 = null;
         RuntimeException var2_ref = null;
-        tpa stackIn_2_0 = null;
-        tpa stackIn_4_0 = null;
+        AccountRequestResult stackIn_2_0 = null;
+        AccountRequestResult stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new tpa(false);
+          var2 = new AccountRequestResult(false);
           if (param1 > -121) {
-            stackIn_2_0 = (tpa) null;
+            stackIn_2_0 = (AccountRequestResult) null;
             return stackIn_2_0;
           }
-          var2.field_e = args;
+          var2.suggestedNames = args;
           stackIn_4_0 = var2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -181,7 +181,7 @@ class MissionCondition implements DiffableState {
         try {
           if (param1 != -2) {
             String[] var6 = (String[]) null;
-            MissionCondition.a((String[]) null, (byte) -97);
+            MissionCondition.createAccountNameSuggestions((String[]) null, (byte) -97);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wm.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

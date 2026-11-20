@@ -18,11 +18,11 @@ final class gib {
     }
 
     final static void a(byte param0) {
-        GetLagStandardDeviationIn.field_r.g((byte) -17);
+        GetLagStandardDeviationIn.field_r.closeAllPanels((byte) -17);
         if (null == vqa.field_i) {
           vqa.field_i = new goa(GetLagStandardDeviationIn.field_r, EnvironmentReflectionGpuMaterialEffect.field_j);
         }
-        GetLagStandardDeviationIn.field_r.a(false, vqa.field_i);
+        GetLagStandardDeviationIn.field_r.pushPanel(false, vqa.field_i);
         if (param0 < -32) {
           return;
         }

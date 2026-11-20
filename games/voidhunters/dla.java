@@ -38,10 +38,10 @@ final class dla {
           if (param2 > -26) {
             return;
           }
-          var7 = -this.field_f.getWidth((byte) -122) / 2 + hob.a(param1, this.field_f.getWidth((byte) -122), 119);
-          var8 = -this.field_f.getHeight(1) / 2 + hob.a(param1, this.field_f.getHeight(1), 120);
+          var7 = -this.field_f.getWidth((byte) -122) / 2 + TextHotspotRegion.randomBoundedInt(param1, this.field_f.getWidth((byte) -122), 119);
+          var8 = -this.field_f.getHeight(1) / 2 + TextHotspotRegion.randomBoundedInt(param1, this.field_f.getHeight(1), 120);
           var6.setPosition(var7, var8, (byte) -72);
-          var6.setAngle(hob.a(param1, 8192, 126), -85);
+          var6.setAngle(TextHotspotRegion.randomBoundedInt(param1, 8192, 126), -85);
           this.field_f.addShip(var6, (byte) 125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -240,7 +240,7 @@ final class dla {
         if (var6Lifetime1 > 100) {
           var7 = null;
           var18 = new Random();
-          var9Lifetime1 = hob.a(var18, var6Lifetime1, 118);
+          var9Lifetime1 = TextHotspotRegion.randomBoundedInt(var18, var6Lifetime1, 118);
           var10 = 0;
           var11 = 0;
           while (true) {
@@ -349,7 +349,7 @@ final class dla {
             var5_ref_sg = ae.a(var12, (byte) 45);
             var5_ref_sg.setTeam(17704, 3);
             var5_ref_sg.setAi(new ShipAI(), 4);
-            var5_ref_sg.setAngle(hob.a(var3, 8192, 122), -67);
+            var5_ref_sg.setAngle(TextHotspotRegion.randomBoundedInt(var3, 8192, 122), -67);
             this.field_f.addShip(var5_ref_sg, (byte) 107);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -365,8 +365,8 @@ final class dla {
           }
         }
         var9 = new Asteroid(new ShipComponent(49));
-        var5 = -this.field_f.getWidth((byte) -122) / 2 + hob.a(var3, this.field_f.getWidth((byte) -122), 120);
-        var6 = -this.field_f.getHeight(1) / 2 + hob.a(var3, this.field_f.getHeight(1), 123);
+        var5 = -this.field_f.getWidth((byte) -122) / 2 + TextHotspotRegion.randomBoundedInt(var3, this.field_f.getWidth((byte) -122), 120);
+        var6 = -this.field_f.getHeight(1) / 2 + TextHotspotRegion.randomBoundedInt(var3, this.field_f.getHeight(1), 123);
         var9.setPosition(var5, var6, (byte) 43);
         this.field_f.addAsteroid((byte) 126, var9);
     }

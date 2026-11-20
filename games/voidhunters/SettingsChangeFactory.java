@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SettingsChangeFactory implements GameStateFactory {
-    static oe field_e;
+    static ContentTransitionPhase field_e;
     static String field_d;
     static Widget field_b;
     static apb[] field_a;
@@ -38,7 +38,7 @@ final class SettingsChangeFactory implements GameStateFactory {
 
     static {
         field_d = "Set up new game";
-        field_e = new oe();
+        field_e = new ContentTransitionPhase();
         field_c = 262144;
     }
 }

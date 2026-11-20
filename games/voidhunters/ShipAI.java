@@ -319,7 +319,7 @@ final class ShipAI implements DiffableState {
             if (this.targetBody == null) {
               var10 = 4000;
             }
-            if (hob.a(var9_ref_Random, var10, 125) == 0) {
+            if (TextHotspotRegion.randomBoundedInt(var9_ref_Random, var10, 125) == 0) {
               ArchiveProvider.playSpatialSound(50, param0.y, param0.x, false, 94, 512);
             }
           }

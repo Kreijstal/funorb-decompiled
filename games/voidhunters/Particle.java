@@ -222,7 +222,7 @@ final class Particle implements DiffableState {
           var15Lifetime1 = param1.worldToScreenX(var21 + this.x, (byte) 117);
           var16Lifetime1 = param1.worldToScreenY(true, var22 + this.y);
           var23 = -SetPhasedEnergyBeamReload.field_o + this.type - 1;
-          var24 = qpb.a(false, var23, 13894143);
+          var24 = AlphaContainer.getTeamColor(false, var23, 13894143);
           var5 = var5 * 200 >> 8;
           var25 = var24 | var5 << 24;
           GetDebrisCarryOver.a(8, var16Lifetime1, 1, var25, var11Lifetime2, var15Lifetime1, var14Lifetime1, var12Lifetime1, var25, var13Lifetime1, var25);

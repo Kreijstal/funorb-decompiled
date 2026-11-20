@@ -33,7 +33,7 @@ final class WeaveTextureOperation extends TextureOperation {
           return var9;
         }
         var4 = SetSalvoUsesAllEnergy.textureYCoordinates[param0];
-        for (var5 = 0; hob.textureWidth > var5; var5++) {
+        for (var5 = 0; TextHotspotRegion.textureWidth > var5; var5++) {
           var6 = BoxBlurTextureOperation.textureXCoordinates[var5];
           if (var6 > this.stripWidth &&
             4096 - this.stripWidth > var6 &&

@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class w extends UiContainer implements ln, UiActionListener {
+final class Under13AccountNoticePanel extends UiContainer implements UiHotspotListener, UiActionListener {
     static int field_y;
-    private UiFocusableComponent field_w;
+    private UiFocusableComponent continueButton;
     static GameStateFactory field_v;
-    private sn field_z;
-    private kja field_x;
+    private AccountCreationDialog dialog;
+    private HotspotTextWidget noticeText;
 
-    private final String j(byte param0) {
+    private final String getLinkMarkupEnd(byte param0) {
         if (param0 >= -25) {
-          this.field_z = (sn) null;
+          this.dialog = (AccountCreationDialog) null;
           return "</col></u>";
         }
         return "</col></u>";
     }
 
-    public final void a(int param0, int param1, int param2, kja param3) {
+    public final void onHotspotClicked(int param0, int param1, int param2, HotspotTextWidget param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -26,7 +26,7 @@ final class w extends UiContainer implements ln, UiActionListener {
         var6 = VoidHunters.field_G;
         try {
           if (param0 != -1) {
-            this.field_x = (kja) null;
+            this.noticeText = (HotspotTextWidget) null;
           }
           if (0 == param2) {
             SetReloadBarWidth.a(12, "terms.ws");
@@ -55,7 +55,7 @@ final class w extends UiContainer implements ln, UiActionListener {
         }
     }
 
-    w(sn param0) {
+    Under13AccountNoticePanel(AccountCreationDialog param0) {
         super(0, 0, 288, 0, (UiRenderer) null);
         String var7 = null;
         int var3 = 0;
@@ -63,26 +63,26 @@ final class w extends UiContainer implements ln, UiActionListener {
         int var5 = 0;
         int var6 = 0;
         try {
-          this.field_z = param0;
-          this.field_w = new UiFocusableComponent(tn.field_b, (UiListener) null);
-          this.field_w.renderer = (UiRenderer) ((Object) new vva());
-          var7 = SetReverbGain.a(SetCountermeasuresPulsetime.field_o, new String[]{this.c(true), this.j((byte) -30)}, 81);
+          this.dialog = param0;
+          this.continueButton = new UiFocusableComponent(tn.field_b, (UiListener) null);
+          this.continueButton.renderer = (UiRenderer) ((Object) new vva());
+          var7 = SetReverbGain.a(SetCountermeasuresPulsetime.field_o, new String[]{this.getLinkMarkupStart(true), this.getLinkMarkupEnd((byte) -30)}, 81);
           var3 = 20;
           var4 = new UiTextStyle(SetShipToShipRamDamage.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, SetShipToShipRamDamage.field_o.maxAscent, -1, 2147483647, true);
-          this.field_x = new kja(var7, var4);
-          this.field_x.tooltip = "";
-          this.field_x.a(0, -1, SetBombletSprayProjectileDamage.field_q);
-          this.field_x.a(1, -1, SetBombletSprayProjectileDamage.field_q);
-          this.field_x.listener = (UiListener) (this);
-          this.field_x.width = -40 + this.width;
-          this.field_x.a(-40 + this.width, var3, 26, (byte) -23);
-          var3 = var3 + (15 + this.field_x.height);
-          this.addChild(-18756, this.field_x);
+          this.noticeText = new HotspotTextWidget(var7, var4);
+          this.noticeText.tooltip = "";
+          this.noticeText.setHotspotTooltip(0, -1, SetBombletSprayProjectileDamage.field_q);
+          this.noticeText.setHotspotTooltip(1, -1, SetBombletSprayProjectileDamage.field_q);
+          this.noticeText.listener = (UiListener) (this);
+          this.noticeText.width = -40 + this.width;
+          this.noticeText.fitTextBounds(-40 + this.width, var3, 26, (byte) -23);
+          var3 = var3 + (15 + this.noticeText.height);
+          this.addChild(-18756, this.noticeText);
           var5 = 4;
           var6 = 200;
-          this.field_w.setBounds(-var6 + 300 >> 1, var6, 40, 1, var3);
-          this.field_w.listener = (UiListener) (this);
-          this.addChild(-18756, this.field_w);
+          this.continueButton.setBounds(-var6 + 300 >> 1, var6, 40, 1, var3);
+          this.continueButton.listener = (UiListener) (this);
+          this.addChild(-18756, this.continueButton);
           this.setBounds(0, 300, var3 - (-55 - var5), 1, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "w.<init>(" + (param0 != null ? "{...}" : "null") + ')');
@@ -139,14 +139,14 @@ final class w extends UiContainer implements ln, UiActionListener {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_w == param3) {
+          if (this.continueButton == param3) {
             GetBoostersActiveTime.f((byte) -74);
-            this.field_z.l((byte) -106);
+            this.dialog.closeDialog((byte) -106);
           }
           if (param0 == 11) {
             return;
           }
-          w.a(-96, (byte) -47);
+          Under13AccountNoticePanel.a(-96, (byte) -47);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -171,7 +171,7 @@ final class w extends UiContainer implements ln, UiActionListener {
         field_v = null;
     }
 
-    private final String c(boolean param0) {
+    private final String getLinkMarkupStart(boolean param0) {
         if (!param0) {
           return (String) null;
         }

@@ -32,19 +32,19 @@ final class MovingObjectFactory implements GameStateFactory {
         var3 = VoidHunters.field_G;
         try {
           param1.unlink(-3846);
-          var2 = (LobbyGameEntry) (kja.field_E.first(0));
+          var2 = (LobbyGameEntry) (HotspotTextWidget.field_E.first(0));
           if (param0 < 99) {
             return;
           }
           while (var2 != null) {
             if (var2.comesBefore(param1, -128)) {
-              var2 = (LobbyGameEntry) (kja.field_E.next((byte) 28));
+              var2 = (LobbyGameEntry) (HotspotTextWidget.field_E.next((byte) 28));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            kja.field_E.addLast(-10258, param1);
+            HotspotTextWidget.field_E.addLast(-10258, param1);
             return;
           }
           SoftwareFramebuffer.insertBefore(param1, var2, 2);

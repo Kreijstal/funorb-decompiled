@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetBloomCoefficientPercentage extends ConsoleCommand {
-    static oe field_o;
+    static ContentTransitionPhase field_o;
     static String field_p;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -145,6 +145,6 @@ final class SetBloomCoefficientPercentage extends ConsoleCommand {
 
     static {
         field_p = "Fighters";
-        field_o = new oe();
+        field_o = new ContentTransitionPhase();
     }
 }

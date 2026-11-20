@@ -4,7 +4,7 @@
 final class SetPointDefenceLaserAimarc extends ConsoleCommand {
     static IndexedSpriteData[] field_r;
     static int field_q;
-    static os field_o;
+    static AccountStatusDialog field_o;
     static Sprite[][] field_p;
 
     final static boolean a(CharSequence param0, int param1) {

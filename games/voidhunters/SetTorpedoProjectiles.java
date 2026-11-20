@@ -157,9 +157,9 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
           stackIn_43_0 = (ScrollPaneWidget) (param2);
           stackIn_43_1 = 38;
           stackIn_43_2 = 2;
-          stackIn_43_3 = (8 + nna.field_w * 4) * param0;
+          stackIn_43_3 = (8 + DialogMessagePanel.field_w * 4) * param0;
           stackIn_44_4 = (param2 == qg.field_a);
-          stackIn_47_0 = (!((ScrollPaneWidget) (Object) stackIn_43_0).layoutAndUpdateScrolling((byte) stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_44_4, param3, 2 * (2 + nna.field_w))) ? 0 : 1;
+          stackIn_47_0 = (!((ScrollPaneWidget) (Object) stackIn_43_0).layoutAndUpdateScrolling((byte) stackIn_43_1, stackIn_43_2, stackIn_43_3, stackIn_44_4, param3, 2 * (2 + DialogMessagePanel.field_w))) ? 0 : 1;
           var9Lifetime1 = stackIn_47_0;
           var10 = param2.content.children;
           var11 = null;
@@ -269,7 +269,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                 BodyInZoneConditionFactory.field_a != var12.field_zb) {
                 if (null != var12.field_wb.text) {
                   var26 = var12.field_wb.getPreferredWidth(param1 + 93) + 2 * qs.field_c;
-                  var12.field_wb.setBounds(var25_int, 124, var26, var19, nna.field_w);
+                  var12.field_wb.setBounds(var25_int, 124, var26, var19, DialogMessagePanel.field_w);
                   var25_int = var25_int + var26;
                 }
                 if (var12.field_Nb.text != null) {
@@ -278,7 +278,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                   } else {
                     var26Lifetime2 = 40;
                   }
-                  var12.field_Nb.setBounds(var25_int, 127, var26Lifetime2, var19, nna.field_w);
+                  var12.field_Nb.setBounds(var25_int, 127, var26Lifetime2, var19, DialogMessagePanel.field_w);
                   var25_int = var25_int + var26Lifetime2;
                 }
               }
@@ -291,9 +291,9 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               } else {
                 stackIn_96_4 = 42;
               }
-              ((Widget) (Object) stackIn_95_0).setBounds(stackIn_95_1, stackIn_95_2, stackIn_95_3 + (-stackIn_96_4 + var12.width), var19, nna.field_w);
+              ((Widget) (Object) stackIn_95_0).setBounds(stackIn_95_1, stackIn_95_2, stackIn_95_3 + (-stackIn_96_4 + var12.width), var19, DialogMessagePanel.field_w);
               var12.field_Jb.text = Integer.toString(var12.field_Gb);
-              var12.field_Jb.setBounds(-40 + var12.width, param1 + 123, 40, var19, nna.field_w);
+              var12.field_Jb.setBounds(-40 + var12.width, param1 + 123, 40, var19, DialogMessagePanel.field_w);
               if (var12.field_Ib.field_O &&
                 var22 != 0) {
                 NebulaFieldFactory.field_a = var12.field_xb;
@@ -308,7 +308,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                   NebulaFieldFactory.field_a = GetShieldsDirectionalArcParticleLife.field_q[var12.field_vb];
                 }
               }
-              var19 = var19 + nna.field_w;
+              var19 = var19 + DialogMessagePanel.field_w;
             }
             var23 = SetServerinfoVotestate.a(var12.field_Db, var20, param1 ^ -3224);
             var24 = var23;
@@ -319,8 +319,8 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               var24_intLifetime1 = var12.field_Mb.font.getLineCount(var23, -qs.field_c + var12.width - qs.field_c);
               var12.field_Mb.field_I = 256 * var12.field_yb / GetMomentOfInertiaPredivideDownshift.field_p;
               var12.field_Mb.text = var23;
-              var12.field_Mb.setBounds(qs.field_c, -102, var12.width - qs.field_c * 2, var19, nna.field_w * var24_intLifetime1);
-              var19 = var19 + nna.field_w * var24_intLifetime1;
+              var12.field_Mb.setBounds(qs.field_c, -102, var12.width - qs.field_c * 2, var19, DialogMessagePanel.field_w * var24_intLifetime1);
+              var19 = var19 + DialogMessagePanel.field_w * var24_intLifetime1;
             }
             if (var9Lifetime1 == 0) {
               var12.field_E = var19 - var12.height;
@@ -334,7 +334,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                 if (0 != var12.field_Nb.field_o) {
                   World.a(param4, var12.field_zb, -125);
                 } else {
-                  sn.a(qs.field_a, 0, var12, (byte) 71, Particle.field_H, param2, 0);
+                  AccountCreationDialog.showPlayerContextMenu(qs.field_a, 0, var12, (byte) 71, Particle.field_H, param2, 0);
                 }
               } else {
                 ut.a(6, var12.field_zb, param4);

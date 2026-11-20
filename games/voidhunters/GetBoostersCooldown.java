@@ -23,7 +23,7 @@ final class GetBoostersCooldown extends ConsoleCommand {
         var5 = VoidHunters.field_G;
         try {
           var3 = -66 / ((param1 + 62) / 62);
-          var2_int = hob.a(param0, OpenGlGpuRectangleTexture.field_m, 123);
+          var2_int = TextHotspotRegion.randomBoundedInt(param0, OpenGlGpuRectangleTexture.field_m, 123);
           for (var4 = 0; var4 < 56; var4++) {
             if (SetMassDriverAimarc.a(130, var4)) {
               if (var2_int == 0) {

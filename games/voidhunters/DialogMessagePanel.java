@@ -1,19 +1,19 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nna extends UiContainer implements UiActionListener {
+final class DialogMessagePanel extends UiContainer implements UiActionListener {
     static String field_F;
-    private int[] field_E;
+    private int[] actionCodes;
     static String field_D;
-    private os field_B;
+    private AccountStatusDialog owner;
     static int field_w;
     static Widget field_v;
     static CommandConsole field_C;
-    private BitmapFont field_H;
-    private String field_x;
+    private BitmapFont font;
+    private String message;
     static ae field_z;
-    private int field_A;
-    private UiFocusableComponent[] field_y;
+    private int actionButtonCount;
+    private UiFocusableComponent[] actionButtons;
 
     public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         int var6_int = 0;
@@ -29,15 +29,15 @@ final class nna extends UiContainer implements UiActionListener {
           if (param0 != 11) {
             return;
           }
-          for (var6_int = 0; this.field_A > var6_int; var6_int++) {
-            if (this.field_y[var6_int] != param3) {
+          for (var6_int = 0; this.actionButtonCount > var6_int; var6_int++) {
+            if (this.actionButtons[var6_int] != param3) {
               continue;
             }
-            var7 = this.field_E[var6_int];
+            var7 = this.actionCodes[var6_int];
             if (var7 != -1) {
-              GetSelfDestructPrepareToggleCooldown.a(127, this.field_E[var6_int]);
+              GetSelfDestructPrepareToggleCooldown.a(127, this.actionCodes[var6_int]);
             } else {
-              this.field_B.l((byte) -106);
+              this.owner.closeDialog((byte) -106);
             }
             break;
           }
@@ -56,22 +56,22 @@ final class nna extends UiContainer implements UiActionListener {
         }
     }
 
-    final void a(int param0, String param1, int param2) {
+    final void addButton(int param0, String param1, int param2) {
         int var4_int = 0;
         try {
-          var4_int = this.field_A;
-          this.a(-4349, var4_int + 1);
+          var4_int = this.actionButtonCount;
+          this.growActionButtons(-4349, var4_int + 1);
           if (param0 > -113) {
             field_D = (String) null;
           }
-          this.field_y[var4_int] = this.a((byte) 62, param1, (UiListener) (this));
-          this.field_E[var4_int] = param2;
+          this.actionButtons[var4_int] = this.addButton((byte) 62, param1, (UiListener) (this));
+          this.actionCodes[var4_int] = param2;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nna.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
-    final UiFocusableComponent a(byte param0, String param1, UiListener param2) {
+    final UiFocusableComponent addButton(byte param0, String param1, UiListener param2) {
         UiFocusableComponent var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -120,20 +120,20 @@ final class nna extends UiContainer implements UiActionListener {
         field_z = null;
         field_C = null;
         if (!param0) {
-          nna.clearSharedReferences(true);
+          DialogMessagePanel.clearSharedReferences(true);
         }
         field_D = null;
     }
 
-    nna(os param0, BitmapFont param1, String param2) {
+    DialogMessagePanel(AccountStatusDialog param0, BitmapFont param1, String param2) {
         super(0, 0, 288, 0, (UiRenderer) null);
         int var4_int = 0;
-        this.field_A = 0;
+        this.actionButtonCount = 0;
         try {
-          this.field_x = param2;
-          this.field_B = param0;
-          this.field_H = param1;
-          var4_int = null != this.field_x ? this.field_H.getParagraphHeight(this.field_x, 260, this.field_H.maxAscent) : 0;
+          this.message = param2;
+          this.owner = param0;
+          this.font = param1;
+          var4_int = null != this.message ? this.font.getParagraphHeight(this.message, 260, this.font.maxAscent) : 0;
           this.setBounds(0, 288, var4_int + 22, 1, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -143,16 +143,16 @@ final class nna extends UiContainer implements UiActionListener {
     final void drawLayer(int param0, int param1, int param2, int param3) {
         if (param2 < 47) {
           UiListener var6 = (UiListener) null;
-          this.a((byte) -58, (String) null, (UiListener) null);
+          this.addButton((byte) -58, (String) null, (UiListener) null);
         }
         super.drawLayer(param0, param1, 61, param3);
-        this.field_H.drawParagraph(this.field_x, param0 + this.x + 14, 10 + (param3 + this.y), this.width - 28, this.height, 16777215, -1, 0, 0, this.field_H.maxAscent);
+        this.font.drawParagraph(this.message, param0 + this.x + 14, 10 + (param3 + this.y), this.width - 28, this.height, 16777215, -1, 0, 0, this.font.maxAscent);
     }
 
-    private final void a(int param0, int param1) {
+    private final void growActionButtons(int param0, int param1) {
         int var5 = 0;
         int var6 = VoidHunters.field_G;
-        if (param1 <= this.field_A) {
+        if (param1 <= this.actionButtonCount) {
           return;
         }
         UiFocusableComponent[] var7 = new UiFocusableComponent[param1];
@@ -161,13 +161,13 @@ final class nna extends UiContainer implements UiActionListener {
           return;
         }
         int[] var4 = new int[param1];
-        for (var5 = 0; var5 < this.field_A; var5++) {
-          var7[var5] = this.field_y[var5];
-          var4[var5] = this.field_E[var5];
+        for (var5 = 0; var5 < this.actionButtonCount; var5++) {
+          var7[var5] = this.actionButtons[var5];
+          var4[var5] = this.actionCodes[var5];
         }
-        this.field_y = var3;
-        this.field_A = param1;
-        this.field_E = var4;
+        this.actionButtons = var3;
+        this.actionButtonCount = param1;
+        this.actionCodes = var4;
     }
 
     static {

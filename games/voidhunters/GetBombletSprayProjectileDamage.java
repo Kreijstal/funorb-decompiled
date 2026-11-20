@@ -65,7 +65,7 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
           }
           var4 = param0;
           if (fbb.field_j[param0] > 1) {
-            var4 = hob.a(OpenGlGpuToolkit.field_Jc, fbb.field_j[param0], 123) + param0;
+            var4 = TextHotspotRegion.randomBoundedInt(OpenGlGpuToolkit.field_Jc, fbb.field_j[param0], 123) + param0;
           }
           var10 = fa.field_d[var4];
           var12 = var10;
@@ -87,7 +87,7 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
         }
         var4Lifetime1 = param0;
         if (fbb.field_j[param0] > 1) {
-          var4Lifetime1 = hob.a(OpenGlGpuToolkit.field_Jc, fbb.field_j[param0], 123) + param0;
+          var4Lifetime1 = TextHotspotRegion.randomBoundedInt(OpenGlGpuToolkit.field_Jc, fbb.field_j[param0], 123) + param0;
         }
         var12Lifetime1 = fa.field_d[var4Lifetime1];
         SoundPlayback var13 = GetNebulaFadesOutWhenClose.a(-102, var12Lifetime1);

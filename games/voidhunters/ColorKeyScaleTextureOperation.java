@@ -118,7 +118,7 @@ final class ColorKeyScaleTextureOperation extends TextureOperation {
         var33 = var27[2];
         var25 = var33;
         var10 = var25;
-        for (var11 = 0; hob.textureWidth > var11; var11++) {
+        for (var11 = 0; TextHotspotRegion.textureWidth > var11; var11++) {
           var13 = var39[var11];
           var12 = -this.targetColor[0] + var13;
           if (0 > var12) {

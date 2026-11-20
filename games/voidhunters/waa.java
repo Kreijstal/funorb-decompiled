@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class waa extends UiContainer implements jpb, UiActionListener {
+final class waa extends UiContainer implements NameSuggestionTarget, UiActionListener {
     rcb field_v;
     private tga field_A;
     static String field_y;
@@ -154,7 +154,7 @@ final class waa extends UiContainer implements jpb, UiActionListener {
         this.field_z.listener = (UiListener) (this);
         this.addChild(-18756, this.field_z);
         this.addChild(-18756, this.field_C);
-        this.field_v = new rcb((jpb) (this));
+        this.field_v = new rcb((NameSuggestionTarget) (this));
         this.field_v.setBounds(60 + (this.field_A.x + this.field_A.width), -60 - this.field_A.x + (this.width - this.field_A.width), 150, 1, 20);
         this.addChild(-18756, this.field_v);
         this.setBounds(0, 496, var4 + var3 + 55, 1, 0);
@@ -333,7 +333,7 @@ final class waa extends UiContainer implements jpb, UiActionListener {
         }
     }
 
-    public final void a(int param0) {
+    public final void invalidateNameAvailability(int param0) {
         int discarded$0 = 0;
         ((tib) (this.field_A.a(-782444220))).d((byte) 127);
         if (param0 != 1546) {
@@ -350,7 +350,7 @@ final class waa extends UiContainer implements jpb, UiActionListener {
         }
     }
 
-    public final void a(byte param0, String param1) {
+    public final void setSuggestedName(byte param0, String param1) {
         int discarded$1 = 0;
         tga var3 = null;
         RuntimeException var3_ref = null;

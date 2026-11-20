@@ -334,7 +334,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           var7 = (this.getBoundingbox((byte) -23)[0] + this.getBoundingbox((byte) -46)[1]) / 2;
           var8 = param1.worldToScreenX(var7, (byte) 117) - var5 / 2;
           var9 = param1.worldToScreenY(true, this.getBoundingbox((byte) -94)[2]) - 4 * var6;
-          SetMissionTerrainDebrisProbability.a(qpb.a(false, this.team, param2 ^ 13894111), var4_int, var9, var6, param0, var5, var8, 2);
+          SetMissionTerrainDebrisProbability.a(AlphaContainer.getTeamColor(false, this.team, param2 ^ 13894111), var4_int, var9, var6, param0, var5, var8, 2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sg.NC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -1075,7 +1075,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         int var13 = 0;
         var13 = VoidHunters.field_G;
         try {
-          var4_int = qpb.a(false, this.team, 13894143);
+          var4_int = AlphaContainer.getTeamColor(false, this.team, 13894143);
           if (this.isSpawnProtected((byte) 108)) {
             var5 = this.getBoundingRadius(true);
             if (var5 > 0) {

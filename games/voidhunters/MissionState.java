@@ -283,7 +283,7 @@ final class MissionState implements DiffableState {
             var9Lifetime1 = var7Lifetime1 - var8;
             var10 = 0;
             if (1 < var9Lifetime1) {
-              var10 = hob.a(param0, var9Lifetime1, 122);
+              var10 = TextHotspotRegion.randomBoundedInt(param0, var9Lifetime1, 122);
             }
             var11 = 0;
             for (var12 = 0; param2.players.length > var12; var12++) {

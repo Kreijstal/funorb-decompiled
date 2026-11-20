@@ -30,7 +30,7 @@ final class SetRadialMenuRadius extends ConsoleCommand {
         SetTorpedoEnergyUsed.a(74, ata.field_K);
         bfb.e();
         SoftwareRasterizer2D.clear();
-        Transform3D.a((byte) 74);
+        Transform3D.renderLogoMeshes((byte) 74);
         if (var5 < 256) {
           SoftwareRasterizer2D.fillRectangleAlpha(0, 0, SoftwareRasterizer2D.width, SoftwareRasterizer2D.height, 0, -var5 + 256);
         }

@@ -92,14 +92,14 @@ final class SpawnChoice implements DiffableState {
         if (param0 > 25) {
           OpenGlSprite.field_c = true;
           vu.field_xb = true;
-          GetLagStandardDeviationIn.field_r.g((byte) -17);
+          GetLagStandardDeviationIn.field_r.closeAllPanels((byte) -17);
           fa.a(SetCountermeasureLauncherEnergyUsed.field_p, -122, false);
           return;
         }
         field_b = (String[]) null;
         OpenGlSprite.field_c = true;
         vu.field_xb = true;
-        GetLagStandardDeviationIn.field_r.g((byte) -17);
+        GetLagStandardDeviationIn.field_r.closeAllPanels((byte) -17);
         fa.a(SetCountermeasureLauncherEnergyUsed.field_p, -122, false);
     }
 

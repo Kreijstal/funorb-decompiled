@@ -260,8 +260,8 @@ final class WeaponBehaviour implements DiffableState {
             var34Lifetime1 = 0;
             var35Lifetime1 = 0;
             if (0 < var19) {
-              var34Lifetime1 = hob.a(var29, var19 << 1, 124) - var19;
-              var35Lifetime1 = -var19 + hob.a(var29, var19 << 1, 121);
+              var34Lifetime1 = TextHotspotRegion.randomBoundedInt(var29, var19 << 1, 124) - var19;
+              var35Lifetime1 = -var19 + TextHotspotRegion.randomBoundedInt(var29, var19 << 1, 121);
             }
             var36 = new Projectile(var30, var31, var26 + var34Lifetime1, var27 + var35Lifetime1, param12, var22, param3, param9, var23, var32);
             param15.addProjectile(var36, false);

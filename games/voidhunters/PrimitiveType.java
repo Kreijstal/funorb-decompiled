@@ -5,7 +5,7 @@ final class PrimitiveType {
     static boolean[] field_d;
     static int field_c;
     static String field_b;
-    static tpa field_a;
+    static AccountRequestResult field_a;
 
     final static void a(int param0, boolean param1, int param2) {
         int var3;

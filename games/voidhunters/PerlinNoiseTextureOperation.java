@@ -109,14 +109,14 @@ final class PerlinNoiseTextureOperation extends TextureOperation {
             var17 = this.permutation[255 & var15] & 255;
             var18 = 255 & this.permutation[255 & var16];
             if (!this.biasUnsigned) {
-              for (var10 = 0; hob.textureWidth > var10; var10++) {
+              for (var10 = 0; TextHotspotRegion.textureWidth > var10; var10++) {
                 var4_int = this.horizontalFrequency * BoxBlurTextureOperation.textureXCoordinates[var10];
                 var6 = this.interpolateNoiseCell(var18, var17, var12, var4_int * var8 >> 12, var14, var11, (byte) -34);
                 param2[var10] = var9 * var6 >> 12;
               }
               return;
             }
-            for (var10Lifetime3 = 0; hob.textureWidth > var10Lifetime3; var10Lifetime3++) {
+            for (var10Lifetime3 = 0; TextHotspotRegion.textureWidth > var10Lifetime3; var10Lifetime3++) {
               var4_intLifetime3 = BoxBlurTextureOperation.textureXCoordinates[var10Lifetime3] * this.horizontalFrequency;
               var6Lifetime3 = this.interpolateNoiseCell(var18, var17, var12, var4_intLifetime3 * var8 >> 12, var14, var11, (byte) -34);
               var6Lifetime3 = var9 * var6Lifetime3 >> 12;
@@ -140,7 +140,7 @@ final class PerlinNoiseTextureOperation extends TextureOperation {
             var14Lifetime1 = ocb.field_h[var11Lifetime1];
             var17Lifetime1 = 255 & this.permutation[255 & var15Lifetime1];
             var18Lifetime1 = this.permutation[255 & var16Lifetime1] & 255;
-            for (var10Lifetime1 = 0; var10Lifetime1 < hob.textureWidth; var10Lifetime1++) {
+            for (var10Lifetime1 = 0; var10Lifetime1 < TextHotspotRegion.textureWidth; var10Lifetime1++) {
               var4_intLifetime1 = BoxBlurTextureOperation.textureXCoordinates[var10Lifetime1] * this.horizontalFrequency;
               var6Lifetime1 = this.interpolateNoiseCell(var18Lifetime1, var17Lifetime1, var12Lifetime1, var4_intLifetime1 * var8Lifetime1 >> 12, var14Lifetime1, var11Lifetime1, (byte) -34);
               param2[var10Lifetime1] = var9Lifetime1 * var6Lifetime1 >> 12;
@@ -165,14 +165,14 @@ final class PerlinNoiseTextureOperation extends TextureOperation {
               var18Lifetime2 = this.permutation[255 & var16Lifetime2] & 255;
               if (this.biasUnsigned &&
                 this.octaveCount - 1 == var7) {
-                for (var10Lifetime2 = 0; hob.textureWidth > var10Lifetime2; var10Lifetime2++) {
+                for (var10Lifetime2 = 0; TextHotspotRegion.textureWidth > var10Lifetime2; var10Lifetime2++) {
                   var4_intLifetime2 = this.horizontalFrequency * BoxBlurTextureOperation.textureXCoordinates[var10Lifetime2];
                   var6Lifetime2 = this.interpolateNoiseCell(var18Lifetime2, var17Lifetime2, var12Lifetime2, var8Lifetime2 * var4_intLifetime2 >> 12, var14Lifetime2, var11Lifetime2, (byte) -34);
                   var6Lifetime2 = (var9Lifetime2 * var6Lifetime2 >> 12) + param2[var10Lifetime2];
                   param2[var10Lifetime2] = 2048 + (var6Lifetime2 >> 1);
                 }
               } else {
-                for (var10Lifetime2 = 0; var10Lifetime2 < hob.textureWidth; var10Lifetime2++) {
+                for (var10Lifetime2 = 0; var10Lifetime2 < TextHotspotRegion.textureWidth; var10Lifetime2++) {
                   var4_intLifetime2 = BoxBlurTextureOperation.textureXCoordinates[var10Lifetime2] * this.horizontalFrequency;
                   var6Lifetime2 = this.interpolateNoiseCell(var18Lifetime2, var17Lifetime2, var12Lifetime2, var8Lifetime2 * var4_intLifetime2 >> 12, var14Lifetime2, var11Lifetime2, (byte) -34);
                   param2[var10Lifetime2] = param2[var10Lifetime2] + (var6Lifetime2 * var9Lifetime2 >> 12);

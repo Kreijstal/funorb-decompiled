@@ -18,7 +18,7 @@ final class GetShipAimLines extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 10);
           }
-          stackIn_3_0 = new ConsoleValue(sn.field_Y);
+          stackIn_3_0 = new ConsoleValue(AccountCreationDialog.field_Y);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

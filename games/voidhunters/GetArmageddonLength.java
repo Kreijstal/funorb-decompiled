@@ -14,7 +14,7 @@ final class GetArmageddonLength extends ConsoleCommand {
         field_o = null;
         if (param0 != 66) {
           String var2 = (String) null;
-          GetArmageddonLength.a(0, (String) null, (byte) -109);
+          GetArmageddonLength.createAccountErrorResult(0, (String) null, (byte) -109);
         }
     }
 
@@ -95,23 +95,23 @@ final class GetArmageddonLength extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static tpa a(int param0, String param1, byte param2) {
-        tpa var3 = null;
+    final static AccountRequestResult createAccountErrorResult(int param0, String param1, byte param2) {
+        AccountRequestResult var3 = null;
         RuntimeException var3_ref = null;
-        tpa stackIn_2_0 = null;
-        tpa stackIn_4_0 = null;
+        AccountRequestResult stackIn_2_0 = null;
+        AccountRequestResult stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new tpa(false);
+          var3 = new AccountRequestResult(false);
           if (param2 != -124) {
-            stackIn_2_0 = (tpa) null;
+            stackIn_2_0 = (AccountRequestResult) null;
             return stackIn_2_0;
           }
-          var3.field_f = param1;
-          var3.field_d = param0;
+          var3.message = param1;
+          var3.responseCode = param0;
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

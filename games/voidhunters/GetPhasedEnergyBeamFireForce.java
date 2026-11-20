@@ -64,8 +64,8 @@ final class GetPhasedEnergyBeamFireForce extends ConsoleCommand {
         if (param0 != 117) {
           return;
         }
-        HighscoreTableRequest.field_h.g((byte) -17);
-        HighscoreTableRequest.field_h.a(false, new hnb(HighscoreTableRequest.field_h));
+        HighscoreTableRequest.field_h.closeAllPanels((byte) -17);
+        HighscoreTableRequest.field_h.pushPanel(false, new hnb(HighscoreTableRequest.field_h));
     }
 
     GetPhasedEnergyBeamFireForce(String param0, Class[] param1, String param2) {

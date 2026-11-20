@@ -252,7 +252,7 @@ final class Projectile extends MovingObject implements DiffableState {
             if (this.type == 3) {
               var5 = param1.worldToScreenX(-this.dx + this.x, (byte) 112);
               var6 = param1.worldToScreenY(true, this.y - this.dy);
-              var7 = qpb.a(false, this.firedTeam, 13894143);
+              var7 = AlphaContainer.getTeamColor(false, this.firedTeam, 13894143);
               var8 = 255 * this.damage / TickClock.field_a;
               FixedPointTrigonometry.drawThickLine(var7, 3, 16994, var4, var8 >> 1, var3_int, var5, var6);
               if (0 < this.angle) {

@@ -61,7 +61,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         if (param1 <= 87) {
           field_Xc = (int[]) null;
         }
-        if (param0 == ida.field_x) {
+        if (param0 == ModalStack.field_x) {
           return 1;
         }
         if (param0 == OpenGlInterleavedVertexBuffer.field_a) {

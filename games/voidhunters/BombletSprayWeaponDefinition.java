@@ -23,8 +23,8 @@ final class BombletSprayWeaponDefinition extends WeaponDefinition {
         pa.field_b = 0;
         SetBots.field_q = SetMachineGunEnergyUsed.field_p;
         SetSpecialOrderBoxWidth.field_o = 0;
-        nna.field_z = new ae(2);
-        nna.field_z.a(param0, param1 - 91, -1, GetGrapplingHookAimspeed.a(param1 - 91, uia.field_b, PlayerGameData.field_b));
+        DialogMessagePanel.field_z = new ae(2);
+        DialogMessagePanel.field_z.a(param0, param1 - 91, -1, GetGrapplingHookAimspeed.a(param1 - 91, uia.field_b, PlayerGameData.field_b));
         if (param1 != 90) {
           BombletSprayWeaponDefinition.clearSharedReferences((byte) 38);
         }

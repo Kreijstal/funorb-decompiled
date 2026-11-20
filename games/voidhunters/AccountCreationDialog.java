@@ -1,14 +1,14 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sn extends os implements UiActionListener {
+final class AccountCreationDialog extends AccountStatusDialog implements UiActionListener {
     static boolean field_Y;
-    private boolean field_ab;
-    private boolean field_Z;
-    private rq field_X;
+    private boolean ineligible;
+    private boolean resultShown;
+    private AccountCreationForm creationForm;
 
     public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
-        if (this.field_ab) {
+        if (this.ineligible) {
           WaterTextures.a(false, true, false);
           return;
         }
@@ -17,17 +17,17 @@ final class sn extends os implements UiActionListener {
           return;
         }
         try {
-          this.l((byte) -106);
+          this.closeDialog((byte) -106);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sn.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    final void e(boolean param0) {
-        this.a(true, param0, GetArmageddonLength.a(248, GetMissionTerrainAsteroidProbability.field_q, (byte) -124));
+    final void showAccountIneligible(boolean param0) {
+        this.showAccountResult(true, param0, GetArmageddonLength.createAccountErrorResult(248, GetMissionTerrainAsteroidProbability.field_q, (byte) -124));
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, Camera2D param6) {
+    final static void drawWorldArrow(int param0, byte param1, int param2, int param3, int param4, int param5, Camera2D param6) {
         try {
           GetCountermeasureLauncherAimarc.a(param2, param6, param0, 3, param4, param5, 255, param3);
           if (param1 <= 68) {
@@ -38,7 +38,7 @@ final class sn extends os implements UiActionListener {
         }
     }
 
-    final static void a(int param0, int param1, jk param2, byte param3, int param4, ScrollPaneWidget param5, int param6) {
+    final static void showPlayerContextMenu(int param0, int param1, jk param2, byte param3, int param4, ScrollPaneWidget param5, int param6) {
         hqb var13 = null;
         int var8 = 0;
         int var9 = 0;
@@ -55,7 +55,7 @@ final class sn extends os implements UiActionListener {
           var10 = param6;
           if (param3 != 71) {
             Camera2D var12 = (Camera2D) null;
-            sn.a(64, (byte) -32, -119, -6, 29, 12, (Camera2D) null);
+            AccountCreationDialog.drawWorldArrow(64, (byte) -32, -119, -6, 29, 12, (Camera2D) null);
           }
           var11 = param1;
           var13.field_i.layoutPopup(var8, -29060, var9, var10, var11);
@@ -64,69 +64,69 @@ final class sn extends os implements UiActionListener {
         }
     }
 
-    private final void a(boolean param0, boolean param1, tpa param2) {
+    private final void showAccountResult(boolean param0, boolean param1, AccountRequestResult param2) {
         RuntimeException stackIn_33_0 = null;
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         String var4 = null;
         RuntimeException var4_ref = null;
-        nna var5 = null;
+        DialogMessagePanel var5 = null;
         int var6 = 0;
         ScrollPaneWidget var7 = null;
         var6 = VoidHunters.field_G;
         try {
-          this.field_Z = true;
-          if (param2.field_g) {
+          this.resultShown = true;
+          if (param2.success) {
             var4 = uj.field_c;
           } else {
-            if (null == param2.field_e) {
-              var4 = param2.field_f;
-              if (param2.field_d == 248) {
+            if (null == param2.suggestedNames) {
+              var4 = param2.message;
+              if (param2.responseCode == 248) {
                 if (!param0) {
                   MapClearanceAreaFactory.b((byte) -75);
                 }
                 var4 = GetMissionTerrainAsteroidProbability.field_q;
-                this.field_ab = true;
+                this.ineligible = true;
               }
             } else {
               var4 = GetLaserReload.field_p;
-              if (null != this.field_X) {
-                this.field_X.a(1546);
+              if (null != this.creationForm) {
+                this.creationForm.invalidateNameAvailability(1546);
               }
             }
           }
-          var5 = new nna((os) (this), GetBoostersCooldown.field_r, var4);
-          if (param2.field_g) {
-            if (param2.field_c) {
-              this.b(new w(this), -99);
+          var5 = new DialogMessagePanel((AccountStatusDialog) (this), GetBoostersCooldown.field_r, var4);
+          if (param2.success) {
+            if (param2.under13) {
+              this.transitionToContent(new Under13AccountNoticePanel(this), -99);
               return;
             }
-            var5.a((byte) 107, tn.field_b, (UiListener) (this));
+            var5.addButton((byte) 107, tn.field_b, (UiListener) (this));
           } else {
-            if (this.field_ab) {
-              var5.a((byte) 98, tn.field_b, (UiListener) (this));
+            if (this.ineligible) {
+              var5.addButton((byte) 98, tn.field_b, (UiListener) (this));
             } else {
-              if (param2.field_d == 5) {
-                var5.a(-128, PhasedEnergyBeamWeaponDefinition.field_c, 11);
-                var5.a(-114, GetFighterBayAimspeed.field_q, 17);
+              if (param2.responseCode == 5) {
+                var5.addButton(-128, PhasedEnergyBeamWeaponDefinition.field_c, 11);
+                var5.addButton(-114, GetFighterBayAimspeed.field_q, 17);
               } else {
-                var5.a(-115, ArbProgram.field_a, -1);
+                var5.addButton(-115, ArbProgram.field_a, -1);
               }
             }
-            if (param2.field_d == 3) {
-              var5.a(-115, mab.field_h, 7);
+            if (param2.responseCode == 3) {
+              var5.addButton(-115, mab.field_h, 7);
             } else {
-              if (param2.field_d == 6) {
-                var5.a(-124, SoftwareTransform3D.field_c, 9);
+              if (param2.responseCode == 6) {
+                var5.addButton(-124, SoftwareTransform3D.field_c, 9);
               }
             }
           }
           if (param1) {
             var7 = (ScrollPaneWidget) null;
-            sn.a(-93, 7, (jk) null, (byte) 42, -22, (ScrollPaneWidget) null, 46);
+            AccountCreationDialog.showPlayerContextMenu(-93, 7, (jk) null, (byte) 42, -22, (ScrollPaneWidget) null, 46);
           }
-          this.b(var5, 99);
+          this.transitionToContent(var5, 99);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -142,45 +142,45 @@ final class sn extends os implements UiActionListener {
         }
     }
 
-    sn(ida param0, rq param1) {
+    AccountCreationDialog(ModalStack param0, AccountCreationForm param1) {
         super(param0, GetBoostersCooldown.field_r, CommonGameState.field_c, false, false);
         try {
-          this.field_X = param1;
+          this.creationForm = param1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sn.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final boolean a(int param0) {
-        tpa var2 = null;
-        tpa var2Lifetime1;
+    final boolean updateAndCheckClosed(int param0) {
+        AccountRequestResult var2 = null;
+        AccountRequestResult var2Lifetime1;
         if (param0 != 248) {
-          this.field_ab = false;
-          if (!this.field_z) {
-            return super.a(248);
+          this.ineligible = false;
+          if (!this.active) {
+            return super.updateAndCheckClosed(248);
           }
-          if (this.field_Z) {
-            return super.a(248);
+          if (this.resultShown) {
+            return super.updateAndCheckClosed(248);
           }
-          var2 = GetDebrisThrowable.a(10589);
+          var2 = GetDebrisThrowable.pollAccountCreationResult(10589);
           if (var2 != null) {
-            this.a(false, false, var2);
-            return super.a(248);
+            this.showAccountResult(false, false, var2);
+            return super.updateAndCheckClosed(248);
           }
-          return super.a(248);
+          return super.updateAndCheckClosed(248);
         }
-        if (!this.field_z) {
-          return super.a(248);
+        if (!this.active) {
+          return super.updateAndCheckClosed(248);
         }
-        if (this.field_Z) {
-          return super.a(248);
+        if (this.resultShown) {
+          return super.updateAndCheckClosed(248);
         }
-        var2Lifetime1 = GetDebrisThrowable.a(10589);
+        var2Lifetime1 = GetDebrisThrowable.pollAccountCreationResult(10589);
         if (var2Lifetime1 != null) {
-          this.a(false, false, var2Lifetime1);
-          return super.a(248);
+          this.showAccountResult(false, false, var2Lifetime1);
+          return super.updateAndCheckClosed(248);
         }
-        return super.a(248);
+        return super.updateAndCheckClosed(248);
     }
 
     static {

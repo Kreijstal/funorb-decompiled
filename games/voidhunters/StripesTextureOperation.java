@@ -51,12 +51,12 @@ final class StripesTextureOperation extends TextureOperation {
               }
               break;
             }
-            ArrayOperations.fill(var13, 0, hob.textureWidth, var5);
+            ArrayOperations.fill(var13, 0, TextHotspotRegion.textureWidth, var5);
             decompiledFrameRemainder0 = false;
           }
           else {
             var5Lifetime1 = 0;
-            while (!(hob.textureWidth <= var5Lifetime1)) {
+            while (!(TextHotspotRegion.textureWidth <= var5Lifetime1)) {
               var6Lifetime1 = 0;
               var7 = 0;
               var8 = BoxBlurTextureOperation.textureXCoordinates[var5Lifetime1];

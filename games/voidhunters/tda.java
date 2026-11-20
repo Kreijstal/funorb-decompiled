@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tda extends iw implements UiActionListener {
+final class tda extends ResizableModalPanel implements UiActionListener {
     static String field_O;
     private UiFocusableComponent field_P;
     private UiComponent field_J;
@@ -30,19 +30,19 @@ final class tda extends iw implements UiActionListener {
           } else {
             spb.a((byte) -95);
             this.l((byte) -98);
-            this.field_v.a(false, new mr(this.field_v, RemoveEventAction.field_a));
+            this.modalStack.pushPanel(false, new mr(this.modalStack, RemoveEventAction.field_a));
           }
-          if (this.field_z &&
+          if (this.active &&
             psb.field_b == null) {
             this.l((byte) -98);
-            this.field_v.a(false, new mr(this.field_v, AdminMessageFactory.field_a));
+            this.modalStack.pushPanel(false, new mr(this.modalStack, AdminMessageFactory.field_a));
           }
           if (psb.field_b != null) {
             if (!psb.field_b.focusLost) {
               return;
             }
             this.l((byte) -98);
-            this.field_v.a(false, new mr(this.field_v, AdminMessageFactory.field_a));
+            this.modalStack.pushPanel(false, new mr(this.modalStack, AdminMessageFactory.field_a));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -59,7 +59,7 @@ final class tda extends iw implements UiActionListener {
         }
     }
 
-    tda(ida param0) {
+    tda(ModalStack param0) {
         super(param0, 200, 200);
         UiComponent var3 = null;
         try {
@@ -215,13 +215,13 @@ final class tda extends iw implements UiActionListener {
     }
 
     private final void l(byte param0) {
-        if (!this.field_z) {
+        if (!this.active) {
           return;
         }
         if (param0 != -98) {
           return;
         }
-        this.field_z = false;
+        this.active = false;
     }
 
     static {

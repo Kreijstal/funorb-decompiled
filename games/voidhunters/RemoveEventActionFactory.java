@@ -14,10 +14,10 @@ final class RemoveEventActionFactory implements GameStateFactory {
     final static int b(byte param0) {
         int var1 = 8 % ((param0 - 63) / 33);
         if (!SetReloadBarWidth.isCachedFrameAvailable((byte) -89) ||
-          null == HighscoreTableRequest.field_h.g(0)) {
+          null == HighscoreTableRequest.field_h.getTopPanel(0)) {
           return -1;
         }
-        return HighscoreTableRequest.field_h.g(0).y;
+        return HighscoreTableRequest.field_h.getTopPanel(0).y;
     }
 
     public final SerializableGameState[] createArray(int param0, int param1) {

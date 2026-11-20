@@ -49,7 +49,7 @@ final class GetCountermeasureLauncherFireForce extends ConsoleCommand {
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
-            ida.writeReflectionCheckResponse(var1, (byte) 127);
+            ModalStack.writeReflectionCheckResponse(var1, (byte) 127);
             RequestNewestBlackboxRecording.field_p.writeLengthByte(var1.position - var2, -129);
           }
           return;

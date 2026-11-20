@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GameCanvasResizeListener implements CanvasResizeListener {
-    static oe field_a;
+    static ContentTransitionPhase field_a;
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 2) {
-          field_a = (oe) null;
+          field_a = (ContentTransitionPhase) null;
           field_a = null;
           return;
         }
@@ -85,6 +85,6 @@ final class GameCanvasResizeListener implements CanvasResizeListener {
     }
 
     static {
-        field_a = new oe();
+        field_a = new ContentTransitionPhase();
     }
 }

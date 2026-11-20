@@ -15,7 +15,7 @@ final class ClampTextureOperation extends TextureOperation {
         var3 = this.field_f.getRow((byte) -117, param0);
         if (this.field_f.field_e) {
           var4 = this.getInputMonochromeRow(0, param0, 255);
-          for (var5 = 0; var5 < hob.textureWidth; var5++) {
+          for (var5 = 0; var5 < TextHotspotRegion.textureWidth; var5++) {
             var6 = var4[var5];
             if (this.lowerBound > var6) {
               var3[var5] = this.lowerBound;
@@ -87,7 +87,7 @@ final class ClampTextureOperation extends TextureOperation {
           var33 = var27[2];
           var25 = var33;
           var10 = var25;
-          for (var11 = 0; hob.textureWidth > var11; var11++) {
+          for (var11 = 0; TextHotspotRegion.textureWidth > var11; var11++) {
             var12 = var39[var11];
             var13 = var40[var11];
             var14 = var41[var11];

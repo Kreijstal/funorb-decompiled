@@ -15,7 +15,7 @@ final class fk extends tb {
 
     final static int b(int param0) {
         int var1 = 95 % ((-69 - param0) / 48);
-        return GetLagStandardDeviationIn.field_r.i(-101);
+        return GetLagStandardDeviationIn.field_r.getMaximumPanelWidth(-101);
     }
 
     static {

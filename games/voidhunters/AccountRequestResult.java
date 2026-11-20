@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tpa {
+final class AccountRequestResult {
     static QuickChatDynamicCommand field_a;
-    String[] field_e;
-    int field_d;
-    boolean field_g;
-    boolean field_c;
+    String[] suggestedNames;
+    int responseCode;
+    boolean success;
+    boolean under13;
     static int field_b;
-    String field_f;
+    String message;
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 2) {
-          tpa.clearSharedReferences(-52);
+          AccountRequestResult.clearSharedReferences(-52);
           field_a = null;
           return;
         }
         field_a = null;
     }
 
-    tpa(boolean param0) {
-        this.field_g = param0 ? true : false;
+    AccountRequestResult(boolean param0) {
+        this.success = param0 ? true : false;
     }
 
     static {

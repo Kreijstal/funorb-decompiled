@@ -56,7 +56,7 @@ final class SetMessageFadetime extends ConsoleCommand {
           RemoveEventActionFactory.field_b = false;
           vu.field_xb = false;
           if (SetPointDefenceLaserAimarc.field_o != null &&
-            SetPointDefenceLaserAimarc.field_o.field_z) {
+            SetPointDefenceLaserAimarc.field_o.active) {
             var3_int = 1;
             if (param2 == 8) {
               if (!OpenGlSprite.field_c) {
@@ -78,7 +78,7 @@ final class SetMessageFadetime extends ConsoleCommand {
               if (kmb.field_c) {
                 param0 = bbb.field_a;
               }
-              SetPointDefenceLaserAimarc.field_o.a(true, param0, param2);
+              SetPointDefenceLaserAimarc.field_o.showStatusMessage(true, param0, param2);
             }
             if (param2 != 256 &&
               param2 != 10 &&

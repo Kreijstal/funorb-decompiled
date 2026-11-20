@@ -46,7 +46,7 @@ final class CellularNoiseTextureOperation extends TextureOperation {
         this.cellOffsets = new short[512];
         if (this.jitterRange > 0) {
           for (var3 = 0; 512 > var3; var3++) {
-            this.cellOffsets[var3] = (short)hob.a(var5, this.jitterRange, 120);
+            this.cellOffsets[var3] = (short)TextHotspotRegion.randomBoundedInt(var5, this.jitterRange, 120);
           }
         }
     }
@@ -154,7 +154,7 @@ final class CellularNoiseTextureOperation extends TextureOperation {
           var4 = 2048 + SetSalvoUsesAllEnergy.textureYCoordinates[param0] * this.verticalFrequency;
           var5 = var4 >> 12;
           var6 = var5 + 1;
-          for (var14 = 0; hob.textureWidth > var14; var14++) {
+          for (var14 = 0; TextHotspotRegion.textureWidth > var14; var14++) {
             SoftwareDepthBuffer.field_b = 2147483647;
             qd.field_b = 2147483647;
             SetSalvoRepairTimeMultiplier.field_q = 2147483647;

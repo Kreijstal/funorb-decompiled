@@ -88,7 +88,7 @@ final class ColorizeTextureOperation extends TextureOperation {
           var8 = var23[0];
           var9 = var23[1];
           var10 = var23[2];
-          for (var11 = 0; hob.textureWidth > var11; var11++) {
+          for (var11 = 0; TextHotspotRegion.textureWidth > var11; var11++) {
             var12 = var37[var11];
             var13 = var38[var11];
             var14 = var39[var11];
@@ -123,7 +123,7 @@ final class ColorizeTextureOperation extends TextureOperation {
         var8Lifetime1 = var23Lifetime1[0];
         var9Lifetime1 = var23Lifetime1[1];
         var10Lifetime1 = var23Lifetime1[2];
-        for (var11Lifetime1 = 0; hob.textureWidth > var11Lifetime1; var11Lifetime1++) {
+        for (var11Lifetime1 = 0; TextHotspotRegion.textureWidth > var11Lifetime1; var11Lifetime1++) {
           var12Lifetime1 = var28[var11Lifetime1];
           var13Lifetime1 = var29[var11Lifetime1];
           var14Lifetime1 = var30[var11Lifetime1];

@@ -251,17 +251,17 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           if (param2 >= -65) {
             field_o = (String[]) null;
           }
-          if (param1 != hob.textureWidth) {
+          if (param1 != TextHotspotRegion.textureWidth) {
             BoxBlurTextureOperation.textureXCoordinates = new int[param1];
             for (var3_int = 0; var3_int < param1; var3_int++) {
               BoxBlurTextureOperation.textureXCoordinates[var3_int] = (var3_int << 12) / param1;
             }
             SetMassDriverEnergyUsed.field_q = param1 - 1;
-            tpa.field_b = 32 * param1;
-            hob.textureWidth = param1;
+            AccountRequestResult.field_b = 32 * param1;
+            TextHotspotRegion.textureWidth = param1;
           }
           if (param0 != GetTorpedoReload.field_o) {
-            if (hob.textureWidth == param0) {
+            if (TextHotspotRegion.textureWidth == param0) {
               SetSalvoUsesAllEnergy.textureYCoordinates = BoxBlurTextureOperation.textureXCoordinates;
             } else {
               SetSalvoUsesAllEnergy.textureYCoordinates = new int[param0];

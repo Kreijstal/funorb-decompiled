@@ -32,7 +32,7 @@ final class PolarDisplacementTextureOperation extends TextureOperation {
           var6 = var23[0];
           var7 = var23[1];
           var8 = var23[2];
-          for (var9 = 0; hob.textureWidth > var9; var9++) {
+          for (var9 = 0; TextHotspotRegion.textureWidth > var9; var9++) {
             var10 = var30[var9] * 255 >> 12 & 255;
             var11 = this.displacementScale * var31[var9] >> 12;
             var12 = GetBombletSprayProjectiles.field_q[var10] * var11 >> 12;
@@ -225,7 +225,7 @@ final class PolarDisplacementTextureOperation extends TextureOperation {
         if (this.field_f.field_e) {
           var25 = this.getInputMonochromeRow(1, param0, 255);
           var26 = this.getInputMonochromeRow(2, param0, 255);
-          for (var6 = 0; var6 < hob.textureWidth; var6++) {
+          for (var6 = 0; var6 < TextHotspotRegion.textureWidth; var6++) {
             var7 = (4084 & var25[var6]) >> 4;
             var8 = var26[var6] * this.displacementScale >> 12;
             var9 = var8 * GetBombletSprayProjectiles.field_q[var7] >> 12;

@@ -43,9 +43,9 @@ final class IsaacCipher {
           stackIn_5_0 = vra.field_b.scrollPane;
           stackIn_5_1 = 38;
           stackIn_5_2 = 2;
-          stackIn_5_3 = param1 * (2 + nna.field_w) * 3;
+          stackIn_5_3 = param1 * (2 + DialogMessagePanel.field_w) * 3;
           stackIn_6_4 = (qg.field_a == vra.field_b.scrollPane);
-          var3_int = ((ScrollPaneWidget) (Object) stackIn_5_0).layoutAndUpdateScrolling((byte) stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, param2, 2 + nna.field_w) ? 1 : 0;
+          var3_int = ((ScrollPaneWidget) (Object) stackIn_5_0).layoutAndUpdateScrolling((byte) stackIn_5_1, stackIn_5_2, stackIn_5_3, stackIn_6_4, param2, 2 + DialogMessagePanel.field_w) ? 1 : 0;
           var4 = vra.field_b.content.children;
           if (iwa.field_b != 2 &&
             1 != iwa.field_b) {
@@ -69,14 +69,14 @@ final class IsaacCipher {
               var6.inheritInteractionStateInDescendants(127);
             }
             var6.width = vra.field_b.content.width;
-            var6.field_wb.setBounds(0, -55, var6.width, 0, nna.field_w);
+            var6.field_wb.setBounds(0, -55, var6.width, 0, DialogMessagePanel.field_w);
             var8 = 0;
             if (null != var6.field_vb &&
               !var6.field_vb.equals("")) {
               var6.field_Bb.field_tb = SetMissileLauncherRandomness.field_o;
               var6.field_Bb.field_qb = 16737894;
               var8 = 1;
-              var6.field_Bb.setBounds(0, -87, SetMissileLauncherRandomness.field_o.paddedWidth + 3, 0, nna.field_w);
+              var6.field_Bb.setBounds(0, -87, SetMissileLauncherRandomness.field_o.paddedWidth + 3, 0, DialogMessagePanel.field_w);
             }
             var9 = 0;
             var10 = var6.width;
@@ -93,9 +93,9 @@ final class IsaacCipher {
             stackIn_22_0.text = stackIn_23_1;
             stackIn_26_0 = (var6.field_wb.text.equals(var6.field_Fb)) ? 0 : 1;
             var11 = stackIn_26_0;
-            var6.field_wb.setBounds(var9, 117, var10, 0, nna.field_w);
+            var6.field_wb.setBounds(var9, 117, var10, 0, DialogMessagePanel.field_w);
             if (var3_int == 0) {
-              var6.field_E = -var6.height + nna.field_w;
+              var6.field_E = -var6.height + DialogMessagePanel.field_w;
             }
             if (var7 != 0) {
               vra.field_b.content.positionBelow((Widget) (var5), 2, var6, -113);

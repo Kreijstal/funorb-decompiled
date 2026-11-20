@@ -77,7 +77,7 @@ final class WaveformTextureOperation extends TextureOperation {
         if (this.field_f.field_e) {
           var4 = SetSalvoUsesAllEnergy.textureYCoordinates[param0];
           var5 = var4 - 2048 >> 1;
-          for (var6 = 0; var6 < hob.textureWidth; var6++) {
+          for (var6 = 0; var6 < TextHotspotRegion.textureWidth; var6++) {
             var8 = BoxBlurTextureOperation.textureXCoordinates[var6];
             var9 = var8 - 2048 >> 1;
             if (this.phaseMode == 0) {

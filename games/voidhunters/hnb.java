@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hnb extends iw implements UiActionListener {
+final class hnb extends ResizableModalPanel implements UiActionListener {
     static Sprite[] field_U;
     private boolean field_M;
     static Widget field_X;
@@ -47,7 +47,7 @@ final class hnb extends iw implements UiActionListener {
           if (!this.field_J &&
             !GetPhasedEnergyBeamPulsetime.e((byte) 124)) {
             this.l((byte) -118);
-            this.field_v.a(false, new hnb(this.field_v));
+            this.modalStack.pushPanel(false, new hnb(this.modalStack));
           }
           if (param2 != -981) {
             field_U = (Sprite[]) null;
@@ -131,16 +131,16 @@ final class hnb extends iw implements UiActionListener {
     }
 
     private final void l(byte param0) {
-        if (!this.field_z) {
+        if (!this.active) {
           return;
         }
         if (param0 >= -20) {
           return;
         }
-        this.field_z = false;
+        this.active = false;
     }
 
-    hnb(ida param0) {
+    hnb(ModalStack param0) {
         super(param0, 430, 254);
         int incrementValue$0 = 0;
         int var7_int = 0;
@@ -439,11 +439,11 @@ final class hnb extends iw implements UiActionListener {
                   if (var6_int == 0 &&
                     this.field_L == param3) {
                     if (!this.field_K) {
-                      this.field_v.a(false, new mr(this.field_v, ComponentAttachmentPlan.field_a));
+                      this.modalStack.pushPanel(false, new mr(this.modalStack, ComponentAttachmentPlan.field_a));
                       return;
                     }
                     if (GetDebrisCarryOver.field_o <= 0) {
-                      this.field_v.a(false, new qh(this.field_v));
+                      this.modalStack.pushPanel(false, new qh(this.modalStack));
                       return;
                     }
                     this.a(true, param3);
@@ -685,10 +685,10 @@ final class hnb extends iw implements UiActionListener {
                   MissionConditionFactory.field_b.setFullscreenSize(this.field_N[var2].height, 480, this.field_N[var2].width);
                 }
                 SetReadyRoomMutatorTime.a(2, true);
-                this.field_v.a(false, new tda(this.field_v));
+                this.modalStack.pushPanel(false, new tda(this.modalStack));
               } else {
                 SetReadyRoomMutatorTime.a(2, true);
-                this.field_v.a(false, new tda(this.field_v));
+                this.modalStack.pushPanel(false, new tda(this.modalStack));
               }
             }
           }

@@ -197,8 +197,8 @@ final class World implements DiffableState, CompactGameState {
           var11 = param1;
           var12 = param8;
           if (param6 > 0) {
-            var11 = var11 + (-param6 + hob.a(GetFogOfWarSensorRange.field_o, param6 << 1, 126));
-            var12 = var12 + (-param6 + hob.a(GetFogOfWarSensorRange.field_o, param6 << 1, 116));
+            var11 = var11 + (-param6 + TextHotspotRegion.randomBoundedInt(GetFogOfWarSensorRange.field_o, param6 << 1, 126));
+            var12 = var12 + (-param6 + TextHotspotRegion.randomBoundedInt(GetFogOfWarSensorRange.field_o, param6 << 1, 116));
           }
           this.a(param2, param5, var11, -19079, GetPedrosRepairMode.field_q, var12, param7, param3);
           var10++;
@@ -736,8 +736,8 @@ final class World implements DiffableState, CompactGameState {
           var18 = 1;
           var19 = 0;
           while (var19 < param5) {
-            var20 = hob.a(GetFogOfWarSensorRange.field_o, var14Lifetime1, 126) + var10_int;
-            var21 = hob.a(GetFogOfWarSensorRange.field_o, var15Lifetime1, 125) + var12;
+            var20 = TextHotspotRegion.randomBoundedInt(GetFogOfWarSensorRange.field_o, var14Lifetime1, 126) + var10_int;
+            var21 = TextHotspotRegion.randomBoundedInt(GetFogOfWarSensorRange.field_o, var15Lifetime1, 125) + var12;
             if (fra.a(param7, var21, 2, var20)) {
               var22 = 0;
               var23 = 0;
@@ -748,11 +748,11 @@ final class World implements DiffableState, CompactGameState {
                 if (1 > var26) {
                   var26 = 1;
                 }
-                var27 = hob.a(GetFogOfWarSensorRange.field_o, param4 >> 1, 117) + (param4 >> 1);
+                var27 = TextHotspotRegion.randomBoundedInt(GetFogOfWarSensorRange.field_o, param4 >> 1, 117) + (param4 >> 1);
                 var23 = var23 + var27 * (-var17 + var21) / var26;
                 var22 = var22 + var27 * (-var16Lifetime1 + var20) / var26;
               }
-              var24Lifetime1 = hob.a(GetFogOfWarSensorRange.field_o, param2, 117) + (param2 >> 1);
+              var24Lifetime1 = TextHotspotRegion.randomBoundedInt(GetFogOfWarSensorRange.field_o, param2, 117) + (param2 >> 1);
               var25Lifetime1 = GetPedrosRepairMode.field_q;
               if (var18 != 0) {
                 var22 = var22 >> 2;
@@ -942,7 +942,7 @@ final class World implements DiffableState, CompactGameState {
             var4 = 1;
             System.out.println("Ship[] ships has changed. ");
           }
-          if (SetCountermeasureLauncherAimspeed.a(hob.a(var5.projectiles, 210377952), false, 1, hob.a(this.projectiles, 210377952), 123)) {
+          if (SetCountermeasureLauncherAimspeed.a(TextHotspotRegion.dequeToStateArray(var5.projectiles, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.projectiles, 210377952), 123)) {
             System.out.println("linklist projectiles has changed. ");
             var4 = 1;
           }
@@ -963,7 +963,7 @@ final class World implements DiffableState, CompactGameState {
             null != this.asteroidField &&
             !this.asteroidField.differsFrom((byte) -90, var5.asteroidField)) {
           }
-          if (SetCountermeasureLauncherAimspeed.a(hob.a(var5.spawnPoints, 210377952), false, 1, hob.a(this.spawnPoints, 210377952), 118)) {
+          if (SetCountermeasureLauncherAimspeed.a(TextHotspotRegion.dequeToStateArray(var5.spawnPoints, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.spawnPoints, 210377952), 118)) {
             var4 = 1;
             System.out.println("linklist spawn_points has changed. ");
           }
@@ -1599,7 +1599,7 @@ final class World implements DiffableState, CompactGameState {
           }
           if (var14Lifetime1 > OpenGlGpuTexture.field_g) {
             var15 = null;
-            var16 = hob.a(GetFogOfWarSensorRange.field_o, var14Lifetime1, 123);
+            var16 = TextHotspotRegion.randomBoundedInt(GetFogOfWarSensorRange.field_o, var14Lifetime1, 123);
             var17 = 0;
             var18_int = 0;
             while (true) {
@@ -2523,7 +2523,7 @@ final class World implements DiffableState, CompactGameState {
               var13 = var7;
               var14 = var8;
               var29.setPosition(var13, var14, (byte) 108);
-              var29.setAngle(hob.a(var28, 8192, 122), -103);
+              var29.setAngle(TextHotspotRegion.randomBoundedInt(var28, 8192, 122), -103);
               var29.integrateMotion(false, true, this);
               var15 = 1;
               var30 = this.ships;
@@ -2839,13 +2839,13 @@ final class World implements DiffableState, CompactGameState {
                                                                                       break;
                                                                                     case 57:
                                                                                       var72 = new Random((long)(var7 * var8));
-                                                                                      var73 = t.a(hob.a(var72, 12, 126) + 0, (byte) 42);
+                                                                                      var73 = t.a(TextHotspotRegion.randomBoundedInt(var72, 12, 126) + 0, (byte) 42);
                                                                                       var73.setAi(new ShipAI(), 4);
                                                                                       var73.setTeam(17704, sja.field_c);
                                                                                       var12 = var7;
                                                                                       var13 = var8;
                                                                                       var73.setPosition(var12, var13, (byte) 52);
-                                                                                      var73.setAngle(hob.a(var72, 8192, 118), -82);
+                                                                                      var73.setAngle(TextHotspotRegion.randomBoundedInt(var72, 8192, 118), -82);
                                                                                       this.addShip(var73, (byte) 80);
                                                                                       break;
                                                                                     case 58:
@@ -2858,7 +2858,7 @@ final class World implements DiffableState, CompactGameState {
                                                                                       var14 = var7;
                                                                                       var15 = var8;
                                                                                       var70.setPosition(var14, var15, (byte) 100);
-                                                                                      var70.setAngle(hob.a(var71, 8192, 120), -51);
+                                                                                      var70.setAngle(TextHotspotRegion.randomBoundedInt(var71, 8192, 120), -51);
                                                                                       this.addShip(var70, (byte) 81);
                                                                                       break;
                                                                                     default:
@@ -2876,7 +2876,7 @@ final class World implements DiffableState, CompactGameState {
                                                                                             var63 = new ShipComponent(var10_int);
                                                                                             var65 = new Debris(var63, false);
                                                                                             var64 = new Random((long)var7);
-                                                                                            var65.setAngle(hob.a(var64, 8192, 121), -95);
+                                                                                            var65.setAngle(TextHotspotRegion.randomBoundedInt(var64, 8192, 121), -95);
                                                                                             var65.setPosition(var7, var8, (byte) -62);
                                                                                             this.addDebris(var65, (byte) 54);
                                                                                           }
@@ -2898,7 +2898,7 @@ final class World implements DiffableState, CompactGameState {
                                                                                       break;
                                                                                     case 56:
                                                                                       var60 = new Random((long)(var7 * var8));
-                                                                                      var11_int = hob.a(var60, 5, 123);
+                                                                                      var11_int = TextHotspotRegion.randomBoundedInt(var60, 5, 123);
                                                                                       var61 = new Message(var11_int, 0, 0);
                                                                                       param3.addMessage(var61, true);
                                                                                       break;
@@ -3812,7 +3812,7 @@ final class World implements DiffableState, CompactGameState {
           var4 = 33 % ((22 - param0) / 59);
           var5 = (World) (param1);
           if (!SetCountermeasureLauncherAimspeed.a(var5.ships, false, 1, this.ships, 126) &&
-            !SetCountermeasureLauncherAimspeed.a(hob.a(var5.projectiles, 210377952), false, 1, hob.a(this.projectiles, 210377952), -79) &&
+            !SetCountermeasureLauncherAimspeed.a(TextHotspotRegion.dequeToStateArray(var5.projectiles, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.projectiles, 210377952), -79) &&
             !SetCountermeasureLauncherAimspeed.a(var5.debris, false, 1, this.debris, 117)) {
             stackIn_7_0 = (this.asteroidField != null) ? 0 : 1;
             stackIn_10_0 = stackIn_7_0;
@@ -3824,7 +3824,7 @@ final class World implements DiffableState, CompactGameState {
               stackIn_11_1 = 1;
             }
             if ((stackIn_11_0 ^ stackIn_11_1) == 0 && (null == this.asteroidField ||
-              !this.asteroidField.differsFrom((byte) -65, var5.asteroidField)) && (!SetCountermeasureLauncherAimspeed.a(hob.a(var5.spawnPoints, 210377952), false, 1, hob.a(this.spawnPoints, 210377952), -93) &&
+              !this.asteroidField.differsFrom((byte) -65, var5.asteroidField)) && (!SetCountermeasureLauncherAimspeed.a(TextHotspotRegion.dequeToStateArray(var5.spawnPoints, 210377952), false, 1, TextHotspotRegion.dequeToStateArray(this.spawnPoints, 210377952), -93) &&
               !SetCountermeasureLauncherAimspeed.a(var5.grapplingHooks, false, 1, this.grapplingHooks, 122) &&
               !SetBlueprintSaveTime.a(var5.respawntimers, this.respawntimers, (byte) 28))) {
               stackIn_22_0 = (var5.debug) ? 0 : 1;
@@ -4007,8 +4007,8 @@ final class World implements DiffableState, CompactGameState {
           if (var15 >= 100) {
             return var10;
           }
-          var16 = hob.a(GetFogOfWarSensorRange.field_o, -var11 + var12, 124) + var11;
-          var17 = hob.a(GetFogOfWarSensorRange.field_o, -var13 + var14, 123) + var13;
+          var16 = TextHotspotRegion.randomBoundedInt(GetFogOfWarSensorRange.field_o, -var11 + var12, 124) + var11;
+          var17 = TextHotspotRegion.randomBoundedInt(GetFogOfWarSensorRange.field_o, -var13 + var14, 123) + var13;
           var18 = 1;
           var19_ref_crb__ = var9;
           var20_int = 0;
@@ -4213,11 +4213,11 @@ final class World implements DiffableState, CompactGameState {
                             var17 = param2[var5_int].carriedOverComponents[var25];
                             var18 = new ShipComponent(var17);
                             var19 = new Debris(var18, false);
-                            var20 = hob.a(GetFogOfWarSensorRange.field_o, 8192, 122);
+                            var20 = TextHotspotRegion.randomBoundedInt(GetFogOfWarSensorRange.field_o, 8192, 122);
                             var21 = (GetNumStars.cosAngle(var20, (byte) -115) >> 8) * (var15 >> 8);
                             var22 = (TextureLineShape.sinAngle(var20, 107) >> 8) * (var15 >> 8);
                             var19.setPosition(var11_ref.getX(false) + var21, var11_ref.getY((byte) 118) + var22, (byte) -70);
-                            var19.setAngle(hob.a(GetFogOfWarSensorRange.field_o, 8192, 124), -66);
+                            var19.setAngle(TextHotspotRegion.randomBoundedInt(GetFogOfWarSensorRange.field_o, 8192, 124), -66);
                             this.addDebris(var19, (byte) 90);
                           }
                           var25++;
@@ -4402,7 +4402,7 @@ final class World implements DiffableState, CompactGameState {
           }
           var14 = param0;
           var3Lifetime1 = var14;
-          var13 = hob.a(this.projectiles, 210377952);
+          var13 = TextHotspotRegion.dequeToStateArray(this.projectiles, 210377952);
           var4_array = var13;
           if (null != var4_array) {
             stackIn_25_0 = var13.length;
@@ -4456,7 +4456,7 @@ final class World implements DiffableState, CompactGameState {
           }
           var19 = param0;
           var3Lifetime3 = var19;
-          var18 = hob.a(this.spawnPoints, 210377952);
+          var18 = TextHotspotRegion.dequeToStateArray(this.spawnPoints, 210377952);
           var4_arrayLifetime1 = var18;
           if (null == var4_arrayLifetime1) {
             stackIn_67_0 = 0;
@@ -4889,7 +4889,7 @@ final class World implements DiffableState, CompactGameState {
               var8_int = var16.getOwner((byte) -117);
               if ((var8_int == -1 ||
                 null != var16.getAi((byte) -108)) && !var16.hasVisibilityFlag(2, (byte) -103)) {
-                var9 = qpb.a(false, var16.getTeam((byte) 92), 13894143);
+                var9 = AlphaContainer.getTeamColor(false, var16.getTeam((byte) 92), 13894143);
                 var16.chassis.drawTrailsAndGrapples(0, var9, this, param0);
                 this.a(var16, param0, 97);
               }
@@ -7498,7 +7498,7 @@ final class World implements DiffableState, CompactGameState {
             var13 = this.findSpawnLocation(0, var12, 0, 0, param3, var11);
             var8 = var13.y;
             var7_int = var13.x;
-            param5.setAngle(hob.a(GetFogOfWarSensorRange.field_o, 8192, 117), -29);
+            param5.setAngle(TextHotspotRegion.randomBoundedInt(GetFogOfWarSensorRange.field_o, 8192, 117), -29);
           }
           param5.setPosition(var7_int, var8, (byte) 65);
           param5.dx = 0;
@@ -7679,7 +7679,7 @@ final class World implements DiffableState, CompactGameState {
           }
           var14 = param0;
           var3Lifetime1 = var14;
-          var13 = hob.a(this.projectiles, 210377952);
+          var13 = TextHotspotRegion.dequeToStateArray(this.projectiles, 210377952);
           var4_array = var13;
           if (null == var4_array) {
             stackIn_23_0 = 0;
@@ -7736,7 +7736,7 @@ final class World implements DiffableState, CompactGameState {
           }
           var21 = param0;
           var3Lifetime3 = var21;
-          var20 = hob.a(this.spawnPoints, 210377952);
+          var20 = TextHotspotRegion.dequeToStateArray(this.spawnPoints, 210377952);
           var4_arrayLifetime1 = var20;
           if (null == var4_arrayLifetime1) {
             stackIn_67_0 = 0;
@@ -8124,7 +8124,7 @@ final class World implements DiffableState, CompactGameState {
               var11 = (int)(param1.worldCenterY + (float)var6 * 1.0f * (float)var9 / 65536.0f);
               var12 = param1.worldToScreenX(var10, (byte) 127);
               var13 = param1.worldToScreenY(true, var11);
-              var14 = qpb.a(false, param0.getTeam((byte) 88), 13894143);
+              var14 = AlphaContainer.getTeamColor(false, param0.getTeam((byte) 88), 13894143);
               GetPhasedEnergyBeamReload.a(var13, var8, -109, var12, var14);
             }
             return;
@@ -8216,7 +8216,7 @@ final class World implements DiffableState, CompactGameState {
                 !var12.hasVisibilityFlag(2, (byte) 78)) {
                 var13 = var12.getOwner((byte) -117);
                 if (param8 == var13) {
-                  var14 = qpb.a(false, var12.getTeam((byte) 80), 13894143);
+                  var14 = AlphaContainer.getTeamColor(false, var12.getTeam((byte) 80), 13894143);
                   var12.chassis.drawTrailsAndGrapples(0, var14, this, param3);
                   if (param5 == var12 &&
                     param2 != null) {
@@ -8842,7 +8842,7 @@ final class World implements DiffableState, CompactGameState {
                 if (var11Lifetime1 == 0) {
                   var13Lifetime1 = 16711680;
                 } else {
-                  var13Lifetime1 = qpb.a(false, param3.getTeam((byte) 73), 13894143);
+                  var13Lifetime1 = AlphaContainer.getTeamColor(false, param3.getTeam((byte) 73), 13894143);
                 }
               }
               var9.draw(param7, var13Lifetime1, this, 16);

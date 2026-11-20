@@ -69,7 +69,7 @@ final class BricksTextureOperation extends TextureOperation {
           var16 = this.rowBoundaries[-1 + var7];
           if (this.mortarInset + var16 < var9 &&
             var15 - this.mortarInset > var9) {
-            for (var4 = 0; var4 < hob.textureWidth; var4++) {
+            for (var4 = 0; var4 < TextHotspotRegion.textureWidth; var4++) {
               var6 = 0;
               if (var12 == 0) {
                 stackIn_21_0 = -this.rowOffset;
@@ -102,7 +102,7 @@ final class BricksTextureOperation extends TextureOperation {
             }
           } else {
             var19Lifetime1 = var18;
-            ArrayOperations.fill(var19Lifetime1, 0, hob.textureWidth, 0);
+            ArrayOperations.fill(var19Lifetime1, 0, TextHotspotRegion.textureWidth, 0);
           }
         }
         return var3;
@@ -175,7 +175,7 @@ final class BricksTextureOperation extends TextureOperation {
         for (var5 = 0; var5 < this.rowCount; var5++) {
           if (var5 > 0) {
             var6 = this.brickHeight;
-            var7 = (-2048 + hob.a(var10, 4096, 123)) * this.heightRandomness >> 12;
+            var7 = (-2048 + TextHotspotRegion.randomBoundedInt(var10, 4096, 123)) * this.heightRandomness >> 12;
             var6 = var6 + (var7 * var4 >> 12);
             this.rowBoundaries[var5] = var6 + this.rowBoundaries[-1 + var5];
           }
@@ -183,11 +183,11 @@ final class BricksTextureOperation extends TextureOperation {
           for (var6Lifetime1 = 0; this.columnCount > var6Lifetime1; var6Lifetime1++) {
             if (var6Lifetime1 > 0) {
               var7Lifetime1 = this.brickWidth;
-              var8 = (hob.a(var10, 4096, param0 ^ -91) - 2048) * this.widthRandomness >> 12;
+              var8 = (TextHotspotRegion.randomBoundedInt(var10, 4096, param0 ^ -91) - 2048) * this.widthRandomness >> 12;
               var7Lifetime1 = var7Lifetime1 + (var8 * var3 >> 12);
               this.columnBoundaries[var5][var6Lifetime1] = this.columnBoundaries[var5][var6Lifetime1 - 1] + var7Lifetime1;
             }
-            this.brickValues[var5][var6Lifetime1] = this.brightnessRandomness > 0 ? -hob.a(var10, this.brightnessRandomness, 123) + 4096 : 4096;
+            this.brickValues[var5][var6Lifetime1] = this.brightnessRandomness > 0 ? -TextHotspotRegion.randomBoundedInt(var10, this.brightnessRandomness, 123) + 4096 : 4096;
           }
           this.columnBoundaries[var5][this.columnCount] = 4096;
         }

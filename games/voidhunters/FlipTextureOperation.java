@@ -38,9 +38,9 @@ final class FlipTextureOperation extends TextureOperation {
         } else {
           var4 = this.getInputMonochromeRow(0, !this.flipVertical ? param0 : -param0 + wf.textureHeightMask, 255);
           if (!this.flipHorizontal) {
-            ArrayOperations.copy(var4, 0, var7, 0, hob.textureWidth);
+            ArrayOperations.copy(var4, 0, var7, 0, TextHotspotRegion.textureWidth);
           } else {
-            for (var5 = 0; hob.textureWidth > var5; var5++) {
+            for (var5 = 0; TextHotspotRegion.textureWidth > var5; var5++) {
               var3[var5] = var4[SetMassDriverEnergyUsed.field_q - var5];
             }
           }
@@ -151,7 +151,7 @@ final class FlipTextureOperation extends TextureOperation {
           var9 = var21[1];
           var10 = var21[2];
           if (!this.flipHorizontal) {
-            for (var11 = 0; var11 < hob.textureWidth; var11++) {
+            for (var11 = 0; var11 < TextHotspotRegion.textureWidth; var11++) {
               var8[var11] = var22[var11];
               var9[var11] = var23[var11];
               var10[var11] = var24[var11];
@@ -159,7 +159,7 @@ final class FlipTextureOperation extends TextureOperation {
           } else {
             var14 = 0;
             var11 = var14;
-            while (hob.textureWidth > var14) {
+            while (TextHotspotRegion.textureWidth > var14) {
               var8[var14] = var5[-var14 + SetMassDriverEnergyUsed.field_q];
               var9[var14] = var6[SetMassDriverEnergyUsed.field_q - var14];
               var10[var14] = var7[SetMassDriverEnergyUsed.field_q - var14];

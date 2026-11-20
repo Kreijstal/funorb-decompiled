@@ -55,7 +55,7 @@ final class GetDebrisThrowable extends ConsoleCommand {
         }
     }
 
-    final static tpa a(int param0) {
+    final static AccountRequestResult pollAccountCreationResult(int param0) {
         if (SetCountermeasureLauncherAimspeed.field_r == kla.field_d) {
           throw new IllegalStateException();
         }

@@ -14,7 +14,7 @@ final class VerticalGradientTextureOperation extends TextureOperation {
           var4 = this.field_f.getRow((byte) 127, param0);
           var3 = var4;
           if (this.field_f.field_e) {
-            ArrayOperations.fill(var4, 0, hob.textureWidth, SetSalvoUsesAllEnergy.textureYCoordinates[param0]);
+            ArrayOperations.fill(var4, 0, TextHotspotRegion.textureWidth, SetSalvoUsesAllEnergy.textureYCoordinates[param0]);
             return var4;
           }
           return var4;
@@ -24,7 +24,7 @@ final class VerticalGradientTextureOperation extends TextureOperation {
         if (!this.field_f.field_e) {
           return var4Lifetime1;
         }
-        ArrayOperations.fill(var4Lifetime1, 0, hob.textureWidth, SetSalvoUsesAllEnergy.textureYCoordinates[param0]);
+        ArrayOperations.fill(var4Lifetime1, 0, TextHotspotRegion.textureWidth, SetSalvoUsesAllEnergy.textureYCoordinates[param0]);
         return var4Lifetime1;
     }
 

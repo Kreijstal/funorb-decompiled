@@ -14,10 +14,10 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
         RuntimeException var3 = null;
         try {
           if (SetPointDefenceLaserAimarc.field_o != null) {
-            SetPointDefenceLaserAimarc.field_o.l((byte) -106);
+            SetPointDefenceLaserAimarc.field_o.closeDialog((byte) -106);
           }
           SetAiFiringRangeUpshift.field_o = new vla(param1, param0, false, true, true);
-          GetMissionVariablesHudX.field_o.b(SetAiFiringRangeUpshift.field_o, -124);
+          GetMissionVariablesHudX.field_o.transitionToContent(SetAiFiringRangeUpshift.field_o, -124);
           if (param2 != 0) {
             SetDebrisFoundInPairs.a((String) null, (String) null, 35);
           }
@@ -177,7 +177,7 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
           var8 = -120 % ((-38 - param2) / 49);
           if (0 < param3.field_z &&
             param3.field_E != null) {
-            bl.d(false);
+            ModalPanel.d(false);
           }
           CarouselPlayerEvent.field_j = 0;
           var9 = 0;

@@ -11,7 +11,7 @@ final class GetMissionTerrainNebulaProbability extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0) {
+    final static void buildLogoGlowSprite(int param0) {
         Sprite var1 = null;
         Sprite var2 = null;
         int var3 = 0;
@@ -22,7 +22,7 @@ final class GetMissionTerrainNebulaProbability extends ConsoleCommand {
           bfb.e();
           SoftwareRasterizer2D.clear();
           SetSalvoaim.field_r = 0;
-          Transform3D.a((byte) 74);
+          Transform3D.renderLogoMeshes((byte) 74);
           var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
             var2.drawMask(-2, -2, 16777215);
@@ -42,7 +42,7 @@ final class GetMissionTerrainNebulaProbability extends ConsoleCommand {
     final static void a(String param0, byte param1) {
         try {
           if (param1 < 120) {
-            GetMissionTerrainNebulaProbability.a(94);
+            GetMissionTerrainNebulaProbability.buildLogoGlowSprite(94);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ls.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
