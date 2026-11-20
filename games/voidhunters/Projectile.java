@@ -146,7 +146,7 @@ final class Projectile extends MovingObject implements DiffableState {
                       var4 = 0;
                       var5 = -this.x + var16.x;
                       var6 = var16.y - this.y;
-                      if (TextLayout.approximateVectorLength(var5, (byte) 111, var6) < GetUseNiceTrails.field_p / 2 &&
+                      if (TextLayout.approximateVectorLength(var5, (byte) 111, var6) < GetUseNiceTrails.fogOfWarSensorRange / 2 &&
                         !param1.isBodyCenterInNebula(var16, param0 ^ 39)) {
                         var4 = 1;
                       }
@@ -284,7 +284,7 @@ final class Projectile extends MovingObject implements DiffableState {
             if (this.targetBody >= 0) {
               return;
             }
-            var5 = GetUseNiceTrails.field_p / 2 >> 8;
+            var5 = GetUseNiceTrails.fogOfWarSensorRange / 2 >> 8;
             for (var6 = 0; var6 < 8; var6++) {
               var7Lifetime1 = (int)((float)(var5 * (GetNumStars.cosAngle(this.life + var6 << 5, (byte) 33) >> 8)) * param1.scale) + var3_int;
               var8Lifetime1 = (int)((float)((TextureLineShape.sinAngle(this.life + var6 << 5, 62) >> 8) * var5) * param1.scale) + var4;

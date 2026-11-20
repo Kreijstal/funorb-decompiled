@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1423/1572 classes and 7098/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 149 opaque classes and 1117 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1423/1572 classes and 7123/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 149 opaque classes and 1092 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -92,6 +92,8 @@ All forty texture-operation factory products have descriptive class names, inclu
 `ComponentWordEncoder` and `ShipBlueprint.getEncodedBitLength` identify component-tree serialization and blueprint sizing. `GameSession` separates blueprint saving/status, component inspection, fog-of-war composition, Armageddon timing, special-order button aggregation, objective instructions, event messages and music-state selection. Menu labels/action IDs and the original fog/Armageddon settings have named fields. The original sentinel encoding, 192-byte save limit, timer comparisons, raster restoration, arithmetic and guarded side effects remain.
 
 `GraphicsToolkitSelector`, `GraphicsBackendOption`, `ToolkitCanvasContext` and `ToolkitViewState` expose renderer selection, native dependency loading and view restoration across toolkit replacement. `TimingGraph` retains the render/update duration rings. `UnderlinedLinkRenderer` names link drawing, while preset-ship factories, chat/cursor handling and special-order menu input have named helpers. `activatePendingSpecialOrder` identifies activation of an order staged by a click or shortcut. The existing fallback, timing, encryption, input and rendering behavior remains unchanged.
+
+`GameSession` now names every method. Its remaining entrypoints separate action input and submission, camera pan/follow/autozoom, ship visibility, minimap drawing, inspection guides, voting grids, scoreboard columns, respawn choices and round-status rendering. `World.isTeamRespawnEnabled` and `isTeamRespawnAllowed` distinguish the original custom-variable gate from phase/Armageddon eligibility. Existing trigger masks, neutral-team rules, random blueprint fallback, timers, guards and failure behavior remain intact.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

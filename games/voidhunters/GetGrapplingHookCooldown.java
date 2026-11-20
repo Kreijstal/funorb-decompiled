@@ -63,7 +63,7 @@ final class GetGrapplingHookCooldown extends ConsoleCommand {
           var13 = param0.getShips(1000);
           var5 = 2147483647;
           if (param3.getTeam((byte) 113) < 0) {
-            var5 = GetUseNiceTrails.field_p;
+            var5 = GetUseNiceTrails.fogOfWarSensorRange;
           }
           var6 = null;
           for (var7 = 0; var13.length > var7; var7++) {

@@ -914,7 +914,7 @@ final class TutorialController {
                 if (this.isHintCompleteAndHidden((byte) 11, 0) &&
                   this.isHintCompleteAndHidden((byte) 11, 1) &&
                   var14_int == 5) {
-                  var20_int = GetUseNiceTrails.field_p;
+                  var20_int = GetUseNiceTrails.fogOfWarSensorRange;
                   var21_ref_int__Lifetime1 = new int[]{param12.getX(false) - var20_int, -var20_int + param12.getX(false), param12.getY((byte) 127), param12.getY((byte) 124)};
                   if (param3.worldBounds[0] >= var21_ref_int__Lifetime1[0] &&
                     param3.worldBounds[1] <= var21_ref_int__Lifetime1[1] &&

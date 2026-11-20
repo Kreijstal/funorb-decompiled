@@ -377,7 +377,7 @@ final class MissionBuilder implements DiffableState {
             for (var13 = 0; 1000 > var13; var13++) {
               var10 = TextHotspotRegion.randomBoundedInt(param0, var4_int, 118) - var4_int / 2;
               var11 = -(var5 / 2) + TextHotspotRegion.randomBoundedInt(param0, var5, 122);
-              if (param2.a(var12 + GetUseNiceTrails.field_p, var11, false, var10)) {
+              if (param2.a(var12 + GetUseNiceTrails.fogOfWarSensorRange, var11, false, var10)) {
                 continue;
               }
               break;

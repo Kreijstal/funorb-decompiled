@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetUseNiceTrails extends ConsoleCommand {
-    static int field_p;
+    static int fogOfWarSensorRange;
     static int field_r;
     static String field_q;
     static ScrollBarWidget field_o;
@@ -47,7 +47,7 @@ final class GetUseNiceTrails extends ConsoleCommand {
     }
 
     static {
-        field_p = 524288;
+        fogOfWarSensorRange = 524288;
         field_q = "Enter name of player to delete from list";
     }
 }

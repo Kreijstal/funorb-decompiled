@@ -4123,7 +4123,7 @@ final class World implements DiffableState, CompactGameState {
             }
             if (var6 == 0) {
               var7 = param2[var5_int].selectedTeam;
-              if (this.a(var7, param3, -14368)) {
+              if (this.isTeamRespawnAllowed(var7, param3, -14368)) {
                 this.respawntimers[var5_int] = this.respawntimers[var5_int] + 1;
                 var8Lifetime1 = Particle.field_C;
                 if (param3.isPreGamePhase((byte) -59)) {
@@ -6256,7 +6256,7 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    final boolean a(int param0, MissionState param1, int param2) {
+    final boolean isTeamRespawnAllowed(int param0, MissionState param1, int param2) {
         int var4_int = 0;
         boolean stackIn_15_0 = false;
         RuntimeException stackIn_19_0 = null;
@@ -6282,7 +6282,7 @@ final class World implements DiffableState, CompactGameState {
               return false;
             }
           }
-          stackIn_15_0 = this.a(true, param0, param1);
+          stackIn_15_0 = this.isTeamRespawnEnabled(true, param0, param1);
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -9110,7 +9110,7 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    final boolean a(boolean param0, int param1, MissionState param2) {
+    final boolean isTeamRespawnEnabled(boolean param0, int param1, MissionState param2) {
         int var6 = 0;
         int var8 = 0;
         MissionState stackIn_7_0 = null;

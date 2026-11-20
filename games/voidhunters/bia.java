@@ -8,11 +8,11 @@ class bia extends tb {
     bia() {
     }
 
-    final static boolean a(boolean param0, byte param1, int param2) {
+    final static boolean isVoteOptionAvailable(boolean param0, byte param1, int param2) {
         if (param1 == -31) {
           return ArchiveIndexLoader.field_g.isVoteOptionAvailable(param2, 11, param0);
         }
-        bia.a(true, (byte) 77, 66);
+        bia.isVoteOptionAvailable(true, (byte) 77, 66);
         return ArchiveIndexLoader.field_g.isVoteOptionAvailable(param2, 11, param0);
     }
 

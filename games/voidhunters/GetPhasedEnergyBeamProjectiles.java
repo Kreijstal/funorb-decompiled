@@ -261,7 +261,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetPointDefenceLaserReload.field_q = param1[132];
           MenuBackgroundBattle.field_c = param1[139];
           ArmSelfDestructOrderDefinition.field_e = param1[122];
-          GetUseNiceTrails.field_p = param1[47];
+          GetUseNiceTrails.fogOfWarSensorRange = param1[47];
           GetMissileLauncherEnergyUsed.field_p = param1[52];
           GetPhysicsCollisionPhantomForceMultiplier.field_o = param1[213];
           SetSalvoRepairTimeMultiplier.field_p = param1[81];

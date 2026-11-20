@@ -310,8 +310,8 @@ final class ShipAI implements DiffableState {
           var6 = param0.angularvelocity;
           var7 = param0.chassis.collectWeapons(127, 0);
           var8 = this.computeCombatRange(GetPointDefenceLaserProjectileInterceptDamage.field_q, -18, var7);
-          if (var8 > GetUseNiceTrails.field_p) {
-            var8 = GetUseNiceTrails.field_p;
+          if (var8 > GetUseNiceTrails.fogOfWarSensorRange) {
+            var8 = GetUseNiceTrails.fogOfWarSensorRange;
           }
           if (param0.isFighter(false)) {
             var9_ref_Random = new Random((long)(param0.id * GetSniperCannonFireForce.field_o));
@@ -368,7 +368,7 @@ final class ShipAI implements DiffableState {
                 this.desiredAngularVelocity = GameKeyHandler.a(22433, var16 - param0.getAngle(param1 ^ -73)) << 8;
               }
             }
-            if (GetUseNiceTrails.field_p > var14) {
+            if (GetUseNiceTrails.fogOfWarSensorRange > var14) {
               param0.activateSpecialOrder(-73, 2, param2, var11, var10Lifetime1);
               param0.activateSpecialOrder(-126, 6, param2, var11, var10Lifetime1);
               if (!param0.getShieldsOn(31390)) {
