@@ -747,7 +747,7 @@ final class OpenGlModel extends Model3D {
               if (-1 == var15_intLifetime1) {
                 throw new RuntimeException();
               }
-              var16Lifetime1Lifetime1 = GetLagStandardDeviationIn.field_o[65535 & param1.field_b[var69.faceIndex]] & 16777215;
+              var16Lifetime1Lifetime1 = GetLagStandardDeviationIn.hslPalette[65535 & param1.field_b[var69.faceIndex]] & 16777215;
               stackIn_75_0 = var16Lifetime1Lifetime1;
               if (param1.field_r == null) {
                 stackIn_76_1 = 0;

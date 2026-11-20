@@ -406,7 +406,7 @@ final class MissionControl implements DiffableState {
 
     final void createEvent(int param0) {
         MissionEvent var2 = new MissionEvent();
-        this.events = (MissionEvent[]) (SoftwareSprite2D.a(var2, this.events, param0, GetExplosionPushMultiplier.field_o));
+        this.events = (MissionEvent[]) (SoftwareSprite2D.appendStateArrayValue(var2, this.events, param0, GetExplosionPushMultiplier.field_o));
         this.selectedEvent = -1 + this.events.length;
     }
 
@@ -553,7 +553,7 @@ final class MissionControl implements DiffableState {
 
     final void addEvent(int param0, MissionEvent param1) {
         try {
-          this.events = (MissionEvent[]) (SoftwareSprite2D.a(param1, this.events, param0, GetExplosionPushMultiplier.field_o));
+          this.events = (MissionEvent[]) (SoftwareSprite2D.appendStateArrayValue(param1, this.events, param0, GetExplosionPushMultiplier.field_o));
           this.rebuildReservedIds((byte) -111);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "una.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

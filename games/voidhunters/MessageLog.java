@@ -141,7 +141,7 @@ final class MessageLog implements DiffableState {
         RuntimeException var3 = null;
         try {
           param0.tick = IncrementVariableActionFactory.field_a;
-          this.messages = (Message[]) (SoftwareSprite2D.a(param0, this.messages, 0, UiTextStyle.field_e));
+          this.messages = (Message[]) (SoftwareSprite2D.appendStateArrayValue(param0, this.messages, 0, UiTextStyle.field_e));
           if (ConsoleSettingsScript.field_a < this.messages.length) {
             this.messages = (Message[]) (GetSalvoUsesAllEnergy.a(UiTextStyle.field_e, 0, 15667, this.messages));
           }

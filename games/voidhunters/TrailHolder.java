@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class TrailHolder implements DiffableState {
-    private int[] field_d;
+    private int[] sampleIntensities;
     private int[] field_f;
-    private int field_c;
+    private int sampleHead;
     private int[] field_b;
-    private int field_a;
-    private int field_g;
+    private int intensity;
+    private int sampleTicks;
     private int[] field_e;
 
     public final void copyTo(byte param0, SerializableGameState param1) {
@@ -17,13 +17,13 @@ final class TrailHolder implements DiffableState {
           var3.field_b = SetTeamSelectionSpeedup.copyIntsReusingArray(var3.field_b, (byte) -124, this.field_b);
           var3.field_f = SetTeamSelectionSpeedup.copyIntsReusingArray(var3.field_f, (byte) -105, this.field_f);
           var3.field_e = SetTeamSelectionSpeedup.copyIntsReusingArray(var3.field_e, (byte) -29, this.field_e);
-          var3.field_d = SetTeamSelectionSpeedup.copyIntsReusingArray(var3.field_d, (byte) -103, this.field_d);
+          var3.sampleIntensities = SetTeamSelectionSpeedup.copyIntsReusingArray(var3.sampleIntensities, (byte) -103, this.sampleIntensities);
           if (param0 <= 54) {
             this.field_b = (int[]) null;
           }
-          var3.field_a = this.field_a;
-          var3.field_g = this.field_g;
-          var3.field_c = this.field_c;
+          var3.intensity = this.intensity;
+          var3.sampleTicks = this.sampleTicks;
+          var3.sampleHead = this.sampleHead;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tbb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -32,25 +32,25 @@ final class TrailHolder implements DiffableState {
     public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 >= -109) {
-            this.field_g = -81;
+            this.sampleTicks = -81;
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tbb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(byte param0) {
+    final void updateTrail(byte param0) {
         SerializableGameState var3 = null;
         SerializableGameState var3Lifetime1;
-        this.field_a = this.field_a - 8;
-        this.field_g = this.field_g + 1;
-        if (this.field_a < 0) {
-          this.field_a = 0;
+        this.intensity = this.intensity - 8;
+        this.sampleTicks = this.sampleTicks + 1;
+        if (this.intensity < 0) {
+          this.intensity = 0;
         }
-        if (this.field_g > 4) {
-          this.field_c = (1 + this.field_c) % 64;
-          this.field_d[this.field_c] = 0;
-          this.field_g = 0;
+        if (this.sampleTicks > 4) {
+          this.sampleHead = (1 + this.sampleHead) % 64;
+          this.sampleIntensities[this.sampleHead] = 0;
+          this.sampleTicks = 0;
           if (param0 >= -123) {
             var3 = (SerializableGameState) null;
             this.copyTo((byte) -29, (SerializableGameState) null);
@@ -65,12 +65,12 @@ final class TrailHolder implements DiffableState {
         }
     }
 
-    final void a(byte param0, int param1) {
+    final void increaseIntensity(byte param0, int param1) {
         SerializableGameState var4 = null;
         SerializableGameState var4Lifetime1;
-        this.field_a = this.field_a + param1;
-        if (this.field_a > 255) {
-          this.field_a = 255;
+        this.intensity = this.intensity + param1;
+        if (this.intensity > 255) {
+          this.intensity = 255;
           if (param0 <= 93) {
             var4 = (SerializableGameState) null;
             this.reportDifferences((SerializableGameState) null, 104);
@@ -85,43 +85,43 @@ final class TrailHolder implements DiffableState {
         }
     }
 
-    final void a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
+    final void recordSample(int param0, int param1, byte param2, int param3, int param4, int param5, int param6) {
         int var8 = 0;
         int var8Lifetime1;
         if (param2 < -104) {
-          var8 = this.field_c << 1;
+          var8 = this.sampleHead << 1;
           this.field_b[var8] = param4;
           this.field_b[1 + var8] = param6;
           this.field_f[var8] = param1;
           this.field_f[1 + var8] = param0;
           this.field_e[var8] = param3;
           this.field_e[var8 + 1] = param5;
-          this.field_d[this.field_c] = this.field_a;
+          this.sampleIntensities[this.sampleHead] = this.intensity;
           return;
         }
         this.field_b = (int[]) null;
-        var8Lifetime1 = this.field_c << 1;
+        var8Lifetime1 = this.sampleHead << 1;
         this.field_b[var8Lifetime1] = param4;
         this.field_b[1 + var8Lifetime1] = param6;
         this.field_f[var8Lifetime1] = param1;
         this.field_f[1 + var8Lifetime1] = param0;
         this.field_e[var8Lifetime1] = param3;
         this.field_e[var8Lifetime1 + 1] = param5;
-        this.field_d[this.field_c] = this.field_a;
+        this.sampleIntensities[this.sampleHead] = this.intensity;
     }
 
-    final void a(Camera2D param0, int param1, int param2) {
+    final void drawTrail(Camera2D param0, int param1, int param2) {
         try {
           if (param1 != 1325107016) {
             this.field_f = (int[]) null;
           }
-          PointLight.a(param0, this.field_f, 6407, this.field_g, this.field_b, this.field_e, this.field_c, this.field_d, param2);
+          PointLight.a(param0, this.field_f, 6407, this.sampleTicks, this.field_b, this.field_e, this.sampleHead, this.sampleIntensities, param2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tbb.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static ChatMessage a(int param0, boolean param1) {
+    final static ChatMessage readChatMessage(int param0, boolean param1) {
         boolean stackIn_5_0 = false;
         int stackIn_11_0 = 0;
         int[] stackIn_26_0 = null;
@@ -219,13 +219,13 @@ final class TrailHolder implements DiffableState {
           this.field_f[var2] = 0;
           this.field_f[var2] = 0;
         }
-        for (var2Lifetime1 = 0; this.field_d.length > var2Lifetime1; var2Lifetime1++) {
-          this.field_d[var2Lifetime1] = 0;
+        for (var2Lifetime1 = 0; this.sampleIntensities.length > var2Lifetime1; var2Lifetime1++) {
+          this.sampleIntensities[var2Lifetime1] = 0;
         }
         var2Lifetime2 = 104 / ((37 - param0) / 55);
-        this.field_c = 0;
-        this.field_a = 0;
-        this.field_g = 0;
+        this.sampleHead = 0;
+        this.intensity = 0;
+        this.sampleTicks = 0;
     }
 
     final static void fillCaretPositions(BitmapFont param0, int param1, TextLayoutLine param2, String param3, int param4) {
@@ -246,7 +246,7 @@ final class TrailHolder implements DiffableState {
         var9 = VoidHunters.field_G;
         try {
           if (param4 != 18126) {
-            TrailHolder.a(-98, false);
+            TrailHolder.readChatMessage(-98, false);
           }
           var5_int = 0;
           var6 = -1;
@@ -321,7 +321,7 @@ final class TrailHolder implements DiffableState {
     public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         try {
           if (obfuscationGuard > -19) {
-            this.a(-95, 21, (byte) 84, 30, -19, 64, 55);
+            this.recordSample(-95, 21, (byte) 84, 30, -19, 64, 55);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tbb.F(" + (other != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
@@ -329,12 +329,12 @@ final class TrailHolder implements DiffableState {
     }
 
     TrailHolder() {
-        this.field_d = new int[64];
-        this.field_c = 0;
+        this.sampleIntensities = new int[64];
+        this.sampleHead = 0;
         this.field_f = new int[128];
         this.field_b = new int[128];
-        this.field_a = 0;
-        this.field_g = 0;
+        this.intensity = 0;
+        this.sampleTicks = 0;
         this.field_e = new int[128];
     }
 

@@ -57,14 +57,14 @@ final class GetFighterBayReload extends ConsoleCommand {
           PlayerGameData.a(-14677, param2, 0, param1, param2.length - 1);
           if (param0 != -24) {
             GameStateFactory var4 = (GameStateFactory) null;
-            GetFighterBayReload.a((Object[]) null, (Object) null, false, (GameStateFactory) null, 32);
+            GetFighterBayReload.appendStateArrayValue((Object[]) null, (Object) null, false, (GameStateFactory) null, 32);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kn.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static Object[] a(Object[] param0, Object param1, boolean param2, GameStateFactory param3, int param4) {
+    final static Object[] appendStateArrayValue(Object[] param0, Object param1, boolean param2, GameStateFactory param3, int param4) {
         RuntimeException var5 = null;
         Object[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -79,7 +79,7 @@ final class GetFighterBayReload extends ConsoleCommand {
           if (param4 >= -73) {
             GetFighterBayReload.clearSharedReferences(64);
           }
-          stackIn_3_0 = MapClearanceAreaFactory.a(param0, param1, param3, param2, false, 1);
+          stackIn_3_0 = MapClearanceAreaFactory.insertStateArrayValue(param0, param1, param3, param2, false, 1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

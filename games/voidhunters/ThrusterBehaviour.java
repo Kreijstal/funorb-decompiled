@@ -50,7 +50,7 @@ final class ThrusterBehaviour implements DiffableState {
             if (param0.getDebug((byte) -86)) {
               return;
             }
-            this.trail.a((byte) 98, 16);
+            this.trail.increaseIntensity((byte) 98, 16);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -347,7 +347,7 @@ final class ThrusterBehaviour implements DiffableState {
           if (this.trail == null) {
             return;
           }
-          this.trail.a(param2, 1325107016, param1);
+          this.trail.drawTrail(param2, 1325107016, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -454,8 +454,8 @@ final class ThrusterBehaviour implements DiffableState {
           if (BodyDestroyedConditionFactoryHolder.field_a &&
             null != this.trail &&
             !param8.getDebug((byte) 33)) {
-            this.trail.a((byte) -128);
-            this.trail.a(param5[3], param5[2], (byte) -125, param5[4], param5[2] + param5[4] >> 1, param5[5], param5[3] + param5[5] >> 1);
+            this.trail.updateTrail((byte) -128);
+            this.trail.recordSample(param5[3], param5[2], (byte) -125, param5[4], param5[2] + param5[4] >> 1, param5[5], param5[3] + param5[5] >> 1);
           }
           if (param4 == 46) {
             var10_int = CarouselPlayerEvent.specialOrderDefinitions[5].getCooldown((byte) 64);

@@ -387,7 +387,7 @@ final class GpuModel extends Model3D {
               if (var15_intLifetime1 == -1) {
                 throw new RuntimeException();
               }
-              var16Lifetime1Lifetime1 = 16777215 & GetLagStandardDeviationIn.field_o[param1.field_b[var69.faceIndex] & 65535];
+              var16Lifetime1Lifetime1 = 16777215 & GetLagStandardDeviationIn.hslPalette[param1.field_b[var69.faceIndex] & 65535];
               stackIn_63_0 = var16Lifetime1Lifetime1;
               if (param1.field_r == null) {
                 stackIn_64_1 = 0;

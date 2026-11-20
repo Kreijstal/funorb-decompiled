@@ -589,7 +589,7 @@ abstract class NetworkGameClient extends GameApplet {
                 }
                 stackIn_31_0 = 47;
                 stackIn_32_1 = (12 == var2);
-                var3 = TrailHolder.a(stackIn_31_0, stackIn_32_1);
+                var3 = TrailHolder.readChatMessage(stackIn_31_0, stackIn_32_1);
                 PlayerLeave.a((byte) 108, var3);
                 break;
               case 16:

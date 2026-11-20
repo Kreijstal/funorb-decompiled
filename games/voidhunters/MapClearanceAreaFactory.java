@@ -9,7 +9,7 @@ final class MapClearanceAreaFactory implements GameStateFactory {
         return null;
     }
 
-    final static Object[] a(Object[] param0, Object param1, GameStateFactory param2, boolean param3, boolean param4, int param5) {
+    final static Object[] insertStateArrayValue(Object[] param0, Object param1, GameStateFactory param2, boolean param3, boolean param4, int param5) {
         SerializableGameState[] stackIn_7_0 = null;
         Object[] stackIn_18_0 = null;
         SerializableGameState[] stackIn_36_0 = null;

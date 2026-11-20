@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetPhasedEnergyBeamRandomness extends ConsoleCommand {
-    static int field_p;
+    static int hslPaletteUsers;
     static int[] field_o;
 
     final static void a(int param0, int param1, int param2, int param3, int[] param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, int param13, int param14, int param15, int param16) {
@@ -376,6 +376,6 @@ final class SetPhasedEnergyBeamRandomness extends ConsoleCommand {
     }
 
     static {
-        field_p = 0;
+        hslPaletteUsers = 0;
     }
 }

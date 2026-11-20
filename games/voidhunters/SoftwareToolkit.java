@@ -1406,7 +1406,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
           }
           this.resizeCanvas(param0, param1, param2);
         } else {
-          var4 = ResourceNode.a(param1, true, param0, param2);
+          var4 = ResourceNode.createRasterBuffer(param1, true, param0, param2);
           this.field_t.put((long)param0.hashCode(), var4, (byte) -124);
         }
     }
@@ -1571,7 +1571,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
         RasterBuffer var6 = (RasterBuffer) (this.field_t.get((long)param0.hashCode(), 97));
         if (var6 != null) {
           var6.unlink(-3846);
-          var7 = ResourceNode.a(param1, true, param0, param2);
+          var7 = ResourceNode.createRasterBuffer(param1, true, param0, param2);
           this.field_t.put((long)param0.hashCode(), var7, (byte) -122);
           if (this.canvas == param0 &&
             this.framebuffer == null) {
@@ -1632,7 +1632,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
           discarded$0 = new SoftwareTransform3D();
           this.setThreadContextCount(1);
           this.bindThreadContext(0);
-          PasswordValidator.a(true, (byte) 33, true);
+          PasswordValidator.acquireColorPalettes(true, (byte) 33, true);
           this.field_B = true;
           this.field_E = (int)MonotonicMillisClock.currentTimeMillis(false);
         } catch (Throwable throwable) {

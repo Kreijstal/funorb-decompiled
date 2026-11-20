@@ -12,10 +12,10 @@ final class ResourceNode implements DiffableState {
     int x;
     int radius;
 
-    final void b(Camera2D param0, int param1) {
+    final void draw(Camera2D param0, int param1) {
         try {
           SetNumStars.drawCircle((float)this.radius * param0.scale, (byte) 55, param0.worldToScreenY(true, this.y), AlphaContainer.getTeamColor(false, this.team, 13894143), param0.worldToScreenX(this.x, (byte) 124));
-          this.a(param0, 8947848);
+          this.drawCaptureProgress(param0, 8947848);
           int var3_int = 97 % ((55 - param1) / 49);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rba.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -118,7 +118,7 @@ final class ResourceNode implements DiffableState {
         }
     }
 
-    final boolean a(int param0, byte param1, int param2) {
+    final boolean containsPoint(int param0, byte param1, int param2) {
         int var5 = 72 / ((8 - param1) / 57);
         int var4 = param0 - this.x;
         int var6 = param2 - this.y;
@@ -143,7 +143,7 @@ final class ResourceNode implements DiffableState {
         }
     }
 
-    private final void a(Camera2D param0, int param1) {
+    private final void drawCaptureProgress(Camera2D param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -185,7 +185,7 @@ final class ResourceNode implements DiffableState {
         }
     }
 
-    final static RasterBuffer a(int param0, boolean param1, java.awt.Canvas param2, int param3) {
+    final static RasterBuffer createRasterBuffer(int param0, boolean param1, java.awt.Canvas param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
@@ -204,7 +204,7 @@ final class ResourceNode implements DiffableState {
               var4 = Class.forName("BufferedImageRasterBuffer");
               if (!param1) {
                 var6 = (java.awt.Canvas) null;
-                ResourceNode.a(102, true, (java.awt.Canvas) null, -4);
+                ResourceNode.createRasterBuffer(102, true, (java.awt.Canvas) null, -4);
               }
               var5 = (RasterBuffer) (var4.newInstance());
               var5.initialize(4904, param0, param3, param2);

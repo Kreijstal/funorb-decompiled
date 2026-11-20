@@ -5,7 +5,7 @@ final class MatchResults implements DiffableState {
     private RoundResult[] results;
     static int field_b;
 
-    final int a(int param0, int param1) {
+    final int countResultsForWinner(int param0, int param1) {
         int var3;
         int var4;
         RoundResult var5;
@@ -127,7 +127,7 @@ final class MatchResults implements DiffableState {
         }
     }
 
-    final int a(int param0, byte param1) {
+    final int getTotalWinningTime(int param0, byte param1) {
         int var4 = 0;
         int var3;
         RoundResult var5;
@@ -152,12 +152,12 @@ final class MatchResults implements DiffableState {
         return 0;
     }
 
-    final void a(int param0, RoundResult param1) {
+    final void appendRoundResult(int param0, RoundResult param1) {
         try {
           if (param0 < 87) {
             field_b = 57;
           }
-          this.results = (RoundResult[]) (SoftwareSprite2D.a(param1, this.results, 0, LogoAnimationStatus.roundResultFactory));
+          this.results = (RoundResult[]) (SoftwareSprite2D.appendStateArrayValue(param1, this.results, 0, LogoAnimationStatus.roundResultFactory));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qqb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -175,7 +175,7 @@ final class MatchResults implements DiffableState {
         SettingsChange.field_f = null;
     }
 
-    final int a(boolean param0) {
+    final int resolveWinner(boolean param0) {
         int var2;
         int var3_int;
         int[] var3;
@@ -285,7 +285,7 @@ final class MatchResults implements DiffableState {
         try {
           if (obfuscationGuard > -19) {
             var5 = (RoundResult) null;
-            this.a(118, (RoundResult) null);
+            this.appendRoundResult(118, (RoundResult) null);
           }
           var3 = (MatchResults) (other);
           CarouselSlot.reportStateArrayDifferences(var3.results, 1, this.results, false, 5547);

@@ -21,7 +21,7 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
         SetUseBackground.field_o = ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true);
         java.awt.Dimension var9 = DateOfBirthInput.field_x.context.canvas.getSize();
         GetDebrisGroupColour.field_r.setClip(0, 0, var9.width, var9.height);
-        PasswordValidator.f(-10150);
+        PasswordValidator.rebuildGraphicsResources(-10150);
         if (param0 != -9934) {
           PcmStreamMixer var8 = (PcmStreamMixer) null;
           GetSpinningBladeSpindamageMultiplier.a((byte) 16, (ResourceArchive) null, -27, (PcmStreamMixer) null);

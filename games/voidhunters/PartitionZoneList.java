@@ -220,7 +220,7 @@ final class PartitionZoneList implements DiffableState, SpatialStateMarker {
         if (param0 <= 118) {
           this.revision = -59;
         }
-        this.zones = (PartitionZone[]) (MapClearanceAreaFactory.a(this.zones, var7, PartitionZoneFactoryHolder.partitionZoneFactory, true, true, 1));
+        this.zones = (PartitionZone[]) (MapClearanceAreaFactory.insertStateArrayValue(this.zones, var7, PartitionZoneFactoryHolder.partitionZoneFactory, true, true, 1));
         this.markChanged(125);
         return var7;
     }

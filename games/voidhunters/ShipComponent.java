@@ -389,7 +389,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             this.configureThrusterBindings((byte) 114, (ShipBody) null);
           }
           if (ArchiveLoadRequest.a((byte) -57, this.finaloutline, param1, param4, param2)) {
-            param3 = (ShipComponent[]) (SoftwareSprite2D.a(this, param3, 0, ArchiveTextureProvider.field_d));
+            param3 = (ShipComponent[]) (SoftwareSprite2D.appendStateArrayValue(this, param3, 0, ArchiveTextureProvider.field_d));
           }
           stackIn_11_0 = (ShipComponent[]) (param3);
           return stackIn_11_0;
@@ -2104,7 +2104,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           var3_int = -63 % ((param1 + 44) / 42);
           if (this.subcomponents != null) {
             for (var4 = 0; this.subcomponents.length > var4; var4++) {
-              param0 = (ShipComponent[]) (SoftwareSprite2D.a(this.subcomponents[var4], param0, 0, ArchiveTextureProvider.field_d));
+              param0 = (ShipComponent[]) (SoftwareSprite2D.appendStateArrayValue(this.subcomponents[var4], param0, 0, ArchiveTextureProvider.field_d));
               param0 = this.subcomponents[var4].collectDescendants(param0, (byte) -127);
             }
           }
@@ -2225,7 +2225,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               if (GetBombletSprayReload.field_s > var5 &&
                 this.subcomponents[var4_int].componentTypeId != 47) {
                 this.subcomponents[var4_int].health = 0;
-                param2 = (ShipComponent[]) (SoftwareSprite2D.a(this.subcomponents[var4_int], param2, 0, ArchiveTextureProvider.field_d));
+                param2 = (ShipComponent[]) (SoftwareSprite2D.appendStateArrayValue(this.subcomponents[var4_int], param2, 0, ArchiveTextureProvider.field_d));
               } else {
                 if (0 >= this.subcomponents[var4_int].health) {
                   this.subcomponents[var4_int].health = 1;
@@ -3963,7 +3963,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (this.thrusterbehaviour != null &&
             !this.thrusterbehaviour.isBooster(this.componentTypeId, (byte) -61) &&
             this.health > 0) {
-            param1 = (ShipComponent[]) (SoftwareSprite2D.a(this, param1, 0, ArchiveTextureProvider.field_d));
+            param1 = (ShipComponent[]) (SoftwareSprite2D.appendStateArrayValue(this, param1, 0, ArchiveTextureProvider.field_d));
           }
           if (param0 != 0) {
             this.currentconnectedangle = 84;

@@ -801,7 +801,7 @@ final class MissionState implements DiffableState {
             var3 = new RoundResult();
             var3.winningTime = this.phaseTimer;
             var3.winner = this.winner;
-            this.currentMatch.a(126, var3);
+            this.currentMatch.appendRoundResult(126, var3);
           }
           this.setMissionPhase(6, -7, Particle.field_l * 10);
         }
@@ -1203,7 +1203,7 @@ final class MissionState implements DiffableState {
                 if (null != this.currentMatch &&
                   !this.hasNextRound(24416) &&
                   ConsoleCharacterStream.a(81, var14.getObjectiveType(false))) {
-                  var5Lifetime1 = this.currentMatch.a(true);
+                  var5Lifetime1 = this.currentMatch.resolveWinner(true);
                   if (0 <= var5Lifetime1 &&
                     this.teamscores.length > var5Lifetime1) {
                     this.teamscores[var5Lifetime1] = this.teamscores[var5Lifetime1] + 1;

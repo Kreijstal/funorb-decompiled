@@ -7180,7 +7180,7 @@ final class GameSession {
             var12 = var24.getCurrentMatch((byte) -48);
             if (!var24.hasNextRound(24416) &&
               var12 != null) {
-              var13Lifetime1 = var12.a(true);
+              var13Lifetime1 = var12.resolveWinner(true);
               if (var13Lifetime1 == -1) {
                 var10 = SetCountermeasureLauncherFireForce.field_p.toUpperCase();
               } else {
@@ -7195,8 +7195,8 @@ final class GameSession {
                 var23 = dupTemp$0;
                 var15_ref_StringLifetime2 = dupTemp$0;
                 if (var14 == 2) {
-                  var16 = var12.a(var13Lifetime1, (byte) -88);
-                  var17 = var12.a(GpuSprite.swapTeamId(21957, var13Lifetime1), (byte) -88);
+                  var16 = var12.getTotalWinningTime(var13Lifetime1, (byte) -88);
+                  var17 = var12.getTotalWinningTime(GpuSprite.swapTeamId(21957, var13Lifetime1), (byte) -88);
                   var18_int = -var16 + var17;
                   var19 = 1000 * var18_int / Particle.field_l;
                   var20 = SetPointDefenceLaserAimspeed.a((byte) 10, var19);
@@ -7206,7 +7206,7 @@ final class GameSession {
                   if (var14 != 1) {
                     var10 = SetReverbGain.a(ChatMessages.wonMatchText.toUpperCase(), new String[]{var23}, 92);
                   } else {
-                    var16 = var12.a(-54, var13Lifetime1);
+                    var16 = var12.countResultsForWinner(-54, var13Lifetime1);
                     if (var16 != 1) {
                       stackIn_49_0 = SpecialOrderDefinition.field_b;
                     } else {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetBuildViewAutozoom extends ConsoleCommand {
-    final static int a(int param0, int param1) {
+    final static int floorLog2(int param0, int param1) {
         if (param0 < 8) {
           return -114;
         }
@@ -64,7 +64,7 @@ final class SetBuildViewAutozoom extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0) {
+    final static void initializeHslPalette(int param0) {
         int var3 = 0;
         RuntimeException decompiledCaughtException = null;
         double var1_double = 0.0;
@@ -87,12 +87,12 @@ final class SetBuildViewAutozoom extends ConsoleCommand {
         int var26 = 0;
         var26 = VoidHunters.field_G;
         try {
-          if (GetLagStandardDeviationIn.field_o != null) {
+          if (GetLagStandardDeviationIn.hslPalette != null) {
             return;
           }
-          GetLagStandardDeviationIn.field_o = new int[65536];
+          GetLagStandardDeviationIn.hslPalette = new int[65536];
           if (param0 != -10693) {
-            SetBuildViewAutozoom.a(43, 19);
+            SetBuildViewAutozoom.floorLog2(43, 19);
           }
           var1_double = 0.7 + (-0.015 + 0.03 * Math.random());
           for (var3 = 0; var3 < 65536; var3++) {
@@ -165,7 +165,7 @@ final class SetBuildViewAutozoom extends ConsoleCommand {
             var17 = (int)(var12 * 256.0);
             var18 = (int)(var14 * 256.0);
             var19 = (var17 << 8) + ((var16 << 16) + var18);
-            GetLagStandardDeviationIn.field_o[var3] = var19;
+            GetLagStandardDeviationIn.hslPalette[var3] = var19;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

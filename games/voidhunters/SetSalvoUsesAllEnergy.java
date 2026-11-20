@@ -104,7 +104,7 @@ final class SetSalvoUsesAllEnergy extends ConsoleCommand {
         if (null != Asteroid.activeReportDialog) {
           Asteroid.activeReportDialog.draw(param0, -117);
         }
-        PasswordValidator.a(param0, 124);
+        PasswordValidator.drawQuickChatHelp(param0, 124);
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

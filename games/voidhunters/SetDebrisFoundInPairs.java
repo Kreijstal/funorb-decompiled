@@ -94,15 +94,15 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
         RuntimeException var3 = null;
         try {
           if (param1) {
-            SetPhasedEnergyBeamRandomness.field_p = SetPhasedEnergyBeamRandomness.field_p - 1;
-            if (SetPhasedEnergyBeamRandomness.field_p == 0) {
-              GetLagStandardDeviationIn.field_o = null;
+            SetPhasedEnergyBeamRandomness.hslPaletteUsers = SetPhasedEnergyBeamRandomness.hslPaletteUsers - 1;
+            if (SetPhasedEnergyBeamRandomness.hslPaletteUsers == 0) {
+              GetLagStandardDeviationIn.hslPalette = null;
             }
           }
           if (param2) {
-            SetPedrosRepairMode.field_o = SetPedrosRepairMode.field_o - 1;
-            if (0 == SetPedrosRepairMode.field_o) {
-              OpenGlBloomEffect.field_h = null;
+            SetPedrosRepairMode.hsvPaletteUsers = SetPedrosRepairMode.hsvPaletteUsers - 1;
+            if (0 == SetPedrosRepairMode.hsvPaletteUsers) {
+              OpenGlBloomEffect.hsvPalette = null;
             }
           }
           var3_int = 78 % ((param0 - 24) / 63);

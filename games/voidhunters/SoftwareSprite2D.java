@@ -50,7 +50,7 @@ abstract class SoftwareSprite2D {
         field_b = null;
     }
 
-    final static Object[] a(Object param0, Object[] param1, int param2, GameStateFactory param3) {
+    final static Object[] appendStateArrayValue(Object param0, Object[] param1, int param2, GameStateFactory param3) {
         RuntimeException var4 = null;
         GameStateFactory var5 = null;
         Object[] stackIn_3_0 = null;
@@ -65,9 +65,9 @@ abstract class SoftwareSprite2D {
         try {
           if (param2 != 0) {
             var5 = (GameStateFactory) null;
-            SoftwareSprite2D.a(param1[1], (Object[]) null, ((int[]) (param1[7]))[7], (GameStateFactory) null);
+            SoftwareSprite2D.appendStateArrayValue(param1[1], (Object[]) null, ((int[]) (param1[7]))[7], (GameStateFactory) null);
           }
-          stackIn_3_0 = GetFighterBayReload.a(param1, param0, false, param3, param2 - 110);
+          stackIn_3_0 = GetFighterBayReload.appendStateArrayValue(param1, param0, false, param3, param2 - 110);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

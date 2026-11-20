@@ -86,7 +86,7 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static Widget a(int param0, int param1, int param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
+    final static Widget createBorderedWidgetTemplate(int param0, int param1, int param2, BitmapFont param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12) {
         Widget var13 = null;
         RuntimeException var13_ref = null;
         Widget stackIn_3_0 = null;
@@ -122,24 +122,24 @@ final class PasswordValidator extends TextFieldValidator {
         }
     }
 
-    final static void a(boolean param0, byte param1, boolean param2) {
+    final static void acquireColorPalettes(boolean param0, byte param1, boolean param2) {
         if (param0) {
-          SetPedrosRepairMode.field_o = SetPedrosRepairMode.field_o + 1;
-          SetDebrisCarryOver.e(param1 + 94);
+          SetPedrosRepairMode.hsvPaletteUsers = SetPedrosRepairMode.hsvPaletteUsers + 1;
+          SetDebrisCarryOver.initializeHsvPalette(param1 + 94);
         }
         if (param2) {
-          SetPhasedEnergyBeamRandomness.field_p = SetPhasedEnergyBeamRandomness.field_p + 1;
-          SetBuildViewAutozoom.a(param1 - 10726);
+          SetPhasedEnergyBeamRandomness.hslPaletteUsers = SetPhasedEnergyBeamRandomness.hslPaletteUsers + 1;
+          SetBuildViewAutozoom.initializeHslPalette(param1 - 10726);
         }
         if (param1 != 33) {
-          PasswordValidator.f(12);
+          PasswordValidator.rebuildGraphicsResources(12);
         }
     }
 
-    final static void f(int param0) {
+    final static void rebuildGraphicsResources(int param0) {
         ShipSpawnedConditionFactory.a(100);
         if (param0 != -10150) {
-          PasswordValidator.a(-128, 101, 87, (BitmapFont) null, 109, 83, -49, -78, 19, -41, 88, -111, 125);
+          PasswordValidator.createBorderedWidgetTemplate(-128, 101, 87, (BitmapFont) null, 109, 83, -49, -78, 19, -41, 88, -111, 125);
         }
         GpuMaterialEffect.buildToolkitFonts(-2283);
         SetReadyRoomMutatorTime.e(-17);
@@ -156,7 +156,7 @@ final class PasswordValidator extends TextFieldValidator {
         field_j = null;
     }
 
-    final static void a(boolean param0, int param1) {
+    final static void drawQuickChatHelp(boolean param0, int param1) {
         if (param1 <= 101) {
           field_g = (String) null;
         }

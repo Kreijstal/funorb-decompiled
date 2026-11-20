@@ -823,7 +823,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
             var7_ref_ml__ = this.chassis.collectActiveThrusters(0, (ShipComponent[]) null, param1);
             if (var6_int != 0) {
               for (var8_intLifetime1 = 0; var8_intLifetime1 < MissionActionFactory.field_a.length; var8_intLifetime1++) {
-                var7_ref_ml__ = (ShipComponent[]) (SoftwareSprite2D.a(MissionActionFactory.field_a[var8_intLifetime1], var7_ref_ml__, 0, ArchiveTextureProvider.field_d));
+                var7_ref_ml__ = (ShipComponent[]) (SoftwareSprite2D.appendStateArrayValue(MissionActionFactory.field_a[var8_intLifetime1], var7_ref_ml__, 0, ArchiveTextureProvider.field_d));
               }
             }
             if (var7_ref_ml__ == null) {

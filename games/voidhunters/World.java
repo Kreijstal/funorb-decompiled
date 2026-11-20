@@ -40,7 +40,7 @@ final class World implements DiffableState, CompactGameState {
           if (param1 > -37) {
             field_w = (int[]) null;
           }
-          this.resNodes = (ResourceNode[]) (SoftwareSprite2D.a(param0, this.resNodes, 0, SetShipDirectionArrow.field_p));
+          this.resNodes = (ResourceNode[]) (SoftwareSprite2D.appendStateArrayValue(param0, this.resNodes, 0, SetShipDirectionArrow.field_p));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2665,7 +2665,7 @@ final class World implements DiffableState, CompactGameState {
                   if (this.resNodes != null) {
                     for (var11_int = 0; this.resNodes.length > var11_int; var11_int++) {
                       var37 = this.resNodes[var11_int];
-                      if (var37.a(var7, (byte) 87, var8)) {
+                      if (var37.containsPoint(var7, (byte) 87, var8)) {
                         this.removeResourceNodeAtIndex((byte) 110, var11_int);
                         break;
                       }
@@ -3239,7 +3239,7 @@ final class World implements DiffableState, CompactGameState {
           if (param0 != 5706) {
             this.debris = (Debris[]) null;
           }
-          this.mapZones = (MapZone[]) (SoftwareSprite2D.a(param1, this.mapZones, param0 - 5706, ArchiveRequestQueue.field_e));
+          this.mapZones = (MapZone[]) (SoftwareSprite2D.appendStateArrayValue(param1, this.mapZones, param0 - 5706, ArchiveRequestQueue.field_e));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4878,7 +4878,7 @@ final class World implements DiffableState, CompactGameState {
             var11 = 0;
             var5_intLifetime1 = var11;
             while (this.resNodes.length > var11) {
-              this.resNodes[var11].b(param0, 115);
+              this.resNodes[var11].draw(param0, 115);
               var11++;
             }
           }
@@ -6465,7 +6465,7 @@ final class World implements DiffableState, CompactGameState {
             this.escapePods.length >= 15) {
             return;
           }
-          this.escapePods = (EscapePod[]) (SoftwareSprite2D.a(param0, this.escapePods, 0, ChatMessage.field_g));
+          this.escapePods = (EscapePod[]) (SoftwareSprite2D.appendStateArrayValue(param0, this.escapePods, 0, ChatMessage.field_g));
           if (param1 != 107) {
             discarded$0 = this.acquireDraggedDebris(78, (Debris) null, (Ship) null, (byte) -99, 119);
           }
@@ -8360,7 +8360,7 @@ final class World implements DiffableState, CompactGameState {
                   var7 = var6.getTeam((byte) 100);
                   if (var7 >= 0 &&
                     SetMissionTerrainAsteroidProbability.field_p > var7 &&
-                    var3.a(var6.x, (byte) 84, var6.y)) {
+                    var3.containsPoint(var6.x, (byte) 84, var6.y)) {
                     if (var4 < 0) {
                       var4 = var7;
                     } else {

@@ -629,7 +629,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
             this.field_e = param5;
             this.viewportHeight = var11.height;
             this.viewportWidth = var11.width;
-            PasswordValidator.a(false, (byte) 33, true);
+            PasswordValidator.acquireColorPalettes(false, (byte) 33, true);
             if (this.field_a != null) {
               this.field_I = new GpuTextureCache(this, this.field_a);
               this.field_Zb = new jagex3.graphics2.hw.NativeInterface(this.field_a.getTextureCount(11316), this.field_e);

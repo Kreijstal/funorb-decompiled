@@ -75,7 +75,7 @@ final class SetShieldsDamageEnergyConversion extends ConsoleCommand {
             return -1;
           }
         }
-        var9 = SetBuildViewAutozoom.a(34, param1 ^ param1 >> 31 | param4 >> 31 ^ param4 | param6 ^ param6 >> 31 | param2 >> 31 ^ param2 | param0 >> 31 ^ param0) - 12;
+        var9 = SetBuildViewAutozoom.floorLog2(34, param1 ^ param1 >> 31 | param4 >> 31 ^ param4 | param6 ^ param6 >> 31 | param2 >> 31 ^ param2 | param0 >> 31 ^ param0) - 12;
         if (var9 > 0) {
           param0 = param0 >> var9;
           param6 = param6 >> var9;

@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1572/1572 classes and 7533/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 0 opaque classes and 682 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1572/1572 classes and 7556/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 0 opaque classes and 659 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -134,6 +134,8 @@ All forty texture-operation factory products have descriptive class names, inclu
 `MouseInputUtilities` exposes the flag set when canvas-menu initialization starts; menu rebuilding and quick-chat help creation have named entrypoints. `LobbyInviteControls`, `IncomingChatState`, `SocialPanelState`, `LoginMethodCatalog` and shared raster/tab/projection resources name their static APIs while preserving the original empty inheritance chain. Lag getters, chat-dialog cleanup and numeric debug requests retain their original guards and side effects.
 
 `AlternateSerializableGameState` and `ExtendedSerializableGameState` name the verified read/write/copy/difference extension contracts without assuming their encoding. `NativeModelIntValue` and `NativeModelIntTriple` describe entries flattened into the native initialization payload; their geometry meaning is unspecified. `GpuModelFlagChecks`, `TeamObjectiveFormatter`, half-alpha triangle blending and lobby initialization have named helpers. Original masks, unsupported options, primitive payload order, dispatch branches, source premultiplication and guards remain unchanged.
+
+`TrailHolder` names trail updates, sampling and chat-message parsing. `ResourceNode` exposes containment, capture progress and drawing; `MatchResults` names round accumulation and winner resolution. Palette initialization, bordered widget templates, quick-chat help, graphics-resource rebuilding and state-array insertion have named entrypoints. Original ring/intensity bounds, packet staging, tie rules, randomized gamma, unusual color masks, allocation order and guards remain unchanged.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

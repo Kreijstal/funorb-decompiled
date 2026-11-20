@@ -4,11 +4,11 @@
 final class SetPedrosRepairMode extends ConsoleCommand {
     static Sprite[] field_q;
     static int field_p;
-    static int field_o;
+    static int hsvPaletteUsers;
 
     public static void clearSharedReferences(byte param0) {
         if (param0 != 53) {
-          field_o = -42;
+          hsvPaletteUsers = -42;
           field_q = null;
           return;
         }
@@ -25,7 +25,7 @@ final class SetPedrosRepairMode extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(31, 62, arguments[0].intValue(65));
           if (obfuscationGuard > -119) {
-            field_o = -106;
+            hsvPaletteUsers = -106;
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -49,6 +49,6 @@ final class SetPedrosRepairMode extends ConsoleCommand {
 
     static {
         field_p = 64;
-        field_o = 0;
+        hsvPaletteUsers = 0;
     }
 }

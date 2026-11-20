@@ -36,7 +36,7 @@ final class SetDebrisCarryOver extends ConsoleCommand {
         }
     }
 
-    final static void e(int param0) {
+    final static void initializeHsvPalette(int param0) {
         int var5 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -65,10 +65,10 @@ final class SetDebrisCarryOver extends ConsoleCommand {
         int var24 = 0;
         var24 = VoidHunters.field_G;
         try {
-          if (null != OpenGlBloomEffect.field_h) {
+          if (null != OpenGlBloomEffect.hsvPalette) {
             return;
           }
-          OpenGlBloomEffect.field_h = new int[65536];
+          OpenGlBloomEffect.hsvPalette = new int[65536];
           var1_double = 0.7 + (-0.015 + 0.03 * Math.random());
           var3 = 0;
           var4 = -119 % ((-10 - param0) / 52);
@@ -131,7 +131,7 @@ final class SetDebrisCarryOver extends ConsoleCommand {
               var23 = var22 + (var21 << 8) + (-16777216 + (var20 << 16));
               incrementValue$0 = var3;
               var3++;
-              OpenGlBloomEffect.field_h[incrementValue$0] = var23;
+              OpenGlBloomEffect.hsvPalette[incrementValue$0] = var23;
             }
           }
           return;
@@ -144,7 +144,7 @@ final class SetDebrisCarryOver extends ConsoleCommand {
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
-          SetDebrisCarryOver.e(13);
+          SetDebrisCarryOver.initializeHsvPalette(13);
         }
         field_o = null;
     }

@@ -1907,7 +1907,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 throw new RuntimeException("");
               }
             }
-            PasswordValidator.a(false, (byte) 33, true);
+            PasswordValidator.acquireColorPalettes(false, (byte) 33, true);
             this.field_m = true;
             this.field_r = new LegacyOpenGlTextureCache(this, this.field_a);
             this.initializeDefaultResources((byte) -92);

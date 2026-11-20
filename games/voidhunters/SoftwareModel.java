@@ -396,7 +396,7 @@ final class SoftwareModel extends Model3D {
           while (var54 < param1.faceAttachments.length) {
             var59 = param1.faceAttachments[var54];
             var60 = GetBombletSprayAimspeed.getFaceAttachmentDefinition(var59.definitionId, 0);
-            var14Lifetime1 = OpenGlBloomEffect.field_h[param1.field_b[var59.faceIndex] & 65535] & 16777215;
+            var14Lifetime1 = OpenGlBloomEffect.hsvPalette[param1.field_b[var59.faceIndex] & 65535] & 16777215;
             stackIn_57_0 = var14Lifetime1;
             stackIn_57_1 = 255;
             if (param1.field_r == null) {

@@ -3,7 +3,7 @@
  */
 final class OpenGlBloomEffect extends OpenGlPostEffect {
     private int sourceHeight;
-    static int[] field_h;
+    static int[] hsvPalette;
     private int textureHeight;
     private int textureWidth;
     private int sourceWidth;
@@ -497,7 +497,7 @@ final class OpenGlBloomEffect extends OpenGlPostEffect {
     public static void clearSharedReferences(int param0) {
         field_l = null;
         field_k = null;
-        field_h = null;
+        hsvPalette = null;
         if (param0 != 0) {
           field_k = (String) null;
         }
