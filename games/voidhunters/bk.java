@@ -43,10 +43,10 @@ final class bk extends mc {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_v = null;
         if (param0 <= 40) {
-          bk.e(87);
+          bk.clearSharedReferences(87);
           field_w = null;
           return;
         }

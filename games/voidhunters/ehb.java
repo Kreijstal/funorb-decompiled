@@ -63,10 +63,10 @@ final class ehb {
         return var4;
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_f = null;
         if (param0) {
-          ehb.a(false);
+          ehb.clearSharedReferences(false);
         }
     }
 

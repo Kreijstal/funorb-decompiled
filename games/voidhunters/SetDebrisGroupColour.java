@@ -126,7 +126,7 @@ final class SetDebrisGroupColour extends ConsoleCommand {
         return true;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 7311) {
           String var2 = (String) null;

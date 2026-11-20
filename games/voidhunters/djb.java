@@ -330,7 +330,7 @@ final class djb extends qc {
                 djb.clearSharedReferences((byte) 96);
               }
               var4 = new ipb(var3);
-              var5 = lhb.a((byte) 105, var4);
+              var5 = GrapplingHookFactory.a((byte) 105, var4);
               if (!var4.a(100)) {
                 throw new ojb(var4.a((byte) -69).field_g);
               }
@@ -529,7 +529,7 @@ final class djb extends qc {
               this.field_p.a(var5Lifetime1, 31401, var5Lifetime1);
             }
           }
-          nv.field_r = bab.a(this.field_p.l(param2 - 14413), 107);
+          nv.field_r = PlayerVoteFactory.a(this.field_p.l(param2 - 14413), 107);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -7,13 +7,13 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
     static String field_a;
 
     final static void d(int param0) {
-        if (efb.field_b != null) {
-          efb.field_b.field_b = false;
+        if (MissionConditionFactory.field_b != null) {
+          MissionConditionFactory.field_b.field_b = false;
         }
         mb.h(param0, param0 + 101);
     }
 
-    final int a(int param0, int param1) {
+    final int getParameter(int param0, int param1) {
         if (param1 >= -100) {
           field_a = (String) null;
           if (param0 != 0) {
@@ -74,27 +74,27 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
         }
     }
 
-    final String a(int param0) {
+    final String getDescription(int param0) {
         String var2 = null;
         String var2Lifetime1;
         if (param0 == -1325) {
           var2 = Integer.toString(this.label);
           if (this.label >= 0 &&
-            this.label < pu.field_c.length) {
-            var2 = pu.field_c[this.label];
+            this.label < ParticleFactory.field_c.length) {
+            var2 = ParticleFactory.field_c[this.label];
           }
           return "Set label of custom variable " + this.index + " to " + var2;
         }
         field_a = (String) null;
         var2Lifetime1 = Integer.toString(this.label);
         if (this.label >= 0 &&
-          this.label < pu.field_c.length) {
-          var2Lifetime1 = pu.field_c[this.label];
+          this.label < ParticleFactory.field_c.length) {
+          var2Lifetime1 = ParticleFactory.field_c[this.label];
         }
         return "Set label of custom variable " + this.index + " to " + var2Lifetime1;
     }
 
-    final void a(int param0, int[] param1, GameSnapshot param2) {
+    final void execute(int param0, int[] param1, GameSnapshot param2) {
         RuntimeException var4 = null;
         MissionVariable var6 = null;
         MissionVariable var7 = null;
@@ -148,7 +148,7 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
         }
     }
 
-    final void a(World param0, boolean param1, int param2, int param3) {
+    final void setParameter(World param0, boolean param1, int param2, int param3) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -164,14 +164,14 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
           } else {
             this.label = param3;
             if (this.label < 0) {
-              this.label = (this.label + pu.field_c.length) % pu.field_c.length;
+              this.label = (this.label + ParticleFactory.field_c.length) % ParticleFactory.field_c.length;
             }
           }
           if (!param1) {
             return;
           }
           var6 = (World) null;
-          this.a((World) null, -77);
+          this.getWorldPosition((World) null, -77);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -259,7 +259,7 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
         }
     }
 
-    final ucb a(World param0, int param1) {
+    final WorldPoint getWorldPosition(World param0, int param1) {
         RuntimeException var3 = null;
         Object stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -272,7 +272,7 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
           }
           this.label = -111;
           stackIn_3_0 = null;
-          return (ucb) (stackIn_3_0);
+          return (WorldPoint) (stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;

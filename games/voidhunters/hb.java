@@ -7,7 +7,7 @@ final class hb {
     static int field_a;
     static boolean field_c;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 15873) {
           field_b = -75L;
         }
@@ -41,7 +41,7 @@ final class hb {
             if (var5 != null &&
               var5.length == 2) {
               var5[1] = ne.a(')', (byte) 111, "", var5[1]);
-              var6 = new ConsoleValue(lob.a(-92, (CharSequence) ((Object) var5[1])));
+              var6 = new ConsoleValue(NebulaFieldFactory.a(-92, (CharSequence) ((Object) var5[1])));
               var7 = new ConsoleValue[]{var6};
               var8 = (ConsoleCommand) (var2.first(0));
               while (var8 != null) {
@@ -69,7 +69,7 @@ final class hb {
 
     final static void a(kka param0, byte param1) {
         try {
-          be.a(32, true, param0);
+          AdminMessage.a(32, true, param0);
           int var2_int = -81 / ((param1 + 42) / 61);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

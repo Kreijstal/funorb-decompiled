@@ -109,7 +109,7 @@ final class oj extends pw {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 < 65) {
           oj.a((byte) 104, false, 86);
           field_b = null;
@@ -136,7 +136,7 @@ final class oj extends pw {
         this.field_k = this.field_k + param0;
         this.field_d = this.field_d + param2;
         if (param3 != 13) {
-          oj.b(6);
+          oj.clearSharedReferences(6);
         }
     }
 
@@ -479,7 +479,7 @@ final class oj extends pw {
           this.field_n = 0.0f;
           return;
         }
-        oj.b(-43);
+        oj.clearSharedReferences(-43);
         this.field_j = (float)param0;
         this.field_k = (float)param3;
         this.field_g = 1.0f;

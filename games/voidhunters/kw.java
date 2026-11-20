@@ -19,9 +19,9 @@ final class kw extends llb {
     private int field_Gb;
     private mob field_Ib;
 
-    public static void g(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != 124) {
-          kw.g((byte) 112);
+          kw.clearSharedReferences((byte) 112);
         }
         field_xb = null;
         field_Jb = null;
@@ -177,7 +177,7 @@ final class kw extends llb {
           java.awt.datatransfer.Transferable var7 = null;
           String var8 = null;
           var6 = VoidHunters.field_G;
-          var2 = this.b(-this.field_Fb.field_t + (-this.field_M + kc.field_b), param0 + 6);
+          var2 = this.b(-this.field_Fb.field_t + (-this.field_M + PlayerGameData.field_b), param0 + 6);
           if (1 == this.field_o) {
             this.a(var2, 3047);
             this.field_Bb = true;
@@ -271,7 +271,7 @@ final class kw extends llb {
           }
           if (this.field_Ab != this.field_Eb.length()) {
             var4 = this.field_Eb.toString().substring(this.field_Ab, this.field_Eb.length());
-            npa.a(this.field_Ab, false, this.field_Eb, ' ');
+            ServerTickFactory.a(this.field_Ab, false, this.field_Eb, ' ');
             discarded$5 = this.field_Eb.append(param0);
             discarded$6 = this.field_Eb.append(var4);
           } else {
@@ -299,7 +299,7 @@ final class kw extends llb {
     }
 
     final void a(boolean param0) {
-        npa.a(0, !param0 ? true : false, this.field_Eb, ' ');
+        ServerTickFactory.a(0, !param0 ? true : false, this.field_Eb, ' ');
         if (!param0) {
           this.a(97, -10, -98);
         }
@@ -314,7 +314,7 @@ final class kw extends llb {
           this.field_Gb = this.field_Ab;
         }
         if (param1 != 3047) {
-          kw.g((byte) -20);
+          kw.clearSharedReferences((byte) -20);
         }
     }
 
@@ -362,7 +362,7 @@ final class kw extends llb {
               discarded$0 = this.field_Eb.append(param2);
             } else {
               var5 = this.field_Eb.toString().substring(this.field_Ab, this.field_Eb.length());
-              npa.a(this.field_Ab, false, this.field_Eb, ' ');
+              ServerTickFactory.a(this.field_Ab, false, this.field_Eb, ' ');
               discarded$1 = this.field_Eb.append(param2);
               discarded$2 = this.field_Eb.append(var5);
             }
@@ -592,7 +592,7 @@ final class kw extends llb {
           this.field_Ab = var2;
           this.field_Gb = var2;
           var4 = this.field_Eb.toString().substring(var3, this.field_Eb.length());
-          npa.a(var2, !param0 ? true : false, this.field_Eb, ' ');
+          ServerTickFactory.a(var2, !param0 ? true : false, this.field_Eb, ' ');
           discarded$0 = this.field_Eb.append(var4);
           this.field_Fb.field_R = this.field_Eb.toString();
         }

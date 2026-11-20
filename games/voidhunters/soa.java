@@ -83,7 +83,7 @@ final class soa extends llb {
         int var10Lifetime1;
         var12 = VoidHunters.field_G;
         try {
-          lkb.a(nf.field_a, (byte) -101);
+          lkb.a(CarouselPlayerEventFactory.field_a, (byte) -101);
           if (null != SetThrusterParticleSpeedDownshift.field_o) {
             var15 = vw.field_a;
             var17 = var15;
@@ -160,7 +160,7 @@ final class soa extends llb {
                   mia.field_a[var13] = false;
                   var13++;
                 }
-                bea.a(ocb.field_l, -1, SetThrusterParticleSpeedDownshift.field_o, -1, 115, true, 0, -1);
+                MissionBuilder.a(ocb.field_l, -1, SetThrusterParticleSpeedDownshift.field_o, -1, 115, true, 0, -1);
                 if (!(SetAngularVelocitySustain.field_p < 2) &&
                   SetMachineGunEnergyUsed.field_o[12]) {
                   hrb.field_b = true;
@@ -189,16 +189,16 @@ final class soa extends llb {
                       }
                     }
                   }
-                  lob.field_a = "<col=A00000>" + GetReloadBarWidth.field_q + "<br>" + GetRepairModeCooldown.field_p + (String) (var9);
+                  NebulaFieldFactory.field_a = "<col=A00000>" + GetReloadBarWidth.field_q + "<br>" + GetRepairModeCooldown.field_p + (String) (var9);
                 }
               }
             } else {
               GetTorpedoProjectileDamage.field_p.field_R = hqb.field_j;
               GetShipToShipRamDamage.field_q.field_y = false;
               if (var8 == 0) {
-                stackIn_25_0 = cn.field_b;
+                stackIn_25_0 = TickConditionFactory.field_b;
               } else {
-                stackIn_25_0 = osb.field_a;
+                stackIn_25_0 = BodyDestroyedConditionFactory.field_a;
               }
               var16 = stackIn_25_0;
               var9 = var16;

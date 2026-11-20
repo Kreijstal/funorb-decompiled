@@ -5,7 +5,7 @@ final class MissionGenerationData implements DiffableState {
     int votedObjective;
     int missionGenerationSeed;
     int roundsLeft;
-    static dja field_a;
+    static GameStateFactory field_a;
     int[] optionTotals;
     static String field_e;
 
@@ -16,7 +16,7 @@ final class MissionGenerationData implements DiffableState {
         try {
           this.votedObjective = param0.readBits(0, 8);
           this.missionGenerationSeed = param0.readBits(0, 32);
-          this.optionTotals = wkb.a((byte) 37, this.optionTotals, param0, 8);
+          this.optionTotals = SetVariableActionFactory.a((byte) 37, this.optionTotals, param0, 8);
           this.roundsLeft = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qdb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -51,7 +51,7 @@ final class MissionGenerationData implements DiffableState {
             GetSalvoRepairTimeMultiplier.a(param6, var15, ResourceNode.field_b[var16], (byte) 75, var14);
           }
           if (param2 != 0) {
-            field_a = (dja) null;
+            field_a = (GameStateFactory) null;
           }
           for (var16Lifetime1 = var13; var16Lifetime1 > var9; var16Lifetime1--) {
             GetSalvoRepairTimeMultiplier.a(param6, var15, ResourceNode.field_b[var16Lifetime1], (byte) 75, var14);
@@ -87,7 +87,7 @@ final class MissionGenerationData implements DiffableState {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_e = null;
         field_a = null;
         if (param0 >= -116) {
@@ -138,7 +138,7 @@ final class MissionGenerationData implements DiffableState {
     }
 
     final static void a(int param0, int param1, int param2, int param3, boolean param4, int param5, boolean param6, boolean param7, int param8, boolean param9, int param10, int param11, int param12, boolean param13) {
-        lob.field_a = null;
+        NebulaFieldFactory.field_a = null;
         SettingsInstance.c(6939);
         if (param8 >= -118) {
           return;
@@ -201,6 +201,6 @@ final class MissionGenerationData implements DiffableState {
 
     static {
         field_e = "Average rating";
-        field_a = (dja) ((Object) new ccb());
+        field_a = (GameStateFactory) ((Object) new ShipFactory());
     }
 }

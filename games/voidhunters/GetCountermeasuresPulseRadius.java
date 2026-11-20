@@ -19,7 +19,7 @@ final class GetCountermeasuresPulseRadius extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            GetCountermeasuresPulseRadius.a(-28);
+            GetCountermeasuresPulseRadius.clearSharedReferences(-28);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(222, 109));
           return stackIn_3_0;
@@ -37,9 +37,9 @@ final class GetCountermeasuresPulseRadius extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 16407) {
-          GetCountermeasuresPulseRadius.a(68);
+          GetCountermeasuresPulseRadius.clearSharedReferences(68);
           field_q = null;
           return;
         }
@@ -48,7 +48,7 @@ final class GetCountermeasuresPulseRadius extends ConsoleCommand {
 
     static {
         field_o = 0;
-        iaa discarded$0 = new iaa();
+        ShipBlueprintFactory discarded$0 = new ShipBlueprintFactory();
         field_q = new String[]{"By rating", "By win percentage"};
     }
 }

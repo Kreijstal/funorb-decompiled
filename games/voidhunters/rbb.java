@@ -82,14 +82,14 @@ final class rbb {
               var13 = var9 / var8;
               var12 = (var13 + var9 % var8 - 1) / var13 * 2 + var8;
             }
-            if (wkb.field_d == null) {
-              wkb.field_d = new String[16];
+            if (SetVariableActionFactory.field_d == null) {
+              SetVariableActionFactory.field_d = new String[16];
             }
-            var11Lifetime1 = this.field_p.a(param3, new int[]{var12}, wkb.field_d);
+            var11Lifetime1 = this.field_p.a(param3, new int[]{var12}, SetVariableActionFactory.field_d);
             var10 = var10 + var7 * (-1 + var11Lifetime1);
             var9 = 0;
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
-              var14 = this.field_p.b(wkb.field_d[var13Lifetime2]);
+              var14 = this.field_p.b(SetVariableActionFactory.field_d[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }

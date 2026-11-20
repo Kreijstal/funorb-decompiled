@@ -5,7 +5,7 @@ final class uab {
     static String field_a;
     static int field_b;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
           field_b = 112;
           field_a = null;
@@ -16,7 +16,7 @@ final class uab {
 
     final static boolean a(byte param0) {
         if (param0 != 44) {
-          uab.a(54);
+          uab.clearSharedReferences(54);
           return SetAngularForceDownshift.field_o;
         }
         return SetAngularForceDownshift.field_o;

@@ -10,7 +10,7 @@ abstract class SpriteDimensions extends DualLinkNode {
     int field_k;
     int field_m;
 
-    final static SerializableGameState[] a(SerializableGameState[] param0, SerializableGameState[] param1, int param2, dja param3, boolean param4) {
+    final static SerializableGameState[] a(SerializableGameState[] param0, SerializableGameState[] param1, int param2, GameStateFactory param3, boolean param4) {
         int var5_int = 0;
         SerializableGameState dupTemp$0 = null;
         SerializableGameState[] stackIn_10_0 = null;
@@ -37,7 +37,7 @@ abstract class SpriteDimensions extends DualLinkNode {
           }
           if (param0 == null ||
             param0.length != param1.length) {
-            param0 = param3.a(11995, param1.length);
+            param0 = param3.createArray(11995, param1.length);
           }
           if (param4) {
             stackIn_10_0 = (SerializableGameState[]) null;
@@ -48,7 +48,7 @@ abstract class SpriteDimensions extends DualLinkNode {
             if (var6 != null) {
               var7 = param0[var5_int];
               if (var7 == null) {
-                dupTemp$0 = param3.a((byte) -124);
+                dupTemp$0 = param3.create((byte) -124);
                 param0[var5_int] = dupTemp$0;
                 var7 = dupTemp$0;
               }
@@ -129,7 +129,7 @@ abstract class SpriteDimensions extends DualLinkNode {
         return -SetNumStars.a(param0, -param2, 11105) + 4096;
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_o = null;
         if (!param0) {
           SpriteDimensions.a(2, -61, -79);

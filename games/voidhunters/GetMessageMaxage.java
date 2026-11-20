@@ -31,7 +31,7 @@ final class GetMessageMaxage extends ConsoleCommand {
             GetMessageMaxage.clearSharedReferences((byte) -96);
           }
           for (var5 = param3; param1 > var5; var5++) {
-            var4_int = var4_int >>> 8 ^ coa.field_d[255 & (var4_int ^ param2[var5])];
+            var4_int = var4_int >>> 8 ^ ServerInfo.field_d[255 & (var4_int ^ param2[var5])];
           }
           var4_int = ~var4_int;
           stackIn_7_0 = var4_int;
@@ -115,45 +115,45 @@ final class GetMessageMaxage extends ConsoleCommand {
           }
           var6 = stackIn_4_0;
           if (ft.field_t == 0) {
-            var7 = wva.a(480, rea.field_e, 0, var11, GetUsePolygonFill.field_p);
+            var7 = MatchResultsFactory.a(480, rea.field_e, 0, var11, GetUsePolygonFill.field_p);
             var8 = 3 + var7;
             GetSniperCannonProjectiles.field_o = new int[var8];
             GetWorldWidthUpshift.field_o = new String[var8];
             for (var9 = 0; var8 > var9; var9++) {
               GetSniperCannonProjectiles.field_o[var9] = -1;
             }
-            kc.field_e = new int[2];
+            PlayerGameData.field_e = new int[2];
             for (var9 = 0; var9 < var7; var9++) {
               GetWorldWidthUpshift.field_o[var9] = rea.field_e[var9];
             }
             GetWorldWidthUpshift.field_o[-3 + var8] = "";
             GetWorldWidthUpshift.field_o[var8 - 2] = var6;
             GetSniperCannonProjectiles.field_o[var8 - 2] = 0;
-            kc.field_e[0] = 1;
+            PlayerGameData.field_e[0] = 1;
             GetWorldWidthUpshift.field_o[var8 - 1] = MissionCondition.field_b;
             GetSniperCannonProjectiles.field_o[-1 + var8] = 1;
-            kc.field_e[1] = 2;
+            PlayerGameData.field_e[1] = 2;
           } else {
             if (ft.field_t != 1) {
               throw new IllegalArgumentException();
             }
-            var7 = wva.a(480, rea.field_e, 0, var11, GetUsePolygonFill.field_p);
+            var7 = MatchResultsFactory.a(480, rea.field_e, 0, var11, GetUsePolygonFill.field_p);
             var8 = var7 + 2;
             GetSniperCannonProjectiles.field_o = new int[var8];
             GetWorldWidthUpshift.field_o = new String[var8];
             for (var9 = 0; var9 < var8; var9++) {
               GetSniperCannonProjectiles.field_o[var9] = -1;
             }
-            kc.field_e = new int[1];
+            PlayerGameData.field_e = new int[1];
             for (var9 = 0; var9 < var7; var9++) {
               GetWorldWidthUpshift.field_o[var9] = rea.field_e[var9];
             }
             GetWorldWidthUpshift.field_o[-2 + var8] = "";
             GetWorldWidthUpshift.field_o[-1 + var8] = MissionCondition.field_b;
             GetSniperCannonProjectiles.field_o[-1 + var8] = 0;
-            kc.field_e[0] = 2;
+            PlayerGameData.field_e[0] = 2;
           }
-          ei.field_c.field_c = kc.field_e.length;
+          ei.field_c.field_c = PlayerGameData.field_e.length;
           var7Lifetime1 = 0;
           for (var8Lifetime1 = 0; var8Lifetime1 < GetWorldWidthUpshift.field_o.length; var8Lifetime1++) {
             stackIn_25_0 = GetWorldWidthUpshift.field_o[var8Lifetime1];
@@ -161,7 +161,7 @@ final class GetMessageMaxage extends ConsoleCommand {
             stackIn_26_2 = !(GetSniperCannonProjectiles.field_o[var8Lifetime1] < 0);
             var9Lifetime1 = lsa.a(stackIn_25_0, stackIn_25_1, stackIn_26_2);
             if (GetSniperCannonProjectiles.field_o[var8Lifetime1] != -1) {
-              var9Lifetime1 = var9Lifetime1 + ShipCondition.field_e * 2;
+              var9Lifetime1 = var9Lifetime1 + ShipTeamCondition.field_e * 2;
             }
             if (var7Lifetime1 < var9Lifetime1) {
               var7Lifetime1 = var9Lifetime1;
@@ -171,19 +171,19 @@ final class GetMessageMaxage extends ConsoleCommand {
             return;
           }
           GetMissionTerrainAsteroidProbability.field_p = -(var7Lifetime1 >> 1) + var7Lifetime1 + alb.field_b;
-          mua.field_d = alb.field_b - (var7Lifetime1 >> 1);
+          ShieldBehaviour.field_d = alb.field_b - (var7Lifetime1 >> 1);
           ot.field_b = (SetPointDefenceLaserAimarc.field_q + pva.field_g << 1) * ei.field_c.field_c;
           for (var8Lifetime2 = 0; GetWorldWidthUpshift.field_o.length > var8Lifetime2; var8Lifetime2++) {
             stackIn_40_0 = ot.field_b;
             if (GetSniperCannonProjectiles.field_o[var8Lifetime2] >= 0) {
               stackIn_41_1 = SetExplosionPushMultiplier.field_o;
             } else {
-              stackIn_41_1 = whb.field_a;
+              stackIn_41_1 = DebugMessage.field_a;
             }
             ot.field_b = stackIn_40_0 + stackIn_41_1;
           }
           nl.field_m = -(ot.field_b >> 1) + SetDebrisPartitioned.field_r;
-          ei.field_c.a(param3, -1, 0, SetBuildViewAutozoomEndOnAction.a(uia.field_b, 3841, kc.field_b));
+          ei.field_c.a(param3, -1, 0, SetBuildViewAutozoomEndOnAction.a(uia.field_b, 3841, PlayerGameData.field_b));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

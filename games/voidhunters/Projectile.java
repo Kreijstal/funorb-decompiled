@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class Projectile extends ara implements DiffableState {
+final class Projectile extends MovingObject implements DiffableState {
     private int firedPlayer;
     private int damage;
     static String field_r;
@@ -55,7 +55,7 @@ final class Projectile extends ara implements DiffableState {
               var8 -= 512;
               var6 += 512;
             }
-            var9 = ng.a(8, -this.dy + this.y, (byte) 89, -this.dx + this.x, var7, this.x, var6, var5, var8, this.y);
+            var9 = SpecialOrderSubmessageFactory.a(8, -this.dy + this.y, (byte) 89, -this.dx + this.x, var7, this.x, var6, var5, var8, this.y);
             if (var9 != -1 &&
               var9 < var3_int) {
               var3_int = var9;

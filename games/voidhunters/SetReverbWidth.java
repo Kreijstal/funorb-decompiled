@@ -23,8 +23,8 @@ final class SetReverbWidth extends ConsoleCommand {
           if (rw.field_q != 0) {
             var2_long = wt.a(false);
             var4 = rw.field_q;
-            if (0.0 != npa.field_c) {
-              var4 = (int)((double)var4 + jeb.field_b.nextGaussian() * npa.field_c);
+            if (0.0 != ServerTickFactory.field_c) {
+              var4 = (int)((double)var4 + jeb.field_b.nextGaussian() * ServerTickFactory.field_c);
               if (0 > var4) {
                 var4 = 0;
               }
@@ -80,7 +80,7 @@ final class SetReverbWidth extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          oma.field_i = arguments[0].floatValue(0);
+          CommonGameState.field_i = arguments[0].floatValue(0);
           if (obfuscationGuard <= -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

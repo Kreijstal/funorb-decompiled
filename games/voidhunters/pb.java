@@ -17,7 +17,7 @@ final class pb {
     static String field_n;
     static byte[] field_f;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 <= -20) {
           field_f = null;
           field_h = null;

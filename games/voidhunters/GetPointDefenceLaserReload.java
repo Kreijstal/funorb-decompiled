@@ -36,16 +36,16 @@ final class GetPointDefenceLaserReload extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 116) {
-          GetPointDefenceLaserReload.a(41);
+          GetPointDefenceLaserReload.clearSharedReferences(41);
         }
     }
 
     static {
         field_o = "Full screen";
         field_p = false;
-        ng discarded$0 = new ng();
+        SpecialOrderSubmessageFactory discarded$0 = new SpecialOrderSubmessageFactory();
     }
 }

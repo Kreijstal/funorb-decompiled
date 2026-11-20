@@ -11,7 +11,7 @@ final class SetLag extends ConsoleCommand {
         SetMachineGunEnergyUsed.field_r = (param1 << 16) / 150;
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, dja param4, int param5, dja param6, int param7, int param8, int param9, int param10, int param11, dja param12, int param13, byte param14) {
+    final static void a(boolean param0, int param1, int param2, int param3, GameStateFactory param4, int param5, GameStateFactory param6, int param7, int param8, int param9, int param10, int param11, GameStateFactory param12, int param13, byte param14) {
         try {
           GetAngleset.field_o = param11;
           ehb.field_g = param8;
@@ -65,7 +65,7 @@ final class SetLag extends ConsoleCommand {
               ifb.l(-128);
               return;
             }
-            var5 = -var9.position + vja.field_a;
+            var5 = -var9.position + PartitioningManagerFactory.field_a;
             var11 = var4.field_d;
             var10 = var11;
             var6 = var10;

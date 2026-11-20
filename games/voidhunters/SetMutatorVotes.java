@@ -23,13 +23,13 @@ final class SetMutatorVotes extends ConsoleCommand {
         int var10 = 0;
         var10 = VoidHunters.field_G;
         try {
-          var1_int = GetMissionTerrainAsteroidProbability.field_p - mua.field_d;
-          mua.field_d = -(var1_int >> 1) + alb.field_b;
+          var1_int = GetMissionTerrainAsteroidProbability.field_p - ShieldBehaviour.field_d;
+          ShieldBehaviour.field_d = -(var1_int >> 1) + alb.field_b;
           if (param0 != -1321004447) {
             field_o = (int[]) null;
           }
           nl.field_m = -(ot.field_b >> 1) + SetDebrisPartitioned.field_r;
-          GetMissionTerrainAsteroidProbability.field_p = mua.field_d + var1_int;
+          GetMissionTerrainAsteroidProbability.field_p = ShieldBehaviour.field_d + var1_int;
           var2 = nl.field_m;
           for (var3 = 0; var3 < GetWorldWidthUpshift.field_o.length; var3++) {
             var4 = GetSniperCannonProjectiles.field_o[var3];
@@ -57,7 +57,7 @@ final class SetMutatorVotes extends ConsoleCommand {
               var9 = stackIn_18_0;
               var2 = var2 + pva.field_g;
               if (var9 != null) {
-                var9.a((byte) 54, var8 - ShipCondition.field_e, (ShipCondition.field_e << 1) + var7, var2, SetExplosionPushMultiplier.field_o + (SetPointDefenceLaserAimarc.field_q << 1));
+                var9.a((byte) 54, var8 - ShipTeamCondition.field_e, (ShipTeamCondition.field_e << 1) + var7, var2, SetExplosionPushMultiplier.field_o + (SetPointDefenceLaserAimarc.field_q << 1));
               }
               var2 = var2 + SetPointDefenceLaserAimarc.field_q;
             }
@@ -66,7 +66,7 @@ final class SetMutatorVotes extends ConsoleCommand {
               var2 = var2 + (pva.field_g + (SetPointDefenceLaserAimarc.field_q + SetExplosionPushMultiplier.field_o));
             } else {
               GetUsePolygonFill.field_p.c(var6, var8, var2 + mab.field_f, var5, -1);
-              var2 = var2 + whb.field_a;
+              var2 = var2 + DebugMessage.field_a;
             }
           }
           return;

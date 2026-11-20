@@ -166,7 +166,7 @@ final class sw {
                                           break regionExit1;
                                         }
                                         try {
-                                          var20_int = lob.a(123, (CharSequence) ((Object) var19.substring(4)));
+                                          var20_int = NebulaFieldFactory.a(123, (CharSequence) ((Object) var19.substring(4)));
                                           var17 = var17 + param1[var20_int].c();
                                           var12 = -1;
                                           decompiledRegionSelector0 = 0;
@@ -377,7 +377,7 @@ final class sw {
                                   (decompiledFrameRemainder0 = !(!var13_ref_String.startsWith("img="))) &&
                                   (decompiledFrameRemainder0 = (param3 != null))) {
                                   try {
-                                    var14_int = lob.a(78, (CharSequence) ((Object) var13_ref_String.substring(4)));
+                                    var14_int = NebulaFieldFactory.a(78, (CharSequence) ((Object) var13_ref_String.substring(4)));
                                     var8 = var8 + param3[var14_int].c();
                                     var7 = -1;
                                     if (var8 > param1) {
@@ -969,7 +969,7 @@ final class sw {
                                   (decompiledFrameRemainder0 = !(!var10.startsWith("img="))) &&
                                   (decompiledFrameRemainder0 = (param2 != null))) {
                                   try {
-                                    var11_int = lob.a(10, (CharSequence) ((Object) var10.substring(4)));
+                                    var11_int = NebulaFieldFactory.a(10, (CharSequence) ((Object) var10.substring(4)));
                                     var6 = var6 + param2[var11_int].c();
                                     var5 = -1;
                                     decompiledRegionSelector0 = 0;

@@ -171,12 +171,12 @@ final class dib extends ev {
         return 2 <= param1 ? true : false;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_j = null;
         if (param0 == 89) {
           return;
         }
-        dib.a((byte) 40);
+        dib.clearSharedReferences((byte) 40);
     }
 
     static {

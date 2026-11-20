@@ -28,20 +28,20 @@ final class dm extends mfb {
         if (param1 != -78) {
           dm.a(-119, (byte) -85);
           if (param0 == 3) {
-            return Particle.field_l * wkb.field_a;
+            return Particle.field_l * SetVariableActionFactory.field_a;
           }
           if (param0 == 12) {
-            return Particle.field_l * wkb.field_a;
+            return Particle.field_l * SetVariableActionFactory.field_a;
           }
-          return wkb.field_a * Particle.field_l;
+          return SetVariableActionFactory.field_a * Particle.field_l;
         }
         if (param0 == 3) {
-          return Particle.field_l * wkb.field_a;
+          return Particle.field_l * SetVariableActionFactory.field_a;
         }
         if (param0 == 12) {
-          return Particle.field_l * wkb.field_a;
+          return Particle.field_l * SetVariableActionFactory.field_a;
         }
-        return wkb.field_a * Particle.field_l;
+        return SetVariableActionFactory.field_a * Particle.field_l;
     }
 
     final int f(byte param0) {

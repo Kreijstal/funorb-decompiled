@@ -48,7 +48,7 @@ final class GetReverbFeedback extends ConsoleCommand {
             if (param1.field_a == 4) {
               var2_intLifetime1 = SetLaserEnergyUsed.field_p[param1.field_a];
             } else {
-              if (param1.field_i == wqa.field_a) {
+              if (param1.field_i == BodyInZoneConditionFactory.field_a) {
                 var2_intLifetime1 = ConsoleCommand.field_m[param1.field_a];
               } else {
                 var2_intLifetime1 = SetLaserEnergyUsed.field_p[param1.field_a];

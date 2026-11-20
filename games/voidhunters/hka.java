@@ -44,8 +44,8 @@ final class hka extends uj {
         llb var3 = null;
         SetMissileLauncherRandomness.field_o = SetSniperCannonProjectiles.a(param0, "display_name_changed", "basic", true);
         re.field_n = new wdb(0L, rbb.field_k, SetMissileLauncherEnergyUsed.field_q, SetDefaultFiringLeeway.field_o);
-        vra.field_b = new wdb(0L, rbb.field_k, SetMissilesTopSpeed.field_q, ci.field_a);
-        ci.field_c = new llb(0L, (llb) null);
+        vra.field_b = new wdb(0L, rbb.field_k, SetMissilesTopSpeed.field_q, PlayerJoinFactory.field_a);
+        PlayerJoinFactory.field_c = new llb(0L, (llb) null);
         rtb.field_h = new llb(0L, qc.field_q);
         rtb.field_h.field_F = 1;
         if (param1 >= -96) {
@@ -54,12 +54,12 @@ final class hka extends uj {
         try {
           SetCountermeasureLauncherRandomness.field_o = new llb(0L, GetThrusterBindingBalanceThreshold.field_p, kpb.field_r);
           GameKeyHandler.field_b = new llb(0L, qsa.field_d, mab.field_e);
-          nf.field_c = new llb(0L, GetMissionDebrisDefaultProbability.field_o);
-          ci.field_c.b(-561, rtb.field_h);
-          ci.field_c.b(-561, SetCountermeasureLauncherRandomness.field_o);
-          ci.field_c.b(-561, GameKeyHandler.field_b);
-          ci.field_c.b(-561, re.field_n);
-          ci.field_c.b(-561, nf.field_c);
+          CarouselPlayerEventFactory.field_c = new llb(0L, GetMissionDebrisDefaultProbability.field_o);
+          PlayerJoinFactory.field_c.b(-561, rtb.field_h);
+          PlayerJoinFactory.field_c.b(-561, SetCountermeasureLauncherRandomness.field_o);
+          PlayerJoinFactory.field_c.b(-561, GameKeyHandler.field_b);
+          PlayerJoinFactory.field_c.b(-561, re.field_n);
+          PlayerJoinFactory.field_c.b(-561, CarouselPlayerEventFactory.field_c);
           re.field_n.field_xb.field_xb.a(18445, qc.field_q);
           re.field_n.field_xb.field_xb.field_B = 1;
           var5 = re.field_n.field_xb.field_xb;

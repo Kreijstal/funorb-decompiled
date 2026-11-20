@@ -55,7 +55,7 @@ final class GetMissilesHitSourceTeam extends ConsoleCommand {
         GetDebrisGroupColour.field_r.a(72, param1, param6, param4 << 24 | param5, param0, param3);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 <= 57) {
           GetMissilesHitSourceTeam.a(-77, 127, (byte) 35, -88, 55, 91, -105);
           field_p = null;

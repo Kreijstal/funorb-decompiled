@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetLaserBeamProjectileDamage extends ConsoleCommand {
-    static dja field_r;
+    static GameStateFactory field_r;
     static String field_t;
     static String field_q;
     static String field_s;
@@ -13,7 +13,7 @@ final class GetLaserBeamProjectileDamage extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         field_r = null;
         field_t = null;
@@ -64,7 +64,7 @@ final class GetLaserBeamProjectileDamage extends ConsoleCommand {
     static {
         field_t = "VIP";
         field_q = "You have entered another game.";
-        field_r = (dja) ((Object) new fl());
+        field_r = (GameStateFactory) ((Object) new AwardVictoryToWinnerActionFactory());
         field_o = 1;
         field_s = "Members";
     }

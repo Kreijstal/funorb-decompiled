@@ -39,14 +39,14 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
     }
 
     final static boolean a(int param0, int param1) {
-        coa var3;
+        ServerInfo var3;
         ShipBlueprint var4;
-        coa var5;
+        ServerInfo var5;
         ShipBlueprint var6;
         if (param0 < -44) {
           if (param1 == 73) {
             GetDebrisThrowable.a(false, "Receiving server info");
-            var5 = new coa();
+            var5 = new ServerInfo();
             uw.a((byte) -61, qga.field_b, var5);
             if (var5 == null) {
               return true;
@@ -69,7 +69,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
         GetMpSandboxEnemySpawnLimit.a(114, 1);
         if (param1 == 73) {
           GetDebrisThrowable.a(false, "Receiving server info");
-          var3 = new coa();
+          var3 = new ServerInfo();
           uw.a((byte) -61, qga.field_b, var3);
           if (var3 == null) {
             return true;

@@ -9,9 +9,9 @@ final class SetTorpedoFireForce extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (param0) {
-          SetTorpedoFireForce.b(true);
+          SetTorpedoFireForce.clearSharedReferences(true);
           field_p = null;
           return;
         }

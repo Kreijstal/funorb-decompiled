@@ -57,6 +57,6 @@ final class SetDebrisProjectileCollision extends ConsoleCommand {
 
     static {
         field_o = true;
-        fob discarded$0 = new fob();
+        ComponentBehaviourFactory discarded$0 = new ComponentBehaviourFactory();
     }
 }

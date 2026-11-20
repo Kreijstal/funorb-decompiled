@@ -72,7 +72,7 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
@@ -120,7 +120,7 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 < 38) {
-            SetDebrisFoundInPairs.e((byte) -38);
+            SetDebrisFoundInPairs.clearSharedReferences((byte) -38);
           }
           stackIn_4_0 = SetAutoAfkTimeout.a(param3, param4, -120, false, param1, param0);
           return stackIn_4_0;
@@ -179,7 +179,7 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
             param3.field_E != null) {
             bl.d(false);
           }
-          pca.field_j = 0;
+          CarouselPlayerEvent.field_j = 0;
           var9 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var9 < param3.field_y)))) {
@@ -237,7 +237,7 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
                           dupTemp$0 = param3.field_E[var9];
                           GetAngularVelocitySustain.field_q[dupTemp$0] = GetAngularVelocitySustain.field_q[dupTemp$0] + 1;
                         }
-                        pca.field_j = pca.field_j + 1;
+                        CarouselPlayerEvent.field_j = CarouselPlayerEvent.field_j + 1;
                         break;
                       }
                     }

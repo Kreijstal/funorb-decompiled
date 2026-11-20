@@ -57,7 +57,7 @@ final class tc {
     }
 
     final static void a(int param0, int param1, int param2) {
-        be var3 = new be();
+        AdminMessage var3 = new AdminMessage();
         var3.value = param1;
         var3.index = 31 + param2;
         SetBuildViewAutozoomEndOnAction.a(0, var3, RequestNewestBlackboxRecording.field_p, param0);

@@ -74,10 +74,10 @@ final class SetFogOfWarSensorRange extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = (int[][]) null;
         if (param0 < 101) {
-          SetFogOfWarSensorRange.a(-22);
+          SetFogOfWarSensorRange.clearSharedReferences(-22);
         }
     }
 
@@ -91,7 +91,7 @@ final class SetFogOfWarSensorRange extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(47, 62, arguments[0].intValue(109));
           if (obfuscationGuard > -119) {
-            SetFogOfWarSensorRange.a(115);
+            SetFogOfWarSensorRange.clearSharedReferences(115);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

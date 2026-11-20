@@ -6,10 +6,10 @@ final class fra {
     static int field_b;
     static int field_a;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         if (param0 != 2147483647) {
-          fra.a(52);
+          fra.clearSharedReferences(52);
         }
     }
 
@@ -62,7 +62,7 @@ final class fra {
             }
           }
           if (param2 != 2) {
-            fra.a(25);
+            fra.clearSharedReferences(25);
           }
           if (!SetDebrisProjectileCollision.a(5220, var5, param1, var7, param3, var4_int, var6)) {
             return false;
@@ -92,7 +92,7 @@ final class fra {
             var13 = param0[1 + var17];
             var14 = param0[(2 + var17) % param0.length];
             var15 = param0[(var17 + 3) % param0.length];
-            if (-1 != ng.a(8, param1, (byte) 93, param3, var14, var8Lifetime1, var13, var12, var15, var9Lifetime1)) {
+            if (-1 != SpecialOrderSubmessageFactory.a(8, param1, (byte) 93, param3, var14, var8Lifetime1, var13, var12, var15, var9Lifetime1)) {
               var10Lifetime2++;
             }
             var17 += 2;

@@ -6,10 +6,10 @@ final class ncb {
     static int field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = (int[][]) null;
         if (param0 != 500) {
-          ncb.a(-91);
+          ncb.clearSharedReferences(-91);
         }
     }
 

@@ -1,0 +1,251 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+class MovingObject extends IntrusiveNode implements DiffableState {
+    int dx;
+    int y;
+    int x;
+    static String field_g;
+    int dy;
+
+    public static void clearSharedReferences(boolean param0) {
+        field_g = null;
+        if (!param0) {
+          field_g = (String) null;
+        }
+    }
+
+    final static void a(int param0) {
+        try {
+          Throwable decompiledCaughtException = null;
+          java.lang.reflect.Method var1 = null;
+          Exception var1_ref = null;
+          Runtime var2 = null;
+          Throwable var2_ref = null;
+          Long var3 = null;
+          Object[] var4 = null;
+          try {
+            if (param0 != 27671) {
+              field_g = (String) null;
+            }
+            var1 = Runtime.class.getMethod("maxMemory", new Class[]{});
+            if (var1 == null) {
+              return;
+            }
+            try {
+              var2 = Runtime.getRuntime();
+              var4 = (Object[]) null;
+              var3 = (Long) (var1.invoke((Object) (var2), (Object[]) null));
+              Nebula.field_b = 1 + (int)(var3.longValue() / 1048576L);
+              return;
+            } catch (java.lang.Throwable decompiledCaughtParameter0) {
+              decompiledCaughtException = decompiledCaughtParameter0;
+              var2_ref = decompiledCaughtException;
+              return;
+            }
+          } catch (java.lang.Exception decompiledCaughtParameter1) {
+            decompiledCaughtException = decompiledCaughtParameter1;
+            var1_ref = (Exception) (Object) decompiledCaughtException;
+            return;
+          }
+        } catch (RuntimeException | Error decompiledUncheckedException) {
+          throw decompiledUncheckedException;
+        } catch (Throwable decompiledCheckedException) {
+          throw new RuntimeException(decompiledCheckedException);
+        }
+    }
+
+    public void writeState(IsaacPacketBuffer param0, int param1) {
+        try {
+          param0.writeBits(-632, this.x, 32);
+          if (param1 >= -109) {
+            this.y = 34;
+          }
+          param0.writeBits(-632, this.y, 32);
+          this.b(param0, false);
+        } catch (RuntimeException runtimeException) {
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ara.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    public void reportDifferences(SerializableGameState other, int obfuscationGuard) {
+        RuntimeException stackIn_18_0 = null;
+        StringBuilder stackIn_18_1 = null;
+        String stackIn_19_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        int var4 = 0;
+        MovingObject var5 = null;
+        try {
+          var5 = (MovingObject) (other);
+          var4 = 0;
+          if (var5.x != this.x) {
+            var4 = 1;
+            System.out.println("int x has changed. before=" + var5.x + ", now=" + this.x);
+          }
+          if (var5.y != this.y) {
+            var4 = 1;
+            System.out.println("int y has changed. before=" + var5.y + ", now=" + this.y);
+          }
+          if (this.dx != var5.dx) {
+            System.out.println("int dx has changed. before=" + var5.dx + ", now=" + this.dx);
+            var4 = 1;
+          }
+          if (obfuscationGuard > -19) {
+            return;
+          }
+          if (this.dy != var5.dy) {
+            var4 = 1;
+            System.out.println("int dy has changed. before=" + var5.dy + ", now=" + this.dy);
+          }
+          if (var4 == 0) {
+            return;
+          }
+          System.out.println("This instance of MovingObject has changed");
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_18_0 = var3;
+          stackIn_18_1 = new StringBuilder().append("ara.F(");
+          if (other == null) {
+            stackIn_19_2 = "null";
+          } else {
+            stackIn_19_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_18_0), ((StringBuilder) (Object) stackIn_18_1).append(stackIn_19_2).append(',').append(obfuscationGuard).append(')').toString());
+        }
+    }
+
+    public boolean differsFrom(byte param0, SerializableGameState param1) {
+        int var3_int = 0;
+        MovingObject var4 = null;
+        boolean stackIn_5_0 = false;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        try {
+          var3_int = -111 / ((22 - param0) / 59);
+          var4 = (MovingObject) (param1);
+          stackIn_5_0 = (var4.x != this.x) || (this.y != var4.y);
+          return stackIn_5_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_8_0 = var3;
+          stackIn_8_1 = new StringBuilder().append("ara.C(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+        }
+    }
+
+    public void copyTo(byte param0, SerializableGameState param1) {
+        MovingObject var5 = null;
+        MovingObject var6 = null;
+        try {
+          var5 = (MovingObject) (param1);
+          var6 = var5;
+          var6.x = this.x;
+          if (param0 <= 54) {
+            this.dy = 125;
+          }
+          var6.dx = this.dx;
+          var6.dy = this.dy;
+          var6.y = this.y;
+        } catch (RuntimeException runtimeException) {
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ara.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    private final void b(IsaacPacketBuffer param0, boolean param1) {
+        IsaacPacketBuffer stackIn_5_0 = null;
+        int stackIn_5_1 = 0;
+        boolean stackIn_7_2 = false;
+        RuntimeException stackIn_12_0 = null;
+        StringBuilder stackIn_12_1 = null;
+        String stackIn_13_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var3 = null;
+        try {
+          if (param1) {
+            return;
+          }
+          stackIn_5_0 = (IsaacPacketBuffer) (param0);
+          stackIn_5_1 = 87;
+          stackIn_7_2 = (this.dx != 0) || (this.dy != 0);
+          if (!vq.writeBoolean(stackIn_5_0, stackIn_5_1, stackIn_7_2)) {
+            return;
+          }
+          param0.writeBits(-632, this.dx, 32);
+          param0.writeBits(-632, this.dy, 32);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_12_0 = var3;
+          stackIn_12_1 = new StringBuilder().append("ara.TB(");
+          if (param0 == null) {
+            stackIn_13_2 = "null";
+          } else {
+            stackIn_13_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    MovingObject() {
+    }
+
+    private final void c(IsaacPacketBuffer param0, int param1) {
+        RuntimeException var3 = null;
+        RuntimeException stackIn_8_0 = null;
+        StringBuilder stackIn_8_1 = null;
+        String stackIn_9_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        try {
+          if (param1 != 32) {
+            return;
+          }
+          if (!kv.readBoolean(false, param0)) {
+            return;
+          }
+          this.dx = param0.readBits(param1 - 32, 32);
+          this.dy = param0.readBits(0, 32);
+          return;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var3 = decompiledCaughtException;
+          stackIn_8_0 = var3;
+          stackIn_8_1 = new StringBuilder().append("ara.QB(");
+          if (param0 == null) {
+            stackIn_9_2 = "null";
+          } else {
+            stackIn_9_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+        }
+    }
+
+    public void readState(IsaacPacketBuffer param0, boolean param1) {
+        try {
+          this.x = param0.readBits(0, 32);
+          if (param1) {
+            field_g = (String) null;
+          }
+          this.y = param0.readBits(0, 32);
+          this.c(param0, 32);
+        } catch (RuntimeException runtimeException) {
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ara.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+        }
+    }
+
+    static {
+        field_g = "Sandbox";
+    }
+}

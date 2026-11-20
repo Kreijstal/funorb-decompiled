@@ -4,10 +4,10 @@
 final class GetMassDriverProjectileDamage extends ConsoleCommand {
     static String field_o;
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_o = null;
         if (!param0) {
-          GetMassDriverProjectileDamage.b(true);
+          GetMassDriverProjectileDamage.clearSharedReferences(true);
         }
     }
 

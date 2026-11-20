@@ -16,6 +16,6 @@ final class dr {
     static {
         field_z = "dr.A(";
         field_a = 128;
-        pn discarded$0 = new pn();
+        WeaponBehaviourFactory discarded$0 = new WeaponBehaviourFactory();
     }
 }

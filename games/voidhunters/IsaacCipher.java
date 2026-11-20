@@ -102,18 +102,18 @@ final class IsaacCipher {
             }
             if (var6.field_Bb != null &&
               var6.field_Bb.field_O) {
-              lob.field_a = var6.field_vb;
+              NebulaFieldFactory.field_a = var6.field_vb;
             } else {
               if (var6.field_wb.field_O &&
                 var11 != 0) {
-                lob.field_a = var6.field_Fb;
+                NebulaFieldFactory.field_a = var6.field_Fb;
               }
             }
             var5 = var6;
             if (var6.field_o != 0) {
               pea.$cfr$intArgs$a$91f64d33677c(0L, var6, -1, (int[]) null, var6.field_Cb, vra.field_b.field_xb, var6.field_Fb, 72, -1);
               var16 = GetLagStandardDeviationOut.field_o;
-              var13_ref_String = ci.field_a;
+              var13_ref_String = PlayerJoinFactory.field_a;
               var16.field_i.a(var13_ref_String, (byte) -53, 7);
               var17 = GetLagStandardDeviationOut.field_o;
               var13 = Particle.field_H;
@@ -124,13 +124,13 @@ final class IsaacCipher {
           }
           if (0 != vra.field_b.field_wb.field_o) {
             ola.field_p = new qka(vra.field_b.field_wb.field_M, vra.field_b.field_wb.field_u, vra.field_b.field_wb.field_hb, vra.field_b.field_wb.field_G, mw.field_d, GetDebrisMax.field_o, qc.field_q, qc.field_q);
-            rc.field_b = 2;
+            MissionGenerationDataFactory.field_b = 2;
           }
           if (0 == vra.field_b.field_zb.field_o) {
             return;
           }
           ola.field_p = new qka(vra.field_b.field_zb.field_M, vra.field_b.field_zb.field_u, vra.field_b.field_zb.field_hb, vra.field_b.field_zb.field_G, GetUseNiceTrails.field_q, GetDebrisMax.field_o, qc.field_q, qc.field_q);
-          rc.field_b = 3;
+          MissionGenerationDataFactory.field_b = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

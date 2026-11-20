@@ -11,9 +11,9 @@ final class ob extends pib {
     int field_k;
     int field_i;
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != 42) {
-          ob.c((byte) 67);
+          ob.clearSharedReferences((byte) 67);
           field_l = null;
           field_m = null;
           return;

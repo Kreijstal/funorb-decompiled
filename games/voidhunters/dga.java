@@ -150,7 +150,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_x_entered_game", 23100);
                 if (null != var2) {
-                  ub.field_g = qpa.a((byte) -125, var2);
+                  DebugSendable.field_g = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_x_joined_your_game", 23100);
                 if (var2 != null) {
@@ -246,7 +246,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_lobby_name_rm", 23100);
                 if (null != var2) {
-                  ci.field_a = qpa.a((byte) -125, var2);
+                  PlayerJoinFactory.field_a = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_lobby_location", 23100);
                 if (null != var2) {
@@ -314,7 +314,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("yes", 23100);
                 if (null != var2) {
-                  ns.field_a = qpa.a((byte) -125, var2);
+                  SettingsInstanceFactory.field_a = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("no", 23100);
                 if (var2 != null) {
@@ -482,11 +482,11 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("searching_for_opponent_singular", 23100);
                 if (null != var2) {
-                  cn.field_b = qpa.a((byte) -125, var2);
+                  TickConditionFactory.field_b = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("searching_for_opponents_plural", 23100);
                 if (var2 != null) {
-                  osb.field_a = qpa.a((byte) -125, var2);
+                  BodyDestroyedConditionFactory.field_a = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("find_opponent_singular", 23100);
                 if (var2 != null) {
@@ -530,7 +530,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("waiting_for_x_to_start_game", 23100);
                 if (null != var2) {
-                  ub.field_h = qpa.a((byte) -125, var2);
+                  DebugSendable.field_h = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("game_options_changed", 23100);
                 if (var2 != null) {
@@ -570,7 +570,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("x_wants_to_join", 23100);
                 if (var2 != null) {
-                  uk.field_a = qpa.a((byte) -125, var2);
+                  TeamShipComponentConditionFactory.field_a = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("accept", 23100);
                 if (null != var2) {
@@ -630,7 +630,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("you_can_ask_to_join", 23100);
                 if (null != var2) {
-                  rdb.field_f = qpa.a((byte) -125, var2);
+                  SpawnPoint.field_f = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("you_cannot_join_in_progress", 23100);
                 if (var2 != null) {
@@ -642,7 +642,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("you_can_not_spectate", 23100);
                 if (var2 != null) {
-                  jja.field_b = qpa.a((byte) -125, var2);
+                  CarouselSystemEventFactory.field_b = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("spectate_xs_game", 23100);
                 if (null != var2) {
@@ -678,7 +678,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("multiconst_friends", 23100);
                 if (var2 != null) {
-                  tja.field_b = qpa.a((byte) -125, var2);
+                  CarouselSlot.field_b = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("multiconst_similar_rating", 23100);
                 if (null != var2) {
@@ -734,7 +734,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("privatechat_blankarea_explanation", 23100);
                 if (null != var2) {
-                  rc.field_a = qpa.a((byte) -125, var2);
+                  MissionGenerationDataFactory.field_a = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("publicchat_unavailable_ratedgame", 23100);
                 if (null != var2) {
@@ -742,7 +742,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("privatechat_friend_offline", 23100);
                 if (var2 != null) {
-                  BodyCondition.field_d = qpa.a((byte) -125, var2);
+                  BodyDestroyedCondition.field_d = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("privatechat_friend_notlisted", 23100);
                 if (null != var2) {
@@ -778,7 +778,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_moreratedgames", 23100);
                 if (null != var2) {
-                  nra.field_a = qpa.a((byte) -125, var2);
+                  AwardVictoryToTeamActionFactory.field_a = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_needrating", 23100);
                 if (var2 != null) {
@@ -790,7 +790,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_notunlocked", 23100);
                 if (null != var2) {
-                  lp.field_a = qpa.a((byte) -125, var2);
+                  CarouselEventFactory.field_a = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_cannotbecombined1", 23100);
                 if (var2 != null) {
@@ -1300,7 +1300,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("creatingyouraccount", 23100);
                 if (var2 != null) {
-                  oma.field_c = qpa.a((byte) -125, var2);
+                  CommonGameState.field_c = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_youmustaccept", 23100);
                 if (var2 != null) {
@@ -1376,7 +1376,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_welcome", 23100);
                 if (null != var2) {
-                  dkb.field_a = qpa.a((byte) -125, var2);
+                  NebulaFactory.field_a = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_u13_welcome", 23100);
                 if (null != var2) {
@@ -1412,7 +1412,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_age", 23100);
                 if (null != var2) {
-                  jja.field_a = qpa.a((byte) -125, var2);
+                  CarouselSystemEventFactory.field_a = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_u13_email", 23100);
                 if (null != var2) {
@@ -1464,7 +1464,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("login_username_email", 23100);
                 if (var2 != null) {
-                  rg.field_a = qpa.a((byte) -125, var2);
+                  RemoveEventActionFactory.field_a = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("login_username", 23100);
                 if (var2 != null) {
@@ -1588,11 +1588,11 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_alert_nameleadingspace", 23100);
                 if (null != var2) {
-                  kma.field_d = qpa.a((byte) -125, var2);
+                  ArmBehaviour.field_d = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_alert_doublespace", 23100);
                 if (null != var2) {
-                  amb.field_a = qpa.a((byte) -125, var2);
+                  ServerInfoFactory.field_a = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_alert_passchars", 23100);
                 if (null != var2) {
@@ -1640,7 +1640,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_alert_yearrange", 23100);
                 if (null != var2) {
-                  fob.field_d = qpa.a((byte) -125, var2);
+                  ComponentBehaviourFactory.field_d = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_alert_mismatch", 23100);
                 if (null != var2) {
@@ -1680,7 +1680,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("unable_to_delete_ignore", 23100);
                 if (var2 != null) {
-                  nf.field_b = qpa.a((byte) -125, var2);
+                  CarouselPlayerEventFactory.field_b = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("friendlistfull", 23100);
                 if (var2 != null) {
@@ -1770,7 +1770,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("waitingfor_music", 23100);
                 if (var2 != null) {
-                  vfb.field_a = qpa.a((byte) -125, var2);
+                  CarouselSlotFactory.field_a = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("waitingfor_instruments", 23100);
                 if (var2 != null) {
@@ -1898,7 +1898,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("screensize", 23100);
                 if (var2 != null) {
-                  mo.field_j = qpa.a((byte) -125, var2);
+                  DebugRequest.field_j = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("highscores", 23100);
                 if (var2 != null) {
@@ -2106,7 +2106,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("graphics_best", 23100);
                 if (var2 != null) {
-                  wva.field_a = qpa.a((byte) -125, var2);
+                  MatchResultsFactory.field_a = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("graphics_directx", 23100);
                 if (null != var2) {
@@ -2353,7 +2353,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mp_rematchnewgame", 23100);
                 if (null != var2) {
-                  gs.field_d = qpa.a((byte) -125, var2);
+                  SettingsChangeFactory.field_d = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mp_rematchnewgame_unrated", 23100);
                 if (var2 != null) {
@@ -2441,7 +2441,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mp_showchat_nounread", 23100);
                 if (var2 != null) {
-                  upb.field_b = qpa.a((byte) -125, var2);
+                  VariableConditionFactory.field_b = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mp_showchat_unread1", 23100);
                 if (null != var2) {
@@ -2645,7 +2645,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("fs_button_accept", 23100);
                 if (var2 != null) {
-                  amb.field_b = qpa.a((byte) -125, var2);
+                  ServerInfoFactory.field_b = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("fs_accept_afteraccept", 23100);
                 if (var2 != null) {
@@ -2695,7 +2695,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("fs_focus_or_resolution", 23100);
                 if (null != var2) {
-                  jga.field_b = qpa.a((byte) -125, var2);
+                  WorldFactory.field_b = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("fs_timeout", 23100);
                 if (var2 != null) {
@@ -2799,7 +2799,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("graphics_config_apply", 23100);
                 if (null != var2) {
-                  jdb.field_a = qpa.a((byte) -125, var2);
+                  SetVariableLabelActionFactory.field_a = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("graphics_config_title", 23100);
                 if (null != var2) {

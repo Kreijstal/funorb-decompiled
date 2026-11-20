@@ -16,21 +16,21 @@ final class lfa extends TextureOperation {
     }
 
     final static void a(byte param0, boolean param1) {
-        if (wga.field_a == null) {
+        if (RoundResultFactory.field_a == null) {
           if (param0 == 34) {
             return;
           }
           field_j = true;
           return;
         }
-        if (!wga.field_a.a(param1, false)) {
+        if (!RoundResultFactory.field_a.a(param1, false)) {
           if (param0 == 34) {
             return;
           }
           field_j = true;
           return;
         }
-        wga.field_a = null;
+        RoundResultFactory.field_a = null;
         if (param0 == 34) {
           return;
         }

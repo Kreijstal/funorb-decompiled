@@ -51,9 +51,9 @@ final class koa extends TextureOperation {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 < 9) {
-          koa.d(-110);
+          koa.clearSharedReferences(-110);
         }
         field_k = null;
     }

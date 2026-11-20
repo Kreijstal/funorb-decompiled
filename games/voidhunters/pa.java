@@ -75,7 +75,7 @@ final class pa {
     }
 
     static {
-        lob discarded$0 = new lob();
+        NebulaFieldFactory discarded$0 = new NebulaFieldFactory();
         field_c = "Hull piece";
     }
 }

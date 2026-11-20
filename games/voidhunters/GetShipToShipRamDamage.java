@@ -11,7 +11,7 @@ final class GetShipToShipRamDamage extends ConsoleCommand {
           return;
         }
         if (param5 == param1) {
-          fl.a(param6, param7, param2, param5, param0 + 1512, param4, param3);
+          AwardVictoryToWinnerActionFactory.a(param6, param7, param2, param5, param0 + 1512, param4, param3);
           return;
         }
         if (ob.field_j > -param5 + param6) {

@@ -22,7 +22,7 @@ final class SetReverbDamp extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          qaa.field_a = arguments[0].floatValue(0);
+          MapClearanceRectangleFactory.field_a = arguments[0].floatValue(0);
           if (obfuscationGuard >= -119) {
             SetReverbDamp.clearSharedReferences((byte) -82);
           }

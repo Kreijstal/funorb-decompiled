@@ -341,7 +341,7 @@ abstract class BitmapFont extends DualLinkNode {
                               if (!(!var8.startsWith("img="))) {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
-                                  var9_int = lob.a(-89, var10);
+                                  var9_int = NebulaFieldFactory.a(-89, var10);
                                   var4 = var4 + this.field_l[var9_int].field_a;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -453,7 +453,7 @@ abstract class BitmapFont extends DualLinkNode {
                 }
               } else {
                 var4 = (CharSequence) ((Object) param0.substring(6));
-                field_B = lob.a(22, var4);
+                field_B = NebulaFieldFactory.a(22, var4);
               }
             } else {
               field_x = field_G;
@@ -510,7 +510,7 @@ abstract class BitmapFont extends DualLinkNode {
         if (param0 == null) {
           return 0;
         }
-        npa.a(0, false, field_s, ' ');
+        ServerTickFactory.a(0, false, field_s, ' ');
         var4 = 0;
         var5 = 0;
         var6 = -1;
@@ -542,7 +542,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 if (var15.startsWith("img=")) {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
-                                    var16_int = lob.a(-81, var18);
+                                    var16_int = NebulaFieldFactory.a(-81, var18);
                                     var4 = var4 + this.field_l[var16_int].field_a;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -887,7 +887,7 @@ abstract class BitmapFont extends DualLinkNode {
                               } else {
                                 try {
                                   var13 = (CharSequence) ((Object) var9_ref_String.substring(4));
-                                  var10 = lob.a(61, var13);
+                                  var10 = NebulaFieldFactory.a(61, var13);
                                   var11_ref_ija = this.field_l[var10];
                                   if (this.field_y == null) {
                                     stackIn_27_0 = var11_ref_ija.field_g;

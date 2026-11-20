@@ -14,9 +14,9 @@ final class ts {
         synchronized (var1_ref) {
           hu.field_b = GetBombletSprayAimarc.field_q;
           rpa.field_b = rpa.field_b + 1;
-          kc.field_b = wt.field_a;
+          PlayerGameData.field_b = wt.field_a;
           uia.field_b = kv.field_e;
-          upb.field_c = hda.field_a;
+          VariableConditionFactory.field_c = hda.field_a;
           hda.field_a = false;
           SetDebrisPartitioned.field_o = ro.field_a;
           Particle.field_H = cma.field_a;

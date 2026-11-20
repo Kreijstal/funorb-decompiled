@@ -35,7 +35,7 @@ final class GetFightersPerPlayerMaximum extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_s = null;
         field_q = null;
         field_o = null;

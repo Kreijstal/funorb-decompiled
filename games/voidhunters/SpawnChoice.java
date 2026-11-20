@@ -17,10 +17,10 @@ final class SpawnChoice implements DiffableState {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         if (param0 != 32) {
-          SpawnChoice.a(-98);
+          SpawnChoice.clearSharedReferences(-98);
         }
     }
 

@@ -5,9 +5,9 @@ final class GetMissileLauncherAimspeed extends ConsoleCommand {
     static dqb field_o;
     static int[] field_p;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 127) {
-          GetMissileLauncherAimspeed.a(14);
+          GetMissileLauncherAimspeed.clearSharedReferences(14);
           field_o = null;
           field_p = null;
           return;

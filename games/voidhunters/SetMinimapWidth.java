@@ -14,7 +14,7 @@ final class SetMinimapWidth extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 < -95) {
-            stackIn_4_0 = nra.a(false, param0, param1, 28849, false);
+            stackIn_4_0 = AwardVictoryToTeamActionFactory.a(false, param0, param1, 28849, false);
             return stackIn_4_0;
           }
           stackIn_2_0 = (int[]) null;

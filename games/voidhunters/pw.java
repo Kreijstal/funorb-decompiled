@@ -79,11 +79,11 @@ abstract class pw {
           var7Lifetime1 = 0;
           var8Lifetime1 = eu.a(var6Lifetime1, 57) >> 8;
           var9Lifetime1 = GetNumStars.a(var6Lifetime1, (byte) 61) >> 8;
-          if (kc.field_b != -1 &&
+          if (PlayerGameData.field_b != -1 &&
             uia.field_b != -1) {
             var8Lifetime1 = 240 - uia.field_b;
             var9Lifetime1 = -128;
-            var7Lifetime1 = kc.field_b - 320;
+            var7Lifetime1 = PlayerGameData.field_b - 320;
           }
           var10 = 256.0 / Math.sqrt((double)(var8Lifetime1 * var8Lifetime1 + var7Lifetime1 * var7Lifetime1 + var9Lifetime1 * var9Lifetime1));
           var8Lifetime1 = (int)((double)var8Lifetime1 * var10);

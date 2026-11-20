@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetUseCircleOutline extends ConsoleCommand {
-    static dja field_o;
+    static GameStateFactory field_o;
     static int field_p;
     static volatile int field_q;
 
@@ -52,7 +52,7 @@ final class GetUseCircleOutline extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 != -47) {
           asb var2 = (asb) null;
@@ -61,7 +61,7 @@ final class GetUseCircleOutline extends ConsoleCommand {
     }
 
     static {
-        field_o = (dja) ((Object) new isb());
+        field_o = (GameStateFactory) ((Object) new TeamNodeConditionFactory());
         field_p = 27;
         field_q = 0;
     }

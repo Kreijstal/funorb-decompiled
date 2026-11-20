@@ -10,7 +10,7 @@ final class SetMassDriverReload extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -20005) {
           field_p = 75;
           field_q = null;
@@ -23,15 +23,15 @@ final class SetMassDriverReload extends ConsoleCommand {
 
     final static void a(int param0) {
         java.awt.Canvas var1 = null;
-        if (!upa.field_a) {
-          upa.field_a = true;
+        if (!ShipComponentFactory.field_a) {
+          ShipComponentFactory.field_a = true;
           var1 = SetThrusterBindingMoveAndTurnHasOppositeMove.e((byte) 106);
-          GetUseDetailLines.field_o = kc.field_b;
+          GetUseDetailLines.field_o = PlayerGameData.field_b;
           GetTorpedoReload.field_q = uia.field_b;
-          SetTorpedoProjectiles.field_o.a((java.awt.Component) ((Object) var1), GetComponentBreakingExplosionForceMultiplier.field_p, uqb.field_h, 14);
+          SetTorpedoProjectiles.field_o.a((java.awt.Component) ((Object) var1), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
           SetTorpedoProjectiles.field_o.a((java.awt.Component) ((Object) var1), false, (byte) -106);
           uia.field_b = GetComponentBreakingExplosionForceMultiplier.field_p;
-          kc.field_b = uqb.field_h;
+          PlayerGameData.field_b = CarouselEvent.field_h;
         }
         if (param0 == 6045) {
           return;

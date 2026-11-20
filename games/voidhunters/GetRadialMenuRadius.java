@@ -14,7 +14,7 @@ final class GetRadialMenuRadius extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetRadialMenuRadius.a(-80);
+            GetRadialMenuRadius.clearSharedReferences(-80);
           }
           stackIn_3_0 = new ConsoleValue(gnb.field_a);
           return stackIn_3_0;
@@ -32,10 +32,10 @@ final class GetRadialMenuRadius extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 0) {
-          GetRadialMenuRadius.a(-39);
+          GetRadialMenuRadius.clearSharedReferences(-39);
         }
     }
 

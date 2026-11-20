@@ -40,7 +40,7 @@ final class SetMachineGunEnergyUsed extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (!param0) {
           field_s = 71;
         }
@@ -49,12 +49,12 @@ final class SetMachineGunEnergyUsed extends ConsoleCommand {
     }
 
     final static void a(int param0, int param1, int param2) {
-        hna var3 = null;
+        PlayerAction var3 = null;
         if (param1 != 62) {
           field_r = 110;
         }
         if (vqa.field_g != null) {
-          var3 = new hna();
+          var3 = new PlayerAction();
           var3.specialOrderSubmessage = new SpecialOrderSubmessage();
           var3.specialOrderSubmessage.settingsChange = new SettingsChange(param0, param2);
           vqa.field_g.a(param1 ^ 62, true, var3);

@@ -80,7 +80,7 @@ final class fma extends mfb {
           lc.field_b = new bs(bib.field_e, lw.field_i);
           tb.field_a = new llb(0L, (llb) null);
           tb.field_a.b(param0 ^ -9108, lc.field_b.field_a);
-          tb.field_a.b(-561, gmb.field_c);
+          tb.field_a.b(-561, SpawnChoiceFactory.field_c);
           SetGrapplingHookMinLength.a(5);
           if (param0 != 8611) {
             fma.clearSharedReferences((byte) -29);
@@ -92,7 +92,7 @@ final class fma extends mfb {
         lc.field_b = new bs(bib.field_e, lw.field_i);
         tb.field_a = new llb(0L, (llb) null);
         tb.field_a.b(param0 ^ -9108, lc.field_b.field_a);
-        tb.field_a.b(-561, gmb.field_c);
+        tb.field_a.b(-561, SpawnChoiceFactory.field_c);
         SetGrapplingHookMinLength.a(5);
         if (param0 == 8611) {
           return;
@@ -143,7 +143,7 @@ final class fma extends mfb {
         if (param0 != 0) {
           return -23;
         }
-        return bn.field_a;
+        return PlayerActionFactory.field_a;
     }
 
     final int a(byte param0) {

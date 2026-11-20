@@ -26,7 +26,7 @@ class MissionAction implements DiffableState {
         }
     }
 
-    void a(World param0, boolean param1, int param2, int param3) {
+    void setParameter(World param0, boolean param1, int param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
@@ -48,16 +48,16 @@ class MissionAction implements DiffableState {
         }
     }
 
-    int a(int param0, int param1) {
+    int getParameter(int param0, int param1) {
         if (param1 >= -100) {
           return -104;
         }
         return 0;
     }
 
-    ucb a(World param0, int param1) {
+    WorldPoint getWorldPosition(World param0, int param1) {
         RuntimeException var3 = null;
-        ucb stackIn_3_0 = null;
+        WorldPoint stackIn_3_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -66,7 +66,7 @@ class MissionAction implements DiffableState {
           if (param1 == 26964) {
             return null;
           }
-          stackIn_3_0 = (ucb) null;
+          stackIn_3_0 = (WorldPoint) null;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -82,7 +82,7 @@ class MissionAction implements DiffableState {
         }
     }
 
-    final static boolean a(int[] param0, int[] param1, int param2) {
+    final static boolean rectanglesIntersect(int[] param0, int[] param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_11_0 = null;
@@ -122,7 +122,7 @@ class MissionAction implements DiffableState {
         }
     }
 
-    String a(int param0) {
+    String getDescription(int param0) {
         if (param0 != -1325) {
           return (String) null;
         }
@@ -154,7 +154,7 @@ class MissionAction implements DiffableState {
     public void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
-            this.a(-32, 17);
+            this.getParameter(-32, 17);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rna.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -172,7 +172,7 @@ class MissionAction implements DiffableState {
         }
     }
 
-    void a(int param0, int[] param1, GameSnapshot param2) {
+    void execute(int param0, int[] param1, GameSnapshot param2) {
         try {
           if (param0 != 1) {
             SerializableGameState var5 = (SerializableGameState) null;

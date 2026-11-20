@@ -14,11 +14,11 @@ final class spb {
         kl.a(psb.field_b, -28);
         psb.field_b.a(SetTorpedoProjectiles.field_o, -32335);
         psb.field_b = null;
-        if (efb.field_b == null) {
+        if (MissionConditionFactory.field_b == null) {
           igb.field_a.requestFocus();
           return;
         }
-        efb.field_b.c(param0 - 29579);
+        MissionConditionFactory.field_b.c(param0 - 29579);
         igb.field_a.requestFocus();
     }
 

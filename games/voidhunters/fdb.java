@@ -10,10 +10,10 @@ final class fdb extends hbb {
     private int[] field_J;
     private MidiChannelLevels field_U;
 
-    public static void g(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_S = null;
         if (param0 != 0) {
-          fdb.g(-2);
+          fdb.clearSharedReferences(-2);
         }
         field_T = null;
     }
@@ -74,7 +74,7 @@ final class fdb extends hbb {
         stackIn_22_1 = (param0) && (!param1) && (bv.field_d);
         ((llb) (Object) stackIn_21_0).a(stackIn_22_1, 1332);
         lc.field_b.field_a.i(10000);
-        if (gmb.field_c.field_o != 0) {
+        if (SpawnChoiceFactory.field_c.field_o != 0) {
           MessageLog.field_d = true;
         }
         if (param3 < 96) {

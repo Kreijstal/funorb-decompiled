@@ -532,10 +532,10 @@ class hbb extends f {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_N = null;
         if (!param0) {
-          hbb.c(false);
+          hbb.clearSharedReferences(false);
         }
     }
 

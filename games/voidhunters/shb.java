@@ -102,7 +102,7 @@ class shb extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.a(uia.field_b, param1, kc.field_b, param0, (byte) 22) ? 1 : 0;
+          var5_int = this.a(uia.field_b, param1, PlayerGameData.field_b, param0, (byte) 22) ? 1 : 0;
           if (param2 != -981) {
             this.field_e = true;
           }
@@ -215,7 +215,7 @@ class shb extends IntrusiveNode {
         return false;
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 <= 61) {
           field_k = -86;
@@ -446,7 +446,7 @@ class shb extends IntrusiveNode {
         if (param3) {
           if (GetPointDefenceLaserPulsetime.field_o != 0 &&
             var5 != 0) {
-            this.a(param1, -6006, GetPointDefenceLaserPulsetime.field_o, this, kc.field_b, param2, uia.field_b);
+            this.a(param1, -6006, GetPointDefenceLaserPulsetime.field_o, this, PlayerGameData.field_b, param2, uia.field_b);
           }
           if (SetDebrisPartitioned.field_o != 0) {
             if (!this.a(Particle.field_H, param1, qs.field_a, SetDebrisPartitioned.field_o, this, param2, (byte) -105)) {
@@ -459,7 +459,7 @@ class shb extends IntrusiveNode {
           }
           if (hu.field_b == 0 &&
             jw.field_b != 0) {
-            this.a((byte) 118, param1, uia.field_b, param2, this, kc.field_b);
+            this.a((byte) 118, param1, uia.field_b, param2, this, PlayerGameData.field_b);
             var6 = SetBombletSprayRandomness.field_p;
             if (var6 != null) {
               if (var6.field_l instanceof ol) {

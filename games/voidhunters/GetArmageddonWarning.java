@@ -36,6 +36,6 @@ final class GetArmageddonWarning extends ConsoleCommand {
     }
 
     static {
-        qbb discarded$0 = new qbb();
+        ShipAIFactory discarded$0 = new ShipAIFactory();
     }
 }

@@ -41,10 +41,10 @@ final class SetThrusterAutobalancing extends ConsoleCommand {
         int var1 = -31 / ((param0 - 58) / 51);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != -21968) {
-          SetThrusterAutobalancing.a(-128);
+          SetThrusterAutobalancing.clearSharedReferences(-128);
           field_p = null;
           return;
         }

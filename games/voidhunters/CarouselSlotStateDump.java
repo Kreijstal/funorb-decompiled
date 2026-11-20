@@ -7,16 +7,16 @@ final class CarouselSlotStateDump extends IntrusiveNode implements SerializableG
     static int field_f;
     static int field_g;
     static int field_i;
-    private tja field_h;
+    private CarouselSlot field_h;
 
-    final tja d(int param0) {
+    final CarouselSlot d(int param0) {
         if (null != this.field_h) {
           return this.field_h;
         }
         IsaacPacketBuffer var2 = new IsaacPacketBuffer(this.field_d.length - 4);
         var2.writeBytes(4, this.field_d, -1, -4 + this.field_d.length);
         var2.position = param0;
-        tja var3 = (tja) (gva.field_a.a((byte) -128));
+        CarouselSlot var3 = (CarouselSlot) (gva.field_a.create((byte) -128));
         var2.beginBitRead(-23497);
         if (!(var3 instanceof CompactGameState)) {
           var3.readState(var2, false);
@@ -92,7 +92,7 @@ final class CarouselSlotStateDump extends IntrusiveNode implements SerializableG
           if (param0 > 54) {
             return;
           }
-          this.field_h = (tja) null;
+          this.field_h = (CarouselSlot) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

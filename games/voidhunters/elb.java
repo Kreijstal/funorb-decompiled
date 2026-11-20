@@ -184,7 +184,7 @@ abstract class elb {
           this.field_d[var4] = (short) var6;
         }
         if (param0 != 23) {
-          elb.c((byte) 43);
+          elb.clearSharedReferences((byte) 43);
         }
     }
 
@@ -218,10 +218,10 @@ abstract class elb {
         this.b((byte) 23);
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_f = null;
         if (param0 < 35) {
-          elb.c((byte) 62);
+          elb.clearSharedReferences((byte) 62);
         }
     }
 

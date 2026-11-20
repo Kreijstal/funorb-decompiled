@@ -15,7 +15,7 @@ final class fa extends IntrusiveNode {
 
     final static void a(String param0, int param1, boolean param2) {
         try {
-          rg.field_b = true;
+          RemoveEventActionFactory.field_b = true;
           kmb.field_c = param2 ? true : false;
           SetPointDefenceLaserAimarc.field_o = new os(GetLagStandardDeviationIn.field_r, GetBoostersCooldown.field_r, param0, tla.field_c, kmb.field_c);
           if (param1 >= -119) {

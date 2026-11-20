@@ -8,7 +8,7 @@ final class uea extends bob {
 
     final vv a(int param0, int param1) {
         if (param1 != -1) {
-          uea.a((byte) -96);
+          uea.clearSharedReferences((byte) -96);
         }
         vv dupTemp$0 = new vv();
         this.field_q[param0] = dupTemp$0;
@@ -131,7 +131,7 @@ final class uea extends bob {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         if (param0 != -18) {
           uea.a((byte) 52, true, false, 58);
@@ -191,14 +191,14 @@ final class uea extends bob {
         }
         var4 = 0;
         if (-1 == param3) {
-          amb.a(-30428, param2);
+          ServerInfoFactory.a(-30428, param2);
         } else {
           if (param3 == -2) {
             dma.a();
             RoundResult.field_e = true;
           } else {
             if (param1) {
-              amb.a(-30428, false);
+              ServerInfoFactory.a(-30428, false);
             } else {
               if (null == wca.field_b) {
                 wca.field_b = new dla();
@@ -220,7 +220,7 @@ final class uea extends bob {
         var6 = 13421772;
         if (li.field_i) {
           var7 = 3;
-          SetBoostersCooldown.a(GetDebrisGroupColour.field_r, SetTorpedoEnergyUsed.a(var7, 300), nma.field_b[var7], -125, var6, GetBombletSprayEnergyUsed.field_p.width, GetUseDetailLines.field_o, var5, GetTorpedoReload.field_q, GetBombletSprayEnergyUsed.field_p.height);
+          SetBoostersCooldown.a(GetDebrisGroupColour.field_r, SetTorpedoEnergyUsed.a(var7, 300), PlayerReadyFactory.field_b[var7], -125, var6, GetBombletSprayEnergyUsed.field_p.width, GetUseDetailLines.field_o, var5, GetTorpedoReload.field_q, GetBombletSprayEnergyUsed.field_p.height);
         }
     }
 

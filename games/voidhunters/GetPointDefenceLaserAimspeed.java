@@ -9,10 +9,10 @@ final class GetPointDefenceLaserAimspeed extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = (int[][]) null;
         if (param0 >= -65) {
-          GetPointDefenceLaserAimspeed.a(106);
+          GetPointDefenceLaserAimspeed.clearSharedReferences(106);
         }
     }
 

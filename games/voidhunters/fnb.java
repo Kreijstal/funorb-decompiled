@@ -59,7 +59,7 @@ abstract class fnb {
             if (1 < fbb.field_j[param4]) {
               var8Lifetime1 = param4 + hob.a(OpenGlGpuToolkit.field_Jc, fbb.field_j[param4], 117);
             }
-            var9 = coa.a(var7Lifetime1, 100, var6_int, fa.field_d[var8Lifetime1]);
+            var9 = ServerInfo.a(var7Lifetime1, 100, var6_int, fa.field_d[var8Lifetime1]);
             var10 = new qw();
             var10.field_m = true;
             var10.field_h = param1;
@@ -78,7 +78,7 @@ abstract class fnb {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 >= -8) {
           field_a = -67;
           field_c = null;

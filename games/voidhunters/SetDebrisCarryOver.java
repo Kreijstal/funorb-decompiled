@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetDebrisCarryOver extends ConsoleCommand {
-    static dja field_o;
+    static GameStateFactory field_o;
 
     SetDebrisCarryOver(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -17,7 +17,7 @@ final class SetDebrisCarryOver extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            field_o = (dja) null;
+            field_o = (GameStateFactory) null;
           }
           SetMachineGunEnergyUsed.a(34, 62, arguments[0].intValue(94));
           stackIn_3_0 = new ConsoleValue("void");
@@ -142,7 +142,7 @@ final class SetDebrisCarryOver extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
           SetDebrisCarryOver.e(13);
         }
@@ -150,6 +150,6 @@ final class SetDebrisCarryOver extends ConsoleCommand {
     }
 
     static {
-        field_o = (dja) ((Object) new mbb());
+        field_o = (GameStateFactory) ((Object) new SetShipTeamActionFactory());
     }
 }

@@ -15,7 +15,7 @@ final class SetMissionTerrainDebrisProbability extends ConsoleCommand {
         int var10 = GetGrapplingHookAimarc.a(-16777216, param0);
         int var11 = dib.a((byte) 95, param0, param1, var10);
         GetMachineGunPulsetime.a(12124934, -98, -var9 + param5, param2 + (-var8 + param3) / 2, var8, param6 + var9);
-        ci.a(param2, param3, var10, var9, param6, var11, param7 ^ param7);
+        PlayerJoinFactory.a(param2, param3, var10, var9, param6, var11, param7 ^ param7);
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

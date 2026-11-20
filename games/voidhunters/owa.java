@@ -229,9 +229,9 @@ final class owa extends TextureOperation {
         this.field_m = 0;
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 < 83) {
-          owa.e((byte) 58);
+          owa.clearSharedReferences((byte) 58);
         }
         field_j = null;
     }

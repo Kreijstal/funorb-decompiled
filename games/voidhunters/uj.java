@@ -14,12 +14,12 @@ class uj {
         return false;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_c = null;
         field_a = null;
         field_b = null;
         if (param0 != -95) {
-          uj.a((byte) 83);
+          uj.clearSharedReferences((byte) 83);
         }
     }
 

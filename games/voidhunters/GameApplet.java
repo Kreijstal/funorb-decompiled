@@ -609,7 +609,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     if (decompiledFrameCompleted0) {
                       var4 = var2.substring(6, var3);
                       if (SetPointDefenceLaserAimarc.a((CharSequence) ((Object) var4), 10) &&
-                        !(lob.a(-121, (CharSequence) ((Object) var4)) >= 10)) {
+                        !(NebulaFieldFactory.a(-121, (CharSequence) ((Object) var4)) >= 10)) {
                         this.showGameError("wrongjava", 0);
                         decompiledFrameRemainder3 = (var5 != 0);
                       }
@@ -665,7 +665,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     var3_ref_Throwable = decompiledCaughtException;
                   }
                 }
-                ara.a(27671);
+                MovingObject.a(27671);
                 this.rebuildCanvas(-78);
                 SetClientSideDragging.field_q = SetBurstFireRegenerationRate.a((byte) 3, (java.awt.Component) ((Object) igb.field_a), SetPointDefenceLaserReload.field_p, GetDebrisSurvives.field_p);
                 this.initializeGame(false);

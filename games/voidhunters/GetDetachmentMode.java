@@ -35,10 +35,10 @@ final class GetDetachmentMode extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 < 114) {
-          GetDetachmentMode.a(4);
+          GetDetachmentMode.clearSharedReferences(4);
         }
     }
 

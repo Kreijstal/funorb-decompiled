@@ -5,7 +5,7 @@ final class GetUseSprites extends ConsoleCommand {
     static llb field_p;
     static int field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 > -81) {
           field_o = 65;

@@ -9,11 +9,11 @@ final class SetMessageFadetime extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         field_o = null;
         if (param0 != 32) {
-          SetMessageFadetime.e((byte) 122);
+          SetMessageFadetime.clearSharedReferences((byte) 122);
         }
     }
 
@@ -53,7 +53,7 @@ final class SetMessageFadetime extends ConsoleCommand {
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          rg.field_b = false;
+          RemoveEventActionFactory.field_b = false;
           vu.field_xb = false;
           if (SetPointDefenceLaserAimarc.field_o != null &&
             SetPointDefenceLaserAimarc.field_o.field_z) {

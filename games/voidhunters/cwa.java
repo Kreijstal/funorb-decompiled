@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class cwa {
-    static dja field_a;
+    static GameStateFactory field_a;
     static String field_b;
     static llb field_c;
     private static String field_z;
@@ -18,6 +18,6 @@ final class cwa {
 
     static {
         field_z = "cwa.A(";
-        field_a = (dja) ((Object) new cla());
+        field_a = (GameStateFactory) ((Object) new IncrementVariableActionFactory());
     }
 }

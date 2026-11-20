@@ -7,7 +7,7 @@ final class lsa extends IntrusiveNode {
     int field_d;
     static llb field_e;
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -92) {
           field_f = 37L;
           field_e = null;
@@ -30,7 +30,7 @@ final class lsa extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 > -2) {
-            lsa.c((byte) -36);
+            lsa.clearSharedReferences((byte) -36);
           }
           if (param2) {
             stackIn_6_0 = bl.field_x.b(param0);

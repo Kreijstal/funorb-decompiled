@@ -92,7 +92,7 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
         int var12 = 0;
         var12 = VoidHunters.field_G;
         try {
-          wqa.field_a = -1L;
+          BodyInZoneConditionFactory.field_a = -1L;
           vu.field_zb = param0;
           SetThrusterForce.field_o = param6;
           ocb.field_l = param0.length;
@@ -112,7 +112,7 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
           SetMachineGunAimarc.field_q = param9.field_lb;
           SetMachineGunAimarc.field_q.clear(109);
           GetReverbWet.field_o = new pr(param3);
-          cla.field_b = -1;
+          IncrementVariableActionFactory.field_b = -1;
           SetLaserRandomness.field_p = 0;
           GetMachineGunPulsetime.field_q = 0;
           SetShieldsDirectionalArcParticleSpeedDownshift.field_q = -1;

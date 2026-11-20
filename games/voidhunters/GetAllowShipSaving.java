@@ -55,7 +55,7 @@ final class GetAllowShipSaving extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= -119) {
-            stackIn_4_0 = new ConsoleValue(mbb.field_b);
+            stackIn_4_0 = new ConsoleValue(SetShipTeamActionFactory.field_b);
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

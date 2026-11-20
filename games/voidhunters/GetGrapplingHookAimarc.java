@@ -69,7 +69,7 @@ final class GetGrapplingHookAimarc extends ConsoleCommand {
             var8 = hob.a(OpenGlGpuToolkit.field_Jc, fbb.field_j[param2], 121) + param2;
           }
           var9 = fa.field_d[var8];
-          var10 = coa.a(var7, 100, var6, var9);
+          var10 = ServerInfo.a(var7, 100, var6, var9);
           var10.field_e.d(-1);
           var5 = new nl();
           var5.field_i = param4;
@@ -79,7 +79,7 @@ final class GetGrapplingHookAimarc extends ConsoleCommand {
           var5.field_h = true;
           var5.field_d = var10;
           var5.field_g = true;
-          gtb.field_d.addLast(-10258, var5);
+          PlayerReady.field_d.addLast(-10258, var5);
         }
         var6Lifetime1 = 116 % ((param3 - 14) / 45);
     }

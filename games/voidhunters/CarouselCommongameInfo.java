@@ -12,25 +12,25 @@ final class CarouselCommongameInfo implements DiffableState {
     boolean field_k;
     private String field_j;
     private mfa field_l;
-    af field_d;
+    BlackBoxRecording field_d;
     IntrusiveDeque field_f;
     int field_c;
-    private tja[] field_a;
+    private CarouselSlot[] field_a;
     private boolean field_e;
 
     private final void b(IsaacPacketBuffer param0, byte param1) {
-        uqb var5 = null;
-        tja var3 = null;
+        CarouselEvent var5 = null;
+        CarouselSlot var3 = null;
         int var4 = VoidHunters.field_G;
         try {
           this.field_g = param0.readBits(0, SetMissilesTopSpeed.field_p);
           if (param1 <= 35) {
             this.field_b = false;
           }
-          var5 = (uqb) (this.field_f.first(0));
+          var5 = (CarouselEvent) (this.field_f.first(0));
           while (var5 != null) {
             var5.field_g = false;
-            var5 = (uqb) (this.field_f.next((byte) 88));
+            var5 = (CarouselEvent) (this.field_f.next((byte) 88));
           }
           var3 = this.b(28120);
           var3.readState(param0, false);
@@ -39,9 +39,9 @@ final class CarouselCommongameInfo implements DiffableState {
         }
     }
 
-    final tja a(int param0, int param1) {
+    final CarouselSlot a(int param0, int param1) {
         if (param1 > -65) {
-          return (tja) null;
+          return (CarouselSlot) null;
         }
         if (param0 == 0) {
           return this.b(28120);
@@ -67,15 +67,15 @@ final class CarouselCommongameInfo implements DiffableState {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (fjb.field_b.startsWith("win")) {
+          if (MessageFactory.field_b.startsWith("win")) {
             stackIn_5_0 = param1 + ".dll";
             return stackIn_5_0;
           }
-          if (fjb.field_b.startsWith("linux")) {
+          if (MessageFactory.field_b.startsWith("linux")) {
             stackIn_12_0 = "lib" + param1 + ".so";
             return stackIn_12_0;
           }
-          if (!fjb.field_b.startsWith("mac")) {
+          if (!MessageFactory.field_b.startsWith("mac")) {
             return null;
           }
           stackIn_10_0 = "lib" + param1 + ".dylib";
@@ -103,9 +103,9 @@ final class CarouselCommongameInfo implements DiffableState {
           if (param1) {
             var4_int = lla.field_b;
           }
-          this.field_a = new tja[var4_int];
+          this.field_a = new CarouselSlot[var4_int];
           for (var5 = 0; this.field_a.length > var5; var5++) {
-            this.field_a[var5] = (tja) (gva.field_a.a((byte) 94));
+            this.field_a[var5] = (CarouselSlot) (gva.field_a.create((byte) 94));
           }
           this.field_f = new IntrusiveDeque();
           this.field_l = param0;
@@ -127,7 +127,7 @@ final class CarouselCommongameInfo implements DiffableState {
             this.field_j = (String) null;
           }
           var3.field_i = this.field_i;
-          var3.field_a = (tja[]) (SpriteDimensions.a(var3.field_a, this.field_a, 1, gva.field_a, false));
+          var3.field_a = (CarouselSlot[]) (SpriteDimensions.a(var3.field_a, this.field_a, 1, gva.field_a, false));
           this.b(param1, -128);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mib.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -144,7 +144,7 @@ final class CarouselCommongameInfo implements DiffableState {
           }
         }
         if (param2 != 0) {
-          this.field_a = (tja[]) null;
+          this.field_a = (CarouselSlot[]) null;
         }
     }
 
@@ -209,8 +209,8 @@ final class CarouselCommongameInfo implements DiffableState {
         wc var4;
         Object var5;
         Object var6;
-        uqb var7;
-        uqb var8;
+        CarouselEvent var7;
+        CarouselEvent var8;
         int var9;
         int var3;
         var9 = VoidHunters.field_G;
@@ -221,10 +221,10 @@ final class CarouselCommongameInfo implements DiffableState {
           var4 = new wc(this.field_f);
           var5 = null;
           var6 = null;
-          var7 = (uqb) (var3_ref_wc.c(570));
+          var7 = (CarouselEvent) (var3_ref_wc.c(570));
           scanLoop1: while (true) {
             if (var7 != null) {
-              var8 = (uqb) (var4.c(570));
+              var8 = (CarouselEvent) (var4.c(570));
               while (var8 != null) {
                 if (var7 != var8 &&
                   !var7.differsFrom((byte) -51, var8)) {
@@ -232,17 +232,17 @@ final class CarouselCommongameInfo implements DiffableState {
                   var6 = var8;
                   break scanLoop1;
                 }
-                var8 = (uqb) (var4.a(19072));
+                var8 = (CarouselEvent) (var4.a(19072));
               }
-              var7 = (uqb) (var3_ref_wc.a(19072));
+              var7 = (CarouselEvent) (var3_ref_wc.a(19072));
               continue;
             }
             break;
           }
           if (var5 != null &&
             var6 != null) {
-            ((uqb) (var5)).unlink(-3846);
-            ((uqb) (var6)).unlink(-3846);
+            ((CarouselEvent) (var5)).unlink(-3846);
+            ((CarouselEvent) (var6)).unlink(-3846);
             var2 = 1;
           }
         } while (var2 != 0);
@@ -257,7 +257,7 @@ final class CarouselCommongameInfo implements DiffableState {
         return this.field_h;
     }
 
-    final boolean a(int param0, uqb param1) {
+    final boolean a(int param0, CarouselEvent param1) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -265,7 +265,7 @@ final class CarouselCommongameInfo implements DiffableState {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
-        uqb var5 = null;
+        CarouselEvent var5 = null;
         var4 = VoidHunters.field_G;
         try {
           if (param1.field_e <= this.field_g - (wsb.field_b - param0)) {
@@ -277,14 +277,14 @@ final class CarouselCommongameInfo implements DiffableState {
             param1.field_d = null;
           } else {
             if (ujb.field_j) {
-              var5 = (uqb) (this.field_f.first(param0 - 1));
+              var5 = (CarouselEvent) (this.field_f.first(param0 - 1));
               while (var5 != null) {
                 if (param1 != var5 &&
                   !var5.differsFrom((byte) -41, param1)) {
                   var5.field_f = true;
                   return true;
                 }
-                var5 = (uqb) (this.field_f.next((byte) 121));
+                var5 = (CarouselEvent) (this.field_f.next((byte) 121));
               }
             }
           }
@@ -334,7 +334,7 @@ final class CarouselCommongameInfo implements DiffableState {
     }
 
     private final void a(int param0, IsaacPacketBuffer param1) {
-        tja var3 = null;
+        CarouselSlot var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -385,7 +385,7 @@ final class CarouselCommongameInfo implements DiffableState {
             GetSniperCannonAimarc.a(-6940, "int carouselslot has changed. before=" + var6.field_i + ", now=" + this.field_i);
             var4 = 1;
           }
-          tja.a(var6.field_a, 1, this.field_a, false, 5547);
+          CarouselSlot.a(var6.field_a, 1, this.field_a, false, 5547);
           SetUseFilledPolygons.a(1, this.field_f, 13, false, var6.field_f);
           if (SetCountermeasureLauncherAimspeed.a(var6.field_a, false, 1, this.field_a, -66)) {
             var4 = 1;
@@ -438,20 +438,20 @@ final class CarouselCommongameInfo implements DiffableState {
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
         RuntimeException decompiledCaughtException = null;
-        uqb[] var3 = null;
+        CarouselEvent[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        tja var5 = null;
+        CarouselSlot var5 = null;
         int var7 = 0;
         SerializableGameState[] var8 = null;
-        uqb[] var9 = null;
-        uqb var10 = null;
+        CarouselEvent[] var9 = null;
+        CarouselEvent var10 = null;
         int var4Lifetime1;
         var7 = VoidHunters.field_G;
         try {
           this.field_f = new IntrusiveDeque();
           var8 = (SerializableGameState[]) null;
-          var9 = (uqb[]) (SetAutoDetail.a(12, wc.field_a, param0, 1, -71, (SerializableGameState[]) null));
+          var9 = (CarouselEvent[]) (SetAutoDetail.a(12, wc.field_a, param0, 1, -71, (SerializableGameState[]) null));
           var3 = var9;
           if (var3 != null) {
             for (var4 = 0; var9.length > var4; var4++) {
@@ -459,13 +459,13 @@ final class CarouselCommongameInfo implements DiffableState {
             }
           }
           this.field_g = param0.readBits(param1 ^ -19, SetMissilesTopSpeed.field_p);
-          var10 = (uqb) (this.field_f.first(0));
+          var10 = (CarouselEvent) (this.field_f.first(0));
           if (param1 != -19) {
             this.c((byte) -98);
           }
           while (var10 != null) {
             var10.field_g = false;
-            var10 = (uqb) (this.field_f.next((byte) 40));
+            var10 = (CarouselEvent) (this.field_f.next((byte) 40));
           }
           var4Lifetime1 = this.field_a.length - 1;
           if (var4Lifetime1 > this.field_g) {
@@ -570,9 +570,9 @@ final class CarouselCommongameInfo implements DiffableState {
         this.field_c = 0;
     }
 
-    final tja b(int param0) {
+    final CarouselSlot b(int param0) {
         if (param0 != 28120) {
-          this.field_d = (af) null;
+          this.field_d = (BlackBoxRecording) null;
         }
         if (this.field_b) {
           return this.a(0);
@@ -600,7 +600,7 @@ final class CarouselCommongameInfo implements DiffableState {
         int var7 = 0;
         SerializableGameState var8 = null;
         int var3_int = 0;
-        tja var12 = null;
+        CarouselSlot var12 = null;
         int var9 = VoidHunters.field_G;
         try {
           var11 = param0;
@@ -633,7 +633,7 @@ final class CarouselCommongameInfo implements DiffableState {
         }
     }
 
-    private final tja a(int param0) {
+    private final CarouselSlot a(int param0) {
         if (param0 != 0) {
           this.field_c = -42;
         }
@@ -648,14 +648,14 @@ final class CarouselCommongameInfo implements DiffableState {
         Object var3;
         int var4;
         int var5;
-        uqb var6_ref_uqb;
+        CarouselEvent var6_ref_uqb;
         int var6;
         PrintStream var7;
         int var7_int;
         PrintStream var9;
-        tja var10;
+        CarouselSlot var10;
         int var11;
-        uqb var12;
+        CarouselEvent var12;
         wc var13;
         StringBuilder var14;
         int var4Lifetime1;
@@ -678,9 +678,9 @@ final class CarouselCommongameInfo implements DiffableState {
         var4Lifetime1 = this.field_g;
         var5 = this.field_g;
         if (param1 != 106) {
-          this.field_a = (tja[]) null;
+          this.field_a = (CarouselSlot[]) null;
         }
-        var6_ref_uqb = (uqb) (this.field_f.first(0));
+        var6_ref_uqb = (CarouselEvent) (this.field_f.first(0));
         while (var6_ref_uqb != null) {
           if (this.field_g - this.field_a.length > var6_ref_uqb.field_e) {
             var6_ref_uqb.unlink(-3846);
@@ -689,14 +689,14 @@ final class CarouselCommongameInfo implements DiffableState {
               var5 > var6_ref_uqb.field_e) {
               var7_int = 0;
               var13 = new wc(this.field_f);
-              var12 = (uqb) (var13.c(570));
+              var12 = (CarouselEvent) (var13.c(570));
               while (true) {
                 if (var12 != null) {
                   if (var6_ref_uqb != var12 &&
                     !var12.differsFrom((byte) -55, var6_ref_uqb)) {
                     var7_int = 1;
                   } else {
-                    var12 = (uqb) (var13.a(19072));
+                    var12 = (CarouselEvent) (var13.a(19072));
                     continue;
                   }
                 }
@@ -712,7 +712,7 @@ final class CarouselCommongameInfo implements DiffableState {
               var4Lifetime1 = var6_ref_uqb.field_e;
             }
           }
-          var6_ref_uqb = (uqb) (this.field_f.next((byte) 52));
+          var6_ref_uqb = (CarouselEvent) (this.field_f.next((byte) 52));
         }
         if (0 > this.field_c && (nv.field_o == 0 ||
           (param0 & nv.field_o) != 0)) {
@@ -750,8 +750,8 @@ final class CarouselCommongameInfo implements DiffableState {
     }
 
     private final void c(int param0, int param1) {
-        tja stackIn_23_0;
-        tja stackIn_23_1;
+        CarouselSlot stackIn_23_0;
+        CarouselSlot stackIn_23_1;
         int stackIn_23_2;
         int stackIn_23_3;
         boolean stackIn_24_4 = false;
@@ -760,9 +760,9 @@ final class CarouselCommongameInfo implements DiffableState {
         int var5;
         int var6;
         int var7;
-        uqb var8_ref_uqb;
+        CarouselEvent var8_ref_uqb;
         int var8;
-        tja var9;
+        CarouselSlot var9;
         int var10;
         var10 = VoidHunters.field_G;
         var3 = (this.field_i + this.field_a.length - param0) % this.field_a.length;
@@ -789,20 +789,20 @@ final class CarouselCommongameInfo implements DiffableState {
           if (ProxyAuthenticationException.field_c == 1) {
             this.b((byte) 71);
           }
-          var8_ref_uqb = (uqb) (this.field_f.first(0));
+          var8_ref_uqb = (CarouselEvent) (this.field_f.first(0));
           while (var8_ref_uqb != null) {
             if (var8_ref_uqb.field_e == var4) {
               var8_ref_uqb.a((byte) -122, this.field_l, this.field_a[var6]);
               var8_ref_uqb.field_g = false;
             }
-            var8_ref_uqb = (uqb) (this.field_f.next((byte) 117));
+            var8_ref_uqb = (CarouselEvent) (this.field_f.next((byte) 117));
           }
           stackIn_23_0 = this.field_a[var6];
           stackIn_23_1 = this.field_a[var5];
           stackIn_23_2 = var4;
           stackIn_23_3 = 1;
           stackIn_24_4 = (this.field_g == var4);
-          ((tja) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_24_4);
+          ((CarouselSlot) (Object) stackIn_23_0).a(stackIn_23_1, stackIn_23_2, stackIn_23_3, stackIn_24_4);
           if (GetUseOffscreenRendering.field_o) {
             uea.c(9487);
             var8 = SetTestActionLag.a(this.field_a[var5], (byte) -117);
@@ -832,7 +832,7 @@ final class CarouselCommongameInfo implements DiffableState {
     }
 
     private final void a(int param0, int param1, int param2) {
-        tja var5 = null;
+        CarouselSlot var5 = null;
         int var4 = -85 % ((-55 - param2) / 38);
         if (1 == ko.field_g &&
           param0 == this.field_i) {

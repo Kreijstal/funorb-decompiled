@@ -20,7 +20,7 @@ final class GetLagStandardDeviationOut extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != -2) {
           String var2 = (String) null;
@@ -59,6 +59,6 @@ final class GetLagStandardDeviationOut extends ConsoleCommand {
 
     static {
         field_p = -2;
-        sl discarded$0 = new sl();
+        AsteroidFieldFactory discarded$0 = new AsteroidFieldFactory();
     }
 }

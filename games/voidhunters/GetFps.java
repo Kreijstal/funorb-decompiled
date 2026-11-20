@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetFps extends ConsoleCommand {
-    static dja field_o;
+    static GameStateFactory field_o;
     static String field_p;
 
     GetFps(String param0, Class[] param1, String param2) {
@@ -45,7 +45,7 @@ final class GetFps extends ConsoleCommand {
     }
 
     static {
-        field_o = (dja) ((Object) new ulb());
+        field_o = (GameStateFactory) ((Object) new ShipSpawnedConditionFactory());
         field_p = "ms";
     }
 }

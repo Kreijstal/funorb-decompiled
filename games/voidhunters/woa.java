@@ -19,7 +19,7 @@ final class woa implements wib {
             return;
           }
           if (li.field_i) {
-            nma.field_b[param5].a(param4, param1, -16777216 | param0, true, param2, param6);
+            PlayerReadyFactory.field_b[param5].a(param4, param1, -16777216 | param0, true, param2, param6);
             return;
           }
           ita.a(param5, 7988).b(param6, param2, param1, param0, param4);

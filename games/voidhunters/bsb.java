@@ -6,10 +6,10 @@ final class bsb {
     static long[] field_b;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         if (param0 != 23870) {
-          bsb.a(81);
+          bsb.clearSharedReferences(81);
         }
     }
 

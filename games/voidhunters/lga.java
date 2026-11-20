@@ -17,10 +17,10 @@ final class lga {
 
     final static boolean a(int param0, int param1, int param2) {
         if (param0 == 14216) {
-          return (IncrementVariableAction.a(92, param2, param1) | pca.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & SetDebrisThrowable.a((byte) -49, param2, param1);
+          return (IncrementVariableAction.a(92, param2, param1) | CarouselPlayerEvent.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & SetDebrisThrowable.a((byte) -49, param2, param1);
         }
         lga.a(-124, 11, -116);
-        return (IncrementVariableAction.a(92, param2, param1) | pca.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & SetDebrisThrowable.a((byte) -49, param2, param1);
+        return (IncrementVariableAction.a(92, param2, param1) | CarouselPlayerEvent.a(param0 ^ 14268, param2, param1) | ava.a(param1, param2, false)) & SetDebrisThrowable.a((byte) -49, param2, param1);
     }
 
     final static int a(byte param0, int param1) {
@@ -31,7 +31,7 @@ final class lga {
           return aea.field_b * Particle.field_l * 2;
         }
         if (11 == param1) {
-          return 1 + Particle.field_l * (wha.field_a + 300);
+          return 1 + Particle.field_l * (AsteroidFactory.field_a + 300);
         }
         if (param1 == 3) {
           return 120 * Particle.field_l;

@@ -84,7 +84,7 @@ final class sn extends os implements oo {
               var4 = param2.field_f;
               if (param2.field_d == 248) {
                 if (!param0) {
-                  qlb.b((byte) -75);
+                  MapClearanceAreaFactory.b((byte) -75);
                 }
                 var4 = GetMissionTerrainAsteroidProbability.field_q;
                 this.field_ab = true;
@@ -143,7 +143,7 @@ final class sn extends os implements oo {
     }
 
     sn(ida param0, rq param1) {
-        super(param0, GetBoostersCooldown.field_r, oma.field_c, false, false);
+        super(param0, GetBoostersCooldown.field_r, CommonGameState.field_c, false, false);
         try {
           this.field_X = param1;
         } catch (RuntimeException runtimeException) {

@@ -135,9 +135,9 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != 42) {
-          SetSniperCannonRandomness.e((byte) -19);
+          SetSniperCannonRandomness.clearSharedReferences((byte) -19);
         }
         field_p = null;
     }

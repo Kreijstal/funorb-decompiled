@@ -14,7 +14,7 @@ final class joa {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = vga.a(agb.a(param0, -49), -128);
+          var2 = vga.a(AdjustBodyComponentsActionFactory.a(param0, -49), -128);
           if (param1) {
             field_b = (int[]) null;
           }
@@ -125,7 +125,7 @@ final class joa {
         return stackIn_30_0;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         if (param0 != 26936) {
           joa.a(-25, -71, 87, 48, 85, 34, -54, 36);

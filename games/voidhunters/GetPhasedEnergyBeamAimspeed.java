@@ -9,7 +9,7 @@ final class GetPhasedEnergyBeamAimspeed extends ConsoleCommand {
           if (GetSpinningBladeAimspeed.field_q == 11) {
             ana.c((byte) 111);
           }
-          uob.a(dga.field_a, (byte) 106, mnb.field_g, dkb.field_b);
+          uob.a(dga.field_a, (byte) 106, mnb.field_g, NebulaFactory.field_b);
           if (!param1) {
             GetPhasedEnergyBeamAimspeed.clearSharedReferences(73);
           }

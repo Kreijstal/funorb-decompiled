@@ -3,7 +3,7 @@
  */
 final class ii implements d {
     static String field_g;
-    static dja field_d;
+    static GameStateFactory field_d;
     private opa[] field_b;
     private ehb field_f;
     private asb field_e;
@@ -66,12 +66,12 @@ final class ii implements d {
         return stackIn_6_0;
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         field_d = null;
         field_g = null;
         if (param0 != 25498) {
-          ii.b(116);
+          ii.clearSharedReferences(116);
         }
     }
 
@@ -281,7 +281,7 @@ final class ii implements d {
 
     static {
         field_g = "Next event";
-        field_d = (dja) ((Object) new upa());
+        field_d = (GameStateFactory) ((Object) new ShipComponentFactory());
         field_a = "Assault";
     }
 }

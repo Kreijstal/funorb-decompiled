@@ -32,14 +32,14 @@ abstract class ComponentBehaviour implements DiffableState {
     public void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 > -109) {
-            ComponentBehaviour.b(78);
+            ComponentBehaviour.clearSharedReferences(78);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "eka.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    int a(byte param0) {
+    int getAimArc(byte param0) {
         if (param0 > -100) {
           return 10;
         }
@@ -98,13 +98,13 @@ abstract class ComponentBehaviour implements DiffableState {
 
     final boolean a(int param0) {
         if (param0 != 0) {
-          this.a((byte) 90);
+          this.getAimArc((byte) 90);
           return false;
         }
         return false;
     }
 
-    int b(byte param0) {
+    int getAimSpeed(byte param0) {
         if (param0 <= 98) {
           field_a = (String) null;
           return 0;
@@ -143,10 +143,10 @@ abstract class ComponentBehaviour implements DiffableState {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != 0) {
-          ComponentBehaviour.b(-83);
+          ComponentBehaviour.clearSharedReferences(-83);
         }
     }
 

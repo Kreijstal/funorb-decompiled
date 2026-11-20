@@ -38,9 +38,9 @@ final class SetGrappleDebris extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 <= 49) {
-          SetGrappleDebris.e((byte) -37);
+          SetGrappleDebris.clearSharedReferences((byte) -37);
           field_o = null;
           return;
         }

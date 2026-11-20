@@ -7,7 +7,7 @@ final class hab extends uda {
     static int field_i;
     static String field_j;
     static int field_h;
-    static wfb[] field_g;
+    static ShipComponentDefinition[] field_g;
     static String field_e;
 
     final void b(int param0, boolean param1) {

@@ -33,7 +33,7 @@ final class hpb extends TextureOperation {
         return var10;
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_j = null;
         if (param0 != -6200) {
           field_k = -61L;

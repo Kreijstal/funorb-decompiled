@@ -98,7 +98,7 @@ final class GetBuildViewAutozoomTimeout extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 2);
           }
-          stackIn_3_0 = new ConsoleValue(mbb.field_c);
+          stackIn_3_0 = new ConsoleValue(SetShipTeamActionFactory.field_c);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

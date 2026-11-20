@@ -13,7 +13,7 @@ final class GetUseRectOutline extends ConsoleCommand {
           }
           SetAutozoomSpeedDivide.field_p.field_F = 1;
           SetAutozoomSpeedDivide.field_p.field_w = SetAutoAfkTimeout.field_q.field_w;
-          if (nf.field_a > 0) {
+          if (CarouselPlayerEventFactory.field_a > 0) {
             soa.a(param0, -99, param7, param5);
           }
           if (~SetExplosionPushMultiplier.field_p < param1) {
@@ -22,12 +22,12 @@ final class GetUseRectOutline extends ConsoleCommand {
           if (GetTorpedoProjectileDamage.field_o &&
             SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
             DualLinkNode.field_f.field_y = false;
-            tja.field_a.field_xb.field_R = SetPhasedEnergyBeamPulsetime.field_q;
-            igb.a(tja.field_a.field_wb, (byte) -93);
+            CarouselSlot.field_a.field_xb.field_R = SetPhasedEnergyBeamPulsetime.field_q;
+            igb.a(CarouselSlot.field_a.field_wb, (byte) -93);
           } else {
-            tja.field_a.field_xb.field_R = null;
+            CarouselSlot.field_a.field_xb.field_R = null;
             DualLinkNode.field_f.field_y = true;
-            SetTorpedoProjectiles.a(param6, (byte) 1, tja.field_a, param4, param5);
+            SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
           }
         } else {
           if (GetShieldsDirectionalArcParticleLife.field_p != dma.field_g) {
@@ -37,10 +37,10 @@ final class GetUseRectOutline extends ConsoleCommand {
                 if (null == SetThrusterParticleSpeedDownshift.field_o) {
                   SetGrapplingHookMinLength.a(5);
                 } else {
-                  ok.a((byte) 100, true);
+                  ShipBodyFactory.a((byte) 100, true);
                 }
               } else {
-                ok.a((byte) 100, false);
+                ShipBodyFactory.a((byte) 100, false);
               }
             }
             if (!param7) {
@@ -51,7 +51,7 @@ final class GetUseRectOutline extends ConsoleCommand {
               }
               SetAutozoomSpeedDivide.field_p.field_F = 1;
               SetAutozoomSpeedDivide.field_p.field_w = SetAutoAfkTimeout.field_q.field_w;
-              if (nf.field_a > 0) {
+              if (CarouselPlayerEventFactory.field_a > 0) {
                 soa.a(param0, -99, param7, param5);
               }
               if (~SetExplosionPushMultiplier.field_p < param1) {
@@ -60,12 +60,12 @@ final class GetUseRectOutline extends ConsoleCommand {
               if (GetTorpedoProjectileDamage.field_o &&
                 SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
                 DualLinkNode.field_f.field_y = false;
-                tja.field_a.field_xb.field_R = SetPhasedEnergyBeamPulsetime.field_q;
-                igb.a(tja.field_a.field_wb, (byte) -93);
+                CarouselSlot.field_a.field_xb.field_R = SetPhasedEnergyBeamPulsetime.field_q;
+                igb.a(CarouselSlot.field_a.field_wb, (byte) -93);
               } else {
-                tja.field_a.field_xb.field_R = null;
+                CarouselSlot.field_a.field_xb.field_R = null;
                 DualLinkNode.field_f.field_y = true;
-                SetTorpedoProjectiles.a(param6, (byte) 1, tja.field_a, param4, param5);
+                SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
               }
             } else {
               SetUseDetailLines.field_o = GetVelocitySustain.field_p;
@@ -75,7 +75,7 @@ final class GetUseRectOutline extends ConsoleCommand {
               }
               SetAutozoomSpeedDivide.field_p.field_F = 1;
               SetAutozoomSpeedDivide.field_p.field_w = SetAutoAfkTimeout.field_q.field_w;
-              if (nf.field_a > 0) {
+              if (CarouselPlayerEventFactory.field_a > 0) {
                 soa.a(param0, -99, param7, param5);
               }
               if (~SetExplosionPushMultiplier.field_p < param1) {
@@ -84,12 +84,12 @@ final class GetUseRectOutline extends ConsoleCommand {
               if (GetTorpedoProjectileDamage.field_o &&
                 SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
                 DualLinkNode.field_f.field_y = false;
-                tja.field_a.field_xb.field_R = SetPhasedEnergyBeamPulsetime.field_q;
-                igb.a(tja.field_a.field_wb, (byte) -93);
+                CarouselSlot.field_a.field_xb.field_R = SetPhasedEnergyBeamPulsetime.field_q;
+                igb.a(CarouselSlot.field_a.field_wb, (byte) -93);
               } else {
-                tja.field_a.field_xb.field_R = null;
+                CarouselSlot.field_a.field_xb.field_R = null;
                 DualLinkNode.field_f.field_y = true;
-                SetTorpedoProjectiles.a(param6, (byte) 1, tja.field_a, param4, param5);
+                SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
               }
             }
           } else {
@@ -100,10 +100,10 @@ final class GetUseRectOutline extends ConsoleCommand {
                 if (null == SetThrusterParticleSpeedDownshift.field_o) {
                   SetGrapplingHookMinLength.a(5);
                 } else {
-                  ok.a((byte) 100, true);
+                  ShipBodyFactory.a((byte) 100, true);
                 }
               } else {
-                ok.a((byte) 100, false);
+                ShipBodyFactory.a((byte) 100, false);
               }
             }
             if (!param7) {
@@ -114,7 +114,7 @@ final class GetUseRectOutline extends ConsoleCommand {
               }
               SetAutozoomSpeedDivide.field_p.field_F = 1;
               SetAutozoomSpeedDivide.field_p.field_w = SetAutoAfkTimeout.field_q.field_w;
-              if (nf.field_a > 0) {
+              if (CarouselPlayerEventFactory.field_a > 0) {
                 soa.a(param0, -99, param7, param5);
               }
               if (~SetExplosionPushMultiplier.field_p < param1) {
@@ -123,12 +123,12 @@ final class GetUseRectOutline extends ConsoleCommand {
               if (GetTorpedoProjectileDamage.field_o &&
                 SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
                 DualLinkNode.field_f.field_y = false;
-                tja.field_a.field_xb.field_R = SetPhasedEnergyBeamPulsetime.field_q;
-                igb.a(tja.field_a.field_wb, (byte) -93);
+                CarouselSlot.field_a.field_xb.field_R = SetPhasedEnergyBeamPulsetime.field_q;
+                igb.a(CarouselSlot.field_a.field_wb, (byte) -93);
               } else {
-                tja.field_a.field_xb.field_R = null;
+                CarouselSlot.field_a.field_xb.field_R = null;
                 DualLinkNode.field_f.field_y = true;
-                SetTorpedoProjectiles.a(param6, (byte) 1, tja.field_a, param4, param5);
+                SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
               }
             } else {
               SetUseDetailLines.field_o = GetVelocitySustain.field_p;
@@ -138,25 +138,25 @@ final class GetUseRectOutline extends ConsoleCommand {
               }
               SetAutozoomSpeedDivide.field_p.field_F = 1;
               SetAutozoomSpeedDivide.field_p.field_w = SetAutoAfkTimeout.field_q.field_w;
-              if (nf.field_a > 0) {
+              if (CarouselPlayerEventFactory.field_a > 0) {
                 soa.a(param0, -99, param7, param5);
               }
               if (~SetExplosionPushMultiplier.field_p < param1) {
                 fka.a(param5, (byte) 105, param8, param0, param7);
               }
               if (!GetTorpedoProjectileDamage.field_o) {
-                tja.field_a.field_xb.field_R = null;
+                CarouselSlot.field_a.field_xb.field_R = null;
                 DualLinkNode.field_f.field_y = true;
-                SetTorpedoProjectiles.a(param6, (byte) 1, tja.field_a, param4, param5);
+                SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
               } else {
                 if (SetSpinningBladeSpindamageMultiplier.field_o.field_zb < SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
-                  tja.field_a.field_xb.field_R = null;
+                  CarouselSlot.field_a.field_xb.field_R = null;
                   DualLinkNode.field_f.field_y = true;
-                  SetTorpedoProjectiles.a(param6, (byte) 1, tja.field_a, param4, param5);
+                  SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
                 } else {
                   DualLinkNode.field_f.field_y = false;
-                  tja.field_a.field_xb.field_R = SetPhasedEnergyBeamPulsetime.field_q;
-                  igb.a(tja.field_a.field_wb, (byte) -93);
+                  CarouselSlot.field_a.field_xb.field_R = SetPhasedEnergyBeamPulsetime.field_q;
+                  igb.a(CarouselSlot.field_a.field_wb, (byte) -93);
                 }
               }
             }
@@ -205,14 +205,14 @@ final class GetUseRectOutline extends ConsoleCommand {
         if (ar.field_d) {
           return;
         }
-        if (fjb.field_c == null) {
-          fjb.field_c = drb.a(true, 6);
+        if (MessageFactory.field_c == null) {
+          MessageFactory.field_c = drb.a(true, 6);
         }
-        if (!fjb.field_c.field_d) {
+        if (!MessageFactory.field_c.field_d) {
           return;
         }
-        fab.a(-29365, fjb.field_c.field_f);
-        fjb.field_c = null;
+        fab.a(-29365, MessageFactory.field_c.field_f);
+        MessageFactory.field_c = null;
         ar.field_d = true;
         ilb.a((byte) -114);
         SetKeepTeamColours.a(15334);

@@ -13,16 +13,16 @@ final class nrb implements wwa {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         field_a = null;
         if (param0 != 11227) {
-          nrb.a(-127);
+          nrb.clearSharedReferences(-127);
         }
     }
 
     static {
-        blb discarded$0 = new blb();
+        TimedSpecialOrderBehaviourFactory discarded$0 = new TimedSpecialOrderBehaviourFactory();
         field_a = "Decline invitation to <%0>'s game";
     }
 }

@@ -27,10 +27,10 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
 
     final static boolean a(int param0, int param1) {
         if (param1 == 11284) {
-          return 0 != (param0 & kf.field_a) ? true : false;
+          return 0 != (param0 & DebugMessageFactory.field_a) ? true : false;
         }
         field_p = (String) null;
-        return 0 != (param0 & kf.field_a) ? true : false;
+        return 0 != (param0 & DebugMessageFactory.field_a) ? true : false;
     }
 
     GetPointDefenceLaserProjectiles(String param0, Class[] param1, String param2) {

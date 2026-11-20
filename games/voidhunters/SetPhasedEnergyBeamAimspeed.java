@@ -6,7 +6,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
     static java.awt.Image field_p;
     static String field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 != 0) {
           SetPhasedEnergyBeamAimspeed.a(48, false);
@@ -30,7 +30,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(124, 62, arguments[0].intValue(93));
           if (obfuscationGuard > -119) {
-            SetPhasedEnergyBeamAimspeed.a(-23);
+            SetPhasedEnergyBeamAimspeed.clearSharedReferences(-23);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -94,7 +94,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
             stackIn_71_1 = (param1) && (!bv.field_d);
             ((llb) (Object) stackIn_70_0).b(stackIn_71_1, 113);
           }
-          if (!(nf.field_a <= 0) ||
+          if (!(CarouselPlayerEventFactory.field_a <= 0) ||
             !(SetExplosionPushMultiplier.field_p <= 0)) {
             if (null == kl.field_c) {
               stackIn_79_0 = rga.field_g;
@@ -127,7 +127,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
             stackIn_14_1 = (param1) && (!bv.field_d);
             ((llb) (Object) stackIn_13_0).b(stackIn_14_1, 113);
           }
-          if (nf.field_a > 0) {
+          if (CarouselPlayerEventFactory.field_a > 0) {
             if (null == kl.field_c) {
               stackIn_20_0 = rga.field_g;
               stackIn_21_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);

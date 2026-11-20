@@ -380,10 +380,10 @@ abstract class oda extends shb implements nea {
         super(param0, param1, param2, param3, param4, (sba) null);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_t = null;
         if (param0 != 0) {
-          oda.a(68);
+          oda.clearSharedReferences(68);
         }
     }
 

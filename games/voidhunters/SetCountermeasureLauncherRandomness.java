@@ -73,7 +73,7 @@ final class SetCountermeasureLauncherRandomness extends ConsoleCommand {
           }
           var8 = stackIn_7_0;
           if (param4 >= -41) {
-            SetCountermeasureLauncherRandomness.a(110);
+            SetCountermeasureLauncherRandomness.clearSharedReferences(110);
           }
           if (dma.field_a <= var5_int) {
             stackIn_12_0 = dma.field_a;
@@ -149,7 +149,7 @@ final class SetCountermeasureLauncherRandomness extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 1511754497) {
           SetCountermeasureLauncherRandomness.a(-121, 80, -93, -27, (byte) -68);

@@ -23,15 +23,15 @@ final class uga extends qg {
     final static void d(int param0) {
         if (param0 != -10128) {
           uga.d(115);
-          if (null != efb.field_b) {
-            efb.field_b.field_b = true;
+          if (null != MissionConditionFactory.field_b) {
+            MissionConditionFactory.field_b.field_b = true;
             mb.h(1, 117);
             return;
           }
           throw new IllegalStateException("NGR");
         }
-        if (null != efb.field_b) {
-          efb.field_b.field_b = true;
+        if (null != MissionConditionFactory.field_b) {
+          MissionConditionFactory.field_b.field_b = true;
           mb.h(1, 117);
           return;
         }

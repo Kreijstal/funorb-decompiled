@@ -3,11 +3,11 @@
  */
 final class AdjustVariableAction extends MissionAction implements DiffableState {
     private int index;
-    static dja field_c;
+    static GameStateFactory field_c;
     static boolean field_a;
     private int mode;
 
-    final ucb a(World param0, int param1) {
+    final WorldPoint getWorldPosition(World param0, int param1) {
         RuntimeException var3 = null;
         Object stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -18,9 +18,9 @@ final class AdjustVariableAction extends MissionAction implements DiffableState 
           if (param1 == 26964) {
             return null;
           }
-          this.a(-98, -31);
+          this.getParameter(-98, -31);
           stackIn_3_0 = null;
-          return (ucb) (stackIn_3_0);
+          return (WorldPoint) (stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -35,7 +35,7 @@ final class AdjustVariableAction extends MissionAction implements DiffableState 
         }
     }
 
-    final void a(World param0, boolean param1, int param2, int param3) {
+    final void setParameter(World param0, boolean param1, int param2, int param3) {
         RuntimeException var5 = null;
         World var6 = null;
         RuntimeException stackIn_10_0 = null;
@@ -55,7 +55,7 @@ final class AdjustVariableAction extends MissionAction implements DiffableState 
             return;
           }
           var6 = (World) null;
-          this.a((World) null, false, 39, -42);
+          this.setParameter((World) null, false, 39, -42);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -71,7 +71,7 @@ final class AdjustVariableAction extends MissionAction implements DiffableState 
         }
     }
 
-    final void a(int param0, int[] param1, GameSnapshot param2) {
+    final void execute(int param0, int[] param1, GameSnapshot param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -154,14 +154,14 @@ final class AdjustVariableAction extends MissionAction implements DiffableState 
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_c = null;
         if (!param0) {
           AdjustVariableAction.b(127);
         }
     }
 
-    final String a(int param0) {
+    final String getDescription(int param0) {
         String var5 = null;
         String var7 = null;
         String var6 = null;
@@ -170,7 +170,7 @@ final class AdjustVariableAction extends MissionAction implements DiffableState 
         int var4 = VoidHunters.field_G;
         int var3Lifetime1;
         if (param0 != -1325) {
-          AdjustVariableAction.a(true);
+          AdjustVariableAction.clearSharedReferences(true);
           var5 = "Unknown mode";
           var3 = this.mode;
           if (var3 != 0) {
@@ -201,7 +201,7 @@ final class AdjustVariableAction extends MissionAction implements DiffableState 
           super.writeState(param0, -116);
           param0.writeBits(-632, this.index, 8);
           if (param1 >= -109) {
-            field_c = (dja) null;
+            field_c = (GameStateFactory) null;
           }
           param0.writeBits(-632, this.mode, 1);
         } catch (RuntimeException runtimeException) {
@@ -320,10 +320,10 @@ final class AdjustVariableAction extends MissionAction implements DiffableState 
     AdjustVariableAction() {
     }
 
-    final int a(int param0, int param1) {
+    final int getParameter(int param0, int param1) {
         if (param1 >= -100) {
           World var4 = (World) null;
-          this.a((World) null, 85);
+          this.getWorldPosition((World) null, 85);
           if (param0 != 0) {
             return this.mode;
           }
@@ -341,6 +341,6 @@ final class AdjustVariableAction extends MissionAction implements DiffableState 
     }
 
     static {
-        field_c = (dja) ((Object) new csb());
+        field_c = (GameStateFactory) ((Object) new PlayerGameDataFactory());
     }
 }

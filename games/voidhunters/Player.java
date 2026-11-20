@@ -3,7 +3,7 @@
  */
 import java.util.*;
 
-final class Player extends bha implements DiffableState {
+final class Player extends CarouselPlayerInfo implements DiffableState {
     int unassignedForAutobalanceTimer;
     int assists;
     int[] carriedOverComponents;
@@ -170,7 +170,7 @@ final class Player extends bha implements DiffableState {
         this.selectedTeam = sja.field_c;
     }
 
-    final void a(boolean param0, tja param1, int param2, int param3) {
+    final void a(boolean param0, CarouselSlot param1, int param2, int param3) {
         GameSnapshot var5 = null;
         Message var6 = null;
         try {
@@ -436,7 +436,7 @@ final class Player extends bha implements DiffableState {
           this.specialorder = -1 + param0.readBits(0, 8);
           this.spawnChoice = param0.readBits(0, 4);
           this.selectedTeam = param0.readBits(0, 4) - 1;
-          this.votes = wkb.a((byte) 37, this.votes, param0, 4);
+          this.votes = SetVariableActionFactory.a((byte) 37, this.votes, param0, 4);
           if (!kv.readBoolean(param1, param0)) {
             this.savedShip = null;
           } else {
@@ -445,7 +445,7 @@ final class Player extends bha implements DiffableState {
             }
             this.savedShip.readState(param0, false);
           }
-          this.carriedOverComponents = wkb.a((byte) 37, this.carriedOverComponents, param0, 8);
+          this.carriedOverComponents = SetVariableActionFactory.a((byte) 37, this.carriedOverComponents, param0, 8);
           this.kills = param0.readBits(0, 16);
           this.assists = param0.readBits(0, 16);
           this.deaths = param0.readBits(0, 16);
@@ -483,7 +483,7 @@ final class Player extends bha implements DiffableState {
         this.kills = 0;
     }
 
-    final void a(tja param0, int param1, int param2, int param3) {
+    final void a(CarouselSlot param0, int param1, int param2, int param3) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -492,7 +492,7 @@ final class Player extends bha implements DiffableState {
         Message var6 = null;
         Ship var7 = null;
         Random var8 = null;
-        tja var9 = null;
+        CarouselSlot var9 = null;
         GameSnapshot var10 = null;
         try {
           this.selectedTeam = -1;
@@ -504,8 +504,8 @@ final class Player extends bha implements DiffableState {
           var6 = new Message(1, param1, param1);
           var10.messageLog.a(var6, true);
           if (param2 != -24354) {
-            var9 = (tja) null;
-            this.a(false, (tja) null, -66, -35);
+            var9 = (CarouselSlot) null;
+            this.a(false, (CarouselSlot) null, -66, -35);
           }
           var7 = var10.world.d(param1, 92);
           if (var7 != null) {

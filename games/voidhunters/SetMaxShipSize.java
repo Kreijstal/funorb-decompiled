@@ -103,6 +103,6 @@ final class SetMaxShipSize extends ConsoleCommand {
 
     static {
         field_o = 1;
-        dtb discarded$0 = new dtb();
+        MissionBuilderFactory discarded$0 = new MissionBuilderFactory();
     }
 }

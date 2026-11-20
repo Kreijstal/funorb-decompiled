@@ -46,8 +46,8 @@ final class GrappleLauncherBehaviour implements DiffableState {
             var9 = Lo.a(param2, 84);
             var10 = param5 + (var9 * GetNumStars.a(param0, (byte) -96) >> 16);
             var11 = param3 + (eu.a(param0, 85) * var9 >> 16);
-            var12 = -var10 + var23.d(false);
-            var13 = -var11 + var23.g((byte) 124);
+            var12 = -var10 + var23.getX(false);
+            var13 = -var11 + var23.getY((byte) 124);
             var14 = ar.a(var12, (byte) 118, var13);
             var15 = -this.ropeLength + var14;
             var16 = 39219;
@@ -58,8 +58,8 @@ final class GrappleLauncherBehaviour implements DiffableState {
               }
               var16 = 39219 + (var17 << 16);
             }
-            var17Lifetime1 = param1.a(var23.d(false), (byte) 115);
-            var18 = param1.b(true, var23.g((byte) 119));
+            var17Lifetime1 = param1.a(var23.getX(false), (byte) 115);
+            var18 = param1.b(true, var23.getY((byte) 119));
             var19 = param1.a(var10, (byte) 122);
             var20 = param1.b(true, var11);
             c.a(var18, var17Lifetime1, var19, var20, -16777216, var16);
@@ -164,7 +164,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
             var16 = (var14 * eu.a(param4, 76) >> 16) + param1;
             var17 = -var12_int + param0;
             var18 = param3 - var13;
-            var19 = ecb.a(var18, (byte) -77, var17);
+            var19 = GameSnapshotFactory.a(var18, (byte) -77, var17);
             var20 = GameKeyHandler.a(22433, var19 - param4);
             if (Math.abs(var20) > 256) {
               return;
@@ -187,14 +187,14 @@ final class GrappleLauncherBehaviour implements DiffableState {
             var22.a(var16, param4, var15, joa.field_a, 1948934248);
             param10.a(var16, GameKeyHandler.a(22433, param4 + 4096), var15, joa.field_a, 1948934248);
             this.hookId = var22.id;
-            this.reload = pca.field_i[0].d((byte) 64);
+            this.reload = CarouselPlayerEvent.field_i[0].d((byte) 64);
             this.targetRopeLength = this.ropeLength;
             return;
           }
           var25 = param8.h(this.hookId, -103);
           if (var25 != null) {
             if (-1 != var25.l((byte) 123)) {
-              qba.a(20382, var25.d(false), 13, var25.g((byte) -69), 50);
+              qba.a(20382, var25.getX(false), 13, var25.getY((byte) -69), 50);
             }
             this.a(32, var25);
             qba.a(20382, param5, 14, param1, 50);
@@ -289,8 +289,8 @@ final class GrappleLauncherBehaviour implements DiffableState {
             var10 = Lo.a(param7, -82);
             var11 = param5 + (var10 * GetNumStars.a(param6, (byte) -125) >> 16);
             var12 = param2 + (var10 * eu.a(param6, 39) >> 16);
-            var13 = var33.d(false) - var11;
-            var14 = var33.g((byte) -54) - var12;
+            var13 = var33.getX(false) - var11;
+            var14 = var33.getY((byte) -54) - var12;
             var15 = ar.a(var13, (byte) 114, var14);
             var16 = var15 - this.ropeLength;
             if (var16 > 0) {
@@ -300,15 +300,15 @@ final class GrappleLauncherBehaviour implements DiffableState {
               if (CarouselSlotStateDump.field_i < var15) {
                 var33.chassis.a(var33.chassis.i((byte) -112).field_p, (byte) -109);
               } else {
-                if (var17_int > nra.field_b) {
-                  var17_int = nra.field_b;
+                if (var17_int > AwardVictoryToTeamActionFactory.field_b) {
+                  var17_int = AwardVictoryToTeamActionFactory.field_b;
                   var16 = var17_int * this.ropeLength >> 8;
                 }
                 var18_int = (var16 * SetPointDefenceLaserEnergyUsed.field_o >> 8) * var13;
                 var19 = var18_int >> 8;
                 var20 = var14 * (SetPointDefenceLaserEnergyUsed.field_o * var16 >> 8);
                 var21_int = var20 >> 8;
-                var33.a(-var21_int, var33.d(false), var33.g((byte) 122), (byte) -128, -var19);
+                var33.a(-var21_int, var33.getX(false), var33.getY((byte) 122), (byte) -128, -var19);
                 param0.a(var21_int, var11, var12, (byte) -117, var19);
                 if (-1 == var33.l((byte) -106)) {
                   this.a(32, var33);
@@ -333,14 +333,14 @@ final class GrappleLauncherBehaviour implements DiffableState {
               var20Lifetime1 = GetNumStars.a(var18.finalangle, (byte) -76);
               var21 = (long)var18.finalx + ((long)var20Lifetime1 * (long)var33.o(23463) - (long)var33.getGrabbedComponentOffsety(32) * (long)var19Lifetime1 >> 16);
               var23 = (long)var18.finaly + ((long)var33.o(23463) * (long)var19Lifetime1 + (long)var33.getGrabbedComponentOffsety(32) * (long)var20Lifetime1 >> 16);
-              var25 = (int)var21 - var33.d(false);
-              var26 = (int)var23 - var33.g((byte) -29);
+              var25 = (int)var21 - var33.getX(false);
+              var26 = (int)var23 - var33.getY((byte) -29);
               var27 = var33.c((byte) -121) - var17.c((byte) -112);
               var28 = var33.f(0) - var17.f(0);
               var29 = Math.min(var33.e(false), var17.e(false) / 4);
               var30 = (var25 - var27) * var29 / 2;
               var31 = (-var28 + var26) * var29 / 2;
-              var33.a(var31, var33.d(false), var33.g((byte) 124), (byte) -118, var30);
+              var33.a(var31, var33.getX(false), var33.getY((byte) 124), (byte) -118, var30);
               var17.a(-var31, (int)var21, (int)var23, (byte) -123, -var30);
             }
             if (this.ropeLength > this.targetRopeLength) {

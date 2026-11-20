@@ -36,9 +36,9 @@ final class SetAudioRangeCutoff extends ConsoleCommand {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (param0) {
-          SetAudioRangeCutoff.b(true);
+          SetAudioRangeCutoff.clearSharedReferences(true);
           field_o = null;
           field_p = null;
           return;

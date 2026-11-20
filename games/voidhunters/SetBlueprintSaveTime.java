@@ -9,7 +9,7 @@ final class SetBlueprintSaveTime extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 0) {
           SetBlueprintSaveTime.a(108, -55);
@@ -138,18 +138,18 @@ final class SetBlueprintSaveTime extends ConsoleCommand {
     final static asb a(int param0, int param1) {
         if (param1 != 11835) {
           field_o = (String) null;
-          if (akb.field_a == null) {
-            return -1 == param0 ? akb.field_a : SetAutoAfkTimeout.a(true, false, -52, true, param0, 1);
+          if (MissionEventFactory.field_a == null) {
+            return -1 == param0 ? MissionEventFactory.field_a : SetAutoAfkTimeout.a(true, false, -52, true, param0, 1);
           }
-          return akb.field_a;
+          return MissionEventFactory.field_a;
         }
-        if (akb.field_a != null) {
-          return akb.field_a;
+        if (MissionEventFactory.field_a != null) {
+          return MissionEventFactory.field_a;
         }
         if (-1 != param0) {
           return SetAutoAfkTimeout.a(true, false, -52, true, param0, 1);
         }
-        return akb.field_a;
+        return MissionEventFactory.field_a;
     }
 
     static {

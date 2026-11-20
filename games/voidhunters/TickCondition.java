@@ -3,7 +3,7 @@
  */
 final class TickCondition extends MissionCondition implements DiffableState {
     private int tick;
-    static dja field_c;
+    static GameStateFactory field_c;
     static boolean field_e;
 
     public static void clearSharedReferences(byte param0) {
@@ -13,9 +13,9 @@ final class TickCondition extends MissionCondition implements DiffableState {
         field_c = null;
     }
 
-    final ucb[] a(World param0, int param1) {
+    final WorldPoint[] getWorldPositions(World param0, int param1) {
         RuntimeException var3 = null;
-        ucb[] stackIn_3_0 = null;
+        WorldPoint[] stackIn_3_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -24,7 +24,7 @@ final class TickCondition extends MissionCondition implements DiffableState {
           if (param1 == -20605) {
             return null;
           }
-          stackIn_3_0 = (ucb[]) null;
+          stackIn_3_0 = (WorldPoint[]) null;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -56,7 +56,7 @@ final class TickCondition extends MissionCondition implements DiffableState {
           if (param0 > 54) {
             return;
           }
-          this.a(90);
+          this.getDescription(90);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -72,7 +72,7 @@ final class TickCondition extends MissionCondition implements DiffableState {
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int getParameter(byte param0, int param1) {
         if (param0 >= -102) {
           this.tick = -122;
           return this.tick;
@@ -103,7 +103,7 @@ final class TickCondition extends MissionCondition implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -19) {
-            field_c = (dja) null;
+            field_c = (GameStateFactory) null;
           }
           var3 = (TickCondition) (other);
           super.reportDifferences(other, -44);
@@ -131,15 +131,15 @@ final class TickCondition extends MissionCondition implements DiffableState {
         }
     }
 
-    final String a(int param0) {
+    final String getDescription(int param0) {
         if (param0 == -1) {
           return "Is at tick " + this.tick;
         }
-        field_c = (dja) null;
+        field_c = (GameStateFactory) null;
         return "Is at tick " + this.tick;
     }
 
-    final boolean a(int param0, MissionState param1, World param2) {
+    final boolean evaluate(int param0, MissionState param1, World param2) {
         RuntimeException var4 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -174,7 +174,7 @@ final class TickCondition extends MissionCondition implements DiffableState {
         }
     }
 
-    final static byte[] a(int param0, SerializableGameState param1) {
+    final static byte[] encodeState(int param0, SerializableGameState param1) {
         IsaacPacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
@@ -209,7 +209,7 @@ final class TickCondition extends MissionCondition implements DiffableState {
         }
     }
 
-    final void a(World param0, int param1, int param2, int param3) {
+    final void setParameter(World param0, int param1, int param2, int param3) {
         if (param1 != -2) {
           return;
         }
@@ -265,6 +265,6 @@ final class TickCondition extends MissionCondition implements DiffableState {
     }
 
     static {
-        field_c = (dja) ((Object) new lhb());
+        field_c = (GameStateFactory) ((Object) new GrapplingHookFactory());
     }
 }

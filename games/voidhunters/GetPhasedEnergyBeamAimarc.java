@@ -11,7 +11,7 @@ final class GetPhasedEnergyBeamAimarc extends ConsoleCommand {
         return 0 != (param0 & 16) ? true : false;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 16) {
           GetPhasedEnergyBeamAimarc.a(-34, false, 111);

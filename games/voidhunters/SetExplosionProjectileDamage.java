@@ -91,7 +91,7 @@ final class SetExplosionProjectileDamage extends ConsoleCommand {
           if (param1 == 0) {
             return;
           }
-          SetExplosionProjectileDamage.a(77);
+          SetExplosionProjectileDamage.clearSharedReferences(77);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -107,10 +107,10 @@ final class SetExplosionProjectileDamage extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 != -123) {
-          SetExplosionProjectileDamage.a(-15);
+          SetExplosionProjectileDamage.clearSharedReferences(-15);
         }
     }
 

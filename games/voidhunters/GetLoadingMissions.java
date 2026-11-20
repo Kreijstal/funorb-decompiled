@@ -3,7 +3,7 @@
  */
 final class GetLoadingMissions extends ConsoleCommand {
     static int field_p;
-    static dja field_q;
+    static GameStateFactory field_q;
     static int[] field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -15,7 +15,7 @@ final class GetLoadingMissions extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            GetLoadingMissions.a(-76);
+            GetLoadingMissions.clearSharedReferences(-76);
           }
           stackIn_3_0 = new ConsoleValue(SetMissionTerrainAsteroidProbability.field_o);
           return stackIn_3_0;
@@ -33,10 +33,10 @@ final class GetLoadingMissions extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_q = null;
         if (param0 != 1) {
-          GetLoadingMissions.a(35);
+          GetLoadingMissions.clearSharedReferences(35);
           field_o = null;
           return;
         }

@@ -1,0 +1,21 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class ShipAIFactory implements GameStateFactory {
+    static int field_a;
+
+    public final SerializableGameState create(byte param0) {
+        int var2 = 41 / ((-64 - param0) / 50);
+        return (SerializableGameState) ((Object) new ShipAI());
+    }
+
+    public final SerializableGameState[] createArray(int param0, int param1) {
+        if (param0 != 11995) {
+          return (SerializableGameState[]) null;
+        }
+        return (SerializableGameState[]) ((Object) new ShipAI[param1]);
+    }
+
+    static {
+    }
+}

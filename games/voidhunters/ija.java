@@ -50,9 +50,9 @@ abstract class ija {
         field_b = null;
     }
 
-    final static Object[] a(Object param0, Object[] param1, int param2, dja param3) {
+    final static Object[] a(Object param0, Object[] param1, int param2, GameStateFactory param3) {
         RuntimeException var4 = null;
-        dja var5 = null;
+        GameStateFactory var5 = null;
         Object[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -64,8 +64,8 @@ abstract class ija {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 != 0) {
-            var5 = (dja) null;
-            ija.a(param1[1], (Object[]) null, ((int[]) (param1[7]))[7], (dja) null);
+            var5 = (GameStateFactory) null;
+            ija.a(param1[1], (Object[]) null, ((int[]) (param1[7]))[7], (GameStateFactory) null);
           }
           stackIn_3_0 = GetFighterBayReload.a(param1, param0, false, param3, param2 - 110);
           return stackIn_3_0;

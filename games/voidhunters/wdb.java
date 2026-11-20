@@ -30,7 +30,7 @@ final class wdb extends llb {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_Ab = null;
         if (param0 < 126) {
           field_vb = 24;

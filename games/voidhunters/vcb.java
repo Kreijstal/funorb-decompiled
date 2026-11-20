@@ -18,7 +18,7 @@ final class vcb extends oda implements oo {
     private int field_H;
     private htb field_D;
     static byte[][] field_E;
-    static dja field_z;
+    static GameStateFactory field_z;
     int field_M;
     private htb field_v;
 
@@ -119,7 +119,7 @@ final class vcb extends oda implements oo {
                 this.a((byte) -17, this.field_L + this.field_F);
                 return;
               }
-              var5_intLifetime1 = -this.field_P.field_g - (this.field_P.field_h >> 1) + (-param1 + kc.field_b) - this.field_g;
+              var5_intLifetime1 = -this.field_P.field_g - (this.field_P.field_h >> 1) + (-param1 + PlayerGameData.field_b) - this.field_g;
               var6 = uia.field_b - param0 + (-this.field_r - (this.field_P.field_r + (this.field_P.field_f >> 1)));
               if (Math.abs(var6) <= Math.abs(var5_intLifetime1)) {
                 if (var5_intLifetime1 <= 0) {
@@ -137,7 +137,7 @@ final class vcb extends oda implements oo {
               return;
             }
             if (this.field_w) {
-              if ((this.field_P.field_h >> 1) + (this.field_P.field_g + param1) >= kc.field_b) {
+              if ((this.field_P.field_h >> 1) + (this.field_P.field_g + param1) >= PlayerGameData.field_b) {
                 this.a(107, -this.field_x + this.field_M);
                 return;
               }
@@ -730,6 +730,6 @@ final class vcb extends oda implements oo {
 
     static {
         field_E = new byte[250][];
-        field_z = (dja) ((Object) new ej());
+        field_z = (GameStateFactory) ((Object) new DebrisFactory());
     }
 }

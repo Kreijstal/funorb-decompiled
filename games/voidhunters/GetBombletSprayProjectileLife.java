@@ -40,7 +40,7 @@ final class GetBombletSprayProjectileLife extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_q = null;
         if (param0 == 92) {
           field_p = null;
@@ -48,7 +48,7 @@ final class GetBombletSprayProjectileLife extends ConsoleCommand {
           field_r = null;
           return;
         }
-        GetBombletSprayProjectileLife.a(111);
+        GetBombletSprayProjectileLife.clearSharedReferences(111);
         field_p = null;
         field_o = null;
         field_r = null;

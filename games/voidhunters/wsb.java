@@ -8,7 +8,7 @@ final class wsb {
     private int field_h;
     float field_g;
     String field_a;
-    static dja field_e;
+    static GameStateFactory field_e;
     static String field_c;
     static int field_f;
     static int field_b;
@@ -117,7 +117,7 @@ final class wsb {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_c = null;
         if (param0 > -102) {
           field_f = -17;
@@ -165,7 +165,7 @@ final class wsb {
     }
 
     static {
-        field_e = (dja) ((Object) new kfa());
+        field_e = (GameStateFactory) ((Object) new MapZoneFactory());
         field_b = 200;
         field_f = field_b / 2;
         field_c = "Hull triangle";

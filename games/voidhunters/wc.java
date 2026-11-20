@@ -4,7 +4,7 @@
 final class wc {
     private IntrusiveDeque field_c;
     static String field_d;
-    static dja field_a;
+    static GameStateFactory field_a;
     private IntrusiveNode field_b;
 
     final IntrusiveNode a(byte param0) {
@@ -115,9 +115,9 @@ final class wc {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -20221) {
-          wc.b(-115);
+          wc.clearSharedReferences(-115);
           field_d = null;
           field_a = null;
           return;

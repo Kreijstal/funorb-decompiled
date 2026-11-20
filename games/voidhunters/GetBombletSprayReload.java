@@ -39,9 +39,9 @@ final class GetBombletSprayReload extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -20626) {
-          GetBombletSprayReload.a(43);
+          GetBombletSprayReload.clearSharedReferences(43);
           field_p = null;
           return;
         }
@@ -51,7 +51,7 @@ final class GetBombletSprayReload extends ConsoleCommand {
     final static void a(int param0, int param1, int param2) {
         int var3 = GetUseDetailLines.field_o - param2;
         int var4 = GetTorpedoReload.field_q - param1;
-        kc.field_b = var3;
+        PlayerGameData.field_b = var3;
         uia.field_b = var4;
         int var5 = -112 / ((param0 + 16) / 59);
         Particle.field_H = var3;

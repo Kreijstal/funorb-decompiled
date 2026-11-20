@@ -21,11 +21,11 @@ abstract class vjb {
         GetUseExtraBackground.a(-1);
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_b = null;
         field_c = null;
         if (param0 != 53) {
-          vjb.b((byte) -48);
+          vjb.clearSharedReferences((byte) -48);
         }
     }
 

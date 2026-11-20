@@ -4,7 +4,7 @@
 final class fwa {
     private pfa field_i;
     static llb field_a;
-    static coa field_g;
+    static ServerInfo field_g;
     private java.math.BigInteger field_e;
     static int field_h;
     private ga[] field_f;
@@ -13,7 +13,7 @@ final class fwa {
     private km field_d;
     private PacketBuffer field_c;
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != 5) {
           int[] var2 = (int[]) null;

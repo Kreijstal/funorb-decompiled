@@ -894,7 +894,7 @@ public final class Direct3DToolkit extends GpuToolkit {
             this.field_Mc.SetRenderState(19, 2);
             this.field_Mc.SetRenderState(20, 2);
           } else {
-            if (this.field_fc == ub.field_e) {
+            if (this.field_fc == DebugSendable.field_e) {
               this.field_Mc.SetRenderState(19, 9);
               this.field_Mc.SetRenderState(20, 2);
             }

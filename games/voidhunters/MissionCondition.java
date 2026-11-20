@@ -13,7 +13,7 @@ class MissionCondition implements DiffableState {
         }
     }
 
-    int[] a(World param0, int param1, int[] param2) {
+    int[] collectTargetBodyIds(World param0, int param1, int[] param2) {
         RuntimeException var4 = null;
         int[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -167,7 +167,7 @@ class MissionCondition implements DiffableState {
         }
         SetExplosionPushMultiplier.field_o = param1;
         SetDebrisDetachmentForceMultiplier.field_p = param0;
-        whb.field_a = param4;
+        DebugMessage.field_a = param4;
     }
 
     public static void clearSharedReferences(byte param0) {
@@ -177,7 +177,7 @@ class MissionCondition implements DiffableState {
         field_b = null;
     }
 
-    void a(World param0, int param1, int param2, int param3) {
+    void setParameter(World param0, int param1, int param2, int param3) {
         try {
           if (param1 != -2) {
             String[] var6 = (String[]) null;
@@ -188,7 +188,7 @@ class MissionCondition implements DiffableState {
         }
     }
 
-    int a(byte param0, int param1) {
+    int getParameter(byte param0, int param1) {
         if (param0 > -102) {
           return -122;
         }
@@ -199,7 +199,7 @@ class MissionCondition implements DiffableState {
         try {
           if (param1 > -109) {
             World var4 = (World) null;
-            this.a((World) null, 68, -88, 56);
+            this.setParameter((World) null, 68, -88, 56);
           }
           vq.writeBoolean(param0, -119, this.negated);
         } catch (RuntimeException runtimeException) {
@@ -207,7 +207,7 @@ class MissionCondition implements DiffableState {
         }
     }
 
-    String a(int param0) {
+    String getDescription(int param0) {
         if (param0 != -1) {
           SerializableGameState var3 = (SerializableGameState) null;
           this.copyTo((byte) -4, (SerializableGameState) null);
@@ -215,7 +215,7 @@ class MissionCondition implements DiffableState {
         return this.toString();
     }
 
-    ucb[] a(World param0, int param1) {
+    WorldPoint[] getWorldPositions(World param0, int param1) {
         RuntimeException var3 = null;
         SerializableGameState var4 = null;
         Object stackIn_3_0 = null;
@@ -230,7 +230,7 @@ class MissionCondition implements DiffableState {
           var4 = (SerializableGameState) null;
           this.reportDifferences((SerializableGameState) null, -22);
           stackIn_3_0 = null;
-          return (ucb[]) (stackIn_3_0);
+          return (WorldPoint[]) (stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -258,7 +258,7 @@ class MissionCondition implements DiffableState {
         }
     }
 
-    final static int[] a(int param0, byte param1, int[] param2) {
+    final static int[] removeFirstValue(int param0, byte param1, int[] param2) {
         int var4_int = 0;
         int var6 = 0;
         int var3_int = 0;
@@ -326,7 +326,7 @@ class MissionCondition implements DiffableState {
         }
     }
 
-    boolean a(int param0, MissionState param1, World param2) {
+    boolean evaluate(int param0, MissionState param1, World param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;

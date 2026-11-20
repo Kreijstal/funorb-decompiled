@@ -44,7 +44,7 @@ final class GetBuildViewAutozoomEndOnAction extends ConsoleCommand {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 53562) {
           GetBuildViewAutozoomEndOnAction.a(-36);
           field_o = null;

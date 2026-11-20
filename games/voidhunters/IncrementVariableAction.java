@@ -42,7 +42,7 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
     }
 
     final static void a(String param0, int param1, float param2) {
-        dkb.field_b = param2;
+        NebulaFactory.field_b = param2;
         if (param1 != -1) {
           return;
         }
@@ -53,7 +53,7 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
         }
     }
 
-    final ucb a(World param0, int param1) {
+    final WorldPoint getWorldPosition(World param0, int param1) {
         RuntimeException var3 = null;
         SerializableGameState var4 = null;
         Object stackIn_3_0 = null;
@@ -68,7 +68,7 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
           var4 = (SerializableGameState) null;
           this.differsFrom((byte) -70, (SerializableGameState) null);
           stackIn_3_0 = null;
-          return (ucb) (stackIn_3_0);
+          return (WorldPoint) (stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -98,7 +98,7 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
         mmb.field_d[param0].a(param4, param2, 0, 16777215 | param1 << 24, 1);
     }
 
-    final void a(int param0, int[] param1, GameSnapshot param2) {
+    final void execute(int param0, int[] param1, GameSnapshot param2) {
         try {
           if (param0 != 1) {
             this.index = 84;
@@ -109,7 +109,7 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
         }
     }
 
-    final String a(int param0) {
+    final String getDescription(int param0) {
         if (param0 == -1325) {
           return "Increment custom variable " + this.index + " by " + this.valueAdded;
         }
@@ -143,7 +143,7 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
         }
     }
 
-    final void a(World param0, boolean param1, int param2, int param3) {
+    final void setParameter(World param0, boolean param1, int param2, int param3) {
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -161,7 +161,7 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
           if (!param1) {
             return;
           }
-          this.a(34);
+          this.getDescription(34);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -219,7 +219,7 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
         }
     }
 
-    final int a(int param0, int param1) {
+    final int getParameter(int param0, int param1) {
         if (param1 >= -100) {
           return -14;
         }

@@ -23,9 +23,9 @@ final class rab extends kva implements gf {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 148) {
-          rab.a(-7);
+          rab.clearSharedReferences(-7);
           field_m = null;
           return;
         }

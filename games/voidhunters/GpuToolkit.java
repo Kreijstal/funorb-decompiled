@@ -1111,7 +1111,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
                 var5 = 0;
               } else {
                 var5 = 1;
-                var3 = ub.field_e;
+                var3 = DebugSendable.field_e;
                 var4 = 1;
               }
             }
@@ -1755,10 +1755,10 @@ abstract class GpuToolkit extends GraphicsToolkit {
         if (!GetUseCircleFill.a(param1, (byte) -120, param2)) {
           return false;
         }
-        if (rc.a(param2, (byte) 91, param1) | (param0 != (param1 & 36864) ? true : false) | IncrementVariableAction.a(param2, param1, (byte) 9)) {
+        if (MissionGenerationDataFactory.a(param2, (byte) 91, param1) | (param0 != (param1 & 36864) ? true : false) | IncrementVariableAction.a(param2, param1, (byte) 9)) {
           return true;
         }
-        return (bla.a(param1, false, param2) | ((param1 & 8192) != 0 ? true : false) | hsb.a(param2, 65536, param1)) & ((55 & param2) == 0 ? true : false);
+        return (bla.a(param1, false, param2) | ((param1 & 8192) != 0 ? true : false) | MessageLogFactory.a(param2, 65536, param1)) & ((55 & param2) == 0 ? true : false);
     }
 
     abstract void a(jra param0, int param1, int param2, int param3);

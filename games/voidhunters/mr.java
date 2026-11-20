@@ -53,7 +53,7 @@ final class mr extends iw implements oo {
         return var1;
     }
 
-    public static void l(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_L = null;
         field_M = null;
         field_J = null;
@@ -77,11 +77,11 @@ final class mr extends iw implements oo {
           if (param1 == qua.field_a) {
             var3 = oda.field_t;
           } else {
-            if (param1 == bca.field_a) {
+            if (param1 == AdminMessageFactory.field_a) {
               this.field_f = this.field_f + 10;
               var3 = r.field_m;
               if (Particle.c((byte) 109)) {
-                var3 = jga.field_b;
+                var3 = WorldFactory.field_b;
                 this.field_f = this.field_f + 20;
               }
             } else {

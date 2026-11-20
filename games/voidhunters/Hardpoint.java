@@ -8,10 +8,10 @@ final class Hardpoint implements DiffableState, CompactGameState {
     int worldy;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         if (param0 <= 54) {
-          Hardpoint.a(64);
+          Hardpoint.clearSharedReferences(64);
         }
     }
 

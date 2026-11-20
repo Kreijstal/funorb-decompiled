@@ -6,9 +6,9 @@ final class SetPhysicsCollisionGrapplingHookForceMultiplier extends ConsoleComma
     static llb field_o;
     static float field_p;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 < 121) {
-          SetPhysicsCollisionGrapplingHookForceMultiplier.e((byte) 2);
+          SetPhysicsCollisionGrapplingHookForceMultiplier.clearSharedReferences((byte) 2);
           field_o = null;
           return;
         }

@@ -24,9 +24,9 @@ final class vf {
         SetMutatorVotes.a(1600, -61);
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -26) {
-          vf.a((byte) 123);
+          vf.clearSharedReferences((byte) 123);
           field_a = null;
           return;
         }

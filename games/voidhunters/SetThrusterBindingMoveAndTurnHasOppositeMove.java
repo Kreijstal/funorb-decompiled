@@ -5,7 +5,7 @@ final class SetThrusterBindingMoveAndTurnHasOppositeMove extends ConsoleCommand 
     static aba field_o;
     static int field_p;
 
-    public static void f(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 > -90) {
           SetThrusterBindingMoveAndTurnHasOppositeMove.e((byte) 1);

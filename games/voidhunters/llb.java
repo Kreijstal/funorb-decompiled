@@ -362,7 +362,7 @@ class llb extends fgb {
         if (hu.field_b == 0) {
           this.field_C = 0;
         }
-        stackIn_35_1 = (!GetPlayerRepairAmount.field_p) && (kc.field_b >= dma.field_d) && (kc.field_b < dma.field_a) && (dma.field_c <= uia.field_b) && (dma.field_f > uia.field_b);
+        stackIn_35_1 = (!GetPlayerRepairAmount.field_p) && (PlayerGameData.field_b >= dma.field_d) && (PlayerGameData.field_b < dma.field_a) && (dma.field_c <= uia.field_b) && (dma.field_f > uia.field_b);
         this.field_Q = stackIn_35_1;
         stackIn_40_1 = (this.field_Q) && (this.field_C == hu.field_b) && (param3);
         this.field_O = stackIn_40_1;
@@ -383,7 +383,7 @@ class llb extends fgb {
         if (this.field_C != 0 &&
           this.field_Z) {
           this.field_K = -this.field_n + uia.field_b - param4;
-          this.field_L = -param1 - this.field_r + kc.field_b;
+          this.field_L = -param1 - this.field_r + PlayerGameData.field_b;
           if (this.field_L < 0) {
             this.field_L = 0;
           }
@@ -403,12 +403,12 @@ class llb extends fgb {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_kb = null;
         field_H = null;
         field_V = null;
         if (param0 != -2147483648) {
-          llb.f(97);
+          llb.clearSharedReferences(97);
         }
     }
 

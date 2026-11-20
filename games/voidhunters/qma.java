@@ -54,7 +54,7 @@ final class qma {
           bl.field_x = param0;
           MissionCondition.a(param6, param10, 116, param19, param5);
           ue.a(param15, (byte) 111, param9, param1);
-          wqa.a(param17, param12, 114, param3, param18, param11);
+          BodyInZoneConditionFactory.a(param17, param12, 114, param3, param18, param11);
           var20_int = 20 % ((param16 + 14) / 55);
           SetFighterRepairAmount.a(param4, -22699, param7);
           nva.a(param13, true, param2, param14);

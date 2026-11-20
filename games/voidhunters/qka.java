@@ -101,7 +101,7 @@ final class qka extends llb {
           return true;
         }
         if (this.field_yb.length() > 0) {
-          npa.a(this.field_yb.length() - 1, param0, this.field_yb, ' ');
+          ServerTickFactory.a(this.field_yb.length() - 1, param0, this.field_yb, ' ');
         }
         if (this.field_yb.length() >= 12) {
           if (SetBombletSprayProjectileDamage.field_o == 84) {
@@ -241,9 +241,9 @@ final class qka extends llb {
           }
           if (SetBombletSprayProjectileDamage.field_o == 85 &&
             this.field_yb.length() > 0) {
-            npa.a(-1 + this.field_yb.length(), false, this.field_yb, ' ');
+            ServerTickFactory.a(-1 + this.field_yb.length(), false, this.field_yb, ' ');
           }
-          if (dtb.a(SetClientSideDragging.field_r, 109, (CharSequence) ((Object) this.field_yb))) {
+          if (MissionBuilderFactory.a(SetClientSideDragging.field_r, 109, (CharSequence) ((Object) this.field_yb))) {
             discarded$0 = this.field_yb.append(SetClientSideDragging.field_r);
           } else {
             if (this.field_yb.length() == 0 &&

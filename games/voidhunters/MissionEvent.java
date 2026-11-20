@@ -37,7 +37,7 @@ final class MissionEvent implements DiffableState {
         }
     }
 
-    final void a(GameSnapshot param0, int param1) {
+    final void evaluateAndExecute(GameSnapshot param0, int param1) {
         int var4_int = 0;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
@@ -62,7 +62,7 @@ final class MissionEvent implements DiffableState {
           if (null != this.conditions) {
             for (var4_int = 0; this.conditions.length > var4_int; var4_int++) {
               var5_ref_wm = this.conditions[var4_int];
-              var6_int = var5_ref_wm.a(0, param0.missionState, param0.world) ^ var5_ref_wm.negated ? 1 : 0;
+              var6_int = var5_ref_wm.evaluate(0, param0.missionState, param0.world) ^ var5_ref_wm.negated ? 1 : 0;
               if (var6_int == 0) {
                 var3_int = 0;
               }
@@ -73,14 +73,14 @@ final class MissionEvent implements DiffableState {
             var4 = null;
             if (null != this.conditions) {
               for (var5 = 0; var5 < this.conditions.length; var5++) {
-                var4 = this.conditions[var5].a(param0.world, 120, (int[]) (var4));
+                var4 = this.conditions[var5].collectTargetBodyIds(param0.world, 120, (int[]) (var4));
               }
             }
             var8 = 0;
             var5Lifetime1 = var8;
             while (var8 < this.actions.length) {
               var6 = this.actions[var8];
-              var6.a(1, (int[]) (var4), param0);
+              var6.execute(1, (int[]) (var4), param0);
               var8++;
             }
             return;
@@ -103,32 +103,32 @@ final class MissionEvent implements DiffableState {
     public final void copyTo(byte param0, SerializableGameState param1) {
         MissionEvent var9 = null;
         Class[] var4 = null;
-        dja[] var5 = null;
+        GameStateFactory[] var5 = null;
         Class[] var6 = null;
-        dja[] var7 = null;
+        GameStateFactory[] var7 = null;
         try {
           var9 = (MissionEvent) (param1);
-          var4 = new Class[]{VariableCondition.class, ShipSpawnedCondition.class, TeamNodeCondition.class, MissionCondition.class, BodyInZoneCondition.class, TeamShipComponentCondition.class, TickCondition.class, ShipCondition.class, BodyCondition.class};
-          var5 = new dja[]{lq.field_i, GetFps.field_o, GetUseCircleOutline.field_o, jv.field_d, GetNebulaProximityFadeDownshift.field_o, SetSalvoaim.field_s, GetMachineGunEnergyUsed.field_q, rla.field_v, oua.field_b};
+          var4 = new Class[]{VariableCondition.class, ShipSpawnedCondition.class, TeamNodeCondition.class, MissionCondition.class, BodyInZoneCondition.class, TeamShipComponentCondition.class, TickCondition.class, ShipTeamCondition.class, BodyDestroyedCondition.class};
+          var5 = new GameStateFactory[]{lq.field_i, GetFps.field_o, GetUseCircleOutline.field_o, jv.field_d, GetNebulaProximityFadeDownshift.field_o, SetSalvoaim.field_s, GetMachineGunEnergyUsed.field_q, rla.field_v, oua.field_b};
           var9.conditions = (MissionCondition[]) (hla.a(var4, this.conditions, var5, -118, var9.conditions, 1, jv.field_d));
           if (param0 <= 54) {
             SerializableGameState var8 = (SerializableGameState) null;
             this.reportDifferences((SerializableGameState) null, 121);
           }
           var6 = new Class[]{SetVariableLabelAction.class, AdjustVariableAction.class, SetShipTeamAction.class, IncrementVariableAction.class, MissionAction.class, AwardVictoryToWinnerAction.class, RemoveEventAction.class, AdjustBodyComponentsAction.class, AwardVictoryToTeamAction.class, SetVariableAction.class};
-          var7 = new dja[]{GetUseBackgroundInFullscreen.field_o, re.field_k, SetDebrisCarryOver.field_o, cwa.field_a, SetUseCircleOutline.field_o, GetLaserBeamProjectileDamage.field_r, SetShieldsDirectionalHalfarcCuts.field_o, GetFixedaim.field_q, SetBloomThresholdPercentage.field_o, whb.field_c};
+          var7 = new GameStateFactory[]{GetUseBackgroundInFullscreen.field_o, re.field_k, SetDebrisCarryOver.field_o, cwa.field_a, SetUseCircleOutline.field_o, GetLaserBeamProjectileDamage.field_r, SetShieldsDirectionalHalfarcCuts.field_o, GetFixedaim.field_q, SetBloomThresholdPercentage.field_o, DebugMessage.field_c};
           var9.actions = (MissionAction[]) (hla.a(var6, this.actions, var7, -120, var9.actions, 1, SetUseCircleOutline.field_o));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bba.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(MissionAction param0, boolean param1) {
+    final void addAction(MissionAction param0, boolean param1) {
         try {
           this.actions = (MissionAction[]) (ija.a(param0, this.actions, 0, SetUseCircleOutline.field_o));
           if (!param1) {
             MissionCondition var4 = (MissionCondition) null;
-            this.a((byte) 23, (MissionCondition) null);
+            this.addCondition((byte) 23, (MissionCondition) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bba.M(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -145,8 +145,8 @@ final class MissionEvent implements DiffableState {
         RuntimeException var3_ref = null;
         try {
           var3 = (MissionEvent) (other);
-          tja.a(var3.conditions, 1, this.conditions, true, 5547);
-          tja.a(var3.actions, 1, this.actions, true, 5547);
+          CarouselSlot.a(var3.conditions, 1, this.conditions, true, 5547);
+          CarouselSlot.a(var3.actions, 1, this.actions, true, 5547);
           var4 = 0;
           if (SetCountermeasureLauncherAimspeed.a(var3.conditions, true, 1, this.conditions, -64)) {
             System.out.println("MissionCondition[] conditions has changed. ");
@@ -182,9 +182,9 @@ final class MissionEvent implements DiffableState {
         Class[] var4 = null;
         try {
           if (param1 >= -109) {
-            this.a(-43, -72);
+            this.toggleConditionNegation(-43, -72);
           }
-          var5 = new Class[]{VariableCondition.class, ShipSpawnedCondition.class, TeamNodeCondition.class, MissionCondition.class, BodyInZoneCondition.class, TeamShipComponentCondition.class, TickCondition.class, ShipCondition.class, BodyCondition.class};
+          var5 = new Class[]{VariableCondition.class, ShipSpawnedCondition.class, TeamNodeCondition.class, MissionCondition.class, BodyInZoneCondition.class, TeamShipComponentCondition.class, TickCondition.class, ShipTeamCondition.class, BodyDestroyedCondition.class};
           pjb.a(param0, this.conditions, 8, 1, var5, 122);
           var4 = new Class[]{SetVariableLabelAction.class, AdjustVariableAction.class, SetShipTeamAction.class, IncrementVariableAction.class, MissionAction.class, AwardVictoryToWinnerAction.class, RemoveEventAction.class, AdjustBodyComponentsAction.class, AwardVictoryToTeamAction.class, SetVariableAction.class};
           pjb.a(param0, this.actions, 8, 1, var4, 118);
@@ -196,7 +196,7 @@ final class MissionEvent implements DiffableState {
     final MissionCondition[] getConditions(byte param0) {
         if (param0 >= -110) {
           GameSnapshot var3 = (GameSnapshot) null;
-          this.a((GameSnapshot) null, -8);
+          this.evaluateAndExecute((GameSnapshot) null, -8);
         }
         return this.conditions;
     }
@@ -209,7 +209,7 @@ final class MissionEvent implements DiffableState {
         field_e = null;
     }
 
-    final void a(byte param0, MissionCondition param1) {
+    final void addCondition(byte param0, MissionCondition param1) {
         try {
           this.conditions = (MissionCondition[]) (ija.a(param1, this.conditions, 0, jv.field_d));
           if (param0 >= -97) {
@@ -222,23 +222,23 @@ final class MissionEvent implements DiffableState {
 
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
         Class[] var5 = null;
-        dja[] var6 = null;
-        Class[] var7 = new Class[]{VariableCondition.class, ShipSpawnedCondition.class, TeamNodeCondition.class, MissionCondition.class, BodyInZoneCondition.class, TeamShipComponentCondition.class, TickCondition.class, ShipCondition.class, BodyCondition.class};
-        dja[] var4 = new dja[]{lq.field_i, GetFps.field_o, GetUseCircleOutline.field_o, jv.field_d, GetNebulaProximityFadeDownshift.field_o, SetSalvoaim.field_s, GetMachineGunEnergyUsed.field_q, rla.field_v, oua.field_b};
+        GameStateFactory[] var6 = null;
+        Class[] var7 = new Class[]{VariableCondition.class, ShipSpawnedCondition.class, TeamNodeCondition.class, MissionCondition.class, BodyInZoneCondition.class, TeamShipComponentCondition.class, TickCondition.class, ShipTeamCondition.class, BodyDestroyedCondition.class};
+        GameStateFactory[] var4 = new GameStateFactory[]{lq.field_i, GetFps.field_o, GetUseCircleOutline.field_o, jv.field_d, GetNebulaProximityFadeDownshift.field_o, SetSalvoaim.field_s, GetMachineGunEnergyUsed.field_q, rla.field_v, oua.field_b};
         this.conditions = (MissionCondition[]) (iq.a(var4, this.conditions, var7, jv.field_d, 8, param0, 1, 108));
         if (param1) {
           return;
         }
         try {
           var5 = new Class[]{SetVariableLabelAction.class, AdjustVariableAction.class, SetShipTeamAction.class, IncrementVariableAction.class, MissionAction.class, AwardVictoryToWinnerAction.class, RemoveEventAction.class, AdjustBodyComponentsAction.class, AwardVictoryToTeamAction.class, SetVariableAction.class};
-          var6 = new dja[]{GetUseBackgroundInFullscreen.field_o, re.field_k, SetDebrisCarryOver.field_o, cwa.field_a, SetUseCircleOutline.field_o, GetLaserBeamProjectileDamage.field_r, SetShieldsDirectionalHalfarcCuts.field_o, GetFixedaim.field_q, SetBloomThresholdPercentage.field_o, whb.field_c};
+          var6 = new GameStateFactory[]{GetUseBackgroundInFullscreen.field_o, re.field_k, SetDebrisCarryOver.field_o, cwa.field_a, SetUseCircleOutline.field_o, GetLaserBeamProjectileDamage.field_r, SetShieldsDirectionalHalfarcCuts.field_o, GetFixedaim.field_q, SetBloomThresholdPercentage.field_o, DebugMessage.field_c};
           this.actions = (MissionAction[]) (iq.a(var6, this.actions, var5, SetUseCircleOutline.field_o, 8, param0, 1, 119));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bba.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final void a(int param0, byte param1) {
+    final void removeItem(int param0, byte param1) {
         int var3;
         int stackIn_6_0 = 0;
         if (param1 != -79) {
@@ -263,7 +263,7 @@ final class MissionEvent implements DiffableState {
         }
     }
 
-    final static int a(int param0, ShipComponent param1, int param2, int[] param3) {
+    final static int decodeChildComponents(int param0, ShipComponent param1, int param2, int[] param3) {
         int dupTemp$4 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -294,7 +294,7 @@ final class MissionEvent implements DiffableState {
                 var5 = param3[param2++];
                 var6 = new ShipComponent(var5);
                 param1.a(1, var4_int, var6);
-                param2 = MissionEvent.a(param0 ^ 0, var6, param2, param3);
+                param2 = MissionEvent.decodeChildComponents(param0 ^ 0, var6, param2, param3);
                 if (var4_int != -1 + param1.hardpoints.length) {
                   continue;
                 }
@@ -333,7 +333,7 @@ final class MissionEvent implements DiffableState {
         return this.actions;
     }
 
-    final void a(int param0, int param1) {
+    final void toggleConditionNegation(int param0, int param1) {
         if (param1 != -1) {
           this.getActions((byte) 14);
         }
@@ -343,7 +343,7 @@ final class MissionEvent implements DiffableState {
         }
     }
 
-    final int a(byte param0, int param1, int param2) {
+    final int getItemParameter(byte param0, int param1, int param2) {
         int var4 = -113 % ((param0 - 32) / 63);
         if (0 > param1) {
           return 0;
@@ -351,16 +351,16 @@ final class MissionEvent implements DiffableState {
         int var5 = this.conditions != null ? this.conditions.length : 0;
         if (this.conditions != null &&
           param1 < this.conditions.length) {
-          return this.conditions[param1].a((byte) -117, param2);
+          return this.conditions[param1].getParameter((byte) -117, param2);
         }
         if (null != this.actions &&
           param1 - var5 < this.actions.length) {
-          return this.actions[-var5 + param1].a(param2, -125);
+          return this.actions[-var5 + param1].getParameter(param2, -125);
         }
         return 0;
     }
 
-    final void a(int param0, int param1, int param2, int param3, World param4) {
+    final void setItemParameter(int param0, int param1, int param2, int param3, World param4) {
         int var6_int = 0;
         int stackIn_5_0 = 0;
         RuntimeException stackIn_17_0 = null;
@@ -379,14 +379,14 @@ final class MissionEvent implements DiffableState {
             var6_int = stackIn_5_0;
             if (null != this.conditions &&
               param3 < this.conditions.length) {
-              this.conditions[param3].a(param4, -2, param2, param0);
+              this.conditions[param3].setParameter(param4, -2, param2, param0);
             } else {
               if (null != this.actions) {
                 if (-var6_int + param3 >= this.actions.length) {
                   var6_int = -7 % ((35 - param1) / 63);
                   return;
                 }
-                this.actions[-var6_int + param3].a(param4, false, param2, param0);
+                this.actions[-var6_int + param3].setParameter(param4, false, param2, param0);
               }
             }
           }

@@ -86,7 +86,7 @@ final class SetReverbGain extends ConsoleCommand {
                 continue;
               }
               var5++;
-              var8 = lob.a(24, (CharSequence) ((Object) var7_ref_String));
+              var8 = NebulaFieldFactory.a(24, (CharSequence) ((Object) var7_ref_String));
               var4 = var4 + (param1[var8].length() - var5 + var6_int);
               continue;
             }
@@ -124,7 +124,7 @@ final class SetReverbGain extends ConsoleCommand {
               continue;
             }
             var5Lifetime1++;
-            var10 = lob.a(-88, (CharSequence) ((Object) var9));
+            var10 = NebulaFieldFactory.a(-88, (CharSequence) ((Object) var9));
             discarded$0 = var6.append(param0.substring(var7, var8Lifetime1));
             var7 = var5Lifetime1;
             discarded$1 = var6.append(param1[var10]);

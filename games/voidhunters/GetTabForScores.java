@@ -37,10 +37,10 @@ final class GetTabForScores extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != -9028) {
-          GetTabForScores.a(49);
+          GetTabForScores.clearSharedReferences(49);
         }
     }
 

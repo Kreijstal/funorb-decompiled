@@ -37,6 +37,6 @@ final class SetDebrisCollisionDamage extends ConsoleCommand {
     }
 
     static {
-        eta discarded$0 = new eta();
+        MovingObjectFactory discarded$0 = new MovingObjectFactory();
     }
 }

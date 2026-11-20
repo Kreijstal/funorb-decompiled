@@ -4,9 +4,9 @@
 final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
     static String field_o;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 <= 58) {
-          GetPhasedEnergyBeamPulseFadetime.e((byte) 89);
+          GetPhasedEnergyBeamPulseFadetime.clearSharedReferences((byte) 89);
         }
         field_o = null;
     }
@@ -98,7 +98,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               ShipBlueprint.a(1, 30000)) {
               var6_int = qga.field_b.readUnsignedByte((byte) -121);
               if (var6_int != 0) {
-                vja.field_a = -1;
+                PartitioningManagerFactory.field_a = -1;
                 tc.field_c = kw.field_xb;
                 ow.field_a = var6_int;
               } else {
@@ -123,7 +123,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               if (var6_intLifetime1 != 0 &&
                 var6_intLifetime1 != 1) {
                 if (var6_intLifetime1 != 8) {
-                  vja.field_a = -1;
+                  PartitioningManagerFactory.field_a = -1;
                   tc.field_c = kw.field_xb;
                   decompiledFrameRemainder0 = false;
                 }
@@ -135,12 +135,12 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
                 }
               }
               if (decompiledFrameRemainder0) {
-                vja.field_a = -1;
+                PartitioningManagerFactory.field_a = -1;
                 tc.field_c = htb.field_A;
               }
             }
             if (tc.field_c == htb.field_A &&
-              ci.b((byte) 113)) {
+              PlayerJoinFactory.b((byte) 113)) {
               SetTorpedoAimarc.field_p = qga.field_b.readLong(255);
               SetLagVariant.field_p = param5;
               SetAngularVelocitySustain.field_p = qga.field_b.readUnsignedByte((byte) -94);
@@ -218,7 +218,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               return stackIn_77_0;
             }
             if (tc.field_c == kw.field_xb &&
-              ci.b((byte) 113)) {
+              PlayerJoinFactory.b((byte) 113)) {
               ifb.l(-117);
               if (ow.field_a == 7 &&
                 !SetShowTutorial.field_o) {

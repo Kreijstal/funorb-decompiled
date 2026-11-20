@@ -33,9 +33,9 @@ final class vdb extends uj {
     final int d(byte param0) {
         if (param0 != 64) {
           field_d = -94;
-          return qaa.field_b;
+          return MapClearanceRectangleFactory.field_b;
         }
-        return qaa.field_b;
+        return MapClearanceRectangleFactory.field_b;
     }
 
     final boolean a(boolean param0) {
@@ -66,14 +66,14 @@ final class vdb extends uj {
             }
             var1_int = 1;
           }
-          ei.field_c.a(SetBuildViewAutozoomEndOnAction.a(qs.field_a, param0 ^ -29724, Particle.field_H), 5620, SetBuildViewAutozoomEndOnAction.a(uia.field_b, 3841, kc.field_b));
+          ei.field_c.a(SetBuildViewAutozoomEndOnAction.a(qs.field_a, param0 ^ -29724, Particle.field_H), 5620, SetBuildViewAutozoomEndOnAction.a(uia.field_b, 3841, PlayerGameData.field_b));
           if (ei.field_c.e((byte) -126)) {
             var1_int = 1;
           }
           var2 = 0;
           if (var1_int != 0 &&
             0 <= ei.field_c.field_j) {
-            var2 = kc.field_e[ei.field_c.field_j];
+            var2 = PlayerGameData.field_e[ei.field_c.field_j];
             if (var2 == 2) {
               SetMissionTerrainSpaceProbability.b(false);
             }

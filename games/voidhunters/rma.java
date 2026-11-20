@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class rma extends mfb {
-    static dja field_d;
+    static GameStateFactory field_d;
     static int field_b;
-    static dja field_c;
+    static GameStateFactory field_c;
 
     final static void a(int param0, byte param1) {
         if (di.field_l != null) {
@@ -25,7 +25,7 @@ final class rma extends mfb {
         if (param0 != 2769) {
           return 45;
         }
-        return coa.field_f;
+        return ServerInfo.field_f;
     }
 
     rma() {
@@ -40,7 +40,7 @@ final class rma extends mfb {
 
     final int a(int param0) {
         if (param0 != 0) {
-          field_c = (dja) null;
+          field_c = (GameStateFactory) null;
           return mmb.field_g;
         }
         return mmb.field_g;
@@ -85,7 +85,7 @@ final class rma extends mfb {
         lla.field_h = 2;
     }
 
-    public static void l(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         if (param0 != 3) {
           rma.b(-77, (byte) 54);
@@ -132,7 +132,7 @@ final class rma extends mfb {
 
     final int b(int param0) {
         int var2 = -115 / ((param0 - 7) / 47);
-        return gtb.field_c;
+        return PlayerReady.field_c;
     }
 
     final boolean h(byte param0) {
@@ -165,15 +165,15 @@ final class rma extends mfb {
 
     final int c(int param0) {
         if (param0 != 0) {
-          field_c = (dja) null;
+          field_c = (GameStateFactory) null;
           return dr.field_a;
         }
         return dr.field_a;
     }
 
     static {
-        field_d = (dja) ((Object) new bh());
+        field_d = (GameStateFactory) ((Object) new MapClearanceCircleFactory());
         field_b = 0;
-        field_c = (dja) ((Object) new dkb());
+        field_c = (GameStateFactory) ((Object) new NebulaFactory());
     }
 }

@@ -11,7 +11,7 @@ final class pfa implements Runnable {
     private final void a(int param0, jma param1) {
         synchronized (this.field_d) {
           if (param0 != 0) {
-            pfa.b(102);
+            pfa.clearSharedReferences(102);
           }
           this.field_d.a(param1, param0 ^ -108);
           this.field_e = this.field_e + 1;
@@ -171,10 +171,10 @@ final class pfa implements Runnable {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 <= 62) {
-          pfa.b(-80);
+          pfa.clearSharedReferences(-80);
         }
     }
 

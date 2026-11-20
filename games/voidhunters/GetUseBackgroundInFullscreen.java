@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetUseBackgroundInFullscreen extends ConsoleCommand {
-    static dja field_o;
+    static GameStateFactory field_o;
 
     final static void a(byte param0, ShipComponent param1) {
         ShipComponent var3 = null;
@@ -19,7 +19,7 @@ final class GetUseBackgroundInFullscreen extends ConsoleCommand {
           var3.a(1, 0, new ShipComponent(27));
           param1.a(1, 4, var3);
           if (param0 >= -77) {
-            field_o = (dja) null;
+            field_o = (GameStateFactory) null;
           }
           var4 = new ShipComponent(29);
           var4.a(1, 0, new ShipComponent(27));
@@ -68,6 +68,6 @@ final class GetUseBackgroundInFullscreen extends ConsoleCommand {
     }
 
     static {
-        field_o = (dja) ((Object) new jdb());
+        field_o = (GameStateFactory) ((Object) new SetVariableLabelActionFactory());
     }
 }

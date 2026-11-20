@@ -34,14 +34,14 @@ final class SetTorpedoProjectileDamage extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 == 0) {
           field_q = null;
           field_o = null;
           field_p = (Sprite[][]) null;
           return;
         }
-        SetTorpedoProjectileDamage.a(55);
+        SetTorpedoProjectileDamage.clearSharedReferences(55);
         field_q = null;
         field_o = null;
         field_p = (Sprite[][]) null;

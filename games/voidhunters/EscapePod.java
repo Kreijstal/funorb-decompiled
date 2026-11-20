@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class EscapePod extends ara implements DiffableState {
+final class EscapePod extends MovingObject implements DiffableState {
     int owner;
     static String field_m;
     static int field_j;
@@ -221,7 +221,7 @@ final class EscapePod extends ara implements DiffableState {
         this.hyperdriveTimer = 3 * Particle.field_l;
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_m = null;
         if (param0 != 3) {
           field_j = -19;

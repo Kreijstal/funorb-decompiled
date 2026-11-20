@@ -79,7 +79,7 @@ final class tjb extends llb {
             this.a((byte) 116, 0);
             this.field_vb = param0;
             this.field_xb = this.field_Db[this.field_vb];
-            wkb.a(this.field_xb, 6);
+            SetVariableActionFactory.a(this.field_xb, 6);
             this.field_xb.a((byte) 121, 12);
           } else {
             if (this.field_Ab[param0] != -1) {
@@ -102,7 +102,7 @@ final class tjb extends llb {
               GetUseExtraBackground.a(-1);
               SetSalvoRepairTimeMultiplier.a(4907);
             } else {
-              wha.a(29012);
+              AsteroidFactory.a(29012);
               GetUseExtraBackground.a(-1);
             }
           }
@@ -154,7 +154,7 @@ final class tjb extends llb {
           var12 = "</col>";
           for (var13 = 0; this.field_Gb > var13; var13++) {
             if (this.field_yb[var13] > 0) {
-              param6[var13] = var11 + av.a(this.field_yb[var13], 6).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + MissionActionFactory.a(this.field_yb[var13], 6).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (this.field_Db[var13] != null ||

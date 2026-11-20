@@ -143,7 +143,7 @@ final class ef extends mc {
           if ((!(this.field_t instanceof htb) ||
             ((htb) (this.field_t)).field_x) &&
             this.field_n == 1) {
-            var5_int = -this.field_D + (kc.field_b - param1);
+            var5_int = -this.field_D + (PlayerGameData.field_b - param1);
             var6 = -this.field_x + uia.field_b - param0;
             if (this.field_g != var5_int ||
               this.field_r != var6) {

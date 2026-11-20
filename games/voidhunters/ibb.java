@@ -15,7 +15,7 @@ final class ibb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (li.field_i) {
-            nma.field_b[param5].a(true, param0 | param1 << 24, param2 | param1 << 24, param3, param6, param7);
+            PlayerReadyFactory.field_b[param5].a(true, param0 | param1 << 24, param2 | param1 << 24, param3, param6, param7);
           } else {
             ita.a(param5, 7988).a(param3, param7, param6, param0, param2, param1);
           }

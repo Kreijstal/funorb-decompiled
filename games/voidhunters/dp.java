@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class dp {
-    static dja field_b;
+    static GameStateFactory field_b;
     static llb field_a;
     private static String field_z;
 
@@ -14,6 +14,6 @@ final class dp {
 
     static {
         field_z = "dp.A(";
-        field_b = (dja) ((Object) new onb());
+        field_b = (GameStateFactory) ((Object) new PartitionZoneFactory());
     }
 }

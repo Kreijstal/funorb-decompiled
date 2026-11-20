@@ -168,7 +168,7 @@ final class tib extends eca {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 == 6312) {
           field_i = null;
           field_h = null;

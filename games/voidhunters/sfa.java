@@ -56,10 +56,10 @@ final class sfa {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6_int = 0;
-        wfb var6 = null;
+        ShipComponentDefinition var6 = null;
         int var7 = 0;
         int var8 = 0;
-        wfb var9 = null;
+        ShipComponentDefinition var9 = null;
         int var10 = 0;
         int var6_intLifetime1;
         int var8Lifetime1;

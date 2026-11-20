@@ -118,7 +118,7 @@ final class pbb implements wwa {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != -652030847) {
           java.awt.Canvas var2 = (java.awt.Canvas) null;

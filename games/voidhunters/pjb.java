@@ -162,7 +162,7 @@ final class pjb extends llb {
         return var6;
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_vb = null;
         if (param0 == 22) {
           field_Db = null;

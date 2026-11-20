@@ -77,7 +77,7 @@ final class GetMissionTerrainAsteroidProbability extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 > -37) {
           field_p = -2;
           field_q = null;

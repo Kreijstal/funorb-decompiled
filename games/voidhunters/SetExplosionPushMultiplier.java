@@ -12,7 +12,7 @@ final class SetExplosionPushMultiplier extends ConsoleCommand {
 
     final static void a(int param0, byte param1, int param2) {
         if (param1 != -114) {
-          SetExplosionPushMultiplier.e((byte) 98);
+          SetExplosionPushMultiplier.clearSharedReferences((byte) 98);
           GetBombletSprayProjectileOndamageParticles.field_o = param0;
           gi.field_b = param2;
           return;
@@ -86,7 +86,7 @@ final class SetExplosionPushMultiplier extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_q = null;
         if (param0 >= -79) {
           SetExplosionPushMultiplier.a(23, (byte) -112, 66);

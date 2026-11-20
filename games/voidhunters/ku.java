@@ -5,7 +5,7 @@ final class ku extends qg {
     static int field_c;
     static String field_d;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_d = null;
         if (param0 <= 105) {
           String var2 = (String) null;
@@ -134,7 +134,7 @@ final class ku extends qg {
 
     final void a(boolean param0, boolean param1) {
         if (!param0) {
-          ku.a((byte) -82);
+          ku.clearSharedReferences((byte) -82);
         }
     }
 

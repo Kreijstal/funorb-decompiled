@@ -35,9 +35,9 @@ final class bna extends is {
         return true;
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (!param0) {
-          bna.a(false);
+          bna.clearSharedReferences(false);
           field_m = null;
           return;
         }

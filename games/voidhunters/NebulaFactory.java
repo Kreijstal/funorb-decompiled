@@ -1,0 +1,29 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class NebulaFactory implements GameStateFactory {
+    static float field_b;
+    static String field_a;
+
+    public static void clearSharedReferences(byte param0) {
+        int var1 = 94 / ((param0 + 39) / 59);
+        field_a = null;
+    }
+
+    public final SerializableGameState[] createArray(int param0, int param1) {
+        if (param0 != 11995) {
+          this.create((byte) 13);
+          return (SerializableGameState[]) ((Object) new Nebula[param1]);
+        }
+        return (SerializableGameState[]) ((Object) new Nebula[param1]);
+    }
+
+    public final SerializableGameState create(byte param0) {
+        int var2 = -103 % ((-64 - param0) / 50);
+        return (SerializableGameState) ((Object) new Nebula());
+    }
+
+    static {
+        field_a = "Creating a Jagex account is simple and free. Your account will remember your progress, highscores and achievements in every game. You can also use it to play some of our multiplayer games - and Jagex's other games!<br><br><col=2164A2>Please note - if you have a RuneScape account, you can click 'Go Back' and use your existing account to log in!</col>";
+    }
+}

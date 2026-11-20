@@ -1,0 +1,40 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class SetShipTeamActionFactory implements GameStateFactory {
+    static String field_a;
+    static int field_c;
+    static boolean field_b;
+    static String field_d;
+
+    public static void clearSharedReferences(int param0) {
+        if (param0 != 50) {
+          SetShipTeamActionFactory.clearSharedReferences(-18);
+          field_d = null;
+          field_a = null;
+          return;
+        }
+        field_d = null;
+        field_a = null;
+    }
+
+    public final SerializableGameState[] createArray(int param0, int param1) {
+        if (param0 != 11995) {
+          this.create((byte) -26);
+          return (SerializableGameState[]) ((Object) new SetShipTeamAction[param1]);
+        }
+        return (SerializableGameState[]) ((Object) new SetShipTeamAction[param1]);
+    }
+
+    public final SerializableGameState create(byte param0) {
+        int var2 = -72 / ((-64 - param0) / 50);
+        return (SerializableGameState) ((Object) new SetShipTeamAction());
+    }
+
+    static {
+        field_b = true;
+        field_c = 50;
+        field_a = "Remove selected condition/action";
+        field_d = "SAVED BLUEPRINT";
+    }
+}

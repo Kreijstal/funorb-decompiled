@@ -55,7 +55,7 @@ final class GetTorqueDownshift extends ConsoleCommand {
         return 1;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 != 2) {
           field_o = 114;

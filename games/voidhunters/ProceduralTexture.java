@@ -117,7 +117,7 @@ final class ProceduralTexture extends DualLinkNode {
             var21++;
           }
           if (param0 != 2) {
-            ProceduralTexture.a(false);
+            ProceduralTexture.clearSharedReferences(false);
           }
           stackIn_35_0 = var7;
           return stackIn_35_0;
@@ -574,10 +574,10 @@ final class ProceduralTexture extends DualLinkNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_o = null;
         if (!param0) {
-          ProceduralTexture.a(false);
+          ProceduralTexture.clearSharedReferences(false);
         }
     }
 

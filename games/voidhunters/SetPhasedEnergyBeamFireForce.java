@@ -94,6 +94,6 @@ final class SetPhasedEnergyBeamFireForce extends ConsoleCommand {
     }
 
     static {
-        etb discarded$0 = new etb();
+        ThrusterBehaviourFactory discarded$0 = new ThrusterBehaviourFactory();
     }
 }

@@ -10,10 +10,10 @@ final class GetBloomCoefficientPercentage extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_q = null;
         if (param0 != 256) {
-          GetBloomCoefficientPercentage.a(79);
+          GetBloomCoefficientPercentage.clearSharedReferences(79);
           field_p = null;
           field_o = null;
           return;

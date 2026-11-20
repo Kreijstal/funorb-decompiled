@@ -9,9 +9,9 @@ class vhb extends tb {
     vhb() {
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 21053) {
-          vhb.b(-96);
+          vhb.clearSharedReferences(-96);
           field_d = null;
           field_c = null;
           return;

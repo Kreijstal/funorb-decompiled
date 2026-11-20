@@ -14,9 +14,9 @@ final class ut {
         var4.writeLengthByte(var4.position - var5, -129);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 > -36) {
-          ut.a(7);
+          ut.clearSharedReferences(7);
           field_a = null;
           return;
         }

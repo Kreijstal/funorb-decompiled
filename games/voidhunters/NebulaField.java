@@ -30,7 +30,7 @@ final class NebulaField implements DiffableState, ofa {
             var5 = (SerializableGameState) null;
             this.copyTo((byte) 8, (SerializableGameState) null);
           }
-          tja.a(var3.nebulae, 1, this.nebulae, false, 5547);
+          CarouselSlot.a(var3.nebulae, 1, this.nebulae, false, 5547);
           var4 = 0;
           if (SetCountermeasureLauncherAimspeed.a(var3.nebulae, false, 1, this.nebulae, 124)) {
             var4 = 1;

@@ -34,11 +34,11 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
         }
     }
 
-    final String a(int param0) {
+    final String getDescription(int param0) {
         if (param0 == -1325) {
           return "Award victory to team " + this.team;
         }
-        this.a(-23);
+        this.getDescription(-23);
         return "Award victory to team " + this.team;
     }
 
@@ -129,9 +129,9 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
         }
     }
 
-    final ucb a(World param0, int param1) {
+    final WorldPoint getWorldPosition(World param0, int param1) {
         RuntimeException var3 = null;
-        ucb stackIn_3_0 = null;
+        WorldPoint stackIn_3_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -140,7 +140,7 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
           if (param1 == 26964) {
             return null;
           }
-          stackIn_3_0 = (ucb) null;
+          stackIn_3_0 = (WorldPoint) null;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -156,7 +156,7 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
         }
     }
 
-    final int a(int param0, int param1) {
+    final int getParameter(int param0, int param1) {
         if (param1 > -100) {
           this.team = -95;
           return this.team;
@@ -194,7 +194,7 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
         }
     }
 
-    final void a(World param0, boolean param1, int param2, int param3) {
+    final void setParameter(World param0, boolean param1, int param2, int param3) {
         try {
           this.team = param3;
           if (param1) {
@@ -212,7 +212,7 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
         this.team = param0;
     }
 
-    final void a(int param0, int[] param1, GameSnapshot param2) {
+    final void execute(int param0, int[] param1, GameSnapshot param2) {
         try {
           SetGrapplingHookCooldown.a(202, "wins_for_team_" + this.team, param0);
           param2.missionState.b(false, this.team);

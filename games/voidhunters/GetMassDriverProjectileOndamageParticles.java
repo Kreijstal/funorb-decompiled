@@ -43,7 +43,7 @@ final class GetMassDriverProjectileOndamageParticles extends ConsoleCommand {
     }
 
     static {
-        nn discarded$0 = new nn();
+        CarouselPlayerInfoFactory discarded$0 = new CarouselPlayerInfoFactory();
         field_o = "Match by...";
     }
 }

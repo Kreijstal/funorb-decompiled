@@ -135,7 +135,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
           jka.a(var4, (byte) -111);
           var12 = (BitmapFont) null;
           wdb.field_Ab = ocb.a(65793, 4020342, 10204, (BitmapFont) null, 1513239, 8947848, 1513239, 5138823, 65793, 1127256, 0, 65793, 2245737);
-          ej.field_a = ocb.a(0, 0, param0 ^ -10239, param2, 0, 0, 0, 0, 0, 0, 16764006, 0, 0);
+          DebrisFactory.field_a = ocb.a(0, 0, param0 ^ -10239, param2, 0, 0, 0, 0, 0, 0, 16764006, 0, 0);
           jwa.field_k = ocb.a(0, 0, 10204, param2, 0, 0, 0, 0, 0, 0, 16777215, 0, 0);
           var5 = dma.field_g;
           var6 = dma.field_j;
@@ -146,7 +146,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
             dma.d(var8, 1 + var8, 14 - (var8 << 1), 16777215);
           }
           dma.a(var16, var5, var6);
-          GetShieldsDamageEnergyConversion.field_o = vcb.a(0, jwa.field_k, wdb.field_Ab, ej.field_a, var4);
+          GetShieldsDamageEnergyConversion.field_o = vcb.a(0, jwa.field_k, wdb.field_Ab, DebrisFactory.field_a, var4);
           if (param0 != -35) {
             return;
           }

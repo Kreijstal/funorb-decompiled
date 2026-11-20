@@ -34,11 +34,11 @@ final class GetPhasedEnergyBeamFireForce extends ConsoleCommand {
 
     final static void b(boolean param0) {
         if (!param0) {
-          al.field_a = kda.field_g + " <b>" + amb.field_b + "</b> " + GetFighterBayAimspeed.field_p + " <b>" + GetFighterRepairAmount.field_r + "</b> " + SetReloadBarHeight.field_p + "<br>" + "<br>" + GetDebrisMax.field_r;
+          al.field_a = kda.field_g + " <b>" + ServerInfoFactory.field_b + "</b> " + GetFighterBayAimspeed.field_p + " <b>" + GetFighterRepairAmount.field_r + "</b> " + SetReloadBarHeight.field_p + "<br>" + "<br>" + GetDebrisMax.field_r;
           return;
         }
         field_p = -73;
-        al.field_a = kda.field_g + " <b>" + amb.field_b + "</b> " + GetFighterBayAimspeed.field_p + " <b>" + GetFighterRepairAmount.field_r + "</b> " + SetReloadBarHeight.field_p + "<br>" + "<br>" + GetDebrisMax.field_r;
+        al.field_a = kda.field_g + " <b>" + ServerInfoFactory.field_b + "</b> " + GetFighterBayAimspeed.field_p + " <b>" + GetFighterRepairAmount.field_r + "</b> " + SetReloadBarHeight.field_p + "<br>" + "<br>" + GetDebrisMax.field_r;
     }
 
     final static int b(int param0, int param1, int param2) {
@@ -47,10 +47,10 @@ final class GetPhasedEnergyBeamFireForce extends ConsoleCommand {
         return var3 + (param0 + (param0 >>> 31)) % param1;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 617169759) {
-          GetPhasedEnergyBeamFireForce.a(-84);
+          GetPhasedEnergyBeamFireForce.clearSharedReferences(-84);
         }
     }
 

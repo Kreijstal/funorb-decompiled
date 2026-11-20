@@ -11,7 +11,7 @@ final class GetAutoAfkTimeout extends ConsoleCommand {
         return "0" + (param0 + 1) + "/" + "0" + mb.field_k.length;
     }
 
-    final static SerializableGameState[] a(int param0, int param1, SerializableGameState[] param2, dja param3, int param4, IsaacPacketBuffer param5) {
+    final static SerializableGameState[] a(int param0, int param1, SerializableGameState[] param2, GameStateFactory param3, int param4, IsaacPacketBuffer param5) {
         int var8 = 0;
         int var6_int = 0;
         int var7 = 0;
@@ -33,12 +33,12 @@ final class GetAutoAfkTimeout extends ConsoleCommand {
           if (0 != var6_int) {
             if (param2 == null ||
               param2.length != var6_int) {
-              param2 = param3.a(11995, var6_int);
+              param2 = param3.createArray(11995, var6_int);
             }
             for (var8 = 0; var8 < var6_int; var8++) {
               if (kv.readBoolean(false, param5)) {
                 if (param2[var8] == null) {
-                  param2[var8] = param3.a((byte) 109);
+                  param2[var8] = param3.create((byte) 109);
                 }
                 ((CompactGameState) ((Object) param2[var8])).readCompactState(param5, 32);
               } else {

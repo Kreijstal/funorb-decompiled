@@ -99,7 +99,7 @@ final class GetMissionTerrainDebrisProbability extends ConsoleCommand {
           }
         }
         rw.field_q = param3;
-        npa.field_c = param2;
+        ServerTickFactory.field_c = param2;
     }
 
     public static void clearSharedReferences(boolean param0) {

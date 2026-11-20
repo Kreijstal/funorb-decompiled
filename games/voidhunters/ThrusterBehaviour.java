@@ -302,7 +302,7 @@ final class ThrusterBehaviour implements DiffableState {
           this.field_d = false;
           var3.trail = this.trail;
           if (param0 < 54) {
-            ThrusterBehaviour.b(-40);
+            ThrusterBehaviour.clearSharedReferences(-40);
           }
           var3.field_d = false;
         } catch (RuntimeException runtimeException) {
@@ -379,7 +379,7 @@ final class ThrusterBehaviour implements DiffableState {
         try {
           if (46 == param0 &&
             !(param1 instanceof Ship)) {
-            var4 = pca.field_i[5];
+            var4 = CarouselPlayerEvent.field_i[5];
             if (this.timer.cooldown > var4.d((byte) 64)) {
               this.timer.cooldown = var4.d((byte) 64);
               param1.d((byte) -55);
@@ -404,7 +404,7 @@ final class ThrusterBehaviour implements DiffableState {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 > -52) {
           ThrusterBehaviour.a(115);
@@ -418,7 +418,7 @@ final class ThrusterBehaviour implements DiffableState {
           return enb.field_c;
         }
         if (var3 == 13) {
-          return pwa.field_b;
+          return CarouselSystemEvent.field_b;
         }
         if (var3 == 12) {
           return ConsoleCommandRegistry.field_a;
@@ -458,7 +458,7 @@ final class ThrusterBehaviour implements DiffableState {
             this.trail.a(param5[3], param5[2], (byte) -125, param5[4], param5[2] + param5[4] >> 1, param5[5], param5[3] + param5[5] >> 1);
           }
           if (param4 == 46) {
-            var10_int = pca.field_i[5].d((byte) 64);
+            var10_int = CarouselPlayerEvent.field_i[5].d((byte) 64);
             if (param0) {
               if (this.timer.cooldown > var10_int) {
                 this.timer.cooldown = var10_int;
@@ -522,7 +522,7 @@ final class ThrusterBehaviour implements DiffableState {
         try {
           if (param13 == 46) {
             if (this.timer.cooldown <= 0) {
-              var16 = pca.field_i[5];
+              var16 = CarouselPlayerEvent.field_i[5];
               this.timer.cooldown = var16.d((byte) 64) + var16.b(-25131);
               param5.d((byte) -57);
             }

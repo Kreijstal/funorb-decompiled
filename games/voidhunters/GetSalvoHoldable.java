@@ -38,10 +38,10 @@ final class GetSalvoHoldable extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != -1721) {
-          GetSalvoHoldable.a(-92);
+          GetSalvoHoldable.clearSharedReferences(-92);
         }
     }
 

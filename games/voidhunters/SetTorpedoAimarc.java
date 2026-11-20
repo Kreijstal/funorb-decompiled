@@ -5,9 +5,9 @@ final class SetTorpedoAimarc extends ConsoleCommand {
     static long field_p;
     static String field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 <= 43) {
-          SetTorpedoAimarc.a(117);
+          SetTorpedoAimarc.clearSharedReferences(117);
           field_o = null;
           return;
         }
@@ -28,7 +28,7 @@ final class SetTorpedoAimarc extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(131, 62, arguments[0].intValue(120));
           if (obfuscationGuard >= -119) {
-            SetTorpedoAimarc.a(75);
+            SetTorpedoAimarc.clearSharedReferences(75);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

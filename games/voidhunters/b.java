@@ -461,13 +461,13 @@ final class b extends ka {
                 if (var22 != 1) {
                   if (var22 != 2) {
                     if (var22 == 3) {
-                      oma.a(var75, this.field_y[var23], var31, var76, var28, this.field_e[var23], (byte) -82, var27, this.field_o[var23], var30, var26);
+                      CommonGameState.a(var75, this.field_y[var23], var31, var76, var28, this.field_e[var23], (byte) -82, var27, this.field_o[var23], var30, var26);
                       var19[0] = var76[0];
                       var20[0] = var76[1];
-                      oma.a(var75, this.field_y[var24], var31, var76, var28, this.field_e[var24], (byte) -82, var27, this.field_o[var24], var30, var26);
+                      CommonGameState.a(var75, this.field_y[var24], var31, var76, var28, this.field_e[var24], (byte) -82, var27, this.field_o[var24], var30, var26);
                       var19[1] = var76[0];
                       var20[1] = var76[1];
-                      oma.a(var75, this.field_y[var25], var31, var76, var28, this.field_e[var25], (byte) -82, var27, this.field_o[var25], var30, var26);
+                      CommonGameState.a(var75, this.field_y[var25], var31, var76, var28, this.field_e[var25], (byte) -82, var27, this.field_o[var25], var30, var26);
                       var19[2] = var76[0];
                       var20[2] = var76[1];
                       if ((var30 & 1) != 0) {

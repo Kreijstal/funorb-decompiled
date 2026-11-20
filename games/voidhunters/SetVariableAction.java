@@ -45,7 +45,7 @@ final class SetVariableAction extends MissionAction implements DiffableState {
         }
     }
 
-    final void a(int param0, int[] param1, GameSnapshot param2) {
+    final void execute(int param0, int[] param1, GameSnapshot param2) {
         try {
           param2.missionState.b(2, this.value, this.index);
           if (param0 != 1) {
@@ -56,16 +56,16 @@ final class SetVariableAction extends MissionAction implements DiffableState {
         }
     }
 
-    final String a(int param0) {
+    final String getDescription(int param0) {
         if (param0 == -1325) {
           return "Set custom variable " + this.index + " to " + this.value;
         }
         World var3 = (World) null;
-        this.a((World) null, true, -7, 72);
+        this.setParameter((World) null, true, -7, 72);
         return "Set custom variable " + this.index + " to " + this.value;
     }
 
-    final int a(int param0, int param1) {
+    final int getParameter(int param0, int param1) {
         if (param1 >= -100) {
           field_c = (mma) null;
           if (0 != param0) {
@@ -79,9 +79,9 @@ final class SetVariableAction extends MissionAction implements DiffableState {
         return this.index;
     }
 
-    final ucb a(World param0, int param1) {
+    final WorldPoint getWorldPosition(World param0, int param1) {
         RuntimeException var3 = null;
-        ucb stackIn_3_0 = null;
+        WorldPoint stackIn_3_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -90,7 +90,7 @@ final class SetVariableAction extends MissionAction implements DiffableState {
           if (param1 == 26964) {
             return null;
           }
-          stackIn_3_0 = (ucb) null;
+          stackIn_3_0 = (WorldPoint) null;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -153,7 +153,7 @@ final class SetVariableAction extends MissionAction implements DiffableState {
         }
     }
 
-    final void a(World param0, boolean param1, int param2, int param3) {
+    final void setParameter(World param0, boolean param1, int param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -187,10 +187,10 @@ final class SetVariableAction extends MissionAction implements DiffableState {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_c = null;
         if (param0 <= 22) {
-          SetVariableAction.a((byte) 65);
+          SetVariableAction.clearSharedReferences((byte) 65);
         }
     }
 

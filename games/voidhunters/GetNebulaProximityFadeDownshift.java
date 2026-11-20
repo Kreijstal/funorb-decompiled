@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetNebulaProximityFadeDownshift extends ConsoleCommand {
-    static dja field_o;
+    static GameStateFactory field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -36,7 +36,7 @@ final class GetNebulaProximityFadeDownshift extends ConsoleCommand {
     final static void a(int param0, Object param1, Object param2) {
         try {
           if (param0 != 29786) {
-            field_o = (dja) null;
+            field_o = (GameStateFactory) null;
           }
           System.out.println("before=" + param2 + ", now=" + param1);
         } catch (RuntimeException runtimeException) {
@@ -47,7 +47,7 @@ final class GetNebulaProximityFadeDownshift extends ConsoleCommand {
     public static void clearSharedReferences(boolean param0) {
         field_o = null;
         if (param0) {
-          field_o = (dja) null;
+          field_o = (GameStateFactory) null;
         }
     }
 
@@ -56,6 +56,6 @@ final class GetNebulaProximityFadeDownshift extends ConsoleCommand {
     }
 
     static {
-        field_o = (dja) ((Object) new wqa());
+        field_o = (GameStateFactory) ((Object) new BodyInZoneConditionFactory());
     }
 }

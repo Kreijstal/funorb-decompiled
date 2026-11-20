@@ -34,7 +34,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
           if (ow.field_b == 2 &&
             !SetAutozoomAmountMultiply.a(0)) {
             if (GetTorqueDownshift.a(GetDebrisThrowable.field_o, (byte) -47)) {
-              var2 = SetReverbGain.a(BodyCondition.field_d, new String[]{waa.field_x}, 78);
+              var2 = SetReverbGain.a(BodyDestroyedCondition.field_d, new String[]{waa.field_x}, 78);
               if (var10 != 0) {
                 var2 = SetReverbGain.a(fab.field_b, new String[]{waa.field_x}, 114);
               }
@@ -55,7 +55,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
             SetSelfDestructTimer.a(19204, (String) (var2), 0, (String) null, kmb.field_a);
           } else {
             var3 = kca.field_a;
-            var3 = gfb.a(1, var3);
+            var3 = EscapePodFactory.a(1, var3);
             var4 = "";
             var5 = "|";
             var6 = ow.field_b;
@@ -63,7 +63,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
             if (var6 == 2) {
               var4 = SetReverbGain.a(tia.field_G, new String[]{waa.field_x}, 91);
               var8 = SetReverbGain.a(GetLaserAimspeed.field_o, new String[]{var3}, 79);
-              var7 = fgb.field_l.field_hb + (bpa.field_c.field_hb - 485 + ej.field_c.b(var8)) - ej.field_c.b(var4);
+              var7 = fgb.field_l.field_hb + (bpa.field_c.field_hb - 485 + DebrisFactory.field_c.b(var8)) - DebrisFactory.field_c.b(var4);
               if (0 > var7) {
                 var7 = 0;
               }
@@ -108,10 +108,10 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
                 var4 = "<col=999999>" + var4 + ocb.field_g + "</col>";
                 var5 = "";
               }
-              var9 = ej.field_c.b(var4);
+              var9 = DebrisFactory.field_c.b(var4);
               if (!tob.g(0)) {
                 if (bpa.field_c.field_O &&
-                  -bpa.field_c.field_M + kc.field_b < var9) {
+                  -bpa.field_c.field_M + PlayerGameData.field_b < var9) {
                   if (!GetBloomThresholdPercentage.field_p) {
                     var1 = vq.field_y;
                   } else {
@@ -130,7 +130,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
               fgb.field_l.field_O = false;
             }
             if (fgb.field_l.field_O) {
-              var1 = SetReverbGain.a(rc.field_a, new String[]{var3, waa.field_x}, 100);
+              var1 = SetReverbGain.a(MissionGenerationDataFactory.field_a, new String[]{var3, waa.field_x}, 100);
             }
           }
           stackIn_94_0 = var1;

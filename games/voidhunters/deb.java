@@ -64,9 +64,9 @@ final class deb extends mfb {
     final int d(byte param0) {
         if (param0 > -52) {
           this.g((byte) 55);
-          return jga.field_a;
+          return WorldFactory.field_a;
         }
-        return jga.field_a;
+        return WorldFactory.field_a;
     }
 
     final int g(int param0) {

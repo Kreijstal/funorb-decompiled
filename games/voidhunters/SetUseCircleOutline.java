@@ -3,7 +3,7 @@
  */
 final class SetUseCircleOutline extends ConsoleCommand {
     static String field_p;
-    static dja field_o;
+    static GameStateFactory field_o;
 
     SetUseCircleOutline(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -18,7 +18,7 @@ final class SetUseCircleOutline extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            field_o = (dja) null;
+            field_o = (GameStateFactory) null;
           }
           GetReadyRoomMutatorTime.field_p = arguments[0].booleanValue(false);
           stackIn_3_0 = new ConsoleValue("void");
@@ -37,10 +37,10 @@ final class SetUseCircleOutline extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 <= 18) {
-          SetUseCircleOutline.e((byte) 115);
+          SetUseCircleOutline.clearSharedReferences((byte) 115);
           field_p = null;
           return;
         }
@@ -48,8 +48,8 @@ final class SetUseCircleOutline extends ConsoleCommand {
     }
 
     static {
-        bab discarded$0 = new bab();
+        PlayerVoteFactory discarded$0 = new PlayerVoteFactory();
         field_p = "(<%0> players want to join)";
-        field_o = (dja) ((Object) new av());
+        field_o = (GameStateFactory) ((Object) new MissionActionFactory());
     }
 }

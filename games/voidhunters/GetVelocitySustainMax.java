@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetVelocitySustainMax extends ConsoleCommand {
-    final static SerializableGameState a(Class[] param0, dja[] param1, Class param2, int param3) {
+    final static SerializableGameState a(Class[] param0, GameStateFactory[] param1, Class param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         SerializableGameState stackIn_3_0 = null;
@@ -33,7 +33,7 @@ final class GetVelocitySustainMax extends ConsoleCommand {
             }
             break;
           }
-          stackIn_8_0 = param1[var4_int].a((byte) 39);
+          stackIn_8_0 = param1[var4_int].create((byte) 39);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

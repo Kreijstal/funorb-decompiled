@@ -34,11 +34,11 @@ final class fia {
         }
         var2 = -5 % ((51 - param0) / 54);
         if (param1 == 30000 &&
-          nma.field_a > 0) {
-          fieldTemp$5 = nma.field_a - 1;
-          nma.field_a = nma.field_a - 1;
-          var3_ref_byte__ = npa.field_b[fieldTemp$5];
-          npa.field_b[nma.field_a] = null;
+          PlayerReadyFactory.field_a > 0) {
+          fieldTemp$5 = PlayerReadyFactory.field_a - 1;
+          PlayerReadyFactory.field_a = PlayerReadyFactory.field_a - 1;
+          var3_ref_byte__ = ServerTickFactory.field_b[fieldTemp$5];
+          ServerTickFactory.field_b[PlayerReadyFactory.field_a] = null;
           return var3_ref_byte__;
         }
         if (ShipComponent.field_l != null) {
@@ -81,8 +81,8 @@ final class fia {
           var8 = (CharSequence) ((Object) param4);
           GetDebrisThrowable.field_o = jwa.a(false, var8);
           lsa.field_f = param3;
-          var7 = MessageLog.a(jwa.field_k, param0, 0, ej.field_a, wdb.field_Ab);
-          sl.a((byte) -28, var7);
+          var7 = MessageLog.a(jwa.field_k, param0, 0, DebrisFactory.field_a, wdb.field_Ab);
+          AsteroidFieldFactory.a((byte) -28, var7);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -127,7 +127,7 @@ final class fia {
         int var14 = 0;
         int[] var17 = null;
         int[] var18 = null;
-        wfb var19 = null;
+        ShipComponentDefinition var19 = null;
         int[] var20 = null;
         lta var21 = null;
         int[] var22 = null;

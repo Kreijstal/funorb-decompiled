@@ -21,7 +21,7 @@ abstract class NetworkGameClient extends GameApplet {
           this.e((byte) 92);
         }
         String var2 = mea.a(true);
-        wva.a(MissionList.b((byte) -119), (byte) 56, var2);
+        MatchResultsFactory.a(MissionList.b((byte) -119), (byte) 56, var2);
     }
 
     final int f(int param0) {
@@ -49,7 +49,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (0 != MapClearanceArea.field_a) {
             return var2;
           }
-          uk.b((byte) 50);
+          TeamShipComponentConditionFactory.b((byte) 50);
           return var2;
         }
         if (var2 != 1) {
@@ -63,7 +63,7 @@ abstract class NetworkGameClient extends GameApplet {
         } else {
           if (GetSpinningBladeAimspeed.field_q == 11 &&
             0 == MapClearanceArea.field_a) {
-            uk.b((byte) 50);
+            TeamShipComponentConditionFactory.b((byte) 50);
           }
         }
         return var2;
@@ -84,7 +84,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (!eu.a(true)) {
           if (ef.field_z >= 10) {
             if (!lm.a(true)) {
-              wkb.b((byte) 6);
+              SetVariableActionFactory.b((byte) 6);
             } else {
               if (GetSpinningBladeAimspeed.field_q != 0) {
                 GetLagOut.a(GetPointDefenceLaserPulsetime.field_o, param0 ^ 15877);
@@ -120,13 +120,13 @@ abstract class NetworkGameClient extends GameApplet {
         int var3Lifetime1;
         int var3Lifetime2;
         var5 = VoidHunters.field_G;
-        if (efb.field_b != null) {
+        if (MissionConditionFactory.field_b != null) {
           if (psb.field_b == null) {
-            var6 = etb.b(-28941);
+            var6 = ThrusterBehaviourFactory.b(-28941);
             var4 = var6.getSize();
-            efb.field_b.c(param1 ^ 109, var4.width, var4.height);
+            MissionConditionFactory.field_b.c(param1 ^ 109, var4.width, var4.height);
           }
-          efb.field_b.d(param1 + 3899);
+          MissionConditionFactory.field_b.d(param1 + 3899);
         }
         GetMassDriverFireForce.e((byte) -101);
         ts.a(1001);
@@ -135,7 +135,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (!GetUseTriFill.a(45) &&
           GetSpinningBladeAimspeed.field_q != 11) {
-          csb.a(true);
+          PlayerGameDataFactory.a(true);
         }
         if (null != GetWaitForPlayers.field_o) {
           GetPointDefenceLaserPulsetime.field_o = GetWaitForPlayers.field_o.pollRotation(1);
@@ -163,7 +163,7 @@ abstract class NetworkGameClient extends GameApplet {
             0 == MapClearanceArea.field_a &&
             GetSpinningBladeAimspeed.field_q == 11 &&
             !SetWeaponProjectileSpeedMultiply.b(true)) {
-            uk.b((byte) 123);
+            TeamShipComponentConditionFactory.b((byte) 123);
           }
           if (MapClearanceArea.field_a != -1 &&
             MapClearanceArea.field_a != 0) {
@@ -235,7 +235,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (1 == ef.field_z) {
           if (0 != SetGrapplingHookAimarc.field_p) {
-            ppb.field_a = bea.a(1, GrappleLauncherBehaviour.field_f);
+            ppb.field_a = MissionBuilder.a(1, GrappleLauncherBehaviour.field_f);
           }
           btb.field_b = SetDebrisFoundInPairs.a(1, GetShieldsDirectionalArc.field_p, 106, true, false);
           GetSalvoUsesAllEnergy.field_o = SetDebrisFoundInPairs.a(1, SetFighterRepairAmount.field_p, 97, true, false);
@@ -264,17 +264,17 @@ abstract class NetworkGameClient extends GameApplet {
         if (ef.field_z == 3 &&
           SetBombletSprayEnergyUsed.a(GetSalvoUsesAllEnergy.field_o, 2, gdb.field_i, btb.field_b) &&
           GetUseOffscreenRendering.a(-20230, gdb.field_i)) {
-          mta.b((byte) 123);
+          MissionFactory.b((byte) 123);
           GetPhasedEnergyBeamFireForce.b(false);
           mnb.field_g = SetFighterRepairTime.field_o;
           djb.field_r = false;
           GetUseCircleOutline.a(GetRespawnTime.field_o, GetSalvoUsesAllEnergy.field_o, btb.field_b, gdb.field_i, false);
           if (jb.field_a ||
-            gtb.field_a != null) {
+            PlayerReady.field_a != null) {
             stackIn_102_0 = !(jb.field_a);
             stackIn_104_1 = param1 ^ -110;
             stackIn_105_2 = !(jb.field_a);
-            SetSniperCannonAimspeed.a(stackIn_102_0, stackIn_104_1, stackIn_105_2, gtb.field_a);
+            SetSniperCannonAimspeed.a(stackIn_102_0, stackIn_104_1, stackIn_105_2, PlayerReady.field_a);
           }
           if (tc.field_a) {
             pr.a(param1 + 17487);
@@ -293,7 +293,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (10 == ef.field_z) {
           if (0 != SetGrapplingHookAimarc.field_p) {
-            esb.field_j = bea.a(1, GetFullMissionSet.field_o);
+            esb.field_j = MissionBuilder.a(1, GetFullMissionSet.field_o);
           }
           ef.field_z = 11;
         }
@@ -573,7 +573,7 @@ abstract class NetworkGameClient extends GameApplet {
                   var2 != 12) {
                   switch (var2) {
                     case 13:
-                      lob.a(true);
+                      NebulaFieldFactory.a(true);
                       break regionExit1;
                     case 17:
                       this.j(3);
@@ -590,13 +590,13 @@ abstract class NetworkGameClient extends GameApplet {
                 stackIn_31_0 = 47;
                 stackIn_32_1 = (12 == var2);
                 var3 = TrailHolder.a(stackIn_31_0, stackIn_32_1);
-                hg.a((byte) 108, var3);
+                PlayerLeave.a((byte) 108, var3);
                 break;
               case 16:
                 al.a(-113);
                 break;
               case 8:
-                SetSalvoDamageMultiplier.a(SetTorpedoProjectiles.field_o, vja.field_a, qga.field_b, false);
+                SetSalvoDamageMultiplier.a(SetTorpedoProjectiles.field_o, PartitioningManagerFactory.field_a, qga.field_b, false);
                 break;
               case 6:
                 iw.k((byte) -38);
@@ -628,7 +628,7 @@ abstract class NetworkGameClient extends GameApplet {
     private final void j(int param0) {
         int var2 = qga.field_b.readUnsignedByte((byte) -124);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
-        int var4 = -1 + vja.field_a;
+        int var4 = -1 + PartitioningManagerFactory.field_a;
         byte[] var5 = new byte[var4];
         qga.field_b.readIsaacBytes(var4, 0, (byte) -50, var5);
         qp.a(var3 != 0, param0 ^ param0, MissionList.b((byte) -117), qpa.a((byte) -125, var5));
@@ -689,7 +689,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
           var5Lifetime1 = 60 % ((-49 - param0) / 41);
           if (var4 == 2) {
-            var6_int = RoundResult.a(SetVariableAction.b(119), GetPointDefenceLaserRandomness.a(52), this.affiliateId, (byte) 111, LoadBlackboxRecording.a(88), etb.a(31065), fpb.d(true));
+            var6_int = RoundResult.a(SetVariableAction.b(119), GetPointDefenceLaserRandomness.a(52), this.affiliateId, (byte) 111, LoadBlackboxRecording.a(88), ThrusterBehaviourFactory.a(31065), fpb.d(true));
             if (-1 != var6_int) {
               wt.a(var6_int, -19342, gob.field_a, dgb.field_b);
               gob.field_a = null;
@@ -712,7 +712,7 @@ abstract class NetworkGameClient extends GameApplet {
                   dgb.field_b = null;
                 } else {
                   tia.field_C = SetTorpedoAimarc.field_p;
-                  uk.b((byte) 49);
+                  TeamShipComponentConditionFactory.b((byte) 49);
                   cgb.field_a = false;
                   GetSpinningBladeAimspeed.field_q = 10;
                 }
@@ -760,7 +760,7 @@ abstract class NetworkGameClient extends GameApplet {
               if (SetPhasedEnergyBeamReload.field_p.c(104)) {
                 var7 = SetPhasedEnergyBeamReload.field_p.a(43);
                 if (var7 != null) {
-                  var8 = tja.a(0, 0, var7.position, var7.payload);
+                  var8 = CarouselSlot.a(0, 0, var7.position, var7.payload);
                   GetMissionTerrainNebulaProbability.a(var8, (byte) 122);
                 } else {
                   var10 = (String) null;

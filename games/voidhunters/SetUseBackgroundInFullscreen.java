@@ -37,11 +37,11 @@ final class SetUseBackgroundInFullscreen extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         field_o = null;
         if (param0 != 0) {
-          SetUseBackgroundInFullscreen.a(-22);
+          SetUseBackgroundInFullscreen.clearSharedReferences(-22);
         }
     }
 

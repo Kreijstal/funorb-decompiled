@@ -16,11 +16,11 @@ final class nv extends DualLinkNode implements mda {
     int field_u;
     private int field_k;
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         field_r = null;
         if (param0 < 30) {
-          nv.e(-90);
+          nv.clearSharedReferences(-90);
         }
     }
 

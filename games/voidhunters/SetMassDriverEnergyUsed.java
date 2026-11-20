@@ -45,7 +45,7 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
         if (param3 != 23) {
           return true;
         }
-        if (wga.field_a == null) {
+        if (RoundResultFactory.field_a == null) {
           if (!SetFightersPerPlayerMaximum.field_p) {
             if (!uga.field_d &&
               9 != SetBombletSprayProjectileDamage.field_o &&
@@ -74,7 +74,7 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
           }
         } else {
           if (SetBombletSprayProjectileDamage.field_o == 13) {
-            wga.field_a = null;
+            RoundResultFactory.field_a = null;
             return true;
           }
           if (!SetFightersPerPlayerMaximum.field_p) {
@@ -137,7 +137,7 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_p = null;
         if (!param0) {
           field_o = 71;

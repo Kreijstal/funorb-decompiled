@@ -7,7 +7,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
     private int index;
     static String field_f;
 
-    final String a(int param0) {
+    final String getDescription(int param0) {
         if (param0 == -1) {
           return "Variable " + this.index + " at least " + this.value;
         }
@@ -48,7 +48,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         field_f = null;
     }
 
-    final boolean a(int param0, MissionState param1, World param2) {
+    final boolean evaluate(int param0, MissionState param1, World param2) {
         RuntimeException var4 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -114,7 +114,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         VariableCondition var6 = null;
         try {
           if (param0 <= 54) {
-            this.a((byte) -47, -43);
+            this.getParameter((byte) -47, -43);
           }
           super.copyTo((byte) 82, param1);
           var5 = (VariableCondition) (param1);
@@ -131,9 +131,9 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         int var1 = -25 / ((46 - param0) / 35);
     }
 
-    final ucb[] a(World param0, int param1) {
+    final WorldPoint[] getWorldPositions(World param0, int param1) {
         RuntimeException var3 = null;
-        ucb[] stackIn_3_0 = null;
+        WorldPoint[] stackIn_3_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -142,7 +142,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
           if (param1 == -20605) {
             return null;
           }
-          stackIn_3_0 = (ucb[]) null;
+          stackIn_3_0 = (WorldPoint[]) null;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -161,7 +161,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
     VariableCondition() {
     }
 
-    final void a(World param0, int param1, int param2, int param3) {
+    final void setParameter(World param0, int param1, int param2, int param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -242,7 +242,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
             }
             return;
           }
-          ifa.field_g[10] = vqa.field_g.field_h ? pva.field_e : gs.field_d;
+          ifa.field_g[10] = vqa.field_g.field_h ? pva.field_e : SettingsChangeFactory.field_d;
           if (param0 <= -76) {
             return;
           }
@@ -256,7 +256,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         field_e = false;
     }
 
-    final int a(byte param0, int param1) {
+    final int getParameter(byte param0, int param1) {
         if (param0 >= -102) {
           return -56;
         }

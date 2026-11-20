@@ -78,7 +78,7 @@ final class tsa extends IntrusiveNode {
                 var7[incrementValue$0] = var5.a((byte) 96, param1);
                 var5 = (tsa) (this.field_f.next((byte) 69));
               }
-              stackIn_10_0 = fjb.a(this.field_d, var8, param1, (byte) -124);
+              stackIn_10_0 = MessageFactory.a(this.field_d, var8, param1, (byte) -124);
               return stackIn_10_0;
             }
             if (this.field_e == fwa.field_h) {

@@ -168,7 +168,7 @@ final class WeaponBehaviour implements DiffableState {
     final boolean d(int param0) {
         if (param0 != 6) {
           ShipComponent var3 = (ShipComponent) null;
-          this.a(-39, -35, 81, (wfb) null, (ShipComponent) null);
+          this.a(-39, -35, 81, (ShipComponentDefinition) null, (ShipComponent) null);
         }
         return !this.a((byte) 24).e(118) ? true : false;
     }
@@ -269,7 +269,7 @@ final class WeaponBehaviour implements DiffableState {
           if (this.weapontype != 6 &&
             this.weapontype != 9 &&
             this.weapontype != 11) {
-            param15.a(5, param10.c((byte) -121) + (var24 >> eta.field_b), 20, 20, 30273, param13, 500, param7, param10.f(0) + (var25 >> eta.field_b));
+            param15.a(5, param10.c((byte) -121) + (var24 >> MovingObjectFactory.field_b), 20, 20, 30273, param13, 500, param7, param10.f(0) + (var25 >> MovingObjectFactory.field_b));
           }
           if (this.weapontype == 9 &&
             param4 >= 0) {
@@ -373,7 +373,7 @@ final class WeaponBehaviour implements DiffableState {
             if (this.weapontype != 9) {
               return;
             }
-            if (this.reload <= -upb.field_a + GetFighterRepairAmount.field_o) {
+            if (this.reload <= -VariableConditionFactory.field_a + GetFighterRepairAmount.field_o) {
               return;
             }
           }
@@ -431,7 +431,7 @@ final class WeaponBehaviour implements DiffableState {
             0 == di.field_p) {
             var25_int = param3 - var17;
             var26_int = -var18 + param6;
-            var27 = ecb.a(var26_int, (byte) -77, var25_int);
+            var27 = GameSnapshotFactory.a(var26_int, (byte) -77, var25_int);
             var28 = GameKeyHandler.a(22433, var27 - param8);
             if (Math.abs(var28) > var34.d(27918)) {
               return;
@@ -483,15 +483,15 @@ final class WeaponBehaviour implements DiffableState {
               var32 = var29.y - param6;
               if (ar.a(var31, (byte) 112, var32) <= var29.b(true) + 32768) {
                 this.targetLock.targetId = var29.getId(false);
-                this.targetLock.targetX = param3 - var29.d(false);
-                this.targetLock.targetY = -var29.g((byte) -122) + param6;
+                this.targetLock.targetX = param3 - var29.getX(false);
+                this.targetLock.targetY = -var29.getY((byte) -122) + param6;
                 var30 = 1;
               }
             }
             if (var30 == 0) {
               this.targetLock.targetId = -1;
-              this.targetLock.targetX = -param5.d(false) + param3;
-              this.targetLock.targetY = -param5.g((byte) 123) + param6;
+              this.targetLock.targetX = -param5.getX(false) + param3;
+              this.targetLock.targetY = -param5.getY((byte) 123) + param6;
             }
           }
           this.a(param3, var26_intLifetime1, 113, var22, var25_intLifetime1, param9, var16, var21Lifetime1, param7, var23, param5, param6, param8, var20Lifetime1, var15, param0, var34);
@@ -644,10 +644,10 @@ final class WeaponBehaviour implements DiffableState {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_a = null;
         if (!param0) {
-          WeaponBehaviour.c(false);
+          WeaponBehaviour.clearSharedReferences(false);
         }
     }
 
@@ -675,7 +675,7 @@ final class WeaponBehaviour implements DiffableState {
           if (this.weapontype == 10 &&
             Particle.field_a - Particle.field_n < this.reload) {
             var10_int = Particle.field_a - this.reload;
-            var11 = ccb.field_a.a(0);
+            var11 = ShipFactory.field_a.a(0);
             var11.a(-1, param4, param0, bpa.field_a / Particle.field_n * var10_int, 1, 0, (byte) 69, param1, param7, 0);
           }
           var12 = this.a((byte) 24);
@@ -724,7 +724,7 @@ final class WeaponBehaviour implements DiffableState {
         this.weapontype = param0;
     }
 
-    final boolean a(int param0, int param1, int param2, wfb param3, ShipComponent param4) {
+    final boolean a(int param0, int param1, int param2, ShipComponentDefinition param3, ShipComponent param4) {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
@@ -754,7 +754,7 @@ final class WeaponBehaviour implements DiffableState {
           var9 = param4.g((byte) -127);
           var10 = param2 - var7;
           var11 = param1 - var8;
-          var12 = ecb.a(var11, (byte) -77, var10);
+          var12 = GameSnapshotFactory.a(var11, (byte) -77, var10);
           var13 = GameKeyHandler.a(22433, var12 - var9);
           stackIn_9_0 = !(Math.abs(var13) > var6_int);
           return stackIn_9_0;

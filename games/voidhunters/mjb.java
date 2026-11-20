@@ -5,7 +5,7 @@ final class mjb extends aja {
     private boolean field_k;
     private eb field_o;
     private int field_l;
-    static dja field_c;
+    static GameStateFactory field_c;
     private boolean field_j;
     private int field_m;
     static boolean field_e;
@@ -22,10 +22,10 @@ final class mjb extends aja {
         return this.field_m + this.field_n + this.field_g;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         if (param0 > -79) {
-          mjb.a(9);
+          mjb.clearSharedReferences(9);
         }
     }
 
@@ -359,7 +359,7 @@ final class mjb extends aja {
         var2.position = var2.position + 1;
         int var3 = var2.position;
         if (param0 <= 93) {
-          field_c = (dja) null;
+          field_c = (GameStateFactory) null;
         }
         var2.writeByte(0, 2);
         var2.writeBytes(0, GetPlayerRepairTime.field_o, -1, GetPlayerRepairTime.field_o.length);
@@ -505,6 +505,6 @@ final class mjb extends aja {
 
     static {
         field_e = false;
-        field_c = (dja) ((Object) new ada());
+        field_c = (GameStateFactory) ((Object) new PartitionZoneListFactory());
     }
 }

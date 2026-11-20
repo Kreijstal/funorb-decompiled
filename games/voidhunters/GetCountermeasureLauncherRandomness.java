@@ -5,7 +5,7 @@ final class GetCountermeasureLauncherRandomness extends ConsoleCommand {
     static int field_p;
     static String field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 80) {
           field_p = -59;
@@ -44,7 +44,7 @@ final class GetCountermeasureLauncherRandomness extends ConsoleCommand {
     }
 
     static {
-        vna discarded$0 = new vna();
+        TrailHolderFactory discarded$0 = new TrailHolderFactory();
         field_o = "The '<%0>' setting needs to be changed.";
     }
 }

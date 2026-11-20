@@ -284,7 +284,7 @@ final class rq extends dqa implements ln, oo, jpb {
         var3 = var3 + this.a(this.field_x, var3, RequestNewestBlackboxRecording.field_q, 170, (byte) -36);
         var3 = var3 + (this.a(-41, mmb.field_e, 170, lg.field_d, var3, this.field_A) + 5);
         var3 = var3 + (5 + this.a(-103, Projectile.field_r, 170, ffb.field_c, var3, this.field_F));
-        var3 = var3 + this.a(170, this.field_D, (byte) 104, jja.field_a, var3);
+        var3 = var3 + this.a(170, this.field_D, (byte) 104, CarouselSystemEventFactory.field_a, var3);
         sca var4 = new sca(46, var3, -90 + this.field_h, 25, this.field_E, true, this.field_h - 120, 5, SetTorpedoProjectileLife.field_o, 11579568, shb.field_m);
         this.b(-18756, var4);
         var3 = var3 + var4.field_f;

@@ -114,13 +114,13 @@ final class nna extends dqa implements oo {
         }
     }
 
-    public static void c(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_F = null;
         field_v = null;
         field_z = null;
         field_C = null;
         if (!param0) {
-          nna.c(true);
+          nna.clearSharedReferences(true);
         }
         field_D = null;
     }

@@ -13,7 +13,7 @@ final class ata extends htb {
     static int field_H;
     static String field_G;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 == 6344) {
           field_G = null;
           field_L = null;
@@ -37,7 +37,7 @@ final class ata extends htb {
           if (MessageLog.field_a == bva.field_c) {
             return false;
           }
-          SetBombletSprayProjectileDamage.field_o = npa.field_a[bva.field_c];
+          SetBombletSprayProjectileDamage.field_o = ServerTickFactory.field_a[bva.field_c];
           SetClientSideDragging.field_r = GetGrapplingHookCooldown.field_q[bva.field_c];
           bva.field_c = param0 & bva.field_c + 1;
           stackIn_5_0 = true;

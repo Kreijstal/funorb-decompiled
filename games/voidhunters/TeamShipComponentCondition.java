@@ -6,7 +6,7 @@ final class TeamShipComponentCondition extends MissionCondition implements Diffa
     private int teamId;
     static ri field_e;
 
-    final void a(World param0, int param1, int param2, int param3) {
+    final void setParameter(World param0, int param1, int param2, int param3) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -36,14 +36,14 @@ final class TeamShipComponentCondition extends MissionCondition implements Diffa
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_e = null;
         if (param0 != -2404) {
-          TeamShipComponentCondition.b(-35);
+          TeamShipComponentCondition.clearSharedReferences(-35);
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int getParameter(byte param0, int param1) {
         if (param0 >= -102) {
           return -124;
         }
@@ -111,7 +111,7 @@ final class TeamShipComponentCondition extends MissionCondition implements Diffa
         }
     }
 
-    final boolean a(int param0, MissionState param1, World param2) {
+    final boolean evaluate(int param0, MissionState param1, World param2) {
         int var6 = 0;
         RuntimeException var4 = null;
         Ship[] var5 = null;
@@ -180,7 +180,7 @@ final class TeamShipComponentCondition extends MissionCondition implements Diffa
         }
     }
 
-    final ucb[] a(World param0, int param1) {
+    final WorldPoint[] getWorldPositions(World param0, int param1) {
         RuntimeException var3 = null;
         Object stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -191,9 +191,9 @@ final class TeamShipComponentCondition extends MissionCondition implements Diffa
           if (param1 == -20605) {
             return null;
           }
-          this.a((byte) -105, 11);
+          this.getParameter((byte) -105, 11);
           stackIn_3_0 = null;
-          return (ucb[]) (stackIn_3_0);
+          return (WorldPoint[]) (stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -208,7 +208,7 @@ final class TeamShipComponentCondition extends MissionCondition implements Diffa
         }
     }
 
-    final int[] a(World param0, int param1, int[] param2) {
+    final int[] collectTargetBodyIds(World param0, int param1, int[] param2) {
         int var6 = 0;
         Ship[] var5 = null;
         Ship var7 = null;
@@ -227,7 +227,7 @@ final class TeamShipComponentCondition extends MissionCondition implements Diffa
           var9 = param0.getShips(1000);
           var5 = var9;
           if (param1 < 16) {
-            this.a((World) null, -9);
+            this.getWorldPositions((World) null, -9);
           }
           for (var6 = 0; var6 < var5.length; var6++) {
             var7 = var5[var6];
@@ -261,9 +261,9 @@ final class TeamShipComponentCondition extends MissionCondition implements Diffa
         }
     }
 
-    final String a(int param0) {
+    final String getDescription(int param0) {
         if (param0 != -1) {
-          this.a(-64, (MissionState) null, (World) null);
+          this.evaluate(-64, (MissionState) null, (World) null);
         }
         String var2 = "Any ship ";
         return var2 + "on team " + this.teamId + " holds component " + SetSpinningBladeSpinupSpeed.field_o[this.componentTypeId];

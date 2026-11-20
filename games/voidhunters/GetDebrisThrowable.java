@@ -18,7 +18,7 @@ final class GetDebrisThrowable extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         field_o = null;
         if (param0 > -67) {
@@ -78,7 +78,7 @@ final class GetDebrisThrowable extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0) {
-            GetDebrisThrowable.e((byte) 12);
+            GetDebrisThrowable.clearSharedReferences((byte) 12);
           }
           if (!ssa.b(2)) {
             return;
@@ -100,6 +100,6 @@ final class GetDebrisThrowable extends ConsoleCommand {
     }
 
     static {
-        gmb discarded$0 = new gmb();
+        SpawnChoiceFactory discarded$0 = new SpawnChoiceFactory();
     }
 }

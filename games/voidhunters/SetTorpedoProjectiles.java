@@ -179,7 +179,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               var12.g(121);
               var12.field_wb = new llb(0L, jba.field_h);
               var12.b(-561, var12.field_wb);
-              var12.field_Nb = new llb(0L, nfb.field_a);
+              var12.field_Nb = new llb(0L, GrappleLauncherBehaviourFactory.field_a);
               var13 = 1;
               var12.b(-561, var12.field_Nb);
             }
@@ -207,7 +207,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
             var19 = 0;
             var32 = var12.field_xb;
             var21 = 72;
-            if (tja.field_a == param2) {
+            if (CarouselSlot.field_a == param2) {
               var21 += 42;
             }
             var33 = BitmapFont.a(var12.field_Ib.field_eb, var32, var21);
@@ -255,7 +255,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                   var12.field_Nb.field_R = SetMissileLauncherProjectiles.field_p;
                 } else {
                   if (var12.field_Fb) {
-                    var12.field_Ib.field_R = SetReverbGain.a(uk.field_a, new String[]{var20}, 100);
+                    var12.field_Ib.field_R = SetReverbGain.a(TeamShipComponentConditionFactory.field_a, new String[]{var20}, 100);
                     var12.field_wb.field_R = SetAngularForceDownshift.field_q;
                     var12.field_Nb.field_R = GetHealthBarWidth.field_o;
                   } else {
@@ -266,7 +266,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               var25_int = 0;
               if (null != SetSpinningBladeSpindamageMultiplier.field_o &&
                 nmb.b(-91) &&
-                wqa.field_a != var12.field_zb) {
+                BodyInZoneConditionFactory.field_a != var12.field_zb) {
                 if (null != var12.field_wb.field_R) {
                   var26 = var12.field_wb.e(param1 + 93) + 2 * qs.field_c;
                   var12.field_wb.a(var25_int, 124, var26, var19, nna.field_w);
@@ -296,16 +296,16 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               var12.field_Jb.a(-40 + var12.field_hb, param1 + 123, 40, var19, nna.field_w);
               if (var12.field_Ib.field_O &&
                 var22 != 0) {
-                lob.field_a = var12.field_xb;
+                NebulaFieldFactory.field_a = var12.field_xb;
                 if (GetShieldsDirectionalArcParticleLife.field_q != null &&
                   GetShieldsDirectionalArcParticleLife.field_q[var12.field_vb] != null) {
-                  lob.field_a = lob.field_a + " - " + GetShieldsDirectionalArcParticleLife.field_q[var12.field_vb];
+                  NebulaFieldFactory.field_a = NebulaFieldFactory.field_a + " - " + GetShieldsDirectionalArcParticleLife.field_q[var12.field_vb];
                 }
               } else {
                 if (var12.field_Ib.field_O &&
                   null != GetShieldsDirectionalArcParticleLife.field_q &&
                   null != GetShieldsDirectionalArcParticleLife.field_q[var12.field_vb]) {
-                  lob.field_a = GetShieldsDirectionalArcParticleLife.field_q[var12.field_vb];
+                  NebulaFieldFactory.field_a = GetShieldsDirectionalArcParticleLife.field_q[var12.field_vb];
                 }
               }
               var19 = var19 + nna.field_w;
@@ -343,7 +343,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
             if (var12.field_Q &&
               !var12.i(121)) {
               var24Lifetime2 = null;
-              if (~var12.field_zb != ~wqa.field_a) {
+              if (~var12.field_zb != ~BodyInZoneConditionFactory.field_a) {
                 if (var5_int != 0 &&
                   !var12.field_Lb) {
                   var24Lifetime2 = SetReverbGain.a(jla.field_B, new String[]{var20}, 120);
@@ -365,10 +365,10 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                         var25_int = wsb.a(var8 & ~var12.field_Ab, 1302374146);
                         var24Lifetime2 = SetReverbGain.a(GetKeepTeamColours.field_q, new String[]{var20}, param1 ^ 124);
                         if (var25_int > 0 &&
-                          null != mta.field_a &&
-                          mta.field_a.length >= var25_int &&
-                          null != mta.field_a[-1 + var25_int]) {
-                          var24Lifetime2 = SetReverbGain.a(mta.field_a[var25_int - 1][2], new String[]{var20}, 82);
+                          null != MissionFactory.field_a &&
+                          MissionFactory.field_a.length >= var25_int &&
+                          null != MissionFactory.field_a[-1 + var25_int]) {
+                          var24Lifetime2 = SetReverbGain.a(MissionFactory.field_a[var25_int - 1][2], new String[]{var20}, 82);
                         }
                       }
                     } else {
@@ -389,10 +389,10 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                         var25_int = wsb.a(~var12.field_Ab & var8, 1302374146);
                         var24Lifetime2 = ooa.field_zb;
                         if (0 < var25_int &&
-                          mta.field_a != null &&
-                          var25_int <= mta.field_a.length &&
-                          mta.field_a[-1 + var25_int] != null) {
-                          var24Lifetime2 = mta.field_a[var25_int - 1][1];
+                          MissionFactory.field_a != null &&
+                          var25_int <= MissionFactory.field_a.length &&
+                          MissionFactory.field_a[-1 + var25_int] != null) {
+                          var24Lifetime2 = MissionFactory.field_a[var25_int - 1][1];
                         }
                       }
                     }
@@ -486,7 +486,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                   var27 = SetSpinningBladeSpindamageMultiplier.field_o.field_Vb;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + SetReverbGain.a(SetMassDriverProjectileLife.field_o, new String[]{var27}, 125);
                 }
-                lob.field_a = (String) (var24Lifetime2);
+                NebulaFieldFactory.field_a = (String) (var24Lifetime2);
               }
             }
             var11 = var12;

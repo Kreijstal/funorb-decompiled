@@ -10,9 +10,9 @@ final class SetTorpedoEnergyUsed extends ConsoleCommand {
         if (param1 != 300) {
           Sprite var3 = (Sprite) null;
           SetTorpedoEnergyUsed.a(86, (Sprite) null);
-          return ok.field_b[param0];
+          return ShipBodyFactory.field_b[param0];
         }
-        return ok.field_b[param0];
+        return ShipBodyFactory.field_b[param0];
     }
 
     final static void a(int param0, Sprite param1) {

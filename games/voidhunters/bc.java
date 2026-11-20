@@ -6,11 +6,11 @@ final class bc {
     private Sprite[] field_c;
     static String field_a;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         field_b = null;
         if (param0 != -22113) {
-          bc.a(70);
+          bc.clearSharedReferences(70);
         }
     }
 

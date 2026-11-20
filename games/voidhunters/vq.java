@@ -126,7 +126,7 @@ abstract class vq extends dqa implements lca {
             if (gob.field_c == 2) {
               eu.field_h = new lpb((java.net.Socket) (ija.field_b.field_d), gia.field_k);
               var2 = new PacketBuffer(13);
-              jdb.a(SetPointDefenceLaserProjectileDamage.field_p, (byte) -48, GetFixedaim.field_o, var2, OpenGlToolkit.field_Ib);
+              SetVariableLabelActionFactory.a(SetPointDefenceLaserProjectileDamage.field_p, (byte) -48, GetFixedaim.field_o, var2, OpenGlToolkit.field_Ib);
               var2.writeByte(0, 15);
               var2.writeInt(ea.field_d, 332614536);
               eu.field_h.a(0, var2.payload, 13, 0);

@@ -9,7 +9,7 @@ final class GetUseTrails extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         if (param0 != 63) {
           field_o = -0.15479488670825958f;

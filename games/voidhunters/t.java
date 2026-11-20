@@ -48,9 +48,9 @@ final class t {
         return rpa.a(param0, 0, true);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 1) {
-          t.a(57);
+          t.clearSharedReferences(57);
           field_e = null;
           return;
         }

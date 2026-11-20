@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class jv {
-    static dja field_d;
+    static GameStateFactory field_d;
     private asb field_e;
     private asb field_a;
     private pfb field_c;
@@ -48,7 +48,7 @@ final class jv {
           return param1;
         }
         if (param0 != -109) {
-          jv.a((byte) 16);
+          jv.clearSharedReferences((byte) 16);
           if (0 <= param2 + param1 - param3) {
             return param2 + (param1 - param3);
           }
@@ -60,7 +60,7 @@ final class jv {
         return -param3 + dma.field_g;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_f = null;
         field_d = null;
         if (param0 != -33) {
@@ -109,7 +109,7 @@ final class jv {
     }
 
     static {
-        field_d = (dja) ((Object) new efb());
+        field_d = (GameStateFactory) ((Object) new MissionConditionFactory());
         field_f = "Updates will sent to the email address you've given";
     }
 }

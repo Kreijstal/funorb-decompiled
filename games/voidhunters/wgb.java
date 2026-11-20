@@ -26,7 +26,7 @@ final class wgb extends eca {
             return stackIn_2_0;
           }
           var5 = (CharSequence) ((Object) param0);
-          var3_int = lob.a(-73, var5);
+          var3_int = NebulaFieldFactory.a(-73, var5);
           if (var3_int > 0 &&
             var3_int <= 130) {
             if (param1 != 16384) {
@@ -51,9 +51,9 @@ final class wgb extends eca {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 <= 64) {
-          wgb.f(53);
+          wgb.clearSharedReferences(53);
           field_i = null;
           field_h = null;
           return;

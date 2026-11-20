@@ -6,9 +6,9 @@ final class GetMachineGunAimarc extends ConsoleCommand {
     static String field_o;
     static boolean field_p;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 > -16) {
-          GetMachineGunAimarc.a(-80);
+          GetMachineGunAimarc.clearSharedReferences(-80);
           field_o = null;
           field_q = null;
           return;

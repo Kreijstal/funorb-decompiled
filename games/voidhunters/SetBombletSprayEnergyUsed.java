@@ -29,7 +29,7 @@ final class SetBombletSprayEnergyUsed extends ConsoleCommand {
           var7 = AsteroidField.a((byte) -37, param3, 0, param2, var5_int);
           var8 = 20;
           var9 = param0 + GetBombletSprayEnergyUsed.field_p.height / 2 - var7 / 2;
-          af.a((byte) -115, param4, 2 * var8 + var7, -(var6 / 2) + (GetBombletSprayEnergyUsed.field_p.width / 2 - var8), -var8 + var9, var6 + 2 * var8);
+          BlackBoxRecording.a((byte) -115, param4, 2 * var8 + var7, -(var6 / 2) + (GetBombletSprayEnergyUsed.field_p.width / 2 - var8), -var8 + var9, var6 + 2 * var8);
           kca.a(var9, var7, -(var6 / 2) + GetBombletSprayEnergyUsed.field_p.width / 2, 0, param4, 1, param3, param2, 16777215, var6, 0, (byte) -99, 1);
           stackIn_3_0 = var8 * 2 + var7;
           return stackIn_3_0;

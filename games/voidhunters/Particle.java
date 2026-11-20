@@ -373,10 +373,10 @@ final class Particle implements DiffableState {
 
     final static boolean c(byte param0) {
         int var1 = 117 % ((param0 - 44) / 58);
-        if (null == efb.field_b) {
+        if (null == MissionConditionFactory.field_b) {
           return false;
         }
-        if (efb.field_b.a(34)) {
+        if (MissionConditionFactory.field_b.a(34)) {
           return true;
         }
         return false;

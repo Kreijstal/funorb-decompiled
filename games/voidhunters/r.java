@@ -10,10 +10,10 @@ abstract class r extends DualLinkNode {
     protected r() {
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_m = null;
         if (param0 != -123) {
-          r.e((byte) -19);
+          r.clearSharedReferences((byte) -19);
         }
     }
 

@@ -3,7 +3,7 @@
  */
 final class gva extends Exception {
     String field_b;
-    static dja field_a;
+    static GameStateFactory field_a;
 
     public static void clearSharedReferences(boolean param0) {
         if (!param0) {
@@ -17,7 +17,7 @@ final class gva extends Exception {
           return;
         }
         int var1 = -35 / ((-45 - param0) / 50);
-        wha.a(2, false, 4);
+        AsteroidFactory.a(2, false, 4);
     }
 
     gva(String param0) {

@@ -7,7 +7,7 @@ final class SetClientSideDragging extends ConsoleCommand {
     static mab field_q;
     static String field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 37) {
           field_r = 'ﾇ';
           field_q = null;

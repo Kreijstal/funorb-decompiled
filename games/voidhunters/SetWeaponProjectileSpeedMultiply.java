@@ -54,7 +54,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
         RuntimeException var1 = null;
         lta var2 = null;
         int var3 = 0;
-        wfb var3_ref_wfb = null;
+        ShipComponentDefinition var3_ref_wfb = null;
         int var4 = 0;
         Exception var4_ref_Exception = null;
         int[] var6 = null;
@@ -71,7 +71,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
         int[] var18 = null;
         int[] var19 = null;
         String var20 = null;
-        wfb var22 = null;
+        ShipComponentDefinition var22 = null;
         int[] var24 = null;
         int[] var25 = null;
         int[] var29 = null;
@@ -92,14 +92,14 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
             var3 = 4 * -fnb.field_b;
             var4 = fnb.field_b / 2;
             var30 = uca.a(var4, (byte) 9, new int[]{3, 4, 6, 8, 6, 4, 6, 8, 6, 4, 6, 8, 9, 10, 0, 2, 0, 10, 0, 2, 0, 10, 0}, var3);
-            var22 = new wfb(var30, 0, 0);
+            var22 = new ShipComponentDefinition(var30, 0, 0);
             ta.a(var30, param0 + 12, var22);
             var22.a(102, 15);
-            fr.a(var2, var22, false);
+            SpawnPointFactory.a(var2, var22, false);
           } else {
             var3_ref_wfb = hab.field_g[SetMissileLauncherProjectileLife.field_p];
             if (var3_ref_wfb != null) {
-              fr.a(var2, var3_ref_wfb, false);
+              SpawnPointFactory.a(var2, var3_ref_wfb, false);
               try {
                 if (au.field_c == 1) {
                   for (var4 = 0; var4 < hw.field_d.length; var4++) {
@@ -176,7 +176,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
           SetWeaponProjectileSpeedMultiply.e((byte) 14);
         }

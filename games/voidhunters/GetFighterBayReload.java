@@ -5,9 +5,9 @@ final class GetFighterBayReload extends ConsoleCommand {
     static float[] field_r;
     static llb field_p;
     static float[] field_o;
-    static dja field_q;
+    static GameStateFactory field_q;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 == 16086) {
           field_q = null;
@@ -15,7 +15,7 @@ final class GetFighterBayReload extends ConsoleCommand {
           field_r = null;
           return;
         }
-        GetFighterBayReload.a(-66);
+        GetFighterBayReload.clearSharedReferences(-66);
         field_q = null;
         field_p = null;
         field_r = null;
@@ -34,7 +34,7 @@ final class GetFighterBayReload extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetFighterBayReload.a(-101);
+            GetFighterBayReload.clearSharedReferences(-101);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(115, 100));
           return stackIn_3_0;
@@ -54,17 +54,17 @@ final class GetFighterBayReload extends ConsoleCommand {
 
     final static void a(byte param0, int[] param1, long[] param2) {
         try {
-          kc.a(-14677, param2, 0, param1, param2.length - 1);
+          PlayerGameData.a(-14677, param2, 0, param1, param2.length - 1);
           if (param0 != -24) {
-            dja var4 = (dja) null;
-            GetFighterBayReload.a((Object[]) null, (Object) null, false, (dja) null, 32);
+            GameStateFactory var4 = (GameStateFactory) null;
+            GetFighterBayReload.a((Object[]) null, (Object) null, false, (GameStateFactory) null, 32);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kn.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static Object[] a(Object[] param0, Object param1, boolean param2, dja param3, int param4) {
+    final static Object[] a(Object[] param0, Object param1, boolean param2, GameStateFactory param3, int param4) {
         RuntimeException var5 = null;
         Object[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -77,9 +77,9 @@ final class GetFighterBayReload extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param4 >= -73) {
-            GetFighterBayReload.a(64);
+            GetFighterBayReload.clearSharedReferences(64);
           }
-          stackIn_3_0 = qlb.a(param0, param1, param3, param2, false, 1);
+          stackIn_3_0 = MapClearanceAreaFactory.a(param0, param1, param3, param2, false, 1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -116,6 +116,6 @@ final class GetFighterBayReload extends ConsoleCommand {
           field_r[var2] = (float)Math.sin(var0 * (double)var2);
           field_o[var2] = (float)Math.cos(var0 * (double)var2);
         }
-        field_q = (dja) ((Object) new qaa());
+        field_q = (GameStateFactory) ((Object) new MapClearanceRectangleFactory());
     }
 }

@@ -145,7 +145,7 @@ final class MissionList implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = (MissionList) (other);
-          tja.a(var3.missions, 1, this.missions, false, 5547);
+          CarouselSlot.a(var3.missions, 1, this.missions, false, 5547);
           var4 = 0;
           if (SetCountermeasureLauncherAimspeed.a(var3.missions, false, 1, this.missions, -5)) {
             var4 = 1;

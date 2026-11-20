@@ -4,7 +4,7 @@
 final class GetSelfDestructTimer extends ConsoleCommand {
     static String field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 225) {
           int[] var2 = (int[]) null;
@@ -41,9 +41,9 @@ final class GetSelfDestructTimer extends ConsoleCommand {
             if (var4_ref_c != null &&
               var4_ref_c.field_e < var2_long) {
               var4_ref_c.unlink(-3846);
-              vja.field_a = var4_ref_c.field_f.length;
+              PartitioningManagerFactory.field_a = var4_ref_c.field_f.length;
               qga.field_b.position = 0;
-              for (var5_int = 0; var5_int < vja.field_a; var5_int++) {
+              for (var5_int = 0; var5_int < PartitioningManagerFactory.field_a; var5_int++) {
                 qga.field_b.payload[var5_int] = var4_ref_c.field_f[var5_int];
               }
               iq.field_a = SetMissionResnetResourceTickTime.field_o;
@@ -61,9 +61,9 @@ final class GetSelfDestructTimer extends ConsoleCommand {
               }
               SetAutoDetail.field_p = qga.field_b.readIsaacByte(255);
               qga.field_b.position = 0;
-              vja.field_a = param1[SetAutoDetail.field_p];
+              PartitioningManagerFactory.field_a = param1[SetAutoDetail.field_p];
             }
-            if (!ci.b((byte) 51)) {
+            if (!PlayerJoinFactory.b((byte) 51)) {
               return false;
             }
             if (cd.field_c == 0) {
@@ -81,8 +81,8 @@ final class GetSelfDestructTimer extends ConsoleCommand {
                 var4 = 0;
               }
             }
-            var5 = new c((long)var4 + var2_long, SetAutoDetail.field_p, new byte[vja.field_a]);
-            for (var6 = 0; var6 < vja.field_a; var6++) {
+            var5 = new c((long)var4 + var2_long, SetAutoDetail.field_p, new byte[PartitioningManagerFactory.field_a]);
+            for (var6 = 0; var6 < PartitioningManagerFactory.field_a; var6++) {
               var5.field_f[var6] = qga.field_b.payload[var6];
             }
             GetSpinningBladeAimarc.field_q.addLast(param0 ^ -10258, var5);

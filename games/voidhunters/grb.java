@@ -8,11 +8,11 @@ final class grb extends TextureOperation {
     private int field_k;
     static String field_i;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_l = null;
         field_i = null;
         if (param0 > -37) {
-          grb.e((byte) 94);
+          grb.clearSharedReferences((byte) 94);
         }
         field_j = null;
     }
@@ -41,7 +41,7 @@ final class grb extends TextureOperation {
         int var13Lifetime1;
         var14 = VoidHunters.field_G;
         if (!param1) {
-          grb.e((byte) -21);
+          grb.clearSharedReferences((byte) -21);
         }
         var3 = this.field_f.getRow((byte) 121, param0);
         if (this.field_f.field_e) {
@@ -113,7 +113,7 @@ final class grb extends TextureOperation {
             }
           }
           if (param1 > -60) {
-            grb.e((byte) -106);
+            grb.clearSharedReferences((byte) -106);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

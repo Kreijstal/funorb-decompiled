@@ -11,10 +11,10 @@ final class gla {
         super.finalize();
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         if (param0 != -5709) {
-          gla.a(-15);
+          gla.clearSharedReferences(-15);
         }
     }
 

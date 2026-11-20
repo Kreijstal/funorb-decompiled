@@ -9,7 +9,7 @@ final class GetNebulaFadesOutWhenClose extends ConsoleCommand {
         if (param2 != -85) {
           return;
         }
-        if (!wqa.a(false, wgb.field_f)) {
+        if (!BodyInZoneConditionFactory.a(false, wgb.field_f)) {
           return;
         }
         GetNebulaFadesOutWhenClose.a(-103, fa.field_d[75]);

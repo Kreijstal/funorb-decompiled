@@ -14,7 +14,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
         SetShipTeamAction var6 = null;
         try {
           if (param0 < 54) {
-            this.a(-15);
+            this.getDescription(-15);
           }
           var5 = (SetShipTeamAction) (param1);
           var6 = var5;
@@ -38,7 +38,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
         try {
           if (obfuscationGuard > -19) {
             var5 = (World) null;
-            this.a((World) null, 61);
+            this.getWorldPosition((World) null, 61);
           }
           super.reportDifferences(other, -97);
           var6 = (SetShipTeamAction) (other);
@@ -69,7 +69,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
         }
     }
 
-    final void a(World param0, boolean param1, int param2, int param3) {
+    final void setParameter(World param0, boolean param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -134,7 +134,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
         try {
           super.readState(param0, param1);
           if (param1) {
-            this.a(-27);
+            this.getDescription(-27);
           }
           this.targetBody = param0.readBits(0, 32);
           this.team = param0.readBits(0, 32);
@@ -143,7 +143,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
         }
     }
 
-    final String a(int param0) {
+    final String getDescription(int param0) {
         String var2 = "Set team of ship " + this.targetBody;
         if (param0 != -1325) {
           SerializableGameState var3 = (SerializableGameState) null;
@@ -155,11 +155,11 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
         return var2 + " to " + this.team;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_a = null;
         field_b = null;
         if (param0 <= 52) {
-          SetShipTeamAction.a((byte) -16);
+          SetShipTeamAction.clearSharedReferences((byte) -16);
         }
     }
 
@@ -204,7 +204,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
         }
     }
 
-    public final int[] a(int param0, int[] param1) {
+    public final int[] collectReferencedBodyIds(int param0, int[] param1) {
         RuntimeException var3 = null;
         int[] stackIn_4_0 = null;
         int[] stackIn_6_0 = null;
@@ -236,7 +236,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
         }
     }
 
-    private final void a(int param0, int param1, GameSnapshot param2) {
+    private final void applyTeamToBody(int param0, int param1, GameSnapshot param2) {
         ShipBody var4 = null;
         Ship var5 = null;
         GameSnapshot var6 = null;
@@ -268,7 +268,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
           }
           if (param1 != 32) {
             var6 = (GameSnapshot) null;
-            this.a(90, -3, (GameSnapshot) null);
+            this.applyTeamToBody(90, -3, (GameSnapshot) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -285,10 +285,10 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
         }
     }
 
-    final ucb a(World param0, int param1) {
+    final WorldPoint getWorldPosition(World param0, int param1) {
         ShipBody var3 = null;
         RuntimeException var3_ref = null;
-        ucb stackIn_5_0 = null;
+        WorldPoint stackIn_5_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -301,7 +301,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
           if (var3 == null) {
             return null;
           }
-          stackIn_5_0 = new ucb(var3.d(false), var3.g((byte) 117));
+          stackIn_5_0 = new WorldPoint(var3.getX(false), var3.getY((byte) 117));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -317,7 +317,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
         }
     }
 
-    final int a(int param0, int param1) {
+    final int getParameter(int param0, int param1) {
         if (param1 >= -100) {
           return -97;
         }
@@ -330,7 +330,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
     SetShipTeamAction() {
     }
 
-    final void a(int param0, int[] param1, GameSnapshot param2) {
+    final void execute(int param0, int[] param1, GameSnapshot param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -343,17 +343,17 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
         var5 = VoidHunters.field_G;
         try {
           if (this.targetBody != -1) {
-            this.a(this.targetBody, 32, param2);
+            this.applyTeamToBody(this.targetBody, 32, param2);
           } else {
             if (param1 != null &&
               param1.length > 0) {
               for (var4_int = 0; var4_int < param1.length; var4_int++) {
-                this.a(param1[var4_int], 32, param2);
+                this.applyTeamToBody(param1[var4_int], 32, param2);
               }
             }
           }
           if (param0 != 1) {
-            SetShipTeamAction.a((byte) 94);
+            SetShipTeamAction.clearSharedReferences((byte) 94);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

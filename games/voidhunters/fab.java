@@ -10,14 +10,14 @@ final class fab {
 
     final static void a(int param0, byte[] param1) {
         String var4 = null;
-        kc var2_ref = null;
+        PlayerGameData var2_ref = null;
         GetDebrisThrowable.a(false, "Reading gamedata from server");
         Object var2 = null;
         try {
-          var2_ref = (kc) (beb.a(param1, 6429, AdjustVariableAction.field_c));
+          var2_ref = (PlayerGameData) (ProjectileFactory.a(param1, 6429, AdjustVariableAction.field_c));
         } catch (Exception exception) {
           var4 = ila.a(param1, param0 ^ 29411);
-          var2_ref = new kc();
+          var2_ref = new PlayerGameData();
           GetMissionResnetResourceTickTime.e((byte) -69);
           gna.a((Throwable) ((Object) exception), "Gamedata is corrupted - " + var4, 0);
         }
@@ -129,10 +129,10 @@ final class fab {
               if (var7_int != 0) {
                 if (var7_int != 5) {
                   if (var7_int == 1) {
-                    if (!akb.field_a.b((byte) 87)) {
+                    if (!MissionEventFactory.field_a.b((byte) 87)) {
                       return;
                     }
-                    var7_int = ada.a("jaclib", true);
+                    var7_int = PartitionZoneListFactory.a("jaclib", true);
                     if (var7_int == -1) {
                       var6.field_b = false;
                       decompiledFrameRemainder0 = false;
@@ -141,7 +141,7 @@ final class fab {
                       if (100 > var7_int) {
                         return;
                       }
-                      var8_int = ada.a("jaggl", true);
+                      var8_int = PartitionZoneListFactory.a("jaggl", true);
                       if (var8_int == -1) {
                         var6.field_b = false;
                         decompiledFrameRemainder0 = false;
@@ -154,10 +154,10 @@ final class fab {
                     }
                   } else {
                     if (3 == var7_int) {
-                      if (!akb.field_a.b((byte) -57)) {
+                      if (!MissionEventFactory.field_a.b((byte) -57)) {
                         return;
                       }
-                      var7_int = ada.a("jaclib", true);
+                      var7_int = PartitionZoneListFactory.a("jaclib", true);
                       if (var7_int == -1) {
                         var6.field_b = false;
                         decompiledFrameRemainder0 = false;
@@ -166,7 +166,7 @@ final class fab {
                         if (var7_int < 100) {
                           return;
                         }
-                        var8_int = ada.a("jagdx", true);
+                        var8_int = PartitionZoneListFactory.a("jagdx", true);
                         if (-1 == var8_int) {
                           var6.field_b = false;
                           decompiledFrameRemainder0 = false;
@@ -175,7 +175,7 @@ final class fab {
                           if (100 > var8_int) {
                             return;
                           }
-                          var9 = ada.a("hw3d", true);
+                          var9 = PartitionZoneListFactory.a("hw3d", true);
                           if (var9 == -1) {
                             var6.field_b = false;
                             decompiledFrameRemainder0 = false;
@@ -191,10 +191,10 @@ final class fab {
                       if (var7_int != 2) {
                         throw new IllegalStateException("UT" + var6.field_a);
                       }
-                      if (!akb.field_a.b((byte) -83)) {
+                      if (!MissionEventFactory.field_a.b((byte) -83)) {
                         return;
                       }
-                      var7_int = ada.a("jaclib", true);
+                      var7_int = PartitionZoneListFactory.a("jaclib", true);
                       if (-1 == var7_int) {
                         var6.field_b = false;
                         decompiledFrameRemainder0 = false;
@@ -203,7 +203,7 @@ final class fab {
                         if (var7_int < 100) {
                           return;
                         }
-                        var8_int = ada.a("sw3d", true);
+                        var8_int = PartitionZoneListFactory.a("sw3d", true);
                         if (var8_int == -1) {
                           var6.field_b = false;
                           decompiledFrameRemainder0 = false;
@@ -217,10 +217,10 @@ final class fab {
                     }
                   }
                 } else {
-                  if (!akb.field_a.b((byte) 121)) {
+                  if (!MissionEventFactory.field_a.b((byte) 121)) {
                     return;
                   }
-                  var7_int = ada.a("hw3d", true);
+                  var7_int = PartitionZoneListFactory.a("hw3d", true);
                   if (var7_int == -1) {
                     var6.field_b = false;
                     decompiledFrameRemainder0 = false;
@@ -229,7 +229,7 @@ final class fab {
                     if (var7_int < 100) {
                       return;
                     }
-                    var8_int = ada.a("jaclib", true);
+                    var8_int = PartitionZoneListFactory.a("jaclib", true);
                     if (-1 == var8_int) {
                       var6.field_b = false;
                       decompiledFrameRemainder0 = false;
@@ -238,7 +238,7 @@ final class fab {
                       if (var8_int < 100) {
                         return;
                       }
-                      var9 = ada.a("jaggl", true);
+                      var9 = PartitionZoneListFactory.a("jaggl", true);
                       if (-1 == var9) {
                         var6.field_b = false;
                         decompiledFrameRemainder0 = false;
@@ -459,7 +459,7 @@ final class fab {
         this.field_d = false;
         try {
           lwa.field_xb = param1;
-          akb.field_a = param0;
+          MissionEventFactory.field_a = param0;
           this.field_a = param2;
           eu.a(param3, (byte) 127, param0);
           this.a(false, param4);

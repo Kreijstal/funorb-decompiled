@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-class ShipBody extends ara implements DiffableState, CompactGameState {
+class ShipBody extends MovingObject implements DiffableState, CompactGameState {
     private int momentofinertia;
     private int centreofmassx;
     int[] boundingbox;
@@ -177,7 +177,7 @@ class ShipBody extends ara implements DiffableState, CompactGameState {
           this.centreofmassy = param0.readBits(param1 - 32, 32);
           this.mass = param0.readBits(0, param1);
           this.momentofinertia = param0.readBits(0, 32);
-          this.boundingbox = wkb.a((byte) 37, this.boundingbox, param0, 8);
+          this.boundingbox = SetVariableActionFactory.a((byte) 37, this.boundingbox, param0, 8);
           this.id = param0.readBits(0, 16);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "anb.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -267,7 +267,7 @@ class ShipBody extends ara implements DiffableState, CompactGameState {
         }
     }
 
-    final int g(byte param0) {
+    final int getY(byte param0) {
         int var2 = 124 % ((param0 - 62) / 55);
         return this.y;
     }
@@ -459,7 +459,7 @@ class ShipBody extends ara implements DiffableState, CompactGameState {
         int var7Lifetime1;
         int var8Lifetime1;
         try {
-          if (!MissionAction.a(this.boundingbox, param0.field_f, 36)) {
+          if (!MissionAction.rectanglesIntersect(this.boundingbox, param0.field_f, 36)) {
             return;
           }
           this.chassis.a((byte) 125, param0, this instanceof Ship, param2, param1);
@@ -770,7 +770,7 @@ class ShipBody extends ara implements DiffableState, CompactGameState {
             var9 = -(var8_int * GetNumStars.a(this.chassis.finalangle, (byte) -76)) >> 16;
             var10 = -(eu.a(this.chassis.finalangle, 40) * var8_int) >> 16;
             var27_ref.a(false, this.chassis.finalx + var9, this.chassis.finaly + var10, this.chassis.finalangle, 0, (int[]) null);
-            av.field_a[0] = var27_ref;
+            MissionActionFactory.field_a[0] = var27_ref;
             var28_ref = new ShipComponent(13);
             var28_ref.a((byte) 114, 2);
             var8_intLifetime2 = 4096;
@@ -778,7 +778,7 @@ class ShipBody extends ara implements DiffableState, CompactGameState {
             var10Lifetime2 = var8_intLifetime2 * eu.a(this.chassis.finalangle, 122) >> 16;
             var11 = this.chassis.finalangle + 4096;
             var28_ref.a(false, this.chassis.finalx + var9Lifetime2, this.chassis.finaly + var10Lifetime2, var11, 0, (int[]) null);
-            av.field_a[1] = var28_ref;
+            MissionActionFactory.field_a[1] = var28_ref;
             var29_ref = new ShipComponent(13);
             var29_ref.a((byte) 113, 36);
             var8_intLifetime3 = 8192;
@@ -787,7 +787,7 @@ class ShipBody extends ara implements DiffableState, CompactGameState {
             var11Lifetime2 = var8_intLifetime3 * eu.a(var9Lifetime3, 85) >> 16;
             var12_int = GameKeyHandler.a(22433, -2048 + this.chassis.finalangle);
             var29_ref.a(false, var10Lifetime3 + this.chassis.finalx, var11Lifetime2 + this.chassis.finaly, var12_int, 0, (int[]) null);
-            av.field_a[2] = var29_ref;
+            MissionActionFactory.field_a[2] = var29_ref;
             var30_ref = new ShipComponent(13);
             var30_ref.a((byte) 120, 72);
             var8_intLifetime4 = 8192;
@@ -796,7 +796,7 @@ class ShipBody extends ara implements DiffableState, CompactGameState {
             var11Lifetime3 = var8_intLifetime4 * eu.a(var9Lifetime4, 87) >> 16;
             var12_intLifetime1 = GameKeyHandler.a(22433, 2048 + this.chassis.finalangle);
             var30_ref.a(false, var10Lifetime4 + this.chassis.finalx, var11Lifetime3 + this.chassis.finaly, var12_intLifetime1, 0, (int[]) null);
-            av.field_a[3] = var30_ref;
+            MissionActionFactory.field_a[3] = var30_ref;
             var31_ref = new ShipComponent(13);
             var31_ref.a((byte) -23, 68);
             var8_intLifetime5 = 8192;
@@ -805,7 +805,7 @@ class ShipBody extends ara implements DiffableState, CompactGameState {
             var11Lifetime4 = var8_intLifetime5 * eu.a(var9Lifetime5, 122) >> 16;
             var12_intLifetime2 = GameKeyHandler.a(22433, this.chassis.finalangle + 2048);
             var31_ref.a(false, var10Lifetime5 + this.chassis.finalx, var11Lifetime4 + this.chassis.finaly, var12_intLifetime2, 0, (int[]) null);
-            av.field_a[4] = var31_ref;
+            MissionActionFactory.field_a[4] = var31_ref;
             var32_ref = new ShipComponent(13);
             var32_ref.a((byte) 12, 40);
             var8_intLifetime6 = 8192;
@@ -814,23 +814,23 @@ class ShipBody extends ara implements DiffableState, CompactGameState {
             var11Lifetime5 = var8_intLifetime6 * eu.a(var9Lifetime6, 85) >> 16;
             var12_intLifetime3 = GameKeyHandler.a(22433, this.chassis.finalangle - 2048);
             var32_ref.a(false, var10Lifetime6 + this.chassis.finalx, this.chassis.finaly + var11Lifetime5, var12_intLifetime3, 0, (int[]) null);
-            av.field_a[5] = var32_ref;
+            MissionActionFactory.field_a[5] = var32_ref;
           }
           boolean decompiledFrameRemainder0 = true;
-          if (1 == wqa.field_b &&
+          if (1 == BodyInZoneConditionFactory.field_b &&
             (99 & param1) != 0 &&
             (param1 & 111) == (99 & param1)) {
             var7_ref_ml__ = this.chassis.a(0, (ShipComponent[]) null, param1);
             if (var6_int != 0) {
-              for (var8_intLifetime1 = 0; var8_intLifetime1 < av.field_a.length; var8_intLifetime1++) {
-                var7_ref_ml__ = (ShipComponent[]) (ija.a(av.field_a[var8_intLifetime1], var7_ref_ml__, 0, ii.field_d));
+              for (var8_intLifetime1 = 0; var8_intLifetime1 < MissionActionFactory.field_a.length; var8_intLifetime1++) {
+                var7_ref_ml__ = (ShipComponent[]) (ija.a(MissionActionFactory.field_a[var8_intLifetime1], var7_ref_ml__, 0, ii.field_d));
               }
             }
             if (var7_ref_ml__ == null) {
               param1 = param1 & -112;
               if ((var6_int != 0)) {
-                for (var7 = 0; var7 < av.field_a.length; var7++) {
-                  av.field_a[var7].a(param4, 7834, this, param3, param1, param0);
+                for (var7 = 0; var7 < MissionActionFactory.field_a.length; var7++) {
+                  MissionActionFactory.field_a[var7].a(param4, 7834, this, param3, param1, param0);
                 }
               }
               decompiledFrameRemainder0 = false;
@@ -935,8 +935,8 @@ class ShipBody extends ara implements DiffableState, CompactGameState {
           }
           if ((decompiledFrameRemainder0) &&
             (var6_int != 0)) {
-            for (var7Lifetime1 = 0; var7Lifetime1 < av.field_a.length; var7Lifetime1++) {
-              av.field_a[var7Lifetime1].a(param4, 7834, this, param3, param1, param0);
+            for (var7Lifetime1 = 0; var7Lifetime1 < MissionActionFactory.field_a.length; var7Lifetime1++) {
+              MissionActionFactory.field_a[var7Lifetime1].a(param4, 7834, this, param3, param1, param0);
             }
           }
           this.chassis.a(param4, 7834, this, param3, param1, param0);
@@ -1027,7 +1027,7 @@ class ShipBody extends ara implements DiffableState, CompactGameState {
         }
     }
 
-    final int d(boolean param0) {
+    final int getX(boolean param0) {
         if (param0) {
           this.e((byte) 22);
         }

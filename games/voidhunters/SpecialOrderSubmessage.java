@@ -138,7 +138,7 @@ final class SpecialOrderSubmessage implements DiffableState {
           for (var3 = 1; var2_int > var3; var3++) {
             var4 = param0[var3];
             for (var5 = var3 - 1; var5 >= 0; var5--) {
-              if (uk.a(param1 ^ -27562, param0[var5], var4)) {
+              if (TeamShipComponentConditionFactory.a(param1 ^ -27562, param0[var5], var4)) {
                 param0[1 + var5] = param0[var5];
                 continue;
               }

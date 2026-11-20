@@ -37,9 +37,9 @@ final class GetSpecialOrderBoxHeight extends ConsoleCommand {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (param0) {
-          GetSpecialOrderBoxHeight.b(true);
+          GetSpecialOrderBoxHeight.clearSharedReferences(true);
           field_o = null;
           return;
         }

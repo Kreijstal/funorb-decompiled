@@ -6,10 +6,10 @@ final class kpb extends io {
     static PartitionZone[] field_s;
     static String field_r;
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_s = null;
         if (param0 != 17433) {
-          kpb.c(-38);
+          kpb.clearSharedReferences(-38);
           field_q = null;
           field_r = null;
           return;

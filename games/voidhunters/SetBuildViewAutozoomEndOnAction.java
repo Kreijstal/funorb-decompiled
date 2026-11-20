@@ -75,12 +75,12 @@ final class SetBuildViewAutozoomEndOnAction extends ConsoleCommand {
           while (var3_int < GetWorldWidthUpshift.field_o.length) {
             var5 = GetSniperCannonProjectiles.field_o[var3_int];
             if (var5 < 0) {
-              var4 = var4 + whb.field_a;
+              var4 = var4 + DebugMessage.field_a;
             } else {
               var6 = lsa.a(GetWorldWidthUpshift.field_o[var3_int], -118, true);
               var4 = var4 + pva.field_g;
               var7 = -(var6 >> 1) + alb.field_b;
-              if (SetMachineGunAimarc.a(var4, (ShipCondition.field_e << 1) + var6, (SetPointDefenceLaserAimarc.field_q << 1) + SetExplosionPushMultiplier.field_o, param2, (byte) -65, -ShipCondition.field_e + var7, param0)) {
+              if (SetMachineGunAimarc.a(var4, (ShipTeamCondition.field_e << 1) + var6, (SetPointDefenceLaserAimarc.field_q << 1) + SetExplosionPushMultiplier.field_o, param2, (byte) -65, -ShipTeamCondition.field_e + var7, param0)) {
                 stackIn_8_0 = var5;
                 return stackIn_8_0;
               }

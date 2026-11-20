@@ -8,11 +8,11 @@ final class jw {
     static String field_d;
     private static String field_z;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_d = null;
         field_a = null;
         if (param0) {
-          jw.a(false);
+          jw.clearSharedReferences(false);
         }
     }
 

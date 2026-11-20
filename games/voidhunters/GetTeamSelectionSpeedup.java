@@ -5,7 +5,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
     static int field_p;
     static Sprite field_o;
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 3575) {
           GetTeamSelectionSpeedup.a(-8);
@@ -182,7 +182,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                 GetLaserReload.field_r.a(var4_ref_mm, (byte) -115, (long)var3);
               }
               SetShipAimLines.a(118, var4_ref_mm, true, var1);
-              eta.a((byte) 109, var4_ref_mm);
+              MovingObjectFactory.a((byte) 109, var4_ref_mm);
               return;
             }
             if (var2 == 9) {
@@ -224,7 +224,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                     var27_ref.field_Db = GetMomentOfInertiaPredivideDownshift.field_p;
                   }
                   var13.field_ac = false;
-                  eta.a((byte) 109, var27_ref);
+                  MovingObjectFactory.a((byte) 109, var27_ref);
                 }
                 return;
               }
@@ -284,11 +284,11 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                   }
                   if (var2 == 22) {
                     SetShieldsDirectionalArcParticleSpeedDownshift.field_q = ((PacketBuffer) ((Object) var1)).readUnsignedShort(param0 + 1856);
-                    cla.field_b = ((PacketBuffer) ((Object) var1)).readVarInt(11436);
+                    IncrementVariableActionFactory.field_b = ((PacketBuffer) ((Object) var1)).readVarInt(11436);
                     return;
                   }
                   if (var2 == 23) {
-                    wqa.field_a = ((PacketBuffer) ((Object) var1)).readLong(param0 ^ 242);
+                    BodyInZoneConditionFactory.field_a = ((PacketBuffer) ((Object) var1)).readLong(param0 ^ 242);
                     return;
                   }
                   gna.a((Throwable) null, "L1: " + SetCountermeasuresPulsetime.e(-13514), 0);
@@ -341,7 +341,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
               } else {
                 var14.field_ac = true;
               }
-              eta.a((byte) 102, var28);
+              MovingObjectFactory.a((byte) 102, var28);
             }
             return;
           }

@@ -7,12 +7,12 @@ final class GetLagStandardDeviationIn extends ConsoleCommand {
     static ida field_r;
     static int field_p;
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_r = null;
         field_o = null;
         field_q = null;
         if (!param0) {
-          GetLagStandardDeviationIn.b(true);
+          GetLagStandardDeviationIn.clearSharedReferences(true);
         }
     }
 

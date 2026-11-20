@@ -5,11 +5,11 @@ final class tgb extends abb {
     static int[] field_c;
     static String field_d;
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_c = null;
         field_d = null;
         if (param0 != -58) {
-          tgb.b((byte) 51);
+          tgb.clearSharedReferences((byte) 51);
         }
     }
 

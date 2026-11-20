@@ -46,7 +46,7 @@ final class rga {
             var20 = var23;
             var19 = var20;
             var3 = var19;
-            ti.field_c = gfb.a(false, var23, -12445);
+            ti.field_c = EscapePodFactory.a(false, var23, -12445);
           }
           var24 = ffb.a(false, ti.field_c, true);
           var21 = var24;
@@ -125,7 +125,7 @@ final class rga {
             !this.field_h.a(-10, wh.field_o, mj.field_f)) {
             return;
           }
-          mta.c((byte) 111);
+          MissionFactory.c((byte) 111);
           if (!this.field_b) {
             this.field_a = new eb[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {

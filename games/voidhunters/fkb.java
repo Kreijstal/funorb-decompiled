@@ -56,9 +56,9 @@ final class fkb extends IntrusiveNode {
         this.field_n = null;
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -25815) {
-          fkb.d(-108);
+          fkb.clearSharedReferences(-108);
           field_m = null;
           field_z = null;
           return;

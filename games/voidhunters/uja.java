@@ -5,10 +5,10 @@ final class uja {
     static int field_b;
     static String field_a;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_a = null;
         if (param0 > -121) {
-          uja.a((byte) 103);
+          uja.clearSharedReferences((byte) 103);
         }
     }
 

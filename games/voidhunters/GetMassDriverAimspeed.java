@@ -38,7 +38,7 @@ final class GetMassDriverAimspeed extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 != 117) {
           field_o = -117;

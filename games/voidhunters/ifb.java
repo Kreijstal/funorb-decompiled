@@ -6,7 +6,7 @@ final class ifb extends mfb {
         if (param0 <= 0) {
           return -105;
         }
-        return qaa.field_b;
+        return MapClearanceRectangleFactory.field_b;
     }
 
     final boolean h(byte param0) {
@@ -53,7 +53,7 @@ final class ifb extends mfb {
 
     final int b(int param0) {
         int var2 = 120 % ((param0 - 7) / 47);
-        return wkb.field_b;
+        return SetVariableActionFactory.field_b;
     }
 
     final int a(boolean param0) {

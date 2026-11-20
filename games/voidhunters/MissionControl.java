@@ -63,7 +63,7 @@ final class MissionControl implements DiffableState {
         if (this.events != null && this.selectedEvent >= 0 &&
           this.selectedEvent < this.events.length) {
           var2 = this.events[this.selectedEvent];
-          var2.a(this.selectedConditionOrAction, (byte) -79);
+          var2.removeItem(this.selectedConditionOrAction, (byte) -79);
           this.selectedConditionOrAction = this.selectedConditionOrAction - 1;
           if (this.selectedConditionOrAction < 0) {
             this.selectedConditionOrAction = 0;
@@ -84,7 +84,7 @@ final class MissionControl implements DiffableState {
           if (this.events != null &&
             this.selectedEvent >= 0 &&
             this.events.length > this.selectedEvent) {
-            this.events[this.selectedEvent].a((byte) -105, param1);
+            this.events[this.selectedEvent].addCondition((byte) -105, param1);
           }
           if (param0 > -112) {
             this.a(121, (byte) -5);
@@ -113,7 +113,7 @@ final class MissionControl implements DiffableState {
           this.events = (MissionEvent[]) (SetAutoDetail.a(8, GetExplosionPushMultiplier.field_o, param0, 1, -115, this.events));
           this.selectedEvent = param0.readBits(0, 32);
           this.selectedConditionOrAction = param0.readBits(0, 32);
-          this.reservedIds = wkb.a((byte) 37, this.reservedIds, param0, 8);
+          this.reservedIds = SetVariableActionFactory.a((byte) 37, this.reservedIds, param0, 8);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "una.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -164,7 +164,7 @@ final class MissionControl implements DiffableState {
           if (null != this.events) {
             this.field_c = 0;
             while (this.events.length > this.field_c) {
-              this.events[this.field_c].a(param1, -40);
+              this.events[this.field_c].evaluateAndExecute(param1, -40);
               this.field_c = this.field_c + 1;
             }
             this.field_c = -1;
@@ -242,8 +242,8 @@ final class MissionControl implements DiffableState {
             this.selectedEvent >= 0 &&
             this.events.length > this.selectedEvent) {
             var4 = this.events[this.selectedEvent];
-            var5 = var4.a((byte) 127, this.selectedConditionOrAction, param1);
-            var4.a(var5 - 1, -61, param1, this.selectedConditionOrAction, param2);
+            var5 = var4.getItemParameter((byte) 127, this.selectedConditionOrAction, param1);
+            var4.setItemParameter(var5 - 1, -61, param1, this.selectedConditionOrAction, param2);
           }
           if (param0 != 1) {
             field_f = (String) null;
@@ -317,7 +317,7 @@ final class MissionControl implements DiffableState {
           if (this.events != null &&
             0 <= this.selectedEvent &&
             this.events.length > this.selectedEvent) {
-            this.events[this.selectedEvent].a(param0, true);
+            this.events[this.selectedEvent].addAction(param0, true);
           }
           if (param1 != 0) {
             MissionControl.clearSharedReferences((byte) 108);
@@ -365,7 +365,7 @@ final class MissionControl implements DiffableState {
         MissionControl var5 = null;
         try {
           var5 = (MissionControl) (other);
-          tja.a(var5.events, 1, this.events, false, 5547);
+          CarouselSlot.a(var5.events, 1, this.events, false, 5547);
           var4 = 0;
           if (SetCountermeasureLauncherAimspeed.a(var5.events, false, 1, this.events, 115)) {
             var4 = 1;
@@ -445,8 +445,8 @@ final class MissionControl implements DiffableState {
             0 <= this.selectedEvent &&
             this.events.length > this.selectedEvent) {
             var4 = this.events[this.selectedEvent];
-            var5 = var4.a((byte) -82, this.selectedConditionOrAction, param2);
-            var4.a(1 + var5, 118, param2, this.selectedConditionOrAction, param1);
+            var5 = var4.getItemParameter((byte) -82, this.selectedConditionOrAction, param2);
+            var4.setItemParameter(1 + var5, 118, param2, this.selectedConditionOrAction, param1);
           }
           if (param0) {
             this.selectedConditionOrAction = 56;
@@ -505,7 +505,7 @@ final class MissionControl implements DiffableState {
                 var10 = var16;
                 if (var10 instanceof hd) {
                   var20 = (hd) ((Object) var16);
-                  this.reservedIds = var20.a(121, this.reservedIds);
+                  this.reservedIds = var20.collectReferencedBodyIds(121, this.reservedIds);
                 }
               }
             }
@@ -518,7 +518,7 @@ final class MissionControl implements DiffableState {
                 var10_ref = var18;
                 if (var10_ref instanceof hd) {
                   var21 = (hd) ((Object) var18);
-                  this.reservedIds = var21.a(114, this.reservedIds);
+                  this.reservedIds = var21.collectReferencedBodyIds(114, this.reservedIds);
                 }
                 var15++;
               }
@@ -547,7 +547,7 @@ final class MissionControl implements DiffableState {
         if (null != this.events &&
           (this.selectedEvent >= 0 && this.selectedEvent < this.events.length)) {
           var2 = this.events[this.selectedEvent];
-          var2.a(this.selectedConditionOrAction, -1);
+          var2.toggleConditionNegation(this.selectedConditionOrAction, -1);
         }
     }
 

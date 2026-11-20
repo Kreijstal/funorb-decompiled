@@ -76,8 +76,8 @@ final class IsaacPacketBuffer extends PacketBuffer {
           var4_int = jaggl.OpenGL.glGenProgramARB();
           jaggl.OpenGL.glBindProgramARB(param2, var4_int);
           jaggl.OpenGL.glProgramStringARB(param2, 34933, param3);
-          jaggl.OpenGL.glGetIntegerv(34379, lp.field_b, 0);
-          if (lp.field_b[0] != -1) {
+          jaggl.OpenGL.glGetIntegerv(34379, CarouselEventFactory.field_b, 0);
+          if (CarouselEventFactory.field_b[0] != -1) {
             jaggl.OpenGL.glBindProgramARB(param2, 0);
             stackIn_6_0 = null;
             return (ArbProgram) (stackIn_6_0);

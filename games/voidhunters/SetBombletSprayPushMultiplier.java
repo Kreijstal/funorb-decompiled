@@ -8,9 +8,9 @@ final class SetBombletSprayPushMultiplier extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
-          SetBombletSprayPushMultiplier.e(-101);
+          SetBombletSprayPushMultiplier.clearSharedReferences(-101);
           field_o = (int[][]) null;
           return;
         }

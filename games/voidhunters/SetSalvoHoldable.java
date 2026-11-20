@@ -52,11 +52,11 @@ final class SetSalvoHoldable extends ConsoleCommand {
         if (param2 == -2679) {
           return (384 & param1) != 0 ? true : false;
         }
-        SetSalvoHoldable.e((byte) 84);
+        SetSalvoHoldable.clearSharedReferences((byte) 84);
         return (384 & param1) != 0 ? true : false;
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -127) {
           SetSalvoHoldable.a(8, 67, -87);
           field_o = null;

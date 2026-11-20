@@ -156,10 +156,10 @@ final class jwa extends TextureOperation {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_k = null;
         if (param0 > -76) {
-          jwa.d(-39);
+          jwa.clearSharedReferences(-39);
         }
     }
 

@@ -80,7 +80,7 @@ final class Asteroid extends ShipBody implements DiffableState, CompactGameState
         }
     }
 
-    public static void l(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 3) {
           Asteroid.a(123, true);
           field_w = (int[][]) null;
@@ -128,7 +128,7 @@ final class Asteroid extends ShipBody implements DiffableState, CompactGameState
         try {
           super.writeCompactState(param0, (byte) -101);
           if (param1 > -91) {
-            Asteroid.l(-20);
+            Asteroid.clearSharedReferences(-20);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "crb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

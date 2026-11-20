@@ -19,14 +19,14 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
         }
     }
 
-    final ucb[] a(World param0, int param1) {
+    final WorldPoint[] getWorldPositions(World param0, int param1) {
         ShipBody var3 = null;
         RuntimeException var3_ref = null;
         MapZone var4 = null;
         ShipBody var5 = null;
-        ucb[] stackIn_5_0 = null;
-        ucb[] stackIn_12_0 = null;
-        ucb[] stackIn_14_0 = null;
+        WorldPoint[] stackIn_5_0 = null;
+        WorldPoint[] stackIn_12_0 = null;
+        WorldPoint[] stackIn_14_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -40,18 +40,18 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
           var4 = param0.e((byte) -126, this.zoneId);
           if (var3 != null &&
             var4 != null) {
-            stackIn_5_0 = new ucb[]{new ucb(var5.d(false), var5.g((byte) 124)), new ucb(var4.x, var4.y)};
+            stackIn_5_0 = new WorldPoint[]{new WorldPoint(var5.getX(false), var5.getY((byte) 124)), new WorldPoint(var4.x, var4.y)};
             return stackIn_5_0;
           }
           if (var3 != null &&
             var4 == null) {
-            stackIn_14_0 = new ucb[]{new ucb(var5.d(false), var5.g((byte) 123))};
+            stackIn_14_0 = new WorldPoint[]{new WorldPoint(var5.getX(false), var5.getY((byte) 123))};
             return stackIn_14_0;
           }
           if (var4 == null) {
             return null;
           }
-          stackIn_12_0 = new ucb[]{new ucb(var4.x, var4.y)};
+          stackIn_12_0 = new WorldPoint[]{new WorldPoint(var4.x, var4.y)};
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -152,7 +152,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
         }
     }
 
-    final int[] a(World param0, int param1, int[] param2) {
+    final int[] collectTargetBodyIds(World param0, int param1, int[] param2) {
         int var7 = 0;
         MapZone var4 = null;
         Ship[] var5 = null;
@@ -188,7 +188,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
           for (var7 = 0; var7 < var6.length; var7++) {
             var8 = var6[var7];
             if (var8 != null &&
-              var4.a(var8.g((byte) 121), var8.d(false), (byte) -98)) {
+              var4.a(var8.getY((byte) 121), var8.getX(false), (byte) -98)) {
               param2 = SetAutozoomSpeedDivide.a(var8.getId(false), true, param2, (byte) -14);
             }
           }
@@ -214,7 +214,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
         }
     }
 
-    public final int[] a(int param0, int[] param1) {
+    public final int[] collectReferencedBodyIds(int param0, int[] param1) {
         RuntimeException var3 = null;
         int[] stackIn_2_0 = null;
         int[] stackIn_6_0 = null;
@@ -246,7 +246,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int getParameter(byte param0, int param1) {
         if (param0 > -102) {
           field_c = (String) null;
         }
@@ -273,7 +273,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
         return false;
     }
 
-    final void a(World param0, int param1, int param2, int param3) {
+    final void setParameter(World param0, int param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -387,7 +387,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
         }
     }
 
-    final String a(int param0) {
+    final String getDescription(int param0) {
         String var2 = "Body " + this.bodyId;
         if (this.bodyId == -1) {
           var2 = "Any ship";
@@ -411,7 +411,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
         }
     }
 
-    final boolean a(int param0, MissionState param1, World param2) {
+    final boolean evaluate(int param0, MissionState param1, World param2) {
         int var7 = 0;
         MapZone var4 = null;
         RuntimeException var4_ref = null;
@@ -436,7 +436,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
           if (param0 != ~this.bodyId) {
             var10 = param2.d((byte) -27, this.bodyId);
             if (var10 != null) {
-              stackIn_9_0 = var4.a(var10.g((byte) -62), var10.d(false), (byte) -98);
+              stackIn_9_0 = var4.a(var10.getY((byte) -62), var10.getX(false), (byte) -98);
               return stackIn_9_0;
             }
             return false;
@@ -446,7 +446,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
           for (var7 = 0; var7 < var6.length; var7++) {
             var8 = var6[var7];
             if (var8 != null &&
-              var4.a(var8.g((byte) 124), var8.d(false), (byte) -98)) {
+              var4.a(var8.getY((byte) 124), var8.getX(false), (byte) -98)) {
               return true;
             }
           }
@@ -474,7 +474,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
     BodyInZoneCondition() {
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -15818) {
           BodyInZoneCondition.a(-54, 46, true, 51);
         }

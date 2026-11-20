@@ -113,8 +113,8 @@ final class kda {
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        uqb var11 = null;
-        tja var11_ref = null;
+        CarouselEvent var11 = null;
+        CarouselSlot var11_ref = null;
         int var12 = 0;
         CarouselSlotStateDump var13 = null;
         lla var14 = null;
@@ -138,14 +138,14 @@ final class kda {
               GetSniperCannonAimarc.a(param2 ^ -6388, "Carousel_clientgame_Info.check_servercrc_against_clientcrc was going to look " + var10 + " steps back");
               return;
             }
-            var11 = (uqb) (param0.field_f.first(0));
+            var11 = (CarouselEvent) (param0.field_f.first(0));
             while (var11 != null) {
               if (!var11.a(115) &&
                 -var10 + param0.field_g >= var11.field_e) {
                 GetSniperCannonAimarc.a(-6940, "Carousel_clientgame_Info.check_servercrc_against_clientcrc was going to look " + var10 + " steps back when unconfirmed event was back by " + (-var11.field_e + param0.field_g));
                 return;
               }
-              var11 = (uqb) (param0.field_f.next((byte) 36));
+              var11 = (CarouselEvent) (param0.field_f.next((byte) 36));
             }
             var11_ref = param0.a(var10, param2 ^ -949);
             var12 = SetTestActionLag.a(var11_ref, (byte) -70);
@@ -218,7 +218,7 @@ final class kda {
     }
 
     final boolean a(byte param0, CarouselCommongameInfo param1, int param2, IsaacPacketBuffer param3) {
-        uqb var5 = null;
+        CarouselEvent var5 = null;
         RuntimeException var5_ref = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -231,7 +231,7 @@ final class kda {
             param2 >= 0 &&
             !this.field_p) {
             GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Sending ready packet");
-            var5 = (uqb) (wc.field_a.a((byte) 77));
+            var5 = (CarouselEvent) (wc.field_a.create((byte) 77));
             var5.field_e = param1.field_g;
             var5.a(param2, -125);
             this.a(var5, param3, 1000);
@@ -262,21 +262,21 @@ final class kda {
     }
 
     final void a(int param0, IsaacPacketBuffer param1) {
-        whb var3 = null;
+        DebugMessage var3 = null;
         if (param0 != -32339) {
           return;
         }
         try {
-          var3 = new whb();
-          var3.field_b = (ub) ((Object) new mo("<RequestNewestBlackBox>"));
+          var3 = new DebugMessage();
+          var3.field_b = (DebugSendable) ((Object) new DebugRequest("<RequestNewestBlackBox>"));
           SetBuildViewAutozoomEndOnAction.a(0, var3, param1, fk.field_e);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kda.H(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(boolean param0, uqb param1, CarouselCommongameInfo param2, boolean param3, boolean param4, int param5, IsaacPacketBuffer param6) {
-        uqb stackIn_8_0 = null;
+    final void a(boolean param0, CarouselEvent param1, CarouselCommongameInfo param2, boolean param3, boolean param4, int param5, IsaacPacketBuffer param6) {
+        CarouselEvent stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -286,7 +286,7 @@ final class kda {
         StringBuilder stackIn_33_1 = null;
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
-        uqb var8 = null;
+        CarouselEvent var8 = null;
         RuntimeException var8_ref = null;
         CarouselCommongameInfo var9 = null;
         try {
@@ -295,7 +295,7 @@ final class kda {
             return;
           }
           if (!param2.f(1)) {
-            stackIn_8_0 = (uqb) (param1);
+            stackIn_8_0 = (CarouselEvent) (param1);
             stackIn_9_1 = !(param4);
             stackIn_8_0.field_f = stackIn_9_1;
             if (!param0) {
@@ -303,7 +303,7 @@ final class kda {
               this.b((CarouselCommongameInfo) null, 33);
             }
             param1.field_e = -param5 + param2.field_g;
-            if (hna.field_s == 1 &&
+            if (PlayerAction.field_s == 1 &&
               this.field_f >= param1.field_e) {
               return;
             }
@@ -313,7 +313,7 @@ final class kda {
             this.field_f = param1.field_e;
             if (param4) {
               if (param3) {
-                var8 = (uqb) (wc.field_a.a((byte) 49));
+                var8 = (CarouselEvent) (wc.field_a.create((byte) 49));
                 param1.copyTo((byte) 75, var8);
                 this.field_i.addLast(-10258, var8);
               } else {
@@ -352,7 +352,7 @@ final class kda {
         }
     }
 
-    private final void a(uqb param0, IsaacPacketBuffer param1, int param2) {
+    private final void a(CarouselEvent param0, IsaacPacketBuffer param1, int param2) {
         try {
           if (param2 != 1000) {
             this.field_a = true;
@@ -365,10 +365,10 @@ final class kda {
         }
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_g = null;
         if (param0 <= 4) {
-          kda.b(-77);
+          kda.clearSharedReferences(-77);
         }
     }
 
@@ -409,15 +409,15 @@ final class kda {
         int var12 = 0;
         int var13 = 0;
         CarouselCommongameInfo var14 = null;
-        af var15 = null;
-        umb var16 = null;
+        BlackBoxRecording var15 = null;
+        ServerTick var16 = null;
         Object var17 = null;
-        uqb var17_ref = null;
+        CarouselEvent var17_ref = null;
         String var18 = null;
         byte[] var19 = null;
-        whb var20 = null;
+        DebugMessage var20 = null;
         Object var21 = null;
-        mo var21_ref = null;
+        DebugRequest var21_ref = null;
         byte[] var22 = null;
         int var7_intLifetime1;
         int var8_intLifetime1;
@@ -427,7 +427,7 @@ final class kda {
         var13 = VoidHunters.field_G;
         try {
           if (param4 == GetSniperCannonFiringLeeway.field_o) {
-            var16 = new umb();
+            var16 = new ServerTick();
             param1.beginBitRead(-23497);
             var16.readState(param1, false);
             param1.endBitRead((byte) -38);
@@ -475,7 +475,7 @@ final class kda {
             return true;
           }
           if (pr.field_d == param4) {
-            var17_ref = (uqb) (wc.field_a.a((byte) -126));
+            var17_ref = (CarouselEvent) (wc.field_a.create((byte) -126));
             param1.beginBitRead(-23497);
             var17_ref.readState(param1, false);
             param1.endBitRead((byte) -114);
@@ -488,8 +488,8 @@ final class kda {
               !this.field_o) {
               if (!param5.a(1, var17_ref)) {
                 var9_int = -1;
-                if (var17_ref instanceof pca) {
-                  var9_int = ((pca) (var17_ref)).field_k;
+                if (var17_ref instanceof CarouselPlayerEvent) {
+                  var9_int = ((CarouselPlayerEvent) (var17_ref)).field_k;
                 }
                 var18 = param5.e(param3 + 101).a(param3 ^ 6, var9_int);
                 SetDebrisGrabbingRange.a((byte) -92, "I'm " + kca.field_a + ", and an action from " + var18 + " is off carousel so dropping connection");
@@ -551,18 +551,18 @@ final class kda {
           if (var7 != null) {
             var8 = SetCountermeasuresPulseRadius.a(9, var22);
             try {
-              var20 = new whb();
+              var20 = new DebugMessage();
               var8.beginBitRead(-23497);
               var20.readState(var8, false);
               var8.endBitRead((byte) -33);
-              if (var20.field_b instanceof af) {
+              if (var20.field_b instanceof BlackBoxRecording) {
                 GetSniperCannonAimarc.a(param3 - 6947, "Received black box recording");
-                var15 = (af) (var20.field_b);
+                var15 = (BlackBoxRecording) (var20.field_b);
                 param5.field_d = var15;
                 this.b(param5, -125);
               } else {
-                if (var20.field_b instanceof mo) {
-                  var21_ref = (mo) (var20.field_b);
+                if (var20.field_b instanceof DebugRequest) {
+                  var21_ref = (DebugRequest) (var20.field_b);
                   GetSniperCannonAimarc.a(-6940, "The newest black box recording=" + var21_ref.field_i);
                 }
               }
@@ -647,12 +647,12 @@ final class kda {
         RuntimeException var4 = null;
         int var5 = 0;
         IntrusiveNode var6 = null;
-        umb var7 = null;
+        ServerTick var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
-        uqb var12 = null;
-        uqb var13 = null;
+        CarouselEvent var12 = null;
+        CarouselEvent var13 = null;
         var10 = VoidHunters.field_G;
         try {
           if (this.field_l) {
@@ -664,9 +664,9 @@ final class kda {
           var5 = 0;
           var6 = this.field_c.first(param0);
           while (var6 != null) {
-            if (!(var6 instanceof uqb)) {
-              if (var6 instanceof umb) {
-                var7 = (umb) (var6);
+            if (!(var6 instanceof CarouselEvent)) {
+              if (var6 instanceof ServerTick) {
+                var7 = (ServerTick) (var6);
                 var8 = var7.field_f;
                 var9 = var8;
                 if (param1) {
@@ -680,13 +680,13 @@ final class kda {
                 param2.a(var9, false, 0);
               }
             } else {
-              var12 = (uqb) (var6);
+              var12 = (CarouselEvent) (var6);
               var13 = var12;
               if (MonochromeRowCacheEntry.field_e) {
                 var13.field_g = false;
               }
               var4_int++;
-              param2.a(param0 ^ 1, (uqb) (var6));
+              param2.a(param0 ^ 1, (CarouselEvent) (var6));
             }
             var6 = this.field_c.next((byte) 62);
           }
@@ -709,10 +709,10 @@ final class kda {
     }
 
     final void a(IsaacPacketBuffer param0, int param1, String param2) {
-        whb var4 = null;
+        DebugMessage var4 = null;
         try {
-          var4 = new whb();
-          var4.field_b = (ub) ((Object) new mo("<SetCarouselConstant>" + param2));
+          var4 = new DebugMessage();
+          var4.field_b = (DebugSendable) ((Object) new DebugRequest("<SetCarouselConstant>" + param2));
           SetBuildViewAutozoomEndOnAction.a(param1 ^ param1, var4, param0, fk.field_e);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kda.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -747,13 +747,13 @@ final class kda {
     }
 
     final void a(byte param0, String param1, IsaacPacketBuffer param2) {
-        whb var4 = null;
+        DebugMessage var4 = null;
         try {
           if (param0 < 63) {
             this.a((byte) -70, -117);
           }
-          var4 = new whb();
-          var4.field_b = (ub) ((Object) new mo(param1));
+          var4 = new DebugMessage();
+          var4.field_b = (DebugSendable) ((Object) new DebugRequest(param1));
           SetBuildViewAutozoomEndOnAction.a(0, var4, param2, fk.field_e);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kda.W(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -767,7 +767,7 @@ final class kda {
         RuntimeException decompiledCaughtException = null;
         int var3_int = 0;
         RuntimeException var3 = null;
-        uqb var4 = null;
+        CarouselEvent var4 = null;
         int var5 = 0;
         var5 = VoidHunters.field_G;
         try {
@@ -794,11 +794,11 @@ final class kda {
           this.field_b = (1 + this.field_b) % 5;
           if (this.field_i.size(3) > 0 &&
             this.field_b == 0) {
-            var4 = (uqb) (this.field_i.first(0));
+            var4 = (CarouselEvent) (this.field_i.first(0));
             while (var4 != null) {
               this.a(var4, param0, 1000);
               var4.unlink(-3846);
-              var4 = (uqb) (this.field_i.next((byte) 100));
+              var4 = (CarouselEvent) (this.field_i.next((byte) 100));
             }
             return;
           }

@@ -65,7 +65,7 @@ final class vu extends llb {
         return var9;
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_zb = null;
         if (param0 != 113) {
           vu.b(30, 61, 5, 19, 62);

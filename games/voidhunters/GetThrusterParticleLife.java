@@ -3,7 +3,7 @@
  */
 final class GetThrusterParticleLife extends ConsoleCommand {
     static fdb field_o;
-    static dja field_p;
+    static GameStateFactory field_p;
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 177) {
@@ -47,6 +47,6 @@ final class GetThrusterParticleLife extends ConsoleCommand {
     }
 
     static {
-        field_p = (dja) ((Object) new mta());
+        field_p = (GameStateFactory) ((Object) new MissionFactory());
     }
 }

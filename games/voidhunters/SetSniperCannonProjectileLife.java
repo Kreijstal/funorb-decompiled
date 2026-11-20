@@ -15,7 +15,7 @@ final class SetSniperCannonProjectileLife extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new ShipComponent(param1[0]);
-          MissionEvent.a(0, var2, param0, param1);
+          MissionEvent.decodeChildComponents(0, var2, param0, param1);
           stackIn_1_0 = var2;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

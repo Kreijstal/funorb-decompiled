@@ -113,7 +113,7 @@ final class dla {
         this.field_b.field_e = GetBombletSprayEnergyUsed.field_p.height / 2;
         this.field_b.field_d = GetBombletSprayEnergyUsed.field_p.width / 2;
         this.field_b.a(GetBombletSprayEnergyUsed.field_p.height, 0, -72, GetBombletSprayEnergyUsed.field_p.width, 0);
-        hna.a(this.field_f, this.field_b, false, (byte) -59);
+        PlayerAction.a(this.field_f, this.field_b, false, (byte) -59);
         this.field_f.a(this.field_b, (byte) 85, this.field_a, (Ship) null);
         var5 = this.field_b.a(true, GetUseDetailLines.field_o);
         var6 = this.field_b.a(0, GetTorpedoReload.field_q);

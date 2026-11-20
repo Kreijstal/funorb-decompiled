@@ -16,7 +16,7 @@ final class GetTorpedoEnergyUsed extends ConsoleCommand {
             is.a(param5, param2, param1, param6, 20408, param3, param0);
             return;
           }
-          lob.a(param5, param2, param1, 256, param3, param0);
+          NebulaFieldFactory.a(param5, param2, param1, 256, param3, param0);
           return;
         }
         if (GetCountermeasureLauncherProjectiles.field_o < param5) {
@@ -24,7 +24,7 @@ final class GetTorpedoEnergyUsed extends ConsoleCommand {
             is.a(param5, param2, param1, param6, 20408, param3, param0);
             return;
           }
-          lob.a(param5, param2, param1, 256, param3, param0);
+          NebulaFieldFactory.a(param5, param2, param1, 256, param3, param0);
           return;
         }
         if (param3 < NebulaField.field_c) {
@@ -32,7 +32,7 @@ final class GetTorpedoEnergyUsed extends ConsoleCommand {
             is.a(param5, param2, param1, param6, 20408, param3, param0);
             return;
           }
-          lob.a(param5, param2, param1, 256, param3, param0);
+          NebulaFieldFactory.a(param5, param2, param1, 256, param3, param0);
           return;
         }
         if (param0 > hab.field_i) {
@@ -40,11 +40,11 @@ final class GetTorpedoEnergyUsed extends ConsoleCommand {
             is.a(param5, param2, param1, param6, 20408, param3, param0);
             return;
           }
-          lob.a(param5, param2, param1, 256, param3, param0);
+          NebulaFieldFactory.a(param5, param2, param1, 256, param3, param0);
           return;
         }
         if (param6 != 1) {
-          rg.a(param5, param0, param1, param2, param3, param6, 120);
+          RemoveEventActionFactory.a(param5, param0, param1, param2, param3, param6, 120);
           return;
         }
         nv.a(param2, 102, param3, param0, param1, param5);

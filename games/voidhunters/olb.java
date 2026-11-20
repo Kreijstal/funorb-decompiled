@@ -179,7 +179,7 @@ final class olb extends TextureOperation {
           if (GetArmageddonTimerStart.field_o == wgb.field_f) {
             return;
           }
-          if (wqa.a(false, GetArmageddonTimerStart.field_o)) {
+          if (BodyInZoneConditionFactory.a(false, GetArmageddonTimerStart.field_o)) {
             lo.field_a[GetArmageddonTimerStart.field_o].b((byte) 49);
           }
           SetShipTeamAction.field_f = GetMessageFadetime.field_o;

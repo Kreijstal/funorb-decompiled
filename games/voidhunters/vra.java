@@ -9,10 +9,10 @@ final class vra {
     static wdb field_b;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_b = null;
         if (param0 != -66) {
-          vra.a((byte) -20);
+          vra.clearSharedReferences((byte) -20);
         }
     }
 

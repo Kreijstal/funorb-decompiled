@@ -52,7 +52,7 @@ final class SetAutoaim extends ConsoleCommand {
             stackIn_4_0 = ita.a(param11, 7988).a(param5, param2, param9, param7, param1, param6, param0, param10, param4, param3);
             return stackIn_4_0;
           }
-          stackIn_2_0 = nma.field_b[param11].a(param1, param3, param4, 0, param9, param2, (int[]) null, false, 0, param7, param5, param10, param0, (aja[]) null, -16777216 | param6, (aa) null);
+          stackIn_2_0 = PlayerReadyFactory.field_b[param11].a(param1, param3, param4, 0, param9, param2, (int[]) null, false, 0, param7, param5, param10, param0, (aja[]) null, -16777216 | param6, (aa) null);
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

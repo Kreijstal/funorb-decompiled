@@ -15,7 +15,7 @@ final class RemoveEventAction extends MissionAction implements DiffableState {
     public final void copyTo(byte param0, SerializableGameState param1) {
         try {
           if (param0 <= 54) {
-            this.a(-78);
+            this.getDescription(-78);
           }
           super.copyTo((byte) 63, param1);
         } catch (RuntimeException runtimeException) {
@@ -23,7 +23,7 @@ final class RemoveEventAction extends MissionAction implements DiffableState {
         }
     }
 
-    final ucb a(World param0, int param1) {
+    final WorldPoint getWorldPosition(World param0, int param1) {
         RuntimeException var3 = null;
         Object stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -36,7 +36,7 @@ final class RemoveEventAction extends MissionAction implements DiffableState {
           }
           field_a = (dpb) null;
           stackIn_3_0 = null;
-          return (ucb) (stackIn_3_0);
+          return (WorldPoint) (stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -104,7 +104,7 @@ final class RemoveEventAction extends MissionAction implements DiffableState {
         }
     }
 
-    final void a(int param0, int[] param1, GameSnapshot param2) {
+    final void execute(int param0, int[] param1, GameSnapshot param2) {
         try {
           if (param0 != 1) {
             IsaacPacketBuffer var5 = (IsaacPacketBuffer) null;
@@ -116,7 +116,7 @@ final class RemoveEventAction extends MissionAction implements DiffableState {
         }
     }
 
-    final String a(int param0) {
+    final String getDescription(int param0) {
         if (param0 != -1325) {
           return (String) null;
         }

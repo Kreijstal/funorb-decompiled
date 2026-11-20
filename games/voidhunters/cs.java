@@ -12,7 +12,7 @@ final class cs {
         int var3 = (-GetPhasedEnergyBeamProjectiles.field_o + GetAngularForceDownshift.field_p) * var2 / var1 + GetPhasedEnergyBeamProjectiles.field_o;
         SetToggledScoreboard.field_o.a(SetUseDetailLines.field_o, 118, 640, var3, 120);
         int var4 = 81 / ((31 - param0) / 40);
-        hp.a(640, -24 + GetAngularForceDownshift.field_p, qs.field_c, false, hi.field_a, 5, 0);
+        hp.a(640, -24 + GetAngularForceDownshift.field_p, qs.field_c, false, MissionListFactory.field_a, 5, 0);
     }
 
     cs(int param0) {
@@ -62,7 +62,7 @@ final class cs {
         return false;
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 == 111) {
           field_c = null;
           field_b = null;

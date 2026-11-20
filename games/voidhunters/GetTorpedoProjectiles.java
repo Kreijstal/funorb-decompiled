@@ -4,10 +4,10 @@
 final class GetTorpedoProjectiles extends ConsoleCommand {
     static llb field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 85) {
-          GetTorpedoProjectiles.a(-102);
+          GetTorpedoProjectiles.clearSharedReferences(-102);
         }
     }
 
@@ -45,6 +45,6 @@ final class GetTorpedoProjectiles extends ConsoleCommand {
     }
 
     static {
-        nj discarded$0 = new nj();
+        BlackBoxRecordingFactory discarded$0 = new BlackBoxRecordingFactory();
     }
 }

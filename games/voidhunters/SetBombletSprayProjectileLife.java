@@ -18,7 +18,7 @@ final class SetBombletSprayProjectileLife extends ConsoleCommand {
           var3 = new Sprite[9];
           var2 = var3;
           if (param0) {
-            SetBombletSprayProjectileLife.e((byte) -84);
+            SetBombletSprayProjectileLife.clearSharedReferences((byte) -84);
           }
           var3[4] = param1;
           stackIn_3_0 = var2;
@@ -37,7 +37,7 @@ final class SetBombletSprayProjectileLife extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         if (param0 >= -113) {
           OpenGlToolkit var2 = (OpenGlToolkit) null;
@@ -98,23 +98,23 @@ final class SetBombletSprayProjectileLife extends ConsoleCommand {
           if (GetMissionTimeLimit.field_p == null) {
             var7 = new rjb();
             var19 = var7.b(128, (byte) -66, 128, 16);
-            GetMissionTimeLimit.field_p = gfb.a(false, var19, -12445);
+            GetMissionTimeLimit.field_p = EscapePodFactory.a(false, var19, -12445);
           }
           if (pjb.field_vb == null) {
             var9 = new krb();
             var20 = var9.b(128, (byte) -29, 128, 16);
-            pjb.field_vb = gfb.a(false, var20, -12445);
+            pjb.field_vb = EscapePodFactory.a(false, var20, -12445);
           }
           var11 = param0.field_yb;
           if (var11.a(param1 + 77) &&
             null == SetPhasedEnergyBeamProjectileOndamageParticles.field_o) {
             var21 = GetFighterRepairTime.a(4.0f, 0.6000000238418579f, (byte) 80, 8, new ko(419684), 16, 128, 128, 0.5f, 4.0f, 16.0f);
-            SetPhasedEnergyBeamProjectileOndamageParticles.field_o = gfb.a(false, var21, param1 - 12461);
+            SetPhasedEnergyBeamProjectileOndamageParticles.field_o = EscapePodFactory.a(false, var21, param1 - 12461);
           }
           if (param1 == 16) {
             return;
           }
-          SetBombletSprayProjectileLife.e((byte) -27);
+          SetBombletSprayProjectileLife.clearSharedReferences((byte) -27);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

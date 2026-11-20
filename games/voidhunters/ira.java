@@ -49,7 +49,7 @@ final class ira extends mfb {
         return true;
     }
 
-    public static void l(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         field_c = null;
         if (param0 != 17036) {
@@ -83,7 +83,7 @@ final class ira extends mfb {
 
     final int c(byte param0) {
         int var2 = -86 % ((param0 - 75) / 46);
-        return upb.field_a;
+        return VariableConditionFactory.field_a;
     }
 
     final static boolean a(long param0, String param1, int param2) {

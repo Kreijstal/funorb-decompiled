@@ -8,10 +8,10 @@ final class km extends jtb {
     byte field_q;
     static String field_s;
 
-    public static void g(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_s = null;
         if (param0 != 114) {
-          km.g((byte) -103);
+          km.clearSharedReferences((byte) -103);
         }
     }
 
@@ -56,7 +56,7 @@ final class km extends jtb {
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) -87);
           var10.beginBitRead(-23497);
-          gs.field_a = bh.a(var10, (byte) -122);
+          SettingsChangeFactory.field_a = MapClearanceCircleFactory.a(var10, (byte) -122);
           SetMachineGunFireForce.field_p = new int[var3][];
           SetMissileLauncherFireForce.field_o = new wma[var3];
           for (var4 = 0; var3 > var4; var4++) {
@@ -94,7 +94,7 @@ final class km extends jtb {
 
     final static void f(byte param0) {
         if (param0 != -119) {
-          km.g((byte) 33);
+          km.clearSharedReferences((byte) 33);
         }
         if (GetSpinningBladeAimspeed.field_q == 10) {
           SpawnChoice.b(param0 ^ -108);

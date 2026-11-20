@@ -169,7 +169,7 @@ final class ResourceNode implements DiffableState {
           uv.a(126, var3_int - 1, var6 + 2, -1 + var4, 8947848, var5 + 2);
           var7 = qpb.a(false, this.field_h, 13894143);
           var8 = GetGrapplingHookAimarc.a(-16777216, var7);
-          ci.a(var4, var6, var8, this.captureTimer * var5 / Particle.field_G, var3_int, var7, 0);
+          PlayerJoinFactory.a(var4, var6, var8, this.captureTimer * var5 / Particle.field_G, var3_int, var7, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -44,6 +44,6 @@ final class GetAngularVelocitySustain extends ConsoleCommand {
 
     static {
         field_q = new int[128];
-        vlb discarded$0 = new vlb();
+        TargetLockFactory discarded$0 = new TargetLockFactory();
     }
 }

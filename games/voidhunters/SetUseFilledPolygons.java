@@ -15,7 +15,7 @@ final class SetUseFilledPolygons extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          wkb.field_c = arguments[0].intValue(68);
+          SetVariableActionFactory.field_c = arguments[0].intValue(68);
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -81,7 +81,7 @@ final class SetUseFilledPolygons extends ConsoleCommand {
         try {
           var5 = gn.a(param2 ^ param2, param1);
           var6 = gn.a(0, param4);
-          stackIn_1_0 = tja.a(var6, param0, var5, param3, param2 ^ 5542);
+          stackIn_1_0 = CarouselSlot.a(var6, param0, var5, param3, param2 ^ 5542);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

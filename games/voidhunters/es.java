@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class es {
-    static kc field_b;
+    static PlayerGameData field_b;
     static String field_a;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (param0) {
-          es.a(false);
+          es.clearSharedReferences(false);
           field_b = null;
           field_a = null;
           return;
@@ -34,9 +34,9 @@ final class es {
         try {
           var11_int = -47 / ((param8 + 59) / 50);
           if (null != pja.field_o) {
-            hg.field_c = 0;
+            PlayerLeave.field_c = 0;
             GetAngularVelocitySustain.field_o = GetAngularVelocitySustain.field_o + 1;
-            if (jua.field_a < GetAngularVelocitySustain.field_o) {
+            if (ArmBehaviourFactory.field_a < GetAngularVelocitySustain.field_o) {
               if (param9 != null) {
                 usb.a(param3, param9, pja.field_o, param7, 1, param0, param5);
               } else {
@@ -46,8 +46,8 @@ final class es {
               }
             }
           } else {
-            hg.field_c = hg.field_c + 1;
-            if (hg.field_c > mna.field_b) {
+            PlayerLeave.field_c = PlayerLeave.field_c + 1;
+            if (PlayerLeave.field_c > mna.field_b) {
               GetAngularVelocitySustain.field_o = 0;
             }
           }

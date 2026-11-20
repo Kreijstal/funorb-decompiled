@@ -20,7 +20,7 @@ final class tda extends iw implements oo {
         int var7 = 0;
         try {
           super.a(param0, param1, param2, param3);
-          if (upb.field_c) {
+          if (VariableConditionFactory.field_c) {
             param3.f((byte) -34);
           }
           var5_long = -this.field_L + wt.a(false);
@@ -35,14 +35,14 @@ final class tda extends iw implements oo {
           if (this.field_z &&
             psb.field_b == null) {
             this.l((byte) -98);
-            this.field_v.a(false, new mr(this.field_v, bca.field_a));
+            this.field_v.a(false, new mr(this.field_v, AdminMessageFactory.field_a));
           }
           if (psb.field_b != null) {
             if (!psb.field_b.field_a) {
               return;
             }
             this.l((byte) -98);
-            this.field_v.a(false, new mr(this.field_v, bca.field_a));
+            this.field_v.a(false, new mr(this.field_v, AdminMessageFactory.field_a));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -78,7 +78,7 @@ final class tda extends iw implements oo {
           this.field_J.field_f = 80;
           this.field_J.field_q = (wwa) ((Object) new bob(GetBoostersCooldown.field_r, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.b(-18756, this.field_J);
-          this.field_N = this.a((byte) -104, (sba) (this), amb.field_b);
+          this.field_N = this.a((byte) -104, (sba) (this), ServerInfoFactory.field_b);
           this.field_P = this.a((byte) -73, (sba) (this), GetFighterRepairAmount.field_r);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tda.<init>(" + (param0 != null ? "{...}" : "null") + ')');

@@ -31,10 +31,10 @@ final class GetGrapplingHookRopeChangeRate extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != -14010) {
-          GetGrapplingHookRopeChangeRate.a(55);
+          GetGrapplingHookRopeChangeRate.clearSharedReferences(55);
         }
     }
 

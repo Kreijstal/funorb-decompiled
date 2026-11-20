@@ -89,8 +89,8 @@ final class ida extends mc {
         RuntimeException var3 = null;
         try {
           SetExplosionProjectileDamage.a(param1, 0, param0);
-          if (lob.field_a != null) {
-            SetPhasedEnergyBeamPulsetime.a(lob.field_a, (byte) 92);
+          if (NebulaFieldFactory.field_a != null) {
+            SetPhasedEnergyBeamPulsetime.a(NebulaFieldFactory.field_a, (byte) 92);
           }
           if (param2 > -66) {
             var4 = (IsaacPacketBuffer) null;
@@ -182,7 +182,7 @@ final class ida extends mc {
     }
 
     public ida() {
-        super(0, 0, fob.field_a, GetSniperCannonFiringLeeway.field_p, (wwa) null, (sba) null);
+        super(0, 0, ComponentBehaviourFactory.field_a, GetSniperCannonFiringLeeway.field_p, (wwa) null, (sba) null);
         this.field_v = new IntrusiveDeque();
     }
 

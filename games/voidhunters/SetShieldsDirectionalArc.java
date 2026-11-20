@@ -47,7 +47,7 @@ final class SetShieldsDirectionalArc extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 0) {
-            stackIn_4_0 = nj.a(-2, param1.length, 0, param1);
+            stackIn_4_0 = BlackBoxRecordingFactory.a(-2, param1.length, 0, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;

@@ -100,10 +100,10 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
                     var18 = 0;
                     var13Lifetime1 = var18;
                     while (var9 > var18) {
-                      var12[var18] = beb.a(var10[var18], (byte) 99);
+                      var12[var18] = ProjectileFactory.a(var10[var18], (byte) 99);
                       var18++;
                     }
-                    var19.field_e[var5] = param0.a(var12, (byte) 95, beb.a(var21, (byte) 99), var22);
+                    var19.field_e[var5] = param0.a(var12, (byte) 95, ProjectileFactory.a(var21, (byte) 99), var22);
                     var19.field_f[var5] = var23;
                   }
                 } else {
@@ -115,7 +115,7 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
                   }
                   var19.field_h[var5] = var6_int;
                   var19.field_j[var5] = var9;
-                  var19.field_g[var5] = param0.a(var16, beb.a(var17, (byte) 99), -6576);
+                  var19.field_g[var5] = param0.a(var16, ProjectileFactory.a(var17, (byte) 99), -6576);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

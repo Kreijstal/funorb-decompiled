@@ -9,10 +9,10 @@ final class SetTorpedoReload extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 != 109) {
-          SetTorpedoReload.a(114);
+          SetTorpedoReload.clearSharedReferences(114);
           field_o = null;
           return;
         }
@@ -28,7 +28,7 @@ final class SetTorpedoReload extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            SetTorpedoReload.a(112);
+            SetTorpedoReload.clearSharedReferences(112);
           }
           SetMachineGunEnergyUsed.a(109, 62, arguments[0].intValue(52));
           stackIn_3_0 = new ConsoleValue("void");

@@ -89,10 +89,10 @@ final class rpa implements jaa {
                     SetPhasedEnergyBeamProjectiles.a(var4, 116);
                   } else {
                     if (var5 == 11) {
-                      bab.a(param2, var4);
+                      PlayerVoteFactory.a(param2, var4);
                     } else {
                       if (var5 == 4) {
-                        lhb.a((byte) 127, var4);
+                        GrapplingHookFactory.a((byte) 127, var4);
                       } else {
                         if (var5 == 5) {
                           lc.a(38, var4);

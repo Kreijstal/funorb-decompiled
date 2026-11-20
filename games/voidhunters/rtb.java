@@ -10,7 +10,7 @@ final class rtb extends pib {
         if (param1 >= -37) {
           field_h = (llb) null;
           if (GetBloomThresholdPercentage.field_p) {
-            return ada.field_b.a(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
+            return PartitionZoneListFactory.field_b.a(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
           }
           if (uga.field_d) {
             return GetDetachmentMode.a(param3, -9307, param2);
@@ -24,7 +24,7 @@ final class rtb extends pib {
           return SetFighterRepairAmount.b(param0, param3, -85);
         }
         if (GetBloomThresholdPercentage.field_p) {
-          return ada.field_b.a(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
+          return PartitionZoneListFactory.field_b.a(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
         }
         if (uga.field_d) {
           return GetDetachmentMode.a(param3, -9307, param2);

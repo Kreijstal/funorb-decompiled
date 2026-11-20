@@ -7,7 +7,7 @@ final class SetDebrisCarryOverPercentage extends ConsoleCommand {
 
     final static boolean a(int param0, byte param1, int param2) {
         if (param1 != 119) {
-          SetDebrisCarryOverPercentage.e((byte) 34);
+          SetDebrisCarryOverPercentage.clearSharedReferences((byte) 34);
           return false;
         }
         return false;
@@ -43,7 +43,7 @@ final class SetDebrisCarryOverPercentage extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 > -100) {
           field_p = 70;
           field_o = null;

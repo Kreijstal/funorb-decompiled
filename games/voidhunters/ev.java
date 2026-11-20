@@ -12,11 +12,11 @@ abstract class ev {
 
     abstract void b(byte param0, int param1, int param2);
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         field_b = null;
         if (param0 != 28378) {
-          ev.a(72);
+          ev.clearSharedReferences(72);
         }
     }
 

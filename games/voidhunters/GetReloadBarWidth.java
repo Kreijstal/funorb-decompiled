@@ -6,12 +6,12 @@ final class GetReloadBarWidth extends ConsoleCommand {
     static int[] field_o;
     static String field_q;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         field_o = null;
         field_q = null;
         if (param0 != 1) {
-          GetReloadBarWidth.a(-20);
+          GetReloadBarWidth.clearSharedReferences(-20);
         }
     }
 

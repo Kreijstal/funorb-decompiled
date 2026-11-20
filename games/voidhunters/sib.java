@@ -84,7 +84,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
             }
             var5 = new byte[var4_int];
             param1.position = param1.position + GetMissileLauncherAimspeed.field_o.a(0, param1.payload, var5, var4_int, 0, param1.position);
-            var6 = tja.a(0, 0, var4_int, var5);
+            var6 = CarouselSlot.a(0, 0, var4_int, var5);
             stackIn_4_0 = var6;
             return stackIn_4_0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {

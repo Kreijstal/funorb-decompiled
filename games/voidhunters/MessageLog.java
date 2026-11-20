@@ -7,10 +7,10 @@ final class MessageLog implements DiffableState {
     static boolean field_d;
     private Message[] messages;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         if (param0 != 1) {
-          MessageLog.a(20);
+          MessageLog.clearSharedReferences(20);
         }
     }
 
@@ -22,7 +22,7 @@ final class MessageLog implements DiffableState {
         if (param0 <= 57) {
           return;
         }
-        cla.field_a = param1;
+        IncrementVariableActionFactory.field_a = param1;
         if (null != this.messages) {
           var3 = 0;
           while (this.messages.length > var3) {
@@ -140,7 +140,7 @@ final class MessageLog implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          param0.tick = cla.field_a;
+          param0.tick = IncrementVariableActionFactory.field_a;
           this.messages = (Message[]) (ija.a(param0, this.messages, 0, bob.field_e));
           if (hb.field_a < this.messages.length) {
             this.messages = (Message[]) (GetSalvoUsesAllEnergy.a(bob.field_e, 0, 15667, this.messages));
@@ -214,7 +214,7 @@ final class MessageLog implements DiffableState {
         RuntimeException var3_ref = null;
         try {
           var3 = (MessageLog) (other);
-          tja.a(var3.messages, 1, this.messages, false, 5547);
+          CarouselSlot.a(var3.messages, 1, this.messages, false, 5547);
           var4 = 0;
           if (SetCountermeasureLauncherAimspeed.a(var3.messages, false, 1, this.messages, 121)) {
             System.out.println("Message[] messages has changed. ");

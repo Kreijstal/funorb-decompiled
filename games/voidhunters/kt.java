@@ -162,7 +162,7 @@ class kt extends elb {
             var54[var13] = var14Lifetime2;
             var64[var13] = var15Lifetime2;
           }
-          for (var13Lifetime1 = 0; var13Lifetime1 < pca.field_j; var13Lifetime1++) {
+          for (var13Lifetime1 = 0; var13Lifetime1 < CarouselPlayerEvent.field_j; var13Lifetime1++) {
             var14Lifetime1 = SetMissionDebrisDefaultProbability.field_p[var13Lifetime1];
             var15Lifetime1 = param0.field_w[var14Lifetime1];
             var16 = param0.field_N[var14Lifetime1];
@@ -185,12 +185,12 @@ class kt extends elb {
               stackIn_30_0 = -1;
             }
             var20 = stackIn_30_0;
-            if (gs.field_a != null &&
+            if (SettingsChangeFactory.field_a != null &&
               param0.field_K != null &&
               param0.field_K.length > var14Lifetime1 &&
               param0.field_K[var14Lifetime1] != -1 &&
-              param0.field_K[var14Lifetime1] < gs.field_a.length) {
-              stackIn_38_0 = gs.field_a[param0.field_K[var14Lifetime1]];
+              param0.field_K[var14Lifetime1] < SettingsChangeFactory.field_a.length) {
+              stackIn_38_0 = SettingsChangeFactory.field_a[param0.field_K[var14Lifetime1]];
             } else {
               stackIn_38_0 = null;
             }

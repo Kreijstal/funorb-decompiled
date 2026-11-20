@@ -43,7 +43,7 @@ final class uca {
     private int field_o;
     private float field_w;
     private int field_H;
-    oma field_m;
+    CommonGameState field_m;
     private bv field_v;
     private int field_J;
     private int field_t;
@@ -78,8 +78,8 @@ final class uca {
             var5 = new Ship();
             param1.copyTo((byte) 61, var5);
             var5.a(param2 ^ 11893, param0, param3);
-            var6 = var5.d(false) - var5.j(995401160);
-            var7 = var5.g((byte) -54) - var5.i((byte) 5);
+            var6 = var5.getX(false) - var5.j(995401160);
+            var7 = var5.getY((byte) -54) - var5.i((byte) 5);
             var5.chassis.a(true, var6, var7, var5.e(0), 0, var5.getBoundingbox((byte) -55));
             param1 = var5;
           }
@@ -147,14 +147,14 @@ final class uca {
         var11 = VoidHunters.field_G;
         var6 = ar.a(param1, (byte) 111, param4);
         var9 = -92 % ((param3 - 66) / 48);
-        var7 = ar.a(-param1 + onb.field_a, (byte) 114, param4);
-        var8 = ar.a(param1, (byte) 108, -param4 + lj.field_a);
-        var10 = ar.a(onb.field_a - param1, (byte) 107, lj.field_a - param4);
+        var7 = ar.a(-param1 + PartitionZoneFactory.field_a, (byte) 114, param4);
+        var8 = ar.a(param1, (byte) 108, -param4 + MissionVariableFactory.field_a);
+        var10 = ar.a(PartitionZoneFactory.field_a - param1, (byte) 107, MissionVariableFactory.field_a - param4);
         if (param2 > var6 &&
           var7 < param2 &&
           var8 < param2 &&
           param2 > var10) {
-          jjb.a(0, lj.field_a, 17634, 0, 0, onb.field_a);
+          jjb.a(0, MissionVariableFactory.field_a, 17634, 0, 0, PartitionZoneFactory.field_a);
           return true;
         }
         if (param2 > 20000) {
@@ -244,7 +244,7 @@ final class uca {
         int var15;
         IntrusiveDeque var16;
         Object var17;
-        hna var17_ref;
+        PlayerAction var17_ref;
         int var17_int;
         int var18;
         int var19;
@@ -283,7 +283,7 @@ final class uca {
           var12 = var12 + (-1 + var10);
         }
         var16 = this.field_m.carouselInfo.field_f;
-        var17_ref = (hna) (var16.first(0));
+        var17_ref = (PlayerAction) (var16.first(0));
         while (var17_ref != null) {
           var18 = var17_ref.field_e - var4;
           var19 = 65280;
@@ -299,8 +299,8 @@ final class uca {
             GetMachineGunPulsetime.a(16755200, -55, var14, var21, 4 + var15, var20);
           }
           GetMachineGunPulsetime.a(var19, -50, var14, var21, var15, var20);
-          if (kc.field_b >= var20 &&
-            kc.field_b <= var20 + var14 &&
+          if (PlayerGameData.field_b >= var20 &&
+            PlayerGameData.field_b <= var20 + var14 &&
             var21 <= uia.field_b &&
             uia.field_b <= var21 + var15) {
             stackIn_24_0 = new StringBuilder().append("tick=").append(var17_ref.field_e).append(",player=").append(var17_ref.field_k).append(",mousex=").append(var17_ref.mousex).append(",y=").append(var17_ref.mousey).append(",triggers=").append(var17_ref.triggers).append(",specialorder=");
@@ -311,7 +311,7 @@ final class uca {
             }
             GetMassDriverReload.a(((StringBuilder) (Object) stackIn_24_0).append(stackIn_25_1).toString(), -101);
           }
-          var17_ref = (hna) (var16.next((byte) 127));
+          var17_ref = (PlayerAction) (var16.next((byte) 127));
         }
     }
 
@@ -346,8 +346,8 @@ final class uca {
                 var7 = var4[var5 + 1];
                 var8 = var4[(2 + var5) % var16.length];
                 var9 = var4[(var5 + 3) % var16.length];
-                c.a(eoa.field_a.b(true, var9), eoa.field_a.a(var8, (byte) 121), eoa.field_a.a(var6, (byte) 120), eoa.field_a.b(true, var7), -16777216, 16777215);
-                SetMissileLauncherEnergyUsed.a(16711680, (byte) 7, eoa.field_a.b(true, var7), (float)(int)(eoa.field_a.field_a * 16384.0f), 100, eoa.field_a.a(var6, (byte) 115));
+                c.a(ShipTeamConditionFactory.field_a.b(true, var9), ShipTeamConditionFactory.field_a.a(var8, (byte) 121), ShipTeamConditionFactory.field_a.a(var6, (byte) 120), ShipTeamConditionFactory.field_a.b(true, var7), -16777216, 16777215);
+                SetMissileLauncherEnergyUsed.a(16711680, (byte) 7, ShipTeamConditionFactory.field_a.b(true, var7), (float)(int)(ShipTeamConditionFactory.field_a.field_a * 16384.0f), 100, ShipTeamConditionFactory.field_a.a(var6, (byte) 115));
               }
             }
           }
@@ -380,7 +380,7 @@ final class uca {
             if (this.field_M <= 192) {
               this.field_d = 0;
               if (es.field_b == null) {
-                es.field_b = new kc();
+                es.field_b = new PlayerGameData();
               }
               es.field_b.blueprint = var4;
               if (!bqa.a(false)) {
@@ -442,8 +442,8 @@ final class uca {
         if (param0 < 32) {
           return 38;
         }
-        while (ecb.field_a.length > var2) {
-          var3 = ecb.field_a[var2];
+        while (GameSnapshotFactory.field_a.length > var2) {
+          var3 = GameSnapshotFactory.field_a[var2];
           var4 = 0;
           if (SetMachineGunEnergyUsed.field_o[81]) {
             var4 = 10;
@@ -519,7 +519,7 @@ final class uca {
         if (param3 != -8464) {
           return 71;
         }
-        int var6 = (lj.field_a + 100) * var5 >> 9;
+        int var6 = (MissionVariableFactory.field_a + 100) * var5 >> 9;
         return var6;
     }
 
@@ -620,10 +620,10 @@ final class uca {
             li.field_i = false;
           }
           if (!li.field_i && (null == epb.field_m ||
-            epb.field_m.field_q != onb.field_a ||
-            epb.field_m.field_p != lj.field_a)) {
+            epb.field_m.field_q != PartitionZoneFactory.field_a ||
+            epb.field_m.field_p != MissionVariableFactory.field_a)) {
             GetDebrisThrowable.a(false, "Creating a new g1 fog of war sprite");
-            epb.field_m = (Sprite) ((Object) new jva(onb.field_a, lj.field_a));
+            epb.field_m = (Sprite) ((Object) new jva(PartitionZoneFactory.field_a, MissionVariableFactory.field_a));
             if (var6 != 0) {
               GetGrapplingHooksDamageableBySourcePlayer.field_p = null;
             }
@@ -631,14 +631,14 @@ final class uca {
           if ((li.field_i ||
             var6 == 0) &&
             (GetGrapplingHooksDamageableBySourcePlayer.field_p == null ||
-            GetGrapplingHooksDamageableBySourcePlayer.field_p.c() != onb.field_a ||
-            GetGrapplingHooksDamageableBySourcePlayer.field_p.b() != lj.field_a)) {
+            GetGrapplingHooksDamageableBySourcePlayer.field_p.c() != PartitionZoneFactory.field_a ||
+            GetGrapplingHooksDamageableBySourcePlayer.field_p.b() != MissionVariableFactory.field_a)) {
             GetDebrisThrowable.a(false, "Creating a new g2 fog of war sprite");
             GetGrapplingHooksDamageableBySourcePlayer.field_p = null;
             if (var6 != 0) {
               epb.field_m = null;
             }
-            GetGrapplingHooksDamageableBySourcePlayer.field_p = GetDebrisGroupColour.field_r.a(onb.field_a, lj.field_a, true);
+            GetGrapplingHooksDamageableBySourcePlayer.field_p = GetDebrisGroupColour.field_r.a(PartitionZoneFactory.field_a, MissionVariableFactory.field_a, true);
             if (var6 == 0) {
               GetDebrisThrowable.a(false, "Setting area");
               GetDebrisGroupColour.field_r.SA(0, 0, 1, 1, new int[]{1}, 0, 1);
@@ -650,7 +650,7 @@ final class uca {
               var7 = 0;
               if (!li.field_i) {
                 SetTorpedoEnergyUsed.a(107, epb.field_m);
-                dma.d(0, 0, onb.field_a, lj.field_a, -1442840576);
+                dma.d(0, 0, PartitionZoneFactory.field_a, MissionVariableFactory.field_a, -1442840576);
               } else {
                 SetUseBackground.field_o.a(GetGrapplingHooksDamageableBySourcePlayer.field_p, 0);
                 GetDebrisGroupColour.field_r.GA(-1442840576);
@@ -667,9 +667,9 @@ final class uca {
                     var8 == var21.getTeam((byte) 121) &&
                     var21.s(param1 ^ -15491) && (var8 != sja.field_c ||
                     var21 == param0)) {
-                    var13 = eoa.field_a.a(var21.d(false), (byte) 119);
-                    var14 = eoa.field_a.b(true, var21.g((byte) -118));
-                    var15 = (int)((float)GetUseNiceTrails.field_p * eoa.field_a.field_a);
+                    var13 = ShipTeamConditionFactory.field_a.a(var21.getX(false), (byte) 119);
+                    var14 = ShipTeamConditionFactory.field_a.b(true, var21.getY((byte) -118));
+                    var15 = (int)((float)GetUseNiceTrails.field_p * ShipTeamConditionFactory.field_a.field_a);
                     this.a(var14, (byte) 66, var13, var15);
                   }
                 }
@@ -679,9 +679,9 @@ final class uca {
                   for (var12 = 0; var12 < var22.length; var12++) {
                     var13_ref_it = var22[var12];
                     if (var8 == var13_ref_it.team) {
-                      var14Lifetime2 = eoa.field_a.a(var13_ref_it.x, (byte) 123);
-                      var15Lifetime2 = eoa.field_a.b(true, var13_ref_it.y);
-                      var16 = (int)(eoa.field_a.field_a * (float)GetUseNiceTrails.field_p);
+                      var14Lifetime2 = ShipTeamConditionFactory.field_a.a(var13_ref_it.x, (byte) 123);
+                      var15Lifetime2 = ShipTeamConditionFactory.field_a.b(true, var13_ref_it.y);
+                      var16 = (int)(ShipTeamConditionFactory.field_a.field_a * (float)GetUseNiceTrails.field_p);
                       var17 = var13_ref_it.hyperdriveTimer * var16 / (3 * Particle.field_l);
                       this.a(var15Lifetime2, (byte) -7, var14Lifetime2, var17);
                     }
@@ -696,9 +696,9 @@ final class uca {
                     var14_ref_rba = var24;
                     if (null != var24 &&
                       var8 == var24.team) {
-                      var15Lifetime3 = eoa.field_a.a(var24.x, (byte) 117);
-                      var16Lifetime1 = eoa.field_a.b(true, var24.y);
-                      var17Lifetime1 = (int)((float)GetUseNiceTrails.field_p * eoa.field_a.field_a);
+                      var15Lifetime3 = ShipTeamConditionFactory.field_a.a(var24.x, (byte) 117);
+                      var16Lifetime1 = ShipTeamConditionFactory.field_a.b(true, var24.y);
+                      var17Lifetime1 = (int)((float)GetUseNiceTrails.field_p * ShipTeamConditionFactory.field_a.field_a);
                       this.a(var16Lifetime1, (byte) -115, var15Lifetime3, var17Lifetime1);
                     }
                   }
@@ -713,9 +713,9 @@ final class uca {
                         var26Lifetime1.getTeam((byte) 90) == var8 &&
                         var26Lifetime1.s(param1 + 15726) && (var8 != sja.field_c ||
                         param0 == var26Lifetime1)) {
-                        var15Lifetime4 = eoa.field_a.a(var26Lifetime1.d(false), (byte) 125);
-                        var16Lifetime2 = eoa.field_a.b(true, var26Lifetime1.g((byte) 127));
-                        var17Lifetime2 = (int)(eoa.field_a.field_a * (float)GetUseNiceTrails.field_p);
+                        var15Lifetime4 = ShipTeamConditionFactory.field_a.a(var26Lifetime1.getX(false), (byte) 125);
+                        var16Lifetime2 = ShipTeamConditionFactory.field_a.b(true, var26Lifetime1.getY((byte) 127));
+                        var17Lifetime2 = (int)(ShipTeamConditionFactory.field_a.field_a * (float)GetUseNiceTrails.field_p);
                         stackIn_85_0 = (!this.a(255, var15Lifetime4, var17Lifetime2, (byte) -126, var16Lifetime2)) ? 0 : 1;
                         var7 = stackIn_85_0;
                         if (var7 != 0) {
@@ -754,9 +754,9 @@ final class uca {
                           stackIn_99_1 = var14_ref_rbaLifetime1;
                           if (stackIn_99_0 != stackIn_99_1 &&
                             var14_ref_rbaLifetime1.team == var8) {
-                            var15Lifetime4 = eoa.field_a.a(var14_ref_rbaLifetime1.x, (byte) 126);
-                            var16Lifetime2Lifetime1 = eoa.field_a.b(true, var14_ref_rbaLifetime1.y);
-                            var17Lifetime2Lifetime1 = (int)(eoa.field_a.field_a * (float)GetUseNiceTrails.field_p);
+                            var15Lifetime4 = ShipTeamConditionFactory.field_a.a(var14_ref_rbaLifetime1.x, (byte) 126);
+                            var16Lifetime2Lifetime1 = ShipTeamConditionFactory.field_a.b(true, var14_ref_rbaLifetime1.y);
+                            var17Lifetime2Lifetime1 = (int)(ShipTeamConditionFactory.field_a.field_a * (float)GetUseNiceTrails.field_p);
                             stackIn_105_0 = (!this.a(255, var15Lifetime4, var17Lifetime2Lifetime1, (byte) -40, var16Lifetime2Lifetime1)) ? 0 : 1;
                             var7 = stackIn_105_0;
                             if (var7 != 0) {
@@ -773,9 +773,9 @@ final class uca {
                         for (var13Lifetime3 = 0; var13Lifetime3 < var29.length; var13Lifetime3++) {
                           var30 = var29[var13Lifetime3];
                           if (var8 == var30.team) {
-                            var15Lifetime4 = eoa.field_a.a(var30.x, (byte) 112);
-                            var16Lifetime2Lifetime1 = eoa.field_a.b(true, var30.y);
-                            var17Lifetime2Lifetime1 = (int)((float)GetUseNiceTrails.field_p * eoa.field_a.field_a);
+                            var15Lifetime4 = ShipTeamConditionFactory.field_a.a(var30.x, (byte) 112);
+                            var16Lifetime2Lifetime1 = ShipTeamConditionFactory.field_a.b(true, var30.y);
+                            var17Lifetime2Lifetime1 = (int)((float)GetUseNiceTrails.field_p * ShipTeamConditionFactory.field_a.field_a);
                             var18 = var17Lifetime2Lifetime1 * var30.hyperdriveTimer / (3 * Particle.field_l);
                             stackIn_131_0 = (!this.a(var30.hyperdriveTimer, var15Lifetime4, var18, (byte) -101, var16Lifetime2Lifetime1)) ? 0 : 1;
                             var7 = stackIn_131_0;
@@ -808,9 +808,9 @@ final class uca {
                   if (((null != this.field_v)) &&
                     ((param0 != null)) &&
                     (!(!this.field_v.b(4, -53)))) {
-                    var8 = eoa.field_a.a(param0.d(false), (byte) 114);
-                    var9 = eoa.field_a.b(true, param0.g((byte) -121));
-                    var10 = 1 + (int)(eoa.field_a.field_a * (float)GetUseNiceTrails.field_p);
+                    var8 = ShipTeamConditionFactory.field_a.a(param0.getX(false), (byte) 114);
+                    var9 = ShipTeamConditionFactory.field_a.b(true, param0.getY((byte) -121));
+                    var10 = 1 + (int)(ShipTeamConditionFactory.field_a.field_a * (float)GetUseNiceTrails.field_p);
                     var11Lifetime2 = SetMinimapWidth.field_o * 10 % 8192;
                     for (var12Lifetime2 = 0; var12Lifetime2 < 100; var12Lifetime2++) {
                       var13Lifetime3 = var11Lifetime2 + var12Lifetime2 * 8192 / 100;
@@ -843,9 +843,9 @@ final class uca {
                 stackIn_144_0 = (Ship) (param0);
                 if (stackIn_144_0 != null &&
                   this.field_v.b(4, -53)) {
-                  var8Lifetime1 = eoa.field_a.a(param0.d(false), (byte) 114);
-                  var9Lifetime1 = eoa.field_a.b(true, param0.g((byte) -121));
-                  var10Lifetime1 = 1 + (int)(eoa.field_a.field_a * (float)GetUseNiceTrails.field_p);
+                  var8Lifetime1 = ShipTeamConditionFactory.field_a.a(param0.getX(false), (byte) 114);
+                  var9Lifetime1 = ShipTeamConditionFactory.field_a.b(true, param0.getY((byte) -121));
+                  var10Lifetime1 = 1 + (int)(ShipTeamConditionFactory.field_a.field_a * (float)GetUseNiceTrails.field_p);
                   var11Lifetime1 = SetMinimapWidth.field_o * 10 % 8192;
                   for (var12Lifetime1 = 0; var12Lifetime1 < 100; var12Lifetime1++) {
                     var13Lifetime1 = var11Lifetime1 + var12Lifetime1 * 8192 / 100;
@@ -921,12 +921,12 @@ final class uca {
         var18_ref = null;
         var22 = VoidHunters.field_G;
         var3 = SetUseTriFill.field_o.a((byte) -110);
-        onb.field_a = GetBombletSprayEnergyUsed.field_p.width;
-        lj.field_a = GetBombletSprayEnergyUsed.field_p.height;
-        SetMassDriverReload.field_p = onb.field_a >> 1;
-        GetLaserAimarc.field_q = lj.field_a >> 1;
-        eoa.field_a.field_e = GetLaserAimarc.field_q;
-        eoa.field_a.field_d = SetMassDriverReload.field_p;
+        PartitionZoneFactory.field_a = GetBombletSprayEnergyUsed.field_p.width;
+        MissionVariableFactory.field_a = GetBombletSprayEnergyUsed.field_p.height;
+        SetMassDriverReload.field_p = PartitionZoneFactory.field_a >> 1;
+        GetLaserAimarc.field_q = MissionVariableFactory.field_a >> 1;
+        ShipTeamConditionFactory.field_a.field_e = GetLaserAimarc.field_q;
+        ShipTeamConditionFactory.field_a.field_d = SetMassDriverReload.field_p;
         if (!param1) {
           this.field_i = this.field_i - 32;
           if (this.field_i < 0) {
@@ -942,7 +942,7 @@ final class uca {
           this.field_R = ffa.field_a;
         }
         if (jkb.field_a) {
-          eoa.field_a.field_e = eoa.field_a.field_e - (-SetToggledScoreboard.field_o.field_u + dma.field_j >> 1);
+          ShipTeamConditionFactory.field_a.field_e = ShipTeamConditionFactory.field_a.field_e - (-SetToggledScoreboard.field_o.field_u + dma.field_j >> 1);
         }
         if (SetPhasedEnergyBeamAimspeed.field_q == 1 &&
           ffa.field_a < 20 &&
@@ -952,8 +952,8 @@ final class uca {
             GetUseSprites.field_o = 0;
           } else {
             if (AwardVictoryToWinnerAction.field_b != 1) {
-              if (1 == wkb.field_c) {
-                wkb.field_c = 0;
+              if (1 == SetVariableActionFactory.field_c) {
+                SetVariableActionFactory.field_c = 0;
               }
             } else {
               AwardVictoryToWinnerAction.field_b = 0;
@@ -963,7 +963,7 @@ final class uca {
         if (1 == ul.field_a &&
           li.field_i &&
           GetDebrisGroupColour.field_r.s()) {
-          GetDebrisGroupColour.field_r.a(0, 0, onb.field_a, lj.field_a);
+          GetDebrisGroupColour.field_r.a(0, 0, PartitionZoneFactory.field_a, MissionVariableFactory.field_a);
           GetDebrisGroupColour.field_r.GA(0);
         }
         if (rma.field_b == 1) {
@@ -973,18 +973,18 @@ final class uca {
           GetDebrisGroupColour.field_r.DA(SetMassDriverReload.field_p, GetLaserAimarc.field_q, 512, 512);
           GetDebrisGroupColour.field_r.f(32, 524288);
           var23 = GetDebrisGroupColour.field_r.d();
-          var23.a((int)(eoa.field_a.field_c / 64.0f), (int)(-8.0f / eoa.field_a.field_a), (int)(-eoa.field_a.field_b / 64.0f), -4096, 0, 0);
+          var23.a((int)(ShipTeamConditionFactory.field_a.field_c / 64.0f), (int)(-8.0f / ShipTeamConditionFactory.field_a.field_a), (int)(-ShipTeamConditionFactory.field_a.field_b / 64.0f), -4096, 0, 0);
           GetDebrisGroupColour.field_r.a(var23);
         }
-        eoa.field_a.a(lj.field_a, 0, -116, onb.field_a, 0);
+        ShipTeamConditionFactory.field_a.a(MissionVariableFactory.field_a, 0, -116, PartitionZoneFactory.field_a, 0);
         var24 = this.field_m.b(1);
-        hna.a(var24.world, eoa.field_a, this.field_x, (byte) -59);
+        PlayerAction.a(var24.world, ShipTeamConditionFactory.field_a, this.field_x, (byte) -59);
         var6 = this.field_m.a((byte) 33).getShips(1000);
         var7 = this.field_m.a((byte) 42).getResNodes(1);
         var8 = this.field_m.a((byte) 30).getEscapePods(0);
         var9 = null;
-        var10 = eoa.field_a.a(true, GetUseDetailLines.field_o);
-        var11 = eoa.field_a.a(0, GetTorpedoReload.field_q);
+        var10 = ShipTeamConditionFactory.field_a.a(true, GetUseDetailLines.field_o);
+        var11 = ShipTeamConditionFactory.field_a.a(0, GetTorpedoReload.field_q);
         if (this.field_L >= 0) {
           var9 = var24.world.d(this.field_L, 126);
         }
@@ -1019,8 +1019,8 @@ final class uca {
               !((Ship) (var9)).d(4, 91)) {
               ((Ship) (var9)).copyTo((byte) 94, this.field_W);
               this.field_W.a(-123, var17, var16);
-              var20_int = this.field_W.d(false) - this.field_W.j(995401160);
-              var21 = this.field_W.g((byte) -31) - this.field_W.i((byte) 5);
+              var20_int = this.field_W.getX(false) - this.field_W.j(995401160);
+              var21 = this.field_W.getY((byte) -31) - this.field_W.i((byte) 5);
               var19_int = 1;
               this.field_W.chassis.a(true, var20_int, var21, this.field_W.e(0), 0, this.field_W.getBoundingbox((byte) -71));
             }
@@ -1031,7 +1031,7 @@ final class uca {
           if (this.field_m.carouselInfo.f(1)) {
             var20 = var15.world.d(var13, 75);
             if (var20 != null) {
-              GetCountermeasureLauncherAimarc.a(var20.x, eoa.field_a, var17, 3, var20.y, 16755200, 255, var16);
+              GetCountermeasureLauncherAimarc.a(var20.x, ShipTeamConditionFactory.field_a, var17, 3, var20.y, 16755200, 255, var16);
             }
           }
           stackIn_58_0 = var15.world;
@@ -1042,11 +1042,11 @@ final class uca {
           } else {
             stackIn_59_3 = null;
           }
-          ((World) (Object) stackIn_58_0).a(stackIn_58_1, stackIn_58_2, stackIn_59_3, eoa.field_a, (byte) 19, (Ship) (var9), SetMinimapWidth.field_o, var16, var13);
+          ((World) (Object) stackIn_58_0).a(stackIn_58_1, stackIn_58_2, stackIn_59_3, ShipTeamConditionFactory.field_a, (byte) 19, (Ship) (var9), SetMinimapWidth.field_o, var16, var13);
         }
         var13Lifetime1 = this.field_m.carouselInfo.field_g;
-        var24.world.a(eoa.field_a, (byte) 122, var13Lifetime1, (Ship) (var9));
-        var24.world.a(eoa.field_a, -950, var24.missionState);
+        var24.world.a(ShipTeamConditionFactory.field_a, (byte) 122, var13Lifetime1, (Ship) (var9));
+        var24.world.a(ShipTeamConditionFactory.field_a, -950, var24.missionState);
         if (var9 != null &&
           GetPointDefenceLaserProjectileInterceptDamage.field_o) {
           this.a((byte) -95, (Ship) (var9));
@@ -1104,14 +1104,14 @@ final class uca {
         this.c((byte) 70, (Ship) (var9));
         if (this.field_v != null &&
           param1) {
-          this.field_v.a(var24, this.field_t, this.field_x, eoa.field_a, this.field_I, lj.field_a, this.field_F, this.field_p, (byte) -32, this.field_P, onb.field_a, this.field_L, (Ship) (var9));
+          this.field_v.a(var24, this.field_t, this.field_x, ShipTeamConditionFactory.field_a, this.field_I, MissionVariableFactory.field_a, this.field_F, this.field_p, (byte) -32, this.field_P, PartitionZoneFactory.field_a, this.field_L, (Ship) (var9));
         }
         if (var9 != null) {
           var18Lifetime1 = ((Ship) (var9)).getDragging(57);
           var26 = var24.world.i(21363, var18Lifetime1);
           if (var26 != null &&
             ((Ship) (var9)).chassis.j(1) + var26.chassis.j(1) > ue.field_a) {
-            kma.a(2, 0, 200, MissionControl.field_a.toUpperCase());
+            ArmBehaviour.a(2, 0, 200, MissionControl.field_a.toUpperCase());
           }
         }
         if (this.a(-12, var24) ||
@@ -1158,7 +1158,7 @@ final class uca {
         String var5Lifetime3;
         var7 = VoidHunters.field_G;
         try {
-          if (!mbb.field_b) {
+          if (!SetShipTeamActionFactory.field_b) {
             return;
           }
           var3_int = 0;
@@ -1187,7 +1187,7 @@ final class uca {
                 }
               }
               var3_int = 1;
-              kma.a(1, 116, 200, var5Lifetime3);
+              ArmBehaviour.a(1, 116, 200, var5Lifetime3);
             }
           }
           if (var3_int == 0 &&
@@ -1263,7 +1263,7 @@ final class uca {
               var5 = wqb.field_c[var4_int];
               var6 = GetPhasedEnergyBeamProjectiles.a(96, var5);
               var7 = pib.b((byte) 118);
-              var8 = -10 + (onb.field_a - var6);
+              var8 = -10 + (PartitionZoneFactory.field_a - var6);
               var9 = var7 * var4_int + 200 - var7;
               if (this.field_C == -1 ||
                 var4_int == this.field_C) {
@@ -1377,13 +1377,13 @@ final class uca {
         for (var3 = 0; this.field_m.field_a > var3; var3++) {
           var4 = var30.world.d(var3, 96);
           if (var4 != null) {
-            this.field_j[var3] = var4.d(false);
-            this.field_c[var3] = var4.g((byte) 118);
+            this.field_j[var3] = var4.getX(false);
+            this.field_c[var3] = var4.getY((byte) 118);
           }
           var5 = this.field_j[var3];
           var6 = this.field_c[var3];
-          var7 = eoa.field_a.a(var5, (byte) 127);
-          var8 = eoa.field_a.b(true, -(3 * NebulaField.field_d) + var6);
+          var7 = ShipTeamConditionFactory.field_a.a(var5, (byte) 127);
+          var8 = ShipTeamConditionFactory.field_a.b(true, -(3 * NebulaField.field_d) + var6);
           var9 = this.a((byte) 120, var30.a(var3, (byte) 59).selectedTeam, var3);
           if (var9 != null) {
             stackIn_12_0 = (var9.length > 0) ? 1 : 0;
@@ -1392,7 +1392,7 @@ final class uca {
           }
           var10 = stackIn_12_0;
           if (var4 != null) {
-            var8 = -6 + eoa.field_a.b(true, var4.getBoundingbox((byte) -110)[2] - 3 * NebulaField.field_d);
+            var8 = -6 + ShipTeamConditionFactory.field_a.b(true, var4.getBoundingbox((byte) -110)[2] - 3 * NebulaField.field_d);
             var11_ref_String = this.field_m.a(1, var4.getOwner((byte) -117));
             if (var4.getOwner((byte) -117) != this.field_L && (!var4.b(1, (byte) 24) &&
               !var4.b(2, (byte) -120) ||
@@ -1406,8 +1406,8 @@ final class uca {
           if (var10 != 0) {
             var31 = var9[var9.length - 1];
             var13 = GetPhasedEnergyBeamProjectiles.a(param0 ^ 4206, var31);
-            var14 = eoa.field_a.a(4096 + var5, (byte) 122);
-            var15 = eoa.field_a.b(true, -2048 + (var6 - (var11 << 1))) - pib.b((byte) 118);
+            var14 = ShipTeamConditionFactory.field_a.a(4096 + var5, (byte) 122);
+            var15 = ShipTeamConditionFactory.field_a.b(true, -2048 + (var6 - (var11 << 1))) - pib.b((byte) 118);
             var16 = var14 - (var13 >> 1);
             var17 = var15;
             var18 = 0;
@@ -1418,8 +1418,8 @@ final class uca {
             var23 = pib.b((byte) 118) + var17;
             var24 = 64;
             if (var24 <= var22) {
-              if (var23 > -var24 + lj.field_a) {
-                var19 = lj.field_a + (-var24 - var23);
+              if (var23 > -var24 + MissionVariableFactory.field_a) {
+                var19 = MissionVariableFactory.field_a + (-var24 - var23);
               }
             } else {
               var19 = var24 - var22;
@@ -1427,17 +1427,17 @@ final class uca {
             if (var20 < var24) {
               var18 = var24 - var20;
             } else {
-              if (-var24 + onb.field_a < var21) {
-                var18 = onb.field_a + (-var24 - var21);
+              if (-var24 + PartitionZoneFactory.field_a < var21) {
+                var18 = PartitionZoneFactory.field_a + (-var24 - var21);
               }
             }
             for (var25 = 0; var25 < var9.length; var25++) {
               var32 = var9[var25];
               var13Lifetime1 = GetPhasedEnergyBeamProjectiles.a(param0 - 4218, var32);
-              var26 = eoa.field_a.a(2048 + var5, (byte) 115);
-              var27 = eoa.field_a.b(true, var6 - 16384 - 16384);
-              var14Lifetime1 = eoa.field_a.a(var5 + 4096, (byte) 117);
-              var15Lifetime1 = eoa.field_a.b(true, -8192 + (var6 - (var11 << 1))) - pib.b((byte) 118);
+              var26 = ShipTeamConditionFactory.field_a.a(2048 + var5, (byte) 115);
+              var27 = ShipTeamConditionFactory.field_a.b(true, var6 - 16384 - 16384);
+              var14Lifetime1 = ShipTeamConditionFactory.field_a.a(var5 + 4096, (byte) 117);
+              var15Lifetime1 = ShipTeamConditionFactory.field_a.b(true, -8192 + (var6 - (var11 << 1))) - pib.b((byte) 118);
               var16Lifetime1 = var14Lifetime1 - (var13Lifetime1 >> 1);
               var17Lifetime1 = var15Lifetime1 + -16 * (-var25 + var9.length - 1);
               c.a(var27 + var19, var26 + var18, var7, -(pib.b((byte) 118) * 2) + var8, -16777216, 16777215);
@@ -1648,7 +1648,7 @@ final class uca {
         var13 = new int[var3 + 1];
         for (var14 = 0; var32.length > var14; var14++) {
           var15_int = var32[var14];
-          var10[var14][0] = wkb.field_e[var15_int];
+          var10[var14][0] = SetVariableActionFactory.field_e[var15_int];
           var12[0] = 8947848;
           var13[0] = 2147483647;
         }
@@ -1808,12 +1808,12 @@ final class uca {
           var23Lifetime1 = var7.missionState.a(false, 1);
           var25_ref_String = VoidHunters.b(1, -1) + ": <col=ffffff>" + Integer.toString(var23Lifetime1) + "</col>";
           var26Lifetime1 = GetPointDefenceLaserProjectiles.a(false, 1);
-          af.a((byte) -115, 200, var14Lifetime1 + var26Lifetime1, var6, -var26Lifetime1 + var4Lifetime1, var20Lifetime1);
+          BlackBoxRecording.a((byte) -115, 200, var14Lifetime1 + var26Lifetime1, var6, -var26Lifetime1 + var4Lifetime1, var20Lifetime1);
           SetSelfDestructPrepareToggleCooldown.a((var20Lifetime1 >> 1) + (var6 - tea.a(1, var42, 13879) / 2 - var20Lifetime1 / 4), 1, var4Lifetime1 - 10, var42, 1, qpb.a(false, 0, 13894143), (byte) -124);
           SetSelfDestructPrepareToggleCooldown.a(-(tea.a(1, var25_ref_String, 13879) / 2) + var6 - (-(var20Lifetime1 >> 1) - var20Lifetime1 / 4), 1, -10 + var4Lifetime1, var25_ref_String, 1, qpb.a(false, 1, 13894143), (byte) -95);
         } else {
           var23Lifetime1 = 4;
-          af.a((byte) -115, 200, var14Lifetime1 + 2 * var23Lifetime1, var6, -var23Lifetime1 + (var4Lifetime1 - 5), var20Lifetime1);
+          BlackBoxRecording.a((byte) -115, 200, var14Lifetime1 + 2 * var23Lifetime1, var6, -var23Lifetime1 + (var4Lifetime1 - 5), var20Lifetime1);
         }
         var23Lifetime2 = var18Lifetime1 + var6;
         var24Lifetime1 = var4Lifetime1;
@@ -1892,19 +1892,19 @@ final class uca {
         int var20;
         int var21;
         int var22;
-        ucb[] var23;
+        WorldPoint[] var23;
         int var24;
         int var25;
         int var26;
         int var27;
         MissionVariable[] var28;
-        ucb[] var29;
+        WorldPoint[] var29;
         int var30;
         MissionState var31;
         MissionControl var32;
         String var33;
         String var34;
-        ucb var35;
+        WorldPoint var35;
         String var36;
         int var21Lifetime1;
         int var22Lifetime1;
@@ -1933,8 +1933,8 @@ final class uca {
                 if (var5_ref_et != null) {
                   var6_ref_String = Integer.toString(var4_int);
                   if (var5_ref_et.label >= 1 &&
-                    pu.field_c.length > var5_ref_et.label) {
-                    var6_ref_String = pu.field_c[var5_ref_et.label];
+                    ParticleFactory.field_c.length > var5_ref_et.label) {
+                    var6_ref_String = ParticleFactory.field_c[var5_ref_et.label];
                   }
                   GetLagStandardDeviationOut.a(-1, var6_ref_String + " = " + var28[var4_int].value, 16711680, 120 + var4_int * 20, 140, 4266);
                 }
@@ -1947,7 +1947,7 @@ final class uca {
             if (var4 != null) {
               var5 = 10;
               var6 = 180;
-              var7 = onb.field_a - var5;
+              var7 = PartitionZoneFactory.field_a - var5;
               var8 = pib.b((byte) 118) * 1;
               var9 = 8947848;
               var10 = -1;
@@ -2009,7 +2009,7 @@ final class uca {
                     } else {
                       stackIn_52_1 = "";
                     }
-                    stackIn_54_0 = ((StringBuilder) (Object) stackIn_51_0).append(stackIn_52_1).append(var16[var21].a(-1));
+                    stackIn_54_0 = ((StringBuilder) (Object) stackIn_51_0).append(stackIn_52_1).append(var16[var21].getDescription(-1));
                     if (var22 != 0) {
                       stackIn_55_1 = "</col>";
                     } else {
@@ -2020,12 +2020,12 @@ final class uca {
                     var15Lifetime3 = var34Lifetime1Lifetime2;
                     var15Lifetime3 = var34Lifetime1Lifetime2;
                     if (var14 != 0) {
-                      var29 = var16[var21].a(this.field_m.a((byte) 106), -20605);
+                      var29 = var16[var21].getWorldPositions(this.field_m.a((byte) 106), -20605);
                       var23 = var29;
                       if (var23 != null) {
                         for (var24 = 0; var29.length > var24; var24++) {
-                          var25 = eoa.field_a.a(var29[var24].field_a, (byte) 118);
-                          var26 = eoa.field_a.b(true, var29[var24].field_b);
+                          var25 = ShipTeamConditionFactory.field_a.a(var29[var24].x, (byte) 118);
+                          var26 = ShipTeamConditionFactory.field_a.b(true, var29[var24].y);
                           stackIn_62_0 = var26;
                           stackIn_62_1 = var25;
                           stackIn_62_2 = var19;
@@ -2067,7 +2067,7 @@ final class uca {
                     } else {
                       stackIn_87_1 = "<col=ffffff>";
                     }
-                    stackIn_89_0 = ((StringBuilder) (Object) stackIn_86_0).append(stackIn_87_1).append(var17[var30].a(-1325));
+                    stackIn_89_0 = ((StringBuilder) (Object) stackIn_86_0).append(stackIn_87_1).append(var17[var30].getDescription(-1325));
                     if (var22Lifetime1 != 0) {
                       stackIn_90_1 = "</col>";
                     } else {
@@ -2076,10 +2076,10 @@ final class uca {
                     var36 = ((StringBuilder) (Object) stackIn_89_0).append(stackIn_90_1).toString();
                     var15Lifetime3 = var36;
                     if (var14 != 0) {
-                      var35 = var17[var30].a(this.field_m.a((byte) 55), 26964);
+                      var35 = var17[var30].getWorldPosition(this.field_m.a((byte) 55), 26964);
                       if (var35 != null) {
-                        var24Lifetime1 = eoa.field_a.a(var35.field_a, (byte) 118);
-                        var25Lifetime1 = eoa.field_a.b(true, var35.field_b);
+                        var24Lifetime1 = ShipTeamConditionFactory.field_a.a(var35.x, (byte) 118);
+                        var25Lifetime1 = ShipTeamConditionFactory.field_a.b(true, var35.y);
                         stackIn_96_0 = var25Lifetime1;
                         stackIn_96_1 = var24Lifetime1;
                         stackIn_96_2 = var19;
@@ -2320,7 +2320,7 @@ final class uca {
           var7 = 529;
           var8 = 120;
           var9 = SetMassDriverReload.field_p;
-          var10 = lj.field_a - (var8 >> 1);
+          var10 = MissionVariableFactory.field_a - (var8 >> 1);
           var11 = 80;
           if (var5 == 1 ||
             var5 == 2) {
@@ -2433,7 +2433,7 @@ final class uca {
               SetBuildViewAutozoomTimeout.a(true, this.field_U, -36 + var26, var27 - 24, 30);
               var30_int = var26 + 160;
               var31 = 29 + var27;
-              ibb.a(var21, this.field_U, -1, ShipCondition.field_f[this.field_y].toUpperCase(), (byte) -106, 2, var31, var30_int);
+              ibb.a(var21, this.field_U, -1, ShipTeamCondition.field_f[this.field_y].toUpperCase(), (byte) -106, 2, var31, var30_int);
               var31 = var31 + (36 - GetPointDefenceLaserProjectiles.a(false, 2));
               var32 = ThrusterBehaviour.field_a[this.field_y];
               if (var32 != null) {
@@ -2449,7 +2449,7 @@ final class uca {
                   var33 = GetDebrisCollisionDamage.field_o;
                 }
               } else {
-                var33 = ptb.field_f;
+                var33 = MapClearanceRectangle.field_f;
               }
               if (fwa.field_g.a((byte) -126, this.field_y)) {
                 if (var33 != null) {
@@ -2488,7 +2488,7 @@ final class uca {
           if (param2) {
             if (var40.f(24416)) {
               var18Lifetime1 = var40.d(6472);
-              var45 = pfb.field_a + "<col=01b5cc>" + ShipCondition.field_f[var18Lifetime1] + "</col>";
+              var45 = pfb.field_a + "<col=01b5cc>" + ShipTeamCondition.field_f[var18Lifetime1] + "</col>";
               var19 = var45;
               var20 = GetTorqueDownshift.a(var18Lifetime1, -58);
               if (var20 > 1) {
@@ -2550,7 +2550,7 @@ final class uca {
                         !(GetUseDetailLines.field_o > var28.d() + var25Lifetime1) &&
                         !(var29 > GetTorpedoReload.field_q) &&
                         !(GetTorpedoReload.field_q > var28.a() + var29)) {
-                        var47Lifetime1 = ShipCondition.field_f[var26Lifetime1];
+                        var47Lifetime1 = ShipTeamCondition.field_f[var26Lifetime1];
                         var30Lifetime1 = var47Lifetime1;
                         var19Lifetime2 = var30Lifetime1;
                         var30Lifetime1Lifetime1 = var47Lifetime1;
@@ -2628,7 +2628,7 @@ final class uca {
         EscapePod[] var8_ref_it__ = null;
         int var8 = 0;
         int var9 = 0;
-        hna var9_ref_hna = null;
+        PlayerAction var9_ref_hna = null;
         Random var10_ref_Random = null;
         int var10 = 0;
         int var11 = 0;
@@ -2676,11 +2676,11 @@ final class uca {
         int[][] var46 = null;
         String var48 = null;
         String var49 = null;
-        hna var50 = null;
+        PlayerAction var50 = null;
         String var51 = null;
         aja var52 = null;
-        hna var53 = null;
-        hna var54 = null;
+        PlayerAction var53 = null;
+        PlayerAction var54 = null;
         String var55 = null;
         int[][] var56 = null;
         int[] var59 = null;
@@ -2731,7 +2731,7 @@ final class uca {
                 }
                 var8 = stackIn_20_0;
                 if (pla.a(param0.world.d(false), -4)) {
-                  var9_ref_hna = new hna();
+                  var9_ref_hna = new PlayerAction();
                   var9_ref_hna.specialOrderSubmessage = new SpecialOrderSubmessage();
                   if (var8 == 0) {
                     var10_ref_Random = new Random();
@@ -2757,7 +2757,7 @@ final class uca {
                   var15 = var15 - (dma.field_j - SetToggledScoreboard.field_o.field_u);
                 }
                 var16 = 260;
-                af.a((byte) -115, 200, var16, var14, var15, var12);
+                BlackBoxRecording.a((byte) -115, 200, var16, var14, var15, var12);
                 var17 = 2.0f;
                 if (var10 == 11 ||
                   var10 == 9) {
@@ -2818,17 +2818,17 @@ final class uca {
                   }
                 }
                 if (var26Lifetime1 >= 0 &&
-                  ShipCondition.field_f.length > var26Lifetime1) {
+                  ShipTeamCondition.field_f.length > var26Lifetime1) {
                   var48 = nv.a(var26Lifetime1, var27Lifetime1, true);
                   SetSelfDestructPrepareToggleCooldown.a(var13 - (tea.a(3, var48, 13879) >> 1), -1, var15 + (var11Lifetime1 + GetPointDefenceLaserProjectiles.a(false, 2) + 2), var48, 4, 56035, (byte) -103);
-                  var29_ref_String = ShipCondition.field_f[var26Lifetime1].toUpperCase();
+                  var29_ref_String = ShipTeamCondition.field_f[var26Lifetime1].toUpperCase();
                   var30 = -(tea.a(1, var29_ref_String, 13879) >> 1) + var13;
                   var31 = var15 + var11Lifetime1 + 16;
                   SetSelfDestructPrepareToggleCooldown.a(var30, 1, var31, var29_ref_String, 1, 16777215, (byte) -106);
                 }
                 var28 = SetSpinningBladeSpinupSpeed.field_o[var10].toUpperCase();
                 if (var9Lifetime1 >= var20) {
-                  var28 = mbb.field_d;
+                  var28 = SetShipTeamActionFactory.field_d;
                 }
                 SetSelfDestructPrepareToggleCooldown.a(-(tea.a(2, var28, 13879) >> 1) + var13, -1, var15 + (var16 - var11Lifetime1), var28, 2, 16777215, (byte) -101);
                 var29 = var12 / var22 + 2;
@@ -2854,7 +2854,7 @@ final class uca {
                     var38 = fwa.field_g.a(ujb.a(-116), 3 + var34_int, (byte) -84) ? 1 : 0;
                     var39 = fwa.field_g.d(-22549, 3 + var34_int) ? 1 : 0;
                     var40 = fwa.field_g.b(3 + var34_int, (byte) 24) ? 1 : 0;
-                    af.a((byte) -115, 200, var30Lifetime1, var36, var37, var30Lifetime1);
+                    BlackBoxRecording.a((byte) -115, 200, var30Lifetime1, var36, var37, var30Lifetime1);
                     if (param2) {
                       if (GetUseDetailLines.field_o >= var36) {
                         if (GetUseDetailLines.field_o < var30Lifetime1 + var36) {
@@ -2904,9 +2904,9 @@ final class uca {
                       }
                     }
                     if (var42 != var9Lifetime1) {
-                      var50 = new hna();
-                      var50.mousex = eoa.field_a.a(true, GetUseDetailLines.field_o);
-                      var50.mousey = eoa.field_a.a(0, GetTorpedoReload.field_q);
+                      var50 = new PlayerAction();
+                      var50.mousex = ShipTeamConditionFactory.field_a.a(true, GetUseDetailLines.field_o);
+                      var50.mousey = ShipTeamConditionFactory.field_a.a(0, GetTorpedoReload.field_q);
                       var50.specialOrderSubmessage = new SpecialOrderSubmessage();
                       var50.specialOrderSubmessage.spawnchoice = new SpawnChoice(var42);
                       this.a(0, true, var50);
@@ -2984,16 +2984,16 @@ final class uca {
                       (null == nna.field_C ||
                       !nna.field_C.c(13462))) && !this.field_X) {
                       if (var9Lifetime1 >= var20) {
-                        var54 = new hna();
-                        var54.mousex = eoa.field_a.a(true, GetUseDetailLines.field_o);
-                        var54.mousey = eoa.field_a.a(0, GetTorpedoReload.field_q);
+                        var54 = new PlayerAction();
+                        var54.mousex = ShipTeamConditionFactory.field_a.a(true, GetUseDetailLines.field_o);
+                        var54.mousey = ShipTeamConditionFactory.field_a.a(0, GetTorpedoReload.field_q);
                         var54.specialOrderSubmessage = new SpecialOrderSubmessage();
                         var54.specialOrderSubmessage.blueprint = es.field_b.blueprint;
                         this.a(0, true, var54);
                       } else {
-                        var53 = new hna();
-                        var53.mousex = eoa.field_a.a(true, GetUseDetailLines.field_o);
-                        var53.mousey = eoa.field_a.a(0, GetTorpedoReload.field_q);
+                        var53 = new PlayerAction();
+                        var53.mousex = ShipTeamConditionFactory.field_a.a(true, GetUseDetailLines.field_o);
+                        var53.mousey = ShipTeamConditionFactory.field_a.a(0, GetTorpedoReload.field_q);
                         var53.specialOrderSubmessage = new SpecialOrderSubmessage();
                         var53.specialOrderSubmessage.spawnchoice = new SpawnChoice(var9Lifetime1);
                         this.a(0, true, var53);
@@ -3058,9 +3058,9 @@ final class uca {
         String var4 = null;
         if (this.field_p >= 0 &&
           this.field_p < 13) {
-          var2 = pca.field_i[this.field_p];
+          var2 = CarouselPlayerEvent.field_i[this.field_p];
           var3 = var2.b((byte) 85);
-          bn.a(var3, 20 + GetUseDetailLines.field_o, (byte) 84, GetTorpedoReload.field_q);
+          PlayerActionFactory.a(var3, 20 + GetUseDetailLines.field_o, (byte) 84, GetTorpedoReload.field_q);
           var4 = GetGrapplingHookSpringConstant.field_o[this.field_p].toUpperCase();
           SetSelfDestructPrepareToggleCooldown.a(50 + GetUseDetailLines.field_o, 1, GetTorpedoReload.field_q + 20, var4, 2, 16777215, (byte) -92);
         }
@@ -3070,7 +3070,7 @@ final class uca {
     }
 
     private final void b(int param0, int param1, int param2, int param3) {
-        SetMissileLauncherEnergyUsed.a(param2 * 131586 + 8947848, (byte) 7, eoa.field_a.b(true, param3), eoa.field_a.field_a * 512.0f, 200, eoa.field_a.a(param1, (byte) 117));
+        SetMissileLauncherEnergyUsed.a(param2 * 131586 + 8947848, (byte) 7, ShipTeamConditionFactory.field_a.b(true, param3), ShipTeamConditionFactory.field_a.field_a * 512.0f, 200, ShipTeamConditionFactory.field_a.a(param1, (byte) 117));
         if (param0 != -7178) {
           this.a(true);
         }
@@ -3164,9 +3164,9 @@ final class uca {
                 var22.field_u != null) {
                 var13 = var22.field_u.a(-1, var12.getBoundingbox((byte) -63), 0, -122);
                 for (var14 = 0; var14 < var13; var14++) {
-                  var15 = var9[ada.field_a[var14]];
+                  var15 = var9[PartitionZoneListFactory.field_a[var14]];
                   if (var15 != null &&
-                    var15.a((byte) 100, var12.d(false), var12.g((byte) 117))) {
+                    var15.a((byte) 100, var12.getX(false), var12.getY((byte) 117))) {
                     var12.f(0, 1);
                     break;
                   }
@@ -3188,9 +3188,9 @@ final class uca {
                 var22Lifetime1.field_u != null) {
                 var13Lifetime1 = var22Lifetime1.field_u.a(-1, var12Lifetime1.getBoundingbox((byte) -63), 0, -122);
                 for (var14Lifetime1 = 0; var14Lifetime1 < var13Lifetime1; var14Lifetime1++) {
-                  var15Lifetime1 = var9Lifetime1[ada.field_a[var14Lifetime1]];
+                  var15Lifetime1 = var9Lifetime1[PartitionZoneListFactory.field_a[var14Lifetime1]];
                   if (var15Lifetime1 != null &&
-                    var15Lifetime1.a((byte) 100, var12Lifetime1.d(false), var12Lifetime1.g((byte) 117))) {
+                    var15Lifetime1.a((byte) 100, var12Lifetime1.getX(false), var12Lifetime1.getY((byte) 117))) {
                     var12Lifetime1.f(0, 1);
                     break;
                   }
@@ -3211,9 +3211,9 @@ final class uca {
                 var13Lifetime1Lifetime1 = var22Lifetime1.field_u.a(-1, var12Lifetime1Lifetime1.getBoundingbox((byte) -63), 0, -122);
                 var14Lifetime1Lifetime1 = 0;
                 while (var14Lifetime1Lifetime1 < var13Lifetime1Lifetime1) {
-                  var15Lifetime1Lifetime1 = var9Lifetime1[ada.field_a[var14Lifetime1Lifetime1]];
+                  var15Lifetime1Lifetime1 = var9Lifetime1[PartitionZoneListFactory.field_a[var14Lifetime1Lifetime1]];
                   if (var15Lifetime1Lifetime1 != null &&
-                    var15Lifetime1Lifetime1.a((byte) 100, var12Lifetime1Lifetime1.d(false), var12Lifetime1Lifetime1.g((byte) 117))) {
+                    var15Lifetime1Lifetime1.a((byte) 100, var12Lifetime1Lifetime1.getX(false), var12Lifetime1Lifetime1.getY((byte) 117))) {
                     var12Lifetime1Lifetime1.f(0, 1);
                     break;
                   }
@@ -3373,8 +3373,8 @@ final class uca {
                 ifa.field_d > 0) {
                 boolean decompiledFrameRemainder0 = true;
                 var4_int = GetSniperCannonAimarc.field_p;
-                var5 = onb.field_a - (12 + var4_int);
-                var6 = -ifa.field_d - 12 + (lj.field_a + SetToggledScoreboard.field_o.field_u - dma.field_j);
+                var5 = PartitionZoneFactory.field_a - (12 + var4_int);
+                var6 = -ifa.field_d - 12 + (MissionVariableFactory.field_a + SetToggledScoreboard.field_o.field_u - dma.field_j);
                 if ((this.field_v != null &&
                   !this.field_v.a(1, true)) &&
                   (decompiledFrameRemainder0 = !(!this.field_v.b(1, -34)))) {
@@ -3392,7 +3392,7 @@ final class uca {
                     var6 = var6 + ((-this.field_i + 255) * (2 * ifa.field_d) >> 8);
                     var5 = var5 + ((32 + var4_int) * (-this.field_i + 255) >> 8);
                   }
-                  ci.a(var6, ifa.field_d, GetGrapplingHookAimarc.a(param1 ^ -46080, var10), var9, var5, var10, 0);
+                  PlayerJoinFactory.a(var6, ifa.field_d, GetGrapplingHookAimarc.a(param1 ^ -46080, var10), var9, var5, var10, 0);
                   for (var11 = 125; var11 < var8; var11 += 125) {
                     var12 = var11 * var4_int / var8 + var5;
                     c.a(var6 + 2, var12, var12, var6, -16777216, 4473924);
@@ -3427,9 +3427,9 @@ final class uca {
               discarded$0 = this.a((byte) 61, true, param0);
             }
             if (param0.world.b(var22.getId(false), param1 - 16731016)) {
-              var4 = gmb.field_a.toUpperCase();
+              var4 = SpawnChoiceFactory.field_a.toUpperCase();
               if (SetMinimapWidth.field_o % 20 > 10) {
-                SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - (tea.a(2, var4, 13879) >> 1), -1, -50 + lj.field_a, var4, 2, 16711680, (byte) -122);
+                SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - (tea.a(2, var4, 13879) >> 1), -1, -50 + MissionVariableFactory.field_a, var4, 2, 16711680, (byte) -122);
               }
             }
           }
@@ -3462,7 +3462,7 @@ final class uca {
           if (this.field_S != param1) {
             var3_int = SetMinimapWidth.field_o - this.field_S;
             if (Particle.field_d > var3_int) {
-              kma.a(1, 116, param1 ^ -201, GetMachineGunPulsetime.field_p);
+              ArmBehaviour.a(1, 116, param1 ^ -201, GetMachineGunPulsetime.field_p);
             }
           }
           if (this.field_L >= 0) {
@@ -3541,7 +3541,7 @@ final class uca {
           var10 = var24;
           if (!this.field_N &&
             GetBuildViewAutozoomEndOnAction.a(61848)) {
-            var28 = upb.a(99);
+            var28 = VariableConditionFactory.a(99);
             if (var24 != null) {
               var23 = ae.a(var28, (byte) 27);
               var23.h(17704, 1);
@@ -3555,7 +3555,7 @@ final class uca {
             }
           }
           if (this.field_x) {
-            this.field_v.a(lj.field_a, var9, 127, onb.field_a, var24, this.field_L, eoa.field_a);
+            this.field_v.a(MissionVariableFactory.field_a, var9, 127, PartitionZoneFactory.field_a, var24, this.field_L, ShipTeamConditionFactory.field_a);
           }
           var25 = var9.a(this.field_L, (byte) 59);
           var7 = var25.aimtargetx;
@@ -3564,7 +3564,7 @@ final class uca {
         }
         var11 = 0;
         if (param1) {
-          var12 = uu.field_a;
+          var12 = DebugRequestFactory.field_a;
           if (me.field_r) {
             var12 = GrappleLauncherBehaviour.field_b;
           }
@@ -3600,14 +3600,14 @@ final class uca {
           if (var13_int != 0 &&
             this.field_L >= 0 && (GetUseDetailLines.field_o != -1 ||
             GetTorpedoReload.field_q != -1)) {
-            var5 = eoa.field_a.a(true, GetUseDetailLines.field_o);
-            var6 = eoa.field_a.a(0, GetTorpedoReload.field_q);
+            var5 = ShipTeamConditionFactory.field_a.a(true, GetUseDetailLines.field_o);
+            var6 = ShipTeamConditionFactory.field_a.a(0, GetTorpedoReload.field_q);
             decompiledFrameRemainder0 = false;
           }
           else {
             if (var13_int == 0) {
-              var5 = eoa.field_a.a(true, GetUseDetailLines.field_o);
-              var6 = eoa.field_a.a(0, GetTorpedoReload.field_q);
+              var5 = ShipTeamConditionFactory.field_a.a(true, GetUseDetailLines.field_o);
+              var6 = ShipTeamConditionFactory.field_a.a(0, GetTorpedoReload.field_q);
             }
           }
           var3 = this.a(var5, var6, var13_int != 0, var9, 2, var3);
@@ -3615,7 +3615,7 @@ final class uca {
           var11 = stackIn_53_0;
         }
         if (var11 == 0) {
-          eoa.field_a.field_a = eoa.field_a.field_a + (this.field_w - eoa.field_a.field_a) / 4.0f;
+          ShipTeamConditionFactory.field_a.field_a = ShipTeamConditionFactory.field_a.field_a + (this.field_w - ShipTeamConditionFactory.field_a.field_a) / 4.0f;
         }
         sh.a(20824);
         this.a(var5, var8, var3, var4, var6, var7, param1, 109);
@@ -3628,7 +3628,7 @@ final class uca {
           return;
         }
         this.c((byte) 110);
-        GetReverbWidth.a(eoa.field_a, -8077);
+        GetReverbWidth.a(ShipTeamConditionFactory.field_a, -8077);
         if (this.field_N) {
           stackIn_70_0 = (di.field_l.a((byte) 110, this.field_m.carouselInfo, this.field_L, RequestNewestBlackboxRecording.field_p)) ? 1 : 0;
         } else {
@@ -3758,25 +3758,25 @@ final class uca {
             SetMachineGunEnergyUsed.field_o[SetFixedaim.field_q] ||
             var6 != 0 &&
             SetMachineGunEnergyUsed.field_o[98]) {
-            eoa.field_a.field_b = eoa.field_a.field_b - 8.0f / eoa.field_a.field_a;
+            ShipTeamConditionFactory.field_a.field_b = ShipTeamConditionFactory.field_a.field_b - 8.0f / ShipTeamConditionFactory.field_a.field_a;
           }
           if (var5 != 0 &&
             SetMachineGunEnergyUsed.field_o[SetCountermeasureLauncherAimspeed.field_q] ||
             var6 != 0 &&
             SetMachineGunEnergyUsed.field_o[99]) {
-            eoa.field_a.field_b = eoa.field_a.field_b + 8.0f / eoa.field_a.field_a;
+            ShipTeamConditionFactory.field_a.field_b = ShipTeamConditionFactory.field_a.field_b + 8.0f / ShipTeamConditionFactory.field_a.field_a;
           }
           if (var5 != 0 &&
             SetMachineGunEnergyUsed.field_o[bib.field_f] ||
             var6 != 0 &&
             SetMachineGunEnergyUsed.field_o[97]) {
-            eoa.field_a.field_c = eoa.field_a.field_c + 8.0f / eoa.field_a.field_a;
+            ShipTeamConditionFactory.field_a.field_c = ShipTeamConditionFactory.field_a.field_c + 8.0f / ShipTeamConditionFactory.field_a.field_a;
           }
           if (var5 != 0 &&
             SetMachineGunEnergyUsed.field_o[SetSalvoaim.field_p] ||
             var6 != 0 &&
             SetMachineGunEnergyUsed.field_o[96]) {
-            eoa.field_a.field_c = eoa.field_a.field_c - 8.0f / eoa.field_a.field_a;
+            ShipTeamConditionFactory.field_a.field_c = ShipTeamConditionFactory.field_a.field_c - 8.0f / ShipTeamConditionFactory.field_a.field_a;
           }
           boolean decompiledFrameRemainder1 = true;
           if (var4_int != 0 && (SetMachineGunEnergyUsed.field_o[GetUseCircleOutline.field_p] &&
@@ -3793,8 +3793,8 @@ final class uca {
           var7 = stackIn_70_0;
           if (var4_int != 0 && (SetMachineGunEnergyUsed.field_o[GetTorpedoProjectileLife.field_o] &&
             !this.field_q[GetTorpedoProjectileLife.field_o] ||
-            SetMachineGunEnergyUsed.field_o[hna.field_n] &&
-            !this.field_q[hna.field_n])) {
+            SetMachineGunEnergyUsed.field_o[PlayerAction.field_n] &&
+            !this.field_q[PlayerAction.field_n])) {
             stackIn_79_0 = 1;
             decompiledFrameRemainder0 = false;
           }
@@ -3981,10 +3981,10 @@ final class uca {
                     if (var31 != null &&
                       var31.chassis.a(var25, 0) > 0) {
                       var28 = 1;
-                      var32 = var31.d(false) - param4.d(false);
-                      var33 = var31.g((byte) -116) - param4.g((byte) -15);
+                      var32 = var31.getX(false) - param4.getX(false);
+                      var33 = var31.getY((byte) -116) - param4.getY((byte) -15);
                       var34 = ar.a(var32, (byte) 125, var33);
-                      if (var34 < gs.field_c) {
+                      if (var34 < SettingsChangeFactory.field_c) {
                         var27 = 1;
                         break scanLoop1;
                       }
@@ -4043,7 +4043,7 @@ final class uca {
         String var2_ref_String;
         String var3;
         int var3_int;
-        hna var3_ref;
+        PlayerAction var3_ref;
         int var4;
         int var5;
         int var7;
@@ -4153,7 +4153,7 @@ final class uca {
                 var8 = 16777215;
               }
               var9 = 200 + var3_intLifetime1 * pib.b((byte) 118);
-              var10 = -10 + onb.field_a;
+              var10 = -10 + PartitionZoneFactory.field_a;
               GetShipPersistence.a(var22, var10, var9, var8, -1, (byte) -103);
               if (var7 != 0) {
                 var11_int = 0;
@@ -4179,20 +4179,20 @@ final class uca {
         }
         this.e(-115);
         var2Lifetime1 = 0;
-        var3_ref = (hna) (this.field_m.carouselInfo.field_f.first(0));
+        var3_ref = (PlayerAction) (this.field_m.carouselInfo.field_f.first(0));
         while (var3_ref != null) {
           if (var3_ref.specialOrderSubmessage != null &&
             var3_ref.specialOrderSubmessage.settingsChange != null) {
             var34 = var3_ref.specialOrderSubmessage.settingsChange;
-            var35 = qb.field_a[var34.id] + " changed to " + var34.value + " by " + this.field_m.a(1, var3_ref.field_k);
+            var35 = CarouselCommongameInfoFactory.field_a[var34.id] + " changed to " + var34.value + " by " + this.field_m.a(1, var3_ref.field_k);
             incrementValue$0 = var2Lifetime1;
             var2Lifetime1++;
             GetLagStandardDeviationOut.a(-1, var35, 16777215, 20 * incrementValue$0 + 300, SetMassDriverReload.field_p - (GetPhasedEnergyBeamProjectiles.a(-37, var35) >> 1), 4266);
           }
-          var3_ref = (hna) (this.field_m.carouselInfo.field_f.next((byte) 22));
+          var3_ref = (PlayerAction) (this.field_m.carouselInfo.field_f.next((byte) 22));
         }
         if (GetPointDefenceLaserProjectiles.a(2, 11284)) {
-          SetMachineGunFireForce.a((byte) -99, eoa.field_a);
+          SetMachineGunFireForce.a((byte) -99, ShipTeamConditionFactory.field_a);
         }
         if (this.field_m.carouselInfo.f(1)) {
           if (SetMinimapWidth.field_o % 20 > 10) {
@@ -4205,10 +4205,10 @@ final class uca {
             var3Lifetime2Lifetime1 = var25;
             GetLagStandardDeviationOut.a(-1, var3Lifetime2Lifetime1, 16777215, 80, SetMassDriverReload.field_p - GetPhasedEnergyBeamProjectiles.a(-71, var25) / 2, 4266);
           }
-          stackIn_72_0 = eoa.field_a;
+          stackIn_72_0 = ShipTeamConditionFactory.field_a;
           stackIn_73_1 = !(param0);
           var3_intLifetime2 = ((lta) (Object) stackIn_72_0).a(stackIn_73_1, GetUseDetailLines.field_o);
-          var4Lifetime3 = eoa.field_a.a(0, GetTorpedoReload.field_q);
+          var4Lifetime3 = ShipTeamConditionFactory.field_a.a(0, GetTorpedoReload.field_q);
           GetLagStandardDeviationOut.a(1, "x=" + var3_intLifetime2, 16777215, GetTorpedoReload.field_q, 16 + GetUseDetailLines.field_o, 4266);
           GetLagStandardDeviationOut.a(1, "y=" + var4Lifetime3, 16777215, 12 + GetTorpedoReload.field_q, 16 + GetUseDetailLines.field_o, 4266);
           var26 = this.field_m.carouselInfo.a((byte) -75);
@@ -4216,7 +4216,7 @@ final class uca {
             var17 = SetFighterBayAimspeed.a((byte) -67, '\n', var26);
             var7Lifetime1 = 5;
             var8Lifetime1 = pib.b((byte) 118);
-            var9Lifetime1 = lj.field_a - var8Lifetime1 * (-1 + var17.length);
+            var9Lifetime1 = MissionVariableFactory.field_a - var8Lifetime1 * (-1 + var17.length);
             var18 = 0;
             var10Lifetime1 = var18;
             while (var18 < var17.length) {
@@ -4230,14 +4230,14 @@ final class uca {
         }
         if (ssa.b(2) &&
           SetMachineGunEnergyUsed.field_o[12]) {
-          GetMachineGunPulsetime.a(1118481, -88, onb.field_a, 0, 200, 0);
+          GetMachineGunPulsetime.a(1118481, -88, PartitionZoneFactory.field_a, 0, 200, 0);
           var3Lifetime3 = "Help:<br>F1 for gfx2, F2 for gfx1, F3 to rebuild toolkit, F4 for java toolkit<br>Alt 0-9, and Alt&Shift 0-9 to toggle debug flags.<br>Alt 0=Carousel, 1=Forces, 2=Hardpoints, 3=IDs, 4=Bounding boxes, 5=Teams and owners<br>Alt 6=Mission, 7=Connected players, 8=Spatial partitioning, 9=Spatial partitioning with ships<br>Alt Shift 0=FPS, 1=Mission generation, 2=AI<br><br>Hold 0 and press middle mouse to toggle debug mode<br><br>Press ` to toggle the console.<br>Type print_settings() to print all ingame settings to the java console<br>Type request_newest_blackbox_recording() to print the latest recording filename to the java console<br>Type load_blackbox_recording(id) to load the recording with that id<br>Press r to restart the recording playback<br><br>Useful console commands: set_lag(lag,deviation)";
-          GetMachineGunPulsetime.a(var3Lifetime3, 16777215, lj.field_a, 10, -120, 10, -1, 0, pib.b((byte) 118), onb.field_a, 0);
+          GetMachineGunPulsetime.a(var3Lifetime3, 16777215, MissionVariableFactory.field_a, 10, -120, 10, -1, 0, pib.b((byte) 118), PartitionZoneFactory.field_a, 0);
         }
         return;
     }
 
-    public static void f(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (!param0) {
           int[] var2 = (int[]) null;
           uca.a(120, (byte) 120, (int[]) null, -35);
@@ -4312,10 +4312,10 @@ final class uca {
         int var3_int = 2 * param1.g(-42);
         int var4 = var3_int * (GetNumStars.a(param1.e(0), (byte) 91) >> 8) >> 8;
         int var5 = (eu.a(param1.e(0), 43) >> 8) * var3_int >> 8;
-        var3_int = (int)(24.0f / eoa.field_a.field_a) + var3_int;
+        var3_int = (int)(24.0f / ShipTeamConditionFactory.field_a.field_a) + var3_int;
         int var6 = (GetNumStars.a(param1.e(0), (byte) -99) >> 8) * var3_int >> 8;
         int var7 = var3_int * (eu.a(param1.e(0), 102) >> 8) >> 8;
-        int var8 = (int)(0.05000000074505806f / eoa.field_a.field_a);
+        int var8 = (int)(0.05000000074505806f / ShipTeamConditionFactory.field_a.field_a);
         if (param0 > -56) {
           return;
         }
@@ -4327,7 +4327,7 @@ final class uca {
             var9 = param1.chassis.getFinalx(true);
             var10 = param1.chassis.getFinaly((byte) 55);
             var11 = qpb.a(false, param1.getTeam((byte) 69), 13894143);
-            GetCountermeasureLauncherAimarc.a(var4 + var9, eoa.field_a, var10 + var7, 3, var10 + var5, var11, var8, var6 + var9);
+            GetCountermeasureLauncherAimarc.a(var4 + var9, ShipTeamConditionFactory.field_a, var10 + var7, 3, var10 + var5, var11, var8, var6 + var9);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uca.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -4368,13 +4368,13 @@ final class uca {
               while (var15 < var7.ids.length) {
                 var10 = var7.ids[var15];
                 var11 = param1.d((byte) -27, var10);
-                var12 = eoa.field_a.a(var7.gridx * 65536, (byte) 119);
-                var13 = 20 + (eoa.field_a.b(true, 65536 * var7.gridy) + var8 * pib.b((byte) 118));
+                var12 = ShipTeamConditionFactory.field_a.a(var7.gridx * 65536, (byte) 119);
+                var13 = 20 + (ShipTeamConditionFactory.field_a.b(true, 65536 * var7.gridy) + var8 * pib.b((byte) 118));
                 if (var11 == null) {
                   var8++;
                   GetLagStandardDeviationOut.a(-1, "Null body=" + var10, 16711680, var13, var12, 4266);
                 } else {
-                  var11.a(eoa.field_a, 16777215, param1, 16);
+                  var11.a(ShipTeamConditionFactory.field_a, 16777215, param1, 16);
                   GetLagStandardDeviationOut.a(-1, "Body=" + var10, 65280, var13, var12, 4266);
                   var8++;
                 }
@@ -4382,8 +4382,8 @@ final class uca {
               }
               this.a(44, var7);
             } else {
-              var9 = eoa.field_a.a(65536 * var7.gridx, (byte) 113);
-              var10 = 20 + (eoa.field_a.b(true, var7.gridy * 65536) + var8 * pib.b((byte) 118));
+              var9 = ShipTeamConditionFactory.field_a.a(65536 * var7.gridx, (byte) 113);
+              var10 = 20 + (ShipTeamConditionFactory.field_a.b(true, var7.gridy * 65536) + var8 * pib.b((byte) 118));
               GetLagStandardDeviationOut.a(-1, "Null id list!", 16711680, var10, var9, 4266);
             }
           }
@@ -4455,9 +4455,9 @@ final class uca {
             var15 = var14;
             if (var15 != null &&
               var15 != param4.chassis) {
-              var15.a((byte) 100, eoa.field_a, true, param5, qpb.a(true, param4.getTeam((byte) 105), 13894143));
-              var8_int = 26 + eoa.field_a.a(param2, (byte) 120);
-              var9 = eoa.field_a.b(true, param1) + 10;
+              var15.a((byte) 100, ShipTeamConditionFactory.field_a, true, param5, qpb.a(true, param4.getTeam((byte) 105), 13894143));
+              var8_int = 26 + ShipTeamConditionFactory.field_a.a(param2, (byte) 120);
+              var9 = ShipTeamConditionFactory.field_a.b(true, param1) + 10;
               this.a(var8_int, 92, var9);
               if (this.field_J != var15.getComponentTypeId(0)) {
                 this.field_o = 0;
@@ -4469,7 +4469,7 @@ final class uca {
               stackIn_21_0 = 1;
               return stackIn_21_0;
             }
-            var8 = param5.a(true, param4.g((byte) 124), param2, param4.d(false), param1);
+            var8 = param5.a(true, param4.getY((byte) 124), param2, param4.getX(false), param1);
             if (var8 != null) {
               var9Lifetime1 = var8.g(-115) << 1;
               var10 = (var8.getBoundingbox((byte) -60)[0] + var8.getBoundingbox((byte) -88)[1]) / 2;
@@ -4514,7 +4514,7 @@ final class uca {
         }
     }
 
-    final void a(int param0, boolean param1, hna param2) {
+    final void a(int param0, boolean param1, PlayerAction param2) {
         if (param0 > this.field_L) {
           return;
         }
@@ -4528,9 +4528,9 @@ final class uca {
 
     private final void a(int param0, byte param1, int param2, int param3) {
         int var5 = ar.a(param2, (byte) 123, param0);
-        int var6 = ar.a(-param2 + onb.field_a, (byte) 104, param0);
-        int var7 = ar.a(param2, (byte) 112, lj.field_a - param0);
-        int var8 = ar.a(onb.field_a - param2, (byte) 114, -param0 + lj.field_a);
+        int var6 = ar.a(-param2 + PartitionZoneFactory.field_a, (byte) 104, param0);
+        int var7 = ar.a(param2, (byte) 112, MissionVariableFactory.field_a - param0);
+        int var8 = ar.a(PartitionZoneFactory.field_a - param2, (byte) 114, -param0 + MissionVariableFactory.field_a);
         if (param3 <= 20000) {
           if (var5 < param3 && var6 < param3 && param3 > var7 &&
             var8 < param3) {
@@ -4591,7 +4591,7 @@ final class uca {
               if (var5 != null && (!var5.b(1, (byte) -111) ||
                 var5.getOwner((byte) -117) == this.field_L) && (!var5.b(2, (byte) -116) &&
                 !var5.d(9, 56))) {
-                var5.a(false, eoa.field_a, 32);
+                var5.a(false, ShipTeamConditionFactory.field_a, 32);
               }
             }
           }
@@ -4767,7 +4767,7 @@ final class uca {
           if (param2.getMissionPhase(8) == 5) {
             var4_int = param2.getPhaseTimer((byte) -122);
             var5 = lga.a((byte) -2, param1.d(false));
-            var6 = var5 - Particle.field_l * wha.field_a;
+            var6 = var5 - Particle.field_l * AsteroidFactory.field_a;
             if (var6 < var4_int &&
               var5 >= var4_int) {
               var7 = (-var4_int + var5) / Particle.field_l;
@@ -4881,13 +4881,13 @@ final class uca {
               var20 = var18 + param5;
               this.b(-7178, var19, var15, var20);
             }
-            var15Lifetime2 = 26 + eoa.field_a.a(param2, (byte) 112);
-            var16Lifetime2 = eoa.field_a.b(true, param0) + 10;
+            var15Lifetime2 = 26 + ShipTeamConditionFactory.field_a.a(param2, (byte) 112);
+            var16Lifetime2 = ShipTeamConditionFactory.field_a.b(true, param0) + 10;
             this.a(var15Lifetime2, 78, var16Lifetime2);
             this.a(param1, param5, param4, (byte) -96);
             return true;
           }
-          var13Lifetime1 = ecb.a(var9, (byte) -77, var8_int);
+          var13Lifetime1 = GameSnapshotFactory.a(var9, (byte) -77, var8_int);
           var14Lifetime1 = GameKeyHandler.a(22433, -2048 + var13Lifetime1);
           var15Lifetime1 = GameKeyHandler.a(22433, 2048 + var13Lifetime1);
           if (param3) {
@@ -4961,8 +4961,8 @@ final class uca {
               }
             }
           }
-          var42Lifetime1 = 26 + eoa.field_a.a(param2, (byte) 113);
-          var43Lifetime1 = 10 + eoa.field_a.b(true, param0);
+          var42Lifetime1 = 26 + ShipTeamConditionFactory.field_a.a(param2, (byte) 113);
+          var43Lifetime1 = 10 + ShipTeamConditionFactory.field_a.b(true, param0);
           this.a(var42Lifetime1, 124, var43Lifetime1);
           this.a(param1, param5, param4, (byte) -96);
           return true;
@@ -5031,7 +5031,7 @@ final class uca {
             var4_int = GetAiFiringRangeUpshift.field_o;
             var5 = vv.field_c;
             var6 = 0;
-            var7 = -var5 + lj.field_a;
+            var7 = -var5 + MissionVariableFactory.field_a;
             var8 = new lta();
             var8.field_b = 0.0f;
             var8.field_c = 0.0f;
@@ -5051,8 +5051,8 @@ final class uca {
               var24 = var23[var14_int];
               var15_ref_sg = var24;
               if (var15_ref_sg != null) {
-                var16 = var6 + var8.a(var24.d(false), (byte) 114);
-                var17 = var8.b(true, var24.g((byte) 124)) + var7;
+                var16 = var6 + var8.a(var24.getX(false), (byte) 114);
+                var17 = var8.b(true, var24.getY((byte) 124)) + var7;
                 stackIn_12_0 = (var24.getOwner((byte) -117) == this.field_L);
                 var18 = qpb.a(stackIn_12_0, var24.getTeam((byte) 95), param1 ^ 13894143);
                 MouseWheelInput.a(var18, var17, var16, -119);
@@ -5072,16 +5072,16 @@ final class uca {
             for (var16Lifetime2 = param1; var26.length > var16Lifetime2; var16Lifetime2++) {
               var17_ref_crb = var26[var16Lifetime2];
               if (var17_ref_crb != null) {
-                var18Lifetime1 = var6 + var8.a(var17_ref_crb.d(false), (byte) 119);
-                var19 = var7 + var8.b(true, var17_ref_crb.g((byte) -24));
+                var18Lifetime1 = var6 + var8.a(var17_ref_crb.getX(false), (byte) 119);
+                var19 = var7 + var8.b(true, var17_ref_crb.getY((byte) -24));
                 var20 = 7829367;
                 MouseWheelInput.a(var20, var19, var18Lifetime1, 82);
               }
             }
-            var15Lifetime1 = var8.a(eoa.field_a.a(true, 0), (byte) 115);
-            var16Lifetime3 = var8.a(eoa.field_a.a(true, onb.field_a), (byte) 117);
-            var17Lifetime2 = var8.b(true, eoa.field_a.a(0, 0));
-            var18Lifetime2 = var8.b(true, eoa.field_a.a(param1 ^ 0, lj.field_a));
+            var15Lifetime1 = var8.a(ShipTeamConditionFactory.field_a.a(true, 0), (byte) 115);
+            var16Lifetime3 = var8.a(ShipTeamConditionFactory.field_a.a(true, PartitionZoneFactory.field_a), (byte) 117);
+            var17Lifetime2 = var8.b(true, ShipTeamConditionFactory.field_a.a(0, 0));
+            var18Lifetime2 = var8.b(true, ShipTeamConditionFactory.field_a.a(param1 ^ 0, MissionVariableFactory.field_a));
             GetMissilesHitSourceTeam.a(var6 + var15Lifetime1, var17Lifetime2 + var7, (byte) -128, var18Lifetime2 - var17Lifetime2, 100, 16777215, var16Lifetime3 - var15Lifetime1);
             GetMissionTerrainSpaceProbability.a(99);
             uv.a(110, var9 + var6, var12 - var11, var7 + var11, 16777215, -var9 + var10);
@@ -5138,18 +5138,18 @@ final class uca {
         String var8 = null;
         if (this.e((byte) 126) &&
           li.field_i) {
-          var2 = -(bf.field_a.field_hb / 2) + SetMassDriverReload.field_p;
-          var3 = lj.field_a + (SetToggledScoreboard.field_o.field_u - dma.field_j) - bf.field_a.field_G;
-          bf.field_a.field_L = var2;
-          bf.field_a.field_M = var2;
-          bf.field_a.field_K = var3;
-          bf.field_a.field_u = var3;
-          var4 = bf.field_a.field_L;
-          var5 = bf.field_a.field_K;
+          var2 = -(AdjustVariableActionFactory.field_a.field_hb / 2) + SetMassDriverReload.field_p;
+          var3 = MissionVariableFactory.field_a + (SetToggledScoreboard.field_o.field_u - dma.field_j) - AdjustVariableActionFactory.field_a.field_G;
+          AdjustVariableActionFactory.field_a.field_L = var2;
+          AdjustVariableActionFactory.field_a.field_M = var2;
+          AdjustVariableActionFactory.field_a.field_K = var3;
+          AdjustVariableActionFactory.field_a.field_u = var3;
+          var4 = AdjustVariableActionFactory.field_a.field_L;
+          var5 = AdjustVariableActionFactory.field_a.field_K;
           var6 = 0;
           var7 = mmb.field_d[115];
           var7.a(var4, var5);
-          if (bf.field_a.field_O) {
+          if (AdjustVariableActionFactory.field_a.field_O) {
             var7.a(var4, var5, 2, 1157627903, 1);
           }
           var8 = SetWeaponProjectileSpeedMultiply.field_o;
@@ -5195,9 +5195,9 @@ final class uca {
         Ship var15;
         int var16;
         int var18;
-        hna var19;
+        PlayerAction var19;
         Ship var20;
-        hna var21;
+        PlayerAction var21;
         int[] var25;
         int var11Lifetime1;
         var18 = VoidHunters.field_G;
@@ -5235,7 +5235,7 @@ final class uca {
             }
             var10 = stackIn_25_0;
             if (var10 == 0 &&
-              (param2 & 16) != 0 && (pca.field_m == 1 ||
+              (param2 & 16) != 0 && (CarouselPlayerEvent.field_m == 1 ||
               !this.field_T)) {
               var10 = var11;
             }
@@ -5259,7 +5259,7 @@ final class uca {
           var11Lifetime1 = stackIn_42_0;
           if (var10 != 0 ||
             var11Lifetime1 != 0) {
-            var19 = new hna();
+            var19 = new PlayerAction();
             var21 = var19;
             var19.triggers = param2;
             var13 = 1;
@@ -5360,9 +5360,9 @@ final class uca {
                   for (var7 = 0; var7 < var6.ids.length; var7++) {
                     var8 = var6.ids[var7];
                     var9 = var13.d((byte) 116)[var8];
-                    var10 = eoa.field_a.a(var9.a(true), (byte) 118);
-                    var11 = eoa.field_a.b(true, var9.getY((byte) -116));
-                    SetMissileLauncherEnergyUsed.a(16777215, (byte) 7, var11, 16384.0f * eoa.field_a.field_a, 100, var10);
+                    var10 = ShipTeamConditionFactory.field_a.a(var9.a(true), (byte) 118);
+                    var11 = ShipTeamConditionFactory.field_a.b(true, var9.getY((byte) -116));
+                    SetMissileLauncherEnergyUsed.a(16777215, (byte) 7, var11, 16384.0f * ShipTeamConditionFactory.field_a.field_a, 100, var10);
                   }
                   this.a(105, var6);
                 }
@@ -5389,8 +5389,8 @@ final class uca {
           if (SetDebrisPartitioned.field_o != 1 ||
             PacketBuffer.field_g != 1 ||
             param0) {
-            if (!(this.field_p >= pca.field_i.length) &&
-              !pca.field_i[this.field_p].a(false)) {
+            if (!(this.field_p >= CarouselPlayerEvent.field_i.length) &&
+              !CarouselPlayerEvent.field_i[this.field_p].a(false)) {
               this.field_H = this.field_p;
               if (this.field_H <= 8 ||
                 !SetMachineGunEnergyUsed.field_o[81]) {
@@ -5417,7 +5417,7 @@ final class uca {
         boolean decompiledFrameRemainder0 = true;
         var2 = 49 % ((56 - param0) / 56);
         if ((this.field_N ||
-          jkb.field_a) && null != bf.field_a) {
+          jkb.field_a) && null != AdjustVariableActionFactory.field_a) {
           stackIn_6_0 = true;
           decompiledFrameRemainder0 = false;
         }
@@ -5517,7 +5517,7 @@ final class uca {
         RuntimeException var7_ref = null;
         int var8 = 0;
         int var9 = 0;
-        hna var10 = null;
+        PlayerAction var10 = null;
         int var11 = 0;
         var11 = VoidHunters.field_G;
         try {
@@ -5554,7 +5554,7 @@ final class uca {
                   SetWaitForPlayers.a(9) > var9 &&
                   var8 != var9 &&
                   fwa.field_g.a(ujb.a(-114), 3 + var9, (byte) -84)) {
-                  var10 = new hna();
+                  var10 = new PlayerAction();
                   var10.mousey = param1;
                   var10.mousex = param0;
                   var10.specialOrderSubmessage = new SpecialOrderSubmessage();
@@ -5616,7 +5616,7 @@ final class uca {
           while (bra.field_f.length > var3_int) {
             var5 = GetMessageMax.field_o[var3_int];
             if (var5 >= 0) {
-              var6 = ptb.$cfr$intArgs$a$62abead39cee(-107, true, bra.field_f[var3_int]);
+              var6 = MapClearanceRectangle.$cfr$intArgs$a$62abead39cee(-107, true, bra.field_f[var3_int]);
               var4 = var4 + ro.field_c;
               var7 = -(var6 >> 1) + PlayerVote.field_f;
               if (SetMachineGunAimarc.a(var4, (za.field_d << 1) + var6, (lfa.field_m << 1) + GetAngularVelocitySustain.field_p, param1, (byte) -65, var7 - za.field_d, param2)) {
@@ -5700,11 +5700,11 @@ final class uca {
         int var8 = 0;
         try {
           var3_int = param1.gridx * 65536;
-          var4 = eoa.field_a.a(var3_int, (byte) 124);
+          var4 = ShipTeamConditionFactory.field_a.a(var3_int, (byte) 124);
           var5 = param1.gridy * 65536;
-          var6 = eoa.field_a.b(true, var5);
-          var7 = eoa.field_a.a(65536 + var3_int, (byte) 119);
-          var8 = eoa.field_a.b(true, var5 + 65536);
+          var6 = ShipTeamConditionFactory.field_a.b(true, var5);
+          var7 = ShipTeamConditionFactory.field_a.a(65536 + var3_int, (byte) 119);
+          var8 = ShipTeamConditionFactory.field_a.b(true, var5 + 65536);
           if (param0 < 39) {
             this.field_H = -98;
           }
@@ -5744,8 +5744,8 @@ final class uca {
         int var31 = 0;
         String var32 = null;
         aja var33 = null;
-        hna var34 = null;
-        hna var35 = null;
+        PlayerAction var34 = null;
+        PlayerAction var35 = null;
         aja var36 = null;
         String var37 = null;
         aja var29Lifetime1;
@@ -5762,7 +5762,7 @@ final class uca {
           if (param0 < 0) {
             return;
           }
-          var37 = ShipCondition.field_f[param0];
+          var37 = ShipTeamCondition.field_f[param0];
           var17 = var37;
           var17 = var37;
           if (param7 <= 99) {
@@ -5813,9 +5813,9 @@ final class uca {
             this.field_y = param0;
             if (!fwa.field_g.b(param0, 4)) {
               if (var15 == 0) {
-                GetMassDriverReload.a(fba.field_c, -46);
+                GetMassDriverReload.a(PartitioningManager.field_c, -46);
               } else {
-                GetMassDriverReload.a(SetReverbGain.a(ok.field_a, new String[]{var17}, 93), -35);
+                GetMassDriverReload.a(SetReverbGain.a(ShipBodyFactory.field_a, new String[]{var17}, 93), -35);
               }
             } else {
               GetMassDriverReload.a(GetDebrisCollisionDamage.field_o, -64);
@@ -5824,12 +5824,12 @@ final class uca {
               this.field_a[param0] = Math.min(255, 64 + this.field_a[param0]);
               if (SetDebrisPartitioned.field_o != 1) {
                 if (SetDebrisPartitioned.field_o == 2) {
-                  var35 = new hna();
+                  var35 = new PlayerAction();
                   var35.a(true, param0, -30790);
                   this.a(0, true, var35);
                 }
               } else {
-                var34 = new hna();
+                var34 = new PlayerAction();
                 var34.a(false, param0, -30790);
                 this.a(0, true, var34);
               }
@@ -5918,7 +5918,7 @@ final class uca {
         int var9 = 0;
         ShipComponent var10 = null;
         int var11 = 0;
-        wfb var12 = null;
+        ShipComponentDefinition var12 = null;
         int var13 = 0;
         int var14 = 0;
         int var15 = 0;
@@ -5943,8 +5943,8 @@ final class uca {
             stackIn_4_0 = param2;
             return stackIn_4_0;
           }
-          var6_int = eoa.field_a.a(true, param1);
-          var7 = eoa.field_a.a(0, param0);
+          var6_int = ShipTeamConditionFactory.field_a.a(true, param1);
+          var7 = ShipTeamConditionFactory.field_a.a(0, param0);
           var8 = param4.chassis.b(param3 ^ 126, param3);
           var9 = 0;
           scanLoop1: while (true) {
@@ -5959,7 +5959,7 @@ final class uca {
                   var15 = var10.g((byte) -127);
                   var16 = var6_int - var13;
                   var17 = var7 - var14;
-                  var18 = ecb.a(var17, (byte) -77, var16);
+                  var18 = GameSnapshotFactory.a(var17, (byte) -77, var16);
                   var19 = GameKeyHandler.a(param3 + 22433, var18 - var15);
                   if (var11 >= Math.abs(var19)) {
                     param2 = 2;
@@ -5969,8 +5969,8 @@ final class uca {
                     if ((1 & PacketBuffer.field_g) != 0) {
                       break scanLoop1;
                     }
-                    var20 = eoa.field_a.a(var13, (byte) 113);
-                    var21 = eoa.field_a.b(true, var14);
+                    var20 = ShipTeamConditionFactory.field_a.a(var13, (byte) 113);
+                    var21 = ShipTeamConditionFactory.field_a.b(true, var14);
                     if (var10.weaponbehaviour.b((byte) 118)) {
                       var22 = ar.a(var16, (byte) 116, var17);
                       var23 = SetShipDirectionArrow.field_o[var10.weaponbehaviour.weapontype];
@@ -5979,9 +5979,9 @@ final class uca {
                       var26 = var23.j(122) << 3;
                       if (var22 > var26) {
                         var27 = var16 * 255 / var22 * var26 / 255;
-                        var24 = eoa.field_a.a(var27 + var13, (byte) 122);
+                        var24 = ShipTeamConditionFactory.field_a.a(var27 + var13, (byte) 122);
                         var28 = var17 * 255 / var22 * var26 / 255;
-                        var25 = eoa.field_a.b(true, var28 + var14);
+                        var25 = ShipTeamConditionFactory.field_a.b(true, var28 + var14);
                       }
                       SetShowTutorial.a(var20, (byte) 66, var24, var21, 16777215, var25, 30);
                     }
@@ -6053,7 +6053,7 @@ final class uca {
         int var8 = 0;
         int[] var9 = null;
         int var10 = 0;
-        hna var11 = null;
+        PlayerAction var11 = null;
         int var12 = 0;
         Ship var13 = null;
         Player var14 = null;
@@ -6091,7 +6091,7 @@ final class uca {
                 }
               }
               if (var10 == 0) {
-                var11 = new hna();
+                var11 = new PlayerAction();
                 var11.a(false, var8Lifetime1, -30790);
                 this.a(0, true, var11);
               }
@@ -6152,28 +6152,28 @@ final class uca {
               var11 = (var22[1] + var22[0]) / 2;
               var12 = (var22[3] + var22[2]) / 2;
               if (var22[1] < var22[0]) {
-                var11 = var9.d(false);
-                var12 = var9.g((byte) 1);
+                var11 = var9.getX(false);
+                var12 = var9.getY((byte) 1);
               }
               if (!var8.getDebug((byte) 96) &&
                 !this.field_m.carouselInfo.f(1)) {
                 var13 = 30.0f;
                 var14 = (float)var11 + var13 * (float)var9.c((byte) -117);
                 var15 = (float)var12 + (float)var9.f(0) * var13;
-                eoa.field_a.field_c = (var14 + 9.0f * eoa.field_a.field_c) / 10.0f;
-                eoa.field_a.field_b = (9.0f * eoa.field_a.field_b + var15) / 10.0f;
-                eoa.field_a.a(lj.field_a, 0, -117, onb.field_a, 0);
-                if (eoa.field_a.field_f[0] > var22[0]) {
-                  eoa.field_a.field_c = eoa.field_a.field_c + (float)((-eoa.field_a.field_f[0] + var22[0]) / 2);
+                ShipTeamConditionFactory.field_a.field_c = (var14 + 9.0f * ShipTeamConditionFactory.field_a.field_c) / 10.0f;
+                ShipTeamConditionFactory.field_a.field_b = (9.0f * ShipTeamConditionFactory.field_a.field_b + var15) / 10.0f;
+                ShipTeamConditionFactory.field_a.a(MissionVariableFactory.field_a, 0, -117, PartitionZoneFactory.field_a, 0);
+                if (ShipTeamConditionFactory.field_a.field_f[0] > var22[0]) {
+                  ShipTeamConditionFactory.field_a.field_c = ShipTeamConditionFactory.field_a.field_c + (float)((-ShipTeamConditionFactory.field_a.field_f[0] + var22[0]) / 2);
                 }
-                if (eoa.field_a.field_f[2] > var22[2]) {
-                  eoa.field_a.field_b = eoa.field_a.field_b + (float)((var22[2] - eoa.field_a.field_f[2]) / 2);
+                if (ShipTeamConditionFactory.field_a.field_f[2] > var22[2]) {
+                  ShipTeamConditionFactory.field_a.field_b = ShipTeamConditionFactory.field_a.field_b + (float)((var22[2] - ShipTeamConditionFactory.field_a.field_f[2]) / 2);
                 }
-                if (var22[1] > eoa.field_a.field_f[1]) {
-                  eoa.field_a.field_c = eoa.field_a.field_c - (float)((eoa.field_a.field_f[1] - var22[1]) / 2);
+                if (var22[1] > ShipTeamConditionFactory.field_a.field_f[1]) {
+                  ShipTeamConditionFactory.field_a.field_c = ShipTeamConditionFactory.field_a.field_c - (float)((ShipTeamConditionFactory.field_a.field_f[1] - var22[1]) / 2);
                 }
-                if (eoa.field_a.field_f[3] < var22[3]) {
-                  eoa.field_a.field_b = eoa.field_a.field_b - (float)((eoa.field_a.field_f[3] - var22[3]) / 2);
+                if (ShipTeamConditionFactory.field_a.field_f[3] < var22[3]) {
+                  ShipTeamConditionFactory.field_a.field_b = ShipTeamConditionFactory.field_a.field_b - (float)((ShipTeamConditionFactory.field_a.field_f[3] - var22[3]) / 2);
                 }
               }
               if (var9.d(4, 44)) {
@@ -6182,7 +6182,7 @@ final class uca {
                 if (GetFightersPerPlayerMaximum.field_p == 1) {
                   this.field_g = 2;
                 } else {
-                  this.field_g = mbb.field_c;
+                  this.field_g = SetShipTeamActionFactory.field_c;
                 }
               } else {
                 if ((param3 & 128) != 0 && (var9.getDragging(-109) != -1 &&
@@ -6192,7 +6192,7 @@ final class uca {
                     this.field_n = true;
                   }
                   this.field_r = 0;
-                  this.field_g = mbb.field_c;
+                  this.field_g = SetShipTeamActionFactory.field_c;
                 }
               }
               if (this.field_g > 0) {
@@ -6205,7 +6205,7 @@ final class uca {
                   0 != param3) {
                   this.field_n = false;
                 }
-                eoa.field_a.field_a = eoa.field_a.field_a + (-eoa.field_a.field_a + var17) / (float)SetMassDriverProjectileDamage.field_o;
+                ShipTeamConditionFactory.field_a.field_a = ShipTeamConditionFactory.field_a.field_a + (-ShipTeamConditionFactory.field_a.field_a + var17) / (float)SetMassDriverProjectileDamage.field_o;
                 var6_int = 1;
                 if (!this.field_n) {
                   this.field_g = this.field_g - 1;
@@ -6217,24 +6217,24 @@ final class uca {
                 1 == var10 ||
                 var10 == 2) {
                 this.field_w = 0.001953125f;
-                eoa.field_a.field_c = 0.0f;
-                eoa.field_a.field_b = 0.0f;
+                ShipTeamConditionFactory.field_a.field_c = 0.0f;
+                ShipTeamConditionFactory.field_a.field_b = 0.0f;
               }
             }
           }
           if (!var8.getDebug((byte) 39) &&
             !this.field_m.carouselInfo.f(1)) {
-            if (eoa.field_a.field_c < (float)(-var8.getWidth((byte) -122) / 2)) {
-              eoa.field_a.field_c = (float)(-var8.getWidth((byte) -122) / 2);
+            if (ShipTeamConditionFactory.field_a.field_c < (float)(-var8.getWidth((byte) -122) / 2)) {
+              ShipTeamConditionFactory.field_a.field_c = (float)(-var8.getWidth((byte) -122) / 2);
             }
-            if (eoa.field_a.field_b < (float)(-var8.m(1) / 2)) {
-              eoa.field_a.field_b = (float)(-var8.m(1) / 2);
+            if (ShipTeamConditionFactory.field_a.field_b < (float)(-var8.m(1) / 2)) {
+              ShipTeamConditionFactory.field_a.field_b = (float)(-var8.m(1) / 2);
             }
-            if (eoa.field_a.field_c > (float)(var8.getWidth((byte) -122) / 2)) {
-              eoa.field_a.field_c = (float)(var8.getWidth((byte) -122) / 2);
+            if (ShipTeamConditionFactory.field_a.field_c > (float)(var8.getWidth((byte) -122) / 2)) {
+              ShipTeamConditionFactory.field_a.field_c = (float)(var8.getWidth((byte) -122) / 2);
             }
-            if (eoa.field_a.field_b > (float)(var8.m(1) / 2)) {
-              eoa.field_a.field_b = (float)(var8.m(1) / 2);
+            if (ShipTeamConditionFactory.field_a.field_b > (float)(var8.m(1) / 2)) {
+              ShipTeamConditionFactory.field_a.field_b = (float)(var8.m(1) / 2);
             }
           }
           stackIn_58_0 = var6_int;
@@ -6274,7 +6274,7 @@ final class uca {
         RuntimeException var5 = null;
         ShipComponent var7 = null;
         int var8 = 0;
-        wfb var9 = null;
+        ShipComponentDefinition var9 = null;
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
@@ -6312,12 +6312,12 @@ final class uca {
                   var12 = var7.g((byte) -127);
                   var13 = param2 - var10;
                   var14 = param3 - var11;
-                  var15 = ecb.a(var14, (byte) -77, var13);
+                  var15 = GameSnapshotFactory.a(var14, (byte) -77, var13);
                   var16 = GameKeyHandler.a(22433, -var12 + var15);
-                  var17 = eoa.field_a.a(var10, (byte) 122);
-                  var18 = eoa.field_a.b(true, var11);
+                  var17 = ShipTeamConditionFactory.field_a.a(var10, (byte) 122);
+                  var18 = ShipTeamConditionFactory.field_a.b(true, var11);
                   if (Math.abs(var16) <= var8) {
-                    c.a(eoa.field_a.b(true, param3), eoa.field_a.a(param2, (byte) 124), var17, var18, -16777216, 16711680);
+                    c.a(ShipTeamConditionFactory.field_a.b(true, param3), ShipTeamConditionFactory.field_a.a(param2, (byte) 124), var17, var18, -16777216, 16711680);
                   }
                   var19 = 16777215;
                   var20 = GameKeyHandler.a(22433, var12 - var8);
@@ -6327,10 +6327,10 @@ final class uca {
                   var24 = (var22 >> 8) * (eu.a(var20, 70) >> 8) + var11;
                   var25 = (GetNumStars.a(var21, (byte) 61) >> 8) * (var22 >> 8) + var10;
                   var26 = (var22 >> 8) * (eu.a(var21, 86) >> 8) + var11;
-                  c.a(eoa.field_a.b(true, var24), eoa.field_a.a(var23, (byte) 124), var17, var18, -16777216, var19);
-                  stackIn_18_0 = eoa.field_a;
+                  c.a(ShipTeamConditionFactory.field_a.b(true, var24), ShipTeamConditionFactory.field_a.a(var23, (byte) 124), var17, var18, -16777216, var19);
+                  stackIn_18_0 = ShipTeamConditionFactory.field_a;
                   stackIn_19_1 = !(param1);
-                  c.a(((lta) (Object) stackIn_18_0).b(stackIn_19_1, var26), eoa.field_a.a(var25, (byte) 115), var17, var18, -16777216, var19);
+                  c.a(((lta) (Object) stackIn_18_0).b(stackIn_19_1, var26), ShipTeamConditionFactory.field_a.a(var25, (byte) 115), var17, var18, -16777216, var19);
                 }
               }
             }
@@ -6464,7 +6464,7 @@ final class uca {
                   gda.field_d != 0)) {
                   this.field_E.addLast(-10258, new ihb(10, 0));
                 }
-                if (mbb.field_b) {
+                if (SetShipTeamActionFactory.field_b) {
                   this.field_E.addLast(-10258, new ihb(11, 0));
                   if (es.field_b != null &&
                     es.field_b.blueprint != null) {
@@ -6508,7 +6508,7 @@ final class uca {
             }
             var11 = 0;
             var12 = SetFighterBayAimarc.field_o;
-            var13 = lj.field_a - dma.field_j + SetToggledScoreboard.field_o.field_u;
+            var13 = MissionVariableFactory.field_a - dma.field_j + SetToggledScoreboard.field_o.field_u;
             var14 = -GetSalvoDamageMultiplier.field_p + var13;
             if (this.field_i < 255) {
               var14 = var14 + (255 - this.field_i) / 4;
@@ -6561,7 +6561,7 @@ final class uca {
               if (var15.field_l == 10) {
                 var18 = var12;
                 var19 = -12 + (-var17 + var14);
-                if (mbb.field_b &&
+                if (SetShipTeamActionFactory.field_b &&
                   this.field_i < 255) {
                   var18 = var18 - (255 - this.field_i) / 12;
                 }
@@ -6614,7 +6614,7 @@ final class uca {
               }
               var15.field_h = var19;
               var15.field_m = var18;
-              var41 = pca.field_i[var15.field_l];
+              var41 = CarouselPlayerEvent.field_i[var15.field_l];
               if (0 >= var15.field_g) {
                 if (var41.c(83)) {
                   if (!var41.c((byte) -117)) {
@@ -6719,7 +6719,7 @@ final class uca {
                     this.a(var33Lifetime1Lifetime1, param2, var19, false, var5);
                   }
                 }
-                var33Lifetime2 = pca.field_i[var15.field_l].b((byte) 87);
+                var33Lifetime2 = CarouselPlayerEvent.field_i[var15.field_l].b((byte) 87);
                 if (8 == var15.field_l &&
                   var5.getSelfDestructPrepared((byte) -90)) {
                   var33Lifetime2 = 114;
@@ -6731,7 +6731,7 @@ final class uca {
                 }
                 var36 = var17 * var30Lifetime1 >> 8;
                 fpa.a(var17 + (var19 - var36), var17 + var19, true, var18 + var16, var18);
-                bn.a(var33Lifetime2, var34 + var18, (byte) 92, var35 + var19);
+                PlayerActionFactory.a(var33Lifetime2, var34 + var18, (byte) 92, var35 + var19);
                 GetMissionTerrainSpaceProbability.a(84);
                 if (var30Lifetime1 < 255 &&
                   var26 == 0) {
@@ -7039,8 +7039,8 @@ final class uca {
               if (var10 != null &&
                 var10.getTeam((byte) 119) != var8.getTeam((byte) 112) &&
                 !var10.b(1, (byte) 82)) {
-                var11 = var8.d(false) - var10.d(false);
-                var12Lifetime1 = var8.g((byte) 119) - var10.g((byte) -111);
+                var11 = var8.getX(false) - var10.getX(false);
+                var12Lifetime1 = var8.getY((byte) 119) - var10.getY((byte) -111);
                 var13Lifetime1 = ar.a(var11, (byte) 120, var12Lifetime1);
                 if (GetUseNiceTrails.field_p > var13Lifetime1) {
                   return 1;
@@ -7113,9 +7113,9 @@ final class uca {
             var4_ref_String = kmb.field_d.toUpperCase();
             var7 = var4_ref_String;
             var7Lifetime2 = var4_ref_String;
-            var5 = lj.field_a;
-            if (null != bf.field_a) {
-              var5 = bf.field_a.field_K;
+            var5 = MissionVariableFactory.field_a;
+            if (null != AdjustVariableActionFactory.field_a) {
+              var5 = AdjustVariableActionFactory.field_a.field_K;
             }
             SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - (tea.a(var3_int, var4_ref_String, 13879) >> 1), 1, -pib.b((byte) 118) + var5, var4_ref_String, var3_int, 16777215, (byte) -87);
           }
@@ -7130,7 +7130,7 @@ final class uca {
           if (4 == var6 ||
             var6 == 5 ||
             6 == var6) {
-            var7Lifetime1 = ShipCondition.field_f[var4].toUpperCase();
+            var7Lifetime1 = ShipTeamCondition.field_f[var4].toUpperCase();
             if (this.field_x) {
               var7Lifetime1 = GetWeaponParticleSpeedDownshift.field_p;
             }
@@ -7150,7 +7150,7 @@ final class uca {
             var9 = SetMassDriverReload.field_p - (tea.a(var3_int, var7Lifetime1, 13879) >> 1);
             var10_int = GetLaserAimarc.field_q - 100;
             if (var8 < 255) {
-              var11 = onb.field_a + (-tea.a(var3_int, var7Lifetime1, 13879) - 5);
+              var11 = PartitionZoneFactory.field_a + (-tea.a(var3_int, var7Lifetime1, 13879) - 5);
               var12_int = GetPointDefenceLaserProjectiles.a(false, var3_int) - 7;
               if (var8 != 0) {
                 var13 = 255 - var8;
@@ -7274,7 +7274,7 @@ final class uca {
         int var5_int = 0;
         RuntimeException var5 = null;
         ShipComponent var7 = null;
-        wfb var8 = null;
+        ShipComponentDefinition var8 = null;
         int var9 = 0;
         Ship var10 = null;
         RuntimeException stackIn_28_0 = null;
@@ -7481,50 +7481,50 @@ final class uca {
         int var4Lifetime1;
         if (this.e((byte) -103)) {
           if (!GetSniperCannonProjectiles.field_p) {
-            bf.field_a.field_R = upb.field_b;
+            AdjustVariableActionFactory.field_a.field_R = VariableConditionFactory.field_b;
           } else {
-            bf.field_a.field_R = ita.field_A;
+            AdjustVariableActionFactory.field_a.field_R = ita.field_A;
           }
-          var3 = -(bf.field_a.field_hb / 2) + SetMassDriverReload.field_p;
-          var4 = -bf.field_a.field_G + (lj.field_a + (SetToggledScoreboard.field_o.field_u - dma.field_j));
+          var3 = -(AdjustVariableActionFactory.field_a.field_hb / 2) + SetMassDriverReload.field_p;
+          var4 = -AdjustVariableActionFactory.field_a.field_G + (MissionVariableFactory.field_a + (SetToggledScoreboard.field_o.field_u - dma.field_j));
           if (!SetFightersPerPlayerMaximum.field_p ||
             SetMissionTerrainDebrisProbability.field_p) {
             if (SetNebulaProximityFadeDownshift.field_o) {
               uia.field_b = GetTorpedoReload.field_q;
-              kc.field_b = GetUseDetailLines.field_o;
+              PlayerGameData.field_b = GetUseDetailLines.field_o;
               qs.field_a = GetTorpedoReload.field_q;
               Particle.field_H = GetUseDetailLines.field_o;
             }
             var5 = -var3 + GetUseDetailLines.field_o;
-            bf.field_a.field_K = 0;
-            bf.field_a.field_L = 0;
+            AdjustVariableActionFactory.field_a.field_K = 0;
+            AdjustVariableActionFactory.field_a.field_L = 0;
             var6 = GetTorpedoReload.field_q - var4;
-            kc.field_b = var5;
+            PlayerGameData.field_b = var5;
             qs.field_a = var6;
             Particle.field_H = var5;
             uia.field_b = var6;
-            bf.field_a.a(param1, 1332);
+            AdjustVariableActionFactory.field_a.a(param1, 1332);
             qs.field_a = GetTorpedoReload.field_q;
             Particle.field_H = GetUseDetailLines.field_o;
-            kc.field_b = GetUseDetailLines.field_o;
+            PlayerGameData.field_b = GetUseDetailLines.field_o;
             uia.field_b = GetTorpedoReload.field_q;
-            if (bf.field_a.field_O) {
+            if (AdjustVariableActionFactory.field_a.field_O) {
               this.field_l = true;
             }
-            if ((-dma.field_g + onb.field_a) / 2 < GetUseDetailLines.field_o &&
-              GetUseDetailLines.field_o < -((-dma.field_g + onb.field_a) / 2) + onb.field_a &&
-              GetTorpedoReload.field_q > -dma.field_j - (-SetToggledScoreboard.field_o.field_u - lj.field_a)) {
+            if ((-dma.field_g + PartitionZoneFactory.field_a) / 2 < GetUseDetailLines.field_o &&
+              GetUseDetailLines.field_o < -((-dma.field_g + PartitionZoneFactory.field_a) / 2) + PartitionZoneFactory.field_a &&
+              GetTorpedoReload.field_q > -dma.field_j - (-SetToggledScoreboard.field_o.field_u - MissionVariableFactory.field_a)) {
               this.field_l = true;
             }
-            if (bf.field_a.field_o == 1) {
+            if (AdjustVariableActionFactory.field_a.field_o == 1) {
               this.field_X = true;
               this.a(false);
             }
           }
-          bf.field_a.field_K = var4;
-          bf.field_a.field_L = var3;
-          bf.field_a.field_M = var3;
-          bf.field_a.field_u = var4;
+          AdjustVariableActionFactory.field_a.field_K = var4;
+          AdjustVariableActionFactory.field_a.field_L = var3;
+          AdjustVariableActionFactory.field_a.field_M = var3;
+          AdjustVariableActionFactory.field_a.field_u = var4;
         }
         if (param0 <= 32) {
           this.a(-112, -67, 51, 21);
@@ -7570,8 +7570,8 @@ final class uca {
         if (param0 != 30) {
           this.field_e = (int[]) null;
         }
-        while (var2 < ecb.field_a.length) {
-          var3 = ecb.field_a[var2];
+        while (var2 < GameSnapshotFactory.field_a.length) {
+          var3 = GameSnapshotFactory.field_a[var2];
           var4 = 0;
           if (SetMachineGunEnergyUsed.field_o[81]) {
             var4 += 10;
@@ -7610,8 +7610,8 @@ final class uca {
           }
           var6 = 3;
           for (var7 = 0; var7 < var5_int; var7++) {
-            var8 = eoa.field_a.a(param0, (byte) 114) - (GetPhasedEnergyBeamProjectiles.a(param3 + 215, param2[0]) >> 1);
-            var9 = eoa.field_a.b(true, -10000 + param1) - (var5_int - var7) * tib.a(true, var6);
+            var8 = ShipTeamConditionFactory.field_a.a(param0, (byte) 114) - (GetPhasedEnergyBeamProjectiles.a(param3 + 215, param2[0]) >> 1);
+            var9 = ShipTeamConditionFactory.field_a.b(true, -10000 + param1) - (var5_int - var7) * tib.a(true, var6);
             if (null != this.field_v &&
               this.field_v.b(3, -22)) {
               var9 -= 20;
@@ -7846,28 +7846,28 @@ final class uca {
           var8 = GetSniperCannonAimspeed.a(100, param3);
           var9 = var8 / 2;
           var10 = mmb.field_d[4];
-          if (!MissionAction.a(param1, eoa.field_a.field_f, 122)) {
-            var11 = -(int)eoa.field_a.field_c + var6_int;
-            var12 = var7 - (int)eoa.field_a.field_b;
-            var13 = SetMissionTerrainSpaceProbability.a(0, (int)eoa.field_a.field_b, (int)eoa.field_a.field_c, eoa.field_a.field_f[2], var7, 16, eoa.field_a.field_f[1], eoa.field_a.field_f[0], eoa.field_a.field_f[3], var6_int);
+          if (!MissionAction.rectanglesIntersect(param1, ShipTeamConditionFactory.field_a.field_f, 122)) {
+            var11 = -(int)ShipTeamConditionFactory.field_a.field_c + var6_int;
+            var12 = var7 - (int)ShipTeamConditionFactory.field_a.field_b;
+            var13 = SetMissionTerrainSpaceProbability.a(0, (int)ShipTeamConditionFactory.field_a.field_b, (int)ShipTeamConditionFactory.field_a.field_c, ShipTeamConditionFactory.field_a.field_f[2], var7, 16, ShipTeamConditionFactory.field_a.field_f[1], ShipTeamConditionFactory.field_a.field_f[0], ShipTeamConditionFactory.field_a.field_f[3], var6_int);
             if (0 <= var13) {
-              var14 = (int)((float)var11 * 1.0f * (float)var13 / 65536.0f + eoa.field_a.field_c);
-              var15 = (int)(eoa.field_a.field_b + (float)var13 * ((float)var12 * 1.0f) / 65536.0f);
-              var16 = eoa.field_a.a(var14, (byte) 114);
-              var17 = eoa.field_a.b(true, var15);
+              var14 = (int)((float)var11 * 1.0f * (float)var13 / 65536.0f + ShipTeamConditionFactory.field_a.field_c);
+              var15 = (int)(ShipTeamConditionFactory.field_a.field_b + (float)var13 * ((float)var12 * 1.0f) / 65536.0f);
+              var16 = ShipTeamConditionFactory.field_a.a(var14, (byte) 114);
+              var17 = ShipTeamConditionFactory.field_a.b(true, var15);
               if (li.field_i) {
-                var18 = ecb.a(var12, (byte) -77, var11);
+                var18 = GameSnapshotFactory.a(var12, (byte) -77, var11);
                 var16 = var16 - (GetNumStars.a(var18, (byte) -122) * 28 >> 16);
                 var17 = var17 - (28 * eu.a(var18, 97) >> 16);
                 var10.a((float)var16, (float)var17, 20.0f, 23.0f, 4096, -var18 << 3, 0, -1, 1);
               }
-              bn.a(param3, -var9 + var16, (byte) 88, -var9 + var17);
+              PlayerActionFactory.a(param3, -var9 + var16, (byte) 88, -var9 + var17);
             }
           } else {
             var11 = var10.b();
-            var12 = eoa.field_a.a(var6_int, (byte) 114);
-            var13 = -(var11 / 2) + eoa.field_a.b(true, param1[2]);
-            var14 = (int)(0.32 / (double)eoa.field_a.field_a);
+            var12 = ShipTeamConditionFactory.field_a.a(var6_int, (byte) 114);
+            var13 = -(var11 / 2) + ShipTeamConditionFactory.field_a.b(true, param1[2]);
+            var14 = (int)(0.32 / (double)ShipTeamConditionFactory.field_a.field_a);
             if (255 < var14) {
               var14 = 255;
             }
@@ -7958,7 +7958,7 @@ final class uca {
             if (param3.field_fc && (!param3.field_Gb ||
               !param3.field_cc &&
               !param3.field_ac)) {
-              jua.a(param3.f((byte) -13), 11, 20694);
+              ArmBehaviourFactory.a(param3.f((byte) -13), 11, 20694);
               decompiledFrameRemainder0 = false;
             }
             else {
@@ -7973,7 +7973,7 @@ final class uca {
             olb.d(991426348);
             wgb.field_f = -2;
             GetSniperCannonProjectiles.field_p = true;
-            lsb.a(true);
+            HardpointDefinition.a(true);
           }
           param3.field_Sb.b(false, 38);
           param3.field_Tb.field_K = param3.field_Sb.field_G + param2;
@@ -7991,8 +7991,8 @@ final class uca {
             var10 = 8 + (param3.field_Sb.field_hb + var5_int) + param3.field_dc.field_L;
             var11 = 1 + param2;
             var7.a(var10, var11);
-            if (var10 <= kc.field_b &&
-              var10 + var7.field_q >= kc.field_b &&
+            if (var10 <= PlayerGameData.field_b &&
+              var10 + var7.field_q >= PlayerGameData.field_b &&
               uia.field_b >= var11 &&
               var11 + var7.field_p >= uia.field_b) {
               GetMassDriverReload.a(GetBombletSprayRandomness.field_q[0][var6], -53);
@@ -8113,7 +8113,7 @@ final class uca {
           !var33.c((byte) 93)) {
           var4 = var33.getCustomVariables(false);
           var5 = 0;
-          var6 = onb.field_a - 17;
+          var6 = PartitionZoneFactory.field_a - 17;
           var7 = 37;
           var8 = 0;
           var9 = 4;
@@ -8127,8 +8127,8 @@ final class uca {
               var34 = var28;
               if (var34 != null &&
                 1 <= var34.label &&
-                var34.label < pu.field_c.length) {
-                var35 = pu.field_c[var28.label];
+                var34.label < ParticleFactory.field_c.length) {
+                var35 = ParticleFactory.field_c[var28.label];
                 var36 = SetUseBackgroundInFullscreen.field_o[var28.label];
                 var17 = cna.field_zb[var28.label];
                 var18_int = var4[var13_int].value;
@@ -8168,8 +8168,8 @@ final class uca {
               var39 = var29;
               if (var39 != null &&
                 var39.label >= 1 &&
-                pu.field_c.length > var39.label) {
-                var40 = pu.field_c[var29.label];
+                ParticleFactory.field_c.length > var39.label) {
+                var40 = ParticleFactory.field_c[var29.label];
                 var41 = SetUseBackgroundInFullscreen.field_o[var29.label];
                 var17Lifetime1 = cna.field_zb[var29.label];
                 var18_intLifetime2 = var4[var13_intLifetime2].value;
@@ -8233,7 +8233,7 @@ final class uca {
     private final boolean b(int param0, byte param1, int param2, int param3) {
         int var5 = GetUseDetailLines.field_o - this.field_t;
         int var6 = GetTorpedoReload.field_q - this.field_I;
-        int var7 = ecb.a(var6, (byte) -77, var5);
+        int var7 = GameSnapshotFactory.a(var6, (byte) -77, var5);
         int var8 = ar.a(var5, (byte) 112, var6);
         int var9 = -41 / ((param1 - 48) / 45);
         if (var8 > param3 / 8 &&
@@ -8280,8 +8280,8 @@ final class uca {
             param1 != null) {
             var3 = qd.field_c;
             if (param1.q(-22)) {
-              var4 = eoa.field_a.a(true, GetUseDetailLines.field_o);
-              var5_int = eoa.field_a.a(0, GetTorpedoReload.field_q);
+              var4 = ShipTeamConditionFactory.field_a.a(true, GetUseDetailLines.field_o);
+              var5_int = ShipTeamConditionFactory.field_a.a(0, GetTorpedoReload.field_q);
               if (!param1.chassis.b(32609, var5_int, GetMinimapWidth.field_o, var4)) {
                 var3 = SetPlayerRepairTime.field_o;
               }
@@ -8323,7 +8323,7 @@ final class uca {
             var3Lifetime2Lifetime1 = var13;
             var6 = 5;
             if (this.field_L < 0) {
-              var7 = uu.field_a;
+              var7 = DebugRequestFactory.field_a;
               if (me.field_r) {
                 var7 = GrappleLauncherBehaviour.field_b;
               }
@@ -8339,7 +8339,7 @@ final class uca {
                 var5_array = new String[]{SetTorpedoProjectileDamage.field_q[vu.field_Db].toUpperCase(), SetTorpedoProjectileDamage.field_q[GetBombletSprayProjectiles.field_p].toUpperCase(), SetTorpedoProjectileDamage.field_q[GrappleLauncherBehaviour.field_b].toUpperCase()};
               } else {
                 var3Lifetime2Lifetime2 = SetTeamSelectionSpeedup.field_p + "<br>" + GetDebrisCarryOverPercentage.field_p + "<br>" + var13;
-                var5_array = new String[]{SetTorpedoProjectileDamage.field_q[GetHealthBarWidth.field_q].toUpperCase(), SetTorpedoProjectileDamage.field_q[GetGrappleDebris.field_p].toUpperCase(), " " + SetTorpedoProjectileDamage.field_q[uu.field_a].toUpperCase()};
+                var5_array = new String[]{SetTorpedoProjectileDamage.field_q[GetHealthBarWidth.field_q].toUpperCase(), SetTorpedoProjectileDamage.field_q[GetGrappleDebris.field_p].toUpperCase(), " " + SetTorpedoProjectileDamage.field_q[DebugRequestFactory.field_a].toUpperCase()};
               }
             }
             SetAutoaim.a(1, 100, 40, 0, 0, var3Lifetime2Lifetime2, 16777215, 100, 122, var6, 0, 0);
@@ -8516,7 +8516,7 @@ final class uca {
         int var10 = 1;
         if (255 > param1) {
           if (param1 < 255) {
-            var11 = onb.field_a - tea.a(4, var6, 13879) - 5;
+            var11 = PartitionZoneFactory.field_a - tea.a(4, var6, 13879) - 5;
             var12 = GetPointDefenceLaserProjectiles.a(false, 2) + pib.b((byte) 118) / 2;
             if (param1 == 0) {
               var7 = var11;
@@ -8567,7 +8567,7 @@ final class uca {
             param0.getMissionPhase(8) != 5) {
             return;
           }
-          LoadSettings.a(param3, param4, eoa.field_a, (byte) -84, param0);
+          LoadSettings.a(param3, param4, ShipTeamConditionFactory.field_a, (byte) -84, param0);
           for (var6_int = 0; GetDebrisCarryOver.field_p > var6_int; var6_int++) {
             var7 = SetKeepTeamColours.field_p[var6_int];
             var8 = var7.field_c;
@@ -8706,7 +8706,7 @@ final class uca {
               var13 = this.field_m.a(1, var9.aId);
               var14 = this.field_m.a(1, var9.bId);
               var12Lifetime1 = SetReverbGain.a(var17, new String[]{var13, var14}, 85);
-              SetThrusterForce.a(16777215, var11, onb.field_a - 5, 180, var12Lifetime1, (var7 >> 8) + 140, -1);
+              SetThrusterForce.a(16777215, var11, PartitionZoneFactory.field_a - 5, 180, var12Lifetime1, (var7 >> 8) + 140, -1);
               var7 = var7 + pib.b((byte) 118) * var11;
             }
             return;
@@ -8777,16 +8777,16 @@ final class uca {
           for (var9_int = 0; var9_int < 8; var9_int++) {
             var13[var9_int] = 0;
           }
-          this.field_m = new oma(param1, -1, param4, param5, false);
-          onb.field_a = GetBombletSprayEnergyUsed.field_p.width;
-          lj.field_a = GetBombletSprayEnergyUsed.field_p.height;
-          bf.field_a = new llb("chat_toggle", (llb) null, 0, 440, 95, 20, ita.field_A);
-          bf.field_a.field_L = -(bf.field_a.field_hb / 2) + onb.field_a / 2;
-          bf.field_a.field_gb = ko.field_e;
-          bf.field_a.field_K = lj.field_a - bf.field_a.field_G;
-          bf.field_a.field_eb = lhb.field_a;
-          bf.field_a.field_mb = vfa.field_d;
-          eoa.field_a = new lta();
+          this.field_m = new CommonGameState(param1, -1, param4, param5, false);
+          PartitionZoneFactory.field_a = GetBombletSprayEnergyUsed.field_p.width;
+          MissionVariableFactory.field_a = GetBombletSprayEnergyUsed.field_p.height;
+          AdjustVariableActionFactory.field_a = new llb("chat_toggle", (llb) null, 0, 440, 95, 20, ita.field_A);
+          AdjustVariableActionFactory.field_a.field_L = -(AdjustVariableActionFactory.field_a.field_hb / 2) + PartitionZoneFactory.field_a / 2;
+          AdjustVariableActionFactory.field_a.field_gb = ko.field_e;
+          AdjustVariableActionFactory.field_a.field_K = MissionVariableFactory.field_a - AdjustVariableActionFactory.field_a.field_G;
+          AdjustVariableActionFactory.field_a.field_eb = GrapplingHookFactory.field_a;
+          AdjustVariableActionFactory.field_a.field_mb = vfa.field_d;
+          ShipTeamConditionFactory.field_a = new lta();
           this.field_w = 0.001953125f;
           this.field_g = 0;
           this.field_r = 0;
@@ -8814,7 +8814,7 @@ final class uca {
           var8 = null;
           if (!this.field_N &&
             GetBuildViewAutozoomEndOnAction.a(61848)) {
-            var8 = ae.a(upb.a(108), (byte) 127);
+            var8 = ae.a(VariableConditionFactory.a(108), (byte) 127);
           } else {
             if (this.field_x) {
               var8 = t.a(3, (byte) 65);

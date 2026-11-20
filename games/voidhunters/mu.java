@@ -49,6 +49,6 @@ class mu extends htb {
     }
 
     static {
-        jua discarded$0 = new jua();
+        ArmBehaviourFactory discarded$0 = new ArmBehaviourFactory();
     }
 }

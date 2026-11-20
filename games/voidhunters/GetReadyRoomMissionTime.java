@@ -10,9 +10,9 @@ final class GetReadyRoomMissionTime extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 232) {
-          GetReadyRoomMissionTime.a(-85);
+          GetReadyRoomMissionTime.clearSharedReferences(-85);
           field_o = null;
           field_q = null;
           return;

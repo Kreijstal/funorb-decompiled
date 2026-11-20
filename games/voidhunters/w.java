@@ -4,7 +4,7 @@
 final class w extends dqa implements ln, oo {
     static int field_y;
     private htb field_w;
-    static dja field_v;
+    static GameStateFactory field_v;
     private sn field_z;
     private kja field_x;
 
@@ -162,7 +162,7 @@ final class w extends dqa implements ln, oo {
         }
     }
 
-    public static void i(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != 77) {
           field_y = 91;
           field_v = null;
@@ -179,6 +179,6 @@ final class w extends dqa implements ln, oo {
     }
 
     static {
-        field_v = (dja) ((Object) new bn());
+        field_v = (GameStateFactory) ((Object) new PlayerActionFactory());
     }
 }

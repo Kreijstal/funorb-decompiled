@@ -37,9 +37,9 @@ final class GetMissileLauncherRandomness extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 32) {
-          GetMissileLauncherRandomness.a(-20);
+          GetMissileLauncherRandomness.clearSharedReferences(-20);
           field_q = null;
           field_o = null;
           return;

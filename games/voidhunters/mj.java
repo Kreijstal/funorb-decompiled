@@ -16,7 +16,7 @@ final class mj {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_i = null;
         field_a = null;
         field_e = null;
@@ -26,7 +26,7 @@ final class mj {
         field_f = null;
         field_g = null;
         if (param0 < 5) {
-          mj.a(31);
+          mj.clearSharedReferences(31);
         }
     }
 

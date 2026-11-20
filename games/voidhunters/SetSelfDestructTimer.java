@@ -34,10 +34,10 @@ final class SetSelfDestructTimer extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != -26016) {
-          SetSelfDestructTimer.a(-2);
+          SetSelfDestructTimer.clearSharedReferences(-2);
         }
     }
 
@@ -54,7 +54,7 @@ final class SetSelfDestructTimer extends ConsoleCommand {
           fgb.field_l.field_L = fgb.field_l.field_L + fgb.field_l.field_hb;
           fgb.field_l.field_hb = param2;
           if (param0 != 19204) {
-            SetSelfDestructTimer.a(98);
+            SetSelfDestructTimer.clearSharedReferences(98);
           }
           bpa.field_c.field_hb = bpa.field_c.field_hb - fgb.field_l.field_hb;
           fgb.field_l.field_L = fgb.field_l.field_L - fgb.field_l.field_hb;

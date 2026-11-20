@@ -5,7 +5,7 @@ final class hla {
     static int[] field_a;
     static String field_b;
 
-    final static SerializableGameState[] a(Class[] param0, SerializableGameState[] param1, dja[] param2, int param3, SerializableGameState[] param4, int param5, dja param6) {
+    final static SerializableGameState[] a(Class[] param0, SerializableGameState[] param1, GameStateFactory[] param2, int param3, SerializableGameState[] param4, int param5, GameStateFactory param6) {
         int var8 = 0;
         SerializableGameState dupTemp$0 = null;
         Object stackIn_3_0 = null;
@@ -40,7 +40,7 @@ final class hla {
           }
           if (param4 == null ||
             param4.length != param1.length) {
-            param4 = param6.a(11995, param1.length);
+            param4 = param6.createArray(11995, param1.length);
           }
           var7_int = 97 / ((param3 + 68) / 42);
           for (var8 = 0; param1.length > var8; var8++) {

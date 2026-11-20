@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class aba {
-    static dja field_b;
+    static GameStateFactory field_b;
     static aw field_a;
 
     final static void a(MissionState param0, MissionCondition[] param1, lta param2, int param3, byte param4, int param5, GameSnapshot param6) {
@@ -30,7 +30,7 @@ final class aba {
         MapZone var18 = null;
         ShipBody var19 = null;
         ShipBody var20 = null;
-        BodyCondition var21 = null;
+        BodyDestroyedCondition var21 = null;
         var16 = null;
         var13 = VoidHunters.field_G;
         try {
@@ -38,9 +38,9 @@ final class aba {
           for (var8 = 0; param1.length > var8; var8++) {
             var9 = param1[var8];
             if (!(var9 instanceof BodyInZoneCondition)) {
-              if (var9 instanceof BodyCondition) {
-                var21 = (BodyCondition) (var9);
-                var11 = var21.a((byte) -123, 0);
+              if (var9 instanceof BodyDestroyedCondition) {
+                var21 = (BodyDestroyedCondition) (var9);
+                var11 = var21.getParameter((byte) -123, 0);
                 var20 = param6.world.d((byte) -27, var11);
                 var12 = var20;
                 if (var20 != null) {
@@ -53,7 +53,7 @@ final class aba {
               } else {
                 if (var9 instanceof TeamShipComponentCondition) {
                   var15 = (TeamShipComponentCondition) (var9);
-                  var11 = var15.a((byte) -106, 1);
+                  var11 = var15.getParameter((byte) -106, 1);
                   var19 = param6.world.g((byte) 118, var11);
                   var12 = var19;
                   if (var19 != null) {
@@ -68,13 +68,13 @@ final class aba {
             } else {
               var14 = (BodyInZoneCondition) (var9);
               if (param3 == param5) {
-                var11 = var14.a((byte) -122, 0);
+                var11 = var14.getParameter((byte) -122, 0);
                 var17 = param6.world.d((byte) -27, var11);
                 if (var17 != null) {
                   SetRadialMenuRadius.a((byte) -100, 2, var17);
                 }
               }
-              var11 = var14.a((byte) -124, 1);
+              var11 = var14.getParameter((byte) -124, 1);
               var18 = param6.world.e((byte) -79, var11);
               if (var18 != null) {
                 if (param0.getMissionPhase(8) == 3) {
@@ -127,7 +127,7 @@ final class aba {
         throw new IllegalStateException();
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 == -3696) {
           field_b = null;
@@ -151,7 +151,7 @@ final class aba {
           var4 = new byte[param1];
           var3 = var4;
           if (param2 != -28321) {
-            field_b = (dja) null;
+            field_b = (GameStateFactory) null;
           }
           cua.a(param0, 0, var4, 0, param1);
           stackIn_3_0 = var4;
@@ -171,6 +171,6 @@ final class aba {
     }
 
     static {
-        field_b = (dja) ((Object) new beb());
+        field_b = (GameStateFactory) ((Object) new ProjectileFactory());
     }
 }

@@ -15,7 +15,7 @@ final class GetSalvoUsesAllEnergy extends ConsoleCommand {
         }
         if (param0 >= -64) {
           Object[] var2 = (Object[]) null;
-          GetSalvoUsesAllEnergy.a((dja) null, -6, 116, (Object[]) null);
+          GetSalvoUsesAllEnergy.a((GameStateFactory) null, -6, 116, (Object[]) null);
         }
     }
 
@@ -53,7 +53,7 @@ final class GetSalvoUsesAllEnergy extends ConsoleCommand {
         }
     }
 
-    final static Object[] a(dja param0, int param1, int param2, Object[] param3) {
+    final static Object[] a(GameStateFactory param0, int param1, int param2, Object[] param3) {
         int var6 = 0;
         SerializableGameState[] var4 = null;
         RuntimeException var4_ref = null;
@@ -81,7 +81,7 @@ final class GetSalvoUsesAllEnergy extends ConsoleCommand {
           }
           if (param1 >= 0 &&
             param1 < param3.length) {
-            var4 = param0.a(param2 - 3672, -1 + param3.length);
+            var4 = param0.createArray(param2 - 3672, -1 + param3.length);
             var4 = var4;
             var5 = 0;
             for (var6 = 0; var6 < param3.length; var6++) {

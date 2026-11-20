@@ -15,7 +15,7 @@ final class ColorRowCacheEntry extends IntrusiveNode {
 
     static {
         field_z = "dcb.<init>(";
-        nfb discarded$0 = new nfb();
+        GrappleLauncherBehaviourFactory discarded$0 = new GrappleLauncherBehaviourFactory();
         field_d = 1;
         field_f = 0;
     }

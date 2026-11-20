@@ -97,7 +97,7 @@ final class esb extends qq implements mkb {
         return super.a((byte) -124, this.field_d.field_Vc);
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 >= -104) {
           CharSequence var2 = (CharSequence) null;
           esb.a(27, (CharSequence) null);

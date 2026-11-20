@@ -86,13 +86,13 @@ final class eu extends ev {
           SetSniperCannonEnergyUsed.field_p = "";
           SetExplosionPushMultiplier.field_q = param2;
           MessageLog.field_c = param0;
-          if (fjb.field_b.startsWith("win")) {
+          if (MessageFactory.field_b.startsWith("win")) {
             SetSniperCannonEnergyUsed.field_p = SetSniperCannonEnergyUsed.field_p + "windows/";
           } else {
-            if (fjb.field_b.startsWith("linux")) {
+            if (MessageFactory.field_b.startsWith("linux")) {
               SetSniperCannonEnergyUsed.field_p = SetSniperCannonEnergyUsed.field_p + "linux/";
             } else {
-              if (fjb.field_b.startsWith("mac")) {
+              if (MessageFactory.field_b.startsWith("mac")) {
                 SetSniperCannonEnergyUsed.field_p = SetSniperCannonEnergyUsed.field_p + "macos/";
               }
             }
@@ -102,13 +102,13 @@ final class eu extends ev {
             SetSniperCannonEnergyUsed.field_p = SetSniperCannonEnergyUsed.field_p + "msjava/";
             return;
           }
-          if (!fjb.field_a.startsWith("amd64") &&
-            !fjb.field_a.startsWith("x86_64")) {
-            if (!fjb.field_a.startsWith("i386") &&
-              !fjb.field_a.startsWith("i486") &&
-              !fjb.field_a.startsWith("i586") &&
-              !fjb.field_a.startsWith("x86")) {
-              if (fjb.field_a.startsWith("ppc")) {
+          if (!MessageFactory.field_a.startsWith("amd64") &&
+            !MessageFactory.field_a.startsWith("x86_64")) {
+            if (!MessageFactory.field_a.startsWith("i386") &&
+              !MessageFactory.field_a.startsWith("i486") &&
+              !MessageFactory.field_a.startsWith("i586") &&
+              !MessageFactory.field_a.startsWith("x86")) {
+              if (MessageFactory.field_a.startsWith("ppc")) {
                 SetSniperCannonEnergyUsed.field_p = SetSniperCannonEnergyUsed.field_p + "ppc/";
                 return;
               }

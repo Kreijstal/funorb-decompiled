@@ -4,7 +4,7 @@
 final class AdjustBodyComponentsAction extends MissionAction implements DiffableState {
     private int index;
     static String field_a;
-    static dja field_c;
+    static GameStateFactory field_c;
     private int mode;
 
     public static void clearSharedReferences(byte param0) {
@@ -13,7 +13,7 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
         field_a = null;
     }
 
-    final String a(int param0) {
+    final String getDescription(int param0) {
         String var2;
         int var3;
         int var4;
@@ -69,7 +69,7 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
         }
     }
 
-    final int a(int param0, int param1) {
+    final int getParameter(int param0, int param1) {
         if (param1 >= -100) {
           return 117;
         }
@@ -92,7 +92,7 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
         }
     }
 
-    final void a(int param0, int[] param1, GameSnapshot param2) {
+    final void execute(int param0, int[] param1, GameSnapshot param2) {
         int var4_int = 0;
         int var5 = 0;
         ShipBody var6 = null;
@@ -136,7 +136,7 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
             }
           }
           if (param0 != 1) {
-            field_c = (dja) null;
+            field_c = (GameStateFactory) null;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -191,7 +191,7 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
         }
     }
 
-    final void a(World param0, boolean param1, int param2, int param3) {
+    final void setParameter(World param0, boolean param1, int param2, int param3) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -245,7 +245,7 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
         }
     }
 
-    final ucb a(World param0, int param1) {
+    final WorldPoint getWorldPosition(World param0, int param1) {
         RuntimeException var3 = null;
         SerializableGameState var4 = null;
         Object stackIn_3_0 = null;
@@ -260,7 +260,7 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
           var4 = (SerializableGameState) null;
           this.copyTo((byte) 88, (SerializableGameState) null);
           stackIn_3_0 = null;
-          return (ucb) (stackIn_3_0);
+          return (WorldPoint) (stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -294,7 +294,7 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
         try {
           super.reportDifferences(other, -90);
           if (obfuscationGuard >= -19) {
-            field_c = (dja) null;
+            field_c = (GameStateFactory) null;
           }
           var5 = (AdjustBodyComponentsAction) (other);
           var4 = 0;
@@ -326,6 +326,6 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
 
     static {
         field_a = "Create your own free Jagex account";
-        field_c = (dja) ((Object) new pu());
+        field_c = (GameStateFactory) ((Object) new ParticleFactory());
     }
 }

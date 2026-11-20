@@ -6,7 +6,7 @@ final class GetSpinningBladeAimspeed extends ConsoleCommand {
     static int field_p;
     static int field_q;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 >= -113) {
           GetSpinningBladeAimspeed.a(-93);

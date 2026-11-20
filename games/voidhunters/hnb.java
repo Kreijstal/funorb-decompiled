@@ -33,7 +33,7 @@ final class hnb extends iw implements oo {
         var8 = VoidHunters.field_G;
         try {
           super.a(param0, param1, param2 ^ 0, param3);
-          if (upb.field_c) {
+          if (VariableConditionFactory.field_c) {
             param3.f((byte) -34);
             var9 = this.field_T;
             var5 = var9;
@@ -101,8 +101,8 @@ final class hnb extends iw implements oo {
               if (this.field_P != null) {
                 var4 = this.field_P.a(0);
                 var5 = this.field_N[var4];
-                if (efb.field_b.field_q == var5.field_c &&
-                  efb.field_b.field_e == var5.field_a) {
+                if (MissionConditionFactory.field_b.field_q == var5.field_c &&
+                  MissionConditionFactory.field_b.field_e == var5.field_a) {
                   this.g(-99);
                   return;
                 }
@@ -185,7 +185,7 @@ final class hnb extends iw implements oo {
         int var2_intLifetime1;
         int var3Lifetime2;
         try {
-          this.field_N = dtb.a(SetTorpedoProjectiles.field_o, -30334);
+          this.field_N = MissionBuilderFactory.a(SetTorpedoProjectiles.field_o, -30334);
           if (0 < this.field_N.length) {
             for (var2_int = 0; var2_int < this.field_N.length; var2_int++) {
               if (null != this.field_N[var2_int]) {
@@ -196,9 +196,9 @@ final class hnb extends iw implements oo {
                     this.field_N[var3] = null;
                   }
                 }
-                if (efb.field_b != null &&
+                if (MissionConditionFactory.field_b != null &&
                   this.field_N[var2_int] != null &&
-                  !efb.field_b.b(this.field_N[var2_int].field_a, this.field_N[var2_int].field_c, 0)) {
+                  !MissionConditionFactory.field_b.b(this.field_N[var2_int].field_a, this.field_N[var2_int].field_c, 0)) {
                   this.field_N[var2_int] = null;
                 }
               }
@@ -230,8 +230,8 @@ final class hnb extends iw implements oo {
           stackIn_40_1 = !(GetPhasedEnergyBeamPulsetime.e((byte) 110));
           this.field_J = stackIn_40_1;
           if (var2_intLifetime1 == 0) {
-            if (efb.field_b != null) {
-              stackIn_48_0 = (efb.field_b.b((byte) -17)) ? 1 : 0;
+            if (MissionConditionFactory.field_b != null) {
+              stackIn_48_0 = (MissionConditionFactory.field_b.b((byte) -17)) ? 1 : 0;
             } else {
               stackIn_48_0 = 0;
             }
@@ -286,8 +286,8 @@ final class hnb extends iw implements oo {
             for (var7_int = 0; this.field_N.length > var7_int; var7_int++) {
               var8 = this.field_N[var7_int];
               if (psb.field_b != null &&
-                var8.field_c == efb.field_b.field_q &&
-                var8.field_a == efb.field_b.field_e) {
+                var8.field_c == MissionConditionFactory.field_b.field_q &&
+                var8.field_a == MissionConditionFactory.field_b.field_e) {
                 var6_int = var7_int;
               }
               var5_ref_String__[var7_int] = var8.field_c + "<times>" + var8.field_a;
@@ -300,7 +300,7 @@ final class hnb extends iw implements oo {
           var5Lifetime1 = this.field_Q.field_h / 2 + this.field_Q.field_g;
           this.field_Q.field_h = 150;
           this.field_Q.field_g = -this.field_Q.field_h + (var5Lifetime1 - 20);
-          this.field_W = this.a(jdb.field_a, (sba) (this), -14);
+          this.field_W = this.a(SetVariableLabelActionFactory.field_a, (sba) (this), -14);
           this.field_W.field_h = this.field_Q.field_h;
           this.field_W.field_x = false;
           this.field_W.field_g = var5Lifetime1 + 20;
@@ -646,7 +646,7 @@ final class hnb extends iw implements oo {
           String var3 = (String) null;
           hnb.a((byte) -60, (String) null);
         }
-        if (efb.field_b != null && efb.field_b.field_b &&
+        if (MissionConditionFactory.field_b != null && MissionConditionFactory.field_b.field_b &&
           null != this.field_R) {
           return this.field_R;
         }
@@ -682,7 +682,7 @@ final class hnb extends iw implements oo {
               if (null != this.field_P) {
                 var2 = this.field_P.a(0);
                 if (var2 >= 0) {
-                  efb.field_b.a(this.field_N[var2].field_a, 480, this.field_N[var2].field_c);
+                  MissionConditionFactory.field_b.a(this.field_N[var2].field_a, 480, this.field_N[var2].field_c);
                 }
                 SetReadyRoomMutatorTime.a(2, true);
                 this.field_v.a(false, new tda(this.field_v));

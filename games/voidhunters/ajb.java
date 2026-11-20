@@ -23,10 +23,10 @@ final class ajb extends IntrusiveNode {
         }
     }
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_f = null;
         if (param0 != 44) {
-          ajb.c((byte) 98);
+          ajb.clearSharedReferences((byte) 98);
         }
     }
 

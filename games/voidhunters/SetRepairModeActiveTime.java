@@ -114,7 +114,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           atb.field_b = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "opentome");
           GetPointDefenceLaserProjectileInterceptDamage.field_t = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "allowspectators");
           SetHealthBarHeight.field_p = new String[5];
-          SetHealthBarHeight.field_p[2] = tja.field_b;
+          SetHealthBarHeight.field_p[2] = CarouselSlot.field_b;
           SetHealthBarHeight.field_p[3] = SetPointDefenceLaserProjectiles.field_q;
           SetHealthBarHeight.field_p[1] = GetAngularForceDownshift.field_o;
           SetHealthBarHeight.field_p[0] = uob.field_f;
@@ -122,29 +122,29 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           DualLinkNode.field_f = new llb(0L, (llb) null);
           me.field_q = new llb(0L, GetThrusterBindingBalanceThreshold.field_p, kpb.field_r);
           GetDebrisGrabbingRange.field_o = new llb(0L, qsa.field_d, GetMessageMaxage.field_p);
-          tja.field_a = new soa(0L, new llb(0L, (llb) null), htb.field_w, GetUseNiceTrails.field_o);
+          CarouselSlot.field_a = new soa(0L, new llb(0L, (llb) null), htb.field_w, GetUseNiceTrails.field_o);
           DualLinkNode.field_f.b(-561, me.field_q);
           if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
             DualLinkNode.field_f.b(param1 - 10792, GetDebrisGrabbingRange.field_o);
           }
-          DualLinkNode.field_f.b(param1 - 10792, tja.field_a);
-          tja.field_a.field_xb.a(param1 + 8214, qc.field_q);
-          var23 = tja.field_a.field_xb;
+          DualLinkNode.field_f.b(param1 - 10792, CarouselSlot.field_a);
+          CarouselSlot.field_a.field_xb.a(param1 + 8214, qc.field_q);
+          var23 = CarouselSlot.field_a.field_xb;
           var24 = var23;
-          tja.field_a.field_xb.field_B = 1;
+          CarouselSlot.field_a.field_xb.field_B = 1;
           var24.field_F = 1;
           nna.field_v = new llb(0L, qc.field_q);
           nna.field_v.field_F = 1;
-          gmb.field_c = new llb(0L, SetPlayerRepairAmount.field_q, bw.field_a.toUpperCase());
+          SpawnChoiceFactory.field_c = new llb(0L, SetPlayerRepairAmount.field_q, bw.field_a.toUpperCase());
           qpb.field_w = new llb(0L, pa.field_a, SetMachineGunAimarc.field_o.toUpperCase());
           sra.field_a = new llb(0L, as.field_c);
           fwa.field_a = new llb(0L, GetThrusterBindingBalanceThreshold.field_p, GetLaserRandomness.field_o);
           GetSniperCannonAimspeed.field_q = new llb(0L, GetUseSprites.field_p, lw.field_e);
-          gs.field_b = new llb(0L, GetUseSprites.field_p, sc.field_b);
+          SettingsChangeFactory.field_b = new llb(0L, GetUseSprites.field_p, sc.field_b);
           GrapplingHook.field_C = new llb(0L, GetUseSprites.field_p, MissionGenerationData.field_e);
           GetDebrisDetachmentForceMultiplier.field_o = new llb(0L, GetUseSprites.field_p, SetTrapMouse.field_o);
           uga.field_h = new llb(0L, qsa.field_d, tea.field_c);
-          rgb.field_f = new soa(0L, new llb(0L, (llb) null), htb.field_w, GetUseNiceTrails.field_o);
+          MapClearanceCircle.field_f = new soa(0L, new llb(0L, (llb) null), htb.field_w, GetUseNiceTrails.field_o);
           GetMomentOfInertiaPerpointCalcDownshift.field_p = new llb(0L, SetGrapplingHookMaxExtension8Force.field_p, ev.field_b.toUpperCase());
           GetMomentOfInertiaPerpointCalcDownshift.field_p.field_y = GetGrapplingHooksDamageableBySourcePlayer.field_o;
           stackIn_6_0 = null;
@@ -166,13 +166,13 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           bqa.field_d.b(param1 - 10792, sra.field_a);
           sra.field_a.b(-561, fwa.field_a);
           sra.field_a.b(-561, GetSniperCannonAimspeed.field_q);
-          sra.field_a.b(param1 ^ -9672, gs.field_b);
+          sra.field_a.b(param1 ^ -9672, SettingsChangeFactory.field_b);
           if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
             sra.field_a.b(param1 ^ -9672, GrapplingHook.field_C);
           }
           sra.field_a.b(-561, GetDebrisDetachmentForceMultiplier.field_o);
           sra.field_a.b(-561, uga.field_h);
-          sra.field_a.b(-561, rgb.field_f);
+          sra.field_a.b(-561, MapClearanceCircle.field_f);
           if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
             bqa.field_d.b(-561, GetMomentOfInertiaPerpointCalcDownshift.field_p);
           }
@@ -225,7 +225,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
             }
           }
           GetLaserAimarc.field_o[2] = new llb(0L, SetShieldsDirectionalHalfarcCuts.field_p, kra.field_b);
-          SetReloadBarHeight.field_q[2] = new cna[]{new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, mpb.field_k), new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, GetPointDefenceLaserProjectileInterceptDamage.field_t[0], nl.field_j), new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, GetPointDefenceLaserProjectileInterceptDamage.field_t[1], ns.field_a)};
+          SetReloadBarHeight.field_q[2] = new cna[]{new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, mpb.field_k), new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, GetPointDefenceLaserProjectileInterceptDamage.field_t[0], nl.field_j), new cna(0L, tia.field_M, (llb) null, GetMissionDebrisDefaultProbability.field_o, GetPointDefenceLaserProjectileInterceptDamage.field_t[1], SettingsInstanceFactory.field_a)};
           if (GetDebrisThrowable.field_r > 1) {
             GetLaserAimarc.field_o[3] = new llb(0L, SetShieldsDirectionalHalfarcCuts.field_p, GetMassDriverProjectileOndamageParticles.field_o);
             array$1 = new cna[1 + GetDebrisThrowable.field_r];

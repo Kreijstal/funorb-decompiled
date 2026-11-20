@@ -236,10 +236,10 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 >= -18) {
-          SetPhasedEnergyBeamProjectiles.a(21);
+          SetPhasedEnergyBeamProjectiles.clearSharedReferences(21);
         }
     }
 

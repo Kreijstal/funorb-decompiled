@@ -35,11 +35,11 @@ final class SetCountermeasureLauncherEnergyUsed extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         field_o = null;
         if (param0 != 28) {
-          SetCountermeasureLauncherEnergyUsed.e((byte) -51);
+          SetCountermeasureLauncherEnergyUsed.clearSharedReferences((byte) -51);
         }
     }
 

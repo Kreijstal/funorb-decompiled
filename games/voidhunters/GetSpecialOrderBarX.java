@@ -4,10 +4,10 @@
 final class GetSpecialOrderBarX extends ConsoleCommand {
     static String field_o;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 != -115) {
-          GetSpecialOrderBarX.e((byte) 82);
+          GetSpecialOrderBarX.clearSharedReferences((byte) 82);
         }
     }
 

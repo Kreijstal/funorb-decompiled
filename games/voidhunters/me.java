@@ -197,16 +197,16 @@ final class me extends pja {
         var53 = null;
         var41 = VoidHunters.field_G;
         try {
-          stackIn_3_0 = rgb.field_f;
+          stackIn_3_0 = MapClearanceCircle.field_f;
           stackIn_3_1 = 38;
           stackIn_3_2 = 2;
           stackIn_3_3 = (nna.field_w * 4 + 8) * param1;
-          stackIn_4_4 = (qg.field_a == rgb.field_f);
+          stackIn_4_4 = (qg.field_a == MapClearanceCircle.field_f);
           var7_int = ((soa) (Object) stackIn_3_0).a((byte) stackIn_3_1, stackIn_3_2, stackIn_3_3, stackIn_4_4, param2, nna.field_w * 2 + 4) ? 1 : 0;
           if (param6 <= 108) {
             me.clearSharedReferences(false);
           }
-          var8 = rgb.field_f.field_wb.field_lb;
+          var8 = MapClearanceCircle.field_f.field_wb.field_lb;
           var9 = wt.a(false);
           var11 = null;
           var12 = (mm) (var8.first(0));
@@ -377,7 +377,7 @@ final class me extends pja {
             var12.field_bc.field_G = 0;
             var30 = var12.field_bc;
             var30.field_hb = 0;
-            var12.field_hb = rgb.field_f.field_wb.field_hb;
+            var12.field_hb = MapClearanceCircle.field_f.field_wb.field_hb;
             var31 = 0;
             var32 = var12.field_Vb;
             if (!var12.e((byte) 58)) {
@@ -422,7 +422,7 @@ final class me extends pja {
               var12.field_dc.a(70, -40, 78, var31, nna.field_w);
               if (var12.field_dc.field_O &&
                 !var12.field_dc.field_R.equals(var32)) {
-                lob.field_a = var32;
+                NebulaFieldFactory.field_a = var32;
               }
               var12.field_yb.field_R = Integer.toString(var12.field_zb);
               if (!var12.field_Gb) {
@@ -440,12 +440,12 @@ final class me extends pja {
               stackIn_67_0 = (GetGrapplingHooksDamageableBySourcePlayer.field_o) ? 250 : 200;
               var33_intLifetime1 = stackIn_67_0;
               var12.field_Lb.a(var33_intLifetime1, 28, -var33_intLifetime1 + 363, var31, nna.field_w);
-              var34_int = hi.field_a;
+              var34_int = MissionListFactory.field_a;
               if ((1 << ar.field_b & var14Lifetime1) != 0) {
                 var50_ref = SpriteDimensions.field_o[var12.field_Cb];
                 var12.field_Wb.field_tb = var50_ref;
                 var12.field_Wb.a(var34_int, 32, var50_ref.field_m, 0, var12.field_Lb.field_G);
-                var34_int = var34_int + (hi.field_a + var50_ref.field_m);
+                var34_int = var34_int + (MissionListFactory.field_a + var50_ref.field_m);
               }
               if ((var14Lifetime1 & 1 << ujb.field_g) != 0) {
                 if (!var12.field_cc) {
@@ -463,13 +463,13 @@ final class me extends pja {
                 var51_ref = stackIn_79_0[stackIn_80_1];
                 var12.field_Eb.field_tb = var51_ref;
                 var12.field_Eb.a(var34_int, 35, var51_ref.field_m, 0, var12.field_Lb.field_G);
-                var34_int = var34_int + (var51_ref.field_m + hi.field_a);
+                var34_int = var34_int + (var51_ref.field_m + MissionListFactory.field_a);
               }
               if ((1 << GetShipToShipRamDamage.field_o & var14Lifetime1) != 0) {
                 var52_ref = GetPointDefenceLaserProjectileInterceptDamage.field_t[var12.field_Bb - 1];
                 var12.field_Ab.field_tb = var52_ref;
                 var12.field_Ab.a(var34_int, 117, var52_ref.field_m, 0, var12.field_Lb.field_G);
-                var34_int = var34_int + (var52_ref.field_m + hi.field_a);
+                var34_int = var34_int + (var52_ref.field_m + MissionListFactory.field_a);
               }
               if (0 != (1 << GetFighterVision.field_o & var14Lifetime1)) {
                 stackIn_87_0 = hnb.field_U;
@@ -481,7 +481,7 @@ final class me extends pja {
                 var53_ref = stackIn_87_0[stackIn_88_1];
                 var12.field_Rb.field_tb = var53_ref;
                 var12.field_Rb.a(var34_int, 121, var53_ref.field_m, 0, var12.field_Lb.field_G);
-                var34_int = var34_int + (var53_ref.field_m + hi.field_a);
+                var34_int = var34_int + (var53_ref.field_m + MissionListFactory.field_a);
               }
               if (null != SetPointDefenceLaserAimarc.field_p) {
                 for (var36Lifetime1 = 0; var36Lifetime1 < ocb.field_l; var36Lifetime1++) {
@@ -491,7 +491,7 @@ final class me extends pja {
                     var54 = var42;
                     var12.field_Zb[var36Lifetime1].field_tb = var42;
                     var12.field_Zb[var36Lifetime1].a(var34_int, 120, var54.field_m, 0, var12.field_Lb.field_G);
-                    var34_int = var34_int + (var54.field_m + hi.field_a);
+                    var34_int = var34_int + (var54.field_m + MissionListFactory.field_a);
                   }
                 }
               }
@@ -564,7 +564,7 @@ final class me extends pja {
               var12.field_E = var31 - var12.field_G;
             }
             if (var13 != 0) {
-              rgb.field_f.field_wb.a((llb) (var11), 2, var12, -25);
+              MapClearanceCircle.field_f.field_wb.a((llb) (var11), 2, var12, -25);
             }
             for (var34_intLifetime2 = 0; var34_intLifetime2 < ocb.field_l; var34_intLifetime2++) {
               if (var12.field_Zb[var34_intLifetime2].field_O) {
@@ -578,9 +578,9 @@ final class me extends pja {
                   var35 = null;
                 }
                 if (var35 != null) {
-                  lob.field_a = ClientException.field_c[var34_intLifetime2] + " - " + (String) (var35);
+                  NebulaFieldFactory.field_a = ClientException.field_c[var34_intLifetime2] + " - " + (String) (var35);
                 } else {
-                  lob.field_a = ClientException.field_c[var34_intLifetime2];
+                  NebulaFieldFactory.field_a = ClientException.field_c[var34_intLifetime2];
                 }
               }
             }
@@ -590,7 +590,7 @@ final class me extends pja {
               } else {
                 var34Lifetime2 = GetDebrisGroupColour.field_p;
               }
-              lob.field_a = gib.field_c + " - " + var34Lifetime2;
+              NebulaFieldFactory.field_a = gib.field_c + " - " + var34Lifetime2;
             }
             if (var12.field_Rb.field_O) {
               if (!var12.field_xb) {
@@ -598,28 +598,28 @@ final class me extends pja {
               } else {
                 stackIn_152_0 = GetTorpedoAimspeed.field_p;
               }
-              lob.field_a = stackIn_152_0;
+              NebulaFieldFactory.field_a = stackIn_152_0;
             }
             if (var12.field_Eb.field_O) {
               if (!var12.field_cc &&
                 !var12.field_ac) {
                 if (var12.field_Gb) {
-                  stackIn_160_0 = rdb.field_f;
+                  stackIn_160_0 = SpawnPoint.field_f;
                 } else {
                   stackIn_160_0 = GetMissilesCooldown.field_o;
                 }
               } else {
                 stackIn_160_0 = gda.field_k;
               }
-              lob.field_a = stackIn_160_0;
+              NebulaFieldFactory.field_a = stackIn_160_0;
             }
             if (var12.field_Ab.field_O) {
               if (var12.field_Bb != 2) {
-                stackIn_165_0 = jja.field_b;
+                stackIn_165_0 = CarouselSystemEventFactory.field_b;
               } else {
                 stackIn_165_0 = tla.field_h;
               }
-              lob.field_a = stackIn_165_0;
+              NebulaFieldFactory.field_a = stackIn_165_0;
             }
             boolean decompiledFrameRemainder0 = true;
             if (var12.field_o != 0 &&
@@ -630,7 +630,7 @@ final class me extends pja {
                 if (var12.field_fc && (!var12.field_Gb ||
                   !var12.field_cc &&
                   !var12.field_ac)) {
-                  jua.a(var12.f((byte) -13), param4, 20694);
+                  ArmBehaviourFactory.a(var12.f((byte) -13), param4, 20694);
                   decompiledFrameRemainder0 = false;
                 }
                 else {

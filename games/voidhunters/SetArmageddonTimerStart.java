@@ -4,10 +4,10 @@
 final class SetArmageddonTimerStart extends ConsoleCommand {
     static String field_o;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 < 121) {
-          SetArmageddonTimerStart.e((byte) -70);
+          SetArmageddonTimerStart.clearSharedReferences((byte) -70);
         }
     }
 

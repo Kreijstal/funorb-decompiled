@@ -6,7 +6,7 @@ final class GetDebrisCarryOver extends ConsoleCommand {
     static int field_o;
     static String field_q;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_q = null;
         if (param0 < 34) {
           GetDebrisCarryOver.a(-45, -91, 32, -35, 52, 118, 51, -43, 19, 16, 38);

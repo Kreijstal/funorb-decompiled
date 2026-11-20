@@ -17,7 +17,7 @@ final class kmb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 18700) {
-            kmb.a(9);
+            kmb.clearSharedReferences(9);
           }
           if (di.field_l == null) {
             return;
@@ -38,7 +38,7 @@ final class kmb {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 == 32768) {
           field_d = null;
           field_e = null;

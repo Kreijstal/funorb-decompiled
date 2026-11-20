@@ -8,9 +8,9 @@ final class GetMissionVariablesHudX extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 18841) {
-          GetMissionVariablesHudX.a(98);
+          GetMissionVariablesHudX.clearSharedReferences(98);
           field_o = null;
           return;
         }

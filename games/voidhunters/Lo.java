@@ -113,7 +113,7 @@ final class Lo extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= -119) {
-            stackIn_4_0 = new ConsoleValue(upa.a(-8225));
+            stackIn_4_0 = new ConsoleValue(ShipComponentFactory.a(-8225));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

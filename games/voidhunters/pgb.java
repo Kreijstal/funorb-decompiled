@@ -16,7 +16,7 @@ final class pgb {
     String field_o;
     int field_a;
     int field_c;
-    static dja field_g;
+    static GameStateFactory field_g;
     static String field_l;
     static String field_p;
 
@@ -90,7 +90,7 @@ final class pgb {
     final int a(int param0) {
         if (!this.field_k && (this.field_a != 2 ||
           0 >= this.field_c)) {
-          if (~this.field_i == ~wqa.field_a) {
+          if (~this.field_i == ~BodyInZoneConditionFactory.field_a) {
             return 1;
           }
           if (iwa.field_b == 2 &&
@@ -155,7 +155,7 @@ final class pgb {
 
     static {
         field_b = new gl(3);
-        field_g = (dja) ((Object) new gfb());
+        field_g = (GameStateFactory) ((Object) new EscapePodFactory());
         field_p = "Toggle condition not";
         field_l = "ESC - cancel private message";
     }

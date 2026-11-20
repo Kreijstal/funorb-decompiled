@@ -109,7 +109,7 @@ final class aw extends llb {
         GetSalvoDamageMultiplier.field_q = 1;
         GetUseSprites.field_o = 1;
         AwardVictoryToWinnerAction.field_b = 1;
-        wkb.field_c = 1;
+        SetVariableActionFactory.field_c = 1;
         if (param0) {
           return;
         }
@@ -119,7 +119,7 @@ final class aw extends llb {
           GetSalvoDamageMultiplier.field_q = 0;
           SetSalvoDamageMultiplier.field_o = 0;
           AwardVictoryToWinnerAction.field_b = 0;
-          wkb.field_c = 0;
+          SetVariableActionFactory.field_c = 0;
           GetMissilesExplosionPower.field_p = 0;
         } else {
           if (1 == GetMissileLauncherProjectileLife.field_p) {

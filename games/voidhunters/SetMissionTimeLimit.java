@@ -33,7 +33,7 @@ final class SetMissionTimeLimit extends ConsoleCommand {
     }
 
     final static void a(int param0, int param1, int param2) {
-        be var3 = new be();
+        AdminMessage var3 = new AdminMessage();
         var3.index = param1;
         var3.value = param0;
         SetBuildViewAutozoomEndOnAction.a(0, var3, RequestNewestBlackboxRecording.field_p, 70);
@@ -59,9 +59,9 @@ final class SetMissionTimeLimit extends ConsoleCommand {
           if (param1 <= 9) {
             SetMissionTimeLimit.a(-34, -13, 122);
           }
-          efb.field_b = param0;
-          if (null != efb.field_b &&
-            efb.field_b.field_b) {
+          MissionConditionFactory.field_b = param0;
+          if (null != MissionConditionFactory.field_b &&
+            MissionConditionFactory.field_b.field_b) {
             stackIn_7_0 = 1;
           } else {
             stackIn_7_0 = 0;

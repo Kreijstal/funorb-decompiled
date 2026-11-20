@@ -276,11 +276,11 @@ class htb extends shb {
           this.field_z = 0;
           if (this.field_n != 0 &&
             hu.field_b != this.field_n) {
-            if (this.a(uia.field_b, param1, kc.field_b, param0, (byte) 22) &&
+            if (this.a(uia.field_b, param1, PlayerGameData.field_b, param0, (byte) 22) &&
               hu.field_b == 0) {
-              this.c(this.field_n, -param1 + kc.field_b, 23015, uia.field_b - param0);
+              this.c(this.field_n, -param1 + PlayerGameData.field_b, 23015, uia.field_b - param0);
             }
-            this.a((byte) -106, param1, uia.field_b, param0, param3, kc.field_b);
+            this.a((byte) -106, param1, uia.field_b, param0, param3, PlayerGameData.field_b);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "htb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class GetFixedaim extends ConsoleCommand {
-    static dja field_q;
+    static GameStateFactory field_q;
     static int field_p;
     static int field_o;
 
@@ -74,7 +74,7 @@ final class GetFixedaim extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -70) {
           field_o = -17;
         }
@@ -95,75 +95,75 @@ final class GetFixedaim extends ConsoleCommand {
             int[][] var6_array;
             int[] var7_ref_int__;
             int var7;
-            wfb var8_ref_wfb;
+            ShipComponentDefinition var8_ref_wfb;
             int var8;
             int var9;
             long var10;
             long var12;
             int var14;
             Object var16;
-            wfb var16_ref;
+            ShipComponentDefinition var16_ref;
             Object var17;
-            wfb var17_ref;
+            ShipComponentDefinition var17_ref;
             Object var18;
-            wfb var18_ref;
+            ShipComponentDefinition var18_ref;
             Object var19;
-            wfb var19_ref;
-            wfb var20;
+            ShipComponentDefinition var19_ref;
+            ShipComponentDefinition var20;
             int[] var21;
             Object var22;
-            wfb var22_ref;
+            ShipComponentDefinition var22_ref;
             int[] var23;
             Object var24;
-            wfb var24_ref;
+            ShipComponentDefinition var24_ref;
             Object var25;
-            wfb var25_ref;
+            ShipComponentDefinition var25_ref;
             int[] var26;
             Object var27;
-            wfb var27_ref;
+            ShipComponentDefinition var27_ref;
             int[] var28;
             Object var29;
-            wfb var29_ref;
+            ShipComponentDefinition var29_ref;
             Object var30;
-            wfb var30_ref;
+            ShipComponentDefinition var30_ref;
             Object var31;
-            wfb var31_ref;
+            ShipComponentDefinition var31_ref;
             Object var32;
-            wfb var32_ref;
+            ShipComponentDefinition var32_ref;
             int[] var33;
             Object var34;
-            wfb var34_ref;
+            ShipComponentDefinition var34_ref;
             int[] var35;
             Object var36;
-            wfb var36_ref;
+            ShipComponentDefinition var36_ref;
             int[] var37;
             Object var38;
-            wfb var38_ref;
+            ShipComponentDefinition var38_ref;
             Object var39;
-            wfb var39_ref;
+            ShipComponentDefinition var39_ref;
             Object var40;
-            wfb var40_ref;
+            ShipComponentDefinition var40_ref;
             int[] var41;
             Object var44;
-            wfb var44_ref;
+            ShipComponentDefinition var44_ref;
             Object var46;
-            wfb var46_ref;
+            ShipComponentDefinition var46_ref;
             Object var48;
-            wfb var48_ref;
+            ShipComponentDefinition var48_ref;
             Object var50;
-            wfb var50_ref;
+            ShipComponentDefinition var50_ref;
             Object var52;
-            wfb var52_ref;
+            ShipComponentDefinition var52_ref;
             Object var54;
-            wfb var54_ref;
+            ShipComponentDefinition var54_ref;
             Object var56;
-            wfb var56_ref;
+            ShipComponentDefinition var56_ref;
             Object var58;
-            wfb var58_ref;
+            ShipComponentDefinition var58_ref;
             Object var60;
-            wfb var60_ref;
+            ShipComponentDefinition var60_ref;
             int[] var61;
-            wfb var62;
+            ShipComponentDefinition var62;
             int[][] var63;
             int[] var64;
             int[] var65;
@@ -330,84 +330,84 @@ final class GetFixedaim extends ConsoleCommand {
                         }
                         case 1: {
                             try {
-                                hab.field_g = new wfb[56];
-                                var16_ref = new wfb(new int[]{5, 0, -5, 4, -5, -4}, 0, 0);
-                                var16_ref.a(1, new lsb(5, 0, 0));
-                                var16_ref.a(param0 - 27, new lsb(2, -2, -2048));
-                                var16_ref.a(102, new lsb(2, 2, 2048));
-                                var16_ref.a(param0 ^ -56, new lsb(-1, 0, 0));
-                                var16_ref.a(-120, new lsb(-5, 0, 4096));
+                                hab.field_g = new ShipComponentDefinition[56];
+                                var16_ref = new ShipComponentDefinition(new int[]{5, 0, -5, 4, -5, -4}, 0, 0);
+                                var16_ref.a(1, new HardpointDefinition(5, 0, 0));
+                                var16_ref.a(param0 - 27, new HardpointDefinition(2, -2, -2048));
+                                var16_ref.a(102, new HardpointDefinition(2, 2, 2048));
+                                var16_ref.a(param0 ^ -56, new HardpointDefinition(-1, 0, 0));
+                                var16_ref.a(-120, new HardpointDefinition(-5, 0, 4096));
                                 hab.field_g[0] = var16_ref;
                                 var16_ref.field_w = new int[][]{new int[]{-2564, 0, -2564, -2086, -1456, -1626, -1456, -2233, -745, -2400, -117, -1103, 2559, 0}, new int[]{-515, -1919, 405, -1773, -305, -1501}};
-                                hab.field_g[1] = new wfb(new int[]{40, 0, 0, 40, -40, 0, 0, -40}, 0, 0);
-                                hab.field_g[1].a(-119, new lsb(40, 0, 0));
-                                hab.field_g[1].a(53, new lsb(0, 40, 2048));
-                                hab.field_g[1].a(-9, new lsb(-40, 0, 4096));
-                                hab.field_g[1].a(18, new lsb(0, -40, -2048));
+                                hab.field_g[1] = new ShipComponentDefinition(new int[]{40, 0, 0, 40, -40, 0, 0, -40}, 0, 0);
+                                hab.field_g[1].a(-119, new HardpointDefinition(40, 0, 0));
+                                hab.field_g[1].a(53, new HardpointDefinition(0, 40, 2048));
+                                hab.field_g[1].a(-9, new HardpointDefinition(-40, 0, 4096));
+                                hab.field_g[1].a(18, new HardpointDefinition(0, -40, -2048));
                                 hab.field_g[1].a(1024, true);
                                 hab.field_g[1].field_h = 1024;
-                                hab.field_g[2] = new wfb(new int[]{10, 0, 0, 10, -10, 0, 0, -10}, 0, 0);
-                                hab.field_g[2].a(10, new lsb(10, 0, 0));
-                                hab.field_g[2].a(31, new lsb(0, 10, 2048));
-                                hab.field_g[2].a(-120, new lsb(-10, 0, 4096));
-                                hab.field_g[2].a(param0 - 71, new lsb(0, -10, -2048));
+                                hab.field_g[2] = new ShipComponentDefinition(new int[]{10, 0, 0, 10, -10, 0, 0, -10}, 0, 0);
+                                hab.field_g[2].a(10, new HardpointDefinition(10, 0, 0));
+                                hab.field_g[2].a(31, new HardpointDefinition(0, 10, 2048));
+                                hab.field_g[2].a(-120, new HardpointDefinition(-10, 0, 4096));
+                                hab.field_g[2].a(param0 - 71, new HardpointDefinition(0, -10, -2048));
                                 hab.field_g[2].a(1024, true);
-                                var17_ref = new wfb(new int[]{2, 0, -2, 1, -2, -1}, 0, 0);
+                                var17_ref = new ShipComponentDefinition(new int[]{2, 0, -2, 1, -2, -1}, 0, 0);
                                 var17_ref.field_t = new ThrusterBehaviour();
                                 var17_ref.field_w = new int[][]{new int[]{-1024, 0, -1024, -517, -486, -517, -104, -423, 151, -219, 151, 0}};
                                 hab.field_g[12] = var17_ref;
                                 var17_ref.field_a = 5;
-                                var18_ref = new wfb(new int[]{3, 0, -4, 3, -4, -3}, 0, 0);
+                                var18_ref = new ShipComponentDefinition(new int[]{3, 0, -4, 3, -4, -3}, 0, 0);
                                 var18_ref.field_t = new ThrusterBehaviour();
                                 var18_ref.field_a = 5;
                                 hab.field_g[13] = var18_ref;
                                 var18_ref.field_w = new int[][]{new int[]{-2049, 0, -2049, -1547, -1223, -1547, -784, -1108, 376, -1108, 941, -543, 941, 0}};
-                                var19_ref = new wfb(new int[]{10, 0, -8, 4, -8, -4}, 0, 0);
+                                var19_ref = new ShipComponentDefinition(new int[]{10, 0, -8, 4, -8, -4}, 0, 0);
                                 var19_ref.field_t = new ThrusterBehaviour(46);
                                 var19_ref.a((byte) -128, 5);
                                 var19_ref.field_w = new int[][]{new int[]{-4112, 0, -4112, -2233, -2941, -2233, -2313, -1605, 4358, -1605, 5132, -832, 5132, 0}};
                                 var19_ref.field_a = 5;
                                 hab.field_g[46] = var19_ref;
-                                hab.field_g[14] = new wfb(new int[]{2, -1, 2, 1, -2, 0}, -2, 0);
+                                hab.field_g[14] = new ShipComponentDefinition(new int[]{2, -1, 2, 1, -2, 0}, -2, 0);
                                 hab.field_g[14].field_c = new WeaponBehaviour(11);
                                 hab.field_g[14].field_w = new int[][]{new int[]{-1019, 0, -1019, -402, 658, -402, 658, -203, 1024, -203, 1024, 0}};
                                 hab.field_g[14].field_a = 0;
-                                hab.field_g[15] = new wfb(new int[]{5, -1, 5, 1, -5, 3, -5, -3}, -5, 0);
+                                hab.field_g[15] = new ShipComponentDefinition(new int[]{5, -1, 5, 1, -5, 3, -5, -3}, -5, 0);
                                 hab.field_g[15].field_c = new WeaponBehaviour(0);
                                 hab.field_g[15].field_a = 0;
                                 hab.field_g[15].field_w = new int[][]{new int[]{-2562, 0, -2562, -1464, -826, -1464, -324, -962, 627, -962, 627, -627, 2562, -627, 2562, 0}};
-                                hab.field_g[16] = new wfb(new int[]{10, -3, 10, 3, -10, 1, -10, -1}, -10, 0);
+                                hab.field_g[16] = new ShipComponentDefinition(new int[]{10, -3, 10, 3, -10, 1, -10, -1}, -10, 0);
                                 hab.field_g[16].field_c = new WeaponBehaviour(3);
                                 hab.field_g[16].field_w = new int[][]{new int[]{-5124, 0, -5124, -512, -4810, -826, 1202, -836, 1558, -1192, 4193, -1192, 4538, -1537, 5124, -1532, 5124, 0}};
                                 hab.field_g[16].field_a = 0;
-                                hab.field_g[27] = new wfb(new int[]{8, -3, 8, 3, -8, 1, -8, -1}, -8, 0);
+                                hab.field_g[27] = new ShipComponentDefinition(new int[]{8, -3, 8, 3, -8, 1, -8, -1}, -8, 0);
                                 hab.field_g[27].field_c = new WeaponBehaviour(8);
                                 hab.field_g[27].a((byte) -118, 2);
                                 hab.field_g[27].field_w = new int[][]{new int[]{-4099, 0, -3911, -606, -2467, -983, 4078, -1547, 3911, -1024, 3220, -794, 2928, 0}};
                                 hab.field_g[27].field_a = 4;
-                                hab.field_g[17] = new wfb(new int[]{10, -5, 10, 5, -10, 3, -10, -3}, -10, 0);
+                                hab.field_g[17] = new ShipComponentDefinition(new int[]{10, -5, 10, 5, -10, 3, -10, -3}, -10, 0);
                                 hab.field_g[17].field_c = new WeaponBehaviour(1);
                                 hab.field_g[17].field_a = 0;
-                                hab.field_g[19] = new wfb(new int[]{40, 5, -40, 5, -40, -5, 40, -5}, -35, 0);
-                                hab.field_g[19].a(20, new lsb(40, 0, 0));
-                                hab.field_g[19].field_e = new kma();
-                                hab.field_g[20] = new wfb(new int[]{20, 5, -20, 5, -20, -5, 20, -5}, -15, 0);
-                                hab.field_g[20].a(74, new lsb(20, 0, 0));
-                                hab.field_g[20].field_e = new kma();
-                                hab.field_g[29] = new wfb(new int[]{5, -5, 5, 5, -5, 5, -5, -5}, -5, 0);
-                                hab.field_g[29].a(12, new lsb(5, 0, 0));
-                                hab.field_g[29].a(-115, new lsb(0, 5, 2048));
-                                hab.field_g[29].a(param0 - 190, new lsb(0, -5, -2048));
+                                hab.field_g[19] = new ShipComponentDefinition(new int[]{40, 5, -40, 5, -40, -5, 40, -5}, -35, 0);
+                                hab.field_g[19].a(20, new HardpointDefinition(40, 0, 0));
+                                hab.field_g[19].field_e = new ArmBehaviour();
+                                hab.field_g[20] = new ShipComponentDefinition(new int[]{20, 5, -20, 5, -20, -5, 20, -5}, -15, 0);
+                                hab.field_g[20].a(74, new HardpointDefinition(20, 0, 0));
+                                hab.field_g[20].field_e = new ArmBehaviour();
+                                hab.field_g[29] = new ShipComponentDefinition(new int[]{5, -5, 5, 5, -5, 5, -5, -5}, -5, 0);
+                                hab.field_g[29].a(12, new HardpointDefinition(5, 0, 0));
+                                hab.field_g[29].a(-115, new HardpointDefinition(0, 5, 2048));
+                                hab.field_g[29].a(param0 - 190, new HardpointDefinition(0, -5, -2048));
                                 hab.field_g[29].field_a = 2;
-                                hab.field_g[23] = new wfb(new int[]{3, -3, 3, 3, -3, 1, -3, -1}, -3, 0);
+                                hab.field_g[23] = new ShipComponentDefinition(new int[]{3, -3, 3, 3, -3, 1, -3, -1}, -3, 0);
                                 hab.field_g[23].field_c = new WeaponBehaviour(4);
                                 hab.field_g[23].field_w = new int[][]{new int[]{-1537, 0, -1537, -752, -1401, -888, -345, -888, 596, -1819, 1244, -1171, 543, -470, 1537, -470, 1537, 5}};
                                 hab.field_g[23].field_a = 0;
-                                hab.field_g[24] = new wfb(new int[]{4, -1, 4, 1, -4, 1, -4, -1}, -4, 0);
+                                hab.field_g[24] = new ShipComponentDefinition(new int[]{4, -1, 4, 1, -4, 1, -4, -1}, -4, 0);
                                 hab.field_g[24].field_c = new WeaponBehaviour(6);
                                 hab.field_g[24].field_w = new int[][]{new int[]{-2049, 0, -2049, -512, -1045, -512, -1045, -324, -151, -324, -151, -156, 1181, -156, 1537, -512, 2049, 0}};
                                 hab.field_g[24].field_a = 0;
-                                hab.field_g[25] = new wfb(new int[]{8, -1, 8, 1, -8, 2, -8, -2}, -8, 0);
+                                hab.field_g[25] = new ShipComponentDefinition(new int[]{8, -1, 8, 1, -8, 2, -8, -2}, -8, 0);
                                 hab.field_g[25].field_c = new WeaponBehaviour(7);
                                 if (param0 == 64) {
                                     statePc = 3;
@@ -415,7 +415,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 } else {
                                     /* Inlined CFG state: 2. */
                                     {
-                                        GetFixedaim.e((byte) 124);
+                                        GetFixedaim.clearSharedReferences((byte) 124);
                                         statePc = 3;
                                         continue scanLoop1;
                                     }
@@ -433,28 +433,28 @@ final class GetFixedaim extends ConsoleCommand {
                             try {
                                 hab.field_g[25].field_a = 0;
                                 hab.field_g[25].field_w = new int[][]{new int[]{-4109, 0, -4109, -1129, 428, -1129, 428, -836, 1871, -836, 1871, -606, 4099, -606, 4099, -130, 1861, -130, 1861, 0}};
-                                hab.field_g[26] = new wfb(new int[]{6, -4, 6, 4, -6, 3, -6, -3}, -6, 0);
+                                hab.field_g[26] = new ShipComponentDefinition(new int[]{6, -4, 6, 4, -6, 3, -6, -3}, -6, 0);
                                 hab.field_g[26].field_x = new GrappleLauncherBehaviour();
                                 hab.field_g[26].a((byte) -103, 0);
                                 hab.field_g[26].field_w = new int[][]{new int[]{-3074, 0, -3074, -1003, -2854, -1223, -2185, -1223, -1840, -1568, -62, -1568, 428, -2049, 3084, -2049, 3084, -1192, 2562, -1192, 2562, 0}};
                                 hab.field_g[26].field_a = 4;
-                                hab.field_g[28] = new wfb(new int[]{3, -3, 3, 3, -3, 3, -3, -3}, 0, 0);
+                                hab.field_g[28] = new ShipComponentDefinition(new int[]{3, -3, 3, 3, -3, 3, -3, -3}, 0, 0);
                                 hab.field_g[28].field_w = new int[][]{new int[]{-1537, 0, -1537, -653, -653, -1537, 653, -1537, 1532, -658, 1532, 5}, new int[]{-658, -1537, 10, -2196, 669, -1537, 1537, -1537, 1537, -669, 2206, 0}, new int[]{-658, -1537, -1537, -1537, -1537, -653, -2196, 0}};
-                                hab.field_g[42] = new wfb(new int[]{5, -8, 5, 8, -5, 5, -5, -5}, -5, 0);
-                                hab.field_g[42].field_g = new mua();
+                                hab.field_g[42] = new ShipComponentDefinition(new int[]{5, -8, 5, 8, -5, 5, -5, -5}, -5, 0);
+                                hab.field_g[42].field_g = new ShieldBehaviour();
                                 hab.field_g[42].a((byte) -126, 3);
                                 hab.field_g[42].field_w = new int[][]{new int[]{-2562, 0, -2562, -2572, -1662, -2572, -1662, -2091, -658, -2091, -658, -3994, 282, -3994, 1035, -3618, 1579, -2969, 2081, -2154, 2332, -1171, 2415, 0}};
                                 hab.field_g[42].field_a = 1;
-                                hab.field_g[43] = new wfb(new int[]{3, -1, 3, 1, -3, 1, -3, -1}, -3, 0);
+                                hab.field_g[43] = new ShipComponentDefinition(new int[]{3, -1, 3, 1, -3, 1, -3, -1}, -3, 0);
                                 hab.field_g[43].field_c = new WeaponBehaviour(9);
                                 hab.field_g[43].field_w = new int[][]{new int[]{-1537, 0, -1537, -512, -1045, -512, -1045, -386, -444, -386, -444, -177, 690, -177, 1024, -512, 1537, 0}};
                                 hab.field_g[43].field_a = 1;
-                                hab.field_g[44] = new wfb(new int[]{3, -3, 3, 3, -3, 5, -3, -5}, -3, 0);
+                                hab.field_g[44] = new ShipComponentDefinition(new int[]{3, -3, 3, 3, -3, 5, -3, -5}, -3, 0);
                                 hab.field_g[44].field_c = new WeaponBehaviour(10);
                                 hab.field_g[44].a((byte) -105, 7);
                                 hab.field_g[44].field_a = 1;
                                 hab.field_g[44].field_w = new int[][]{new int[]{-1537, 0, -1537, -522, -491, -2572, -73, -2572, -73, -669, 1537, 0}};
-                                hab.field_g[47] = new wfb(new int[]{20, -18, 20, 18, -11, 18, -11, 5, -20, 5, -20, -5, -11, -5, -11, -18}, -20, 0);
+                                hab.field_g[47] = new ShipComponentDefinition(new int[]{20, -18, 20, 18, -11, 18, -11, 5, -20, 5, -20, -5, -11, -5, -11, -18}, -20, 0);
                                 hab.field_g[47].field_B = 0;
                                 hab.field_g[47].field_A = new int[][]{new int[]{5, 6, 3, 4}, new int[]{7, 0, 1, 2}};
                                 hab.field_g[47].field_a = 6;
@@ -531,17 +531,17 @@ final class GetFixedaim extends ConsoleCommand {
                             try {
                                 var1_int = 2560;
                                 var2 = (int)((double)var1_int * Math.sin(1.0471975511965976));
-                                hab.field_g[30] = new wfb(new int[]{var2, 0, -var2, var1_int, -var2, -var1_int}, -var2, 0);
+                                hab.field_g[30] = new ShipComponentDefinition(new int[]{var2, 0, -var2, var1_int, -var2, -var1_int}, -var2, 0);
                                 var3 = 1365;
-                                hab.field_g[30].a(-119, new lsb(0, var1_int / 2, var3));
-                                hab.field_g[30].a(param0 + 50, new lsb(0, -var1_int / 2, -var3));
+                                hab.field_g[30].a(-119, new HardpointDefinition(0, var1_int / 2, var3));
+                                hab.field_g[30].a(param0 + 50, new HardpointDefinition(0, -var1_int / 2, -var3));
                                 hab.field_g[30].a(106, 15);
                                 hab.field_g[30].field_a = 2;
-                                var20 = new wfb(new int[]{-var1_int, -var1_int, var1_int, -var1_int, var1_int + var2 * 2, 0, var1_int, var1_int, -var1_int, var1_int}, -var1_int, 0);
-                                var20.a(-116, new lsb(var1_int + var2, var1_int / 2, var3));
-                                var20.a(96, new lsb(var2 + var1_int, -var1_int / 2, -var3));
-                                var20.a(-126, new lsb(0, var1_int, 2048));
-                                var20.a(-11, new lsb(0, -var1_int, -2048));
+                                var20 = new ShipComponentDefinition(new int[]{-var1_int, -var1_int, var1_int, -var1_int, var1_int + var2 * 2, 0, var1_int, var1_int, -var1_int, var1_int}, -var1_int, 0);
+                                var20.a(-116, new HardpointDefinition(var1_int + var2, var1_int / 2, var3));
+                                var20.a(96, new HardpointDefinition(var2 + var1_int, -var1_int / 2, -var3));
+                                var20.a(-126, new HardpointDefinition(0, var1_int, 2048));
+                                var20.a(-11, new HardpointDefinition(0, -var1_int, -2048));
                                 var20.a(126, 15);
                                 var20.field_a = 2;
                                 hab.field_g[31] = var20;
@@ -578,7 +578,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var5 += 0;
                                 var21 = new int[]{localTemp$177, localTemp$174, localTemp$178, localTemp$175, localTemp$179, localTemp$176, localTemp$180, localTemp$181, localTemp$185, localTemp$182, localTemp$186, localTemp$183, localTemp$187, localTemp$184, localTemp$188, var5};
                                 var6 = var21;
-                                var22_ref = new wfb(var6, -var1_int, 0);
+                                var22_ref = new ShipComponentDefinition(var6, -var1_int, 0);
                                 ta.a(var21, 124, var22_ref);
                                 var22_ref.a(105, 15);
                                 var22_ref.field_a = 2;
@@ -588,7 +588,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var64 = uca.a(var5, (byte) 9, new int[]{6, 6, 6, 9, 0, 0, 0}, var4);
                                 var23 = var64;
                                 var6 = var23;
-                                var24_ref = new wfb(var6, 3 * -var1_int, 0);
+                                var24_ref = new ShipComponentDefinition(var6, 3 * -var1_int, 0);
                                 ta.a(var64, 119, var24_ref);
                                 var24_ref.a(127, 15);
                                 var24_ref.field_a = 2;
@@ -596,7 +596,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var4 = -var2;
                                 var5 = var1_int;
                                 var6 = uca.a(var5, (byte) 9, new int[]{3, 3, 7, 9, 9, 11}, var4);
-                                var25_ref = new wfb(var6, -var2, 0);
+                                var25_ref = new ShipComponentDefinition(var6, -var2, 0);
                                 var25_ref.a(param0 + 43, 15);
                                 var25_ref.field_a = 3;
                                 hab.field_g[37] = var25_ref;
@@ -627,7 +627,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var5 = localTemp$199;
                                 var26 = new int[]{localTemp$189, localTemp$191, localTemp$190, localTemp$192, localTemp$194, localTemp$193, localTemp$195, localTemp$196, localTemp$197, localTemp$198, var4, localTemp$199};
                                 var6 = var26;
-                                var27_ref = new wfb(var6, -var1_int, 0);
+                                var27_ref = new ShipComponentDefinition(var6, -var1_int, 0);
                                 ta.a(var26, 127, var27_ref);
                                 var27_ref.a(118, 15);
                                 hab.field_g[33] = var27_ref;
@@ -666,7 +666,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var6_int = localTemp$214;
                                 var28 = new int[]{localTemp$200, localTemp$202, localTemp$201, localTemp$203, localTemp$204, localTemp$205, localTemp$207, localTemp$206, localTemp$208, localTemp$210, localTemp$209, localTemp$211, localTemp$212, localTemp$213, var5, localTemp$214};
                                 var7_ref_int__ = var28;
-                                var29_ref = new wfb(var7_ref_int__, -var4 / 2, 0);
+                                var29_ref = new ShipComponentDefinition(var7_ref_int__, -var4 / 2, 0);
                                 ta.a(var28, 114, var29_ref);
                                 var29_ref.a(110, 15);
                                 var29_ref.field_a = 2;
@@ -675,7 +675,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var4 = -fnb.field_b / 2;
                                 var5 = -fnb.field_b / 2;
                                 var6 = uca.a(var5, (byte) 9, new int[]{1, 4, 7, 8, 9, 10, 11, 2, 5}, var4);
-                                var30_ref = new wfb(var6, -fnb.field_b / 2, 0);
+                                var30_ref = new ShipComponentDefinition(var6, -fnb.field_b / 2, 0);
                                 var30_ref.a(111, 15);
                                 var30_ref.field_A = new int[][]{new int[]{0, 1, 2, 3}, new int[]{0, 3, 4, 5, 6, 9}, new int[]{6, 7, 8, 9}};
                                 var30_ref.field_a = 3;
@@ -685,7 +685,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var4 = -fnb.field_b / 2;
                                 var5 = 0;
                                 var6 = uca.a(var5, (byte) 9, new int[]{3, 7, 8, 11, 0}, var4);
-                                var31_ref = new wfb(var6, -fnb.field_b / 2, -fnb.field_b / 2);
+                                var31_ref = new ShipComponentDefinition(var6, -fnb.field_b / 2, -fnb.field_b / 2);
                                 var31_ref.a(113, 15);
                                 var31_ref.field_A = new int[][]{new int[]{0, 1, 2, 3, 4}, new int[]{4, 5, 0}};
                                 var31_ref.field_a = 3;
@@ -695,7 +695,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var4 = -fnb.field_b / 2;
                                 var5 = 0;
                                 var6 = uca.a(var5, (byte) 9, new int[]{2, 6, 7, 10, 11}, var4);
-                                var32_ref = new wfb(var6, -fnb.field_b / 2, fnb.field_b / 2);
+                                var32_ref = new ShipComponentDefinition(var6, -fnb.field_b / 2, fnb.field_b / 2);
                                 var32_ref.a(101, 15);
                                 var32_ref.field_B = 0;
                                 var32_ref.field_A = new int[][]{new int[]{0, 1, 2, 3, 4}, new int[]{4, 5, 0}};
@@ -707,7 +707,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var65 = uca.a(var5, (byte) 9, new int[]{4, 3, 7, 9, 10, 11}, var4);
                                 var33 = var65;
                                 var6 = var33;
-                                var34_ref = new wfb(var6, -fnb.field_b / 2, fnb.field_b / 2);
+                                var34_ref = new ShipComponentDefinition(var6, -fnb.field_b / 2, fnb.field_b / 2);
                                 ta.a(var65, 120, var34_ref);
                                 var34_ref.a(param0 + 63, 15);
                                 var34_ref.field_a = 2;
@@ -718,7 +718,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var66 = uca.a(var5, (byte) 9, new int[]{7, 8, 9, 11, 3, 2}, var4);
                                 var35 = var66;
                                 var6 = var35;
-                                var36_ref = new wfb(var6, -fnb.field_b / 2, -fnb.field_b / 2);
+                                var36_ref = new ShipComponentDefinition(var6, -fnb.field_b / 2, -fnb.field_b / 2);
                                 ta.a(var66, 119, var36_ref);
                                 var36_ref.a(param0 + 44, 15);
                                 var36_ref.field_A = new int[][]{new int[]{0, 1, 2, 5, 6}, new int[]{2, 3, 4, 5}};
@@ -729,7 +729,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var67 = uca.a(var5, (byte) 9, new int[]{5, 7, 9, 11, 1}, var4);
                                 var37 = var67;
                                 var6 = var37;
-                                var38_ref = new wfb(var6, -fnb.field_a, 0);
+                                var38_ref = new ShipComponentDefinition(var6, -fnb.field_a, 0);
                                 ta.a(var67, 118, var38_ref);
                                 var38_ref.a(114, 15);
                                 hab.field_g[41] = var38_ref;
@@ -737,7 +737,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var4 = -fnb.field_a;
                                 var5 = -fnb.field_b / 2;
                                 var6 = uca.a(var5, (byte) 9, new int[]{5, 7, 11, 7, 11, 1}, var4);
-                                var39_ref = new wfb(var6, -fnb.field_a, 0);
+                                var39_ref = new ShipComponentDefinition(var6, -fnb.field_a, 0);
                                 var39_ref.a(108, 15);
                                 var39_ref.field_a = 4;
                                 hab.field_g[18] = var39_ref;
@@ -749,7 +749,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var4 = -fnb.field_a;
                                 var5 = -fnb.field_b / 2;
                                 var6 = uca.a(var5, (byte) 9, new int[]{5, 7, 9, 11, 1}, var4);
-                                var40_ref = new wfb(var6, -fnb.field_a, 0);
+                                var40_ref = new ShipComponentDefinition(var6, -fnb.field_a, 0);
                                 var40_ref.a(111, 15);
                                 var40_ref.field_n = 125;
                                 var40_ref.field_y = 50;
@@ -796,7 +796,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var41 = new int[]{localTemp$215, localTemp$217, localTemp$216, localTemp$218, localTemp$219, localTemp$220, localTemp$221, localTemp$222, localTemp$223, localTemp$224, localTemp$225, localTemp$227, localTemp$226, localTemp$228, localTemp$229, localTemp$230, var4, localTemp$231};
                                 var90 = GetGrapplingHookCooldown.a((byte) 104, var41);
                                 var91 = OpenGlToolkit.a(1, var90);
-                                var44_ref = new wfb(var91, 0, 0);
+                                var44_ref = new ShipComponentDefinition(var91, 0, 0);
                                 ta.a(var91, 114, var44_ref);
                                 var44_ref.a(param0 ^ 49, 15);
                                 var44_ref.field_s = true;
@@ -807,10 +807,10 @@ final class GetFixedaim extends ConsoleCommand {
                                 var4 = -fnb.field_b * 4;
                                 var5 = -fnb.field_b / 2;
                                 var92 = uca.a(var5, (byte) 9, new int[]{5, 7, 6, 5, 6, 6, 7, 9, 11, 0, 0, 1, 0, 11, 1}, var4);
-                                var46_ref = new wfb(var92, 0, 0);
+                                var46_ref = new ShipComponentDefinition(var92, 0, 0);
                                 ta.a(var92, 127, var46_ref);
-                                var46_ref.a(-113, new lsb(fnb.field_b, 0, 4096));
-                                var46_ref.a(-117, new lsb(3 * -fnb.field_b, 0, 4096));
+                                var46_ref.a(-113, new HardpointDefinition(fnb.field_b, 0, 4096));
+                                var46_ref.a(-117, new HardpointDefinition(3 * -fnb.field_b, 0, 4096));
                                 var46_ref.a(119, 15);
                                 var46_ref.field_s = true;
                                 var8_ref_wfb = var46_ref;
@@ -820,7 +820,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var4 = 2 * -fnb.field_b;
                                 var5 = 0;
                                 var93 = uca.a(var5, (byte) 9, new int[]{3, 5, 2, 5, 8, 9, 6, 6, 7, 9, 11, 0, 0, 9, 10, 1, 4, 1}, var4);
-                                var48_ref = new wfb(var93, 0, 0);
+                                var48_ref = new ShipComponentDefinition(var93, 0, 0);
                                 ta.a(var93, 116, var48_ref);
                                 var48_ref.a(param0 + 42, 15);
                                 var8_ref_wfb = var48_ref;
@@ -831,9 +831,9 @@ final class GetFixedaim extends ConsoleCommand {
                                 var4 = -fnb.field_b * 2;
                                 var5 = -fnb.field_b;
                                 var94 = uca.a(var5, (byte) 9, new int[]{5, 7, 6, 7, 9, 11, 0, 11, 1, 3}, var4);
-                                var50_ref = new wfb(var94, 0, 0);
+                                var50_ref = new ShipComponentDefinition(var94, 0, 0);
                                 ta.a(var94, 124, var50_ref);
-                                var50_ref.a(param0 ^ 92, new lsb(-fnb.field_b, 0, 0));
+                                var50_ref.a(param0 ^ 92, new HardpointDefinition(-fnb.field_b, 0, 0));
                                 var50_ref.a(120, 15);
                                 var50_ref.field_s = true;
                                 var8_ref_wfb = var50_ref;
@@ -843,7 +843,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var4 = -fnb.field_b;
                                 var5 = -fnb.field_b / 2;
                                 var95 = uca.a(var5, (byte) 9, new int[]{1, 1, 4, 7, 7, 6, 7, 8, 10, 11, 0, 11, 11, 2, 5, 5}, var4);
-                                var52_ref = new wfb(var95, 0, 0);
+                                var52_ref = new ShipComponentDefinition(var95, 0, 0);
                                 ta.a(var95, 122, var52_ref);
                                 var52_ref.a(param0 ^ 37, 15);
                                 var8_ref_wfb = var52_ref;
@@ -854,7 +854,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var4 = 2 * -fnb.field_b;
                                 var5 = -fnb.field_b / 2;
                                 var96 = uca.a(var5, (byte) 9, new int[]{5, 5, 5, 7, 9, 9, 9, 11, 1, 1, 1}, var4);
-                                var54_ref = new wfb(var96, 0, 0);
+                                var54_ref = new ShipComponentDefinition(var96, 0, 0);
                                 ta.a(var96, param0 ^ 51, var54_ref);
                                 var54_ref.a(104, 15);
                                 var8_ref_wfb = var54_ref;
@@ -864,7 +864,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var4 = -fnb.field_b * 6;
                                 var5 = 0;
                                 var97 = uca.a(var5, (byte) 9, new int[]{5, 6, 6, 4, 4, 5, 5, 6, 6, 7, 7, 8, 8, 9, 10, 10, 11, 11, 0, 0, 1, 1, 2, 2, 0, 0}, var4);
-                                var56_ref = new wfb(var97, 0, 0);
+                                var56_ref = new ShipComponentDefinition(var97, 0, 0);
                                 ta.a(var97, 121, var56_ref);
                                 var56_ref.a(107, 15);
                                 var56_ref.field_n = 125;
@@ -878,7 +878,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var4 = -fnb.field_a * 2;
                                 var5 = -fnb.field_b / 2;
                                 var98 = uca.a(var5, (byte) 9, new int[]{5, 6, 7, 6, 9, 0, 11, 0, 1}, var4);
-                                var58_ref = new wfb(var98, 0, 0);
+                                var58_ref = new ShipComponentDefinition(var98, 0, 0);
                                 ta.a(var98, 120, var58_ref);
                                 var58_ref.a(114, 15);
                                 var8_ref_wfb = var58_ref;
@@ -889,7 +889,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 var4 = -(fnb.field_b / 2) + 4 * -fnb.field_b;
                                 var5 = fnb.field_b / 2;
                                 var99 = uca.a(var5, (byte) 9, new int[]{3, 4, 6, 8, 6, 4, 6, 8, 6, 6, 4, 6, 8, 9, 10, 0, 2, 0, 0, 10, 0, 2, 0, 10, 0}, var4);
-                                var60_ref = new wfb(var99, 0, 0);
+                                var60_ref = new ShipComponentDefinition(var99, 0, 0);
                                 ta.a(var99, 114, var60_ref);
                                 var60_ref.a(120, 15);
                                 var60_ref.field_s = true;
@@ -919,7 +919,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 if (var8 >= var78.length) {
                                     /* Inlined CFG state: 12. */
                                     {
-                                        hab.field_g[22] = new wfb(var78, 0, 0);
+                                        hab.field_g[22] = new ShipComponentDefinition(var78, 0, 0);
                                         var62 = hab.field_g[22];
                                         var62.field_w = new int[][]{new int[]{-8198, 0, -7236, -4099, -4392, -7194, 0, -8198, 3848, -7194, 6943, -4392, 8198, 0}, new int[]{-8198, 0, -8784, -2467, -7236, -4099, -6567, -6400, -4350, -7194, -2551, -8575, 0, -8198, 2509, -8491, 3848, -7194, 5981, -6483, 6901, -4392, 8282, -2509, 8156, 0}};
                                         var62.field_a = 0;
@@ -1216,7 +1216,7 @@ final class GetFixedaim extends ConsoleCommand {
     }
 
     static {
-        field_q = (dja) ((Object) new agb());
+        field_q = (GameStateFactory) ((Object) new AdjustBodyComponentsActionFactory());
         field_p = 0;
     }
 

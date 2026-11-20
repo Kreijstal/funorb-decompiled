@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetSniperCannonProjectileOndamageParticles extends ConsoleCommand {
-    static dja field_o;
+    static GameStateFactory field_o;
     static String field_p;
 
     GetSniperCannonProjectileOndamageParticles(String param0, Class[] param1, String param2) {
@@ -38,10 +38,10 @@ final class GetSniperCannonProjectileOndamageParticles extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 != 15) {
-          GetSniperCannonProjectileOndamageParticles.e((byte) 22);
+          GetSniperCannonProjectileOndamageParticles.clearSharedReferences((byte) 22);
           field_p = null;
           return;
         }
@@ -50,6 +50,6 @@ final class GetSniperCannonProjectileOndamageParticles extends ConsoleCommand {
 
     static {
         field_p = "Discard";
-        field_o = (dja) ((Object) new dlb());
+        field_o = (GameStateFactory) ((Object) new PlayerFactory());
     }
 }

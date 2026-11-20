@@ -6,7 +6,7 @@ final class mb extends PacketBuffer {
     static boolean field_i;
     static int field_j;
 
-    public static void f(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_k = null;
         if (param0 > -92) {
           field_i = false;
@@ -86,7 +86,7 @@ final class mb extends PacketBuffer {
           if (param0 == -1688588312) {
             return;
           }
-          mb.f((byte) 4);
+          mb.clearSharedReferences((byte) 4);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

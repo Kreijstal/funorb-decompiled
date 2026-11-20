@@ -94,8 +94,8 @@ final class GetPedrosRepairModeSwitchtime extends ConsoleCommand {
             if (GetAutozoomAmountMultiply.field_o != null) {
               GetAutozoomAmountMultiply.field_o.a(116);
             }
-            if (nj.field_a != null) {
-              nj.field_a.a(23474);
+            if (BlackBoxRecordingFactory.field_a != null) {
+              BlackBoxRecordingFactory.field_a.a(23474);
             }
             if (cba.field_e != null) {
               try {

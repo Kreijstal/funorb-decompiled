@@ -80,6 +80,6 @@ abstract class qg {
     abstract void a(int param0, byte param1, pib param2);
 
     static {
-        vja discarded$0 = new vja();
+        PartitioningManagerFactory discarded$0 = new PartitioningManagerFactory();
     }
 }

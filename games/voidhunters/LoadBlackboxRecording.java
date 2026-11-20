@@ -50,7 +50,7 @@ final class LoadBlackboxRecording extends ConsoleCommand {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 == 0) {
           field_o = null;
           field_r = null;

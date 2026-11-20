@@ -45,6 +45,6 @@ final class GetAutozoomAmountMultiply extends ConsoleCommand {
     }
 
     static {
-        ci discarded$0 = new ci();
+        PlayerJoinFactory discarded$0 = new PlayerJoinFactory();
     }
 }

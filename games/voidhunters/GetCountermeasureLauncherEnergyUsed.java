@@ -43,7 +43,7 @@ final class GetCountermeasureLauncherEnergyUsed extends ConsoleCommand {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_p = null;
         if (param0) {
           GetCountermeasureLauncherEnergyUsed.a(108, 71, -111);

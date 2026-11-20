@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lq extends TextureOperation {
-    static dja field_i;
+    static GameStateFactory field_i;
     static String field_j;
 
     private final int c(int param0, int param1, int param2) {
@@ -14,11 +14,11 @@ final class lq extends TextureOperation {
         return -((2147483647 & 1376312589 + (789221 + var4 * (var4 * 15731)) * var4) / 262144) + 4096;
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_j = null;
         field_i = null;
         if (param0 != 262144) {
-          lq.d(-121);
+          lq.clearSharedReferences(-121);
         }
     }
 
@@ -45,7 +45,7 @@ final class lq extends TextureOperation {
     }
 
     static {
-        field_i = (dja) ((Object) new upb());
+        field_i = (GameStateFactory) ((Object) new VariableConditionFactory());
         field_j = "Type your age in years";
     }
 }

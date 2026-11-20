@@ -147,13 +147,13 @@ abstract class bl extends dqa {
     abstract void b(int param0, int param1, int param2);
 
     final void c(int param0, int param1, int param2) {
-        this.a(-param0 + fob.field_a >> 1, param0, param2, 1, GetSniperCannonFiringLeeway.field_p - param2 >> 1);
+        this.a(-param0 + ComponentBehaviourFactory.field_a >> 1, param0, param2, 1, GetSniperCannonFiringLeeway.field_p - param2 >> 1);
         if (param1 != -1860440319) {
           this.field_z = false;
         }
     }
 
-    public static void i(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_y = null;
         if (param0 != -17) {
           bl.d(false);
@@ -176,7 +176,7 @@ abstract class bl extends dqa {
           var5 = GetAngularVelocitySustain.field_q;
           var1 = var5;
           if (param0) {
-            bl.i((byte) 60);
+            bl.clearSharedReferences((byte) 60);
           }
           var2 = 0;
           var3 = var5.length;
@@ -199,7 +199,7 @@ abstract class bl extends dqa {
     }
 
     bl(ida param0, int param1, int param2) {
-        super(fob.field_a - param1 >> 1, -param2 + GetSniperCannonFiringLeeway.field_p >> 1, param1, param2, (wwa) null);
+        super(ComponentBehaviourFactory.field_a - param1 >> 1, -param2 + GetSniperCannonFiringLeeway.field_p >> 1, param1, param2, (wwa) null);
         try {
           this.field_w = 0;
           this.field_v = param0;

@@ -17,16 +17,16 @@ final class jma extends jtb {
         return this.field_p;
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_q = null;
         if (param0 != 100) {
-          jma.e(-2);
+          jma.clearSharedReferences(-2);
         }
     }
 
     final int e(byte param0) {
         if (param0 != -4) {
-          jma.e(-40);
+          jma.clearSharedReferences(-40);
           if (!this.field_n) {
             return 100;
           }

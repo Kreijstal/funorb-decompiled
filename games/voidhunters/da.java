@@ -10,12 +10,12 @@ abstract class da {
         if (param0 == -1) {
           param0 = 0;
         }
-        nn.field_b = param2;
+        CarouselPlayerInfoFactory.field_b = param2;
         TimedSpecialOrderBehaviour.field_a = param2;
         drb.field_j = param1;
         oib.field_c = 0;
         SetGrapplingHookRopeChangeRate.field_p = -1;
-        qlb.field_a = param0;
+        MapClearanceAreaFactory.field_a = param0;
         SetThrusterAutobalancing.field_q = param0;
     }
 
@@ -315,7 +315,7 @@ abstract class da {
                                 } else {
                                   try {
                                     var22 = (CharSequence) ((Object) var16_ref_String.substring(4));
-                                    var17_int = lob.a(-118, var22);
+                                    var17_int = NebulaFieldFactory.a(-118, var22);
                                     var18 = param3[var17_int];
                                     if (param8 == null) {
                                       stackIn_26_0 = var18.b();
@@ -468,7 +468,7 @@ abstract class da {
               TimedSpecialOrderBehaviour.field_a = -16777216 & TimedSpecialOrderBehaviour.field_a | tib.a(-596, var5, 16) & 16777215;
             } else {
               if (param1.equals("/col")) {
-                TimedSpecialOrderBehaviour.field_a = 16777215 & nn.field_b | TimedSpecialOrderBehaviour.field_a & -16777216;
+                TimedSpecialOrderBehaviour.field_a = 16777215 & CarouselPlayerInfoFactory.field_b | TimedSpecialOrderBehaviour.field_a & -16777216;
               }
             }
             if (param1.startsWith("argb=")) {
@@ -494,10 +494,10 @@ abstract class da {
                                 if (!param1.equals("shad")) {
                                   if (!param1.equals("/shad")) {
                                     if (param1.equals("br")) {
-                                      this.a(qlb.field_a, 0, nn.field_b);
+                                      this.a(MapClearanceAreaFactory.field_a, 0, CarouselPlayerInfoFactory.field_b);
                                     }
                                   } else {
-                                    SetThrusterAutobalancing.field_q = qlb.field_a;
+                                    SetThrusterAutobalancing.field_q = MapClearanceAreaFactory.field_a;
                                   }
                                 } else {
                                   SetThrusterAutobalancing.field_q = TimedSpecialOrderBehaviour.field_a & -16777216;
@@ -523,7 +523,7 @@ abstract class da {
                   SetGrapplingHookRopeChangeRate.field_p = TimedSpecialOrderBehaviour.field_a & -16777216 | tib.a(-596, var6, 16);
                 }
               } else {
-                TimedSpecialOrderBehaviour.field_a = nn.field_b;
+                TimedSpecialOrderBehaviour.field_a = CarouselPlayerInfoFactory.field_b;
               }
             }
             if (param0 < 65) {

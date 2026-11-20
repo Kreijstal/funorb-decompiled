@@ -27,15 +27,15 @@ abstract class uda {
           if (!GetFighterBayAimarc.field_o) {
             return;
           }
-          nma.field_b = new da[5];
-          for (var1_int = 0; nma.field_b.length > var1_int; var1_int++) {
-            nma.field_b[var1_int] = GetDebrisGroupColour.field_r.a(ok.field_b[var1_int], djb.field_s[var1_int], smb.a((byte) -26, var1_int));
+          PlayerReadyFactory.field_b = new da[5];
+          for (var1_int = 0; PlayerReadyFactory.field_b.length > var1_int; var1_int++) {
+            PlayerReadyFactory.field_b[var1_int] = GetDebrisGroupColour.field_r.a(ShipBodyFactory.field_b[var1_int], djb.field_s[var1_int], smb.a((byte) -26, var1_int));
           }
           GetDebrisThrowable.a(false, "Finished building fonts");
           if (param0 == -2283) {
             return;
           }
-          uda.b((byte) 81);
+          uda.clearSharedReferences((byte) 81);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -54,7 +54,7 @@ abstract class uda {
 
     abstract void a(int param0);
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_a = null;
         if (param0 > -6) {
           uda.b(-56);

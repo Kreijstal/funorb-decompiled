@@ -7,11 +7,11 @@ final class GetFogOfWarSensorRange extends ConsoleCommand {
     static Random field_o;
     static String[] field_p;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         field_o = null;
         if (param0 > -47) {
-          GetFogOfWarSensorRange.e((byte) -14);
+          GetFogOfWarSensorRange.clearSharedReferences((byte) -14);
         }
     }
 

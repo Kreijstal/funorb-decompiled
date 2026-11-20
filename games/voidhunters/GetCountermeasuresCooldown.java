@@ -126,7 +126,7 @@ final class GetCountermeasuresCooldown extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 221) {
           int[] var2 = (int[]) null;
@@ -138,8 +138,8 @@ final class GetCountermeasuresCooldown extends ConsoleCommand {
         if (param0 > -116) {
           return;
         }
-        if (null != hg.field_b) {
-          hg.field_b.b(-85);
+        if (null != PlayerLeave.field_b) {
+          PlayerLeave.field_b.b(-85);
         }
     }
 

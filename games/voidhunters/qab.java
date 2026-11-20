@@ -33,7 +33,7 @@ final class qab {
         return this.field_e <= this.field_b ? true : false;
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
           qab.a(107, -118);
           field_a = null;

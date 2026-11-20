@@ -49,17 +49,17 @@ final class SetKeepTeamColours extends ConsoleCommand {
         if (param0 == 15334) {
           return;
         }
-        SetKeepTeamColours.b(true);
+        SetKeepTeamColours.clearSharedReferences(true);
     }
 
     SetKeepTeamColours(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_q = null;
         if (param0) {
-          SetKeepTeamColours.b(false);
+          SetKeepTeamColours.clearSharedReferences(false);
           field_p = null;
           return;
         }

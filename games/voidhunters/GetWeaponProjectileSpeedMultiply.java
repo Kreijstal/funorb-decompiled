@@ -48,7 +48,7 @@ final class GetWeaponProjectileSpeedMultiply extends ConsoleCommand {
         }
     }
 
-    public static void f(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 > -90) {
           GetWeaponProjectileSpeedMultiply.e((byte) 79);
           field_o = null;
@@ -70,7 +70,7 @@ final class GetWeaponProjectileSpeedMultiply extends ConsoleCommand {
             re.a(0, (byte) -126);
           }
         } else {
-          GetWeaponProjectileSpeedMultiply.f((byte) 52);
+          GetWeaponProjectileSpeedMultiply.clearSharedReferences((byte) 52);
           if (GetMutatorVotes.field_p > 32) {
             var1 = GetMutatorVotes.field_p % 32;
             if (0 == var1) {

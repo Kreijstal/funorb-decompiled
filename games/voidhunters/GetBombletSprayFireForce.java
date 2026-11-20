@@ -8,10 +8,10 @@ final class GetBombletSprayFireForce extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 != -91) {
-          GetBombletSprayFireForce.e((byte) 92);
+          GetBombletSprayFireForce.clearSharedReferences((byte) 92);
         }
     }
 

@@ -14,7 +14,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            SetMissionDebrisDefaultProbability.a(80);
+            SetMissionDebrisDefaultProbability.clearSharedReferences(80);
           }
           SetMachineGunEnergyUsed.a(68, 62, arguments[0].intValue(91));
           stackIn_3_0 = new ConsoleValue("void");
@@ -37,7 +37,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 != -10441) {
           field_o = -54;
@@ -99,7 +99,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
               var8_ref_pgb.field_j.field_Y = var12;
               var8_ref_pgb.field_j.field_qb = ((TargetLock.field_b.field_qb & 16711422) >> 1) + var12 - (8355711 & var12 >> 1);
               var6 = var6 + param0;
-              var8_ref_pgb.field_j.field_eb = ej.field_c;
+              var8_ref_pgb.field_j.field_eb = DebrisFactory.field_c;
             }
             var5++;
           } else {

@@ -18,7 +18,7 @@ final class GetSelfDestructActivateCooldown extends ConsoleCommand {
           return null;
         }
         if (param0 == 3) {
-          return whb.field_d;
+          return DebugMessage.field_d;
         }
         if (param0 == 4) {
           return SetTorpedoProjectileDamage.field_o;

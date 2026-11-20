@@ -3,7 +3,7 @@
  */
 final class GetSelfDestructPrepareToggleCooldown extends ConsoleCommand {
     final static void a(int param0, int param1) {
-        ci.field_b = param1;
+        PlayerJoinFactory.field_b = param1;
         int var2 = -10 % ((param0 - 46) / 50);
     }
 

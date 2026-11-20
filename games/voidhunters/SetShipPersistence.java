@@ -75,7 +75,7 @@ final class SetShipPersistence extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 <= -6) {
           field_p = null;
           field_r = null;

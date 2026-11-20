@@ -34,9 +34,9 @@ final class GetBloomThresholdPercentage extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 <= 81) {
-          GetBloomThresholdPercentage.a(-39);
+          GetBloomThresholdPercentage.clearSharedReferences(-39);
           field_o = null;
           return;
         }

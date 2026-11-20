@@ -248,7 +248,7 @@ final class dqb {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         if (param0 != 15060) {
           String var2 = (String) null;

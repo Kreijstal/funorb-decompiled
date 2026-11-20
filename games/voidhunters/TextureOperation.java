@@ -134,7 +134,7 @@ abstract class TextureOperation extends IntrusiveNode {
             TextureOperation.a((asb) null, (byte) 32, (asb) null, -82, 9);
           }
           if (pa.a(param4, 2, param0, param3)) {
-            stackIn_6_0 = coa.a(param2.a(param4, param3, (byte) 13), 11);
+            stackIn_6_0 = ServerInfo.a(param2.a(param4, param3, (byte) 13), 11);
             return stackIn_6_0;
           }
           stackIn_4_0 = null;

@@ -7,7 +7,7 @@ final class re extends ar {
     private int field_e;
     private int field_j;
     private BitmapFont field_g;
-    static dja field_k;
+    static GameStateFactory field_k;
     private int field_l;
     private String field_m;
     private int field_i;
@@ -322,6 +322,6 @@ final class re extends ar {
     }
 
     static {
-        field_k = (dja) ((Object) new bf());
+        field_k = (GameStateFactory) ((Object) new AdjustVariableActionFactory());
     }
 }

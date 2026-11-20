@@ -24,8 +24,8 @@ abstract class gea extends iw {
             this.c(116, this.field_K.field_h + 12, this.field_K.field_f + this.field_O + 12, this.field_M);
             this.field_Q = 0;
           } else {
-            if (this.field_N != gs.field_e) {
-              this.field_N = gs.field_e;
+            if (this.field_N != SettingsChangeFactory.field_e) {
+              this.field_N = SettingsChangeFactory.field_e;
               this.field_Q = 0;
             }
           }
@@ -117,7 +117,7 @@ abstract class gea extends iw {
           if (this.field_N == null) {
             return super.a(248);
           }
-          if (this.field_N == gs.field_e) {
+          if (this.field_N == SettingsChangeFactory.field_e) {
             fieldTemp$0 = this.field_Q + 1;
             this.field_Q = this.field_Q + 1;
             if (this.field_P == fieldTemp$0) {
@@ -148,7 +148,7 @@ abstract class gea extends iw {
         if (this.field_N == null) {
           return super.a(248);
         }
-        if (this.field_N == gs.field_e) {
+        if (this.field_N == SettingsChangeFactory.field_e) {
           fieldTemp$2 = this.field_Q + 1;
           this.field_Q = this.field_Q + 1;
           if (this.field_P == fieldTemp$2) {
@@ -176,7 +176,7 @@ abstract class gea extends iw {
     }
 
     final void d(int param0) {
-        if (gs.field_e == this.field_N) {
+        if (SettingsChangeFactory.field_e == this.field_N) {
           return;
         }
         this.field_Q = 0;

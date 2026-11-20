@@ -77,16 +77,16 @@ final class wt {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         field_c = null;
         if (param0 > -97) {
-          wt.a(-106);
+          wt.clearSharedReferences(-106);
         }
     }
 
     static {
-        bcb discarded$0 = new bcb();
+        MissionControlFactory discarded$0 = new MissionControlFactory();
         field_b = "<%0>'s game";
         field_c = "Full";
         field_a = -1;

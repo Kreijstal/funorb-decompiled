@@ -11,10 +11,10 @@ final class di extends TextureOperation {
     static String field_j;
     static int field_p;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_j = null;
         if (param0 < 106) {
-          di.e((byte) 85);
+          di.clearSharedReferences((byte) 85);
         }
         field_m = null;
         field_i = null;
@@ -123,7 +123,7 @@ final class di extends TextureOperation {
         int[][] var26;
         var12 = VoidHunters.field_G;
         if (param0 != 255) {
-          di.e((byte) -54);
+          di.clearSharedReferences((byte) -54);
         }
         var21 = this.field_d.getRow(param1, (byte) -113);
         var16 = var21;

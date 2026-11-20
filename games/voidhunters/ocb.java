@@ -137,7 +137,7 @@ final class ocb extends eca {
     }
 
     final static void f(int param0) {
-        ulb.a(100);
+        ShipSpawnedConditionFactory.a(100);
         if (param0 != -10150) {
           ocb.a(-128, 101, 87, (BitmapFont) null, 109, 83, -49, -78, 19, -41, 88, -111, 125);
         }
@@ -160,9 +160,9 @@ final class ocb extends eca {
         if (param1 <= 101) {
           field_g = (String) null;
         }
-        if (wga.field_a != null) {
+        if (RoundResultFactory.field_a != null) {
           dma.e(dma.field_d, dma.field_c, -dma.field_d + dma.field_a, -dma.field_c + dma.field_f);
-          wga.field_a.b(param0, 22);
+          RoundResultFactory.field_a.b(param0, 22);
         }
     }
 

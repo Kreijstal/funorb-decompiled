@@ -36,7 +36,7 @@ final class GetMissilesExplosionPower extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 3) {
           ShipComponent var2 = (ShipComponent) null;

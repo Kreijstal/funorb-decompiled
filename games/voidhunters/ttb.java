@@ -61,7 +61,7 @@ final class ttb extends shb {
         this.field_t = param2;
         this.field_A = param2 >> 1 & 8355711;
         if (param1 != -21202) {
-          ttb.d(87);
+          ttb.clearSharedReferences(87);
         }
         this.a(107);
     }
@@ -80,7 +80,7 @@ final class ttb extends shb {
             }
           }
           if (param2 != -981) {
-            ttb.d(-78);
+            ttb.clearSharedReferences(-78);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -142,9 +142,9 @@ final class ttb extends shb {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 16711935) {
-          ttb.d(-30);
+          ttb.clearSharedReferences(-30);
         }
         field_z = null;
     }

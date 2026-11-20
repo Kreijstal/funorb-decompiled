@@ -72,10 +72,10 @@ final class ujb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_d = null;
         if (param0 > -99) {
-          ujb.a((byte) 62);
+          ujb.clearSharedReferences((byte) 62);
         }
     }
 
@@ -109,16 +109,16 @@ final class ujb {
         int var6Lifetime1;
         int var7Lifetime1;
         int var7Lifetime2;
-        hb.field_d[bea.field_e] = param4;
-        sv.field_f[bea.field_e] = bea.field_e;
-        GetLaserEnergyUsed.field_o[bea.field_e] = param1;
-        if (pn.field_b < param1) {
-          qbb.field_a = param1;
+        hb.field_d[MissionBuilder.field_e] = param4;
+        sv.field_f[MissionBuilder.field_e] = MissionBuilder.field_e;
+        GetLaserEnergyUsed.field_o[MissionBuilder.field_e] = param1;
+        if (WeaponBehaviourFactory.field_b < param1) {
+          ShipAIFactory.field_a = param1;
         }
         if (param1 >= Message.field_d) {
-          SetPhasedEnergyBeamRandomness.field_o[bea.field_e] = param0;
-          hma.field_d[bea.field_e] = param2;
-          GetMissionVariablesHudY.field_o[bea.field_e] = param5;
+          SetPhasedEnergyBeamRandomness.field_o[MissionBuilder.field_e] = param0;
+          hma.field_d[MissionBuilder.field_e] = param2;
+          GetMissionVariablesHudY.field_o[MissionBuilder.field_e] = param5;
           var6 = param0 + param2 + param5;
           if (param3 == 13336) {
             if (0 == var6) {
@@ -127,15 +127,15 @@ final class ujb {
               stackIn_39_0 = 1000 * param0 / var6;
             }
             var7 = stackIn_39_0;
-            SetRespawnTime.field_o[bea.field_e] = var7;
-            bea.field_e = bea.field_e + 1;
-            if (var7 > qbb.field_a) {
-              qbb.field_a = var7;
+            SetRespawnTime.field_o[MissionBuilder.field_e] = var7;
+            MissionBuilder.field_e = MissionBuilder.field_e + 1;
+            if (var7 > ShipAIFactory.field_a) {
+              ShipAIFactory.field_a = var7;
             }
-            if (npa.field_d <= var7) {
+            if (ServerTickFactory.field_d <= var7) {
               return;
             }
-            npa.field_d = var7;
+            ServerTickFactory.field_d = var7;
             return;
           }
           field_c = -21;
@@ -145,21 +145,21 @@ final class ujb {
             stackIn_29_0 = 1000 * param0 / var6;
           }
           var7Lifetime2 = stackIn_29_0;
-          SetRespawnTime.field_o[bea.field_e] = var7Lifetime2;
-          bea.field_e = bea.field_e + 1;
-          if (var7Lifetime2 > qbb.field_a) {
-            qbb.field_a = var7Lifetime2;
+          SetRespawnTime.field_o[MissionBuilder.field_e] = var7Lifetime2;
+          MissionBuilder.field_e = MissionBuilder.field_e + 1;
+          if (var7Lifetime2 > ShipAIFactory.field_a) {
+            ShipAIFactory.field_a = var7Lifetime2;
           }
-          if (npa.field_d <= var7Lifetime2) {
+          if (ServerTickFactory.field_d <= var7Lifetime2) {
             return;
           }
-          npa.field_d = var7Lifetime2;
+          ServerTickFactory.field_d = var7Lifetime2;
           return;
         }
-        npa.field_d = param1;
-        SetPhasedEnergyBeamRandomness.field_o[bea.field_e] = param0;
-        hma.field_d[bea.field_e] = param2;
-        GetMissionVariablesHudY.field_o[bea.field_e] = param5;
+        ServerTickFactory.field_d = param1;
+        SetPhasedEnergyBeamRandomness.field_o[MissionBuilder.field_e] = param0;
+        hma.field_d[MissionBuilder.field_e] = param2;
+        GetMissionVariablesHudY.field_o[MissionBuilder.field_e] = param5;
         var6Lifetime1 = param0 + param2 + param5;
         if (param3 == 13336) {
           if (0 == var6Lifetime1) {
@@ -177,15 +177,15 @@ final class ujb {
           }
           var7Lifetime1 = stackIn_18_0;
         }
-        SetRespawnTime.field_o[bea.field_e] = var7Lifetime1;
-        bea.field_e = bea.field_e + 1;
-        if (var7Lifetime1 > qbb.field_a) {
-          qbb.field_a = var7Lifetime1;
+        SetRespawnTime.field_o[MissionBuilder.field_e] = var7Lifetime1;
+        MissionBuilder.field_e = MissionBuilder.field_e + 1;
+        if (var7Lifetime1 > ShipAIFactory.field_a) {
+          ShipAIFactory.field_a = var7Lifetime1;
         }
-        if (npa.field_d <= var7Lifetime1) {
+        if (ServerTickFactory.field_d <= var7Lifetime1) {
           return;
         }
-        npa.field_d = var7Lifetime1;
+        ServerTickFactory.field_d = var7Lifetime1;
     }
 
     static {

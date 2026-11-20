@@ -10,12 +10,12 @@ final class lu {
     int field_e;
     static String field_c;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_c = null;
         field_f = null;
         field_a = null;
         if (param0 != 87) {
-          lu.a((byte) 17);
+          lu.clearSharedReferences((byte) 17);
         }
     }
 

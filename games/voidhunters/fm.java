@@ -9,10 +9,10 @@ final class fm {
     int field_d;
     private static String field_z;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_b = null;
         if (param0 >= -87) {
-          fm.a((byte) 2);
+          fm.clearSharedReferences((byte) 2);
         }
     }
 

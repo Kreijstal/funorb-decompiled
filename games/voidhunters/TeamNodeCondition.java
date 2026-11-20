@@ -11,7 +11,7 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
         TeamNodeCondition var6 = null;
         try {
           if (param0 <= 54) {
-            this.a(-77);
+            this.getDescription(-77);
           }
           super.copyTo((byte) 57, param1);
           var5 = (TeamNodeCondition) (param1);
@@ -50,7 +50,7 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
         }
     }
 
-    final void a(World param0, int param1, int param2, int param3) {
+    final void setParameter(World param0, int param1, int param2, int param3) {
         try {
           this.teamId = (param3 + SettingsChange.field_b) % SettingsChange.field_b;
           if (param1 != -2) {
@@ -74,14 +74,14 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
         }
     }
 
-    final int a(byte param0, int param1) {
+    final int getParameter(byte param0, int param1) {
         if (param0 >= -102) {
           this.teamId = 93;
         }
         return this.teamId;
     }
 
-    final ucb[] a(World param0, int param1) {
+    final WorldPoint[] getWorldPositions(World param0, int param1) {
         RuntimeException var3 = null;
         IsaacPacketBuffer var4 = null;
         Object stackIn_3_0 = null;
@@ -96,7 +96,7 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
           var4 = (IsaacPacketBuffer) null;
           this.writeState((IsaacPacketBuffer) null, -57);
           stackIn_3_0 = null;
-          return (ucb[]) (stackIn_3_0);
+          return (WorldPoint[]) (stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -111,7 +111,7 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
         }
     }
 
-    final boolean a(int param0, MissionState param1, World param2) {
+    final boolean evaluate(int param0, MissionState param1, World param2) {
         int var5 = 0;
         ResourceNode[] var4 = null;
         RuntimeException var4_ref = null;
@@ -159,7 +159,7 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
         }
     }
 
-    final String a(int param0) {
+    final String getDescription(int param0) {
         if (param0 != -1) {
           return (String) null;
         }
@@ -274,7 +274,7 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
         }
     }
 
-    final int[] a(World param0, int param1, int[] param2) {
+    final int[] collectTargetBodyIds(World param0, int param1, int[] param2) {
         ResourceNode[] var4 = null;
         int var5 = 0;
         ResourceNode var6 = null;

@@ -95,7 +95,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var7 = null;
-        wfb var8 = null;
+        ShipComponentDefinition var8 = null;
         try {
           if (param4 <= 7) {
             return;
@@ -221,9 +221,9 @@ final class ShipComponent implements DiffableState, CompactGameState {
         int var20 = 0;
         Object var21 = null;
         mfb var22 = null;
-        wfb var23 = null;
+        ShipComponentDefinition var23 = null;
         IntrusiveDeque var24 = null;
-        wfb var25 = null;
+        ShipComponentDefinition var25 = null;
         Ship var26 = null;
         int var5_intLifetime1;
         int var13Lifetime1;
@@ -257,7 +257,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                         var8 = param2.d((byte) -27, var7.targetId);
                       }
                       if (var8 != null) {
-                        this.a(var8.d(false) + var7.targetX, true, 0, var8.g((byte) -87) + var7.targetY, 21750, 0);
+                        this.a(var8.getX(false) + var7.targetX, true, 0, var8.getY((byte) -87) + var7.targetY, 21750, 0);
                       }
                     }
                   } else {
@@ -311,8 +311,8 @@ final class ShipComponent implements DiffableState, CompactGameState {
                     var20++;
                   }
                   if (var10 != null) {
-                    this.a(((ara) (var10)).dx + ((ara) (var10)).x, true, 0, ((ara) (var10)).y + ((ara) (var10)).dy, 21750, 0);
-                    this.a(param3, ((ara) (var10)).dy + ((ara) (var10)).y, param2, ((ara) (var10)).x + ((ara) (var10)).dx, 111, 256);
+                    this.a(((MovingObject) (var10)).dx + ((MovingObject) (var10)).x, true, 0, ((MovingObject) (var10)).y + ((MovingObject) (var10)).dy, 21750, 0);
+                    this.a(param3, ((MovingObject) (var10)).dy + ((MovingObject) (var10)).y, param2, ((MovingObject) (var10)).x + ((MovingObject) (var10)).dx, 111, 256);
                     param3.d((byte) -44);
                   }
                 }
@@ -714,7 +714,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         int var44 = 0;
         int var45 = 0;
         int var46 = 0;
-        wfb var47 = null;
+        ShipComponentDefinition var47 = null;
         int var16Lifetime1;
         int var17Lifetime1;
         int var18Lifetime1;
@@ -898,7 +898,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               var25Lifetime2 = var15 * 8 >> 9;
               c.a(param3.b(true, var25Lifetime2 + var19Lifetime1), param3.a(var18Lifetime1 + var24Lifetime2, (byte) 127), var20, var21, -16777216, param2);
             }
-            if (wkb.field_c != 1) {
+            if (SetVariableActionFactory.field_c != 1) {
               for (var16Lifetime1Lifetime1 = 0; this.finaloutline.length > var16Lifetime1Lifetime1; var16Lifetime1Lifetime1 += 2) {
                 var17Lifetime1Lifetime1 = this.finaloutline[var16Lifetime1Lifetime1];
                 var18Lifetime1Lifetime1 = this.finaloutline[var16Lifetime1Lifetime1 + 1];
@@ -1051,7 +1051,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         int var7 = 0;
         int stackIn_3_0 = 0;
         int var4;
-        wfb var5;
+        ShipComponentDefinition var5;
         int var6;
         int var8;
         int var9;
@@ -1229,8 +1229,8 @@ final class ShipComponent implements DiffableState, CompactGameState {
             this.behaviour.getClass() == var5.behaviour.getClass()) {
             this.behaviour.reportDifferences(var5.behaviour, -36);
           }
-          tja.a(var5.subcomponents, 1, this.subcomponents, false, 5547);
-          tja.a(var5.hardpoints, 1, this.hardpoints, false, 5547);
+          CarouselSlot.a(var5.subcomponents, 1, this.subcomponents, false, 5547);
+          CarouselSlot.a(var5.hardpoints, 1, this.hardpoints, false, 5547);
           var4 = 0;
           if (this.componentTypeId != var5.componentTypeId) {
             System.out.println("int component_type_id has changed. before=" + var5.componentTypeId + ", now=" + this.componentTypeId);
@@ -1560,7 +1560,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    private final int a(boolean param0, wfb param1, boolean param2) {
+    private final int a(boolean param0, ShipComponentDefinition param1, boolean param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -1746,7 +1746,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               var14 = param2.finaloutline[1 + var12];
               var15 = param2.finaloutline[(var12 + 2) % param2.finaloutline.length];
               var16 = param2.finaloutline[(3 + var12) % param2.finaloutline.length];
-              var17 = ng.a(8, var9, (byte) 88, var8, var15, var10, var14, var13, var16, var11);
+              var17 = SpecialOrderSubmessageFactory.a(8, var9, (byte) 88, var8, var15, var10, var14, var13, var16, var11);
               if (var17 != -1 &&
                 var17 > 10 &&
                 var17 < 245) {
@@ -2165,10 +2165,10 @@ final class ShipComponent implements DiffableState, CompactGameState {
             if (null == this.behaviour) {
               var3_int = param0.readBits(0, 1);
               if (0 == var3_int) {
-                this.behaviour = (ComponentBehaviour) ((Object) new mua());
+                this.behaviour = (ComponentBehaviour) ((Object) new ShieldBehaviour());
               } else {
                 if (var3_int == 1) {
-                  this.behaviour = (ComponentBehaviour) ((Object) new kma());
+                  this.behaviour = (ComponentBehaviour) ((Object) new ArmBehaviour());
                 }
               }
               this.behaviour.readState(param0, false);
@@ -2300,7 +2300,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           this.getFinalx(false);
         }
         if (this.behaviour != null) {
-          return this.behaviour.b((byte) 118);
+          return this.behaviour.getAimSpeed((byte) 118);
         }
         if (this.weaponbehaviour != null) {
           return this.weaponbehaviour.e((byte) -4);
@@ -2320,7 +2320,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
 
     private final void c(boolean param0) {
         int var3 = 0;
-        wfb var2;
+        ShipComponentDefinition var2;
         Hardpoint var4;
         int var5;
         int var7;
@@ -2329,7 +2329,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         var2 = hab.field_g[this.componentTypeId];
         this.finaloutline = new int[var2.field_v.length];
         if (!param0) {
-          this.a((wfb) null, (byte) -94);
+          this.a((ShipComponentDefinition) null, (byte) -94);
         }
         if (this.hardpoints != null) {
           for (var3 = 0; this.hardpoints.length > var3; var3++) {
@@ -2377,7 +2377,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         int var10 = 0;
         qua var11 = null;
         ShipComponent var12 = null;
-        lsb var13 = null;
+        HardpointDefinition var13 = null;
         Hardpoint var14 = null;
         ShipComponent var15 = null;
         int var16 = 0;
@@ -2642,7 +2642,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           }
           return this.grapplebehaviour.a((byte) 12);
         }
-        return this.behaviour.a((byte) -114);
+        return this.behaviour.getAimArc((byte) -114);
     }
 
     final void a(Projectile param0, sfa param1, int param2) {
@@ -2732,7 +2732,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         return stackIn_14_0;
     }
 
-    final int a(wfb param0, byte param1) {
+    final int a(ShipComponentDefinition param0, byte param1) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -2963,10 +2963,10 @@ final class ShipComponent implements DiffableState, CompactGameState {
               var3_int = param0.readBits(0, 1);
               if (var3_int != 0) {
                 if (var3_int == 1) {
-                  this.behaviour = (ComponentBehaviour) ((Object) new kma());
+                  this.behaviour = (ComponentBehaviour) ((Object) new ArmBehaviour());
                 }
               } else {
-                this.behaviour = (ComponentBehaviour) ((Object) new mua());
+                this.behaviour = (ComponentBehaviour) ((Object) new ShieldBehaviour());
               }
             }
             this.behaviour.readState(param0, false);
@@ -2979,7 +2979,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           this.finalx = param0.readBits(0, 32);
           this.finaly = param0.readBits(0, 32);
           this.finalangle = param0.readBits(0, 32);
-          this.finaloutline = wkb.a((byte) 37, this.finaloutline, param0, 8);
+          this.finaloutline = SetVariableActionFactory.a((byte) 37, this.finaloutline, param0, 8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3135,11 +3135,11 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (this.behaviour != null) {
             if (var5.behaviour == null ||
               var5.behaviour.getClass() != this.behaviour.getClass()) {
-              if (this.behaviour.getClass() == mua.class) {
-                var5.behaviour = (ComponentBehaviour) ((Object) new mua());
+              if (this.behaviour.getClass() == ShieldBehaviour.class) {
+                var5.behaviour = (ComponentBehaviour) ((Object) new ShieldBehaviour());
               } else {
-                if (this.behaviour.getClass() == kma.class) {
-                  var5.behaviour = (ComponentBehaviour) ((Object) new kma());
+                if (this.behaviour.getClass() == ArmBehaviour.class) {
+                  var5.behaviour = (ComponentBehaviour) ((Object) new ArmBehaviour());
                 }
               }
             }
@@ -3492,7 +3492,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         int var8;
         int var9;
         int var10;
-        wfb var10_ref_wfb;
+        ShipComponentDefinition var10_ref_wfb;
         int var11;
         int var12;
         int var13;
@@ -3551,7 +3551,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           var12Lifetime1 = this.a(-86, var10_ref_wfb);
           var13 = param0 - var11Lifetime1;
           var14 = param3 - var12Lifetime1;
-          var15 = ecb.a(var14, (byte) -77, var13);
+          var15 = GameSnapshotFactory.a(var14, (byte) -77, var13);
           if (this.d(-77)) {
             var16 = GameKeyHandler.a(param4 ^ 855, GameKeyHandler.a(22433, -this.currentconnectedangle + this.finalangle) + this.connectedangle);
             var7 = GameKeyHandler.a(22433, var15 - var16);
@@ -3650,8 +3650,8 @@ final class ShipComponent implements DiffableState, CompactGameState {
           stackIn_18_1 = 54;
           stackIn_19_2 = (null != this.behaviour);
           if (vq.writeBoolean(stackIn_18_0, stackIn_18_1, stackIn_19_2)) {
-            if (this.behaviour.getClass() != mua.class) {
-              if (this.behaviour.getClass() == kma.class) {
+            if (this.behaviour.getClass() != ShieldBehaviour.class) {
+              if (this.behaviour.getClass() == ArmBehaviour.class) {
                 param0.writeBits(-632, 1, 1);
               }
             } else {
@@ -3787,9 +3787,9 @@ final class ShipComponent implements DiffableState, CompactGameState {
         int var37 = 0;
         int var38 = 0;
         int var39 = 0;
-        wfb var40 = null;
+        ShipComponentDefinition var40 = null;
         int var41 = 0;
-        wfb var42 = null;
+        ShipComponentDefinition var42 = null;
         int var28Lifetime1;
         var39 = VoidHunters.field_G;
         try {
@@ -3907,14 +3907,14 @@ final class ShipComponent implements DiffableState, CompactGameState {
             this.currentconnectedangle = 117;
           }
           var13 = new Debris(this.subcomponents[param4], false);
-          var8 = var13.d(false) - this.finalx;
-          var9 = var13.g((byte) 126) - this.finaly;
+          var8 = var13.getX(false) - this.finalx;
+          var9 = var13.getY((byte) 126) - this.finaly;
           VariableCondition.a(this.finalx + var8, this.finaly + var9, this.finaly, this.finalx, (byte) -54);
           var10 = ar.a(var8, (byte) 110, var9);
           if (0 == var10) {
             var10 = 1;
           }
-          var11 = ecb.a(var9, (byte) -77, var8);
+          var11 = GameSnapshotFactory.a(var9, (byte) -77, var8);
           var12 = param2 * var13.e(false) / var10;
           if (param5 != null) {
             var13.dy = param5.dy;
@@ -4024,9 +4024,9 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final wfb i(byte param0) {
+    final ShipComponentDefinition i(byte param0) {
         if (param0 != -112) {
-          return (wfb) null;
+          return (ShipComponentDefinition) null;
         }
         return hab.field_g[this.componentTypeId];
     }
@@ -4096,8 +4096,8 @@ final class ShipComponent implements DiffableState, CompactGameState {
           stackIn_20_1 = -98;
           stackIn_21_2 = (null != this.behaviour);
           if (vq.writeBoolean(stackIn_20_0, stackIn_20_1, stackIn_21_2)) {
-            if (this.behaviour.getClass() != mua.class) {
-              if (this.behaviour.getClass() == kma.class) {
+            if (this.behaviour.getClass() != ShieldBehaviour.class) {
+              if (this.behaviour.getClass() == ArmBehaviour.class) {
                 param0.writeBits(-632, 1, 1);
               }
             } else {
@@ -4267,7 +4267,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final int a(int param0, wfb param1) {
+    final int a(int param0, ShipComponentDefinition param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_1_0 = 0;
@@ -4414,7 +4414,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         int var15 = 0;
         int var16 = 0;
         int var17 = 0;
-        wfb var18 = null;
+        ShipComponentDefinition var18 = null;
         int var11Lifetime1;
         var17 = VoidHunters.field_G;
         try {
@@ -4441,14 +4441,14 @@ final class ShipComponent implements DiffableState, CompactGameState {
           }
           param1.a(var11Lifetime1, var8, 100, 50, 1000, var6 << 1, var7, this.finaloutline, (byte) 84);
           if (param2 != null) {
-            var12 = param2.d(false) - this.finalx;
-            var13 = param2.g((byte) -21) - this.finaly;
+            var12 = param2.getX(false) - this.finalx;
+            var13 = param2.getY((byte) -21) - this.finaly;
             VariableCondition.a(this.finalx + var12, this.finaly + var13, this.finaly, this.finalx, (byte) -54);
             var14 = ar.a(var12, (byte) 120, var13);
             if (var14 == 0) {
               var14 = 1;
             }
-            var15 = ecb.a(var13, (byte) -77, var12);
+            var15 = GameSnapshotFactory.a(var13, (byte) -77, var12);
             var16 = param2.e(false) * var9 / var14;
             param2.a(this.finaly, GameKeyHandler.a(22433, -100 + (var15 + hob.a(var10, 200, 123))), this.finalx, var16, 1948934248);
           }
@@ -4496,7 +4496,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    private final void a(ShipComponent param0, byte param1, wfb param2, int param3) {
+    private final void a(ShipComponent param0, byte param1, ShipComponentDefinition param2, int param3) {
         int var5_int = 0;
         try {
           if (param1 <= 25) {
@@ -4513,7 +4513,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
     }
 
     final void a(int param0, int param1, ShipComponent param2) {
-        wfb var4 = null;
+        ShipComponentDefinition var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -4547,7 +4547,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
 
     ShipComponent(int param0) {
         int var3 = 0;
-        wfb var2;
+        ShipComponentDefinition var2;
         this.componentTypeId = param0;
         var2 = hab.field_g[this.componentTypeId];
         if (null != var2.field_c) {
@@ -4560,11 +4560,11 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
         if (var2.field_e == null) {
           if (null != var2.field_g) {
-            this.behaviour = (ComponentBehaviour) ((Object) new mua());
+            this.behaviour = (ComponentBehaviour) ((Object) new ShieldBehaviour());
             var2.field_g.copyTo((byte) 56, this.behaviour);
           }
         } else {
-          this.behaviour = (ComponentBehaviour) ((Object) new kma());
+          this.behaviour = (ComponentBehaviour) ((Object) new ArmBehaviour());
           var2.field_e.copyTo((byte) 64, this.behaviour);
         }
         if (null != var2.field_t) {

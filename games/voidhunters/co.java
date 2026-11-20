@@ -61,7 +61,7 @@ final class co {
             !bd.a(param4, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
-          var7_int = pu.a((byte) -104, param0);
+          var7_int = ParticleFactory.a((byte) -104, param0);
           var8 = 0;
           stackIn_12_0 = (param2 >= param4) ? param4 : param2;
           var9 = stackIn_12_0;
@@ -176,6 +176,6 @@ final class co {
     }
 
     static {
-        pv discarded$0 = new pv();
+        MissionStateFactory discarded$0 = new MissionStateFactory();
     }
 }

@@ -59,9 +59,9 @@ final class SetArmageddonWarning extends ConsoleCommand {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (!param0) {
-          SetArmageddonWarning.b(false);
+          SetArmageddonWarning.clearSharedReferences(false);
           field_p = null;
           return;
         }

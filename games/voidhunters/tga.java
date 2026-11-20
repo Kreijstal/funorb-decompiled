@@ -7,10 +7,10 @@ final class tga extends uf implements lca {
     private int field_L;
     static String[] field_M;
 
-    public static void j(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_M = null;
         if (param0 <= 69) {
-          tga.j(21);
+          tga.clearSharedReferences(21);
         }
     }
 
@@ -29,11 +29,11 @@ final class tga extends uf implements lca {
           return null;
         }
         if (param0 == 125) {
-          SetExplosionPushMultiplier.a(kc.field_b + (this.field_h - this.field_L), (byte) -114, uia.field_b);
+          SetExplosionPushMultiplier.a(PlayerGameData.field_b + (this.field_h - this.field_L), (byte) -114, uia.field_b);
           return this.field_p;
         }
         field_M = (String[]) null;
-        SetExplosionPushMultiplier.a(kc.field_b + (this.field_h - this.field_L), (byte) -114, uia.field_b);
+        SetExplosionPushMultiplier.a(PlayerGameData.field_b + (this.field_h - this.field_L), (byte) -114, uia.field_b);
         return this.field_p;
     }
 
@@ -127,7 +127,7 @@ final class tga extends uf implements lca {
     final void a(int param0, int param1, int param2, shb param3) {
         try {
           super.a(param0, param1, param2, param3);
-          this.field_L = -param1 + (kc.field_b - this.field_g);
+          this.field_L = -param1 + (PlayerGameData.field_b - this.field_g);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tga.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

@@ -14,9 +14,9 @@ final class jba implements wwa {
     static llb field_h;
     private int field_e;
 
-    final static wfb a(int[][] param0, long param1, int param2, Random param3, int param4, long param5) {
+    final static ShipComponentDefinition a(int[][] param0, long param1, int param2, Random param3, int param4, long param5) {
         int var18 = 0;
-        wfb stackIn_32_0 = null;
+        ShipComponentDefinition stackIn_32_0 = null;
         Object stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
@@ -41,7 +41,7 @@ final class jba implements wwa {
         int[][] var21 = null;
         int[] var22 = null;
         int[][] var23 = null;
-        wfb var24 = null;
+        ShipComponentDefinition var24 = null;
         int[] var25 = null;
         int[][] var26 = null;
         int[] var27 = null;
@@ -85,7 +85,7 @@ final class jba implements wwa {
           if (var8 == null) {
             var8 = tka.a(param1, (byte) 55, param5, param2, param3);
           }
-          var24 = new wfb((int[]) (var8), 0, 0);
+          var24 = new ShipComponentDefinition((int[]) (var8), 0, 0);
           var24.a(4, 102, false);
           if (param0 == null) {
             var24.field_w = new int[3][];

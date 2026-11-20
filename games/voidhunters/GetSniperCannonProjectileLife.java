@@ -39,10 +39,10 @@ final class GetSniperCannonProjectileLife extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_s = null;
         if (param0 != 4) {
-          GetSniperCannonProjectileLife.a(8);
+          GetSniperCannonProjectileLife.clearSharedReferences(8);
           field_o = null;
           return;
         }

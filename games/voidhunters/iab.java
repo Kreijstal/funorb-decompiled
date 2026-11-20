@@ -41,10 +41,10 @@ final class iab implements nka {
             return stackIn_3_0;
           }
           if (2 != iwa.field_b) {
-            stackIn_6_0 = nf.field_b;
+            stackIn_6_0 = CarouselPlayerEventFactory.field_b;
             return stackIn_6_0;
           }
-          var7 = nf.a(param1, false);
+          var7 = CarouselPlayerEventFactory.a(param1, false);
           if (var7 == null) {
             stackIn_10_0 = SetReverbGain.a(mr.field_L, new String[]{param1}, 122);
             return stackIn_10_0;

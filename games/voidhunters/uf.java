@@ -43,7 +43,7 @@ class uf extends htb {
           if (GetBombletSprayProjectileOndamageParticles.field_o == -1 &&
             -1 == gi.field_b) {
             gi.field_b = uia.field_b;
-            GetBombletSprayProjectileOndamageParticles.field_o = kc.field_b;
+            GetBombletSprayProjectileOndamageParticles.field_o = PlayerGameData.field_b;
           }
           boolean decompiledFrameRemainder0 = true;
           if (param0 != null) {
@@ -88,7 +88,7 @@ class uf extends htb {
           GetReadyRoomMutatorTime.field_o = param0;
           if (!GetMissileLauncherAimarc.field_o &&
             od.field_a < fra.field_b &&
-            upb.field_c) {
+            VariableConditionFactory.field_c) {
             od.field_a = 0;
             GetBombletSprayReload.field_r = GetBombletSprayProjectileOndamageParticles.field_o;
             SetTestActionLag.field_o = gi.field_b;
@@ -508,7 +508,7 @@ class uf extends htb {
         try {
           if (super.a(param0, param1, param2, param3, param4, param5, (byte) -61) &&
             this.field_q instanceof at) {
-            var8_int = ((at) ((Object) this.field_q)).a(kc.field_b, uia.field_b, param5, param1, (shb) (this), -1);
+            var8_int = ((at) ((Object) this.field_q)).a(PlayerGameData.field_b, uia.field_b, param5, param1, (shb) (this), -1);
             if (var8_int == -1) {
               stackIn_6_1 = 0;
             } else {
@@ -575,7 +575,7 @@ class uf extends htb {
           if (this.field_n == 1) {
             if (this.field_q instanceof at) {
               var7 = (at) ((Object) this.field_q);
-              var6 = var7.a(kc.field_b, uia.field_b, param0, param1, (shb) (this), param2 + 980);
+              var6 = var7.a(PlayerGameData.field_b, uia.field_b, param0, param1, (shb) (this), param2 + 980);
               if (var6 != -1) {
                 if (this.field_I && var6 < this.field_B &&
                   this.field_H < var6) {
@@ -704,7 +704,7 @@ class uf extends htb {
     }
 
     static {
-        ns discarded$0 = new ns();
+        SettingsInstanceFactory discarded$0 = new SettingsInstanceFactory();
         field_F = "Weapon";
     }
 }

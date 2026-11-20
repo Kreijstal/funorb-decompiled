@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetBloomThresholdPercentage extends ConsoleCommand {
-    static dja field_o;
+    static GameStateFactory field_o;
     static int[] field_p;
 
     SetBloomThresholdPercentage(String param0, Class[] param1, String param2) {
@@ -46,7 +46,7 @@ final class SetBloomThresholdPercentage extends ConsoleCommand {
     }
 
     static {
-        field_o = (dja) ((Object) new nra());
+        field_o = (GameStateFactory) ((Object) new AwardVictoryToTeamActionFactory());
         field_p = new int[12];
     }
 }

@@ -29,6 +29,6 @@ final class of {
 
     static {
         field_a = new gj();
-        gs discarded$0 = new gs();
+        SettingsChangeFactory discarded$0 = new SettingsChangeFactory();
     }
 }

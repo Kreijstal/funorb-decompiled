@@ -6,7 +6,7 @@ final class or {
 
     final static void a(int param0) {
         ow.field_b = param0;
-        oma.a(true);
+        CommonGameState.a(true);
     }
 
     static {

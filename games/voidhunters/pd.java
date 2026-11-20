@@ -23,6 +23,6 @@ final class pd extends IntrusiveNode {
     }
 
     static {
-        bca discarded$0 = new bca();
+        AdminMessageFactory discarded$0 = new AdminMessageFactory();
     }
 }

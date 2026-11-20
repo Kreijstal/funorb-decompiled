@@ -7,15 +7,15 @@ final class nfa extends uj {
 
     final boolean a(boolean param0) {
         if (param0) {
-          nfa.d(-108);
+          nfa.clearSharedReferences(-108);
           return true;
         }
         return true;
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -3408) {
-          nfa.d(-105);
+          nfa.clearSharedReferences(-105);
           field_e = null;
           return;
         }
@@ -50,7 +50,7 @@ final class nfa extends uj {
 
     final int d(byte param0) {
         if (param0 != 64) {
-          nfa.d(64);
+          nfa.clearSharedReferences(64);
           return Particle.field_t;
         }
         return Particle.field_t;

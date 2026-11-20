@@ -11,7 +11,7 @@ final class GetRepairModePower extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_p = null;
         if (param0) {
           field_r = -19L;

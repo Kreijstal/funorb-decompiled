@@ -65,7 +65,7 @@ final class un extends us {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (param0) {
           Sprite var2 = (Sprite) null;
           un.a((Sprite) null, 3);

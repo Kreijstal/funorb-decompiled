@@ -8,7 +8,7 @@ final class mia implements Runnable {
     eab field_d;
     volatile boolean field_e;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != -11954) {
           mia.a('\021', false);

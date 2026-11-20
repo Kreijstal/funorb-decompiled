@@ -69,34 +69,34 @@ final class GetFighterRepairAmount extends ConsoleCommand {
     }
 
     final static void a(int param0) {
-        pca.field_i = new uj[13];
-        pca.field_i[0] = (uj) ((Object) new nfa());
-        pca.field_i[1] = (uj) ((Object) new rea());
-        pca.field_i[2] = (uj) ((Object) new mcb());
+        CarouselPlayerEvent.field_i = new uj[13];
+        CarouselPlayerEvent.field_i[0] = (uj) ((Object) new nfa());
+        CarouselPlayerEvent.field_i[1] = (uj) ((Object) new rea());
+        CarouselPlayerEvent.field_i[2] = (uj) ((Object) new mcb());
         if (param0 == 11) {
-          pca.field_i[3] = (uj) ((Object) new qsb());
-          pca.field_i[4] = (uj) ((Object) new gb());
-          pca.field_i[5] = (uj) ((Object) new uw());
-          pca.field_i[6] = (uj) ((Object) new vdb());
-          pca.field_i[7] = (uj) ((Object) new lg());
-          pca.field_i[8] = (uj) ((Object) new nnb());
-          pca.field_i[9] = (uj) ((Object) new kib());
-          pca.field_i[10] = (uj) ((Object) new pva());
-          pca.field_i[11] = (uj) ((Object) new fpa());
-          pca.field_i[12] = (uj) ((Object) new hka());
+          CarouselPlayerEvent.field_i[3] = (uj) ((Object) new qsb());
+          CarouselPlayerEvent.field_i[4] = (uj) ((Object) new gb());
+          CarouselPlayerEvent.field_i[5] = (uj) ((Object) new uw());
+          CarouselPlayerEvent.field_i[6] = (uj) ((Object) new vdb());
+          CarouselPlayerEvent.field_i[7] = (uj) ((Object) new lg());
+          CarouselPlayerEvent.field_i[8] = (uj) ((Object) new nnb());
+          CarouselPlayerEvent.field_i[9] = (uj) ((Object) new kib());
+          CarouselPlayerEvent.field_i[10] = (uj) ((Object) new pva());
+          CarouselPlayerEvent.field_i[11] = (uj) ((Object) new fpa());
+          CarouselPlayerEvent.field_i[12] = (uj) ((Object) new hka());
           return;
         }
         GetFighterRepairAmount.a(-61);
-        pca.field_i[3] = (uj) ((Object) new qsb());
-        pca.field_i[4] = (uj) ((Object) new gb());
-        pca.field_i[5] = (uj) ((Object) new uw());
-        pca.field_i[6] = (uj) ((Object) new vdb());
-        pca.field_i[7] = (uj) ((Object) new lg());
-        pca.field_i[8] = (uj) ((Object) new nnb());
-        pca.field_i[9] = (uj) ((Object) new kib());
-        pca.field_i[10] = (uj) ((Object) new pva());
-        pca.field_i[11] = (uj) ((Object) new fpa());
-        pca.field_i[12] = (uj) ((Object) new hka());
+        CarouselPlayerEvent.field_i[3] = (uj) ((Object) new qsb());
+        CarouselPlayerEvent.field_i[4] = (uj) ((Object) new gb());
+        CarouselPlayerEvent.field_i[5] = (uj) ((Object) new uw());
+        CarouselPlayerEvent.field_i[6] = (uj) ((Object) new vdb());
+        CarouselPlayerEvent.field_i[7] = (uj) ((Object) new lg());
+        CarouselPlayerEvent.field_i[8] = (uj) ((Object) new nnb());
+        CarouselPlayerEvent.field_i[9] = (uj) ((Object) new kib());
+        CarouselPlayerEvent.field_i[10] = (uj) ((Object) new pva());
+        CarouselPlayerEvent.field_i[11] = (uj) ((Object) new fpa());
+        CarouselPlayerEvent.field_i[12] = (uj) ((Object) new hka());
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

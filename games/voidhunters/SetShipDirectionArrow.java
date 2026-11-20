@@ -3,7 +3,7 @@
  */
 final class SetShipDirectionArrow extends ConsoleCommand {
     static String field_q;
-    static dja field_p;
+    static GameStateFactory field_p;
     static mfb[] field_o;
     static String field_r;
 
@@ -53,7 +53,7 @@ final class SetShipDirectionArrow extends ConsoleCommand {
 
     static {
         field_q = "Accept draw";
-        field_p = (dja) ((Object) new wla());
+        field_p = (GameStateFactory) ((Object) new ResourceNodeFactory());
         field_r = "Passwords must be between 5 and 20 characters long";
     }
 }

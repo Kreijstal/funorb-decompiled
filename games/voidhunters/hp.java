@@ -27,10 +27,10 @@ final class hp extends OutputStream {
         hp.a(-122, 15, -4, false, -81, -103, -22);
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_b = null;
         if (param0) {
-          hp.a(true);
+          hp.clearSharedReferences(true);
         }
     }
 

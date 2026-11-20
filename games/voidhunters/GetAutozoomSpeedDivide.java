@@ -98,7 +98,7 @@ final class GetAutozoomSpeedDivide extends ConsoleCommand {
             return null;
           }
           if (param1 == 0) {
-            var10 = dtb.a(param2, -30334);
+            var10 = MissionBuilderFactory.a(param2, -30334);
             var6 = var10;
             if (var6 == null) {
               return null;
@@ -151,9 +151,9 @@ final class GetAutozoomSpeedDivide extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -15) {
-          GetAutozoomSpeedDivide.e((byte) 23);
+          GetAutozoomSpeedDivide.clearSharedReferences((byte) 23);
         }
         field_o = null;
     }

@@ -39,7 +39,7 @@ final class SetPhasedEnergyBeamReload extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 <= 68) {
           field_o = -81;
           field_p = null;
@@ -49,7 +49,7 @@ final class SetPhasedEnergyBeamReload extends ConsoleCommand {
     }
 
     static {
-        hsb discarded$0 = new hsb();
+        MessageLogFactory discarded$0 = new MessageLogFactory();
         field_o = 1;
     }
 }

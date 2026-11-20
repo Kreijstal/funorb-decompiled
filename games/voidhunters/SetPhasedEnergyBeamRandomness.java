@@ -349,7 +349,7 @@ final class SetPhasedEnergyBeamRandomness extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            SetPhasedEnergyBeamRandomness.a(62);
+            SetPhasedEnergyBeamRandomness.clearSharedReferences(62);
           }
           SetMachineGunEnergyUsed.a(76, 62, arguments[0].intValue(92));
           stackIn_3_0 = new ConsoleValue("void");
@@ -368,7 +368,7 @@ final class SetPhasedEnergyBeamRandomness extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 23518) {
           SetPhasedEnergyBeamRandomness.a(-25, -40, 101, -77, (int[]) null, -65, 79, 17, 32, 59, 77, -19, 88, -80, -117, 21, 79);
         }

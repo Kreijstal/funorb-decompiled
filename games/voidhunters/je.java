@@ -10,7 +10,7 @@ final class je {
     final void a(boolean param0) {
         this.field_a.a(-108);
         if (param0) {
-          je.b((byte) -55);
+          je.clearSharedReferences((byte) -55);
         }
     }
 
@@ -81,17 +81,17 @@ final class je {
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_c = null;
         if (param0 != 117) {
-          je.b((byte) -3);
+          je.clearSharedReferences((byte) -3);
         }
     }
 
     final static void a(byte param0) {
         lsa var1 = (lsa) (vfa.field_p.first(0));
         if (param0 <= 108) {
-          je.b((byte) -96);
+          je.clearSharedReferences((byte) -96);
         }
         if (var1 == null) {
           ifb.l(-116);

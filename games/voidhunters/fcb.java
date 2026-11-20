@@ -23,29 +23,29 @@ final class fcb implements oob {
           esb.field_j = null;
           fkb.a(param0 + 2095);
         }
-        sl.field_b = true;
+        AsteroidFieldFactory.field_b = true;
         fka.a("common wordpackj", (byte) -102);
-        this.field_f = bea.a(param0 + 0, gn.field_k.field_a);
+        this.field_f = MissionBuilder.a(param0 + 0, gn.field_k.field_a);
         fka.a("graphicsj", (byte) -103);
-        this.field_i = bea.a(param0 + 0, 16);
+        this.field_i = MissionBuilder.a(param0 + 0, 16);
         fka.a("fontmetricsj", (byte) -66);
-        this.field_e = bea.a(1, 17);
+        this.field_e = MissionBuilder.a(1, 17);
         fka.a("jagfxj", (byte) -93);
-        this.field_l = bea.a(param0 + 0, 18);
+        this.field_l = MissionBuilder.a(param0 + 0, 18);
         fka.a("vorbisj", (byte) -64);
-        this.field_k = bea.a(1, 19);
+        this.field_k = MissionBuilder.a(1, 19);
         fka.a("patchesj", (byte) -106);
-        this.field_j = bea.a(param0 + 0, 20);
+        this.field_j = MissionBuilder.a(param0 + 0, 20);
         fka.a("midij", (byte) -100);
-        this.field_h = bea.a(1, 21);
+        this.field_h = MissionBuilder.a(1, 21);
         fka.a("common quickchatj", (byte) -64);
-        this.field_b = bea.a(1, GetMachineGunProjectileDamage.field_o.field_a);
+        this.field_b = MissionBuilder.a(1, GetMachineGunProjectileDamage.field_o.field_a);
         fka.a("texturemetricsj", (byte) -108);
-        this.field_m = bea.a(param0 ^ 0, 24);
+        this.field_m = MissionBuilder.a(param0 ^ 0, 24);
         fka.a("texturesj", (byte) -91);
-        this.field_a = bea.a(1, 25);
+        this.field_a = MissionBuilder.a(1, 25);
         fka.a("jpegj", (byte) -52);
-        this.field_d = bea.a(param0 ^ 0, 26);
+        this.field_d = MissionBuilder.a(param0 ^ 0, 26);
         asb var4 = GetMassDriverReload.field_o;
         asb var3 = GetShieldsDirectionalArc.field_r;
         fka.a("creating request queue", (byte) -84);
@@ -67,7 +67,7 @@ final class fcb implements oob {
         fka.a("requesting patches", (byte) -112);
         rab.field_m.a(ttb.field_z, param0 ^ -2, GetMissilesCooldown.field_p, this.field_j);
         fka.a("requesting midis", (byte) -113);
-        rab.field_m.a(GetBombletSprayProjectiles.field_o, -1, vfb.field_a, this.field_h);
+        rab.field_m.a(GetBombletSprayProjectiles.field_o, -1, CarouselSlotFactory.field_a, this.field_h);
         fka.a("requesting basic graphics", (byte) -108);
         if (param0 != 1) {
           this.field_a = (asb) null;
@@ -105,7 +105,7 @@ final class fcb implements oob {
         int[] var19;
         var8 = VoidHunters.field_G;
         fka.a("Inside unpack", (byte) -111);
-        nra.b((byte) -99);
+        AwardVictoryToTeamActionFactory.b((byte) -99);
         var11 = GetMassDriverReload.field_o;
         var12 = GetShieldsDirectionalArc.field_r;
         if (this.field_l != null &&
@@ -279,15 +279,15 @@ final class fcb implements oob {
           fka.a("Unpacking graphics", (byte) -113);
           IncrementVariableAction.a(SetAutozoomSpeedDivide.field_o, -1, 90.0f);
           mab.field_a.renderGameFrame(-112);
-          lhb.field_a = (BitmapFont) ((Object) fab.a(var12, "", 0, var11, "arialish12"));
+          GrapplingHookFactory.field_a = (BitmapFont) ((Object) fab.a(var12, "", 0, var11, "arialish12"));
           SetMpSandboxEnemySpawnLimit.field_p = GetFighterBayAimspeed.a(0, "basic", this.field_i, this.field_e, "antigrav_18_graphics1");
           kbb.a(var12, this.field_e, this.field_i, (byte) 88, var11);
           cbb.a(this.field_d, param0 ^ 57, this.field_i);
-          ko.field_e = ucb.a("frame", -124, "basic", this.field_i);
-          vfa.field_d = ucb.a("frame_filled", 52, "basic", this.field_i);
-          dra.field_v = ucb.a("button_frame", param0 ^ 21, "basic", this.field_i);
-          SetDebrisGroupColour.field_o = ucb.a("button_raised", -95, "basic", this.field_i);
-          ucb.a("button_depressed", 80, "basic", this.field_i);
+          ko.field_e = WorldPoint.a("frame", -124, "basic", this.field_i);
+          vfa.field_d = WorldPoint.a("frame_filled", 52, "basic", this.field_i);
+          dra.field_v = WorldPoint.a("button_frame", param0 ^ 21, "basic", this.field_i);
+          SetDebrisGroupColour.field_o = WorldPoint.a("button_raised", -95, "basic", this.field_i);
+          WorldPoint.a("button_depressed", 80, "basic", this.field_i);
           lo.field_c = SetGrapplingHookRopeBreakLength.a(this.field_i, true, "basic", "achievements_large");
           ubb.field_j = SetSniperCannonProjectiles.a(var11, "unachieved", "basic", true);
           wu.field_h = SetSniperCannonProjectiles.a(var11, "orbcoin", "basic", true);
@@ -313,7 +313,7 @@ final class fcb implements oob {
           for (var7 = 0; var19.length > var7; var7++) {
             var19[var7] = 9;
           }
-          cma.a(var12, var14, var19, true, (byte) -127, ResourceNode.field_g, GetBombletSprayRandomness.field_q, NetworkGameClient.field_A, GetDebugLineLife.field_o, 8, SetTorpedoProjectileDamage.field_p, var11, 1, this.field_b, var15, shb.field_o, ub.field_d);
+          cma.a(var12, var14, var19, true, (byte) -127, ResourceNode.field_g, GetBombletSprayRandomness.field_q, NetworkGameClient.field_A, GetDebugLineLife.field_o, 8, SetTorpedoProjectileDamage.field_p, var11, 1, this.field_b, var15, shb.field_o, DebugSendable.field_d);
           kl.field_c = SetSniperCannonProjectiles.a(this.field_i, "lobby_game_logo", "basic", true);
           hk.b(200, -100);
           SetMissilesExplosionPower.a(var11, param0 - 68, var12);
@@ -322,7 +322,7 @@ final class fcb implements oob {
           this.field_e = null;
           fkb.a(param0 ^ 2164);
           if (ssa.b(2)) {
-            nna.field_C = new djb(ConsoleCommandRegistry.a(16), lhb.field_a, SetTorpedoProjectiles.field_o);
+            nna.field_C = new djb(ConsoleCommandRegistry.a(16), GrapplingHookFactory.field_a, SetTorpedoProjectiles.field_o);
           }
           fkb.a(2096);
           return false;
@@ -358,7 +358,7 @@ final class fcb implements oob {
           GetCountermeasureLauncherProjectiles.field_o >= param4 &&
           NebulaField.field_c <= param2 &&
           param1 <= hab.field_i) {
-          nn.a(param3, param4, param2, 112, param0, param1);
+          CarouselPlayerInfoFactory.a(param3, param4, param2, 112, param0, param1);
         } else {
           MidiChannelLevels.a(-3518, param0, param1, param2, param4, param3);
         }

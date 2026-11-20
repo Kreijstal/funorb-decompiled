@@ -38,9 +38,9 @@ final class GetSpinningBladeTopSpeed extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 > -79) {
-          GetSpinningBladeTopSpeed.a(-52);
+          GetSpinningBladeTopSpeed.clearSharedReferences(-52);
           field_o = null;
           field_p = null;
           return;

@@ -17,7 +17,7 @@ final class GetReverbWidth extends ConsoleCommand {
             var4 = (lta) null;
             GetReverbWidth.a((lta) null, 62);
           }
-          stackIn_3_0 = new ConsoleValue(oma.field_i);
+          stackIn_3_0 = new ConsoleValue(CommonGameState.field_i);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

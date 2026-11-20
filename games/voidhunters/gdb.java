@@ -257,10 +257,10 @@ final class gdb {
           return;
         }
         if (param1 % 10L == 0L) {
-          hg.a((byte) 90, -1L + param1);
-          hg.a((byte) 90, 1L);
+          PlayerLeave.a((byte) 90, -1L + param1);
+          PlayerLeave.a((byte) 90, 1L);
         } else {
-          hg.a((byte) 90, param1);
+          PlayerLeave.a((byte) 90, param1);
         }
     }
 

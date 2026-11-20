@@ -7,11 +7,11 @@ final class bpa implements wwa {
     static llb field_c;
     static String field_d;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_c = null;
         field_d = null;
         if (param0 <= 44) {
-          bpa.a((byte) 122);
+          bpa.clearSharedReferences((byte) 122);
         }
     }
 
@@ -49,7 +49,7 @@ final class bpa implements wwa {
         try {
           var6_int = param1.field_g + param2;
           var7 = param3 + param1.field_r;
-          npa.a(var7, (byte) 115, param1.field_f, param1.field_h, var6_int);
+          ServerTickFactory.a(var7, (byte) 115, param1.field_f, param1.field_h, var6_int);
           if (param1.e((byte) -120)) {
             SetCountermeasureLauncherRandomness.a(var7 + 2, param1.field_h - 4, 2 + var6_int, param1.field_f - 4, (byte) -100);
           }

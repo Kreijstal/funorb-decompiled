@@ -9,9 +9,9 @@ final class GetWaitForPlayers extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 <= 4) {
-          GetWaitForPlayers.e((byte) -4);
+          GetWaitForPlayers.clearSharedReferences((byte) -4);
           field_o = null;
           return;
         }
@@ -27,7 +27,7 @@ final class GetWaitForPlayers extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            GetWaitForPlayers.e((byte) 96);
+            GetWaitForPlayers.clearSharedReferences((byte) 96);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(6, 107));
           return stackIn_3_0;

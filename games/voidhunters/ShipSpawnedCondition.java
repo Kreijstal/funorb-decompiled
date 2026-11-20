@@ -43,9 +43,9 @@ final class ShipSpawnedCondition extends MissionCondition implements DiffableSta
         }
     }
 
-    final ucb[] a(World param0, int param1) {
+    final WorldPoint[] getWorldPositions(World param0, int param1) {
         RuntimeException var3 = null;
-        ucb[] stackIn_3_0 = null;
+        WorldPoint[] stackIn_3_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -54,7 +54,7 @@ final class ShipSpawnedCondition extends MissionCondition implements DiffableSta
           if (param1 == -20605) {
             return null;
           }
-          stackIn_3_0 = (ucb[]) null;
+          stackIn_3_0 = (WorldPoint[]) null;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,7 +70,7 @@ final class ShipSpawnedCondition extends MissionCondition implements DiffableSta
         }
     }
 
-    final int[] a(World param0, int param1, int[] param2) {
+    final int[] collectTargetBodyIds(World param0, int param1, int[] param2) {
         int var6 = 0;
         Ship[] var4 = null;
         Ship[] var5 = null;
@@ -88,7 +88,7 @@ final class ShipSpawnedCondition extends MissionCondition implements DiffableSta
         try {
           var4 = param0.getShips(1000);
           if (param1 <= 16) {
-            this.a(-56);
+            this.getDescription(-56);
           }
           var5 = var4;
           for (var6 = 0; var5.length > var6; var6++) {
@@ -123,7 +123,7 @@ final class ShipSpawnedCondition extends MissionCondition implements DiffableSta
         }
     }
 
-    final boolean a(int param0, MissionState param1, World param2) {
+    final boolean evaluate(int param0, MissionState param1, World param2) {
         int var6 = 0;
         RuntimeException var4 = null;
         Ship[] var5 = null;
@@ -169,9 +169,9 @@ final class ShipSpawnedCondition extends MissionCondition implements DiffableSta
         }
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != 11) {
-          ShipSpawnedCondition.b((byte) 113);
+          ShipSpawnedCondition.clearSharedReferences((byte) 113);
         }
         field_e = null;
     }
@@ -212,7 +212,7 @@ final class ShipSpawnedCondition extends MissionCondition implements DiffableSta
           var7 = var6;
           if (param0 <= 54) {
             World var4 = (World) null;
-            this.a((World) null, -15);
+            this.getWorldPositions((World) null, -15);
           }
           super.copyTo((byte) 81, param1);
           var7.teamId = this.teamId;
@@ -224,7 +224,7 @@ final class ShipSpawnedCondition extends MissionCondition implements DiffableSta
     ShipSpawnedCondition() {
     }
 
-    final String a(int param0) {
+    final String getDescription(int param0) {
         if (param0 != -1) {
           return (String) null;
         }
@@ -245,15 +245,15 @@ final class ShipSpawnedCondition extends MissionCondition implements DiffableSta
         this.teamId = param0;
     }
 
-    final int a(byte param0, int param1) {
+    final int getParameter(byte param0, int param1) {
         if (param0 >= -102) {
           World var4 = (World) null;
-          this.a((World) null, 9);
+          this.getWorldPositions((World) null, 9);
         }
         return this.teamId;
     }
 
-    final void a(World param0, int param1, int param2, int param3) {
+    final void setParameter(World param0, int param1, int param2, int param3) {
         if (param1 != -2) {
           return;
         }

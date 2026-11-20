@@ -338,15 +338,15 @@ final class GetUseCircleFill extends ConsoleCommand {
           }
         }
         Message.field_d = 2147483647;
-        qbb.field_a = -2147483648;
-        pn.field_b = -2147483648;
-        bea.field_e = param2;
-        npa.field_d = 2147483647;
+        ShipAIFactory.field_a = -2147483648;
+        WeaponBehaviourFactory.field_b = -2147483648;
+        MissionBuilder.field_e = param2;
+        ServerTickFactory.field_d = 2147483647;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 2) {
-          GetUseCircleFill.a(-99);
+          GetUseCircleFill.clearSharedReferences(-99);
           field_o = null;
           field_p = null;
           return;

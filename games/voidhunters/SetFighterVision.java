@@ -34,7 +34,7 @@ final class SetFighterVision extends ConsoleCommand {
           }
           var7 = (String) null;
           SetSelfDestructTimer.a(19204, var5, 0, (String) null, kmb.field_a);
-          umb.field_d = fgb.field_l;
+          ServerTick.field_d = fgb.field_l;
           bpa.field_c.field_ib = (8355711 & TargetLock.field_b.field_ib >> 1) + (-((16711423 & kmb.field_a) >> 1) + kmb.field_a);
           bpa.field_c.field_qb = kmb.field_a - (((16711422 & kmb.field_a) >> 1) - ((TargetLock.field_b.field_qb & 16711423) >> 1));
           bpa.field_c.field_U = -(kmb.field_a >> 1 & 8355711) + kmb.field_a + ((TargetLock.field_b.field_U & 16711423) >> 1);
@@ -47,9 +47,9 @@ final class SetFighterVision extends ConsoleCommand {
           me.field_s = new llb(0L, (llb) null);
           SetThrusterAutobalancing.field_p = new llb(0L, param0);
           bpa.field_c = new llb(0L, param4);
-          bpa.field_c.field_eb = ej.field_c;
+          bpa.field_c.field_eb = DebrisFactory.field_c;
           SetThrusterAutobalancing.field_p.b(-561, bpa.field_c);
-          fgb.field_l = new llb(0L, umb.field_d);
+          fgb.field_l = new llb(0L, ServerTick.field_d);
           SetThrusterAutobalancing.field_p.b(-561, fgb.field_l);
           GetMachineGunAimarc.field_q = new llb(0L, TargetLock.field_b, GetMissionTerrainVotingChancestep.field_o);
           dp.field_a = new llb(0L, TargetLock.field_b);

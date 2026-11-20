@@ -93,7 +93,7 @@ final class wk implements rs {
 
     static {
         field_b = new float[4];
-        npa discarded$0 = new npa();
+        ServerTickFactory discarded$0 = new ServerTickFactory();
         field_a = 20;
     }
 }

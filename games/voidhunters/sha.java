@@ -23,7 +23,7 @@ final class sha extends oda {
         }
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_x = null;
         if (param0 != 1) {
           eab var2 = (eab) null;
@@ -96,8 +96,8 @@ final class sha extends oda {
           SetDefaultFiringLeeway.field_p = param2;
           GetLaserProjectiles.field_p = param3;
           GetAutozoomAmountMultiply.field_o = (ona) ((Object) new wh());
-          nj.field_a = new pfa(param7);
-          ho.field_a = new fwa(GetAutozoomAmountMultiply.field_o, nj.field_a);
+          BlackBoxRecordingFactory.field_a = new pfa(param7);
+          ho.field_a = new fwa(GetAutozoomAmountMultiply.field_o, BlackBoxRecordingFactory.field_a);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sha.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }

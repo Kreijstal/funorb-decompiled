@@ -11,12 +11,12 @@ final class SetSpinningBladeAimarc extends ConsoleCommand {
     final static void e(byte param0) {
         java.awt.Canvas var1 = null;
         if (param0 == -128) {
-          if (upa.field_a) {
-            upa.field_a = false;
+          if (ShipComponentFactory.field_a) {
+            ShipComponentFactory.field_a = false;
             var1 = SetThrusterBindingMoveAndTurnHasOppositeMove.e((byte) 123);
             SetTorpedoProjectiles.field_o.a((java.awt.Component) ((Object) var1), GetTorpedoReload.field_q, GetUseDetailLines.field_o, 14);
             SetTorpedoProjectiles.field_o.a((java.awt.Component) ((Object) var1), true, (byte) -122);
-            kc.field_b = GetUseDetailLines.field_o;
+            PlayerGameData.field_b = GetUseDetailLines.field_o;
             uia.field_b = GetTorpedoReload.field_q;
           }
           return;

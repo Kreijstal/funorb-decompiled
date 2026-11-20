@@ -12,7 +12,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
 
     final static void a(int param0, int param1, int param2) {
         if (param1 != -22699) {
-          SetFighterRepairAmount.e((byte) -97);
+          SetFighterRepairAmount.clearSharedReferences((byte) -97);
           alb.field_b = param2;
           SetDebrisPartitioned.field_r = param0;
           return;
@@ -49,7 +49,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 != -15) {
           SetFighterRepairAmount.b(-46, 57, -52);
@@ -144,7 +144,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
         if (SetBombletSprayProjectileDamage.field_o == 85) {
           if (var3 != 0 &&
             SetShipAimLines.field_p.length() > 0) {
-            npa.a(-1 + SetShipAimLines.field_p.length(), false, SetShipAimLines.field_p, ' ');
+            ServerTickFactory.a(-1 + SetShipAimLines.field_p.length(), false, SetShipAimLines.field_p, ' ');
           }
           return true;
         }
@@ -161,17 +161,17 @@ final class SetFighterRepairAmount extends ConsoleCommand {
         discarded$0 = SetShipAimLines.field_p.append((char) var4);
         var5Lifetime1 = 485;
         var17 = kca.field_a;
-        var16 = gfb.a(1, var17);
+        var16 = EscapePodFactory.a(1, var17);
         var19 = var16;
         if (ow.field_b != 2) {
           var7 = "";
           if (0 != ow.field_b) {
             var35 = var7 + var19 + ": ";
-            var5Lifetime1 = var5Lifetime1 - ej.field_c.b(var35);
-            if (var5Lifetime1 >= ej.field_c.b(SetShipAimLines.field_p.toString())) {
+            var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.b(var35);
+            if (var5Lifetime1 >= DebrisFactory.field_c.b(SetShipAimLines.field_p.toString())) {
               return true;
             }
-            npa.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
+            ServerTickFactory.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
             return true;
           }
           if (SetSpinningBladeSpindamageMultiplier.field_o == null) {
@@ -180,29 +180,29 @@ final class SetFighterRepairAmount extends ConsoleCommand {
                 if (!nv.field_n) {
                   var38 = "[" + SetReverbGain.a(wt.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
                   var39 = var38 + var19 + ": ";
-                  var5Lifetime1 = var5Lifetime1 - ej.field_c.b(var39);
-                  if (var5Lifetime1 < ej.field_c.b(SetShipAimLines.field_p.toString())) {
-                    npa.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
+                  var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.b(var39);
+                  if (var5Lifetime1 < DebrisFactory.field_c.b(SetShipAimLines.field_p.toString())) {
+                    ServerTickFactory.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
                   }
                   return true;
                 }
                 if (null == vla.field_E) {
                   var36 = "[" + SetReverbGain.a(wt.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
                   var37 = var36 + var19 + ": ";
-                  var5Lifetime1 = var5Lifetime1 - ej.field_c.b(var37);
-                  if (var5Lifetime1 < ej.field_c.b(SetShipAimLines.field_p.toString())) {
-                    npa.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
+                  var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.b(var37);
+                  if (var5Lifetime1 < DebrisFactory.field_c.b(SetShipAimLines.field_p.toString())) {
+                    ServerTickFactory.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
                   }
                   return true;
                 }
                 var7 = "[" + vla.field_E + "] ";
               }
               var40 = var7 + var19 + ": ";
-              var5Lifetime1 = var5Lifetime1 - ej.field_c.b(var40);
-              if (var5Lifetime1 >= ej.field_c.b(SetShipAimLines.field_p.toString())) {
+              var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.b(var40);
+              if (var5Lifetime1 >= DebrisFactory.field_c.b(SetShipAimLines.field_p.toString())) {
                 return true;
               }
-              npa.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
+              ServerTickFactory.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
               return true;
             }
             var7 = "[" + bib.field_e + "] ";
@@ -211,43 +211,43 @@ final class SetFighterRepairAmount extends ConsoleCommand {
             if (!nv.field_n) {
               var43 = "[" + SetReverbGain.a(wt.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
               var44 = var43 + var19 + ": ";
-              var5Lifetime1 = var5Lifetime1 - ej.field_c.b(var44);
-              if (var5Lifetime1 >= ej.field_c.b(SetShipAimLines.field_p.toString())) {
+              var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.b(var44);
+              if (var5Lifetime1 >= DebrisFactory.field_c.b(SetShipAimLines.field_p.toString())) {
                 return true;
               }
-              npa.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
+              ServerTickFactory.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
               return true;
             }
             if (null == vla.field_E) {
               var41 = "[" + SetReverbGain.a(wt.field_b, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 80) + "] ";
               var42 = var41 + var19 + ": ";
-              var5Lifetime1 = var5Lifetime1 - ej.field_c.b(var42);
-              if (var5Lifetime1 >= ej.field_c.b(SetShipAimLines.field_p.toString())) {
+              var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.b(var42);
+              if (var5Lifetime1 >= DebrisFactory.field_c.b(SetShipAimLines.field_p.toString())) {
                 return true;
               }
-              npa.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
+              ServerTickFactory.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
               return true;
             }
             var7 = "[" + vla.field_E + "] ";
           }
           var45 = var7 + var19 + ": ";
-          var5Lifetime1 = var5Lifetime1 - ej.field_c.b(var45);
+          var5Lifetime1 = var5Lifetime1 - DebrisFactory.field_c.b(var45);
         } else {
           var47 = (CharSequence) ((Object) waa.field_x);
           var18 = SetReverbGain.a(tia.field_G, new String[]{joa.a(var47, false)}, 108);
           var8 = SetReverbGain.a(GetLaserAimspeed.field_o, new String[]{var16}, param2 ^ -30);
-          var9 = ej.field_c.b(var18);
-          var10 = ej.field_c.b(var8);
+          var9 = DebrisFactory.field_c.b(var18);
+          var10 = DebrisFactory.field_c.b(var8);
           if (var10 >= var9) {
             var5Lifetime1 = var5Lifetime1 - var10;
           } else {
             var5Lifetime1 = var5Lifetime1 - var9;
           }
         }
-        if (var5Lifetime1 >= ej.field_c.b(SetShipAimLines.field_p.toString())) {
+        if (var5Lifetime1 >= DebrisFactory.field_c.b(SetShipAimLines.field_p.toString())) {
           return true;
         }
-        npa.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
+        ServerTickFactory.a(SetShipAimLines.field_p.length() - 1, false, SetShipAimLines.field_p, ' ');
         return true;
     }
 

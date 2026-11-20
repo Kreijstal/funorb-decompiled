@@ -178,7 +178,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
                 if (param6) {
                   teb.field_b[var23Lifetime2] = var27Lifetime1 >> iob.field_f;
                   gw.field_i[var23Lifetime2] = var28Lifetime1 >> iob.field_f;
-                  lka.field_a[var23Lifetime2] = var29Lifetime1;
+                  HardpointFactory.field_a[var23Lifetime2] = var29Lifetime1;
                 }
                 var23Lifetime2++;
                 continue;
@@ -200,7 +200,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
                   var26Lifetime1 = param0.field_h[var23Lifetime2];
                   GetSalvoaim.field_o[var23Lifetime2] = (var26Lifetime1 * var18 + var15 * var25Lifetime1 + var12 * var24Lifetime1 >> 16) + var9;
                   GetPhysicsCollisionPhantomForceMultiplier.field_p[var23Lifetime2] = var10 + (var13 * var24Lifetime1 - (-(var25Lifetime1 * var16) - var26Lifetime1 * var19) >> 16);
-                  kgb.field_b[var23Lifetime2] = var11 + (var17 * var25Lifetime1 + (var24Lifetime1 * var14 + var20 * var26Lifetime1) >> 16);
+                  PlayerLeaveFactory.field_b[var23Lifetime2] = var11 + (var17 * var25Lifetime1 + (var24Lifetime1 * var14 + var20 * var26Lifetime1) >> 16);
                   var24Lifetime1 = param0.field_t[var23Lifetime2];
                   var25Lifetime1 = param0.field_C[var23Lifetime2];
                   var26Lifetime1 = param0.field_H[var23Lifetime2];
@@ -281,7 +281,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         try {
           field_p = null;
           field_o = null;

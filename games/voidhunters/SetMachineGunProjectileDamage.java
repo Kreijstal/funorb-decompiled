@@ -32,10 +32,10 @@ final class SetMachineGunProjectileDamage extends ConsoleCommand {
         SetMachineGunProjectileDamage.a(-123, 19, -27, 40, -88, 106, 33, 78);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 146) {
-          SetMachineGunProjectileDamage.a(59);
+          SetMachineGunProjectileDamage.clearSharedReferences(59);
         }
     }
 
@@ -68,7 +68,7 @@ final class SetMachineGunProjectileDamage extends ConsoleCommand {
     }
 
     static {
-        jja discarded$0 = new jja();
+        CarouselSystemEventFactory discarded$0 = new CarouselSystemEventFactory();
         field_o = "win";
     }
 }

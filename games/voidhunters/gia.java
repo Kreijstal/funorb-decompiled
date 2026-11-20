@@ -115,11 +115,11 @@ final class gia extends TextureOperation {
         return var22;
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_j = null;
         field_k = null;
         if (param0) {
-          gia.a(true);
+          gia.clearSharedReferences(true);
         }
     }
 

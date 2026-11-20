@@ -115,7 +115,7 @@ final class SettingsInstance implements DiffableState {
 
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.values = wkb.a((byte) 37, this.values, param0, 8);
+          this.values = SetVariableActionFactory.a((byte) 37, this.values, param0, 8);
           if (param1) {
             this.values = (int[]) null;
           }

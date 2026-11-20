@@ -29,7 +29,7 @@ final class qpa {
             var3 = (byte[]) null;
             qpa.a((byte) -116, (byte[]) null);
           }
-          stackIn_3_0 = tja.a(0, 0, param1.length, param1);
+          stackIn_3_0 = CarouselSlot.a(0, 0, param1.length, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

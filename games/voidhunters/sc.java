@@ -12,9 +12,9 @@ abstract class sc implements eeb {
         }
     }
 
-    public static void c(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 < 36) {
-          sc.c(-26);
+          sc.clearSharedReferences(-26);
           field_b = null;
           return;
         }

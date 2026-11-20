@@ -19,7 +19,7 @@ final class GetThrusterBoosterForce extends ConsoleCommand {
             return null;
           }
           if (param0 == -32431) {
-            stackIn_7_0 = dlb.a(-115);
+            stackIn_7_0 = PlayerFactory.a(-115);
             return stackIn_7_0;
           }
           stackIn_5_0 = (caa) null;

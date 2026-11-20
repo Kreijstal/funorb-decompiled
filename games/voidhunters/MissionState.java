@@ -41,7 +41,7 @@ final class MissionState implements DiffableState {
         MissionState var5 = null;
         try {
           var5 = (MissionState) (other);
-          tja.a(var5.customVariables, 1, this.customVariables, false, 5547);
+          CarouselSlot.a(var5.customVariables, 1, this.customVariables, false, 5547);
           if (null != this.nextround &&
             var5.nextround != null) {
             this.nextround.reportDifferences(var5.nextround, -123);
@@ -131,13 +131,13 @@ final class MissionState implements DiffableState {
         Player var5 = null;
         int var6 = 0;
         int var7 = 0;
-        bea var8 = null;
-        bea var9 = null;
+        MissionBuilder var8 = null;
+        MissionBuilder var9 = null;
         Random var10 = null;
         String var11 = null;
         var7 = VoidHunters.field_G;
         try {
-          var8 = new bea();
+          var8 = new MissionBuilder();
           var9 = var8;
           var9.seed = this.a((byte) 120);
           if (qab.a(param0 + 92, this.d(6472))) {
@@ -148,13 +148,13 @@ final class MissionState implements DiffableState {
           var9.optionTotals = this.c(true);
           var9.a(91, param1);
           if (MissionList.a((byte) -125)) {
-            var11 = ShipCondition.field_f[param1.missionState.d(6472)];
+            var11 = ShipTeamCondition.field_f[param1.missionState.d(6472)];
             SetGrapplingHookCooldown.a(202, "missions_started_" + var11, 1);
             SetGrapplingHookCooldown.a(param0 + 202, "missions_started", 1);
             for (var5_int = 0; var5_int < var9.optionTotals.length; var5_int++) {
               var6 = var8.optionTotals[var5_int];
               if (0 < var6) {
-                SetGrapplingHookCooldown.a(param0 + 202, "votes_for_" + ShipCondition.field_f[var5_int], var6);
+                SetGrapplingHookCooldown.a(param0 + 202, "votes_for_" + ShipTeamCondition.field_f[var5_int], var6);
               }
             }
           }
@@ -293,7 +293,7 @@ final class MissionState implements DiffableState {
                 SetMissionResnetResourceTickTime.field_p != 0) && (var14 < 0 ||
                 var18.length <= var14)) {
                 if (var11 == var10) {
-                  var15 = ccb.a(param0, var18, (byte) -21, false);
+                  var15 = ShipFactory.a(param0, var18, (byte) -21, false);
                   var13.selectedTeam = var15;
                   var4[var15] = var4[var15] + 1;
                 }
@@ -439,7 +439,7 @@ final class MissionState implements DiffableState {
         if (param2 < 15) {
           return true;
         }
-        return wh.a(param0, (byte) 99, param1) & (((param1 & 8192) != 0 ? true : false) | bla.a(param1, false, param0) | hsb.a(param0, 65536, param1));
+        return wh.a(param0, (byte) 99, param1) & (((param1 & 8192) != 0 ? true : false) | bla.a(param1, false, param0) | MessageLogFactory.a(param0, 65536, param1));
     }
 
     public final boolean differsFrom(byte param0, SerializableGameState param1) {
@@ -706,7 +706,7 @@ final class MissionState implements DiffableState {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (!param0) {
           MissionState.a(111, -111, (byte) -58);
         }
@@ -1041,7 +1041,7 @@ final class MissionState implements DiffableState {
           } else {
             this.nextround = null;
           }
-          this.teamscores = wkb.a((byte) 37, this.teamscores, param0, 8);
+          this.teamscores = SetVariableActionFactory.a((byte) 37, this.teamscores, param0, 8);
           if (kv.readBoolean(param1, param0)) {
             if (this.currentMatch == null) {
               this.currentMatch = new MatchResults();
@@ -1130,7 +1130,7 @@ final class MissionState implements DiffableState {
           } else {
             if (this.missionPhase == 1) {
               if (this.phaseChangeCountdown > 0) {
-                this.a(13, (byte) -126, sl.field_a, param0, 0, -1);
+                this.a(13, (byte) -126, AsteroidFieldFactory.field_a, param0, 0, -1);
               }
               if (this.phaseChangeCountdown != 0) {
                 return;

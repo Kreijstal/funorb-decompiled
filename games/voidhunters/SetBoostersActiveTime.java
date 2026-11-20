@@ -37,6 +37,6 @@ final class SetBoostersActiveTime extends ConsoleCommand {
     }
 
     static {
-        kgb discarded$0 = new kgb();
+        PlayerLeaveFactory discarded$0 = new PlayerLeaveFactory();
     }
 }

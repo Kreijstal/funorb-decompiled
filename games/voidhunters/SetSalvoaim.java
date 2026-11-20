@@ -4,15 +4,15 @@
 final class SetSalvoaim extends ConsoleCommand {
     static int field_r;
     static String field_q;
-    static dja field_s;
+    static GameStateFactory field_s;
     static int field_p;
     static String field_o;
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_q = null;
         field_s = null;
         if (param0) {
-          SetSalvoaim.b(false);
+          SetSalvoaim.clearSharedReferences(false);
           field_o = null;
           return;
         }
@@ -56,7 +56,7 @@ final class SetSalvoaim extends ConsoleCommand {
     static {
         field_q = "Pause Menu";
         field_p = 48;
-        field_s = (dja) ((Object) new uk());
+        field_s = (GameStateFactory) ((Object) new TeamShipComponentConditionFactory());
         field_o = "Please select options in the following rows:  ";
     }
 }

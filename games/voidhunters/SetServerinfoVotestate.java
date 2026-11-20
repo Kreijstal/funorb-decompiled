@@ -53,7 +53,7 @@ final class SetServerinfoVotestate extends ConsoleCommand {
         String var4 = null;
         try {
           if (param0 == 1) {
-            stackIn_3_0 = SetReverbGain.a(ub.field_g, new String[]{param1}, 90);
+            stackIn_3_0 = SetReverbGain.a(DebugSendable.field_g, new String[]{param1}, 90);
             return stackIn_3_0;
           }
           if (param0 == 2) {

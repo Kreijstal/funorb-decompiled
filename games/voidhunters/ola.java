@@ -45,7 +45,7 @@ final class ola extends gna {
         return var1Lifetime1;
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_q = null;
         field_o = null;
         if (param0 != 2) {

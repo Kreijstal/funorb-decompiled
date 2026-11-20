@@ -7,7 +7,7 @@ final class tea {
     static String field_c;
     static String field_a;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (param0) {
           field_a = null;
           field_d = null;

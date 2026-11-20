@@ -11,12 +11,12 @@ final class SetAngularForceDownshift extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_r = null;
         field_q = null;
         field_p = null;
         if (param0 > -96) {
-          SetAngularForceDownshift.e((byte) -119);
+          SetAngularForceDownshift.clearSharedReferences((byte) -119);
         }
     }
 

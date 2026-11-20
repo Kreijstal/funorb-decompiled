@@ -13,11 +13,11 @@ final class kua {
         if (param0 == 75) {
           return (kib.field_d << 4) + ((GetThrusterSmallForce.field_p << 2) + lla.field_h);
         }
-        kua.a(108);
+        kua.clearSharedReferences(108);
         return (kib.field_d << 4) + ((GetThrusterSmallForce.field_p << 2) + lla.field_h);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != 181765988) {
           field_e = false;

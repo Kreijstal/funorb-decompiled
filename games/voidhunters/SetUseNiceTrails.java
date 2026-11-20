@@ -37,9 +37,9 @@ final class SetUseNiceTrails extends ConsoleCommand {
     final static int a(int param0) {
         if (param0 != 0) {
           SetUseNiceTrails.a(61);
-          return -mua.field_d + GetMissionTerrainAsteroidProbability.field_p;
+          return -ShieldBehaviour.field_d + GetMissionTerrainAsteroidProbability.field_p;
         }
-        return -mua.field_d + GetMissionTerrainAsteroidProbability.field_p;
+        return -ShieldBehaviour.field_d + GetMissionTerrainAsteroidProbability.field_p;
     }
 
     static {

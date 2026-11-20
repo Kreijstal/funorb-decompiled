@@ -15,7 +15,7 @@ final class ai {
         SetUseCircleFill.field_o.b(param1 ^ -561, SetUseModels.field_o);
         SetUseModels.field_o.b(-561, DualLinkNode.field_f);
         SetUseModels.field_o.b(-561, rlb.field_a);
-        ok.a((byte) 100, param0);
+        ShipBodyFactory.a((byte) 100, param0);
     }
 
     static {

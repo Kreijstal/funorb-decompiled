@@ -158,7 +158,7 @@ final class bmb {
             GetDebrisSurvives.field_o = param5;
             fk.field_c = param9;
             GetUseRectFill.field_p = param12;
-            beb.field_a = param3;
+            ProjectileFactory.field_a = param3;
             if (param2 < 46) {
               bmb.clearSharedReferences((byte) -11);
             }

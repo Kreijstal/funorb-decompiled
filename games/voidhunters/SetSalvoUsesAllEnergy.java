@@ -93,8 +93,8 @@ final class SetSalvoUsesAllEnergy extends ConsoleCommand {
     }
 
     final static void a(boolean param0, byte param1) {
-        if (lob.field_a != null) {
-          SetPhasedEnergyBeamPulsetime.a(lob.field_a, (byte) 17);
+        if (NebulaFieldFactory.field_a != null) {
+          SetPhasedEnergyBeamPulsetime.a(NebulaFieldFactory.field_a, (byte) 17);
         }
         if (GetLagStandardDeviationOut.field_o != null) {
           GetLagStandardDeviationOut.field_o.a(1, param0);

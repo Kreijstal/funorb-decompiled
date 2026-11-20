@@ -8,9 +8,9 @@ final class atb {
     private GpuToolkit field_a;
     private d field_e;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (!param0) {
-          atb.a(false);
+          atb.clearSharedReferences(false);
           field_b = null;
           return;
         }

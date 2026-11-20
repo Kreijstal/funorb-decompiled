@@ -30,12 +30,12 @@ final class glb {
               var1 = (qw) (NetworkGameClient.field_y.next((byte) 77));
             }
           }
-          if (null != gtb.field_d) {
-            stackIn_13_0 = gtb.field_d.isEmpty(-74);
+          if (null != PlayerReady.field_d) {
+            stackIn_13_0 = PlayerReady.field_d.isEmpty(-74);
             if (stackIn_13_0) {
               return;
             }
-            var1_ref = (nl) (gtb.field_d.first(0));
+            var1_ref = (nl) (PlayerReady.field_d.first(0));
             while (var1_ref != null) {
               if (!var1_ref.field_h) {
                 nmb.a((byte) -91, var1_ref.field_d);
@@ -48,7 +48,7 @@ final class glb {
                 }
                 var1_ref.field_h = false;
               }
-              var1_ref = (nl) (gtb.field_d.next((byte) 12));
+              var1_ref = (nl) (PlayerReady.field_d.next((byte) 12));
             }
             return;
           }
@@ -73,7 +73,7 @@ final class glb {
         field_a = (String) null;
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         field_a = null;
         if (param0 != -17471) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetExplosionPushMultiplier extends ConsoleCommand {
-    static dja field_o;
+    static GameStateFactory field_o;
 
     GetExplosionPushMultiplier(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -10,7 +10,7 @@ final class GetExplosionPushMultiplier extends ConsoleCommand {
 
     public static void clearSharedReferences(int param0) {
         if (param0 <= 71) {
-          field_o = (dja) null;
+          field_o = (GameStateFactory) null;
           field_o = null;
           return;
         }
@@ -47,6 +47,6 @@ final class GetExplosionPushMultiplier extends ConsoleCommand {
     }
 
     static {
-        field_o = (dja) ((Object) new akb());
+        field_o = (GameStateFactory) ((Object) new MissionEventFactory());
     }
 }

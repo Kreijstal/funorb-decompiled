@@ -137,18 +137,18 @@ final class gnb {
             jaggl.OpenGL.glAttachObjectARB(var3_long, param1[var5].field_d);
           }
           jaggl.OpenGL.glLinkProgramARB(var3_long);
-          jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35714, hg.field_a, 0);
-          if (0 == hg.field_a[param0]) {
-            if (0 == hg.field_a[0]) {
+          jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35714, PlayerLeave.field_a, 0);
+          if (0 == PlayerLeave.field_a[param0]) {
+            if (0 == PlayerLeave.field_a[0]) {
               System.out.println("Shader linking failed:");
             }
-            jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35716, hg.field_a, 1);
-            if (hg.field_a[1] > 1) {
-              var11 = new byte[hg.field_a[1]];
-              jaggl.OpenGL.glGetInfoLogARB(var3_long, hg.field_a[1], hg.field_a, 0, var11, 0);
+            jaggl.OpenGL.glGetObjectParameterivARB(var3_long, 35716, PlayerLeave.field_a, 1);
+            if (PlayerLeave.field_a[1] > 1) {
+              var11 = new byte[PlayerLeave.field_a[1]];
+              jaggl.OpenGL.glGetInfoLogARB(var3_long, PlayerLeave.field_a[1], PlayerLeave.field_a, 0, var11, 0);
               System.out.println(new String(var11));
             }
-            if (0 == hg.field_a[0]) {
+            if (0 == PlayerLeave.field_a[0]) {
               var7 = 0;
               var5Lifetime1 = var7;
               while (var7 < param1.length) {
@@ -224,7 +224,7 @@ final class gnb {
         this.field_e = null;
     }
 
-    public static void b(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_f = null;
         if (param0 < 17) {
           field_a = -8;

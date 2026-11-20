@@ -4,7 +4,7 @@
 final class GetMissionDebrisVotingChancestep extends ConsoleCommand {
     static String field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 69) {
           GetMissionDebrisVotingChancestep.a(-33, 96, true);
           field_o = null;
@@ -33,7 +33,7 @@ final class GetMissionDebrisVotingChancestep extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetMissionDebrisVotingChancestep.a(55);
+            GetMissionDebrisVotingChancestep.clearSharedReferences(55);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(69, 96));
           return stackIn_3_0;

@@ -13,14 +13,14 @@ final class mmb {
     static String field_e;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 == 2) {
           field_e = null;
           field_b = null;
           field_d = null;
           return;
         }
-        mmb.a(-124);
+        mmb.clearSharedReferences(-124);
         field_e = null;
         field_b = null;
         field_d = null;

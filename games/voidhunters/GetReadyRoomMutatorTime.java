@@ -38,9 +38,9 @@ final class GetReadyRoomMutatorTime extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 < 29) {
-          GetReadyRoomMutatorTime.e((byte) 98);
+          GetReadyRoomMutatorTime.clearSharedReferences((byte) 98);
           field_o = null;
           return;
         }

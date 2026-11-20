@@ -138,11 +138,11 @@ abstract class iw extends bl {
         this.field_G = 0;
     }
 
-    public static void f(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_F = null;
         field_D = null;
         if (param0 != -27545) {
-          iw.f(28);
+          iw.clearSharedReferences(28);
         }
     }
 
@@ -234,7 +234,7 @@ abstract class iw extends bl {
             SetLaserRandomness.a((byte) -29, var5);
             var6 = new String[2][var5];
             var18 = new int[2][var5 * 4];
-            var8 = bea.field_e;
+            var8 = MissionBuilder.field_e;
             var9 = 0;
             var10 = 0;
             while (var9 < var8) {

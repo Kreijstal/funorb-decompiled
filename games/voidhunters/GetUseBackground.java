@@ -35,8 +35,8 @@ final class GetUseBackground extends ConsoleCommand {
         if (0 < lia.field_b) {
           lia.field_b = lia.field_b - 1;
         } else {
-          if (nf.field_a > 0) {
-            nf.field_a = nf.field_a - 1;
+          if (CarouselPlayerEventFactory.field_a > 0) {
+            CarouselPlayerEventFactory.field_a = CarouselPlayerEventFactory.field_a - 1;
           } else {
             if (SetExplosionPushMultiplier.field_p > 0) {
               SetExplosionPushMultiplier.field_p = SetExplosionPushMultiplier.field_p - 1;
@@ -46,8 +46,8 @@ final class GetUseBackground extends ConsoleCommand {
         if (~lia.field_b < param0) {
           moa.a(true);
         }
-        if (nf.field_a > 0) {
-          lkb.a(nf.field_a, (byte) -107);
+        if (CarouselPlayerEventFactory.field_a > 0) {
+          lkb.a(CarouselPlayerEventFactory.field_a, (byte) -107);
         }
         if (SetExplosionPushMultiplier.field_p <= 0) {
           return;

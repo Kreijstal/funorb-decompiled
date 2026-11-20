@@ -53,18 +53,18 @@ final class GetMissionTimeLimit extends ConsoleCommand {
             if (lia.field_b > 0) {
               lia.field_b = lia.field_b - 1;
             } else {
-              if (nf.field_a <= 0) {
+              if (CarouselPlayerEventFactory.field_a <= 0) {
                 if (SetExplosionPushMultiplier.field_p > 0) {
                   SetExplosionPushMultiplier.field_p = SetExplosionPushMultiplier.field_p - 1;
                 }
               } else {
-                nf.field_a = nf.field_a - 1;
+                CarouselPlayerEventFactory.field_a = CarouselPlayerEventFactory.field_a - 1;
               }
             }
           } else {
             if (SetSpinningBladeSpindamageMultiplier.field_o != null) {
               if (0 >= lia.field_b) {
-                if (nf.field_a <= 0) {
+                if (CarouselPlayerEventFactory.field_a <= 0) {
                   if (GetRepairModePower.field_o > SetExplosionPushMultiplier.field_p) {
                     if (SetExplosionPushMultiplier.field_p == 0) {
                       ai.a(false, 0);
@@ -72,7 +72,7 @@ final class GetMissionTimeLimit extends ConsoleCommand {
                     SetExplosionPushMultiplier.field_p = SetExplosionPushMultiplier.field_p + 1;
                   }
                 } else {
-                  nf.field_a = nf.field_a - 1;
+                  CarouselPlayerEventFactory.field_a = CarouselPlayerEventFactory.field_a - 1;
                 }
               } else {
                 lia.field_b = lia.field_b - 1;
@@ -85,18 +85,18 @@ final class GetMissionTimeLimit extends ConsoleCommand {
                   if (0 < SetExplosionPushMultiplier.field_p) {
                     SetExplosionPushMultiplier.field_p = SetExplosionPushMultiplier.field_p - 1;
                   } else {
-                    if (nf.field_a < GetRepairModePower.field_o) {
-                      if (nf.field_a == 0) {
+                    if (CarouselPlayerEventFactory.field_a < GetRepairModePower.field_o) {
+                      if (CarouselPlayerEventFactory.field_a == 0) {
                         ai.a(true, 0);
                       }
-                      nf.field_a = nf.field_a + 1;
+                      CarouselPlayerEventFactory.field_a = CarouselPlayerEventFactory.field_a + 1;
                     }
                   }
                 }
               } else {
                 GetTorpedoProjectileDamage.field_o = false;
-                if (0 < nf.field_a) {
-                  nf.field_a = nf.field_a - 1;
+                if (0 < CarouselPlayerEventFactory.field_a) {
+                  CarouselPlayerEventFactory.field_a = CarouselPlayerEventFactory.field_a - 1;
                 } else {
                   if (SetExplosionPushMultiplier.field_p <= 0) {
                     if (lia.field_b < GetRepairModePower.field_o) {

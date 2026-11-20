@@ -66,7 +66,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           this.justAttachedSomething = kv.readBoolean(false, param0);
           this.shieldsOn = kv.readBoolean(false, param0);
           this.shieldsToggleCooldown = param0.readBits(0, 32);
-          this.lastAttackers = wkb.a((byte) 37, this.lastAttackers, param0, 4);
+          this.lastAttackers = SetVariableActionFactory.a((byte) 37, this.lastAttackers, param0, 4);
           if (!kv.readBoolean(false, param0)) {
             this.targetBlueprint = null;
           } else {
@@ -200,12 +200,12 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         if (this.shieldsToggleCooldown > 0) {
         } else {
           this.shieldsOn = !this.shieldsOn ? true : false;
-          this.shieldsToggleCooldown = pca.field_i[3].d((byte) 64);
+          this.shieldsToggleCooldown = CarouselPlayerEvent.field_i[3].d((byte) 64);
           this.d((byte) 39);
           if (!this.shieldsOn) {
-            qba.a(20382, this.d(false), 25, this.g((byte) -3), 50);
+            qba.a(20382, this.getX(false), 25, this.getY((byte) -3), 50);
           } else {
-            qba.a(20382, this.d(false), 26, this.g((byte) -71), 50);
+            qba.a(20382, this.getX(false), 26, this.getY((byte) -71), 50);
           }
         }
     }
@@ -491,7 +491,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           this.justAttachedSomething = kv.readBoolean(false, param0);
           this.shieldsOn = kv.readBoolean(false, param0);
           this.shieldsToggleCooldown = param0.readBits(0, 32);
-          this.lastAttackers = wkb.a((byte) 37, this.lastAttackers, param0, 4);
+          this.lastAttackers = SetVariableActionFactory.a((byte) 37, this.lastAttackers, param0, 4);
           if (!kv.readBoolean(false, param0)) {
             this.targetBlueprint = null;
           } else {
@@ -873,7 +873,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           return this.selfDestructActivated;
         }
         if (GetFightersPerPlayerMaximum.field_p != 1) {
-          stackIn_7_0 = !(this.repairModeReload <= pca.field_i[4].d((byte) 64));
+          stackIn_7_0 = !(this.repairModeReload <= CarouselPlayerEvent.field_i[4].d((byte) 64));
           return stackIn_7_0;
         }
         stackIn_13_0 = (this.repairModeOn) || !(this.repairModeReload <= 0);
@@ -1150,7 +1150,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           if (param1 == 4) {
             if (GetFightersPerPlayerMaximum.field_p != 1) {
               if (this.repairModeReload <= 0) {
-                var7 = pca.field_i[4];
+                var7 = CarouselPlayerEvent.field_i[4];
                 var8 = var7;
                 var8Lifetime2 = var7;
                 this.repairModeReload = var7.d((byte) 64) + var7.b(-25131);
@@ -1170,7 +1170,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
             this.selfDestructPrepared &&
             !this.selfDestructActivated) {
             this.selfDestructActivated = true;
-            var8Lifetime1 = pca.field_i[9];
+            var8Lifetime1 = CarouselPlayerEvent.field_i[9];
             this.selfDestructCountdown = var8Lifetime1.d((byte) 64) + var8Lifetime1.b(-25131);
           }
           if (param0 > -36) {

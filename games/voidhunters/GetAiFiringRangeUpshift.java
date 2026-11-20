@@ -34,7 +34,7 @@ final class GetAiFiringRangeUpshift extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -118) {
           field_o = 31;
           field_p = null;

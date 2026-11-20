@@ -59,10 +59,10 @@ final class GetMutatorVotes extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 < 66) {
-          GetMutatorVotes.e((byte) 9);
+          GetMutatorVotes.clearSharedReferences((byte) 9);
         }
     }
 

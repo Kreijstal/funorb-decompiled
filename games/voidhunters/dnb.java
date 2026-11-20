@@ -5,13 +5,13 @@ final class dnb extends IntrusiveNode {
     int field_d;
     byte[] field_e;
 
-    final static tja c(byte param0) {
+    final static CarouselSlot c(byte param0) {
         bk.field_w.position = 0;
         if (param0 != -39) {
-          return (tja) null;
+          return (CarouselSlot) null;
         }
         bk.field_w.beginBitRead(-23497);
-        tja var1 = (tja) (gva.field_a.a((byte) 69));
+        CarouselSlot var1 = (CarouselSlot) (gva.field_a.create((byte) 69));
         if (!(var1 instanceof CompactGameState)) {
           var1.readState(bk.field_w, false);
           bk.field_w.endBitRead((byte) -92);

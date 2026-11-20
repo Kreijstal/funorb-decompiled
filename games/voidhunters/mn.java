@@ -28,11 +28,11 @@ final class mn {
           }
           cs.b((byte) 71);
           SetToggledScoreboard.field_o.a(param0, 1332);
-          if (ada.field_b != null) {
+          if (PartitionZoneListFactory.field_b != null) {
             if (GetBloomThresholdPercentage.field_p) {
-              ada.field_b.a((byte) -5, SetToggledScoreboard.field_o.field_M, SetToggledScoreboard.field_o.field_u, param0);
+              PartitionZoneListFactory.field_b.a((byte) -5, SetToggledScoreboard.field_o.field_M, SetToggledScoreboard.field_o.field_u, param0);
             } else {
-              ada.field_b = null;
+              PartitionZoneListFactory.field_b = null;
             }
           }
           for (var4_int = 0; 5 > var4_int; var4_int++) {
@@ -43,7 +43,7 @@ final class mn {
               }
               var6 = SetReverbDry.a(var4_int, (byte) 19);
               SecondaryNodeDeque.field_c[var4_int].field_tb = GetGrapplingHookAimspeed.field_o[var6];
-              lob.field_c[var4_int].field_R = SetMissileLauncherProjectiles.field_o[var6];
+              NebulaFieldFactory.field_c[var4_int].field_R = SetMissileLauncherProjectiles.field_o[var6];
             }
           }
           if (SetBombletSprayAimarc.field_o.field_o != 0) {
@@ -56,7 +56,7 @@ final class mn {
           var8 = GetThrusterBindingBalanceThreshold.a(-8037);
           var6Lifetime1 = 101 / ((param3 + 32) / 58);
           if (var8 != null) {
-            lob.field_a = var8;
+            NebulaFieldFactory.field_a = var8;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

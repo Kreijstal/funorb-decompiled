@@ -34,13 +34,13 @@ final class GetSniperCannonAimspeed extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         field_o = null;
         field_r = null;
         field_q = null;
         if (param0 != 100) {
-          GetSniperCannonAimspeed.a(34);
+          GetSniperCannonAimspeed.clearSharedReferences(34);
         }
     }
 

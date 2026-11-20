@@ -84,7 +84,7 @@ final class nmb extends hrb {
 
     final static boolean b(int param0) {
         int var1 = 99 / ((param0 - 30) / 45);
-        return wqa.field_a == SetSpinningBladeSpindamageMultiplier.field_o.field_Nb ? true : false;
+        return BodyInZoneConditionFactory.field_a == SetSpinningBladeSpindamageMultiplier.field_o.field_Nb ? true : false;
     }
 
     nmb() {

@@ -77,7 +77,7 @@ final class ae {
                 return;
               }
               if (!this.field_b &&
-                !upb.field_c) {
+                !VariableConditionFactory.field_c) {
                 return;
               }
               if (0 <= param2) {
@@ -106,7 +106,7 @@ final class ae {
               return;
             }
             if (!this.field_b &&
-              !upb.field_c) {
+              !VariableConditionFactory.field_c) {
               return;
             }
             if (0 <= param2) {
@@ -131,7 +131,7 @@ final class ae {
               return;
             }
             if (!this.field_b &&
-              !upb.field_c) {
+              !VariableConditionFactory.field_c) {
               return;
             }
             if (0 <= param2) {
@@ -170,7 +170,7 @@ final class ae {
                   return;
                 }
                 if (!this.field_b &&
-                  !upb.field_c) {
+                  !VariableConditionFactory.field_c) {
                   return;
                 }
                 if (0 <= param2) {
@@ -199,7 +199,7 @@ final class ae {
                 return;
               }
               if (!this.field_b &&
-                !upb.field_c) {
+                !VariableConditionFactory.field_c) {
                 return;
               }
               if (0 <= param2) {
@@ -224,7 +224,7 @@ final class ae {
                 return;
               }
               if (!this.field_b &&
-                !upb.field_c) {
+                !VariableConditionFactory.field_c) {
                 return;
               }
               if (0 <= param2) {
@@ -261,7 +261,7 @@ final class ae {
                   return;
                 }
                 if (!this.field_b &&
-                  !upb.field_c) {
+                  !VariableConditionFactory.field_c) {
                   return;
                 }
                 if (0 <= param2) {
@@ -293,7 +293,7 @@ final class ae {
           return;
         }
         if (!this.field_b &&
-          !upb.field_c) {
+          !VariableConditionFactory.field_c) {
           return;
         }
         if (0 > param2) {
@@ -492,7 +492,7 @@ final class ae {
           this.field_i = SetBombletSprayProjectileDamage.field_o;
           if (0 != this.field_d) {
             if (param0 > -37) {
-              ae.e(15);
+              ae.clearSharedReferences(15);
             }
             if (this.field_d == 0 &&
               99 == SetBombletSprayProjectileDamage.field_o) {
@@ -506,7 +506,7 @@ final class ae {
           }
           if (98 != SetBombletSprayProjectileDamage.field_o) {
             if (param0 > -37) {
-              ae.e(15);
+              ae.clearSharedReferences(15);
             }
             if (this.field_d == 0 &&
               99 == SetBombletSprayProjectileDamage.field_o) {
@@ -531,7 +531,7 @@ final class ae {
               this.field_b = false;
               this.field_j = this.field_j - 1;
               if (param0 > -37) {
-                ae.e(15);
+                ae.clearSharedReferences(15);
               }
               if (this.field_d == 0) {
                 if (99 != SetBombletSprayProjectileDamage.field_o) {
@@ -550,7 +550,7 @@ final class ae {
           }
         }
         if (param0 > -37) {
-          ae.e(15);
+          ae.clearSharedReferences(15);
         }
         if (this.field_d != 0) {
           return;
@@ -616,7 +616,7 @@ final class ae {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 == -1) {
           field_f = null;
           field_g = null;

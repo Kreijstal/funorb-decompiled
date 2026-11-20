@@ -13,7 +13,7 @@ final class GetCountermeasureLauncherProjectileLife extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetCountermeasureLauncherProjectileLife.a(126);
+            GetCountermeasureLauncherProjectileLife.clearSharedReferences(126);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(95, 90));
           return stackIn_3_0;
@@ -31,9 +31,9 @@ final class GetCountermeasureLauncherProjectileLife extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 >= -19) {
-          GetCountermeasureLauncherProjectileLife.a(11);
+          GetCountermeasureLauncherProjectileLife.clearSharedReferences(11);
           field_o = null;
           return;
         }

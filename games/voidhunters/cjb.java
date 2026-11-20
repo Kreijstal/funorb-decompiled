@@ -6,10 +6,10 @@ final class cjb {
     static String field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != 0) {
-          cjb.a(28);
+          cjb.clearSharedReferences(28);
           field_b = null;
           return;
         }

@@ -55,7 +55,7 @@ final class GetReverbGain extends ConsoleCommand {
           }
           var2 = GetBoostersActiveTime.field_q.first(0);
           while (var2 != null) {
-            wva.b(param0, 22681);
+            MatchResultsFactory.b(param0, 22681);
             var2 = GetBoostersActiveTime.field_q.next((byte) 54);
           }
           return;
@@ -76,7 +76,7 @@ final class GetReverbGain extends ConsoleCommand {
     }
 
     static {
-        uu discarded$0 = new uu();
+        DebugRequestFactory discarded$0 = new DebugRequestFactory();
         field_o = new kb(1);
     }
 }

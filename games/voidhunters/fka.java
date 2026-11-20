@@ -277,9 +277,9 @@ final class fka extends IntrusiveNode {
                     qsa.field_b.field_y = false;
                     if (!(!qsa.field_b.field_Q)) {
                       if (0 == GetReverbWidth.field_o.field_a.field_Ab) {
-                        lob.field_a = kob.field_e;
+                        NebulaFieldFactory.field_a = kob.field_e;
                       } else {
-                        lob.field_a = SetReverbGain.a(SetInnateThrusters.field_p, new String[]{bd.field_a}, 121);
+                        NebulaFieldFactory.field_a = SetReverbGain.a(SetInnateThrusters.field_p, new String[]{bd.field_a}, 121);
                       }
                     }
                   }
@@ -317,14 +317,14 @@ final class fka extends IntrusiveNode {
                       var14_ref_String = SetReverbGain.a(cp.field_g, new String[]{(String) (var11_ref)}, 126);
                     }
                   }
-                  lob.field_a = "<col=A00000>" + var13_ref_String + "<br>" + var14_ref_String;
+                  NebulaFieldFactory.field_a = "<col=A00000>" + var13_ref_String + "<br>" + var14_ref_String;
                 }
               }
             } else {
               var9_ref_String = SetSpinningBladeSpindamageMultiplier.field_o.field_Vb;
               GetWeaponParticleSpeedDownshift.field_q.field_R = SetReverbGain.a(wt.field_b, new String[]{var9_ref_String}, 118).toUpperCase();
               SetAutozoomSpeedDivide.field_p.a(0, -127, vva.field_r.field_hb, -40 + vva.field_r.field_G, 40);
-              SetAutozoomSpeedDivide.field_p.field_R = SetReverbGain.a(ub.field_h, new String[]{var9_ref_String}, 79);
+              SetAutozoomSpeedDivide.field_p.field_R = SetReverbGain.a(DebugSendable.field_h, new String[]{var9_ref_String}, 79);
               var8 = SetAutozoomSpeedDivide.field_p;
             }
             if (qga.field_a != 0L) {

@@ -82,7 +82,7 @@ final class GetMissionResnetResourceTickTime extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 > -43) {
           field_o = -91;
@@ -96,16 +96,16 @@ final class GetMissionResnetResourceTickTime extends ConsoleCommand {
         if (!wh.g(-127)) {
           return;
         }
-        kc var1 = es.field_b;
+        PlayerGameData var1 = es.field_b;
         if (var1 == null) {
           return;
         }
         if (bqa.a(false)) {
-          var1 = new kc();
+          var1 = new PlayerGameData();
           es.field_b.copyTo((byte) 87, var1);
           var1.blueprint = null;
         }
-        byte[] var2 = TickCondition.a(-30234, var1);
+        byte[] var2 = TickCondition.encodeState(-30234, var1);
         if (var2 == null) {
           GetDebrisThrowable.a(false, "Failed to write player gamedata");
           return;

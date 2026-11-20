@@ -26,7 +26,7 @@ final class nl extends IntrusiveNode {
           kt.field_l = param0;
           var2 = (ana) (GetToggledScoreboard.field_p.first(param1 + 13205));
           if (param1 != -13205) {
-            nl.a(-88);
+            nl.clearSharedReferences(-88);
           }
           while (var2 != null) {
             if (var2.field_g.isLinked((byte) -63)) {
@@ -57,7 +57,7 @@ final class nl extends IntrusiveNode {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 2128263208) {
           field_n = -0.17532885074615479f;
           field_e = null;

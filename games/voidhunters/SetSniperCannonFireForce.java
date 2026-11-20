@@ -19,7 +19,7 @@ final class SetSniperCannonFireForce extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            SetSniperCannonFireForce.a(16);
+            SetSniperCannonFireForce.clearSharedReferences(16);
           }
           SetMachineGunEnergyUsed.a(104, 62, arguments[0].intValue(19));
           stackIn_3_0 = new ConsoleValue("void");
@@ -38,10 +38,10 @@ final class SetSniperCannonFireForce extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 > -103) {
-          SetSniperCannonFireForce.a(-5);
+          SetSniperCannonFireForce.clearSharedReferences(-5);
           field_o = null;
           return;
         }

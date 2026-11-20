@@ -132,9 +132,9 @@ final class ita extends vq {
     final static BitmapFont a(int param0, int param1) {
         if (param1 != 7988) {
           field_D = (String) null;
-          return lhb.field_a;
+          return GrapplingHookFactory.field_a;
         }
-        return lhb.field_a;
+        return GrapplingHookFactory.field_a;
     }
 
     final String d(byte param0) {

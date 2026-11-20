@@ -14,7 +14,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
           return;
         }
         if (es.field_b == null) {
-          es.field_b = new kc();
+          es.field_b = new PlayerGameData();
         }
         es.field_b.a(qd.field_a, -28855);
         GetMissionResnetResourceTickTime.e((byte) -46);
@@ -153,7 +153,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
             }
           }
         }
-        BodyCondition.b(-1);
+        BodyDestroyedCondition.b(-1);
         kl.field_c.field_l = 0;
         kl.field_c.field_k = 0;
         if (GetExplosionProjectileDamage.field_o) {

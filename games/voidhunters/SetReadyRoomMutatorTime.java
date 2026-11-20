@@ -88,7 +88,7 @@ final class SetReadyRoomMutatorTime extends ConsoleCommand {
             var2 = 1;
           }
         } else {
-          if (null == efb.field_b) {
+          if (null == MissionConditionFactory.field_b) {
             psb.field_b = ob.a(0, SetTorpedoProjectiles.field_o, 640, 480, 0, 0);
             if (psb.field_b != null) {
               var2 = 2;
@@ -97,7 +97,7 @@ final class SetReadyRoomMutatorTime extends ConsoleCommand {
               var2 = 3;
             }
           } else {
-            psb.field_b = efb.field_b.a((byte) 124);
+            psb.field_b = MissionConditionFactory.field_b.a((byte) 124);
             mb.h(2, 117);
             if (psb.field_b != null) {
               var2 = 2;
@@ -110,11 +110,11 @@ final class SetReadyRoomMutatorTime extends ConsoleCommand {
         if (param0 != 2) {
           return;
         }
-        if (null != efb.field_b) {
+        if (null != MissionConditionFactory.field_b) {
           return;
         }
         if (SetOndamageParticleSpeed.field_p) {
-          wha.a(2, param1, var2);
+          AsteroidFactory.a(2, param1, var2);
         }
     }
 

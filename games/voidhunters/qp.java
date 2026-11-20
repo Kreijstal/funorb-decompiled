@@ -440,7 +440,7 @@ final class qp {
           var4 = re.field_n.field_yb.field_lb;
           var5 = null;
           if (iwa.field_b == 2) {
-            ci.field_c.field_y = true;
+            PlayerJoinFactory.field_c.field_y = true;
             rtb.field_h.field_R = SetReverbGain.a(SetVelocitySustain.field_o, new String[]{kbb.field_q}, param1 + 89);
             re.field_n.field_xb.field_xb.field_R = null;
             var6 = null;
@@ -545,10 +545,10 @@ final class qp {
                     var5 = var7;
                   } else if (var7.field_wb.field_O &&
                     var15 != 0) {
-                    lob.field_a = var7.field_Fb;
+                    NebulaFieldFactory.field_a = var7.field_Fb;
                   }
                 } else {
-                  lob.field_a = var7.field_vb;
+                  NebulaFieldFactory.field_a = var7.field_vb;
                 }
                 var7 = (vu) (var4.next((byte) 99));
                 continue;
@@ -558,19 +558,19 @@ final class qp {
             if (decompiledNaturalLoopExit0) {
               if (re.field_n.field_wb.field_o != 0) {
                 ola.field_p = new qka(re.field_n.field_wb.field_M, re.field_n.field_wb.field_u, re.field_n.field_wb.field_hb, re.field_n.field_wb.field_G, hk.field_i, GetDebrisMax.field_o, qc.field_q, qc.field_q);
-                rc.field_b = 0;
+                MissionGenerationDataFactory.field_b = 0;
               }
               stackIn_89_0 = re.field_n.field_zb;
             }
             if (((llb) (stackIn_89_0)).field_o != 0) {
               ola.field_p = new qka(re.field_n.field_zb.field_M, re.field_n.field_zb.field_u, re.field_n.field_zb.field_hb, re.field_n.field_zb.field_G, MissionEvent.field_e, GetDebrisMax.field_o, qc.field_q, qc.field_q);
-              rc.field_b = 1;
+              MissionGenerationDataFactory.field_b = 1;
             }
             decompiledFrameRemainder0 = false;
           }
           else {
             rtb.field_h.field_R = SetUseModels.field_p;
-            ci.field_c.field_y = false;
+            PlayerJoinFactory.field_c.field_y = false;
             if (iwa.field_b == 1) {
               re.field_n.field_xb.field_xb.field_R = SetMachineGunPulsetime.field_o;
               if (var19 != 0) {

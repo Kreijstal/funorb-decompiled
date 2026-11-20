@@ -9,7 +9,7 @@ final class SettingsChange implements DiffableState {
     static String field_d;
     static int[] field_f;
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_e = null;
         field_d = null;
         field_f = null;

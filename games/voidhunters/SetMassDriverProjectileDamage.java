@@ -9,7 +9,7 @@ final class SetMassDriverProjectileDamage extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 != 9099) {
           SetMassDriverProjectileDamage.a(-21, -94, -54);
@@ -20,7 +20,7 @@ final class SetMassDriverProjectileDamage extends ConsoleCommand {
         SetOndamageParticleFadestart.field_o = param1;
         ata.field_H = param0;
         if (param2 != 143) {
-          SetMassDriverProjectileDamage.a(-87);
+          SetMassDriverProjectileDamage.clearSharedReferences(-87);
         }
     }
 
@@ -33,7 +33,7 @@ final class SetMassDriverProjectileDamage extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            SetMassDriverProjectileDamage.a(4);
+            SetMassDriverProjectileDamage.clearSharedReferences(4);
           }
           SetMachineGunEnergyUsed.a(143, 62, arguments[0].intValue(49));
           stackIn_3_0 = new ConsoleValue("void");

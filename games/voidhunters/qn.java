@@ -13,7 +13,7 @@ final class qn extends IntrusiveNode {
 
     final static void c(byte param0) {
         NetworkGameClient.field_y = new IntrusiveDeque();
-        gtb.field_d = new IntrusiveDeque();
+        PlayerReady.field_d = new IntrusiveDeque();
         if (param0 >= 52) {
           OpenGlGpuToolkit.field_Jc = new Random();
           return;
@@ -79,7 +79,7 @@ final class qn extends IntrusiveNode {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (!param0) {
           qn.c((byte) -115);
           field_h = null;

@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ebb {
-    static dja field_a;
+    static GameStateFactory field_a;
     static boolean field_b;
 
     final static void a(byte param0) {
         ola.field_p = null;
         if (param0 != -74) {
-          field_a = (dja) null;
+          field_a = (GameStateFactory) null;
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 23357) {
-          ebb.a(27);
+          ebb.clearSharedReferences(27);
           field_a = null;
           return;
         }
@@ -22,7 +22,7 @@ final class ebb {
     }
 
     static {
-        field_a = (dja) ((Object) new ok());
+        field_a = (GameStateFactory) ((Object) new ShipBodyFactory());
         field_b = true;
     }
 }

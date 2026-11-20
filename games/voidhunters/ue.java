@@ -46,7 +46,7 @@ final class ue {
             !bd.a(param6, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
-          var7_int = pu.a((byte) -120, param2);
+          var7_int = ParticleFactory.a((byte) -120, param2);
           var8 = param1;
           stackIn_11_0 = (param6 > param5) ? param5 : param6;
           var9 = stackIn_11_0;

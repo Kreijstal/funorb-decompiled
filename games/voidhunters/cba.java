@@ -8,7 +8,7 @@ final class cba extends za {
     final void a(boolean param0) {
         this.field_f.deallocate();
         if (!param0) {
-          cba.b(false);
+          cba.clearSharedReferences(false);
         }
     }
 
@@ -16,10 +16,10 @@ final class cba extends za {
         this.field_f = new jaclib.memory.heap.NativeHeap(param0);
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_e = null;
         if (!param0) {
-          cba.b(false);
+          cba.clearSharedReferences(false);
         }
     }
 

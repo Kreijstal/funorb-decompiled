@@ -11,10 +11,10 @@ final class SetMissilesHitSourceTeam extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_q = null;
         if (param0) {
-          SetMissilesHitSourceTeam.b(false);
+          SetMissilesHitSourceTeam.clearSharedReferences(false);
           field_o = null;
           field_r = null;
           return;

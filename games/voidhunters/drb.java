@@ -17,7 +17,7 @@ final class drb extends TextureOperation {
         kob var2 = new kob();
         if (param0) {
           GetBoostersActiveTime.field_q.addLast(-10258, var2);
-          wva.b(param1, 22681);
+          MatchResultsFactory.b(param1, 22681);
           return var2;
         }
         return (kob) null;

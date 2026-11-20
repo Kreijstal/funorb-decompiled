@@ -22,7 +22,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
           var4_int = 3 % ((param0 + 36) / 49);
           var5 = param3.b(param1, -80);
           var6 = param3.a(true, var5, param2);
-          stackIn_1_0 = ng.a(var5, (byte) 104, var6, param3);
+          stackIn_1_0 = SpecialOrderSubmessageFactory.a(var5, (byte) 104, var6, param3);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -161,7 +161,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
         int var20 = 0;
         var20 = VoidHunters.field_G;
         try {
-          ej.field_c = param3;
+          DebrisFactory.field_c = param3;
           ConsoleCommand.field_m[4] = 16711935;
           ConsoleCommand.field_m[3] = 16736511;
           ConsoleCommand.field_m[0] = 16764000;
@@ -195,14 +195,14 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
           jba.field_b = new llb(0L, param4);
           kea.field_a.b(-561, jba.field_b);
           bpa.field_c = new llb(0L, param0);
-          bpa.field_c.field_eb = ej.field_c;
+          bpa.field_c.field_eb = DebrisFactory.field_c;
           jba.field_b.b(-561, bpa.field_c);
           jba.field_b.g(119);
           fgb.field_l = new llb(0L, (llb) null);
           fgb.field_l.field_gb = var16;
           jba.field_b.b(-561, fgb.field_l);
           ul.field_b = new llb[5];
-          lob.field_c = new llb[5];
+          NebulaFieldFactory.field_c = new llb[5];
           SetMissionVariablesHudX.field_o = new llb[5];
           SecondaryNodeDeque.field_c = new llb[5];
           var18 = 0;
@@ -234,11 +234,11 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
                 SetMissionVariablesHudX.field_o[var18] = new llb(0L, TargetLock.field_b, var19);
                 SecondaryNodeDeque.field_c[var18] = new llb(0L, (llb) null);
                 SecondaryNodeDeque.field_c[var18].field_B = 1;
-                lob.field_c[var18] = new llb(0L, TargetLock.field_b);
-                lob.field_c[var18].field_B = 1;
+                NebulaFieldFactory.field_c[var18] = new llb(0L, TargetLock.field_b);
+                NebulaFieldFactory.field_c[var18].field_B = 1;
                 ul.field_b[var18].b(-561, SetMissionVariablesHudX.field_o[var18]);
                 ul.field_b[var18].b(-561, SecondaryNodeDeque.field_c[var18]);
-                ul.field_b[var18].b(-561, lob.field_c[var18]);
+                ul.field_b[var18].b(-561, NebulaFieldFactory.field_c[var18]);
                 ul.field_b[var18].g(112);
                 SetToggledScoreboard.field_o.b(param1 ^ -561, ul.field_b[var18]);
                 SetSniperCannonRandomness.field_o = SetSniperCannonRandomness.field_o + 1;
@@ -258,7 +258,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
             !GetBloomThresholdPercentage.field_p) {
             return;
           }
-          ada.field_b = new pia(0, 0, 0, 0);
+          PartitionZoneListFactory.field_b = new pia(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -329,6 +329,6 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
     }
 
     static {
-        wva discarded$0 = new wva();
+        MatchResultsFactory discarded$0 = new MatchResultsFactory();
     }
 }

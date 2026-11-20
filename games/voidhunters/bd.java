@@ -81,7 +81,7 @@ final class bd {
               }
             }
           }
-          hi.field_a = 2;
+          MissionListFactory.field_a = 2;
           qs.field_c = 4;
           nna.field_w = 15;
           atb.field_d = 11;
@@ -159,7 +159,7 @@ final class bd {
           SetReverbDamp.field_q = new llb(0L, SetShieldsDirectionalHalfarcCuts.field_p);
           SetReverbDamp.field_q.a(18445, GetMissionDebrisDefaultProbability.field_o);
           var16 = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "button_mouseover");
-          aba.field_a = new aw(GetDebrisMax.field_o, var12, qc.field_q, GetMissionDebrisDefaultProbability.field_o, 3, 2, hi.field_a, 3, nna.field_w);
+          aba.field_a = new aw(GetDebrisMax.field_o, var12, qc.field_q, GetMissionDebrisDefaultProbability.field_o, 3, 2, MissionListFactory.field_a, 3, nna.field_w);
           dla.field_e = new llb(0L, GetMissionDebrisDefaultProbability.field_o);
           dla.field_e.field_mb = var16;
           dla.field_e.field_gb = var13;
@@ -176,8 +176,8 @@ final class bd {
           vhb.field_c.field_gb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "tab_inactive"), (byte) -124);
           vhb.field_c.field_mb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "tab_mouseover"), (byte) 72);
           vhb.field_c.field_nb = var14;
-          gfb.field_a = new llb(0L, (llb) null);
-          gfb.field_a.field_gb = uwa.a(1856141, 206, -1, 1127256, 105, 3);
+          EscapePodFactory.field_a = new llb(0L, (llb) null);
+          EscapePodFactory.field_a.field_gb = uwa.a(1856141, 206, -1, 1127256, 105, 3);
           as.field_c = new llb(0L, (llb) null);
           var17 = -115 % ((param0 + 71) / 37);
           as.field_c.field_gb = uwa.a(11579568, 290, -1, 6052956, 120, 3);
@@ -195,10 +195,10 @@ final class bd {
           GetShieldsDirectionalArc.field_o.field_X = 1;
           GetShieldsDirectionalArc.field_o.field_rb = 1;
           jba.field_h = new llb(0L, GetShieldsDirectionalArc.field_o);
-          nfb.field_a = new llb(0L, GetShieldsDirectionalArc.field_o);
+          GrappleLauncherBehaviourFactory.field_a = new llb(0L, GetShieldsDirectionalArc.field_o);
           SetPlayerRepairAmount.field_q = new llb(0L, SetGrapplingHookMaxExtension8Force.field_p);
           pva.field_d = new llb(0L, GetShieldsDirectionalArc.field_o);
-          vlb.field_a = new llb(0L, GetShieldsDirectionalArc.field_o);
+          TargetLockFactory.field_a = new llb(0L, GetShieldsDirectionalArc.field_o);
           tia.field_M = new llb(0L, GetShieldsDirectionalArc.field_o);
           GetShieldsDirectionalArc.field_o.field_gb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "smallbutton"), (byte) 36);
           GetShieldsDirectionalArc.field_o.field_mb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "smallbutton_mouseover"), (byte) -119);
@@ -216,9 +216,9 @@ final class bd {
           jba.field_h.field_gb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "greenbutton"), (byte) -84);
           jba.field_h.field_mb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "greenbutton_mouseover"), (byte) 69);
           jba.field_h.field_A = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "greenbutton_mouseheld"), (byte) -63);
-          nfb.field_a.field_gb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "redbutton"), (byte) -89);
-          nfb.field_a.field_mb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "redbutton_mouseover"), (byte) 52);
-          nfb.field_a.field_A = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "redbutton_mouseheld"), (byte) 79);
+          GrappleLauncherBehaviourFactory.field_a.field_gb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "redbutton"), (byte) -89);
+          GrappleLauncherBehaviourFactory.field_a.field_mb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "redbutton_mouseover"), (byte) 52);
+          GrappleLauncherBehaviourFactory.field_a.field_A = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "redbutton_mouseheld"), (byte) 79);
           SetPlayerRepairAmount.field_q.field_gb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "backbutton"), (byte) -100);
           SetPlayerRepairAmount.field_q.field_mb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "backbutton_mouseover"), (byte) -115);
           SetPlayerRepairAmount.field_q.field_A = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "backbutton_mouseheld"), (byte) 76);
@@ -234,11 +234,11 @@ final class bd {
           dupTemp$2 = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "chatbutton_active"), (byte) -66);
           pva.field_d.field_nb = dupTemp$2;
           pva.field_d.field_A = dupTemp$2;
-          vlb.field_a.field_gb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "chatfilterbutton"), (byte) 123);
-          vlb.field_a.field_mb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "chatfilterbutton_mouseover"), (byte) 21);
+          TargetLockFactory.field_a.field_gb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "chatfilterbutton"), (byte) 123);
+          TargetLockFactory.field_a.field_mb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "chatfilterbutton_mouseover"), (byte) 21);
           dupTemp$3 = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "chatfilterbutton_active"), (byte) 45);
-          vlb.field_a.field_nb = dupTemp$3;
-          vlb.field_a.field_A = dupTemp$3;
+          TargetLockFactory.field_a.field_nb = dupTemp$3;
+          TargetLockFactory.field_a.field_A = dupTemp$3;
           var18 = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "checkbox");
           SetShieldsDirectionalArcParticleLife.field_o = new qca(0L, var18[1], var18[0], 1, GetMissionDebrisDefaultProbability.field_o, (String) null);
           ga.field_s = new llb(0L, (llb) null);
@@ -251,17 +251,17 @@ final class bd {
           GetPointDefenceLaserProjectileInterceptDamage.field_r.field_mb = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "dragbar_mouseover"), (byte) -59);
           GetPointDefenceLaserProjectileInterceptDamage.field_r.field_A = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "dragbar_mouseheld"), (byte) -123);
           GetPointDefenceLaserProjectileInterceptDamage.field_r.field_ub = bbb.a(SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "dragbar_disabled"), (byte) 43);
-          efb.field_a = new llb(0L, (llb) null);
-          efb.field_a.field_tb = SetSniperCannonProjectiles.a(param3, "upbutton", "lobby", true);
-          efb.field_a.field_cb = SetSniperCannonProjectiles.a(param3, "upbutton_mouseover", "lobby", true);
-          efb.field_a.field_ob = SetSniperCannonProjectiles.a(param3, "upbutton_mouseheld", "lobby", true);
-          efb.field_a.field_z = SetSniperCannonProjectiles.a(param3, "upbutton_disabled", "lobby", true);
+          MissionConditionFactory.field_a = new llb(0L, (llb) null);
+          MissionConditionFactory.field_a.field_tb = SetSniperCannonProjectiles.a(param3, "upbutton", "lobby", true);
+          MissionConditionFactory.field_a.field_cb = SetSniperCannonProjectiles.a(param3, "upbutton_mouseover", "lobby", true);
+          MissionConditionFactory.field_a.field_ob = SetSniperCannonProjectiles.a(param3, "upbutton_mouseheld", "lobby", true);
+          MissionConditionFactory.field_a.field_z = SetSniperCannonProjectiles.a(param3, "upbutton_disabled", "lobby", true);
           SetAngularVelocitySustain.field_q = new llb(0L, (llb) null);
           SetAngularVelocitySustain.field_q.field_tb = SetSniperCannonProjectiles.a(param3, "downbutton", "lobby", true);
           SetAngularVelocitySustain.field_q.field_cb = SetSniperCannonProjectiles.a(param3, "downbutton_mouseover", "lobby", true);
           SetAngularVelocitySustain.field_q.field_ob = SetSniperCannonProjectiles.a(param3, "downbutton_mouseheld", "lobby", true);
           SetAngularVelocitySustain.field_q.field_z = SetSniperCannonProjectiles.a(param3, "downbutton_disabled", "lobby", true);
-          GetUseNiceTrails.field_o = new pjb(0L, efb.field_a, SetAngularVelocitySustain.field_q, ga.field_s, GetPointDefenceLaserProjectileInterceptDamage.field_r);
+          GetUseNiceTrails.field_o = new pjb(0L, MissionConditionFactory.field_a, SetAngularVelocitySustain.field_q, ga.field_s, GetPointDefenceLaserProjectileInterceptDamage.field_r);
           rbb.field_k = new wdb(0L, (llb) null, htb.field_w, GetUseNiceTrails.field_o, GetShieldsDirectionalArc.field_o, (String) null, (String) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

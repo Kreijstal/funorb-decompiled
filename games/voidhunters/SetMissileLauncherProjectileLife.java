@@ -9,9 +9,9 @@ final class SetMissileLauncherProjectileLife extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 6425) {
-          SetMissileLauncherProjectileLife.a(-116);
+          SetMissileLauncherProjectileLife.clearSharedReferences(-116);
           field_o = null;
           return;
         }
@@ -37,7 +37,7 @@ final class SetMissileLauncherProjectileLife extends ConsoleCommand {
           var6 = null;
           if (-1 == param0.indexOf('@')) {
             var8 = (CharSequence) ((Object) param0);
-            var4_long = agb.a(var8, -49);
+            var4_long = AdjustBodyComponentsActionFactory.a(var8, -49);
           } else {
             var6 = param0;
           }

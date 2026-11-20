@@ -5,10 +5,10 @@ final class GetGrappleDebris extends ConsoleCommand {
     static int field_p;
     static String field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 54) {
-          GetGrappleDebris.a(-75);
+          GetGrappleDebris.clearSharedReferences(-75);
         }
     }
 

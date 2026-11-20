@@ -27,7 +27,7 @@ final class dw implements wwa {
         try {
           var6_int = param1.field_g + param2;
           var7 = param3 + param1.field_r;
-          npa.a(var7, (byte) 115, param1.field_f, param1.field_h, var6_int);
+          ServerTickFactory.a(var7, (byte) 115, param1.field_f, param1.field_h, var6_int);
           var8 = ps.field_a[1];
           if (param1 instanceof htb &&
             ((htb) (param1)).field_u) {

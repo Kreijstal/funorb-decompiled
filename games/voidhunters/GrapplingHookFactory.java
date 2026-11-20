@@ -1,0 +1,128 @@
+/*
+ * Decompiled by CFR-JS 0.4.0.
+ */
+final class GrapplingHookFactory implements GameStateFactory {
+    static BitmapFont field_a;
+
+    final static tsa a(byte param0, ipb param1) throws ojb {
+        tsa stackIn_9_0 = null;
+        tsa stackIn_25_0 = null;
+        tsa stackIn_31_0 = null;
+        RuntimeException stackIn_38_0 = null;
+        StringBuilder stackIn_38_1 = null;
+        String stackIn_39_2 = null;
+        RuntimeException decompiledCaughtException = null;
+        RuntimeException var2 = null;
+        int var4 = 0;
+        tsa var5 = null;
+        tsa var6 = null;
+        tsa var7 = null;
+        var4 = VoidHunters.field_G;
+        try {
+          var5 = param1.a((byte) -1);
+          if (param0 <= 13) {
+            field_a = (BitmapFont) null;
+          }
+          if (dla.field_d != var5.field_e &&
+            SetMissionTerrainSpaceProbability.field_o != var5.field_e &&
+            var5.field_e != fwa.field_h &&
+            io.field_p != var5.field_e) {
+            if (SetMissionVariablesHudX.field_p != var5.field_e) {
+              throw new ojb(var5.field_g);
+            }
+            if (param1.a(81)) {
+              throw new ojb(var5.field_g);
+            }
+            var6 = param1.a((byte) -67);
+            if (var6.field_e != wdb.field_vb) {
+              throw new ojb(var6.field_g);
+            }
+            var5.field_f = new IntrusiveDeque();
+            while (true) {
+              if (param1.a(67)) {
+                throw new ojb(var5.field_g);
+              }
+              if (param1.a((byte) -27).field_e == SetMissionTerrainVotingChancestep.field_o) {
+                stackIn_25_0 = var5;
+                return stackIn_25_0;
+              }
+              param1.field_a = param1.field_a - 1;
+              var5.field_f.addLast(-10258, GrapplingHookFactory.a((byte) 33, param1));
+              if (param1.a(35)) {
+                throw new ojb(var5.field_g);
+              }
+              var7 = param1.a((byte) -28);
+              if (var7.field_e == SetMissionTerrainVotingChancestep.field_o) {
+                stackIn_31_0 = var5;
+                return stackIn_31_0;
+              }
+              if (var7.field_e != jwa.field_l) {
+                throw new ojb(var7.field_g);
+              }
+            }
+          }
+          stackIn_9_0 = var5;
+          return stackIn_9_0;
+        } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
+          decompiledCaughtException = decompiledCaughtParameter0;
+          var2 = decompiledCaughtException;
+          stackIn_38_0 = var2;
+          stackIn_38_1 = new StringBuilder().append("lhb.D(").append(param0).append(',');
+          if (param1 == null) {
+            stackIn_39_2 = "null";
+          } else {
+            stackIn_39_2 = "{...}";
+          }
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+        }
+    }
+
+    final static void a(byte param0, ShipComponent param1) {
+        ShipComponent var4 = null;
+        ShipComponent var5 = null;
+        try {
+          param1.a(1, 7, new ShipComponent(35));
+          int var2_int = -57 / ((param0 - 24) / 51);
+          param1.a(1, 15, new ShipComponent(35));
+          param1.a(1, 3, new ShipComponent(13));
+          param1.a(1, 11, new ShipComponent(13));
+          param1.a(1, 16, new ShipComponent(13));
+          param1.a(1, 17, new ShipComponent(13));
+          param1.a(1, 5, new ShipComponent(15));
+          param1.a(1, 9, new ShipComponent(15));
+          param1.a(1, 4, new ShipComponent(15));
+          param1.a(1, 10, new ShipComponent(15));
+          var4 = new ShipComponent(33);
+          var4.a(1, 0, new ShipComponent(13));
+          param1.a(1, 1, var4);
+          var5 = new ShipComponent(33);
+          var5.a(1, 2, new ShipComponent(13));
+          param1.a(1, 13, var5);
+        } catch (RuntimeException runtimeException) {
+          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lhb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+        }
+    }
+
+    public final SerializableGameState[] createArray(int param0, int param1) {
+        if (param0 != 11995) {
+          this.create((byte) -4);
+          return (SerializableGameState[]) ((Object) new GrapplingHook[param1]);
+        }
+        return (SerializableGameState[]) ((Object) new GrapplingHook[param1]);
+    }
+
+    public final SerializableGameState create(byte param0) {
+        int var2 = -113 / ((param0 + 64) / 50);
+        return (SerializableGameState) ((Object) new GrapplingHook());
+    }
+
+    public static void clearSharedReferences(byte param0) {
+        if (param0 > -62) {
+          return;
+        }
+        field_a = null;
+    }
+
+    static {
+    }
+}

@@ -8,7 +8,7 @@ final class GetBurstFireRegenerationRate extends ConsoleCommand {
 
     final static ri[] e(byte param0) {
         if (param0 < -40) {
-          return new ri[]{TeamShipComponentCondition.field_e, GetMomentOfInertiaPerpointCalcDownshift.field_r, SetAngularVelocitySustain.field_o, efb.field_c, SetSniperCannonAimarc.field_r, MapClearanceArea.field_b, SetSniperCannonAimarc.field_o, GetMassDriverProjectiles.field_p, tpa.field_a, ppb.field_c, ae.field_g, qw.field_g, GetBloomThresholdPercentage.field_o, qc.field_g};
+          return new ri[]{TeamShipComponentCondition.field_e, GetMomentOfInertiaPerpointCalcDownshift.field_r, SetAngularVelocitySustain.field_o, MissionConditionFactory.field_c, SetSniperCannonAimarc.field_r, MapClearanceArea.field_b, SetSniperCannonAimarc.field_o, GetMassDriverProjectiles.field_p, tpa.field_a, ppb.field_c, ae.field_g, qw.field_g, GetBloomThresholdPercentage.field_o, qc.field_g};
         }
         return (ri[]) null;
     }
@@ -71,6 +71,6 @@ final class GetBurstFireRegenerationRate extends ConsoleCommand {
     }
 
     static {
-        kf discarded$0 = new kf();
+        DebugMessageFactory discarded$0 = new DebugMessageFactory();
     }
 }

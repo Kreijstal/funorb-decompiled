@@ -23,7 +23,7 @@ final class hqb {
         var4 = null;
         if (param1 != 4) {
           if (param1 == 5) {
-            var4_ref = npa.a((byte) 90, this.field_a, param0);
+            var4_ref = ServerTickFactory.a((byte) 90, this.field_a, param0);
           } else {
             if (6 != param1) {
               if (7 != param1) {
@@ -72,7 +72,7 @@ final class hqb {
                     mia.a(param1, 0, 53);
                   }
                 } else {
-                  jua.a(this.field_h, param1, 20694);
+                  ArmBehaviourFactory.a(this.field_h, param1, 20694);
                 }
               } else {
                 sh.a(this.field_h, -1, param1);
@@ -180,7 +180,7 @@ final class hqb {
         CharSequence var7 = null;
         String var8 = null;
         try {
-          if (this.field_a != null && (~wqa.field_a != ~this.field_d ||
+          if (this.field_a != null && (~BodyInZoneConditionFactory.field_a != ~this.field_d ||
             param1 == 2) && iwa.field_b == 2) {
             var8 = this.b((byte) -63);
             var4 = var8;
@@ -281,17 +281,17 @@ final class hqb {
                   }
                   if (var5 >= 2 &&
                     !param0) {
-                    stackIn_31_0 = amb.field_a;
+                    stackIn_31_0 = ServerInfoFactory.field_a;
                     return stackIn_31_0;
                   }
                 }
                 if (0 >= var5) {
                   return null;
                 }
-                stackIn_36_0 = kma.field_d;
+                stackIn_36_0 = ArmBehaviour.field_d;
                 return stackIn_36_0;
               }
-              stackIn_21_0 = kma.field_d;
+              stackIn_21_0 = ArmBehaviour.field_d;
               return stackIn_21_0;
             }
             stackIn_16_0 = GetInnateThrusters.field_o;
@@ -313,7 +313,7 @@ final class hqb {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_k = (String[][]) null;
         if (param0 > -103) {
           CharSequence var2 = (CharSequence) null;
@@ -337,7 +337,7 @@ final class hqb {
         }
         if (param1 != 8) {
           if (18 == param1) {
-            bab.a(this.field_a, this.field_d, 63);
+            PlayerVoteFactory.a(this.field_a, this.field_d, 63);
           } else {
             if (param1 == 11) {
               mea.a(0, (byte) -118, param0, this.field_c);
@@ -380,7 +380,7 @@ final class hqb {
           this.field_b = (llb) null;
         }
         if (this.field_a != null &&
-          wqa.field_a != this.field_d &&
+          BodyInZoneConditionFactory.field_a != this.field_d &&
           null != SetSpinningBladeSpindamageMultiplier.field_o &&
           nmb.b(-45)) {
           var7 = SetPhasedEnergyBeamAimarc.a((byte) 80, this.field_d);
@@ -517,7 +517,7 @@ final class hqb {
     final void b(int param0) {
         String var3 = null;
         if (this.field_a != null &&
-          wqa.field_a != this.field_d) {
+          BodyInZoneConditionFactory.field_a != this.field_d) {
           var3 = this.b((byte) -110);
           String var2 = var3;
           this.field_i.a(SetReverbGain.a(ona.field_l, new String[]{var3}, 83), (byte) -53, 17);

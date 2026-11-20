@@ -7,7 +7,7 @@ final class GetArmageddonLength extends ConsoleCommand {
     static String field_o;
     static uja field_p;
 
-    public static void f(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_q = null;
         field_r = null;
         field_p = null;

@@ -62,7 +62,7 @@ abstract class MapClearanceArea implements DiffableState {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 > -99) {
           asb var2 = (asb) null;
           MapClearanceArea.a(-84, (byte) -24, (asb) null, 25);
@@ -93,7 +93,7 @@ abstract class MapClearanceArea implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 75) {
-            MapClearanceArea.a((byte) -84);
+            MapClearanceArea.clearSharedReferences((byte) -84);
           }
           if (pa.a(param3, 2, param2, param0)) {
             stackIn_6_0 = v.b(false);

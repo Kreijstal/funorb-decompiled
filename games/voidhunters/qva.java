@@ -64,10 +64,10 @@ final class qva extends kva implements hdb {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_j = null;
         if (param0 != 6) {
-          qva.a(-55);
+          qva.clearSharedReferences(-55);
           field_k = null;
           return;
         }

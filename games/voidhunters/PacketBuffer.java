@@ -588,7 +588,7 @@ class PacketBuffer extends IntrusiveNode {
         } while (0 != this.payload[fieldTemp$1]);
         var4 = -1 + this.position - var3;
         if (var4 != 0) {
-          return tja.a(var3, 0, var4, this.payload);
+          return CarouselSlot.a(var3, 0, var4, this.payload);
         }
         return "";
     }
@@ -757,7 +757,7 @@ class PacketBuffer extends IntrusiveNode {
         if (var3 == 0) {
           return "";
         }
-        return tja.a(var2, param0 + 1, var3, this.payload);
+        return CarouselSlot.a(var2, param0 + 1, var3, this.payload);
     }
 
     final int readShort(boolean param0) {

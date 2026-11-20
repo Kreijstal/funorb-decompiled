@@ -10,7 +10,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
         if (param0 != -74) {
           field_q = (IntrusiveDeque) null;
         }
-        kma.a(GrapplingHook.field_x, true, -17833, SetResourceNodeCaptureTime.field_p);
+        ArmBehaviour.a(GrapplingHook.field_x, true, -17833, SetResourceNodeCaptureTime.field_p);
         kmb.field_c = true;
     }
 
@@ -176,7 +176,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               }
               if (99 != var9Lifetime1) {
                 tc.field_c = qva.field_k;
-                vja.field_a = -1;
+                PartitioningManagerFactory.field_a = -1;
                 ow.field_a = var9Lifetime1;
               } else {
                 ShipBlueprint.a(SetWorldWidthUpshift.a(param4 + 24655), 30000);
@@ -206,7 +206,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
             GetBoostersActiveTime.f((byte) 86);
           }
           if (tc.field_c == qva.field_k &&
-            ci.b((byte) 46)) {
+            PlayerJoinFactory.b((byte) 46)) {
             if (ow.field_a == 255) {
               var9_ref_String = qga.field_b.readNullableString(0);
               if (var9_ref_String != null) {

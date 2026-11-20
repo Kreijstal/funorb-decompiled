@@ -123,7 +123,7 @@ abstract class mc extends shb implements nea {
           ShipComponent var3 = (ShipComponent) null;
           mc.a((ShipComponent) null, -56);
         }
-        if ((nf.field_a > 0 || SetExplosionPushMultiplier.field_p > 0) &&
+        if ((CarouselPlayerEventFactory.field_a > 0 || SetExplosionPushMultiplier.field_p > 0) &&
           GetTorpedoProjectileDamage.field_o) {
           dma.e(0, 0, dma.field_g, SetToggledScoreboard.field_o.field_u);
           SetUseCircleFill.field_o.b(param1, -91);

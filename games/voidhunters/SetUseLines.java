@@ -21,7 +21,7 @@ final class SetUseLines extends ConsoleCommand {
           if (param0 != -94) {
             field_p = 16;
           }
-          stackIn_5_0 = (null != nf.a(param1, false));
+          stackIn_5_0 = (null != CarouselPlayerEventFactory.a(param1, false));
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -37,11 +37,11 @@ final class SetUseLines extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         field_q = null;
         if (param0 != 10) {
-          SetUseLines.a(-69);
+          SetUseLines.clearSharedReferences(-69);
         }
     }
 

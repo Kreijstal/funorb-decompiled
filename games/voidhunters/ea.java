@@ -12,10 +12,10 @@ final class ea extends IntrusiveNode {
     int field_e;
     int field_l;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_k = null;
         if (param0 != 10) {
-          ea.a(-25);
+          ea.clearSharedReferences(-25);
         }
     }
 

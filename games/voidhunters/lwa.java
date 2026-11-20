@@ -51,8 +51,8 @@ final class lwa extends llb {
           if (param1 != -1) {
             field_vb = (String) null;
           }
-          for (var2_int = 0; ub.field_f.length > var2_int; var2_int++) {
-            if (ub.field_f[var2_int] == param0) {
+          for (var2_int = 0; DebugSendable.field_f.length > var2_int; var2_int++) {
+            if (DebugSendable.field_f[var2_int] == param0) {
               stackIn_8_0 = var2_int;
               return stackIn_8_0;
             }

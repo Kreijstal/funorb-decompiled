@@ -8,10 +8,10 @@ final class GetGrapplingHookSpringConstant extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_o = null;
         if (!param0) {
-          GetGrapplingHookSpringConstant.b(false);
+          GetGrapplingHookSpringConstant.clearSharedReferences(false);
         }
     }
 

@@ -194,12 +194,12 @@ final class bv {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           if (param0 != 39) {
-            bv.a(105);
+            bv.clearSharedReferences(105);
           }
           field_a = null;
           field_b = null;
@@ -254,8 +254,8 @@ final class bv {
           var10_int = -16384;
           var11 = -2048;
           var12 = tea.a(param7, param6, 13879);
-          var13 = onb.field_a;
-          var14 = lj.field_a;
+          var13 = PartitionZoneFactory.field_a;
+          var14 = MissionVariableFactory.field_a;
           var15 = param0[0];
           var16 = param0[1];
           if (param5) {
@@ -561,9 +561,9 @@ final class bv {
               param1.world.a(var14, (byte) 72);
               var14.r(-2);
               var16 = new MissionEvent();
-              var16.a((byte) -106, (MissionCondition) (new BodyCondition(var14.getId(false))));
-              var16.a(new IncrementVariableAction(0, 1), true);
-              var16.a(new RemoveEventAction(), true);
+              var16.addCondition((byte) -106, (MissionCondition) (new BodyDestroyedCondition(var14.getId(false))));
+              var16.addAction(new IncrementVariableAction(0, 1), true);
+              var16.addAction(new RemoveEventAction(), true);
               param1.world.a(var16, -38);
             }
           }
@@ -829,14 +829,14 @@ final class bv {
                       var18 = param12.getBoundingbox((byte) -112)[2];
                       if ((var43 != 0) &&
                         (var22 != 0)) {
-                        var24_intLifetime2 = kc.field_b;
+                        var24_intLifetime2 = PlayerGameData.field_b;
                         var25Lifetime1 = uia.field_b;
                         var26 = mmb.field_d[0];
                         var26.a(-(var26.d() / 2) + var24_intLifetime2, -(var26.a() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.a(lu.field_f[1], 255) << 24, 1);
                       }
                     } else {
                       if (var22 != 0) {
-                        var24_intLifetime2 = kc.field_b;
+                        var24_intLifetime2 = PlayerGameData.field_b;
                         var25Lifetime1 = uia.field_b;
                         var26 = mmb.field_d[0];
                         var26.a(-(var26.d() / 2) + var24_intLifetime2, -(var26.a() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.a(lu.field_f[1], 255) << 24, 1);
@@ -856,7 +856,7 @@ final class bv {
                     var17 = param12.x;
                     var18 = param12.y;
                   }
-                  var20_ref = param0.world.b(1, 2147483647, param12.d(false), var17, var18, param12.g((byte) 124));
+                  var20_ref = param0.world.b(1, 2147483647, param12.getX(false), var17, var18, param12.getY((byte) 124));
                   if (var20_ref != null ||
                     param12.getDragging(-96) != -1) {
                     this.a(-26476, 3);
@@ -897,7 +897,7 @@ final class bv {
                   }
                   if (!(GetPointDefenceLaserPulsetime.field_o <= 0) ||
                     SetMachineGunEnergyUsed.field_o[GetTorpedoProjectileLife.field_o] ||
-                    SetMachineGunEnergyUsed.field_o[hna.field_n]) {
+                    SetMachineGunEnergyUsed.field_o[PlayerAction.field_n]) {
                     nqa.field_c = true;
                   }
                   if (GetPointDefenceLaserReload.field_p &&
@@ -915,7 +915,7 @@ final class bv {
                   this.b((byte) 11, 1) &&
                   var14_int == 5) {
                   var20_int = GetUseNiceTrails.field_p;
-                  var21_ref_int__Lifetime1 = new int[]{param12.d(false) - var20_int, -var20_int + param12.d(false), param12.g((byte) 127), param12.g((byte) 124)};
+                  var21_ref_int__Lifetime1 = new int[]{param12.getX(false) - var20_int, -var20_int + param12.getX(false), param12.getY((byte) 127), param12.getY((byte) 124)};
                   if (param3.field_f[0] >= var21_ref_int__Lifetime1[0] &&
                     param3.field_f[1] <= var21_ref_int__Lifetime1[1] &&
                     var21_ref_int__Lifetime1[2] <= param3.field_f[2] &&

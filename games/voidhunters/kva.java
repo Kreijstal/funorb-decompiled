@@ -335,10 +335,10 @@ abstract class kva implements ura {
         dp.field_a = null;
         GetMachineGunAimarc.field_q = null;
         if (lsa.field_e != null) {
-          fgb.field_l = umb.field_d;
+          fgb.field_l = ServerTick.field_d;
           bpa.field_c = lsa.field_e;
           lsa.field_e = null;
-          umb.field_d = null;
+          ServerTick.field_d = null;
           bpa.field_c.field_qb = -1;
           bpa.field_c.field_ib = -1;
         }

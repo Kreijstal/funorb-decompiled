@@ -6,7 +6,7 @@ final class wia {
     static boolean field_a;
     private static String field_z;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         if (param0 != 9911) {
           field_a = false;

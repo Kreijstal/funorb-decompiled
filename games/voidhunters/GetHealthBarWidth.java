@@ -33,11 +33,11 @@ final class GetHealthBarWidth extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         field_p = null;
         if (param0 != 27358) {
-          GetHealthBarWidth.a(-109);
+          GetHealthBarWidth.clearSharedReferences(-109);
         }
     }
 

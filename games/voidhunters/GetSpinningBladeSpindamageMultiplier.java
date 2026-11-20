@@ -30,7 +30,7 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
           GetMassDriverProjectiles.field_q = vq.field_x.field_e.field_b.field_a;
           if (var2 != GetMassDriverProjectiles.field_q &&
             ef.field_E) {
-            bea.a((byte) 44, "graphics_mode", GetMassDriverProjectiles.field_q);
+            MissionBuilder.a((byte) 44, "graphics_mode", GetMassDriverProjectiles.field_q);
             SetLaserAimarc.a(-123);
           }
           if (GetMassDriverProjectiles.field_q != 1) {
@@ -106,7 +106,7 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
             }
             return;
           }
-          bea.a((byte) 44, "graphics_mode", GetMassDriverProjectiles.field_q);
+          MissionBuilder.a((byte) 44, "graphics_mode", GetMassDriverProjectiles.field_q);
           SetLaserAimarc.a(-123);
         }
         if (GetMassDriverProjectiles.field_q != 1) {
@@ -193,10 +193,10 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_o = null;
         if (param0) {
-          GetSpinningBladeSpindamageMultiplier.b(false);
+          GetSpinningBladeSpindamageMultiplier.clearSharedReferences(false);
         }
     }
 

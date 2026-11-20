@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class GetBombletSprayProjectileDamage extends ConsoleCommand {
-    static dja field_q;
+    static GameStateFactory field_q;
     static int field_o;
     static int field_p;
 
@@ -58,7 +58,7 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
         nl var8 = SetThrusterParticleSpeedDownshift.a(param0, -26, param1);
         nl var9 = var8;
         if (param2 >= -31) {
-          field_q = (dja) null;
+          field_q = (GameStateFactory) null;
           if (var9 != null) {
             var9.field_h = true;
             return;
@@ -78,7 +78,7 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
           var3.field_l = param1;
           var3.field_g = false;
           var3.field_k = param0;
-          gtb.field_d.addLast(-10258, var3);
+          PlayerReady.field_d.addLast(-10258, var3);
           return;
         }
         if (var9 != null) {
@@ -98,13 +98,13 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
         var3Lifetime1.field_l = param1;
         var3Lifetime1.field_g = false;
         var3Lifetime1.field_k = param0;
-        gtb.field_d.addLast(-10258, var3Lifetime1);
+        PlayerReady.field_d.addLast(-10258, var3Lifetime1);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_q = null;
         if (param0 != -102) {
-          GetBombletSprayProjectileDamage.e((byte) -93);
+          GetBombletSprayProjectileDamage.clearSharedReferences((byte) -93);
         }
     }
 
@@ -144,6 +144,6 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
     static {
         field_p = 0;
         field_o = 10;
-        field_q = (dja) ((Object) new fr());
+        field_q = (GameStateFactory) ((Object) new SpawnPointFactory());
     }
 }

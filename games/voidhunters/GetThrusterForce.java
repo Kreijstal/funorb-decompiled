@@ -36,7 +36,7 @@ final class GetThrusterForce extends ConsoleCommand {
     final static void a(int param0) {
         me.field_q.a(0, 123, DualLinkNode.field_f.field_hb - (!GetGrapplingHooksDamageableBySourcePlayer.field_o ? 0 : 4 + (ResourceNode.field_a + 40)), 0, 18);
         GetDebrisGrabbingRange.field_o.a(-40 + DualLinkNode.field_f.field_hb + (-ResourceNode.field_a - 2), -29, 42 + ResourceNode.field_a, param0, 18);
-        tja.field_a.a(DualLinkNode.field_f.field_hb, 2, -1, DualLinkNode.field_f.field_G - 20, 20, 0, ResourceNode.field_a);
+        CarouselSlot.field_a.a(DualLinkNode.field_f.field_hb, 2, -1, DualLinkNode.field_f.field_G - 20, 20, 0, ResourceNode.field_a);
     }
 
     static {

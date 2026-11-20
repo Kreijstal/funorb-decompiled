@@ -23,9 +23,9 @@ final class SetCountermeasuresPulsetime extends ConsoleCommand {
         if (param0 != -13514) {
           SetCountermeasuresPulsetime.e(-111);
         }
-        if (0 < vja.field_a) {
+        if (0 < PartitioningManagerFactory.field_a) {
           var1 = var6 + ":";
-          for (var2 = 0; var2 < vja.field_a; var2++) {
+          for (var2 = 0; var2 < PartitioningManagerFactory.field_a; var2++) {
             var7 = var1 + ' ';
             var3 = qga.field_b.payload[var2] & 255;
             var4 = var3 >> 4;
@@ -57,7 +57,7 @@ final class SetCountermeasuresPulsetime extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(220, 62, arguments[0].intValue(104));
           if (obfuscationGuard >= -119) {
-            SetCountermeasuresPulsetime.a(-107);
+            SetCountermeasuresPulsetime.clearSharedReferences(-107);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -75,10 +75,10 @@ final class SetCountermeasuresPulsetime extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 >= -120) {
-          SetCountermeasuresPulsetime.a(67);
+          SetCountermeasuresPulsetime.clearSharedReferences(67);
         }
     }
 

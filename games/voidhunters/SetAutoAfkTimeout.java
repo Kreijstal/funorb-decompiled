@@ -56,7 +56,7 @@ final class SetAutoAfkTimeout extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 == 0) {
           field_q = null;
           field_o = null;
@@ -65,7 +65,7 @@ final class SetAutoAfkTimeout extends ConsoleCommand {
           field_s = null;
           return;
         }
-        SetAutoAfkTimeout.a(-123);
+        SetAutoAfkTimeout.clearSharedReferences(-123);
         field_q = null;
         field_o = null;
         field_r = null;
@@ -93,7 +93,7 @@ final class SetAutoAfkTimeout extends ConsoleCommand {
           }
           var3_int = param1.position;
           var5 = (CharSequence) ((Object) param0);
-          var4 = hi.a(var5, 96);
+          var4 = MissionListFactory.a(var5, 96);
           param1.writeUnsignedSmart((byte) 124, var4.length);
           param1.position = param1.position + GetMissileLauncherAimspeed.field_o.b(var4.length, var4, param1.payload, 104, param1.position, 0);
           stackIn_4_0 = -var3_int + param1.position;

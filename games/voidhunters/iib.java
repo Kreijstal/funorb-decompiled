@@ -34,9 +34,9 @@ final class iib extends qg {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 1) {
-          iib.d(-53);
+          iib.clearSharedReferences(-53);
           field_e = null;
           return;
         }

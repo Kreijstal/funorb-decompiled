@@ -6,9 +6,9 @@ final class SetAngularVelocitySustain extends ConsoleCommand {
     static int field_p;
     static llb field_q;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -25544) {
-          SetAngularVelocitySustain.a(-125);
+          SetAngularVelocitySustain.clearSharedReferences(-125);
           field_q = null;
           field_o = null;
           return;

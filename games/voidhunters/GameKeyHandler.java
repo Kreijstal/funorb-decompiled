@@ -69,7 +69,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
               mia.a((char) var2_int, true)) {
               var3 = SetComponentBreakingExplosionForceMultiplier.field_o + 1 & 127;
               if (var3 != bva.field_c) {
-                npa.field_a[SetComponentBreakingExplosionForceMultiplier.field_o] = -1;
+                ServerTickFactory.field_a[SetComponentBreakingExplosionForceMultiplier.field_o] = -1;
                 GetGrapplingHookCooldown.field_q[SetComponentBreakingExplosionForceMultiplier.field_o] = (char)var2_int;
                 SetComponentBreakingExplosionForceMultiplier.field_o = var3;
               }
@@ -114,7 +114,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             if (0 <= var2_int) {
               var3 = 127 & 1 + SetComponentBreakingExplosionForceMultiplier.field_o;
               if (var3 != bva.field_c) {
-                npa.field_a[SetComponentBreakingExplosionForceMultiplier.field_o] = var2_int;
+                ServerTickFactory.field_a[SetComponentBreakingExplosionForceMultiplier.field_o] = var2_int;
                 GetGrapplingHookCooldown.field_q[SetComponentBreakingExplosionForceMultiplier.field_o] = (char)0;
                 SetComponentBreakingExplosionForceMultiplier.field_o = var3;
               }
@@ -160,7 +160,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= 23) {
-            GameKeyHandler.a(115);
+            GameKeyHandler.clearSharedReferences(115);
           }
           if (!li.field_i) {
             stackIn_6_0 = ita.a(param2, 7988).b(param4, param3);
@@ -208,7 +208,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 >= -1) {
           GameKeyHandler.b(-72);
           field_b = null;

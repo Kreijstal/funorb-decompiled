@@ -297,9 +297,9 @@ final class asb {
             }
             if (SetReloadBarHeight.field_q[0][2].field_Q) {
               if (nmb.b(97)) {
-                lob.field_a = SetAutoAfkTimeout.field_r;
+                NebulaFieldFactory.field_a = SetAutoAfkTimeout.field_r;
               } else {
-                lob.field_a = SetReverbGain.a(SetMissionVotes.field_p, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 124);
+                NebulaFieldFactory.field_a = SetReverbGain.a(SetMissionVotes.field_p, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 124);
               }
             }
             decompiledFrameRemainder1 = !(SetMutatorVotes.field_o.length < 2);
@@ -439,7 +439,7 @@ final class asb {
                 }
                 var8 = stackIn_153_0;
                 if (var8 != null) {
-                  lob.field_a = var8;
+                  NebulaFieldFactory.field_a = var8;
                 }
               }
               stackIn_158_0 = var30;
@@ -507,7 +507,7 @@ final class asb {
                   GetPhasedEnergyBeamRandomness.field_p[var7] != null) {
                   var16Lifetime2 = GetPhasedEnergyBeamRandomness.field_p[var7][var9];
                   if (var16Lifetime2 > 0 &&
-                    var16Lifetime2 > cla.field_b) {
+                    var16Lifetime2 > IncrementVariableActionFactory.field_b) {
                     var11 = 1;
                   }
                   if (0 != var16Lifetime2 &&
@@ -549,7 +549,7 @@ final class asb {
                 for (var17_int = 0; var7 > var17_int; var17_int++) {
                   mia.field_a[var17_int] = false;
                 }
-                bea.a(var7, var9, param1, -1, 93, param2, 0, -1);
+                MissionBuilder.a(var7, var9, param1, -1, 93, param2, 0, -1);
                 if (2 <= SetAngularVelocitySustain.field_p &&
                   SetMachineGunEnergyUsed.field_o[12]) {
                   hrb.field_b = true;
@@ -619,7 +619,7 @@ final class asb {
                     var21 = bpa.field_d;
                   } else {
                     if (var11 != 0) {
-                      var22_int = GetPhasedEnergyBeamRandomness.field_p[var7][var9] - cla.field_b;
+                      var22_int = GetPhasedEnergyBeamRandomness.field_p[var7][var9] - IncrementVariableActionFactory.field_b;
                       if (var22_int == 1) {
                         var21 = wia.field_b;
                         var32 = var21;
@@ -627,7 +627,7 @@ final class asb {
                         var32Lifetime1 = var21;
                         var21 = var32Lifetime1;
                       } else {
-                        var21 = SetReverbGain.a(nra.field_a, new String[]{Integer.toString(var22_int)}, 105);
+                        var21 = SetReverbGain.a(AwardVictoryToTeamActionFactory.field_a, new String[]{Integer.toString(var22_int)}, 105);
                       }
                     }
                     if (var12 != 0) {
@@ -641,12 +641,12 @@ final class asb {
                       }
                     }
                     if (var14 != 0) {
-                      var22 = lp.field_a;
+                      var22 = CarouselEventFactory.field_a;
                       if (var15 > 0 &&
-                        mta.field_a != null &&
-                        mta.field_a.length >= var15 &&
-                        null != mta.field_a[var15 - 1]) {
-                        var22 = mta.field_a[var15 - 1][0];
+                        MissionFactory.field_a != null &&
+                        MissionFactory.field_a.length >= var15 &&
+                        null != MissionFactory.field_a[var15 - 1]) {
+                        var22 = MissionFactory.field_a[var15 - 1][0];
                       }
                       if (var21 == null) {
                         var21 = var22;
@@ -700,7 +700,7 @@ final class asb {
                   }
                 }
                 if (var20 != null) {
-                  lob.field_a = (String) (var20);
+                  NebulaFieldFactory.field_a = (String) (var20);
                 }
               }
               if (!param2) {
@@ -747,7 +747,7 @@ final class asb {
             if (param2) {
               return;
             }
-            bh.a(param0, true);
+            MapClearanceCircleFactory.a(param0, true);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -816,7 +816,7 @@ final class asb {
           0 != this.field_g.field_m[param1]) {
           return true;
         }
-        if (sl.field_b) {
+        if (AsteroidFieldFactory.field_b) {
           throw new IllegalArgumentException(Integer.toString(param1));
         }
         return false;
@@ -1100,7 +1100,7 @@ final class asb {
 
     private final synchronized void a(byte param0, int param1) {
         if (!this.field_e) {
-          this.field_i[param1] = gfb.a(false, this.field_d.a(127, param1), -12445);
+          this.field_i[param1] = EscapePodFactory.a(false, this.field_d.a(127, param1), -12445);
         } else {
           this.field_i[param1] = this.field_d.a(118, param1);
         }
@@ -1117,7 +1117,7 @@ final class asb {
           0 > param0 ||
           param1 >= this.field_g.field_m.length ||
           param0 >= this.field_g.field_m[param1]) {
-          if (!sl.field_b) {
+          if (!AsteroidFieldFactory.field_b) {
             return false;
           }
           throw new IllegalArgumentException(param1 + " " + param0);
@@ -1523,7 +1523,7 @@ final class asb {
                   var18 = var34[var17];
                 }
                 if (0 == this.field_h) {
-                  var7[var18] = gfb.a(false, var39[var17], -12445);
+                  var7[var18] = EscapePodFactory.a(false, var39[var17], -12445);
                 } else {
                   var7[var18] = var39[var17];
                 }
@@ -1536,7 +1536,7 @@ final class asb {
               var11 = var34[0];
             }
             if (this.field_h == 0) {
-              var7[var11] = gfb.a(false, var36, -12445);
+              var7[var11] = EscapePodFactory.a(false, var36, -12445);
               return true;
             }
             var7[var11] = var43;

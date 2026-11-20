@@ -54,9 +54,9 @@ final class SetUseOffscreenRendering extends ConsoleCommand {
     final static llb b(boolean param0) {
         if (param0) {
           SetUseOffscreenRendering.a(45);
-          return rgb.field_f.field_wb;
+          return MapClearanceCircle.field_f.field_wb;
         }
-        return rgb.field_f.field_wb;
+        return MapClearanceCircle.field_f.field_wb;
     }
 
     static {

@@ -12,7 +12,7 @@ final class GetBombletSprayProjectiles extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (param0) {
           field_q = null;
           field_r = null;
@@ -20,7 +20,7 @@ final class GetBombletSprayProjectiles extends ConsoleCommand {
           field_o = null;
           return;
         }
-        GetBombletSprayProjectiles.b(true);
+        GetBombletSprayProjectiles.clearSharedReferences(true);
         field_q = null;
         field_r = null;
         field_s = null;

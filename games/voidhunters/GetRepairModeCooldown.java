@@ -45,7 +45,7 @@ final class GetRepairModeCooldown extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         field_p = null;
         if (param0 != 91) {

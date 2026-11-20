@@ -45,7 +45,7 @@ final class GetDebrisProjectileCollision extends ConsoleCommand {
           param1 = param1 + (-param1 + GetAngularForceDownshift.field_p) * var3 / var2;
         }
         SetToggledScoreboard.field_o.a(SetUseDetailLines.field_o, param0 + 123, 640, param1, 120);
-        hp.a(640, GetAngularForceDownshift.field_p - 24, qs.field_c, false, hi.field_a, 5, param0);
+        hp.a(640, GetAngularForceDownshift.field_p - 24, qs.field_c, false, MissionListFactory.field_a, 5, param0);
     }
 
     static {

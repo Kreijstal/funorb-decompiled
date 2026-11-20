@@ -39,7 +39,7 @@ final class SetLaserRandomness extends ConsoleCommand {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_r = null;
         if (!param0) {
           SetLaserRandomness.a(-19, -41, true, 117, -123, 114, 51);
@@ -56,15 +56,15 @@ final class SetLaserRandomness extends ConsoleCommand {
           if (param0 != -29) {
             field_r = (int[]) null;
           }
-          hqb.a(0, pn.field_b, bea.field_e, true, param1, (byte) 24, Message.field_d);
-          for (var2_int = 0; bea.field_e > var2_int; var2_int++) {
+          hqb.a(0, WeaponBehaviourFactory.field_b, MissionBuilder.field_e, true, param1, (byte) 24, Message.field_d);
+          for (var2_int = 0; MissionBuilder.field_e > var2_int; var2_int++) {
             sv.field_f[var2_int + param1] = var2_int;
           }
-          hqb.a(param1, qbb.field_a, bea.field_e + param1, false, param1 + param1, (byte) 24, npa.field_d);
-          if (bea.field_e <= param1) {
+          hqb.a(param1, ShipAIFactory.field_a, MissionBuilder.field_e + param1, false, param1 + param1, (byte) 24, ServerTickFactory.field_d);
+          if (MissionBuilder.field_e <= param1) {
             return;
           }
-          bea.field_e = param1;
+          MissionBuilder.field_e = param1;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

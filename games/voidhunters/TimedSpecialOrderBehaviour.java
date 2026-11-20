@@ -89,7 +89,7 @@ final class TimedSpecialOrderBehaviour implements DiffableState {
     public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 >= -109) {
-            TimedSpecialOrderBehaviour.a(55);
+            TimedSpecialOrderBehaviour.clearSharedReferences(55);
           }
           param0.writeBits(-632, this.cooldown, 32);
         } catch (RuntimeException runtimeException) {
@@ -148,10 +148,10 @@ final class TimedSpecialOrderBehaviour implements DiffableState {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         if (param0 <= 121) {
-          TimedSpecialOrderBehaviour.a(-50);
+          TimedSpecialOrderBehaviour.clearSharedReferences(-50);
         }
     }
 

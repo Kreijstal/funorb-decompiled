@@ -83,10 +83,10 @@ final class SetMassDriverRandomness extends ConsoleCommand {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_o = null;
         if (!param0) {
-          SetMassDriverRandomness.b(true);
+          SetMassDriverRandomness.clearSharedReferences(true);
         }
     }
 

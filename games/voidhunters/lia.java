@@ -75,7 +75,7 @@ final class lia extends pw {
           if (param9 == -57) {
             return;
           }
-          lia.a(-127);
+          lia.clearSharedReferences(-127);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -84,7 +84,7 @@ final class lia extends pw {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         if (param0 < 80) {
           lia.a(89, -99, 30, -99, -30, -113, 13, -65, 25, (byte) 100);

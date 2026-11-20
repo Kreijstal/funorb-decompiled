@@ -177,10 +177,10 @@ final class fj {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != 0) {
-          fj.a(-54);
+          fj.clearSharedReferences(-54);
         }
         field_c = null;
     }

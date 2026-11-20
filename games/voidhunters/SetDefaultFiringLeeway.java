@@ -19,7 +19,7 @@ final class SetDefaultFiringLeeway extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(96, 62, arguments[0].intValue(50));
           if (obfuscationGuard >= -119) {
-            SetDefaultFiringLeeway.b(false);
+            SetDefaultFiringLeeway.clearSharedReferences(false);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -37,10 +37,10 @@ final class SetDefaultFiringLeeway extends ConsoleCommand {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_o = null;
         if (!param0) {
-          SetDefaultFiringLeeway.b(true);
+          SetDefaultFiringLeeway.clearSharedReferences(true);
         }
     }
 

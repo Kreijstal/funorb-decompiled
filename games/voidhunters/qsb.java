@@ -14,15 +14,15 @@ final class qsb extends uj {
 
     final int d(byte param0) {
         if (param0 != 64) {
-          qsb.d(87);
+          qsb.clearSharedReferences(87);
           return Particle.field_w;
         }
         return Particle.field_w;
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 104) {
-          qsb.d(122);
+          qsb.clearSharedReferences(122);
           field_d = null;
           return;
         }

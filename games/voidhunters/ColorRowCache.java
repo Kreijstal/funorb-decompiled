@@ -106,13 +106,13 @@ final class ColorRowCache {
           while (ata.e(127)) {
             GetLagStandardDeviationIn.field_r.a(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
           }
-          if (ci.field_b != -1) {
-            var1_int = ci.field_b;
+          if (PlayerJoinFactory.field_b != -1) {
+            var1_int = PlayerJoinFactory.field_b;
             GetSelfDestructPrepareToggleCooldown.a(-59, -1);
             stackIn_7_0 = var1_int;
             return stackIn_7_0;
           }
-          if (rg.field_b) {
+          if (RemoveEventActionFactory.field_b) {
             stackIn_11_0 = 3;
             return stackIn_11_0;
           }

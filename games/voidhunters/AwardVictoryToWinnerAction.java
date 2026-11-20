@@ -26,9 +26,9 @@ final class AwardVictoryToWinnerAction extends MissionAction implements Diffable
     AwardVictoryToWinnerAction() {
     }
 
-    final ucb a(World param0, int param1) {
+    final WorldPoint getWorldPosition(World param0, int param1) {
         RuntimeException var3 = null;
-        ucb stackIn_3_0 = null;
+        WorldPoint stackIn_3_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -37,7 +37,7 @@ final class AwardVictoryToWinnerAction extends MissionAction implements Diffable
           if (param1 == 26964) {
             return null;
           }
-          stackIn_3_0 = (ucb) null;
+          stackIn_3_0 = (WorldPoint) null;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -53,7 +53,7 @@ final class AwardVictoryToWinnerAction extends MissionAction implements Diffable
         }
     }
 
-    final String a(int param0) {
+    final String getDescription(int param0) {
         if (param0 != -1325) {
           SerializableGameState var3 = (SerializableGameState) null;
           this.reportDifferences((SerializableGameState) null, -23);
@@ -61,7 +61,7 @@ final class AwardVictoryToWinnerAction extends MissionAction implements Diffable
         return "Award victory to the winning player";
     }
 
-    final void a(int param0, int[] param1, GameSnapshot param2) {
+    final void execute(int param0, int[] param1, GameSnapshot param2) {
         int var6 = 0;
         int var4_int = 0;
         int var5 = 0;
@@ -77,7 +77,7 @@ final class AwardVictoryToWinnerAction extends MissionAction implements Diffable
         var8 = VoidHunters.field_G;
         try {
           if (param0 != 1) {
-            this.a(31);
+            this.getDescription(31);
           }
           var4_int = 0;
           var5 = -1;
@@ -124,7 +124,7 @@ final class AwardVictoryToWinnerAction extends MissionAction implements Diffable
           super.writeState(param0, -127);
           if (param1 > -109) {
             GameSnapshot var4 = (GameSnapshot) null;
-            this.a(62, (int[]) null, (GameSnapshot) null);
+            this.execute(62, (int[]) null, (GameSnapshot) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "via.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -172,7 +172,7 @@ final class AwardVictoryToWinnerAction extends MissionAction implements Diffable
         try {
           super.copyTo((byte) 86, param1);
           if (param0 <= 54) {
-            this.a(67);
+            this.getDescription(67);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "via.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

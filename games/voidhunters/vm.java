@@ -158,7 +158,7 @@ final class vm extends TextureOperation {
             woa.field_b = 2147483647;
             qd.field_b = 2147483647;
             SetSalvoRepairTimeMultiplier.field_q = 2147483647;
-            hi.field_b = 2147483647;
+            MissionListFactory.field_b = 2147483647;
             var15 = 2048 + grb.field_l[var14] * this.field_m;
             var16 = var15 >> 12;
             var17 = var16 + 1;
@@ -248,11 +248,11 @@ final class vm extends TextureOperation {
                 }
                 if (SetSalvoRepairTimeMultiplier.field_q > var11) {
                   woa.field_b = qd.field_b;
-                  qd.field_b = hi.field_b;
-                  hi.field_b = SetSalvoRepairTimeMultiplier.field_q;
+                  qd.field_b = MissionListFactory.field_b;
+                  MissionListFactory.field_b = SetSalvoRepairTimeMultiplier.field_q;
                   SetSalvoRepairTimeMultiplier.field_q = var11;
                 } else {
-                  if (var11 >= hi.field_b) {
+                  if (var11 >= MissionListFactory.field_b) {
                     if (qd.field_b <= var11) {
                       if (var11 < woa.field_b) {
                         woa.field_b = var11;
@@ -263,8 +263,8 @@ final class vm extends TextureOperation {
                     }
                   } else {
                     woa.field_b = qd.field_b;
-                    qd.field_b = hi.field_b;
-                    hi.field_b = var11;
+                    qd.field_b = MissionListFactory.field_b;
+                    MissionListFactory.field_b = var11;
                   }
                 }
               }
@@ -274,12 +274,12 @@ final class vm extends TextureOperation {
               var3[var14] = SetSalvoRepairTimeMultiplier.field_q;
             } else {
               if (var18Lifetime1 == 1) {
-                var3[var14] = hi.field_b;
+                var3[var14] = MissionListFactory.field_b;
               } else {
                 if (var18Lifetime1 != 3) {
                   if (4 != var18Lifetime1) {
                     if (2 == var18Lifetime1) {
-                      var3[var14] = -SetSalvoRepairTimeMultiplier.field_q + hi.field_b;
+                      var3[var14] = -SetSalvoRepairTimeMultiplier.field_q + MissionListFactory.field_b;
                     }
                   } else {
                     var3[var14] = woa.field_b;
@@ -294,9 +294,9 @@ final class vm extends TextureOperation {
         return var3;
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != 110) {
-          vm.e((byte) -75);
+          vm.clearSharedReferences((byte) -75);
         }
         field_q = null;
     }

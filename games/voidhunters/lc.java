@@ -36,7 +36,7 @@ final class lc {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         if (param0 != 95) {
           ShipComponent var2 = (ShipComponent) null;

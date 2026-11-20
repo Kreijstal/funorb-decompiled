@@ -89,7 +89,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
         int var7 = 0;
         int var8 = 0;
         try {
-          var2_int = kc.field_b;
+          var2_int = PlayerGameData.field_b;
           var3 = uia.field_b;
           var4 = qc.field_q.field_eb.c(param0, 500);
           var5 = 6 + qc.field_q.field_eb.b(param0, 500);

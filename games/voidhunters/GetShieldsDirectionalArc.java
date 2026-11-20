@@ -7,10 +7,10 @@ final class GetShieldsDirectionalArc extends ConsoleCommand {
     static asb field_r;
     static int field_p;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_q = null;
         if (param0 != -29044) {
-          GetShieldsDirectionalArc.a(17);
+          GetShieldsDirectionalArc.clearSharedReferences(17);
           field_o = null;
           field_r = null;
           return;

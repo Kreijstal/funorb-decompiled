@@ -49,6 +49,6 @@ final class SetHealthBarHeight extends ConsoleCommand {
 
     static {
         field_o = "Out of sync";
-        vfb discarded$0 = new vfb();
+        CarouselSlotFactory discarded$0 = new CarouselSlotFactory();
     }
 }

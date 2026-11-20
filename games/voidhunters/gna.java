@@ -138,9 +138,9 @@ class gna extends elb {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (param0) {
-          gna.b(false);
+          gna.clearSharedReferences(false);
           field_m = null;
           return;
         }

@@ -66,10 +66,10 @@ final class uob extends qg {
         }
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_f = null;
         if (param0 != 3168) {
-          uob.d(71);
+          uob.clearSharedReferences(71);
           field_g = (int[][]) null;
           return;
         }

@@ -67,7 +67,7 @@ final class psb {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_b = null;
         if (param0) {
           String var2 = (String) null;

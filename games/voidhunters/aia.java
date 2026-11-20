@@ -44,7 +44,7 @@ class aia extends pib {
             param5 &&
             0 == param7 &&
             param8 == 0) {
-            jdb.a(param6, this.field_g.field_cc, 29175, this.field_d, this.field_b, 32993, this.field_j, this.field_h);
+            SetVariableLabelActionFactory.a(param6, this.field_g.field_cc, 29175, this.field_d, this.field_b, 32993, this.field_j, this.field_h);
             this.a((byte) 62, true);
           } else {
             jaggl.OpenGL.glPixelStorei(3314, param7);
@@ -243,7 +243,7 @@ class aia extends pib {
             param4 = param5;
           }
           if (param8) {
-            var11_int = pu.a((byte) -122, param1);
+            var11_int = ParticleFactory.a((byte) -122, param1);
             var12 = var11_int * param5;
             var13 = var11_int * param4;
             var14 = new byte[var12 * param0];

@@ -23,14 +23,14 @@ abstract class mab {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 == -23483) {
           field_e = null;
           field_a = null;
           field_h = null;
           return;
         }
-        mab.a(83);
+        mab.clearSharedReferences(83);
         field_e = null;
         field_a = null;
         field_h = null;

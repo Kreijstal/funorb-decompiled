@@ -26,7 +26,7 @@ final class fbb {
         return false;
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_f = null;
         field_j = null;
         if (param0) {

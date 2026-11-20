@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetShieldsDirectionalHalfarcCuts extends ConsoleCommand {
-    static dja field_o;
+    static GameStateFactory field_o;
     static llb field_p;
 
     public static void clearSharedReferences(int param0) {
@@ -48,6 +48,6 @@ final class SetShieldsDirectionalHalfarcCuts extends ConsoleCommand {
     }
 
     static {
-        field_o = (dja) ((Object) new rg());
+        field_o = (GameStateFactory) ((Object) new RemoveEventActionFactory());
     }
 }

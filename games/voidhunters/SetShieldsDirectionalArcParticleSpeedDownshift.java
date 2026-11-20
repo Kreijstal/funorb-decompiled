@@ -193,7 +193,7 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_s = null;
         if (param0 != -32514) {
           field_o = 71;

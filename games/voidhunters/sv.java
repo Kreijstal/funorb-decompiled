@@ -25,7 +25,7 @@ final class sv extends uda {
 
     final void a(int param0, int param1, int param2) {
         if (param2 != 5) {
-          sv.e(80);
+          sv.clearSharedReferences(80);
         }
     }
 
@@ -55,7 +55,7 @@ final class sv extends uda {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_f = null;
         if (param0 != 0) {
           field_e = -79;

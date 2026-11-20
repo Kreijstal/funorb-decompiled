@@ -6,7 +6,7 @@ final class GetDebrisPartitioned extends ConsoleCommand {
 
     final static boolean a(int param0, int param1) {
         if (param1 != 9) {
-          GetDebrisPartitioned.b(false);
+          GetDebrisPartitioned.clearSharedReferences(false);
           if (4 > param0) {
             return false;
           }
@@ -37,7 +37,7 @@ final class GetDebrisPartitioned extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetDebrisPartitioned.b(true);
+            GetDebrisPartitioned.clearSharedReferences(true);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(9, 111));
           return stackIn_3_0;
@@ -55,7 +55,7 @@ final class GetDebrisPartitioned extends ConsoleCommand {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_o = null;
         if (param0) {
           GetDebrisPartitioned.a(-80, 94);

@@ -31,7 +31,7 @@ final class aaa {
         String var12 = null;
         hqb var13 = null;
         try {
-          pea.$cfr$intArgs$a$91f64d33677c(0L, param1, -1, (int[]) null, (String) null, rgb.field_f, (String) null, 50, param1.f((byte) -13));
+          pea.$cfr$intArgs$a$91f64d33677c(0L, param1, -1, (int[]) null, (String) null, MapClearanceCircle.field_f, (String) null, 50, param1.f((byte) -13));
           if (param1.field_fc && (param1.field_Bb == 2 ||
             !(SetAngularVelocitySustain.field_p < 2))) {
             var7 = GetLagStandardDeviationOut.field_o;

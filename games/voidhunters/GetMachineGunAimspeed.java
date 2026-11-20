@@ -62,7 +62,7 @@ final class GetMachineGunAimspeed extends ConsoleCommand {
     static {
         field_o = new int[8192];
         field_q = "Staff impersonation";
-        hi discarded$0 = new hi();
+        MissionListFactory discarded$0 = new MissionListFactory();
         field_p = 256;
     }
 }

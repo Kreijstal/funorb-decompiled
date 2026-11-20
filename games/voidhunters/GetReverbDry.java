@@ -52,7 +52,7 @@ final class GetReverbDry extends ConsoleCommand {
           if (null != Asteroid.field_v) {
             return true;
           }
-          if (!kfa.a(-26243)) {
+          if (!MapZoneFactory.a(-26243)) {
             return false;
           }
           return true;
@@ -66,7 +66,7 @@ final class GetReverbDry extends ConsoleCommand {
         if (null != Asteroid.field_v) {
           return true;
         }
-        if (!kfa.a(-26243)) {
+        if (!MapZoneFactory.a(-26243)) {
           return false;
         }
         return true;

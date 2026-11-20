@@ -34,10 +34,10 @@ final class SetMissileLauncherAimspeed extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 != 53) {
-          SetMissileLauncherAimspeed.e((byte) 82);
+          SetMissileLauncherAimspeed.clearSharedReferences((byte) 82);
         }
     }
 

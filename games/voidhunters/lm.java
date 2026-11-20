@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class lm {
-    static dja field_b;
+    static GameStateFactory field_b;
     static String field_a;
 
     public static void clearSharedReferences(int param0) {
@@ -19,7 +19,7 @@ final class lm {
     }
 
     static {
-        field_b = (dja) ((Object) new wga());
+        field_b = (GameStateFactory) ((Object) new RoundResultFactory());
         field_a = "Armour plate";
     }
 }

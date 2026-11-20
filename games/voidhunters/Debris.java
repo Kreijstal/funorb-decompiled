@@ -179,10 +179,10 @@ final class Debris extends ShipBody implements DiffableState, ofa, CompactGameSt
         }
     }
 
-    public static void j(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_y = null;
         if (param0 >= -125) {
-          Debris.j((byte) 120);
+          Debris.clearSharedReferences((byte) 120);
         }
     }
 

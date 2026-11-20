@@ -19,7 +19,7 @@ final class SetAllowShipSaving extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          mbb.field_b = arguments[0].booleanValue(false);
+          SetShipTeamActionFactory.field_b = arguments[0].booleanValue(false);
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -37,6 +37,6 @@ final class SetAllowShipSaving extends ConsoleCommand {
     }
 
     static {
-        rc discarded$0 = new rc();
+        MissionGenerationDataFactory discarded$0 = new MissionGenerationDataFactory();
     }
 }

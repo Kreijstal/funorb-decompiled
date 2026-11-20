@@ -6,9 +6,9 @@ final class nnb extends uj {
     static String field_f;
     static String field_d;
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         if (param0) {
-          nnb.b(false);
+          nnb.clearSharedReferences(false);
           field_d = null;
           field_f = null;
           return;
@@ -19,7 +19,7 @@ final class nnb extends uj {
 
     final int a(int param0) {
         if (param0 != -1) {
-          nnb.b(true);
+          nnb.clearSharedReferences(true);
           return GetPointDefenceLaserRandomness.field_p;
         }
         return GetPointDefenceLaserRandomness.field_p;

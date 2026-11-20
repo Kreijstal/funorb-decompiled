@@ -5,7 +5,7 @@ final class GetInnateThrusters extends ConsoleCommand {
     static String field_o;
     static int field_p;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 0) {
           field_p = -121;

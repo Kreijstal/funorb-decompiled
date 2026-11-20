@@ -12,16 +12,16 @@ final class bs {
         llb[] var4 = null;
         try {
           var3 = new String[]{param0, GetBloomCoefficientPercentage.field_q, RequestNewestBlackboxRecording.field_o};
-          var4 = new llb[]{param1, ci.field_c, (llb) ((Object) vra.field_b)};
-          this.field_a = new ooa(0L, vhb.field_c, var3, gfb.field_a, var4, 0);
+          var4 = new llb[]{param1, PlayerJoinFactory.field_c, (llb) ((Object) vra.field_b)};
+          this.field_a = new ooa(0L, vhb.field_c, var3, EscapePodFactory.field_a, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 < 41) {
-          bs.a((byte) 78);
+          bs.clearSharedReferences((byte) 78);
           field_d = null;
           field_b = null;
           return;
@@ -35,10 +35,10 @@ final class bs {
         int var7 = 5;
         if (param1 <= -71) {
           this.field_a.a(param3, param4, var6, var7, 60, param2, param0);
-          rtb.field_h.a(0, 120, ci.field_c.field_hb, 0, nna.field_w);
-          SetCountermeasureLauncherRandomness.field_o.a(0, -25, ci.field_c.field_hb - ResourceNode.field_a - 84, 2 + nna.field_w, 18);
-          GameKeyHandler.field_b.a(-2 + (ci.field_c.field_hb - ResourceNode.field_a) - 80, 120, ResourceNode.field_a + 82, nna.field_w + 2, 18);
-          re.field_n.a(0, nna.field_w + 22, 20, ResourceNode.field_a, -2 + ci.field_c.field_G - (nna.field_w + 20), ci.field_c.field_hb, 0, 2);
+          rtb.field_h.a(0, 120, PlayerJoinFactory.field_c.field_hb, 0, nna.field_w);
+          SetCountermeasureLauncherRandomness.field_o.a(0, -25, PlayerJoinFactory.field_c.field_hb - ResourceNode.field_a - 84, 2 + nna.field_w, 18);
+          GameKeyHandler.field_b.a(-2 + (PlayerJoinFactory.field_c.field_hb - ResourceNode.field_a) - 80, 120, ResourceNode.field_a + 82, nna.field_w + 2, 18);
+          re.field_n.a(0, nna.field_w + 22, 20, ResourceNode.field_a, -2 + PlayerJoinFactory.field_c.field_G - (nna.field_w + 20), PlayerJoinFactory.field_c.field_hb, 0, 2);
           vra.field_b.a(2, 20, ResourceNode.field_a, (byte) 63);
           return;
         }

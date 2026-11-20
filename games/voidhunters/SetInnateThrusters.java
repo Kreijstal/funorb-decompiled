@@ -35,10 +35,10 @@ final class SetInnateThrusters extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = (byte[][]) null;
         if (param0 != 21) {
-          SetInnateThrusters.a(0);
+          SetInnateThrusters.clearSharedReferences(0);
           field_p = null;
           return;
         }

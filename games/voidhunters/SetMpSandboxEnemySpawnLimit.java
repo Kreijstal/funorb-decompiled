@@ -39,9 +39,9 @@ final class SetMpSandboxEnemySpawnLimit extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != -23436) {
-          SetMpSandboxEnemySpawnLimit.a(126);
+          SetMpSandboxEnemySpawnLimit.clearSharedReferences(126);
           field_p = null;
           field_o = null;
           return;

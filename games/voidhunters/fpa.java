@@ -68,9 +68,9 @@ final class fpa extends uj {
         return SetDetachmentMode.field_p;
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 110) {
-          fpa.d(-110);
+          fpa.clearSharedReferences(-110);
           field_d = null;
           return;
         }

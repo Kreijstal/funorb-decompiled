@@ -5,13 +5,13 @@ final class rla extends dqa implements oo {
     private htb field_w;
     private htb field_z;
     private htb field_y;
-    static dja field_v;
+    static GameStateFactory field_v;
     static int field_x;
 
     final static boolean c(boolean param0) {
         if (param0) {
           rla.clearSharedReferences((byte) -52);
-          if (!upa.field_a) {
+          if (!ShipComponentFactory.field_a) {
             return false;
           }
           if (GetUseDetailLines.field_o != -1) {
@@ -22,7 +22,7 @@ final class rla extends dqa implements oo {
           }
           return false;
         }
-        if (!upa.field_a) {
+        if (!ShipComponentFactory.field_a) {
           return false;
         }
         if (GetUseDetailLines.field_o != -1) {
@@ -40,13 +40,13 @@ final class rla extends dqa implements oo {
         int var6Lifetime1;
         if (param2 > 47) {
           var6 = param3 + this.field_r;
-          SetShipToShipRamDamage.field_o.a(dkb.field_a, 20 + var5, var6 + 20, this.field_h - 40, this.field_f - 50, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.field_k);
+          SetShipToShipRamDamage.field_o.a(NebulaFactory.field_a, 20 + var5, var6 + 20, this.field_h - 40, this.field_f - 50, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.field_k);
           super.b(param0, param1, 94, param3);
           return;
         }
         this.field_z = (htb) null;
         var6Lifetime1 = param3 + this.field_r;
-        SetShipToShipRamDamage.field_o.a(dkb.field_a, 20 + var5, var6Lifetime1 + 20, this.field_h - 40, this.field_f - 50, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.field_k);
+        SetShipToShipRamDamage.field_o.a(NebulaFactory.field_a, 20 + var5, var6Lifetime1 + 20, this.field_h - 40, this.field_f - 50, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.field_k);
         super.b(param0, param1, 94, param3);
     }
 
@@ -161,7 +161,7 @@ final class rla extends dqa implements oo {
     }
 
     static {
-        field_v = (dja) ((Object) new eoa());
+        field_v = (GameStateFactory) ((Object) new ShipTeamConditionFactory());
         field_x = 1;
     }
 }

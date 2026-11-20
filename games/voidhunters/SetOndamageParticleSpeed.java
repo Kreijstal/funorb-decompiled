@@ -5,10 +5,10 @@ final class SetOndamageParticleSpeed extends ConsoleCommand {
     static int[] field_o;
     static boolean field_p;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 2051507073) {
-          SetOndamageParticleSpeed.a(-30);
+          SetOndamageParticleSpeed.clearSharedReferences(-30);
         }
     }
 

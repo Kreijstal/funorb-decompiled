@@ -9,7 +9,7 @@ final class GetPointDefenceLaserProjectileInterceptDamage extends ConsoleCommand
     static String field_s;
     static boolean field_o;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_t = null;
         field_q = null;
         if (param0 != 0) {
@@ -71,8 +71,8 @@ final class GetPointDefenceLaserProjectileInterceptDamage extends ConsoleCommand
         var6 = VoidHunters.field_G;
         try {
           if (param0[86]) {
-            for (var3_int = 0; var3_int < ecb.field_a.length; var3_int++) {
-              var4 = ecb.field_a[var3_int];
+            for (var3_int = 0; var3_int < GameSnapshotFactory.field_a.length; var3_int++) {
+              var4 = GameSnapshotFactory.field_a[var3_int];
               if (!param1[var4] &&
                 param0[var4]) {
                 var5 = 1 << var3_int;
@@ -81,12 +81,12 @@ final class GetPointDefenceLaserProjectileInterceptDamage extends ConsoleCommand
                 }
                 stackIn_14_0 = var5;
                 stackIn_15_1 = !(GetPointDefenceLaserProjectiles.a(var5, 11284));
-                ucb.a(stackIn_14_0, stackIn_15_1, 11585);
+                WorldPoint.a(stackIn_14_0, stackIn_15_1, 11585);
               }
             }
           }
           if (param2 != 79) {
-            GetPointDefenceLaserProjectileInterceptDamage.a(-53);
+            GetPointDefenceLaserProjectileInterceptDamage.clearSharedReferences(-53);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

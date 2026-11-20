@@ -270,7 +270,7 @@ final class wh extends ona {
         }
     }
 
-    public static void h(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 0) {
           wh.g(-53);
@@ -423,7 +423,7 @@ final class wh extends ona {
             }
             this.field_m = 0;
             if (param2) {
-              wh.h(-98);
+              wh.clearSharedReferences(-98);
             }
             this.field_h = wt.a(param2);
             return;

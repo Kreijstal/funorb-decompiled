@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class GameSnapshot extends tja implements DiffableState, CompactGameState {
+final class GameSnapshot extends CarouselSlot implements DiffableState, CompactGameState {
     MissionState missionState;
     SettingsInstance settings;
     World world;
@@ -377,7 +377,7 @@ final class GameSnapshot extends tja implements DiffableState, CompactGameState 
         }
     }
 
-    final void a(tja param0, int param1, int param2, boolean param3) {
+    final void a(CarouselSlot param0, int param1, int param2, boolean param3) {
         Player var6 = null;
         int var8 = 0;
         int var5_int = 0;

@@ -6,7 +6,7 @@ final class gib {
     static int field_a;
     static String field_c;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         field_c = null;
         if (param0 != 15) {

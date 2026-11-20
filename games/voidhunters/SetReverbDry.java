@@ -27,8 +27,8 @@ final class SetReverbDry extends ConsoleCommand {
           var7 = var7 - (2 + param1);
           fgb.field_l.a(param3 + bpa.field_c.field_hb, 122, fgb.field_l.field_hb, 0, param1);
           GetUseLines.field_p.a(487 + (param3 + param5), 2, -1, -5 + var7, 5, 5, param5);
-          if (null != ada.field_b) {
-            ada.field_b.a(GetUseLines.field_p.field_L, GetUseLines.field_p.field_hb, GetUseLines.field_p.field_G, 1, GetUseLines.field_p.field_K);
+          if (null != PartitionZoneListFactory.field_b) {
+            PartitionZoneListFactory.field_b.a(GetUseLines.field_p.field_L, GetUseLines.field_p.field_hb, GetUseLines.field_p.field_G, 1, GetUseLines.field_p.field_K);
           }
           if (param2 <= 91) {
             return;
@@ -47,7 +47,7 @@ final class SetReverbDry extends ConsoleCommand {
                 ul.field_b[var12].a(var6_int, -100, var8, var13, var7Lifetime1);
                 SetMissionVariablesHudX.field_o[var12].a(param3, -110, -param3 + var9, 0, var7Lifetime1);
                 SecondaryNodeDeque.field_c[var12].a(var9, -27, param0, param4, -param4 + (var7Lifetime1 - param4));
-                lob.field_c[var12].a(var10, 127, -var10 + (-param3 + var8), param4, var7Lifetime1 - (param4 + param4));
+                NebulaFieldFactory.field_c[var12].a(var10, 127, -var10 + (-param3 + var8), param4, var7Lifetime1 - (param4 + param4));
               } else {
                 SetBombletSprayAimarc.field_o.a(var6_int, -120, var8, var13, var7Lifetime1);
               }

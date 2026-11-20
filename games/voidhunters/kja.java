@@ -146,7 +146,7 @@ class kja extends htb {
           super.a(param0, param1, param2, param3);
           this.field_F = null;
           if (this.field_e) {
-            var5_int = -this.field_g + kc.field_b - param1;
+            var5_int = -this.field_g + PlayerGameData.field_b - param1;
             var6 = -param0 + (uia.field_b - this.field_r);
             this.field_F = this.b(var5_int, var6, 0);
           }

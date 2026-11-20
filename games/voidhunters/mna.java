@@ -24,7 +24,7 @@ final class mna extends mfb {
         SetBots.field_q = SetMachineGunEnergyUsed.field_p;
         SetSpecialOrderBoxWidth.field_o = 0;
         nna.field_z = new ae(2);
-        nna.field_z.a(param0, param1 - 91, -1, GetGrapplingHookAimspeed.a(param1 - 91, uia.field_b, kc.field_b));
+        nna.field_z.a(param0, param1 - 91, -1, GetGrapplingHookAimspeed.a(param1 - 91, uia.field_b, PlayerGameData.field_b));
         if (param1 != 90) {
           mna.clearSharedReferences((byte) 38);
         }

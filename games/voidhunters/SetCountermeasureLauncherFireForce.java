@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetCountermeasureLauncherFireForce extends ConsoleCommand {
-    static dja field_o;
+    static GameStateFactory field_o;
     static String field_p;
     static String field_q;
 
@@ -40,13 +40,13 @@ final class SetCountermeasureLauncherFireForce extends ConsoleCommand {
 
     final static Sprite[] a(int param0, byte param1, int param2, int param3, int param4) {
         if (param1 >= 112) {
-          return hi.a(-972, 1, param4, 3, param3, 1, 1, param2, param0);
+          return MissionListFactory.a(-972, 1, param4, 3, param3, 1, 1, param2, param0);
         }
         SetCountermeasureLauncherFireForce.a(-19, (byte) -41, -16, 83, 121);
-        return hi.a(-972, 1, param4, 3, param3, 1, 1, param2, param0);
+        return MissionListFactory.a(-972, 1, param4, 3, param3, 1, 1, param2, param0);
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_q = null;
         field_p = null;
         field_o = null;
@@ -56,7 +56,7 @@ final class SetCountermeasureLauncherFireForce extends ConsoleCommand {
     }
 
     static {
-        field_o = (dja) ((Object) new qlb());
+        field_o = (GameStateFactory) ((Object) new MapClearanceAreaFactory());
         field_p = "The match was a draw!";
         field_q = "Options";
     }

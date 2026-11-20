@@ -85,9 +85,9 @@ final class GetShieldsDirectionalArcParticleLife extends ConsoleCommand {
             var10 = var10 ^ 285L;
           }
           var12 = var10 ^ var2;
-          field_r[0][var0] = nra.a(nra.a(nra.a(var8 << 16, nra.a(var10 << 24, nra.a(var2 << 32, nra.a(nra.a(var2 << 56, var2 << 48), var6 << 40)))), var4 << 8), var12);
+          field_r[0][var0] = AwardVictoryToTeamActionFactory.a(AwardVictoryToTeamActionFactory.a(AwardVictoryToTeamActionFactory.a(var8 << 16, AwardVictoryToTeamActionFactory.a(var10 << 24, AwardVictoryToTeamActionFactory.a(var2 << 32, AwardVictoryToTeamActionFactory.a(AwardVictoryToTeamActionFactory.a(var2 << 56, var2 << 48), var6 << 40)))), var4 << 8), var12);
           for (var14 = 1; var14 < 8; var14++) {
-            field_r[var14][var0] = nra.a(field_r[var14 - 1][var0] << 56, field_r[var14 - 1][var0] >>> 8);
+            field_r[var14][var0] = AwardVictoryToTeamActionFactory.a(field_r[var14 - 1][var0] << 56, field_r[var14 - 1][var0] >>> 8);
           }
           var0++;
         }

@@ -134,6 +134,6 @@ final class GetAngularVelocitySustainMax extends ConsoleCommand {
     }
 
     static {
-        nma discarded$0 = new nma();
+        PlayerReadyFactory discarded$0 = new PlayerReadyFactory();
     }
 }

@@ -6,7 +6,7 @@ final class SetPedrosRepairMode extends ConsoleCommand {
     static int field_p;
     static int field_o;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != 53) {
           field_o = -42;
           field_q = null;

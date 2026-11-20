@@ -49,7 +49,7 @@ final class SetMissionDebrisVotingChancestep extends ConsoleCommand {
 
     final static void a(boolean param0, int param1) {
         SetToggledScoreboard.field_o.b(param0, param1 ^ 3970);
-        pia var2 = ada.field_b;
+        pia var2 = PartitionZoneListFactory.field_b;
         if (param1 == 4095) {
           if (var2 != null) {
             var2.a(0, SetToggledScoreboard.field_o.field_u, SetToggledScoreboard.field_o.field_M);

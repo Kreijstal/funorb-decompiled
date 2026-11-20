@@ -123,9 +123,9 @@ class mfb {
     final int d(int param0) {
         if (param0 != 27918) {
           this.c(84);
-          return lob.field_b;
+          return NebulaFieldFactory.field_b;
         }
-        return lob.field_b;
+        return NebulaFieldFactory.field_b;
     }
 
     int b(byte param0) {

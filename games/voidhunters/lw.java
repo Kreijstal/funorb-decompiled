@@ -99,7 +99,7 @@ final class lw extends IntrusiveNode {
 
     lw(int param0) {
         this.field_l = param0;
-        if (pca.field_i[this.field_l].c((byte) -115)) {
+        if (CarouselPlayerEvent.field_i[this.field_l].c((byte) -115)) {
           this.field_d = 50;
         }
     }

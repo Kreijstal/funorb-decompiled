@@ -33,10 +33,10 @@ final class GetLaserRandomness extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != -26081) {
-          GetLaserRandomness.a(-127);
+          GetLaserRandomness.clearSharedReferences(-127);
         }
     }
 

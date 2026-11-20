@@ -12,11 +12,11 @@ final class wca extends mfb {
         return 4;
     }
 
-    public static void l(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_c = null;
         field_b = null;
         if (param0 > -27) {
-          wca.l(-69);
+          wca.clearSharedReferences(-69);
         }
     }
 
@@ -74,7 +74,7 @@ final class wca extends mfb {
         if (param0 != 0) {
           return 87;
         }
-        return spa.field_a;
+        return ShieldBehaviourFactory.field_a;
     }
 
     final int b(boolean param0) {

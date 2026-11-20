@@ -16,7 +16,7 @@ final class SetAutozoomSpeedDivide extends ConsoleCommand {
           if (param3 != -14) {
             field_o = (String) null;
           }
-          stackIn_3_0 = nra.a(false, param2, param0, 28849, param1);
+          stackIn_3_0 = AwardVictoryToTeamActionFactory.a(false, param2, param0, 28849, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

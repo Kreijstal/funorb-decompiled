@@ -38,7 +38,7 @@ final class SetUseExtraBackground extends ConsoleCommand {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 == 0) {
           field_r = null;
           field_o = null;
@@ -48,7 +48,7 @@ final class SetUseExtraBackground extends ConsoleCommand {
           field_q = null;
           return;
         }
-        SetUseExtraBackground.a(50);
+        SetUseExtraBackground.clearSharedReferences(50);
         field_r = null;
         field_o = null;
         field_u = null;

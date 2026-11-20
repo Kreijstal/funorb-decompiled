@@ -19,7 +19,7 @@ final class GetUseFilledPolygons extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = (String) null;
           }
-          stackIn_3_0 = new ConsoleValue(wkb.field_c);
+          stackIn_3_0 = new ConsoleValue(SetVariableActionFactory.field_c);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -43,7 +43,7 @@ final class GetUseFilledPolygons extends ConsoleCommand {
     }
 
     final static void a(int param0) {
-        rg.field_b = false;
+        RemoveEventActionFactory.field_b = false;
         tla.field_c = false;
         GetSelfDestructPrepareToggleCooldown.a(-86, param0);
         SetShipTeamAction.field_b = kla.field_d;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetPhasedEnergyBeamReload extends ConsoleCommand {
-    static dja field_p;
+    static GameStateFactory field_p;
     static int field_q;
     static String[] field_o;
     static String field_r;
@@ -23,14 +23,14 @@ final class GetPhasedEnergyBeamReload extends ConsoleCommand {
         if (!li.field_i) {
           dma.f(param3, param0, (int)param1, param4);
           if (param2 >= -16) {
-            field_p = (dja) null;
+            field_p = (GameStateFactory) null;
             return;
           }
           return;
         }
         if (!lfa.field_j) {
           if (param2 >= -16) {
-            field_p = (dja) null;
+            field_p = (GameStateFactory) null;
             return;
           }
           return;
@@ -39,7 +39,7 @@ final class GetPhasedEnergyBeamReload extends ConsoleCommand {
         if (param2 < -16) {
           return;
         }
-        field_p = (dja) null;
+        field_p = (GameStateFactory) null;
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -76,7 +76,7 @@ final class GetPhasedEnergyBeamReload extends ConsoleCommand {
     }
 
     static {
-        field_p = (dja) ((Object) new ecb());
+        field_p = (GameStateFactory) ((Object) new GameSnapshotFactory());
         field_q = 3;
         field_o = new String[]{"Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"};
         field_r = "Missile scrambler";

@@ -9,7 +9,7 @@ final class SetMachineGunAimspeed extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         if (param0 != -78) {
           field_o = -126;
@@ -26,7 +26,7 @@ final class SetMachineGunAimspeed extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(125, 62, arguments[0].intValue(67));
           if (obfuscationGuard >= -119) {
-            SetMachineGunAimspeed.e((byte) -36);
+            SetMachineGunAimspeed.clearSharedReferences((byte) -36);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

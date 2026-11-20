@@ -48,7 +48,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
         var26 = VoidHunters.field_G;
         try {
           if (param0 != 1) {
-            GetLaserAimspeed.e(-77);
+            GetLaserAimspeed.clearSharedReferences(-77);
           }
           var27 = qga.field_b;
           var2 = var27.readUnsignedByte((byte) -93);
@@ -202,7 +202,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 <= 92) {
           GetLaserAimspeed.a(-87);

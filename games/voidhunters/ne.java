@@ -924,26 +924,26 @@ final class ne extends ka {
                       var56 = ((float)var50 * var86[4] + (float)var49 * var86[3] + var86[5] * (float)var51) / var53;
                       var57 = (var86[7] * (float)var50 + var86[6] * (float)var49 + var86[8] * (float)var51) / var54;
                       var30Lifetime1 = GetSniperCannonRandomness.a(-93, var56, var55, var57);
-                      SetPointDefenceLaserRandomness.a(var42, param1.field_x[var32_int], var41, (byte) 39, param1.field_v[var32_int], var37, param1.field_G[var32_int], var30Lifetime1, bea.field_f, var35, var39, var86, var36, var40);
-                      var23 = bea.field_f[1];
-                      var22 = bea.field_f[0];
-                      SetPointDefenceLaserRandomness.a(var42, param1.field_x[var33_int], var41, (byte) 67, param1.field_v[var33_int], var37, param1.field_G[var33_int], var30Lifetime1, bea.field_f, var35, var39, var86, var36, var40);
-                      var24 = bea.field_f[0];
-                      var25 = bea.field_f[1];
-                      SetPointDefenceLaserRandomness.a(var42, param1.field_x[var34], var41, (byte) 26, param1.field_v[var34], var37, param1.field_G[var34], var30Lifetime1, bea.field_f, var35, var39, var86, var36, var40);
-                      var27 = bea.field_f[1];
-                      var26 = bea.field_f[0];
+                      SetPointDefenceLaserRandomness.a(var42, param1.field_x[var32_int], var41, (byte) 39, param1.field_v[var32_int], var37, param1.field_G[var32_int], var30Lifetime1, MissionBuilder.field_f, var35, var39, var86, var36, var40);
+                      var23 = MissionBuilder.field_f[1];
+                      var22 = MissionBuilder.field_f[0];
+                      SetPointDefenceLaserRandomness.a(var42, param1.field_x[var33_int], var41, (byte) 67, param1.field_v[var33_int], var37, param1.field_G[var33_int], var30Lifetime1, MissionBuilder.field_f, var35, var39, var86, var36, var40);
+                      var24 = MissionBuilder.field_f[0];
+                      var25 = MissionBuilder.field_f[1];
+                      SetPointDefenceLaserRandomness.a(var42, param1.field_x[var34], var41, (byte) 26, param1.field_v[var34], var37, param1.field_G[var34], var30Lifetime1, MissionBuilder.field_f, var35, var39, var86, var36, var40);
+                      var27 = MissionBuilder.field_f[1];
+                      var26 = MissionBuilder.field_f[0];
                     } else {
                       if (3 == var31) {
-                        oma.a(var86, param1.field_x[var32_int], var40, bea.field_f, var37, param1.field_v[var32_int], (byte) -82, var36, param1.field_G[var32_int], var39, var35);
-                        var23 = bea.field_f[1];
-                        var22 = bea.field_f[0];
-                        oma.a(var86, param1.field_x[var33_int], var40, bea.field_f, var37, param1.field_v[var33_int], (byte) -82, var36, param1.field_G[var33_int], var39, var35);
-                        var24 = bea.field_f[0];
-                        var25 = bea.field_f[1];
-                        oma.a(var86, param1.field_x[var34], var40, bea.field_f, var37, param1.field_v[var34], (byte) -82, var36, param1.field_G[var34], var39, var35);
-                        var27 = bea.field_f[1];
-                        var26 = bea.field_f[0];
+                        CommonGameState.a(var86, param1.field_x[var32_int], var40, MissionBuilder.field_f, var37, param1.field_v[var32_int], (byte) -82, var36, param1.field_G[var32_int], var39, var35);
+                        var23 = MissionBuilder.field_f[1];
+                        var22 = MissionBuilder.field_f[0];
+                        CommonGameState.a(var86, param1.field_x[var33_int], var40, MissionBuilder.field_f, var37, param1.field_v[var33_int], (byte) -82, var36, param1.field_G[var33_int], var39, var35);
+                        var24 = MissionBuilder.field_f[0];
+                        var25 = MissionBuilder.field_f[1];
+                        CommonGameState.a(var86, param1.field_x[var34], var40, MissionBuilder.field_f, var37, param1.field_v[var34], (byte) -82, var36, param1.field_G[var34], var39, var35);
+                        var27 = MissionBuilder.field_f[1];
+                        var26 = MissionBuilder.field_f[0];
                         if ((1 & var39) != 0) {
                           if (0.5f < -var23 + var25) {
                             var28Lifetime1 = 1;
@@ -987,15 +987,15 @@ final class ne extends ka {
                     }
                   } else {
                     var41 = (float)param1.field_C[var19_intLifetime2] / 1024.0f;
-                    ac.a(var86, var36, var39, var40, param1.field_v[var32_int], param1.field_G[var32_int], (byte) -52, var41, var37, bea.field_f, var35, param1.field_x[var32_int]);
-                    var22 = bea.field_f[0];
-                    var23 = bea.field_f[1];
-                    ac.a(var86, var36, var39, var40, param1.field_v[var33_int], param1.field_G[var33_int], (byte) -52, var41, var37, bea.field_f, var35, param1.field_x[var33_int]);
-                    var24 = bea.field_f[0];
-                    var25 = bea.field_f[1];
-                    ac.a(var86, var36, var39, var40, param1.field_v[var34], param1.field_G[var34], (byte) -52, var41, var37, bea.field_f, var35, param1.field_x[var34]);
-                    var27 = bea.field_f[1];
-                    var26 = bea.field_f[0];
+                    ac.a(var86, var36, var39, var40, param1.field_v[var32_int], param1.field_G[var32_int], (byte) -52, var41, var37, MissionBuilder.field_f, var35, param1.field_x[var32_int]);
+                    var22 = MissionBuilder.field_f[0];
+                    var23 = MissionBuilder.field_f[1];
+                    ac.a(var86, var36, var39, var40, param1.field_v[var33_int], param1.field_G[var33_int], (byte) -52, var41, var37, MissionBuilder.field_f, var35, param1.field_x[var33_int]);
+                    var24 = MissionBuilder.field_f[0];
+                    var25 = MissionBuilder.field_f[1];
+                    ac.a(var86, var36, var39, var40, param1.field_v[var34], param1.field_G[var34], (byte) -52, var41, var37, MissionBuilder.field_f, var35, param1.field_x[var34]);
+                    var27 = MissionBuilder.field_f[1];
+                    var26 = MissionBuilder.field_f[0];
                     var42 = var41 / 2.0f;
                     if ((var39 & 1) == 0) {
                       if (!(var42 < var24 - var22)) {

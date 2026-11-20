@@ -19,7 +19,7 @@ final class SetTabForScores extends ConsoleCommand {
           param1 = ne.a('_', (byte) 108, "", param1);
           var3 = cm.a((byte) -87, param1);
           if (!param2) {
-            SetTabForScores.b(false);
+            SetTabForScores.clearSharedReferences(false);
           }
           stackIn_7_0 = (param0.indexOf(param1) != -1) || (param0.indexOf(var3) != -1);
           return stackIn_7_0;
@@ -43,7 +43,7 @@ final class SetTabForScores extends ConsoleCommand {
         }
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_o = null;
         field_p = null;
         if (param0) {

@@ -70,7 +70,7 @@ final class bi implements Runnable {
               var3 = var4.getOutputStream();
               var3.write(17);
               var5 = (CharSequence) ((Object) ("JAGGRAB " + this.field_i.getFile() + "\n\n"));
-              var3.write(hi.a(var5, 126));
+              var3.write(MissionListFactory.a(var5, 126));
               this.field_d = new DataInputStream(var4.getInputStream());
             }
             this.field_h.position = 0;

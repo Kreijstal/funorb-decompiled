@@ -628,13 +628,13 @@ final class roa extends ka {
                       var27 = GetAutozoomSpeedDivide.field_o[1];
                     } else {
                       if (var31 == 3) {
-                        oma.a(var86, param1.field_x[var32_int], var40, GetAutozoomSpeedDivide.field_o, var37, param1.field_v[var32_int], (byte) -82, var36, param1.field_G[var32_int], var39_int, var35);
+                        CommonGameState.a(var86, param1.field_x[var32_int], var40, GetAutozoomSpeedDivide.field_o, var37, param1.field_v[var32_int], (byte) -82, var36, param1.field_G[var32_int], var39_int, var35);
                         var23 = GetAutozoomSpeedDivide.field_o[1];
                         var22_float = GetAutozoomSpeedDivide.field_o[0];
-                        oma.a(var86, param1.field_x[var33_int], var40, GetAutozoomSpeedDivide.field_o, var37, param1.field_v[var33_int], (byte) -82, var36, param1.field_G[var33_int], var39_int, var35);
+                        CommonGameState.a(var86, param1.field_x[var33_int], var40, GetAutozoomSpeedDivide.field_o, var37, param1.field_v[var33_int], (byte) -82, var36, param1.field_G[var33_int], var39_int, var35);
                         var25 = GetAutozoomSpeedDivide.field_o[1];
                         var24 = GetAutozoomSpeedDivide.field_o[0];
-                        oma.a(var86, param1.field_x[var34], var40, GetAutozoomSpeedDivide.field_o, var37, param1.field_v[var34], (byte) -82, var36, param1.field_G[var34], var39_int, var35);
+                        CommonGameState.a(var86, param1.field_x[var34], var40, GetAutozoomSpeedDivide.field_o, var37, param1.field_v[var34], (byte) -82, var36, param1.field_G[var34], var39_int, var35);
                         var26 = GetAutozoomSpeedDivide.field_o[0];
                         var27 = GetAutozoomSpeedDivide.field_o[1];
                         if ((1 & var39_int) != 0) {
@@ -1126,7 +1126,7 @@ final class roa extends ka {
             this.field_h = new glb(MissionState.a(this.field_s, this.field_I, (byte) 30));
           }
           if (!param3 &&
-            !eta.a(this.field_s, -1104, this.field_I)) {
+            !MovingObjectFactory.a(this.field_s, -1104, this.field_I)) {
             return;
           }
           this.field_H = new rv(iea.a(this.field_I, this.field_s, (byte) -106));

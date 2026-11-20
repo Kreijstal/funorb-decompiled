@@ -19,7 +19,7 @@ final class GetCountermeasureLauncherAimspeed extends ConsoleCommand {
             return;
           }
           if (li.field_i) {
-            stackIn_8_0 = nma.field_b[param7];
+            stackIn_8_0 = PlayerReadyFactory.field_b[param7];
             stackIn_8_1 = param5;
             stackIn_8_2 = param1;
             stackIn_8_3 = param2 << 24 | param4;

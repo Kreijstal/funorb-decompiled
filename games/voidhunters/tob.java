@@ -3,7 +3,7 @@
  */
 final class tob extends DualLinkNode {
     static String field_l;
-    static dja field_o;
+    static GameStateFactory field_o;
     private long field_n;
     int field_m;
     private OpenGlToolkit field_k;
@@ -54,6 +54,6 @@ final class tob extends DualLinkNode {
 
     static {
         field_l = "More special weapons";
-        field_o = (dja) ((Object) new wha());
+        field_o = (GameStateFactory) ((Object) new AsteroidFactory());
     }
 }

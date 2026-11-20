@@ -312,7 +312,7 @@ final class qua {
         }
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_d = null;
         if (param0 != 16606) {
           String var2 = (String) null;

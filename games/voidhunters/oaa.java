@@ -41,9 +41,9 @@ final class oaa extends mnb implements uq {
     final static double b(byte param0) {
         if (param0 >= -43) {
           oaa.a((byte) 83);
-          return npa.field_c;
+          return ServerTickFactory.field_c;
         }
-        return npa.field_c;
+        return ServerTickFactory.field_c;
     }
 
     static {

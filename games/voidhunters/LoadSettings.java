@@ -72,7 +72,7 @@ final class LoadSettings extends ConsoleCommand {
                 var10 = var8.getActions((byte) -42);
                 if (var9 != null &&
                   var10 != null) {
-                  var11 = ada.a(param0, param4, false, var10);
+                  var11 = PartitionZoneListFactory.a(param0, param4, false, var10);
                   if (var11 >= 0 &&
                     var11 < glb.field_c.length) {
                     aba.a(param4, var9, param2, var11, (byte) 51, param1, param0);

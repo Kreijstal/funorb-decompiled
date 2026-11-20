@@ -30,16 +30,16 @@ final class jra {
                 var4 = jwa.a(false, var11);
               }
               var5Lifetime1 = null;
-              if (0 == rc.field_b) {
+              if (0 == MissionGenerationDataFactory.field_b) {
                 var5Lifetime1 = SetPhasedEnergyBeamPulsetime.a(var4, param0, param2 - 10115);
               }
-              if (rc.field_b == 1) {
-                var5Lifetime1 = npa.a((byte) 90, var4, param0);
+              if (MissionGenerationDataFactory.field_b == 1) {
+                var5Lifetime1 = ServerTickFactory.a((byte) 90, var4, param0);
               }
-              if (2 == rc.field_b) {
+              if (2 == MissionGenerationDataFactory.field_b) {
                 var5Lifetime1 = SetExplosionPushMultiplier.a(2, var4, param0);
               }
-              if (rc.field_b == 3) {
+              if (MissionGenerationDataFactory.field_b == 3) {
                 var5Lifetime1 = iab.a(param0, var4, var4, (byte) -76);
               }
               if (var5Lifetime1 != null) {
@@ -47,7 +47,7 @@ final class jra {
                 lh.a((byte) -86, 0, (String) null, var4, (String) (var5Lifetime1), 2);
               }
             }
-            rc.field_b = -1;
+            MissionGenerationDataFactory.field_b = -1;
             ola.field_p = null;
           }
         }

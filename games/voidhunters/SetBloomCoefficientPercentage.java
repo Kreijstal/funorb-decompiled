@@ -35,7 +35,7 @@ final class SetBloomCoefficientPercentage extends ConsoleCommand {
         }
     }
 
-    final static IntrusiveDeque a(IntrusiveDeque param0, IntrusiveDeque param1, int param2, dja param3, int param4) {
+    final static IntrusiveDeque a(IntrusiveDeque param0, IntrusiveDeque param1, int param2, GameStateFactory param3, int param4) {
         Object stackIn_3_0 = null;
         IntrusiveDeque stackIn_27_0 = null;
         RuntimeException stackIn_30_0 = null;
@@ -68,7 +68,7 @@ final class SetBloomCoefficientPercentage extends ConsoleCommand {
           var5_int = param1.size(3) - param0.size(3);
           if (var5_int > 0) {
             for (var6_int = 0; var5_int > var6_int; var6_int++) {
-              param0.addLast(-10258, (IntrusiveNode) ((Object) param3.a((byte) 6)));
+              param0.addLast(-10258, (IntrusiveNode) ((Object) param3.create((byte) 6)));
             }
           } else {
             if (var5_int < 0) {
@@ -130,12 +130,12 @@ final class SetBloomCoefficientPercentage extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         field_p = null;
         if (param0 <= 94) {
-          dja var2 = (dja) null;
-          SetBloomCoefficientPercentage.a((IntrusiveDeque) null, (IntrusiveDeque) null, 83, (dja) null, 17);
+          GameStateFactory var2 = (GameStateFactory) null;
+          SetBloomCoefficientPercentage.a((IntrusiveDeque) null, (IntrusiveDeque) null, 83, (GameStateFactory) null, 17);
         }
     }
 

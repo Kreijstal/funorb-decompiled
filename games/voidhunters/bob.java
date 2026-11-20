@@ -9,7 +9,7 @@ class bob implements wwa, at {
     int field_h;
     private boolean field_g;
     int field_i;
-    static dja field_e;
+    static GameStateFactory field_e;
     int field_b;
     static String field_l;
     int field_k;
@@ -674,7 +674,7 @@ class bob implements wwa, at {
     }
 
     static {
-        field_e = (dja) ((Object) new fjb());
+        field_e = (GameStateFactory) ((Object) new MessageFactory());
         field_l = "Extend current mission phase";
     }
 }

@@ -13,7 +13,7 @@ final class gda extends IntrusiveNode {
     int field_f;
     int field_l;
 
-    public static void c(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_k = null;
         if (param0 != 18) {
           field_d = -107;

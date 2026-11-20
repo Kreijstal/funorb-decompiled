@@ -29,21 +29,21 @@ final class PartitionZone implements DiffableState, ofa, iu {
           if (param1 != var5) {
             var6 = 0;
             for (var7_int = 0; var7_int < param2; var7_int++) {
-              if (var5 != ada.field_a[var7_int]) {
+              if (var5 != PartitionZoneListFactory.field_a[var7_int]) {
                 continue;
               }
               var6 = 1;
               break;
             }
             if (var6 == 0) {
-              if (ada.field_a.length == param2) {
-                var7 = new int[10 + ada.field_a.length];
-                cua.a(ada.field_a, 0, var7, 0, ada.field_a.length);
-                ada.field_a = var7;
+              if (PartitionZoneListFactory.field_a.length == param2) {
+                var7 = new int[10 + PartitionZoneListFactory.field_a.length];
+                cua.a(PartitionZoneListFactory.field_a, 0, var7, 0, PartitionZoneListFactory.field_a.length);
+                PartitionZoneListFactory.field_a = var7;
               }
               incrementValue$0 = param2;
               param2++;
-              ada.field_a[incrementValue$0] = var5;
+              PartitionZoneListFactory.field_a[incrementValue$0] = var5;
             }
           }
           var4++;
@@ -51,16 +51,16 @@ final class PartitionZone implements DiffableState, ofa, iu {
         return param2;
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_g = null;
         if (!param0) {
-          PartitionZone.a(true);
+          PartitionZone.clearSharedReferences(true);
         }
         field_a = null;
     }
 
     final boolean c(int param0, int param1) {
-        this.ids = MissionCondition.a(param0, (byte) 116, this.ids);
+        this.ids = MissionCondition.removeFirstValue(param0, (byte) 116, this.ids);
         this.a((byte) -119);
         if (null == this.ids) {
           return true;
@@ -236,7 +236,7 @@ final class PartitionZone implements DiffableState, ofa, iu {
           if (param1) {
             this.ids = (int[]) null;
           }
-          this.ids = wkb.a((byte) 37, this.ids, param0, 8);
+          this.ids = SetVariableActionFactory.a((byte) 37, this.ids, param0, 8);
           this.gridx = uwa.a(8, param0, (byte) 20);
           this.gridy = uwa.a(8, param0, (byte) 20);
           this.type = param0.readBits(0, 2);
@@ -277,8 +277,8 @@ final class PartitionZone implements DiffableState, ofa, iu {
         if (param0 >= -57) {
           this.field_c = -117;
         }
-        int fieldTemp$0 = kgb.field_a;
-        kgb.field_a = kgb.field_a + 1;
+        int fieldTemp$0 = PlayerLeaveFactory.field_a;
+        PlayerLeaveFactory.field_a = PlayerLeaveFactory.field_a + 1;
         this.field_c = fieldTemp$0;
     }
 
@@ -286,7 +286,7 @@ final class PartitionZone implements DiffableState, ofa, iu {
         if (param1 != -13251) {
           this.a(-116, 102, -62);
         }
-        this.ids = nra.a(true, this.ids, param0, param1 + 42100, true);
+        this.ids = AwardVictoryToTeamActionFactory.a(true, this.ids, param0, param1 + 42100, true);
         this.a((byte) -77);
     }
 

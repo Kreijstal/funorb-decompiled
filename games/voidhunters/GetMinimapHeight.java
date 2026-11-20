@@ -33,10 +33,10 @@ final class GetMinimapHeight extends ConsoleCommand {
         }
     }
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 < 17) {
-          GetMinimapHeight.e((byte) -125);
+          GetMinimapHeight.clearSharedReferences((byte) -125);
         }
     }
 

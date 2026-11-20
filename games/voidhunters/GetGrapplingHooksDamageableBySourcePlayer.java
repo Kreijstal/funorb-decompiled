@@ -48,7 +48,7 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
         }
     }
 
-    public static void e(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 == 1) {
           return;
@@ -162,12 +162,12 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
               SetBots.field_q > SetMachineGunEnergyUsed.field_p &&
               var3 < uia.field_b &&
               SettingsChange.field_e.field_p + var3 > uia.field_b) {
-              if (269 - SettingsChange.field_e.field_q < kc.field_b &&
-                kc.field_b < 269) {
+              if (269 - SettingsChange.field_e.field_q < PlayerGameData.field_b &&
+                PlayerGameData.field_b < 269) {
                 SetBots.field_q = SetMachineGunEnergyUsed.field_p;
               }
-              if (586 < kc.field_b &&
-                kc.field_b < SettingsChange.field_e.field_q + 586) {
+              if (586 < PlayerGameData.field_b &&
+                PlayerGameData.field_b < SettingsChange.field_e.field_q + 586) {
                 SetBots.field_q = SetMachineGunEnergyUsed.field_p;
               }
             }
@@ -176,7 +176,7 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
           if (!param0) {
             return 0;
           }
-          nna.field_z.a(GetGrapplingHookAimspeed.a(-1, qs.field_a, Particle.field_H), 5620, GetGrapplingHookAimspeed.a(-1, uia.field_b, kc.field_b));
+          nna.field_z.a(GetGrapplingHookAimspeed.a(-1, qs.field_a, Particle.field_H), 5620, GetGrapplingHookAimspeed.a(-1, uia.field_b, PlayerGameData.field_b));
           if (nna.field_z.e((byte) -120)) {
             if (nna.field_z.field_j == 0) {
               stackIn_61_0 = 3;

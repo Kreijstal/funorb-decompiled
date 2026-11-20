@@ -10,11 +10,11 @@ final class dfa {
         throw new IllegalStateException();
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_c = null;
         field_b = null;
         if (param0 <= 65) {
-          dfa.a((byte) -8);
+          dfa.clearSharedReferences((byte) -8);
         }
     }
 

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pr {
-    static oma field_c;
+    static CommonGameState field_c;
     private DualLinkNode field_h;
     private int field_e;
     private DualLinkNode[] field_g;
@@ -51,7 +51,7 @@ final class pr {
         return null;
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 != 1) {
           pr.a(-20);
           field_c = null;

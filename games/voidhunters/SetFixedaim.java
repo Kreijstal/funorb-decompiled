@@ -6,7 +6,7 @@ final class SetFixedaim extends ConsoleCommand {
     static int field_q;
     static int[] field_p;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 != -49) {
           field_o = false;
           field_p = null;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ta {
-    static dja field_a;
+    static GameStateFactory field_a;
     static int[] field_b;
 
     final static void a(byte param0, int param1) {
@@ -23,7 +23,7 @@ final class ta {
         }
     }
 
-    final static void a(int[] param0, int param1, wfb param2) {
+    final static void a(int[] param0, int param1, ShipComponentDefinition param2) {
         int var3_int = 0;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
@@ -65,7 +65,7 @@ final class ta {
             var11 = -var5 + var7;
             var12 = var11;
             var13 = -var10;
-            var14 = ecb.a(var13, (byte) -77, var12);
+            var14 = GameSnapshotFactory.a(var13, (byte) -77, var12);
             var15 = 1;
             if (param2.field_b != 0 ||
               param2.field_i != 0) {
@@ -78,7 +78,7 @@ final class ta {
               }
             }
             if (var15 != 0) {
-              param2.a(-124, new lsb(var8, var9, var14));
+              param2.a(-124, new HardpointDefinition(var8, var9, var14));
             }
           }
           return;
@@ -103,7 +103,7 @@ final class ta {
     }
 
     static {
-        field_a = (dja) ((Object) new lka());
+        field_a = (GameStateFactory) ((Object) new HardpointFactory());
         field_b = new int[256];
     }
 }

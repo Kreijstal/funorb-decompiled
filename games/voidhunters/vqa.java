@@ -121,6 +121,6 @@ final class vqa extends eca {
         field_k = 1;
         field_f = "Add action (Set custom variable label)";
         field_j = "Encouraging rule breaking";
-        nf discarded$0 = new nf();
+        CarouselPlayerEventFactory discarded$0 = new CarouselPlayerEventFactory();
     }
 }

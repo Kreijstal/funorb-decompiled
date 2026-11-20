@@ -246,7 +246,7 @@ final class vla extends dqa implements en, oo {
           if (null != this.field_v) {
             this.field_r = this.field_r + (var7.b(this.field_v, this.field_h - 40, var7.field_k) + 5);
           }
-          var8 = rg.field_a;
+          var8 = RemoveEventActionFactory.field_a;
           var9 = gib.a(19314, MissionList.b((byte) -86));
           if (SetFighterBayAimspeed.field_o != var9) {
             if (var9 == SetShowTutorial.field_p) {

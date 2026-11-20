@@ -5,10 +5,10 @@ final class GetReverbDamp extends ConsoleCommand {
     static boolean field_o;
     static int[] field_p;
 
-    public static void e(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         field_p = null;
         if (param0 <= 117) {
-          GetReverbDamp.e((byte) -51);
+          GetReverbDamp.clearSharedReferences((byte) -51);
         }
     }
 
@@ -26,7 +26,7 @@ final class GetReverbDamp extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard < -119) {
-            stackIn_4_0 = new ConsoleValue(qaa.field_a);
+            stackIn_4_0 = new ConsoleValue(MapClearanceRectangleFactory.field_a);
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

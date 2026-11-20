@@ -96,7 +96,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
     final static void a(int param0, int[] param1) {
         try {
           us.field_f = param1[48];
-          qaa.field_b = param1[115];
+          MapClearanceRectangleFactory.field_b = param1[115];
           GetSalvoRepairTimeMultiplier.field_o = param1[75];
           CarouselSlotStateDump.field_i = param1[204];
           adb.field_a = param1[98];
@@ -106,8 +106,8 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           hrb.field_a = param1[145];
           GetWorldWidthUpshift.field_q = param1[191];
           GetLaserBeamProjectileDamage.field_o = param1[82];
-          osb.field_b = param1[158];
-          nn.field_a = param1[192];
+          BodyDestroyedConditionFactory.field_b = param1[158];
+          CarouselPlayerInfoFactory.field_a = param1[192];
           sja.field_i = param1[51];
           GetDebrisFoundInPairs.field_p = param1[230];
           GetMassDriverAimarc.field_o = param1[104];
@@ -118,9 +118,9 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           ShipSpawnedCondition.field_d = param1[185];
           Particle.field_v = param1[71];
           Particle.field_y = param1[225];
-          gs.field_c = param1[55];
+          SettingsChangeFactory.field_c = param1[55];
           GetPhasedEnergyBeamReload.field_q = param1[58];
-          lob.field_b = param1[96];
+          NebulaFieldFactory.field_b = param1[96];
           Particle.field_C = param1[196];
           uda.field_b = param1[119];
           Particle.field_t = param1[202];
@@ -132,14 +132,14 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetSpinningBladeAimspeed.field_p = param1[6];
           SetTorpedoFireForce.field_o = param1[121];
           rlb.field_e = param1[142];
-          jga.field_a = param1[100];
+          WorldFactory.field_a = param1[100];
           dr.field_a = param1[125];
           GetDebrisFoundInPairs.field_o = param1[64];
           WeaponBehaviour.field_d = param1[18];
           GetMomentOfInertiaPredivideDownshift.field_q = param1[37];
           bpa.field_a = param1[222];
           tua.field_a = param1[180];
-          pca.field_m = param1[30];
+          CarouselPlayerEvent.field_m = param1[30];
           GetShieldsDirectionalRadius.field_p = param1[167];
           GetFighterRepairAmount.field_o = param1[116];
           SetLaserRandomness.field_o = param1[134];
@@ -149,7 +149,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           Particle.field_e = param1[224];
           Particle.field_q = param1[214];
           SetShipAimLines.field_q = param1[166];
-          bn.field_a = param1[124];
+          PlayerActionFactory.field_a = param1[124];
           GetFightersPerPlayerMaximum.field_p = param1[31];
           la.field_m = param1[83];
           SetTorpedoEnergyUsed.field_q = param1[94];
@@ -160,18 +160,18 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           gib.field_a = param1[206];
           ea.field_j = param1[187];
           SetMachineGunAimspeed.field_o = param1[7];
-          gtb.field_c = param1[138];
+          PlayerReady.field_c = param1[138];
           slb.field_a = param1[177];
           GetTorpedoAcceleration.field_p = param1[226];
           GetInnateThrusters.field_p = param1[24];
           Particle.field_k = param1[215];
           SetSniperCannonFireForce.field_q = param1[227];
           GetLaserEnergyUsed.field_r = param1[157];
-          eta.field_b = param1[194];
+          MovingObjectFactory.field_b = param1[194];
           GetSalvoHoldable.field_p = param1[176];
           ava.field_a = param1[129];
           kmb.field_f = param1[49];
-          fob.field_c = param1[193];
+          ComponentBehaviourFactory.field_c = param1[193];
           Particle.field_p = param1[219];
           asa.field_e = param1[128];
           ooa.field_xb = param1[151];
@@ -189,7 +189,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           fra.field_a = param1[26];
           bma.field_n = param1[118];
           GetMissionTerrainNebulaProbability.field_r = param1[198];
-          wkb.field_a = param1[62];
+          SetVariableActionFactory.field_a = param1[62];
           ana.field_f = param1[105];
           wk.field_a = param1[42];
           GetRepairModePower.field_q = param1[126];
@@ -227,7 +227,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetShipTeamAction.field_e = param1[28];
           pea.field_b = param1[154];
           GetBombletSprayRandomness.field_p = param1[29];
-          nra.field_b = param1[201];
+          AwardVictoryToTeamActionFactory.field_b = param1[201];
           GetMaxShipSize.field_o = param1[141];
           qrb.field_a = param1[33];
           la.field_k = param1[208];
@@ -243,7 +243,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetMissilesTopSpeed.field_o = param1[25];
           vqa.field_k = param1[2];
           SetThrusterAutobalancing.field_r = param1[15];
-          wqa.field_b = param1[22];
+          BodyInZoneConditionFactory.field_b = param1[22];
           SetTorpedoEnergyUsed.field_p = param1[59];
           di.field_p = param1[27];
           GetMinimapWidth.field_o = param1[216];
@@ -256,7 +256,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetFullMissionSet.field_p = param1[36];
           voa.field_b = param1[144];
           sib.field_i = param1[130];
-          wha.field_a = param1[61];
+          AsteroidFactory.field_a = param1[61];
           SetLaserAimarc.field_o = param1[160];
           SetPointDefenceLaserReload.field_q = param1[132];
           dla.field_c = param1[139];
@@ -265,7 +265,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetMissileLauncherEnergyUsed.field_p = param1[52];
           GetPhysicsCollisionPhantomForceMultiplier.field_o = param1[213];
           SetSalvoRepairTimeMultiplier.field_p = param1[81];
-          pwa.field_b = param1[170];
+          CarouselSystemEvent.field_b = param1[170];
           SetMissilesCooldown.field_o = param1[174];
           GetAutoAfkTimeout.field_o = param1[97];
           voa.field_d = param1[11];
@@ -282,8 +282,8 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           qh.field_J = param1[88];
           GetMissionTerrainNebulaProbability.field_p = param1[143];
           ffa.field_b = param1[161];
-          sl.field_a = param1[57];
-          wkb.field_b = param1[133];
+          AsteroidFieldFactory.field_a = param1[57];
+          SetVariableActionFactory.field_b = param1[133];
           ConsoleCommandRegistry.field_a = param1[172];
           GetMissionTerrainAsteroidProbability.field_o = param1[148];
           SetRepairModePower.field_r = param1[182];
@@ -304,14 +304,14 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetShipPersistence.field_s = param1[106];
           LoadSettings.field_s = param1[78];
           SetKeepTeamColours.field_o = param1[231];
-          upb.field_a = param1[189];
+          VariableConditionFactory.field_a = param1[189];
           SetMissileLauncherEnergyUsed.field_o = param1[107];
           LoadSettings.field_p = param1[217];
           mmb.field_g = param1[164];
           uab.field_b = param1[84];
           Particle.field_j = param1[234];
           GetToggledScoreboard.field_r = param1[67];
-          coa.field_f = param1[146];
+          ServerInfo.field_f = param1[146];
           veb.field_b = param1[1];
           GetAutoaim.field_o = param1[5];
           GetPointDefenceLaserAimspeed.field_p = param1[159];
@@ -331,7 +331,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           Particle.field_A = param1[46];
           rn.field_o = param1[162];
           qca.field_yb = param1[76];
-          spa.field_a = param1[165];
+          ShieldBehaviourFactory.field_a = param1[165];
           bra.field_d = param1[3];
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kga.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

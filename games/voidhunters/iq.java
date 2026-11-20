@@ -4,7 +4,7 @@
 final class iq {
     static int field_a;
 
-    final static SerializableGameState[] a(dja[] param0, SerializableGameState[] param1, Class[] param2, dja param3, int param4, IsaacPacketBuffer param5, int param6, int param7) {
+    final static SerializableGameState[] a(GameStateFactory[] param0, SerializableGameState[] param1, Class[] param2, GameStateFactory param3, int param4, IsaacPacketBuffer param5, int param6, int param7) {
         int var11 = 0;
         SerializableGameState[] stackIn_26_0 = null;
         RuntimeException stackIn_29_0 = null;
@@ -35,7 +35,7 @@ final class iq {
           if (var9 != 0) {
             if (param1 == null ||
               param1.length != var9) {
-              param1 = param3.a(11995, var9);
+              param1 = param3.createArray(11995, var9);
             }
             var10 = BodyInZoneCondition.a(-118, param0.length - 1);
             for (var11 = 0; var9 > var11; var11++) {
@@ -45,7 +45,7 @@ final class iq {
                 var12 = param5.readBits(0, var10);
                 if (param1[var11] == null ||
                   param1[var11].getClass() != param2[var12]) {
-                  param1[var11] = param0[var12].a((byte) -120);
+                  param1[var11] = param0[var12].create((byte) -120);
                 }
                 var13 = param6;
                 var14 = param1[var11];

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetMachineGunEnergyUsed extends ConsoleCommand {
-    static dja field_q;
+    static GameStateFactory field_q;
     static ColorRowCacheEntry field_o;
     static int field_p;
 
@@ -10,11 +10,11 @@ final class GetMachineGunEnergyUsed extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_q = null;
         field_o = null;
         if (param0) {
-          GetMachineGunEnergyUsed.b(true);
+          GetMachineGunEnergyUsed.clearSharedReferences(true);
         }
     }
 
@@ -48,7 +48,7 @@ final class GetMachineGunEnergyUsed extends ConsoleCommand {
     }
 
     static {
-        field_q = (dja) ((Object) new cn());
+        field_q = (GameStateFactory) ((Object) new TickConditionFactory());
         field_o = new ColorRowCacheEntry(0, 0);
     }
 }

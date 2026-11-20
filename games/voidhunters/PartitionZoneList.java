@@ -15,7 +15,7 @@ final class PartitionZoneList implements DiffableState, ofa {
         RuntimeException var3_ref = null;
         try {
           var3 = (PartitionZoneList) (other);
-          tja.a(var3.zones, 1, this.zones, false, 5547);
+          CarouselSlot.a(var3.zones, 1, this.zones, false, 5547);
           if (obfuscationGuard > -19) {
             this.zones = (PartitionZone[]) null;
           }
@@ -168,7 +168,7 @@ final class PartitionZoneList implements DiffableState, ofa {
           return;
         }
         try {
-          kma.a(param1, false, -17833, param2);
+          ArmBehaviour.a(param1, false, -17833, param2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "cda.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
@@ -220,7 +220,7 @@ final class PartitionZoneList implements DiffableState, ofa {
         if (param0 <= 118) {
           this.field_b = -59;
         }
-        this.zones = (PartitionZone[]) (qlb.a(this.zones, var7, dp.field_b, true, true, 1));
+        this.zones = (PartitionZone[]) (MapClearanceAreaFactory.a(this.zones, var7, dp.field_b, true, true, 1));
         this.a(125);
         return var7;
     }

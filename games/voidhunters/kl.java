@@ -67,7 +67,7 @@ final class kl {
         return this.field_b[fieldTemp$1];
     }
 
-    public static void b(int param0) {
+    public static void clearSharedReferences(int param0) {
         if (param0 < -102) {
           field_a = null;
           field_e = null;

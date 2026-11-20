@@ -74,7 +74,7 @@ final class SetTestActionLag extends ConsoleCommand {
     }
 
     static {
-        amb discarded$0 = new amb();
+        ServerInfoFactory discarded$0 = new ServerInfoFactory();
         field_o = -1;
     }
 }

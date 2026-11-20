@@ -167,7 +167,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = (AsteroidField) (other);
-          tja.a(var3.asteroids, 1, this.asteroids, false, 5547);
+          CarouselSlot.a(var3.asteroids, 1, this.asteroids, false, 5547);
           var4 = 0;
           if (SetCountermeasureLauncherAimspeed.a(var3.asteroids, false, 1, this.asteroids, 127)) {
             System.out.println("Asteroid[] asteroids has changed. ");
@@ -541,7 +541,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime1 = dqb.a((byte) -104, "gameoptlabels,0");
           if (null != var2Lifetime1) {
-            ub.field_d[0] = qpa.a((byte) -125, var2Lifetime1);
+            DebugSendable.field_d[0] = qpa.a((byte) -125, var2Lifetime1);
           }
           var2Lifetime2 = dqb.a((byte) -84, "gameoptnames,0,0");
           if (null != var2Lifetime2) {
@@ -581,11 +581,11 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime11 = dqb.a((byte) -15, "no_votes");
           if (null != var2Lifetime11) {
-            fba.field_c = qpa.a((byte) -125, var2Lifetime11);
+            PartitioningManager.field_c = qpa.a((byte) -125, var2Lifetime11);
           }
           var2Lifetime12 = dqb.a((byte) -102, "voters_colon");
           if (null != var2Lifetime12) {
-            ok.field_a = qpa.a((byte) -125, var2Lifetime12);
+            ShipBodyFactory.field_a = qpa.a((byte) -125, var2Lifetime12);
           }
           var2Lifetime13 = dqb.a((byte) -13, "out_of_sync");
           if (var2Lifetime13 != null) {
@@ -653,7 +653,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime29 = dqb.a((byte) -62, "saved_blueprint");
           if (null != var2Lifetime29) {
-            mbb.field_d = qpa.a((byte) -125, var2Lifetime29);
+            SetShipTeamActionFactory.field_d = qpa.a((byte) -125, var2Lifetime29);
           }
           var2Lifetime30 = dqb.a((byte) -10, "saved_ship");
           if (null != var2Lifetime30) {
@@ -693,7 +693,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime39 = dqb.a((byte) -126, "option_state_new");
           if (var2Lifetime39 != null) {
-            ptb.field_f = qpa.a((byte) -125, var2Lifetime39);
+            MapClearanceRectangle.field_f = qpa.a((byte) -125, var2Lifetime39);
           }
           var2Lifetime40 = dqb.a((byte) -69, "option_state_coming_soon");
           if (null != var2Lifetime40) {
@@ -721,27 +721,27 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime46 = dqb.a((byte) -45, "scoreboard_column_type_names,0");
           if (null != var2Lifetime46) {
-            wkb.field_e[0] = qpa.a((byte) -125, var2Lifetime46);
+            SetVariableActionFactory.field_e[0] = qpa.a((byte) -125, var2Lifetime46);
           }
           var2Lifetime47 = dqb.a((byte) -36, "scoreboard_column_type_names,1");
           if (var2Lifetime47 != null) {
-            wkb.field_e[1] = qpa.a((byte) -125, var2Lifetime47);
+            SetVariableActionFactory.field_e[1] = qpa.a((byte) -125, var2Lifetime47);
           }
           var2Lifetime48 = dqb.a((byte) -6, "scoreboard_column_type_names,2");
           if (var2Lifetime48 != null) {
-            wkb.field_e[2] = qpa.a((byte) -125, var2Lifetime48);
+            SetVariableActionFactory.field_e[2] = qpa.a((byte) -125, var2Lifetime48);
           }
           var2Lifetime49 = dqb.a((byte) -103, "scoreboard_column_type_names,3");
           if (var2Lifetime49 != null) {
-            wkb.field_e[3] = qpa.a((byte) -125, var2Lifetime49);
+            SetVariableActionFactory.field_e[3] = qpa.a((byte) -125, var2Lifetime49);
           }
           var2Lifetime50 = dqb.a((byte) -35, "scoreboard_column_type_names,4");
           if (null != var2Lifetime50) {
-            wkb.field_e[4] = qpa.a((byte) -125, var2Lifetime50);
+            SetVariableActionFactory.field_e[4] = qpa.a((byte) -125, var2Lifetime50);
           }
           var2Lifetime51 = dqb.a((byte) -40, "scoreboard_column_type_names,5");
           if (null != var2Lifetime51) {
-            wkb.field_e[5] = qpa.a((byte) -125, var2Lifetime51);
+            SetVariableActionFactory.field_e[5] = qpa.a((byte) -125, var2Lifetime51);
           }
           var2Lifetime52 = dqb.a((byte) -114, "controls");
           if (var2Lifetime52 != null) {
@@ -849,7 +849,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime78 = dqb.a((byte) -114, "keycode_scoreboard_primary");
           if (var2Lifetime78 != null) {
-            uu.field_a = var2Lifetime78[0] & 255;
+            DebugRequestFactory.field_a = var2Lifetime78[0] & 255;
           }
           var2Lifetime79 = dqb.a((byte) -16, "keycode_chat_all_secondary");
           if (var2Lifetime79 != null) {
@@ -877,7 +877,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime85 = dqb.a((byte) -50, "keycode_zoom_out_2");
           if (var2Lifetime85 != null) {
-            hna.field_n = var2Lifetime85[0] & 255;
+            PlayerAction.field_n = var2Lifetime85[0] & 255;
           }
           var2Lifetime86 = dqb.a((byte) -40, "cursor_keys_shortname");
           if (var2Lifetime86 != null) {
@@ -901,7 +901,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime91 = dqb.a((byte) -75, "missile_lock");
           if (var2Lifetime91 != null) {
-            gmb.field_a = qpa.a((byte) -125, var2Lifetime91);
+            SpawnChoiceFactory.field_a = qpa.a((byte) -125, var2Lifetime91);
           }
           var2Lifetime92 = dqb.a((byte) -100, "armageddon_in");
           if (var2Lifetime92 != null) {
@@ -973,7 +973,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime109 = dqb.a((byte) -28, "TYPE_ARMOUR");
           if (null != var2Lifetime109) {
-            whb.field_d = qpa.a((byte) -125, var2Lifetime109);
+            DebugMessage.field_d = qpa.a((byte) -125, var2Lifetime109);
           }
           var2Lifetime110 = dqb.a((byte) -43, "TYPE_SPECIAL_WEAPON");
           if (null != var2Lifetime110) {
@@ -993,7 +993,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime114 = dqb.a((byte) -27, "COMPONENT_USE_WEAPON_MASSDRIVER_TEXT");
           if (var2Lifetime114 != null) {
-            pwa.field_a = qpa.a((byte) -125, var2Lifetime114);
+            CarouselSystemEvent.field_a = qpa.a((byte) -125, var2Lifetime114);
           }
           var2Lifetime115 = dqb.a((byte) -71, "COMPONENT_USE_WEAPON_PLASMABALL_TEXT");
           if (null != var2Lifetime115) {
@@ -1017,7 +1017,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime120 = dqb.a((byte) -47, "COMPONENT_USE_WEAPON_SNIPER_CANNON_TEXT");
           if (var2Lifetime120 != null) {
-            rg.field_c = qpa.a((byte) -125, var2Lifetime120);
+            RemoveEventActionFactory.field_c = qpa.a((byte) -125, var2Lifetime120);
           }
           var2Lifetime121 = dqb.a((byte) -125, "COMPONENT_USE_WEAPON_GRAPPLING_HOOK_TEXT");
           if (null != var2Lifetime121) {
@@ -1025,7 +1025,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime122 = dqb.a((byte) -98, "COMPONENT_USE_WEAPON_MISSILE_LAUNCHER_TEXT");
           if (var2Lifetime122 != null) {
-            ej.field_b = qpa.a((byte) -125, var2Lifetime122);
+            DebrisFactory.field_b = qpa.a((byte) -125, var2Lifetime122);
           }
           var2Lifetime123 = dqb.a((byte) -44, "COMPONENT_USE_HULL_TEXT");
           if (var2Lifetime123 != null) {
@@ -1197,7 +1197,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime165 = dqb.a((byte) -110, "COMPONENT_HULL_LATTICE_TEXT");
           if (var2Lifetime165 != null) {
-            kc.field_a = qpa.a((byte) -125, var2Lifetime165);
+            PlayerGameData.field_a = qpa.a((byte) -125, var2Lifetime165);
           }
           var2Lifetime166 = dqb.a((byte) -37, "COMPONENT_ARMOUR_BIG_TEXT");
           if (null != var2Lifetime166) {
@@ -1249,7 +1249,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime178 = dqb.a((byte) -120, "COMPONENT_HULL_HEXAGON_TEXT");
           if (null != var2Lifetime178) {
-            pn.field_a = qpa.a((byte) -125, var2Lifetime178);
+            WeaponBehaviourFactory.field_a = qpa.a((byte) -125, var2Lifetime178);
           }
           var2Lifetime179 = dqb.a((byte) -95, "hull_piece");
           if (null != var2Lifetime179) {
@@ -1285,7 +1285,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime187 = dqb.a((byte) -78, "ORDER_SHIELDS_TOGGLE");
           if (var2Lifetime187 != null) {
-            fob.field_b = qpa.a((byte) -125, var2Lifetime187);
+            ComponentBehaviourFactory.field_b = qpa.a((byte) -125, var2Lifetime187);
           }
           var2Lifetime188 = dqb.a((byte) -126, "ORDER_REPAIR_MODE_SHORT");
           if (var2Lifetime188 != null) {
@@ -1317,7 +1317,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime195 = dqb.a((byte) -97, "ORDER_COUNTERMEASURES_LAUNCH");
           if (null != var2Lifetime195) {
-            ng.field_a = qpa.a((byte) -125, var2Lifetime195);
+            SpecialOrderSubmessageFactory.field_a = qpa.a((byte) -125, var2Lifetime195);
           }
           var2Lifetime196 = dqb.a((byte) -60, "ORDER_SELF_DESTRUCT_PREPARE_TOGGLE");
           if (null != var2Lifetime196) {
@@ -1441,7 +1441,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime226 = dqb.a((byte) -111, "VOTE_ASSASSINATE_VIP_DESC");
           if (var2Lifetime226 != null) {
-            kma.field_c = qpa.a((byte) -125, var2Lifetime226);
+            ArmBehaviour.field_c = qpa.a((byte) -125, var2Lifetime226);
           }
           var2Lifetime227 = dqb.a((byte) -116, "VOTE_ASSASSINATE_VIP_DESC_A");
           if (null != var2Lifetime227) {
@@ -1481,7 +1481,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime236 = dqb.a((byte) -45, "VOTE_HOARD_TECHNOLOGY_BALANCED_DESC");
           if (null != var2Lifetime236) {
-            dtb.field_a = qpa.a((byte) -125, var2Lifetime236);
+            MissionBuilderFactory.field_a = qpa.a((byte) -125, var2Lifetime236);
           }
           var2Lifetime237 = dqb.a((byte) -54, "VOTE_SCAVENGERS");
           if (var2Lifetime237 != null) {
@@ -1525,7 +1525,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime247 = dqb.a((byte) -120, "VOTE_SANDBOX");
           if (var2Lifetime247 != null) {
-            ara.field_g = qpa.a((byte) -125, var2Lifetime247);
+            MovingObject.field_g = qpa.a((byte) -125, var2Lifetime247);
           }
           var2Lifetime248 = dqb.a((byte) -103, "VOTE_SANDBOX_DESC");
           if (null != var2Lifetime248) {
@@ -1557,7 +1557,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime255 = dqb.a((byte) -20, "VOTE_MORE_POWER_PLANTS");
           if (null != var2Lifetime255) {
-            etb.field_a = qpa.a((byte) -125, var2Lifetime255);
+            ThrusterBehaviourFactory.field_a = qpa.a((byte) -125, var2Lifetime255);
           }
           var2Lifetime256 = dqb.a((byte) -66, "VOTE_MORE_SHIELDS");
           if (var2Lifetime256 != null) {
@@ -1577,7 +1577,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime260 = dqb.a((byte) -17, "VOTE_MORE_SAWBLADES");
           if (var2Lifetime260 != null) {
-            etb.field_b = qpa.a((byte) -125, var2Lifetime260);
+            ThrusterBehaviourFactory.field_b = qpa.a((byte) -125, var2Lifetime260);
           }
           var2Lifetime261 = dqb.a((byte) -118, "VOTE_MORE_SPECIAL_WEAPONS");
           if (var2Lifetime261 != null) {
@@ -1589,7 +1589,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime263 = dqb.a((byte) -9, "VOTE_MORE_WEAPONS");
           if (null != var2Lifetime263) {
-            pca.field_l = qpa.a((byte) -125, var2Lifetime263);
+            CarouselPlayerEvent.field_l = qpa.a((byte) -125, var2Lifetime263);
           }
           var2Lifetime264 = dqb.a((byte) -98, "VOTE_MORE_NEUTRALS");
           if (null != var2Lifetime264) {
@@ -1724,7 +1724,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime296 = dqb.a((byte) -99, "message_a_destroyed_b");
           if (var2Lifetime296 != null) {
-            uu.field_c = qpa.a((byte) -125, var2Lifetime296);
+            DebugRequestFactory.field_c = qpa.a((byte) -125, var2Lifetime296);
           }
           var2Lifetime297 = dqb.a((byte) -58, "message_a_connected");
           if (var2Lifetime297 != null) {
@@ -1740,51 +1740,51 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime300 = dqb.a((byte) -14, "custom_variable_labels,0");
           if (var2Lifetime300 != null) {
-            pu.field_c[0] = qpa.a((byte) -125, var2Lifetime300);
+            ParticleFactory.field_c[0] = qpa.a((byte) -125, var2Lifetime300);
           }
           var2Lifetime301 = dqb.a((byte) -92, "custom_variable_labels,1");
           if (var2Lifetime301 != null) {
-            pu.field_c[1] = qpa.a((byte) -125, var2Lifetime301);
+            ParticleFactory.field_c[1] = qpa.a((byte) -125, var2Lifetime301);
           }
           var2Lifetime302 = dqb.a((byte) -106, "custom_variable_labels,2");
           if (null != var2Lifetime302) {
-            pu.field_c[2] = qpa.a((byte) -125, var2Lifetime302);
+            ParticleFactory.field_c[2] = qpa.a((byte) -125, var2Lifetime302);
           }
           var2Lifetime303 = dqb.a((byte) -49, "custom_variable_labels,3");
           if (null != var2Lifetime303) {
-            pu.field_c[3] = qpa.a((byte) -125, var2Lifetime303);
+            ParticleFactory.field_c[3] = qpa.a((byte) -125, var2Lifetime303);
           }
           var2Lifetime304 = dqb.a((byte) -112, "custom_variable_labels,4");
           if (null != var2Lifetime304) {
-            pu.field_c[4] = qpa.a((byte) -125, var2Lifetime304);
+            ParticleFactory.field_c[4] = qpa.a((byte) -125, var2Lifetime304);
           }
           var2Lifetime305 = dqb.a((byte) -13, "custom_variable_labels,5");
           if (null != var2Lifetime305) {
-            pu.field_c[5] = qpa.a((byte) -125, var2Lifetime305);
+            ParticleFactory.field_c[5] = qpa.a((byte) -125, var2Lifetime305);
           }
           var2Lifetime306 = dqb.a((byte) -13, "custom_variable_labels,6");
           if (null != var2Lifetime306) {
-            pu.field_c[6] = qpa.a((byte) -125, var2Lifetime306);
+            ParticleFactory.field_c[6] = qpa.a((byte) -125, var2Lifetime306);
           }
           var2Lifetime307 = dqb.a((byte) -33, "custom_variable_labels,7");
           if (null != var2Lifetime307) {
-            pu.field_c[7] = qpa.a((byte) -125, var2Lifetime307);
+            ParticleFactory.field_c[7] = qpa.a((byte) -125, var2Lifetime307);
           }
           var2Lifetime308 = dqb.a((byte) -83, "custom_variable_labels,8");
           if (var2Lifetime308 != null) {
-            pu.field_c[8] = qpa.a((byte) -125, var2Lifetime308);
+            ParticleFactory.field_c[8] = qpa.a((byte) -125, var2Lifetime308);
           }
           var2Lifetime309 = dqb.a((byte) -65, "custom_variable_labels,9");
           if (var2Lifetime309 != null) {
-            pu.field_c[9] = qpa.a((byte) -125, var2Lifetime309);
+            ParticleFactory.field_c[9] = qpa.a((byte) -125, var2Lifetime309);
           }
           var2Lifetime310 = dqb.a((byte) -74, "custom_variable_labels,10");
           if (null != var2Lifetime310) {
-            pu.field_c[10] = qpa.a((byte) -125, var2Lifetime310);
+            ParticleFactory.field_c[10] = qpa.a((byte) -125, var2Lifetime310);
           }
           var2Lifetime311 = dqb.a((byte) -6, "custom_variable_labels,11");
           if (null != var2Lifetime311) {
-            pu.field_c[11] = qpa.a((byte) -125, var2Lifetime311);
+            ParticleFactory.field_c[11] = qpa.a((byte) -125, var2Lifetime311);
           }
           var2Lifetime312 = dqb.a((byte) -21, "short_millisecond");
           if (null != var2Lifetime312) {
@@ -1848,7 +1848,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime327 = dqb.a((byte) -45, "gamename");
           if (var2Lifetime327 != null) {
-            bab.field_a = qpa.a((byte) -125, var2Lifetime327);
+            PlayerVoteFactory.field_a = qpa.a((byte) -125, var2Lifetime327);
           }
           var2Lifetime328 = dqb.a((byte) -120, "error");
           if (var2Lifetime328 != null) {
@@ -1864,11 +1864,11 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime331 = dqb.a((byte) -22, "copy_to_clipboard");
           if (var2Lifetime331 != null) {
-            gmb.field_b = qpa.a((byte) -125, var2Lifetime331);
+            SpawnChoiceFactory.field_b = qpa.a((byte) -125, var2Lifetime331);
           }
           var2Lifetime332 = dqb.a((byte) -100, "copied_to_clipboard");
           if (var2Lifetime332 != null) {
-            pu.field_b = qpa.a((byte) -125, var2Lifetime332);
+            ParticleFactory.field_b = qpa.a((byte) -125, var2Lifetime332);
           }
           cja.field_j = null;
           return;
@@ -1947,12 +1947,12 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
         }
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
         try {
           if (param0 <= 13) {
-            AsteroidField.a((byte) -107);
+            AsteroidField.clearSharedReferences((byte) -107);
           }
           field_b = null;
           return;

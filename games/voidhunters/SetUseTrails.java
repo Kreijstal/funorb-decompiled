@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetUseTrails extends ConsoleCommand {
-    static dja field_p;
+    static GameStateFactory field_p;
     static boolean field_o;
 
     SetUseTrails(String param0, Class[] param1, String param2) {
@@ -47,7 +47,7 @@ final class SetUseTrails extends ConsoleCommand {
     }
 
     static {
-        field_p = (dja) ((Object) new lj());
+        field_p = (GameStateFactory) ((Object) new MissionVariableFactory());
         field_o = false;
     }
 }

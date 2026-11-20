@@ -229,7 +229,7 @@ final class rv {
         return;
     }
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_b = null;
         if (param0 != -1) {
           rv.a(-69, 55);

@@ -200,10 +200,10 @@ final class md extends TextureOperation {
         }
     }
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_j = null;
         if (param0) {
-          md.a(true);
+          md.clearSharedReferences(true);
         }
     }
 
