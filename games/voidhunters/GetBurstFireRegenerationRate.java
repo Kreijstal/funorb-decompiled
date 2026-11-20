@@ -8,7 +8,7 @@ final class GetBurstFireRegenerationRate extends ConsoleCommand {
 
     final static QuickChatDynamicCommand[] e(byte param0) {
         if (param0 < -40) {
-          return new QuickChatDynamicCommand[]{TeamShipComponentCondition.field_e, GetMomentOfInertiaPerpointCalcDownshift.field_r, SetAngularVelocitySustain.field_o, MissionConditionFactory.field_c, SetSniperCannonAimarc.field_r, MapClearanceArea.field_b, SetSniperCannonAimarc.field_o, GetMassDriverProjectiles.field_p, tpa.field_a, ppb.field_c, ae.field_g, qw.field_g, GetBloomThresholdPercentage.field_o, DeveloperConsole.field_g};
+          return new QuickChatDynamicCommand[]{TeamShipComponentCondition.field_e, GetMomentOfInertiaPerpointCalcDownshift.field_r, SetAngularVelocitySustain.field_o, MissionConditionFactory.field_c, SetSniperCannonAimarc.field_r, MapClearanceArea.field_b, SetSniperCannonAimarc.field_o, GetMassDriverProjectiles.field_p, tpa.field_a, ppb.field_c, ae.field_g, OneShotSound.field_g, GetBloomThresholdPercentage.field_o, DeveloperConsole.field_g};
         }
         return (QuickChatDynamicCommand[]) null;
     }

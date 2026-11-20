@@ -49,7 +49,7 @@ final class rm extends eca {
             return stackIn_3_0;
           }
           if (param1 == -1) {
-            stackIn_8_0 = bqa.field_f;
+            stackIn_8_0 = ModelFaceAttachment.field_f;
             return stackIn_8_0;
           }
           stackIn_6_0 = (String) null;

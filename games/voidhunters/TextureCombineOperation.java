@@ -5,7 +5,7 @@ final class TextureCombineOperation {
     static GameStateFactory field_b;
     static PopupMenuWidget field_a;
 
-    final static void a(MissionState param0, MissionCondition[] param1, lta param2, int param3, byte param4, int param5, GameSnapshot param6) {
+    final static void a(MissionState param0, MissionCondition[] param1, Camera2D param2, int param3, byte param4, int param5, GameSnapshot param6) {
         int var8 = 0;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
@@ -134,7 +134,7 @@ final class TextureCombineOperation {
           return;
         }
         GameSnapshot var2 = (GameSnapshot) null;
-        TextureCombineOperation.a((MissionState) null, (MissionCondition[]) null, (lta) null, -51, (byte) -22, -26, (GameSnapshot) null);
+        TextureCombineOperation.a((MissionState) null, (MissionCondition[]) null, (Camera2D) null, -51, (byte) -22, -26, (GameSnapshot) null);
         field_b = null;
     }
 

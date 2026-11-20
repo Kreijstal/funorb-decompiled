@@ -66,11 +66,11 @@ final class ae {
             this.field_d = SetDebrisPartitioned.field_o;
           }
           if (this.field_d != 0 &&
-            hu.field_b != 0) {
+            GpuVertexNormal.field_b != 0) {
             if (this.field_e > 0) {
               this.field_e = this.field_e - 1;
               if (SetDebrisPartitioned.field_o == 0 &&
-                0 == hu.field_b) {
+                0 == GpuVertexNormal.field_b) {
                 this.field_d = 0;
               }
               if (0 != this.field_d) {
@@ -99,7 +99,7 @@ final class ae {
             this.field_h = this.field_d;
             this.field_e = this.field_e - 1;
             if (SetDebrisPartitioned.field_o == 0 &&
-              0 == hu.field_b) {
+              0 == GpuVertexNormal.field_b) {
               this.field_d = 0;
             }
             if (0 != this.field_d) {
@@ -125,7 +125,7 @@ final class ae {
             return;
           }
           if (SetDebrisPartitioned.field_o == 0 &&
-            0 == hu.field_b) {
+            0 == GpuVertexNormal.field_b) {
             this.field_d = 0;
             if (0 != this.field_d) {
               return;
@@ -159,11 +159,11 @@ final class ae {
           this.field_h = 0;
           if (SetDebrisPartitioned.field_o == 0) {
             if (this.field_d != 0 &&
-              hu.field_b != 0) {
+              GpuVertexNormal.field_b != 0) {
               if (this.field_e > 0) {
                 this.field_e = this.field_e - 1;
                 if (SetDebrisPartitioned.field_o == 0 &&
-                  0 == hu.field_b) {
+                  0 == GpuVertexNormal.field_b) {
                   this.field_d = 0;
                 }
                 if (0 != this.field_d) {
@@ -192,7 +192,7 @@ final class ae {
               this.field_h = this.field_d;
               this.field_e = this.field_e - 1;
               if (SetDebrisPartitioned.field_o == 0 &&
-                0 == hu.field_b) {
+                0 == GpuVertexNormal.field_b) {
                 this.field_d = 0;
               }
               if (0 != this.field_d) {
@@ -218,7 +218,7 @@ final class ae {
               return;
             }
             if (SetDebrisPartitioned.field_o == 0 &&
-              0 == hu.field_b) {
+              0 == GpuVertexNormal.field_b) {
               this.field_d = 0;
               if (0 != this.field_d) {
                 return;
@@ -250,11 +250,11 @@ final class ae {
             this.field_j = param0;
             this.field_d = SetDebrisPartitioned.field_o;
             if (this.field_d != 0 &&
-              hu.field_b != 0) {
+              GpuVertexNormal.field_b != 0) {
               if (this.field_e > 0) {
                 this.field_e = this.field_e - 1;
                 if (SetDebrisPartitioned.field_o == 0 &&
-                  0 == hu.field_b) {
+                  0 == GpuVertexNormal.field_b) {
                   this.field_d = 0;
                 }
                 if (0 != this.field_d) {
@@ -284,7 +284,7 @@ final class ae {
               this.field_e = this.field_e - 1;
             }
             if (SetDebrisPartitioned.field_o == 0 &&
-              0 == hu.field_b) {
+              0 == GpuVertexNormal.field_b) {
               this.field_d = 0;
             }
           }

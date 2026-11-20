@@ -1,51 +1,51 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nl extends IntrusiveNode {
-    ana field_d;
-    boolean field_h;
-    boolean field_g;
-    int field_k;
-    int field_f;
-    int field_i;
+final class LoopingSound extends IntrusiveNode {
+    SoundPlayback playback;
+    boolean refreshed;
+    boolean positional;
+    int sampleId;
+    int y;
+    int x;
     static float field_n;
     static TextureProvider field_e;
-    int field_l;
+    int key;
     static int field_m;
     static String field_j;
 
-    final static void a(int param0, int param1) {
-        ana var2 = null;
+    final static void setSoundEffectVolume(int param0, int param1) {
+        SoundPlayback var2 = null;
         int var3 = 0;
         boolean stackIn_13_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2_ref = null;
-        ana var2Lifetime1;
+        SoundPlayback var2Lifetime1;
         var3 = VoidHunters.field_G;
         try {
-          kt.field_l = param0;
-          var2 = (ana) (GetToggledScoreboard.field_p.first(param1 + 13205));
+          kt.soundEffectVolume = param0;
+          var2 = (SoundPlayback) (GetToggledScoreboard.field_p.first(param1 + 13205));
           if (param1 != -13205) {
-            nl.clearSharedReferences(-88);
+            LoopingSound.clearSharedReferences(-88);
           }
           while (var2 != null) {
-            if (var2.field_g.isLinked((byte) -63)) {
-              var2.field_e.setGain(128 + kt.field_l * var2.field_d >> 8);
+            if (var2.lifetimeNode.isLinked((byte) -63)) {
+              var2.stream.setGain(128 + kt.soundEffectVolume * var2.baseGain >> 8);
             } else {
               var2.unlink(-3846);
             }
-            var2 = (ana) (GetToggledScoreboard.field_p.next((byte) 61));
+            var2 = (SoundPlayback) (GetToggledScoreboard.field_p.next((byte) 61));
           }
           if (null != GetSniperCannonReload.field_o) {
-            var2Lifetime1 = (ana) (GetSniperCannonReload.field_o.first(0));
+            var2Lifetime1 = (SoundPlayback) (GetSniperCannonReload.field_o.first(0));
             while (var2Lifetime1 != null) {
-              stackIn_13_0 = var2Lifetime1.field_g.isLinked((byte) -63);
+              stackIn_13_0 = var2Lifetime1.lifetimeNode.isLinked((byte) -63);
               if (!stackIn_13_0) {
                 var2Lifetime1.unlink(param1 ^ 15505);
               } else {
-                var2Lifetime1.field_e.setGain(kt.field_l * var2Lifetime1.field_d + 128 >> 8);
+                var2Lifetime1.stream.setGain(kt.soundEffectVolume * var2Lifetime1.baseGain + 128 >> 8);
               }
-              var2Lifetime1 = (ana) (GetSniperCannonReload.field_o.next((byte) 100));
+              var2Lifetime1 = (SoundPlayback) (GetSniperCannonReload.field_o.next((byte) 100));
             }
             return;
           }
@@ -68,7 +68,7 @@ final class nl extends IntrusiveNode {
         field_j = null;
     }
 
-    nl() {
+    LoopingSound() {
     }
 
     static {

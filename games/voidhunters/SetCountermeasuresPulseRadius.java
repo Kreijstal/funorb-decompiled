@@ -210,7 +210,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
                   var24Lifetime1 = param0.field_e[var23Lifetime2];
                   var25Lifetime1 = param0.field_x[var23Lifetime2];
                   var26Lifetime1 = param0.field_l[var23Lifetime2];
-                  uv.field_a[var23Lifetime2] = var9 + (var25Lifetime1 * var15 + var12 * var24Lifetime1 + var18 * var26Lifetime1 >> 16);
+                  UiToggleButtonRenderer.field_a[var23Lifetime2] = var9 + (var25Lifetime1 * var15 + var12 * var24Lifetime1 + var18 * var26Lifetime1 >> 16);
                   ShipAI.field_c[var23Lifetime2] = (var26Lifetime1 * var19 + (var16 * var25Lifetime1 + var13 * var24Lifetime1) >> 16) + var10;
                   SetFixedaim.field_p[var23Lifetime2] = (var25Lifetime1 * var17 + var24Lifetime1 * var14 + var26Lifetime1 * var20 >> 16) + var11;
                   var23Lifetime2++;

@@ -75,7 +75,7 @@ final class SetMaxShipSize extends ConsoleCommand {
               if (param1 != 0) {
                 field_o = -95;
               }
-              param0.getAppletContext().showDocument(ne.a(var2, (byte) 63, param0), "_top");
+              param0.getAppletContext().showDocument(OpenGlModel.updateUrlSessionSettings(var2, (byte) 63, param0), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref = (Exception) (Object) decompiledCaughtException;

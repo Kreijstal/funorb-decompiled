@@ -7,7 +7,7 @@ final class GetPhasedEnergyBeamAimspeed extends ConsoleCommand {
     final static void a(java.awt.Canvas param0, boolean param1) {
         try {
           if (GetSpinningBladeAimspeed.field_q == 11) {
-            ana.c((byte) 111);
+            SoundPlayback.checkArithmeticGuard((byte) 111);
           }
           uob.a(dga.field_a, (byte) 106, OpenGlBufferObject.field_g, NebulaFactory.field_b);
           if (!param1) {

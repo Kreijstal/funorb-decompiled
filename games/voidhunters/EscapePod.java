@@ -36,7 +36,7 @@ final class EscapePod extends MovingObject implements DiffableState {
         }
     }
 
-    final void a(lta param0, byte param1) {
+    final void a(Camera2D param0, byte param1) {
         try {
           if (param1 >= -91) {
             SerializableGameState var4 = (SerializableGameState) null;

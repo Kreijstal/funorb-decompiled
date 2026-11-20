@@ -69,7 +69,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         return this.getDefinition((byte) -112).connectionY;
     }
 
-    final void drawTree(byte param0, lta param1, boolean param2, World param3, int param4) {
+    final void drawTree(byte param0, Camera2D param1, boolean param2, World param3, int param4) {
         int var6_int = 0;
         int var7 = VoidHunters.field_G;
         this.drawComponent(param3, (byte) 84, param4, param1, param2);
@@ -656,7 +656,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         return this.componentTypeId;
     }
 
-    final void drawComponent(World param0, byte param1, int param2, lta param3, boolean param4) {
+    final void drawComponent(World param0, byte param1, int param2, Camera2D param3, boolean param4) {
         boolean discarded$0 = false;
         int stackIn_74_0 = 0;
         RuntimeException stackIn_127_0 = null;
@@ -769,10 +769,10 @@ final class ShipComponent implements DiffableState, CompactGameState {
             discarded$0 = this.hasAdjustableConnection((byte) -119);
           }
           if (this.componentTypeId == 45) {
-            SetMissileLauncherEnergyUsed.a(13412864, (byte) 7, param3.b(true, this.finaly), (float)(int)(param3.field_a * 4096.0f), 128 + (TextureLineShape.sinAngle(100 * SetMinimapWidth.field_o, param1 ^ 122) >> 8) / 8, param3.a(this.finalx, (byte) 127));
+            SetMissileLauncherEnergyUsed.a(13412864, (byte) 7, param3.worldToScreenY(true, this.finaly), (float)(int)(param3.scale * 4096.0f), 128 + (TextureLineShape.sinAngle(100 * SetMinimapWidth.field_o, param1 ^ 122) >> 8) / 8, param3.worldToScreenX(this.finalx, (byte) 127));
           }
           if (GetPointDefenceLaserProjectiles.a(16, param1 + 11200)) {
-            SetNumStars.a(param3.field_a * (float)var47.boundingRadius, (byte) 113, param3.b(true, this.finaly), 16711680, param3.a(this.finalx, (byte) 126));
+            SetNumStars.a(param3.scale * (float)var47.boundingRadius, (byte) 113, param3.worldToScreenY(true, this.finaly), 16711680, param3.worldToScreenX(this.finalx, (byte) 126));
           }
           var13 = 1;
           if (1 == GetUseSprites.field_o) {
@@ -844,9 +844,9 @@ final class ShipComponent implements DiffableState, CompactGameState {
               }
             }
             if (var17 >= 0) {
-              var19 = (int)((float)var16 * (16384.0f * param3.field_a));
-              var20_float = param3.b(this.finalx, param1 ^ -41);
-              var21_float = param3.c(0, this.finaly);
+              var19 = (int)((float)var16 * (16384.0f * param3.scale));
+              var20_float = param3.worldToScreenXFloat(this.finalx, param1 ^ -41);
+              var21_float = param3.worldToScreenYFloat(0, this.finaly);
               var22 = -(2048 + this.finalangle) << 3;
               var23 = var12 | -16777216;
               if (!OpenGlTexture1D.field_i) {
@@ -863,12 +863,12 @@ final class ShipComponent implements DiffableState, CompactGameState {
                   }
                 }
               } else {
-                if (mmb.field_d[var17] != null) {
-                  mmb.field_d[var17].drawRotatedScaled(var20_float, var21_float, var14_float, var15_float, var19, var22, 0, var23, 1);
+                if (OpenGlVertexNormal.field_d[var17] != null) {
+                  OpenGlVertexNormal.field_d[var17].drawRotatedScaled(var20_float, var21_float, var14_float, var15_float, var19, var22, 0, var23, 1);
                 }
                 if (0 <= var18 &&
-                  null != mmb.field_d[var18]) {
-                  mmb.field_d[var18].drawRotatedScaled(var20_float, var21_float, var14_float, var15_float, var19, var22, 0, var23, 2);
+                  null != OpenGlVertexNormal.field_d[var18]) {
+                  OpenGlVertexNormal.field_d[var18].drawRotatedScaled(var20_float, var21_float, var14_float, var15_float, var19, var22, 0, var23, 2);
                 }
               }
               var13 = 0;
@@ -886,17 +886,17 @@ final class ShipComponent implements DiffableState, CompactGameState {
               var17Lifetime1 = var47.connectionX * var15 + var47.connectionY * var14 >> 16;
               var18Lifetime1 = var16Lifetime1 + this.finalx;
               var19Lifetime1 = this.finaly + var17Lifetime1;
-              var20 = param3.a(var18Lifetime1, (byte) 115);
-              var21 = param3.b(true, var19Lifetime1);
-              GetPhasedEnergyBeamReload.a(var21, (float)(int)(512.0f * param3.field_a), param1 ^ -35, var20, param2);
+              var20 = param3.worldToScreenX(var18Lifetime1, (byte) 115);
+              var21 = param3.worldToScreenY(true, var19Lifetime1);
+              GetPhasedEnergyBeamReload.a(var21, (float)(int)(512.0f * param3.scale), param1 ^ -35, var20, param2);
               var22Lifetime1 = this.currentconnectedangle - this.connectedangle;
               var23Lifetime1 = -var22Lifetime1 + this.finalangle;
               var24 = 8 * GetNumStars.cosAngle(var23Lifetime1, (byte) 104) >> 9;
               var25 = TextureLineShape.sinAngle(var23Lifetime1, 55) * 8 >> 9;
-              c.a(param3.b(true, var19Lifetime1 - var25), param3.a(var18Lifetime1 - var24, (byte) 126), var20, var21, param1 - 16777300, param2);
+              c.a(param3.worldToScreenY(true, var19Lifetime1 - var25), param3.worldToScreenX(var18Lifetime1 - var24, (byte) 126), var20, var21, param1 - 16777300, param2);
               var24Lifetime2 = 8 * var14 >> 9;
               var25Lifetime2 = var15 * 8 >> 9;
-              c.a(param3.b(true, var25Lifetime2 + var19Lifetime1), param3.a(var18Lifetime1 + var24Lifetime2, (byte) 127), var20, var21, -16777216, param2);
+              c.a(param3.worldToScreenY(true, var25Lifetime2 + var19Lifetime1), param3.worldToScreenX(var18Lifetime1 + var24Lifetime2, (byte) 127), var20, var21, -16777216, param2);
             }
             if (SetVariableActionFactory.field_c != 1) {
               for (var16Lifetime1Lifetime1 = 0; this.finaloutline.length > var16Lifetime1Lifetime1; var16Lifetime1Lifetime1 += 2) {
@@ -904,7 +904,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                 var18Lifetime1Lifetime1 = this.finaloutline[var16Lifetime1Lifetime1 + 1];
                 var19Lifetime1Lifetime1 = this.finaloutline[(2 + var16Lifetime1Lifetime1) % this.finaloutline.length];
                 var20Lifetime1 = this.finaloutline[(3 + var16Lifetime1Lifetime1) % this.finaloutline.length];
-                c.a(param3.b(true, var20Lifetime1), param3.a(var19Lifetime1Lifetime1, (byte) 124), param3.a(var17Lifetime1Lifetime1, (byte) 120), param3.b(true, var18Lifetime1Lifetime1), -16777216, var12);
+                c.a(param3.worldToScreenY(true, var20Lifetime1), param3.worldToScreenX(var19Lifetime1Lifetime1, (byte) 124), param3.worldToScreenX(var17Lifetime1Lifetime1, (byte) 120), param3.worldToScreenY(true, var18Lifetime1Lifetime1), -16777216, var12);
               }
             } else {
               var16Lifetime1Lifetime1 = 1879048192;
@@ -925,8 +925,8 @@ final class ShipComponent implements DiffableState, CompactGameState {
               if (var18Lifetime1Lifetime1 != 0) {
                 var19_ref_int__ = GetLaserBeamProjectileDamage.field_p;
                 for (var20Lifetime1 = 0; var20Lifetime1 < this.finaloutline.length; var20Lifetime1 += 2) {
-                  var19_ref_int__[var20Lifetime1] = param3.a(this.finaloutline[var20Lifetime1], (byte) 122);
-                  var19_ref_int__[var20Lifetime1 + 1] = param3.b(true, this.finaloutline[var20Lifetime1 + 1]);
+                  var19_ref_int__[var20Lifetime1] = param3.worldToScreenX(this.finaloutline[var20Lifetime1], (byte) 122);
+                  var19_ref_int__[var20Lifetime1 + 1] = param3.worldToScreenY(true, this.finaloutline[var20Lifetime1 + 1]);
                 }
                 GetBombletSprayAimarc.a(-112, 0, this.finaloutline.length, var12 | var16Lifetime1Lifetime1, var19_ref_int__);
                 for (var20Lifetime1 = 0; var20Lifetime1 < this.finaloutline.length; var20Lifetime1 += 2) {
@@ -958,8 +958,8 @@ final class ShipComponent implements DiffableState, CompactGameState {
                     var35 = var32 + var33 >> 12;
                     var36 = var34 + this.finalx;
                     var37 = var35 + this.finaly;
-                    var38 = param3.a(var36, (byte) 119);
-                    var39 = param3.b(true, var37);
+                    var38 = param3.worldToScreenX(var36, (byte) 119);
+                    var39 = param3.worldToScreenY(true, var37);
                     var20_ref_int__[var27] = var38;
                     var20_ref_int__[1 + var27] = var39;
                     if (var47.field_k) {
@@ -967,8 +967,8 @@ final class ShipComponent implements DiffableState, CompactGameState {
                       var41 = -var33 + var32 >> 12;
                       var42 = this.finalx + var40;
                       var43 = this.finaly + var41;
-                      var44 = param3.a(var42, (byte) 120);
-                      var45 = param3.b(true, var43);
+                      var44 = param3.worldToScreenX(var42, (byte) 120);
+                      var45 = param3.worldToScreenY(true, var43);
                       if (var26 == 0) {
                         c.a(var39, var38, var22Lifetime1Lifetime1, var23Lifetime1Lifetime1, -16777216, var12);
                         c.a(var45, var44, var24Lifetime1Lifetime1, var25Lifetime1, -16777216, var12);
@@ -1005,7 +1005,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                 var18Lifetime1Lifetime2 = this.finaloutline[var16Lifetime1Lifetime2 + 1];
                 var19Lifetime1Lifetime2 = this.finalx;
                 var20Lifetime2 = this.finaly;
-                c.a(param3.b(true, var20Lifetime2), param3.a(var19Lifetime1Lifetime2, (byte) 116), param3.a(var17Lifetime1Lifetime2, (byte) 115), param3.b(true, var18Lifetime1Lifetime2), -16777216, var12);
+                c.a(param3.worldToScreenY(true, var20Lifetime2), param3.worldToScreenX(var19Lifetime1Lifetime2, (byte) 116), param3.worldToScreenX(var17Lifetime1Lifetime2, (byte) 115), param3.worldToScreenY(true, var18Lifetime1Lifetime2), -16777216, var12);
               }
             }
             if (this.hardpoints != null &&
@@ -1014,12 +1014,12 @@ final class ShipComponent implements DiffableState, CompactGameState {
                 if (-1 == this.hardpoints[var16Lifetime1Lifetime3].connectedComponentIdx) {
                   var17Lifetime1Lifetime3 = this.hardpoints[var16Lifetime1Lifetime3].worldx;
                   var18Lifetime1Lifetime3 = this.hardpoints[var16Lifetime1Lifetime3].worldy;
-                  var19Lifetime1Lifetime3 = param3.a(var17Lifetime1Lifetime3, (byte) 125);
-                  var20Lifetime3 = param3.b(true, var18Lifetime1Lifetime3);
+                  var19Lifetime1Lifetime3 = param3.worldToScreenX(var17Lifetime1Lifetime3, (byte) 125);
+                  var20Lifetime3 = param3.worldToScreenY(true, var18Lifetime1Lifetime3);
                   if (GetPointDefenceLaserProjectiles.a(4, 11284)) {
                     var21Lifetime2 = GetNumStars.cosAngle(this.finalangle + var47.hardpoints[var16Lifetime1Lifetime3].field_a, (byte) -93) * 8 >> 8;
                     var22Lifetime1Lifetime2 = TextureLineShape.sinAngle(var47.hardpoints[var16Lifetime1Lifetime3].field_a + this.finalangle, 99) * 8 >> 8;
-                    c.a(param3.b(true, var22Lifetime1Lifetime2 + var18Lifetime1Lifetime3), param3.a(var17Lifetime1Lifetime3 + var21Lifetime2, (byte) 119), var19Lifetime1Lifetime3, var20Lifetime3, -16777216, 16711680);
+                    c.a(param3.worldToScreenY(true, var22Lifetime1Lifetime2 + var18Lifetime1Lifetime3), param3.worldToScreenX(var17Lifetime1Lifetime3 + var21Lifetime2, (byte) 119), var19Lifetime1Lifetime3, var20Lifetime3, -16777216, 16711680);
                     GetLagStandardDeviationOut.a(-1, Integer.toString(var16Lifetime1Lifetime3), 16711935, var20Lifetime3, var19Lifetime1Lifetime3, param1 ^ 4350);
                   }
                 }
@@ -4473,7 +4473,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         }
     }
 
-    final void drawTrailsAndGrapples(int param0, int param1, World param2, lta param3) {
+    final void drawTrailsAndGrapples(int param0, int param1, World param2, Camera2D param3) {
         int var5_int = 0;
         int var6 = VoidHunters.field_G;
         try {

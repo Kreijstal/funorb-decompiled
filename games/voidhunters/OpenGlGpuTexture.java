@@ -347,7 +347,7 @@ abstract class OpenGlGpuTexture implements GpuTexture {
         if (param0 > -15) {
           OpenGlGpuTexture.d((byte) -19);
         }
-        qw.field_l = null;
+        OneShotSound.field_l = null;
         SetFightersPerPlayerMaximum.field_p = true;
     }
 

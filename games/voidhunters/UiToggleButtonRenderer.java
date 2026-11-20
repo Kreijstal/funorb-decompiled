@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class uv implements UiRenderer {
-    private int field_c;
-    private int field_m;
-    private int field_l;
-    private int field_n;
-    private BitmapFont field_j;
-    private int field_e;
-    private int field_k;
-    private int field_b;
-    private int field_d;
-    private int field_i;
+final class UiToggleButtonRenderer implements UiRenderer {
+    private int textOffsetY;
+    private int textPadding;
+    private int boxWidth;
+    private int boxOffsetY;
+    private BitmapFont font;
+    private int verticalAlignment;
+    private int backgroundColor;
+    private int horizontalAlignment;
+    private int boxOffsetX;
+    private int boxHeight;
     static String field_f;
     static int[] field_a;
-    private int field_g;
-    private int field_h;
+    private int textColor;
+    private int textShadow;
 
-    final static int a(int param0, int param1) {
-        int var2 = TextureTransformMode.field_a.a(param1, (byte) 121) - TextureTransformMode.field_a.field_d;
+    final static int computeSoundPan(int param0, int param1) {
+        int var2 = TextureTransformMode.field_a.worldToScreenX(param1, (byte) 121) - TextureTransformMode.field_a.screenOriginX;
         int var3 = param0 + var2 / 4;
         if (var3 > 250) {
           var3 = 250;
@@ -31,7 +31,7 @@ final class uv implements UiRenderer {
         return var3;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (!OpenGlTexture1D.field_i) {
           SoftwareRasterizer2D.drawRectangle(param1, param3, param5, param2, param4);
           if (param0 < 106) {
@@ -81,21 +81,21 @@ final class uv implements UiRenderer {
           if (param4) {
             var7 = 16777215;
           }
-          SoftwareRasterizer2D.fillRectangle(param2 + param1.x, param3 + param1.y, param1.width, param1.height, this.field_k);
-          var8 = this.field_d + (param2 + param1.x);
-          var9 = param1.y + param3 + this.field_n;
-          SoftwareRasterizer2D.drawRectangleDropShadow(var8, var9, this.field_l, this.field_i, 5592405);
-          SoftwareRasterizer2D.fillRectangle(var8, var9, this.field_l, this.field_i, var7);
+          SoftwareRasterizer2D.fillRectangle(param2 + param1.x, param3 + param1.y, param1.width, param1.height, this.backgroundColor);
+          var8 = this.boxOffsetX + (param2 + param1.x);
+          var9 = param1.y + param3 + this.boxOffsetY;
+          SoftwareRasterizer2D.drawRectangleDropShadow(var8, var9, this.boxWidth, this.boxHeight, 5592405);
+          SoftwareRasterizer2D.fillRectangle(var8, var9, this.boxWidth, this.boxHeight, var7);
           if (var12.active) {
-            SoftwareRasterizer2D.drawLine(var8, var9, var8 + this.field_l, this.field_i + var9, 1);
-            SoftwareRasterizer2D.drawLine(var8 + this.field_l, var9, var8, this.field_i + var9, 1);
+            SoftwareRasterizer2D.drawLine(var8, var9, var8 + this.boxWidth, this.boxHeight + var9, 1);
+            SoftwareRasterizer2D.drawLine(var8 + this.boxWidth, var9, var8, this.boxHeight + var9, 1);
           }
           var10 = 49 % ((param0 + 27) / 35);
-          if (null == this.field_j) {
+          if (null == this.font) {
             return;
           }
-          var11 = this.field_l + this.field_d + this.field_m;
-          this.field_j.drawParagraph(param1.text, var11 + (param2 + param1.x), this.field_c + param3 + param1.y, -this.field_m + (-var11 + param1.width), -(this.field_m << 1) + param1.height, this.field_g, this.field_h, this.field_b, this.field_e, 0);
+          var11 = this.boxWidth + this.boxOffsetX + this.textPadding;
+          this.font.drawParagraph(param1.text, var11 + (param2 + param1.x), this.textOffsetY + param3 + param1.y, -this.textPadding + (-var11 + param1.width), -(this.textPadding << 1) + param1.height, this.textColor, this.textShadow, this.horizontalAlignment, this.verticalAlignment, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -119,20 +119,20 @@ final class uv implements UiRenderer {
         }
     }
 
-    uv(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
-        this.field_e = 1;
-        this.field_b = 1;
+    UiToggleButtonRenderer(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+        this.verticalAlignment = 1;
+        this.horizontalAlignment = 1;
         try {
-          this.field_m = param1;
-          this.field_n = param6;
-          this.field_c = param2;
-          this.field_l = param8;
-          this.field_j = param0;
-          this.field_h = param4;
-          this.field_d = param5;
-          this.field_g = param3;
-          this.field_k = param9;
-          this.field_i = param7;
+          this.textPadding = param1;
+          this.boxOffsetY = param6;
+          this.textOffsetY = param2;
+          this.boxWidth = param8;
+          this.font = param0;
+          this.textShadow = param4;
+          this.boxOffsetX = param5;
+          this.textColor = param3;
+          this.backgroundColor = param9;
+          this.boxHeight = param7;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }

@@ -103,7 +103,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetAiFiringRangeUpshift.field_p = param1[93];
           iea.field_d = param1[207];
           GetPhysicsCollisionGrapplingHookForceMultiplier.field_o = param1[109];
-          hrb.field_a = param1[145];
+          TickClock.field_a = param1[145];
           GetWorldWidthUpshift.field_q = param1[191];
           GetLaserBeamProjectileDamage.field_o = param1[82];
           BodyDestroyedConditionFactory.field_b = param1[158];
@@ -190,7 +190,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           OpenGlUnderwaterMaterialEffect.field_n = param1[118];
           GetMissionTerrainNebulaProbability.field_r = param1[198];
           SetVariableActionFactory.field_a = param1[62];
-          ana.field_f = param1[105];
+          SoundPlayback.field_f = param1[105];
           wk.field_a = param1[42];
           GetRepairModePower.field_q = param1[126];
           TextureBezierShape.field_f = param1[80];
@@ -212,7 +212,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetUseRectFill.field_p = param1[184];
           sja.field_b = param1[44];
           OpenGlIndexBuffer.field_j = param1[95];
-          mmb.field_i = param1[131];
+          OpenGlVertexNormal.field_i = param1[131];
           SetThrusterBindingBalanceThreshold.field_p = param1[135];
           ujb.field_h = param1[108];
           GetTeamSelectionSpeedup.field_p = param1[10];
@@ -307,7 +307,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           VariableConditionFactory.field_a = param1[189];
           SetMissileLauncherEnergyUsed.field_o = param1[107];
           LoadSettings.field_p = param1[217];
-          mmb.field_g = param1[164];
+          OpenGlVertexNormal.field_g = param1[164];
           uab.field_b = param1[84];
           Particle.field_j = param1[234];
           GetToggledScoreboard.field_r = param1[67];

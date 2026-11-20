@@ -44,23 +44,23 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
 
     final static void a(int param0, int param1, byte param2) {
         PcmSample var10 = null;
-        ana var11 = null;
+        SoundPlayback var11 = null;
         int var4 = 0;
         PcmSample var12 = null;
-        nl var3 = null;
+        LoopingSound var3 = null;
         PcmSample var12Lifetime1;
-        nl var3Lifetime1;
+        LoopingSound var3Lifetime1;
         PcmSample var12Lifetime2;
         int var4Lifetime1;
         if (TextureTransformMode.field_a == null) {
           return;
         }
-        nl var8 = SetThrusterParticleSpeedDownshift.a(param0, -26, param1);
-        nl var9 = var8;
+        LoopingSound var8 = SetThrusterParticleSpeedDownshift.findLoopingSound(param0, -26, param1);
+        LoopingSound var9 = var8;
         if (param2 >= -31) {
           field_q = (GameStateFactory) null;
           if (var9 != null) {
-            var9.field_h = true;
+            var9.refreshed = true;
             return;
           }
           var4 = param0;
@@ -71,18 +71,18 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
           var12 = var10;
           var12Lifetime2 = var10;
           var11 = GetNebulaFadesOutWhenClose.a(-102, var10);
-          var11.field_e.setLoopCount(-1);
-          var3 = new nl();
-          var3.field_h = true;
-          var3.field_d = var11;
-          var3.field_l = param1;
-          var3.field_g = false;
-          var3.field_k = param0;
+          var11.stream.setLoopCount(-1);
+          var3 = new LoopingSound();
+          var3.refreshed = true;
+          var3.playback = var11;
+          var3.key = param1;
+          var3.positional = false;
+          var3.sampleId = param0;
           PlayerReady.activeLoopingSounds.addLast(-10258, var3);
           return;
         }
         if (var9 != null) {
-          var9.field_h = true;
+          var9.refreshed = true;
           return;
         }
         var4Lifetime1 = param0;
@@ -90,14 +90,14 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
           var4Lifetime1 = hob.a(OpenGlGpuToolkit.field_Jc, fbb.field_j[param0], 123) + param0;
         }
         var12Lifetime1 = fa.field_d[var4Lifetime1];
-        ana var13 = GetNebulaFadesOutWhenClose.a(-102, var12Lifetime1);
-        var13.field_e.setLoopCount(-1);
-        var3Lifetime1 = new nl();
-        var3Lifetime1.field_h = true;
-        var3Lifetime1.field_d = var13;
-        var3Lifetime1.field_l = param1;
-        var3Lifetime1.field_g = false;
-        var3Lifetime1.field_k = param0;
+        SoundPlayback var13 = GetNebulaFadesOutWhenClose.a(-102, var12Lifetime1);
+        var13.stream.setLoopCount(-1);
+        var3Lifetime1 = new LoopingSound();
+        var3Lifetime1.refreshed = true;
+        var3Lifetime1.playback = var13;
+        var3Lifetime1.key = param1;
+        var3Lifetime1.positional = false;
+        var3Lifetime1.sampleId = param0;
         PlayerReady.activeLoopingSounds.addLast(-10258, var3Lifetime1);
     }
 

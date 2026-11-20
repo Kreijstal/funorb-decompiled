@@ -76,14 +76,14 @@ class SpriteTextureOperation extends TextureOperation {
         this.spriteId = -1;
     }
 
-    final static int b(byte param0, int param1, int param2) {
+    final static int computeSoundGain(byte param0, int param1, int param2) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        int var3 = (int)(-TextureTransformMode.field_a.field_c + (float)param1);
-        int var4 = (int)((float)param2 - TextureTransformMode.field_a.field_b);
+        int var3 = (int)(-TextureTransformMode.field_a.worldCenterX + (float)param1);
+        int var4 = (int)((float)param2 - TextureTransformMode.field_a.worldCenterY);
         if (param0 > 83) {
-          var5 = (int)(640.0 / (double)TextureTransformMode.field_a.field_a);
+          var5 = (int)(640.0 / (double)TextureTransformMode.field_a.scale);
           var6 = ComponentAttachmentPlan.a(var5, (byte) 119, var4, var3);
           var7 = 33554432 / var6;
           if (var7 > 128) {

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bqa {
+final class ModelFaceAttachment {
     static String field_f;
     static Widget field_d;
-    int field_a;
+    int label;
     int field_c;
-    int field_b;
-    int field_e;
+    int faceIndex;
+    int definitionId;
 
     public static void clearSharedReferences(byte param0) {
         field_f = null;
@@ -33,7 +33,7 @@ final class bqa {
         return stackIn_7_0;
     }
 
-    private bqa() throws Throwable {
+    private ModelFaceAttachment() throws Throwable {
         throw new Error();
     }
 

@@ -42,7 +42,7 @@ final class SetFighterVision extends ConsoleCommand {
             return;
           }
           lsa.field_e = UiComboBoxRenderer.field_c;
-          qw.field_l = new Widget(0L, param3);
+          OneShotSound.field_l = new Widget(0L, param3);
           hp.field_b = new Widget(0L, param2);
           TiledSpriteTextureOperation.field_s = new Widget(0L, (Widget) null);
           SetThrusterAutobalancing.field_p = new Widget(0L, param0);
@@ -53,8 +53,8 @@ final class SetFighterVision extends ConsoleCommand {
           SetThrusterAutobalancing.field_p.addChild(-561, WidgetNode.field_l);
           GetMachineGunAimarc.field_q = new Widget(0L, TargetLock.field_b, GetMissionTerrainVotingChancestep.field_o);
           dp.field_a = new Widget(0L, TargetLock.field_b);
-          qw.field_l.addChild(-561, hp.field_b);
-          qw.field_l.addChild(-561, TiledSpriteTextureOperation.field_s);
+          OneShotSound.field_l.addChild(-561, hp.field_b);
+          OneShotSound.field_l.addChild(-561, TiledSpriteTextureOperation.field_s);
           TiledSpriteTextureOperation.field_s.addChild(-561, SetThrusterAutobalancing.field_p);
           TiledSpriteTextureOperation.field_s.addChild(param1 + 19588, GetMachineGunAimarc.field_q);
           TiledSpriteTextureOperation.field_s.addChild(-561, dp.field_a);

@@ -10,7 +10,7 @@ final class TextureRectangleShape extends TextureRasterShape {
     static String field_j;
     private int bottom;
 
-    final static void a(File param0, int param1, byte[] param2, byte param3) throws IOException {
+    final static void readFileInto(File param0, int param1, byte[] param2, byte param3) throws IOException {
         DataInputStream var4 = null;
         try {
           var4 = new DataInputStream((InputStream) ((Object) new BufferedInputStream((InputStream) ((Object) new FileInputStream(param0)))));

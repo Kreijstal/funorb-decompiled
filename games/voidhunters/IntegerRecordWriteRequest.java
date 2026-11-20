@@ -31,7 +31,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[72] = Cp1252CharacterEncoder.field_a;
         var2[157] = GetLaserEnergyUsed.field_r;
         var2[50] = SetPointDefenceLaserProjectiles.field_o;
-        var2[131] = mmb.field_i;
+        var2[131] = OpenGlVertexNormal.field_i;
         var2[211] = rjb.field_u;
         var2[220] = Particle.field_n;
         var2[33] = qrb.field_a;
@@ -75,7 +75,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[213] = GetPhysicsCollisionPhantomForceMultiplier.field_o;
         var2[63] = ku.field_c;
         var2[3] = bra.field_d;
-        var2[145] = hrb.field_a;
+        var2[145] = TickClock.field_a;
         var2[179] = SetMassDriverEnergyUsed.field_o;
         var2[59] = SetTorpedoEnergyUsed.field_p;
         var2[48] = us.field_f;
@@ -112,7 +112,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[215] = Particle.field_k;
         var2[128] = OpenGlGlyphMask.field_e;
         var2[192] = CarouselPlayerInfoFactory.field_a;
-        var2[164] = mmb.field_g;
+        var2[164] = OpenGlVertexNormal.field_g;
         var2[96] = NebulaFieldFactory.field_b;
         var2[170] = CarouselSystemEvent.field_b;
         var2[219] = Particle.field_p;
@@ -200,7 +200,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[143] = GetMissionTerrainNebulaProbability.field_p;
         var2[69] = GetMissilesHitSourceTeam.field_o;
         var2[75] = GetSalvoRepairTimeMultiplier.field_o;
-        var2[105] = ana.field_f;
+        var2[105] = SoundPlayback.field_f;
         var2[226] = GetTorpedoAcceleration.field_p;
         var2[60] = Cp1252CharacterEncoder.field_b;
         var2[171] = enb.field_c;

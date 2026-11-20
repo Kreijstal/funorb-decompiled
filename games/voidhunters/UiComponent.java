@@ -457,7 +457,7 @@ class UiComponent extends IntrusiveNode {
               param3 = false;
             }
           }
-          if (hu.field_b == 0 &&
+          if (GpuVertexNormal.field_b == 0 &&
             jw.field_b != 0) {
             this.handleMouseRelease((byte) 118, param1, uia.field_b, param2, this, PlayerGameData.field_b);
             var6 = SetBombletSprayRandomness.field_p;
@@ -477,7 +477,7 @@ class UiComponent extends IntrusiveNode {
         if (param0 != -5) {
           this.draw(-58, -39, -116);
         }
-        jw.field_b = hu.field_b;
+        jw.field_b = GpuVertexNormal.field_b;
         UiTextField.updateTooltip(this.getTooltip((byte) 125), 5757);
         return param3;
     }

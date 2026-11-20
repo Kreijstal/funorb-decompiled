@@ -95,7 +95,7 @@ final class ProjectileHit {
             var6 = this.component.getDefinition((byte) -112);
             if (this.projectile.getType((byte) -104) != 3) {
               if (this.projectile.getType((byte) -104) == 1) {
-                GetGrapplingHookAimarc.a(this.impactY, param2.getId(false), 40, 106, this.impactX);
+                GetGrapplingHookAimarc.updateLoopingSound(this.impactY, param2.getId(false), 40, 106, this.impactX);
               } else {
                 if (!var6.field_r) {
                   if (var6.field_B == 0) {
@@ -108,7 +108,7 @@ final class ProjectileHit {
                 }
               }
             } else {
-              GetGrapplingHookAimarc.a(this.impactY, param2.getId(false), 70, -48, this.impactX);
+              GetGrapplingHookAimarc.updateLoopingSound(this.impactY, param2.getId(false), 70, -48, this.impactX);
             }
             var7 = 5;
             var8 = this.projectile.getType((byte) -104);

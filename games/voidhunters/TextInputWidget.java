@@ -195,7 +195,7 @@ final class TextInputWidget extends Widget {
             }
             this.lastClickTime = var3_long;
           } else {
-            if (hu.field_b == 1 &&
+            if (GpuVertexNormal.field_b == 1 &&
               this.dragSelecting) {
               if (this.doubleClickSelection &&
                 var2 < this.doubleClickWordEnd &&

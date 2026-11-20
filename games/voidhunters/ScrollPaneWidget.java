@@ -144,7 +144,7 @@ final class ScrollPaneWidget extends Widget {
                 stackIn_40_1 = aaa.field_a;
               }
               stackIn_39_0.text = SetReverbGain.a(stackIn_40_1, new String[]{ObjectiveMarker.field_b.text}, 76);
-              hrb.field_b = true;
+              TickClock.field_b = true;
               GetShipToShipRamDamage.field_q.enabled = true;
               SetAutozoomSpeedDivide.field_p.text = UiComboBox.field_D;
               if (ncb.field_a != null) {
@@ -153,7 +153,7 @@ final class ScrollPaneWidget extends Widget {
                   tib.field_i = new byte[ocb.field_l];
                 }
                 GetMissionVotes.field_p = false;
-                hrb.field_b = false;
+                TickClock.field_b = false;
                 var13 = 0;
                 var9_intLifetime1 = var13;
                 while (ocb.field_l > var13) {
@@ -163,10 +163,10 @@ final class ScrollPaneWidget extends Widget {
                 MissionBuilder.a(ocb.field_l, -1, SetThrusterParticleSpeedDownshift.field_o, -1, 115, true, 0, -1);
                 if (!(SetAngularVelocitySustain.field_p < 2) &&
                   SetMachineGunEnergyUsed.field_o[12]) {
-                  hrb.field_b = true;
+                  TickClock.field_b = true;
                 }
               }
-              if (!hrb.field_b) {
+              if (!TickClock.field_b) {
                 ObjectiveMarker.field_b.enabled = false;
                 if (ObjectiveMarker.field_b.field_Q) {
                   var9 = null;

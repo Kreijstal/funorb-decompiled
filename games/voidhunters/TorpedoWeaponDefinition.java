@@ -60,7 +60,7 @@ final class TorpedoWeaponDefinition extends WeaponDefinition {
 
     final int getAimArc(int param0) {
         int var2 = 57 % ((7 - param0) / 47);
-        return mmb.field_i;
+        return OpenGlVertexNormal.field_i;
     }
 
     final int getProjectileSpeed(byte param0) {

@@ -47,7 +47,7 @@ final class ProceduralTexture extends DualLinkNode {
         var18 = VoidHunters.field_G;
         try {
           GetAngularVelocitySustainMax.field_o = param4;
-          nl.field_e = param2;
+          LoopingSound.field_e = param2;
           for (var7_int = 0; this.field_q.length > var7_int; var7_int++) {
             this.field_q[var7_int].initializeCache(-9163, param1, param5);
           }
@@ -241,7 +241,7 @@ final class ProceduralTexture extends DualLinkNode {
             var22 = (TextureProvider) null;
             this.isReady(45, (ResourceArchive) null, (TextureProvider) null);
           }
-          nl.field_e = param5;
+          LoopingSound.field_e = param5;
           GetAngularVelocitySustainMax.field_o = param4;
           for (var9_int = 0; this.field_q.length > var9_int; var9_int++) {
             this.field_q[var9_int].initializeCache(-9163, param0, param2);
@@ -383,7 +383,7 @@ final class ProceduralTexture extends DualLinkNode {
         var24 = VoidHunters.field_G;
         try {
           GetAngularVelocitySustainMax.field_o = param2;
-          nl.field_e = param1;
+          LoopingSound.field_e = param1;
           for (var10_int = 0; this.field_q.length > var10_int; var10_int++) {
             this.field_q[var10_int].initializeCache(-9163, param5, param7);
           }

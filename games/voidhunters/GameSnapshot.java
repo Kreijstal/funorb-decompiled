@@ -384,7 +384,7 @@ final class GameSnapshot extends CarouselSlot implements DiffableState, CompactG
         int var7 = VoidHunters.field_G;
         int var5_intLifetime1;
         try {
-          ka.a(param1, param2 ^ -19265);
+          Model3D.setSoundTime(param1, param2 ^ -19265);
           this.settings.a((byte) 125);
           this.world.a(1799937864, param3, this.messageLog, (Player[]) (param0.players), this.missionState, param1, (Player[]) (this.players));
           this.missionState.updateMissionPhases(this, param1, (byte) -19);

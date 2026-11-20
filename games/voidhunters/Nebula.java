@@ -220,7 +220,7 @@ final class Nebula implements DiffableState {
         this.x = param0;
     }
 
-    final void drawParticle(Ship param0, int param1, int param2, lta param3, int param4) {
+    final void drawParticle(Ship param0, int param1, int param2, Camera2D param3, int param4) {
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -242,8 +242,8 @@ final class Nebula implements DiffableState {
         int var17 = 0;
         try {
           var6_int = param4 % 16 - 8;
-          var7 = param3.b(this.x + (GetNumStars.cosAngle(param2 * var6_int << 1, (byte) -127) >> 4), -125);
-          var8 = param3.c(0, this.y + (TextureLineShape.sinAngle(param2 * var6_int << 1, 116) >> 4));
+          var7 = param3.worldToScreenXFloat(this.x + (GetNumStars.cosAngle(param2 * var6_int << 1, (byte) -127) >> 4), -125);
+          var8 = param3.worldToScreenYFloat(0, this.y + (TextureLineShape.sinAngle(param2 * var6_int << 1, 116) >> 4));
           if (param1 <= 42) {
             return;
           }
@@ -253,21 +253,21 @@ final class Nebula implements DiffableState {
           if (OpenGlTexture1D.field_i &&
             1 == GetUseSprites.field_o) {
             var12 = param4 % 3 + 8;
-            var13 = mmb.field_d[var12];
-            var14 = (int)((float)var9 * param3.field_a * 4.0f);
+            var13 = OpenGlVertexNormal.field_d[var12];
+            var14 = (int)((float)var9 * param3.scale * 4.0f);
             var15 = (int)var7 - (var14 >> 1);
             var16 = -(var14 >> 1) + (int)var8;
             var17 = var9 << 1;
-            if (param3.field_f[0] <= this.x + var17 &&
-              -var17 + this.x < param3.field_f[1] &&
-              this.y + var17 >= param3.field_f[2] &&
-              param3.field_f[3] > this.y - var17) {
+            if (param3.worldBounds[0] <= this.x + var17 &&
+              -var17 + this.x < param3.worldBounds[1] &&
+              this.y + var17 >= param3.worldBounds[2] &&
+              param3.worldBounds[3] > this.y - var17) {
               var13.drawScaled(var15, var16, var14, var14, 2, var11, 1);
               return;
             }
             return;
           }
-          SetMissileLauncherEnergyUsed.a(var11, (byte) 7, (int)var8, param3.field_a * (float)var9, var10, (int)var7);
+          SetMissileLauncherEnergyUsed.a(var11, (byte) 7, (int)var8, param3.scale * (float)var9, var10, (int)var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

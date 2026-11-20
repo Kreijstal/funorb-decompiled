@@ -541,16 +541,16 @@ final class OpenGlToolkit extends GraphicsToolkit {
         MonochromeRowCacheEntry.field_e = param1 ? true : false;
     }
 
-    final ka createModel(cbb param0, int param1, int param2, int param3, int param4) {
+    final Model3D createModel(ModelData param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
-        ne stackIn_1_0 = null;
+        OpenGlModel stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = new ne(this, param0, param1, param3, param4, param2);
-          return (ka) ((Object) stackIn_1_0);
+          stackIn_1_0 = new OpenGlModel(this, param0, param1, param3, param4, param2);
+          return (Model3D) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -1285,19 +1285,19 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_qb = new OpenGlTexture2D(this, 3553, 6408, 1, 1);
         OpenGlTexture2D discarded$0 = new OpenGlTexture2D(this, 3553, 6408, 1, 1);
         OpenGlTexture2D discarded$1 = new OpenGlTexture2D(this, 3553, 6408, 1, 1);
-        ne discarded$2 = new ne(this);
-        ne discarded$3 = new ne(this);
-        ne discarded$4 = new ne(this);
-        ne discarded$5 = new ne(this);
-        ne discarded$6 = new ne(this);
-        ne discarded$7 = new ne(this);
-        ne discarded$8 = new ne(this);
-        ne discarded$11 = new ne(this);
+        OpenGlModel discarded$2 = new OpenGlModel(this);
+        OpenGlModel discarded$3 = new OpenGlModel(this);
+        OpenGlModel discarded$4 = new OpenGlModel(this);
+        OpenGlModel discarded$5 = new OpenGlModel(this);
+        OpenGlModel discarded$6 = new OpenGlModel(this);
+        OpenGlModel discarded$7 = new OpenGlModel(this);
+        OpenGlModel discarded$8 = new OpenGlModel(this);
+        OpenGlModel discarded$11 = new OpenGlModel(this);
         if (param0 > -54) {
           this.setTextureCombineMode(102, -80);
         }
-        ne discarded$12 = new ne(this);
-        ne discarded$15 = new ne(this);
+        OpenGlModel discarded$12 = new OpenGlModel(this);
+        OpenGlModel discarded$15 = new OpenGlModel(this);
         if (this.field_U) {
           this.field_pb = new OpenGlFramebuffer(this);
           discarded$16 = new OpenGlFramebuffer(this);

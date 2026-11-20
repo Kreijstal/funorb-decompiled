@@ -96,7 +96,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
         var11 = VoidHunters.field_G;
         var3 = 1;
         if (!GetReverbDamp.field_o &&
-          qw.field_l == null) {
+          OneShotSound.field_l == null) {
           var3 = 0;
         }
         if (0 == ow.field_b &&

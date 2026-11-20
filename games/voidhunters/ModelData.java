@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cbb {
+final class ModelData {
     short[] field_w;
     byte[] field_r;
     qeb[] field_c;
@@ -11,37 +11,37 @@ final class cbb {
     static long field_q;
     int field_D;
     int[] field_f;
-    bqa[] field_g;
+    ModelFaceAttachment[] faceAttachments;
     byte[] field_e;
-    int[] field_p;
+    int[] vertexLabels;
     byte[] field_m;
-    short[] field_o;
+    short[] faceVertexB;
     short[] field_i;
     short[] field_z;
-    int[] field_G;
+    int[] vertexY;
     byte[] field_M;
     byte[] field_J;
-    short[] field_k;
+    short[] faceVertexA;
     int field_B;
     int[] field_I;
     byte[] field_E;
-    int[] field_x;
+    int[] vertexZ;
     int field_s;
     int[] field_a;
-    short[] field_K;
+    short[] faceVertexC;
     byte field_d;
     tn[] field_l;
-    int[] field_y;
-    int[] field_v;
+    int[] faceLabels;
+    int[] vertexX;
     int[] field_F;
     short[] field_H;
     byte[] field_n;
     short[] field_b;
     int[] field_C;
-    int field_j;
+    int faceCount;
     static int field_h;
 
-    final int[][] a(int param0) {
+    final int[][] groupFaceAttachmentIndices(int param0) {
         int var4_int = 0;
         int[] array$2 = null;
         int dupTemp$0 = 0;
@@ -69,8 +69,8 @@ final class cbb {
           this.field_t = (short[]) null;
         }
         var3 = 0;
-        for (var4_int = 0; var4_int < this.field_g.length; var4_int++) {
-          var5 = this.field_g[var4_int].field_a;
+        for (var4_int = 0; var4_int < this.faceAttachments.length; var4_int++) {
+          var5 = this.faceAttachments[var4_int].label;
           if (var5 >= 0) {
             if (var3 < var5) {
               var3 = var5;
@@ -86,8 +86,8 @@ final class cbb {
           var4[var5Lifetime1] = array$2;
           var11[var5Lifetime1] = 0;
         }
-        for (var5Lifetime2 = 0; var5Lifetime2 < this.field_g.length; var5Lifetime2++) {
-          var6 = this.field_g[var5Lifetime2].field_a;
+        for (var5Lifetime2 = 0; var5Lifetime2 < this.faceAttachments.length; var5Lifetime2++) {
+          var6 = this.faceAttachments[var5Lifetime2].label;
           if (var6 >= 0) {
             var12Lifetime1 = var10;
             dupTemp$0 = var2[var6];
@@ -99,7 +99,7 @@ final class cbb {
         return var4;
     }
 
-    final int[][] a(byte param0, boolean param1) {
+    final int[][] groupVertexIndices(byte param0, boolean param1) {
         int var6_int = 0;
         int[] array$2 = null;
         int dupTemp$0 = 0;
@@ -133,10 +133,10 @@ final class cbb {
         }
         var5 = stackIn_3_0;
         if (param0 != -37) {
-          this.a(-13);
+          this.groupFaceAttachmentIndices(-13);
         }
         for (var6_int = 0; var5 > var6_int; var6_int++) {
-          var7 = this.field_p[var6_int];
+          var7 = this.vertexLabels[var6_int];
           if (var7 >= 0) {
             if (var4 < var7) {
               var4 = var7;
@@ -158,7 +158,7 @@ final class cbb {
           if (var7Lifetime2 >= var5) {
             return var6;
           }
-          var8 = this.field_p[var7Lifetime2];
+          var8 = this.vertexLabels[var7Lifetime2];
           if (var8 >= 0) {
             dupTemp$0 = var3[var8];
             arrayValue$1 = var14Lifetime1[var8];
@@ -169,7 +169,7 @@ final class cbb {
         }
     }
 
-    final int[][] b(int param0) {
+    final int[][] groupFaceIndices(int param0) {
         int var4_int = 0;
         int[] array$2 = null;
         int dupTemp$0 = 0;
@@ -194,8 +194,8 @@ final class cbb {
         var8 = var9;
         var2 = var8;
         var3 = 0;
-        for (var4_int = 0; var4_int < this.field_j; var4_int++) {
-          var5 = this.field_y[var4_int];
+        for (var4_int = 0; var4_int < this.faceCount; var4_int++) {
+          var5 = this.faceLabels[var4_int];
           if (var5 >= 0) {
             var8[var5] = var8[var5] + 1;
             if (var5 > var3) {
@@ -211,8 +211,8 @@ final class cbb {
           var4[var5Lifetime1] = array$2;
           var11[var5Lifetime1] = 0;
         }
-        for (var5Lifetime2 = 0; this.field_j > var5Lifetime2; var5Lifetime2++) {
-          var6 = this.field_y[var5Lifetime2];
+        for (var5Lifetime2 = 0; this.faceCount > var5Lifetime2; var5Lifetime2++) {
+          var6 = this.faceLabels[var5Lifetime2];
           if (var6 >= 0) {
             var12Lifetime1 = var10;
             dupTemp$0 = var2[var6];
@@ -224,7 +224,7 @@ final class cbb {
         return var4;
     }
 
-    final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {
+    final static void loadGameSprites(ResourceArchive param0, int param1, ResourceArchive param2) {
         ArgbSprite var8 = null;
         IndexedSpriteData[] var9 = null;
         IndexedSpriteData[] var10 = null;
@@ -360,7 +360,7 @@ final class cbb {
         }
     }
 
-    private cbb() throws Throwable {
+    private ModelData() throws Throwable {
         throw new Error();
     }
 

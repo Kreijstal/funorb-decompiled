@@ -406,7 +406,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
                   }
                   else {
                     if (var12.field_Bb == 2) {
-                      var12.field_Sb.text = glb.field_a;
+                      var12.field_Sb.text = GpuVertexBufferOwner.field_a;
                     } else {
                       var12.field_Mb.text = vq.field_w;
                     }

@@ -60,7 +60,7 @@ final class SetNebulaFadesOutWhenClose extends ConsoleCommand {
                 field_p = 68;
               }
               var2 = new java.net.URL(param1.getCodeBase(), "tosupport.ws");
-              param1.getAppletContext().showDocument(ne.a(var2, (byte) -119, param1), "_top");
+              param1.getAppletContext().showDocument(OpenGlModel.updateUrlSessionSettings(var2, (byte) -119, param1), "_top");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

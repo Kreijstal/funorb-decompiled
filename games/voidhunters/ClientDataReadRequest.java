@@ -20,9 +20,9 @@ final class ClientDataReadRequest extends IntrusiveNode {
           wk.a(4.0f, 0.0f, var6, 255, (float)param1, -1520350600, (float)GetBombletSprayEnergyUsed.field_p.height, (float)param1);
           return;
         }
-        uv.a(param0 ^ 102, -2 + param4, 4 + (param2 - param3), param3 - 2, 16711680, param1 - param4 + 4);
-        uv.a(118, param4 - 1, 2 + (-param3 + param2), param3 - 1, 16755370, param1 + (-param4 + 2));
-        uv.a(108, param4, param2 - param3, param3, 16764108, -param4 + param1);
+        UiToggleButtonRenderer.drawRectangle(param0 ^ 102, -2 + param4, 4 + (param2 - param3), param3 - 2, 16711680, param1 - param4 + 4);
+        UiToggleButtonRenderer.drawRectangle(118, param4 - 1, 2 + (-param3 + param2), param3 - 1, 16755370, param1 + (-param4 + 2));
+        UiToggleButtonRenderer.drawRectangle(108, param4, param2 - param3, param3, 16764108, -param4 + param1);
     }
 
     public static void clearSharedReferences(int param0) {

@@ -48,7 +48,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
           }
           if (null == var2 &&
             !GetReverbDamp.field_o &&
-            qw.field_l == null) {
+            OneShotSound.field_l == null) {
             var2 = SetMomentOfInertiaPerpointCalcDownshift.field_o;
           }
           if (var2 != null) {

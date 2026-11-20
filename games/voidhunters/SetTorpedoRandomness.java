@@ -61,7 +61,7 @@ final class SetTorpedoRandomness extends ConsoleCommand {
           return;
         }
         try {
-          qw.field_l.setBounds(param3 - var9_int / 2, -99, var9_int, -(var12 / 2) + param1, var12);
+          OneShotSound.field_l.setBounds(param3 - var9_int / 2, -99, var9_int, -(var12 / 2) + param1, var12);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mrb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + (param7 != null ? "{...}" : "null") + ',' + param8 + ')');
         }

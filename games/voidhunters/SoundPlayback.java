@@ -3,13 +3,13 @@
  */
 import java.io.*;
 
-final class ana extends IntrusiveNode {
+final class SoundPlayback extends IntrusiveNode {
     static int field_f;
-    PcmSampleStream field_e;
-    int field_d;
-    IntrusiveNode field_g;
+    PcmSampleStream stream;
+    int baseGain;
+    IntrusiveNode lifetimeNode;
 
-    final static byte[] a(File param0, byte param1) {
+    final static byte[] readFile(File param0, byte param1) {
         RuntimeException var2 = null;
         byte[] stackIn_2_0 = null;
         byte[] stackIn_4_0 = null;
@@ -19,7 +19,7 @@ final class ana extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 48) {
-            stackIn_4_0 = ana.a((byte) -123, (int)param0.length(), param0);
+            stackIn_4_0 = SoundPlayback.readFilePrefix((byte) -123, (int)param0.length(), param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = (byte[]) null;
@@ -38,11 +38,11 @@ final class ana extends IntrusiveNode {
         }
     }
 
-    final static void c(byte param0) {
+    final static void checkArithmeticGuard(byte param0) {
         int var1 = -34 / ((param0 - 16) / 54);
     }
 
-    private final static byte[] a(byte param0, int param1, File param2) {
+    private final static byte[] readFilePrefix(byte param0, int param1, File param2) {
         try {
           byte[] var3 = null;
           IOException var3_ref = null;
@@ -57,11 +57,11 @@ final class ana extends IntrusiveNode {
           try {
             try {
               if (param0 > -89) {
-                ana.c((byte) 117);
+                SoundPlayback.checkArithmeticGuard((byte) 117);
               }
               var4 = new byte[param1];
               var3 = var4;
-              TextureRectangleShape.a(param2, param1, var4, (byte) 119);
+              TextureRectangleShape.readFileInto(param2, param1, var4, (byte) 119);
               stackIn_3_0 = var4;
               return stackIn_3_0;
             } catch (java.io.IOException decompiledCaughtParameter0) {
@@ -89,22 +89,22 @@ final class ana extends IntrusiveNode {
         }
     }
 
-    ana(PcmSampleStream param0, IntrusiveNode param1) {
+    SoundPlayback(PcmSampleStream param0, IntrusiveNode param1) {
         try {
-          this.field_e = param0;
-          this.field_d = param0.getTargetGain();
-          this.field_g = param1;
-          this.field_e.setGain(128 + this.field_d * kt.field_l >> 8);
+          this.stream = param0;
+          this.baseGain = param0.getTargetGain();
+          this.lifetimeNode = param1;
+          this.stream.setGain(128 + this.baseGain * kt.soundEffectVolume >> 8);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ana.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void setGainAndPan(int param0, int param1, int param2) {
         param2 = param2 << 6;
         param1 = param1 << 6;
-        this.field_d = param1;
-        this.field_e.setGainAndPan(param0 + param1 * kt.field_l >> 8, param2);
+        this.baseGain = param1;
+        this.stream.setGainAndPan(param0 + param1 * kt.soundEffectVolume >> 8, param2);
     }
 
     static {

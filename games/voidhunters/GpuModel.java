@@ -1,87 +1,87 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class roa extends ka {
+final class GpuModel extends Model3D {
     private int field_Q;
     private int[][] field_a;
     private short[] field_i;
-    private glb field_C;
+    private GpuVertexBufferOwner field_C;
     private int[] field_l;
     private float[] field_D;
     private int field_v;
-    private int field_B;
+    private int minX;
     private int field_L;
-    private int[] field_j;
+    private int[] vertexY;
     private int[] field_g;
-    private boolean field_m;
-    private glb field_h;
-    private int field_z;
+    private boolean boundsValid;
+    private GpuVertexBufferOwner field_h;
+    private int minZ;
     private short[] field_r;
-    private int[] field_K;
+    private int[] vertexX;
     private short[] field_e;
     private short[] field_d;
     private int field_I;
-    private int field_M;
+    private int maxZ;
     private int field_u;
     private float[] field_y;
     private int[] field_t;
     private short[] field_c;
     private short[] field_x;
-    private glb field_o;
-    private int[] field_p;
-    private int field_P;
+    private GpuVertexBufferOwner field_o;
+    private int[] vertexZ;
+    private int vertexCount;
     private byte[] field_b;
-    private int field_G;
+    private int maxX;
     private short[] field_O;
     private short[] field_A;
     private short[] field_f;
     private short[] field_J;
     private gib[] field_E;
     private short[] field_N;
-    private rv field_H;
+    private GpuIndexBufferOwner field_H;
     private int[] field_w;
-    private glb field_q;
+    private GpuVertexBufferOwner field_q;
     private short[] field_F;
     private byte[] field_n;
     private lga[] field_k;
     private int field_s;
 
-    final int HA() {
-        if (!this.field_m) {
-          this.b(-27337);
+    final int getMinZ() {
+        if (!this.boundsValid) {
+          this.updateBounds(-27337);
         }
-        return this.field_z;
+        return this.minZ;
     }
 
-    final void H(int param0, int param1, int param2) {
+    final void translate(int param0, int param1, int param2) {
         int var4 = 0;
         int var5;
         var5 = VoidHunters.field_G;
-        for (var4 = 0; var4 < this.field_P; var4++) {
+        for (var4 = 0; var4 < this.vertexCount; var4++) {
           if (param0 != 0) {
-            this.field_K[var4] = this.field_K[var4] + param0;
+            this.vertexX[var4] = this.vertexX[var4] + param0;
           }
           if (param1 != 0) {
-            this.field_j[var4] = this.field_j[var4] + param1;
+            this.vertexY[var4] = this.vertexY[var4] + param1;
           }
           if (0 != param2) {
-            this.field_p[var4] = this.field_p[var4] + param2;
+            this.vertexZ[var4] = this.vertexZ[var4] + param2;
           }
         }
-        this.a((byte) -53);
-        this.field_m = false;
+        this.onVertexPositionsChanged((byte) -53);
+        this.boundsValid = false;
     }
 
-    private final void a(byte param0) {
+    private final void onVertexPositionsChanged(byte param0) {
         short discarded$0 = 0;
         if (this.field_o != null) {
         }
         if (param0 > -42) {
-          discarded$0 = this.a(73, 73, 17, 37, 0.2685146629810333f, (cbb) null, -53, 101, -66L, 29, 0.045781638473272324f);
+          discarded$0 = this.getOrCreateRenderVertex(73, 73, 17, 37, 0.2685146629810333f, (ModelData) null, -53, 101, -66L, 29, 0.045781638473272324f);
         }
     }
 
-    roa(GpuToolkit param0, cbb param1, int param2, int param3, int param4, int param5) {
+    GpuModel(GpuToolkit param0, ModelData param1, int param2, int param3, int param4, int param5) {
         this(param0, param2, param5, true, false);
         int var9_int = 0;
         int fieldTemp$4 = 0;
@@ -89,7 +89,7 @@ final class roa extends ka {
         short dupTemp$6 = 0;
         short dupTemp$7 = 0;
         int var11_int = 0;
-        vib dupTemp$3 = null;
+        GpuFaceNormal dupTemp$3 = null;
         int[] array$2 = null;
         int dupTemp$0 = 0;
         int[] arrayValue$1 = null;
@@ -112,22 +112,22 @@ final class roa extends ka {
         long[] var9 = null;
         int var10 = 0;
         TextureMetadata var10_ref_opa = null;
-        hu[] var11 = null;
+        GpuVertexNormal[] var11 = null;
         int var12 = 0;
         int var13 = 0;
         Object var13_ref = null;
         int var14 = 0;
         int var15_int = 0;
-        vib[] var15 = null;
+        GpuFaceNormal[] var15 = null;
         int var16 = 0;
         int var17_int = 0;
         int[] var17 = null;
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        bqa var20_ref_bqa = null;
+        ModelFaceAttachment var20_ref_bqa = null;
         int var21 = 0;
-        sr var21_ref_sr = null;
+        ModelFaceAttachmentDefinition var21_ref_sr = null;
         int var22 = 0;
         float var22_float = 0.0f;
         float var23 = 0.0f;
@@ -144,10 +144,10 @@ final class roa extends ka {
         int var29 = 0;
         int var30 = 0;
         int var31 = 0;
-        vib var31_ref_vib = null;
+        GpuFaceNormal var31_ref_vib = null;
         int var32_int = 0;
         long var32 = 0L;
-        vib var32_ref_vib = null;
+        GpuFaceNormal var32_ref_vib = null;
         int var33_int = 0;
         long var33 = 0L;
         int var34 = 0;
@@ -194,16 +194,16 @@ final class roa extends ka {
         TextureMetadata var66 = null;
         TextureMetadata var67 = null;
         long[] var68 = null;
-        bqa var69 = null;
-        sr var70 = null;
-        hu var71 = null;
-        hu var72 = null;
-        hu var73 = null;
+        ModelFaceAttachment var69 = null;
+        ModelFaceAttachmentDefinition var70 = null;
+        GpuVertexNormal var71 = null;
+        GpuVertexNormal var72 = null;
+        GpuVertexNormal var73 = null;
         TextureMetadata var74 = null;
         kua var75 = null;
-        hu var77 = null;
-        hu var78 = null;
-        hu var79 = null;
+        GpuVertexNormal var77 = null;
+        GpuVertexNormal var78 = null;
+        GpuVertexNormal var79 = null;
         int[] var80 = null;
         int[] var81 = null;
         long[] var82 = null;
@@ -258,11 +258,11 @@ final class roa extends ka {
         int var18Lifetime3Lifetime1;
         try {
           var64 = param0.field_a;
-          var81 = new int[param1.field_j];
+          var81 = new int[param1.faceCount];
           var65 = var81;
           var8 = var65;
           this.field_l = new int[param1.field_D + 1];
-          for (var9_int = 0; param1.field_j > var9_int; var9_int++) {
+          for (var9_int = 0; param1.faceCount > var9_int; var9_int++) {
             boolean decompiledFrameRemainder0 = true;
             if (null == param1.field_E ||
               2 != param1.field_E[var9_int]) {
@@ -276,11 +276,11 @@ final class roa extends ka {
                 fieldTemp$4 = this.field_v;
                 this.field_v = this.field_v + 1;
                 var8[fieldTemp$4] = var9_int;
-                dupTemp$5 = param1.field_k[var9_int];
+                dupTemp$5 = param1.faceVertexA[var9_int];
                 this.field_l[dupTemp$5] = this.field_l[dupTemp$5] + 1;
-                dupTemp$6 = param1.field_o[var9_int];
+                dupTemp$6 = param1.faceVertexB[var9_int];
                 this.field_l[dupTemp$6] = this.field_l[dupTemp$6] + 1;
-                dupTemp$7 = param1.field_K[var9_int];
+                dupTemp$7 = param1.faceVertexC[var9_int];
                 this.field_l[dupTemp$7] = this.field_l[dupTemp$7] + 1;
               }
             }
@@ -299,12 +299,12 @@ final class roa extends ka {
             var15_int = 0;
             var16 = 0;
             var17_int = 0;
-            if (param1.field_g != null) {
+            if (param1.faceAttachments != null) {
               var18 = 0;
-              for (var19 = 0; param1.field_g.length > var19; var19++) {
-                var20_ref_bqa = param1.field_g[var19];
-                if (var12 == var20_ref_bqa.field_b) {
-                  var21_ref_sr = GetBombletSprayAimspeed.a(var20_ref_bqa.field_e, 0);
+              for (var19 = 0; param1.faceAttachments.length > var19; var19++) {
+                var20_ref_bqa = param1.faceAttachments[var19];
+                if (var12 == var20_ref_bqa.faceIndex) {
+                  var21_ref_sr = GetBombletSprayAimspeed.getFaceAttachmentDefinition(var20_ref_bqa.definitionId, 0);
                   if (var21_ref_sr.field_a) {
                     var18 = 1;
                   }
@@ -364,21 +364,21 @@ final class roa extends ka {
             }
           }
           GetFighterBayReload.a((byte) -24, var81, var82);
-          this.field_P = param1.field_D;
-          this.field_j = param1.field_G;
-          this.field_p = param1.field_x;
-          this.field_K = param1.field_v;
-          var11 = new hu[this.field_P];
-          if (null != param1.field_g) {
-            this.field_u = param1.field_g.length;
+          this.vertexCount = param1.field_D;
+          this.vertexY = param1.vertexY;
+          this.vertexZ = param1.vertexZ;
+          this.vertexX = param1.vertexX;
+          var11 = new GpuVertexNormal[this.vertexCount];
+          if (null != param1.faceAttachments) {
+            this.field_u = param1.faceAttachments.length;
             this.field_k = new lga[this.field_u];
             this.field_E = new gib[this.field_u];
             for (var12Lifetime1 = 0; this.field_u > var12Lifetime1; var12Lifetime1++) {
-              var69 = param1.field_g[var12Lifetime1];
-              var70 = GetBombletSprayAimspeed.a(var69.field_e, 0);
+              var69 = param1.faceAttachments[var12Lifetime1];
+              var70 = GetBombletSprayAimspeed.getFaceAttachmentDefinition(var69.definitionId, 0);
               var15_intLifetime1 = -1;
               for (var16Lifetime1 = 0; var16Lifetime1 < this.field_v; var16Lifetime1++) {
-                if (var81[var16Lifetime1] != var69.field_b) {
+                if (var81[var16Lifetime1] != var69.faceIndex) {
                   continue;
                 }
                 var15_intLifetime1 = var16Lifetime1;
@@ -387,15 +387,15 @@ final class roa extends ka {
               if (var15_intLifetime1 == -1) {
                 throw new RuntimeException();
               }
-              var16Lifetime1Lifetime1 = 16777215 & GetLagStandardDeviationIn.field_o[param1.field_b[var69.field_b] & 65535];
+              var16Lifetime1Lifetime1 = 16777215 & GetLagStandardDeviationIn.field_o[param1.field_b[var69.faceIndex] & 65535];
               stackIn_63_0 = var16Lifetime1Lifetime1;
               if (param1.field_r == null) {
                 stackIn_64_1 = 0;
               } else {
-                stackIn_64_1 = param1.field_r[var69.field_b];
+                stackIn_64_1 = param1.field_r[var69.faceIndex];
               }
               var16Lifetime1Lifetime2 = stackIn_63_0 | -stackIn_64_1 + 255 << 24;
-              this.field_k[var12Lifetime1] = new lga(var15_intLifetime1, (int) param1.field_k[var69.field_b], (int) param1.field_o[var69.field_b], (int) param1.field_K[var69.field_b], var70.field_g, var70.field_b, var70.field_e, var70.field_d, var70.field_f, var70.field_a, var70.field_c, var69.field_c);
+              this.field_k[var12Lifetime1] = new lga(var15_intLifetime1, (int) param1.faceVertexA[var69.faceIndex], (int) param1.faceVertexB[var69.faceIndex], (int) param1.faceVertexC[var69.faceIndex], var70.field_g, var70.field_b, var70.field_e, var70.field_d, var70.field_f, var70.field_a, var70.field_c, var69.field_c);
               this.field_E[var12Lifetime1] = new gib(var16Lifetime1Lifetime2);
             }
           }
@@ -423,23 +423,23 @@ final class roa extends ka {
           for (var14Lifetime1 = 0; var14Lifetime1 < param1.field_D; var14Lifetime1++) {
             var15_intLifetime2 = this.field_l[var14Lifetime1];
             this.field_l[var14Lifetime1] = var13;
-            var11[var14Lifetime1] = new hu();
+            var11[var14Lifetime1] = new GpuVertexNormal();
             var13 = var13 + var15_intLifetime2;
           }
           this.field_l[param1.field_D] = var13;
           var75 = SetSpecialOrderBoxWidth.a(param1, var81, this.field_v, -3);
-          var15 = new vib[param1.field_j];
+          var15 = new GpuFaceNormal[param1.faceCount];
           var16Lifetime2 = 0;
-          while (var16Lifetime2 < param1.field_j) {
-            var17_intLifetime1 = param1.field_k[var16Lifetime2];
-            var18Lifetime1 = param1.field_o[var16Lifetime2];
-            var19Lifetime1 = param1.field_K[var16Lifetime2];
-            var20 = this.field_K[var18Lifetime1] - this.field_K[var17_intLifetime1];
-            var21 = -this.field_j[var17_intLifetime1] + this.field_j[var18Lifetime1];
-            var22 = -this.field_p[var17_intLifetime1] + this.field_p[var18Lifetime1];
-            var23_int = -this.field_K[var17_intLifetime1] + this.field_K[var19Lifetime1];
-            var24_int = -this.field_j[var17_intLifetime1] + this.field_j[var19Lifetime1];
-            var25_int = this.field_p[var19Lifetime1] - this.field_p[var17_intLifetime1];
+          while (var16Lifetime2 < param1.faceCount) {
+            var17_intLifetime1 = param1.faceVertexA[var16Lifetime2];
+            var18Lifetime1 = param1.faceVertexB[var16Lifetime2];
+            var19Lifetime1 = param1.faceVertexC[var16Lifetime2];
+            var20 = this.vertexX[var18Lifetime1] - this.vertexX[var17_intLifetime1];
+            var21 = -this.vertexY[var17_intLifetime1] + this.vertexY[var18Lifetime1];
+            var22 = -this.vertexZ[var17_intLifetime1] + this.vertexZ[var18Lifetime1];
+            var23_int = -this.vertexX[var17_intLifetime1] + this.vertexX[var19Lifetime1];
+            var24_int = -this.vertexY[var17_intLifetime1] + this.vertexY[var19Lifetime1];
+            var25_int = this.vertexZ[var19Lifetime1] - this.vertexZ[var17_intLifetime1];
             var26_int = -(var22 * var24_int) + var25_int * var21;
             var27_int = -(var20 * var25_int) + var22 * var23_int;
             var28 = -(var23_int * var21) + var20 * var24_int;
@@ -465,28 +465,28 @@ final class roa extends ka {
                 var30 = stackIn_85_0;
                 if (var30 == 0) {
                   var71 = var11[var17_intLifetime1];
-                  var71.field_a = var71.field_a + var26_int;
-                  var71.field_c = var71.field_c + var28;
-                  var71.field_e = var71.field_e + 1;
-                  var71.field_d = var71.field_d + var27_int;
+                  var71.x = var71.x + var26_int;
+                  var71.z = var71.z + var28;
+                  var71.contributionCount = var71.contributionCount + 1;
+                  var71.y = var71.y + var27_int;
                   var72 = var11[var18Lifetime1];
-                  var72.field_a = var72.field_a + var26_int;
-                  var72.field_e = var72.field_e + 1;
-                  var72.field_d = var72.field_d + var27_int;
-                  var72.field_c = var72.field_c + var28;
+                  var72.x = var72.x + var26_int;
+                  var72.contributionCount = var72.contributionCount + 1;
+                  var72.y = var72.y + var27_int;
+                  var72.z = var72.z + var28;
                   var73 = var11[var19Lifetime1];
-                  var73.field_a = var73.field_a + var26_int;
-                  var73.field_d = var73.field_d + var27_int;
-                  var73.field_c = var73.field_c + var28;
-                  var73.field_e = var73.field_e + 1;
+                  var73.x = var73.x + var26_int;
+                  var73.y = var73.y + var27_int;
+                  var73.z = var73.z + var28;
+                  var73.contributionCount = var73.contributionCount + 1;
                 } else {
                   if (1 == var30) {
-                    dupTemp$3 = new vib();
+                    dupTemp$3 = new GpuFaceNormal();
                     var15[var16Lifetime2] = dupTemp$3;
                     var31_ref_vib = dupTemp$3;
-                    var31_ref_vib.field_d = var27_int;
-                    var31_ref_vib.field_a = var26_int;
-                    var31_ref_vib.field_c = var28;
+                    var31_ref_vib.y = var27_int;
+                    var31_ref_vib.x = var26_int;
+                    var31_ref_vib.z = var28;
                   }
                 }
                 var16Lifetime2++;
@@ -546,30 +546,30 @@ final class roa extends ka {
                 var19Lifetime2 = var19Lifetime2 & 255;
                 var31 = param1.field_e[var19Lifetime2];
                 if (var31 == 0) {
-                  var32_int = param1.field_k[var17_intLifetime2];
-                  var33_int = param1.field_o[var17_intLifetime2];
-                  var34 = param1.field_K[var17_intLifetime2];
+                  var32_int = param1.faceVertexA[var17_intLifetime2];
+                  var33_int = param1.faceVertexB[var17_intLifetime2];
+                  var34 = param1.faceVertexC[var17_intLifetime2];
                   var35 = param1.field_t[var19Lifetime2];
                   var36 = param1.field_i[var19Lifetime2];
                   var37 = param1.field_H[var19Lifetime2];
-                  var38 = (float)param1.field_v[var35];
-                  var39 = (float)param1.field_G[var35];
-                  var40 = (float)param1.field_x[var35];
-                  var41 = (float)param1.field_v[var36] - var38;
-                  var42 = (float)param1.field_G[var36] - var39;
-                  var43 = -var40 + (float)param1.field_x[var36];
-                  var44 = -var38 + (float)param1.field_v[var37];
-                  var45 = (float)param1.field_G[var37] - var39;
-                  var46 = (float)param1.field_x[var37] - var40;
-                  var47 = (float)param1.field_v[var32_int] - var38;
-                  var48 = (float)param1.field_G[var32_int] - var39;
-                  var49 = (float)param1.field_x[var32_int] - var40;
-                  var50 = -var38 + (float)param1.field_v[var33_int];
-                  var51 = -var39 + (float)param1.field_G[var33_int];
-                  var52 = (float)param1.field_x[var33_int] - var40;
-                  var53 = -var38 + (float)param1.field_v[var34];
-                  var54 = -var39 + (float)param1.field_G[var34];
-                  var55 = -var40 + (float)param1.field_x[var34];
+                  var38 = (float)param1.vertexX[var35];
+                  var39 = (float)param1.vertexY[var35];
+                  var40 = (float)param1.vertexZ[var35];
+                  var41 = (float)param1.vertexX[var36] - var38;
+                  var42 = (float)param1.vertexY[var36] - var39;
+                  var43 = -var40 + (float)param1.vertexZ[var36];
+                  var44 = -var38 + (float)param1.vertexX[var37];
+                  var45 = (float)param1.vertexY[var37] - var39;
+                  var46 = (float)param1.vertexZ[var37] - var40;
+                  var47 = (float)param1.vertexX[var32_int] - var38;
+                  var48 = (float)param1.vertexY[var32_int] - var39;
+                  var49 = (float)param1.vertexZ[var32_int] - var40;
+                  var50 = -var38 + (float)param1.vertexX[var33_int];
+                  var51 = -var39 + (float)param1.vertexY[var33_int];
+                  var52 = (float)param1.vertexZ[var33_int] - var40;
+                  var53 = -var38 + (float)param1.vertexX[var34];
+                  var54 = -var39 + (float)param1.vertexY[var34];
+                  var55 = -var40 + (float)param1.vertexZ[var34];
                   var56 = -(var43 * var45) + var42 * var46;
                   var57 = -(var41 * var46) + var44 * var43;
                   var58 = var45 * var41 - var42 * var44;
@@ -588,9 +588,9 @@ final class roa extends ka {
                   var23 = var62Lifetime1 * (var48 * var60Lifetime1 + var47 * var59Lifetime1 + var49 * var61Lifetime1);
                   var27 = (var55 * var61Lifetime1 + (var54 * var60Lifetime1 + var59Lifetime1 * var53)) * var62Lifetime1;
                 } else {
-                  var32_int = param1.field_k[var17_intLifetime2];
-                  var33_int = param1.field_o[var17_intLifetime2];
-                  var34 = param1.field_K[var17_intLifetime2];
+                  var32_int = param1.faceVertexA[var17_intLifetime2];
+                  var33_int = param1.faceVertexB[var17_intLifetime2];
+                  var34 = param1.faceVertexC[var17_intLifetime2];
                   var35 = var75.field_d[var19Lifetime2];
                   var36 = var75.field_b[var19Lifetime2];
                   var37 = var75.field_f[var19Lifetime2];
@@ -601,12 +601,12 @@ final class roa extends ka {
                     if (2 == var31) {
                       var41 = (float)param1.field_f[var19Lifetime2] / 256.0f;
                       var42 = (float)param1.field_I[var19Lifetime2] / 256.0f;
-                      var43_int = param1.field_v[var33_int] - param1.field_v[var32_int];
-                      var44_int = -param1.field_G[var32_int] + param1.field_G[var33_int];
-                      var45_int = -param1.field_x[var32_int] + param1.field_x[var33_int];
-                      var46_int = -param1.field_v[var32_int] + param1.field_v[var34];
-                      var47_int = param1.field_G[var34] - param1.field_G[var32_int];
-                      var48_int = param1.field_x[var34] - param1.field_x[var32_int];
+                      var43_int = param1.vertexX[var33_int] - param1.vertexX[var32_int];
+                      var44_int = -param1.vertexY[var32_int] + param1.vertexY[var33_int];
+                      var45_int = -param1.vertexZ[var32_int] + param1.vertexZ[var33_int];
+                      var46_int = -param1.vertexX[var32_int] + param1.vertexX[var34];
+                      var47_int = param1.vertexY[var34] - param1.vertexY[var32_int];
+                      var48_int = param1.vertexZ[var34] - param1.vertexZ[var32_int];
                       var49_int = var48_int * var44_int - var47_int * var45_int;
                       var50_int = var45_int * var46_int - var48_int * var43_int;
                       var51_int = -(var44_int * var46_int) + var43_int * var47_int;
@@ -617,24 +617,24 @@ final class roa extends ka {
                       var56 = (var86[5] * (float)var51_int + ((float)var50_int * var86[4] + (float)var49_int * var86[3])) / var53;
                       var57 = (var86[7] * (float)var50_int + (float)var49_int * var86[6] + (float)var51_int * var86[8]) / var54;
                       var30Lifetime1 = GetSniperCannonRandomness.a(-74, var56, var55, var57);
-                      SetPointDefenceLaserRandomness.a(var42, param1.field_x[var32_int], var41, (byte) 47, param1.field_v[var32_int], var37, param1.field_G[var32_int], var30Lifetime1, GetAutozoomSpeedDivide.field_o, var35, var39_int, var86, var36, var40);
+                      SetPointDefenceLaserRandomness.a(var42, param1.vertexZ[var32_int], var41, (byte) 47, param1.vertexX[var32_int], var37, param1.vertexY[var32_int], var30Lifetime1, GetAutozoomSpeedDivide.field_o, var35, var39_int, var86, var36, var40);
                       var23 = GetAutozoomSpeedDivide.field_o[1];
                       var22_float = GetAutozoomSpeedDivide.field_o[0];
-                      SetPointDefenceLaserRandomness.a(var42, param1.field_x[var33_int], var41, (byte) 81, param1.field_v[var33_int], var37, param1.field_G[var33_int], var30Lifetime1, GetAutozoomSpeedDivide.field_o, var35, var39_int, var86, var36, var40);
+                      SetPointDefenceLaserRandomness.a(var42, param1.vertexZ[var33_int], var41, (byte) 81, param1.vertexX[var33_int], var37, param1.vertexY[var33_int], var30Lifetime1, GetAutozoomSpeedDivide.field_o, var35, var39_int, var86, var36, var40);
                       var24 = GetAutozoomSpeedDivide.field_o[0];
                       var25 = GetAutozoomSpeedDivide.field_o[1];
-                      SetPointDefenceLaserRandomness.a(var42, param1.field_x[var34], var41, (byte) 39, param1.field_v[var34], var37, param1.field_G[var34], var30Lifetime1, GetAutozoomSpeedDivide.field_o, var35, var39_int, var86, var36, var40);
+                      SetPointDefenceLaserRandomness.a(var42, param1.vertexZ[var34], var41, (byte) 39, param1.vertexX[var34], var37, param1.vertexY[var34], var30Lifetime1, GetAutozoomSpeedDivide.field_o, var35, var39_int, var86, var36, var40);
                       var26 = GetAutozoomSpeedDivide.field_o[0];
                       var27 = GetAutozoomSpeedDivide.field_o[1];
                     } else {
                       if (var31 == 3) {
-                        CommonGameState.a(var86, param1.field_x[var32_int], var40, GetAutozoomSpeedDivide.field_o, var37, param1.field_v[var32_int], (byte) -82, var36, param1.field_G[var32_int], var39_int, var35);
+                        CommonGameState.a(var86, param1.vertexZ[var32_int], var40, GetAutozoomSpeedDivide.field_o, var37, param1.vertexX[var32_int], (byte) -82, var36, param1.vertexY[var32_int], var39_int, var35);
                         var23 = GetAutozoomSpeedDivide.field_o[1];
                         var22_float = GetAutozoomSpeedDivide.field_o[0];
-                        CommonGameState.a(var86, param1.field_x[var33_int], var40, GetAutozoomSpeedDivide.field_o, var37, param1.field_v[var33_int], (byte) -82, var36, param1.field_G[var33_int], var39_int, var35);
+                        CommonGameState.a(var86, param1.vertexZ[var33_int], var40, GetAutozoomSpeedDivide.field_o, var37, param1.vertexX[var33_int], (byte) -82, var36, param1.vertexY[var33_int], var39_int, var35);
                         var25 = GetAutozoomSpeedDivide.field_o[1];
                         var24 = GetAutozoomSpeedDivide.field_o[0];
-                        CommonGameState.a(var86, param1.field_x[var34], var40, GetAutozoomSpeedDivide.field_o, var37, param1.field_v[var34], (byte) -82, var36, param1.field_G[var34], var39_int, var35);
+                        CommonGameState.a(var86, param1.vertexZ[var34], var40, GetAutozoomSpeedDivide.field_o, var37, param1.vertexX[var34], (byte) -82, var36, param1.vertexY[var34], var39_int, var35);
                         var26 = GetAutozoomSpeedDivide.field_o[0];
                         var27 = GetAutozoomSpeedDivide.field_o[1];
                         if ((1 & var39_int) != 0) {
@@ -680,13 +680,13 @@ final class roa extends ka {
                     }
                   } else {
                     var41 = (float)param1.field_C[var19Lifetime2] / 1024.0f;
-                    TextEncodings.computeCylindricalTextureCoordinates(var86, var36, var39_int, var40, param1.field_v[var32_int], param1.field_G[var32_int], (byte) -52, var41, var37, GetAutozoomSpeedDivide.field_o, var35, param1.field_x[var32_int]);
+                    TextEncodings.computeCylindricalTextureCoordinates(var86, var36, var39_int, var40, param1.vertexX[var32_int], param1.vertexY[var32_int], (byte) -52, var41, var37, GetAutozoomSpeedDivide.field_o, var35, param1.vertexZ[var32_int]);
                     var22_float = GetAutozoomSpeedDivide.field_o[0];
                     var23 = GetAutozoomSpeedDivide.field_o[1];
-                    TextEncodings.computeCylindricalTextureCoordinates(var86, var36, var39_int, var40, param1.field_v[var33_int], param1.field_G[var33_int], (byte) -52, var41, var37, GetAutozoomSpeedDivide.field_o, var35, param1.field_x[var33_int]);
+                    TextEncodings.computeCylindricalTextureCoordinates(var86, var36, var39_int, var40, param1.vertexX[var33_int], param1.vertexY[var33_int], (byte) -52, var41, var37, GetAutozoomSpeedDivide.field_o, var35, param1.vertexZ[var33_int]);
                     var25 = GetAutozoomSpeedDivide.field_o[1];
                     var24 = GetAutozoomSpeedDivide.field_o[0];
-                    TextEncodings.computeCylindricalTextureCoordinates(var86, var36, var39_int, var40, param1.field_v[var34], param1.field_G[var34], (byte) -52, var41, var37, GetAutozoomSpeedDivide.field_o, var35, param1.field_x[var34]);
+                    TextEncodings.computeCylindricalTextureCoordinates(var86, var36, var39_int, var40, param1.vertexX[var34], param1.vertexY[var34], (byte) -52, var41, var37, GetAutozoomSpeedDivide.field_o, var35, param1.vertexZ[var34]);
                     var27 = GetAutozoomSpeedDivide.field_o[1];
                     var26 = GetAutozoomSpeedDivide.field_o[0];
                     var42 = var41 / 2.0f;
@@ -740,28 +740,28 @@ final class roa extends ka {
             }
             if (var31Lifetime1 == 0) {
               var32 = ((long)var20Lifetime1 + (long)(var30Lifetime1 << 24) + (long)(var18Lifetime2 << 8) << 32) + (long)(var19Lifetime2 << 2);
-              var34Lifetime1 = param1.field_k[var17_intLifetime2];
-              var35Lifetime1 = param1.field_o[var17_intLifetime2];
-              var36Lifetime1 = param1.field_K[var17_intLifetime2];
+              var34Lifetime1 = param1.faceVertexA[var17_intLifetime2];
+              var35Lifetime1 = param1.faceVertexB[var17_intLifetime2];
+              var36Lifetime1 = param1.faceVertexC[var17_intLifetime2];
               var77 = var11[var34Lifetime1];
-              this.field_N[var16Lifetime3] = this.a(var77.field_d, var16Lifetime3, var34Lifetime1, 31809, var22_float, param1, var77.field_e, var77.field_c, var32, var77.field_a, var23);
+              this.field_N[var16Lifetime3] = this.getOrCreateRenderVertex(var77.y, var16Lifetime3, var34Lifetime1, 31809, var22_float, param1, var77.contributionCount, var77.z, var32, var77.x, var23);
               var78 = var11[var35Lifetime1];
-              this.field_e[var16Lifetime3] = this.a(var78.field_d, var16Lifetime3, var35Lifetime1, 31809, var24, param1, var78.field_e, var78.field_c, var32 + (long)var28Lifetime1, var78.field_a, var25);
+              this.field_e[var16Lifetime3] = this.getOrCreateRenderVertex(var78.y, var16Lifetime3, var35Lifetime1, 31809, var24, param1, var78.contributionCount, var78.z, var32 + (long)var28Lifetime1, var78.x, var25);
               var79 = var11[var36Lifetime1];
-              this.field_i[var16Lifetime3] = this.a(var79.field_d, var16Lifetime3, var36Lifetime1, 31809, var26, param1, var79.field_e, var79.field_c, var32 + (long)var29Lifetime1, var79.field_a, var27);
+              this.field_i[var16Lifetime3] = this.getOrCreateRenderVertex(var79.y, var16Lifetime3, var36Lifetime1, 31809, var26, param1, var79.contributionCount, var79.z, var32 + (long)var29Lifetime1, var79.x, var27);
             } else {
               if (var31Lifetime1 == 1) {
                 var32_ref_vib = var15[var17_intLifetime2];
-                stackIn_155_0 = (256 + var32_ref_vib.field_c << 22) + (var19Lifetime2 << 2);
-                if (var32_ref_vib.field_a > 0) {
+                stackIn_155_0 = (256 + var32_ref_vib.z << 22) + (var19Lifetime2 << 2);
+                if (var32_ref_vib.x > 0) {
                   stackIn_156_1 = 1024;
                 } else {
                   stackIn_156_1 = 2048;
                 }
-                var33 = (long)(stackIn_155_0 + (stackIn_156_1 + (var32_ref_vib.field_d + 256 << 12))) + ((long)(var30Lifetime1 << 24) + (long)(var18Lifetime2 << 8) + (long)var20Lifetime1 << 32);
-                this.field_N[var16Lifetime3] = this.a(var32_ref_vib.field_d, var16Lifetime3, (int) param1.field_k[var17_intLifetime2], 31809, var22_float, param1, 0, var32_ref_vib.field_c, var33, var32_ref_vib.field_a, var23);
-                this.field_e[var16Lifetime3] = this.a(var32_ref_vib.field_d, var16Lifetime3, (int) param1.field_o[var17_intLifetime2], 31809, var24, param1, 0, var32_ref_vib.field_c, var33 + (long)var28Lifetime1, var32_ref_vib.field_a, var25);
-                this.field_i[var16Lifetime3] = this.a(var32_ref_vib.field_d, var16Lifetime3, (int) param1.field_K[var17_intLifetime2], 31809, var26, param1, 0, var32_ref_vib.field_c, var33 + (long)var29Lifetime1, var32_ref_vib.field_a, var27);
+                var33 = (long)(stackIn_155_0 + (stackIn_156_1 + (var32_ref_vib.y + 256 << 12))) + ((long)(var30Lifetime1 << 24) + (long)(var18Lifetime2 << 8) + (long)var20Lifetime1 << 32);
+                this.field_N[var16Lifetime3] = this.getOrCreateRenderVertex(var32_ref_vib.y, var16Lifetime3, (int) param1.faceVertexA[var17_intLifetime2], 31809, var22_float, param1, 0, var32_ref_vib.z, var33, var32_ref_vib.x, var23);
+                this.field_e[var16Lifetime3] = this.getOrCreateRenderVertex(var32_ref_vib.y, var16Lifetime3, (int) param1.faceVertexB[var17_intLifetime2], 31809, var24, param1, 0, var32_ref_vib.z, var33 + (long)var28Lifetime1, var32_ref_vib.x, var25);
+                this.field_i[var16Lifetime3] = this.getOrCreateRenderVertex(var32_ref_vib.y, var16Lifetime3, (int) param1.faceVertexC[var17_intLifetime2], 31809, var26, param1, 0, var32_ref_vib.z, var33 + (long)var29Lifetime1, var32_ref_vib.x, var27);
               }
             }
             if (param1.field_r != null) {
@@ -838,22 +838,22 @@ final class roa extends ka {
           this.field_b = TextureCombineOperation.a(this.field_b, this.field_L, -28321);
           this.field_D = OpenGlGpuToolkit.a(this.field_D, this.field_L, 7353);
           this.field_y = OpenGlGpuToolkit.a(this.field_y, this.field_L, 7353);
-          if (null != param1.field_p &&
+          if (null != param1.vertexLabels &&
             GetLaserBeamProjectileDamage.a((byte) 11, this.field_s, param2)) {
-            param1.a((byte) -37, false);
+            param1.groupVertexIndices((byte) -37, false);
           }
-          if (null != param1.field_g &&
+          if (null != param1.faceAttachments &&
             TileTextureOperation.a(param2, this.field_s, false)) {
-            param1.a(-126);
+            param1.groupFaceAttachmentIndices(-126);
           }
-          if (null != param1.field_y &&
+          if (null != param1.faceLabels &&
             SetSalvoHoldable.a(this.field_s, param2, -2679)) {
             var16Lifetime5 = 0;
             var84 = new int[256];
             var80 = var84;
             var17 = var80;
             for (var18Lifetime4 = 0; this.field_v > var18Lifetime4; var18Lifetime4++) {
-              var19Lifetime4 = param1.field_y[var81[var18Lifetime4]];
+              var19Lifetime4 = param1.faceLabels[var81[var18Lifetime4]];
               if (0 <= var19Lifetime4) {
                 if (var19Lifetime4 > var16Lifetime5) {
                   var16Lifetime5 = var19Lifetime4;
@@ -868,7 +868,7 @@ final class roa extends ka {
               var84[var18Lifetime4] = 0;
             }
             for (var18Lifetime4 = 0; var18Lifetime4 < this.field_v; var18Lifetime4++) {
-              var19Lifetime4Lifetime1 = param1.field_y[var81[var18Lifetime4]];
+              var19Lifetime4Lifetime1 = param1.faceLabels[var81[var18Lifetime4]];
               if (var19Lifetime4Lifetime1 >= 0) {
                 dupTemp$0 = var17[var19Lifetime4Lifetime1];
                 arrayValue$1 = this.field_a[var19Lifetime4Lifetime1];
@@ -899,14 +899,14 @@ final class roa extends ka {
         }
     }
 
-    final int V() {
-        if (!this.field_m) {
-          this.b(-27337);
+    final int getMinX() {
+        if (!this.boundsValid) {
+          this.updateBounds(-27337);
         }
-        return this.field_B;
+        return this.minX;
     }
 
-    private final short a(int param0, int param1, int param2, int param3, float param4, cbb param5, int param6, int param7, long param8, int param9, float param10) {
+    private final short getOrCreateRenderVertex(int param0, int param1, int param2, int param3, float param4, ModelData param5, int param6, int param7, long param8, int param9, float param10) {
         int fieldTemp$0 = 0;
         int stackIn_3_0 = 0;
         short stackIn_11_0 = 0;
@@ -973,26 +973,26 @@ final class roa extends ka {
         }
     }
 
-    final void O(int param0, int param1, int param2) {
+    final void scale(int param0, int param1, int param2) {
         int var4 = 0;
         int var5;
         var5 = VoidHunters.field_G;
-        for (var4 = 0; var4 < this.field_P; var4++) {
+        for (var4 = 0; var4 < this.vertexCount; var4++) {
           if (param0 != 128) {
-            this.field_K[var4] = param0 * this.field_K[var4] >> 7;
+            this.vertexX[var4] = param0 * this.vertexX[var4] >> 7;
           }
           if (param1 != 128) {
-            this.field_j[var4] = this.field_j[var4] * param1 >> 7;
+            this.vertexY[var4] = this.vertexY[var4] * param1 >> 7;
           }
           if (param2 != 128) {
-            this.field_p[var4] = param2 * this.field_p[var4] >> 7;
+            this.vertexZ[var4] = param2 * this.vertexZ[var4] >> 7;
           }
         }
-        this.a((byte) -111);
-        this.field_m = false;
+        this.onVertexPositionsChanged((byte) -111);
+        this.boundsValid = false;
     }
 
-    private final void b(int param0) {
+    private final void updateBounds(int param0) {
         int var10 = 0;
         int var2;
         int var3;
@@ -1017,9 +1017,9 @@ final class roa extends ka {
         var7 = -32768;
         var8 = 0;
         var9 = 0;
-        for (var10 = 0; var10 < this.field_P; var10++) {
-          var11 = this.field_K[var10];
-          var12 = this.field_j[var10];
+        for (var10 = 0; var10 < this.vertexCount; var10++) {
+          var11 = this.vertexX[var10];
+          var12 = this.vertexY[var10];
           if (var3 > var12) {
             var3 = var12;
           }
@@ -1029,7 +1029,7 @@ final class roa extends ka {
           if (var11 > var5) {
             var5 = var11;
           }
-          var13 = this.field_p[var10];
+          var13 = this.vertexZ[var10];
           if (var11 < var2) {
             var2 = var11;
           }
@@ -1048,54 +1048,54 @@ final class roa extends ka {
             var9 = var14Lifetime1;
           }
         }
-        this.field_z = var4;
-        this.field_M = var7;
+        this.minZ = var4;
+        this.maxZ = var7;
         if (param0 != -27337) {
           return;
         }
-        this.field_B = var2;
-        this.field_G = var5;
+        this.minX = var2;
+        this.maxX = var5;
         Math.sqrt((double)var8);
         Math.sqrt((double)var9);
-        this.field_m = true;
+        this.boundsValid = true;
     }
 
-    final int G() {
-        if (!this.field_m) {
-          this.b(-27337);
+    final int getMaxZ() {
+        if (!this.boundsValid) {
+          this.updateBounds(-27337);
         }
-        return this.field_M;
+        return this.maxZ;
     }
 
-    final void a(int param0) {
+    final void releaseBuffers(int param0) {
         if (param0 != 26385) {
           this.field_x = (short[]) null;
         }
         if (this.field_o != null) {
-          this.field_o.a(26363);
+          this.field_o.release(26363);
         }
         if (null != this.field_q) {
-          this.field_q.a(26363);
+          this.field_q.release(26363);
         }
         if (null != this.field_C) {
-          this.field_C.a(param0 ^ 490);
+          this.field_C.release(param0 ^ 490);
         }
         if (this.field_h != null) {
-          this.field_h.a(26363);
+          this.field_h.release(26363);
         }
         if (null != this.field_H) {
-          this.field_H.a((byte) -35);
+          this.field_H.release((byte) -35);
         }
     }
 
-    final int RA() {
-        if (!this.field_m) {
-          this.b(-27337);
+    final int getMaxX() {
+        if (!this.boundsValid) {
+          this.updateBounds(-27337);
         }
-        return this.field_G;
+        return this.maxX;
     }
 
-    roa(GpuToolkit param0, int param1, int param2, boolean param3, boolean param4) {
+    GpuModel(GpuToolkit param0, int param1, int param2, boolean param3, boolean param4) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -1103,33 +1103,33 @@ final class roa extends ka {
         RuntimeException var6 = null;
         this.field_Q = 0;
         this.field_v = 0;
-        this.field_P = 0;
-        this.field_m = false;
+        this.vertexCount = 0;
+        this.boundsValid = false;
         this.field_L = 0;
         try {
           this.field_I = param1;
           this.field_s = param2;
           if (param3 ||
             SetDebrisThrowable.a((byte) -89, this.field_I, this.field_s)) {
-            this.field_o = new glb(lga.a(14216, this.field_s, this.field_I));
+            this.field_o = new GpuVertexBufferOwner(lga.a(14216, this.field_s, this.field_I));
           }
           if (param3 ||
             SetHealthBarWidth.a(this.field_s, false, this.field_I)) {
-            this.field_q = new glb(cma.a(this.field_s, this.field_I, -22785));
+            this.field_q = new GpuVertexBufferOwner(cma.a(this.field_s, this.field_I, -22785));
           }
           if (param3 ||
             GetUseCircleFill.a(this.field_I, (byte) -111, this.field_s)) {
-            this.field_C = new glb(GpuToolkit.a(0, this.field_I, this.field_s));
+            this.field_C = new GpuVertexBufferOwner(GpuToolkit.a(0, this.field_I, this.field_s));
           }
           if (param3 ||
             SocketNetworkArchiveClient.a(this.field_s, (byte) 127, this.field_I)) {
-            this.field_h = new glb(MissionState.a(this.field_s, this.field_I, (byte) 30));
+            this.field_h = new GpuVertexBufferOwner(MissionState.a(this.field_s, this.field_I, (byte) 30));
           }
           if (!param3 &&
             !MovingObjectFactory.a(this.field_s, -1104, this.field_I)) {
             return;
           }
-          this.field_H = new rv(iea.a(this.field_I, this.field_s, (byte) -106));
+          this.field_H = new GpuIndexBufferOwner(iea.a(this.field_I, this.field_s, (byte) -106));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

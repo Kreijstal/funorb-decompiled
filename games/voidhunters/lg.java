@@ -34,7 +34,7 @@ final class lg extends uj {
         if (param0 != -1) {
           return 56;
         }
-        return cbb.field_h;
+        return ModelData.field_h;
     }
 
     public static void clearSharedReferences(int param0) {

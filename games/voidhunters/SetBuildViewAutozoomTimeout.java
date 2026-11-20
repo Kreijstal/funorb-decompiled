@@ -39,7 +39,7 @@ final class SetBuildViewAutozoomTimeout extends ConsoleCommand {
     final static void a(boolean param0, int param1, int param2, int param3, int param4) {
         if (param0) {
           if (OpenGlTexture1D.field_i) {
-            mmb.field_d[param4].draw(param2, param3, 0, 16777215 | param1 << 24, 1);
+            OpenGlVertexNormal.field_d[param4].draw(param2, param3, 0, 16777215 | param1 << 24, 1);
           }
           return;
         }

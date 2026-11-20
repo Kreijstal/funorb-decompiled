@@ -124,16 +124,16 @@ final class SoftwareRenderContext {
     }
 
     SoftwareRenderContext(SoftwareToolkit param0) {
-        b discarded$12 = null;
-        b discarded$13 = null;
-        b discarded$14 = null;
-        b discarded$15 = null;
-        b discarded$16 = null;
-        b discarded$17 = null;
-        b discarded$18 = null;
-        b discarded$19 = null;
-        b discarded$20 = null;
-        b discarded$21 = null;
+        SoftwareModel discarded$12 = null;
+        SoftwareModel discarded$13 = null;
+        SoftwareModel discarded$14 = null;
+        SoftwareModel discarded$15 = null;
+        SoftwareModel discarded$16 = null;
+        SoftwareModel discarded$17 = null;
+        SoftwareModel discarded$18 = null;
+        SoftwareModel discarded$19 = null;
+        SoftwareModel discarded$20 = null;
+        SoftwareModel discarded$21 = null;
         int var2_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -146,18 +146,18 @@ final class SoftwareRenderContext {
         try {
           this.toolkit = param0;
           this.rasterizer = new SoftwareTriangleRasterizer(param0, this);
-          discarded$12 = new b(this.toolkit);
-          discarded$13 = new b(this.toolkit);
-          discarded$14 = new b(this.toolkit);
-          discarded$15 = new b(this.toolkit);
-          discarded$16 = new b(this.toolkit);
-          discarded$17 = new b(this.toolkit);
-          discarded$18 = new b(this.toolkit);
-          discarded$19 = new b(this.toolkit);
-          discarded$20 = new b(this.toolkit);
-          discarded$21 = new b(this.toolkit);
-          this.field_b = new int[b.field_v];
-          for (var2_int = 0; var2_int < b.field_v; var2_int++) {
+          discarded$12 = new SoftwareModel(this.toolkit);
+          discarded$13 = new SoftwareModel(this.toolkit);
+          discarded$14 = new SoftwareModel(this.toolkit);
+          discarded$15 = new SoftwareModel(this.toolkit);
+          discarded$16 = new SoftwareModel(this.toolkit);
+          discarded$17 = new SoftwareModel(this.toolkit);
+          discarded$18 = new SoftwareModel(this.toolkit);
+          discarded$19 = new SoftwareModel(this.toolkit);
+          discarded$20 = new SoftwareModel(this.toolkit);
+          discarded$21 = new SoftwareModel(this.toolkit);
+          this.field_b = new int[SoftwareModel.field_v];
+          for (var2_int = 0; var2_int < SoftwareModel.field_v; var2_int++) {
             this.field_b[var2_int] = -1;
           }
           return;

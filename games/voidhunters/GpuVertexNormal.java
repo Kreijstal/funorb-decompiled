@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class hu {
-    int field_d;
-    int field_c;
-    int field_e;
+final class GpuVertexNormal {
+    int y;
+    int z;
+    int contributionCount;
     static int field_b;
-    int field_a;
+    int x;
 
     static {
         field_b = 0;

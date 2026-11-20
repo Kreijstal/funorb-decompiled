@@ -645,7 +645,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime27 = HuffmanCodec.fetchLocalizedResource((byte) -120, "disconnected_for_x_minutes_idle");
           if (null != var2Lifetime27) {
-            mmb.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime27);
+            OpenGlVertexNormal.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime27);
           }
           var2Lifetime28 = HuffmanCodec.fetchLocalizedResource((byte) -74, "unknown");
           if (null != var2Lifetime28) {
@@ -817,7 +817,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime70 = HuffmanCodec.fetchLocalizedResource((byte) -44, "keycode_countermeasures_launch");
           if (null != var2Lifetime70) {
-            cbb.field_h = 255 & var2Lifetime70[0];
+            ModelData.field_h = 255 & var2Lifetime70[0];
           }
           var2Lifetime71 = HuffmanCodec.fetchLocalizedResource((byte) -94, "keycode_self_destruct_prepare_toggle");
           if (var2Lifetime71 != null) {
@@ -1109,7 +1109,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime143 = HuffmanCodec.fetchLocalizedResource((byte) -55, "COMPONENT_THRUSTER_SMALL_TEXT");
           if (null != var2Lifetime143) {
-            ne.field_m = Cp1252Strings.decode((byte) -125, var2Lifetime143);
+            OpenGlModel.field_m = Cp1252Strings.decode((byte) -125, var2Lifetime143);
           }
           var2Lifetime144 = HuffmanCodec.fetchLocalizedResource((byte) -116, "COMPONENT_THRUSTER_STANDARD_TEXT");
           if (null != var2Lifetime144) {
@@ -1653,15 +1653,15 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime279 = HuffmanCodec.fetchLocalizedResource((byte) -30, "team_names,0");
           if (var2Lifetime279 != null) {
-            glb.field_c[0] = Cp1252Strings.decode((byte) -125, var2Lifetime279);
+            GpuVertexBufferOwner.field_c[0] = Cp1252Strings.decode((byte) -125, var2Lifetime279);
           }
           var2Lifetime280 = HuffmanCodec.fetchLocalizedResource((byte) -9, "team_names,1");
           if (null != var2Lifetime280) {
-            glb.field_c[1] = Cp1252Strings.decode((byte) -125, var2Lifetime280);
+            GpuVertexBufferOwner.field_c[1] = Cp1252Strings.decode((byte) -125, var2Lifetime280);
           }
           var2Lifetime281 = HuffmanCodec.fetchLocalizedResource((byte) -39, "team_names,2");
           if (null != var2Lifetime281) {
-            glb.field_c[2] = Cp1252Strings.decode((byte) -125, var2Lifetime281);
+            GpuVertexBufferOwner.field_c[2] = Cp1252Strings.decode((byte) -125, var2Lifetime281);
           }
           var2Lifetime282 = HuffmanCodec.fetchLocalizedResource((byte) -40, "game_restart_timer");
           if (var2Lifetime282 != null) {

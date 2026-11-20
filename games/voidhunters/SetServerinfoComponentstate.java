@@ -93,7 +93,7 @@ final class SetServerinfoComponentstate extends ConsoleCommand {
             return stackIn_3_0;
           }
           if (var2_int > 255) {
-            stackIn_7_0 = qw.field_j;
+            stackIn_7_0 = OneShotSound.field_j;
             return stackIn_7_0;
           }
           var3 = SetFighterBayAimspeed.a((byte) -67, '.', param1);

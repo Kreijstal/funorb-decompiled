@@ -13,7 +13,7 @@ final class mw extends qg {
         if (param0 != 0) {
           return -5L;
         }
-        return wt.a(false) - cbb.field_q;
+        return wt.a(false) - ModelData.field_q;
     }
 
     final void a(int param0) {

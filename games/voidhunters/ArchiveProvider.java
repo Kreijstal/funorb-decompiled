@@ -12,46 +12,46 @@ abstract class ArchiveProvider {
 
     abstract byte[] fetchGroup(int param0, int param1);
 
-    final static void a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
+    final static void playSpatialSound(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         RuntimeException decompiledCaughtException = null;
-        qw var6 = null;
+        OneShotSound var6 = null;
         int var6_int = 0;
         RuntimeException var6_ref = null;
         int var7 = 0;
         int var8 = 0;
-        ana var9 = null;
+        SoundPlayback var9 = null;
         int var9_int = 0;
-        qw var10 = null;
+        OneShotSound var10 = null;
         int var11 = 0;
         int var7Lifetime1;
         int var8Lifetime1;
         var11 = VoidHunters.field_G;
         try {
           if (param3) {
-            ArchiveProvider.a(-3, 82, -123, true, 37, 119);
+            ArchiveProvider.playSpatialSound(-3, 82, -123, true, 37, 119);
           }
           if (null != NetworkGameClient.activeOneShotSounds &&
             null != TextureTransformMode.field_a) {
-            var6 = (qw) (NetworkGameClient.activeOneShotSounds.first(0));
+            var6 = (OneShotSound) (NetworkGameClient.activeOneShotSounds.first(0));
             while (var6 != null) {
-              if (var6.field_f == param4 &&
-                var6.field_m &&
-                Math.abs(-SetReverbDry.field_o + var6.field_i) < param0) {
-                if (var6.field_i == SetReverbDry.field_o) {
+              if (var6.sampleId == param4 &&
+                var6.positional &&
+                Math.abs(-SetReverbDry.field_o + var6.startedAt) < param0) {
+                if (var6.startedAt == SetReverbDry.field_o) {
                   return;
                 }
-                var7 = -param2 + var6.field_d;
-                var8 = var6.field_h - param1;
+                var7 = -param2 + var6.x;
+                var8 = var6.y - param1;
                 var9_int = TextLayout.approximateVectorLength(var7, (byte) 109, var8);
                 if (var9_int < Projectile.field_q) {
-                  VariableCondition.a(var6.field_d + 65536, var6.field_h, var6.field_h, var6.field_d, (byte) -54);
+                  VariableCondition.a(var6.x + 65536, var6.y, var6.y, var6.x, (byte) -54);
                   return;
                 }
               }
-              var6 = (qw) (NetworkGameClient.activeOneShotSounds.next((byte) 127));
+              var6 = (OneShotSound) (NetworkGameClient.activeOneShotSounds.next((byte) 127));
             }
-            var6_int = uv.a(128, param2);
-            var7Lifetime1 = SpriteTextureOperation.b((byte) 95, param2, param1);
+            var6_int = UiToggleButtonRenderer.computeSoundPan(128, param2);
+            var7Lifetime1 = SpriteTextureOperation.computeSoundGain((byte) 95, param2, param1);
             if (param5 != 256) {
               var7Lifetime1 = var7Lifetime1 * param5 >> 8;
             }
@@ -60,13 +60,13 @@ abstract class ArchiveProvider {
               var8Lifetime1 = param4 + hob.a(OpenGlGpuToolkit.field_Jc, fbb.field_j[param4], 117);
             }
             var9 = ServerInfo.playPannedSample(var7Lifetime1, 100, var6_int, fa.field_d[var8Lifetime1]);
-            var10 = new qw();
-            var10.field_m = true;
-            var10.field_h = param1;
-            var10.field_f = param4;
-            var10.field_k = var9;
-            var10.field_i = SetReverbDry.field_o;
-            var10.field_d = param2;
+            var10 = new OneShotSound();
+            var10.positional = true;
+            var10.y = param1;
+            var10.sampleId = param4;
+            var10.playback = var9;
+            var10.startedAt = SetReverbDry.field_o;
+            var10.x = param2;
             NetworkGameClient.activeOneShotSounds.addLast(-10258, var10);
             return;
           }

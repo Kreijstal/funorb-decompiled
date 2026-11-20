@@ -124,9 +124,9 @@ final class TextureSourceOperation extends TextureOperation {
         int var4 = 0;
         super.initializeCache(param0, param1, param2);
         if (this.textureId >= 0 &&
-          nl.field_e != null) {
-          var4 = nl.field_e.getTextureMetadata(-20292, this.textureId).field_h ? 64 : 128;
-          this.sourcePixels = nl.field_e.generateRgbPixels(var4, 1.0f, true, this.textureId, var4, false);
+          LoopingSound.field_e != null) {
+          var4 = LoopingSound.field_e.getTextureMetadata(-20292, this.textureId).field_h ? 64 : 128;
+          this.sourcePixels = LoopingSound.field_e.generateRgbPixels(var4, 1.0f, true, this.textureId, var4, false);
           this.sourceHeight = var4;
           this.sourceWidth = var4;
         }

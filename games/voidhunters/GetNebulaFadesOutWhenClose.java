@@ -31,20 +31,20 @@ final class GetNebulaFadesOutWhenClose extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static ana a(int param0, PcmSample param1) {
+    final static SoundPlayback a(int param0, PcmSample param1) {
         RuntimeException var2 = null;
-        ana stackIn_2_0 = null;
-        ana stackIn_4_0 = null;
+        SoundPlayback stackIn_2_0 = null;
+        SoundPlayback stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= -85) {
-            stackIn_4_0 = ka.a(61, PcmSampleStream.create(param1, 100, 96));
+            stackIn_4_0 = Model3D.playSampleStream(61, PcmSampleStream.create(param1, 100, 96));
             return stackIn_4_0;
           }
-          stackIn_2_0 = (ana) null;
+          stackIn_2_0 = (SoundPlayback) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

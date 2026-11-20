@@ -18,7 +18,7 @@ final class CarouselPlayerInfoFactory implements GameStateFactory {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, lta param4, int param5) {
+    final static void a(int param0, int param1, int param2, int param3, Camera2D param4, int param5) {
         int var16 = 0;
         int var6_int = 0;
         int var7 = 0;
@@ -62,10 +62,10 @@ final class CarouselPlayerInfoFactory implements GameStateFactory {
             var19 = var12 * var17 + var10 * var16 / var15 + param5;
             var20 = var17 * var13 + var16 * var11 / var15 + param0;
             var21 = param5 + var10 * var16 / var15 - var18 * var12;
-            SetShowTutorial.a(param4.a(var6_int, (byte) 126), (byte) 66, param4.a(var19, (byte) 126), param4.b(true, var7), 11206400, param4.b(true, var20), 200);
+            SetShowTutorial.a(param4.worldToScreenX(var6_int, (byte) 126), (byte) 66, param4.worldToScreenX(var19, (byte) 126), param4.worldToScreenY(true, var7), 11206400, param4.worldToScreenY(true, var20), 200);
             var22 = -(var13 * var18) + (param0 + var11 * var16 / var15);
             var7 = var20;
-            SetShowTutorial.a(param4.a(var8, (byte) 113), (byte) 66, param4.a(var21, (byte) 125), param4.b(true, var9), 12320512, param4.b(true, var22), 240);
+            SetShowTutorial.a(param4.worldToScreenX(var8, (byte) 113), (byte) 66, param4.worldToScreenX(var21, (byte) 125), param4.worldToScreenY(true, var9), 12320512, param4.worldToScreenY(true, var22), 240);
             var6_int = var19;
             var8 = var21;
             var9 = var22;

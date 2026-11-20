@@ -4,7 +4,7 @@
 import java.util.*;
 
 final class dla {
-    private lta field_b;
+    private Camera2D field_b;
     static Widget field_e;
     static int stringTokenType;
     private int field_a;
@@ -99,8 +99,8 @@ final class dla {
         Debris var7_refLifetime2;
         Debris var18Lifetime2;
         var16 = VoidHunters.field_G;
-        var3 = this.field_b.a(true, GetBombletSprayEnergyUsed.field_p.width) - this.field_b.a(true, 0);
-        var4 = this.field_b.a(0, GetBombletSprayEnergyUsed.field_p.height) - this.field_b.a(0, 0);
+        var3 = this.field_b.screenToWorldX(true, GetBombletSprayEnergyUsed.field_p.width) - this.field_b.screenToWorldX(true, 0);
+        var4 = this.field_b.screenToWorldY(0, GetBombletSprayEnergyUsed.field_p.height) - this.field_b.screenToWorldY(0, 0);
         if (var3 != this.field_f.getWidth((byte) -122)) {
           this.field_f.setWidth(var3, (byte) 113);
           this.field_f.setHeight(var4, 0);
@@ -110,13 +110,13 @@ final class dla {
             this.field_f.setHeight(var4, 0);
           }
         }
-        this.field_b.field_e = GetBombletSprayEnergyUsed.field_p.height / 2;
-        this.field_b.field_d = GetBombletSprayEnergyUsed.field_p.width / 2;
-        this.field_b.a(GetBombletSprayEnergyUsed.field_p.height, 0, -72, GetBombletSprayEnergyUsed.field_p.width, 0);
+        this.field_b.screenOriginY = GetBombletSprayEnergyUsed.field_p.height / 2;
+        this.field_b.screenOriginX = GetBombletSprayEnergyUsed.field_p.width / 2;
+        this.field_b.updateWorldBounds(GetBombletSprayEnergyUsed.field_p.height, 0, -72, GetBombletSprayEnergyUsed.field_p.width, 0);
         PlayerAction.a(this.field_f, this.field_b, false, (byte) -59);
         this.field_f.a(this.field_b, (byte) 85, this.field_a, (Ship) null);
-        var5 = this.field_b.a(true, GetUseDetailLines.field_o);
-        var6 = this.field_b.a(0, GetTorpedoReload.field_q);
+        var5 = this.field_b.screenToWorldX(true, GetUseDetailLines.field_o);
+        var6 = this.field_b.screenToWorldY(0, GetTorpedoReload.field_q);
         if (param0 && (GetUseDetailLines.field_o != -1 ||
           GetTorpedoReload.field_q != -1)) {
           var17 = this.field_f.getDebris((byte) -33);
@@ -134,9 +134,9 @@ final class dla {
                 var12_ref_String = TiledSpriteTextureOperation.a(var11_ref_ml, (byte) 72);
                 var13 = var11_ref_ml.getFinalx(true);
                 var14 = var11_ref_ml.getFinaly((byte) 111);
-                var15 = this.field_b.a(var13, (byte) 115);
-                GetLagStandardDeviationOut.a(1, var12_ref_String, 16777215, this.field_b.b(true, -10000 + var14), -(GetPhasedEnergyBeamProjectiles.a(112, var12_ref_String) >> 1) + var15, 4266);
-                c.a(this.field_b.b(true, var14), var15, -(GetPhasedEnergyBeamProjectiles.a(-77, var12_ref_String) >> 2) + var15, this.field_b.b(true, -10000 + var14), -16777216, 16777215);
+                var15 = this.field_b.worldToScreenX(var13, (byte) 115);
+                GetLagStandardDeviationOut.a(1, var12_ref_String, 16777215, this.field_b.worldToScreenY(true, -10000 + var14), -(GetPhasedEnergyBeamProjectiles.a(112, var12_ref_String) >> 1) + var15, 4266);
+                c.a(this.field_b.worldToScreenY(true, var14), var15, -(GetPhasedEnergyBeamProjectiles.a(-77, var12_ref_String) >> 2) + var15, this.field_b.worldToScreenY(true, -10000 + var14), -16777216, 16777215);
                 return;
               }
             }
@@ -152,9 +152,9 @@ final class dla {
             var13Lifetime1 = -var6 + var12;
             var14Lifetime1 = TextLayout.approximateVectorLength(var11, (byte) 106, var13Lifetime1);
             if (var14Lifetime1 <= var8Lifetime1) {
-              var15Lifetime1 = this.field_b.a(var10, (byte) 116);
-              GetLagStandardDeviationOut.a(1, var9, 16777215, this.field_b.b(true, -10000 + var12), -(GetPhasedEnergyBeamProjectiles.a(-51, var9) >> 1) + var15Lifetime1, 4266);
-              c.a(this.field_b.b(true, var12), var15Lifetime1, -(GetPhasedEnergyBeamProjectiles.a(-100, var9) >> 2) + var15Lifetime1, this.field_b.b(true, -10000 + var12), -16777216, 16777215);
+              var15Lifetime1 = this.field_b.worldToScreenX(var10, (byte) 116);
+              GetLagStandardDeviationOut.a(1, var9, 16777215, this.field_b.worldToScreenY(true, -10000 + var12), -(GetPhasedEnergyBeamProjectiles.a(-51, var9) >> 1) + var15Lifetime1, 4266);
+              c.a(this.field_b.worldToScreenY(true, var12), var15Lifetime1, -(GetPhasedEnergyBeamProjectiles.a(-100, var9) >> 2) + var15Lifetime1, this.field_b.worldToScreenY(true, -10000 + var12), -16777216, 16777215);
             }
           }
           return;
@@ -176,7 +176,7 @@ final class dla {
         int var10;
         int var11;
         int var12;
-        lta var13;
+        Camera2D var13;
         Ship[] var14;
         Debris[] var15;
         Player[] var16;
@@ -186,9 +186,9 @@ final class dla {
         int var7_intLifetime1;
         int var9Lifetime1;
         var12 = VoidHunters.field_G;
-        var13 = (lta) null;
-        GetReverbWidth.a((lta) null, -8077);
-        ka.a(this.field_a, -19266);
+        var13 = (Camera2D) null;
+        GetReverbWidth.a((Camera2D) null, -8077);
+        Model3D.setSoundTime(this.field_a, -19266);
         var16 = new Player[]{};
         var3 = new MissionState();
         var4 = new MessageLog();
@@ -336,9 +336,9 @@ final class dla {
         int[] var12 = null;
         Throwable decompiledCaughtException = null;
         this.field_f = new World(0);
-        this.field_b = new lta();
-        var1 = this.field_b.a(true, GetBombletSprayEnergyUsed.field_p.width) - this.field_b.a(true, 0);
-        var2 = this.field_b.a(0, GetBombletSprayEnergyUsed.field_p.height) - this.field_b.a(0, 0);
+        this.field_b = new Camera2D();
+        var1 = this.field_b.screenToWorldX(true, GetBombletSprayEnergyUsed.field_p.width) - this.field_b.screenToWorldX(true, 0);
+        var2 = this.field_b.screenToWorldY(0, GetBombletSprayEnergyUsed.field_p.height) - this.field_b.screenToWorldY(0, 0);
         this.field_f.setWidth(var1, (byte) -93);
         this.field_f.setHeight(var2, 0);
         var3 = new Random();

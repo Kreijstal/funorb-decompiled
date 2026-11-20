@@ -41,9 +41,9 @@ final class MachineGunWeaponDefinition extends WeaponDefinition {
     final int getEnergyCost(int param0) {
         if (param0 != 0) {
           field_c = (GameStateFactory) null;
-          return mmb.field_g;
+          return OpenGlVertexNormal.field_g;
         }
-        return mmb.field_g;
+        return OpenGlVertexNormal.field_g;
     }
 
     final static void b(int param0, byte param1) {

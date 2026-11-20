@@ -38,7 +38,7 @@ final class LoadSettings extends ConsoleCommand {
         }
     }
 
-    final static void a(GameSnapshot param0, int param1, lta param2, byte param3, MissionState param4) {
+    final static void a(GameSnapshot param0, int param1, Camera2D param2, byte param3, MissionState param4) {
         int var7 = 0;
         MissionEvent[] var6 = null;
         MissionEvent var8 = null;
@@ -74,7 +74,7 @@ final class LoadSettings extends ConsoleCommand {
                   var10 != null) {
                   var11 = PartitionZoneListFactory.a(param0, param4, false, var10);
                   if (var11 >= 0 &&
-                    var11 < glb.field_c.length) {
+                    var11 < GpuVertexBufferOwner.field_c.length) {
                     TextureCombineOperation.a(param4, var9, param2, var11, (byte) 51, param1, param0);
                   }
                 }

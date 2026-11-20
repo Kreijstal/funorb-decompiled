@@ -119,7 +119,7 @@ abstract class PointLight extends IntrusiveNode {
                 if (6409 != param0 &&
                   param0 != 34846) {
                   if (param1) {
-                    PointLight.a((lta) null, (int[]) null, 84, -107, (int[]) null, (int[]) null, -96, (int[]) null, 2);
+                    PointLight.a((Camera2D) null, (int[]) null, 84, -107, (int[]) null, (int[]) null, -96, (int[]) null, 2);
                   }
                   if (6410 != param0 &&
                     param0 != 34847) {
@@ -150,7 +150,7 @@ abstract class PointLight extends IntrusiveNode {
         }
     }
 
-    final static void a(lta param0, int[] param1, int param2, int param3, int[] param4, int[] param5, int param6, int[] param7, int param8) {
+    final static void a(Camera2D param0, int[] param1, int param2, int param3, int[] param4, int[] param5, int param6, int[] param7, int param8) {
         RuntimeException stackIn_50_0 = null;
         StringBuilder stackIn_50_1 = null;
         String stackIn_51_2 = null;
@@ -275,12 +275,12 @@ abstract class PointLight extends IntrusiveNode {
           var21 = var21 + (var25 - var23 / 2);
           var19 = var19 + (var23 / 2 + var25);
           var20 = var20 + (var24 - var22 / 2);
-          var26 = param0.a(var16, (byte) 124);
-          var27 = param0.b(true, var17);
-          var28 = param0.a(var18, (byte) 119);
-          var29 = param0.b(true, var19);
-          var30 = param0.a(var20, (byte) 118);
-          var31 = param0.b(true, var21);
+          var26 = param0.worldToScreenX(var16, (byte) 124);
+          var27 = param0.worldToScreenY(true, var17);
+          var28 = param0.worldToScreenX(var18, (byte) 119);
+          var29 = param0.worldToScreenY(true, var19);
+          var30 = param0.worldToScreenX(var20, (byte) 118);
+          var31 = param0.worldToScreenY(true, var21);
           GetDebrisCarryOver.a(param2 - 6399, var29, 1, param8, var26, var28, var31, var27, 16777215 | var13 << 24, var30, param8);
           var32 = 1;
           while (var32 < var9_int) {
@@ -305,10 +305,10 @@ abstract class PointLight extends IntrusiveNode {
                 var76 != 0) {
                 var44 = 128;
                 var45 = var44 + var36 * 16;
-                var46 = param0.a(var39, (byte) 123);
-                var47 = param0.b(true, var40);
-                var48 = param0.a(var42, (byte) 115);
-                var49 = param0.b(true, var43);
+                var46 = param0.worldToScreenX(var39, (byte) 123);
+                var47 = param0.worldToScreenY(true, var40);
+                var48 = param0.worldToScreenX(var42, (byte) 115);
+                var49 = param0.worldToScreenY(true, var43);
                 var50 = var42 - var39;
                 var51 = -var40 + var43;
                 var52 = TextLayout.approximateVectorLength(var50, (byte) 110, var51);
@@ -346,14 +346,14 @@ abstract class PointLight extends IntrusiveNode {
                       var64 = SetGrapplingHookRopeChangeRate.a(var45, var64, 1, var42, var44);
                       var65 = SetGrapplingHookRopeChangeRate.a(var45, var65, 1, var43, var44);
                     }
-                    var66 = param0.a(var58_int, (byte) 121);
-                    var67 = param0.b(true, var59);
-                    var68 = param0.a(var62, (byte) 120);
-                    var69 = param0.b(true, var63);
-                    var70 = param0.a(var60, (byte) 126);
-                    var71 = param0.b(true, var61);
-                    var72 = param0.a(var64, (byte) 121);
-                    var73 = param0.b(true, var65);
+                    var66 = param0.worldToScreenX(var58_int, (byte) 121);
+                    var67 = param0.worldToScreenY(true, var59);
+                    var68 = param0.worldToScreenX(var62, (byte) 120);
+                    var69 = param0.worldToScreenY(true, var63);
+                    var70 = param0.worldToScreenX(var60, (byte) 126);
+                    var71 = param0.worldToScreenY(true, var61);
+                    var72 = param0.worldToScreenX(var64, (byte) 121);
+                    var73 = param0.worldToScreenY(true, var65);
                     var74 = param8 | var55 << 24;
                     var75 = param8;
                     GetDebrisCarryOver.a(8, var69, var57, var75, var46, var68, var67, var47, var56, var66, var75);
@@ -362,7 +362,7 @@ abstract class PointLight extends IntrusiveNode {
                     GetDebrisCarryOver.a(param2 ^ 6415, var49, var57, var75, var72, var48, var71, var73, var75, var70, var74);
                   } else {
                     try {
-                      var58_int = (int)(param0.field_a * 2048.0f);
+                      var58_int = (int)(param0.scale * 2048.0f);
                       if (var58_int < 1) {
                         var58_int = 1;
                       }

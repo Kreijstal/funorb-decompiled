@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mmb {
-    int field_f;
+final class OpenGlVertexNormal {
+    int y;
     static int field_i;
     static String field_b;
     static ToolkitSprite[] field_d;
     static int field_g;
-    int field_c;
-    int field_h;
-    int field_a;
+    int contributionCount;
+    int z;
+    int x;
     static String field_e;
     private static String field_z;
 
@@ -20,7 +20,7 @@ final class mmb {
           field_d = null;
           return;
         }
-        mmb.clearSharedReferences(-124);
+        OpenGlVertexNormal.clearSharedReferences(-124);
         field_e = null;
         field_b = null;
         field_d = null;

@@ -265,7 +265,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               }
               var25_int = 0;
               if (null != SetSpinningBladeSpindamageMultiplier.field_o &&
-                nmb.b(-91) &&
+                SmoothedNanoTickClock.isLocalLobbyOwner(-91) &&
                 BodyInZoneConditionFactory.field_a != var12.field_zb) {
                 if (null != var12.field_wb.text) {
                   var26 = var12.field_wb.getPreferredWidth(param1 + 93) + 2 * qs.field_c;
@@ -468,7 +468,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                   }
                 }
                 if (WaterTextures.field_f == param2 &&
-                  nmb.b(param1 - 106)) {
+                  SmoothedNanoTickClock.isLocalLobbyOwner(param1 - 106)) {
                   if (var26Lifetime1 != 0) {
                     var24Lifetime2 = var34 + "<br>" + SetMissilesHitSourceTeam.field_r + (String) (var25);
                   } else {
@@ -482,7 +482,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                   }
                 }
                 if (param2 == WaterTextures.field_f &&
-                  !nmb.b(90)) {
+                  !SmoothedNanoTickClock.isLocalLobbyOwner(90)) {
                   var27 = SetSpinningBladeSpindamageMultiplier.field_o.field_Vb;
                   var24Lifetime2 = (String) (var24Lifetime2) + "<br>" + SetReverbGain.a(SetMassDriverProjectileLife.field_o, new String[]{var27}, 125);
                 }

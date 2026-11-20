@@ -11,19 +11,19 @@ final class ShieldBehaviourFactory implements GameStateFactory {
 
     final static void b(byte param0) {
         int var1 = 0;
-        if (32 < kt.field_l) {
-          var1 = kt.field_l % 32;
+        if (32 < kt.soundEffectVolume) {
+          var1 = kt.soundEffectVolume % 32;
           if (var1 == 0) {
             var1 = 32;
           }
-          nl.a(-var1 + kt.field_l, -13205);
+          LoopingSound.setSoundEffectVolume(-var1 + kt.soundEffectVolume, -13205);
           if (param0 != 64) {
             field_a = 29;
             return;
           }
           return;
         }
-        nl.a(0, -13205);
+        LoopingSound.setSoundEffectVolume(0, -13205);
         if (param0 != 64) {
           field_a = 29;
           return;
@@ -49,11 +49,11 @@ final class ShieldBehaviourFactory implements GameStateFactory {
         float var12;
         String var15;
         Ship var16;
-        lta var18;
+        Camera2D var18;
         Ship var19;
-        lta var21;
+        Camera2D var21;
         Ship var22;
-        lta var24;
+        Camera2D var24;
         int[] var25;
         int[] var26;
         int[] var27;
@@ -97,17 +97,17 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             CachedArchiveProvider.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
             var5 = ArmBehaviour.a(var2, 0, 200, var15Lifetime2);
             var16 = ae.a(GetBombletSprayPushMultiplier.field_o, (byte) 41);
-            var18 = new lta();
-            var18.field_e = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (-(var5 >> 1) - ((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5 >> 1) >> 1));
-            var18.field_d = GetBombletSprayEnergyUsed.field_p.width >> 1;
+            var18 = new Camera2D();
+            var18.screenOriginY = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (-(var5 >> 1) - ((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5 >> 1) >> 1));
+            var18.screenOriginX = GetBombletSprayEnergyUsed.field_p.width >> 1;
             var25 = var16.getBoundingbox((byte) -92);
             var9 = -var25[0] + var25[1];
             var10 = var25[3] - var25[2];
             var11 = (-32.0f + (float)((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5 >> 1))) / (float)var9;
             var12 = (-32.0f + (float)((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5 >> 1))) / (float)var10;
-            var18.field_a = Math.min(var11, var12);
-            var18.field_c = (float)((var25[0] + var25[1]) / 2);
-            var18.field_b = (float)((var25[3] + var25[2]) / 2);
+            var18.scale = Math.min(var11, var12);
+            var18.worldCenterX = (float)((var25[0] + var25[1]) / 2);
+            var18.worldCenterY = (float)((var25[3] + var25[2]) / 2);
             var16.setAngle(SetMinimapWidth.field_o * 10 % 8192, -82);
             if (vqa.field_g != null &&
               !vqa.field_g.networked &&
@@ -183,17 +183,17 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             CachedArchiveProvider.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
             var5Lifetime2 = ArmBehaviour.a(var2, 0, 200, var3Lifetime2);
             var19 = ae.a(GetBombletSprayPushMultiplier.field_o, (byte) 41);
-            var21 = new lta();
-            var21.field_e = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (-(var5Lifetime2 >> 1) - ((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime2 >> 1) >> 1));
-            var21.field_d = GetBombletSprayEnergyUsed.field_p.width >> 1;
+            var21 = new Camera2D();
+            var21.screenOriginY = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (-(var5Lifetime2 >> 1) - ((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime2 >> 1) >> 1));
+            var21.screenOriginX = GetBombletSprayEnergyUsed.field_p.width >> 1;
             var26 = var19.getBoundingbox((byte) -92);
             var9Lifetime2 = -var26[0] + var26[1];
             var10Lifetime2 = var26[3] - var26[2];
             var11Lifetime2 = (-32.0f + (float)((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime2 >> 1))) / (float)var9Lifetime2;
             var12Lifetime2 = (-32.0f + (float)((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime2 >> 1))) / (float)var10Lifetime2;
-            var21.field_a = Math.min(var11Lifetime2, var12Lifetime2);
-            var21.field_c = (float)((var26[0] + var26[1]) / 2);
-            var21.field_b = (float)((var26[3] + var26[2]) / 2);
+            var21.scale = Math.min(var11Lifetime2, var12Lifetime2);
+            var21.worldCenterX = (float)((var26[0] + var26[1]) / 2);
+            var21.worldCenterY = (float)((var26[3] + var26[2]) / 2);
             var19.setAngle(SetMinimapWidth.field_o * 10 % 8192, -82);
             if (vqa.field_g != null &&
               !vqa.field_g.networked &&
@@ -225,17 +225,17 @@ final class ShieldBehaviourFactory implements GameStateFactory {
         CachedArchiveProvider.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
         var5Lifetime1 = ArmBehaviour.a(var2, 0, 200, var3Lifetime2);
         var22 = ae.a(GetBombletSprayPushMultiplier.field_o, (byte) 41);
-        var24 = new lta();
-        var24.field_e = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (-(var5Lifetime1 >> 1) - ((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime1 >> 1) >> 1));
-        var24.field_d = GetBombletSprayEnergyUsed.field_p.width >> 1;
+        var24 = new Camera2D();
+        var24.screenOriginY = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (-(var5Lifetime1 >> 1) - ((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime1 >> 1) >> 1));
+        var24.screenOriginX = GetBombletSprayEnergyUsed.field_p.width >> 1;
         var27 = var22.getBoundingbox((byte) -92);
         var9Lifetime1 = -var27[0] + var27[1];
         var10Lifetime1 = var27[3] - var27[2];
         var11Lifetime1 = (-32.0f + (float)((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime1 >> 1))) / (float)var9Lifetime1;
         var12Lifetime1 = (-32.0f + (float)((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime1 >> 1))) / (float)var10Lifetime1;
-        var24.field_a = Math.min(var11Lifetime1, var12Lifetime1);
-        var24.field_c = (float)((var27[0] + var27[1]) / 2);
-        var24.field_b = (float)((var27[3] + var27[2]) / 2);
+        var24.scale = Math.min(var11Lifetime1, var12Lifetime1);
+        var24.worldCenterX = (float)((var27[0] + var27[1]) / 2);
+        var24.worldCenterY = (float)((var27[3] + var27[2]) / 2);
         var22.setAngle(SetMinimapWidth.field_o * 10 % 8192, -82);
         if (vqa.field_g == null) {
           var22.integrateMotion(false, true, (World) null);

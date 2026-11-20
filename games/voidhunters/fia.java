@@ -129,7 +129,7 @@ final class fia {
         int[] var18 = null;
         ShipComponentDefinition var19 = null;
         int[] var20 = null;
-        lta var21 = null;
+        Camera2D var21 = null;
         int[] var22 = null;
         int[] var23 = null;
         int[] var26 = null;
@@ -298,18 +298,18 @@ final class fia {
             boolean decompiledFrameRemainder0 = true;
             var19 = EnvironmentReflectionGpuMaterialEffect.field_g[SetMissileLauncherProjectileLife.field_p];
             if (var19 != null) {
-              var21 = new lta();
-              var21.field_b = SetTorpedoEnergyUsed.field_o;
-              var21.field_c = SetPhysicsCollisionGrapplingHookForceMultiplier.field_p;
-              var21.field_a = GetUseTrails.field_o;
+              var21 = new Camera2D();
+              var21.worldCenterY = SetTorpedoEnergyUsed.field_o;
+              var21.worldCenterX = SetPhysicsCollisionGrapplingHookForceMultiplier.field_p;
+              var21.scale = GetUseTrails.field_o;
               if (BoundedRandomAccessFile.field_c != 1) {
                 if (BoundedRandomAccessFile.field_c != 2) {
                   return;
                 }
                 var23 = uob.field_g[-1 + uob.field_g.length];
                 var3 = var23;
-                var4 = var21.a(true, GetUseDetailLines.field_o);
-                var5 = var21.a(0, GetTorpedoReload.field_q);
+                var4 = var21.screenToWorldX(true, GetUseDetailLines.field_o);
+                var5 = var21.screenToWorldY(0, GetTorpedoReload.field_q);
                 if (ujb.field_c == 1 &&
                   SetMachineGunEnergyUsed.field_o[81]) {
                   uob.field_g[-1 + uob.field_g.length] = SetAutozoomSpeedDivide.a(var4, false, var23, (byte) -14);
@@ -359,8 +359,8 @@ final class fia {
                   for (var6Lifetime1 = 0; var27.length > var6Lifetime1; var6Lifetime1 += 2) {
                     var7Lifetime1 = var27[var6Lifetime1];
                     var8Lifetime1 = var5_ref_int__[var6Lifetime1 + 1];
-                    var9Lifetime1 = var21.a(var7Lifetime1, (byte) 125);
-                    var10Lifetime1 = var21.b(true, var8Lifetime1);
+                    var9Lifetime1 = var21.worldToScreenX(var7Lifetime1, (byte) 125);
+                    var10Lifetime1 = var21.worldToScreenY(true, var8Lifetime1);
                     var11Lifetime1 = TextLayout.approximateVectorLength(-GetUseDetailLines.field_o + var9Lifetime1, (byte) 119, var10Lifetime1 - GetTorpedoReload.field_q);
                     if (var11Lifetime1 < var4Lifetime1) {
                       var4Lifetime1 = var11Lifetime1;

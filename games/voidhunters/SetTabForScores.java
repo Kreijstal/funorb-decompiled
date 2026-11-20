@@ -16,7 +16,7 @@ final class SetTabForScores extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param1 = ne.a('_', (byte) 108, "", param1);
+          param1 = OpenGlModel.replaceCharacter('_', (byte) 108, "", param1);
           var3 = IrregularBricksTextureOperation.a((byte) -87, param1);
           if (!param2) {
             SetTabForScores.clearSharedReferences(false);

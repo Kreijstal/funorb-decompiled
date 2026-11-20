@@ -20,7 +20,7 @@ final class ShipSpawnedConditionFactory implements GameStateFactory {
           if (!GetPointDefenceLaserProjectileOndamageParticles.field_o) {
             return;
           }
-          GetHealthBarWidth.field_p = new ka[MessageLogFactory.field_a.length];
+          GetHealthBarWidth.field_p = new Model3D[MessageLogFactory.field_a.length];
           if (param0 != 100) {
             ShipSpawnedConditionFactory.a(-114);
           }
@@ -32,18 +32,18 @@ final class ShipSpawnedConditionFactory implements GameStateFactory {
                 var14 = GetBombletSprayProjectileOndamageParticles.a((byte) -109, var2.outline);
                 var4 = -var14[0] + var14[1];
                 var5 = var14[3] - var14[2];
-                var6 = GetHealthBarWidth.field_p[var1_int].RA() - GetHealthBarWidth.field_p[var1_int].V();
-                var7 = GetHealthBarWidth.field_p[var1_int].G() - GetHealthBarWidth.field_p[var1_int].HA();
+                var6 = GetHealthBarWidth.field_p[var1_int].getMaxX() - GetHealthBarWidth.field_p[var1_int].getMinX();
+                var7 = GetHealthBarWidth.field_p[var1_int].getMaxZ() - GetHealthBarWidth.field_p[var1_int].getMinZ();
                 if (var2.connectionX == 0 &&
                   0 == var2.connectionY) {
                   var8 = var6 * var14[0] / var4;
-                  GetHealthBarWidth.field_p[var1_int].H(var8, 0, 0);
+                  GetHealthBarWidth.field_p[var1_int].translate(var8, 0, 0);
                 } else {
                   var8 = var2.connectionX * var6 / var4;
                   var9 = -var2.connectionY * var7 / var5;
-                  GetHealthBarWidth.field_p[var1_int].H(var8, 0, var9);
+                  GetHealthBarWidth.field_p[var1_int].translate(var8, 0, var9);
                 }
-                GetHealthBarWidth.field_p[var1_int].O(144, 144, 144);
+                GetHealthBarWidth.field_p[var1_int].scale(144, 144, 144);
               }
             }
           }

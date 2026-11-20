@@ -53,7 +53,7 @@ final class SetMachineGunFireForce extends ConsoleCommand {
         return new dj(LoadBlackboxRecording.a(94), GetMissileLauncherRandomness.e(-3840));
     }
 
-    final static void a(byte param0, lta param1) {
+    final static void a(byte param0, Camera2D param1) {
         pd var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;

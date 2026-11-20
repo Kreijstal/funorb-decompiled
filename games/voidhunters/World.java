@@ -1660,7 +1660,7 @@ final class World implements DiffableState, CompactGameState {
               var30.c((byte) -7);
             }
           }
-          this.a(false, param4, (byte) -117, (lta) null);
+          this.a(false, param4, (byte) -117, (Camera2D) null);
           this.a(param0 ^ 1799937866, param2, param6);
           this.a(param0 - 1799937751, param5, param6, param4);
           var31 = this.ships;
@@ -2142,7 +2142,7 @@ final class World implements DiffableState, CompactGameState {
                   if (!param0) {
                     var17 = 52;
                   }
-                  ArchiveProvider.a(50, var12_ref.y, var12_ref.x, false, var17, var16);
+                  ArchiveProvider.playSpatialSound(50, var12_ref.y, var12_ref.x, false, var17, var16);
                 }
                 var11 = 0;
               }
@@ -2573,7 +2573,7 @@ final class World implements DiffableState, CompactGameState {
                 var15 = 0;
               }
               if (var15 == 0) {
-                GetFighterVision.a(6811, 6, 1);
+                GetFighterVision.playNonSpatialSound(6811, 6, 1);
                 decompiledFrameRemainder0 = false;
               }
               else {
@@ -3392,12 +3392,12 @@ final class World implements DiffableState, CompactGameState {
           }
           if (var14 != 0 &&
             !var20.isDestroyed((byte) 91)) {
-            GetGrapplingHookAimarc.a(param2.y, param1.id, 46, -126, param2.x);
+            GetGrapplingHookAimarc.updateLoopingSound(param2.y, param1.id, 46, -126, param2.x);
             this.a(var8 >> 8, param2.y, var7.outline, (byte) -82, param2.x, var20.finaly, var20.finalx);
           }
           if (var16 != 0 &&
             !var9.isDestroyed((byte) 118)) {
-            GetGrapplingHookAimarc.a(param2.y, param0.id, 46, -89, param2.x);
+            GetGrapplingHookAimarc.updateLoopingSound(param2.y, param0.id, 46, -89, param2.x);
             this.a(var13 >> 8, param2.y, var10.outline, (byte) -13, param2.x, var9.finaly, var9.finalx);
           }
           if (param3 != 46) {
@@ -4821,7 +4821,7 @@ final class World implements DiffableState, CompactGameState {
         return (Debris) (var7);
     }
 
-    final void a(lta param0, byte param1, int param2, Ship param3) {
+    final void a(Camera2D param0, byte param1, int param2, Ship param3) {
         RuntimeException stackIn_90_0 = null;
         StringBuilder stackIn_90_1 = null;
         String stackIn_91_2 = null;
@@ -5416,7 +5416,7 @@ final class World implements DiffableState, CompactGameState {
                 if (var13Lifetime3 != 0) {
                   var23_ref.recordAttacker(var3_ref.b(false), 19581);
                   if (var23_ref.isFighter(false)) {
-                    GetFighterVision.a(6811, 90, 100);
+                    GetFighterVision.playNonSpatialSound(6811, 90, 100);
                   }
                 }
                 if (var13Lifetime3 == 0 &&
@@ -5483,7 +5483,7 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(lta param0, int param1, MissionState param2) {
+    final void a(Camera2D param0, int param1, MissionState param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -5610,7 +5610,7 @@ final class World implements DiffableState, CompactGameState {
             stackIn_29_1 = (Ship) (param3);
             stackIn_30_2 = (1 == hw.field_b);
             this.a(stackIn_29_1, stackIn_30_2, -98, (Debris) (var5), var8, var7);
-            GetGrapplingHookAimarc.a(param3.getY((byte) -91), param3.id, 74, 93, param3.getX(false));
+            GetGrapplingHookAimarc.updateLoopingSound(param3.getY((byte) -91), param3.id, 74, 93, param3.getX(false));
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -5880,7 +5880,7 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    private final void a(int param0, lta param1, int param2) {
+    private final void a(int param0, Camera2D param1, int param2) {
         int var4_int = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -5914,8 +5914,8 @@ final class World implements DiffableState, CompactGameState {
             var5 = ShipFactory.field_a.field_b[var4_int];
             if (!(var5.field_e instanceof Ship) ||
               !((Ship) (var5.field_e)).hasVisibilityFlag(2, (byte) 62)) {
-              var6 = param1.a(var5.field_g, (byte) 115);
-              var7 = param1.b(true, var5.field_f);
+              var6 = param1.worldToScreenX(var5.field_g, (byte) 115);
+              var7 = param1.worldToScreenY(true, var5.field_f);
               if (-1 != var5.field_i) {
                 var8 = SetBuildViewAutozoomEndOnAction.field_o;
                 var9 = 0;
@@ -5925,7 +5925,7 @@ final class World implements DiffableState, CompactGameState {
                   var13 = (TextureLineShape.sinAngle(var12 * (10 * param2), 78) >> 8) * (var5.field_i >> 8) + var5.field_b;
                   var14 = (GetNumStars.cosAngle(var13, (byte) 105) >> 8) * (var5.field_d >> 8);
                   var15 = (TextureLineShape.sinAngle(var13, 45) >> 8) * (var5.field_d >> 8);
-                  c.a(param1.b(true, var15 + var5.field_f), param1.a(var14 + var5.field_g, (byte) 120), var6, var7, -16777216, 4473924);
+                  c.a(param1.worldToScreenY(true, var15 + var5.field_f), param1.worldToScreenX(var14 + var5.field_g, (byte) 120), var6, var7, -16777216, 4473924);
                 }
                 for (var12Lifetime1 = -var8; var8 >= var12Lifetime1; var12Lifetime1++) {
                   var13Lifetime1 = var5.field_b + var5.field_i * var12Lifetime1 / var8;
@@ -5934,13 +5934,13 @@ final class World implements DiffableState, CompactGameState {
                   var16 = var5.field_g + var14Lifetime1;
                   var17 = var5.field_f + var15Lifetime1;
                   if (-var8 < var12Lifetime1) {
-                    c.a(param1.b(true, var17), param1.a(var16, (byte) 112), param1.a(var9, (byte) 125), param1.b(true, var10), -16777216, var11);
+                    c.a(param1.worldToScreenY(true, var17), param1.worldToScreenX(var16, (byte) 112), param1.worldToScreenX(var9, (byte) 125), param1.worldToScreenY(true, var10), -16777216, var11);
                   }
                   var10 = var17;
                   var9 = var16;
                 }
               } else {
-                SetNumStars.a((float)var5.field_d * param1.field_a, (byte) 111, var7, 11184895, var6);
+                SetNumStars.a((float)var5.field_d * param1.scale, (byte) 111, var7, 11184895, var6);
               }
             }
           }
@@ -5959,7 +5959,7 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    private final void a(lta param0, Ship param1, int param2, int param3, int param4) {
+    private final void a(Camera2D param0, Ship param1, int param2, int param3, int param4) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -5976,9 +5976,9 @@ final class World implements DiffableState, CompactGameState {
             param1.isRepairModeFullyCharged(-49)) &&
             (-1 != param4 ||
             param2 != -1))) {
-            var6_int = param0.a(param4, (byte) 120);
-            var7 = param0.b(true, param2);
-            SetNumStars.a(param0.field_a * (float)GetMinimapWidth.field_o, (byte) 77, var7, 65280, var6_int);
+            var6_int = param0.worldToScreenX(param4, (byte) 120);
+            var7 = param0.worldToScreenY(true, param2);
+            SetNumStars.a(param0.scale * (float)GetMinimapWidth.field_o, (byte) 77, var7, 65280, var6_int);
           }
           if (param3 != 0) {
             this.projectiles = (IntrusiveDeque) null;
@@ -6779,7 +6779,7 @@ final class World implements DiffableState, CompactGameState {
     private final void removeMapZoneAtIndex(int param0, byte param1) {
         this.mapZones = (MapZone[]) (GetSalvoUsesAllEnergy.a(wsb.field_e, param0, 15667, this.mapZones));
         if (param1 != -90) {
-          this.a(false, (MissionState) null, (byte) 94, (lta) null);
+          this.a(false, (MissionState) null, (byte) 94, (Camera2D) null);
         }
     }
 
@@ -6954,7 +6954,7 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    private final void a(boolean param0, MissionState param1, byte param2, lta param3) {
+    private final void a(boolean param0, MissionState param1, byte param2, Camera2D param3) {
         int var18 = 0;
         int var21 = 0;
         RuntimeException stackIn_98_0 = null;
@@ -7105,10 +7105,10 @@ final class World implements DiffableState, CompactGameState {
                 decompiledFrameRemainder0 = false;
               }
               else {
-                var14_intLifetime1 = -1 + param3.a(-var11, (byte) 123);
-                var15Lifetime1 = param3.a(var11, (byte) 126) + 1;
-                var16Lifetime1 = param3.b(true, -var12) - 1;
-                var17Lifetime1 = param3.b(true, var12) + 1;
+                var14_intLifetime1 = -1 + param3.worldToScreenX(-var11, (byte) 123);
+                var15Lifetime1 = param3.worldToScreenX(var11, (byte) 126) + 1;
+                var16Lifetime1 = param3.worldToScreenY(true, -var12) - 1;
+                var17Lifetime1 = param3.worldToScreenY(true, var12) + 1;
                 ClientDataReadRequest.drawHighlightedBounds((byte) 17, var15Lifetime1, var17Lifetime1, var16Lifetime1, var14_intLifetime1);
               }
             }
@@ -8071,7 +8071,7 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    private final void a(Ship param0, lta param1, int param2) {
+    private final void a(Ship param0, Camera2D param1, int param2) {
         boolean discarded$0 = false;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
@@ -8107,23 +8107,23 @@ final class World implements DiffableState, CompactGameState {
           var16 = var18;
           var15 = var16;
           var4 = var15;
-          if (!MissionAction.rectanglesIntersect(var18, param1.field_f, 5)) {
+          if (!MissionAction.rectanglesIntersect(var18, param1.worldBounds, 5)) {
             if (param0.hasVisibilityFlag(1, (byte) -107)) {
               return;
             }
-            var5_int = -(int)param1.field_c + param0.x;
-            var6 = -(int)param1.field_b + param0.y;
+            var5_int = -(int)param1.worldCenterX + param0.x;
+            var6 = -(int)param1.worldCenterY + param0.y;
             var7 = TextLayout.approximateVectorLength(var5_int, (byte) 110, var6);
             var8 = (float)((param0.getBoundingExtent(-66) << 8) / var7);
             if (0.0f >= var8) {
               return;
             }
-            var9 = SetMissionTerrainSpaceProbability.a(0, (int)param1.field_b, (int)param1.field_c, param1.field_f[2], param0.y, 16, param1.field_f[1], param1.field_f[0], param1.field_f[3], param0.x);
+            var9 = SetMissionTerrainSpaceProbability.a(0, (int)param1.worldCenterY, (int)param1.worldCenterX, param1.worldBounds[2], param0.y, 16, param1.worldBounds[1], param1.worldBounds[0], param1.worldBounds[3], param0.x);
             if (var9 >= 0) {
-              var10 = (int)(1.0f * (float)var5_int * (float)var9 / 65536.0f + param1.field_c);
-              var11 = (int)(param1.field_b + (float)var6 * 1.0f * (float)var9 / 65536.0f);
-              var12 = param1.a(var10, (byte) 127);
-              var13 = param1.b(true, var11);
+              var10 = (int)(1.0f * (float)var5_int * (float)var9 / 65536.0f + param1.worldCenterX);
+              var11 = (int)(param1.worldCenterY + (float)var6 * 1.0f * (float)var9 / 65536.0f);
+              var12 = param1.worldToScreenX(var10, (byte) 127);
+              var13 = param1.worldToScreenY(true, var11);
               var14 = qpb.a(false, param0.getTeam((byte) 88), 13894143);
               GetPhasedEnergyBeamReload.a(var13, var8, -109, var12, var14);
             }
@@ -8141,8 +8141,8 @@ final class World implements DiffableState, CompactGameState {
             if (param0.hasAi((byte) -10)) {
               var5Lifetime2 = var17 + " parent=" + param0.getAi((byte) -108).getParentPlayerId((byte) -125);
             }
-            var6Lifetime1 = param1.a(param0.getX(false), (byte) 123);
-            var7Lifetime1 = param1.b(true, param0.getY((byte) -54) - 16384);
+            var6Lifetime1 = param1.worldToScreenX(param0.getX(false), (byte) 123);
+            var7Lifetime1 = param1.worldToScreenY(true, param0.getY((byte) -54) - 16384);
             GetLagStandardDeviationOut.a(-1, var5Lifetime2, 16711935, var7Lifetime1, var6Lifetime1 - (GetPhasedEnergyBeamProjectiles.a(115, var5Lifetime2) >> 1), 4266);
           }
           if (GetPointDefenceLaserProjectiles.a(4096, 11284) &&
@@ -8174,7 +8174,7 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(Player param0, int param1, Ship param2, lta param3, byte param4, Ship param5, int param6, int param7, int param8) {
+    final void a(Player param0, int param1, Ship param2, Camera2D param3, byte param4, Ship param5, int param6, int param7, int param8) {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -8230,8 +8230,8 @@ final class World implements DiffableState, CompactGameState {
                     var15_int = var12.getTimeUntilSelfDestructEffect(8);
                     if (var15_int >= 0) {
                       var16_ref_String = Integer.toString((var15_int - 1) / Particle.field_l);
-                      var17 = param3.a(var12.getX(false), (byte) 119);
-                      var18 = param3.b(true, -8192 + var12.getBoundingbox((byte) -70)[2]);
+                      var17 = param3.worldToScreenX(var12.getX(false), (byte) 119);
+                      var18 = param3.worldToScreenY(true, -8192 + var12.getBoundingbox((byte) -70)[2]);
                       SetSelfDestructPrepareToggleCooldown.a(-(tea.a(1, var16_ref_String, 13879) >> 1) + var17, -1, var18, var16_ref_String, 1, 16541441, (byte) -94);
                     }
                   }
@@ -8239,8 +8239,8 @@ final class World implements DiffableState, CompactGameState {
                     break scanLoop1;
                   }
                   var15 = "Dragging debris=" + Integer.toString(var12.getDragging(param4 - 116));
-                  var16 = param3.a(var12.getX(false), (byte) 126);
-                  var17Lifetime1 = param3.b(true, var12.getY((byte) 125) - 16384);
+                  var16 = param3.worldToScreenX(var12.getX(false), (byte) 126);
+                  var17Lifetime1 = param3.worldToScreenY(true, var12.getY((byte) 125) - 16384);
                   GetLagStandardDeviationOut.a(-1, var15, 16711935, var17Lifetime1, var16 - (GetPhasedEnergyBeamProjectiles.a(-9, var15) >> 1), param4 + 4247);
                   break scanLoop1;
                 }
@@ -8671,7 +8671,7 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    private final void a(byte param0, ShipBody param1, lta param2) {
+    private final void a(byte param0, ShipBody param1, Camera2D param2) {
         RuntimeException runtimeException = null;
         int var4_int = 0;
         int var5 = 0;
@@ -8688,8 +8688,8 @@ final class World implements DiffableState, CompactGameState {
         try {
           var4_int = 22 % ((-27 - param0) / 42);
           if (GetPointDefenceLaserProjectiles.a(8, 11284)) {
-            var5 = param2.a(param1.getX(false), (byte) 127);
-            var6 = param2.b(true, param1.getBoundingbox((byte) -53)[2]) - OpenGlTexture.b((byte) 118) / 2;
+            var5 = param2.worldToScreenX(param1.getX(false), (byte) 127);
+            var6 = param2.worldToScreenY(true, param1.getBoundingbox((byte) -53)[2]) - OpenGlTexture.b((byte) 118) / 2;
             var7 = Integer.toString(param1.id);
             GetLagStandardDeviationOut.a(-1, var7, 16711935, var6, -(GetPhasedEnergyBeamProjectiles.a(-118, var7) >> 1) + var5, 4266);
           }
@@ -8717,7 +8717,7 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    private final void a(Player param0, Ship param1, byte param2, Ship param3, int param4, int param5, int param6, lta param7) {
+    private final void a(Player param0, Ship param1, byte param2, Ship param3, int param4, int param5, int param6, Camera2D param7) {
         RuntimeException stackIn_72_0 = null;
         StringBuilder stackIn_72_1 = null;
         String stackIn_73_2 = null;
@@ -8855,10 +8855,10 @@ final class World implements DiffableState, CompactGameState {
                 var14_ref_ml__.length > 0) {
                 var15_ref_imb = var29.hardpoint.component.hardpoints[var25.hardpoint.hardpointIndex];
                 var16Lifetime1 = 1024;
-                var17_int = param7.a(-var16Lifetime1 + var15_ref_imb.worldx, (byte) 113);
-                var18_int = param7.a(var16Lifetime1 + var15_ref_imb.worldx, (byte) 115);
-                var19 = param7.b(true, -var16Lifetime1 + var15_ref_imb.worldy);
-                var20 = param7.b(true, var16Lifetime1 + var15_ref_imb.worldy);
+                var17_int = param7.worldToScreenX(-var16Lifetime1 + var15_ref_imb.worldx, (byte) 113);
+                var18_int = param7.worldToScreenX(var16Lifetime1 + var15_ref_imb.worldx, (byte) 115);
+                var19 = param7.worldToScreenY(true, -var16Lifetime1 + var15_ref_imb.worldy);
+                var20 = param7.worldToScreenY(true, var16Lifetime1 + var15_ref_imb.worldy);
                 c.a(var20, var18_int, var17_int, var19, -16777216, 16711680);
                 c.a(var19, var18_int, var17_int, var20, -16777216, 16711680);
                 for (var21 = 0; var21 < var14_ref_ml__.length; var21++) {
@@ -8873,7 +8873,7 @@ final class World implements DiffableState, CompactGameState {
             var16Lifetime2 = var10.getDefaultConnectionX(-25) * TextureLineShape.sinAngle(var9.getAngle(0), 62) + var10.getDefaultConnectionY((byte) 100) * GetNumStars.cosAngle(var9.getAngle(0), (byte) 64) >> 16;
             CarouselPlayerInfoFactory.a(param3.chassis.finaly, 1, var14Lifetime2 + var16Lifetime2, var13Lifetime3 + var15Lifetime1, param7, param3.chassis.finalx);
             var17 = TiledSpriteTextureOperation.a(var10, (byte) -84);
-            GetLagStandardDeviationOut.a(-1, var17, 16777215, param7.b(true, -10000 + var9.getY((byte) -109)), param7.a(var9.getX(false), (byte) 118) - (GetPhasedEnergyBeamProjectiles.a(94, var17) >> 1), 4266);
+            GetLagStandardDeviationOut.a(-1, var17, 16777215, param7.worldToScreenY(true, -10000 + var9.getY((byte) -109)), param7.worldToScreenX(var9.getX(false), (byte) 118) - (GetPhasedEnergyBeamProjectiles.a(94, var17) >> 1), 4266);
             if (null != param3.getAttachmentPreviewOutline(56)) {
               var31 = param3.getAttachmentPreviewOutline(116);
               var30 = var31;
@@ -8885,7 +8885,7 @@ final class World implements DiffableState, CompactGameState {
                 var21Lifetime1 = var18[var26 + 1];
                 var22 = var18[(var26 + 2) % var31.length];
                 var23 = var18[(3 + var26) % var31.length];
-                c.a(param7.b(true, var23), param7.a(var22, (byte) 122), param7.a(var20Lifetime1, (byte) 121), param7.b(true, var21Lifetime1), -16777216, 65280);
+                c.a(param7.worldToScreenY(true, var23), param7.worldToScreenX(var22, (byte) 122), param7.worldToScreenX(var20Lifetime1, (byte) 121), param7.worldToScreenY(true, var21Lifetime1), -16777216, 65280);
                 var26 += 2;
               }
             }

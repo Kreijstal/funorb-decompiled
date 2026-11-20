@@ -79,7 +79,7 @@ final class bla extends eca {
           if (param1 != -1) {
             this.field_g = (String) null;
           }
-          stackIn_11_0 = bqa.field_f;
+          stackIn_11_0 = ModelFaceAttachment.field_f;
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

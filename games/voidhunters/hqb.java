@@ -382,7 +382,7 @@ final class hqb {
         if (this.field_a != null &&
           BodyInZoneConditionFactory.field_a != this.field_d &&
           null != SetSpinningBladeSpindamageMultiplier.field_o &&
-          nmb.b(-45)) {
+          SmoothedNanoTickClock.isLocalLobbyOwner(-45)) {
           var7 = SetPhasedEnergyBeamAimarc.a((byte) 80, this.field_d);
           var4 = ScrollBarWidget.a(this.field_d, true);
           var5 = this.b((byte) -128);

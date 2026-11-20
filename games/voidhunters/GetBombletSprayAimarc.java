@@ -56,7 +56,7 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
           if (!OpenGlTexture1D.field_i) {
             sa.a(param4, param1, param2, param3 & 16777215, param3 >>> 24);
           } else {
-            if (ne.field_v) {
+            if (OpenGlModel.field_v) {
               rj.a(GetDebrisGroupColour.field_r, param4, param1, param2, param3);
             }
           }

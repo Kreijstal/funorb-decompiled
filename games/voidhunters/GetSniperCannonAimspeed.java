@@ -48,12 +48,12 @@ final class GetSniperCannonAimspeed extends ConsoleCommand {
         if (param0 != 100) {
           GetSniperCannonAimspeed.a(-120, -74);
           if (OpenGlTexture1D.field_i) {
-            return mmb.field_d[param1].getWidth();
+            return OpenGlVertexNormal.field_d[param1].getWidth();
           }
           return 100;
         }
         if (OpenGlTexture1D.field_i) {
-          return mmb.field_d[param1].getWidth();
+          return OpenGlVertexNormal.field_d[param1].getWidth();
         }
         return 100;
     }

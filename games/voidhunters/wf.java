@@ -346,7 +346,7 @@ final class wf {
           if (var6 != 13) {
             stackIn_91_0 = var10 * GetMutatorVotes.field_p / 256;
           } else {
-            stackIn_91_0 = var10 * kt.field_l / 256;
+            stackIn_91_0 = var10 * kt.soundEffectVolume / 256;
           }
           var26 = stackIn_91_0;
           if (var21 == 1) {
@@ -590,7 +590,7 @@ final class wf {
                                           if (this.field_b.e((byte) -94)) {
                                             vqa.field_g.beginPacket(60);
                                             var10_int = param1 ? 1 : 0;
-                                            stackIn_161_0 = (!bqa.a(false)) ? 0 : 7;
+                                            stackIn_161_0 = (!ModelFaceAttachment.a(false)) ? 0 : 7;
                                             GetNebulaFadesOutWhenClose.a(stackIn_161_0, var10_int != 0, (byte) -85, -1);
                                           }
                                         } else {
@@ -598,7 +598,7 @@ final class wf {
                                             if (this.field_b.e((byte) -96)) {
                                               vqa.field_g.b(true);
                                               var10_int = param1 ? 1 : 0;
-                                              stackIn_166_0 = (bqa.a(false)) ? 7 : 0;
+                                              stackIn_166_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
                                               GetNebulaFadesOutWhenClose.a(stackIn_166_0, var10_int != 0, (byte) -85, -1);
                                             }
                                           } else {
@@ -718,7 +718,7 @@ final class wf {
                                         if (this.field_b.e((byte) -89)) {
                                           vqa.field_g.e(true);
                                           var10_int = param1 ? 1 : 0;
-                                          stackIn_156_0 = (bqa.a(false)) ? 7 : 0;
+                                          stackIn_156_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
                                           GetNebulaFadesOutWhenClose.a(stackIn_156_0, var10_int != 0, (byte) -85, -1);
                                         }
                                       }
@@ -786,14 +786,14 @@ final class wf {
                           } else {
                             var6 = 0;
                             if (this.field_b.a(true) &&
-                              kt.field_l > 0) {
-                              nl.a(0, -13205);
+                              kt.soundEffectVolume > 0) {
+                              LoopingSound.setSoundEffectVolume(0, -13205);
                               var6 = 1;
                             }
                             if (this.field_b.d(12465) &&
-                              256 > kt.field_l) {
+                              256 > kt.soundEffectVolume) {
                               var6 = 1;
-                              nl.a(256, -13205);
+                              LoopingSound.setSoundEffectVolume(256, -13205);
                             }
                             if (this.field_b.b((byte) 126)) {
                               var10_int = this.b(31488, param2) - (-this.a((byte) -79, param2) + GetSniperCannonAimspeed.a(100, 131)) >> 1;
@@ -801,22 +801,22 @@ final class wf {
                               var12_int = 256 * var11 / GetSniperCannonAimspeed.a(param0 + 76, 131);
                               var6 = 1;
                               if (var12_int <= 0) {
-                                nl.a(0, -13205);
+                                LoopingSound.setSoundEffectVolume(0, -13205);
                               } else {
                                 if (256 > var12_int) {
-                                  nl.a(var12_int, -13205);
+                                  LoopingSound.setSoundEffectVolume(var12_int, -13205);
                                 } else {
-                                  nl.a(256, -13205);
+                                  LoopingSound.setSoundEffectVolume(256, -13205);
                                 }
                               }
                             }
                             if (this.field_b.d((byte) -7) &&
-                              kt.field_l > 0) {
+                              kt.soundEffectVolume > 0) {
                               var6 = 1;
                               ShieldBehaviourFactory.b((byte) 64);
                             }
                             if (this.field_b.b(-86) &&
-                              kt.field_l < 256) {
+                              kt.soundEffectVolume < 256) {
                               ft.b(18941);
                               var6 = 1;
                             }
@@ -827,7 +827,7 @@ final class wf {
                                 mba.field_b = 20 + SetMinimapWidth.field_o;
                               }
                               if (UiDraggableContainer.field_E) {
-                                MissionBuilder.a((byte) 3, "fx_volume", kt.field_l);
+                                MissionBuilder.a((byte) 3, "fx_volume", kt.soundEffectVolume);
                                 SetLaserAimarc.a(-108);
                               }
                             }
@@ -857,7 +857,7 @@ final class wf {
             } else {
               if (this.field_b.e((byte) -97)) {
                 var10_int = param1 ? 1 : 0;
-                stackIn_51_0 = (bqa.a(false)) ? 7 : 0;
+                stackIn_51_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
                 GetNebulaFadesOutWhenClose.a(stackIn_51_0, var10_int != 0, (byte) -85, -1);
               }
             }
@@ -865,7 +865,7 @@ final class wf {
         } else {
           if (this.field_b.e((byte) -78)) {
             var10_int = param1 ? 1 : 0;
-            stackIn_40_0 = (bqa.a(false)) ? 7 : 0;
+            stackIn_40_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
             GetNebulaFadesOutWhenClose.a(stackIn_40_0, var10_int != 0, (byte) -85, -3);
           }
         }
@@ -1079,7 +1079,7 @@ final class wf {
                 this.field_c != 4) {
                 continue;
               }
-              stackIn_41_0 = (!bqa.a(false)) ? 0 : 7;
+              stackIn_41_0 = (!ModelFaceAttachment.a(false)) ? 0 : 7;
               GetNebulaFadesOutWhenClose.a(stackIn_41_0, false, (byte) -85, -1);
               continue;
             }

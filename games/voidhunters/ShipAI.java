@@ -60,10 +60,10 @@ final class ShipAI implements DiffableState {
         }
     }
 
-    final void drawSteeringDebug(Ship param0, int param1, lta param2, World param3) {
+    final void drawSteeringDebug(Ship param0, int param1, Camera2D param2, World param3) {
         try {
           int var5_int = -5 / ((-71 - param1) / 50);
-          c.a(param2.b(true, param0.y + this.desiredVelocityY), param2.a(param0.x + this.desiredVelocityX, (byte) 124), param2.a(param0.x, (byte) 127), param2.b(true, param0.y), -16777216, 16776960);
+          c.a(param2.worldToScreenY(true, param0.y + this.desiredVelocityY), param2.worldToScreenX(param0.x + this.desiredVelocityX, (byte) 124), param2.worldToScreenX(param0.x, (byte) 127), param2.worldToScreenY(true, param0.y), -16777216, 16776960);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aoa.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -206,7 +206,7 @@ final class ShipAI implements DiffableState {
         try {
           if (param1) {
             World var4 = (World) null;
-            this.drawSteeringDebug((Ship) null, 11, (lta) null, (World) null);
+            this.drawSteeringDebug((Ship) null, 11, (Camera2D) null, (World) null);
           }
           this.parentPlayer = param0.readBits(0, 4);
         } catch (RuntimeException runtimeException) {
@@ -320,7 +320,7 @@ final class ShipAI implements DiffableState {
               var10 = 4000;
             }
             if (hob.a(var9_ref_Random, var10, 125) == 0) {
-              ArchiveProvider.a(50, param0.y, param0.x, false, 94, 512);
+              ArchiveProvider.playSpatialSound(50, param0.y, param0.x, false, 94, 512);
             }
           }
           this.updateSteering(false, var8, param0, param2);

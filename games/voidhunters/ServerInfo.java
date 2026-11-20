@@ -296,9 +296,9 @@ final class ServerInfo implements DiffableState {
         return this.isOptionStateAvailable(var4, param0, false);
     }
 
-    final static ana playPannedSample(int param0, int param1, int param2, PcmSample param3) {
+    final static SoundPlayback playPannedSample(int param0, int param1, int param2, PcmSample param3) {
         RuntimeException var4 = null;
-        ana stackIn_3_0 = null;
+        SoundPlayback stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -307,7 +307,7 @@ final class ServerInfo implements DiffableState {
           if (param1 != 100) {
             field_d = (int[]) null;
           }
-          stackIn_3_0 = ka.a(param1 - 193, PcmSampleStream.createPanned(param3, 100, param0, param2));
+          stackIn_3_0 = Model3D.playSampleStream(param1 - 193, PcmSampleStream.createPanned(param3, 100, param0, param2));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

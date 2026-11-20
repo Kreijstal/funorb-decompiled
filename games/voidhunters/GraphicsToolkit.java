@@ -335,7 +335,7 @@ abstract class GraphicsToolkit {
 
     abstract DepthBuffer createDepthBuffer(int param0, int param1);
 
-    abstract ka createModel(cbb param0, int param1, int param2, int param3, int param4);
+    abstract Model3D createModel(ModelData param0, int param1, int param2, int param3, int param4);
 
     final void dispose(byte param0) {
         if (param0 != 30) {

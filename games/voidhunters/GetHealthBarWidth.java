@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetHealthBarWidth extends ConsoleCommand {
-    static ka[] field_p;
+    static Model3D[] field_p;
     static int field_q;
     static String field_o;
 

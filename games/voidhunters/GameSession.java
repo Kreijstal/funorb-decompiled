@@ -272,7 +272,7 @@ final class GameSession {
         var14 = -2 + var10;
         var15 = -2 + var11;
         for (var16_int = var8; var9 > var16_int; var16_int++) {
-          uv.a(112, var12, var11, var13, 5592405, var10);
+          UiToggleButtonRenderer.drawRectangle(112, var12, var11, var13, 5592405, var10);
           var17_int = 0;
           if (var16_int == var4) {
             var17_int = 16711680;
@@ -346,8 +346,8 @@ final class GameSession {
                 var7 = var4[var5 + 1];
                 var8 = var4[(2 + var5) % var16.length];
                 var9 = var4[(var5 + 3) % var16.length];
-                c.a(ShipTeamConditionFactory.field_a.b(true, var9), ShipTeamConditionFactory.field_a.a(var8, (byte) 121), ShipTeamConditionFactory.field_a.a(var6, (byte) 120), ShipTeamConditionFactory.field_a.b(true, var7), -16777216, 16777215);
-                SetMissileLauncherEnergyUsed.a(16711680, (byte) 7, ShipTeamConditionFactory.field_a.b(true, var7), (float)(int)(ShipTeamConditionFactory.field_a.field_a * 16384.0f), 100, ShipTeamConditionFactory.field_a.a(var6, (byte) 115));
+                c.a(ShipTeamConditionFactory.field_a.worldToScreenY(true, var9), ShipTeamConditionFactory.field_a.worldToScreenX(var8, (byte) 121), ShipTeamConditionFactory.field_a.worldToScreenX(var6, (byte) 120), ShipTeamConditionFactory.field_a.worldToScreenY(true, var7), -16777216, 16777215);
+                SetMissileLauncherEnergyUsed.a(16711680, (byte) 7, ShipTeamConditionFactory.field_a.worldToScreenY(true, var7), (float)(int)(ShipTeamConditionFactory.field_a.scale * 16384.0f), 100, ShipTeamConditionFactory.field_a.worldToScreenX(var6, (byte) 115));
               }
             }
           }
@@ -383,7 +383,7 @@ final class GameSession {
                 es.field_b = new PlayerGameData();
               }
               es.field_b.blueprint = var4;
-              if (!bqa.a(false)) {
+              if (!ModelFaceAttachment.a(false)) {
                 GetMissionResnetResourceTickTime.savePlayerGameData((byte) -39);
               }
             } else {
@@ -667,9 +667,9 @@ final class GameSession {
                     var8 == var21.getTeam((byte) 121) &&
                     var21.canSpawnEscapePod(param1 ^ -15491) && (var8 != sja.field_c ||
                     var21 == param0)) {
-                    var13 = ShipTeamConditionFactory.field_a.a(var21.getX(false), (byte) 119);
-                    var14 = ShipTeamConditionFactory.field_a.b(true, var21.getY((byte) -118));
-                    var15 = (int)((float)GetUseNiceTrails.field_p * ShipTeamConditionFactory.field_a.field_a);
+                    var13 = ShipTeamConditionFactory.field_a.worldToScreenX(var21.getX(false), (byte) 119);
+                    var14 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var21.getY((byte) -118));
+                    var15 = (int)((float)GetUseNiceTrails.field_p * ShipTeamConditionFactory.field_a.scale);
                     this.a(var14, (byte) 66, var13, var15);
                   }
                 }
@@ -679,9 +679,9 @@ final class GameSession {
                   for (var12 = 0; var12 < var22.length; var12++) {
                     var13_ref_it = var22[var12];
                     if (var8 == var13_ref_it.team) {
-                      var14Lifetime2 = ShipTeamConditionFactory.field_a.a(var13_ref_it.x, (byte) 123);
-                      var15Lifetime2 = ShipTeamConditionFactory.field_a.b(true, var13_ref_it.y);
-                      var16 = (int)(ShipTeamConditionFactory.field_a.field_a * (float)GetUseNiceTrails.field_p);
+                      var14Lifetime2 = ShipTeamConditionFactory.field_a.worldToScreenX(var13_ref_it.x, (byte) 123);
+                      var15Lifetime2 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var13_ref_it.y);
+                      var16 = (int)(ShipTeamConditionFactory.field_a.scale * (float)GetUseNiceTrails.field_p);
                       var17 = var13_ref_it.hyperdriveTimer * var16 / (3 * Particle.field_l);
                       this.a(var15Lifetime2, (byte) -7, var14Lifetime2, var17);
                     }
@@ -696,9 +696,9 @@ final class GameSession {
                     var14_ref_rba = var24;
                     if (null != var24 &&
                       var8 == var24.team) {
-                      var15Lifetime3 = ShipTeamConditionFactory.field_a.a(var24.x, (byte) 117);
-                      var16Lifetime1 = ShipTeamConditionFactory.field_a.b(true, var24.y);
-                      var17Lifetime1 = (int)((float)GetUseNiceTrails.field_p * ShipTeamConditionFactory.field_a.field_a);
+                      var15Lifetime3 = ShipTeamConditionFactory.field_a.worldToScreenX(var24.x, (byte) 117);
+                      var16Lifetime1 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var24.y);
+                      var17Lifetime1 = (int)((float)GetUseNiceTrails.field_p * ShipTeamConditionFactory.field_a.scale);
                       this.a(var16Lifetime1, (byte) -115, var15Lifetime3, var17Lifetime1);
                     }
                   }
@@ -713,9 +713,9 @@ final class GameSession {
                         var26Lifetime1.getTeam((byte) 90) == var8 &&
                         var26Lifetime1.canSpawnEscapePod(param1 + 15726) && (var8 != sja.field_c ||
                         param0 == var26Lifetime1)) {
-                        var15Lifetime4 = ShipTeamConditionFactory.field_a.a(var26Lifetime1.getX(false), (byte) 125);
-                        var16Lifetime2 = ShipTeamConditionFactory.field_a.b(true, var26Lifetime1.getY((byte) 127));
-                        var17Lifetime2 = (int)(ShipTeamConditionFactory.field_a.field_a * (float)GetUseNiceTrails.field_p);
+                        var15Lifetime4 = ShipTeamConditionFactory.field_a.worldToScreenX(var26Lifetime1.getX(false), (byte) 125);
+                        var16Lifetime2 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var26Lifetime1.getY((byte) 127));
+                        var17Lifetime2 = (int)(ShipTeamConditionFactory.field_a.scale * (float)GetUseNiceTrails.field_p);
                         stackIn_85_0 = (!this.a(255, var15Lifetime4, var17Lifetime2, (byte) -126, var16Lifetime2)) ? 0 : 1;
                         var7 = stackIn_85_0;
                         if (var7 != 0) {
@@ -754,9 +754,9 @@ final class GameSession {
                           stackIn_99_1 = var14_ref_rbaLifetime1;
                           if (stackIn_99_0 != stackIn_99_1 &&
                             var14_ref_rbaLifetime1.team == var8) {
-                            var15Lifetime4 = ShipTeamConditionFactory.field_a.a(var14_ref_rbaLifetime1.x, (byte) 126);
-                            var16Lifetime2Lifetime1 = ShipTeamConditionFactory.field_a.b(true, var14_ref_rbaLifetime1.y);
-                            var17Lifetime2Lifetime1 = (int)(ShipTeamConditionFactory.field_a.field_a * (float)GetUseNiceTrails.field_p);
+                            var15Lifetime4 = ShipTeamConditionFactory.field_a.worldToScreenX(var14_ref_rbaLifetime1.x, (byte) 126);
+                            var16Lifetime2Lifetime1 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var14_ref_rbaLifetime1.y);
+                            var17Lifetime2Lifetime1 = (int)(ShipTeamConditionFactory.field_a.scale * (float)GetUseNiceTrails.field_p);
                             stackIn_105_0 = (!this.a(255, var15Lifetime4, var17Lifetime2Lifetime1, (byte) -40, var16Lifetime2Lifetime1)) ? 0 : 1;
                             var7 = stackIn_105_0;
                             if (var7 != 0) {
@@ -773,9 +773,9 @@ final class GameSession {
                         for (var13Lifetime3 = 0; var13Lifetime3 < var29.length; var13Lifetime3++) {
                           var30 = var29[var13Lifetime3];
                           if (var8 == var30.team) {
-                            var15Lifetime4 = ShipTeamConditionFactory.field_a.a(var30.x, (byte) 112);
-                            var16Lifetime2Lifetime1 = ShipTeamConditionFactory.field_a.b(true, var30.y);
-                            var17Lifetime2Lifetime1 = (int)((float)GetUseNiceTrails.field_p * ShipTeamConditionFactory.field_a.field_a);
+                            var15Lifetime4 = ShipTeamConditionFactory.field_a.worldToScreenX(var30.x, (byte) 112);
+                            var16Lifetime2Lifetime1 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var30.y);
+                            var17Lifetime2Lifetime1 = (int)((float)GetUseNiceTrails.field_p * ShipTeamConditionFactory.field_a.scale);
                             var18 = var17Lifetime2Lifetime1 * var30.hyperdriveTimer / (3 * Particle.field_l);
                             stackIn_131_0 = (!this.a(var30.hyperdriveTimer, var15Lifetime4, var18, (byte) -101, var16Lifetime2Lifetime1)) ? 0 : 1;
                             var7 = stackIn_131_0;
@@ -808,9 +808,9 @@ final class GameSession {
                   if (((null != this.field_v)) &&
                     ((param0 != null)) &&
                     (!(!this.field_v.b(4, -53)))) {
-                    var8 = ShipTeamConditionFactory.field_a.a(param0.getX(false), (byte) 114);
-                    var9 = ShipTeamConditionFactory.field_a.b(true, param0.getY((byte) -121));
-                    var10 = 1 + (int)(ShipTeamConditionFactory.field_a.field_a * (float)GetUseNiceTrails.field_p);
+                    var8 = ShipTeamConditionFactory.field_a.worldToScreenX(param0.getX(false), (byte) 114);
+                    var9 = ShipTeamConditionFactory.field_a.worldToScreenY(true, param0.getY((byte) -121));
+                    var10 = 1 + (int)(ShipTeamConditionFactory.field_a.scale * (float)GetUseNiceTrails.field_p);
                     var11Lifetime2 = SetMinimapWidth.field_o * 10 % 8192;
                     for (var12Lifetime2 = 0; var12Lifetime2 < 100; var12Lifetime2++) {
                       var13Lifetime3 = var11Lifetime2 + var12Lifetime2 * 8192 / 100;
@@ -843,9 +843,9 @@ final class GameSession {
                 stackIn_144_0 = (Ship) (param0);
                 if (stackIn_144_0 != null &&
                   this.field_v.b(4, -53)) {
-                  var8Lifetime1 = ShipTeamConditionFactory.field_a.a(param0.getX(false), (byte) 114);
-                  var9Lifetime1 = ShipTeamConditionFactory.field_a.b(true, param0.getY((byte) -121));
-                  var10Lifetime1 = 1 + (int)(ShipTeamConditionFactory.field_a.field_a * (float)GetUseNiceTrails.field_p);
+                  var8Lifetime1 = ShipTeamConditionFactory.field_a.worldToScreenX(param0.getX(false), (byte) 114);
+                  var9Lifetime1 = ShipTeamConditionFactory.field_a.worldToScreenY(true, param0.getY((byte) -121));
+                  var10Lifetime1 = 1 + (int)(ShipTeamConditionFactory.field_a.scale * (float)GetUseNiceTrails.field_p);
                   var11Lifetime1 = SetMinimapWidth.field_o * 10 % 8192;
                   for (var12Lifetime1 = 0; var12Lifetime1 < 100; var12Lifetime1++) {
                     var13Lifetime1 = var11Lifetime1 + var12Lifetime1 * 8192 / 100;
@@ -925,8 +925,8 @@ final class GameSession {
         MissionVariableFactory.field_a = GetBombletSprayEnergyUsed.field_p.height;
         SetMassDriverReload.field_p = PartitionZoneFactory.field_a >> 1;
         GetLaserAimarc.field_q = MissionVariableFactory.field_a >> 1;
-        ShipTeamConditionFactory.field_a.field_e = GetLaserAimarc.field_q;
-        ShipTeamConditionFactory.field_a.field_d = SetMassDriverReload.field_p;
+        ShipTeamConditionFactory.field_a.screenOriginY = GetLaserAimarc.field_q;
+        ShipTeamConditionFactory.field_a.screenOriginX = SetMassDriverReload.field_p;
         if (!param1) {
           this.field_i = this.field_i - 32;
           if (this.field_i < 0) {
@@ -942,7 +942,7 @@ final class GameSession {
           this.field_R = ffa.field_a;
         }
         if (GraphicsPresentException.field_a) {
-          ShipTeamConditionFactory.field_a.field_e = ShipTeamConditionFactory.field_a.field_e - (-SetToggledScoreboard.field_o.screenY + SoftwareRasterizer2D.height >> 1);
+          ShipTeamConditionFactory.field_a.screenOriginY = ShipTeamConditionFactory.field_a.screenOriginY - (-SetToggledScoreboard.field_o.screenY + SoftwareRasterizer2D.height >> 1);
         }
         if (SetPhasedEnergyBeamAimspeed.field_q == 1 &&
           ffa.field_a < 20 &&
@@ -973,18 +973,18 @@ final class GameSession {
           GetDebrisGroupColour.field_r.setProjectionParameters(SetMassDriverReload.field_p, GetLaserAimarc.field_q, 512, 512);
           GetDebrisGroupColour.field_r.setDepthRange(32, 524288);
           var23 = GetDebrisGroupColour.field_r.createTransform();
-          var23.setCamera((int)(ShipTeamConditionFactory.field_a.field_c / 64.0f), (int)(-8.0f / ShipTeamConditionFactory.field_a.field_a), (int)(-ShipTeamConditionFactory.field_a.field_b / 64.0f), -4096, 0, 0);
+          var23.setCamera((int)(ShipTeamConditionFactory.field_a.worldCenterX / 64.0f), (int)(-8.0f / ShipTeamConditionFactory.field_a.scale), (int)(-ShipTeamConditionFactory.field_a.worldCenterY / 64.0f), -4096, 0, 0);
           GetDebrisGroupColour.field_r.setViewTransform(var23);
         }
-        ShipTeamConditionFactory.field_a.a(MissionVariableFactory.field_a, 0, -116, PartitionZoneFactory.field_a, 0);
+        ShipTeamConditionFactory.field_a.updateWorldBounds(MissionVariableFactory.field_a, 0, -116, PartitionZoneFactory.field_a, 0);
         var24 = this.state.b(1);
         PlayerAction.a(var24.world, ShipTeamConditionFactory.field_a, this.field_x, (byte) -59);
         var6 = this.state.a((byte) 33).getShips(1000);
         var7 = this.state.a((byte) 42).getResNodes(1);
         var8 = this.state.a((byte) 30).getEscapePods(0);
         var9 = null;
-        var10 = ShipTeamConditionFactory.field_a.a(true, GetUseDetailLines.field_o);
-        var11 = ShipTeamConditionFactory.field_a.a(0, GetTorpedoReload.field_q);
+        var10 = ShipTeamConditionFactory.field_a.screenToWorldX(true, GetUseDetailLines.field_o);
+        var11 = ShipTeamConditionFactory.field_a.screenToWorldY(0, GetTorpedoReload.field_q);
         if (this.localPlayerIndex >= 0) {
           var9 = var24.world.findShipByOwner(this.localPlayerIndex, 126);
         }
@@ -1097,7 +1097,7 @@ final class GameSession {
           if (var13Lifetime1 > var17Lifetime1 - var16Lifetime1) {
             var18 = (-var13Lifetime1 + var17Lifetime1) * 255 / var16Lifetime1;
           }
-          var25 = mmb.field_d[137];
+          var25 = OpenGlVertexNormal.field_d[137];
           var25.draw(SetMassDriverReload.field_p - var25.getPaddedWidth() / 2, 0, 0, 16777215 | var18 << 24, 1);
         }
         this.b(var24, 1);
@@ -1382,8 +1382,8 @@ final class GameSession {
           }
           var5 = this.lastPlayerShipX[var3];
           var6 = this.lastPlayerShipY[var3];
-          var7 = ShipTeamConditionFactory.field_a.a(var5, (byte) 127);
-          var8 = ShipTeamConditionFactory.field_a.b(true, -(3 * NebulaField.field_d) + var6);
+          var7 = ShipTeamConditionFactory.field_a.worldToScreenX(var5, (byte) 127);
+          var8 = ShipTeamConditionFactory.field_a.worldToScreenY(true, -(3 * NebulaField.field_d) + var6);
           var9 = this.getPlayerChatLines((byte) 120, var30.getPlayer(var3, (byte) 59).selectedTeam, var3);
           if (var9 != null) {
             stackIn_12_0 = (var9.length > 0) ? 1 : 0;
@@ -1392,7 +1392,7 @@ final class GameSession {
           }
           var10 = stackIn_12_0;
           if (var4 != null) {
-            var8 = -6 + ShipTeamConditionFactory.field_a.b(true, var4.getBoundingbox((byte) -110)[2] - 3 * NebulaField.field_d);
+            var8 = -6 + ShipTeamConditionFactory.field_a.worldToScreenY(true, var4.getBoundingbox((byte) -110)[2] - 3 * NebulaField.field_d);
             var11_ref_String = this.state.getPlayerName(1, var4.getOwner((byte) -117));
             if (var4.getOwner((byte) -117) != this.localPlayerIndex && (!var4.hasVisibilityFlag(1, (byte) 24) &&
               !var4.hasVisibilityFlag(2, (byte) -120) ||
@@ -1406,8 +1406,8 @@ final class GameSession {
           if (var10 != 0) {
             var31 = var9[var9.length - 1];
             var13 = GetPhasedEnergyBeamProjectiles.a(param0 ^ 4206, var31);
-            var14 = ShipTeamConditionFactory.field_a.a(4096 + var5, (byte) 122);
-            var15 = ShipTeamConditionFactory.field_a.b(true, -2048 + (var6 - (var11 << 1))) - OpenGlTexture.b((byte) 118);
+            var14 = ShipTeamConditionFactory.field_a.worldToScreenX(4096 + var5, (byte) 122);
+            var15 = ShipTeamConditionFactory.field_a.worldToScreenY(true, -2048 + (var6 - (var11 << 1))) - OpenGlTexture.b((byte) 118);
             var16 = var14 - (var13 >> 1);
             var17 = var15;
             var18 = 0;
@@ -1434,10 +1434,10 @@ final class GameSession {
             for (var25 = 0; var25 < var9.length; var25++) {
               var32 = var9[var25];
               var13Lifetime1 = GetPhasedEnergyBeamProjectiles.a(param0 - 4218, var32);
-              var26 = ShipTeamConditionFactory.field_a.a(2048 + var5, (byte) 115);
-              var27 = ShipTeamConditionFactory.field_a.b(true, var6 - 16384 - 16384);
-              var14Lifetime1 = ShipTeamConditionFactory.field_a.a(var5 + 4096, (byte) 117);
-              var15Lifetime1 = ShipTeamConditionFactory.field_a.b(true, -8192 + (var6 - (var11 << 1))) - OpenGlTexture.b((byte) 118);
+              var26 = ShipTeamConditionFactory.field_a.worldToScreenX(2048 + var5, (byte) 115);
+              var27 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var6 - 16384 - 16384);
+              var14Lifetime1 = ShipTeamConditionFactory.field_a.worldToScreenX(var5 + 4096, (byte) 117);
+              var15Lifetime1 = ShipTeamConditionFactory.field_a.worldToScreenY(true, -8192 + (var6 - (var11 << 1))) - OpenGlTexture.b((byte) 118);
               var16Lifetime1 = var14Lifetime1 - (var13Lifetime1 >> 1);
               var17Lifetime1 = var15Lifetime1 + -16 * (-var25 + var9.length - 1);
               c.a(var27 + var19, var26 + var18, var7, -(OpenGlTexture.b((byte) 118) * 2) + var8, -16777216, 16777215);
@@ -2024,8 +2024,8 @@ final class GameSession {
                       var23 = var29;
                       if (var23 != null) {
                         for (var24 = 0; var29.length > var24; var24++) {
-                          var25 = ShipTeamConditionFactory.field_a.a(var29[var24].x, (byte) 118);
-                          var26 = ShipTeamConditionFactory.field_a.b(true, var29[var24].y);
+                          var25 = ShipTeamConditionFactory.field_a.worldToScreenX(var29[var24].x, (byte) 118);
+                          var26 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var29[var24].y);
                           stackIn_62_0 = var26;
                           stackIn_62_1 = var25;
                           stackIn_62_2 = var19;
@@ -2078,8 +2078,8 @@ final class GameSession {
                     if (var14 != 0) {
                       var35 = var17[var30].getWorldPosition(this.state.a((byte) 55), 26964);
                       if (var35 != null) {
-                        var24Lifetime1 = ShipTeamConditionFactory.field_a.a(var35.x, (byte) 118);
-                        var25Lifetime1 = ShipTeamConditionFactory.field_a.b(true, var35.y);
+                        var24Lifetime1 = ShipTeamConditionFactory.field_a.worldToScreenX(var35.x, (byte) 118);
+                        var25Lifetime1 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var35.y);
                         stackIn_96_0 = var25Lifetime1;
                         stackIn_96_1 = var24Lifetime1;
                         stackIn_96_2 = var19;
@@ -2876,8 +2876,8 @@ final class GameSession {
                     var42 = var9Lifetime1;
                     if (var34_int == var9Lifetime1) {
                       CachedArchiveProvider.a(120, false, var36, var37, var30Lifetime1, var30Lifetime1, 56035);
-                      uv.a(125, var36, var30Lifetime1, var37, 56035, var30Lifetime1);
-                      uv.a(124, 1 + var36, var30Lifetime1 - 2, 1 + var37, 56035, -2 + var30Lifetime1);
+                      UiToggleButtonRenderer.drawRectangle(125, var36, var30Lifetime1, var37, 56035, var30Lifetime1);
+                      UiToggleButtonRenderer.drawRectangle(124, 1 + var36, var30Lifetime1 - 2, 1 + var37, 56035, -2 + var30Lifetime1);
                     } else {
                       if (var41 != 0) {
                         if (var38 != 0) {
@@ -2905,8 +2905,8 @@ final class GameSession {
                     }
                     if (var42 != var9Lifetime1) {
                       var50 = new PlayerAction();
-                      var50.mousex = ShipTeamConditionFactory.field_a.a(true, GetUseDetailLines.field_o);
-                      var50.mousey = ShipTeamConditionFactory.field_a.a(0, GetTorpedoReload.field_q);
+                      var50.mousex = ShipTeamConditionFactory.field_a.screenToWorldX(true, GetUseDetailLines.field_o);
+                      var50.mousey = ShipTeamConditionFactory.field_a.screenToWorldY(0, GetTorpedoReload.field_q);
                       var50.specialOrderSubmessage = new SpecialOrderSubmessage();
                       var50.specialOrderSubmessage.spawnchoice = new SpawnChoice(var42);
                       this.submitPlayerAction(0, true, var50);
@@ -2949,14 +2949,14 @@ final class GameSession {
                       FixedPointTrigonometry.drawThickLine(16711680, 2, 16994, var30Lifetime1 + var37 - 1 - 4, 255, 4 + var36, -5 + (var36 + var30Lifetime1), 4 + var37);
                     }
                     if (var20 <= var34_int) {
-                      mmb.field_d[111].draw(var32 + 2, -mmb.field_d[111].getPaddedHeight() + var33 + var30Lifetime1);
+                      OpenGlVertexNormal.field_d[111].draw(var32 + 2, -OpenGlVertexNormal.field_d[111].getPaddedHeight() + var33 + var30Lifetime1);
                     }
                     var32 = var32 + var29;
                   }
                 }
                 var33Lifetime1 = var11Lifetime1 + (var16 + var15);
                 if (param0.world.getObjectiveType(false) == 13) {
-                  var52 = mmb.field_d[129];
+                  var52 = OpenGlVertexNormal.field_d[129];
                   var34 = var52;
                   var34Lifetime1 = var52;
                   var34Lifetime2 = var52;
@@ -2978,22 +2978,22 @@ final class GameSession {
                   if (var36Lifetime1 != 0 ||
                     SetMachineGunEnergyUsed.field_o[84] &&
                     !this.field_X) {
-                    var34Lifetime2 = mmb.field_d[130];
+                    var34Lifetime2 = OpenGlVertexNormal.field_d[130];
                     if ((1 == GetBots.field_o ||
                       SetMachineGunEnergyUsed.field_o[84] &&
                       (null == nna.field_C ||
                       !nna.field_C.isOpen(13462))) && !this.field_X) {
                       if (var9Lifetime1 >= var20) {
                         var54 = new PlayerAction();
-                        var54.mousex = ShipTeamConditionFactory.field_a.a(true, GetUseDetailLines.field_o);
-                        var54.mousey = ShipTeamConditionFactory.field_a.a(0, GetTorpedoReload.field_q);
+                        var54.mousex = ShipTeamConditionFactory.field_a.screenToWorldX(true, GetUseDetailLines.field_o);
+                        var54.mousey = ShipTeamConditionFactory.field_a.screenToWorldY(0, GetTorpedoReload.field_q);
                         var54.specialOrderSubmessage = new SpecialOrderSubmessage();
                         var54.specialOrderSubmessage.blueprint = es.field_b.blueprint;
                         this.submitPlayerAction(0, true, var54);
                       } else {
                         var53 = new PlayerAction();
-                        var53.mousex = ShipTeamConditionFactory.field_a.a(true, GetUseDetailLines.field_o);
-                        var53.mousey = ShipTeamConditionFactory.field_a.a(0, GetTorpedoReload.field_q);
+                        var53.mousex = ShipTeamConditionFactory.field_a.screenToWorldX(true, GetUseDetailLines.field_o);
+                        var53.mousey = ShipTeamConditionFactory.field_a.screenToWorldY(0, GetTorpedoReload.field_q);
                         var53.specialOrderSubmessage = new SpecialOrderSubmessage();
                         var53.specialOrderSubmessage.spawnchoice = new SpawnChoice(var9Lifetime1);
                         this.submitPlayerAction(0, true, var53);
@@ -3070,7 +3070,7 @@ final class GameSession {
     }
 
     private final void b(int param0, int param1, int param2, int param3) {
-        SetMissileLauncherEnergyUsed.a(param2 * 131586 + 8947848, (byte) 7, ShipTeamConditionFactory.field_a.b(true, param3), ShipTeamConditionFactory.field_a.field_a * 512.0f, 200, ShipTeamConditionFactory.field_a.a(param1, (byte) 117));
+        SetMissileLauncherEnergyUsed.a(param2 * 131586 + 8947848, (byte) 7, ShipTeamConditionFactory.field_a.worldToScreenY(true, param3), ShipTeamConditionFactory.field_a.scale * 512.0f, 200, ShipTeamConditionFactory.field_a.worldToScreenX(param1, (byte) 117));
         if (param0 != -7178) {
           this.a(true);
         }
@@ -3280,7 +3280,7 @@ final class GameSession {
             var5_ref = GetLaserReload.field_o;
           } else {
             if (var3_int == 0) {
-              var5_ref = SetReverbGain.a(Widget.field_H, new String[]{glb.field_c[0]}, param1 + 74);
+              var5_ref = SetReverbGain.a(Widget.field_H, new String[]{GpuVertexBufferOwner.field_c[0]}, param1 + 74);
               var6 = qpb.a(false, 0, 13894143);
             } else {
               if (var4 != 0) {
@@ -3291,7 +3291,7 @@ final class GameSession {
                 }
                 return;
               }
-              var5_ref = SetReverbGain.a(Widget.field_H, new String[]{glb.field_c[1]}, 99);
+              var5_ref = SetReverbGain.a(Widget.field_H, new String[]{GpuVertexBufferOwner.field_c[1]}, 99);
               var6 = qpb.a(false, 1, 13894143);
             }
           }
@@ -3404,7 +3404,7 @@ final class GameSession {
                     if (var22.isReloading((byte) -90)) {
                       var13 = -65536;
                     }
-                    var14 = mmb.field_d[44];
+                    var14 = OpenGlVertexNormal.field_d[44];
                     if (!var22.isReloading((byte) -90)) {
                       var14.draw(var5 - var11Lifetime1, var6 - var12Lifetime1, 0, var13, 1);
                     } else {
@@ -3600,14 +3600,14 @@ final class GameSession {
           if (var13_int != 0 &&
             this.localPlayerIndex >= 0 && (GetUseDetailLines.field_o != -1 ||
             GetTorpedoReload.field_q != -1)) {
-            var5 = ShipTeamConditionFactory.field_a.a(true, GetUseDetailLines.field_o);
-            var6 = ShipTeamConditionFactory.field_a.a(0, GetTorpedoReload.field_q);
+            var5 = ShipTeamConditionFactory.field_a.screenToWorldX(true, GetUseDetailLines.field_o);
+            var6 = ShipTeamConditionFactory.field_a.screenToWorldY(0, GetTorpedoReload.field_q);
             decompiledFrameRemainder0 = false;
           }
           else {
             if (var13_int == 0) {
-              var5 = ShipTeamConditionFactory.field_a.a(true, GetUseDetailLines.field_o);
-              var6 = ShipTeamConditionFactory.field_a.a(0, GetTorpedoReload.field_q);
+              var5 = ShipTeamConditionFactory.field_a.screenToWorldX(true, GetUseDetailLines.field_o);
+              var6 = ShipTeamConditionFactory.field_a.screenToWorldY(0, GetTorpedoReload.field_q);
             }
           }
           var3 = this.a(var5, var6, var13_int != 0, var9, 2, var3);
@@ -3615,7 +3615,7 @@ final class GameSession {
           var11 = stackIn_53_0;
         }
         if (var11 == 0) {
-          ShipTeamConditionFactory.field_a.field_a = ShipTeamConditionFactory.field_a.field_a + (this.field_w - ShipTeamConditionFactory.field_a.field_a) / 4.0f;
+          ShipTeamConditionFactory.field_a.scale = ShipTeamConditionFactory.field_a.scale + (this.field_w - ShipTeamConditionFactory.field_a.scale) / 4.0f;
         }
         sh.a(20824);
         this.a(var5, var8, var3, var4, var6, var7, param1, 109);
@@ -3656,7 +3656,7 @@ final class GameSession {
             !var9.world.a(this.getLocalTeam((byte) 107), var9.missionState, -14368)) {
             return;
           }
-          var13 = SetReverbGain.a(mmb.field_b, new String[]{Integer.toString(Particle.field_E / (Particle.field_l * 60))}, 95);
+          var13 = SetReverbGain.a(OpenGlVertexNormal.field_b, new String[]{Integer.toString(Particle.field_E / (Particle.field_l * 60))}, 95);
           var19 = (String) null;
           var18 = (String) null;
           lh.a((byte) -123, 0, (String) null, (String) null, var13, 2);
@@ -3758,25 +3758,25 @@ final class GameSession {
             SetMachineGunEnergyUsed.field_o[SetFixedaim.field_q] ||
             var6 != 0 &&
             SetMachineGunEnergyUsed.field_o[98]) {
-            ShipTeamConditionFactory.field_a.field_b = ShipTeamConditionFactory.field_a.field_b - 8.0f / ShipTeamConditionFactory.field_a.field_a;
+            ShipTeamConditionFactory.field_a.worldCenterY = ShipTeamConditionFactory.field_a.worldCenterY - 8.0f / ShipTeamConditionFactory.field_a.scale;
           }
           if (var5 != 0 &&
             SetMachineGunEnergyUsed.field_o[SetCountermeasureLauncherAimspeed.field_q] ||
             var6 != 0 &&
             SetMachineGunEnergyUsed.field_o[99]) {
-            ShipTeamConditionFactory.field_a.field_b = ShipTeamConditionFactory.field_a.field_b + 8.0f / ShipTeamConditionFactory.field_a.field_a;
+            ShipTeamConditionFactory.field_a.worldCenterY = ShipTeamConditionFactory.field_a.worldCenterY + 8.0f / ShipTeamConditionFactory.field_a.scale;
           }
           if (var5 != 0 &&
             SetMachineGunEnergyUsed.field_o[UnsupportedGpuMaterialEffect.field_f] ||
             var6 != 0 &&
             SetMachineGunEnergyUsed.field_o[97]) {
-            ShipTeamConditionFactory.field_a.field_c = ShipTeamConditionFactory.field_a.field_c + 8.0f / ShipTeamConditionFactory.field_a.field_a;
+            ShipTeamConditionFactory.field_a.worldCenterX = ShipTeamConditionFactory.field_a.worldCenterX + 8.0f / ShipTeamConditionFactory.field_a.scale;
           }
           if (var5 != 0 &&
             SetMachineGunEnergyUsed.field_o[SetSalvoaim.field_p] ||
             var6 != 0 &&
             SetMachineGunEnergyUsed.field_o[96]) {
-            ShipTeamConditionFactory.field_a.field_c = ShipTeamConditionFactory.field_a.field_c - 8.0f / ShipTeamConditionFactory.field_a.field_a;
+            ShipTeamConditionFactory.field_a.worldCenterX = ShipTeamConditionFactory.field_a.worldCenterX - 8.0f / ShipTeamConditionFactory.field_a.scale;
           }
           boolean decompiledFrameRemainder1 = true;
           if (var4_int != 0 && (SetMachineGunEnergyUsed.field_o[GetUseCircleOutline.field_p] &&
@@ -3889,7 +3889,7 @@ final class GameSession {
         String stackIn_43_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var6 = null;
-        lta var7 = null;
+        Camera2D var7 = null;
         int var8 = 0;
         int var9 = 0;
         int var10 = 0;
@@ -3930,11 +3930,11 @@ final class GameSession {
             null != es.field_b.blueprint.description) {
             var36 = ae.a(es.field_b.blueprint.description, (byte) 60);
             var37 = var36;
-            var7 = new lta();
+            var7 = new Camera2D();
             var8 = 512;
             var9 = 256;
-            var10 = (int)((float)var8 / var7.field_a);
-            var11 = (int)((float)var9 / var7.field_a);
+            var10 = (int)((float)var8 / var7.scale);
+            var11 = (int)((float)var9 / var7.scale);
             var12 = var36.getBoundingbox((byte) -43)[1] - var36.getBoundingbox((byte) -93)[0];
             var13 = var36.getBoundingbox((byte) -72)[3] - var36.getBoundingbox((byte) -54)[2];
             if (var12 > var10 ||
@@ -3942,13 +3942,13 @@ final class GameSession {
               var14_float = (float)var12 / (float)var10;
               var15_float = (float)var13 / (float)var11;
               if (var14_float > var15_float) {
-                var7.field_a = var7.field_a / var14_float;
+                var7.scale = var7.scale / var14_float;
               } else {
-                var7.field_a = var7.field_a / var15_float;
+                var7.scale = var7.scale / var15_float;
               }
             }
-            var14 = (int)((float)var12 * var7.field_a);
-            var15 = (int)(var7.field_a * (float)var13);
+            var14 = (int)((float)var12 * var7.scale);
+            var15 = (int)(var7.scale * (float)var13);
             var16 = param0;
             if (-16 + (var16 - var14 / 2) < 0) {
               var16 = var14 / 2 + 16;
@@ -3960,11 +3960,11 @@ final class GameSession {
             var21 = 2 * var18 + var14;
             var22 = var15 + 2 * var18;
             CachedArchiveProvider.a(200, false, var19, var20, var22, var21, 1);
-            uv.a(113, var19, var22, var20, 11184810, var21);
-            var7.field_c = (float)((var37.getBoundingbox((byte) -98)[0] + var37.getBoundingbox((byte) -49)[1]) / 2);
-            var7.field_b = (float)((var37.getBoundingbox((byte) -101)[2] + var37.getBoundingbox((byte) -39)[3]) / 2);
-            var7.field_e = var17;
-            var7.field_d = var16;
+            UiToggleButtonRenderer.drawRectangle(113, var19, var22, var20, 11184810, var21);
+            var7.worldCenterX = (float)((var37.getBoundingbox((byte) -98)[0] + var37.getBoundingbox((byte) -49)[1]) / 2);
+            var7.worldCenterY = (float)((var37.getBoundingbox((byte) -101)[2] + var37.getBoundingbox((byte) -39)[3]) / 2);
+            var7.screenOriginY = var17;
+            var7.screenOriginX = var16;
             var37.draw(var7, 122, (World) null);
             var23 = GetPointDefenceLaserProjectiles.a(param3, 3);
             var24 = param1.world.getDebris((byte) -33);
@@ -4036,7 +4036,7 @@ final class GameSession {
         int stackIn_15_1 = 0;
         int stackIn_33_0 = 0;
         int stackIn_48_0 = 0;
-        lta stackIn_72_0 = null;
+        Camera2D stackIn_72_0 = null;
         boolean stackIn_73_1 = false;
         int var2;
         Player[] var2_ref_tfa__;
@@ -4094,7 +4094,7 @@ final class GameSession {
             var3_int = 8;
             var4 = 4;
             GetMachineGunPulsetime.a(16711680, -102, var3_int, 8, var4, var2 * var3_int + 300);
-            uv.a(119, 300 + var2 * var3_int, var4, 8, 16777215, var3_int);
+            UiToggleButtonRenderer.drawRectangle(119, 300 + var2 * var3_int, var4, 8, 16777215, var3_int);
           }
         }
         if (GetPointDefenceLaserProjectiles.a(128, 11284)) {
@@ -4207,8 +4207,8 @@ final class GameSession {
           }
           stackIn_72_0 = ShipTeamConditionFactory.field_a;
           stackIn_73_1 = !(param0);
-          var3_intLifetime2 = ((lta) (Object) stackIn_72_0).a(stackIn_73_1, GetUseDetailLines.field_o);
-          var4Lifetime3 = ShipTeamConditionFactory.field_a.a(0, GetTorpedoReload.field_q);
+          var3_intLifetime2 = ((Camera2D) (Object) stackIn_72_0).screenToWorldX(stackIn_73_1, GetUseDetailLines.field_o);
+          var4Lifetime3 = ShipTeamConditionFactory.field_a.screenToWorldY(0, GetTorpedoReload.field_q);
           GetLagStandardDeviationOut.a(1, "x=" + var3_intLifetime2, 16777215, GetTorpedoReload.field_q, 16 + GetUseDetailLines.field_o, 4266);
           GetLagStandardDeviationOut.a(1, "y=" + var4Lifetime3, 16777215, 12 + GetTorpedoReload.field_q, 16 + GetUseDetailLines.field_o, 4266);
           var26 = this.state.carouselInfo.getDebugDifferences((byte) -75);
@@ -4312,10 +4312,10 @@ final class GameSession {
         int var3_int = 2 * param1.getBoundingExtent(-42);
         int var4 = var3_int * (GetNumStars.cosAngle(param1.getAngle(0), (byte) 91) >> 8) >> 8;
         int var5 = (TextureLineShape.sinAngle(param1.getAngle(0), 43) >> 8) * var3_int >> 8;
-        var3_int = (int)(24.0f / ShipTeamConditionFactory.field_a.field_a) + var3_int;
+        var3_int = (int)(24.0f / ShipTeamConditionFactory.field_a.scale) + var3_int;
         int var6 = (GetNumStars.cosAngle(param1.getAngle(0), (byte) -99) >> 8) * var3_int >> 8;
         int var7 = var3_int * (TextureLineShape.sinAngle(param1.getAngle(0), 102) >> 8) >> 8;
-        int var8 = (int)(0.05000000074505806f / ShipTeamConditionFactory.field_a.field_a);
+        int var8 = (int)(0.05000000074505806f / ShipTeamConditionFactory.field_a.scale);
         if (param0 > -56) {
           return;
         }
@@ -4368,8 +4368,8 @@ final class GameSession {
               while (var15 < var7.ids.length) {
                 var10 = var7.ids[var15];
                 var11 = param1.getBodyById((byte) -27, var10);
-                var12 = ShipTeamConditionFactory.field_a.a(var7.gridx * 65536, (byte) 119);
-                var13 = 20 + (ShipTeamConditionFactory.field_a.b(true, 65536 * var7.gridy) + var8 * OpenGlTexture.b((byte) 118));
+                var12 = ShipTeamConditionFactory.field_a.worldToScreenX(var7.gridx * 65536, (byte) 119);
+                var13 = 20 + (ShipTeamConditionFactory.field_a.worldToScreenY(true, 65536 * var7.gridy) + var8 * OpenGlTexture.b((byte) 118));
                 if (var11 == null) {
                   var8++;
                   GetLagStandardDeviationOut.a(-1, "Null body=" + var10, 16711680, var13, var12, 4266);
@@ -4382,8 +4382,8 @@ final class GameSession {
               }
               this.drawPartitionZoneDebug(44, var7);
             } else {
-              var9 = ShipTeamConditionFactory.field_a.a(65536 * var7.gridx, (byte) 113);
-              var10 = 20 + (ShipTeamConditionFactory.field_a.b(true, var7.gridy * 65536) + var8 * OpenGlTexture.b((byte) 118));
+              var9 = ShipTeamConditionFactory.field_a.worldToScreenX(65536 * var7.gridx, (byte) 113);
+              var10 = 20 + (ShipTeamConditionFactory.field_a.worldToScreenY(true, var7.gridy * 65536) + var8 * OpenGlTexture.b((byte) 118));
               GetLagStandardDeviationOut.a(-1, "Null id list!", 16711680, var10, var9, 4266);
             }
           }
@@ -4456,8 +4456,8 @@ final class GameSession {
             if (var15 != null &&
               var15 != param4.chassis) {
               var15.drawTree((byte) 100, ShipTeamConditionFactory.field_a, true, param5, qpb.a(true, param4.getTeam((byte) 105), 13894143));
-              var8_int = 26 + ShipTeamConditionFactory.field_a.a(param2, (byte) 120);
-              var9 = ShipTeamConditionFactory.field_a.b(true, param1) + 10;
+              var8_int = 26 + ShipTeamConditionFactory.field_a.worldToScreenX(param2, (byte) 120);
+              var9 = ShipTeamConditionFactory.field_a.worldToScreenY(true, param1) + 10;
               this.a(var8_int, 92, var9);
               if (this.field_J != var15.getComponentTypeId(0)) {
                 this.field_o = 0;
@@ -4881,8 +4881,8 @@ final class GameSession {
               var20 = var18 + param5;
               this.b(-7178, var19, var15, var20);
             }
-            var15Lifetime2 = 26 + ShipTeamConditionFactory.field_a.a(param2, (byte) 112);
-            var16Lifetime2 = ShipTeamConditionFactory.field_a.b(true, param0) + 10;
+            var15Lifetime2 = 26 + ShipTeamConditionFactory.field_a.worldToScreenX(param2, (byte) 112);
+            var16Lifetime2 = ShipTeamConditionFactory.field_a.worldToScreenY(true, param0) + 10;
             this.a(var15Lifetime2, 78, var16Lifetime2);
             this.a(param1, param5, param4, (byte) -96);
             return true;
@@ -4961,8 +4961,8 @@ final class GameSession {
               }
             }
           }
-          var42Lifetime1 = 26 + ShipTeamConditionFactory.field_a.a(param2, (byte) 113);
-          var43Lifetime1 = 10 + ShipTeamConditionFactory.field_a.b(true, param0);
+          var42Lifetime1 = 26 + ShipTeamConditionFactory.field_a.worldToScreenX(param2, (byte) 113);
+          var43Lifetime1 = 10 + ShipTeamConditionFactory.field_a.worldToScreenY(true, param0);
           this.a(var42Lifetime1, 124, var43Lifetime1);
           this.a(param1, param5, param4, (byte) -96);
           return true;
@@ -4987,7 +4987,7 @@ final class GameSession {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        lta var8 = null;
+        Camera2D var8 = null;
         int var9 = 0;
         int var10 = 0;
         int var11 = 0;
@@ -5032,16 +5032,16 @@ final class GameSession {
             var5 = UiVisualStyle.field_c;
             var6 = 0;
             var7 = -var5 + MissionVariableFactory.field_a;
-            var8 = new lta();
-            var8.field_b = 0.0f;
-            var8.field_c = 0.0f;
-            var8.field_a = (float)Math.min(var4_int, var5) / (float)Math.max(param0.getWidth((byte) -122), param0.getHeight(1));
-            var8.field_e = var5 / 2;
-            var8.field_d = var4_int / 2;
-            var9 = var8.a(-param0.getWidth((byte) -122) / 2, (byte) 126);
-            var10 = var8.a(param0.getWidth((byte) -122) / 2, (byte) 122);
-            var11 = var8.b(true, -param0.getHeight(1) / 2);
-            var12 = var8.b(true, param0.getHeight(1) / 2);
+            var8 = new Camera2D();
+            var8.worldCenterY = 0.0f;
+            var8.worldCenterX = 0.0f;
+            var8.scale = (float)Math.min(var4_int, var5) / (float)Math.max(param0.getWidth((byte) -122), param0.getHeight(1));
+            var8.screenOriginY = var5 / 2;
+            var8.screenOriginX = var4_int / 2;
+            var9 = var8.worldToScreenX(-param0.getWidth((byte) -122) / 2, (byte) 126);
+            var10 = var8.worldToScreenX(param0.getWidth((byte) -122) / 2, (byte) 122);
+            var11 = var8.worldToScreenY(true, -param0.getHeight(1) / 2);
+            var12 = var8.worldToScreenY(true, param0.getHeight(1) / 2);
             var7 = var7 + var11;
             var6 = var6 - var9;
             CachedArchiveProvider.a(200, false, var6 + var9, var11 + var7, -var11 + var12, var10 - var9, 0);
@@ -5051,8 +5051,8 @@ final class GameSession {
               var24 = var23[var14_int];
               var15_ref_sg = var24;
               if (var15_ref_sg != null) {
-                var16 = var6 + var8.a(var24.getX(false), (byte) 114);
-                var17 = var8.b(true, var24.getY((byte) 124)) + var7;
+                var16 = var6 + var8.worldToScreenX(var24.getX(false), (byte) 114);
+                var17 = var8.worldToScreenY(true, var24.getY((byte) 124)) + var7;
                 stackIn_12_0 = (var24.getOwner((byte) -117) == this.localPlayerIndex);
                 var18 = qpb.a(stackIn_12_0, var24.getTeam((byte) 95), param1 ^ 13894143);
                 MouseWheelInput.a(var18, var17, var16, -119);
@@ -5061,8 +5061,8 @@ final class GameSession {
             var25 = this.state.a((byte) 33).getProjectiles(true);
             var27 = (Projectile) (var25.first(0));
             while (var27 != null) {
-              var15 = var8.a(var27.d(116), (byte) 115) + var6;
-              var16Lifetime1 = var7 + var8.b(true, var27.e((byte) -107));
+              var15 = var8.worldToScreenX(var27.d(116), (byte) 115) + var6;
+              var16Lifetime1 = var7 + var8.worldToScreenY(true, var27.e((byte) -107));
               var17Lifetime1 = 16776960;
               MouseWheelInput.a(var17Lifetime1, var16Lifetime1, var15, -110);
               var27 = (Projectile) (var25.next((byte) 118));
@@ -5072,19 +5072,19 @@ final class GameSession {
             for (var16Lifetime2 = param1; var26.length > var16Lifetime2; var16Lifetime2++) {
               var17_ref_crb = var26[var16Lifetime2];
               if (var17_ref_crb != null) {
-                var18Lifetime1 = var6 + var8.a(var17_ref_crb.getX(false), (byte) 119);
-                var19 = var7 + var8.b(true, var17_ref_crb.getY((byte) -24));
+                var18Lifetime1 = var6 + var8.worldToScreenX(var17_ref_crb.getX(false), (byte) 119);
+                var19 = var7 + var8.worldToScreenY(true, var17_ref_crb.getY((byte) -24));
                 var20 = 7829367;
                 MouseWheelInput.a(var20, var19, var18Lifetime1, 82);
               }
             }
-            var15Lifetime1 = var8.a(ShipTeamConditionFactory.field_a.a(true, 0), (byte) 115);
-            var16Lifetime3 = var8.a(ShipTeamConditionFactory.field_a.a(true, PartitionZoneFactory.field_a), (byte) 117);
-            var17Lifetime2 = var8.b(true, ShipTeamConditionFactory.field_a.a(0, 0));
-            var18Lifetime2 = var8.b(true, ShipTeamConditionFactory.field_a.a(param1 ^ 0, MissionVariableFactory.field_a));
+            var15Lifetime1 = var8.worldToScreenX(ShipTeamConditionFactory.field_a.screenToWorldX(true, 0), (byte) 115);
+            var16Lifetime3 = var8.worldToScreenX(ShipTeamConditionFactory.field_a.screenToWorldX(true, PartitionZoneFactory.field_a), (byte) 117);
+            var17Lifetime2 = var8.worldToScreenY(true, ShipTeamConditionFactory.field_a.screenToWorldY(0, 0));
+            var18Lifetime2 = var8.worldToScreenY(true, ShipTeamConditionFactory.field_a.screenToWorldY(param1 ^ 0, MissionVariableFactory.field_a));
             GetMissilesHitSourceTeam.a(var6 + var15Lifetime1, var17Lifetime2 + var7, (byte) -128, var18Lifetime2 - var17Lifetime2, 100, 16777215, var16Lifetime3 - var15Lifetime1);
             GetMissionTerrainSpaceProbability.a(99);
-            uv.a(110, var9 + var6, var12 - var11, var7 + var11, 16777215, -var9 + var10);
+            UiToggleButtonRenderer.drawRectangle(110, var9 + var6, var12 - var11, var7 + var11, 16777215, -var9 + var10);
             return;
           }
           return;
@@ -5109,16 +5109,16 @@ final class GameSession {
     }
 
     private final void drawShipPreview(int param0, int param1, float param2, int param3, byte param4, Ship param5, GameSnapshot param6, int param7) {
-        lta var11 = null;
+        Camera2D var11 = null;
         if (param5 == null) {
           return;
         }
         try {
-          var11 = new lta();
-          var11.field_e = param1;
+          var11 = new Camera2D();
+          var11.screenOriginY = param1;
           int var10 = -20 % ((param4 - 8) / 41);
-          var11.field_d = param7;
-          var11.field_a = var11.field_a * param2;
+          var11.screenOriginX = param7;
+          var11.scale = var11.scale * param2;
           param5.setPosition(0, 0, (byte) 92);
           param5.setAngle(param0, -116);
           param5.integrateMotion(false, true, param6.world);
@@ -5147,7 +5147,7 @@ final class GameSession {
           var4 = AdjustVariableActionFactory.field_a.x;
           var5 = AdjustVariableActionFactory.field_a.y;
           var6 = 0;
-          var7 = mmb.field_d[115];
+          var7 = OpenGlVertexNormal.field_d[115];
           var7.draw(var4, var5);
           if (AdjustVariableActionFactory.field_a.field_O) {
             var7.draw(var4, var5, 2, 1157627903, 1);
@@ -5172,10 +5172,10 @@ final class GameSession {
         } else {
           if (GetPhasedEnergyBeamPulsetime.e((byte) 118)) {
             var3 = param0 ? 1 : 0;
-            GetNebulaFadesOutWhenClose.a(!bqa.a(false) ? 0 : 7, var3 != 0, (byte) -85, 0);
+            GetNebulaFadesOutWhenClose.a(!ModelFaceAttachment.a(false) ? 0 : 7, var3 != 0, (byte) -85, 0);
           } else {
             var3 = param0 ? 1 : 0;
-            GetNebulaFadesOutWhenClose.a(!bqa.a(false) ? 0 : 7, var3 != 0, (byte) -85, 0);
+            GetNebulaFadesOutWhenClose.a(!ModelFaceAttachment.a(false) ? 0 : 7, var3 != 0, (byte) -85, 0);
           }
         }
     }
@@ -5360,9 +5360,9 @@ final class GameSession {
                   for (var7 = 0; var7 < var6.ids.length; var7++) {
                     var8 = var6.ids[var7];
                     var9 = var13.getNebulae((byte) 116)[var8];
-                    var10 = ShipTeamConditionFactory.field_a.a(var9.getX(true), (byte) 118);
-                    var11 = ShipTeamConditionFactory.field_a.b(true, var9.getY((byte) -116));
-                    SetMissileLauncherEnergyUsed.a(16777215, (byte) 7, var11, 16384.0f * ShipTeamConditionFactory.field_a.field_a, 100, var10);
+                    var10 = ShipTeamConditionFactory.field_a.worldToScreenX(var9.getX(true), (byte) 118);
+                    var11 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var9.getY((byte) -116));
+                    SetMissileLauncherEnergyUsed.a(16777215, (byte) 7, var11, 16384.0f * ShipTeamConditionFactory.field_a.scale, 100, var10);
                   }
                   this.drawPartitionZoneDebug(105, var6);
                 }
@@ -5430,7 +5430,7 @@ final class GameSession {
     private final void a(int param0, int param1, int param2) {
         ToolkitSprite var4 = null;
         if (OpenGlTexture1D.field_i) {
-          var4 = mmb.field_d[5];
+          var4 = OpenGlVertexNormal.field_d[5];
           var4.draw(param0 - (var4.getWidth() >> 1), -(var4.getHeight() >> 1) + param2);
         }
         if (param1 <= 76) {
@@ -5499,10 +5499,10 @@ final class GameSession {
           GameSnapshot var5 = (GameSnapshot) null;
           this.a((Ship) null, 120, (GameSnapshot) null, false);
         }
-        if (mmb.field_d.length <= var4) {
+        if (OpenGlVertexNormal.field_d.length <= var4) {
           return null;
         }
-        return mmb.field_d[var4];
+        return OpenGlVertexNormal.field_d[var4];
     }
 
     private final int a(int param0, int param1, boolean param2, GameSnapshot param3, int param4, int param5) {
@@ -5700,15 +5700,15 @@ final class GameSession {
         int var8 = 0;
         try {
           var3_int = param1.gridx * 65536;
-          var4 = ShipTeamConditionFactory.field_a.a(var3_int, (byte) 124);
+          var4 = ShipTeamConditionFactory.field_a.worldToScreenX(var3_int, (byte) 124);
           var5 = param1.gridy * 65536;
-          var6 = ShipTeamConditionFactory.field_a.b(true, var5);
-          var7 = ShipTeamConditionFactory.field_a.a(65536 + var3_int, (byte) 119);
-          var8 = ShipTeamConditionFactory.field_a.b(true, var5 + 65536);
+          var6 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var5);
+          var7 = ShipTeamConditionFactory.field_a.worldToScreenX(65536 + var3_int, (byte) 119);
+          var8 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var5 + 65536);
           if (param0 < 39) {
             this.field_H = -98;
           }
-          uv.a(120, var4, -var6 + var8, var6, 16755455, -var4 + var7);
+          UiToggleButtonRenderer.drawRectangle(120, var4, -var6 + var8, var6, 16755455, -var4 + var7);
           GetLagStandardDeviationOut.a(1, "Gridx=" + param1.gridx + ", gridy=" + param1.gridy, 16711935, var6, var4, 4266);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uca.TA(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -5797,7 +5797,7 @@ final class GameSession {
               }
             }
           }
-          var33 = mmb.field_d[param2];
+          var33 = OpenGlVertexNormal.field_d[param2];
           var29 = var33;
           var29Lifetime1 = var33;
           var19 = 3 + var33.getWidth();
@@ -5877,7 +5877,7 @@ final class GameSession {
               }
               var33.draw(var27Lifetime1, var28Lifetime1);
               if (this.field_a[param0] > 0) {
-                var36 = mmb.field_d[1 + param2];
+                var36 = OpenGlVertexNormal.field_d[1 + param2];
                 var18 = var36;
                 var30 = this.field_a[param0];
                 SetUseBackground.field_o.a(var27Lifetime1, (var30 * var36.getWidth() >> 8) + var27Lifetime1, var28Lifetime1, var28Lifetime1 + var36.getHeight(), (byte) -105);
@@ -5943,8 +5943,8 @@ final class GameSession {
             stackIn_4_0 = param2;
             return stackIn_4_0;
           }
-          var6_int = ShipTeamConditionFactory.field_a.a(true, param1);
-          var7 = ShipTeamConditionFactory.field_a.a(0, param0);
+          var6_int = ShipTeamConditionFactory.field_a.screenToWorldX(true, param1);
+          var7 = ShipTeamConditionFactory.field_a.screenToWorldY(0, param0);
           var8 = param4.chassis.collectWeapons(param3 ^ 126, param3);
           var9 = 0;
           scanLoop1: while (true) {
@@ -5969,8 +5969,8 @@ final class GameSession {
                     if ((1 & PacketBuffer.field_g) != 0) {
                       break scanLoop1;
                     }
-                    var20 = ShipTeamConditionFactory.field_a.a(var13, (byte) 113);
-                    var21 = ShipTeamConditionFactory.field_a.b(true, var14);
+                    var20 = ShipTeamConditionFactory.field_a.worldToScreenX(var13, (byte) 113);
+                    var21 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var14);
                     if (var10.weaponbehaviour.isReadyToFire((byte) 118)) {
                       var22 = TextLayout.approximateVectorLength(var16, (byte) 116, var17);
                       var23 = SetShipDirectionArrow.weaponDefinitions[var10.weaponbehaviour.weapontype];
@@ -5979,9 +5979,9 @@ final class GameSession {
                       var26 = var23.getProjectileRange(122) << 3;
                       if (var22 > var26) {
                         var27 = var16 * 255 / var22 * var26 / 255;
-                        var24 = ShipTeamConditionFactory.field_a.a(var27 + var13, (byte) 122);
+                        var24 = ShipTeamConditionFactory.field_a.worldToScreenX(var27 + var13, (byte) 122);
                         var28 = var17 * 255 / var22 * var26 / 255;
-                        var25 = ShipTeamConditionFactory.field_a.b(true, var28 + var14);
+                        var25 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var28 + var14);
                       }
                       SetShowTutorial.a(var20, (byte) 66, var24, var21, 16777215, var25, 30);
                     }
@@ -6160,20 +6160,20 @@ final class GameSession {
                 var13 = 30.0f;
                 var14 = (float)var11 + var13 * (float)var9.getVelocityX((byte) -117);
                 var15 = (float)var12 + (float)var9.getVelocityY(0) * var13;
-                ShipTeamConditionFactory.field_a.field_c = (var14 + 9.0f * ShipTeamConditionFactory.field_a.field_c) / 10.0f;
-                ShipTeamConditionFactory.field_a.field_b = (9.0f * ShipTeamConditionFactory.field_a.field_b + var15) / 10.0f;
-                ShipTeamConditionFactory.field_a.a(MissionVariableFactory.field_a, 0, -117, PartitionZoneFactory.field_a, 0);
-                if (ShipTeamConditionFactory.field_a.field_f[0] > var22[0]) {
-                  ShipTeamConditionFactory.field_a.field_c = ShipTeamConditionFactory.field_a.field_c + (float)((-ShipTeamConditionFactory.field_a.field_f[0] + var22[0]) / 2);
+                ShipTeamConditionFactory.field_a.worldCenterX = (var14 + 9.0f * ShipTeamConditionFactory.field_a.worldCenterX) / 10.0f;
+                ShipTeamConditionFactory.field_a.worldCenterY = (9.0f * ShipTeamConditionFactory.field_a.worldCenterY + var15) / 10.0f;
+                ShipTeamConditionFactory.field_a.updateWorldBounds(MissionVariableFactory.field_a, 0, -117, PartitionZoneFactory.field_a, 0);
+                if (ShipTeamConditionFactory.field_a.worldBounds[0] > var22[0]) {
+                  ShipTeamConditionFactory.field_a.worldCenterX = ShipTeamConditionFactory.field_a.worldCenterX + (float)((-ShipTeamConditionFactory.field_a.worldBounds[0] + var22[0]) / 2);
                 }
-                if (ShipTeamConditionFactory.field_a.field_f[2] > var22[2]) {
-                  ShipTeamConditionFactory.field_a.field_b = ShipTeamConditionFactory.field_a.field_b + (float)((var22[2] - ShipTeamConditionFactory.field_a.field_f[2]) / 2);
+                if (ShipTeamConditionFactory.field_a.worldBounds[2] > var22[2]) {
+                  ShipTeamConditionFactory.field_a.worldCenterY = ShipTeamConditionFactory.field_a.worldCenterY + (float)((var22[2] - ShipTeamConditionFactory.field_a.worldBounds[2]) / 2);
                 }
-                if (var22[1] > ShipTeamConditionFactory.field_a.field_f[1]) {
-                  ShipTeamConditionFactory.field_a.field_c = ShipTeamConditionFactory.field_a.field_c - (float)((ShipTeamConditionFactory.field_a.field_f[1] - var22[1]) / 2);
+                if (var22[1] > ShipTeamConditionFactory.field_a.worldBounds[1]) {
+                  ShipTeamConditionFactory.field_a.worldCenterX = ShipTeamConditionFactory.field_a.worldCenterX - (float)((ShipTeamConditionFactory.field_a.worldBounds[1] - var22[1]) / 2);
                 }
-                if (ShipTeamConditionFactory.field_a.field_f[3] < var22[3]) {
-                  ShipTeamConditionFactory.field_a.field_b = ShipTeamConditionFactory.field_a.field_b - (float)((ShipTeamConditionFactory.field_a.field_f[3] - var22[3]) / 2);
+                if (ShipTeamConditionFactory.field_a.worldBounds[3] < var22[3]) {
+                  ShipTeamConditionFactory.field_a.worldCenterY = ShipTeamConditionFactory.field_a.worldCenterY - (float)((ShipTeamConditionFactory.field_a.worldBounds[3] - var22[3]) / 2);
                 }
               }
               if (var9.isSpecialOrderActive(4, 44)) {
@@ -6205,7 +6205,7 @@ final class GameSession {
                   0 != param3) {
                   this.field_n = false;
                 }
-                ShipTeamConditionFactory.field_a.field_a = ShipTeamConditionFactory.field_a.field_a + (-ShipTeamConditionFactory.field_a.field_a + var17) / (float)SetMassDriverProjectileDamage.field_o;
+                ShipTeamConditionFactory.field_a.scale = ShipTeamConditionFactory.field_a.scale + (-ShipTeamConditionFactory.field_a.scale + var17) / (float)SetMassDriverProjectileDamage.field_o;
                 var6_int = 1;
                 if (!this.field_n) {
                   this.field_g = this.field_g - 1;
@@ -6217,24 +6217,24 @@ final class GameSession {
                 1 == var10 ||
                 var10 == 2) {
                 this.field_w = 0.001953125f;
-                ShipTeamConditionFactory.field_a.field_c = 0.0f;
-                ShipTeamConditionFactory.field_a.field_b = 0.0f;
+                ShipTeamConditionFactory.field_a.worldCenterX = 0.0f;
+                ShipTeamConditionFactory.field_a.worldCenterY = 0.0f;
               }
             }
           }
           if (!var8.getDebug((byte) 39) &&
             !this.state.carouselInfo.isReplay(1)) {
-            if (ShipTeamConditionFactory.field_a.field_c < (float)(-var8.getWidth((byte) -122) / 2)) {
-              ShipTeamConditionFactory.field_a.field_c = (float)(-var8.getWidth((byte) -122) / 2);
+            if (ShipTeamConditionFactory.field_a.worldCenterX < (float)(-var8.getWidth((byte) -122) / 2)) {
+              ShipTeamConditionFactory.field_a.worldCenterX = (float)(-var8.getWidth((byte) -122) / 2);
             }
-            if (ShipTeamConditionFactory.field_a.field_b < (float)(-var8.getHeight(1) / 2)) {
-              ShipTeamConditionFactory.field_a.field_b = (float)(-var8.getHeight(1) / 2);
+            if (ShipTeamConditionFactory.field_a.worldCenterY < (float)(-var8.getHeight(1) / 2)) {
+              ShipTeamConditionFactory.field_a.worldCenterY = (float)(-var8.getHeight(1) / 2);
             }
-            if (ShipTeamConditionFactory.field_a.field_c > (float)(var8.getWidth((byte) -122) / 2)) {
-              ShipTeamConditionFactory.field_a.field_c = (float)(var8.getWidth((byte) -122) / 2);
+            if (ShipTeamConditionFactory.field_a.worldCenterX > (float)(var8.getWidth((byte) -122) / 2)) {
+              ShipTeamConditionFactory.field_a.worldCenterX = (float)(var8.getWidth((byte) -122) / 2);
             }
-            if (ShipTeamConditionFactory.field_a.field_b > (float)(var8.getHeight(1) / 2)) {
-              ShipTeamConditionFactory.field_a.field_b = (float)(var8.getHeight(1) / 2);
+            if (ShipTeamConditionFactory.field_a.worldCenterY > (float)(var8.getHeight(1) / 2)) {
+              ShipTeamConditionFactory.field_a.worldCenterY = (float)(var8.getHeight(1) / 2);
             }
           }
           stackIn_58_0 = var6_int;
@@ -6264,7 +6264,7 @@ final class GameSession {
         int var6 = 0;
         WeaponBehaviour stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
-        lta stackIn_18_0 = null;
+        Camera2D stackIn_18_0 = null;
         boolean stackIn_19_1 = false;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
@@ -6314,10 +6314,10 @@ final class GameSession {
                   var14 = param3 - var11;
                   var15 = GameSnapshotFactory.a(var14, (byte) -77, var13);
                   var16 = GameKeyHandler.a(22433, -var12 + var15);
-                  var17 = ShipTeamConditionFactory.field_a.a(var10, (byte) 122);
-                  var18 = ShipTeamConditionFactory.field_a.b(true, var11);
+                  var17 = ShipTeamConditionFactory.field_a.worldToScreenX(var10, (byte) 122);
+                  var18 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var11);
                   if (Math.abs(var16) <= var8) {
-                    c.a(ShipTeamConditionFactory.field_a.b(true, param3), ShipTeamConditionFactory.field_a.a(param2, (byte) 124), var17, var18, -16777216, 16711680);
+                    c.a(ShipTeamConditionFactory.field_a.worldToScreenY(true, param3), ShipTeamConditionFactory.field_a.worldToScreenX(param2, (byte) 124), var17, var18, -16777216, 16711680);
                   }
                   var19 = 16777215;
                   var20 = GameKeyHandler.a(22433, var12 - var8);
@@ -6327,10 +6327,10 @@ final class GameSession {
                   var24 = (var22 >> 8) * (TextureLineShape.sinAngle(var20, 70) >> 8) + var11;
                   var25 = (GetNumStars.cosAngle(var21, (byte) 61) >> 8) * (var22 >> 8) + var10;
                   var26 = (var22 >> 8) * (TextureLineShape.sinAngle(var21, 86) >> 8) + var11;
-                  c.a(ShipTeamConditionFactory.field_a.b(true, var24), ShipTeamConditionFactory.field_a.a(var23, (byte) 124), var17, var18, -16777216, var19);
+                  c.a(ShipTeamConditionFactory.field_a.worldToScreenY(true, var24), ShipTeamConditionFactory.field_a.worldToScreenX(var23, (byte) 124), var17, var18, -16777216, var19);
                   stackIn_18_0 = ShipTeamConditionFactory.field_a;
                   stackIn_19_1 = !(param1);
-                  c.a(((lta) (Object) stackIn_18_0).b(stackIn_19_1, var26), ShipTeamConditionFactory.field_a.a(var25, (byte) 115), var17, var18, -16777216, var19);
+                  c.a(((Camera2D) (Object) stackIn_18_0).worldToScreenY(stackIn_19_1, var26), ShipTeamConditionFactory.field_a.worldToScreenX(var25, (byte) 115), var17, var18, -16777216, var19);
                 }
               }
             }
@@ -6704,9 +6704,9 @@ final class GameSession {
                       var34_ref_String = GetBlueprintSaveTime.field_o[var15.field_l];
                       OpenGlShaderProgram.a(16777215, this.radialMenuAlpha, 1, var34_ref_String, (byte) -69, 3, var19, var16 / 2 + (var18 - tea.a(3, var34_ref_String, 13879) / 2));
                     } else {
-                      mmb.field_d[101].draw(var18, var19, 0, var33Lifetime1, 1);
+                      OpenGlVertexNormal.field_d[101].draw(var18, var19, 0, var33Lifetime1, 1);
                       if (var25 != 0) {
-                        mmb.field_d[101].draw(var18, var19, 0, -2004318072, 2);
+                        OpenGlVertexNormal.field_d[101].draw(var18, var19, 0, -2004318072, 2);
                       }
                     }
                   }
@@ -6753,7 +6753,7 @@ final class GameSession {
                 }
                 var39 = 0;
                 if (var26 == 0) {
-                  uv.a(125, 1 + var18, var32Lifetime2, -var32Lifetime2 + var19 + var17, 7698040, tea.a(var39, var37, 13879) + 3);
+                  UiToggleButtonRenderer.drawRectangle(125, 1 + var18, var32Lifetime2, -var32Lifetime2 + var19 + var17, 7698040, tea.a(var39, var37, 13879) + 3);
                 }
                 SetSelfDestructPrepareToggleCooldown.a(3 + var18, 1, var17 + (var19 - 2), var37, var39, var38Lifetime1, (byte) -81);
               }
@@ -7610,8 +7610,8 @@ final class GameSession {
           }
           var6 = 3;
           for (var7 = 0; var7 < var5_int; var7++) {
-            var8 = ShipTeamConditionFactory.field_a.a(param0, (byte) 114) - (GetPhasedEnergyBeamProjectiles.a(param3 + 215, param2[0]) >> 1);
-            var9 = ShipTeamConditionFactory.field_a.b(true, -10000 + param1) - (var5_int - var7) * tib.a(true, var6);
+            var8 = ShipTeamConditionFactory.field_a.worldToScreenX(param0, (byte) 114) - (GetPhasedEnergyBeamProjectiles.a(param3 + 215, param2[0]) >> 1);
+            var9 = ShipTeamConditionFactory.field_a.worldToScreenY(true, -10000 + param1) - (var5_int - var7) * tib.a(true, var6);
             if (null != this.field_v &&
               this.field_v.b(3, -22)) {
               var9 -= 20;
@@ -7845,16 +7845,16 @@ final class GameSession {
           }
           var8 = GetSniperCannonAimspeed.a(100, param3);
           var9 = var8 / 2;
-          var10 = mmb.field_d[4];
-          if (!MissionAction.rectanglesIntersect(param1, ShipTeamConditionFactory.field_a.field_f, 122)) {
-            var11 = -(int)ShipTeamConditionFactory.field_a.field_c + var6_int;
-            var12 = var7 - (int)ShipTeamConditionFactory.field_a.field_b;
-            var13 = SetMissionTerrainSpaceProbability.a(0, (int)ShipTeamConditionFactory.field_a.field_b, (int)ShipTeamConditionFactory.field_a.field_c, ShipTeamConditionFactory.field_a.field_f[2], var7, 16, ShipTeamConditionFactory.field_a.field_f[1], ShipTeamConditionFactory.field_a.field_f[0], ShipTeamConditionFactory.field_a.field_f[3], var6_int);
+          var10 = OpenGlVertexNormal.field_d[4];
+          if (!MissionAction.rectanglesIntersect(param1, ShipTeamConditionFactory.field_a.worldBounds, 122)) {
+            var11 = -(int)ShipTeamConditionFactory.field_a.worldCenterX + var6_int;
+            var12 = var7 - (int)ShipTeamConditionFactory.field_a.worldCenterY;
+            var13 = SetMissionTerrainSpaceProbability.a(0, (int)ShipTeamConditionFactory.field_a.worldCenterY, (int)ShipTeamConditionFactory.field_a.worldCenterX, ShipTeamConditionFactory.field_a.worldBounds[2], var7, 16, ShipTeamConditionFactory.field_a.worldBounds[1], ShipTeamConditionFactory.field_a.worldBounds[0], ShipTeamConditionFactory.field_a.worldBounds[3], var6_int);
             if (0 <= var13) {
-              var14 = (int)((float)var11 * 1.0f * (float)var13 / 65536.0f + ShipTeamConditionFactory.field_a.field_c);
-              var15 = (int)(ShipTeamConditionFactory.field_a.field_b + (float)var13 * ((float)var12 * 1.0f) / 65536.0f);
-              var16 = ShipTeamConditionFactory.field_a.a(var14, (byte) 114);
-              var17 = ShipTeamConditionFactory.field_a.b(true, var15);
+              var14 = (int)((float)var11 * 1.0f * (float)var13 / 65536.0f + ShipTeamConditionFactory.field_a.worldCenterX);
+              var15 = (int)(ShipTeamConditionFactory.field_a.worldCenterY + (float)var13 * ((float)var12 * 1.0f) / 65536.0f);
+              var16 = ShipTeamConditionFactory.field_a.worldToScreenX(var14, (byte) 114);
+              var17 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var15);
               if (OpenGlTexture1D.field_i) {
                 var18 = GameSnapshotFactory.a(var12, (byte) -77, var11);
                 var16 = var16 - (GetNumStars.cosAngle(var18, (byte) -122) * 28 >> 16);
@@ -7865,9 +7865,9 @@ final class GameSession {
             }
           } else {
             var11 = var10.getPaddedHeight();
-            var12 = ShipTeamConditionFactory.field_a.a(var6_int, (byte) 114);
-            var13 = -(var11 / 2) + ShipTeamConditionFactory.field_a.b(true, param1[2]);
-            var14 = (int)(0.32 / (double)ShipTeamConditionFactory.field_a.field_a);
+            var12 = ShipTeamConditionFactory.field_a.worldToScreenX(var6_int, (byte) 114);
+            var13 = -(var11 / 2) + ShipTeamConditionFactory.field_a.worldToScreenY(true, param1[2]);
+            var14 = (int)(0.32 / (double)ShipTeamConditionFactory.field_a.scale);
             if (255 < var14) {
               var14 = 255;
             }
@@ -8160,7 +8160,7 @@ final class GameSession {
             }
           }
           GetMachineGunPulsetime.a(1118481, -115, var8, var7, var5 + 1, -var8 + (var11 + var6));
-          uv.a(107, -var8 + var6 + var11, var5 + 1, var7, 8947848, var8);
+          UiToggleButtonRenderer.drawRectangle(107, -var8 + var6 + var11, var5 + 1, var7, 8947848, var8);
           if (var4 != null &&
             var4.length > 0) {
             for (var13_intLifetime2 = 0; var4.length > var13_intLifetime2; var13_intLifetime2++) {
@@ -8216,7 +8216,7 @@ final class GameSession {
                     var46 = (Ship) (var23);
                     if (var46.getHealthProgress(0) > var19) {
                       var25Lifetime1 = SetMinimapWidth.field_o * 16 % 255;
-                      uv.a(121, var6 - var12 + 1, 7, -3 + (var22Lifetime1 - var21Lifetime1 / 2), var25Lifetime1 << 16, 1 + var12);
+                      UiToggleButtonRenderer.drawRectangle(121, var6 - var12 + 1, 7, -3 + (var22Lifetime1 - var21Lifetime1 / 2), var25Lifetime1 << 16, 1 + var12);
                     }
                   }
                 }
@@ -8280,8 +8280,8 @@ final class GameSession {
             param1 != null) {
             var3 = qd.field_c;
             if (param1.isRepairModeFullyCharged(-22)) {
-              var4 = ShipTeamConditionFactory.field_a.a(true, GetUseDetailLines.field_o);
-              var5_int = ShipTeamConditionFactory.field_a.a(0, GetTorpedoReload.field_q);
+              var4 = ShipTeamConditionFactory.field_a.screenToWorldX(true, GetUseDetailLines.field_o);
+              var5_int = ShipTeamConditionFactory.field_a.screenToWorldY(0, GetTorpedoReload.field_q);
               if (!param1.chassis.hasDamagedComponentInCircle(32609, var5_int, GetMinimapWidth.field_o, var4)) {
                 var3 = SetPlayerRepairTime.field_o;
               }
@@ -8347,7 +8347,7 @@ final class GameSession {
               for (var7Lifetime1 = 0; var7Lifetime1 < var5_array.length; var7Lifetime1++) {
                 if (var5_array[var7Lifetime1] != null &&
                   var5_array[var7Lifetime1].length() != 0) {
-                  uv.a(116, -GetPhasedEnergyBeamProjectiles.a(-42, var5_array[var7Lifetime1]) + 27, -1 + GetPointDefenceLaserProjectiles.a(false, 0), var6 + 4 + GetPointDefenceLaserProjectiles.a(false, 0) * var7Lifetime1, 11184810, GetPhasedEnergyBeamProjectiles.a(-128, var5_array[var7Lifetime1]) + 5);
+                  UiToggleButtonRenderer.drawRectangle(116, -GetPhasedEnergyBeamProjectiles.a(-42, var5_array[var7Lifetime1]) + 27, -1 + GetPointDefenceLaserProjectiles.a(false, 0), var6 + 4 + GetPointDefenceLaserProjectiles.a(false, 0) * var7Lifetime1, 11184810, GetPhasedEnergyBeamProjectiles.a(-128, var5_array[var7Lifetime1]) + 5);
                   SoftwareDepthBuffer.a(16777215, (var7Lifetime1 + 1) * GetPointDefenceLaserProjectiles.a(false, 0) + var6, 30, (byte) 74, -1, 0, var5_array[var7Lifetime1]);
                 }
               }
@@ -8786,7 +8786,7 @@ final class GameSession {
           AdjustVariableActionFactory.field_a.y = MissionVariableFactory.field_a - AdjustVariableActionFactory.field_a.height;
           AdjustVariableActionFactory.field_a.font = GrapplingHookFactory.field_a;
           AdjustVariableActionFactory.field_a.field_mb = ScreenSizeController.field_d;
-          ShipTeamConditionFactory.field_a = new lta();
+          ShipTeamConditionFactory.field_a = new Camera2D();
           this.field_w = 0.001953125f;
           this.field_g = 0;
           this.field_r = 0;

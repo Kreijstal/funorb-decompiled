@@ -34,20 +34,20 @@ final class ft extends kt {
         int var1Lifetime1;
         if (param0 != 18941) {
           ft.b(-27);
-          if (kt.field_l >= 224) {
-            nl.a(256, -13205);
+          if (kt.soundEffectVolume >= 224) {
+            LoopingSound.setSoundEffectVolume(256, -13205);
             return;
           }
-          var1 = kt.field_l % 32;
-          nl.a(-var1 + kt.field_l + 32, param0 ^ -31338);
+          var1 = kt.soundEffectVolume % 32;
+          LoopingSound.setSoundEffectVolume(-var1 + kt.soundEffectVolume + 32, param0 ^ -31338);
           return;
         }
-        if (kt.field_l >= 224) {
-          nl.a(256, -13205);
+        if (kt.soundEffectVolume >= 224) {
+          LoopingSound.setSoundEffectVolume(256, -13205);
           return;
         }
-        var1Lifetime1 = kt.field_l % 32;
-        nl.a(-var1Lifetime1 + kt.field_l + 32, param0 ^ -31338);
+        var1Lifetime1 = kt.soundEffectVolume % 32;
+        LoopingSound.setSoundEffectVolume(-var1Lifetime1 + kt.soundEffectVolume + 32, param0 ^ -31338);
     }
 
     ft() {

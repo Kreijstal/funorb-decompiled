@@ -23,16 +23,16 @@ final class NativeSoftwareRenderContext implements NativeResource {
 
     NativeSoftwareRenderContext(NativeSoftwareToolkit param0, int param1, int param2) {
         this.toolkit = param0;
-        i discarded$0 = new i(this.toolkit);
-        i discarded$1 = new i(this.toolkit);
-        i discarded$2 = new i(this.toolkit);
-        i discarded$3 = new i(this.toolkit);
-        i discarded$4 = new i(this.toolkit);
-        i discarded$5 = new i(this.toolkit);
-        i discarded$6 = new i(this.toolkit);
-        i discarded$7 = new i(this.toolkit);
-        i discarded$8 = new i(this.toolkit);
-        i discarded$9 = new i(this.toolkit);
+        NativeSoftwareModel discarded$0 = new NativeSoftwareModel(this.toolkit);
+        NativeSoftwareModel discarded$1 = new NativeSoftwareModel(this.toolkit);
+        NativeSoftwareModel discarded$2 = new NativeSoftwareModel(this.toolkit);
+        NativeSoftwareModel discarded$3 = new NativeSoftwareModel(this.toolkit);
+        NativeSoftwareModel discarded$4 = new NativeSoftwareModel(this.toolkit);
+        NativeSoftwareModel discarded$5 = new NativeSoftwareModel(this.toolkit);
+        NativeSoftwareModel discarded$6 = new NativeSoftwareModel(this.toolkit);
+        NativeSoftwareModel discarded$7 = new NativeSoftwareModel(this.toolkit);
+        NativeSoftwareModel discarded$8 = new NativeSoftwareModel(this.toolkit);
+        NativeSoftwareModel discarded$9 = new NativeSoftwareModel(this.toolkit);
         this.initializeContextNative(this.field_nativeid, param0, param1, param2);
     }
 

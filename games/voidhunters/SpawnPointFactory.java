@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SpawnPointFactory implements GameStateFactory {
-    final static void a(lta param0, ShipComponentDefinition param1, boolean param2) {
+    final static void a(Camera2D param0, ShipComponentDefinition param1, boolean param2) {
         int stackIn_18_0 = 0;
-        lta stackIn_18_1 = null;
+        Camera2D stackIn_18_1 = null;
         boolean stackIn_19_2 = false;
-        lta stackIn_36_0 = null;
+        Camera2D stackIn_36_0 = null;
         boolean stackIn_37_1 = false;
-        lta stackIn_40_0 = null;
+        Camera2D stackIn_40_0 = null;
         boolean stackIn_41_1 = false;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
@@ -82,21 +82,21 @@ final class SpawnPointFactory implements GameStateFactory {
           var17 = var19;
           var4_array = var17;
           stackIn_18_0 = 16711935;
-          stackIn_18_1 = (lta) (param0);
+          stackIn_18_1 = (Camera2D) (param0);
           stackIn_19_2 = !(param2);
-          MouseWheelInput.a(stackIn_18_0, ((lta) (Object) stackIn_18_1).b(stackIn_19_2, 0), param0.a(0, (byte) 122), 80);
+          MouseWheelInput.a(stackIn_18_0, ((Camera2D) (Object) stackIn_18_1).worldToScreenY(stackIn_19_2, 0), param0.worldToScreenX(0, (byte) 122), 80);
           for (var5 = 0; var5 < var18.length; var5 += 2) {
             var6 = var18[var5];
             var7 = var14[var5 + 1];
             var8 = var14[(2 + var5) % var18.length];
             var9 = var14[(3 + var5) % var18.length];
-            c.a(param0.b(true, var9), param0.a(var8, (byte) 121), param0.a(var6, (byte) 114), param0.b(true, var7), -16777216, 16711680);
+            c.a(param0.worldToScreenY(true, var9), param0.worldToScreenX(var8, (byte) 121), param0.worldToScreenX(var6, (byte) 114), param0.worldToScreenY(true, var7), -16777216, 16711680);
           }
           for (var5Lifetime1 = 0; var5Lifetime1 < var19.length; var5Lifetime1 += 2) {
             var6Lifetime1 = var19[var5Lifetime1];
             var7Lifetime1 = var4_array[var5Lifetime1 + 1];
-            var8Lifetime1 = param0.a(var6Lifetime1, (byte) 120);
-            var9Lifetime1 = param0.b(true, var7Lifetime1);
+            var8Lifetime1 = param0.worldToScreenX(var6Lifetime1, (byte) 120);
+            var9Lifetime1 = param0.worldToScreenY(true, var7Lifetime1);
             MouseWheelInput.a(16777215, var9Lifetime1, var8Lifetime1, 63);
             if (BoundedRandomAccessFile.field_c != 2) {
               GetLagStandardDeviationOut.a(1, "" + (var5Lifetime1 >> 1), 16777215, var9Lifetime1, var8Lifetime1, 4266);
@@ -108,22 +108,22 @@ final class SpawnPointFactory implements GameStateFactory {
               for (var6Lifetime2 = 0; var5_ref_lsb__.length > var6Lifetime2; var6Lifetime2++) {
                 var7Lifetime2 = var5_ref_lsb__[var6Lifetime2].field_b;
                 var8Lifetime2 = var5_ref_lsb__[var6Lifetime2].field_c;
-                var9Lifetime2 = param0.a(var7Lifetime2, (byte) 120);
-                stackIn_36_0 = (lta) (param0);
+                var9Lifetime2 = param0.worldToScreenX(var7Lifetime2, (byte) 120);
+                stackIn_36_0 = (Camera2D) (param0);
                 stackIn_37_1 = !(param2);
-                var10 = ((lta) (Object) stackIn_36_0).b(stackIn_37_1, var8Lifetime2);
-                GetPhasedEnergyBeamReload.a(var10, (float)(int)(param0.field_a * 256.0f), -104, var9Lifetime2, 65280);
+                var10 = ((Camera2D) (Object) stackIn_36_0).worldToScreenY(stackIn_37_1, var8Lifetime2);
+                GetPhasedEnergyBeamReload.a(var10, (float)(int)(param0.scale * 256.0f), -104, var9Lifetime2, 65280);
                 var11 = 8 * GetNumStars.cosAngle(var5_ref_lsb__[var6Lifetime2].field_a, (byte) 61) >> 8;
                 var12 = TextureLineShape.sinAngle(var5_ref_lsb__[var6Lifetime2].field_a, 109) * 8 >> 8;
-                c.a(param0.b(true, var12 + var8Lifetime2), param0.a(var11 + var7Lifetime2, (byte) 127), var9Lifetime2, var10, -16777216, 16711680);
+                c.a(param0.worldToScreenY(true, var12 + var8Lifetime2), param0.worldToScreenX(var11 + var7Lifetime2, (byte) 127), var9Lifetime2, var10, -16777216, 16711680);
                 GetLagStandardDeviationOut.a(-1, Integer.toString(var6Lifetime2), 16711935, var10, var9Lifetime2, 4266);
               }
             }
           }
-          var5Lifetime2 = param0.a(param1.connectionX, (byte) 125);
-          stackIn_40_0 = (lta) (param0);
+          var5Lifetime2 = param0.worldToScreenX(param1.connectionX, (byte) 125);
+          stackIn_40_0 = (Camera2D) (param0);
           stackIn_41_1 = !(param2);
-          var6Lifetime3 = ((lta) (Object) stackIn_40_0).b(stackIn_41_1, param1.connectionY);
+          var6Lifetime3 = ((Camera2D) (Object) stackIn_40_0).worldToScreenY(stackIn_41_1, param1.connectionY);
           SetNumStars.a(2.0f, (byte) 115, var6Lifetime3, 255, var5Lifetime2);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

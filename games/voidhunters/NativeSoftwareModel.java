@@ -1,45 +1,45 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class i extends ka implements NativeResource {
+final class NativeSoftwareModel extends Model3D implements NativeResource {
     private qeb[] field_a;
-    long field_nativeid;
-    private NativeSoftwareHeap field_b;
+    long nativeHandle;
+    private NativeSoftwareHeap heap;
     private tn[] field_c;
-    private NativeSoftwareToolkit field_d;
+    private NativeSoftwareToolkit toolkit;
 
     protected final void finalize() {
-        if (this.field_nativeid != 0L) {
+        if (this.nativeHandle != 0L) {
           NativeDisposalQueue.enqueue(0, (NativeResource) (this));
         }
     }
 
-    final native void O(int param0, int param1, int param2);
+    final native void scale(int param0, int param1, int param2);
 
-    final native int RA();
+    final native int getMaxX();
 
-    final native int HA();
+    final native int getMinZ();
 
-    private final native void R(NativeSoftwareToolkit param0, NativeSoftwareHeap param1, int param2, int param3, int[] param4, int[] param5, int[] param6, int[] param7, short[] param8, int param9, short[] param10, short[] param11, short[] param12, byte[] param13, byte[] param14, byte[] param15, byte[] param16, short[] param17, short[] param18, int[] param19, byte param20, short[] param21, int param22, byte[] param23, short[] param24, short[] param25, short[] param26, int[] param27, int[] param28, int[] param29, byte[] param30, byte[] param31, int[] param32, int[] param33, int[] param34, int[] param35, int param36, int param37, int param38, int param39, int param40, int param41, int[] param42);
+    private final native void initializeFromModelDataNative(NativeSoftwareToolkit param0, NativeSoftwareHeap param1, int param2, int param3, int[] param4, int[] param5, int[] param6, int[] param7, short[] param8, int param9, short[] param10, short[] param11, short[] param12, byte[] param13, byte[] param14, byte[] param15, byte[] param16, short[] param17, short[] param18, int[] param19, byte param20, short[] param21, int param22, byte[] param23, short[] param24, short[] param25, short[] param26, int[] param27, int[] param28, int[] param29, byte[] param30, byte[] param31, int[] param32, int[] param33, int[] param34, int[] param35, int param36, int param37, int param38, int param39, int param40, int param41, int[] param42);
 
-    final native int G();
+    final native int getMaxZ();
 
-    private final native void oa(NativeSoftwareToolkit param0);
+    private final native void initializeNative(NativeSoftwareToolkit param0);
 
     public final native void disposeNative(boolean param0);
 
-    final native void H(int param0, int param1, int param2);
+    final native void translate(int param0, int param1, int param2);
 
-    final native int V();
+    final native int getMinX();
 
-    i(NativeSoftwareToolkit param0, NativeSoftwareHeap param1, cbb param2, int param3, int param4, int param5, int param6) {
+    NativeSoftwareModel(NativeSoftwareToolkit param0, NativeSoftwareHeap param1, ModelData param2, int param3, int param4, int param5, int param6) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$3 = 0;
-        bqa var18 = null;
-        bqa var21 = null;
-        sr var17 = null;
+        ModelFaceAttachment var18 = null;
+        ModelFaceAttachment var21 = null;
+        ModelFaceAttachmentDefinition var17 = null;
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
         int incrementValue$6 = 0;
@@ -47,15 +47,15 @@ final class i extends ka implements NativeResource {
         int incrementValue$8 = 0;
         int incrementValue$9 = 0;
         int incrementValue$10 = 0;
-        bqa var19 = null;
+        ModelFaceAttachment var19 = null;
         int incrementValue$11 = 0;
         int var12 = 0;
         int var15 = 0;
         int var15Lifetime1;
         int var12Lifetime1;
         int var12Lifetime2;
-        this.field_d = param0;
-        this.field_b = param1;
+        this.toolkit = param0;
+        this.heap = param1;
         this.field_a = param2.field_c;
         this.field_c = param2.field_l;
         int var8 = param2.field_c == null ? 0 : param2.field_c.length;
@@ -80,18 +80,18 @@ final class i extends ka implements NativeResource {
           var10++;
           var11[incrementValue$3] = this.field_c[var12Lifetime1].field_a;
         }
-        var12Lifetime2 = param2.field_g == null ? 0 : param2.field_g.length;
+        var12Lifetime2 = param2.faceAttachments == null ? 0 : param2.faceAttachments.length;
         int[] var25 = new int[var12Lifetime2 * 8];
         int[] var23 = var25;
         int[] var13 = var23;
         int var14 = 0;
         for (var15 = 0; var15 < var12Lifetime2; var15++) {
-          var18 = param2.field_g[var15];
+          var18 = param2.faceAttachments[var15];
           var21 = var18;
-          var17 = GetBombletSprayAimspeed.a(var21.field_e, 0);
+          var17 = GetBombletSprayAimspeed.getFaceAttachmentDefinition(var21.definitionId, 0);
           incrementValue$4 = var14;
           var14++;
-          var13[incrementValue$4] = var18.field_b;
+          var13[incrementValue$4] = var18.faceIndex;
           incrementValue$5 = var14;
           var14++;
           var13[incrementValue$5] = var17.field_g;
@@ -114,18 +114,18 @@ final class i extends ka implements NativeResource {
         int var20 = 0;
         var15Lifetime1 = var20;
         while (var20 < var12Lifetime2) {
-          var19 = param2.field_g[var20];
+          var19 = param2.faceAttachments[var20];
           incrementValue$11 = var14;
           var14++;
-          var13[incrementValue$11] = var19.field_a;
+          var13[incrementValue$11] = var19.label;
           var20++;
         }
-        this.R(this.field_d, this.field_b, param2.field_s, param2.field_D, param2.field_v, param2.field_G, param2.field_x, param2.field_p, param2.field_z, param2.field_j, param2.field_k, param2.field_o, param2.field_K, param2.field_E, param2.field_m, param2.field_r, param2.field_M, param2.field_b, param2.field_u, param2.field_y, param2.field_d, param2.field_w, param2.field_B, param2.field_e, param2.field_t, param2.field_i, param2.field_H, param2.field_F, param2.field_a, param2.field_C, param2.field_J, param2.field_n, param2.field_L, param2.field_f, param2.field_I, var24, var8, var9, param3, param4, param5, param6, var25);
+        this.initializeFromModelDataNative(this.toolkit, this.heap, param2.field_s, param2.field_D, param2.vertexX, param2.vertexY, param2.vertexZ, param2.vertexLabels, param2.field_z, param2.faceCount, param2.faceVertexA, param2.faceVertexB, param2.faceVertexC, param2.field_E, param2.field_m, param2.field_r, param2.field_M, param2.field_b, param2.field_u, param2.faceLabels, param2.field_d, param2.field_w, param2.field_B, param2.field_e, param2.field_t, param2.field_i, param2.field_H, param2.field_F, param2.field_a, param2.field_C, param2.field_J, param2.field_n, param2.field_L, param2.field_f, param2.field_I, var24, var8, var9, param3, param4, param5, param6, var25);
     }
 
-    i(NativeSoftwareToolkit param0) {
-        this.field_d = param0;
-        this.field_b = null;
-        this.oa(param0);
+    NativeSoftwareModel(NativeSoftwareToolkit param0) {
+        this.toolkit = param0;
+        this.heap = null;
+        this.initializeNative(param0);
     }
 }

@@ -332,7 +332,7 @@ final class ThrusterBehaviour implements DiffableState {
         return param0 == 46 ? true : false;
     }
 
-    final void drawTrail(byte param0, int param1, lta param2, int[] param3) {
+    final void drawTrail(byte param0, int param1, Camera2D param2, int[] param3) {
         RuntimeException var5 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -471,7 +471,7 @@ final class ThrusterBehaviour implements DiffableState {
               param1.onStateChanged((byte) -128);
             }
             if (this.timer.cooldown > var10_int) {
-              GetGrapplingHookAimarc.a(param3, param1.id + param8.getShips(1000).length, 2, -64, param7);
+              GetGrapplingHookAimarc.updateLoopingSound(param3, param1.id + param8.getShips(1000).length, 2, -64, param7);
               this.applyThrust(param8, 256, param2, param6 + 31501, param7, param5, param4, param3, param1);
             }
           }
@@ -528,7 +528,7 @@ final class ThrusterBehaviour implements DiffableState {
             }
           } else {
             if (param13 != 12) {
-              GetGrapplingHookAimarc.a(param3, param5.id, 69, 87, param2);
+              GetGrapplingHookAimarc.updateLoopingSound(param3, param5.id, 69, 87, param2);
             }
             this.applyThrust(param8, param11, param9, 0, param2, param7, param13, param3, param5);
           }

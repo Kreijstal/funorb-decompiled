@@ -46,12 +46,12 @@ final class SetReverbFeedback extends ConsoleCommand {
     }
 
     final static void e(int param0) {
-        ana var1 = null;
+        SoundPlayback var1 = null;
         int var2 = 0;
         boolean stackIn_20_0 = false;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1_ref = null;
-        ana var1Lifetime1;
+        SoundPlayback var1Lifetime1;
         var2 = VoidHunters.field_G;
         try {
           if (param0 != 200) {
@@ -62,20 +62,20 @@ final class SetReverbFeedback extends ConsoleCommand {
           GetShieldsDirectionalRadius.field_o = GetShieldsDirectionalRadius.field_o - 1;
           if (GetShieldsDirectionalRadius.field_o == 0) {
             GetShieldsDirectionalRadius.field_o = 200;
-            var1 = (ana) (GetToggledScoreboard.field_p.first(0));
+            var1 = (SoundPlayback) (GetToggledScoreboard.field_p.first(0));
             while (var1 != null) {
-              if (!var1.field_g.isLinked((byte) -63)) {
+              if (!var1.lifetimeNode.isLinked((byte) -63)) {
                 var1.unlink(-3846);
               }
-              var1 = (ana) (GetToggledScoreboard.field_p.next((byte) 96));
+              var1 = (SoundPlayback) (GetToggledScoreboard.field_p.next((byte) 96));
             }
             if (GetSniperCannonReload.field_o != null) {
-              var1Lifetime1 = (ana) (GetSniperCannonReload.field_o.first(0));
+              var1Lifetime1 = (SoundPlayback) (GetSniperCannonReload.field_o.first(0));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_g.isLinked((byte) -63)) {
+                if (!var1Lifetime1.lifetimeNode.isLinked((byte) -63)) {
                   var1Lifetime1.unlink(-3846);
                 }
-                var1Lifetime1 = (ana) (GetSniperCannonReload.field_o.next((byte) 47));
+                var1Lifetime1 = (SoundPlayback) (GetSniperCannonReload.field_o.next((byte) 47));
               }
             }
           }

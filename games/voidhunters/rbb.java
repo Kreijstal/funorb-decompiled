@@ -258,7 +258,7 @@ final class rbb {
           var7.horizontalAlignment = 0;
           var7.setBackgroundSpritesForAllStates(GetBurstFireRegenerationRate.createCenterSpriteTile(true, 8947848), (byte) -54);
           var7.createStateStyle(1, -1).setBackgroundSprites(true, GetBurstFireRegenerationRate.createCenterSpriteTile(true, 11184810)).setTextColor(2236962, -2147483648);
-          this.field_d = (UiRenderer) ((Object) new uv(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
+          this.field_d = (UiRenderer) ((Object) new UiToggleButtonRenderer(param0, 2, 2, 16777215, -1, 5, 5, 15, 15, 4473924));
           discarded$0 = new ei(param0, 2, 2, 16777215, -1, 16777215, 16729156, 4473924);
           discarded$1 = new jba(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new UiStatefulStyle();

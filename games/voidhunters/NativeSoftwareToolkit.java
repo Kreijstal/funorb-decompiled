@@ -273,8 +273,8 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
         }
     }
 
-    final ka createModel(cbb param0, int param1, int param2, int param3, int param4) {
-        return (ka) ((Object) new i(this, this.field_k, param0, param1, param2, param3, param4));
+    final Model3D createModel(ModelData param0, int param1, int param2, int param3, int param4) {
+        return (Model3D) ((Object) new NativeSoftwareModel(this, this.field_k, param0, param1, param2, param3, param4));
     }
 
     final GraphicsHeap createHeap(int param0) {

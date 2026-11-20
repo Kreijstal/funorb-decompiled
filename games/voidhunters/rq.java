@@ -282,7 +282,7 @@ final class rq extends UiContainer implements ln, UiActionListener, jpb {
         var3 = var3 + this.a(this.field_z, var3, MissionState.field_h, 170, (byte) -42);
         var3 = var3 + (5 + this.a(this.field_y, var3, 170, qs.field_b, false, 20, ""));
         var3 = var3 + this.a(this.field_x, var3, RequestNewestBlackboxRecording.field_q, 170, (byte) -36);
-        var3 = var3 + (this.a(-41, mmb.field_e, 170, lg.field_d, var3, this.field_A) + 5);
+        var3 = var3 + (this.a(-41, OpenGlVertexNormal.field_e, 170, lg.field_d, var3, this.field_A) + 5);
         var3 = var3 + (5 + this.a(-103, Projectile.field_r, 170, ffb.field_c, var3, this.field_F));
         var3 = var3 + this.a(170, this.field_D, (byte) 104, CarouselSystemEventFactory.field_a, var3);
         sca var4 = new sca(46, var3, -90 + this.width, 25, this.field_E, true, this.width - 120, 5, SetTorpedoProjectileLife.field_o, 11579568, UiComponent.field_m);

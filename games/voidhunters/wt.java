@@ -40,7 +40,7 @@ final class wt {
           SetCountermeasureLauncherAimspeed.field_r = SetSniperCannonFireForce.field_o;
           if (param0 == 255) {
             stackIn_11_0 = !(SetDebrisCarryOverPercentage.field_p >= 13);
-            cjb.field_b = rv.a(stackIn_11_0, param1 ^ -19341);
+            cjb.field_b = GpuIndexBufferOwner.a(stackIn_11_0, param1 ^ -19341);
           } else {
             if (param0 < 100) {
               cjb.field_b = GetArmageddonLength.a(param0, param3, (byte) -124);

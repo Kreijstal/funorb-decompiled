@@ -16,7 +16,7 @@ final class GetFighterVision extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetFighterVision.a(-97, 123, -112);
+            GetFighterVision.playNonSpatialSound(-97, 123, -112);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(2, 124));
           return stackIn_3_0;
@@ -34,11 +34,11 @@ final class GetFighterVision extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
-        qw var3 = null;
+    final static void playNonSpatialSound(int param0, int param1, int param2) {
+        OneShotSound var3 = null;
         int var3_int = 0;
-        ana var4 = null;
-        qw var5 = null;
+        SoundPlayback var4 = null;
+        OneShotSound var5 = null;
         int var6 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
@@ -46,25 +46,25 @@ final class GetFighterVision extends ConsoleCommand {
         try {
           if (NetworkGameClient.activeOneShotSounds != null &&
             null != TextureTransformMode.field_a) {
-            var3 = (qw) (NetworkGameClient.activeOneShotSounds.first(0));
+            var3 = (OneShotSound) (NetworkGameClient.activeOneShotSounds.first(0));
             while (var3 != null) {
-              if (param1 == var3.field_f &&
-                !var3.field_m &&
-                Math.abs(var3.field_i - SetReverbDry.field_o) < param2) {
+              if (param1 == var3.sampleId &&
+                !var3.positional &&
+                Math.abs(var3.startedAt - SetReverbDry.field_o) < param2) {
                 return;
               }
-              var3 = (qw) (NetworkGameClient.activeOneShotSounds.next((byte) 92));
+              var3 = (OneShotSound) (NetworkGameClient.activeOneShotSounds.next((byte) 92));
             }
             var3_int = param1;
             if (fbb.field_j[param1] > 1) {
               var3_int = hob.a(OpenGlGpuToolkit.field_Jc, fbb.field_j[param1], 117) + param1;
             }
             var4 = GetNebulaFadesOutWhenClose.a(param0 ^ -6902, fa.field_d[var3_int]);
-            var5 = new qw();
-            var5.field_k = var4;
-            var5.field_m = false;
-            var5.field_i = SetReverbDry.field_o;
-            var5.field_f = param1;
+            var5 = new OneShotSound();
+            var5.playback = var4;
+            var5.positional = false;
+            var5.startedAt = SetReverbDry.field_o;
+            var5.sampleId = param1;
             NetworkGameClient.activeOneShotSounds.addLast(-10258, var5);
           }
           if (param0 == 6811) {

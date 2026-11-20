@@ -68,7 +68,7 @@ final class SetBuildViewAutozoomEndOnAction extends ConsoleCommand {
         var8 = VoidHunters.field_G;
         try {
           var3_int = 0;
-          var4 = nl.field_m;
+          var4 = LoopingSound.field_m;
           if (param1 != 3841) {
             field_o = -93;
           }

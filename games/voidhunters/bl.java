@@ -68,66 +68,66 @@ abstract class bl extends UiContainer {
           super.drawLayer(param0, param1, 101, param3);
           return;
         }
-        if (null == vib.field_b) {
-          vib.field_b = new Sprite(this.width, this.height);
-          SetTorpedoEnergyUsed.a(111, vib.field_b);
+        if (null == GpuFaceNormal.field_b) {
+          GpuFaceNormal.field_b = new Sprite(this.width, this.height);
+          SetTorpedoEnergyUsed.a(111, GpuFaceNormal.field_b);
           SoftwareRasterizer2D.clear();
           this.b(0, 1630174241, 0);
           super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
           if (param2 > 47) {
             bia.popRasterState((byte) 124);
-            vib.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
+            GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
             return;
           }
           this.j((byte) 123);
           bia.popRasterState((byte) 124);
-          vib.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
+          GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
           return;
         }
-        if (vib.field_b.width < this.width) {
-          vib.field_b = new Sprite(this.width, this.height);
-          SetTorpedoEnergyUsed.a(111, vib.field_b);
+        if (GpuFaceNormal.field_b.width < this.width) {
+          GpuFaceNormal.field_b = new Sprite(this.width, this.height);
+          SetTorpedoEnergyUsed.a(111, GpuFaceNormal.field_b);
           SoftwareRasterizer2D.clear();
           this.b(0, 1630174241, 0);
           super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
           if (param2 > 47) {
             bia.popRasterState((byte) 124);
-            vib.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
+            GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
             return;
           }
           this.j((byte) 123);
           bia.popRasterState((byte) 124);
-          vib.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
+          GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
           return;
         }
-        if (this.height > vib.field_b.height) {
-          vib.field_b = new Sprite(this.width, this.height);
-          SetTorpedoEnergyUsed.a(111, vib.field_b);
+        if (this.height > GpuFaceNormal.field_b.height) {
+          GpuFaceNormal.field_b = new Sprite(this.width, this.height);
+          SetTorpedoEnergyUsed.a(111, GpuFaceNormal.field_b);
           SoftwareRasterizer2D.clear();
           this.b(0, 1630174241, 0);
           super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
           if (param2 > 47) {
             bia.popRasterState((byte) 124);
-            vib.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
+            GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
             return;
           }
           this.j((byte) 123);
           bia.popRasterState((byte) 124);
-          vib.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
+          GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
           return;
         }
-        SetTorpedoEnergyUsed.a(111, vib.field_b);
+        SetTorpedoEnergyUsed.a(111, GpuFaceNormal.field_b);
         SoftwareRasterizer2D.clear();
         this.b(0, 1630174241, 0);
         super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
         if (param2 > 47) {
           bia.popRasterState((byte) 124);
-          vib.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
+          GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
           return;
         }
         this.j((byte) 123);
         bia.popRasterState((byte) 124);
-        vib.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
+        GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.field_w);
     }
 
     boolean j(byte param0) {

@@ -182,7 +182,7 @@ final class GetMessageMaxage extends ConsoleCommand {
             }
             ot.field_b = stackIn_40_0 + stackIn_41_1;
           }
-          nl.field_m = -(ot.field_b >> 1) + SetDebrisPartitioned.field_r;
+          LoopingSound.field_m = -(ot.field_b >> 1) + SetDebrisPartitioned.field_r;
           ei.field_c.a(param3, -1, 0, SetBuildViewAutozoomEndOnAction.a(uia.field_b, 3841, PlayerGameData.field_b));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -223,7 +223,7 @@ final class Projectile extends MovingObject implements DiffableState {
         }
     }
 
-    final void a(int param0, lta param1) {
+    final void a(int param0, Camera2D param1) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -240,59 +240,59 @@ final class Projectile extends MovingObject implements DiffableState {
         int var8Lifetime1;
         var9 = VoidHunters.field_G;
         try {
-          var3_int = param1.a(this.x, (byte) 127);
-          var4 = param1.b(true, this.y);
+          var3_int = param1.worldToScreenX(this.x, (byte) 127);
+          var4 = param1.worldToScreenY(true, this.y);
           if (param0 != this.type) {
             if (this.type == 4) {
-              var5 = param1.a(-this.dx + this.x, (byte) 119);
-              var6 = param1.b(true, this.y - this.dy);
+              var5 = param1.worldToScreenX(-this.dx + this.x, (byte) 119);
+              var6 = param1.worldToScreenY(true, this.y - this.dy);
               c.a(var6, var5, var3_int, var4, param0 ^ -16777216, 16746632);
               return;
             }
             if (this.type == 3) {
-              var5 = param1.a(-this.dx + this.x, (byte) 112);
-              var6 = param1.b(true, this.y - this.dy);
+              var5 = param1.worldToScreenX(-this.dx + this.x, (byte) 112);
+              var6 = param1.worldToScreenY(true, this.y - this.dy);
               var7 = qpb.a(false, this.firedTeam, 13894143);
-              var8 = 255 * this.damage / hrb.field_a;
+              var8 = 255 * this.damage / TickClock.field_a;
               FixedPointTrigonometry.drawThickLine(var7, 3, 16994, var4, var8 >> 1, var3_int, var5, var6);
               if (0 < this.angle) {
-                SetMissileLauncherEnergyUsed.a(var7, (byte) 7, var4, Math.max(3.0f, (float)var8 * (11.0f * param1.field_a)), var8 >> 1, var3_int);
-                SetMissileLauncherEnergyUsed.a(var7, (byte) 7, var4, Math.max(2.0f, 8.0f * param1.field_a * (float)var8), var8, var3_int);
+                SetMissileLauncherEnergyUsed.a(var7, (byte) 7, var4, Math.max(3.0f, (float)var8 * (11.0f * param1.scale)), var8 >> 1, var3_int);
+                SetMissileLauncherEnergyUsed.a(var7, (byte) 7, var4, Math.max(2.0f, 8.0f * param1.scale * (float)var8), var8, var3_int);
               }
-              SetMissileLauncherEnergyUsed.a(var7, (byte) 7, var6, Math.max(2.0f, param1.field_a * 8.0f * (float)var8), var8 >> 1, var5);
-              SetMissileLauncherEnergyUsed.a(var7, (byte) 7, var6, Math.max(1.0f, (float)var8 * (param1.field_a * 4.0f)), var8, var5);
+              SetMissileLauncherEnergyUsed.a(var7, (byte) 7, var6, Math.max(2.0f, param1.scale * 8.0f * (float)var8), var8 >> 1, var5);
+              SetMissileLauncherEnergyUsed.a(var7, (byte) 7, var6, Math.max(1.0f, (float)var8 * (param1.scale * 4.0f)), var8, var5);
               SetShowTutorial.a(var3_int, (byte) 66, var5, var4, var7, var6, var8);
               return;
             }
             if (2 == this.type) {
-              GetPhasedEnergyBeamReload.a(var4, param1.field_a * 400.0f, param0 - 106, var3_int, 65280);
+              GetPhasedEnergyBeamReload.a(var4, param1.scale * 400.0f, param0 - 106, var3_int, 65280);
               return;
             }
             if (this.type == 5) {
-              GetPhasedEnergyBeamReload.a(var4, param1.field_a * 400.0f, -100, var3_int, 65280);
+              GetPhasedEnergyBeamReload.a(var4, param1.scale * 400.0f, -100, var3_int, 65280);
               return;
             }
             if (1 == this.type) {
-              SetNumStars.a(2400.0f * param1.field_a, (byte) 96, var4, 65280, var3_int);
-              GetPhasedEnergyBeamReload.a(var4, 1600.0f * param1.field_a, -110, var3_int, 65280);
+              SetNumStars.a(2400.0f * param1.scale, (byte) 96, var4, 65280, var3_int);
+              GetPhasedEnergyBeamReload.a(var4, 1600.0f * param1.scale, -110, var3_int, 65280);
               return;
             }
             if (6 != this.type) {
               return;
             }
-            SetNumStars.a(1200.0f * param1.field_a, (byte) 80, var4, 16776960, var3_int);
+            SetNumStars.a(1200.0f * param1.scale, (byte) 80, var4, 16776960, var3_int);
             if (this.targetBody >= 0) {
               return;
             }
             var5 = GetUseNiceTrails.field_p / 2 >> 8;
             for (var6 = 0; var6 < 8; var6++) {
-              var7Lifetime1 = (int)((float)(var5 * (GetNumStars.cosAngle(this.life + var6 << 5, (byte) 33) >> 8)) * param1.field_a) + var3_int;
-              var8Lifetime1 = (int)((float)((TextureLineShape.sinAngle(this.life + var6 << 5, 62) >> 8) * var5) * param1.field_a) + var4;
+              var7Lifetime1 = (int)((float)(var5 * (GetNumStars.cosAngle(this.life + var6 << 5, (byte) 33) >> 8)) * param1.scale) + var3_int;
+              var8Lifetime1 = (int)((float)((TextureLineShape.sinAngle(this.life + var6 << 5, 62) >> 8) * var5) * param1.scale) + var4;
               SetShowTutorial.a(var3_int, (byte) 66, var7Lifetime1, var4, 65280, var8Lifetime1, 23);
             }
           } else {
-            var5 = param1.a(this.x - this.dx, (byte) 123);
-            var6 = param1.b(true, -this.dy + this.y);
+            var5 = param1.worldToScreenX(this.x - this.dx, (byte) 123);
+            var6 = param1.worldToScreenY(true, -this.dy + this.y);
             c.a(var6, var5, var3_int, var4, -16777216, 16776977);
           }
           return;

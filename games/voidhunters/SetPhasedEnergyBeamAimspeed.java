@@ -90,7 +90,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
             stackIn_66_0 = tb.field_a;
             stackIn_67_1 = (param1) && (!bv.field_d);
             ((Widget) (Object) stackIn_66_0).draw(stackIn_67_1, -109);
-            stackIn_70_0 = bqa.field_d;
+            stackIn_70_0 = ModelFaceAttachment.field_d;
             stackIn_71_1 = (param1) && (!bv.field_d);
             ((Widget) (Object) stackIn_70_0).draw(stackIn_71_1, 113);
           }
@@ -123,7 +123,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
             stackIn_9_0 = tb.field_a;
             stackIn_10_1 = (param1) && (!bv.field_d);
             ((Widget) (Object) stackIn_9_0).draw(stackIn_10_1, -109);
-            stackIn_13_0 = bqa.field_d;
+            stackIn_13_0 = ModelFaceAttachment.field_d;
             stackIn_14_1 = (param1) && (!bv.field_d);
             ((Widget) (Object) stackIn_13_0).draw(stackIn_14_1, 113);
           }

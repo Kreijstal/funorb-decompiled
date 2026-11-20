@@ -138,7 +138,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
             stackIn_73_0 = (var9Lifetime1 == GetUseLines.field_p.content.y + GetUseLines.field_p.content.field_db);
             GetReverbDamp.field_o = stackIn_73_0;
           } else {
-            if (null == qw.field_l) {
+            if (null == OneShotSound.field_l) {
               var9Lifetime1 = -GetUseLines.field_p.content.field_E - GetUseLines.field_p.content.height + GetUseLines.field_p.viewport.height;
               if (GetReverbDamp.field_o) {
                 GetUseLines.field_p.content.field_db = -GetUseLines.field_p.content.y + var9Lifetime1;
@@ -175,7 +175,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
             stackIn_46_0 = (var9Lifetime1 == GetUseLines.field_p.content.y + GetUseLines.field_p.content.field_db);
             GetReverbDamp.field_o = stackIn_46_0;
           } else {
-            if (null == qw.field_l) {
+            if (null == OneShotSound.field_l) {
               var9Lifetime1 = -GetUseLines.field_p.content.field_E - GetUseLines.field_p.content.height + GetUseLines.field_p.viewport.height;
               if (GetReverbDamp.field_o) {
                 GetUseLines.field_p.content.field_db = -GetUseLines.field_p.content.y + var9Lifetime1;

@@ -72,7 +72,7 @@ final class MidiNote extends IntrusiveNode {
         int var2 = VoidHunters.field_G;
         int var1_intLifetime1;
         try {
-          GetPedrosRepairMode.field_p.a(-103);
+          GetPedrosRepairMode.field_p.reset(-103);
           for (var1_int = 0; var1_int < 32; var1_int++) {
             SetSniperCannonFiringLeeway.field_o[var1_int] = 0L;
           }

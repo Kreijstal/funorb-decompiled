@@ -112,8 +112,8 @@ final class MapZone extends IntrusiveNode implements DiffableState {
           param0.writeBits(-632, this.y, 32);
           param0.writeBits(-632, this.width, 32);
           if (param1 > -109) {
-            lta var4 = (lta) null;
-            this.a(-77, 104, (lta) null);
+            Camera2D var4 = (Camera2D) null;
+            this.a(-77, 104, (Camera2D) null);
           }
           param0.writeBits(-632, this.height, 32);
         } catch (RuntimeException runtimeException) {
@@ -149,22 +149,22 @@ final class MapZone extends IntrusiveNode implements DiffableState {
         }
     }
 
-    final void a(int param0, int param1, lta param2) {
+    final void a(int param0, int param1, Camera2D param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
         try {
-          var4_int = param2.a(this.x, (byte) 126);
-          var5 = param2.b(true, this.y);
+          var4_int = param2.worldToScreenX(this.x, (byte) 126);
+          var5 = param2.worldToScreenY(true, this.y);
           if (param0 != 32) {
             IsaacPacketBuffer var8 = (IsaacPacketBuffer) null;
             this.writeState((IsaacPacketBuffer) null, 76);
           }
-          var6 = param2.a(this.width + this.x, (byte) 125);
-          var7 = param2.b(true, this.height + this.y);
+          var6 = param2.worldToScreenX(this.width + this.x, (byte) 125);
+          var7 = param2.worldToScreenY(true, this.height + this.y);
           CachedArchiveProvider.a(64, false, var4_int, var5, -var5 + var7, -var4_int + var6, param1);
-          uv.a(112, var4_int, -var5 + var7, var5, param1, -var4_int + var6);
+          UiToggleButtonRenderer.drawRectangle(112, var4_int, -var5 + var7, var5, param1, -var4_int + var6);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "cq.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

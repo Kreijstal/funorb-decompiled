@@ -1,31 +1,31 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ka {
-    abstract int HA();
+abstract class Model3D {
+    abstract int getMinZ();
 
-    abstract int V();
+    abstract int getMinX();
 
-    final static void a(int param0, int param1) {
+    final static void setSoundTime(int param0, int param1) {
         SetReverbDry.field_o = param0;
         if (param1 != -19266) {
           return;
         }
     }
 
-    abstract int G();
+    abstract int getMaxZ();
 
-    final static ana a(int param0, PcmSampleStream param1) {
-        ana var2 = null;
+    final static SoundPlayback playSampleStream(int param0, PcmSampleStream param1) {
+        SoundPlayback var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        ana stackIn_1_0 = null;
+        SoundPlayback stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = new ana(param1, param1);
+          var2 = new SoundPlayback(param1, param1);
           GetToggledScoreboard.field_p.addLast(-10258, var2);
           var3 = 119 / ((param0 - 18) / 37);
           kpb.field_q.addSubStream(param1);
@@ -45,11 +45,11 @@ abstract class ka {
         }
     }
 
-    abstract void H(int param0, int param1, int param2);
+    abstract void translate(int param0, int param1, int param2);
 
-    abstract int RA();
+    abstract int getMaxX();
 
-    abstract void O(int param0, int param1, int param2);
+    abstract void scale(int param0, int param1, int param2);
 
     static {
     }

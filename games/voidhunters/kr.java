@@ -33,7 +33,7 @@ final class kr {
                 var4 = var4 + var2.substring(var3);
               }
               var5 = new java.net.URL(param0.getCodeBase(), var4);
-              param0.getAppletContext().showDocument(ne.a(var5, (byte) 113, param0), "_self");
+              param0.getAppletContext().showDocument(OpenGlModel.updateUrlSessionSettings(var5, (byte) 113, param0), "_self");
               return;
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

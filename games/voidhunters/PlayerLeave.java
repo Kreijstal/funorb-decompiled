@@ -23,7 +23,7 @@ final class PlayerLeave implements DiffableState {
               if (param0 > -4) {
                 field_a = (int[]) null;
               }
-              var3 = ne.a(var4, (byte) -107, param1).getFile();
+              var3 = OpenGlModel.updateUrlSessionSettings(var4, (byte) -107, param1).getFile();
               ia.a(new Object[]{"home", var3 + "home.ws"}, param1, "updatelinks", (byte) -71);
               ia.a(new Object[]{"gamelist", var3 + "togamelist.ws"}, param1, "updatelinks", (byte) 97);
               ia.a(new Object[]{"serverlist", var3 + "toserverlist.ws"}, param1, "updatelinks", (byte) 121);

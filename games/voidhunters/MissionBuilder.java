@@ -1999,7 +1999,7 @@ final class MissionBuilder implements DiffableState {
                   decompiledFrameCompleted2 = false;
                   break;
                 }
-                hrb.field_b = true;
+                TickClock.field_b = true;
                 decompiledFrameCompleted1 = false;
                 break;
               }
@@ -2106,7 +2106,7 @@ final class MissionBuilder implements DiffableState {
                     tib.field_i[param3] = (byte)var11;
                   }
                   MissionBuilder.a(param0, param1, param2, 1 + param3, 110, param5, param6, param7);
-                  if (hrb.field_b) {
+                  if (TickClock.field_b) {
                     return;
                   }
                 }
@@ -2146,7 +2146,7 @@ final class MissionBuilder implements DiffableState {
                 MissionBuilder.a(param0, param1, param2, param3 + 1, 91, param5, param6, param7);
                 var10Lifetime1 = 1;
               }
-              if (hrb.field_b) {
+              if (TickClock.field_b) {
                 return;
               }
               var11++;

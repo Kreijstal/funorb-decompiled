@@ -2519,8 +2519,8 @@ final class SoftwareToolkit extends GraphicsToolkit {
         this.refreshClipState();
     }
 
-    final ka createModel(cbb param0, int param1, int param2, int param3, int param4) {
-        return (ka) ((Object) new b(this, param0, param1, param3, param4, param2));
+    final Model3D createModel(ModelData param0, int param1, int param2, int param3, int param4) {
+        return (Model3D) ((Object) new SoftwareModel(this, param0, param1, param3, param4, param2));
     }
 
     final int getMaxPointLights() {

@@ -44,41 +44,41 @@ final class GetGrapplingHookAimarc extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void updateLoopingSound(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         PcmSample var9 = null;
-        ana var10 = null;
-        nl var5 = null;
+        SoundPlayback var10 = null;
+        LoopingSound var5 = null;
         int var6 = 0;
         int var6Lifetime1;
         if (null == TextureTransformMode.field_a) {
           return;
         }
-        nl var12 = SetThrusterParticleSpeedDownshift.a(param2, -112, param1);
-        nl var13 = var12;
+        LoopingSound var12 = SetThrusterParticleSpeedDownshift.findLoopingSound(param2, -112, param1);
+        LoopingSound var13 = var12;
         if (var13 != null) {
-          var13.field_h = true;
-          var13.field_f = param0;
-          var13.field_i = param4;
+          var13.refreshed = true;
+          var13.y = param0;
+          var13.x = param4;
         } else {
-          var6 = uv.a(128, param4);
-          var7 = SpriteTextureOperation.b((byte) 126, param4, param0);
+          var6 = UiToggleButtonRenderer.computeSoundPan(128, param4);
+          var7 = SpriteTextureOperation.computeSoundGain((byte) 126, param4, param0);
           var8 = param2;
           if (fbb.field_j[param2] > 1) {
             var8 = hob.a(OpenGlGpuToolkit.field_Jc, fbb.field_j[param2], 121) + param2;
           }
           var9 = fa.field_d[var8];
           var10 = ServerInfo.playPannedSample(var7, 100, var6, var9);
-          var10.field_e.setLoopCount(-1);
-          var5 = new nl();
-          var5.field_i = param4;
-          var5.field_k = param2;
-          var5.field_f = param0;
-          var5.field_l = param1;
-          var5.field_h = true;
-          var5.field_d = var10;
-          var5.field_g = true;
+          var10.stream.setLoopCount(-1);
+          var5 = new LoopingSound();
+          var5.x = param4;
+          var5.sampleId = param2;
+          var5.y = param0;
+          var5.key = param1;
+          var5.refreshed = true;
+          var5.playback = var10;
+          var5.positional = true;
           PlayerReady.activeLoopingSounds.addLast(-10258, var5);
         }
         var6Lifetime1 = 116 % ((param3 - 14) / 45);

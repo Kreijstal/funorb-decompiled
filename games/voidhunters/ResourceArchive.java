@@ -249,7 +249,7 @@ final class ResourceArchive {
             stackIn_12_0 = (ArchiveTextureProvider.field_h) ? 0 : 1;
             var4_int = stackIn_12_0;
           } else {
-            if (nmb.b(param3 + 164)) {
+            if (SmoothedNanoTickClock.isLocalLobbyOwner(param3 + 164)) {
               stackIn_8_0 = (!param1.field_fc) ? 1 : 0;
             } else {
               stackIn_8_0 = 0;
@@ -296,7 +296,7 @@ final class ResourceArchive {
               stackIn_41_0.field_J = stackIn_42_1;
             }
             if (SetReloadBarHeight.field_q[0][2].field_Q) {
-              if (nmb.b(97)) {
+              if (SmoothedNanoTickClock.isLocalLobbyOwner(97)) {
                 NebulaFieldFactory.field_a = SetAutoAfkTimeout.field_r;
               } else {
                 NebulaFieldFactory.field_a = SetReverbGain.a(SetMissionVotes.field_p, new String[]{SetSpinningBladeSpindamageMultiplier.field_o.field_Vb}, 124);
@@ -535,13 +535,13 @@ final class ResourceArchive {
                 stackIn_223_0 = 1;
               }
               var16Lifetime1 = stackIn_223_0;
-              hrb.field_b = true;
+              TickClock.field_b = true;
               if (var16Lifetime1 == 0 &&
                 var9 >= 0 &&
                 null != ncb.field_a && (!param2 ||
                 !ArchiveTextureProvider.field_h)) {
                 GetMissionVotes.field_p = false;
-                hrb.field_b = false;
+                TickClock.field_b = false;
                 if (tib.field_i == null) {
                   tib.field_i = new byte[ocb.field_l];
                   AudioPump.field_a = new boolean[ocb.field_l];
@@ -552,9 +552,9 @@ final class ResourceArchive {
                 MissionBuilder.a(var7, var9, param1, -1, 93, param2, 0, -1);
                 if (2 <= SetAngularVelocitySustain.field_p &&
                   SetMachineGunEnergyUsed.field_o[12]) {
-                  hrb.field_b = true;
+                  TickClock.field_b = true;
                 }
-                if (!hrb.field_b) {
+                if (!TickClock.field_b) {
                   var16Lifetime1 = 1;
                 }
               }
@@ -657,7 +657,7 @@ final class ResourceArchive {
                   }
                 }
                 if (var4_int != 0 &&
-                  !hrb.field_b) {
+                  !TickClock.field_b) {
                   var22 = null;
                   var23 = 0;
                   if (GetMissionVotes.field_p) {
@@ -706,7 +706,7 @@ final class ResourceArchive {
               if (!param2) {
                 boolean decompiledFrameRemainder2 = true;
                 stackIn_332_0 = var17;
-                if (hrb.field_b) {
+                if (TickClock.field_b) {
                   stackIn_330_1 = ~(byte)var9;
                   stackIn_330_2 = param1.field_Pb[var7];
                   stackIn_330_3 = -1;

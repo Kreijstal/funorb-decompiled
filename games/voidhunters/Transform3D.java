@@ -57,7 +57,7 @@ abstract class Transform3D {
             var17 = var4_ref_wma;
             var17Lifetime2 = var4_ref_wma;
             var4_ref_wma.a(84);
-            rv.a(-37, var3);
+            GpuIndexBufferOwner.a(-37, var3);
             var5 = var4_ref_wma.field_B + var4_ref_wma.field_d >> 1;
             var6 = var4_ref_wma.field_u + var4_ref_wma.field_a >> 1;
             var7 = var4_ref_wma.field_s + var4_ref_wma.field_q >> 1;
@@ -105,7 +105,7 @@ abstract class Transform3D {
             }
             var21[var16] = -2147483648;
             var17Lifetime1 = SetMissileLauncherFireForce.field_o[var16];
-            rv.a(param0 ^ -34, var16);
+            GpuIndexBufferOwner.a(param0 ^ -34, var16);
             for (var18 = 0; var18 < 3; var18++) {
               GetMissileLauncherAimspeed.field_p[var18] = GetMissileLauncherAimspeed.field_p[var18] + SetMachineGunFireForce.field_p[var15][var18];
             }

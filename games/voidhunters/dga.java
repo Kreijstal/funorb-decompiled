@@ -38,7 +38,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("loginm2", 23100);
                 if (null != var2) {
-                  uv.field_f = Cp1252Strings.decode((byte) -125, var2);
+                  UiToggleButtonRenderer.field_f = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("loginm1", 23100);
                 if (null != var2) {
@@ -190,7 +190,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_x_dropped_out", 23100);
                 if (var2 != null) {
-                  rv.field_b = Cp1252Strings.decode((byte) -125, var2);
+                  GpuIndexBufferOwner.field_b = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_entered_other_game", 23100);
                 if (null != var2) {
@@ -318,7 +318,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("no", 23100);
                 if (var2 != null) {
-                  nl.field_j = Cp1252Strings.decode((byte) -125, var2);
+                  LoopingSound.field_j = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_invite_players", 23100);
                 if (var2 != null) {
@@ -590,7 +590,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("status_spectate", 23100);
                 if (var2 != null) {
-                  glb.field_a = Cp1252Strings.decode((byte) -125, var2);
+                  GpuVertexBufferOwner.field_a = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("status_playing", 23100);
                 if (null != var2) {
@@ -1524,7 +1524,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_password_hint", 23100);
                 if (null != var2) {
-                  mmb.field_e = Cp1252Strings.decode((byte) -125, var2);
+                  OpenGlVertexNormal.field_e = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_password_confirm_tooltip", 23100);
                 if (var2 != null) {
@@ -1652,7 +1652,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_emailvalid", 23100);
                 if (null != var2) {
-                  bqa.field_f = Cp1252Strings.decode((byte) -125, var2);
+                  ModelFaceAttachment.field_f = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_account_success", 23100);
                 if (var2 != null) {

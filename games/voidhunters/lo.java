@@ -12,13 +12,13 @@ final class lo {
         field_b = null;
         field_c = null;
         if (!param0) {
-          lta var2 = (lta) null;
-          lo.a(20, 74, (ToolkitSprite) null, (lta) null);
+          Camera2D var2 = (Camera2D) null;
+          lo.a(20, 74, (ToolkitSprite) null, (Camera2D) null);
         }
         field_a = null;
     }
 
-    final static void a(int param0, int param1, ToolkitSprite param2, lta param3) {
+    final static void a(int param0, int param1, ToolkitSprite param2, Camera2D param3) {
         int var16 = 0;
         int var17 = 0;
         RuntimeException stackIn_15_0 = null;
@@ -49,16 +49,16 @@ final class lo {
         int var24 = 0;
         var24 = VoidHunters.field_G;
         try {
-          var4_int = param3.a(true, 0);
+          var4_int = param3.screenToWorldX(true, 0);
           if (var4_int < 0) {
             var4_int = var4_int - param1;
           }
-          var5 = param3.a(param0 + 0, 0);
+          var5 = param3.screenToWorldY(param0 + 0, 0);
           if (var5 < 0) {
             var5 = var5 - param1;
           }
-          var6 = param3.a(true, GetBombletSprayEnergyUsed.field_p.width);
-          var7 = param3.a(0, GetBombletSprayEnergyUsed.field_p.height);
+          var6 = param3.screenToWorldX(true, GetBombletSprayEnergyUsed.field_p.width);
+          var7 = param3.screenToWorldY(0, GetBombletSprayEnergyUsed.field_p.height);
           var8 = -var4_int + var6;
           var9 = var7 - var5;
           var10 = var4_int / param1 * param1;
@@ -71,10 +71,10 @@ final class lo {
             for (var17 = 0; var13 >= var17; var17++) {
               var18 = var14 + param1;
               var19 = var15 + param1;
-              var20 = param3.a(var14, (byte) 127);
-              var21 = param3.b(true, var15);
-              var22 = param3.a(var18, (byte) 127);
-              var23 = param3.b(true, var19);
+              var20 = param3.worldToScreenX(var14, (byte) 127);
+              var21 = param3.worldToScreenY(true, var15);
+              var22 = param3.worldToScreenX(var18, (byte) 127);
+              var23 = param3.worldToScreenY(true, var19);
               param2.drawScaled(var20, var21, var22 - var20, -var21 + var23);
               var15 = var15 + param1;
             }

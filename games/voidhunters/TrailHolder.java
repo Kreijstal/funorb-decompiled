@@ -110,7 +110,7 @@ final class TrailHolder implements DiffableState {
         this.field_d[this.field_c] = this.field_a;
     }
 
-    final void a(lta param0, int param1, int param2) {
+    final void a(Camera2D param0, int param1, int param2) {
         try {
           if (param1 != 1325107016) {
             this.field_f = (int[]) null;

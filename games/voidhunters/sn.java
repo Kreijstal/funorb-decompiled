@@ -27,7 +27,7 @@ final class sn extends os implements UiActionListener {
         this.a(true, param0, GetArmageddonLength.a(248, GetMissionTerrainAsteroidProbability.field_q, (byte) -124));
     }
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, lta param6) {
+    final static void a(int param0, byte param1, int param2, int param3, int param4, int param5, Camera2D param6) {
         try {
           GetCountermeasureLauncherAimarc.a(param2, param6, param0, 3, param4, param5, 255, param3);
           if (param1 <= 68) {
@@ -54,8 +54,8 @@ final class sn extends os implements UiActionListener {
           var9 = param0;
           var10 = param6;
           if (param3 != 71) {
-            lta var12 = (lta) null;
-            sn.a(64, (byte) -32, -119, -6, 29, 12, (lta) null);
+            Camera2D var12 = (Camera2D) null;
+            sn.a(64, (byte) -32, -119, -6, 29, 12, (Camera2D) null);
           }
           var11 = param1;
           var13.field_i.layoutPopup(var8, -29060, var9, var10, var11);

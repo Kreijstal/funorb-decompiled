@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qw extends IntrusiveNode {
-    int field_f;
-    int field_h;
-    int field_i;
-    boolean field_m;
-    ana field_k;
-    int field_d;
+final class OneShotSound extends IntrusiveNode {
+    int sampleId;
+    int y;
+    int startedAt;
+    boolean positional;
+    SoundPlayback playback;
+    int x;
     static gl field_e;
     static lkb field_j;
     static QuickChatDynamicCommand field_g;
@@ -24,7 +24,7 @@ final class qw extends IntrusiveNode {
         }
     }
 
-    qw() {
+    OneShotSound() {
     }
 
     static {

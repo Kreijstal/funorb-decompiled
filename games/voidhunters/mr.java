@@ -58,7 +58,7 @@ final class mr extends iw implements UiActionListener {
         field_M = null;
         field_J = null;
         if (param0 != -16) {
-          mr.g(-102);
+          mr.createTickClock(-102);
         }
     }
 
@@ -135,12 +135,12 @@ final class mr extends iw implements UiActionListener {
         }
     }
 
-    final static hrb g(int param0) {
+    final static TickClock createTickClock(int param0) {
         if (param0 <= 37) {
-          mr.g(84);
-          return (hrb) ((Object) new nmb());
+          mr.createTickClock(84);
+          return (TickClock) ((Object) new SmoothedNanoTickClock());
         }
-        return (hrb) ((Object) new nmb());
+        return (TickClock) ((Object) new SmoothedNanoTickClock());
     }
 
     private final UiFocusableComponent a(byte param0, UiListener param1, String param2) {

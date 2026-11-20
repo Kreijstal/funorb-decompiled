@@ -56,7 +56,7 @@ final class MissileLauncherWeaponDefinition extends WeaponDefinition {
         if (param0 > -52) {
           return 120;
         }
-        return ana.field_f;
+        return SoundPlayback.field_f;
     }
 
     final int getProjectileCount(boolean param0) {

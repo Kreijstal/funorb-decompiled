@@ -86,7 +86,7 @@ final class PartitionZoneListFactory implements GameStateFactory {
             boolean decompiledFrameRemainder0 = true;
             boolean decompiledFrameCompleted0 = true;
             var6 = 1;
-            var15 = ana.a(var11, (byte) 48);
+            var15 = SoundPlayback.readFile(var11, (byte) 48);
             var13 = var15;
             var7 = var13;
             if (var7 != null &&

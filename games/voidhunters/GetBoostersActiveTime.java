@@ -96,7 +96,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
           var11_ref_StringLifetime2 = var8;
           var11_ref_StringLifetime3 = var8;
           if (null == SetShipSpawnInvulnerabilityTime.field_o &&
-            !ne.a(false, (byte) -11)) {
+            !OpenGlModel.pollSocketRequest(false, (byte) -11)) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
           }
@@ -225,7 +225,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               if (30000L < mw.e(0)) {
                 dgb.field_b = SetSalvoRepairTimeMultiplier.field_o;
               } else {
-                dgb.field_b = uv.field_f;
+                dgb.field_b = UiToggleButtonRenderer.field_f;
               }
               SetShowTutorial.field_o = false;
               stackIn_63_0 = 249;

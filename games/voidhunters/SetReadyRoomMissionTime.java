@@ -58,12 +58,12 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
               if (!ShipComponentFactory.field_a) {
                 GetTorpedoReload.field_q = uia.field_b;
                 GetUseDetailLines.field_o = PlayerGameData.field_b;
-                GetBots.field_o = hu.field_b;
+                GetBots.field_o = GpuVertexNormal.field_b;
                 ujb.field_c = SetDebrisPartitioned.field_o;
               } else {
                 if (~CarouselEvent.field_h == ~PlayerGameData.field_b &&
                   GetComponentBreakingExplosionForceMultiplier.field_p == uia.field_b) {
-                  GetBots.field_o = hu.field_b;
+                  GetBots.field_o = GpuVertexNormal.field_b;
                   ujb.field_c = SetDebrisPartitioned.field_o;
                   return;
                 }
@@ -78,7 +78,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                 }
                 var4 = stackIn_15_0;
                 SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
-                GetBots.field_o = hu.field_b;
+                GetBots.field_o = GpuVertexNormal.field_b;
                 ujb.field_c = SetDebrisPartitioned.field_o;
               }
               return;
@@ -137,13 +137,13 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
               if (!ShipComponentFactory.field_a) {
                 GetTorpedoReload.field_q = uia.field_b;
                 GetUseDetailLines.field_o = PlayerGameData.field_b;
-                GetBots.field_o = hu.field_b;
+                GetBots.field_o = GpuVertexNormal.field_b;
                 ujb.field_c = SetDebrisPartitioned.field_o;
                 return;
               }
               if (~CarouselEvent.field_h == ~PlayerGameData.field_b &&
                 GetComponentBreakingExplosionForceMultiplier.field_p == uia.field_b) {
-                GetBots.field_o = hu.field_b;
+                GetBots.field_o = GpuVertexNormal.field_b;
                 ujb.field_c = SetDebrisPartitioned.field_o;
                 return;
               }
@@ -158,7 +158,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
               }
               var4 = stackIn_83_0;
               SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
-              GetBots.field_o = hu.field_b;
+              GetBots.field_o = GpuVertexNormal.field_b;
               ujb.field_c = SetDebrisPartitioned.field_o;
               return;
             }
@@ -241,7 +241,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
             }
           }
         }
-        GetBots.field_o = hu.field_b;
+        GetBots.field_o = GpuVertexNormal.field_b;
         ujb.field_c = SetDebrisPartitioned.field_o;
     }
 

@@ -11,7 +11,7 @@ final class PlayerActionFactory implements GameStateFactory {
 
     final static void a(int param0, int param1, byte param2, int param3) {
         if (OpenGlTexture1D.field_i) {
-          mmb.field_d[param0].draw(param1, param3);
+          OpenGlVertexNormal.field_d[param0].draw(param1, param3);
           if (param2 <= 82) {
             PlayerActionFactory.a(-67, -4, (byte) 25, 43);
             return;

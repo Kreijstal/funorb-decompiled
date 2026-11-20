@@ -12,9 +12,9 @@ final class ResourceNode implements DiffableState {
     int x;
     int radius;
 
-    final void b(lta param0, int param1) {
+    final void b(Camera2D param0, int param1) {
         try {
-          SetNumStars.a((float)this.radius * param0.field_a, (byte) 55, param0.b(true, this.y), qpb.a(false, this.team, 13894143), param0.a(this.x, (byte) 124));
+          SetNumStars.a((float)this.radius * param0.scale, (byte) 55, param0.worldToScreenY(true, this.y), qpb.a(false, this.team, 13894143), param0.worldToScreenX(this.x, (byte) 124));
           this.a(param0, 8947848);
           int var3_int = 97 % ((55 - param1) / 49);
         } catch (RuntimeException runtimeException) {
@@ -143,7 +143,7 @@ final class ResourceNode implements DiffableState {
         }
     }
 
-    private final void a(lta param0, int param1) {
+    private final void a(Camera2D param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -162,11 +162,11 @@ final class ResourceNode implements DiffableState {
           if (this.captureTimer <= 0) {
             return;
           }
-          var3_int = param0.a(this.x - this.radius, (byte) 112);
-          var4 = param0.b(true, this.y - (-this.radius - 8192));
-          var5 = (int)(2.0f * (param0.field_a * (float)this.radius));
-          var6 = (int)(8192.0f * param0.field_a);
-          uv.a(126, var3_int - 1, var6 + 2, -1 + var4, 8947848, var5 + 2);
+          var3_int = param0.worldToScreenX(this.x - this.radius, (byte) 112);
+          var4 = param0.worldToScreenY(true, this.y - (-this.radius - 8192));
+          var5 = (int)(2.0f * (param0.scale * (float)this.radius));
+          var6 = (int)(8192.0f * param0.scale);
+          UiToggleButtonRenderer.drawRectangle(126, var3_int - 1, var6 + 2, -1 + var4, 8947848, var5 + 2);
           var7 = qpb.a(false, this.field_h, 13894143);
           var8 = GetGrapplingHookAimarc.a(-16777216, var7);
           PlayerJoinFactory.a(var4, var6, var8, this.captureTimer * var5 / Particle.field_G, var3_int, var7, 0);

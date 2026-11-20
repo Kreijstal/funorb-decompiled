@@ -275,9 +275,9 @@ class UiFocusableComponent extends UiComponent {
           super.updatePointer(param0, param1, param2, param3);
           this.activatedButton = 0;
           if (this.pressedButton != 0 &&
-            hu.field_b != this.pressedButton) {
+            GpuVertexNormal.field_b != this.pressedButton) {
             if (this.containsPoint(uia.field_b, param1, PlayerGameData.field_b, param0, (byte) 22) &&
-              hu.field_b == 0) {
+              GpuVertexNormal.field_b == 0) {
               this.fireAction(this.pressedButton, -param1 + PlayerGameData.field_b, 23015, uia.field_b - param0);
             }
             this.handleMouseRelease((byte) -106, param1, uia.field_b, param0, param3, PlayerGameData.field_b);

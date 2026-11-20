@@ -77,7 +77,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
           var9 = VoidHunters.field_G;
           try {
             if (SetShipSpawnInvulnerabilityTime.field_o == null &&
-              !ne.a(param4, (byte) -11)) {
+              !OpenGlModel.pollSocketRequest(param4, (byte) -11)) {
               stackIn_4_0 = -1;
               return stackIn_4_0;
             }
@@ -243,7 +243,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
                 if (mw.e(0) > 30000L) {
                   dgb.field_b = SetSalvoRepairTimeMultiplier.field_o;
                 } else {
-                  dgb.field_b = uv.field_f;
+                  dgb.field_b = UiToggleButtonRenderer.field_f;
                 }
                 SetShowTutorial.field_o = false;
                 stackIn_100_0 = 3;

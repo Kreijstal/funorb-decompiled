@@ -84,7 +84,7 @@ final class ComponentCollision extends IntrusiveNode {
             SetAutozoomSpeedDivide.field_p.height = 0;
             var7 = SetAutozoomSpeedDivide.field_p;
             var7.width = 0;
-            if (nmb.b(119)) {
+            if (SmoothedNanoTickClock.isLocalLobbyOwner(119)) {
               GetWeaponParticleSpeedDownshift.field_q.text = GetLaserEnergyUsed.field_p.toUpperCase();
               var9 = (2 + vva.field_r.width) / 2;
               vw.field_a.setBounds(0, 116, -2 + var9, vva.field_r.height - 40, 40);

@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-final class ne extends ka {
+final class OpenGlModel extends Model3D {
     private float[] field_k;
     private byte[] field_q;
     private short[] field_E;
@@ -12,7 +12,7 @@ final class ne extends ka {
     private uia[] field_D;
     private int field_w;
     private int field_u;
-    private short field_t;
+    private short minZ;
     private short[] field_g;
     private int field_d;
     private short[] field_b;
@@ -20,49 +20,49 @@ final class ne extends ka {
     private short[] field_n;
     private dga[] field_r;
     private short[] field_l;
-    private short field_C;
-    private short field_j;
-    private int[] field_a;
+    private short minX;
+    private short maxZ;
+    private int[] vertexY;
     static String field_m;
     private int field_B;
     private short[] field_h;
     private int[] field_H;
     static boolean field_v;
     private int[][] field_K;
-    private short field_e;
-    private int[] field_s;
+    private short maxX;
+    private int[] vertexZ;
     private short[] field_c;
     private float[] field_J;
-    private int field_f;
+    private int vertexCount;
     private byte[] field_z;
-    private boolean field_p;
+    private boolean boundsValid;
     private int field_o;
     private int[] field_F;
     private int field_x;
-    private int[] field_y;
+    private int[] vertexX;
     private short[] field_I;
 
-    final void O(int param0, int param1, int param2) {
+    final void scale(int param0, int param1, int param2) {
         int var4 = 0;
         int var5;
         var5 = VoidHunters.field_G;
-        for (var4 = 0; this.field_f > var4; var4++) {
+        for (var4 = 0; this.vertexCount > var4; var4++) {
           if (param0 != 128) {
-            this.field_y[var4] = param0 * this.field_y[var4] >> 7;
+            this.vertexX[var4] = param0 * this.vertexX[var4] >> 7;
           }
           if (param1 != 128) {
-            this.field_a[var4] = param1 * this.field_a[var4] >> 7;
+            this.vertexY[var4] = param1 * this.vertexY[var4] >> 7;
           }
           if (param2 != 128) {
-            this.field_s[var4] = param2 * this.field_s[var4] >> 7;
+            this.vertexZ[var4] = param2 * this.vertexZ[var4] >> 7;
           }
         }
         if (this.field_i == null) {
         }
-        this.field_p = false;
+        this.boundsValid = false;
     }
 
-    private final short a(byte param0, int param1, int param2, int param3, float param4, int param5, long param6, int param7, cbb param8, float param9) {
+    private final short getOrCreateRenderVertex(byte param0, int param1, int param2, int param3, float param4, int param5, long param6, int param7, ModelData param8, float param9) {
         int var15 = 0;
         int fieldTemp$0 = 0;
         short stackIn_7_0 = 0;
@@ -123,41 +123,41 @@ final class ne extends ka {
         }
     }
 
-    final void H(int param0, int param1, int param2) {
+    final void translate(int param0, int param1, int param2) {
         int var4 = 0;
         int var5;
         var5 = VoidHunters.field_G;
-        for (var4 = 0; var4 < this.field_f; var4++) {
+        for (var4 = 0; var4 < this.vertexCount; var4++) {
           if (0 != param0) {
-            this.field_y[var4] = this.field_y[var4] + param0;
+            this.vertexX[var4] = this.vertexX[var4] + param0;
           }
           if (param1 != 0) {
-            this.field_a[var4] = this.field_a[var4] + param1;
+            this.vertexY[var4] = this.vertexY[var4] + param1;
           }
           if (param2 != 0) {
-            this.field_s[var4] = this.field_s[var4] + param2;
+            this.vertexZ[var4] = this.vertexZ[var4] + param2;
           }
         }
         if (null == this.field_i) {
         }
-        this.field_p = false;
+        this.boundsValid = false;
     }
 
-    final int G() {
-        if (!this.field_p) {
-          this.a((byte) -10);
+    final int getMaxZ() {
+        if (!this.boundsValid) {
+          this.updateBounds((byte) -10);
         }
-        return this.field_j;
+        return this.maxZ;
     }
 
-    final int V() {
-        if (!this.field_p) {
-          this.a((byte) -10);
+    final int getMinX() {
+        if (!this.boundsValid) {
+          this.updateBounds((byte) -10);
         }
-        return this.field_C;
+        return this.minX;
     }
 
-    private final void a(byte param0) {
+    private final void updateBounds(byte param0) {
         int var10 = 0;
         int var2;
         int var3;
@@ -185,9 +185,9 @@ final class ne extends ka {
         var7 = -32768;
         var8 = 0;
         var9 = 0;
-        for (var10 = 0; this.field_f > var10; var10++) {
-          var11 = this.field_y[var10];
-          var12 = this.field_a[var10];
+        for (var10 = 0; this.vertexCount > var10; var10++) {
+          var11 = this.vertexX[var10];
+          var12 = this.vertexY[var10];
           if (var11 > var5) {
             var5 = var11;
           }
@@ -197,7 +197,7 @@ final class ne extends ka {
           if (var11 < var2) {
             var2 = var11;
           }
-          var13 = this.field_s[var10];
+          var13 = this.vertexZ[var10];
           if (var12 > var6) {
             var6 = var12;
           }
@@ -216,17 +216,17 @@ final class ne extends ka {
             var9 = var14Lifetime1;
           }
         }
-        this.field_C = (short)var2;
-        this.field_j = (short)var7;
-        this.field_e = (short)var5;
-        this.field_t = (short)var4;
+        this.minX = (short)var2;
+        this.maxZ = (short)var7;
+        this.maxX = (short)var5;
+        this.minZ = (short)var4;
         Math.sqrt((double)var8);
         Math.sqrt((double)var9);
-        this.field_p = true;
+        this.boundsValid = true;
         return;
     }
 
-    final static String a(char param0, byte param1, String param2, String param3) {
+    final static String replaceCharacter(char param0, byte param1, String param2, String param3) {
         StringBuilder discarded$4 = null;
         StringBuilder discarded$2 = null;
         StringBuilder discarded$3 = null;
@@ -252,7 +252,7 @@ final class ne extends ka {
         try {
           if (param1 <= 97) {
             var12 = (java.applet.Applet) null;
-            ne.a((java.net.URL) null, (byte) 9, (java.applet.Applet) null);
+            OpenGlModel.updateUrlSessionSettings((java.net.URL) null, (byte) 9, (java.applet.Applet) null);
           }
           var4_int = param3.length();
           var5 = param2.length();
@@ -302,7 +302,7 @@ final class ne extends ka {
         }
     }
 
-    final static java.net.URL a(java.net.URL param0, byte param1, java.applet.Applet param2) {
+    final static java.net.URL updateUrlSessionSettings(java.net.URL param0, byte param1, java.applet.Applet param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         Object var4 = null;
@@ -330,7 +330,7 @@ final class ne extends ka {
             !SetMachineGunAimarc.field_p.equals(param2.getParameter("session"))) {
             var5Lifetime1 = SetMachineGunAimarc.field_p;
           }
-          stackIn_8_0 = OpenGlBloomEffect.a(-1, param0, (byte) 50, (String) (var4), (String) (var5Lifetime1));
+          stackIn_8_0 = OpenGlBloomEffect.rewriteUrlPathParameters(-1, param0, (byte) 50, (String) (var4), (String) (var5Lifetime1));
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -352,18 +352,18 @@ final class ne extends ka {
         }
     }
 
-    final int HA() {
-        if (!this.field_p) {
-          this.a((byte) -10);
+    final int getMinZ() {
+        if (!this.boundsValid) {
+          this.updateBounds((byte) -10);
         }
-        return this.field_t;
+        return this.minZ;
     }
 
-    final int RA() {
-        if (!this.field_p) {
-          this.a((byte) -10);
+    final int getMaxX() {
+        if (!this.boundsValid) {
+          this.updateBounds((byte) -10);
         }
-        return this.field_e;
+        return this.maxX;
     }
 
     public static void clearSharedReferences(int param0) {
@@ -373,7 +373,7 @@ final class ne extends ka {
         }
     }
 
-    final static boolean a(boolean param0, byte param1) {
+    final static boolean pollSocketRequest(boolean param0, byte param1) {
         long dupTemp$2 = 0L;
         if (param1 != -11) {
           return true;
@@ -386,7 +386,7 @@ final class ne extends ka {
         }
         dupTemp$2 = wt.a(false);
         GetTorpedoProjectileOndamageParticles.field_o = dupTemp$2;
-        cbb.field_q = dupTemp$2;
+        ModelData.field_q = dupTemp$2;
         if (1 != GetPointDefenceLaserProjectiles.field_o.status) {
         }
         tc.field_c = GetMissileLauncherRandomness.field_o;
@@ -394,15 +394,15 @@ final class ne extends ka {
         return true;
     }
 
-    ne(OpenGlToolkit param0) {
+    OpenGlModel(OpenGlToolkit param0) {
         OpenGlVertexAttribute discarded$0 = null;
         OpenGlVertexAttribute discarded$1 = null;
         OpenGlVertexAttribute discarded$2 = null;
         dgb discarded$3 = null;
         this.field_B = 0;
-        this.field_f = 0;
+        this.vertexCount = 0;
         this.field_d = 0;
-        this.field_p = false;
+        this.boundsValid = false;
         this.field_x = 0;
         try {
           this.field_i = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5126, 3, 0);
@@ -415,7 +415,7 @@ final class ne extends ka {
         }
     }
 
-    ne(OpenGlToolkit param0, cbb param1, int param2, int param3, int param4, int param5) {
+    OpenGlModel(OpenGlToolkit param0, ModelData param1, int param2, int param3, int param4, int param5) {
         OpenGlVertexAttribute discarded$0 = null;
         OpenGlVertexAttribute discarded$1 = null;
         OpenGlVertexAttribute discarded$2 = null;
@@ -426,7 +426,7 @@ final class ne extends ka {
         short dupTemp$11 = 0;
         short dupTemp$12 = 0;
         int var11_int = 0;
-        dea dupTemp$8 = null;
+        OpenGlFaceNormal dupTemp$8 = null;
         int incrementValue$7 = 0;
         int[] array$6 = null;
         int dupTemp$4 = 0;
@@ -451,22 +451,22 @@ final class ne extends ka {
         long[] var9 = null;
         int var10 = 0;
         TextureMetadata var10_ref_opa = null;
-        mmb[] var11 = null;
+        OpenGlVertexNormal[] var11 = null;
         int var12 = 0;
         int var13 = 0;
         Object var13_ref = null;
         int var14 = 0;
         int var15_int = 0;
-        dea[] var15 = null;
+        OpenGlFaceNormal[] var15 = null;
         int var16 = 0;
         int var17 = 0;
         int var18 = 0;
         int[] var19 = null;
         int var19_int = 0;
         int var20 = 0;
-        bqa var20_ref_bqa = null;
+        ModelFaceAttachment var20_ref_bqa = null;
         int var21 = 0;
-        sr var21_ref_sr = null;
+        ModelFaceAttachmentDefinition var21_ref_sr = null;
         float var22 = 0.0f;
         int var22_int = 0;
         float var23 = 0.0f;
@@ -483,9 +483,9 @@ final class ne extends ka {
         int var29 = 0;
         int var30 = 0;
         int var31 = 0;
-        dea var31_ref_dea = null;
+        OpenGlFaceNormal var31_ref_dea = null;
         int var32_int = 0;
-        dea var32 = null;
+        OpenGlFaceNormal var32 = null;
         long var32_long = 0L;
         int var33_int = 0;
         long var33 = 0L;
@@ -533,16 +533,16 @@ final class ne extends ka {
         TextureMetadata var66 = null;
         TextureMetadata var67 = null;
         long[] var68 = null;
-        bqa var69 = null;
-        sr var70 = null;
-        mmb var71 = null;
-        mmb var72 = null;
-        mmb var73 = null;
+        ModelFaceAttachment var69 = null;
+        ModelFaceAttachmentDefinition var70 = null;
+        OpenGlVertexNormal var71 = null;
+        OpenGlVertexNormal var72 = null;
+        OpenGlVertexNormal var73 = null;
         TextureMetadata var74 = null;
         kua var75 = null;
-        mmb var77 = null;
-        mmb var78 = null;
-        mmb var79 = null;
+        OpenGlVertexNormal var77 = null;
+        OpenGlVertexNormal var78 = null;
+        OpenGlVertexNormal var79 = null;
         int[] var80 = null;
         int[] var81 = null;
         long[] var82 = null;
@@ -592,9 +592,9 @@ final class ne extends ka {
         int var16Lifetime1Lifetime1;
         int var16Lifetime1Lifetime2;
         this.field_B = 0;
-        this.field_f = 0;
+        this.vertexCount = 0;
         this.field_d = 0;
-        this.field_p = false;
+        this.boundsValid = false;
         this.field_x = 0;
         try {
           this.field_w = param2;
@@ -616,10 +616,10 @@ final class ne extends ka {
           }
           var65 = param0.field_a;
           this.field_H = new int[param1.field_D + 1];
-          var81 = new int[param1.field_j];
+          var81 = new int[param1.faceCount];
           var64 = var81;
           var8 = var64;
-          for (var9_int = 0; var9_int < param1.field_j; var9_int++) {
+          for (var9_int = 0; var9_int < param1.faceCount; var9_int++) {
             boolean decompiledFrameRemainder0 = true;
             if (param1.field_E == null ||
               param1.field_E[var9_int] != 2) {
@@ -633,11 +633,11 @@ final class ne extends ka {
                 fieldTemp$9 = this.field_B;
                 this.field_B = this.field_B + 1;
                 var8[fieldTemp$9] = var9_int;
-                dupTemp$10 = param1.field_k[var9_int];
+                dupTemp$10 = param1.faceVertexA[var9_int];
                 this.field_H[dupTemp$10] = this.field_H[dupTemp$10] + 1;
-                dupTemp$11 = param1.field_o[var9_int];
+                dupTemp$11 = param1.faceVertexB[var9_int];
                 this.field_H[dupTemp$11] = this.field_H[dupTemp$11] + 1;
-                dupTemp$12 = param1.field_K[var9_int];
+                dupTemp$12 = param1.faceVertexC[var9_int];
                 this.field_H[dupTemp$12] = this.field_H[dupTemp$12] + 1;
               }
             }
@@ -656,12 +656,12 @@ final class ne extends ka {
             var15_int = 0;
             var16 = 0;
             var17 = 0;
-            if (null != param1.field_g) {
+            if (null != param1.faceAttachments) {
               var18 = 0;
-              for (var19_int = 0; param1.field_g.length > var19_int; var19_int++) {
-                var20_ref_bqa = param1.field_g[var19_int];
-                if (~var20_ref_bqa.field_b == ~var12) {
-                  var21_ref_sr = GetBombletSprayAimspeed.a(var20_ref_bqa.field_e, 0);
+              for (var19_int = 0; param1.faceAttachments.length > var19_int; var19_int++) {
+                var20_ref_bqa = param1.faceAttachments[var19_int];
+                if (~var20_ref_bqa.faceIndex == ~var12) {
+                  var21_ref_sr = GetBombletSprayAimspeed.getFaceAttachmentDefinition(var20_ref_bqa.definitionId, 0);
                   if (var21_ref_sr.field_a) {
                     var18 = 1;
                   }
@@ -724,21 +724,21 @@ final class ne extends ka {
             }
           }
           GetFighterBayReload.a((byte) -24, var81, var82);
-          this.field_s = param1.field_x;
-          this.field_y = param1.field_v;
-          this.field_f = param1.field_D;
-          this.field_a = param1.field_G;
-          var11 = new mmb[this.field_f];
-          if (param1.field_g != null) {
-            this.field_o = param1.field_g.length;
+          this.vertexZ = param1.vertexZ;
+          this.vertexX = param1.vertexX;
+          this.vertexCount = param1.field_D;
+          this.vertexY = param1.vertexY;
+          var11 = new OpenGlVertexNormal[this.vertexCount];
+          if (param1.faceAttachments != null) {
+            this.field_o = param1.faceAttachments.length;
             this.field_r = new dga[this.field_o];
             this.field_D = new uia[this.field_o];
             for (var12Lifetime1 = 0; this.field_o > var12Lifetime1; var12Lifetime1++) {
-              var69 = param1.field_g[var12Lifetime1];
-              var70 = GetBombletSprayAimspeed.a(var69.field_e, 0);
+              var69 = param1.faceAttachments[var12Lifetime1];
+              var70 = GetBombletSprayAimspeed.getFaceAttachmentDefinition(var69.definitionId, 0);
               var15_intLifetime1 = -1;
               for (var16Lifetime1 = 0; this.field_B > var16Lifetime1; var16Lifetime1++) {
-                if (var81[var16Lifetime1] != var69.field_b) {
+                if (var81[var16Lifetime1] != var69.faceIndex) {
                   continue;
                 }
                 var15_intLifetime1 = var16Lifetime1;
@@ -747,15 +747,15 @@ final class ne extends ka {
               if (-1 == var15_intLifetime1) {
                 throw new RuntimeException();
               }
-              var16Lifetime1Lifetime1 = GetLagStandardDeviationIn.field_o[65535 & param1.field_b[var69.field_b]] & 16777215;
+              var16Lifetime1Lifetime1 = GetLagStandardDeviationIn.field_o[65535 & param1.field_b[var69.faceIndex]] & 16777215;
               stackIn_75_0 = var16Lifetime1Lifetime1;
               if (param1.field_r == null) {
                 stackIn_76_1 = 0;
               } else {
-                stackIn_76_1 = param1.field_r[var69.field_b];
+                stackIn_76_1 = param1.field_r[var69.faceIndex];
               }
               var16Lifetime1Lifetime2 = stackIn_75_0 | -stackIn_76_1 + 255 << 24;
-              this.field_D[var12Lifetime1] = new uia(var15_intLifetime1, (int) param1.field_k[var69.field_b], (int) param1.field_o[var69.field_b], (int) param1.field_K[var69.field_b], var70.field_g, var70.field_b, var70.field_e, var70.field_d, var70.field_f, var70.field_a, var70.field_c, var69.field_c);
+              this.field_D[var12Lifetime1] = new uia(var15_intLifetime1, (int) param1.faceVertexA[var69.faceIndex], (int) param1.faceVertexB[var69.faceIndex], (int) param1.faceVertexC[var69.faceIndex], var70.field_g, var70.field_b, var70.field_e, var70.field_d, var70.field_f, var70.field_a, var70.field_c, var69.field_c);
               this.field_r[var12Lifetime1] = new dga(var16Lifetime1Lifetime2);
             }
           }
@@ -781,23 +781,23 @@ final class ne extends ka {
           for (var14Lifetime1 = 0; param1.field_D > var14Lifetime1; var14Lifetime1++) {
             var15_intLifetime2 = this.field_H[var14Lifetime1];
             this.field_H[var14Lifetime1] = var13;
-            var11[var14Lifetime1] = new mmb();
+            var11[var14Lifetime1] = new OpenGlVertexNormal();
             var13 = var13 + var15_intLifetime2;
           }
           this.field_H[param1.field_D] = var13;
           var75 = SetSpecialOrderBoxWidth.a(param1, var81, this.field_B, -3);
-          var15 = new dea[param1.field_j];
+          var15 = new OpenGlFaceNormal[param1.faceCount];
           var16Lifetime2 = 0;
-          while (param1.field_j > var16Lifetime2) {
-            var17Lifetime1 = param1.field_k[var16Lifetime2];
-            var18Lifetime1 = param1.field_o[var16Lifetime2];
-            var19_intLifetime1 = param1.field_K[var16Lifetime2];
-            var20 = this.field_y[var18Lifetime1] - this.field_y[var17Lifetime1];
-            var21 = this.field_a[var18Lifetime1] - this.field_a[var17Lifetime1];
-            var22_int = -this.field_s[var17Lifetime1] + this.field_s[var18Lifetime1];
-            var23_int = this.field_y[var19_intLifetime1] - this.field_y[var17Lifetime1];
-            var24_int = -this.field_a[var17Lifetime1] + this.field_a[var19_intLifetime1];
-            var25_int = this.field_s[var19_intLifetime1] - this.field_s[var17Lifetime1];
+          while (param1.faceCount > var16Lifetime2) {
+            var17Lifetime1 = param1.faceVertexA[var16Lifetime2];
+            var18Lifetime1 = param1.faceVertexB[var16Lifetime2];
+            var19_intLifetime1 = param1.faceVertexC[var16Lifetime2];
+            var20 = this.vertexX[var18Lifetime1] - this.vertexX[var17Lifetime1];
+            var21 = this.vertexY[var18Lifetime1] - this.vertexY[var17Lifetime1];
+            var22_int = -this.vertexZ[var17Lifetime1] + this.vertexZ[var18Lifetime1];
+            var23_int = this.vertexX[var19_intLifetime1] - this.vertexX[var17Lifetime1];
+            var24_int = -this.vertexY[var17Lifetime1] + this.vertexY[var19_intLifetime1];
+            var25_int = this.vertexZ[var19_intLifetime1] - this.vertexZ[var17Lifetime1];
             var26_int = -(var22_int * var24_int) + var25_int * var21;
             var27_int = var22_int * var23_int - var25_int * var20;
             var28 = -(var21 * var23_int) + var24_int * var20;
@@ -823,29 +823,29 @@ final class ne extends ka {
                 var30 = stackIn_97_0;
                 if (var30 != 0) {
                   if (var30 == 1) {
-                    dupTemp$8 = new dea();
+                    dupTemp$8 = new OpenGlFaceNormal();
                     var15[var16Lifetime2] = dupTemp$8;
                     var31_ref_dea = dupTemp$8;
-                    var31_ref_dea.field_a = var28;
-                    var31_ref_dea.field_c = var27_int;
-                    var31_ref_dea.field_b = var26_int;
+                    var31_ref_dea.z = var28;
+                    var31_ref_dea.y = var27_int;
+                    var31_ref_dea.x = var26_int;
                   }
                 } else {
                   var71 = var11[var17Lifetime1];
-                  var71.field_a = var71.field_a + var26_int;
-                  var71.field_f = var71.field_f + var27_int;
-                  var71.field_h = var71.field_h + var28;
-                  var71.field_c = var71.field_c + 1;
+                  var71.x = var71.x + var26_int;
+                  var71.y = var71.y + var27_int;
+                  var71.z = var71.z + var28;
+                  var71.contributionCount = var71.contributionCount + 1;
                   var72 = var11[var18Lifetime1];
-                  var72.field_a = var72.field_a + var26_int;
-                  var72.field_f = var72.field_f + var27_int;
-                  var72.field_c = var72.field_c + 1;
-                  var72.field_h = var72.field_h + var28;
+                  var72.x = var72.x + var26_int;
+                  var72.y = var72.y + var27_int;
+                  var72.contributionCount = var72.contributionCount + 1;
+                  var72.z = var72.z + var28;
                   var73 = var11[var19_intLifetime1];
-                  var73.field_f = var73.field_f + var27_int;
-                  var73.field_h = var73.field_h + var28;
-                  var73.field_a = var73.field_a + var26_int;
-                  var73.field_c = var73.field_c + 1;
+                  var73.y = var73.y + var27_int;
+                  var73.z = var73.z + var28;
+                  var73.x = var73.x + var26_int;
+                  var73.contributionCount = var73.contributionCount + 1;
                 }
                 var16Lifetime2++;
                 break;
@@ -895,9 +895,9 @@ final class ne extends ka {
                 var19_intLifetime2 = var19_intLifetime2 & 255;
                 var31 = param1.field_e[var19_intLifetime2];
                 if (0 != var31) {
-                  var32_int = param1.field_k[var17Lifetime2];
-                  var33_int = param1.field_o[var17Lifetime2];
-                  var34 = param1.field_K[var17Lifetime2];
+                  var32_int = param1.faceVertexA[var17Lifetime2];
+                  var33_int = param1.faceVertexB[var17Lifetime2];
+                  var34 = param1.faceVertexC[var17Lifetime2];
                   var35 = var75.field_d[var19_intLifetime2];
                   var36 = var75.field_b[var19_intLifetime2];
                   var37 = var75.field_f[var19_intLifetime2];
@@ -908,12 +908,12 @@ final class ne extends ka {
                     if (var31 == 2) {
                       var41 = (float)param1.field_f[var19_intLifetime2] / 256.0f;
                       var42 = (float)param1.field_I[var19_intLifetime2] / 256.0f;
-                      var43 = -param1.field_v[var32_int] + param1.field_v[var33_int];
-                      var44 = param1.field_G[var33_int] - param1.field_G[var32_int];
-                      var45 = param1.field_x[var33_int] - param1.field_x[var32_int];
-                      var46 = param1.field_v[var34] - param1.field_v[var32_int];
-                      var47 = -param1.field_G[var32_int] + param1.field_G[var34];
-                      var48 = -param1.field_x[var32_int] + param1.field_x[var34];
+                      var43 = -param1.vertexX[var32_int] + param1.vertexX[var33_int];
+                      var44 = param1.vertexY[var33_int] - param1.vertexY[var32_int];
+                      var45 = param1.vertexZ[var33_int] - param1.vertexZ[var32_int];
+                      var46 = param1.vertexX[var34] - param1.vertexX[var32_int];
+                      var47 = -param1.vertexY[var32_int] + param1.vertexY[var34];
+                      var48 = -param1.vertexZ[var32_int] + param1.vertexZ[var34];
                       var49 = var44 * var48 - var45 * var47;
                       var50 = var46 * var45 - var48 * var43;
                       var51 = var47 * var43 - var46 * var44;
@@ -924,24 +924,24 @@ final class ne extends ka {
                       var56 = ((float)var50 * var86[4] + (float)var49 * var86[3] + var86[5] * (float)var51) / var53;
                       var57 = (var86[7] * (float)var50 + var86[6] * (float)var49 + var86[8] * (float)var51) / var54;
                       var30Lifetime1 = GetSniperCannonRandomness.a(-93, var56, var55, var57);
-                      SetPointDefenceLaserRandomness.a(var42, param1.field_x[var32_int], var41, (byte) 39, param1.field_v[var32_int], var37, param1.field_G[var32_int], var30Lifetime1, MissionBuilder.field_f, var35, var39, var86, var36, var40);
+                      SetPointDefenceLaserRandomness.a(var42, param1.vertexZ[var32_int], var41, (byte) 39, param1.vertexX[var32_int], var37, param1.vertexY[var32_int], var30Lifetime1, MissionBuilder.field_f, var35, var39, var86, var36, var40);
                       var23 = MissionBuilder.field_f[1];
                       var22 = MissionBuilder.field_f[0];
-                      SetPointDefenceLaserRandomness.a(var42, param1.field_x[var33_int], var41, (byte) 67, param1.field_v[var33_int], var37, param1.field_G[var33_int], var30Lifetime1, MissionBuilder.field_f, var35, var39, var86, var36, var40);
+                      SetPointDefenceLaserRandomness.a(var42, param1.vertexZ[var33_int], var41, (byte) 67, param1.vertexX[var33_int], var37, param1.vertexY[var33_int], var30Lifetime1, MissionBuilder.field_f, var35, var39, var86, var36, var40);
                       var24 = MissionBuilder.field_f[0];
                       var25 = MissionBuilder.field_f[1];
-                      SetPointDefenceLaserRandomness.a(var42, param1.field_x[var34], var41, (byte) 26, param1.field_v[var34], var37, param1.field_G[var34], var30Lifetime1, MissionBuilder.field_f, var35, var39, var86, var36, var40);
+                      SetPointDefenceLaserRandomness.a(var42, param1.vertexZ[var34], var41, (byte) 26, param1.vertexX[var34], var37, param1.vertexY[var34], var30Lifetime1, MissionBuilder.field_f, var35, var39, var86, var36, var40);
                       var27 = MissionBuilder.field_f[1];
                       var26 = MissionBuilder.field_f[0];
                     } else {
                       if (3 == var31) {
-                        CommonGameState.a(var86, param1.field_x[var32_int], var40, MissionBuilder.field_f, var37, param1.field_v[var32_int], (byte) -82, var36, param1.field_G[var32_int], var39, var35);
+                        CommonGameState.a(var86, param1.vertexZ[var32_int], var40, MissionBuilder.field_f, var37, param1.vertexX[var32_int], (byte) -82, var36, param1.vertexY[var32_int], var39, var35);
                         var23 = MissionBuilder.field_f[1];
                         var22 = MissionBuilder.field_f[0];
-                        CommonGameState.a(var86, param1.field_x[var33_int], var40, MissionBuilder.field_f, var37, param1.field_v[var33_int], (byte) -82, var36, param1.field_G[var33_int], var39, var35);
+                        CommonGameState.a(var86, param1.vertexZ[var33_int], var40, MissionBuilder.field_f, var37, param1.vertexX[var33_int], (byte) -82, var36, param1.vertexY[var33_int], var39, var35);
                         var24 = MissionBuilder.field_f[0];
                         var25 = MissionBuilder.field_f[1];
-                        CommonGameState.a(var86, param1.field_x[var34], var40, MissionBuilder.field_f, var37, param1.field_v[var34], (byte) -82, var36, param1.field_G[var34], var39, var35);
+                        CommonGameState.a(var86, param1.vertexZ[var34], var40, MissionBuilder.field_f, var37, param1.vertexX[var34], (byte) -82, var36, param1.vertexY[var34], var39, var35);
                         var27 = MissionBuilder.field_f[1];
                         var26 = MissionBuilder.field_f[0];
                         if ((1 & var39) != 0) {
@@ -987,13 +987,13 @@ final class ne extends ka {
                     }
                   } else {
                     var41 = (float)param1.field_C[var19_intLifetime2] / 1024.0f;
-                    TextEncodings.computeCylindricalTextureCoordinates(var86, var36, var39, var40, param1.field_v[var32_int], param1.field_G[var32_int], (byte) -52, var41, var37, MissionBuilder.field_f, var35, param1.field_x[var32_int]);
+                    TextEncodings.computeCylindricalTextureCoordinates(var86, var36, var39, var40, param1.vertexX[var32_int], param1.vertexY[var32_int], (byte) -52, var41, var37, MissionBuilder.field_f, var35, param1.vertexZ[var32_int]);
                     var22 = MissionBuilder.field_f[0];
                     var23 = MissionBuilder.field_f[1];
-                    TextEncodings.computeCylindricalTextureCoordinates(var86, var36, var39, var40, param1.field_v[var33_int], param1.field_G[var33_int], (byte) -52, var41, var37, MissionBuilder.field_f, var35, param1.field_x[var33_int]);
+                    TextEncodings.computeCylindricalTextureCoordinates(var86, var36, var39, var40, param1.vertexX[var33_int], param1.vertexY[var33_int], (byte) -52, var41, var37, MissionBuilder.field_f, var35, param1.vertexZ[var33_int]);
                     var24 = MissionBuilder.field_f[0];
                     var25 = MissionBuilder.field_f[1];
-                    TextEncodings.computeCylindricalTextureCoordinates(var86, var36, var39, var40, param1.field_v[var34], param1.field_G[var34], (byte) -52, var41, var37, MissionBuilder.field_f, var35, param1.field_x[var34]);
+                    TextEncodings.computeCylindricalTextureCoordinates(var86, var36, var39, var40, param1.vertexX[var34], param1.vertexY[var34], (byte) -52, var41, var37, MissionBuilder.field_f, var35, param1.vertexZ[var34]);
                     var27 = MissionBuilder.field_f[1];
                     var26 = MissionBuilder.field_f[0];
                     var42 = var41 / 2.0f;
@@ -1038,30 +1038,30 @@ final class ne extends ka {
                     }
                   }
                 } else {
-                  var32_int = param1.field_k[var17Lifetime2];
-                  var33_int = param1.field_o[var17Lifetime2];
-                  var34 = param1.field_K[var17Lifetime2];
+                  var32_int = param1.faceVertexA[var17Lifetime2];
+                  var33_int = param1.faceVertexB[var17Lifetime2];
+                  var34 = param1.faceVertexC[var17Lifetime2];
                   var35 = param1.field_t[var19_intLifetime2];
                   var36 = param1.field_i[var19_intLifetime2];
                   var37 = param1.field_H[var19_intLifetime2];
-                  var38 = (float)param1.field_v[var35];
-                  var39_float = (float)param1.field_G[var35];
-                  var40 = (float)param1.field_x[var35];
-                  var41 = -var38 + (float)param1.field_v[var36];
-                  var42 = (float)param1.field_G[var36] - var39_float;
-                  var43_float = (float)param1.field_x[var36] - var40;
-                  var44_float = -var38 + (float)param1.field_v[var37];
-                  var45_float = -var39_float + (float)param1.field_G[var37];
-                  var46_float = (float)param1.field_x[var37] - var40;
-                  var47_float = (float)param1.field_v[var32_int] - var38;
-                  var48_float = -var39_float + (float)param1.field_G[var32_int];
-                  var49_float = (float)param1.field_x[var32_int] - var40;
-                  var50_float = -var38 + (float)param1.field_v[var33_int];
-                  var51_float = (float)param1.field_G[var33_int] - var39_float;
-                  var52 = (float)param1.field_x[var33_int] - var40;
-                  var53 = (float)param1.field_v[var34] - var38;
-                  var54 = -var39_float + (float)param1.field_G[var34];
-                  var55 = (float)param1.field_x[var34] - var40;
+                  var38 = (float)param1.vertexX[var35];
+                  var39_float = (float)param1.vertexY[var35];
+                  var40 = (float)param1.vertexZ[var35];
+                  var41 = -var38 + (float)param1.vertexX[var36];
+                  var42 = (float)param1.vertexY[var36] - var39_float;
+                  var43_float = (float)param1.vertexZ[var36] - var40;
+                  var44_float = -var38 + (float)param1.vertexX[var37];
+                  var45_float = -var39_float + (float)param1.vertexY[var37];
+                  var46_float = (float)param1.vertexZ[var37] - var40;
+                  var47_float = (float)param1.vertexX[var32_int] - var38;
+                  var48_float = -var39_float + (float)param1.vertexY[var32_int];
+                  var49_float = (float)param1.vertexZ[var32_int] - var40;
+                  var50_float = -var38 + (float)param1.vertexX[var33_int];
+                  var51_float = (float)param1.vertexY[var33_int] - var39_float;
+                  var52 = (float)param1.vertexZ[var33_int] - var40;
+                  var53 = (float)param1.vertexX[var34] - var38;
+                  var54 = -var39_float + (float)param1.vertexY[var34];
+                  var55 = (float)param1.vertexZ[var34] - var40;
                   var56 = var46_float * var42 - var45_float * var43_float;
                   var57 = var43_float * var44_float - var46_float * var41;
                   var58 = -(var44_float * var42) + var45_float * var41;
@@ -1100,28 +1100,28 @@ final class ne extends ka {
               if (var31Lifetime1 == 1) {
                 var32 = var15[var17Lifetime2];
                 stackIn_168_0 = (long)(var18Lifetime2 << 8) + ((long)(var30Lifetime1 << 24) + (long)var20Lifetime1) << 32;
-                stackIn_168_1 = (256 + var32.field_a << 22) + (256 + var32.field_c << 12);
-                if (var32.field_b > 0) {
+                stackIn_168_1 = (256 + var32.z << 22) + (256 + var32.y << 12);
+                if (var32.x > 0) {
                   stackIn_169_2 = 1024;
                 } else {
                   stackIn_169_2 = 2048;
                 }
                 var33 = stackIn_168_0 + (long)(stackIn_168_1 + stackIn_169_2 + (var19_intLifetime2 << 2));
-                this.field_E[var16Lifetime3] = this.a((byte) 123, var32.field_b, var32.field_c, 0, var23, var32.field_a, var33, (int) param1.field_k[var17Lifetime2], param1, var22);
-                this.field_b[var16Lifetime3] = this.a((byte) 123, var32.field_b, var32.field_c, 0, var25, var32.field_a, var33 + (long)var28Lifetime1, (int) param1.field_o[var17Lifetime2], param1, var24);
-                this.field_n[var16Lifetime3] = this.a((byte) 112, var32.field_b, var32.field_c, 0, var27, var32.field_a, var33 + (long)var29Lifetime1, (int) param1.field_K[var17Lifetime2], param1, var26);
+                this.field_E[var16Lifetime3] = this.getOrCreateRenderVertex((byte) 123, var32.x, var32.y, 0, var23, var32.z, var33, (int) param1.faceVertexA[var17Lifetime2], param1, var22);
+                this.field_b[var16Lifetime3] = this.getOrCreateRenderVertex((byte) 123, var32.x, var32.y, 0, var25, var32.z, var33 + (long)var28Lifetime1, (int) param1.faceVertexB[var17Lifetime2], param1, var24);
+                this.field_n[var16Lifetime3] = this.getOrCreateRenderVertex((byte) 112, var32.x, var32.y, 0, var27, var32.z, var33 + (long)var29Lifetime1, (int) param1.faceVertexC[var17Lifetime2], param1, var26);
               }
             } else {
               var32_long = (long)(var19_intLifetime2 << 2) + ((long)(var18Lifetime2 << 8) + (long)(var30Lifetime1 << 24) + (long)var20Lifetime1 << 32);
-              var34Lifetime1 = param1.field_k[var17Lifetime2];
-              var35Lifetime1 = param1.field_o[var17Lifetime2];
-              var36Lifetime1 = param1.field_K[var17Lifetime2];
+              var34Lifetime1 = param1.faceVertexA[var17Lifetime2];
+              var35Lifetime1 = param1.faceVertexB[var17Lifetime2];
+              var36Lifetime1 = param1.faceVertexC[var17Lifetime2];
               var77 = var11[var34Lifetime1];
-              this.field_E[var16Lifetime3] = this.a((byte) 111, var77.field_a, var77.field_f, var77.field_c, var23, var77.field_h, var32_long, var34Lifetime1, param1, var22);
+              this.field_E[var16Lifetime3] = this.getOrCreateRenderVertex((byte) 111, var77.x, var77.y, var77.contributionCount, var23, var77.z, var32_long, var34Lifetime1, param1, var22);
               var78 = var11[var35Lifetime1];
-              this.field_b[var16Lifetime3] = this.a((byte) 112, var78.field_a, var78.field_f, var78.field_c, var25, var78.field_h, (long)var28Lifetime1 + var32_long, var35Lifetime1, param1, var24);
+              this.field_b[var16Lifetime3] = this.getOrCreateRenderVertex((byte) 112, var78.x, var78.y, var78.contributionCount, var25, var78.z, (long)var28Lifetime1 + var32_long, var35Lifetime1, param1, var24);
               var79 = var11[var36Lifetime1];
-              this.field_n[var16Lifetime3] = this.a((byte) 124, var79.field_a, var79.field_f, var79.field_c, var27, var79.field_h, var32_long + (long)var29Lifetime1, var36Lifetime1, param1, var26);
+              this.field_n[var16Lifetime3] = this.getOrCreateRenderVertex((byte) 124, var79.x, var79.y, var79.contributionCount, var27, var79.z, var32_long + (long)var29Lifetime1, var36Lifetime1, param1, var26);
             }
             if (param1.field_r != null) {
               this.field_q[var16Lifetime3] = param1.field_r[var17Lifetime2];
@@ -1161,22 +1161,22 @@ final class ne extends ka {
           this.field_z = PolarDisplacementTextureOperation.a(this.field_z, this.field_x, 5666);
           this.field_J = MusicPatchPcmStream.copyFloatArray(this.field_x, 0, this.field_J);
           this.field_k = MusicPatchPcmStream.copyFloatArray(this.field_x, 0, this.field_k);
-          if (param1.field_p != null &&
+          if (param1.vertexLabels != null &&
             bwa.a(param2, (byte) 121, this.field_u)) {
-            param1.a((byte) -37, false);
+            param1.groupVertexIndices((byte) -37, false);
           }
-          if (param1.field_g != null &&
+          if (param1.faceAttachments != null &&
             FighterBayWeaponDefinition.a(-54, param2, this.field_u)) {
-            param1.a(-96);
+            param1.groupFaceAttachmentIndices(-96);
           }
-          if (null != param1.field_y &&
+          if (null != param1.faceLabels &&
             ujb.a(384, this.field_u, param2)) {
             var18Lifetime5 = 0;
             var84 = new int[256];
             var80 = var84;
             var19 = var80;
             for (var20Lifetime2 = 0; var20Lifetime2 < this.field_B; var20Lifetime2++) {
-              var21Lifetime2 = param1.field_y[var81[var20Lifetime2]];
+              var21Lifetime2 = param1.faceLabels[var81[var20Lifetime2]];
               if (0 <= var21Lifetime2) {
                 if (var21Lifetime2 > var18Lifetime5) {
                   var18Lifetime5 = var21Lifetime2;
@@ -1191,7 +1191,7 @@ final class ne extends ka {
               var84[var20Lifetime2] = 0;
             }
             for (var20Lifetime2 = 0; this.field_B > var20Lifetime2; var20Lifetime2++) {
-              var21Lifetime2Lifetime1 = param1.field_y[var81[var20Lifetime2]];
+              var21Lifetime2Lifetime1 = param1.faceLabels[var81[var20Lifetime2]];
               if (0 <= var21Lifetime2Lifetime1) {
                 dupTemp$4 = var19[var21Lifetime2Lifetime1];
                 arrayValue$5 = this.field_K[var21Lifetime2Lifetime1];

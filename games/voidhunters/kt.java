@@ -7,7 +7,7 @@ class kt extends elb {
     private int field_o;
     static int[] field_r;
     private int field_j;
-    static int field_l;
+    static int soundEffectVolume;
     private byte[] field_k;
     private int field_n;
     private int field_m;
@@ -241,7 +241,7 @@ class kt extends elb {
             }
           }
           if (param3 > -109) {
-            field_l = 50;
+            soundEffectVolume = 50;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -288,6 +288,6 @@ class kt extends elb {
 
     static {
         field_r = new int[]{0, 1, 21, 4, 3, 20, 12};
-        field_l = 256;
+        soundEffectVolume = 256;
     }
 }

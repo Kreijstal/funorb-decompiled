@@ -58,7 +58,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_use_circle_fill(" + ColorizeTextureOperation.field_j + ")");
         System.out.println("set_use_circle_outline(" + GetReadyRoomMutatorTime.field_p + ")");
         System.out.println("set_use_lines(" + GetLaserAimarc.field_p + ")");
-        System.out.println("set_use_rect_fill(" + ne.field_v + ")");
+        System.out.println("set_use_rect_fill(" + OpenGlModel.field_v + ")");
         System.out.println("set_use_rect_outline(" + SetPointDefenceLaserReload.field_o + ")");
         System.out.println("set_use_tri_fill(" + GetBurstFireMaxEnergy.field_o + ")");
         System.out.println("set_use_polygon_fill(" + SetServerinfoComponentstate.field_o + ")");
@@ -81,7 +81,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_reverb_gain(" + SetMissileLauncherEnergyUsed.field_p + ")");
         System.out.println("set_reverb_feedback(" + ComponentAttachmentPlan.field_b + ")");
         System.out.println("set_reverb_damp(" + MapClearanceRectangleFactory.field_a + ")");
-        System.out.println("set_reverb_wet(" + nl.field_n + ")");
+        System.out.println("set_reverb_wet(" + LoopingSound.field_n + ")");
         System.out.println("set_reverb_dry(" + GetMissileLauncherProjectiles.field_o + ")");
         System.out.println("set_reverb_width(" + CommonGameState.field_i + ")");
         System.out.println("set_blueprint_save_time(" + Particle.field_d + ")");
@@ -219,7 +219,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_phased_energy_beam_fire_force(" + wja.field_b + ")");
         System.out.println("set_machine_gun_fire_force(" + eca.field_e + ")");
         System.out.println("set_sniper_cannon_fire_force(" + GetMassDriverAimarc.field_o + ")");
-        System.out.println("set_missile_launcher_fire_force(" + ana.field_f + ")");
+        System.out.println("set_missile_launcher_fire_force(" + SoundPlayback.field_f + ")");
         System.out.println("set_point_defence_laser_fire_force(" + SetShipPersistence.field_s + ")");
         System.out.println("set_countermeasure_launcher_fire_force(" + SetMissileLauncherEnergyUsed.field_o + ")");
         System.out.println("set_mass_driver_reload(" + ujb.field_h + ")");
@@ -245,7 +245,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_point_defence_laser_aimspeed(" + OpenGlGlyphMask.field_e + ")");
         System.out.println("set_countermeasure_launcher_aimspeed(" + ava.field_a + ")");
         System.out.println("set_mass_driver_aimarc(" + sib.field_i + ")");
-        System.out.println("set_torpedo_aimarc(" + mmb.field_i + ")");
+        System.out.println("set_torpedo_aimarc(" + OpenGlVertexNormal.field_i + ")");
         System.out.println("set_laser_aimarc(" + SetPointDefenceLaserReload.field_q + ")");
         System.out.println("set_fighter_bay_aimarc(" + SetVariableActionFactory.field_b + ")");
         System.out.println("set_spinning_blade_aimarc(" + SetLaserRandomness.field_o + ")");
@@ -259,7 +259,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_countermeasure_launcher_aimarc(" + rlb.field_e + ")");
         System.out.println("set_mass_driver_projectile_damage(" + GetMissionTerrainNebulaProbability.field_p + ")");
         System.out.println("set_torpedo_projectile_damage(" + QuickChatPhraseLoader.field_b + ")");
-        System.out.println("set_laser_beam_projectile_damage(" + hrb.field_a + ")");
+        System.out.println("set_laser_beam_projectile_damage(" + TickClock.field_a + ")");
         System.out.println("set_machine_gun_projectile_damage(" + ServerInfo.field_f + ")");
         System.out.println("set_sniper_cannon_projectile_damage(" + ArchiveRequest.field_m + ")");
         System.out.println("set_bomblet_spray_projectile_damage(" + GetMissionTerrainAsteroidProbability.field_o + ")");
@@ -278,7 +278,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_laser_energy_used(" + ffa.field_b + ")");
         System.out.println("set_bomblet_spray_energy_used(" + QuickChatCategoryDefinition.field_o + ")");
         System.out.println("set_phased_energy_beam_energy_used(" + bv.field_e + ")");
-        System.out.println("set_machine_gun_energy_used(" + mmb.field_g + ")");
+        System.out.println("set_machine_gun_energy_used(" + OpenGlVertexNormal.field_g + ")");
         System.out.println("set_sniper_cannon_energy_used(" + ShieldBehaviourFactory.field_a + ")");
         System.out.println("set_missile_launcher_energy_used(" + SetShipAimLines.field_q + ")");
         System.out.println("set_countermeasure_launcher_energy_used(" + GetShieldsDirectionalRadius.field_p + ")");

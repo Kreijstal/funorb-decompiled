@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rv {
+final class GpuIndexBufferOwner {
     static String field_b;
-    private GpuIndexBuffer field_a;
+    private GpuIndexBuffer indexBuffer;
 
     final static void a(int param0, int param1) {
         int var2;
@@ -232,23 +232,23 @@ final class rv {
     public static void clearSharedReferences(int param0) {
         field_b = null;
         if (param0 != -1) {
-          rv.a(-69, 55);
+          GpuIndexBufferOwner.a(-69, 55);
         }
     }
 
-    final void a(byte param0) {
+    final void release(byte param0) {
         if (param0 != -35) {
-          this.a((byte) 98);
-          if (this.field_a != null) {
-            this.field_a.release(param0 - 51);
+          this.release((byte) 98);
+          if (this.indexBuffer != null) {
+            this.indexBuffer.release(param0 - 51);
             return;
           }
           return;
         }
-        if (this.field_a == null) {
+        if (this.indexBuffer == null) {
           return;
         }
-        this.field_a.release(param0 - 51);
+        this.indexBuffer.release(param0 - 51);
     }
 
     final static tpa a(boolean param0, int param1) {
@@ -260,7 +260,7 @@ final class rv {
         return (tpa) null;
     }
 
-    rv(boolean param0) {
+    GpuIndexBufferOwner(boolean param0) {
     }
 
     static {

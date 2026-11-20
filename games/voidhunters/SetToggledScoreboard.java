@@ -79,7 +79,7 @@ final class SetToggledScoreboard extends ConsoleCommand {
             return stackIn_6_0;
           }
           if (var2_int > 64) {
-            stackIn_10_0 = qw.field_j;
+            stackIn_10_0 = OneShotSound.field_j;
             return stackIn_10_0;
           }
           if (param1.charAt(0) == 34) {

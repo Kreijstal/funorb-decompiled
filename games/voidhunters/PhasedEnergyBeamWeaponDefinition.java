@@ -43,9 +43,9 @@ final class PhasedEnergyBeamWeaponDefinition extends WeaponDefinition {
     final int getProjectileDamage(int param0) {
         if (param0 != 2769) {
           this.getAimArc(-10);
-          return hrb.field_a;
+          return TickClock.field_a;
         }
-        return hrb.field_a;
+        return TickClock.field_a;
     }
 
     final int getProjectileSpeed(byte param0) {

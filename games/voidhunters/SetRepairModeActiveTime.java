@@ -161,9 +161,9 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
             stackIn_7_4 = SetMessageMax.field_o;
           }
           oib.field_a = new Widget(stackIn_6_2, stackIn_6_3, ((String) (Object) stackIn_7_4).toUpperCase());
-          bqa.field_d = new Widget(0L, (Widget) null);
-          bqa.field_d.addChild(-561, qpb.field_w);
-          bqa.field_d.addChild(param1 - 10792, sra.field_a);
+          ModelFaceAttachment.field_d = new Widget(0L, (Widget) null);
+          ModelFaceAttachment.field_d.addChild(-561, qpb.field_w);
+          ModelFaceAttachment.field_d.addChild(param1 - 10792, sra.field_a);
           sra.field_a.addChild(-561, ArchiveIndexLoader.field_a);
           sra.field_a.addChild(-561, GetSniperCannonAimspeed.field_q);
           sra.field_a.addChild(param1 ^ -9672, SettingsChangeFactory.field_b);
@@ -174,9 +174,9 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           sra.field_a.addChild(-561, uga.field_h);
           sra.field_a.addChild(-561, MapClearanceCircle.field_f);
           if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
-            bqa.field_d.addChild(-561, GetMomentOfInertiaPerpointCalcDownshift.field_p);
+            ModelFaceAttachment.field_d.addChild(-561, GetMomentOfInertiaPerpointCalcDownshift.field_p);
           }
-          bqa.field_d.addChild(-561, oib.field_a);
+          ModelFaceAttachment.field_d.addChild(-561, oib.field_a);
           Debris.field_y = new Widget(0L, DeveloperConsole.field_q);
           Debris.field_y.field_F = 1;
           Debris.field_y.field_B = 0;
@@ -225,7 +225,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
             }
           }
           GetLaserAimarc.field_o[2] = new Widget(0L, SetShieldsDirectionalHalfarcCuts.field_p, FixedPointTrigonometry.field_b);
-          SetReloadBarHeight.field_q[2] = new IconTextWidget[]{new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, OpenGlBloomEffect.field_k), new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, GetPointDefenceLaserProjectileInterceptDamage.field_t[0], nl.field_j), new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, GetPointDefenceLaserProjectileInterceptDamage.field_t[1], SettingsInstanceFactory.field_a)};
+          SetReloadBarHeight.field_q[2] = new IconTextWidget[]{new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, (Sprite) null, OpenGlBloomEffect.field_k), new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, GetPointDefenceLaserProjectileInterceptDamage.field_t[0], LoopingSound.field_j), new IconTextWidget(0L, UiComboBoxList.field_M, (Widget) null, GetMissionDebrisDefaultProbability.field_o, GetPointDefenceLaserProjectileInterceptDamage.field_t[1], SettingsInstanceFactory.field_a)};
           if (GetDebrisThrowable.field_r > 1) {
             GetLaserAimarc.field_o[3] = new Widget(0L, SetShieldsDirectionalHalfarcCuts.field_p, GetMassDriverProjectileOndamageParticles.field_o);
             array$1 = new IconTextWidget[1 + GetDebrisThrowable.field_r];

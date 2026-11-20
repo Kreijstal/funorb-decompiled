@@ -1,28 +1,28 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class hrb {
+abstract class TickClock {
     static int field_a;
     static boolean field_b;
     private static String field_z;
 
-    final int a(boolean param0, long param1) {
+    final int waitForTicks(boolean param0, long param1) {
         long var4 = 0L;
         if (!param0) {
-          var4 = this.a((byte) -81);
+          var4 = this.getSleepMillis((byte) -81);
           if (0L < var4) {
             BufferedFile.sleep(-96, var4);
           }
-          return this.a(0, param1);
+          return this.advanceTicks(0, param1);
         }
         return 36;
     }
 
-    abstract long a(byte param0);
+    abstract long getSleepMillis(byte param0);
 
-    abstract void a(int param0);
+    abstract void reset(int param0);
 
-    abstract int a(int param0, long param1);
+    abstract int advanceTicks(int param0, long param1);
 
     static {
         field_z = "hrb.C(";

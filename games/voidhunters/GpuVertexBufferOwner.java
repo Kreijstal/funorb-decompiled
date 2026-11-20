@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class glb {
-    private GpuVertexBuffer field_b;
+final class GpuVertexBufferOwner {
+    private GpuVertexBuffer vertexBuffer;
     static String[] field_c;
     static String field_a;
 
-    final static void c(int param0) {
+    final static void updateSoundQueues(int param0) {
         boolean stackIn_13_0 = false;
         RuntimeException decompiledCaughtException = null;
-        qw var1 = null;
-        nl var1_ref = null;
+        OneShotSound var1 = null;
+        LoopingSound var1_ref = null;
         RuntimeException var1_ref2 = null;
         int var2 = 0;
         int var3 = 0;
@@ -22,12 +22,12 @@ final class glb {
           }
           if (NetworkGameClient.activeOneShotSounds != null &&
             !NetworkGameClient.activeOneShotSounds.isEmpty(-42)) {
-            var1 = (qw) (NetworkGameClient.activeOneShotSounds.first(0));
+            var1 = (OneShotSound) (NetworkGameClient.activeOneShotSounds.first(0));
             while (var1 != null) {
-              if (!var1.field_k.isLinked((byte) -63)) {
+              if (!var1.playback.isLinked((byte) -63)) {
                 var1.unlink(-3846);
               }
-              var1 = (qw) (NetworkGameClient.activeOneShotSounds.next((byte) 77));
+              var1 = (OneShotSound) (NetworkGameClient.activeOneShotSounds.next((byte) 77));
             }
           }
           if (null != PlayerReady.activeLoopingSounds) {
@@ -35,20 +35,20 @@ final class glb {
             if (stackIn_13_0) {
               return;
             }
-            var1_ref = (nl) (PlayerReady.activeLoopingSounds.first(0));
+            var1_ref = (LoopingSound) (PlayerReady.activeLoopingSounds.first(0));
             while (var1_ref != null) {
-              if (!var1_ref.field_h) {
-                nmb.a((byte) -91, var1_ref.field_d);
+              if (!var1_ref.refreshed) {
+                SmoothedNanoTickClock.stopPlayback((byte) -91, var1_ref.playback);
                 var1_ref.unlink(param0 ^ -19863);
               } else {
-                if (var1_ref.field_g) {
-                  var2 = uv.a(param0 - 16915, var1_ref.field_i);
-                  var3 = SpriteTextureOperation.b((byte) 119, var1_ref.field_i, var1_ref.field_f);
-                  var1_ref.field_d.a(param0 ^ 16915, var3, var2);
+                if (var1_ref.positional) {
+                  var2 = UiToggleButtonRenderer.computeSoundPan(param0 - 16915, var1_ref.x);
+                  var3 = SpriteTextureOperation.computeSoundGain((byte) 119, var1_ref.x, var1_ref.y);
+                  var1_ref.playback.setGainAndPan(param0 ^ 16915, var3, var2);
                 }
-                var1_ref.field_h = false;
+                var1_ref.refreshed = false;
               }
-              var1_ref = (nl) (PlayerReady.activeLoopingSounds.next((byte) 12));
+              var1_ref = (LoopingSound) (PlayerReady.activeLoopingSounds.next((byte) 12));
             }
             return;
           }
@@ -60,12 +60,12 @@ final class glb {
         }
     }
 
-    glb(boolean param0) {
+    GpuVertexBufferOwner(boolean param0) {
     }
 
-    final void a(int param0) {
-        if (null != this.field_b) {
-          this.field_b.release(param0 - 26459);
+    final void release(int param0) {
+        if (null != this.vertexBuffer) {
+          this.vertexBuffer.release(param0 - 26459);
         }
         if (param0 == 26363) {
           return;
@@ -77,7 +77,7 @@ final class glb {
         field_c = null;
         field_a = null;
         if (param0 != -17471) {
-          glb.c(99);
+          GpuVertexBufferOwner.updateSoundQueues(99);
         }
     }
 

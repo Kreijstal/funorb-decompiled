@@ -28,9 +28,9 @@ final class SetMutatorVotes extends ConsoleCommand {
           if (param0 != -1321004447) {
             field_o = (int[]) null;
           }
-          nl.field_m = -(ot.field_b >> 1) + SetDebrisPartitioned.field_r;
+          LoopingSound.field_m = -(ot.field_b >> 1) + SetDebrisPartitioned.field_r;
           GetMissionTerrainAsteroidProbability.field_p = ShieldBehaviour.field_d + var1_int;
-          var2 = nl.field_m;
+          var2 = LoopingSound.field_m;
           for (var3 = 0; var3 < GetWorldWidthUpshift.field_o.length; var3++) {
             var4 = GetSniperCannonProjectiles.field_o[var3];
             if (0 <= var4) {

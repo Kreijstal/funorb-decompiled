@@ -119,15 +119,15 @@ abstract class GpuToolkit extends GraphicsToolkit {
     ConsoleCommandRegistry blendFunction;
     private GpuVertexBuffer quadVertexBuffer;
     private GpuVertexDeclaration circleVertexDeclaration;
-    private roa field_w;
+    private GpuModel field_w;
     private GpuVertexDeclaration quadVertexDeclaration;
     private GpuVertexDeclaration lineVertexDeclaration;
     GpuVertexDeclaration field_Vb;
-    private roa field_D;
+    private GpuModel field_D;
     private GpuVertexBuffer circleVertexBuffer;
-    private roa field_hb;
-    private roa field_Jb;
-    private roa field_R;
+    private GpuModel field_hb;
+    private GpuModel field_Jb;
+    private GpuModel field_R;
     private GpuVertexBuffer lineVertexBuffer;
     private GpuIndexBuffer field_T;
     boolean scissorEnabled;
@@ -848,16 +848,16 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.createVertexDeclaration(10, new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.field_k, VertexAttribute.field_d})});
         this.createVertexDeclaration(param0 ^ -31099, new VertexStreamLayout[]{new VertexStreamLayout(VertexAttribute.field_k), new VertexStreamLayout(VertexAttribute.field_d), new VertexStreamLayout(VertexAttribute.field_l), new VertexStreamLayout(VertexAttribute.field_g)});
         this.createVertexDeclaration(10, new VertexStreamLayout[]{new VertexStreamLayout(VertexAttribute.field_k), new VertexStreamLayout(VertexAttribute.field_d), new VertexStreamLayout(VertexAttribute.field_l)});
-        roa discarded$0 = new roa(this, 0, 0, false, false);
-        this.field_R = new roa(this, 0, 0, true, true);
-        roa discarded$1 = new roa(this, 0, 0, false, false);
-        this.field_D = new roa(this, 0, 0, true, true);
-        roa discarded$2 = new roa(this, 0, 0, false, false);
-        this.field_hb = new roa(this, 0, 0, true, true);
-        roa discarded$3 = new roa(this, 0, 0, false, false);
-        this.field_Jb = new roa(this, 0, 0, true, true);
-        roa discarded$4 = new roa(this, 0, 0, false, false);
-        this.field_w = new roa(this, 0, 0, true, true);
+        GpuModel discarded$0 = new GpuModel(this, 0, 0, false, false);
+        this.field_R = new GpuModel(this, 0, 0, true, true);
+        GpuModel discarded$1 = new GpuModel(this, 0, 0, false, false);
+        this.field_D = new GpuModel(this, 0, 0, true, true);
+        GpuModel discarded$2 = new GpuModel(this, 0, 0, false, false);
+        this.field_hb = new GpuModel(this, 0, 0, true, true);
+        GpuModel discarded$3 = new GpuModel(this, 0, 0, false, false);
+        this.field_Jb = new GpuModel(this, 0, 0, true, true);
+        GpuModel discarded$4 = new GpuModel(this, 0, 0, false, false);
+        this.field_w = new GpuModel(this, 0, 0, true, true);
         this.field_Ib = new je(this);
         this.field_T = this.createIndexBuffer((byte) -19, true);
         this.recreateGpuResources(param0 ^ -31089);
@@ -917,7 +917,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         float var8;
         float[] var9;
         if (param0 != 97) {
-          this.field_hb = (roa) null;
+          this.field_hb = (GpuModel) null;
         }
         if (!this.orthographicProjectionValid) {
           var9 = this.orthographicProjection;
@@ -1161,16 +1161,16 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     abstract GpuCubeTexture createCubeTexture(boolean param0, int param1, int[][] param2, int param3);
 
-    final ka createModel(cbb param0, int param1, int param2, int param3, int param4) {
+    final Model3D createModel(ModelData param0, int param1, int param2, int param3, int param4) {
         RuntimeException var6 = null;
-        roa stackIn_1_0 = null;
+        GpuModel stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_1_0 = new roa(this, param0, param1, param3, param4, param2);
-          return (ka) ((Object) stackIn_1_0);
+          stackIn_1_0 = new GpuModel(this, param0, param1, param3, param4, param2);
+          return (Model3D) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
@@ -2141,11 +2141,11 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.lineVertexBuffer.release(-103);
         this.circleVertexBuffer.release(-117);
         int var3 = 19 % ((47 - param0) / 45);
-        this.field_R.a(26385);
-        this.field_D.a(26385);
-        this.field_hb.a(26385);
-        this.field_Jb.a(26385);
-        this.field_w.a(26385);
+        this.field_R.releaseBuffers(26385);
+        this.field_D.releaseBuffers(26385);
+        this.field_hb.releaseBuffers(26385);
+        this.field_Jb.releaseBuffers(26385);
+        this.field_w.releaseBuffers(26385);
         this.field_Ib.a(false);
         this.field_T.release(-127);
     }

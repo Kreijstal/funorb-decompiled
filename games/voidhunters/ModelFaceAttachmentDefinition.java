@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sr {
+final class ModelFaceAttachmentDefinition {
     int field_f;
     int field_d;
     boolean field_a;
@@ -10,7 +10,7 @@ final class sr {
     boolean field_c;
     int field_b;
 
-    final void a(int param0, PacketBuffer param1, byte param2) {
+    final void decode(int param0, PacketBuffer param1, byte param2) {
         int var4_int = 0;
         int var5 = 0;
         PacketBuffer var6 = null;
@@ -23,14 +23,14 @@ final class sr {
         try {
           if (param2 != 11) {
             var6 = (PacketBuffer) null;
-            this.a(-11, (PacketBuffer) null, -118, true);
+            this.decodeOpcode(-11, (PacketBuffer) null, -118, true);
           }
           while (true) {
             var4_int = param1.readUnsignedByte((byte) -127);
             if (var4_int == 0) {
               return;
             }
-            this.a(param0, param1, var4_int, false);
+            this.decodeOpcode(param0, param1, var4_int, false);
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -46,7 +46,7 @@ final class sr {
         }
     }
 
-    private final void a(int param0, PacketBuffer param1, int param2, boolean param3) {
+    private final void decodeOpcode(int param0, PacketBuffer param1, int param2, boolean param3) {
         RuntimeException var5 = null;
         int var6 = 0;
         RuntimeException stackIn_23_0 = null;
@@ -106,7 +106,7 @@ final class sr {
         }
     }
 
-    sr() {
+    ModelFaceAttachmentDefinition() {
         this.field_a = false;
         this.field_d = 1;
         this.field_f = 2;

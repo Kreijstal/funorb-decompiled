@@ -311,7 +311,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         }
     }
 
-    final void drawHealthBar(boolean param0, lta param1, int param2) {
+    final void drawHealthBar(boolean param0, Camera2D param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -320,11 +320,11 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         int var9 = 0;
         try {
           var4_int = this.getHealthProgress(0);
-          var5 = (int)((float)TextureFilterMode.field_d * param1.field_a);
+          var5 = (int)((float)TextureFilterMode.field_d * param1.scale);
           if (var5 < 8) {
             var5 = 8;
           }
-          var6 = (int)((float)NebulaField.field_d * param1.field_a);
+          var6 = (int)((float)NebulaField.field_d * param1.scale);
           if (1 > var6) {
             var6 = 1;
           }
@@ -332,8 +332,8 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
             this.field_D = false;
           }
           var7 = (this.getBoundingbox((byte) -23)[0] + this.getBoundingbox((byte) -46)[1]) / 2;
-          var8 = param1.a(var7, (byte) 117) - var5 / 2;
-          var9 = param1.b(true, this.getBoundingbox((byte) -94)[2]) - 4 * var6;
+          var8 = param1.worldToScreenX(var7, (byte) 117) - var5 / 2;
+          var9 = param1.worldToScreenY(true, this.getBoundingbox((byte) -94)[2]) - 4 * var6;
           SetMissionTerrainDebrisProbability.a(qpb.a(false, this.team, param2 ^ 13894111), var4_int, var9, var6, param0, var5, var8, 2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sg.NC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -597,7 +597,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
               }
             }
             if (var10 != 0) {
-              GetGrapplingHookAimarc.a(param2, this.id, 73, 102, param1);
+              GetGrapplingHookAimarc.updateLoopingSound(param2, this.id, 73, 102, param1);
               var6 = 0;
             }
             if (var10 != 0 &&
@@ -608,7 +608,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           if (var6 != 0) {
             stackIn_38_0 = param2;
             stackIn_38_1 = this.id;
-            GetGrapplingHookAimarc.a(stackIn_38_0, stackIn_38_1, 72, -72, param1);
+            GetGrapplingHookAimarc.updateLoopingSound(stackIn_38_0, stackIn_38_1, 72, -72, param1);
           }
           return false;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1055,7 +1055,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
         }
     }
 
-    final void draw(lta param0, int param1, World param2) {
+    final void draw(Camera2D param0, int param1, World param2) {
         int var7 = 0;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -1087,7 +1087,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
                 var10 = this.y + (TextureLineShape.sinAngle(var8, 77) >> 8) * (var5 >> 8);
                 var11 = this.x + (GetNumStars.cosAngle(var8 + var6, (byte) -73) >> 8) * (var5 >> 8);
                 var12 = this.y + (var5 >> 8) * (TextureLineShape.sinAngle(var6 + var8, 56) >> 8);
-                c.a(param0.b(true, var12), param0.a(var11, (byte) 122), param0.a(var9, (byte) 116), param0.b(true, var10), -16777216, var4_int);
+                c.a(param0.worldToScreenY(true, var12), param0.worldToScreenX(var11, (byte) 122), param0.worldToScreenX(var9, (byte) 116), param0.worldToScreenY(true, var10), -16777216, var4_int);
               }
             }
             if ((this.spawnTimer & 8) != 0) {

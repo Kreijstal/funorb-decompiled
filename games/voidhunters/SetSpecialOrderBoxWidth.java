@@ -36,7 +36,7 @@ final class SetSpecialOrderBoxWidth extends ConsoleCommand {
         }
     }
 
-    final static kua a(cbb param0, int[] param1, int param2, int param3) {
+    final static kua a(ModelData param0, int[] param1, int param2, int param3) {
         int var18_int = 0;
         kua stackIn_50_0 = null;
         Object stackIn_53_0 = null;
@@ -108,16 +108,16 @@ final class SetSpecialOrderBoxWidth extends ConsoleCommand {
                 for (var18_int = 0; var18_int < 3; var18_int++) {
                   if (var18_int != 0) {
                     if (var18_int != 1) {
-                      var19_int = param0.field_K[var16];
+                      var19_int = param0.faceVertexC[var16];
                     } else {
-                      var19_int = param0.field_o[var16];
+                      var19_int = param0.faceVertexB[var16];
                     }
                   } else {
-                    var19_int = param0.field_k[var16];
+                    var19_int = param0.faceVertexA[var16];
                   }
-                  var20 = param0.field_v[var19_int];
-                  var21 = param0.field_G[var19_int];
-                  var22 = param0.field_x[var19_int];
+                  var20 = param0.vertexX[var19_int];
+                  var21 = param0.vertexY[var19_int];
+                  var22 = param0.vertexZ[var19_int];
                   if (var20 < var45[var17_int]) {
                     var45[var17_int] = var20;
                   }

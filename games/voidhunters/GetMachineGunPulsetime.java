@@ -73,7 +73,7 @@ final class GetMachineGunPulsetime extends ConsoleCommand {
             SoftwareRasterizer2D.fillRectangle(param5, param3, param2, param4, param0);
             return;
           }
-          if (ne.field_v) {
+          if (OpenGlModel.field_v) {
             GetDebrisGroupColour.field_r.fillRectangle(param2, (byte) 120, param0 | -16777216, param4, param3, param5);
             return;
           }
@@ -83,7 +83,7 @@ final class GetMachineGunPulsetime extends ConsoleCommand {
           SoftwareRasterizer2D.fillRectangle(param5, param3, param2, param4, param0);
           return;
         }
-        if (!ne.field_v) {
+        if (!OpenGlModel.field_v) {
           return;
         }
         GetDebrisGroupColour.field_r.fillRectangle(param2, (byte) 120, param0 | -16777216, param4, param3, param5);

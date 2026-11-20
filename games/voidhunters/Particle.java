@@ -115,7 +115,7 @@ final class Particle implements DiffableState {
         }
     }
 
-    final void a(byte param0, lta param1) {
+    final void a(byte param0, Camera2D param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -160,8 +160,8 @@ final class Particle implements DiffableState {
         int var16Lifetime1;
         var27 = VoidHunters.field_G;
         try {
-          var3_int = param1.a(this.x, (byte) 121);
-          var4 = param1.b(true, this.y);
+          var3_int = param1.worldToScreenX(this.x, (byte) 121);
+          var4 = param1.worldToScreenY(true, this.y);
           if (param0 < 108) {
             field_h = 22;
           }
@@ -172,7 +172,7 @@ final class Particle implements DiffableState {
           }
           if (GetPedrosRepairMode.field_q == this.type) {
             var6 = 16742144;
-            var7 = 400.0f * param1.field_a;
+            var7 = 400.0f * param1.scale;
             var8 = var5;
             if (0.5f > var7) {
               var8 = (int)(2.0f * (var7 * (float)var5));
@@ -183,8 +183,8 @@ final class Particle implements DiffableState {
               SetMissileLauncherEnergyUsed.a(var6, (byte) 7, var4, var7, var8, var3_int);
               return;
             }
-            var10 = param1.a((this.dx << 2) + this.x, (byte) 124);
-            var11 = param1.b(true, (this.dy << 2) + this.y);
+            var10 = param1.worldToScreenX((this.dx << 2) + this.x, (byte) 124);
+            var11 = param1.worldToScreenY(true, (this.dy << 2) + this.y);
             if (var9 <= 1) {
               SetShowTutorial.a(var3_int, (byte) 66, var10, var4, var6, var11, var8);
               return;
@@ -215,12 +215,12 @@ final class Particle implements DiffableState {
           var20 = var14 * var9Lifetime1 + var13 * var10Lifetime1 >> 16;
           var21 = -(var16 * var10Lifetime1) + var9Lifetime1 * var15 >> 16;
           var22 = var9Lifetime1 * var16 + var15 * var10Lifetime1 >> 16;
-          var11Lifetime2 = param1.a(var17 + this.x, (byte) 125);
-          var12Lifetime1 = param1.b(true, this.y + var18);
-          var13Lifetime1 = param1.a(var19 + this.x, (byte) 117);
-          var14Lifetime1 = param1.b(true, var20 + this.y);
-          var15Lifetime1 = param1.a(var21 + this.x, (byte) 117);
-          var16Lifetime1 = param1.b(true, var22 + this.y);
+          var11Lifetime2 = param1.worldToScreenX(var17 + this.x, (byte) 125);
+          var12Lifetime1 = param1.worldToScreenY(true, this.y + var18);
+          var13Lifetime1 = param1.worldToScreenX(var19 + this.x, (byte) 117);
+          var14Lifetime1 = param1.worldToScreenY(true, var20 + this.y);
+          var15Lifetime1 = param1.worldToScreenX(var21 + this.x, (byte) 117);
+          var16Lifetime1 = param1.worldToScreenY(true, var22 + this.y);
           var23 = -SetPhasedEnergyBeamReload.field_o + this.type - 1;
           var24 = qpb.a(false, var23, 13894143);
           var5 = var5 * 200 >> 8;
@@ -230,7 +230,7 @@ final class Particle implements DiffableState {
             return;
           }
           var26 = 11 + this.life - (this.fadestart << 1);
-          SetMissileLauncherEnergyUsed.a(var24, (byte) 7, param1.b(true, this.y), (float)(int)((float)var26 * (param1.field_a * 4096.0f)), 1, param1.a(this.x, (byte) 113));
+          SetMissileLauncherEnergyUsed.a(var24, (byte) 7, param1.worldToScreenY(true, this.y), (float)(int)((float)var26 * (param1.scale * 4096.0f)), 1, param1.worldToScreenX(this.x, (byte) 113));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

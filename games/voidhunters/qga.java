@@ -25,7 +25,7 @@ final class qga {
           SetShipTeamAction.field_b = SetSniperCannonFireForce.field_o;
           if (param1 == 255) {
             stackIn_12_0 = !(SetDebrisCarryOverPercentage.field_p >= 13);
-            PrimitiveType.field_a = rv.a(stackIn_12_0, 1);
+            PrimitiveType.field_a = GpuIndexBufferOwner.a(stackIn_12_0, 1);
             var6 = (String[]) null;
             WeaponDefinition.a((String[]) null, 11113);
             return;

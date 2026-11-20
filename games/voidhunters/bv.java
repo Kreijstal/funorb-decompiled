@@ -19,7 +19,7 @@ final class bv {
         }
     }
 
-    private final int[] a(int param0, IntrusiveDeque param1, int param2, int param3, lta param4, int param5, int param6, int param7) {
+    private final int[] a(int param0, IntrusiveDeque param1, int param2, int param3, Camera2D param4, int param5, int param6, int param7) {
         lw var9 = null;
         int var10 = 0;
         int var13 = 0;
@@ -61,7 +61,7 @@ final class bv {
             stackIn_12_1 = 30;
           }
           if (stackIn_12_0 != stackIn_12_1) {
-            this.a(-87, (GameSnapshot) null, 37, 98, (Ship) null, 100, (lta) null);
+            this.a(-87, (GameSnapshot) null, 37, 98, (Ship) null, 100, (Camera2D) null);
           }
           stackIn_16_0 = null;
           return (int[]) (stackIn_16_0);
@@ -89,7 +89,7 @@ final class bv {
         try {
           this.a((byte) 113, 100, param1);
           if (param0 != -26476) {
-            this.a((GameSnapshot) null, (lta) null, 111, -69, (int[]) null, (String) null, -41);
+            this.a((GameSnapshot) null, (Camera2D) null, 111, -69, (int[]) null, (String) null, -41);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bv.J(" + param0 + ',' + param1 + ')');
@@ -137,7 +137,7 @@ final class bv {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != -6448) {
-            this.a((GameSnapshot) null, (lta) null, 32, -33, (int[]) null, (String) null, -106);
+            this.a((GameSnapshot) null, (Camera2D) null, 32, -33, (int[]) null, (String) null, -106);
           }
           if (!param2) {
             stackIn_7_0 = SetTorpedoProjectileDamage.field_q[param1];
@@ -211,7 +211,7 @@ final class bv {
         }
     }
 
-    private final void a(int[] param0, lta param1, boolean param2, int param3, GameSnapshot param4, boolean param5, String param6, int param7, byte param8) {
+    private final void a(int[] param0, Camera2D param1, boolean param2, int param3, GameSnapshot param4, boolean param5, String param6, int param7, byte param8) {
         RuntimeException stackIn_76_0 = null;
         StringBuilder stackIn_76_1 = null;
         String stackIn_77_2 = null;
@@ -266,8 +266,8 @@ final class bv {
               decompiledSharedTail0 = (var30 != 0);
             }
             if (decompiledSharedTail0) {
-              var15 = param1.a((param0[1] + param0[0] >> 1) + var10_int, (byte) 124);
-              var16 = param1.b(true, var11 + (param0[2] + param0[3] >> 1));
+              var15 = param1.worldToScreenX((param0[1] + param0[0] >> 1) + var10_int, (byte) 124);
+              var16 = param1.worldToScreenY(true, var11 + (param0[2] + param0[3] >> 1));
             }
           }
           var17 = GetPointDefenceLaserProjectiles.a(false, param7);
@@ -311,8 +311,8 @@ final class bv {
             var24 = 0;
             var25 = 0;
             if (!param2) {
-              var24 = param1.a(param0[0] + param0[1] >> 1, (byte) 120);
-              var25 = param1.b(true, param0[2] + param0[3] >> 1);
+              var24 = param1.worldToScreenX(param0[0] + param0[1] >> 1, (byte) 120);
+              var25 = param1.worldToScreenY(true, param0[2] + param0[3] >> 1);
             }
             if (param2 ||
               var30 != 0) {
@@ -321,7 +321,7 @@ final class bv {
             }
             if (var24 < (var22 + var15) &&
               var25 < (var16 + var23 / 2)) {
-              var26 = param1.b(true, param0[3] - var11);
+              var26 = param1.worldToScreenY(true, param0[3] - var11);
               var27 = var23 + var26;
               var28 = var23 + var27 - var17;
               if ((var28 + 16) < var14) {
@@ -356,22 +356,22 @@ final class bv {
             GetMissilesHitSourceTeam.a(-1 + var20, var21 - 1, (byte) -128, 2 + var23, param3, 1, 2 + var22);
           }
           CachedArchiveProvider.a(param3, false, var20, var21, var23, var22, 236981);
-          var24Lifetime1 = param1.a(0, 4 + var16 + var19);
+          var24Lifetime1 = param1.screenToWorldY(0, 4 + var16 + var19);
           if (param5) {
             if (param0[3] < var24Lifetime1) {
               if (var24Lifetime1 >= param0[2]) {
-                var24Lifetime1 = param1.a(0, -var17 + var16);
+                var24Lifetime1 = param1.screenToWorldY(0, -var17 + var16);
                 if (var30 != 0) {
-                  var24Lifetime1 = param1.a(0, var16 - var17);
+                  var24Lifetime1 = param1.screenToWorldY(0, var16 - var17);
                 }
               } else {
-                var24Lifetime1 = param1.a(0, var16 - var17);
+                var24Lifetime1 = param1.screenToWorldY(0, var16 - var17);
               }
             }
-            var25Lifetime1 = param1.b(true, param0[2] + param0[3] >> 1);
+            var25Lifetime1 = param1.worldToScreenY(true, param0[2] + param0[3] >> 1);
             if (var25Lifetime1 > var21 &&
               (var23 + var21) > var25Lifetime1) {
-              var24Lifetime1 = param1.a(0, var16);
+              var24Lifetime1 = param1.screenToWorldY(0, var16);
             }
           }
           OpenGlShaderProgram.a(1, param3, -1, param6, (byte) -117, param7, -5 + var16, var15);
@@ -408,7 +408,7 @@ final class bv {
         }
     }
 
-    private final void a(GameSnapshot param0, lta param1, int param2, int param3, int[] param4, String param5, int param6) {
+    private final void a(GameSnapshot param0, Camera2D param1, int param2, int param3, int[] param4, String param5, int param6) {
         String discarded$1 = null;
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
@@ -484,7 +484,7 @@ final class bv {
         }
     }
 
-    final void a(int param0, GameSnapshot param1, int param2, int param3, Ship param4, int param5, lta param6) {
+    final void a(int param0, GameSnapshot param1, int param2, int param3, Ship param4, int param5, Camera2D param6) {
         int stackIn_28_0 = 0;
         RuntimeException stackIn_45_0 = null;
         StringBuilder stackIn_45_1 = null;
@@ -594,7 +594,7 @@ final class bv {
         }
     }
 
-    final void a(GameSnapshot param0, int param1, boolean param2, lta param3, int param4, int param5, int param6, int param7, byte param8, IntrusiveDeque param9, int param10, int param11, Ship param12) {
+    final void a(GameSnapshot param0, int param1, boolean param2, Camera2D param3, int param4, int param5, int param6, int param7, byte param8, IntrusiveDeque param9, int param10, int param11, Ship param12) {
         int stackIn_23_0 = 0;
         int stackIn_41_0 = 0;
         boolean stackIn_82_0 = false;
@@ -693,8 +693,8 @@ final class bv {
               }
               var18 = stackIn_23_0;
               var16 = 4;
-              var17 = param3.a(true, GetUseDetailLines.field_o);
-              var18 = param3.a(0, GetTorpedoReload.field_q);
+              var17 = param3.screenToWorldX(true, GetUseDetailLines.field_o);
+              var18 = param3.screenToWorldY(0, GetTorpedoReload.field_q);
               GetMassDriverFireForce.field_o = -1;
               var19_int = 0;
               scanLoop1: while (true) {
@@ -794,12 +794,12 @@ final class bv {
                             var32 = (TextureLineShape.sinAngle(var26_int, 44) * var30 >> 1) + var29;
                             var33 = (var30 * GetNumStars.cosAngle(var27, (byte) 109) >> 1) + var28;
                             var34 = (var30 * TextureLineShape.sinAngle(var27, 87) >> 1) + var29;
-                            var35 = param3.a(var31, (byte) 118);
-                            var36 = param3.b(true, var32);
-                            var37 = param3.a(var33, (byte) 115);
-                            var38 = param3.b(true, var34);
-                            var39 = param3.a(var28, (byte) 115);
-                            var40 = param3.b(true, var29);
+                            var35 = param3.worldToScreenX(var31, (byte) 118);
+                            var36 = param3.worldToScreenY(true, var32);
+                            var37 = param3.worldToScreenX(var33, (byte) 115);
+                            var38 = param3.worldToScreenY(true, var34);
+                            var39 = param3.worldToScreenX(var28, (byte) 115);
+                            var40 = param3.worldToScreenY(true, var29);
                             var41 = 11142145;
                             var42 = GetMutatorVotes.a(HardpointMatch.field_f[1], 255) >>> 2;
                             if (!var24.weaponbehaviour.canAimAtTarget(-26772, var18, var17, var24.getDefinition((byte) -112), var24)) {
@@ -831,14 +831,14 @@ final class bv {
                         (var22 != 0)) {
                         var24_intLifetime2 = PlayerGameData.field_b;
                         var25Lifetime1 = uia.field_b;
-                        var26 = mmb.field_d[0];
+                        var26 = OpenGlVertexNormal.field_d[0];
                         var26.draw(-(var26.getWidth() / 2) + var24_intLifetime2, -(var26.getHeight() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.a(HardpointMatch.field_f[1], 255) << 24, 1);
                       }
                     } else {
                       if (var22 != 0) {
                         var24_intLifetime2 = PlayerGameData.field_b;
                         var25Lifetime1 = uia.field_b;
-                        var26 = mmb.field_d[0];
+                        var26 = OpenGlVertexNormal.field_d[0];
                         var26.draw(-(var26.getWidth() / 2) + var24_intLifetime2, -(var26.getHeight() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.a(HardpointMatch.field_f[1], 255) << 24, 1);
                       }
                     }
@@ -916,10 +916,10 @@ final class bv {
                   var14_int == 5) {
                   var20_int = GetUseNiceTrails.field_p;
                   var21_ref_int__Lifetime1 = new int[]{param12.getX(false) - var20_int, -var20_int + param12.getX(false), param12.getY((byte) 127), param12.getY((byte) 124)};
-                  if (param3.field_f[0] >= var21_ref_int__Lifetime1[0] &&
-                    param3.field_f[1] <= var21_ref_int__Lifetime1[1] &&
-                    var21_ref_int__Lifetime1[2] <= param3.field_f[2] &&
-                    var21_ref_int__Lifetime1[3] >= param3.field_f[3]) {
+                  if (param3.worldBounds[0] >= var21_ref_int__Lifetime1[0] &&
+                    param3.worldBounds[1] <= var21_ref_int__Lifetime1[1] &&
+                    var21_ref_int__Lifetime1[2] <= param3.worldBounds[2] &&
+                    var21_ref_int__Lifetime1[3] >= param3.worldBounds[3]) {
                     stackIn_236_0 = 0;
                   } else {
                     stackIn_236_0 = 1;

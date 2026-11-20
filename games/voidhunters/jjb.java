@@ -21,7 +21,7 @@ final class jjb {
         if (!OpenGlTexture1D.field_i) {
           SoftwareRasterizer2D.fillRectangle(param4, param3, param5, param1, param0);
         } else {
-          if (ne.field_v) {
+          if (OpenGlModel.field_v) {
             GetDebrisGroupColour.field_r.fillRectangle(param4, param3, param5, param1, param0, 0);
           }
         }

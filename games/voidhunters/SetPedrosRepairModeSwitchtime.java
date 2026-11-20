@@ -44,7 +44,7 @@ final class SetPedrosRepairModeSwitchtime extends ConsoleCommand {
           try {
             try {
               var2 = new java.net.URL(param1.getCodeBase(), "toserverlist.ws");
-              param1.getAppletContext().showDocument(ne.a(var2, (byte) 118, param1), "_top");
+              param1.getAppletContext().showDocument(OpenGlModel.updateUrlSessionSettings(var2, (byte) 118, param1), "_top");
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var2_ref2 = (Exception) (Object) decompiledCaughtException;

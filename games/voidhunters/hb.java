@@ -30,9 +30,9 @@ final class hb {
         int var9 = 0;
         var9 = VoidHunters.field_G;
         try {
-          param0 = ne.a((char)param1, (byte) 119, "", param0);
-          param0 = ne.a('\t', (byte) 124, "", param0);
-          param0 = ne.a('\n', (byte) 99, ";", param0);
+          param0 = OpenGlModel.replaceCharacter((char)param1, (byte) 119, "", param0);
+          param0 = OpenGlModel.replaceCharacter('\t', (byte) 124, "", param0);
+          param0 = OpenGlModel.replaceCharacter('\n', (byte) 99, ";", param0);
           var2 = ConsoleCommandRegistry.a(16);
           System.out.println("String s=" + param0);
           var3 = SetFighterBayAimspeed.a((byte) -67, ';', param0);
@@ -40,7 +40,7 @@ final class hb {
             var5 = SetFighterBayAimspeed.a((byte) -67, '(', var3[var4]);
             if (var5 != null &&
               var5.length == 2) {
-              var5[1] = ne.a(')', (byte) 111, "", var5[1]);
+              var5[1] = OpenGlModel.replaceCharacter(')', (byte) 111, "", var5[1]);
               var6 = new ConsoleValue(NebulaFieldFactory.a(-92, (CharSequence) ((Object) var5[1])));
               var7 = new ConsoleValue[]{var6};
               var8 = (ConsoleCommand) (var2.first(0));

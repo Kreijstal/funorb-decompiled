@@ -359,12 +359,12 @@ class Widget extends WidgetNode {
           }
           this.field_o = 0;
         }
-        if (hu.field_b == 0) {
+        if (GpuVertexNormal.field_b == 0) {
           this.field_C = 0;
         }
         stackIn_35_1 = (!GetPlayerRepairAmount.field_p) && (PlayerGameData.field_b >= SoftwareRasterizer2D.clipLeft) && (PlayerGameData.field_b < SoftwareRasterizer2D.clipRight) && (SoftwareRasterizer2D.clipTop <= uia.field_b) && (SoftwareRasterizer2D.clipBottom > uia.field_b);
         this.field_Q = stackIn_35_1;
-        stackIn_40_1 = (this.field_Q) && (this.field_C == hu.field_b) && (param3);
+        stackIn_40_1 = (this.field_Q) && (this.field_C == GpuVertexNormal.field_b) && (param3);
         this.field_O = stackIn_40_1;
         if (this.children != null) {
           var13 = (Widget) (this.children.last((byte) 119));

@@ -67,7 +67,7 @@ final class fdb extends MidiPcmStream {
         stackIn_9_0 = tb.field_a;
         stackIn_10_1 = (param0) && (!param1) && (!bv.field_d) && (SetSpinningBladeSpindamageMultiplier.field_o == null) && (null == SetThrusterParticleSpeedDownshift.field_o);
         ((Widget) (Object) stackIn_9_0).updateInput(stackIn_10_1, 1332);
-        stackIn_16_0 = bqa.field_d;
+        stackIn_16_0 = ModelFaceAttachment.field_d;
         stackIn_17_1 = (param0) && (!param1) && (!bv.field_d) && (null == SetSpinningBladeSpindamageMultiplier.field_o) && (null == SetThrusterParticleSpeedDownshift.field_o);
         ((Widget) (Object) stackIn_16_0).updateInput(stackIn_17_1, 1332);
         stackIn_21_0 = GetTorpedoProjectiles.field_o;

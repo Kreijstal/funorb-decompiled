@@ -20,7 +20,7 @@ final class GetReverbWet extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_o = (pr) null;
           }
-          stackIn_3_0 = new ConsoleValue(nl.field_n);
+          stackIn_3_0 = new ConsoleValue(LoopingSound.field_n);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

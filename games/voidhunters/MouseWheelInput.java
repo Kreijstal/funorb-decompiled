@@ -10,7 +10,7 @@ abstract class MouseWheelInput {
           SoftwareRasterizer2D.drawPixel(param2, param1, param0);
           return;
         }
-        if (ne.field_v) {
+        if (OpenGlModel.field_v) {
           GetDebrisGroupColour.field_r.fillRectangle(1, (byte) 120, param0 | -16777216, 1, param1, param2);
           return;
         }

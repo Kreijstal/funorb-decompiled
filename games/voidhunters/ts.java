@@ -12,7 +12,7 @@ final class ts {
         Object var1_ref = null;
         var1_ref = GetDebrisFoundInPairs.field_q;
         synchronized (var1_ref) {
-          hu.field_b = GetBombletSprayAimarc.field_q;
+          GpuVertexNormal.field_b = GetBombletSprayAimarc.field_q;
           OpenGlFramebuffer.field_b = OpenGlFramebuffer.field_b + 1;
           PlayerGameData.field_b = wt.field_a;
           uia.field_b = kv.field_e;

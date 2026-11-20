@@ -52,7 +52,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
         int stackIn_31_0 = 0;
         Throwable decompiledCaughtException = null;
         RuntimeException var1 = null;
-        lta var2 = null;
+        Camera2D var2 = null;
         int var3 = 0;
         ShipComponentDefinition var3_ref_wfb = null;
         int var4 = 0;
@@ -84,10 +84,10 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
           }
           var16 = "Component editor";
           SetSelfDestructPrepareToggleCooldown.a(GetBombletSprayEnergyUsed.field_p.width / 2 - (tea.a(1, var16, param0 ^ 13905) >> 1), -1, 30, var16, 1, 16756480, (byte) -94);
-          var2 = new lta();
-          var2.field_b = SetTorpedoEnergyUsed.field_o;
-          var2.field_c = SetPhysicsCollisionGrapplingHookForceMultiplier.field_p;
-          var2.field_a = GetUseTrails.field_o;
+          var2 = new Camera2D();
+          var2.worldCenterY = SetTorpedoEnergyUsed.field_o;
+          var2.worldCenterX = SetPhysicsCollisionGrapplingHookForceMultiplier.field_p;
+          var2.scale = GetUseTrails.field_o;
           if (SetMissileLauncherProjectileLife.field_p == -1) {
             var3 = 4 * -ArchiveProvider.field_b;
             var4 = ArchiveProvider.field_b / 2;
@@ -110,8 +110,8 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
                       var18 = var24;
                       var6 = var18;
                       for (var7 = 0; var7 < var29.length; var7++) {
-                        var15[var7 << 1] = var2.a(var3_ref_wfb.outline[var29[var7] << 1], (byte) 119);
-                        var15[(var7 << 1) + 1] = var2.b(true, var3_ref_wfb.outline[1 + (var29[var7] << 1)]);
+                        var15[var7 << 1] = var2.worldToScreenX(var3_ref_wfb.outline[var29[var7] << 1], (byte) 119);
+                        var15[(var7 << 1) + 1] = var2.worldToScreenY(true, var3_ref_wfb.outline[1 + (var29[var7] << 1)]);
                       }
                       for (var7 = 0; var7 < var24.length; var7 += 2) {
                         var8 = var24[var7];
@@ -144,16 +144,16 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
                         var11 = var6[var9 + 1];
                         var12 = var6[(var9 + 2) % var25.length];
                         var13 = var6[(3 + var9) % var25.length];
-                        c.a(var2.b(true, var13), var2.a(var12, (byte) 121), var2.a(var10, (byte) 121), var2.b(true, var11), -16777216, var8);
+                        c.a(var2.worldToScreenY(true, var13), var2.worldToScreenX(var12, (byte) 121), var2.worldToScreenX(var10, (byte) 121), var2.worldToScreenY(true, var11), -16777216, var8);
                         if (var3_ref_wfb.field_k) {
-                          c.a(var2.b(true, -var13), var2.a(var12, (byte) 123), var2.a(var10, (byte) 126), var2.b(true, -var11), -16777216, var8);
+                          c.a(var2.worldToScreenY(true, -var13), var2.worldToScreenX(var12, (byte) 123), var2.worldToScreenX(var10, (byte) 126), var2.worldToScreenY(true, -var11), -16777216, var8);
                         }
                       }
                       if (var7 != 0) {
                         for (var9 = 0; var9 < var25.length; var9 += 2) {
                           var10 = var25[var9];
                           var11 = var6[var9 + 1];
-                          SetNumStars.a(2.0f, (byte) 64, var2.b(true, var11), 16711935, var2.a(var10, (byte) 126));
+                          SetNumStars.a(2.0f, (byte) 64, var2.worldToScreenY(true, var11), 16711935, var2.worldToScreenX(var10, (byte) 126));
                         }
                       }
                     }

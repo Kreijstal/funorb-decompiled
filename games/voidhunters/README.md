@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1234/1572 classes and 6182/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 338 opaque classes and 2033 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1255/1572 classes and 6269/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 317 opaque classes and 1946 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -38,6 +38,8 @@ All forty texture-operation factory products have descriptive class names, inclu
 `ShipAI` exposes target seeking, obstacle/friendly avoidance, combat controls and desired motion. `FixedPointTrigonometry` names the original quarter-wave lookup and sine/cosine wrappers. `NetworkGameClient` identifies initialization, staged resource updates, login actions, packet dispatch and reconnection; `ReflectionCheck` retains queued lookup requests and protocol response data. Their original guards, timing, reflection behavior and wire formats are preserved.
 
 `ClientDataReadRequest` and `ClientDataWriteRequest` expose saved player-data loading, submission and CRC-matched acknowledgements. Integer-array reads, integer-record writes and highscore table/value requests identify their distinct queues and reply handlers. `UiToggleButton` toggles its active state before dispatching actions. The original retry order, byte packing, discarded highscore results and player-data limits remain intact.
+
+`SoundPlayback`, `OneShotSound` and `LoopingSound` expose stream lifetime, gain, panning, repeat suppression and refreshed looping playback. `Model3D` supplies X/Z bounds, translation and scaling for `SoftwareModel`, `OpenGlModel`, `GpuModel` and `NativeSoftwareModel`; `ModelData` retains their shared input arrays. Vertex/face normal records, label groups and `ModelFaceAttachment` definitions identify model preparation. Buffer owners identify vertex/index releases. `Camera2D` names world/screen projection and inverse transforms; `TickClock` and `SmoothedNanoTickClock` expose scheduling, delay and bounded catch-up. Original cache behavior and guards remain; source binding checks do not establish native-runtime equivalence.
 
 `ShipBody` names force accumulation, motion integration, mass properties, bounds and controls. `ShipComponent` exposes its tree, transforms, aiming, health, attachment and collision operations. `ComponentAttachmentPlan` records the chosen `HardpointMatch` and obstructions; `ComponentCollision` and `ComponentContact` separate polygon overlaps from contact points. `ProjectileHit` resolves impact effects and damage, while `ProjectileTraceResult` retains the nearest intersection.
 

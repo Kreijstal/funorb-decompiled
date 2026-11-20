@@ -27,7 +27,7 @@ final class SetUseRectFill extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          ne.field_v = arguments[0].booleanValue(false);
+          OpenGlModel.field_v = arguments[0].booleanValue(false);
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

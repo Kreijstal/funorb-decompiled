@@ -93,7 +93,7 @@ final class SetServerinfoVotestate extends ConsoleCommand {
             return stackIn_36_0;
           }
           if (13 == param0) {
-            stackIn_40_0 = SetReverbGain.a(rv.field_b, new String[]{param1}, 110);
+            stackIn_40_0 = SetReverbGain.a(GpuIndexBufferOwner.field_b, new String[]{param1}, 110);
             return stackIn_40_0;
           }
           if (param2 == -3223) {

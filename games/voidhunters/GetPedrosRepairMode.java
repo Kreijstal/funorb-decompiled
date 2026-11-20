@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetPedrosRepairMode extends ConsoleCommand {
-    static hrb field_p;
+    static TickClock field_p;
     static String field_o;
     static int field_q;
 

@@ -11,7 +11,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
     private int ropeLength;
     static int field_f;
 
-    final void a(int param0, lta param1, int[] param2, int param3, World param4, int param5, int param6) {
+    final void a(int param0, Camera2D param1, int[] param2, int param3, World param4, int param5, int param6) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -58,10 +58,10 @@ final class GrappleLauncherBehaviour implements DiffableState {
               }
               var16 = 39219 + (var17 << 16);
             }
-            var17Lifetime1 = param1.a(var23.getX(false), (byte) 115);
-            var18 = param1.b(true, var23.getY((byte) 119));
-            var19 = param1.a(var10, (byte) 122);
-            var20 = param1.b(true, var11);
+            var17Lifetime1 = param1.worldToScreenX(var23.getX(false), (byte) 115);
+            var18 = param1.worldToScreenY(true, var23.getY((byte) 119));
+            var19 = param1.worldToScreenX(var10, (byte) 122);
+            var20 = param1.worldToScreenY(true, var11);
             c.a(var18, var17Lifetime1, var19, var20, -16777216, var16);
             if (var23.l((byte) -68) >= 0) {
               var21 = param4.getBodyById((byte) -27, var23.l((byte) -102));
@@ -435,7 +435,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
         try {
           if (param1 != 19278) {
             var4 = (World) null;
-            this.a(-123, (lta) null, (int[]) null, -18, (World) null, 75, 40);
+            this.a(-123, (Camera2D) null, (int[]) null, -18, (World) null, 75, 40);
           }
           var3 = param0.getGrapplingHookById(this.hookId, 101);
           if (var3 != null) {

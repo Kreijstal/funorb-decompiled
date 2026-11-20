@@ -47,32 +47,32 @@ final class SetThrusterParticleSpeedDownshift extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static nl a(int param0, int param1, int param2) {
+    final static LoopingSound findLoopingSound(int param0, int param1, int param2) {
         Object var3;
-        nl var3_ref;
+        LoopingSound var3_ref;
         int var4;
-        nl var3_refLifetime1;
+        LoopingSound var3_refLifetime1;
         var3 = null;
         var4 = VoidHunters.field_G;
         if (param1 <= -17) {
-          var3_ref = (nl) (PlayerReady.activeLoopingSounds.first(0));
+          var3_ref = (LoopingSound) (PlayerReady.activeLoopingSounds.first(0));
           while (var3_ref != null) {
-            if (param0 == var3_ref.field_k &&
-              param2 == var3_ref.field_l) {
+            if (param0 == var3_ref.sampleId &&
+              param2 == var3_ref.key) {
               return var3_ref;
             }
-            var3_ref = (nl) (PlayerReady.activeLoopingSounds.next((byte) 59));
+            var3_ref = (LoopingSound) (PlayerReady.activeLoopingSounds.next((byte) 59));
           }
           return null;
         }
         SetThrusterParticleSpeedDownshift.clearSharedReferences((byte) -51);
-        var3_refLifetime1 = (nl) (PlayerReady.activeLoopingSounds.first(0));
+        var3_refLifetime1 = (LoopingSound) (PlayerReady.activeLoopingSounds.first(0));
         while (var3_refLifetime1 != null) {
-          if (param0 == var3_refLifetime1.field_k &&
-            param2 == var3_refLifetime1.field_l) {
+          if (param0 == var3_refLifetime1.sampleId &&
+            param2 == var3_refLifetime1.key) {
             return var3_refLifetime1;
           }
-          var3_refLifetime1 = (nl) (PlayerReady.activeLoopingSounds.next((byte) 59));
+          var3_refLifetime1 = (LoopingSound) (PlayerReady.activeLoopingSounds.next((byte) 59));
         }
         return null;
     }

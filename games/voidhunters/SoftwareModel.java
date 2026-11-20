@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class b extends ka {
+final class SoftwareModel extends Model3D {
     static int field_v;
-    private short field_w;
+    private short minZ;
     private boolean field_z;
     private float[][] field_a;
-    private short field_j;
-    private short field_r;
-    private boolean field_n;
+    private short minX;
+    private short maxZ;
+    private boolean boundsValid;
     private cs[] field_p;
-    private int[] field_y;
-    private short field_d;
+    private int[] vertexZ;
+    private short maxX;
     private short[] field_l;
     private byte[] field_h;
     private short[] field_m;
     private byte[] field_k;
     private float[][] field_q;
-    private SoftwareToolkit field_f;
+    private SoftwareToolkit toolkit;
     private int field_A;
-    private int[] field_o;
+    private int[] vertexY;
     private short[] field_g;
     private short[] field_b;
     private int field_t;
@@ -28,9 +28,9 @@ final class b extends ka {
     private ffa[] field_i;
     private int field_u;
     private int field_c;
-    private int[] field_e;
+    private int[] vertexX;
 
-    final void H(int param0, int param1, int param2) {
+    final void translate(int param0, int param1, int param2) {
         int var5 = 0;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
@@ -49,14 +49,14 @@ final class b extends ka {
         var4 = this;
         synchronized (var4) {
           for (var5 = 0; var5 < this.field_u; var5++) {
-            this.field_e[var5] = this.field_e[var5] + param0;
-            this.field_o[var5] = this.field_o[var5] + param1;
-            this.field_y[var5] = this.field_y[var5] + param2;
+            this.vertexX[var5] = this.vertexX[var5] + param0;
+            this.vertexY[var5] = this.vertexY[var5] + param1;
+            this.vertexZ[var5] = this.vertexZ[var5] + param2;
           }
         }
     }
 
-    final void O(int param0, int param1, int param2) {
+    final void scale(int param0, int param1, int param2) {
         int var5 = 0;
         Throwable decompiledCaughtException = null;
         Object var4 = null;
@@ -75,36 +75,36 @@ final class b extends ka {
         var4 = this;
         synchronized (var4) {
           for (var5 = 0; var5 < this.field_u; var5++) {
-            this.field_e[var5] = this.field_e[var5] * param0 >> 7;
-            this.field_o[var5] = this.field_o[var5] * param1 >> 7;
-            this.field_y[var5] = this.field_y[var5] * param2 >> 7;
+            this.vertexX[var5] = this.vertexX[var5] * param0 >> 7;
+            this.vertexY[var5] = this.vertexY[var5] * param1 >> 7;
+            this.vertexZ[var5] = this.vertexZ[var5] * param2 >> 7;
           }
-          this.field_n = false;
+          this.boundsValid = false;
         }
     }
 
-    final int G() {
-        if (!this.field_n) {
-          this.a();
+    final int getMaxZ() {
+        if (!this.boundsValid) {
+          this.updateBounds();
         }
-        return this.field_r;
+        return this.maxZ;
     }
 
-    final int V() {
-        if (!this.field_n) {
-          this.a();
+    final int getMinX() {
+        if (!this.boundsValid) {
+          this.updateBounds();
         }
-        return this.field_j;
+        return this.minX;
     }
 
-    final int HA() {
-        if (!this.field_n) {
-          this.a();
+    final int getMinZ() {
+        if (!this.boundsValid) {
+          this.updateBounds();
         }
-        return this.field_w;
+        return this.minZ;
     }
 
-    private final void a() {
+    private final void updateBounds() {
         int var9 = 0;
         int var1;
         int var2;
@@ -118,7 +118,7 @@ final class b extends ka {
         int var11;
         int var12;
         int var13;
-        if (this.field_n) {
+        if (this.boundsValid) {
           return;
         }
         var1 = 0;
@@ -130,9 +130,9 @@ final class b extends ka {
         var7 = -32768;
         var8 = -32768;
         for (var9 = 0; var9 < this.field_A; var9++) {
-          var10 = this.field_e[var9];
-          var11 = this.field_o[var9];
-          var12 = this.field_y[var9];
+          var10 = this.vertexX[var9];
+          var11 = this.vertexY[var9];
+          var12 = this.vertexZ[var9];
           if (var10 < var3) {
             var3 = var10;
           }
@@ -160,33 +160,33 @@ final class b extends ka {
             var2 = var13;
           }
         }
-        this.field_j = (short)var3;
-        this.field_d = (short)var6;
-        this.field_w = (short)var5;
-        this.field_r = (short)var8;
+        this.minX = (short)var3;
+        this.maxX = (short)var6;
+        this.minZ = (short)var5;
+        this.maxZ = (short)var8;
         Math.sqrt((double)var1);
         Math.sqrt((double)var2);
-        this.field_n = true;
+        this.boundsValid = true;
         return;
     }
 
-    final int RA() {
-        if (!this.field_n) {
-          this.a();
+    final int getMaxX() {
+        if (!this.boundsValid) {
+          this.updateBounds();
         }
-        return this.field_d;
+        return this.maxX;
     }
 
-    b(SoftwareToolkit param0) {
-        this.field_n = false;
+    SoftwareModel(SoftwareToolkit param0) {
+        this.boundsValid = false;
         this.field_A = 0;
         this.field_z = false;
         this.field_u = 0;
         this.field_c = 0;
-        this.field_f = param0;
+        this.toolkit = param0;
     }
 
-    b(SoftwareToolkit param0, cbb param1, int param2, int param3, int param4, int param5) {
+    SoftwareModel(SoftwareToolkit param0, ModelData param1, int param2, int param3, int param4, int param5) {
         int var9_int = 0;
         int stackIn_6_0 = 0;
         int stackIn_41_0 = 0;
@@ -211,7 +211,7 @@ final class b extends ka {
         int var19_int;
         float[] var20;
         int var21;
-        sr var21_ref_sr;
+        ModelFaceAttachmentDefinition var21_ref_sr;
         int var22;
         TextureMetadata var22_ref_opa;
         int var23;
@@ -256,11 +256,11 @@ final class b extends ka {
         float var52;
         float var53;
         int var54;
-        bqa var56;
+        ModelFaceAttachment var56;
         TextureMetadata var57;
         long[] var58;
-        bqa var59;
-        sr var60;
+        ModelFaceAttachment var59;
+        ModelFaceAttachmentDefinition var60;
         SoftwareRenderContext var61;
         TextureMetadata var62;
         float[] var65;
@@ -288,23 +288,23 @@ final class b extends ka {
         float var52Lifetime1;
         float var53Lifetime1;
         int var14Lifetime1Lifetime1;
-        this.field_n = false;
+        this.boundsValid = false;
         this.field_A = 0;
         this.field_z = false;
         this.field_u = 0;
         this.field_c = 0;
-        this.field_f = param0;
+        this.toolkit = param0;
         this.field_x = param2;
-        var7 = this.field_f.field_a;
+        var7 = this.toolkit.field_a;
         this.field_u = param1.field_s;
         this.field_A = param1.field_D;
-        this.field_e = param1.field_v;
-        this.field_o = param1.field_G;
-        this.field_y = param1.field_x;
-        this.field_c = param1.field_j;
-        this.field_l = param1.field_k;
-        this.field_m = param1.field_o;
-        this.field_s = param1.field_K;
+        this.vertexX = param1.vertexX;
+        this.vertexY = param1.vertexY;
+        this.vertexZ = param1.vertexZ;
+        this.field_c = param1.faceCount;
+        this.field_l = param1.faceVertexA;
+        this.field_m = param1.faceVertexB;
+        this.field_s = param1.faceVertexC;
         this.field_k = param1.field_m;
         this.field_h = param1.field_r;
         var74 = new int[this.field_c];
@@ -323,12 +323,12 @@ final class b extends ka {
           var15 = 0;
           var16 = 0;
           var17 = 0;
-          if (param1.field_g != null) {
+          if (param1.faceAttachments != null) {
             var18_int = 0;
-            for (var19_int = 0; var19_int < param1.field_g.length; var19_int++) {
-              var56 = param1.field_g[var19_int];
-              if (var12 == var56.field_b) {
-                var21_ref_sr = GetBombletSprayAimspeed.a(var56.field_e, 0);
+            for (var19_int = 0; var19_int < param1.faceAttachments.length; var19_int++) {
+              var56 = param1.faceAttachments[var19_int];
+              if (var12 == var56.faceIndex) {
+                var21_ref_sr = GetBombletSprayAimspeed.getFaceAttachmentDefinition(var56.definitionId, 0);
                 if (var21_ref_sr.field_a) {
                   var18_int = 1;
                 }
@@ -387,25 +387,25 @@ final class b extends ka {
           }
         }
         GetFighterBayReload.a((byte) -24, var74, var68);
-        if (param1.field_g != null) {
-          this.field_t = param1.field_g.length;
+        if (param1.faceAttachments != null) {
+          this.field_t = param1.faceAttachments.length;
           this.field_i = new ffa[this.field_t];
           this.field_p = new cs[this.field_t];
           var54 = 0;
           var11_intLifetime1 = var54;
-          while (var54 < param1.field_g.length) {
-            var59 = param1.field_g[var54];
-            var60 = GetBombletSprayAimspeed.a(var59.field_e, 0);
-            var14Lifetime1 = OpenGlBloomEffect.field_h[param1.field_b[var59.field_b] & 65535] & 16777215;
+          while (var54 < param1.faceAttachments.length) {
+            var59 = param1.faceAttachments[var54];
+            var60 = GetBombletSprayAimspeed.getFaceAttachmentDefinition(var59.definitionId, 0);
+            var14Lifetime1 = OpenGlBloomEffect.field_h[param1.field_b[var59.faceIndex] & 65535] & 16777215;
             stackIn_57_0 = var14Lifetime1;
             stackIn_57_1 = 255;
             if (param1.field_r == null) {
               stackIn_58_2 = 0;
             } else {
-              stackIn_58_2 = param1.field_r[var59.field_b] & 255;
+              stackIn_58_2 = param1.field_r[var59.faceIndex] & 255;
             }
             var14Lifetime1Lifetime1 = stackIn_57_0 | stackIn_57_1 - stackIn_58_2 << 24;
-            this.field_i[var54] = new ffa(var59.field_b, (int) param1.field_k[var59.field_b], (int) param1.field_o[var59.field_b], (int) param1.field_K[var59.field_b], var60.field_g, var60.field_b, var60.field_e, var60.field_d, var60.field_f, var60.field_a, var59.field_c);
+            this.field_i[var54] = new ffa(var59.faceIndex, (int) param1.faceVertexA[var59.faceIndex], (int) param1.faceVertexB[var59.faceIndex], (int) param1.faceVertexC[var59.faceIndex], var60.field_g, var60.field_b, var60.field_e, var60.field_d, var60.field_f, var60.field_a, var59.field_c);
             this.field_p[var54] = new cs(var14Lifetime1Lifetime1);
             var54++;
           }
@@ -413,7 +413,7 @@ final class b extends ka {
         this.field_q = new float[this.field_c][];
         this.field_a = new float[this.field_c][];
         var11 = SetSpecialOrderBoxWidth.a(param1, var74, this.field_c, -3);
-        var61 = this.field_f.getThreadContext((Runnable) ((Object) Thread.currentThread()));
+        var61 = this.toolkit.getThreadContext((Runnable) ((Object) Thread.currentThread()));
         var76 = var61.field_a;
         var14Lifetime2 = 0;
         for (var15Lifetime1 = 0; var15Lifetime1 < this.field_c; var15Lifetime1++) {
@@ -461,13 +461,13 @@ final class b extends ka {
                 if (var22 != 1) {
                   if (var22 != 2) {
                     if (var22 == 3) {
-                      CommonGameState.a(var75, this.field_y[var23], var31, var76, var28, this.field_e[var23], (byte) -82, var27, this.field_o[var23], var30, var26);
+                      CommonGameState.a(var75, this.vertexZ[var23], var31, var76, var28, this.vertexX[var23], (byte) -82, var27, this.vertexY[var23], var30, var26);
                       var19[0] = var76[0];
                       var20[0] = var76[1];
-                      CommonGameState.a(var75, this.field_y[var24], var31, var76, var28, this.field_e[var24], (byte) -82, var27, this.field_o[var24], var30, var26);
+                      CommonGameState.a(var75, this.vertexZ[var24], var31, var76, var28, this.vertexX[var24], (byte) -82, var27, this.vertexY[var24], var30, var26);
                       var19[1] = var76[0];
                       var20[1] = var76[1];
-                      CommonGameState.a(var75, this.field_y[var25], var31, var76, var28, this.field_e[var25], (byte) -82, var27, this.field_o[var25], var30, var26);
+                      CommonGameState.a(var75, this.vertexZ[var25], var31, var76, var28, this.vertexX[var25], (byte) -82, var27, this.vertexY[var25], var30, var26);
                       var19[2] = var76[0];
                       var20[2] = var76[1];
                       if ((var30 & 1) != 0) {
@@ -505,12 +505,12 @@ final class b extends ka {
                   } else {
                     var32 = (float)param1.field_f[var17Lifetime1] / 256.0f;
                     var33 = (float)param1.field_I[var17Lifetime1] / 256.0f;
-                    var34 = this.field_e[var24] - this.field_e[var23];
-                    var35 = this.field_o[var24] - this.field_o[var23];
-                    var36 = this.field_y[var24] - this.field_y[var23];
-                    var37 = this.field_e[var25] - this.field_e[var23];
-                    var38 = this.field_o[var25] - this.field_o[var23];
-                    var39 = this.field_y[var25] - this.field_y[var23];
+                    var34 = this.vertexX[var24] - this.vertexX[var23];
+                    var35 = this.vertexY[var24] - this.vertexY[var23];
+                    var36 = this.vertexZ[var24] - this.vertexZ[var23];
+                    var37 = this.vertexX[var25] - this.vertexX[var23];
+                    var38 = this.vertexY[var25] - this.vertexY[var23];
+                    var39 = this.vertexZ[var25] - this.vertexZ[var23];
                     var40 = var35 * var39 - var38 * var36;
                     var41 = var36 * var37 - var39 * var34;
                     var42 = var34 * var38 - var37 * var35;
@@ -521,25 +521,25 @@ final class b extends ka {
                     var47 = ((float)var40 * var75[3] + (float)var41 * var75[4] + (float)var42 * var75[5]) / var44;
                     var48 = ((float)var40 * var75[6] + (float)var41 * var75[7] + (float)var42 * var75[8]) / var45;
                     var21Lifetime1 = GetSniperCannonRandomness.a(-44, var47, var46, var48);
-                    SetPointDefenceLaserRandomness.a(var33, this.field_y[var23], var32, (byte) 109, this.field_e[var23], var28, this.field_o[var23], var21Lifetime1, var76, var26, var30, var75, var27, var31);
+                    SetPointDefenceLaserRandomness.a(var33, this.vertexZ[var23], var32, (byte) 109, this.vertexX[var23], var28, this.vertexY[var23], var21Lifetime1, var76, var26, var30, var75, var27, var31);
                     var19[0] = var76[0];
                     var20[0] = var76[1];
-                    SetPointDefenceLaserRandomness.a(var33, this.field_y[var24], var32, (byte) 40, this.field_e[var24], var28, this.field_o[var24], var21Lifetime1, var76, var26, var30, var75, var27, var31);
+                    SetPointDefenceLaserRandomness.a(var33, this.vertexZ[var24], var32, (byte) 40, this.vertexX[var24], var28, this.vertexY[var24], var21Lifetime1, var76, var26, var30, var75, var27, var31);
                     var19[1] = var76[0];
                     var20[1] = var76[1];
-                    SetPointDefenceLaserRandomness.a(var33, this.field_y[var25], var32, (byte) 19, this.field_e[var25], var28, this.field_o[var25], var21Lifetime1, var76, var26, var30, var75, var27, var31);
+                    SetPointDefenceLaserRandomness.a(var33, this.vertexZ[var25], var32, (byte) 19, this.vertexX[var25], var28, this.vertexY[var25], var21Lifetime1, var76, var26, var30, var75, var27, var31);
                     var19[2] = var76[0];
                     var20[2] = var76[1];
                   }
                 } else {
                   var32 = (float)param1.field_C[var17Lifetime1] / 1024.0f;
-                  TextEncodings.computeCylindricalTextureCoordinates(var75, var27, var30, var31, this.field_e[var23], this.field_o[var23], (byte) -52, var32, var28, var76, var26, this.field_y[var23]);
+                  TextEncodings.computeCylindricalTextureCoordinates(var75, var27, var30, var31, this.vertexX[var23], this.vertexY[var23], (byte) -52, var32, var28, var76, var26, this.vertexZ[var23]);
                   var19[0] = var76[0];
                   var20[0] = var76[1];
-                  TextEncodings.computeCylindricalTextureCoordinates(var75, var27, var30, var31, this.field_e[var24], this.field_o[var24], (byte) -52, var32, var28, var76, var26, this.field_y[var24]);
+                  TextEncodings.computeCylindricalTextureCoordinates(var75, var27, var30, var31, this.vertexX[var24], this.vertexY[var24], (byte) -52, var32, var28, var76, var26, this.vertexZ[var24]);
                   var19[1] = var76[0];
                   var20[1] = var76[1];
-                  TextEncodings.computeCylindricalTextureCoordinates(var75, var27, var30, var31, this.field_e[var25], this.field_o[var25], (byte) -52, var32, var28, var76, var26, this.field_y[var25]);
+                  TextEncodings.computeCylindricalTextureCoordinates(var75, var27, var30, var31, this.vertexX[var25], this.vertexY[var25], (byte) -52, var32, var28, var76, var26, this.vertexZ[var25]);
                   var19[2] = var76[0];
                   var20[2] = var76[1];
                   var33 = var32 / 2.0f;
@@ -582,24 +582,24 @@ final class b extends ka {
                 var26 = param1.field_t[var17Lifetime1];
                 var27 = param1.field_i[var17Lifetime1];
                 var28 = param1.field_H[var17Lifetime1];
-                var29 = (float)this.field_e[var26];
-                var30_float = (float)this.field_o[var26];
-                var31 = (float)this.field_y[var26];
-                var32 = (float)this.field_e[var27] - var29;
-                var33 = (float)this.field_o[var27] - var30_float;
-                var34_float = (float)this.field_y[var27] - var31;
-                var35_float = (float)this.field_e[var28] - var29;
-                var36_float = (float)this.field_o[var28] - var30_float;
-                var37_float = (float)this.field_y[var28] - var31;
-                var38_float = (float)this.field_e[var23] - var29;
-                var39_float = (float)this.field_o[var23] - var30_float;
-                var40_float = (float)this.field_y[var23] - var31;
-                var41_float = (float)this.field_e[var24] - var29;
-                var42_float = (float)this.field_o[var24] - var30_float;
-                var43 = (float)this.field_y[var24] - var31;
-                var44 = (float)this.field_e[var25] - var29;
-                var45 = (float)this.field_o[var25] - var30_float;
-                var46 = (float)this.field_y[var25] - var31;
+                var29 = (float)this.vertexX[var26];
+                var30_float = (float)this.vertexY[var26];
+                var31 = (float)this.vertexZ[var26];
+                var32 = (float)this.vertexX[var27] - var29;
+                var33 = (float)this.vertexY[var27] - var30_float;
+                var34_float = (float)this.vertexZ[var27] - var31;
+                var35_float = (float)this.vertexX[var28] - var29;
+                var36_float = (float)this.vertexY[var28] - var30_float;
+                var37_float = (float)this.vertexZ[var28] - var31;
+                var38_float = (float)this.vertexX[var23] - var29;
+                var39_float = (float)this.vertexY[var23] - var30_float;
+                var40_float = (float)this.vertexZ[var23] - var31;
+                var41_float = (float)this.vertexX[var24] - var29;
+                var42_float = (float)this.vertexY[var24] - var30_float;
+                var43 = (float)this.vertexZ[var24] - var31;
+                var44 = (float)this.vertexX[var25] - var29;
+                var45 = (float)this.vertexY[var25] - var30_float;
+                var46 = (float)this.vertexZ[var25] - var31;
                 var47 = var33 * var37_float - var34_float * var36_float;
                 var48 = var34_float * var35_float - var32 * var37_float;
                 var49 = var32 * var36_float - var33 * var35_float;
@@ -632,17 +632,17 @@ final class b extends ka {
           this.field_a = (float[][]) null;
           this.field_q = (float[][]) null;
         }
-        if (param1.field_p != null &&
+        if (param1.vertexLabels != null &&
           (this.field_x & 32) != 0) {
-          param1.a((byte) -37, true);
+          param1.groupVertexIndices((byte) -37, true);
         }
-        if (param1.field_y != null &&
+        if (param1.faceLabels != null &&
           (this.field_x & 384) != 0) {
-          param1.b(0);
+          param1.groupFaceIndices(0);
         }
-        if (param1.field_g != null &&
+        if (param1.faceAttachments != null &&
           (this.field_x & 1024) != 0) {
-          param1.a(-125);
+          param1.groupFaceAttachmentIndices(-125);
         }
         if (param1.field_u != null) {
           this.field_b = new short[this.field_c];
@@ -652,7 +652,7 @@ final class b extends ka {
             if (var17Lifetime2 == -1) {
               this.field_b[var16Lifetime2] = (short)-1;
             } else {
-              var18 = this.field_f.field_a.getTextureMetadata(-20292, var17Lifetime2);
+              var18 = this.toolkit.field_a.getTextureMetadata(-20292, var17Lifetime2);
               if ((param5 & 64) != 0 &&
                 var18.field_r) {
                 this.field_b[var16Lifetime2] = (short)-1;

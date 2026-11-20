@@ -287,7 +287,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         int var3 = 0;
         if (param0 != 24) {
           World var4 = (World) null;
-          this.draw((lta) null, -28, (World) null, -49);
+          this.draw((Camera2D) null, -28, (World) null, -49);
         }
         if (this.forceX != 0 ||
           this.forceY != 0) {
@@ -440,7 +440,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         }
     }
 
-    final void draw(lta param0, int param1, World param2, int param3) {
+    final void draw(Camera2D param0, int param1, World param2, int param3) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -459,26 +459,26 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         int var7Lifetime1;
         int var8Lifetime1;
         try {
-          if (!MissionAction.rectanglesIntersect(this.boundingbox, param0.field_f, 36)) {
+          if (!MissionAction.rectanglesIntersect(this.boundingbox, param0.worldBounds, 36)) {
             return;
           }
           this.chassis.drawTree((byte) 125, param0, this instanceof Ship, param2, param1);
           if (GetPointDefenceLaserProjectiles.a(2, 11284)) {
             var5_int = this.getCenterOfMassOffsetX(995401160);
             var6 = this.getCenterOfMassOffsetY((byte) 5);
-            var7 = param0.a(this.x, (byte) 125);
-            var8 = param0.b(true, this.y);
-            GetPhasedEnergyBeamReload.a(var8, param0.field_a * 1024.0f, -81, var7, 16711680);
-            var9 = param0.a(-var5_int + this.x, (byte) 122);
-            var10 = param0.b(true, -var6 + this.y);
-            SetNumStars.a(1024.0f * param0.field_a, (byte) 90, var10, 16777215, var9);
+            var7 = param0.worldToScreenX(this.x, (byte) 125);
+            var8 = param0.worldToScreenY(true, this.y);
+            GetPhasedEnergyBeamReload.a(var8, param0.scale * 1024.0f, -81, var7, 16711680);
+            var9 = param0.worldToScreenX(-var5_int + this.x, (byte) 122);
+            var10 = param0.worldToScreenY(true, -var6 + this.y);
+            SetNumStars.a(1024.0f * param0.scale, (byte) 90, var10, 16777215, var9);
           }
           if (GetPointDefenceLaserProjectiles.a(param3, param3 ^ 11268)) {
-            var5_intLifetime1 = param0.a(this.boundingbox[0], (byte) 121);
-            var6Lifetime1 = param0.a(this.boundingbox[1], (byte) 112);
-            var7Lifetime1 = param0.b(true, this.boundingbox[2]);
-            var8Lifetime1 = param0.b(true, this.boundingbox[3]);
-            uv.a(param3 + 105, var5_intLifetime1, -var7Lifetime1 + var8Lifetime1, var7Lifetime1, 16711935, -var5_intLifetime1 + var6Lifetime1);
+            var5_intLifetime1 = param0.worldToScreenX(this.boundingbox[0], (byte) 121);
+            var6Lifetime1 = param0.worldToScreenX(this.boundingbox[1], (byte) 112);
+            var7Lifetime1 = param0.worldToScreenY(true, this.boundingbox[2]);
+            var8Lifetime1 = param0.worldToScreenY(true, this.boundingbox[3]);
+            UiToggleButtonRenderer.drawRectangle(param3 + 105, var5_intLifetime1, -var7Lifetime1 + var8Lifetime1, var7Lifetime1, 16711935, -var5_intLifetime1 + var6Lifetime1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

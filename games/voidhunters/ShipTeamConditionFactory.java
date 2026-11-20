@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ShipTeamConditionFactory implements GameStateFactory {
-    static lta field_a;
+    static Camera2D field_a;
 
     public final SerializableGameState create(byte param0) {
         int var2 = 45 / ((param0 + 64) / 50);

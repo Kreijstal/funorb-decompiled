@@ -273,7 +273,7 @@ final class WeaponBehaviour implements DiffableState {
           }
           if (this.weapontype == 9 &&
             param4 >= 0) {
-            GetGrapplingHookAimarc.a(param7, param10.id, param4, -39, param13);
+            GetGrapplingHookAimarc.updateLoopingSound(param7, param10.id, param4, -39, param13);
             return;
           }
           if (param4 >= 0) {
@@ -418,7 +418,7 @@ final class WeaponBehaviour implements DiffableState {
             var25.addDirectionalForce(var21Lifetime1, param8, var20Lifetime1, 500, 1948934248);
             param0.addShip(var25, (byte) 72);
             this.reload = var34.getReloadTime((byte) 77);
-            GetFighterVision.a(6811, var34.getFiringSoundId(false), 1 + this.reload / 2);
+            GetFighterVision.playNonSpatialSound(6811, var34.getFiringSoundId(false), 1 + this.reload / 2);
             return;
           }
           if (this.weapontype == 10) {

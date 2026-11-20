@@ -90,7 +90,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
         }
     }
 
-    final static void a(World param0, lta param1, boolean param2, byte param3) {
+    final static void a(World param0, Camera2D param1, boolean param2, byte param3) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -107,10 +107,10 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
         int var10 = 0;
         int var11 = 0;
         int var12 = 0;
-        lta var13 = null;
+        Camera2D var13 = null;
         Random var14 = null;
         ToolkitSprite var15 = null;
-        lta var16 = null;
+        Camera2D var16 = null;
         ToolkitSprite var17 = null;
         int var7Lifetime1;
         int var8Lifetime1;
@@ -130,41 +130,41 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
               var8 = hob.a(var14, param0.getWidth((byte) -122), 127) - var4_int;
               var9 = -var5 + hob.a(var14, param0.getHeight(1), param3 + 175);
               var10 = hob.a(var14, 800, param3 + 179) + 200;
-              var11 = (int)(param1.field_a * (float)(var10 << 8));
+              var11 = (int)(param1.scale * (float)(var10 << 8));
               if (var11 > 255) {
                 var11 = 255;
               }
-              SetMissileLauncherEnergyUsed.a(8947865, (byte) 7, param1.b(true, var9), (float)(int)((float)var10 * param1.field_a), var11, param1.a(var8, (byte) 121));
+              SetMissileLauncherEnergyUsed.a(8947865, (byte) 7, param1.worldToScreenY(true, var9), (float)(int)((float)var10 * param1.scale), var11, param1.worldToScreenX(var8, (byte) 121));
             }
           }
           if (OpenGlTexture1D.field_i &&
             AwardVictoryToWinnerAction.field_b == 1) {
-            var13 = new lta();
+            var13 = new Camera2D();
             var16 = var13;
-            var16.field_d = param1.field_d;
-            var16.field_e = param1.field_e;
+            var16.screenOriginX = param1.screenOriginX;
+            var16.screenOriginY = param1.screenOriginY;
             if (1 == GetMissilesExplosionPower.field_p ||
               null == psb.field_b) {
-              var16.field_b = param1.field_b;
-              var16.field_a = param1.field_a / 32.0f + 0.00011081559932790697f;
-              var13.field_c = param1.field_c;
-              var15 = mmb.field_d[7];
+              var16.worldCenterY = param1.worldCenterY;
+              var16.scale = param1.scale / 32.0f + 0.00011081559932790697f;
+              var13.worldCenterX = param1.worldCenterX;
+              var15 = OpenGlVertexNormal.field_d[7];
               var8Lifetime1 = 4194304;
               lo.a(0, var8Lifetime1, var15, var16);
             }
             if (SetSalvoDamageMultiplier.field_o == 1) {
-              var16.field_c = param1.field_c;
-              var16.field_a = param1.field_a / 64.0f + 0.00005540779966395348f;
-              var13.field_b = param1.field_b;
-              var17 = mmb.field_d[6];
+              var16.worldCenterX = param1.worldCenterX;
+              var16.scale = param1.scale / 64.0f + 0.00005540779966395348f;
+              var13.worldCenterY = param1.worldCenterY;
+              var17 = OpenGlVertexNormal.field_d[6];
               var8Lifetime1Lifetime1 = 4194304;
               lo.a(0, var8Lifetime1Lifetime1, var17, var16);
             }
           }
-          var6 = param1.a(-var4_int, (byte) 124) - 1;
-          var7Lifetime1 = param1.a(var4_int, (byte) 123) + 1;
-          var8Lifetime2 = -1 + param1.b(true, -var5);
-          var9Lifetime1 = param1.b(true, var5) + 1;
+          var6 = param1.worldToScreenX(-var4_int, (byte) 124) - 1;
+          var7Lifetime1 = param1.worldToScreenX(var4_int, (byte) 123) + 1;
+          var8Lifetime2 = -1 + param1.worldToScreenY(true, -var5);
+          var9Lifetime1 = param1.worldToScreenY(true, var5) + 1;
           if (OpenGlTexture1D.field_i) {
             if (GetLaserAimarc.field_p) {
               GetDebrisGroupColour.field_r.drawHorizontalLine(var6, var8Lifetime2, var7Lifetime1 - var6, 16777215, 0);

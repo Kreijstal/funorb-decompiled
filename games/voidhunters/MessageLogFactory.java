@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MessageLogFactory implements GameStateFactory {
-    static cbb[] field_a;
+    static ModelData[] field_a;
 
     final static boolean a(int param0, int param1, int param2) {
         if (param1 == 65536) {
           return (65536 & param2) != 0 ? true : false;
         }
-        field_a = (cbb[]) null;
+        field_a = (ModelData[]) null;
         return (65536 & param2) != 0 ? true : false;
     }
 

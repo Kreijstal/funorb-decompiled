@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vib {
-    int field_c;
-    int field_d;
+final class GpuFaceNormal {
+    int z;
+    int y;
     static Sprite field_b;
-    int field_a;
+    int x;
     private static String field_z;
 
     public static void clearSharedReferences(int param0) {
