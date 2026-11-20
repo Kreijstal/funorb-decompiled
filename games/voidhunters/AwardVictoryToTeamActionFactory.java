@@ -5,7 +5,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
     static int field_b;
     static String field_a;
 
-    final static void b(byte param0) {
+    final static void initializeTextTables(byte param0) {
         int var1_int = 0;
         int var2 = VoidHunters.field_G;
         if (FloatNoiseSliceGenerator.field_a) {
@@ -306,7 +306,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
         return param0 | param1;
     }
 
-    final static int[] a(boolean param0, int[] param1, int param2, int param3, boolean param4) {
+    final static int[] addIntArrayValue(boolean param0, int[] param1, int param2, int param3, boolean param4) {
         int var5_int = 0;
         int[] stackIn_3_0 = null;
         int[] stackIn_8_0 = null;

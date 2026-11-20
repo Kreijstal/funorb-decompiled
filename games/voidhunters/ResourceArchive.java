@@ -336,9 +336,9 @@ final class ResourceArchive {
                 0 != SetReloadBarHeight.field_q[1][var7 + 1].field_o) {
                 if (!param2) {
                   var9 = SetMutatorVotes.field_o[var7];
-                  if (param1.field_Fb != var9) {
+                  if (param1.maxPlayers != var9) {
                     var5 = 1;
-                    param1.field_Fb = var9;
+                    param1.maxPlayers = var9;
                   }
                 } else {
                   if (var6 == 0) {
@@ -373,7 +373,7 @@ final class ResourceArchive {
               } else {
                 var9 = SetMutatorVotes.field_o[var7];
                 stackIn_89_0 = SetReloadBarHeight.field_q[1][1 + var7];
-                stackIn_90_1 = (param1.field_Fb == var9);
+                stackIn_90_1 = (param1.maxPlayers == var9);
                 stackIn_89_0.field_J = stackIn_90_1;
               }
               stackIn_106_0 = SetReloadBarHeight.field_q[1][1 + var7];

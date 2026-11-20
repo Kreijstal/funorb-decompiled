@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1572/1572 classes and 7704/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 0 opaque classes and 511 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1572/1572 classes and 7744/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 0 opaque classes and 471 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -144,6 +144,8 @@ Native heap callbacks identify their observed initialization, toolkit-release an
 Mission lookup, saved-world application and player-data version migration have named entrypoints, along with player-event ID serialization and escape-pod drawing/timer hooks. Login panels, quick-chat overlays, incoming chat, ignore requests, keyboard polling and tooltip coordinates expose their existing contracts. Half-alpha RGB triangles and scanlines retain the original interpolation, vertex ordering and clipping. The Direct3D texture-matrix writer retains its specialized layout.
 
 Archive factories, saved preferences, native-library loading, account-request polling and Huffman string writing have named helpers. Logo faces expose depth buckets, compaction, category grouping and their shared index storage; palette release, bordered ellipses and polygon filling retain their original raster behavior. Console highlighting, exception context, preset component attachments, audio shutdown and integer utilities also have named entrypoints.
+
+Menu fonts, backgrounds and metrics have named configuration helpers, along with label-table initialization and the loading-bar resource lifecycle. Map-zone containment/drawing, decoded sprites, clipped spans, tooltips, lobby player counts, objective round counts and serialized-state buffer copies expose their existing roles. Carousel protocol configuration, focus checks and score-index preparation retain their original packet IDs, state transitions, guards and sorting behavior.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

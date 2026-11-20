@@ -4,7 +4,7 @@
 final class LoginFormNavigation {
     static String field_a;
     static String field_c;
-    static int field_b;
+    static int menuHeight;
 
     public static void clearSharedReferences(boolean param0) {
         field_a = null;

@@ -188,7 +188,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
           for (var7 = 0; var7 < var6.length; var7++) {
             var8 = var6[var7];
             if (var8 != null &&
-              var4.a(var8.getY((byte) 121), var8.getX(false), (byte) -98)) {
+              var4.containsPoint(var8.getY((byte) 121), var8.getX(false), (byte) -98)) {
               param2 = SetAutozoomSpeedDivide.a(var8.getId(false), true, param2, (byte) -14);
             }
           }
@@ -436,7 +436,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
           if (param0 != ~this.bodyId) {
             var10 = param2.getBodyById((byte) -27, this.bodyId);
             if (var10 != null) {
-              stackIn_9_0 = var4.a(var10.getY((byte) -62), var10.getX(false), (byte) -98);
+              stackIn_9_0 = var4.containsPoint(var10.getY((byte) -62), var10.getX(false), (byte) -98);
               return stackIn_9_0;
             }
             return false;
@@ -446,7 +446,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
           for (var7 = 0; var7 < var6.length; var7++) {
             var8 = var6[var7];
             if (var8 != null &&
-              var4.a(var8.getY((byte) 124), var8.getX(false), (byte) -98)) {
+              var4.containsPoint(var8.getY((byte) 124), var8.getX(false), (byte) -98)) {
               return true;
             }
           }

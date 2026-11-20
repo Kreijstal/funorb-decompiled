@@ -6,19 +6,19 @@ final class ClientDataWriteRequest extends IntrusiveNode {
     byte[] data;
 
     final static CarouselSlot readCarouselState(byte param0) {
-        UiViewport.field_w.position = 0;
+        UiViewport.serializedStateBuffer.position = 0;
         if (param0 != -39) {
           return (CarouselSlot) null;
         }
-        UiViewport.field_w.beginBitRead(-23497);
+        UiViewport.serializedStateBuffer.beginBitRead(-23497);
         CarouselSlot var1 = (CarouselSlot) (ConsoleEvaluationException.field_a.create((byte) 69));
         if (!(var1 instanceof CompactGameState)) {
-          var1.readState(UiViewport.field_w, false);
-          UiViewport.field_w.endBitRead((byte) -92);
+          var1.readState(UiViewport.serializedStateBuffer, false);
+          UiViewport.serializedStateBuffer.endBitRead((byte) -92);
           return var1;
         }
-        ((CompactGameState) ((Object) var1)).readCompactState(UiViewport.field_w, 32);
-        UiViewport.field_w.endBitRead((byte) -92);
+        ((CompactGameState) ((Object) var1)).readCompactState(UiViewport.serializedStateBuffer, 32);
+        UiViewport.serializedStateBuffer.endBitRead((byte) -92);
         return var1;
     }
 

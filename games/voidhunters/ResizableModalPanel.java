@@ -231,7 +231,7 @@ abstract class ResizableModalPanel extends ModalPanel {
                 ArchiveLoadRequest.appendScoreRow(SetCountermeasuresPulseRadius.field_q, GetCountermeasureLauncherFireForce.field_o, SecondaryNodeQueue.field_d, 13336, var6_intLifetime1, QuickChatCategoryLoader.field_b);
               }
             }
-            SetLaserRandomness.a((byte) -29, var5);
+            SetLaserRandomness.sortAndLimitScoreIndices((byte) -29, var5);
             var6 = new String[2][var5];
             var18 = new int[2][var5 * 4];
             var8 = MissionBuilder.field_e;

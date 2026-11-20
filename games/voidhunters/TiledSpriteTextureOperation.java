@@ -424,13 +424,13 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
                 !var12.field_dc.text.equals(var32)) {
                 NebulaFieldFactory.field_a = var32;
               }
-              var12.field_yb.text = Integer.toString(var12.field_zb);
+              var12.field_yb.text = Integer.toString(var12.playerCount);
               if (!var12.field_Gb) {
                 var12.field_yb.field_F = 1;
                 var12.field_yb.setBounds(150, 125, 48, var31, DialogMessagePanel.field_w);
               } else {
                 var12.field_yb.field_F = 2;
-                var12.field_wb.text = "/" + var12.field_Fb;
+                var12.field_wb.text = "/" + var12.maxPlayers;
                 var33_int = (-var12.field_wb.font.getStringWidth("/") + 348) / 2;
                 var12.field_yb.setBounds(150, 127, -150 + var33_int, var31, DialogMessagePanel.field_w);
                 var12.field_wb.setBounds(var33_int, 121, -var33_int + 198, var31, DialogMessagePanel.field_w);
@@ -529,7 +529,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
                 var37 = new StringBuilder(64);
                 discarded$1 = var37.append(SoftwareSprite2D.field_c);
                 discarded$2 = var37.append(var12.field_Ib[0]);
-                for (var38_intLifetime1 = 1; var38_intLifetime1 < var12.field_zb; var38_intLifetime1++) {
+                for (var38_intLifetime1 = 1; var38_intLifetime1 < var12.playerCount; var38_intLifetime1++) {
                   discarded$3 = var37.append(", ");
                   discarded$4 = var37.append(var12.field_Ib[var38_intLifetime1]);
                 }

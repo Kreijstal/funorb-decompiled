@@ -13,7 +13,7 @@ final class SetMissionTimeLimit extends ConsoleCommand {
         try {
           if (obfuscationGuard >= -119) {
             var4 = (ScreenSizeController) null;
-            SetMissionTimeLimit.a((ScreenSizeController) null, -90);
+            SetMissionTimeLimit.setScreenSizeController((ScreenSizeController) null, -90);
           }
           SetMachineGunEnergyUsed.a(59, 62, arguments[0].intValue(98));
           stackIn_3_0 = new ConsoleValue("void");
@@ -32,7 +32,7 @@ final class SetMissionTimeLimit extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void sendAdminMessage(int param0, int param1, int param2) {
         AdminMessage var3 = new AdminMessage();
         var3.index = param1;
         var3.value = param0;
@@ -41,14 +41,14 @@ final class SetMissionTimeLimit extends ConsoleCommand {
           return;
         }
         ScreenSizeController var4 = (ScreenSizeController) null;
-        SetMissionTimeLimit.a((ScreenSizeController) null, -41);
+        SetMissionTimeLimit.setScreenSizeController((ScreenSizeController) null, -41);
     }
 
     SetMissionTimeLimit(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
     }
 
-    final static void a(ScreenSizeController param0, int param1) {
+    final static void setScreenSizeController(ScreenSizeController param0, int param1) {
         int stackIn_7_0 = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -57,7 +57,7 @@ final class SetMissionTimeLimit extends ConsoleCommand {
         RuntimeException var2 = null;
         try {
           if (param1 <= 9) {
-            SetMissionTimeLimit.a(-34, -13, 122);
+            SetMissionTimeLimit.sendAdminMessage(-34, -13, 122);
           }
           MissionConditionFactory.field_b = param0;
           if (null != MissionConditionFactory.field_b &&

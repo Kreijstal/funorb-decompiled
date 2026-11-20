@@ -4,7 +4,7 @@
 final class BlackBoxRecordingFactory implements GameStateFactory {
     static ArchiveDiskWorker field_a;
 
-    final static String a(int param0, int param1, int param2, CharSequence[] param3) {
+    final static String concatenateRange(int param0, int param1, int param2, CharSequence[] param3) {
         int var6_int = 0;
         int var7 = 0;
         StringBuilder discarded$3 = null;
@@ -78,7 +78,7 @@ final class BlackBoxRecordingFactory implements GameStateFactory {
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 != 11995) {
           CharSequence[] var4 = (CharSequence[]) null;
-          BlackBoxRecordingFactory.a(-62, 119, 20, (CharSequence[]) null);
+          BlackBoxRecordingFactory.concatenateRange(-62, 119, 20, (CharSequence[]) null);
         }
         return (SerializableGameState[]) ((Object) new BlackBoxRecording[param1]);
     }
@@ -86,7 +86,7 @@ final class BlackBoxRecordingFactory implements GameStateFactory {
     public static void clearSharedReferences(boolean param0) {
         if (param0) {
           CharSequence[] var2 = (CharSequence[]) null;
-          BlackBoxRecordingFactory.a(1, 39, 107, (CharSequence[]) null);
+          BlackBoxRecordingFactory.concatenateRange(1, 39, 107, (CharSequence[]) null);
         }
         field_a = null;
     }

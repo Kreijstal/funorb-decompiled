@@ -264,7 +264,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (UiDraggableContainer.field_z == 3 &&
           SetBombletSprayEnergyUsed.a(GetSalvoUsesAllEnergy.field_o, 2, BufferedFile.field_i, CommonUiArchiveResources.commonUiArchive) &&
           GetUseOffscreenRendering.a(-20230, BufferedFile.field_i)) {
-          MissionFactory.b((byte) 123);
+          MissionFactory.clearLoadingBarResources((byte) 123);
           GetPhasedEnergyBeamFireForce.buildFullscreenConfirmationText(false);
           OpenGlBufferObject.progressDialogMessage = SetFighterRepairTime.field_o;
           CommandConsole.field_r = false;

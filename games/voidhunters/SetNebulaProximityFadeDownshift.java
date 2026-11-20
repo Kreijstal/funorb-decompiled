@@ -6,7 +6,7 @@ final class SetNebulaProximityFadeDownshift extends ConsoleCommand {
     static int field_p;
 
     final static void a(int param0, boolean param1, boolean param2) {
-        SetLag.a(param2, 62, 71, 64, GetSniperCannonProjectileOndamageParticles.field_o, 66, Under13AccountNoticePanel.field_v, 2000, 70, 65, 69, 72, GetPhasedEnergyBeamReload.field_p, 68, (byte) 91);
+        SetLag.configureCarouselProtocol(param2, 62, 71, 64, GetSniperCannonProjectileOndamageParticles.field_o, 66, Under13AccountNoticePanel.field_v, 2000, 70, 65, 69, 72, GetPhasedEnergyBeamReload.field_p, 68, (byte) 91);
         MidiCrossfadeStream.setAlternateHistoryLength((byte) 125, 3);
         if (param1) {
           SpecialOrderButtonState.field_f = true;
@@ -49,7 +49,7 @@ final class SetNebulaProximityFadeDownshift extends ConsoleCommand {
               var5Lifetime4 = var7;
               var5Lifetime5 = var7;
               if (param2 != ~param1.length()) {
-                var5Lifetime6 = var7 + "; Expires=" + SetMassDriverAimarc.a((byte) -88, 94608000000L + MonotonicMillisClock.currentTimeMillis(false)) + "; Max-Age=" + 94608000L;
+                var5Lifetime6 = var7 + "; Expires=" + SetMassDriverAimarc.formatGmtDate((byte) -88, 94608000000L + MonotonicMillisClock.currentTimeMillis(false)) + "; Max-Age=" + 94608000L;
               } else {
                 var5Lifetime6 = var7 + "; Expires=Thu, 01-Jan-1970 00:00:00 GMT; Max-Age=0";
               }

@@ -172,17 +172,17 @@ final class GetMessageMaxage extends ConsoleCommand {
           }
           GetMissionTerrainAsteroidProbability.field_p = -(var7Lifetime1 >> 1) + var7Lifetime1 + LobbyInviteSuggestionText.field_b;
           ShieldBehaviour.field_d = LobbyInviteSuggestionText.field_b - (var7Lifetime1 >> 1);
-          LoginFormNavigation.field_b = (SetPointDefenceLaserAimarc.field_q + SpawnEnemyShipOrderDefinition.field_g << 1) * UiAngleDialRenderer.field_c.itemCount;
+          LoginFormNavigation.menuHeight = (SetPointDefenceLaserAimarc.field_q + SpawnEnemyShipOrderDefinition.field_g << 1) * UiAngleDialRenderer.field_c.itemCount;
           for (var8Lifetime2 = 0; GetWorldWidthUpshift.field_o.length > var8Lifetime2; var8Lifetime2++) {
-            stackIn_40_0 = LoginFormNavigation.field_b;
+            stackIn_40_0 = LoginFormNavigation.menuHeight;
             if (GetSniperCannonProjectiles.field_o[var8Lifetime2] >= 0) {
               stackIn_41_1 = SetExplosionPushMultiplier.field_o;
             } else {
               stackIn_41_1 = DebugMessage.field_a;
             }
-            LoginFormNavigation.field_b = stackIn_40_0 + stackIn_41_1;
+            LoginFormNavigation.menuHeight = stackIn_40_0 + stackIn_41_1;
           }
-          LoopingSound.field_m = -(LoginFormNavigation.field_b >> 1) + SetDebrisPartitioned.field_r;
+          LoopingSound.field_m = -(LoginFormNavigation.menuHeight >> 1) + SetDebrisPartitioned.field_r;
           UiAngleDialRenderer.field_c.resetSelection(param3, -1, 0, SetBuildViewAutozoomEndOnAction.a(OpenGlFaceAttachment.field_b, 3841, PlayerGameData.field_b));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

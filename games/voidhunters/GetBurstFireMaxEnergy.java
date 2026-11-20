@@ -84,7 +84,7 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
           return;
         }
         if (0 == var7) {
-          SetMinimapWidth.a(param0, param1, (byte) 111, param5, param3);
+          SetMinimapWidth.fillClippedHorizontalSpan(param0, param1, (byte) 111, param5, param3);
           return;
         }
         if (param2 < 45) {

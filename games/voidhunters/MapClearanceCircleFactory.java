@@ -20,7 +20,7 @@ final class MapClearanceCircleFactory implements GameStateFactory {
           var2.position = var2.position + 1;
           var3 = var2.position;
           var2.writeByte(0, 5);
-          var2.writeByte(0, SetSpinningBladeSpindamageMultiplier.field_o.field_Fb);
+          var2.writeByte(0, SetSpinningBladeSpindamageMultiplier.field_o.maxPlayers);
           var4 = SetSpinningBladeSpindamageMultiplier.field_o.field_Cb + (SetSpinningBladeSpindamageMultiplier.field_o.field_Bb << 6);
           var2.writeByte(0, var4);
           var2.writeBytes(0, SetSpinningBladeSpindamageMultiplier.field_o.field_Pb, -1, SetSpinningBladeSpindamageMultiplier.field_o.field_Pb.length);
@@ -31,7 +31,7 @@ final class MapClearanceCircleFactory implements GameStateFactory {
         var2.position = var2.position + 1;
         var3Lifetime1 = var2.position;
         var2.writeByte(0, 5);
-        var2.writeByte(0, SetSpinningBladeSpindamageMultiplier.field_o.field_Fb);
+        var2.writeByte(0, SetSpinningBladeSpindamageMultiplier.field_o.maxPlayers);
         var4Lifetime1 = SetSpinningBladeSpindamageMultiplier.field_o.field_Cb + (SetSpinningBladeSpindamageMultiplier.field_o.field_Bb << 6);
         var2.writeByte(0, var4Lifetime1);
         var2.writeBytes(0, SetSpinningBladeSpindamageMultiplier.field_o.field_Pb, -1, SetSpinningBladeSpindamageMultiplier.field_o.field_Pb.length);

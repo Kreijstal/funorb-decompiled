@@ -2656,7 +2656,7 @@ final class World implements DiffableState, CompactGameState {
                   if (this.mapZones != null) {
                     for (var11_int = 0; this.mapZones.length > var11_int; var11_int++) {
                       var36 = this.mapZones[var11_int];
-                      if (var36.a(var8, var7, (byte) -98)) {
+                      if (var36.containsPoint(var8, var7, (byte) -98)) {
                         this.removeMapZoneAtIndex(var11_int, (byte) -90);
                         break;
                       }
@@ -2803,7 +2803,7 @@ final class World implements DiffableState, CompactGameState {
                                                                                 var10_int = 0;
                                                                                 while (var10_int < this.mapZones.length) {
                                                                                   var76 = this.mapZones[var10_int];
-                                                                                  if (!var76.a(var8, var7, (byte) -98)) {
+                                                                                  if (!var76.containsPoint(var8, var7, (byte) -98)) {
                                                                                     var10_int++;
                                                                                     continue;
                                                                                   }
@@ -2864,7 +2864,7 @@ final class World implements DiffableState, CompactGameState {
                                                                                     default:
                                                                                       if (var9 >= 72) {
                                                                                         var10_int = -72 + var9;
-                                                                                        if (SetMassDriverAimarc.a(130, var10_int)) {
+                                                                                        if (SetMassDriverAimarc.isSpawnableShipChassis(130, var10_int)) {
                                                                                           var66 = new ShipComponent(var10_int);
                                                                                           var67 = new Ship();
                                                                                           var67.chassis = var66;
@@ -2919,7 +2919,7 @@ final class World implements DiffableState, CompactGameState {
                                                                                 var58 = this.mapZones[var10_int];
                                                                                 var76 = var58;
                                                                                 var76 = var58;
-                                                                                if (!var58.a(var8, var7, (byte) -98)) {
+                                                                                if (!var58.containsPoint(var8, var7, (byte) -98)) {
                                                                                   var10_int++;
                                                                                   continue;
                                                                                 }
@@ -4870,7 +4870,7 @@ final class World implements DiffableState, CompactGameState {
             }
             if (this.mapZones != null) {
               for (var5_int = 0; var5_int < this.mapZones.length; var5_int++) {
-                this.mapZones[var5_int].a(32, 13421772, param0);
+                this.mapZones[var5_int].draw(32, 13421772, param0);
               }
             }
           }

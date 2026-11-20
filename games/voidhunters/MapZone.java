@@ -25,7 +25,7 @@ final class MapZone extends IntrusiveNode implements DiffableState {
         }
     }
 
-    final boolean a(int param0, int param1, byte param2) {
+    final boolean containsPoint(int param0, int param1, byte param2) {
         if (param2 != -98) {
           return true;
         }
@@ -51,7 +51,7 @@ final class MapZone extends IntrusiveNode implements DiffableState {
           this.width = param0.readBits(0, 32);
           this.height = param0.readBits(0, 32);
           if (param1) {
-            this.a(64, 118, (byte) 59);
+            this.containsPoint(64, 118, (byte) 59);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "cq.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -113,7 +113,7 @@ final class MapZone extends IntrusiveNode implements DiffableState {
           param0.writeBits(-632, this.width, 32);
           if (param1 > -109) {
             Camera2D var4 = (Camera2D) null;
-            this.a(-77, 104, (Camera2D) null);
+            this.draw(-77, 104, (Camera2D) null);
           }
           param0.writeBits(-632, this.height, 32);
         } catch (RuntimeException runtimeException) {
@@ -149,7 +149,7 @@ final class MapZone extends IntrusiveNode implements DiffableState {
         }
     }
 
-    final void a(int param0, int param1, Camera2D param2) {
+    final void draw(int param0, int param1, Camera2D param2) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;

@@ -3,11 +3,11 @@
  */
 final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
     static int field_q;
-    static java.awt.Image field_p;
+    static java.awt.Image loadingBarImage;
     static String field_o;
 
     public static void clearSharedReferences(int param0) {
-        field_p = null;
+        loadingBarImage = null;
         if (param0 != 0) {
           SetPhasedEnergyBeamAimspeed.a(48, false);
           field_o = null;
@@ -114,7 +114,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
             }
           }
         } else {
-          field_p = (java.awt.Image) null;
+          loadingBarImage = (java.awt.Image) null;
           SelectableIconLabelWidget.pushClip(SoftwareRasterizer2D.width + 640 >> 1, SoftwareRasterizer2D.height, SoftwareRasterizer2D.width - 640 >> 1, true, 0);
           if (0 < SoftwareTransform3D.field_b) {
             if (null != ShieldInfoPool.field_c) {

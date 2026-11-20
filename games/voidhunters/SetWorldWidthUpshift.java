@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetWorldWidthUpshift extends ConsoleCommand {
-    final static int a(int param0) {
+    final static int getEmailAvailabilityReplyLength(int param0) {
         if (param0 != 24655) {
           return 4;
         }
         return 1;
     }
 
-    final static GraphicsToolkit a(TextureProvider param0, int param1, int param2, java.awt.Canvas param3, int param4) {
+    final static GraphicsToolkit createSoftwareToolkit(TextureProvider param0, int param1, int param2, java.awt.Canvas param3, int param4) {
         RuntimeException var5 = null;
         GraphicsToolkit stackIn_2_0 = null;
         SoftwareToolkit stackIn_4_0 = null;
@@ -57,7 +57,7 @@ final class SetWorldWidthUpshift extends ConsoleCommand {
         try {
           if (obfuscationGuard > -119) {
             var4 = (java.awt.Canvas) null;
-            SetWorldWidthUpshift.a((TextureProvider) null, -53, -128, (java.awt.Canvas) null, -4);
+            SetWorldWidthUpshift.createSoftwareToolkit((TextureProvider) null, -53, -128, (java.awt.Canvas) null, -4);
           }
           SetMachineGunEnergyUsed.a(193, 62, arguments[0].intValue(88));
           stackIn_3_0 = new ConsoleValue("void");

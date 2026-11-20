@@ -20,7 +20,7 @@ final class GetUseRectOutline extends ConsoleCommand {
             ComponentCollision.a(param5, (byte) 105, param8, param0, param7);
           }
           if (GetTorpedoProjectileDamage.field_o &&
-            SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
+            SetSpinningBladeSpindamageMultiplier.field_o.playerCount >= SetSpinningBladeSpindamageMultiplier.field_o.maxPlayers) {
             DualLinkNode.field_f.enabled = false;
             CarouselSlot.field_a.viewport.text = SetPhasedEnergyBeamPulsetime.field_q;
             GammaCorrection.collapseWidgetAndChildren(CarouselSlot.field_a.content, (byte) -93);
@@ -58,7 +58,7 @@ final class GetUseRectOutline extends ConsoleCommand {
                 ComponentCollision.a(param5, (byte) 105, param8, param0, param7);
               }
               if (GetTorpedoProjectileDamage.field_o &&
-                SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
+                SetSpinningBladeSpindamageMultiplier.field_o.playerCount >= SetSpinningBladeSpindamageMultiplier.field_o.maxPlayers) {
                 DualLinkNode.field_f.enabled = false;
                 CarouselSlot.field_a.viewport.text = SetPhasedEnergyBeamPulsetime.field_q;
                 GammaCorrection.collapseWidgetAndChildren(CarouselSlot.field_a.content, (byte) -93);
@@ -82,7 +82,7 @@ final class GetUseRectOutline extends ConsoleCommand {
                 ComponentCollision.a(param5, (byte) 105, param8, param0, param7);
               }
               if (GetTorpedoProjectileDamage.field_o &&
-                SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
+                SetSpinningBladeSpindamageMultiplier.field_o.playerCount >= SetSpinningBladeSpindamageMultiplier.field_o.maxPlayers) {
                 DualLinkNode.field_f.enabled = false;
                 CarouselSlot.field_a.viewport.text = SetPhasedEnergyBeamPulsetime.field_q;
                 GammaCorrection.collapseWidgetAndChildren(CarouselSlot.field_a.content, (byte) -93);
@@ -121,7 +121,7 @@ final class GetUseRectOutline extends ConsoleCommand {
                 ComponentCollision.a(param5, (byte) 105, param8, param0, param7);
               }
               if (GetTorpedoProjectileDamage.field_o &&
-                SetSpinningBladeSpindamageMultiplier.field_o.field_zb >= SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
+                SetSpinningBladeSpindamageMultiplier.field_o.playerCount >= SetSpinningBladeSpindamageMultiplier.field_o.maxPlayers) {
                 DualLinkNode.field_f.enabled = false;
                 CarouselSlot.field_a.viewport.text = SetPhasedEnergyBeamPulsetime.field_q;
                 GammaCorrection.collapseWidgetAndChildren(CarouselSlot.field_a.content, (byte) -93);
@@ -149,7 +149,7 @@ final class GetUseRectOutline extends ConsoleCommand {
                 DualLinkNode.field_f.enabled = true;
                 SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
               } else {
-                if (SetSpinningBladeSpindamageMultiplier.field_o.field_zb < SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
+                if (SetSpinningBladeSpindamageMultiplier.field_o.playerCount < SetSpinningBladeSpindamageMultiplier.field_o.maxPlayers) {
                   CarouselSlot.field_a.viewport.text = null;
                   DualLinkNode.field_f.enabled = true;
                   SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);

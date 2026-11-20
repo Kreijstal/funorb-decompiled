@@ -3,7 +3,7 @@
  */
 final class GetPhasedEnergyBeamPulsetime extends ConsoleCommand {
     static int menuHeadingColor;
-    static java.awt.Font field_p;
+    static java.awt.Font loadingBarFont;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -33,9 +33,9 @@ final class GetPhasedEnergyBeamPulsetime extends ConsoleCommand {
     }
 
     public static void clearSharedReferences(byte param0) {
-        field_p = null;
+        loadingBarFont = null;
         if (param0 != 51) {
-          field_p = (java.awt.Font) null;
+          loadingBarFont = (java.awt.Font) null;
         }
     }
 

@@ -37,7 +37,7 @@ final class SetShieldsDirectionalArc extends ConsoleCommand {
         }
     }
 
-    final static String a(int param0, CharSequence[] param1) {
+    final static String concatenate(int param0, CharSequence[] param1) {
         RuntimeException var2 = null;
         String stackIn_2_0 = null;
         String stackIn_4_0 = null;
@@ -47,7 +47,7 @@ final class SetShieldsDirectionalArc extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 0) {
-            stackIn_4_0 = BlackBoxRecordingFactory.a(-2, param1.length, 0, param1);
+            stackIn_4_0 = BlackBoxRecordingFactory.concatenateRange(-2, param1.length, 0, param1);
             return stackIn_4_0;
           }
           stackIn_2_0 = (String) null;
@@ -66,12 +66,12 @@ final class SetShieldsDirectionalArc extends ConsoleCommand {
         }
     }
 
-    final static int a(int param0) {
+    final static int getMenuHeight(int param0) {
         if (param0 != -22954) {
           SetShieldsDirectionalArc.clearSharedReferences((byte) 3);
-          return LoginFormNavigation.field_b;
+          return LoginFormNavigation.menuHeight;
         }
-        return LoginFormNavigation.field_b;
+        return LoginFormNavigation.menuHeight;
     }
 
     SetShieldsDirectionalArc(String param0, Class[] param1, String param2) {

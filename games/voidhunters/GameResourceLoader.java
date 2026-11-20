@@ -105,7 +105,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
         int[] var19;
         var8 = VoidHunters.field_G;
         ComponentCollision.a("Inside unpack", (byte) -111);
-        AwardVictoryToTeamActionFactory.b((byte) -99);
+        AwardVictoryToTeamActionFactory.initializeTextTables((byte) -99);
         var11 = GetMassDriverReload.field_o;
         var12 = GetShieldsDirectionalArc.field_r;
         if (this.soundEffectArchive != null &&

@@ -164,7 +164,7 @@ final class CarouselGameClient {
               }
               if (this.dataSender.isIdle(param2 - 1000)) {
                 GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Sending the state dump to the server");
-                var13 = new CarouselSlotStateDump(-var10 + param0.tick, UiViewport.field_w);
+                var13 = new CarouselSlotStateDump(-var10 + param0.tick, UiViewport.serializedStateBuffer);
                 var14 = new GzipCodec();
                 var14.compress(84, 0, var13.serializedState, var13.serializedState.length);
                 var20 = GameApplet.copyWrittenBytes((byte) 10, var14.compressedOutput);

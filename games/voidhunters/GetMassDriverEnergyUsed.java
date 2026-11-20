@@ -33,7 +33,7 @@ final class GetMassDriverEnergyUsed extends ConsoleCommand {
         }
     }
 
-    final static char a(byte param0, int param1) {
+    final static char decodeCp1252Byte(byte param0, int param1) {
         int var3 = 0;
         int var2 = param0 & 255;
         int var3Lifetime1;
@@ -70,7 +70,7 @@ final class GetMassDriverEnergyUsed extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static UiScrollBar a(int param0) {
+    final static UiScrollBar createVerticalScrollbar(int param0) {
         if (param0 == 0) {
           return new UiScrollBar(0, 0, GetDebrisMax.field_s.field_s, 0, (UiRenderer) null, GetDebrisMax.field_s.field_e, GetDebrisMax.field_s.field_l, GetDebrisMax.field_s.field_s, GetDebrisMax.field_s.field_s, GetDebrisMax.field_s.field_r, GetDebrisMax.field_s.field_i, false, true, 32768, 0);
         }

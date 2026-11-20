@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class UiViewport extends UiSingleChildContainer {
-    static IsaacPacketBuffer field_w;
+    static IsaacPacketBuffer serializedStateBuffer;
     static PrimitiveType field_v;
 
     final void refreshChildLayout(int param0) {
@@ -47,10 +47,10 @@ final class UiViewport extends UiSingleChildContainer {
         field_v = null;
         if (param0 <= 40) {
           UiViewport.clearSharedReferences(87);
-          field_w = null;
+          serializedStateBuffer = null;
           return;
         }
-        field_w = null;
+        serializedStateBuffer = null;
     }
 
     final boolean handleMousePress(int param0, int param1, int param2, int param3, UiComponent param4, int param5, byte param6) {
@@ -90,7 +90,7 @@ final class UiViewport extends UiSingleChildContainer {
     }
 
     static {
-        field_w = new IsaacPacketBuffer(1048576);
+        serializedStateBuffer = new IsaacPacketBuffer(1048576);
         field_v = new PrimitiveType();
     }
 }

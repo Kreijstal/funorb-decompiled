@@ -1418,7 +1418,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           }
           if (ArchiveLoadRequest.intersectsCircle((byte) -57, this.finaloutline, param4, param1, param0) &&
             this.health < this.getDefinition((byte) -112).maxHealth) {
-            param6 = SetMinimapWidth.a(param6, param2, (byte) -106);
+            param6 = SetMinimapWidth.appendInt(param6, param2, (byte) -106);
           }
           stackIn_12_0 = (int[]) (param6);
           return stackIn_12_0;

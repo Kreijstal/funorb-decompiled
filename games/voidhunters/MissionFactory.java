@@ -11,21 +11,21 @@ final class MissionFactory implements GameStateFactory {
 
     public static void clearSharedReferences(boolean param0) {
         if (param0) {
-          MissionFactory.b((byte) -50);
+          MissionFactory.clearLoadingBarResources((byte) -50);
           field_a = (String[][]) null;
           return;
         }
         field_a = (String[][]) null;
     }
 
-    final static void b(byte param0) {
-        GetPhasedEnergyBeamPulsetime.field_p = null;
+    final static void clearLoadingBarResources(byte param0) {
+        GetPhasedEnergyBeamPulsetime.loadingBarFont = null;
         if (param0 <= 109) {
-          MissionFactory.b((byte) -94);
-          SetPhasedEnergyBeamAimspeed.field_p = null;
+          MissionFactory.clearLoadingBarResources((byte) -94);
+          SetPhasedEnergyBeamAimspeed.loadingBarImage = null;
           return;
         }
-        SetPhasedEnergyBeamAimspeed.field_p = null;
+        SetPhasedEnergyBeamAimspeed.loadingBarImage = null;
     }
 
     public final SerializableGameState[] createArray(int param0, int param1) {
@@ -36,7 +36,7 @@ final class MissionFactory implements GameStateFactory {
         return (SerializableGameState[]) ((Object) new Mission[param1]);
     }
 
-    final static void c(byte param0) {
+    final static void initializeNoiseVolumes(byte param0) {
         GpuRidgedNoiseVolume var1 = null;
         byte[] var3 = null;
         GpuFractalNoiseVolume var1_ref = null;

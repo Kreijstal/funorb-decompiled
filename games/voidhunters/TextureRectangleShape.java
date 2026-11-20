@@ -27,7 +27,7 @@ final class TextureRectangleShape extends TextureRasterShape {
         }
     }
 
-    final static int a(byte param0, int param1, int param2, int param3) {
+    final static int blendColors(byte param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var4Lifetime1;
         if (param0 <= 49) {
@@ -135,7 +135,7 @@ final class TextureRectangleShape extends TextureRasterShape {
           GameResourceLoader.fillRasterRectangle(this.fillColor, var7, var6, var4, var5, (byte) -117);
           return;
         }
-        TextureRectangleShape.a((byte) 92, -127, 80, 107);
+        TextureRectangleShape.blendColors((byte) 92, -127, 80, 107);
         var6Lifetime1 = param2 * this.top >> 12;
         var7Lifetime1 = this.bottom * param2 >> 12;
         GameResourceLoader.fillRasterRectangle(this.fillColor, var7Lifetime1, var6Lifetime1, var4, var5, (byte) -117);
@@ -163,7 +163,7 @@ final class TextureRectangleShape extends TextureRasterShape {
         SetMachineGunProjectileDamage.fillBorderedRectangle(this.outlineWidth, var5Lifetime1, this.fillColor, var6Lifetime1, this.outlineColor, var4, var7Lifetime1, 0);
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean hasMultiplePlayers(int param0, int param1) {
         if (param0 >= 93) {
           return 2 <= param1 ? true : false;
         }

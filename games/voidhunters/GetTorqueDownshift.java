@@ -9,7 +9,7 @@ final class GetTorqueDownshift extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean isFriend(String param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -44,7 +44,7 @@ final class GetTorqueDownshift extends ConsoleCommand {
         var2.writeByte(0, 2);
     }
 
-    final static int a(int param0, int param1) {
+    final static int getObjectiveRoundCount(int param0, int param1) {
         int var2 = 74 / ((param1 + 14) / 42);
         if (param0 < 4) {
           return 2;

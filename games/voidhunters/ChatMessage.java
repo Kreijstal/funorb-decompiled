@@ -94,7 +94,7 @@ final class ChatMessage {
             return 1;
           }
           if (PendingRequestResender.field_b == 2 &&
-            GetTorqueDownshift.a(this.senderName, (byte) -105)) {
+            GetTorqueDownshift.isFriend(this.senderName, (byte) -105)) {
             return 1;
           }
           if (param0 == 1) {

@@ -23,8 +23,8 @@ final class HelloCommand extends ConsoleCommand {
         try {
           try {
             var9 = GammaCorrection.canvas.getGraphics();
-            if (null == GetPhasedEnergyBeamPulsetime.field_p) {
-              GetPhasedEnergyBeamPulsetime.field_p = new java.awt.Font("Helvetica", 1, 13);
+            if (null == GetPhasedEnergyBeamPulsetime.loadingBarFont) {
+              GetPhasedEnergyBeamPulsetime.loadingBarFont = new java.awt.Font("Helvetica", 1, 13);
             }
             if (param3) {
               var9.setColor(java.awt.Color.black);
@@ -34,10 +34,10 @@ final class HelloCommand extends ConsoleCommand {
               param0 = new java.awt.Color(140, 17, 17);
             }
             try {
-              if (SetPhasedEnergyBeamAimspeed.field_p == null) {
-                SetPhasedEnergyBeamAimspeed.field_p = GammaCorrection.canvas.createImage(304, 34);
+              if (SetPhasedEnergyBeamAimspeed.loadingBarImage == null) {
+                SetPhasedEnergyBeamAimspeed.loadingBarImage = GammaCorrection.canvas.createImage(304, 34);
               }
-              var10 = SetPhasedEnergyBeamAimspeed.field_p.getGraphics();
+              var10 = SetPhasedEnergyBeamAimspeed.loadingBarImage.getGraphics();
               var10.setColor(param0);
               var10.drawRect(0, 0, 303, 33);
               var10.fillRect(2, 2, 3 * param2, 30);
@@ -47,10 +47,10 @@ final class HelloCommand extends ConsoleCommand {
               }
               var10.drawRect(1, 1, 301, 31);
               var10.fillRect(2 + param2 * 3, 2, 300 - 3 * param2, 30);
-              var10.setFont(GetPhasedEnergyBeamPulsetime.field_p);
+              var10.setFont(GetPhasedEnergyBeamPulsetime.loadingBarFont);
               var10.setColor(java.awt.Color.white);
               var10.drawString(param4, (-(6 * param4.length()) + 304) / 2, 22);
-              var9.drawImage(SetPhasedEnergyBeamAimspeed.field_p, -152 + GetDebrisSurvives.field_p / 2, SetPointDefenceLaserReload.field_p / 2 - 18, (java.awt.image.ImageObserver) null);
+              var9.drawImage(SetPhasedEnergyBeamAimspeed.loadingBarImage, -152 + GetDebrisSurvives.field_p / 2, SetPointDefenceLaserReload.field_p / 2 - 18, (java.awt.image.ImageObserver) null);
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var6 = (Exception) (Object) decompiledCaughtException;
@@ -62,14 +62,14 @@ final class HelloCommand extends ConsoleCommand {
               var9.setColor(java.awt.Color.black);
               var9.drawRect(1 + var7, 1 + var8, 301, 31);
               var9.fillRect(param2 * 3 + var7 + 2, 2 + var8, -(param2 * 3) + 300, 30);
-              var9.setFont(GetPhasedEnergyBeamPulsetime.field_p);
+              var9.setFont(GetPhasedEnergyBeamPulsetime.loadingBarFont);
               var9.setColor(java.awt.Color.white);
               var9.drawString(param4, (-(param4.length() * 6) + 304) / 2 + var7, var8 + 22);
             }
             if (null == SetMissileLauncherEnergyUsed.field_r) {
               return;
             }
-            var9.setFont(GetPhasedEnergyBeamPulsetime.field_p);
+            var9.setFont(GetPhasedEnergyBeamPulsetime.loadingBarFont);
             var9.setColor(java.awt.Color.white);
             var9.drawString(SetMissileLauncherEnergyUsed.field_r, GetDebrisSurvives.field_p / 2 - SetMissileLauncherEnergyUsed.field_r.length() * 6 / 2, SetPointDefenceLaserReload.field_p / 2 - 26);
             return;

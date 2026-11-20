@@ -4,13 +4,13 @@
 final class SetMassDriverProjectileLife extends ConsoleCommand {
     static String field_o;
 
-    final static void a(int param0, byte param1, int param2, int param3, int param4, int param5) {
+    final static void drawToolkitLine(int param0, byte param1, int param2, int param3, int param4, int param5) {
         if (param5 != param3) {
           GetDebrisGroupColour.field_r.drawLineTo(param5, 1, param0, param4, param3, param2);
           if (param1 > 1) {
             return;
           }
-          SetMassDriverProjectileLife.a(59, (byte) -18, 107, 110, 95, -108);
+          SetMassDriverProjectileLife.drawToolkitLine(59, (byte) -18, 107, 110, 95, -108);
           return;
         }
         if (param2 != param4) {
@@ -18,7 +18,7 @@ final class SetMassDriverProjectileLife extends ConsoleCommand {
           if (param1 > 1) {
             return;
           }
-          SetMassDriverProjectileLife.a(59, (byte) -18, 107, 110, 95, -108);
+          SetMassDriverProjectileLife.drawToolkitLine(59, (byte) -18, 107, 110, 95, -108);
           return;
         }
         param5++;
@@ -26,7 +26,7 @@ final class SetMassDriverProjectileLife extends ConsoleCommand {
         if (param1 > 1) {
           return;
         }
-        SetMassDriverProjectileLife.a(59, (byte) -18, 107, 110, 95, -108);
+        SetMassDriverProjectileLife.drawToolkitLine(59, (byte) -18, 107, 110, 95, -108);
     }
 
     public static void clearSharedReferences(byte param0) {
@@ -68,7 +68,7 @@ final class SetMassDriverProjectileLife extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean a(int param0) {
+    final static boolean isGameFocused(int param0) {
         if (param0 != 0) {
           field_o = (String) null;
           return EmailAvailabilityChecks.fullscreenCanvas != null ? true : SetReverbDamp.field_o;

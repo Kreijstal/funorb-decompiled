@@ -726,7 +726,7 @@ final class MissionState implements DiffableState {
         if (param0 != 1) {
           return true;
         }
-        stackIn_6_0 = (this.hasNextRound(24416)) && (GetTorqueDownshift.a(this.getVotedObjective(param0 + 6471), 103) > 1);
+        stackIn_6_0 = (this.hasNextRound(24416)) && (GetTorqueDownshift.getObjectiveRoundCount(this.getVotedObjective(param0 + 6471), 103) > 1);
         return stackIn_6_0;
     }
 
@@ -934,7 +934,7 @@ final class MissionState implements DiffableState {
         this.nextround = new MissionGenerationData();
         this.nextround.missionGenerationSeed = param0;
         this.nextround.votedObjective = param2;
-        this.nextround.roundsLeft = GetTorqueDownshift.a(param2, param1 ^ 57);
+        this.nextround.roundsLeft = GetTorqueDownshift.getObjectiveRoundCount(param2, param1 ^ 57);
         this.currentMatch = new MatchResults();
     }
 

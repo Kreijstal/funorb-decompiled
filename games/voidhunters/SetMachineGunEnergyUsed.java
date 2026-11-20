@@ -66,7 +66,7 @@ final class SetMachineGunEnergyUsed extends ConsoleCommand {
         int var0_intLifetime1;
         int var0_intLifetime2;
         int var0_intLifetime3;
-        SetLag.a(105, 50);
+        SetLag.setMenuCarouselTickRate(105, 50);
         field_o = new boolean[112];
         field_q = new int[128];
         for (var0_int = 0; field_q.length > var0_int; var0_int++) {

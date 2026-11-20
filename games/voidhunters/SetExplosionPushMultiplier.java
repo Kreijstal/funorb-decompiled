@@ -59,7 +59,7 @@ final class SetExplosionPushMultiplier extends ConsoleCommand {
             stackIn_17_0 = GetBombletSprayAimarc.field_o;
             return stackIn_17_0;
           }
-          if (GetTorqueDownshift.a(param1, (byte) -93)) {
+          if (GetTorqueDownshift.isFriend(param1, (byte) -93)) {
             stackIn_21_0 = SetReverbGain.a(GetLaserAimarc.field_r, new String[]{param1}, 76);
             return stackIn_21_0;
           }

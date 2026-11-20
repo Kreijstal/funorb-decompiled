@@ -28,7 +28,7 @@ final class SetMutatorVotes extends ConsoleCommand {
           if (param0 != -1321004447) {
             field_o = (int[]) null;
           }
-          LoopingSound.field_m = -(LoginFormNavigation.field_b >> 1) + SetDebrisPartitioned.field_r;
+          LoopingSound.field_m = -(LoginFormNavigation.menuHeight >> 1) + SetDebrisPartitioned.field_r;
           GetMissionTerrainAsteroidProbability.field_p = ShieldBehaviour.field_d + var1_int;
           var2 = LoopingSound.field_m;
           for (var3 = 0; var3 < GetWorldWidthUpshift.field_o.length; var3++) {

@@ -2517,7 +2517,7 @@ final class OpenGlFaceAttachmentState {
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("keychar_the_character_under_questionmark", 23100);
                 if (resourceBytes != null) {
-                  StripedProgressBar.field_B = GetMassDriverEnergyUsed.a(resourceBytes[0], 76);
+                  StripedProgressBar.field_B = GetMassDriverEnergyUsed.decodeCp1252Byte(resourceBytes[0], 76);
                 }
                 resourceBytes = NetworkGameClient.loadNamedResource("rating_noratings", 23100);
                 if (resourceBytes != null) {

@@ -5,7 +5,7 @@ final class SetDetachmentMode extends ConsoleCommand {
     static int field_p;
     static int field_o;
 
-    final static boolean a(boolean param0, byte param1, CharSequence param2) {
+    final static boolean isValidBasicPlayerName(boolean param0, byte param1, CharSequence param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;

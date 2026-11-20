@@ -2137,7 +2137,7 @@ final class MissionBuilder implements DiffableState {
                   if (-1 != param3) {
                     stackIn_74_0 = (var11 != (255 & SetSpinningBladeSpindamageMultiplier.field_o.field_Pb[param3])) ? 0 : 1;
                   } else {
-                    stackIn_74_0 = (SetMutatorVotes.field_o[var11] != SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) ? 0 : 1;
+                    stackIn_74_0 = (SetMutatorVotes.field_o[var11] != SetSpinningBladeSpindamageMultiplier.field_o.maxPlayers) ? 0 : 1;
                   }
                   var12 = stackIn_74_0;
                 }
@@ -2709,20 +2709,20 @@ final class MissionBuilder implements DiffableState {
                 var34 = var7[(var40 + 3) % var7.length];
                 var35 = var40 >> 1;
                 if (var39 == 1) {
-                  var50 = SetMinimapWidth.a((int[]) (var29), var31Lifetime1, (byte) -96);
-                  var29 = SetMinimapWidth.a(var50, var32Lifetime1, (byte) -114);
+                  var50 = SetMinimapWidth.appendInt((int[]) (var29), var31Lifetime1, (byte) -96);
+                  var29 = SetMinimapWidth.appendInt(var50, var32Lifetime1, (byte) -114);
                 } else {
-                  var49 = SetMinimapWidth.a((int[]) (var28), var31Lifetime1, (byte) -102);
-                  var28 = SetMinimapWidth.a(var49, var32Lifetime1, (byte) -118);
+                  var49 = SetMinimapWidth.appendInt((int[]) (var28), var31Lifetime1, (byte) -102);
+                  var28 = SetMinimapWidth.appendInt(var49, var32Lifetime1, (byte) -118);
                 }
                 if (var39 < 2 &&
                   var35 == var25[var39]) {
                   var36 = ((-var31Lifetime1 + var33) * var48[var39] >> 8) + var31Lifetime1;
                   var37 = (var48[var39] * (-var32Lifetime1 + var34) >> 8) + var32Lifetime1;
-                  var51 = SetMinimapWidth.a((int[]) (var28), var36, (byte) -113);
-                  var28 = SetMinimapWidth.a(var51, var37, (byte) -104);
-                  var52 = SetMinimapWidth.a((int[]) (var29), var36, (byte) -113);
-                  var29 = SetMinimapWidth.a(var52, var37, (byte) -126);
+                  var51 = SetMinimapWidth.appendInt((int[]) (var28), var36, (byte) -113);
+                  var28 = SetMinimapWidth.appendInt(var51, var37, (byte) -104);
+                  var52 = SetMinimapWidth.appendInt((int[]) (var29), var36, (byte) -113);
+                  var29 = SetMinimapWidth.appendInt(var52, var37, (byte) -126);
                   var39++;
                 }
                 var40 += 2;

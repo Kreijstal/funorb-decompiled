@@ -286,7 +286,7 @@ final class PartitionZone implements DiffableState, SpatialStateMarker, Sortable
         if (param1 != -13251) {
           this.collectUniqueIds(-116, 102, -62);
         }
-        this.ids = AwardVictoryToTeamActionFactory.a(true, this.ids, param0, param1 + 42100, true);
+        this.ids = AwardVictoryToTeamActionFactory.addIntArrayValue(true, this.ids, param0, param1 + 42100, true);
         this.markChanged((byte) -77);
     }
 

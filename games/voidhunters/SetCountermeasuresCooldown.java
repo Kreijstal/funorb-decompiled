@@ -32,7 +32,7 @@ final class SetCountermeasuresCooldown extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1, int param2, BitmapFont param3, int param4, Sprite[] param5, int param6, int param7, int param8, int param9, int param10, Sprite[] param11, int param12, int param13, BitmapFont param14, int param15, int param16, int param17, int param18, Sprite[] param19) {
+    final static void configureMenuTheme(int param0, int param1, int param2, BitmapFont param3, int param4, Sprite[] param5, int param6, int param7, int param8, int param9, int param10, Sprite[] param11, int param12, int param13, BitmapFont param14, int param15, int param16, int param17, int param18, Sprite[] param19) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -47,7 +47,7 @@ final class SetCountermeasuresCooldown extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var20 = null;
         try {
-          VertexStreamLayout.a(param14, param0, param9, param2, param16, param10, param13, param7, param3, new NineSliceSprite(param19), param8, param18, new NineSliceSprite(param5), param15, param6, param12, -92, param1, new NineSliceSprite(param11), param4);
+          VertexStreamLayout.configureMenuTheme(param14, param0, param9, param2, param16, param10, param13, param7, param3, new NineSliceSprite(param19), param8, param18, new NineSliceSprite(param5), param15, param6, param12, -92, param1, new NineSliceSprite(param11), param4);
           if (param17 < 80) {
             field_o = (int[]) null;
           }

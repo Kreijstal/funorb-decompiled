@@ -20,7 +20,7 @@ final class SetLaserRandomness extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            SetLaserRandomness.a((byte) -45, -12);
+            SetLaserRandomness.sortAndLimitScoreIndices((byte) -45, -12);
           }
           SetMachineGunEnergyUsed.a(74, 62, arguments[0].intValue(118));
           stackIn_3_0 = new ConsoleValue("void");
@@ -42,11 +42,11 @@ final class SetLaserRandomness extends ConsoleCommand {
     public static void clearSharedReferences(boolean param0) {
         field_r = null;
         if (!param0) {
-          SetLaserRandomness.a(-19, -41, true, 117, -123, 114, 51);
+          SetLaserRandomness.updateChatInputDialog(-19, -41, true, 117, -123, 114, 51);
         }
     }
 
-    final static void a(byte param0, int param1) {
+    final static void sortAndLimitScoreIndices(byte param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -73,7 +73,7 @@ final class SetLaserRandomness extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
+    final static void updateChatInputDialog(int param0, int param1, boolean param2, int param3, int param4, int param5, int param6) {
         String var7 = null;
         int var8 = 105 / ((27 - param1) / 52);
         if (NetworkMessageState.chatChannel == 2) {

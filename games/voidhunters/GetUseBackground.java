@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetUseBackground extends ConsoleCommand {
-    final static boolean a(CharSequence param0, int param1) {
+    final static boolean isValidBasicPlayerName(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -11,7 +11,7 @@ final class GetUseBackground extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 0) {
-            stackIn_4_0 = SetDetachmentMode.a(false, (byte) 100, param0);
+            stackIn_4_0 = SetDetachmentMode.isValidBasicPlayerName(false, (byte) 100, param0);
             return stackIn_4_0;
           }
           return false;
@@ -29,7 +29,7 @@ final class GetUseBackground extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0) {
+    final static void updateLobbyPanelAnimations(int param0) {
         int var2;
         var2 = VoidHunters.field_G;
         if (0 < SoftwareTransform3D.field_b) {

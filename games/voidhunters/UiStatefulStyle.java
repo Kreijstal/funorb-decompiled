@@ -58,12 +58,12 @@ final class UiStatefulStyle extends UiTextStyle {
     }
 
     final static void c(int param0) {
-        IsaacPacketBuffer var2 = UiViewport.field_w;
+        IsaacPacketBuffer var2 = UiViewport.serializedStateBuffer;
         IsaacPacketBuffer var1 = var2;
-        UiViewport.field_w = OpenGlSpriteTexture.field_q;
+        UiViewport.serializedStateBuffer = OpenGlSpriteTexture.field_q;
         OpenGlSpriteTexture.field_q = var2;
-        if (null == UiViewport.field_w) {
-          UiViewport.field_w = new IsaacPacketBuffer(1048576);
+        if (null == UiViewport.serializedStateBuffer) {
+          UiViewport.serializedStateBuffer = new IsaacPacketBuffer(1048576);
         }
         if (param0 != 9487) {
           field_p = (String) null;
@@ -220,7 +220,7 @@ final class UiStatefulStyle extends UiTextStyle {
         var6 = 13421772;
         if (OpenGlTexture1D.field_i) {
           var7 = 3;
-          SetBoostersCooldown.a(GetDebrisGroupColour.field_r, SetTorpedoEnergyUsed.getToolkitFont(var7, 300), PlayerReadyFactory.field_b[var7], -125, var6, GetBombletSprayEnergyUsed.field_p.width, GetUseDetailLines.field_o, var5, GetTorpedoReload.field_q, GetBombletSprayEnergyUsed.field_p.height);
+          SetBoostersCooldown.drawToolkitTooltip(GetDebrisGroupColour.field_r, SetTorpedoEnergyUsed.getToolkitFont(var7, 300), PlayerReadyFactory.field_b[var7], -125, var6, GetBombletSprayEnergyUsed.field_p.width, GetUseDetailLines.field_o, var5, GetTorpedoReload.field_q, GetBombletSprayEnergyUsed.field_p.height);
         }
     }
 

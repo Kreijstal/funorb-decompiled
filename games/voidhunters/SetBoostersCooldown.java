@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetBoostersCooldown extends ConsoleCommand {
-    final static ResourceArchive a(byte param0, int param1) {
+    final static ResourceArchive getOrCreateToolkitResourceArchive(byte param0, int param1) {
         int var2 = 59 / ((7 - param0) / 45);
         if (QuickChatHelpWindow.field_xb != null) {
           return QuickChatHelpWindow.field_xb;
@@ -17,7 +17,7 @@ final class SetBoostersCooldown extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(GraphicsToolkit param0, ToolkitFontMetrics param1, ToolkitFont param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void drawToolkitTooltip(GraphicsToolkit param0, ToolkitFontMetrics param1, ToolkitFont param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         if (param3 >= -123) {
           return;
         }
@@ -41,7 +41,7 @@ final class SetBoostersCooldown extends ConsoleCommand {
           SetMachineGunEnergyUsed.a(218, 62, arguments[0].intValue(109));
           if (obfuscationGuard > -119) {
             var4 = (ToolkitFont) null;
-            SetBoostersCooldown.a((GraphicsToolkit) null, (ToolkitFontMetrics) null, (ToolkitFont) null, 34, 113, 21, -90, -26, 89, -84);
+            SetBoostersCooldown.drawToolkitTooltip((GraphicsToolkit) null, (ToolkitFontMetrics) null, (ToolkitFont) null, 34, 113, 21, -90, -26, 89, -84);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

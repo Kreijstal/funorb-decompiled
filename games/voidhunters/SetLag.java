@@ -4,14 +4,14 @@
 final class SetLag extends ConsoleCommand {
     static int field_o;
 
-    final static void a(int param0, int param1) {
+    final static void setMenuCarouselTickRate(int param0, int param1) {
         SetMachineGunEnergyUsed.field_s = param1 * 400 / 150;
         SetMachineGunEnergyUsed.field_p = param1 * 100 / 150;
         int var2 = 98 / ((1 - param0) / 62);
         SetMachineGunEnergyUsed.field_r = (param1 << 16) / 150;
     }
 
-    final static void a(boolean param0, int param1, int param2, int param3, GameStateFactory param4, int param5, GameStateFactory param6, int param7, int param8, int param9, int param10, int param11, GameStateFactory param12, int param13, byte param14) {
+    final static void configureCarouselProtocol(boolean param0, int param1, int param2, int param3, GameStateFactory param4, int param5, GameStateFactory param6, int param7, int param8, int param9, int param10, int param11, GameStateFactory param12, int param13, byte param14) {
         try {
           GetAngleset.field_o = param11;
           LruNodeCache.field_g = param8;

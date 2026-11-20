@@ -33,7 +33,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
           }
           if (NetworkMessageState.chatChannel == 2 &&
             !SetAutozoomAmountMultiply.isPrivateChatTargetAvailable(0)) {
-            if (GetTorqueDownshift.a(GetDebrisThrowable.privateChatTarget, (byte) -47)) {
+            if (GetTorqueDownshift.isFriend(GetDebrisThrowable.privateChatTarget, (byte) -47)) {
               var2 = SetReverbGain.a(BodyDestroyedCondition.field_d, new String[]{ChoosePlayerNameForm.privateChatTargetDisplayName}, 78);
               if (var10 != 0) {
                 var2 = SetReverbGain.a(GraphicsToolkitSelector.field_b, new String[]{ChoosePlayerNameForm.privateChatTargetDisplayName}, 114);

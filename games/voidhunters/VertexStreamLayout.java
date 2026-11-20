@@ -28,13 +28,13 @@ final class VertexStreamLayout {
     private final int getAttributeId(int param0, int param1) {
         if (param0 != 15) {
           NineSliceSprite var4 = (NineSliceSprite) null;
-          VertexStreamLayout.a((BitmapFont) null, 36, 72, 17, 121, -94, -120, 88, (BitmapFont) null, (NineSliceSprite) null, 76, 114, (NineSliceSprite) null, 55, -78, 123, -51, -27, (NineSliceSprite) null, -111);
+          VertexStreamLayout.configureMenuTheme((BitmapFont) null, 36, 72, 17, 121, -94, -120, 88, (BitmapFont) null, (NineSliceSprite) null, 76, 114, (NineSliceSprite) null, 55, -78, 123, -51, -27, (NineSliceSprite) null, -111);
           return 15 & (int)(this.packedAttributes >> param1 * VertexAttribute.field_m);
         }
         return 15 & (int)(this.packedAttributes >> param1 * VertexAttribute.field_m);
     }
 
-    final static void a(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, BitmapFont param8, NineSliceSprite param9, int param10, int param11, NineSliceSprite param12, int param13, int param14, int param15, int param16, int param17, NineSliceSprite param18, int param19) {
+    final static void configureMenuTheme(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, BitmapFont param8, NineSliceSprite param9, int param10, int param11, NineSliceSprite param12, int param13, int param14, int param15, int param16, int param17, NineSliceSprite param18, int param19) {
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;

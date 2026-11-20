@@ -15,7 +15,7 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
         if (param0 < 9) {
           SetSalvoDamageMultiplier.clearSharedReferences(24);
         }
-        stackIn_6_0 = (SetMassDriverProjectileLife.a(0)) && ((SetMinimapWidth.field_o & 8) == 0);
+        stackIn_6_0 = (SetMassDriverProjectileLife.isGameFocused(0)) && ((SetMinimapWidth.field_o & 8) == 0);
         return stackIn_6_0;
     }
 

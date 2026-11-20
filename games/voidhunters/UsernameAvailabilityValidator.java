@@ -25,7 +25,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!GetUseBackground.a(var4, 0)) {
+          if (!GetUseBackground.isValidBasicPlayerName(var4, 0)) {
             stackIn_3_0 = SetArmageddonLength.invalidInput;
             return stackIn_3_0;
           }

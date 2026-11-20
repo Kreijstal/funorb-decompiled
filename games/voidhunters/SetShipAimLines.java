@@ -38,9 +38,9 @@ final class SetShipAimLines extends ConsoleCommand {
         var10 = VoidHunters.field_G;
         try {
           if (param2) {
-            param1.field_zb = param3.readUnsignedByte((byte) -114);
+            param1.playerCount = param3.readUnsignedByte((byte) -114);
           }
-          param1.field_Fb = param3.readUnsignedByte((byte) -109);
+          param1.maxPlayers = param3.readUnsignedByte((byte) -109);
           param1.field_Cb = param3.readUnsignedByte((byte) -120);
           var4_int = param3.readUnsignedByte((byte) -113);
           stackIn_5_0 = (LobbyGameEntry) (param1);
@@ -57,7 +57,7 @@ final class SetShipAimLines extends ConsoleCommand {
           }
           stackIn_11_0.field_Bb = stackIn_12_1;
           stackIn_15_0 = (LobbyGameEntry) (param1);
-          stackIn_16_1 = (param1.field_Xb) && (param1.field_zb < param1.field_Fb);
+          stackIn_16_1 = (param1.field_Xb) && (param1.playerCount < param1.maxPlayers);
           stackIn_15_0.field_cc = stackIn_16_1;
           stackIn_18_0 = (LobbyGameEntry) (param1);
           stackIn_19_1 = ((64 & var4_int) != 0);
@@ -83,8 +83,8 @@ final class SetShipAimLines extends ConsoleCommand {
           param1.field_Vb = param3.readString(-1);
           if (var6 != 0) {
             param3.position = var8;
-            param1.field_Ib = new String[param1.field_zb];
-            for (var9 = 0; var9 < param1.field_zb; var9++) {
+            param1.field_Ib = new String[param1.playerCount];
+            for (var9 = 0; var9 < param1.playerCount; var9++) {
               param1.field_Ib[var9] = param3.readString(-1);
             }
             return;

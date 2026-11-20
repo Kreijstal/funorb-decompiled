@@ -25,7 +25,7 @@ final class GetBoostersCooldown extends ConsoleCommand {
           var3 = -66 / ((param1 + 62) / 62);
           var2_int = TextHotspotRegion.randomBoundedInt(param0, OpenGlGpuRectangleTexture.field_m, 123);
           for (var4 = 0; var4 < 56; var4++) {
-            if (SetMassDriverAimarc.a(130, var4)) {
+            if (SetMassDriverAimarc.isSpawnableShipChassis(130, var4)) {
               if (var2_int == 0) {
                 stackIn_9_0 = var4;
                 return stackIn_9_0;

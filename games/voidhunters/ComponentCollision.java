@@ -88,7 +88,7 @@ final class ComponentCollision extends IntrusiveNode {
               GetWeaponParticleSpeedDownshift.field_q.text = GetLaserEnergyUsed.field_p.toUpperCase();
               var9 = (2 + ThreeSliceButtonStyle.field_r.width) / 2;
               LobbyInviteControls.inviteButton.setBounds(0, 116, -2 + var9, ThreeSliceButtonStyle.field_r.height - 40, 40);
-              if (SetSpinningBladeSpindamageMultiplier.field_o.field_Fb <= SetSpinningBladeSpindamageMultiplier.field_o.field_zb) {
+              if (SetSpinningBladeSpindamageMultiplier.field_o.maxPlayers <= SetSpinningBladeSpindamageMultiplier.field_o.playerCount) {
                 LobbyInviteControls.inviteButton.text = SetPhasedEnergyBeamPulsetime.field_q.toUpperCase();
                 LobbyInviteControls.inviteButton.enabled = false;
               } else {
@@ -160,9 +160,9 @@ final class ComponentCollision extends IntrusiveNode {
                             }
                           } else {
                             if (var10 == 0) {
-                              stackIn_38_0 = SetSpinningBladeSpindamageMultiplier.field_o.field_Fb;
+                              stackIn_38_0 = SetSpinningBladeSpindamageMultiplier.field_o.maxPlayers;
                             } else {
-                              stackIn_38_0 = SetSpinningBladeSpindamageMultiplier.field_o.field_zb;
+                              stackIn_38_0 = SetSpinningBladeSpindamageMultiplier.field_o.playerCount;
                             }
                             var17_int = stackIn_38_0;
                             if (var17_int != var16) {
@@ -335,7 +335,7 @@ final class ComponentCollision extends IntrusiveNode {
               }
               var8.text = SetReverbGain.a(SetPhasedEnergyBeamEnergyUsed.field_o, new String[]{Integer.toString(var9)}, 79);
             }
-            SetPhasedEnergyBeamPulsetime.field_o.text = SetReverbGain.a(GetArmageddonLength.field_o, new String[]{Integer.toString(SetSpinningBladeSpindamageMultiplier.field_o.field_zb), Integer.toString(SetSpinningBladeSpindamageMultiplier.field_o.field_Fb)}, 124);
+            SetPhasedEnergyBeamPulsetime.field_o.text = SetReverbGain.a(GetArmageddonLength.field_o, new String[]{Integer.toString(SetSpinningBladeSpindamageMultiplier.field_o.playerCount), Integer.toString(SetSpinningBladeSpindamageMultiplier.field_o.maxPlayers)}, 124);
           }
           if (param1 < 8) {
             ComponentCollision.a(-44, (byte) 40, true, false, true);

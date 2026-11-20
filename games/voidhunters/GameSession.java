@@ -376,7 +376,7 @@ final class GameSession {
             var4 = new ShipBlueprint();
             var4.description = var5;
             GetLaserRandomness.a((byte) 103, var4);
-            this.blueprintSizeBytes = IntrusiveNode.a((byte) -6).payload.length;
+            this.blueprintSizeBytes = IntrusiveNode.copySerializedStateBuffer((byte) -6).payload.length;
             if (this.blueprintSizeBytes <= 192) {
               this.blueprintSaveStatus = 0;
               if (TooltipDisplay.field_b == null) {
@@ -2490,7 +2490,7 @@ final class GameSession {
               var18Lifetime1 = var40.getVotedObjective(6472);
               var45 = SoftLruCache.field_a + "<col=01b5cc>" + ShipTeamCondition.field_f[var18Lifetime1] + "</col>";
               var19 = var45;
-              var20 = GetTorqueDownshift.a(var18Lifetime1, -58);
+              var20 = GetTorqueDownshift.getObjectiveRoundCount(var18Lifetime1, -58);
               if (var20 > 1) {
                 var19 = var45 + " (" + SetReverbGain.a(GameInterfaceText.roundTemplate, new String[]{Integer.toString(var20 - (var40.getRoundsLeft((byte) 28) - 1))}, 107) + ")";
               }
@@ -8185,7 +8185,7 @@ final class GameSession {
                 if (var18_intLifetime2 > 0 &&
                   var18_intLifetime2 < 60) {
                   var25 = TextureLineShape.sinAngle(128 * SetMinimapWidth.field_o, 96) >> 9;
-                  var24 = TextureRectangleShape.a((byte) 66, 16711680, var25, var24);
+                  var24 = TextureRectangleShape.blendColors((byte) 66, 16711680, var25, var24);
                 }
                 SetSelfDestructPrepareToggleCooldown.a(var20Lifetime1, -1, -MidiNote.a(var9, (byte) -121) + var22, var42, var9, var24, (byte) -117);
                 var10 = var10 + (var21 - 1);

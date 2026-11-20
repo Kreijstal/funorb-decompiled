@@ -8,7 +8,7 @@ final class DelayedPacket extends IntrusiveNode {
 
     final static void drawLine(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (OpenGlTexture1D.field_i) {
-          SetMassDriverProjectileLife.a(-16777216 | param5, (byte) 103, param3, param2, param0, param1);
+          SetMassDriverProjectileLife.drawToolkitLine(-16777216 | param5, (byte) 103, param3, param2, param0, param1);
           return;
         }
         SoftwareRasterizer2D.drawLine(param2, param3, param1, param0, param5);

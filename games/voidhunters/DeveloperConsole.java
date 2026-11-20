@@ -261,7 +261,7 @@ abstract class DeveloperConsole implements DeveloperConsoleMarker {
         if (param0 != 0) {
           field_q = (Widget) null;
         }
-        return SetBoostersCooldown.a((byte) 52, OneShotSound.field_e.id);
+        return SetBoostersCooldown.getOrCreateToolkitResourceArchive((byte) 52, OneShotSound.field_e.id);
     }
 
     private final Widget createCenterBackgroundWidget(int param0, int param1) {

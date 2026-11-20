@@ -45,19 +45,19 @@ final class SetTestActionLag extends ConsoleCommand {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          UiViewport.field_w.position = 0;
+          UiViewport.serializedStateBuffer.position = 0;
           if (param1 >= -5) {
             var3 = (SerializableGameState) null;
             SetTestActionLag.a((SerializableGameState) null, (byte) 16);
           }
-          UiViewport.field_w.beginBitWrite(-81);
+          UiViewport.serializedStateBuffer.beginBitWrite(-81);
           if (!(param0 instanceof CompactGameState)) {
-            param0.writeState(UiViewport.field_w, -111);
+            param0.writeState(UiViewport.serializedStateBuffer, -111);
           } else {
-            ((CompactGameState) ((Object) param0)).writeCompactState(UiViewport.field_w, (byte) -116);
+            ((CompactGameState) ((Object) param0)).writeCompactState(UiViewport.serializedStateBuffer, (byte) -116);
           }
-          UiViewport.field_w.endBitWrite(32712);
-          stackIn_6_0 = EmailAvailabilityChecks.crc32(UiViewport.field_w.payload, UiViewport.field_w.position, 0);
+          UiViewport.serializedStateBuffer.endBitWrite(32712);
+          stackIn_6_0 = EmailAvailabilityChecks.crc32(UiViewport.serializedStateBuffer.payload, UiViewport.serializedStateBuffer.position, 0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

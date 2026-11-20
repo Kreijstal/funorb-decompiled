@@ -130,7 +130,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
           this.votes = SetAutozoomSpeedDivide.a(param1, true, this.votes, (byte) -14);
           return;
         }
-        this.votes = SetMinimapWidth.a(this.votes, param1, (byte) -99);
+        this.votes = SetMinimapWidth.appendInt(this.votes, param1, (byte) -99);
         var6 = this.countVotesInRange(param3, param2 - 18161, param0);
         if (param4 < var6) {
           var7 = var6 - param4;

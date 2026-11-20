@@ -16,7 +16,7 @@ final class SetMassDriverAimarc extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            SetMassDriverAimarc.a((byte) 59, 88L);
+            SetMassDriverAimarc.formatGmtDate((byte) 59, 88L);
           }
           SetMachineGunEnergyUsed.a(130, 62, arguments[0].intValue(73));
           stackIn_3_0 = new ConsoleValue("void");
@@ -35,7 +35,7 @@ final class SetMassDriverAimarc extends ConsoleCommand {
         }
     }
 
-    final static String a(byte param0, long param1) {
+    final static String formatGmtDate(byte param0, long param1) {
         SetMissilesDamageSourceTeam.field_o.setTime(new Date(param1));
         int var3 = SetMissilesDamageSourceTeam.field_o.get(7);
         int var5 = -29 / ((-38 - param0) / 39);
@@ -53,7 +53,7 @@ final class SetMassDriverAimarc extends ConsoleCommand {
         int var1 = 32 / ((param0 - 67) / 55);
     }
 
-    final static boolean a(int param0, int param1) {
+    final static boolean isSpawnableShipChassis(int param0, int param1) {
         if (param0 != 130) {
           return true;
         }

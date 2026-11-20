@@ -240,7 +240,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                     if (var7 == null) {
                       var7 = new LobbyPlayerEntry(var25, var26, var3_longLifetime2);
                       SetUseDetailLines.field_p.put(var7, (byte) -76, var3_longLifetime2);
-                      SetSpinningBladeSpindamageMultiplier.field_o.field_zb = SetSpinningBladeSpindamageMultiplier.field_o.field_zb + 1;
+                      SetSpinningBladeSpindamageMultiplier.field_o.playerCount = SetSpinningBladeSpindamageMultiplier.field_o.playerCount + 1;
                     }
                     var7.field_Gb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
                     var8 = ((PacketBuffer) ((Object) var1)).readVarInt(11436);
@@ -265,7 +265,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                         var24.unlink(-3846);
                       }
                       var24.unlinkSecondary((byte) -35);
-                      SetSpinningBladeSpindamageMultiplier.field_o.field_zb = SetSpinningBladeSpindamageMultiplier.field_o.field_zb - 1;
+                      SetSpinningBladeSpindamageMultiplier.field_o.playerCount = SetSpinningBladeSpindamageMultiplier.field_o.playerCount - 1;
                     }
                     return;
                   }

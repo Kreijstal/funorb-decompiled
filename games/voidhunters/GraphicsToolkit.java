@@ -90,7 +90,7 @@ abstract class GraphicsToolkit {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param7 == 0) {
-            stackIn_3_0 = SetWorldWidthUpshift.a(param4, param0, 42, param5, param3);
+            stackIn_3_0 = SetWorldWidthUpshift.createSoftwareToolkit(param4, param0, 42, param5, param3);
             return stackIn_3_0;
           }
           if (param7 == 2) {

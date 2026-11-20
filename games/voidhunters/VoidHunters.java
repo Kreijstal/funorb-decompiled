@@ -107,7 +107,7 @@ public final class VoidHunters extends NetworkGameClient {
         if (param0 != -29130) {
           return;
         }
-        GetUseBackground.a(param0 + 29129);
+        GetUseBackground.updateLobbyPanelAnimations(param0 + 29129);
     }
 
     final static void updateChatInputDialog(int param0, int param1, int param2, int param3, String param4, int param5, boolean param6, boolean param7) {
@@ -199,7 +199,7 @@ public final class VoidHunters extends NetworkGameClient {
             !MatchingFieldValidator.field_g.networked) {
             SecondaryNodeQueue.field_b = 0;
             GetSniperCannonProjectiles.chatVisible = false;
-            SetDebrisSurvives.e((byte) -86);
+            SetDebrisSurvives.initializeChatInputDialog((byte) -86);
             return;
           }
           if (MatchingFieldValidator.field_g == null) {
@@ -371,7 +371,7 @@ public final class VoidHunters extends NetworkGameClient {
                 GetThrusterSmallForce.field_o = true;
                 PolarDisplacementTextureOperation.updateDrawMenuLabel(-19057);
                 VariableCondition.updateRematchMenuLabel(-126);
-                SetDebrisSurvives.e((byte) -76);
+                SetDebrisSurvives.initializeChatInputDialog((byte) -76);
               } else {
                 SetMissionTerrainDebrisProbability.field_p = true;
                 ProxyAuthenticationException.field_a = var8;
@@ -635,7 +635,7 @@ public final class VoidHunters extends NetworkGameClient {
         ScreenSizeController var5 = new ScreenSizeController(new GameCanvasResizeListener());
         var5.minimumMemoryMegabytes = 0;
         var5.resizable = false;
-        SetMissionTimeLimit.a(var5, 20);
+        SetMissionTimeLimit.setScreenSizeController(var5, 20);
         DebugRequestFactory.a((byte) 90, HardpointGeometry.serverPacketLengths, (NetworkGameClient) (this));
         SetNebulaProximityFadeDownshift.a(114, param0, false);
         FlipTextureOperation.field_l = new CarouselGameClient();
@@ -2288,7 +2288,7 @@ public final class VoidHunters extends NetworkGameClient {
             }
           }
           if (GetUseTriFill.a(77)) {
-            BuildBlueprintOrderDefinition.drawGameFrame(111, var10, SetMassDriverProjectileLife.a(0));
+            BuildBlueprintOrderDefinition.drawGameFrame(111, var10, SetMassDriverProjectileLife.isGameFocused(0));
             return;
           }
           if (!LegacyOpenGlEnvironmentReflectionEffect.field_e) {
@@ -2373,10 +2373,10 @@ public final class VoidHunters extends NetworkGameClient {
             RoundResult.field_e = true;
           } else {
             if (SoftwareFaceAttachment.isMessageBoxOpen(false)) {
-              IntrusiveNode.a((Sprite[]) null, 8, 0, (Sprite[]) null, (Sprite[]) null, 8555923, 0, 15658751, 15658751, SetMpSandboxEnemySpawnLimit.field_p, SoftwareRasterizer2D.height / 2, 0, 0, -14109, SoftwareRasterizer2D.width / 2);
+              IntrusiveNode.configureMenuTheme((Sprite[]) null, 8, 0, (Sprite[]) null, (Sprite[]) null, 8555923, 0, 15658751, 15658751, SetMpSandboxEnemySpawnLimit.field_p, SoftwareRasterizer2D.height / 2, 0, 0, -14109, SoftwareRasterizer2D.width / 2);
               var4_int = 16;
               var5_intLifetime2 = var4_int + SetUseNiceTrails.a(0);
-              var6 = var4_int + SetShieldsDirectionalArc.a(-22954);
+              var6 = var4_int + SetShieldsDirectionalArc.getMenuHeight(-22954);
               var7 = GetBombletSprayEnergyUsed.field_p.width / 2 - var5_intLifetime2 / 2;
               var8 = -(var6 / 2) + GetBombletSprayEnergyUsed.field_p.height / 2;
               BlackBoxRecording.drawPanelBackground((byte) -115, 255, var6, var7, var8 - 1, var5_intLifetime2);

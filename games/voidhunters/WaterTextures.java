@@ -125,7 +125,7 @@ final class WaterTextures {
             !this.toolkit.supportsTexture2DFormat(-10, SocketNetworkArchiveClient.field_o, GpuDataType.UNSIGNED_BYTE)) {
             return;
           }
-          MissionFactory.c((byte) 111);
+          MissionFactory.initializeNoiseVolumes((byte) 111);
           if (!this.usesVolumeTexture) {
             this.noiseFrames = new GpuTexture2D[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {

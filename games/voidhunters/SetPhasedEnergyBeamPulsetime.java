@@ -37,7 +37,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
             stackIn_11_0 = GetUsePolygonFill.field_o;
             return stackIn_11_0;
           }
-          if (GetTorqueDownshift.a(param0, (byte) -23)) {
+          if (GetTorqueDownshift.isFriend(param0, (byte) -23)) {
             stackIn_15_0 = SetReverbGain.a(AccountRequestPhase.field_b, new String[]{param0}, 73);
             return stackIn_15_0;
           }

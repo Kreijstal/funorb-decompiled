@@ -7,7 +7,7 @@ final class SetDebrisSurvives extends ConsoleCommand {
     public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 0) {
-          SetDebrisSurvives.e((byte) -59);
+          SetDebrisSurvives.initializeChatInputDialog((byte) -59);
         }
     }
 
@@ -39,7 +39,7 @@ final class SetDebrisSurvives extends ConsoleCommand {
         }
     }
 
-    final static void e(byte param0) {
+    final static void initializeChatInputDialog(byte param0) {
         if (param0 > -53) {
           field_o = (String) null;
         }
@@ -50,13 +50,13 @@ final class SetDebrisSurvives extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static Sprite a(int param0) {
+    final static Sprite buildDecodedSprite(int param0) {
         int var4_int = 0;
         int var5 = VoidHunters.field_G;
         int var1 = TypedStateArrayCopier.field_a[0] * SetMissionTerrainDebrisProbability.field_o[0];
         byte[] var2 = LiteralStrings.field_a[0];
         if (param0 >= -65) {
-          SetDebrisSurvives.e((byte) 85);
+          SetDebrisSurvives.initializeChatInputDialog((byte) 85);
         }
         int[] var3 = new int[var1];
         for (var4_int = 0; var4_int < var1; var4_int++) {

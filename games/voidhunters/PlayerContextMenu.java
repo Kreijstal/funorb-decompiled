@@ -389,7 +389,7 @@ final class PlayerContextMenu {
           if (var4 == null) {
             if (var7 != null &&
               SetSpinningBladeSpindamageMultiplier.field_o.field_Gb &&
-              SetSpinningBladeSpindamageMultiplier.field_o.field_zb < SetSpinningBladeSpindamageMultiplier.field_o.field_Fb) {
+              SetSpinningBladeSpindamageMultiplier.field_o.playerCount < SetSpinningBladeSpindamageMultiplier.field_o.maxPlayers) {
               if (!var7.field_Eb) {
                 if (param0 &&
                   var7.field_Fb) {

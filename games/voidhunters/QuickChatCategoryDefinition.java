@@ -98,7 +98,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
                 if (var6 == 0) {
                   stackIn_9_2 = (char)0;
                 } else {
-                  stackIn_9_2 = GetMassDriverEnergyUsed.a((byte) var6, param1 + 5);
+                  stackIn_9_2 = GetMassDriverEnergyUsed.decodeCp1252Byte((byte) var6, param1 + 5);
                 }
                 stackIn_8_0[stackIn_8_1] = stackIn_9_2;
               }
@@ -115,7 +115,7 @@ final class QuickChatCategoryDefinition extends DualLinkNode {
                   if (0 == var6) {
                     stackIn_16_2 = (char)0;
                   } else {
-                    stackIn_16_2 = GetMassDriverEnergyUsed.a((byte) var6, -120);
+                    stackIn_16_2 = GetMassDriverEnergyUsed.decodeCp1252Byte((byte) var6, -120);
                   }
                   stackIn_15_0[stackIn_15_1] = stackIn_16_2;
                 }

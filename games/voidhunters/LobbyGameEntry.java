@@ -23,8 +23,8 @@ final class LobbyGameEntry extends Widget {
     boolean field_Gb;
     int field_Bb;
     boolean field_ac;
-    int field_Fb;
-    int field_zb;
+    int maxPlayers;
+    int playerCount;
     Widget field_Sb;
     Widget field_Mb;
     Widget field_Ab;

@@ -4,7 +4,7 @@
 final class SetMinimapWidth extends ConsoleCommand {
     static int field_o;
 
-    final static int[] a(int[] param0, int param1, byte param2) {
+    final static int[] appendInt(int[] param0, int param1, byte param2) {
         RuntimeException var3 = null;
         int[] stackIn_2_0 = null;
         int[] stackIn_4_0 = null;
@@ -14,7 +14,7 @@ final class SetMinimapWidth extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 < -95) {
-            stackIn_4_0 = AwardVictoryToTeamActionFactory.a(false, param0, param1, 28849, false);
+            stackIn_4_0 = AwardVictoryToTeamActionFactory.addIntArrayValue(false, param0, param1, 28849, false);
             return stackIn_4_0;
           }
           stackIn_2_0 = (int[]) null;
@@ -33,7 +33,7 @@ final class SetMinimapWidth extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1, byte param2, int param3, int param4) {
+    final static void fillClippedHorizontalSpan(int param0, int param1, byte param2, int param3, int param4) {
         if (NebulaField.field_c <= param0 &&
           param0 <= EnvironmentReflectionGpuMaterialEffect.field_i) {
           param4 = IntrusiveNode.clamp(31123, OpenGlTexture3D.field_j, GetCountermeasureLauncherProjectiles.field_o, param4);

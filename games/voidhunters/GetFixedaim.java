@@ -985,7 +985,7 @@ final class GetFixedaim extends ConsoleCommand {
                                 } else {
                                     /* Inlined CFG state: 14. */
                                     {
-                                        if (SetMassDriverAimarc.a(130, var5)) {
+                                        if (SetMassDriverAimarc.isSpawnableShipChassis(130, var5)) {
                                             /* Inlined CFG state: 16. */
                                             {
                                                 OpenGlGpuRectangleTexture.field_m = OpenGlGpuRectangleTexture.field_m + 1;

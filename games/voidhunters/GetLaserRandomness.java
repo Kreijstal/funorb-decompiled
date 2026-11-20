@@ -42,10 +42,10 @@ final class GetLaserRandomness extends ConsoleCommand {
 
     final static void a(byte param0, SerializableGameState param1) {
         try {
-          UiViewport.field_w.position = 0;
-          UiViewport.field_w.beginBitWrite(-77);
-          param1.writeState(UiViewport.field_w, -117);
-          UiViewport.field_w.endBitWrite(32712);
+          UiViewport.serializedStateBuffer.position = 0;
+          UiViewport.serializedStateBuffer.beginBitWrite(-77);
+          param1.writeState(UiViewport.serializedStateBuffer, -117);
+          UiViewport.serializedStateBuffer.endBitWrite(32712);
           int var2_int = 1 % ((param0 - 38) / 57);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "bo.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
