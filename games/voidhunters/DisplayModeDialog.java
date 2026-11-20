@@ -223,7 +223,7 @@ final class DisplayModeDialog extends ResizableModalPanel implements UiActionLis
           }
           stackIn_31_1 = !(this.displayModes.length <= 0);
           this.hasDisplayModes = stackIn_31_1;
-          stackIn_34_0 = (!Particle.c((byte) 114)) ? 0 : 1;
+          stackIn_34_0 = (!Particle.canResizeGameWindow((byte) 114)) ? 0 : 1;
           var2_intLifetime1 = stackIn_34_0;
           stackIn_37_0 = (var2_intLifetime1 == 0) ? 2 : 3;
           var3Lifetime1 = stackIn_37_0;

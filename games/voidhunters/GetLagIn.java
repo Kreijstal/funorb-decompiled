@@ -31,7 +31,7 @@ final class GetLagIn extends ConsoleCommand {
         }
     }
 
-    final static int a(int param0, int param1, Object param2) {
+    final static int getIntegerPreference(int param0, int param1, Object param2) {
         Object var3 = null;
         RuntimeException var3_ref = null;
         int stackIn_2_0 = 0;

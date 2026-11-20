@@ -235,7 +235,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (1 == UiDraggableContainer.field_z) {
           if (0 != SetGrapplingHookAimarc.field_p) {
-            ppb.field_a = MissionBuilder.a(1, GrappleLauncherBehaviour.field_f);
+            ppb.field_a = MissionBuilder.createArchive(1, GrappleLauncherBehaviour.field_f);
           }
           btb.field_b = SetDebrisFoundInPairs.a(1, GetShieldsDirectionalArc.field_p, 106, true, false);
           GetSalvoUsesAllEnergy.field_o = SetDebrisFoundInPairs.a(1, SetFighterRepairAmount.field_p, 97, true, false);
@@ -293,7 +293,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (10 == UiDraggableContainer.field_z) {
           if (0 != SetGrapplingHookAimarc.field_p) {
-            OpenGlVertexBuffer.field_j = MissionBuilder.a(1, GetFullMissionSet.field_o);
+            OpenGlVertexBuffer.field_j = MissionBuilder.createArchive(1, GetFullMissionSet.field_o);
           }
           UiDraggableContainer.field_z = 11;
         }

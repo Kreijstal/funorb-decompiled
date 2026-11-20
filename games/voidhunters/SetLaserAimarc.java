@@ -7,7 +7,7 @@ final class SetLaserAimarc extends ConsoleCommand {
     static int[] field_p;
     static int field_o;
 
-    final static void a(int param0) {
+    final static void savePreferences(int param0) {
         File var1_ref = null;
         if (null == TorpedoWeaponDefinition.field_e) {
           return;

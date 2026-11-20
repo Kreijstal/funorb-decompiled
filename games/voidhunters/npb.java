@@ -179,7 +179,7 @@ final class npb {
             if (var5_int < 64) {
               GetBombletSprayProjectileDamage.a(15, 0, (byte) -53);
             }
-            if (param1.world.b(param3.getId(false), -71)) {
+            if (param1.world.hasHomingProjectileTargeting(param3.getId(false), -71)) {
               GetBombletSprayProjectileDamage.a(86, 0, (byte) -109);
             }
           }

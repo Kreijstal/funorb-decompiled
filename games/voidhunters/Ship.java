@@ -592,7 +592,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
                 if (0 == var15) {
                   var15 = 1;
                 }
-                param0.a(5, var12.finaly, var12.finalx, 1000, 11184895, var15, 5);
+                param0.spawnParticles(5, var12.finaly, var12.finalx, 1000, 11184895, var15, 5);
                 var10 = 1;
               }
             }

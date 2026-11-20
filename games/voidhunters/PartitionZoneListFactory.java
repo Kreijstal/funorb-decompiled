@@ -201,7 +201,7 @@ final class PartitionZoneListFactory implements GameStateFactory {
                   var10 = var9.label;
                   var4_int = GetReloadBarWidth.field_o[var10];
                   if (var13.getParameter(1, -126) < 0) {
-                    var4_int = GpuSprite.b(21957, var4_int);
+                    var4_int = GpuSprite.swapTeamId(21957, var4_int);
                   }
                 }
               } else {

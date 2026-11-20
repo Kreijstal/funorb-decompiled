@@ -198,14 +198,14 @@ public final class VoidHunters extends NetworkGameClient {
           if (MatchingFieldValidator.field_g != null &&
             !MatchingFieldValidator.field_g.networked) {
             SecondaryNodeQueue.field_b = 0;
-            GetSniperCannonProjectiles.field_p = false;
+            GetSniperCannonProjectiles.chatVisible = false;
             SetDebrisSurvives.e((byte) -86);
             return;
           }
           if (MatchingFieldValidator.field_g == null) {
             ColorKeyScaleTextureOperation.d(param1 ^ 991426336);
             AgeValidator.field_f = -2;
-            GetSniperCannonProjectiles.field_p = true;
+            GetSniperCannonProjectiles.chatVisible = true;
             HardpointDefinition.a(true);
             decompiledFrameRemainder0 = false;
           }
@@ -256,14 +256,14 @@ public final class VoidHunters extends NetworkGameClient {
                   GetThrusterSmallForce.field_o = false;
                 }
                 if (GetThrusterSmallForce.field_o) {
-                  MatchingFieldValidator.field_g.a(false, -10510);
+                  MatchingFieldValidator.field_g.saveHintsAndOpenMainMenu(false, -10510);
                 }
                 GetMessageFadetime.field_o = false;
                 GetThrusterSmallForce.field_o = false;
                 AgeValidator.field_f = -2;
                 SetMissionTerrainDebrisProbability.field_p = false;
                 aeb.field_a = true;
-                GetSniperCannonProjectiles.field_p = true;
+                GetSniperCannonProjectiles.chatVisible = true;
                 HardpointDefinition.a(true);
               }
               FlipTextureOperation.field_l.handleGameStopped(true);
@@ -365,7 +365,7 @@ public final class VoidHunters extends NetworkGameClient {
             var3Lifetime1 = var8;
             if (var8 != null) {
               GpuSprite.field_e = false;
-              GetSniperCannonProjectiles.field_p = false;
+              GetSniperCannonProjectiles.chatVisible = false;
               if (param0 == 57) {
                 MatchingFieldValidator.field_g = (GameSession) (var3Lifetime1);
                 GetThrusterSmallForce.field_o = true;
@@ -490,7 +490,7 @@ public final class VoidHunters extends NetworkGameClient {
           this.handleServerPacket(var3Lifetime1, 12);
         }
         SetReverbWidth.a(0, -29008);
-        if (GetSniperCannonProjectiles.field_p) {
+        if (GetSniperCannonProjectiles.chatVisible) {
         }
         if (null != FlipTextureOperation.field_l &&
           !GetThrusterSmallForce.field_o &&
@@ -648,11 +648,11 @@ public final class VoidHunters extends NetworkGameClient {
         ncb.field_a = GetPointDefenceLaserAimspeed.field_o;
         if (UiDraggableContainer.field_E) {
           GetGrapplingHooksDamageableBySourcePlayer.e((byte) -120);
-          GetMissileLauncherProjectileLife.graphicsQuality = GetLagIn.a(GetMissileLauncherProjectileLife.graphicsQuality, 68, "graphics_quality");
+          GetMissileLauncherProjectileLife.graphicsQuality = GetLagIn.getIntegerPreference(GetMissileLauncherProjectileLife.graphicsQuality, 68, "graphics_quality");
           PopupMenuWidget.applyGraphicsQualityPreset(false);
-          LoopingSound.setSoundEffectVolume(GetLagIn.a(kt.soundEffectVolume, 93, "fx_volume"), -13205);
-          BitmapTextLayout.setMusicVolume(GetLagIn.a(GetMutatorVotes.field_p, 21, "music_volume"), (byte) -99);
-          GetMassDriverProjectiles.field_q = GetLagIn.a(GetMassDriverProjectiles.field_q, 36, "graphics_mode");
+          LoopingSound.setSoundEffectVolume(GetLagIn.getIntegerPreference(kt.soundEffectVolume, 93, "fx_volume"), -13205);
+          BitmapTextLayout.setMusicVolume(GetLagIn.getIntegerPreference(GetMutatorVotes.field_p, 21, "music_volume"), (byte) -99);
+          GetMassDriverProjectiles.field_q = GetLagIn.getIntegerPreference(GetMassDriverProjectiles.field_q, 36, "graphics_mode");
         }
     }
 
@@ -1963,7 +1963,7 @@ public final class VoidHunters extends NetworkGameClient {
             var5 == 0 && ((psb.field_b != null ||
             SetReverbDamp.field_o) &&
             (!MatchingFieldValidator.field_g.networked ||
-            !GetSniperCannonProjectiles.field_p &&
+            !GetSniperCannonProjectiles.chatVisible &&
             !SetFightersPerPlayerMaximum.field_p))) {
             stackIn_32_0 = 1;
             decompiledFrameRemainder0 = false;
@@ -2008,7 +2008,7 @@ public final class VoidHunters extends NetworkGameClient {
                       if (stackIn_48_0) {
                         continue;
                       }
-                      MatchingFieldValidator.field_g.d((byte) 121);
+                      MatchingFieldValidator.field_g.handleMenuHotkeys((byte) 121);
                     }
                   }
                 }
@@ -2116,25 +2116,25 @@ public final class VoidHunters extends NetworkGameClient {
                   continue;
                 }
               } else {
-                if (GetSniperCannonProjectiles.field_p &&
+                if (GetSniperCannonProjectiles.chatVisible &&
                   BricksTextureOperation.b(12, -2048, 13, 15)) {
                   continue;
                 }
               }
               if (SetMissionTerrainDebrisProbability.field_p) {
-                ProxyAuthenticationException.field_a.d((byte) -111);
+                ProxyAuthenticationException.field_a.handleMenuHotkeys((byte) -111);
               }
               if (!GetThrusterSmallForce.field_o) {
                 continue;
               }
-              MatchingFieldValidator.field_g.d((byte) -16);
+              MatchingFieldValidator.field_g.handleMenuHotkeys((byte) -16);
             }
           }
           stackIn_133_0Lifetime1 = GraphicsPresentException.field_a;
           if (!stackIn_133_0Lifetime1) {
             VoidHunters.m(-29130);
           }
-          if (GetSniperCannonProjectiles.field_p) {
+          if (GetSniperCannonProjectiles.chatVisible) {
             if (GetRepairModePower.field_o > SecondaryNodeQueue.field_b) {
               SecondaryNodeQueue.field_b = SecondaryNodeQueue.field_b + 1;
             }

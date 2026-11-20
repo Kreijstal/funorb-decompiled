@@ -82,7 +82,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final int[][] a(int param0, int param1, int param2, boolean param3) {
+    private final int[][] createRectangleOrTriangle(int param0, int param1, int param2, boolean param3) {
         int[][] var5 = null;
         if (param0 != 0) {
           field_e = 13;
@@ -311,7 +311,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    final static ResourceArchive a(int param0, int param1) {
+    final static ResourceArchive createArchive(int param0, int param1) {
         if (param0 != 1) {
           return (ResourceArchive) null;
         }
@@ -516,7 +516,7 @@ final class MissionBuilder implements DiffableState {
           for (var6_int = 0; var5.length > var6_int; var6_int++) {
             var21 = var5[var6_int];
             if (var21 != null) {
-              var8_int = GpuSprite.b(21957, var21.getTeam((byte) 91));
+              var8_int = GpuSprite.swapTeamId(21957, var21.getTeam((byte) 91));
               var21.setTeam(param0 + 17705, var8_int);
               if (var21.getOwner((byte) -117) >= 0) {
                 var9 = this.a(param2, var8_int, 13145, param1);
@@ -530,7 +530,7 @@ final class MissionBuilder implements DiffableState {
           var6 = var20.getSpawnPoints((byte) 24);
           var7 = (SpawnPoint) (var6.first(0));
           while (var7 != null) {
-            var7.setTeam(GpuSprite.b(param0 + 21958, var7.getTeam(121)), (byte) -96);
+            var7.setTeam(GpuSprite.swapTeamId(param0 + 21958, var7.getTeam(121)), (byte) -96);
             var7 = (SpawnPoint) (var6.next((byte) 66));
           }
           if (param0 != -1) {
@@ -550,17 +550,17 @@ final class MissionBuilder implements DiffableState {
                 for (var13_int = 0; var23.length > var13_int; var13_int++) {
                   var14_ref_wm = var23[var13_int];
                   if (var14_ref_wm instanceof TeamNodeCondition) {
-                    this.a(var14_ref_wm, var20, 0, param0 ^ -14277);
+                    this.swapConditionTeamParameter(var14_ref_wm, var20, 0, param0 ^ -14277);
                   } else {
                     if (var14_ref_wm instanceof ShipSpawnedCondition) {
-                      this.a(var14_ref_wm, var20, 0, 14276);
+                      this.swapConditionTeamParameter(var14_ref_wm, var20, 0, 14276);
                     } else {
                       if (!(var14_ref_wm instanceof TeamShipComponentCondition)) {
                         if (var14_ref_wm instanceof ShipTeamCondition) {
-                          this.a(var14_ref_wm, var20, 1, param0 ^ -14277);
+                          this.swapConditionTeamParameter(var14_ref_wm, var20, 1, param0 ^ -14277);
                         }
                       } else {
-                        this.a(var14_ref_wm, var20, 0, param0 ^ -14277);
+                        this.swapConditionTeamParameter(var14_ref_wm, var20, 0, param0 ^ -14277);
                       }
                     }
                   }
@@ -586,7 +586,7 @@ final class MissionBuilder implements DiffableState {
                       var24.setParameter(var20, false, 1, var17);
                     }
                   } else {
-                    this.a(var15, 17333, var20, 0);
+                    this.swapActionTeamParameter(var15, 17333, var20, 0);
                   }
                 }
               }
@@ -672,7 +672,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    final static void a(byte param0, Object param1, int param2) {
+    final static void setIntegerPreference(byte param0, Object param1, int param2) {
         try {
           TorpedoWeaponDefinition.field_e.put(param1, new Integer(param2));
           int var3_int = -38 / ((param0 - 80) / 33);
@@ -788,7 +788,7 @@ final class MissionBuilder implements DiffableState {
                 var12.chassis.makeThrusterTrailsMutable(0);
                 var12.setAngle(GameKeyHandler.a(22433, 4096 + var12.getAngle(0)), -29);
                 var12.setPosition(-var12.x, -var12.y, (byte) 45);
-                var9 = GpuSprite.b(21957, var12.getTeam((byte) 64));
+                var9 = GpuSprite.swapTeamId(21957, var12.getTeam((byte) 64));
                 var12.setTeam(17704, var9);
                 if (var12.getOwner((byte) -117) >= 0) {
                   var10 = this.a(param0, var9, 13145, param3);
@@ -997,7 +997,7 @@ final class MissionBuilder implements DiffableState {
                 if (var15_ref instanceof AwardVictoryToTeamAction) {
                   var26 = (AwardVictoryToTeamAction) (var15_ref);
                   var17Lifetime1 = var26.getParameter(0, -118);
-                  var18Lifetime1 = GpuSprite.b(21957, var17Lifetime1);
+                  var18Lifetime1 = GpuSprite.swapTeamId(21957, var17Lifetime1);
                   var26.setParameter(param4, false, 0, var18Lifetime1);
                 }
                 var20++;
@@ -1298,7 +1298,7 @@ final class MissionBuilder implements DiffableState {
             var5 = this.a(var7.getConditions((byte) -123), (MapZone[]) (var5), -95, param1);
           }
           if (!param3) {
-            this.a(true, (MapClearanceArea) null);
+            this.addClearanceArea(true, (MapClearanceArea) null);
           }
           stackIn_7_0 = var5;
           return (MapZone[]) (stackIn_7_0);
@@ -1413,7 +1413,7 @@ final class MissionBuilder implements DiffableState {
           }
           var9 = param4.getHeight(1) >> 1;
           var10 = (int[][]) null;
-          var13 = this.a(0, var8_int, var9, param5);
+          var13 = this.createRectangleOrTriangle(0, var8_int, var9, param5);
           var10Lifetime1 = var13;
           var10Lifetime2 = this.a(param2 ^ -27942, 50, param6, var13);
           if (param2 != 27943) {
@@ -1509,14 +1509,14 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    private final void a(MissionCondition param0, World param1, int param2, int param3) {
+    private final void swapConditionTeamParameter(MissionCondition param0, World param1, int param2, int param3) {
         int var5_int = 0;
         try {
           var5_int = param0.getParameter((byte) -118, param2);
           if (param3 != 14276) {
             this.clearanceAreas = (MapClearanceArea[]) null;
           }
-          param0.setParameter(param1, -2, param2, GpuSprite.b(21957, var5_int));
+          param0.setParameter(param1, -2, param2, GpuSprite.swapTeamId(21957, var5_int));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bea.GA(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -2241,7 +2241,7 @@ final class MissionBuilder implements DiffableState {
         }
     }
 
-    final void a(boolean param0, MapClearanceArea param1) {
+    final void addClearanceArea(boolean param0, MapClearanceArea param1) {
         try {
           this.clearanceAreas = (MapClearanceArea[]) (SoftwareSprite2D.a(param1, this.clearanceAreas, 0, SetCountermeasureLauncherFireForce.field_o));
           if (!param0) {
@@ -2382,7 +2382,7 @@ final class MissionBuilder implements DiffableState {
           var4 = GetDebrisPartitioned.a(var3_int, 9) ? 1 : 0;
           var5 = new Random((long)this.seed);
           if (param1 != 0) {
-            MissionBuilder.a((byte) 80, (Object) null, -58);
+            MissionBuilder.setIntegerPreference((byte) 80, (Object) null, -58);
           }
           this.a(false, var3_int, 27943, false, param0, var4 != 0, var5);
           if (null != this.clearanceAreas) {
@@ -3360,14 +3360,14 @@ final class MissionBuilder implements DiffableState {
         field_a = null;
     }
 
-    private final void a(MissionAction param0, int param1, World param2, int param3) {
+    private final void swapActionTeamParameter(MissionAction param0, int param1, World param2, int param3) {
         int var5_int = 0;
         if (param1 != 17333) {
           return;
         }
         try {
           var5_int = param0.getParameter(param3, -113);
-          param0.setParameter(param2, false, param3, GpuSprite.b(21957, var5_int));
+          param0.setParameter(param2, false, param3, GpuSprite.swapTeamId(21957, var5_int));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bea.P(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }

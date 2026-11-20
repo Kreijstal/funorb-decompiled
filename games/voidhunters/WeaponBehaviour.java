@@ -269,7 +269,7 @@ final class WeaponBehaviour implements DiffableState {
           if (this.weapontype != 6 &&
             this.weapontype != 9 &&
             this.weapontype != 11) {
-            param15.a(5, param10.getVelocityX((byte) -121) + (var24 >> MovingObjectFactory.field_b), 20, 20, 30273, param13, 500, param7, param10.getVelocityY(0) + (var25 >> MovingObjectFactory.field_b));
+            param15.spawnParticles(5, param10.getVelocityX((byte) -121) + (var24 >> MovingObjectFactory.field_b), 20, 20, 30273, param13, 500, param7, param10.getVelocityY(0) + (var25 >> MovingObjectFactory.field_b));
           }
           if (this.weapontype == 9 &&
             param4 >= 0) {

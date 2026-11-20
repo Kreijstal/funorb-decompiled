@@ -169,7 +169,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
               stackIn_34_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
               GetNebulaFadesOutWhenClose.a(stackIn_34_0, var6 != 0, (byte) -85, -1);
               SetMassDriverFireForce.field_o = false;
-              GetSniperCannonProjectiles.field_p = false;
+              GetSniperCannonProjectiles.chatVisible = false;
               GetMessageFadetime.field_o = true;
               GetThrusterSmallForce.field_o = true;
               if (SocketNetworkArchiveClient.g(-120)) {
@@ -193,7 +193,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
             stackIn_22_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
             GetNebulaFadesOutWhenClose.a(stackIn_22_0, var6Lifetime2 != 0, (byte) -85, -1);
             SetMassDriverFireForce.field_o = false;
-            GetSniperCannonProjectiles.field_p = false;
+            GetSniperCannonProjectiles.chatVisible = false;
             GetMessageFadetime.field_o = true;
             GetThrusterSmallForce.field_o = true;
             if (SocketNetworkArchiveClient.g(-120)) {
@@ -249,7 +249,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
           }
         }
         SetMassDriverFireForce.field_o = false;
-        GetSniperCannonProjectiles.field_p = false;
+        GetSniperCannonProjectiles.chatVisible = false;
         GetMessageFadetime.field_o = true;
         GetThrusterSmallForce.field_o = true;
         if (SocketNetworkArchiveClient.g(-120)) {

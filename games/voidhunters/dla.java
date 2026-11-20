@@ -141,7 +141,7 @@ final class dla {
               }
             }
           }
-          var18Lifetime1 = this.field_f.a(true, var6, var5, var5, var6);
+          var18Lifetime1 = this.field_f.findNearestDraggableDebris(true, var6, var5, var5, var6);
           var7_refLifetime1 = var18Lifetime1;
           if (var18Lifetime1 != null) {
             var8Lifetime1 = var18Lifetime1.getBoundingExtent(-71) << 2;
@@ -207,7 +207,7 @@ final class dla {
               var10_ref_sg = var14[var9];
               if (var10_ref_sg != null &&
                 var10_ref_sg.getTeam((byte) 78) < SetMissionTerrainAsteroidProbability.field_p) {
-                var6 = GpuSprite.b(param0 ^ 21957, var10_ref_sg.getTeam((byte) 102));
+                var6 = GpuSprite.swapTeamId(param0 ^ 21957, var10_ref_sg.getTeam((byte) 102));
                 if (1 == var10_ref_sg.chassis.getComponentTypeId(0)) {
                   var7_int = 0;
                   break scanLoop1;

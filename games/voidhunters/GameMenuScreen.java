@@ -564,8 +564,8 @@ final class GameMenuScreen {
                                   if (var8 != 0) {
                                     PopupMenuWidget.applyGraphicsQualityPreset(false);
                                     if (UiDraggableContainer.field_E) {
-                                      MissionBuilder.a((byte) 114, "graphics_quality", GetMissileLauncherProjectileLife.graphicsQuality);
-                                      SetLaserAimarc.a(-96);
+                                      MissionBuilder.setIntegerPreference((byte) 114, "graphics_quality", GetMissileLauncherProjectileLife.graphicsQuality);
+                                      SetLaserAimarc.savePreferences(-96);
                                     }
                                   }
                                 } else {
@@ -573,7 +573,7 @@ final class GameMenuScreen {
                                     if (var10_int == 7) {
                                       if (this.inputState.isActivationRequested((byte) -126)) {
                                         if (null != MatchingFieldValidator.field_g) {
-                                          MatchingFieldValidator.field_g.a(param1, -10510);
+                                          MatchingFieldValidator.field_g.saveHintsAndOpenMainMenu(param1, -10510);
                                         }
                                         aeb.field_a = true;
                                         GetMessageFadetime.field_o = false;
@@ -779,8 +779,8 @@ final class GameMenuScreen {
                               }
                               if (GetMutatorVotes.field_p != var7 &&
                                 UiDraggableContainer.field_E) {
-                                MissionBuilder.a((byte) -22, "music_volume", GetMutatorVotes.field_p);
-                                SetLaserAimarc.a(-122);
+                                MissionBuilder.setIntegerPreference((byte) -22, "music_volume", GetMutatorVotes.field_p);
+                                SetLaserAimarc.savePreferences(-122);
                               }
                             }
                           } else {
@@ -827,8 +827,8 @@ final class GameMenuScreen {
                                 mba.field_b = 20 + SetMinimapWidth.field_o;
                               }
                               if (UiDraggableContainer.field_E) {
-                                MissionBuilder.a((byte) 3, "fx_volume", kt.soundEffectVolume);
-                                SetLaserAimarc.a(-108);
+                                MissionBuilder.setIntegerPreference((byte) 3, "fx_volume", kt.soundEffectVolume);
+                                SetLaserAimarc.savePreferences(-108);
                               }
                             }
                           }

@@ -69,7 +69,7 @@ final class GpuSprite extends ToolkitSprite {
         this.toolkit.setAlphaCombineSource(1, (byte) -55, SpriteTextureOperation.field_l);
     }
 
-    final static int b(int param0, int param1) {
+    final static int swapTeamId(int param0, int param1) {
         if (param0 != 21957) {
           return -115;
         }

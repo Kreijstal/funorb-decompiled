@@ -37,17 +37,17 @@ final class Particle implements DiffableState {
     static int field_e;
     private int dy;
 
-    final boolean b(byte param0) {
+    final boolean isAlive(byte param0) {
         if (param0 <= -115) {
           return this.life > 0 ? true : false;
         }
-        this.a(87);
+        this.update(87);
         return this.life > 0 ? true : false;
     }
 
-    final void a(byte param0) {
+    final void deactivate(byte param0) {
         if (param0 <= 109) {
-          this.a(false);
+          this.getReplacementPriority(false);
           this.life = 0;
           return;
         }
@@ -115,7 +115,7 @@ final class Particle implements DiffableState {
         }
     }
 
-    final void a(byte param0, Camera2D param1) {
+    final void draw(byte param0, Camera2D param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -267,7 +267,7 @@ final class Particle implements DiffableState {
           if (param0 > 54) {
             return;
           }
-          this.a(5, 70, 45, 42, 86, -73, 112, true);
+          this.initialize(5, 70, 45, 42, 86, -73, 112, true);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -286,7 +286,7 @@ final class Particle implements DiffableState {
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
-            this.a(-123);
+            this.update(-123);
           }
           this.x = param0.readBits(0, 32);
           this.y = param0.readBits(0, 32);
@@ -300,7 +300,7 @@ final class Particle implements DiffableState {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void initialize(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         this.y = param3;
         this.type = param1;
         this.dy = param4;
@@ -316,7 +316,7 @@ final class Particle implements DiffableState {
         this.fadestart = param5;
     }
 
-    final void a(int param0) {
+    final void update(int param0) {
         this.x = this.x + this.dx;
         this.y = this.y + this.dy;
         this.life = this.life - 1;
@@ -371,7 +371,7 @@ final class Particle implements DiffableState {
         }
     }
 
-    final static boolean c(byte param0) {
+    final static boolean canResizeGameWindow(byte param0) {
         int var1 = 117 % ((param0 - 44) / 58);
         if (null == MissionConditionFactory.field_b) {
           return false;
@@ -382,7 +382,7 @@ final class Particle implements DiffableState {
         return false;
     }
 
-    final int a(boolean param0) {
+    final int getReplacementPriority(boolean param0) {
         if (param0) {
           return (this.fadestart << 1) - this.life;
         }

@@ -80,7 +80,7 @@ final class mr extends ResizableModalPanel implements UiActionListener {
             if (param1 == AdminMessageFactory.field_a) {
               this.height = this.height + 10;
               var3 = RenderResourceNode.field_m;
-              if (Particle.c((byte) 109)) {
+              if (Particle.canResizeGameWindow((byte) 109)) {
                 var3 = WorldFactory.field_b;
                 this.height = this.height + 20;
               }

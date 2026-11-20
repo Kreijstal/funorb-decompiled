@@ -856,7 +856,7 @@ final class TutorialController {
                     var17 = param12.x;
                     var18 = param12.y;
                   }
-                  var20_ref = param0.world.b(1, 2147483647, param12.getX(false), var17, var18, param12.getY((byte) 124));
+                  var20_ref = param0.world.findNearestDraggableDebris(1, 2147483647, param12.getX(false), var17, var18, param12.getY((byte) 124));
                   if (var20_ref != null ||
                     param12.getDragging(-96) != -1) {
                     this.advanceHintTimer(-26476, 3);

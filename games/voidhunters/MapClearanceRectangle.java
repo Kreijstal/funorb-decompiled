@@ -42,7 +42,7 @@ final class MapClearanceRectangle extends MapClearanceArea implements DiffableSt
             SerializableGameState var4 = (SerializableGameState) null;
             this.differsFrom((byte) -16, (SerializableGameState) null);
           }
-          param0.a(this.x + this.width / 2, this.y + this.height / 2, this.y, false, -124, this.x);
+          param0.removeNebulaeInRectangle(this.x + this.width / 2, this.y + this.height / 2, this.y, false, -124, this.x);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ptb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -87,7 +87,7 @@ final class ProjectileHit {
           if (this.projectile.getType((byte) -104) == 6) {
             if (param3 ||
               SetPointDefenceLaserPulsetime.field_o == 1) {
-              param0.a(0, gib.field_a, this.projectile.getFiredTeam(512), this.projectile.getFiredPlayer(false), false, this.impactX, this.impactY);
+              param0.spawnRadialProjectiles(0, gib.field_a, this.projectile.getFiredTeam(512), this.projectile.getFiredPlayer(false), false, this.impactX, this.impactY);
             }
             param3 = false;
           }
@@ -140,13 +140,13 @@ final class ProjectileHit {
               var5_int = 0;
               this.projectile.setDamage(var8Lifetime1, 110);
             }
-            param0.a(RandomLinesTextureOperation.field_m, this.impactY, this.impactX, ei.field_a, 11184895, var7, dw.field_b);
+            param0.spawnParticles(RandomLinesTextureOperation.field_m, this.impactY, this.impactX, ei.field_a, 11184895, var7, dw.field_b);
             var9 = var6;
             if (this.component.isDestroyed((byte) 99) &&
               var9.field_y > 0) {
               param2.chassis.detachComponent(true, this.component, param0, 60, param2);
               param2.chassis.configureThrusterBindings((byte) 102, param2);
-              param0.a(1, var9.field_y, this.projectile.getFiredTeam(param1 ^ -513), this.projectile.getFiredPlayer(false), false, this.component.getFinalx(true), this.component.getFinaly((byte) 74));
+              param0.spawnRadialProjectiles(1, var9.field_y, this.projectile.getFiredTeam(param1 ^ -513), this.projectile.getFiredPlayer(false), false, this.component.getFinalx(true), this.component.getFinaly((byte) 74));
             } else {
               if (GetInnateThrusters.field_p == 1 &&
                 this.component.isDestroyed((byte) 71) &&

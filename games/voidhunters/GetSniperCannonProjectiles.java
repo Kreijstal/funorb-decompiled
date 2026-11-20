@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetSniperCannonProjectiles extends ConsoleCommand {
-    static boolean field_p;
+    static boolean chatVisible;
     static int[] field_o;
 
     final static void a(ChatMessage param0, int param1) {
@@ -106,7 +106,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
     final static void a(boolean param0, int param1) {
         WaterTextures.a(param0, false, false);
         if (param1 > -121) {
-          field_p = true;
+          chatVisible = true;
         }
     }
 
@@ -147,6 +147,6 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
     }
 
     static {
-        field_p = true;
+        chatVisible = true;
     }
 }

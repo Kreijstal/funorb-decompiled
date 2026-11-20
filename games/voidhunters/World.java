@@ -20,7 +20,7 @@ final class World implements DiffableState, CompactGameState {
     static String field_d;
     private MapZone[] mapZones;
     private boolean debrisArrayMutable;
-    private Particle[] field_s;
+    private Particle[] particles;
     private boolean debug;
     private MissionControl missionControl;
     private static int[] field_c;
@@ -56,7 +56,7 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    final boolean a(byte param0, boolean param1, int param2, int param3, int param4) {
+    final boolean removeNebulaeInRadius(byte param0, boolean param1, int param2, int param3, int param4) {
         Debris discarded$1 = null;
         int var6;
         Nebula[] var7;
@@ -183,7 +183,7 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final void spawnParticles(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10;
         int var11;
         int var12;
@@ -191,7 +191,7 @@ final class World implements DiffableState, CompactGameState {
         var13 = VoidHunters.field_G;
         var10 = 0;
         if (param4 != 30273) {
-          this.a((byte) -34, true, 58, 71, 121);
+          this.removeNebulaeInRadius((byte) -34, true, 58, 71, 121);
         }
         while (param0 > var10) {
           var11 = param1;
@@ -200,7 +200,7 @@ final class World implements DiffableState, CompactGameState {
             var11 = var11 + (-param6 + TextHotspotRegion.randomBoundedInt(GetFogOfWarSensorRange.field_o, param6 << 1, 126));
             var12 = var12 + (-param6 + TextHotspotRegion.randomBoundedInt(GetFogOfWarSensorRange.field_o, param6 << 1, 116));
           }
-          this.a(param2, param5, var11, -19079, GetPedrosRepairMode.field_q, var12, param7, param3);
+          this.spawnParticle(param2, param5, var11, -19079, GetPedrosRepairMode.field_q, var12, param7, param3);
           var10++;
         }
     }
@@ -244,11 +244,11 @@ final class World implements DiffableState, CompactGameState {
                   var2_ref_tj.unlink(-3846);
                   if (var2_ref_tj.getType((byte) -104) == 6 &&
                     var4.getType((byte) -104) == 5) {
-                    this.a(0, gib.field_a, var2_ref_tj.getFiredTeam(512), var2_ref_tj.getFiredPlayer(false), false, var2_ref_tj.getX(111), var2_ref_tj.getY((byte) -107));
+                    this.spawnRadialProjectiles(0, gib.field_a, var2_ref_tj.getFiredTeam(512), var2_ref_tj.getFiredPlayer(false), false, var2_ref_tj.getX(111), var2_ref_tj.getY((byte) -107));
                     break;
                   }
                   BlendTextureOperation.a(20382, var2_ref_tj.getX(113), 81, var2_ref_tj.getY((byte) -107), 50);
-                  this.a(100, var2_ref_tj.getY((byte) -107), var2_ref_tj.getX(119), 1000, 11184895, 10, 50);
+                  this.spawnParticles(100, var2_ref_tj.getY((byte) -107), var2_ref_tj.getX(119), 1000, 11184895, 10, 50);
                   break;
                 }
               }
@@ -414,7 +414,7 @@ final class World implements DiffableState, CompactGameState {
                 var14 = (Ship) (var13);
                 var14.consumeEnergy((byte) 11, param0.getDamage((byte) 45) / GetPhysicsCollisionPhantomForceMultiplier.field_o);
               }
-              this.a(RandomLinesTextureOperation.field_m, var10, var9Lifetime1, ei.field_a, 11184895, var11Lifetime1, dw.field_b);
+              this.spawnParticles(RandomLinesTextureOperation.field_m, var10, var9Lifetime1, ei.field_a, 11184895, var11Lifetime1, dw.field_b);
               AgeValidator.field_i = null;
             }
           }
@@ -597,7 +597,7 @@ final class World implements DiffableState, CompactGameState {
                   var10.clearPlaceholderHealth(98);
                   var13.attachToHardpoint(1, var12.hardpointIndex, var10);
                   param3.recalculateMassProperties((byte) 119);
-                  this.a(40, var14.worldy, var14.worldx, 1000, 11184895, 10, 20);
+                  this.spawnParticles(40, var14.worldy, var14.worldx, 1000, 11184895, 10, 20);
                   param3.chassis.configureThrusterBindings((byte) -127, (ShipBody) (param3));
                   BlendTextureOperation.a(20382, param0.getX(false), 4, param0.getY((byte) -94), 5);
                   if (var10.weaponbehaviour != null) {
@@ -764,7 +764,7 @@ final class World implements DiffableState, CompactGameState {
               var18 = stackIn_37_0;
               var26Lifetime1 = var22 + (param6 >> 1);
               var27Lifetime1 = var23 + (param1 >> 1);
-              this.a(param3 * var24Lifetime1 / param2, var20, var26Lifetime1, -19079, var25Lifetime1, var27Lifetime1, var21, var24Lifetime1);
+              this.spawnParticle(param3 * var24Lifetime1 / param2, var20, var26Lifetime1, -19079, var25Lifetime1, var27Lifetime1, var21, var24Lifetime1);
             } else {
               var19--;
             }
@@ -846,14 +846,14 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    private final void a(int param0, byte param1, ShipBody param2) {
+    private final void destroyBody(int param0, byte param1, ShipBody param2) {
         RuntimeException runtimeException = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.a(param2, true, true, false, param0);
+          this.destroyBody(param2, true, true, false, param0);
           if (param1 <= 60) {
             this.swappedTeams = false;
           }
@@ -1550,9 +1550,9 @@ final class World implements DiffableState, CompactGameState {
             var35.update((byte) 93, this);
             var35 = (Projectile) (this.projectiles.next((byte) 101));
           }
-          for (var14 = 0; this.field_s.length > var14; var14++) {
-            if (this.field_s[var14].b((byte) -126)) {
-              this.field_s[var14].a(-8460);
+          for (var14 = 0; this.particles.length > var14; var14++) {
+            if (this.particles[var14].isAlive((byte) -126)) {
+              this.particles[var14].update(-8460);
             }
           }
           var14Lifetime1 = 0;
@@ -2369,7 +2369,7 @@ final class World implements DiffableState, CompactGameState {
         Debris[] var5;
         var4 = VoidHunters.field_G;
         if (param0 > -82) {
-          this.a(82, -2, -88, 15, 61, -108, -2, -18);
+          this.spawnParticle(82, -2, -88, 15, 61, -108, -2, -18);
         }
         if (this.debrisArrayMutable) {
           return;
@@ -2579,7 +2579,7 @@ final class World implements DiffableState, CompactGameState {
               else {
                 this.addShip(var29, (byte) 96);
                 if (MatchingFieldValidator.field_g != null) {
-                  MatchingFieldValidator.field_g.d(-31407);
+                  MatchingFieldValidator.field_g.recordEnemyShipSpawn(-31407);
                 }
               }
             }
@@ -3168,7 +3168,7 @@ final class World implements DiffableState, CompactGameState {
         return null;
     }
 
-    final boolean b(int param0, int param1) {
+    final boolean hasHomingProjectileTargeting(int param0, int param1) {
         int var5 = VoidHunters.field_G;
         Projectile var6 = (Projectile) (this.projectiles.first(0));
         while (var6 != null) {
@@ -3619,12 +3619,12 @@ final class World implements DiffableState, CompactGameState {
               System.err.println("An element of Ship[] ships has a duplicate reference - " + var7.toString());
             }
           }
-          var6_ref.field_s = (Particle[]) (SpriteDimensions.copyStateArrayByMode(var6_ref.field_s, this.field_s, 1, AdjustBodyComponentsAction.field_c, false));
+          var6_ref.particles = (Particle[]) (SpriteDimensions.copyStateArrayByMode(var6_ref.particles, this.particles, 1, AdjustBodyComponentsAction.field_c, false));
           if (this.debug) {
-            if (VoidHunters.checkDuplicateReference(true, this.field_s)) {
+            if (VoidHunters.checkDuplicateReference(true, this.particles)) {
               System.err.println("Particle[] particles the actual object has a duplicate reference");
             }
-            var8 = QuickChatMenuWidget.findDuplicateReference(this.field_s, 0);
+            var8 = QuickChatMenuWidget.findDuplicateReference(this.particles, 0);
             if (var8 != null) {
               System.err.println("An element of Particle[] particles has a duplicate reference - " + var8.toString());
             }
@@ -4630,8 +4630,8 @@ final class World implements DiffableState, CompactGameState {
         }
         this.asteroidField.clearAsteroids(121);
         this.projectiles.clear(127);
-        for (var2Lifetime2 = 0; this.field_s.length > var2Lifetime2; var2Lifetime2++) {
-          this.field_s[var2Lifetime2].a((byte) 121);
+        for (var2Lifetime2 = 0; this.particles.length > var2Lifetime2; var2Lifetime2++) {
+          this.particles[var2Lifetime2].deactivate((byte) 121);
         }
         this.spawnPoints.clear(125);
         if (param0 != 11184895) {
@@ -4778,7 +4778,7 @@ final class World implements DiffableState, CompactGameState {
         return this.resNodes;
     }
 
-    final Debris b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final Debris findNearestDraggableDebris(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var10 = 0;
         Object var7;
         int var8;
@@ -4933,9 +4933,9 @@ final class World implements DiffableState, CompactGameState {
               this.a((byte) 80, var8, param0);
             }
           }
-          for (var6_intLifetime4 = 0; this.field_s.length > var6_intLifetime4; var6_intLifetime4++) {
-            if (this.field_s[var6_intLifetime4].b((byte) -125)) {
-              this.field_s[var6_intLifetime4].a((byte) 114, param0);
+          for (var6_intLifetime4 = 0; this.particles.length > var6_intLifetime4; var6_intLifetime4++) {
+            if (this.particles[var6_intLifetime4].isAlive((byte) -125)) {
+              this.particles[var6_intLifetime4].draw((byte) 114, param0);
             }
           }
           this.a(-98, param0, param2);
@@ -5062,8 +5062,8 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
-        this.a(param5, 0, param6, param0, 30273, param2, param3, param1, 0);
+    final void spawnParticles(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+        this.spawnParticles(param5, 0, param6, param0, 30273, param2, param3, param1, 0);
         if (param4 != 11184895) {
           field_d = (String) null;
         }
@@ -5454,7 +5454,7 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    private final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final void spawnParticle(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var11 = 0;
         int var9;
         int var10;
@@ -5466,9 +5466,9 @@ final class World implements DiffableState, CompactGameState {
         }
         var9 = -2147483648;
         var10 = -1;
-        for (var11 = 0; this.field_s.length > var11; var11++) {
-          if (this.field_s[var11].b((byte) -123)) {
-            var12 = this.field_s[var11].a(true);
+        for (var11 = 0; this.particles.length > var11; var11++) {
+          if (this.particles[var11].isAlive((byte) -123)) {
+            var12 = this.particles[var11].getReplacementPriority(true);
             if (var12 > var9) {
               var10 = var11;
               var9 = var12;
@@ -5479,7 +5479,7 @@ final class World implements DiffableState, CompactGameState {
           break;
         }
         if (var10 >= 0) {
-          this.field_s[var10].a(param7, param4, param2, param6, param5, param0, param1, true);
+          this.particles[var10].initialize(param7, param4, param2, param6, param5, param0, param1, true);
         }
     }
 
@@ -5645,7 +5645,7 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    final boolean a(int param0, int param1, int param2, boolean param3, int param4, int param5) {
+    final boolean removeNebulaeInRectangle(int param0, int param1, int param2, boolean param3, int param4, int param5) {
         int var7;
         Nebula[] var8;
         int var9;
@@ -6663,11 +6663,11 @@ final class World implements DiffableState, CompactGameState {
         return this.projectiles;
     }
 
-    final Debris a(boolean param0, int param1, int param2, int param3, int param4) {
+    final Debris findNearestDraggableDebris(boolean param0, int param1, int param2, int param3, int param4) {
         if (!param0) {
           field_w = (int[]) null;
         }
-        return this.b(1, 65536, param3, param2, param4, param1);
+        return this.findNearestDraggableDebris(1, 65536, param3, param2, param4, param1);
     }
 
     public static void clearSharedReferences(int param0) {
@@ -6823,7 +6823,7 @@ final class World implements DiffableState, CompactGameState {
           var15 = -var13 / var14;
           var16 = var12 / var14;
           var17 = 320;
-          this.a(param0, var15, 50, 100, 30273, param4, var17, param1, var16);
+          this.spawnParticles(param0, var15, 50, 100, 30273, param4, var17, param1, var16);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -7036,7 +7036,7 @@ final class World implements DiffableState, CompactGameState {
                   if (null != var27 &&
                     this.extendsOutsideBounds(true, var13, var27.boundingbox)) {
                     var15_ref_nbb = this.getMutableDebris(var26, false);
-                    this.a(var15_ref_nbb, true, false, false, 1);
+                    this.destroyBody(var15_ref_nbb, true, false, false, 1);
                   }
                   var26++;
                 }
@@ -7047,7 +7047,7 @@ final class World implements DiffableState, CompactGameState {
                   var17_ref_crb = var24[var16];
                   if (null != var17_ref_crb &&
                     this.extendsOutsideBounds(true, var13, var17_ref_crb.boundingbox)) {
-                    this.a(var17_ref_crb, true, false, false, 2);
+                    this.destroyBody(var17_ref_crb, true, false, false, 2);
                   }
                 }
                 for (var15 = 0; this.ships.length > var15; var15++) {
@@ -7209,7 +7209,7 @@ final class World implements DiffableState, CompactGameState {
                 if (SetMaxShipSize.field_o == 1) {
                   var9_ref_ml__ = var16.chassis.markRandomComponentsDestroyed(0, GetFogOfWarSensorRange.field_o, (ShipComponent[]) null);
                   var7_int = 0;
-                  this.a(var16, true, true, true, 0);
+                  this.destroyBody(var16, true, true, true, 0);
                   if (null != var9_ref_ml__ &&
                     var9_ref_ml__.length > 0) {
                     var10 = new int[var9_ref_ml__.length];
@@ -7252,9 +7252,9 @@ final class World implements DiffableState, CompactGameState {
               }
               if (var7_int != 0) {
                 if (var16.isFighter(false)) {
-                  this.a(var16, true, false, false, 0);
+                  this.destroyBody(var16, true, false, false, 0);
                 } else {
-                  this.a(0, (byte) 117, (ShipBody) (var16));
+                  this.destroyBody(0, (byte) 117, (ShipBody) (var16));
                 }
               }
             }
@@ -7267,7 +7267,7 @@ final class World implements DiffableState, CompactGameState {
               var18.field_u) {
               var19Lifetime2 = this.getMutableDebris(var5_intLifetime1, false);
               if (var19Lifetime2.isDestroyed(-128)) {
-                this.a(1, (byte) 66, (ShipBody) (var19Lifetime2));
+                this.destroyBody(1, (byte) 66, (ShipBody) (var19Lifetime2));
               } else {
                 var19Lifetime2.pruneDestroyedComponents(107, this);
               }
@@ -7279,7 +7279,7 @@ final class World implements DiffableState, CompactGameState {
             var21 = var20[var6];
             if (null != var21 &&
               var21.isDestroyed(-122)) {
-              this.a(3, (byte) 90, (ShipBody) (var21));
+              this.destroyBody(3, (byte) 90, (ShipBody) (var21));
             }
           }
           if (param1 != 7559) {
@@ -7293,7 +7293,7 @@ final class World implements DiffableState, CompactGameState {
             var7 = var23;
             if (var7 != null &&
               var23.isDestroyed(-116)) {
-              this.a(2, (byte) 72, (ShipBody) (var23));
+              this.destroyBody(2, (byte) 72, (ShipBody) (var23));
             }
             var15++;
           }
@@ -8295,7 +8295,7 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    private final void a(ShipBody param0, boolean param1, boolean param2, boolean param3, int param4) {
+    private final void destroyBody(ShipBody param0, boolean param1, boolean param2, boolean param3, int param4) {
         int stackIn_10_0 = 0;
         ShipBody stackIn_10_1 = null;
         boolean stackIn_11_2 = false;
@@ -8428,7 +8428,7 @@ final class World implements DiffableState, CompactGameState {
             var5_int = var7.getOwner((byte) -117);
             var6 = var7.getTeam((byte) 93);
           }
-          this.a(1, param3.field_y, var6, var5_int, false, param2.finalx, param2.finaly);
+          this.spawnRadialProjectiles(1, param3.field_y, var6, var5_int, false, param2.finalx, param2.finaly);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -8580,7 +8580,7 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
+    final void spawnRadialProjectiles(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6) {
         int var10 = 0;
         int var8;
         int var9;
@@ -8958,8 +8958,8 @@ final class World implements DiffableState, CompactGameState {
             }
           }
         }
-        if (this.a((byte) -99, true, param0, param2, param3)) {
-          this.missionBuilder.a(true, new MapClearanceCircle(param2, param0, param3));
+        if (this.removeNebulaeInRadius((byte) -99, true, param0, param2, param3)) {
+          this.missionBuilder.addClearanceArea(true, new MapClearanceCircle(param2, param0, param3));
         }
     }
 
@@ -9381,8 +9381,8 @@ final class World implements DiffableState, CompactGameState {
         if (param4 > -61) {
           return;
         }
-        if (this.a(var7, var8, param2, true, 121, param3)) {
-          this.missionBuilder.a(true, new MapClearanceRectangle(param1, param0, param3, param2));
+        if (this.removeNebulaeInRectangle(var7, var8, param2, true, 121, param3)) {
+          this.missionBuilder.addClearanceArea(true, new MapClearanceRectangle(param1, param0, param3, param2));
         }
     }
 
@@ -9494,7 +9494,7 @@ final class World implements DiffableState, CompactGameState {
           if (null == param1) {
             var6_int = param2.getX(false);
             var7 = param2.getY((byte) 3);
-            var8 = this.a(true, var7, param4, var6_int, param0);
+            var8 = this.findNearestDraggableDebris(true, var7, param4, var6_int, param0);
             param1 = var8;
             if (null != param1) {
               param2.setDragging(param1.id, (byte) -114);
@@ -9557,18 +9557,18 @@ final class World implements DiffableState, CompactGameState {
 
     public World() {
         int var1 = 0;
-        this.field_s = new Particle[768];
-        for (var1 = 0; this.field_s.length > var1; var1++) {
-          this.field_s[var1] = new Particle();
+        this.particles = new Particle[768];
+        for (var1 = 0; this.particles.length > var1; var1++) {
+          this.particles[var1] = new Particle();
         }
     }
 
     World(int param0) {
         int var2 = 0;
         this.partitioningManager = new PartitioningManager();
-        this.field_s = new Particle[768];
-        for (var2 = 0; var2 < this.field_s.length; var2++) {
-          this.field_s[var2] = new Particle();
+        this.particles = new Particle[768];
+        for (var2 = 0; var2 < this.particles.length; var2++) {
+          this.particles[var2] = new Particle();
         }
         this.projectiles = new IntrusiveDeque();
         this.spawnPoints = new IntrusiveDeque();

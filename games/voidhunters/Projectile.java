@@ -130,12 +130,12 @@ final class Projectile extends MovingObject implements DiffableState {
           if (this.life < 0) {
             this.unlink(param0 ^ -3929);
             if (this.type == 6) {
-              param1.a(0, gib.field_a, this.firedTeam, this.firedPlayer, false, this.x, this.y);
+              param1.spawnRadialProjectiles(0, gib.field_a, this.firedTeam, this.firedPlayer, false, this.x, this.y);
             }
           } else {
             if (3 != this.type &&
               this.type != 5) {
-              param1.a(10, this.y, this.x, 0, 11184895, 1, 5);
+              param1.spawnParticles(10, this.y, this.x, 0, 11184895, 1, 5);
               if (this.type != 1) {
                 if (this.type == 6) {
                   var3 = null;
@@ -195,7 +195,7 @@ final class Projectile extends MovingObject implements DiffableState {
                 this.dx = this.dx + (SetShieldsDirectionalRadius.field_o * GetNumStars.cosAngle(this.angle, (byte) 89) >> 16);
                 this.dy = this.dy + (SetShieldsDirectionalRadius.field_o * TextureLineShape.sinAngle(this.angle, 96) >> 16);
                 var3_int = 128;
-                param1.a(20, this.y, this.x, var3_int, param0 + 11184802, 1, 10);
+                param1.spawnParticles(20, this.y, this.x, var3_int, param0 + 11184802, 1, 10);
               }
             }
           }
