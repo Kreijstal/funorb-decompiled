@@ -47,7 +47,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
           if (param1 == 73) {
             GetDebrisThrowable.a(false, "Receiving server info");
             var5 = new ServerInfo();
-            FireBoostersOrderDefinition.a((byte) -61, qga.field_b, var5);
+            FireBoostersOrderDefinition.readStateFromBits((byte) -61, qga.field_b, var5);
             if (var5 == null) {
               return true;
             }
@@ -59,7 +59,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
           }
           GetDebrisThrowable.a(false, "Receiving player blueprint");
           var6 = new ShipBlueprint();
-          FireBoostersOrderDefinition.a((byte) -84, qga.field_b, var6);
+          FireBoostersOrderDefinition.readStateFromBits((byte) -84, qga.field_b, var6);
           if (var6 == null) {
             return true;
           }
@@ -70,7 +70,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
         if (param1 == 73) {
           GetDebrisThrowable.a(false, "Receiving server info");
           var3 = new ServerInfo();
-          FireBoostersOrderDefinition.a((byte) -61, qga.field_b, var3);
+          FireBoostersOrderDefinition.readStateFromBits((byte) -61, qga.field_b, var3);
           if (var3 == null) {
             return true;
           }
@@ -82,7 +82,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
         }
         GetDebrisThrowable.a(false, "Receiving player blueprint");
         var4 = new ShipBlueprint();
-        FireBoostersOrderDefinition.a((byte) -84, qga.field_b, var4);
+        FireBoostersOrderDefinition.readStateFromBits((byte) -84, qga.field_b, var4);
         if (var4 == null) {
           return true;
         }

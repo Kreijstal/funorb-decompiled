@@ -76,7 +76,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetSpinningBladeSpinupSpeed.field_o[26] = HuffmanCodec.field_c;
           SetSpinningBladeSpinupSpeed.field_o[19] = SetUseExtraBackground.field_r;
           SetSpinningBladeSpinupSpeed.field_o[10] = AgeValidator.field_h;
-          SetSpinningBladeSpinupSpeed.field_o[29] = vla.field_C;
+          SetSpinningBladeSpinupSpeed.field_o[29] = LoginForm.field_C;
           SetSpinningBladeSpinupSpeed.field_o[38] = SetArmageddonWarning.field_p;
           SetSpinningBladeSpinupSpeed.field_o[54] = GetPedrosRepairMode.field_o;
           SetSpinningBladeSpinupSpeed.field_o[9] = gm.field_I;
@@ -236,7 +236,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ShipTeamCondition.field_f[7] = SetCarouselConstant.field_o;
           ShipTeamCondition.field_f[6] = GetSniperCannonAimspeed.field_o;
           ShipTeamCondition.field_f[3] = iwa.field_a;
-          ShipTeamCondition.field_f[22] = kla.field_b;
+          ShipTeamCondition.field_f[22] = ToolkitRasterStateStack.field_b;
           ShipTeamCondition.field_f[0] = ArchiveTextureProvider.field_a;
           ShipTeamCondition.field_f[15] = HighscoreTableRequest.field_d;
           ShipTeamCondition.field_f[27] = GetBombletSprayEnergyUsed.field_o;

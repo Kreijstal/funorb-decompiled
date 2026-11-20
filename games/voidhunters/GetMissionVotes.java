@@ -7,7 +7,7 @@ final class GetMissionVotes extends ConsoleCommand {
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
-        kla var4 = null;
+        ToolkitRasterStateStack var4 = null;
         ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -15,8 +15,8 @@ final class GetMissionVotes extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            var4 = (kla) null;
-            GetMissionVotes.a((kla) null, -72, 98, -34, -112, -87);
+            var4 = (ToolkitRasterStateStack) null;
+            GetMissionVotes.a((ToolkitRasterStateStack) null, -72, 98, -34, -112, -87);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(57, 92));
           return stackIn_3_0;
@@ -38,7 +38,7 @@ final class GetMissionVotes extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(kla param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void a(ToolkitRasterStateStack param0, int param1, int param2, int param3, int param4, int param5) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;
@@ -52,9 +52,9 @@ final class GetMissionVotes extends ConsoleCommand {
           var9 = var7 + param4;
           var10 = param1 + var6_int;
           var11 = var7 + param2;
-          param0.a(var8, var10, var9, var11, (byte) -85);
+          param0.pushClip(var8, var10, var9, var11, (byte) -85);
           GetDebrisGroupColour.field_r.writePixels(var6_int, param4 + var7, SoftwareRasterizer2D.width, param2 - param4, SoftwareRasterizer2D.pixels, param4 * SoftwareRasterizer2D.width, SoftwareRasterizer2D.width);
-          param0.a(true);
+          param0.pop(true);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nr.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

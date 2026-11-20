@@ -111,11 +111,11 @@ class SpriteTextureOperation extends TextureOperation {
         if (this.spriteId < param0) {
           return false;
         }
-        IndexedSpriteData var2 = GetFighterRepairTime.field_o < 0 ? IndexedSpriteData.a(GetAngularVelocitySustainMax.field_o, this.spriteId) : IndexedSpriteData.a(GetAngularVelocitySustainMax.field_o, GetFighterRepairTime.field_o, this.spriteId);
-        var2.d();
-        this.sourcePixels = var2.b();
-        this.sourceHeight = var2.field_e;
-        this.sourceWidth = var2.field_f;
+        IndexedSpriteData var2 = GetFighterRepairTime.field_o < 0 ? IndexedSpriteData.loadFirst(GetAngularVelocitySustainMax.field_o, this.spriteId) : IndexedSpriteData.loadFirst(GetAngularVelocitySustainMax.field_o, GetFighterRepairTime.field_o, this.spriteId);
+        var2.normalize();
+        this.sourcePixels = var2.toArgbPixels();
+        this.sourceHeight = var2.height;
+        this.sourceWidth = var2.width;
         return true;
     }
 

@@ -19,7 +19,7 @@ final class SetLag extends ConsoleCommand {
             field_o = 34;
           }
           GetSniperCannonFiringLeeway.field_o = param10;
-          pr.field_d = param13;
+          SecondaryNodeHashTable.field_d = param13;
           OpenGlPostProcessor.field_v = param9;
           GetMissionTimeLimit.field_o = param1;
           IntrusiveDequeIterator.field_a = param6;

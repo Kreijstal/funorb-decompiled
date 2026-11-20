@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetUseBackground extends ConsoleCommand {
-    static kla field_o;
+    static ToolkitRasterStateStack field_o;
     static SoftwareIndexedSprite2D[] field_p;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

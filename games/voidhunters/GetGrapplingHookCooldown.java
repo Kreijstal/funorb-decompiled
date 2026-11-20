@@ -70,7 +70,7 @@ final class GetGrapplingHookCooldown extends ConsoleCommand {
             var8 = var13[var7];
             if (var8 != null &&
               param3 != var8 && ((var8.getTeam((byte) 71) != param3.getTeam((byte) 84) ||
-              var8.getTeam((byte) 86) == sja.field_c &&
+              var8.getTeam((byte) 86) == ToolkitRasterState.field_c &&
               var8.getOwner((byte) -117) != param2 &&
               (null == var8.getAi((byte) -108) ||
               var8.getAi((byte) -108).getParentPlayerId((byte) 66) != param2)) &&

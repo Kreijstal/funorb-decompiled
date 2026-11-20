@@ -99,7 +99,7 @@ final class CommonGameState implements DiffableState, PlayerNameRegistry {
     }
 
     final void c(int param0) {
-        pr.field_c = this;
+        SecondaryNodeHashTable.field_c = this;
         this.carouselInfo.updateTimeline(SetMinimapWidth.field_o, (byte) 106);
         int var2 = 5 % ((67 - param0) / 57);
     }
@@ -377,7 +377,7 @@ final class CommonGameState implements DiffableState, PlayerNameRegistry {
         Asteroid var16 = null;
         MissionBuilder var17 = null;
         try {
-          pr.field_c = this;
+          SecondaryNodeHashTable.field_c = this;
           this.field_a = param0.length;
           this.field_d = param3;
           this.field_h = param0;

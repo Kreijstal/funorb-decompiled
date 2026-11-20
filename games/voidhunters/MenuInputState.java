@@ -10,7 +10,7 @@ final class MenuInputState {
     private int mouseButtonEvent;
     private boolean pointerSelection;
     private int repeatCountdown;
-    static pr field_f;
+    static SecondaryNodeHashTable field_f;
     int selectedIndex;
 
     final boolean isDecreaseRequested(int param0) {

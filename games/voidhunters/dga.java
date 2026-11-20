@@ -458,7 +458,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("you_have_been_removed_from_xs_game", 23100);
                 if (var2 != null) {
-                  sja.field_d = Cp1252Strings.decode((byte) -125, var2);
+                  ToolkitRasterState.field_d = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("your_rating_is_x", 23100);
                 if (var2 != null) {
@@ -650,7 +650,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("hide_players_in_xs_game", 23100);
                 if (null != var2) {
-                  ot.field_c = Cp1252Strings.decode((byte) -125, var2);
+                  LoginFormNavigation.field_c = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("show_players_in_xs_game", 23100);
                 if (null != var2) {
@@ -1476,7 +1476,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("login_username_tooltip", 23100);
                 if (var2 != null) {
-                  sja.field_j = Cp1252Strings.decode((byte) -125, var2);
+                  ToolkitRasterState.field_j = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("login_password_tooltip", 23100);
                 if (var2 != null) {
@@ -2114,7 +2114,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("graphics_opengl", 23100);
                 if (null != var2) {
-                  ot.field_a = Cp1252Strings.decode((byte) -125, var2);
+                  LoginFormNavigation.field_a = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("graphics_java", 23100);
                 if (var2 != null) {

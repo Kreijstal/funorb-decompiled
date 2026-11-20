@@ -38,7 +38,7 @@ final class BuildBlueprintOrderDefinition extends SpecialOrderDefinition {
         return 111;
     }
 
-    final static void a(ResourceArchive param0, int param1) {
+    final static void initializeSocialWidgets(ResourceArchive param0, int param1) {
         Widget var5 = null;
         Widget var6 = null;
         Widget var3 = null;
@@ -89,7 +89,7 @@ final class BuildBlueprintOrderDefinition extends SpecialOrderDefinition {
         return 256;
     }
 
-    final static void a(int param0, java.awt.Canvas param1, boolean param2) {
+    final static void drawGameFrame(int param0, java.awt.Canvas param1, boolean param2) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_16_0 = null;

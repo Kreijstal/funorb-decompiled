@@ -3,7 +3,7 @@
  */
 final class SetUseDetailLines extends ConsoleCommand {
     static int field_o;
-    static pr field_p;
+    static SecondaryNodeHashTable field_p;
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 0) {

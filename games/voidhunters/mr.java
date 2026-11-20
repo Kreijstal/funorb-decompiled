@@ -41,7 +41,7 @@ final class mr extends ResizableModalPanel implements UiActionListener {
     final static String m(byte param0) {
         String var1 = "";
         if (null != SetAiFiringRangeUpshift.field_o) {
-          var1 = SetAiFiringRangeUpshift.field_o.a(30);
+          var1 = SetAiFiringRangeUpshift.field_o.getLoginName(30);
         }
         int var2 = 80 / ((-61 - param0) / 55);
         if (0 == var1.length()) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetReverbWet extends ConsoleCommand {
-    static pr field_o;
+    static SecondaryNodeHashTable field_o;
     static String field_p;
 
     GetReverbWet(String param0, Class[] param1, String param2) {
@@ -18,7 +18,7 @@ final class GetReverbWet extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            field_o = (pr) null;
+            field_o = (SecondaryNodeHashTable) null;
           }
           stackIn_3_0 = new ConsoleValue(LoopingSound.field_n);
           return stackIn_3_0;

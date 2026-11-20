@@ -4,7 +4,7 @@
 final class TeamNodeCondition extends MissionCondition implements DiffableState {
     private int teamId;
     static int field_e;
-    static pr field_c;
+    static SecondaryNodeHashTable field_c;
 
     public final void copyTo(byte param0, SerializableGameState param1) {
         TeamNodeCondition var5 = null;
@@ -391,7 +391,7 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
     public static void clearSharedReferences(int param0) {
         field_c = null;
         if (param0 != -2684) {
-          field_c = (pr) null;
+          field_c = (SecondaryNodeHashTable) null;
         }
     }
 

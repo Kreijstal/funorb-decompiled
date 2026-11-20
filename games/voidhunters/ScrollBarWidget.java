@@ -177,7 +177,7 @@ final class ScrollBarWidget extends Widget {
         if (!param1) {
           return (jk) null;
         }
-        return (jk) (SetUseDetailLines.field_p.a(-1, param0));
+        return (jk) (SetUseDetailLines.field_p.get(-1, param0));
     }
 
     final boolean pollPageUp(int param0) {

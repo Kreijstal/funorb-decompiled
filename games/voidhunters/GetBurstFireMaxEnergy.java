@@ -34,7 +34,7 @@ final class GetBurstFireMaxEnergy extends ConsoleCommand {
 
     final static void a(int param0, String param1) {
         try {
-          vla.field_E = param1;
+          LoginForm.field_E = param1;
           if (param0 != 1043) {
             GetBurstFireMaxEnergy.clearSharedReferences(false);
           }

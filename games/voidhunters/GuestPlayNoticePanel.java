@@ -1,16 +1,16 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rla extends UiContainer implements UiActionListener {
-    private UiFocusableComponent field_w;
-    private UiFocusableComponent field_z;
-    private UiFocusableComponent field_y;
+final class GuestPlayNoticePanel extends UiContainer implements UiActionListener {
+    private UiFocusableComponent createAccountButton;
+    private UiFocusableComponent playGuestButton;
+    private UiFocusableComponent backButton;
     static GameStateFactory field_v;
     static int field_x;
 
-    final static boolean c(boolean param0) {
+    final static boolean hasActivePointerPosition(boolean param0) {
         if (param0) {
-          rla.clearSharedReferences((byte) -52);
+          GuestPlayNoticePanel.clearSharedReferences((byte) -52);
           if (!ShipComponentFactory.field_a) {
             return false;
           }
@@ -44,7 +44,7 @@ final class rla extends UiContainer implements UiActionListener {
           super.drawLayer(param0, param1, 94, param3);
           return;
         }
-        this.field_z = (UiFocusableComponent) null;
+        this.playGuestButton = (UiFocusableComponent) null;
         var6Lifetime1 = param3 + this.y;
         SetShipToShipRamDamage.field_o.drawParagraph(NebulaFactory.field_a, 20 + var5, var6Lifetime1 + 20, this.width - 40, this.height - 50, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.maxAscent);
         super.drawLayer(param0, param1, 94, param3);
@@ -57,29 +57,29 @@ final class rla extends UiContainer implements UiActionListener {
         field_v = null;
     }
 
-    public rla() {
+    public GuestPlayNoticePanel() {
         super(0, 0, 476, 225, (UiRenderer) null);
-        this.field_w = new UiFocusableComponent(TimedSpecialOrderBehaviour.field_b, (UiListener) null);
-        this.field_y = new UiFocusableComponent(SetTorpedoReload.field_p, (UiListener) null);
-        this.field_z = new UiFocusableComponent(cjb.field_a, (UiListener) null);
+        this.createAccountButton = new UiFocusableComponent(TimedSpecialOrderBehaviour.field_b, (UiListener) null);
+        this.backButton = new UiFocusableComponent(SetTorpedoReload.field_p, (UiListener) null);
+        this.playGuestButton = new UiFocusableComponent(cjb.field_a, (UiListener) null);
         vva var1 = new vva();
-        this.field_w.renderer = (UiRenderer) ((Object) var1);
-        this.field_y.renderer = (UiRenderer) ((Object) var1);
-        this.field_z.renderer = (UiRenderer) ((Object) var1);
+        this.createAccountButton.renderer = (UiRenderer) ((Object) var1);
+        this.backButton.renderer = (UiRenderer) ((Object) var1);
+        this.playGuestButton.renderer = (UiRenderer) ((Object) var1);
         int var2 = 4;
         int var3 = 326;
         int var4 = var3 - var2 >> 1;
-        this.field_y.setBounds(this.width - var3 >> 1, var4, 30, 1, -48 + this.height - var2);
-        this.field_z.setBounds(var4 + ((this.width - var3 >> 1) + var2), var4, 30, 1, -var2 - 48 + this.height);
-        this.field_w.setBounds(this.width - var3 >> 1, var3, 30, 1, -78 + (this.height - var2 * 2));
-        this.field_y.listener = (UiListener) (this);
-        this.field_w.listener = (UiListener) (this);
-        this.field_z.listener = (UiListener) (this);
-        this.field_w.tooltip = AdjustBodyComponentsAction.field_a;
-        this.field_z.tooltip = UiContainer.field_u;
-        this.addChild(-18756, this.field_y);
-        this.addChild(-18756, this.field_w);
-        this.addChild(-18756, this.field_z);
+        this.backButton.setBounds(this.width - var3 >> 1, var4, 30, 1, -48 + this.height - var2);
+        this.playGuestButton.setBounds(var4 + ((this.width - var3 >> 1) + var2), var4, 30, 1, -var2 - 48 + this.height);
+        this.createAccountButton.setBounds(this.width - var3 >> 1, var3, 30, 1, -78 + (this.height - var2 * 2));
+        this.backButton.listener = (UiListener) (this);
+        this.createAccountButton.listener = (UiListener) (this);
+        this.playGuestButton.listener = (UiListener) (this);
+        this.createAccountButton.tooltip = AdjustBodyComponentsAction.field_a;
+        this.playGuestButton.tooltip = UiContainer.field_u;
+        this.addChild(-18756, this.backButton);
+        this.addChild(-18756, this.createAccountButton);
+        this.addChild(-18756, this.playGuestButton);
     }
 
     final boolean handleKey(int param0, int param1, UiComponent param2, char param3) {
@@ -130,21 +130,21 @@ final class rla extends UiContainer implements UiActionListener {
         RuntimeException var6 = null;
         var7 = VoidHunters.field_G;
         try {
-          if (this.field_y == param3) {
-            ot.a(-96);
+          if (this.backButton == param3) {
+            LoginFormNavigation.showEmptyLoginForm(-96);
           } else {
-            if (this.field_w == param3) {
-              GetPhasedEnergyBeamProjectiles.a(70);
+            if (this.createAccountButton == param3) {
+              GetPhasedEnergyBeamProjectiles.showAccountCreationForm(70);
             } else {
-              if (param3 == this.field_z) {
-                pr.a(17496);
+              if (param3 == this.playGuestButton) {
+                SecondaryNodeHashTable.continueAsGuest(17496);
               }
             }
           }
           if (param0 == 11) {
             return;
           }
-          this.field_y = (UiFocusableComponent) null;
+          this.backButton = (UiFocusableComponent) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

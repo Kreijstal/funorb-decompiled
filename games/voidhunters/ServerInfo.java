@@ -133,10 +133,10 @@ final class ServerInfo implements DiffableState {
         if (param1) {
           return false;
         }
-        if (pr.field_c == null) {
+        if (SecondaryNodeHashTable.field_c == null) {
           return false;
         }
-        var3 = pr.field_c.field_g;
+        var3 = SecondaryNodeHashTable.field_c.field_g;
         if (var3 != 1) {
           if (pla.a(param0, -4)) {
             return false;

@@ -38,7 +38,7 @@ final class SetPhasedEnergyBeamAimarc extends ConsoleCommand {
         if (param0 != 80) {
           return (jk) null;
         }
-        return (jk) (GetReverbWet.field_o.a(-1, param1));
+        return (jk) (GetReverbWet.field_o.get(-1, param1));
     }
 
     static {

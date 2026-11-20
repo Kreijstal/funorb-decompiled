@@ -11,7 +11,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
     private int ropeLength;
     static int field_f;
 
-    final void a(int param0, Camera2D param1, int[] param2, int param3, World param4, int param5, int param6) {
+    final void drawRope(int param0, Camera2D param1, int[] param2, int param3, World param4, int param5, int param6) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -63,8 +63,8 @@ final class GrappleLauncherBehaviour implements DiffableState {
             var19 = param1.worldToScreenX(var10, (byte) 122);
             var20 = param1.worldToScreenY(true, var11);
             c.a(var18, var17Lifetime1, var19, var20, -16777216, var16);
-            if (var23.l((byte) -68) >= 0) {
-              var21 = param4.getBodyById((byte) -27, var23.l((byte) -102));
+            if (var23.getGrabbedObjectId((byte) -68) >= 0) {
+              var21 = param4.getBodyById((byte) -27, var23.getGrabbedObjectId((byte) -102));
               if (var21 == null) {
                 return;
               }
@@ -101,22 +101,22 @@ final class GrappleLauncherBehaviour implements DiffableState {
         }
     }
 
-    private final void a(int param0, GrapplingHook param1) {
+    private final void startRecall(int param0, GrapplingHook param1) {
         if (param0 != 32) {
           return;
         }
         try {
           if (this.targetRopeLength != GetMissionTerrainNebulaProbability.field_r) {
             this.targetRopeLength = GetMissionTerrainNebulaProbability.field_r;
-            param1.f(true);
-            param1.a(param0 ^ 86, true);
+            param1.clearGrabbedObject(true);
+            param1.setRetracting(param0 ^ 86, true);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lja.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final int d(byte param0) {
+    final int getAimSpeed(byte param0) {
         if (param0 != 126) {
           return -65;
         }
@@ -126,7 +126,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
         return GetRepairModePower.field_q;
     }
 
-    final void a(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, byte param7, World param8, int param9, ShipBody param10) {
+    final void fireOrRecall(int param0, int param1, int[] param2, int param3, int param4, int param5, int param6, byte param7, World param8, int param9, ShipBody param10) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -193,10 +193,10 @@ final class GrappleLauncherBehaviour implements DiffableState {
           }
           var25 = param8.getGrapplingHookById(this.hookId, -103);
           if (var25 != null) {
-            if (-1 != var25.l((byte) 123)) {
+            if (-1 != var25.getGrabbedObjectId((byte) 123)) {
               BlendTextureOperation.a(20382, var25.getX(false), 13, var25.getY((byte) -69), 50);
             }
-            this.a(32, var25);
+            this.startRecall(32, var25);
             BlendTextureOperation.a(20382, param5, 14, param1, 50);
           }
           return;
@@ -226,15 +226,15 @@ final class GrappleLauncherBehaviour implements DiffableState {
         }
     }
 
-    final static void e(byte param0) {
+    final static void showLoginForm(byte param0) {
         String var2 = (String) null;
-        SetDebrisFoundInPairs.a((String) null, SetResourceNodeCaptureTime.field_p, 0);
+        SetDebrisFoundInPairs.showLoginForm((String) null, SetResourceNodeCaptureTime.field_p, 0);
         if (param0 <= 11) {
-          GrappleLauncherBehaviour.e((byte) 76);
+          GrappleLauncherBehaviour.showLoginForm((byte) 76);
         }
     }
 
-    final void a(ShipBody param0, World param1, int param2, boolean param3, byte param4, int param5, int param6, int[] param7) {
+    final void update(ShipBody param0, World param1, int param2, boolean param3, byte param4, int param5, int param6, int[] param7) {
         RuntimeException stackIn_41_0 = null;
         StringBuilder stackIn_41_1 = null;
         String stackIn_42_2 = null;
@@ -310,20 +310,20 @@ final class GrappleLauncherBehaviour implements DiffableState {
                 var21_int = var20 >> 8;
                 var33.addForceAtPoint(-var21_int, var33.getX(false), var33.getY((byte) 122), (byte) -128, -var19);
                 param0.addForceAtPoint(var21_int, var11, var12, (byte) -117, var19);
-                if (-1 == var33.l((byte) -106)) {
-                  this.a(32, var33);
+                if (-1 == var33.getGrabbedObjectId((byte) -106)) {
+                  this.startRecall(32, var33);
                 }
               }
             }
-            if (var33.l((byte) 120) >= 0) {
-              var17 = param1.getBodyById((byte) -27, var33.l((byte) 121));
+            if (var33.getGrabbedObjectId((byte) 120) >= 0) {
+              var17 = param1.getBodyById((byte) -27, var33.getGrabbedObjectId((byte) 121));
               if (var17 == null) {
-                var33.f(true);
+                var33.clearGrabbedObject(true);
                 return;
               }
               var18 = var17.chassis.getComponentByPath(var33.getGrabbedComponentId(-109), -121);
               if (var18 == null) {
-                var33.f(true);
+                var33.clearGrabbedObject(true);
                 return;
               }
               if (this.targetRopeLength > bia.field_c >> 1) {
@@ -331,8 +331,8 @@ final class GrappleLauncherBehaviour implements DiffableState {
               }
               var19Lifetime1 = TextureLineShape.sinAngle(var18.finalangle, 126);
               var20Lifetime1 = GetNumStars.cosAngle(var18.finalangle, (byte) -76);
-              var21 = (long)var18.finalx + ((long)var20Lifetime1 * (long)var33.o(23463) - (long)var33.getGrabbedComponentOffsety(32) * (long)var19Lifetime1 >> 16);
-              var23 = (long)var18.finaly + ((long)var33.o(23463) * (long)var19Lifetime1 + (long)var33.getGrabbedComponentOffsety(32) * (long)var20Lifetime1 >> 16);
+              var21 = (long)var18.finalx + ((long)var20Lifetime1 * (long)var33.getGrabbedComponentOffsetx(23463) - (long)var33.getGrabbedComponentOffsety(32) * (long)var19Lifetime1 >> 16);
+              var23 = (long)var18.finaly + ((long)var33.getGrabbedComponentOffsetx(23463) * (long)var19Lifetime1 + (long)var33.getGrabbedComponentOffsety(32) * (long)var20Lifetime1 >> 16);
               var25 = (int)var21 - var33.getX(false);
               var26 = (int)var23 - var33.getY((byte) -29);
               var27 = var33.getVelocityX((byte) -121) - var17.getVelocityX((byte) -112);
@@ -349,8 +349,8 @@ final class GrappleLauncherBehaviour implements DiffableState {
                 this.ropeLength = this.targetRopeLength;
               }
               if (this.targetRopeLength == GetMissionTerrainNebulaProbability.field_r &&
-                0 <= var33.l((byte) -34)) {
-                var33.f(true);
+                0 <= var33.getGrabbedObjectId((byte) -34)) {
+                var33.clearGrabbedObject(true);
                 var33.dx = 0;
                 var33.dy = 0;
               }
@@ -406,7 +406,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
         }
     }
 
-    final boolean b(byte param0) {
+    final boolean hasNoHook(byte param0) {
         if (param0 != -113) {
           return true;
         }
@@ -417,14 +417,14 @@ final class GrappleLauncherBehaviour implements DiffableState {
         this.hookId = -1;
     }
 
-    final int a(byte param0) {
+    final int getAimArc(byte param0) {
         if (param0 != 12) {
           field_d = -53;
         }
         return dla.field_c;
     }
 
-    final void a(World param0, int param1) {
+    final void destroyHook(World param0, int param1) {
         GrapplingHook var3 = null;
         World var4 = null;
         RuntimeException stackIn_8_0 = null;
@@ -435,11 +435,11 @@ final class GrappleLauncherBehaviour implements DiffableState {
         try {
           if (param1 != 19278) {
             var4 = (World) null;
-            this.a(-123, (Camera2D) null, (int[]) null, -18, (World) null, 75, 40);
+            this.drawRope(-123, (Camera2D) null, (int[]) null, -18, (World) null, 75, 40);
           }
           var3 = param0.getGrapplingHookById(this.hookId, 101);
           if (var3 != null) {
-            var3.n(620);
+            var3.destroyHook(620);
             this.hookId = -1;
           }
           return;
@@ -556,7 +556,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
           var7.targetRopeLength = this.targetRopeLength;
           if (param0 <= 54) {
             ShipBody var4 = (ShipBody) null;
-            this.a(-126, -1, (int[]) null, -127, 86, -67, -61, (byte) 75, (World) null, -84, (ShipBody) null);
+            this.fireOrRecall(-126, -1, (int[]) null, -127, 86, -67, -61, (byte) 75, (World) null, -84, (ShipBody) null);
           }
           var7.hookId = this.hookId;
           var7.reload = this.reload;

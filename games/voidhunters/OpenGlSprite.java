@@ -6,18 +6,18 @@ final class OpenGlSprite extends ToolkitSprite {
     static String field_k;
     private int field_j;
     private OpenGlToolkit toolkit;
-    private im field_e;
+    private OpenGlSpriteTexture field_e;
     static String field_h;
     private int field_a;
     private boolean field_l;
-    im texture;
+    OpenGlSpriteTexture texture;
     static boolean reconnecting;
     private int paddingTop;
     private int paddingLeft;
 
     private final void a(int param0) {
         if (param0 != -27568) {
-          this.field_e = (im) null;
+          this.field_e = (OpenGlSpriteTexture) null;
         }
         this.toolkit.setActiveTextureUnit(33984, 1);
         this.toolkit.bindTexture(65, (OpenGlTexture) null);
@@ -46,42 +46,42 @@ final class OpenGlSprite extends ToolkitSprite {
           this.a(true, param2);
           this.field_e.setLinearFiltering(-77, false);
           jaggl.OpenGL.glBegin(7);
-          jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.texture.field_o);
-          jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.field_o);
+          jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.texture.vMax);
+          jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.vMax);
           jaggl.OpenGL.glVertex2i(param0, param1);
           jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
           jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-          jaggl.OpenGL.glVertex2i(param0, this.texture.field_p + param1);
-          jaggl.OpenGL.glMultiTexCoord2f(33985, this.texture.field_n, 0.0f);
-          jaggl.OpenGL.glTexCoord2f(this.texture.field_n, 0.0f);
-          jaggl.OpenGL.glVertex2i(this.texture.field_m + param0, this.texture.field_p + param1);
-          jaggl.OpenGL.glMultiTexCoord2f(33985, this.texture.field_n, this.texture.field_o);
-          jaggl.OpenGL.glTexCoord2f(this.texture.field_n, this.texture.field_o);
-          jaggl.OpenGL.glVertex2i(param0 + this.texture.field_m, param1);
+          jaggl.OpenGL.glVertex2i(param0, this.texture.logicalHeight + param1);
+          jaggl.OpenGL.glMultiTexCoord2f(33985, this.texture.uMax, 0.0f);
+          jaggl.OpenGL.glTexCoord2f(this.texture.uMax, 0.0f);
+          jaggl.OpenGL.glVertex2i(this.texture.logicalWidth + param0, this.texture.logicalHeight + param1);
+          jaggl.OpenGL.glMultiTexCoord2f(33985, this.texture.uMax, this.texture.vMax);
+          jaggl.OpenGL.glTexCoord2f(this.texture.uMax, this.texture.vMax);
+          jaggl.OpenGL.glVertex2i(param0 + this.texture.logicalWidth, param1);
           jaggl.OpenGL.glEnd();
           this.a(-27568);
         } else {
           this.toolkit.bindTexture(117, this.texture);
           this.toolkit.setTextureCombineMode(0, param2);
           jaggl.OpenGL.glBegin(7);
-          jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.field_o);
+          jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.vMax);
           jaggl.OpenGL.glVertex2i(param0, param1);
           jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
-          jaggl.OpenGL.glVertex2i(param0, this.texture.field_p + param1);
-          jaggl.OpenGL.glTexCoord2f(this.texture.field_n, 0.0f);
-          jaggl.OpenGL.glVertex2i(this.texture.field_m + param0, param1 + this.texture.field_p);
-          jaggl.OpenGL.glTexCoord2f(this.texture.field_n, this.texture.field_o);
-          jaggl.OpenGL.glVertex2i(this.texture.field_m + param0, param1);
+          jaggl.OpenGL.glVertex2i(param0, this.texture.logicalHeight + param1);
+          jaggl.OpenGL.glTexCoord2f(this.texture.uMax, 0.0f);
+          jaggl.OpenGL.glVertex2i(this.texture.logicalWidth + param0, param1 + this.texture.logicalHeight);
+          jaggl.OpenGL.glTexCoord2f(this.texture.uMax, this.texture.vMax);
+          jaggl.OpenGL.glVertex2i(this.texture.logicalWidth + param0, param1);
           jaggl.OpenGL.glEnd();
         }
     }
 
     final int getHeight() {
-        return this.texture.field_p;
+        return this.texture.logicalHeight;
     }
 
     final int getPaddedHeight() {
-        return this.texture.field_p - (-this.paddingTop - this.field_b);
+        return this.texture.logicalHeight - (-this.paddingTop - this.field_b);
     }
 
     private final void a(boolean param0, int param1) {
@@ -140,14 +140,14 @@ final class OpenGlSprite extends ToolkitSprite {
         float var13;
         float var14;
         int var15;
-        im stackIn_2_0 = null;
+        OpenGlSpriteTexture stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         boolean stackIn_3_2 = false;
         var15 = VoidHunters.field_G;
         stackIn_2_0 = this.texture;
         stackIn_2_1 = -124;
         stackIn_3_2 = ((param7 & 1) == 0) ? false : true;
-        ((im) (Object) stackIn_2_0).setLinearFiltering(stackIn_2_1, stackIn_3_2);
+        ((OpenGlSpriteTexture) (Object) stackIn_2_0).setLinearFiltering(stackIn_2_1, stackIn_3_2);
         this.toolkit.n(27841);
         this.toolkit.setBlendMode(param6, 115);
         jaggl.OpenGL.glColor4ub((byte)(param5 >> 16), (byte)(param5 >> 8), (byte)param5, (byte)(param5 >> 24));
@@ -156,17 +156,17 @@ final class OpenGlSprite extends ToolkitSprite {
             this.a(true, param4);
             this.field_e.setLinearFiltering(-112, true);
             jaggl.OpenGL.glBegin(7);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.texture.field_o);
-            jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.field_o);
+            jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.texture.vMax);
+            jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.vMax);
             jaggl.OpenGL.glVertex2i(param0, param1);
             jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
             jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
             jaggl.OpenGL.glVertex2i(param0, param1 + param3);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, this.texture.field_n, 0.0f);
-            jaggl.OpenGL.glTexCoord2f(this.texture.field_n, 0.0f);
+            jaggl.OpenGL.glMultiTexCoord2f(33985, this.texture.uMax, 0.0f);
+            jaggl.OpenGL.glTexCoord2f(this.texture.uMax, 0.0f);
             jaggl.OpenGL.glVertex2i(param0 + param2, param1 + param3);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, this.texture.field_n, this.texture.field_o);
-            jaggl.OpenGL.glTexCoord2f(this.texture.field_n, this.texture.field_o);
+            jaggl.OpenGL.glMultiTexCoord2f(33985, this.texture.uMax, this.texture.vMax);
+            jaggl.OpenGL.glTexCoord2f(this.texture.uMax, this.texture.vMax);
             jaggl.OpenGL.glVertex2i(param2 + param0, param1);
             jaggl.OpenGL.glEnd();
             this.a(-27568);
@@ -174,13 +174,13 @@ final class OpenGlSprite extends ToolkitSprite {
             this.toolkit.bindTexture(103, this.texture);
             this.toolkit.setTextureCombineMode(0, param4);
             jaggl.OpenGL.glBegin(7);
-            jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.field_o);
+            jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.vMax);
             jaggl.OpenGL.glVertex2i(param0, param1);
             jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
             jaggl.OpenGL.glVertex2i(param0, param1 + param3);
-            jaggl.OpenGL.glTexCoord2f(this.texture.field_n, 0.0f);
+            jaggl.OpenGL.glTexCoord2f(this.texture.uMax, 0.0f);
             jaggl.OpenGL.glVertex2i(param0 + param2, param3 + param1);
-            jaggl.OpenGL.glTexCoord2f(this.texture.field_n, this.texture.field_o);
+            jaggl.OpenGL.glTexCoord2f(this.texture.uMax, this.texture.vMax);
             jaggl.OpenGL.glVertex2i(param2 + param0, param1);
             jaggl.OpenGL.glEnd();
           }
@@ -189,23 +189,23 @@ final class OpenGlSprite extends ToolkitSprite {
           var10 = (float)param3 / (float)this.getPaddedHeight();
           var11 = (float)this.paddingLeft * var9 + (float)param0;
           var12 = (float)param1 + (float)this.paddingTop * var10;
-          var13 = var11 + (float)this.texture.field_m * var9;
-          var14 = (float)this.texture.field_p * var10 + var12;
+          var13 = var11 + (float)this.texture.logicalWidth * var9;
+          var14 = (float)this.texture.logicalHeight * var10 + var12;
           if (this.field_e != null) {
             this.a(true, param4);
             this.field_e.setLinearFiltering(-128, true);
             jaggl.OpenGL.glBegin(7);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.texture.field_o);
-            jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.field_o);
+            jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.texture.vMax);
+            jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.vMax);
             jaggl.OpenGL.glVertex2f(var11, var12);
             jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, 0.0f);
             jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
             jaggl.OpenGL.glVertex2f(var11, var14);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, this.texture.field_n, 0.0f);
-            jaggl.OpenGL.glTexCoord2f(this.texture.field_n, 0.0f);
+            jaggl.OpenGL.glMultiTexCoord2f(33985, this.texture.uMax, 0.0f);
+            jaggl.OpenGL.glTexCoord2f(this.texture.uMax, 0.0f);
             jaggl.OpenGL.glVertex2f(var13, var14);
-            jaggl.OpenGL.glMultiTexCoord2f(33985, this.texture.field_n, this.texture.field_o);
-            jaggl.OpenGL.glTexCoord2f(this.texture.field_n, this.texture.field_o);
+            jaggl.OpenGL.glMultiTexCoord2f(33985, this.texture.uMax, this.texture.vMax);
+            jaggl.OpenGL.glTexCoord2f(this.texture.uMax, this.texture.vMax);
             jaggl.OpenGL.glVertex2f(var13, var12);
             jaggl.OpenGL.glEnd();
             this.a(-27568);
@@ -213,13 +213,13 @@ final class OpenGlSprite extends ToolkitSprite {
             this.toolkit.bindTexture(120, this.texture);
             this.toolkit.setTextureCombineMode(0, param4);
             jaggl.OpenGL.glBegin(7);
-            jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.field_o);
+            jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.vMax);
             jaggl.OpenGL.glVertex2f(var11, var12);
             jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
             jaggl.OpenGL.glVertex2f(var11, var14);
-            jaggl.OpenGL.glTexCoord2f(this.texture.field_n, 0.0f);
+            jaggl.OpenGL.glTexCoord2f(this.texture.uMax, 0.0f);
             jaggl.OpenGL.glVertex2f(var13, var14);
-            jaggl.OpenGL.glTexCoord2f(this.texture.field_n, this.texture.field_o);
+            jaggl.OpenGL.glTexCoord2f(this.texture.uMax, this.texture.vMax);
             jaggl.OpenGL.glVertex2f(var13, var12);
             jaggl.OpenGL.glEnd();
           }
@@ -252,10 +252,10 @@ final class OpenGlSprite extends ToolkitSprite {
         this.toolkit.setBlendMode(param6, 111);
         this.toolkit.setTextureCombineMode(0, param4);
         jaggl.OpenGL.glColor4ub((byte)(param5 >> 16), (byte)(param5 >> 8), (byte)param5, (byte)(param5 >> 24));
-        if (this.texture.field_l &&
+        if (this.texture.fullNormalizedCoordinates &&
           !this.field_l) {
-          var10 = this.texture.field_o * (float)param3 / (float)this.texture.field_p;
-          var11 = this.texture.field_n * (float)param2 / (float)this.texture.field_m;
+          var10 = this.texture.vMax * (float)param3 / (float)this.texture.logicalHeight;
+          var11 = this.texture.uMax * (float)param2 / (float)this.texture.logicalWidth;
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glTexCoord2f(0.0f, var10);
           jaggl.OpenGL.glVertex2i(param0, param1);
@@ -271,33 +271,33 @@ final class OpenGlSprite extends ToolkitSprite {
           jaggl.OpenGL.glTranslatef((float)this.paddingLeft, (float)this.paddingTop, 0.0f);
           var10_int = this.getPaddedWidth();
           var11_int = this.getPaddedHeight();
-          var13 = this.texture.field_p + param1;
+          var13 = this.texture.logicalHeight + param1;
           jaggl.OpenGL.glBegin(7);
           var12 = param1;
           while (var13 <= var9) {
-            var15 = param0 + this.texture.field_m;
+            var15 = param0 + this.texture.logicalWidth;
             var14_int = param0;
             while (var15 <= var8) {
-              jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.field_o);
+              jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.vMax);
               jaggl.OpenGL.glVertex2i(var14_int, var12);
               jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
               jaggl.OpenGL.glVertex2i(var14_int, var13);
-              jaggl.OpenGL.glTexCoord2f(this.texture.field_n, 0.0f);
+              jaggl.OpenGL.glTexCoord2f(this.texture.uMax, 0.0f);
               jaggl.OpenGL.glVertex2i(var15, var13);
-              jaggl.OpenGL.glTexCoord2f(this.texture.field_n, this.texture.field_o);
+              jaggl.OpenGL.glTexCoord2f(this.texture.uMax, this.texture.vMax);
               jaggl.OpenGL.glVertex2i(var15, var12);
               var14_int = var14_int + var10_int;
               var15 = var15 + var10_int;
             }
             if (var8 > var14_int) {
-              var16_float = this.texture.field_n * (float)(-var14_int + var8) / (float)this.texture.field_m;
-              jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.field_o);
+              var16_float = this.texture.uMax * (float)(-var14_int + var8) / (float)this.texture.logicalWidth;
+              jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.vMax);
               jaggl.OpenGL.glVertex2i(var14_int, var12);
               jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
               jaggl.OpenGL.glVertex2i(var14_int, var13);
               jaggl.OpenGL.glTexCoord2f(var16_float, 0.0f);
               jaggl.OpenGL.glVertex2i(var8, var13);
-              jaggl.OpenGL.glTexCoord2f(var16_float, this.texture.field_o);
+              jaggl.OpenGL.glTexCoord2f(var16_float, this.texture.vMax);
               jaggl.OpenGL.glVertex2i(var8, var12);
             }
             var13 = var13 + var11_int;
@@ -307,30 +307,30 @@ final class OpenGlSprite extends ToolkitSprite {
             jaggl.OpenGL.glEnd();
             jaggl.OpenGL.glPopMatrix();
           } else {
-            var14 = (float)(this.texture.field_p - (var9 - var12)) * this.texture.field_o / (float)this.texture.field_p;
-            var16 = param0 + this.texture.field_m;
+            var14 = (float)(this.texture.logicalHeight - (var9 - var12)) * this.texture.vMax / (float)this.texture.logicalHeight;
+            var16 = param0 + this.texture.logicalWidth;
             var15Lifetime1 = param0;
             while (var16 <= var8) {
-              jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.field_o);
+              jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.vMax);
               jaggl.OpenGL.glVertex2i(var15Lifetime1, var12);
               jaggl.OpenGL.glTexCoord2f(0.0f, var14);
               jaggl.OpenGL.glVertex2i(var15Lifetime1, var9);
-              jaggl.OpenGL.glTexCoord2f(this.texture.field_n, var14);
+              jaggl.OpenGL.glTexCoord2f(this.texture.uMax, var14);
               jaggl.OpenGL.glVertex2i(var16, var9);
-              jaggl.OpenGL.glTexCoord2f(this.texture.field_n, this.texture.field_o);
+              jaggl.OpenGL.glTexCoord2f(this.texture.uMax, this.texture.vMax);
               jaggl.OpenGL.glVertex2i(var16, var12);
               var16 = var16 + var10_int;
               var15Lifetime1 = var15Lifetime1 + var10_int;
             }
             if (var15Lifetime1 < var8) {
-              var17 = (float)(var8 - var15Lifetime1) * this.texture.field_n / (float)this.texture.field_m;
-              jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.field_o);
+              var17 = (float)(var8 - var15Lifetime1) * this.texture.uMax / (float)this.texture.logicalWidth;
+              jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.vMax);
               jaggl.OpenGL.glVertex2i(var15Lifetime1, var12);
               jaggl.OpenGL.glTexCoord2f(0.0f, var14);
               jaggl.OpenGL.glVertex2i(var15Lifetime1, var9);
               jaggl.OpenGL.glTexCoord2f(var17, var14);
               jaggl.OpenGL.glVertex2i(var8, var9);
-              jaggl.OpenGL.glTexCoord2f(var17, this.texture.field_o);
+              jaggl.OpenGL.glTexCoord2f(var17, this.texture.vMax);
               jaggl.OpenGL.glVertex2i(var8, var12);
             }
             jaggl.OpenGL.glEnd();
@@ -340,7 +340,7 @@ final class OpenGlSprite extends ToolkitSprite {
     }
 
     final int getPaddedWidth() {
-        return this.field_a + (this.texture.field_m + this.paddingLeft);
+        return this.field_a + (this.texture.logicalWidth + this.paddingLeft);
     }
 
     final void setPadding(int param0, int param1, int param2, int param3) {
@@ -380,7 +380,7 @@ final class OpenGlSprite extends ToolkitSprite {
     }
 
     final int getWidth() {
-        return this.texture.field_m;
+        return this.texture.logicalWidth;
     }
 
     final void drawAffine(float param0, float param1, float param2, float param3, float param4, float param5, int param6, int param7, int param8, int param9) {
@@ -431,13 +431,13 @@ final class OpenGlSprite extends ToolkitSprite {
         this.toolkit.setTextureCombineMode(0, param6);
         jaggl.OpenGL.glColor4ub((byte)(param7 >> 16), (byte)(param7 >> 8), (byte)param7, (byte)(param7 >> 24));
         jaggl.OpenGL.glBegin(7);
-        jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.field_o);
+        jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.vMax);
         jaggl.OpenGL.glVertex2f(param0, param1);
         jaggl.OpenGL.glTexCoord2f(0.0f, 0.0f);
         jaggl.OpenGL.glVertex2f(param4, param5);
-        jaggl.OpenGL.glTexCoord2f(this.texture.field_n, 0.0f);
+        jaggl.OpenGL.glTexCoord2f(this.texture.uMax, 0.0f);
         jaggl.OpenGL.glVertex2f(var11Lifetime1, var12Lifetime1);
-        jaggl.OpenGL.glTexCoord2f(this.texture.field_n, this.texture.field_o);
+        jaggl.OpenGL.glTexCoord2f(this.texture.uMax, this.texture.vMax);
         jaggl.OpenGL.glVertex2f(param2, param3);
         jaggl.OpenGL.glEnd();
     }
@@ -474,7 +474,7 @@ final class OpenGlSprite extends ToolkitSprite {
         this.field_l = false;
         try {
           this.toolkit = param0;
-          this.texture = FireBoostersOrderDefinition.a(param0, param4, param5, param2, param3, param1, false, (byte) 60);
+          this.texture = FireBoostersOrderDefinition.createSpriteTexture(param0, param4, param5, param2, param3, param1, false, (byte) 60);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }

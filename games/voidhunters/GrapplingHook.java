@@ -12,7 +12,7 @@ final class GrapplingHook extends ShipBody implements DiffableState, CompactGame
     private int grabbedComponentOffsetx;
     static Widget field_C;
 
-    final void a(int param0, boolean param1) {
+    final void setRetracting(int param0, boolean param1) {
         int var3 = -47 / ((param0 - 56) / 50);
         this.retracting = param1 ? true : false;
     }
@@ -86,7 +86,7 @@ final class GrapplingHook extends ShipBody implements DiffableState, CompactGame
         return this.grabbedComponentOffsety;
     }
 
-    final void d(int param0, int param1, int param2, int param3, int param4) {
+    final void setGrabbedComponent(int param0, int param1, int param2, int param3, int param4) {
         if (param3 >= 43) {
           this.grabbedComponentOffsety = param2;
           this.grabbedComponentId = param0;
@@ -96,12 +96,12 @@ final class GrapplingHook extends ShipBody implements DiffableState, CompactGame
         }
     }
 
-    final int l(byte param0) {
+    final int getGrabbedObjectId(byte param0) {
         int var2 = 59 / ((66 - param0) / 49);
         return -1 + this.grabbedObjectId;
     }
 
-    final int m(int param0) {
+    final int getFiredFromPlayer(int param0) {
         if (param0 != 32) {
           SerializableGameState var3 = (SerializableGameState) null;
           this.reportDifferences((SerializableGameState) null, -15);
@@ -126,16 +126,16 @@ final class GrapplingHook extends ShipBody implements DiffableState, CompactGame
           param0.writeBits(-632, this.firedFromPlayer, 32);
           vq.writeBoolean(param0, -98, this.retracting);
           if (param1 > -91) {
-            this.o(-128);
+            this.getGrabbedComponentOffsetx(-128);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mqb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    final int o(int param0) {
+    final int getGrabbedComponentOffsetx(int param0) {
         if (param0 != 23463) {
-          this.l((byte) -122);
+          this.getGrabbedObjectId((byte) -122);
           return this.grabbedComponentOffsetx;
         }
         return this.grabbedComponentOffsetx;
@@ -164,7 +164,7 @@ final class GrapplingHook extends ShipBody implements DiffableState, CompactGame
         }
     }
 
-    final void f(boolean param0) {
+    final void clearGrabbedObject(boolean param0) {
         if (!param0) {
           this.firedFromPlayer = -107;
           this.grabbedObjectId = 0;
@@ -173,15 +173,15 @@ final class GrapplingHook extends ShipBody implements DiffableState, CompactGame
         this.grabbedObjectId = 0;
     }
 
-    final int p(int param0) {
+    final int getFiredFromId(int param0) {
         if (param0 != 32) {
-          this.d(87, 119, -79, -18, -61);
+          this.setGrabbedComponent(87, 119, -79, -18, -61);
           return this.firedFromId;
         }
         return this.firedFromId;
     }
 
-    final void n(int param0) {
+    final void destroyHook(int param0) {
         if (param0 != 620) {
           return;
         }

@@ -29,7 +29,7 @@ final class SaveShipDesignOrderDefinition extends SpecialOrderDefinition {
 
     final boolean requiresPrimaryPress(boolean param0) {
         if (param0) {
-          SaveShipDesignOrderDefinition.a(68, 42, true, -12, 65);
+          SaveShipDesignOrderDefinition.pushClip(68, 42, true, -12, 65);
           return false;
         }
         return false;
@@ -45,18 +45,18 @@ final class SaveShipDesignOrderDefinition extends SpecialOrderDefinition {
     SaveShipDesignOrderDefinition() {
     }
 
-    final static void a(int param0, int param1, boolean param2, int param3, int param4) {
+    final static void pushClip(int param0, int param1, boolean param2, int param3, int param4) {
         if (OpenGlTexture1D.field_i) {
-          feb.a(GetDebrisGroupColour.field_r, true).a(param4, param3, param0, param1, (byte) -45);
+          ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true).pushClip(param4, param3, param0, param1, (byte) -45);
           if (!param2) {
-            SaveShipDesignOrderDefinition.a(117, -125, true, -70, 61);
+            SaveShipDesignOrderDefinition.pushClip(117, -125, true, -70, 61);
             return;
           }
           return;
         }
         SelectableIconLabelWidget.pushClip(param3, param1, param4, true, param0);
         if (!param2) {
-          SaveShipDesignOrderDefinition.a(117, -125, true, -70, 61);
+          SaveShipDesignOrderDefinition.pushClip(117, -125, true, -70, 61);
           return;
         }
     }

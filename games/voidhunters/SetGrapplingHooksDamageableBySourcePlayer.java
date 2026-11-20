@@ -37,10 +37,10 @@ final class SetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
           if (GetReverbWet.field_o == null) {
             return;
           }
-          var3 = (jk) (GetReverbWet.field_o.c(param0 - 99));
+          var3 = (jk) (GetReverbWet.field_o.first(param0 - 99));
           while (var3 != null) {
             var3.unlinkSecondary((byte) -35);
-            var3 = (jk) (GetReverbWet.field_o.d(param0 - 16));
+            var3 = (jk) (GetReverbWet.field_o.next(param0 - 16));
           }
           GetReverbWet.field_o = null;
           return;

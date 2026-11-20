@@ -29,7 +29,7 @@ class AccountStatusDialog extends ContentTransitionDialog implements UiActionLis
           }
           return;
         }
-        GrappleLauncherBehaviour.e((byte) 90);
+        GrappleLauncherBehaviour.showLoginForm((byte) 90);
         if (param0 == -106) {
           return;
         }

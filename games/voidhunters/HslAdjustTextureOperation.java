@@ -30,15 +30,15 @@ final class HslAdjustTextureOperation extends TextureOperation {
           CommandConsole.field_s = new IndexedSpriteData[5][];
           ShipBodyFactory.field_b = new ToolkitFontMetrics[5];
           ShipBodyFactory.field_b[0] = SetShieldsDirectionalArcParticleSpeedDownshift.a(param3 + 14135, param1, "basic", "tinyfont_graphics2");
-          CommandConsole.field_s[0] = IndexedSpriteData.a(param2, "basic", "tinyfont_graphics2");
+          CommandConsole.field_s[0] = IndexedSpriteData.loadAll(param2, "basic", "tinyfont_graphics2");
           ShipBodyFactory.field_b[1] = SetShieldsDirectionalArcParticleSpeedDownshift.a(14223, param1, "basic", "antigrav_24_graphics2");
-          CommandConsole.field_s[1] = IndexedSpriteData.a(param2, "basic", "font_antigrav_24_alpha");
+          CommandConsole.field_s[1] = IndexedSpriteData.loadAll(param2, "basic", "font_antigrav_24_alpha");
           ShipBodyFactory.field_b[2] = SetShieldsDirectionalArcParticleSpeedDownshift.a(14223, param1, "basic", "antigrav_18_graphics2");
-          CommandConsole.field_s[2] = IndexedSpriteData.a(param2, "basic", "font_antigrav_18_alpha");
+          CommandConsole.field_s[2] = IndexedSpriteData.loadAll(param2, "basic", "font_antigrav_18_alpha");
           ShipBodyFactory.field_b[3] = SetShieldsDirectionalArcParticleSpeedDownshift.a(SetFixedaim.a((int) param3, 14295), param1, "basic", "calibri_11_graphics2");
-          CommandConsole.field_s[3] = IndexedSpriteData.a(param2, "basic", "font_calibri_11_alpha");
+          CommandConsole.field_s[3] = IndexedSpriteData.loadAll(param2, "basic", "font_calibri_11_alpha");
           ShipBodyFactory.field_b[4] = SetShieldsDirectionalArcParticleSpeedDownshift.a(14223, param1, "basic", "calibri_12_graphics2");
-          CommandConsole.field_s[4] = IndexedSpriteData.a(param2, "basic", "font_calibri_12_alpha");
+          CommandConsole.field_s[4] = IndexedSpriteData.loadAll(param2, "basic", "font_calibri_12_alpha");
           if (param3 != 88) {
             return;
           }

@@ -111,7 +111,7 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
             return;
           }
           if (param3 == this.cancelButton) {
-            GetGrapplingHookRopeBreakLength.e((byte) -77);
+            GetGrapplingHookRopeBreakLength.showGuestPlayNotice((byte) -77);
             return;
           }
           if (this.submitButton != param3) {

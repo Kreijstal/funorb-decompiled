@@ -80,11 +80,11 @@ final class GpuFont extends ToolkitFont {
         var5 = 0;
         for (var6 = 0; var6 < 256; var6++) {
           var25 = param2[var6];
-          if (var25.field_e > var5) {
-            var5 = var25.field_e;
+          if (var25.height > var5) {
+            var5 = var25.height;
           }
-          if (var25.field_f > var5) {
-            var5 = var25.field_f;
+          if (var25.width > var5) {
+            var5 = var25.width;
           }
         }
         var6Lifetime1 = var5 * 16;
@@ -94,15 +94,15 @@ final class GpuFont extends ToolkitFont {
           var7_ref_int__ = var32;
           for (var8 = 0; var8 < 256; var8++) {
             var29 = param2[var8];
-            var10_ref_int__ = var29.field_b;
-            var37 = var29.field_a;
+            var10_ref_int__ = var29.palette;
+            var37 = var29.alpha;
             var30 = var37;
             var11_ref_byte__ = var30;
-            var38 = var29.field_h;
+            var38 = var29.pixels;
             var31 = var38;
             var12_ref_byte__ = var31;
-            var13_int = var29.field_e;
-            var14 = var29.field_f;
+            var13_int = var29.height;
+            var14 = var29.width;
             var15 = var8 % 16 * var5;
             var16 = var8 / 16 * var5;
             var17 = var16 * var6Lifetime1 + var15;
@@ -144,14 +144,14 @@ final class GpuFont extends ToolkitFont {
           var7_ref_byte__ = var27;
           for (var8 = 0; var8 < 256; var8++) {
             var26 = param2[var8];
-            var10_int = var26.field_e;
-            var11_int = var26.field_f;
+            var10_int = var26.height;
+            var11_int = var26.width;
             var12 = var8 % 16 * var5;
             var13_int = var8 / 16 * var5;
             var14 = var13_int * var6Lifetime1 + var12;
             var15 = 0;
-            if (var26.field_a != null) {
-              var16_ref_byte__ = var26.field_a;
+            if (var26.alpha != null) {
+              var16_ref_byte__ = var26.alpha;
               for (var17 = 0; var17 < var10_int; var17++) {
                 for (var18_int = 0; var18_int < var11_int; var18_int++) {
                   var7_ref_byte__[var14++] = var16_ref_byte__[var15++];
@@ -159,7 +159,7 @@ final class GpuFont extends ToolkitFont {
                 var14 = var14 + (var6Lifetime1 - var11_int);
               }
             } else {
-              var16_ref_byte__ = var26.field_h;
+              var16_ref_byte__ = var26.pixels;
               for (var17 = 0; var17 < var10_int; var17++) {
                 for (var18_int = 0; var18_int < var11_int; var18_int++) {
                   incrementValue$6 = var14;
@@ -206,10 +206,10 @@ final class GpuFont extends ToolkitFont {
             var12Lifetime1 = var24;
             while (var24 < 256) {
               var13 = param2[var24];
-              var14Lifetime1 = var13.field_e;
-              var15Lifetime1 = var13.field_f;
-              var16Lifetime1 = var13.field_g;
-              var17Lifetime1 = var13.field_c;
+              var14Lifetime1 = var13.height;
+              var15Lifetime1 = var13.width;
+              var16Lifetime1 = var13.topPadding;
+              var17Lifetime1 = var13.leftPadding;
               var18 = (float)(var24 % 16 * var5);
               var19 = (float)(var24 / 16 * var5);
               var20 = var18 * var10;

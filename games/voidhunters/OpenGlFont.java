@@ -5,7 +5,7 @@ final class OpenGlFont extends ToolkitFont {
     private OpenGlToolkit toolkit;
     private OpenGlDisplayLists field_d;
     private boolean field_c;
-    private im field_e;
+    private OpenGlSpriteTexture field_e;
 
     OpenGlFont(OpenGlToolkit param0, ToolkitFontMetrics param1, IndexedSpriteData[] param2, boolean param3) {
         super(param0, param1);
@@ -69,11 +69,11 @@ final class OpenGlFont extends ToolkitFont {
         var5 = 0;
         for (var6 = 0; var6 < 256; var6++) {
           var22 = param2[var6];
-          if (var22.field_e > var5) {
-            var5 = var22.field_e;
+          if (var22.height > var5) {
+            var5 = var22.height;
           }
-          if (var22.field_f > var5) {
-            var5 = var22.field_f;
+          if (var22.width > var5) {
+            var5 = var22.width;
           }
         }
         var6Lifetime1 = var5 * 16;
@@ -83,15 +83,15 @@ final class OpenGlFont extends ToolkitFont {
           var7_ref_int__ = var28;
           for (var8_int = 0; var8_int < 256; var8_int++) {
             var25 = param2[var8_int];
-            var10 = var25.field_b;
-            var31 = var25.field_a;
+            var10 = var25.palette;
+            var31 = var25.alpha;
             var26 = var31;
             var11_ref_byte__ = var26;
-            var32 = var25.field_h;
+            var32 = var25.pixels;
             var27 = var32;
             var12_ref_byte__ = var27;
-            var13 = var25.field_e;
-            var14 = var25.field_f;
+            var13 = var25.height;
+            var14 = var25.width;
             var15_int = var8_int % 16 * var5;
             var16_int = var8_int / 16 * var5;
             var17_int = var16_int * var6Lifetime1 + var15_int;
@@ -125,7 +125,7 @@ final class OpenGlFont extends ToolkitFont {
               }
             }
           }
-          this.field_e = FireBoostersOrderDefinition.a(param0, 0, 0, var6Lifetime1, var33, var6Lifetime1, false, (byte) 60);
+          this.field_e = FireBoostersOrderDefinition.createSpriteTexture(param0, 0, 0, var6Lifetime1, var33, var6Lifetime1, false, (byte) 60);
           this.field_c = false;
         } else {
           var30 = new byte[var6Lifetime1 * var6Lifetime1];
@@ -133,14 +133,14 @@ final class OpenGlFont extends ToolkitFont {
           var7_ref_byte__ = var24;
           for (var8_int = 0; var8_int < 256; var8_int++) {
             var23 = param2[var8_int];
-            var10_int = var23.field_e;
-            var11 = var23.field_f;
+            var10_int = var23.height;
+            var11 = var23.width;
             var12 = var8_int % 16 * var5;
             var13 = var8_int / 16 * var5;
             var14 = var13 * var6Lifetime1 + var12;
             var15_int = 0;
-            if (var23.field_a != null) {
-              var16_ref_byte__ = var23.field_a;
+            if (var23.alpha != null) {
+              var16_ref_byte__ = var23.alpha;
               for (var17_int = 0; var17_int < var10_int; var17_int++) {
                 for (var18_int = 0; var18_int < var11; var18_int++) {
                   var7_ref_byte__[var14++] = var16_ref_byte__[var15_int++];
@@ -148,7 +148,7 @@ final class OpenGlFont extends ToolkitFont {
                 var14 = var14 + (var6Lifetime1 - var11);
               }
             } else {
-              var16_ref_byte__ = var23.field_h;
+              var16_ref_byte__ = var23.pixels;
               for (var17_int = 0; var17_int < var10_int; var17_int++) {
                 for (var18_int = 0; var18_int < var11; var18_int++) {
                   incrementValue$6 = var14;
@@ -173,14 +173,14 @@ final class OpenGlFont extends ToolkitFont {
         }
         this.field_e.setLinearFiltering(107, false);
         this.field_d = new OpenGlDisplayLists(param0, 256);
-        var7 = this.field_e.field_n / (float)this.field_e.field_m;
-        var8 = this.field_e.field_o / (float)this.field_e.field_p;
+        var7 = this.field_e.uMax / (float)this.field_e.logicalWidth;
+        var8 = this.field_e.vMax / (float)this.field_e.logicalHeight;
         for (var9 = 0; var9 < 256; var9++) {
           var29 = param2[var9];
-          var11Lifetime1 = var29.field_e;
-          var12Lifetime1 = var29.field_f;
-          var13Lifetime1 = var29.field_g;
-          var14Lifetime1 = var29.field_c;
+          var11Lifetime1 = var29.height;
+          var12Lifetime1 = var29.width;
+          var13Lifetime1 = var29.topPadding;
+          var14Lifetime1 = var29.leftPadding;
           var15 = (float)(var9 % 16 * var5);
           var16 = (float)(var9 / 16 * var5);
           var17 = var15 * var7;
@@ -189,13 +189,13 @@ final class OpenGlFont extends ToolkitFont {
           var20 = (var16 + (float)var11Lifetime1) * var8;
           this.field_d.beginList(-104, var9);
           jaggl.OpenGL.glBegin(7);
-          jaggl.OpenGL.glTexCoord2f(var17, this.field_e.field_o - var18);
+          jaggl.OpenGL.glTexCoord2f(var17, this.field_e.vMax - var18);
           jaggl.OpenGL.glVertex2i(var14Lifetime1, var13Lifetime1);
-          jaggl.OpenGL.glTexCoord2f(var17, this.field_e.field_o - var20);
+          jaggl.OpenGL.glTexCoord2f(var17, this.field_e.vMax - var20);
           jaggl.OpenGL.glVertex2i(var14Lifetime1, var13Lifetime1 + var11Lifetime1);
-          jaggl.OpenGL.glTexCoord2f(var19, this.field_e.field_o - var20);
+          jaggl.OpenGL.glTexCoord2f(var19, this.field_e.vMax - var20);
           jaggl.OpenGL.glVertex2i(var14Lifetime1 + var12Lifetime1, var13Lifetime1 + var11Lifetime1);
-          jaggl.OpenGL.glTexCoord2f(var19, this.field_e.field_o - var18);
+          jaggl.OpenGL.glTexCoord2f(var19, this.field_e.vMax - var18);
           jaggl.OpenGL.glVertex2i(var14Lifetime1 + var12Lifetime1, var13Lifetime1);
           jaggl.OpenGL.glEnd();
           this.field_d.endList(4864);
@@ -224,7 +224,7 @@ final class OpenGlFont extends ToolkitFont {
 
     final void drawGlyphMasked(char param0, int param1, int param2, int param3, boolean param4, GlyphMask param5, int param6, int param7) {
         OpenGlGlyphMask var9;
-        im var10;
+        OpenGlSpriteTexture var10;
         float var11;
         float var12;
         var9 = (OpenGlGlyphMask) (param5);
@@ -244,8 +244,8 @@ final class OpenGlFont extends ToolkitFont {
         this.toolkit.setRgbCombineArgument(0, 34192, 768, 34168);
         jaggl.OpenGL.glTexGeni(8192, 9472, 9216);
         jaggl.OpenGL.glTexGeni(8193, 9472, 9216);
-        var11 = var10.field_n / (float)var10.field_m;
-        var12 = var10.field_o / (float)var10.field_p;
+        var11 = var10.uMax / (float)var10.logicalWidth;
+        var12 = var10.vMax / (float)var10.logicalHeight;
         jaggl.OpenGL.glTexGenfv(8192, 9474, new float[]{var11, 0.0f, 0.0f, (float)(-param6) * var11}, 0);
         jaggl.OpenGL.glTexGenfv(8193, 9474, new float[]{0.0f, var12, 0.0f, (float)(-param7) * var12}, 0);
         jaggl.OpenGL.glEnable(3168);

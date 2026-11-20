@@ -1177,7 +1177,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime160 = HuffmanCodec.fetchLocalizedResource((byte) -83, "COMPONENT_ARMOUR_BLOCK_TEXT");
           if (null != var2Lifetime160) {
-            vla.field_C = Cp1252Strings.decode((byte) -125, var2Lifetime160);
+            LoginForm.field_C = Cp1252Strings.decode((byte) -125, var2Lifetime160);
           }
           var2Lifetime161 = HuffmanCodec.fetchLocalizedResource((byte) -10, "COMPONENT_HULL_TRIANGLE_TEXT");
           if (var2Lifetime161 != null) {
@@ -1565,7 +1565,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime257 = HuffmanCodec.fetchLocalizedResource((byte) -31, "VOTE_MORE_MISSILE_DEFENCE");
           if (null != var2Lifetime257) {
-            kla.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime257);
+            ToolkitRasterStateStack.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime257);
           }
           var2Lifetime258 = HuffmanCodec.fetchLocalizedResource((byte) -31, "VOTE_MORE_ARMOUR");
           if (null != var2Lifetime258) {

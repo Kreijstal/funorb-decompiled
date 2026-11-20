@@ -42,11 +42,11 @@ final class GetGrapplingHookRopeBreakLength extends ConsoleCommand {
         }
     }
 
-    final static void e(byte param0) {
+    final static void showGuestPlayNotice(byte param0) {
         if (param0 >= -14) {
           return;
         }
-        GetMissionVariablesHudX.field_o.transitionToContent(new rla(), 90);
+        GetMissionVariablesHudX.field_o.transitionToContent(new GuestPlayNoticePanel(), 90);
     }
 
     GetGrapplingHookRopeBreakLength(String param0, Class[] param1, String param2) {

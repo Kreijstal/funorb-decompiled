@@ -108,7 +108,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             this.weaponbehaviour.fire(param2, false, var8.connectionX, param3, -97, param0, param1, this.finaly, this.finalangle, this.finalx, var8.connectionY, var8.outline);
           }
           if (this.grapplebehaviour != null) {
-            this.grapplebehaviour.a(param3, this.finaly, var8.outline, param1, this.finalangle, this.finalx, var8.connectionY, (byte) 77, param2, var8.connectionX, param0);
+            this.grapplebehaviour.fireOrRecall(param3, this.finaly, var8.outline, param1, this.finalangle, this.finalx, var8.connectionY, (byte) 77, param2, var8.connectionX, param0);
           }
           if (null != this.behaviour) {
             this.behaviour.a(param0, var8.outline, -9151, param1, this.finaly, this.finalangle, var8.connectionX, param2, var8.connectionY, this.finalx, param3);
@@ -147,7 +147,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         var5 = VoidHunters.field_G;
         try {
           if (null != this.grapplebehaviour) {
-            this.grapplebehaviour.a(param0, 19278);
+            this.grapplebehaviour.destroyHook(param0, 19278);
           }
           param0.a(15520, this, param2);
           if (this.weaponbehaviour != null) {
@@ -338,7 +338,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           }
           var25 = this.getDefinition((byte) -112);
           if (this.grapplebehaviour != null) {
-            this.grapplebehaviour.a(param3, param2, this.finaly, var5_intLifetime1 != 0, (byte) 126, this.finalx, this.finalangle, var25.outline);
+            this.grapplebehaviour.update(param3, param2, this.finaly, var5_intLifetime1 != 0, (byte) 126, this.finalx, this.finalangle, var25.outline);
           }
           if (null != this.behaviour) {
             this.behaviour.a(var5_intLifetime1 != 0, this.finaly, param3, var25.outline, param2, this.finalangle, 123, this.finalx);
@@ -941,7 +941,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                 var17_ref_int____ != null) {
                 for (var19Lifetime1Lifetime1 = 0; var19Lifetime1Lifetime1 < var17_ref_int____.length; var19Lifetime1Lifetime1++) {
                   var20_ref_int__ = GetLaserBeamProjectileDamage.field_p;
-                  var21_ref_int__ = feb.field_b;
+                  var21_ref_int__ = ToolkitRasterStateCache.field_b;
                   var22Lifetime1Lifetime1 = 0;
                   var23Lifetime1Lifetime1 = 0;
                   var24Lifetime1Lifetime1 = 0;
@@ -2308,7 +2308,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         if (null == this.grapplebehaviour) {
           return 0;
         }
-        return this.grapplebehaviour.d((byte) 126);
+        return this.grapplebehaviour.getAimSpeed((byte) 126);
     }
 
     public static void clearSharedReferences(int param0) {
@@ -2640,7 +2640,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (this.grapplebehaviour == null) {
             return 0;
           }
-          return this.grapplebehaviour.a((byte) 12);
+          return this.grapplebehaviour.getAimArc((byte) 12);
         }
         return this.behaviour.getAimArc((byte) -114);
     }
@@ -3750,7 +3750,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           return true;
         }
         if (this.grapplebehaviour != null &&
-          this.grapplebehaviour.b((byte) -113)) {
+          this.grapplebehaviour.hasNoHook((byte) -113)) {
           return true;
         }
         if (!param0) {
@@ -4481,7 +4481,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             this.thrusterbehaviour.drawTrail((byte) -116, param1, param3, this.finaloutline);
           }
           if (null != this.grapplebehaviour) {
-            this.grapplebehaviour.a(this.finalangle, param3, this.getDefinition((byte) -112).outline, this.finaly, param2, this.finalx, param0 + 110);
+            this.grapplebehaviour.drawRope(this.finalangle, param3, this.getDefinition((byte) -112).outline, this.finaly, param2, this.finalx, param0 + 110);
           }
           if (param0 != 0) {
             this.getSubcomponent(34, -81);

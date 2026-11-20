@@ -3,7 +3,7 @@
  */
 final class GetBombletSprayProjectileLife extends ConsoleCommand {
     static String field_r;
-    static kla field_q;
+    static ToolkitRasterStateStack field_q;
     static Sprite[] field_o;
     static String field_p;
 

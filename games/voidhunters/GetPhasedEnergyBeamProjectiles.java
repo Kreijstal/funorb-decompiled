@@ -55,7 +55,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0) {
+    final static void showAccountCreationForm(int param0) {
         GetFighterRepairAmount.field_p = new AccountCreationForm();
         GetMissionVariablesHudX.field_o.transitionToContent(GetFighterRepairAmount.field_p, 99);
         if (param0 != 70) {
@@ -108,7 +108,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetLaserBeamProjectileDamage.field_o = param1[82];
           BodyDestroyedConditionFactory.field_b = param1[158];
           CarouselPlayerInfoFactory.field_a = param1[192];
-          sja.field_i = param1[51];
+          ToolkitRasterState.field_i = param1[51];
           GetDebrisFoundInPairs.field_p = param1[230];
           GetMassDriverAimarc.field_o = param1[104];
           SetMissionResnetResourceTickTime.field_p = param1[23];
@@ -210,7 +210,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SetPointDefenceLaserEnergyUsed.field_o = param1[200];
           MachineGunWeaponDefinition.field_b = param1[20];
           SetUseRectFill.field_p = param1[184];
-          sja.field_b = param1[44];
+          ToolkitRasterState.field_b = param1[44];
           OpenGlIndexBuffer.field_j = param1[95];
           OpenGlVertexNormal.field_i = param1[131];
           SetThrusterBindingBalanceThreshold.field_p = param1[135];
@@ -327,7 +327,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GrappleLauncherBehaviour.field_d = param1[39];
           SetArmageddonWarning.field_o = param1[54];
           bia.field_c = param1[197];
-          rla.field_x = param1[19];
+          GuestPlayNoticePanel.field_x = param1[19];
           Particle.field_A = param1[46];
           QuickChatCategoryDefinition.field_o = param1[162];
           SelectableIconLabelWidget.field_yb = param1[76];

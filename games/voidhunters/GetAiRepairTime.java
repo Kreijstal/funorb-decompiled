@@ -39,7 +39,7 @@ final class GetAiRepairTime extends ConsoleCommand {
         int var2 = 0;
         int var3 = 0;
         int var4 = 0;
-        kla var5 = null;
+        ToolkitRasterStateStack var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -54,7 +54,7 @@ final class GetAiRepairTime extends ConsoleCommand {
           }
           var3 = -1;
           var4 = -1;
-          var5 = feb.a(GetDebrisGroupColour.field_r, true);
+          var5 = ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true);
           for (var6 = 0; SoftwareRasterizer2D.height > var6; var6++) {
             var7 = -1;
             var8 = -1;

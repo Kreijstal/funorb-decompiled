@@ -69,9 +69,9 @@ final class SetShieldsDirectionalArc extends ConsoleCommand {
     final static int a(int param0) {
         if (param0 != -22954) {
           SetShieldsDirectionalArc.clearSharedReferences((byte) 3);
-          return ot.field_b;
+          return LoginFormNavigation.field_b;
         }
-        return ot.field_b;
+        return LoginFormNavigation.field_b;
     }
 
     SetShieldsDirectionalArc(String param0, Class[] param1, String param2) {

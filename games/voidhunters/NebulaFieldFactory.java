@@ -54,7 +54,7 @@ final class NebulaFieldFactory implements GameStateFactory {
           var2 = var1.readUnsignedByte((byte) -91);
           if (var2 == 0) {
             if (TeamNodeCondition.field_c == null) {
-              TeamNodeCondition.field_c = new pr(128);
+              TeamNodeCondition.field_c = new SecondaryNodeHashTable(128);
               OpenGlIndexBuffer.field_k = 0;
             }
             stackIn_14_0 = (var1.readUnsignedByte((byte) -101) != 1) ? 0 : 1;
@@ -76,12 +76,12 @@ final class NebulaFieldFactory implements GameStateFactory {
             if (null == var6) {
               var6 = CarouselPlayerEventFactory.a(var7, false);
               if (null != var6) {
-                TeamNodeCondition.field_c.a(var6, (byte) -124, (long)var8.hashCode());
+                TeamNodeCondition.field_c.put(var6, (byte) -124, (long)var8.hashCode());
               }
             }
             if (var6 == null) {
               var6 = new vu();
-              TeamNodeCondition.field_c.a(var6, (byte) -106, (long)var8.hashCode());
+              TeamNodeCondition.field_c.put(var6, (byte) -106, (long)var8.hashCode());
               fieldTemp$0 = OpenGlIndexBuffer.field_k;
               OpenGlIndexBuffer.field_k = OpenGlIndexBuffer.field_k + 1;
               var6.field_yb = fieldTemp$0;
@@ -118,7 +118,7 @@ final class NebulaFieldFactory implements GameStateFactory {
             return;
           }
           if (MenuInputState.field_f == null) {
-            MenuInputState.field_f = new pr(128);
+            MenuInputState.field_f = new SecondaryNodeHashTable(128);
             GetBoostersCooldown.field_p = 0;
           }
           var3Lifetime1 = var1.readString(-1);
@@ -131,12 +131,12 @@ final class NebulaFieldFactory implements GameStateFactory {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = FlipTextureOperation.a(var5Lifetime1, 0);
             if (null != var6Lifetime1) {
-              MenuInputState.field_f.a(var6Lifetime1, (byte) -31, (long)ConstantColorTextureOperation.normalizeName(false, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+              MenuInputState.field_f.put(var6Lifetime1, (byte) -31, (long)ConstantColorTextureOperation.normalizeName(false, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             }
           }
           if (var6Lifetime1 == null) {
             var6Lifetime1 = new vu();
-            MenuInputState.field_f.a(var6Lifetime1, (byte) -112, (long)ConstantColorTextureOperation.normalizeName(false, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+            MenuInputState.field_f.put(var6Lifetime1, (byte) -112, (long)ConstantColorTextureOperation.normalizeName(false, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             fieldTemp$1 = GetBoostersCooldown.field_p;
             GetBoostersCooldown.field_p = GetBoostersCooldown.field_p + 1;
             var6Lifetime1.field_yb = fieldTemp$1;

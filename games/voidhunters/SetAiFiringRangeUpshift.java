@@ -3,7 +3,7 @@
  */
 final class SetAiFiringRangeUpshift extends ConsoleCommand {
     static int field_p;
-    static vla field_o;
+    static LoginForm field_o;
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 26468) {

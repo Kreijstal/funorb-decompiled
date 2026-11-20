@@ -271,27 +271,27 @@ final class OpenGlToolkit extends GraphicsToolkit {
         int[] var12 = null;
         var9 = VoidHunters.field_G;
         try {
-          var10 = new int[param0.field_f * param0.field_e];
+          var10 = new int[param0.width * param0.height];
           var12 = var10;
           var11 = var12;
           var3 = var11;
           var4 = 0;
           var5 = 0;
-          if (param0.field_a != null) {
-            for (var6_int = 0; param0.field_e > var6_int; var6_int++) {
-              for (var7 = 0; param0.field_f > var7; var7++) {
+          if (param0.alpha != null) {
+            for (var6_int = 0; param0.height > var6_int; var6_int++) {
+              for (var7 = 0; param0.width > var7; var7++) {
                 incrementValue$0 = var5;
                 var5++;
-                var3[incrementValue$0] = SetAngularForceDownshift.a(param0.field_b[dla.a(255, (int) param0.field_h[var4])], param0.field_a[var4] << 24);
+                var3[incrementValue$0] = SetAngularForceDownshift.a(param0.palette[dla.a(255, (int) param0.pixels[var4])], param0.alpha[var4] << 24);
                 var4++;
               }
             }
           } else {
-            for (var6_int = 0; param0.field_e > var6_int; var6_int++) {
-              for (var7 = 0; param0.field_f > var7; var7++) {
+            for (var6_int = 0; param0.height > var6_int; var6_int++) {
+              for (var7 = 0; param0.width > var7; var7++) {
                 incrementValue$1 = var4;
                 var4++;
-                var8 = param0.field_b[param0.field_h[incrementValue$1] & 255];
+                var8 = param0.palette[param0.pixels[incrementValue$1] & 255];
                 incrementValue$2 = var5;
                 var5++;
                 stackIn_8_0 = var10;
@@ -305,8 +305,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
               }
             }
           }
-          var6 = this.createSprite(param0.field_f, param0.field_f, var12, 0, (byte) 96, param0.field_e);
-          var6.setPadding(param0.field_c, param0.field_g, param0.field_i, param0.field_d);
+          var6 = this.createSprite(param0.width, param0.width, var12, 0, (byte) 96, param0.height);
+          var6.setPadding(param0.leftPadding, param0.topPadding, param0.rightPadding, param0.bottomPadding);
           stackIn_18_0 = var6;
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

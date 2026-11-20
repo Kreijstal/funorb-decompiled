@@ -252,7 +252,7 @@ final class GameMenuScreen {
                 var9_ref_StringLifetime2 = HotspotTextWidget.field_C;
               }
             } else {
-              var9_ref_StringLifetime2 = ot.field_a;
+              var9_ref_StringLifetime2 = LoginFormNavigation.field_a;
             }
           } else {
             var9_ref_StringLifetime2 = GetDebrisMax.field_p;
@@ -350,7 +350,7 @@ final class GameMenuScreen {
           }
           var26 = stackIn_91_0;
           if (var21 == 1) {
-            SaveShipDesignOrderDefinition.a(var25, ct.a(19143, 131) + var25, true, var17 + var26, var17);
+            SaveShipDesignOrderDefinition.pushClip(var25, ct.a(19143, 131) + var25, true, var17 + var26, var17);
             PlayerActionFactory.a(132, var17, (byte) 122, var25);
             GetMissionTerrainSpaceProbability.a(126);
           }

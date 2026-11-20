@@ -2,31 +2,31 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetAngleset extends ConsoleCommand {
-    final static im a(int param0, int param1, int param2, OpenGlToolkit param3, int param4) {
+    final static OpenGlSpriteTexture a(int param0, int param1, int param2, OpenGlToolkit param3, int param4) {
         RuntimeException var5 = null;
-        im stackIn_2_0 = null;
-        im stackIn_8_0 = null;
-        im stackIn_11_0 = null;
-        im stackIn_13_0 = null;
+        OpenGlSpriteTexture stackIn_2_0 = null;
+        OpenGlSpriteTexture stackIn_8_0 = null;
+        OpenGlSpriteTexture stackIn_11_0 = null;
+        OpenGlSpriteTexture stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 28) {
-            stackIn_2_0 = (im) null;
+            stackIn_2_0 = (OpenGlSpriteTexture) null;
             return stackIn_2_0;
           }
           if (!param3.field_n && (!bd.a(param1, (byte) -95) ||
             !bd.a(param2, (byte) -95))) {
             if (param3.field_g) {
-              stackIn_13_0 = new im(param3, 34037, param4, param1, param2);
+              stackIn_13_0 = new OpenGlSpriteTexture(param3, 34037, param4, param1, param2);
               return stackIn_13_0;
             }
-            stackIn_11_0 = new im(param3, param4, param1, param2, GetSalvoaim.a(param1, (byte) -106), GetSalvoaim.a(param2, (byte) -106));
+            stackIn_11_0 = new OpenGlSpriteTexture(param3, param4, param1, param2, GetSalvoaim.a(param1, (byte) -106), GetSalvoaim.a(param2, (byte) -106));
             return stackIn_11_0;
           }
-          stackIn_8_0 = new im(param3, 3553, param4, param1, param2);
+          stackIn_8_0 = new OpenGlSpriteTexture(param3, 3553, param4, param1, param2);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

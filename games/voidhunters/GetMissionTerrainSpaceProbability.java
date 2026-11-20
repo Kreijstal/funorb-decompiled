@@ -9,14 +9,14 @@ final class GetMissionTerrainSpaceProbability extends ConsoleCommand {
         if (param0 <= 48) {
           GetMissionTerrainSpaceProbability.a(45);
           if (OpenGlTexture1D.field_i) {
-            feb.a(GetDebrisGroupColour.field_r, true).a(true);
+            ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true).pop(true);
             return;
           }
           bia.popRasterState((byte) 124);
           return;
         }
         if (OpenGlTexture1D.field_i) {
-          feb.a(GetDebrisGroupColour.field_r, true).a(true);
+          ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true).pop(true);
           return;
         }
         bia.popRasterState((byte) 124);

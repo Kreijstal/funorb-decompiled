@@ -111,7 +111,7 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
           }
           SetMachineGunAimarc.field_q = param9.children;
           SetMachineGunAimarc.field_q.clear(109);
-          GetReverbWet.field_o = new pr(param3);
+          GetReverbWet.field_o = new SecondaryNodeHashTable(param3);
           IncrementVariableActionFactory.field_b = -1;
           SetLaserRandomness.field_p = 0;
           GetMachineGunPulsetime.field_q = 0;
@@ -121,13 +121,13 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
           }
           HotspotTextWidget.field_E = param4.children;
           HotspotTextWidget.field_E.clear(118);
-          GetLaserReload.field_r = new pr(param8);
+          GetLaserReload.field_r = new SecondaryNodeHashTable(param8);
           if (null == param1.children) {
             param1.children = new IntrusiveDeque();
           }
           OpenGlPostEffect.field_e = param1.children;
           OpenGlPostEffect.field_e.clear(93);
-          SetUseDetailLines.field_p = new pr(param2);
+          SetUseDetailLines.field_p = new SecondaryNodeHashTable(param2);
           GetMomentOfInertiaPredivideDownshift.field_p = param7;
           if (!param5) {
             field_p = (String) null;

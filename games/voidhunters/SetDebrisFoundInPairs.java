@@ -4,7 +4,7 @@
 final class SetDebrisFoundInPairs extends ConsoleCommand {
     static String field_o;
 
-    final static void a(String param0, String param1, int param2) {
+    final static void showLoginForm(String param0, String param1, int param2) {
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -16,10 +16,10 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
           if (SetPointDefenceLaserAimarc.field_o != null) {
             SetPointDefenceLaserAimarc.field_o.closeDialog((byte) -106);
           }
-          SetAiFiringRangeUpshift.field_o = new vla(param1, param0, false, true, true);
+          SetAiFiringRangeUpshift.field_o = new LoginForm(param1, param0, false, true, true);
           GetMissionVariablesHudX.field_o.transitionToContent(SetAiFiringRangeUpshift.field_o, -124);
           if (param2 != 0) {
-            SetDebrisFoundInPairs.a((String) null, (String) null, 35);
+            SetDebrisFoundInPairs.showLoginForm((String) null, (String) null, 35);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

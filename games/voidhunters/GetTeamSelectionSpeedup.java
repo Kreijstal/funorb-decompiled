@@ -130,7 +130,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                 }
               } else {
                 var8_ref_jk = new jk(var18, var19, var3_long);
-                GetReverbWet.field_o.a(var8_ref_jk, (byte) -86, var3_long);
+                GetReverbWet.field_o.put(var8_ref_jk, (byte) -86, var3_long);
               }
               var8_ref_jk.field_Kb = MonotonicMillisClock.currentTimeMillis(false) - (long)((PacketBuffer) ((Object) var1)).readInt(77);
               var8_ref_jk.field_Gb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
@@ -176,10 +176,10 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
             }
             if (var2 == 8) {
               var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
-              var4_ref_mm = (LobbyGameEntry) (GetLaserReload.field_r.a(-1, (long)var3));
+              var4_ref_mm = (LobbyGameEntry) (GetLaserReload.field_r.get(-1, (long)var3));
               if (var4_ref_mm == null) {
                 var4_ref_mm = new LobbyGameEntry(PasswordValidator.field_l);
-                GetLaserReload.field_r.a(var4_ref_mm, (byte) -115, (long)var3);
+                GetLaserReload.field_r.put(var4_ref_mm, (byte) -115, (long)var3);
               }
               SetShipAimLines.a(118, var4_ref_mm, true, var1);
               MovingObjectFactory.insertSortedLobbyGame((byte) 109, var4_ref_mm);
@@ -188,7 +188,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
             if (var2 == 9) {
               var3Lifetime4 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
               var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -127);
-              var30 = (LobbyGameEntry) (GetLaserReload.field_r.a(-1, (long)var3Lifetime4));
+              var30 = (LobbyGameEntry) (GetLaserReload.field_r.get(-1, (long)var3Lifetime4));
               if (var30 != null) {
                 if (var4 != 0) {
                   var30.field_Db = GetMomentOfInertiaPredivideDownshift.field_p;
@@ -214,7 +214,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
               if (13 == var2) {
                 var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
                 var4Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -97);
-                var27_ref = (LobbyGameEntry) (GetLaserReload.field_r.a(-1, (long)var3Lifetime5));
+                var27_ref = (LobbyGameEntry) (GetLaserReload.field_r.get(-1, (long)var3Lifetime5));
                 if (var27_ref != null) {
                   var13 = var27_ref;
                   var6 = var13;
@@ -239,7 +239,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                     var7 = ScrollBarWidget.a(var3_longLifetime2, true);
                     if (var7 == null) {
                       var7 = new jk(var25, var26, var3_longLifetime2);
-                      SetUseDetailLines.field_p.a(var7, (byte) -76, var3_longLifetime2);
+                      SetUseDetailLines.field_p.put(var7, (byte) -76, var3_longLifetime2);
                       SetSpinningBladeSpindamageMultiplier.field_o.field_zb = SetSpinningBladeSpindamageMultiplier.field_o.field_zb + 1;
                     }
                     var7.field_Gb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
@@ -333,7 +333,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
               return;
             }
             var3Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
-            var14 = (LobbyGameEntry) (GetLaserReload.field_r.a(-1, (long)var3Lifetime6));
+            var14 = (LobbyGameEntry) (GetLaserReload.field_r.get(-1, (long)var3Lifetime6));
             var28 = var14;
             if (var14 != null) {
               if (var2 != 11) {
@@ -351,7 +351,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
             var3_ref_jk.unlinkSecondary((byte) -35);
             var3_ref_jk = (jk) (OpenGlPostEffect.field_e.next((byte) 80));
           }
-          var3_ref_jkLifetime1 = (jk) (GetReverbWet.field_o.c(-31));
+          var3_ref_jkLifetime1 = (jk) (GetReverbWet.field_o.first(-31));
           while (var3_ref_jkLifetime1 != null) {
             if (var3_ref_jkLifetime1.field_Eb ||
               var3_ref_jkLifetime1.field_Fb) {
@@ -362,7 +362,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
               var3_ref_jkLifetime1.field_Eb = false;
               OpenGlBufferObject.a(var3_ref_jkLifetime1, true);
             }
-            var3_ref_jkLifetime1 = (jk) (GetReverbWet.field_o.d(-1));
+            var3_ref_jkLifetime1 = (jk) (GetReverbWet.field_o.next(-1));
           }
           if (var2 == 1 &&
             null != SetSpinningBladeSpindamageMultiplier.field_o) {

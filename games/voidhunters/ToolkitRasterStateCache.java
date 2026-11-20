@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class feb {
+final class ToolkitRasterStateCache {
     static TextureCombineOperation field_a;
     static int[] field_b;
 
@@ -13,11 +13,11 @@ final class feb {
         field_b = null;
     }
 
-    final static kla a(GraphicsToolkit param0, boolean param1) {
-        qgb var2 = null;
-        kla var3 = null;
-        kla stackIn_3_0 = null;
-        kla stackIn_15_0 = null;
+    final static ToolkitRasterStateStack getStateStack(GraphicsToolkit param0, boolean param1) {
+        ToolkitRasterStateCacheEntry var2 = null;
+        ToolkitRasterStateStack var3 = null;
+        ToolkitRasterStateStack stackIn_3_0 = null;
+        ToolkitRasterStateStack stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -28,19 +28,19 @@ final class feb {
             stackIn_3_0 = GetBombletSprayProjectileLife.field_q;
             return stackIn_3_0;
           }
-          var2 = (qgb) (WidgetNode.field_k.get((long)param0.field_b, 124));
+          var2 = (ToolkitRasterStateCacheEntry) (WidgetNode.field_k.get((long)param0.field_b, 124));
           if (!param1) {
             field_b = (int[]) null;
           }
           if (var2 != null &&
-            var2.field_e == param0) {
-            var3 = var2.field_d;
+            var2.toolkit == param0) {
+            var3 = var2.stateStack;
           } else {
             if (var2 != null) {
               var2.unlink(-3846);
             }
-            var3 = new kla(param0);
-            WidgetNode.field_k.put((long)param0.field_b, new qgb(param0, var3), (byte) -127);
+            var3 = new ToolkitRasterStateStack(param0);
+            WidgetNode.field_k.put((long)param0.field_b, new ToolkitRasterStateCacheEntry(param0, var3), (byte) -127);
           }
           GetAutoaim.field_p = param0;
           GetBombletSprayProjectileLife.field_q = var3;

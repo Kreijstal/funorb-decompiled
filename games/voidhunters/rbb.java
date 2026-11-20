@@ -236,12 +236,12 @@ final class rbb {
           this.field_j = 3;
           this.field_c = 3;
           this.field_u = 3;
-          var4.createStateStyle(0, -1).setTextColor(15658734, -2147483648).setBackgroundSprites(true, LaunchFightersOrderDefinition.a(10066329, 8947848, 117, 7829367));
+          var4.createStateStyle(0, -1).setTextColor(15658734, -2147483648).setBackgroundSprites(true, LaunchFightersOrderDefinition.createBeveledSpriteTiles(10066329, 8947848, 117, 7829367));
           if (param1 != -24763) {
             this.a(99, (byte) 19, 39, -32, 64);
           }
-          var4.createStateStyle(1, -1).setBackgroundSprites(true, LaunchFightersOrderDefinition.a(10066329, 11184810, 118, 13421772));
-          var4.createStateStyle(3, -1).setBackgroundSprites(true, LaunchFightersOrderDefinition.a(7829367, 8947848, 123, 10066329)).setOffsetX(113, 1).setOffsetY(1, false);
+          var4.createStateStyle(1, -1).setBackgroundSprites(true, LaunchFightersOrderDefinition.createBeveledSpriteTiles(10066329, 11184810, 118, 13421772));
+          var4.createStateStyle(3, -1).setBackgroundSprites(true, LaunchFightersOrderDefinition.createBeveledSpriteTiles(7829367, 8947848, 123, 10066329)).setOffsetX(113, 1).setOffsetY(1, false);
           var5 = new Sprite[9];
           var16 = new ArgbSprite(32, 32);
           var18 = var16;
@@ -263,7 +263,7 @@ final class rbb {
           discarded$1 = new jba(param0, 16777215, -1, 125269879, 4473924, 3, 268435455);
           var8 = new UiStatefulStyle();
           var17.copyTo(-122, var8);
-          var8.createStateStyle(0, -1).setBackgroundSprites(true, LaunchFightersOrderDefinition.a(7829367, 15658734, param1 + 24884, 10066329)).setTextColor(1118481, -2147483648).setTextShadowColor(-1, param1 - 2147458885);
+          var8.createStateStyle(0, -1).setBackgroundSprites(true, LaunchFightersOrderDefinition.createBeveledSpriteTiles(7829367, 15658734, param1 + 24884, 10066329)).setTextColor(1118481, -2147483648).setTextShadowColor(-1, param1 - 2147458885);
           var8.createStateStyle(4, -1).setDrawPreviousLayer(param1 + 24635, true).setBackgroundSprites(true, var5);
           this.field_o = (UiRenderer) ((Object) var8);
           var9 = new Sprite[9];

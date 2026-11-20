@@ -1538,9 +1538,9 @@ final class SoftwareToolkit extends GraphicsToolkit {
         var5 = new int[param1.length];
         var6 = 0;
         for (var7 = 0; var7 < param1.length; var7++) {
-          var4[var7] = param1[var7].field_f;
-          var5[var7] = param1[var7].field_e;
-          if (param1[var7].field_a != null) {
+          var4[var7] = param1[var7].width;
+          var5[var7] = param1[var7].height;
+          if (param1[var7].alpha != null) {
             var6 = 1;
           }
         }
@@ -2242,14 +2242,14 @@ final class SoftwareToolkit extends GraphicsToolkit {
         byte[] var21;
         int[] var22;
         int[] var23;
-        var20 = param0.field_b;
+        var20 = param0.palette;
         var16 = var20;
         var3 = var16;
-        var4 = param0.field_h;
-        var5 = param0.field_f;
-        var6 = param0.field_e;
+        var4 = param0.pixels;
+        var5 = param0.width;
+        var6 = param0.height;
         if (param1 &&
-          param0.field_a == null) {
+          param0.alpha == null) {
           var22 = new int[var20.length];
           var18 = var22;
           var8 = var18;
@@ -2271,7 +2271,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
           var23 = new int[var5 * var6];
           var19 = var23;
           var15 = var19;
-          var9 = param0.field_a;
+          var9 = param0.alpha;
           if (var9 != null) {
             for (var10 = 0; var10 < var6; var10++) {
               var11 = var10 * var5;
@@ -2298,7 +2298,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
             var7 = new SoftwareRgbSprite(this, var23, var5, var6);
           }
         }
-        ((ToolkitSprite) (var7)).setPadding(param0.field_c, param0.field_g, param0.field_i, param0.field_d);
+        ((ToolkitSprite) (var7)).setPadding(param0.leftPadding, param0.topPadding, param0.rightPadding, param0.bottomPadding);
         return (ToolkitSprite) (var7);
     }
 

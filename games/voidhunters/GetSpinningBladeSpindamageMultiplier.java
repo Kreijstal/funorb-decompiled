@@ -18,7 +18,7 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
         int var2 = 0;
         int var2Lifetime1;
         GetDebrisGroupColour.field_r = vq.field_x.field_e.field_g;
-        SetUseBackground.field_o = feb.a(GetDebrisGroupColour.field_r, true);
+        SetUseBackground.field_o = ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true);
         java.awt.Dimension var9 = vq.field_x.field_e.field_a.getSize();
         GetDebrisGroupColour.field_r.setClip(0, 0, var9.width, var9.height);
         PasswordValidator.f(-10150);

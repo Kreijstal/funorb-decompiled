@@ -60,8 +60,8 @@ final class UiStatefulStyle extends UiTextStyle {
     final static void c(int param0) {
         IsaacPacketBuffer var2 = UiViewport.field_w;
         IsaacPacketBuffer var1 = var2;
-        UiViewport.field_w = im.field_q;
-        im.field_q = var2;
+        UiViewport.field_w = OpenGlSpriteTexture.field_q;
+        OpenGlSpriteTexture.field_q = var2;
         if (null == UiViewport.field_w) {
           UiViewport.field_w = new IsaacPacketBuffer(1048576);
         }

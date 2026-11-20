@@ -61,8 +61,8 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
     final native void getClip(int[] param0);
 
     final ToolkitSprite createSprite(IndexedSpriteData param0, boolean param1) {
-        NativeSoftwareSprite var3 = new NativeSoftwareSprite(this, param0.field_b, param0.field_h, param0.field_a, 0, param0.field_f, param0.field_f, param0.field_e);
-        ((ToolkitSprite) ((Object) var3)).setPadding(param0.field_c, param0.field_g, param0.field_i, param0.field_d);
+        NativeSoftwareSprite var3 = new NativeSoftwareSprite(this, param0.palette, param0.pixels, param0.alpha, 0, param0.width, param0.width, param0.height);
+        ((ToolkitSprite) ((Object) var3)).setPadding(param0.leftPadding, param0.topPadding, param0.rightPadding, param0.bottomPadding);
         return (ToolkitSprite) ((Object) var3);
     }
 
@@ -167,9 +167,9 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
         var5 = new int[param1.length];
         var6 = 0;
         for (var7 = 0; var7 < param1.length; var7++) {
-          var4[var7] = param1[var7].field_f;
-          var5[var7] = param1[var7].field_e;
-          if (param1[var7].field_a != null) {
+          var4[var7] = param1[var7].width;
+          var5[var7] = param1[var7].height;
+          if (param1[var7].alpha != null) {
             var6 = 1;
           }
         }

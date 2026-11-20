@@ -15,7 +15,7 @@ final class kia {
             SetPointDefenceLaserAimarc.field_o.closeDialog((byte) -106);
           }
           var1 = mr.m((byte) -118);
-          SetAiFiringRangeUpshift.field_o = new vla(var1, (String) null, true, false, false);
+          SetAiFiringRangeUpshift.field_o = new LoginForm(var1, (String) null, true, false, false);
           GetLagStandardDeviationIn.field_r.pushPanel(false, GetMissionVariablesHudX.field_o);
           GetMissionVariablesHudX.field_o.transitionToContent(SetAiFiringRangeUpshift.field_o, -110);
           GetMissionVariablesHudX.field_o.finishResize(param0 - 10394);
@@ -23,12 +23,12 @@ final class kia {
         }
     }
 
-    final static im a(int param0, OpenGlToolkit param1, int param2, byte[] param3, int param4, boolean param5, int param6, int param7) {
+    final static OpenGlSpriteTexture a(int param0, OpenGlToolkit param1, int param2, byte[] param3, int param4, boolean param5, int param6, int param7) {
         RuntimeException var8 = null;
-        im stackIn_2_0 = null;
-        im stackIn_9_0 = null;
-        im stackIn_11_0 = null;
-        im stackIn_13_0 = null;
+        OpenGlSpriteTexture stackIn_2_0 = null;
+        OpenGlSpriteTexture stackIn_9_0 = null;
+        OpenGlSpriteTexture stackIn_11_0 = null;
+        OpenGlSpriteTexture stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -37,19 +37,19 @@ final class kia {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param6 != 21989) {
-            stackIn_2_0 = (im) null;
+            stackIn_2_0 = (OpenGlSpriteTexture) null;
             return stackIn_2_0;
           }
           if (!param1.field_n && (!bd.a(param2, (byte) -95) ||
             !bd.a(param0, (byte) -95))) {
             if (!param1.field_g) {
-              stackIn_11_0 = new im(param1, param7, param2, param0, GetSalvoaim.a(param2, (byte) -95), GetSalvoaim.a(param0, (byte) -109), param3, param4);
+              stackIn_11_0 = new OpenGlSpriteTexture(param1, param7, param2, param0, GetSalvoaim.a(param2, (byte) -95), GetSalvoaim.a(param0, (byte) -109), param3, param4);
               return stackIn_11_0;
             }
-            stackIn_9_0 = new im(param1, 34037, param7, param2, param0, param5, param3, param4);
+            stackIn_9_0 = new OpenGlSpriteTexture(param1, 34037, param7, param2, param0, param5, param3, param4);
             return stackIn_9_0;
           }
-          stackIn_13_0 = new im(param1, 3553, param7, param2, param0, param5, param3, param4);
+          stackIn_13_0 = new OpenGlSpriteTexture(param1, 3553, param7, param2, param0, param5, param3, param4);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -645,7 +645,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
             this.energy = this.getMaxEnergy(true);
           }
           if (this.energy > 0) {
-            this.energy = this.energy + sja.field_b;
+            this.energy = this.energy + ToolkitRasterState.field_b;
             if (this.energy > this.getMaxEnergy(true)) {
               this.energy = this.getMaxEnergy(true);
             }

@@ -23,11 +23,11 @@ final class NativeSoftwareMonoFont extends ToolkitFont implements NativeResource
         int[] var9 = new int[param3.length];
         int[] var10 = new int[param3.length];
         for (var11 = 0; var11 < param3.length; var11++) {
-          var6[var11] = param3[var11].field_h;
-          var7[var11] = param3[var11].field_f;
-          var8[var11] = param3[var11].field_e;
-          var9[var11] = param3[var11].field_c;
-          var10[var11] = param3[var11].field_g;
+          var6[var11] = param3[var11].pixels;
+          var7[var11] = param3[var11].width;
+          var8[var11] = param3[var11].height;
+          var9[var11] = param3[var11].leftPadding;
+          var10[var11] = param3[var11].topPadding;
         }
         this.initializeNative(param0, param1, var6, var7, var8, var9, var10);
     }

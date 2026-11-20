@@ -1,83 +1,83 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class im extends OpenGlTexture2D {
-    float field_o;
+final class OpenGlSpriteTexture extends OpenGlTexture2D {
+    float vMax;
     static IsaacPacketBuffer field_q;
-    int field_p;
-    int field_m;
-    float field_n;
-    boolean field_l;
+    int logicalHeight;
+    int logicalWidth;
+    float uMax;
+    boolean fullNormalizedCoordinates;
 
-    im(OpenGlToolkit param0, int param1, int param2, int param3, boolean param4, int[] param5, int param6, int param7) {
+    OpenGlSpriteTexture(OpenGlToolkit param0, int param1, int param2, int param3, boolean param4, int[] param5, int param6, int param7) {
         super(param0, param1, 6408, param2, param3, param4, param5, param6, param7, true);
         try {
-          this.field_m = param2;
+          this.logicalWidth = param2;
           if (this.target == 34037) {
-            this.field_o = (float)param3;
-            this.field_n = (float)param2;
-            this.field_l = false;
+            this.vMax = (float)param3;
+            this.uMax = (float)param2;
+            this.fullNormalizedCoordinates = false;
           } else {
-            this.field_l = true;
-            this.field_n = 1.0f;
-            this.field_o = 1.0f;
+            this.fullNormalizedCoordinates = true;
+            this.uMax = 1.0f;
+            this.vMax = 1.0f;
           }
-          this.field_p = param3;
+          this.logicalHeight = param3;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ',' + param6 + ',' + param7 + ')');
         }
     }
 
-    im(OpenGlToolkit param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int param7) {
+    OpenGlSpriteTexture(OpenGlToolkit param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int param7) {
         super(param0, 3553, param1, param4, param5);
         try {
-          this.field_p = param3;
-          this.field_m = param2;
+          this.logicalHeight = param3;
+          this.logicalWidth = param2;
           this.updatePixels(param3, param7, 0, param6, 0, param2, 0, 0, true, 1);
-          this.field_o = (float)param3 / (float)param5;
-          this.field_l = false;
-          this.field_n = (float)param2 / (float)param4;
+          this.vMax = (float)param3 / (float)param5;
+          this.fullNormalizedCoordinates = false;
+          this.uMax = (float)param2 / (float)param4;
           this.setWrap(false, false, 10497);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 
-    im(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7) {
+    OpenGlSpriteTexture(OpenGlToolkit param0, int param1, int param2, int param3, int param4, boolean param5, byte[] param6, int param7) {
         super(param0, param1, param2, param3, param4, param5, param6, param7, true);
         try {
-          this.field_m = param3;
+          this.logicalWidth = param3;
           if (this.target == 34037) {
-            this.field_o = (float)param4;
-            this.field_l = false;
-            this.field_n = (float)param3;
+            this.vMax = (float)param4;
+            this.fullNormalizedCoordinates = false;
+            this.uMax = (float)param3;
           } else {
-            this.field_n = 1.0f;
-            this.field_o = 1.0f;
-            this.field_l = true;
+            this.uMax = 1.0f;
+            this.vMax = 1.0f;
+            this.fullNormalizedCoordinates = true;
           }
-          this.field_p = param4;
+          this.logicalHeight = param4;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ')');
         }
     }
 
-    im(OpenGlToolkit param0, int param1, int param2, int param3, int param4, int[] param5) {
+    OpenGlSpriteTexture(OpenGlToolkit param0, int param1, int param2, int param3, int param4, int[] param5) {
         super(param0, 3553, 6408, param3, param4);
         try {
-          this.field_m = param1;
-          this.field_p = param2;
+          this.logicalWidth = param1;
+          this.logicalHeight = param2;
           this.updatePixels((byte) 32, 0, param1, 0, param2, 0, 0, true, param5);
-          this.field_n = (float)param1 / (float)param3;
-          this.field_o = (float)param2 / (float)param4;
-          this.field_l = false;
+          this.uMax = (float)param1 / (float)param3;
+          this.vMax = (float)param2 / (float)param4;
+          this.fullNormalizedCoordinates = false;
           this.setWrap(false, false, 10497);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
     }
 
-    im(OpenGlToolkit param0, int param1, int param2, int param3, int param4) {
+    OpenGlSpriteTexture(OpenGlToolkit param0, int param1, int param2, int param3, int param4) {
         super(param0, param1, param2, param3, param4);
         RuntimeException var6 = null;
         RuntimeException stackIn_7_0 = null;
@@ -85,17 +85,17 @@ final class im extends OpenGlTexture2D {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_m = param3;
-          this.field_p = param4;
+          this.logicalWidth = param3;
+          this.logicalHeight = param4;
           if (this.target != 34037) {
-            this.field_n = 1.0f;
-            this.field_l = true;
-            this.field_o = 1.0f;
+            this.uMax = 1.0f;
+            this.fullNormalizedCoordinates = true;
+            this.vMax = 1.0f;
             return;
           }
-          this.field_l = false;
-          this.field_o = (float)param4;
-          this.field_n = (float)param3;
+          this.fullNormalizedCoordinates = false;
+          this.vMax = (float)param4;
+          this.uMax = (float)param3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -118,14 +118,14 @@ final class im extends OpenGlTexture2D {
         field_q = null;
     }
 
-    im(OpenGlToolkit param0, int param1, int param2, int param3, int param4, int param5) {
+    OpenGlSpriteTexture(OpenGlToolkit param0, int param1, int param2, int param3, int param4, int param5) {
         super(param0, 3553, param1, param4, param5);
         try {
-          this.field_o = (float)param3 / (float)param5;
-          this.field_n = (float)param2 / (float)param4;
-          this.field_p = param3;
-          this.field_m = param2;
-          this.field_l = false;
+          this.vMax = (float)param3 / (float)param5;
+          this.uMax = (float)param2 / (float)param4;
+          this.logicalHeight = param3;
+          this.logicalWidth = param2;
+          this.fullNormalizedCoordinates = false;
           this.setWrap(false, false, 10497);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "im.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');

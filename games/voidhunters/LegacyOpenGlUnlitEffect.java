@@ -55,7 +55,7 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlMaterialEffect {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (SetCountermeasureLauncherAimspeed.field_r != kla.field_d) {
+          if (SetCountermeasureLauncherAimspeed.field_r != ToolkitRasterStateStack.field_d) {
             return false;
           }
           var9 = new AccountCreationDialog(GetLagStandardDeviationIn.field_r, param2);

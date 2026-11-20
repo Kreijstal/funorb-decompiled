@@ -11308,17 +11308,17 @@
       "inputTreeSha256": "edb5cead5405f544aad442e989958b12eb4352744ef4e2311bc767342c35118c",
       "sources": {
         "files": 1570,
-        "sha256": "987bd4fcb6dd7d822f67520ab3b3ed483c2c9b7a7d62600d9d46a5f5678b332a"
+        "sha256": "0b153b6f69e5c2c2ffd03d7f6661b69752be0c0f803fa28d0ab873e7ad7ae54d"
       },
       "dictionary": {
         "path": "decompilation/voidhunters-naming.json",
-        "sha256": "aba5da2fa578a02a07bf376144b0b44ced8fe58ae8cc37b68446c2277f8d5aeb"
+        "sha256": "b2900295c8db463f2bdbad29e9422d1517a93752771b62b46ed43c6dd7d55c43"
       },
       "readingGuide": {
         "path": "games/voidhunters/README.md",
-        "sha256": "57a9e4fc3a7bd21ec158a8847a2fef2f9c1d390cccd0ab3b1a75041fabe170c6"
+        "sha256": "92e1714068bb80f08158885c6c225c00e6ac22cb1d227cbe2096468d1dfc5f0b"
       },
-      "rulesSha256": "e4fccd79445a55fd3bcaafd7b2343f0347125440994eb660e14a171fcfda34e8",
+      "rulesSha256": "c727b2339584bf8ee6dcc91c195a24d271206c3402ae7f09957038e06b670e18",
       "compiler": {
         "commit": "00c1c12fb58cdbd6be065e604ee5e9acbcebeff7"
       }
@@ -13697,7 +13697,7 @@
         },
         "publishedSources": {
           "files": 1570,
-          "sha256": "987bd4fcb6dd7d822f67520ab3b3ed483c2c9b7a7d62600d9d46a5f5678b332a"
+          "sha256": "0b153b6f69e5c2c2ffd03d7f6661b69752be0c0f803fa28d0ab873e7ad7ae54d"
         }
       },
       "wizardrun": {

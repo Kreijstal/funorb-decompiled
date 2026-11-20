@@ -68,7 +68,7 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
             discarded$1 = this.a((ValidatableInput) null, (byte) 100);
           }
           if (param3 == this.field_C) {
-            ot.a(-116);
+            LoginFormNavigation.showEmptyLoginForm(-116);
             return;
           }
           if (this.field_z != param3) {

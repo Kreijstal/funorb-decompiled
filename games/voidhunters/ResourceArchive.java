@@ -66,7 +66,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.index.groupNameLookup.get(param1 ^ 123456123, vla.a((byte) 120, var4));
+          var3_int = this.index.groupNameLookup.get(param1 ^ 123456123, LoginForm.hashCp1252((byte) 120, var4));
           stackIn_7_0 = this.getGroupLoadPercent(var3_int, 1045);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -101,7 +101,7 @@ final class ResourceArchive {
           }
           param0 = param0.toLowerCase();
           var4 = (CharSequence) ((Object) param0);
-          var3_int = this.index.groupNameLookup.get(-123454015, vla.a((byte) 109, var4));
+          var3_int = this.index.groupNameLookup.get(-123454015, LoginForm.hashCp1252((byte) 109, var4));
           if (!this.isValidGroup((byte) -72, var3_int)) {
             stackIn_6_0 = -1;
             return stackIn_6_0;
@@ -782,7 +782,7 @@ final class ResourceArchive {
           }
           param2 = param2.toLowerCase();
           var5 = (CharSequence) ((Object) param2);
-          var4_int = this.index.fileNameLookups[param1].get(-123454015, vla.a((byte) 122, var5));
+          var4_int = this.index.fileNameLookups[param1].get(-123454015, LoginForm.hashCp1252((byte) 122, var5));
           if (!param0) {
             stackIn_6_0 = 78;
             return stackIn_6_0;
@@ -848,13 +848,13 @@ final class ResourceArchive {
           param2 = param2.toLowerCase();
           param0 = param0.toLowerCase();
           var6 = (CharSequence) ((Object) param2);
-          var4_int = this.index.groupNameLookup.get(-123454015, vla.a((byte) 114, var6));
+          var4_int = this.index.groupNameLookup.get(-123454015, LoginForm.hashCp1252((byte) 114, var6));
           if (!this.isValidGroup((byte) -28, var4_int)) {
             stackIn_7_0 = null;
             return (byte[]) (stackIn_7_0);
           }
           var7 = (CharSequence) ((Object) param0);
-          var5 = this.index.fileNameLookups[var4_int].get(-123454015, vla.a((byte) 116, var7));
+          var5 = this.index.fileNameLookups[var4_int].get(-123454015, LoginForm.hashCp1252((byte) 116, var7));
           stackIn_9_0 = this.fetchFile(var4_int, var5, (byte) 13);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -893,7 +893,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var5 = (CharSequence) ((Object) param1);
-          var3_int = this.index.groupNameLookup.get(param0 - 123486186, vla.a((byte) 127, var5));
+          var3_int = this.index.groupNameLookup.get(param0 - 123486186, LoginForm.hashCp1252((byte) 127, var5));
           if (param0 != 32171) {
             var4 = (String) null;
             this.isNamedGroupReady(-117, (String) null);
@@ -950,7 +950,7 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var4 = (CharSequence) ((Object) param1);
-          var3_int = this.index.groupNameLookup.get(-123454015, vla.a((byte) 108, var4));
+          var3_int = this.index.groupNameLookup.get(-123454015, LoginForm.hashCp1252((byte) 108, var4));
           if (var3_int >= 0) {
             return true;
           }
@@ -1152,12 +1152,12 @@ final class ResourceArchive {
           }
           param1 = param1.toLowerCase();
           var6 = (CharSequence) ((Object) param2);
-          var4_int = this.index.groupNameLookup.get(-123454015, vla.a((byte) 127, var6));
+          var4_int = this.index.groupNameLookup.get(-123454015, LoginForm.hashCp1252((byte) 127, var6));
           if (var4_int < 0) {
             return false;
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.index.fileNameLookups[var4_int].get(-123454015, vla.a((byte) 123, var7));
+          var5 = this.index.fileNameLookups[var4_int].get(-123454015, LoginForm.hashCp1252((byte) 123, var7));
           if (var5 >= 0) {
             return true;
           }
@@ -1212,12 +1212,12 @@ final class ResourceArchive {
             this.files = (Object[][]) null;
           }
           var6 = (CharSequence) ((Object) param2);
-          var4_int = this.index.groupNameLookup.get(-123454015, vla.a((byte) 120, var6));
+          var4_int = this.index.groupNameLookup.get(-123454015, LoginForm.hashCp1252((byte) 120, var6));
           if (!this.isValidGroup((byte) 125, var4_int)) {
             return false;
           }
           var7 = (CharSequence) ((Object) param1);
-          var5 = this.index.fileNameLookups[var4_int].get(-123454015, vla.a((byte) 108, var7));
+          var5 = this.index.fileNameLookups[var4_int].get(-123454015, LoginForm.hashCp1252((byte) 108, var7));
           stackIn_11_0 = this.isFileReady((byte) 84, var5, var4_int);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

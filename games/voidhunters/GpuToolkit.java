@@ -395,7 +395,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  this.setTextureCombineOperations(feb.field_a, true, feb.field_a);
+                  this.setTextureCombineOperations(ToolkitRasterStateCache.field_a, true, ToolkitRasterStateCache.field_a);
                 }
               }
             }
@@ -2305,28 +2305,28 @@ abstract class GpuToolkit extends GraphicsToolkit {
         int[] var12 = null;
         var10 = VoidHunters.field_G;
         try {
-          if (param0.field_f != 0 &&
-            param0.field_e != 0) {
-            var12 = new int[param0.field_e * param0.field_f];
+          if (param0.width != 0 &&
+            param0.height != 0) {
+            var12 = new int[param0.height * param0.width];
             var11 = var12;
             var4 = var11;
             var5 = 0;
             var6 = 0;
-            if (param0.field_a != null) {
-              for (var7 = 0; var7 < param0.field_e; var7++) {
-                for (var8 = 0; param0.field_f > var8; var8++) {
+            if (param0.alpha != null) {
+              for (var7 = 0; var7 < param0.height; var7++) {
+                for (var8 = 0; param0.width > var8; var8++) {
                   incrementValue$0 = var6;
                   var6++;
-                  var4[incrementValue$0] = SetAngularForceDownshift.a(param0.field_b[dla.a(255, (int) param0.field_h[var5])], param0.field_a[var5] << 24);
+                  var4[incrementValue$0] = SetAngularForceDownshift.a(param0.palette[dla.a(255, (int) param0.pixels[var5])], param0.alpha[var5] << 24);
                   var5++;
                 }
               }
             } else {
-              for (var7 = 0; param0.field_e > var7; var7++) {
-                for (var8 = 0; param0.field_f > var8; var8++) {
+              for (var7 = 0; param0.height > var7; var7++) {
+                for (var8 = 0; param0.width > var8; var8++) {
                   incrementValue$1 = var5;
                   var5++;
-                  var9 = param0.field_b[param0.field_h[incrementValue$1] & 255];
+                  var9 = param0.palette[param0.pixels[incrementValue$1] & 255];
                   incrementValue$2 = var6;
                   var6++;
                   stackIn_12_0 = var4;
@@ -2340,11 +2340,11 @@ abstract class GpuToolkit extends GraphicsToolkit {
                 }
               }
             }
-            var3 = this.createSprite(param0.field_f, param0.field_f, var12, 0, (byte) 70, param0.field_e);
+            var3 = this.createSprite(param0.width, param0.width, var12, 0, (byte) 70, param0.height);
           } else {
             var3 = this.createSprite(1, 1, new int[]{0}, 0, (byte) 92, 1);
           }
-          var3.setPadding(param0.field_c, param0.field_g, param0.field_i, param0.field_d);
+          var3.setPadding(param0.leftPadding, param0.topPadding, param0.rightPadding, param0.bottomPadding);
           stackIn_23_0 = var3;
           return stackIn_23_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

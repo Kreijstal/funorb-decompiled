@@ -21,7 +21,7 @@ final class AudioPump implements Runnable {
         IsaacPacketBuffer var4 = null;
         IsaacPacketBuffer var4Lifetime1;
         if (param1 != GetMachineGunPulsetime.field_q) {
-          var6 = (LobbyGameEntry) (GetLaserReload.field_r.a(-1, (long)GetMachineGunPulsetime.field_q));
+          var6 = (LobbyGameEntry) (GetLaserReload.field_r.get(-1, (long)GetMachineGunPulsetime.field_q));
           var7 = var6;
           if (var7 != null) {
             var7.field_Ib = null;

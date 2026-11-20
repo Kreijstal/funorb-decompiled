@@ -205,8 +205,8 @@ final class SoftwareAlphaFont extends ToolkitFont {
         this.glyphXOffsets = new int[param2.length];
         for (var6 = 0; var6 < param2.length; var6++) {
           var7 = param2[var6];
-          if (var7.field_a == null) {
-            var14 = var7.field_h;
+          if (var7.alpha == null) {
+            var14 = var7.pixels;
             array$0 = new byte[var14.length];
             this.glyphCoverage[var6] = array$0;
             var9 = array$0;
@@ -221,10 +221,10 @@ final class SoftwareAlphaFont extends ToolkitFont {
               stackIn_8_0[stackIn_8_1] = (byte)stackIn_9_2;
             }
           } else {
-            this.glyphCoverage[var6] = var7.field_a;
+            this.glyphCoverage[var6] = var7.alpha;
           }
-          this.glyphYOffsets[var6] = var7.field_g;
-          this.glyphXOffsets[var6] = var7.field_c;
+          this.glyphYOffsets[var6] = var7.topPadding;
+          this.glyphXOffsets[var6] = var7.leftPadding;
         }
     }
 

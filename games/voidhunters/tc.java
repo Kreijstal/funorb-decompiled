@@ -37,7 +37,7 @@ final class tc {
             stackIn_13_0 = 260;
             return stackIn_13_0;
           }
-          if (feb.field_a != param1) {
+          if (ToolkitRasterStateCache.field_a != param1) {
             throw new IllegalArgumentException();
           }
           stackIn_16_0 = 34023;

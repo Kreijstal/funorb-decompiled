@@ -56,8 +56,8 @@ final class NebulaField implements DiffableState, ofa {
     }
 
     private final void markChanged(int param0) {
-        int fieldTemp$0 = sja.field_g;
-        sja.field_g = sja.field_g + 1;
+        int fieldTemp$0 = ToolkitRasterState.field_g;
+        ToolkitRasterState.field_g = ToolkitRasterState.field_g + 1;
         this.revision = fieldTemp$0;
         if (param0 <= 118) {
           NebulaField.acquireTemporaryObjective((byte) 80);

@@ -7,7 +7,7 @@ final class OpenGlGlyphMask extends GlyphMask {
     static String field_d;
     static TextureCombineOperation field_a;
     static long field_c;
-    im texture;
+    OpenGlSpriteTexture texture;
     static int field_e;
 
     public static void clearSharedReferences(int param0) {

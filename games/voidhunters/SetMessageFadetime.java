@@ -65,7 +65,7 @@ final class SetMessageFadetime extends ConsoleCommand {
                 param0 = GetTorqueDownshift.field_p;
               }
               param2 = 2;
-              SetAiFiringRangeUpshift.field_o.a((byte) 9, ToggleShieldsOrderDefinition.field_d);
+              SetAiFiringRangeUpshift.field_o.setLoginName((byte) 9, ToggleShieldsOrderDefinition.field_d);
             }
             if (param2 == 10) {
               Nebula.a(92);
@@ -83,7 +83,7 @@ final class SetMessageFadetime extends ConsoleCommand {
             if (param2 != 256 &&
               param2 != 10 &&
               !OpenGlSprite.reconnecting) {
-              SetAiFiringRangeUpshift.field_o.i((byte) -29);
+              SetAiFiringRangeUpshift.field_o.clearCredentials((byte) -29);
             }
           }
           if (param1 >= 5) {

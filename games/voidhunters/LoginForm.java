@@ -1,30 +1,30 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vla extends UiContainer implements UiTextFieldListener, UiActionListener {
+final class LoginForm extends UiContainer implements UiTextFieldListener, UiActionListener {
     static String field_E;
-    private UiFocusableComponent field_x;
-    private boolean field_B;
-    private UiFocusableComponent field_A;
-    private String field_v;
-    private UiTextField field_G;
-    private boolean field_F;
-    private boolean field_w;
+    private UiFocusableComponent submitButton;
+    private boolean reconnectMode;
+    private UiFocusableComponent alternateButton;
+    private String headerMessage;
+    private UiTextField passwordField;
+    private boolean showCreateAccountButton;
+    private boolean showGuestOption;
     static String field_C;
-    private UiTextField field_y;
-    private UiFocusableComponent field_z;
+    private UiTextField loginField;
+    private UiFocusableComponent createAccountButton;
 
-    final void a(byte param0, String param1) {
+    final void setLoginName(byte param0, String param1) {
         UiTextField var3 = null;
         String var4 = null;
         if (param0 != 9) {
           return;
         }
         try {
-          var3 = this.field_y;
+          var3 = this.loginField;
           var4 = param1;
           var3.setText(false, param0 ^ 9, var4);
-          this.field_G.clearText(82);
+          this.passwordField.clearText(82);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vla.J(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -42,16 +42,16 @@ final class vla extends UiContainer implements UiTextFieldListener, UiActionList
           if (param0 != 11) {
             return;
           }
-          if (this.field_x != param3) {
-            if (param3 == this.field_z) {
-              GetPhasedEnergyBeamProjectiles.a(70);
+          if (this.submitButton != param3) {
+            if (param3 == this.createAccountButton) {
+              GetPhasedEnergyBeamProjectiles.showAccountCreationForm(70);
             } else {
-              if (param3 == this.field_A) {
-                if (!this.field_B) {
-                  if (!this.field_w) {
+              if (param3 == this.alternateButton) {
+                if (!this.reconnectMode) {
+                  if (!this.showGuestOption) {
                     OpenGlTransparentWaterEffect.e(-24248);
                   } else {
-                    GetGrapplingHookRopeBreakLength.e((byte) -91);
+                    GetGrapplingHookRopeBreakLength.showGuestPlayNotice((byte) -91);
                   }
                 } else {
                   qj.a((byte) 127);
@@ -59,7 +59,7 @@ final class vla extends UiContainer implements UiTextFieldListener, UiActionList
               }
             }
           } else {
-            this.d(-1);
+            this.submitLogin(-1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -77,10 +77,10 @@ final class vla extends UiContainer implements UiTextFieldListener, UiActionList
     }
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
-        if (this.field_v != null) {
-          SetShipToShipRamDamage.field_o.drawParagraph(this.field_v, this.x + (param0 + 20), 15 + (param3 + this.y), -40 + this.width, this.height, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.maxAscent);
+        if (this.headerMessage != null) {
+          SetShipToShipRamDamage.field_o.drawParagraph(this.headerMessage, this.x + (param0 + 20), 15 + (param3 + this.y), -40 + this.width, this.height, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.maxAscent);
         }
-        if (this.field_z != null) {
+        if (this.createAccountButton != null) {
           SoftwareRasterizer2D.drawHorizontalLine(param0 + 10, param3 + 134, -20 + this.width, 4210752);
         }
         super.drawLayer(param0, param1, 58, param3);
@@ -90,24 +90,24 @@ final class vla extends UiContainer implements UiTextFieldListener, UiActionList
         }
     }
 
-    final void i(byte param0) {
-        this.field_y.clearText(82);
+    final void clearCredentials(byte param0) {
+        this.loginField.clearText(82);
         if (param0 != -29) {
-          this.field_x = (UiFocusableComponent) null;
+          this.submitButton = (UiFocusableComponent) null;
         }
-        this.field_G.clearText(82);
+        this.passwordField.clearText(82);
     }
 
-    private final void d(int param0) {
+    private final void submitLogin(int param0) {
         UiTextField var3;
         if (param0 != -1) {
           var3 = (UiTextField) null;
           this.onTextChanged((UiTextField) null, (byte) -20);
         }
         if (Projectile.isReconnecting((byte) -21) ||
-          !(this.field_y.text.length() <= 0) &&
-          !(this.field_G.text.length() <= 0)) {
-          PartitionZoneList.a(-41, this.field_G.text, this.field_y.text);
+          !(this.loginField.text.length() <= 0) &&
+          !(this.passwordField.text.length() <= 0)) {
+          PartitionZoneList.a(-41, this.passwordField.text, this.loginField.text);
         }
     }
 
@@ -146,17 +146,17 @@ final class vla extends UiContainer implements UiTextFieldListener, UiActionList
         }
     }
 
-    final String a(int param0) {
-        if (null == this.field_y.text) {
+    final String getLoginName(int param0) {
+        if (null == this.loginField.text) {
           return "";
         }
         if (param0 != 30) {
           return (String) null;
         }
-        return this.field_y.text;
+        return this.loginField.text;
     }
 
-    vla(String param0, String param1, boolean param2, boolean param3, boolean param4) {
+    LoginForm(String param0, String param1, boolean param2, boolean param3, boolean param4) {
         super(0, 0, 310, 190, (UiRenderer) null);
         sca dupTemp$0 = null;
         sca dupTemp$1 = null;
@@ -183,27 +183,27 @@ final class vla extends UiContainer implements UiTextFieldListener, UiActionList
         sca var13 = null;
         try {
           stackIn_4_1 = (param4);
-          this.field_w = stackIn_4_1;
+          this.showGuestOption = stackIn_4_1;
           stackIn_7_1 = (param3);
-          this.field_F = stackIn_7_1;
+          this.showCreateAccountButton = stackIn_7_1;
           stackIn_10_1 = (param2);
-          this.field_B = stackIn_10_1;
-          this.field_v = param1;
-          if (this.field_B && (this.field_F ||
-            this.field_w)) {
+          this.reconnectMode = stackIn_10_1;
+          this.headerMessage = param1;
+          if (this.reconnectMode && (this.showCreateAccountButton ||
+            this.showGuestOption)) {
             throw new IllegalStateException();
           }
-          this.field_y = (UiTextField) ((Object) new ValidatedTextField(param0, (UiListener) (this), 100));
-          this.field_G = (UiTextField) ((Object) new ValidatedTextField("", (UiListener) (this), 20));
-          if (this.field_B) {
-            this.field_x = new UiFocusableComponent(SetSpecialOrderBoxHeight.field_p, (UiListener) null);
-            this.field_A = new UiFocusableComponent(GetFighterBayAimspeed.field_q, (UiListener) null);
-            this.field_y.enabled = false;
+          this.loginField = (UiTextField) ((Object) new ValidatedTextField(param0, (UiListener) (this), 100));
+          this.passwordField = (UiTextField) ((Object) new ValidatedTextField("", (UiListener) (this), 20));
+          if (this.reconnectMode) {
+            this.submitButton = new UiFocusableComponent(SetSpecialOrderBoxHeight.field_p, (UiListener) null);
+            this.alternateButton = new UiFocusableComponent(GetFighterBayAimspeed.field_q, (UiListener) null);
+            this.loginField.enabled = false;
           } else {
-            this.field_x = new UiFocusableComponent(GetBombletSprayProjectiles.field_s, (UiListener) null);
+            this.submitButton = new UiFocusableComponent(GetBombletSprayProjectiles.field_s, (UiListener) null);
             stackIn_17_1 = null;
             stackIn_17_2 = null;
-            if (this.field_w) {
+            if (this.showGuestOption) {
               stackIn_18_1 = null;
               stackIn_18_2 = null;
               stackIn_18_3 = cjb.field_a;
@@ -212,39 +212,39 @@ final class vla extends UiContainer implements UiTextFieldListener, UiActionList
               stackIn_18_2 = null;
               stackIn_18_3 = ArbProgram.field_a;
             }
-            this.field_A = new UiFocusableComponent(stackIn_18_3, (UiListener) null);
-            if (this.field_F) {
-              this.field_z = new UiFocusableComponent(TimedSpecialOrderBehaviour.field_b, (UiListener) (this));
+            this.alternateButton = new UiFocusableComponent(stackIn_18_3, (UiListener) null);
+            if (this.showCreateAccountButton) {
+              this.createAccountButton = new UiFocusableComponent(TimedSpecialOrderBehaviour.field_b, (UiListener) (this));
             }
           }
-          this.field_y.renderer = (UiRenderer) ((Object) new io(10000536));
-          this.field_G.renderer = (UiRenderer) ((Object) new kpb(10000536));
+          this.loginField.renderer = (UiRenderer) ((Object) new io(10000536));
+          this.passwordField.renderer = (UiRenderer) ((Object) new kpb(10000536));
           var6 = new vva();
-          this.field_x.renderer = (UiRenderer) ((Object) var6);
-          if (null != this.field_A) {
-            this.field_A.renderer = (UiRenderer) ((Object) var6);
+          this.submitButton.renderer = (UiRenderer) ((Object) var6);
+          if (null != this.alternateButton) {
+            this.alternateButton.renderer = (UiRenderer) ((Object) var6);
           }
-          this.field_y.tooltip = sja.field_j;
-          if (this.field_z != null) {
-            this.field_z.renderer = (UiRenderer) ((Object) var6);
+          this.loginField.tooltip = ToolkitRasterState.field_j;
+          if (this.createAccountButton != null) {
+            this.createAccountButton.renderer = (UiRenderer) ((Object) var6);
           }
-          if (this.field_z != null) {
-            this.field_z.tooltip = AdjustBodyComponentsAction.field_a;
+          if (this.createAccountButton != null) {
+            this.createAccountButton.tooltip = AdjustBodyComponentsAction.field_a;
           }
-          if (this.field_B) {
-            this.field_A.tooltip = GetSpecialOrderBoxHeight.field_o;
+          if (this.reconnectMode) {
+            this.alternateButton.tooltip = GetSpecialOrderBoxHeight.field_o;
           } else {
-            if (!this.field_w) {
-              this.field_A.renderer = (UiRenderer) ((Object) new meb());
+            if (!this.showGuestOption) {
+              this.alternateButton.renderer = (UiRenderer) ((Object) new meb());
             } else {
-              this.field_A.tooltip = UiContainer.field_u;
-              this.field_A.renderer = (UiRenderer) ((Object) new meb());
+              this.alternateButton.tooltip = UiContainer.field_u;
+              this.alternateButton.renderer = (UiRenderer) ((Object) new meb());
             }
           }
           this.y = 15;
           var7 = SetShipToShipRamDamage.field_o;
-          if (null != this.field_v) {
-            this.y = this.y + (var7.getParagraphHeight(this.field_v, this.width - 40, var7.maxAscent) + 5);
+          if (null != this.headerMessage) {
+            this.y = this.y + (var7.getParagraphHeight(this.headerMessage, this.width - 40, var7.maxAscent) + 5);
           }
           var8 = RemoveEventActionFactory.field_a;
           var9 = gib.a(19314, MissionList.b((byte) -86));
@@ -255,49 +255,49 @@ final class vla extends UiContainer implements UiTextFieldListener, UiActionList
           } else {
             var8 = fj.field_a;
           }
-          dupTemp$0 = new sca(10, this.y, this.width - 20, 25, this.field_y, false, 80, 3, var7, 16777215, var8);
+          dupTemp$0 = new sca(10, this.y, this.width - 20, 25, this.loginField, false, 80, 3, var7, 16777215, var8);
           var12 = dupTemp$0;
           this.addChild(-18756, dupTemp$0);
           this.y = this.y + (((UiComponent) ((Object) var12)).height + 5);
-          dupTemp$1 = new sca(10, this.y, -20 + this.width, 25, this.field_G, false, 80, 3, var7, 16777215, RequestNewestBlackboxRecording.field_q);
+          dupTemp$1 = new sca(10, this.y, -20 + this.width, 25, this.passwordField, false, 80, 3, var7, 16777215, RequestNewestBlackboxRecording.field_q);
           var13 = dupTemp$1;
           this.addChild(-18756, dupTemp$1);
           this.y = this.y + (((UiComponent) ((Object) var13)).height + 5);
-          this.field_x.listener = (UiListener) (this);
-          if (this.field_z != null) {
-            this.field_z.listener = (UiListener) (this);
+          this.submitButton.listener = (UiListener) (this);
+          if (this.createAccountButton != null) {
+            this.createAccountButton.listener = (UiListener) (this);
           }
-          if (this.field_A != null) {
-            this.field_A.listener = (UiListener) (this);
+          if (this.alternateButton != null) {
+            this.alternateButton.listener = (UiListener) (this);
           }
-          if (null == this.field_z) {
-            this.field_x.setBounds(8, this.width - 16, 30, 1, this.y);
+          if (null == this.createAccountButton) {
+            this.submitButton.setBounds(8, this.width - 16, 30, 1, this.y);
             this.y = this.y + 35;
           } else {
-            this.field_x.setBounds(85, this.width - 95, 30, 1, this.y);
+            this.submitButton.setBounds(85, this.width - 95, 30, 1, this.y);
             this.y = this.y + 60;
           }
-          if (null != this.field_z) {
-            this.field_z.setBounds(8, -16 + this.width, 30, 1, this.y);
+          if (null != this.createAccountButton) {
+            this.createAccountButton.setBounds(8, -16 + this.width, 30, 1, this.y);
             this.y = this.y + 35;
           }
-          if (null != this.field_A) {
-            if (!this.field_B &&
-              !this.field_w) {
-              this.field_A.setBounds(8, 40, 20, 1, this.y);
+          if (null != this.alternateButton) {
+            if (!this.reconnectMode &&
+              !this.showGuestOption) {
+              this.alternateButton.setBounds(8, 40, 20, 1, this.y);
               this.y = this.y + 25;
             } else {
-              this.field_A.setBounds(8, -10 + (-6 + this.width), 30, 1, this.y);
+              this.alternateButton.setBounds(8, -10 + (-6 + this.width), 30, 1, this.y);
               this.y = this.y + 35;
             }
           }
           this.setBounds(0, this.width, 3 + this.y, 1, 0);
-          this.addChild(-18756, this.field_x);
-          if (this.field_z != null) {
-            this.addChild(-18756, this.field_z);
+          this.addChild(-18756, this.submitButton);
+          if (this.createAccountButton != null) {
+            this.addChild(-18756, this.createAccountButton);
           }
-          if (null != this.field_A) {
-            this.addChild(-18756, this.field_A);
+          if (null != this.alternateButton) {
+            this.addChild(-18756, this.alternateButton);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -328,7 +328,7 @@ final class vla extends UiContainer implements UiTextFieldListener, UiActionList
         field_C = null;
     }
 
-    final static int a(byte param0, CharSequence param1) {
+    final static int hashCp1252(byte param0, CharSequence param1) {
         int var4 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -344,7 +344,7 @@ final class vla extends UiContainer implements UiTextFieldListener, UiActionList
           var2_int = param1.length();
           var3 = 0;
           if (param0 <= 105) {
-            vla.clearSharedReferences(30);
+            LoginForm.clearSharedReferences(30);
           }
           for (var4 = 0; var4 < var2_int; var4++) {
             var3 = Cp1252CharacterEncoder.encodeCp1252Character(-125, param1.charAt(var4)) + (-var3 + (var3 << 5));
@@ -368,7 +368,7 @@ final class vla extends UiContainer implements UiTextFieldListener, UiActionList
     public final void onTextChanged(UiTextField param0, byte param1) {
         try {
           if (param1 != 100) {
-            this.d(-74);
+            this.submitLogin(-74);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vla.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -385,13 +385,13 @@ final class vla extends UiContainer implements UiTextFieldListener, UiActionList
         try {
           if (param0 != -12409) {
             var4 = (CharSequence) null;
-            vla.a((byte) -119, (CharSequence) null);
+            LoginForm.hashCp1252((byte) -119, (CharSequence) null);
           }
-          if (param1 == this.field_y) {
-            this.field_G.requestFocus(param0 ^ -12409, (UiComponent) (this));
+          if (param1 == this.loginField) {
+            this.passwordField.requestFocus(param0 ^ -12409, (UiComponent) (this));
           }
-          if (param1 == this.field_G) {
-            this.d(-1);
+          if (param1 == this.passwordField) {
+            this.submitLogin(-1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

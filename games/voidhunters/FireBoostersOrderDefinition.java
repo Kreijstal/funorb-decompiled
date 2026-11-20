@@ -23,7 +23,7 @@ final class FireBoostersOrderDefinition extends SpecialOrderDefinition {
         return 106;
     }
 
-    final static void a(byte param0, IsaacPacketBuffer param1, SerializableGameState param2) {
+    final static void readStateFromBits(byte param0, IsaacPacketBuffer param1, SerializableGameState param2) {
         param1.beginBitRead(-23497);
         if (param0 >= -31) {
           return;
@@ -58,12 +58,12 @@ final class FireBoostersOrderDefinition extends SpecialOrderDefinition {
         return false;
     }
 
-    final static im a(OpenGlToolkit param0, int param1, int param2, int param3, int[] param4, int param5, boolean param6, byte param7) {
+    final static OpenGlSpriteTexture createSpriteTexture(OpenGlToolkit param0, int param1, int param2, int param3, int[] param4, int param5, boolean param6, byte param7) {
         RuntimeException var8 = null;
-        im stackIn_2_0 = null;
-        im stackIn_9_0 = null;
-        im stackIn_11_0 = null;
-        im stackIn_13_0 = null;
+        OpenGlSpriteTexture stackIn_2_0 = null;
+        OpenGlSpriteTexture stackIn_9_0 = null;
+        OpenGlSpriteTexture stackIn_11_0 = null;
+        OpenGlSpriteTexture stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -72,19 +72,19 @@ final class FireBoostersOrderDefinition extends SpecialOrderDefinition {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param7 != 60) {
-            stackIn_2_0 = (im) null;
+            stackIn_2_0 = (OpenGlSpriteTexture) null;
             return stackIn_2_0;
           }
           if (!param0.field_n && (!bd.a(param5, (byte) -95) ||
             !bd.a(param3, (byte) -95))) {
             if (!param0.field_g) {
-              stackIn_11_0 = new im(param0, param5, param3, GetSalvoaim.a(param5, (byte) -110), GetSalvoaim.a(param3, (byte) -109), param4);
+              stackIn_11_0 = new OpenGlSpriteTexture(param0, param5, param3, GetSalvoaim.a(param5, (byte) -110), GetSalvoaim.a(param3, (byte) -109), param4);
               return stackIn_11_0;
             }
-            stackIn_9_0 = new im(param0, 34037, param5, param3, param6, param4, param2, param1);
+            stackIn_9_0 = new OpenGlSpriteTexture(param0, 34037, param5, param3, param6, param4, param2, param1);
             return stackIn_9_0;
           }
-          stackIn_13_0 = new im(param0, 3553, param5, param3, param6, param4, param2, param1);
+          stackIn_13_0 = new OpenGlSpriteTexture(param0, 3553, param5, param3, param6, param4, param2, param1);
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

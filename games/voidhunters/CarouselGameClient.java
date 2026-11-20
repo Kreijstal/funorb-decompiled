@@ -474,7 +474,7 @@ final class CarouselGameClient {
             }
             return true;
           }
-          if (pr.field_d == param4) {
+          if (SecondaryNodeHashTable.field_d == param4) {
             var17_ref = (CarouselEvent) (IntrusiveDequeIterator.field_a.create((byte) -126));
             param1.beginBitRead(-23497);
             var17_ref.readState(param1, false);

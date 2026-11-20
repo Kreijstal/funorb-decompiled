@@ -61,7 +61,7 @@ final class CarouselPlayerEventFactory implements GameStateFactory {
           if (var2 == null) {
             var2 = param0;
           }
-          var3 = (vu) (TeamNodeCondition.field_c.a(-1, (long)var2.hashCode()));
+          var3 = (vu) (TeamNodeCondition.field_c.get(-1, (long)var2.hashCode()));
           while (true) {
             if (var3 == null) {
               return null;
@@ -72,7 +72,7 @@ final class CarouselPlayerEventFactory implements GameStateFactory {
               var4 = var3.field_Fb;
             }
             if (!var4.equals(var2)) {
-              var3 = (vu) (TeamNodeCondition.field_c.e(-88));
+              var3 = (vu) (TeamNodeCondition.field_c.getNextSameKey(-88));
               continue;
             }
             break;

@@ -216,14 +216,14 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[202] = Particle.field_t;
         var2[110] = SetSniperCannonAimspeed.field_o;
         var2[70] = Particle.field_G;
-        var2[51] = sja.field_i;
+        var2[51] = ToolkitRasterState.field_i;
         var2[108] = ujb.field_h;
         var2[199] = joa.field_a;
         var2[67] = GetToggledScoreboard.field_r;
-        var2[44] = sja.field_b;
+        var2[44] = ToolkitRasterState.field_b;
         var2[184] = SetUseRectFill.field_p;
         var2[158] = BodyDestroyedConditionFactory.field_b;
-        var2[19] = rla.field_x;
+        var2[19] = GuestPlayNoticePanel.field_x;
         var2[125] = dr.field_a;
         var2[46] = Particle.field_A;
         var2[45] = LaunchFightersOrderDefinition.field_d;

@@ -38,7 +38,7 @@ final class ServerInfoFactory implements GameStateFactory {
         String stackIn_177_0 = null;
         boolean stackIn_181_0 = false;
         int var2;
-        kla var3;
+        ToolkitRasterStateStack var3;
         int var4_int;
         String var4;
         int var5;
@@ -50,11 +50,11 @@ final class ServerInfoFactory implements GameStateFactory {
         int var11;
         int var12;
         String var13;
-        kla var14;
+        ToolkitRasterStateStack var14;
         String var15;
-        kla var16;
+        ToolkitRasterStateStack var16;
         String var17;
-        kla var18;
+        ToolkitRasterStateStack var18;
         String var19;
         String var20;
         String var21;
@@ -145,7 +145,7 @@ final class ServerInfoFactory implements GameStateFactory {
             var2 = stackIn_20_0;
             stackIn_25_0 = (param1) && (SetSalvoDamageMultiplier.e(51)) && (var2 == 0);
             SpawnPointFactory.a(stackIn_25_0, true);
-            var14 = feb.a(GetDebrisGroupColour.field_r, true);
+            var14 = ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true);
             if (OpenGlTexture1D.field_i) {
               var4_int = SetToggledScoreboard.field_o.screenY;
               if (!LegacyOpenGlTurbulenceEffect.field_d) {
@@ -182,9 +182,9 @@ final class ServerInfoFactory implements GameStateFactory {
                 var10 = (-SoftwareRasterizer2D.height + MissionVariableFactory.field_a) / 2;
                 var11 = var5Lifetime2 + var9;
                 var12 = var6Lifetime2 + var10;
-                var14.a(var11, var7 + var11, var12, var8 + var12, (byte) -70);
+                var14.pushClip(var11, var7 + var11, var12, var8 + var12, (byte) -70);
                 GetDebrisGroupColour.field_r.writePixels(var11 - var5Lifetime2, var12, SoftwareRasterizer2D.width, var8, SoftwareRasterizer2D.pixels, SoftwareRasterizer2D.width * var6Lifetime2, SoftwareRasterizer2D.width);
-                var14.a(true);
+                var14.pop(true);
               }
             }
           }
@@ -216,7 +216,7 @@ final class ServerInfoFactory implements GameStateFactory {
                 var2Lifetime1 = stackIn_74_0;
                 stackIn_79_0 = (param1) && (SetSalvoDamageMultiplier.e(51)) && (var2Lifetime1 == 0);
                 SpawnPointFactory.a(stackIn_79_0, true);
-                var16 = feb.a(GetDebrisGroupColour.field_r, true);
+                var16 = ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true);
                 if (OpenGlTexture1D.field_i) {
                   var4_intLifetime1 = SetToggledScoreboard.field_o.screenY;
                   if (!LegacyOpenGlTurbulenceEffect.field_d) {
@@ -253,9 +253,9 @@ final class ServerInfoFactory implements GameStateFactory {
                     var10Lifetime1 = (-SoftwareRasterizer2D.height + MissionVariableFactory.field_a) / 2;
                     var11Lifetime1 = var5Lifetime1Lifetime3 + var9Lifetime1;
                     var12Lifetime1 = var6Lifetime1Lifetime3 + var10Lifetime1;
-                    var16.a(var11Lifetime1, var7Lifetime1 + var11Lifetime1, var12Lifetime1, var8Lifetime1 + var12Lifetime1, (byte) -70);
+                    var16.pushClip(var11Lifetime1, var7Lifetime1 + var11Lifetime1, var12Lifetime1, var8Lifetime1 + var12Lifetime1, (byte) -70);
                     GetDebrisGroupColour.field_r.writePixels(var11Lifetime1 - var5Lifetime1Lifetime3, var12Lifetime1, SoftwareRasterizer2D.width, var8Lifetime1, SoftwareRasterizer2D.pixels, SoftwareRasterizer2D.width * var6Lifetime1Lifetime3, SoftwareRasterizer2D.width);
-                    var16.a(true);
+                    var16.pop(true);
                   }
                 }
                 if (param0 != -30428) {
@@ -271,7 +271,7 @@ final class ServerInfoFactory implements GameStateFactory {
           var2Lifetime1Lifetime1 = stackIn_108_0;
           stackIn_113_0 = (param1) && (SetSalvoDamageMultiplier.e(51)) && (var2Lifetime1Lifetime1 == 0);
           SpawnPointFactory.a(stackIn_113_0, true);
-          var18 = feb.a(GetDebrisGroupColour.field_r, true);
+          var18 = ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true);
           var3 = var18;
           if (OpenGlTexture1D.field_i) {
             var4_intLifetime1Lifetime1 = SetToggledScoreboard.field_o.screenY;
@@ -310,9 +310,9 @@ final class ServerInfoFactory implements GameStateFactory {
                   var10Lifetime1Lifetime1 = (-SoftwareRasterizer2D.height + MissionVariableFactory.field_a) / 2;
                   var11Lifetime1Lifetime1 = var5Lifetime1Lifetime1Lifetime4 + var9Lifetime1Lifetime1;
                   var12Lifetime1Lifetime1 = var6Lifetime1Lifetime1Lifetime4 + var10Lifetime1Lifetime1;
-                  var18.a(var11Lifetime1Lifetime1, var7Lifetime1Lifetime1 + var11Lifetime1Lifetime1, var12Lifetime1Lifetime1, var8Lifetime1Lifetime1 + var12Lifetime1Lifetime1, (byte) -70);
+                  var18.pushClip(var11Lifetime1Lifetime1, var7Lifetime1Lifetime1 + var11Lifetime1Lifetime1, var12Lifetime1Lifetime1, var8Lifetime1Lifetime1 + var12Lifetime1Lifetime1, (byte) -70);
                   GetDebrisGroupColour.field_r.writePixels(var11Lifetime1Lifetime1 - var5Lifetime1Lifetime1Lifetime4, var12Lifetime1Lifetime1, SoftwareRasterizer2D.width, var8Lifetime1Lifetime1, SoftwareRasterizer2D.pixels, SoftwareRasterizer2D.width * var6Lifetime1Lifetime1Lifetime4, SoftwareRasterizer2D.width);
-                  var18.a(true);
+                  var18.pop(true);
                 }
               }
               if (param0 != -30428) {
@@ -350,9 +350,9 @@ final class ServerInfoFactory implements GameStateFactory {
                 var10Lifetime1Lifetime1Lifetime1 = (-SoftwareRasterizer2D.height + MissionVariableFactory.field_a) / 2;
                 var11Lifetime1Lifetime1Lifetime1 = var5Lifetime1Lifetime1Lifetime1Lifetime1 + var9Lifetime1Lifetime1Lifetime1;
                 var12Lifetime1Lifetime1Lifetime1 = var6Lifetime1Lifetime1Lifetime1Lifetime1 + var10Lifetime1Lifetime1Lifetime1;
-                var18.a(var11Lifetime1Lifetime1Lifetime1, var7Lifetime1Lifetime1Lifetime1 + var11Lifetime1Lifetime1Lifetime1, var12Lifetime1Lifetime1Lifetime1, var8Lifetime1Lifetime1Lifetime1 + var12Lifetime1Lifetime1Lifetime1, (byte) -70);
+                var18.pushClip(var11Lifetime1Lifetime1Lifetime1, var7Lifetime1Lifetime1Lifetime1 + var11Lifetime1Lifetime1Lifetime1, var12Lifetime1Lifetime1Lifetime1, var8Lifetime1Lifetime1Lifetime1 + var12Lifetime1Lifetime1Lifetime1, (byte) -70);
                 GetDebrisGroupColour.field_r.writePixels(var11Lifetime1Lifetime1Lifetime1 - var5Lifetime1Lifetime1Lifetime1Lifetime1, var12Lifetime1Lifetime1Lifetime1, SoftwareRasterizer2D.width, var8Lifetime1Lifetime1Lifetime1, SoftwareRasterizer2D.pixels, SoftwareRasterizer2D.width * var6Lifetime1Lifetime1Lifetime1Lifetime1, SoftwareRasterizer2D.width);
-                var18.a(true);
+                var18.pop(true);
               }
               if (param0 == -30428) {
                 return;
@@ -382,9 +382,9 @@ final class ServerInfoFactory implements GameStateFactory {
                   var10Lifetime1Lifetime1Lifetime2 = (-SoftwareRasterizer2D.height + MissionVariableFactory.field_a) / 2;
                   var11Lifetime1Lifetime1Lifetime2 = var5Lifetime1Lifetime1Lifetime2 + var9Lifetime1Lifetime1Lifetime2;
                   var12Lifetime1Lifetime1Lifetime2 = var6Lifetime1Lifetime1Lifetime2 + var10Lifetime1Lifetime1Lifetime2;
-                  var18.a(var11Lifetime1Lifetime1Lifetime2, var7Lifetime1Lifetime1Lifetime2 + var11Lifetime1Lifetime1Lifetime2, var12Lifetime1Lifetime1Lifetime2, var8Lifetime1Lifetime1Lifetime2 + var12Lifetime1Lifetime1Lifetime2, (byte) -70);
+                  var18.pushClip(var11Lifetime1Lifetime1Lifetime2, var7Lifetime1Lifetime1Lifetime2 + var11Lifetime1Lifetime1Lifetime2, var12Lifetime1Lifetime1Lifetime2, var8Lifetime1Lifetime1Lifetime2 + var12Lifetime1Lifetime1Lifetime2, (byte) -70);
                   GetDebrisGroupColour.field_r.writePixels(var11Lifetime1Lifetime1Lifetime2 - var5Lifetime1Lifetime1Lifetime2, var12Lifetime1Lifetime1Lifetime2, SoftwareRasterizer2D.width, var8Lifetime1Lifetime1Lifetime2, SoftwareRasterizer2D.pixels, SoftwareRasterizer2D.width * var6Lifetime1Lifetime1Lifetime2, SoftwareRasterizer2D.width);
-                  var18.a(true);
+                  var18.pop(true);
                 }
               }
               if (param0 == -30428) {
@@ -422,9 +422,9 @@ final class ServerInfoFactory implements GameStateFactory {
             var10Lifetime1Lifetime2 = (-SoftwareRasterizer2D.height + MissionVariableFactory.field_a) / 2;
             var11Lifetime1Lifetime2 = var5Lifetime1Lifetime2 + var9Lifetime1Lifetime2;
             var12Lifetime1Lifetime2 = var6Lifetime1Lifetime2 + var10Lifetime1Lifetime2;
-            var18.a(var11Lifetime1Lifetime2, var7Lifetime1Lifetime2 + var11Lifetime1Lifetime2, var12Lifetime1Lifetime2, var8Lifetime1Lifetime2 + var12Lifetime1Lifetime2, (byte) -70);
+            var18.pushClip(var11Lifetime1Lifetime2, var7Lifetime1Lifetime2 + var11Lifetime1Lifetime2, var12Lifetime1Lifetime2, var8Lifetime1Lifetime2 + var12Lifetime1Lifetime2, (byte) -70);
             GetDebrisGroupColour.field_r.writePixels(var11Lifetime1Lifetime2 - var5Lifetime1Lifetime2, var12Lifetime1Lifetime2, SoftwareRasterizer2D.width, var8Lifetime1Lifetime2, SoftwareRasterizer2D.pixels, SoftwareRasterizer2D.width * var6Lifetime1Lifetime2, SoftwareRasterizer2D.width);
-            var18.a(true);
+            var18.pop(true);
           }
         }
         if (param0 == -30428) {

@@ -277,7 +277,7 @@ abstract class NetworkGameClient extends GameApplet {
             SetSniperCannonAimspeed.a(stackIn_102_0, stackIn_104_1, stackIn_105_2, PlayerReady.field_a);
           }
           if (tc.field_a) {
-            pr.a(param1 + 17487);
+            SecondaryNodeHashTable.continueAsGuest(param1 + 17487);
           }
           if (null == SetReverbFeedback.field_p) {
             SetReverbFeedback.field_p = bia.a(true);

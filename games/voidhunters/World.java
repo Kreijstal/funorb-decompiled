@@ -812,10 +812,10 @@ final class World implements DiffableState, CompactGameState {
           for (var5 = 0; var9.length > var5; var5++) {
             var6 = var9[var5];
             if (null != var6 &&
-              var6.l((byte) -58) == param2.id) {
+              var6.getGrabbedObjectId((byte) -58) == param2.id) {
               var7 = param2.chassis.getComponentByPath(var6.getGrabbedComponentId(114), -126);
               if (var7 == param1) {
-                var6.n(620);
+                var6.destroyHook(620);
               }
             }
           }
@@ -2519,7 +2519,7 @@ final class World implements DiffableState, CompactGameState {
               var11_int = GetRepairModeRadius.a(-101, 3, SetRepairModeCooldown.e((byte) 107), var28);
               var29 = t.a(var11_int, (byte) 47);
               var29.setAi(new ShipAI(), 4);
-              var29.setTeam(17704, sja.field_c);
+              var29.setTeam(17704, ToolkitRasterState.field_c);
               var13 = var7;
               var14 = var8;
               var29.setPosition(var13, var14, (byte) 108);
@@ -2841,7 +2841,7 @@ final class World implements DiffableState, CompactGameState {
                                                                                       var72 = new Random((long)(var7 * var8));
                                                                                       var73 = t.a(TextHotspotRegion.randomBoundedInt(var72, 12, 126) + 0, (byte) 42);
                                                                                       var73.setAi(new ShipAI(), 4);
-                                                                                      var73.setTeam(17704, sja.field_c);
+                                                                                      var73.setTeam(17704, ToolkitRasterState.field_c);
                                                                                       var12 = var7;
                                                                                       var13 = var8;
                                                                                       var73.setPosition(var12, var13, (byte) 52);
@@ -2854,7 +2854,7 @@ final class World implements DiffableState, CompactGameState {
                                                                                       var83 = GetResourceNodeCaptureTime.a(var68, true, true);
                                                                                       var70 = MenuInputState.createShipFromComponentWords(var83, (byte) 126);
                                                                                       var70.setAi(new ShipAI(), 4);
-                                                                                      var70.setTeam(17704, sja.field_c);
+                                                                                      var70.setTeam(17704, ToolkitRasterState.field_c);
                                                                                       var14 = var7;
                                                                                       var15 = var8;
                                                                                       var70.setPosition(var14, var15, (byte) 100);
@@ -5354,7 +5354,7 @@ final class World implements DiffableState, CompactGameState {
                 6 == var3_ref.getType((byte) -104) &&
                 GpuEnvironmentMapSource.field_d == 0 &&
                 var20.getTeam((byte) 99) == var3_ref.getFiredTeam(512) &&
-                (var20.getTeam((byte) 84) != sja.field_c ||
+                (var20.getTeam((byte) 84) != ToolkitRasterState.field_c ||
                 var20.getOwner((byte) -117) == var3_ref.getFiredPlayer(false) ||
                 var20.getAi((byte) -108) != null &&
                 var20.getAi((byte) -108).getParentPlayerId((byte) 28) == var3_ref.getFiredPlayer(false)) ||
@@ -5383,7 +5383,7 @@ final class World implements DiffableState, CompactGameState {
               for (var14_int = 0; var14_int < var13_ref_mqb__.length; var14_int++) {
                 var15 = var13_ref_mqb__[var14_int];
                 if (null != var15 && (0 != SetThrusterAutobalancing.field_r ||
-                  var15.m(32) != var3_ref.getFiredPlayer(false)) && (this.a(var3_ref, var15, -80) &&
+                  var15.getFiredFromPlayer(32) != var3_ref.getFiredPlayer(false)) && (this.a(var3_ref, var15, -80) &&
                   this.testProjectileAgainstBody(var15, 48, var3_ref))) {
                   break;
                 }
@@ -6623,12 +6623,12 @@ final class World implements DiffableState, CompactGameState {
           this.a(var7, -1, var5);
           this.a(var5, true, var7);
           if (SetArmageddonWarning.field_o == 1) {
-            discarded$3 = this.a(var7, this.debris, this.grapplingHooks, 20521, 3, 1, sja.field_i);
+            discarded$3 = this.a(var7, this.debris, this.grapplingHooks, 20521, 3, 1, ToolkitRasterState.field_i);
           }
-          if (this.a(var7, var5, this.grapplingHooks, param0 + 20519, 3, param0, sja.field_i)) {
+          if (this.a(var7, var5, this.grapplingHooks, param0 + 20519, 3, param0, ToolkitRasterState.field_i)) {
             this.asteroidField.markChanged(-67);
           }
-          discarded$4 = this.a(var7, this.ships, this.grapplingHooks, 20521, 3, 0, sja.field_i);
+          discarded$4 = this.a(var7, this.ships, this.grapplingHooks, 20521, 3, 0, ToolkitRasterState.field_i);
           this.a(var5, param0 ^ 44);
           this.k(param0 ^ -84);
           this.a(param1, 7559, param2, var5);
@@ -8006,10 +8006,10 @@ final class World implements DiffableState, CompactGameState {
             if (28 == var10.getComponentTypeId(0) &&
               var12 instanceof GrapplingHook) {
               var26 = (GrapplingHook) (var12);
-              if (var13.id == var26.p(32)) {
+              if (var13.id == var26.getFiredFromId(32)) {
                 return true;
               }
-              if (var26.l((byte) 13) == -1 &&
+              if (var26.getGrabbedObjectId((byte) 13) == -1 &&
                 !var26.getRetracting((byte) -16)) {
                 var17 = var13;
                 var18 = (long)(var26.getX(false) - var11.finalx);
@@ -8018,7 +8018,7 @@ final class World implements DiffableState, CompactGameState {
                 var23 = (int)((long)GetNumStars.cosAngle(var22, (byte) 29) * var18 - var20 * (long)TextureLineShape.sinAngle(var22, 39) >> 16);
                 var24 = (int)((long)TextureLineShape.sinAngle(var22, 58) * var18 + var20 * (long)GetNumStars.cosAngle(var22, (byte) 75) >> 16);
                 BlendTextureOperation.a(20382, var26.getX(false), 11, var26.getY((byte) 124), 50);
-                var26.d(param7, var23, var24, 122, var17.id);
+                var26.setGrabbedComponent(param7, var23, var24, 122, var17.id);
               }
               return false;
             }

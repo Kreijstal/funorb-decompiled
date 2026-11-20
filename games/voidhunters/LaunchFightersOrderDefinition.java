@@ -7,11 +7,11 @@ final class LaunchFightersOrderDefinition extends SpecialOrderDefinition {
     LaunchFightersOrderDefinition() {
     }
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3) {
+    final static Sprite[] createBeveledSpriteTiles(int param0, int param1, int param2, int param3) {
         if (param2 <= 110) {
           return (Sprite[]) null;
         }
-        return ul.a(param0, param1, 1, param3, true);
+        return ul.createBeveledSpriteTiles(param0, param1, 1, param3, true);
     }
 
     final int getIconId(byte param0) {
@@ -46,7 +46,7 @@ final class LaunchFightersOrderDefinition extends SpecialOrderDefinition {
         return false;
     }
 
-    final static int d(int param0) {
+    final static int pollMenuAction(int param0) {
         int var1_int = 0;
         int var3 = 0;
         int stackIn_15_0 = 0;

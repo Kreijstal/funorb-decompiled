@@ -202,7 +202,7 @@ final class FlipTextureOperation extends TextureOperation {
           if (var2 == null) {
             return null;
           }
-          var3 = (vu) (MenuInputState.field_f.a(-1, (long)var2.hashCode()));
+          var3 = (vu) (MenuInputState.field_f.get(-1, (long)var2.hashCode()));
           if (param1 != 0) {
             stackIn_13_0 = (vu) null;
             return stackIn_13_0;
@@ -214,7 +214,7 @@ final class FlipTextureOperation extends TextureOperation {
             var7 = (CharSequence) ((Object) var3.field_Fb);
             var4 = ConstantColorTextureOperation.normalizeName(false, var7);
             if (!var4.equals(var2)) {
-              var3 = (vu) (MenuInputState.field_f.e(-116));
+              var3 = (vu) (MenuInputState.field_f.getNextSameKey(-116));
               continue;
             }
             break;

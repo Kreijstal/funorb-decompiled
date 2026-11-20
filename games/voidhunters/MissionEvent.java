@@ -109,7 +109,7 @@ final class MissionEvent implements DiffableState {
         try {
           var9 = (MissionEvent) (param1);
           var4 = new Class[]{VariableCondition.class, ShipSpawnedCondition.class, TeamNodeCondition.class, MissionCondition.class, BodyInZoneCondition.class, TeamShipComponentCondition.class, TickCondition.class, ShipTeamCondition.class, BodyDestroyedCondition.class};
-          var5 = new GameStateFactory[]{HashNoiseTextureOperation.field_i, GetFps.field_o, GetUseCircleOutline.field_o, QuickChatCategoryLoader.field_d, GetNebulaProximityFadeDownshift.field_o, SetSalvoaim.field_s, GetMachineGunEnergyUsed.field_q, rla.field_v, oua.field_b};
+          var5 = new GameStateFactory[]{HashNoiseTextureOperation.field_i, GetFps.field_o, GetUseCircleOutline.field_o, QuickChatCategoryLoader.field_d, GetNebulaProximityFadeDownshift.field_o, SetSalvoaim.field_s, GetMachineGunEnergyUsed.field_q, GuestPlayNoticePanel.field_v, oua.field_b};
           var9.conditions = (MissionCondition[]) (hla.a(var4, this.conditions, var5, -118, var9.conditions, 1, QuickChatCategoryLoader.field_d));
           if (param0 <= 54) {
             SerializableGameState var8 = (SerializableGameState) null;
@@ -224,7 +224,7 @@ final class MissionEvent implements DiffableState {
         Class[] var5 = null;
         GameStateFactory[] var6 = null;
         Class[] var7 = new Class[]{VariableCondition.class, ShipSpawnedCondition.class, TeamNodeCondition.class, MissionCondition.class, BodyInZoneCondition.class, TeamShipComponentCondition.class, TickCondition.class, ShipTeamCondition.class, BodyDestroyedCondition.class};
-        GameStateFactory[] var4 = new GameStateFactory[]{HashNoiseTextureOperation.field_i, GetFps.field_o, GetUseCircleOutline.field_o, QuickChatCategoryLoader.field_d, GetNebulaProximityFadeDownshift.field_o, SetSalvoaim.field_s, GetMachineGunEnergyUsed.field_q, rla.field_v, oua.field_b};
+        GameStateFactory[] var4 = new GameStateFactory[]{HashNoiseTextureOperation.field_i, GetFps.field_o, GetUseCircleOutline.field_o, QuickChatCategoryLoader.field_d, GetNebulaProximityFadeDownshift.field_o, SetSalvoaim.field_s, GetMachineGunEnergyUsed.field_q, GuestPlayNoticePanel.field_v, oua.field_b};
         this.conditions = (MissionCondition[]) (iq.a(var4, this.conditions, var7, QuickChatCategoryLoader.field_d, 8, param0, 1, 108));
         if (param1) {
           return;

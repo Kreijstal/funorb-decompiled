@@ -118,11 +118,11 @@ final class SoftwarePaletteFont extends ToolkitFont {
         this.glyphYOffsets = new int[param2.length];
         this.glyphXOffsets = new int[param2.length];
         for (var6 = 0; var6 < param2.length; var6++) {
-          this.glyphIndices[var6] = param2[var6].field_h;
-          this.glyphYOffsets[var6] = param2[var6].field_g;
-          this.glyphXOffsets[var6] = param2[var6].field_c;
+          this.glyphIndices[var6] = param2[var6].pixels;
+          this.glyphYOffsets[var6] = param2[var6].topPadding;
+          this.glyphXOffsets[var6] = param2[var6].leftPadding;
         }
-        this.palette = param2[0].field_b;
+        this.palette = param2[0].palette;
     }
 
     private final void blitPalette(byte[] param0, int[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8) {

@@ -48,8 +48,8 @@ final class dpb {
               var3Lifetime1 = "[" + SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{param1.field_o}, 107) + "] ";
             }
             if (param1.field_a == 4 &&
-              null != vla.field_E) {
-              var3Lifetime1 = "[" + vla.field_E + "] ";
+              null != LoginForm.field_E) {
+              var3Lifetime1 = "[" + LoginForm.field_E + "] ";
             }
             if (3 == param1.field_a) {
               var3Lifetime1 = "[#" + param1.field_o + "] ";

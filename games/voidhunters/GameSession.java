@@ -410,7 +410,7 @@ final class GameSession {
     private final void a(int param0) {
         int var5 = 0;
         int var2;
-        kla var3;
+        ToolkitRasterStateStack var3;
         int var4;
         LobbyGameEntry var6;
         int var8;
@@ -419,7 +419,7 @@ final class GameSession {
         var2 = 97 / ((param0 - 43) / 43);
         if (!this.networked &&
           GraphicsPresentException.field_a) {
-          var3 = feb.a(GetDebrisGroupColour.field_r, true);
+          var3 = ToolkitRasterStateCache.getStateStack(GetDebrisGroupColour.field_r, true);
           var4 = 30;
           for (var5 = 0; var5 < 100; var5++) {
             var6 = meb.a(var5, 1);
@@ -652,7 +652,7 @@ final class GameSession {
                 SetTorpedoEnergyUsed.a(107, OpenGlTransform3D.field_m);
                 SoftwareRasterizer2D.fillRectangle(0, 0, PartitionZoneFactory.field_a, MissionVariableFactory.field_a, -1442840576);
               } else {
-                SetUseBackground.field_o.a(GetGrapplingHooksDamageableBySourcePlayer.field_p, 0);
+                SetUseBackground.field_o.pushRenderTarget(GetGrapplingHooksDamageableBySourcePlayer.field_p, 0);
                 GetDebrisGroupColour.field_r.clearColor(-1442840576);
               }
               if (0 <= this.localPlayerIndex) {
@@ -665,7 +665,7 @@ final class GameSession {
                   var26Lifetime2 = var21;
                   if (var21 != null &&
                     var8 == var21.getTeam((byte) 121) &&
-                    var21.canSpawnEscapePod(param1 ^ -15491) && (var8 != sja.field_c ||
+                    var21.canSpawnEscapePod(param1 ^ -15491) && (var8 != ToolkitRasterState.field_c ||
                     var21 == param0)) {
                     var13 = ShipTeamConditionFactory.field_a.worldToScreenX(var21.getX(false), (byte) 119);
                     var14 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var21.getY((byte) -118));
@@ -711,7 +711,7 @@ final class GameSession {
                       var26Lifetime1 = var25[var13Lifetime3];
                       if (var26Lifetime1 != null &&
                         var26Lifetime1.getTeam((byte) 90) == var8 &&
-                        var26Lifetime1.canSpawnEscapePod(param1 + 15726) && (var8 != sja.field_c ||
+                        var26Lifetime1.canSpawnEscapePod(param1 + 15726) && (var8 != ToolkitRasterState.field_c ||
                         param0 == var26Lifetime1)) {
                         var15Lifetime4 = ShipTeamConditionFactory.field_a.worldToScreenX(var26Lifetime1.getX(false), (byte) 125);
                         var16Lifetime2 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var26Lifetime1.getY((byte) 127));
@@ -799,7 +799,7 @@ final class GameSession {
                         break regionExit4;
                       }
                     }
-                    SetUseBackground.field_o.a(true);
+                    SetUseBackground.field_o.pop(true);
                     if (var7 == 0) {
                       GetGrapplingHooksDamageableBySourcePlayer.field_p.draw(0, 0);
                     }
@@ -823,7 +823,7 @@ final class GameSession {
                 }
               }
               if (OpenGlTexture1D.field_i) {
-                SetUseBackground.field_o.a(true);
+                SetUseBackground.field_o.pop(true);
                 if (var7 == 0) {
                   GetGrapplingHooksDamageableBySourcePlayer.field_p.draw(0, 0);
                 }
@@ -2127,7 +2127,7 @@ final class GameSession {
         try {
           if (param0 != 3) {
             if (!AccountCreationDialog.field_Y &&
-              !rla.c(false)) {
+              !GuestPlayNoticePanel.hasActivePointerPosition(false)) {
               return;
             }
             if (this.localPlayerIndex >= 0) {
@@ -2171,7 +2171,7 @@ final class GameSession {
                   }
                 }
               }
-              if (!rla.c(false)) {
+              if (!GuestPlayNoticePanel.hasActivePointerPosition(false)) {
                 return;
               }
               if (param0 != 2) {
@@ -3143,7 +3143,7 @@ final class GameSession {
               var21 = param4[var8];
               var9_ref = var21;
               if (var9_ref != null && (var21.getTeam((byte) 103) != var7_int ||
-                sja.field_c == var7_int &&
+                ToolkitRasterState.field_c == var7_int &&
                 var9_ref != param2)) {
                 this.a(param2, param1, var21, param3, var7_int, -116, param4);
               }
@@ -3864,7 +3864,7 @@ final class GameSession {
           if (param0 != 46) {
             this.field_a = (int[]) null;
           }
-          stackIn_9_0 = (rla.field_x == 1) && (null != param1.missionState) && (param1.missionState.getMissionPhase(param0 ^ 38) == 5) && (!SetMissionTerrainDebrisProbability.field_p) && (!this.a((byte) 94, param1.world, param1.missionState));
+          stackIn_9_0 = (GuestPlayNoticePanel.field_x == 1) && (null != param1.missionState) && (param1.missionState.getMissionPhase(param0 ^ 38) == 5) && (!SetMissionTerrainDebrisProbability.field_p) && (!this.a((byte) 94, param1.world, param1.missionState));
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -4545,7 +4545,7 @@ final class GameSession {
     private final int getLocalTeam(byte param0) {
         GameSnapshot var4 = null;
         Ship var5 = null;
-        int var2 = sja.field_c;
+        int var2 = ToolkitRasterState.field_c;
         int var3 = 81 % ((-32 - param0) / 52);
         if (this.localPlayerIndex >= 0) {
           var4 = this.state.b(1);
@@ -5045,7 +5045,7 @@ final class GameSession {
             var7 = var7 + var11;
             var6 = var6 - var9;
             CachedArchiveProvider.a(200, false, var6 + var9, var11 + var7, -var11 + var12, var10 - var9, 0);
-            SaveShipDesignOrderDefinition.a(var7 + var11, var12 + var7, true, var6 + var10, var9 + var6);
+            SaveShipDesignOrderDefinition.pushClip(var7 + var11, var12 + var7, true, var6 + var10, var9 + var6);
             var23 = param2;
             for (var14_int = 0; var23.length > var14_int; var14_int++) {
               var24 = var23[var14_int];
@@ -5880,9 +5880,9 @@ final class GameSession {
                 var36 = OpenGlVertexNormal.field_d[1 + param2];
                 var18 = var36;
                 var30 = this.field_a[param0];
-                SetUseBackground.field_o.a(var27Lifetime1, (var30 * var36.getWidth() >> 8) + var27Lifetime1, var28Lifetime1, var28Lifetime1 + var36.getHeight(), (byte) -105);
+                SetUseBackground.field_o.pushClip(var27Lifetime1, (var30 * var36.getWidth() >> 8) + var27Lifetime1, var28Lifetime1, var28Lifetime1 + var36.getHeight(), (byte) -105);
                 var18.draw(var27Lifetime1, var28Lifetime1, 0, var30 << 24 | 16777215, 1);
-                SetUseBackground.field_o.a(true);
+                SetUseBackground.field_o.pop(true);
               }
             }
             var27Lifetime2 = 2;
@@ -6730,7 +6730,7 @@ final class GameSession {
                   IncrementVariableAction.a(var33Lifetime2, 100, var19 + var35, 0, var18 + var34);
                 }
                 var36 = var17 * var30Lifetime1 >> 8;
-                SaveShipDesignOrderDefinition.a(var17 + (var19 - var36), var17 + var19, true, var18 + var16, var18);
+                SaveShipDesignOrderDefinition.pushClip(var17 + (var19 - var36), var17 + var19, true, var18 + var16, var18);
                 PlayerActionFactory.a(var33Lifetime2, var34 + var18, (byte) 92, var35 + var19);
                 GetMissionTerrainSpaceProbability.a(84);
                 if (var30Lifetime1 < 255 &&
@@ -7372,7 +7372,7 @@ final class GameSession {
             if (var10 < param6.length) {
               var11_ref_sg = param6[var10];
               if (var11_ref_sg != null &&
-                param4 == var11_ref_sg.getTeam((byte) 121) && (param4 != sja.field_c ||
+                param4 == var11_ref_sg.getTeam((byte) 121) && (param4 != ToolkitRasterState.field_c ||
                 var11_ref_sg == param0)) {
                 var12_int = param2.x - var11_ref_sg.x;
                 var13 = param2.y - var11_ref_sg.y;
@@ -7922,7 +7922,7 @@ final class GameSession {
         return this.field_H;
     }
 
-    private final int a(kla param0, byte param1, int param2, LobbyGameEntry param3) {
+    private final int a(ToolkitRasterStateStack param0, byte param1, int param2, LobbyGameEntry param3) {
         int stackIn_27_0 = 0;
         RuntimeException stackIn_30_0 = null;
         StringBuilder stackIn_30_1 = null;
@@ -8000,9 +8000,9 @@ final class GameSession {
             var8 = Math.max(var8, var9);
           }
           var10Lifetime1 = param3.field_Sb.height + param3.field_Tb.height;
-          param0.a(var5_int, var8 + var5_int, param2, var10Lifetime1 + param2, (byte) -30);
+          param0.pushClip(var5_int, var8 + var5_int, param2, var10Lifetime1 + param2, (byte) -30);
           GetDebrisGroupColour.field_r.writePixels(0, param2, SoftwareRasterizer2D.width, var10Lifetime1, SoftwareRasterizer2D.pixels, param2 * SoftwareRasterizer2D.width, SoftwareRasterizer2D.width);
-          param0.a(true);
+          param0.pop(true);
           var11Lifetime1 = 6;
           var12 = 2;
           var13 = 12;

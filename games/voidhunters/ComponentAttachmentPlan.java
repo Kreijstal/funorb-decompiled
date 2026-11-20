@@ -289,7 +289,7 @@ final class ComponentAttachmentPlan {
           }
           if (SetSniperCannonFireForce.field_o == SetShipTeamAction.field_b &&
             param1.equals(SetCountermeasureLauncherAimarc.field_q)) {
-            SetShipTeamAction.field_b = kla.field_d;
+            SetShipTeamAction.field_b = ToolkitRasterStateStack.field_d;
             stackIn_11_0 = PrimitiveType.field_a;
             return stackIn_11_0;
           }

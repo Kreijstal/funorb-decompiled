@@ -232,7 +232,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         if (param1 == je.field_c) {
           return 7;
         }
-        if (param1 == feb.field_a) {
+        if (param1 == ToolkitRasterStateCache.field_a) {
           return 10;
         }
         if (param0) {

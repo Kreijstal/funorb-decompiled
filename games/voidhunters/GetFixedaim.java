@@ -978,7 +978,7 @@ final class GetFixedaim extends ConsoleCommand {
                                     /* Inlined CFG state: 32. */
                                     {
                                         GetLaserBeamProjectileDamage.field_p = new int[var4];
-                                        feb.field_b = new int[var4];
+                                        ToolkitRasterStateCache.field_b = new int[var4];
                                         statePc = 35;
                                         continue scanLoop1;
                                     }

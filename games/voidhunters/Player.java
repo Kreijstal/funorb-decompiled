@@ -167,7 +167,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
 
     final void unassignForAutobalance(int param0) {
         this.unassignedForAutobalanceTimer = param0;
-        this.selectedTeam = sja.field_c;
+        this.selectedTeam = ToolkitRasterState.field_c;
     }
 
     final void onLeave(boolean param0, CarouselSlot param1, int param2, int param3) {
@@ -536,7 +536,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
     Player() {
         this.specialorder = -1;
         this.votes = null;
-        this.selectedTeam = sja.field_c;
+        this.selectedTeam = ToolkitRasterState.field_c;
     }
 
     static {

@@ -151,7 +151,7 @@ final class SettingsInstance implements DiffableState {
         if (SetFighterRepairTime.field_p != null) {
           var2 = SetFighterRepairTime.field_p;
           String var1 = var2;
-          kqb.a(SetReverbGain.a(sja.field_d, new String[]{var2}, 125), param0 ^ 6923);
+          kqb.a(SetReverbGain.a(ToolkitRasterState.field_d, new String[]{var2}, 125), param0 ^ 6923);
           SetFighterRepairTime.field_p = null;
         }
         if (param0 == 6939) {

@@ -5,7 +5,7 @@ final class ul {
     static Widget[] field_b;
     static int field_a;
 
-    final static Sprite[] a(int param0, int param1, int param2, int param3, boolean param4) {
+    final static Sprite[] createBeveledSpriteTiles(int param0, int param1, int param2, int param3, boolean param4) {
         Sprite[] var6 = new Sprite[9];
         Sprite[] var5 = var6;
         Sprite dupTemp$0 = SetMaxShipSize.createSolidSprite(param0, (byte) -119, param2);
