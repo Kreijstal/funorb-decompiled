@@ -5,7 +5,7 @@ abstract class BitmapFont extends DualLinkNode {
     int ascent;
     private int[] glyphWidths;
     private int[] inlineSpriteHeights;
-    private ija[] inlineSprites;
+    private SoftwareSprite2D[] inlineSprites;
     private int[] glyphXOffsets;
     private int[] glyphYOffsets;
     private byte[] kerning;
@@ -251,7 +251,7 @@ abstract class BitmapFont extends DualLinkNode {
     }
 
     final int getCharacterAdvance(char param0) {
-        return this.advances[aea.a(-128, param0) & 255];
+        return this.advances[Cp1252CharacterEncoder.encodeCp1252Character(-128, param0) & 255];
     }
 
     final void drawCentered(String param0, int param1, int param2, int param3, int param4) {
@@ -342,7 +342,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 try {
                                   var10 = (CharSequence) ((Object) var8.substring(4));
                                   var9_int = NebulaFieldFactory.a(-89, var10);
-                                  var4 = var4 + this.inlineSprites[var9_int].field_a;
+                                  var4 = var4 + this.inlineSprites[var9_int].canvasWidth;
                                   var3 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -378,7 +378,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var2 == -1)) {
-              var7 = (char)(aea.a(-119, (char) var7) & 255);
+              var7 = (char)(Cp1252CharacterEncoder.encodeCp1252Character(-119, (char) var7) & 255);
               var4 = var4 + this.advances[var7];
               if (this.kerning != null &&
                 var3 != 0) {
@@ -543,7 +543,7 @@ abstract class BitmapFont extends DualLinkNode {
                                   try {
                                     var18 = (CharSequence) ((Object) var15.substring(4));
                                     var16_int = NebulaFieldFactory.a(-81, var18);
-                                    var4 = var4 + this.inlineSprites[var16_int].field_a;
+                                    var4 = var4 + this.inlineSprites[var16_int].canvasWidth;
                                     var10 = 0;
                                   } catch (java.lang.Exception decompiledCaughtParameter0) {
                                     decompiledCaughtException = decompiledCaughtParameter0;
@@ -627,7 +627,7 @@ abstract class BitmapFont extends DualLinkNode {
             if (var9 == -1) {
               if (var14 != 0) {
                 discarded$3 = field_s.append((char) var14);
-                var14 = (char)(aea.a(-126, (char) var14) & 255);
+                var14 = (char)(Cp1252CharacterEncoder.encodeCp1252Character(-126, (char) var14) & 255);
                 var4 = var4 + this.advances[var14];
                 if (this.kerning != null &&
                   var10 != 0) {
@@ -829,7 +829,7 @@ abstract class BitmapFont extends DualLinkNode {
         return var13;
     }
 
-    final void setInlineSprites(ija[] param0, int[] param1) {
+    final void setInlineSprites(SoftwareSprite2D[] param0, int[] param1) {
         if (param1 != null &&
           param1.length != param0.length) {
           throw new IllegalArgumentException();
@@ -858,7 +858,7 @@ abstract class BitmapFont extends DualLinkNode {
         int var9 = 0;
         int var10 = 0;
         Exception var10_ref_Exception = null;
-        ija var11_ref_ija = null;
+        SoftwareSprite2D var11_ref_ija = null;
         int var11 = 0;
         int var12 = 0;
         CharSequence var13 = null;
@@ -890,17 +890,17 @@ abstract class BitmapFont extends DualLinkNode {
                                   var10 = NebulaFieldFactory.a(61, var13);
                                   var11_ref_ija = this.inlineSprites[var10];
                                   if (this.inlineSpriteHeights == null) {
-                                    stackIn_27_0 = var11_ref_ija.field_g;
+                                    stackIn_27_0 = var11_ref_ija.canvasHeight;
                                   } else {
                                     stackIn_27_0 = this.inlineSpriteHeights[var10];
                                   }
                                   var12 = stackIn_27_0;
                                   if (alpha != 256) {
-                                    var11_ref_ija.a(param1, param2 + this.ascent - var12, alpha);
+                                    var11_ref_ija.drawWithAlpha(param1, param2 + this.ascent - var12, alpha);
                                   } else {
-                                    var11_ref_ija.a(param1, param2 + this.ascent - var12);
+                                    var11_ref_ija.draw(param1, param2 + this.ascent - var12);
                                   }
-                                  param1 = param1 + var11_ref_ija.field_a;
+                                  param1 = param1 + var11_ref_ija.canvasWidth;
                                   var5 = 0;
                                 } catch (java.lang.Exception decompiledCaughtParameter0) {
                                   decompiledCaughtException = decompiledCaughtParameter0;
@@ -936,7 +936,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
             if ((decompiledFrameRemainder0) &&
               (var4 == -1)) {
-              var8 = (char)(aea.a(-125, (char) var8) & 255);
+              var8 = (char)(Cp1252CharacterEncoder.encodeCp1252Character(-125, (char) var8) & 255);
               if (this.kerning != null &&
                 var5 != 0) {
                 param1 = param1 + this.kerning[(var5 << 8) + var8];

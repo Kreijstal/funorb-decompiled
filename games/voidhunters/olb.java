@@ -220,7 +220,7 @@ final class olb extends TextureOperation {
           }
           vjb.a((byte) 95);
           SetGrapplingHooksDamageableBySourcePlayer.a(15);
-          ija.a(114);
+          SoftwareSprite2D.a(114);
           enb.field_b = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

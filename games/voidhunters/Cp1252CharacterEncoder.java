@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class aea {
+final class Cp1252CharacterEncoder {
     static int field_a;
     static int field_b;
     private static String field_z;
 
-    final static byte a(int param0, char param1) {
+    final static byte encodeCp1252Character(int param0, char param1) {
         int stackIn_3_0 = 0;
         int stackIn_67_0 = 0;
         RuntimeException decompiledCaughtException = null;

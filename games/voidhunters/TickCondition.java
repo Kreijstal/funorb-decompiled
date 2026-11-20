@@ -192,7 +192,7 @@ final class TickCondition extends MissionCondition implements DiffableState {
           param1.writeState(var2, param0 + 30119);
           var2.endBitWrite(param0 ^ -2514);
           var3 = new byte[var2.position];
-          cua.a(var2.payload, 0, var3, 0, var2.position);
+          ArrayOperations.copy(var2.payload, 0, var3, 0, var2.position);
           stackIn_3_0 = var3;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

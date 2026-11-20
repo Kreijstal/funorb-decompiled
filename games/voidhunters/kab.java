@@ -3,7 +3,7 @@
  */
 final class kab extends UiTextStyle {
     static String field_p;
-    private caa[] field_q;
+    private SoftwareIndexedSprite2D[] field_q;
 
     public final void drawComponent(int param0, UiComponent param1, int param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
@@ -18,7 +18,7 @@ final class kab extends UiTextStyle {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        caa var10 = null;
+        SoftwareIndexedSprite2D var10 = null;
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
@@ -48,10 +48,10 @@ final class kab extends UiTextStyle {
           }
           var10 = this.field_q[var8];
           var12 = -89 % ((-27 - param0) / 35);
-          var11 = param2 - (-param1.x - (-var10.field_h + param1.width) / 2);
-          var13 = param3 + (param1.y + (-var10.field_e + param1.height) / 2);
+          var11 = param2 - (-param1.x - (-var10.width + param1.width) / 2);
+          var13 = param3 + (param1.y + (-var10.height + param1.height) / 2);
           var14 = param1.x + param2 + param1.width / 2;
-          var10.a(var11, var13);
+          var10.draw(var11, var13);
           this.font.drawCentered(this.getDisplayText((byte) -82, param1), var14, param3, var9, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -68,7 +68,7 @@ final class kab extends UiTextStyle {
         }
     }
 
-    kab(caa[] param0) {
+    kab(SoftwareIndexedSprite2D[] param0) {
         try {
           this.font = SetShipToShipRamDamage.field_o;
           this.field_q = param0;

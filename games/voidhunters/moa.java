@@ -51,7 +51,7 @@ final class moa extends TextureOperation {
               }
               break;
             }
-            cua.a(var13, 0, hob.field_d, var5);
+            ArrayOperations.fill(var13, 0, hob.field_d, var5);
             decompiledFrameRemainder0 = false;
           }
           else {

@@ -71,7 +71,7 @@ final class ToolkitFontMetrics {
           var15 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var14 <= var15))) {
-            var16 = 255 & aea.a(-122, param0.charAt(var15));
+            var16 = 255 & Cp1252CharacterEncoder.encodeCp1252Character(-122, param0.charAt(var15));
             var17 = 0;
             stackIn_160_0 = ~var16;
             stackIn_160_1 = -61;
@@ -426,7 +426,7 @@ final class ToolkitFontMetrics {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (var6 == -1)) {
-                  var8 = var8 + (255 & this.field_b[255 & aea.a(-122, (char) var12)]);
+                  var8 = var8 + (255 & this.field_b[255 & Cp1252CharacterEncoder.encodeCp1252Character(-122, (char) var12)]);
                   if (this.field_g != null &&
                     var7 != -1) {
                     var8 = var8 + this.field_g[var7][var12];
@@ -1003,7 +1003,7 @@ final class ToolkitFontMetrics {
                 }
                 if ((decompiledFrameRemainder0) &&
                   (var4_int == -1)) {
-                  var6 = var6 + (255 & this.field_b[aea.a(-121, (char) var9) & 255]);
+                  var6 = var6 + (255 & this.field_b[Cp1252CharacterEncoder.encodeCp1252Character(-121, (char) var9) & 255]);
                   if (this.field_g != null &&
                     -1 != var5) {
                     var6 = var6 + this.field_g[var5][var9];

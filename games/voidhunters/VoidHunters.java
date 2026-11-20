@@ -889,7 +889,7 @@ public final class VoidHunters extends NetworkGameClient {
         wf.clearSharedReferences(3);
         GameSession.clearSharedReferences(!param0 ? true : false);
         PlayerGameData.clearSharedReferences(-106);
-        djb.clearSharedReferences((byte) -107);
+        CommandConsole.clearSharedReferences((byte) -107);
         fcb.clearSharedReferences(111);
         dla.clearSharedReferences((byte) 101);
         mn.clearSharedReferences(-49);
@@ -1026,7 +1026,7 @@ public final class VoidHunters extends NetworkGameClient {
         bs.clearSharedReferences((byte) 42);
         ooa.clearSharedReferences(126);
         DualLinkNode.clearSharedReferences(-31049);
-        qc.clearSharedReferences((byte) 78);
+        DeveloperConsole.clearSharedReferences((byte) 78);
         ffb.clearSharedReferences(-106);
         TextInputWidget.clearSharedReferences((byte) 124);
         pia.clearSharedReferences(-89);
@@ -1035,7 +1035,7 @@ public final class VoidHunters extends NetworkGameClient {
         ebb.clearSharedReferences(23357);
         SpriteDimensions.clearSharedReferences(!param0 ? true : false);
         mr.clearSharedReferences((byte) -16);
-        ija.clearSharedReferences(true);
+        SoftwareSprite2D.clearSharedReferences(true);
         uc.clearSharedReferences(0);
         lm.clearSharedReferences(127);
         wk.clearSharedReferences((byte) 80);
@@ -1946,10 +1946,10 @@ public final class VoidHunters extends NetworkGameClient {
           var3 = 0;
           var4 = 0;
           if (nna.field_C != null) {
-            nna.field_C.a(true, (byte) 77);
+            nna.field_C.update(true, (byte) 77);
           }
           if (null != nna.field_C &&
-            nna.field_C.c(13462)) {
+            nna.field_C.isOpen(13462)) {
             stackIn_18_0 = 1;
           } else {
             stackIn_18_0 = 0;
@@ -2021,7 +2021,7 @@ public final class VoidHunters extends NetworkGameClient {
             SniperCannonWeaponDefinition.field_b.b(0);
           }
           if (null != nna.field_C &&
-            nna.field_C.c(13462)) {
+            nna.field_C.isOpen(13462)) {
             var3 = 0;
             var4 = 0;
           }
@@ -2347,8 +2347,8 @@ public final class VoidHunters extends NetworkGameClient {
             return;
           }
           if (nna.field_C != null) {
-            nna.field_C.b((byte) 95);
-            if (nna.field_C.c(13462)) {
+            nna.field_C.draw((byte) 95);
+            if (nna.field_C.isOpen(13462)) {
               RoundResult.field_e = true;
             }
           }

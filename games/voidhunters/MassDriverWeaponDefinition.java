@@ -120,7 +120,7 @@ final class MassDriverWeaponDefinition extends WeaponDefinition {
         if (param0 > -12) {
           return 70;
         }
-        return aea.field_a;
+        return Cp1252CharacterEncoder.field_a;
     }
 
     final int getProjectileSpeed(byte param0) {

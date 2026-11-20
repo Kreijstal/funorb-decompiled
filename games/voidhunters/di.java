@@ -38,7 +38,7 @@ final class di extends TextureOperation {
         } else {
           var4 = this.getInputMonochromeRow(0, !this.field_n ? param0 : -param0 + wf.field_d, 255);
           if (!this.field_o) {
-            cua.a(var4, 0, var7, 0, hob.field_d);
+            ArrayOperations.copy(var4, 0, var7, 0, hob.field_d);
           } else {
             for (var5 = 0; hob.field_d > var5; var5++) {
               var3[var5] = var4[SetMassDriverEnergyUsed.field_q - var5];
@@ -198,7 +198,7 @@ final class di extends TextureOperation {
             return (vu) (stackIn_7_0);
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = jwa.a(false, var6);
+          var2 = jwa.normalizeName(false, var6);
           if (var2 == null) {
             return null;
           }
@@ -212,7 +212,7 @@ final class di extends TextureOperation {
               return null;
             }
             var7 = (CharSequence) ((Object) var3.field_Fb);
-            var4 = jwa.a(false, var7);
+            var4 = jwa.normalizeName(false, var7);
             if (!var4.equals(var2)) {
               var3 = (vu) (ae.field_f.e(-116));
               continue;

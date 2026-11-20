@@ -98,9 +98,9 @@ final class fcb implements oob {
         Object var3;
         ArchiveTextureProvider var4;
         Sprite[][] var9;
-        caa[] var10;
+        SoftwareIndexedSprite2D[] var10;
         Sprite[][] var14;
-        caa[] var15;
+        SoftwareIndexedSprite2D[] var15;
         int[] var16;
         int[] var19;
         var8 = VoidHunters.field_G;
@@ -322,7 +322,7 @@ final class fcb implements oob {
           this.field_e = null;
           MidiNote.resetFrameTiming(param0 ^ 2164);
           if (ssa.b(2)) {
-            nna.field_C = new djb(ConsoleCommandRegistry.a(16), GrapplingHookFactory.field_a, SetTorpedoProjectiles.field_o);
+            nna.field_C = new CommandConsole(ConsoleCommandRegistry.a(16), GrapplingHookFactory.field_a, SetTorpedoProjectiles.field_o);
           }
           MidiNote.resetFrameTiming(2096);
           return false;

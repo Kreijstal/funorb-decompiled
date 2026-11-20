@@ -267,7 +267,7 @@ abstract class NetworkGameClient extends GameApplet {
           MissionFactory.b((byte) 123);
           GetPhasedEnergyBeamFireForce.b(false);
           OpenGlBufferObject.field_g = SetFighterRepairTime.field_o;
-          djb.field_r = false;
+          CommandConsole.field_r = false;
           GetUseCircleOutline.a(GetRespawnTime.field_o, GetSalvoUsesAllEnergy.field_o, btb.field_b, BufferedFile.field_i, false);
           if (jb.field_a ||
             PlayerReady.field_a != null) {
@@ -731,7 +731,7 @@ abstract class NetworkGameClient extends GameApplet {
             VoidHunters.quitToWebsite(MissionList.b((byte) -91), 4);
           }
           if (var4 == 6 &&
-            djb.field_r) {
+            CommandConsole.field_r) {
             GetSpinningBladeAimspeed.field_q = 10;
           }
           if (var4 == 7) {

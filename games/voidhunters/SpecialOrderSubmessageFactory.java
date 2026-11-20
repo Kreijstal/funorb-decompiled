@@ -4,16 +4,16 @@
 final class SpecialOrderSubmessageFactory implements GameStateFactory {
     static String field_a;
 
-    final static caa[] a(int param0, byte param1, int param2, ResourceArchive param3) {
+    final static SoftwareIndexedSprite2D[] a(int param0, byte param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
-        caa[] stackIn_4_0 = null;
+        SoftwareIndexedSprite2D[] stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!pa.a(param0, 2, param3, param2)) {
+          if (!pa.decodeSpriteArchiveFile(param0, 2, param3, param2)) {
             return null;
           }
           var4_int = -44 % ((param1 - 53) / 50);

@@ -19,19 +19,19 @@ final class SetAutoAfkTimeout extends ConsoleCommand {
           Throwable decompiledCaughtException = null;
           try {
             var6 = null;
-            if (gia.field_k.field_d != null) {
-              GpuNativeHeap.field_e = new BufferedFile(gia.field_k.field_d, 5200, 0);
-              gia.field_k.field_d = null;
-              var6 = new ArchiveDisk(255, GpuNativeHeap.field_e, new BufferedFile(gia.field_k.field_t, 12000, 0), 2097152);
+            if (gia.field_k.cacheDataFile != null) {
+              GpuNativeHeap.field_e = new BufferedFile(gia.field_k.cacheDataFile, 5200, 0);
+              gia.field_k.cacheDataFile = null;
+              var6 = new ArchiveDisk(255, GpuNativeHeap.field_e, new BufferedFile(gia.field_k.masterIndexFile, 12000, 0), 2097152);
             }
             var7 = null;
             if (null != GpuNativeHeap.field_e) {
               if (null == btb.field_d) {
-                btb.field_d = new BufferedFile[gia.field_k.field_l.length];
+                btb.field_d = new BufferedFile[gia.field_k.cacheIndexFiles.length];
               }
               if (null == btb.field_d[param4]) {
-                btb.field_d[param4] = new BufferedFile(gia.field_k.field_l[param4], 12000, 0);
-                gia.field_k.field_l[param4] = null;
+                btb.field_d[param4] = new BufferedFile(gia.field_k.cacheIndexFiles[param4], 12000, 0);
+                gia.field_k.cacheIndexFiles[param4] = null;
               }
               var7 = new ArchiveDisk(param4, GpuNativeHeap.field_e, btb.field_d[param4], 2097152);
             }

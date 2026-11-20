@@ -153,7 +153,7 @@ final class TextureCombineOperation {
           if (param2 != -28321) {
             field_b = (GameStateFactory) null;
           }
-          cua.a(param0, 0, var4, 0, param1);
+          ArrayOperations.copy(param0, 0, var4, 0, param1);
           stackIn_3_0 = var4;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

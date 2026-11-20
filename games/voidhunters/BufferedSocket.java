@@ -5,10 +5,10 @@ import java.io.*;
 
 final class BufferedSocket implements Runnable {
     private int writePosition;
-    private eab field_e;
+    private PlatformService field_e;
     private int bufferCapacity;
     private boolean writeError;
-    private mob field_g;
+    private PlatformRequest field_g;
     private OutputStream output;
     private boolean closed;
     private byte[] writeBuffer;
@@ -31,12 +31,12 @@ final class BufferedSocket implements Runnable {
             this.notifyAll();
           }
           if (this.field_g != null) {
-            while (this.field_g.field_f == 0) {
+            while (this.field_g.status == 0) {
               BufferedFile.sleep(-94, 1L);
             }
-            if (this.field_g.field_f == 1) {
+            if (this.field_g.status == 1) {
               try {
-                ((Thread) (this.field_g.field_d)).join();
+                ((Thread) (this.field_g.result)).join();
               } catch (InterruptedException interruptedException) {
               }
             }
@@ -225,7 +225,7 @@ final class BufferedSocket implements Runnable {
               }
             }
             if (null == this.field_g) {
-              this.field_g = this.field_e.a(0, 3, (Runnable) (this));
+              this.field_g = this.field_e.startThread(0, 3, (Runnable) (this));
             }
             this.notifyAll();
           }
@@ -306,11 +306,11 @@ final class BufferedSocket implements Runnable {
         this.close(1);
     }
 
-    BufferedSocket(java.net.Socket param0, eab param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, PlatformService param1) throws IOException {
         this(param0, param1, 5000);
     }
 
-    private BufferedSocket(java.net.Socket param0, eab param1, int param2) throws IOException {
+    private BufferedSocket(java.net.Socket param0, PlatformService param1, int param2) throws IOException {
         this.writeError = false;
         this.closed = false;
         this.writePosition = 0;

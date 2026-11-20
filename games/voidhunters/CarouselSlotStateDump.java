@@ -87,7 +87,7 @@ final class CarouselSlotStateDump extends IntrusiveNode implements SerializableG
               this.field_d.length != var3.field_d.length) {
               var3.field_d = new byte[this.field_d.length];
             }
-            cua.a(this.field_d, 0, var3.field_d, 0, this.field_d.length);
+            ArrayOperations.copy(this.field_d, 0, var3.field_d, 0, this.field_d.length);
           }
           if (param0 > 54) {
             return;
@@ -158,7 +158,7 @@ final class CarouselSlotStateDump extends IntrusiveNode implements SerializableG
           this.field_d[3] = (byte)param0;
           this.field_d[1] = (byte)(param0 >> 16);
           this.field_d[0] = (byte)(param0 >> 24);
-          cua.a(param1, 0, this.field_d, 4, param2);
+          ArrayOperations.copy(param1, 0, this.field_d, 4, param2);
           this.field_h = null;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bhb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');

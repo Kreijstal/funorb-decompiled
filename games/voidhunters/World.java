@@ -40,7 +40,7 @@ final class World implements DiffableState, CompactGameState {
           if (param1 > -37) {
             field_w = (int[]) null;
           }
-          this.resNodes = (ResourceNode[]) (ija.a(param0, this.resNodes, 0, SetShipDirectionArrow.field_p));
+          this.resNodes = (ResourceNode[]) (SoftwareSprite2D.a(param0, this.resNodes, 0, SetShipDirectionArrow.field_p));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3239,7 +3239,7 @@ final class World implements DiffableState, CompactGameState {
           if (param0 != 5706) {
             this.debris = (Debris[]) null;
           }
-          this.mapZones = (MapZone[]) (ija.a(param1, this.mapZones, param0 - 5706, wsb.field_e));
+          this.mapZones = (MapZone[]) (SoftwareSprite2D.a(param1, this.mapZones, param0 - 5706, wsb.field_e));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3674,7 +3674,7 @@ final class World implements DiffableState, CompactGameState {
               System.err.println("An element of GrapplingHook[] grappling_hooks has a duplicate reference - " + var11.toString());
             }
           }
-          var6_ref.respawntimers = SetTeamSelectionSpeedup.a(var6_ref.respawntimers, (byte) -66, this.respawntimers);
+          var6_ref.respawntimers = SetTeamSelectionSpeedup.copyIntsReusingArray(var6_ref.respawntimers, (byte) -66, this.respawntimers);
           var6_ref.debug = this.debug;
           if (param0 < 54) {
             this.differsFrom((byte) -80, (SerializableGameState) null);
@@ -6465,7 +6465,7 @@ final class World implements DiffableState, CompactGameState {
             this.escapePods.length >= 15) {
             return;
           }
-          this.escapePods = (EscapePod[]) (ija.a(param0, this.escapePods, 0, pgb.field_g));
+          this.escapePods = (EscapePod[]) (SoftwareSprite2D.a(param0, this.escapePods, 0, pgb.field_g));
           if (param1 != 107) {
             discarded$0 = this.a(78, (Debris) null, (Ship) null, (byte) -99, 119);
           }

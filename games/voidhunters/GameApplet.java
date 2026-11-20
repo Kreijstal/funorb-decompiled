@@ -174,7 +174,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           if (param0 <= 4) {
             GameApplet.copyWrittenBytes((byte) -89, (PacketBuffer) null);
           }
-          cua.a(param1.payload, 0, var3, 0, var2_int);
+          ArrayOperations.copy(param1.payload, 0, var3, 0, var2_int);
           stackIn_4_0 = var3;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -476,7 +476,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
 
     final void startApplet(int param0, int param1, int param2, int param3, int param4, String param5, int param6) {
         try {
-          eab dupTemp$0 = null;
+          PlatformService dupTemp$0 = null;
           RuntimeException stackIn_21_0 = null;
           StringBuilder stackIn_21_1 = null;
           String stackIn_22_2 = null;
@@ -484,7 +484,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           int var8_int = 0;
           Throwable var8 = null;
           RuntimeException var8_ref = null;
-          mob var9 = null;
+          PlatformRequest var9 = null;
           int var10 = 0;
           var10 = VoidHunters.field_G;
           try {
@@ -508,12 +508,12 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               GetPhasedEnergyBeamFireForce.field_p = param4;
               TextureFilterMode.field_a = this;
               SetMachineGunAimspeed.field_p = MissionList.b((byte) -117);
-              dupTemp$0 = new eab(param1, param5, param2, true);
+              dupTemp$0 = new PlatformService(param1, param5, param2, true);
               SetTorpedoProjectiles.field_o = dupTemp$0;
               MissionList.field_b = dupTemp$0;
-              var9 = SetTorpedoProjectiles.field_o.a(0, 1, (Runnable) (this));
+              var9 = SetTorpedoProjectiles.field_o.startThread(0, 1, (Runnable) (this));
               while (true) {
-                if (var9.field_f == 0) {
+                if (var9.status == 0) {
                   BufferedFile.sleep(-94, 10L);
                   if (var10 == 0) {
                     continue;
@@ -572,11 +572,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
               boolean decompiledFrameRemainder3 = true;
               boolean decompiledFrameRemainder2 = true;
               boolean decompiledFrameCompleted0 = true;
-              if (eab.field_w != null) {
-                var1 = eab.field_w.toLowerCase();
+              if (PlatformService.javaVendor != null) {
+                var1 = PlatformService.javaVendor.toLowerCase();
                 if (((String) (var1)).indexOf("sun") != -1 ||
                   ((String) (var1)).indexOf("apple") != -1) {
-                  var2 = eab.field_r;
+                  var2 = PlatformService.javaVersion;
                   if (var2.equals("1.1") ||
                     var2.startsWith("1.1.") ||
                     var2.equals("1.2") ||
@@ -618,8 +618,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
               }
               if (((decompiledFrameRemainder3) && (decompiledFrameCompleted0)) &&
-                (decompiledFrameRemainder2 = (null != eab.field_r))) {
-                stackIn_66_0 = eab.field_r.startsWith("1.");
+                (decompiledFrameRemainder2 = (null != PlatformService.javaVersion))) {
+                stackIn_66_0 = PlatformService.javaVersion.startsWith("1.");
               }
               if ((decompiledFrameRemainder3) &&
                 (decompiledFrameRemainder2) &&
@@ -628,8 +628,8 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 var2_int = 0;
                 while (true) {
                   boolean decompiledFrameRemainder1 = true;
-                  if (eab.field_r.length() > var1_int) {
-                    var3 = eab.field_r.charAt(var1_int);
+                  if (PlatformService.javaVersion.length() > var1_int) {
+                    var3 = PlatformService.javaVersion.charAt(var1_int);
                     stackIn_78_0 = var3;
                     stackIn_78_1 = 48;
                     decompiledFrameRemainder1 = (var5 == 0);
@@ -656,7 +656,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 if (null != EnvironmentMapSource.field_b) {
                   var1 = EnvironmentMapSource.field_b;
                 }
-                var2_ref = eab.field_q;
+                var2_ref = PlatformService.setFocusCycleRootMethod;
                 if (var2_ref != null) {
                   try {
                     var2_ref.invoke(var1, new Object[]{Boolean.TRUE});
@@ -861,7 +861,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
           }
           if (SetTorpedoProjectiles.field_o != null) {
             try {
-              SetTorpedoProjectiles.field_o.b(0);
+              SetTorpedoProjectiles.field_o.shutdown(0);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               exception = (Exception) (Object) decompiledCaughtException;

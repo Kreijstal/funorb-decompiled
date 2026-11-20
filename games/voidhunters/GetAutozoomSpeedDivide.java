@@ -24,7 +24,7 @@ final class GetAutozoomSpeedDivide extends ConsoleCommand {
         int var12 = 0;
         int var13 = 0;
         int var14 = 0;
-        eab var15 = null;
+        PlatformService var15 = null;
         try {
           var11_int = param8.a(param2, 1);
           var12 = param8.field_d + param8.field_e;
@@ -38,8 +38,8 @@ final class GetAutozoomSpeedDivide extends ConsoleCommand {
           }
           param7.drawRectangleDefaultBlend(114, var14, 6 + var11_int, -16777216 | param0, var13, 6 + var12);
           if (param3 != 100) {
-            var15 = (eab) null;
-            GetAutozoomSpeedDivide.a(-53, -31, (eab) null, -44, -9, 98);
+            var15 = (PlatformService) null;
+            GetAutozoomSpeedDivide.a(-53, -31, (PlatformService) null, -44, -9, 98);
           }
           param7.fillRectangle(var11_int + 4, (byte) 120, -16777216 | param9, var12 + 4, 1 + var14, 1 + var13);
           param6.a(true, param0 | -16777216, -1, param2, var14 + 3 + param8.field_d, var13 + 3);
@@ -76,7 +76,7 @@ final class GetAutozoomSpeedDivide extends ConsoleCommand {
         }
     }
 
-    final static java.awt.Frame a(int param0, int param1, eab param2, int param3, int param4, int param5) {
+    final static java.awt.Frame a(int param0, int param1, PlatformService param2, int param3, int param4, int param5) {
         int var8 = 0;
         Object stackIn_28_0 = null;
         Object stackIn_34_0 = null;
@@ -91,10 +91,10 @@ final class GetAutozoomSpeedDivide extends ConsoleCommand {
         java.awt.Frame var7 = null;
         int var9 = 0;
         fm[] var10 = null;
-        mob var11 = null;
+        PlatformRequest var11 = null;
         var9 = VoidHunters.field_G;
         try {
-          if (!param2.a(param0 - 11168)) {
+          if (!param2.isFullscreenSupported(param0 - 11168)) {
             return null;
           }
           if (param1 == 0) {
@@ -119,11 +119,11 @@ final class GetAutozoomSpeedDivide extends ConsoleCommand {
               return (java.awt.Frame) (stackIn_28_0);
             }
           }
-          var11 = param2.a(param3, 4, param1, param5, param4);
-          while (0 == var11.field_f) {
+          var11 = param2.enterFullscreen(param3, 4, param1, param5, param4);
+          while (0 == var11.status) {
             BufferedFile.sleep(121, 10L);
           }
-          var7 = (java.awt.Frame) (var11.field_d);
+          var7 = (java.awt.Frame) (var11.result);
           if (var7 == null) {
             stackIn_34_0 = null;
             return (java.awt.Frame) (stackIn_34_0);
@@ -131,7 +131,7 @@ final class GetAutozoomSpeedDivide extends ConsoleCommand {
           if (param0 != 11168) {
             field_o = (float[]) null;
           }
-          if (2 != var11.field_f) {
+          if (2 != var11.status) {
             return var7;
           }
           GetWorldWidthUpshift.a(var7, param2, (byte) 31);

@@ -28,7 +28,7 @@ final class lga {
           return 2147483647;
         }
         if (param1 == 9) {
-          return aea.field_b * Particle.field_l * 2;
+          return Cp1252CharacterEncoder.field_b * Particle.field_l * 2;
         }
         if (11 == param1) {
           return 1 + Particle.field_l * (AsteroidFactory.field_a + 300);
@@ -40,10 +40,10 @@ final class lga {
           return Particle.field_l * 120;
         }
         if (param0 == -2) {
-          return aea.field_b * Particle.field_l;
+          return Cp1252CharacterEncoder.field_b * Particle.field_l;
         }
         lga.a((byte) 36, 1);
-        return aea.field_b * Particle.field_l;
+        return Cp1252CharacterEncoder.field_b * Particle.field_l;
     }
 
     static {

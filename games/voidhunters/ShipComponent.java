@@ -389,7 +389,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             this.configureThrusterBindings((byte) 114, (ShipBody) null);
           }
           if (ujb.a((byte) -57, this.finaloutline, param1, param4, param2)) {
-            param3 = (ShipComponent[]) (ija.a(this, param3, 0, ArchiveTextureProvider.field_d));
+            param3 = (ShipComponent[]) (SoftwareSprite2D.a(this, param3, 0, ArchiveTextureProvider.field_d));
           }
           stackIn_11_0 = (ShipComponent[]) (param3);
           return stackIn_11_0;
@@ -2104,7 +2104,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           var3_int = -63 % ((param1 + 44) / 42);
           if (this.subcomponents != null) {
             for (var4 = 0; this.subcomponents.length > var4; var4++) {
-              param0 = (ShipComponent[]) (ija.a(this.subcomponents[var4], param0, 0, ArchiveTextureProvider.field_d));
+              param0 = (ShipComponent[]) (SoftwareSprite2D.a(this.subcomponents[var4], param0, 0, ArchiveTextureProvider.field_d));
               param0 = this.subcomponents[var4].collectDescendants(param0, (byte) -127);
             }
           }
@@ -2225,7 +2225,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               if (GetBombletSprayReload.field_s > var5 &&
                 this.subcomponents[var4_int].componentTypeId != 47) {
                 this.subcomponents[var4_int].health = 0;
-                param2 = (ShipComponent[]) (ija.a(this.subcomponents[var4_int], param2, 0, ArchiveTextureProvider.field_d));
+                param2 = (ShipComponent[]) (SoftwareSprite2D.a(this.subcomponents[var4_int], param2, 0, ArchiveTextureProvider.field_d));
               } else {
                 if (0 >= this.subcomponents[var4_int].health) {
                   this.subcomponents[var4_int].health = 1;
@@ -2769,7 +2769,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (param1 >= GetPointDefenceLaserProjectileInterceptDamage.field_q.length) {
             var5 = new ShipComponent[GetPointDefenceLaserProjectileInterceptDamage.field_q.length + 1];
             var3_ref_ml__ = var5;
-            cua.a(GetPointDefenceLaserProjectileInterceptDamage.field_q, 0, var3_ref_ml__, 0, GetPointDefenceLaserProjectileInterceptDamage.field_q.length);
+            ArrayOperations.copy(GetPointDefenceLaserProjectileInterceptDamage.field_q, 0, var3_ref_ml__, 0, GetPointDefenceLaserProjectileInterceptDamage.field_q.length);
             GetPointDefenceLaserProjectileInterceptDamage.field_q = var5;
           }
           incrementValue$0 = param1;
@@ -3033,9 +3033,9 @@ final class ShipComponent implements DiffableState, CompactGameState {
           }
           var7 = new ShipComponent[-1 + this.subcomponents.length];
           var3 = var7;
-          cua.a(this.subcomponents, 0, var3, 0, param1);
+          ArrayOperations.copy(this.subcomponents, 0, var3, 0, param1);
           if (-1 + this.subcomponents.length > param1) {
-            cua.a(this.subcomponents, 1 + param1, var3, param1, var7.length - param1);
+            ArrayOperations.copy(this.subcomponents, 1 + param1, var3, param1, var7.length - param1);
           }
           this.subcomponents = var3;
           if (null != this.hardpoints) {
@@ -3158,7 +3158,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (param0 <= 54) {
             field_l = (byte[][][]) null;
           }
-          var5.finaloutline = SetTeamSelectionSpeedup.a(var5.finaloutline, (byte) -94, this.finaloutline);
+          var5.finaloutline = SetTeamSelectionSpeedup.copyIntsReusingArray(var5.finaloutline, (byte) -94, this.finaloutline);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3963,7 +3963,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (this.thrusterbehaviour != null &&
             !this.thrusterbehaviour.isBooster(this.componentTypeId, (byte) -61) &&
             this.health > 0) {
-            param1 = (ShipComponent[]) (ija.a(this, param1, 0, ArchiveTextureProvider.field_d));
+            param1 = (ShipComponent[]) (SoftwareSprite2D.a(this, param1, 0, ArchiveTextureProvider.field_d));
           }
           if (param0 != 0) {
             this.currentconnectedangle = 84;

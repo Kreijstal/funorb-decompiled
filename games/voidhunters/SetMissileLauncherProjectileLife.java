@@ -37,7 +37,7 @@ final class SetMissileLauncherProjectileLife extends ConsoleCommand {
           var6 = null;
           if (-1 == param0.indexOf('@')) {
             var8 = (CharSequence) ((Object) param0);
-            var4_long = AdjustBodyComponentsActionFactory.a(var8, -49);
+            var4_long = AdjustBodyComponentsActionFactory.encodeBase37Name(var8, -49);
           } else {
             var6 = param0;
           }

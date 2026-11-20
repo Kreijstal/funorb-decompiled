@@ -111,20 +111,20 @@ abstract class vq extends UiContainer implements lca {
           }
           try {
             if (0 == gob.field_c) {
-              ija.field_b = gia.field_k.a(SetDefaultFiringLeeway.field_p, hob.field_l, param0 ^ -6201);
+              SoftwareSprite2D.field_b = gia.field_k.openSocket(SetDefaultFiringLeeway.field_p, hob.field_l, param0 ^ -6201);
               gob.field_c = gob.field_c + 1;
             }
             if (1 == gob.field_c) {
-              if (ija.field_b.field_f == 2) {
+              if (SoftwareSprite2D.field_b.status == 2) {
                 stackIn_17_0 = SetReverbDry.a(-93, -1);
                 return stackIn_17_0;
               }
-              if (ija.field_b.field_f == 1) {
+              if (SoftwareSprite2D.field_b.status == 1) {
                 gob.field_c = gob.field_c + 1;
               }
             }
             if (gob.field_c == 2) {
-              eu.field_h = new BufferedSocket((java.net.Socket) (ija.field_b.field_d), gia.field_k);
+              eu.field_h = new BufferedSocket((java.net.Socket) (SoftwareSprite2D.field_b.result), gia.field_k);
               var2 = new PacketBuffer(13);
               SetVariableLabelActionFactory.a(SetPointDefenceLaserProjectileDamage.field_p, (byte) -48, GetFixedaim.field_o, var2, OpenGlToolkit.field_Ib);
               var2.writeByte(0, 15);
@@ -155,7 +155,7 @@ abstract class vq extends UiContainer implements lca {
             GetAutozoomAmountMultiply.field_o.setConnection(eu.field_h, ToolkitFontMetrics.field_f, false);
             gob.field_c = 0;
             eu.field_h = null;
-            ija.field_b = null;
+            SoftwareSprite2D.field_b = null;
             stackIn_35_0 = 0;
             return stackIn_35_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {

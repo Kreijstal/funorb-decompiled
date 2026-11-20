@@ -4,7 +4,7 @@
 final class MissionActionFactory implements GameStateFactory {
     static ShipComponent[] field_a;
 
-    final static String a(char param0, int param1) {
+    final static String characterToString(char param0, int param1) {
         if (param1 != 6) {
           field_a = (ShipComponent[]) null;
           return String.valueOf(param0);

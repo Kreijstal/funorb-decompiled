@@ -18,7 +18,7 @@ final class pa {
           return;
         }
         ResourceArchive var4 = (ResourceArchive) null;
-        pa.a(-92, -5, (ResourceArchive) null, 15);
+        pa.decodeSpriteArchiveFile(-92, -5, (ResourceArchive) null, 15);
         var3Lifetime1 = RequestNewestBlackboxRecording.field_p;
         var3Lifetime1.writeIsaacByte(24335, param0);
         var3Lifetime1.writeByte(0, 3);
@@ -41,7 +41,7 @@ final class pa {
         }
     }
 
-    final static boolean a(int param0, int param1, ResourceArchive param2, int param3) {
+    final static boolean decodeSpriteArchiveFile(int param0, int param1, ResourceArchive param2, int param3) {
         byte[] var4 = null;
         RuntimeException var4_ref = null;
         byte[] var5 = null;
@@ -58,7 +58,7 @@ final class pa {
           if (var5 == null) {
             return false;
           }
-          SetUseSprites.a(0, var5);
+          SetUseSprites.decodeSpriteSheet(0, var5);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -732,7 +732,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
             var5 = (IsaacPacketBuffer) null;
             this.writeState((IsaacPacketBuffer) null, -85);
           }
-          var7.lastAttackers = SetTeamSelectionSpeedup.a(var7.lastAttackers, (byte) -102, this.lastAttackers);
+          var7.lastAttackers = SetTeamSelectionSpeedup.copyIntsReusingArray(var7.lastAttackers, (byte) -102, this.lastAttackers);
           if (this.targetBlueprint != null) {
             if (null == var7.targetBlueprint) {
               var7.targetBlueprint = new ShipBlueprint();

@@ -301,7 +301,7 @@ final class MissionControl implements DiffableState {
             this.reservedIds = (int[]) null;
           }
           var3.selectedEvent = this.selectedEvent;
-          var3.reservedIds = SetTeamSelectionSpeedup.a(var3.reservedIds, (byte) -59, this.reservedIds);
+          var3.reservedIds = SetTeamSelectionSpeedup.copyIntsReusingArray(var3.reservedIds, (byte) -59, this.reservedIds);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "una.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -406,7 +406,7 @@ final class MissionControl implements DiffableState {
 
     final void createEvent(int param0) {
         MissionEvent var2 = new MissionEvent();
-        this.events = (MissionEvent[]) (ija.a(var2, this.events, param0, GetExplosionPushMultiplier.field_o));
+        this.events = (MissionEvent[]) (SoftwareSprite2D.a(var2, this.events, param0, GetExplosionPushMultiplier.field_o));
         this.selectedEvent = -1 + this.events.length;
     }
 
@@ -553,7 +553,7 @@ final class MissionControl implements DiffableState {
 
     final void addEvent(int param0, MissionEvent param1) {
         try {
-          this.events = (MissionEvent[]) (ija.a(param1, this.events, param0, GetExplosionPushMultiplier.field_o));
+          this.events = (MissionEvent[]) (SoftwareSprite2D.a(param1, this.events, param0, GetExplosionPushMultiplier.field_o));
           this.rebuildReservedIds((byte) -111);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "una.U(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

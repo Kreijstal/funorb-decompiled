@@ -235,7 +235,7 @@ final class NodeHashTable {
         if (!cgb.field_a) {
           throw new IllegalStateException();
         }
-        djb.field_r = true;
+        CommandConsole.field_r = true;
         GetSniperCannonProjectiles.a(true, param0 ^ -125);
         GetSpinningBladeAimspeed.field_q = param0;
     }

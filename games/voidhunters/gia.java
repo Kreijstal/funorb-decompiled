@@ -4,7 +4,7 @@
 final class gia extends TextureOperation {
     private boolean field_l;
     private int field_i;
-    static eab field_k;
+    static PlatformService field_k;
     static String field_j;
 
     final void decodeParameter(int param0, int param1, PacketBuffer param2) {
@@ -19,7 +19,7 @@ final class gia extends TextureOperation {
         var5 = VoidHunters.field_G;
         try {
           if (param1 >= -60) {
-            field_k = (eab) null;
+            field_k = (PlatformService) null;
           }
           var4_int = param0;
           if (var4_int == 0) {

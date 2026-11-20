@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetUseSprites extends ConsoleCommand {
-    final static void a(int param0, byte[] param1) {
+    final static void decodeSpriteSheet(int param0, byte[] param1) {
         byte dupTemp$0 = 0;
         byte dupTemp$1 = 0;
         int stackIn_34_0 = 0;

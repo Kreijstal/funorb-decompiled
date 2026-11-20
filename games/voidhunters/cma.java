@@ -86,7 +86,7 @@ final class cma {
         cma.a(64, 30, false, -122, 108, -24, -111, 16);
     }
 
-    final static void a(ResourceArchive param0, Sprite[][] param1, int[] param2, boolean param3, byte param4, byte[] param5, String[][] param6, int[] param7, String[][] param8, int param9, Sprite[][] param10, ResourceArchive param11, int param12, ResourceArchive param13, caa[] param14, byte[] param15, String[] param16) {
+    final static void a(ResourceArchive param0, Sprite[][] param1, int[] param2, boolean param3, byte param4, byte[] param5, String[][] param6, int[] param7, String[][] param8, int param9, Sprite[][] param10, ResourceArchive param11, int param12, ResourceArchive param13, SoftwareIndexedSprite2D[] param14, byte[] param15, String[] param16) {
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;

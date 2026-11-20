@@ -3,12 +3,12 @@
  */
 import java.util.*;
 
-final class djb extends qc {
-    private ConsoleCommand[] field_t;
+final class CommandConsole extends DeveloperConsole {
+    private ConsoleCommand[] commands;
     static boolean field_r;
     static IndexedSpriteData[][] field_s;
 
-    final void a(int param0) {
+    final void completeInput(int param0) {
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
         char stackIn_32_1 = 0;
@@ -43,8 +43,8 @@ final class djb extends qc {
         int var12Lifetime1;
         var14 = VoidHunters.field_G;
         try {
-          var2 = this.field_p.getText(-14453);
-          var3 = this.field_p.getCaretPosition(param0 ^ param0);
+          var2 = this.inputWidget.getText(-14453);
+          var3 = this.inputWidget.getCaretPosition(param0 ^ param0);
           var4 = dib.a(var2, 90);
           var5 = SetMassDriverRandomness.a(var4, -25223, var3);
           var6 = "";
@@ -57,7 +57,7 @@ final class djb extends qc {
               var6 = var7.field_d.substring(0, var8_int);
             }
           }
-          var7_ref = this.a(var6, (byte) 28);
+          var7_ref = this.findCommandsByPrefix(var6, (byte) 28);
           if (var7_ref.size(param0 + 35) == 0) {
             return;
           }
@@ -128,8 +128,8 @@ final class djb extends qc {
               var12Lifetime1++;
             }
           }
-          this.field_p.setText(var2.substring(0, var3) + var8.toString() + var2.substring(var3), -110);
-          this.field_p.collapseSelectionAt((byte) -48, var12Lifetime1);
+          this.inputWidget.setText(var2.substring(0, var3) + var8.toString() + var2.substring(var3), -110);
+          this.inputWidget.collapseSelectionAt((byte) -48, var12Lifetime1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -138,20 +138,20 @@ final class djb extends qc {
         }
     }
 
-    final void b(byte param0) {
+    final void draw(byte param0) {
         String var3 = null;
         try {
           int var2_int = -15 / ((param0 - 44) / 43);
-          var3 = this.field_p.textWidget.text;
-          this.field_p.textWidget.text = OpenGlRenderbuffer.field_r;
-          super.b((byte) -74);
-          this.field_p.textWidget.text = var3;
+          var3 = this.inputWidget.textWidget.text;
+          this.inputWidget.textWidget.text = OpenGlRenderbuffer.field_r;
+          super.draw((byte) -74);
+          this.inputWidget.textWidget.text = var3;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "djb.A(" + param0 + ')');
         }
     }
 
-    final String[] d(int param0) {
+    final String[] getCompletionSuggestions(int param0) {
         int incrementValue$0 = 0;
         int stackIn_25_0 = 0;
         int stackIn_25_1 = 0;
@@ -175,14 +175,14 @@ final class djb extends qc {
         var11 = VoidHunters.field_G;
         try {
           if (param0 >= -4) {
-            djb.clearSharedReferences((byte) 38);
+            CommandConsole.clearSharedReferences((byte) 38);
           }
           boolean decompiledFrameRemainder0 = true;
-          var2 = this.field_p.getText(-14453);
-          var3 = this.field_p.getCaretPosition(0);
+          var2 = this.inputWidget.getText(-14453);
+          var3 = this.inputWidget.getCaretPosition(0);
           var4 = dib.a(var2, 83);
           var5 = SetMassDriverRandomness.a(var4, -25223, var3);
-          this.field_o.x = 0;
+          this.completionBackground.x = 0;
           var6 = "";
           if (var5 >= 0) {
             var7 = var4[var5];
@@ -216,16 +216,16 @@ final class djb extends qc {
               if (stackIn_25_0 < stackIn_25_1 &&
                 SetMissionVariablesHudX.field_p == var4[var9 - 1].field_e) {
                 var6 = var4[var9 - 1].field_d;
-                this.field_o.x = this.field_n.getStringWidth(var2.substring(0, var4[-1 + var9].field_g));
+                this.completionBackground.x = this.font.getStringWidth(var2.substring(0, var4[-1 + var9].field_g));
               }
               decompiledFrameRemainder0 = (var11 != 0);
             }
             if (decompiledFrameRemainder0) {
               var6 = var7.field_d.substring(0, Math.min(var7.field_d.length(), var8_int));
-              this.field_o.x = this.field_n.getStringWidth(var2.substring(0, var7.field_g));
+              this.completionBackground.x = this.font.getStringWidth(var2.substring(0, var7.field_g));
             }
           }
-          var7_ref = this.a(var6, (byte) 28);
+          var7_ref = this.findCommandsByPrefix(var6, (byte) 28);
           var8 = new String[var7_ref.size(0)];
           var9Lifetime1 = 0;
           var10 = (ConsoleCommand) (var7_ref.first((byte) -54));
@@ -252,7 +252,7 @@ final class djb extends qc {
         }
     }
 
-    djb(IntrusiveDeque param0, BitmapFont param1, eab param2) {
+    CommandConsole(IntrusiveDeque param0, BitmapFont param1, PlatformService param2) {
         super(param1, param2);
         int incrementValue$1 = 0;
         RuntimeException runtimeException = null;
@@ -269,19 +269,19 @@ final class djb extends qc {
         RuntimeException decompiledCaughtException = null;
         var6 = VoidHunters.field_G;
         try {
-          this.field_t = new ConsoleCommand[param0.size(3)];
+          this.commands = new ConsoleCommand[param0.size(3)];
           var4_int = 0;
           var5 = (ConsoleCommand) (param0.first(0));
           while (null != var5) {
             incrementValue$1 = var4_int;
             var4_int++;
-            this.field_t[incrementValue$1] = var5;
+            this.commands[incrementValue$1] = var5;
             var5 = (ConsoleCommand) (param0.next((byte) 92));
             if (var6 != 0) {
               return;
             }
           }
-          this.a((byte) 93, "# <col=ffaaff>FunOrbConsole (loaded " + this.field_t.length + " methods at " + new Date() + ")</col>");
+          this.printLine((byte) 93, "# <col=ffaaff>FunOrbConsole (loaded " + this.commands.length + " methods at " + new Date() + ")</col>");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -309,7 +309,7 @@ final class djb extends qc {
         }
     }
 
-    final boolean a(int param0, String param1) {
+    final boolean executeInput(int param0, String param1) {
         try {
           IntrusiveDeque var3 = null;
           ojb var3_ref = null;
@@ -327,25 +327,25 @@ final class djb extends qc {
               if (false) throw (ojb) null;
               var3 = SetDebrisGroupColour.a(-1, param1);
               if (param0 != -10278) {
-                djb.clearSharedReferences((byte) 96);
+                CommandConsole.clearSharedReferences((byte) 96);
               }
               var4 = new ipb(var3);
               var5 = GrapplingHookFactory.a((byte) 105, var4);
               if (!var4.a(100)) {
                 throw new ojb(var4.a((byte) -69).field_g);
               }
-              this.a(var5.a((byte) 114, this.field_t), -110);
+              this.printObject(var5.a((byte) 114, this.commands), -110);
               return true;
             } catch (ojb decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = (ojb) (Object) decompiledCaughtException;
               param1 = "<col=55ff55>" + param1.substring(0, var3_ref.field_a) + "</col>" + param1.substring(var3_ref.field_a);
-              var4_ref = (Widget) (this.field_h.content.children.last((byte) 122));
-              var4_ref.text = this.field_c + param1;
+              var4_ref = (Widget) (this.outputPane.content.children.last((byte) 122));
+              var4_ref.text = this.prompt + param1;
             } catch (gva decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3_ref3 = (gva) (Object) decompiledCaughtException;
-              this.a((byte) 89, var3_ref3.field_b);
+              this.printLine((byte) 89, var3_ref3.field_b);
             }
             return false;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {
@@ -376,7 +376,7 @@ final class djb extends qc {
         }
     }
 
-    final boolean a(int param0, char param1, int param2) {
+    final boolean handleKey(int param0, char param1, int param2) {
         boolean discarded$0 = false;
         boolean stackIn_3_0 = false;
         int stackIn_25_0 = 0;
@@ -403,14 +403,14 @@ final class djb extends qc {
         int var10Lifetime1;
         var11 = VoidHunters.field_G;
         try {
-          if (!this.c(13462)) {
-            stackIn_3_0 = super.a(param0, param1, param2 + 0);
+          if (!this.isOpen(13462)) {
+            stackIn_3_0 = super.handleKey(param0, param1, param2 + 0);
             return stackIn_3_0;
           }
-          var4 = this.field_p.getText(-14453);
-          var5 = this.field_p.getCaretPosition(0);
+          var4 = this.inputWidget.getText(-14453);
+          var5 = this.inputWidget.getCaretPosition(0);
           if (param2 != -40) {
-            this.a(87);
+            this.completeInput(87);
           }
           var6 = 0;
           var7 = 0;
@@ -483,7 +483,7 @@ final class djb extends qc {
             var7 == 0 &&
             param1 == 41 &&
             var10Lifetime1 == 41) {
-            this.field_p.collapseSelectionAt((byte) -73, 1 + var5);
+            this.inputWidget.collapseSelectionAt((byte) -73, 1 + var5);
           }
           if ((var6 == 0 ||
             var8 != 0 ||
@@ -505,31 +505,31 @@ final class djb extends qc {
               var7 != 0 &&
               var9Lifetime1 == 39 &&
               var10Lifetime1 == 39)) {
-              this.field_p.handleKey(101, -1, '￿');
+              this.inputWidget.handleKey(101, -1, '￿');
             }
-            discarded$0 = super.a(param0, param1, -40);
-            var4Lifetime1 = this.field_p.getText(-14453);
-            var5Lifetime1 = this.field_p.getCaretPosition(0);
+            discarded$0 = super.handleKey(param0, param1, -40);
+            var4Lifetime1 = this.inputWidget.getText(-14453);
+            var5Lifetime1 = this.inputWidget.getCaretPosition(0);
             if (var6 == 0 &&
               var7 == 0 &&
               param1 == 40) {
-              this.field_p.handleKey(-1, param2 ^ 39, ')');
-              this.field_p.setSelection(var5Lifetime1, 31401, var5Lifetime1);
+              this.inputWidget.handleKey(-1, param2 ^ 39, ')');
+              this.inputWidget.setSelection(var5Lifetime1, 31401, var5Lifetime1);
             }
             if (var6 == 0 &&
               var7 == 0 &&
               param1 == 34) {
-              this.field_p.handleKey(-1, param2 + 39, '"');
-              this.field_p.setSelection(var5Lifetime1, 31401, var5Lifetime1);
+              this.inputWidget.handleKey(-1, param2 + 39, '"');
+              this.inputWidget.setSelection(var5Lifetime1, 31401, var5Lifetime1);
             }
             if (var6 == 0 &&
               var7 == 0 &&
               param1 == 39) {
-              this.field_p.handleKey(-1, -1, '\'');
-              this.field_p.setSelection(var5Lifetime1, 31401, var5Lifetime1);
+              this.inputWidget.handleKey(-1, -1, '\'');
+              this.inputWidget.setSelection(var5Lifetime1, 31401, var5Lifetime1);
             }
           }
-          OpenGlRenderbuffer.field_r = PlayerVoteFactory.a(this.field_p.getText(param2 - 14413), 107);
+          OpenGlRenderbuffer.field_r = PlayerVoteFactory.a(this.inputWidget.getText(param2 - 14413), 107);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -538,7 +538,7 @@ final class djb extends qc {
         }
     }
 
-    private final SecondaryNodeQueue a(String param0, byte param1) {
+    private final SecondaryNodeQueue findCommandsByPrefix(String param0, byte param1) {
         SecondaryNodeQueue var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -557,14 +557,14 @@ final class djb extends qc {
           var3 = new SecondaryNodeQueue();
           var4 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (var4 >= this.field_t.length))) {
-            stackOut_3_0 = this.field_t[var4].name.startsWith(param0);
+          while (!(decompiledNaturalLoopExit0 = (var4 >= this.commands.length))) {
+            stackOut_3_0 = this.commands[var4].name.startsWith(param0);
             stackIn_11_0 = stackOut_3_0 ? 1 : 0;
             stackIn_4_0 = stackOut_3_0;
             if (var5 == 0) {
               if (stackIn_4_0) {
-                this.field_t[var4].unlinkSecondary((byte) -35);
-                var3.addLast(this.field_t[var4], param1 - 93);
+                this.commands[var4].unlinkSecondary((byte) -35);
+                var3.addLast(this.commands[var4], param1 - 93);
               }
               var4++;
               continue;

@@ -25,7 +25,7 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
           }
           var5 = new short[param2];
           var3 = var5;
-          cua.a(param0, 0, var5, 0, param2);
+          ArrayOperations.copy(param0, 0, var5, 0, param2);
           stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

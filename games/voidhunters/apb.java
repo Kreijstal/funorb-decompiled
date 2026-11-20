@@ -29,11 +29,11 @@ final class apb {
           var3 = 58 % ((param0 + 10) / 48);
           for (var2 = 0; var2 < var1.field_i; var2++) {
             if (null != var5.field_g[var2] &&
-              var5.field_g[var2].field_f == 0) {
+              var5.field_g[var2].status == 0) {
               return false;
             }
             if (null != var5.field_e[var2] &&
-              0 == var5.field_e[var2].field_f) {
+              0 == var5.field_e[var2].status) {
               return false;
             }
           }

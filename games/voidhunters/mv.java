@@ -6,9 +6,9 @@ final class mv extends IntrusiveNode {
     int[] field_h;
     int field_i;
     int[] field_j;
-    mob[] field_e;
+    PlatformRequest[] field_e;
     byte[][][] field_f;
-    mob[] field_g;
+    PlatformRequest[] field_g;
     int[] field_k;
 
     final static void a(int param0, java.awt.Component param1) {

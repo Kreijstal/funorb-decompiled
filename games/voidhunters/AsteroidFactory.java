@@ -15,7 +15,7 @@ final class AsteroidFactory implements GameStateFactory {
         if (param0 != 29012) {
           field_a = 71;
         }
-        RoundResultFactory.field_a = new lwa(DualLinkNode.field_g, lo.field_b, GetFighterBayReload.field_p, qc.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o);
+        RoundResultFactory.field_a = new lwa(DualLinkNode.field_g, lo.field_b, GetFighterBayReload.field_p, DeveloperConsole.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o);
     }
 
     final static void a(int param0, boolean param1, int param2) {
@@ -103,7 +103,7 @@ final class AsteroidFactory implements GameStateFactory {
             CountermeasureLauncherWeaponDefinition.field_c[0] = 5;
           } else if (GetMassDriverAimspeed.field_o != 2) {
             if (GetMassDriverAimspeed.field_o == 3) {
-              if (!SetTorpedoProjectiles.field_o.field_k) {
+              if (!SetTorpedoProjectiles.field_o.privilegedAccess) {
                 var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, UiArrayContainer.field_t, ShipBlueprint.field_a);
               } else {
                 var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, param0 ^ 2, moa.field_n, ShipBlueprint.field_a);
@@ -175,9 +175,9 @@ final class AsteroidFactory implements GameStateFactory {
               throw new IllegalStateException();
             }
             Projectile.field_k = new String[var4];
-            cua.a(OpenGlTexture3D.field_l, 0, Projectile.field_k, 0, var4);
+            ArrayOperations.copy(OpenGlTexture3D.field_l, 0, Projectile.field_k, 0, var4);
             GetFogOfWarSensorRange.field_p = new String[-var4 + (var3_int - 1)];
-            cua.a(OpenGlTexture3D.field_l, var4 + 1, GetFogOfWarSensorRange.field_p, 0, -1 - var4 + var3_int);
+            ArrayOperations.copy(OpenGlTexture3D.field_l, var4 + 1, GetFogOfWarSensorRange.field_p, 0, -1 - var4 + var3_int);
             var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, SetReverbGain.a(SetPhasedEnergyBeamAimspeed.field_o, new String[]{"<br><%0><br>"}, 88), ShipBlueprint.field_a);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
@@ -191,9 +191,9 @@ final class AsteroidFactory implements GameStateFactory {
               throw new IllegalStateException();
             }
             dha.field_q = new String[var4];
-            cua.a(OpenGlTexture3D.field_l, 0, dha.field_q, 0, var4);
+            ArrayOperations.copy(OpenGlTexture3D.field_l, 0, dha.field_q, 0, var4);
             GetMissileLauncherProjectileLife.field_o = new String[-var4 + (var3_int - 1)];
-            cua.a(OpenGlTexture3D.field_l, var4 + 1, GetMissileLauncherProjectileLife.field_o, 0, -1 - var4 + var3_int);
+            ArrayOperations.copy(OpenGlTexture3D.field_l, var4 + 1, GetMissileLauncherProjectileLife.field_o, 0, -1 - var4 + var3_int);
             if (Projectile.field_k.length >= dha.field_q.length) {
               stackIn_49_0 = Projectile.field_k.length;
             } else {

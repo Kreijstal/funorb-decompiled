@@ -57,7 +57,7 @@ final class GetSniperCannonReload extends ConsoleCommand {
         var4 = VoidHunters.field_G;
         try {
           try {
-            if (!eab.field_s.startsWith("win")) {
+            if (!PlatformService.osNameLowercase.startsWith("win")) {
               return false;
             }
             if (!param0.startsWith("http://") &&

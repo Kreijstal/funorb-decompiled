@@ -14,7 +14,7 @@ final class peb extends TextureOperation {
           var4 = this.field_f.getRow((byte) 127, param0);
           var3 = var4;
           if (this.field_f.field_e) {
-            cua.a(var4, 0, hob.field_d, SetSalvoUsesAllEnergy.field_p[param0]);
+            ArrayOperations.fill(var4, 0, hob.field_d, SetSalvoUsesAllEnergy.field_p[param0]);
             return var4;
           }
           return var4;
@@ -24,7 +24,7 @@ final class peb extends TextureOperation {
         if (!this.field_f.field_e) {
           return var4Lifetime1;
         }
-        cua.a(var4Lifetime1, 0, hob.field_d, SetSalvoUsesAllEnergy.field_p[param0]);
+        ArrayOperations.fill(var4Lifetime1, 0, hob.field_d, SetSalvoUsesAllEnergy.field_p[param0]);
         return var4Lifetime1;
     }
 

@@ -49,7 +49,7 @@ final class SettingsInstance implements DiffableState {
         }
         try {
           var3 = (SettingsInstance) (param1);
-          var3.values = SetTeamSelectionSpeedup.a(var3.values, (byte) -50, this.values);
+          var3.values = SetTeamSelectionSpeedup.copyIntsReusingArray(var3.values, (byte) -50, this.values);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tr.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

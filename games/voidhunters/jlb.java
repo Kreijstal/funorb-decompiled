@@ -102,7 +102,7 @@ final class jlb extends TextureOperation {
             }
           } else {
             var19Lifetime1 = var18;
-            cua.a(var19Lifetime1, 0, hob.field_d, 0);
+            ArrayOperations.fill(var19Lifetime1, 0, hob.field_d, 0);
           }
         }
         return var3;

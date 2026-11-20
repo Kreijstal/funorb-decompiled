@@ -123,13 +123,13 @@ final class IsaacCipher {
             var6 = (vu) (var4.next((byte) 66));
           }
           if (0 != vra.field_b.firstButton.field_o) {
-            ola.field_p = new qka(vra.field_b.firstButton.screenX, vra.field_b.firstButton.screenY, vra.field_b.firstButton.width, vra.field_b.firstButton.height, mw.field_d, GetDebrisMax.field_o, qc.field_q, qc.field_q);
+            ola.field_p = new qka(vra.field_b.firstButton.screenX, vra.field_b.firstButton.screenY, vra.field_b.firstButton.width, vra.field_b.firstButton.height, mw.field_d, GetDebrisMax.field_o, DeveloperConsole.field_q, DeveloperConsole.field_q);
             MissionGenerationDataFactory.field_b = 2;
           }
           if (0 == vra.field_b.secondButton.field_o) {
             return;
           }
-          ola.field_p = new qka(vra.field_b.secondButton.screenX, vra.field_b.secondButton.screenY, vra.field_b.secondButton.width, vra.field_b.secondButton.height, GetUseNiceTrails.field_q, GetDebrisMax.field_o, qc.field_q, qc.field_q);
+          ola.field_p = new qka(vra.field_b.secondButton.screenX, vra.field_b.secondButton.screenY, vra.field_b.secondButton.width, vra.field_b.secondButton.height, GetUseNiceTrails.field_q, GetDebrisMax.field_o, DeveloperConsole.field_q, DeveloperConsole.field_q);
           MissionGenerationDataFactory.field_b = 3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

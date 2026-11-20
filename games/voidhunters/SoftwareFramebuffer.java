@@ -15,13 +15,13 @@ final class SoftwareFramebuffer implements Framebuffer {
         if (param0 < -84) {
           IntIndexTable.field_a = qga.field_b.readString(-1);
           var3 = (CharSequence) ((Object) IntIndexTable.field_a);
-          ffb.field_e = jwa.a(false, var3);
+          ffb.field_e = jwa.normalizeName(false, var3);
           return;
         }
         field_a = (String) null;
         IntIndexTable.field_a = qga.field_b.readString(-1);
         CharSequence var2 = (CharSequence) ((Object) IntIndexTable.field_a);
-        ffb.field_e = jwa.a(false, var2);
+        ffb.field_e = jwa.normalizeName(false, var2);
     }
 
     final static void insertBefore(IntrusiveNode param0, IntrusiveNode param1, int param2) {

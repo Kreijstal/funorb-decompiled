@@ -298,7 +298,7 @@ final class me extends pja {
               var12.addChild(-561, var12.field_Tb);
               var12.field_vb = new Widget(0L, GetMissionDebrisDefaultProbability.field_o);
               var12.addChild(-561, var12.field_vb);
-              var12.field_bc = new Widget(0L, qc.field_q);
+              var12.field_bc = new Widget(0L, DeveloperConsole.field_q);
               var12.addChild(-561, var12.field_bc);
               var12.inheritInteractionStateInDescendants(127);
               var12.field_Sb = new Widget(0L, jba.field_h);
@@ -527,7 +527,7 @@ final class me extends pja {
               if (var12.field_Ib != null) {
                 var31 += 2;
                 var37 = new StringBuilder(64);
-                discarded$1 = var37.append(ija.field_c);
+                discarded$1 = var37.append(SoftwareSprite2D.field_c);
                 discarded$2 = var37.append(var12.field_Ib[0]);
                 for (var38_intLifetime1 = 1; var38_intLifetime1 < var12.field_zb; var38_intLifetime1++) {
                   discarded$3 = var37.append(", ");

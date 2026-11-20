@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class caa extends ija {
-    byte[] field_j;
-    int[] field_i;
+final class SoftwareIndexedSprite2D extends SoftwareSprite2D {
+    byte[] indices;
+    int[] palette;
 
-    private final static void b(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitIndexedWithAlpha(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int var12 = 0;
         int incrementValue$12 = 0;
@@ -31,16 +31,16 @@ final class caa extends ija {
         }
     }
 
-    final void a(int param0, int param1) {
+    final void draw(int param0, int param1) {
         int var9 = 0;
         int var9Lifetime1;
         int var9Lifetime2;
-        param0 = param0 + this.field_f;
-        param1 = param1 + this.field_d;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
         int var3 = param0 + param1 * SoftwareRasterizer2D.width;
         int var4 = 0;
-        int var5 = this.field_e;
-        int var6 = this.field_h;
+        int var5 = this.height;
+        int var6 = this.width;
         int var7 = SoftwareRasterizer2D.width - var6;
         int var8 = 0;
         if (param1 < SoftwareRasterizer2D.clipTop) {
@@ -72,10 +72,10 @@ final class caa extends ija {
           var5 <= 0) {
           return;
         }
-        caa.a(SoftwareRasterizer2D.pixels, this.field_j, this.field_i, 0, var4, var3, var6, var5, var7, var8);
+        SoftwareIndexedSprite2D.blitIndexed(SoftwareRasterizer2D.pixels, this.indices, this.palette, 0, var4, var3, var6, var5, var7, var8);
     }
 
-    private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitIndexed(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var11 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -137,16 +137,16 @@ final class caa extends ija {
         }
     }
 
-    final void a(int param0, int param1, int param2) {
+    final void drawWithAlpha(int param0, int param1, int param2) {
         int var10 = 0;
         int var10Lifetime1;
         int var10Lifetime2;
-        param0 = param0 + this.field_f;
-        param1 = param1 + this.field_d;
+        param0 = param0 + this.offsetX;
+        param1 = param1 + this.offsetY;
         int var4 = param0 + param1 * SoftwareRasterizer2D.width;
         int var5 = 0;
-        int var6 = this.field_e;
-        int var7 = this.field_h;
+        int var6 = this.height;
+        int var7 = this.width;
         int var8 = SoftwareRasterizer2D.width - var7;
         int var9 = 0;
         if (param1 < SoftwareRasterizer2D.clipTop) {
@@ -178,28 +178,28 @@ final class caa extends ija {
           var6 <= 0) {
           return;
         }
-        caa.b(SoftwareRasterizer2D.pixels, this.field_j, this.field_i, var5, var4, var7, var6, var8, var9, param2);
+        SoftwareIndexedSprite2D.blitIndexedWithAlpha(SoftwareRasterizer2D.pixels, this.indices, this.palette, var5, var4, var7, var6, var8, var9, param2);
     }
 
-    caa(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
-        this.field_a = param0;
-        this.field_g = param1;
-        this.field_f = param2;
-        this.field_d = param3;
-        this.field_h = param4;
-        this.field_e = param5;
-        this.field_j = param6;
-        this.field_i = param7;
+    SoftwareIndexedSprite2D(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {
+        this.canvasWidth = param0;
+        this.canvasHeight = param1;
+        this.offsetX = param2;
+        this.offsetY = param3;
+        this.width = param4;
+        this.height = param5;
+        this.indices = param6;
+        this.palette = param7;
     }
 
-    caa(int param0, int param1, int param2) {
-        this.field_h = param0;
-        this.field_a = param0;
-        this.field_e = param1;
-        this.field_g = param1;
-        this.field_d = 0;
-        this.field_f = 0;
-        this.field_j = new byte[param0 * param1];
-        this.field_i = new int[param2];
+    SoftwareIndexedSprite2D(int param0, int param1, int param2) {
+        this.width = param0;
+        this.canvasWidth = param0;
+        this.height = param1;
+        this.canvasHeight = param1;
+        this.offsetY = 0;
+        this.offsetX = 0;
+        this.indices = new byte[param0 * param1];
+        this.palette = new int[param2];
     }
 }

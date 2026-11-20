@@ -28,7 +28,7 @@ final class ik extends IntrusiveNode {
         var2[17] = ColorRowCacheEntry.field_d;
         var2[35] = GetBombletSprayReload.field_s;
         var2[39] = GrappleLauncherBehaviour.field_d;
-        var2[72] = aea.field_a;
+        var2[72] = Cp1252CharacterEncoder.field_a;
         var2[157] = GetLaserEnergyUsed.field_r;
         var2[50] = SetPointDefenceLaserProjectiles.field_o;
         var2[131] = mmb.field_i;
@@ -202,7 +202,7 @@ final class ik extends IntrusiveNode {
         var2[75] = GetSalvoRepairTimeMultiplier.field_o;
         var2[105] = ana.field_f;
         var2[226] = GetTorpedoAcceleration.field_p;
-        var2[60] = aea.field_b;
+        var2[60] = Cp1252CharacterEncoder.field_b;
         var2[171] = enb.field_c;
         var2[76] = SelectableIconLabelWidget.field_yb;
         var2[23] = SetMissionResnetResourceTickTime.field_p;

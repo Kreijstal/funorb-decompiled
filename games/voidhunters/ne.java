@@ -379,15 +379,15 @@ final class ne extends ka {
           return true;
         }
         if (null == GetPointDefenceLaserProjectiles.field_o) {
-          GetPointDefenceLaserProjectiles.field_o = cp.field_n.a(SetNebulaProximityFadeDownshift.field_p, GetAutozoomAmountMultiply.field_p, -122);
+          GetPointDefenceLaserProjectiles.field_o = cp.field_n.openSocket(SetNebulaProximityFadeDownshift.field_p, GetAutozoomAmountMultiply.field_p, -122);
         }
-        if (GetPointDefenceLaserProjectiles.field_o.field_f == 0) {
+        if (GetPointDefenceLaserProjectiles.field_o.status == 0) {
           return false;
         }
         dupTemp$2 = wt.a(false);
         GetTorpedoProjectileOndamageParticles.field_o = dupTemp$2;
         cbb.field_q = dupTemp$2;
-        if (1 != GetPointDefenceLaserProjectiles.field_o.field_f) {
+        if (1 != GetPointDefenceLaserProjectiles.field_o.status) {
         }
         tc.field_c = GetMissileLauncherRandomness.field_o;
         GetPointDefenceLaserProjectiles.field_o = null;

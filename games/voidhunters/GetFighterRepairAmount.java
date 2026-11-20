@@ -4,7 +4,7 @@
 final class GetFighterRepairAmount extends ConsoleCommand {
     static int field_o;
     static String field_r;
-    static caa[] field_q;
+    static SoftwareIndexedSprite2D[] field_q;
     static rq field_p;
 
     GetFighterRepairAmount(String param0, Class[] param1, String param2) {
@@ -44,7 +44,7 @@ final class GetFighterRepairAmount extends ConsoleCommand {
           var3 = new fs[stackIn_7_0];
           var4 = 0;
           if (param1 != 2) {
-            field_q = (caa[]) null;
+            field_q = (SoftwareIndexedSprite2D[]) null;
           }
           for (var4Lifetime1 = 0; param0.length > var4Lifetime1; var4Lifetime1++) {
             var3[var4Lifetime1] = new fs(param0[var4Lifetime1], 2);

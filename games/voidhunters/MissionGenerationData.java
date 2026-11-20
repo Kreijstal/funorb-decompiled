@@ -76,7 +76,7 @@ final class MissionGenerationData implements DiffableState {
         MissionGenerationData var3 = (MissionGenerationData) (param1);
         var3.votedObjective = this.votedObjective;
         var3.missionGenerationSeed = this.missionGenerationSeed;
-        var3.optionTotals = SetTeamSelectionSpeedup.a(var3.optionTotals, (byte) -38, this.optionTotals);
+        var3.optionTotals = SetTeamSelectionSpeedup.copyIntsReusingArray(var3.optionTotals, (byte) -38, this.optionTotals);
         if (param0 < 54) {
           return;
         }

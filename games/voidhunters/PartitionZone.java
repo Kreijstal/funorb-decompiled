@@ -38,7 +38,7 @@ final class PartitionZone implements DiffableState, ofa, SortableValue {
             if (var6 == 0) {
               if (PartitionZoneListFactory.field_a.length == param2) {
                 var7 = new int[10 + PartitionZoneListFactory.field_a.length];
-                cua.a(PartitionZoneListFactory.field_a, 0, var7, 0, PartitionZoneListFactory.field_a.length);
+                ArrayOperations.copy(PartitionZoneListFactory.field_a, 0, var7, 0, PartitionZoneListFactory.field_a.length);
                 PartitionZoneListFactory.field_a = var7;
               }
               incrementValue$0 = param2;
@@ -201,7 +201,7 @@ final class PartitionZone implements DiffableState, ofa, SortableValue {
         }
         try {
           var3.revision = this.revision;
-          var3.ids = SetTeamSelectionSpeedup.a(var3.ids, (byte) -55, this.ids);
+          var3.ids = SetTeamSelectionSpeedup.copyIntsReusingArray(var3.ids, (byte) -55, this.ids);
           var3.gridy = this.gridy;
           var3.gridx = this.gridx;
           if (param0 <= 54) {

@@ -16,7 +16,7 @@ final class fab {
         try {
           var2_ref = (PlayerGameData) (ProjectileFactory.a(param1, 6429, AdjustVariableAction.field_c));
         } catch (Exception exception) {
-          var4 = ila.a(param1, param0 ^ 29411);
+          var4 = TextNode.formatByteArray(param1, param0 ^ 29411);
           var2_ref = new PlayerGameData();
           GetMissionResnetResourceTickTime.e((byte) -69);
           gna.a((Throwable) ((Object) exception), "Gamedata is corrupted - " + var4, 0);
@@ -452,10 +452,10 @@ final class fab {
     }
 
     fab(TextureProvider param0, fs[] param1) {
-        this(GetAiRepairAmount.a(0), qc.b(0), param0, SetTorpedoProjectiles.field_o, param1);
+        this(GetAiRepairAmount.a(0), DeveloperConsole.getToolkitResourceArchive(0), param0, SetTorpedoProjectiles.field_o, param1);
     }
 
-    private fab(ResourceArchive param0, ResourceArchive param1, TextureProvider param2, eab param3, fs[] param4) {
+    private fab(ResourceArchive param0, ResourceArchive param1, TextureProvider param2, PlatformService param3, fs[] param4) {
         this.field_d = false;
         try {
           lwa.field_xb = param1;

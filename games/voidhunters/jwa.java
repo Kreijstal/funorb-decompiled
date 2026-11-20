@@ -78,7 +78,7 @@ final class jwa extends TextureOperation {
         }
     }
 
-    final static String a(boolean param0, CharSequence param1) {
+    final static String normalizeName(boolean param0, CharSequence param1) {
         int var6 = 0;
         StringBuilder discarded$0 = null;
         String stackIn_6_0 = null;
@@ -131,8 +131,8 @@ final class jwa extends TextureOperation {
           var5 = new StringBuilder(var4);
           for (var6 = var2_int; var6 < var3; var6++) {
             var7 = param1.charAt(var6);
-            if (GetAngularVelocitySustainMax.a((byte) -128, (char) var7)) {
-              var8 = GetThrusterBoosterForce.a((char) var7, 102);
+            if (GetAngularVelocitySustainMax.isNormalizableNameCharacter((byte) -128, (char) var7)) {
+              var8 = GetThrusterBoosterForce.normalizeNameCharacter((char) var7, 102);
               if (var8 != 0) {
                 discarded$0 = var5.append((char) var8);
               }

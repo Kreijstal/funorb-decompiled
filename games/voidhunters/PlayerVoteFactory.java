@@ -104,7 +104,7 @@ final class PlayerVoteFactory implements GameStateFactory {
           int var4_int = -104 / ((-6 - param2) / 42);
           ow.field_b = 2;
           var5 = (CharSequence) ((Object) param0);
-          GetDebrisThrowable.field_o = jwa.a(false, var5);
+          GetDebrisThrowable.field_o = jwa.normalizeName(false, var5);
           lsa.field_f = param1;
           CommonGameState.a(true);
         } catch (RuntimeException runtimeException) {

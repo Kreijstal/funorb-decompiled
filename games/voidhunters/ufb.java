@@ -10,7 +10,7 @@ final class ufb extends java.awt.Canvas implements java.awt.event.FocusListener 
     public final void update(java.awt.Graphics param0) {
     }
 
-    final void a(eab param0, int param1) {
+    final void a(PlatformService param0, int param1) {
         try {
           if (param1 != -32335) {
             ufb.clearSharedReferences(false);

@@ -17,7 +17,7 @@ final class ShipBlueprint implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = (ShipBlueprint) (param1);
-          var3.description = SetTeamSelectionSpeedup.a(var3.description, (byte) -97, this.description);
+          var3.description = SetTeamSelectionSpeedup.copyIntsReusingArray(var3.description, (byte) -97, this.description);
           if (param0 > 54) {
             return;
           }

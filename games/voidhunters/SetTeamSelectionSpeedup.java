@@ -17,7 +17,7 @@ final class SetTeamSelectionSpeedup extends ConsoleCommand {
         int var1 = -111 / ((param0 + 5) / 49);
     }
 
-    final static int[] a(int[] param0, byte param1, int[] param2) {
+    final static int[] copyIntsReusingArray(int[] param0, byte param1, int[] param2) {
         RuntimeException var3 = null;
         int[] stackIn_9_0 = null;
         RuntimeException stackIn_13_0 = null;
@@ -37,7 +37,7 @@ final class SetTeamSelectionSpeedup extends ConsoleCommand {
             param2.length != param0.length) {
             param0 = new int[param2.length];
           }
-          cua.a(param2, 0, param0, 0, param2.length);
+          ArrayOperations.copy(param2, 0, param0, 0, param2.length);
           stackIn_9_0 = (int[]) (param0);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

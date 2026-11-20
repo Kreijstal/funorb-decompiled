@@ -13,7 +13,7 @@ final class cp extends ev {
     static gl field_q;
     static String field_j;
     static String field_g;
-    static eab field_n;
+    static PlatformService field_n;
     static int field_f;
 
     cp(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {

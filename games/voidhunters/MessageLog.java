@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MessageLog implements DiffableState {
-    static eab field_c;
+    static PlatformService field_c;
     static int field_a;
     static boolean field_d;
     private Message[] messages;
@@ -141,7 +141,7 @@ final class MessageLog implements DiffableState {
         RuntimeException var3 = null;
         try {
           param0.tick = IncrementVariableActionFactory.field_a;
-          this.messages = (Message[]) (ija.a(param0, this.messages, 0, UiTextStyle.field_e));
+          this.messages = (Message[]) (SoftwareSprite2D.a(param0, this.messages, 0, UiTextStyle.field_e));
           if (hb.field_a < this.messages.length) {
             this.messages = (Message[]) (GetSalvoUsesAllEnergy.a(UiTextStyle.field_e, 0, 15667, this.messages));
           }
@@ -272,7 +272,7 @@ final class MessageLog implements DiffableState {
 
     final Message[] getMessages(byte param0) {
         if (param0 < 44) {
-          field_c = (eab) null;
+          field_c = (PlatformService) null;
         }
         return this.messages;
     }

@@ -77,7 +77,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                   stackIn_15_0 = igb.field_a;
                 }
                 var4 = stackIn_15_0;
-                SetTorpedoProjectiles.field_o.a((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
+                SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
                 GetBots.field_o = hu.field_b;
                 ujb.field_c = SetDebrisPartitioned.field_o;
               }
@@ -104,7 +104,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                 stackIn_28_0 = igb.field_a;
               }
               var4 = stackIn_28_0;
-              SetTorpedoProjectiles.field_o.a((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
+              SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
             }
           }
         } else {
@@ -127,7 +127,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                   stackIn_41_0 = igb.field_a;
                 }
                 var4 = stackIn_41_0;
-                SetTorpedoProjectiles.field_o.a((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
+                SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
               }
             }
           } else {
@@ -157,7 +157,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                 stackIn_83_0 = igb.field_a;
               }
               var4 = stackIn_83_0;
-              SetTorpedoProjectiles.field_o.a((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
+              SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
               GetBots.field_o = hu.field_b;
               ujb.field_c = SetDebrisPartitioned.field_o;
               return;
@@ -179,7 +179,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                     stackIn_57_0 = igb.field_a;
                   }
                   var4 = stackIn_57_0;
-                  SetTorpedoProjectiles.field_o.a((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
+                  SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
                 }
               }
             } else {
@@ -200,7 +200,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                       stackIn_70_0 = igb.field_a;
                     }
                     var4 = stackIn_70_0;
-                    SetTorpedoProjectiles.field_o.a((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
+                    SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
                   }
                 }
               } else {
@@ -220,7 +220,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                       stackIn_93_0 = igb.field_a;
                     }
                     var4 = stackIn_93_0;
-                    SetTorpedoProjectiles.field_o.a((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
+                    SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
                   } else {
                     if (GetComponentBreakingExplosionForceMultiplier.field_p != uia.field_b) {
                       GetTorpedoReload.field_q = GetTorpedoReload.field_q + (-GetComponentBreakingExplosionForceMultiplier.field_p + uia.field_b);
@@ -233,7 +233,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                         stackIn_98_0 = igb.field_a;
                       }
                       var4 = stackIn_98_0;
-                      SetTorpedoProjectiles.field_o.a((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
+                      SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
                     }
                   }
                 }

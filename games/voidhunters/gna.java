@@ -17,7 +17,7 @@ class gna extends elb {
 
     final static void a(Throwable param0, String param1, int param2) {
         try {
-          eab stackIn_13_0;
+          PlatformService stackIn_13_0;
           java.net.URL stackIn_13_1;
           java.net.URL stackIn_13_2;
           java.net.URL stackIn_13_3;
@@ -28,7 +28,7 @@ class gna extends elb {
           Throwable decompiledCaughtException = null;
           String var3 = null;
           Exception var3_ref = null;
-          mob var4 = null;
+          PlatformRequest var4 = null;
           DataInputStream var5 = null;
           int var6 = 0;
           String var7 = null;
@@ -69,12 +69,12 @@ class gna extends elb {
               stackIn_14_2 = null;
               stackIn_14_5 = "" + UiComboBoxList.field_C;
             }
-            var4 = ((eab) (Object) stackIn_13_0).a(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(eab.field_w).append("&v2=").append(eab.field_r).append("&e=").append(var10).toString()), 108);
-            while (var4.field_f == 0) {
+            var4 = ((PlatformService) (Object) stackIn_13_0).openUrlStream(new java.net.URL(stackIn_13_3, ((StringBuilder) (Object) stackIn_13_4).append(stackIn_14_5).append("&v1=").append(PlatformService.javaVendor).append("&v2=").append(PlatformService.javaVersion).append("&e=").append(var10).toString()), 108);
+            while (var4.status == 0) {
               BufferedFile.sleep(120, 1L);
             }
-            if (var4.field_f == 1) {
-              var5 = (DataInputStream) (var4.field_d);
+            if (var4.status == 1) {
+              var5 = (DataInputStream) (var4.result);
               var5.read();
               var5.close();
             }

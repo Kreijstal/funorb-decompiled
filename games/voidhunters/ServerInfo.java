@@ -55,8 +55,8 @@ final class ServerInfo implements DiffableState {
         RuntimeException var3_ref = null;
         try {
           var3 = (ServerInfo) (param1);
-          var3.voteoptionStates = SetTeamSelectionSpeedup.a(var3.voteoptionStates, (byte) -108, this.voteoptionStates);
-          var3.componentoptionStates = SetTeamSelectionSpeedup.a(var3.componentoptionStates, (byte) -38, this.componentoptionStates);
+          var3.voteoptionStates = SetTeamSelectionSpeedup.copyIntsReusingArray(var3.voteoptionStates, (byte) -108, this.voteoptionStates);
+          var3.componentoptionStates = SetTeamSelectionSpeedup.copyIntsReusingArray(var3.componentoptionStates, (byte) -38, this.componentoptionStates);
           var3.copyToClipboardHidden = this.copyToClipboardHidden;
           if (param0 < 54) {
             this.isVoteOptionLimitedTime(-67, (byte) -39);

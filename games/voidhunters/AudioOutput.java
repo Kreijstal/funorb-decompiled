@@ -28,7 +28,7 @@ class AudioOutput {
         pump = null;
     }
 
-    final static AudioOutput create(eab param0, java.awt.Component param1, int param2, int param3) {
+    final static AudioOutput create(PlatformService param0, java.awt.Component param1, int param2, int param3) {
         try {
           JavaSoundAudioOutput var4 = null;
           Throwable var4_ref = null;
@@ -68,7 +68,7 @@ class AudioOutput {
                 pump == null) {
                 pump = new AudioPump();
                 pump.platform = param0;
-                param0.a(0, field_u, (Runnable) ((Object) pump));
+                param0.startThread(0, field_u, (Runnable) ((Object) pump));
               }
               if (pump != null) {
                 if (pump.outputs[param2] != null) {
@@ -261,7 +261,7 @@ class AudioOutput {
         if (stereo) {
           var3 = var3 << 1;
         }
-        cua.a(param0, 0, var3);
+        ArrayOperations.clear(param0, 0, var3);
         this.rescheduleSamplesRemaining = this.rescheduleSamplesRemaining - param1;
         if (this.stream != null &&
           this.rescheduleSamplesRemaining <= 0) {

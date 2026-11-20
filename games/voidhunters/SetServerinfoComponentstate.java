@@ -47,7 +47,7 @@ final class SetServerinfoComponentstate extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (pa.a(param0, param3, param2, param1)) {
+          if (pa.decodeSpriteArchiveFile(param0, param3, param2, param1)) {
             stackIn_4_0 = SetDebrisSurvives.a(-91);
             return stackIn_4_0;
           }

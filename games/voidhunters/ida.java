@@ -243,18 +243,18 @@ final class ida extends UiSingleChildContainer {
             var3 = 0;
             for (var4 = 0; var4 < var18.field_i; var4++) {
               if (var13.field_g[var4] != null) {
-                if (var13.field_g[var4].field_f == 2) {
+                if (var13.field_g[var4].status == 2) {
                   var13.field_k[var4] = -5;
                 }
-                if (0 == var13.field_g[var4].field_f) {
+                if (0 == var13.field_g[var4].status) {
                   var3 = 1;
                 }
               }
               if (null != var13.field_e[var4]) {
-                if (var13.field_e[var4].field_f == 2) {
+                if (var13.field_e[var4].status == 2) {
                   var13.field_k[var4] = -6;
                 }
-                if (var13.field_e[var4].field_f == 0) {
+                if (var13.field_e[var4].status == 0) {
                   var3 = 1;
                 }
               }
@@ -269,27 +269,27 @@ final class ida extends UiSingleChildContainer {
                 try {
                   var6_int = var18.field_h[var5];
                   if (var6_int == 0) {
-                    var15 = (java.lang.reflect.Field) (var18.field_g[var5].field_d);
+                    var15 = (java.lang.reflect.Field) (var18.field_g[var5].result);
                     var8 = var15.getInt((Object) null);
                     param0.writeByte(0, 0);
                     param0.writeInt(var8, 332614536);
                   } else {
                     if (var6_int != 1) {
                       if (var6_int == 2) {
-                        var26 = (java.lang.reflect.Field) (var18.field_g[var5].field_d);
+                        var26 = (java.lang.reflect.Field) (var18.field_g[var5].result);
                         var8 = var26.getModifiers();
                         param0.writeByte(0, 0);
                         param0.writeInt(var8, 332614536);
                       }
                     } else {
-                      var17_ref = (java.lang.reflect.Field) (var18.field_g[var5].field_d);
+                      var17_ref = (java.lang.reflect.Field) (var18.field_g[var5].result);
                       var19 = var17_ref;
                       var19.setInt((Object) null, var18.field_j[var5]);
                       param0.writeByte(0, 0);
                     }
                   }
                   if (var6_int == 3) {
-                    var28 = (java.lang.reflect.Method) (var18.field_e[var5].field_d);
+                    var28 = (java.lang.reflect.Method) (var18.field_e[var5].result);
                     var25 = var18.field_f[var5];
                     var9 = new Object[var25.length];
                     for (var10_int = 0; var10_int < var25.length; var10_int++) {
@@ -310,7 +310,7 @@ final class ida extends UiSingleChildContainer {
                     }
                   } else {
                     if (var6_int == 4) {
-                      var27 = (java.lang.reflect.Method) (var18.field_e[var5].field_d);
+                      var27 = (java.lang.reflect.Method) (var18.field_e[var5].result);
                       var8Lifetime1 = var27.getModifiers();
                       param0.writeByte(0, 0);
                       param0.writeInt(var8Lifetime1, 332614536);

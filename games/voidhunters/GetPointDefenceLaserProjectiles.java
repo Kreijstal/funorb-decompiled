@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
-    static mob field_o;
+    static PlatformRequest field_o;
     static String field_p;
 
     final static int a(boolean param0, int param1) {
         if (param0) {
-          field_o = (mob) null;
+          field_o = (PlatformRequest) null;
           if (!OpenGlTexture1D.field_i) {
             return ita.a(param1, 7988).ascent;
           }

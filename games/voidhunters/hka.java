@@ -46,7 +46,7 @@ final class hka extends uj {
         BitmapTextLayout.field_n = new ScrollableActionPanel(0L, rbb.field_k, SetMissileLauncherEnergyUsed.field_q, SetDefaultFiringLeeway.field_o);
         vra.field_b = new ScrollableActionPanel(0L, rbb.field_k, SetMissilesTopSpeed.field_q, PlayerJoinFactory.field_a);
         PlayerJoinFactory.field_c = new Widget(0L, (Widget) null);
-        OpenGlCubeTexture.field_h = new Widget(0L, qc.field_q);
+        OpenGlCubeTexture.field_h = new Widget(0L, DeveloperConsole.field_q);
         OpenGlCubeTexture.field_h.field_F = 1;
         if (param1 >= -96) {
           return;
@@ -60,12 +60,12 @@ final class hka extends uj {
           PlayerJoinFactory.field_c.addChild(-561, GameKeyHandler.field_b);
           PlayerJoinFactory.field_c.addChild(-561, BitmapTextLayout.field_n);
           PlayerJoinFactory.field_c.addChild(-561, CarouselPlayerEventFactory.field_c);
-          BitmapTextLayout.field_n.scrollPane.viewport.applyStyle(18445, qc.field_q);
+          BitmapTextLayout.field_n.scrollPane.viewport.applyStyle(18445, DeveloperConsole.field_q);
           BitmapTextLayout.field_n.scrollPane.viewport.field_B = 1;
           var5 = BitmapTextLayout.field_n.scrollPane.viewport;
           var6 = var5;
           var6.field_F = 1;
-          vra.field_b.scrollPane.viewport.applyStyle(18445, qc.field_q);
+          vra.field_b.scrollPane.viewport.applyStyle(18445, DeveloperConsole.field_q);
           var3 = vra.field_b.scrollPane.viewport;
           vra.field_b.scrollPane.viewport.field_B = 1;
           var3.field_F = 1;

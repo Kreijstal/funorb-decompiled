@@ -329,7 +329,7 @@ final class sfb extends PcmStream {
           if (this.field_k == null) {
             continue;
           }
-          cua.a(this.field_j, 0, var4);
+          ArrayOperations.clear(this.field_j, 0, var4);
         }
     }
 

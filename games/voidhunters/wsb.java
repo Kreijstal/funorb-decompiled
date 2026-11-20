@@ -75,7 +75,7 @@ final class wsb {
           if (this.field_i.length <= this.field_h) {
             var10 = new ujb[this.field_h * 2];
             ujb[] var7 = var10;
-            cua.a(this.field_i, 0, var10, 0, this.field_h);
+            ArrayOperations.copy(this.field_i, 0, var10, 0, this.field_h);
             this.field_i = var10;
           }
           if (param1 != -62) {

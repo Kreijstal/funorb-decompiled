@@ -14,9 +14,9 @@ final class SetMachineGunPulsetime extends ConsoleCommand {
     final static boolean e(int param0) {
         if (param0 != 0) {
           SetMachineGunPulsetime.clearSharedReferences(-11);
-          return SetTorpedoProjectiles.field_o.field_k;
+          return SetTorpedoProjectiles.field_o.privilegedAccess;
         }
-        return SetTorpedoProjectiles.field_o.field_k;
+        return SetTorpedoProjectiles.field_o.privilegedAccess;
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ila extends IntrusiveNode {
-    String field_d;
+final class TextNode extends IntrusiveNode {
+    String text;
 
     final static void c(byte param0) {
         int var2 = 0;
@@ -19,7 +19,7 @@ final class ila extends IntrusiveNode {
           }
           for (var2 = 1; var2 < bs.field_b.length; var2++) {
             var3 = bs.field_b[var2];
-            cua.a(SetMissionDebrisDefaultProbability.field_p, var2 << 4, SetMissionDebrisDefaultProbability.field_p, var1_int, var3);
+            ArrayOperations.copy(SetMissionDebrisDefaultProbability.field_p, var2 << 4, SetMissionDebrisDefaultProbability.field_p, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;
@@ -30,7 +30,7 @@ final class ila extends IntrusiveNode {
         }
     }
 
-    final static boolean a(int param0, java.applet.Applet param1) {
+    final static boolean isTuhstatbutEnabled(int param0, java.applet.Applet param1) {
         try {
           int var5 = 0;
           String var2 = null;
@@ -86,15 +86,15 @@ final class ila extends IntrusiveNode {
         }
     }
 
-    ila(String param0) {
+    TextNode(String param0) {
         try {
-          this.field_d = param0;
+          this.text = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ila.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static String a(byte[] param0, int param1) {
+    final static String formatByteArray(byte[] param0, int param1) {
         String var2 = null;
         int var3 = 0;
         int var4 = 0;

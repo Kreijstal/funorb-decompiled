@@ -154,7 +154,7 @@ final class QuickChatMenuWidget extends Widget {
           var12 = "</col>";
           for (var13 = 0; this.itemCount > var13; var13++) {
             if (this.shortcutKeys[var13] > 0) {
-              param6[var13] = var11 + MissionActionFactory.a(this.shortcutKeys[var13], 6).toUpperCase() + ": " + var12 + param6[var13];
+              param6[var13] = var11 + MissionActionFactory.characterToString(this.shortcutKeys[var13], 6).toUpperCase() + ": " + var12 + param6[var13];
             }
             var14 = null;
             if (this.submenus[var13] != null ||

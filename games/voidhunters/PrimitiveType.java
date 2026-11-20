@@ -27,7 +27,7 @@ final class PrimitiveType {
                 var5Lifetime2 = var4;
               } else {
                 var11 = (CharSequence) ((Object) ola.field_p.text);
-                var4 = jwa.a(false, var11);
+                var4 = jwa.normalizeName(false, var11);
               }
               var5Lifetime1 = null;
               if (0 == MissionGenerationDataFactory.field_b) {

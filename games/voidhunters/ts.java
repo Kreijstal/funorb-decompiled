@@ -61,7 +61,7 @@ final class ts {
         }
     }
 
-    final static void a(byte param0, eab param1, Object param2) {
+    final static void a(byte param0, PlatformService param1, Object param2) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -74,7 +74,7 @@ final class ts {
         int var4 = 0;
         var4 = VoidHunters.field_G;
         try {
-          if (param1.field_n == null) {
+          if (param1.eventQueue == null) {
             return;
           }
           var3_int = 0;
@@ -82,7 +82,7 @@ final class ts {
             return;
           }
           while (var3_int < 50) {
-            if (param1.field_n.peekEvent() != null) {
+            if (param1.eventQueue.peekEvent() != null) {
               BufferedFile.sleep(-84, 1L);
               var3_int++;
               continue;
@@ -91,7 +91,7 @@ final class ts {
           }
           try {
             if (param2 != null) {
-              param1.field_n.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param2, 1001, "dummy")));
+              param1.eventQueue.postEvent((java.awt.AWTEvent) ((Object) new java.awt.event.ActionEvent(param2, 1001, "dummy")));
             }
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

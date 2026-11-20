@@ -53,7 +53,7 @@ final class GetAngularVelocitySustainMax extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean a(byte param0, char param1) {
+    final static boolean isNormalizableNameCharacter(byte param0, char param1) {
         char[] var2 = null;
         int var3 = 0;
         int var4 = 0;

@@ -16,7 +16,7 @@ final class igb {
           if (param1 <= 111) {
             igb.clearSharedReferences(-66);
           }
-          stackIn_3_0 = SetThrusterBoosterForce.a(-125, false, param0);
+          stackIn_3_0 = SetThrusterBoosterForce.getNameValidationError(-125, false, param0);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

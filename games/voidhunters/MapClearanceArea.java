@@ -95,7 +95,7 @@ abstract class MapClearanceArea implements DiffableState {
           if (param1 != 75) {
             MapClearanceArea.clearSharedReferences((byte) -84);
           }
-          if (pa.a(param3, 2, param2, param0)) {
+          if (pa.decodeSpriteArchiveFile(param3, 2, param2, param0)) {
             stackIn_6_0 = v.b(false);
             return stackIn_6_0;
           }

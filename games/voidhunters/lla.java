@@ -115,7 +115,7 @@ final class lla {
               var10 = new byte[this.field_d + this.field_f.payload.length];
               var9 = var10;
               var7 = var9;
-              cua.a(this.field_f.payload, 0, var10, 0, this.field_f.position);
+              ArrayOperations.copy(this.field_f.payload, 0, var10, 0, this.field_f.position);
               var6 = var6 + this.field_d;
               this.field_f.payload = var7;
               if (var5_int != 0) {

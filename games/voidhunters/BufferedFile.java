@@ -117,7 +117,7 @@ final class BufferedFile {
             if (this.writeBufferOffset != -1L &&
               (this.position + (long)param0) > (this.writeBufferOffset + (long)this.writeBuffer.length)) {
               var5_int = (int)((long)this.writeBuffer.length - this.position + this.writeBufferOffset);
-              cua.a(param3, param1, this.writeBuffer, (int)(this.position - this.writeBufferOffset), var5_int);
+              ArrayOperations.copy(param3, param1, this.writeBuffer, (int)(this.position - this.writeBufferOffset), var5_int);
               this.position = this.position + (long)var5_int;
               param0 = param0 - var5_int;
               param1 = param1 + var5_int;
@@ -131,7 +131,7 @@ final class BufferedFile {
               if (-1L == this.writeBufferOffset) {
                 this.writeBufferOffset = this.position;
               }
-              cua.a(param3, param1, this.writeBuffer, (int)(-this.writeBufferOffset + this.position), param0);
+              ArrayOperations.copy(param3, param1, this.writeBuffer, (int)(-this.writeBufferOffset + this.position), param0);
               this.position = this.position + (long)param0;
               if ((long)this.writeBufferLength < (this.position - this.writeBufferOffset)) {
                 this.writeBufferLength = (int)(this.position - this.writeBufferOffset);
@@ -170,7 +170,7 @@ final class BufferedFile {
             if (var5_long > -1L &&
               var7 > var5_long) {
               var9 = (int)(-var5_long + var7);
-              cua.a(param3, (int)(var5_long + (long)param1 - this.position), this.readBuffer, (int)(var5_long - this.readBufferOffset), var9);
+              ArrayOperations.copy(param3, (int)(var5_long + (long)param1 - this.position), this.readBuffer, (int)(var5_long - this.readBufferOffset), var9);
             }
             this.position = this.position + (long)param0;
             return;
@@ -244,7 +244,7 @@ final class BufferedFile {
           if (var2 > -1L &&
             var4 > var2) {
             var6 = (int)(var4 - var2);
-            cua.a(this.writeBuffer, (int)(-this.writeBufferOffset + var2), this.readBuffer, (int)(-this.readBufferOffset + var2), var6);
+            ArrayOperations.copy(this.writeBuffer, (int)(-this.writeBufferOffset + var2), this.readBuffer, (int)(-this.readBufferOffset + var2), var6);
           }
           this.writeBufferLength = 0;
           this.writeBufferOffset = -1L;
@@ -292,7 +292,7 @@ final class BufferedFile {
             if (-1L != this.writeBufferOffset &&
               this.position >= this.writeBufferOffset &&
               ((long)this.writeBufferLength + this.writeBufferOffset) >= (this.position + (long)param1)) {
-              cua.a(this.writeBuffer, (int)(this.position - this.writeBufferOffset), param0, param2, param1);
+              ArrayOperations.copy(this.writeBuffer, (int)(this.position - this.writeBufferOffset), param0, param2, param1);
               this.position = this.position + (long)param1;
               return;
             }
@@ -305,7 +305,7 @@ final class BufferedFile {
               if (var9_int > param1) {
                 var9_int = param1;
               }
-              cua.a(this.readBuffer, (int)(-this.readBufferOffset + this.position), param0, param2, var9_int);
+              ArrayOperations.copy(this.readBuffer, (int)(-this.readBufferOffset + this.position), param0, param2, var9_int);
               param2 = param2 + var9_int;
               param1 = param1 - var9_int;
               this.position = this.position + (long)var9_int;
@@ -336,7 +336,7 @@ final class BufferedFile {
               if (var9_intLifetime1Lifetime1 > this.readBufferLength) {
                 var9_intLifetime1Lifetime1 = this.readBufferLength;
               }
-              cua.a(this.readBuffer, 0, param0, param2, var9_intLifetime1Lifetime1);
+              ArrayOperations.copy(this.readBuffer, 0, param0, param2, var9_intLifetime1Lifetime1);
               param2 = param2 + var9_intLifetime1Lifetime1;
               param1 = param1 - var9_intLifetime1Lifetime1;
               this.position = this.position + (long)var9_intLifetime1Lifetime1;
@@ -379,7 +379,7 @@ final class BufferedFile {
               if (var9 > -1L &&
                 var9 < var11) {
                 var13 = (int)(-var9 + var11);
-                cua.a(this.writeBuffer, (int)(-this.writeBufferOffset + var9), param0, var7 + (int)(var9 - var5_long), var13);
+                ArrayOperations.copy(this.writeBuffer, (int)(-this.writeBufferOffset + var9), param0, var7 + (int)(var9 - var5_long), var13);
                 if (this.position < var11) {
                   param1 = (int)((long)param1 - (var11 - this.position));
                   this.position = var11;

@@ -21,25 +21,25 @@ final class ola extends gna {
         }
     }
 
-    final static caa[] d(byte param0) {
-        caa[] var1 = null;
+    final static SoftwareIndexedSprite2D[] d(byte param0) {
+        SoftwareIndexedSprite2D[] var1 = null;
         int var2 = 0;
         int var3 = VoidHunters.field_G;
-        caa[] var1Lifetime1;
+        SoftwareIndexedSprite2D[] var1Lifetime1;
         int var2Lifetime1;
         if (param0 != -91) {
           ola.d((byte) 67);
         } else {
-          var1 = new caa[GpuProjectionMode.field_a];
+          var1 = new SoftwareIndexedSprite2D[GpuProjectionMode.field_a];
           for (var2 = 0; GpuProjectionMode.field_a > var2; var2++) {
-            var1[var2] = new caa(fbb.field_i, Ship.field_H, iib.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], sh.field_a[var2], rlb.field_d);
+            var1[var2] = new SoftwareIndexedSprite2D(fbb.field_i, Ship.field_H, iib.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], sh.field_a[var2], rlb.field_d);
           }
           MatchResults.a(94);
           return var1;
         }
-        var1Lifetime1 = new caa[GpuProjectionMode.field_a];
+        var1Lifetime1 = new SoftwareIndexedSprite2D[GpuProjectionMode.field_a];
         for (var2Lifetime1 = 0; GpuProjectionMode.field_a > var2Lifetime1; var2Lifetime1++) {
-          var1Lifetime1[var2Lifetime1] = new caa(fbb.field_i, Ship.field_H, iib.field_e[var2Lifetime1], SettingsChange.field_f[var2Lifetime1], SetMissionTerrainDebrisProbability.field_o[var2Lifetime1], hla.field_a[var2Lifetime1], sh.field_a[var2Lifetime1], rlb.field_d);
+          var1Lifetime1[var2Lifetime1] = new SoftwareIndexedSprite2D(fbb.field_i, Ship.field_H, iib.field_e[var2Lifetime1], SettingsChange.field_f[var2Lifetime1], SetMissionTerrainDebrisProbability.field_o[var2Lifetime1], hla.field_a[var2Lifetime1], sh.field_a[var2Lifetime1], rlb.field_d);
         }
         MatchResults.a(94);
         return var1Lifetime1;

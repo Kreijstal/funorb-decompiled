@@ -4,11 +4,11 @@
 final class SetSalvoHoldable extends ConsoleCommand {
     static IntrusiveDeque field_o;
 
-    final static caa a(int param0, caa param1, int[] param2) {
-        caa var3 = null;
+    final static SoftwareIndexedSprite2D a(int param0, SoftwareIndexedSprite2D param1, int[] param2) {
+        SoftwareIndexedSprite2D var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        caa stackIn_1_0 = null;
+        SoftwareIndexedSprite2D stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
@@ -16,16 +16,16 @@ final class SetSalvoHoldable extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = new caa(0, 0, 0);
-          var3.field_g = param1.field_g;
-          var3.field_e = param1.field_e;
+          var3 = new SoftwareIndexedSprite2D(0, 0, 0);
+          var3.canvasHeight = param1.canvasHeight;
+          var3.height = param1.height;
           var4 = 50 / ((param0 - 20) / 62);
-          var3.field_d = param1.field_d;
-          var3.field_j = param1.field_j;
-          var3.field_a = param1.field_a;
-          var3.field_f = param1.field_f;
-          var3.field_i = param2;
-          var3.field_h = param1.field_h;
+          var3.offsetY = param1.offsetY;
+          var3.indices = param1.indices;
+          var3.canvasWidth = param1.canvasWidth;
+          var3.offsetX = param1.offsetX;
+          var3.palette = param2;
+          var3.width = param1.width;
           stackIn_1_0 = var3;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -457,15 +457,15 @@ final class cm extends TextureOperation {
           if (var10 <= 0) {
             if (hob.field_d >= param3 + param1) {
               for (var11 = 0; var11 < param4; var11++) {
-                cua.a(param2[var11 + param6], param3, param1, var8_int);
+                ArrayOperations.fill(param2[var11 + param6], param3, param1, var8_int);
               }
               return;
             }
             var11Lifetime2 = -param3 + hob.field_d;
             for (var12 = 0; var12 < param4; var12++) {
               var13_ref_int__ = param2[param6 + var12];
-              cua.a(var13_ref_int__, param3, var11Lifetime2, var8_int);
-              cua.a(var13_ref_int__, 0, -var11Lifetime2 + param1, var8_int);
+              ArrayOperations.fill(var13_ref_int__, param3, var11Lifetime2, var8_int);
+              ArrayOperations.fill(var13_ref_int__, 0, -var11Lifetime2 + param1, var8_int);
             }
             return;
           }
@@ -508,11 +508,11 @@ final class cm extends TextureOperation {
                   }
                 }
                 if (var16 + var15 <= hob.field_d) {
-                  cua.a(var18, var15, var16, var19);
+                  ArrayOperations.fill(var18, var15, var16, var19);
                 } else {
                   var20 = -var15 + hob.field_d;
-                  cua.a(var18, var15, var20, var19);
-                  cua.a(var18, 0, -var20 + var16, var19);
+                  ArrayOperations.fill(var18, var15, var20, var19);
+                  ArrayOperations.fill(var18, 0, -var20 + var16, var19);
                 }
               } else {
                 var19 = -var17 + (param4 - 1);
@@ -523,11 +523,11 @@ final class cm extends TextureOperation {
                     var18[dla.a(var20 + param3, SetMassDriverEnergyUsed.field_q)] = var8_int * var20 / var13;
                   }
                   if (hob.field_d >= var15 + var16) {
-                    cua.a(var18, var15, var16, var8_int);
+                    ArrayOperations.fill(var18, var15, var16, var8_int);
                   } else {
                     var20 = hob.field_d - var15;
-                    cua.a(var18, var15, var20, var8_int);
-                    cua.a(var18, 0, -var20 + var16, var8_int);
+                    ArrayOperations.fill(var18, var15, var20, var8_int);
+                    ArrayOperations.fill(var18, 0, -var20 + var16, var8_int);
                   }
                   decompiledFrameRemainder0 = false;
                 }
@@ -557,11 +557,11 @@ final class cm extends TextureOperation {
                     }
                   }
                   if (hob.field_d >= var16 + var15) {
-                    cua.a(var18, var15, var16, var20);
+                    ArrayOperations.fill(var18, var15, var16, var20);
                   } else {
                     var21 = -var15 + hob.field_d;
-                    cua.a(var18, var15, var21, var20);
-                    cua.a(var18, 0, var16 - var21, var20);
+                    ArrayOperations.fill(var18, var15, var21, var20);
+                    ArrayOperations.fill(var18, 0, var16 - var21, var20);
                   }
                 }
               }

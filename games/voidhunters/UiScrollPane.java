@@ -26,8 +26,8 @@ final class UiScrollPane extends UiArrayContainer {
     public static void clearSharedReferences(int param0) {
         field_x = null;
         if (param0 != 1) {
-          eab var2 = (eab) null;
-          UiScrollPane.initializeArchiveSystem(56, (String) null, 29, -128, (byte) -61, -80, -20, (eab) null, 10);
+          PlatformService var2 = (PlatformService) null;
+          UiScrollPane.initializeArchiveSystem(56, (String) null, 29, -128, (byte) -61, -80, -20, (PlatformService) null, 10);
         }
     }
 
@@ -82,7 +82,7 @@ final class UiScrollPane extends UiArrayContainer {
         this.horizontalScrollbar.updateHorizontalThumbSize(1, 21944, 1);
     }
 
-    final static void initializeArchiveSystem(int param0, String param1, int param2, int param3, byte param4, int param5, int param6, eab param7, int param8) {
+    final static void initializeArchiveSystem(int param0, String param1, int param2, int param3, byte param4, int param5, int param6, PlatformService param7, int param8) {
         GetFixedaim.field_o = param0;
         gia.field_k = param7;
         hob.field_l = param1;
@@ -690,8 +690,8 @@ final class UiScrollPane extends UiArrayContainer {
           this.viewport.child.y = -(int)((long)(this.viewport.child.height - this.viewport.height) * (long)this.verticalScrollbar.verticalPosition >> 16);
         }
         if (param0 != -1715704688) {
-          eab var3 = (eab) null;
-          UiScrollPane.initializeArchiveSystem(74, (String) null, -117, -2, (byte) 104, -89, -50, (eab) null, -99);
+          PlatformService var3 = (PlatformService) null;
+          UiScrollPane.initializeArchiveSystem(74, (String) null, -117, -2, (byte) 104, -89, -50, (PlatformService) null, -99);
           if (null != this.horizontalScrollbar) {
             this.viewport.child.x = -(int)((long)(this.viewport.child.width - this.viewport.width) * (long)this.horizontalScrollbar.horizontalPosition >> 16);
             return;

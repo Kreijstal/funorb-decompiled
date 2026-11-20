@@ -691,7 +691,7 @@ final class wf {
                                                             }
                                                             var20 = "http://" + var13Lifetime7 + "/g=voidhunters/autochoose.ws?dest=" + GetDebrisMax.a((CharSequence) ((Object) var12), 32);
                                                             var13_ref = new java.awt.datatransfer.StringSelection(var20);
-                                                            SetTorpedoProjectiles.field_o.a((byte) -45, (java.awt.datatransfer.Transferable) ((Object) var13_ref));
+                                                            SetTorpedoProjectiles.field_o.writeClipboard((byte) -45, (java.awt.datatransfer.Transferable) ((Object) var13_ref));
                                                             SocketNetworkArchiveClient.field_n = 100;
                                                             var4 = 1;
                                                             ArchiveIndex.openExternalUrl(true, 0, MissionList.b((byte) -92), var20);

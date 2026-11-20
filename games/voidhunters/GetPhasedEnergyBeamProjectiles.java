@@ -195,7 +195,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetRepairModePower.field_q = param1[126];
           cp.field_f = param1[80];
           GetPlayerRepairAmount.field_o = param1[87];
-          aea.field_a = param1[72];
+          Cp1252CharacterEncoder.field_a = param1[72];
           if (param0 != 107) {
             field_o = -43;
           }
@@ -291,7 +291,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           Particle.field_z = param1[233];
           joa.field_a = param1[199];
           GetMissileLauncherEnergyUsed.field_q = param1[175];
-          aea.field_b = param1[60];
+          Cp1252CharacterEncoder.field_b = param1[60];
           SetPhasedEnergyBeamPulseFadetime.field_o = param1[77];
           Particle.field_o = param1[223];
           GetMachineGunAimspeed.field_p = param1[101];

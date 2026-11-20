@@ -125,7 +125,7 @@ class kt extends elb {
             var60 = var44.field_E;
             tga.a(GetAngularVelocitySustain.field_q, 0, (byte) 118, var60, 0);
           } else {
-            ila.c((byte) -15);
+            TextNode.c((byte) -15);
           }
           var54 = new int[param0.field_L];
           var49 = var54;

@@ -2982,7 +2982,7 @@ final class GameSession {
                     if ((1 == GetBots.field_o ||
                       SetMachineGunEnergyUsed.field_o[84] &&
                       (null == nna.field_C ||
-                      !nna.field_C.c(13462))) && !this.field_X) {
+                      !nna.field_C.isOpen(13462))) && !this.field_X) {
                       if (var9Lifetime1 >= var20) {
                         var54 = new PlayerAction();
                         var54.mousex = ShipTeamConditionFactory.field_a.a(true, GetUseDetailLines.field_o);

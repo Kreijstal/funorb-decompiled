@@ -37,7 +37,7 @@ final class GetPhasedEnergyBeamAimarc extends ConsoleCommand {
         }
         try {
           SetPointDefenceLaserProjectileOndamageParticles.field_o = param0.children;
-          ija.a(85);
+          SoftwareSprite2D.a(85);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "plb.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

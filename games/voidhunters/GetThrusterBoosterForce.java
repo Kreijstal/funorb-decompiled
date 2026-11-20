@@ -6,23 +6,23 @@ final class GetThrusterBoosterForce extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static caa a(int param0, ResourceArchive param1, int param2, int param3) {
+    final static SoftwareIndexedSprite2D loadSoftwareIndexedSprite(int param0, ResourceArchive param1, int param2, int param3) {
         RuntimeException var4 = null;
-        caa stackIn_5_0 = null;
-        caa stackIn_7_0 = null;
+        SoftwareIndexedSprite2D stackIn_5_0 = null;
+        SoftwareIndexedSprite2D stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!pa.a(param2, 2, param1, param3)) {
+          if (!pa.decodeSpriteArchiveFile(param2, 2, param1, param3)) {
             return null;
           }
           if (param0 == -32431) {
-            stackIn_7_0 = PlayerFactory.a(-115);
+            stackIn_7_0 = PlayerFactory.createFirstSoftwareIndexedSprite(-115);
             return stackIn_7_0;
           }
-          stackIn_5_0 = (caa) null;
+          stackIn_5_0 = (SoftwareIndexedSprite2D) null;
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -38,7 +38,7 @@ final class GetThrusterBoosterForce extends ConsoleCommand {
         }
     }
 
-    final static char a(char param0, int param1) {
+    final static char normalizeNameCharacter(char param0, int param1) {
         int var2;
         int var3;
         int var4;

@@ -125,7 +125,7 @@ final class MissionEvent implements DiffableState {
 
     final void addAction(MissionAction param0, boolean param1) {
         try {
-          this.actions = (MissionAction[]) (ija.a(param0, this.actions, 0, SetUseCircleOutline.field_o));
+          this.actions = (MissionAction[]) (SoftwareSprite2D.a(param0, this.actions, 0, SetUseCircleOutline.field_o));
           if (!param1) {
             MissionCondition var4 = (MissionCondition) null;
             this.addCondition((byte) 23, (MissionCondition) null);
@@ -211,7 +211,7 @@ final class MissionEvent implements DiffableState {
 
     final void addCondition(byte param0, MissionCondition param1) {
         try {
-          this.conditions = (MissionCondition[]) (ija.a(param1, this.conditions, 0, QuickChatCategoryLoader.field_d));
+          this.conditions = (MissionCondition[]) (SoftwareSprite2D.a(param1, this.conditions, 0, QuickChatCategoryLoader.field_d));
           if (param0 >= -97) {
             field_f = (String) null;
           }

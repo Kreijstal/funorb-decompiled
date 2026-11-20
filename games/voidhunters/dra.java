@@ -105,8 +105,8 @@ final class dra extends PcmStream {
               if (var5 != 256) {
                 if (this.field_r != null &&
                   var6 <= this.field_r.length) {
-                  cua.a(this.field_r, 0, var6);
-                  cua.a(this.field_p, 0, var6);
+                  ArrayOperations.clear(this.field_r, 0, var6);
+                  ArrayOperations.clear(this.field_p, 0, var6);
                 } else {
                   this.field_p = new int[var6];
                   this.field_r = new int[var6];
@@ -135,7 +135,7 @@ final class dra extends PcmStream {
             }
             if (null != this.field_r &&
               this.field_r.length >= var6) {
-              cua.a(this.field_r, 0, var6);
+              ArrayOperations.clear(this.field_r, 0, var6);
             } else {
               this.field_p = new int[var6];
               this.field_r = new int[var6];

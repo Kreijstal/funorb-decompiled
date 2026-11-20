@@ -32,7 +32,7 @@ final class MusicPatchPcmStream extends PcmStream {
         try {
           var4 = new float[param0];
           var3 = var4;
-          cua.a(param2, 0, var4, param1, param0);
+          ArrayOperations.copy(param2, 0, var4, param1, param0);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

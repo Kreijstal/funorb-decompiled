@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MissionList implements DiffableState {
-    static eab field_b;
+    static PlatformService field_b;
     private Mission[] missions;
 
     final static boolean a(byte param0) {
@@ -20,7 +20,7 @@ final class MissionList implements DiffableState {
 
     public static void clearSharedReferences(boolean param0) {
         if (param0) {
-          field_b = (eab) null;
+          field_b = (PlatformService) null;
           field_b = null;
           return;
         }
@@ -57,7 +57,7 @@ final class MissionList implements DiffableState {
         var9 = VoidHunters.field_G;
         try {
           if (param1 >= -109) {
-            field_b = (eab) null;
+            field_b = (PlatformService) null;
           }
           var3 = param0;
           var4 = this.missions;

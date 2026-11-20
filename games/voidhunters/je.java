@@ -34,7 +34,7 @@ final class je {
           var3_int = param1.length();
           if (var3_int >= 1 &&
             12 >= var3_int) {
-            var4 = jwa.a(false, param1);
+            var4 = jwa.normalizeName(false, param1);
             if (var4 != null &&
               var4.length() >= 1) {
               if (MouseWheelInput.isNameSeparator(var4.charAt(0), 104)) {

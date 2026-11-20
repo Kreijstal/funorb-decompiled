@@ -292,7 +292,7 @@ abstract class ToolkitFont {
           var13 = param4.length();
           for (var14 = 0; var14 < var13; var14++) {
             boolean decompiledFrameRemainder0 = true;
-            var15 = (char)(255 & aea.a(-123, param4.charAt(var14)));
+            var15 = (char)(255 & Cp1252CharacterEncoder.encodeCp1252Character(-123, param4.charAt(var14)));
             if (var15 != 60) {
               if (var15 == 62 &&
                 var11 != -1) {

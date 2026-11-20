@@ -32,7 +32,7 @@ final class drb extends TextureOperation {
         if (!this.field_f.field_e) {
           return var4;
         }
-        cua.a(var4, 0, hob.field_d, this.field_i);
+        ArrayOperations.fill(var4, 0, hob.field_d, this.field_i);
         return var4;
     }
 

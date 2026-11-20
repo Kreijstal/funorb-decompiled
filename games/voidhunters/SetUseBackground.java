@@ -3,7 +3,7 @@
  */
 final class SetUseBackground extends ConsoleCommand {
     static kla field_o;
-    static caa[] field_p;
+    static SoftwareIndexedSprite2D[] field_p;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;

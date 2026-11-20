@@ -24,7 +24,7 @@ final class SetGrapplingHookMaxExtension8Force extends ConsoleCommand {
             stackIn_2_0 = (byte[]) null;
             return stackIn_2_0;
           }
-          cua.a(param1, param2, var5, 0, param0);
+          ArrayOperations.copy(param1, param2, var5, 0, param0);
           stackIn_4_0 = var5;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -57,7 +57,7 @@ final class CarouselPlayerEventFactory implements GameStateFactory {
             return null;
           }
           var6 = (CharSequence) ((Object) param0);
-          var2 = jwa.a(param1, var6);
+          var2 = jwa.normalizeName(param1, var6);
           if (var2 == null) {
             var2 = param0;
           }
@@ -67,7 +67,7 @@ final class CarouselPlayerEventFactory implements GameStateFactory {
               return null;
             }
             var7 = (CharSequence) ((Object) var3.field_Fb);
-            var4 = jwa.a(param1, var7);
+            var4 = jwa.normalizeName(param1, var7);
             if (var4 == null) {
               var4 = var3.field_Fb;
             }

@@ -16,7 +16,7 @@ final class MissionBuilderFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new MissionBuilder());
     }
 
-    final static fm[] a(eab param0, int param1) {
+    final static fm[] a(PlatformService param0, int param1) {
         int var5 = 0;
         fm[] stackIn_4_0 = null;
         fm[] stackIn_10_0 = null;
@@ -30,27 +30,27 @@ final class MissionBuilderFactory implements GameStateFactory {
         fm[] var4 = null;
         fm var6 = null;
         int var7 = 0;
-        mob var8 = null;
+        PlatformRequest var8 = null;
         int[] var9 = null;
         int[] var10 = null;
         var7 = VoidHunters.field_G;
         try {
-          if (!param0.a(0)) {
+          if (!param0.isFullscreenSupported(0)) {
             stackIn_4_0 = new fm[]{};
             return stackIn_4_0;
           }
-          var8 = param0.d(85);
-          while (var8.field_f == 0) {
+          var8 = param0.listDisplayModes(85);
+          while (var8.status == 0) {
             BufferedFile.sleep(127, 10L);
           }
-          if (2 == var8.field_f) {
+          if (2 == var8.status) {
             stackIn_10_0 = new fm[]{};
             return stackIn_10_0;
           }
           if (param1 != -30334) {
             field_a = (String) null;
           }
-          var10 = (int[]) (var8.field_d);
+          var10 = (int[]) (var8.result);
           var9 = var10;
           var3 = var9;
           var4 = new fm[var10.length >> 2];
@@ -97,7 +97,7 @@ final class MissionBuilderFactory implements GameStateFactory {
           if (param1 <= 18) {
             return true;
           }
-          if (!GetAngularVelocitySustainMax.a((byte) -35, param0)) {
+          if (!GetAngularVelocitySustainMax.isNormalizableNameCharacter((byte) -35, param0)) {
             return false;
           }
           if (param2 == null) {

@@ -4,14 +4,14 @@
 import java.io.*;
 
 final class bi implements Runnable {
-    private mob field_f;
-    private mob field_c;
+    private PlatformRequest field_f;
+    private PlatformRequest field_c;
     private PacketBuffer field_h;
     static String field_g;
-    private mob field_b;
+    private PlatformRequest field_b;
     private java.net.URL field_i;
     private DataInputStream field_d;
-    private eab field_e;
+    private PlatformService field_e;
     private int field_a;
 
     public static void clearSharedReferences(int param0) {
@@ -35,12 +35,12 @@ final class bi implements Runnable {
         }
         if (0 == this.field_a) {
           if (null == this.field_c) {
-            this.field_c = this.field_e.a(this.field_i, 97);
+            this.field_c = this.field_e.openUrlStream(this.field_i, 97);
           }
-          if (this.field_c.field_f == 0) {
+          if (this.field_c.status == 0) {
             return false;
           }
-          if (this.field_c.field_f != 1) {
+          if (this.field_c.status != 1) {
             this.field_a = this.field_a + 1;
             this.field_c = null;
             return false;
@@ -48,12 +48,12 @@ final class bi implements Runnable {
         }
         if (this.field_a == 1) {
           if (this.field_b == null) {
-            this.field_b = this.field_e.a(443, this.field_i.getHost(), 91);
+            this.field_b = this.field_e.openSocket(443, this.field_i.getHost(), 91);
           }
-          if (this.field_b.field_f == 0) {
+          if (this.field_b.status == 0) {
             return false;
           }
-          if (1 != this.field_b.field_f) {
+          if (1 != this.field_b.status) {
             this.field_b = null;
             this.field_a = this.field_a + 1;
             return false;
@@ -62,10 +62,10 @@ final class bi implements Runnable {
         if (null == this.field_d) {
           try {
             if (this.field_a == 0) {
-              this.field_d = (DataInputStream) (this.field_c.field_d);
+              this.field_d = (DataInputStream) (this.field_c.result);
             }
             if (this.field_a == 1) {
-              var4 = (java.net.Socket) (this.field_b.field_d);
+              var4 = (java.net.Socket) (this.field_b.result);
               var4.setSoTimeout(10000);
               var3 = var4.getOutputStream();
               var3.write(17);
@@ -84,15 +84,15 @@ final class bi implements Runnable {
           }
           if (decompiledRegionSelector0 == 0) {
             if (null == this.field_f) {
-              this.field_f = this.field_e.a(0, 5, (Runnable) (this));
+              this.field_f = this.field_e.startThread(0, 5, (Runnable) (this));
             }
-            if (0 == this.field_f.field_f) {
+            if (0 == this.field_f.status) {
               return false;
             }
             if (param0 <= 38) {
               this.run();
             }
-            if (this.field_f.field_f == 1) {
+            if (this.field_f.status == 1) {
               return false;
             }
             this.finalize();
@@ -101,15 +101,15 @@ final class bi implements Runnable {
           }
         }
         if (null == this.field_f) {
-          this.field_f = this.field_e.a(0, 5, (Runnable) (this));
+          this.field_f = this.field_e.startThread(0, 5, (Runnable) (this));
         }
-        if (0 == this.field_f.field_f) {
+        if (0 == this.field_f.status) {
           return false;
         }
         if (param0 <= 38) {
           this.run();
         }
-        if (this.field_f.field_f != 1) {
+        if (this.field_f.status != 1) {
           this.finalize();
           this.field_a = this.field_a + 1;
         }
@@ -118,18 +118,18 @@ final class bi implements Runnable {
 
     protected final void finalize() {
         if (null != this.field_c) {
-          if (null != this.field_c.field_d) {
+          if (null != this.field_c.result) {
             try {
-              ((DataInputStream) (this.field_c.field_d)).close();
+              ((DataInputStream) (this.field_c.result)).close();
             } catch (Exception exception) {
             }
           }
           this.field_c = null;
         }
         if (null != this.field_b) {
-          if (this.field_b.field_d != null) {
+          if (this.field_b.result != null) {
             try {
-              ((java.net.Socket) (this.field_b.field_d)).close();
+              ((java.net.Socket) (this.field_b.result)).close();
             } catch (Exception exception) {
             }
           }
@@ -197,7 +197,7 @@ final class bi implements Runnable {
         return null;
     }
 
-    bi(eab param0, java.net.URL param1, int param2) {
+    bi(PlatformService param0, java.net.URL param1, int param2) {
         try {
           this.field_e = param0;
           this.field_i = param1;

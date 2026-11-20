@@ -610,7 +610,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("players_in_game", 23100);
                 if (var2 != null) {
-                  ija.field_c = Cp1252Strings.decode((byte) -125, var2);
+                  SoftwareSprite2D.field_c = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("you_are_invited_to_xs_game", 23100);
                 if (null != var2) {

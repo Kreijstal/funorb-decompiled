@@ -195,7 +195,7 @@ final class GetBots extends ConsoleCommand {
             param2.length != param0.length) {
             param0 = new boolean[param2.length];
           }
-          cua.a(param2, 0, param0, 0, param2.length);
+          ArrayOperations.copy(param2, 0, param0, 0, param2.length);
           stackIn_9_0 = (boolean[]) (param0);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -174,7 +174,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_mission_votes(" + AsteroidFieldFactory.field_a + ")");
         System.out.println("set_mutator_votes(" + GetPhasedEnergyBeamReload.field_q + ")");
         System.out.println("set_mission_time_limit(" + SetTorpedoEnergyUsed.field_p + ")");
-        System.out.println("set_armageddon_timer_start(" + aea.field_b + ")");
+        System.out.println("set_armageddon_timer_start(" + Cp1252CharacterEncoder.field_b + ")");
         System.out.println("set_armageddon_warning(" + AsteroidFactory.field_a + ")");
         System.out.println("set_armageddon_length(" + SetVariableActionFactory.field_a + ")");
         System.out.println("set_mission_terrain_nebula_probability(" + ku.field_c + ")");
@@ -186,7 +186,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_mission_debris_voting_chancestep(" + GetMissilesHitSourceTeam.field_o + ")");
         System.out.println("set_resource_node_capture_time(" + Particle.field_G + ")");
         System.out.println("set_mission_resnet_resource_tick_time(" + Particle.field_v + ")");
-        System.out.println("set_mass_driver_randomness(" + aea.field_a + ")");
+        System.out.println("set_mass_driver_randomness(" + Cp1252CharacterEncoder.field_a + ")");
         System.out.println("set_torpedo_randomness(" + GetBombletSprayProjectileDamage.field_p + ")");
         System.out.println("set_laser_randomness(" + tea.field_b + ")");
         System.out.println("set_bomblet_spray_randomness(" + GetSalvoRepairTimeMultiplier.field_o + ")");

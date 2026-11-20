@@ -26,7 +26,7 @@ final class SetDetachmentMode extends ConsoleCommand {
             if (var3_int >= param2.length()) {
               return true;
             }
-            if (SetMissileLauncherProjectiles.a(16647, param2.charAt(var3_int))) {
+            if (SetMissileLauncherProjectiles.isBasicNameCharacter(16647, param2.charAt(var3_int))) {
               var3_int++;
               continue;
             }

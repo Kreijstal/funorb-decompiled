@@ -40,12 +40,12 @@ final class SetOndamageParticleFadestart extends ConsoleCommand {
 
     final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, int param3) {
         Sprite var17 = null;
-        caa[] var5 = null;
-        caa[][] var6 = null;
+        SoftwareIndexedSprite2D[] var5 = null;
+        SoftwareIndexedSprite2D[][] var6 = null;
         int[][] var19 = null;
         int[][] var16 = null;
         int[][] var7 = null;
-        caa[] var14 = null;
+        SoftwareIndexedSprite2D[] var14 = null;
         int var11_int = 0;
         Sprite var15 = null;
         Sprite var18 = null;
@@ -66,26 +66,26 @@ final class SetOndamageParticleFadestart extends ConsoleCommand {
           SetShipToShipRamDamage.field_o = (BitmapFont) ((Object) GetFighterBayAimspeed.a(0, "commonui", param1, param2, "arezzo14"));
           GetBoostersCooldown.field_r = (BitmapFont) ((Object) GetFighterBayAimspeed.a(0, "commonui", param1, param2, "arezzo14bold"));
           var17 = new Sprite(param0.fetchNamedFile("", true, "button.gif"), (java.awt.Component) ((Object) igb.field_a));
-          UiDraggableContainer.a("dropdown", "commonui", param3 ^ -60, param1);
+          UiDraggableContainer.loadSoftwareIndexedSpriteByName("dropdown", "commonui", param3 ^ -60, param1);
           var5 = GetExplosionProjectileDamage.a(-124, "commonui", "screen_options", param1);
-          SetUseBackground.field_p = new caa[4];
-          SpecialOrderSubmessage.field_f = new caa[4];
-          GetFighterRepairAmount.field_q = new caa[4];
-          var6 = new caa[][]{GetFighterRepairAmount.field_q, SetUseBackground.field_p, SpecialOrderSubmessage.field_f};
+          SetUseBackground.field_p = new SoftwareIndexedSprite2D[4];
+          SpecialOrderSubmessage.field_f = new SoftwareIndexedSprite2D[4];
+          GetFighterRepairAmount.field_q = new SoftwareIndexedSprite2D[4];
+          var6 = new SoftwareIndexedSprite2D[][]{GetFighterRepairAmount.field_q, SetUseBackground.field_p, SpecialOrderSubmessage.field_f};
           var19 = new int[4][];
           var16 = var19;
           var7 = var16;
-          var7[0] = var5[0].field_i;
+          var7[0] = var5[0].palette;
           for (var8 = 1; var8 < var19.length; var8++) {
             var7[var8] = (int[]) ((Object) var19[0].clone());
           }
-          var8Lifetime1 = var5[0].field_j[0];
+          var8Lifetime1 = var5[0].indices[0];
           var19[2][var8Lifetime1] = 16777215;
           var19[1][var8Lifetime1] = 2394342;
           var19[3][var8Lifetime1] = 4767999;
           for (var9 = 0; 3 > var9; var9++) {
             var14 = var6[var9];
-            caa[] var10 = var14;
+            SoftwareIndexedSprite2D[] var10 = var14;
             for (var11_int = 0; var11_int < var14.length; var11_int++) {
               var14[var11_int] = SetSalvoHoldable.a(94, var5[var9], var19[var11_int]);
             }

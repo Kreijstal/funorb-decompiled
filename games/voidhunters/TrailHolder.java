@@ -14,10 +14,10 @@ final class TrailHolder implements DiffableState {
         TrailHolder var3 = null;
         try {
           var3 = (TrailHolder) (param1);
-          var3.field_b = SetTeamSelectionSpeedup.a(var3.field_b, (byte) -124, this.field_b);
-          var3.field_f = SetTeamSelectionSpeedup.a(var3.field_f, (byte) -105, this.field_f);
-          var3.field_e = SetTeamSelectionSpeedup.a(var3.field_e, (byte) -29, this.field_e);
-          var3.field_d = SetTeamSelectionSpeedup.a(var3.field_d, (byte) -103, this.field_d);
+          var3.field_b = SetTeamSelectionSpeedup.copyIntsReusingArray(var3.field_b, (byte) -124, this.field_b);
+          var3.field_f = SetTeamSelectionSpeedup.copyIntsReusingArray(var3.field_f, (byte) -105, this.field_f);
+          var3.field_e = SetTeamSelectionSpeedup.copyIntsReusingArray(var3.field_e, (byte) -29, this.field_e);
+          var3.field_d = SetTeamSelectionSpeedup.copyIntsReusingArray(var3.field_d, (byte) -103, this.field_d);
           if (param0 <= 54) {
             this.field_b = (int[]) null;
           }

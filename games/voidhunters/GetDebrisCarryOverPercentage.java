@@ -30,7 +30,7 @@ final class GetDebrisCarryOverPercentage extends ConsoleCommand {
           }
           var5 = new short[param0];
           var3 = var5;
-          cua.a(param1, 0, var5, 0, param0);
+          ArrayOperations.copy(param1, 0, var5, 0, param0);
           stackIn_3_0 = var5;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

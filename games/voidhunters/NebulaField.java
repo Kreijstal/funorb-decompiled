@@ -181,7 +181,7 @@ final class NebulaField implements DiffableState, ofa {
             stackIn_4_0 = -1;
             return stackIn_4_0;
           }
-          this.nebulae = (Nebula[]) (ija.a(param0, this.nebulae, 0, MachineGunWeaponDefinition.field_c));
+          this.nebulae = (Nebula[]) (SoftwareSprite2D.a(param0, this.nebulae, 0, MachineGunWeaponDefinition.field_c));
           this.markChanged(124);
           if (param1 <= 73) {
             this.markChanged(60);

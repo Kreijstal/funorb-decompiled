@@ -7,7 +7,7 @@ final class AdjustBodyComponentsActionFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new AdjustBodyComponentsAction());
     }
 
-    final static long a(CharSequence param0, int param1) {
+    final static long encodeBase37Name(CharSequence param0, int param1) {
         int var5 = 0;
         long stackIn_22_0 = 0L;
         RuntimeException stackIn_25_0 = null;
@@ -25,7 +25,7 @@ final class AdjustBodyComponentsActionFactory implements GameStateFactory {
           var2_long = 0L;
           if (param1 != -49) {
             var8 = (CharSequence) null;
-            AdjustBodyComponentsActionFactory.a((CharSequence) null, 54);
+            AdjustBodyComponentsActionFactory.encodeBase37Name((CharSequence) null, 54);
           }
           var4 = param0.length();
           for (var5 = 0; var4 > var5; var5++) {

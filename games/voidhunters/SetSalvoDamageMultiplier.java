@@ -19,7 +19,7 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
         return stackIn_6_0;
     }
 
-    final static void a(eab param0, int param1, PacketBuffer param2, boolean param3) {
+    final static void a(PlatformService param0, int param1, PacketBuffer param2, boolean param3) {
         try {
           int var5 = 0;
           int var11_int = 0;
@@ -58,15 +58,15 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
           try {
             if (param3) {
               var15 = (PacketBuffer) null;
-              SetSalvoDamageMultiplier.a((eab) null, 59, (PacketBuffer) null, false);
+              SetSalvoDamageMultiplier.a((PlatformService) null, 59, (PacketBuffer) null, false);
             }
             var19 = new mv();
             var19.field_i = param2.readUnsignedByte((byte) -90);
             var19.field_d = param2.readInt(26);
-            var19.field_e = new mob[var19.field_i];
+            var19.field_e = new PlatformRequest[var19.field_i];
             var19.field_j = new int[var19.field_i];
             var19.field_f = new byte[var19.field_i][][];
-            var19.field_g = new mob[var19.field_i];
+            var19.field_g = new PlatformRequest[var19.field_i];
             var19.field_h = new int[var19.field_i];
             var19.field_k = new int[var19.field_i];
             for (var5 = 0; var19.field_i > var5; var5++) {
@@ -103,7 +103,7 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
                       var12[var18] = ProjectileFactory.a(var10[var18], (byte) 99);
                       var18++;
                     }
-                    var19.field_e[var5] = param0.a(var12, (byte) 95, ProjectileFactory.a(var21, (byte) 99), var22);
+                    var19.field_e[var5] = param0.lookupDeclaredMethod(var12, (byte) 95, ProjectileFactory.a(var21, (byte) 99), var22);
                     var19.field_f[var5] = var23;
                   }
                 } else {
@@ -115,7 +115,7 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
                   }
                   var19.field_h[var5] = var6_int;
                   var19.field_j[var5] = var9;
-                  var19.field_g[var5] = param0.a(var16, ProjectileFactory.a(var17, (byte) 99), -6576);
+                  var19.field_g[var5] = param0.lookupDeclaredField(var16, ProjectileFactory.a(var17, (byte) 99), -6576);
                 }
               } catch (java.lang.ClassNotFoundException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

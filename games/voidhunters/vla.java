@@ -347,7 +347,7 @@ final class vla extends UiContainer implements UiTextFieldListener, UiActionList
             vla.clearSharedReferences(30);
           }
           for (var4 = 0; var4 < var2_int; var4++) {
-            var3 = aea.a(-125, param1.charAt(var4)) + (-var3 + (var3 << 5));
+            var3 = Cp1252CharacterEncoder.encodeCp1252Character(-125, param1.charAt(var4)) + (-var3 + (var3 << 5));
           }
           stackIn_7_0 = var3;
           return stackIn_7_0;

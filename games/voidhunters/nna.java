@@ -8,7 +8,7 @@ final class nna extends UiContainer implements UiActionListener {
     private os field_B;
     static int field_w;
     static Widget field_v;
-    static djb field_C;
+    static CommandConsole field_C;
     private BitmapFont field_H;
     private String field_x;
     static ae field_z;

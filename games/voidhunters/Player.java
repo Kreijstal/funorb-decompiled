@@ -396,7 +396,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
           var4.spawnChoice = this.spawnChoice;
           var4.specialorder = this.specialorder;
           var4.aimtargetx = this.aimtargetx;
-          var4.votes = SetTeamSelectionSpeedup.a(var4.votes, (byte) -108, this.votes);
+          var4.votes = SetTeamSelectionSpeedup.copyIntsReusingArray(var4.votes, (byte) -108, this.votes);
           if (this.savedShip == null) {
             var4.savedShip = null;
           } else {
@@ -405,7 +405,7 @@ final class Player extends CarouselPlayerInfo implements DiffableState {
             }
             this.savedShip.copyTo((byte) 93, var4.savedShip);
           }
-          var4.carriedOverComponents = SetTeamSelectionSpeedup.a(var4.carriedOverComponents, (byte) -66, this.carriedOverComponents);
+          var4.carriedOverComponents = SetTeamSelectionSpeedup.copyIntsReusingArray(var4.carriedOverComponents, (byte) -66, this.carriedOverComponents);
           var4.assists = this.assists;
           var4.unassignedForAutobalanceTimer = this.unassignedForAutobalanceTimer;
           var4.kills = this.kills;

@@ -61,7 +61,7 @@ final class sna extends TextureOperation {
         try {
           var4 = new byte[param1];
           var3 = var4;
-          cua.a(param0, 0, var4, 0, param1);
+          ArrayOperations.copy(param0, 0, var4, 0, param1);
           if (param2 == 5666) {
             stackIn_4_0 = var4;
             return stackIn_4_0;

@@ -4,18 +4,18 @@
 final class bd {
     static String field_a;
 
-    final static void a(int param0, int[] param1, ResourceArchive param2, ResourceArchive param3, caa[] param4) {
+    final static void a(int param0, int[] param1, ResourceArchive param2, ResourceArchive param3, SoftwareIndexedSprite2D[] param4) {
         Sprite[] dupTemp$0 = null;
         Sprite[] dupTemp$1 = null;
         Sprite[] dupTemp$2 = null;
         Sprite[] dupTemp$3 = null;
-        caa[] var5 = null;
-        caa[] var6 = null;
+        SoftwareIndexedSprite2D[] var5 = null;
+        SoftwareIndexedSprite2D[] var6 = null;
         int[] var6_array = null;
         int var7_int = 0;
         int var19 = 0;
         int[] var20 = null;
-        caa[] var21 = null;
+        SoftwareIndexedSprite2D[] var21 = null;
         int[] var22 = null;
         int[] var23 = null;
         int[] var24 = null;
@@ -52,7 +52,7 @@ final class bd {
           var5 = var21;
           mha.field_a = var21.length;
           if (param4 != null) {
-            var6 = new caa[mha.field_a + param4.length];
+            var6 = new SoftwareIndexedSprite2D[mha.field_a + param4.length];
             for (var7_int = 0; mha.field_a > var7_int; var7_int++) {
               var6[var7_int] = var21[var7_int];
             }
@@ -77,7 +77,7 @@ final class bd {
               }
             } else {
               for (var7_intLifetime2 = 0; param4.length > var7_intLifetime2; var7_intLifetime2++) {
-                var6_array[mha.field_a + var7_intLifetime2] = param4[var7_intLifetime2].field_g;
+                var6_array[mha.field_a + var7_intLifetime2] = param4[var7_intLifetime2].canvasHeight;
               }
             }
           }
@@ -133,12 +133,12 @@ final class bd {
           ObjectiveMarker.field_d = new Widget(0L, var10);
           ObjectiveMarker.field_d.field_w = 2;
           ObjectiveMarker.field_d.field_gb = GetFighterVision.a(false, true, 2039583, 24436, 3815994, 30);
-          qc.field_q = new Widget(0L, (Widget) null);
-          qc.field_q.field_B = 1;
-          qc.field_q.font = (BitmapFont) ((Object) GetDebrisCarryOverPercentage.field_o);
-          qc.field_q.field_Y = 13421772;
-          qc.field_q.field_D = nna.field_w;
-          GetMissionDebrisDefaultProbability.field_o = new Widget(0L, qc.field_q);
+          DeveloperConsole.field_q = new Widget(0L, (Widget) null);
+          DeveloperConsole.field_q.field_B = 1;
+          DeveloperConsole.field_q.font = (BitmapFont) ((Object) GetDebrisCarryOverPercentage.field_o);
+          DeveloperConsole.field_q.field_Y = 13421772;
+          DeveloperConsole.field_q.field_D = nna.field_w;
+          GetMissionDebrisDefaultProbability.field_o = new Widget(0L, DeveloperConsole.field_q);
           GetMissionDebrisDefaultProbability.field_o.field_jb = 8421504;
           GetMissionDebrisDefaultProbability.field_o.field_U = 16777215;
           GetMissionDebrisDefaultProbability.field_o.field_ib = 16777215;
@@ -148,10 +148,10 @@ final class bd {
           var15.field_D = nna.field_w;
           var15.field_Y = 16777215;
           var15.font = (BitmapFont) ((Object) var7);
-          SetAutoAfkTimeout.field_q = new Widget(0L, qc.field_q);
+          SetAutoAfkTimeout.field_q = new Widget(0L, DeveloperConsole.field_q);
           SetAutoAfkTimeout.field_q.field_gb = GetFighterVision.a(false, false, 2236962, 24436, 2236962, 16);
           SetAutoAfkTimeout.field_q.field_w = 2;
-          SetShieldsDirectionalHalfarcCuts.field_p = new Widget(0L, qc.field_q);
+          SetShieldsDirectionalHalfarcCuts.field_p = new Widget(0L, DeveloperConsole.field_q);
           SetShieldsDirectionalHalfarcCuts.field_p.field_gb = GetFighterVision.a(false, false, 1513239, 24436, 1513239, 16);
           SetShieldsDirectionalHalfarcCuts.field_p.field_w = 2;
           SetShieldsDirectionalArc.field_o = new Widget(0L, SetAutoAfkTimeout.field_q);
@@ -159,7 +159,7 @@ final class bd {
           SetReverbDamp.field_q = new Widget(0L, SetShieldsDirectionalHalfarcCuts.field_p);
           SetReverbDamp.field_q.applyStyle(18445, GetMissionDebrisDefaultProbability.field_o);
           var16 = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "button_mouseover");
-          TextureCombineOperation.field_a = new PopupMenuWidget(GetDebrisMax.field_o, var12, qc.field_q, GetMissionDebrisDefaultProbability.field_o, 3, 2, MissionListFactory.field_a, 3, nna.field_w);
+          TextureCombineOperation.field_a = new PopupMenuWidget(GetDebrisMax.field_o, var12, DeveloperConsole.field_q, GetMissionDebrisDefaultProbability.field_o, 3, 2, MissionListFactory.field_a, 3, nna.field_w);
           dla.field_e = new Widget(0L, GetMissionDebrisDefaultProbability.field_o);
           dla.field_e.field_mb = var16;
           dla.field_e.field_gb = var13;

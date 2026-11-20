@@ -682,7 +682,7 @@ final class MissionState implements DiffableState {
             }
             this.nextround.copyTo((byte) 98, var5.nextround);
           }
-          var5.teamscores = SetTeamSelectionSpeedup.a(var5.teamscores, (byte) -57, this.teamscores);
+          var5.teamscores = SetTeamSelectionSpeedup.copyIntsReusingArray(var5.teamscores, (byte) -57, this.teamscores);
           if (null != this.currentMatch) {
             if (var5.currentMatch == null) {
               var5.currentMatch = new MatchResults();

@@ -4,12 +4,12 @@
 final class GetExplosionProjectileDamage extends ConsoleCommand {
     static boolean field_o;
 
-    final static caa[] a(int param0, String param1, String param2, ResourceArchive param3) {
+    final static SoftwareIndexedSprite2D[] a(int param0, String param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
         int var6 = 0;
-        caa[] stackIn_1_0 = null;
+        SoftwareIndexedSprite2D[] stackIn_1_0 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;

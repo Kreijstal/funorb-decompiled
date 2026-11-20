@@ -5,7 +5,7 @@ final class SetBurstFireMaxEnergy extends ConsoleCommand {
     static String field_p;
     static boolean[] field_o;
 
-    final static void a(byte param0, int[] param1, ResourceArchive param2, ResourceArchive param3, caa[] param4, int[] param5, String[][] param6, ResourceArchive param7, String[][] param8, byte[] param9, byte[] param10, String[] param11, Sprite[][] param12, int param13, Sprite[][] param14, int param15, String[] param16, boolean param17, int param18, String[] param19) {
+    final static void a(byte param0, int[] param1, ResourceArchive param2, ResourceArchive param3, SoftwareIndexedSprite2D[] param4, int[] param5, String[][] param6, ResourceArchive param7, String[][] param8, byte[] param9, byte[] param10, String[] param11, Sprite[][] param12, int param13, Sprite[][] param14, int param15, String[] param16, boolean param17, int param18, String[] param19) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

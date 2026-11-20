@@ -96,7 +96,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
           ow.field_b = 2;
           waa.field_x = param2;
           var5 = (CharSequence) ((Object) param2);
-          GetDebrisThrowable.field_o = jwa.a(false, var5);
+          GetDebrisThrowable.field_o = jwa.normalizeName(false, var5);
           SetFightersPerPlayerMaximum.field_p = true;
           if (param0 != 39) {
             field_o = (String) null;

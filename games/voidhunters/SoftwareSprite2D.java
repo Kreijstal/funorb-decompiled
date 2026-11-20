@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ija {
-    int field_h;
+abstract class SoftwareSprite2D {
+    int width;
     static String field_c;
-    int field_d;
-    int field_e;
-    int field_a;
-    static mob field_b;
-    int field_g;
-    int field_f;
+    int offsetY;
+    int height;
+    int canvasWidth;
+    static PlatformRequest field_b;
+    int canvasHeight;
+    int offsetX;
 
-    abstract void a(int param0, int param1);
+    abstract void draw(int param0, int param1);
 
     final static void a(int param0) {
         DualLinkNode var2 = null;
@@ -43,7 +43,7 @@ abstract class ija {
     public static void clearSharedReferences(boolean param0) {
         field_c = null;
         if (!param0) {
-          field_b = (mob) null;
+          field_b = (PlatformRequest) null;
           field_b = null;
           return;
         }
@@ -65,7 +65,7 @@ abstract class ija {
         try {
           if (param2 != 0) {
             var5 = (GameStateFactory) null;
-            ija.a(param1[1], (Object[]) null, ((int[]) (param1[7]))[7], (GameStateFactory) null);
+            SoftwareSprite2D.a(param1[1], (Object[]) null, ((int[]) (param1[7]))[7], (GameStateFactory) null);
           }
           stackIn_3_0 = GetFighterBayReload.a(param1, param0, false, param3, param2 - 110);
           return stackIn_3_0;
@@ -95,7 +95,7 @@ abstract class ija {
         }
     }
 
-    abstract void a(int param0, int param1, int param2);
+    abstract void drawWithAlpha(int param0, int param1, int param2);
 
     static {
         field_c = "Players: ";

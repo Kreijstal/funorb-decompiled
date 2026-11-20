@@ -341,7 +341,7 @@ final class hnb extends iw implements UiActionListener {
         }
     }
 
-    private final UiFocusableComponent a(String param0, byte param1, UiListener param2, caa[] param3) {
+    private final UiFocusableComponent a(String param0, byte param1, UiListener param2, SoftwareIndexedSprite2D[] param3) {
         UiFocusableComponent var5 = null;
         RuntimeException var5_ref = null;
         usb var6 = null;

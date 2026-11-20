@@ -47,7 +47,7 @@ final class mn {
             }
           }
           if (SetBombletSprayAimarc.field_o.field_o != 0) {
-            Asteroid.field_v = new bwa(SetBombletSprayAimarc.field_o.screenX, SetBombletSprayAimarc.field_o.screenY, SetBombletSprayAimarc.field_o.width, SetBombletSprayAimarc.field_o.height, param2, DualLinkNode.field_g, lo.field_b, GetFighterBayReload.field_p, qc.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o, (String) null, 0L);
+            Asteroid.field_v = new bwa(SetBombletSprayAimarc.field_o.screenX, SetBombletSprayAimarc.field_o.screenY, SetBombletSprayAimarc.field_o.width, SetBombletSprayAimarc.field_o.height, param2, DualLinkNode.field_g, lo.field_b, GetFighterBayReload.field_p, DeveloperConsole.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o, (String) null, 0L);
           }
           var9 = SetMissionDebrisDefaultProbability.b(nna.field_w, qs.field_c, param1, -123);
           if (var9 != null) {
@@ -88,7 +88,7 @@ final class mn {
             field_a = (String) null;
           }
           for (var2_int = 0; var2_int < param0.length(); var2_int++) {
-            if (!GetAngularVelocitySustainMax.a((byte) -108, param0.charAt(var2_int))) {
+            if (!GetAngularVelocitySustainMax.isNormalizableNameCharacter((byte) -108, param0.charAt(var2_int))) {
               return false;
             }
           }

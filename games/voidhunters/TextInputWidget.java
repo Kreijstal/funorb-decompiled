@@ -3,7 +3,7 @@
  */
 final class TextInputWidget extends Widget {
     private int doubleClickWordEnd;
-    private eab clipboardService;
+    private PlatformService clipboardService;
     private Widget caretWidget;
     private boolean doubleClickSelection;
     private StringBuilder textBuffer;
@@ -17,7 +17,7 @@ final class TextInputWidget extends Widget {
     private int maximumLength;
     static String field_Jb;
     private int selectionAnchor;
-    private mob pendingClipboardRequest;
+    private PlatformRequest pendingClipboardRequest;
 
     public static void clearSharedReferences(byte param0) {
         if (param0 != 124) {
@@ -33,8 +33,8 @@ final class TextInputWidget extends Widget {
         int dupTemp$1 = 0;
         try {
           if (param1 > -85) {
-            eab var4 = (eab) null;
-            this.setClipboardService(30, (eab) null);
+            PlatformService var4 = (PlatformService) null;
+            this.setClipboardService(30, (PlatformService) null);
           }
           this.textBuffer.setLength(0);
           var3_int = param0.length();
@@ -122,7 +122,7 @@ final class TextInputWidget extends Widget {
         if (null == this.clipboardService) {
           return;
         }
-        this.pendingClipboardRequest = this.clipboardService.c(param0 - 10964);
+        this.pendingClipboardRequest = this.clipboardService.readClipboard(param0 - 10964);
         if (param0 != 11090) {
           this.dragSelecting = true;
         }
@@ -139,7 +139,7 @@ final class TextInputWidget extends Widget {
         return this.caretPosition;
     }
 
-    final void setClipboardService(int param0, eab param1) {
+    final void setClipboardService(int param0, PlatformService param1) {
         try {
           if (param0 != -20640) {
             this.deleteSelection(false);
@@ -230,8 +230,8 @@ final class TextInputWidget extends Widget {
             this.selectionWidget.setBounds(this.caretWidget.x, -30, 0, 2, this.selectionHeight);
           }
           if (this.pendingClipboardRequest != null &&
-            this.pendingClipboardRequest.field_f != 0) {
-            var7 = (java.awt.datatransfer.Transferable) (this.pendingClipboardRequest.field_d);
+            this.pendingClipboardRequest.status != 0) {
+            var7 = (java.awt.datatransfer.Transferable) (this.pendingClipboardRequest.result);
             try {
               var8 = (String) (var7.getTransferData(java.awt.datatransfer.DataFlavor.stringFlavor));
               this.deleteSelection(true);
@@ -557,7 +557,7 @@ final class TextInputWidget extends Widget {
           return;
         }
         java.awt.datatransfer.StringSelection var3 = new java.awt.datatransfer.StringSelection(this.getSelectedText(-100));
-        this.clipboardService.a((byte) -45, (java.awt.datatransfer.Transferable) ((Object) var3));
+        this.clipboardService.writeClipboard((byte) -45, (java.awt.datatransfer.Transferable) ((Object) var3));
     }
 
     private final int getNextWordBoundary(int param0) {

@@ -39,7 +39,7 @@ final class ComponentAttachmentPlan {
               }
               var4Lifetime1++;
             }
-            this.obstructions = (ShipComponent[]) (ija.a(param1, this.obstructions, 0, ArchiveTextureProvider.field_d));
+            this.obstructions = (ShipComponent[]) (SoftwareSprite2D.a(param1, this.obstructions, 0, ArchiveTextureProvider.field_d));
           }
           if (param0 != 108) {
             var6 = (String) null;

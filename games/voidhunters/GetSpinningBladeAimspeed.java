@@ -48,7 +48,7 @@ final class GetSpinningBladeAimspeed extends ConsoleCommand {
 
     final static boolean a(int param0) {
         if (nna.field_C != null) {
-          return nna.field_C.a(SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r, -40);
+          return nna.field_C.handleKey(SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r, -40);
         }
         if (param0 != -22029) {
           return false;

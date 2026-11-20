@@ -79,7 +79,7 @@ final class fia {
           waa.field_x = param4;
           ow.field_b = param1;
           var8 = (CharSequence) ((Object) param4);
-          GetDebrisThrowable.field_o = jwa.a(false, var8);
+          GetDebrisThrowable.field_o = jwa.normalizeName(false, var8);
           lsa.field_f = param3;
           var7 = MessageLog.createQuickChatPhraseMenu(jwa.field_k, param0, 0, DebrisFactory.field_a, ScrollableActionPanel.field_Ab);
           AsteroidFieldFactory.a((byte) -28, var7);

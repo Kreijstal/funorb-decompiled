@@ -27,7 +27,7 @@ final class usb extends UiArrayContainer {
             0 < this.children.length &&
             var5.length > 0 &&
             param2 > 0) {
-            cua.a(this.children, 0, var5, 0, Math.min(param2, param0) * var4);
+            ArrayOperations.copy(this.children, 0, var5, 0, Math.min(param2, param0) * var4);
           }
           this.children = var5;
           return;
@@ -38,7 +38,7 @@ final class usb extends UiArrayContainer {
           0 < this.children.length &&
           var5Lifetime1.length > 0 &&
           param2 > 0) {
-          cua.a(this.children, 0, var5Lifetime1, 0, Math.min(param2, param0) * var4);
+          ArrayOperations.copy(this.children, 0, var5Lifetime1, 0, Math.min(param2, param0) * var4);
         }
         this.children = var5Lifetime1;
     }
@@ -90,7 +90,7 @@ final class usb extends UiArrayContainer {
           return;
         }
         for (var6 = 0; var4 > var6; var6++) {
-          cua.a(this.field_v, param2 * var6, var5, param0 * var6, Math.min(param2, param0));
+          ArrayOperations.copy(this.field_v, param2 * var6, var5, param0 * var6, Math.min(param2, param0));
         }
         this.field_v = var5;
         if (param1 < -49) {
@@ -109,9 +109,9 @@ final class usb extends UiArrayContainer {
         try {
           var10 = new int[param5];
           int[] var8 = var10;
-          cua.a(var10, 0, param5, 1);
+          ArrayOperations.fill(var10, 0, param5, 1);
           var9 = new int[param6];
-          cua.a(var9, 0, param6, 1);
+          ArrayOperations.fill(var9, 0, param6, 1);
           this.a(0, var10);
           this.a((byte) -115, var9);
         } catch (RuntimeException runtimeException) {
@@ -236,7 +236,7 @@ final class usb extends UiArrayContainer {
           return;
         }
         if (param2 > 0) {
-          cua.a(this.field_v, 0, var5, 0, Math.min(param2, param0) * var4);
+          ArrayOperations.copy(this.field_v, 0, var5, 0, Math.min(param2, param0) * var4);
           this.field_v = var5;
           return;
         }
@@ -529,7 +529,7 @@ final class usb extends UiArrayContainer {
           var5.length > 0 &&
           param0 > 0) {
           for (var6 = 0; var4 > var6; var6++) {
-            cua.a(this.children, param0 * var6, var5, param2 * var6, Math.min(param0, param2));
+            ArrayOperations.copy(this.children, param0 * var6, var5, param2 * var6, Math.min(param0, param2));
           }
         }
         this.children = var5;

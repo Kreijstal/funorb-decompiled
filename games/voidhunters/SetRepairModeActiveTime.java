@@ -128,12 +128,12 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
             DualLinkNode.field_f.addChild(param1 - 10792, GetDebrisGrabbingRange.field_o);
           }
           DualLinkNode.field_f.addChild(param1 - 10792, CarouselSlot.field_a);
-          CarouselSlot.field_a.viewport.applyStyle(param1 + 8214, qc.field_q);
+          CarouselSlot.field_a.viewport.applyStyle(param1 + 8214, DeveloperConsole.field_q);
           var23 = CarouselSlot.field_a.viewport;
           var24 = var23;
           CarouselSlot.field_a.viewport.field_B = 1;
           var24.field_F = 1;
-          nna.field_v = new Widget(0L, qc.field_q);
+          nna.field_v = new Widget(0L, DeveloperConsole.field_q);
           nna.field_v.field_F = 1;
           SpawnChoiceFactory.field_c = new Widget(0L, SetPlayerRepairAmount.field_q, bw.field_a.toUpperCase());
           qpb.field_w = new Widget(0L, pa.field_a, SetMachineGunAimarc.field_o.toUpperCase());
@@ -177,7 +177,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
             bqa.field_d.addChild(-561, GetMomentOfInertiaPerpointCalcDownshift.field_p);
           }
           bqa.field_d.addChild(-561, oib.field_a);
-          Debris.field_y = new Widget(0L, qc.field_q);
+          Debris.field_y = new Widget(0L, DeveloperConsole.field_q);
           Debris.field_y.field_F = 1;
           Debris.field_y.field_B = 0;
           SetTorpedoAcceleration.field_o = new Widget(0L, hnb.field_X, UiComboBoxList.field_K.toUpperCase());
@@ -185,7 +185,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           GetTorpedoProjectiles.field_o.addChild(-561, Debris.field_y);
           GetTorpedoProjectiles.field_o.addChild(-561, SetTorpedoAcceleration.field_o);
           GetTorpedoProjectileDamage.field_p = new Widget(0L, UiFocusableComponent.field_w);
-          GetTorpedoProjectileDamage.field_p.applyStyle(18445, qc.field_q);
+          GetTorpedoProjectileDamage.field_p.applyStyle(18445, DeveloperConsole.field_q);
           var16 = GetTorpedoProjectileDamage.field_p;
           GetTorpedoProjectileDamage.field_p.field_B = 1;
           if (param1 != 10231) {
@@ -193,7 +193,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           }
           var16.field_F = 1;
           SetOndamageParticleLife.field_o = new Widget(0L, (Widget) null);
-          SetPhasedEnergyBeamPulsetime.field_o = new Widget(0L, qc.field_q);
+          SetPhasedEnergyBeamPulsetime.field_o = new Widget(0L, DeveloperConsole.field_q);
           SetPhasedEnergyBeamPulsetime.field_o.field_F = 1;
           SecondaryNodeDequeIterator.field_a = new Widget(0L, GetThrusterBindingBalanceThreshold.field_p, kpb.field_r);
           GetPointDefenceLaserProjectileDamage.field_o = new Widget(0L, ObjectiveMarker.field_d, GetMessageMaxage.field_p);
@@ -278,7 +278,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           vw.field_a = new Widget(0L, SetGrapplingHookMaxExtension8Force.field_p);
           ObjectiveMarker.field_b = new Widget(0L, SetGrapplingHookMaxExtension8Force.field_p);
           SetAutozoomSpeedDivide.field_p = new Widget(0L, SetAutoAfkTimeout.field_q);
-          SetAutozoomSpeedDivide.field_p.applyStyle(18445, qc.field_q);
+          SetAutozoomSpeedDivide.field_p.applyStyle(18445, DeveloperConsole.field_q);
           SetAutozoomSpeedDivide.field_p.field_B = 1;
           var17 = SetAutozoomSpeedDivide.field_p;
           var17.field_F = 1;

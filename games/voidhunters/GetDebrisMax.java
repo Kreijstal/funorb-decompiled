@@ -83,7 +83,7 @@ final class GetDebrisMax extends ConsoleCommand {
                   } else {
                     if (var5 != 95) {
                       if (var5 != 32) {
-                        var6 = aea.a(param1 ^ -90, (char) var5);
+                        var6 = Cp1252CharacterEncoder.encodeCp1252Character(param1 ^ -90, (char) var5);
                         discarded$6 = var3.append('%');
                         var7 = (var6 & 244) >> 4;
                         if (var7 < 10) {

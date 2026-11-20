@@ -454,7 +454,7 @@ final class MissionBuilder implements DiffableState {
         try {
           var5 = new int[2 * param0];
           var4 = var5;
-          cua.a(param2, 0, var5, 0, param2.length);
+          ArrayOperations.copy(param2, 0, var5, 0, param2.length);
           param2 = var5;
           if (param1 >= -83) {
             this.optionTotals = (int[]) null;
@@ -780,7 +780,7 @@ final class MissionBuilder implements DiffableState {
                   var13.setAngle(GameKeyHandler.a(22433, var13.getAngle(0) + 4096), -93);
                   var13.setPosition(-var13.x, -var13.y, (byte) -112);
                   param0.world.addDebris(var13, (byte) 53);
-                  var5 = (ShipBody[]) (ija.a(var13, (Object[]) (var5), 0, ebb.field_a));
+                  var5 = (ShipBody[]) (SoftwareSprite2D.a(var13, (Object[]) (var5), 0, ebb.field_a));
                 }
               } else {
                 var12 = new Ship();
@@ -798,7 +798,7 @@ final class MissionBuilder implements DiffableState {
                   }
                 }
                 param0.world.addShip(var12, (byte) 85);
-                var5 = (ShipBody[]) (ija.a(var12, (Object[]) (var5), 0, ebb.field_a));
+                var5 = (ShipBody[]) (SoftwareSprite2D.a(var12, (Object[]) (var5), 0, ebb.field_a));
               }
             }
           }
@@ -902,7 +902,7 @@ final class MissionBuilder implements DiffableState {
             var21.setAi(new ShipAI(), 4);
             var21.setTeam(17704, 1);
             param2.addShip(var21, (byte) 81);
-            var19 = (ShipBody[]) (ija.a(var21, (Object[]) (var19), 0, ebb.field_a));
+            var19 = (ShipBody[]) (SoftwareSprite2D.a(var21, (Object[]) (var19), 0, ebb.field_a));
           }
           stackIn_5_0 = var19;
           return (ShipBody[]) (stackIn_5_0);
@@ -1199,7 +1199,7 @@ final class MissionBuilder implements DiffableState {
             var19.setAi(new ShipAI(), 4);
             var19.setTeam(17704, 1);
             param2.addShip(var19, (byte) 92);
-            var17Lifetime2 = (ShipBody[]) (ija.a(var19, (Object[]) (var17Lifetime2), 0, ebb.field_a));
+            var17Lifetime2 = (ShipBody[]) (SoftwareSprite2D.a(var19, (Object[]) (var17Lifetime2), 0, ebb.field_a));
           }
           stackIn_10_0 = var17Lifetime2;
           return (ShipBody[]) (stackIn_10_0);
@@ -2178,7 +2178,7 @@ final class MissionBuilder implements DiffableState {
         try {
           var3 = (MissionBuilder) (param1);
           var3.seed = this.seed;
-          var3.optionTotals = SetTeamSelectionSpeedup.a(var3.optionTotals, (byte) -117, this.optionTotals);
+          var3.optionTotals = SetTeamSelectionSpeedup.copyIntsReusingArray(var3.optionTotals, (byte) -117, this.optionTotals);
           if (param0 <= 54) {
             discarded$0 = this.a(87, -72, (World) null, 18);
           }
@@ -2243,7 +2243,7 @@ final class MissionBuilder implements DiffableState {
 
     final void a(boolean param0, MapClearanceArea param1) {
         try {
-          this.clearanceAreas = (MapClearanceArea[]) (ija.a(param1, this.clearanceAreas, 0, SetCountermeasureLauncherFireForce.field_o));
+          this.clearanceAreas = (MapClearanceArea[]) (SoftwareSprite2D.a(param1, this.clearanceAreas, 0, SetCountermeasureLauncherFireForce.field_o));
           if (!param0) {
             field_f = (float[]) null;
           }
@@ -2541,7 +2541,7 @@ final class MissionBuilder implements DiffableState {
             var16 = hob.a(param1, 8192, 126);
             var19.setAngle(var16, -107);
             param4.addDebris(var19, (byte) 99);
-            var7 = (ShipBody[]) (ija.a(var19, (Object[]) (var7), param0 ^ 0, ebb.field_a));
+            var7 = (ShipBody[]) (SoftwareSprite2D.a(var19, (Object[]) (var7), param0 ^ 0, ebb.field_a));
           }
           var9Lifetime1 = -param4.getWidth((byte) -122) / 2;
           var10Lifetime1 = param4.getWidth((byte) -122) / 2;
@@ -2788,7 +2788,7 @@ final class MissionBuilder implements DiffableState {
               var7.x = -var7.width - var7.x;
               var7.y = -var7.y - var7.height;
               param1.addMapZone(5706, var7);
-              var4 = (MapZone[]) (ija.a(var7, (Object[]) (var4), 0, wsb.field_e));
+              var4 = (MapZone[]) (SoftwareSprite2D.a(var7, (Object[]) (var4), 0, wsb.field_e));
             }
           }
           stackIn_9_0 = var4;

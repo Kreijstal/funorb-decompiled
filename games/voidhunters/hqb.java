@@ -50,7 +50,7 @@ final class hqb {
         if (17 != param1) {
           return false;
         }
-        Asteroid.field_v = new bwa(this.field_b.screenX, this.field_b.screenY, this.field_b.width, this.field_b.height, param2, DualLinkNode.field_g, lo.field_b, GetFighterBayReload.field_p, qc.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o, this.field_a, this.field_d);
+        Asteroid.field_v = new bwa(this.field_b.screenX, this.field_b.screenY, this.field_b.width, this.field_b.height, param2, DualLinkNode.field_g, lo.field_b, GetFighterBayReload.field_p, DeveloperConsole.field_q, SetShieldsDirectionalArcParticleLife.field_o, GetMissionDebrisDefaultProbability.field_o, this.field_a, this.field_d);
         return true;
     }
 
@@ -217,7 +217,7 @@ final class hqb {
           }
           if (param0 >= -13) {
             var7 = (CharSequence) null;
-            hqb.a(false, (byte) -9, (CharSequence) null);
+            hqb.getNameFormatError(false, (byte) -9, (CharSequence) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -234,7 +234,7 @@ final class hqb {
         }
     }
 
-    final static String a(boolean param0, byte param1, CharSequence param2) {
+    final static String getNameFormatError(boolean param0, byte param1, CharSequence param2) {
         int var6 = 0;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -266,7 +266,7 @@ final class hqb {
           var3_int = param2.length();
           if (var3_int >= 1 &&
             var3_int <= 12) {
-            var4 = jwa.a(false, param2);
+            var4 = jwa.normalizeName(false, param2);
             if (var4 != null &&
               var4.length() >= 1) {
               if (!MouseWheelInput.isNameSeparator(var4.charAt(0), 56) &&
@@ -317,7 +317,7 @@ final class hqb {
         field_k = (String[][]) null;
         if (param0 > -103) {
           CharSequence var2 = (CharSequence) null;
-          hqb.a(true, (byte) -64, (CharSequence) null);
+          hqb.getNameFormatError(true, (byte) -64, (CharSequence) null);
         }
         field_j = null;
     }

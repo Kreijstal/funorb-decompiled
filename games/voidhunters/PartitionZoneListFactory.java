@@ -47,7 +47,7 @@ final class PartitionZoneListFactory implements GameStateFactory {
         byte[] var15 = null;
         var9 = VoidHunters.field_G;
         try {
-          if (!MessageLog.field_c.field_k) {
+          if (!MessageLog.field_c.privilegedAccess) {
             stackIn_3_0 = -1;
             return stackIn_3_0;
           }
@@ -114,7 +114,7 @@ final class PartitionZoneListFactory implements GameStateFactory {
             }
             try {
               if (var6 == 0) {
-                MessageLog.field_c.a(var14, (byte) 110, var11);
+                MessageLog.field_c.writeFile(var14, (byte) 110, var11);
               }
             } catch (java.lang.Throwable decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;

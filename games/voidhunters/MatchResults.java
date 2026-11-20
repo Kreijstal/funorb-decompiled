@@ -157,7 +157,7 @@ final class MatchResults implements DiffableState {
           if (param0 < 87) {
             field_b = 57;
           }
-          this.results = (RoundResult[]) (ija.a(param1, this.results, 0, lm.field_b));
+          this.results = (RoundResult[]) (SoftwareSprite2D.a(param1, this.results, 0, lm.field_b));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qqb.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

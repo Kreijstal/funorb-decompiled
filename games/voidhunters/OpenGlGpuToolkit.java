@@ -743,7 +743,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         try {
           var4 = new float[param1];
           var3 = var4;
-          cua.a(param0, 0, var4, 0, param1);
+          ArrayOperations.copy(param0, 0, var4, 0, param1);
           if (param2 != 7353) {
             field_Oc = -20;
           }

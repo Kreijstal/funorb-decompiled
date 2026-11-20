@@ -111,7 +111,7 @@ final class pla extends UiFocusableComponent {
         if (!cgb.field_a) {
           throw new IllegalStateException();
         }
-        djb.field_r = true;
+        CommandConsole.field_r = true;
         GetSniperCannonProjectiles.a(false, param0 - 122);
         GetSpinningBladeAimspeed.field_q = param0;
     }

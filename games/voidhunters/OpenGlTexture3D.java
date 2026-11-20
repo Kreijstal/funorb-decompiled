@@ -74,7 +74,7 @@ final class OpenGlTexture3D extends OpenGlTexture {
         }
     }
 
-    final static ufb a(int param0, eab param1, int param2, int param3, int param4, int param5) {
+    final static ufb a(int param0, PlatformService param1, int param2, int param3, int param4, int param5) {
         java.awt.Frame var6 = null;
         RuntimeException var6_ref = null;
         ufb var7 = null;

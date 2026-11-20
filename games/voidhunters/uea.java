@@ -111,7 +111,7 @@ final class uea extends UiTextStyle {
               }
             }
           } else {
-            cua.a(this.field_q, 0, param0.field_q, 0, 6);
+            ArrayOperations.copy(this.field_q, 0, param0.field_q, 0, 6);
           }
           if (param1 != 6) {
             this.field_r = (vv) null;

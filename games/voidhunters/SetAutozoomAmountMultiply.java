@@ -50,7 +50,7 @@ final class SetAutozoomAmountMultiply extends ConsoleCommand {
         if (param0 != 0) {
           return false;
         }
-        return ila.a(param0 ^ 0, MissionList.b((byte) -113));
+        return TextNode.isTuhstatbutEnabled(param0 ^ 0, MissionList.b((byte) -113));
     }
 
     SetAutozoomAmountMultiply(String param0, Class[] param1, String param2) {

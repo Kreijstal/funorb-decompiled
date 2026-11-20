@@ -84,7 +84,7 @@ final class jk extends Widget {
             this.a(-116, (jk) null);
           }
           var6 = (CharSequence) ((Object) this.field_Hb);
-          jwa.a(false, var6);
+          jwa.normalizeName(false, var6);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jk.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -98,7 +98,7 @@ final class jk extends Widget {
           this.field_xb = param1;
           this.field_Hb = param0;
           var6 = (CharSequence) ((Object) this.field_Hb);
-          jwa.a(false, var6);
+          jwa.normalizeName(false, var6);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jk.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

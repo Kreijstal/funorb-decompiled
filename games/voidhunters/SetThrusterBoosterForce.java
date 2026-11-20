@@ -36,7 +36,7 @@ final class SetThrusterBoosterForce extends ConsoleCommand {
         }
     }
 
-    final static String a(int param0, boolean param1, CharSequence param2) {
+    final static String getNameValidationError(int param0, boolean param1, CharSequence param2) {
         String var3 = null;
         int var4 = 0;
         int var5 = 0;
@@ -50,7 +50,7 @@ final class SetThrusterBoosterForce extends ConsoleCommand {
         RuntimeException var3_ref = null;
         var6 = VoidHunters.field_G;
         try {
-          var3 = hqb.a(param1, (byte) 43, param2);
+          var3 = hqb.getNameFormatError(param1, (byte) 43, param2);
           var4 = 107 / ((param0 + 12) / 63);
           if (var3 != null) {
             stackIn_3_0 = var3;
@@ -61,7 +61,7 @@ final class SetThrusterBoosterForce extends ConsoleCommand {
             if (param2.length() <= var5) {
               return null;
             }
-            if (SetMissileLauncherProjectiles.a(16647, param2.charAt(var5))) {
+            if (SetMissileLauncherProjectiles.isBasicNameCharacter(16647, param2.charAt(var5))) {
               var5++;
               continue;
             }

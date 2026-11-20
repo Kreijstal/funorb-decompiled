@@ -5,7 +5,7 @@ final class SetMissileLauncherProjectiles extends ConsoleCommand {
     static String field_p;
     static String[] field_o;
 
-    final static boolean a(int param0, char param1) {
+    final static boolean isBasicNameCharacter(int param0, char param1) {
         if (Character.isISOControl(param1)) {
           return false;
         }

@@ -5,7 +5,7 @@ final class SpecialOrderSubmessage implements DiffableState {
     ShipBlueprint blueprint;
     SettingsChange settingsChange;
     SpawnChoice spawnchoice;
-    static caa[] field_f;
+    static SoftwareIndexedSprite2D[] field_f;
     int ordertype;
     PlayerVote vote;
 

@@ -178,20 +178,20 @@ final class ArchiveDiskWorker implements Runnable {
         }
     }
 
-    ArchiveDiskWorker(eab param0) {
-        mob var2 = null;
+    ArchiveDiskWorker(PlatformService param0) {
+        PlatformRequest var2 = null;
         this.field_d = new SecondaryNodeQueue();
         this.pendingCount = 0;
         this.stopped = false;
         try {
-          var2 = param0.a(0, 5, (Runnable) (this));
-          while (0 == var2.field_f) {
+          var2 = param0.startThread(0, 5, (Runnable) (this));
+          while (0 == var2.status) {
             BufferedFile.sleep(-52, 10L);
           }
-          if (var2.field_f == 2) {
+          if (var2.status == 2) {
             throw new RuntimeException();
           }
-          this.thread = (Thread) (var2.field_d);
+          this.thread = (Thread) (var2.result);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pfa.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

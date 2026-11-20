@@ -51,7 +51,7 @@ final class SetPhysicsCollisionPhantomForceMultiplier extends ConsoleCommand {
             field_o = (String) null;
           }
           var3 = (CharSequence) ((Object) param1);
-          stackIn_3_0 = ffb.field_e.equals(jwa.a(false, var3));
+          stackIn_3_0 = ffb.field_e.equals(jwa.normalizeName(false, var3));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

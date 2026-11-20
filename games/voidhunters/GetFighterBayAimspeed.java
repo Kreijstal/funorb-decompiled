@@ -10,7 +10,7 @@ final class GetFighterBayAimspeed extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(eab param0, dra param1, java.awt.Component param2, boolean param3, int param4, int param5, byte param6, int param7) {
+    final static void a(PlatformService param0, dra param1, java.awt.Component param2, boolean param3, int param4, int param5, byte param6, int param7) {
         try {
           AudioOutput.configure(param7, param3, 10);
           SetSelfDestructTimer.field_o = AudioOutput.create(param0, param2, 0, param4);

@@ -99,14 +99,14 @@ final class hma {
         if (param0 > 110) {
           var4 = new int[this.a(0, param1)];
           var3 = var4;
-          cua.a(this.field_c, 0, var4, 0, this.field_c.length);
+          ArrayOperations.copy(this.field_c, 0, var4, 0, this.field_c.length);
           this.field_c = var4;
           return;
         }
         field_d = (int[]) null;
         var4Lifetime1 = new int[this.a(0, param1)];
         var3Lifetime1 = var4Lifetime1;
-        cua.a(this.field_c, 0, var4Lifetime1, 0, this.field_c.length);
+        ArrayOperations.copy(this.field_c, 0, var4Lifetime1, 0, this.field_c.length);
         this.field_c = var4Lifetime1;
     }
 
@@ -129,7 +129,7 @@ final class hma {
         }
         if (param1 == 70) {
           if (param0 != this.field_a) {
-            cua.a(this.field_c, 1 + param0, this.field_c, param0, this.field_a - param0);
+            ArrayOperations.copy(this.field_c, 1 + param0, this.field_c, param0, this.field_a - param0);
           }
           this.field_a = this.field_a - 1;
           return;

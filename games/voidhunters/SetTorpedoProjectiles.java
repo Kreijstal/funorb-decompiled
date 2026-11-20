@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetTorpedoProjectiles extends ConsoleCommand {
-    static eab field_o;
+    static PlatformService field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -111,7 +111,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
           var5_int = 0;
           var6 = 0;
           if (param1 != 1) {
-            field_o = (eab) null;
+            field_o = (PlatformService) null;
           }
           var7 = 0;
           var8 = 0;
@@ -174,7 +174,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                 var12.addChild(-561, var12.field_Jb);
               }
               var12.field_Jb.field_F = 2;
-              var12.field_Mb = new Widget(0L, qc.field_q);
+              var12.field_Mb = new Widget(0L, DeveloperConsole.field_q);
               var12.addChild(-561, var12.field_Mb);
               var12.inheritInteractionStateInDescendants(121);
               var12.field_wb = new Widget(0L, jba.field_h);

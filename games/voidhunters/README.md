@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1156/1572 classes and 5941/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 416 opaque classes and 2274 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1168/1572 classes and 6021/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 404 opaque classes and 2194 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -28,6 +28,8 @@ Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionCo
 `UiScrollBar`, `UiScrollPane`, `UiViewport` and `UiDraggableContainer` expose thumb geometry, normalized positions, clipping, dragging and scroll offsets. `UiComboBox` names prefix selection and dropdown layout; `UiComboBoxList`, `UiFocusProxy` and `UiComboBoxRenderer` separate its list, focus ownership and selected-text rendering. `QuickChatCategoryLoader` caches group-zero `QuickChatCategoryDefinition` records and recursive category menu construction names their linked categories, phrases and shortcuts.
 
 `UiTextField` and `TextInputWidget` name caret/selection editing, word boundaries and direct/asynchronous clipboard operations. `UiTextRenderer` and `UiTextStyle` expose layout metrics, hit-testing, caret and selection drawing. `TextLayout`, `BitmapTextLayout` and `TextLayoutLine` retain line bounds and character-boundary positions; their names preserve the original alignment, caching, markup and spacing behavior.
+
+`PlatformService` queues `PlatformRequest` operations for sockets, threads, reflection, clipboard and display/cursor access. The Microsoft-JVM fullscreen and cursor controllers retain their native contracts. `ArrayOperations`, `Cp1252CharacterEncoder`, `SoftwareSprite2D` and `SoftwareIndexedSprite2D` name array, encoding and indexed raster helpers. `DeveloperConsole` and `CommandConsole` expose animated output, command history, expression execution and completion through `TextNode` records.
 
 `ShipBody` names force accumulation, motion integration, mass properties, bounds and controls. `ShipComponent` exposes its tree, transforms, aiming, health, attachment and collision operations. `ComponentAttachmentPlan` records the chosen `HardpointMatch` and obstructions; `ComponentCollision` and `ComponentContact` separate polygon overlaps from contact points. `ProjectileHit` resolves impact effects and damage, while `ProjectileTraceResult` retains the nearest intersection.
 

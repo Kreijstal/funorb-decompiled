@@ -136,7 +136,7 @@ final class SoundCache {
         }
     }
 
-    final static void initializeClientProtocol(int param0, int param1, int param2, int param3, eab param4, long param5, String param6, boolean param7, int param8, int param9, boolean param10, int param11, int param12, int param13) {
+    final static void initializeClientProtocol(int param0, int param1, int param2, int param3, PlatformService param4, long param5, String param6, boolean param7, int param8, int param9, boolean param10, int param11, int param12, int param13) {
         try {
           RuntimeException stackIn_12_0 = null;
           StringBuilder stackIn_12_1 = null;
@@ -163,11 +163,11 @@ final class SoundCache {
               SoundCache.clearSharedReferences((byte) -11);
             }
             GetRespawnTime.field_o = param7;
-            if (null == cp.field_n.field_o) {
+            if (null == cp.field_n.randomFile) {
               return;
             }
             try {
-              SetCountermeasureLauncherAimarc.field_r = new BufferedFile(cp.field_n.field_o, 64, 0);
+              SetCountermeasureLauncherAimarc.field_r = new BufferedFile(cp.field_n.randomFile, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

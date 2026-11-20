@@ -5,7 +5,7 @@ final class AudioPump implements Runnable {
     volatile boolean running;
     static boolean[] field_a;
     volatile AudioOutput[] outputs;
-    eab platform;
+    PlatformService platform;
     volatile boolean stopRequested;
 
     public static void clearSharedReferences(int param0) {
