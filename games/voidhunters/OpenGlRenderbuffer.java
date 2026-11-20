@@ -163,7 +163,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements OpenGlFramebuffer
           if (param1 != 0) {
             stackIn_26_0 = csa.field_a;
           } else {
-            stackIn_26_0 = fdb.field_T;
+            stackIn_26_0 = FadingMidiPcmStream.field_T;
           }
           return stackIn_26_0;
         }

@@ -51,7 +51,7 @@ final class SetBombletSprayPushMultiplier extends ConsoleCommand {
         if (param0 != 0) {
           return (Widget) null;
         }
-        return vra.field_b.content;
+        return AttachmentInputState.field_b.content;
     }
 
     static {

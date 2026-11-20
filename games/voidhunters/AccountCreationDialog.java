@@ -29,7 +29,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements UiActio
 
     final static void drawWorldArrow(int param0, byte param1, int param2, int param3, int param4, int param5, Camera2D param6) {
         try {
-          GetCountermeasureLauncherAimarc.a(param2, param6, param0, 3, param4, param5, 255, param3);
+          GetCountermeasureLauncherAimarc.drawWorldArrow(param2, param6, param0, 3, param4, param5, 255, param3);
           if (param1 <= 68) {
             field_Y = false;
           }

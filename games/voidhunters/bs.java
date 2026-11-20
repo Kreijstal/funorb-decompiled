@@ -12,7 +12,7 @@ final class bs {
         Widget[] var4 = null;
         try {
           var3 = new String[]{param0, GetBloomCoefficientPercentage.field_q, RequestNewestBlackboxRecording.field_o};
-          var4 = new Widget[]{param1, PlayerJoinFactory.field_c, (Widget) ((Object) vra.field_b)};
+          var4 = new Widget[]{param1, PlayerJoinFactory.field_c, (Widget) ((Object) AttachmentInputState.field_b)};
           this.field_a = new ooa(0L, vhb.field_c, var3, EscapePodFactory.field_a, var4, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -39,7 +39,7 @@ final class bs {
           SetCountermeasureLauncherRandomness.field_o.setBounds(0, -25, PlayerJoinFactory.field_c.width - ResourceNode.field_a - 84, 2 + DialogMessagePanel.field_w, 18);
           GameKeyHandler.field_b.setBounds(-2 + (PlayerJoinFactory.field_c.width - ResourceNode.field_a) - 80, 120, ResourceNode.field_a + 82, DialogMessagePanel.field_w + 2, 18);
           BitmapTextLayout.field_n.setBoundsAndLayout(0, DialogMessagePanel.field_w + 22, 20, ResourceNode.field_a, -2 + PlayerJoinFactory.field_c.height - (DialogMessagePanel.field_w + 20), PlayerJoinFactory.field_c.width, 0, 2);
-          vra.field_b.layoutContents(2, 20, ResourceNode.field_a, (byte) 63);
+          AttachmentInputState.field_b.layoutContents(2, 20, ResourceNode.field_a, (byte) 63);
           return;
         }
     }

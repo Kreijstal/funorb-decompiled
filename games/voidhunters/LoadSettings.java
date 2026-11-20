@@ -74,7 +74,7 @@ final class LoadSettings extends ConsoleCommand {
                   var10 != null) {
                   var11 = PartitionZoneListFactory.a(param0, param4, false, var10);
                   if (var11 >= 0 &&
-                    var11 < GpuVertexBufferOwner.field_c.length) {
+                    var11 < GpuVertexBufferOwner.teamNames.length) {
                     TextureCombineOperation.a(param4, var9, param2, var11, (byte) 51, param1, param0);
                   }
                 }

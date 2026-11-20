@@ -1,57 +1,57 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fdb extends MidiPcmStream {
-    private int[] field_R;
+final class FadingMidiPcmStream extends MidiPcmStream {
+    private int[] channelGainsQ12;
     static String field_T;
     static String field_S;
-    private boolean field_P;
-    private int field_Q;
-    private int[] field_J;
-    private MidiChannelLevels field_U;
+    private boolean channelFadesComplete;
+    private int masterGainScale;
+    private int[] channelGainStepsQ12;
+    private MidiChannelLevels targetChannelLevels;
 
     public static void clearSharedReferences(int param0) {
         field_S = null;
         if (param0 != 0) {
-          fdb.clearSharedReferences(-2);
+          FadingMidiPcmStream.clearSharedReferences(-2);
         }
         field_T = null;
     }
 
     final synchronized void startTrack(MusicTrack param0, boolean param1, int param2, boolean param3) {
         try {
-          this.f(-17);
+          this.resetChannelGains(-17);
           super.startTrack(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fdb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    private final void f(int param0) {
+    private final void resetChannelGains(int param0) {
         int var2 = 0;
         int var3 = VoidHunters.field_G;
         if (param0 != -17) {
           return;
         }
         for (var2 = 0; var2 < 16; var2++) {
-          this.field_R[var2] = 1048576;
+          this.channelGainsQ12[var2] = 1048576;
         }
         super.setChannelGain(256, (byte) 18, -1);
     }
 
-    fdb(MidiPcmStream param0) {
+    FadingMidiPcmStream(MidiPcmStream param0) {
         super(param0);
-        this.field_Q = 256;
-        this.field_J = new int[16];
-        this.field_R = new int[16];
+        this.masterGainScale = 256;
+        this.channelGainStepsQ12 = new int[16];
+        this.channelGainsQ12 = new int[16];
         try {
-          this.f(-17);
+          this.resetChannelGains(-17);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fdb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final static void a(boolean param0, boolean param1, int param2, byte param3) {
+    final static void updateLobbyAndTutorialInput(boolean param0, boolean param1, int param2, byte param3) {
         Widget stackIn_9_0 = null;
         boolean stackIn_10_1 = false;
         Widget stackIn_16_0 = null;
@@ -108,42 +108,42 @@ final class fdb extends MidiPcmStream {
 
     final synchronized void setChannelGain(int param0, byte param1, int param2) {
         if (param2 == -1) {
-          this.field_Q = param0;
+          this.masterGainScale = param0;
           return;
         }
         super.setChannelGain(param0, param1, param2);
-        this.field_R[param2] = param0 << 12;
+        this.channelGainsQ12[param2] = param0 << 12;
     }
 
-    final synchronized void a(byte param0, int param1, MidiChannelLevels param2) {
+    final synchronized void fadeToChannelLevels(byte param0, int param1, MidiChannelLevels param2) {
         int var4_int = 0;
         try {
           var4_int = AudioOutput.sampleRate * param1 / 1000;
-          this.a(-91, param2, var4_int);
+          this.fadeToChannelLevelsSamples(-91, param2, var4_int);
           int var5 = 76 % ((param0 - 80) / 33);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fdb.D(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public fdb() {
-        this.field_Q = 256;
-        this.field_J = new int[16];
-        this.field_R = new int[16];
-        this.f(-17);
+    public FadingMidiPcmStream() {
+        this.masterGainScale = 256;
+        this.channelGainStepsQ12 = new int[16];
+        this.channelGainsQ12 = new int[16];
+        this.resetChannelGains(-17);
     }
 
-    private final synchronized void b(int param0, int param1, int param2, byte param3) {
-        this.field_P = false;
-        if (this.field_U == null) {
-          this.field_U = new MidiChannelLevels();
+    private final synchronized void fadeChannelGainSamples(int param0, int param1, int param2, byte param3) {
+        this.channelFadesComplete = false;
+        if (this.targetChannelLevels == null) {
+          this.targetChannelLevels = new MidiChannelLevels();
         }
-        this.field_U.levels[param1] = param2;
+        this.targetChannelLevels.levels[param1] = param2;
         if (param3 != -48) {
           return;
         }
-        int var5 = this.field_R[param1];
-        int var6 = -var5 + (this.field_U.levels[param1] << 12);
+        int var5 = this.channelGainsQ12[param1];
+        int var6 = -var5 + (this.targetChannelLevels.levels[param1] << 12);
         int var7 = 0;
         int var8 = 0;
         if (0 > var6) {
@@ -153,7 +153,7 @@ final class fdb extends MidiPcmStream {
         if (var6 > 0) {
           var7 = (1 + var6) / (param0 + 1);
         }
-        this.field_J[param1] = var8 != 0 ? -var7 : var7;
+        this.channelGainStepsQ12[param1] = var8 != 0 ? -var7 : var7;
     }
 
     final synchronized void mix(int[] param0, int param1, int param2) {
@@ -173,16 +173,16 @@ final class fdb extends MidiPcmStream {
         var9 = VoidHunters.field_G;
         try {
           var4_int = this.getMasterVolume(127);
-          this.setMasterVolume(this.field_Q * var4_int >> 8, (byte) 14);
+          this.setMasterVolume(this.masterGainScale * var4_int >> 8, (byte) 14);
           super.mix(param0, param1, param2);
-          if (!this.field_P) {
+          if (!this.channelFadesComplete) {
             var5 = 1;
             for (var6 = 0; var6 < 16; var6++) {
-              var7 = this.field_J[var6];
+              var7 = this.channelGainStepsQ12[var6];
               if (0 != var7) {
-                this.field_R[var6] = this.field_R[var6] + param2 * var7;
-                var8 = this.field_U.levels[var6];
-                stackIn_9_0 = (this.field_R[var6] >> 12 >= var8) ? 0 : 1;
+                this.channelGainsQ12[var6] = this.channelGainsQ12[var6] + param2 * var7;
+                var8 = this.targetChannelLevels.levels[var6];
+                stackIn_9_0 = (this.channelGainsQ12[var6] >> 12 >= var8) ? 0 : 1;
                 if (var7 <= 0) {
                   stackIn_12_1 = 0;
                 } else {
@@ -191,14 +191,14 @@ final class fdb extends MidiPcmStream {
                 if ((stackIn_9_0 ^ stackIn_12_1) == 0) {
                   var5 = 0;
                 } else {
-                  this.field_J[var6] = 0;
-                  this.field_R[var6] = var8 << 12;
+                  this.channelGainStepsQ12[var6] = 0;
+                  this.channelGainsQ12[var6] = var8 << 12;
                 }
-                super.setChannelGain(this.field_R[var6] >> 12, (byte) 18, var6);
+                super.setChannelGain(this.channelGainsQ12[var6] >> 12, (byte) 18, var6);
               }
             }
             if (var5 != 0) {
-              this.field_P = true;
+              this.channelFadesComplete = true;
             }
           }
           this.setMasterVolume(var4_int, (byte) 14);
@@ -217,7 +217,7 @@ final class fdb extends MidiPcmStream {
         }
     }
 
-    private final synchronized void a(int param0, MidiChannelLevels param1, int param2) {
+    private final synchronized void fadeToChannelLevelsSamples(int param0, MidiChannelLevels param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -227,12 +227,12 @@ final class fdb extends MidiPcmStream {
         RuntimeException var4 = null;
         var5 = VoidHunters.field_G;
         try {
-          this.field_U = param1;
+          this.targetChannelLevels = param1;
           if (param0 > 0) {
             return;
           }
           for (var4_int = 0; var4_int < 16; var4_int++) {
-            this.b(param2, var4_int, this.field_U.levels[var4_int], (byte) -48);
+            this.fadeChannelGainSamples(param2, var4_int, this.targetChannelLevels.levels[var4_int], (byte) -48);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

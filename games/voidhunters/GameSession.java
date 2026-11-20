@@ -334,7 +334,7 @@ final class GameSession {
           discarded$0 = this.a((byte) 34, (GameSnapshot) null);
         }
         if (GetPointDefenceLaserProjectiles.a(2048, param0 + 11163)) {
-          var12 = pd.field_g;
+          var12 = WorldDebugArrow.field_g;
           var18 = var12;
           if (var12 != null) {
             for (var3 = 0; var3 < var18.length; var3++) {
@@ -1031,7 +1031,7 @@ final class GameSession {
           if (this.state.carouselInfo.isReplay(1)) {
             var20 = var15.world.findShipByOwner(var13, 75);
             if (var20 != null) {
-              GetCountermeasureLauncherAimarc.a(var20.x, ShipTeamConditionFactory.field_a, var17, 3, var20.y, 16755200, 255, var16);
+              GetCountermeasureLauncherAimarc.drawWorldArrow(var20.x, ShipTeamConditionFactory.field_a, var17, 3, var20.y, 16755200, 255, var16);
             }
           }
           stackIn_58_0 = var15.world;
@@ -1804,9 +1804,9 @@ final class GameSession {
         }
         if (var9 != 0) {
           var23Lifetime1 = var7.missionState.getTeamScore(param0, 0);
-          var42 = VoidHunters.b(0, -1) + ": <col=ffffff>" + Integer.toString(var23Lifetime1) + "</col>";
+          var42 = VoidHunters.getTeamName(0, -1) + ": <col=ffffff>" + Integer.toString(var23Lifetime1) + "</col>";
           var23Lifetime1 = var7.missionState.getTeamScore(false, 1);
-          var25_ref_String = VoidHunters.b(1, -1) + ": <col=ffffff>" + Integer.toString(var23Lifetime1) + "</col>";
+          var25_ref_String = VoidHunters.getTeamName(1, -1) + ": <col=ffffff>" + Integer.toString(var23Lifetime1) + "</col>";
           var26Lifetime1 = GetPointDefenceLaserProjectiles.a(false, 1);
           BlackBoxRecording.a((byte) -115, 200, var14Lifetime1 + var26Lifetime1, var6, -var26Lifetime1 + var4Lifetime1, var20Lifetime1);
           SetSelfDestructPrepareToggleCooldown.a((var20Lifetime1 >> 1) + (var6 - tea.a(1, var42, 13879) / 2 - var20Lifetime1 / 4), 1, var4Lifetime1 - 10, var42, 1, AlphaContainer.getTeamColor(false, 0, 13894143), (byte) -124);
@@ -3280,7 +3280,7 @@ final class GameSession {
             var5_ref = GetLaserReload.field_o;
           } else {
             if (var3_int == 0) {
-              var5_ref = SetReverbGain.a(Widget.field_H, new String[]{GpuVertexBufferOwner.field_c[0]}, param1 + 74);
+              var5_ref = SetReverbGain.a(Widget.field_H, new String[]{GpuVertexBufferOwner.teamNames[0]}, param1 + 74);
               var6 = AlphaContainer.getTeamColor(false, 0, 13894143);
             } else {
               if (var4 != 0) {
@@ -3291,7 +3291,7 @@ final class GameSession {
                 }
                 return;
               }
-              var5_ref = SetReverbGain.a(Widget.field_H, new String[]{GpuVertexBufferOwner.field_c[1]}, 99);
+              var5_ref = SetReverbGain.a(Widget.field_H, new String[]{GpuVertexBufferOwner.teamNames[1]}, 99);
               var6 = AlphaContainer.getTeamColor(false, 1, 13894143);
             }
           }
@@ -3617,7 +3617,7 @@ final class GameSession {
         if (var11 == 0) {
           ShipTeamConditionFactory.field_a.scale = ShipTeamConditionFactory.field_a.scale + (this.field_w - ShipTeamConditionFactory.field_a.scale) / 4.0f;
         }
-        sh.a(20824);
+        sh.expireDebugArrows(20824);
         this.a(var5, var8, var3, var4, var6, var7, param1, 109);
         if (this.state.carouselInfo.isReplay(1) &&
           SetMachineGunEnergyUsed.field_o[35] &&
@@ -4192,7 +4192,7 @@ final class GameSession {
           var3_ref = (PlayerAction) (this.state.carouselInfo.events.next((byte) 22));
         }
         if (GetPointDefenceLaserProjectiles.a(2, 11284)) {
-          SetMachineGunFireForce.a((byte) -99, ShipTeamConditionFactory.field_a);
+          SetMachineGunFireForce.drawDebugArrows((byte) -99, ShipTeamConditionFactory.field_a);
         }
         if (this.state.carouselInfo.isReplay(1)) {
           if (SetMinimapWidth.field_o % 20 > 10) {
@@ -4327,7 +4327,7 @@ final class GameSession {
             var9 = param1.chassis.getFinalx(true);
             var10 = param1.chassis.getFinaly((byte) 55);
             var11 = AlphaContainer.getTeamColor(false, param1.getTeam((byte) 69), 13894143);
-            GetCountermeasureLauncherAimarc.a(var4 + var9, ShipTeamConditionFactory.field_a, var10 + var7, 3, var10 + var5, var11, var8, var6 + var9);
+            GetCountermeasureLauncherAimarc.drawWorldArrow(var4 + var9, ShipTeamConditionFactory.field_a, var10 + var7, 3, var10 + var5, var11, var8, var6 + var9);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uca.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -5466,7 +5466,7 @@ final class GameSession {
                 var4 = var4 + "\n";
               }
               if (var8.channelType == 4) {
-                var9 = VoidHunters.b(param1, -1);
+                var9 = VoidHunters.getTeamName(param1, -1);
                 var4 = var4 + "<col=" + UiFocusProxy.toHexString(-18879, AlphaContainer.getTeamColor(false, param1, 13894143)) + ">(" + var9 + ") " + var8.text + "</col>";
               } else {
                 var4 = var4 + var8.text;
@@ -7187,7 +7187,7 @@ final class GameSession {
                 var14 = GetBombletSprayReload.field_o;
                 var15_ref_String = SetMomentOfInertiaPredivideDownshift.field_o;
                 if (var8Lifetime1 != 0) {
-                  var15_ref_StringLifetime1 = VoidHunters.b(var13Lifetime1, param1 ^ -201);
+                  var15_ref_StringLifetime1 = VoidHunters.getTeamName(var13Lifetime1, param1 ^ -201);
                 } else {
                   var15_ref_StringLifetime1 = this.getPlayerName(var13Lifetime1, (byte) -98);
                 }
@@ -7226,7 +7226,7 @@ final class GameSession {
               } else {
                 var13_ref_String = SetMomentOfInertiaPredivideDownshift.field_o;
                 if (var8Lifetime1 != 0) {
-                  var13_ref_String = VoidHunters.b(var9Lifetime1, param1 - 201);
+                  var13_ref_String = VoidHunters.getTeamName(var9Lifetime1, param1 - 201);
                   var18 = var13_ref_String;
                   var18 = var13_ref_String;
                 } else {
@@ -7542,7 +7542,7 @@ final class GameSession {
             GetLagStandardDeviationOut.field_p = var3Lifetime1;
             var4Lifetime1 = AlphaContainer.getTeamColor(false, var3Lifetime1, 13894143);
             FireMissilesOrderDefinition.setTeamChatColor(var4Lifetime1, 124);
-            var9 = VoidHunters.b(var3Lifetime1, -1);
+            var9 = VoidHunters.getTeamName(var3Lifetime1, -1);
             GetBurstFireMaxEnergy.a(1043, var9);
           }
         }
@@ -8790,7 +8790,7 @@ final class GameSession {
           this.field_w = 0.001953125f;
           this.field_g = 0;
           this.field_r = 0;
-          GetDebrisCarryOver.b(false);
+          GetDebrisCarryOver.initializeDebugArrows(false);
           this.previousKeyStates = new boolean[SetMachineGunEnergyUsed.field_o.length];
           this.lastPlayerShipX = new int[param1.length];
           this.lastPlayerShipY = new int[param1.length];

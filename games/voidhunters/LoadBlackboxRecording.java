@@ -73,12 +73,12 @@ final class LoadBlackboxRecording extends ConsoleCommand {
         }
         if (param0 < 54) {
           field_o = (Sprite[]) null;
-          if (!GetBombletSprayPushMultiplier.field_p.a(4)) {
+          if (!GetBombletSprayPushMultiplier.emailAvailabilityCheck.isComplete(4)) {
             return SetCountermeasureLauncherAimarc.field_q;
           }
           return ToggleShieldsOrderDefinition.field_d;
         }
-        if (!GetBombletSprayPushMultiplier.field_p.a(4)) {
+        if (!GetBombletSprayPushMultiplier.emailAvailabilityCheck.isComplete(4)) {
           return SetCountermeasureLauncherAimarc.field_q;
         }
         return ToggleShieldsOrderDefinition.field_d;

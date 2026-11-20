@@ -11,7 +11,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         if (param0 == -1) {
           return "Variable " + this.index + " at least " + this.value;
         }
-        VariableCondition.a(104, -21, -70, -33, (byte) -17);
+        VariableCondition.enqueueDebugArrow(104, -21, -70, -33, (byte) -17);
         return "Variable " + this.index + " at least " + this.value;
     }
 
@@ -308,14 +308,14 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4) {
+    final static void enqueueDebugArrow(int param0, int param1, int param2, int param3, byte param4) {
         if (param4 != -54) {
           return;
         }
-        if (SocketConnector.field_c == null) {
+        if (SocketConnector.debugArrows == null) {
           return;
         }
-        SocketConnector.field_c.addLast(-10258, new pd(param3, param2, param0, param1));
+        SocketConnector.debugArrows.addLast(-10258, new WorldDebugArrow(param3, param2, param0, param1));
     }
 
     static {

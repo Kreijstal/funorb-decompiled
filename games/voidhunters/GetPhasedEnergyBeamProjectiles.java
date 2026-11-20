@@ -236,7 +236,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           Particle.field_h = param1[232];
           SetShieldsDirectionalRadius.field_o = param1[169];
           SetMissionDebrisDefaultProbability.field_o = param1[195];
-          ge.field_c = param1[178];
+          EmailAvailabilityCheck.field_c = param1[178];
           Particle.field_x = param1[90];
           Particle.field_g = param1[218];
           dfa.field_a = param1[123];

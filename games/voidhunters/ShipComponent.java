@@ -3909,7 +3909,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           var13 = new Debris(this.subcomponents[param4], false);
           var8 = var13.getX(false) - this.finalx;
           var9 = var13.getY((byte) 126) - this.finaly;
-          VariableCondition.a(this.finalx + var8, this.finaly + var9, this.finaly, this.finalx, (byte) -54);
+          VariableCondition.enqueueDebugArrow(this.finalx + var8, this.finaly + var9, this.finaly, this.finalx, (byte) -54);
           var10 = TextLayout.approximateVectorLength(var8, (byte) 110, var9);
           if (0 == var10) {
             var10 = 1;
@@ -4443,7 +4443,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (param2 != null) {
             var12 = param2.getX(false) - this.finalx;
             var13 = param2.getY((byte) -21) - this.finaly;
-            VariableCondition.a(this.finalx + var12, this.finaly + var13, this.finaly, this.finalx, (byte) -54);
+            VariableCondition.enqueueDebugArrow(this.finalx + var12, this.finaly + var13, this.finaly, this.finalx, (byte) -54);
             var14 = TextLayout.approximateVectorLength(var12, (byte) 120, var13);
             if (var14 == 0) {
               var14 = 1;

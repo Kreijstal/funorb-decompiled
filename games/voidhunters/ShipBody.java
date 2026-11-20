@@ -1154,8 +1154,8 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         if (param3 > -112) {
           this.mass = 65;
         }
-        var8 = (long)(-var7 >> ge.field_c);
-        var10 = (long)(var6 >> ge.field_c);
+        var8 = (long)(-var7 >> EmailAvailabilityCheck.field_c);
+        var10 = (long)(var6 >> EmailAvailabilityCheck.field_c);
         var12 = var8 * (long)param4 + (long)param0 * var10;
         var14 = this.torque;
         this.torque = (int)((long)this.torque + (var12 >> tua.field_a));
@@ -1175,7 +1175,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
           }
         }
         this.onStateChanged((byte) 111);
-        VariableCondition.a(param1, param2, param2 - param0, -param4 + param1, (byte) -54);
+        VariableCondition.enqueueDebugArrow(param1, param2, param2 - param0, -param4 + param1, (byte) -54);
     }
 
     final void testProjectileHit(ProjectileHit param0, Projectile param1, int param2) {

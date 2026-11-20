@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1411/1572 classes and 7021/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 161 opaque classes and 1194 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1416/1572 classes and 7048/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 156 opaque classes and 1167 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -86,6 +86,8 @@ All forty texture-operation factory products have descriptive class names, inclu
 `LoginCredentials` and `LoginCredentialType` identify the original numeric, email and alternate numeric payload variants, their wire tags and buffer writers. `GuestModeState` and `TeamChangeGuardState` retain account/guest mode and blocked team-change state. `ValidationStatusIcon` and `DisplayModeErrorDialog` identify validation feedback and display-mode failure controls. Credential encoding, variant selection, guards, defaults and state transitions remain unchanged.
 
 `AppletRasterBuffer` separates the original BufferedImage and ImageProducer framebuffer implementations from toolkit raster buffers. `ThreeSliceButtonStyle`, `GradientBorderTextStyle`, `NullUiRenderer`, `UiDropTargetContainer` and `UiDropListener` identify button/input drawing and drop callbacks. `SpritePadding` discards padding metadata without reallocating pixels. `Direct3DSwapChainSurface` and the remaining `Direct3DToolkit` methods expose native presentation, device reset, shader selection, texture binding and presentation-format selection; original guards, fallback paths and indexing remain.
+
+`VoidHunters` now names every method, including client-state/input updates, cached-frame drawing, chat input, panel animation, team names, tutorial visibility and menu/game music mixes. `FadingMidiPcmStream` names the original per-channel gain fades. `EmailAvailabilityCheck` retains the shared asynchronous check and its original pending-query reuse. `AttachmentInputState`, component-dragging helpers and `WorldDebugArrow` expose attachment controls and debug-arrow queueing, drawing and expiry; timing, guards, fixed-point arithmetic and packet behavior remain unchanged.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

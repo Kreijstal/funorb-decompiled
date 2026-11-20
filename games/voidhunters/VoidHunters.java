@@ -2,14 +2,14 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 public final class VoidHunters extends NetworkGameClient {
-    private int field_B;
-    private int field_D;
-    private Sprite field_F;
+    private int musicStingCooldown;
+    private int menuMusicMixId;
+    private Sprite cachedFrame;
     static int[] field_E;
-    private int field_C;
+    private int gameMusicMixId;
     public static int field_G;
 
-    private final void a(int param0, MidiChannelLevels param1, int param2) {
+    private final void setMenuMusicChannelLevels(int param0, MidiChannelLevels param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -19,14 +19,14 @@ public final class VoidHunters extends NetworkGameClient {
         RuntimeException var4 = null;
         var5 = field_G;
         try {
-          if (this.field_D == -1) {
+          if (this.menuMusicMixId == -1) {
             for (var4_int = 0; var4_int < param1.levels.length; var4_int++) {
               GetThrusterParticleLife.field_o.setChannelGain(param1.levels[var4_int], (byte) 18, var4_int);
             }
           } else {
-            GetThrusterParticleLife.field_o.a((byte) 125, 4000, param1);
+            GetThrusterParticleLife.field_o.fadeToChannelLevels((byte) 125, 4000, param1);
           }
-          this.field_D = param2;
+          this.menuMusicMixId = param2;
           if (param0 != -23134) {
             field_E = (int[]) null;
           }
@@ -102,7 +102,7 @@ public final class VoidHunters extends NetworkGameClient {
         }
     }
 
-    private final static void m(int param0) {
+    private final static void updatePanelAnimations(int param0) {
         SetPlayerRepairAmount.e(param0 + 29129);
         if (param0 != -29130) {
           return;
@@ -110,7 +110,7 @@ public final class VoidHunters extends NetworkGameClient {
         GetUseBackground.a(param0 + 29129);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, String param4, int param5, boolean param6, boolean param7) {
+    final static void updateChatInputDialog(int param0, int param1, int param2, int param3, String param4, int param5, boolean param6, boolean param7) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -279,7 +279,7 @@ public final class VoidHunters extends NetworkGameClient {
               var3 = MatchingFieldValidator.field_g;
             }
             if (param1 != 12) {
-              this.field_F = (Sprite) null;
+              this.cachedFrame = (Sprite) null;
             }
             if (param0 == 62) {
               GetDebrisThrowable.a(false, "Game finished packet");
@@ -435,7 +435,7 @@ public final class VoidHunters extends NetworkGameClient {
           if (!Mission.b(-1)) {
             GetUseRectOutline.updatePlayerGameDataLoading(false);
             if (TextLayout.playerGameDataLoaded &&
-              this.l(0) &&
+              this.isTutorialEnabled(0) &&
               !uc.b(-116)) {
               WaterNoiseGpuMaterialEffect.startOfflineGame(true, false);
             }
@@ -452,13 +452,13 @@ public final class VoidHunters extends NetworkGameClient {
                   VoidHunters.quitToWebsite(MissionList.b((byte) -118), 4);
                 }
               }
-              this.d(true, -121);
+              this.updateClientStateAndInput(true, -121);
             } else {
               if (!ffa.a(false)) {
                 if (SetDebrisGroupColour.b(false)) {
-                  this.d(true, -126);
+                  this.updateClientStateAndInput(true, -126);
                 } else {
-                  this.d(false, -124);
+                  this.updateClientStateAndInput(false, -124);
                 }
               } else {
                 if (wp.field_b == wp.field_a) {
@@ -467,9 +467,9 @@ public final class VoidHunters extends NetworkGameClient {
                     kua.field_e = true;
                     ta.a((byte) -121, 0);
                   }
-                  this.d(true, -127);
+                  this.updateClientStateAndInput(true, -127);
                 } else {
-                  this.d(false, -122);
+                  this.updateClientStateAndInput(false, -122);
                 }
               }
             }
@@ -579,14 +579,14 @@ public final class VoidHunters extends NetworkGameClient {
         }
     }
 
-    private final boolean l(int param0) {
+    private final boolean isTutorialEnabled(int param0) {
         if (param0 != 0) {
-          this.d(true, 48);
+          this.updateClientStateAndInput(true, 48);
         }
-        return SetUseExtraBackground.field_p;
+        return SetUseExtraBackground.showTutorial;
     }
 
-    private final void a(MidiChannelLevels param0, int param1, int param2) {
+    private final void setGameMusicChannelLevels(MidiChannelLevels param0, int param1, int param2) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -597,16 +597,16 @@ public final class VoidHunters extends NetworkGameClient {
         var5 = field_G;
         try {
           if (param1 != -19653) {
-            this.field_D = -9;
+            this.menuMusicMixId = -9;
           }
-          if (this.field_C == -1) {
+          if (this.gameMusicMixId == -1) {
             for (var4_int = 0; param0.levels.length > var4_int; var4_int++) {
               LegacyOpenGlTurbulenceEffect.field_g.setChannelGain(param0.levels[var4_int], (byte) 18, var4_int);
             }
           } else {
-            LegacyOpenGlTurbulenceEffect.field_g.a((byte) -115, 4000, param0);
+            LegacyOpenGlTurbulenceEffect.field_g.fadeToChannelLevels((byte) -115, 4000, param0);
           }
-          this.field_C = param2;
+          this.gameMusicMixId = param2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -627,8 +627,8 @@ public final class VoidHunters extends NetworkGameClient {
         TextureLineShape.field_i = new GameResourceLoader();
         MidiPcmStream var6 = new MidiPcmStream();
         var6.setDefaultProgram(128, (byte) 96, 9);
-        GetThrusterParticleLife.field_o = new fdb();
-        LegacyOpenGlTurbulenceEffect.field_g = new fdb(GetThrusterParticleLife.field_o);
+        GetThrusterParticleLife.field_o = new FadingMidiPcmStream();
+        LegacyOpenGlTurbulenceEffect.field_g = new FadingMidiPcmStream(GetThrusterParticleLife.field_o);
         MidiPcmStream var3 = new MidiPcmStream();
         MidiCrossfadeStream var4 = new MidiCrossfadeStream(GetThrusterParticleLife.field_o, LegacyOpenGlTurbulenceEffect.field_g, var3);
         kr.a((byte) -32, true, SetTorpedoProjectiles.field_o, (java.awt.Component) ((Object) igb.field_a), var4, 22050);
@@ -660,7 +660,7 @@ public final class VoidHunters extends NetworkGameClient {
         field_E = null;
         if (param0 != 0) {
           String var2 = (String) null;
-          VoidHunters.a(-6, -55, -125, 73, (String) null, -128, true, true);
+          VoidHunters.updateChatInputDialog(-6, -55, -125, 73, (String) null, -128, true, true);
         }
     }
 
@@ -688,26 +688,26 @@ public final class VoidHunters extends NetworkGameClient {
         var3 = 28 / ((-54 - param0) / 37);
         if (var2 != 0) {
           if (GetBurstFireMaxEnergy.field_p.selectedStream != LegacyOpenGlTurbulenceEffect.field_g &&
-            this.field_B <= 0) {
+            this.musicStingCooldown <= 0) {
             GetBurstFireMaxEnergy.field_p.crossfadeToTrack(-126, pab.field_k[1], 100, 1000000);
           }
-          this.field_D = -1;
+          this.menuMusicMixId = -1;
         } else {
           if (GetBurstFireMaxEnergy.field_p.selectedStream != GetThrusterParticleLife.field_o) {
             GetBurstFireMaxEnergy.field_p.crossfadeToTrack(-127, pab.field_k[0], 100, 1000000);
           }
-          this.field_C = -1;
+          this.gameMusicMixId = -1;
         }
-        if (this.field_B > 0) {
-          this.field_B = this.field_B - 1;
+        if (this.musicStingCooldown > 0) {
+          this.musicStingCooldown = this.musicStingCooldown - 1;
         }
         regionExit1: {
           if (var2 != 0) {
             if (BodyInZoneConditionFactory.a(false, GetArmageddonTimerStart.field_o)) {
-              if (4 != this.field_C) {
+              if (4 != this.gameMusicMixId) {
                 var9 = new MidiChannelLevels();
                 var9.levels[0] = 255;
-                this.a(var9, -19653, 4);
+                this.setGameMusicChannelLevels(var9, -19653, 4);
               }
             } else {
               var4 = MatchingFieldValidator.field_g;
@@ -717,24 +717,24 @@ public final class VoidHunters extends NetworkGameClient {
               if (var4 != null) {
                 var5 = var4.k(-18620);
                 if (var5 == 5) {
-                  if (this.field_B <= 0) {
+                  if (this.musicStingCooldown <= 0) {
                     for (var6_int = 0; var6_int < 16; var6_int++) {
                       LegacyOpenGlTurbulenceEffect.field_g.setChannelGain(0, (byte) 18, var6_int);
                     }
                     AdminMessage.a(32, false, pab.field_k[2]);
-                    this.field_B = 500;
+                    this.musicStingCooldown = 500;
                   }
                 } else {
                   if (6 == var5 &&
-                    this.field_B <= 0) {
+                    this.musicStingCooldown <= 0) {
                     for (var6_int = 0; var6_int < 16; var6_int++) {
                       LegacyOpenGlTurbulenceEffect.field_g.setChannelGain(0, (byte) 18, var6_int);
                     }
                     AdminMessage.a(32, false, pab.field_k[3]);
-                    this.field_B = 500;
+                    this.musicStingCooldown = 500;
                   }
                 }
-                if (~var5 != ~this.field_C) {
+                if (~var5 != ~this.gameMusicMixId) {
                   var6 = new MidiChannelLevels();
                   if (0 == var5) {
                     var6.levels[0] = 255;
@@ -765,14 +765,14 @@ public final class VoidHunters extends NetworkGameClient {
                         var6.levels[1] = 255;
                         break;
                       default:
-                        this.a(var6, -19653, var5);
+                        this.setGameMusicChannelLevels(var6, -19653, var5);
                         break regionExit1;
                       case 3:
                         var6.levels[4] = 255;
                         break;
                     }
                   }
-                  this.a(var6, -19653, var5);
+                  this.setGameMusicChannelLevels(var6, -19653, var5);
                 }
               }
             }
@@ -780,14 +780,14 @@ public final class VoidHunters extends NetworkGameClient {
         }
         if (!BodyInZoneConditionFactory.a(false, GetArmageddonTimerStart.field_o)) {
           if (GetArmageddonTimerStart.field_o == -2 &&
-            this.field_D != 1) {
+            this.menuMusicMixId != 1) {
             var11 = new MidiChannelLevels();
             var11.levels[14] = 255;
-            this.a(-23134, var11, 1);
+            this.setMenuMusicChannelLevels(-23134, var11, 1);
           }
         } else {
           if (var2 == 0 &&
-            this.field_D != 0) {
+            this.menuMusicMixId != 0) {
             var10 = new MidiChannelLevels();
             var8 = 0;
             var5 = var8;
@@ -796,7 +796,7 @@ public final class VoidHunters extends NetworkGameClient {
               var8++;
             }
             var10.levels[14] = 0;
-            this.a(-23134, var10, 0);
+            this.setMenuMusicChannelLevels(-23134, var10, 0);
           }
         }
     }
@@ -854,7 +854,7 @@ public final class VoidHunters extends NetworkGameClient {
         CarouselGameClient.clearSharedReferences(66);
         fab.clearSharedReferences(10970);
         pa.clearSharedReferences(2);
-        fdb.clearSharedReferences(0);
+        FadingMidiPcmStream.clearSharedReferences(0);
         MidiCrossfadeStream.clearSharedReferences(98);
         btb.clearSharedReferences((byte) 94);
         bda.clearSharedReferences(-12407);
@@ -906,7 +906,7 @@ public final class VoidHunters extends NetworkGameClient {
         SpecialOrderDefinition.clearSharedReferences((byte) -95);
         eqb.clearSharedReferences(65);
         es.clearSharedReferences(param0);
-        pd.clearSharedReferences((byte) 26);
+        WorldDebugArrow.clearSharedReferences((byte) 26);
         CommonGameState.clearSharedReferences(28801);
         MissionBuilder.clearSharedReferences(1);
         MissionCondition.clearSharedReferences((byte) -110);
@@ -962,7 +962,7 @@ public final class VoidHunters extends NetworkGameClient {
         VariableCondition.clearSharedReferences(-120);
         ComponentContact.clearSharedReferences((byte) 18);
         HardpointMatch.clearSharedReferences((byte) 87);
-        vra.clearSharedReferences((byte) -66);
+        AttachmentInputState.clearSharedReferences((byte) -66);
         kl.clearSharedReferences(-127);
         AsteroidField.clearSharedReferences((byte) 48);
         GrapplingHook.clearSharedReferences((byte) -116);
@@ -1323,7 +1323,7 @@ public final class VoidHunters extends NetworkGameClient {
         SpecialOrderSubmessageFactory.clearSharedReferences(false);
         SoftwareRasterState.clearSharedReferences((byte) 44);
         SettingsInstanceFactory.clearSharedReferences(102);
-        ge.clearSharedReferences((byte) 122);
+        EmailAvailabilityCheck.clearSharedReferences((byte) 122);
         MovingObjectFactory.clearSharedReferences(126);
         MissionFactory.clearSharedReferences(false);
         SetVariableLabelActionFactory.clearSharedReferences(param0);
@@ -1810,7 +1810,7 @@ public final class VoidHunters extends NetworkGameClient {
         lkb.clearSharedReferences(199);
         OpenGlVertexNormal.clearSharedReferences(2);
         dgb.clearSharedReferences(false);
-        this.field_F = null;
+        this.cachedFrame = null;
         this.host = null;
     }
 
@@ -1844,7 +1844,7 @@ public final class VoidHunters extends NetworkGameClient {
         HighscoreTableRequest.initializeSoundQueues((byte) 89);
         MidiNote.resetFrameTiming(2096);
         ComponentCollision.a("Finished loadloop", (byte) -128);
-        if (this.l(0) &&
+        if (this.isTutorialEnabled(0) &&
           GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 116)) {
           WaterNoiseGpuMaterialEffect.startOfflineGame(true, false);
         }
@@ -1858,11 +1858,11 @@ public final class VoidHunters extends NetworkGameClient {
         }
         SecondaryNodeDequeIterator.a(1);
         if (param0 >= -102) {
-          VoidHunters.b(63, 91);
+          VoidHunters.getTeamName(63, 91);
         }
     }
 
-    private final void d(boolean param0, int param1) {
+    private final void updateClientStateAndInput(boolean param0, int param1) {
         int fieldTemp$0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_18_0 = 0;
@@ -2132,7 +2132,7 @@ public final class VoidHunters extends NetworkGameClient {
           }
           stackIn_133_0Lifetime1 = GraphicsPresentException.field_a;
           if (!stackIn_133_0Lifetime1) {
-            VoidHunters.m(-29130);
+            VoidHunters.updatePanelAnimations(-29130);
           }
           if (GetSniperCannonProjectiles.chatVisible) {
             if (GetRepairModePower.field_o > SecondaryNodeQueue.field_b) {
@@ -2171,7 +2171,7 @@ public final class VoidHunters extends NetworkGameClient {
           AgeValidator.field_f = GetArmageddonTimerStart.field_o;
         }
         if (param1 >= -117) {
-          this.field_B = -120;
+          this.musicStingCooldown = -120;
         }
         if (SocketNetworkArchiveClient.field_n > 0) {
           SocketNetworkArchiveClient.field_n = SocketNetworkArchiveClient.field_n - 1;
@@ -2209,7 +2209,7 @@ public final class VoidHunters extends NetworkGameClient {
         }
     }
 
-    private final void a(int param0, int param1, int param2) {
+    private final void drawCachedCenteredFrame(int param0, int param1, int param2) {
         int var4;
         int var5;
         if (0 >= param2) {
@@ -2219,30 +2219,30 @@ public final class VoidHunters extends NetworkGameClient {
           GetDebrisGroupColour.field_r != null) {
           var4 = (GetBombletSprayEnergyUsed.field_p.width - param2) / 2;
           var5 = (GetBombletSprayEnergyUsed.field_p.height - param1) / 2;
-          if (null == this.field_F ||
-            ~param2 != ~this.field_F.width ||
-            ~this.field_F.height != ~param1) {
-            this.field_F = new Sprite(0, 0);
-            this.field_F.width = param2;
-            this.field_F.paddedWidth = param2;
-            this.field_F.height = param1;
-            this.field_F.paddedHeight = param1;
-            this.field_F.pixels = GetDebrisGroupColour.field_r.readPixels(var4, var5, this.field_F.width, this.field_F.height);
+          if (null == this.cachedFrame ||
+            ~param2 != ~this.cachedFrame.width ||
+            ~this.cachedFrame.height != ~param1) {
+            this.cachedFrame = new Sprite(0, 0);
+            this.cachedFrame.width = param2;
+            this.cachedFrame.paddedWidth = param2;
+            this.cachedFrame.height = param1;
+            this.cachedFrame.paddedHeight = param1;
+            this.cachedFrame.pixels = GetDebrisGroupColour.field_r.readPixels(var4, var5, this.cachedFrame.width, this.cachedFrame.height);
           }
-          this.field_F.drawOpaque(SoftwareRasterizer2D.width / 2 - param2 / param0, SoftwareRasterizer2D.height / 2 - param1 / 2 - 1);
+          this.cachedFrame.drawOpaque(SoftwareRasterizer2D.width / 2 - param2 / param0, SoftwareRasterizer2D.height / 2 - param1 / 2 - 1);
           return;
         }
     }
 
-    final static String b(int param0, int param1) {
+    final static String getTeamName(int param0, int param1) {
         if (param0 >= 0 &&
-          !(GpuVertexBufferOwner.field_c.length <= param0)) {
-          return GpuVertexBufferOwner.field_c[param0];
+          !(GpuVertexBufferOwner.teamNames.length <= param0)) {
+          return GpuVertexBufferOwner.teamNames[param0];
         }
         if (param1 != -1) {
           return (String) null;
         }
-        return GpuVertexBufferOwner.field_c[GpuVertexBufferOwner.field_c.length - 1];
+        return GpuVertexBufferOwner.teamNames[GpuVertexBufferOwner.teamNames.length - 1];
     }
 
     final void renderGameFrame(int param0) {
@@ -2367,7 +2367,7 @@ public final class VoidHunters extends NetworkGameClient {
             var5_intLifetime2 = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
             GetPhasedEnergyBeamFireForce.a(var4_int, 32, var5_intLifetime2);
             if (!RoundResult.field_e) {
-              this.a(2, 20 + cd.a(true), fk.b(-119));
+              this.drawCachedCenteredFrame(2, 20 + cd.a(true), fk.b(-119));
             }
             PerlinNoiseTextureOperation.a(false, (byte) 71);
             RoundResult.field_e = true;
@@ -2380,15 +2380,15 @@ public final class VoidHunters extends NetworkGameClient {
               var7 = GetBombletSprayEnergyUsed.field_p.width / 2 - var5_intLifetime2 / 2;
               var8 = -(var6 / 2) + GetBombletSprayEnergyUsed.field_p.height / 2;
               BlackBoxRecording.a((byte) -115, 255, var6, var7, var8 - 1, var5_intLifetime2);
-              if (this.field_F == null) {
-                this.field_F = new Sprite(0, 0);
-                this.field_F.width = var5_intLifetime2;
-                this.field_F.paddedWidth = var5_intLifetime2;
-                this.field_F.height = var6;
-                this.field_F.paddedHeight = var6;
-                this.field_F.pixels = GetDebrisGroupColour.field_r.readPixels(var7, var8, this.field_F.width, this.field_F.height);
+              if (this.cachedFrame == null) {
+                this.cachedFrame = new Sprite(0, 0);
+                this.cachedFrame.width = var5_intLifetime2;
+                this.cachedFrame.paddedWidth = var5_intLifetime2;
+                this.cachedFrame.height = var6;
+                this.cachedFrame.paddedHeight = var6;
+                this.cachedFrame.pixels = GetDebrisGroupColour.field_r.readPixels(var7, var8, this.cachedFrame.width, this.cachedFrame.height);
               }
-              this.field_F.drawOpaque(SoftwareRasterizer2D.width / 2 - var5_intLifetime2 / 2, SoftwareRasterizer2D.height / 2 - var6 / 2 - 1);
+              this.cachedFrame.drawOpaque(SoftwareRasterizer2D.width / 2 - var5_intLifetime2 / 2, SoftwareRasterizer2D.height / 2 - var6 / 2 - 1);
               SetMutatorVotes.f(-1321004447);
               RoundResult.field_e = true;
             }
@@ -2400,20 +2400,20 @@ public final class VoidHunters extends NetworkGameClient {
             }
           }
           if (!RoundResult.field_e) {
-            this.field_F = null;
+            this.cachedFrame = null;
           }
           if (RoundResult.field_e &&
             OpenGlTexture1D.field_i) {
             var4_int = SoftwareRasterizer2D.width;
             var5_intLifetime3 = SoftwareRasterizer2D.height;
-            if (this.field_F != null) {
-              var5_intLifetime3 = this.field_F.height;
-              var4_int = this.field_F.width;
+            if (this.cachedFrame != null) {
+              var5_intLifetime3 = this.cachedFrame.height;
+              var4_int = this.cachedFrame.width;
             }
             var6Lifetime1 = (-var4_int + GetBombletSprayEnergyUsed.field_p.width) / 2;
             var7Lifetime1 = (-var5_intLifetime3 + GetBombletSprayEnergyUsed.field_p.height) / 2;
             if (SetReloadBarWidth.isCachedFrameAvailable((byte) -116) &&
-              this.field_F != null) {
+              this.cachedFrame != null) {
               var6Lifetime1 = GetExplosionProjectileOndamageParticles.e((byte) -24);
               var7Lifetime1 = RemoveEventActionFactory.b((byte) 102);
             }
@@ -2459,10 +2459,10 @@ public final class VoidHunters extends NetworkGameClient {
     }
 
     public VoidHunters() {
-        this.field_B = 0;
-        this.field_F = null;
-        this.field_D = -1;
-        this.field_C = -1;
+        this.musicStingCooldown = 0;
+        this.cachedFrame = null;
+        this.menuMusicMixId = -1;
+        this.gameMusicMixId = -1;
     }
 
     static {

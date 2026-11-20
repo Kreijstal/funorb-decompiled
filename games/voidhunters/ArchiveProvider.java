@@ -44,7 +44,7 @@ abstract class ArchiveProvider {
                 var8 = var6.y - param1;
                 var9_int = TextLayout.approximateVectorLength(var7, (byte) 109, var8);
                 if (var9_int < Projectile.field_q) {
-                  VariableCondition.a(var6.x + 65536, var6.y, var6.y, var6.x, (byte) -54);
+                  VariableCondition.enqueueDebugArrow(var6.x + 65536, var6.y, var6.y, var6.x, (byte) -54);
                   return;
                 }
               }

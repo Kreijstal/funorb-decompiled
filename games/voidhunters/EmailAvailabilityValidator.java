@@ -15,7 +15,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
     }
 
     final ValidationState validateValue(String param0, int param1) {
-        ge var3 = null;
+        EmailAvailabilityCheck var3 = null;
         RuntimeException var3_ref = null;
         ValidationState stackIn_2_0 = null;
         ValidationState stackIn_8_0 = null;
@@ -30,13 +30,13 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
             return stackIn_2_0;
           }
           if (!param0.equals(this.checkedEmail)) {
-            var3 = psb.a(param0, param1 ^ 16384);
-            if (!var3.a(4)) {
+            var3 = psb.getEmailAvailabilityCheck(param0, param1 ^ 16384);
+            if (!var3.isComplete(4)) {
               stackIn_8_0 = SetFighterRepairTime.pendingValidation;
               return stackIn_8_0;
             }
             this.checkedEmail = param0;
-            this.emailAvailable = var3.b((byte) -20);
+            this.emailAvailable = var3.isAvailable((byte) -20);
           }
           if (!this.emailAvailable) {
             stackIn_13_0 = SetArmageddonLength.invalidInput;

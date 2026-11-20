@@ -51,7 +51,7 @@ final class GetSniperCannonAimarc extends ConsoleCommand {
           if (param0 > -3) {
             field_o = 21;
           }
-          var4 = VoidHunters.b(var3_int, -1);
+          var4 = VoidHunters.getTeamName(var3_int, -1);
           var5 = param1;
           if (var5 != 0 &&
             var5 != 4) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetThrusterParticleLife extends ConsoleCommand {
-    static fdb field_o;
+    static FadingMidiPcmStream field_o;
     static GameStateFactory field_p;
 
     public static void clearSharedReferences(int param0) {

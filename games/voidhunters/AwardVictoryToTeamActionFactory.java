@@ -93,7 +93,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetSpinningBladeSpinupSpeed.field_o[21] = GetPedrosRepairMode.field_o;
           SetSpinningBladeSpinupSpeed.field_o[1] = iob.field_e;
           SetSpinningBladeSpinupSpeed.field_o[25] = SetShieldsDirectionalArcParticleLife.field_p;
-          SetSpinningBladeSpinupSpeed.field_o[3] = fdb.field_S;
+          SetSpinningBladeSpinupSpeed.field_o[3] = FadingMidiPcmStream.field_S;
           SetSpinningBladeSpinupSpeed.field_o[6] = kmb.field_b;
           SetSpinningBladeSpinupSpeed.field_o[50] = GetPedrosRepairMode.field_o;
           SetSpinningBladeSpinupSpeed.field_o[41] = WeaponBehaviourFactory.field_a;

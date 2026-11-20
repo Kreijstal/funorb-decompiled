@@ -36,7 +36,7 @@ final class GetCountermeasureLauncherAimarc extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, Camera2D param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void drawWorldArrow(int param0, Camera2D param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8_int = 0;
         int var9 = 0;
         int var10 = 0;

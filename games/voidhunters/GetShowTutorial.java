@@ -27,7 +27,7 @@ final class GetShowTutorial extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 111);
           }
-          stackIn_3_0 = new ConsoleValue(SetUseExtraBackground.field_p);
+          stackIn_3_0 = new ConsoleValue(SetUseExtraBackground.showTutorial);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

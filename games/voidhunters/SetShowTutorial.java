@@ -17,7 +17,7 @@ final class SetShowTutorial extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetUseExtraBackground.field_p = arguments[0].booleanValue(false);
+          SetUseExtraBackground.showTutorial = arguments[0].booleanValue(false);
           if (obfuscationGuard > -119) {
             field_o = true;
           }

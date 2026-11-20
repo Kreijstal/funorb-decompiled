@@ -41,8 +41,8 @@ class UiTextField extends UiFocusableComponent {
         try {
           OpenGlVertexAttribute.field_a = OpenGlVertexAttribute.field_a + 1;
           if (GetBombletSprayProjectileOndamageParticles.field_o == -1 &&
-            -1 == gi.field_b) {
-            gi.field_b = uia.field_b;
+            -1 == EmailAvailabilityCheckFactory.field_b) {
+            EmailAvailabilityCheckFactory.field_b = uia.field_b;
             GetBombletSprayProjectileOndamageParticles.field_o = PlayerGameData.field_b;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -83,7 +83,7 @@ class UiTextField extends UiFocusableComponent {
               GetMissileLauncherAimarc.field_o = false;
             }
             GetBombletSprayReload.field_r = GetBombletSprayProjectileOndamageParticles.field_o;
-            SetTestActionLag.field_o = gi.field_b;
+            SetTestActionLag.field_o = EmailAvailabilityCheckFactory.field_b;
           }
           GetReadyRoomMutatorTime.field_o = param0;
           if (!GetMissileLauncherAimarc.field_o &&
@@ -91,14 +91,14 @@ class UiTextField extends UiFocusableComponent {
             VariableConditionFactory.field_c) {
             OpenGlVertexAttribute.field_a = 0;
             GetBombletSprayReload.field_r = GetBombletSprayProjectileOndamageParticles.field_o;
-            SetTestActionLag.field_o = gi.field_b;
+            SetTestActionLag.field_o = EmailAvailabilityCheckFactory.field_b;
           }
           if (GetMissileLauncherAimarc.field_o &&
             GetBombletSprayProjectileDamage.field_o == OpenGlVertexAttribute.field_a) {
             GetMissileLauncherAimarc.field_o = false;
             OpenGlVertexAttribute.field_a = 0;
           }
-          gi.field_b = -1;
+          EmailAvailabilityCheckFactory.field_b = -1;
           GetBombletSprayProjectileOndamageParticles.field_o = -1;
           if (param1 == 5757) {
             return;

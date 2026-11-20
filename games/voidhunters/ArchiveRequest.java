@@ -21,7 +21,7 @@ abstract class ArchiveRequest extends DualLinkNode {
           hb.field_b = param2;
           cwa.field_b = param4;
           SetThrusterBindingBalanceThreshold.field_o = true;
-          gi.field_a = param0;
+          EmailAvailabilityCheckFactory.field_a = param0;
           if (param3) {
             String var7 = (String) null;
             ArchiveRequest.a(50, -52, 121L, false, (String) null);

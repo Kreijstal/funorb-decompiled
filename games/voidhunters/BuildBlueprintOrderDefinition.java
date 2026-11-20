@@ -44,7 +44,7 @@ final class BuildBlueprintOrderDefinition extends SpecialOrderDefinition {
         Widget var3 = null;
         SetMissileLauncherRandomness.field_o = SetSniperCannonProjectiles.a(param0, "display_name_changed", "basic", true);
         BitmapTextLayout.field_n = new ScrollableActionPanel(0L, UiTheme.field_k, SetMissileLauncherEnergyUsed.field_q, SetDefaultFiringLeeway.field_o);
-        vra.field_b = new ScrollableActionPanel(0L, UiTheme.field_k, SetMissilesTopSpeed.field_q, PlayerJoinFactory.field_a);
+        AttachmentInputState.field_b = new ScrollableActionPanel(0L, UiTheme.field_k, SetMissilesTopSpeed.field_q, PlayerJoinFactory.field_a);
         PlayerJoinFactory.field_c = new Widget(0L, (Widget) null);
         OpenGlCubeTexture.field_h = new Widget(0L, DeveloperConsole.field_q);
         OpenGlCubeTexture.field_h.field_F = 1;
@@ -65,9 +65,9 @@ final class BuildBlueprintOrderDefinition extends SpecialOrderDefinition {
           var5 = BitmapTextLayout.field_n.scrollPane.viewport;
           var6 = var5;
           var6.field_F = 1;
-          vra.field_b.scrollPane.viewport.applyStyle(18445, DeveloperConsole.field_q);
-          var3 = vra.field_b.scrollPane.viewport;
-          vra.field_b.scrollPane.viewport.field_B = 1;
+          AttachmentInputState.field_b.scrollPane.viewport.applyStyle(18445, DeveloperConsole.field_q);
+          var3 = AttachmentInputState.field_b.scrollPane.viewport;
+          AttachmentInputState.field_b.scrollPane.viewport.field_B = 1;
           var3.field_F = 1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hka.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

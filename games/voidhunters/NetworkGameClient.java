@@ -684,7 +684,7 @@ abstract class NetworkGameClient extends GameApplet {
             }
             var12 = SetExplosionPushMultiplier.a(-127);
             if (var12 != null) {
-              GetDebrisThrowable.a(12, var12.booleanValue());
+              GetDebrisThrowable.completeEmailAvailabilityCheck(12, var12.booleanValue());
             }
           }
           var5Lifetime1 = 60 % ((-49 - param0) / 41);

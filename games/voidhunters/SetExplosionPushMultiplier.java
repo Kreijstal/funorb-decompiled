@@ -14,11 +14,11 @@ final class SetExplosionPushMultiplier extends ConsoleCommand {
         if (param1 != -114) {
           SetExplosionPushMultiplier.clearSharedReferences((byte) 98);
           GetBombletSprayProjectileOndamageParticles.field_o = param0;
-          gi.field_b = param2;
+          EmailAvailabilityCheckFactory.field_b = param2;
           return;
         }
         GetBombletSprayProjectileOndamageParticles.field_o = param0;
-        gi.field_b = param2;
+        EmailAvailabilityCheckFactory.field_b = param2;
     }
 
     final static String a(int param0, String param1, int param2) {

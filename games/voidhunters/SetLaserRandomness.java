@@ -81,7 +81,7 @@ final class SetLaserRandomness extends ConsoleCommand {
         } else {
           var7 = kia.field_b;
         }
-        VoidHunters.a(param4, param3, param6, param0, var7, param5, true, param2);
+        VoidHunters.updateChatInputDialog(param4, param3, param6, param0, var7, param5, true, param2);
     }
 
     static {

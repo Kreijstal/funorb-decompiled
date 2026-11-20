@@ -8,8 +8,8 @@ final class GetUseCircleOutline extends ConsoleCommand {
 
     final static void a(boolean param0, ResourceArchive param1, ResourceArchive param2, ResourceArchive param3, boolean param4) {
         try {
-          GetBombletSprayPushMultiplier.field_p = gi.a("", (byte) 110);
-          GetBombletSprayPushMultiplier.field_p.a(7861, param4);
+          GetBombletSprayPushMultiplier.emailAvailabilityCheck = EmailAvailabilityCheckFactory.create("", (byte) 110);
+          GetBombletSprayPushMultiplier.emailAvailabilityCheck.complete(7861, param4);
           SetOndamageParticleFadestart.a(param3, param2, param1, 0);
           SetMutatorVotes.e(121);
           SetCountermeasureLauncherAimspeed.field_r = ToolkitRasterStateStack.field_d;

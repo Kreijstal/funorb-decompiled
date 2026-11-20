@@ -13,8 +13,8 @@ final class GetDebrisCarryOver extends ConsoleCommand {
         }
     }
 
-    final static void b(boolean param0) {
-        SocketConnector.field_c = new IntrusiveDeque();
+    final static void initializeDebugArrows(boolean param0) {
+        SocketConnector.debugArrows = new IntrusiveDeque();
         if (param0) {
           field_q = (String) null;
         }

@@ -1431,7 +1431,7 @@ final class MissionBuilder implements DiffableState {
           if (param3) {
             this.a(param6, param4, var10Lifetime2, param2 - 27942, var11);
           }
-          pd.field_g = var10Lifetime2;
+          WorldDebugArrow.field_g = var10Lifetime2;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

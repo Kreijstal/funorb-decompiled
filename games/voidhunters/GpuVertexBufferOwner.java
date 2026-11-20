@@ -3,7 +3,7 @@
  */
 final class GpuVertexBufferOwner {
     private GpuVertexBuffer vertexBuffer;
-    static String[] field_c;
+    static String[] teamNames;
     static String field_a;
 
     final static void updateSoundQueues(int param0) {
@@ -74,7 +74,7 @@ final class GpuVertexBufferOwner {
     }
 
     public static void clearSharedReferences(int param0) {
-        field_c = null;
+        teamNames = null;
         field_a = null;
         if (param0 != -17471) {
           GpuVertexBufferOwner.updateSoundQueues(99);
@@ -82,7 +82,7 @@ final class GpuVertexBufferOwner {
     }
 
     static {
-        field_c = new String[]{"Blue", "Yellow", "Neutral"};
+        teamNames = new String[]{"Blue", "Yellow", "Neutral"};
         field_a = "Spectate";
     }
 }

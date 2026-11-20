@@ -124,7 +124,7 @@ final class ColorRowCache {
             stackIn_17_0 = -23;
             return stackIn_17_0;
           }
-          if (!GetBombletSprayPushMultiplier.field_p.a(4)) {
+          if (!GetBombletSprayPushMultiplier.emailAvailabilityCheck.isComplete(4)) {
             stackIn_21_0 = 1;
             return stackIn_21_0;
           }

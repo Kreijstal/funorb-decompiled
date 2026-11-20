@@ -5,24 +5,24 @@ final class psb {
     static int field_a;
     static FullscreenCanvas field_b;
 
-    final static ge a(String param0, int param1) {
+    final static EmailAvailabilityCheck getEmailAvailabilityCheck(String param0, int param1) {
         RuntimeException var2 = null;
-        ge stackIn_2_0 = null;
-        ge stackIn_8_0 = null;
+        EmailAvailabilityCheck stackIn_2_0 = null;
+        EmailAvailabilityCheck stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            stackIn_2_0 = (ge) null;
+            stackIn_2_0 = (EmailAvailabilityCheck) null;
             return stackIn_2_0;
           }
-          if (GetBombletSprayPushMultiplier.field_p.a(4) &&
-            !param0.equals(GetBombletSprayPushMultiplier.field_p.b(4))) {
-            GetBombletSprayPushMultiplier.field_p = gi.a(param0, (byte) 110);
+          if (GetBombletSprayPushMultiplier.emailAvailabilityCheck.isComplete(4) &&
+            !param0.equals(GetBombletSprayPushMultiplier.emailAvailabilityCheck.getEmail(4))) {
+            GetBombletSprayPushMultiplier.emailAvailabilityCheck = EmailAvailabilityCheckFactory.create(param0, (byte) 110);
           }
-          stackIn_8_0 = GetBombletSprayPushMultiplier.field_p;
+          stackIn_8_0 = GetBombletSprayPushMultiplier.emailAvailabilityCheck;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -49,7 +49,7 @@ final class psb {
         try {
           if (param2 != 0) {
             var4 = (String) null;
-            psb.a((String) null, 28);
+            psb.getEmailAvailabilityCheck((String) null, 28);
           }
           stackIn_3_0 = GetMessageMaxage.a((byte) -69, param1, param0, 0);
           return stackIn_3_0;
@@ -71,7 +71,7 @@ final class psb {
         field_b = null;
         if (param0) {
           String var2 = (String) null;
-          psb.a((String) null, -33);
+          psb.getEmailAvailabilityCheck((String) null, -33);
         }
     }
 

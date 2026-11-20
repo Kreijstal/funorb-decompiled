@@ -39,10 +39,10 @@ final class sh {
         return param2;
     }
 
-    final static void a(int param0) {
+    final static void expireDebugArrows(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        pd var1 = null;
+        WorldDebugArrow var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         var2 = VoidHunters.field_G;
@@ -50,17 +50,17 @@ final class sh {
           if (param0 != 20824) {
             field_a = (byte[][]) null;
           }
-          if (null == SocketConnector.field_c) {
+          if (null == SocketConnector.debugArrows) {
             return;
           }
-          var1 = (pd) (SocketConnector.field_c.first(0));
+          var1 = (WorldDebugArrow) (SocketConnector.debugArrows.first(0));
           while (var1 != null) {
-            fieldTemp$0 = var1.field_d;
-            var1.field_d = var1.field_d - 1;
+            fieldTemp$0 = var1.remainingTicks;
+            var1.remainingTicks = var1.remainingTicks - 1;
             if (fieldTemp$0 == 0) {
               var1.unlink(param0 ^ -24158);
             }
-            var1 = (pd) (SocketConnector.field_c.next((byte) 12));
+            var1 = (WorldDebugArrow) (SocketConnector.debugArrows.next((byte) 12));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

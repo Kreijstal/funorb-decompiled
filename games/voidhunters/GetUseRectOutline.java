@@ -9,7 +9,7 @@ final class GetUseRectOutline extends ConsoleCommand {
           SetUseDetailLines.field_o = GetVelocitySustain.field_p;
           GetMissionTimeLimit.a(param7, true);
           if (SoftwareTransform3D.field_b > 0) {
-            fdb.a(param0, param7, param5, (byte) 100);
+            FadingMidiPcmStream.updateLobbyAndTutorialInput(param0, param7, param5, (byte) 100);
           }
           SetAutozoomSpeedDivide.field_p.field_F = 1;
           SetAutozoomSpeedDivide.field_p.field_w = SetAutoAfkTimeout.field_q.field_w;
@@ -47,7 +47,7 @@ final class GetUseRectOutline extends ConsoleCommand {
               SetUseDetailLines.field_o = (GetShieldsDirectionalArcParticleLife.field_p - 640) / 2;
               GetMissionTimeLimit.a(param7, true);
               if (SoftwareTransform3D.field_b > 0) {
-                fdb.a(param0, param7, param5, (byte) 100);
+                FadingMidiPcmStream.updateLobbyAndTutorialInput(param0, param7, param5, (byte) 100);
               }
               SetAutozoomSpeedDivide.field_p.field_F = 1;
               SetAutozoomSpeedDivide.field_p.field_w = SetAutoAfkTimeout.field_q.field_w;
@@ -71,7 +71,7 @@ final class GetUseRectOutline extends ConsoleCommand {
               SetUseDetailLines.field_o = GetVelocitySustain.field_p;
               GetMissionTimeLimit.a(param7, true);
               if (SoftwareTransform3D.field_b > 0) {
-                fdb.a(param0, param7, param5, (byte) 100);
+                FadingMidiPcmStream.updateLobbyAndTutorialInput(param0, param7, param5, (byte) 100);
               }
               SetAutozoomSpeedDivide.field_p.field_F = 1;
               SetAutozoomSpeedDivide.field_p.field_w = SetAutoAfkTimeout.field_q.field_w;
@@ -110,7 +110,7 @@ final class GetUseRectOutline extends ConsoleCommand {
               SetUseDetailLines.field_o = (GetShieldsDirectionalArcParticleLife.field_p - 640) / 2;
               GetMissionTimeLimit.a(param7, true);
               if (SoftwareTransform3D.field_b > 0) {
-                fdb.a(param0, param7, param5, (byte) 100);
+                FadingMidiPcmStream.updateLobbyAndTutorialInput(param0, param7, param5, (byte) 100);
               }
               SetAutozoomSpeedDivide.field_p.field_F = 1;
               SetAutozoomSpeedDivide.field_p.field_w = SetAutoAfkTimeout.field_q.field_w;
@@ -134,7 +134,7 @@ final class GetUseRectOutline extends ConsoleCommand {
               SetUseDetailLines.field_o = GetVelocitySustain.field_p;
               GetMissionTimeLimit.a(param7, true);
               if (SoftwareTransform3D.field_b > 0) {
-                fdb.a(param0, param7, param5, (byte) 100);
+                FadingMidiPcmStream.updateLobbyAndTutorialInput(param0, param7, param5, (byte) 100);
               }
               SetAutozoomSpeedDivide.field_p.field_F = 1;
               SetAutozoomSpeedDivide.field_p.field_w = SetAutoAfkTimeout.field_q.field_w;

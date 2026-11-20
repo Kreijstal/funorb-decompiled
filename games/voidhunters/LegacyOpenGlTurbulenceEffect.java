@@ -9,7 +9,7 @@ final class LegacyOpenGlTurbulenceEffect extends LegacyOpenGlMaterialEffect {
     private int lastUpdateTime;
     static boolean field_d;
     private LegacyOpenGlWaterTextures waterTextures;
-    static fdb field_g;
+    static FadingMidiPcmStream field_g;
     private OpenGlDisplayLists displayLists;
 
     public static void clearSharedReferences(byte param0) {

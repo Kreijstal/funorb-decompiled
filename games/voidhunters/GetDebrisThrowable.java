@@ -7,11 +7,11 @@ final class GetDebrisThrowable extends ConsoleCommand {
     static int field_q;
     static String field_o;
 
-    final static void a(int param0, boolean param1) {
+    final static void completeEmailAvailabilityCheck(int param0, boolean param1) {
         if (param0 != 12) {
           return;
         }
-        GetBombletSprayPushMultiplier.field_p.a(7861, param1);
+        GetBombletSprayPushMultiplier.emailAvailabilityCheck.complete(7861, param1);
     }
 
     GetDebrisThrowable(String param0, Class[] param1, String param2) {

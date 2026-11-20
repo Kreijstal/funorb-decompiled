@@ -8,7 +8,7 @@ final class SetUseExtraBackground extends ConsoleCommand {
     static String field_s;
     static String field_u;
     static String field_t;
-    static boolean field_p;
+    static boolean showTutorial;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -67,7 +67,7 @@ final class SetUseExtraBackground extends ConsoleCommand {
         field_s = "Add action (Set custom variable)";
         field_o = "Macroing or use of bots";
         field_t = "Your rating is <%0>";
-        field_p = true;
+        showTutorial = true;
         field_u = "Names can only contain letters, numbers, spaces and underscores";
     }
 }

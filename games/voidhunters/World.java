@@ -1175,7 +1175,7 @@ final class World implements DiffableState, CompactGameState {
             if (param6.chassis.thrusterbehaviour != null) {
               var19 += 4096;
             }
-            VariableCondition.a(param2.worldx + GetNumStars.cosAngle(var19, (byte) -81), param2.worldy + TextureLineShape.sinAngle(var19, 54), param2.worldy, param2.worldx, (byte) -54);
+            VariableCondition.enqueueDebugArrow(param2.worldx + GetNumStars.cosAngle(var19, (byte) -81), param2.worldy + TextureLineShape.sinAngle(var19, 54), param2.worldy, param2.worldx, (byte) -54);
             param6.addForceAtPoint(param6.getMass(false) * var15 * 4, param6.getX(false), param6.getY((byte) 124), (byte) -121, param6.getMass(false) * (var14 * 4));
             param6.dx = 180 * param6.dx >> 8;
             param6.dy = param6.dy * 180 >> 8;
@@ -1872,7 +1872,7 @@ final class World implements DiffableState, CompactGameState {
                         var11.activateSpecialOrder(param1 ^ -93, var12.specialorder, this, var12.aimtargety, var12.aimtargetx);
                       }
                     } else {
-                      var15 = this.a(var12, -72, var13, var11) ? 1 : 0;
+                      var15 = this.updateComponentDragging(var12, -72, var13, var11) ? 1 : 0;
                       if (FlipTextureOperation.field_p == 1 &&
                         SetShipTeamAction.field_e == 1 &&
                         var11.justAttachedSomething &&
@@ -5069,7 +5069,7 @@ final class World implements DiffableState, CompactGameState {
         }
     }
 
-    private final Debris a(Debris param0, byte param1, Ship param2, int param3, vra param4, int param5) {
+    private final Debris resolveDraggedDebris(Debris param0, byte param1, Ship param2, int param3, AttachmentInputState param4, int param5) {
         Debris stackIn_7_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -5091,8 +5091,8 @@ final class World implements DiffableState, CompactGameState {
             this.height = 62;
           }
           if (null == param0 &&
-            (128 & param4.field_e) != 0) {
-            param2.aimAt(123, param4.field_a, param4.field_c);
+            (128 & param4.triggers) != 0) {
+            param2.aimAt(123, param4.aimTargetY, param4.aimTargetX);
             var7_int = param2.getX(false) - param2.getCenterOfMassOffsetX(param1 + 995401033);
             var8 = param2.getY((byte) 118) - param2.getCenterOfMassOffsetY((byte) 5);
             param2.chassis.updateWorldTransforms(true, var7_int, var8, param2.getAngle(param1 ^ 127), 0, param2.getBoundingbox((byte) -106));
@@ -5534,7 +5534,7 @@ final class World implements DiffableState, CompactGameState {
         return this.debug;
     }
 
-    private final boolean a(Player param0, int param1, Player param2, Ship param3) {
+    private final boolean updateComponentDragging(Player param0, int param1, Player param2, Ship param3) {
         boolean discarded$0 = false;
         int stackIn_16_0 = 0;
         int stackIn_22_0 = 0;
@@ -5553,7 +5553,7 @@ final class World implements DiffableState, CompactGameState {
         String stackIn_49_2 = null;
         RuntimeException decompiledCaughtException = null;
         Object var5 = null;
-        vra var6 = null;
+        AttachmentInputState var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -5568,32 +5568,32 @@ final class World implements DiffableState, CompactGameState {
           if (param3.getTargetBlueprint((byte) 28) == null) {
             var5 = this.getDebrisById(21363, param3.getDragging(85));
           }
-          var6 = new vra();
-          var6.field_e = param0.triggers;
+          var6 = new AttachmentInputState();
+          var6.triggers = param0.triggers;
           if (param1 > -69) {
             return false;
           }
-          var6.field_d = param2.triggers;
-          var6.field_a = param0.aimtargety;
-          var6.field_c = param0.aimtargetx;
+          var6.previousTriggers = param2.triggers;
+          var6.aimTargetY = param0.aimtargety;
+          var6.aimTargetX = param0.aimtargetx;
           if (param3.getTargetBlueprint((byte) 28) != null) {
             param3.chassis.resetAim(103);
             this.a(16384, var6, param3.getTargetBlueprint((byte) 28), param3);
             return false;
           }
-          var7 = var6.field_c;
-          var8 = var6.field_a;
+          var7 = var6.aimTargetX;
+          var8 = var6.aimTargetY;
           stackIn_16_0 = (var5 == null) ? 0 : 1;
           var9 = stackIn_16_0;
-          var12 = this.a((Debris) (var5), (byte) 127, param3, var8, var6, var7);
+          var12 = this.resolveDraggedDebris((Debris) (var5), (byte) 127, param3, var8, var6, var7);
           if (var12 != null) {
             stackIn_22_0 = (var9 == 0) ? 1 : 0;
           } else {
             stackIn_22_0 = 0;
           }
           var10 = stackIn_22_0;
-          if ((var6.field_e & 128) == 0) {
-            if ((var6.field_d & 128) == 0) {
+          if ((var6.triggers & 128) == 0) {
+            if ((var6.previousTriggers & 128) == 0) {
               return true;
             }
             discarded$0 = this.a(var12, var8, true, param3, 126, var7);
@@ -6871,7 +6871,7 @@ final class World implements DiffableState, CompactGameState {
         this.initializeSpatialPartitions(false);
     }
 
-    private final void a(int param0, vra param1, ShipBlueprint param2, Ship param3) {
+    private final void a(int param0, AttachmentInputState param1, ShipBlueprint param2, Ship param3) {
         int var10 = 0;
         int var5_int = 0;
         int[] var6 = null;

@@ -1073,7 +1073,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime134 = HuffmanCodec.fetchLocalizedResource((byte) -123, "COMPONENT_CHASSIS_POLYGONAL_FRIGATE_TEXT");
           if (var2Lifetime134 != null) {
-            fdb.field_S = Cp1252Strings.decode((byte) -125, var2Lifetime134);
+            FadingMidiPcmStream.field_S = Cp1252Strings.decode((byte) -125, var2Lifetime134);
           }
           var2Lifetime135 = HuffmanCodec.fetchLocalizedResource((byte) -9, "COMPONENT_CHASSIS_CONVOY_TEXT");
           if (var2Lifetime135 != null) {
@@ -1421,7 +1421,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime221 = HuffmanCodec.fetchLocalizedResource((byte) -98, "VOTE_CONVOY_DESC_A");
           if (null != var2Lifetime221) {
-            fdb.field_T = Cp1252Strings.decode((byte) -125, var2Lifetime221);
+            FadingMidiPcmStream.field_T = Cp1252Strings.decode((byte) -125, var2Lifetime221);
           }
           var2Lifetime222 = HuffmanCodec.fetchLocalizedResource((byte) -110, "VOTE_CONVOY_DESC_B");
           if (var2Lifetime222 != null) {
@@ -1653,15 +1653,15 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime279 = HuffmanCodec.fetchLocalizedResource((byte) -30, "team_names,0");
           if (var2Lifetime279 != null) {
-            GpuVertexBufferOwner.field_c[0] = Cp1252Strings.decode((byte) -125, var2Lifetime279);
+            GpuVertexBufferOwner.teamNames[0] = Cp1252Strings.decode((byte) -125, var2Lifetime279);
           }
           var2Lifetime280 = HuffmanCodec.fetchLocalizedResource((byte) -9, "team_names,1");
           if (null != var2Lifetime280) {
-            GpuVertexBufferOwner.field_c[1] = Cp1252Strings.decode((byte) -125, var2Lifetime280);
+            GpuVertexBufferOwner.teamNames[1] = Cp1252Strings.decode((byte) -125, var2Lifetime280);
           }
           var2Lifetime281 = HuffmanCodec.fetchLocalizedResource((byte) -39, "team_names,2");
           if (null != var2Lifetime281) {
-            GpuVertexBufferOwner.field_c[2] = Cp1252Strings.decode((byte) -125, var2Lifetime281);
+            GpuVertexBufferOwner.teamNames[2] = Cp1252Strings.decode((byte) -125, var2Lifetime281);
           }
           var2Lifetime282 = HuffmanCodec.fetchLocalizedResource((byte) -40, "game_restart_timer");
           if (var2Lifetime282 != null) {
@@ -1669,7 +1669,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime283 = HuffmanCodec.fetchLocalizedResource((byte) -109, "tutorial_movement");
           if (var2Lifetime283 != null) {
-            ge.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime283);
+            EmailAvailabilityCheck.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime283);
           }
           var2Lifetime284 = HuffmanCodec.fetchLocalizedResource((byte) -105, "tutorial_shooting");
           if (var2Lifetime284 != null) {

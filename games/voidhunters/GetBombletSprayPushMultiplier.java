@@ -3,7 +3,7 @@
  */
 final class GetBombletSprayPushMultiplier extends ConsoleCommand {
     static int[] field_o;
-    static ge field_p;
+    static EmailAvailabilityCheck emailAvailabilityCheck;
 
     final static ToolkitSprite a(byte param0, GraphicsToolkit param1, Sprite param2) {
         int var4 = 0;
@@ -95,9 +95,9 @@ final class GetBombletSprayPushMultiplier extends ConsoleCommand {
     }
 
     public static void clearSharedReferences(int param0) {
-        field_p = null;
+        emailAvailabilityCheck = null;
         if (param0 > -70) {
-          field_p = (ge) null;
+          emailAvailabilityCheck = (EmailAvailabilityCheck) null;
           field_o = null;
           return;
         }

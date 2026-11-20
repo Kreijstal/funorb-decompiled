@@ -4,7 +4,7 @@
 import java.io.*;
 
 abstract class SocketConnector {
-    static IntrusiveDeque field_c;
+    static IntrusiveDeque debugArrows;
     int port;
     String host;
 
@@ -27,10 +27,10 @@ abstract class SocketConnector {
     public static void clearSharedReferences(byte param0) {
         if (param0 >= -71) {
           SocketConnector.a(-112, -32, -122);
-          field_c = null;
+          debugArrows = null;
           return;
         }
-        field_c = null;
+        debugArrows = null;
     }
 
     abstract java.net.Socket openSocket(int param0) throws IOException;

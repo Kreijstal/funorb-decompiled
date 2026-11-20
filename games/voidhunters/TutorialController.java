@@ -739,7 +739,7 @@ final class TutorialController {
                   OpenGlVertexDeclaration.field_d = true;
                 }
                 if (this.isHintVisible(0, -116)) {
-                  var20 = SetReverbGain.a(ge.field_b, new String[]{this.formatShortcutLabel(-6448, SetFixedaim.field_q, SetUseTrails.field_o), this.formatShortcutLabel(-6448, SetSalvoaim.field_p, OpenGlVertexDeclaration.field_d), this.formatShortcutLabel(-6448, UnsupportedGpuMaterialEffect.field_f, WeaponDefinition.field_a), this.formatShortcutLabel(-6448, SetCountermeasureLauncherAimspeed.field_q, ComponentBehaviour.field_b)}, 90);
+                  var20 = SetReverbGain.a(EmailAvailabilityCheck.field_b, new String[]{this.formatShortcutLabel(-6448, SetFixedaim.field_q, SetUseTrails.field_o), this.formatShortcutLabel(-6448, SetSalvoaim.field_p, OpenGlVertexDeclaration.field_d), this.formatShortcutLabel(-6448, UnsupportedGpuMaterialEffect.field_f, WeaponDefinition.field_a), this.formatShortcutLabel(-6448, SetCountermeasureLauncherAimspeed.field_q, ComponentBehaviour.field_b)}, 90);
                   this.drawWorldHint(param0, param3, GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[0], 255), var16, var19, var20, 1619);
                 }
                 if (this.isHintCompleteAndHidden((byte) 11, 0) &&

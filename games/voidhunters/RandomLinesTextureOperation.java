@@ -193,7 +193,7 @@ final class RandomLinesTextureOperation extends TextureOperation {
         if (param0 != -34) {
           RandomLinesTextureOperation.e((byte) 68);
         }
-        return !GetBombletSprayPushMultiplier.field_p.a(4) ? true : false;
+        return !GetBombletSprayPushMultiplier.emailAvailabilityCheck.isComplete(4) ? true : false;
     }
 
     static {

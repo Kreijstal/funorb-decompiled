@@ -62,7 +62,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_use_rect_outline(" + SetPointDefenceLaserReload.field_o + ")");
         System.out.println("set_use_tri_fill(" + GetBurstFireMaxEnergy.field_o + ")");
         System.out.println("set_use_polygon_fill(" + SetServerinfoComponentstate.field_o + ")");
-        System.out.println("set_show_tutorial(" + SetUseExtraBackground.field_p + ")");
+        System.out.println("set_show_tutorial(" + SetUseExtraBackground.showTutorial + ")");
         System.out.println("set_fps(" + Particle.field_l + ")");
         System.out.println("set_radial_menu_radius(" + NodeHashTable.field_a + ")");
         System.out.println("set_minimap_width(" + GetAiFiringRangeUpshift.field_o + ")");
@@ -292,7 +292,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_angular_velocity_sustain(" + GetMissileLauncherEnergyUsed.field_q + ")");
         System.out.println("set_thruster_particle_speed_downshift(" + GetSalvoHoldable.field_p + ")");
         System.out.println("set_thruster_particle_life(" + TextureCombineSource.field_a + ")");
-        System.out.println("set_angular_force_downshift(" + ge.field_c + ")");
+        System.out.println("set_angular_force_downshift(" + EmailAvailabilityCheck.field_c + ")");
         System.out.println("set_angular_velocity_sustain_max(" + SetMassDriverEnergyUsed.field_o + ")");
         System.out.println("set_torque_downshift(" + tua.field_a + ")");
         System.out.println("set_moment_of_inertia_predivide_downshift(" + GameMenuScreen.field_e + ")");
