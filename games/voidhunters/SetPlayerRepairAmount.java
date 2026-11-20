@@ -11,9 +11,9 @@ final class SetPlayerRepairAmount extends ConsoleCommand {
     }
 
     final static void e(int param0) {
-        if (GetAngularForceDownshift.field_p != SetClientSideDragging.field_q.field_b) {
-          GetPhasedEnergyBeamProjectiles.field_o = GetPhasedEnergyBeamProjectiles.field_o + (SetClientSideDragging.field_q.field_b - GetAngularForceDownshift.field_p);
-          GetAngularForceDownshift.field_p = SetClientSideDragging.field_q.field_b;
+        if (GetAngularForceDownshift.field_p != SetClientSideDragging.field_q.height) {
+          GetPhasedEnergyBeamProjectiles.field_o = GetPhasedEnergyBeamProjectiles.field_o + (SetClientSideDragging.field_q.height - GetAngularForceDownshift.field_p);
+          GetAngularForceDownshift.field_p = SetClientSideDragging.field_q.height;
           if (param0 > ~tb.field_b) {
             tb.field_b = tb.field_b - 1;
             if (!(tb.field_b <= 0)) {

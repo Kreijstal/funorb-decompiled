@@ -194,7 +194,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[152] = ehb.field_e;
         var2[57] = AsteroidFieldFactory.field_a;
         var2[2] = MatchingFieldValidator.field_k;
-        var2[130] = sib.field_i;
+        var2[130] = ImageProducerAppletRasterBuffer.field_i;
         var2[7] = SetMachineGunAimspeed.field_o;
         var2[133] = SetVariableActionFactory.field_b;
         var2[143] = GetMissionTerrainNebulaProbability.field_p;

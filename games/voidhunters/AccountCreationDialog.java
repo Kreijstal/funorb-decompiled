@@ -115,7 +115,7 @@ final class AccountCreationDialog extends AccountStatusDialog implements UiActio
               }
             }
             if (param2.responseCode == 3) {
-              var5.addButton(-115, mab.field_h, 7);
+              var5.addButton(-115, AppletRasterBuffer.field_h, 7);
             } else {
               if (param2.responseCode == 6) {
                 var5.addButton(-124, SoftwareTransform3D.field_c, 9);

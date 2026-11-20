@@ -65,7 +65,7 @@ final class SetMutatorVotes extends ConsoleCommand {
               ModalPanel.field_x.draw(var6, var8, var2 + SetDebrisDetachmentForceMultiplier.field_p, var5, -1);
               var2 = var2 + (SpawnEnemyShipOrderDefinition.field_g + (SetPointDefenceLaserAimarc.field_q + SetExplosionPushMultiplier.field_o));
             } else {
-              GetUsePolygonFill.field_p.draw(var6, var8, var2 + mab.field_f, var5, -1);
+              GetUsePolygonFill.field_p.draw(var6, var8, var2 + AppletRasterBuffer.field_f, var5, -1);
               var2 = var2 + DebugMessage.field_a;
             }
           }

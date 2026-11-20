@@ -4,7 +4,7 @@
 final class SetClientSideDragging extends ConsoleCommand {
     static int field_p;
     static char field_r;
-    static mab field_q;
+    static AppletRasterBuffer field_q;
     static String field_o;
 
     public static void clearSharedReferences(int param0) {

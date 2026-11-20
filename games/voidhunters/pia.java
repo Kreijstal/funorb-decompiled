@@ -31,11 +31,11 @@ final class pia extends UiArrayContainer implements UiActionListener {
 
     pia(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (UiRenderer) null);
-        this.field_v = new DateOfBirthTextFields(new io(10000536), SetMissilesHitSourceTeam.field_p, 0, 0, 140, 25);
+        this.field_v = new DateOfBirthTextFields(new GradientBorderTextStyle(10000536), SetMissilesHitSourceTeam.field_p, 0, 0, 140, 25);
         this.field_v.setValidator(99, new DateOfBirthValidator());
         this.field_w = new UiFocusableComponent(tn.field_b, (UiListener) (this));
         this.children = new UiComponent[]{(UiComponent) ((Object) this.field_v), (UiComponent) ((Object) this.field_w)};
-        this.field_w.renderer = (UiRenderer) ((Object) new vva());
+        this.field_w.renderer = (UiRenderer) ((Object) new ThreeSliceButtonStyle());
         this.refreshLayout(false);
     }
 

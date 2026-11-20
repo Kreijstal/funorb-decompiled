@@ -99,7 +99,7 @@ final class fdb extends MidiPcmStream {
             UiScrollPane.field_w != SetMutatorVotes.field_o[0]) {
             UiScrollPane.field_w = SetMutatorVotes.field_o[0];
           }
-          GetMassDriverProjectiles.a((byte) 127, true, vva.field_u, 0, UiScrollPane.field_w, param2);
+          GetMassDriverProjectiles.a((byte) 127, true, ThreeSliceButtonStyle.field_u, 0, UiScrollPane.field_w, param2);
         }
         if (SetTorpedoAcceleration.field_o.field_o != 0) {
           TutorialController.field_d = false;

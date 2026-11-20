@@ -43,8 +43,8 @@ final class MassDriverWeaponDefinition extends WeaponDefinition {
             GetPlayerRepairAmount.field_q[var2_int] = 0;
           }
           for (var2_intLifetime1 = 0; var2_intLifetime1 < SetRepairModePower.field_q; var2_intLifetime1++) {
-            if (param0.channelType == nrb.field_b[var2_intLifetime1].channelType) {
-              dupTemp$3 = nrb.field_b[var2_intLifetime1].getVisibilityPriority(param1 ^ 1);
+            if (param0.channelType == NullUiRenderer.field_b[var2_intLifetime1].channelType) {
+              dupTemp$3 = NullUiRenderer.field_b[var2_intLifetime1].getVisibilityPriority(param1 ^ 1);
               GetPlayerRepairAmount.field_q[dupTemp$3] = GetPlayerRepairAmount.field_q[dupTemp$3] + 1;
             }
           }
@@ -53,8 +53,8 @@ final class MassDriverWeaponDefinition extends WeaponDefinition {
           var2_intLifetime2 = 0;
           for (var3 = 0; SetRepairModePower.field_q > var3; var3++) {
             boolean decompiledFrameRemainder0 = true;
-            if (nrb.field_b[var3].channelType == param0.channelType) {
-              var4 = nrb.field_b[var3].getVisibilityPriority(1);
+            if (NullUiRenderer.field_b[var3].channelType == param0.channelType) {
+              var4 = NullUiRenderer.field_b[var3].getVisibilityPriority(1);
               if (GetPlayerRepairAmount.field_q[var4] > EnvironmentReflectionGpuMaterialEffect.field_k) {
                 GetPlayerRepairAmount.field_q[var4] = GetPlayerRepairAmount.field_q[var4] - 1;
                 decompiledFrameRemainder0 = false;
@@ -63,13 +63,13 @@ final class MassDriverWeaponDefinition extends WeaponDefinition {
             if (decompiledFrameRemainder0) {
               incrementValue$2 = var2_intLifetime2;
               var2_intLifetime2++;
-              nrb.field_b[incrementValue$2] = nrb.field_b[var3];
+              NullUiRenderer.field_b[incrementValue$2] = NullUiRenderer.field_b[var3];
             }
           }
           SetRepairModePower.field_q = var2_intLifetime2;
           fieldTemp$1 = SetRepairModePower.field_q;
           SetRepairModePower.field_q = SetRepairModePower.field_q + 1;
-          nrb.field_b[fieldTemp$1] = param0;
+          NullUiRenderer.field_b[fieldTemp$1] = param0;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -96,7 +96,7 @@ final class MassDriverWeaponDefinition extends WeaponDefinition {
 
     final int getAimArc(int param0) {
         int var2 = -52 / ((param0 - 7) / 47);
-        return sib.field_i;
+        return ImageProducerAppletRasterBuffer.field_i;
     }
 
     final static String d(boolean param0) {

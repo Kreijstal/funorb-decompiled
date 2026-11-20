@@ -255,7 +255,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           ehb.field_e = param1[152];
           GetFullMissionSet.field_p = param1[36];
           QuickChatPhraseLoader.field_b = param1[144];
-          sib.field_i = param1[130];
+          ImageProducerAppletRasterBuffer.field_i = param1[130];
           AsteroidFactory.field_a = param1[61];
           SetLaserAimarc.field_o = param1[160];
           SetPointDefenceLaserReload.field_q = param1[132];

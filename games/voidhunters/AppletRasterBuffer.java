@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class mab {
-    int field_b;
+abstract class AppletRasterBuffer {
+    int height;
     static int field_f;
-    int[] field_c;
-    java.awt.Image field_g;
+    int[] pixels;
+    java.awt.Image image;
     static VoidHunters field_a;
     static String field_e;
     static String field_h;
-    int field_d;
+    int width;
 
-    abstract void a(int param0, int param1, java.awt.Component param2, byte param3);
+    abstract void initialize(int param0, int param1, java.awt.Component param2, byte param3);
 
-    abstract void a(java.awt.Graphics param0, int param1, byte param2, int param3);
+    abstract void draw(java.awt.Graphics param0, int param1, byte param2, int param3);
 
-    final void a(byte param0) {
-        SoftwareRasterizer2D.setTarget(this.field_c, this.field_d, this.field_b);
+    final void bind(byte param0) {
+        SoftwareRasterizer2D.setTarget(this.pixels, this.width, this.height);
         if (param0 != -108) {
           java.awt.Component var3 = (java.awt.Component) null;
-          this.a(-98, 3, (java.awt.Component) null, (byte) -19);
+          this.initialize(-98, 3, (java.awt.Component) null, (byte) -19);
         }
     }
 
@@ -30,7 +30,7 @@ abstract class mab {
           field_h = null;
           return;
         }
-        mab.clearSharedReferences(83);
+        AppletRasterBuffer.clearSharedReferences(83);
         field_e = null;
         field_a = null;
         field_h = null;

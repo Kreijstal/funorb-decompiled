@@ -65,7 +65,7 @@ final class Under13AccountNoticePanel extends UiContainer implements UiHotspotLi
         try {
           this.dialog = param0;
           this.continueButton = new UiFocusableComponent(tn.field_b, (UiListener) null);
-          this.continueButton.renderer = (UiRenderer) ((Object) new vva());
+          this.continueButton.renderer = (UiRenderer) ((Object) new ThreeSliceButtonStyle());
           var7 = SetReverbGain.a(SetCountermeasuresPulsetime.field_o, new String[]{this.getLinkMarkupStart(true), this.getLinkMarkupEnd((byte) -30)}, 81);
           var3 = 20;
           var4 = new UiTextStyle(SetShipToShipRamDamage.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, SetShipToShipRamDamage.field_o.maxAscent, -1, 2147483647, true);

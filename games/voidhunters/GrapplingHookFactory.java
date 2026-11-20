@@ -26,7 +26,7 @@ final class GrapplingHookFactory implements GameStateFactory {
           if (MenuBackgroundBattle.stringTokenType != var5.type &&
             SetMissionTerrainSpaceProbability.charTokenType != var5.type &&
             var5.type != ArchiveIndexLoader.numberTokenType &&
-            io.booleanTokenType != var5.type) {
+            GradientBorderTextStyle.booleanTokenType != var5.type) {
             if (SetMissionVariablesHudX.methodTokenType != var5.type) {
               throw new ConsoleSyntaxException(var5.sourceOffset);
             }

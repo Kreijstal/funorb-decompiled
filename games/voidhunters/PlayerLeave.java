@@ -110,7 +110,7 @@ final class PlayerLeave implements DiffableState {
           if (param1.field_f != 0 ||
             param1.field_h != 0) {
             for (var2_int = 0; var2_int < SetRepairModePower.field_q; var2_int++) {
-              var3 = nrb.field_b[var2_int];
+              var3 = NullUiRenderer.field_b[var2_int];
               if (var3.channelType == 2 &&
                 param1.field_f == var3.field_f &&
                 param1.field_h == var3.field_h) {

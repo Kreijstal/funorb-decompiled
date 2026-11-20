@@ -51,7 +51,7 @@ final class Direct3DIndexBuffer implements GpuIndexBuffer {
         }
         if (null == this.buffer) {
           stackIn_10_0 = this;
-          stackIn_10_1 = this.toolkit.field_Mc;
+          stackIn_10_1 = this.toolkit.device;
           stackIn_10_2 = this.size;
           stackIn_10_3 = var4;
           if (this.dataType == GpuDataType.UNSIGNED_SHORT) {
@@ -63,7 +63,7 @@ final class Direct3DIndexBuffer implements GpuIndexBuffer {
         } else {
           this.buffer.release(false);
           stackIn_14_0 = this;
-          stackIn_14_1 = this.toolkit.field_Mc;
+          stackIn_14_1 = this.toolkit.device;
           stackIn_14_2 = this.size;
           stackIn_14_3 = var4;
           if (this.dataType == GpuDataType.UNSIGNED_SHORT) {

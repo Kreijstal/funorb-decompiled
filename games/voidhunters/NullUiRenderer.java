@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class nrb implements UiRenderer {
+final class NullUiRenderer implements UiRenderer {
     static ChatMessage[] field_b;
     static String field_a;
 
@@ -17,7 +17,7 @@ final class nrb implements UiRenderer {
         field_b = null;
         field_a = null;
         if (param0 != 11227) {
-          nrb.clearSharedReferences(-127);
+          NullUiRenderer.clearSharedReferences(-127);
         }
     }
 

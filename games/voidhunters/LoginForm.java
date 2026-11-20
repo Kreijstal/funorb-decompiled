@@ -174,7 +174,7 @@ final class LoginForm extends UiContainer implements UiTextFieldListener, UiActi
         StringBuilder stackIn_62_1 = null;
         String stackIn_63_2 = null;
         RuntimeException decompiledCaughtException = null;
-        vva var6 = null;
+        ThreeSliceButtonStyle var6 = null;
         RuntimeException var6_ref = null;
         BitmapFont var7 = null;
         String var8 = null;
@@ -217,9 +217,9 @@ final class LoginForm extends UiContainer implements UiTextFieldListener, UiActi
               this.createAccountButton = new UiFocusableComponent(TimedSpecialOrderBehaviour.field_b, (UiListener) (this));
             }
           }
-          this.loginField.renderer = (UiRenderer) ((Object) new io(10000536));
+          this.loginField.renderer = (UiRenderer) ((Object) new GradientBorderTextStyle(10000536));
           this.passwordField.renderer = (UiRenderer) ((Object) new kpb(10000536));
-          var6 = new vva();
+          var6 = new ThreeSliceButtonStyle();
           this.submitButton.renderer = (UiRenderer) ((Object) var6);
           if (null != this.alternateButton) {
             this.alternateButton.renderer = (UiRenderer) ((Object) var6);

@@ -174,7 +174,7 @@ final class TrailHolder implements DiffableState {
           }
         }
         if (!param1) {
-          SetCountermeasureLauncherProjectiles.field_p = sib.a(80, var8, (byte) 112);
+          SetCountermeasureLauncherProjectiles.field_p = ImageProducerAppletRasterBuffer.readHuffmanString(80, var8, (byte) 112);
           AlternateNumericLoginCredentials.field_h = null;
           return new ChatMessage(param1);
         }

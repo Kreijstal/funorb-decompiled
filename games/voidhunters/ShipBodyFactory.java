@@ -58,11 +58,11 @@ final class ShipBodyFactory implements GameStateFactory {
           GetPointDefenceLaserProjectileDamage.field_o.setBounds(-40 + (-2 + SetOndamageParticleLife.field_o.width) - ResourceNode.field_a, param0 + 18, ResourceNode.field_a + 42, DialogMessagePanel.field_w + 2, 18);
           WaterTextures.field_f.setBoundsAndLayout(SetOndamageParticleLife.field_o.width, 2, -1, -DialogMessagePanel.field_w + (SetOndamageParticleLife.field_o.height - 2) - 20, 2 + (DialogMessagePanel.field_w + 20), 0, ResourceNode.field_a);
           GetShipToShipRamDamage.field_q.setBounds(0, -41, WaterTextures.field_g.width, WaterTextures.field_g.height - 40, 40);
-          GetWeaponParticleSpeedDownshift.field_q.setBounds(0, 121, vva.field_r.width, 0, 30);
+          GetWeaponParticleSpeedDownshift.field_q.setBounds(0, 121, ThreeSliceButtonStyle.field_r.width, 0, 30);
           if (param0 != 100) {
             ShipBodyFactory.a((byte) -23, true);
           }
-          SetPhysicsCollisionGrapplingHookForceMultiplier.field_o.setBounds(0, 124, vva.field_r.width, 30, -32 + vva.field_r.height - 40);
+          SetPhysicsCollisionGrapplingHookForceMultiplier.field_o.setBounds(0, 124, ThreeSliceButtonStyle.field_r.width, 30, -32 + ThreeSliceButtonStyle.field_r.height - 40);
           var2_int = 3 + PasswordValidator.field_l;
           if (SetMutatorVotes.field_o.length < 2) {
             var2_int--;
@@ -149,7 +149,7 @@ final class ShipBodyFactory implements GameStateFactory {
                       var9_ref_cna.width = 0;
                     }
                   }
-                  var9 = -var8 + (-5 + vva.field_r.width + 2);
+                  var9 = -var8 + (-5 + ThreeSliceButtonStyle.field_r.width + 2);
                   var10 = -1 + SetReloadBarHeight.field_q[var6].length;
                   for (var11 = 0; var11 < var10; var11++) {
                     var12 = var9 * var11 / var10;

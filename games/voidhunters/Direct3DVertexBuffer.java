@@ -31,7 +31,7 @@ final class Direct3DVertexBuffer implements GpuVertexBuffer {
             if (this.buffer != null) {
               this.buffer.release(false);
             }
-            this.buffer = this.toolkit.field_Mc.createVertexBuffer(this.size, var5, 0, var4, this.buffer);
+            this.buffer = this.toolkit.device.createVertexBuffer(this.size, var5, 0, var4, this.buffer);
             this.capacity = this.size;
           }
           stackIn_12_0 = (this.buffer != null);
@@ -50,7 +50,7 @@ final class Direct3DVertexBuffer implements GpuVertexBuffer {
           if (this.buffer != null) {
             this.buffer.release(false);
           }
-          this.buffer = this.toolkit.field_Mc.createVertexBuffer(this.size, var5Lifetime1, 0, var4Lifetime1, this.buffer);
+          this.buffer = this.toolkit.device.createVertexBuffer(this.size, var5Lifetime1, 0, var4Lifetime1, this.buffer);
           this.capacity = this.size;
         }
         stackIn_24_0 = (this.buffer != null);

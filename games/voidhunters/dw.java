@@ -27,7 +27,7 @@ final class dw implements UiRenderer {
         try {
           var6_int = param1.x + param2;
           var7 = param3 + param1.y;
-          ServerTickFactory.a(var7, (byte) 115, param1.height, param1.width, var6_int);
+          ServerTickFactory.drawGradientBorder(var7, (byte) 115, param1.height, param1.width, var6_int);
           var8 = ByteStorage.field_a[1];
           if (param1 instanceof UiFocusableComponent &&
             ((UiFocusableComponent) (param1)).active) {

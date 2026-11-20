@@ -32,10 +32,10 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
         this.field_m = param0;
         if (param1 != null &&
           257 <= (this.field_m.field_Hc.VertexShaderVersion & 65535)) {
-          this.field_e = this.field_m.field_Mc.createVertexShader(param1.fetchNamedFile("uw_ground_unlit", true, "dx"));
-          this.field_l = this.field_m.field_Mc.createVertexShader(param1.fetchNamedFile("uw_ground_lit", true, "dx"));
-          this.field_i = this.field_m.field_Mc.createVertexShader(param1.fetchNamedFile("uw_model_unlit", true, "dx"));
-          this.field_g = this.field_m.field_Mc.createVertexShader(param1.fetchNamedFile("uw_model_lit", true, "dx"));
+          this.field_e = this.field_m.device.createVertexShader(param1.fetchNamedFile("uw_ground_unlit", true, "dx"));
+          this.field_l = this.field_m.device.createVertexShader(param1.fetchNamedFile("uw_ground_lit", true, "dx"));
+          this.field_i = this.field_m.device.createVertexShader(param1.fetchNamedFile("uw_model_unlit", true, "dx"));
+          this.field_g = this.field_m.device.createVertexShader(param1.fetchNamedFile("uw_model_lit", true, "dx"));
           stackIn_6_0 = (null == this.field_g) ? 0 : 1;
           stackIn_9_1 = (null == this.field_e) ? 0 : 1;
           stackIn_12_2 = (null == this.field_l) ? 0 : 1;
@@ -66,7 +66,7 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
         GpuTransform3D var3Lifetime1;
         if (param0 == 15) {
           if (null != this.field_h) {
-            var2 = this.field_m.field_Mc;
+            var2 = this.field_m.device;
             var3 = this.field_m.getModelViewTransform(param0 - 15);
             var2.setVertexShaderConstants(0, var3.writeRowMajorMatrix(field_p, (byte) 22));
           }
@@ -74,7 +74,7 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
         }
         this.field_l = (jagdx.IDirect3DVertexShader) null;
         if (null != this.field_h) {
-          var2Lifetime1 = this.field_m.field_Mc;
+          var2Lifetime1 = this.field_m.device;
           var3Lifetime1 = this.field_m.getModelViewTransform(param0 - 15);
           var2Lifetime1.setVertexShaderConstants(0, var3Lifetime1.writeRowMajorMatrix(field_p, (byte) 22));
         }
@@ -114,7 +114,7 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
         GpuTransform3D var5 = null;
         jagdx.IDirect3DVertexShader var2 = null;
         if (param0 == -46) {
-          var3 = this.field_m.field_Mc;
+          var3 = this.field_m.device;
           var4 = this.toolkit.getWaterPlaneDistance((byte) 95);
           var5 = this.toolkit.getViewTransform((byte) 20);
           if (!this.field_j) {
@@ -124,7 +124,7 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
           }
           if (var2 != this.field_h) {
             this.field_h = var2;
-            this.field_m.a(0, var2);
+            this.field_m.setVertexShader(0, var2);
             this.e(127);
             this.onProjectionChanged(true);
             this.onTextureTransformChanged(8);
@@ -151,7 +151,7 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
         this.toolkit.setActiveTextureUnit(0, -71);
         if (!this.field_f) {
           if (null != this.field_h) {
-            this.field_m.a(0, (jagdx.IDirect3DVertexShader) null);
+            this.field_m.setVertexShader(0, (jagdx.IDirect3DVertexShader) null);
             this.field_h = null;
           }
           return;
@@ -160,7 +160,7 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
         this.toolkit.setAlphaCombineSource(0, (byte) -65, SetGrapplingHookMaxExtension8Force.field_q);
         this.field_f = false;
         if (null != this.field_h) {
-          this.field_m.a(0, (jagdx.IDirect3DVertexShader) null);
+          this.field_m.setVertexShader(0, (jagdx.IDirect3DVertexShader) null);
           this.field_h = null;
         }
     }
@@ -168,7 +168,7 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
     final void onProjectionChanged(boolean param0) {
         jagdx.IDirect3DDevice var2 = null;
         if (null != this.field_h) {
-          var2 = this.field_m.field_Mc;
+          var2 = this.field_m.device;
           var2.setVertexShaderConstants(4, this.toolkit.writeTransposedProjection(123, field_p));
         }
         if (param0) {
@@ -181,7 +181,7 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
         jagdx.IDirect3DDevice var2 = null;
         GpuTransform3D var3 = null;
         if (this.field_h != null) {
-          var2 = this.field_m.field_Mc;
+          var2 = this.field_m.device;
           var3 = this.toolkit.getTextureTransform(0);
           var2.SetVertexShaderConstantF(8, var3.writeFirstTwoRows((byte) 105, field_p), 2);
         }
@@ -209,7 +209,7 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
           }
           var4 = this.toolkit.getInverseViewTransform((byte) 90);
           GpuTransform3D var2 = var4;
-          var3 = this.field_m.field_Mc;
+          var3 = this.field_m.device;
           var3.setVertexShaderConstant(13, this.toolkit.ambientIntensity * this.toolkit.lightRed, this.toolkit.ambientIntensity * this.toolkit.lightGreen, this.toolkit.ambientIntensity * this.toolkit.lightBlue, 1.0f);
           var3.setVertexShaderConstant(14, this.toolkit.sunIntensity * this.toolkit.lightRed, this.toolkit.sunIntensity * this.toolkit.lightGreen, this.toolkit.sunIntensity * this.toolkit.lightBlue, 1.0f);
           var3.setVertexShaderConstant(16, this.toolkit.lightRed * this.toolkit.antiSunIntensity, this.toolkit.lightGreen * this.toolkit.antiSunIntensity, this.toolkit.lightBlue * this.toolkit.antiSunIntensity, 1.0f);
@@ -250,7 +250,7 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
         jagdx.IDirect3DDevice var2 = null;
         GpuTransform3D var3 = null;
         if (null != this.field_h) {
-          var2 = this.field_m.field_Mc;
+          var2 = this.field_m.device;
           var3 = this.field_m.getModelViewTransform(0);
           var2.setVertexShaderConstants(0, var3.writeRowMajorMatrix(field_p, (byte) 22));
         }
@@ -267,7 +267,7 @@ final class Direct3DUnderwaterMaterialEffect extends GpuMaterialEffect {
         float var5 = 0.0f;
         float var6 = 0.0f;
         if (this.field_h != null) {
-          var2 = this.field_m.field_Mc;
+          var2 = this.field_m.device;
           var3 = this.toolkit.getFarPlane();
           var4 = this.toolkit.getNearPlane();
           var5 = (float)var3 - 0.125f * (float)(-var4 + var3);

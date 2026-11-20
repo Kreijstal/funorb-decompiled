@@ -76,7 +76,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
         var5 = 0;
         var6 = 0;
         for (var7 = -1 + SetRepairModePower.field_q; 0 <= var7; var7--) {
-          var8_ref_pgb = nrb.field_b[var7];
+          var8_ref_pgb = NullUiRenderer.field_b[var7];
           var9 = 0;
           if (!GetBloomThresholdPercentage.field_p &&
             var5 < EnvironmentReflectionGpuMaterialEffect.field_k) {
@@ -108,7 +108,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
         }
         var7Lifetime1 = 0;
         for (var8 = 0; SetRepairModePower.field_q > var8; var8++) {
-          var9_ref_pgb = nrb.field_b[var8];
+          var9_ref_pgb = NullUiRenderer.field_b[var8];
           if (null != var9_ref_pgb.widget) {
             GetUseLines.field_p.content.addChild(-561, var9_ref_pgb.widget);
             var9_ref_pgb.widget.setBounds(param1, 122, var9_ref_pgb.widget.getPreferredWidth(66), var7Lifetime1, param0);

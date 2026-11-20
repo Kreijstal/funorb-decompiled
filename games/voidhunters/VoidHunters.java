@@ -882,7 +882,7 @@ public final class VoidHunters extends NetworkGameClient {
         lmb.clearSharedReferences((byte) -53);
         ChatMessage.clearSharedReferences((byte) 75);
         nqa.clearSharedReferences((byte) -30);
-        mab.clearSharedReferences(-23483);
+        AppletRasterBuffer.clearSharedReferences(-23483);
         ArchiveRequestQueue.clearSharedReferences((byte) -108);
         FullscreenCanvas.clearSharedReferences(false);
         ScreenSizeController.clearSharedReferences((byte) 120);
@@ -1091,7 +1091,7 @@ public final class VoidHunters extends NetworkGameClient {
         VorbisFloor.clearSharedReferences();
         TutorialProgressState.clearSharedReferences((byte) 66);
         SoftLruCache.clearSharedReferences(118);
-        bbb.clearSharedReferences(0);
+        SpritePadding.clearSharedReferences(0);
         jw.clearSharedReferences(false);
         SocketConnector.clearSharedReferences((byte) -109);
         ProxyAuthenticationException.clearSharedReferences(91);
@@ -1267,7 +1267,7 @@ public final class VoidHunters extends NetworkGameClient {
         ShipFactory.clearSharedReferences((byte) 126);
         ServerInfoFactory.clearSharedReferences(-46);
         gl.clearSharedReferences(0);
-        vva.clearSharedReferences((byte) 121);
+        ThreeSliceButtonStyle.clearSharedReferences((byte) 121);
         meb.clearSharedReferences((byte) -52);
         kpb.clearSharedReferences(17433);
         dw.clearSharedReferences(118);
@@ -1357,7 +1357,7 @@ public final class VoidHunters extends NetworkGameClient {
         t.clearSharedReferences(1);
         UiVisualStyle.clearSharedReferences(24358);
         pbb.clearSharedReferences(-652030847);
-        nrb.clearSharedReferences(11227);
+        NullUiRenderer.clearSharedReferences(11227);
         UiComboBoxRenderer.clearSharedReferences((byte) 68);
         UiComboBoxList.clearSharedReferences(-102);
         CarouselSystemEventFactory.clearSharedReferences((byte) -110);
@@ -1818,7 +1818,7 @@ public final class VoidHunters extends NetworkGameClient {
         int var2 = 0;
         int var3 = field_G;
         int var2Lifetime1;
-        mab.field_a = this;
+        AppletRasterBuffer.field_a = this;
         if (!TextureLineShape.field_i.unpackResources((byte) 68)) {
           return false;
         }

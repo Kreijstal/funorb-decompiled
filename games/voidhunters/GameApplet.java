@@ -667,7 +667,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                 }
                 MovingObject.readMaximumHeapMemory(27671);
                 this.rebuildCanvas(-78);
-                SetClientSideDragging.field_q = SetBurstFireRegenerationRate.a((byte) 3, (java.awt.Component) ((Object) igb.field_a), SetPointDefenceLaserReload.field_p, GetDebrisSurvives.field_p);
+                SetClientSideDragging.field_q = SetBurstFireRegenerationRate.createAppletRasterBuffer((byte) 3, (java.awt.Component) ((Object) igb.field_a), SetPointDefenceLaserReload.field_p, GetDebrisSurvives.field_p);
                 this.initializeGame(false);
                 GetPedrosRepairMode.field_p = DisplayModeErrorDialog.createTickClock(46);
                 do {

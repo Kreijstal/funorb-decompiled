@@ -13,7 +13,7 @@ final class Direct3DTransparentWaterEffect extends GpuMaterialEffect {
         float var5 = 0.0f;
         float var3 = 0.0f;
         if (null != this.field_g) {
-          var2 = this.field_e.field_Mc;
+          var2 = this.field_e.device;
           if (this.toolkit.field_j > 0) {
             var3 = this.toolkit.field_r;
             var4 = this.toolkit.field_p;
@@ -38,7 +38,7 @@ final class Direct3DTransparentWaterEffect extends GpuMaterialEffect {
     final void onProjectionChanged(boolean param0) {
         jagdx.IDirect3DDevice var2 = null;
         if (this.field_g != null) {
-          var2 = this.field_e.field_Mc;
+          var2 = this.field_e.device;
           var2.setVertexShaderConstants(4, this.toolkit.writeTransposedProjection(108, field_h));
         }
         if (param0) {
@@ -54,7 +54,7 @@ final class Direct3DTransparentWaterEffect extends GpuMaterialEffect {
         if (param1 != null &&
           this.field_f.hasNoiseTextures((byte) 60) &&
           (65535 & this.field_e.field_Hc.VertexShaderVersion) >= 257) {
-          this.field_g = this.field_e.field_Mc.createVertexShader(param1.fetchNamedFile("transparent_water", true, "dx"));
+          this.field_g = this.field_e.device.createVertexShader(param1.fetchNamedFile("transparent_water", true, "dx"));
         } else {
           this.field_g = null;
         }
@@ -64,7 +64,7 @@ final class Direct3DTransparentWaterEffect extends GpuMaterialEffect {
         jagdx.IDirect3DDevice var2 = null;
         GpuTransform3D var3 = null;
         if (null != this.field_g) {
-          var2 = this.field_e.field_Mc;
+          var2 = this.field_e.device;
           var3 = this.toolkit.getTextureTransform(0);
           var3.writeFirstTwoRows((byte) 105, field_h);
           field_h[7] = field_h[7] * 0.25f;
@@ -84,7 +84,7 @@ final class Direct3DTransparentWaterEffect extends GpuMaterialEffect {
     }
 
     final void disable(int param0) {
-        this.field_e.a(0, (jagdx.IDirect3DVertexShader) null);
+        this.field_e.setVertexShader(0, (jagdx.IDirect3DVertexShader) null);
         this.toolkit.setRgbCombineSource(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
         if (param0 == 2543) {
           this.toolkit.setRgbCombineSource(1, GetArmageddonLength.field_q, 7);
@@ -109,7 +109,7 @@ final class Direct3DTransparentWaterEffect extends GpuMaterialEffect {
         jagdx.IDirect3DDevice var2 = null;
         GpuTransform3D var3 = null;
         if (this.field_g != null) {
-          var2 = this.field_e.field_Mc;
+          var2 = this.field_e.device;
           var3 = this.field_e.getModelViewTransform(0);
           var2.setVertexShaderConstants(0, var3.writeRowMajorMatrix(field_h, (byte) 22));
         }
@@ -132,7 +132,7 @@ final class Direct3DTransparentWaterEffect extends GpuMaterialEffect {
         GpuTransform3D var3Lifetime1;
         if (param0 == 15) {
           if (null != this.field_g) {
-            var2 = this.field_e.field_Mc;
+            var2 = this.field_e.device;
             var3 = this.field_e.getModelViewTransform(0);
             var2.setVertexShaderConstants(0, var3.writeRowMajorMatrix(field_h, (byte) 22));
           }
@@ -140,7 +140,7 @@ final class Direct3DTransparentWaterEffect extends GpuMaterialEffect {
         }
         this.field_f = (WaterTextures) null;
         if (null != this.field_g) {
-          var2Lifetime1 = this.field_e.field_Mc;
+          var2Lifetime1 = this.field_e.device;
           var3Lifetime1 = this.field_e.getModelViewTransform(0);
           var2Lifetime1.setVertexShaderConstants(0, var3Lifetime1.writeRowMajorMatrix(field_h, (byte) 22));
         }
@@ -153,7 +153,7 @@ final class Direct3DTransparentWaterEffect extends GpuMaterialEffect {
         float var5_floatLifetime1;
         int var5Lifetime1;
         if (param2 == 5) {
-          var7 = this.field_e.field_Mc;
+          var7 = this.field_e.device;
           if (this.field_f.usesVolumeTexture) {
             var5_float = (float)(this.toolkit.field_pc % 4000) / 4000.0f;
             this.toolkit.setTexture(this.field_f.noiseVolume, -124);
@@ -166,7 +166,7 @@ final class Direct3DTransparentWaterEffect extends GpuMaterialEffect {
           return;
         }
         this.disable(-112);
-        jagdx.IDirect3DDevice var6 = this.field_e.field_Mc;
+        jagdx.IDirect3DDevice var6 = this.field_e.device;
         if (this.field_f.usesVolumeTexture) {
           var5_floatLifetime1 = (float)(this.toolkit.field_pc % 4000) / 4000.0f;
           this.toolkit.setTexture(this.field_f.noiseVolume, -124);
@@ -183,7 +183,7 @@ final class Direct3DTransparentWaterEffect extends GpuMaterialEffect {
         this.toolkit.setRgbCombineSource(1, pea.field_d, 7);
         this.toolkit.setRgbCombineSource(false, -21115, true, GetArmageddonLength.field_q, 2);
         this.toolkit.setEffectFogEnabled(false, false);
-        this.field_e.a(0, this.field_g);
+        this.field_e.setVertexShader(0, this.field_g);
         this.onModelTransformChanged(param0);
         this.onTextureTransformChanged(8);
         this.onProjectionChanged(true);

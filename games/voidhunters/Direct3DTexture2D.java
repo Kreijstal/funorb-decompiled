@@ -82,9 +82,9 @@ final class Direct3DTexture2D extends Direct3DTexture implements GpuTexture2D {
           this.height = GetSalvoaim.a(param3, (byte) -99);
         }
         if (!param4) {
-          this.texture = this.toolkit.field_Mc.createTexture(this.width, this.height, 1, 0, Direct3DToolkit.toDirect3DTextureFormat(this.format, GpuDataType.UNSIGNED_BYTE, -122), 1);
+          this.texture = this.toolkit.device.createTexture(this.width, this.height, 1, 0, Direct3DToolkit.toDirect3DTextureFormat(this.format, GpuDataType.UNSIGNED_BYTE, -122), 1);
         } else {
-          this.texture = this.toolkit.field_Mc.createTexture(this.width, this.height, 0, 1024, Direct3DToolkit.toDirect3DTextureFormat(this.format, GpuDataType.UNSIGNED_BYTE, -95), 1);
+          this.texture = this.toolkit.device.createTexture(this.width, this.height, 0, 1024, Direct3DToolkit.toDirect3DTextureFormat(this.format, GpuDataType.UNSIGNED_BYTE, -95), 1);
         }
         var13 = this.toolkit.field_zc;
         var10 = this.texture.LockRect(0, 0, 0, param2, param3, 0, var13);
@@ -116,7 +116,7 @@ final class Direct3DTexture2D extends Direct3DTexture implements GpuTexture2D {
           this.width = GetSalvoaim.a(param3, (byte) -113);
           this.height = GetSalvoaim.a(param4, (byte) -97);
         }
-        this.texture = this.toolkit.field_Mc.createTexture(param3, param4, 1, 0, Direct3DToolkit.toDirect3DTextureFormat(this.format, this.dataType, -122), 1);
+        this.texture = this.toolkit.device.createTexture(param3, param4, 1, 0, Direct3DToolkit.toDirect3DTextureFormat(this.format, this.dataType, -122), 1);
     }
 
     final jagdx.IDirect3DBaseTexture getNativeTexture(int param0) {
@@ -137,7 +137,7 @@ final class Direct3DTexture2D extends Direct3DTexture implements GpuTexture2D {
         if (param0 != -27445) {
           this.height = -11;
         }
-        this.toolkit.a(param0 ^ -27467, this);
+        this.toolkit.bindTexture(param0 ^ -27467, this);
     }
 
     public final void setRepeat(boolean param0, byte param1, boolean param2) {
@@ -199,9 +199,9 @@ final class Direct3DTexture2D extends Direct3DTexture implements GpuTexture2D {
           this.height = param2;
         }
         if (!param3) {
-          this.texture = this.toolkit.field_Mc.createTexture(this.width, this.height, 1, 0, 21, 1);
+          this.texture = this.toolkit.device.createTexture(this.width, this.height, 1, 0, 21, 1);
         } else {
-          this.texture = this.toolkit.field_Mc.createTexture(this.width, this.height, 0, 1024, 21, 1);
+          this.texture = this.toolkit.device.createTexture(this.width, this.height, 0, 1024, 21, 1);
         }
         var12 = this.toolkit.field_zc;
         var9 = this.texture.LockRect(0, 0, 0, param1, param2, 0, var12);

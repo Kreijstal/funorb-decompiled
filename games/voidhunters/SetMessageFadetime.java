@@ -76,7 +76,7 @@ final class SetMessageFadetime extends ConsoleCommand {
                 param0 = SetReverbGain.a(SetPointDefenceLaserFireForce.field_o, new String[]{param0}, 107);
               }
               if (kmb.field_c) {
-                param0 = bbb.field_a;
+                param0 = SpritePadding.field_a;
               }
               SetPointDefenceLaserAimarc.field_o.showStatusMessage(true, param0, param2);
             }

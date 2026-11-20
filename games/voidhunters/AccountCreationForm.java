@@ -266,13 +266,13 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
         this.passwordConfirmationField.setValidator(6614, new MatchingFieldValidator(this.passwordConfirmationField, this.passwordField));
         this.ageField.setValidator(6614, new AgeValidator(this.ageField));
         this.submitButton.enabled = false;
-        this.submitButton.renderer = (UiRenderer) ((Object) new vva());
+        this.submitButton.renderer = (UiRenderer) ((Object) new ThreeSliceButtonStyle());
         this.cancelButton.renderer = (UiRenderer) ((Object) new meb());
-        this.usernameField.renderer = (UiRenderer) ((Object) new io(10000536));
-        io dupTemp$0 = new io(10000536);
+        this.usernameField.renderer = (UiRenderer) ((Object) new GradientBorderTextStyle(10000536));
+        GradientBorderTextStyle dupTemp$0 = new GradientBorderTextStyle(10000536);
         this.emailConfirmationField.renderer = (UiRenderer) ((Object) dupTemp$0);
         this.emailField.renderer = (UiRenderer) ((Object) dupTemp$0);
-        this.ageField.renderer = (UiRenderer) ((Object) new io(10000536));
+        this.ageField.renderer = (UiRenderer) ((Object) new GradientBorderTextStyle(10000536));
         this.emailUpdatesToggle.renderer = (UiRenderer) ((Object) new dw());
         kpb dupTemp$1 = new kpb(10000536);
         this.passwordConfirmationField.renderer = (UiRenderer) ((Object) dupTemp$1);

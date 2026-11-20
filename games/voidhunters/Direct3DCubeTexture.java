@@ -48,9 +48,9 @@ final class Direct3DCubeTexture extends Direct3DTexture implements GpuCubeTextur
         }
         this.field_f = param1;
         if (this.field_b) {
-          this.texture = this.toolkit.field_Mc.createCubeTexture(this.field_f, 0, 1024, 21, 1);
+          this.texture = this.toolkit.device.createCubeTexture(this.field_f, 0, 1024, 21, 1);
         } else {
-          this.texture = this.toolkit.field_Mc.createCubeTexture(this.field_f, 1, 0, 21, 1);
+          this.texture = this.toolkit.device.createCubeTexture(this.field_f, 1, 0, 21, 1);
         }
         var10 = this.toolkit.field_zc;
         var11 = var10;
@@ -74,6 +74,6 @@ final class Direct3DCubeTexture extends Direct3DTexture implements GpuCubeTextur
         if (param0 != -27445) {
           return;
         }
-        this.toolkit.a(56, (Direct3DTexture) (this));
+        this.toolkit.bindTexture(56, (Direct3DTexture) (this));
     }
 }

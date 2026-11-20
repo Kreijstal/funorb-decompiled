@@ -87,7 +87,7 @@ final class DialogMessagePanel extends UiContainer implements UiActionListener {
             this.drawLayer(78, -29, 18, 90);
           }
           var4 = new UiFocusableComponent(param1, param2);
-          var4.renderer = (UiRenderer) ((Object) new vva());
+          var4.renderer = (UiRenderer) ((Object) new ThreeSliceButtonStyle());
           var5 = -2 + this.height;
           this.setBounds(0, this.width, this.height + 34, 1, 0);
           var4.setBounds(7, this.width - 14, 30, 1, var5);

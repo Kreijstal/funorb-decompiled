@@ -105,7 +105,7 @@ final class SettingsInstance implements DiffableState {
         }
         try {
           for (var1_int = 0; SetRepairModePower.field_q > var1_int; var1_int++) {
-            nrb.field_b[var1_int] = null;
+            NullUiRenderer.field_b[var1_int] = null;
           }
           SetRepairModePower.field_q = 0;
         } catch (RuntimeException runtimeException) {

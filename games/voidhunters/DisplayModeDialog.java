@@ -612,7 +612,7 @@ final class DisplayModeDialog extends ResizableModalPanel implements UiActionLis
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new UiFocusableComponent(param0, param1);
-          var4.renderer = (UiRenderer) ((Object) new vva());
+          var4.renderer = (UiRenderer) ((Object) new ThreeSliceButtonStyle());
           var5 = this.height - 46;
           var4.setBounds(15, -16 + (param2 + this.width), 30, 1, var5);
           this.addChild(param2 ^ 18766, var4);

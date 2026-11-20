@@ -16,9 +16,9 @@ final class mn {
         int var6Lifetime1;
         var7 = VoidHunters.field_G;
         try {
-          if (GetAngularForceDownshift.field_p != SetClientSideDragging.field_q.field_b) {
-            GetPhasedEnergyBeamProjectiles.field_o = GetPhasedEnergyBeamProjectiles.field_o + (SetClientSideDragging.field_q.field_b - GetAngularForceDownshift.field_p);
-            GetAngularForceDownshift.field_p = SetClientSideDragging.field_q.field_b;
+          if (GetAngularForceDownshift.field_p != SetClientSideDragging.field_q.height) {
+            GetPhasedEnergyBeamProjectiles.field_o = GetPhasedEnergyBeamProjectiles.field_o + (SetClientSideDragging.field_q.height - GetAngularForceDownshift.field_p);
+            GetAngularForceDownshift.field_p = SetClientSideDragging.field_q.height;
           }
           if (tb.field_b < GetRepairModePower.field_o) {
             tb.field_b = tb.field_b + 1;

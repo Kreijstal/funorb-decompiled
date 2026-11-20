@@ -663,7 +663,7 @@ final class GameMenuScreen {
                                                             var13Lifetime2 = var14Lifetime1;
                                                             var13Lifetime3 = var12;
                                                             var13Lifetime4 = "games.jagex.com";
-                                                            var19 = mab.field_a.getParameter("environment");
+                                                            var19 = AppletRasterBuffer.field_a.getParameter("environment");
                                                             var14Lifetime2 = var19;
                                                             var13Lifetime5 = var14Lifetime2;
                                                             var13Lifetime6 = var19;

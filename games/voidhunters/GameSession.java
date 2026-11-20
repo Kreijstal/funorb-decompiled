@@ -5451,14 +5451,14 @@ final class GameSession {
         if (param0 <= 26) {
           discarded$0 = this.a(-96, -60, -66, (byte) 53, 121);
         }
-        if (null == nrb.field_b) {
+        if (null == NullUiRenderer.field_b) {
           return null;
         }
         var4 = "";
         var5 = 0;
         var6 = 0;
-        for (var7 = this.field_u; var7 < nrb.field_b.length; var7++) {
-          var8 = nrb.field_b[var7];
+        for (var7 = this.field_u; var7 < NullUiRenderer.field_b.length; var7++) {
+          var8 = NullUiRenderer.field_b[var7];
           if (var8 != null &&
             SetPhasedEnergyBeamFireForce.a(true, var8.field_e, this.state.getPlayerName(1, param2))) {
             if (var5 >= this.playerChatOffsets[param2]) {
@@ -8017,7 +8017,7 @@ final class GameSession {
             var15 <= GetTorpedoReload.field_q &&
             var17 >= GetTorpedoReload.field_q) {
             var18 = 16711680;
-            GetMassDriverReload.a(SetReverbGain.a(nrb.field_a, new String[]{param3.field_dc.text}, 78), -61);
+            GetMassDriverReload.a(SetReverbGain.a(NullUiRenderer.field_a, new String[]{param3.field_dc.text}, 78), -61);
             if (ArchiveLoadRequest.field_c == 1) {
               sh.a(param3.getGameId((byte) -13), -1, 11);
             }

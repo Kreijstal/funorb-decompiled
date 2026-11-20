@@ -62,6 +62,6 @@ public class dxVertexLayout extends GpuVertexDeclaration {
           }
         }
         var10.finish();
-        this.declaration = param0.field_Mc.createVertexDeclaration(var10, (jagdx.IDirect3DVertexDeclaration) null);
+        this.declaration = param0.device.createVertexDeclaration(var10, (jagdx.IDirect3DVertexDeclaration) null);
     }
 }

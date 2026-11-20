@@ -96,9 +96,9 @@ final class ScrollPaneWidget extends Widget {
             var6 = SetAutozoomSpeedDivide.field_p;
             var6.width = 0;
             GetWeaponParticleSpeedDownshift.field_q.text = GetTorpedoAimspeed.field_p.toUpperCase();
-            var7 = (2 + vva.field_r.width) / 2;
-            SetAutozoomSpeedDivide.field_p.setBounds(0, 6, var7 - 2, vva.field_r.height - 40, 40);
-            ObjectiveMarker.field_b.setBounds(var7, -120, vva.field_r.width - var7, -40 + vva.field_r.height, 40);
+            var7 = (2 + ThreeSliceButtonStyle.field_r.width) / 2;
+            SetAutozoomSpeedDivide.field_p.setBounds(0, 6, var7 - 2, ThreeSliceButtonStyle.field_r.height - 40, 40);
+            ObjectiveMarker.field_b.setBounds(var7, -120, ThreeSliceButtonStyle.field_r.width - var7, -40 + ThreeSliceButtonStyle.field_r.height, 40);
             if (SetMutatorVotes.field_o.length == 1 &&
               SetMutatorVotes.field_o[0] == 2) {
               var8 = 0;
@@ -223,7 +223,7 @@ final class ScrollPaneWidget extends Widget {
           stackIn_71_0 = WaterTextures.field_g;
           stackIn_72_1 = (param0) && (!param2) && (!GetTorpedoProjectileDamage.field_o);
           ((Widget) (Object) stackIn_71_0).updateInput(stackIn_72_1, 1332);
-          stackIn_76_0 = vva.field_r;
+          stackIn_76_0 = ThreeSliceButtonStyle.field_r;
           stackIn_77_1 = (param0) && (!param2) && (!GetTorpedoProjectileDamage.field_o);
           ((Widget) (Object) stackIn_76_0).updateInput(stackIn_77_1, 1332);
           if (param1 > -89) {

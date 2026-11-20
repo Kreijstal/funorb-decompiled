@@ -113,7 +113,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           ComponentCollision.a("Unpacking sounds", (byte) -104);
           GetAllowShipSaving.finishLoadingAnimations(4410);
           IncrementVariableAction.a(OpenGlVertexDeclaration.field_e, param0 ^ -69, 82.0f);
-          mab.field_a.renderGameFrame(param0 - 187);
+          AppletRasterBuffer.field_a.renderGameFrame(param0 - 187);
           this.soundCache = new SoundCache(this.soundEffectArchive, this.vorbisArchive);
           fa.field_d[0] = this.soundCache.getMusicSampleByName("", "vh_menu_mouseover", (byte) 113);
           fa.field_d[1] = this.soundCache.getMusicSampleByName("", "vh_menu_mouseover", (byte) 72);
@@ -246,7 +246,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
         if (null != this.musicArchive) {
           ComponentCollision.a("Unpacking music", (byte) -125);
           IncrementVariableAction.a(GetBloomCoefficientPercentage.field_p, -1, 88.0f);
-          mab.field_a.renderGameFrame(-103);
+          AppletRasterBuffer.field_a.renderGameFrame(-103);
           pab.field_k = new MusicTrack[4];
           pab.field_k[0] = MusicTrack.load(this.musicArchive, "", "VH_Title_Music");
           pab.field_k[1] = MusicTrack.load(this.musicArchive, "", "VH_Ingame_Music");
@@ -278,7 +278,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           this.jpegArchive != null) {
           ComponentCollision.a("Unpacking graphics", (byte) -113);
           IncrementVariableAction.a(SetAutozoomSpeedDivide.field_o, -1, 90.0f);
-          mab.field_a.renderGameFrame(-112);
+          AppletRasterBuffer.field_a.renderGameFrame(-112);
           GrapplingHookFactory.field_a = (BitmapFont) ((Object) fab.a(var12, "", 0, var11, "arialish12"));
           SetMpSandboxEnemySpawnLimit.field_p = GetFighterBayAimspeed.a(0, "basic", this.graphicsArchive, this.fontMetricsArchive, "antigrav_18_graphics1");
           HslAdjustTextureOperation.a(var12, this.fontMetricsArchive, this.graphicsArchive, (byte) 88, var11);
@@ -296,7 +296,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           kua.field_a = new Sprite(32, 32);
           kua.field_a.setRasterTarget();
           WaterNoiseGpuMaterialEffect.field_h.drawDownscaled(0, 0, 32, 32);
-          SetClientSideDragging.field_q.a((byte) -108);
+          SetClientSideDragging.field_q.bind((byte) -108);
           WaterNoiseGpuMaterialEffect.field_h = null;
           SetTorpedoProjectileDamage.field_p = new Sprite[ei.field_i.length][];
           var9 = new Sprite[ei.field_i.length][];
@@ -317,7 +317,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           kl.field_c = SetSniperCannonProjectiles.a(this.graphicsArchive, "lobby_game_logo", "basic", true);
           EdgeMagnitudeTextureOperation.b(200, -100);
           SetMissilesExplosionPower.a(var11, param0 - 68, var12);
-          SetMomentOfInertiaPredivideDownshift.a(mab.field_a, 2141, GetShieldsDirectionalArcParticleSpeedDownshift.field_o, 16777215, 0, 0);
+          SetMomentOfInertiaPredivideDownshift.a(AppletRasterBuffer.field_a, 2141, GetShieldsDirectionalArcParticleSpeedDownshift.field_o, 16777215, 0, 0);
           var3 = null;
           this.fontMetricsArchive = null;
           MidiNote.resetFrameTiming(param0 ^ 2164);

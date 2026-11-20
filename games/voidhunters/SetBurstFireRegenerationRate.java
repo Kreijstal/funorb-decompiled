@@ -2,38 +2,38 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetBurstFireRegenerationRate extends ConsoleCommand {
-    final static mab a(byte param0, java.awt.Component param1, int param2, int param3) {
+    final static AppletRasterBuffer createAppletRasterBuffer(byte param0, java.awt.Component param1, int param2, int param3) {
         try {
           Class var4 = null;
           Throwable var4_ref = null;
           RuntimeException var4_ref2 = null;
-          mab var5 = null;
-          sib var5_ref = null;
+          AppletRasterBuffer var5 = null;
+          ImageProducerAppletRasterBuffer var5_ref = null;
           java.awt.Component var6 = null;
-          mab stackIn_3_0 = null;
-          sib stackIn_5_0 = null;
+          AppletRasterBuffer stackIn_3_0 = null;
+          ImageProducerAppletRasterBuffer stackIn_5_0 = null;
           RuntimeException stackIn_8_0 = null;
           StringBuilder stackIn_8_1 = null;
           String stackIn_9_2 = null;
           Throwable decompiledCaughtException = null;
           try {
             try {
-              var4 = Class.forName("on");
+              var4 = Class.forName("BufferedImageAppletRasterBuffer");
               if (param0 != 3) {
                 var6 = (java.awt.Component) null;
-                SetBurstFireRegenerationRate.a((byte) 35, (java.awt.Component) null, -53, 89);
+                SetBurstFireRegenerationRate.createAppletRasterBuffer((byte) 35, (java.awt.Component) null, -53, 89);
               }
-              var5 = (mab) (var4.newInstance());
-              var5.a(param3, param2, param1, (byte) 61);
+              var5 = (AppletRasterBuffer) (var4.newInstance());
+              var5.initialize(param3, param2, param1, (byte) 61);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
-              var5_ref = new sib();
-              ((mab) ((Object) var5_ref)).a(param3, param2, param1, (byte) 67);
+              var5_ref = new ImageProducerAppletRasterBuffer();
+              ((AppletRasterBuffer) ((Object) var5_ref)).initialize(param3, param2, param1, (byte) 67);
               stackIn_5_0 = var5_ref;
-              return (mab) ((Object) stackIn_5_0);
+              return (AppletRasterBuffer) ((Object) stackIn_5_0);
             }
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

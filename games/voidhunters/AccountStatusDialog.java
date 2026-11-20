@@ -169,7 +169,7 @@ class AccountStatusDialog extends ContentTransitionDialog implements UiActionLis
             }
           }
           if (param2 == 3) {
-            var6.addButton(-125, mab.field_h, 7);
+            var6.addButton(-125, AppletRasterBuffer.field_h, 7);
           } else {
             if (param2 == 4) {
               var6.addButton(-119, GetBombletSprayProjectileLife.field_p, 8);

@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gga extends UiSingleChildContainer {
-    private gga(int param0, int param1, int param2, int param3, UiRenderer param4, UiListener param5, UiComponent param6) {
+final class UiDropTargetContainer extends UiSingleChildContainer {
+    private UiDropTargetContainer(int param0, int param1, int param2, int param3, UiRenderer param4, UiListener param5, UiComponent param6) {
         super(param0, param1, param2, param3, param4, param5);
         try {
           this.child = param6;
@@ -19,15 +19,15 @@ final class gga extends UiSingleChildContainer {
           int var8 = 123 % ((52 - param0) / 52);
           if (var9 != null &&
             this.containsPoint(param2, param1, param5, param3, (byte) 22)) {
-            if (!(this.listener instanceof ol)) {
-              if (!(var9.listener instanceof ol)) {
+            if (!(this.listener instanceof UiDropListener)) {
+              if (!(var9.listener instanceof UiDropListener)) {
                 return;
               }
-              ((ol) (var9.listener)).a((byte) -70, var9, this);
+              ((UiDropListener) (var9.listener)).onDrop((byte) -70, var9, this);
               SetBombletSprayRandomness.field_p = null;
               return;
             }
-            ((ol) (this.listener)).a((byte) -70, var9, this);
+            ((UiDropListener) (this.listener)).onDrop((byte) -70, var9, this);
             SetBombletSprayRandomness.field_p = null;
             return;
           }

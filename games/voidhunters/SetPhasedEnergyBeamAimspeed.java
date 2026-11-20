@@ -100,7 +100,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
               stackIn_79_0 = WaterTextures.field_g;
               stackIn_80_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((Widget) (Object) stackIn_79_0).draw(stackIn_80_1, 101);
-              stackIn_83_0 = vva.field_r;
+              stackIn_83_0 = ThreeSliceButtonStyle.field_r;
               stackIn_84_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((Widget) (Object) stackIn_83_0).draw(stackIn_84_1, 101);
             } else {
@@ -108,7 +108,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
               stackIn_88_0 = WaterTextures.field_g;
               stackIn_89_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((Widget) (Object) stackIn_88_0).draw(stackIn_89_1, 101);
-              stackIn_92_0 = vva.field_r;
+              stackIn_92_0 = ThreeSliceButtonStyle.field_r;
               stackIn_93_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((Widget) (Object) stackIn_92_0).draw(stackIn_93_1, 101);
             }
@@ -132,7 +132,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
               stackIn_20_0 = WaterTextures.field_g;
               stackIn_21_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((Widget) (Object) stackIn_20_0).draw(stackIn_21_1, 101);
-              stackIn_24_0 = vva.field_r;
+              stackIn_24_0 = ThreeSliceButtonStyle.field_r;
               stackIn_25_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((Widget) (Object) stackIn_24_0).draw(stackIn_25_1, 101);
             } else {
@@ -140,7 +140,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
               stackIn_29_0 = WaterTextures.field_g;
               stackIn_30_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((Widget) (Object) stackIn_29_0).draw(stackIn_30_1, 101);
-              stackIn_33_0 = vva.field_r;
+              stackIn_33_0 = ThreeSliceButtonStyle.field_r;
               stackIn_34_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((Widget) (Object) stackIn_33_0).draw(stackIn_34_1, 101);
             }
@@ -150,7 +150,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
                 stackIn_42_0 = WaterTextures.field_g;
                 stackIn_43_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
                 ((Widget) (Object) stackIn_42_0).draw(stackIn_43_1, 101);
-                stackIn_46_0 = vva.field_r;
+                stackIn_46_0 = ThreeSliceButtonStyle.field_r;
                 stackIn_47_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
                 ((Widget) (Object) stackIn_46_0).draw(stackIn_47_1, 101);
               } else {
@@ -158,7 +158,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
                 stackIn_51_0 = WaterTextures.field_g;
                 stackIn_52_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
                 ((Widget) (Object) stackIn_51_0).draw(stackIn_52_1, 101);
-                stackIn_55_0 = vva.field_r;
+                stackIn_55_0 = ThreeSliceButtonStyle.field_r;
                 stackIn_56_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
                 ((Widget) (Object) stackIn_55_0).draw(stackIn_56_1, 101);
               }

@@ -10,8 +10,8 @@ final class kqb {
         try {
           TutorialController.field_d = true;
           Debris.field_y.text = param0;
-          var2_int = SetClientSideDragging.field_q.field_d;
-          var3 = SetClientSideDragging.field_q.field_b;
+          var2_int = SetClientSideDragging.field_q.width;
+          var3 = SetClientSideDragging.field_q.height;
           var4 = Debris.field_y.font.getParagraphHeight(param0, 272, Debris.field_y.field_D);
           var5 = -(var4 / 2) + 7 - 110 + var3 / 2;
           GetTorpedoProjectiles.field_o.setBounds((-320 + var2_int) / 2, 125, 320, var5, -(var5 * 2) + var3 - 120);

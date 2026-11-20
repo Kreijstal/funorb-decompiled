@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bbb {
+final class SpritePadding {
     static String field_a;
 
     public static void clearSharedReferences(int param0) {
@@ -13,7 +13,7 @@ final class bbb {
         field_a = null;
     }
 
-    final static Sprite[] a(Sprite[] param0, byte param1) {
+    final static Sprite[] discardSpritePadding(Sprite[] param0, byte param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;

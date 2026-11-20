@@ -18,7 +18,7 @@ final class SetSniperCannonAimarc extends ConsoleCommand {
         try {
           try {
             var4 = param0.getGraphics();
-            SetClientSideDragging.field_q.a(var4, param2, (byte) 77, param3);
+            SetClientSideDragging.field_q.draw(var4, param2, (byte) 77, param3);
             var4.dispose();
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;

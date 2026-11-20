@@ -107,7 +107,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           SetShipAimLines.field_o = param5;
           ValidationStatusWidget.field_M = param0;
           SetRepairModeRadius.field_o = param6;
-          vva.field_u = param11;
+          ThreeSliceButtonStyle.field_u = param11;
           SetPointDefenceLaserAimarc.field_p = param8;
           SpriteDimensions.field_o = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "gameprivacy");
           DisplayModeDialog.field_U = SetGrapplingHookRopeBreakLength.a(param3, true, "lobby", "ratedgame");
@@ -282,9 +282,9 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           SetAutozoomSpeedDivide.field_p.field_B = 1;
           var17 = SetAutozoomSpeedDivide.field_p;
           var17.field_F = 1;
-          vva.field_r = new Widget(0L, (Widget) null);
-          vva.field_r.addChild(-561, GetWeaponParticleSpeedDownshift.field_q);
-          vva.field_r.addChild(-561, SetPhysicsCollisionGrapplingHookForceMultiplier.field_o);
+          ThreeSliceButtonStyle.field_r = new Widget(0L, (Widget) null);
+          ThreeSliceButtonStyle.field_r.addChild(-561, GetWeaponParticleSpeedDownshift.field_q);
+          ThreeSliceButtonStyle.field_r.addChild(-561, SetPhysicsCollisionGrapplingHookForceMultiplier.field_o);
           SetPhysicsCollisionGrapplingHookForceMultiplier.field_o.addChild(-561, ProxySocketConnector.field_e);
           for (var18Lifetime2 = 0; 4 + param12 > var18Lifetime2; var18Lifetime2++) {
             if ((var18Lifetime2 != 1 ||
@@ -298,9 +298,9 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
               }
             }
           }
-          vva.field_r.addChild(param1 - 10792, vw.field_a);
-          vva.field_r.addChild(-561, ObjectiveMarker.field_b);
-          vva.field_r.addChild(-561, SetAutozoomSpeedDivide.field_p);
+          ThreeSliceButtonStyle.field_r.addChild(param1 - 10792, vw.field_a);
+          ThreeSliceButtonStyle.field_r.addChild(-561, ObjectiveMarker.field_b);
+          ThreeSliceButtonStyle.field_r.addChild(-561, SetAutozoomSpeedDivide.field_p);
           ProjectileHit.field_d = new Widget(0L, lo.field_b, ko.field_d.toUpperCase());
           LegacyOpenGlTextureCache.field_a = new Widget(0L, DisplayModeDialog.field_X, SetCountermeasureLauncherAimarc.field_s.toUpperCase());
           return;

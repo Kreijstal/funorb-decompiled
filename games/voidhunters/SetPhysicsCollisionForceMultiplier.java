@@ -152,7 +152,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
         try {
           if (obfuscationGuard >= -119) {
             var4 = (Sprite[]) null;
-            SetPhysicsCollisionForceMultiplier.a((Sprite[]) null, 64, 92, -41, -29, false);
+            SetPhysicsCollisionForceMultiplier.drawTintedThreeSliceStrip((Sprite[]) null, 64, 92, -41, -29, false);
           }
           SetMachineGunEnergyUsed.a(50, 62, arguments[0].intValue(48));
           stackIn_3_0 = new ConsoleValue("void");
@@ -178,7 +178,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
         }
     }
 
-    final static void a(Sprite[] param0, int param1, int param2, int param3, int param4, boolean param5) {
+    final static void drawTintedThreeSliceStrip(Sprite[] param0, int param1, int param2, int param3, int param4, boolean param5) {
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;

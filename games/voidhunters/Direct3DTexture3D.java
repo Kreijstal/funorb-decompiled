@@ -19,7 +19,7 @@ final class Direct3DTexture3D extends Direct3DTexture implements GpuTexture3D {
     }
 
     public final void bind(int param0) {
-        this.toolkit.a(this, -7913);
+        this.toolkit.bindTexture(this, -7913);
         if (param0 != -27445) {
           this.bind(-122);
         }
@@ -38,7 +38,7 @@ final class Direct3DTexture3D extends Direct3DTexture implements GpuTexture3D {
         this.field_h = param4;
         this.field_g = param3;
         this.field_f = param2;
-        this.texture = this.toolkit.field_Mc.createVolumeTexture(param2, param3, param4, 1, 0, Direct3DToolkit.toDirect3DTextureFormat(param1, this.dataType, -86), 1);
+        this.texture = this.toolkit.device.createVolumeTexture(param2, param3, param4, 1, 0, Direct3DToolkit.toDirect3DTextureFormat(param1, this.dataType, -86), 1);
         var15 = this.toolkit.field_zc;
         var8 = this.texture.LockBox(0, 0, 0, 0, param2, param3, param4, 0, var15);
         if (jagdx.HResult.succeeded(var8, (byte) 15)) {

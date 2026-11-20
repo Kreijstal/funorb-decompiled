@@ -61,7 +61,7 @@ final class PlayerVoteFactory implements GameStateFactory {
                   if (ArchiveIndexLoader.numberTokenType == var5.type) {
                     discarded$2 = var3.append("<col=ffaaff>").append(var8).append("</col>");
                   } else {
-                    if (var5.type != io.booleanTokenType) {
+                    if (var5.type != GradientBorderTextStyle.booleanTokenType) {
                       discarded$3 = var3.append(var8);
                     } else {
                       discarded$4 = var3.append("<col=33ffaa>").append(var8).append("</col>");

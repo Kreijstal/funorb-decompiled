@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vva extends UiTextStyle {
+final class ThreeSliceButtonStyle extends UiTextStyle {
     static Widget field_r;
-    private int field_s;
-    private int field_p;
+    private int normalTint;
+    private int disabledTint;
     static byte[] field_u;
-    private int field_t;
-    private Sprite[] field_q;
+    private int highlightTint;
+    private Sprite[] backgroundSprites;
 
     public final void drawComponent(int param0, UiComponent param1, int param2, int param3, boolean param4) {
         int stackIn_6_0 = 0;
@@ -34,16 +34,16 @@ final class vva extends UiTextStyle {
             param4 = param4 & ((UiFocusableComponent) (param1)).enabled;
           }
           if (!param4) {
-            stackIn_14_0 = this.field_p;
+            stackIn_14_0 = this.disabledTint;
           } else {
             if (var6_int != 0) {
-              stackIn_14_0 = this.field_t;
+              stackIn_14_0 = this.highlightTint;
             } else {
-              stackIn_14_0 = this.field_s;
+              stackIn_14_0 = this.normalTint;
             }
           }
           var8 = stackIn_14_0;
-          SetPhysicsCollisionForceMultiplier.a(this.field_q, var8, param1.y + (param3 + (-this.field_q[0].paddedHeight + param1.height >> 1)), param1.width, param2 + param1.x, true);
+          SetPhysicsCollisionForceMultiplier.drawTintedThreeSliceStrip(this.backgroundSprites, var8, param1.y + (param3 + (-this.backgroundSprites[0].paddedHeight + param1.height >> 1)), param1.width, param2 + param1.x, true);
           stackIn_17_0 = (!param4) ? 7105644 : 16777215;
           var9 = stackIn_17_0;
           this.font.drawParagraph(param1.text, param2 + param1.x, param1.y + param3 - 2, param1.width, param1.height, var9, -1, 1, 1, this.font.maxAscent);
@@ -62,7 +62,7 @@ final class vva extends UiTextStyle {
         }
     }
 
-    public vva() {
+    public ThreeSliceButtonStyle() {
         this(2188450, 2591221, 9543);
     }
 
@@ -74,12 +74,12 @@ final class vva extends UiTextStyle {
         field_u = null;
     }
 
-    private vva(int param0, int param1, int param2) {
-        this.field_s = param0;
-        this.field_q = GetBombletSprayProjectileLife.field_o;
-        this.field_p = param2;
+    private ThreeSliceButtonStyle(int param0, int param1, int param2) {
+        this.normalTint = param0;
+        this.backgroundSprites = GetBombletSprayProjectileLife.field_o;
+        this.disabledTint = param2;
         this.font = GetBoostersCooldown.field_r;
-        this.field_t = param1;
+        this.highlightTint = param1;
     }
 
     static {

@@ -15,7 +15,7 @@ final class ConsoleExpressionToken extends IntrusiveNode {
         if (ArchiveIndexLoader.numberTokenType == this.type) {
           return "Number{" + this.lexeme + "}";
         }
-        if (io.booleanTokenType == this.type) {
+        if (GradientBorderTextStyle.booleanTokenType == this.type) {
           return "Boolean{" + this.lexeme + "}";
         }
         if (this.type == SetMissionTerrainSpaceProbability.charTokenType) {
@@ -98,7 +98,7 @@ final class ConsoleExpressionToken extends IntrusiveNode {
               stackIn_25_0 = new ConsoleValue(Integer.parseInt(this.lexeme));
               return stackIn_25_0;
             }
-            if (io.booleanTokenType == this.type) {
+            if (GradientBorderTextStyle.booleanTokenType == this.type) {
               stackIn_29_0 = new ConsoleValue(this.lexeme.equals("true"));
               return stackIn_29_0;
             }

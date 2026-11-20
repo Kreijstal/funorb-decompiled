@@ -31,8 +31,8 @@ final class GetUseRectOutline extends ConsoleCommand {
           }
         } else {
           if (GetShieldsDirectionalArcParticleLife.field_p != SoftwareRasterizer2D.width) {
-            if (SoftwareRasterizer2D.height == SetClientSideDragging.field_q.field_b &&
-              SetClientSideDragging.field_q.field_d == SoftwareRasterizer2D.width) {
+            if (SoftwareRasterizer2D.height == SetClientSideDragging.field_q.height &&
+              SetClientSideDragging.field_q.width == SoftwareRasterizer2D.width) {
               if (null == SetSpinningBladeSpindamageMultiplier.field_o) {
                 if (null == SetThrusterParticleSpeedDownshift.field_o) {
                   SetGrapplingHookMinLength.a(5);
@@ -94,8 +94,8 @@ final class GetUseRectOutline extends ConsoleCommand {
             }
           } else {
             if (SoftwareRasterizer2D.height != SetGrapplingHookRopeBreakLength.field_p &&
-              SoftwareRasterizer2D.height == SetClientSideDragging.field_q.field_b &&
-              SetClientSideDragging.field_q.field_d == SoftwareRasterizer2D.width) {
+              SoftwareRasterizer2D.height == SetClientSideDragging.field_q.height &&
+              SetClientSideDragging.field_q.width == SoftwareRasterizer2D.width) {
               if (null == SetSpinningBladeSpindamageMultiplier.field_o) {
                 if (null == SetThrusterParticleSpeedDownshift.field_o) {
                   SetGrapplingHookMinLength.a(5);

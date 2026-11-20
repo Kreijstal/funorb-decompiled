@@ -484,7 +484,7 @@ final class PlayerContextMenu {
               }
             } else {
               this.menu.addItem(SetReverbGain.a(SetDebrisCollision.field_o, new String[]{var3}, 127), (byte) -53, 2);
-              this.menu.addItem(SetReverbGain.a(nrb.field_a, new String[]{var3}, 127), (byte) -53, 3);
+              this.menu.addItem(SetReverbGain.a(NullUiRenderer.field_a, new String[]{var3}, 127), (byte) -53, 3);
             }
           }
         }

@@ -3,26 +3,26 @@
  */
 import java.util.*;
 
-final class sib extends mab implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
+final class ImageProducerAppletRasterBuffer extends AppletRasterBuffer implements java.awt.image.ImageProducer, java.awt.image.ImageObserver {
     static int field_i;
-    private java.awt.image.ImageConsumer field_k;
-    private java.awt.image.ColorModel field_j;
+    private java.awt.image.ImageConsumer consumer;
+    private java.awt.image.ColorModel colorModel;
 
-    final void a(int param0, int param1, java.awt.Component param2, byte param3) {
+    final void initialize(int param0, int param1, java.awt.Component param2, byte param3) {
         try {
-          this.field_b = param1;
-          this.field_c = new int[param1 * param0 + 1];
-          this.field_d = param0;
-          this.field_j = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
-          this.field_g = param2.createImage((java.awt.image.ImageProducer) (this));
-          this.b((byte) -69);
-          param2.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
-          this.b((byte) -113);
-          param2.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
-          this.b((byte) -67);
+          this.height = param1;
+          this.pixels = new int[param1 * param0 + 1];
+          this.width = param0;
+          this.colorModel = (java.awt.image.ColorModel) ((Object) new java.awt.image.DirectColorModel(32, 16711680, 65280, 255));
+          this.image = param2.createImage((java.awt.image.ImageProducer) (this));
+          this.pushPixels((byte) -69);
+          param2.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
+          this.pushPixels((byte) -113);
+          param2.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
+          this.pushPixels((byte) -67);
           int var5_int = -10 % ((12 - param3) / 45);
-          param2.prepareImage(this.field_g, (java.awt.image.ImageObserver) (this));
-          this.a((byte) -108);
+          param2.prepareImage(this.image, (java.awt.image.ImageObserver) (this));
+          this.bind((byte) -108);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sib.C(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -39,30 +39,30 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
         }
     }
 
-    private final synchronized void b(byte param0) {
-        if (null != this.field_k) {
+    private final synchronized void pushPixels(byte param0) {
+        if (null != this.consumer) {
           int var2 = 99 / ((param0 - 29) / 63);
-          this.field_k.setPixels(0, 0, this.field_d, this.field_b, this.field_j, this.field_c, 0, this.field_d);
-          this.field_k.imageComplete(2);
+          this.consumer.setPixels(0, 0, this.width, this.height, this.colorModel, this.pixels, 0, this.width);
+          this.consumer.imageComplete(2);
           return;
         }
     }
 
     public final synchronized boolean isConsumer(java.awt.image.ImageConsumer param0) {
-        return this.field_k == param0;
+        return this.consumer == param0;
     }
 
-    final void a(java.awt.Graphics param0, int param1, byte param2, int param3) {
+    final void draw(java.awt.Graphics param0, int param1, byte param2, int param3) {
         try {
-          this.b((byte) -42);
+          this.pushPixels((byte) -42);
           int var5_int = -106 % ((-6 - param2) / 41);
-          param0.drawImage(this.field_g, param1, param3, (java.awt.image.ImageObserver) (this));
+          param0.drawImage(this.image, param1, param3, (java.awt.image.ImageObserver) (this));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sib.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
-    final static String a(int param0, PacketBuffer param1, byte param2) {
+    final static String readHuffmanString(int param0, PacketBuffer param1, byte param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4_int = 0;
@@ -114,10 +114,10 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param0 != this.field_k) {
+          if (param0 != this.consumer) {
             return;
           }
-          this.field_k = null;
+          this.consumer = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -133,15 +133,15 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
         }
     }
 
-    sib() {
+    ImageProducerAppletRasterBuffer() {
     }
 
     public final synchronized void addConsumer(java.awt.image.ImageConsumer param0) {
         try {
-          this.field_k = param0;
-          param0.setDimensions(this.field_d, this.field_b);
+          this.consumer = param0;
+          param0.setDimensions(this.width, this.height);
           param0.setProperties((Hashtable) null);
-          param0.setColorModel(this.field_j);
+          param0.setColorModel(this.colorModel);
           param0.setHints(14);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sib.addConsumer(" + (param0 != null ? "{...}" : "null") + ')');

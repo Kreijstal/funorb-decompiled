@@ -49,7 +49,7 @@ final class UiComboBoxRenderer implements UiRenderer {
         try {
           var6_int = param1.x + param2;
           var7 = param3 + param1.y;
-          ServerTickFactory.a(var7, (byte) 115, param1.height, param1.width, var6_int);
+          ServerTickFactory.drawGradientBorder(var7, (byte) 115, param1.height, param1.width, var6_int);
           if (param1.hasFocus((byte) -120)) {
             SetCountermeasureLauncherRandomness.a(var7 + 2, param1.width - 4, 2 + var6_int, param1.height - 4, (byte) -100);
           }

@@ -137,7 +137,7 @@ final class tda extends ResizableModalPanel implements UiActionListener {
             return stackIn_2_0;
           }
           var4 = new UiFocusableComponent(param2, param1);
-          var4.renderer = (UiRenderer) ((Object) new vva());
+          var4.renderer = (UiRenderer) ((Object) new ThreeSliceButtonStyle());
           var5 = this.height - 6;
           this.height = this.height + 38;
           var4.setBounds(15, -16 + this.width - 14, 30, 1, var5);

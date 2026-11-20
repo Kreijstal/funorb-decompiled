@@ -161,7 +161,7 @@ class MissionCondition implements DiffableState {
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4) {
-        mab.field_f = param3;
+        AppletRasterBuffer.field_f = param3;
         if (param2 < 92) {
           field_b = (String) null;
         }

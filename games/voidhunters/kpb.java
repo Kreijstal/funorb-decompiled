@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kpb extends io {
+final class kpb extends GradientBorderTextStyle {
     static PcmStreamMixer field_q;
     static PartitionZone[] field_s;
     static String field_r;

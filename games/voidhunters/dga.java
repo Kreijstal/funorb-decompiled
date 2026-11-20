@@ -250,7 +250,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_lobby_location", 23100);
                 if (null != var2) {
-                  mab.field_e = Cp1252Strings.decode((byte) -125, var2);
+                  AppletRasterBuffer.field_e = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_gamelist_all_games", 23100);
                 if (null != var2) {
@@ -362,7 +362,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("invite_decline_xs_game", 23100);
                 if (null != var2) {
-                  nrb.field_a = Cp1252Strings.decode((byte) -125, var2);
+                  NullUiRenderer.field_a = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("join_xs_game", 23100);
                 if (var2 != null) {
@@ -1020,7 +1020,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("pleasetryagain", 23100);
                 if (null != var2) {
-                  bbb.field_a = Cp1252Strings.decode((byte) -125, var2);
+                  SpritePadding.field_a = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("pleasereenterpass", 23100);
                 if (null != var2) {
@@ -1036,7 +1036,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("toserverlist", 23100);
                 if (null != var2) {
-                  mab.field_h = Cp1252Strings.decode((byte) -125, var2);
+                  AppletRasterBuffer.field_h = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("tocustomersupport", 23100);
                 if (null != var2) {

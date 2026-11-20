@@ -181,7 +181,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
               var4Lifetime1 = ArchiveIndexLoader.numberTokenType;
             }
           } else {
-            var4Lifetime1 = io.booleanTokenType;
+            var4Lifetime1 = GradientBorderTextStyle.booleanTokenType;
           }
           stackIn_21_0 = new ConsoleExpressionToken(var4Lifetime1, var2_int, var5);
           return stackIn_21_0;

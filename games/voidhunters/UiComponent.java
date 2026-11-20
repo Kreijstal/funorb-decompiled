@@ -462,8 +462,8 @@ class UiComponent extends IntrusiveNode {
             this.handleMouseRelease((byte) 118, param1, uia.field_b, param2, this, PlayerGameData.field_b);
             var6 = SetBombletSprayRandomness.field_p;
             if (var6 != null) {
-              if (var6.listener instanceof ol) {
-                ((ol) (var6.listener)).a((byte) -70, var6, (gga) null);
+              if (var6.listener instanceof UiDropListener) {
+                ((UiDropListener) (var6.listener)).onDrop((byte) -70, var6, (UiDropTargetContainer) null);
               }
               SetBombletSprayRandomness.field_p = null;
             }

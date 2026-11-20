@@ -105,7 +105,7 @@ final class UiComboBox extends UiContainer implements UiActionListener {
         }
         this.setBoundsAndLayout(this.width, this.y, -20, this.x, this.collapsedHeight + var3);
         this.list.setBounds(0, this.width, var2, 1, 0);
-        this.dropdownPane = new UiScrollPane(0, 0, 0, 0, new nrb(), this.list, (UiRenderer) null);
+        this.dropdownPane = new UiScrollPane(0, 0, 0, 0, new NullUiRenderer(), this.list, (UiRenderer) null);
         if (var4 != 0) {
           this.dropdownPane.setVerticalScrollbar(true, GetMassDriverEnergyUsed.a(0), (byte) -99);
         }

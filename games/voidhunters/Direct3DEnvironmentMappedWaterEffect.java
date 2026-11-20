@@ -14,7 +14,7 @@ final class Direct3DEnvironmentMappedWaterEffect extends GpuMaterialEffect {
         jagdx.IDirect3DDevice var2 = null;
         GpuTransform3D var3 = null;
         if (this.field_k) {
-          var2 = this.field_e.field_Mc;
+          var2 = this.field_e.device;
           var3 = this.field_e.getModelViewTransform(param0 - 5);
           var2.setVertexShaderConstants(0, var3.writeRowMajorMatrix(field_f, (byte) 22));
         }
@@ -27,8 +27,8 @@ final class Direct3DEnvironmentMappedWaterEffect extends GpuMaterialEffect {
     final void disable(int param0) {
         if (param0 == 2543) {
           if (this.field_k) {
-            this.field_e.a(param0 ^ 2543, (jagdx.IDirect3DVertexShader) null);
-            this.field_e.a(-123, (jagdx.IDirect3DPixelShader) null);
+            this.field_e.setVertexShader(param0 ^ 2543, (jagdx.IDirect3DVertexShader) null);
+            this.field_e.setPixelShader(-123, (jagdx.IDirect3DPixelShader) null);
             this.toolkit.setActiveTextureUnit(1, param0 - 2658);
             this.toolkit.setTexture((GpuTexture) null, param0 ^ -2449);
             this.toolkit.setActiveTextureUnit(0, param0 - 2668);
@@ -39,8 +39,8 @@ final class Direct3DEnvironmentMappedWaterEffect extends GpuMaterialEffect {
         }
         this.onDepthRangeChanged(true);
         if (this.field_k) {
-          this.field_e.a(param0 ^ 2543, (jagdx.IDirect3DVertexShader) null);
-          this.field_e.a(-123, (jagdx.IDirect3DPixelShader) null);
+          this.field_e.setVertexShader(param0 ^ 2543, (jagdx.IDirect3DVertexShader) null);
+          this.field_e.setPixelShader(-123, (jagdx.IDirect3DPixelShader) null);
           this.toolkit.setActiveTextureUnit(1, param0 - 2658);
           this.toolkit.setTexture((GpuTexture) null, param0 ^ -2449);
           this.toolkit.setActiveTextureUnit(0, param0 - 2668);
@@ -71,9 +71,9 @@ final class Direct3DEnvironmentMappedWaterEffect extends GpuMaterialEffect {
           var3 = this.toolkit.getEnvironmentCubeTexture(10);
           if (this.field_j) {
             if (var3 != null) {
-              var5 = this.field_e.field_Mc;
-              this.field_e.a(0, this.field_g);
-              this.field_e.a(-121, this.field_h);
+              var5 = this.field_e.device;
+              this.field_e.setVertexShader(0, this.field_g);
+              this.field_e.setPixelShader(-121, this.field_h);
               this.toolkit.setActiveTextureUnit(1, -88);
               this.toolkit.setTexture(var3, -108);
               this.toolkit.setActiveTextureUnit(0, -99);
@@ -96,9 +96,9 @@ final class Direct3DEnvironmentMappedWaterEffect extends GpuMaterialEffect {
           return;
         }
         if (var3Lifetime1 != null) {
-          var6 = this.field_e.field_Mc;
-          this.field_e.a(0, this.field_g);
-          this.field_e.a(-121, this.field_h);
+          var6 = this.field_e.device;
+          this.field_e.setVertexShader(0, this.field_g);
+          this.field_e.setPixelShader(-121, this.field_h);
           this.toolkit.setActiveTextureUnit(1, -88);
           this.toolkit.setTexture(var3Lifetime1, -108);
           this.toolkit.setActiveTextureUnit(0, -99);
@@ -122,7 +122,7 @@ final class Direct3DEnvironmentMappedWaterEffect extends GpuMaterialEffect {
         int var7 = 0;
         float var8 = 0.0f;
         if (this.field_k) {
-          var4 = this.field_e.field_Mc;
+          var4 = this.field_e.device;
           var5 = 1 << (param1 & 3);
           var6 = (float)(1 << ((62 & param1) >> 3)) / 32.0f;
           var7 = param0 & 65535;
@@ -144,7 +144,7 @@ final class Direct3DEnvironmentMappedWaterEffect extends GpuMaterialEffect {
         float var4 = 0.0f;
         if (param0) {
           if (this.field_k) {
-            var2 = this.field_e.field_Mc;
+            var2 = this.field_e.device;
             if (0 >= this.toolkit.field_j) {
               var2.setVertexShaderConstant(16, 0.0f, 0.0f, 0.0f, 0.0f);
             } else {
@@ -164,7 +164,7 @@ final class Direct3DEnvironmentMappedWaterEffect extends GpuMaterialEffect {
         GpuTransform3D var4 = null;
         if (param0 == 15) {
           if (this.field_k) {
-            var2 = this.field_e.field_Mc;
+            var2 = this.field_e.device;
             var3 = this.field_e.getViewTransform((byte) 82);
             var4 = this.field_e.getModelViewTransform(0);
             var2.setVertexShaderConstants(0, var4.writeRowMajorMatrix(field_f, (byte) 22));
@@ -179,14 +179,14 @@ final class Direct3DEnvironmentMappedWaterEffect extends GpuMaterialEffect {
         jagdx.IDirect3DDevice var2Lifetime1;
         if (param0) {
           if (this.field_k) {
-            var2 = this.field_e.field_Mc;
+            var2 = this.field_e.device;
             var2.setVertexShaderConstants(8, this.toolkit.writeTransposedProjection(114, field_f));
           }
           return;
         }
         field_f = (float[]) null;
         if (this.field_k) {
-          var2Lifetime1 = this.field_e.field_Mc;
+          var2Lifetime1 = this.field_e.device;
           var2Lifetime1.setVertexShaderConstants(8, this.toolkit.writeTransposedProjection(114, field_f));
         }
     }
@@ -195,7 +195,7 @@ final class Direct3DEnvironmentMappedWaterEffect extends GpuMaterialEffect {
         jagdx.IDirect3DDevice var2 = null;
         GpuTransform3D var3 = null;
         if (this.field_k) {
-          var2 = this.field_e.field_Mc;
+          var2 = this.field_e.device;
           var3 = this.toolkit.getTextureTransform(0);
           var2.SetVertexShaderConstantF(12, var3.writeFirstTwoRows((byte) 105, field_f), 2);
         }
@@ -234,8 +234,8 @@ final class Direct3DEnvironmentMappedWaterEffect extends GpuMaterialEffect {
           this.field_g = null;
           return;
         }
-        this.field_g = this.field_e.field_Mc.createVertexShader(param1.fetchNamedFile("environment_mapped_water_v", true, "dx"));
-        this.field_h = this.field_e.field_Mc.createPixelShader(param1.fetchNamedFile("environment_mapped_water_f", true, "dx"));
+        this.field_g = this.field_e.device.createVertexShader(param1.fetchNamedFile("environment_mapped_water_v", true, "dx"));
+        this.field_h = this.field_e.device.createPixelShader(param1.fetchNamedFile("environment_mapped_water_f", true, "dx"));
         stackIn_9_1 = (null != this.field_g) && (null != this.field_h) && (this.field_i.ensureNormalMap((byte) 107));
         this.field_j = stackIn_9_1;
     }

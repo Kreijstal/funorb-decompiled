@@ -96,7 +96,7 @@ final class qh extends ResizableModalPanel implements UiActionListener {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new UiFocusableComponent(param1, param0);
-          var4.renderer = (UiRenderer) ((Object) new vva());
+          var4.renderer = (UiRenderer) ((Object) new ThreeSliceButtonStyle());
           if (param2 <= 123) {
             field_L = (String) null;
           }

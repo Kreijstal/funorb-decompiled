@@ -86,8 +86,8 @@ final class ComponentCollision extends IntrusiveNode {
             var7.width = 0;
             if (SmoothedNanoTickClock.isLocalLobbyOwner(119)) {
               GetWeaponParticleSpeedDownshift.field_q.text = GetLaserEnergyUsed.field_p.toUpperCase();
-              var9 = (2 + vva.field_r.width) / 2;
-              vw.field_a.setBounds(0, 116, -2 + var9, vva.field_r.height - 40, 40);
+              var9 = (2 + ThreeSliceButtonStyle.field_r.width) / 2;
+              vw.field_a.setBounds(0, 116, -2 + var9, ThreeSliceButtonStyle.field_r.height - 40, 40);
               if (SetSpinningBladeSpindamageMultiplier.field_o.field_Fb <= SetSpinningBladeSpindamageMultiplier.field_o.field_zb) {
                 vw.field_a.text = SetPhasedEnergyBeamPulsetime.field_q.toUpperCase();
                 vw.field_a.enabled = false;
@@ -108,7 +108,7 @@ final class ComponentCollision extends IntrusiveNode {
                 }
                 vw.field_a.text = vw.field_a.text + "<br>" + var10_ref_String;
               }
-              ObjectiveMarker.field_b.setBounds(var9, 119, vva.field_r.width - var9, vva.field_r.height - 40, 40);
+              ObjectiveMarker.field_b.setBounds(var9, 119, ThreeSliceButtonStyle.field_r.width - var9, ThreeSliceButtonStyle.field_r.height - 40, 40);
               ObjectiveMarker.field_b.text = GetPhasedEnergyBeamAimspeed.field_o.toUpperCase();
               stackIn_20_0 = ObjectiveMarker.field_b;
               stackIn_21_1 = (param2) && (qga.field_a == 0L);
@@ -323,7 +323,7 @@ final class ComponentCollision extends IntrusiveNode {
             } else {
               var9_ref_String = SetSpinningBladeSpindamageMultiplier.field_o.field_Vb;
               GetWeaponParticleSpeedDownshift.field_q.text = SetReverbGain.a(MonotonicMillisClock.field_b, new String[]{var9_ref_String}, 118).toUpperCase();
-              SetAutozoomSpeedDivide.field_p.setBounds(0, -127, vva.field_r.width, -40 + vva.field_r.height, 40);
+              SetAutozoomSpeedDivide.field_p.setBounds(0, -127, ThreeSliceButtonStyle.field_r.width, -40 + ThreeSliceButtonStyle.field_r.height, 40);
               SetAutozoomSpeedDivide.field_p.text = SetReverbGain.a(DebugSendable.field_h, new String[]{var9_ref_String}, 79);
               var8 = SetAutozoomSpeedDivide.field_p;
             }
@@ -343,7 +343,7 @@ final class ComponentCollision extends IntrusiveNode {
           stackIn_165_0 = WaterTextures.field_g;
           stackIn_166_1 = (param3) && (!param4) && (!GetTorpedoProjectileDamage.field_o);
           ((Widget) (Object) stackIn_165_0).updateInput(stackIn_166_1, 1332);
-          stackIn_170_0 = vva.field_r;
+          stackIn_170_0 = ThreeSliceButtonStyle.field_r;
           stackIn_171_1 = (param3) && (!param4) && (!GetTorpedoProjectileDamage.field_o);
           ((Widget) (Object) stackIn_170_0).updateInput(stackIn_171_1, 1332);
           stackIn_175_0 = SetUseCircleFill.field_o;

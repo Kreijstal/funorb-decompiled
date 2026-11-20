@@ -157,7 +157,7 @@ final class DisplayModeErrorDialog extends ResizableModalPanel implements UiActi
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = new UiFocusableComponent(param2, param1);
-          var4.renderer = (UiRenderer) ((Object) new vva());
+          var4.renderer = (UiRenderer) ((Object) new ThreeSliceButtonStyle());
           var5 = -79 / ((6 - param0) / 32);
           var6 = -6 + this.height;
           this.height = this.height + 38;
