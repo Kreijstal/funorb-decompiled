@@ -11,7 +11,7 @@ final class ita extends vq {
 
     private final void a(shb param0, int param1, String param2, int param3, int param4) {
         try {
-          SetTorpedoProjectileLife.field_o.a(param2, (param0.field_h >> 1) + (param4 + param0.field_g), param1 + param0.field_r - 5, 16777215, -1);
+          SetTorpedoProjectileLife.field_o.drawCentered(param2, (param0.field_h >> 1) + (param4 + param0.field_g), param1 + param0.field_r - 5, 16777215, -1);
           if (param3 != 1225728129) {
             this.d(108);
           }

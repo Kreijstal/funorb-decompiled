@@ -143,7 +143,7 @@ final class ServerInfo implements DiffableState {
           }
           return true;
         }
-        if (qq.a(param0, true) &&
+        if (OpenGlGpuBuffer.a(param0, true) &&
           !pla.a(param0, -4)) {
           return false;
         }
@@ -481,11 +481,11 @@ final class ServerInfo implements DiffableState {
         return false;
     }
 
-    final static arb a(byte[] param0, int param1) {
-        arb var2 = null;
+    final static SoftwareMonochromeBitmapFont a(byte[] param0, int param1) {
+        SoftwareMonochromeBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
-        arb stackIn_6_0 = null;
+        SoftwareMonochromeBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -494,7 +494,7 @@ final class ServerInfo implements DiffableState {
           if (param0 == null) {
             return null;
           }
-          var2 = new arb(param0, iib.field_e, SettingsChange.field_f, SetMissionTerrainDebrisProbability.field_o, hla.field_a, sh.field_a);
+          var2 = new SoftwareMonochromeBitmapFont(param0, iib.field_e, SettingsChange.field_f, SetMissionTerrainDebrisProbability.field_o, hla.field_a, sh.field_a);
           if (param1 != 11) {
             var3 = (byte[]) null;
             ServerInfo.a((byte[]) null, -100);

@@ -253,7 +253,7 @@ final class TrailHolder implements DiffableState {
           for (var7 = 1; param3.length() > var7; var7++) {
             var8 = param3.charAt(var7);
             if (var8 == 60) {
-              var6 = (var5_int >> 8) - (-param2.field_c[0] - param0.b(param3.substring(0, var7)));
+              var6 = (var5_int >> 8) - (-param2.field_c[0] - param0.getStringWidth(param3.substring(0, var7)));
             }
             if (-1 != var6) {
               param2.field_c[var7] = var6;
@@ -261,7 +261,7 @@ final class TrailHolder implements DiffableState {
               if (32 == var8) {
                 var5_int = var5_int + param1;
               }
-              param2.field_c[var7] = param2.field_c[0] + ((var5_int >> 8) + (param0.b(param3.substring(0, 1 + var7)) - param0.a((char) var8)));
+              param2.field_c[var7] = param2.field_c[0] + ((var5_int >> 8) + (param0.getStringWidth(param3.substring(0, 1 + var7)) - param0.getCharacterAdvance((char) var8)));
             }
             if (var8 == 62) {
               var6 = -1;

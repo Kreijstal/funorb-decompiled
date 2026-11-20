@@ -59,7 +59,7 @@ final class bwa extends llb {
         RuntimeException decompiledCaughtException = null;
         try {
           param1 += 8;
-          var6_int = param3.field_eb.b(param3.field_R, -(param3.field_w * 2) + param2, param3.field_D);
+          var6_int = param3.field_eb.getParagraphHeight(param3.field_R, -(param3.field_w * 2) + param2, param3.field_D);
           param3.a(0, 125, param2, param1, var6_int);
           param1 = param1 + (var6_int - 0);
           if (param4 != 28488) {
@@ -231,15 +231,15 @@ final class bwa extends llb {
               discarded$1 = this.field_Fb.append(param11);
             }
             var16Lifetime2 = 0;
-            var17 = param6.field_eb.b(GetGrapplingHookCooldown.field_p);
+            var17 = param6.field_eb.getStringWidth(GetGrapplingHookCooldown.field_p);
             if (var16Lifetime2 < var17) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.field_eb.b(oqb.field_n);
+            var17Lifetime2 = param6.field_eb.getStringWidth(oqb.field_n);
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
-            var17Lifetime3 = param6.field_eb.b(SetUseOffscreenRendering.field_p);
+            var17Lifetime3 = param6.field_eb.getStringWidth(SetUseOffscreenRendering.field_p);
             if (var17Lifetime3 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime3;
             }
@@ -329,7 +329,7 @@ final class bwa extends llb {
           this.field_Ab.b(-561, this.field_Bb);
           var15_int = 226;
           var16Lifetime1 = 10;
-          var17Lifetime1 = this.field_Bb.field_eb.c(this.field_Bb.field_R, var15_int);
+          var17Lifetime1 = this.field_Bb.field_eb.getLineCount(this.field_Bb.field_R, var15_int);
           this.field_Bb.a(13, -65, var15_int, var16Lifetime1, nna.field_w * var17Lifetime1);
           var16Lifetime1 = var16Lifetime1 + var17Lifetime1 * nna.field_w;
           this.field_Ab.a(0, 116, 13 + var15_int + 13, 24, var16Lifetime1 + 10);
@@ -458,7 +458,7 @@ final class bwa extends llb {
         this.a(param0, 1332);
         if (null != this.field_Eb) {
           this.field_Eb.field_R = this.field_Fb.toString();
-          this.field_Eb.field_L = (this.field_hb - this.field_Eb.field_eb.b(this.field_Eb.field_R)) / 2;
+          this.field_Eb.field_L = (this.field_hb - this.field_Eb.field_eb.getStringWidth(this.field_Eb.field_R)) / 2;
           this.field_Eb.field_hb = this.field_hb - this.field_Eb.field_L;
           if (this.field_wb != null &&
             this.field_wb.field_o != 0) {

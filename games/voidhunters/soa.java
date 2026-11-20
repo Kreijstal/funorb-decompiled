@@ -204,7 +204,7 @@ final class soa extends llb {
               var9 = var16;
               var9 = var16;
               var9 = var16;
-              var10Lifetime1 = SetAutozoomSpeedDivide.field_p.field_eb.b(var16) + 3 * SetAutozoomSpeedDivide.field_p.field_eb.a('.');
+              var10Lifetime1 = SetAutozoomSpeedDivide.field_p.field_eb.getStringWidth(var16) + 3 * SetAutozoomSpeedDivide.field_p.field_eb.getCharacterAdvance('.');
               SetAutozoomSpeedDivide.field_p.field_F = 0;
               if ((GetMissionTerrainNebulaProbability.field_o & 48) == 16) {
                 var9 = var16 + ".";

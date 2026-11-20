@@ -9,7 +9,7 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
         if (param0) {
           field_o = (mob) null;
           if (!li.field_i) {
-            return ita.a(param1, 7988).field_H;
+            return ita.a(param1, 7988).ascent;
           }
           if (param1 == 3) {
             return 11;
@@ -17,7 +17,7 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
           return SetTorpedoEnergyUsed.a(param1, 300).field_a;
         }
         if (!li.field_i) {
-          return ita.a(param1, 7988).field_H;
+          return ita.a(param1, 7988).ascent;
         }
         if (param1 == 3) {
           return 11;

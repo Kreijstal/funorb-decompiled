@@ -271,7 +271,7 @@ final class me extends pja {
               var45.field_B = 1;
               for (var18_int = 0; ocb.field_l > var18_int; var18_int++) {
                 var12.field_Zb[var18_int] = new llb(0L, (llb) null);
-                if (0 != (1 << var18_int + kb.field_b & var14)) {
+                if (0 != (1 << var18_int + TextureFormat.field_b & var14)) {
                   var12.field_Lb.b(-561, var12.field_Zb[var18_int]);
                 }
                 var12.field_Zb[var18_int].field_B = 1;
@@ -418,7 +418,7 @@ final class me extends pja {
               } else {
                 var12.field_Mb.a(0, 5, 68, var31, nna.field_w);
               }
-              var12.field_dc.field_R = BitmapFont.a(var12.field_dc.field_eb, var32, 78);
+              var12.field_dc.field_R = BitmapFont.ellipsize(var12.field_dc.field_eb, var32, 78);
               var12.field_dc.a(70, -40, 78, var31, nna.field_w);
               if (var12.field_dc.field_O &&
                 !var12.field_dc.field_R.equals(var32)) {
@@ -431,7 +431,7 @@ final class me extends pja {
               } else {
                 var12.field_yb.field_F = 2;
                 var12.field_wb.field_R = "/" + var12.field_Fb;
-                var33_int = (-var12.field_wb.field_eb.b("/") + 348) / 2;
+                var33_int = (-var12.field_wb.field_eb.getStringWidth("/") + 348) / 2;
                 var12.field_yb.a(150, 127, -150 + var33_int, var31, nna.field_w);
                 var12.field_wb.a(var33_int, 121, -var33_int + 198, var31, nna.field_w);
               }
@@ -444,8 +444,8 @@ final class me extends pja {
               if ((1 << ar.field_b & var14Lifetime1) != 0) {
                 var50_ref = SpriteDimensions.field_o[var12.field_Cb];
                 var12.field_Wb.field_tb = var50_ref;
-                var12.field_Wb.a(var34_int, 32, var50_ref.field_m, 0, var12.field_Lb.field_G);
-                var34_int = var34_int + (MissionListFactory.field_a + var50_ref.field_m);
+                var12.field_Wb.a(var34_int, 32, var50_ref.paddedWidth, 0, var12.field_Lb.field_G);
+                var34_int = var34_int + (MissionListFactory.field_a + var50_ref.paddedWidth);
               }
               if ((var14Lifetime1 & 1 << ujb.field_g) != 0) {
                 if (!var12.field_cc) {
@@ -462,14 +462,14 @@ final class me extends pja {
                 }
                 var51_ref = stackIn_79_0[stackIn_80_1];
                 var12.field_Eb.field_tb = var51_ref;
-                var12.field_Eb.a(var34_int, 35, var51_ref.field_m, 0, var12.field_Lb.field_G);
-                var34_int = var34_int + (var51_ref.field_m + MissionListFactory.field_a);
+                var12.field_Eb.a(var34_int, 35, var51_ref.paddedWidth, 0, var12.field_Lb.field_G);
+                var34_int = var34_int + (var51_ref.paddedWidth + MissionListFactory.field_a);
               }
               if ((1 << GetShipToShipRamDamage.field_o & var14Lifetime1) != 0) {
                 var52_ref = GetPointDefenceLaserProjectileInterceptDamage.field_t[var12.field_Bb - 1];
                 var12.field_Ab.field_tb = var52_ref;
-                var12.field_Ab.a(var34_int, 117, var52_ref.field_m, 0, var12.field_Lb.field_G);
-                var34_int = var34_int + (var52_ref.field_m + MissionListFactory.field_a);
+                var12.field_Ab.a(var34_int, 117, var52_ref.paddedWidth, 0, var12.field_Lb.field_G);
+                var34_int = var34_int + (var52_ref.paddedWidth + MissionListFactory.field_a);
               }
               if (0 != (1 << GetFighterVision.field_o & var14Lifetime1)) {
                 stackIn_87_0 = hnb.field_U;
@@ -480,18 +480,18 @@ final class me extends pja {
                 }
                 var53_ref = stackIn_87_0[stackIn_88_1];
                 var12.field_Rb.field_tb = var53_ref;
-                var12.field_Rb.a(var34_int, 121, var53_ref.field_m, 0, var12.field_Lb.field_G);
-                var34_int = var34_int + (var53_ref.field_m + MissionListFactory.field_a);
+                var12.field_Rb.a(var34_int, 121, var53_ref.paddedWidth, 0, var12.field_Lb.field_G);
+                var34_int = var34_int + (var53_ref.paddedWidth + MissionListFactory.field_a);
               }
               if (null != SetPointDefenceLaserAimarc.field_p) {
                 for (var36Lifetime1 = 0; var36Lifetime1 < ocb.field_l; var36Lifetime1++) {
                   if (SetPointDefenceLaserAimarc.field_p[var36Lifetime1] != null &&
-                    (var14Lifetime1 & 1 << var36Lifetime1 + kb.field_b) != 0) {
+                    (var14Lifetime1 & 1 << var36Lifetime1 + TextureFormat.field_b) != 0) {
                     var42 = SetPointDefenceLaserAimarc.field_p[var36Lifetime1][var12.field_Pb[var36Lifetime1] & 255];
                     var54 = var42;
                     var12.field_Zb[var36Lifetime1].field_tb = var42;
-                    var12.field_Zb[var36Lifetime1].a(var34_int, 120, var54.field_m, 0, var12.field_Lb.field_G);
-                    var34_int = var34_int + (var54.field_m + MissionListFactory.field_a);
+                    var12.field_Zb[var36Lifetime1].a(var34_int, 120, var54.paddedWidth, 0, var12.field_Lb.field_G);
+                    var34_int = var34_int + (var54.paddedWidth + MissionListFactory.field_a);
                   }
                 }
               }
@@ -535,7 +535,7 @@ final class me extends pja {
                 }
                 var38 = var37.toString();
                 var12.field_Jb.field_R = var38;
-                var39Lifetime1 = var12.field_Jb.field_eb.c(var38, var12.field_hb - var12.field_Jb.field_w * 2);
+                var39Lifetime1 = var12.field_Jb.field_eb.getLineCount(var38, var12.field_hb - var12.field_Jb.field_w * 2);
                 var12.field_Jb.a(0, -9, var12.field_hb, var31, var39Lifetime1 * nna.field_w);
                 var31 = var31 + nna.field_w * var39Lifetime1;
               }
@@ -554,7 +554,7 @@ final class me extends pja {
             var34 = var33;
             var34Lifetime1 = var33;
             if (var33 != null) {
-              var34_intLifetime1 = var12.field_bc.field_eb.c(var33, -qs.field_c + (var12.field_hb - qs.field_c));
+              var34_intLifetime1 = var12.field_bc.field_eb.getLineCount(var33, -qs.field_c + (var12.field_hb - qs.field_c));
               var12.field_bc.field_I = var12.field_Db * 256 / GetMomentOfInertiaPredivideDownshift.field_p;
               var12.field_bc.field_R = var33;
               var12.field_bc.a(qs.field_c, 126, -(2 * qs.field_c) + var12.field_hb, var31, nna.field_w * var34_intLifetime1);

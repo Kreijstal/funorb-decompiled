@@ -7,8 +7,8 @@ final class ubb extends kva implements eb {
     static Sprite field_j;
     static String field_k;
 
-    ubb(OpenGlGpuToolkit param0, kb param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
-        super(param0, 3553, param1, mj.field_d, param3 * param2, param4);
+    ubb(OpenGlGpuToolkit param0, TextureFormat param1, int param2, int param3, boolean param4, float[] param5, int param6, int param7) {
+        super(param0, 3553, param1, GpuDataType.field_d, param3 * param2, param4);
         RuntimeException var9 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -58,7 +58,7 @@ final class ubb extends kva implements eb {
         }
     }
 
-    final void a(int param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, kb param8) {
+    final void a(int param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, TextureFormat param8) {
         try {
           this.field_h.a((ura) (this), -116);
           jaggl.OpenGL.glPixelStorei(3317, 1);
@@ -71,7 +71,7 @@ final class ubb extends kva implements eb {
         }
     }
 
-    ubb(OpenGlGpuToolkit param0, kb param1, mj param2, int param3, int param4) {
+    ubb(OpenGlGpuToolkit param0, TextureFormat param1, GpuDataType param2, int param3, int param4) {
         super(param0, 3553, param1, param2, param4 * param3, false);
         try {
           this.field_m = param4;
@@ -154,8 +154,8 @@ final class ubb extends kva implements eb {
         }
     }
 
-    ubb(OpenGlGpuToolkit param0, kb param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
-        super(param0, 3553, param1, mj.field_f, param3 * param2, param4);
+    ubb(OpenGlGpuToolkit param0, TextureFormat param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
+        super(param0, 3553, param1, GpuDataType.field_f, param3 * param2, param4);
         RuntimeException runtimeException = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
@@ -224,7 +224,7 @@ final class ubb extends kva implements eb {
     }
 
     ubb(OpenGlGpuToolkit param0, int param1, int param2, boolean param3, int[] param4, int param5, int param6) {
-        super(param0, 3553, ComponentAttachmentPlan.field_d, mj.field_f, param2 * param1, param3);
+        super(param0, 3553, ComponentAttachmentPlan.field_d, GpuDataType.field_f, param2 * param1, param3);
         RuntimeException var8 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -299,7 +299,7 @@ final class ubb extends kva implements eb {
         return this.field_m;
     }
 
-    final void a(int param0, kb param1, byte param2, int param3, float[] param4, int param5, int param6, int param7, int param8) {
+    final void a(int param0, TextureFormat param1, byte param2, int param3, float[] param4, int param5, int param6, int param7, int param8) {
         try {
           this.field_h.a((ura) (this), -122);
           jaggl.OpenGL.glPixelStorei(3314, param3);

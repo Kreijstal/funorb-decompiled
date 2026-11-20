@@ -122,12 +122,12 @@ public final class Direct3DToolkit extends GpuToolkit {
         int var7 = 0;
         int var8 = 0;
         Throwable var9 = null;
-        jra var12 = null;
+        PrimitiveType var12 = null;
         jagdx.D3DDISPLAYMODE var13 = null;
         jagdx.D3DDISPLAYMODE var14 = null;
         if (param2 != -111) {
-          var12 = (jra) null;
-          Direct3DToolkit.a((jra) null, 37);
+          var12 = (PrimitiveType) null;
+          Direct3DToolkit.toDirect3DPrimitiveType((PrimitiveType) null, 37);
         }
         var6 = 0;
         var7 = 0;
@@ -180,9 +180,9 @@ public final class Direct3DToolkit extends GpuToolkit {
         }
     }
 
-    final void a(jra param0, int param1, int param2, int param3) {
+    final void drawPrimitive(PrimitiveType param0, int param1, int param2, int param3) {
         int var5 = 31 % ((param3 + 4) / 32);
-        this.field_Mc.DrawPrimitive(Direct3DToolkit.a(param0, 1), param1, param2);
+        this.field_Mc.DrawPrimitive(Direct3DToolkit.toDirect3DPrimitiveType(param0, 1), param1, param2);
     }
 
     final void a(int param0, jagdx.IDirect3DVertexShader param1) {
@@ -242,7 +242,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         throw new IllegalArgumentException();
     }
 
-    final eb a(int param0, int param1, int param2, kb param3, mj param4) {
+    final eb a(int param0, int param1, int param2, TextureFormat param3, GpuDataType param4) {
         if (param0 < 115) {
           this.field_zc = (jagdx.PixelBuffer) null;
         }
@@ -454,7 +454,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         }
     }
 
-    final boolean a(mj param0, kb param1, int param2) {
+    final boolean a(GpuDataType param0, TextureFormat param1, int param2) {
         int var4;
         jagdx.D3DDISPLAYMODE var5;
         boolean stackIn_4_0 = false;
@@ -475,7 +475,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         this.field_Qc = false;
     }
 
-    private final static int a(jra param0, int param1) {
+    private final static int toDirect3DPrimitiveType(PrimitiveType param0, int param1) {
         if (param1 != 1) {
           field_Pc = (int[]) null;
         }
@@ -527,12 +527,12 @@ public final class Direct3DToolkit extends GpuToolkit {
         return false;
     }
 
-    final void a(byte param0, mkb param1, int param2) {
-        mga var4 = (mga) (param1);
+    final void setVertexBuffer(byte param0, GpuVertexBuffer param1, int param2) {
+        Direct3DVertexBuffer var4 = (Direct3DVertexBuffer) (param1);
         if (param0 != -6) {
           return;
         }
-        this.field_Mc.SetStreamSource(param2, var4.field_f, 0, var4.a((byte) -33));
+        this.field_Mc.SetStreamSource(param2, var4.buffer, 0, var4.getStride((byte) -33));
     }
 
     final void copyFrontToBackBuffer() {
@@ -625,7 +625,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         int var2 = -124 % ((-40 - param0) / 57);
     }
 
-    final eb a(int param0, byte[] param1, kb param2, int param3, int param4, int param5, boolean param6, int param7) {
+    final eb a(int param0, byte[] param1, TextureFormat param2, int param3, int param4, int param5, boolean param6, int param7) {
         if (param7 != 11) {
           this.createDepthBuffer(-44, 57);
         }
@@ -660,22 +660,22 @@ public final class Direct3DToolkit extends GpuToolkit {
         }
     }
 
-    final vca a(byte param0, boolean param1) {
+    final GpuIndexBuffer createIndexBuffer(byte param0, boolean param1) {
         if (param0 != -19) {
           this.y((byte) -63);
         }
-        return (vca) ((Object) new okb(this, mj.field_e, param1));
+        return (GpuIndexBuffer) ((Object) new Direct3DIndexBuffer(this, GpuDataType.field_e, param1));
     }
 
     final boolean isBloomEnabled() {
         return false;
     }
 
-    final mkb a(boolean param0, int param1) {
+    final GpuVertexBuffer createVertexBuffer(boolean param0, int param1) {
         if (param1 != 3) {
-          this.a((byte) 82, true);
+          this.createIndexBuffer((byte) 82, true);
         }
-        return (mkb) ((Object) new mga(this, param0));
+        return (GpuVertexBuffer) ((Object) new Direct3DVertexBuffer(this, param0));
     }
 
     final void o(byte param0) {
@@ -902,8 +902,8 @@ public final class Direct3DToolkit extends GpuToolkit {
         }
     }
 
-    final static int a(kb param0, mj param1, int param2) {
-        if (param1 == mj.field_f) {
+    final static int a(TextureFormat param0, GpuDataType param1, int param2) {
+        if (param1 == GpuDataType.field_f) {
           if (SetGrapplingHookFireForce.field_o == param0) {
             return 22;
           }
@@ -916,7 +916,7 @@ public final class Direct3DToolkit extends GpuToolkit {
           if (param0 == SetSniperCannonFireForce.field_p) {
             return 50;
           }
-          if (param0 == wh.field_o) {
+          if (param0 == SocketNetworkArchiveClient.field_o) {
             return 51;
           }
           if (param0 == GetReverbGain.field_o) {
@@ -939,7 +939,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         super.updateFrame(param0);
     }
 
-    final gf a(int param0, int param1, byte[] param2, kb param3, int param4, int param5) {
+    final gf a(int param0, int param1, byte[] param2, TextureFormat param3, int param4, int param5) {
         if (param5 != -16539) {
           this.field_Mc = (jagdx.IDirect3DDevice) null;
         }
@@ -948,13 +948,13 @@ public final class Direct3DToolkit extends GpuToolkit {
 
     final void v(byte param0) {
         if (param0 != -109) {
-          kb var3 = (kb) null;
-          this.a(-96, (byte[]) null, (kb) null, -82, 72, 41, false, 39);
+          TextureFormat var3 = (TextureFormat) null;
+          this.a(-96, (byte[]) null, (TextureFormat) null, -82, 72, 41, false, 39);
         }
         this.field_Mc.SetRenderState(60, this.field_jb);
     }
 
-    final eb a(kb param0, float[] param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7) {
+    final eb a(TextureFormat param0, float[] param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7) {
         if (param6) {
           return null;
         }
@@ -965,17 +965,17 @@ public final class Direct3DToolkit extends GpuToolkit {
     final void o(int param0) {
         int var2 = this.field_yc[this.field_ab] ? Direct3DToolkit.a(false, this.field_z[this.field_ab]) : 1;
         if (param0 > -64) {
-          mj var3 = (mj) null;
-          Direct3DToolkit.a((kb) null, (mj) null, 107);
+          GpuDataType var3 = (GpuDataType) null;
+          Direct3DToolkit.a((TextureFormat) null, (GpuDataType) null, 107);
         }
         this.field_Mc.SetTextureStageState(this.field_ab, 1, var2);
     }
 
-    final vmb a(int param0, qma[] param1) {
+    final GpuVertexDeclaration createVertexDeclaration(int param0, VertexStreamLayout[] param1) {
         if (param0 != 10) {
           this.field_Ic = (jagdx.IDirect3D) null;
         }
-        return (vmb) ((Object) new dxVertexLayout(this, param1));
+        return (GpuVertexDeclaration) ((Object) new dxVertexLayout(this, param1));
     }
 
     final void setRenderTarget(ToolkitSprite param0, boolean param1) {
@@ -1032,10 +1032,10 @@ public final class Direct3DToolkit extends GpuToolkit {
         return (int[]) (var5);
     }
 
-    final void a(int param0, vmb param1) {
+    final void setVertexDeclaration(int param0, GpuVertexDeclaration param1) {
         dxVertexLayout var3 = (dxVertexLayout) (param1);
         int var4 = 80 % ((param0 - 55) / 44);
-        this.field_Mc.SetVertexDeclaration(var3.field_b);
+        this.field_Mc.SetVertexDeclaration(var3.declaration);
     }
 
     final Framebuffer createFramebuffer(ColorBuffer param0, DepthBuffer param1) {
@@ -1069,7 +1069,7 @@ public final class Direct3DToolkit extends GpuToolkit {
         this.field_Mc.setBooleanRenderState(15, this.field_eb);
     }
 
-    final boolean a(int param0, kb param1, mj param2) {
+    final boolean a(int param0, TextureFormat param1, GpuDataType param2) {
         jagdx.D3DDISPLAYMODE var4;
         int var5;
         boolean stackIn_4_0 = false;

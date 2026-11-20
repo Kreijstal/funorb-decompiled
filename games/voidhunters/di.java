@@ -6,7 +6,7 @@ final class di extends TextureOperation {
     private boolean field_o;
     static String field_k;
     static kda field_l;
-    static jra field_i;
+    static PrimitiveType field_i;
     static String field_m;
     static String field_j;
     static int field_p;
@@ -238,7 +238,7 @@ final class di extends TextureOperation {
     static {
         field_k = "Message lobby";
         field_m = "Add action (Set team of a body)";
-        field_i = new jra();
+        field_i = new PrimitiveType();
         field_j = "Join";
         field_p = 0;
     }

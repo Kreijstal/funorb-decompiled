@@ -45,12 +45,12 @@ class bob implements wwa, at {
               if (var6 != 3 &&
                 var6 != 1) {
               }
-              var5 = this.field_d.field_k + (-this.field_d.field_A + (-this.field_d.field_k + var4) >> 1);
+              var5 = this.field_d.maxAscent + (-this.field_d.maxDescent + (-this.field_d.maxAscent + var4) >> 1);
             } else {
-              var5 = var4 - this.field_d.field_A;
+              var5 = var4 - this.field_d.maxDescent;
             }
           } else {
-            var5 = this.field_d.field_k;
+            var5 = this.field_d.maxAscent;
           }
           if (param1 <= 58) {
             var8 = (shb) null;
@@ -119,33 +119,33 @@ class bob implements wwa, at {
             var12 = this.field_n;
             if (var12 != 0) {
               if (var12 == 2) {
-                var11 = var10 - this.field_d.field_A;
+                var11 = var10 - this.field_d.maxDescent;
               } else {
                 if (3 != var12 &&
                   var12 == 1) {
                 }
-                var11 = this.field_d.field_k + (-this.field_d.field_A + var10 - this.field_d.field_k >> 1);
+                var11 = this.field_d.maxAscent + (-this.field_d.maxDescent + var10 - this.field_d.maxAscent >> 1);
               }
             } else {
-              var11 = this.field_d.field_k;
+              var11 = this.field_d.maxAscent;
             }
             var12Lifetime1 = this.field_c;
             if (0 != var12Lifetime1 &&
               var12Lifetime1 != 3) {
               if (var12Lifetime1 == 1) {
-                this.field_d.a(this.b((byte) -109, param5), (var9_int >> 1) + this.a(param6, param5, param0, (byte) -13), this.a(param7, -117, param5, param2) + var11, param4, param1);
+                this.field_d.drawCentered(this.b((byte) -109, param5), (var9_int >> 1) + this.a(param6, param5, param0, (byte) -13), this.a(param7, -117, param5, param2) + var11, param4, param1);
               } else {
                 if ((var12Lifetime1 == 2)) {
-                  this.field_d.b(this.b((byte) -72, param5), var9_int + this.a(param6, param5, param0, (byte) -13), var11 + this.a(param7, -124, param5, param2), param4, param1);
+                  this.field_d.drawRightAligned(this.b((byte) -72, param5), var9_int + this.a(param6, param5, param0, (byte) -13), var11 + this.a(param7, -124, param5, param2), param4, param1);
                 }
               }
               decompiledFrameRemainder0 = false;
             }
             else {
-              this.field_d.c(this.b((byte) -68, param5), this.a(param6, param5, param0, (byte) -13), this.a(param7, param3 ^ 14041, param5, param2) + var11, param4, param1);
+              this.field_d.draw(this.b((byte) -68, param5), this.a(param6, param5, param0, (byte) -13), this.a(param7, param3 ^ 14041, param5, param2) + var11, param4, param1);
             }
           } else {
-            this.field_d.a(this.b((byte) -112, param5), this.a(param6, param5, param0, (byte) -13), this.a(param7, -117, param5, param2), var9_int, var10, param4, param1, this.field_c, this.field_n, this.field_h);
+            this.field_d.drawParagraph(this.b((byte) -112, param5), this.a(param6, param5, param0, (byte) -13), this.a(param7, -117, param5, param2), var9_int, var10, param4, param1, this.field_c, this.field_n, this.field_h);
           }
           bia.a((byte) 124);
           return;
@@ -591,7 +591,7 @@ class bob implements wwa, at {
         if (param0 < 7) {
           return -64;
         }
-        return this.field_d.field_A + this.field_d.field_k;
+        return this.field_d.maxDescent + this.field_d.maxAscent;
     }
 
     String b(byte param0, shb param1) {

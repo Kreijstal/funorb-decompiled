@@ -3,7 +3,7 @@
  */
 final class NetworkArchiveRequest extends ArchiveRequest {
     PacketBuffer buffer;
-    int field_r;
+    int blockPosition;
     static int field_o;
     byte padding;
     static String field_s;

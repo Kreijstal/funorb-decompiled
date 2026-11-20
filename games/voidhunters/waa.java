@@ -131,7 +131,7 @@ final class waa extends dqa implements jpb, oo {
     public waa() {
         super(0, 0, 496, 0, (wwa) null);
         this.field_A = new tga("", (sba) null, 12);
-        bob var1 = new bob(SetTorpedoProjectileLife.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, SetShipToShipRamDamage.field_o.field_k, -1, 2147483647, true);
+        bob var1 = new bob(SetTorpedoProjectileLife.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, SetShipToShipRamDamage.field_o.maxAscent, -1, 2147483647, true);
         shb var2 = new shb(field_y, var1, (sba) null);
         this.field_z = new htb(tia.field_K, (sba) null);
         this.field_C = new htb(SetMissileLauncherProjectiles.field_p, (sba) null);

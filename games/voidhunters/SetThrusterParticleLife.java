@@ -3,7 +3,7 @@
  */
 final class SetThrusterParticleLife extends ConsoleCommand {
     static String field_o;
-    static jra field_p;
+    static PrimitiveType field_p;
 
     SetThrusterParticleLife(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -65,6 +65,6 @@ final class SetThrusterParticleLife extends ConsoleCommand {
 
     static {
         field_o = "Scores";
-        field_p = new jra();
+        field_p = new PrimitiveType();
     }
 }

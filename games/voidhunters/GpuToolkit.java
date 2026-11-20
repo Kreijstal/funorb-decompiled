@@ -76,7 +76,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
     private int field_Ob;
     private int field_V;
     private je field_Ib;
-    private jaclib.memory.Stream field_kb;
+    private jaclib.memory.Stream bufferWriter;
     boolean field_Xb;
     private as field_kc;
     private int field_e;
@@ -117,19 +117,19 @@ abstract class GpuToolkit extends GraphicsToolkit {
     int field_rc;
     private boolean field_Tb;
     ConsoleCommandRegistry field_fc;
-    private mkb field_C;
-    private vmb field_G;
+    private GpuVertexBuffer quadVertexBuffer;
+    private GpuVertexDeclaration field_G;
     private roa field_w;
-    private vmb field_ic;
-    private vmb field_o;
-    vmb field_Vb;
+    private GpuVertexDeclaration quadVertexDeclaration;
+    private GpuVertexDeclaration field_o;
+    GpuVertexDeclaration field_Vb;
     private roa field_D;
-    private mkb field_P;
+    private GpuVertexBuffer field_P;
     private roa field_hb;
     private roa field_Jb;
     private roa field_R;
-    private mkb field_S;
-    private vca field_T;
+    private GpuVertexBuffer field_S;
+    private GpuIndexBuffer field_T;
     boolean field_ac;
 
     final boolean supportsShadows() {
@@ -167,7 +167,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         if (param0 > -51) {
           this.field_kc = (as) null;
         }
-        this.a(0, bk.field_v, 2);
+        this.drawUnitQuad(0, bk.field_v, 2);
     }
 
     final GpuTransform3D A(int param0) {
@@ -252,7 +252,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
           this.field_E.b(true);
         }
         if (param0 <= 105) {
-          this.field_S = (mkb) null;
+          this.field_S = (GpuVertexBuffer) null;
         }
         this.j(8);
     }
@@ -362,9 +362,9 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.field_O.translate(param1, 16383, 0, param0);
         this.h(20837);
         this.a(-114, false);
-        this.a((byte) -6, this.field_P, 0);
-        this.a(-51, this.field_G);
-        this.a(bk.field_v, 0, 256, 66);
+        this.setVertexBuffer((byte) -6, this.field_P, 0);
+        this.setVertexDeclaration(-51, this.field_G);
+        this.drawPrimitive(bk.field_v, 0, 256, 66);
         this.a(-82, true);
         this.a(0, (byte) -122, SetGrapplingHookMaxExtension8Force.field_q);
         this.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
@@ -618,7 +618,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.field_xc = 0;
         this.field_fc = GetGrapplingHookRopeBreakLength.field_o;
         this.field_n = 128;
-        this.field_kb = new jaclib.memory.Stream();
+        this.bufferWriter = new jaclib.memory.Stream();
         GpuTransform3D discarded$1 = new GpuTransform3D();
         try {
           try {
@@ -708,7 +708,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     abstract void a(byte param0, uja param1);
 
-    final eb a(int param0, kb param1, int param2, int param3, boolean param4, byte[] param5) {
+    final eb a(int param0, TextureFormat param1, int param2, int param3, boolean param4, byte[] param5) {
         RuntimeException var7 = null;
         eb stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -842,12 +842,12 @@ abstract class GpuToolkit extends GraphicsToolkit {
           this.field_Eb[var2] = new GpuTransform3D();
         }
         this.field_Lb = new fsb[-2 + this.field_qb];
-        this.field_Q = (ura) ((Object) this.a(125, 1, 1, ComponentAttachmentPlan.field_d, mj.field_f));
+        this.field_Q = (ura) ((Object) this.a(125, 1, 1, ComponentAttachmentPlan.field_d, GpuDataType.field_f));
         this.setHeap(new GpuNativeHeap(262144));
-        this.field_Vb = this.a(10, new qma[]{new qma(new pb[]{pb.field_k, pb.field_l})});
-        this.a(10, new qma[]{new qma(new pb[]{pb.field_k, pb.field_d})});
-        this.a(param0 ^ -31099, new qma[]{new qma(pb.field_k), new qma(pb.field_d), new qma(pb.field_l), new qma(pb.field_g)});
-        this.a(10, new qma[]{new qma(pb.field_k), new qma(pb.field_d), new qma(pb.field_l)});
+        this.field_Vb = this.createVertexDeclaration(10, new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.field_k, VertexAttribute.field_l})});
+        this.createVertexDeclaration(10, new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.field_k, VertexAttribute.field_d})});
+        this.createVertexDeclaration(param0 ^ -31099, new VertexStreamLayout[]{new VertexStreamLayout(VertexAttribute.field_k), new VertexStreamLayout(VertexAttribute.field_d), new VertexStreamLayout(VertexAttribute.field_l), new VertexStreamLayout(VertexAttribute.field_g)});
+        this.createVertexDeclaration(10, new VertexStreamLayout[]{new VertexStreamLayout(VertexAttribute.field_k), new VertexStreamLayout(VertexAttribute.field_d), new VertexStreamLayout(VertexAttribute.field_l)});
         roa discarded$0 = new roa(this, 0, 0, false, false);
         this.field_R = new roa(this, 0, 0, true, true);
         roa discarded$1 = new roa(this, 0, 0, false, false);
@@ -859,7 +859,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         roa discarded$4 = new roa(this, 0, 0, false, false);
         this.field_w = new roa(this, 0, 0, true, true);
         this.field_Ib = new je(this);
-        this.field_T = this.a((byte) -19, true);
+        this.field_T = this.createIndexBuffer((byte) -19, true);
         this.i(param0 ^ -31089);
         this.field_Mb = new rga(this);
         this.field_dc[1] = this.a((byte) -123, 1);
@@ -969,16 +969,16 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract vmb a(int param0, qma[] param1);
+    abstract GpuVertexDeclaration createVertexDeclaration(int param0, VertexStreamLayout[] param1);
 
     abstract void o(int param0);
 
     private final boolean a(float param0, float param1, byte param2, float param3, float param4, float param5, float param6) {
-        jaclib.memory.Buffer var10 = this.field_S.a(true, (byte) 87);
+        jaclib.memory.Buffer var10 = this.field_S.lock(true, (byte) 87);
         if (var10 == null) {
           return false;
         }
-        jaclib.memory.Stream var9 = this.a(var10, false);
+        jaclib.memory.Stream var9 = this.getBufferWriter(var10, false);
         if (!jaclib.memory.Stream.isBigEndian()) {
           var9.writeFloatLE(param5);
           var9.writeFloatLE(param1);
@@ -998,17 +998,17 @@ abstract class GpuToolkit extends GraphicsToolkit {
           this.field_Bb = -117;
         }
         var9.flush();
-        return this.field_S.b(-20836);
+        return this.field_S.unlock(-20836);
     }
 
     private final void a(boolean param0, boolean param1, int param2, int param3, int param4, boolean param5) {
         int stackIn_10_0 = 0;
         int var8;
-        kb var9;
+        TextureFormat var9;
         var8 = VoidHunters.field_G;
         if (param1) {
-          var9 = (kb) null;
-          this.a(-31, -99, (byte[]) null, (kb) null, -65, -32);
+          var9 = (TextureFormat) null;
+          this.a(-31, -99, (byte[]) null, (TextureFormat) null, -65, -32);
         }
         param0 = param0 & this.supportsUnderwaterEffects();
         if (!param0 && (param2 == 4 ||
@@ -1231,11 +1231,11 @@ abstract class GpuToolkit extends GraphicsToolkit {
           this.field_Fb = this.field_gc;
         }
         if (param0 != -101) {
-          this.field_S = (mkb) null;
+          this.field_S = (GpuVertexBuffer) null;
         }
     }
 
-    abstract eb a(int param0, byte[] param1, kb param2, int param3, int param4, int param5, boolean param6, int param7);
+    abstract eb a(int param0, byte[] param1, TextureFormat param2, int param3, int param4, int param5, boolean param6, int param7);
 
     void releaseResources() {
         IntrusiveNode var1 = null;
@@ -1261,7 +1261,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     abstract void d(int param0, int param1);
 
-    abstract eb a(int param0, int param1, int param2, kb param3, mj param4);
+    abstract eb a(int param0, int param1, int param2, TextureFormat param3, GpuDataType param4);
 
     abstract void G(int param0);
 
@@ -1269,7 +1269,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return true;
     }
 
-    final eb a(int param0, int param1, float[] param2, boolean param3, int param4, kb param5) {
+    final eb a(int param0, int param1, float[] param2, boolean param3, int param4, TextureFormat param5) {
         RuntimeException var7 = null;
         eb stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -1319,7 +1319,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    final jaclib.memory.heap.NativeHeapBuffer a(boolean param0, int param1, int param2) {
+    final jaclib.memory.heap.NativeHeapBuffer allocateNativeBuffer(boolean param0, int param1, int param2) {
         int var4 = -73 % ((param1 - 37) / 38);
         return this.field_jc.allocate(param2, param0);
     }
@@ -1382,14 +1382,14 @@ abstract class GpuToolkit extends GraphicsToolkit {
         if (!param0) {
           return;
         }
-        this.field_C = this.a(false, 3);
-        this.field_C.a(28, 140, 126);
+        this.quadVertexBuffer = this.createVertexBuffer(false, 3);
+        this.quadVertexBuffer.allocate(28, 140, 126);
         var2 = 0;
         scanLoop1: while (true) {
           if (4 > var2) {
-            var3 = this.field_C.a(true, (byte) 119);
+            var3 = this.quadVertexBuffer.lock(true, (byte) 119);
             if (var3 != null) {
-              var4 = this.a(var3, false);
+              var4 = this.getBufferWriter(var3, false);
               if (jaclib.memory.Stream.isBigEndian()) {
                 var4.writeFloat(0.0f);
                 var4.writeFloat(0.0f);
@@ -1464,7 +1464,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
                 var4.writeFloatLE(0.0f);
               }
               var4.flush();
-              if (this.field_C.b(-20836)) {
+              if (this.quadVertexBuffer.unlock(-20836)) {
                 break scanLoop1;
               }
             }
@@ -1473,11 +1473,11 @@ abstract class GpuToolkit extends GraphicsToolkit {
           }
           break;
         }
-        this.field_ic = this.a(10, new qma[]{new qma(new pb[]{pb.field_k, pb.field_l, pb.field_l})});
+        this.quadVertexDeclaration = this.createVertexDeclaration(10, new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.field_k, VertexAttribute.field_l, VertexAttribute.field_l})});
         return;
     }
 
-    final jaclib.memory.Stream a(jaclib.memory.Buffer param0, boolean param1) {
+    final jaclib.memory.Stream getBufferWriter(jaclib.memory.Buffer param0, boolean param1) {
         RuntimeException var3 = null;
         jaclib.memory.Stream stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -1488,8 +1488,8 @@ abstract class GpuToolkit extends GraphicsToolkit {
           if (param1) {
             this.field_Eb = (GpuTransform3D[]) null;
           }
-          this.field_kb.setBuffer(param0);
-          stackIn_3_0 = this.field_kb;
+          this.bufferWriter.setBuffer(param0);
+          stackIn_3_0 = this.bufferWriter;
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1548,7 +1548,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract void a(int param0, vmb param1);
+    abstract void setVertexDeclaration(int param0, GpuVertexDeclaration param1);
 
     final void a(int param0, slb param1, int param2) {
         try {
@@ -1620,21 +1620,21 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.field_O.translate(param1, 16383, 0, param0);
         this.h(20837);
         this.a(-112, false);
-        this.a((byte) -6, this.field_P, 0);
-        this.a(115, this.field_G);
-        this.a(GetFightersPerPlayerMaximum.field_o, 1, 256, -114);
+        this.setVertexBuffer((byte) -6, this.field_P, 0);
+        this.setVertexDeclaration(115, this.field_G);
+        this.drawPrimitive(GetFightersPerPlayerMaximum.field_o, 1, 256, -114);
         this.a(-27, true);
         this.a(0, (byte) -97, SetGrapplingHookMaxExtension8Force.field_q);
         this.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
     }
 
-    abstract boolean a(int param0, kb param1, mj param2);
+    abstract boolean a(int param0, TextureFormat param1, GpuDataType param2);
 
     abstract Object a(byte param0, java.awt.Canvas param1);
 
     abstract void a(int param0, boolean param1);
 
-    abstract vca a(byte param0, boolean param1);
+    abstract GpuIndexBuffer createIndexBuffer(byte param0, boolean param1);
 
     final void setDepthRange(int param0, int param1) {
         if (param0 != this.field_h ||
@@ -1681,7 +1681,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    abstract mkb a(boolean param0, int param1);
+    abstract GpuVertexBuffer createVertexBuffer(boolean param0, int param1);
 
     final void b(byte param0, boolean param1) {
         if (param0 != -74) {
@@ -1704,14 +1704,14 @@ abstract class GpuToolkit extends GraphicsToolkit {
         float var9;
         int var10;
         var10 = VoidHunters.field_G;
-        this.field_P = this.a(false, param0 - 3093);
-        this.field_P.a(12, param0, 86);
+        this.field_P = this.createVertexBuffer(false, param0 - 3093);
+        this.field_P.allocate(12, param0, 86);
         var2 = 0;
         scanLoop1: while (true) {
           if (var2 < 4) {
-            var3 = this.field_P.a(true, (byte) 52);
+            var3 = this.field_P.lock(true, (byte) 52);
             if (var3 != null) {
-              var4 = this.a(var3, false);
+              var4 = this.getBufferWriter(var3, false);
               var4.writeFloat(0.0f);
               var4.writeFloat(0.0f);
               var4.writeFloat(0.0f);
@@ -1730,7 +1730,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
                 }
               }
               var4.flush();
-              if (this.field_P.b(param0 ^ -23932)) {
+              if (this.field_P.unlock(param0 ^ -23932)) {
                 break scanLoop1;
               }
             }
@@ -1739,7 +1739,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
           }
           break;
         }
-        this.field_G = this.a(10, new qma[]{new qma(pb.field_k)});
+        this.field_G = this.createVertexDeclaration(10, new VertexStreamLayout[]{new VertexStreamLayout(VertexAttribute.field_k)});
         return;
     }
 
@@ -1761,7 +1761,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return (bla.a(param1, false, param2) | ((param1 & 8192) != 0 ? true : false) | MessageLogFactory.a(param2, 65536, param1)) & ((55 & param2) == 0 ? true : false);
     }
 
-    abstract void a(jra param0, int param1, int param2, int param3);
+    abstract void drawPrimitive(PrimitiveType param0, int param1, int param2, int param3);
 
     abstract void C(int param0);
 
@@ -1787,7 +1787,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.b((byte) -103);
     }
 
-    abstract gf a(int param0, int param1, byte[] param2, kb param3, int param4, int param5);
+    abstract gf a(int param0, int param1, byte[] param2, TextureFormat param3, int param4, int param5);
 
     final GpuTransform3D H(byte param0) {
         int var2 = 34 % ((param0 + 63) / 51);
@@ -1985,11 +1985,11 @@ abstract class GpuToolkit extends GraphicsToolkit {
         }
     }
 
-    private final void a(int param0, jra param1, int param2) {
+    private final void drawUnitQuad(int param0, PrimitiveType param1, int param2) {
         try {
-          this.a((byte) -6, this.field_C, param0);
-          this.a(101, this.field_ic);
-          this.a(param1, 0, param2, -114);
+          this.setVertexBuffer((byte) -6, this.quadVertexBuffer, param0);
+          this.setVertexDeclaration(101, this.quadVertexDeclaration);
+          this.drawPrimitive(param1, 0, param2, -114);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pf.FH(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -2013,7 +2013,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.field_O.translate(0.0f, (float)param0 - var7, -var7 + (float)param1, (byte) 13);
         this.h(20837);
         this.a(-118, false);
-        this.a(0, GetFightersPerPlayerMaximum.field_o, 4);
+        this.drawUnitQuad(0, GetFightersPerPlayerMaximum.field_o, 4);
         this.a(-110, true);
         this.a(0, (byte) -67, SetGrapplingHookMaxExtension8Force.field_q);
         this.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);
@@ -2106,18 +2106,18 @@ abstract class GpuToolkit extends GraphicsToolkit {
     }
 
     private final void k(int param0) {
-        this.a((byte) -6, this.field_S, 0);
+        this.setVertexBuffer((byte) -6, this.field_S, 0);
         if (param0 <= 102) {
           int[] var3 = (int[]) null;
           this.a(-65, true, (int[]) null, -35, -49, false, 126);
         }
-        this.a(124, this.field_o);
-        this.a(tu.field_b, 0, 1, -93);
+        this.setVertexDeclaration(124, this.field_o);
+        this.drawPrimitive(tu.field_b, 0, 1, -93);
     }
 
     abstract void s(byte param0);
 
-    abstract void a(byte param0, mkb param1, int param2);
+    abstract void setVertexBuffer(byte param0, GpuVertexBuffer param1, int param2);
 
     final int D(byte param0) {
         boolean discarded$0 = false;
@@ -2137,9 +2137,9 @@ abstract class GpuToolkit extends GraphicsToolkit {
           var3_ref_java_awt_Canvas = (java.awt.Canvas) (var2.nextElement());
           this.a(var3_ref_java_awt_Canvas, this.field_rb.get(var3_ref_java_awt_Canvas), 0);
         }
-        this.field_C.a(-96);
-        this.field_S.a(-103);
-        this.field_P.a(-117);
+        this.quadVertexBuffer.release(-96);
+        this.field_S.release(-103);
+        this.field_P.release(-117);
         int var3 = 19 % ((47 - param0) / 45);
         this.field_R.a(26385);
         this.field_D.a(26385);
@@ -2147,7 +2147,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         this.field_Jb.a(26385);
         this.field_w.a(26385);
         this.field_Ib.a(false);
-        this.field_T.a(-127);
+        this.field_T.release(-127);
     }
 
     final boolean supportsFarClipPlane() {
@@ -2192,9 +2192,9 @@ abstract class GpuToolkit extends GraphicsToolkit {
     abstract void i(byte param0);
 
     private final void q(int param0) {
-        this.field_S = this.a(true, 3);
-        this.field_S.a(12, 24, 95);
-        this.field_o = this.a(10, new qma[]{new qma(pb.field_k)});
+        this.field_S = this.createVertexBuffer(true, 3);
+        this.field_S.allocate(12, 24, 95);
+        this.field_o = this.createVertexDeclaration(10, new VertexStreamLayout[]{new VertexStreamLayout(VertexAttribute.field_k)});
         if (param0 != 27191) {
           this.field_E = (uda) null;
         }
@@ -2386,7 +2386,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         return this.field_Ob;
     }
 
-    abstract eb a(kb param0, float[] param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7);
+    abstract eb a(TextureFormat param0, float[] param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7);
 
     final int u(byte param0) {
         if (param0 <= 78) {
@@ -2436,7 +2436,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
 
     abstract void a(java.awt.Canvas param0, Object param1, int param2);
 
-    abstract boolean a(mj param0, kb param1, int param2);
+    abstract boolean a(GpuDataType param0, TextureFormat param1, int param2);
 
     static {
         field_Yb = new String[]{"£3.20", "€4.25", "US$ 5.00", "Can$ 4.95", "Aus$ 6.50", "Krn 29.95", "", "Rp 160", "Rng 17.95", "NZ$ 7.95", "SG$ 6.95", "Krn 44.95", "R$ 7,00"};

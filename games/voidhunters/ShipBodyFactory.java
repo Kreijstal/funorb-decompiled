@@ -35,8 +35,8 @@ final class ShipBodyFactory implements GameStateFactory {
         llb var14 = null;
         var13 = VoidHunters.field_G;
         try {
-          GetShieldsDirectionalArcParticleLife.field_p = dma.field_g;
-          SetGrapplingHookRopeBreakLength.field_p = dma.field_j;
+          GetShieldsDirectionalArcParticleLife.field_p = SoftwareRasterizer2D.width;
+          SetGrapplingHookRopeBreakLength.field_p = SoftwareRasterizer2D.height;
           if (param1) {
             stackIn_4_0 = CarouselPlayerEventFactory.field_a;
           } else {
@@ -113,8 +113,8 @@ final class ShipBodyFactory implements GameStateFactory {
               } else {
                 if (param1) {
                   if (var6 >= 4) {
-                    if (jra.field_d != null) {
-                      stackIn_58_0 = (jra.field_d[-4 + var6]) ? 1 : 0;
+                    if (PrimitiveType.field_d != null) {
+                      stackIn_58_0 = (PrimitiveType.field_d[-4 + var6]) ? 1 : 0;
                     } else {
                       stackIn_58_0 = 0;
                     }
@@ -160,7 +160,7 @@ final class ShipBodyFactory implements GameStateFactory {
               }
             }
           }
-          SetUseCircleFill.field_o.a(-360 + dma.field_g >> 1, 117, 360, 10, -130 + (dma.field_j - 14));
+          SetUseCircleFill.field_o.a(-360 + SoftwareRasterizer2D.width >> 1, 117, 360, 10, -130 + (SoftwareRasterizer2D.height - 14));
           ProjectileHit.field_d.a(0, 124, SetUseCircleFill.field_o.field_hb, 0, 24);
           SetUseModels.field_o.a(0, 124, SetUseCircleFill.field_o.field_hb, 24, -24 + SetUseCircleFill.field_o.field_G);
           SetUseModels.field_o.field_gb = uwa.a(11579568, SetUseModels.field_o.field_G, 1, 8421504, 92, 3);

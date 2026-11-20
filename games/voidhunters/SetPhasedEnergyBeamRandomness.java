@@ -154,7 +154,7 @@ final class SetPhasedEnergyBeamRandomness extends ConsoleCommand {
                     return;
                   }
                   var21 = var21 + var23;
-                  var36Lifetime2 = var36Lifetime2 + dma.field_g;
+                  var36Lifetime2 = var36Lifetime2 + SoftwareRasterizer2D.width;
                   var25 = var25 + var27;
                   var26 = var26 + var28;
                   var29 = var29 + var31;
@@ -313,7 +313,7 @@ final class SetPhasedEnergyBeamRandomness extends ConsoleCommand {
               var22 = var22 + var24;
               var18 = var18 + var20;
               var29 = var29 + var31;
-              var35Lifetime1 = var35Lifetime1 + dma.field_g;
+              var35Lifetime1 = var35Lifetime1 + SoftwareRasterizer2D.width;
               var26 = var26 + var28;
               var17_int = var17_int + var19;
               var25 = var25 + var27;

@@ -173,10 +173,10 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
               GetDebrisGroupColour.field_r.drawVerticalLine(var7Lifetime1, var8Lifetime2, -var8Lifetime2 + var9Lifetime1, 16777215, 0);
             }
           } else {
-            dma.h(var6, var8Lifetime2, -var6 + var7Lifetime1, 16777215);
-            dma.h(var6, var9Lifetime1, -var6 + var7Lifetime1, 16777215);
-            dma.d(var6, var8Lifetime2, var9Lifetime1 - var8Lifetime2, 16777215);
-            dma.d(var7Lifetime1, var8Lifetime2, var9Lifetime1 - var8Lifetime2, 16777215);
+            SoftwareRasterizer2D.drawHorizontalLine(var6, var8Lifetime2, -var6 + var7Lifetime1, 16777215);
+            SoftwareRasterizer2D.drawHorizontalLine(var6, var9Lifetime1, -var6 + var7Lifetime1, 16777215);
+            SoftwareRasterizer2D.drawVerticalLine(var6, var8Lifetime2, var9Lifetime1 - var8Lifetime2, 16777215);
+            SoftwareRasterizer2D.drawVerticalLine(var7Lifetime1, var8Lifetime2, var9Lifetime1 - var8Lifetime2, 16777215);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

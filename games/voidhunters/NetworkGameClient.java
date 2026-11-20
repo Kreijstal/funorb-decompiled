@@ -140,7 +140,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (null != GetWaitForPlayers.field_o) {
           GetPointDefenceLaserPulsetime.field_o = GetWaitForPlayers.field_o.pollRotation(1);
         }
-        if (wh.g(-126)) {
+        if (SocketNetworkArchiveClient.g(-126)) {
           var3 = 1200 * SetGrapplingHookRopeBreakLength.e(204);
           if (this.field_s ||
             !(var3 >= SetPedrosRepairModeSwitchtime.a(32)) &&
@@ -293,15 +293,15 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (10 == ef.field_z) {
           if (0 != SetGrapplingHookAimarc.field_p) {
-            esb.field_j = MissionBuilder.a(1, GetFullMissionSet.field_o);
+            OpenGlVertexBuffer.field_j = MissionBuilder.a(1, GetFullMissionSet.field_o);
           }
           ef.field_z = 11;
         }
         boolean decompiledFrameRemainder0 = true;
         if (ef.field_z == 11) {
-          if (esb.field_j != null && (!esb.field_j.loadIndex((byte) -38) ||
-            !esb.field_j.loadAllGroups(param1 ^ 113))) {
-            IncrementVariableAction.a(SetMomentOfInertiaPerpointCalcDownshift.a(-93, esb.field_j, ocb.field_i, lo.field_d), -1, 0.0f);
+          if (OpenGlVertexBuffer.field_j != null && (!OpenGlVertexBuffer.field_j.loadIndex((byte) -38) ||
+            !OpenGlVertexBuffer.field_j.loadAllGroups(param1 ^ 113))) {
+            IncrementVariableAction.a(SetMomentOfInertiaPerpointCalcDownshift.a(-93, OpenGlVertexBuffer.field_j, ocb.field_i, lo.field_d), -1, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {

@@ -174,8 +174,8 @@ final class MissionListFactory implements GameStateFactory {
         var11_ref_phb__ = var10;
         for (var12 = 0; var11_ref_phb__.length > var12; var12++) {
           var13 = var11_ref_phb__[var12];
-          for (var14 = 0; var14 < var13.field_r.length; var14++) {
-            var13.field_r[var14] = param2;
+          for (var14 = 0; var14 < var13.pixels.length; var14++) {
+            var13.pixels[var14] = param2;
           }
         }
         if (param0 != -972) {
@@ -183,36 +183,36 @@ final class MissionListFactory implements GameStateFactory {
         }
         for (var11 = 0; param1 > var11; var11++) {
           for (var12Lifetime1 = 0; var12Lifetime1 < var9; var12Lifetime1++) {
-            var10[6].field_r[var12Lifetime1 + (-var11 + (var9 - 1)) * var9] = param8;
-            var10[8].field_r[(var9 + (-var11 - 1)) * var9 + var12Lifetime1] = param8;
-            var10[2].field_r[var9 * var12Lifetime1 - var11 - 1 + var9] = param8;
-            var10[8].field_r[var9 - (1 + var11 - var9 * var12Lifetime1)] = param8;
+            var10[6].pixels[var12Lifetime1 + (-var11 + (var9 - 1)) * var9] = param8;
+            var10[8].pixels[(var9 + (-var11 - 1)) * var9 + var12Lifetime1] = param8;
+            var10[2].pixels[var9 * var12Lifetime1 - var11 - 1 + var9] = param8;
+            var10[8].pixels[var9 - (1 + var11 - var9 * var12Lifetime1)] = param8;
           }
         }
         for (var11Lifetime1 = 0; param1 > var11Lifetime1; var11Lifetime1++) {
           for (var12Lifetime2 = 0; var12Lifetime2 < var9; var12Lifetime2++) {
-            var10[0].field_r[var12Lifetime2 + var11Lifetime1 * var9] = param7;
-            var10[0].field_r[var12Lifetime2 * var9 + var11Lifetime1] = param7;
+            var10[0].pixels[var12Lifetime2 + var11Lifetime1 * var9] = param7;
+            var10[0].pixels[var12Lifetime2 * var9 + var11Lifetime1] = param7;
             if (var12Lifetime2 < (-var11Lifetime1 + var9)) {
-              var10[2].field_r[var12Lifetime2 + var9 * var11Lifetime1] = param7;
-              var10[6].field_r[var11Lifetime1 + var9 * var12Lifetime2] = param7;
+              var10[2].pixels[var12Lifetime2 + var9 * var11Lifetime1] = param7;
+              var10[6].pixels[var11Lifetime1 + var9 * var12Lifetime2] = param7;
             }
           }
         }
         for (var11Lifetime2 = 0; var11Lifetime2 < param3; var11Lifetime2++) {
           for (var12Lifetime3 = 0; var12Lifetime3 < param1; var12Lifetime3++) {
-            var10[7].field_r[var11Lifetime2 + (-1 + (var9 - var12Lifetime3)) * param3] = param8;
-            var10[5].field_r[-1 + var9 + (-var12Lifetime3 + var9 * var11Lifetime2)] = param8;
-            var10[1].field_r[param3 * var12Lifetime3 + var11Lifetime2] = param7;
-            var10[3].field_r[var12Lifetime3 + var9 * var11Lifetime2] = param7;
+            var10[7].pixels[var11Lifetime2 + (-1 + (var9 - var12Lifetime3)) * param3] = param8;
+            var10[5].pixels[-1 + var9 + (-var12Lifetime3 + var9 * var11Lifetime2)] = param8;
+            var10[1].pixels[param3 * var12Lifetime3 + var11Lifetime2] = param7;
+            var10[3].pixels[var12Lifetime3 + var9 * var11Lifetime2] = param7;
           }
         }
         for (var11Lifetime3 = 0; var11Lifetime3 < param3 >> 1; var11Lifetime3++) {
           for (var12Lifetime4 = 0; var12Lifetime4 < param6; var12Lifetime4++) {
-            var10[1].field_r[var11Lifetime3 + param3 * (-1 + var9 - var12Lifetime4)] = param4;
-            var10[3].field_r[var11Lifetime3 * var9 + (-var12Lifetime4 - 1 + var9)] = param4;
-            var10[7].field_r[var11Lifetime3 + param3 * var12Lifetime4] = param4;
-            var10[5].field_r[var11Lifetime3 * var9 + var12Lifetime4] = param4;
+            var10[1].pixels[var11Lifetime3 + param3 * (-1 + var9 - var12Lifetime4)] = param4;
+            var10[3].pixels[var11Lifetime3 * var9 + (-var12Lifetime4 - 1 + var9)] = param4;
+            var10[7].pixels[var11Lifetime3 + param3 * var12Lifetime4] = param4;
+            var10[5].pixels[var11Lifetime3 * var9 + var12Lifetime4] = param4;
           }
         }
         return var10;

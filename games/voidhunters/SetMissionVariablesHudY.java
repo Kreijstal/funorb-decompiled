@@ -15,7 +15,7 @@ final class SetMissionVariablesHudY extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          jra.field_c = arguments[0].intValue(39);
+          PrimitiveType.field_c = arguments[0].intValue(39);
           if (obfuscationGuard <= -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

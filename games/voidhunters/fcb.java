@@ -18,9 +18,9 @@ final class fcb implements oob {
 
     final void b(byte param0) {
         ComponentCollision.a("Very start of requestdata", (byte) -56);
-        if (esb.field_j != null) {
-          AsteroidField.a((byte) -100, esb.field_j);
-          esb.field_j = null;
+        if (OpenGlVertexBuffer.field_j != null) {
+          AsteroidField.a((byte) -100, OpenGlVertexBuffer.field_j);
+          OpenGlVertexBuffer.field_j = null;
           MidiNote.resetFrameTiming(param0 + 2095);
         }
         AsteroidFieldFactory.field_b = true;
@@ -112,7 +112,7 @@ final class fcb implements oob {
           this.field_k != null) {
           ComponentCollision.a("Unpacking sounds", (byte) -104);
           GetAllowShipSaving.a(4410);
-          IncrementVariableAction.a(bva.field_e, param0 ^ -69, 82.0f);
+          IncrementVariableAction.a(OpenGlVertexDeclaration.field_e, param0 ^ -69, 82.0f);
           mab.field_a.renderGameFrame(param0 - 187);
           this.field_c = new SoundCache(this.field_l, this.field_k);
           fa.field_d[0] = this.field_c.getMusicSampleByName("", "vh_menu_mouseover", (byte) 113);
@@ -294,8 +294,8 @@ final class fcb implements oob {
           un.a(ubb.field_j, 121);
           un.a(wu.field_h, 126);
           kua.field_a = new Sprite(32, 32);
-          kua.field_a.b();
-          wu.field_h.c(0, 0, 32, 32);
+          kua.field_a.setRasterTarget();
+          wu.field_h.drawDownscaled(0, 0, 32, 32);
           SetClientSideDragging.field_q.a((byte) -108);
           wu.field_h = null;
           SetTorpedoProjectileDamage.field_p = new Sprite[ei.field_i.length][];

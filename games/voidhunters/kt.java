@@ -132,7 +132,7 @@ class kt extends elb {
           var41 = var49;
           var8 = var41;
           var64 = new int[param0.field_L];
-          var63 = bva.field_b;
+          var63 = OpenGlVertexDeclaration.field_b;
           var62 = GetSniperCannonRandomness.field_o;
           var61 = GetReverbDamp.field_p;
           for (var13 = 0; var13 < param0.field_L; var13++) {
@@ -167,19 +167,19 @@ class kt extends elb {
             var15Lifetime1 = param0.field_w[var14Lifetime1];
             var16 = param0.field_N[var14Lifetime1];
             var17 = param0.field_D[var14Lifetime1];
-            if (param0.field_j[var14Lifetime1] < bva.field_b.length) {
+            if (param0.field_j[var14Lifetime1] < OpenGlVertexDeclaration.field_b.length) {
               stackIn_24_0 = param0.field_j[var14Lifetime1];
             } else {
               stackIn_24_0 = -1;
             }
             var18 = stackIn_24_0;
-            if (param0.field_G[var14Lifetime1] < bva.field_b.length) {
+            if (param0.field_G[var14Lifetime1] < OpenGlVertexDeclaration.field_b.length) {
               stackIn_27_0 = param0.field_G[var14Lifetime1];
             } else {
               stackIn_27_0 = -1;
             }
             var19 = stackIn_27_0;
-            if (bva.field_b.length > param0.field_I[var14Lifetime1]) {
+            if (OpenGlVertexDeclaration.field_b.length > param0.field_I[var14Lifetime1]) {
               stackIn_30_0 = param0.field_I[var14Lifetime1];
             } else {
               stackIn_30_0 = -1;

@@ -84,7 +84,7 @@ final class TeamShipComponentConditionFactory implements GameStateFactory {
           if (var1 == 1) {
             hab.field_j = nnb.field_d;
           } else {
-            hab.field_j = SetReverbGain.a(bva.field_g, new String[]{Integer.toString(var1)}, 119);
+            hab.field_j = SetReverbGain.a(OpenGlVertexDeclaration.field_g, new String[]{Integer.toString(var1)}, 119);
           }
           hab.field_j = SetShieldsDirectionalArc.a(0, new CharSequence[]{(CharSequence) ((Object) hab.field_j), (CharSequence) ((Object) "<br>"), (CharSequence) ((Object) GetMassDriverProjectileDamage.field_o)});
         }

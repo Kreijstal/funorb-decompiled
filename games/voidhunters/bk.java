@@ -3,7 +3,7 @@
  */
 final class bk extends mc {
     static IsaacPacketBuffer field_w;
-    static jra field_v;
+    static PrimitiveType field_v;
 
     final void a(int param0) {
         int var2 = 43 / ((-80 - param0) / 42);
@@ -91,6 +91,6 @@ final class bk extends mc {
 
     static {
         field_w = new IsaacPacketBuffer(1048576);
-        field_v = new jra();
+        field_v = new PrimitiveType();
     }
 }

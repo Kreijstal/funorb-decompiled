@@ -24,7 +24,7 @@ final class qqa extends TextureOperation {
           mfb.field_a = !param0 ? true : false;
           SetUseTrails.field_o = !param0 ? true : false;
           ComponentBehaviour.field_b = !param0 ? true : false;
-          bva.field_d = !param0 ? true : false;
+          OpenGlVertexDeclaration.field_d = !param0 ? true : false;
           GetPointDefenceLaserReload.field_p = !param0 ? true : false;
           GetShieldsDirectionalRadius.a(37);
         } catch (RuntimeException runtimeException) {

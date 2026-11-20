@@ -24,7 +24,7 @@ final class kra {
         }
         if (param4 > 1) {
           bfb.field_b = param4 >= 255 ? 0 : -param4 + 255;
-          dma.f(param5, param3, param6, param7, param0, param1);
+          SoftwareRasterizer2D.drawThickLine(param5, param3, param6, param7, param0, param1);
         }
         if (param2 == 16994) {
           return;

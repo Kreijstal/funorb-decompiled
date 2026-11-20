@@ -161,7 +161,7 @@ final class ocb extends eca {
           field_g = (String) null;
         }
         if (RoundResultFactory.field_a != null) {
-          dma.e(dma.field_d, dma.field_c, -dma.field_d + dma.field_a, -dma.field_c + dma.field_f);
+          SoftwareRasterizer2D.darkenRectangle(SoftwareRasterizer2D.clipLeft, SoftwareRasterizer2D.clipTop, -SoftwareRasterizer2D.clipLeft + SoftwareRasterizer2D.clipRight, -SoftwareRasterizer2D.clipTop + SoftwareRasterizer2D.clipBottom);
           RoundResultFactory.field_a.b(param0, 22);
         }
     }

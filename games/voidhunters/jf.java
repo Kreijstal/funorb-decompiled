@@ -22,8 +22,8 @@ final class jf extends ora implements hdb {
         int var9 = 0;
         Object stackIn_3_0;
         Direct3DToolkit stackIn_3_1;
-        kb stackIn_3_2;
-        mj stackIn_3_3;
+        TextureFormat stackIn_3_2;
+        GpuDataType stackIn_3_3;
         int stackIn_4_4 = 0;
         int var7;
         int var8;
@@ -35,7 +35,7 @@ final class jf extends ora implements hdb {
         stackIn_3_0 = this;
         stackIn_3_1 = (Direct3DToolkit) (param0);
         stackIn_3_2 = ComponentAttachmentPlan.field_d;
-        stackIn_3_3 = mj.field_f;
+        stackIn_3_3 = GpuDataType.field_f;
         if (param2) {
           stackIn_3_0Lifetime1 = this;
           if (param0.field_Jc) {

@@ -25,22 +25,22 @@ final class qga {
           SetShipTeamAction.field_b = SetSniperCannonFireForce.field_o;
           if (param1 == 255) {
             stackIn_12_0 = !(SetDebrisCarryOverPercentage.field_p >= 13);
-            jra.field_a = rv.a(stackIn_12_0, 1);
+            PrimitiveType.field_a = rv.a(stackIn_12_0, 1);
             var6 = (String[]) null;
             mfb.a((String[]) null, 11113);
             return;
           }
           if (param1 < 100) {
-            jra.field_a = GetArmageddonLength.a(param1, param0, (byte) -124);
+            PrimitiveType.field_a = GetArmageddonLength.a(param1, param0, (byte) -124);
             return;
           }
           if (param1 > 105) {
-            jra.field_a = GetArmageddonLength.a(param1, param0, (byte) -124);
+            PrimitiveType.field_a = GetArmageddonLength.a(param1, param0, (byte) -124);
             return;
           }
           var4 = param3;
           mfb.a(var4, 11113);
-          jra.field_a = MissionCondition.a(param3, (byte) -123);
+          PrimitiveType.field_a = MissionCondition.a(param3, (byte) -123);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -305,7 +305,7 @@ final class ComponentCollision extends IntrusiveNode {
                   if (var10 != 0) {
                     var13_ref_String = ef.field_A;
                     if (var12Lifetime2 == 0) {
-                      var14_ref_String = SetReverbGain.a(jra.field_b, new String[]{(String) (var11_ref)}, 92);
+                      var14_ref_String = SetReverbGain.a(PrimitiveType.field_b, new String[]{(String) (var11_ref)}, 92);
                     } else {
                       var14_ref_String = alb.field_a + (String) (var11_ref);
                     }

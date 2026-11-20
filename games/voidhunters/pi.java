@@ -143,9 +143,9 @@ final class pi extends DualLinkNode {
           return;
         }
         if (!param1) {
-          dma.a();
+          SoftwareRasterizer2D.clear();
         } else {
-          dma.e(0, 0, dma.field_g, dma.field_j, 0, 192);
+          SoftwareRasterizer2D.fillRectangleAlpha(0, 0, SoftwareRasterizer2D.width, SoftwareRasterizer2D.height, 0, 192);
         }
         GetPointDefenceLaserProjectileDamage.a(param1, 76);
     }

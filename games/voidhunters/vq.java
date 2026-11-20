@@ -97,11 +97,11 @@ abstract class vq extends dqa implements lca {
           int var1_int = 0;
           IOException var1 = null;
           PacketBuffer var2 = null;
-          if (GetAutozoomAmountMultiply.field_o.field_g >= 4) {
-            if (GetAutozoomAmountMultiply.field_o.field_k == -1) {
+          if (GetAutozoomAmountMultiply.field_o.errorCount >= 4) {
+            if (GetAutozoomAmountMultiply.field_o.errorStatus == -1) {
               return 3;
             }
-            if (GetAutozoomAmountMultiply.field_o.field_k == -2) {
+            if (GetAutozoomAmountMultiply.field_o.errorStatus == -2) {
               return 4;
             }
             return 1;
@@ -124,18 +124,18 @@ abstract class vq extends dqa implements lca {
               }
             }
             if (gob.field_c == 2) {
-              eu.field_h = new lpb((java.net.Socket) (ija.field_b.field_d), gia.field_k);
+              eu.field_h = new BufferedSocket((java.net.Socket) (ija.field_b.field_d), gia.field_k);
               var2 = new PacketBuffer(13);
               SetVariableLabelActionFactory.a(SetPointDefenceLaserProjectileDamage.field_p, (byte) -48, GetFixedaim.field_o, var2, OpenGlToolkit.field_Ib);
               var2.writeByte(0, 15);
               var2.writeInt(ea.field_d, 332614536);
-              eu.field_h.a(0, var2.payload, 13, 0);
+              eu.field_h.write(0, var2.payload, 13, 0);
               gob.field_c = gob.field_c + 1;
               GetRepairModePower.field_r = 30000L + wt.a(false);
             }
             if (gob.field_c == 3) {
-              if (0 < eu.field_h.c(param0 ^ -6269)) {
-                var1_int = eu.field_h.a(-123);
+              if (0 < eu.field_h.available(param0 ^ -6269)) {
+                var1_int = eu.field_h.readByte(-123);
                 if (var1_int != 0) {
                   stackIn_31_0 = SetReverbDry.a(-71, var1_int);
                   return stackIn_31_0;
@@ -152,7 +152,7 @@ abstract class vq extends dqa implements lca {
               stackIn_37_0 = -1;
               return stackIn_37_0;
             }
-            GetAutozoomAmountMultiply.field_o.a(eu.field_h, ToolkitFontMetrics.field_f, false);
+            GetAutozoomAmountMultiply.field_o.setConnection(eu.field_h, ToolkitFontMetrics.field_f, false);
             gob.field_c = 0;
             eu.field_h = null;
             ija.field_b = null;

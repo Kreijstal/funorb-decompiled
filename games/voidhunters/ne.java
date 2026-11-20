@@ -602,7 +602,7 @@ final class ne extends ka {
           if (GetCountermeasureLauncherEnergyUsed.a(param5, 82, param2)) {
             this.field_i = new od((uq) null, 5126, 3, 0);
           }
-          if (mq.a(param5, param2, false)) {
+          if (OpenGlIndexBuffer.a(param5, param2, false)) {
             discarded$0 = new od((uq) null, 5126, 2, 0);
           }
           if (toa.a(-8636, param2, param5)) {

@@ -3,31 +3,31 @@
  */
 import java.io.*;
 
-final class lpb implements Runnable {
-    private int field_i;
+final class BufferedSocket implements Runnable {
+    private int writePosition;
     private eab field_e;
-    private int field_k;
-    private boolean field_f;
+    private int bufferCapacity;
+    private boolean writeError;
     private mob field_g;
-    private OutputStream field_j;
-    private boolean field_c;
-    private byte[] field_a;
-    private java.net.Socket field_h;
-    private InputStream field_b;
-    private int field_d;
+    private OutputStream output;
+    private boolean closed;
+    private byte[] writeBuffer;
+    private java.net.Socket socket;
+    private InputStream input;
+    private int readPosition;
 
-    final void b(int param0) {
+    final void close(int param0) {
         try {
           int var4 = 0;
           var4 = VoidHunters.field_G;
-          if (this.field_c) {
+          if (this.closed) {
             return;
           }
           if (param0 != 1) {
             return;
           }
           synchronized (this) {
-            this.field_c = true;
+            this.closed = true;
             this.notifyAll();
           }
           if (this.field_g != null) {
@@ -49,7 +49,7 @@ final class lpb implements Runnable {
         }
     }
 
-    final void a(int param0, int param1, int param2, byte[] param3) throws IOException {
+    final void readFully(int param0, int param1, int param2, byte[] param3) throws IOException {
         int var5_int = 0;
         int var6 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -60,13 +60,13 @@ final class lpb implements Runnable {
         var6 = VoidHunters.field_G;
         try {
           if (param0 >= -121) {
-            this.field_k = 66;
+            this.bufferCapacity = 66;
           }
-          if (this.field_c) {
+          if (this.closed) {
             return;
           }
           while (param2 > 0) {
-            var5_int = this.field_b.read(param3, param1, param2);
+            var5_int = this.input.read(param3, param1, param2);
             if (0 >= var5_int) {
               throw new EOFException();
             }
@@ -107,8 +107,8 @@ final class lpb implements Runnable {
               var3 = this;
               synchronized (var3) {
                 boolean decompiledFrameRemainder0 = true;
-                if (this.field_i == this.field_d) {
-                  if (this.field_c) {
+                if (this.writePosition == this.readPosition) {
+                  if (this.closed) {
                     decompiledRegionSelector0 = 0;
                     decompiledFrameRemainder0 = false;
                   }
@@ -122,52 +122,52 @@ final class lpb implements Runnable {
                   }
                 }
                 if (decompiledFrameRemainder0) {
-                  var2 = this.field_d;
-                  if (this.field_i >= this.field_d) {
-                    var1_int = -this.field_d + this.field_i;
+                  var2 = this.readPosition;
+                  if (this.writePosition >= this.readPosition) {
+                    var1_int = -this.readPosition + this.writePosition;
                   } else {
-                    var1_int = this.field_k - this.field_d;
+                    var1_int = this.bufferCapacity - this.readPosition;
                   }
                   decompiledRegionSelector0 = 1;
                 }
               }
               if (decompiledRegionSelector0 == 0) {
                 try {
-                  if (null != this.field_b) {
-                    this.field_b.close();
+                  if (null != this.input) {
+                    this.input.close();
                   }
-                  if (null != this.field_j) {
-                    this.field_j.close();
+                  if (null != this.output) {
+                    this.output.close();
                   }
-                  if (this.field_h != null) {
-                    this.field_h.close();
+                  if (this.socket != null) {
+                    this.socket.close();
                   }
                 } catch (java.io.IOException decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var1 = (IOException) (Object) decompiledCaughtException;
                 }
-                this.field_a = null;
+                this.writeBuffer = null;
                 break;
               }
               if (var1_int <= 0) {
                 continue;
               }
               try {
-                this.field_j.write(this.field_a, var2, var1_int);
+                this.output.write(this.writeBuffer, var2, var1_int);
               } catch (java.io.IOException decompiledCaughtParameter2) {
                 decompiledCaughtException = decompiledCaughtParameter2;
                 var3_ref = (IOException) (Object) decompiledCaughtException;
-                this.field_f = true;
+                this.writeError = true;
               }
-              this.field_d = (var1_int + this.field_d) % this.field_k;
+              this.readPosition = (var1_int + this.readPosition) % this.bufferCapacity;
               try {
-                if (this.field_i == this.field_d) {
-                  this.field_j.flush();
+                if (this.writePosition == this.readPosition) {
+                  this.output.flush();
                 }
               } catch (java.io.IOException decompiledCaughtParameter3) {
                 decompiledCaughtException = decompiledCaughtParameter3;
                 var3_ref = (IOException) (Object) decompiledCaughtException;
-                this.field_f = true;
+                this.writeError = true;
               }
             }
           } catch (java.lang.Exception decompiledCaughtParameter4) {
@@ -183,18 +183,18 @@ final class lpb implements Runnable {
         }
     }
 
-    final int a(int param0) throws IOException {
+    final int readByte(int param0) throws IOException {
         if (param0 >= -34) {
           byte[] var3 = (byte[]) null;
-          lpb.a((byte) -34, (byte[]) null);
+          BufferedSocket.createAlphaBitmapFont((byte) -34, (byte[]) null);
         }
-        if (this.field_c) {
+        if (this.closed) {
           return 0;
         }
-        return this.field_b.read();
+        return this.input.read();
     }
 
-    final void a(int param0, byte[] param1, int param2, int param3) throws IOException {
+    final void write(int param0, byte[] param1, int param2, int param3) throws IOException {
         int var6 = 0;
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
@@ -205,22 +205,22 @@ final class lpb implements Runnable {
         int var8 = 0;
         var8 = VoidHunters.field_G;
         try {
-          if (this.field_c) {
+          if (this.closed) {
             return;
           }
-          if (this.field_f) {
-            this.field_f = false;
+          if (this.writeError) {
+            this.writeError = false;
             throw new IOException();
           }
-          if (this.field_a == null) {
-            this.field_a = new byte[this.field_k];
+          if (this.writeBuffer == null) {
+            this.writeBuffer = new byte[this.bufferCapacity];
           }
           var5 = this;
           synchronized (var5) {
             for (var6 = param0; var6 < param2; var6++) {
-              this.field_a[this.field_i] = param1[var6 + param3];
-              this.field_i = (this.field_i + 1) % this.field_k;
-              if (this.field_i == (-100 + (this.field_k + this.field_d)) % this.field_k) {
+              this.writeBuffer[this.writePosition] = param1[var6 + param3];
+              this.writePosition = (this.writePosition + 1) % this.bufferCapacity;
+              if (this.writePosition == (-100 + (this.bufferCapacity + this.readPosition)) % this.bufferCapacity) {
                 throw new IOException();
               }
             }
@@ -244,11 +244,11 @@ final class lpb implements Runnable {
         }
     }
 
-    final static ngb a(byte param0, byte[] param1) {
-        ngb var2 = null;
+    final static SoftwareAlphaBitmapFont createAlphaBitmapFont(byte param0, byte[] param1) {
+        SoftwareAlphaBitmapFont var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
-        ngb stackIn_6_0 = null;
+        SoftwareAlphaBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -259,9 +259,9 @@ final class lpb implements Runnable {
           }
           if (param0 != 19) {
             var3 = (byte[]) null;
-            lpb.a((byte) -54, (byte[]) null);
+            BufferedSocket.createAlphaBitmapFont((byte) -54, (byte[]) null);
           }
-          var2 = new ngb(param1, iib.field_e, SettingsChange.field_f, SetMissionTerrainDebrisProbability.field_o, hla.field_a, rlb.field_d, sh.field_a);
+          var2 = new SoftwareAlphaBitmapFont(param1, iib.field_e, SettingsChange.field_f, SetMissionTerrainDebrisProbability.field_o, hla.field_a, rlb.field_d, sh.field_a);
           MatchResults.a(39);
           stackIn_6_0 = var2;
           return stackIn_6_0;
@@ -279,22 +279,22 @@ final class lpb implements Runnable {
         }
     }
 
-    final int c(int param0) throws IOException {
-        if (this.field_c) {
+    final int available(int param0) throws IOException {
+        if (this.closed) {
           return 0;
         }
         if (param0 != 0) {
           return 45;
         }
-        return this.field_b.available();
+        return this.input.available();
     }
 
-    final void a(byte param0) throws IOException {
-        if (this.field_c) {
+    final void checkWriteError(byte param0) throws IOException {
+        if (this.closed) {
           return;
         }
-        if (this.field_f) {
-          this.field_f = false;
+        if (this.writeError) {
+          this.writeError = false;
           throw new IOException();
         }
         if (param0 <= 101) {
@@ -303,26 +303,26 @@ final class lpb implements Runnable {
     }
 
     protected final void finalize() {
-        this.b(1);
+        this.close(1);
     }
 
-    lpb(java.net.Socket param0, eab param1) throws IOException {
+    BufferedSocket(java.net.Socket param0, eab param1) throws IOException {
         this(param0, param1, 5000);
     }
 
-    private lpb(java.net.Socket param0, eab param1, int param2) throws IOException {
-        this.field_f = false;
-        this.field_c = false;
-        this.field_i = 0;
-        this.field_d = 0;
+    private BufferedSocket(java.net.Socket param0, eab param1, int param2) throws IOException {
+        this.writeError = false;
+        this.closed = false;
+        this.writePosition = 0;
+        this.readPosition = 0;
         try {
           this.field_e = param1;
-          this.field_h = param0;
-          this.field_h.setSoTimeout(30000);
-          this.field_h.setTcpNoDelay(true);
-          this.field_b = this.field_h.getInputStream();
-          this.field_j = this.field_h.getOutputStream();
-          this.field_k = param2;
+          this.socket = param0;
+          this.socket.setSoTimeout(30000);
+          this.socket.setTcpNoDelay(true);
+          this.input = this.socket.getInputStream();
+          this.output = this.socket.getOutputStream();
+          this.bufferCapacity = param2;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lpb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

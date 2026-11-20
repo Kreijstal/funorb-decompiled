@@ -27,7 +27,7 @@ final class djb extends qc {
         int var5 = 0;
         String var6 = null;
         tsa var7 = null;
-        vga var7_ref = null;
+        SecondaryNodeQueue var7_ref = null;
         int var8_int = 0;
         StringBuilder var8 = null;
         int var9 = 0;
@@ -58,14 +58,14 @@ final class djb extends qc {
             }
           }
           var7_ref = this.a(var6, (byte) 28);
-          if (var7_ref.c(param0 + 35) == 0) {
+          if (var7_ref.size(param0 + 35) == 0) {
             return;
           }
           var8 = new StringBuilder();
           var9 = var6.length();
           var10 = 1;
           var11 = 2147483647;
-          var12_ref_rqa = (ConsoleCommand) (var7_ref.a((byte) -54));
+          var12_ref_rqa = (ConsoleCommand) (var7_ref.first((byte) -54));
           while (true) {
             if (var12_ref_rqa != null) {
               stackIn_44_0 = var12_ref_rqa.name.length();
@@ -74,7 +74,7 @@ final class djb extends qc {
                 if (stackIn_44_0 < stackIn_44_1) {
                   var11 = var12_ref_rqa.name.length();
                 }
-                var12_ref_rqa = (ConsoleCommand) (var7_ref.a(1900));
+                var12_ref_rqa = (ConsoleCommand) (var7_ref.next(1900));
                 continue;
               }
             } else {
@@ -86,8 +86,8 @@ final class djb extends qc {
                     break;
                   }
                   if (stackIn_44_0 > stackIn_44_1) {
-                    var12 = ((ConsoleCommand) (var7_ref.a((byte) -54))).name.charAt(var9);
-                    var13 = (ConsoleCommand) (var7_ref.a(1900));
+                    var12 = ((ConsoleCommand) (var7_ref.first((byte) -54))).name.charAt(var9);
+                    var13 = (ConsoleCommand) (var7_ref.next(1900));
                     while (null != var13) {
                       stackIn_45_0 = var10;
                       stackOut_31_1 = var13.name.charAt(var9);
@@ -100,7 +100,7 @@ final class djb extends qc {
                         stackIn_38_1 = 1;
                       }
                       var10 = stackIn_45_0 & stackIn_38_1;
-                      var13 = (ConsoleCommand) (var7_ref.a(1900));
+                      var13 = (ConsoleCommand) (var7_ref.next(1900));
                     }
                     if (var10 != 0) {
                       discarded$0 = var8.append((char) var12);
@@ -123,8 +123,8 @@ final class djb extends qc {
           if (stackIn_45_0Lifetime1 == (stackIn_45_1Lifetime1 ^ stackIn_45_2Lifetime1)) {
             var12Lifetime1++;
             discarded$1 = var8.append("()");
-            if (var7_ref.c(0) == 1 &&
-              ((ConsoleCommand) (var7_ref.a((byte) -54))).parameterTypes.length == 0) {
+            if (var7_ref.size(0) == 1 &&
+              ((ConsoleCommand) (var7_ref.first((byte) -54))).parameterTypes.length == 0) {
               var12Lifetime1++;
             }
           }
@@ -164,7 +164,7 @@ final class djb extends qc {
         int var5 = 0;
         String var6 = null;
         tsa var7 = null;
-        vga var7_ref = null;
+        SecondaryNodeQueue var7_ref = null;
         int var8_int = 0;
         String[] var8 = null;
         int var9 = 0;
@@ -216,19 +216,19 @@ final class djb extends qc {
               if (stackIn_25_0 < stackIn_25_1 &&
                 SetMissionVariablesHudX.field_p == var4[var9 - 1].field_e) {
                 var6 = var4[var9 - 1].field_d;
-                this.field_o.field_L = this.field_n.b(var2.substring(0, var4[-1 + var9].field_g));
+                this.field_o.field_L = this.field_n.getStringWidth(var2.substring(0, var4[-1 + var9].field_g));
               }
               decompiledFrameRemainder0 = (var11 != 0);
             }
             if (decompiledFrameRemainder0) {
               var6 = var7.field_d.substring(0, Math.min(var7.field_d.length(), var8_int));
-              this.field_o.field_L = this.field_n.b(var2.substring(0, var7.field_g));
+              this.field_o.field_L = this.field_n.getStringWidth(var2.substring(0, var7.field_g));
             }
           }
           var7_ref = this.a(var6, (byte) 28);
-          var8 = new String[var7_ref.c(0)];
+          var8 = new String[var7_ref.size(0)];
           var9Lifetime1 = 0;
-          var10 = (ConsoleCommand) (var7_ref.a((byte) -54));
+          var10 = (ConsoleCommand) (var7_ref.first((byte) -54));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var10 == null))) {
             stackIn_39_0 = var8;
@@ -236,7 +236,7 @@ final class djb extends qc {
               incrementValue$0 = var9Lifetime1;
               var9Lifetime1++;
               stackIn_39_0[incrementValue$0] = var10.signatureText;
-              var10 = (ConsoleCommand) (var7_ref.a(1900));
+              var10 = (ConsoleCommand) (var7_ref.next(1900));
               continue;
             }
             break;
@@ -538,14 +538,14 @@ final class djb extends qc {
         }
     }
 
-    private final vga a(String param0, byte param1) {
-        vga var3 = null;
+    private final SecondaryNodeQueue a(String param0, byte param1) {
+        SecondaryNodeQueue var3 = null;
         int var4 = 0;
         int var5 = 0;
         boolean stackIn_4_0 = false;
         int stackIn_11_0 = 0;
-        vga stackIn_13_0 = null;
-        vga stackIn_15_0 = null;
+        SecondaryNodeQueue stackIn_13_0 = null;
+        SecondaryNodeQueue stackIn_15_0 = null;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -554,7 +554,7 @@ final class djb extends qc {
         RuntimeException var3_ref = null;
         var5 = VoidHunters.field_G;
         try {
-          var3 = new vga();
+          var3 = new SecondaryNodeQueue();
           var4 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4 >= this.field_t.length))) {
@@ -564,7 +564,7 @@ final class djb extends qc {
             if (var5 == 0) {
               if (stackIn_4_0) {
                 this.field_t[var4].unlinkSecondary((byte) -35);
-                var3.a(this.field_t[var4], param1 - 93);
+                var3.addLast(this.field_t[var4], param1 - 93);
               }
               var4++;
               continue;
@@ -578,7 +578,7 @@ final class djb extends qc {
             stackIn_15_0 = var3;
             return stackIn_15_0;
           }
-          stackIn_13_0 = (vga) null;
+          stackIn_13_0 = (SecondaryNodeQueue) null;
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

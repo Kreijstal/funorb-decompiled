@@ -77,7 +77,7 @@ final class tia extends mu {
         }
         int var5 = this.field_g + param0;
         int var6 = this.field_r + param3;
-        dma.d(var5, var6, this.field_h, this.field_f, 0);
+        SoftwareRasterizer2D.fillRectangle(var5, var6, this.field_h, this.field_f, 0);
         if (param2 <= 47) {
           return;
         }
@@ -90,10 +90,10 @@ final class tia extends mu {
             var9 = this.field_L[var8];
             var10 = var9.toString();
             if (var8 == var7) {
-              dma.e(2 + var5, var6 + 4, this.field_h - 4, this.field_I, 2188450, 128);
+              SoftwareRasterizer2D.fillRectangleAlpha(2 + var5, var6 + 4, this.field_h - 4, this.field_I, 2188450, 128);
             }
             var6 = var6 + this.field_I;
-            this.field_E.c(var10, 2 + var5, var6, 10000536, -1);
+            this.field_E.draw(var10, 2 + var5, var6, 10000536, -1);
           }
         }
     }
@@ -117,7 +117,7 @@ final class tia extends mu {
         try {
           this.field_E = param1;
           this.field_F = param0;
-          this.field_I = this.field_E.field_A + this.field_E.field_k;
+          this.field_I = this.field_E.maxDescent + this.field_E.maxAscent;
           this.a(param3, 28, param2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tia.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');

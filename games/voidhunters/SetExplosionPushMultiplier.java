@@ -55,7 +55,7 @@ final class SetExplosionPushMultiplier extends ConsoleCommand {
             stackIn_14_0 = SetReverbGain.a(vjb.field_c, new String[]{param1}, 100);
             return stackIn_14_0;
           }
-          if (mq.field_k >= 100) {
+          if (OpenGlIndexBuffer.field_k >= 100) {
             stackIn_17_0 = GetBombletSprayAimarc.field_o;
             return stackIn_17_0;
           }

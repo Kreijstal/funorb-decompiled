@@ -21,8 +21,8 @@ class IntrusiveNode {
     }
 
     final static void a(Sprite[] param0, int param1, int param2, Sprite[] param3, Sprite[] param4, int param5, int param6, int param7, int param8, BitmapFont param9, int param10, int param11, int param12, int param13, int param14) {
-        int var15_int = param9.field_A + param9.field_o;
-        int var16 = param9.field_o;
+        int var15_int = param9.maxDescent + param9.capHeight;
+        int var16 = param9.capHeight;
         if (param13 != -14109) {
           return;
         }

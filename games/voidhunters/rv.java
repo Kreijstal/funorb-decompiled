@@ -3,7 +3,7 @@
  */
 final class rv {
     static String field_b;
-    private vca field_a;
+    private GpuIndexBuffer field_a;
 
     final static void a(int param0, int param1) {
         int var2;
@@ -240,7 +240,7 @@ final class rv {
         if (param0 != -35) {
           this.a((byte) 98);
           if (this.field_a != null) {
-            this.field_a.a(param0 - 51);
+            this.field_a.release(param0 - 51);
             return;
           }
           return;
@@ -248,7 +248,7 @@ final class rv {
         if (this.field_a == null) {
           return;
         }
-        this.field_a.a(param0 - 51);
+        this.field_a.release(param0 - 51);
     }
 
     final static tpa a(boolean param0, int param1) {

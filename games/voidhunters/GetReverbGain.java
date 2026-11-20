@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetReverbGain extends ConsoleCommand {
-    static kb field_o;
+    static TextureFormat field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -47,7 +47,7 @@ final class GetReverbGain extends ConsoleCommand {
         try {
           var4 = (dnb) (SetGrapplingHookAimarc.field_o.first(0));
           if (param1 != -52) {
-            field_o = (kb) null;
+            field_o = (TextureFormat) null;
           }
           while (var4 != null) {
             nv.a((byte) 88, var4, param0);
@@ -68,7 +68,7 @@ final class GetReverbGain extends ConsoleCommand {
 
     public static void clearSharedReferences(int param0) {
         if (param0 < 26) {
-          field_o = (kb) null;
+          field_o = (TextureFormat) null;
           field_o = null;
           return;
         }
@@ -77,6 +77,6 @@ final class GetReverbGain extends ConsoleCommand {
 
     static {
         DebugRequestFactory discarded$0 = new DebugRequestFactory();
-        field_o = new kb(1);
+        field_o = new TextureFormat(1);
     }
 }

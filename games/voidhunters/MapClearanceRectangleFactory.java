@@ -134,7 +134,7 @@ final class MapClearanceRectangleFactory implements GameStateFactory {
                     return;
                   }
                   var10 = var10 + var12;
-                  var17Lifetime2 = var17Lifetime2 + dma.field_g;
+                  var17Lifetime2 = var17Lifetime2 + SoftwareRasterizer2D.width;
                   var9_int = var9_int + var11;
                 }
               }
@@ -186,7 +186,7 @@ final class MapClearanceRectangleFactory implements GameStateFactory {
               }
               var10 = var10 + var12;
               var9_int = var9_int + var11;
-              var16Lifetime1 = var16Lifetime1 + dma.field_g;
+              var16Lifetime1 = var16Lifetime1 + SoftwareRasterizer2D.width;
             }
             return;
           }

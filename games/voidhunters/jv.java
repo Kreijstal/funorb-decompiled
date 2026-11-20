@@ -44,7 +44,7 @@ final class jv {
     }
 
     final static int a(byte param0, int param1, int param2, int param3) {
-        if (!(dma.field_g < param3 + param1)) {
+        if (!(SoftwareRasterizer2D.width < param3 + param1)) {
           return param1;
         }
         if (param0 != -109) {
@@ -52,12 +52,12 @@ final class jv {
           if (0 <= param2 + param1 - param3) {
             return param2 + (param1 - param3);
           }
-          return -param3 + dma.field_g;
+          return -param3 + SoftwareRasterizer2D.width;
         }
         if (0 <= param2 + param1 - param3) {
           return param2 + (param1 - param3);
         }
-        return -param3 + dma.field_g;
+        return -param3 + SoftwareRasterizer2D.width;
     }
 
     public static void clearSharedReferences(byte param0) {

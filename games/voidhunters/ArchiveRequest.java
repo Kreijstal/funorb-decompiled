@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ArchiveRequest extends DualLinkNode {
-    boolean field_k;
+    boolean cleanupMarked;
     volatile boolean pending;
-    boolean field_l;
+    boolean priority;
     static int field_m;
 
     abstract byte[] getData(int param0);

@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class vga {
+final class SecondaryNodeQueue {
     static int field_b;
-    private DualLinkNode field_c;
+    private DualLinkNode sentinel;
     static int field_d;
-    private DualLinkNode field_a;
+    private DualLinkNode cursor;
 
-    final static String a(long param0, int param1) {
+    final static String decodeBase37Name(long param0, int param1) {
         int var3 = 0;
         long var4 = 0L;
         StringBuilder var6 = null;
@@ -53,11 +53,11 @@ final class vga {
         return null;
     }
 
-    final int c(int param0) {
+    final int size(int param0) {
         int var4 = VoidHunters.field_G;
         int var2 = param0;
-        DualLinkNode var3 = this.field_c.secondaryNext;
-        while (var3 != this.field_c) {
+        DualLinkNode var3 = this.sentinel.secondaryNext;
+        while (var3 != this.sentinel) {
           var2++;
           var3 = var3.secondaryNext;
         }
@@ -82,21 +82,21 @@ final class vga {
         }
     }
 
-    final DualLinkNode a(byte param0) {
-        DualLinkNode var2 = this.field_c.secondaryNext;
-        if (this.field_c == var2) {
-          this.field_a = null;
+    final DualLinkNode first(byte param0) {
+        DualLinkNode var2 = this.sentinel.secondaryNext;
+        if (this.sentinel == var2) {
+          this.cursor = null;
           return null;
         }
-        this.field_a = var2.secondaryNext;
+        this.cursor = var2.secondaryNext;
         if (param0 == -54) {
           return var2;
         }
-        this.a(77);
+        this.next(77);
         return var2;
     }
 
-    final void a(DualLinkNode param0, byte param1) {
+    final void addFirst(DualLinkNode param0, byte param1) {
         if (param1 != -22) {
           return;
         }
@@ -104,8 +104,8 @@ final class vga {
           if (param0.secondaryPrevious != null) {
             param0.unlinkSecondary((byte) -35);
           }
-          param0.secondaryNext = this.field_c.secondaryNext;
-          param0.secondaryPrevious = this.field_c;
+          param0.secondaryNext = this.sentinel.secondaryNext;
+          param0.secondaryPrevious = this.sentinel;
           param0.secondaryPrevious.secondaryNext = param0;
           param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
@@ -113,21 +113,21 @@ final class vga {
         }
     }
 
-    final DualLinkNode b(int param0) {
-        DualLinkNode var2 = this.field_c.secondaryPrevious;
-        if (var2 == this.field_c) {
+    final DualLinkNode removeLast(int param0) {
+        DualLinkNode var2 = this.sentinel.secondaryPrevious;
+        if (var2 == this.sentinel) {
           return null;
         }
         if (param0 == 1) {
           var2.unlinkSecondary((byte) -35);
           return var2;
         }
-        this.a((byte) 3);
+        this.first((byte) 3);
         var2.unlinkSecondary((byte) -35);
         return var2;
     }
 
-    final static int a(boolean param0) {
+    final static int getCurrentYear(boolean param0) {
         if (param0) {
           return 1900 + new Date().getYear();
         }
@@ -135,31 +135,31 @@ final class vga {
         return 1900 + new Date().getYear();
     }
 
-    final DualLinkNode a(int param0) {
+    final DualLinkNode next(int param0) {
         DualLinkNode var2 = null;
         DualLinkNode var2Lifetime1;
         if (param0 != 1900) {
-          vga.a(-33L, 30);
-          var2 = this.field_a;
-          if (this.field_c == var2) {
-            this.field_a = null;
+          SecondaryNodeQueue.decodeBase37Name(-33L, 30);
+          var2 = this.cursor;
+          if (this.sentinel == var2) {
+            this.cursor = null;
             return null;
           }
-          this.field_a = var2.secondaryNext;
+          this.cursor = var2.secondaryNext;
           return var2;
         }
-        var2Lifetime1 = this.field_a;
-        if (this.field_c == var2Lifetime1) {
-          this.field_a = null;
+        var2Lifetime1 = this.cursor;
+        if (this.sentinel == var2Lifetime1) {
+          this.cursor = null;
           return null;
         }
-        this.field_a = var2Lifetime1.secondaryNext;
+        this.cursor = var2Lifetime1.secondaryNext;
         return var2Lifetime1;
     }
 
-    final DualLinkNode b(byte param0) {
-        DualLinkNode var2 = this.field_c.secondaryNext;
-        if (this.field_c != var2) {
+    final DualLinkNode removeFirst(byte param0) {
+        DualLinkNode var2 = this.sentinel.secondaryNext;
+        if (this.sentinel != var2) {
           var2.unlinkSecondary((byte) -35);
           int var3 = 25 % ((param0 + 18) / 58);
           return var2;
@@ -167,7 +167,7 @@ final class vga {
         return null;
     }
 
-    final void a(DualLinkNode param0, int param1) {
+    final void addLast(DualLinkNode param0, int param1) {
         if (param0.secondaryPrevious != null) {
           param0.unlinkSecondary((byte) -35);
         }
@@ -175,8 +175,8 @@ final class vga {
           return;
         }
         try {
-          param0.secondaryNext = this.field_c;
-          param0.secondaryPrevious = this.field_c.secondaryPrevious;
+          param0.secondaryNext = this.sentinel;
+          param0.secondaryPrevious = this.sentinel.secondaryPrevious;
           param0.secondaryPrevious.secondaryNext = param0;
           param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
@@ -184,10 +184,10 @@ final class vga {
         }
     }
 
-    public vga() {
-        this.field_c = new DualLinkNode();
-        this.field_c.secondaryPrevious = this.field_c;
-        this.field_c.secondaryNext = this.field_c;
+    public SecondaryNodeQueue() {
+        this.sentinel = new DualLinkNode();
+        this.sentinel.secondaryPrevious = this.sentinel;
+        this.sentinel.secondaryNext = this.sentinel;
     }
 
     static {

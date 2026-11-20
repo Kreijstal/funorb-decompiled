@@ -70,22 +70,22 @@ final class GetPointDefenceLaserProjectileDamage extends ConsoleCommand {
         var17 = VoidHunters.field_G;
         if (param15 >= param5) {
           if (param15 < param11) {
-            SetPhasedEnergyBeamRandomness.a(param7, param6, param14, param11, dma.field_i, param2, param12, param5, param1, param13, param8, param4, param0, param15, param3, -1, param10);
+            SetPhasedEnergyBeamRandomness.a(param7, param6, param14, param11, SoftwareRasterizer2D.pixels, param2, param12, param5, param1, param13, param8, param4, param0, param15, param3, -1, param10);
           } else {
             if (param11 <= param5) {
-              SetPhasedEnergyBeamRandomness.a(param1, param2, param8, param15, dma.field_i, param0, param14, param11, param4, param10, param12, param7, param6, param5, param13, param9 ^ 18418, param3);
+              SetPhasedEnergyBeamRandomness.a(param1, param2, param8, param15, SoftwareRasterizer2D.pixels, param0, param14, param11, param4, param10, param12, param7, param6, param5, param13, param9 ^ 18418, param3);
             } else {
-              SetPhasedEnergyBeamRandomness.a(param4, param0, param14, param15, dma.field_i, param2, param8, param5, param1, param13, param12, param7, param6, param11, param10, param9 + 18418, param3);
+              SetPhasedEnergyBeamRandomness.a(param4, param0, param14, param15, SoftwareRasterizer2D.pixels, param2, param8, param5, param1, param13, param12, param7, param6, param11, param10, param9 + 18418, param3);
             }
           }
         } else {
           if (param11 > param5) {
-            SetPhasedEnergyBeamRandomness.a(param1, param2, param12, param11, dma.field_i, param6, param14, param15, param7, param3, param8, param4, param0, param5, param13, param9 + 18418, param10);
+            SetPhasedEnergyBeamRandomness.a(param1, param2, param12, param11, SoftwareRasterizer2D.pixels, param6, param14, param15, param7, param3, param8, param4, param0, param5, param13, param9 + 18418, param10);
           } else {
             if (param15 >= param11) {
-              SetPhasedEnergyBeamRandomness.a(param7, param6, param8, param5, dma.field_i, param0, param12, param11, param4, param10, param14, param1, param2, param15, param3, -1, param13);
+              SetPhasedEnergyBeamRandomness.a(param7, param6, param8, param5, SoftwareRasterizer2D.pixels, param0, param12, param11, param4, param10, param14, param1, param2, param15, param3, -1, param13);
             } else {
-              SetPhasedEnergyBeamRandomness.a(param4, param0, param12, param5, dma.field_i, param6, param8, param15, param7, param3, param14, param1, param2, param11, param10, -1, param13);
+              SetPhasedEnergyBeamRandomness.a(param4, param0, param12, param5, SoftwareRasterizer2D.pixels, param6, param8, param15, param7, param3, param14, param1, param2, param11, param10, -1, param13);
             }
           }
         }

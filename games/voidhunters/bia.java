@@ -26,8 +26,8 @@ class bia extends tb {
           if (var1_ref == null) {
             throw new IllegalStateException();
           }
-          dma.a(var1_ref.field_k, var1_ref.field_d, var1_ref.field_i);
-          dma.b(var1_ref.field_j, var1_ref.field_g, var1_ref.field_h, var1_ref.field_e);
+          SoftwareRasterizer2D.setTarget(var1_ref.field_k, var1_ref.field_d, var1_ref.field_i);
+          SoftwareRasterizer2D.setClip(var1_ref.field_j, var1_ref.field_g, var1_ref.field_h, var1_ref.field_e);
           var1_ref.field_k = null;
           GetPlayerRepairTime.field_p.addLast(-10258, var1_ref);
           return;
@@ -36,8 +36,8 @@ class bia extends tb {
         if (var1_refLifetime1 == null) {
           throw new IllegalStateException();
         }
-        dma.a(var1_refLifetime1.field_k, var1_refLifetime1.field_d, var1_refLifetime1.field_i);
-        dma.b(var1_refLifetime1.field_j, var1_refLifetime1.field_g, var1_refLifetime1.field_h, var1_refLifetime1.field_e);
+        SoftwareRasterizer2D.setTarget(var1_refLifetime1.field_k, var1_refLifetime1.field_d, var1_refLifetime1.field_i);
+        SoftwareRasterizer2D.setClip(var1_refLifetime1.field_j, var1_refLifetime1.field_g, var1_refLifetime1.field_h, var1_refLifetime1.field_e);
         var1_refLifetime1.field_k = null;
         GetPlayerRepairTime.field_p.addLast(-10258, var1_refLifetime1);
     }

@@ -55,11 +55,11 @@ final class GetAiRepairTime extends ConsoleCommand {
           var3 = -1;
           var4 = -1;
           var5 = feb.a(GetDebrisGroupColour.field_r, true);
-          for (var6 = 0; dma.field_j > var6; var6++) {
+          for (var6 = 0; SoftwareRasterizer2D.height > var6; var6++) {
             var7 = -1;
             var8 = -1;
-            for (var9 = 0; var9 < dma.field_g; var9++) {
-              if (dma.field_i[var1_int] != 0) {
+            for (var9 = 0; var9 < SoftwareRasterizer2D.width; var9++) {
+              if (SoftwareRasterizer2D.pixels[var1_int] != 0) {
                 var8 = var9;
                 if (var7 == -1) {
                   var7 = var9;
@@ -96,7 +96,7 @@ final class GetAiRepairTime extends ConsoleCommand {
             }
           }
           if (var2 != -1) {
-            var6Lifetime1 = dma.field_j;
+            var6Lifetime1 = SoftwareRasterizer2D.height;
             GetMissionVotes.a(var5, var3, var6Lifetime1, 2, var4, var2);
           }
           return;

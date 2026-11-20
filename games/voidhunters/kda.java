@@ -771,7 +771,7 @@ final class kda {
         int var5 = 0;
         var5 = VoidHunters.field_G;
         try {
-          if (!wh.g(-121)) {
+          if (!SocketNetworkArchiveClient.g(-121)) {
             if (this.field_l) {
               GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Not ready");
             }

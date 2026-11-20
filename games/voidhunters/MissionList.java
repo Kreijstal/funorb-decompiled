@@ -179,7 +179,7 @@ final class MissionList implements DiffableState {
           return;
         }
         try {
-          var3.missions = (Mission[]) (SpriteDimensions.a(var3.missions, this.missions, 1, GetThrusterParticleLife.field_p, false));
+          var3.missions = (Mission[]) (SpriteDimensions.copyStateArrayByMode(var3.missions, this.missions, 1, GetThrusterParticleLife.field_p, false));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vpa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

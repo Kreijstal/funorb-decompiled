@@ -16,7 +16,7 @@ final class GetMissionVariablesHudY extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= -119) {
-            stackIn_4_0 = new ConsoleValue(jra.field_c);
+            stackIn_4_0 = new ConsoleValue(PrimitiveType.field_c);
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

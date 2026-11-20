@@ -14,7 +14,7 @@ final class joa {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2 = vga.a(AdjustBodyComponentsActionFactory.a(param0, -49), -128);
+          var2 = SecondaryNodeQueue.decodeBase37Name(AdjustBodyComponentsActionFactory.a(param0, -49), -128);
           if (param1) {
             field_b = (int[]) null;
           }

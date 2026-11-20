@@ -33,7 +33,7 @@ final class uv implements wwa {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (!li.field_i) {
-          dma.b(param1, param3, param5, param2, param4);
+          SoftwareRasterizer2D.drawRectangle(param1, param3, param5, param2, param4);
           if (param0 < 106) {
             field_f = (String) null;
             return;
@@ -81,21 +81,21 @@ final class uv implements wwa {
           if (param4) {
             var7 = 16777215;
           }
-          dma.d(param2 + param1.field_g, param3 + param1.field_r, param1.field_h, param1.field_f, this.field_k);
+          SoftwareRasterizer2D.fillRectangle(param2 + param1.field_g, param3 + param1.field_r, param1.field_h, param1.field_f, this.field_k);
           var8 = this.field_d + (param2 + param1.field_g);
           var9 = param1.field_r + param3 + this.field_n;
-          dma.c(var8, var9, this.field_l, this.field_i, 5592405);
-          dma.d(var8, var9, this.field_l, this.field_i, var7);
+          SoftwareRasterizer2D.drawRectangleDropShadow(var8, var9, this.field_l, this.field_i, 5592405);
+          SoftwareRasterizer2D.fillRectangle(var8, var9, this.field_l, this.field_i, var7);
           if (var12.field_u) {
-            dma.a(var8, var9, var8 + this.field_l, this.field_i + var9, 1);
-            dma.a(var8 + this.field_l, var9, var8, this.field_i + var9, 1);
+            SoftwareRasterizer2D.drawLine(var8, var9, var8 + this.field_l, this.field_i + var9, 1);
+            SoftwareRasterizer2D.drawLine(var8 + this.field_l, var9, var8, this.field_i + var9, 1);
           }
           var10 = 49 % ((param0 + 27) / 35);
           if (null == this.field_j) {
             return;
           }
           var11 = this.field_l + this.field_d + this.field_m;
-          this.field_j.a(param1.field_j, var11 + (param2 + param1.field_g), this.field_c + param3 + param1.field_r, -this.field_m + (-var11 + param1.field_h), -(this.field_m << 1) + param1.field_f, this.field_g, this.field_h, this.field_b, this.field_e, 0);
+          this.field_j.drawParagraph(param1.field_j, var11 + (param2 + param1.field_g), this.field_c + param3 + param1.field_r, -this.field_m + (-var11 + param1.field_h), -(this.field_m << 1) + param1.field_f, this.field_g, this.field_h, this.field_b, this.field_e, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

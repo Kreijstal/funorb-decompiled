@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GpuFont extends ToolkitFont {
-    private mkb field_e;
+    private GpuVertexBuffer field_e;
     private boolean field_c;
     private eb field_d;
     private GpuToolkit toolkit;
@@ -179,7 +179,7 @@ final class GpuFont extends ToolkitFont {
               }
             }
           }
-          if (!param0.a(-26, GetMinimapWidth.field_p, mj.field_f)) {
+          if (!param0.a(-26, GetMinimapWidth.field_p, GpuDataType.field_f)) {
             var36 = new int[var35.length];
             var28 = var36;
             var8_ref_int__ = var28;
@@ -193,13 +193,13 @@ final class GpuFont extends ToolkitFont {
           this.field_c = true;
         }
         this.field_d.a(SetLagVariant.field_o, -28798);
-        this.field_e = param0.a(false, 3);
-        this.field_e.a(20, 20480, 96);
+        this.field_e = param0.createVertexBuffer(false, 3);
+        this.field_e.allocate(20, 20480, 96);
         var7 = 0;
         while (var7 < 4) {
-          var33 = this.field_e.a(true, (byte) 106);
+          var33 = this.field_e.lock(true, (byte) 106);
           if (var33 != null) {
-            var34 = this.toolkit.a(var33, false);
+            var34 = this.toolkit.getBufferWriter(var33, false);
             var10 = this.field_d.a((float)var6Lifetime1, -1080) / (float)var6Lifetime1;
             var11 = this.field_d.b((float)var6Lifetime1, 105) / (float)var6Lifetime1;
             var24 = 0;
@@ -262,7 +262,7 @@ final class GpuFont extends ToolkitFont {
               var24++;
             }
             var34.flush();
-            if (this.field_e.b(-20836)) {
+            if (this.field_e.unlock(-20836)) {
               return;
             }
           }
@@ -286,9 +286,9 @@ final class GpuFont extends ToolkitFont {
         var6 = this.toolkit.A(11);
         var6.setTranslation(param1, param2, (byte) -54, 0);
         this.toolkit.h(20837);
-        this.toolkit.a((byte) -6, this.field_e, 0);
-        this.toolkit.a(106, this.toolkit.field_Vb);
-        this.toolkit.a(bk.field_v, param0 * 4, 2, 56);
+        this.toolkit.setVertexBuffer((byte) -6, this.field_e, 0);
+        this.toolkit.setVertexDeclaration(106, this.toolkit.field_Vb);
+        this.toolkit.drawPrimitive(bk.field_v, param0 * 4, 2, 56);
         if (this.field_c ||
           param4) {
           this.toolkit.a(0, SetGrapplingHookMaxExtension8Force.field_q, 7);

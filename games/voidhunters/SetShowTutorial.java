@@ -55,14 +55,14 @@ final class SetShowTutorial extends ConsoleCommand {
             SetMassDriverProjectileLife.a(param6 << 24 | param4, (byte) 73, param3, param0, param5, param2);
             return;
           }
-          dma.b(param0, param3, param2, param5, param4, param6);
+          SoftwareRasterizer2D.drawLineAlpha(param0, param3, param2, param5, param4, param6);
           return;
         }
         if (li.field_i) {
           SetMassDriverProjectileLife.a(param6 << 24 | param4, (byte) 73, param3, param0, param5, param2);
           return;
         }
-        dma.b(param0, param3, param2, param5, param4, param6);
+        SoftwareRasterizer2D.drawLineAlpha(param0, param3, param2, param5, param4, param6);
     }
 
     static {

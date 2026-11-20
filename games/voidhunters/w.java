@@ -68,7 +68,7 @@ final class w extends dqa implements ln, oo {
           this.field_w.field_q = (wwa) ((Object) new vva());
           var7 = SetReverbGain.a(SetCountermeasuresPulsetime.field_o, new String[]{this.c(true), this.j((byte) -30)}, 81);
           var3 = 20;
-          var4 = new bob(SetShipToShipRamDamage.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, SetShipToShipRamDamage.field_o.field_k, -1, 2147483647, true);
+          var4 = new bob(SetShipToShipRamDamage.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, SetShipToShipRamDamage.field_o.maxAscent, -1, 2147483647, true);
           this.field_x = new kja(var7, var4);
           this.field_x.field_p = "";
           this.field_x.a(0, -1, SetBombletSprayProjectileDamage.field_q);

@@ -66,12 +66,12 @@ final class ShipBlueprint implements DiffableState {
           if (null == SetShipSpawnInvulnerabilityTime.field_o) {
             return false;
           }
-          int var2_int = SetShipSpawnInvulnerabilityTime.field_o.c(0);
+          int var2_int = SetShipSpawnInvulnerabilityTime.field_o.available(0);
           if (var2_int > 0) {
             if (var2_int > -qga.field_b.position + param0) {
               var2_int = param0 - qga.field_b.position;
             }
-            SetShipSpawnInvulnerabilityTime.field_o.a(param1 ^ -30026, qga.field_b.position, var2_int, qga.field_b.payload);
+            SetShipSpawnInvulnerabilityTime.field_o.readFully(param1 ^ -30026, qga.field_b.position, var2_int, qga.field_b.payload);
             cbb.field_q = wt.a(false);
             qga.field_b.position = qga.field_b.position + var2_int;
             if (param0 > qga.field_b.position) {

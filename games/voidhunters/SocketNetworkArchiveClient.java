@@ -3,12 +3,12 @@
  */
 import java.io.*;
 
-final class wh extends ona {
-    private lpb field_p;
-    static kb field_o;
+final class SocketNetworkArchiveClient extends NetworkArchiveClient {
+    private BufferedSocket connection;
+    static TextureFormat field_o;
     static int field_n;
 
-    final boolean e(int param0) {
+    final boolean processRequests(int param0) {
         try {
           int var2_int = 0;
           int stackIn_62_0 = 0;
@@ -35,97 +35,97 @@ final class wh extends ona {
           int var16 = 0;
           NetworkArchiveRequest var2Lifetime1;
           var16 = VoidHunters.field_G;
-          if (this.field_p != null) {
+          if (this.connection != null) {
             var2_long = wt.a(false);
-            var4 = (int)(var2_long - this.field_h);
+            var4 = (int)(var2_long - this.lastProcessTime);
             if (var4 > 200) {
               var4 = 200;
             }
-            this.field_h = var2_long;
-            this.field_m = this.field_m + var4;
-            if (this.field_m > 30000) {
+            this.lastProcessTime = var2_long;
+            this.idleMillis = this.idleMillis + var4;
+            if (this.idleMillis > 30000) {
               try {
-                this.field_p.b(param0 + 1);
+                this.connection.close(param0 + 1);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var5_ref_Exception = (Exception) (Object) decompiledCaughtException;
               }
-              this.field_p = null;
+              this.connection = null;
             }
           }
-          if (null == this.field_p) {
-            if (0 != this.f(param0 ^ 13223)) {
+          if (null == this.connection) {
+            if (0 != this.getPriorityRequestCount(param0 ^ 13223)) {
               return false;
             }
-            if (this.b(-3666) == 0) {
+            if (this.getBackgroundRequestCount(-3666) == 0) {
               return true;
             }
             return false;
           }
           try {
-            this.field_p.a((byte) 115);
-            var2 = (NetworkArchiveRequest) (this.field_a.a((byte) -54));
+            this.connection.checkWriteError((byte) 115);
+            var2 = (NetworkArchiveRequest) (this.priorityQueue.first((byte) -54));
             while (var2 != null) {
-              this.field_e.position = 0;
-              this.field_e.writeByte(0, 1);
-              this.field_e.writeLong40(117, var2.secondaryKey);
-              this.field_p.a(0, this.field_e.payload, this.field_e.payload.length, 0);
-              this.field_d.a(var2, -84);
-              var2 = (NetworkArchiveRequest) (this.field_a.a(param0 + 1900));
+              this.commandBuffer.position = 0;
+              this.commandBuffer.writeByte(0, 1);
+              this.commandBuffer.writeLong40(117, var2.secondaryKey);
+              this.connection.write(0, this.commandBuffer.payload, this.commandBuffer.payload.length, 0);
+              this.priorityInFlight.addLast(var2, -84);
+              var2 = (NetworkArchiveRequest) (this.priorityQueue.next(param0 + 1900));
             }
-            var2Lifetime1 = (NetworkArchiveRequest) (this.field_c.a((byte) -54));
+            var2Lifetime1 = (NetworkArchiveRequest) (this.backgroundQueue.first((byte) -54));
             while (var2Lifetime1 != null) {
-              this.field_e.position = 0;
-              this.field_e.writeByte(0, 0);
-              this.field_e.writeLong40(100, var2Lifetime1.secondaryKey);
-              this.field_p.a(0, this.field_e.payload, this.field_e.payload.length, 0);
-              this.field_f.a(var2Lifetime1, -65);
-              var2Lifetime1 = (NetworkArchiveRequest) (this.field_c.a(1900));
+              this.commandBuffer.position = 0;
+              this.commandBuffer.writeByte(0, 0);
+              this.commandBuffer.writeLong40(100, var2Lifetime1.secondaryKey);
+              this.connection.write(0, this.commandBuffer.payload, this.commandBuffer.payload.length, 0);
+              this.backgroundInFlight.addLast(var2Lifetime1, -65);
+              var2Lifetime1 = (NetworkArchiveRequest) (this.backgroundQueue.next(1900));
             }
             for (var2_int = param0; var2_int < 100; var2_int++) {
-              var3_int = this.field_p.c(0);
+              var3_int = this.connection.available(0);
               if (0 > var3_int) {
                 throw new IOException();
               }
               if (var3_int != 0) {
-                this.field_m = 0;
+                this.idleMillis = 0;
                 var4 = 0;
-                if (null == this.field_b) {
+                if (null == this.currentRequest) {
                   var4 = 10;
                 } else {
-                  if (this.field_b.field_r == 0) {
+                  if (this.currentRequest.blockPosition == 0) {
                     var4 = 1;
                   }
                 }
                 if (0 < var4) {
-                  var5 = -this.field_i.position + var4;
+                  var5 = -this.responseHeader.position + var4;
                   if (var5 > var3_int) {
                     var5 = var3_int;
                   }
-                  this.field_p.a(-122, this.field_i.position, var5, this.field_i.payload);
-                  if (0 != this.field_j) {
+                  this.connection.readFully(-122, this.responseHeader.position, var5, this.responseHeader.payload);
+                  if (0 != this.responseXorKey) {
                     for (var6 = 0; var6 < var5; var6++) {
-                      this.field_i.payload[this.field_i.position + var6] = (byte)SetFixedaim.a((int) this.field_i.payload[this.field_i.position + var6], (int) this.field_j);
+                      this.responseHeader.payload[this.responseHeader.position + var6] = (byte)SetFixedaim.a((int) this.responseHeader.payload[this.responseHeader.position + var6], (int) this.responseXorKey);
                     }
                   }
-                  this.field_i.position = this.field_i.position + var5;
-                  if (var4 <= this.field_i.position) {
-                    if (this.field_b != null) {
-                      if (0 != this.field_b.field_r) {
+                  this.responseHeader.position = this.responseHeader.position + var5;
+                  if (var4 <= this.responseHeader.position) {
+                    if (this.currentRequest != null) {
+                      if (0 != this.currentRequest.blockPosition) {
                         throw new IOException();
                       }
-                      if (this.field_i.payload[0] != -1) {
-                        this.field_b = null;
+                      if (this.responseHeader.payload[0] != -1) {
+                        this.currentRequest = null;
                       } else {
-                        this.field_i.position = 0;
-                        this.field_b.field_r = 1;
+                        this.responseHeader.position = 0;
+                        this.currentRequest.blockPosition = 1;
                       }
                     } else {
-                      this.field_i.position = 0;
-                      var6 = this.field_i.readUnsignedByte((byte) -126);
-                      var7 = this.field_i.readInt(125);
-                      var8 = this.field_i.readUnsignedByte((byte) -125);
-                      var9 = this.field_i.readInt(24);
+                      this.responseHeader.position = 0;
+                      var6 = this.responseHeader.readUnsignedByte((byte) -126);
+                      var7 = this.responseHeader.readInt(125);
+                      var8 = this.responseHeader.readUnsignedByte((byte) -125);
+                      var9 = this.responseHeader.readInt(24);
                       var10 = var8 & 127;
                       stackIn_62_0 = ((128 & var8) == 0) ? 0 : 1;
                       boolean decompiledFrameRemainder0 = true;
@@ -134,24 +134,24 @@ final class wh extends ona {
                       var12 = (long)var7 + ((long)var6 << 32);
                       var14 = null;
                       if (var11 == 0) {
-                        var14_ref = (NetworkArchiveRequest) (this.field_d.a((byte) -54));
+                        var14_ref = (NetworkArchiveRequest) (this.priorityInFlight.first((byte) -54));
                         while (var14_ref != null) {
                           if (~var14_ref.secondaryKey == ~var12) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
-                          var14_ref = (NetworkArchiveRequest) (this.field_d.a(1900));
+                          var14_ref = (NetworkArchiveRequest) (this.priorityInFlight.next(1900));
                         }
                         decompiledFrameRemainder0 = !(decompiledFrameCompleted0);
                       }
                       if ((decompiledFrameRemainder0) &&
                         (decompiledFrameCompleted0)) {
-                        var14_ref = (NetworkArchiveRequest) (this.field_f.a((byte) -54));
+                        var14_ref = (NetworkArchiveRequest) (this.backgroundInFlight.first((byte) -54));
                         while (var14_ref != null) {
                           if (var14_ref.secondaryKey == var12) {
                             break;
                           }
-                          var14_ref = (NetworkArchiveRequest) (this.field_f.a(1900));
+                          var14_ref = (NetworkArchiveRequest) (this.backgroundInFlight.next(1900));
                         }
                       }
                       if (var14_ref == null) {
@@ -159,39 +159,39 @@ final class wh extends ona {
                       }
                       stackIn_78_0 = (var10 != 0) ? 9 : 5;
                       var15 = stackIn_78_0;
-                      this.field_b = var14_ref;
-                      this.field_b.buffer = new PacketBuffer(this.field_b.padding + var9 + var15);
-                      this.field_b.buffer.writeByte(0, var10);
-                      this.field_b.buffer.writeInt(var9, param0 + 332614536);
-                      this.field_i.position = 0;
-                      this.field_b.field_r = 10;
+                      this.currentRequest = var14_ref;
+                      this.currentRequest.buffer = new PacketBuffer(this.currentRequest.padding + var9 + var15);
+                      this.currentRequest.buffer.writeByte(0, var10);
+                      this.currentRequest.buffer.writeInt(var9, param0 + 332614536);
+                      this.responseHeader.position = 0;
+                      this.currentRequest.blockPosition = 10;
                     }
                   }
                 } else {
-                  var5 = -this.field_b.padding + this.field_b.buffer.payload.length;
-                  var6 = 512 - this.field_b.field_r;
-                  if (var6 > var5 - this.field_b.buffer.position) {
-                    var6 = -this.field_b.buffer.position + var5;
+                  var5 = -this.currentRequest.padding + this.currentRequest.buffer.payload.length;
+                  var6 = 512 - this.currentRequest.blockPosition;
+                  if (var6 > var5 - this.currentRequest.buffer.position) {
+                    var6 = -this.currentRequest.buffer.position + var5;
                   }
                   if (var6 > var3_int) {
                     var6 = var3_int;
                   }
-                  this.field_p.a(param0 ^ -126, this.field_b.buffer.position, var6, this.field_b.buffer.payload);
-                  if (this.field_j != 0) {
+                  this.connection.readFully(param0 ^ -126, this.currentRequest.buffer.position, var6, this.currentRequest.buffer.payload);
+                  if (this.responseXorKey != 0) {
                     for (var7 = 0; var7 < var6; var7++) {
-                      this.field_b.buffer.payload[var7 + this.field_b.buffer.position] = (byte)SetFixedaim.a((int) this.field_b.buffer.payload[var7 + this.field_b.buffer.position], (int) this.field_j);
+                      this.currentRequest.buffer.payload[var7 + this.currentRequest.buffer.position] = (byte)SetFixedaim.a((int) this.currentRequest.buffer.payload[var7 + this.currentRequest.buffer.position], (int) this.responseXorKey);
                     }
                   }
-                  this.field_b.field_r = this.field_b.field_r + var6;
-                  this.field_b.buffer.position = this.field_b.buffer.position + var6;
-                  if (var5 != this.field_b.buffer.position) {
-                    if (this.field_b.field_r == 512) {
-                      this.field_b.field_r = 0;
+                  this.currentRequest.blockPosition = this.currentRequest.blockPosition + var6;
+                  this.currentRequest.buffer.position = this.currentRequest.buffer.position + var6;
+                  if (var5 != this.currentRequest.buffer.position) {
+                    if (this.currentRequest.blockPosition == 512) {
+                      this.currentRequest.blockPosition = 0;
                     }
                   } else {
-                    this.field_b.unlinkSecondary((byte) -35);
-                    this.field_b.pending = false;
-                    this.field_b = null;
+                    this.currentRequest.unlinkSecondary((byte) -35);
+                    this.currentRequest.pending = false;
+                    this.currentRequest = null;
                   }
                 }
                 continue;
@@ -203,16 +203,16 @@ final class wh extends ona {
             decompiledCaughtException = decompiledCaughtParameter1;
             var2_ref = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_p.b(1);
+              this.connection.close(1);
             } catch (java.lang.Exception decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var3 = (Exception) (Object) decompiledCaughtException;
             }
-            this.field_g = this.field_g + 1;
-            this.field_p = null;
-            this.field_k = -2;
-            if (this.f(13223) == 0 &&
-              this.b(param0 - 3666) == 0) {
+            this.errorCount = this.errorCount + 1;
+            this.connection = null;
+            this.errorStatus = -2;
+            if (this.getPriorityRequestCount(13223) == 0 &&
+              this.getBackgroundRequestCount(param0 - 3666) == 0) {
               return true;
             }
             return false;
@@ -224,7 +224,7 @@ final class wh extends ona {
         }
     }
 
-    private final void a(byte param0, boolean param1) {
+    private final void sendConnectionMode(byte param0, boolean param1) {
         try {
           IOException iOException = null;
           PacketBuffer stackIn_6_0 = null;
@@ -235,12 +235,12 @@ final class wh extends ona {
           if (param0 != -65) {
             return;
           }
-          if (this.field_p == null) {
+          if (this.connection == null) {
             return;
           }
           try {
-            this.field_e.position = 0;
-            stackIn_6_0 = this.field_e;
+            this.commandBuffer.position = 0;
+            stackIn_6_0 = this.commandBuffer;
             stackIn_6_1 = 0;
             if (param1) {
               stackIn_7_2 = 2;
@@ -248,20 +248,20 @@ final class wh extends ona {
               stackIn_7_2 = 3;
             }
             ((PacketBuffer) (Object) stackIn_6_0).writeByte(stackIn_6_1, stackIn_7_2);
-            this.field_e.writeLong40(param0 ^ -50, 0L);
-            this.field_p.a(0, this.field_e.payload, this.field_e.payload.length, 0);
+            this.commandBuffer.writeLong40(param0 ^ -50, 0L);
+            this.connection.write(0, this.commandBuffer.payload, this.commandBuffer.payload.length, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_p.b(1);
+              this.connection.close(1);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var4 = (Exception) (Object) decompiledCaughtException;
             }
-            this.field_k = -2;
-            this.field_g = this.field_g + 1;
-            this.field_p = null;
+            this.errorStatus = -2;
+            this.errorCount = this.errorCount + 1;
+            this.connection = null;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -273,36 +273,36 @@ final class wh extends ona {
     public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 0) {
-          wh.g(-53);
+          SocketNetworkArchiveClient.g(-53);
         }
     }
 
-    private final void i(int param0) {
+    private final void sendConnectionInit(int param0) {
         try {
           IOException iOException = null;
           Throwable decompiledCaughtException = null;
           Exception var3 = null;
-          if (this.field_p == null) {
+          if (this.connection == null) {
             return;
           }
           try {
-            this.field_e.position = 0;
-            this.field_e.writeByte(0, 6);
-            this.field_e.writeMedium(3, (byte) 125);
-            this.field_e.writeShort(0, true);
-            this.field_p.a(param0 ^ param0, this.field_e.payload, this.field_e.payload.length, 0);
+            this.commandBuffer.position = 0;
+            this.commandBuffer.writeByte(0, 6);
+            this.commandBuffer.writeMedium(3, (byte) 125);
+            this.commandBuffer.writeShort(0, true);
+            this.connection.write(param0 ^ param0, this.commandBuffer.payload, this.commandBuffer.payload.length, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             iOException = (IOException) (Object) decompiledCaughtException;
             try {
-              this.field_p.b(1);
+              this.connection.close(1);
             } catch (java.lang.Exception decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
               var3 = (Exception) (Object) decompiledCaughtException;
             }
-            this.field_g = this.field_g + 1;
-            this.field_p = null;
-            this.field_k = -2;
+            this.errorCount = this.errorCount + 1;
+            this.connection = null;
+            this.errorStatus = -2;
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -311,27 +311,27 @@ final class wh extends ona {
         }
     }
 
-    public wh() {
+    public SocketNetworkArchiveClient() {
     }
 
-    final void a(byte param0) {
+    final void resetAfterValidationFailure(byte param0) {
         try {
-          this.field_p.b(1);
+          this.connection.close(1);
         } catch (Exception exception) {
         }
-        this.field_g = this.field_g + 1;
-        this.field_p = null;
-        this.field_k = -1;
+        this.errorCount = this.errorCount + 1;
+        this.connection = null;
+        this.errorStatus = -1;
         if (param0 != -25) {
-          field_o = (kb) null;
+          field_o = (TextureFormat) null;
         }
-        this.field_j = (byte)(int)(Math.random() * 255.0 + 1.0);
+        this.responseXorKey = (byte)(int)(Math.random() * 255.0 + 1.0);
     }
 
     final static boolean g(int param0) {
         boolean stackIn_6_0 = false;
         if (param0 > -113) {
-          wh.a(-4, (byte) 35, 31);
+          SocketNetworkArchiveClient.a(-4, (byte) 35, 31);
         }
         stackIn_6_0 = (null != SetShipSpawnInvulnerabilityTime.field_o) && (GetOndamageParticleSpeed.field_o == tc.field_c);
         return stackIn_6_0;
@@ -340,22 +340,22 @@ final class wh extends ona {
     final static boolean a(int param0, byte param1, int param2) {
         boolean stackIn_6_0 = false;
         if (param1 < 90) {
-          field_o = (kb) null;
+          field_o = (TextureFormat) null;
         }
         stackIn_6_0 = ((2048 & param2) != 0) && (0 != (55 & param0));
         return stackIn_6_0;
     }
 
-    final void a(int param0) {
+    final void close(int param0) {
         if (param0 <= 105) {
           field_n = 115;
         }
-        if (null != this.field_p) {
-          this.field_p.b(1);
+        if (null != this.connection) {
+          this.connection.close(1);
         }
     }
 
-    final void a(Object param0, boolean param1, boolean param2) {
+    final void setConnection(Object param0, boolean param1, boolean param2) {
         try {
           RuntimeException stackIn_27_0 = null;
           StringBuilder stackIn_27_1 = null;
@@ -370,62 +370,62 @@ final class wh extends ona {
           NetworkArchiveRequest var4_refLifetime1;
           var6 = VoidHunters.field_G;
           try {
-            if (null != this.field_p) {
+            if (null != this.connection) {
               try {
-                this.field_p.b(1);
+                this.connection.close(1);
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 var4 = (Exception) (Object) decompiledCaughtException;
               }
-              this.field_p = null;
+              this.connection = null;
             }
-            this.field_p = (lpb) (param0);
-            this.i(7571);
-            this.a((byte) -65, param1);
-            this.field_b = null;
-            this.field_i.position = 0;
+            this.connection = (BufferedSocket) (param0);
+            this.sendConnectionInit(7571);
+            this.sendConnectionMode((byte) -65, param1);
+            this.currentRequest = null;
+            this.responseHeader.position = 0;
             while (true) {
-              var4_ref = (NetworkArchiveRequest) (this.field_d.b((byte) 87));
+              var4_ref = (NetworkArchiveRequest) (this.priorityInFlight.removeFirst((byte) 87));
               if (var4_ref != null) {
-                this.field_a.a(var4_ref, -116);
+                this.priorityQueue.addLast(var4_ref, -116);
                 continue;
               }
               break;
             }
             while (true) {
-              var4_refLifetime1 = (NetworkArchiveRequest) (this.field_f.b((byte) 109));
+              var4_refLifetime1 = (NetworkArchiveRequest) (this.backgroundInFlight.removeFirst((byte) 109));
               if (var4_refLifetime1 != null) {
-                this.field_c.a(var4_refLifetime1, -86);
+                this.backgroundQueue.addLast(var4_refLifetime1, -86);
                 continue;
               }
               break;
             }
-            if (0 != this.field_j) {
+            if (0 != this.responseXorKey) {
               try {
-                this.field_e.position = 0;
-                this.field_e.writeByte(0, 4);
-                this.field_e.writeByte(0, (int) this.field_j);
-                this.field_e.writeInt(0, 332614536);
-                this.field_p.a(0, this.field_e.payload, this.field_e.payload.length, 0);
+                this.commandBuffer.position = 0;
+                this.commandBuffer.writeByte(0, 4);
+                this.commandBuffer.writeByte(0, (int) this.responseXorKey);
+                this.commandBuffer.writeInt(0, 332614536);
+                this.connection.write(0, this.commandBuffer.payload, this.commandBuffer.payload.length, 0);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;
                 var4_ref2 = (IOException) (Object) decompiledCaughtException;
                 try {
-                  this.field_p.b(1);
+                  this.connection.close(1);
                 } catch (java.lang.Exception decompiledCaughtParameter2) {
                   decompiledCaughtException = decompiledCaughtParameter2;
                   var5 = (Exception) (Object) decompiledCaughtException;
                 }
-                this.field_p = null;
-                this.field_g = this.field_g + 1;
-                this.field_k = -2;
+                this.connection = null;
+                this.errorCount = this.errorCount + 1;
+                this.errorStatus = -2;
               }
             }
-            this.field_m = 0;
+            this.idleMillis = 0;
             if (param2) {
-              wh.clearSharedReferences(-98);
+              SocketNetworkArchiveClient.clearSharedReferences(-98);
             }
-            this.field_h = wt.a(param2);
+            this.lastProcessTime = wt.a(param2);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter3) {
             decompiledCaughtException = decompiledCaughtParameter3;
@@ -447,7 +447,7 @@ final class wh extends ona {
     }
 
     static {
-        field_o = new kb(2);
+        field_o = new TextureFormat(2);
         field_n = 0;
     }
 }

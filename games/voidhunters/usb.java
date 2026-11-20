@@ -475,19 +475,19 @@ final class usb extends oda {
         int var9 = 0;
         int var10 = 0;
         try {
-          var7_int = param1.b(param2);
-          var8 = param1.field_A + param1.field_o;
+          var7_int = param1.getStringWidth(param2);
+          var8 = param1.maxDescent + param1.capHeight;
           var9 = param3;
-          if (dma.field_g < var7_int + (var9 + 6)) {
-            var9 = -var7_int + (dma.field_g - 6);
+          if (SoftwareRasterizer2D.width < var7_int + (var9 + 6)) {
+            var9 = -var7_int + (SoftwareRasterizer2D.width - 6);
           }
-          var10 = 32 + (-param1.field_o + param0);
-          if (dma.field_j < var8 + var10 + 6) {
-            var10 = -var8 + (dma.field_j - 6);
+          var10 = 32 + (-param1.capHeight + param0);
+          if (SoftwareRasterizer2D.height < var8 + var10 + 6) {
+            var10 = -var8 + (SoftwareRasterizer2D.height - 6);
           }
-          dma.b(var9, var10, 6 + var7_int, 6 + var8, param5);
-          dma.d(param4 + var9, var10 + 1, 4 + var7_int, var8 + 4, param6);
-          param1.c(param2, 3 + var9, param1.field_o + (var10 + 3), param5, -1);
+          SoftwareRasterizer2D.drawRectangle(var9, var10, 6 + var7_int, 6 + var8, param5);
+          SoftwareRasterizer2D.fillRectangle(param4 + var9, var10 + 1, 4 + var7_int, var8 + 4, param6);
+          param1.draw(param2, 3 + var9, param1.capHeight + (var10 + 3), param5, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

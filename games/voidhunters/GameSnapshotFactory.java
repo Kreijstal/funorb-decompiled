@@ -63,7 +63,7 @@ final class GameSnapshotFactory implements GameStateFactory {
               if (param1 != -77) {
                 GameSnapshotFactory.clearSharedReferences(34);
               }
-              return SpriteDimensions.a(param0, 102, param2);
+              return SpriteDimensions.atan2Angle(param0, 102, param2);
             }
           } else {
             param2 = param2 >> 16;
@@ -99,7 +99,7 @@ final class GameSnapshotFactory implements GameStateFactory {
               if (param1 != -77) {
                 GameSnapshotFactory.clearSharedReferences(34);
               }
-              return SpriteDimensions.a(param0, 102, param2);
+              return SpriteDimensions.atan2Angle(param0, 102, param2);
             }
           } else {
             param0 = param0 >> 4;
@@ -119,7 +119,7 @@ final class GameSnapshotFactory implements GameStateFactory {
             if (param1 != -77) {
               GameSnapshotFactory.clearSharedReferences(34);
             }
-            return SpriteDimensions.a(param0, 102, param2);
+            return SpriteDimensions.atan2Angle(param0, 102, param2);
           }
           param0 = param0 >> 1;
           param2 = param2 >> 1;
@@ -162,7 +162,7 @@ final class GameSnapshotFactory implements GameStateFactory {
                 if (param1 != -77) {
                   GameSnapshotFactory.clearSharedReferences(34);
                 }
-                return SpriteDimensions.a(param0, 102, param2);
+                return SpriteDimensions.atan2Angle(param0, 102, param2);
               }
             } else {
               param2 = param2 >> 16;
@@ -198,7 +198,7 @@ final class GameSnapshotFactory implements GameStateFactory {
                 if (param1 != -77) {
                   GameSnapshotFactory.clearSharedReferences(34);
                 }
-                return SpriteDimensions.a(param0, 102, param2);
+                return SpriteDimensions.atan2Angle(param0, 102, param2);
               }
             } else {
               param0 = param0 >> 4;
@@ -218,7 +218,7 @@ final class GameSnapshotFactory implements GameStateFactory {
               if (param1 != -77) {
                 GameSnapshotFactory.clearSharedReferences(34);
               }
-              return SpriteDimensions.a(param0, 102, param2);
+              return SpriteDimensions.atan2Angle(param0, 102, param2);
             }
             param0 = param0 >> 1;
             param2 = param2 >> 1;
@@ -260,7 +260,7 @@ final class GameSnapshotFactory implements GameStateFactory {
                       if (param1 != -77) {
                         GameSnapshotFactory.clearSharedReferences(34);
                       }
-                      return SpriteDimensions.a(param0, 102, param2);
+                      return SpriteDimensions.atan2Angle(param0, 102, param2);
                     }
                   } else {
                     param0 = param0 >> 4;
@@ -281,10 +281,10 @@ final class GameSnapshotFactory implements GameStateFactory {
                     param2 = param2 >> 1;
                   }
                   if (param1 == -77) {
-                    return SpriteDimensions.a(param0, 102, param2);
+                    return SpriteDimensions.atan2Angle(param0, 102, param2);
                   }
                   GameSnapshotFactory.clearSharedReferences(34);
-                  return SpriteDimensions.a(param0, 102, param2);
+                  return SpriteDimensions.atan2Angle(param0, 102, param2);
                 }
               } else {
                 param2 = param2 >> 16;
@@ -318,10 +318,10 @@ final class GameSnapshotFactory implements GameStateFactory {
                     param2 = param2 >> 1;
                   }
                   if (param1 == -77) {
-                    return SpriteDimensions.a(param0, 102, param2);
+                    return SpriteDimensions.atan2Angle(param0, 102, param2);
                   }
                   GameSnapshotFactory.clearSharedReferences(34);
-                  return SpriteDimensions.a(param0, 102, param2);
+                  return SpriteDimensions.atan2Angle(param0, 102, param2);
                 }
               } else {
                 param0 = param0 >> 4;
@@ -339,10 +339,10 @@ final class GameSnapshotFactory implements GameStateFactory {
                 16384 > param0 &&
                 param0 >= -16384) {
                 if (param1 == -77) {
-                  return SpriteDimensions.a(param0, 102, param2);
+                  return SpriteDimensions.atan2Angle(param0, 102, param2);
                 }
                 GameSnapshotFactory.clearSharedReferences(34);
-                return SpriteDimensions.a(param0, 102, param2);
+                return SpriteDimensions.atan2Angle(param0, 102, param2);
               }
               param0 = param0 >> 1;
               param2 = param2 >> 1;
@@ -385,7 +385,7 @@ final class GameSnapshotFactory implements GameStateFactory {
                     if (param1 != -77) {
                       GameSnapshotFactory.clearSharedReferences(34);
                     }
-                    return SpriteDimensions.a(param0, 102, param2);
+                    return SpriteDimensions.atan2Angle(param0, 102, param2);
                   }
                 } else {
                   param0 = param0 >> 4;
@@ -406,19 +406,19 @@ final class GameSnapshotFactory implements GameStateFactory {
                   param2 = param2 >> 1;
                 }
                 if (param1 == -77) {
-                  return SpriteDimensions.a(param0, 102, param2);
+                  return SpriteDimensions.atan2Angle(param0, 102, param2);
                 }
                 GameSnapshotFactory.clearSharedReferences(34);
-                return SpriteDimensions.a(param0, 102, param2);
+                return SpriteDimensions.atan2Angle(param0, 102, param2);
               }
             }
           }
         }
         if (param1 == -77) {
-          return SpriteDimensions.a(param0, 102, param2);
+          return SpriteDimensions.atan2Angle(param0, 102, param2);
         }
         GameSnapshotFactory.clearSharedReferences(34);
-        return SpriteDimensions.a(param0, 102, param2);
+        return SpriteDimensions.atan2Angle(param0, 102, param2);
     }
 
     static {

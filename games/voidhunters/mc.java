@@ -116,7 +116,7 @@ abstract class mc extends shb implements nea {
     final static void a(int param0, boolean param1) {
         if (!(SoftwareTransform3D.field_b <= 0) &&
           bv.field_d) {
-          dma.e(0, 0, dma.field_g, SetToggledScoreboard.field_o.field_u);
+          SoftwareRasterizer2D.darkenRectangle(0, 0, SoftwareRasterizer2D.width, SetToggledScoreboard.field_o.field_u);
           GetTorpedoProjectiles.field_o.b(param1, 45);
         }
         if (param0 >= -117) {
@@ -125,7 +125,7 @@ abstract class mc extends shb implements nea {
         }
         if ((CarouselPlayerEventFactory.field_a > 0 || SetExplosionPushMultiplier.field_p > 0) &&
           GetTorpedoProjectileDamage.field_o) {
-          dma.e(0, 0, dma.field_g, SetToggledScoreboard.field_o.field_u);
+          SoftwareRasterizer2D.darkenRectangle(0, 0, SoftwareRasterizer2D.width, SetToggledScoreboard.field_o.field_u);
           SetUseCircleFill.field_o.b(param1, -91);
         }
     }

@@ -77,14 +77,14 @@ final class SetPedrosRepairModeSwitchtime extends ConsoleCommand {
     final static void e(byte param0) {
         if (param0 > 6) {
           if (uga.field_d) {
-            dma.e(dma.field_d, dma.field_c, -dma.field_d + dma.field_a, -dma.field_c + dma.field_f);
+            SoftwareRasterizer2D.darkenRectangle(SoftwareRasterizer2D.clipLeft, SoftwareRasterizer2D.clipTop, -SoftwareRasterizer2D.clipLeft + SoftwareRasterizer2D.clipRight, -SoftwareRasterizer2D.clipTop + SoftwareRasterizer2D.clipBottom);
             GetGrapplingHookFireForce.field_o.b(false, -111);
           }
           return;
         }
         SetPedrosRepairModeSwitchtime.a(76);
         if (uga.field_d) {
-          dma.e(dma.field_d, dma.field_c, -dma.field_d + dma.field_a, -dma.field_c + dma.field_f);
+          SoftwareRasterizer2D.darkenRectangle(SoftwareRasterizer2D.clipLeft, SoftwareRasterizer2D.clipTop, -SoftwareRasterizer2D.clipLeft + SoftwareRasterizer2D.clipRight, -SoftwareRasterizer2D.clipTop + SoftwareRasterizer2D.clipBottom);
           GetGrapplingHookFireForce.field_o.b(false, -111);
         }
     }

@@ -51,7 +51,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           if (param0 < 54) {
             this.b(116);
           }
-          var3.asteroids = (Asteroid[]) (SpriteDimensions.a(var3.asteroids, this.asteroids, 1, tob.field_o, false));
+          var3.asteroids = (Asteroid[]) (SpriteDimensions.copyStateArrayByMode(var3.asteroids, this.asteroids, 1, tob.field_o, false));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1001,7 +1001,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime116 = dqb.a((byte) -77, "COMPONENT_USE_WEAPON_FIGHTERBAY_TEXT");
           if (var2Lifetime116 != null) {
-            pb.field_n = qpa.a((byte) -125, var2Lifetime116);
+            VertexAttribute.field_n = qpa.a((byte) -125, var2Lifetime116);
           }
           var2Lifetime117 = dqb.a((byte) -77, "COMPONENT_USE_WEAPON_SPINNING_BLADE_TEXT");
           if (var2Lifetime117 != null) {
@@ -1928,7 +1928,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
             AsteroidField.a((byte) 0, (String) null, -53, 66, 33);
           }
           if (!li.field_i) {
-            stackIn_7_0 = ita.a(param3, param0 + 8025).b(param1, param4, param2);
+            stackIn_7_0 = ita.a(param3, param0 + 8025).getParagraphHeight(param1, param4, param2);
             return stackIn_7_0;
           }
           stackIn_5_0 = SetTorpedoEnergyUsed.a(param3, 300).a(param1, param2, param4, (byte) 112, (ToolkitSprite[]) null);

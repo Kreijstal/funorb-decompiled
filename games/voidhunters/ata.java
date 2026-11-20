@@ -34,12 +34,12 @@ final class ata extends htb {
         Throwable decompiledCaughtException = null;
         var1_ref = GetMomentOfInertiaPerpointCalcDownshift.field_q;
         synchronized (var1_ref) {
-          if (MessageLog.field_a == bva.field_c) {
+          if (MessageLog.field_a == OpenGlVertexDeclaration.field_c) {
             return false;
           }
-          SetBombletSprayProjectileDamage.field_o = ServerTickFactory.field_a[bva.field_c];
-          SetClientSideDragging.field_r = GetGrapplingHookCooldown.field_q[bva.field_c];
-          bva.field_c = param0 & bva.field_c + 1;
+          SetBombletSprayProjectileDamage.field_o = ServerTickFactory.field_a[OpenGlVertexDeclaration.field_c];
+          SetClientSideDragging.field_r = GetGrapplingHookCooldown.field_q[OpenGlVertexDeclaration.field_c];
+          OpenGlVertexDeclaration.field_c = param0 & OpenGlVertexDeclaration.field_c + 1;
           stackIn_5_0 = true;
         }
         return stackIn_5_0;

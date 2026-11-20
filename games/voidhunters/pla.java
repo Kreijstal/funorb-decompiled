@@ -27,82 +27,82 @@ final class pla extends htb {
         qrb var8 = this.field_C.a((byte) 35);
         if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p == var8) {
           var15 = ByteStorage.field_a[0];
-          var9 = var15.field_m << 1;
-          var10 = var15.field_n << 1;
+          var9 = var15.paddedWidth << 1;
+          var10 = var15.paddedHeight << 1;
           if (GetWeaponProjectileSpeedMultiply.field_o == null) {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9, var10);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
-            var15.b(112, 144, var15.field_m << 4, var15.field_n << 4, -this.field_B << 10, 4096);
+            var15.drawRotatedScaledBilinear(112, 144, var15.paddedWidth << 4, var15.paddedHeight << 4, -this.field_B << 10, 4096);
             bia.a((byte) 124);
-            GetWeaponProjectileSpeedMultiply.field_o.c(-var15.field_m + var5, -var15.field_n + var6, 256);
+            GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var15.paddedWidth + var5, -var15.paddedHeight + var6, 256);
             return;
           }
-          if (GetWeaponProjectileSpeedMultiply.field_o.field_q < var9) {
+          if (GetWeaponProjectileSpeedMultiply.field_o.width < var9) {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9, var10);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
-            var15.b(112, 144, var15.field_m << 4, var15.field_n << 4, -this.field_B << 10, 4096);
+            var15.drawRotatedScaledBilinear(112, 144, var15.paddedWidth << 4, var15.paddedHeight << 4, -this.field_B << 10, 4096);
             bia.a((byte) 124);
-            GetWeaponProjectileSpeedMultiply.field_o.c(-var15.field_m + var5, -var15.field_n + var6, 256);
+            GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var15.paddedWidth + var5, -var15.paddedHeight + var6, 256);
             return;
           }
-          if (var10 > GetWeaponProjectileSpeedMultiply.field_o.field_p) {
+          if (var10 > GetWeaponProjectileSpeedMultiply.field_o.height) {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9, var10);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
-            var15.b(112, 144, var15.field_m << 4, var15.field_n << 4, -this.field_B << 10, 4096);
+            var15.drawRotatedScaledBilinear(112, 144, var15.paddedWidth << 4, var15.paddedHeight << 4, -this.field_B << 10, 4096);
             bia.a((byte) 124);
-            GetWeaponProjectileSpeedMultiply.field_o.c(-var15.field_m + var5, -var15.field_n + var6, 256);
+            GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var15.paddedWidth + var5, -var15.paddedHeight + var6, 256);
             return;
           }
           SetTorpedoEnergyUsed.a(85, GetWeaponProjectileSpeedMultiply.field_o);
-          dma.a();
-          var15.b(112, 144, var15.field_m << 4, var15.field_n << 4, -this.field_B << 10, 4096);
+          SoftwareRasterizer2D.clear();
+          var15.drawRotatedScaledBilinear(112, 144, var15.paddedWidth << 4, var15.paddedHeight << 4, -this.field_B << 10, 4096);
           bia.a((byte) 124);
-          GetWeaponProjectileSpeedMultiply.field_o.c(-var15.field_m + var5, -var15.field_n + var6, 256);
+          GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var15.paddedWidth + var5, -var15.paddedHeight + var6, 256);
           return;
         }
         if (SetFighterRepairTime.field_q == var8) {
           var16 = ByteStorage.field_a[0];
-          var9Lifetime1 = var16.field_m << 1;
-          var10Lifetime1 = var16.field_n << 1;
+          var9Lifetime1 = var16.paddedWidth << 1;
+          var10Lifetime1 = var16.paddedHeight << 1;
           if (GetWeaponProjectileSpeedMultiply.field_o == null) {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
-            var16.b(112, 144, var16.field_m << 4, var16.field_n << 4, -this.field_B << 10, 4096);
+            var16.drawRotatedScaledBilinear(112, 144, var16.paddedWidth << 4, var16.paddedHeight << 4, -this.field_B << 10, 4096);
             bia.a((byte) 124);
-            GetWeaponProjectileSpeedMultiply.field_o.c(-var16.field_m + var5, -var16.field_n + var6, 256);
+            GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var16.paddedWidth + var5, -var16.paddedHeight + var6, 256);
             return;
           }
-          if (GetWeaponProjectileSpeedMultiply.field_o.field_q < var9Lifetime1) {
+          if (GetWeaponProjectileSpeedMultiply.field_o.width < var9Lifetime1) {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
-            var16.b(112, 144, var16.field_m << 4, var16.field_n << 4, -this.field_B << 10, 4096);
+            var16.drawRotatedScaledBilinear(112, 144, var16.paddedWidth << 4, var16.paddedHeight << 4, -this.field_B << 10, 4096);
             bia.a((byte) 124);
-            GetWeaponProjectileSpeedMultiply.field_o.c(-var16.field_m + var5, -var16.field_n + var6, 256);
+            GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var16.paddedWidth + var5, -var16.paddedHeight + var6, 256);
             return;
           }
-          if (var10Lifetime1 > GetWeaponProjectileSpeedMultiply.field_o.field_p) {
+          if (var10Lifetime1 > GetWeaponProjectileSpeedMultiply.field_o.height) {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
             SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
-            var16.b(112, 144, var16.field_m << 4, var16.field_n << 4, -this.field_B << 10, 4096);
+            var16.drawRotatedScaledBilinear(112, 144, var16.paddedWidth << 4, var16.paddedHeight << 4, -this.field_B << 10, 4096);
             bia.a((byte) 124);
-            GetWeaponProjectileSpeedMultiply.field_o.c(-var16.field_m + var5, -var16.field_n + var6, 256);
+            GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var16.paddedWidth + var5, -var16.paddedHeight + var6, 256);
             return;
           }
           SetTorpedoEnergyUsed.a(85, GetWeaponProjectileSpeedMultiply.field_o);
-          dma.a();
-          var16.b(112, 144, var16.field_m << 4, var16.field_n << 4, -this.field_B << 10, 4096);
+          SoftwareRasterizer2D.clear();
+          var16.drawRotatedScaledBilinear(112, 144, var16.paddedWidth << 4, var16.paddedHeight << 4, -this.field_B << 10, 4096);
           bia.a((byte) 124);
-          GetWeaponProjectileSpeedMultiply.field_o.c(-var16.field_m + var5, -var16.field_n + var6, 256);
+          GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var16.paddedWidth + var5, -var16.paddedHeight + var6, 256);
           return;
         }
         if (var8 == SetArmageddonLength.field_o) {
           var13 = ByteStorage.field_a[2];
-          var13.c(var5 - (var13.field_q >> 1), var6 - (var13.field_p >> 1), 256);
+          var13.drawAdditive(var5 - (var13.width >> 1), var6 - (var13.height >> 1), 256);
           return;
         }
         if (GetShipPersistence.field_o == var8) {
           var12 = ByteStorage.field_a[1];
-          var12.c(var5 - (var12.field_q >> 1), var6 - (var12.field_p >> 1), 256);
+          var12.drawAdditive(var5 - (var12.width >> 1), var6 - (var12.height >> 1), 256);
           return;
         }
     }

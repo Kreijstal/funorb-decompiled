@@ -37,7 +37,7 @@ final class jeb extends mfb {
 
     final int a(byte param0) {
         int var2 = -96 / ((-48 - param0) / 43);
-        return mq.field_j;
+        return OpenGlIndexBuffer.field_j;
     }
 
     final int f(byte param0) {

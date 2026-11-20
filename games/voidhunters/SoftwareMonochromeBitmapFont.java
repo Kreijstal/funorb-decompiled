@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class arb extends BitmapFont {
-    private byte[][] field_I;
+final class SoftwareMonochromeBitmapFont extends BitmapFont {
+    private byte[][] glyphMasks;
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    final static void blitMask(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var10 = 0;
         int var9;
         int var11;
@@ -46,7 +46,7 @@ final class arb extends BitmapFont {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
+    private final static void blitMaskedGlyph(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int[] param11, int[] param12) {
         int var15 = 0;
         int var20 = 0;
         int incrementValue$1 = 0;
@@ -57,8 +57,8 @@ final class arb extends BitmapFont {
         int var18;
         int var19;
         int var19Lifetime1;
-        var13 = param2 - dma.field_d;
-        var14 = param3 - dma.field_c;
+        var13 = param2 - SoftwareRasterizer2D.clipLeft;
+        var14 = param3 - SoftwareRasterizer2D.clipTop;
         for (var15 = var14; var15 < var14 + param5; var15++) {
           boolean decompiledFrameRemainder0 = true;
           var16 = param11[var15];
@@ -100,7 +100,7 @@ final class arb extends BitmapFont {
               } else {
                 incrementValue$1 = param8;
                 param8++;
-                dma.field_i[incrementValue$1] = param6;
+                SoftwareRasterizer2D.pixels[incrementValue$1] = param6;
               }
             }
             param7 = param7 + (var19Lifetime1 + param10);
@@ -109,7 +109,7 @@ final class arb extends BitmapFont {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;
@@ -117,75 +117,75 @@ final class arb extends BitmapFont {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * dma.field_g;
-        var9 = dma.field_g - param3;
+        var8 = param1 + param2 * SoftwareRasterizer2D.width;
+        var9 = SoftwareRasterizer2D.width - param3;
         var10 = 0;
         var11 = 0;
-        if (param2 < dma.field_c) {
-          var12 = dma.field_c - param2;
+        if (param2 < SoftwareRasterizer2D.clipTop) {
+          var12 = SoftwareRasterizer2D.clipTop - param2;
           param4 = param4 - var12;
-          param2 = dma.field_c;
+          param2 = SoftwareRasterizer2D.clipTop;
           var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * dma.field_g;
+          var8 = var8 + var12 * SoftwareRasterizer2D.width;
         }
-        if (param2 + param4 > dma.field_f) {
-          param4 = param4 - (param2 + param4 - dma.field_f);
+        if (param2 + param4 > SoftwareRasterizer2D.clipBottom) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer2D.clipBottom);
         }
-        if (param1 < dma.field_d) {
-          var12Lifetime1 = dma.field_d - param1;
+        if (param1 < SoftwareRasterizer2D.clipLeft) {
+          var12Lifetime1 = SoftwareRasterizer2D.clipLeft - param1;
           param3 = param3 - var12Lifetime1;
-          param1 = dma.field_d;
+          param1 = SoftwareRasterizer2D.clipLeft;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > dma.field_a) {
-          var12Lifetime2 = param1 + param3 - dma.field_a;
+        if (param1 + param3 > SoftwareRasterizer2D.clipRight) {
+          var12Lifetime2 = param1 + param3 - SoftwareRasterizer2D.clipRight;
           param3 = param3 - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
         }
         if (param3 > 0 &&
           param4 > 0) {
-          if (dma.field_h == null) {
-            arb.a(dma.field_i, this.field_I[param0], param5, var11, var8, param3, param4, var9, var10);
+          if (SoftwareRasterizer2D.maskStarts == null) {
+            SoftwareMonochromeBitmapFont.blitMask(SoftwareRasterizer2D.pixels, this.glyphMasks[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            arb.a(dma.field_i, this.field_I[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, dma.field_h, dma.field_b);
+            SoftwareMonochromeBitmapFont.blitMaskedGlyph(SoftwareRasterizer2D.pixels, this.glyphMasks[param0], param1, param2, param3, param4, param5, var11, var8, var9, var10, SoftwareRasterizer2D.maskStarts, SoftwareRasterizer2D.maskWidths);
           }
           return;
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var13 = 0;
-        int var9 = param1 + param2 * dma.field_g;
-        int var10 = dma.field_g - param3;
+        int var9 = param1 + param2 * SoftwareRasterizer2D.width;
+        int var10 = SoftwareRasterizer2D.width - param3;
         int var11 = 0;
         int var12 = 0;
         int var13Lifetime1;
         int var13Lifetime2;
-        if (param2 < dma.field_c) {
-          var13 = dma.field_c - param2;
+        if (param2 < SoftwareRasterizer2D.clipTop) {
+          var13 = SoftwareRasterizer2D.clipTop - param2;
           param4 = param4 - var13;
-          param2 = dma.field_c;
+          param2 = SoftwareRasterizer2D.clipTop;
           var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * dma.field_g;
+          var9 = var9 + var13 * SoftwareRasterizer2D.width;
         }
-        if (param2 + param4 > dma.field_f) {
-          param4 = param4 - (param2 + param4 - dma.field_f);
+        if (param2 + param4 > SoftwareRasterizer2D.clipBottom) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer2D.clipBottom);
         }
-        if (param1 < dma.field_d) {
-          var13Lifetime1 = dma.field_d - param1;
+        if (param1 < SoftwareRasterizer2D.clipLeft) {
+          var13Lifetime1 = SoftwareRasterizer2D.clipLeft - param1;
           param3 = param3 - var13Lifetime1;
-          param1 = dma.field_d;
+          param1 = SoftwareRasterizer2D.clipLeft;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > dma.field_a) {
-          var13Lifetime2 = param1 + param3 - dma.field_a;
+        if (param1 + param3 > SoftwareRasterizer2D.clipRight) {
+          var13Lifetime2 = param1 + param3 - SoftwareRasterizer2D.clipRight;
           param3 = param3 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -194,16 +194,16 @@ final class arb extends BitmapFont {
           param4 <= 0) {
           return;
         }
-        arb.a(dma.field_i, this.field_I[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+        SoftwareMonochromeBitmapFont.blitMaskAlpha(SoftwareRasterizer2D.pixels, this.glyphMasks[param0], param5, var12, var9, param3, param4, var10, var11, param6);
     }
 
-    arb(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {
+    SoftwareMonochromeBitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, byte[][] param5) {
         super(param0, param1, param2, param3, param4);
-        this.field_I = new byte[256][];
-        this.field_I = param5;
+        this.glyphMasks = new byte[256][];
+        this.glyphMasks = param5;
     }
 
-    final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void blitMaskAlpha(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$12 = 0;

@@ -50,7 +50,7 @@ final class GetPedrosRepairModeSwitchtime extends ConsoleCommand {
             lnb.d(0);
             param6 = false;
           }
-          jra.a(param4, param6, 19717);
+          PrimitiveType.a(param4, param6, 19717);
           GpuTransform3D.a((byte) -127, param6, param5);
           param6 = false;
         }
@@ -92,7 +92,7 @@ final class GetPedrosRepairModeSwitchtime extends ConsoleCommand {
               field_o = -75;
             }
             if (GetAutozoomAmountMultiply.field_o != null) {
-              GetAutozoomAmountMultiply.field_o.a(116);
+              GetAutozoomAmountMultiply.field_o.close(116);
             }
             if (BlackBoxRecordingFactory.field_a != null) {
               BlackBoxRecordingFactory.field_a.shutdown(23474);

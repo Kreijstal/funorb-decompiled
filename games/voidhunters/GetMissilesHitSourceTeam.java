@@ -36,7 +36,7 @@ final class GetMissilesHitSourceTeam extends ConsoleCommand {
         if (param2 != -128) {
           field_o = -36;
           if (!li.field_i) {
-            dma.d(param0, param1, param6, param3, param5, param4);
+            SoftwareRasterizer2D.drawRectangleAlpha(param0, param1, param6, param3, param5, param4);
             return;
           }
           if (SetPointDefenceLaserReload.field_o) {
@@ -46,7 +46,7 @@ final class GetMissilesHitSourceTeam extends ConsoleCommand {
           return;
         }
         if (!li.field_i) {
-          dma.d(param0, param1, param6, param3, param5, param4);
+          SoftwareRasterizer2D.drawRectangleAlpha(param0, param1, param6, param3, param5, param4);
           return;
         }
         if (!SetPointDefenceLaserReload.field_o) {

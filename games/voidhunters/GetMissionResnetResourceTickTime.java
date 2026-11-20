@@ -21,19 +21,19 @@ final class GetMissionResnetResourceTickTime extends ConsoleCommand {
         try {
           if (param2 != null &&
             param4 > 0) {
-            var5_int = param2[0].field_m;
-            var6 = param2[2].field_m;
-            var7 = param2[1].field_m;
-            param2[0].a(param3, param1);
-            param2[2].a(param4 + (param3 - var6), param1);
-            dma.a(ola.field_o);
-            dma.g(var5_int + param3, param1, param4 + param3 - var6, param1 + param2[param0].field_n);
+            var5_int = param2[0].paddedWidth;
+            var6 = param2[2].paddedWidth;
+            var7 = param2[1].paddedWidth;
+            param2[0].draw(param3, param1);
+            param2[2].draw(param4 + (param3 - var6), param1);
+            SoftwareRasterizer2D.getClip(ola.field_o);
+            SoftwareRasterizer2D.intersectClip(var5_int + param3, param1, param4 + param3 - var6, param1 + param2[param0].paddedHeight);
             var8 = param3 + var5_int;
             var9 = -var6 + param4 + param3;
             for (param3 = var8; param3 < var9; param3 = param3 + var7) {
-              param2[1].a(param3, param1);
+              param2[1].draw(param3, param1);
             }
-            dma.b(ola.field_o);
+            SoftwareRasterizer2D.restoreClip(ola.field_o);
             return;
           }
           return;
@@ -93,7 +93,7 @@ final class GetMissionResnetResourceTickTime extends ConsoleCommand {
         if (GetPhasedEnergyBeamPulsetime.e((byte) 104)) {
           return;
         }
-        if (!wh.g(-127)) {
+        if (!SocketNetworkArchiveClient.g(-127)) {
           return;
         }
         PlayerGameData var1 = es.field_b;

@@ -82,10 +82,10 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
         llb stackIn_92_0 = null;
         boolean stackIn_93_1 = false;
         if (param0 < -111) {
-          qca.a(dma.field_g + 640 >> 1, dma.field_j, dma.field_g - 640 >> 1, true, 0);
+          qca.a(SoftwareRasterizer2D.width + 640 >> 1, SoftwareRasterizer2D.height, SoftwareRasterizer2D.width - 640 >> 1, true, 0);
           if (0 < SoftwareTransform3D.field_b) {
             if (null != kl.field_c) {
-              kl.field_c.c(tb.field_a.field_L, 0);
+              kl.field_c.drawOpaque(tb.field_a.field_L, 0);
             }
             stackIn_66_0 = tb.field_a;
             stackIn_67_1 = (param1) && (!bv.field_d);
@@ -104,7 +104,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
               stackIn_84_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((llb) (Object) stackIn_83_0).b(stackIn_84_1, 101);
             } else {
-              kl.field_c.c(rga.field_g.field_L, 0);
+              kl.field_c.drawOpaque(rga.field_g.field_L, 0);
               stackIn_88_0 = rga.field_g;
               stackIn_89_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((llb) (Object) stackIn_88_0).b(stackIn_89_1, 101);
@@ -115,10 +115,10 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
           }
         } else {
           field_p = (java.awt.Image) null;
-          qca.a(dma.field_g + 640 >> 1, dma.field_j, dma.field_g - 640 >> 1, true, 0);
+          qca.a(SoftwareRasterizer2D.width + 640 >> 1, SoftwareRasterizer2D.height, SoftwareRasterizer2D.width - 640 >> 1, true, 0);
           if (0 < SoftwareTransform3D.field_b) {
             if (null != kl.field_c) {
-              kl.field_c.c(tb.field_a.field_L, 0);
+              kl.field_c.drawOpaque(tb.field_a.field_L, 0);
             }
             stackIn_9_0 = tb.field_a;
             stackIn_10_1 = (param1) && (!bv.field_d);
@@ -136,7 +136,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
               stackIn_25_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((llb) (Object) stackIn_24_0).b(stackIn_25_1, 101);
             } else {
-              kl.field_c.c(rga.field_g.field_L, 0);
+              kl.field_c.drawOpaque(rga.field_g.field_L, 0);
               stackIn_29_0 = rga.field_g;
               stackIn_30_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
               ((llb) (Object) stackIn_29_0).b(stackIn_30_1, 101);
@@ -154,7 +154,7 @@ final class SetPhasedEnergyBeamAimspeed extends ConsoleCommand {
                 stackIn_47_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
                 ((llb) (Object) stackIn_46_0).b(stackIn_47_1, 101);
               } else {
-                kl.field_c.c(rga.field_g.field_L, 0);
+                kl.field_c.drawOpaque(rga.field_g.field_L, 0);
                 stackIn_51_0 = rga.field_g;
                 stackIn_52_1 = (param1) && (!GetTorpedoProjectileDamage.field_o);
                 ((llb) (Object) stackIn_51_0).b(stackIn_52_1, 101);

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetGrapplingHookFireForce extends ConsoleCommand {
-    static kb field_o;
+    static TextureFormat field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -14,7 +14,7 @@ final class SetGrapplingHookFireForce extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(199, 62, arguments[0].intValue(45));
           if (obfuscationGuard >= -119) {
-            field_o = (kb) null;
+            field_o = (TextureFormat) null;
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -85,7 +85,7 @@ final class SetGrapplingHookFireForce extends ConsoleCommand {
           }
           var20 = (var7 - 1) * var15;
           if (param0 > -112) {
-            field_o = (kb) null;
+            field_o = (TextureFormat) null;
           }
           while (true) {
             if (var7 <= 0) {
@@ -143,6 +143,6 @@ final class SetGrapplingHookFireForce extends ConsoleCommand {
     }
 
     static {
-        field_o = new kb(3);
+        field_o = new TextureFormat(3);
     }
 }

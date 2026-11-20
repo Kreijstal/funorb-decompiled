@@ -26,21 +26,21 @@ final class ServerTickFactory implements GameStateFactory {
           if (param1 != 115) {
             field_b = (byte[][]) null;
           }
-          dma.h(param4, param0, param3 + 1, 10000536);
-          dma.h(param4, param0 + param2, param3 + 1, 12105912);
+          SoftwareRasterizer2D.drawHorizontalLine(param4, param0, param3 + 1, 10000536);
+          SoftwareRasterizer2D.drawHorizontalLine(param4, param0 + param2, param3 + 1, 12105912);
           var5_int = 1;
-          if (param0 + var5_int < dma.field_c) {
-            var5_int = dma.field_c - param0;
+          if (param0 + var5_int < SoftwareRasterizer2D.clipTop) {
+            var5_int = SoftwareRasterizer2D.clipTop - param0;
           }
           var6 = param2;
-          if (dma.field_f < var6 + param0) {
-            var6 = dma.field_f - param0;
+          if (SoftwareRasterizer2D.clipBottom < var6 + param0) {
+            var6 = SoftwareRasterizer2D.clipBottom - param0;
           }
           for (var7 = var5_int; var6 > var7; var7++) {
             var8 = 48 * var7 / param2 + 152;
             var9 = var8 | (var8 << 16 | var8 << 8);
-            dma.field_i[dma.field_g * (param0 + var7) + param4] = var9;
-            dma.field_i[(param0 + var7) * dma.field_g + param4 + param3] = var9;
+            SoftwareRasterizer2D.pixels[SoftwareRasterizer2D.width * (param0 + var7) + param4] = var9;
+            SoftwareRasterizer2D.pixels[(param0 + var7) * SoftwareRasterizer2D.width + param4 + param3] = var9;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

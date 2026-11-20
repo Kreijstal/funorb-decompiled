@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetMpSandboxEnemySpawnLimit extends ConsoleCommand {
-    static ngb field_p;
+    static SoftwareAlphaBitmapFont field_p;
     static String field_o;
 
     SetMpSandboxEnemySpawnLimit(String param0, Class[] param1, String param2) {

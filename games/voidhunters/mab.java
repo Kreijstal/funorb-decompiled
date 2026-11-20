@@ -16,7 +16,7 @@ abstract class mab {
     abstract void a(java.awt.Graphics param0, int param1, byte param2, int param3);
 
     final void a(byte param0) {
-        dma.a(this.field_c, this.field_d, this.field_b);
+        SoftwareRasterizer2D.setTarget(this.field_c, this.field_d, this.field_b);
         if (param0 != -108) {
           java.awt.Component var3 = (java.awt.Component) null;
           this.a(-98, 3, (java.awt.Component) null, (byte) -19);

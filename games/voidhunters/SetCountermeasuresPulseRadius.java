@@ -206,7 +206,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
                   var26Lifetime1 = param0.field_H[var23Lifetime2];
                   um.field_c[var23Lifetime2] = (var25Lifetime1 * var15 + (var24Lifetime1 * var12 + var18 * var26Lifetime1) >> 16) + var9;
                   SetReverbFeedback.field_o[var23Lifetime2] = (var19 * var26Lifetime1 + (var24Lifetime1 * var13 + var25Lifetime1 * var16) >> 16) + var10;
-                  vmb.field_a[var23Lifetime2] = (var20 * var26Lifetime1 + (var14 * var24Lifetime1 + var25Lifetime1 * var17) >> 16) + var11;
+                  GpuVertexDeclaration.field_a[var23Lifetime2] = (var20 * var26Lifetime1 + (var14 * var24Lifetime1 + var25Lifetime1 * var17) >> 16) + var11;
                   var24Lifetime1 = param0.field_e[var23Lifetime2];
                   var25Lifetime1 = param0.field_x[var23Lifetime2];
                   var26Lifetime1 = param0.field_l[var23Lifetime2];
@@ -231,7 +231,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
                 var17 = param1[11];
                 var18 = 0;
                 while (!(var18 >= param0.field_L)) {
-                  stackIn_65_0 = ~bva.field_b.length;
+                  stackIn_65_0 = ~OpenGlVertexDeclaration.field_b.length;
                   stackIn_65_1 = ~var18;
                   if (var30 != 0) {
                     break scanLoop1;
@@ -242,7 +242,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
                   var19 = param0.field_k[var18];
                   var20 = param0.field_v[var18];
                   var21Lifetime2 = param0.field_n[var18];
-                  bva.field_b[var18] = var21Lifetime2 * var15 + var19 * var9 + var12 * var20 >> 16;
+                  OpenGlVertexDeclaration.field_b[var18] = var21Lifetime2 * var15 + var19 * var9 + var12 * var20 >> 16;
                   GetSniperCannonRandomness.field_o[var18] = var16 * var21Lifetime2 + (var13 * var20 + var10 * var19) >> 16;
                   GetReverbDamp.field_p[var18] = var17 * var21Lifetime2 + var14 * var20 + var11 * var19 >> 16;
                   var18++;

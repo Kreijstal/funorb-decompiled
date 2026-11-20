@@ -45,7 +45,7 @@ final class SetMissileLauncherEnergyUsed extends ConsoleCommand {
         if (param1 != 7) {
           SetMissileLauncherEnergyUsed.a(-51, (byte) -126, 78, -1.8534518480300903f, -88, 102);
           if (!li.field_i) {
-            dma.e(param5, param2, (int)param3, param0, param4);
+            SoftwareRasterizer2D.fillCircleAlpha(param5, param2, (int)param3, param0, param4);
             return;
           }
           if (lfa.field_j) {
@@ -55,7 +55,7 @@ final class SetMissileLauncherEnergyUsed extends ConsoleCommand {
           return;
         }
         if (!li.field_i) {
-          dma.e(param5, param2, (int)param3, param0, param4);
+          SoftwareRasterizer2D.fillCircleAlpha(param5, param2, (int)param3, param0, param4);
           return;
         }
         if (!lfa.field_j) {

@@ -139,7 +139,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               SetTorpedoAcceleration.field_p.writeCircumfixedString((byte) 0, var14);
               SetTorpedoAcceleration.field_p.writeCircumfixedString((byte) 0, var8);
               var15 = (CharSequence) ((Object) param5);
-              SetTorpedoAcceleration.field_p.writeCircumfixedString((byte) 0, esb.a(param4 + 22, var15));
+              SetTorpedoAcceleration.field_p.writeCircumfixedString((byte) 0, OpenGlVertexBuffer.normalizeAsciiIdentifier(param4 + 22, var15));
               SetTorpedoAcceleration.field_p.writeShort(param3, true);
               SetTorpedoAcceleration.field_p.writeByte(param4 + 0, param0);
               SetTorpedoAcceleration.field_p.writeByte(0, var9);

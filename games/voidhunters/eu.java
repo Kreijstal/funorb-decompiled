@@ -5,7 +5,7 @@ final class eu extends ev {
     private int field_j;
     private int field_g;
     private int field_k;
-    static lpb field_h;
+    static BufferedSocket field_h;
     static fcb field_i;
     private int field_f;
 
@@ -48,7 +48,7 @@ final class eu extends ev {
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 30826) {
-          field_h = (lpb) null;
+          field_h = (BufferedSocket) null;
           field_i = null;
           field_h = null;
           return;

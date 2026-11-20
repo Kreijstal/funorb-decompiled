@@ -483,7 +483,7 @@ final class ArchiveIndex {
                   var7.field_Bb.field_tb = SetMissileLauncherRandomness.field_o;
                   var7.field_Bb.field_qb = var11;
                   var12 = 1;
-                  var7.field_Bb.a(0, 127, SetMissileLauncherRandomness.field_o.field_m + 3, var9, nna.field_w);
+                  var7.field_Bb.a(0, 127, SetMissileLauncherRandomness.field_o.paddedWidth + 3, var9, nna.field_w);
                 }
                 var7.field_Eb.field_Y = var10;
                 var7.field_wb.field_Y = var10;
@@ -496,12 +496,12 @@ final class ArchiveIndex {
                 var13 = 0;
                 var14 = -80 + (var7.field_hb - 2);
                 if (var12 != 0) {
-                  var13 = 3 + SetMissileLauncherRandomness.field_o.field_m;
+                  var13 = 3 + SetMissileLauncherRandomness.field_o.paddedWidth;
                   var14 = var14 - var13;
                 }
                 stackIn_34_0 = var7.field_wb;
                 if (var14 > 0) {
-                  stackIn_35_1 = BitmapFont.a(var7.field_wb.field_eb, var7.field_Fb, var14);
+                  stackIn_35_1 = BitmapFont.ellipsize(var7.field_wb.field_eb, var7.field_Fb, var14);
                 } else {
                   stackIn_35_1 = var7.field_Fb;
                 }

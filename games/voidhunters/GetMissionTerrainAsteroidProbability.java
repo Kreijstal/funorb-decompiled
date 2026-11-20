@@ -10,10 +10,10 @@ final class GetMissionTerrainAsteroidProbability extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static ngb a(int param0, int param1, ResourceArchive param2, int param3, ResourceArchive param4) {
+    final static SoftwareAlphaBitmapFont a(int param0, int param1, ResourceArchive param2, int param3, ResourceArchive param4) {
         RuntimeException var5 = null;
-        ngb stackIn_2_0 = null;
-        ngb stackIn_7_0 = null;
+        SoftwareAlphaBitmapFont stackIn_2_0 = null;
+        SoftwareAlphaBitmapFont stackIn_7_0 = null;
         RuntimeException stackIn_10_0 = null;
         StringBuilder stackIn_10_1 = null;
         String stackIn_11_2 = null;
@@ -22,13 +22,13 @@ final class GetMissionTerrainAsteroidProbability extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 320) {
-            stackIn_2_0 = (ngb) null;
+            stackIn_2_0 = (SoftwareAlphaBitmapFont) null;
             return stackIn_2_0;
           }
           if (!pa.a(param3, 2, param4, param1)) {
             return null;
           }
-          stackIn_7_0 = lpb.a((byte) 19, param2.fetchFile(param3, param1, (byte) 13));
+          stackIn_7_0 = BufferedSocket.createAlphaBitmapFont((byte) 19, param2.fetchFile(param3, param1, (byte) 13));
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

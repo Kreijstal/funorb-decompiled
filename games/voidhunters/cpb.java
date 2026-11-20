@@ -25,8 +25,8 @@ final class cpb extends ora implements gf {
         }
     }
 
-    cpb(Direct3DToolkit param0, kb param1, int param2, int param3, int param4, byte[] param5) {
-        super(param0, param1, mj.field_f, false, param4 * param3 * param2);
+    cpb(Direct3DToolkit param0, TextureFormat param1, int param2, int param3, int param4, byte[] param5) {
+        super(param0, param1, GpuDataType.field_f, false, param4 * param3 * param2);
         int var14 = 0;
         int var8;
         int var9;

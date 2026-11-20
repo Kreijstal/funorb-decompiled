@@ -90,20 +90,20 @@ final class SetOndamageParticleFadestart extends ConsoleCommand {
               var14[var11_int] = SetSalvoHoldable.a(94, var5[var9], var19[var11_int]);
             }
           }
-          var9Lifetime1 = var17.field_p;
+          var9Lifetime1 = var17.height;
           SetOndamageParticleSpeed.e(param3 + 3);
-          var17.b();
-          dma.a(0, 0, dma.field_g, dma.field_j);
+          var17.setRasterTarget();
+          SoftwareRasterizer2D.grayscaleRectangle(0, 0, SoftwareRasterizer2D.width, SoftwareRasterizer2D.height);
           var15 = new Sprite(var9Lifetime1, var9Lifetime1);
           var18 = var15;
-          var18.b();
-          var17.c(0, 0);
+          var18.setRasterTarget();
+          var17.drawOpaque(0, 0);
           var11 = new Sprite(var9Lifetime1, var9Lifetime1);
-          var11.b();
-          var17.c(var9Lifetime1 - var17.field_q, 0);
-          var12 = new Sprite(var17.field_q - var9Lifetime1 * 2, var9Lifetime1);
-          var12.b();
-          var17.c(-var9Lifetime1, param3);
+          var11.setRasterTarget();
+          var17.drawOpaque(var9Lifetime1 - var17.width, 0);
+          var12 = new Sprite(var17.width - var9Lifetime1 * 2, var9Lifetime1);
+          var12.setRasterTarget();
+          var17.drawOpaque(-var9Lifetime1, param3);
           bia.a((byte) 124);
           GetBombletSprayProjectileLife.field_o = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {

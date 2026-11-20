@@ -3,11 +3,11 @@
  */
 abstract class kva implements ura {
     private int field_a;
-    kb field_f;
+    TextureFormat field_f;
     OpenGlGpuToolkit field_h;
     private int field_d;
     private boolean field_c;
-    mj field_b;
+    GpuDataType field_b;
     private tu field_i;
     static int field_g;
     int field_e;
@@ -126,7 +126,7 @@ abstract class kva implements ura {
           var3 = (tu) null;
           this.a((tu) null, 94);
         }
-        if (mj.field_f == this.field_b) {
+        if (GpuDataType.field_f == this.field_b) {
           if (this.field_f == SetGrapplingHookFireForce.field_o) {
             return 6407;
           }
@@ -139,14 +139,14 @@ abstract class kva implements ura {
           if (this.field_f == SetSniperCannonFireForce.field_p) {
             return 6409;
           }
-          if (wh.field_o == this.field_f) {
+          if (SocketNetworkArchiveClient.field_o == this.field_f) {
             return 6410;
           }
           if (GetReverbGain.field_o == this.field_f) {
             return 6145;
           }
         } else {
-          if (this.field_b == mj.field_b) {
+          if (this.field_b == GpuDataType.field_b) {
             if (this.field_f == SetGrapplingHookFireForce.field_o) {
               return 34843;
             }
@@ -159,14 +159,14 @@ abstract class kva implements ura {
             if (this.field_f == SetSniperCannonFireForce.field_p) {
               return 34846;
             }
-            if (this.field_f == wh.field_o) {
+            if (this.field_f == SocketNetworkArchiveClient.field_o) {
               return 34847;
             }
             if (GetReverbGain.field_o == this.field_f) {
               return 6145;
             }
           } else {
-            if (mj.field_d == this.field_b) {
+            if (GpuDataType.field_d == this.field_b) {
               if (SetGrapplingHookFireForce.field_o == this.field_f) {
                 return 34837;
               }
@@ -179,7 +179,7 @@ abstract class kva implements ura {
               if (this.field_f == SetSniperCannonFireForce.field_p) {
                 return 34840;
               }
-              if (this.field_f == wh.field_o) {
+              if (this.field_f == SocketNetworkArchiveClient.field_o) {
                 return 34841;
               }
               if (this.field_f == GetReverbGain.field_o) {
@@ -206,7 +206,7 @@ abstract class kva implements ura {
     }
 
     private final int c(byte param0) {
-        int var2 = this.field_f.field_a * this.field_b.field_h * this.field_d;
+        int var2 = this.field_f.field_a * this.field_b.byteSize * this.field_d;
         if (param0 != 61) {
           return -71;
         }
@@ -481,7 +481,7 @@ abstract class kva implements ura {
         jaggl.OpenGL.glBindTexture(this.field_e, this.field_a);
     }
 
-    kva(OpenGlGpuToolkit param0, int param1, kb param2, mj param3, int param4, boolean param5) {
+    kva(OpenGlGpuToolkit param0, int param1, TextureFormat param2, GpuDataType param3, int param4, boolean param5) {
         this.field_i = cs.field_a;
         try {
           this.field_h = param0;

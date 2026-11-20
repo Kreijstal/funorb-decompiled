@@ -12,7 +12,7 @@ final class kqb {
           Debris.field_y.field_R = param0;
           var2_int = SetClientSideDragging.field_q.field_d;
           var3 = SetClientSideDragging.field_q.field_b;
-          var4 = Debris.field_y.field_eb.b(param0, 272, Debris.field_y.field_D);
+          var4 = Debris.field_y.field_eb.getParagraphHeight(param0, 272, Debris.field_y.field_D);
           var5 = -(var4 / 2) + 7 - 110 + var3 / 2;
           GetTorpedoProjectiles.field_o.a((-320 + var2_int) / 2, 125, 320, var5, -(var5 * 2) + var3 - 120);
           GetTorpedoProjectiles.field_o.field_gb = uwa.a(11579568, GetTorpedoProjectiles.field_o.field_G, 2105376, 8421504, param1 ^ 77, 3);

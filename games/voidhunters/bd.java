@@ -31,7 +31,7 @@ final class bd {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5_ref = null;
-        arb var7 = null;
+        SoftwareMonochromeBitmapFont var7 = null;
         llb var8 = null;
         llb var9 = null;
         llb var10 = null;
@@ -89,9 +89,9 @@ final class bd {
           var7 = fab.a(param2, "largefont", 0, param3, "lobby");
           GetDebrisCarryOverPercentage.field_o = fab.a(param2, "generalfont", 0, param3, "lobby");
           ef.field_y = fab.a(param2, "chatfont", 0, param3, "lobby");
-          var7.a(var5, var25);
-          GetDebrisCarryOverPercentage.field_o.a(var5, var25);
-          ef.field_y.a(var5, var25);
+          var7.setInlineSprites(var5, var25);
+          GetDebrisCarryOverPercentage.field_o.setInlineSprites(var5, var25);
+          ef.field_y.setInlineSprites(var5, var25);
           var8 = new llb(0L, (llb) null);
           var8.field_Y = 16777215;
           var8.field_D = nna.field_w;

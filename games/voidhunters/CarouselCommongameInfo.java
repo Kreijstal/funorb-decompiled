@@ -127,7 +127,7 @@ final class CarouselCommongameInfo implements DiffableState {
             this.field_j = (String) null;
           }
           var3.field_i = this.field_i;
-          var3.field_a = (CarouselSlot[]) (SpriteDimensions.a(var3.field_a, this.field_a, 1, gva.field_a, false));
+          var3.field_a = (CarouselSlot[]) (SpriteDimensions.copyStateArrayByMode(var3.field_a, this.field_a, 1, gva.field_a, false));
           this.b(param1, -128);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mib.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

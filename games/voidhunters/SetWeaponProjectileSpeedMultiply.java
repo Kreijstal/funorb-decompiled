@@ -43,7 +43,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
         if (!param0) {
           return false;
         }
-        stackIn_7_0 = (GetSpinningBladeAimspeed.field_q >= 10) && (!cgb.field_a) && (!wh.g(-115));
+        stackIn_7_0 = (GetSpinningBladeAimspeed.field_q >= 10) && (!cgb.field_a) && (!SocketNetworkArchiveClient.g(-115));
         return stackIn_7_0;
     }
 

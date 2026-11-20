@@ -33,10 +33,10 @@ final class lsa extends IntrusiveNode {
             lsa.clearSharedReferences((byte) -36);
           }
           if (param2) {
-            stackIn_6_0 = bl.field_x.b(param0);
+            stackIn_6_0 = bl.field_x.getStringWidth(param0);
             return stackIn_6_0;
           }
-          stackIn_4_0 = GetUsePolygonFill.field_p.b(param0);
+          stackIn_4_0 = GetUsePolygonFill.field_p.getStringWidth(param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

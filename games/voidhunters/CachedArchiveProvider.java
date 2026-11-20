@@ -12,7 +12,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
     static llb field_s;
     private byte[] expectedIndexDigest;
     private int expectedIndexVersion;
-    private ona field_g;
+    private NetworkArchiveClient field_g;
     private byte[] groupDiskStatus;
     private ArchiveRequest indexRequest;
     private boolean validatingDiskGroups;
@@ -36,10 +36,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
           return this.index;
         }
         if (null == this.indexRequest) {
-          if (this.field_g.d(126)) {
+          if (this.field_g.isPriorityQueueFull(126)) {
             return null;
           }
-          this.indexRequest = (ArchiveRequest) ((Object) this.field_g.a(true, param0 ^ -30, this.archiveId, (byte) 0, 255));
+          this.indexRequest = (ArchiveRequest) ((Object) this.field_g.requestGroup(true, param0 ^ -30, this.archiveId, (byte) 0, 255));
         }
         if (this.indexRequest.pending) {
           return null;
@@ -60,12 +60,12 @@ final class CachedArchiveProvider extends ArchiveProvider {
           } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var3 = decompiledCaughtException;
-            this.field_g.a((byte) -25);
+            this.field_g.resetAfterValidationFailure((byte) -25);
             this.index = null;
-            if (this.field_g.d(param0 ^ 89)) {
+            if (this.field_g.isPriorityQueueFull(param0 ^ 89)) {
               this.indexRequest = null;
             } else {
-              this.indexRequest = (ArchiveRequest) ((Object) this.field_g.a(true, param0 - 30, this.archiveId, (byte) 0, 255));
+              this.indexRequest = (ArchiveRequest) ((Object) this.field_g.requestGroup(true, param0 - 30, this.archiveId, (byte) 0, 255));
             }
             return null;
           }
@@ -85,10 +85,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
             decompiledCaughtException = decompiledCaughtParameter1;
             var3 = decompiledCaughtException;
             this.index = null;
-            if (this.field_g.d(121)) {
+            if (this.field_g.isPriorityQueueFull(121)) {
               this.indexRequest = null;
             } else {
-              this.indexRequest = (ArchiveRequest) ((Object) this.field_g.a(true, -21, this.archiveId, (byte) 0, 255));
+              this.indexRequest = (ArchiveRequest) ((Object) this.field_g.requestGroup(true, -21, this.archiveId, (byte) 0, 255));
             }
             return null;
           }
@@ -197,7 +197,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
               scanLoop2: while (true) {
                 if (this.backgroundGroupIndex < this.index.groupFileCounts.length) {
                   if (this.index.groupFileCounts[this.backgroundGroupIndex] != 0) {
-                    if (this.field_g.b((byte) 32)) {
+                    if (this.field_g.isBackgroundQueueFull((byte) 32)) {
                       var2_intLifetime1 = 0;
                       break scanLoop2;
                     }
@@ -231,13 +231,13 @@ final class CachedArchiveProvider extends ArchiveProvider {
                   var2 = (ArchiveRequest) (this.requests.first((byte) 48));
                   while (var2 != null) {
                     if (!var2.pending) {
-                      if (var2.field_k) {
-                        if (!var2.field_l) {
+                      if (var2.cleanupMarked) {
+                        if (!var2.priority) {
                           throw new RuntimeException();
                         }
                         var2.unlink(-3846);
                       } else {
-                        var2.field_k = true;
+                        var2.cleanupMarked = true;
                       }
                     }
                     var2 = (ArchiveRequest) (this.requests.next(-91));
@@ -264,13 +264,13 @@ final class CachedArchiveProvider extends ArchiveProvider {
             var2Lifetime1 = (ArchiveRequest) (this.requests.first((byte) 48));
             while (var2Lifetime1 != null) {
               if (!var2Lifetime1.pending) {
-                if (var2Lifetime1.field_k) {
-                  if (!var2Lifetime1.field_l) {
+                if (var2Lifetime1.cleanupMarked) {
+                  if (!var2Lifetime1.priority) {
                     throw new RuntimeException();
                   }
                   var2Lifetime1.unlink(-3846);
                 } else {
-                  var2Lifetime1.field_k = true;
+                  var2Lifetime1.cleanupMarked = true;
                 }
               }
               var2Lifetime1 = (ArchiveRequest) (this.requests.next(-91));
@@ -378,7 +378,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         var4 = var12;
         if (var12 != null &&
           0 == param0 &&
-          !var12.field_l &&
+          !var12.priority &&
           var12.pending) {
           var12.unlink(-3846);
           var4 = null;
@@ -395,10 +395,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
               if (this.groupDiskStatus[param2] != -1) {
                 throw new RuntimeException();
               }
-              if (this.field_g.b((byte) 32)) {
+              if (this.field_g.isBackgroundQueueFull((byte) 32)) {
                 return null;
               }
-              var4 = this.field_g.a(false, -21, param2, (byte) 2, this.archiveId);
+              var4 = this.field_g.requestGroup(false, -21, param2, (byte) 2, this.archiveId);
             } else {
               if (this.archiveDisk == null) {
                 throw new RuntimeException();
@@ -410,10 +410,10 @@ final class CachedArchiveProvider extends ArchiveProvider {
               this.groupDiskStatus[param2] != -1) {
               var4 = this.diskWorker.readSynchronously(param2, this.archiveDisk, (byte) 104);
             } else {
-              if (this.field_g.d(104)) {
+              if (this.field_g.isPriorityQueueFull(104)) {
                 return null;
               }
-              var4 = this.field_g.a(true, -21, param2, (byte) 2, this.archiveId);
+              var4 = this.field_g.requestGroup(true, -21, param2, (byte) 2, this.archiveId);
             }
           }
           this.requests.put((long)param2, (IntrusiveNode) (var4), (byte) -119);
@@ -456,7 +456,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 }
                 this.groupDiskStatus[param2] = (byte) 1;
               }
-              if (!((ArchiveRequest) (var4)).field_l) {
+              if (!((ArchiveRequest) (var4)).priority) {
                 ((ArchiveRequest) (var4)).unlink(-3846);
               }
               stackIn_92_0 = var4;
@@ -468,13 +468,13 @@ final class CachedArchiveProvider extends ArchiveProvider {
             var6 = (Exception) (Object) decompiledCaughtException;
             this.groupDiskStatus[param2] = (byte)-1;
             ((ArchiveRequest) (var4)).unlink(-3846);
-            if (!((ArchiveRequest) (var4)).field_l) {
+            if (!((ArchiveRequest) (var4)).priority) {
               return null;
             }
-            if (this.field_g.d(92)) {
+            if (this.field_g.isPriorityQueueFull(92)) {
               return null;
             }
-            var4 = this.field_g.a(true, -21, param2, (byte) 2, this.archiveId);
+            var4 = this.field_g.requestGroup(true, -21, param2, (byte) 2, this.archiveId);
             this.requests.put((long)param2, (IntrusiveNode) (var4), (byte) -127);
             return null;
           }
@@ -498,21 +498,21 @@ final class CachedArchiveProvider extends ArchiveProvider {
                 }
               }
             }
-            this.field_g.field_g = 0;
-            this.field_g.field_k = 0;
+            this.field_g.errorCount = 0;
+            this.field_g.errorStatus = 0;
           } else {
             throw new RuntimeException();
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
-          this.field_g.a((byte) -25);
+          this.field_g.resetAfterValidationFailure((byte) -25);
           ((ArchiveRequest) (var4)).unlink(-3846);
-          if (((ArchiveRequest) (var4)).field_l) {
-            if (this.field_g.d(54)) {
+          if (((ArchiveRequest) (var4)).priority) {
+            if (this.field_g.isPriorityQueueFull(54)) {
               return null;
             }
-            var4 = this.field_g.a(true, -21, param2, (byte) 2, this.archiveId);
+            var4 = this.field_g.requestGroup(true, -21, param2, (byte) 2, this.archiveId);
             this.requests.put((long)param2, (IntrusiveNode) (var4), (byte) -118);
           }
           return null;
@@ -527,7 +527,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
             this.groupDiskStatus[param2] = (byte) 1;
           }
         }
-        if (!((ArchiveRequest) (var4)).field_l) {
+        if (!((ArchiveRequest) (var4)).priority) {
           ((ArchiveRequest) (var4)).unlink(-3846);
         }
         return (ArchiveRequest) (var4);
@@ -535,7 +535,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
 
     final static void a(int param0, boolean param1, int param2, int param3, int param4, int param5, int param6) {
         if (!li.field_i) {
-          dma.e(param2, param3, param5, param4, param6, param0);
+          SoftwareRasterizer2D.fillRectangleAlpha(param2, param3, param5, param4, param6, param0);
         } else {
           if (ne.field_v) {
             GetDebrisGroupColour.field_r.fillRectangle(param5, (byte) 120, param6 | param0 << 24, param4, param3, param2);
@@ -546,7 +546,7 @@ final class CachedArchiveProvider extends ArchiveProvider {
         }
     }
 
-    CachedArchiveProvider(int param0, ArchiveDisk param1, ArchiveDisk param2, ona param3, ArchiveDiskWorker param4, int param5, byte[] param6, int param7, boolean param8) {
+    CachedArchiveProvider(int param0, ArchiveDisk param1, ArchiveDisk param2, NetworkArchiveClient param3, ArchiveDiskWorker param4, int param5, byte[] param6, int param7, boolean param8) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

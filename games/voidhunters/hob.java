@@ -64,16 +64,16 @@ final class hob extends IntrusiveNode {
           return;
         }
         try {
-          var3 = var2.field_q;
-          var4 = var2.field_p;
+          var3 = var2.width;
+          var4 = var2.height;
           SetOndamageParticleSpeed.e(3);
           GetToggledScoreboard.field_o = new Sprite(var3, 3 * var4 / 4);
-          GetToggledScoreboard.field_o.b();
-          var2.c(0, 0);
-          reb.field_a = new Sprite(var3, var4 - GetToggledScoreboard.field_o.field_p);
-          reb.field_a.b();
-          var2.c(0, -GetToggledScoreboard.field_o.field_p);
-          reb.field_a.field_l = GetToggledScoreboard.field_o.field_p;
+          GetToggledScoreboard.field_o.setRasterTarget();
+          var2.drawOpaque(0, 0);
+          reb.field_a = new Sprite(var3, var4 - GetToggledScoreboard.field_o.height);
+          reb.field_a.setRasterTarget();
+          var2.drawOpaque(0, -GetToggledScoreboard.field_o.height);
+          reb.field_a.yOffset = GetToggledScoreboard.field_o.height;
           bia.a((byte) 124);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hob.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

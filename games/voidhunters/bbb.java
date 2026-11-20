@@ -29,10 +29,10 @@ final class bbb {
           var2_int = 60 / ((-15 - param1) / 36);
           for (var3 = 0; param0.length > var3; var3++) {
             var4 = param0[var3];
-            param0[var3].field_l = 0;
-            var4.field_k = 0;
-            param0[var3].field_m = param0[var3].field_q;
-            param0[var3].field_n = param0[var3].field_p;
+            param0[var3].yOffset = 0;
+            var4.xOffset = 0;
+            param0[var3].paddedWidth = param0[var3].width;
+            param0[var3].paddedHeight = param0[var3].height;
           }
           stackIn_5_0 = (Sprite[]) (param0);
           return stackIn_5_0;

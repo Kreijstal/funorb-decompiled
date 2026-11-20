@@ -37,33 +37,33 @@ final class caa extends ija {
         int var9Lifetime2;
         param0 = param0 + this.field_f;
         param1 = param1 + this.field_d;
-        int var3 = param0 + param1 * dma.field_g;
+        int var3 = param0 + param1 * SoftwareRasterizer2D.width;
         int var4 = 0;
         int var5 = this.field_e;
         int var6 = this.field_h;
-        int var7 = dma.field_g - var6;
+        int var7 = SoftwareRasterizer2D.width - var6;
         int var8 = 0;
-        if (param1 < dma.field_c) {
-          var9 = dma.field_c - param1;
+        if (param1 < SoftwareRasterizer2D.clipTop) {
+          var9 = SoftwareRasterizer2D.clipTop - param1;
           var5 = var5 - var9;
-          param1 = dma.field_c;
+          param1 = SoftwareRasterizer2D.clipTop;
           var4 = var4 + var9 * var6;
-          var3 = var3 + var9 * dma.field_g;
+          var3 = var3 + var9 * SoftwareRasterizer2D.width;
         }
-        if (param1 + var5 > dma.field_f) {
-          var5 = var5 - (param1 + var5 - dma.field_f);
+        if (param1 + var5 > SoftwareRasterizer2D.clipBottom) {
+          var5 = var5 - (param1 + var5 - SoftwareRasterizer2D.clipBottom);
         }
-        if (param0 < dma.field_d) {
-          var9Lifetime1 = dma.field_d - param0;
+        if (param0 < SoftwareRasterizer2D.clipLeft) {
+          var9Lifetime1 = SoftwareRasterizer2D.clipLeft - param0;
           var6 = var6 - var9Lifetime1;
-          param0 = dma.field_d;
+          param0 = SoftwareRasterizer2D.clipLeft;
           var4 = var4 + var9Lifetime1;
           var3 = var3 + var9Lifetime1;
           var8 = var8 + var9Lifetime1;
           var7 = var7 + var9Lifetime1;
         }
-        if (param0 + var6 > dma.field_a) {
-          var9Lifetime2 = param0 + var6 - dma.field_a;
+        if (param0 + var6 > SoftwareRasterizer2D.clipRight) {
+          var9Lifetime2 = param0 + var6 - SoftwareRasterizer2D.clipRight;
           var6 = var6 - var9Lifetime2;
           var8 = var8 + var9Lifetime2;
           var7 = var7 + var9Lifetime2;
@@ -72,7 +72,7 @@ final class caa extends ija {
           var5 <= 0) {
           return;
         }
-        caa.a(dma.field_i, this.field_j, this.field_i, 0, var4, var3, var6, var5, var7, var8);
+        caa.a(SoftwareRasterizer2D.pixels, this.field_j, this.field_i, 0, var4, var3, var6, var5, var7, var8);
     }
 
     private final static void a(int[] param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -143,33 +143,33 @@ final class caa extends ija {
         int var10Lifetime2;
         param0 = param0 + this.field_f;
         param1 = param1 + this.field_d;
-        int var4 = param0 + param1 * dma.field_g;
+        int var4 = param0 + param1 * SoftwareRasterizer2D.width;
         int var5 = 0;
         int var6 = this.field_e;
         int var7 = this.field_h;
-        int var8 = dma.field_g - var7;
+        int var8 = SoftwareRasterizer2D.width - var7;
         int var9 = 0;
-        if (param1 < dma.field_c) {
-          var10 = dma.field_c - param1;
+        if (param1 < SoftwareRasterizer2D.clipTop) {
+          var10 = SoftwareRasterizer2D.clipTop - param1;
           var6 = var6 - var10;
-          param1 = dma.field_c;
+          param1 = SoftwareRasterizer2D.clipTop;
           var5 = var5 + var10 * var7;
-          var4 = var4 + var10 * dma.field_g;
+          var4 = var4 + var10 * SoftwareRasterizer2D.width;
         }
-        if (param1 + var6 > dma.field_f) {
-          var6 = var6 - (param1 + var6 - dma.field_f);
+        if (param1 + var6 > SoftwareRasterizer2D.clipBottom) {
+          var6 = var6 - (param1 + var6 - SoftwareRasterizer2D.clipBottom);
         }
-        if (param0 < dma.field_d) {
-          var10Lifetime1 = dma.field_d - param0;
+        if (param0 < SoftwareRasterizer2D.clipLeft) {
+          var10Lifetime1 = SoftwareRasterizer2D.clipLeft - param0;
           var7 = var7 - var10Lifetime1;
-          param0 = dma.field_d;
+          param0 = SoftwareRasterizer2D.clipLeft;
           var5 = var5 + var10Lifetime1;
           var4 = var4 + var10Lifetime1;
           var9 = var9 + var10Lifetime1;
           var8 = var8 + var10Lifetime1;
         }
-        if (param0 + var7 > dma.field_a) {
-          var10Lifetime2 = param0 + var7 - dma.field_a;
+        if (param0 + var7 > SoftwareRasterizer2D.clipRight) {
+          var10Lifetime2 = param0 + var7 - SoftwareRasterizer2D.clipRight;
           var7 = var7 - var10Lifetime2;
           var9 = var9 + var10Lifetime2;
           var8 = var8 + var10Lifetime2;
@@ -178,7 +178,7 @@ final class caa extends ija {
           var6 <= 0) {
           return;
         }
-        caa.b(dma.field_i, this.field_j, this.field_i, var5, var4, var7, var6, var8, var9, param2);
+        caa.b(SoftwareRasterizer2D.pixels, this.field_j, this.field_i, var5, var4, var7, var6, var8, var9, param2);
     }
 
     caa(int param0, int param1, int param2, int param3, int param4, int param5, byte[] param6, int[] param7) {

@@ -194,7 +194,7 @@ final class uea extends bob {
           ServerInfoFactory.a(-30428, param2);
         } else {
           if (param3 == -2) {
-            dma.a();
+            SoftwareRasterizer2D.clear();
             RoundResult.field_e = true;
           } else {
             if (param1) {

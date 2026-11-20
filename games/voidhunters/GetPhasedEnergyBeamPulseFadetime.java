@@ -200,7 +200,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
                 }
               } else {
                 try {
-                  ia.a(new Object[]{vga.a(SetTorpedoAimarc.field_p, -127)}, MissionList.b((byte) -92), "zap", (byte) 108);
+                  ia.a(new Object[]{SecondaryNodeQueue.decodeBase37Name(SetTorpedoAimarc.field_p, -127)}, MissionList.b((byte) -92), "zap", (byte) 108);
                 } catch (java.lang.Throwable decompiledCaughtParameter1) {
                   decompiledCaughtException = decompiledCaughtParameter1;
                   var8_ref_Throwable = decompiledCaughtException;

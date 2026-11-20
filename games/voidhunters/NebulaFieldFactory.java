@@ -55,7 +55,7 @@ final class NebulaFieldFactory implements GameStateFactory {
           if (var2 == 0) {
             if (TeamNodeCondition.field_c == null) {
               TeamNodeCondition.field_c = new pr(128);
-              mq.field_k = 0;
+              OpenGlIndexBuffer.field_k = 0;
             }
             stackIn_14_0 = (var1.readUnsignedByte((byte) -101) != 1) ? 0 : 1;
             var3_int = stackIn_14_0;
@@ -82,8 +82,8 @@ final class NebulaFieldFactory implements GameStateFactory {
             if (var6 == null) {
               var6 = new vu();
               TeamNodeCondition.field_c.a(var6, (byte) -106, (long)var8.hashCode());
-              fieldTemp$0 = mq.field_k;
-              mq.field_k = mq.field_k + 1;
+              fieldTemp$0 = OpenGlIndexBuffer.field_k;
+              OpenGlIndexBuffer.field_k = OpenGlIndexBuffer.field_k + 1;
               var6.field_yb = fieldTemp$0;
               SetPointDefenceLaserProjectileOndamageParticles.field_o.addLast(-10258, var6);
             }

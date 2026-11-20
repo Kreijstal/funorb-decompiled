@@ -101,7 +101,7 @@ final class hka extends uj {
         try {
           if (ef.field_z >= 10) {
             if (!lm.a(true)) {
-              dma.a();
+              SoftwareRasterizer2D.clear();
               SetRadialMenuRadius.a((byte) 82, 320, 240);
               SetSniperCannonAimarc.a(param1, 0, 0, 0);
             } else {

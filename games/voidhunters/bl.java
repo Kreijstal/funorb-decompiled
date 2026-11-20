@@ -71,63 +71,63 @@ abstract class bl extends dqa {
         if (null == vib.field_b) {
           vib.field_b = new Sprite(this.field_h, this.field_f);
           SetTorpedoEnergyUsed.a(111, vib.field_b);
-          dma.a();
+          SoftwareRasterizer2D.clear();
           this.b(0, 1630174241, 0);
           super.b(-param0 - this.field_g, param1, 127, -this.field_r - param3);
           if (param2 > 47) {
             bia.a((byte) 124);
-            vib.field_b.d(param0 + this.field_g, this.field_r + param3, this.field_w);
+            vib.field_b.drawAlpha(param0 + this.field_g, this.field_r + param3, this.field_w);
             return;
           }
           this.j((byte) 123);
           bia.a((byte) 124);
-          vib.field_b.d(param0 + this.field_g, this.field_r + param3, this.field_w);
+          vib.field_b.drawAlpha(param0 + this.field_g, this.field_r + param3, this.field_w);
           return;
         }
-        if (vib.field_b.field_q < this.field_h) {
+        if (vib.field_b.width < this.field_h) {
           vib.field_b = new Sprite(this.field_h, this.field_f);
           SetTorpedoEnergyUsed.a(111, vib.field_b);
-          dma.a();
+          SoftwareRasterizer2D.clear();
           this.b(0, 1630174241, 0);
           super.b(-param0 - this.field_g, param1, 127, -this.field_r - param3);
           if (param2 > 47) {
             bia.a((byte) 124);
-            vib.field_b.d(param0 + this.field_g, this.field_r + param3, this.field_w);
+            vib.field_b.drawAlpha(param0 + this.field_g, this.field_r + param3, this.field_w);
             return;
           }
           this.j((byte) 123);
           bia.a((byte) 124);
-          vib.field_b.d(param0 + this.field_g, this.field_r + param3, this.field_w);
+          vib.field_b.drawAlpha(param0 + this.field_g, this.field_r + param3, this.field_w);
           return;
         }
-        if (this.field_f > vib.field_b.field_p) {
+        if (this.field_f > vib.field_b.height) {
           vib.field_b = new Sprite(this.field_h, this.field_f);
           SetTorpedoEnergyUsed.a(111, vib.field_b);
-          dma.a();
+          SoftwareRasterizer2D.clear();
           this.b(0, 1630174241, 0);
           super.b(-param0 - this.field_g, param1, 127, -this.field_r - param3);
           if (param2 > 47) {
             bia.a((byte) 124);
-            vib.field_b.d(param0 + this.field_g, this.field_r + param3, this.field_w);
+            vib.field_b.drawAlpha(param0 + this.field_g, this.field_r + param3, this.field_w);
             return;
           }
           this.j((byte) 123);
           bia.a((byte) 124);
-          vib.field_b.d(param0 + this.field_g, this.field_r + param3, this.field_w);
+          vib.field_b.drawAlpha(param0 + this.field_g, this.field_r + param3, this.field_w);
           return;
         }
         SetTorpedoEnergyUsed.a(111, vib.field_b);
-        dma.a();
+        SoftwareRasterizer2D.clear();
         this.b(0, 1630174241, 0);
         super.b(-param0 - this.field_g, param1, 127, -this.field_r - param3);
         if (param2 > 47) {
           bia.a((byte) 124);
-          vib.field_b.d(param0 + this.field_g, this.field_r + param3, this.field_w);
+          vib.field_b.drawAlpha(param0 + this.field_g, this.field_r + param3, this.field_w);
           return;
         }
         this.j((byte) 123);
         bia.a((byte) 124);
-        vib.field_b.d(param0 + this.field_g, this.field_r + param3, this.field_w);
+        vib.field_b.drawAlpha(param0 + this.field_g, this.field_r + param3, this.field_w);
     }
 
     boolean j(byte param0) {

@@ -12,8 +12,8 @@ final class SetMaxShipSize extends ConsoleCommand {
           java.applet.Applet var6 = (java.applet.Applet) null;
           SetMaxShipSize.a((java.applet.Applet) null, 118);
         }
-        while (var4 < var3.field_r.length) {
-          var3.field_r[var4] = param0;
+        while (var4 < var3.pixels.length) {
+          var3.pixels[var4] = param0;
           var4++;
         }
         return var3;

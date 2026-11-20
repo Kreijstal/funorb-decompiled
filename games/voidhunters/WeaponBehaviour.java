@@ -254,7 +254,7 @@ final class WeaponBehaviour implements DiffableState {
               param12 = 0;
             }
           } else {
-            param12 = SpriteDimensions.a(-param7 + param11 >> 6, 77, param0 - param13 >> 6);
+            param12 = SpriteDimensions.atan2Angle(-param7 + param11 >> 6, 77, param0 - param13 >> 6);
           }
           for (var33Lifetime1 = 0; var33Lifetime1 < var18_int; var33Lifetime1++) {
             var34Lifetime1 = 0;

@@ -32,8 +32,8 @@ final class rab extends kva implements gf {
         field_m = null;
     }
 
-    rab(OpenGlGpuToolkit param0, kb param1, int param2, int param3, int param4, byte[] param5) {
-        super(param0, 32879, param1, mj.field_f, param4 * (param2 * param3), false);
+    rab(OpenGlGpuToolkit param0, TextureFormat param1, int param2, int param3, int param4, byte[] param5) {
+        super(param0, 32879, param1, GpuDataType.field_f, param4 * (param2 * param3), false);
         try {
           this.field_l = param3;
           this.field_k = param4;

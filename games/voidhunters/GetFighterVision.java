@@ -84,39 +84,39 @@ final class GetFighterVision extends ConsoleCommand {
         Object var11 = null;
         Sprite var13 = null;
         Sprite var14 = null;
-        int[] var16 = dma.field_i;
+        int[] var16 = SoftwareRasterizer2D.pixels;
         int[] var15 = var16;
         int[] var12 = var15;
         int[] var6 = var12;
-        int var7 = dma.field_g;
-        int var8 = dma.field_j;
+        int var7 = SoftwareRasterizer2D.width;
+        int var8 = SoftwareRasterizer2D.height;
         Sprite var9 = new Sprite(16, param5);
-        var9.b();
-        dma.c(0, 0, 16, param5, param4, param2);
+        var9.setRasterTarget();
+        SoftwareRasterizer2D.fillGradientRectangle(0, 0, 16, param5, param4, param2);
         if (param3 == 24436) {
           var10 = null;
           var11 = null;
           if (param0) {
-            var13 = var9.d();
+            var13 = var9.copy();
             var10 = var13;
-            var13.b();
-            dma.h(0, 0, 5, 0);
-            dma.h(0, 1, 3, 0);
-            dma.h(0, 2, 2, 0);
-            dma.h(0, 3, 1, 0);
-            dma.h(0, 4, 1, 0);
+            var13.setRasterTarget();
+            SoftwareRasterizer2D.drawHorizontalLine(0, 0, 5, 0);
+            SoftwareRasterizer2D.drawHorizontalLine(0, 1, 3, 0);
+            SoftwareRasterizer2D.drawHorizontalLine(0, 2, 2, 0);
+            SoftwareRasterizer2D.drawHorizontalLine(0, 3, 1, 0);
+            SoftwareRasterizer2D.drawHorizontalLine(0, 4, 1, 0);
           }
           if (param1) {
-            var14 = var9.d();
+            var14 = var9.copy();
             var11 = var14;
-            var14.b();
-            dma.h(11, 0, 5, 0);
-            dma.h(13, 1, 3, 0);
-            dma.h(14, 2, 2, 0);
-            dma.h(15, 3, 1, 0);
-            dma.h(15, 4, 1, 0);
+            var14.setRasterTarget();
+            SoftwareRasterizer2D.drawHorizontalLine(11, 0, 5, 0);
+            SoftwareRasterizer2D.drawHorizontalLine(13, 1, 3, 0);
+            SoftwareRasterizer2D.drawHorizontalLine(14, 2, 2, 0);
+            SoftwareRasterizer2D.drawHorizontalLine(15, 3, 1, 0);
+            SoftwareRasterizer2D.drawHorizontalLine(15, 4, 1, 0);
           }
-          dma.a(var16, var7, var8);
+          SoftwareRasterizer2D.setTarget(var16, var7, var8);
           return new Sprite[]{null, null, null, (Sprite) (var10), var9, (Sprite) (var11), null, null, null};
         }
         return (Sprite[]) null;

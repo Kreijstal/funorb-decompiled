@@ -70,7 +70,7 @@ final class GetMachineGunPulsetime extends ConsoleCommand {
         if (param1 > -44) {
           field_q = 86;
           if (!li.field_i) {
-            dma.d(param5, param3, param2, param4, param0);
+            SoftwareRasterizer2D.fillRectangle(param5, param3, param2, param4, param0);
             return;
           }
           if (ne.field_v) {
@@ -80,7 +80,7 @@ final class GetMachineGunPulsetime extends ConsoleCommand {
           return;
         }
         if (!li.field_i) {
-          dma.d(param5, param3, param2, param4, param0);
+          SoftwareRasterizer2D.fillRectangle(param5, param3, param2, param4, param0);
           return;
         }
         if (!ne.field_v) {

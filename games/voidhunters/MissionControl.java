@@ -174,7 +174,7 @@ final class MissionControl implements DiffableState {
         }
     }
 
-    final static int a(int param0, kb param1) {
+    final static int a(int param0, TextureFormat param1) {
         RuntimeException var2 = null;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -206,7 +206,7 @@ final class MissionControl implements DiffableState {
             stackIn_7_0 = 6409;
             return stackIn_7_0;
           }
-          if (wh.field_o == param1) {
+          if (SocketNetworkArchiveClient.field_o == param1) {
             stackIn_10_0 = 6410;
             return stackIn_10_0;
           }
@@ -295,7 +295,7 @@ final class MissionControl implements DiffableState {
         MissionControl var3 = null;
         try {
           var3 = (MissionControl) (param1);
-          var3.events = (MissionEvent[]) (SpriteDimensions.a(var3.events, this.events, 1, GetExplosionPushMultiplier.field_o, false));
+          var3.events = (MissionEvent[]) (SpriteDimensions.copyStateArrayByMode(var3.events, this.events, 1, GetExplosionPushMultiplier.field_o, false));
           var3.selectedConditionOrAction = this.selectedConditionOrAction;
           if (param0 <= 54) {
             this.reservedIds = (int[]) null;

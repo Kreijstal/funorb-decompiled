@@ -14,7 +14,7 @@ final class goa extends iw {
         try {
           this.field_K = param1;
           if (this.field_K != null) {
-            var3_int = GetBoostersCooldown.field_r.b(this.field_K, 260, GetBoostersCooldown.field_r.field_k);
+            var3_int = GetBoostersCooldown.field_r.getParagraphHeight(this.field_K, 260, GetBoostersCooldown.field_r.maxAscent);
             this.c(300, -1860440319, 150 + var3_int);
           }
           this.field_N = new ttb(13, 50, 274, 30, 15, 2113632, 4210752);
@@ -29,10 +29,10 @@ final class goa extends iw {
 
     final void b(int param0, int param1, int param2) {
         super.b(param0, param1, param2);
-        GetBoostersCooldown.field_r.a(this.field_J, (this.field_h >> 1) + param2, 103 + param0, 16777215, -1);
+        GetBoostersCooldown.field_r.drawCentered(this.field_J, (this.field_h >> 1) + param2, 103 + param0, 16777215, -1);
         if (null != this.field_K) {
-          dma.h(param2 + 20, 113 + param0, 260, 8421504);
-          GetBoostersCooldown.field_r.a(this.field_K, 20 + param2, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, GetBoostersCooldown.field_r.field_k);
+          SoftwareRasterizer2D.drawHorizontalLine(param2 + 20, 113 + param0, 260, 8421504);
+          GetBoostersCooldown.field_r.drawParagraph(this.field_K, 20 + param2, 120 + param0 + 8, 260, 100, 16777215, -1, 1, 0, GetBoostersCooldown.field_r.maxAscent);
         }
     }
 

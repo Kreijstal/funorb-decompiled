@@ -210,7 +210,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
             if (CarouselSlot.field_a == param2) {
               var21 += 42;
             }
-            var33 = BitmapFont.a(var12.field_Ib.field_eb, var32, var21);
+            var33 = BitmapFont.ellipsize(var12.field_Ib.field_eb, var32, var21);
             var20 = var33;
             stackIn_59_0 = (var33.equals(var12.field_xb)) ? 0 : 1;
             var22 = stackIn_59_0;
@@ -316,7 +316,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
             var25 = var30;
             var24Lifetime1 = var23;
             if (var23 != null) {
-              var24_intLifetime1 = var12.field_Mb.field_eb.c(var23, -qs.field_c + var12.field_hb - qs.field_c);
+              var24_intLifetime1 = var12.field_Mb.field_eb.getLineCount(var23, -qs.field_c + var12.field_hb - qs.field_c);
               var12.field_Mb.field_I = 256 * var12.field_yb / GetMomentOfInertiaPredivideDownshift.field_p;
               var12.field_Mb.field_R = var23;
               var12.field_Mb.a(qs.field_c, -102, var12.field_hb - qs.field_c * 2, var19, nna.field_w * var24_intLifetime1);

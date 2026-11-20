@@ -19,7 +19,7 @@ abstract class ija {
         DualLinkNode var2Lifetime1;
         try {
           GetBoostersCooldown.field_p = 0;
-          mq.field_k = 0;
+          OpenGlIndexBuffer.field_k = 0;
           kbb.field_q = null;
           mr.field_M.clear(120);
           int var1_int = -31 % ((param0 + 31) / 39);

@@ -76,19 +76,19 @@ final class IsaacCipher {
               var6.field_Bb.field_tb = SetMissileLauncherRandomness.field_o;
               var6.field_Bb.field_qb = 16737894;
               var8 = 1;
-              var6.field_Bb.a(0, -87, SetMissileLauncherRandomness.field_o.field_m + 3, 0, nna.field_w);
+              var6.field_Bb.a(0, -87, SetMissileLauncherRandomness.field_o.paddedWidth + 3, 0, nna.field_w);
             }
             var9 = 0;
             var10 = var6.field_hb;
             if (var8 != 0) {
-              var9 = 3 + SetMissileLauncherRandomness.field_o.field_m;
+              var9 = 3 + SetMissileLauncherRandomness.field_o.paddedWidth;
               var10 = var10 - var9;
             }
             stackIn_22_0 = var6.field_wb;
             if (var10 <= 0) {
               stackIn_23_1 = var6.field_Fb;
             } else {
-              stackIn_23_1 = BitmapFont.a(var6.field_wb.field_eb, var6.field_Fb, var10);
+              stackIn_23_1 = BitmapFont.ellipsize(var6.field_wb.field_eb, var6.field_Fb, var10);
             }
             stackIn_22_0.field_R = stackIn_23_1;
             stackIn_26_0 = (var6.field_wb.field_R.equals(var6.field_Fb)) ? 0 : 1;

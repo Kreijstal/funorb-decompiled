@@ -42,13 +42,13 @@ final class ttb extends shb {
           var10 = var6 - var5;
           var11 = (int)(Math.sqrt((double)(-(var10 * var10) + var5 * var5)) / (double)var5 * 128.0) + 128;
           var12 = var11 < 256 ? (var8 * var11 & -16711936 | 16711680 & var9 * var11) >>> 8 : var9 | var8;
-          dma.h(var7, var6, this.field_E, var12);
-          dma.h(var7 - 2 * this.field_E, var6, this.field_E, var12);
+          SoftwareRasterizer2D.drawHorizontalLine(var7, var6, this.field_E, var12);
+          SoftwareRasterizer2D.drawHorizontalLine(var7 - 2 * this.field_E, var6, this.field_E, var12);
           var8Lifetime1 = 16711935 & param2;
           var9Lifetime1 = param2 & 65280;
           var12Lifetime1 = 256 <= var11 ? var8Lifetime1 | var9Lifetime1 : (16711680 & var9Lifetime1 * var11 | var8Lifetime1 * var11 & -16711936) >>> 8;
-          dma.h(this.field_E + var7, var6, this.field_E, var12Lifetime1);
-          dma.h(-this.field_E + var7, var6, this.field_E, var12Lifetime1);
+          SoftwareRasterizer2D.drawHorizontalLine(this.field_E + var7, var6, this.field_E, var12Lifetime1);
+          SoftwareRasterizer2D.drawHorizontalLine(-this.field_E + var7, var6, this.field_E, var12Lifetime1);
           var6++;
         }
         bia.a((byte) 124);
@@ -118,7 +118,7 @@ final class ttb extends shb {
               var6 = Math.sqrt(1.0 - var6);
               var8 = var6 >= 1.0 ? 255 : (int)(255.0 * var6);
             }
-            dma.a(var5, var4, var8 << 16 | (var8 << 8 | var8));
+            SoftwareRasterizer2D.drawPixel(var5, var4, var8 << 16 | (var8 << 8 | var8));
           }
         }
         bia.a((byte) 124);
@@ -155,7 +155,7 @@ final class ttb extends shb {
         }
         this.field_C = new Sprite[]{this.a(true, this.field_H, this.field_t), this.a(true, this.field_G, this.field_A)};
         this.field_y = this.b(false);
-        this.field_u = this.field_y.a();
+        this.field_u = this.field_y.mirroredCopy();
         this.field_F = new Sprite(this.field_f >> 1, this.field_f);
     }
 
@@ -186,33 +186,33 @@ final class ttb extends shb {
         var8 = VoidHunters.field_G;
         try {
           var5_int = this.field_h + param3;
-          qca.a(var5_int - this.field_y.field_q, this.field_f + param1, param3 + this.field_y.field_q, true, param1);
+          qca.a(var5_int - this.field_y.width, this.field_f + param1, param3 + this.field_y.width, true, param1);
           var6 = param3 - this.field_w;
           if (param0 != 2) {
             this.field_w = 28;
           }
           while (var5_int > var6) {
-            param2.a(var6, param1);
-            var6 = var6 + param2.field_q;
+            param2.draw(var6, param1);
+            var6 = var6 + param2.width;
           }
           bia.a((byte) 124);
-          if (param3 + this.field_y.field_q >= dma.field_d) {
+          if (param3 + this.field_y.width >= SoftwareRasterizer2D.clipLeft) {
             SetTorpedoEnergyUsed.a(param0 ^ 66, this.field_F);
-            param2.a(-this.field_w, 0);
-            param2.a(this.field_E * 2 - this.field_w, 0);
-            this.field_u.b(0, 0);
+            param2.draw(-this.field_w, 0);
+            param2.draw(this.field_E * 2 - this.field_w, 0);
+            this.field_u.drawMultiply(0, 0);
             bia.a((byte) 124);
-            this.field_F.a(param3, param1);
+            this.field_F.draw(param3, param1);
           }
-          if (dma.field_a >= var5_int - this.field_y.field_q) {
+          if (SoftwareRasterizer2D.clipRight >= var5_int - this.field_y.width) {
             SetTorpedoEnergyUsed.a(param0 + 22, this.field_F);
-            for (var7 = this.field_h - this.field_y.field_q + this.field_w; var7 > 2 * this.field_E; var7 = var7 - this.field_E * 2) {
+            for (var7 = this.field_h - this.field_y.width + this.field_w; var7 > 2 * this.field_E; var7 = var7 - this.field_E * 2) {
             }
-            param2.a(-var7, 0);
-            param2.a(this.field_E * 2 - var7, 0);
-            this.field_y.b(0, 0);
+            param2.draw(-var7, 0);
+            param2.draw(this.field_E * 2 - var7, 0);
+            this.field_y.drawMultiply(0, 0);
             bia.a((byte) 124);
-            this.field_F.a(-this.field_y.field_q + var5_int, param1);
+            this.field_F.draw(-this.field_y.width + var5_int, param1);
             return;
           }
           return;

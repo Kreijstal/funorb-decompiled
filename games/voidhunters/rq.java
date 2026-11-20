@@ -288,7 +288,7 @@ final class rq extends dqa implements ln, oo, jpb {
         sca var4 = new sca(46, var3, -90 + this.field_h, 25, this.field_E, true, this.field_h - 120, 5, SetTorpedoProjectileLife.field_o, 11579568, shb.field_m);
         this.b(-18756, var4);
         var3 = var3 + var4.field_f;
-        bob var5 = new bob(SetShipToShipRamDamage.field_o, 0, 0, 0, 0, 16777215, -1, 0, 0, SetShipToShipRamDamage.field_o.field_k, -1, 2147483647, true);
+        bob var5 = new bob(SetShipToShipRamDamage.field_o, 0, 0, 0, 0, 16777215, -1, 0, 0, SetShipToShipRamDamage.field_o.maxAscent, -1, 2147483647, true);
         this.field_w = new kja(var2, var5);
         this.field_w.field_p = "";
         this.field_w.a(0, -1, SetBombletSprayProjectileDamage.field_q);

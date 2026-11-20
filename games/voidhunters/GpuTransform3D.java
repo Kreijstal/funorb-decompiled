@@ -600,7 +600,7 @@ final class GpuTransform3D extends Transform3D {
           if (var3 != -2) {
             if (-1 != var3) {
               var4 = Asteroid.field_v.e((byte) -108) ? 1 : 0;
-              vga.a(var3, (byte) -119, Asteroid.field_v.i(0), Asteroid.field_v.field_yb, param2, var4 != 0);
+              SecondaryNodeQueue.a(var3, (byte) -119, Asteroid.field_v.i(0), Asteroid.field_v.field_yb, param2, var4 != 0);
             }
             Asteroid.field_v = null;
             lnb.d(0);

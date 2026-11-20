@@ -118,11 +118,11 @@ final class rga {
           this.field_h = param0;
           this.field_b = this.field_h.field_uc;
           if (this.field_b &&
-            !this.field_h.a(mj.field_f, wh.field_o, -92)) {
+            !this.field_h.a(GpuDataType.field_f, SocketNetworkArchiveClient.field_o, -92)) {
             this.field_b = false;
           }
           if (!this.field_b &&
-            !this.field_h.a(-10, wh.field_o, mj.field_f)) {
+            !this.field_h.a(-10, SocketNetworkArchiveClient.field_o, GpuDataType.field_f)) {
             return;
           }
           MissionFactory.c((byte) 111);
@@ -130,19 +130,19 @@ final class rga {
             this.field_a = new eb[16];
             for (var2_int = 0; var2_int < 16; var2_int++) {
               var15 = ppb.a(PlayerVote.field_b, var2_int * 32768, true, 32768);
-              this.field_a[var2_int] = this.field_h.a(128, wh.field_o, 0, 128, true, var15);
+              this.field_a[var2_int] = this.field_h.a(128, SocketNetworkArchiveClient.field_o, 0, 128, true, var15);
             }
             this.field_c = new eb[16];
             for (var2_intLifetime1 = 0; var2_intLifetime1 < 16; var2_intLifetime1++) {
               var16 = ppb.a(GetPointDefenceLaserRandomness.field_q, 32768 * var2_intLifetime1, true, 32768);
-              this.field_c[var2_intLifetime1] = this.field_h.a(128, wh.field_o, 0, 128, true, var16);
+              this.field_c[var2_intLifetime1] = this.field_h.a(128, SocketNetworkArchiveClient.field_o, 0, 128, true, var16);
             }
             return;
           }
           var17 = ffb.extractBytes(false, PlayerVote.field_b, true);
-          this.field_d = this.field_h.a(128, 16, var17, wh.field_o, 128, -16539);
+          this.field_d = this.field_h.a(128, 16, var17, SocketNetworkArchiveClient.field_o, 128, -16539);
           var18 = ffb.extractBytes(false, GetPointDefenceLaserRandomness.field_q, true);
-          this.field_h.a(128, 16, var18, wh.field_o, 128, -16539);
+          this.field_h.a(128, 16, var18, SocketNetworkArchiveClient.field_o, 128, -16539);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -23,9 +23,9 @@ final class wf {
           }
         }
         int var4 = 36;
-        int var5 = (-dma.field_g + GetBombletSprayEnergyUsed.field_p.width) / 2;
+        int var5 = (-SoftwareRasterizer2D.width + GetBombletSprayEnergyUsed.field_p.width) / 2;
         var3 = var3 + var5;
-        int var6 = (GetBombletSprayEnergyUsed.field_p.height - dma.field_j) / 2;
+        int var6 = (GetBombletSprayEnergyUsed.field_p.height - SoftwareRasterizer2D.height) / 2;
         var4 = var4 + var6;
         int var7 = SetVariableAction.field_b;
         if (param1 != -61) {
@@ -131,7 +131,7 @@ final class wf {
 
     private final int c(int param0, int param1) {
         int var4 = 0;
-        int var3 = (GetBombletSprayEnergyUsed.field_p.height - dma.field_j) / 2;
+        int var3 = (GetBombletSprayEnergyUsed.field_p.height - SoftwareRasterizer2D.height) / 2;
         if (param1 != 17915) {
           this.a(false, -15, 108);
         }
@@ -276,7 +276,7 @@ final class wf {
             }
             var9 = 1;
           }
-          if (wh.field_n > 0) {
+          if (SocketNetworkArchiveClient.field_n > 0) {
             var9 = 1;
             var8 = ParticleFactory.field_b.toUpperCase();
           } else {
@@ -433,20 +433,20 @@ final class wf {
             var4 = SetRepairModeRadius.f(255) * 4;
           }
         }
-        var5 = var4 + (GetBombletSprayEnergyUsed.field_p.width - dma.field_g) / 2;
-        var6 = (-dma.field_j + GetBombletSprayEnergyUsed.field_p.height) / 2;
+        var5 = var4 + (GetBombletSprayEnergyUsed.field_p.width - SoftwareRasterizer2D.width) / 2;
+        var6 = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
         var7 = 20;
         var8 = 20;
         var10 = -32 % ((param0 - 3) / 51);
-        BlackBoxRecording.a((byte) -115, 200, var8 * 2 + ko.field_e[6].field_n + (ko.field_e[0].field_n + 180 + 55), 80 + var5 + (-ko.field_e[0].field_m - var7), -var8 + (160 + var6 - ko.field_e[0].field_n) - 55, 2 * var7 + (480 + ko.field_e[0].field_m) + ko.field_e[2].field_m);
+        BlackBoxRecording.a((byte) -115, 200, var8 * 2 + ko.field_e[6].paddedHeight + (ko.field_e[0].paddedHeight + 180 + 55), 80 + var5 + (-ko.field_e[0].paddedWidth - var7), -var8 + (160 + var6 - ko.field_e[0].paddedHeight) - 55, 2 * var7 + (480 + ko.field_e[0].paddedWidth) + ko.field_e[2].paddedWidth);
         var9 = 16;
         var11 = 50;
-        var12 = var11 + (-55 - ko.field_e[0].field_n) + (var6 + 160) - var8;
-        var13 = 2 * var8 + 180 + ko.field_e[0].field_n + (ko.field_e[6].field_n - 10);
-        CachedArchiveProvider.a(150, false, -var7 + var5 + 80 - (ko.field_e[0].field_m - var9), var12, var13, -(var9 * 2) + ko.field_e[0].field_m + 480 - (-ko.field_e[2].field_m - 2 * var7), 1);
+        var12 = var11 + (-55 - ko.field_e[0].paddedHeight) + (var6 + 160) - var8;
+        var13 = 2 * var8 + 180 + ko.field_e[0].paddedHeight + (ko.field_e[6].paddedHeight - 10);
+        CachedArchiveProvider.a(150, false, -var7 + var5 + 80 - (ko.field_e[0].paddedWidth - var9), var12, var13, -(var9 * 2) + ko.field_e[0].paddedWidth + 480 - (-ko.field_e[2].paddedWidth - 2 * var7), 1);
         var14 = 50;
-        var15 = -var7 + (-ko.field_e[0].field_m + (var5 + 80 + var9)) + var14;
-        var16 = 2 * var7 + (ko.field_e[0].field_m + 480 - var14 * 2) + (ko.field_e[2].field_m - var9 * 2);
+        var15 = -var7 + (-ko.field_e[0].paddedWidth + (var5 + 80 + var9)) + var14;
+        var16 = 2 * var7 + (ko.field_e[0].paddedWidth + 480 - var14 * 2) + (ko.field_e[2].paddedWidth - var9 * 2);
         var17 = 13421772;
         if (SetFps.field_o == 0) {
           var12 += 50;
@@ -507,7 +507,7 @@ final class wf {
           if (var10_int == 1) {
             if (this.field_b.e((byte) -126)) {
               if (GetPhasedEnergyBeamPulsetime.e((byte) 85)) {
-                GetAutoDetail.a(SetMpSandboxEnemySpawnLimit.field_p, 2, (byte) -115, 320, SetDebrisGroupColour.field_o, param1, wc.field_d, 0, 8, true, SetMpSandboxEnemySpawnLimit.field_p.field_o, dra.field_v, 240, 8, SetMpSandboxEnemySpawnLimit.field_p.field_A + SetMpSandboxEnemySpawnLimit.field_p.field_o);
+                GetAutoDetail.a(SetMpSandboxEnemySpawnLimit.field_p, 2, (byte) -115, 320, SetDebrisGroupColour.field_o, param1, wc.field_d, 0, 8, true, SetMpSandboxEnemySpawnLimit.field_p.capHeight, dra.field_v, 240, 8, SetMpSandboxEnemySpawnLimit.field_p.maxDescent + SetMpSandboxEnemySpawnLimit.field_p.capHeight);
               } else {
                 var10_int = param1 ? 1 : 0;
                 GetNebulaFadesOutWhenClose.a(wgb.field_f, var10_int != 0, (byte) -85, -4);
@@ -577,7 +577,7 @@ final class wf {
                                         }
                                         aeb.field_a = true;
                                         GetMessageFadetime.field_o = false;
-                                        if (wh.g(-118) &&
+                                        if (SocketNetworkArchiveClient.g(-118) &&
                                           GraphicsPresentException.field_a) {
                                           RequestNewestBlackboxRecording.field_p.writeIsaacByte(param0 ^ 24343, 10);
                                           GraphicsPresentException.field_a = false;
@@ -640,7 +640,7 @@ final class wf {
                                                         this.field_b.e((byte) -84)) {
                                                         var4 = 0;
                                                         if (vqa.field_g != null &&
-                                                          wh.field_n <= 0 && (!ArchiveIndexLoader.field_g.copyToClipboardHidden ||
+                                                          SocketNetworkArchiveClient.field_n <= 0 && (!ArchiveIndexLoader.field_g.copyToClipboardHidden ||
                                                           ssa.b(2))) {
                                                           var10 = vqa.field_g.field_m.b(1).world.findShipByOwner(vqa.field_g.field_L, 93);
                                                           if (var10 != null) {
@@ -692,7 +692,7 @@ final class wf {
                                                             var20 = "http://" + var13Lifetime7 + "/g=voidhunters/autochoose.ws?dest=" + GetDebrisMax.a((CharSequence) ((Object) var12), 32);
                                                             var13_ref = new java.awt.datatransfer.StringSelection(var20);
                                                             SetTorpedoProjectiles.field_o.a((byte) -45, (java.awt.datatransfer.Transferable) ((Object) var13_ref));
-                                                            wh.field_n = 100;
+                                                            SocketNetworkArchiveClient.field_n = 100;
                                                             var4 = 1;
                                                             ArchiveIndex.openExternalUrl(true, 0, MissionList.b((byte) -92), var20);
                                                           }
@@ -921,8 +921,8 @@ final class wf {
             var2Lifetime1 = 3;
             var3 = AsteroidField.a((byte) -37, BodyInZoneCondition.field_c, GetPointDefenceLaserProjectiles.a(false, var2Lifetime1), var2Lifetime1, 480);
             var4 = 16;
-            var5_int = (GetBombletSprayEnergyUsed.field_p.width - dma.field_g) / 2;
-            var6 = (-dma.field_j + GetBombletSprayEnergyUsed.field_p.height) / 2;
+            var5_int = (GetBombletSprayEnergyUsed.field_p.width - SoftwareRasterizer2D.width) / 2;
+            var6 = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
             var3 = var3 + var4 * 2;
             BlackBoxRecording.a((byte) -115, 255, var3, var5_int + (80 - var4), -var4 + (var6 + 160), var4 * 2 + 480);
             SetAutoaim.a(-1, 1000, 80 + var5_int, GetPointDefenceLaserProjectiles.a(false, var2Lifetime1), 0, BodyInZoneCondition.field_c, 8555923, 480, -32, 160 + var6, 0, var2Lifetime1);
@@ -937,7 +937,7 @@ final class wf {
         } else {
           var3Lifetime1 = 4 * (-SetRepairModeRadius.f(param0 ^ 190) + 255);
         }
-        var4Lifetime1 = (GetBombletSprayEnergyUsed.field_p.height - dma.field_j) / 2;
+        var4Lifetime1 = (GetBombletSprayEnergyUsed.field_p.height - SoftwareRasterizer2D.height) / 2;
         if (this.field_c != 0) {
           if (this.field_c < ocb.field_m.length &&
             ocb.field_m[this.field_c] != null) {
@@ -957,7 +957,7 @@ final class wf {
         if (param0 != 31488) {
           discarded$0 = this.a((byte) -10, -10);
         }
-        int var3 = (GetBombletSprayEnergyUsed.field_p.width - dma.field_g) / 2;
+        int var3 = (GetBombletSprayEnergyUsed.field_p.width - SoftwareRasterizer2D.width) / 2;
         if (this.field_c == 5) {
           return 190 * param1 + var3 + SetReloadBarWidth.field_r[this.field_c];
         }
@@ -1018,7 +1018,7 @@ final class wf {
     }
 
     private final int a(byte param0, int param1) {
-        int var3 = (-dma.field_g + GetBombletSprayEnergyUsed.field_p.width) / 2;
+        int var3 = (-SoftwareRasterizer2D.width + GetBombletSprayEnergyUsed.field_p.width) / 2;
         if (this.field_c == 5) {
           return this.b(31488, param1) + 140;
         }

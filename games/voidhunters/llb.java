@@ -263,7 +263,7 @@ class llb extends fgb {
 
     final void b(boolean param0, int param1) {
         int var3 = -119 % ((param1 + 29) / 40);
-        this.a(false, dma.field_j, false, dma.field_g, true, false, true, param0, false, 0, 0);
+        this.a(false, SoftwareRasterizer2D.height, false, SoftwareRasterizer2D.width, true, false, true, param0, false, 0, 0);
     }
 
     final void g(int param0) {
@@ -335,19 +335,19 @@ class llb extends fgb {
         this.field_u = param4 + this.field_K;
         this.field_E = this.field_E - var7Lifetime3;
         param3 = param3 & this.field_y;
-        var8 = dma.field_d;
-        var9 = dma.field_c;
-        var10 = dma.field_a;
-        var11 = dma.field_f;
-        dma.g(this.field_M, this.field_u, this.field_hb + this.field_M, this.field_G + this.field_u);
+        var8 = SoftwareRasterizer2D.clipLeft;
+        var9 = SoftwareRasterizer2D.clipTop;
+        var10 = SoftwareRasterizer2D.clipRight;
+        var11 = SoftwareRasterizer2D.clipBottom;
+        SoftwareRasterizer2D.intersectClip(this.field_M, this.field_u, this.field_hb + this.field_M, this.field_G + this.field_u);
         var12 = 0;
         if (!GetThrusterBindingMoveAndTurnHasOppositeMove.field_o &&
           param3 &&
           SetDebrisPartitioned.field_o != 0 &&
-          Particle.field_H >= dma.field_d &&
-          Particle.field_H < dma.field_a &&
-          qs.field_a >= dma.field_c &&
-          dma.field_f > qs.field_a) {
+          Particle.field_H >= SoftwareRasterizer2D.clipLeft &&
+          Particle.field_H < SoftwareRasterizer2D.clipRight &&
+          qs.field_a >= SoftwareRasterizer2D.clipTop &&
+          SoftwareRasterizer2D.clipBottom > qs.field_a) {
           this.field_C = SetDebrisPartitioned.field_o;
           var12 = 1;
           this.field_r = Particle.field_H - this.field_M;
@@ -362,7 +362,7 @@ class llb extends fgb {
         if (hu.field_b == 0) {
           this.field_C = 0;
         }
-        stackIn_35_1 = (!GetPlayerRepairAmount.field_p) && (PlayerGameData.field_b >= dma.field_d) && (PlayerGameData.field_b < dma.field_a) && (dma.field_c <= uia.field_b) && (dma.field_f > uia.field_b);
+        stackIn_35_1 = (!GetPlayerRepairAmount.field_p) && (PlayerGameData.field_b >= SoftwareRasterizer2D.clipLeft) && (PlayerGameData.field_b < SoftwareRasterizer2D.clipRight) && (SoftwareRasterizer2D.clipTop <= uia.field_b) && (SoftwareRasterizer2D.clipBottom > uia.field_b);
         this.field_Q = stackIn_35_1;
         stackIn_40_1 = (this.field_Q) && (this.field_C == hu.field_b) && (param3);
         this.field_O = stackIn_40_1;
@@ -379,7 +379,7 @@ class llb extends fgb {
         if (var12 != 0) {
           GetThrusterBindingMoveAndTurnHasOppositeMove.field_o = true;
         }
-        dma.b(var8, var9, var10, var11);
+        SoftwareRasterizer2D.setClip(var8, var9, var10, var11);
         if (this.field_C != 0 &&
           this.field_Z) {
           this.field_K = -this.field_n + uia.field_b - param4;
@@ -463,13 +463,13 @@ class llb extends fgb {
         int var4_intLifetime1;
         if (null != this.field_R &&
           null != this.field_eb) {
-          var4_int = this.field_eb.b(this.field_R, param0);
+          var4_int = this.field_eb.getParagraphWidth(this.field_R, param0);
           if (var3 < var4_int) {
             var3 = var4_int;
           }
         }
         if (null != this.field_tb) {
-          var4_intLifetime1 = this.field_tb.field_m;
+          var4_intLifetime1 = this.field_tb.paddedWidth;
           if (var3 < var4_intLifetime1) {
             var3 = var4_intLifetime1;
           }
@@ -563,7 +563,7 @@ class llb extends fgb {
         if (param1 == 1332) {
           GetThrusterBindingMoveAndTurnHasOppositeMove.field_o = !param0 ? true : false;
           GetPlayerRepairAmount.field_p = !param0 ? true : false;
-          this.a(true, 0, dma.field_j, true, 0, dma.field_g);
+          this.a(true, 0, SoftwareRasterizer2D.height, true, 0, SoftwareRasterizer2D.width);
           return;
         }
     }
@@ -592,11 +592,11 @@ class llb extends fgb {
         var25 = VoidHunters.field_G;
         this.field_u = param10 + this.field_K;
         this.field_M = this.field_L + param9;
-        var12 = dma.field_d;
-        var13 = dma.field_c;
-        var14 = dma.field_a;
-        var15 = dma.field_f;
-        dma.g(this.field_M, this.field_u, this.field_M + this.field_hb, this.field_G + this.field_u);
+        var12 = SoftwareRasterizer2D.clipLeft;
+        var13 = SoftwareRasterizer2D.clipTop;
+        var14 = SoftwareRasterizer2D.clipRight;
+        var15 = SoftwareRasterizer2D.clipBottom;
+        SoftwareRasterizer2D.intersectClip(this.field_M, this.field_u, this.field_M + this.field_hb, this.field_G + this.field_u);
         if (!this.field_N) {
           param0 = this.field_O;
           param2 = this.field_J;
@@ -684,22 +684,22 @@ class llb extends fgb {
         if (var17 != null) {
           var23_int = var21 + this.field_M;
           if (1 == this.field_F) {
-            var23_int = var23_int + (this.field_hb - var17.field_m) / 2;
+            var23_int = var23_int + (this.field_hb - var17.paddedWidth) / 2;
           }
           var24 = var22 + this.field_u;
           if (2 == this.field_F) {
-            var23_int = var23_int + (-var17.field_m + this.field_hb);
+            var23_int = var23_int + (-var17.paddedWidth + this.field_hb);
           }
           if (this.field_B == 1) {
-            var24 = var24 + (-var17.field_n + this.field_G) / 2;
+            var24 = var24 + (-var17.paddedHeight + this.field_G) / 2;
           }
           if (this.field_B == 2) {
-            var24 = var24 + (-var17.field_n + this.field_G);
+            var24 = var24 + (-var17.paddedHeight + this.field_G);
           }
           if (256 > this.field_ab) {
-            var17.d(var23_int, var24, this.field_ab);
+            var17.drawAlpha(var23_int, var24, this.field_ab);
           } else {
-            var17.a(var23_int, var24);
+            var17.draw(var23_int, var24);
           }
         }
         boolean decompiledFrameRemainder0 = true;
@@ -713,32 +713,32 @@ class llb extends fgb {
             this.field_s != null) {
             var23Lifetime2 = var26 + this.field_s;
           }
-          if (this.field_eb.b(var23Lifetime2) <= this.field_hb - this.field_w * 2 &&
+          if (this.field_eb.getStringWidth(var23Lifetime2) <= this.field_hb - this.field_w * 2 &&
             var23Lifetime2.indexOf("<br>") < 0) {
             if (this.field_B != 1) {
               if (2 == this.field_B) {
-                var22 = var22 + (-this.field_eb.field_k + (this.field_G - this.field_eb.field_A));
+                var22 = var22 + (-this.field_eb.maxAscent + (this.field_G - this.field_eb.maxDescent));
               }
             } else {
-              var22 = var22 + (-this.field_eb.field_A - this.field_eb.field_k + this.field_G) / 2;
+              var22 = var22 + (-this.field_eb.maxDescent - this.field_eb.maxAscent + this.field_G) / 2;
             }
             if (0 == this.field_F) {
-              this.field_eb.a(var23Lifetime2, this.field_M + (this.field_w + var21), var22 + (this.field_u + this.field_eb.field_k), var18, -1, this.field_I);
+              this.field_eb.draw(var23Lifetime2, this.field_M + (this.field_w + var21), var22 + (this.field_u + this.field_eb.maxAscent), var18, -1, this.field_I);
             } else {
               if (this.field_F == 1) {
-                this.field_eb.b(var23Lifetime2, var21 + this.field_w + (this.field_M + (-(this.field_w * 2) + this.field_hb) / 2), this.field_u + (var22 + this.field_eb.field_k), var18, -1, this.field_I);
+                this.field_eb.drawCentered(var23Lifetime2, var21 + this.field_w + (this.field_M + (-(this.field_w * 2) + this.field_hb) / 2), this.field_u + (var22 + this.field_eb.maxAscent), var18, -1, this.field_I);
               } else {
                 if (2 != this.field_F) {
-                  this.field_eb.a(var23Lifetime2, this.field_M - (-this.field_w - var21), this.field_u + var22, this.field_hb - this.field_w * 2, this.field_G, var18, -1, this.field_I, this.field_F, this.field_B, this.field_D);
+                  this.field_eb.drawParagraph(var23Lifetime2, this.field_M - (-this.field_w - var21), this.field_u + var22, this.field_hb - this.field_w * 2, this.field_G, var18, -1, this.field_I, this.field_F, this.field_B, this.field_D);
                 } else {
-                  this.field_eb.c(var23Lifetime2, this.field_hb - (this.field_w * 2 - this.field_M - this.field_w - var21), this.field_eb.field_k + this.field_u + var22, var18, -1, this.field_I);
+                  this.field_eb.drawRightAligned(var23Lifetime2, this.field_hb - (this.field_w * 2 - this.field_M - this.field_w - var21), this.field_eb.maxAscent + this.field_u + var22, var18, -1, this.field_I);
                 }
               }
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            this.field_eb.a(var23Lifetime2, var21 + (this.field_M + this.field_w), var22 + this.field_u, this.field_hb - 2 * this.field_w, this.field_G, var18, -1, this.field_I, this.field_F, this.field_B, this.field_D);
+            this.field_eb.drawParagraph(var23Lifetime2, var21 + (this.field_M + this.field_w), var22 + this.field_u, this.field_hb - 2 * this.field_w, this.field_G, var18, -1, this.field_I, this.field_F, this.field_B, this.field_D);
           }
         }
         if (null != this.field_lb) {
@@ -748,7 +748,7 @@ class llb extends fgb {
             var23_ref = (llb) (this.field_lb.next((byte) 109));
           }
         }
-        dma.b(var12, var13, var14, var15);
+        SoftwareRasterizer2D.setClip(var12, var13, var14, var15);
         return;
     }
 

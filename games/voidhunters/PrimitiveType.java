@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jra {
+final class PrimitiveType {
     static boolean[] field_d;
     static int field_c;
     static String field_b;
@@ -54,7 +54,7 @@ final class jra {
         if (param2 == 19717) {
           return;
         }
-        jra.a(-70, false, 63);
+        PrimitiveType.a(-70, false, 63);
     }
 
     public final String toString() {

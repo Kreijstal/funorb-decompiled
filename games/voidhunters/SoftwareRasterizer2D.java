@@ -1,38 +1,38 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dma {
-    static int field_f;
-    static int[] field_i;
-    static int field_j;
-    static int[] field_h;
-    private static int[] field_e;
-    static int field_a;
-    static int field_g;
-    static int field_d;
-    private static int[] field_l;
-    static int[] field_b;
-    static int field_c;
-    private static int[] field_k;
+final class SoftwareRasterizer2D {
+    static int clipBottom;
+    static int[] pixels;
+    static int height;
+    static int[] maskStarts;
+    private static int[] blurBlueSums;
+    static int clipRight;
+    static int width;
+    static int clipLeft;
+    private static int[] blurRedSums;
+    static int[] maskWidths;
+    static int clipTop;
+    private static int[] blurGreenSums;
 
-    final static void a(int[] param0, int param1, int param2) {
-        field_i = param0;
-        field_g = param1;
-        field_j = param2;
-        dma.b(0, 0, param1, param2);
+    final static void setTarget(int[] param0, int param1, int param2) {
+        pixels = param0;
+        width = param1;
+        height = param2;
+        SoftwareRasterizer2D.setClip(0, 0, param1, param2);
     }
 
-    final static void c(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawRectangleDropShadow(int param0, int param1, int param2, int param3, int param4) {
         int var6 = 0;
         int var5 = 0;
         for (var6 = 0; var6 < 4; var6++) {
           var5 = 128 - (var6 << 5);
-          dma.g(param0 + var6, param1 + param3 + var6, param2, param4, var5);
-          dma.f(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
+          SoftwareRasterizer2D.drawHorizontalLineAlpha(param0 + var6, param1 + param3 + var6, param2, param4, var5);
+          SoftwareRasterizer2D.drawVerticalLineAlpha(param0 + param2 + var6, param1 + var6, param3 + 1, param4, var5);
         }
     }
 
-    final static void g(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawHorizontalLineAlpha(int param0, int param1, int param2, int param3, int param4) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -44,65 +44,65 @@ final class dma {
         int var11 = 0;
         int var14 = 0;
         int incrementValue$0 = 0;
-        if (param1 >= field_c) {
-          if (param1 >= field_f) {
+        if (param1 >= clipTop) {
+          if (param1 >= clipBottom) {
             return;
           }
-          if (param0 < field_d) {
-            param2 = param2 - (field_d - param0);
-            param0 = field_d;
+          if (param0 < clipLeft) {
+            param2 = param2 - (clipLeft - param0);
+            param0 = clipLeft;
           }
-          if (param0 + param2 > field_a) {
-            param2 = field_a - param0;
+          if (param0 + param2 > clipRight) {
+            param2 = clipRight - param0;
           }
           var5 = 256 - param4;
           var6 = (param3 >> 16 & 255) * param4;
           var7 = (param3 >> 8 & 255) * param4;
           var8 = (param3 & 255) * param4;
-          var12 = param0 + param1 * field_g;
+          var12 = param0 + param1 * width;
           for (var13 = 0; var13 < param2; var13++) {
-            var9 = (field_i[var12] >> 16 & 255) * var5;
-            var10 = (field_i[var12] >> 8 & 255) * var5;
-            var11 = (field_i[var12] & 255) * var5;
+            var9 = (pixels[var12] >> 16 & 255) * var5;
+            var10 = (pixels[var12] >> 8 & 255) * var5;
+            var11 = (pixels[var12] & 255) * var5;
             var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
             incrementValue$0 = var12;
             var12++;
-            field_i[incrementValue$0] = var14;
+            pixels[incrementValue$0] = var14;
           }
           return;
         }
     }
 
-    final static void h(int param0, int param1, int param2, int param3) {
+    final static void drawHorizontalLine(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
-        if (param1 >= field_c) {
-          if (param1 >= field_f) {
+        if (param1 >= clipTop) {
+          if (param1 >= clipBottom) {
             return;
           }
-          if (param0 < field_d) {
-            param2 = param2 - (field_d - param0);
-            param0 = field_d;
+          if (param0 < clipLeft) {
+            param2 = param2 - (clipLeft - param0);
+            param0 = clipLeft;
           }
-          if (param0 + param2 > field_a) {
-            param2 = field_a - param0;
+          if (param0 + param2 > clipRight) {
+            param2 = clipRight - param0;
           }
-          var4 = param0 + param1 * field_g;
+          var4 = param0 + param1 * width;
           for (var5 = 0; var5 < param2; var5++) {
-            field_i[var4 + var5] = param3;
+            pixels[var4 + var5] = param3;
           }
           return;
         }
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4) {
-        dma.h(param0, param1, param2, param4);
-        dma.h(param0, param1 + param3 - 1, param2, param4);
-        dma.d(param0, param1, param3, param4);
-        dma.d(param0 + param2 - 1, param1, param3, param4);
+    final static void drawRectangle(int param0, int param1, int param2, int param3, int param4) {
+        SoftwareRasterizer2D.drawHorizontalLine(param0, param1, param2, param4);
+        SoftwareRasterizer2D.drawHorizontalLine(param0, param1 + param3 - 1, param2, param4);
+        SoftwareRasterizer2D.drawVerticalLine(param0, param1, param3, param4);
+        SoftwareRasterizer2D.drawVerticalLine(param0 + param2 - 1, param1, param3, param4);
     }
 
-    private final static void f(int param0, int param1, int param2, int param3, int param4) {
+    private final static void drawVerticalLineAlpha(int param0, int param1, int param2, int param3, int param4) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -113,45 +113,45 @@ final class dma {
         int var10 = 0;
         int var11 = 0;
         int var14 = 0;
-        if (param0 >= field_d) {
-          if (param0 >= field_a) {
+        if (param0 >= clipLeft) {
+          if (param0 >= clipRight) {
             return;
           }
-          if (param1 < field_c) {
-            param2 = param2 - (field_c - param1);
-            param1 = field_c;
+          if (param1 < clipTop) {
+            param2 = param2 - (clipTop - param1);
+            param1 = clipTop;
           }
-          if (param1 + param2 > field_f) {
-            param2 = field_f - param1;
+          if (param1 + param2 > clipBottom) {
+            param2 = clipBottom - param1;
           }
           var5 = 256 - param4;
           var6 = (param3 >> 16 & 255) * param4;
           var7 = (param3 >> 8 & 255) * param4;
           var8 = (param3 & 255) * param4;
-          var12 = param0 + param1 * field_g;
+          var12 = param0 + param1 * width;
           for (var13 = 0; var13 < param2; var13++) {
-            var9 = (field_i[var12] >> 16 & 255) * var5;
-            var10 = (field_i[var12] >> 8 & 255) * var5;
-            var11 = (field_i[var12] & 255) * var5;
+            var9 = (pixels[var12] >> 16 & 255) * var5;
+            var10 = (pixels[var12] >> 8 & 255) * var5;
+            var11 = (pixels[var12] & 255) * var5;
             var14 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
-            field_i[var12] = var14;
-            var12 = var12 + field_g;
+            pixels[var12] = var14;
+            var12 = var12 + width;
           }
           return;
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3, int param4, int param5) {
-        dma.g(param0, param1, param2, param4, param5);
-        dma.g(param0, param1 + param3 - 1, param2, param4, param5);
+    final static void drawRectangleAlpha(int param0, int param1, int param2, int param3, int param4, int param5) {
+        SoftwareRasterizer2D.drawHorizontalLineAlpha(param0, param1, param2, param4, param5);
+        SoftwareRasterizer2D.drawHorizontalLineAlpha(param0, param1 + param3 - 1, param2, param4, param5);
         if (param3 >= 3) {
-          dma.f(param0, param1 + 1, param3 - 2, param4, param5);
-          dma.f(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
+          SoftwareRasterizer2D.drawVerticalLineAlpha(param0, param1 + 1, param3 - 2, param4, param5);
+          SoftwareRasterizer2D.drawVerticalLineAlpha(param0 + param2 - 1, param1 + 1, param3 - 2, param4, param5);
           return;
         }
     }
 
-    final static void f(int param0, int param1, int param2, int param3) {
+    final static void fillCircle(int param0, int param1, int param2, int param3) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -179,19 +179,19 @@ final class dma {
         int var14Lifetime1;
         int var15Lifetime1;
         if (param2 == 0) {
-          dma.a(param0, param1, param3);
+          SoftwareRasterizer2D.drawPixel(param0, param1, param3);
           return;
         }
         if (param2 < 0) {
           param2 = -param2;
         }
         var4 = param1 - param2;
-        if (var4 < field_c) {
-          var4 = field_c;
+        if (var4 < clipTop) {
+          var4 = clipTop;
         }
         var5 = param1 + param2 + 1;
-        if (var5 > field_f) {
-          var5 = field_f;
+        if (var5 > clipBottom) {
+          var5 = clipBottom;
         }
         var6 = var4;
         var7 = param2 * param2;
@@ -207,18 +207,18 @@ final class dma {
             if (var11 > var7 &&
               var10 > var7) {
               var12 = param0 - var8 + 1;
-              if (var12 < field_d) {
-                var12 = field_d;
+              if (var12 < clipLeft) {
+                var12 = clipLeft;
               }
               var13 = param0 + var8;
-              if (var13 > field_a) {
-                var13 = field_a;
+              if (var13 > clipRight) {
+                var13 = clipRight;
               }
-              var14 = var12 + var6 * field_g;
+              var14 = var12 + var6 * width;
               for (var15 = var12; var15 < var13; var15++) {
                 incrementValue$4 = var14;
                 var14++;
-                field_i[incrementValue$4] = param3;
+                pixels[incrementValue$4] = param3;
               }
               var6++;
               incrementValue$3 = var9;
@@ -250,18 +250,18 @@ final class dma {
             break;
           }
           var12Lifetime1 = param0 - var8Lifetime1;
-          if (var12Lifetime1 < field_d) {
-            var12Lifetime1 = field_d;
+          if (var12Lifetime1 < clipLeft) {
+            var12Lifetime1 = clipLeft;
           }
           var13Lifetime1 = param0 + var8Lifetime1;
-          if (var13Lifetime1 > field_a - 1) {
-            var13Lifetime1 = field_a - 1;
+          if (var13Lifetime1 > clipRight - 1) {
+            var13Lifetime1 = clipRight - 1;
           }
-          var14Lifetime1 = var12Lifetime1 + var6 * field_g;
+          var14Lifetime1 = var12Lifetime1 + var6 * width;
           for (var15Lifetime1 = var12Lifetime1; var15Lifetime1 <= var13Lifetime1; var15Lifetime1++) {
             incrementValue$2 = var14Lifetime1;
             var14Lifetime1++;
-            field_i[incrementValue$2] = param3;
+            pixels[incrementValue$2] = param3;
           }
           var6++;
           var11Lifetime1 = var11Lifetime1 + (var9Lifetime1 + var9Lifetime1);
@@ -272,15 +272,15 @@ final class dma {
         return;
     }
 
-    final static void d() {
-        field_d = 0;
-        field_c = 0;
-        field_a = field_g;
-        field_f = field_j;
-        dma.c();
+    final static void resetClip() {
+        clipLeft = 0;
+        clipTop = 0;
+        clipRight = width;
+        clipBottom = height;
+        SoftwareRasterizer2D.clearScanlineMask();
     }
 
-    final static void c(int param0, int param1, int param2, int param3) {
+    final static void drawCircle(int param0, int param1, int param2, int param3) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int var4;
@@ -291,166 +291,166 @@ final class dma {
         int var9;
         int var10;
         if (param2 == 0) {
-          dma.a(param0, param1, param3);
+          SoftwareRasterizer2D.drawPixel(param0, param1, param3);
           return;
         }
         if (param2 < 0) {
           param2 = -param2;
         }
-        if (field_a > field_d) {
-          if (field_f <= field_c) {
+        if (clipRight > clipLeft) {
+          if (clipBottom <= clipTop) {
             return;
           }
-          if (param0 + param2 >= field_d) {
-            if (param0 - param2 < field_a &&
-              param1 + param2 >= field_c &&
-              param1 - param2 < field_f) {
-              var4 = param0 + param1 * field_g;
+          if (param0 + param2 >= clipLeft) {
+            if (param0 - param2 < clipRight &&
+              param1 + param2 >= clipTop &&
+              param1 - param2 < clipBottom) {
+              var4 = param0 + param1 * width;
               var5 = var4;
-              var6 = var4 - param2 * field_g;
-              var7 = var4 + param2 * field_g;
+              var6 = var4 - param2 * width;
+              var7 = var4 + param2 * width;
               var8 = param2;
               var9 = 0;
               param2 = param2 * param2;
               var10 = param2 - var8;
-              if (param0 - var8 >= field_d &&
-                param0 + var8 < field_a &&
-                param1 - var8 >= field_c &&
-                param1 + var8 < field_f) {
-                field_i[var4 - var8] = param3;
-                field_i[var4 + var8] = param3;
-                field_i[var6] = param3;
-                field_i[var7] = param3;
+              if (param0 - var8 >= clipLeft &&
+                param0 + var8 < clipRight &&
+                param1 - var8 >= clipTop &&
+                param1 + var8 < clipBottom) {
+                pixels[var4 - var8] = param3;
+                pixels[var4 + var8] = param3;
+                pixels[var6] = param3;
+                pixels[var7] = param3;
                 while (true) {
                   incrementValue$0 = var9;
                   var9++;
                   var10 = var10 + (incrementValue$0 + var9);
-                  var4 = var4 - field_g;
-                  var5 = var5 + field_g;
+                  var4 = var4 - width;
+                  var5 = var5 + width;
                   if (var10 > param2) {
                     var8--;
                     var10 = var10 - (var8 + var8);
-                    var6 = var6 + field_g;
-                    var7 = var7 - field_g;
+                    var6 = var6 + width;
+                    var7 = var7 - width;
                   }
                   if (var8 < var9) {
                     return;
                   }
-                  field_i[var6 - var9] = param3;
-                  field_i[var6 + var9] = param3;
-                  field_i[var4 - var8] = param3;
-                  field_i[var4 + var8] = param3;
-                  field_i[var5 - var8] = param3;
-                  field_i[var5 + var8] = param3;
-                  field_i[var7 - var9] = param3;
-                  field_i[var7 + var9] = param3;
+                  pixels[var6 - var9] = param3;
+                  pixels[var6 + var9] = param3;
+                  pixels[var4 - var8] = param3;
+                  pixels[var4 + var8] = param3;
+                  pixels[var5 - var8] = param3;
+                  pixels[var5 + var8] = param3;
+                  pixels[var7 - var9] = param3;
+                  pixels[var7 + var9] = param3;
                 }
               }
-              if (param0 - var8 >= field_d &&
-                param1 >= field_c &&
-                param1 < field_f) {
-                field_i[var4 - var8] = param3;
+              if (param0 - var8 >= clipLeft &&
+                param1 >= clipTop &&
+                param1 < clipBottom) {
+                pixels[var4 - var8] = param3;
               }
-              if (param0 + var8 < field_a &&
-                param1 >= field_c &&
-                param1 < field_f) {
-                field_i[var4 + var8] = param3;
+              if (param0 + var8 < clipRight &&
+                param1 >= clipTop &&
+                param1 < clipBottom) {
+                pixels[var4 + var8] = param3;
               }
-              if (param1 - var8 >= field_c) {
-                if (param0 >= field_d) {
-                  if (param0 < field_a) {
-                    field_i[var6] = param3;
-                    if (param1 + var8 < field_f &&
-                      param0 >= field_d &&
-                      param0 < field_a) {
-                      field_i[var7] = param3;
+              if (param1 - var8 >= clipTop) {
+                if (param0 >= clipLeft) {
+                  if (param0 < clipRight) {
+                    pixels[var6] = param3;
+                    if (param1 + var8 < clipBottom &&
+                      param0 >= clipLeft &&
+                      param0 < clipRight) {
+                      pixels[var7] = param3;
                     }
                   } else {
-                    if (param1 + var8 < field_f &&
-                      param0 >= field_d &&
-                      param0 < field_a) {
-                      field_i[var7] = param3;
+                    if (param1 + var8 < clipBottom &&
+                      param0 >= clipLeft &&
+                      param0 < clipRight) {
+                      pixels[var7] = param3;
                     }
                   }
                 } else {
-                  if (param1 + var8 < field_f &&
-                    param0 >= field_d &&
-                    param0 < field_a) {
-                    field_i[var7] = param3;
+                  if (param1 + var8 < clipBottom &&
+                    param0 >= clipLeft &&
+                    param0 < clipRight) {
+                    pixels[var7] = param3;
                   }
                 }
               } else {
-                if (param1 + var8 < field_f &&
-                  param0 >= field_d &&
-                  param0 < field_a) {
-                  field_i[var7] = param3;
+                if (param1 + var8 < clipBottom &&
+                  param0 >= clipLeft &&
+                  param0 < clipRight) {
+                  pixels[var7] = param3;
                 }
               }
               while (true) {
                 incrementValue$1 = var9;
                 var9++;
                 var10 = var10 + (incrementValue$1 + var9);
-                var4 = var4 - field_g;
-                var5 = var5 + field_g;
+                var4 = var4 - width;
+                var5 = var5 + width;
                 if (var10 > param2) {
                   var8--;
                   var10 = var10 - (var8 + var8);
-                  var6 = var6 + field_g;
-                  var7 = var7 - field_g;
+                  var6 = var6 + width;
+                  var7 = var7 - width;
                 }
                 if (var8 < var9) {
                   return;
                 }
-                if (param1 - var8 >= field_c &&
-                  param1 - var8 < field_f) {
-                  if (param0 - var9 >= field_d &&
-                    param0 - var9 < field_a) {
-                    field_i[var6 - var9] = param3;
+                if (param1 - var8 >= clipTop &&
+                  param1 - var8 < clipBottom) {
+                  if (param0 - var9 >= clipLeft &&
+                    param0 - var9 < clipRight) {
+                    pixels[var6 - var9] = param3;
                   }
-                  if (param0 + var9 >= field_d &&
-                    param0 + var9 < field_a) {
-                    field_i[var6 + var9] = param3;
-                  }
-                }
-                if (param1 - var9 >= field_c &&
-                  param1 - var9 < field_f) {
-                  if (param0 - var8 >= field_d &&
-                    param0 - var8 < field_a) {
-                    field_i[var4 - var8] = param3;
-                  }
-                  if (param0 + var8 >= field_d &&
-                    param0 + var8 < field_a) {
-                    field_i[var4 + var8] = param3;
+                  if (param0 + var9 >= clipLeft &&
+                    param0 + var9 < clipRight) {
+                    pixels[var6 + var9] = param3;
                   }
                 }
-                if (param1 + var9 >= field_c &&
-                  param1 + var9 < field_f) {
-                  if (param0 - var8 >= field_d &&
-                    param0 - var8 < field_a) {
-                    field_i[var5 - var8] = param3;
+                if (param1 - var9 >= clipTop &&
+                  param1 - var9 < clipBottom) {
+                  if (param0 - var8 >= clipLeft &&
+                    param0 - var8 < clipRight) {
+                    pixels[var4 - var8] = param3;
                   }
-                  if (param0 + var8 >= field_d &&
-                    param0 + var8 < field_a) {
-                    field_i[var5 + var8] = param3;
+                  if (param0 + var8 >= clipLeft &&
+                    param0 + var8 < clipRight) {
+                    pixels[var4 + var8] = param3;
                   }
                 }
-                if (param1 + var8 < field_c) {
+                if (param1 + var9 >= clipTop &&
+                  param1 + var9 < clipBottom) {
+                  if (param0 - var8 >= clipLeft &&
+                    param0 - var8 < clipRight) {
+                    pixels[var5 - var8] = param3;
+                  }
+                  if (param0 + var8 >= clipLeft &&
+                    param0 + var8 < clipRight) {
+                    pixels[var5 + var8] = param3;
+                  }
+                }
+                if (param1 + var8 < clipTop) {
                   continue;
                 }
-                if (param1 + var8 >= field_f) {
+                if (param1 + var8 >= clipBottom) {
                   continue;
                 }
-                if (param0 - var9 >= field_d &&
-                  param0 - var9 < field_a) {
-                  field_i[var7 - var9] = param3;
+                if (param0 - var9 >= clipLeft &&
+                  param0 - var9 < clipRight) {
+                  pixels[var7 - var9] = param3;
                 }
-                if (param0 + var9 < field_d) {
+                if (param0 + var9 < clipLeft) {
                   continue;
                 }
-                if (param0 + var9 >= field_a) {
+                if (param0 + var9 >= clipRight) {
                   continue;
                 }
-                field_i[var7 + var9] = param3;
+                pixels[var7 + var9] = param3;
               }
             }
             return;
@@ -458,7 +458,7 @@ final class dma {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawLine(int param0, int param1, int param2, int param3, int param4) {
         int var5;
         int var6;
         int var5Lifetime1;
@@ -467,17 +467,17 @@ final class dma {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            dma.h(param0 + param2, param1, -param2 + 1, param4);
+            SoftwareRasterizer2D.drawHorizontalLine(param0 + param2, param1, -param2 + 1, param4);
           } else {
-            dma.h(param0, param1, param2 + 1, param4);
+            SoftwareRasterizer2D.drawHorizontalLine(param0, param1, param2 + 1, param4);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            dma.d(param0, param1 + param3, -param3 + 1, param4);
+            SoftwareRasterizer2D.drawVerticalLine(param0, param1 + param3, -param3 + 1, param4);
           } else {
-            dma.d(param0, param1, param3 + 1, param4);
+            SoftwareRasterizer2D.drawVerticalLine(param0, param1, param3 + 1, param4);
           }
           return;
         }
@@ -493,18 +493,18 @@ final class dma {
           param2 = param2 << 16;
           var5 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
           param3 = param3 + param1;
-          if (param1 < field_c) {
-            param0 = param0 + var5 * (field_c - param1);
-            param1 = field_c;
+          if (param1 < clipTop) {
+            param0 = param0 + var5 * (clipTop - param1);
+            param1 = clipTop;
           }
-          if (param3 >= field_f) {
-            param3 = field_f - 1;
+          if (param3 >= clipBottom) {
+            param3 = clipBottom - 1;
           }
           while (param1 <= param3) {
             var6 = param0 >> 16;
-            if (var6 >= field_d &&
-              var6 < field_a) {
-              field_i[var6 + param1 * field_g] = param4;
+            if (var6 >= clipLeft &&
+              var6 < clipRight) {
+              pixels[var6 + param1 * width] = param4;
             }
             param0 = param0 + var5;
             param1++;
@@ -516,25 +516,25 @@ final class dma {
         param3 = param3 << 16;
         var5Lifetime1 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
         param2 = param2 + param0;
-        if (param0 < field_d) {
-          param1 = param1 + var5Lifetime1 * (field_d - param0);
-          param0 = field_d;
+        if (param0 < clipLeft) {
+          param1 = param1 + var5Lifetime1 * (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param2 >= field_a) {
-          param2 = field_a - 1;
+        if (param2 >= clipRight) {
+          param2 = clipRight - 1;
         }
         while (param0 <= param2) {
           var6Lifetime1 = param1 >> 16;
-          if (var6Lifetime1 >= field_c &&
-            var6Lifetime1 < field_f) {
-            field_i[param0 + var6Lifetime1 * field_g] = param4;
+          if (var6Lifetime1 >= clipTop &&
+            var6Lifetime1 < clipBottom) {
+            pixels[param0 + var6Lifetime1 * width] = param4;
           }
           param1 = param1 + var5Lifetime1;
           param0++;
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    private final static void blurRows(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var13 = 0;
         int incrementValue$0 = 0;
         int incrementValue$5 = 0;
@@ -567,15 +567,15 @@ final class dma {
         if (0 < var9) {
           var9 = 0;
         }
-        var10 = field_g - param4 - param5 - param3;
+        var10 = width - param4 - param5 - param3;
         if (0 < var10) {
           var10 = 0;
         }
         var11 = 0;
         var12 = param4 + param3 + 1;
-        if (field_g < var12) {
-          var11 = var12 - field_g;
-          var12 = field_g;
+        if (width < var12) {
+          var11 = var12 - width;
+          var12 = width;
         }
         for (var13 = -param7; var13 < 0; var13++) {
           var14 = 0;
@@ -605,7 +605,7 @@ final class dma {
           param0[incrementValue$0] = (var14 / var20 << 16) + (var15 / var20 << 8) + var16 / var20;
           for (var19Lifetime1 = 1 - param5; var19Lifetime1 < var9; var19Lifetime1++) {
             var18++;
-            if (param4 + param5 + var19Lifetime1 + param3 < field_a) {
+            if (param4 + param5 + var19Lifetime1 + param3 < clipRight) {
               param1 = param0[var17];
               var17++;
               var14 = var14 + (param1 >> 16 & 255);
@@ -695,27 +695,27 @@ final class dma {
         }
     }
 
-    final static void b(int[] param0) {
-        field_d = param0[0];
-        field_c = param0[1];
-        field_a = param0[2];
-        field_f = param0[3];
-        dma.c();
+    final static void restoreClip(int[] param0) {
+        clipLeft = param0[0];
+        clipTop = param0[1];
+        clipRight = param0[2];
+        clipBottom = param0[3];
+        SoftwareRasterizer2D.clearScanlineMask();
     }
 
-    final static void a(int param0, int param1, int param2) {
-        if (param0 >= field_d) {
-          if (param1 < field_c ||
-            param0 >= field_a ||
-            param1 >= field_f) {
+    final static void drawPixel(int param0, int param1, int param2) {
+        if (param0 >= clipLeft) {
+          if (param1 < clipTop ||
+            param0 >= clipRight ||
+            param1 >= clipBottom) {
             return;
           }
-          field_i[param0 + param1 * field_g] = param2;
+          pixels[param0 + param1 * width] = param2;
           return;
         }
     }
 
-    final static void c(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillGradientRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var10 = 0;
         int var14 = 0;
         int incrementValue$0 = 0;
@@ -728,23 +728,23 @@ final class dma {
         int var13;
         var6 = 0;
         var7 = 65536 / param3;
-        if (param0 < field_d) {
-          param2 = param2 - (field_d - param0);
-          param0 = field_d;
+        if (param0 < clipLeft) {
+          param2 = param2 - (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param1 < field_c) {
-          var6 = var6 + (field_c - param1) * var7;
-          param3 = param3 - (field_c - param1);
-          param1 = field_c;
+        if (param1 < clipTop) {
+          var6 = var6 + (clipTop - param1) * var7;
+          param3 = param3 - (clipTop - param1);
+          param1 = clipTop;
         }
-        if (param0 + param2 > field_a) {
-          param2 = field_a - param0;
+        if (param0 + param2 > clipRight) {
+          param2 = clipRight - param0;
         }
-        if (param1 + param3 > field_f) {
-          param3 = field_f - param1;
+        if (param1 + param3 > clipBottom) {
+          param3 = clipBottom - param1;
         }
-        var8 = field_g - param2;
-        var9 = param0 + param1 * field_g;
+        var8 = width - param2;
+        var9 = param0 + param1 * width;
         for (var10 = -param3; var10 < 0; var10++) {
           var11 = 65536 - var6 >> 8;
           var12 = var6 >> 8;
@@ -752,14 +752,14 @@ final class dma {
           for (var14 = -param2; var14 < 0; var14++) {
             incrementValue$0 = var9;
             var9++;
-            field_i[incrementValue$0] = var13;
+            pixels[incrementValue$0] = var13;
           }
           var9 = var9 + var8;
           var6 = var6 + var7;
         }
     }
 
-    final static void e(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void fillRectangleAlpha(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var9 = 0;
         int var10 = 0;
         int incrementValue$0 = 0;
@@ -767,37 +767,37 @@ final class dma {
         int var7;
         int var8;
         int var11;
-        if (param0 < field_d) {
-          param2 = param2 - (field_d - param0);
-          param0 = field_d;
+        if (param0 < clipLeft) {
+          param2 = param2 - (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param1 < field_c) {
-          param3 = param3 - (field_c - param1);
-          param1 = field_c;
+        if (param1 < clipTop) {
+          param3 = param3 - (clipTop - param1);
+          param1 = clipTop;
         }
-        if (param0 + param2 > field_a) {
-          param2 = field_a - param0;
+        if (param0 + param2 > clipRight) {
+          param2 = clipRight - param0;
         }
-        if (param1 + param3 > field_f) {
-          param3 = field_f - param1;
+        if (param1 + param3 > clipBottom) {
+          param3 = clipBottom - param1;
         }
         param4 = ((param4 & 16711935) * param5 >> 8 & 16711935) + ((param4 & 65280) * param5 >> 8 & 65280);
         var6 = 256 - param5;
-        var7 = field_g - param2;
-        var8 = param0 + param1 * field_g;
+        var7 = width - param2;
+        var8 = param0 + param1 * width;
         for (var9 = 0; var9 < param3; var9++) {
           for (var10 = -param2; var10 < 0; var10++) {
-            var11 = field_i[var8];
+            var11 = pixels[var8];
             var11 = ((var11 & 16711935) * var6 >> 8 & 16711935) + ((var11 & 65280) * var6 >> 8 & 65280);
             incrementValue$0 = var8;
             var8++;
-            field_i[incrementValue$0] = param4 + var11;
+            pixels[incrementValue$0] = param4 + var11;
           }
           var8 = var8 + var7;
         }
     }
 
-    final static void a() {
+    final static void clear() {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -808,42 +808,42 @@ final class dma {
         int incrementValue$7 = 0;
         int incrementValue$8 = 0;
         int var0 = 0;
-        int var1 = field_g * field_j - 7;
+        int var1 = width * height - 7;
         while (var0 < var1) {
           incrementValue$0 = var0;
           var0++;
-          field_i[incrementValue$0] = 0;
+          pixels[incrementValue$0] = 0;
           incrementValue$1 = var0;
           var0++;
-          field_i[incrementValue$1] = 0;
+          pixels[incrementValue$1] = 0;
           incrementValue$2 = var0;
           var0++;
-          field_i[incrementValue$2] = 0;
+          pixels[incrementValue$2] = 0;
           incrementValue$3 = var0;
           var0++;
-          field_i[incrementValue$3] = 0;
+          pixels[incrementValue$3] = 0;
           incrementValue$4 = var0;
           var0++;
-          field_i[incrementValue$4] = 0;
+          pixels[incrementValue$4] = 0;
           incrementValue$5 = var0;
           var0++;
-          field_i[incrementValue$5] = 0;
+          pixels[incrementValue$5] = 0;
           incrementValue$6 = var0;
           var0++;
-          field_i[incrementValue$6] = 0;
+          pixels[incrementValue$6] = 0;
           incrementValue$7 = var0;
           var0++;
-          field_i[incrementValue$7] = 0;
+          pixels[incrementValue$7] = 0;
         }
         var1 += 7;
         while (var0 < var1) {
           incrementValue$8 = var0;
           var0++;
-          field_i[incrementValue$8] = 0;
+          pixels[incrementValue$8] = 0;
         }
     }
 
-    private final static void a(int param0, int[] param1, int param2, int param3, int param4, int param5) {
+    private final static void darkenPixels(int param0, int[] param1, int param2, int param3, int param4, int param5) {
         while (param4 < 0) {
           param2 = param0 + param3 - 7;
           while (param0 < param2) {
@@ -874,12 +874,12 @@ final class dma {
         }
     }
 
-    private final static void c() {
-        field_h = null;
-        field_b = null;
+    private final static void clearScanlineMask() {
+        maskStarts = null;
+        maskWidths = null;
     }
 
-    final static void f(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawThickLine(int param0, int param1, int param2, int param3, int param4, int param5) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int var6;
@@ -950,104 +950,104 @@ final class dma {
         return;
     }
 
-    final static void g(int param0, int param1, int param2, int param3) {
-        if (field_d < param0) {
-          field_d = param0;
+    final static void intersectClip(int param0, int param1, int param2, int param3) {
+        if (clipLeft < param0) {
+          clipLeft = param0;
         }
-        if (field_c < param1) {
-          field_c = param1;
+        if (clipTop < param1) {
+          clipTop = param1;
         }
-        if (field_a > param2) {
-          field_a = param2;
+        if (clipRight > param2) {
+          clipRight = param2;
         }
-        if (field_f > param3) {
-          field_f = param3;
+        if (clipBottom > param3) {
+          clipBottom = param3;
         }
-        dma.c();
+        SoftwareRasterizer2D.clearScanlineMask();
     }
 
-    final static void e(int param0, int param1, int param2, int param3) {
-        if (param0 < field_d) {
-          param2 = param2 - (field_d - param0);
-          param0 = field_d;
+    final static void darkenRectangle(int param0, int param1, int param2, int param3) {
+        if (param0 < clipLeft) {
+          param2 = param2 - (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param1 < field_c) {
-          param3 = param3 - (field_c - param1);
-          param1 = field_c;
+        if (param1 < clipTop) {
+          param3 = param3 - (clipTop - param1);
+          param1 = clipTop;
         }
-        if (param0 + param2 > field_a) {
-          param2 = field_a - param0;
+        if (param0 + param2 > clipRight) {
+          param2 = clipRight - param0;
         }
-        if (param1 + param3 > field_f) {
-          param3 = field_f - param1;
+        if (param1 + param3 > clipBottom) {
+          param3 = clipBottom - param1;
         }
-        int var4 = field_g - param2;
-        int var5 = param0 + param1 * field_g;
-        dma.a(var5, field_i, 0, param2, -param3, var4);
+        int var4 = width - param2;
+        int var5 = param0 + param1 * width;
+        SoftwareRasterizer2D.darkenPixels(var5, pixels, 0, param2, -param3, var4);
     }
 
-    final static void b(int param0, int param1, int param2, int param3) {
+    final static void setClip(int param0, int param1, int param2, int param3) {
         if (param0 < 0) {
           param0 = 0;
         }
         if (param1 < 0) {
           param1 = 0;
         }
-        if (param2 > field_g) {
-          param2 = field_g;
+        if (param2 > width) {
+          param2 = width;
         }
-        if (param3 > field_j) {
-          param3 = field_j;
+        if (param3 > height) {
+          param3 = height;
         }
-        field_d = param0;
-        field_c = param1;
-        field_a = param2;
-        field_f = param3;
-        dma.c();
+        clipLeft = param0;
+        clipTop = param1;
+        clipRight = param2;
+        clipBottom = param3;
+        SoftwareRasterizer2D.clearScanlineMask();
     }
 
     public static void clearSharedReferences() {
-        field_i = null;
-        field_h = null;
-        field_b = null;
-        field_l = null;
-        field_k = null;
-        field_e = null;
+        pixels = null;
+        maskStarts = null;
+        maskWidths = null;
+        blurRedSums = null;
+        blurGreenSums = null;
+        blurBlueSums = null;
     }
 
-    final static void d(int param0, int param1, int param2, int param3) {
+    final static void drawVerticalLine(int param0, int param1, int param2, int param3) {
         int var4 = 0;
         int var5 = 0;
-        if (param0 >= field_d) {
-          if (param0 >= field_a) {
+        if (param0 >= clipLeft) {
+          if (param0 >= clipRight) {
             return;
           }
-          if (param1 < field_c) {
-            param2 = param2 - (field_c - param1);
-            param1 = field_c;
+          if (param1 < clipTop) {
+            param2 = param2 - (clipTop - param1);
+            param1 = clipTop;
           }
-          if (param1 + param2 > field_f) {
-            param2 = field_f - param1;
+          if (param1 + param2 > clipBottom) {
+            param2 = clipBottom - param1;
           }
-          var4 = param0 + param1 * field_g;
+          var4 = param0 + param1 * width;
           var5 = 0;
           while (var5 < param2) {
-            field_i[var4] = param3;
+            pixels[var4] = param3;
             var5++;
-            var4 = var4 + field_g;
+            var4 = var4 + width;
           }
           return;
         }
     }
 
-    final static void a(int[] param0) {
-        param0[0] = field_d;
-        param0[1] = field_c;
-        param0[2] = field_a;
-        param0[3] = field_f;
+    final static void getClip(int[] param0) {
+        param0[0] = clipLeft;
+        param0[1] = clipTop;
+        param0[2] = clipRight;
+        param0[3] = clipBottom;
     }
 
-    final static void b(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawLineAlpha(int param0, int param1, int param2, int param3, int param4, int param5) {
         int var6;
         int var7;
         int var8;
@@ -1070,17 +1070,17 @@ final class dma {
         param3 = param3 - param1;
         if (param3 == 0) {
           if (param2 < 0) {
-            dma.g(param0 + param2, param1, -param2 + 1, param4, param5);
+            SoftwareRasterizer2D.drawHorizontalLineAlpha(param0 + param2, param1, -param2 + 1, param4, param5);
           } else {
-            dma.g(param0, param1, param2 + 1, param4, param5);
+            SoftwareRasterizer2D.drawHorizontalLineAlpha(param0, param1, param2 + 1, param4, param5);
           }
           return;
         }
         if (param2 == 0) {
           if (param3 < 0) {
-            dma.f(param0, param1 + param3, -param3 + 1, param4, param5);
+            SoftwareRasterizer2D.drawVerticalLineAlpha(param0, param1 + param3, -param3 + 1, param4, param5);
           } else {
-            dma.f(param0, param1, param3 + 1, param4, param5);
+            SoftwareRasterizer2D.drawVerticalLineAlpha(param0, param1, param3 + 1, param4, param5);
           }
           return;
         }
@@ -1100,23 +1100,23 @@ final class dma {
           param2 = param2 << 16;
           var10 = (int)Math.floor((double)param2 / (double)param3 + 0.5);
           param3 = param3 + param1;
-          if (param1 < field_c) {
-            param0 = param0 + var10 * (field_c - param1);
-            param1 = field_c;
+          if (param1 < clipTop) {
+            param0 = param0 + var10 * (clipTop - param1);
+            param1 = clipTop;
           }
-          if (param3 >= field_f) {
-            param3 = field_f - 1;
+          if (param3 >= clipBottom) {
+            param3 = clipBottom - 1;
           }
           while (param1 <= param3) {
             var11 = param0 >> 16;
-            if (var11 >= field_d &&
-              var11 < field_a) {
-              var12 = var11 + param1 * field_g;
-              var13 = (field_i[var12] >> 16 & 255) * var6;
-              var14 = (field_i[var12] >> 8 & 255) * var6;
-              var15 = (field_i[var12] & 255) * var6;
+            if (var11 >= clipLeft &&
+              var11 < clipRight) {
+              var12 = var11 + param1 * width;
+              var13 = (pixels[var12] >> 16 & 255) * var6;
+              var14 = (pixels[var12] >> 8 & 255) * var6;
+              var15 = (pixels[var12] & 255) * var6;
               var16 = (var7 + var13 >> 8 << 16) + (var8 + var14 >> 8 << 8) + (var9 + var15 >> 8);
-              field_i[var12] = var16;
+              pixels[var12] = var16;
             }
             param0 = param0 + var10;
             param1++;
@@ -1128,23 +1128,23 @@ final class dma {
         param3 = param3 << 16;
         var10Lifetime1 = (int)Math.floor((double)param3 / (double)param2 + 0.5);
         param2 = param2 + param0;
-        if (param0 < field_d) {
-          param1 = param1 + var10Lifetime1 * (field_d - param0);
-          param0 = field_d;
+        if (param0 < clipLeft) {
+          param1 = param1 + var10Lifetime1 * (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param2 >= field_a) {
-          param2 = field_a - 1;
+        if (param2 >= clipRight) {
+          param2 = clipRight - 1;
         }
         while (param0 <= param2) {
           var11Lifetime1 = param1 >> 16;
-          if (var11Lifetime1 >= field_c &&
-            var11Lifetime1 < field_f) {
-            var12Lifetime1 = param0 + var11Lifetime1 * field_g;
-            var13Lifetime1 = (field_i[var12Lifetime1] >> 16 & 255) * var6;
-            var14Lifetime1 = (field_i[var12Lifetime1] >> 8 & 255) * var6;
-            var15Lifetime1 = (field_i[var12Lifetime1] & 255) * var6;
+          if (var11Lifetime1 >= clipTop &&
+            var11Lifetime1 < clipBottom) {
+            var12Lifetime1 = param0 + var11Lifetime1 * width;
+            var13Lifetime1 = (pixels[var12Lifetime1] >> 16 & 255) * var6;
+            var14Lifetime1 = (pixels[var12Lifetime1] >> 8 & 255) * var6;
+            var15Lifetime1 = (pixels[var12Lifetime1] & 255) * var6;
             var16Lifetime1 = (var7 + var13Lifetime1 >> 8 << 16) + (var8 + var14Lifetime1 >> 8 << 8) + (var9 + var15Lifetime1 >> 8);
-            field_i[var12Lifetime1] = var16Lifetime1;
+            pixels[var12Lifetime1] = var16Lifetime1;
           }
           param1 = param1 + var10Lifetime1;
           param0++;
@@ -1152,12 +1152,12 @@ final class dma {
         return;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
-        dma.a(field_i, 0, param2 + param3 * field_g, param0, param2, param4, field_g - param4, param5);
-        dma.a(field_i, 0, param2 + param3 * field_g, param1, param3, param5, field_g - param4, param2, param4);
+    final static void blurRectangle(int param0, int param1, int param2, int param3, int param4, int param5) {
+        SoftwareRasterizer2D.blurRows(pixels, 0, param2 + param3 * width, param0, param2, param4, width - param4, param5);
+        SoftwareRasterizer2D.blurColumns(pixels, 0, param2 + param3 * width, param1, param3, param5, width - param4, param2, param4);
     }
 
-    final static void a(int param0, int param1, int param2, int param3) {
+    final static void grayscaleRectangle(int param0, int param1, int param2, int param3) {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
@@ -1166,43 +1166,43 @@ final class dma {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$0 = 0;
-        if (param0 < field_d) {
-          param2 = param2 - (field_d - param0);
-          param0 = field_d;
+        if (param0 < clipLeft) {
+          param2 = param2 - (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param0 + param2 > field_a) {
-          param2 = field_a - param0;
+        if (param0 + param2 > clipRight) {
+          param2 = clipRight - param0;
         }
-        if (param1 < field_c) {
-          param3 = param3 - (field_c - param1);
-          param1 = field_c;
+        if (param1 < clipTop) {
+          param3 = param3 - (clipTop - param1);
+          param1 = clipTop;
         }
-        if (param1 + param3 > field_f) {
-          param3 = field_f - param1;
+        if (param1 + param3 > clipBottom) {
+          param3 = clipBottom - param1;
         }
-        int var4 = param0 + param1 * field_g;
+        int var4 = param0 + param1 * width;
         if (param2 > 0) {
           if (param3 <= 0) {
             return;
           }
           for (var5 = 0; var5 < param3; var5++) {
             for (var6 = 0; var6 < param2; var6++) {
-              var7 = field_i[var4];
+              var7 = pixels[var4];
               var8 = var7 >> 15 & 510;
               var9 = var7 >> 8 & 255;
               var10 = var7 & 255;
               var11 = (var10 + var8) / 3 + var9 >> 1;
               incrementValue$0 = var4;
               var4++;
-              field_i[incrementValue$0] = (var11 << 16) + (var11 << 8) + var11;
+              pixels[incrementValue$0] = (var11 << 16) + (var11 << 8) + var11;
             }
-            var4 = var4 + (field_g - param2);
+            var4 = var4 + (width - param2);
           }
           return;
         }
     }
 
-    private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blurColumns(int[] param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int incrementValue$7 = 0;
         int incrementValue$6 = 0;
         int incrementValue$2 = 0;
@@ -1256,19 +1256,19 @@ final class dma {
         int var21Lifetime1Lifetime1;
         int var21Lifetime1Lifetime2;
         int var21Lifetime1Lifetime3;
-        if (field_l == null ||
-          !(field_l.length >= param8)) {
-          field_l = new int[param8];
-          field_k = new int[param8];
-          field_e = new int[param8];
+        if (blurRedSums == null ||
+          !(blurRedSums.length >= param8)) {
+          blurRedSums = new int[param8];
+          blurGreenSums = new int[param8];
+          blurBlueSums = new int[param8];
         }
-        var27 = field_l;
+        var27 = blurRedSums;
         var24 = var27;
         var9 = var24;
-        var28 = field_k;
+        var28 = blurGreenSums;
         var25 = var28;
         var10 = var25;
-        var29 = field_e;
+        var29 = blurBlueSums;
         var26 = var29;
         var11 = var26;
         cua.a(var27, 0, param8);
@@ -1279,12 +1279,12 @@ final class dma {
         if (var13 < 0) {
           var13 = 0;
         }
-        var14 = param7 + var13 * field_g;
+        var14 = param7 + var13 * width;
         var15 = param4 + param3;
         var16 = 0;
-        if (var15 >= field_j) {
-          var16 = var15 - field_j + 1;
-          var15 = field_j - 1;
+        if (var15 >= height) {
+          var16 = var15 - height + 1;
+          var15 = height - 1;
         }
         var17 = var15 - var13 + 1;
         while (var13 <= var15) {
@@ -1297,7 +1297,7 @@ final class dma {
           var14 = var14 + param6;
           var13++;
         }
-        var14 = var14 + var16 * field_g;
+        var14 = var14 + var16 * width;
         for (var18Lifetime1 = 0; var18Lifetime1 < param8; var18Lifetime1++) {
           incrementValue$7 = param2;
           param2++;
@@ -1309,12 +1309,12 @@ final class dma {
         if (0 < var18Lifetime2) {
           var18Lifetime2 = 0;
         }
-        var19 = param7 + (param4 - param3) * field_g;
+        var19 = param7 + (param4 - param3) * width;
         if (var13Lifetime1 < var18Lifetime2) {
-          var19 = var19 + (var18Lifetime2 - var13Lifetime1) * field_g;
+          var19 = var19 + (var18Lifetime2 - var13Lifetime1) * width;
         }
         while (var13Lifetime1 < var18Lifetime2) {
-          if (var13Lifetime1 + param4 + param5 + param3 < field_f) {
+          if (var13Lifetime1 + param4 + param5 + param3 < clipBottom) {
             for (var20 = 0; var20 < param8; var20++) {
               param1 = param0[var14++];
               var9[var20] = var9[var20] + (param1 >> 16 & 255);
@@ -1324,7 +1324,7 @@ final class dma {
             var14 = var14 + param6;
             var17++;
           } else {
-            var14 = var14 + field_g;
+            var14 = var14 + width;
           }
           for (var20Lifetime3 = 0; var20Lifetime3 < param8; var20Lifetime3++) {
             var21 = var27[var20Lifetime3] / var17;
@@ -1337,7 +1337,7 @@ final class dma {
           param2 = param2 + param6;
           var13Lifetime1++;
         }
-        var18Lifetime3 = field_j - param4 - param5 - param3;
+        var18Lifetime3 = height - param4 - param5 - param3;
         if (0 < var18Lifetime3) {
           var18Lifetime3 = 0;
         }
@@ -1443,37 +1443,37 @@ final class dma {
         }
     }
 
-    final static void d(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillRectangle(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
-        if (param0 < field_d) {
-          param2 = param2 - (field_d - param0);
-          param0 = field_d;
+        if (param0 < clipLeft) {
+          param2 = param2 - (clipLeft - param0);
+          param0 = clipLeft;
         }
-        if (param1 < field_c) {
-          param3 = param3 - (field_c - param1);
-          param1 = field_c;
+        if (param1 < clipTop) {
+          param3 = param3 - (clipTop - param1);
+          param1 = clipTop;
         }
-        if (param0 + param2 > field_a) {
-          param2 = field_a - param0;
+        if (param0 + param2 > clipRight) {
+          param2 = clipRight - param0;
         }
-        if (param1 + param3 > field_f) {
-          param3 = field_f - param1;
+        if (param1 + param3 > clipBottom) {
+          param3 = clipBottom - param1;
         }
-        int var5 = field_g - param2;
-        int var6 = param0 + param1 * field_g;
+        int var5 = width - param2;
+        int var6 = param0 + param1 * width;
         for (var7 = -param3; var7 < 0; var7++) {
           for (var8 = -param2; var8 < 0; var8++) {
             incrementValue$0 = var6;
             var6++;
-            field_i[incrementValue$0] = param4;
+            pixels[incrementValue$0] = param4;
           }
           var6 = var6 + var5;
         }
     }
 
-    final static void e(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillCircleAlpha(int param0, int param1, int param2, int param3, int param4) {
         int incrementValue$4 = 0;
         int incrementValue$3 = 0;
         int incrementValue$5 = 0;
@@ -1516,7 +1516,7 @@ final class dma {
           return;
         }
         if (param4 == 256) {
-          dma.f(param0, param1, param2, param3);
+          SoftwareRasterizer2D.fillCircle(param0, param1, param2, param3);
           return;
         }
         if (param2 < 0) {
@@ -1527,12 +1527,12 @@ final class dma {
         var7 = (param3 >> 8 & 255) * param4;
         var8 = (param3 & 255) * param4;
         var12 = param1 - param2;
-        if (var12 < field_c) {
-          var12 = field_c;
+        if (var12 < clipTop) {
+          var12 = clipTop;
         }
         var13 = param1 + param2 + 1;
-        if (var13 > field_f) {
-          var13 = field_f;
+        if (var13 > clipBottom) {
+          var13 = clipBottom;
         }
         var14 = var12;
         var15 = param2 * param2;
@@ -1548,22 +1548,22 @@ final class dma {
             if (var19 > var15 &&
               var18 > var15) {
               var20 = param0 - var16 + 1;
-              if (var20 < field_d) {
-                var20 = field_d;
+              if (var20 < clipLeft) {
+                var20 = clipLeft;
               }
               var21 = param0 + var16;
-              if (var21 > field_a) {
-                var21 = field_a;
+              if (var21 > clipRight) {
+                var21 = clipRight;
               }
-              var22 = var20 + var14 * field_g;
+              var22 = var20 + var14 * width;
               for (var23 = var20; var23 < var21; var23++) {
-                var9 = (field_i[var22] >> 16 & 255) * var5;
-                var10 = (field_i[var22] >> 8 & 255) * var5;
-                var11 = (field_i[var22] & 255) * var5;
+                var9 = (pixels[var22] >> 16 & 255) * var5;
+                var10 = (pixels[var22] >> 8 & 255) * var5;
+                var11 = (pixels[var22] & 255) * var5;
                 var24 = (var6 + var9 >> 8 << 16) + (var7 + var10 >> 8 << 8) + (var8 + var11 >> 8);
                 incrementValue$4 = var22;
                 var22++;
-                field_i[incrementValue$4] = var24;
+                pixels[incrementValue$4] = var24;
               }
               var14++;
               incrementValue$3 = var17;
@@ -1595,23 +1595,23 @@ final class dma {
             break;
           }
           var20Lifetime1 = param0 - var16Lifetime1;
-          if (var20Lifetime1 < field_d) {
-            var20Lifetime1 = field_d;
+          if (var20Lifetime1 < clipLeft) {
+            var20Lifetime1 = clipLeft;
           }
           var21Lifetime1 = param0 + var16Lifetime1;
-          if (var21Lifetime1 > field_a - 1) {
-            var21Lifetime1 = field_a - 1;
+          if (var21Lifetime1 > clipRight - 1) {
+            var21Lifetime1 = clipRight - 1;
           }
-          var25 = var20Lifetime1 + var14 * field_g;
+          var25 = var20Lifetime1 + var14 * width;
           var22Lifetime1 = var25;
           for (var23Lifetime1 = var20Lifetime1; var23Lifetime1 <= var21Lifetime1; var23Lifetime1++) {
-            var9Lifetime1 = (field_i[var25] >> 16 & 255) * var5;
-            var10Lifetime1 = (field_i[var25] >> 8 & 255) * var5;
-            var11Lifetime1 = (field_i[var25] & 255) * var5;
+            var9Lifetime1 = (pixels[var25] >> 16 & 255) * var5;
+            var10Lifetime1 = (pixels[var25] >> 8 & 255) * var5;
+            var11Lifetime1 = (pixels[var25] & 255) * var5;
             var24Lifetime1 = (var6 + var9Lifetime1 >> 8 << 16) + (var7 + var10Lifetime1 >> 8 << 8) + (var8 + var11Lifetime1 >> 8);
             incrementValue$2 = var25;
             var25++;
-            field_i[incrementValue$2] = var24Lifetime1;
+            pixels[incrementValue$2] = var24Lifetime1;
           }
           var14++;
           var19Lifetime1 = var19Lifetime1 + (var17 + var17);
@@ -1623,9 +1623,9 @@ final class dma {
     }
 
     static {
-        field_f = 0;
-        field_a = 0;
-        field_c = 0;
-        field_d = 0;
+        clipBottom = 0;
+        clipRight = 0;
+        clipTop = 0;
+        clipLeft = 0;
     }
 }

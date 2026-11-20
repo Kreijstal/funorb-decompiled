@@ -58,15 +58,15 @@ final class sa {
           var5 = field_h;
           var6 = field_c;
           if (param2 != null) {
-            var7 = var6 - dma.field_c;
-            if (var4 < param2[var7] + dma.field_d) {
-              var4 = param2[var7] + dma.field_d;
+            var7 = var6 - SoftwareRasterizer2D.clipTop;
+            if (var4 < param2[var7] + SoftwareRasterizer2D.clipLeft) {
+              var4 = param2[var7] + SoftwareRasterizer2D.clipLeft;
             }
-            if (var5 > param2[var7] + param3[var7] + dma.field_d) {
-              var5 = param2[var7] + param3[var7] + dma.field_d;
+            if (var5 > param2[var7] + param3[var7] + SoftwareRasterizer2D.clipLeft) {
+              var5 = param2[var7] + param3[var7] + SoftwareRasterizer2D.clipLeft;
             }
           }
-          dma.g(var4, var6, var5 - var4, param0, param1);
+          SoftwareRasterizer2D.drawHorizontalLineAlpha(var4, var6, var5 - var4, param0, param1);
         }
     }
 
@@ -95,8 +95,8 @@ final class sa {
         }
         sa.b(0, field_a);
         int var0 = field_d[1];
-        if (var0 < dma.field_c) {
-          var0 = dma.field_c;
+        if (var0 < SoftwareRasterizer2D.clipTop) {
+          var0 = SoftwareRasterizer2D.clipTop;
         }
         int var1 = 0;
         for (var2 = 0; var2 < field_a; var2 += 4) {
@@ -158,7 +158,7 @@ final class sa {
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int[] param5, int[] param6) {
         if (param5 != null &&
-          dma.field_f - dma.field_c != param5.length) {
+          SoftwareRasterizer2D.clipBottom - SoftwareRasterizer2D.clipTop != param5.length) {
           throw new IllegalStateException();
         }
         sa.c();
@@ -195,7 +195,7 @@ final class sa {
           }
           var2++;
           field_c = var2;
-          if (var2 >= dma.field_f) {
+          if (var2 >= SoftwareRasterizer2D.clipBottom) {
             return false;
           }
           var3 = field_e;

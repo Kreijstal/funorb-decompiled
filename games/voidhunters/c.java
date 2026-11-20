@@ -11,7 +11,7 @@ final class c extends IntrusiveNode {
           SetMassDriverProjectileLife.a(-16777216 | param5, (byte) 103, param3, param2, param0, param1);
           return;
         }
-        dma.a(param2, param3, param1, param0, param5);
+        SoftwareRasterizer2D.drawLine(param2, param3, param1, param0, param5);
         if (param4 == -16777216) {
           return;
         }

@@ -146,7 +146,7 @@ final class tjb extends llb {
           this.field_Gb = this.field_Ab.length;
           var17 = param3.field_eb;
           var18 = var17;
-          this.field_Ib = var18.field_A + (var18.field_k + 2);
+          this.field_Ib = var18.maxDescent + (var18.maxAscent + 2);
           this.field_Jb = 0;
           this.field_Bb = new cna[this.field_Gb];
           this.field_zb = this.field_Ib * this.field_Gb;
@@ -163,12 +163,12 @@ final class tjb extends llb {
             }
             this.field_Bb[var13] = new cna(0L, param2, (llb) null, param3, (Sprite) (var14), param6[var13]);
             this.b(-561, this.field_Bb[var13]);
-            var15 = var17.b(param6[var13]);
+            var15 = var17.getStringWidth(param6[var13]);
             if (this.field_Jb < var15) {
               this.field_Jb = var15;
             }
           }
-          this.field_Jb = this.field_Jb + (10 + GetTeamSelectionSpeedup.field_o.field_m);
+          this.field_Jb = this.field_Jb + (10 + GetTeamSelectionSpeedup.field_o.paddedWidth);
           this.a((byte) 120, 12);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

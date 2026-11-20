@@ -10,7 +10,7 @@ final class GetBombletSprayPushMultiplier extends ConsoleCommand {
         ToolkitSprite var3 = null;
         RuntimeException var3_ref = null;
         int var5 = 0;
-        jva var6 = null;
+        ArgbSprite var6 = null;
         int[] stackIn_6_0 = null;
         int stackIn_6_1 = 0;
         int stackIn_7_2 = 0;
@@ -23,17 +23,17 @@ final class GetBombletSprayPushMultiplier extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         var5 = VoidHunters.field_G;
         try {
-          if (!(param2 instanceof jva)) {
-            var6 = new jva(param2.field_q, param2.field_p);
-            var6.field_l = param2.field_l;
-            var6.field_n = param2.field_n;
-            var6.field_m = param2.field_m;
-            var6.field_k = param2.field_k;
-            for (var4 = 0; var6.field_r.length > var4; var4++) {
-              stackIn_6_0 = var6.field_r;
+          if (!(param2 instanceof ArgbSprite)) {
+            var6 = new ArgbSprite(param2.width, param2.height);
+            var6.yOffset = param2.yOffset;
+            var6.paddedHeight = param2.paddedHeight;
+            var6.paddedWidth = param2.paddedWidth;
+            var6.xOffset = param2.xOffset;
+            for (var4 = 0; var6.pixels.length > var4; var4++) {
+              stackIn_6_0 = var6.pixels;
               stackIn_6_1 = var4;
-              if (0 != param2.field_r[var4]) {
-                stackIn_7_2 = SetAngularForceDownshift.a(-16777216, param2.field_r[var4]);
+              if (0 != param2.pixels[var4]) {
+                stackIn_7_2 = SetAngularForceDownshift.a(-16777216, param2.pixels[var4]);
               } else {
                 stackIn_7_2 = 0;
               }
@@ -44,7 +44,7 @@ final class GetBombletSprayPushMultiplier extends ConsoleCommand {
           if (param0 > -61) {
             field_o = (int[]) null;
           }
-          var3 = param1.createSprite(param2.field_m, param2.field_m, param2.field_r, 0, (byte) 64, param2.field_n);
+          var3 = param1.createSprite(param2.paddedWidth, param2.paddedWidth, param2.pixels, 0, (byte) 64, param2.paddedHeight);
           stackIn_12_0 = var3;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -338,7 +338,7 @@ final class vfa {
           return;
         }
         if (param0) {
-          dma.e(0, 0, dma.field_g, dma.field_j, 0, 192);
+          SoftwareRasterizer2D.fillRectangleAlpha(0, 0, SoftwareRasterizer2D.width, SoftwareRasterizer2D.height, 0, 192);
         }
         if (param1 == 20637) {
           qn.field_h.a(0, 0, 0);

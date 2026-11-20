@@ -28,7 +28,7 @@ final class rbb {
         if (!param2) {
           this.a((byte) 18);
         }
-        dma.e(param5, param0, param3, param6, param4, param1);
+        SoftwareRasterizer2D.fillRectangleAlpha(param5, param0, param3, param6, param4, param1);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, int param5) {
@@ -36,7 +36,7 @@ final class rbb {
           String var8 = (String) null;
           this.a(-20, -99, (String) null, 15);
         }
-        dma.a(param4, param1, param3, param2, param0);
+        SoftwareRasterizer2D.drawLine(param4, param1, param3, param2, param0);
     }
 
     private final void a(boolean param0, int param1, int param2, String param3) {
@@ -65,14 +65,14 @@ final class rbb {
           var6 = this.field_u + this.field_c;
           var7 = this.field_g;
           if (-1 == var7) {
-            var7 = this.field_p.field_k + this.field_p.field_A;
+            var7 = this.field_p.maxAscent + this.field_p.maxDescent;
           }
-          var8 = dma.field_g >> 2;
+          var8 = SoftwareRasterizer2D.width >> 2;
           if (!param0) {
             this.a(53, -30, true, -4, 116, 102, 70);
           }
-          var9 = this.field_p.b(param3);
-          var10 = this.field_p.field_A + this.field_p.field_k;
+          var9 = this.field_p.getStringWidth(param3);
+          var10 = this.field_p.maxDescent + this.field_p.maxAscent;
           var11 = 1;
           if (var9 > var8 ||
             -1 != param3.indexOf("<br>")) {
@@ -85,27 +85,27 @@ final class rbb {
             if (SetVariableActionFactory.field_d == null) {
               SetVariableActionFactory.field_d = new String[16];
             }
-            var11Lifetime1 = this.field_p.a(param3, new int[]{var12}, SetVariableActionFactory.field_d);
+            var11Lifetime1 = this.field_p.wrapLines(param3, new int[]{var12}, SetVariableActionFactory.field_d);
             var10 = var10 + var7 * (-1 + var11Lifetime1);
             var9 = 0;
             for (var13Lifetime2 = 0; var13Lifetime2 < var11Lifetime1; var13Lifetime2++) {
-              var14 = this.field_p.b(SetVariableActionFactory.field_d[var13Lifetime2]);
+              var14 = this.field_p.getStringWidth(SetVariableActionFactory.field_d[var13Lifetime2]);
               if (var9 < var14) {
                 var9 = var14;
               }
             }
           }
           var12 = param1;
-          if (dma.field_g < var12 + var9 + var5_int) {
-            var12 = -var5_int - var9 + dma.field_g;
+          if (SoftwareRasterizer2D.width < var12 + var9 + var5_int) {
+            var12 = -var5_int - var9 + SoftwareRasterizer2D.width;
           }
-          var13Lifetime1 = -this.field_p.field_o + param2 + 32;
-          if (dma.field_j < var13Lifetime1 + var10 + var6) {
+          var13Lifetime1 = -this.field_p.capHeight + param2 + 32;
+          if (SoftwareRasterizer2D.height < var13Lifetime1 + var10 + var6) {
             var13Lifetime1 = -var10 + param2 - var6;
           }
-          dma.b(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_m);
-          dma.d(var12 + 1, 1 + var13Lifetime1, var9 - (-var5_int + 2), var10 + (var6 - 2), this.field_b);
-          this.field_p.a(param3, var12 + this.field_h, this.field_u + var13Lifetime1, var9, var10, this.field_t, -1, 0, 0, var7);
+          SoftwareRasterizer2D.drawRectangle(var12, var13Lifetime1, var9 + var5_int, var6 + var10, this.field_m);
+          SoftwareRasterizer2D.fillRectangle(var12 + 1, 1 + var13Lifetime1, var9 - (-var5_int + 2), var10 + (var6 - 2), this.field_b);
+          this.field_p.drawParagraph(param3, var12 + this.field_h, this.field_u + var13Lifetime1, var9, var10, this.field_t, -1, 0, 0, var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -171,19 +171,19 @@ final class rbb {
         int var7 = 0;
         int var8 = 0;
         try {
-          var5_int = this.field_p.b(param2);
-          var6 = this.field_p.field_A + this.field_p.field_o;
+          var5_int = this.field_p.getStringWidth(param2);
+          var6 = this.field_p.maxDescent + this.field_p.capHeight;
           var7 = param3;
-          if (!(var5_int + var7 + 6 <= dma.field_g)) {
-            var7 = -6 + (-var5_int + dma.field_g);
+          if (!(var5_int + var7 + 6 <= SoftwareRasterizer2D.width)) {
+            var7 = -6 + (-var5_int + SoftwareRasterizer2D.width);
           }
-          var8 = 32 - this.field_p.field_o + param0;
-          if (dma.field_j < 6 + var6 + var8) {
-            var8 = dma.field_j - var6 - 6;
+          var8 = 32 - this.field_p.capHeight + param0;
+          if (SoftwareRasterizer2D.height < 6 + var6 + var8) {
+            var8 = SoftwareRasterizer2D.height - var6 - 6;
           }
-          dma.b(var7, var8, var5_int + 6, var6 + 6, this.field_t);
-          dma.d(1 + var7, 1 + var8, var5_int + 4, 4 + var6, this.field_b);
-          this.field_p.c(param2, var7 + 3, this.field_p.field_o + param1 + var8, this.field_t, -1);
+          SoftwareRasterizer2D.drawRectangle(var7, var8, var5_int + 6, var6 + 6, this.field_t);
+          SoftwareRasterizer2D.fillRectangle(1 + var7, 1 + var8, var5_int + 4, 4 + var6, this.field_b);
+          this.field_p.draw(param2, var7 + 3, this.field_p.capHeight + param1 + var8, this.field_t, -1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rbb.F(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -200,8 +200,8 @@ final class rbb {
         bob var17 = null;
         uea var4 = null;
         Sprite[] var5 = null;
-        jva var16 = null;
-        jva var18 = null;
+        ArgbSprite var16 = null;
+        ArgbSprite var18 = null;
         int var7_int = 0;
         uea var6 = null;
         uea var7 = null;
@@ -220,7 +220,7 @@ final class rbb {
         uea var14Lifetime1;
         uea var14Lifetime2;
         try {
-          var17 = new bob(param0, 2, 2, 2236962, 1, 1, 1, 2 + param0.field_A + param0.field_k);
+          var17 = new bob(param0, 2, 2, 2236962, 1, 1, 1, 2 + param0.maxDescent + param0.maxAscent);
           var17.field_i = 16777215;
           this.field_n = (wwa) ((Object) var17);
           var4 = new uea();
@@ -243,10 +243,10 @@ final class rbb {
           var4.a(1, -1).a(true, vdb.a(10066329, 11184810, 118, 13421772));
           var4.a(3, -1).a(true, vdb.a(7829367, 8947848, 123, 10066329)).a(113, 1).b(1, false);
           var5 = new Sprite[9];
-          var16 = new jva(32, 32);
+          var16 = new ArgbSprite(32, 32);
           var18 = var16;
-          for (var7_int = 0; var18.field_r.length > var7_int; var7_int++) {
-            var16.field_r[var7_int] = 1077952576;
+          for (var7_int = 0; var18.pixels.length > var7_int; var7_int++) {
+            var16.pixels[var7_int] = 1077952576;
           }
           var5[4] = (Sprite) ((Object) var18);
           var4.a(4, -1).a(-123, true).a(true, var5);
@@ -271,8 +271,8 @@ final class rbb {
           var10 = new Sprite[9];
           var10[4] = new Sprite(1, 2);
           dupTemp$2 = var9[4];
-          dupTemp$2.field_r = new int[]{6710886, 7829367};
-          var10[4].field_r = new int[]{6710886, 7829367};
+          dupTemp$2.pixels = new int[]{6710886, 7829367};
+          var10[4].pixels = new int[]{6710886, 7829367};
           var11 = new uea();
           var12 = new uea();
           var11.a(0, var9, 15486);
@@ -281,16 +281,16 @@ final class rbb {
           this.field_e = (wwa) ((Object) var12);
           var13 = new Sprite(7, 4);
           this.field_s = 10;
-          var13.field_r = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
+          var13.pixels = new int[]{8947848, 8947848, 8947848, 13421772, 8947848, 8947848, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 8947848, 8947848, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 8947848, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772, 13421772};
           var14 = new uea(var4, true);
-          var14.a(param1 ^ -7799, var13.d());
-          var13.c();
+          var14.a(param1 ^ -7799, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime1 = new uea(var4, true);
-          var14Lifetime1.a(32460, var13.d());
-          var13.c();
+          var14Lifetime1.a(32460, var13.copy());
+          var13.rotateClockwise();
           var14Lifetime2 = new uea(var4, true);
-          var14Lifetime2.a(32460, var13.d());
-          var13.c();
+          var14Lifetime2.a(32460, var13.copy());
+          var13.rotateClockwise();
           var19 = new uea(var4, true);
           var19.a(32460, var13);
         } catch (RuntimeException runtimeException) {

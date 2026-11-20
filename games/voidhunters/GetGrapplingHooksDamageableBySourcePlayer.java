@@ -11,7 +11,7 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
     final static int a(int param0) {
         int var1 = 17 / ((param0 + 41) / 54);
         ho.field_a.processArchiveRequests(0);
-        if (!GetAutozoomAmountMultiply.field_o.e(0)) {
+        if (!GetAutozoomAmountMultiply.field_o.processRequests(0)) {
           return vq.g(-6269);
         }
         return 0;
@@ -140,19 +140,19 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
             }
           }
           if (SettingsChange.field_e != null) {
-            var3 = 357 - SettingsChange.field_e.field_n / 2;
+            var3 = 357 - SettingsChange.field_e.paddedHeight / 2;
             var4 = 0;
             if (SetDebrisPartitioned.field_o != 0 &&
               var3 < qs.field_a &&
-              qs.field_a < var3 + SettingsChange.field_e.field_p) {
-              if (269 - SettingsChange.field_e.field_q < Particle.field_H &&
+              qs.field_a < var3 + SettingsChange.field_e.height) {
+              if (269 - SettingsChange.field_e.width < Particle.field_H &&
                 269 > Particle.field_H) {
                 SetBots.field_q = SetMachineGunEnergyUsed.field_s;
                 SetPhysicsCollisionGrapplingHookForceMultiplier.field_q = false;
                 var4 = 1;
               }
               if (Particle.field_H > 586 &&
-                Particle.field_H < 586 + SettingsChange.field_e.field_q) {
+                Particle.field_H < 586 + SettingsChange.field_e.width) {
                 SetBots.field_q = SetMachineGunEnergyUsed.field_s;
                 var4 = 1;
                 SetPhysicsCollisionGrapplingHookForceMultiplier.field_q = true;
@@ -161,13 +161,13 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
             if (var4 == 0 &&
               SetBots.field_q > SetMachineGunEnergyUsed.field_p &&
               var3 < uia.field_b &&
-              SettingsChange.field_e.field_p + var3 > uia.field_b) {
-              if (269 - SettingsChange.field_e.field_q < PlayerGameData.field_b &&
+              SettingsChange.field_e.height + var3 > uia.field_b) {
+              if (269 - SettingsChange.field_e.width < PlayerGameData.field_b &&
                 PlayerGameData.field_b < 269) {
                 SetBots.field_q = SetMachineGunEnergyUsed.field_p;
               }
               if (586 < PlayerGameData.field_b &&
-                PlayerGameData.field_b < SettingsChange.field_e.field_q + 586) {
+                PlayerGameData.field_b < SettingsChange.field_e.width + 586) {
                 SetBots.field_q = SetMachineGunEnergyUsed.field_p;
               }
             }

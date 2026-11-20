@@ -46,14 +46,14 @@ final class GetMissionVotes extends ConsoleCommand {
         int var10 = 0;
         int var11 = 0;
         try {
-          var6_int = (-dma.field_g + GetBombletSprayEnergyUsed.field_p.width) / param3;
-          var7 = GetBombletSprayEnergyUsed.field_p.height - dma.field_j;
+          var6_int = (-SoftwareRasterizer2D.width + GetBombletSprayEnergyUsed.field_p.width) / param3;
+          var7 = GetBombletSprayEnergyUsed.field_p.height - SoftwareRasterizer2D.height;
           var8 = param5 + var6_int;
           var9 = var7 + param4;
           var10 = param1 + var6_int;
           var11 = var7 + param2;
           param0.a(var8, var10, var9, var11, (byte) -85);
-          GetDebrisGroupColour.field_r.writePixels(var6_int, param4 + var7, dma.field_g, param2 - param4, dma.field_i, param4 * dma.field_g, dma.field_g);
+          GetDebrisGroupColour.field_r.writePixels(var6_int, param4 + var7, SoftwareRasterizer2D.width, param2 - param4, SoftwareRasterizer2D.pixels, param4 * SoftwareRasterizer2D.width, SoftwareRasterizer2D.width);
           param0.a(true);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nr.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');

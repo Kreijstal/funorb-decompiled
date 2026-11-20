@@ -24,7 +24,7 @@ final class ifb extends mfb {
           return;
         }
         if (SetShipSpawnInvulnerabilityTime.field_o != null) {
-          SetShipSpawnInvulnerabilityTime.field_o.b(1);
+          SetShipSpawnInvulnerabilityTime.field_o.close(1);
           SetShipSpawnInvulnerabilityTime.field_o = null;
         }
     }

@@ -194,22 +194,22 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
         try {
           if (param0 != null &&
             param3 > 0) {
-            var6_int = param0[0].field_m;
-            var7 = param0[2].field_m;
-            var8 = param0[1].field_m;
-            param0[0].e(param4, param2, param1);
-            param0[2].e(param3 + param4 - var7, param2, param1);
-            dma.a(ola.field_o);
-            dma.g(var6_int + param4, param2, param3 + (param4 - var7), param2 + param0[1].field_n);
+            var6_int = param0[0].paddedWidth;
+            var7 = param0[2].paddedWidth;
+            var8 = param0[1].paddedWidth;
+            param0[0].drawRecolored(param4, param2, param1);
+            param0[2].drawRecolored(param3 + param4 - var7, param2, param1);
+            SoftwareRasterizer2D.getClip(ola.field_o);
+            SoftwareRasterizer2D.intersectClip(var6_int + param4, param2, param3 + (param4 - var7), param2 + param0[1].paddedHeight);
             if (!param5) {
               SetPhysicsCollisionForceMultiplier.a(27, -59, -55);
             }
             var9 = var6_int + param4;
             var10 = -var7 + (param4 + param3);
             for (param4 = var9; param4 < var10; param4 = param4 + var8) {
-              param0[1].e(param4, param2, param1);
+              param0[1].drawRecolored(param4, param2, param1);
             }
-            dma.b(ola.field_o);
+            SoftwareRasterizer2D.restoreClip(ola.field_o);
             return;
           }
           return;

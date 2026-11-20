@@ -123,7 +123,7 @@ final class ik extends IntrusiveNode {
         var2[129] = ava.field_a;
         var2[138] = PlayerReady.field_c;
         var2[121] = SetTorpedoFireForce.field_o;
-        var2[95] = mq.field_j;
+        var2[95] = OpenGlIndexBuffer.field_j;
         var2[151] = ooa.field_xb;
         var2[5] = GetAutoaim.field_o;
         var2[8] = gl.field_d;

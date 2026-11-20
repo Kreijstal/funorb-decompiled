@@ -46,11 +46,11 @@ abstract class abb {
             if (param4[param0] == null) {
               stackIn_11_0 = 0;
             } else {
-              stackIn_11_0 = param4[3].field_m;
+              stackIn_11_0 = param4[3].paddedWidth;
             }
             var6_int = stackIn_11_0;
             if (null != param4[5]) {
-              stackIn_14_0 = param4[5].field_m;
+              stackIn_14_0 = param4[5].paddedWidth;
             } else {
               stackIn_14_0 = 0;
             }
@@ -58,11 +58,11 @@ abstract class abb {
             if (param4[1] == null) {
               stackIn_17_0 = 0;
             } else {
-              stackIn_17_0 = param4[1].field_n;
+              stackIn_17_0 = param4[1].paddedHeight;
             }
             var8 = stackIn_17_0;
             if (param4[7] != null) {
-              stackIn_20_0 = param4[7].field_n;
+              stackIn_20_0 = param4[7].paddedHeight;
             } else {
               stackIn_20_0 = 0;
             }
@@ -85,69 +85,69 @@ abstract class abb {
               var19 = param1 * var8 / (var9 + var8) + param3;
               var18 = param1 * var8 / (var9 + var8) + param3;
             }
-            dma.a(GetUseCircleFill.field_o);
+            SoftwareRasterizer2D.getClip(GetUseCircleFill.field_o);
             if (param4[0] != null) {
-              dma.g(param5, param3, var16, var18);
-              param4[0].a(param5, param3);
-              dma.b(GetUseCircleFill.field_o);
+              SoftwareRasterizer2D.intersectClip(param5, param3, var16, var18);
+              param4[0].draw(param5, param3);
+              SoftwareRasterizer2D.restoreClip(GetUseCircleFill.field_o);
             }
             if (param4[2] != null) {
-              dma.g(var17, param3, var10, var18);
-              param4[2].a(var13, param3);
-              dma.b(GetUseCircleFill.field_o);
+              SoftwareRasterizer2D.intersectClip(var17, param3, var10, var18);
+              param4[2].draw(var13, param3);
+              SoftwareRasterizer2D.restoreClip(GetUseCircleFill.field_o);
             }
             if (null != param4[6]) {
-              dma.g(param5, var19, var16, var11);
-              param4[6].a(param5, var15);
-              dma.b(GetUseCircleFill.field_o);
+              SoftwareRasterizer2D.intersectClip(param5, var19, var16, var11);
+              param4[6].draw(param5, var15);
+              SoftwareRasterizer2D.restoreClip(GetUseCircleFill.field_o);
             }
             if (null != param4[8]) {
-              dma.g(var17, var19, var10, var11);
-              param4[8].a(var13, var15);
-              dma.b(GetUseCircleFill.field_o);
+              SoftwareRasterizer2D.intersectClip(var17, var19, var10, var11);
+              param4[8].draw(var13, var15);
+              SoftwareRasterizer2D.restoreClip(GetUseCircleFill.field_o);
             }
             if (param4[1] != null &&
-              0 != param4[1].field_m) {
-              dma.g(var16, param3, var17, var18);
-              for (var20 = var12; var20 < var13; var20 = var20 + param4[1].field_m) {
-                param4[1].a(var20, param3);
+              0 != param4[1].paddedWidth) {
+              SoftwareRasterizer2D.intersectClip(var16, param3, var17, var18);
+              for (var20 = var12; var20 < var13; var20 = var20 + param4[1].paddedWidth) {
+                param4[1].draw(var20, param3);
               }
-              dma.b(GetUseCircleFill.field_o);
+              SoftwareRasterizer2D.restoreClip(GetUseCircleFill.field_o);
             }
             if (null != param4[7] &&
-              param4[7].field_m != 0) {
-              dma.g(var16, var19, var17, var11);
-              for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param4[7].field_m) {
-                param4[7].a(var20Lifetime1, var15);
+              param4[7].paddedWidth != 0) {
+              SoftwareRasterizer2D.intersectClip(var16, var19, var17, var11);
+              for (var20Lifetime1 = var12; var13 > var20Lifetime1; var20Lifetime1 = var20Lifetime1 + param4[7].paddedWidth) {
+                param4[7].draw(var20Lifetime1, var15);
               }
-              dma.b(GetUseCircleFill.field_o);
+              SoftwareRasterizer2D.restoreClip(GetUseCircleFill.field_o);
             }
             if (param4[3] != null &&
-              0 != param4[3].field_n) {
-              dma.g(param5, var18, var16, var19);
-              for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param4[3].field_n) {
-                param4[3].a(param5, var20Lifetime2);
+              0 != param4[3].paddedHeight) {
+              SoftwareRasterizer2D.intersectClip(param5, var18, var16, var19);
+              for (var20Lifetime2 = var14; var15 > var20Lifetime2; var20Lifetime2 = var20Lifetime2 + param4[3].paddedHeight) {
+                param4[3].draw(param5, var20Lifetime2);
               }
-              dma.b(GetUseCircleFill.field_o);
+              SoftwareRasterizer2D.restoreClip(GetUseCircleFill.field_o);
             }
             if (null != param4[5] &&
-              param4[5].field_n != 0) {
-              dma.g(var17, var18, var10, var19);
-              for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param4[5].field_n) {
-                param4[5].a(var13, var20Lifetime3);
+              param4[5].paddedHeight != 0) {
+              SoftwareRasterizer2D.intersectClip(var17, var18, var10, var19);
+              for (var20Lifetime3 = var14; var15 > var20Lifetime3; var20Lifetime3 = var20Lifetime3 + param4[5].paddedHeight) {
+                param4[5].draw(var13, var20Lifetime3);
               }
-              dma.b(GetUseCircleFill.field_o);
+              SoftwareRasterizer2D.restoreClip(GetUseCircleFill.field_o);
             }
             if (null != param4[4] &&
-              0 != param4[4].field_m &&
-              param4[4].field_n != 0) {
-              dma.g(var16, var18, var17, var19);
-              for (var20Lifetime4 = var14; var20Lifetime4 < var15; var20Lifetime4 = var20Lifetime4 + param4[4].field_n) {
-                for (var21 = var12; var13 > var21; var21 = var21 + param4[4].field_m) {
-                  param4[4].a(var21, var20Lifetime4);
+              0 != param4[4].paddedWidth &&
+              param4[4].paddedHeight != 0) {
+              SoftwareRasterizer2D.intersectClip(var16, var18, var17, var19);
+              for (var20Lifetime4 = var14; var20Lifetime4 < var15; var20Lifetime4 = var20Lifetime4 + param4[4].paddedHeight) {
+                for (var21 = var12; var13 > var21; var21 = var21 + param4[4].paddedWidth) {
+                  param4[4].draw(var21, var20Lifetime4);
                 }
               }
-              dma.b(GetUseCircleFill.field_o);
+              SoftwareRasterizer2D.restoreClip(GetUseCircleFill.field_o);
               return;
             }
             return;

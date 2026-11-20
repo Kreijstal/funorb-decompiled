@@ -47,7 +47,7 @@ final class GetMassDriverFireForce extends ConsoleCommand {
               return;
             }
             GetUseCircleOutline.field_q = GetUseCircleOutline.field_q + 1;
-            bva.field_c = MessageLog.field_a;
+            OpenGlVertexDeclaration.field_c = MessageLog.field_a;
             if (SetSniperCannonAimarc.field_p < 0) {
               for (var2 = 0; 112 > var2; var2++) {
                 SetMachineGunEnergyUsed.field_o[var2] = false;

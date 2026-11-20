@@ -103,31 +103,31 @@ final class gm extends kja {
               SetFighterRepairTime.field_q != var6Lifetime1) {
               if (SetArmageddonLength.field_o == var6Lifetime1) {
                 var18 = ByteStorage.field_a[2];
-                var18.c(var9, var10 - (var18.field_p >> 1), 256);
+                var18.drawAdditive(var9, var10 - (var18.height >> 1), 256);
                 return;
               }
               if (var6Lifetime1 != GetShipPersistence.field_o) {
                 return;
               }
               var19 = ByteStorage.field_a[1];
-              var19.c(var9, var10 - (var19.field_p >> 1), 256);
+              var19.drawAdditive(var9, var10 - (var19.height >> 1), 256);
               return;
             }
             var20 = ByteStorage.field_a[0];
-            var11 = var20.field_m << 1;
-            var12 = var20.field_n << 1;
+            var11 = var20.paddedWidth << 1;
+            var12 = var20.paddedHeight << 1;
             if (this.field_N != null &&
-              var11 <= this.field_N.field_q &&
-              var12 <= this.field_N.field_p) {
+              var11 <= this.field_N.width &&
+              var12 <= this.field_N.height) {
               SetTorpedoEnergyUsed.a(94, this.field_N);
-              dma.a();
+              SoftwareRasterizer2D.clear();
             } else {
               this.field_N = new Sprite(var11, var12);
               SetTorpedoEnergyUsed.a(99, this.field_N);
             }
-            var20.b(112, 144, var20.field_m << 4, var20.field_n << 4, -this.field_K << 10, 4096);
+            var20.drawRotatedScaledBilinear(112, 144, var20.paddedWidth << 4, var20.paddedHeight << 4, -this.field_K << 10, 4096);
             bia.a((byte) 124);
-            this.field_N.c(var9 - (var20.field_m >> 1), -var20.field_n + var10, 256);
+            this.field_N.drawAdditive(var9 - (var20.paddedWidth >> 1), -var20.paddedHeight + var10, 256);
             return;
           }
           super.b(param0, param1, 111, param3);
@@ -139,39 +139,39 @@ final class gm extends kja {
             SetFighterRepairTime.field_q != var6Lifetime1Lifetime1) {
             if (SetArmageddonLength.field_o == var6Lifetime1Lifetime1) {
               var22 = ByteStorage.field_a[2];
-              var22.c(var9Lifetime3, var10Lifetime3 - (var22.field_p >> 1), 256);
+              var22.drawAdditive(var9Lifetime3, var10Lifetime3 - (var22.height >> 1), 256);
               return;
             }
             if (var6Lifetime1Lifetime1 != GetShipPersistence.field_o) {
               return;
             }
             var23 = ByteStorage.field_a[1];
-            var23.c(var9Lifetime3, var10Lifetime3 - (var23.field_p >> 1), 256);
+            var23.drawAdditive(var9Lifetime3, var10Lifetime3 - (var23.height >> 1), 256);
             return;
           }
           var24 = ByteStorage.field_a[0];
-          var11Lifetime4 = var24.field_m << 1;
-          var12Lifetime4 = var24.field_n << 1;
+          var11Lifetime4 = var24.paddedWidth << 1;
+          var12Lifetime4 = var24.paddedHeight << 1;
           if (this.field_N == null) {
             this.field_N = new Sprite(var11Lifetime4, var12Lifetime4);
             SetTorpedoEnergyUsed.a(99, this.field_N);
           } else {
-            if (var11Lifetime4 > this.field_N.field_q) {
+            if (var11Lifetime4 > this.field_N.width) {
               this.field_N = new Sprite(var11Lifetime4, var12Lifetime4);
               SetTorpedoEnergyUsed.a(99, this.field_N);
             } else {
-              if (var12Lifetime4 > this.field_N.field_p) {
+              if (var12Lifetime4 > this.field_N.height) {
                 this.field_N = new Sprite(var11Lifetime4, var12Lifetime4);
                 SetTorpedoEnergyUsed.a(99, this.field_N);
               } else {
                 SetTorpedoEnergyUsed.a(94, this.field_N);
-                dma.a();
+                SoftwareRasterizer2D.clear();
               }
             }
           }
-          var24.b(112, 144, var24.field_m << 4, var24.field_n << 4, -this.field_K << 10, 4096);
+          var24.drawRotatedScaledBilinear(112, 144, var24.paddedWidth << 4, var24.paddedHeight << 4, -this.field_K << 10, 4096);
           bia.a((byte) 124);
-          this.field_N.c(var9Lifetime3 - (var24.field_m >> 1), -var24.field_n + var10Lifetime3, 256);
+          this.field_N.drawAdditive(var9Lifetime3 - (var24.paddedWidth >> 1), -var24.paddedHeight + var10Lifetime3, 256);
           return;
         }
         this.field_j = var5;
@@ -186,39 +186,39 @@ final class gm extends kja {
             SetFighterRepairTime.field_q != var6Lifetime2) {
             if (SetArmageddonLength.field_o == var6Lifetime2) {
               var31 = ByteStorage.field_a[2];
-              var31.c(var9Lifetime1, var10Lifetime1 - (var31.field_p >> 1), 256);
+              var31.drawAdditive(var9Lifetime1, var10Lifetime1 - (var31.height >> 1), 256);
               return;
             }
             if (var6Lifetime2 != GetShipPersistence.field_o) {
               return;
             }
             var32 = ByteStorage.field_a[1];
-            var32.c(var9Lifetime1, var10Lifetime1 - (var32.field_p >> 1), 256);
+            var32.drawAdditive(var9Lifetime1, var10Lifetime1 - (var32.height >> 1), 256);
             return;
           }
           var33 = ByteStorage.field_a[0];
-          var11Lifetime1 = var33.field_m << 1;
-          var12Lifetime1 = var33.field_n << 1;
+          var11Lifetime1 = var33.paddedWidth << 1;
+          var12Lifetime1 = var33.paddedHeight << 1;
           if (this.field_N == null) {
             this.field_N = new Sprite(var11Lifetime1, var12Lifetime1);
             SetTorpedoEnergyUsed.a(99, this.field_N);
           } else {
-            if (var11Lifetime1 > this.field_N.field_q) {
+            if (var11Lifetime1 > this.field_N.width) {
               this.field_N = new Sprite(var11Lifetime1, var12Lifetime1);
               SetTorpedoEnergyUsed.a(99, this.field_N);
             } else {
-              if (var12Lifetime1 <= this.field_N.field_p) {
+              if (var12Lifetime1 <= this.field_N.height) {
                 SetTorpedoEnergyUsed.a(94, this.field_N);
-                dma.a();
+                SoftwareRasterizer2D.clear();
               } else {
                 this.field_N = new Sprite(var11Lifetime1, var12Lifetime1);
                 SetTorpedoEnergyUsed.a(99, this.field_N);
               }
             }
           }
-          var33.b(112, 144, var33.field_m << 4, var33.field_n << 4, -this.field_K << 10, 4096);
+          var33.drawRotatedScaledBilinear(112, 144, var33.paddedWidth << 4, var33.paddedHeight << 4, -this.field_K << 10, 4096);
           bia.a((byte) 124);
-          this.field_N.c(var9Lifetime1 - (var33.field_m >> 1), -var33.field_n + var10Lifetime1, 256);
+          this.field_N.drawAdditive(var9Lifetime1 - (var33.paddedWidth >> 1), -var33.paddedHeight + var10Lifetime1, 256);
           return;
         }
         this.field_L = (eeb) null;
@@ -229,59 +229,59 @@ final class gm extends kja {
         var10Lifetime2 = var36.b(-3, param3, (shb) (this)) + (var36.a((shb) (this), 3).a(29565) >> 1);
         if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p == var6Lifetime3) {
           var26 = ByteStorage.field_a[0];
-          var11Lifetime2 = var26.field_m << 1;
-          var12Lifetime2 = var26.field_n << 1;
+          var11Lifetime2 = var26.paddedWidth << 1;
+          var12Lifetime2 = var26.paddedHeight << 1;
           if (this.field_N != null &&
-            var11Lifetime2 <= this.field_N.field_q &&
-            var12Lifetime2 <= this.field_N.field_p) {
+            var11Lifetime2 <= this.field_N.width &&
+            var12Lifetime2 <= this.field_N.height) {
             SetTorpedoEnergyUsed.a(94, this.field_N);
-            dma.a();
+            SoftwareRasterizer2D.clear();
           } else {
             this.field_N = new Sprite(var11Lifetime2, var12Lifetime2);
             SetTorpedoEnergyUsed.a(99, this.field_N);
           }
-          var26.b(112, 144, var26.field_m << 4, var26.field_n << 4, -this.field_K << 10, 4096);
+          var26.drawRotatedScaledBilinear(112, 144, var26.paddedWidth << 4, var26.paddedHeight << 4, -this.field_K << 10, 4096);
           bia.a((byte) 124);
-          this.field_N.c(var9Lifetime2 - (var26.field_m >> 1), -var26.field_n + var10Lifetime2, 256);
+          this.field_N.drawAdditive(var9Lifetime2 - (var26.paddedWidth >> 1), -var26.paddedHeight + var10Lifetime2, 256);
           return;
         }
         if (SetFighterRepairTime.field_q != var6Lifetime3) {
           if (SetArmageddonLength.field_o == var6Lifetime3) {
             var27 = ByteStorage.field_a[2];
-            var27.c(var9Lifetime2, var10Lifetime2 - (var27.field_p >> 1), 256);
+            var27.drawAdditive(var9Lifetime2, var10Lifetime2 - (var27.height >> 1), 256);
             return;
           }
           if (var6Lifetime3 != GetShipPersistence.field_o) {
             return;
           }
           var28 = ByteStorage.field_a[1];
-          var28.c(var9Lifetime2, var10Lifetime2 - (var28.field_p >> 1), 256);
+          var28.drawAdditive(var9Lifetime2, var10Lifetime2 - (var28.height >> 1), 256);
           return;
         }
         var29 = ByteStorage.field_a[0];
         var16 = var29;
-        var11Lifetime3 = var29.field_m << 1;
-        var12Lifetime3 = var29.field_n << 1;
+        var11Lifetime3 = var29.paddedWidth << 1;
+        var12Lifetime3 = var29.paddedHeight << 1;
         if (this.field_N == null) {
           this.field_N = new Sprite(var11Lifetime3, var12Lifetime3);
           SetTorpedoEnergyUsed.a(99, this.field_N);
         } else {
-          if (var11Lifetime3 > this.field_N.field_q) {
+          if (var11Lifetime3 > this.field_N.width) {
             this.field_N = new Sprite(var11Lifetime3, var12Lifetime3);
             SetTorpedoEnergyUsed.a(99, this.field_N);
           } else {
-            if (var12Lifetime3 > this.field_N.field_p) {
+            if (var12Lifetime3 > this.field_N.height) {
               this.field_N = new Sprite(var11Lifetime3, var12Lifetime3);
               SetTorpedoEnergyUsed.a(99, this.field_N);
             } else {
               SetTorpedoEnergyUsed.a(94, this.field_N);
-              dma.a();
+              SoftwareRasterizer2D.clear();
             }
           }
         }
-        var29.b(112, 144, var29.field_m << 4, var29.field_n << 4, -this.field_K << 10, 4096);
+        var29.drawRotatedScaledBilinear(112, 144, var29.paddedWidth << 4, var29.paddedHeight << 4, -this.field_K << 10, 4096);
         bia.a((byte) 124);
-        this.field_N.c(var9Lifetime2 - (var29.field_m >> 1), -var29.field_n + var10Lifetime2, 256);
+        this.field_N.drawAdditive(var9Lifetime2 - (var29.paddedWidth >> 1), -var29.paddedHeight + var10Lifetime2, 256);
         return;
     }
 

@@ -22,34 +22,34 @@ final class un extends us {
         int var9 = 0;
         var9 = VoidHunters.field_G;
         try {
-          if ((3 & (param0.field_l | (param0.field_k | (param0.field_q | param0.field_p)))) == 0) {
+          if ((3 & (param0.yOffset | (param0.xOffset | (param0.width | param0.height)))) == 0) {
             return;
           }
-          var2_int = (param0.field_k & 3) + param0.field_q;
-          var3 = (param0.field_l & 3) + param0.field_p;
+          var2_int = (param0.xOffset & 3) + param0.width;
+          var3 = (param0.yOffset & 3) + param0.height;
           var2_int = var2_int + 4 - (3 & var2_int);
           var3 = -(3 & var3) + 4 + var3;
           var4 = new int[var3 * var2_int];
           var5 = 0;
-          var6 = (3 & param0.field_k) + (param0.field_l & 3) * var2_int;
+          var6 = (3 & param0.xOffset) + (param0.yOffset & 3) * var2_int;
           if (param1 < 111) {
             field_h = (int[]) null;
           }
-          for (var7 = 0; param0.field_p > var7; var7++) {
-            for (var8 = 0; var8 < param0.field_q; var8++) {
+          for (var7 = 0; param0.height > var7; var7++) {
+            for (var8 = 0; var8 < param0.width; var8++) {
               incrementValue$0 = var6;
               var6++;
               incrementValue$1 = var5;
               var5++;
-              var4[incrementValue$0] = param0.field_r[incrementValue$1];
+              var4[incrementValue$0] = param0.pixels[incrementValue$1];
             }
-            var6 = var6 + (var2_int - param0.field_q);
+            var6 = var6 + (var2_int - param0.width);
           }
-          param0.field_r = var4;
-          param0.field_l = param0.field_l & -4;
-          param0.field_k = param0.field_k & -4;
-          param0.field_q = var2_int;
-          param0.field_p = var3;
+          param0.pixels = var4;
+          param0.yOffset = param0.yOffset & -4;
+          param0.xOffset = param0.xOffset & -4;
+          param0.width = var2_int;
+          param0.height = var3;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

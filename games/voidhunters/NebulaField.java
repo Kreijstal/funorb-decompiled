@@ -161,7 +161,7 @@ final class NebulaField implements DiffableState, ofa {
         }
         try {
           var3.field_a = this.field_a;
-          var3.nebulae = (Nebula[]) (SpriteDimensions.a(var3.nebulae, this.nebulae, 1, rma.field_c, false));
+          var3.nebulae = (Nebula[]) (SpriteDimensions.copyStateArrayByMode(var3.nebulae, this.nebulae, 1, rma.field_c, false));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lua.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

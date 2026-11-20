@@ -92,7 +92,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
               if (null != var8_ref_pgb.field_j) {
               }
               var10 = dpb.a(true, var8_ref_pgb);
-              var11 = var10 + BitmapFont.c(var8_ref_pgb.field_d);
+              var11 = var10 + BitmapFont.escapeMarkup(var8_ref_pgb.field_d);
               var12 = GetReverbFeedback.a(2, var8_ref_pgb);
               var8_ref_pgb.field_j = new llb(0L, TargetLock.field_b, var11);
               var8_ref_pgb.field_j.field_ib = ((TargetLock.field_b.field_ib & 16711422) >> 1) - (var12 >> 1 & 8355711) + var12;

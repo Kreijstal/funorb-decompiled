@@ -397,7 +397,7 @@ final class GpuSprite extends ToolkitSprite {
         int stackIn_3_2;
         int stackIn_3_3;
         int stackIn_3_4;
-        kb stackIn_4_5 = null;
+        TextureFormat stackIn_4_5 = null;
         boolean stackIn_7_1 = false;
         boolean stackIn_10_1 = false;
         boolean stackIn_14_1 = false;
@@ -426,7 +426,7 @@ final class GpuSprite extends ToolkitSprite {
           } else {
             stackIn_4_5 = SetGrapplingHookFireForce.field_o;
           }
-          this.texture = ((GpuToolkit) (Object) stackIn_3_1).a(stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_4_5, mj.field_f);
+          this.texture = ((GpuToolkit) (Object) stackIn_3_1).a(stackIn_3_2, stackIn_3_3, stackIn_3_4, stackIn_4_5, GpuDataType.field_f);
           this.texture.a(true, (byte) -98, true);
           stackIn_7_1 = (~param1 != ~this.texture.b((byte) 113));
           this.field_j = stackIn_7_1;

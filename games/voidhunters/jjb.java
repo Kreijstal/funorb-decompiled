@@ -19,7 +19,7 @@ final class jjb {
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
         if (!li.field_i) {
-          dma.d(param4, param3, param5, param1, param0);
+          SoftwareRasterizer2D.fillRectangle(param4, param3, param5, param1, param0);
         } else {
           if (ne.field_v) {
             GetDebrisGroupColour.field_r.fillRectangle(param4, param3, param5, param1, param0, 0);

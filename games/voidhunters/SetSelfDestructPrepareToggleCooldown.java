@@ -47,7 +47,7 @@ final class SetSelfDestructPrepareToggleCooldown extends ConsoleCommand {
             return;
           }
           if (!li.field_i) {
-            ita.a(param4, 7988).c(param3, param0, param2, param5, param1);
+            ita.a(param4, 7988).draw(param3, param0, param2, param5, param1);
           } else {
             PlayerReadyFactory.field_b[param4].a(true, param5 | -16777216, -16777216 | param1, param3, param2, param0);
           }

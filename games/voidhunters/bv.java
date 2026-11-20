@@ -722,7 +722,7 @@ final class bv {
                 this.a(-26476, 0);
                 if (SetUseTrails.field_o &&
                   ComponentBehaviour.field_b &&
-                  bva.field_d &&
+                  OpenGlVertexDeclaration.field_d &&
                   mfb.field_a) {
                   this.a((byte) 86, 0);
                 }
@@ -736,10 +736,10 @@ final class bv {
                   SetUseTrails.field_o = true;
                 }
                 if ((var15.triggers & 4) != 0) {
-                  bva.field_d = true;
+                  OpenGlVertexDeclaration.field_d = true;
                 }
                 if (this.b(0, -116)) {
-                  var20 = SetReverbGain.a(ge.field_b, new String[]{this.a(-6448, SetFixedaim.field_q, SetUseTrails.field_o), this.a(-6448, SetSalvoaim.field_p, bva.field_d), this.a(-6448, bib.field_f, mfb.field_a), this.a(-6448, SetCountermeasureLauncherAimspeed.field_q, ComponentBehaviour.field_b)}, 90);
+                  var20 = SetReverbGain.a(ge.field_b, new String[]{this.a(-6448, SetFixedaim.field_q, SetUseTrails.field_o), this.a(-6448, SetSalvoaim.field_p, OpenGlVertexDeclaration.field_d), this.a(-6448, bib.field_f, mfb.field_a), this.a(-6448, SetCountermeasureLauncherAimspeed.field_q, ComponentBehaviour.field_b)}, 90);
                   this.a(param0, param3, GetMutatorVotes.a(HardpointMatch.field_f[0], 255), var16, var19, var20, 1619);
                 }
                 if (this.b((byte) 11, 0) &&

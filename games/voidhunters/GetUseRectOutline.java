@@ -30,9 +30,9 @@ final class GetUseRectOutline extends ConsoleCommand {
             SetTorpedoProjectiles.a(param6, (byte) 1, CarouselSlot.field_a, param4, param5);
           }
         } else {
-          if (GetShieldsDirectionalArcParticleLife.field_p != dma.field_g) {
-            if (dma.field_j == SetClientSideDragging.field_q.field_b &&
-              SetClientSideDragging.field_q.field_d == dma.field_g) {
+          if (GetShieldsDirectionalArcParticleLife.field_p != SoftwareRasterizer2D.width) {
+            if (SoftwareRasterizer2D.height == SetClientSideDragging.field_q.field_b &&
+              SetClientSideDragging.field_q.field_d == SoftwareRasterizer2D.width) {
               if (null == SetSpinningBladeSpindamageMultiplier.field_o) {
                 if (null == SetThrusterParticleSpeedDownshift.field_o) {
                   SetGrapplingHookMinLength.a(5);
@@ -93,9 +93,9 @@ final class GetUseRectOutline extends ConsoleCommand {
               }
             }
           } else {
-            if (dma.field_j != SetGrapplingHookRopeBreakLength.field_p &&
-              dma.field_j == SetClientSideDragging.field_q.field_b &&
-              SetClientSideDragging.field_q.field_d == dma.field_g) {
+            if (SoftwareRasterizer2D.height != SetGrapplingHookRopeBreakLength.field_p &&
+              SoftwareRasterizer2D.height == SetClientSideDragging.field_q.field_b &&
+              SetClientSideDragging.field_q.field_d == SoftwareRasterizer2D.width) {
               if (null == SetSpinningBladeSpindamageMultiplier.field_o) {
                 if (null == SetThrusterParticleSpeedDownshift.field_o) {
                   SetGrapplingHookMinLength.a(5);

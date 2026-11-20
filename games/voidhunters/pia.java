@@ -41,7 +41,7 @@ final class pia extends oda implements oo {
 
     final void b(int param0, int param1, int param2, int param3) {
         super.b(param0, param1, 80, param3);
-        SetTorpedoProjectileLife.field_o.c(pea.field_c, 4 + (param0 + this.field_g), 4 + param3 + (this.field_r + SetTorpedoProjectileLife.field_o.field_k), 16777215, -1);
+        SetTorpedoProjectileLife.field_o.draw(pea.field_c, 4 + (param0 + this.field_g), 4 + param3 + (this.field_r + SetTorpedoProjectileLife.field_o.maxAscent), 16777215, -1);
         if (param2 < 47) {
           htb var6 = (htb) null;
           this.a(46, -102, -40, (htb) null, -107);

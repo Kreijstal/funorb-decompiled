@@ -3,7 +3,7 @@
  */
 final class GetMinimapWidth extends ConsoleCommand {
     static int field_o;
-    static kb field_p;
+    static TextureFormat field_p;
 
     public static void clearSharedReferences(byte param0) {
         if (param0 > -89) {
@@ -27,7 +27,7 @@ final class GetMinimapWidth extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            field_p = (kb) null;
+            field_p = (TextureFormat) null;
           }
           stackIn_3_0 = new ConsoleValue(GetAiFiringRangeUpshift.field_o);
           return stackIn_3_0;
@@ -47,6 +47,6 @@ final class GetMinimapWidth extends ConsoleCommand {
 
     static {
         field_o = 4096;
-        field_p = new kb(1);
+        field_p = new TextureFormat(1);
     }
 }

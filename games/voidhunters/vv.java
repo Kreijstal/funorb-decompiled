@@ -65,19 +65,19 @@ final class vv {
           if (this.field_e != null) {
             var6_int = this.field_h + (param2 + param3.field_g);
             if (param0.field_c == 1) {
-              var6_int = var6_int + (-this.field_e.field_m + param3.field_h) / 2;
+              var6_int = var6_int + (-this.field_e.paddedWidth + param3.field_h) / 2;
             }
             var7 = this.field_f + (param4 + param3.field_r);
             if (2 == param0.field_c) {
-              var6_int = var6_int + (-this.field_e.field_m + param3.field_h);
+              var6_int = var6_int + (-this.field_e.paddedWidth + param3.field_h);
             }
             if (param0.field_n == 1) {
-              var7 = var7 + (-this.field_e.field_n + param3.field_f) / 2;
+              var7 = var7 + (-this.field_e.paddedHeight + param3.field_f) / 2;
             }
             if (param0.field_n == 2) {
-              var7 = var7 + (param3.field_f - this.field_e.field_n);
+              var7 = var7 + (param3.field_f - this.field_e.paddedHeight);
             }
-            this.field_e.a(var6_int, var7);
+            this.field_e.draw(var6_int, var7);
           }
           if (param1) {
             return;
@@ -112,7 +112,7 @@ final class vv {
             } else {
               stackIn_28_8 = 256;
             }
-            ((BitmapFont) (Object) stackIn_21_0).a(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param0.field_c, param0.field_n, param0.field_h);
+            ((BitmapFont) (Object) stackIn_21_0).drawParagraph(stackIn_21_1, stackIn_24_2, stackIn_27_3, stackIn_27_4, stackIn_27_5, stackIn_27_6, stackIn_27_7, stackIn_28_8, param0.field_c, param0.field_n, param0.field_h);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

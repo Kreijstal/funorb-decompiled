@@ -241,7 +241,7 @@ final class SetOndamageParticleSpeed extends ConsoleCommand {
         if (param0 != 3) {
           SetOndamageParticleSpeed.e(15);
         }
-        var1.a(dma.field_j, dma.field_i, dma.field_c, (byte) -88, dma.field_a, dma.field_f, dma.field_g, dma.field_d);
+        var1.a(SoftwareRasterizer2D.height, SoftwareRasterizer2D.pixels, SoftwareRasterizer2D.clipTop, (byte) -88, SoftwareRasterizer2D.clipRight, SoftwareRasterizer2D.clipBottom, SoftwareRasterizer2D.width, SoftwareRasterizer2D.clipLeft);
         bc.field_b.addLast(-10258, var1);
     }
 

@@ -169,21 +169,21 @@ final class jba implements wwa {
             stackIn_4_0 = (shb) (param1);
           }
           var13 = (v) (stackIn_4_0);
-          dma.d(param2 + param1.field_g, param1.field_r + param3, param1.field_h, param1.field_f, this.field_e);
+          SoftwareRasterizer2D.fillRectangle(param2 + param1.field_g, param1.field_r + param3, param1.field_h, param1.field_f, this.field_e);
           if (var13 == null) {
           }
           var7 = param1.field_h - var13.field_C * 2;
           var8 = var13.field_C + (param1.field_g + param2);
           var9 = var13.field_F + (param1.field_r + param3);
-          dma.a(var8, var9, var8 + var7, var9, this.field_f);
+          SoftwareRasterizer2D.drawLine(var8, var9, var8 + var7, var9, this.field_f);
           var10 = var13.a(0) - 1;
           var11 = 112 / ((-27 - param0) / 35);
           while (0 <= var10) {
-            dma.f(var8 + var7 * var13.a(-115, var10) / var13.e(-111), var9, this.field_c, this.field_d);
+            SoftwareRasterizer2D.fillCircle(var8 + var7 * var13.a(-115, var10) / var13.e(-111), var9, this.field_c, this.field_d);
             var10--;
           }
           if (null != this.field_g) {
-            this.field_g.a(var13.field_j, var7 / 2 + var8, var13.field_F + (this.field_g.field_H + var9), this.field_a, this.field_i);
+            this.field_g.drawCentered(var13.field_j, var7 / 2 + var8, var13.field_F + (this.field_g.ascent + var9), this.field_a, this.field_i);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

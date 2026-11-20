@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pb {
-    static pb field_k;
-    private int field_c;
-    static pb field_g;
-    int field_j;
-    static pb field_d;
-    static pb field_e;
-    int field_i;
-    private mj field_a;
-    static pb field_l;
-    static pb field_h;
-    static pb field_b;
+final class VertexAttribute {
+    static VertexAttribute field_k;
+    private int componentCount;
+    static VertexAttribute field_g;
+    int id;
+    static VertexAttribute field_d;
+    static VertexAttribute field_e;
+    int byteSize;
+    private GpuDataType dataType;
+    static VertexAttribute field_l;
+    static VertexAttribute field_h;
+    static VertexAttribute field_b;
     static int field_m;
     static String field_n;
     static byte[] field_f;
@@ -30,7 +30,7 @@ final class pb {
           field_g = null;
           return;
         }
-        pb.a((byte) 99, -109);
+        VertexAttribute.fromId((byte) 99, -109);
         field_f = null;
         field_h = null;
         field_n = null;
@@ -42,7 +42,7 @@ final class pb {
         field_g = null;
     }
 
-    final static pb a(byte param0, int param1) {
+    final static VertexAttribute fromId(byte param0, int param1) {
         int var2;
         int var3;
         var3 = VoidHunters.field_G;
@@ -71,25 +71,25 @@ final class pb {
         if (param0 < -107) {
           return null;
         }
-        return (pb) null;
+        return (VertexAttribute) null;
     }
 
     public final String toString() {
         throw new IllegalStateException();
     }
 
-    private pb(int param0, int param1, mj param2) {
+    private VertexAttribute(int param0, int param1, GpuDataType param2) {
         RuntimeException var4 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_c = param1;
-          this.field_a = param2;
-          this.field_j = param0;
-          this.field_i = this.field_c * this.field_a.field_h;
-          if (16 > this.field_j) {
+          this.componentCount = param1;
+          this.dataType = param2;
+          this.id = param0;
+          this.byteSize = this.componentCount * this.dataType.byteSize;
+          if (16 > this.id) {
             return;
           }
           throw new RuntimeException();
@@ -108,13 +108,13 @@ final class pb {
     }
 
     static {
-        field_k = new pb(0, 3, mj.field_d);
-        field_g = new pb(1, 3, mj.field_d);
-        field_d = new pb(2, 4, mj.field_f);
-        field_e = new pb(3, 1, mj.field_d);
-        field_l = new pb(4, 2, mj.field_d);
-        field_h = new pb(5, 3, mj.field_d);
-        field_b = new pb(6, 4, mj.field_d);
+        field_k = new VertexAttribute(0, 3, GpuDataType.field_d);
+        field_g = new VertexAttribute(1, 3, GpuDataType.field_d);
+        field_d = new VertexAttribute(2, 4, GpuDataType.field_f);
+        field_e = new VertexAttribute(3, 1, GpuDataType.field_d);
+        field_l = new VertexAttribute(4, 2, GpuDataType.field_d);
+        field_h = new VertexAttribute(5, 3, GpuDataType.field_d);
+        field_b = new VertexAttribute(6, 4, GpuDataType.field_d);
         field_m = SetMutatorVotes.a(16, -111);
         field_f = new byte[]{(byte)31, (byte)-117, (byte)8, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0, (byte) 0};
         field_n = "Launches a fighter for harrassment";

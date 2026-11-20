@@ -172,9 +172,9 @@ final class wu extends uda {
               GetSniperCannonProjectiles.field_p = false;
               GetMessageFadetime.field_o = true;
               GetThrusterSmallForce.field_o = true;
-              if (wh.g(-120)) {
+              if (SocketNetworkArchiveClient.g(-120)) {
                 RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 71);
-                vga.field_b = GetRepairModePower.field_o;
+                SecondaryNodeQueue.field_b = GetRepairModePower.field_o;
               }
               return;
             }
@@ -196,9 +196,9 @@ final class wu extends uda {
             GetSniperCannonProjectiles.field_p = false;
             GetMessageFadetime.field_o = true;
             GetThrusterSmallForce.field_o = true;
-            if (wh.g(-120)) {
+            if (SocketNetworkArchiveClient.g(-120)) {
               RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 71);
-              vga.field_b = GetRepairModePower.field_o;
+              SecondaryNodeQueue.field_b = GetRepairModePower.field_o;
             }
             return;
           }
@@ -252,9 +252,9 @@ final class wu extends uda {
         GetSniperCannonProjectiles.field_p = false;
         GetMessageFadetime.field_o = true;
         GetThrusterSmallForce.field_o = true;
-        if (wh.g(-120)) {
+        if (SocketNetworkArchiveClient.g(-120)) {
           RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 71);
-          vga.field_b = GetRepairModePower.field_o;
+          SecondaryNodeQueue.field_b = GetRepairModePower.field_o;
         }
     }
 

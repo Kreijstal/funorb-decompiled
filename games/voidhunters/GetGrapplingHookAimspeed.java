@@ -19,62 +19,62 @@ final class GetGrapplingHookAimspeed extends ConsoleCommand {
             if (qr.field_g > param2) {
               return -1;
             }
-            if (param2 >= qr.field_g + GetRadialMenuRadius.field_o.field_q) {
+            if (param2 >= qr.field_g + GetRadialMenuRadius.field_o.width) {
               return -1;
             }
             if (SetShipPersistence.field_q > param1) {
               return -1;
             }
-            if (GetRadialMenuRadius.field_o.field_p + SetShipPersistence.field_q <= param1) {
+            if (GetRadialMenuRadius.field_o.height + SetShipPersistence.field_q <= param1) {
               return -1;
             }
             return 1;
           }
           if (qr.field_g <= param2 &&
-            param2 < qr.field_g + GetRadialMenuRadius.field_o.field_q &&
+            param2 < qr.field_g + GetRadialMenuRadius.field_o.width &&
             SetShipPersistence.field_q <= param1 &&
-            GetRadialMenuRadius.field_o.field_p + SetShipPersistence.field_q > param1) {
+            GetRadialMenuRadius.field_o.height + SetShipPersistence.field_q > param1) {
             return 1;
           }
           return -1;
         }
-        if (GetRadialMenuRadius.field_o.field_q + GetUseNiceTrails.field_r <= param2) {
+        if (GetRadialMenuRadius.field_o.width + GetUseNiceTrails.field_r <= param2) {
           if (param0 != -1) {
             GetGrapplingHookAimspeed.a(109, -32, 51);
             if (qr.field_g <= param2 &&
-              param2 < qr.field_g + GetRadialMenuRadius.field_o.field_q &&
+              param2 < qr.field_g + GetRadialMenuRadius.field_o.width &&
               SetShipPersistence.field_q <= param1 &&
-              GetRadialMenuRadius.field_o.field_p + SetShipPersistence.field_q > param1) {
+              GetRadialMenuRadius.field_o.height + SetShipPersistence.field_q > param1) {
               return 1;
             }
             return -1;
           }
           if (qr.field_g <= param2 &&
-            param2 < qr.field_g + GetRadialMenuRadius.field_o.field_q &&
+            param2 < qr.field_g + GetRadialMenuRadius.field_o.width &&
             SetShipPersistence.field_q <= param1 &&
-            GetRadialMenuRadius.field_o.field_p + SetShipPersistence.field_q > param1) {
+            GetRadialMenuRadius.field_o.height + SetShipPersistence.field_q > param1) {
             return 1;
           }
           return -1;
         }
         if (param1 >= GetCountermeasuresPulseRadius.field_p &&
-          GetRadialMenuRadius.field_o.field_p + GetCountermeasuresPulseRadius.field_p > param1) {
+          GetRadialMenuRadius.field_o.height + GetCountermeasuresPulseRadius.field_p > param1) {
           return 0;
         }
         if (param0 != -1) {
           GetGrapplingHookAimspeed.a(109, -32, 51);
           if (qr.field_g <= param2 &&
-            param2 < qr.field_g + GetRadialMenuRadius.field_o.field_q &&
+            param2 < qr.field_g + GetRadialMenuRadius.field_o.width &&
             SetShipPersistence.field_q <= param1 &&
-            GetRadialMenuRadius.field_o.field_p + SetShipPersistence.field_q > param1) {
+            GetRadialMenuRadius.field_o.height + SetShipPersistence.field_q > param1) {
             return 1;
           }
           return -1;
         }
         if (qr.field_g <= param2 &&
-          param2 < qr.field_g + GetRadialMenuRadius.field_o.field_q &&
+          param2 < qr.field_g + GetRadialMenuRadius.field_o.width &&
           SetShipPersistence.field_q <= param1 &&
-          GetRadialMenuRadius.field_o.field_p + SetShipPersistence.field_q > param1) {
+          GetRadialMenuRadius.field_o.height + SetShipPersistence.field_q > param1) {
           return 1;
         }
         return -1;

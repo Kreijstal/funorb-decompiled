@@ -32,7 +32,7 @@ abstract class qc implements kd {
           var4 = new llb((long)param1, (llb) null, param2);
           var4.field_eb = this.field_n;
           var4.field_Y = param0;
-          var4.a(5, param1 + 124, this.field_n.b(var4.field_R), 0, this.field_e);
+          var4.a(5, param1 + 124, this.field_n.getStringWidth(var4.field_R), 0, this.field_e);
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -112,7 +112,7 @@ abstract class qc implements kd {
           var4 = new IntrusiveDeque();
           while (param2 != null) {
             boolean decompiledFrameRemainder0 = true;
-            var6 = this.field_n.b(param2);
+            var6 = this.field_n.getStringWidth(param2);
             var7 = param2;
             if (param0 < var6) {
               var8 = -1 + param2.length();
@@ -121,18 +121,18 @@ abstract class qc implements kd {
                   param2.charAt(var8) != 32) {
                   incrementValue$0 = var8;
                   var8--;
-                  var6 = var6 - this.field_n.a(param2.charAt(incrementValue$0));
+                  var6 = var6 - this.field_n.getCharacterAdvance(param2.charAt(incrementValue$0));
                   continue;
                 }
                 break;
               }
               if (var8 == 0) {
-                var6 = this.field_n.b(param2);
+                var6 = this.field_n.getStringWidth(param2);
                 var8 = param2.length() - 1;
                 while (param0 < var6) {
                   incrementValue$1 = var8;
                   var8--;
-                  var6 = var6 - this.field_n.a(param2.charAt(incrementValue$1));
+                  var6 = var6 - this.field_n.getCharacterAdvance(param2.charAt(incrementValue$1));
                 }
               }
               var7 = param2.substring(0, var8);
@@ -212,21 +212,21 @@ abstract class qc implements kd {
         int var3Lifetime1;
         int var4Lifetime1;
         if (this.field_m.field_K + this.field_m.field_G > 0) {
-          dma.e(this.field_m.field_M, this.field_m.field_u, this.field_h.field_L, this.field_m.field_G, 5592405, 230);
-          dma.e(this.field_h.field_hb + this.field_h.field_M, this.field_m.field_u, this.field_h.field_L, this.field_m.field_G, 5592405, 230);
-          dma.e(this.field_h.field_M, this.field_m.field_u, this.field_h.field_hb, this.field_h.field_K, 5592405, 230);
-          dma.e(this.field_h.field_M, this.field_h.field_G + this.field_h.field_u, this.field_h.field_hb, -this.field_h.field_G + this.field_p.field_u - this.field_h.field_u, 5592405, 230);
-          dma.e(this.field_h.field_M, this.field_p.field_G + this.field_p.field_u, this.field_h.field_hb, -this.field_p.field_G + (this.field_m.field_G - this.field_p.field_K), 5592405, 230);
-          dma.e(this.field_h.field_M, this.field_h.field_u, this.field_h.field_hb, this.field_h.field_G, 2236962, 240);
-          dma.e(this.field_p.field_M, this.field_p.field_u, this.field_p.field_hb, this.field_p.field_G, 2236962, 240);
+          SoftwareRasterizer2D.fillRectangleAlpha(this.field_m.field_M, this.field_m.field_u, this.field_h.field_L, this.field_m.field_G, 5592405, 230);
+          SoftwareRasterizer2D.fillRectangleAlpha(this.field_h.field_hb + this.field_h.field_M, this.field_m.field_u, this.field_h.field_L, this.field_m.field_G, 5592405, 230);
+          SoftwareRasterizer2D.fillRectangleAlpha(this.field_h.field_M, this.field_m.field_u, this.field_h.field_hb, this.field_h.field_K, 5592405, 230);
+          SoftwareRasterizer2D.fillRectangleAlpha(this.field_h.field_M, this.field_h.field_G + this.field_h.field_u, this.field_h.field_hb, -this.field_h.field_G + this.field_p.field_u - this.field_h.field_u, 5592405, 230);
+          SoftwareRasterizer2D.fillRectangleAlpha(this.field_h.field_M, this.field_p.field_G + this.field_p.field_u, this.field_h.field_hb, -this.field_p.field_G + (this.field_m.field_G - this.field_p.field_K), 5592405, 230);
+          SoftwareRasterizer2D.fillRectangleAlpha(this.field_h.field_M, this.field_h.field_u, this.field_h.field_hb, this.field_h.field_G, 2236962, 240);
+          SoftwareRasterizer2D.fillRectangleAlpha(this.field_p.field_M, this.field_p.field_u, this.field_p.field_hb, this.field_p.field_G, 2236962, 240);
           var3 = this.field_m.field_K + 256;
           if (0 > var3) {
             var3 = 0;
           }
-          dma.e(this.field_m.field_M, this.field_m.field_G + this.field_m.field_u, this.field_m.field_hb, -this.field_m.field_G + SetPointDefenceLaserReload.field_p - this.field_m.field_u, 0, var3 >> 1);
+          SoftwareRasterizer2D.fillRectangleAlpha(this.field_m.field_M, this.field_m.field_G + this.field_m.field_u, this.field_m.field_hb, -this.field_m.field_G + SetPointDefenceLaserReload.field_p - this.field_m.field_u, 0, var3 >> 1);
           var4 = 5 + (this.field_m.field_G + this.field_m.field_K);
           for (var5 = 0; 6 > var5; var5++) {
-            dma.g(0, var4, GetDebrisSurvives.field_p, 0, var5 << 5);
+            SoftwareRasterizer2D.drawHorizontalLineAlpha(0, var4, GetDebrisSurvives.field_p, 0, var5 << 5);
             var4--;
           }
           this.field_m.b((8 & this.field_b) == 0 ? true : false, 111);
@@ -238,7 +238,7 @@ abstract class qc implements kd {
           this.field_o.b(false, 43);
           var3Lifetime1 = var3Lifetime1 + (this.field_e + 5);
           for (var4Lifetime1 = 0; this.field_d.length > var4Lifetime1; var4Lifetime1++) {
-            this.field_n.c(this.field_d[var4Lifetime1], this.field_o.field_M + 10, var3Lifetime1, 13421772, -1);
+            this.field_n.draw(this.field_d[var4Lifetime1], this.field_o.field_M + 10, var3Lifetime1, 13421772, -1);
             var3Lifetime1 = var3Lifetime1 + this.field_e;
           }
         }
@@ -317,7 +317,7 @@ abstract class qc implements kd {
           (this.field_d != null)) {
           var3 = 0;
           for (var4 = 0; this.field_d.length > var4; var4++) {
-            var5 = this.field_n.b(this.field_d[var4]);
+            var5 = this.field_n.getStringWidth(this.field_d[var4]);
             if (var3 < var5) {
               var3 = var5;
             }
@@ -355,7 +355,7 @@ abstract class qc implements kd {
           }
           for (var7 = 0; var6.length > var7; var7++) {
             var8 = var6[var7];
-            if (var4_int <= this.field_n.b(var8)) {
+            if (var4_int <= this.field_n.getStringWidth(var8)) {
               var9 = this.a(var4_int, (byte) -128, var8);
               var10 = (ila) (var9.first(0));
               while (var10 != null) {
@@ -503,7 +503,7 @@ abstract class qc implements kd {
         this.field_b = 0;
         try {
           this.field_n = param0;
-          this.field_e = this.field_n.field_k + this.field_n.field_A;
+          this.field_e = this.field_n.maxAscent + this.field_n.maxDescent;
           var3_int = this.field_e + 4;
           var4 = this.a(65793, (byte) 79);
           var5 = var4;

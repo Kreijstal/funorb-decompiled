@@ -119,7 +119,7 @@ final class Asteroid extends ShipBody implements DiffableState, CompactGameState
           SetMissionDebrisVotingChancestep.a(param1, 4095);
           return;
         }
-        dma.e(GetReverbWidth.field_o.field_a.field_L, GetReverbWidth.field_o.field_a.field_K, GetReverbWidth.field_o.field_a.field_hb, GetReverbWidth.field_o.field_a.field_G);
+        SoftwareRasterizer2D.darkenRectangle(GetReverbWidth.field_o.field_a.field_L, GetReverbWidth.field_o.field_a.field_K, GetReverbWidth.field_o.field_a.field_hb, GetReverbWidth.field_o.field_a.field_G);
         GetReverbWidth.field_o.field_a.b(param1, 35);
         SetMissionDebrisVotingChancestep.a(param1, 4095);
     }

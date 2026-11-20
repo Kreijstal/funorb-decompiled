@@ -2,15 +2,15 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class SpriteDimensions extends DualLinkNode {
-    int field_p;
+    int height;
     static Sprite[] field_o;
-    int field_l;
-    int field_n;
-    int field_q;
-    int field_k;
-    int field_m;
+    int yOffset;
+    int paddedHeight;
+    int width;
+    int xOffset;
+    int paddedWidth;
 
-    final static SerializableGameState[] a(SerializableGameState[] param0, SerializableGameState[] param1, int param2, GameStateFactory param3, boolean param4) {
+    final static SerializableGameState[] copyStateArrayByMode(SerializableGameState[] param0, SerializableGameState[] param1, int param2, GameStateFactory param3, boolean param4) {
         int var5_int = 0;
         SerializableGameState dupTemp$0 = null;
         SerializableGameState[] stackIn_10_0 = null;
@@ -98,7 +98,7 @@ abstract class SpriteDimensions extends DualLinkNode {
         }
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int atan2Angle(int param0, int param1, int param2) {
         if (param1 <= 42) {
           field_o = (Sprite[]) null;
         }
@@ -132,7 +132,7 @@ abstract class SpriteDimensions extends DualLinkNode {
     public static void clearSharedReferences(boolean param0) {
         field_o = null;
         if (!param0) {
-          SpriteDimensions.a(2, -61, -79);
+          SpriteDimensions.atan2Angle(2, -61, -79);
         }
     }
 

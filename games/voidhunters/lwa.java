@@ -104,7 +104,7 @@ final class lwa extends llb {
           for (var12 = 0; var12 < Lo.field_q.length; var12++) {
             var13 = new llb(0L, param3, GetKeepTeamColours.field_r[var12]);
             var14 = new llb(0L, param3, Lo.field_q[var12]);
-            var15 = param3.field_eb.b(Lo.field_q[var12]);
+            var15 = param3.field_eb.getStringWidth(Lo.field_q[var12]);
             if (var15 > var11) {
               var11 = var15;
             }

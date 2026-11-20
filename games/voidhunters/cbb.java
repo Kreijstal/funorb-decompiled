@@ -225,7 +225,7 @@ final class cbb {
     }
 
     final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {
-        jva var8 = null;
+        ArgbSprite var8 = null;
         IndexedSpriteData[] var9 = null;
         IndexedSpriteData[] var10 = null;
         IndexedSpriteData[] var11 = null;
@@ -233,8 +233,8 @@ final class cbb {
         IndexedSpriteData[] var6 = null;
         IndexedSpriteData[] var7 = null;
         try {
-          var8 = new jva(param0.fetchNamedFile("box_bottom.png", true, ""), (java.awt.Component) ((Object) SetThrusterBindingMoveAndTurnHasOppositeMove.e((byte) 75)));
-          var8.e();
+          var8 = new ArgbSprite(param0.fetchNamedFile("box_bottom.png", true, ""), (java.awt.Component) ((Object) SetThrusterBindingMoveAndTurnHasOppositeMove.e((byte) 75)));
+          var8.trimTransparentBorders();
           oaa.field_j = (Sprite) ((Object) var8);
           SetPointDefenceLaserAimarc.field_r = new IndexedSpriteData[138];
           SetPointDefenceLaserAimarc.field_r[0] = IndexedSpriteData.b(param2, "basic", "objective_icon_attack");

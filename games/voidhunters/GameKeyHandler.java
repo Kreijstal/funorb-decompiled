@@ -68,7 +68,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             if (0 != var2_int && var2_int != 65535 &&
               AudioPump.isCp1252Character((char) var2_int, true)) {
               var3 = SetComponentBreakingExplosionForceMultiplier.field_o + 1 & 127;
-              if (var3 != bva.field_c) {
+              if (var3 != OpenGlVertexDeclaration.field_c) {
                 ServerTickFactory.field_a[SetComponentBreakingExplosionForceMultiplier.field_o] = -1;
                 GetGrapplingHookCooldown.field_q[SetComponentBreakingExplosionForceMultiplier.field_o] = (char)var2_int;
                 SetComponentBreakingExplosionForceMultiplier.field_o = var3;
@@ -113,7 +113,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             }
             if (0 <= var2_int) {
               var3 = 127 & 1 + SetComponentBreakingExplosionForceMultiplier.field_o;
-              if (var3 != bva.field_c) {
+              if (var3 != OpenGlVertexDeclaration.field_c) {
                 ServerTickFactory.field_a[SetComponentBreakingExplosionForceMultiplier.field_o] = var2_int;
                 GetGrapplingHookCooldown.field_q[SetComponentBreakingExplosionForceMultiplier.field_o] = (char)0;
                 SetComponentBreakingExplosionForceMultiplier.field_o = var3;
@@ -163,7 +163,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
             GameKeyHandler.clearSharedReferences(115);
           }
           if (!li.field_i) {
-            stackIn_6_0 = ita.a(param2, 7988).b(param4, param3);
+            stackIn_6_0 = ita.a(param2, 7988).getParagraphWidth(param4, param3);
             return stackIn_6_0;
           }
           stackIn_4_0 = SetTorpedoEnergyUsed.a(param2, 300).a(param3, param4, true, (ToolkitSprite[]) null);

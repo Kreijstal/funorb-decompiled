@@ -51,12 +51,12 @@ final class meb implements wwa {
           }
           var6_int = stackIn_5_0;
           var7 = 122 / ((param0 + 27) / 35);
-          this.field_b.a("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_j + "</u>", param2 + param1.field_g, param3 + param1.field_r, param1.field_h, param1.field_f, var6_int, -1, this.field_e, this.field_a, this.field_b.field_A + this.field_b.field_k);
+          this.field_b.drawParagraph("<u=" + Integer.toString(var6_int, 16) + ">" + param1.field_j + "</u>", param2 + param1.field_g, param3 + param1.field_r, param1.field_h, param1.field_f, var6_int, -1, this.field_e, this.field_a, this.field_b.maxDescent + this.field_b.maxAscent);
           if (!param1.e((byte) -120)) {
             return;
           }
-          var8 = this.field_b.b(param1.field_j);
-          var9 = this.field_b.field_A + this.field_b.field_k;
+          var8 = this.field_b.getStringWidth(param1.field_j);
+          var9 = this.field_b.maxDescent + this.field_b.maxAscent;
           var10 = param2 + param1.field_g;
           if (2 != this.field_e) {
             if (this.field_e == 1) {

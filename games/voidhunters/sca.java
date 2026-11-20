@@ -35,7 +35,7 @@ final class sca extends mc {
           this.field_A = param10;
           this.field_x = param7;
           var12_int = this.field_w - this.field_x;
-          var13 = this.field_v.b(param10, var12_int, this.field_v.field_k) + this.field_x * 2;
+          var13 = this.field_v.getParagraphHeight(param10, var12_int, this.field_v.maxAscent) + this.field_x * 2;
           if (var13 <= param3) {
             var13 = param3;
           } else {
@@ -86,7 +86,7 @@ final class sca extends mc {
           return;
         }
         int var7 = this.field_y ? this.field_h - this.field_w - this.field_x * 2 : 0;
-        this.field_v.a(this.field_A, this.field_x + (var7 + var5), var6 + this.field_x, this.field_w - this.field_x, -(this.field_x * 2) + this.field_f, this.field_z, -1, this.field_y ? 0 : 2, 1, this.field_v.field_k);
+        this.field_v.drawParagraph(this.field_A, this.field_x + (var7 + var5), var6 + this.field_x, this.field_w - this.field_x, -(this.field_x * 2) + this.field_f, this.field_z, -1, this.field_y ? 0 : 2, 1, this.field_v.maxAscent);
     }
 
     final String d(byte param0) {

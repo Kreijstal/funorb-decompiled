@@ -3,7 +3,7 @@
  */
 final class GetAutozoomAmountMultiply extends ConsoleCommand {
     static String field_p;
-    static ona field_o;
+    static NetworkArchiveClient field_o;
 
     public static void clearSharedReferences(int param0) {
         field_o = null;
@@ -26,7 +26,7 @@ final class GetAutozoomAmountMultiply extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            field_o = (ona) null;
+            field_o = (NetworkArchiveClient) null;
           }
           stackIn_3_0 = new ConsoleValue(rw.field_n);
           return stackIn_3_0;

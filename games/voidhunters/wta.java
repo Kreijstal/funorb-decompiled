@@ -63,7 +63,7 @@ final class wta extends sc implements en, aca {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          var5 = vga.a(true);
+          var5 = SecondaryNodeQueue.getCurrentYear(true);
           if (var4 >= 1890 &&
             -3 + var5 >= var4) {
             if (BodyInZoneCondition.a(var3, var2_int, true, var4)) {
@@ -97,7 +97,7 @@ final class wta extends sc implements en, aca {
             this.field_c = (vq) null;
           }
           var4 = this.field_c.f(3476);
-          var5 = vga.a(true);
+          var5 = SecondaryNodeQueue.getCurrentYear(true);
           if (var4 < 1890) {
             stackIn_5_0 = SetArmageddonLength.field_o;
             return stackIn_5_0;

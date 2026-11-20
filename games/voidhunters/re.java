@@ -39,7 +39,7 @@ final class re extends ar {
           if (param0 < 77) {
             re.a(-111, (byte) -91);
           }
-          var6 = new toa(-param2.field_k + param3, param3 + param2.field_A, param1.length());
+          var6 = new toa(-param2.maxAscent + param3, param3 + param2.maxDescent, param1.length());
           var5 = var6;
           this.field_c = new toa[]{var6};
           stackIn_3_0 = var5;
@@ -93,7 +93,7 @@ final class re extends ar {
         var15 = VoidHunters.field_G;
         try {
           if (param0 == 0) {
-            param0 = param4.field_H;
+            param0 = param4.ascent;
           }
           if (param3 == null) {
             this.field_c = null;
@@ -118,15 +118,15 @@ final class re extends ar {
           this.field_i = param0;
           this.field_j = param7;
           this.field_g = param4;
-          var16 = new String[param4.c(param3, param2) + 1];
+          var16 = new String[param4.getLineCount(param3, param2) + 1];
           var17 = var16;
-          var10 = Math.max(1, param4.a(param3, new int[]{param2}, var17));
+          var10 = Math.max(1, param4.wrapLines(param3, new int[]{param2}, var17));
           if (this.field_j == param6 &&
             1 == var10) {
             this.field_j = 1;
           }
           if (0 == this.field_j) {
-            var11 = param4.field_k;
+            var11 = param4.maxAscent;
           } else {
             if (this.field_j != 1) {
               if (this.field_j != 2) {
@@ -134,13 +134,13 @@ final class re extends ar {
                 if (var12 < 0) {
                   var12 = 0;
                 }
-                var11 = var12 + param4.field_k;
+                var11 = var12 + param4.maxAscent;
                 this.field_i = this.field_i + var12;
               } else {
-                var11 = -(var10 * this.field_i) + (this.field_h - param4.field_A);
+                var11 = -(var10 * this.field_i) + (this.field_h - param4.maxDescent);
               }
             } else {
-              var11 = param4.field_k + (this.field_h - this.field_i * var10 >> 1);
+              var11 = param4.maxAscent + (this.field_h - this.field_i * var10 >> 1);
             }
           }
           this.field_c = new toa[var10];
@@ -148,8 +148,8 @@ final class re extends ar {
             var13 = var16[var12Lifetime1];
             stackIn_35_0 = null;
             stackIn_35_1 = null;
-            stackIn_35_2 = -param4.field_k + var11;
-            stackIn_35_3 = var11 + param4.field_A;
+            stackIn_35_2 = -param4.maxAscent + var11;
+            stackIn_35_3 = var11 + param4.maxDescent;
             if (var13 != null) {
               stackIn_36_0 = null;
               stackIn_36_1 = null;
@@ -162,12 +162,12 @@ final class re extends ar {
             var14 = new toa(stackIn_35_2, stackIn_35_3, stackIn_36_4);
             var14.field_c[0] = 0;
             if (var13 != null) {
-              var14.field_c[var13.length()] = param4.b(var13);
+              var14.field_c[var13.length()] = param4.getStringWidth(var13);
               stackIn_39_0 = (BitmapFont) (param4);
               if (param5 != 3) {
                 stackIn_40_1 = 0;
               } else {
-                stackIn_40_1 = this.a(false, param2, param4.b(var13), var13);
+                stackIn_40_1 = this.a(false, param2, param4.getStringWidth(var13), var13);
               }
               TrailHolder.a(stackIn_39_0, stackIn_40_1, var14, var13, 18126);
             }
@@ -217,7 +217,7 @@ final class re extends ar {
           var7 = this.a(param2 + 108, param3, param1, param0);
           var8 = var7;
           var7.field_c[0] = param4;
-          var8.field_c[param3.length()] = param4 + param1.b(param3);
+          var8.field_c[param3.length()] = param4 + param1.getStringWidth(param3);
           if (param2 != -3) {
             field_n = (wdb) null;
           }
@@ -249,7 +249,7 @@ final class re extends ar {
         }
         try {
           var8 = this.a(113, param2, param4, param3);
-          var7 = param4.b(param2);
+          var7 = param4.getStringWidth(param2);
           var8.field_c[0] = -(var7 >> 1) + param1;
           var8.field_c[param2.length()] = (var7 >> 1) + param1;
           TrailHolder.a(param4, 0, var8, param2, 18126);
@@ -282,7 +282,7 @@ final class re extends ar {
           this.field_g = param1;
           var8 = this.a(93, param4, param1, param0);
           var9 = var8;
-          var9.field_c[0] = -param1.b(param4) + param3;
+          var9.field_c[0] = -param1.getStringWidth(param4) + param3;
           var9.field_c[param4.length()] = param3;
           TrailHolder.a(param1, 0, var9, param4, 18126);
         } catch (RuntimeException runtimeException) {

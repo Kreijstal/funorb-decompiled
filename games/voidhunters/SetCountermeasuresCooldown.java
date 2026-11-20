@@ -47,7 +47,7 @@ final class SetCountermeasuresCooldown extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var20 = null;
         try {
-          qma.a(param14, param0, param9, param2, param16, param10, param13, param7, param3, new bc(param19), param8, param18, new bc(param5), param15, param6, param12, -92, param1, new bc(param11), param4);
+          VertexStreamLayout.a(param14, param0, param9, param2, param16, param10, param13, param7, param3, new bc(param19), param8, param18, new bc(param5), param15, param6, param12, -92, param1, new bc(param11), param4);
           if (param17 < 80) {
             field_o = (int[]) null;
           }

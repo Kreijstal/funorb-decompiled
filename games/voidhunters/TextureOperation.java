@@ -117,11 +117,11 @@ abstract class TextureOperation extends IntrusiveNode {
         throw new IllegalStateException("This operation does not have a colour output");
     }
 
-    final static arb a(ResourceArchive param0, byte param1, ResourceArchive param2, int param3, int param4) {
+    final static SoftwareMonochromeBitmapFont a(ResourceArchive param0, byte param1, ResourceArchive param2, int param3, int param4) {
         RuntimeException var5 = null;
         ResourceArchive var6 = null;
         Object stackIn_4_0 = null;
-        arb stackIn_6_0 = null;
+        SoftwareMonochromeBitmapFont stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -138,7 +138,7 @@ abstract class TextureOperation extends IntrusiveNode {
             return stackIn_6_0;
           }
           stackIn_4_0 = null;
-          return (arb) (stackIn_4_0);
+          return (SoftwareMonochromeBitmapFont) (stackIn_4_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;

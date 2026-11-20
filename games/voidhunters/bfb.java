@@ -15,7 +15,7 @@ final class bfb {
     private static int[] field_i;
 
     final static int c() {
-        return field_g[0] % dma.field_g;
+        return field_g[0] % SoftwareRasterizer2D.width;
     }
 
     private final static void a() {
@@ -32,11 +32,11 @@ final class bfb {
     }
 
     final static int d() {
-        return field_g[0] / dma.field_g;
+        return field_g[0] / SoftwareRasterizer2D.width;
     }
 
     final static void e() {
-        bfb.a(dma.field_d, dma.field_c, dma.field_a, dma.field_f);
+        bfb.a(SoftwareRasterizer2D.clipLeft, SoftwareRasterizer2D.clipTop, SoftwareRasterizer2D.clipRight, SoftwareRasterizer2D.clipBottom);
     }
 
     private final static void a(int[] param0, int param1, int param2, int param3, int param4, int param5) {
@@ -220,20 +220,20 @@ final class bfb {
               while (true) {
                 param2--;
                 if (param2 >= 0) {
-                  bfb.a(dma.field_i, param0, param6, 0, param3 >> 16, param4 >> 16);
+                  bfb.a(SoftwareRasterizer2D.pixels, param0, param6, 0, param3 >> 16, param4 >> 16);
                   param4 = param4 + var9;
                   param3 = param3 + var7;
-                  param0 = param0 + dma.field_g;
+                  param0 = param0 + SoftwareRasterizer2D.width;
                   continue;
                 }
                 break;
               }
               param1--;
               while (param1 >= 0) {
-                bfb.a(dma.field_i, param0, param6, 0, param3 >> 16, param5 >> 16);
+                bfb.a(SoftwareRasterizer2D.pixels, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var8;
                 param3 = param3 + var7;
-                param0 = param0 + dma.field_g;
+                param0 = param0 + SoftwareRasterizer2D.width;
                 param1--;
               }
               return;
@@ -244,20 +244,20 @@ final class bfb {
             while (true) {
               param2--;
               if (param2 >= 0) {
-                bfb.a(dma.field_i, param0, param6, 0, param4 >> 16, param3 >> 16);
+                bfb.a(SoftwareRasterizer2D.pixels, param0, param6, 0, param4 >> 16, param3 >> 16);
                 param4 = param4 + var9;
                 param3 = param3 + var7;
-                param0 = param0 + dma.field_g;
+                param0 = param0 + SoftwareRasterizer2D.width;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              bfb.a(dma.field_i, param0, param6, 0, param5 >> 16, param3 >> 16);
+              bfb.a(SoftwareRasterizer2D.pixels, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var8;
               param3 = param3 + var7;
-              param0 = param0 + dma.field_g;
+              param0 = param0 + SoftwareRasterizer2D.width;
               param1--;
             }
             return;
@@ -285,20 +285,20 @@ final class bfb {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                bfb.a(dma.field_i, param0, param6, 0, param3 >> 16, param5 >> 16);
+                bfb.a(SoftwareRasterizer2D.pixels, param0, param6, 0, param3 >> 16, param5 >> 16);
                 param5 = param5 + var9;
                 param3 = param3 + var7;
-                param0 = param0 + dma.field_g;
+                param0 = param0 + SoftwareRasterizer2D.width;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              bfb.a(dma.field_i, param0, param6, 0, param4 >> 16, param5 >> 16);
+              bfb.a(SoftwareRasterizer2D.pixels, param0, param6, 0, param4 >> 16, param5 >> 16);
               param5 = param5 + var9;
               param4 = param4 + var8;
-              param0 = param0 + dma.field_g;
+              param0 = param0 + SoftwareRasterizer2D.width;
               param2--;
             }
             return;
@@ -309,20 +309,20 @@ final class bfb {
           while (true) {
             param1--;
             if (param1 >= 0) {
-              bfb.a(dma.field_i, param0, param6, 0, param5 >> 16, param3 >> 16);
+              bfb.a(SoftwareRasterizer2D.pixels, param0, param6, 0, param5 >> 16, param3 >> 16);
               param5 = param5 + var9;
               param3 = param3 + var7;
-              param0 = param0 + dma.field_g;
+              param0 = param0 + SoftwareRasterizer2D.width;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            bfb.a(dma.field_i, param0, param6, 0, param5 >> 16, param4 >> 16);
+            bfb.a(SoftwareRasterizer2D.pixels, param0, param6, 0, param5 >> 16, param4 >> 16);
             param5 = param5 + var9;
             param4 = param4 + var8;
-            param0 = param0 + dma.field_g;
+            param0 = param0 + SoftwareRasterizer2D.width;
             param2--;
           }
           return;
@@ -358,20 +358,20 @@ final class bfb {
               while (true) {
                 param1--;
                 if (param1 >= 0) {
-                  bfb.a(dma.field_i, param2, param6, 0, param5 >> 16, param3 >> 16);
+                  bfb.a(SoftwareRasterizer2D.pixels, param2, param6, 0, param5 >> 16, param3 >> 16);
                   param3 = param3 + var8;
                   param5 = param5 + var9;
-                  param2 = param2 + dma.field_g;
+                  param2 = param2 + SoftwareRasterizer2D.width;
                   continue;
                 }
                 break;
               }
               param0--;
               while (param0 >= 0) {
-                bfb.a(dma.field_i, param2, param6, 0, param5 >> 16, param4 >> 16);
+                bfb.a(SoftwareRasterizer2D.pixels, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var7;
                 param5 = param5 + var9;
-                param2 = param2 + dma.field_g;
+                param2 = param2 + SoftwareRasterizer2D.width;
                 param0--;
               }
               return;
@@ -382,20 +382,20 @@ final class bfb {
             while (true) {
               param1--;
               if (param1 >= 0) {
-                bfb.a(dma.field_i, param2, param6, 0, param3 >> 16, param5 >> 16);
+                bfb.a(SoftwareRasterizer2D.pixels, param2, param6, 0, param3 >> 16, param5 >> 16);
                 param3 = param3 + var8;
                 param5 = param5 + var9;
-                param2 = param2 + dma.field_g;
+                param2 = param2 + SoftwareRasterizer2D.width;
                 continue;
               }
               break;
             }
             param0--;
             while (param0 >= 0) {
-              bfb.a(dma.field_i, param2, param6, 0, param4 >> 16, param5 >> 16);
+              bfb.a(SoftwareRasterizer2D.pixels, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var7;
               param5 = param5 + var9;
-              param2 = param2 + dma.field_g;
+              param2 = param2 + SoftwareRasterizer2D.width;
               param0--;
             }
             return;
@@ -420,20 +420,20 @@ final class bfb {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                bfb.a(dma.field_i, param2, param6, 0, param5 >> 16, param4 >> 16);
+                bfb.a(SoftwareRasterizer2D.pixels, param2, param6, 0, param5 >> 16, param4 >> 16);
                 param4 = param4 + var8;
                 param5 = param5 + var9;
-                param2 = param2 + dma.field_g;
+                param2 = param2 + SoftwareRasterizer2D.width;
                 continue;
               }
               break;
             }
             param1--;
             while (param1 >= 0) {
-              bfb.a(dma.field_i, param2, param6, 0, param3 >> 16, param4 >> 16);
+              bfb.a(SoftwareRasterizer2D.pixels, param2, param6, 0, param3 >> 16, param4 >> 16);
               param4 = param4 + var8;
               param3 = param3 + var7;
-              param2 = param2 + dma.field_g;
+              param2 = param2 + SoftwareRasterizer2D.width;
               param1--;
             }
             return;
@@ -444,20 +444,20 @@ final class bfb {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              bfb.a(dma.field_i, param2, param6, 0, param4 >> 16, param5 >> 16);
+              bfb.a(SoftwareRasterizer2D.pixels, param2, param6, 0, param4 >> 16, param5 >> 16);
               param4 = param4 + var8;
               param5 = param5 + var9;
-              param2 = param2 + dma.field_g;
+              param2 = param2 + SoftwareRasterizer2D.width;
               continue;
             }
             break;
           }
           param1--;
           while (param1 >= 0) {
-            bfb.a(dma.field_i, param2, param6, 0, param4 >> 16, param3 >> 16);
+            bfb.a(SoftwareRasterizer2D.pixels, param2, param6, 0, param4 >> 16, param3 >> 16);
             param4 = param4 + var8;
             param3 = param3 + var7;
-            param2 = param2 + dma.field_g;
+            param2 = param2 + SoftwareRasterizer2D.width;
             param1--;
           }
           return;
@@ -492,20 +492,20 @@ final class bfb {
             while (true) {
               param0--;
               if (param0 >= 0) {
-                bfb.a(dma.field_i, param1, param6, 0, param4 >> 16, param5 >> 16);
+                bfb.a(SoftwareRasterizer2D.pixels, param1, param6, 0, param4 >> 16, param5 >> 16);
                 param5 = param5 + var7;
                 param4 = param4 + var8;
-                param1 = param1 + dma.field_g;
+                param1 = param1 + SoftwareRasterizer2D.width;
                 continue;
               }
               break;
             }
             param2--;
             while (param2 >= 0) {
-              bfb.a(dma.field_i, param1, param6, 0, param4 >> 16, param3 >> 16);
+              bfb.a(SoftwareRasterizer2D.pixels, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var9;
               param4 = param4 + var8;
-              param1 = param1 + dma.field_g;
+              param1 = param1 + SoftwareRasterizer2D.width;
               param2--;
             }
             return;
@@ -516,20 +516,20 @@ final class bfb {
           while (true) {
             param0--;
             if (param0 >= 0) {
-              bfb.a(dma.field_i, param1, param6, 0, param5 >> 16, param4 >> 16);
+              bfb.a(SoftwareRasterizer2D.pixels, param1, param6, 0, param5 >> 16, param4 >> 16);
               param5 = param5 + var7;
               param4 = param4 + var8;
-              param1 = param1 + dma.field_g;
+              param1 = param1 + SoftwareRasterizer2D.width;
               continue;
             }
             break;
           }
           param2--;
           while (param2 >= 0) {
-            bfb.a(dma.field_i, param1, param6, 0, param3 >> 16, param4 >> 16);
+            bfb.a(SoftwareRasterizer2D.pixels, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var9;
             param4 = param4 + var8;
-            param1 = param1 + dma.field_g;
+            param1 = param1 + SoftwareRasterizer2D.width;
             param2--;
           }
           return;
@@ -557,20 +557,20 @@ final class bfb {
           while (true) {
             param2--;
             if (param2 >= 0) {
-              bfb.a(dma.field_i, param1, param6, 0, param4 >> 16, param3 >> 16);
+              bfb.a(SoftwareRasterizer2D.pixels, param1, param6, 0, param4 >> 16, param3 >> 16);
               param3 = param3 + var7;
               param4 = param4 + var8;
-              param1 = param1 + dma.field_g;
+              param1 = param1 + SoftwareRasterizer2D.width;
               continue;
             }
             break;
           }
           param0--;
           while (param0 >= 0) {
-            bfb.a(dma.field_i, param1, param6, 0, param5 >> 16, param3 >> 16);
+            bfb.a(SoftwareRasterizer2D.pixels, param1, param6, 0, param5 >> 16, param3 >> 16);
             param3 = param3 + var7;
             param5 = param5 + var9;
-            param1 = param1 + dma.field_g;
+            param1 = param1 + SoftwareRasterizer2D.width;
             param0--;
           }
           return;
@@ -581,20 +581,20 @@ final class bfb {
         while (true) {
           param2--;
           if (param2 >= 0) {
-            bfb.a(dma.field_i, param1, param6, 0, param3 >> 16, param4 >> 16);
+            bfb.a(SoftwareRasterizer2D.pixels, param1, param6, 0, param3 >> 16, param4 >> 16);
             param3 = param3 + var7;
             param4 = param4 + var8;
-            param1 = param1 + dma.field_g;
+            param1 = param1 + SoftwareRasterizer2D.width;
             continue;
           }
           break;
         }
         param0--;
         while (param0 >= 0) {
-          bfb.a(dma.field_i, param1, param6, 0, param3 >> 16, param5 >> 16);
+          bfb.a(SoftwareRasterizer2D.pixels, param1, param6, 0, param3 >> 16, param5 >> 16);
           param3 = param3 + var7;
           param5 = param5 + var9;
-          param1 = param1 + dma.field_g;
+          param1 = param1 + SoftwareRasterizer2D.width;
           param0--;
         }
         return;
@@ -608,10 +608,10 @@ final class bfb {
         if (field_g.length < field_h) {
           field_g = new int[GetSalvoaim.a(field_h, (byte) -105)];
         }
-        int var4 = param1 * dma.field_g + param0;
+        int var4 = param1 * SoftwareRasterizer2D.width + param0;
         for (var5 = 0; var5 < field_h; var5++) {
           field_g[var5] = var4;
-          var4 = var4 + dma.field_g;
+          var4 = var4 + SoftwareRasterizer2D.width;
         }
     }
 

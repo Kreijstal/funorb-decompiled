@@ -71,11 +71,11 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
           var2 = stackIn_75_0;
           var3 = GetBombletSprayEnergyUsed.field_p.width;
           var4 = GetBombletSprayEnergyUsed.field_p.height;
-          var5 = (var3 - dma.field_g) / 2;
-          var6 = -dma.field_j + var4;
+          var5 = (var3 - SoftwareRasterizer2D.width) / 2;
+          var6 = -SoftwareRasterizer2D.height + var4;
           if (!SetShipTeamAction.field_f ||
             !GetMessageFadetime.field_o) {
-            var6 = (var4 - dma.field_j) / 2;
+            var6 = (var4 - SoftwareRasterizer2D.height) / 2;
           }
           GetBombletSprayReload.a(70, var6, var5);
           stackIn_82_0 = !(GetCountermeasureLauncherEnergyUsed.field_o <= 50);
@@ -93,11 +93,11 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
             var2 = 0;
             var3 = GetBombletSprayEnergyUsed.field_p.width;
             var4 = GetBombletSprayEnergyUsed.field_p.height;
-            var5 = (var3 - dma.field_g) / 2;
-            var6 = -dma.field_j + var4;
+            var5 = (var3 - SoftwareRasterizer2D.width) / 2;
+            var6 = -SoftwareRasterizer2D.height + var4;
             if (!SetShipTeamAction.field_f ||
               !GetMessageFadetime.field_o) {
-              var6 = (var4 - dma.field_j) / 2;
+              var6 = (var4 - SoftwareRasterizer2D.height) / 2;
             }
             GetBombletSprayReload.a(70, var6, var5);
             stackIn_9_0 = !(GetCountermeasureLauncherEnergyUsed.field_o <= 50);
@@ -114,11 +114,11 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
               var2 = 1;
               var3 = GetBombletSprayEnergyUsed.field_p.width;
               var4 = GetBombletSprayEnergyUsed.field_p.height;
-              var5 = (var3 - dma.field_g) / 2;
-              var6 = -dma.field_j + var4;
+              var5 = (var3 - SoftwareRasterizer2D.width) / 2;
+              var6 = -SoftwareRasterizer2D.height + var4;
               if (!SetShipTeamAction.field_f ||
                 !GetMessageFadetime.field_o) {
-                var6 = (var4 - dma.field_j) / 2;
+                var6 = (var4 - SoftwareRasterizer2D.height) / 2;
               }
               GetBombletSprayReload.a(70, var6, var5);
               stackIn_54_0 = !(GetCountermeasureLauncherEnergyUsed.field_o <= 50);
@@ -134,11 +134,11 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
               var2 = 0;
               var3 = GetBombletSprayEnergyUsed.field_p.width;
               var4 = GetBombletSprayEnergyUsed.field_p.height;
-              var5 = (var3 - dma.field_g) / 2;
-              var6 = -dma.field_j + var4;
+              var5 = (var3 - SoftwareRasterizer2D.width) / 2;
+              var6 = -SoftwareRasterizer2D.height + var4;
               if (!SetShipTeamAction.field_f ||
                 !GetMessageFadetime.field_o) {
-                var6 = (var4 - dma.field_j) / 2;
+                var6 = (var4 - SoftwareRasterizer2D.height) / 2;
               }
               GetBombletSprayReload.a(70, var6, var5);
               stackIn_32_0 = !(GetCountermeasureLauncherEnergyUsed.field_o <= 50);
@@ -154,8 +154,8 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
           }
         }
         BodyDestroyedCondition.b(-1);
-        kl.field_c.field_l = 0;
-        kl.field_c.field_k = 0;
+        kl.field_c.yOffset = 0;
+        kl.field_c.xOffset = 0;
         if (GetExplosionProjectileDamage.field_o) {
           RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 57);
           GetExplosionProjectileDamage.field_o = false;

@@ -62,10 +62,10 @@ final class SetMutatorVotes extends ConsoleCommand {
               var2 = var2 + SetPointDefenceLaserAimarc.field_q;
             }
             if (var4 >= 0) {
-              bl.field_x.c(var6, var8, var2 + SetDebrisDetachmentForceMultiplier.field_p, var5, -1);
+              bl.field_x.draw(var6, var8, var2 + SetDebrisDetachmentForceMultiplier.field_p, var5, -1);
               var2 = var2 + (pva.field_g + (SetPointDefenceLaserAimarc.field_q + SetExplosionPushMultiplier.field_o));
             } else {
-              GetUsePolygonFill.field_p.c(var6, var8, var2 + mab.field_f, var5, -1);
+              GetUsePolygonFill.field_p.draw(var6, var8, var2 + mab.field_f, var5, -1);
               var2 = var2 + DebugMessage.field_a;
             }
           }

@@ -11,7 +11,7 @@ final class ef extends mc {
     private boolean field_B;
     private int field_x;
     static boolean field_E;
-    static arb field_y;
+    static SoftwareMonochromeBitmapFont field_y;
     private int field_w;
     private boolean field_v;
 

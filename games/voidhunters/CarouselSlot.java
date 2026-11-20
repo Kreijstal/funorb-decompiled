@@ -265,7 +265,7 @@ class CarouselSlot implements DiffableState {
         RuntimeException var3_ref = null;
         try {
           var3 = (CarouselSlot) (param1);
-          var3.field_c = (CarouselPlayerInfo[]) (SpriteDimensions.a(var3.field_c, this.field_c, 1, GetLoadingMissions.field_q, false));
+          var3.field_c = (CarouselPlayerInfo[]) (SpriteDimensions.copyStateArrayByMode(var3.field_c, this.field_c, 1, GetLoadingMissions.field_q, false));
           if (param0 < 54) {
             this.field_c = (CarouselPlayerInfo[]) null;
           }

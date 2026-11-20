@@ -29,29 +29,29 @@ final class SetRadialMenuRadius extends ConsoleCommand {
         }
         SetTorpedoEnergyUsed.a(74, ata.field_K);
         bfb.e();
-        dma.a();
+        SoftwareRasterizer2D.clear();
         Transform3D.a((byte) 74);
         if (var5 < 256) {
-          dma.e(0, 0, dma.field_g, dma.field_j, 0, -var5 + 256);
+          SoftwareRasterizer2D.fillRectangleAlpha(0, 0, SoftwareRasterizer2D.width, SoftwareRasterizer2D.height, 0, -var5 + 256);
         }
         bia.a((byte) 124);
         if (SetSalvoaim.field_r < 150) {
-          ata.field_K.d(var3, var4);
+          ata.field_K.drawHalfSize(var3, var4);
         } else {
-          GetToggledScoreboard.field_o.d(var3 + 15, 10 + var4, var5);
+          GetToggledScoreboard.field_o.drawAlpha(var3 + 15, 10 + var4, var5);
         }
         var6 = SetSalvoaim.field_r - 125;
         if (0 < var6 &&
           var6 < 50) {
           if (var6 < 20) {
             var7 = 256 * var6 / 20;
-            GetWorldWidthUpshift.field_p.c(var3, var4, var7);
+            GetWorldWidthUpshift.field_p.drawAdditive(var3, var4, var7);
           } else {
             if (30 <= var6) {
               var7 = (12800 - 256 * var6) / 20;
-              GetWorldWidthUpshift.field_p.c(var3, var4, var7);
+              GetWorldWidthUpshift.field_p.drawAdditive(var3, var4, var7);
             } else {
-              GetWorldWidthUpshift.field_p.c(var3, var4, 256);
+              GetWorldWidthUpshift.field_p.drawAdditive(var3, var4, 256);
             }
           }
         }
@@ -61,7 +61,7 @@ final class SetRadialMenuRadius extends ConsoleCommand {
           if (var6Lifetime1 < 20) {
             var7Lifetime1 = var6Lifetime1 * 256 / 20;
           }
-          reb.field_a.d(15 + var3, var4 + 10, var5 * var7Lifetime1 >> 8);
+          reb.field_a.drawAlpha(15 + var3, var4 + 10, var5 * var7Lifetime1 >> 8);
         }
         return;
     }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetFightersPerPlayerMaximum extends ConsoleCommand {
-    static jra field_o;
+    static PrimitiveType field_o;
     static int field_p;
     static boolean field_r;
     static String field_q;
@@ -49,7 +49,7 @@ final class GetFightersPerPlayerMaximum extends ConsoleCommand {
     }
 
     static {
-        field_o = new jra();
+        field_o = new PrimitiveType();
         field_p = 1;
         field_q = "Log in / Create account";
         field_s = "Scavengers";

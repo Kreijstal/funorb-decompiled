@@ -3609,7 +3609,7 @@ final class World implements DiffableState, CompactGameState {
         var5 = VoidHunters.field_G;
         try {
           var6_ref = (World) (param1);
-          var6_ref.ships = (Ship[]) (SpriteDimensions.a(var6_ref.ships, this.ships, 1, MissionGenerationData.field_a, false));
+          var6_ref.ships = (Ship[]) (SpriteDimensions.copyStateArrayByMode(var6_ref.ships, this.ships, 1, MissionGenerationData.field_a, false));
           if (this.debug) {
             if (VoidHunters.checkDuplicateReference(true, this.ships)) {
               System.err.println("Ship[] ships the actual object has a duplicate reference");
@@ -3619,7 +3619,7 @@ final class World implements DiffableState, CompactGameState {
               System.err.println("An element of Ship[] ships has a duplicate reference - " + var7.toString());
             }
           }
-          var6_ref.field_s = (Particle[]) (SpriteDimensions.a(var6_ref.field_s, this.field_s, 1, AdjustBodyComponentsAction.field_c, false));
+          var6_ref.field_s = (Particle[]) (SpriteDimensions.copyStateArrayByMode(var6_ref.field_s, this.field_s, 1, AdjustBodyComponentsAction.field_c, false));
           if (this.debug) {
             if (VoidHunters.checkDuplicateReference(true, this.field_s)) {
               System.err.println("Particle[] particles the actual object has a duplicate reference");
@@ -3664,7 +3664,7 @@ final class World implements DiffableState, CompactGameState {
               System.err.println("An element of linklist<voidhunters.common.worldstate.SpawnPoint> spawn_points has a duplicate reference - " + var10.toString());
             }
           }
-          var6_ref.grapplingHooks = (GrapplingHook[]) (SpriteDimensions.a(var6_ref.grapplingHooks, this.grapplingHooks, 1, TickCondition.field_c, false));
+          var6_ref.grapplingHooks = (GrapplingHook[]) (SpriteDimensions.copyStateArrayByMode(var6_ref.grapplingHooks, this.grapplingHooks, 1, TickCondition.field_c, false));
           if (this.debug) {
             if (VoidHunters.checkDuplicateReference(true, this.grapplingHooks)) {
               System.err.println("GrapplingHook[] grappling_hooks the actual object has a duplicate reference");
@@ -3693,7 +3693,7 @@ final class World implements DiffableState, CompactGameState {
           } else {
             var6_ref.missionControl = null;
           }
-          var6_ref.mapZones = (MapZone[]) (SpriteDimensions.a(var6_ref.mapZones, this.mapZones, 1, wsb.field_e, false));
+          var6_ref.mapZones = (MapZone[]) (SpriteDimensions.copyStateArrayByMode(var6_ref.mapZones, this.mapZones, 1, wsb.field_e, false));
           if (this.debug) {
             if (VoidHunters.checkDuplicateReference(true, this.mapZones)) {
               System.err.println("MapZone[] map_zones the actual object has a duplicate reference");
@@ -3703,7 +3703,7 @@ final class World implements DiffableState, CompactGameState {
               System.err.println("An element of MapZone[] map_zones has a duplicate reference - " + var12.toString());
             }
           }
-          var6_ref.resNodes = (ResourceNode[]) (SpriteDimensions.a(var6_ref.resNodes, this.resNodes, 1, SetShipDirectionArrow.field_p, false));
+          var6_ref.resNodes = (ResourceNode[]) (SpriteDimensions.copyStateArrayByMode(var6_ref.resNodes, this.resNodes, 1, SetShipDirectionArrow.field_p, false));
           if (this.debug) {
             if (VoidHunters.checkDuplicateReference(true, this.resNodes)) {
               System.err.println("ResourceNode[] res_nodes the actual object has a duplicate reference");
@@ -3730,7 +3730,7 @@ final class World implements DiffableState, CompactGameState {
           } else {
             var6_ref.field_u = null;
           }
-          var6_ref.escapePods = (EscapePod[]) (SpriteDimensions.a(var6_ref.escapePods, this.escapePods, 1, pgb.field_g, false));
+          var6_ref.escapePods = (EscapePod[]) (SpriteDimensions.copyStateArrayByMode(var6_ref.escapePods, this.escapePods, 1, pgb.field_g, false));
           if (this.debug) {
             if (VoidHunters.checkDuplicateReference(true, this.escapePods)) {
               System.err.println("EscapePod[] escape_pods the actual object has a duplicate reference");

@@ -150,17 +150,17 @@ final class ServerInfoFactory implements GameStateFactory {
               var4_int = SetToggledScoreboard.field_o.field_u;
               if (!uga.field_d) {
                 if (GetReverbDry.e((byte) 105)) {
-                  var4_int = dma.field_j;
+                  var4_int = SoftwareRasterizer2D.height;
                   GetAiRepairTime.e(-22);
                 }
               } else {
-                var4_int = dma.field_j;
+                var4_int = SoftwareRasterizer2D.height;
                 GetAiRepairTime.e(-97);
               }
-              if (dma.field_j > var4_int) {
-                var5 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
-                var6 = -dma.field_j + var4_int + MissionVariableFactory.field_a;
-                GetDebrisGroupColour.field_r.writePixels(var5, var6, dma.field_g, -var4_int + dma.field_j, dma.field_i, var4_int * dma.field_g, dma.field_g);
+              if (SoftwareRasterizer2D.height > var4_int) {
+                var5 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
+                var6 = -SoftwareRasterizer2D.height + var4_int + MissionVariableFactory.field_a;
+                GetDebrisGroupColour.field_r.writePixels(var5, var6, SoftwareRasterizer2D.width, -var4_int + SoftwareRasterizer2D.height, SoftwareRasterizer2D.pixels, var4_int * SoftwareRasterizer2D.width, SoftwareRasterizer2D.width);
               }
             }
             if (var2 != 0) {
@@ -178,12 +178,12 @@ final class ServerInfoFactory implements GameStateFactory {
                 var6Lifetime2 = fra.a((byte) 120);
                 var7 = DirectByteStorage.a(false);
                 var8 = SetArmageddonWarning.a(param0 + 57974);
-                var9 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
-                var10 = (-dma.field_j + MissionVariableFactory.field_a) / 2;
+                var9 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
+                var10 = (-SoftwareRasterizer2D.height + MissionVariableFactory.field_a) / 2;
                 var11 = var5Lifetime2 + var9;
                 var12 = var6Lifetime2 + var10;
                 var14.a(var11, var7 + var11, var12, var8 + var12, (byte) -70);
-                GetDebrisGroupColour.field_r.writePixels(var11 - var5Lifetime2, var12, dma.field_g, var8, dma.field_i, dma.field_g * var6Lifetime2, dma.field_g);
+                GetDebrisGroupColour.field_r.writePixels(var11 - var5Lifetime2, var12, SoftwareRasterizer2D.width, var8, SoftwareRasterizer2D.pixels, SoftwareRasterizer2D.width * var6Lifetime2, SoftwareRasterizer2D.width);
                 var14.a(true);
               }
             }
@@ -221,17 +221,17 @@ final class ServerInfoFactory implements GameStateFactory {
                   var4_intLifetime1 = SetToggledScoreboard.field_o.field_u;
                   if (!uga.field_d) {
                     if (GetReverbDry.e((byte) 105)) {
-                      var4_intLifetime1 = dma.field_j;
+                      var4_intLifetime1 = SoftwareRasterizer2D.height;
                       GetAiRepairTime.e(-22);
                     }
                   } else {
-                    var4_intLifetime1 = dma.field_j;
+                    var4_intLifetime1 = SoftwareRasterizer2D.height;
                     GetAiRepairTime.e(-97);
                   }
-                  if (dma.field_j > var4_intLifetime1) {
-                    var5Lifetime1 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
-                    var6Lifetime1 = -dma.field_j + var4_intLifetime1 + MissionVariableFactory.field_a;
-                    GetDebrisGroupColour.field_r.writePixels(var5Lifetime1, var6Lifetime1, dma.field_g, -var4_intLifetime1 + dma.field_j, dma.field_i, var4_intLifetime1 * dma.field_g, dma.field_g);
+                  if (SoftwareRasterizer2D.height > var4_intLifetime1) {
+                    var5Lifetime1 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
+                    var6Lifetime1 = -SoftwareRasterizer2D.height + var4_intLifetime1 + MissionVariableFactory.field_a;
+                    GetDebrisGroupColour.field_r.writePixels(var5Lifetime1, var6Lifetime1, SoftwareRasterizer2D.width, -var4_intLifetime1 + SoftwareRasterizer2D.height, SoftwareRasterizer2D.pixels, var4_intLifetime1 * SoftwareRasterizer2D.width, SoftwareRasterizer2D.width);
                   }
                 }
                 if (var2Lifetime1 != 0) {
@@ -249,12 +249,12 @@ final class ServerInfoFactory implements GameStateFactory {
                     var6Lifetime1Lifetime3 = fra.a((byte) 120);
                     var7Lifetime1 = DirectByteStorage.a(false);
                     var8Lifetime1 = SetArmageddonWarning.a(param0 + 57974);
-                    var9Lifetime1 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
-                    var10Lifetime1 = (-dma.field_j + MissionVariableFactory.field_a) / 2;
+                    var9Lifetime1 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
+                    var10Lifetime1 = (-SoftwareRasterizer2D.height + MissionVariableFactory.field_a) / 2;
                     var11Lifetime1 = var5Lifetime1Lifetime3 + var9Lifetime1;
                     var12Lifetime1 = var6Lifetime1Lifetime3 + var10Lifetime1;
                     var16.a(var11Lifetime1, var7Lifetime1 + var11Lifetime1, var12Lifetime1, var8Lifetime1 + var12Lifetime1, (byte) -70);
-                    GetDebrisGroupColour.field_r.writePixels(var11Lifetime1 - var5Lifetime1Lifetime3, var12Lifetime1, dma.field_g, var8Lifetime1, dma.field_i, dma.field_g * var6Lifetime1Lifetime3, dma.field_g);
+                    GetDebrisGroupColour.field_r.writePixels(var11Lifetime1 - var5Lifetime1Lifetime3, var12Lifetime1, SoftwareRasterizer2D.width, var8Lifetime1, SoftwareRasterizer2D.pixels, SoftwareRasterizer2D.width * var6Lifetime1Lifetime3, SoftwareRasterizer2D.width);
                     var16.a(true);
                   }
                 }
@@ -276,12 +276,12 @@ final class ServerInfoFactory implements GameStateFactory {
           if (li.field_i) {
             var4_intLifetime1Lifetime1 = SetToggledScoreboard.field_o.field_u;
             if (uga.field_d) {
-              var4_intLifetime1Lifetime1 = dma.field_j;
+              var4_intLifetime1Lifetime1 = SoftwareRasterizer2D.height;
               GetAiRepairTime.e(-97);
-              if (dma.field_j > var4_intLifetime1Lifetime1) {
-                var5Lifetime1Lifetime1 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
-                var6Lifetime1Lifetime1 = -dma.field_j + var4_intLifetime1Lifetime1 + MissionVariableFactory.field_a;
-                GetDebrisGroupColour.field_r.writePixels(var5Lifetime1Lifetime1, var6Lifetime1Lifetime1, dma.field_g, -var4_intLifetime1Lifetime1 + dma.field_j, dma.field_i, var4_intLifetime1Lifetime1 * dma.field_g, dma.field_g);
+              if (SoftwareRasterizer2D.height > var4_intLifetime1Lifetime1) {
+                var5Lifetime1Lifetime1 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
+                var6Lifetime1Lifetime1 = -SoftwareRasterizer2D.height + var4_intLifetime1Lifetime1 + MissionVariableFactory.field_a;
+                GetDebrisGroupColour.field_r.writePixels(var5Lifetime1Lifetime1, var6Lifetime1Lifetime1, SoftwareRasterizer2D.width, -var4_intLifetime1Lifetime1 + SoftwareRasterizer2D.height, SoftwareRasterizer2D.pixels, var4_intLifetime1Lifetime1 * SoftwareRasterizer2D.width, SoftwareRasterizer2D.width);
               }
               if (var2Lifetime1Lifetime1 != 0) {
                 if (GpuSprite.field_e) {
@@ -306,12 +306,12 @@ final class ServerInfoFactory implements GameStateFactory {
                   var6Lifetime1Lifetime1Lifetime4 = fra.a((byte) 120);
                   var7Lifetime1Lifetime1 = DirectByteStorage.a(false);
                   var8Lifetime1Lifetime1 = SetArmageddonWarning.a(param0 + 57974);
-                  var9Lifetime1Lifetime1 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
-                  var10Lifetime1Lifetime1 = (-dma.field_j + MissionVariableFactory.field_a) / 2;
+                  var9Lifetime1Lifetime1 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
+                  var10Lifetime1Lifetime1 = (-SoftwareRasterizer2D.height + MissionVariableFactory.field_a) / 2;
                   var11Lifetime1Lifetime1 = var5Lifetime1Lifetime1Lifetime4 + var9Lifetime1Lifetime1;
                   var12Lifetime1Lifetime1 = var6Lifetime1Lifetime1Lifetime4 + var10Lifetime1Lifetime1;
                   var18.a(var11Lifetime1Lifetime1, var7Lifetime1Lifetime1 + var11Lifetime1Lifetime1, var12Lifetime1Lifetime1, var8Lifetime1Lifetime1 + var12Lifetime1Lifetime1, (byte) -70);
-                  GetDebrisGroupColour.field_r.writePixels(var11Lifetime1Lifetime1 - var5Lifetime1Lifetime1Lifetime4, var12Lifetime1Lifetime1, dma.field_g, var8Lifetime1Lifetime1, dma.field_i, dma.field_g * var6Lifetime1Lifetime1Lifetime4, dma.field_g);
+                  GetDebrisGroupColour.field_r.writePixels(var11Lifetime1Lifetime1 - var5Lifetime1Lifetime1Lifetime4, var12Lifetime1Lifetime1, SoftwareRasterizer2D.width, var8Lifetime1Lifetime1, SoftwareRasterizer2D.pixels, SoftwareRasterizer2D.width * var6Lifetime1Lifetime1Lifetime4, SoftwareRasterizer2D.width);
                   var18.a(true);
                 }
               }
@@ -321,10 +321,10 @@ final class ServerInfoFactory implements GameStateFactory {
               return;
             }
             if (!GetReverbDry.e((byte) 105)) {
-              if (dma.field_j > var4_intLifetime1Lifetime1) {
-                var5Lifetime1Lifetime1Lifetime1 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
-                var6Lifetime1Lifetime1Lifetime1 = -dma.field_j + var4_intLifetime1Lifetime1 + MissionVariableFactory.field_a;
-                GetDebrisGroupColour.field_r.writePixels(var5Lifetime1Lifetime1Lifetime1, var6Lifetime1Lifetime1Lifetime1, dma.field_g, -var4_intLifetime1Lifetime1 + dma.field_j, dma.field_i, var4_intLifetime1Lifetime1 * dma.field_g, dma.field_g);
+              if (SoftwareRasterizer2D.height > var4_intLifetime1Lifetime1) {
+                var5Lifetime1Lifetime1Lifetime1 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
+                var6Lifetime1Lifetime1Lifetime1 = -SoftwareRasterizer2D.height + var4_intLifetime1Lifetime1 + MissionVariableFactory.field_a;
+                GetDebrisGroupColour.field_r.writePixels(var5Lifetime1Lifetime1Lifetime1, var6Lifetime1Lifetime1Lifetime1, SoftwareRasterizer2D.width, -var4_intLifetime1Lifetime1 + SoftwareRasterizer2D.height, SoftwareRasterizer2D.pixels, var4_intLifetime1Lifetime1 * SoftwareRasterizer2D.width, SoftwareRasterizer2D.width);
               }
               if (var2Lifetime1Lifetime1 != 0) {
                 if (GpuSprite.field_e) {
@@ -346,12 +346,12 @@ final class ServerInfoFactory implements GameStateFactory {
                 var6Lifetime1Lifetime1Lifetime1Lifetime1 = fra.a((byte) 120);
                 var7Lifetime1Lifetime1Lifetime1 = DirectByteStorage.a(false);
                 var8Lifetime1Lifetime1Lifetime1 = SetArmageddonWarning.a(param0 + 57974);
-                var9Lifetime1Lifetime1Lifetime1 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
-                var10Lifetime1Lifetime1Lifetime1 = (-dma.field_j + MissionVariableFactory.field_a) / 2;
+                var9Lifetime1Lifetime1Lifetime1 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
+                var10Lifetime1Lifetime1Lifetime1 = (-SoftwareRasterizer2D.height + MissionVariableFactory.field_a) / 2;
                 var11Lifetime1Lifetime1Lifetime1 = var5Lifetime1Lifetime1Lifetime1Lifetime1 + var9Lifetime1Lifetime1Lifetime1;
                 var12Lifetime1Lifetime1Lifetime1 = var6Lifetime1Lifetime1Lifetime1Lifetime1 + var10Lifetime1Lifetime1Lifetime1;
                 var18.a(var11Lifetime1Lifetime1Lifetime1, var7Lifetime1Lifetime1Lifetime1 + var11Lifetime1Lifetime1Lifetime1, var12Lifetime1Lifetime1Lifetime1, var8Lifetime1Lifetime1Lifetime1 + var12Lifetime1Lifetime1Lifetime1, (byte) -70);
-                GetDebrisGroupColour.field_r.writePixels(var11Lifetime1Lifetime1Lifetime1 - var5Lifetime1Lifetime1Lifetime1Lifetime1, var12Lifetime1Lifetime1Lifetime1, dma.field_g, var8Lifetime1Lifetime1Lifetime1, dma.field_i, dma.field_g * var6Lifetime1Lifetime1Lifetime1Lifetime1, dma.field_g);
+                GetDebrisGroupColour.field_r.writePixels(var11Lifetime1Lifetime1Lifetime1 - var5Lifetime1Lifetime1Lifetime1Lifetime1, var12Lifetime1Lifetime1Lifetime1, SoftwareRasterizer2D.width, var8Lifetime1Lifetime1Lifetime1, SoftwareRasterizer2D.pixels, SoftwareRasterizer2D.width * var6Lifetime1Lifetime1Lifetime1Lifetime1, SoftwareRasterizer2D.width);
                 var18.a(true);
               }
               if (param0 == -30428) {
@@ -360,9 +360,9 @@ final class ServerInfoFactory implements GameStateFactory {
               field_b = (String) null;
               return;
             }
-            var4_intLifetime1Lifetime1Lifetime1 = dma.field_j;
+            var4_intLifetime1Lifetime1Lifetime1 = SoftwareRasterizer2D.height;
             GetAiRepairTime.e(-22);
-            if (dma.field_j <= var4_intLifetime1Lifetime1Lifetime1) {
+            if (SoftwareRasterizer2D.height <= var4_intLifetime1Lifetime1Lifetime1) {
               if (var2Lifetime1Lifetime1 != 0) {
                 if (GpuSprite.field_e) {
                   stackIn_158_0 = SetFighterBayAimspeed.field_p;
@@ -378,12 +378,12 @@ final class ServerInfoFactory implements GameStateFactory {
                   var6Lifetime1Lifetime1Lifetime2 = fra.a((byte) 120);
                   var7Lifetime1Lifetime1Lifetime2 = DirectByteStorage.a(false);
                   var8Lifetime1Lifetime1Lifetime2 = SetArmageddonWarning.a(param0 + 57974);
-                  var9Lifetime1Lifetime1Lifetime2 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
-                  var10Lifetime1Lifetime1Lifetime2 = (-dma.field_j + MissionVariableFactory.field_a) / 2;
+                  var9Lifetime1Lifetime1Lifetime2 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
+                  var10Lifetime1Lifetime1Lifetime2 = (-SoftwareRasterizer2D.height + MissionVariableFactory.field_a) / 2;
                   var11Lifetime1Lifetime1Lifetime2 = var5Lifetime1Lifetime1Lifetime2 + var9Lifetime1Lifetime1Lifetime2;
                   var12Lifetime1Lifetime1Lifetime2 = var6Lifetime1Lifetime1Lifetime2 + var10Lifetime1Lifetime1Lifetime2;
                   var18.a(var11Lifetime1Lifetime1Lifetime2, var7Lifetime1Lifetime1Lifetime2 + var11Lifetime1Lifetime1Lifetime2, var12Lifetime1Lifetime1Lifetime2, var8Lifetime1Lifetime1Lifetime2 + var12Lifetime1Lifetime1Lifetime2, (byte) -70);
-                  GetDebrisGroupColour.field_r.writePixels(var11Lifetime1Lifetime1Lifetime2 - var5Lifetime1Lifetime1Lifetime2, var12Lifetime1Lifetime1Lifetime2, dma.field_g, var8Lifetime1Lifetime1Lifetime2, dma.field_i, dma.field_g * var6Lifetime1Lifetime1Lifetime2, dma.field_g);
+                  GetDebrisGroupColour.field_r.writePixels(var11Lifetime1Lifetime1Lifetime2 - var5Lifetime1Lifetime1Lifetime2, var12Lifetime1Lifetime1Lifetime2, SoftwareRasterizer2D.width, var8Lifetime1Lifetime1Lifetime2, SoftwareRasterizer2D.pixels, SoftwareRasterizer2D.width * var6Lifetime1Lifetime1Lifetime2, SoftwareRasterizer2D.width);
                   var18.a(true);
                 }
               }
@@ -393,9 +393,9 @@ final class ServerInfoFactory implements GameStateFactory {
               field_b = (String) null;
               return;
             }
-            var5Lifetime1Lifetime1Lifetime3 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
-            var6Lifetime1Lifetime1Lifetime3 = -dma.field_j + var4_intLifetime1Lifetime1Lifetime1 + MissionVariableFactory.field_a;
-            GetDebrisGroupColour.field_r.writePixels(var5Lifetime1Lifetime1Lifetime3, var6Lifetime1Lifetime1Lifetime3, dma.field_g, -var4_intLifetime1Lifetime1Lifetime1 + dma.field_j, dma.field_i, var4_intLifetime1Lifetime1Lifetime1 * dma.field_g, dma.field_g);
+            var5Lifetime1Lifetime1Lifetime3 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
+            var6Lifetime1Lifetime1Lifetime3 = -SoftwareRasterizer2D.height + var4_intLifetime1Lifetime1Lifetime1 + MissionVariableFactory.field_a;
+            GetDebrisGroupColour.field_r.writePixels(var5Lifetime1Lifetime1Lifetime3, var6Lifetime1Lifetime1Lifetime3, SoftwareRasterizer2D.width, -var4_intLifetime1Lifetime1Lifetime1 + SoftwareRasterizer2D.height, SoftwareRasterizer2D.pixels, var4_intLifetime1Lifetime1Lifetime1 * SoftwareRasterizer2D.width, SoftwareRasterizer2D.width);
           }
           if (var2Lifetime1Lifetime1 != 0) {
             if (GpuSprite.field_e) {
@@ -418,12 +418,12 @@ final class ServerInfoFactory implements GameStateFactory {
             var6Lifetime1Lifetime2 = fra.a((byte) 120);
             var7Lifetime1Lifetime2 = DirectByteStorage.a(false);
             var8Lifetime1Lifetime2 = SetArmageddonWarning.a(param0 + 57974);
-            var9Lifetime1Lifetime2 = (PartitionZoneFactory.field_a - dma.field_g) / 2;
-            var10Lifetime1Lifetime2 = (-dma.field_j + MissionVariableFactory.field_a) / 2;
+            var9Lifetime1Lifetime2 = (PartitionZoneFactory.field_a - SoftwareRasterizer2D.width) / 2;
+            var10Lifetime1Lifetime2 = (-SoftwareRasterizer2D.height + MissionVariableFactory.field_a) / 2;
             var11Lifetime1Lifetime2 = var5Lifetime1Lifetime2 + var9Lifetime1Lifetime2;
             var12Lifetime1Lifetime2 = var6Lifetime1Lifetime2 + var10Lifetime1Lifetime2;
             var18.a(var11Lifetime1Lifetime2, var7Lifetime1Lifetime2 + var11Lifetime1Lifetime2, var12Lifetime1Lifetime2, var8Lifetime1Lifetime2 + var12Lifetime1Lifetime2, (byte) -70);
-            GetDebrisGroupColour.field_r.writePixels(var11Lifetime1Lifetime2 - var5Lifetime1Lifetime2, var12Lifetime1Lifetime2, dma.field_g, var8Lifetime1Lifetime2, dma.field_i, dma.field_g * var6Lifetime1Lifetime2, dma.field_g);
+            GetDebrisGroupColour.field_r.writePixels(var11Lifetime1Lifetime2 - var5Lifetime1Lifetime2, var12Lifetime1Lifetime2, SoftwareRasterizer2D.width, var8Lifetime1Lifetime2, SoftwareRasterizer2D.pixels, SoftwareRasterizer2D.width * var6Lifetime1Lifetime2, SoftwareRasterizer2D.width);
             var18.a(true);
           }
         }

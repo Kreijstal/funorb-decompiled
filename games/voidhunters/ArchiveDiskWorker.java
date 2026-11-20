@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ArchiveDiskWorker implements Runnable {
-    private vga field_d;
+    private SecondaryNodeQueue field_d;
     private boolean stopped;
     int pendingCount;
     static String field_a;
@@ -13,7 +13,7 @@ final class ArchiveDiskWorker implements Runnable {
           if (param0 != 0) {
             ArchiveDiskWorker.clearSharedReferences(102);
           }
-          this.field_d.a(param1, param0 ^ -108);
+          this.field_d.addLast(param1, param0 ^ -108);
           this.pendingCount = this.pendingCount + 1;
           this.field_d.notifyAll();
         }
@@ -38,7 +38,7 @@ final class ArchiveDiskWorker implements Runnable {
           var4.operation = 1;
           var5_ref_Object = this.field_d;
           synchronized (var5_ref_Object) {
-            var6 = (DiskArchiveRequest) (this.field_d.a((byte) -54));
+            var6 = (DiskArchiveRequest) (this.field_d.first((byte) -54));
             while (var6 != null) {
               if (~var6.secondaryKey == ~(long)param0 &&
                 var6.archiveDisk == param1 &&
@@ -48,13 +48,13 @@ final class ArchiveDiskWorker implements Runnable {
                 stackIn_8_0 = var4;
                 return stackIn_8_0;
               }
-              var6 = (DiskArchiveRequest) (this.field_d.a(1900));
+              var6 = (DiskArchiveRequest) (this.field_d.next(1900));
             }
           }
           var4.data = param1.read((byte) 64, param0);
           var5 = 91 / ((param2 - 0) / 60);
           var4.pending = false;
-          var4.field_l = true;
+          var4.priority = true;
           stackIn_15_0 = var4;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -88,7 +88,7 @@ final class ArchiveDiskWorker implements Runnable {
           var5 = new DiskArchiveRequest();
           var5.archiveDisk = param0;
           var5.operation = 2;
-          var5.field_l = false;
+          var5.priority = false;
           var5.data = param1;
           var5.secondaryKey = (long)param3;
           this.enqueue(0, var5);
@@ -127,7 +127,7 @@ final class ArchiveDiskWorker implements Runnable {
           var4 = new DiskArchiveRequest();
           var4.operation = 3;
           var4.archiveDisk = param1;
-          var4.field_l = false;
+          var4.priority = false;
           var4.secondaryKey = (long)param2;
           this.enqueue(param0 - 121, var4);
           if (param0 == 121) {
@@ -180,7 +180,7 @@ final class ArchiveDiskWorker implements Runnable {
 
     ArchiveDiskWorker(eab param0) {
         mob var2 = null;
-        this.field_d = new vga();
+        this.field_d = new SecondaryNodeQueue();
         this.pendingCount = 0;
         this.stopped = false;
         try {
@@ -212,7 +212,7 @@ final class ArchiveDiskWorker implements Runnable {
           while (!this.stopped) {
             var2 = this.field_d;
             synchronized (var2) {
-              var7 = (DiskArchiveRequest) (this.field_d.b((byte) -120));
+              var7 = (DiskArchiveRequest) (this.field_d.removeFirst((byte) -120));
               if (var7 != null) {
                 this.pendingCount = this.pendingCount - 1;
                 decompiledRegionSelector0 = 1;

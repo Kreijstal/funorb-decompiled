@@ -6,7 +6,7 @@ final class ComponentAttachmentPlan {
     HardpointMatch hardpoint;
     static float field_b;
     ShipComponent[] obstructions;
-    static kb field_d;
+    static TextureFormat field_d;
 
     final void addObstruction(byte param0, ShipComponent param1) {
         int var3_int = 0;
@@ -113,7 +113,7 @@ final class ComponentAttachmentPlan {
         var5Lifetime1 = param2 >> 31;
         param2 = var5Lifetime1 ^ var5Lifetime1 + param2;
         if (param1 != 119) {
-          field_d = (kb) null;
+          field_d = (TextureFormat) null;
         }
         var5Lifetime2 = param0 >> 31;
         param0 = param0 + var5Lifetime2 ^ var5Lifetime2;
@@ -290,11 +290,11 @@ final class ComponentAttachmentPlan {
           if (SetSniperCannonFireForce.field_o == SetShipTeamAction.field_b &&
             param1.equals(SetCountermeasureLauncherAimarc.field_q)) {
             SetShipTeamAction.field_b = kla.field_d;
-            stackIn_11_0 = jra.field_a;
+            stackIn_11_0 = PrimitiveType.field_a;
             return stackIn_11_0;
           }
           SetShipTeamAction.field_b = dw.field_c;
-          jra.field_a = null;
+          PrimitiveType.field_a = null;
           SetCountermeasureLauncherAimarc.field_q = param1;
           stackIn_9_0 = null;
           return (tpa) (stackIn_9_0);
@@ -324,6 +324,6 @@ final class ComponentAttachmentPlan {
     static {
         field_a = new dpb();
         field_b = 0.4000000059604645f;
-        field_d = new kb(4);
+        field_d = new TextureFormat(4);
     }
 }

@@ -24,12 +24,12 @@ final class qca extends llb {
     final static void a(int param0, int param1, int param2, boolean param3, int param4) {
         if (param3) {
           SetOndamageParticleSpeed.e(3);
-          dma.g(param2, param4, param0, param1);
+          SoftwareRasterizer2D.intersectClip(param2, param4, param0, param1);
           return;
         }
         field_yb = 104;
         SetOndamageParticleSpeed.e(3);
-        dma.g(param2, param4, param0, param1);
+        SoftwareRasterizer2D.intersectClip(param2, param4, param0, param1);
     }
 
     final void a(int param0, int param1, int param2, int param3, int param4, boolean param5) {

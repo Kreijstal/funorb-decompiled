@@ -82,7 +82,7 @@ final class ujb {
     final static boolean a(int param0) {
         if (param0 >= -99) {
           field_h = -105;
-          if (!wh.g(-118)) {
+          if (!SocketNetworkArchiveClient.g(-118)) {
             return false;
           }
           if (GetDebrisCarryOver.field_o > 0) {
@@ -90,7 +90,7 @@ final class ujb {
           }
           return false;
         }
-        if (!wh.g(-118)) {
+        if (!SocketNetworkArchiveClient.g(-118)) {
           return false;
         }
         if (GetDebrisCarryOver.field_o > 0) {

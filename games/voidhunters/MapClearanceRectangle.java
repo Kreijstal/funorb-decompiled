@@ -63,10 +63,10 @@ final class MapClearanceRectangle extends MapClearanceArea implements DiffableSt
             return stackIn_2_0;
           }
           if (!param1) {
-            stackIn_7_0 = ShipBlueprint.field_a.b(param2);
+            stackIn_7_0 = ShipBlueprint.field_a.getStringWidth(param2);
             return stackIn_7_0;
           }
-          stackIn_5_0 = ssa.field_a.b(param2);
+          stackIn_5_0 = ssa.field_a.getStringWidth(param2);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -215,10 +215,10 @@ final class MapClearanceRectangle extends MapClearanceArea implements DiffableSt
             return stackIn_2_0;
           }
           if (!param1) {
-            stackIn_7_0 = ShipBlueprint.field_a.b(param2);
+            stackIn_7_0 = ShipBlueprint.field_a.getStringWidth(param2);
             return stackIn_7_0;
           }
-          stackIn_5_0 = ssa.field_a.b(param2);
+          stackIn_5_0 = ssa.field_a.getStringWidth(param2);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

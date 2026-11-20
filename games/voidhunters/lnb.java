@@ -157,7 +157,7 @@ final class lnb extends TextureOperation {
             }
             if (0 < RequestNewestBlackboxRecording.field_p.position) {
               try {
-                SetShipSpawnInvulnerabilityTime.field_o.a(0, RequestNewestBlackboxRecording.field_p.payload, RequestNewestBlackboxRecording.field_p.position, 0);
+                SetShipSpawnInvulnerabilityTime.field_o.write(0, RequestNewestBlackboxRecording.field_p.payload, RequestNewestBlackboxRecording.field_p.position, 0);
                 GetTorpedoProjectileOndamageParticles.field_o = wt.a(false);
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;

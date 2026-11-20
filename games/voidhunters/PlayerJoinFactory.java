@@ -18,7 +18,7 @@ final class PlayerJoinFactory implements GameStateFactory {
           }
           return;
         }
-        dma.d(param4, param0, param3, param1, param2);
+        SoftwareRasterizer2D.fillRectangle(param4, param0, param3, param1, param2);
         if (param6 != 0) {
           field_a = (String) null;
           return;

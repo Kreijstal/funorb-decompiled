@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bva extends vmb {
-    qma[] field_f;
+final class OpenGlVertexDeclaration extends GpuVertexDeclaration {
+    VertexStreamLayout[] streams;
     static int[] field_b;
     static String field_e;
     static int field_c;
@@ -18,9 +18,9 @@ final class bva extends vmb {
         field_e = null;
     }
 
-    bva(qma[] param0) {
+    OpenGlVertexDeclaration(VertexStreamLayout[] param0) {
         try {
-          this.field_f = param0;
+          this.streams = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bva.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

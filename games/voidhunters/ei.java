@@ -39,27 +39,27 @@ final class ei implements wwa {
         int var13Lifetime1;
         try {
           var15 = !(param1 instanceof ata) ? null : (ata) (param1);
-          dma.d(param1.field_g + param2, param1.field_r + param3, param1.field_h, param1.field_f, this.field_h);
+          SoftwareRasterizer2D.fillRectangle(param1.field_g + param2, param1.field_r + param3, param1.field_h, param1.field_f, this.field_h);
           if (var15 != null) {
           }
           var7 = var15.field_J + param2 + param1.field_g;
           int var9 = 127 / ((-27 - param0) / 35);
           var8 = var15.field_B + (param1.field_r + param3);
-          dma.f(var7, var8, var15.field_F, this.field_m);
+          SoftwareRasterizer2D.fillCircle(var7, var8, var15.field_F, this.field_m);
           if (var15.field_E != -1) {
             var10 = 3.141592653589793 * (double)var15.field_E * 2.0 / (double)var15.field_I;
             var12 = (int)(-Math.sin(var10) * (double)var15.field_F);
             var13 = (int)(Math.cos(var10) * (double)var15.field_F);
-            dma.f(var12 + var7, var8 + var13, 1, this.field_d);
+            SoftwareRasterizer2D.fillCircle(var12 + var7, var8 + var13, 1, this.field_d);
           }
-          dma.f(var7, var8, 2, 1);
+          SoftwareRasterizer2D.fillCircle(var7, var8, 2, 1);
           var10Lifetime1 = 2.0 * (3.141592653589793 * (double)var15.field_D) / (double)var15.field_I;
           var12Lifetime1 = (int)(-Math.sin(var10Lifetime1) * (double)var15.field_F);
           var13Lifetime1 = (int)(Math.cos(var10Lifetime1) * (double)var15.field_F);
-          dma.a(var7, var8, var7 + var12Lifetime1, var8 + var13Lifetime1, 1);
+          SoftwareRasterizer2D.drawLine(var7, var8, var7 + var12Lifetime1, var8 + var13Lifetime1, 1);
           if (null != this.field_j) {
             var14 = var15.field_J + var15.field_F + this.field_k;
-            this.field_j.a(param1.field_j, var14 + param1.field_g + param2, param1.field_r + (param3 + this.field_g), param1.field_h - var14 - this.field_k, -(this.field_k << 1) + param1.field_f, this.field_l, this.field_b, 1, 1, 0);
+            this.field_j.drawParagraph(param1.field_j, var14 + param1.field_g + param2, param1.field_r + (param3 + this.field_g), param1.field_h - var14 - this.field_k, -(this.field_k << 1) + param1.field_f, this.field_l, this.field_b, 1, 1, 0);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ei.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ')');

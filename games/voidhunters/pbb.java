@@ -24,22 +24,22 @@ final class pbb implements wwa {
           for (var6_int = 0; param1.field_f >= var6_int; var6_int++) {
             var7 = 152 + 48 * var6_int / param1.field_f;
             var8 = var7 | (var7 << 8 | var7 << 16);
-            dma.h(param1.field_g + param2, var6_int + param1.field_r + param3, param1.field_h, var8);
+            SoftwareRasterizer2D.drawHorizontalLine(param1.field_g + param2, var6_int + param1.field_r + param3, param1.field_h, var8);
           }
           for (var6_intLifetime1 = 1; 5 >= var6_intLifetime1; var6_intLifetime1++) {
             var7Lifetime1 = var6_intLifetime1 - 5 + (param1.field_g + param2 + (param1.field_h - (param1.field_h >> 1)));
             var8Lifetime1 = -(2 * var6_intLifetime1) + (param1.field_h >> 1);
             var9 = (param1.field_f - 4 >> 1) + (param3 - (-param1.field_r - var6_intLifetime1));
-            if (dma.field_c <= var9 &&
-              var9 < dma.field_f) {
-              if (var7Lifetime1 > dma.field_d) {
-                dma.field_i[-1 + (var9 * dma.field_g + var7Lifetime1)] = dla.a(8355711, dma.field_i[-1 + var9 * dma.field_g + var7Lifetime1] >> 1);
+            if (SoftwareRasterizer2D.clipTop <= var9 &&
+              var9 < SoftwareRasterizer2D.clipBottom) {
+              if (var7Lifetime1 > SoftwareRasterizer2D.clipLeft) {
+                SoftwareRasterizer2D.pixels[-1 + (var9 * SoftwareRasterizer2D.width + var7Lifetime1)] = dla.a(8355711, SoftwareRasterizer2D.pixels[-1 + var9 * SoftwareRasterizer2D.width + var7Lifetime1] >> 1);
               }
-              if (dma.field_a > var7Lifetime1 + var8Lifetime1) {
-                dma.field_i[dma.field_g * var9 - (-var7Lifetime1 - var8Lifetime1)] = dla.a(dma.field_i[var8Lifetime1 + var7Lifetime1 + dma.field_g * var9] >> 1, 8355711);
+              if (SoftwareRasterizer2D.clipRight > var7Lifetime1 + var8Lifetime1) {
+                SoftwareRasterizer2D.pixels[SoftwareRasterizer2D.width * var9 - (-var7Lifetime1 - var8Lifetime1)] = dla.a(SoftwareRasterizer2D.pixels[var8Lifetime1 + var7Lifetime1 + SoftwareRasterizer2D.width * var9] >> 1, 8355711);
               }
             }
-            dma.h(var7Lifetime1, var9, var8Lifetime1, 0);
+            SoftwareRasterizer2D.drawHorizontalLine(var7Lifetime1, var9, var8Lifetime1, 0);
           }
           var6_intLifetime2 = 113 / ((-27 - param0) / 35);
           return;

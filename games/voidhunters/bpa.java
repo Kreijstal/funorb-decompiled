@@ -53,19 +53,19 @@ final class bpa implements wwa {
           if (param1.e((byte) -120)) {
             SetCountermeasureLauncherRandomness.a(var7 + 2, param1.field_h - 4, 2 + var6_int, param1.field_f - 4, (byte) -100);
           }
-          dma.b(var6_int, var7, param1.field_h + (var6_int - 2), param1.field_f + var7);
+          SoftwareRasterizer2D.setClip(var6_int, var7, param1.field_h + (var6_int - 2), param1.field_f + var7);
           var9 = 78 % ((-27 - param0) / 35);
           var8 = this.field_b.field_w.g((byte) 96);
           if (var8 != null) {
             var10 = var8.toString();
-            this.field_b.field_v.c(var10, 2 + var6_int, -1 + ((this.field_b.field_v.field_k + param1.field_f >> 1) + var7), 10000536, -1);
+            this.field_b.field_v.draw(var10, 2 + var6_int, -1 + ((this.field_b.field_v.maxAscent + param1.field_f >> 1) + var7), 10000536, -1);
             if (this.field_b.e((byte) -120) &&
               var10.startsWith(this.field_b.field_E)) {
-              var11 = this.field_b.field_v.b(this.field_b.field_E);
-              dma.e(var6_int + 2, var7 + 2, var11, -4 + param1.field_f, 2188450, 100);
+              var11 = this.field_b.field_v.getStringWidth(this.field_b.field_E);
+              SoftwareRasterizer2D.fillRectangleAlpha(var6_int + 2, var7 + 2, var11, -4 + param1.field_f, 2188450, 100);
             }
           }
-          dma.d();
+          SoftwareRasterizer2D.resetClip();
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

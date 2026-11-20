@@ -3,12 +3,12 @@
  */
 final class je {
     static aba field_c;
-    private mkb field_a;
-    private mkb field_d;
-    private vca field_b;
+    private GpuVertexBuffer field_a;
+    private GpuVertexBuffer field_d;
+    private GpuIndexBuffer field_b;
 
     final void a(boolean param0) {
-        this.field_a.a(-108);
+        this.field_a.release(-108);
         if (param0) {
           je.clearSharedReferences((byte) -55);
         }
@@ -107,7 +107,7 @@ final class je {
 
     final void a(int param0, GpuToolkit param1) {
         try {
-          this.field_a.a(param0, 786336, 97);
+          this.field_a.allocate(param0, 786336, 97);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "je.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -127,15 +127,15 @@ final class je {
         jaclib.memory.Buffer var9 = null;
         int var5Lifetime1;
         try {
-          param0.a(10, new qma[]{new qma(new pb[]{pb.field_k, pb.field_d, pb.field_l}), new qma(pb.field_g)});
-          this.field_a = param0.a(true, 3);
-          this.field_d = param0.a(false, 3);
-          this.field_d.a(12, 393168, 119);
-          this.field_b = param0.a((byte) -19, false);
-          this.field_b.a(25427, 49146);
-          var7 = this.field_b.a((byte) -30, true);
+          param0.createVertexDeclaration(10, new VertexStreamLayout[]{new VertexStreamLayout(new VertexAttribute[]{VertexAttribute.field_k, VertexAttribute.field_d, VertexAttribute.field_l}), new VertexStreamLayout(VertexAttribute.field_g)});
+          this.field_a = param0.createVertexBuffer(true, 3);
+          this.field_d = param0.createVertexBuffer(false, 3);
+          this.field_d.allocate(12, 393168, 119);
+          this.field_b = param0.createIndexBuffer((byte) -19, false);
+          this.field_b.allocate(25427, 49146);
+          var7 = this.field_b.lock((byte) -30, true);
           if (var7 != null) {
-            var8 = param0.a(var7, false);
+            var8 = param0.getBufferWriter(var7, false);
             if (jaclib.memory.Stream.isBigEndian()) {
               for (var4_int = 0; var4_int < 8191; var4_int++) {
                 var5 = var4_int * 4;
@@ -158,11 +158,11 @@ final class je {
               }
             }
             var8.flush();
-            this.field_b.b(-93);
+            this.field_b.unlock(-93);
           }
-          var9 = this.field_d.a(true, (byte) 41);
+          var9 = this.field_d.lock(true, (byte) 41);
           if (var9 != null) {
-            var4 = param0.a(var9, false);
+            var4 = param0.getBufferWriter(var9, false);
             if (jaclib.memory.Stream.isBigEndian()) {
               for (var5Lifetime1 = 0; var5Lifetime1 < 8191; var5Lifetime1++) {
                 var4.writeFloat(0.0f);
@@ -195,7 +195,7 @@ final class je {
               }
             }
             var4.flush();
-            this.field_d.b(-20836);
+            this.field_d.unlock(-20836);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

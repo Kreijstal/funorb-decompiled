@@ -31,7 +31,7 @@ final class dw implements wwa {
           var8 = ByteStorage.field_a[1];
           if (param1 instanceof htb &&
             ((htb) (param1)).field_u) {
-            var8.c((-var8.field_m + param1.field_h >> 1) + (1 + var6_int), 1 + (var7 + (-var8.field_n + param1.field_f >> 1)), 256);
+            var8.drawAdditive((-var8.paddedWidth + param1.field_h >> 1) + (1 + var6_int), 1 + (var7 + (-var8.paddedHeight + param1.field_f >> 1)), 256);
           }
           if (param1.e((byte) -120)) {
             SetCountermeasureLauncherRandomness.a(var7 + 2, param1.field_h - 4, var6_int + 2, -4 + param1.field_f, (byte) -62);

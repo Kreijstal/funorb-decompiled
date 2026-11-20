@@ -21,7 +21,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
     private int field_Rc;
     private boolean field_Lc;
     private boolean field_Yc;
-    private esb[] field_Pc;
+    private OpenGlVertexBuffer[] field_Pc;
     private boolean field_Dc;
     jaggl.MapBuffer field_Vc;
     boolean field_Ac;
@@ -36,12 +36,12 @@ final class OpenGlGpuToolkit extends GpuToolkit {
     private String field_ad;
     int field_Nc;
 
-    final void a(byte param0, mkb param1, int param2) {
+    final void setVertexBuffer(byte param0, GpuVertexBuffer param1, int param2) {
         try {
           if (param0 != -6) {
             this.field_Bc = (String) null;
           }
-          this.field_Pc[param2] = (esb) (param1);
+          this.field_Pc[param2] = (OpenGlVertexBuffer) (param1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jp.VC(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -86,7 +86,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final void a(jra param0, int param1, int param2, int param3) {
+    final void drawPrimitive(PrimitiveType param0, int param1, int param2, int param3) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -164,11 +164,11 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final vca a(byte param0, boolean param1) {
+    final GpuIndexBuffer createIndexBuffer(byte param0, boolean param1) {
         if (param0 != -19) {
-          return (vca) null;
+          return (GpuIndexBuffer) null;
         }
-        return (vca) ((Object) new mq(this, mj.field_e, param1));
+        return (GpuIndexBuffer) ((Object) new OpenGlIndexBuffer(this, GpuDataType.field_e, param1));
     }
 
     final boolean enableBloom() {
@@ -210,9 +210,9 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final vmb a(int param0, qma[] param1) {
+    final GpuVertexDeclaration createVertexDeclaration(int param0, VertexStreamLayout[] param1) {
         RuntimeException var3 = null;
-        bva stackIn_3_0 = null;
+        OpenGlVertexDeclaration stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -221,8 +221,8 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           if (param0 != 10) {
             this.field_Yc = true;
           }
-          stackIn_3_0 = new bva(param1);
-          return (vmb) ((Object) stackIn_3_0);
+          stackIn_3_0 = new OpenGlVertexDeclaration(param1);
+          return (GpuVertexDeclaration) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
@@ -378,7 +378,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
               stackIn_9_0 = new gn(this, param0, param3, param2, param6, param4);
               return (eb) ((Object) stackIn_9_0);
             }
-            var9 = new ubb(this, ComponentAttachmentPlan.field_d, mj.field_f, GetSalvoaim.a(param0, (byte) -100), GetSalvoaim.a(param3, (byte) -121));
+            var9 = new ubb(this, ComponentAttachmentPlan.field_d, GpuDataType.field_f, GetSalvoaim.a(param0, (byte) -100), GetSalvoaim.a(param3, (byte) -121));
             var9.a(0, param3, param0, param6, param4, param2, 0, (byte) -104);
             stackIn_11_0 = var9;
             return (eb) ((Object) stackIn_11_0);
@@ -507,11 +507,11 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final mkb a(boolean param0, int param1) {
+    final GpuVertexBuffer createVertexBuffer(boolean param0, int param1) {
         if (param1 != 3) {
-          return (mkb) null;
+          return (GpuVertexBuffer) null;
         }
-        return (mkb) ((Object) new esb(this, param0));
+        return (GpuVertexBuffer) ((Object) new OpenGlVertexBuffer(this, param0));
     }
 
     final void I(int param0) {
@@ -605,7 +605,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
     }
 
     final void a(boolean param0, byte param1, slb param2, int param3) {
-        vmb var6 = null;
+        GpuVertexDeclaration var6 = null;
         int stackIn_2_0 = 0;
         int stackIn_2_1 = 0;
         int stackIn_3_2 = 0;
@@ -625,8 +625,8 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           }
           jaggl.OpenGL.glTexEnvi(stackIn_2_0, stackIn_2_1, stackIn_3_2);
           if (param1 != 94) {
-            var6 = (vmb) null;
-            this.a(-51, (vmb) null);
+            var6 = (GpuVertexDeclaration) null;
+            this.setVertexDeclaration(-51, (GpuVertexDeclaration) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -643,7 +643,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final boolean a(int param0, kb param1, mj param2) {
+    final boolean a(int param0, TextureFormat param1, GpuDataType param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_4_0 = null;
@@ -868,7 +868,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         super.updateFrame(param0);
     }
 
-    final gf a(int param0, int param1, byte[] param2, kb param3, int param4, int param5) {
+    final gf a(int param0, int param1, byte[] param2, TextureFormat param3, int param4, int param5) {
         RuntimeException var7 = null;
         gf stackIn_2_0 = null;
         rab stackIn_4_0 = null;
@@ -905,7 +905,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
     }
 
-    final eb a(kb param0, float[] param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7) {
+    final eb a(TextureFormat param0, float[] param1, boolean param2, int param3, int param4, int param5, boolean param6, int param7) {
         RuntimeException var9 = null;
         uja var10 = null;
         ubb var11 = null;
@@ -929,7 +929,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
               stackIn_12_0 = new gn(this, param0, param7, param4, param1, param3, param5);
               return (eb) ((Object) stackIn_12_0);
             }
-            var11 = new ubb(this, param0, mj.field_d, GetSalvoaim.a(param7, (byte) -125), GetSalvoaim.a(param4, (byte) -101));
+            var11 = new ubb(this, param0, GpuDataType.field_d, GetSalvoaim.a(param7, (byte) -125), GetSalvoaim.a(param4, (byte) -101));
             var11.a(param4, param0, (byte) -51, param5, param1, 0, 0, param7, param3);
             stackIn_10_0 = var11;
             return (eb) ((Object) stackIn_10_0);
@@ -1145,7 +1145,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         this.setClip(var1, var3, var2, var4);
     }
 
-    final eb a(int param0, byte[] param1, kb param2, int param3, int param4, int param5, boolean param6, int param7) {
+    final eb a(int param0, byte[] param1, TextureFormat param2, int param3, int param4, int param5, boolean param6, int param7) {
         RuntimeException var9 = null;
         ubb var10 = null;
         ubb stackIn_7_0 = null;
@@ -1167,7 +1167,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
               stackIn_10_0 = new gn(this, param2, param4, param5, param1, param0, param3);
               return (eb) ((Object) stackIn_10_0);
             }
-            var10 = new ubb(this, param2, mj.field_f, GetSalvoaim.a(param4, (byte) -107), GetSalvoaim.a(param5, (byte) -127));
+            var10 = new ubb(this, param2, GpuDataType.field_f, GetSalvoaim.a(param4, (byte) -107), GetSalvoaim.a(param5, (byte) -127));
             var10.a(param3, param1, param5, param4, param0, 0, 3314, 0, param2);
             stackIn_12_0 = var10;
             return (eb) ((Object) stackIn_12_0);
@@ -1257,7 +1257,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         this.field_bd = new IntrusiveDeque();
         this.field_Ec = new IntrusiveDeque();
         this.field_Gc = new IntrusiveDeque();
-        this.field_Pc = new esb[16];
+        this.field_Pc = new OpenGlVertexBuffer[16];
         this.field_Sc = new jaggl.MapBuffer();
         this.field_Vc = new jaggl.MapBuffer();
         try {
@@ -1495,7 +1495,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
     final void applyPostProcessing() {
     }
 
-    final eb a(int param0, int param1, int param2, kb param3, mj param4) {
+    final eb a(int param0, int param1, int param2, TextureFormat param3, GpuDataType param4) {
         RuntimeException var6 = null;
         eb stackIn_2_0 = null;
         ubb stackIn_9_0 = null;
@@ -1557,7 +1557,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         int var3 = 5 % ((36 - param0) / 33);
     }
 
-    final boolean a(mj param0, kb param1, int param2) {
+    final boolean a(GpuDataType param0, TextureFormat param1, int param2) {
         int var4_int = 0;
         RuntimeException var4 = null;
         RuntimeException stackIn_4_0 = null;
@@ -1605,7 +1605,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         this.field_zc.swapBuffers();
     }
 
-    final void a(int param0, vmb param1) {
+    final void setVertexDeclaration(int param0, GpuVertexDeclaration param1) {
         int var15 = 0;
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
@@ -1631,19 +1631,19 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        qma var9_ref_qma = null;
-        esb var10 = null;
+        VertexStreamLayout var9_ref_qma = null;
+        OpenGlVertexBuffer var10 = null;
         int var11 = 0;
         int var12 = 0;
         long var13 = 0L;
-        pb var16 = null;
+        VertexAttribute var16 = null;
         int var17 = 0;
-        qma[] var18 = null;
+        VertexStreamLayout[] var18 = null;
         int var8Lifetime1;
         int var9Lifetime1;
         var17 = VoidHunters.field_G;
         try {
-          var18 = ((bva) (param1)).field_f;
+          var18 = ((OpenGlVertexDeclaration) (param1)).streams;
           var4 = 0;
           var5 = 0;
           var6 = 0;
@@ -1652,31 +1652,31 @@ final class OpenGlGpuToolkit extends GpuToolkit {
             var9_ref_qma = var18[var8];
             var10 = this.field_Pc[var8];
             var11 = 0;
-            var12 = var10.b((byte) 125);
-            var13 = var10.c(2);
-            var10.a((byte) 54);
-            for (var15 = 0; var9_ref_qma.a(86) > var15; var15++) {
-              var16 = var9_ref_qma.b(var15, 71);
-              if (pb.field_k == var16) {
+            var12 = var10.getStride((byte) 125);
+            var13 = var10.getClientAddress(2);
+            var10.bind((byte) 54);
+            for (var15 = 0; var9_ref_qma.getAttributeCount(86) > var15; var15++) {
+              var16 = var9_ref_qma.getAttribute(var15, 71);
+              if (VertexAttribute.field_k == var16) {
                 jaggl.OpenGL.glVertexPointer(3, 5126, var12, (long)var11 + var13);
                 var7 = 1;
               } else {
-                if (var16 != pb.field_g) {
-                  if (pb.field_d != var16) {
-                    if (var16 != pb.field_e) {
-                      if (var16 == pb.field_l) {
+                if (var16 != VertexAttribute.field_g) {
+                  if (VertexAttribute.field_d != var16) {
+                    if (var16 != VertexAttribute.field_e) {
+                      if (var16 == VertexAttribute.field_l) {
                         incrementValue$0 = var4;
                         var4++;
                         jaggl.OpenGL.glClientActiveTexture(incrementValue$0 + 33984);
                         jaggl.OpenGL.glTexCoordPointer(2, 5126, var12, (long)var11 + var13);
                       } else {
-                        if (pb.field_h == var16) {
+                        if (VertexAttribute.field_h == var16) {
                           incrementValue$1 = var4;
                           var4++;
                           jaggl.OpenGL.glClientActiveTexture(33984 + incrementValue$1);
                           jaggl.OpenGL.glTexCoordPointer(3, 5126, var12, var13 + (long)var11);
                         } else {
-                          if (var16 == pb.field_b) {
+                          if (var16 == VertexAttribute.field_b) {
                             incrementValue$2 = var4;
                             var4++;
                             jaggl.OpenGL.glClientActiveTexture(33984 + incrementValue$2);
@@ -1699,7 +1699,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
                   jaggl.OpenGL.glNormalPointer(5126, var12, (long)var11 + var13);
                 }
               }
-              var11 = var11 + var16.field_i;
+              var11 = var11 + var16.byteSize;
             }
           }
           stackIn_25_0 = (var7 != 0) ? 0 : 1;

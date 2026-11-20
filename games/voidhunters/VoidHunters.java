@@ -197,7 +197,7 @@ public final class VoidHunters extends NetworkGameClient {
           HardpointMatch.field_d = false;
           if (vqa.field_g != null &&
             !vqa.field_g.field_N) {
-            vga.field_b = 0;
+            SecondaryNodeQueue.field_b = 0;
             GetSniperCannonProjectiles.field_p = false;
             SetDebrisSurvives.e((byte) -86);
             return;
@@ -505,7 +505,7 @@ public final class VoidHunters extends NetworkGameClient {
           ProxyAuthenticationException.field_a != null &&
           ProxyAuthenticationException.field_a.field_m.carouselInfo.field_k) &&
           null != di.field_l &&
-          null == di.field_l.field_j) && (wh.g(-114) &&
+          null == di.field_l.field_j) && (SocketNetworkArchiveClient.g(-114) &&
           SetMachineGunEnergyUsed.field_o[82] &&
           SetMachineGunEnergyUsed.field_o[35])) {
           stackIn_69_0 = 1;
@@ -869,7 +869,7 @@ public final class VoidHunters extends NetworkGameClient {
         ClientException.clearSharedReferences(127);
         bi.clearSharedReferences(-19766);
         MouseWheelInput.clearSharedReferences(-25692);
-        dma.clearSharedReferences();
+        SoftwareRasterizer2D.clearSharedReferences();
         ResourceArchive.clearSharedReferences((byte) 112);
         PacketBuffer.clearSharedReferences(-38);
         wt.clearSharedReferences(-101);
@@ -1013,7 +1013,7 @@ public final class VoidHunters extends NetworkGameClient {
         oib.clearSharedReferences(124);
         vw.clearSharedReferences((byte) 55);
         wc.clearSharedReferences(-20221);
-        ona.clearSharedReferences(125);
+        NetworkArchiveClient.clearSharedReferences(125);
         ArchiveDiskWorker.clearSharedReferences(63);
         ArchiveIndexLoader.clearSharedReferences(5);
         ppb.clearSharedReferences(37);
@@ -1108,7 +1108,7 @@ public final class VoidHunters extends NetworkGameClient {
         bqa.clearSharedReferences((byte) 124);
         AwardVictoryToWinnerAction.clearSharedReferences(0);
         qw.clearSharedReferences(true);
-        wh.clearSharedReferences(0);
+        SocketNetworkArchiveClient.clearSharedReferences(0);
         NetworkArchiveRequest.clearSharedReferences((byte) 114);
         DiskArchiveRequest.clearSharedReferences(100);
         CachedArchiveProvider.clearSharedReferences((byte) -110);
@@ -1142,8 +1142,8 @@ public final class VoidHunters extends NetworkGameClient {
         OpenGlTransform3D.clearSharedReferences(13);
         rtb.clearSharedReferences((byte) 81);
         GpuToolkit.clearSharedReferences((byte) -101);
-        pb.clearSharedReferences((byte) -84);
-        mj.clearSharedReferences(17);
+        VertexAttribute.clearSharedReferences((byte) -84);
+        GpuDataType.clearSharedReferences(17);
         rga.clearSharedReferences((byte) 108);
         GpuTransform3D.clearSharedReferences(108);
         kba.clearSharedReferences(17121);
@@ -1152,12 +1152,12 @@ public final class VoidHunters extends NetworkGameClient {
         uda.clearSharedReferences((byte) -96);
         as.clearSharedReferences(0);
         je.clearSharedReferences((byte) 117);
-        vmb.clearSharedReferences(8192);
+        GpuVertexDeclaration.clearSharedReferences(8192);
         slb.clearSharedReferences((byte) 13);
         uja.clearSharedReferences((byte) -123);
-        jra.clearSharedReferences((byte) -125);
+        PrimitiveType.clearSharedReferences((byte) -125);
         OpenGlGpuToolkit.clearSharedReferences(771);
-        esb.clearSharedReferences(-118);
+        OpenGlVertexBuffer.clearSharedReferences(-118);
         hma.clearSharedReferences(-1);
         re.clearSharedReferences(-2705);
         ef.clearSharedReferences(-100);
@@ -1252,7 +1252,7 @@ public final class VoidHunters extends NetworkGameClient {
         rab.clearSharedReferences(148);
         gla.clearSharedReferences(-5709);
         fib.clearSharedReferences(-113);
-        bva.clearSharedReferences(23008);
+        OpenGlVertexDeclaration.clearSharedReferences(23008);
         tb.clearSharedReferences(-75);
         pl.clearSharedReferences((byte) -109);
         fk.clearSharedReferences((byte) 80);
@@ -2048,8 +2048,8 @@ public final class VoidHunters extends NetworkGameClient {
               if (vqa.field_g == null) {
                 GetThrusterSmallForce.field_o = false;
               } else {
-                var7 = (-dma.field_g + GetBombletSprayEnergyUsed.field_p.width) / 2;
-                var8 = (-dma.field_j + GetBombletSprayEnergyUsed.field_p.height) / 2;
+                var7 = (-SoftwareRasterizer2D.width + GetBombletSprayEnergyUsed.field_p.width) / 2;
+                var8 = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
                 GetBombletSprayReload.a(-119, var8, var7);
                 GetMutatorVotes.a(SetBombletSprayProjectileOndamageParticles.e((byte) 93), var4 != 0, SetThrusterForce.a(-99), 123);
                 BodyDestroyedCondition.b(-1);
@@ -2135,16 +2135,16 @@ public final class VoidHunters extends NetworkGameClient {
             VoidHunters.m(-29130);
           }
           if (GetSniperCannonProjectiles.field_p) {
-            if (GetRepairModePower.field_o > vga.field_b) {
-              vga.field_b = vga.field_b + 1;
+            if (GetRepairModePower.field_o > SecondaryNodeQueue.field_b) {
+              SecondaryNodeQueue.field_b = SecondaryNodeQueue.field_b + 1;
             }
           } else {
-            if (0 < vga.field_b) {
-              vga.field_b = vga.field_b - 1;
+            if (0 < SecondaryNodeQueue.field_b) {
+              SecondaryNodeQueue.field_b = SecondaryNodeQueue.field_b - 1;
             }
           }
           var7Lifetime1 = GetRepairModePower.field_o * GetRepairModePower.field_o;
-          var8Lifetime1 = -(vga.field_b * vga.field_b) + var7Lifetime1;
+          var8Lifetime1 = -(SecondaryNodeQueue.field_b * SecondaryNodeQueue.field_b) + var7Lifetime1;
           var9 = 120 * var8Lifetime1 / var7Lifetime1 + nv.field_v;
           GetDebrisProjectileCollision.a(0, var9);
           if (PlayerVote.field_c.first(0) != null) {
@@ -2163,7 +2163,7 @@ public final class VoidHunters extends NetworkGameClient {
           RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 9);
           wgb.field_f = GetArmageddonTimerStart.field_o;
           HardpointMatch.field_d = true;
-          vga.field_b = GetRepairModePower.field_o;
+          SecondaryNodeQueue.field_b = GetRepairModePower.field_o;
         }
         if (-5 == wgb.field_f) {
           sh.a(SetSpinningBladeSpindamageMultiplier.field_o.f((byte) -13), -1, 11);
@@ -2173,8 +2173,8 @@ public final class VoidHunters extends NetworkGameClient {
         if (param1 >= -117) {
           this.field_B = -120;
         }
-        if (wh.field_n > 0) {
-          wh.field_n = wh.field_n - 1;
+        if (SocketNetworkArchiveClient.field_n > 0) {
+          SocketNetworkArchiveClient.field_n = SocketNetworkArchiveClient.field_n - 1;
         }
         this.updateMusicSelection((byte) -127);
         if (ssa.b(2) &&
@@ -2220,16 +2220,16 @@ public final class VoidHunters extends NetworkGameClient {
           var4 = (GetBombletSprayEnergyUsed.field_p.width - param2) / 2;
           var5 = (GetBombletSprayEnergyUsed.field_p.height - param1) / 2;
           if (null == this.field_F ||
-            ~param2 != ~this.field_F.field_q ||
-            ~this.field_F.field_p != ~param1) {
+            ~param2 != ~this.field_F.width ||
+            ~this.field_F.height != ~param1) {
             this.field_F = new Sprite(0, 0);
-            this.field_F.field_q = param2;
-            this.field_F.field_m = param2;
-            this.field_F.field_p = param1;
-            this.field_F.field_n = param1;
-            this.field_F.field_r = GetDebrisGroupColour.field_r.readPixels(var4, var5, this.field_F.field_q, this.field_F.field_p);
+            this.field_F.width = param2;
+            this.field_F.paddedWidth = param2;
+            this.field_F.height = param1;
+            this.field_F.paddedHeight = param1;
+            this.field_F.pixels = GetDebrisGroupColour.field_r.readPixels(var4, var5, this.field_F.width, this.field_F.height);
           }
-          this.field_F.c(dma.field_g / 2 - param2 / param0, dma.field_j / 2 - param1 / 2 - 1);
+          this.field_F.drawOpaque(SoftwareRasterizer2D.width / 2 - param2 / param0, SoftwareRasterizer2D.height / 2 - param1 / 2 - 1);
           return;
         }
     }
@@ -2311,7 +2311,7 @@ public final class VoidHunters extends NetworkGameClient {
             GetDebrisGroupColour.field_r.clearColor(0);
             GetDebrisGroupColour.field_r.clearDepth();
           }
-          dma.a();
+          SoftwareRasterizer2D.clear();
           if (~wgb.field_f != ~GetArmageddonTimerStart.field_o) {
             if (SetVariableAction.field_b < 16) {
               uea.a((byte) 88, SetShipTeamAction.field_f, false, GetArmageddonTimerStart.field_o);
@@ -2323,8 +2323,8 @@ public final class VoidHunters extends NetworkGameClient {
           }
           if (!SetShipTeamAction.field_f ||
             !GetMessageFadetime.field_o) {
-            var3_int = (-dma.field_g + GetBombletSprayEnergyUsed.field_p.width) / 2;
-            var4_int = (-dma.field_j + GetBombletSprayEnergyUsed.field_p.height) / 2;
+            var3_int = (-SoftwareRasterizer2D.width + GetBombletSprayEnergyUsed.field_p.width) / 2;
+            var4_int = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
             GetBombletSprayReload.a(-89, var4_int, var3_int);
             SpawnPointFactory.a(SetSalvoDamageMultiplier.e(83), true);
             BodyDestroyedCondition.b(-1);
@@ -2341,7 +2341,7 @@ public final class VoidHunters extends NetworkGameClient {
                 var4_int = -(var5_int / 2) + 123;
               }
             }
-            lo.field_c[var3.field_d].b(8, var4_int, 32, 32);
+            lo.field_c[var3.field_d].drawScaled(8, var4_int, 32, 32);
           }
           if (param0 >= -79) {
             return;
@@ -2353,8 +2353,8 @@ public final class VoidHunters extends NetworkGameClient {
             }
           }
           if (SetReloadBarWidth.f((byte) -113)) {
-            var4_int = (-dma.field_g + GetBombletSprayEnergyUsed.field_p.width) / 2;
-            var5_intLifetime1 = (GetBombletSprayEnergyUsed.field_p.height - dma.field_j) / 2;
+            var4_int = (-SoftwareRasterizer2D.width + GetBombletSprayEnergyUsed.field_p.width) / 2;
+            var5_intLifetime1 = (GetBombletSprayEnergyUsed.field_p.height - SoftwareRasterizer2D.height) / 2;
             if (li.field_i) {
               GetDebrisGroupColour.field_r.clearColor(-16777216);
             }
@@ -2363,8 +2363,8 @@ public final class VoidHunters extends NetworkGameClient {
             RoundResult.field_e = true;
           }
           if (tjb.l(0)) {
-            var4_int = (-dma.field_g + GetBombletSprayEnergyUsed.field_p.width) / 2;
-            var5_intLifetime2 = (-dma.field_j + GetBombletSprayEnergyUsed.field_p.height) / 2;
+            var4_int = (-SoftwareRasterizer2D.width + GetBombletSprayEnergyUsed.field_p.width) / 2;
+            var5_intLifetime2 = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
             GetPhasedEnergyBeamFireForce.a(var4_int, 32, var5_intLifetime2);
             if (!RoundResult.field_e) {
               this.a(2, 20 + cd.a(true), fk.b(-119));
@@ -2373,7 +2373,7 @@ public final class VoidHunters extends NetworkGameClient {
             RoundResult.field_e = true;
           } else {
             if (ffa.a(false)) {
-              IntrusiveNode.a((Sprite[]) null, 8, 0, (Sprite[]) null, (Sprite[]) null, 8555923, 0, 15658751, 15658751, SetMpSandboxEnemySpawnLimit.field_p, dma.field_j / 2, 0, 0, -14109, dma.field_g / 2);
+              IntrusiveNode.a((Sprite[]) null, 8, 0, (Sprite[]) null, (Sprite[]) null, 8555923, 0, 15658751, 15658751, SetMpSandboxEnemySpawnLimit.field_p, SoftwareRasterizer2D.height / 2, 0, 0, -14109, SoftwareRasterizer2D.width / 2);
               var4_int = 16;
               var5_intLifetime2 = var4_int + SetUseNiceTrails.a(0);
               var6 = var4_int + SetShieldsDirectionalArc.a(-22954);
@@ -2382,13 +2382,13 @@ public final class VoidHunters extends NetworkGameClient {
               BlackBoxRecording.a((byte) -115, 255, var6, var7, var8 - 1, var5_intLifetime2);
               if (this.field_F == null) {
                 this.field_F = new Sprite(0, 0);
-                this.field_F.field_q = var5_intLifetime2;
-                this.field_F.field_m = var5_intLifetime2;
-                this.field_F.field_p = var6;
-                this.field_F.field_n = var6;
-                this.field_F.field_r = GetDebrisGroupColour.field_r.readPixels(var7, var8, this.field_F.field_q, this.field_F.field_p);
+                this.field_F.width = var5_intLifetime2;
+                this.field_F.paddedWidth = var5_intLifetime2;
+                this.field_F.height = var6;
+                this.field_F.paddedHeight = var6;
+                this.field_F.pixels = GetDebrisGroupColour.field_r.readPixels(var7, var8, this.field_F.width, this.field_F.height);
               }
-              this.field_F.c(dma.field_g / 2 - var5_intLifetime2 / 2, dma.field_j / 2 - var6 / 2 - 1);
+              this.field_F.drawOpaque(SoftwareRasterizer2D.width / 2 - var5_intLifetime2 / 2, SoftwareRasterizer2D.height / 2 - var6 / 2 - 1);
               SetMutatorVotes.f(-1321004447);
               RoundResult.field_e = true;
             }
@@ -2396,7 +2396,7 @@ public final class VoidHunters extends NetworkGameClient {
           if (wp.field_a != wp.field_b) {
             var4_int = 256 * hn.field_a / 16;
             if (0 < var4_int) {
-              dma.e(0, 0, dma.field_g, dma.field_j, 0, var4_int);
+              SoftwareRasterizer2D.fillRectangleAlpha(0, 0, SoftwareRasterizer2D.width, SoftwareRasterizer2D.height, 0, var4_int);
             }
           }
           if (!RoundResult.field_e) {
@@ -2404,11 +2404,11 @@ public final class VoidHunters extends NetworkGameClient {
           }
           if (RoundResult.field_e &&
             li.field_i) {
-            var4_int = dma.field_g;
-            var5_intLifetime3 = dma.field_j;
+            var4_int = SoftwareRasterizer2D.width;
+            var5_intLifetime3 = SoftwareRasterizer2D.height;
             if (this.field_F != null) {
-              var5_intLifetime3 = this.field_F.field_p;
-              var4_int = this.field_F.field_q;
+              var5_intLifetime3 = this.field_F.height;
+              var4_int = this.field_F.width;
             }
             var6Lifetime1 = (-var4_int + GetBombletSprayEnergyUsed.field_p.width) / 2;
             var7Lifetime1 = (-var5_intLifetime3 + GetBombletSprayEnergyUsed.field_p.height) / 2;
@@ -2419,9 +2419,9 @@ public final class VoidHunters extends NetworkGameClient {
             }
             var8_ref_kla = feb.a(GetDebrisGroupColour.field_r, true);
             var8_ref_kla.a(var6Lifetime1, var6Lifetime1 + var4_int, var7Lifetime1, var7Lifetime1 + var5_intLifetime3, (byte) -76);
-            var7Lifetime1Lifetime1 = (-dma.field_j + GetBombletSprayEnergyUsed.field_p.height) / 2;
-            var6Lifetime1Lifetime1 = (GetBombletSprayEnergyUsed.field_p.width - dma.field_g) / 2;
-            GetDebrisGroupColour.field_r.writePixels(var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, dma.field_g, dma.field_j, dma.field_i, 0, dma.field_g);
+            var7Lifetime1Lifetime1 = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
+            var6Lifetime1Lifetime1 = (GetBombletSprayEnergyUsed.field_p.width - SoftwareRasterizer2D.width) / 2;
+            GetDebrisGroupColour.field_r.writePixels(var6Lifetime1Lifetime1, var7Lifetime1Lifetime1, SoftwareRasterizer2D.width, SoftwareRasterizer2D.height, SoftwareRasterizer2D.pixels, 0, SoftwareRasterizer2D.width);
             var8_ref_kla.a(true);
           }
           if (di.field_l.a(-28208)) {

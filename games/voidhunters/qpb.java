@@ -96,7 +96,7 @@ final class qpb extends mc {
           SetTorpedoEnergyUsed.a(117, var8);
           this.field_t.b(0, param1, 115, 0);
           bia.a((byte) 124);
-          var8.d(param0 + this.field_g, this.field_r + param3, this.field_v);
+          var8.drawAlpha(param0 + this.field_g, this.field_r + param3, this.field_v);
           return;
         }
         qpb.a(false, 44, 54);
@@ -111,7 +111,7 @@ final class qpb extends mc {
         SetTorpedoEnergyUsed.a(117, var7);
         this.field_t.b(0, param1, 115, 0);
         bia.a((byte) 124);
-        var7.d(param0 + this.field_g, this.field_r + param3, this.field_v);
+        var7.drawAlpha(param0 + this.field_g, this.field_r + param3, this.field_v);
         return;
     }
 

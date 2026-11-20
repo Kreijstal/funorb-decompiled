@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetUseTriFill extends ConsoleCommand {
-    static jra field_o;
+    static PrimitiveType field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -33,7 +33,7 @@ final class GetUseTriFill extends ConsoleCommand {
 
     final static boolean a(int param0) {
         if (param0 < 43) {
-          field_o = (jra) null;
+          field_o = (PrimitiveType) null;
           if (ef.field_z < 20) {
             return true;
           }
@@ -75,6 +75,6 @@ final class GetUseTriFill extends ConsoleCommand {
     }
 
     static {
-        field_o = new jra();
+        field_o = new PrimitiveType();
     }
 }

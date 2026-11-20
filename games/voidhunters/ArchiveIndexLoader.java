@@ -9,7 +9,7 @@ final class ArchiveIndexLoader {
     static int field_h;
     private CachedArchiveProvider[] archiveProviders;
     private java.math.BigInteger signatureExponent;
-    private ona field_j;
+    private NetworkArchiveClient field_j;
     private NetworkArchiveRequest field_d;
     private PacketBuffer masterIndex;
 
@@ -39,10 +39,10 @@ final class ArchiveIndexLoader {
           return true;
         }
         if (null == this.field_d) {
-          if (this.field_j.d(74)) {
+          if (this.field_j.isPriorityQueueFull(74)) {
             return false;
           }
-          this.field_d = this.field_j.a(true, -21, 255, (byte) 0, 255);
+          this.field_d = this.field_j.requestGroup(true, -21, 255, (byte) 0, 255);
         }
         if (this.field_d.pending) {
           return false;
@@ -215,18 +215,18 @@ final class ArchiveIndexLoader {
         }
     }
 
-    ArchiveIndexLoader(ona param0, ArchiveDiskWorker param1) {
+    ArchiveIndexLoader(NetworkArchiveClient param0, ArchiveDiskWorker param1) {
         this(param0, param1, (java.math.BigInteger) null, (java.math.BigInteger) null);
     }
 
-    private ArchiveIndexLoader(ona param0, ArchiveDiskWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
+    private ArchiveIndexLoader(NetworkArchiveClient param0, ArchiveDiskWorker param1, java.math.BigInteger param2, java.math.BigInteger param3) {
         try {
           this.signatureModulus = param3;
           this.signatureExponent = param2;
           this.field_i = param1;
           this.field_j = param0;
-          if (!this.field_j.d(52)) {
-            this.field_d = this.field_j.a(true, -21, 255, (byte) 0, 255);
+          if (!this.field_j.isPriorityQueueFull(52)) {
+            this.field_d = this.field_j.requestGroup(true, -21, 255, (byte) 0, 255);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fwa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ')');

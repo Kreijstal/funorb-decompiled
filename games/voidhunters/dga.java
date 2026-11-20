@@ -102,7 +102,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("ticketing_xunread", 23100);
                 if (var2 != null) {
-                  bva.field_g = qpa.a((byte) -125, var2);
+                  OpenGlVertexDeclaration.field_g = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("ticketing_gotowebsite", 23100);
                 if (null != var2) {
@@ -398,7 +398,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("report_x_for_abuse", 23100);
                 if (var2 != null) {
-                  ona.field_l = qpa.a((byte) -125, var2);
+                  NetworkArchiveClient.field_l = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("unable_to_send_message_password_a", 23100);
                 if (var2 != null) {
@@ -888,7 +888,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_inviteplayers_or_trychanging1", 23100);
                 if (null != var2) {
-                  jra.field_b = qpa.a((byte) -125, var2);
+                  PrimitiveType.field_b = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_inviteplayers_or_trychanging2", 23100);
                 if (var2 != null) {
@@ -1850,7 +1850,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("unpacking_soundeffects", 23100);
                 if (var2 != null) {
-                  bva.field_e = qpa.a((byte) -125, var2);
+                  OpenGlVertexDeclaration.field_e = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("unpacking_music", 23100);
                 if (var2 != null) {

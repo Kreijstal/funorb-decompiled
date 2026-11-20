@@ -131,12 +131,12 @@ final class tib extends eca {
         if (!param0) {
           field_h = (mma) null;
           if (!li.field_i) {
-            return ita.a(param1, 7988).field_k;
+            return ita.a(param1, 7988).maxAscent;
           }
           return SetTorpedoEnergyUsed.a(param1, 300).field_c;
         }
         if (!li.field_i) {
-          return ita.a(param1, 7988).field_k;
+          return ita.a(param1, 7988).maxAscent;
         }
         return SetTorpedoEnergyUsed.a(param1, 300).field_c;
     }

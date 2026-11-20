@@ -211,7 +211,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           rma.field_b = param1[20];
           SetUseRectFill.field_p = param1[184];
           sja.field_b = param1[44];
-          mq.field_j = param1[95];
+          OpenGlIndexBuffer.field_j = param1[95];
           mmb.field_i = param1[131];
           SetThrusterBindingBalanceThreshold.field_p = param1[135];
           ujb.field_h = param1[108];

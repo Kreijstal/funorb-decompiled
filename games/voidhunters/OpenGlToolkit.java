@@ -28,7 +28,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     int field_Mc;
     private OpenGlSprite field_qc;
     private int field_rc;
-    private vga field_E;
+    private SecondaryNodeQueue field_E;
     private jaa[] field_kc;
     private jaa[] field_p;
     private rpa field_jb;
@@ -602,7 +602,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               var3 = var9;
               this.field_Gc = this.field_Gc + 4 * var9.field_m;
               while (this.field_Gc > 2097152) {
-                var4 = this.field_E.b(1);
+                var4 = this.field_E.removeLast(1);
                 if (var4 != null) {
                   var10 = (tob) (var4);
                   var10.unlinkSecondary((byte) -35);
@@ -615,7 +615,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               }
               this.field_Ic.put((long)(this.field_qc.getWidth() << 16 | this.field_qc.getHeight()), var9, (byte) -120);
             }
-            this.field_E.a((DualLinkNode) (var3), (byte) -22);
+            this.field_E.addFirst((DualLinkNode) (var3), (byte) -22);
             this.field_c.setPbuffer(var3.f(-128));
           } else {
             if (this.field_jb == null) {
@@ -632,7 +632,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 var3_ref = var7;
                 this.field_Gc = this.field_Gc + var7.field_m;
                 while (this.field_Gc > 2097152) {
-                  var4 = this.field_E.b(1);
+                  var4 = this.field_E.removeLast(1);
                   if (var4 != null) {
                     var8 = (nv) (var4);
                     var8.unlinkSecondary((byte) -35);
@@ -645,7 +645,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 }
                 this.field_Ic.put((long)(this.field_qc.getWidth() << 16 | this.field_qc.getHeight()), var7, (byte) -124);
               }
-              this.field_E.a((DualLinkNode) (var3_ref), (byte) -22);
+              this.field_E.addFirst((DualLinkNode) (var3_ref), (byte) -22);
               this.field_jb.a(8, var3_ref, (byte) -20);
             }
             this.field_jb.a(0, (byte) -126, this.field_qc.texture);
@@ -1742,7 +1742,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_kc = new jaa[4];
         this.field_Oc = -1;
         this.field_Gb = new jaa[4];
-        this.field_E = new vga();
+        this.field_E = new SecondaryNodeQueue();
         this.field_Ic = new NodeHashTable(16);
         this.field_v = new IntrusiveDeque();
         this.field_xc = new IntrusiveDeque();

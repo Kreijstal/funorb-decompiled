@@ -123,18 +123,18 @@ final class SetReverbDry extends ConsoleCommand {
         eu.field_h = null;
         int var2 = SetDefaultFiringLeeway.field_p;
         SetDefaultFiringLeeway.field_p = GetLaserProjectiles.field_p;
-        GetAutozoomAmountMultiply.field_o.field_g = GetAutozoomAmountMultiply.field_o.field_g + 1;
+        GetAutozoomAmountMultiply.field_o.errorCount = GetAutozoomAmountMultiply.field_o.errorCount + 1;
         if (param0 >= -60) {
           field_o = -4;
           GetLaserProjectiles.field_p = var2;
           if (param1 == 51) {
-            GetAutozoomAmountMultiply.field_o.field_k = 2;
-            if (2 > GetAutozoomAmountMultiply.field_o.field_g) {
-              if (GetAutozoomAmountMultiply.field_o.field_g >= 2 &&
+            GetAutozoomAmountMultiply.field_o.errorStatus = 2;
+            if (2 > GetAutozoomAmountMultiply.field_o.errorCount) {
+              if (GetAutozoomAmountMultiply.field_o.errorCount >= 2 &&
                 param1 == 50) {
                 return 5;
               }
-              if (!(GetAutozoomAmountMultiply.field_o.field_g < 4)) {
+              if (!(GetAutozoomAmountMultiply.field_o.errorCount < 4)) {
                 return 1;
               }
               return -1;
@@ -142,8 +142,8 @@ final class SetReverbDry extends ConsoleCommand {
             if (param1 == 51) {
               return 2;
             }
-            if (GetAutozoomAmountMultiply.field_o.field_g < 2) {
-              if (!(GetAutozoomAmountMultiply.field_o.field_g < 4)) {
+            if (GetAutozoomAmountMultiply.field_o.errorCount < 2) {
+              if (!(GetAutozoomAmountMultiply.field_o.errorCount < 4)) {
                 return 1;
               }
               return -1;
@@ -151,19 +151,19 @@ final class SetReverbDry extends ConsoleCommand {
             if (param1 == 50) {
               return 5;
             }
-            if (!(GetAutozoomAmountMultiply.field_o.field_g < 4)) {
+            if (!(GetAutozoomAmountMultiply.field_o.errorCount < 4)) {
               return 1;
             }
             return -1;
           }
           if (param1 != 50) {
-            GetAutozoomAmountMultiply.field_o.field_k = 1;
-            if (2 > GetAutozoomAmountMultiply.field_o.field_g) {
-              if (GetAutozoomAmountMultiply.field_o.field_g >= 2 &&
+            GetAutozoomAmountMultiply.field_o.errorStatus = 1;
+            if (2 > GetAutozoomAmountMultiply.field_o.errorCount) {
+              if (GetAutozoomAmountMultiply.field_o.errorCount >= 2 &&
                 param1 == 50) {
                 return 5;
               }
-              if (!(GetAutozoomAmountMultiply.field_o.field_g < 4)) {
+              if (!(GetAutozoomAmountMultiply.field_o.errorCount < 4)) {
                 return 1;
               }
               return -1;
@@ -171,8 +171,8 @@ final class SetReverbDry extends ConsoleCommand {
             if (param1 == 51) {
               return 2;
             }
-            if (GetAutozoomAmountMultiply.field_o.field_g < 2) {
-              if (!(GetAutozoomAmountMultiply.field_o.field_g < 4)) {
+            if (GetAutozoomAmountMultiply.field_o.errorCount < 2) {
+              if (!(GetAutozoomAmountMultiply.field_o.errorCount < 4)) {
                 return 1;
               }
               return -1;
@@ -180,18 +180,18 @@ final class SetReverbDry extends ConsoleCommand {
             if (param1 == 50) {
               return 5;
             }
-            if (!(GetAutozoomAmountMultiply.field_o.field_g < 4)) {
+            if (!(GetAutozoomAmountMultiply.field_o.errorCount < 4)) {
               return 1;
             }
             return -1;
           }
-          GetAutozoomAmountMultiply.field_o.field_k = 5;
-          if (2 > GetAutozoomAmountMultiply.field_o.field_g) {
-            if (GetAutozoomAmountMultiply.field_o.field_g >= 2 &&
+          GetAutozoomAmountMultiply.field_o.errorStatus = 5;
+          if (2 > GetAutozoomAmountMultiply.field_o.errorCount) {
+            if (GetAutozoomAmountMultiply.field_o.errorCount >= 2 &&
               param1 == 50) {
               return 5;
             }
-            if (!(GetAutozoomAmountMultiply.field_o.field_g < 4)) {
+            if (!(GetAutozoomAmountMultiply.field_o.errorCount < 4)) {
               return 1;
             }
             return -1;
@@ -199,8 +199,8 @@ final class SetReverbDry extends ConsoleCommand {
           if (param1 == 51) {
             return 2;
           }
-          if (GetAutozoomAmountMultiply.field_o.field_g < 2) {
-            if (!(GetAutozoomAmountMultiply.field_o.field_g < 4)) {
+          if (GetAutozoomAmountMultiply.field_o.errorCount < 2) {
+            if (!(GetAutozoomAmountMultiply.field_o.errorCount < 4)) {
               return 1;
             }
             return -1;
@@ -208,79 +208,79 @@ final class SetReverbDry extends ConsoleCommand {
           if (param1 == 50) {
             return 5;
           }
-          if (!(GetAutozoomAmountMultiply.field_o.field_g < 4)) {
+          if (!(GetAutozoomAmountMultiply.field_o.errorCount < 4)) {
             return 1;
           }
           return -1;
         }
         GetLaserProjectiles.field_p = var2;
         if (param1 == 51) {
-          GetAutozoomAmountMultiply.field_o.field_k = 2;
-          if (2 <= GetAutozoomAmountMultiply.field_o.field_g) {
+          GetAutozoomAmountMultiply.field_o.errorStatus = 2;
+          if (2 <= GetAutozoomAmountMultiply.field_o.errorCount) {
             if (param1 == 51) {
               return 2;
             }
-            if (GetAutozoomAmountMultiply.field_o.field_g >= 2 &&
+            if (GetAutozoomAmountMultiply.field_o.errorCount >= 2 &&
               param1 == 50) {
               return 5;
             }
-            if (!(GetAutozoomAmountMultiply.field_o.field_g < 4)) {
+            if (!(GetAutozoomAmountMultiply.field_o.errorCount < 4)) {
               return 1;
             }
             return -1;
           }
-          if (GetAutozoomAmountMultiply.field_o.field_g >= 2 &&
+          if (GetAutozoomAmountMultiply.field_o.errorCount >= 2 &&
             param1 == 50) {
             return 5;
           }
-          if (!(GetAutozoomAmountMultiply.field_o.field_g < 4)) {
+          if (!(GetAutozoomAmountMultiply.field_o.errorCount < 4)) {
             return 1;
           }
           return -1;
         }
         if (param1 != 50) {
-          GetAutozoomAmountMultiply.field_o.field_k = 1;
-          if (2 <= GetAutozoomAmountMultiply.field_o.field_g) {
+          GetAutozoomAmountMultiply.field_o.errorStatus = 1;
+          if (2 <= GetAutozoomAmountMultiply.field_o.errorCount) {
             if (param1 == 51) {
               return 2;
             }
-            if (GetAutozoomAmountMultiply.field_o.field_g >= 2 &&
+            if (GetAutozoomAmountMultiply.field_o.errorCount >= 2 &&
               param1 == 50) {
               return 5;
             }
-            if (!(GetAutozoomAmountMultiply.field_o.field_g < 4)) {
+            if (!(GetAutozoomAmountMultiply.field_o.errorCount < 4)) {
               return 1;
             }
             return -1;
           }
-          if (GetAutozoomAmountMultiply.field_o.field_g >= 2 &&
+          if (GetAutozoomAmountMultiply.field_o.errorCount >= 2 &&
             param1 == 50) {
             return 5;
           }
-          if (!(GetAutozoomAmountMultiply.field_o.field_g < 4)) {
+          if (!(GetAutozoomAmountMultiply.field_o.errorCount < 4)) {
             return 1;
           }
           return -1;
         }
-        GetAutozoomAmountMultiply.field_o.field_k = 5;
-        if (2 <= GetAutozoomAmountMultiply.field_o.field_g) {
+        GetAutozoomAmountMultiply.field_o.errorStatus = 5;
+        if (2 <= GetAutozoomAmountMultiply.field_o.errorCount) {
           if (param1 == 51) {
             return 2;
           }
-          if (GetAutozoomAmountMultiply.field_o.field_g >= 2 &&
+          if (GetAutozoomAmountMultiply.field_o.errorCount >= 2 &&
             param1 == 50) {
             return 5;
           }
-          if (!(GetAutozoomAmountMultiply.field_o.field_g < 4)) {
+          if (!(GetAutozoomAmountMultiply.field_o.errorCount < 4)) {
             return 1;
           }
           return -1;
         }
-        if (GetAutozoomAmountMultiply.field_o.field_g >= 2 &&
+        if (GetAutozoomAmountMultiply.field_o.errorCount >= 2 &&
           param1 == 50) {
           return 5;
         }
-        if (!(GetAutozoomAmountMultiply.field_o.field_g < 4)) {
+        if (!(GetAutozoomAmountMultiply.field_o.errorCount < 4)) {
           return 1;
         }
         return -1;

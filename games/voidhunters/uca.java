@@ -161,7 +161,7 @@ final class uca {
           return false;
         }
         if (!li.field_i) {
-          dma.f(param1, param4, param2, 0);
+          SoftwareRasterizer2D.fillCircle(param1, param4, param2, 0);
         } else {
           GetDebrisGroupColour.field_r.fillCircle(param1, param4, param2, 0, 0);
         }
@@ -620,10 +620,10 @@ final class uca {
             li.field_i = false;
           }
           if (!li.field_i && (null == OpenGlTransform3D.field_m ||
-            OpenGlTransform3D.field_m.field_q != PartitionZoneFactory.field_a ||
-            OpenGlTransform3D.field_m.field_p != MissionVariableFactory.field_a)) {
+            OpenGlTransform3D.field_m.width != PartitionZoneFactory.field_a ||
+            OpenGlTransform3D.field_m.height != MissionVariableFactory.field_a)) {
             GetDebrisThrowable.a(false, "Creating a new g1 fog of war sprite");
-            OpenGlTransform3D.field_m = (Sprite) ((Object) new jva(PartitionZoneFactory.field_a, MissionVariableFactory.field_a));
+            OpenGlTransform3D.field_m = (Sprite) ((Object) new ArgbSprite(PartitionZoneFactory.field_a, MissionVariableFactory.field_a));
             if (var6 != 0) {
               GetGrapplingHooksDamageableBySourcePlayer.field_p = null;
             }
@@ -650,7 +650,7 @@ final class uca {
               var7 = 0;
               if (!li.field_i) {
                 SetTorpedoEnergyUsed.a(107, OpenGlTransform3D.field_m);
-                dma.d(0, 0, PartitionZoneFactory.field_a, MissionVariableFactory.field_a, -1442840576);
+                SoftwareRasterizer2D.fillRectangle(0, 0, PartitionZoneFactory.field_a, MissionVariableFactory.field_a, -1442840576);
               } else {
                 SetUseBackground.field_o.a(GetGrapplingHooksDamageableBySourcePlayer.field_p, 0);
                 GetDebrisGroupColour.field_r.clearColor(-1442840576);
@@ -739,9 +739,9 @@ final class uca {
                           bia.a((byte) 124);
                           if ((var7 == 0)) {
                             if (var6 != 0) {
-                              OpenGlTransform3D.field_m.a(0, 0);
+                              OpenGlTransform3D.field_m.draw(0, 0);
                             } else {
-                              GetGrapplingHooksDamageableBySourcePlayer.field_p.writePixels(0, 0, OpenGlTransform3D.field_m.field_q, OpenGlTransform3D.field_m.field_p, OpenGlTransform3D.field_m.field_r, 0, OpenGlTransform3D.field_m.field_q);
+                              GetGrapplingHooksDamageableBySourcePlayer.field_p.writePixels(0, 0, OpenGlTransform3D.field_m.width, OpenGlTransform3D.field_m.height, OpenGlTransform3D.field_m.pixels, 0, OpenGlTransform3D.field_m.width);
                               GetGrapplingHooksDamageableBySourcePlayer.field_p.draw(0, 0);
                             }
                           }
@@ -790,9 +790,9 @@ final class uca {
                         bia.a((byte) 124);
                         if ((var7 == 0)) {
                           if (var6 != 0) {
-                            OpenGlTransform3D.field_m.a(0, 0);
+                            OpenGlTransform3D.field_m.draw(0, 0);
                           } else {
-                            GetGrapplingHooksDamageableBySourcePlayer.field_p.writePixels(0, 0, OpenGlTransform3D.field_m.field_q, OpenGlTransform3D.field_m.field_p, OpenGlTransform3D.field_m.field_r, 0, OpenGlTransform3D.field_m.field_q);
+                            GetGrapplingHooksDamageableBySourcePlayer.field_p.writePixels(0, 0, OpenGlTransform3D.field_m.width, OpenGlTransform3D.field_m.height, OpenGlTransform3D.field_m.pixels, 0, OpenGlTransform3D.field_m.width);
                             GetGrapplingHooksDamageableBySourcePlayer.field_p.draw(0, 0);
                           }
                         }
@@ -831,9 +831,9 @@ final class uca {
                 bia.a((byte) 124);
                 if (var7 == 0) {
                   if (var6 != 0) {
-                    OpenGlTransform3D.field_m.a(0, 0);
+                    OpenGlTransform3D.field_m.draw(0, 0);
                   } else {
-                    GetGrapplingHooksDamageableBySourcePlayer.field_p.writePixels(0, 0, OpenGlTransform3D.field_m.field_q, OpenGlTransform3D.field_m.field_p, OpenGlTransform3D.field_m.field_r, 0, OpenGlTransform3D.field_m.field_q);
+                    GetGrapplingHooksDamageableBySourcePlayer.field_p.writePixels(0, 0, OpenGlTransform3D.field_m.width, OpenGlTransform3D.field_m.height, OpenGlTransform3D.field_m.pixels, 0, OpenGlTransform3D.field_m.width);
                     GetGrapplingHooksDamageableBySourcePlayer.field_p.draw(0, 0);
                   }
                 }
@@ -942,7 +942,7 @@ final class uca {
           this.field_R = ffa.field_a;
         }
         if (GraphicsPresentException.field_a) {
-          ShipTeamConditionFactory.field_a.field_e = ShipTeamConditionFactory.field_a.field_e - (-SetToggledScoreboard.field_o.field_u + dma.field_j >> 1);
+          ShipTeamConditionFactory.field_a.field_e = ShipTeamConditionFactory.field_a.field_e - (-SetToggledScoreboard.field_o.field_u + SoftwareRasterizer2D.height >> 1);
         }
         if (SetPhasedEnergyBeamAimspeed.field_q == 1 &&
           ffa.field_a < 20 &&
@@ -2754,7 +2754,7 @@ final class uca {
                 var14 = var13 - (var12 >> 1);
                 var15 = GetLaserAimarc.field_q - 170;
                 if (GraphicsPresentException.field_a) {
-                  var15 = var15 - (dma.field_j - SetToggledScoreboard.field_o.field_u);
+                  var15 = var15 - (SoftwareRasterizer2D.height - SetToggledScoreboard.field_o.field_u);
                 }
                 var16 = 260;
                 BlackBoxRecording.a((byte) -115, 200, var16, var14, var15, var12);
@@ -3374,7 +3374,7 @@ final class uca {
                 boolean decompiledFrameRemainder0 = true;
                 var4_int = GetSniperCannonAimarc.field_p;
                 var5 = PartitionZoneFactory.field_a - (12 + var4_int);
-                var6 = -ifa.field_d - 12 + (MissionVariableFactory.field_a + SetToggledScoreboard.field_o.field_u - dma.field_j);
+                var6 = -ifa.field_d - 12 + (MissionVariableFactory.field_a + SetToggledScoreboard.field_o.field_u - SoftwareRasterizer2D.height);
                 if ((this.field_v != null &&
                   !this.field_v.a(1, true)) &&
                   (decompiledFrameRemainder0 = !(!this.field_v.b(1, -34)))) {
@@ -5139,7 +5139,7 @@ final class uca {
         if (this.e((byte) 126) &&
           li.field_i) {
           var2 = -(AdjustVariableActionFactory.field_a.field_hb / 2) + SetMassDriverReload.field_p;
-          var3 = MissionVariableFactory.field_a + (SetToggledScoreboard.field_o.field_u - dma.field_j) - AdjustVariableActionFactory.field_a.field_G;
+          var3 = MissionVariableFactory.field_a + (SetToggledScoreboard.field_o.field_u - SoftwareRasterizer2D.height) - AdjustVariableActionFactory.field_a.field_G;
           AdjustVariableActionFactory.field_a.field_L = var2;
           AdjustVariableActionFactory.field_a.field_M = var2;
           AdjustVariableActionFactory.field_a.field_K = var3;
@@ -6508,7 +6508,7 @@ final class uca {
             }
             var11 = 0;
             var12 = SetFighterBayAimarc.field_o;
-            var13 = MissionVariableFactory.field_a - dma.field_j + SetToggledScoreboard.field_o.field_u;
+            var13 = MissionVariableFactory.field_a - SoftwareRasterizer2D.height + SetToggledScoreboard.field_o.field_u;
             var14 = -GetSalvoDamageMultiplier.field_p + var13;
             if (this.field_i < 255) {
               var14 = var14 + (255 - this.field_i) / 4;
@@ -7486,7 +7486,7 @@ final class uca {
             AdjustVariableActionFactory.field_a.field_R = ita.field_A;
           }
           var3 = -(AdjustVariableActionFactory.field_a.field_hb / 2) + SetMassDriverReload.field_p;
-          var4 = -AdjustVariableActionFactory.field_a.field_G + (MissionVariableFactory.field_a + (SetToggledScoreboard.field_o.field_u - dma.field_j));
+          var4 = -AdjustVariableActionFactory.field_a.field_G + (MissionVariableFactory.field_a + (SetToggledScoreboard.field_o.field_u - SoftwareRasterizer2D.height));
           if (!SetFightersPerPlayerMaximum.field_p ||
             SetMissionTerrainDebrisProbability.field_p) {
             if (SetNebulaProximityFadeDownshift.field_o) {
@@ -7511,9 +7511,9 @@ final class uca {
             if (AdjustVariableActionFactory.field_a.field_O) {
               this.field_l = true;
             }
-            if ((-dma.field_g + PartitionZoneFactory.field_a) / 2 < GetUseDetailLines.field_o &&
-              GetUseDetailLines.field_o < -((-dma.field_g + PartitionZoneFactory.field_a) / 2) + PartitionZoneFactory.field_a &&
-              GetTorpedoReload.field_q > -dma.field_j - (-SetToggledScoreboard.field_o.field_u - MissionVariableFactory.field_a)) {
+            if ((-SoftwareRasterizer2D.width + PartitionZoneFactory.field_a) / 2 < GetUseDetailLines.field_o &&
+              GetUseDetailLines.field_o < -((-SoftwareRasterizer2D.width + PartitionZoneFactory.field_a) / 2) + PartitionZoneFactory.field_a &&
+              GetTorpedoReload.field_q > -SoftwareRasterizer2D.height - (-SetToggledScoreboard.field_o.field_u - MissionVariableFactory.field_a)) {
               this.field_l = true;
             }
             if (AdjustVariableActionFactory.field_a.field_o == 1) {
@@ -7984,24 +7984,24 @@ final class uca {
           param3.field_dc.b(false, -103);
           var6 = param3.field_Pb[0];
           var7 = SetTorpedoProjectileDamage.field_p[0][var6];
-          var8 = 2 + param3.field_Tb.field_eb.b(param3.field_Tb.field_R);
+          var8 = 2 + param3.field_Tb.field_eb.getStringWidth(param3.field_Tb.field_R);
           var9 = param3.field_dc.field_hb + param3.field_Sb.field_hb;
           if (var7 != null) {
-            var9 = var9 + (4 + var7.field_q);
+            var9 = var9 + (4 + var7.width);
             var10 = 8 + (param3.field_Sb.field_hb + var5_int) + param3.field_dc.field_L;
             var11 = 1 + param2;
-            var7.a(var10, var11);
+            var7.draw(var10, var11);
             if (var10 <= PlayerGameData.field_b &&
-              var10 + var7.field_q >= PlayerGameData.field_b &&
+              var10 + var7.width >= PlayerGameData.field_b &&
               uia.field_b >= var11 &&
-              var11 + var7.field_p >= uia.field_b) {
+              var11 + var7.height >= uia.field_b) {
               GetMassDriverReload.a(GetBombletSprayRandomness.field_q[0][var6], -53);
             }
             var8 = Math.max(var8, var9);
           }
           var10Lifetime1 = param3.field_Sb.field_G + param3.field_Tb.field_G;
           param0.a(var5_int, var8 + var5_int, param2, var10Lifetime1 + param2, (byte) -30);
-          GetDebrisGroupColour.field_r.writePixels(0, param2, dma.field_g, var10Lifetime1, dma.field_i, param2 * dma.field_g, dma.field_g);
+          GetDebrisGroupColour.field_r.writePixels(0, param2, SoftwareRasterizer2D.width, var10Lifetime1, SoftwareRasterizer2D.pixels, param2 * SoftwareRasterizer2D.width, SoftwareRasterizer2D.width);
           param0.a(true);
           var11Lifetime1 = 6;
           var12 = 2;

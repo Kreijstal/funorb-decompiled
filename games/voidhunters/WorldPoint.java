@@ -27,11 +27,11 @@ final class WorldPoint {
         try {
           var6 = SetGrapplingHookRopeBreakLength.a(param3, true, param2, param0);
           var4 = var6;
-          var6[1].field_m = var6[1].field_q;
+          var6[1].paddedWidth = var6[1].width;
           var5 = -55 % ((13 - param1) / 38);
-          var6[3].field_n = var6[3].field_p;
-          var6[5].field_n = var6[5].field_p;
-          var6[7].field_m = var6[7].field_q;
+          var6[3].paddedHeight = var6[3].height;
+          var6[5].paddedHeight = var6[5].height;
+          var6[7].paddedWidth = var6[7].width;
           stackIn_1_0 = var4;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

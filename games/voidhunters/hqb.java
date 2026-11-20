@@ -520,7 +520,7 @@ final class hqb {
           BodyInZoneConditionFactory.field_a != this.field_d) {
           var3 = this.b((byte) -110);
           String var2 = var3;
-          this.field_i.a(SetReverbGain.a(ona.field_l, new String[]{var3}, 83), (byte) -53, 17);
+          this.field_i.a(SetReverbGain.a(NetworkArchiveClient.field_l, new String[]{var3}, 83), (byte) -53, 17);
         }
         if (param0 != -9923) {
           this.a(-125, false);

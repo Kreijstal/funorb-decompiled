@@ -18,36 +18,36 @@ final class uwa {
         Sprite var13 = null;
         Object var14 = null;
         Sprite var16 = null;
-        int[] var18 = dma.field_i;
+        int[] var18 = SoftwareRasterizer2D.pixels;
         int[] var17 = var18;
         int[] var15 = var17;
         int[] var6 = var15;
-        int var7 = dma.field_g;
-        int var8 = dma.field_j;
+        int var7 = SoftwareRasterizer2D.width;
+        int var8 = SoftwareRasterizer2D.height;
         Sprite var9 = new Sprite(param5, param1 - param5 * 2);
-        var9.b();
-        dma.c(0, 0, param5, param1 - param5 * 2, param0, param3);
+        var9.setRasterTarget();
+        SoftwareRasterizer2D.fillGradientRectangle(0, 0, param5, param1 - param5 * 2, param0, param3);
         Sprite var10 = new Sprite(param5, param5);
         if (param4 > 86) {
-          var10.b();
-          dma.d(0, 0, param5, param5, param0);
+          var10.setRasterTarget();
+          SoftwareRasterizer2D.fillRectangle(0, 0, param5, param5, param0);
           var11 = new Sprite(16, param5);
-          var11.b();
-          dma.d(0, 0, 16, param5, param0);
+          var11.setRasterTarget();
+          SoftwareRasterizer2D.fillRectangle(0, 0, 16, param5, param0);
           var12 = new Sprite(param5, param5);
-          var12.b();
-          dma.d(0, 0, param5, param5, param3);
+          var12.setRasterTarget();
+          SoftwareRasterizer2D.fillRectangle(0, 0, param5, param5, param3);
           var13 = new Sprite(16, param5);
-          var13.b();
-          dma.d(0, 0, 16, param5, param3);
+          var13.setRasterTarget();
+          SoftwareRasterizer2D.fillRectangle(0, 0, 16, param5, param3);
           var14 = null;
           if (param2 > 0) {
             var16 = new Sprite(16, 16);
             var14 = var16;
-            var16.b();
-            dma.d(0, 0, 16, 16, param2);
+            var16.setRasterTarget();
+            SoftwareRasterizer2D.fillRectangle(0, 0, 16, 16, param2);
           }
-          dma.a(var18, var7, var8);
+          SoftwareRasterizer2D.setTarget(var18, var7, var8);
           return new Sprite[]{var10, var11, var10, var9, (Sprite) (var14), var9, var12, var13, var12};
         }
         return (Sprite[]) null;

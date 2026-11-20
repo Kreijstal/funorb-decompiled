@@ -29,11 +29,11 @@ final class GetFighterBayAimspeed extends ConsoleCommand {
         }
     }
 
-    final static ngb a(int param0, String param1, ResourceArchive param2, ResourceArchive param3, String param4) {
+    final static SoftwareAlphaBitmapFont a(int param0, String param1, ResourceArchive param2, ResourceArchive param3, String param4) {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
-        ngb stackIn_3_0 = null;
+        SoftwareAlphaBitmapFont stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;

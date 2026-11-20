@@ -10,7 +10,7 @@ final class qva extends kva implements hdb {
     }
 
     qva(OpenGlGpuToolkit param0, int param1, boolean param2, int[][] param3) {
-        super(param0, 34067, ComponentAttachmentPlan.field_d, mj.field_f, 6 * param1 * param1, param2);
+        super(param0, 34067, ComponentAttachmentPlan.field_d, GpuDataType.field_f, 6 * param1 * param1, param2);
         int var5_int = 0;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;

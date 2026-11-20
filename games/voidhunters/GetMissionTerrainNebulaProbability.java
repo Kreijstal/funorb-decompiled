@@ -20,19 +20,19 @@ final class GetMissionTerrainNebulaProbability extends ConsoleCommand {
           var1 = new Sprite(540, 140);
           SetTorpedoEnergyUsed.a(29, var1);
           bfb.e();
-          dma.a();
+          SoftwareRasterizer2D.clear();
           SetSalvoaim.field_r = 0;
           Transform3D.a((byte) 74);
-          var2 = var1.d();
+          var2 = var1.copy();
           for (var3 = 0; var3 < 15; var3++) {
-            var2.b(-2, -2, 16777215);
-            dma.a(4, 4, 0, 0, 540, 140);
+            var2.drawMask(-2, -2, 16777215);
+            SoftwareRasterizer2D.blurRectangle(4, 4, 0, 0, 540, 140);
           }
           if (param0 <= 54) {
             field_q = false;
           }
-          GetWorldWidthUpshift.field_p.b();
-          var1.d(0, 0);
+          GetWorldWidthUpshift.field_p.setRasterTarget();
+          var1.drawHalfSize(0, 0);
           bia.a((byte) 124);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ls.C(" + param0 + ')');

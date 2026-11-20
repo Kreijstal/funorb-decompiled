@@ -46,15 +46,15 @@ abstract class iw extends bl {
         int var12Lifetime1;
         int var13Lifetime1;
         var16 = VoidHunters.field_G;
-        dma.c(6 + param2, param0 + 35, this.field_h - 12, -40 + this.field_f, 2105376, 0);
+        SoftwareRasterizer2D.fillGradientRectangle(6 + param2, param0 + 35, this.field_h - 12, -40 + this.field_f, 2105376, 0);
         var4 = 35;
         var5 = 211;
         var6 = 194;
         var7 = 0;
         var8 = param0;
         while (var7 < var4) {
-          if (dma.field_c <= var8 &&
-            var8 < dma.field_f) {
+          if (SoftwareRasterizer2D.clipTop <= var8 &&
+            var8 < SoftwareRasterizer2D.clipBottom) {
             var9 = var5 + (-var5 + var6) * var7 / var4;
             var10 = 0;
             var11 = this.field_h;
@@ -67,7 +67,7 @@ abstract class iw extends bl {
                   }
                   var13 = (462 - var12) * var9 / 42;
                   var13 = var13 | (var13 << 16 | var13 << 8);
-                  dma.field_i[var10 + (var8 * dma.field_g + param2)] = var13;
+                  SoftwareRasterizer2D.pixels[var10 + (var8 * SoftwareRasterizer2D.width + param2)] = var13;
                 }
                 var10++;
               }
@@ -83,7 +83,7 @@ abstract class iw extends bl {
                   } else {
                     var15 = var9 * (462 - var14) / 42;
                     var15 = var15 | (var15 << 8 | var15 << 16);
-                    dma.field_i[dma.field_g * var8 + param2 + var11] = var15;
+                    SoftwareRasterizer2D.pixels[SoftwareRasterizer2D.width * var8 + param2 + var11] = var15;
                   }
                   var11++;
                   continue;
@@ -93,7 +93,7 @@ abstract class iw extends bl {
               var11 = var12Lifetime1;
             }
             var9 = var9 | (var9 << 8 | var9 << 16);
-            dma.h(var10 + param2, var8, var11 - var10, var9);
+            SoftwareRasterizer2D.drawHorizontalLine(var10 + param2, var8, var11 - var10, var9);
           }
           var8++;
           var7++;
@@ -106,12 +106,12 @@ abstract class iw extends bl {
         while (var7Lifetime1 < var4Lifetime1) {
           var9Lifetime1 = var5Lifetime1 + (var6Lifetime1 - var5Lifetime1) * var7Lifetime1 / var4Lifetime1;
           var9Lifetime1 = var9Lifetime1 | (var9Lifetime1 << 16 | var9Lifetime1 << 8);
-          dma.h(param2, var8Lifetime1, 6, var9Lifetime1);
-          dma.h(-6 + (param2 + this.field_h), var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer2D.drawHorizontalLine(param2, var8Lifetime1, 6, var9Lifetime1);
+          SoftwareRasterizer2D.drawHorizontalLine(-6 + (param2 + this.field_h), var8Lifetime1, 6, var9Lifetime1);
           var8Lifetime1++;
           var7Lifetime1++;
         }
-        wf.field_a.a(-90 + this.field_h + param2, 10 + param0);
+        wf.field_a.draw(-90 + this.field_h + param2, 10 + param0);
         GetMissionResnetResourceTickTime.a(param1 ^ 1630174240, 35 + param0, SetCountermeasureLauncherAimarc.field_p, 5 + param2, this.field_h - 10);
         if (param1 != 1630174241) {
           this.a(59);
@@ -125,8 +125,8 @@ abstract class iw extends bl {
         while (var7Lifetime2 < var4Lifetime2) {
           var9Lifetime2 = var7Lifetime2 * (-var5Lifetime2 + var6Lifetime2) / var4Lifetime2 + var5Lifetime2;
           var9Lifetime2 = var9Lifetime2 | (var9Lifetime2 << 16 | var9Lifetime2 << 8);
-          dma.h(param2, var8Lifetime2, 6, var9Lifetime2);
-          dma.h(-6 + this.field_h + param2, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer2D.drawHorizontalLine(param2, var8Lifetime2, 6, var9Lifetime2);
+          SoftwareRasterizer2D.drawHorizontalLine(-6 + this.field_h + param2, var8Lifetime2, 6, var9Lifetime2);
           var7Lifetime2++;
           var8Lifetime2++;
         }
@@ -226,9 +226,9 @@ abstract class iw extends bl {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               GetShieldsToggleCooldown.a(var14, true);
               if (var6_intLifetime1 != 0) {
-                ujb.a(SetCountermeasuresPulseRadius.field_q, GetCountermeasureLauncherFireForce.field_o, vga.field_d, 13336, var6_intLifetime1, jv.field_b);
+                ujb.a(SetCountermeasuresPulseRadius.field_q, GetCountermeasureLauncherFireForce.field_o, SecondaryNodeQueue.field_d, 13336, var6_intLifetime1, jv.field_b);
               } else {
-                ujb.a(SetCountermeasuresPulseRadius.field_q, GetCountermeasureLauncherFireForce.field_o, vga.field_d, 13336, var6_intLifetime1, jv.field_b);
+                ujb.a(SetCountermeasuresPulseRadius.field_q, GetCountermeasureLauncherFireForce.field_o, SecondaryNodeQueue.field_d, 13336, var6_intLifetime1, jv.field_b);
               }
             }
             SetLaserRandomness.a((byte) -29, var5);

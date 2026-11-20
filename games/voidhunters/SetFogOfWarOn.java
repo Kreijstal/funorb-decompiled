@@ -76,7 +76,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_special_order_box_width(" + chb.field_a + ")");
         System.out.println("set_special_order_box_height(" + CarouselSlotStateDump.field_g + ")");
         System.out.println("set_mission_variables_hud_x(" + GetBoostersActiveTime.field_p + ")");
-        System.out.println("set_mission_variables_hud_y(" + jra.field_c + ")");
+        System.out.println("set_mission_variables_hud_y(" + PrimitiveType.field_c + ")");
         System.out.println("set_audio_range_cutoff(" + Projectile.field_q + ")");
         System.out.println("set_reverb_gain(" + SetMissileLauncherEnergyUsed.field_p + ")");
         System.out.println("set_reverb_feedback(" + ComponentAttachmentPlan.field_b + ")");
@@ -209,7 +209,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_bomblet_spray_projectile_life(" + GetReadyRoomMissionTime.field_p + ")");
         System.out.println("set_sniper_cannon_projectile_life(" + SetAiFiringRangeUpshift.field_p + ")");
         System.out.println("set_missile_launcher_projectile_life(" + SetTorpedoEnergyUsed.field_q + ")");
-        System.out.println("set_countermeasure_launcher_projectile_life(" + mq.field_j + ")");
+        System.out.println("set_countermeasure_launcher_projectile_life(" + OpenGlIndexBuffer.field_j + ")");
         System.out.println("set_default_firing_leeway(" + NebulaFieldFactory.field_b + ")");
         System.out.println("set_sniper_cannon_firing_leeway(" + GetAutoAfkTimeout.field_o + ")");
         System.out.println("set_mass_driver_fire_force(" + adb.field_a + ")");

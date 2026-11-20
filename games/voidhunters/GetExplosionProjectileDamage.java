@@ -176,10 +176,10 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
           SetLaserEnergyUsed.field_p[2] = 16736352;
           ConsoleCommand.field_m[4] = 16711935;
           var12 = new Sprite(4, 4);
-          var13 = var12.field_r;
-          var14 = var12.field_r;
-          var12.field_r[15] = 7368816;
-          var15 = var12.field_r;
+          var13 = var12.pixels;
+          var14 = var12.pixels;
+          var12.pixels[15] = 7368816;
+          var15 = var12.pixels;
           var15[8] = 7368816;
           var13[2] = 7368816;
           var14[5] = 7368816;
@@ -252,7 +252,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
             SetBombletSprayAimarc.field_o = new llb(0L, param5);
             SetBombletSprayAimarc.field_o.field_R = SetShieldsDirectionalArcParticleSpeedDownshift.field_r;
             SetToggledScoreboard.field_o.b(-561, SetBombletSprayAimarc.field_o);
-            stackIn_28_0 = wh.g(-126) ? 1 : 0;
+            stackIn_28_0 = SocketNetworkArchiveClient.g(-126) ? 1 : 0;
           }
           if (stackIn_28_0 != 0 &&
             !GetBloomThresholdPercentage.field_p) {

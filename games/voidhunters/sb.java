@@ -22,7 +22,7 @@ final class sb extends ora implements eb {
           this.field_j = -127;
         }
         if (this.field_c == ComponentAttachmentPlan.field_d &&
-          mj.field_f == this.field_a) {
+          GpuDataType.field_f == this.field_a) {
           var9 = this.field_d.field_zc;
           var10 = this.field_h.LockRect(0, param6, param0, param2, param1, 0, var9);
           if (jagdx.HResult.succeeded(var10, (byte) 58)) {
@@ -46,13 +46,13 @@ final class sb extends ora implements eb {
         super.a(param0, param1);
     }
 
-    sb(Direct3DToolkit param0, kb param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
+    sb(Direct3DToolkit param0, TextureFormat param1, int param2, int param3, boolean param4, byte[] param5, int param6, int param7) {
         super(null, null, null, false, param2 * param3);
         int var12 = 0;
         Object stackIn_3_0;
         Direct3DToolkit stackIn_3_1;
-        kb stackIn_3_2;
-        mj stackIn_3_3;
+        TextureFormat stackIn_3_2;
+        GpuDataType stackIn_3_3;
         int stackIn_4_4 = 0;
         int var10;
         int var11;
@@ -62,8 +62,8 @@ final class sb extends ora implements eb {
         boolean decompiledFrameRemainder0 = true;
         stackIn_3_0 = this;
         stackIn_3_1 = (Direct3DToolkit) (param0);
-        stackIn_3_2 = (kb) (param1);
-        stackIn_3_3 = mj.field_f;
+        stackIn_3_2 = (TextureFormat) (param1);
+        stackIn_3_3 = GpuDataType.field_f;
         if (param4) {
           stackIn_3_0Lifetime1 = this;
           if (param0.field_Zc) {
@@ -82,9 +82,9 @@ final class sb extends ora implements eb {
           this.field_j = GetSalvoaim.a(param3, (byte) -99);
         }
         if (!param4) {
-          this.field_h = this.field_d.field_Mc.createTexture(this.field_i, this.field_j, 1, 0, Direct3DToolkit.a(this.field_c, mj.field_f, -122), 1);
+          this.field_h = this.field_d.field_Mc.createTexture(this.field_i, this.field_j, 1, 0, Direct3DToolkit.a(this.field_c, GpuDataType.field_f, -122), 1);
         } else {
-          this.field_h = this.field_d.field_Mc.createTexture(this.field_i, this.field_j, 0, 1024, Direct3DToolkit.a(this.field_c, mj.field_f, -95), 1);
+          this.field_h = this.field_d.field_Mc.createTexture(this.field_i, this.field_j, 0, 1024, Direct3DToolkit.a(this.field_c, GpuDataType.field_f, -95), 1);
         }
         var13 = this.field_d.field_zc;
         var10 = this.field_h.LockRect(0, 0, 0, param2, param3, 0, var13);
@@ -107,7 +107,7 @@ final class sb extends ora implements eb {
         }
     }
 
-    sb(Direct3DToolkit param0, kb param1, mj param2, int param3, int param4) {
+    sb(Direct3DToolkit param0, TextureFormat param1, GpuDataType param2, int param3, int param4) {
         super(param0, param1, param2, false, param3 * param4);
         if (this.field_d.field_Nc) {
           this.field_j = param4;
@@ -168,8 +168,8 @@ final class sb extends ora implements eb {
         int var11 = 0;
         Object stackIn_3_0;
         Direct3DToolkit stackIn_3_1;
-        kb stackIn_3_2;
-        mj stackIn_3_3;
+        TextureFormat stackIn_3_2;
+        GpuDataType stackIn_3_3;
         int stackIn_4_4 = 0;
         int var9;
         int var10;
@@ -180,7 +180,7 @@ final class sb extends ora implements eb {
         stackIn_3_0 = this;
         stackIn_3_1 = (Direct3DToolkit) (param0);
         stackIn_3_2 = ComponentAttachmentPlan.field_d;
-        stackIn_3_3 = mj.field_f;
+        stackIn_3_3 = GpuDataType.field_f;
         if (param3) {
           stackIn_3_0Lifetime1 = this;
           if (param0.field_Zc) {

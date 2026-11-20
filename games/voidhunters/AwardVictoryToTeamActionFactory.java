@@ -129,7 +129,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           ShipSpawnedCondition.field_e[38] = fib.field_h;
           ShipSpawnedCondition.field_e[23] = GetSniperCannonProjectileLife.field_o;
           ShipSpawnedCondition.field_e[26] = SetBombletSprayAimspeed.field_o;
-          ShipSpawnedCondition.field_e[18] = pb.field_n;
+          ShipSpawnedCondition.field_e[18] = VertexAttribute.field_n;
           if (param0 > -91) {
             field_b = 108;
           }

@@ -100,7 +100,7 @@ final class kw extends llb {
           if (var3 < var5) {
             incrementValue$1 = var3;
             var3++;
-            var4 = var4 + this.field_Fb.field_eb.a(this.field_Eb.charAt(incrementValue$1));
+            var4 = var4 + this.field_Fb.field_eb.getCharacterAdvance(this.field_Eb.charAt(incrementValue$1));
             continue;
           }
           break;
@@ -212,12 +212,12 @@ final class kw extends llb {
             this.field_Gb = dupTemp$0;
             this.field_Ab = dupTemp$0;
           }
-          this.field_Cb.field_L = this.field_Fb.field_eb.b(this.field_Eb.toString().substring(0, this.field_Ab));
+          this.field_Cb.field_L = this.field_Fb.field_eb.getStringWidth(this.field_Eb.toString().substring(0, this.field_Ab));
           if (param0 != -6) {
             this.field_zb = true;
           }
           if (this.field_Gb != this.field_Ab) {
-            var3 = this.field_Fb.field_L + this.field_Fb.field_eb.b(this.field_Eb.toString().substring(0, this.field_Gb));
+            var3 = this.field_Fb.field_L + this.field_Fb.field_eb.getStringWidth(this.field_Eb.toString().substring(0, this.field_Gb));
             if (this.field_Cb.field_L <= var3) {
               stackIn_32_0 = this.field_Cb.field_L;
             } else {

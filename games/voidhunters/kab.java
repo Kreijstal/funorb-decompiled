@@ -24,7 +24,7 @@ final class kab extends bob {
         int var13 = 0;
         int var14 = 0;
         try {
-          dma.b(param2 + param1.field_g, param1.field_r + param3, param1.field_h, param1.field_f, 10197915);
+          SoftwareRasterizer2D.drawRectangle(param2 + param1.field_g, param1.field_r + param3, param1.field_h, param1.field_f, 10197915);
           if (param4) {
             stackIn_6_0 = (((htb) (param1)).field_u) ? 1 : 0;
           } else {
@@ -52,7 +52,7 @@ final class kab extends bob {
           var13 = param3 + (param1.field_r + (-var10.field_e + param1.field_f) / 2);
           var14 = param1.field_g + param2 + param1.field_h / 2;
           var10.a(var11, var13);
-          this.field_d.a(this.b((byte) -82, param1), var14, param3, var9, -1);
+          this.field_d.drawCentered(this.b((byte) -82, param1), var14, param3, var9, -1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

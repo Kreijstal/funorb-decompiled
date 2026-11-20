@@ -51,7 +51,7 @@ final class iab implements nka {
           }
           var7.unlink(param3 ^ 3918);
           var7.unlinkSecondary((byte) -35);
-          mq.field_k = mq.field_k - 1;
+          OpenGlIndexBuffer.field_k = OpenGlIndexBuffer.field_k - 1;
           var5 = RequestNewestBlackboxRecording.field_p;
           if (param3 != -76) {
             iab.clearSharedReferences(76);

@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ngb extends BitmapFont {
-    private byte[][] field_I;
+final class SoftwareAlphaBitmapFont extends BitmapFont {
+    private byte[][] glyphCoverage;
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
+    final void drawGlyphAlpha(int param0, int param1, int param2, int param3, int param4, int param5, int param6, boolean param7) {
         int var9;
         int var10;
         int var11;
@@ -12,31 +12,31 @@ final class ngb extends BitmapFont {
         int var13;
         int var13Lifetime1;
         int var13Lifetime2;
-        var9 = param1 + param2 * dma.field_g;
-        var10 = dma.field_g - param3;
+        var9 = param1 + param2 * SoftwareRasterizer2D.width;
+        var10 = SoftwareRasterizer2D.width - param3;
         var11 = 0;
         var12 = 0;
-        if (param2 < dma.field_c) {
-          var13 = dma.field_c - param2;
+        if (param2 < SoftwareRasterizer2D.clipTop) {
+          var13 = SoftwareRasterizer2D.clipTop - param2;
           param4 = param4 - var13;
-          param2 = dma.field_c;
+          param2 = SoftwareRasterizer2D.clipTop;
           var12 = var12 + var13 * param3;
-          var9 = var9 + var13 * dma.field_g;
+          var9 = var9 + var13 * SoftwareRasterizer2D.width;
         }
-        if (param2 + param4 > dma.field_f) {
-          param4 = param4 - (param2 + param4 - dma.field_f);
+        if (param2 + param4 > SoftwareRasterizer2D.clipBottom) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer2D.clipBottom);
         }
-        if (param1 < dma.field_d) {
-          var13Lifetime1 = dma.field_d - param1;
+        if (param1 < SoftwareRasterizer2D.clipLeft) {
+          var13Lifetime1 = SoftwareRasterizer2D.clipLeft - param1;
           param3 = param3 - var13Lifetime1;
-          param1 = dma.field_d;
+          param1 = SoftwareRasterizer2D.clipLeft;
           var12 = var12 + var13Lifetime1;
           var9 = var9 + var13Lifetime1;
           var11 = var11 + var13Lifetime1;
           var10 = var10 + var13Lifetime1;
         }
-        if (param1 + param3 > dma.field_a) {
-          var13Lifetime2 = param1 + param3 - dma.field_a;
+        if (param1 + param3 > SoftwareRasterizer2D.clipRight) {
+          var13Lifetime2 = param1 + param3 - SoftwareRasterizer2D.clipRight;
           param3 = param3 - var13Lifetime2;
           var11 = var11 + var13Lifetime2;
           var10 = var10 + var13Lifetime2;
@@ -44,15 +44,15 @@ final class ngb extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param7) {
-            ngb.a(dma.field_i, this.field_I[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            SoftwareAlphaBitmapFont.blitCoverageAlpha(SoftwareRasterizer2D.pixels, this.glyphCoverage[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           } else {
-            arb.a(dma.field_i, this.field_I[param0], param5, var12, var9, param3, param4, var10, var11, param6);
+            SoftwareMonochromeBitmapFont.blitMaskAlpha(SoftwareRasterizer2D.pixels, this.glyphCoverage[param0], param5, var12, var9, param3, param4, var10, var11, param6);
           }
           return;
         }
     }
 
-    private final static byte[][] a(int[] param0, byte[][] param1) {
+    private final static byte[][] convertPaletteToCoverage(int[] param0, byte[][] param1) {
         int var2_int = 0;
         int var5 = 0;
         byte[][] var2;
@@ -79,7 +79,7 @@ final class ngb extends BitmapFont {
         return param1;
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
+    private final static void blitCoverage(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {
         int var9 = 0;
         int var10 = 0;
         int incrementValue$11 = 0;
@@ -108,7 +108,7 @@ final class ngb extends BitmapFont {
         }
     }
 
-    private final static void a(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    private final static void blitCoverageAlpha(int[] param0, byte[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var10 = 0;
         int var11 = 0;
         int incrementValue$11 = 0;
@@ -137,7 +137,7 @@ final class ngb extends BitmapFont {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
+    final void drawGlyph(int param0, int param1, int param2, int param3, int param4, int param5, boolean param6) {
         int var8;
         int var9;
         int var10;
@@ -145,31 +145,31 @@ final class ngb extends BitmapFont {
         int var12;
         int var12Lifetime1;
         int var12Lifetime2;
-        var8 = param1 + param2 * dma.field_g;
-        var9 = dma.field_g - param3;
+        var8 = param1 + param2 * SoftwareRasterizer2D.width;
+        var9 = SoftwareRasterizer2D.width - param3;
         var10 = 0;
         var11 = 0;
-        if (param2 < dma.field_c) {
-          var12 = dma.field_c - param2;
+        if (param2 < SoftwareRasterizer2D.clipTop) {
+          var12 = SoftwareRasterizer2D.clipTop - param2;
           param4 = param4 - var12;
-          param2 = dma.field_c;
+          param2 = SoftwareRasterizer2D.clipTop;
           var11 = var11 + var12 * param3;
-          var8 = var8 + var12 * dma.field_g;
+          var8 = var8 + var12 * SoftwareRasterizer2D.width;
         }
-        if (param2 + param4 > dma.field_f) {
-          param4 = param4 - (param2 + param4 - dma.field_f);
+        if (param2 + param4 > SoftwareRasterizer2D.clipBottom) {
+          param4 = param4 - (param2 + param4 - SoftwareRasterizer2D.clipBottom);
         }
-        if (param1 < dma.field_d) {
-          var12Lifetime1 = dma.field_d - param1;
+        if (param1 < SoftwareRasterizer2D.clipLeft) {
+          var12Lifetime1 = SoftwareRasterizer2D.clipLeft - param1;
           param3 = param3 - var12Lifetime1;
-          param1 = dma.field_d;
+          param1 = SoftwareRasterizer2D.clipLeft;
           var11 = var11 + var12Lifetime1;
           var8 = var8 + var12Lifetime1;
           var10 = var10 + var12Lifetime1;
           var9 = var9 + var12Lifetime1;
         }
-        if (param1 + param3 > dma.field_a) {
-          var12Lifetime2 = param1 + param3 - dma.field_a;
+        if (param1 + param3 > SoftwareRasterizer2D.clipRight) {
+          var12Lifetime2 = param1 + param3 - SoftwareRasterizer2D.clipRight;
           param3 = param3 - var12Lifetime2;
           var10 = var10 + var12Lifetime2;
           var9 = var9 + var12Lifetime2;
@@ -177,17 +177,17 @@ final class ngb extends BitmapFont {
         if (param3 > 0 &&
           param4 > 0) {
           if (!param6) {
-            ngb.a(dma.field_i, this.field_I[param0], param5, var11, var8, param3, param4, var9, var10);
+            SoftwareAlphaBitmapFont.blitCoverage(SoftwareRasterizer2D.pixels, this.glyphCoverage[param0], param5, var11, var8, param3, param4, var9, var10);
           } else {
-            arb.a(dma.field_i, this.field_I[param0], param5, var11, var8, param3, param4, var9, var10);
+            SoftwareMonochromeBitmapFont.blitMask(SoftwareRasterizer2D.pixels, this.glyphCoverage[param0], param5, var11, var8, param3, param4, var9, var10);
           }
           return;
         }
     }
 
-    ngb(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
+    SoftwareAlphaBitmapFont(byte[] param0, int[] param1, int[] param2, int[] param3, int[] param4, int[] param5, byte[][] param6) {
         super(param0, param1, param2, param3, param4);
-        this.field_I = new byte[256][];
-        this.field_I = ngb.a(param5, param6);
+        this.glyphCoverage = new byte[256][];
+        this.glyphCoverage = SoftwareAlphaBitmapFont.convertPaletteToCoverage(param5, param6);
     }
 }

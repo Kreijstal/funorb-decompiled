@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetDebrisCarryOverPercentage extends ConsoleCommand {
-    static arb field_o;
+    static SoftwareMonochromeBitmapFont field_o;
     static String field_p;
 
     public static void clearSharedReferences(int param0) {
@@ -60,7 +60,7 @@ final class GetDebrisCarryOverPercentage extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            field_o = (arb) null;
+            field_o = (SoftwareMonochromeBitmapFont) null;
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(35, 94));
           return stackIn_3_0;

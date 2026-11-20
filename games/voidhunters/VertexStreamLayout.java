@@ -1,37 +1,37 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qma {
-    private int field_b;
-    private long field_a;
+final class VertexStreamLayout {
+    private int attributeCount;
+    private long packedAttributes;
 
-    final int a(int param0) {
+    final int getAttributeCount(int param0) {
         int var2 = 84 / ((17 - param0) / 34);
-        return this.field_b;
+        return this.attributeCount;
     }
 
-    private final void a(boolean param0, pb param1) {
+    private final void appendAttribute(boolean param0, VertexAttribute param1) {
         int fieldTemp$0 = 0;
         try {
           if (!param0) {
-            pb var4 = (pb) null;
-            this.a(false, (pb) null);
+            VertexAttribute var4 = (VertexAttribute) null;
+            this.appendAttribute(false, (VertexAttribute) null);
           }
-          fieldTemp$0 = this.field_b;
-          this.field_b = this.field_b + 1;
-          this.field_a = this.field_a | (long)(param1.field_j << pb.field_m * fieldTemp$0);
+          fieldTemp$0 = this.attributeCount;
+          this.attributeCount = this.attributeCount + 1;
+          this.packedAttributes = this.packedAttributes | (long)(param1.id << VertexAttribute.field_m * fieldTemp$0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qma.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final int a(int param0, int param1) {
+    private final int getAttributeId(int param0, int param1) {
         if (param0 != 15) {
           bc var4 = (bc) null;
-          qma.a((BitmapFont) null, 36, 72, 17, 121, -94, -120, 88, (BitmapFont) null, (bc) null, 76, 114, (bc) null, 55, -78, 123, -51, -27, (bc) null, -111);
-          return 15 & (int)(this.field_a >> param1 * pb.field_m);
+          VertexStreamLayout.a((BitmapFont) null, 36, 72, 17, 121, -94, -120, 88, (BitmapFont) null, (bc) null, 76, 114, (bc) null, 55, -78, 123, -51, -27, (bc) null, -111);
+          return 15 & (int)(this.packedAttributes >> param1 * VertexAttribute.field_m);
         }
-        return 15 & (int)(this.field_a >> param1 * pb.field_m);
+        return 15 & (int)(this.packedAttributes >> param1 * VertexAttribute.field_m);
     }
 
     final static void a(BitmapFont param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, BitmapFont param8, bc param9, int param10, int param11, bc param12, int param13, int param14, int param15, int param16, int param17, bc param18, int param19) {
@@ -97,23 +97,23 @@ final class qma {
         }
     }
 
-    final pb b(int param0, int param1) {
+    final VertexAttribute getAttribute(int param0, int param1) {
         if (param1 < 65) {
-          return (pb) null;
+          return (VertexAttribute) null;
         }
-        return pb.a((byte) -120, this.a(15, param0));
+        return VertexAttribute.fromId((byte) -120, this.getAttributeId(15, param0));
     }
 
-    qma(pb param0) {
+    VertexStreamLayout(VertexAttribute param0) {
         try {
-          this.field_a = (long)param0.field_j;
-          this.field_b = 1;
+          this.packedAttributes = (long)param0.id;
+          this.attributeCount = 1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qma.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    qma(pb[] param0) {
+    VertexStreamLayout(VertexAttribute[] param0) {
         int var2_int = 0;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
@@ -122,7 +122,7 @@ final class qma {
         RuntimeException var2 = null;
         try {
           for (var2_int = 0; var2_int < param0.length; var2_int++) {
-            this.a(true, param0[var2_int]);
+            this.appendAttribute(true, param0[var2_int]);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

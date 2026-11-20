@@ -133,7 +133,7 @@ final class nna extends dqa implements oo {
           this.field_x = param2;
           this.field_B = param0;
           this.field_H = param1;
-          var4_int = null != this.field_x ? this.field_H.b(this.field_x, 260, this.field_H.field_k) : 0;
+          var4_int = null != this.field_x ? this.field_H.getParagraphHeight(this.field_x, 260, this.field_H.maxAscent) : 0;
           this.a(0, 288, var4_int + 22, 1, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nna.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -146,7 +146,7 @@ final class nna extends dqa implements oo {
           this.a((byte) -58, (String) null, (sba) null);
         }
         super.b(param0, param1, 61, param3);
-        this.field_H.a(this.field_x, param0 + this.field_g + 14, 10 + (param3 + this.field_r), this.field_h - 28, this.field_f, 16777215, -1, 0, 0, this.field_H.field_k);
+        this.field_H.drawParagraph(this.field_x, param0 + this.field_g + 14, 10 + (param3 + this.field_r), this.field_h - 28, this.field_f, 16777215, -1, 0, 0, this.field_H.maxAscent);
     }
 
     private final void a(int param0, int param1) {

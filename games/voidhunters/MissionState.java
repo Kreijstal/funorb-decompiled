@@ -439,7 +439,7 @@ final class MissionState implements DiffableState {
         if (param2 < 15) {
           return true;
         }
-        return wh.a(param0, (byte) 99, param1) & (((param1 & 8192) != 0 ? true : false) | bla.a(param1, false, param0) | MessageLogFactory.a(param0, 65536, param1));
+        return SocketNetworkArchiveClient.a(param0, (byte) 99, param1) & (((param1 & 8192) != 0 ? true : false) | bla.a(param1, false, param0) | MessageLogFactory.a(param0, 65536, param1));
     }
 
     public final boolean differsFrom(byte param0, SerializableGameState param1) {
@@ -673,7 +673,7 @@ final class MissionState implements DiffableState {
           if (param0 <= 54) {
             this.phaseTimer = 126;
           }
-          var5.customVariables = (MissionVariable[]) (SpriteDimensions.a(var5.customVariables, this.customVariables, 1, SetUseTrails.field_p, false));
+          var5.customVariables = (MissionVariable[]) (SpriteDimensions.copyStateArrayByMode(var5.customVariables, this.customVariables, 1, SetUseTrails.field_p, false));
           if (this.nextround == null) {
             var5.nextround = null;
           } else {

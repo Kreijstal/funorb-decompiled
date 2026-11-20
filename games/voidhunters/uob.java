@@ -130,7 +130,7 @@ final class uob extends qg {
           GetLagStandardDeviationIn.field_r.a(false, vqa.field_i);
         }
         vqa.field_i.a(param0, param2, param3, (byte) -89);
-        dma.a();
+        SoftwareRasterizer2D.clear();
         if (param1 < 26) {
           return;
         }

@@ -855,11 +855,11 @@ final class ShipComponent implements DiffableState, CompactGameState {
                   var17 -= 11;
                   if (var17 >= 0 &&
                     LoadBlackboxRecording.field_o[var17] != null) {
-                    LoadBlackboxRecording.field_o[var17].b((int)var14_float << 4, (int)var15_float << 4, (int)var20_float << 4, (int)var21_float << 4, var22, var19);
+                    LoadBlackboxRecording.field_o[var17].drawRotatedScaledBilinear((int)var14_float << 4, (int)var15_float << 4, (int)var20_float << 4, (int)var21_float << 4, var22, var19);
                   }
                   if (0 <= var18 &&
                     null != LoadBlackboxRecording.field_o[var18]) {
-                    LoadBlackboxRecording.field_o[var18].a((int)var14_float << 4, (int)var15_float << 4, (int)var20_float << 4, (int)var21_float << 4, var22, var19);
+                    LoadBlackboxRecording.field_o[var18].drawRotatedScaled((int)var14_float << 4, (int)var15_float << 4, (int)var20_float << 4, (int)var21_float << 4, var22, var19);
                   }
                 }
               } else {
@@ -3147,8 +3147,8 @@ final class ShipComponent implements DiffableState, CompactGameState {
           } else {
             var5.behaviour = null;
           }
-          var5.subcomponents = (ShipComponent[]) (SpriteDimensions.a(var5.subcomponents, this.subcomponents, 1, ArchiveTextureProvider.field_d, false));
-          var5.hardpoints = (Hardpoint[]) (SpriteDimensions.a(var5.hardpoints, this.hardpoints, 1, ta.field_a, false));
+          var5.subcomponents = (ShipComponent[]) (SpriteDimensions.copyStateArrayByMode(var5.subcomponents, this.subcomponents, 1, ArchiveTextureProvider.field_d, false));
+          var5.hardpoints = (Hardpoint[]) (SpriteDimensions.copyStateArrayByMode(var5.hardpoints, this.hardpoints, 1, ta.field_a, false));
           var5.connectedangle = this.connectedangle;
           var5.finalangle = this.finalangle;
           var5.finalx = this.finalx;

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class glb {
-    private mkb field_b;
+    private GpuVertexBuffer field_b;
     static String[] field_c;
     static String field_a;
 
@@ -65,7 +65,7 @@ final class glb {
 
     final void a(int param0) {
         if (null != this.field_b) {
-          this.field_b.a(param0 - 26459);
+          this.field_b.release(param0 - 26459);
         }
         if (param0 == 26363) {
           return;

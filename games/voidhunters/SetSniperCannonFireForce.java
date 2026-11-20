@@ -3,7 +3,7 @@
  */
 final class SetSniperCannonFireForce extends ConsoleCommand {
     static dfa field_o;
-    static kb field_p;
+    static TextureFormat field_p;
     static int field_q;
 
     SetSniperCannonFireForce(String param0, Class[] param1, String param2) {
@@ -51,6 +51,6 @@ final class SetSniperCannonFireForce extends ConsoleCommand {
     static {
         field_o = new dfa();
         field_q = 256;
-        field_p = new kb(1);
+        field_p = new TextureFormat(1);
     }
 }

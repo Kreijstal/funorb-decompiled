@@ -36,7 +36,7 @@ final class tea {
             stackIn_6_0 = SetTorpedoEnergyUsed.a(param0, param2 ^ 14107).a(param1, param2 - 13878);
             return stackIn_6_0;
           }
-          stackIn_4_0 = ita.a(param0, param2 - 5891).b(param1);
+          stackIn_4_0 = ita.a(param0, param2 - 5891).getStringWidth(param1);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

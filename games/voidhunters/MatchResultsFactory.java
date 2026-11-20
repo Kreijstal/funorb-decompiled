@@ -105,7 +105,7 @@ final class MatchResultsFactory implements GameStateFactory {
         int var6Lifetime1;
         var13 = VoidHunters.field_G;
         try {
-          var5_int = param4.b(param3);
+          var5_int = param4.getStringWidth(param3);
           if (param0 >= var5_int &&
             param3.indexOf("<br>") == -1) {
             param1[0] = param3;
@@ -122,7 +122,7 @@ final class MatchResultsFactory implements GameStateFactory {
             if (32 == var10 ||
               var10 == 45) {
               var11 = param3.substring(var7, var9 + 1).trim();
-              var12 = param4.b(var11);
+              var12 = param4.getStringWidth(var11);
               if (var12 >= param0) {
                 var7 = var9 + 1;
                 incrementValue$1 = var6Lifetime1;

@@ -101,9 +101,9 @@ final class lla {
             this.field_i = new java.util.zip.Deflater(this.field_c, true);
             this.field_a = new java.util.zip.CRC32();
             this.field_f = new PacketBuffer(this.field_g);
-            this.field_f.writeBytes(0, pb.field_f, -1, pb.field_f.length);
+            this.field_f.writeBytes(0, VertexAttribute.field_f, -1, VertexAttribute.field_f.length);
           } else {
-            this.field_f.position = pb.field_f.length;
+            this.field_f.position = VertexAttribute.field_f.length;
           }
           this.field_a.update(param2, param1, param3);
           this.field_i.setInput(param2, param1, param3);

@@ -40,13 +40,13 @@ final class rla extends dqa implements oo {
         int var6Lifetime1;
         if (param2 > 47) {
           var6 = param3 + this.field_r;
-          SetShipToShipRamDamage.field_o.a(NebulaFactory.field_a, 20 + var5, var6 + 20, this.field_h - 40, this.field_f - 50, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.field_k);
+          SetShipToShipRamDamage.field_o.drawParagraph(NebulaFactory.field_a, 20 + var5, var6 + 20, this.field_h - 40, this.field_f - 50, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.maxAscent);
           super.b(param0, param1, 94, param3);
           return;
         }
         this.field_z = (htb) null;
         var6Lifetime1 = param3 + this.field_r;
-        SetShipToShipRamDamage.field_o.a(NebulaFactory.field_a, 20 + var5, var6Lifetime1 + 20, this.field_h - 40, this.field_f - 50, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.field_k);
+        SetShipToShipRamDamage.field_o.drawParagraph(NebulaFactory.field_a, 20 + var5, var6Lifetime1 + 20, this.field_h - 40, this.field_f - 50, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.maxAscent);
         super.b(param0, param1, 94, param3);
     }
 

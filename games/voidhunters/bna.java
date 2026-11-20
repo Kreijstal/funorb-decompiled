@@ -6,8 +6,8 @@ final class bna extends is {
     private java.lang.ref.SoftReference field_l;
 
     final static void e(int param0) {
-        GetAutozoomAmountMultiply.field_o.field_g = 0;
-        GetAutozoomAmountMultiply.field_o.field_k = param0;
+        GetAutozoomAmountMultiply.field_o.errorCount = 0;
+        GetAutozoomAmountMultiply.field_o.errorStatus = param0;
     }
 
     final Object a(int param0) {

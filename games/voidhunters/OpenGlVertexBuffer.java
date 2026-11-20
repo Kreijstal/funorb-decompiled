@@ -1,38 +1,38 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class esb extends qq implements mkb {
+final class OpenGlVertexBuffer extends OpenGlGpuBuffer implements GpuVertexBuffer {
     static ResourceArchive field_j;
-    private byte field_i;
+    private byte stride;
 
-    final int b(byte param0) {
+    final int getStride(byte param0) {
         if (param0 != 125) {
-          this.field_i = (byte) -12;
-          return this.field_i;
+          this.stride = (byte) -12;
+          return this.stride;
         }
-        return this.field_i;
+        return this.stride;
     }
 
-    public final boolean a(int param0, int param1, int param2) {
-        this.field_i = (byte)param0;
-        super.a(25427, param1);
+    public final boolean allocate(int param0, int param1, int param2) {
+        this.stride = (byte)param0;
+        super.allocate(25427, param1);
         if (param2 <= 81) {
-          this.a(-84);
+          this.release(-84);
           return true;
         }
         return true;
     }
 
-    public final jaclib.memory.Buffer a(boolean param0, byte param1) {
+    public final jaclib.memory.Buffer lock(boolean param0, byte param1) {
         if (param1 > 16) {
-          return super.a(false, param0, this.field_d.field_Vc);
+          return super.lockBuffer(false, param0, this.toolkit.field_Vc);
         }
         CharSequence var4 = (CharSequence) null;
-        esb.a(-9, (CharSequence) null);
-        return super.a(false, param0, this.field_d.field_Vc);
+        OpenGlVertexBuffer.normalizeAsciiIdentifier(-9, (CharSequence) null);
+        return super.lockBuffer(false, param0, this.toolkit.field_Vc);
     }
 
-    final static String a(int param0, CharSequence param1) {
+    final static String normalizeAsciiIdentifier(int param0, CharSequence param1) {
         int var4 = 0;
         int var2_int = 0;
         char[] var3 = null;
@@ -88,34 +88,34 @@ final class esb extends qq implements mkb {
         }
     }
 
-    public final boolean b(int param0) {
+    public final boolean unlock(int param0) {
         if (param0 == -20836) {
-          return super.a((byte) -124, this.field_d.field_Vc);
+          return super.unlockBuffer((byte) -124, this.toolkit.field_Vc);
         }
         CharSequence var3 = (CharSequence) null;
-        esb.a(91, (CharSequence) null);
-        return super.a((byte) -124, this.field_d.field_Vc);
+        OpenGlVertexBuffer.normalizeAsciiIdentifier(91, (CharSequence) null);
+        return super.unlockBuffer((byte) -124, this.toolkit.field_Vc);
     }
 
     public static void clearSharedReferences(int param0) {
         if (param0 >= -104) {
           CharSequence var2 = (CharSequence) null;
-          esb.a(27, (CharSequence) null);
+          OpenGlVertexBuffer.normalizeAsciiIdentifier(27, (CharSequence) null);
           field_j = null;
           return;
         }
         field_j = null;
     }
 
-    esb(OpenGlGpuToolkit param0, boolean param1) {
+    OpenGlVertexBuffer(OpenGlGpuToolkit param0, boolean param1) {
         super(param0, 34962, param1);
     }
 
-    public final void a(int param0) {
+    public final void release(int param0) {
         if (param0 > -84) {
           return;
         }
-        super.a(-119);
+        super.release(-119);
     }
 
     static {

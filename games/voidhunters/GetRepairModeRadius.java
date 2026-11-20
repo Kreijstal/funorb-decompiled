@@ -61,7 +61,7 @@ final class GetRepairModeRadius extends ConsoleCommand {
         try {
           var4_int = hob.a(param3, param2, 121);
           var6 = 84 / ((7 - param0) / 49);
-          var5 = qq.a(true, param1, var4_int);
+          var5 = OpenGlGpuBuffer.a(true, param1, var4_int);
           stackIn_1_0 = var5;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

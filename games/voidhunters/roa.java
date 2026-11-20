@@ -1122,7 +1122,7 @@ final class roa extends ka {
             this.field_C = new glb(GpuToolkit.a(0, this.field_I, this.field_s));
           }
           if (param3 ||
-            wh.a(this.field_s, (byte) 127, this.field_I)) {
+            SocketNetworkArchiveClient.a(this.field_s, (byte) 127, this.field_I)) {
             this.field_h = new glb(MissionState.a(this.field_s, this.field_I, (byte) 30));
           }
           if (!param3 &&

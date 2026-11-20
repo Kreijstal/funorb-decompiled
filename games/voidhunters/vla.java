@@ -78,10 +78,10 @@ final class vla extends dqa implements en, oo {
 
     final void b(int param0, int param1, int param2, int param3) {
         if (this.field_v != null) {
-          SetShipToShipRamDamage.field_o.a(this.field_v, this.field_g + (param0 + 20), 15 + (param3 + this.field_r), -40 + this.field_h, this.field_f, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.field_k);
+          SetShipToShipRamDamage.field_o.drawParagraph(this.field_v, this.field_g + (param0 + 20), 15 + (param3 + this.field_r), -40 + this.field_h, this.field_f, 16777215, -1, 1, 0, SetShipToShipRamDamage.field_o.maxAscent);
         }
         if (this.field_z != null) {
-          dma.h(param0 + 10, param3 + 134, -20 + this.field_h, 4210752);
+          SoftwareRasterizer2D.drawHorizontalLine(param0 + 10, param3 + 134, -20 + this.field_h, 4210752);
         }
         super.b(param0, param1, 58, param3);
         if (param2 < 47) {
@@ -244,7 +244,7 @@ final class vla extends dqa implements en, oo {
           this.field_r = 15;
           var7 = SetShipToShipRamDamage.field_o;
           if (null != this.field_v) {
-            this.field_r = this.field_r + (var7.b(this.field_v, this.field_h - 40, var7.field_k) + 5);
+            this.field_r = this.field_r + (var7.getParagraphHeight(this.field_v, this.field_h - 40, var7.maxAscent) + 5);
           }
           var8 = RemoveEventActionFactory.field_a;
           var9 = gib.a(19314, MissionList.b((byte) -86));

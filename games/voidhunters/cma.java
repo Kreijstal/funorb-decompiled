@@ -61,22 +61,22 @@ final class cma {
         var9 = VoidHunters.field_G;
         if (param7 <= param5) {
           if (param3 > param5) {
-            MapClearanceRectangleFactory.a(param3, 65, param4, param7, param0, param1, param6, dma.field_i, param5);
+            MapClearanceRectangleFactory.a(param3, 65, param4, param7, param0, param1, param6, SoftwareRasterizer2D.pixels, param5);
           } else {
             if (param3 > param7) {
-              MapClearanceRectangleFactory.a(param5, -107, param4, param7, param0, param6, param1, dma.field_i, param3);
+              MapClearanceRectangleFactory.a(param5, -107, param4, param7, param0, param6, param1, SoftwareRasterizer2D.pixels, param3);
             } else {
-              MapClearanceRectangleFactory.a(param5, -117, param4, param3, param1, param6, param0, dma.field_i, param7);
+              MapClearanceRectangleFactory.a(param5, -117, param4, param3, param1, param6, param0, SoftwareRasterizer2D.pixels, param7);
             }
           }
         } else {
           if (param7 < param3) {
-            MapClearanceRectangleFactory.a(param3, 46, param4, param5, param6, param1, param0, dma.field_i, param7);
+            MapClearanceRectangleFactory.a(param3, 46, param4, param5, param6, param1, param0, SoftwareRasterizer2D.pixels, param7);
           } else {
             if (param3 <= param5) {
-              MapClearanceRectangleFactory.a(param7, 61, param4, param3, param1, param0, param6, dma.field_i, param5);
+              MapClearanceRectangleFactory.a(param7, 61, param4, param3, param1, param0, param6, SoftwareRasterizer2D.pixels, param5);
             } else {
-              MapClearanceRectangleFactory.a(param7, -99, param4, param5, param6, param0, param1, dma.field_i, param3);
+              MapClearanceRectangleFactory.a(param7, -99, param4, param5, param6, param0, param1, SoftwareRasterizer2D.pixels, param3);
             }
           }
         }
