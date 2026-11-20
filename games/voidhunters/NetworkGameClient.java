@@ -122,7 +122,7 @@ abstract class NetworkGameClient extends GameApplet {
         var5 = VoidHunters.field_G;
         if (MissionConditionFactory.field_b != null) {
           if (EmailAvailabilityChecks.fullscreenCanvas == null) {
-            var6 = ThrusterBehaviourFactory.b(-28941);
+            var6 = ThrusterBehaviourFactory.getGameContainer(-28941);
             var4 = var6.getSize();
             MissionConditionFactory.field_b.setAvailableSize(param1 ^ 109, var4.width, var4.height);
           }
@@ -146,7 +146,7 @@ abstract class NetworkGameClient extends GameApplet {
             !(var3 >= SetPedrosRepairModeSwitchtime.getKeyboardIdleTicks(32)) &&
             !(NormalMapTextureOperation.d(-2) <= var3)) {
             this.field_s = false;
-            FighterBayWeaponDefinition.l(-123);
+            FighterBayWeaponDefinition.closeGameConnection(-123);
             NetworkArchiveRequest.f((byte) -119);
             SetMessageFadetime.a(GetSpinningBladeSpindamageMultiplier.field_o, (byte) 105, 2);
             GetSniperCannonFiringLeeway.applyObfuscationGuard(-10560);
@@ -158,7 +158,7 @@ abstract class NetworkGameClient extends GameApplet {
           MapClearanceArea.field_a == 0) {
           stackIn_23_0 = (-1 != MapClearanceArea.field_a) ? 0 : 1;
           var3Lifetime1 = stackIn_23_0;
-          MapClearanceArea.field_a = GetGrapplingHooksDamageableBySourcePlayer.a(-124);
+          MapClearanceArea.field_a = GetGrapplingHooksDamageableBySourcePlayer.processArchiveLoading(-124);
           if (var3Lifetime1 != 0 &&
             0 == MapClearanceArea.field_a &&
             GetSpinningBladeAimspeed.field_q == 11 &&
@@ -237,9 +237,9 @@ abstract class NetworkGameClient extends GameApplet {
           if (0 != SetGrapplingHookAimarc.field_p) {
             ByteStorageRanges.field_a = MissionBuilder.createArchive(1, GrappleLauncherBehaviour.field_f);
           }
-          CommonUiArchiveResources.commonUiArchive = SetDebrisFoundInPairs.a(1, GetShieldsDirectionalArc.field_p, 106, true, false);
-          GetSalvoUsesAllEnergy.field_o = SetDebrisFoundInPairs.a(1, SetFighterRepairAmount.field_p, 97, true, false);
-          BufferedFile.field_i = SetDebrisFoundInPairs.a(1, GetThrusterBindingMoveAndTurnHasOppositeMove.field_p, 81, true, false);
+          CommonUiArchiveResources.commonUiArchive = SetDebrisFoundInPairs.createArchive(1, GetShieldsDirectionalArc.field_p, 106, true, false);
+          GetSalvoUsesAllEnergy.field_o = SetDebrisFoundInPairs.createArchive(1, SetFighterRepairAmount.field_p, 97, true, false);
+          BufferedFile.field_i = SetDebrisFoundInPairs.createArchive(1, GetThrusterBindingMoveAndTurnHasOppositeMove.field_p, 81, true, false);
           UiDraggableContainer.field_z = 2;
           GetMassDriverReload.field_o = CommonUiArchiveResources.commonUiArchive;
           GetShieldsDirectionalArc.field_r = GetSalvoUsesAllEnergy.field_o;
@@ -401,7 +401,7 @@ abstract class NetworkGameClient extends GameApplet {
           int var4_int = 1 % ((-20 - param1) / 33);
           this.initializeFromAppletParameters(param2, 480, 640, param0, 32);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ms.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "ms.EA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -428,7 +428,7 @@ abstract class NetworkGameClient extends GameApplet {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -506,7 +506,7 @@ abstract class NetworkGameClient extends GameApplet {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -583,7 +583,7 @@ abstract class NetworkGameClient extends GameApplet {
                       break regionExit1;
                     default:
                       FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "MGS1: " + SetCountermeasuresPulsetime.e(-13514), 0);
-                      FighterBayWeaponDefinition.l(-123);
+                      FighterBayWeaponDefinition.closeGameConnection(-123);
                       break regionExit1;
                   }
                 }
@@ -618,7 +618,7 @@ abstract class NetworkGameClient extends GameApplet {
           return;
         }
         FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "MGS2: " + SetCountermeasuresPulsetime.e(-13514), 0);
-        FighterBayWeaponDefinition.l(-125);
+        FighterBayWeaponDefinition.closeGameConnection(-125);
     }
 
     private final void c(boolean param0) {
@@ -676,7 +676,7 @@ abstract class NetworkGameClient extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5 = ComponentAttachmentPlan.a(GetFixedaim.createEmailRequestText((byte) -65), true, SetMachineGunFireForce.e(120));
+            var5 = ComponentAttachmentPlan.pollAccountRequest(GetFixedaim.createEmailRequestText((byte) -65), true, SetMachineGunFireForce.e(120));
             if (var5 != -1) {
               AccountNameAvailabilityReplies.handleNameAvailabilityReply(GameJoinNotificationText.field_b, var5, (byte) 70, GameInvitationText.field_a);
               GameInvitationText.field_a = null;

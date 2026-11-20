@@ -56,7 +56,7 @@ final class GpuVertexBufferOwner {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref2 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1_ref2), "glb.C(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var1_ref2), "glb.C(" + param0 + ')');
         }
     }
 

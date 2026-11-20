@@ -128,7 +128,7 @@ final class OpenGlSprite extends ToolkitSprite {
         try {
           this.texture.updatePixels((byte) 32, param6, param2, param1, param3, param0, param5, true, param4);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tla.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "tla.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -461,7 +461,7 @@ final class OpenGlSprite extends ToolkitSprite {
           this.toolkit = param0;
           this.texture = SetAngleset.a(28, param1, param2, param0, param3 ? 6408 : 6407);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "tla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -476,7 +476,7 @@ final class OpenGlSprite extends ToolkitSprite {
           this.toolkit = param0;
           this.texture = FireBoostersOrderDefinition.createSpriteTexture(param0, param4, param5, param2, param3, param1, false, (byte) 60);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "tla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ')');
         }
     }
 

@@ -30,7 +30,7 @@ final class GetTorpedoProjectileDamage extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -45,7 +45,7 @@ final class GetTorpedoProjectileDamage extends ConsoleCommand {
         try {
           GetBurstFireMaxEnergy.musicStream.crossfadeToTrack(param2, param0, !param1 ? true : false, param4, -47, 1000000);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wo.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "wo.C(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ')');
         }
     }
 

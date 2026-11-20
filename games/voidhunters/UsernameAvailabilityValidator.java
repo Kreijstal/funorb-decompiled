@@ -59,7 +59,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -123,7 +123,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -133,12 +133,12 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           if (!OpenGlTexture1D.field_i) {
             return DateOfBirthTextFields.getDefaultBitmapFont(param1, 7988).maxAscent;
           }
-          return SetTorpedoEnergyUsed.a(param1, 300).maxAscent;
+          return SetTorpedoEnergyUsed.getToolkitFont(param1, 300).maxAscent;
         }
         if (!OpenGlTexture1D.field_i) {
           return DateOfBirthTextFields.getDefaultBitmapFont(param1, 7988).maxAscent;
         }
-        return SetTorpedoEnergyUsed.a(param1, 300).maxAscent;
+        return SetTorpedoEnergyUsed.getToolkitFont(param1, 300).maxAscent;
     }
 
     final static int parseInt(int param0, CharSequence param1, int param2) {
@@ -164,7 +164,7 @@ final class UsernameAvailabilityValidator extends TextFieldValidator {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(param2).append(')').toString());
         }
     }
 

@@ -32,7 +32,7 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -82,7 +82,7 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -189,7 +189,7 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
           var7 = param1.height;
           var39.menu.layoutPopup(var4, -29060, var5, var6, var7);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "tg.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 

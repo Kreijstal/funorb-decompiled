@@ -115,7 +115,7 @@ class UiTextField extends UiFocusableComponent {
           } else {
             stackIn_44_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_43_0), ((StringBuilder) (Object) stackIn_43_1).append(stackIn_44_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -343,7 +343,7 @@ class UiTextField extends UiFocusableComponent {
           } else {
             stackIn_80_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_79_0), ((StringBuilder) (Object) stackIn_79_1).append(stackIn_80_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -383,7 +383,7 @@ class UiTextField extends UiFocusableComponent {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -423,7 +423,7 @@ class UiTextField extends UiFocusableComponent {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -491,7 +491,7 @@ class UiTextField extends UiFocusableComponent {
           this.keepCaretVisible = true;
           this.caretBlinkEpoch = MonotonicMillisClock.currentTimeMillis(false);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "uf.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -544,7 +544,7 @@ class UiTextField extends UiFocusableComponent {
           } else {
             stackIn_24_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_23_0), ((StringBuilder) (Object) stackIn_23_1).append(stackIn_24_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -587,7 +587,7 @@ class UiTextField extends UiFocusableComponent {
             this.caretBlinkEpoch = MonotonicMillisClock.currentTimeMillis(false);
           }
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "uf.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

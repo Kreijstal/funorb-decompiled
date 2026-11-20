@@ -119,7 +119,7 @@ final class OpenGlModel extends Model3D {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param9).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param9).append(')').toString());
         }
     }
 
@@ -298,7 +298,7 @@ final class OpenGlModel extends Model3D {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -348,7 +348,7 @@ final class OpenGlModel extends Model3D {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -411,7 +411,7 @@ final class OpenGlModel extends Model3D {
           discarded$2 = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5121, 4, 0);
           discarded$3 = new GameJoinNotificationText();
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -1166,7 +1166,7 @@ final class OpenGlModel extends Model3D {
             param1.groupVertexIndices((byte) -37, false);
           }
           if (param1.faceAttachments != null &&
-            FighterBayWeaponDefinition.a(-54, param2, this.field_u)) {
+            FighterBayWeaponDefinition.needsFaceAttachmentGroups(-54, param2, this.field_u)) {
             param1.groupFaceAttachmentIndices(-96);
           }
           if (null != param1.faceLabels &&
@@ -1218,7 +1218,7 @@ final class OpenGlModel extends Model3D {
           } else {
             stackIn_215_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_211_0), ((StringBuilder) (Object) stackIn_214_1).append(stackIn_215_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_211_0), ((StringBuilder) (Object) stackIn_214_1).append(stackIn_215_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(')').toString());
         }
     }
 

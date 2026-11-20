@@ -35,7 +35,7 @@ final class GetMissionTimeLimit extends ConsoleCommand {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -120,7 +120,7 @@ final class GetMissionTimeLimit extends ConsoleCommand {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "pra.C(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var2), "pra.C(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -132,7 +132,7 @@ final class GetMissionTimeLimit extends ConsoleCommand {
           field_q = null;
           field_p = null;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pra.B(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "pra.B(" + param0 + ')');
         }
     }
 

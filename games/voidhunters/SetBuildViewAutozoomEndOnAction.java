@@ -22,7 +22,7 @@ final class SetBuildViewAutozoomEndOnAction extends ConsoleCommand {
           param2.endBitWrite(32712);
           param2.writeLengthByte(param2.position - var4_int, -129);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rkb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "rkb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 
@@ -50,7 +50,7 @@ final class SetBuildViewAutozoomEndOnAction extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -93,7 +93,7 @@ final class SetBuildViewAutozoomEndOnAction extends ConsoleCommand {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "rkb.B(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var3), "rkb.B(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 

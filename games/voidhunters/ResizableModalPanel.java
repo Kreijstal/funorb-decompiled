@@ -209,7 +209,7 @@ abstract class ResizableModalPanel extends ModalPanel {
             break;
           }
           if (var3 == null) {
-            FighterBayWeaponDefinition.l(-117);
+            FighterBayWeaponDefinition.closeGameConnection(-117);
             return;
           }
           if (param0 != -38) {
@@ -278,7 +278,7 @@ abstract class ResizableModalPanel extends ModalPanel {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), "iw.MA(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var1), "iw.MA(" + param0 + ')');
         }
     }
 

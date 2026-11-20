@@ -41,7 +41,7 @@ public final class VoidHunters extends NetworkGameClient {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -98,7 +98,7 @@ public final class VoidHunters extends NetworkGameClient {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -150,7 +150,7 @@ public final class VoidHunters extends NetworkGameClient {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 
@@ -191,7 +191,7 @@ public final class VoidHunters extends NetworkGameClient {
         boolean decompiledFrameRemainder0 = true;
         if (param0 == 14) {
           GetDebrisThrowable.a(false, "Entering lobby");
-          GetBombletSprayAimarc.a(UiComponent.field_o, SetUseOffscreenRendering.a(0), GetSalvoaim.a(8, (byte) -99), GetSalvoaim.a(2000, (byte) -116), SetUseOffscreenRendering.b(false), true, NetworkGameClient.field_A.length, 150, 1024, GetMissilesAcceleration.a(207));
+          GetBombletSprayAimarc.initializeLobbyState(UiComponent.field_o, SetUseOffscreenRendering.a(0), GetSalvoaim.a(8, (byte) -99), GetSalvoaim.a(2000, (byte) -116), SetUseOffscreenRendering.b(false), true, NetworkGameClient.field_A.length, 150, 1024, GetMissilesAcceleration.a(207));
           GetPhasedEnergyBeamAimarc.a(SetBombletSprayPushMultiplier.a(0), MissileLauncherWeaponDefinition.i((byte) -90), true);
           GraphicsPresentException.field_a = true;
           HardpointMatch.field_d = false;
@@ -516,7 +516,7 @@ public final class VoidHunters extends NetworkGameClient {
         }
         var3Lifetime2 = stackIn_69_0;
         if (var3Lifetime2 != 0) {
-          FighterBayWeaponDefinition.l(-118);
+          FighterBayWeaponDefinition.closeGameConnection(-118);
         }
         if (SetWeaponProjectileSpeedMultiply.b(true)) {
           FlipTextureOperation.field_l.suspendServerUpdates((byte) -94);
@@ -618,7 +618,7 @@ public final class VoidHunters extends NetworkGameClient {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -647,7 +647,7 @@ public final class VoidHunters extends NetworkGameClient {
         SetGrapplingHookMaxExtension8Force.field_o = TextureCombineMappings.field_b;
         LobbyOptionCompatibilityRules.optionCombinations = GetPointDefenceLaserAimspeed.field_o;
         if (UiDraggableContainer.field_E) {
-          GetGrapplingHooksDamageableBySourcePlayer.e((byte) -120);
+          GetGrapplingHooksDamageableBySourcePlayer.loadPreferences((byte) -120);
           GetMissileLauncherProjectileLife.graphicsQuality = GetLagIn.getIntegerPreference(GetMissileLauncherProjectileLife.graphicsQuality, 68, "graphics_quality");
           PopupMenuWidget.applyGraphicsQualityPreset(false);
           LoopingSound.setSoundEffectVolume(GetLagIn.getIntegerPreference(RidgedNoiseVolumeGenerator.soundEffectVolume, 93, "fx_volume"), -13205);
@@ -703,7 +703,7 @@ public final class VoidHunters extends NetworkGameClient {
         }
         regionExit1: {
           if (var2 != 0) {
-            if (BodyInZoneConditionFactory.a(false, GetArmageddonTimerStart.field_o)) {
+            if (BodyInZoneConditionFactory.isMenuScreenActive(false, GetArmageddonTimerStart.field_o)) {
               if (4 != this.gameMusicMixId) {
                 var9 = new MidiChannelLevels();
                 var9.levels[0] = 255;
@@ -778,7 +778,7 @@ public final class VoidHunters extends NetworkGameClient {
             }
           }
         }
-        if (!BodyInZoneConditionFactory.a(false, GetArmageddonTimerStart.field_o)) {
+        if (!BodyInZoneConditionFactory.isMenuScreenActive(false, GetArmageddonTimerStart.field_o)) {
           if (GetArmageddonTimerStart.field_o == -2 &&
             this.menuMusicMixId != 1) {
             var11 = new MidiChannelLevels();
@@ -833,7 +833,7 @@ public final class VoidHunters extends NetworkGameClient {
             } else {
               stackIn_9_2 = "{...}";
             }
-            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+            throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -1852,7 +1852,7 @@ public final class VoidHunters extends NetworkGameClient {
     }
 
     final void shutdownGame(int param0) {
-        GetBurstFireRegenerationRate.b(false);
+        GetBurstFireRegenerationRate.shutdownAudioOutputs(false);
         if (null != EmailAvailabilityChecks.fullscreenCanvas) {
           VariableCondition.b((byte) 86);
         }
@@ -1930,7 +1930,7 @@ public final class VoidHunters extends NetworkGameClient {
                 if (TextureMappingData.field_e) {
                   GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, false, (byte) -85, -4);
                 }
-                if (BodyInZoneConditionFactory.a(false, AgeValidator.field_f)) {
+                if (BodyInZoneConditionFactory.isMenuScreenActive(false, AgeValidator.field_f)) {
                   ColorKeyScaleTextureOperation.d(991426348);
                 }
               }
@@ -1984,7 +1984,7 @@ public final class VoidHunters extends NetworkGameClient {
                 if (GetArmageddonTimerStart.field_o == -2) {
                   var3 = 1;
                 } else {
-                  if (BodyInZoneConditionFactory.a(false, GetArmageddonTimerStart.field_o)) {
+                  if (BodyInZoneConditionFactory.isMenuScreenActive(false, GetArmageddonTimerStart.field_o)) {
                     WorldSpriteTiler.field_a[GetArmageddonTimerStart.field_o].update(0);
                   }
                 }

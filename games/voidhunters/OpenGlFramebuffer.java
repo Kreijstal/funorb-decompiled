@@ -29,7 +29,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "rpa.M(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var3), "rpa.M(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -42,7 +42,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
           this.bindingMask = this.bindingMask & -2;
           this.boundTarget = this.getBoundTarget(2);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.E(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "rpa.E(" + param0 + ')');
         }
     }
 
@@ -55,7 +55,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
           this.bindingMask = this.bindingMask | 4;
           this.boundTarget = this.getBoundTarget(2);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.F(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "rpa.F(" + param0 + ')');
         }
     }
 
@@ -89,7 +89,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
                     SetPhasedEnergyBeamProjectiles.a(var4, 116);
                   } else {
                     if (var5 == 11) {
-                      PlayerVoteFactory.a(param2, var4);
+                      PlayerVoteFactory.attachPresetComponents(param2, var4);
                     } else {
                       if (var5 == 4) {
                         GrapplingHookFactory.a((byte) 127, var4);
@@ -100,7 +100,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
                           if (var5 != 6) {
                             if (var5 == 1) {
                               if (param1 == 0) {
-                                GetExplosionProjectileDamage.a(var4, -14);
+                                GetExplosionProjectileDamage.attachPresetComponents(var4, -14);
                               } else {
                                 if (1 == param1) {
                                   ArbProgram.a((byte) -94, var4);
@@ -147,7 +147,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "rpa.J(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var3), "rpa.J(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -163,7 +163,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "rpa.O(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var3), "rpa.O(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -182,7 +182,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "rpa.H(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var2), "rpa.H(" + param0 + ')');
         }
     }
 
@@ -195,7 +195,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
           this.bindingMask = this.bindingMask | 2;
           this.boundTarget = this.getBoundTarget(param0 - 31634);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.B(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "rpa.B(" + param0 + ')');
         }
     }
 
@@ -208,7 +208,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
           this.bindingMask = this.bindingMask & -5;
           this.boundTarget = this.getBoundTarget(2);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.A(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "rpa.A(" + param0 + ')');
         }
     }
 
@@ -250,7 +250,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -259,7 +259,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
           this.toolkit.enqueueFramebufferDisposal((byte) 107, this.framebufferId);
           super.finalize();
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.finalize()");
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "rpa.finalize()");
         }
     }
 
@@ -301,7 +301,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -314,7 +314,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
           this.attachmentMask = this.attachmentMask & ~(1 << param0);
           this.attachments[param0] = null;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.I(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "rpa.I(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -327,7 +327,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
             this.boundTarget = 85;
           }
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.D(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "rpa.D(" + param0 + ')');
         }
     }
 
@@ -338,7 +338,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
             field_c = (TextureCoordinateMode) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.P(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "rpa.P(" + param0 + ')');
         }
     }
 
@@ -349,7 +349,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
           this.bindingMask = this.bindingMask | 1;
           this.boundTarget = this.getBoundTarget(2);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rpa.C(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "rpa.C(" + param0 + ')');
         }
     }
 
@@ -378,7 +378,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "rpa.G(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var2), "rpa.G(" + param0 + ')');
         }
     }
 
@@ -404,7 +404,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -435,7 +435,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

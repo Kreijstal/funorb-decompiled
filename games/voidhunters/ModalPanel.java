@@ -70,7 +70,7 @@ abstract class ModalPanel extends UiContainer {
         }
         if (null == GpuFaceNormal.field_b) {
           GpuFaceNormal.field_b = new Sprite(this.width, this.height);
-          SetTorpedoEnergyUsed.a(111, GpuFaceNormal.field_b);
+          SetTorpedoEnergyUsed.pushSpriteRasterTarget(111, GpuFaceNormal.field_b);
           SoftwareRasterizer2D.clear();
           this.drawFrame(0, 1630174241, 0);
           super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
@@ -86,7 +86,7 @@ abstract class ModalPanel extends UiContainer {
         }
         if (GpuFaceNormal.field_b.width < this.width) {
           GpuFaceNormal.field_b = new Sprite(this.width, this.height);
-          SetTorpedoEnergyUsed.a(111, GpuFaceNormal.field_b);
+          SetTorpedoEnergyUsed.pushSpriteRasterTarget(111, GpuFaceNormal.field_b);
           SoftwareRasterizer2D.clear();
           this.drawFrame(0, 1630174241, 0);
           super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
@@ -102,7 +102,7 @@ abstract class ModalPanel extends UiContainer {
         }
         if (this.height > GpuFaceNormal.field_b.height) {
           GpuFaceNormal.field_b = new Sprite(this.width, this.height);
-          SetTorpedoEnergyUsed.a(111, GpuFaceNormal.field_b);
+          SetTorpedoEnergyUsed.pushSpriteRasterTarget(111, GpuFaceNormal.field_b);
           SoftwareRasterizer2D.clear();
           this.drawFrame(0, 1630174241, 0);
           super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
@@ -116,7 +116,7 @@ abstract class ModalPanel extends UiContainer {
           GpuFaceNormal.field_b.drawAlpha(param0 + this.x, this.y + param3, this.opacity);
           return;
         }
-        SetTorpedoEnergyUsed.a(111, GpuFaceNormal.field_b);
+        SetTorpedoEnergyUsed.pushSpriteRasterTarget(111, GpuFaceNormal.field_b);
         SoftwareRasterizer2D.clear();
         this.drawFrame(0, 1630174241, 0);
         super.drawLayer(-param0 - this.x, param1, 127, -this.y - param3);
@@ -194,7 +194,7 @@ abstract class ModalPanel extends UiContainer {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1_ref), "bl.EA(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var1_ref), "bl.EA(" + param0 + ')');
         }
     }
 
@@ -205,7 +205,7 @@ abstract class ModalPanel extends UiContainer {
           this.modalStack = param0;
           this.active = false;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "bl.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

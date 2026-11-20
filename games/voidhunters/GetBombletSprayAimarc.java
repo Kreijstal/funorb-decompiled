@@ -6,7 +6,7 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
     static String field_o;
     static String field_p;
 
-    final static void a(int param0) {
+    final static void clearFaceDepthBuckets(int param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;
@@ -19,9 +19,9 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
         try {
           if (param0 != -19689) {
             var5 = (Widget) null;
-            GetBombletSprayAimarc.a((byte[]) null, (Widget) null, -17, -59, (Widget) null, false, 76, 14, -115, (Widget) null);
+            GetBombletSprayAimarc.initializeLobbyState((byte[]) null, (Widget) null, -17, -59, (Widget) null, false, 76, 14, -115, (Widget) null);
           }
-          var6 = SocialTabsPanel.field_b;
+          var6 = SocialTabsPanel.faceDepthBucketCounts;
           var1 = var6;
           var2 = 0;
           var3 = var6.length;
@@ -39,11 +39,11 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1_ref), "am.D(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var1_ref), "am.D(" + param0 + ')');
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int[] param4) {
+    final static void fillPolygon(int param0, int param1, int param2, int param3, int[] param4) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -71,11 +71,11 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_9_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
-    final static void a(byte[] param0, Widget param1, int param2, int param3, Widget param4, boolean param5, int param6, int param7, int param8, Widget param9) {
+    final static void initializeLobbyState(byte[] param0, Widget param1, int param2, int param3, Widget param4, boolean param5, int param6, int param7, int param8, Widget param9) {
         int var11 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -162,7 +162,7 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
           } else {
             stackIn_29_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_28_1).append(stackIn_29_2).append(')').toString());
         }
     }
 
@@ -201,7 +201,7 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

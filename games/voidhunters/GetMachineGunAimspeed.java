@@ -43,7 +43,7 @@ final class GetMachineGunAimspeed extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -55,7 +55,7 @@ final class GetMachineGunAimspeed extends ConsoleCommand {
             GetMachineGunAimspeed.clearSharedReferences(10);
           }
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lr.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "lr.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

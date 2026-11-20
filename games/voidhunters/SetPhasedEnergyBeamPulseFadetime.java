@@ -29,7 +29,7 @@ final class SetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -39,7 +39,7 @@ final class SetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
         int var4;
         QuickChatDynamicCommand[] var5;
         var4 = VoidHunters.field_G;
-        var5 = GetBurstFireRegenerationRate.e((byte) -66);
+        var5 = GetBurstFireRegenerationRate.getQuickChatDynamicCommands((byte) -66);
         var2 = var5;
         for (var3 = param0; var3 < var5.length; var3++) {
           if (param1 == var5[var3].id) {

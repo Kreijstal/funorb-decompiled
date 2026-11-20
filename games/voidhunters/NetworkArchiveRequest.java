@@ -27,7 +27,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
         return this.buffer.payload;
     }
 
-    final static void e(int param0) {
+    final static void activatePublicChatInput(int param0) {
         SetFightersPerPlayerMaximum.chatInputActive = true;
         NetworkMessageState.chatChannel = 0;
         if (param0 != 1) {
@@ -88,7 +88,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 

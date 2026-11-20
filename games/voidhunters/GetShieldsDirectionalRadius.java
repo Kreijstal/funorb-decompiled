@@ -19,7 +19,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
         TooltipDisplay.field_b.setCompletedHints(TutorialProgressState.completedHints, -28855);
         GetMissionResnetResourceTickTime.savePlayerGameData((byte) -46);
         int var1 = -27 / ((1 - param0) / 32);
-        GetBoostersCooldown.savedHintCompletion = GetBots.a(GetBoostersCooldown.savedHintCompletion, -31567, TutorialProgressState.completedHints);
+        GetBoostersCooldown.savedHintCompletion = GetBots.copyBooleanArray(GetBoostersCooldown.savedHintCompletion, -31567, TutorialProgressState.completedHints);
     }
 
     final static void a(byte param0, boolean param1) {
@@ -191,7 +191,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

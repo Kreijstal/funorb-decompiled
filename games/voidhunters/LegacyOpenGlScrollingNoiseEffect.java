@@ -24,7 +24,7 @@ final class LegacyOpenGlScrollingNoiseEffect extends LegacyOpenGlMaterialEffect 
           this.toolkit.bindTexture(param1 ^ 77, param2);
           this.toolkit.setTextureCombineMode(0, param0);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "iib.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "iib.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -70,7 +70,7 @@ final class LegacyOpenGlScrollingNoiseEffect extends LegacyOpenGlMaterialEffect 
           this.toolkit.setActiveTextureUnit(33984, 0);
           this.displayLists.endList(4864);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "iib.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "iib.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

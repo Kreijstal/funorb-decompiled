@@ -15,7 +15,7 @@ final class SetSniperCannonAimspeed extends ConsoleCommand {
           GetMissionVariablesHudX.field_o = new LoginTransitionDialog(GetLagStandardDeviationIn.modalStack, SetAiFiringRangeUpshift.field_o);
           GetLagStandardDeviationIn.modalStack.pushPanel(false, GetMissionVariablesHudX.field_o);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vt.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "vt.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -49,7 +49,7 @@ final class SetSniperCannonAimspeed extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

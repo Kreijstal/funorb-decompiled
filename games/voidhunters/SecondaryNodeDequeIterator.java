@@ -23,22 +23,22 @@ final class SecondaryNodeDequeIterator implements Iterator {
           if (GetRepairModeActiveTime.e(215)) {
             RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 1);
             TileTextureOperation.flushSocketOutput(0, 127);
-            FighterBayWeaponDefinition.l(-125);
+            FighterBayWeaponDefinition.closeGameConnection(-125);
             return;
           }
-          FighterBayWeaponDefinition.l(-125);
+          FighterBayWeaponDefinition.closeGameConnection(-125);
           return;
         }
         SmoothedNanoTickClock.clearKeyboardHandlerReference(-87);
         CarouselPlayerEventFactory.b(14194);
         GetPedrosRepairModeSwitchtime.closeArchiveResources(16928);
         if (!GetRepairModeActiveTime.e(215)) {
-          FighterBayWeaponDefinition.l(-125);
+          FighterBayWeaponDefinition.closeGameConnection(-125);
           return;
         }
         RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 1);
         TileTextureOperation.flushSocketOutput(0, 127);
-        FighterBayWeaponDefinition.l(-125);
+        FighterBayWeaponDefinition.closeGameConnection(-125);
     }
 
     public static void clearSharedReferences(byte param0) {
@@ -83,7 +83,7 @@ final class SecondaryNodeDequeIterator implements Iterator {
           this.nextNode = this.deque.sentinel.secondaryNext;
           this.lastReturned = null;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "jn.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

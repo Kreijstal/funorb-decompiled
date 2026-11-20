@@ -4,7 +4,7 @@
 final class GetBots extends ConsoleCommand {
     static int field_o;
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void fillBorderedEllipseUnclipped(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int var8_int = 0;
         int var9 = 0;
         int var10 = 0;
@@ -163,19 +163,19 @@ final class GetBots extends ConsoleCommand {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var8 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var8), "sab.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var8), "sab.D(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 
-    final static boolean e(byte param0) {
+    final static boolean loadHardwareRendererLibraries(byte param0) {
         int var1 = 26 % ((-51 - param0) / 45);
-        if (!RasterBuffer.a("jaclib", (byte) 114)) {
+        if (!RasterBuffer.tryLoadNativeLibrary("jaclib", (byte) 114)) {
           return false;
         }
-        return RasterBuffer.a("hw3d", (byte) 114);
+        return RasterBuffer.tryLoadNativeLibrary("hw3d", (byte) 114);
     }
 
-    final static boolean[] a(boolean[] param0, int param1, boolean[] param2) {
+    final static boolean[] copyBooleanArray(boolean[] param0, int param1, boolean[] param2) {
         RuntimeException var3 = null;
         boolean[] stackIn_9_0 = null;
         RuntimeException stackIn_13_0 = null;
@@ -214,7 +214,7 @@ final class GetBots extends ConsoleCommand {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
         }
     }
 
@@ -241,7 +241,7 @@ final class GetBots extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

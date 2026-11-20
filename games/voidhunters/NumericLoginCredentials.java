@@ -24,7 +24,7 @@ class NumericLoginCredentials extends LoginCredentials {
           this.encodedIdentifier = param0;
           this.password = param1;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "us.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "us.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -36,7 +36,7 @@ class NumericLoginCredentials extends LoginCredentials {
           param0.writeLong(this.encodedIdentifier, 90);
           param0.writeBase38Name((byte) -53, this.password);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "us.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "us.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

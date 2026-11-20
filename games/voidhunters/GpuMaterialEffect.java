@@ -40,7 +40,7 @@ abstract class GpuMaterialEffect {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), "uda.L(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var1), "uda.L(" + param0 + ')');
         }
     }
 
@@ -84,7 +84,7 @@ abstract class GpuMaterialEffect {
         try {
           this.toolkit = param0;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uda.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "uda.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

@@ -14,7 +14,7 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
           if (param1 == 3) {
             return 11;
           }
-          return SetTorpedoEnergyUsed.a(param1, 300).ascent;
+          return SetTorpedoEnergyUsed.getToolkitFont(param1, 300).ascent;
         }
         if (!OpenGlTexture1D.field_i) {
           return DateOfBirthTextFields.getDefaultBitmapFont(param1, 7988).ascent;
@@ -22,7 +22,7 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
         if (param1 == 3) {
           return 11;
         }
-        return SetTorpedoEnergyUsed.a(param1, 300).ascent;
+        return SetTorpedoEnergyUsed.getToolkitFont(param1, 300).ascent;
     }
 
     final static boolean a(int param0, int param1) {
@@ -199,7 +199,7 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

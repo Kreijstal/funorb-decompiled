@@ -10,7 +10,7 @@ final class BodyInZoneConditionFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new BodyInZoneCondition());
     }
 
-    final static boolean a(boolean param0, int param1) {
+    final static boolean isMenuScreenActive(boolean param0, int param1) {
         if (param0) {
           return true;
         }
@@ -25,7 +25,7 @@ final class BodyInZoneConditionFactory implements GameStateFactory {
         return (SerializableGameState[]) ((Object) new BodyInZoneCondition[param1]);
     }
 
-    final static void a(int param0, NineSliceSprite param1, int param2, int param3, NineSliceSprite param4, int param5) {
+    final static void configureMenuItemStyles(int param0, NineSliceSprite param1, int param2, int param3, NineSliceSprite param4, int param5) {
         ShipTeamCondition.field_e = param5;
         SpawnEnemyShipOrderDefinition.field_g = param0;
         if (param2 <= 112) {
@@ -36,7 +36,7 @@ final class BodyInZoneConditionFactory implements GameStateFactory {
           SetPointDefenceLaserAimarc.field_q = param3;
           StrongCacheReference.field_o = param4;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wqa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "wqa.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ')');
         }
     }
 

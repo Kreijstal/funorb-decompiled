@@ -20,7 +20,7 @@ final class LoginTransitionDialog extends ContentTransitionDialog {
           super.transitionToContent(param0, -57);
           int var3_int = 47 % ((6 - param1) / 46);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ud.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "ud.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

@@ -38,7 +38,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -128,7 +128,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  FighterBayWeaponDefinition.l(-122);
+                  FighterBayWeaponDefinition.closeGameConnection(-122);
                   SetShowTutorial.field_o = false;
                   stackIn_28_0 = var6_intLifetime1;
                   return stackIn_28_0;
@@ -219,7 +219,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
             }
             if (TextureCombineMappings.loginStage == TextInputWidget.field_xb &&
               PlayerJoinFactory.b((byte) 113)) {
-              FighterBayWeaponDefinition.l(-117);
+              FighterBayWeaponDefinition.closeGameConnection(-117);
               if (NetworkMessageState.incomingOpcode == 7 &&
                 !SetShowTutorial.field_o) {
                 SetShowTutorial.field_o = true;
@@ -272,7 +272,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
             } else {
               stackIn_109_2 = "{...}";
             }
-            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_108_1).append(stackIn_109_2).append(')').toString());
+            throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_105_0), ((StringBuilder) (Object) stackIn_108_1).append(stackIn_109_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

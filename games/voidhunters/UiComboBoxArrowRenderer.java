@@ -53,7 +53,7 @@ final class UiComboBoxArrowRenderer implements UiRenderer {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -73,10 +73,10 @@ final class UiComboBoxArrowRenderer implements UiRenderer {
         String stackIn_23_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (!GetBots.e((byte) 121)) {
+          if (!GetBots.loadHardwareRendererLibraries((byte) 121)) {
             throw new RuntimeException("");
           }
-          if (!RasterBuffer.a("jaggl", (byte) 114)) {
+          if (!RasterBuffer.tryLoadNativeLibrary("jaggl", (byte) 114)) {
             throw new RuntimeException("");
           }
           var9 = new jaggl.OpenGL();
@@ -114,7 +114,7 @@ final class UiComboBoxArrowRenderer implements UiRenderer {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

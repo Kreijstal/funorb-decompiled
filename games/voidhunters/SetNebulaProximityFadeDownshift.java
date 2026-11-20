@@ -58,7 +58,7 @@ final class SetNebulaProximityFadeDownshift extends ConsoleCommand {
             }
             PlayerLeave.updateWebsiteNavigationLinks(-38, param0);
           } catch (RuntimeException runtimeException) {
-            throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pcb.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+            throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "pcb.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -95,7 +95,7 @@ final class SetNebulaProximityFadeDownshift extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

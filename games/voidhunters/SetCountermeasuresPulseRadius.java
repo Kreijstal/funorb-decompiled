@@ -33,7 +33,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -61,7 +61,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -253,7 +253,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
             }
             break;
           }
-          SetDebrisFoundInPairs.a(stackIn_65_0 != 0, stackIn_65_1, (byte) 79, param0, var8);
+          SetDebrisFoundInPairs.bucketLogoFacesByDepth(stackIn_65_0 != 0, stackIn_65_1, (byte) 79, param0, var8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -277,7 +277,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
           } else {
             stackIn_79_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param6).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_70_0), ((StringBuilder) (Object) stackIn_78_1).append(stackIn_79_2).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -289,7 +289,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
             SetCountermeasuresPulseRadius.a(48, (byte[]) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wl.D(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "wl.D(" + param0 + ')');
         }
     }
 

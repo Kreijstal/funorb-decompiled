@@ -11,7 +11,7 @@ final class GetSalvoUsesAllEnergy extends ConsoleCommand {
     final static void a(int param0) {
         if (TooltipDisplay.field_b != null) {
           TooltipDisplay.field_b.copyCompletedHintsTo(0, TutorialProgressState.completedHints);
-          GetBoostersCooldown.savedHintCompletion = GetBots.a(GetBoostersCooldown.savedHintCompletion, -31567, TutorialProgressState.completedHints);
+          GetBoostersCooldown.savedHintCompletion = GetBots.copyBooleanArray(GetBoostersCooldown.savedHintCompletion, -31567, TutorialProgressState.completedHints);
         }
         if (param0 >= -64) {
           Object[] var2 = (Object[]) null;
@@ -49,7 +49,7 @@ final class GetSalvoUsesAllEnergy extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -111,7 +111,7 @@ final class GetSalvoUsesAllEnergy extends ConsoleCommand {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

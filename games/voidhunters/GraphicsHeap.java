@@ -39,7 +39,7 @@ abstract class GraphicsHeap extends IntrusiveNode {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), field_z + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var1), field_z + param0 + ')');
         }
     }
 

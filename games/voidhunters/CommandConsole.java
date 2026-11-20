@@ -134,7 +134,7 @@ final class CommandConsole extends DeveloperConsole {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2_ref), "djb.F(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var2_ref), "djb.F(" + param0 + ')');
         }
     }
 
@@ -147,7 +147,7 @@ final class CommandConsole extends DeveloperConsole {
           super.draw((byte) -74);
           this.inputWidget.textWidget.text = var3;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "djb.A(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "djb.A(" + param0 + ')');
         }
     }
 
@@ -248,7 +248,7 @@ final class CommandConsole extends DeveloperConsole {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2_ref = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2_ref), "djb.E(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var2_ref), "djb.E(" + param0 + ')');
         }
     }
 
@@ -305,7 +305,7 @@ final class CommandConsole extends DeveloperConsole {
           } else {
             stackIn_21_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
         }
     }
 
@@ -358,7 +358,7 @@ final class CommandConsole extends DeveloperConsole {
             } else {
               stackIn_17_2 = "{...}";
             }
-            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
+            throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_16_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -372,7 +372,7 @@ final class CommandConsole extends DeveloperConsole {
           field_s = (IndexedSpriteData[][]) null;
           int var1_int = -118 % ((83 - param0) / 35);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "djb.B(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "djb.B(" + param0 + ')');
         }
     }
 
@@ -529,12 +529,12 @@ final class CommandConsole extends DeveloperConsole {
               this.inputWidget.setSelection(var5Lifetime1, 31401, var5Lifetime1);
             }
           }
-          OpenGlRenderbuffer.field_r = PlayerVoteFactory.a(this.inputWidget.getText(param2 - 14413), 107);
+          OpenGlRenderbuffer.field_r = PlayerVoteFactory.highlightConsoleSyntax(this.inputWidget.getText(param2 - 14413), 107);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4_ref = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var4_ref), "djb.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var4_ref), "djb.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -590,7 +590,7 @@ final class CommandConsole extends DeveloperConsole {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(',').append(param1).append(')').toString());
         }
     }
 

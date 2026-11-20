@@ -29,7 +29,7 @@ final class StripedProgressBar extends UiComponent {
         int var8Lifetime1;
         int var9Lifetime1;
         int var12Lifetime1;
-        SetTorpedoEnergyUsed.a(105, var14);
+        SetTorpedoEnergyUsed.pushSpriteRasterTarget(105, var14);
         int var5 = this.height >> 1;
         int var6 = 0;
         if (!param0) {
@@ -93,7 +93,7 @@ final class StripedProgressBar extends UiComponent {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 
@@ -105,7 +105,7 @@ final class StripedProgressBar extends UiComponent {
         int var9 = VoidHunters.field_G;
         int var2 = this.height >> 1;
         Sprite var3 = new Sprite(var2, this.height);
-        SetTorpedoEnergyUsed.a(78, var3);
+        SetTorpedoEnergyUsed.pushSpriteRasterTarget(78, var3);
         if (param0) {
           Sprite var10 = (Sprite) null;
           this.drawStripedBar(-50, -55, (Sprite) null, -43);
@@ -197,7 +197,7 @@ final class StripedProgressBar extends UiComponent {
           }
           SoftwareRasterStateRestorer.popRasterState((byte) 124);
           if (param3 + this.rightCapMask.width >= SoftwareRasterizer2D.clipLeft) {
-            SetTorpedoEnergyUsed.a(param0 ^ 66, this.capScratch);
+            SetTorpedoEnergyUsed.pushSpriteRasterTarget(param0 ^ 66, this.capScratch);
             param2.draw(-this.stripeOffset, 0);
             param2.draw(this.stripeWidth * 2 - this.stripeOffset, 0);
             this.leftCapMask.drawMultiply(0, 0);
@@ -205,7 +205,7 @@ final class StripedProgressBar extends UiComponent {
             this.capScratch.draw(param3, param1);
           }
           if (SoftwareRasterizer2D.clipRight >= var5_int - this.rightCapMask.width) {
-            SetTorpedoEnergyUsed.a(param0 + 22, this.capScratch);
+            SetTorpedoEnergyUsed.pushSpriteRasterTarget(param0 + 22, this.capScratch);
             for (var7 = this.width - this.rightCapMask.width + this.stripeOffset; var7 > 2 * this.stripeWidth; var7 = var7 - this.stripeWidth * 2) {
             }
             param2.draw(-var7, 0);
@@ -226,7 +226,7 @@ final class StripedProgressBar extends UiComponent {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param3).append(')').toString());
         }
     }
 

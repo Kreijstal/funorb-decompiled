@@ -9,19 +9,19 @@ final class SetLaserAimarc extends ConsoleCommand {
 
     final static void savePreferences(int param0) {
         File var1_ref = null;
-        if (null == TorpedoWeaponDefinition.field_e) {
+        if (null == TorpedoWeaponDefinition.preferences) {
           return;
         }
         Object var1 = null;
         try {
-          var1_ref = CacheFiles.resolveCacheFile(UiAngleDial.field_L, (byte) 34);
+          var1_ref = CacheFiles.resolveCacheFile(UiAngleDial.settingsFileName, (byte) 34);
         } catch (Exception exception) {
         }
         if (param0 > -95) {
           return;
         }
         if (var1_ref != null) {
-          MidiNote.writeSerializedObject(67, TorpedoWeaponDefinition.field_e, var1_ref);
+          MidiNote.writeSerializedObject(67, TorpedoWeaponDefinition.preferences, var1_ref);
           return;
         }
     }
@@ -56,7 +56,7 @@ final class SetLaserAimarc extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

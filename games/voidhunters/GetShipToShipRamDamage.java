@@ -6,7 +6,7 @@ final class GetShipToShipRamDamage extends ConsoleCommand {
     static int field_o;
     static String field_p;
 
-    final static void a(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void fillBorderedEllipse(byte param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         if (param0 != 11) {
           return;
         }
@@ -27,7 +27,7 @@ final class GetShipToShipRamDamage extends ConsoleCommand {
           return;
         }
         if (EnvironmentReflectionGpuMaterialEffect.field_i >= param1 + param7) {
-          GetBots.a(param2, param1, param5, param7, param6, param3, param4, 21601);
+          GetBots.fillBorderedEllipseUnclipped(param2, param1, param5, param7, param6, param3, param4, 21601);
           return;
         }
         SetOndamageParticleSpeed.a(2051507073, param4, param7, param3, param2, param5, param6, param1);
@@ -60,7 +60,7 @@ final class GetShipToShipRamDamage extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

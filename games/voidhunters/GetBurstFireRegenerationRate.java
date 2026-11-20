@@ -6,14 +6,14 @@ final class GetBurstFireRegenerationRate extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static QuickChatDynamicCommand[] e(byte param0) {
+    final static QuickChatDynamicCommand[] getQuickChatDynamicCommands(byte param0) {
         if (param0 < -40) {
           return new QuickChatDynamicCommand[]{TeamShipComponentCondition.field_e, GetMomentOfInertiaPerpointCalcDownshift.field_r, SetAngularVelocitySustain.field_o, MissionConditionFactory.field_c, SetSniperCannonAimarc.field_r, MapClearanceArea.field_b, SetSniperCannonAimarc.field_o, GetMassDriverProjectiles.field_p, AccountRequestResult.field_a, ByteStorageRanges.field_c, MenuInputState.field_g, OneShotSound.field_g, GetBloomThresholdPercentage.field_o, DeveloperConsole.field_g};
         }
         return (QuickChatDynamicCommand[]) null;
     }
 
-    final static void b(boolean param0) {
+    final static void shutdownAudioOutputs(boolean param0) {
         if (param0) {
           return;
         }
@@ -66,7 +66,7 @@ final class GetBurstFireRegenerationRate extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

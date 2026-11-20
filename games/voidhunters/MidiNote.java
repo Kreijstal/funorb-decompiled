@@ -34,12 +34,12 @@ final class MidiNote extends IntrusiveNode {
           if (!OpenGlTexture1D.field_i) {
             return DateOfBirthTextFields.getDefaultBitmapFont(param0, param1 ^ -8013).maxDescent;
           }
-          return SetTorpedoEnergyUsed.a(param0, 300).maxDescent;
+          return SetTorpedoEnergyUsed.getToolkitFont(param0, 300).maxDescent;
         }
         if (!OpenGlTexture1D.field_i) {
           return DateOfBirthTextFields.getDefaultBitmapFont(param0, param1 ^ -8013).maxDescent;
         }
-        return SetTorpedoEnergyUsed.a(param0, 300).maxDescent;
+        return SetTorpedoEnergyUsed.getToolkitFont(param0, 300).maxDescent;
     }
 
     final void clearVoiceReferences(int param0) {
@@ -84,7 +84,7 @@ final class MidiNote extends IntrusiveNode {
           }
           SetCountermeasureLauncherAimspeed.field_p = 0;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fkb.D(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "fkb.D(" + param0 + ')');
         }
     }
 
@@ -143,7 +143,7 @@ final class MidiNote extends IntrusiveNode {
             } else {
               stackIn_15_2 = "{...}";
             }
-            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+            throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

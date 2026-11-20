@@ -41,7 +41,7 @@ final class GetArmageddonLength extends ConsoleCommand {
           if (var2 != 0) {
             if (var2 != 1) {
               FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "A1: " + SetCountermeasuresPulsetime.e(-13514), 0);
-              FighterBayWeaponDefinition.l(-126);
+              FighterBayWeaponDefinition.closeGameConnection(-126);
               return;
             }
             var4 = var10.readInt(100);
@@ -57,12 +57,12 @@ final class GetArmageddonLength extends ConsoleCommand {
               var5_ref_dnb.unlink(-3846);
               return;
             }
-            FighterBayWeaponDefinition.l(-121);
+            FighterBayWeaponDefinition.closeGameConnection(-121);
             return;
           }
           var9 = (ClientDataReadRequest) (GetBoostersActiveTime.pendingClientDataReads.first(0));
           if (var9 == null) {
-            FighterBayWeaponDefinition.l(-126);
+            FighterBayWeaponDefinition.closeGameConnection(-126);
             return;
           }
           var5 = var10.readUnsignedByte((byte) -93);
@@ -77,7 +77,7 @@ final class GetArmageddonLength extends ConsoleCommand {
           }
           var10.position = var10.position + 4;
           if (!var10.checkCrc(-2780)) {
-            FighterBayWeaponDefinition.l(-126);
+            FighterBayWeaponDefinition.closeGameConnection(-126);
             return;
           }
           var9.data = (byte[]) (var6);
@@ -87,7 +87,7 @@ final class GetArmageddonLength extends ConsoleCommand {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), "tma.D(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var1), "tma.D(" + param0 + ')');
         }
     }
 
@@ -124,7 +124,7 @@ final class GetArmageddonLength extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -151,7 +151,7 @@ final class GetArmageddonLength extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

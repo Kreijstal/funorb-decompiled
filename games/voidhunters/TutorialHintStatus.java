@@ -41,7 +41,7 @@ final class TutorialHintStatus {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1_ref), "uc.B(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var1_ref), "uc.B(" + param0 + ')');
         }
     }
 

@@ -4,7 +4,7 @@
 final class SocialTabsPanel {
     static LoginStage field_d;
     TabbedWidget tabs;
-    static int[] field_b;
+    static int[] faceDepthBucketCounts;
     static int field_c;
 
     SocialTabsPanel(String param0, Widget param1) {
@@ -15,7 +15,7 @@ final class SocialTabsPanel {
           var4 = new Widget[]{param1, PlayerJoinFactory.field_c, (Widget) ((Object) AttachmentInputState.field_b)};
           this.tabs = new TabbedWidget(0L, SocialTabResources.tabTemplate, var3, EscapePodFactory.field_a, var4, 0);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "bs.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -23,11 +23,11 @@ final class SocialTabsPanel {
         if (param0 < 41) {
           SocialTabsPanel.clearSharedReferences((byte) 78);
           field_d = null;
-          field_b = null;
+          faceDepthBucketCounts = null;
           return;
         }
         field_d = null;
-        field_b = null;
+        faceDepthBucketCounts = null;
     }
 
     final void layout(int param0, int param1, int param2, int param3, int param4) {
@@ -45,7 +45,7 @@ final class SocialTabsPanel {
     }
 
     static {
-        field_b = new int[1024];
+        faceDepthBucketCounts = new int[1024];
         field_c = 0;
         field_d = new LoginStage();
     }

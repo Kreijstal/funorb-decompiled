@@ -25,7 +25,7 @@ final class DateOfBirthEntryPanel extends UiArrayContainer implements UiActionLi
           super.updatePointer(param0, param1, param2, param3);
           this.continueButton.enabled = this.dateFields.getValidator(param2 ^ 782443887).getValidationState((byte) 35) == GetShipPersistence.validInput ? true : false;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pia.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "pia.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -58,7 +58,7 @@ final class DateOfBirthEntryPanel extends UiArrayContainer implements UiActionLi
         try {
           SetArmageddonWarning.b(0, this.dateFields.getDayOfMonth(-5), this.dateFields.getMonthIndex(true), this.dateFields.getYear(3476));
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pia.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "pia.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 

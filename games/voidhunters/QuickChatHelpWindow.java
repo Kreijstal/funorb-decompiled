@@ -62,7 +62,7 @@ final class QuickChatHelpWindow extends Widget {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "lwa.D(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var2), "lwa.D(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -168,7 +168,7 @@ final class QuickChatHelpWindow extends Widget {
           } else {
             stackIn_26_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_25_1).append(stackIn_26_2).append(')').toString());
         }
     }
 

@@ -17,7 +17,7 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
           }
           GetWorldWidthUpshift.exitFullscreenBlocking(this.frame, param0, (byte) 126);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ufb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "ufb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -28,7 +28,7 @@ final class FullscreenCanvas extends java.awt.Canvas implements java.awt.event.F
         try {
           this.focusLost = true;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ufb.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "ufb.focusLost(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

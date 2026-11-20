@@ -388,7 +388,7 @@ final class ArchiveIndex {
           } else {
             stackIn_169_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_168_0), ((StringBuilder) (Object) stackIn_168_1).append(stackIn_169_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_168_0), ((StringBuilder) (Object) stackIn_168_1).append(stackIn_169_2).append(')').toString());
         }
     }
 
@@ -586,7 +586,7 @@ final class ArchiveIndex {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "qp.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var3), "qp.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -633,7 +633,7 @@ final class ArchiveIndex {
             } else {
               stackIn_20_2 = "{...}";
             }
-            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+            throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -692,7 +692,7 @@ final class ArchiveIndex {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_25_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 

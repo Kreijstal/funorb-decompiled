@@ -18,7 +18,7 @@ final class NebulaFieldFactory implements GameStateFactory {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "lob.A(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var2), "lob.A(" + param0 + ')');
         }
     }
 
@@ -107,7 +107,7 @@ final class NebulaFieldFactory implements GameStateFactory {
             }
             if (var2 != 4) {
               FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "F1: " + SetCountermeasuresPulsetime.e(-13514), 0);
-              FighterBayWeaponDefinition.l(-125);
+              FighterBayWeaponDefinition.closeGameConnection(-125);
               return;
             }
             PendingRequestResender.field_b = 1;
@@ -175,7 +175,7 @@ final class NebulaFieldFactory implements GameStateFactory {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1_ref), "lob.D(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var1_ref), "lob.D(" + param0 + ')');
         }
     }
 
@@ -314,7 +314,7 @@ final class NebulaFieldFactory implements GameStateFactory {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var6), "lob.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var6), "lob.F(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -340,7 +340,7 @@ final class NebulaFieldFactory implements GameStateFactory {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -359,7 +359,7 @@ final class NebulaFieldFactory implements GameStateFactory {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "lob.B(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var3), "lob.B(" + param0 + ',' + param1 + ')');
         }
     }
 
@@ -376,7 +376,7 @@ final class NebulaFieldFactory implements GameStateFactory {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), "lob.E(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var1), "lob.E(" + param0 + ')');
         }
     }
 

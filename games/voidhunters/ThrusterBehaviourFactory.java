@@ -10,7 +10,7 @@ final class ThrusterBehaviourFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new ThrusterBehaviour());
     }
 
-    final static java.awt.Container b(int param0) {
+    final static java.awt.Container getGameContainer(int param0) {
         if (null != PointDefenceLaserWeaponDefinition.field_c) {
           return (java.awt.Container) ((Object) PointDefenceLaserWeaponDefinition.field_c);
         }

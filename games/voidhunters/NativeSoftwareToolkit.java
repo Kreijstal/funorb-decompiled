@@ -92,7 +92,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
         this.field_c.clear(93);
         this.disposeToolkitNative();
         if (this.field_h) {
-          SetDebrisFoundInPairs.a((byte) -115, true, false);
+          SetDebrisFoundInPairs.releaseColorPalettes((byte) -115, true, false);
           this.field_h = false;
         }
         this.collectNativeResources();
@@ -365,7 +365,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
         this.field_i = new NodeHashTable(4);
         this.field_h = false;
         try {
-          if (!RasterBuffer.a("sw3d", (byte) 114)) {
+          if (!RasterBuffer.tryLoadNativeLibrary("sw3d", (byte) 114)) {
             throw new RuntimeException("");
           }
           NativeDisposalQueue.registerToolkit((byte) -76);

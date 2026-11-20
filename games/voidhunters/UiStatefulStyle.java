@@ -27,7 +27,7 @@ final class UiStatefulStyle extends UiTextStyle {
           }
           this.stateStyles[param0].backgroundSprites = param1;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uea.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "uea.T(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -53,7 +53,7 @@ final class UiStatefulStyle extends UiTextStyle {
           } else {
             stackIn_5_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_4_1).append(stackIn_5_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -127,7 +127,7 @@ final class UiStatefulStyle extends UiTextStyle {
           } else {
             stackIn_18_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_17_0), ((StringBuilder) (Object) stackIn_17_1).append(stackIn_18_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -173,7 +173,7 @@ final class UiStatefulStyle extends UiTextStyle {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -220,7 +220,7 @@ final class UiStatefulStyle extends UiTextStyle {
         var6 = 13421772;
         if (OpenGlTexture1D.field_i) {
           var7 = 3;
-          SetBoostersCooldown.a(GetDebrisGroupColour.field_r, SetTorpedoEnergyUsed.a(var7, 300), PlayerReadyFactory.field_b[var7], -125, var6, GetBombletSprayEnergyUsed.field_p.width, GetUseDetailLines.field_o, var5, GetTorpedoReload.field_q, GetBombletSprayEnergyUsed.field_p.height);
+          SetBoostersCooldown.a(GetDebrisGroupColour.field_r, SetTorpedoEnergyUsed.getToolkitFont(var7, 300), PlayerReadyFactory.field_b[var7], -125, var6, GetBombletSprayEnergyUsed.field_p.width, GetUseDetailLines.field_o, var5, GetTorpedoReload.field_q, GetBombletSprayEnergyUsed.field_p.height);
         }
     }
 
@@ -261,7 +261,7 @@ final class UiStatefulStyle extends UiTextStyle {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(')').toString());
         }
     }
 
@@ -340,7 +340,7 @@ final class UiStatefulStyle extends UiTextStyle {
           } else {
             stackIn_33_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_32_0), ((StringBuilder) (Object) stackIn_32_1).append(stackIn_33_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -358,7 +358,7 @@ final class UiStatefulStyle extends UiTextStyle {
         try {
           param0.copyStyleTo(this, 6, param1);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "uea.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

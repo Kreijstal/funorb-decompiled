@@ -5,7 +5,7 @@ import java.util.*;
 
 final class TorpedoWeaponDefinition extends WeaponDefinition {
     static String field_d;
-    static Hashtable field_e;
+    static Hashtable preferences;
     static String[] field_c;
     static String field_b;
 
@@ -19,7 +19,7 @@ final class TorpedoWeaponDefinition extends WeaponDefinition {
 
     final int getAimSpeed(int param0) {
         if (param0 != 0) {
-          field_e = (Hashtable) null;
+          preferences = (Hashtable) null;
           return OpenGlUnderwaterMaterialEffect.field_n;
         }
         return OpenGlUnderwaterMaterialEffect.field_n;
@@ -30,7 +30,7 @@ final class TorpedoWeaponDefinition extends WeaponDefinition {
         if (param0 != 75) {
           return;
         }
-        field_e = null;
+        preferences = null;
         field_b = null;
         field_c = null;
     }
@@ -93,7 +93,7 @@ final class TorpedoWeaponDefinition extends WeaponDefinition {
 
     final int getProjectileVelocityRandomness(byte param0) {
         if (param0 >= -12) {
-          field_e = (Hashtable) null;
+          preferences = (Hashtable) null;
           return GetBombletSprayProjectileDamage.field_p;
         }
         return GetBombletSprayProjectileDamage.field_p;
@@ -106,6 +106,6 @@ final class TorpedoWeaponDefinition extends WeaponDefinition {
         field_c = new String[]{"Level editing", "Events", "Conditions", "Actions", "Event editing", "Map zones & Res nodes", "Misc", "Chassis", "Thrusters", "Basic weapons", "Advanced weapons", "Arms", "Hull pieces", "Defences", "Special"};
         field_b = "Waiting for fonts";
         field_d = "Weapon Energy";
-        field_e = new Hashtable();
+        preferences = new Hashtable();
     }
 }

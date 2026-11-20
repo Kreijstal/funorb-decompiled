@@ -77,7 +77,7 @@ final class GpuQuadBuffers {
           } else {
             stackIn_42_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_41_0), ((StringBuilder) (Object) stackIn_41_1).append(stackIn_42_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -94,7 +94,7 @@ final class GpuQuadBuffers {
           GpuQuadBuffers.clearSharedReferences((byte) -96);
         }
         if (var1 == null) {
-          FighterBayWeaponDefinition.l(-116);
+          FighterBayWeaponDefinition.closeGameConnection(-116);
           return;
         }
         IsaacPacketBuffer var2 = AccountNameAvailabilityReplies.field_b;
@@ -109,7 +109,7 @@ final class GpuQuadBuffers {
         try {
           this.vertexBuffer.allocate(param0, 786336, 97);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "je.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "je.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -208,7 +208,7 @@ final class GpuQuadBuffers {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 

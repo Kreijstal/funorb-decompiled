@@ -286,7 +286,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetPhasedEnergyBeamProjectiles.field_o[6] = MapClearanceRectangle.field_f + " " + LegacyOpenGlEnvironmentMappedWaterEffect.field_i;
           SetPhasedEnergyBeamProjectiles.field_o[7] = GetDebrisCollisionDamage.field_o + " " + LegacyOpenGlEnvironmentMappedWaterEffect.field_i;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nra.F(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "nra.F(" + param0 + ')');
         }
     }
 
@@ -411,7 +411,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           } else {
             stackIn_43_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_42_0), ((StringBuilder) (Object) stackIn_42_1).append(stackIn_43_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 

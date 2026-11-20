@@ -44,7 +44,7 @@ final class ValidatedTextField extends UiTextField implements ValidatableInput {
         try {
           this.validator = param1;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tga.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "tga.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -61,7 +61,7 @@ final class ValidatedTextField extends UiTextField implements ValidatableInput {
         super(param0, param1, param2);
     }
 
-    final static void a(int[] param0, int param1, byte param2, byte[] param3, int param4) {
+    final static void groupBucketedFaces(int[] param0, int param1, byte param2, byte[] param3, int param4) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         byte dupTemp$2 = 0;
@@ -83,10 +83,10 @@ final class ValidatedTextField extends UiTextField implements ValidatableInput {
           }
           var5_int = 0;
           while (true) {
-            if (SocialTabsPanel.field_b.length <= var5_int) {
+            if (SocialTabsPanel.faceDepthBucketCounts.length <= var5_int) {
               return;
             }
-            param1 = SocialTabsPanel.field_b[var5_int];
+            param1 = SocialTabsPanel.faceDepthBucketCounts[var5_int];
             var6 = var5_int << 4;
             while (true) {
               incrementValue$0 = param1;
@@ -97,11 +97,11 @@ final class ValidatedTextField extends UiTextField implements ValidatableInput {
               }
               incrementValue$1 = var6;
               var6++;
-              param4 = SetMissionDebrisDefaultProbability.field_p[incrementValue$1];
+              param4 = SetMissionDebrisDefaultProbability.faceSortIndices[incrementValue$1];
               dupTemp$2 = param3[param4];
               dupTemp$3 = param0[dupTemp$2];
               param0[dupTemp$2] = dupTemp$3 + 1;
-              SetMissionDebrisDefaultProbability.field_p[dupTemp$3] = param4;
+              SetMissionDebrisDefaultProbability.faceSortIndices[dupTemp$3] = param4;
             }
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -120,7 +120,7 @@ final class ValidatedTextField extends UiTextField implements ValidatableInput {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -129,7 +129,7 @@ final class ValidatedTextField extends UiTextField implements ValidatableInput {
           super.updatePointer(param0, param1, param2, param3);
           this.pointerOffsetX = -param1 + (PlayerGameData.field_b - this.x);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tga.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "tga.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 

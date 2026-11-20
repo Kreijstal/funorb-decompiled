@@ -10,7 +10,7 @@ abstract class RasterBuffer extends IntrusiveNode {
 
     abstract void drawRegion(java.awt.Graphics param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7);
 
-    final static boolean a(String param0, byte param1) {
+    final static boolean tryLoadNativeLibrary(String param0, byte param1) {
         RuntimeException var2 = null;
         boolean stackIn_4_0 = false;
         RuntimeException stackIn_7_0 = null;
@@ -33,7 +33,7 @@ abstract class RasterBuffer extends IntrusiveNode {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

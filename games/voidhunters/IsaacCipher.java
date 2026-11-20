@@ -135,7 +135,7 @@ final class IsaacCipher {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "dq.C(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var3), "dq.C(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -331,7 +331,7 @@ final class IsaacCipher {
           }
           this.initialize(true);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "dq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

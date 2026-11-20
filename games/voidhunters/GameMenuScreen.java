@@ -73,7 +73,7 @@ final class GameMenuScreen {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(',').append(param3).append(')').toString());
         }
     }
 
@@ -1051,7 +1051,7 @@ final class GameMenuScreen {
         }
         if (this.menuId == 7) {
           stackIn_10_0 = !(GetBombletSprayRandomness.a(-75));
-          var2 = GetGrapplingHooksDamageableBySourcePlayer.a(stackIn_10_0, (byte) 40);
+          var2 = GetGrapplingHooksDamageableBySourcePlayer.updateMenuCarousel(stackIn_10_0, (byte) 40);
           if (3 == var2) {
             if (null != EmailAvailabilityChecks.fullscreenCanvas) {
               VariableCondition.b((byte) -42);

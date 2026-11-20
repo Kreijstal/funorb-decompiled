@@ -2203,7 +2203,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
 
     final void releaseResources() {
         if (this.field_B) {
-          SetDebrisFoundInPairs.a((byte) -101, false, true);
+          SetDebrisFoundInPairs.releaseColorPalettes((byte) -101, false, true);
           this.field_B = false;
         }
         this.field_D = null;

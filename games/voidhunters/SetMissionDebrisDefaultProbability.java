@@ -3,7 +3,7 @@
  */
 final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
     static int field_o;
-    static int[] field_p;
+    static int[] faceSortIndices;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -29,7 +29,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -38,7 +38,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
     }
 
     public static void clearSharedReferences(int param0) {
-        field_p = null;
+        faceSortIndices = null;
         if (param0 != -10441) {
           field_o = -54;
         }
@@ -200,6 +200,6 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
 
     static {
         field_o = 8;
-        field_p = new int[16384];
+        faceSortIndices = new int[16384];
     }
 }

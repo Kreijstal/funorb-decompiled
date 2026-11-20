@@ -15,7 +15,7 @@ final class ValidationStatusWidget extends HotspotTextWidget {
           this.animationTick = this.animationTick + 1;
           super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gm.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "gm.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -119,11 +119,11 @@ final class ValidationStatusWidget extends HotspotTextWidget {
             if (this.spinnerSprite != null &&
               var11 <= this.spinnerSprite.width &&
               var12 <= this.spinnerSprite.height) {
-              SetTorpedoEnergyUsed.a(94, this.spinnerSprite);
+              SetTorpedoEnergyUsed.pushSpriteRasterTarget(94, this.spinnerSprite);
               SoftwareRasterizer2D.clear();
             } else {
               this.spinnerSprite = new Sprite(var11, var12);
-              SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
+              SetTorpedoEnergyUsed.pushSpriteRasterTarget(99, this.spinnerSprite);
             }
             var20.drawRotatedScaledBilinear(112, 144, var20.paddedWidth << 4, var20.paddedHeight << 4, -this.animationTick << 10, 4096);
             SoftwareRasterStateRestorer.popRasterState((byte) 124);
@@ -154,17 +154,17 @@ final class ValidationStatusWidget extends HotspotTextWidget {
           var12Lifetime4 = var24.paddedHeight << 1;
           if (this.spinnerSprite == null) {
             this.spinnerSprite = new Sprite(var11Lifetime4, var12Lifetime4);
-            SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
+            SetTorpedoEnergyUsed.pushSpriteRasterTarget(99, this.spinnerSprite);
           } else {
             if (var11Lifetime4 > this.spinnerSprite.width) {
               this.spinnerSprite = new Sprite(var11Lifetime4, var12Lifetime4);
-              SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
+              SetTorpedoEnergyUsed.pushSpriteRasterTarget(99, this.spinnerSprite);
             } else {
               if (var12Lifetime4 > this.spinnerSprite.height) {
                 this.spinnerSprite = new Sprite(var11Lifetime4, var12Lifetime4);
-                SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
+                SetTorpedoEnergyUsed.pushSpriteRasterTarget(99, this.spinnerSprite);
               } else {
-                SetTorpedoEnergyUsed.a(94, this.spinnerSprite);
+                SetTorpedoEnergyUsed.pushSpriteRasterTarget(94, this.spinnerSprite);
                 SoftwareRasterizer2D.clear();
               }
             }
@@ -201,18 +201,18 @@ final class ValidationStatusWidget extends HotspotTextWidget {
           var12Lifetime1 = var33.paddedHeight << 1;
           if (this.spinnerSprite == null) {
             this.spinnerSprite = new Sprite(var11Lifetime1, var12Lifetime1);
-            SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
+            SetTorpedoEnergyUsed.pushSpriteRasterTarget(99, this.spinnerSprite);
           } else {
             if (var11Lifetime1 > this.spinnerSprite.width) {
               this.spinnerSprite = new Sprite(var11Lifetime1, var12Lifetime1);
-              SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
+              SetTorpedoEnergyUsed.pushSpriteRasterTarget(99, this.spinnerSprite);
             } else {
               if (var12Lifetime1 <= this.spinnerSprite.height) {
-                SetTorpedoEnergyUsed.a(94, this.spinnerSprite);
+                SetTorpedoEnergyUsed.pushSpriteRasterTarget(94, this.spinnerSprite);
                 SoftwareRasterizer2D.clear();
               } else {
                 this.spinnerSprite = new Sprite(var11Lifetime1, var12Lifetime1);
-                SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
+                SetTorpedoEnergyUsed.pushSpriteRasterTarget(99, this.spinnerSprite);
               }
             }
           }
@@ -234,11 +234,11 @@ final class ValidationStatusWidget extends HotspotTextWidget {
           if (this.spinnerSprite != null &&
             var11Lifetime2 <= this.spinnerSprite.width &&
             var12Lifetime2 <= this.spinnerSprite.height) {
-            SetTorpedoEnergyUsed.a(94, this.spinnerSprite);
+            SetTorpedoEnergyUsed.pushSpriteRasterTarget(94, this.spinnerSprite);
             SoftwareRasterizer2D.clear();
           } else {
             this.spinnerSprite = new Sprite(var11Lifetime2, var12Lifetime2);
-            SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
+            SetTorpedoEnergyUsed.pushSpriteRasterTarget(99, this.spinnerSprite);
           }
           var26.drawRotatedScaledBilinear(112, 144, var26.paddedWidth << 4, var26.paddedHeight << 4, -this.animationTick << 10, 4096);
           SoftwareRasterStateRestorer.popRasterState((byte) 124);
@@ -264,17 +264,17 @@ final class ValidationStatusWidget extends HotspotTextWidget {
         var12Lifetime3 = var29.paddedHeight << 1;
         if (this.spinnerSprite == null) {
           this.spinnerSprite = new Sprite(var11Lifetime3, var12Lifetime3);
-          SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
+          SetTorpedoEnergyUsed.pushSpriteRasterTarget(99, this.spinnerSprite);
         } else {
           if (var11Lifetime3 > this.spinnerSprite.width) {
             this.spinnerSprite = new Sprite(var11Lifetime3, var12Lifetime3);
-            SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
+            SetTorpedoEnergyUsed.pushSpriteRasterTarget(99, this.spinnerSprite);
           } else {
             if (var12Lifetime3 > this.spinnerSprite.height) {
               this.spinnerSprite = new Sprite(var11Lifetime3, var12Lifetime3);
-              SetTorpedoEnergyUsed.a(99, this.spinnerSprite);
+              SetTorpedoEnergyUsed.pushSpriteRasterTarget(99, this.spinnerSprite);
             } else {
-              SetTorpedoEnergyUsed.a(94, this.spinnerSprite);
+              SetTorpedoEnergyUsed.pushSpriteRasterTarget(94, this.spinnerSprite);
               SoftwareRasterizer2D.clear();
             }
           }
@@ -307,7 +307,7 @@ final class ValidationStatusWidget extends HotspotTextWidget {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(')').toString());
         }
     }
 
@@ -355,7 +355,7 @@ final class ValidationStatusWidget extends HotspotTextWidget {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -366,7 +366,7 @@ final class ValidationStatusWidget extends HotspotTextWidget {
           this.validator = param0;
           this.setBounds(param2, param4, param5, 1, param3);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "gm.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 

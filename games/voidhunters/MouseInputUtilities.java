@@ -32,7 +32,7 @@ final class MouseInputUtilities {
           param1.removeFocusListener(GetDebrisFoundInPairs.field_q);
           GetBombletSprayAimarc.field_q = 0;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uab.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "uab.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

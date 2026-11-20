@@ -48,13 +48,13 @@ final class TextureEllipseShape extends TextureRasterShape {
         if (param1 == 110) {
           var6 = this.centerY * param0 >> 12;
           var7 = param0 * this.radiusY >> 12;
-          GetShipToShipRamDamage.a((byte) 11, var7, this.fillColor, this.outlineWidth, this.outlineColor, var5, var4, var6);
+          GetShipToShipRamDamage.fillBorderedEllipse((byte) 11, var7, this.fillColor, this.outlineWidth, this.outlineColor, var5, var4, var6);
           return;
         }
         this.centerY = -115;
         var6Lifetime1 = this.centerY * param0 >> 12;
         var7Lifetime1 = param0 * this.radiusY >> 12;
-        GetShipToShipRamDamage.a((byte) 11, var7Lifetime1, this.fillColor, this.outlineWidth, this.outlineColor, var5, var4, var6Lifetime1);
+        GetShipToShipRamDamage.fillBorderedEllipse((byte) 11, var7Lifetime1, this.fillColor, this.outlineWidth, this.outlineColor, var5, var4, var6Lifetime1);
     }
 
     static {

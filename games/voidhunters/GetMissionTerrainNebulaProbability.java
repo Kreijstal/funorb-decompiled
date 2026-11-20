@@ -18,7 +18,7 @@ final class GetMissionTerrainNebulaProbability extends ConsoleCommand {
         int var4 = VoidHunters.field_G;
         try {
           var1 = new Sprite(540, 140);
-          SetTorpedoEnergyUsed.a(29, var1);
+          SetTorpedoEnergyUsed.pushSpriteRasterTarget(29, var1);
           SoftwareFlatTriangleRasterizer.setClipFromRaster();
           SoftwareRasterizer2D.clear();
           SetSalvoaim.logoAnimationTick = 0;
@@ -35,7 +35,7 @@ final class GetMissionTerrainNebulaProbability extends ConsoleCommand {
           var1.drawHalfSize(0, 0);
           SoftwareRasterStateRestorer.popRasterState((byte) 124);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ls.C(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "ls.C(" + param0 + ')');
         }
     }
 
@@ -45,7 +45,7 @@ final class GetMissionTerrainNebulaProbability extends ConsoleCommand {
             GetMissionTerrainNebulaProbability.buildLogoGlowSprite(94);
           }
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ls.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "ls.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -72,7 +72,7 @@ final class GetMissionTerrainNebulaProbability extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

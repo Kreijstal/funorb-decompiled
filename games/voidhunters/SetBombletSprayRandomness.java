@@ -5,7 +5,7 @@ final class SetBombletSprayRandomness extends ConsoleCommand {
     static String field_o;
     static UiDraggableContainer field_p;
 
-    final static int a(int param0, int param1) {
+    final static int countBits(int param0, int param1) {
         param0 = (param1 & param0) + (1431655765 & param0 >>> 1);
         param0 = (param0 & 858993459) + ((-858993460 & param0) >>> 2);
         param0 = 252645135 & (param0 >>> 4) + param0;
@@ -14,7 +14,7 @@ final class SetBombletSprayRandomness extends ConsoleCommand {
         return 255 & param0;
     }
 
-    final static int a(int param0, int param1, boolean param2) {
+    final static int floorDivide(int param0, int param1, boolean param2) {
         int var3 = 0;
         int var3Lifetime1;
         if (!param2) {
@@ -34,7 +34,7 @@ final class SetBombletSprayRandomness extends ConsoleCommand {
         field_p = null;
         field_o = null;
         if (param0 != -612363640) {
-          SetBombletSprayRandomness.a(-95, 34);
+          SetBombletSprayRandomness.countBits(-95, 34);
         }
     }
 
@@ -64,7 +64,7 @@ final class SetBombletSprayRandomness extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

@@ -33,7 +33,7 @@ final class GetMissileLauncherRandomness extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -48,7 +48,7 @@ final class GetMissileLauncherRandomness extends ConsoleCommand {
         field_o = null;
     }
 
-    final static ClientException a(Throwable param0, String param1) {
+    final static ClientException wrapClientException(Throwable param0, String param1) {
         ClientException var2 = null;
         if (param0 instanceof ClientException) {
           var2 = (ClientException) ((Object) param0);
@@ -59,7 +59,7 @@ final class GetMissileLauncherRandomness extends ConsoleCommand {
         return var2;
     }
 
-    final static boolean e(int param0) {
+    final static boolean isAccountRequestPending(int param0) {
         if (param0 == -3840) {
           return SetShipTeamAction.field_b == ActiveIconBorderRenderer.pendingAccountRequest ? true : false;
         }

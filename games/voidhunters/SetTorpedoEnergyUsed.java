@@ -6,16 +6,16 @@ final class SetTorpedoEnergyUsed extends ConsoleCommand {
     static int field_p;
     static float field_o;
 
-    final static ToolkitFontMetrics a(int param0, int param1) {
+    final static ToolkitFontMetrics getToolkitFont(int param0, int param1) {
         if (param1 != 300) {
           Sprite var3 = (Sprite) null;
-          SetTorpedoEnergyUsed.a(86, (Sprite) null);
+          SetTorpedoEnergyUsed.pushSpriteRasterTarget(86, (Sprite) null);
           return ShipBodyFactory.field_b[param0];
         }
         return ShipBodyFactory.field_b[param0];
     }
 
-    final static void a(int param0, Sprite param1) {
+    final static void pushSpriteRasterTarget(int param0, Sprite param1) {
         try {
           SetOndamageParticleSpeed.pushRasterState(3);
           SoftwareRasterizer2D.setTarget(param1.pixels, param1.paddedWidth, param1.paddedHeight);
@@ -23,7 +23,7 @@ final class SetTorpedoEnergyUsed extends ConsoleCommand {
             field_q = -37;
           }
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "de.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "de.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -55,7 +55,7 @@ final class SetTorpedoEnergyUsed extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

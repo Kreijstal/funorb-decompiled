@@ -19,7 +19,7 @@ final class FighterBayWeaponDefinition extends WeaponDefinition {
     FighterBayWeaponDefinition() {
     }
 
-    final static void l(int param0) {
+    final static void closeGameConnection(int param0) {
         if (param0 > -115) {
           return;
         }
@@ -29,11 +29,11 @@ final class FighterBayWeaponDefinition extends WeaponDefinition {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean needsFaceAttachmentGroups(int param0, int param1, int param2) {
         if (param0 < -21) {
           return 0 != (param1 & 1024) ? true : false;
         }
-        FighterBayWeaponDefinition.l(71);
+        FighterBayWeaponDefinition.closeGameConnection(71);
         return 0 != (param1 & 1024) ? true : false;
     }
 

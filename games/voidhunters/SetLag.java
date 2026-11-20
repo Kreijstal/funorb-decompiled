@@ -30,7 +30,7 @@ final class SetLag extends ConsoleCommand {
           PanelWidthQuery.field_e = param5;
           GetSniperCannonAimarc.field_o = param2;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ogb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + (param12 != null ? "{...}" : "null") + ',' + param13 + ',' + param14 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "ogb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + (param4 != null ? "{...}" : "null") + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ',' + param7 + ',' + param8 + ',' + param9 + ',' + param10 + ',' + param11 + ',' + (param12 != null ? "{...}" : "null") + ',' + param13 + ',' + param14 + ')');
         }
     }
 
@@ -62,7 +62,7 @@ final class SetLag extends ConsoleCommand {
           if (0 == var2) {
             var4 = (IntegerArrayReadRequest) (SetDebugLineLife.pendingIntegerArrayReads.first(param0 ^ -8999));
             if (var4 == null) {
-              FighterBayWeaponDefinition.l(-128);
+              FighterBayWeaponDefinition.closeGameConnection(-128);
               return;
             }
             var5 = -var9.position + PartitioningManagerFactory.field_a;
@@ -89,7 +89,7 @@ final class SetLag extends ConsoleCommand {
                 break;
               }
               if (var5_ref_ik == null) {
-                FighterBayWeaponDefinition.l(-121);
+                FighterBayWeaponDefinition.closeGameConnection(-121);
                 return;
               }
               var5_ref_ik.unlink(param0 ^ 11299);
@@ -97,7 +97,7 @@ final class SetLag extends ConsoleCommand {
             }
             else {
               FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "LR1: " + SetCountermeasuresPulsetime.e(-13514), 0);
-              FighterBayWeaponDefinition.l(-116);
+              FighterBayWeaponDefinition.closeGameConnection(-116);
             }
           }
           if (param0 == -8999) {
@@ -108,7 +108,7 @@ final class SetLag extends ConsoleCommand {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), "ogb.D(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var1), "ogb.D(" + param0 + ')');
         }
     }
 
@@ -138,7 +138,7 @@ final class SetLag extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

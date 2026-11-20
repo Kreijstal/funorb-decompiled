@@ -83,7 +83,7 @@ final class LaunchFightersOrderDefinition extends SpecialOrderDefinition {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), "vdb.C(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var1), "vdb.C(" + param0 + ')');
         }
     }
 

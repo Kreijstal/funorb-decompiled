@@ -27,7 +27,7 @@ final class GetLagIn extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -46,7 +46,7 @@ final class GetLagIn extends ConsoleCommand {
             stackIn_2_0 = 61;
             return stackIn_2_0;
           }
-          var3 = TorpedoWeaponDefinition.field_e.get(param2);
+          var3 = TorpedoWeaponDefinition.preferences.get(param2);
           if (!(var3 instanceof Integer)) {
             stackIn_7_0 = param0;
             return stackIn_7_0;
@@ -63,7 +63,7 @@ final class GetLagIn extends ConsoleCommand {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_10_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(')').toString());
         }
     }
 

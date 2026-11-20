@@ -32,7 +32,7 @@ final class SetMachineGunFireForce extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -44,13 +44,13 @@ final class SetMachineGunFireForce extends ConsoleCommand {
         int var2 = -9 % ((param0 + 52) / 62);
         String var1 = LoadBlackboxRecording.a(87);
         if (var1 == null) {
-          return new AccountRequestText(LoadBlackboxRecording.a(94), GetMissileLauncherRandomness.e(-3840));
+          return new AccountRequestText(LoadBlackboxRecording.a(94), GetMissileLauncherRandomness.isAccountRequestPending(-3840));
         }
         if (var1.indexOf('@') >= 0) {
           var1 = "";
-          return new AccountRequestText(LoadBlackboxRecording.a(94), GetMissileLauncherRandomness.e(-3840));
+          return new AccountRequestText(LoadBlackboxRecording.a(94), GetMissileLauncherRandomness.isAccountRequestPending(-3840));
         }
-        return new AccountRequestText(LoadBlackboxRecording.a(94), GetMissileLauncherRandomness.e(-3840));
+        return new AccountRequestText(LoadBlackboxRecording.a(94), GetMissileLauncherRandomness.isAccountRequestPending(-3840));
     }
 
     final static void drawDebugArrows(byte param0, Camera2D param1) {
@@ -86,7 +86,7 @@ final class SetMachineGunFireForce extends ConsoleCommand {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 

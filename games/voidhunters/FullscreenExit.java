@@ -47,7 +47,7 @@ final class FullscreenExit {
           GetMissileLauncherAimspeed.huffmanCodec = param1;
           int var2_int = 12 % ((param0 - 19) / 37);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "spb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "spb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

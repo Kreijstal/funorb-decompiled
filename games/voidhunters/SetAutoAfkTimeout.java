@@ -10,7 +10,7 @@ final class SetAutoAfkTimeout extends ConsoleCommand {
     static float[] field_p;
     static String field_r;
 
-    final static ResourceArchive a(boolean param0, boolean param1, int param2, boolean param3, int param4, int param5) {
+    final static ResourceArchive createArchive(boolean param0, boolean param1, int param2, boolean param3, int param4, int param5) {
         try {
           Object var6 = null;
           Object var7 = null;
@@ -40,7 +40,7 @@ final class SetAutoAfkTimeout extends ConsoleCommand {
               var8.prefetchAllGroups((byte) -82);
             }
             if (param2 > -48) {
-              SetAutoAfkTimeout.a(false, false, 36, false, -48, -32);
+              SetAutoAfkTimeout.createArchive(false, false, 36, false, -48, -32);
             }
             stackIn_15_0 = new ResourceArchive(var8, param0, param5);
             return stackIn_15_0;
@@ -73,7 +73,7 @@ final class SetAutoAfkTimeout extends ConsoleCommand {
         field_s = null;
     }
 
-    final static int a(String param0, PacketBuffer param1, int param2) {
+    final static int writeHuffmanString(String param0, PacketBuffer param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         byte[] var4 = null;
@@ -114,7 +114,7 @@ final class SetAutoAfkTimeout extends ConsoleCommand {
           } else {
             stackIn_11_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_10_1).append(stackIn_11_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -148,7 +148,7 @@ final class SetAutoAfkTimeout extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

@@ -71,7 +71,7 @@ final class IntrusiveNodeHashTableIterator implements Iterator {
           this.table = param0;
           this.reset(1);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pnb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "pnb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

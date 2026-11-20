@@ -138,7 +138,7 @@ final class TileTextureOperation extends TextureOperation {
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -162,7 +162,7 @@ final class TileTextureOperation extends TextureOperation {
               } catch (java.io.IOException decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
                 iOException = (IOException) (Object) decompiledCaughtException;
-                FighterBayWeaponDefinition.l(-122);
+                FighterBayWeaponDefinition.closeGameConnection(-122);
               }
               RequestNewestBlackboxRecording.field_p.position = 0;
             }

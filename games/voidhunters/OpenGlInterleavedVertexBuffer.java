@@ -15,7 +15,7 @@ final class OpenGlInterleavedVertexBuffer {
           discarded$1 = new OpenGlVertexAttribute(this.vertexBuffer, 5126, 3, param0);
           discarded$2 = new OpenGlVertexAttribute(this.vertexBuffer, 5121, 4, 20);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "vf.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

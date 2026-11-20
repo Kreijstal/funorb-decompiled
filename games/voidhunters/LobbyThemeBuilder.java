@@ -48,7 +48,7 @@ final class LobbyThemeBuilder {
         int var7_intLifetime3;
         var19 = VoidHunters.field_G;
         try {
-          var21 = GetExplosionProjectileDamage.a(-112, "lobby", "crowns", param3);
+          var21 = GetExplosionProjectileDamage.loadNamedIndexedSprites(-112, "lobby", "crowns", param3);
           var5 = var21;
           OpenGlArbProgramCompiler.field_a = var21.length;
           if (param4 != null) {
@@ -292,7 +292,7 @@ final class LobbyThemeBuilder {
           } else {
             stackIn_34_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_33_1).append(stackIn_34_2).append(')').toString());
         }
     }
 

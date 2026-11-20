@@ -57,7 +57,7 @@ final class ColorKeyScaleTextureOperation extends TextureOperation {
           } else {
             stackIn_20_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_19_0), ((StringBuilder) (Object) stackIn_19_1).append(stackIn_20_2).append(')').toString());
         }
     }
 
@@ -179,7 +179,7 @@ final class ColorKeyScaleTextureOperation extends TextureOperation {
           if (GetArmageddonTimerStart.field_o == AgeValidator.field_f) {
             return;
           }
-          if (BodyInZoneConditionFactory.a(false, GetArmageddonTimerStart.field_o)) {
+          if (BodyInZoneConditionFactory.isMenuScreenActive(false, GetArmageddonTimerStart.field_o)) {
             WorldSpriteTiler.field_a[GetArmageddonTimerStart.field_o].applyObfuscationGuard((byte) 49);
           }
           SetShipTeamAction.field_f = GetMessageFadetime.field_o;
@@ -226,7 +226,7 @@ final class ColorKeyScaleTextureOperation extends TextureOperation {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1_ref = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1_ref), "olb.C(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var1_ref), "olb.C(" + param0 + ')');
         }
     }
 

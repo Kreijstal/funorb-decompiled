@@ -24,7 +24,7 @@ final class ConsoleEvaluationException extends Exception {
         try {
           this.message = param0;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gva.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "gva.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

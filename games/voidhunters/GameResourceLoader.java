@@ -307,7 +307,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           }
           OpenGlClientVertexBuffer.a(18090, false);
           SetComponentBreakingExplosionForceMultiplier.a(MonochromeRowCache.field_j, param0 + 29073);
-          var10 = GetExplosionProjectileDamage.a(98, "basic", "extra_crowns", this.graphicsArchive);
+          var10 = GetExplosionProjectileDamage.loadNamedIndexedSprites(98, "basic", "extra_crowns", this.graphicsArchive);
           var15 = var10;
           var19 = new int[var10.length];
           for (var7 = 0; var19.length > var7; var7++) {

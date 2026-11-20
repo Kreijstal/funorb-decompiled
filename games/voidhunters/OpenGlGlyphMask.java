@@ -18,7 +18,7 @@ final class OpenGlGlyphMask extends GlyphMask {
         field_a = null;
     }
 
-    final static Object a(File param0, byte param1) {
+    final static Object readSerializedObject(File param0, byte param1) {
         try {
           Object stackIn_2_0 = null;
           Object stackIn_5_0 = null;
@@ -70,7 +70,7 @@ final class OpenGlGlyphMask extends GlyphMask {
             } else {
               stackIn_15_2 = "{...}";
             }
-            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+            throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

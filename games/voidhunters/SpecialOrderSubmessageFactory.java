@@ -4,7 +4,7 @@
 final class SpecialOrderSubmessageFactory implements GameStateFactory {
     static String field_a;
 
-    final static SoftwareIndexedSprite2D[] a(int param0, byte param1, int param2, ResourceArchive param3) {
+    final static SoftwareIndexedSprite2D[] loadIndexedSprites(int param0, byte param1, int param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         SoftwareIndexedSprite2D[] stackIn_4_0 = null;
@@ -29,7 +29,7 @@ final class SpecialOrderSubmessageFactory implements GameStateFactory {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -80,7 +80,7 @@ final class SpecialOrderSubmessageFactory implements GameStateFactory {
         field_a = null;
         if (param0) {
           ResourceArchive var2 = (ResourceArchive) null;
-          SpecialOrderSubmessageFactory.a(-49, (byte) -68, 33, (ResourceArchive) null);
+          SpecialOrderSubmessageFactory.loadIndexedSprites(-49, (byte) -68, 33, (ResourceArchive) null);
         }
     }
 

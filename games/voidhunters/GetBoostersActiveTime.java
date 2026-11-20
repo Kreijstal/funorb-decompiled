@@ -39,7 +39,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -47,7 +47,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static int a(int param0, AccountRequestText param1, AccountRequestText param2, int param3, int param4, String param5, boolean param6) {
+    final static int sendAndPollAccountRequest(int param0, AccountRequestText param1, AccountRequestText param2, int param3, int param4, String param5, boolean param6) {
         int var12 = 0;
         int stackIn_6_0 = 0;
         PacketBuffer stackIn_17_0 = null;
@@ -169,7 +169,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               if (var9Lifetime1 == 248) {
                 ShieldInfoPool.writeSessionMarkerCookie(MissionList.getApplet((byte) -124), param4 ^ 0);
                 GameJoinNotificationText.field_b = CurveTextureOperation.field_j;
-                FighterBayWeaponDefinition.l(param4 - 125);
+                FighterBayWeaponDefinition.closeGameConnection(param4 - 125);
                 SetShowTutorial.field_o = false;
                 stackIn_34_0 = var9Lifetime1;
                 return stackIn_34_0;
@@ -195,7 +195,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
                 for (var12 = 0; var12 < var11; var12++) {
                   GameInvitationText.field_a[var12] = AccountNameAvailabilityReplies.field_b.readCircumfixedString(-1609246200);
                 }
-                FighterBayWeaponDefinition.l(-122);
+                FighterBayWeaponDefinition.closeGameConnection(-122);
                 SetShowTutorial.field_o = false;
                 stackIn_43_0 = var11 + 100;
                 return stackIn_43_0;
@@ -215,7 +215,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
             } else {
               GameJoinNotificationText.field_b = AccountNameAvailabilityReplies.field_b.readString(-1);
             }
-            FighterBayWeaponDefinition.l(-122);
+            FighterBayWeaponDefinition.closeGameConnection(-122);
             SetShowTutorial.field_o = false;
             stackIn_55_0 = NetworkMessageState.incomingOpcode;
             return stackIn_55_0;
@@ -260,7 +260,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param6).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_68_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(',').append(param6).append(')').toString());
         }
     }
 

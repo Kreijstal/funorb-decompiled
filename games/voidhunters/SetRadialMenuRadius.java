@@ -27,7 +27,7 @@ final class SetRadialMenuRadius extends ConsoleCommand {
         if (param0 != 82) {
           SetRadialMenuRadius.drawLogoAnimation((byte) -71, -110, -57);
         }
-        SetTorpedoEnergyUsed.a(74, UiAngleDial.field_K);
+        SetTorpedoEnergyUsed.pushSpriteRasterTarget(74, UiAngleDial.field_K);
         SoftwareFlatTriangleRasterizer.setClipFromRaster();
         SoftwareRasterizer2D.clear();
         Transform3D.renderLogoMeshes((byte) 74);
@@ -92,7 +92,7 @@ final class SetRadialMenuRadius extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -142,7 +142,7 @@ final class SetRadialMenuRadius extends ConsoleCommand {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 

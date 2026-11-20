@@ -56,11 +56,11 @@ final class ComponentAttachmentPlan {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(')').toString());
         }
     }
 
-    final static long a(CharSequence param0, boolean param1) {
+    final static long hashString31(CharSequence param0, boolean param1) {
         int var5 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -95,11 +95,11 @@ final class ComponentAttachmentPlan {
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static int a(int param0, byte param1, int param2, int param3) {
+    final static int approximateVectorLength(int param0, byte param1, int param2, int param3) {
         int stackIn_52_0 = 0;
         int stackIn_57_0 = 0;
         int stackIn_61_0 = 0;
@@ -170,61 +170,61 @@ final class ComponentAttachmentPlan {
         if (param3 < 65536) {
           if (param3 < 256) {
             if (param3 >= 0) {
-              return GetBuildViewAutozoomEndOnAction.field_o[param3] >> 12;
+              return GetBuildViewAutozoomEndOnAction.sqrtLookupTable[param3] >> 12;
             }
             return -1;
           }
           if (param3 < 4096) {
             if (param3 < 1024) {
-              return GetBuildViewAutozoomEndOnAction.field_o[param3 >> 2] >> 11;
+              return GetBuildViewAutozoomEndOnAction.sqrtLookupTable[param3 >> 2] >> 11;
             }
-            return GetBuildViewAutozoomEndOnAction.field_o[param3 >> 4] >> 10;
+            return GetBuildViewAutozoomEndOnAction.sqrtLookupTable[param3 >> 4] >> 10;
           }
           if (param3 >= 16384) {
-            return GetBuildViewAutozoomEndOnAction.field_o[param3 >> 8] >> 8;
+            return GetBuildViewAutozoomEndOnAction.sqrtLookupTable[param3 >> 8] >> 8;
           }
-          return GetBuildViewAutozoomEndOnAction.field_o[param3 >> 6] >> 9;
+          return GetBuildViewAutozoomEndOnAction.sqrtLookupTable[param3 >> 6] >> 9;
         }
         if (param3 < 16777216) {
           if (param3 < 1048576) {
             if (param3 < 262144) {
-              return GetBuildViewAutozoomEndOnAction.field_o[param3 >> 10] >> 7;
+              return GetBuildViewAutozoomEndOnAction.sqrtLookupTable[param3 >> 10] >> 7;
             }
-            return GetBuildViewAutozoomEndOnAction.field_o[param3 >> 12] >> 6;
+            return GetBuildViewAutozoomEndOnAction.sqrtLookupTable[param3 >> 12] >> 6;
           }
           if (4194304 > param3) {
-            return GetBuildViewAutozoomEndOnAction.field_o[param3 >> 14] >> 5;
+            return GetBuildViewAutozoomEndOnAction.sqrtLookupTable[param3 >> 14] >> 5;
           }
-          return GetBuildViewAutozoomEndOnAction.field_o[param3 >> 16] >> 4;
+          return GetBuildViewAutozoomEndOnAction.sqrtLookupTable[param3 >> 16] >> 4;
         }
         if (param3 >= 268435456) {
           if (1073741824 <= param3) {
-            return GetBuildViewAutozoomEndOnAction.field_o[param3 >> 24] << var4;
+            return GetBuildViewAutozoomEndOnAction.sqrtLookupTable[param3 >> 24] << var4;
           }
           if (var4 < 1) {
-            stackIn_52_0 = GetBuildViewAutozoomEndOnAction.field_o[param3 >> 22] >> -var4 + 1;
+            stackIn_52_0 = GetBuildViewAutozoomEndOnAction.sqrtLookupTable[param3 >> 22] >> -var4 + 1;
           } else {
-            stackIn_52_0 = GetBuildViewAutozoomEndOnAction.field_o[param3 >> 22] << -1 + var4;
+            stackIn_52_0 = GetBuildViewAutozoomEndOnAction.sqrtLookupTable[param3 >> 22] << -1 + var4;
           }
           return stackIn_52_0;
         }
         if (param3 >= 67108864) {
           if (var4 < 2) {
-            stackIn_61_0 = GetBuildViewAutozoomEndOnAction.field_o[param3 >> 20] >> 2 - var4;
+            stackIn_61_0 = GetBuildViewAutozoomEndOnAction.sqrtLookupTable[param3 >> 20] >> 2 - var4;
           } else {
-            stackIn_61_0 = GetBuildViewAutozoomEndOnAction.field_o[param3 >> 20] << var4 - 2;
+            stackIn_61_0 = GetBuildViewAutozoomEndOnAction.sqrtLookupTable[param3 >> 20] << var4 - 2;
           }
           return stackIn_61_0;
         }
         if (3 <= var4) {
-          stackIn_57_0 = GetBuildViewAutozoomEndOnAction.field_o[param3 >> 18] << -3 + var4;
+          stackIn_57_0 = GetBuildViewAutozoomEndOnAction.sqrtLookupTable[param3 >> 18] << -3 + var4;
         } else {
-          stackIn_57_0 = GetBuildViewAutozoomEndOnAction.field_o[param3 >> 18] >> 3 - var4;
+          stackIn_57_0 = GetBuildViewAutozoomEndOnAction.sqrtLookupTable[param3 >> 18] >> 3 - var4;
         }
         return stackIn_57_0;
     }
 
-    final static int a(AccountRequestText param0, boolean param1, AccountRequestText param2) {
+    final static int pollAccountRequest(AccountRequestText param0, boolean param1, AccountRequestText param2) {
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_3_0 = 0;
@@ -239,7 +239,7 @@ final class ComponentAttachmentPlan {
             signedAppletRequired = (FullscreenFailureReason) null;
           }
           var4 = (String) null;
-          stackIn_3_0 = GetBoostersActiveTime.a(0, param2, param0, 0, 0, (String) null, false);
+          stackIn_3_0 = GetBoostersActiveTime.sendAndPollAccountRequest(0, param2, param0, 0, 0, (String) null, false);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -257,7 +257,7 @@ final class ComponentAttachmentPlan {
           } else {
             stackIn_10_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_9_1).append(stackIn_10_2).append(')').toString());
         }
     }
 
@@ -266,7 +266,7 @@ final class ComponentAttachmentPlan {
           this.hardpoint = param0;
           this.obstructions = new ShipComponent[]{};
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "qua.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -285,7 +285,7 @@ final class ComponentAttachmentPlan {
           }
           if (param0) {
             var3 = (CharSequence) null;
-            ComponentAttachmentPlan.a((CharSequence) null, true);
+            ComponentAttachmentPlan.hashString31((CharSequence) null, true);
           }
           if (SetSniperCannonFireForce.completedAccountRequest == SetShipTeamAction.field_b &&
             param1.equals(SetCountermeasureLauncherAimarc.field_q)) {
@@ -308,7 +308,7 @@ final class ComponentAttachmentPlan {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 

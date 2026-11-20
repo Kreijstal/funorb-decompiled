@@ -10,7 +10,7 @@ final class QuickChatHelpEntrySetup {
           param0.phraseShortcuts = new char[]{(char)63};
           param0.phraseIds = new int[]{-1};
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jka.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "jka.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

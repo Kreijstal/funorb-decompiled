@@ -30,7 +30,7 @@ final class SetOndamageParticleFadestart extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -67,7 +67,7 @@ final class SetOndamageParticleFadestart extends ConsoleCommand {
           GetBoostersCooldown.field_r = (BitmapFont) ((Object) GetFighterBayAimspeed.loadSoftwareAlphaFontByName(0, "commonui", param1, param2, "arezzo14bold"));
           var17 = new Sprite(param0.fetchNamedFile("", true, "button.gif"), (java.awt.Component) ((Object) GammaCorrection.canvas));
           UiDraggableContainer.loadSoftwareIndexedSpriteByName("dropdown", "commonui", param3 ^ -60, param1);
-          var5 = GetExplosionProjectileDamage.a(-124, "commonui", "screen_options", param1);
+          var5 = GetExplosionProjectileDamage.loadNamedIndexedSprites(-124, "commonui", "screen_options", param1);
           SetUseBackground.field_p = new SoftwareIndexedSprite2D[4];
           SpecialOrderSubmessage.field_f = new SoftwareIndexedSprite2D[4];
           GetFighterRepairAmount.field_q = new SoftwareIndexedSprite2D[4];
@@ -107,7 +107,7 @@ final class SetOndamageParticleFadestart extends ConsoleCommand {
           SoftwareRasterStateRestorer.popRasterState((byte) 124);
           GetBombletSprayProjectileLife.field_o = new Sprite[]{var15, var12, var11};
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uo.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "uo.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
     }
 

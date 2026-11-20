@@ -73,7 +73,7 @@ final class GrapplingHookFactory implements GameStateFactory {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 
@@ -99,7 +99,7 @@ final class GrapplingHookFactory implements GameStateFactory {
           var5.attachToHardpoint(1, 2, new ShipComponent(13));
           param1.attachToHardpoint(1, 13, var5);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lhb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "lhb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 

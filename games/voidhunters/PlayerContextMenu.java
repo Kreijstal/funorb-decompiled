@@ -164,7 +164,7 @@ final class PlayerContextMenu {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var7 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var7), "hqb.O(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var7), "hqb.O(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }
     }
 
@@ -230,7 +230,7 @@ final class PlayerContextMenu {
           } else {
             stackIn_30_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_29_1).append(stackIn_30_2).append(')').toString());
         }
     }
 
@@ -309,7 +309,7 @@ final class PlayerContextMenu {
           } else {
             stackIn_41_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_40_0), ((StringBuilder) (Object) stackIn_40_1).append(stackIn_41_2).append(')').toString());
         }
     }
 
@@ -337,7 +337,7 @@ final class PlayerContextMenu {
         }
         if (param1 != 8) {
           if (18 == param1) {
-            PlayerVoteFactory.a(this.targetName, this.targetPlayerKey, 63);
+            PlayerVoteFactory.selectPrivateQuickChatTarget(this.targetName, this.targetPlayerKey, 63);
           } else {
             if (param1 == 11) {
               OpenGlPostEffect.setChatFilter(0, (byte) -118, param0, this.channelType);
@@ -358,7 +358,7 @@ final class PlayerContextMenu {
                     }
                     ChatChannelControl.setChatChannel(0);
                   } else {
-                    NetworkArchiveRequest.e(1);
+                    NetworkArchiveRequest.activatePublicChatInput(1);
                   }
                 }
               }
@@ -440,7 +440,7 @@ final class PlayerContextMenu {
             this.menu.addItem(SetMissionDebrisVotingChancestep.field_o, (byte) -53, 13);
           }
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hqb.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "hqb.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -539,7 +539,7 @@ final class PlayerContextMenu {
           this.targetGameId = param4;
           this.actionData = param6;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hqb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "hqb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
         }
     }
 

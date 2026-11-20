@@ -23,7 +23,7 @@ final class PendingScoreboardRequest extends IntrusiveNode {
           }
           GetLagStandardDeviationIn.modalStack.pushPanel(false, SetPointDefenceLaserAimarc.field_o);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "fa.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 

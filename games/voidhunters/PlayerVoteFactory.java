@@ -10,7 +10,7 @@ final class PlayerVoteFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new PlayerVote());
     }
 
-    final static String a(String param0, int param1) {
+    final static String highlightConsoleSyntax(String param0, int param1) {
         int var4 = 0;
         StringBuilder discarded$0 = null;
         StringBuilder discarded$1 = null;
@@ -85,7 +85,7 @@ final class PlayerVoteFactory implements GameStateFactory {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_24_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -97,7 +97,7 @@ final class PlayerVoteFactory implements GameStateFactory {
         field_b = null;
     }
 
-    final static void a(String param0, long param1, int param2) {
+    final static void selectPrivateQuickChatTarget(String param0, long param1, int param2) {
         CharSequence var5 = null;
         try {
           ChoosePlayerNameForm.privateChatTargetDisplayName = param0;
@@ -108,7 +108,7 @@ final class PlayerVoteFactory implements GameStateFactory {
           PendingRequest.privateChatRecipientKey = param1;
           CommonGameState.selectDefaultQuickChatMenu(true);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bab.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "bab.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
     }
 
@@ -119,7 +119,7 @@ final class PlayerVoteFactory implements GameStateFactory {
         return (SerializableGameState[]) ((Object) new PlayerVote[param1]);
     }
 
-    final static void a(boolean param0, ShipComponent param1) {
+    final static void attachPresetComponents(boolean param0, ShipComponent param1) {
         String var3 = null;
         ShipComponent var4 = null;
         ShipComponent var5 = null;
@@ -149,7 +149,7 @@ final class PlayerVoteFactory implements GameStateFactory {
           param1.attachToHardpoint(1, 20, var5);
           if (!param0) {
             var3 = (String) null;
-            PlayerVoteFactory.a((String) null, 85);
+            PlayerVoteFactory.highlightConsoleSyntax((String) null, 85);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -162,7 +162,7 @@ final class PlayerVoteFactory implements GameStateFactory {
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 

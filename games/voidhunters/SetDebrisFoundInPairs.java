@@ -38,7 +38,7 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -68,7 +68,7 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -77,18 +77,18 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
         RuntimeException var1 = null;
         try {
           if (param0 != 32) {
-            SetDebrisFoundInPairs.a(false, -65, (byte) -47, (LogoMesh) null, 29);
+            SetDebrisFoundInPairs.bucketLogoFacesByDepth(false, -65, (byte) -47, (LogoMesh) null, 29);
           }
           field_o = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), "uhb.D(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var1), "uhb.D(" + param0 + ')');
         }
     }
 
-    final static void a(byte param0, boolean param1, boolean param2) {
+    final static void releaseColorPalettes(byte param0, boolean param1, boolean param2) {
         int var3_int = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
@@ -110,11 +110,11 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var3 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var3), "uhb.F(" + param0 + ',' + param1 + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var3), "uhb.F(" + param0 + ',' + param1 + ',' + param2 + ')');
         }
     }
 
-    final static ResourceArchive a(int param0, int param1, int param2, boolean param3, boolean param4) {
+    final static ResourceArchive createArchive(int param0, int param1, int param2, boolean param3, boolean param4) {
         RuntimeException var5 = null;
         ResourceArchive stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
@@ -122,16 +122,16 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
           if (param2 < 38) {
             SetDebrisFoundInPairs.clearSharedReferences((byte) -38);
           }
-          stackIn_4_0 = SetAutoAfkTimeout.a(param3, param4, -120, false, param1, param0);
+          stackIn_4_0 = SetAutoAfkTimeout.createArchive(param3, param4, -120, false, param1, param0);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var5), "uhb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var5), "uhb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 
-    final static void a(boolean param0, int param1, byte param2, LogoMesh param3, int param4) {
+    final static void bucketLogoFacesByDepth(boolean param0, int param1, byte param2, LogoMesh param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_11_0 = false;
         int stackIn_25_0 = 0;
@@ -172,14 +172,14 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
         try {
           var5_int = SetMutatorVotes.bitLength((param4 - param1) * 3, -128);
           var6 = 3 * param1;
-          GetBombletSprayAimarc.a(-19689);
+          GetBombletSprayAimarc.clearFaceDepthBuckets(-19689);
           var7 = var5_int - 10;
           var8 = -120 % ((-38 - param2) / 49);
           if (0 < param3.field_z &&
             param3.field_E != null) {
             ModalPanel.d(false);
           }
-          CarouselPlayerEvent.field_j = 0;
+          CarouselPlayerEvent.bucketedFaceCount = 0;
           var9 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (!(var9 < param3.faceCount)))) {
@@ -207,14 +207,14 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
                     var15 = SpriteTextureOperation.field_n[var12];
                     if (var15 != -2147483648) {
                       var16 = -var6 + (var14Lifetime1 + (var13Lifetime1 + var15));
-                      stackIn_25_0 = -1 + SocialTabsPanel.field_b.length;
+                      stackIn_25_0 = -1 + SocialTabsPanel.faceDepthBucketCounts.length;
                       if (var7 < 0) {
                         stackIn_26_1 = var16 << -var7;
                       } else {
                         stackIn_26_1 = var16 >> var7;
                       }
                       var17 = stackIn_25_0 - stackIn_26_1;
-                      var18 = SocialTabsPanel.field_b[var17];
+                      var18 = SocialTabsPanel.faceDepthBucketCounts[var17];
                       while (true) {
                         if (var18 >> 4 != 0) {
                           var17--;
@@ -224,20 +224,20 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
                             System.err.println("Out of range!");
                             break;
                           }
-                          var18 = SocialTabsPanel.field_b[var17];
+                          var18 = SocialTabsPanel.faceDepthBucketCounts[var17];
                           continue;
                         }
                         stackIn_37_0Lifetime1 = var18;
                         stackIn_37_1Lifetime1 = var17 << 4;
                         var19 = stackIn_37_0Lifetime1 + stackIn_37_1Lifetime1;
-                        SetMissionDebrisDefaultProbability.field_p[var19] = var9;
-                        SocialTabsPanel.field_b[var17] = 1 + var18;
+                        SetMissionDebrisDefaultProbability.faceSortIndices[var19] = var9;
+                        SocialTabsPanel.faceDepthBucketCounts[var17] = 1 + var18;
                         if (0 < param3.field_z &&
                           param3.field_E != null) {
                           dupTemp$0 = param3.field_E[var9];
                           GetAngularVelocitySustain.field_q[dupTemp$0] = GetAngularVelocitySustain.field_q[dupTemp$0] + 1;
                         }
-                        CarouselPlayerEvent.field_j = CarouselPlayerEvent.field_j + 1;
+                        CarouselPlayerEvent.bucketedFaceCount = CarouselPlayerEvent.bucketedFaceCount + 1;
                         break;
                       }
                     }
@@ -277,7 +277,7 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
           } else {
             stackIn_61_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_60_0), ((StringBuilder) (Object) stackIn_60_1).append(stackIn_61_2).append(',').append(param4).append(')').toString());
         }
     }
 

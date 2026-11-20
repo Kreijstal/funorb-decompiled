@@ -53,7 +53,7 @@ final class ShipSpawnedConditionFactory implements GameStateFactory {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), "ulb.C(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var1), "ulb.C(" + param0 + ')');
         }
     }
 

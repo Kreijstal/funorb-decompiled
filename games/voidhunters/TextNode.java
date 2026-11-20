@@ -4,7 +4,7 @@
 final class TextNode extends IntrusiveNode {
     String text;
 
-    final static void c(byte param0) {
+    final static void compactFaceDepthBuckets(byte param0) {
         int var2 = 0;
         int var1_int = 0;
         int var3 = 0;
@@ -13,20 +13,20 @@ final class TextNode extends IntrusiveNode {
         RuntimeException var1 = null;
         var4 = VoidHunters.field_G;
         try {
-          var1_int = SocialTabsPanel.field_b[0];
+          var1_int = SocialTabsPanel.faceDepthBucketCounts[0];
           if (param0 != -15) {
             return;
           }
-          for (var2 = 1; var2 < SocialTabsPanel.field_b.length; var2++) {
-            var3 = SocialTabsPanel.field_b[var2];
-            ArrayOperations.copy(SetMissionDebrisDefaultProbability.field_p, var2 << 4, SetMissionDebrisDefaultProbability.field_p, var1_int, var3);
+          for (var2 = 1; var2 < SocialTabsPanel.faceDepthBucketCounts.length; var2++) {
+            var3 = SocialTabsPanel.faceDepthBucketCounts[var2];
+            ArrayOperations.copy(SetMissionDebrisDefaultProbability.faceSortIndices, var2 << 4, SetMissionDebrisDefaultProbability.faceSortIndices, var1_int, var3);
             var1_int = var1_int + var3;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), "ila.B(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var1), "ila.B(" + param0 + ')');
         }
     }
 
@@ -77,7 +77,7 @@ final class TextNode extends IntrusiveNode {
             } else {
               stackIn_21_2 = "{...}";
             }
-            throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
+            throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_20_0), ((StringBuilder) (Object) stackIn_20_1).append(stackIn_21_2).append(')').toString());
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -90,7 +90,7 @@ final class TextNode extends IntrusiveNode {
         try {
           this.text = param0;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ila.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "ila.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -130,7 +130,7 @@ final class TextNode extends IntrusiveNode {
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_15_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(',').append(param1).append(')').toString());
         }
     }
 

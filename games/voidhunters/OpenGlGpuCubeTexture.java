@@ -52,7 +52,7 @@ final class OpenGlGpuCubeTexture extends OpenGlGpuTexture implements GpuCubeText
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(')').toString());
         }
     }
 
@@ -60,7 +60,7 @@ final class OpenGlGpuCubeTexture extends OpenGlGpuTexture implements GpuCubeText
         try {
           super.setFilterMode(param0, param1);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qva.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "qva.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

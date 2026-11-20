@@ -32,7 +32,7 @@ final class CachedByteArray extends DualLinkNode {
         try {
           this.bytes = param0;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pab.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "pab.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

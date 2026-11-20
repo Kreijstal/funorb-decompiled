@@ -19,7 +19,7 @@ final class MessageDialogPresenter {
           Debris.field_y.setBounds(24, -54, -24 + (GetTorpedoProjectiles.field_o.width - 24), param1, -24 + (-20 + GetTorpedoProjectiles.field_o.height));
           SetTorpedoAcceleration.field_o.setBounds(120, -72, 80, -24 + (-20 + GetTorpedoProjectiles.field_o.height), 24);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kqb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "kqb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 

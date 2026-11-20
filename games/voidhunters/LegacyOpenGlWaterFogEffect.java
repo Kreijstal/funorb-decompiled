@@ -21,7 +21,7 @@ final class LegacyOpenGlWaterFogEffect extends LegacyOpenGlMaterialEffect {
           this.fogRamp = new OpenGlTexture1D(this.toolkit, 6406, 2, new byte[]{(byte) 0, (byte)-1}, 6406);
           this.fogRamp.setWrap(false, true);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ssb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "ssb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -31,7 +31,7 @@ final class LegacyOpenGlWaterFogEffect extends LegacyOpenGlMaterialEffect {
             this.fogRamp = (OpenGlTexture1D) null;
           }
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ssb.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "ssb.A(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

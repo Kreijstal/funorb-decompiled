@@ -12,10 +12,10 @@ final class Direct3DToolkitLoader {
           GraphicsToolkit stackIn_9_0 = null;
           Throwable decompiledCaughtException = null;
           try {
-            if (!GetBots.e((byte) -118)) {
+            if (!GetBots.loadHardwareRendererLibraries((byte) -118)) {
               throw new RuntimeException("");
             }
-            if (!RasterBuffer.a("jagdx", (byte) 114)) {
+            if (!RasterBuffer.tryLoadNativeLibrary("jagdx", (byte) 114)) {
               throw new RuntimeException("");
             }
             var5 = Class.forName("Direct3DToolkit");

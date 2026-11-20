@@ -79,7 +79,7 @@ final class FullscreenFailureReason {
           } else {
             stackIn_39_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) (stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) (stackIn_38_0), ((StringBuilder) (Object) stackIn_38_1).append(stackIn_39_2).append(')').toString());
         }
     }
 

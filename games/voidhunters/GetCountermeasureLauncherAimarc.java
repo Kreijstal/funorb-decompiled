@@ -32,7 +32,7 @@ final class GetCountermeasureLauncherAimarc extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -54,7 +54,7 @@ final class GetCountermeasureLauncherAimarc extends ConsoleCommand {
           var11Lifetime1 = -(var8_int / 8) + param4 + param3 * var9 / 4;
           SetShowTutorial.a(param1.worldToScreenX(var10Lifetime1, (byte) 125), (byte) 66, param1.worldToScreenX(param7, (byte) 121), param1.worldToScreenY(true, var11Lifetime1), param5, param1.worldToScreenY(true, param2), param6);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dva.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "dva.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ')');
         }
     }
 

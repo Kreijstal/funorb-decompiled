@@ -63,7 +63,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
               break;
             }
             if (var4_ref == null) {
-              FighterBayWeaponDefinition.l(-116);
+              FighterBayWeaponDefinition.closeGameConnection(-116);
               return;
             }
             var5 = var27.readUnsignedByte((byte) -97);
@@ -157,19 +157,19 @@ final class GetLaserAimspeed extends ConsoleCommand {
               break;
             }
             if (var4 == null) {
-              FighterBayWeaponDefinition.l(-126);
+              FighterBayWeaponDefinition.closeGameConnection(-126);
               return;
             }
             var4.unlink(-3846);
             return;
           }
           FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "HS1: " + SetCountermeasuresPulsetime.e(-13514), 0);
-          FighterBayWeaponDefinition.l(-119);
+          FighterBayWeaponDefinition.closeGameConnection(-119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), "ejb.C(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var1), "ejb.C(" + param0 + ')');
         }
     }
 
@@ -198,7 +198,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

@@ -45,7 +45,7 @@ final class SetBlueprintSaveTime extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -131,7 +131,7 @@ final class SetBlueprintSaveTime extends ConsoleCommand {
           } else {
             stackIn_52_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_48_0), ((StringBuilder) (Object) stackIn_51_1).append(stackIn_52_2).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -139,7 +139,7 @@ final class SetBlueprintSaveTime extends ConsoleCommand {
         if (param1 != 11835) {
           field_o = (String) null;
           if (MissionEventFactory.commonArchive == null) {
-            return -1 == param0 ? MissionEventFactory.commonArchive : SetAutoAfkTimeout.a(true, false, -52, true, param0, 1);
+            return -1 == param0 ? MissionEventFactory.commonArchive : SetAutoAfkTimeout.createArchive(true, false, -52, true, param0, 1);
           }
           return MissionEventFactory.commonArchive;
         }
@@ -147,7 +147,7 @@ final class SetBlueprintSaveTime extends ConsoleCommand {
           return MissionEventFactory.commonArchive;
         }
         if (-1 != param0) {
-          return SetAutoAfkTimeout.a(true, false, -52, true, param0, 1);
+          return SetAutoAfkTimeout.createArchive(true, false, -52, true, param0, 1);
         }
         return MissionEventFactory.commonArchive;
     }

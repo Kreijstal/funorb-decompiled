@@ -52,7 +52,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements OpenGlFramebuffer
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var6 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var6), "nv.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var6), "nv.G(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
@@ -77,7 +77,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements OpenGlFramebuffer
           param1.payloadCrc = var4.readInt(35);
           var4.writeLengthByte(var4.position - var5, -129);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nv.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "nv.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
     }
 
@@ -203,7 +203,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements OpenGlFramebuffer
           jaggl.OpenGL.glRenderbufferStorageEXT(36161, this.internalFormat, this.width, this.height);
           this.byteSize = this.height * this.width * this.toolkit.getTextureFormatByteSize(this.internalFormat, 2);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -221,7 +221,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements OpenGlFramebuffer
           jaggl.OpenGL.glRenderbufferStorageMultisampleEXT(36161, param4, this.internalFormat, this.width, this.height);
           this.byteSize = this.width * (this.height * this.toolkit.getTextureFormatByteSize(this.internalFormat, 2));
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "nv.<init>(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ')');
         }
     }
 

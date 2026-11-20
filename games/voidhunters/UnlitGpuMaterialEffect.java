@@ -51,7 +51,7 @@ final class UnlitGpuMaterialEffect extends GpuMaterialEffect {
           this.toolkit.setTexture(param2, -119);
           this.toolkit.setTextureCombineMode(-127, param1);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sv.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "sv.E(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 

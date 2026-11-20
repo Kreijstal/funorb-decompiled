@@ -31,7 +31,7 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -74,17 +74,17 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
               var14.unlink(param0 ^ -3846);
               return;
             }
-            FighterBayWeaponDefinition.l(-121);
+            FighterBayWeaponDefinition.closeGameConnection(-121);
             return;
           }
           if (var2 != 1) {
             if (var2 != 2) {
               FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "A1: " + SetCountermeasuresPulsetime.e(-13514), 0);
-              FighterBayWeaponDefinition.l(param0 - 117);
+              FighterBayWeaponDefinition.closeGameConnection(param0 - 117);
             } else {
               var12 = (IntegerRecordReadQueueEntry) (GetLagStandardDeviationIn.pendingRecordReads.first(0));
               if (var12 == null) {
-                FighterBayWeaponDefinition.l(-119);
+                FighterBayWeaponDefinition.closeGameConnection(-119);
                 return;
               }
               SetSniperCannonEnergyUsed.f((byte) -80);
@@ -93,7 +93,7 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
           } else {
             var11 = (ByteIndexedRecordWriteRequest) (OpenGlVertexBufferObject.pendingByteIndexedRecordWrites.first(0));
             if (var11 == null) {
-              FighterBayWeaponDefinition.l(-125);
+              FighterBayWeaponDefinition.closeGameConnection(-125);
               return;
             }
             var11.unlink(-3846);
@@ -102,7 +102,7 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), "fb.C(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var1), "fb.C(" + param0 + ')');
         }
     }
 
@@ -131,7 +131,7 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(',').append(param1).append(')').toString());
         }
     }
 

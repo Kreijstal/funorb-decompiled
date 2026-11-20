@@ -45,7 +45,7 @@ final class MissionVariable implements DiffableState {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_13_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -107,7 +107,7 @@ final class MissionVariable implements DiffableState {
           } else {
             stackIn_25_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_21_0), ((StringBuilder) (Object) stackIn_24_1).append(stackIn_25_2).append(')').toString());
         }
     }
 
@@ -125,7 +125,7 @@ final class MissionVariable implements DiffableState {
             MissionVariable.a((ResourceArchive) null, (ResourceArchive) null, -60, false);
           }
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "et.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "et.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -142,13 +142,13 @@ final class MissionVariable implements DiffableState {
           var7.value = this.value;
           var7.label = this.label;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "et.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "et.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
     final static void a(ResourceArchive param0, ResourceArchive param1, int param2, boolean param3) {
         try {
-          GetExplosionProjectileDamage.a(DeveloperConsole.field_q, 0, IncrementVariableActionFactoryHolder.field_c, UiDraggableContainer.field_y, SetAutoAfkTimeout.field_q, SpawnEnemyShipOrderDefinition.field_d, GetMissionDebrisDefaultProbability.field_o, param3, TargetLockFactory.field_a, SetShieldsDirectionalHalfarcCuts.field_p, ResourceArchive.field_a, GetUseNiceTrails.field_o);
+          GetExplosionProjectileDamage.buildChatPanel(DeveloperConsole.field_q, 0, IncrementVariableActionFactoryHolder.field_c, UiDraggableContainer.field_y, SetAutoAfkTimeout.field_q, SpawnEnemyShipOrderDefinition.field_d, GetMissionDebrisDefaultProbability.field_o, param3, TargetLockFactory.field_a, SetShieldsDirectionalHalfarcCuts.field_p, ResourceArchive.field_a, GetUseNiceTrails.field_o);
           GetGrapplingHookAimspeed.field_o = SetGrapplingHookRopeBreakLength.loadNamedSprites(param0, true, "lobby", "chatfilter");
           SetMissileLauncherProjectiles.field_o[2] = OpenGlNativeHeap.field_f;
           SetMissileLauncherProjectiles.field_o[0] = GetMassDriverAimspeed.field_p;
@@ -158,7 +158,7 @@ final class MissionVariable implements DiffableState {
             MissionVariable.clearSharedReferences((byte) -66);
           }
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "et.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "et.E(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
     }
 
@@ -170,7 +170,7 @@ final class MissionVariable implements DiffableState {
             this.label = -94;
           }
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "et.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "et.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -198,7 +198,7 @@ final class MissionVariable implements DiffableState {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(')').toString());
         }
     }
 

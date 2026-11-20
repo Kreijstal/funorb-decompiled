@@ -8,7 +8,7 @@ final class SetBoostersCooldown extends ConsoleCommand {
           return QuickChatHelpWindow.field_xb;
         }
         if (-1 != param1) {
-          return SetAutoAfkTimeout.a(true, false, -65, true, param1, 1);
+          return SetAutoAfkTimeout.createArchive(true, false, -65, true, param1, 1);
         }
         return QuickChatHelpWindow.field_xb;
     }
@@ -25,7 +25,7 @@ final class SetBoostersCooldown extends ConsoleCommand {
           BitmapFont var11 = (BitmapFont) null;
           TooltipDisplay.updateAndDrawTooltip(param4, param9, param1, param8, param2, param7, param0, param6, -115, (BitmapFont) null, param5);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pj.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "pj.B(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ',' + param7 + ',' + param8 + ',' + param9 + ')');
         }
     }
 
@@ -55,7 +55,7 @@ final class SetBoostersCooldown extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

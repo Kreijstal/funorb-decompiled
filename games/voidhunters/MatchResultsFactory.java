@@ -64,7 +64,7 @@ final class MatchResultsFactory implements GameStateFactory {
             }
             PlayerLeave.updateWebsiteNavigationLinks(-102, param0);
           } catch (RuntimeException runtimeException) {
-            throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wva.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
+            throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "wva.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;
@@ -167,7 +167,7 @@ final class MatchResultsFactory implements GameStateFactory {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_29_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(')').toString());
         }
     }
 

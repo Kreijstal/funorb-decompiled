@@ -138,7 +138,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) (var1), "sdb.B(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) (var1), "sdb.B(" + param0 + ')');
         }
     }
 
@@ -165,7 +165,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -179,7 +179,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
           field_p = null;
           int var1_int = -99 % ((-65 - param0) / 39);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "sdb.C(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "sdb.C(" + param0 + ')');
         }
     }
 

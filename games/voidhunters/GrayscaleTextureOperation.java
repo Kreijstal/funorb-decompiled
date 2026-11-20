@@ -28,7 +28,7 @@ final class GrayscaleTextureOperation extends TextureOperation {
           GetPointDefenceLaserReload.field_p = !param0 ? true : false;
           GetShieldsDirectionalRadius.saveCompletedHints(37);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qqa.C(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "qqa.C(" + param0 + ',' + param1 + ')');
         }
     }
 

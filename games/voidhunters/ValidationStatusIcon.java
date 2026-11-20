@@ -31,7 +31,7 @@ final class ValidationStatusIcon extends UiFocusableComponent {
           var10 = var15.paddedHeight << 1;
           if (GetWeaponProjectileSpeedMultiply.field_o == null) {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9, var10);
-            SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
+            SetTorpedoEnergyUsed.pushSpriteRasterTarget(26, GetWeaponProjectileSpeedMultiply.field_o);
             var15.drawRotatedScaledBilinear(112, 144, var15.paddedWidth << 4, var15.paddedHeight << 4, -this.animationTick << 10, 4096);
             SoftwareRasterStateRestorer.popRasterState((byte) 124);
             GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var15.paddedWidth + var5, -var15.paddedHeight + var6, 256);
@@ -39,7 +39,7 @@ final class ValidationStatusIcon extends UiFocusableComponent {
           }
           if (GetWeaponProjectileSpeedMultiply.field_o.width < var9) {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9, var10);
-            SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
+            SetTorpedoEnergyUsed.pushSpriteRasterTarget(26, GetWeaponProjectileSpeedMultiply.field_o);
             var15.drawRotatedScaledBilinear(112, 144, var15.paddedWidth << 4, var15.paddedHeight << 4, -this.animationTick << 10, 4096);
             SoftwareRasterStateRestorer.popRasterState((byte) 124);
             GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var15.paddedWidth + var5, -var15.paddedHeight + var6, 256);
@@ -47,13 +47,13 @@ final class ValidationStatusIcon extends UiFocusableComponent {
           }
           if (var10 > GetWeaponProjectileSpeedMultiply.field_o.height) {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9, var10);
-            SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
+            SetTorpedoEnergyUsed.pushSpriteRasterTarget(26, GetWeaponProjectileSpeedMultiply.field_o);
             var15.drawRotatedScaledBilinear(112, 144, var15.paddedWidth << 4, var15.paddedHeight << 4, -this.animationTick << 10, 4096);
             SoftwareRasterStateRestorer.popRasterState((byte) 124);
             GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var15.paddedWidth + var5, -var15.paddedHeight + var6, 256);
             return;
           }
-          SetTorpedoEnergyUsed.a(85, GetWeaponProjectileSpeedMultiply.field_o);
+          SetTorpedoEnergyUsed.pushSpriteRasterTarget(85, GetWeaponProjectileSpeedMultiply.field_o);
           SoftwareRasterizer2D.clear();
           var15.drawRotatedScaledBilinear(112, 144, var15.paddedWidth << 4, var15.paddedHeight << 4, -this.animationTick << 10, 4096);
           SoftwareRasterStateRestorer.popRasterState((byte) 124);
@@ -66,7 +66,7 @@ final class ValidationStatusIcon extends UiFocusableComponent {
           var10Lifetime1 = var16.paddedHeight << 1;
           if (GetWeaponProjectileSpeedMultiply.field_o == null) {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
-            SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
+            SetTorpedoEnergyUsed.pushSpriteRasterTarget(26, GetWeaponProjectileSpeedMultiply.field_o);
             var16.drawRotatedScaledBilinear(112, 144, var16.paddedWidth << 4, var16.paddedHeight << 4, -this.animationTick << 10, 4096);
             SoftwareRasterStateRestorer.popRasterState((byte) 124);
             GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var16.paddedWidth + var5, -var16.paddedHeight + var6, 256);
@@ -74,7 +74,7 @@ final class ValidationStatusIcon extends UiFocusableComponent {
           }
           if (GetWeaponProjectileSpeedMultiply.field_o.width < var9Lifetime1) {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
-            SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
+            SetTorpedoEnergyUsed.pushSpriteRasterTarget(26, GetWeaponProjectileSpeedMultiply.field_o);
             var16.drawRotatedScaledBilinear(112, 144, var16.paddedWidth << 4, var16.paddedHeight << 4, -this.animationTick << 10, 4096);
             SoftwareRasterStateRestorer.popRasterState((byte) 124);
             GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var16.paddedWidth + var5, -var16.paddedHeight + var6, 256);
@@ -82,13 +82,13 @@ final class ValidationStatusIcon extends UiFocusableComponent {
           }
           if (var10Lifetime1 > GetWeaponProjectileSpeedMultiply.field_o.height) {
             GetWeaponProjectileSpeedMultiply.field_o = new Sprite(var9Lifetime1, var10Lifetime1);
-            SetTorpedoEnergyUsed.a(26, GetWeaponProjectileSpeedMultiply.field_o);
+            SetTorpedoEnergyUsed.pushSpriteRasterTarget(26, GetWeaponProjectileSpeedMultiply.field_o);
             var16.drawRotatedScaledBilinear(112, 144, var16.paddedWidth << 4, var16.paddedHeight << 4, -this.animationTick << 10, 4096);
             SoftwareRasterStateRestorer.popRasterState((byte) 124);
             GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var16.paddedWidth + var5, -var16.paddedHeight + var6, 256);
             return;
           }
-          SetTorpedoEnergyUsed.a(85, GetWeaponProjectileSpeedMultiply.field_o);
+          SetTorpedoEnergyUsed.pushSpriteRasterTarget(85, GetWeaponProjectileSpeedMultiply.field_o);
           SoftwareRasterizer2D.clear();
           var16.drawRotatedScaledBilinear(112, 144, var16.paddedWidth << 4, var16.paddedHeight << 4, -this.animationTick << 10, 4096);
           SoftwareRasterStateRestorer.popRasterState((byte) 124);
@@ -147,7 +147,7 @@ final class ValidationStatusIcon extends UiFocusableComponent {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -156,7 +156,7 @@ final class ValidationStatusIcon extends UiFocusableComponent {
           this.animationTick = this.animationTick + 1;
           super.updatePointer(param0, param1, param2, param3);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pla.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "pla.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -177,7 +177,7 @@ final class ValidationStatusIcon extends UiFocusableComponent {
         try {
           this.validator = param0;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pla.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "pla.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 

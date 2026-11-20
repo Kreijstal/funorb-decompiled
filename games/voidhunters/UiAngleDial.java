@@ -8,7 +8,7 @@ final class UiAngleDial extends UiFocusableComponent {
     static Sprite field_K;
     int radius;
     int markerValue;
-    static String field_L;
+    static String settingsFileName;
     int value;
     static int field_H;
     static String field_G;
@@ -16,13 +16,13 @@ final class UiAngleDial extends UiFocusableComponent {
     public static void clearSharedReferences(int param0) {
         if (param0 == 6344) {
           field_G = null;
-          field_L = null;
+          settingsFileName = null;
           field_K = null;
           return;
         }
         UiAngleDial.pollKeyEvent(-68);
         field_G = null;
-        field_L = null;
+        settingsFileName = null;
         field_K = null;
     }
 
@@ -94,7 +94,7 @@ final class UiAngleDial extends UiFocusableComponent {
           } else {
             stackIn_23_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(',').append(param6).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_22_0), ((StringBuilder) (Object) stackIn_22_1).append(stackIn_23_2).append(',').append(param5).append(',').append(param6).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class UiAngleDial extends UiFocusableComponent {
     }
 
     static {
-        field_L = "game_settings.dat";
+        settingsFileName = "game_settings.dat";
         field_K = new Sprite(540, 140);
         field_G = "Hold the Component";
     }

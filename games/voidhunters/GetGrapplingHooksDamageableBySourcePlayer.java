@@ -8,7 +8,7 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
     static ToolkitSprite toolkitFogOfWarSprite;
     static boolean field_o;
 
-    final static int a(int param0) {
+    final static int processArchiveLoading(int param0) {
         int var1 = 17 / ((param0 + 41) / 54);
         ArchiveIndexLoaderState.loader.processArchiveRequests(0);
         if (!GetAutozoomAmountMultiply.field_o.processRequests(0)) {
@@ -44,7 +44,7 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -56,27 +56,27 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
         field_o = false;
     }
 
-    final static void e(byte param0) {
+    final static void loadPreferences(byte param0) {
         File var1_ref = null;
         Object var1 = null;
         if (param0 != -120) {
           toolkitFogOfWarSprite = (ToolkitSprite) null;
         }
         try {
-          var1_ref = CacheFiles.resolveCacheFile(UiAngleDial.field_L, (byte) 34);
+          var1_ref = CacheFiles.resolveCacheFile(UiAngleDial.settingsFileName, (byte) 34);
         } catch (Exception exception) {
         }
         if (var1_ref == null) {
           return;
         }
-        Object var2 = OpenGlGlyphMask.a(var1_ref, (byte) -48);
+        Object var2 = OpenGlGlyphMask.readSerializedObject(var1_ref, (byte) -48);
         if (var2 instanceof Hashtable) {
-          TorpedoWeaponDefinition.field_e = (Hashtable) (var2);
+          TorpedoWeaponDefinition.preferences = (Hashtable) (var2);
           return;
         }
     }
 
-    final static int a(boolean param0, byte param1) {
+    final static int updateMenuCarousel(boolean param0, byte param1) {
         int stackIn_61_0 = 0;
         int stackIn_65_0 = 0;
         int stackIn_68_0 = 0;
@@ -215,7 +215,7 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "ll.B(" + param0 + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var2), "ll.B(" + param0 + ',' + param1 + ')');
         }
     }
 

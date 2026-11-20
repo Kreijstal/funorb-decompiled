@@ -49,7 +49,7 @@ class SpriteTextureOperation extends TextureOperation {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 
@@ -84,7 +84,7 @@ class SpriteTextureOperation extends TextureOperation {
         int var4 = (int)((float)param2 - TextureTransformMode.field_a.worldCenterY);
         if (param0 > 83) {
           var5 = (int)(640.0 / (double)TextureTransformMode.field_a.scale);
-          var6 = ComponentAttachmentPlan.a(var5, (byte) 119, var4, var3);
+          var6 = ComponentAttachmentPlan.approximateVectorLength(var5, (byte) 119, var4, var3);
           var7 = 33554432 / var6;
           if (var7 > 128) {
             var7 = 128;

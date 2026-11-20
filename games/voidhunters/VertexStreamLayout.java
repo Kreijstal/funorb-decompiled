@@ -21,7 +21,7 @@ final class VertexStreamLayout {
           this.attributeCount = this.attributeCount + 1;
           this.packedAttributes = this.packedAttributes | (long)(param1.id << VertexAttribute.field_m * fieldTemp$0);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qma.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "qma.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -54,7 +54,7 @@ final class VertexStreamLayout {
           ModalPanel.field_x = param0;
           MissionCondition.a(param6, param10, 116, param19, param5);
           OpenGlShader.a(param15, (byte) 111, param9, param1);
-          BodyInZoneConditionFactory.a(param17, param12, 114, param3, param18, param11);
+          BodyInZoneConditionFactory.configureMenuItemStyles(param17, param12, 114, param3, param18, param11);
           var20_int = 20 % ((param16 + 14) / 55);
           SetFighterRepairAmount.a(param4, -22699, param7);
           UiComboBox.setMenuTextColors(param13, true, param2, param14);
@@ -93,7 +93,7 @@ final class VertexStreamLayout {
           } else {
             stackIn_17_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param19).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_4_0), ((StringBuilder) (Object) stackIn_16_1).append(stackIn_17_2).append(',').append(param19).append(')').toString());
         }
     }
 
@@ -109,7 +109,7 @@ final class VertexStreamLayout {
           this.packedAttributes = (long)param0.id;
           this.attributeCount = 1;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qma.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "qma.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -135,7 +135,7 @@ final class VertexStreamLayout {
           } else {
             stackIn_8_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_7_0), ((StringBuilder) (Object) stackIn_7_1).append(stackIn_8_2).append(')').toString());
         }
     }
 

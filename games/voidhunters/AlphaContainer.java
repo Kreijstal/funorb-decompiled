@@ -12,7 +12,7 @@ final class AlphaContainer extends UiSingleChildContainer {
           this.child = param0;
           this.alpha = 256;
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qpb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "qpb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
@@ -93,7 +93,7 @@ final class AlphaContainer extends UiSingleChildContainer {
             return;
           }
           var8 = new Sprite(this.child.width, this.child.height);
-          SetTorpedoEnergyUsed.a(117, var8);
+          SetTorpedoEnergyUsed.pushSpriteRasterTarget(117, var8);
           this.child.drawLayer(0, param1, 115, 0);
           SoftwareRasterStateRestorer.popRasterState((byte) 124);
           var8.drawAlpha(param0 + this.x, this.y + param3, this.alpha);
@@ -108,7 +108,7 @@ final class AlphaContainer extends UiSingleChildContainer {
           return;
         }
         var7 = new Sprite(this.child.width, this.child.height);
-        SetTorpedoEnergyUsed.a(117, var7);
+        SetTorpedoEnergyUsed.pushSpriteRasterTarget(117, var7);
         this.child.drawLayer(0, param1, 115, 0);
         SoftwareRasterStateRestorer.popRasterState((byte) 124);
         var7.drawAlpha(param0 + this.x, this.y + param3, this.alpha);

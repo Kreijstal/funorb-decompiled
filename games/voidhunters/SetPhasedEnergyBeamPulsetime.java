@@ -76,7 +76,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
           } else {
             stackIn_36_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_35_0), ((StringBuilder) (Object) stackIn_35_1).append(stackIn_36_2).append(',').append(param1).append(',').append(param2).append(')').toString());
         }
     }
 
@@ -103,7 +103,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
           SoftwareRasterizer2D.fillRectangle(1 + var7, 1 + var8, var5 - 2, -2 + var6, 16777088);
           DeveloperConsole.field_q.font.drawParagraph(param0, 3 + var7, var8 + 1 + GpuTextureCache.field_d - DeveloperConsole.field_q.font.maxAscent, 500, 1000, 0, -1, 0, 0, DialogMessagePanel.field_w);
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ukb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "ukb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
@@ -150,7 +150,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
           } else {
             stackIn_7_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_6_0), ((StringBuilder) (Object) stackIn_6_1).append(stackIn_7_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 

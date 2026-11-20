@@ -31,7 +31,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           } else {
             stackIn_6_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_5_1).append(stackIn_6_2).append(')').toString());
         }
     }
 
@@ -63,7 +63,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(')').toString());
         }
     }
 
@@ -90,7 +90,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           runtimeException = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aib.M(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "aib.M(" + param0 + ')');
         }
     }
 
@@ -153,7 +153,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           } else {
             stackIn_27_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_26_0), ((StringBuilder) (Object) stackIn_26_1).append(stackIn_27_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -190,7 +190,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
@@ -1882,7 +1882,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           } else {
             stackIn_1174_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_1173_0), ((StringBuilder) (Object) stackIn_1173_1).append(stackIn_1174_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_1173_0), ((StringBuilder) (Object) stackIn_1173_1).append(stackIn_1174_2).append(')').toString());
         }
     }
 
@@ -1911,7 +1911,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           } else {
             stackIn_13_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_12_0), ((StringBuilder) (Object) stackIn_12_1).append(stackIn_13_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -1931,7 +1931,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
             stackIn_7_0 = DateOfBirthTextFields.getDefaultBitmapFont(param3, param0 + 8025).getParagraphHeight(param1, param4, param2);
             return stackIn_7_0;
           }
-          stackIn_5_0 = SetTorpedoEnergyUsed.a(param3, 300).getParagraphHeight(param1, param2, param4, (byte) 112, (ToolkitSprite[]) null);
+          stackIn_5_0 = SetTorpedoEnergyUsed.getToolkitFont(param3, 300).getParagraphHeight(param1, param2, param4, (byte) 112, (ToolkitSprite[]) null);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1943,7 +1943,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           } else {
             stackIn_12_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_11_1).append(stackIn_12_2).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(')').toString());
         }
     }
 
@@ -1959,7 +1959,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var1 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var1), "aib.I(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var1), "aib.I(" + param0 + ')');
         }
     }
 
@@ -1976,7 +1976,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) var2), "aib.N(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) var2), "aib.N(" + param0 + ')');
         }
     }
 
@@ -2016,7 +2016,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           } else {
             stackIn_16_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_11_0), ((StringBuilder) (Object) stackIn_15_1).append(stackIn_16_2).append(')').toString());
         }
     }
 
@@ -2027,7 +2027,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
             AsteroidField.loadLocalizedTextAndKeyBindings((byte) 105, (ResourceArchive) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aib.O(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "aib.O(" + param0 + ')');
         }
     }
 
@@ -2041,7 +2041,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
             this.addAsteroid((World) null, 6, (Asteroid) null);
           }
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aib.J(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "aib.J(" + param0 + ')');
         }
     }
 
@@ -2067,7 +2067,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2130,7 +2130,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           } else {
             stackIn_28_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_27_0), ((StringBuilder) (Object) stackIn_27_1).append(stackIn_28_2).append(',').append(param1).append(')').toString());
         }
     }
 
@@ -2145,7 +2145,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
         try {
           this.asteroids = new Asteroid[param0];
         } catch (RuntimeException runtimeException) {
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aib.<init>(" + param0 + ')');
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "aib.<init>(" + param0 + ')');
         }
     }
 

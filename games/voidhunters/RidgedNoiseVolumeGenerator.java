@@ -123,9 +123,9 @@ class RidgedNoiseVolumeGenerator extends PerlinNoiseVolumeGenerator {
           if (var44.field_E != null &&
             var44.field_z > 1) {
             var60 = var44.field_E;
-            ValidatedTextField.a(GetAngularVelocitySustain.field_q, 0, (byte) 118, var60, 0);
+            ValidatedTextField.groupBucketedFaces(GetAngularVelocitySustain.field_q, 0, (byte) 118, var60, 0);
           } else {
-            TextNode.c((byte) -15);
+            TextNode.compactFaceDepthBuckets((byte) -15);
           }
           var54 = new int[param0.field_L];
           var49 = var54;
@@ -162,8 +162,8 @@ class RidgedNoiseVolumeGenerator extends PerlinNoiseVolumeGenerator {
             var54[var13] = var14Lifetime2;
             var64[var13] = var15Lifetime2;
           }
-          for (var13Lifetime1 = 0; var13Lifetime1 < CarouselPlayerEvent.field_j; var13Lifetime1++) {
-            var14Lifetime1 = SetMissionDebrisDefaultProbability.field_p[var13Lifetime1];
+          for (var13Lifetime1 = 0; var13Lifetime1 < CarouselPlayerEvent.bucketedFaceCount; var13Lifetime1++) {
+            var14Lifetime1 = SetMissionDebrisDefaultProbability.faceSortIndices[var13Lifetime1];
             var15Lifetime1 = param0.faceVertexA[var14Lifetime1];
             var16 = param0.faceVertexB[var14Lifetime1];
             var17 = param0.faceVertexC[var14Lifetime1];
@@ -254,7 +254,7 @@ class RidgedNoiseVolumeGenerator extends PerlinNoiseVolumeGenerator {
           } else {
             stackIn_55_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_54_0), ((StringBuilder) (Object) stackIn_54_1).append(stackIn_55_2).append(',').append(param1).append(',').append(param2).append(',').append(param3).append(',').append(param4).append(',').append(param5).append(',').append(param6).append(',').append(param7).append(')').toString());
         }
     }
 

@@ -4,7 +4,7 @@
 final class GetExplosionProjectileDamage extends ConsoleCommand {
     static boolean field_o;
 
-    final static SoftwareIndexedSprite2D[] a(int param0, String param1, String param2, ResourceArchive param3) {
+    final static SoftwareIndexedSprite2D[] loadNamedIndexedSprites(int param0, String param1, String param2, ResourceArchive param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         int var5 = 0;
@@ -22,7 +22,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
           var4_int = 3 % ((param0 + 36) / 49);
           var5 = param3.getGroupId(param1, -80);
           var6 = param3.getFileId(true, var5, param2);
-          stackIn_1_0 = SpecialOrderSubmessageFactory.a(var5, (byte) 104, var6, param3);
+          stackIn_1_0 = SpecialOrderSubmessageFactory.loadIndexedSprites(var5, (byte) 104, var6, param3);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -46,7 +46,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
           } else {
             stackIn_14_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_5_0), ((StringBuilder) (Object) stackIn_13_1).append(stackIn_14_2).append(')').toString());
         }
     }
 
@@ -63,7 +63,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetExplosionProjectileDamage.a((ShipComponent) null, -69);
+            GetExplosionProjectileDamage.attachPresetComponents((ShipComponent) null, -69);
           }
           stackIn_4_0 = new ConsoleValue(GetLaserFireForce.a(149, 122));
           return stackIn_4_0;
@@ -77,11 +77,11 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
           } else {
             stackIn_9_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_8_0), ((StringBuilder) (Object) stackIn_8_1).append(stackIn_9_2).append(',').append(obfuscationGuard).append(')').toString());
         }
     }
 
-    final static void a(ShipComponent param0, int param1) {
+    final static void attachPresetComponents(ShipComponent param0, int param1) {
         RuntimeException runtimeException = null;
         int var2_int = 0;
         ShipComponent var3 = null;
@@ -107,7 +107,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
             }
           }
           if (param1 >= -12) {
-            GetExplosionProjectileDamage.a((Widget) null, -42, (Widget) null, (BitmapFont) null, (Widget) null, (Widget) null, (Widget) null, true, (Widget) null, (Widget) null, (Widget) null, (ScrollBarWidget) null);
+            GetExplosionProjectileDamage.buildChatPanel((Widget) null, -42, (Widget) null, (BitmapFont) null, (Widget) null, (Widget) null, (Widget) null, true, (Widget) null, (Widget) null, (Widget) null, (ScrollBarWidget) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -120,11 +120,11 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
           } else {
             stackIn_15_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_14_0), ((StringBuilder) (Object) stackIn_14_1).append(stackIn_15_2).append(',').append(param1).append(')').toString());
         }
     }
 
-    final static void a(Widget param0, int param1, Widget param2, BitmapFont param3, Widget param4, Widget param5, Widget param6, boolean param7, Widget param8, Widget param9, Widget param10, ScrollBarWidget param11) {
+    final static void buildChatPanel(Widget param0, int param1, Widget param2, BitmapFont param3, Widget param4, Widget param5, Widget param6, boolean param7, Widget param8, Widget param9, Widget param10, ScrollBarWidget param11) {
         String stackIn_24_0 = null;
         int stackIn_28_0 = 0;
         RuntimeException stackIn_38_0 = null;
@@ -324,7 +324,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
           } else {
             stackIn_75_2 = "{...}";
           }
-          throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
+          throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_38_0), ((StringBuilder) (Object) stackIn_74_1).append(stackIn_75_2).append(')').toString());
         }
     }
 

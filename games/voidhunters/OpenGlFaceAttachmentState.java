@@ -3040,7 +3040,7 @@ final class OpenGlFaceAttachmentState {
                   } else {
                     stackIn_2597_2 = "{...}";
                   }
-                  throw GetMissileLauncherRandomness.a((Throwable) ((Object) stackIn_2596_0), ((StringBuilder) (Object) stackIn_2596_1).append(stackIn_2597_2).append(')').toString());
+                  throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) stackIn_2596_0), ((StringBuilder) (Object) stackIn_2596_1).append(stackIn_2597_2).append(')').toString());
                 }
                 if (GameApplet.field_g) {
                   var3++;
