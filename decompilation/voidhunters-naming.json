@@ -265,7 +265,7 @@
       "to": "scanLoop1",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:World.a(IIZIILShip;)V#0"
+      "renamedSymbol": "B:World.spawnPlayerShip(IIZIILShip;)V#0"
     },
     {
       "symbol": "B:pe.a(IIZIILsg;)V#1",
@@ -273,7 +273,7 @@
       "to": "scanLoop2",
       "evidence": "Resolved lexical target and declaration ordinal; transfers are unchanged.",
       "confidence": "structural",
-      "renamedSymbol": "B:World.a(IIZIILShip;)V#1"
+      "renamedSymbol": "B:World.spawnPlayerShip(IIZIILShip;)V#1"
     },
     {
       "symbol": "B:pe.a(Ltfa;ILsg;Llta;BLsg;III)V#0",
@@ -38236,6 +38236,14 @@
       "renamedSymbol": "M:MissileLauncherWeaponDefinition.getEnergyCost(I)I"
     },
     {
+      "symbol": "M:dm.a(IB)I",
+      "originalName": "a",
+      "to": "getArmageddonDurationTicks",
+      "evidence": "Return original configured duration multiplied by Particle.field_l tick scale for all objective cases;World Armageddon uses it to clamp elapsed ticks and shrink bounds. Preserve branch multiplication order and bad-byte recursive call.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MissileLauncherWeaponDefinition.getArmageddonDurationTicks(IB)I"
+    },
+    {
       "symbol": "M:dm.a(Z)I",
       "originalName": "a",
       "to": "getFiringSoundId",
@@ -64308,6 +64316,14 @@
       "renamedSymbol": "M:World.findBodyAtPoint(BII)LShipBody;"
     },
     {
+      "symbol": "M:pe.a(BLanb;Lml;Lwfb;)V",
+      "originalName": "a",
+      "to": "spawnComponentRadialProjectiles",
+      "evidence": "Delegate original type1 radial projectile burst from component final coordinates using supplied definition count and body owner/team when ship;retain bad-guard side effect.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V"
+    },
+    {
       "symbol": "M:pe.a(BLcrb;)V",
       "originalName": "a",
       "to": "addAsteroid",
@@ -64356,12 +64372,28 @@
       "renamedSymbol": "M:World.removeNebulaeInRadius(BZIII)Z"
     },
     {
+      "symbol": "M:pe.a(I)V",
+      "originalName": "a",
+      "to": "clearTerrainAroundEntities",
+      "evidence": "Clear asteroid/nebula terrain around ships,spawn points,resources and rectangular map zones through original clearance helpers;retain all getter guards and list order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:World.clearTerrainAroundEntities(I)V"
+    },
+    {
       "symbol": "M:pe.a(IB)V",
       "originalName": "a",
       "to": "setWidth",
       "evidence": "Assign world width.",
       "confidence": "reviewed",
       "renamedSymbol": "M:World.setWidth(IB)V"
+    },
+    {
+      "symbol": "M:pe.a(IBII)V",
+      "originalName": "a",
+      "to": "clearTerrainCircle",
+      "evidence": "Remove asteroids using center distance plus bounding radius and remove nebulae within circle;record clearance circle only on original nebula-helper result,with original invalid-guard call.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:World.clearTerrainCircle(IBII)V"
     },
     {
       "symbol": "M:pe.a(IBI[Lanb;)Lanb;",
@@ -64386,6 +64418,22 @@
       "evidence": "Allocate player respawn-timer array and initialize from starting index to configured duration.",
       "confidence": "reviewed",
       "renamedSymbol": "M:World.initializeRespawnTimers(II)V"
+    },
+    {
+      "symbol": "M:pe.a(IIIBII)Lnbb;",
+      "originalName": "a",
+      "to": "findNearestUndraggedDebrisOfType",
+      "evidence": "Select nearest un-dragged debris of requested component type within original two-point distance limits and initial262144 bound;retain bad-byte partition-manager cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;"
+    },
+    {
+      "symbol": "M:pe.a(IIIIB)V",
+      "originalName": "a",
+      "to": "clearTerrainRectangle",
+      "evidence": "Remove asteroids whose centers lie strictly inside rectangle,then conditionally clear/record nebula rectangle;retain early bad-byte return and original boundary comparisons.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:World.clearTerrainRectangle(IIIIB)V"
     },
     {
       "symbol": "M:pe.a(IIIIII)Lrca;",
@@ -64452,6 +64500,30 @@
       "renamedSymbol": "M:World.removeBody(IILShipBody;)V"
     },
     {
+      "symbol": "M:pe.a(IIZI)Z",
+      "originalName": "a",
+      "to": "overlapsShipsOrSpawnPoints",
+      "evidence": "Test original approximate-distance overlap against eligible teamed ships and spawn points with their original extent/radius rules;retain boolean-guard projectile cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:World.overlapsShipsOrSpawnPoints(IIZI)Z"
+    },
+    {
+      "symbol": "M:pe.a(IIZIILsg;)V",
+      "originalName": "a",
+      "to": "spawnPlayerShip",
+      "evidence": "Choose original objective/team spawn position and angle for supplied ship,zero movement/forces,assign owner/team and add ship;retain occupied-point scans,fallback arithmetic,unreachable branch and partial bad-guard return.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:World.spawnPlayerShip(IIZIILShip;)V"
+    },
+    {
+      "symbol": "M:pe.a(II[Ltfa;Llbb;)V",
+      "originalName": "a",
+      "to": "updatePlayerRespawns",
+      "evidence": "Advance timers for players without ships when team respawn allowed,choose saved/preset ships,spawn and restore unmatched carried-over component debris;retain objective13 timer clamp,disconnected-player policy,guards and possible null failures.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V"
+    },
+    {
       "symbol": "M:pe.a(ILanb;)Z",
       "originalName": "a",
       "to": "overlapsAnyBodyBoundingCircle",
@@ -64506,6 +64578,14 @@
       "evidence": "Remove the indexed nebula from its field and optionally remove its bounds from spatial partitions.",
       "confidence": "reviewed",
       "renamedSymbol": "M:World.removeNebula(IZI)V"
+    },
+    {
+      "symbol": "M:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V",
+      "originalName": "a",
+      "to": "updateSimulation",
+      "evidence": "Run original deterministic world tick,seed RNG from tick,update controls/projectiles/particles/debris/asteroids/hooks/pods,Armageddon,collisions/respawns and forces;preserve ordering,repeated hook forces,copy-on-write and guards.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V"
     },
     {
       "symbol": "M:pe.a(Lanb;I)Z",
@@ -64588,6 +64668,22 @@
       "renamedSymbol": "M:World.addEscapePod(LEscapePod;B)V"
     },
     {
+      "symbol": "M:pe.a(Llta;BILsg;)V",
+      "originalName": "a",
+      "to": "drawWorld",
+      "evidence": "Draw original resources,eligible AI/unowned ships,pods,hooks,debris,asteroids,particles,projectiles and nebula particles plus debug overlays;retain original visibility filters and invalid-byte map-zone insertion.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:World.drawWorld(LCamera2D;BILShip;)V"
+    },
+    {
+      "symbol": "M:pe.a(Llta;ILlbb;)V",
+      "originalName": "a",
+      "to": "drawArmageddonBounds",
+      "evidence": "Delegate original Armageddon helper in draw mode using supplied camera/state;retain invalid-int objective-query side call.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:World.drawArmageddonBounds(LCamera2D;ILMissionState;)V"
+    },
+    {
       "symbol": "M:pe.a(Lnbb;B)V",
       "originalName": "a",
       "to": "addDebris",
@@ -64602,6 +64698,14 @@
       "evidence": "Retain existing dragged debris or,when trigger128 and no debris,aim ship,update chassis transforms and detach at point;store original dragging id and refresh thruster bindings,retaining bad-guard world-height mutation.",
       "confidence": "reviewed",
       "renamedSymbol": "M:World.resolveDraggedDebris(LDebris;BLShip;ILAttachmentInputState;I)LDebris;"
+    },
+    {
+      "symbol": "M:pe.a(Lnwa;I[Ltfa;[Lcrb;)V",
+      "originalName": "a",
+      "to": "processDestroyedEntities",
+      "evidence": "Process destroyed ships,pods,component carryover,kills/assists/deaths/messages,debris pruning,hooks,asteroids and expired escape pods;retain copy-on-write,original array/list order and bad-guard debug assignment.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V"
     },
     {
       "symbol": "M:pe.a(Lqob;I)V",
@@ -64684,6 +64788,14 @@
       "renamedSymbol": "M:World.isTeamRespawnEnabled(ZILMissionState;)Z"
     },
     {
+      "symbol": "M:pe.a(ZLlbb;BLlta;)V",
+      "originalName": "a",
+      "to": "processArmageddon",
+      "evidence": "Original bool selects shrinking-boundary damage/round completion versus drawing;retain width/duration-before-multiplication integer arithmetic,phase/timer gates,tie handling and invalid-byte width assignment.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:World.processArmageddon(ZLMissionState;BLCamera2D;)V"
+    },
+    {
       "symbol": "M:pe.a(ZLqob;B)V",
       "originalName": "a",
       "to": "addNebula",
@@ -64714,6 +64826,14 @@
       "evidence": "Register each non-null member of the supplied body array in the supplied partition group.",
       "confidence": "reviewed",
       "renamedSymbol": "M:World.registerBodyPartitions([LShipBody;ZI)V"
+    },
+    {
+      "symbol": "M:pe.a([Ltfa;I[Ltfa;I)V",
+      "originalName": "a",
+      "to": "updateShipControlsAndRepairs",
+      "evidence": "Apply original player/AI controls and special orders,component dragging,tick updates,periodic repair,saved-ship copies and salvo-energy toggle;retain disconnected policy,aim mutation,settings aliases and exact sequence.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V"
     },
     {
       "symbol": "M:pe.b(B)V",
@@ -96223,7 +96343,7 @@
     },
     {
       "symbol": "B:pe.a(IIZIILsg;)V#0",
-      "renamedSymbol": "B:World.a(IIZIILShip;)V#0",
+      "renamedSymbol": "B:World.spawnPlayerShip(IIZIILShip;)V#0",
       "originalName": "L7",
       "renamedName": "scanLoop1",
       "declaration": {
@@ -96234,7 +96354,7 @@
     },
     {
       "symbol": "B:pe.a(IIZIILsg;)V#1",
-      "renamedSymbol": "B:World.a(IIZIILShip;)V#1",
+      "renamedSymbol": "B:World.spawnPlayerShip(IIZIILShip;)V#1",
       "originalName": "L11",
       "renamedName": "scanLoop2",
       "declaration": {
@@ -458013,7 +458133,7 @@
     },
     {
       "symbol": "L:pe.a(BLanb;Lml;Lwfb;)V#0",
-      "renamedSymbol": "L:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#0",
+      "renamedSymbol": "L:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -458024,7 +458144,7 @@
     },
     {
       "symbol": "L:pe.a(BLanb;Lml;Lwfb;)V#1",
-      "renamedSymbol": "L:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#1",
+      "renamedSymbol": "L:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#1",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -458035,7 +458155,7 @@
     },
     {
       "symbol": "L:pe.a(BLanb;Lml;Lwfb;)V#10",
-      "renamedSymbol": "L:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#10",
+      "renamedSymbol": "L:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#10",
       "originalName": "stackIn_14_2",
       "renamedName": "stackIn_14_2",
       "declaration": {
@@ -458046,7 +458166,7 @@
     },
     {
       "symbol": "L:pe.a(BLanb;Lml;Lwfb;)V#11",
-      "renamedSymbol": "L:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#11",
+      "renamedSymbol": "L:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#11",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -458057,7 +458177,7 @@
     },
     {
       "symbol": "L:pe.a(BLanb;Lml;Lwfb;)V#12",
-      "renamedSymbol": "L:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#12",
+      "renamedSymbol": "L:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#12",
       "originalName": "stackIn_17_1",
       "renamedName": "stackIn_17_1",
       "declaration": {
@@ -458068,7 +458188,7 @@
     },
     {
       "symbol": "L:pe.a(BLanb;Lml;Lwfb;)V#13",
-      "renamedSymbol": "L:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#13",
+      "renamedSymbol": "L:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#13",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -458079,7 +458199,7 @@
     },
     {
       "symbol": "L:pe.a(BLanb;Lml;Lwfb;)V#14",
-      "renamedSymbol": "L:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#14",
+      "renamedSymbol": "L:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#14",
       "originalName": "stackIn_18_2",
       "renamedName": "stackIn_18_2",
       "declaration": {
@@ -458090,7 +458210,7 @@
     },
     {
       "symbol": "L:pe.a(BLanb;Lml;Lwfb;)V#15",
-      "renamedSymbol": "L:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#15",
+      "renamedSymbol": "L:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#15",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -458101,7 +458221,7 @@
     },
     {
       "symbol": "L:pe.a(BLanb;Lml;Lwfb;)V#16",
-      "renamedSymbol": "L:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#16",
+      "renamedSymbol": "L:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#16",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -458112,7 +458232,7 @@
     },
     {
       "symbol": "L:pe.a(BLanb;Lml;Lwfb;)V#2",
-      "renamedSymbol": "L:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#2",
+      "renamedSymbol": "L:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -458123,7 +458243,7 @@
     },
     {
       "symbol": "L:pe.a(BLanb;Lml;Lwfb;)V#3",
-      "renamedSymbol": "L:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#3",
+      "renamedSymbol": "L:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -458134,7 +458254,7 @@
     },
     {
       "symbol": "L:pe.a(BLanb;Lml;Lwfb;)V#4",
-      "renamedSymbol": "L:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#4",
+      "renamedSymbol": "L:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#4",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -458145,7 +458265,7 @@
     },
     {
       "symbol": "L:pe.a(BLanb;Lml;Lwfb;)V#5",
-      "renamedSymbol": "L:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#5",
+      "renamedSymbol": "L:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#5",
       "originalName": "stackIn_9_1",
       "renamedName": "stackIn_9_1",
       "declaration": {
@@ -458156,7 +458276,7 @@
     },
     {
       "symbol": "L:pe.a(BLanb;Lml;Lwfb;)V#6",
-      "renamedSymbol": "L:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#6",
+      "renamedSymbol": "L:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#6",
       "originalName": "stackIn_10_2",
       "renamedName": "stackIn_10_2",
       "declaration": {
@@ -458167,7 +458287,7 @@
     },
     {
       "symbol": "L:pe.a(BLanb;Lml;Lwfb;)V#7",
-      "renamedSymbol": "L:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#7",
+      "renamedSymbol": "L:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#7",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -458178,7 +458298,7 @@
     },
     {
       "symbol": "L:pe.a(BLanb;Lml;Lwfb;)V#8",
-      "renamedSymbol": "L:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#8",
+      "renamedSymbol": "L:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#8",
       "originalName": "stackIn_13_1",
       "renamedName": "stackIn_13_1",
       "declaration": {
@@ -458189,7 +458309,7 @@
     },
     {
       "symbol": "L:pe.a(BLanb;Lml;Lwfb;)V#9",
-      "renamedSymbol": "L:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#9",
+      "renamedSymbol": "L:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#9",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -458915,7 +459035,7 @@
     },
     {
       "symbol": "L:pe.a(I)V#0",
-      "renamedSymbol": "L:World.a(I)V#0",
+      "renamedSymbol": "L:World.clearTerrainAroundEntities(I)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -458926,7 +459046,7 @@
     },
     {
       "symbol": "L:pe.a(I)V#1",
-      "renamedSymbol": "L:World.a(I)V#1",
+      "renamedSymbol": "L:World.clearTerrainAroundEntities(I)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -458937,7 +459057,7 @@
     },
     {
       "symbol": "L:pe.a(I)V#10",
-      "renamedSymbol": "L:World.a(I)V#10",
+      "renamedSymbol": "L:World.clearTerrainAroundEntities(I)V#10",
       "originalName": "var3Lifetime1",
       "renamedName": "var3Lifetime1",
       "declaration": {
@@ -458948,7 +459068,7 @@
     },
     {
       "symbol": "L:pe.a(I)V#11",
-      "renamedSymbol": "L:World.a(I)V#11",
+      "renamedSymbol": "L:World.clearTerrainAroundEntities(I)V#11",
       "originalName": "var3Lifetime2",
       "renamedName": "var3Lifetime2",
       "declaration": {
@@ -458959,7 +459079,7 @@
     },
     {
       "symbol": "L:pe.a(I)V#2",
-      "renamedSymbol": "L:World.a(I)V#2",
+      "renamedSymbol": "L:World.clearTerrainAroundEntities(I)V#2",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -458970,7 +459090,7 @@
     },
     {
       "symbol": "L:pe.a(I)V#3",
-      "renamedSymbol": "L:World.a(I)V#3",
+      "renamedSymbol": "L:World.clearTerrainAroundEntities(I)V#3",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -458981,7 +459101,7 @@
     },
     {
       "symbol": "L:pe.a(I)V#4",
-      "renamedSymbol": "L:World.a(I)V#4",
+      "renamedSymbol": "L:World.clearTerrainAroundEntities(I)V#4",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -458992,7 +459112,7 @@
     },
     {
       "symbol": "L:pe.a(I)V#5",
-      "renamedSymbol": "L:World.a(I)V#5",
+      "renamedSymbol": "L:World.clearTerrainAroundEntities(I)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -459003,7 +459123,7 @@
     },
     {
       "symbol": "L:pe.a(I)V#6",
-      "renamedSymbol": "L:World.a(I)V#6",
+      "renamedSymbol": "L:World.clearTerrainAroundEntities(I)V#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -459014,7 +459134,7 @@
     },
     {
       "symbol": "L:pe.a(I)V#7",
-      "renamedSymbol": "L:World.a(I)V#7",
+      "renamedSymbol": "L:World.clearTerrainAroundEntities(I)V#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -459025,7 +459145,7 @@
     },
     {
       "symbol": "L:pe.a(I)V#8",
-      "renamedSymbol": "L:World.a(I)V#8",
+      "renamedSymbol": "L:World.clearTerrainAroundEntities(I)V#8",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -459036,7 +459156,7 @@
     },
     {
       "symbol": "L:pe.a(I)V#9",
-      "renamedSymbol": "L:World.a(I)V#9",
+      "renamedSymbol": "L:World.clearTerrainAroundEntities(I)V#9",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -459058,7 +459178,7 @@
     },
     {
       "symbol": "L:pe.a(IBII)V#0",
-      "renamedSymbol": "L:World.a(IBII)V#0",
+      "renamedSymbol": "L:World.clearTerrainCircle(IBII)V#0",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -459069,7 +459189,7 @@
     },
     {
       "symbol": "L:pe.a(IBII)V#1",
-      "renamedSymbol": "L:World.a(IBII)V#1",
+      "renamedSymbol": "L:World.clearTerrainCircle(IBII)V#1",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -459080,7 +459200,7 @@
     },
     {
       "symbol": "L:pe.a(IBII)V#2",
-      "renamedSymbol": "L:World.a(IBII)V#2",
+      "renamedSymbol": "L:World.clearTerrainCircle(IBII)V#2",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -459091,7 +459211,7 @@
     },
     {
       "symbol": "L:pe.a(IBII)V#3",
-      "renamedSymbol": "L:World.a(IBII)V#3",
+      "renamedSymbol": "L:World.clearTerrainCircle(IBII)V#3",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -459102,7 +459222,7 @@
     },
     {
       "symbol": "L:pe.a(IBII)V#4",
-      "renamedSymbol": "L:World.a(IBII)V#4",
+      "renamedSymbol": "L:World.clearTerrainCircle(IBII)V#4",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -459113,7 +459233,7 @@
     },
     {
       "symbol": "L:pe.a(IBII)V#5",
-      "renamedSymbol": "L:World.a(IBII)V#5",
+      "renamedSymbol": "L:World.clearTerrainCircle(IBII)V#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -459124,7 +459244,7 @@
     },
     {
       "symbol": "L:pe.a(IBII)V#6",
-      "renamedSymbol": "L:World.a(IBII)V#6",
+      "renamedSymbol": "L:World.clearTerrainCircle(IBII)V#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -459135,7 +459255,7 @@
     },
     {
       "symbol": "L:pe.a(IBII)V#7",
-      "renamedSymbol": "L:World.a(IBII)V#7",
+      "renamedSymbol": "L:World.clearTerrainCircle(IBII)V#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -459377,7 +459497,7 @@
     },
     {
       "symbol": "L:pe.a(IIIBII)Lnbb;#0",
-      "renamedSymbol": "L:World.a(IIIBII)LDebris;#0",
+      "renamedSymbol": "L:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#0",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -459388,7 +459508,7 @@
     },
     {
       "symbol": "L:pe.a(IIIBII)Lnbb;#1",
-      "renamedSymbol": "L:World.a(IIIBII)LDebris;#1",
+      "renamedSymbol": "L:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#1",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -459399,7 +459519,7 @@
     },
     {
       "symbol": "L:pe.a(IIIBII)Lnbb;#10",
-      "renamedSymbol": "L:World.a(IIIBII)LDebris;#10",
+      "renamedSymbol": "L:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#10",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -459410,7 +459530,7 @@
     },
     {
       "symbol": "L:pe.a(IIIBII)Lnbb;#11",
-      "renamedSymbol": "L:World.a(IIIBII)LDebris;#11",
+      "renamedSymbol": "L:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#11",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -459421,7 +459541,7 @@
     },
     {
       "symbol": "L:pe.a(IIIBII)Lnbb;#12",
-      "renamedSymbol": "L:World.a(IIIBII)LDebris;#12",
+      "renamedSymbol": "L:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#12",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -459432,7 +459552,7 @@
     },
     {
       "symbol": "L:pe.a(IIIBII)Lnbb;#13",
-      "renamedSymbol": "L:World.a(IIIBII)LDebris;#13",
+      "renamedSymbol": "L:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#13",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -459443,7 +459563,7 @@
     },
     {
       "symbol": "L:pe.a(IIIBII)Lnbb;#2",
-      "renamedSymbol": "L:World.a(IIIBII)LDebris;#2",
+      "renamedSymbol": "L:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#2",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -459454,7 +459574,7 @@
     },
     {
       "symbol": "L:pe.a(IIIBII)Lnbb;#3",
-      "renamedSymbol": "L:World.a(IIIBII)LDebris;#3",
+      "renamedSymbol": "L:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#3",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -459465,7 +459585,7 @@
     },
     {
       "symbol": "L:pe.a(IIIBII)Lnbb;#4",
-      "renamedSymbol": "L:World.a(IIIBII)LDebris;#4",
+      "renamedSymbol": "L:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#4",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -459476,7 +459596,7 @@
     },
     {
       "symbol": "L:pe.a(IIIBII)Lnbb;#5",
-      "renamedSymbol": "L:World.a(IIIBII)LDebris;#5",
+      "renamedSymbol": "L:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#5",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -459487,7 +459607,7 @@
     },
     {
       "symbol": "L:pe.a(IIIBII)Lnbb;#6",
-      "renamedSymbol": "L:World.a(IIIBII)LDebris;#6",
+      "renamedSymbol": "L:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#6",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -459498,7 +459618,7 @@
     },
     {
       "symbol": "L:pe.a(IIIBII)Lnbb;#7",
-      "renamedSymbol": "L:World.a(IIIBII)LDebris;#7",
+      "renamedSymbol": "L:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#7",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -459509,7 +459629,7 @@
     },
     {
       "symbol": "L:pe.a(IIIBII)Lnbb;#8",
-      "renamedSymbol": "L:World.a(IIIBII)LDebris;#8",
+      "renamedSymbol": "L:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#8",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -459520,7 +459640,7 @@
     },
     {
       "symbol": "L:pe.a(IIIBII)Lnbb;#9",
-      "renamedSymbol": "L:World.a(IIIBII)LDebris;#9",
+      "renamedSymbol": "L:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#9",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -459531,7 +459651,7 @@
     },
     {
       "symbol": "L:pe.a(IIIIB)V#0",
-      "renamedSymbol": "L:World.a(IIIIB)V#0",
+      "renamedSymbol": "L:World.clearTerrainRectangle(IIIIB)V#0",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -459542,7 +459662,7 @@
     },
     {
       "symbol": "L:pe.a(IIIIB)V#1",
-      "renamedSymbol": "L:World.a(IIIIB)V#1",
+      "renamedSymbol": "L:World.clearTerrainRectangle(IIIIB)V#1",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -459553,7 +459673,7 @@
     },
     {
       "symbol": "L:pe.a(IIIIB)V#2",
-      "renamedSymbol": "L:World.a(IIIIB)V#2",
+      "renamedSymbol": "L:World.clearTerrainRectangle(IIIIB)V#2",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -459564,7 +459684,7 @@
     },
     {
       "symbol": "L:pe.a(IIIIB)V#3",
-      "renamedSymbol": "L:World.a(IIIIB)V#3",
+      "renamedSymbol": "L:World.clearTerrainRectangle(IIIIB)V#3",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -459575,7 +459695,7 @@
     },
     {
       "symbol": "L:pe.a(IIIIB)V#4",
-      "renamedSymbol": "L:World.a(IIIIB)V#4",
+      "renamedSymbol": "L:World.clearTerrainRectangle(IIIIB)V#4",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -459586,7 +459706,7 @@
     },
     {
       "symbol": "L:pe.a(IIIIB)V#5",
-      "renamedSymbol": "L:World.a(IIIIB)V#5",
+      "renamedSymbol": "L:World.clearTerrainRectangle(IIIIB)V#5",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -459597,7 +459717,7 @@
     },
     {
       "symbol": "L:pe.a(IIIIB)V#6",
-      "renamedSymbol": "L:World.a(IIIIB)V#6",
+      "renamedSymbol": "L:World.clearTerrainRectangle(IIIIB)V#6",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -459608,7 +459728,7 @@
     },
     {
       "symbol": "L:pe.a(IIIIB)V#7",
-      "renamedSymbol": "L:World.a(IIIIB)V#7",
+      "renamedSymbol": "L:World.clearTerrainRectangle(IIIIB)V#7",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -460994,7 +461114,7 @@
     },
     {
       "symbol": "L:pe.a(IIZI)Z#0",
-      "renamedSymbol": "L:World.a(IIZI)Z#0",
+      "renamedSymbol": "L:World.overlapsShipsOrSpawnPoints(IIZI)Z#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -461005,7 +461125,7 @@
     },
     {
       "symbol": "L:pe.a(IIZI)Z#1",
-      "renamedSymbol": "L:World.a(IIZI)Z#1",
+      "renamedSymbol": "L:World.overlapsShipsOrSpawnPoints(IIZI)Z#1",
       "originalName": "var5_ref",
       "renamedName": "var5_ref",
       "declaration": {
@@ -461016,7 +461136,7 @@
     },
     {
       "symbol": "L:pe.a(IIZI)Z#10",
-      "renamedSymbol": "L:World.a(IIZI)Z#10",
+      "renamedSymbol": "L:World.overlapsShipsOrSpawnPoints(IIZI)Z#10",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -461027,7 +461147,7 @@
     },
     {
       "symbol": "L:pe.a(IIZI)Z#11",
-      "renamedSymbol": "L:World.a(IIZI)Z#11",
+      "renamedSymbol": "L:World.overlapsShipsOrSpawnPoints(IIZI)Z#11",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -461038,7 +461158,7 @@
     },
     {
       "symbol": "L:pe.a(IIZI)Z#2",
-      "renamedSymbol": "L:World.a(IIZI)Z#2",
+      "renamedSymbol": "L:World.overlapsShipsOrSpawnPoints(IIZI)Z#2",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -461049,7 +461169,7 @@
     },
     {
       "symbol": "L:pe.a(IIZI)Z#3",
-      "renamedSymbol": "L:World.a(IIZI)Z#3",
+      "renamedSymbol": "L:World.overlapsShipsOrSpawnPoints(IIZI)Z#3",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -461060,7 +461180,7 @@
     },
     {
       "symbol": "L:pe.a(IIZI)Z#4",
-      "renamedSymbol": "L:World.a(IIZI)Z#4",
+      "renamedSymbol": "L:World.overlapsShipsOrSpawnPoints(IIZI)Z#4",
       "originalName": "var7_ref_sg",
       "renamedName": "var7_ref_sg",
       "declaration": {
@@ -461071,7 +461191,7 @@
     },
     {
       "symbol": "L:pe.a(IIZI)Z#5",
-      "renamedSymbol": "L:World.a(IIZI)Z#5",
+      "renamedSymbol": "L:World.overlapsShipsOrSpawnPoints(IIZI)Z#5",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -461082,7 +461202,7 @@
     },
     {
       "symbol": "L:pe.a(IIZI)Z#6",
-      "renamedSymbol": "L:World.a(IIZI)Z#6",
+      "renamedSymbol": "L:World.overlapsShipsOrSpawnPoints(IIZI)Z#6",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -461093,7 +461213,7 @@
     },
     {
       "symbol": "L:pe.a(IIZI)Z#7",
-      "renamedSymbol": "L:World.a(IIZI)Z#7",
+      "renamedSymbol": "L:World.overlapsShipsOrSpawnPoints(IIZI)Z#7",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -461104,7 +461224,7 @@
     },
     {
       "symbol": "L:pe.a(IIZI)Z#8",
-      "renamedSymbol": "L:World.a(IIZI)Z#8",
+      "renamedSymbol": "L:World.overlapsShipsOrSpawnPoints(IIZI)Z#8",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -461115,7 +461235,7 @@
     },
     {
       "symbol": "L:pe.a(IIZI)Z#9",
-      "renamedSymbol": "L:World.a(IIZI)Z#9",
+      "renamedSymbol": "L:World.overlapsShipsOrSpawnPoints(IIZI)Z#9",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -461126,7 +461246,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#0",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#0",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#0",
       "originalName": "stackIn_59_0",
       "renamedName": "stackIn_59_0",
       "declaration": {
@@ -461137,7 +461257,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#1",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#1",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#1",
       "originalName": "stackIn_59_1",
       "renamedName": "stackIn_59_1",
       "declaration": {
@@ -461148,7 +461268,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#10",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#10",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#10",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -461159,7 +461279,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#11",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#11",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#11",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -461170,7 +461290,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#12",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#12",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#12",
       "originalName": "var13_int",
       "renamedName": "var13_int",
       "declaration": {
@@ -461181,7 +461301,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#13",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#13",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#13",
       "originalName": "var14_ref_rdb",
       "renamedName": "var14_ref_rdb",
       "declaration": {
@@ -461192,7 +461312,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#14",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#14",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#14",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -461203,7 +461323,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#15",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#15",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#15",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -461214,7 +461334,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#16",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#16",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#16",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -461225,7 +461345,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#17",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#17",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#17",
       "originalName": "var16_ref_crb__",
       "renamedName": "var16_ref_crb__",
       "declaration": {
@@ -461236,7 +461356,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#18",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#18",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#18",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -461247,7 +461367,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#19",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#19",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#19",
       "originalName": "var17_ref_crb__",
       "renamedName": "var17_ref_crb__",
       "declaration": {
@@ -461258,7 +461378,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#2",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#2",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#2",
       "originalName": "stackIn_60_2",
       "renamedName": "stackIn_60_2",
       "declaration": {
@@ -461269,7 +461389,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#20",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#20",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#20",
       "originalName": "var18_ref_sg",
       "renamedName": "var18_ref_sg",
       "declaration": {
@@ -461280,7 +461400,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#21",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#21",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#21",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -461291,7 +461411,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#22",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#22",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#22",
       "originalName": "var19_int",
       "renamedName": "var19_int",
       "declaration": {
@@ -461302,7 +461422,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#23",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#23",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#23",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -461313,7 +461433,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#24",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#24",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#24",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -461324,7 +461444,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#25",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#25",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#25",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -461335,7 +461455,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#26",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#26",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#26",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -461346,7 +461466,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#27",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#27",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#27",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -461357,7 +461477,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#28",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#28",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#28",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -461368,7 +461488,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#29",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#29",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#29",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -461379,7 +461499,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#3",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#3",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#3",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -461390,7 +461510,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#30",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#30",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#30",
       "originalName": "var15Lifetime1",
       "renamedName": "var15Lifetime1",
       "declaration": {
@@ -461401,7 +461521,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#31",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#31",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#31",
       "originalName": "var17Lifetime1",
       "renamedName": "var17Lifetime1",
       "declaration": {
@@ -461412,7 +461532,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#32",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#32",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#32",
       "originalName": "var20Lifetime1",
       "renamedName": "var20Lifetime1",
       "declaration": {
@@ -461423,7 +461543,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#33",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#33",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#33",
       "originalName": "var21Lifetime1",
       "renamedName": "var21Lifetime1",
       "declaration": {
@@ -461434,7 +461554,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#34",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#34",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#34",
       "originalName": "var22Lifetime1",
       "renamedName": "var22Lifetime1",
       "declaration": {
@@ -461445,7 +461565,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#35",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#35",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#35",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -461456,7 +461576,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#36",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#36",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#36",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -461467,7 +461587,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#4",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#4",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#4",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -461478,7 +461598,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#5",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#5",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#5",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -461489,7 +461609,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#6",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#6",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#6",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -461500,7 +461620,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#7",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#7",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#7",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -461511,7 +461631,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#8",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#8",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#8",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -461522,7 +461642,7 @@
     },
     {
       "symbol": "L:pe.a(IIZIILsg;)V#9",
-      "renamedSymbol": "L:World.a(IIZIILShip;)V#9",
+      "renamedSymbol": "L:World.spawnPlayerShip(IIZIILShip;)V#9",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -461742,7 +461862,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#0",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#0",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#0",
       "originalName": "stackIn_104_0",
       "renamedName": "stackIn_104_0",
       "declaration": {
@@ -461753,7 +461873,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#1",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#1",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#1",
       "originalName": "stackIn_104_1",
       "renamedName": "stackIn_104_1",
       "declaration": {
@@ -461764,7 +461884,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#10",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#10",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#10",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -461775,7 +461895,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#11",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#11",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#11",
       "originalName": "var7_ref_sg__",
       "renamedName": "var7_ref_sg__",
       "declaration": {
@@ -461786,7 +461906,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#12",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#12",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#12",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -461797,7 +461917,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#13",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#13",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#13",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -461808,7 +461928,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#14",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#14",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#14",
       "originalName": "var9_ref_sg",
       "renamedName": "var9_ref_sg",
       "declaration": {
@@ -461819,7 +461939,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#15",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#15",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#15",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -461830,7 +461950,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#16",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#16",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#16",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -461841,7 +461961,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#17",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#17",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#17",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -461852,7 +461972,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#18",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#18",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#18",
       "originalName": "var11_ref",
       "renamedName": "var11_ref",
       "declaration": {
@@ -461863,7 +461983,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#19",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#19",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#19",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -461874,7 +461994,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#2",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#2",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#2",
       "originalName": "stackIn_105_2",
       "renamedName": "stackIn_105_2",
       "declaration": {
@@ -461885,7 +462005,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#20",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#20",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#20",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -461896,7 +462016,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#21",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#21",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#21",
       "originalName": "var13_array",
       "renamedName": "var13_array",
       "declaration": {
@@ -461907,7 +462027,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#22",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#22",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#22",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -461918,7 +462038,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#23",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#23",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#23",
       "originalName": "var15_ref_ml__",
       "renamedName": "var15_ref_ml__",
       "declaration": {
@@ -461929,7 +462049,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#24",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#24",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#24",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -461940,7 +462060,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#25",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#25",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#25",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -461951,7 +462071,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#26",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#26",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#26",
       "originalName": "var17_ref_ml",
       "renamedName": "var17_ref_ml",
       "declaration": {
@@ -461962,7 +462082,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#27",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#27",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#27",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -461973,7 +462093,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#28",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#28",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#28",
       "originalName": "var18_int",
       "renamedName": "var18_int",
       "declaration": {
@@ -461984,7 +462104,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#29",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#29",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#29",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -461995,7 +462115,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#3",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#3",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#3",
       "originalName": "stackIn_108_0",
       "renamedName": "stackIn_108_0",
       "declaration": {
@@ -462006,7 +462126,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#30",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#30",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#30",
       "originalName": "var19_int",
       "renamedName": "var19_int",
       "declaration": {
@@ -462017,7 +462137,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#31",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#31",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#31",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -462028,7 +462148,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#32",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#32",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#32",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -462039,7 +462159,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#33",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#33",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#33",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -462050,7 +462170,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#34",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#34",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#34",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -462061,7 +462181,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#35",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#35",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#35",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -462072,7 +462192,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#36",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#36",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#36",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -462083,7 +462203,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#37",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#37",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#37",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -462094,7 +462214,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#38",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#38",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#38",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -462105,7 +462225,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#39",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#39",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#39",
       "originalName": "var8Lifetime1",
       "renamedName": "var8Lifetime1",
       "declaration": {
@@ -462116,7 +462236,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#4",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#4",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#4",
       "originalName": "stackIn_108_1",
       "renamedName": "stackIn_108_1",
       "declaration": {
@@ -462127,7 +462247,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#40",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#40",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#40",
       "originalName": "var16Lifetime1",
       "renamedName": "var16Lifetime1",
       "declaration": {
@@ -462138,7 +462258,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#41",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#41",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#41",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -462149,7 +462269,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#42",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#42",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#42",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -462160,7 +462280,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#5",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#5",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#5",
       "originalName": "stackIn_109_0",
       "renamedName": "stackIn_109_0",
       "declaration": {
@@ -462171,7 +462291,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#6",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#6",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#6",
       "originalName": "stackIn_109_2",
       "renamedName": "stackIn_109_2",
       "declaration": {
@@ -462182,7 +462302,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#7",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#7",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -462193,7 +462313,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#8",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#8",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#8",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -462204,7 +462324,7 @@
     },
     {
       "symbol": "L:pe.a(II[Ltfa;Llbb;)V#9",
-      "renamedSymbol": "L:World.a(II[LPlayer;LMissionState;)V#9",
+      "renamedSymbol": "L:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -464481,7 +464601,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#0",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#0",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#0",
       "originalName": "discarded$0",
       "renamedName": "discarded$0",
       "declaration": {
@@ -464492,7 +464612,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#1",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#1",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#1",
       "originalName": "stackIn_29_0",
       "renamedName": "stackIn_29_0",
       "declaration": {
@@ -464503,7 +464623,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#10",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#10",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#10",
       "originalName": "stackIn_37_3",
       "renamedName": "stackIn_37_3",
       "declaration": {
@@ -464514,7 +464634,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#11",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#11",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#11",
       "originalName": "stackIn_38_1",
       "renamedName": "stackIn_38_1",
       "declaration": {
@@ -464525,7 +464645,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#12",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#12",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#12",
       "originalName": "stackIn_38_4",
       "renamedName": "stackIn_38_4",
       "declaration": {
@@ -464536,7 +464656,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#13",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#13",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#13",
       "originalName": "stackIn_65_0",
       "renamedName": "stackIn_65_0",
       "declaration": {
@@ -464547,7 +464667,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#14",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#14",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#14",
       "originalName": "stackIn_124_0",
       "renamedName": "stackIn_124_0",
       "declaration": {
@@ -464558,7 +464678,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#15",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#15",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#15",
       "originalName": "stackIn_124_1",
       "renamedName": "stackIn_124_1",
       "declaration": {
@@ -464569,7 +464689,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#16",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#16",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#16",
       "originalName": "stackIn_125_2",
       "renamedName": "stackIn_125_2",
       "declaration": {
@@ -464580,7 +464700,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#17",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#17",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#17",
       "originalName": "stackIn_128_0",
       "renamedName": "stackIn_128_0",
       "declaration": {
@@ -464591,7 +464711,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#18",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#18",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#18",
       "originalName": "stackIn_128_1",
       "renamedName": "stackIn_128_1",
       "declaration": {
@@ -464602,7 +464722,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#19",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#19",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#19",
       "originalName": "stackIn_129_0",
       "renamedName": "stackIn_129_0",
       "declaration": {
@@ -464613,7 +464733,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#2",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#2",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#2",
       "originalName": "stackIn_29_1",
       "renamedName": "stackIn_29_1",
       "declaration": {
@@ -464624,7 +464744,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#20",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#20",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#20",
       "originalName": "stackIn_129_2",
       "renamedName": "stackIn_129_2",
       "declaration": {
@@ -464635,7 +464755,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#21",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#21",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#21",
       "originalName": "stackIn_132_0",
       "renamedName": "stackIn_132_0",
       "declaration": {
@@ -464646,7 +464766,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#22",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#22",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#22",
       "originalName": "stackIn_132_1",
       "renamedName": "stackIn_132_1",
       "declaration": {
@@ -464657,7 +464777,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#23",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#23",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#23",
       "originalName": "stackIn_133_0",
       "renamedName": "stackIn_133_0",
       "declaration": {
@@ -464668,7 +464788,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#24",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#24",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#24",
       "originalName": "stackIn_133_2",
       "renamedName": "stackIn_133_2",
       "declaration": {
@@ -464679,7 +464799,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#25",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#25",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#25",
       "originalName": "stackIn_136_0",
       "renamedName": "stackIn_136_0",
       "declaration": {
@@ -464690,7 +464810,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#26",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#26",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#26",
       "originalName": "stackIn_136_1",
       "renamedName": "stackIn_136_1",
       "declaration": {
@@ -464701,7 +464821,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#27",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#27",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#27",
       "originalName": "stackIn_137_0",
       "renamedName": "stackIn_137_0",
       "declaration": {
@@ -464712,7 +464832,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#28",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#28",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#28",
       "originalName": "stackIn_137_2",
       "renamedName": "stackIn_137_2",
       "declaration": {
@@ -464723,7 +464843,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#29",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#29",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#29",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -464734,7 +464854,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#3",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#3",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#3",
       "originalName": "stackIn_29_2",
       "renamedName": "stackIn_29_2",
       "declaration": {
@@ -464745,7 +464865,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#30",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#30",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#30",
       "originalName": "var8_int",
       "renamedName": "var8_int",
       "declaration": {
@@ -464756,7 +464876,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#31",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#31",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#31",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -464767,7 +464887,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#32",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#32",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#32",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -464778,7 +464898,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#33",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#33",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#33",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -464789,7 +464909,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#34",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#34",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#34",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -464800,7 +464920,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#35",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#35",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#35",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -464811,7 +464931,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#36",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#36",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#36",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -464822,7 +464942,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#37",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#37",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#37",
       "originalName": "var14_ref_sg__",
       "renamedName": "var14_ref_sg__",
       "declaration": {
@@ -464833,7 +464953,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#38",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#38",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#38",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -464844,7 +464964,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#39",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#39",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#39",
       "originalName": "var15_int",
       "renamedName": "var15_int",
       "declaration": {
@@ -464855,7 +464975,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#4",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#4",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#4",
       "originalName": "stackIn_29_3",
       "renamedName": "stackIn_29_3",
       "declaration": {
@@ -464866,7 +464986,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#40",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#40",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#40",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -464877,7 +464997,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#41",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#41",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#41",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -464888,7 +465008,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#42",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#42",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#42",
       "originalName": "var16_ref",
       "renamedName": "var16_ref",
       "declaration": {
@@ -464899,7 +465019,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#43",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#43",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#43",
       "originalName": "var16_ref_mqb__",
       "renamedName": "var16_ref_mqb__",
       "declaration": {
@@ -464910,7 +465030,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#44",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#44",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#44",
       "originalName": "var16_ref_nbb",
       "renamedName": "var16_ref_nbb",
       "declaration": {
@@ -464921,7 +465041,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#45",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#45",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#45",
       "originalName": "var16_ref_sg",
       "renamedName": "var16_ref_sg",
       "declaration": {
@@ -464932,7 +465052,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#46",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#46",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#46",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -464943,7 +465063,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#47",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#47",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#47",
       "originalName": "var18_int",
       "renamedName": "var18_int",
       "declaration": {
@@ -464954,7 +465074,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#48",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#48",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#48",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -464965,7 +465085,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#49",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#49",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#49",
       "originalName": "var18_ref",
       "renamedName": "var18_ref",
       "declaration": {
@@ -464976,7 +465096,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#5",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#5",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#5",
       "originalName": "stackIn_30_1",
       "renamedName": "stackIn_30_1",
       "declaration": {
@@ -464987,7 +465107,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#50",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#50",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#50",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -464998,7 +465118,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#51",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#51",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#51",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -465009,7 +465129,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#52",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#52",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#52",
       "originalName": "var20_ref",
       "renamedName": "var20_ref",
       "declaration": {
@@ -465020,7 +465140,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#53",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#53",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#53",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -465031,7 +465151,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#54",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#54",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#54",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -465042,7 +465162,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#55",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#55",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#55",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -465053,7 +465173,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#56",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#56",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#56",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -465064,7 +465184,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#57",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#57",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#57",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -465075,7 +465195,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#58",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#58",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#58",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -465086,7 +465206,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#59",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#59",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#59",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -465097,7 +465217,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#6",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#6",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#6",
       "originalName": "stackIn_30_4",
       "renamedName": "stackIn_30_4",
       "declaration": {
@@ -465108,7 +465228,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#60",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#60",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#60",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -465119,7 +465239,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#61",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#61",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#61",
       "originalName": "var29",
       "renamedName": "var29",
       "declaration": {
@@ -465130,7 +465250,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#62",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#62",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#62",
       "originalName": "var30",
       "renamedName": "var30",
       "declaration": {
@@ -465141,7 +465261,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#63",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#63",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#63",
       "originalName": "var31",
       "renamedName": "var31",
       "declaration": {
@@ -465152,7 +465272,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#64",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#64",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#64",
       "originalName": "var32",
       "renamedName": "var32",
       "declaration": {
@@ -465163,7 +465283,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#65",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#65",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#65",
       "originalName": "var33",
       "renamedName": "var33",
       "declaration": {
@@ -465174,7 +465294,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#66",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#66",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#66",
       "originalName": "var34",
       "renamedName": "var34",
       "declaration": {
@@ -465185,7 +465305,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#67",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#67",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#67",
       "originalName": "var35",
       "renamedName": "var35",
       "declaration": {
@@ -465196,7 +465316,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#68",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#68",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#68",
       "originalName": "var15Lifetime1",
       "renamedName": "var15Lifetime1",
       "declaration": {
@@ -465207,7 +465327,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#69",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#69",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#69",
       "originalName": "var16_refLifetime1",
       "renamedName": "var16_refLifetime1",
       "declaration": {
@@ -465218,7 +465338,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#7",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#7",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#7",
       "originalName": "stackIn_37_0",
       "renamedName": "stackIn_37_0",
       "declaration": {
@@ -465229,7 +465349,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#70",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#70",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#70",
       "originalName": "var16_ref_mqb__Lifetime1",
       "renamedName": "var16_ref_mqb__Lifetime1",
       "declaration": {
@@ -465240,7 +465360,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#71",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#71",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#71",
       "originalName": "var18Lifetime1",
       "renamedName": "var18Lifetime1",
       "declaration": {
@@ -465251,7 +465371,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#72",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#72",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#72",
       "originalName": "var18_refLifetime1",
       "renamedName": "var18_refLifetime1",
       "declaration": {
@@ -465262,7 +465382,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#73",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#73",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#73",
       "originalName": "var20Lifetime1",
       "renamedName": "var20Lifetime1",
       "declaration": {
@@ -465273,7 +465393,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#74",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#74",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#74",
       "originalName": "var14Lifetime1",
       "renamedName": "var14Lifetime1",
       "declaration": {
@@ -465284,7 +465404,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#75",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#75",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#75",
       "originalName": "var15_intLifetime1",
       "renamedName": "var15_intLifetime1",
       "declaration": {
@@ -465295,7 +465415,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#76",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#76",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#76",
       "originalName": "var16Lifetime1",
       "renamedName": "var16Lifetime1",
       "declaration": {
@@ -465306,7 +465426,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#77",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#77",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#77",
       "originalName": "var17Lifetime1",
       "renamedName": "var17Lifetime1",
       "declaration": {
@@ -465317,7 +465437,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#78",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#78",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#78",
       "originalName": "var17Lifetime2",
       "renamedName": "var17Lifetime2",
       "declaration": {
@@ -465328,7 +465448,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#79",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#79",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#79",
       "originalName": "var17Lifetime3",
       "renamedName": "var17Lifetime3",
       "declaration": {
@@ -465339,7 +465459,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#8",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#8",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#8",
       "originalName": "stackIn_37_1",
       "renamedName": "stackIn_37_1",
       "declaration": {
@@ -465350,7 +465470,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#80",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#80",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#80",
       "originalName": "var17Lifetime4",
       "renamedName": "var17Lifetime4",
       "declaration": {
@@ -465361,7 +465481,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#81",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#81",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#81",
       "originalName": "var17Lifetime5",
       "renamedName": "var17Lifetime5",
       "declaration": {
@@ -465372,7 +465492,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#82",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#82",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#82",
       "originalName": "var17Lifetime6",
       "renamedName": "var17Lifetime6",
       "declaration": {
@@ -465383,7 +465503,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#83",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#83",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#83",
       "originalName": "var19Lifetime1",
       "renamedName": "var19Lifetime1",
       "declaration": {
@@ -465394,7 +465514,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#84",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#84",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#84",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -465405,7 +465525,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#85",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#85",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#85",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -465416,7 +465536,7 @@
     },
     {
       "symbol": "L:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#9",
-      "renamedSymbol": "L:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#9",
+      "renamedSymbol": "L:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#9",
       "originalName": "stackIn_37_2",
       "renamedName": "stackIn_37_2",
       "declaration": {
@@ -470872,7 +470992,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#0",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#0",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#0",
       "originalName": "stackIn_90_0",
       "renamedName": "stackIn_90_0",
       "declaration": {
@@ -470883,7 +471003,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#1",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#1",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#1",
       "originalName": "stackIn_90_1",
       "renamedName": "stackIn_90_1",
       "declaration": {
@@ -470894,7 +471014,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#10",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#10",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#10",
       "originalName": "var5_ref",
       "renamedName": "var5_ref",
       "declaration": {
@@ -470905,7 +471025,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#11",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#11",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#11",
       "originalName": "var6_int",
       "renamedName": "var6_int",
       "declaration": {
@@ -470916,7 +471036,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#12",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#12",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#12",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -470927,7 +471047,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#13",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#13",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#13",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -470938,7 +471058,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#14",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#14",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#14",
       "originalName": "var7_ref_mqb",
       "renamedName": "var7_ref_mqb",
       "declaration": {
@@ -470949,7 +471069,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#15",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#15",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#15",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -470960,7 +471080,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#16",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#16",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#16",
       "originalName": "var8_int",
       "renamedName": "var8_int",
       "declaration": {
@@ -470971,7 +471091,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#17",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#17",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#17",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -470982,7 +471102,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#18",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#18",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#18",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -470993,7 +471113,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#19",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#19",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#19",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -471004,7 +471124,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#2",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#2",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#2",
       "originalName": "stackIn_91_2",
       "renamedName": "stackIn_91_2",
       "declaration": {
@@ -471015,7 +471135,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#20",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#20",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#20",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -471026,7 +471146,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#21",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#21",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#21",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -471037,7 +471157,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#22",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#22",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#22",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -471048,7 +471168,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#23",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#23",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#23",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -471059,7 +471179,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#24",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#24",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#24",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -471070,7 +471190,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#25",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#25",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#25",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -471081,7 +471201,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#26",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#26",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#26",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -471092,7 +471212,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#27",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#27",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#27",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -471103,7 +471223,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#28",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#28",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#28",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -471114,7 +471234,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#29",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#29",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#29",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -471125,7 +471245,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#3",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#3",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#3",
       "originalName": "stackIn_94_0",
       "renamedName": "stackIn_94_0",
       "declaration": {
@@ -471136,7 +471256,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#30",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#30",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#30",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -471147,7 +471267,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#31",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#31",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#31",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -471158,7 +471278,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#32",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#32",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#32",
       "originalName": "var5_intLifetime1",
       "renamedName": "var5_intLifetime1",
       "declaration": {
@@ -471169,7 +471289,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#33",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#33",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#33",
       "originalName": "var6_intLifetime1",
       "renamedName": "var6_intLifetime1",
       "declaration": {
@@ -471180,7 +471300,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#34",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#34",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#34",
       "originalName": "var6_intLifetime2",
       "renamedName": "var6_intLifetime2",
       "declaration": {
@@ -471191,7 +471311,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#35",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#35",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#35",
       "originalName": "var6_intLifetime3",
       "renamedName": "var6_intLifetime3",
       "declaration": {
@@ -471202,7 +471322,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#36",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#36",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#36",
       "originalName": "var6_intLifetime4",
       "renamedName": "var6_intLifetime4",
       "declaration": {
@@ -471213,7 +471333,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#37",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#37",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#37",
       "originalName": "var7Lifetime1",
       "renamedName": "var7Lifetime1",
       "declaration": {
@@ -471224,7 +471344,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#38",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#38",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#38",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -471235,7 +471355,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#4",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#4",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#4",
       "originalName": "stackIn_94_1",
       "renamedName": "stackIn_94_1",
       "declaration": {
@@ -471246,7 +471366,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#5",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#5",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#5",
       "originalName": "stackIn_95_0",
       "renamedName": "stackIn_95_0",
       "declaration": {
@@ -471257,7 +471377,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#6",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#6",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#6",
       "originalName": "stackIn_95_2",
       "renamedName": "stackIn_95_2",
       "declaration": {
@@ -471268,7 +471388,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#7",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#7",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -471279,7 +471399,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#8",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#8",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#8",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -471290,7 +471410,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;BILsg;)V#9",
-      "renamedSymbol": "L:World.a(LCamera2D;BILShip;)V#9",
+      "renamedSymbol": "L:World.drawWorld(LCamera2D;BILShip;)V#9",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -471301,7 +471421,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;ILlbb;)V#0",
-      "renamedSymbol": "L:World.a(LCamera2D;ILMissionState;)V#0",
+      "renamedSymbol": "L:World.drawArmageddonBounds(LCamera2D;ILMissionState;)V#0",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -471312,7 +471432,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;ILlbb;)V#1",
-      "renamedSymbol": "L:World.a(LCamera2D;ILMissionState;)V#1",
+      "renamedSymbol": "L:World.drawArmageddonBounds(LCamera2D;ILMissionState;)V#1",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -471323,7 +471443,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;ILlbb;)V#2",
-      "renamedSymbol": "L:World.a(LCamera2D;ILMissionState;)V#2",
+      "renamedSymbol": "L:World.drawArmageddonBounds(LCamera2D;ILMissionState;)V#2",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -471334,7 +471454,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;ILlbb;)V#3",
-      "renamedSymbol": "L:World.a(LCamera2D;ILMissionState;)V#3",
+      "renamedSymbol": "L:World.drawArmageddonBounds(LCamera2D;ILMissionState;)V#3",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -471345,7 +471465,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;ILlbb;)V#4",
-      "renamedSymbol": "L:World.a(LCamera2D;ILMissionState;)V#4",
+      "renamedSymbol": "L:World.drawArmageddonBounds(LCamera2D;ILMissionState;)V#4",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -471356,7 +471476,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;ILlbb;)V#5",
-      "renamedSymbol": "L:World.a(LCamera2D;ILMissionState;)V#5",
+      "renamedSymbol": "L:World.drawArmageddonBounds(LCamera2D;ILMissionState;)V#5",
       "originalName": "stackIn_10_1",
       "renamedName": "stackIn_10_1",
       "declaration": {
@@ -471367,7 +471487,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;ILlbb;)V#6",
-      "renamedSymbol": "L:World.a(LCamera2D;ILMissionState;)V#6",
+      "renamedSymbol": "L:World.drawArmageddonBounds(LCamera2D;ILMissionState;)V#6",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -471378,7 +471498,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;ILlbb;)V#7",
-      "renamedSymbol": "L:World.a(LCamera2D;ILMissionState;)V#7",
+      "renamedSymbol": "L:World.drawArmageddonBounds(LCamera2D;ILMissionState;)V#7",
       "originalName": "stackIn_11_2",
       "renamedName": "stackIn_11_2",
       "declaration": {
@@ -471389,7 +471509,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;ILlbb;)V#8",
-      "renamedSymbol": "L:World.a(LCamera2D;ILMissionState;)V#8",
+      "renamedSymbol": "L:World.drawArmageddonBounds(LCamera2D;ILMissionState;)V#8",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -471400,7 +471520,7 @@
     },
     {
       "symbol": "L:pe.a(Llta;ILlbb;)V#9",
-      "renamedSymbol": "L:World.a(LCamera2D;ILMissionState;)V#9",
+      "renamedSymbol": "L:World.drawArmageddonBounds(LCamera2D;ILMissionState;)V#9",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -472907,7 +473027,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#0",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#0",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#0",
       "originalName": "dupTemp$0",
       "renamedName": "dupTemp$0",
       "declaration": {
@@ -472918,7 +473038,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#1",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#1",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#1",
       "originalName": "dupTemp$1",
       "renamedName": "dupTemp$1",
       "declaration": {
@@ -472929,7 +473049,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#10",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#10",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#10",
       "originalName": "stackIn_112_0",
       "renamedName": "stackIn_112_0",
       "declaration": {
@@ -472940,7 +473060,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#11",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#11",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#11",
       "originalName": "stackIn_112_1",
       "renamedName": "stackIn_112_1",
       "declaration": {
@@ -472951,7 +473071,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#12",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#12",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#12",
       "originalName": "stackIn_113_0",
       "renamedName": "stackIn_113_0",
       "declaration": {
@@ -472962,7 +473082,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#13",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#13",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#13",
       "originalName": "stackIn_113_2",
       "renamedName": "stackIn_113_2",
       "declaration": {
@@ -472973,7 +473093,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#14",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#14",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#14",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -472984,7 +473104,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#15",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#15",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#15",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -472995,7 +473115,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#16",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#16",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#16",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -473006,7 +473126,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#17",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#17",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#17",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -473017,7 +473137,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#18",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#18",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#18",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -473028,7 +473148,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#19",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#19",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#19",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -473039,7 +473159,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#2",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#2",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#2",
       "originalName": "dupTemp$2",
       "renamedName": "dupTemp$2",
       "declaration": {
@@ -473050,7 +473170,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#20",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#20",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#20",
       "originalName": "var8_ref_it",
       "renamedName": "var8_ref_it",
       "declaration": {
@@ -473061,7 +473181,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#21",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#21",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#21",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -473072,7 +473192,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#22",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#22",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#22",
       "originalName": "var9_ref_ml__",
       "renamedName": "var9_ref_ml__",
       "declaration": {
@@ -473083,7 +473203,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#23",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#23",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#23",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -473094,7 +473214,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#24",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#24",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#24",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -473105,7 +473225,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#25",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#25",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#25",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -473116,7 +473236,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#26",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#26",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#26",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -473127,7 +473247,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#27",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#27",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#27",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -473138,7 +473258,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#28",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#28",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#28",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -473149,7 +473269,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#29",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#29",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#29",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -473160,7 +473280,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#3",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#3",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#3",
       "originalName": "stackIn_104_0",
       "renamedName": "stackIn_104_0",
       "declaration": {
@@ -473171,7 +473291,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#30",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#30",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#30",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -473182,7 +473302,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#31",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#31",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#31",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -473193,7 +473313,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#32",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#32",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#32",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -473204,7 +473324,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#33",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#33",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#33",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -473215,7 +473335,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#34",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#34",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#34",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -473226,7 +473346,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#35",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#35",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#35",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -473237,7 +473357,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#36",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#36",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#36",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -473248,7 +473368,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#37",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#37",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#37",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -473259,7 +473379,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#38",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#38",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#38",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -473270,7 +473390,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#39",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#39",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#39",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -473281,7 +473401,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#4",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#4",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#4",
       "originalName": "stackIn_104_1",
       "renamedName": "stackIn_104_1",
       "declaration": {
@@ -473292,7 +473412,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#40",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#40",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#40",
       "originalName": "var10Lifetime1",
       "renamedName": "var10Lifetime1",
       "declaration": {
@@ -473303,7 +473423,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#41",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#41",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#41",
       "originalName": "var19Lifetime1",
       "renamedName": "var19Lifetime1",
       "declaration": {
@@ -473314,7 +473434,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#42",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#42",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#42",
       "originalName": "var19Lifetime2",
       "renamedName": "var19Lifetime2",
       "declaration": {
@@ -473325,7 +473445,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#43",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#43",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#43",
       "originalName": "var5_intLifetime1",
       "renamedName": "var5_intLifetime1",
       "declaration": {
@@ -473336,7 +473456,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#44",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#44",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#44",
       "originalName": "var5_intLifetime2",
       "renamedName": "var5_intLifetime2",
       "declaration": {
@@ -473347,7 +473467,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#45",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#45",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#45",
       "originalName": "var6Lifetime1",
       "renamedName": "var6Lifetime1",
       "declaration": {
@@ -473358,7 +473478,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#46",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#46",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#46",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -473369,7 +473489,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#47",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#47",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#47",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -473380,7 +473500,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#5",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#5",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#5",
       "originalName": "stackIn_105_2",
       "renamedName": "stackIn_105_2",
       "declaration": {
@@ -473391,7 +473511,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#6",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#6",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#6",
       "originalName": "stackIn_108_0",
       "renamedName": "stackIn_108_0",
       "declaration": {
@@ -473402,7 +473522,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#7",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#7",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#7",
       "originalName": "stackIn_108_1",
       "renamedName": "stackIn_108_1",
       "declaration": {
@@ -473413,7 +473533,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#8",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#8",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#8",
       "originalName": "stackIn_109_0",
       "renamedName": "stackIn_109_0",
       "declaration": {
@@ -473424,7 +473544,7 @@
     },
     {
       "symbol": "L:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#9",
-      "renamedSymbol": "L:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#9",
+      "renamedSymbol": "L:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#9",
       "originalName": "stackIn_109_2",
       "renamedName": "stackIn_109_2",
       "declaration": {
@@ -477340,7 +477460,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#0",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#0",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#0",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -477351,7 +477471,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#1",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#1",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#1",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -477362,7 +477482,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#10",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#10",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#10",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -477373,7 +477493,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#11",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#11",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#11",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -477384,7 +477504,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#12",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#12",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#12",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -477395,7 +477515,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#13",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#13",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#13",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -477406,7 +477526,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#14",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#14",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#14",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -477417,7 +477537,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#15",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#15",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#15",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -477428,7 +477548,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#16",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#16",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#16",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -477439,7 +477559,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#17",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#17",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#17",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -477450,7 +477570,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#18",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#18",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#18",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -477461,7 +477581,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#19",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#19",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#19",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -477472,7 +477592,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#2",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#2",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#2",
       "originalName": "stackIn_98_0",
       "renamedName": "stackIn_98_0",
       "declaration": {
@@ -477483,7 +477603,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#20",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#20",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#20",
       "originalName": "var14_int",
       "renamedName": "var14_int",
       "declaration": {
@@ -477494,7 +477614,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#21",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#21",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#21",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -477505,7 +477625,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#22",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#22",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#22",
       "originalName": "var15_ref_crb__",
       "renamedName": "var15_ref_crb__",
       "declaration": {
@@ -477516,7 +477636,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#23",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#23",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#23",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -477527,7 +477647,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#24",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#24",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#24",
       "originalName": "var15_ref_nbb",
       "renamedName": "var15_ref_nbb",
       "declaration": {
@@ -477538,7 +477658,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#25",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#25",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#25",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -477549,7 +477669,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#26",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#26",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#26",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -477560,7 +477680,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#27",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#27",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#27",
       "originalName": "var17_ref_crb",
       "renamedName": "var17_ref_crb",
       "declaration": {
@@ -477571,7 +477691,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#28",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#28",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#28",
       "originalName": "var18_ref_sg",
       "renamedName": "var18_ref_sg",
       "declaration": {
@@ -477582,7 +477702,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#29",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#29",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#29",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -477593,7 +477713,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#3",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#3",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#3",
       "originalName": "stackIn_98_1",
       "renamedName": "stackIn_98_1",
       "declaration": {
@@ -477604,7 +477724,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#30",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#30",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#30",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -477615,7 +477735,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#31",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#31",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#31",
       "originalName": "var22",
       "renamedName": "var22",
       "declaration": {
@@ -477626,7 +477746,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#32",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#32",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#32",
       "originalName": "var23",
       "renamedName": "var23",
       "declaration": {
@@ -477637,7 +477757,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#33",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#33",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#33",
       "originalName": "var24",
       "renamedName": "var24",
       "declaration": {
@@ -477648,7 +477768,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#34",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#34",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#34",
       "originalName": "var25",
       "renamedName": "var25",
       "declaration": {
@@ -477659,7 +477779,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#35",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#35",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#35",
       "originalName": "var26",
       "renamedName": "var26",
       "declaration": {
@@ -477670,7 +477790,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#36",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#36",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#36",
       "originalName": "var27",
       "renamedName": "var27",
       "declaration": {
@@ -477681,7 +477801,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#37",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#37",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#37",
       "originalName": "var28",
       "renamedName": "var28",
       "declaration": {
@@ -477692,7 +477812,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#38",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#38",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#38",
       "originalName": "var18_ref_sgLifetime1",
       "renamedName": "var18_ref_sgLifetime1",
       "declaration": {
@@ -477703,7 +477823,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#39",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#39",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#39",
       "originalName": "var22Lifetime1",
       "renamedName": "var22Lifetime1",
       "declaration": {
@@ -477714,7 +477834,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#4",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#4",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#4",
       "originalName": "stackIn_99_2",
       "renamedName": "stackIn_99_2",
       "declaration": {
@@ -477725,7 +477845,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#40",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#40",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#40",
       "originalName": "var22Lifetime2",
       "renamedName": "var22Lifetime2",
       "declaration": {
@@ -477736,7 +477856,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#41",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#41",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#41",
       "originalName": "var18_ref_sgLifetime2",
       "renamedName": "var18_ref_sgLifetime2",
       "declaration": {
@@ -477747,7 +477867,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#42",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#42",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#42",
       "originalName": "var22Lifetime1Lifetime1",
       "renamedName": "var22Lifetime1Lifetime1",
       "declaration": {
@@ -477758,7 +477878,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#43",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#43",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#43",
       "originalName": "var14_intLifetime1",
       "renamedName": "var14_intLifetime1",
       "declaration": {
@@ -477769,7 +477889,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#44",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#44",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#44",
       "originalName": "var15Lifetime1",
       "renamedName": "var15Lifetime1",
       "declaration": {
@@ -477780,7 +477900,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#45",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#45",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#45",
       "originalName": "var16Lifetime1",
       "renamedName": "var16Lifetime1",
       "declaration": {
@@ -477791,7 +477911,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#46",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#46",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#46",
       "originalName": "var17Lifetime1",
       "renamedName": "var17Lifetime1",
       "declaration": {
@@ -477802,7 +477922,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#47",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#47",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#47",
       "originalName": "var15Lifetime2",
       "renamedName": "var15Lifetime2",
       "declaration": {
@@ -477813,7 +477933,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#48",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#48",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#48",
       "originalName": "var16Lifetime2",
       "renamedName": "var16Lifetime2",
       "declaration": {
@@ -477824,7 +477944,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#49",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#49",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#49",
       "originalName": "var17Lifetime2",
       "renamedName": "var17Lifetime2",
       "declaration": {
@@ -477835,7 +477955,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#5",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#5",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#5",
       "originalName": "stackIn_102_0",
       "renamedName": "stackIn_102_0",
       "declaration": {
@@ -477846,7 +477966,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#50",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#50",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#50",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -477857,7 +477977,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#51",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#51",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#51",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -477868,7 +477988,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#6",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#6",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#6",
       "originalName": "stackIn_102_1",
       "renamedName": "stackIn_102_1",
       "declaration": {
@@ -477879,7 +477999,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#7",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#7",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#7",
       "originalName": "stackIn_103_0",
       "renamedName": "stackIn_103_0",
       "declaration": {
@@ -477890,7 +478010,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#8",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#8",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#8",
       "originalName": "stackIn_103_2",
       "renamedName": "stackIn_103_2",
       "declaration": {
@@ -477901,7 +478021,7 @@
     },
     {
       "symbol": "L:pe.a(ZLlbb;BLlta;)V#9",
-      "renamedSymbol": "L:World.a(ZLMissionState;BLCamera2D;)V#9",
+      "renamedSymbol": "L:World.processArmageddon(ZLMissionState;BLCamera2D;)V#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -478858,7 +478978,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#0",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#0",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#0",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -478869,7 +478989,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#1",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#1",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#1",
       "originalName": "stackIn_9_0",
       "renamedName": "stackIn_9_0",
       "declaration": {
@@ -478880,7 +479000,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#10",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#10",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -478891,7 +479011,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#11",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#11",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#11",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -478902,7 +479022,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#12",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#12",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#12",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -478913,7 +479033,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#13",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#13",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#13",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -478924,7 +479044,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#14",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#14",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#14",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -478935,7 +479055,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#15",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#15",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#15",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -478946,7 +479066,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#16",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#16",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#16",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -478957,7 +479077,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#17",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#17",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#17",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -478968,7 +479088,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#18",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#18",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#18",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -478979,7 +479099,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#19",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#19",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#19",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -478990,7 +479110,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#2",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#2",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#2",
       "originalName": "stackIn_13_0",
       "renamedName": "stackIn_13_0",
       "declaration": {
@@ -479001,7 +479121,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#20",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#20",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#20",
       "originalName": "var14_ref_aoa",
       "renamedName": "var14_ref_aoa",
       "declaration": {
@@ -479012,7 +479132,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#21",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#21",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#21",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -479023,7 +479143,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#22",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#22",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#22",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -479034,7 +479154,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#23",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#23",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#23",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -479045,7 +479165,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#24",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#24",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#24",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -479056,7 +479176,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#25",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#25",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#25",
       "originalName": "var16Lifetime1",
       "renamedName": "var16Lifetime1",
       "declaration": {
@@ -479067,7 +479187,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#26",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#26",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#26",
       "originalName": "var16Lifetime2",
       "renamedName": "var16Lifetime2",
       "declaration": {
@@ -479078,7 +479198,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#27",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#27",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#27",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -479089,7 +479209,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#28",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#28",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#28",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -479100,7 +479220,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#3",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#3",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#3",
       "originalName": "stackIn_87_0",
       "renamedName": "stackIn_87_0",
       "declaration": {
@@ -479111,7 +479231,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#4",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#4",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#4",
       "originalName": "stackIn_87_1",
       "renamedName": "stackIn_87_1",
       "declaration": {
@@ -479122,7 +479242,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#5",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#5",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#5",
       "originalName": "stackIn_88_2",
       "renamedName": "stackIn_88_2",
       "declaration": {
@@ -479133,7 +479253,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#6",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#6",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#6",
       "originalName": "stackIn_91_0",
       "renamedName": "stackIn_91_0",
       "declaration": {
@@ -479144,7 +479264,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#7",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#7",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#7",
       "originalName": "stackIn_91_1",
       "renamedName": "stackIn_91_1",
       "declaration": {
@@ -479155,7 +479275,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#8",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#8",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#8",
       "originalName": "stackIn_92_0",
       "renamedName": "stackIn_92_0",
       "declaration": {
@@ -479166,7 +479286,7 @@
     },
     {
       "symbol": "L:pe.a([Ltfa;I[Ltfa;I)V#9",
-      "renamedSymbol": "L:World.a([LPlayer;I[LPlayer;I)V#9",
+      "renamedSymbol": "L:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#9",
       "originalName": "stackIn_92_2",
       "renamedName": "stackIn_92_2",
       "declaration": {
@@ -666903,9 +667023,9 @@
     },
     {
       "symbol": "M:dm.a(IB)I",
-      "renamedSymbol": "M:MissileLauncherWeaponDefinition.a(IB)I",
+      "renamedSymbol": "M:MissileLauncherWeaponDefinition.getArmageddonDurationTicks(IB)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getArmageddonDurationTicks",
       "declaration": {
         "file": "dm.java",
         "start": 526,
@@ -719736,9 +719856,9 @@
     },
     {
       "symbol": "M:pe.a(BLanb;Lml;Lwfb;)V",
-      "renamedSymbol": "M:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V",
+      "renamedSymbol": "M:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "spawnComponentRadialProjectiles",
       "declaration": {
         "file": "pe.java",
         "start": 329653,
@@ -719824,9 +719944,9 @@
     },
     {
       "symbol": "M:pe.a(I)V",
-      "renamedSymbol": "M:World.a(I)V",
+      "renamedSymbol": "M:World.clearTerrainAroundEntities(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearTerrainAroundEntities",
       "declaration": {
         "file": "pe.java",
         "start": 89432,
@@ -719846,9 +719966,9 @@
     },
     {
       "symbol": "M:pe.a(IBII)V",
-      "renamedSymbol": "M:World.a(IBII)V",
+      "renamedSymbol": "M:World.clearTerrainCircle(IBII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearTerrainCircle",
       "declaration": {
         "file": "pe.java",
         "start": 349733,
@@ -719890,9 +720010,9 @@
     },
     {
       "symbol": "M:pe.a(IIIBII)Lnbb;",
-      "renamedSymbol": "M:World.a(IIIBII)LDebris;",
+      "renamedSymbol": "M:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "findNearestUndraggedDebrisOfType",
       "declaration": {
         "file": "pe.java",
         "start": 261278,
@@ -719901,9 +720021,9 @@
     },
     {
       "symbol": "M:pe.a(IIIIB)V",
-      "renamedSymbol": "M:World.a(IIIIB)V",
+      "renamedSymbol": "M:World.clearTerrainRectangle(IIIIB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "clearTerrainRectangle",
       "declaration": {
         "file": "pe.java",
         "start": 365345,
@@ -720022,9 +720142,9 @@
     },
     {
       "symbol": "M:pe.a(IIZI)Z",
-      "renamedSymbol": "M:World.a(IIZI)Z",
+      "renamedSymbol": "M:World.overlapsShipsOrSpawnPoints(IIZI)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "overlapsShipsOrSpawnPoints",
       "declaration": {
         "file": "pe.java",
         "start": 135244,
@@ -720033,9 +720153,9 @@
     },
     {
       "symbol": "M:pe.a(IIZIILsg;)V",
-      "renamedSymbol": "M:World.a(IIZIILShip;)V",
+      "renamedSymbol": "M:World.spawnPlayerShip(IIZIILShip;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "spawnPlayerShip",
       "declaration": {
         "file": "pe.java",
         "start": 290636,
@@ -720055,9 +720175,9 @@
     },
     {
       "symbol": "M:pe.a(II[Ltfa;Llbb;)V",
-      "renamedSymbol": "M:World.a(II[LPlayer;LMissionState;)V",
+      "renamedSymbol": "M:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updatePlayerRespawns",
       "declaration": {
         "file": "pe.java",
         "start": 168644,
@@ -720231,9 +720351,9 @@
     },
     {
       "symbol": "M:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V",
-      "renamedSymbol": "M:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V",
+      "renamedSymbol": "M:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateSimulation",
       "declaration": {
         "file": "pe.java",
         "start": 56351,
@@ -720429,9 +720549,9 @@
     },
     {
       "symbol": "M:pe.a(Llta;BILsg;)V",
-      "renamedSymbol": "M:World.a(LCamera2D;BILShip;)V",
+      "renamedSymbol": "M:World.drawWorld(LCamera2D;BILShip;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawWorld",
       "declaration": {
         "file": "pe.java",
         "start": 196351,
@@ -720440,9 +720560,9 @@
     },
     {
       "symbol": "M:pe.a(Llta;ILlbb;)V",
-      "renamedSymbol": "M:World.a(LCamera2D;ILMissionState;)V",
+      "renamedSymbol": "M:World.drawArmageddonBounds(LCamera2D;ILMissionState;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawArmageddonBounds",
       "declaration": {
         "file": "pe.java",
         "start": 221421,
@@ -720517,9 +720637,9 @@
     },
     {
       "symbol": "M:pe.a(Lnwa;I[Ltfa;[Lcrb;)V",
-      "renamedSymbol": "M:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V",
+      "renamedSymbol": "M:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "processDestroyedEntities",
       "declaration": {
         "file": "pe.java",
         "start": 283153,
@@ -720715,9 +720835,9 @@
     },
     {
       "symbol": "M:pe.a(ZLlbb;BLlta;)V",
-      "renamedSymbol": "M:World.a(ZLMissionState;BLCamera2D;)V",
+      "renamedSymbol": "M:World.processArmageddon(ZLMissionState;BLCamera2D;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "processArmageddon",
       "declaration": {
         "file": "pe.java",
         "start": 276036,
@@ -720792,9 +720912,9 @@
     },
     {
       "symbol": "M:pe.a([Ltfa;I[Ltfa;I)V",
-      "renamedSymbol": "M:World.a([LPlayer;I[LPlayer;I)V",
+      "renamedSymbol": "M:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateShipControlsAndRepairs",
       "declaration": {
         "file": "pe.java",
         "start": 70285,
@@ -793667,7 +793787,7 @@
     },
     {
       "symbol": "P:dm.a(IB)I#0",
-      "renamedSymbol": "P:MissileLauncherWeaponDefinition.a(IB)I#0",
+      "renamedSymbol": "P:MissileLauncherWeaponDefinition.getArmageddonDurationTicks(IB)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -793678,7 +793798,7 @@
     },
     {
       "symbol": "P:dm.a(IB)I#1",
-      "renamedSymbol": "P:MissileLauncherWeaponDefinition.a(IB)I#1",
+      "renamedSymbol": "P:MissileLauncherWeaponDefinition.getArmageddonDurationTicks(IB)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -917912,7 +918032,7 @@
     },
     {
       "symbol": "P:pe.a(BLanb;Lml;Lwfb;)V#0",
-      "renamedSymbol": "P:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#0",
+      "renamedSymbol": "P:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -917923,7 +918043,7 @@
     },
     {
       "symbol": "P:pe.a(BLanb;Lml;Lwfb;)V#1",
-      "renamedSymbol": "P:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#1",
+      "renamedSymbol": "P:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -917934,7 +918054,7 @@
     },
     {
       "symbol": "P:pe.a(BLanb;Lml;Lwfb;)V#2",
-      "renamedSymbol": "P:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#2",
+      "renamedSymbol": "P:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -917945,7 +918065,7 @@
     },
     {
       "symbol": "P:pe.a(BLanb;Lml;Lwfb;)V#3",
-      "renamedSymbol": "P:World.a(BLShipBody;LShipComponent;LShipComponentDefinition;)V#3",
+      "renamedSymbol": "P:World.spawnComponentRadialProjectiles(BLShipBody;LShipComponent;LShipComponentDefinition;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -918154,7 +918274,7 @@
     },
     {
       "symbol": "P:pe.a(I)V#0",
-      "renamedSymbol": "P:World.a(I)V#0",
+      "renamedSymbol": "P:World.clearTerrainAroundEntities(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -918187,7 +918307,7 @@
     },
     {
       "symbol": "P:pe.a(IBII)V#0",
-      "renamedSymbol": "P:World.a(IBII)V#0",
+      "renamedSymbol": "P:World.clearTerrainCircle(IBII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -918198,7 +918318,7 @@
     },
     {
       "symbol": "P:pe.a(IBII)V#1",
-      "renamedSymbol": "P:World.a(IBII)V#1",
+      "renamedSymbol": "P:World.clearTerrainCircle(IBII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -918209,7 +918329,7 @@
     },
     {
       "symbol": "P:pe.a(IBII)V#2",
-      "renamedSymbol": "P:World.a(IBII)V#2",
+      "renamedSymbol": "P:World.clearTerrainCircle(IBII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -918220,7 +918340,7 @@
     },
     {
       "symbol": "P:pe.a(IBII)V#3",
-      "renamedSymbol": "P:World.a(IBII)V#3",
+      "renamedSymbol": "P:World.clearTerrainCircle(IBII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -918330,7 +918450,7 @@
     },
     {
       "symbol": "P:pe.a(IIIBII)Lnbb;#0",
-      "renamedSymbol": "P:World.a(IIIBII)LDebris;#0",
+      "renamedSymbol": "P:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -918341,7 +918461,7 @@
     },
     {
       "symbol": "P:pe.a(IIIBII)Lnbb;#1",
-      "renamedSymbol": "P:World.a(IIIBII)LDebris;#1",
+      "renamedSymbol": "P:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -918352,7 +918472,7 @@
     },
     {
       "symbol": "P:pe.a(IIIBII)Lnbb;#2",
-      "renamedSymbol": "P:World.a(IIIBII)LDebris;#2",
+      "renamedSymbol": "P:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -918363,7 +918483,7 @@
     },
     {
       "symbol": "P:pe.a(IIIBII)Lnbb;#3",
-      "renamedSymbol": "P:World.a(IIIBII)LDebris;#3",
+      "renamedSymbol": "P:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -918374,7 +918494,7 @@
     },
     {
       "symbol": "P:pe.a(IIIBII)Lnbb;#4",
-      "renamedSymbol": "P:World.a(IIIBII)LDebris;#4",
+      "renamedSymbol": "P:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -918385,7 +918505,7 @@
     },
     {
       "symbol": "P:pe.a(IIIBII)Lnbb;#5",
-      "renamedSymbol": "P:World.a(IIIBII)LDebris;#5",
+      "renamedSymbol": "P:World.findNearestUndraggedDebrisOfType(IIIBII)LDebris;#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -918396,7 +918516,7 @@
     },
     {
       "symbol": "P:pe.a(IIIIB)V#0",
-      "renamedSymbol": "P:World.a(IIIIB)V#0",
+      "renamedSymbol": "P:World.clearTerrainRectangle(IIIIB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -918407,7 +918527,7 @@
     },
     {
       "symbol": "P:pe.a(IIIIB)V#1",
-      "renamedSymbol": "P:World.a(IIIIB)V#1",
+      "renamedSymbol": "P:World.clearTerrainRectangle(IIIIB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -918418,7 +918538,7 @@
     },
     {
       "symbol": "P:pe.a(IIIIB)V#2",
-      "renamedSymbol": "P:World.a(IIIIB)V#2",
+      "renamedSymbol": "P:World.clearTerrainRectangle(IIIIB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -918429,7 +918549,7 @@
     },
     {
       "symbol": "P:pe.a(IIIIB)V#3",
-      "renamedSymbol": "P:World.a(IIIIB)V#3",
+      "renamedSymbol": "P:World.clearTerrainRectangle(IIIIB)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -918440,7 +918560,7 @@
     },
     {
       "symbol": "P:pe.a(IIIIB)V#4",
-      "renamedSymbol": "P:World.a(IIIIB)V#4",
+      "renamedSymbol": "P:World.clearTerrainRectangle(IIIIB)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -919177,7 +919297,7 @@
     },
     {
       "symbol": "P:pe.a(IIZI)Z#0",
-      "renamedSymbol": "P:World.a(IIZI)Z#0",
+      "renamedSymbol": "P:World.overlapsShipsOrSpawnPoints(IIZI)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -919188,7 +919308,7 @@
     },
     {
       "symbol": "P:pe.a(IIZI)Z#1",
-      "renamedSymbol": "P:World.a(IIZI)Z#1",
+      "renamedSymbol": "P:World.overlapsShipsOrSpawnPoints(IIZI)Z#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -919199,7 +919319,7 @@
     },
     {
       "symbol": "P:pe.a(IIZI)Z#2",
-      "renamedSymbol": "P:World.a(IIZI)Z#2",
+      "renamedSymbol": "P:World.overlapsShipsOrSpawnPoints(IIZI)Z#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -919210,7 +919330,7 @@
     },
     {
       "symbol": "P:pe.a(IIZI)Z#3",
-      "renamedSymbol": "P:World.a(IIZI)Z#3",
+      "renamedSymbol": "P:World.overlapsShipsOrSpawnPoints(IIZI)Z#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -919221,7 +919341,7 @@
     },
     {
       "symbol": "P:pe.a(IIZIILsg;)V#0",
-      "renamedSymbol": "P:World.a(IIZIILShip;)V#0",
+      "renamedSymbol": "P:World.spawnPlayerShip(IIZIILShip;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -919232,7 +919352,7 @@
     },
     {
       "symbol": "P:pe.a(IIZIILsg;)V#1",
-      "renamedSymbol": "P:World.a(IIZIILShip;)V#1",
+      "renamedSymbol": "P:World.spawnPlayerShip(IIZIILShip;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -919243,7 +919363,7 @@
     },
     {
       "symbol": "P:pe.a(IIZIILsg;)V#2",
-      "renamedSymbol": "P:World.a(IIZIILShip;)V#2",
+      "renamedSymbol": "P:World.spawnPlayerShip(IIZIILShip;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -919254,7 +919374,7 @@
     },
     {
       "symbol": "P:pe.a(IIZIILsg;)V#3",
-      "renamedSymbol": "P:World.a(IIZIILShip;)V#3",
+      "renamedSymbol": "P:World.spawnPlayerShip(IIZIILShip;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -919265,7 +919385,7 @@
     },
     {
       "symbol": "P:pe.a(IIZIILsg;)V#4",
-      "renamedSymbol": "P:World.a(IIZIILShip;)V#4",
+      "renamedSymbol": "P:World.spawnPlayerShip(IIZIILShip;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -919276,7 +919396,7 @@
     },
     {
       "symbol": "P:pe.a(IIZIILsg;)V#5",
-      "renamedSymbol": "P:World.a(IIZIILShip;)V#5",
+      "renamedSymbol": "P:World.spawnPlayerShip(IIZIILShip;)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -919364,7 +919484,7 @@
     },
     {
       "symbol": "P:pe.a(II[Ltfa;Llbb;)V#0",
-      "renamedSymbol": "P:World.a(II[LPlayer;LMissionState;)V#0",
+      "renamedSymbol": "P:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -919375,7 +919495,7 @@
     },
     {
       "symbol": "P:pe.a(II[Ltfa;Llbb;)V#1",
-      "renamedSymbol": "P:World.a(II[LPlayer;LMissionState;)V#1",
+      "renamedSymbol": "P:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -919386,7 +919506,7 @@
     },
     {
       "symbol": "P:pe.a(II[Ltfa;Llbb;)V#2",
-      "renamedSymbol": "P:World.a(II[LPlayer;LMissionState;)V#2",
+      "renamedSymbol": "P:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -919397,7 +919517,7 @@
     },
     {
       "symbol": "P:pe.a(II[Ltfa;Llbb;)V#3",
-      "renamedSymbol": "P:World.a(II[LPlayer;LMissionState;)V#3",
+      "renamedSymbol": "P:World.updatePlayerRespawns(II[LPlayer;LMissionState;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -920013,7 +920133,7 @@
     },
     {
       "symbol": "P:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#0",
-      "renamedSymbol": "P:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#0",
+      "renamedSymbol": "P:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -920024,7 +920144,7 @@
     },
     {
       "symbol": "P:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#1",
-      "renamedSymbol": "P:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#1",
+      "renamedSymbol": "P:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -920035,7 +920155,7 @@
     },
     {
       "symbol": "P:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#2",
-      "renamedSymbol": "P:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#2",
+      "renamedSymbol": "P:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -920046,7 +920166,7 @@
     },
     {
       "symbol": "P:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#3",
-      "renamedSymbol": "P:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#3",
+      "renamedSymbol": "P:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -920057,7 +920177,7 @@
     },
     {
       "symbol": "P:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#4",
-      "renamedSymbol": "P:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#4",
+      "renamedSymbol": "P:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -920068,7 +920188,7 @@
     },
     {
       "symbol": "P:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#5",
-      "renamedSymbol": "P:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#5",
+      "renamedSymbol": "P:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -920079,7 +920199,7 @@
     },
     {
       "symbol": "P:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V#6",
-      "renamedSymbol": "P:World.a(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#6",
+      "renamedSymbol": "P:World.updateSimulation(IZLMessageLog;[LPlayer;LMissionState;I[LPlayer;)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -920673,7 +920793,7 @@
     },
     {
       "symbol": "P:pe.a(Llta;BILsg;)V#0",
-      "renamedSymbol": "P:World.a(LCamera2D;BILShip;)V#0",
+      "renamedSymbol": "P:World.drawWorld(LCamera2D;BILShip;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -920684,7 +920804,7 @@
     },
     {
       "symbol": "P:pe.a(Llta;BILsg;)V#1",
-      "renamedSymbol": "P:World.a(LCamera2D;BILShip;)V#1",
+      "renamedSymbol": "P:World.drawWorld(LCamera2D;BILShip;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -920695,7 +920815,7 @@
     },
     {
       "symbol": "P:pe.a(Llta;BILsg;)V#2",
-      "renamedSymbol": "P:World.a(LCamera2D;BILShip;)V#2",
+      "renamedSymbol": "P:World.drawWorld(LCamera2D;BILShip;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -920706,7 +920826,7 @@
     },
     {
       "symbol": "P:pe.a(Llta;BILsg;)V#3",
-      "renamedSymbol": "P:World.a(LCamera2D;BILShip;)V#3",
+      "renamedSymbol": "P:World.drawWorld(LCamera2D;BILShip;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -920717,7 +920837,7 @@
     },
     {
       "symbol": "P:pe.a(Llta;ILlbb;)V#0",
-      "renamedSymbol": "P:World.a(LCamera2D;ILMissionState;)V#0",
+      "renamedSymbol": "P:World.drawArmageddonBounds(LCamera2D;ILMissionState;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -920728,7 +920848,7 @@
     },
     {
       "symbol": "P:pe.a(Llta;ILlbb;)V#1",
-      "renamedSymbol": "P:World.a(LCamera2D;ILMissionState;)V#1",
+      "renamedSymbol": "P:World.drawArmageddonBounds(LCamera2D;ILMissionState;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -920739,7 +920859,7 @@
     },
     {
       "symbol": "P:pe.a(Llta;ILlbb;)V#2",
-      "renamedSymbol": "P:World.a(LCamera2D;ILMissionState;)V#2",
+      "renamedSymbol": "P:World.drawArmageddonBounds(LCamera2D;ILMissionState;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -921080,7 +921200,7 @@
     },
     {
       "symbol": "P:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#0",
-      "renamedSymbol": "P:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#0",
+      "renamedSymbol": "P:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -921091,7 +921211,7 @@
     },
     {
       "symbol": "P:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#1",
-      "renamedSymbol": "P:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#1",
+      "renamedSymbol": "P:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -921102,7 +921222,7 @@
     },
     {
       "symbol": "P:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#2",
-      "renamedSymbol": "P:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#2",
+      "renamedSymbol": "P:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -921113,7 +921233,7 @@
     },
     {
       "symbol": "P:pe.a(Lnwa;I[Ltfa;[Lcrb;)V#3",
-      "renamedSymbol": "P:World.a(LMessageLog;I[LPlayer;[LAsteroid;)V#3",
+      "renamedSymbol": "P:World.processDestroyedEntities(LMessageLog;I[LPlayer;[LAsteroid;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -921905,7 +922025,7 @@
     },
     {
       "symbol": "P:pe.a(ZLlbb;BLlta;)V#0",
-      "renamedSymbol": "P:World.a(ZLMissionState;BLCamera2D;)V#0",
+      "renamedSymbol": "P:World.processArmageddon(ZLMissionState;BLCamera2D;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -921916,7 +922036,7 @@
     },
     {
       "symbol": "P:pe.a(ZLlbb;BLlta;)V#1",
-      "renamedSymbol": "P:World.a(ZLMissionState;BLCamera2D;)V#1",
+      "renamedSymbol": "P:World.processArmageddon(ZLMissionState;BLCamera2D;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -921927,7 +922047,7 @@
     },
     {
       "symbol": "P:pe.a(ZLlbb;BLlta;)V#2",
-      "renamedSymbol": "P:World.a(ZLMissionState;BLCamera2D;)V#2",
+      "renamedSymbol": "P:World.processArmageddon(ZLMissionState;BLCamera2D;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -921938,7 +922058,7 @@
     },
     {
       "symbol": "P:pe.a(ZLlbb;BLlta;)V#3",
-      "renamedSymbol": "P:World.a(ZLMissionState;BLCamera2D;)V#3",
+      "renamedSymbol": "P:World.processArmageddon(ZLMissionState;BLCamera2D;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -922136,7 +922256,7 @@
     },
     {
       "symbol": "P:pe.a([Ltfa;I[Ltfa;I)V#0",
-      "renamedSymbol": "P:World.a([LPlayer;I[LPlayer;I)V#0",
+      "renamedSymbol": "P:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -922147,7 +922267,7 @@
     },
     {
       "symbol": "P:pe.a([Ltfa;I[Ltfa;I)V#1",
-      "renamedSymbol": "P:World.a([LPlayer;I[LPlayer;I)V#1",
+      "renamedSymbol": "P:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -922158,7 +922278,7 @@
     },
     {
       "symbol": "P:pe.a([Ltfa;I[Ltfa;I)V#2",
-      "renamedSymbol": "P:World.a([LPlayer;I[LPlayer;I)V#2",
+      "renamedSymbol": "P:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -922169,7 +922289,7 @@
     },
     {
       "symbol": "P:pe.a([Ltfa;I[Ltfa;I)V#3",
-      "renamedSymbol": "P:World.a([LPlayer;I[LPlayer;I)V#3",
+      "renamedSymbol": "P:World.updateShipControlsAndRepairs([LPlayer;I[LPlayer;I)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -1082130,7 +1082250,7 @@
       "original": "bea.java",
       "renamed": "MissionBuilder.java",
       "inputSha256": "4431b55955aac3f6bb7d4cb6229c79039c1fcdae7dc6d5d0b314ef6af8a08ac6",
-      "outputSha256": "49efbab8d15eec6c959e1c9530f13c3ef3cbd51af19f6a7af8efaee818633237",
+      "outputSha256": "c7384ebde27b70ba291840bf75b5819c59840ae4695d3e24ff0ffe4b0eebb814",
       "edits": [
         {
           "start": 71,
@@ -1083146,6 +1083266,13 @@
           "symbol": "M:hob.a(Ljava/util/Random;II)I",
           "original": "a",
           "renamed": "randomBoundedInt"
+        },
+        {
+          "start": 13053,
+          "end": 13054,
+          "symbol": "M:pe.a(IIZI)Z",
+          "original": "a",
+          "renamed": "overlapsShipsOrSpawnPoints"
         },
         {
           "start": 13063,
@@ -1088752,6 +1088879,13 @@
           "symbol": "C:ksb",
           "original": "ksb",
           "renamed": "InvertTextureOperation"
+        },
+        {
+          "start": 88513,
+          "end": 88514,
+          "symbol": "M:pe.a(I)V",
+          "original": "a",
+          "renamed": "clearTerrainAroundEntities"
         },
         {
           "start": 88620,
@@ -1190246,7 +1190380,7 @@
       "original": "dla.java",
       "renamed": "MenuBackgroundBattle.java",
       "inputSha256": "a9a02e50d4593a954beb927922878dd093103773ae821bef0ff2b52b42f75fa0",
-      "outputSha256": "cf483e24507a56f1f790331de8baf6a3f4884e49607bca9d48a79fdc0a515475",
+      "outputSha256": "5c747e37b8da88cfd6840c651ac413960b1f58c3fd028456e0248a0493b0c1f1",
       "edits": [
         {
           "start": 71,
@@ -1190865,6 +1190999,13 @@
           "renamed": "world"
         },
         {
+          "start": 3803,
+          "end": 3804,
+          "symbol": "M:pe.a(Llta;BILsg;)V",
+          "original": "a",
+          "renamed": "drawWorld"
+        },
+        {
           "start": 3810,
           "end": 3817,
           "symbol": "F:dla.field_b:Llta;",
@@ -1191395,6 +1191536,13 @@
           "symbol": "F:dla.field_f:Lpe;",
           "original": "field_f",
           "renamed": "world"
+        },
+        {
+          "start": 6938,
+          "end": 6939,
+          "symbol": "M:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V",
+          "original": "a",
+          "renamed": "updateSimulation"
         },
         {
           "start": 6982,
@@ -1192394,7 +1192542,7 @@
       "original": "dm.java",
       "renamed": "MissileLauncherWeaponDefinition.java",
       "inputSha256": "f503c4f1c44d2b5cbebdd75610f3e1576619b018e680b18a517b8307c69b170e",
-      "outputSha256": "90c628aebf3f8f59beb09a6d77b62e2d84afc99f2674ff4748829ff05c0a6774",
+      "outputSha256": "fd987f3e15849ffcfd462eacca9319a2a0f97b3b7a15e4c226d5f2f464e1ec46",
       "edits": [
         {
           "start": 50,
@@ -1192467,11 +1192615,25 @@
           "renamed": "getProjectileType"
         },
         {
+          "start": 526,
+          "end": 527,
+          "symbol": "M:dm.a(IB)I",
+          "original": "a",
+          "renamed": "getArmageddonDurationTicks"
+        },
+        {
           "start": 594,
           "end": 596,
           "symbol": "C:dm",
           "original": "dm",
           "renamed": "MissileLauncherWeaponDefinition"
+        },
+        {
+          "start": 597,
+          "end": 598,
+          "symbol": "M:dm.a(IB)I",
+          "original": "a",
+          "renamed": "getArmageddonDurationTicks"
         },
         {
           "start": 666,
@@ -1456144,7 +1456306,7 @@
       "original": "ml.java",
       "renamed": "ShipComponent.java",
       "inputSha256": "a8775eb216133005871dcb13c91c7da089d1e5d742f112d5960f46d439a0e10a",
-      "outputSha256": "8231cd0a7903f42c84830ff494f0ae9bb405fd337af2d36fb79ab8152a061462",
+      "outputSha256": "4d065fd50f04953e06d7d8357632154a726bd4f191d57b83cbcca7926ab97da0",
       "edits": [
         {
           "start": 71,
@@ -1462200,6 +1462362,13 @@
           "symbol": "M:ml.i(B)Lwfb;",
           "original": "i",
           "renamed": "getDefinition"
+        },
+        {
+          "start": 63761,
+          "end": 63762,
+          "symbol": "M:pe.a(BLanb;Lml;Lwfb;)V",
+          "original": "a",
+          "renamed": "spawnComponentRadialProjectiles"
         },
         {
           "start": 63794,
@@ -1548121,7 +1548290,7 @@
       "original": "pe.java",
       "renamed": "World.java",
       "inputSha256": "0583ff6606280eda408377c71b228e41ba2d6f2eb2dc9d397a07e3401efb9164",
-      "outputSha256": "d155d96fb2d0c5d21f9f7fd7458bbe650f77f26fc054716f639e55386b98af33",
+      "outputSha256": "fa741854d42dd596183c9a1baabc44553e7cb1069d2fd8c9005351245013f34f",
       "edits": [
         {
           "start": 71,
@@ -1553192,6 +1553361,13 @@
           "renamed": "componentTypeId"
         },
         {
+          "start": 52155,
+          "end": 52156,
+          "symbol": "M:pe.a(IIIBII)Lnbb;",
+          "original": "a",
+          "renamed": "findNearestUndraggedDebrisOfType"
+        },
+        {
           "start": 52172,
           "end": 52179,
           "symbol": "F:imb.field_e:I",
@@ -1553225,6 +1553401,13 @@
           "symbol": "F:anb.field_k:Lml;",
           "original": "field_k",
           "renamed": "chassis"
+        },
+        {
+          "start": 52413,
+          "end": 52414,
+          "symbol": "M:pe.a(IIIBII)Lnbb;",
+          "original": "a",
+          "renamed": "findNearestUndraggedDebrisOfType"
         },
         {
           "start": 52430,
@@ -1553421,6 +1553604,13 @@
           "symbol": "M:qob.a(B)I",
           "original": "a",
           "renamed": "getY"
+        },
+        {
+          "start": 56351,
+          "end": 56352,
+          "symbol": "M:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V",
+          "original": "a",
+          "renamed": "updateSimulation"
         },
         {
           "start": 56381,
@@ -1553624,6 +1553814,13 @@
           "symbol": "M:aib.a(Z)V",
           "original": "a",
           "renamed": "selectForRevisionUpdates"
+        },
+        {
+          "start": 59420,
+          "end": 59421,
+          "symbol": "M:pe.a([Ltfa;I[Ltfa;I)V",
+          "original": "a",
+          "renamed": "updateShipControlsAndRepairs"
         },
         {
           "start": 59476,
@@ -1554025,11 +1554222,25 @@
           "renamed": "escapePods"
         },
         {
+          "start": 64505,
+          "end": 64506,
+          "symbol": "M:pe.a(ZLlbb;BLlta;)V",
+          "original": "a",
+          "renamed": "processArmageddon"
+        },
+        {
           "start": 64536,
           "end": 64539,
           "symbol": "C:lta",
           "original": "lta",
           "renamed": "Camera2D"
+        },
+        {
+          "start": 64618,
+          "end": 64619,
+          "symbol": "M:pe.a(II[Ltfa;Llbb;)V",
+          "original": "a",
+          "renamed": "updatePlayerRespawns"
         },
         {
           "start": 64689,
@@ -1554331,6 +1554542,13 @@
           "symbol": "C:rta",
           "original": "rta",
           "renamed": "GetMissileLauncherRandomness"
+        },
+        {
+          "start": 70285,
+          "end": 70286,
+          "symbol": "M:pe.a([Ltfa;I[Ltfa;I)V",
+          "original": "a",
+          "renamed": "updateShipControlsAndRepairs"
         },
         {
           "start": 70287,
@@ -1555978,6 +1556196,13 @@
           "renamed": "position"
         },
         {
+          "start": 89432,
+          "end": 89433,
+          "symbol": "M:pe.a(I)V",
+          "original": "a",
+          "renamed": "clearTerrainAroundEntities"
+        },
+        {
           "start": 89456,
           "end": 89458,
           "symbol": "C:sg",
@@ -1556041,6 +1556266,13 @@
           "renamed": "ships"
         },
         {
+          "start": 89903,
+          "end": 89904,
+          "symbol": "M:pe.a(IBII)V",
+          "original": "a",
+          "renamed": "clearTerrainCircle"
+        },
+        {
           "start": 89910,
           "end": 89911,
           "symbol": "M:anb.g(B)I",
@@ -1556081,6 +1556313,13 @@
           "symbol": "M:ij.d(I)Lksa;",
           "original": "d",
           "renamed": "first"
+        },
+        {
+          "start": 90098,
+          "end": 90099,
+          "symbol": "M:pe.a(IBII)V",
+          "original": "a",
+          "renamed": "clearTerrainCircle"
         },
         {
           "start": 90105,
@@ -1556132,6 +1556371,13 @@
           "renamed": "resNodes"
         },
         {
+          "start": 90449,
+          "end": 90450,
+          "symbol": "M:pe.a(IBII)V",
+          "original": "a",
+          "renamed": "clearTerrainCircle"
+        },
+        {
           "start": 90457,
           "end": 90464,
           "symbol": "F:rba.field_c:I",
@@ -1556165,6 +1556411,13 @@
           "symbol": "F:pe.field_t:[Lcq;",
           "original": "field_t",
           "renamed": "mapZones"
+        },
+        {
+          "start": 90788,
+          "end": 90789,
+          "symbol": "M:pe.a(IIIIB)V",
+          "original": "a",
+          "renamed": "clearTerrainRectangle"
         },
         {
           "start": 90796,
@@ -1559373,6 +1559626,13 @@
           "renamed": "next"
         },
         {
+          "start": 135244,
+          "end": 135245,
+          "symbol": "M:pe.a(IIZI)Z",
+          "original": "a",
+          "renamed": "overlapsShipsOrSpawnPoints"
+        },
+        {
           "start": 135308,
           "end": 135310,
           "symbol": "C:sg",
@@ -1560122,6 +1560382,13 @@
           "renamed": "configureThrusterBindings"
         },
         {
+          "start": 142004,
+          "end": 142005,
+          "symbol": "M:pe.a(BLanb;Lml;Lwfb;)V",
+          "original": "a",
+          "renamed": "spawnComponentRadialProjectiles"
+        },
+        {
           "start": 142186,
           "end": 142193,
           "symbol": "F:anb.field_k:Lml;",
@@ -1560148,6 +1560415,13 @@
           "symbol": "M:ml.a(BLanb;)V",
           "original": "a",
           "renamed": "configureThrusterBindings"
+        },
+        {
+          "start": 142333,
+          "end": 142334,
+          "symbol": "M:pe.a(BLanb;Lml;Lwfb;)V",
+          "original": "a",
+          "renamed": "spawnComponentRadialProjectiles"
         },
         {
           "start": 142442,
@@ -1562854,6 +1563128,13 @@
           "renamed": "x"
         },
         {
+          "start": 168644,
+          "end": 168645,
+          "symbol": "M:pe.a(II[Ltfa;Llbb;)V",
+          "original": "a",
+          "renamed": "updatePlayerRespawns"
+        },
+        {
           "start": 168670,
           "end": 168673,
           "symbol": "C:tfa",
@@ -1563286,6 +1563567,13 @@
           "symbol": "C:qa",
           "original": "qa",
           "renamed": "SetGrapplingHookCooldown"
+        },
+        {
+          "start": 173359,
+          "end": 173360,
+          "symbol": "M:pe.a(IIZIILsg;)V",
+          "original": "a",
+          "renamed": "spawnPlayerShip"
         },
         {
           "start": 173387,
@@ -1565127,6 +1565415,13 @@
           "symbol": "C:nbb",
           "original": "nbb",
           "renamed": "Debris"
+        },
+        {
+          "start": 196351,
+          "end": 196352,
+          "symbol": "M:pe.a(Llta;BILsg;)V",
+          "original": "a",
+          "renamed": "drawWorld"
         },
         {
           "start": 196353,
@@ -1567567,6 +1567862,13 @@
           "renamed": "initialize"
         },
         {
+          "start": 221421,
+          "end": 221422,
+          "symbol": "M:pe.a(Llta;ILlbb;)V",
+          "original": "a",
+          "renamed": "drawArmageddonBounds"
+        },
+        {
           "start": 221423,
           "end": 221426,
           "symbol": "C:lta",
@@ -1567579,6 +1567881,13 @@
           "symbol": "C:lbb",
           "original": "lbb",
           "renamed": "MissionState"
+        },
+        {
+          "start": 221892,
+          "end": 221893,
+          "symbol": "M:pe.a(ZLlbb;BLlta;)V",
+          "original": "a",
+          "renamed": "processArmageddon"
         },
         {
           "start": 221979,
@@ -1570570,6 +1570879,13 @@
           "renamed": "Debris"
         },
         {
+          "start": 261278,
+          "end": 261279,
+          "symbol": "M:pe.a(IIIBII)Lnbb;",
+          "original": "a",
+          "renamed": "findNearestUndraggedDebrisOfType"
+        },
+        {
           "start": 261443,
           "end": 261446,
           "symbol": "C:nbb",
@@ -1570955,6 +1571271,13 @@
           "renamed": "ToolkitRasterState"
         },
         {
+          "start": 264854,
+          "end": 264855,
+          "symbol": "M:pe.a(Lnwa;I[Ltfa;[Lcrb;)V",
+          "original": "a",
+          "renamed": "processDestroyedEntities"
+        },
+        {
           "start": 265731,
           "end": 265734,
           "symbol": "C:rta",
@@ -1570974,6 +1571297,13 @@
           "symbol": "M:pe.c(Z)Lij;",
           "original": "c",
           "renamed": "getProjectiles"
+        },
+        {
+          "start": 265948,
+          "end": 265949,
+          "symbol": "M:pe.a(I)V",
+          "original": "a",
+          "renamed": "clearTerrainAroundEntities"
         },
         {
           "start": 265986,
@@ -1571240,6 +1571570,13 @@
           "symbol": "F:pe.field_t:[Lcq;",
           "original": "field_t",
           "renamed": "mapZones"
+        },
+        {
+          "start": 269870,
+          "end": 269871,
+          "symbol": "M:pe.a(ZLlbb;BLlta;)V",
+          "original": "a",
+          "renamed": "processArmageddon"
         },
         {
           "start": 269880,
@@ -1571599,6 +1571936,13 @@
           "renamed": "GetMissileLauncherRandomness"
         },
         {
+          "start": 276036,
+          "end": 276037,
+          "symbol": "M:pe.a(ZLlbb;BLlta;)V",
+          "original": "a",
+          "renamed": "processArmageddon"
+        },
+        {
           "start": 276054,
           "end": 276057,
           "symbol": "C:lbb",
@@ -1571758,6 +1572102,13 @@
           "symbol": "C:dm",
           "original": "dm",
           "renamed": "MissileLauncherWeaponDefinition"
+        },
+        {
+          "start": 277887,
+          "end": 277888,
+          "symbol": "M:dm.a(IB)I",
+          "original": "a",
+          "renamed": "getArmageddonDurationTicks"
         },
         {
           "start": 277894,
@@ -1572024,6 +1572375,13 @@
           "symbol": "C:rta",
           "original": "rta",
           "renamed": "GetMissileLauncherRandomness"
+        },
+        {
+          "start": 283153,
+          "end": 283154,
+          "symbol": "M:pe.a(Lnwa;I[Ltfa;[Lcrb;)V",
+          "original": "a",
+          "renamed": "processDestroyedEntities"
         },
         {
           "start": 283155,
@@ -1572570,6 +1572928,13 @@
           "symbol": "C:rta",
           "original": "rta",
           "renamed": "GetMissileLauncherRandomness"
+        },
+        {
+          "start": 290636,
+          "end": 290637,
+          "symbol": "M:pe.a(IIZIILsg;)V",
+          "original": "a",
+          "renamed": "spawnPlayerShip"
         },
         {
           "start": 290702,
@@ -1575666,6 +1576031,13 @@
           "renamed": "captureTimer"
         },
         {
+          "start": 329653,
+          "end": 329654,
+          "symbol": "M:pe.a(BLanb;Lml;Lwfb;)V",
+          "original": "a",
+          "renamed": "spawnComponentRadialProjectiles"
+        },
+        {
           "start": 329668,
           "end": 329671,
           "symbol": "C:anb",
@@ -1577129,6 +1577501,13 @@
           "renamed": "GetMissileLauncherRandomness"
         },
         {
+          "start": 349733,
+          "end": 349734,
+          "symbol": "M:pe.a(IBII)V",
+          "original": "a",
+          "renamed": "clearTerrainCircle"
+        },
+        {
           "start": 349816,
           "end": 349819,
           "symbol": "C:crb",
@@ -1578135,6 +1578514,13 @@
           "symbol": "C:rta",
           "original": "rta",
           "renamed": "GetMissileLauncherRandomness"
+        },
+        {
+          "start": 365345,
+          "end": 365346,
+          "symbol": "M:pe.a(IIIIB)V",
+          "original": "a",
+          "renamed": "clearTerrainRectangle"
         },
         {
           "start": 365476,
@@ -1676258,7 +1676644,7 @@
       "original": "rsb.java",
       "renamed": "GameSnapshot.java",
       "inputSha256": "b7276f2329d2ea687005a14c69dfe2c9b1af9dcbf6c902d4a4ee805302fb68f0",
-      "outputSha256": "20333ca7708c81b93a8799bbf7aa9a62ef4f812b56d2006b29fffdf3e5d0dfa6",
+      "outputSha256": "4fa773cf61559f8b4dabd5cdc5ce36d9b2e7cab677b06b17c5fd896d9779c0c2",
       "edits": [
         {
           "start": 50,
@@ -1677855,6 +1678241,13 @@
           "symbol": "F:rsb.field_g:Lpe;",
           "original": "field_g",
           "renamed": "world"
+        },
+        {
+          "start": 13258,
+          "end": 13259,
+          "symbol": "M:pe.a(IZLnwa;[Ltfa;Llbb;I[Ltfa;)V",
+          "original": "a",
+          "renamed": "updateSimulation"
         },
         {
           "start": 13285,
@@ -1759385,7 +1759778,7 @@
       "original": "uca.java",
       "renamed": "GameSession.java",
       "inputSha256": "6411540835dfa3b22b2bd717fb0fa6399b771ecbf519ebf16dcb3d8f7f24035c",
-      "outputSha256": "cdb4ebbd3a6243cca50bfeaf700a87b59621449775dc1d1e55d3351242a59d8e",
+      "outputSha256": "1bc856d28ca9aafeb4416859472970971b7b5e0007d300c17c6e6e264fa412a9",
       "edits": [
         {
           "start": 71,
@@ -1764166,6 +1764559,13 @@
           "renamed": "world"
         },
         {
+          "start": 38953,
+          "end": 38954,
+          "symbol": "M:pe.a(Llta;BILsg;)V",
+          "original": "a",
+          "renamed": "drawWorld"
+        },
+        {
           "start": 38955,
           "end": 38958,
           "symbol": "C:eoa",
@@ -1764185,6 +1764585,13 @@
           "symbol": "F:rsb.field_g:Lpe;",
           "original": "field_g",
           "renamed": "world"
+        },
+        {
+          "start": 39032,
+          "end": 39033,
+          "symbol": "M:pe.a(Llta;ILlbb;)V",
+          "original": "a",
+          "renamed": "drawArmageddonBounds"
         },
         {
           "start": 39034,
@@ -1771367,6 +1771774,13 @@
           "symbol": "F:rsb.field_g:Lpe;",
           "original": "field_g",
           "renamed": "world"
+        },
+        {
+          "start": 137178,
+          "end": 137179,
+          "symbol": "M:pe.a(I)V",
+          "original": "a",
+          "renamed": "clearTerrainAroundEntities"
         },
         {
           "start": 137257,
@@ -1790325,6 +1790739,13 @@
           "symbol": "F:rsb.field_g:Lpe;",
           "original": "field_g",
           "renamed": "world"
+        },
+        {
+          "start": 337322,
+          "end": 337323,
+          "symbol": "M:pe.a(I)V",
+          "original": "a",
+          "renamed": "clearTerrainAroundEntities"
         },
         {
           "start": 337818,
@@ -1882980,10 +1883401,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/voidhunters"
     },
-    "rulesSha256": "8b7503c879184de352ff5a78940104c91982ea28bde7e98079e0e986e3bd932a",
+    "rulesSha256": "ad3dc8d930107825d6c0f99c267af4f15bfd1e7da1c450956be92cc065488d50",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "edb5cead5405f544aad442e989958b12eb4352744ef4e2311bc767342c35118c",
-    "outputTreeSha256": "4a782e1cb3ac511da1b2e1e932c3029b66bf1d808bd437705a25f93581b0b0f3",
+    "outputTreeSha256": "776f534773455bf0bb5d01ea79ae183790e2bf16357aad69309d46b236ead335",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

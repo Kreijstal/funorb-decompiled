@@ -114,7 +114,7 @@ final class MenuBackgroundBattle {
         this.camera.screenOriginX = GetBombletSprayEnergyUsed.field_p.width / 2;
         this.camera.updateWorldBounds(GetBombletSprayEnergyUsed.field_p.height, 0, -72, GetBombletSprayEnergyUsed.field_p.width, 0);
         PlayerAction.a(this.world, this.camera, false, (byte) -59);
-        this.world.a(this.camera, (byte) 85, this.tick, (Ship) null);
+        this.world.drawWorld(this.camera, (byte) 85, this.tick, (Ship) null);
         var5 = this.camera.screenToWorldX(true, GetUseDetailLines.field_o);
         var6 = this.camera.screenToWorldY(0, GetTorpedoReload.field_q);
         if (param0 && (GetUseDetailLines.field_o != -1 ||
@@ -192,7 +192,7 @@ final class MenuBackgroundBattle {
         var16 = new Player[]{};
         var3 = new MissionState();
         var4 = new MessageLog();
-        this.world.a(1799937864, true, var4, var16, var3, this.tick, var16);
+        this.world.updateSimulation(1799937864, true, var4, var16, var3, this.tick, var16);
         this.tick = this.tick + 1;
         if (this.world.countTeamShips(0, param0 - 13766) == 0 ||
           this.world.countTeamShips(1, -13766) == 0) {

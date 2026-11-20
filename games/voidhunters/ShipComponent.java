@@ -1524,7 +1524,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                 if (param2) {
                   var8 = var6.getDefinition((byte) -112).field_y;
                   if (var8 > 0) {
-                    param0.a((byte) -44, param3, var6, var6.getDefinition((byte) -112));
+                    param0.spawnComponentRadialProjectiles((byte) -44, param3, var6, var6.getDefinition((byte) -112));
                   }
                 }
                 var6.detachFromBody(param0, -19625, param3);

@@ -1045,8 +1045,8 @@ final class GameSession {
           ((World) (Object) stackIn_58_0).a(stackIn_58_1, stackIn_58_2, stackIn_59_3, ShipTeamConditionFactory.field_a, (byte) 19, (Ship) (var9), SetMinimapWidth.field_o, var16, var13);
         }
         var13Lifetime1 = this.state.carouselInfo.tick;
-        var24.world.a(ShipTeamConditionFactory.field_a, (byte) 122, var13Lifetime1, (Ship) (var9));
-        var24.world.a(ShipTeamConditionFactory.field_a, -950, var24.missionState);
+        var24.world.drawWorld(ShipTeamConditionFactory.field_a, (byte) 122, var13Lifetime1, (Ship) (var9));
+        var24.world.drawArmageddonBounds(ShipTeamConditionFactory.field_a, -950, var24.missionState);
         if (var9 != null &&
           GetPointDefenceLaserProjectileInterceptDamage.field_o) {
           this.drawShipHeadingArrow((byte) -95, (Ship) (var9));
@@ -3551,7 +3551,7 @@ final class GameSession {
               var22 = MenuInputState.createShipFromComponentWords(var28, (byte) 27);
               var22.setOwner(0, -117);
               this.state.b(1).world.addShip(var22, (byte) 124);
-              this.state.b(1).world.a(0);
+              this.state.b(1).world.clearTerrainAroundEntities(0);
             }
           }
           if (this.field_x) {
@@ -8823,7 +8823,7 @@ final class GameSession {
           if (var8 != null) {
             ((Ship) (var8)).setOwner(0, 114);
             this.state.b(1).world.addShip((Ship) (var8), (byte) 113);
-            this.state.b(1).world.a(0);
+            this.state.b(1).world.clearTerrainAroundEntities(0);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

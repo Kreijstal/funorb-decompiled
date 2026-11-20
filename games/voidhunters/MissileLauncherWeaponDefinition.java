@@ -24,9 +24,9 @@ final class MissileLauncherWeaponDefinition extends WeaponDefinition {
         return 6;
     }
 
-    final static int a(int param0, byte param1) {
+    final static int getArmageddonDurationTicks(int param0, byte param1) {
         if (param1 != -78) {
-          MissileLauncherWeaponDefinition.a(-119, (byte) -85);
+          MissileLauncherWeaponDefinition.getArmageddonDurationTicks(-119, (byte) -85);
           if (param0 == 3) {
             return Particle.field_l * SetVariableActionFactory.field_a;
           }
