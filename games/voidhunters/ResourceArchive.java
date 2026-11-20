@@ -538,7 +538,7 @@ final class ResourceArchive {
               TickClock.field_b = true;
               if (var16Lifetime1 == 0 &&
                 var9 >= 0 &&
-                null != ncb.field_a && (!param2 ||
+                null != LobbyOptionCompatibilityRules.optionCombinations && (!param2 ||
                 !ArchiveTextureProvider.field_h)) {
                 GetMissionVotes.field_p = false;
                 TickClock.field_b = false;

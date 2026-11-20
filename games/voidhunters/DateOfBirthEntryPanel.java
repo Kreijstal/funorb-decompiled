@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class pia extends UiArrayContainer implements UiActionListener {
-    private DateOfBirthTextFields field_v;
-    private UiFocusableComponent field_w;
+final class DateOfBirthEntryPanel extends UiArrayContainer implements UiActionListener {
+    private DateOfBirthTextFields dateFields;
+    private UiFocusableComponent continueButton;
     static GpuProjectionMode field_x;
 
     public static void clearSharedReferences(int param0) {
@@ -14,8 +14,8 @@ final class pia extends UiArrayContainer implements UiActionListener {
     final void layoutChildren(int param0) {
         int var2 = 250;
         if (param0 == 16777215) {
-          this.field_v.setBounds(-var2 + this.width >> 1, 140, 25, param0 - 16777214, this.height + 20 - 25 >> 1);
-          this.field_w.setBounds((-var2 + this.width >> 1) + 150, 100, 30, 1, (20 + (this.height - 30) >> 1) + 2);
+          this.dateFields.setBounds(-var2 + this.width >> 1, 140, 25, param0 - 16777214, this.height + 20 - 25 >> 1);
+          this.continueButton.setBounds((-var2 + this.width >> 1) + 150, 100, 30, 1, (20 + (this.height - 30) >> 1) + 2);
           return;
         }
     }
@@ -23,19 +23,19 @@ final class pia extends UiArrayContainer implements UiActionListener {
     final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         try {
           super.updatePointer(param0, param1, param2, param3);
-          this.field_w.enabled = this.field_v.getValidator(param2 ^ 782443887).getValidationState((byte) 35) == GetShipPersistence.validInput ? true : false;
+          this.continueButton.enabled = this.dateFields.getValidator(param2 ^ 782443887).getValidationState((byte) 35) == GetShipPersistence.validInput ? true : false;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pia.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
     }
 
-    pia(int param0, int param1, int param2, int param3) {
+    DateOfBirthEntryPanel(int param0, int param1, int param2, int param3) {
         super(param0, param1, param2, param3, (UiRenderer) null);
-        this.field_v = new DateOfBirthTextFields(new GradientBorderTextStyle(10000536), SetMissilesHitSourceTeam.field_p, 0, 0, 140, 25);
-        this.field_v.setValidator(99, new DateOfBirthValidator());
-        this.field_w = new UiFocusableComponent(tn.field_b, (UiListener) (this));
-        this.children = new UiComponent[]{(UiComponent) ((Object) this.field_v), (UiComponent) ((Object) this.field_w)};
-        this.field_w.renderer = (UiRenderer) ((Object) new ThreeSliceButtonStyle());
+        this.dateFields = new DateOfBirthTextFields(new GradientBorderTextStyle(10000536), SetMissilesHitSourceTeam.field_p, 0, 0, 140, 25);
+        this.dateFields.setValidator(99, new DateOfBirthValidator());
+        this.continueButton = new UiFocusableComponent(tn.field_b, (UiListener) (this));
+        this.children = new UiComponent[]{(UiComponent) ((Object) this.dateFields), (UiComponent) ((Object) this.continueButton)};
+        this.continueButton.renderer = (UiRenderer) ((Object) new ThreeSliceButtonStyle());
         this.refreshLayout(false);
     }
 
@@ -50,13 +50,13 @@ final class pia extends UiArrayContainer implements UiActionListener {
 
     public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         if (param0 != 11) {
-          this.field_v = (DateOfBirthTextFields) null;
+          this.dateFields = (DateOfBirthTextFields) null;
         }
-        if (this.field_v.getValidator(param0 ^ -782444209).getValidationState((byte) 35) != GetShipPersistence.validInput) {
+        if (this.dateFields.getValidator(param0 ^ -782444209).getValidationState((byte) 35) != GetShipPersistence.validInput) {
           return;
         }
         try {
-          SetArmageddonWarning.b(0, this.field_v.getDayOfMonth(-5), this.field_v.getMonthIndex(true), this.field_v.getYear(3476));
+          SetArmageddonWarning.b(0, this.dateFields.getDayOfMonth(-5), this.dateFields.getMonthIndex(true), this.dateFields.getYear(3476));
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pia.Q(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }

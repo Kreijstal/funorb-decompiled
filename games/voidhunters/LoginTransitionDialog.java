@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ud extends ContentTransitionDialog {
+final class LoginTransitionDialog extends ContentTransitionDialog {
     static String field_R;
 
-    ud(ModalStack param0, UiComponent param1) {
+    LoginTransitionDialog(ModalStack param0, UiComponent param1) {
         super(param0, param1, 33, 20, 30);
     }
 

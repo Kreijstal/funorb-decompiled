@@ -68,7 +68,7 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlMaterialEffect {
             SetResourceNodeCaptureTime.field_p = param6;
             GrapplingHook.field_x = param0;
             SetDebrisCarryOverPercentage.field_p = param1;
-            cjb.field_b = null;
+            GuestPlayText.field_b = null;
             GetTabForScores.field_o = param5;
             AdjustVariableAction.field_a = param3;
           }

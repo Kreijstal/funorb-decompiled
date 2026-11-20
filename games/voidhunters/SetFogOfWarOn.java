@@ -115,14 +115,14 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_autozoom_speed_divide(" + SetMassDriverProjectileDamage.field_o + ")");
         System.out.println("set_autozoom_amount_multiply(" + PerlinNoiseTextureOperation.field_n + ")");
         System.out.println("set_nebula_proximity_fade_downshift(" + SetAutoDetail.field_o + ")");
-        System.out.println("set_use_trails(" + veb.field_b + ")");
+        System.out.println("set_use_trails(" + BlueprintEditorText.field_b + ")");
         System.out.println("set_fighter_vision(" + MatchingFieldValidator.field_k + ")");
         System.out.println("set_ship_to_ship_ram_damage(" + ToolkitCanvasContext.field_d + ")");
         System.out.println("set_team_selection_speedup(" + ColorRowCacheEntry.field_f + ")");
         System.out.println("set_full_mission_set(" + GetAutoaim.field_o + ")");
         System.out.println("set_wait_for_players(" + GetSpinningBladeAimspeed.field_p + ")");
         System.out.println("set_keep_team_colours(" + SetMachineGunAimspeed.field_o + ")");
-        System.out.println("set_debris_collision(" + gl.field_d + ")");
+        System.out.println("set_debris_collision(" + CommonArchiveId.field_d + ")");
         System.out.println("set_debris_partitioned(" + TimingGraph.field_b + ")");
         System.out.println("set_debris_collision_damage(" + GetTeamSelectionSpeedup.field_p + ")");
         System.out.println("set_debris_projectile_collision(" + QuickChatPhraseLoader.field_d + ")");
@@ -202,7 +202,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_torpedo_projectiles(" + GetLagStandardDeviationIn.field_p + ")");
         System.out.println("set_sniper_cannon_projectiles(" + fj.field_b + ")");
         System.out.println("set_missile_launcher_projectiles(" + GetPlayerRepairAmount.field_o + ")");
-        System.out.println("set_point_defence_laser_projectiles(" + qh.field_J + ")");
+        System.out.println("set_point_defence_laser_projectiles(" + FullscreenMembershipDialog.field_J + ")");
         System.out.println("set_countermeasure_launcher_projectiles(" + RenderResourceNode.field_k + ")");
         System.out.println("set_mass_driver_projectile_life(" + Particle.field_x + ")");
         System.out.println("set_torpedo_projectile_life(" + SetGrapplingHookRopeChangeRate.field_o + ")");
@@ -265,7 +265,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_bomblet_spray_projectile_damage(" + GetMissionTerrainAsteroidProbability.field_o + ")");
         System.out.println("set_explosion_projectile_damage(" + pea.field_a + ")");
         System.out.println("set_point_defence_laser_projectile_damage(" + GetAngularForceDownshift.field_q + ")");
-        System.out.println("set_point_defence_laser_projectile_intercept_damage(" + ooa.field_xb + ")");
+        System.out.println("set_point_defence_laser_projectile_intercept_damage(" + TabbedWidget.field_xb + ")");
         System.out.println("set_mass_driver_projectile_ondamage_particles(" + LruNodeCache.field_e + ")");
         System.out.println("set_torpedo_projectile_ondamage_particles(" + UiSingleChildContainer.field_u + ")");
         System.out.println("set_phased_energy_beam_projectile_ondamage_particles(" + pea.field_b + ")");
@@ -285,7 +285,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_point_defence_laser_energy_used(" + GetMissionResnetResourceTickTime.field_o + ")");
         System.out.println("set_torpedo_acceleration(" + SetShieldsDirectionalRadius.field_o + ")");
         System.out.println("set_thruster_force(" + CarouselSystemEvent.field_b + ")");
-        System.out.println("set_thruster_booster_force(" + enb.field_c + ")");
+        System.out.println("set_thruster_booster_force(" + AssassinationObjectiveText.field_c + ")");
         System.out.println("set_thruster_small_force(" + ConsoleCommandRegistry.field_a + ")");
         System.out.println("set_velocity_sustain(" + OpenGlShaderProgram.field_a + ")");
         System.out.println("set_velocity_sustain_max(" + SetMissilesCooldown.field_o + ")");
@@ -294,7 +294,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_thruster_particle_life(" + TextureCombineSource.field_a + ")");
         System.out.println("set_angular_force_downshift(" + EmailAvailabilityCheck.field_c + ")");
         System.out.println("set_angular_velocity_sustain_max(" + SetMassDriverEnergyUsed.field_o + ")");
-        System.out.println("set_torque_downshift(" + tua.field_a + ")");
+        System.out.println("set_torque_downshift(" + ReturnToLobbyText.field_a + ")");
         System.out.println("set_moment_of_inertia_predivide_downshift(" + GameMenuScreen.field_e + ")");
         System.out.println("set_moment_of_inertia_perpoint_calc_downshift(" + SetRepairModePower.field_r + ")");
         System.out.println("set_spinning_blade_top_speed(" + SetFps.field_p + ")");

@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tua {
+final class ReturnToLobbyText {
     static int field_a;
-    static String field_b;
+    static String returnToLobbyText;
     private static String field_z;
 
     public static void clearSharedReferences(int param0) {
-        field_b = null;
+        returnToLobbyText = null;
         if (param0 < 68) {
           field_a = 120;
         }
@@ -16,6 +16,6 @@ final class tua {
     static {
         field_z = "tua.A(";
         field_a = 4;
-        field_b = "Return to lobby";
+        returnToLobbyText = "Return to lobby";
     }
 }

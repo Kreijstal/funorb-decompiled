@@ -50,7 +50,7 @@ final class GetAiRepairAmount extends ConsoleCommand {
         if (param0 != 0) {
           return (ResourceArchive) null;
         }
-        return SetBlueprintSaveTime.a(SetBombletSprayReload.field_o.field_a, 11835);
+        return SetBlueprintSaveTime.a(SetBombletSprayReload.field_o.id, 11835);
     }
 
     GetAiRepairAmount(String param0, Class[] param1, String param2) {

@@ -132,7 +132,7 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
             FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "QC2", 0);
             return;
           }
-          jka.a(var4, (byte) -111);
+          QuickChatHelpEntrySetup.configureHelpEntry(var4, (byte) -111);
           var12 = (BitmapFont) null;
           ScrollableActionPanel.field_Ab = PasswordValidator.a(65793, 4020342, 10204, (BitmapFont) null, 1513239, 8947848, 1513239, 5138823, 65793, 1127256, 0, 65793, 2245737);
           DebrisFactory.field_a = PasswordValidator.a(0, 0, param0 ^ -10239, param2, 0, 0, 0, 0, 0, 0, 16764006, 0, 0);

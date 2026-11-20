@@ -1,36 +1,36 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dj {
-    private String field_b;
-    private boolean field_c;
-    static String field_a;
+final class AccountRequestText {
+    private String text;
+    private boolean includeInEncryptedPayload;
+    static String confirmEmailTooltip;
 
-    dj(String param0) {
+    AccountRequestText(String param0) {
         this(param0, false);
     }
 
     public static void clearSharedReferences(byte param0) {
-        field_a = null;
+        confirmEmailTooltip = null;
         int var1 = -35 / ((param0 - 60) / 53);
     }
 
-    final String b(byte param0) {
+    final String getText(byte param0) {
         if (param0 < 40) {
-          this.field_c = false;
-          return this.field_b;
+          this.includeInEncryptedPayload = false;
+          return this.text;
         }
-        return this.field_b;
+        return this.text;
     }
 
-    final boolean a(boolean param0) {
+    final boolean shouldIncludeInEncryptedPayload(boolean param0) {
         if (!param0) {
           return true;
         }
-        return this.field_c;
+        return this.includeInEncryptedPayload;
     }
 
-    dj(String param0, boolean param1) {
+    AccountRequestText(String param0, boolean param1) {
         RuntimeException var3 = null;
         boolean stackIn_6_1 = false;
         RuntimeException stackIn_12_0 = null;
@@ -38,16 +38,16 @@ final class dj {
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_b = param0;
-          if (null == this.field_b) {
-            this.field_b = "";
+          this.text = param0;
+          if (null == this.text) {
+            this.text = "";
           }
           stackIn_6_1 = (param1);
-          this.field_c = stackIn_6_1;
-          if (this.field_b.length() != 0) {
+          this.includeInEncryptedPayload = stackIn_6_1;
+          if (this.text.length() != 0) {
             return;
           }
-          this.field_c = false;
+          this.includeInEncryptedPayload = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -64,6 +64,6 @@ final class dj {
     }
 
     static {
-        field_a = "Type your email address again to make sure it's correct";
+        confirmEmailTooltip = "Type your email address again to make sure it's correct";
     }
 }

@@ -215,13 +215,13 @@ final class ColorKeyScaleTextureOperation extends TextureOperation {
             }
             GetMachineGunAimarc.field_p = false;
           }
-          if (!enb.field_b) {
+          if (!AssassinationObjectiveText.field_b) {
             return;
           }
           FloatNoiseSliceGenerator.closeTransientMenusAndDialogs((byte) 95);
           SetGrapplingHooksDamageableBySourcePlayer.a(15);
           SoftwareSprite2D.a(114);
-          enb.field_b = false;
+          AssassinationObjectiveText.field_b = false;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

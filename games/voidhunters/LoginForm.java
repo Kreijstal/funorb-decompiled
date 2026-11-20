@@ -206,7 +206,7 @@ final class LoginForm extends UiContainer implements UiTextFieldListener, UiActi
             if (this.showGuestOption) {
               stackIn_18_1 = null;
               stackIn_18_2 = null;
-              stackIn_18_3 = cjb.field_a;
+              stackIn_18_3 = GuestPlayText.justPlayText;
             } else {
               stackIn_18_1 = null;
               stackIn_18_2 = null;

@@ -27,10 +27,10 @@ final class SetMassDriverReload extends ConsoleCommand {
           ShipComponentFactory.field_a = true;
           var1 = SetThrusterBindingMoveAndTurnHasOppositeMove.e((byte) 106);
           GetUseDetailLines.field_o = PlayerGameData.field_b;
-          GetTorpedoReload.field_q = uia.field_b;
+          GetTorpedoReload.field_q = OpenGlFaceAttachment.field_b;
           SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) ((Object) var1), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
           SetTorpedoProjectiles.field_o.setCursorVisible((java.awt.Component) ((Object) var1), false, (byte) -106);
-          uia.field_b = GetComponentBreakingExplosionForceMultiplier.field_p;
+          OpenGlFaceAttachment.field_b = GetComponentBreakingExplosionForceMultiplier.field_p;
           PlayerGameData.field_b = CarouselEvent.field_h;
         }
         if (param0 == 6045) {

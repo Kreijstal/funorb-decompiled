@@ -147,7 +147,7 @@ final class ScrollPaneWidget extends Widget {
               TickClock.field_b = true;
               GetShipToShipRamDamage.field_q.enabled = true;
               SetAutozoomSpeedDivide.field_p.text = UiComboBox.field_D;
-              if (ncb.field_a != null) {
+              if (LobbyOptionCompatibilityRules.optionCombinations != null) {
                 if (null == UsernameAvailabilityValidator.field_i) {
                   AudioPump.field_a = new boolean[PasswordValidator.field_l];
                   UsernameAvailabilityValidator.field_i = new byte[PasswordValidator.field_l];
@@ -232,7 +232,7 @@ final class ScrollPaneWidget extends Widget {
           stackIn_83_0 = SetUseCircleFill.field_o;
           stackIn_84_1 = (param0) && (!param2) && (GetTorpedoProjectileDamage.field_o);
           ((Widget) (Object) stackIn_83_0).updateInput(stackIn_84_1, 1332);
-          GetReverbWidth.field_o.tabs.i(10000);
+          GetReverbWidth.field_o.tabs.updateSelectedTab(10000);
           if (SetThrusterParticleSpeedDownshift.field_o != null) {
             if (GetShipToShipRamDamage.field_q.field_o != 0) {
               LegacyOpenGlShader.a(false, param3);

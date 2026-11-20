@@ -73,7 +73,7 @@ final class EmailAvailabilityValidator extends TextFieldValidator {
             return stackIn_3_0;
           }
           if (this.validateValue(param0, 16384) == SetArmageddonLength.invalidInput) {
-            stackIn_7_0 = qh.field_N;
+            stackIn_7_0 = FullscreenMembershipDialog.field_N;
             return stackIn_7_0;
           }
           if (param1 != -1) {

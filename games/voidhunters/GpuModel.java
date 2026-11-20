@@ -402,7 +402,7 @@ final class GpuModel extends Model3D {
           var12Lifetime2 = 3 * this.field_v;
           this.field_e = new short[this.field_v];
           this.field_A = new short[var12Lifetime2];
-          bsb.field_b = new long[var12Lifetime2];
+          GpuVertexKeyBuffer.renderVertexKeys = new long[var12Lifetime2];
           this.field_x = new short[var12Lifetime2];
           this.field_y = new float[var12Lifetime2];
           this.field_F = new short[var12Lifetime2];
@@ -829,7 +829,7 @@ final class GpuModel extends Model3D {
             var16Lifetime4++;
             this.field_g[var16Lifetime4] = this.field_Q;
           }
-          bsb.field_b = null;
+          GpuVertexKeyBuffer.renderVertexKeys = null;
           this.field_A = GetDebrisCarryOverPercentage.a(this.field_L, this.field_A, (byte) 53);
           this.field_J = GetDebrisCarryOverPercentage.a(this.field_L, this.field_J, (byte) 108);
           this.field_F = GetDebrisCarryOverPercentage.a(this.field_L, this.field_F, (byte) 69);
@@ -935,7 +935,7 @@ final class GpuModel extends Model3D {
           while (var16 < var14) {
             var17 = this.field_f[var16];
             if (var17 != 0) {
-              if (param8 == bsb.field_b[var16]) {
+              if (param8 == GpuVertexKeyBuffer.renderVertexKeys[var16]) {
                 stackIn_11_0 = (short)(-1 + var17);
                 return stackIn_11_0;
               }
@@ -946,7 +946,7 @@ final class GpuModel extends Model3D {
             break;
           }
           this.field_f[var15] = (short)(this.field_L + 1);
-          bsb.field_b[var15] = param8;
+          GpuVertexKeyBuffer.renderVertexKeys[var15] = param8;
           this.field_J[this.field_L] = (short)param1;
           this.field_A[this.field_L] = (short)param2;
           this.field_F[this.field_L] = (short)param9;

@@ -254,7 +254,7 @@ final class AccountCreationForm extends UiContainer implements UiHotspotListener
         this.cancelButton = new UiFocusableComponent(SetTorpedoReload.field_p, (UiListener) null);
         this.usernameField.tooltip = FractalNoiseVolumeGenerator.field_m;
         this.emailField.tooltip = GetPointDefenceLaserProjectileInterceptDamage.field_s;
-        this.emailConfirmationField.tooltip = dj.field_a;
+        this.emailConfirmationField.tooltip = AccountRequestText.confirmEmailTooltip;
         this.passwordField.tooltip = UiScrollPane.field_x;
         this.passwordConfirmationField.tooltip = SetAngularForceDownshift.field_p;
         this.ageField.tooltip = HashNoiseTextureOperation.field_j;

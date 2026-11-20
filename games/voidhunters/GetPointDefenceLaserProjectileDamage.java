@@ -47,7 +47,7 @@ final class GetPointDefenceLaserProjectileDamage extends ConsoleCommand {
     final static void f(byte param0) {
         GetSniperCannonEnergyUsed.reportReasonLabels = new String[SetFightersPerPlayerMaximum.field_o];
         GetSniperCannonEnergyUsed.reportReasonLabels[5] = GetMachineGunAimspeed.field_q;
-        GetSniperCannonEnergyUsed.reportReasonLabels[21] = bda.field_a;
+        GetSniperCannonEnergyUsed.reportReasonLabels[21] = LawViolationReportText.lawViolationText;
         GetSniperCannonEnergyUsed.reportReasonLabels[15] = AccountCreationForm.field_G;
         GetSniperCannonEnergyUsed.reportReasonLabels[17] = SetBots.field_p;
         GetSniperCannonEnergyUsed.reportReasonLabels[9] = MatchingFieldValidator.field_j;

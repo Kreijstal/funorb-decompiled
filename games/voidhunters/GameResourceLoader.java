@@ -25,7 +25,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
         }
         AsteroidFieldFactory.field_b = true;
         ComponentCollision.a("common wordpackj", (byte) -102);
-        this.wordpackArchive = MissionBuilder.createArchive(param0 + 0, OpenGlGpuRectangleTexture.field_k.field_a);
+        this.wordpackArchive = MissionBuilder.createArchive(param0 + 0, OpenGlGpuRectangleTexture.field_k.id);
         ComponentCollision.a("graphicsj", (byte) -103);
         this.graphicsArchive = MissionBuilder.createArchive(param0 + 0, 16);
         ComponentCollision.a("fontmetricsj", (byte) -66);
@@ -39,7 +39,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
         ComponentCollision.a("midij", (byte) -100);
         this.musicArchive = MissionBuilder.createArchive(1, 21);
         ComponentCollision.a("common quickchatj", (byte) -64);
-        this.quickChatArchive = MissionBuilder.createArchive(1, GetMachineGunProjectileDamage.field_o.field_a);
+        this.quickChatArchive = MissionBuilder.createArchive(1, GetMachineGunProjectileDamage.field_o.id);
         ComponentCollision.a("texturemetricsj", (byte) -108);
         this.textureMetricsArchive = MissionBuilder.createArchive(param0 ^ 0, 24);
         ComponentCollision.a("texturesj", (byte) -91);

@@ -115,7 +115,7 @@ final class ComponentCollision extends IntrusiveNode {
               stackIn_20_0.enabled = stackIn_21_1;
               var8 = ObjectiveMarker.field_b;
               var10 = 2;
-              if (ncb.field_a != null) {
+              if (LobbyOptionCompatibilityRules.optionCombinations != null) {
                 if (null == UsernameAvailabilityValidator.field_i) {
                   UsernameAvailabilityValidator.field_i = new byte[PasswordValidator.field_l];
                   AudioPump.field_a = new boolean[PasswordValidator.field_l];
@@ -129,14 +129,14 @@ final class ComponentCollision extends IntrusiveNode {
                     var11Lifetime2 = 0;
                     var12 = 0;
                     while (true) {
-                      if (var12 >= ncb.field_a.length) {
+                      if (var12 >= LobbyOptionCompatibilityRules.optionCombinations.length) {
                         if (var11Lifetime2 != 0) {
                           break scanLoop1;
                         }
                         var10++;
                         continue scanLoop1;
                       }
-                      var24 = ncb.field_a[var12];
+                      var24 = LobbyOptionCompatibilityRules.optionCombinations[var12];
                       var22 = var24;
                       var13_ref_int__ = var22;
                       var14 = 0;
@@ -276,10 +276,10 @@ final class ComponentCollision extends IntrusiveNode {
                   if ((var16Lifetime1Lifetime1 != 0)) {
                     ObjectiveMarker.field_b.enabled = false;
                     if (!(!ObjectiveMarker.field_b.field_Q)) {
-                      if (0 == GetReverbWidth.field_o.tabs.field_Ab) {
+                      if (0 == GetReverbWidth.field_o.tabs.selectedTabIndex) {
                         NebulaFieldFactory.field_a = ClientDataReadRequest.field_e;
                       } else {
-                        NebulaFieldFactory.field_a = SetReverbGain.a(SetInnateThrusters.field_p, new String[]{bd.field_a}, 121);
+                        NebulaFieldFactory.field_a = SetReverbGain.a(SetInnateThrusters.field_p, new String[]{LobbyThemeBuilder.field_a}, 121);
                       }
                     }
                   }
@@ -307,7 +307,7 @@ final class ComponentCollision extends IntrusiveNode {
                     if (var12Lifetime2 == 0) {
                       var14_ref_String = SetReverbGain.a(PrimitiveType.field_b, new String[]{(String) (var11_ref)}, 92);
                     } else {
-                      var14_ref_String = alb.field_a + (String) (var11_ref);
+                      var14_ref_String = LobbyInviteSuggestionText.inviteMorePlayersText + (String) (var11_ref);
                     }
                   } else {
                     var13_ref_String = SetPointDefenceLaserRandomness.field_o;
@@ -349,7 +349,7 @@ final class ComponentCollision extends IntrusiveNode {
           stackIn_175_0 = SetUseCircleFill.field_o;
           stackIn_176_1 = (param3) && (!param4) && (GetTorpedoProjectileDamage.field_o);
           ((Widget) (Object) stackIn_175_0).updateInput(stackIn_176_1, 1332);
-          GetReverbWidth.field_o.tabs.i(10000);
+          GetReverbWidth.field_o.tabs.updateSelectedTab(10000);
           if (null != SetSpinningBladeSpindamageMultiplier.field_o) {
             if (GetShipToShipRamDamage.field_q.field_o != 0) {
               sh.a(SetSpinningBladeSpindamageMultiplier.field_o.getGameId((byte) -13), -1, param0);

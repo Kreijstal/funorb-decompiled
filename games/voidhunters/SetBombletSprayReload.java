@@ -3,13 +3,13 @@
  */
 final class SetBombletSprayReload extends ConsoleCommand {
     static gj field_p;
-    static gl field_o;
+    static CommonArchiveId field_o;
 
     public static void clearSharedReferences(int param0) {
         field_o = null;
         field_p = null;
         if (param0 != 0) {
-          field_o = (gl) null;
+          field_o = (CommonArchiveId) null;
         }
     }
 
@@ -49,6 +49,6 @@ final class SetBombletSprayReload extends ConsoleCommand {
 
     static {
         field_p = new gj();
-        field_o = new gl(0);
+        field_o = new CommonArchiveId(0);
     }
 }

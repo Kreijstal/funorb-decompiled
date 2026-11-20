@@ -9,7 +9,7 @@ final class GetPhasedEnergyBeamAimspeed extends ConsoleCommand {
           if (GetSpinningBladeAimspeed.field_q == 11) {
             SoundPlayback.checkArithmeticGuard((byte) 111);
           }
-          LegacyOpenGlEnvironmentReflectionEffect.updateProgressDialog(dga.field_a, (byte) 106, OpenGlBufferObject.field_g, NebulaFactory.field_b);
+          LegacyOpenGlEnvironmentReflectionEffect.updateProgressDialog(OpenGlFaceAttachmentState.field_a, (byte) 106, OpenGlBufferObject.field_g, NebulaFactory.field_b);
           if (!param1) {
             GetPhasedEnergyBeamAimspeed.clearSharedReferences(73);
           }

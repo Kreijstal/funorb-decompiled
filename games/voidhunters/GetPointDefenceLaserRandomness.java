@@ -46,7 +46,7 @@ final class GetPointDefenceLaserRandomness extends ConsoleCommand {
         }
     }
 
-    final static String a(int param0) {
+    final static String getCurrentAccountEmail(int param0) {
         if (ActiveIconBorderRenderer.field_c == SetCountermeasureLauncherAimspeed.field_r) {
           return SetResourceNodeCaptureTime.field_p;
         }

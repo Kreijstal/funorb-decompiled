@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gob {
+final class GameInvitationText {
     static int field_c;
-    static String field_b;
+    static String invitingPlayerText;
     static String[] field_a;
     private static String field_z;
 
@@ -12,11 +12,11 @@ final class gob {
         if (param0 != 26986) {
           return;
         }
-        field_b = null;
+        invitingPlayerText = null;
     }
 
     static {
         field_z = "gob.A(";
-        field_b = "Inviting <%0>";
+        invitingPlayerText = "Inviting <%0>";
     }
 }

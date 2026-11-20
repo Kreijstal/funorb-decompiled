@@ -9,9 +9,9 @@ final class RoundResult implements DiffableState {
     static String field_a;
 
     final static int a(int param0, String param1, int param2, byte param3, String param4, boolean param5, String param6) {
-        dj var7 = null;
+        AccountRequestText var7 = null;
         RuntimeException var7_ref = null;
-        dj var8 = null;
+        AccountRequestText var8 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_7_0 = null;
@@ -23,12 +23,12 @@ final class RoundResult implements DiffableState {
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var7 = new dj(param4);
+          var7 = new AccountRequestText(param4);
           if (param3 <= 71) {
             stackIn_2_0 = 100;
             return stackIn_2_0;
           }
-          var8 = new dj(param1);
+          var8 = new AccountRequestText(param1);
           stackIn_4_0 = GetBoostersActiveTime.a(param0, var7, var8, param2, 0, param6, param5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

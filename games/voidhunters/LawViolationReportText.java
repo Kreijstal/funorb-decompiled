@@ -1,21 +1,21 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bda {
-    static String field_a;
+final class LawViolationReportText {
+    static String lawViolationText;
     private static String field_z;
 
     public static void clearSharedReferences(int param0) {
         if (param0 != -12407) {
-          field_a = (String) null;
-          field_a = null;
+          lawViolationText = (String) null;
+          lawViolationText = null;
           return;
         }
-        field_a = null;
+        lawViolationText = null;
     }
 
     static {
         field_z = "bda.A(";
-        field_a = "Breaking real-world laws";
+        lawViolationText = "Breaking real-world laws";
     }
 }

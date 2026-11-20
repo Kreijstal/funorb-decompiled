@@ -57,7 +57,7 @@ final class SetServerinfoVotestate extends ConsoleCommand {
             return stackIn_3_0;
           }
           if (param0 == 2) {
-            stackIn_6_0 = SetReverbGain.a(dgb.field_a, new String[]{param1}, 104);
+            stackIn_6_0 = SetReverbGain.a(GameJoinNotificationText.playerJoinedGameText, new String[]{param1}, 104);
             return stackIn_6_0;
           }
           if (param0 == 3) {

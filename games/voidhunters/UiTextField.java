@@ -42,7 +42,7 @@ class UiTextField extends UiFocusableComponent {
           OpenGlVertexAttribute.field_a = OpenGlVertexAttribute.field_a + 1;
           if (GetBombletSprayProjectileOndamageParticles.field_o == -1 &&
             -1 == EmailAvailabilityCheckFactory.field_b) {
-            EmailAvailabilityCheckFactory.field_b = uia.field_b;
+            EmailAvailabilityCheckFactory.field_b = OpenGlFaceAttachment.field_b;
             GetBombletSprayProjectileOndamageParticles.field_o = PlayerGameData.field_b;
           }
           boolean decompiledFrameRemainder0 = true;
@@ -508,7 +508,7 @@ class UiTextField extends UiFocusableComponent {
         try {
           if (super.handleMousePress(param0, param1, param2, param3, param4, param5, (byte) -61) &&
             this.renderer instanceof UiTextRenderer) {
-            var8_int = ((UiTextRenderer) ((Object) this.renderer)).getCaretIndexAtPoint(PlayerGameData.field_b, uia.field_b, param5, param1, (UiComponent) (this), -1);
+            var8_int = ((UiTextRenderer) ((Object) this.renderer)).getCaretIndexAtPoint(PlayerGameData.field_b, OpenGlFaceAttachment.field_b, param5, param1, (UiComponent) (this), -1);
             if (var8_int == -1) {
               stackIn_6_1 = 0;
             } else {
@@ -575,7 +575,7 @@ class UiTextField extends UiFocusableComponent {
           if (this.pressedButton == 1) {
             if (this.renderer instanceof UiTextRenderer) {
               var7 = (UiTextRenderer) ((Object) this.renderer);
-              var6 = var7.getCaretIndexAtPoint(PlayerGameData.field_b, uia.field_b, param0, param1, (UiComponent) (this), param2 + 980);
+              var6 = var7.getCaretIndexAtPoint(PlayerGameData.field_b, OpenGlFaceAttachment.field_b, param0, param1, (UiComponent) (this), param2 + 980);
               if (var6 != -1) {
                 if (this.doubleClickSelection && var6 < this.doubleClickWordEnd &&
                   this.selectionAnchor < var6) {

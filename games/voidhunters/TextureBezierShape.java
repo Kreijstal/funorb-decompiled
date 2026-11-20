@@ -10,7 +10,7 @@ final class TextureBezierShape extends TextureRasterShape {
     private int control2Y;
     private int startY;
     private int endY;
-    static gl field_q;
+    static CommonArchiveId field_q;
     static String field_j;
     static String field_g;
     static PlatformService field_n;
@@ -64,7 +64,7 @@ final class TextureBezierShape extends TextureRasterShape {
     }
 
     static {
-        field_q = new gl(6);
+        field_q = new CommonArchiveId(6);
         field_g = "Please select an option in the '<%0>' row.";
         field_j = "<%0> would need a rating of <%1> to play with the current options.";
         field_f = 0;

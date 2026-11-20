@@ -4,12 +4,12 @@
 import java.io.*;
 
 final class GetMachineGunProjectileDamage extends ConsoleCommand {
-    static gl field_o;
+    static CommonArchiveId field_o;
 
     public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 0) {
-          field_o = (gl) null;
+          field_o = (CommonArchiveId) null;
         }
     }
 
@@ -76,7 +76,7 @@ final class GetMachineGunProjectileDamage extends ConsoleCommand {
           var11Lifetime11 = var2;
         }
         if (!param0) {
-          field_o = (gl) null;
+          field_o = (CommonArchiveId) null;
         } else {
           var21 = new StringWriter();
           var20 = new PrintWriter((Writer) ((Object) var21));
@@ -246,6 +246,6 @@ final class GetMachineGunProjectileDamage extends ConsoleCommand {
     }
 
     static {
-        field_o = new gl(5);
+        field_o = new CommonArchiveId(5);
     }
 }

@@ -54,11 +54,11 @@ final class SoftwareRenderContext {
         var23 = VoidHunters.field_G;
         try {
           if (param2 > 0 &&
-            !bd.a(param2, (byte) -95)) {
+            !LobbyThemeBuilder.hasAtMostOneBitSet(param2, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
           if (param4 > 0 &&
-            !bd.a(param4, (byte) -95)) {
+            !LobbyThemeBuilder.hasAtMostOneBitSet(param4, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
           var7_int = ParticleFactory.a((byte) -104, param0);

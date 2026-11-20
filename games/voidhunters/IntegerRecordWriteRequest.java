@@ -88,7 +88,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[140] = LoginMethod.field_c;
         var2[174] = SetMissilesCooldown.field_o;
         var2[122] = ArmSelfDestructOrderDefinition.field_e;
-        var2[1] = veb.field_b;
+        var2[1] = BlueprintEditorText.field_b;
         var2[18] = WeaponBehaviour.field_d;
         var2[181] = GameMenuScreen.field_e;
         var2[134] = SetLaserRandomness.field_o;
@@ -124,9 +124,9 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[138] = PlayerReady.field_c;
         var2[121] = SetTorpedoFireForce.field_o;
         var2[95] = OpenGlIndexBuffer.field_j;
-        var2[151] = ooa.field_xb;
+        var2[151] = TabbedWidget.field_xb;
         var2[5] = GetAutoaim.field_o;
-        var2[8] = gl.field_d;
+        var2[8] = CommonArchiveId.field_d;
         var2[194] = MovingObjectFactory.field_b;
         var2[58] = GetPhasedEnergyBeamReload.field_q;
         var2[176] = GetSalvoHoldable.field_p;
@@ -135,7 +135,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[112] = MissionEvent.field_a;
         var2[0] = SetAutoDetail.field_o;
         var2[4] = ColorRowCacheEntry.field_f;
-        var2[88] = qh.field_J;
+        var2[88] = FullscreenMembershipDialog.field_J;
         var2[22] = BodyInZoneConditionFactory.field_b;
         var2[167] = GetShieldsDirectionalRadius.field_p;
         var2[92] = GetReadyRoomMissionTime.field_p;
@@ -170,7 +170,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[16] = GetGrapplingHookAimspeed.field_p;
         var2[198] = GetMissionTerrainNebulaProbability.field_r;
         var2[142] = LegacyOpenGlTextureCache.field_e;
-        var2[180] = tua.field_a;
+        var2[180] = ReturnToLobbyText.field_a;
         var2[91] = SetGrapplingHookRopeChangeRate.field_o;
         var2[123] = dfa.field_a;
         var2[205] = Particle.field_m;
@@ -203,7 +203,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[105] = SoundPlayback.field_f;
         var2[226] = GetTorpedoAcceleration.field_p;
         var2[60] = Cp1252CharacterEncoder.armageddonTimerStart;
-        var2[171] = enb.field_c;
+        var2[171] = AssassinationObjectiveText.field_c;
         var2[76] = SelectableIconLabelWidget.field_yb;
         var2[23] = SetMissionResnetResourceTickTime.field_p;
         var2[15] = SetThrusterAutobalancing.field_r;

@@ -15,7 +15,7 @@ final class LegacyOpenGlShader {
           GpuVertexNormal.field_b = GetBombletSprayAimarc.field_q;
           OpenGlFramebuffer.field_b = OpenGlFramebuffer.field_b + 1;
           PlayerGameData.field_b = MonotonicMillisClock.field_a;
-          uia.field_b = LegacyOpenGlSpecularEffect.field_e;
+          OpenGlFaceAttachment.field_b = LegacyOpenGlSpecularEffect.field_e;
           VariableConditionFactory.field_c = MouseActivityState.changed;
           MouseActivityState.changed = false;
           SetDebrisPartitioned.field_o = AppletCookieReader.field_a;

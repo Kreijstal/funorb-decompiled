@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bsb {
+final class GpuVertexKeyBuffer {
     static int field_a;
-    static long[] field_b;
+    static long[] renderVertexKeys;
     private static String field_z;
 
     public static void clearSharedReferences(int param0) {
-        field_b = null;
+        renderVertexKeys = null;
         if (param0 != 23870) {
-          bsb.clearSharedReferences(81);
+          GpuVertexKeyBuffer.clearSharedReferences(81);
         }
     }
 

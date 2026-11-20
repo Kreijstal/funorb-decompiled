@@ -20,7 +20,7 @@ final class PointDefenceLaserWeaponDefinition extends WeaponDefinition {
         if (param0) {
           return 72;
         }
-        return qh.field_J;
+        return FullscreenMembershipDialog.field_J;
     }
 
     final int getFiringSoundId(boolean param0) {

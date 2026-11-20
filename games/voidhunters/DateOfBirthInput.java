@@ -110,37 +110,37 @@ abstract class DateOfBirthInput extends UiContainer implements ValidatableInput 
             return 121;
           }
           try {
-            if (0 == gob.field_c) {
+            if (0 == GameInvitationText.field_c) {
               SoftwareSprite2D.field_b = NormalMapTextureOperation.field_k.openSocket(SetDefaultFiringLeeway.field_p, TextHotspotRegion.field_l, param0 ^ -6201);
-              gob.field_c = gob.field_c + 1;
+              GameInvitationText.field_c = GameInvitationText.field_c + 1;
             }
-            if (1 == gob.field_c) {
+            if (1 == GameInvitationText.field_c) {
               if (SoftwareSprite2D.field_b.status == 2) {
                 stackIn_17_0 = SetReverbDry.a(-93, -1);
                 return stackIn_17_0;
               }
               if (SoftwareSprite2D.field_b.status == 1) {
-                gob.field_c = gob.field_c + 1;
+                GameInvitationText.field_c = GameInvitationText.field_c + 1;
               }
             }
-            if (gob.field_c == 2) {
+            if (GameInvitationText.field_c == 2) {
               TextureLineShape.field_h = new BufferedSocket((java.net.Socket) (SoftwareSprite2D.field_b.result), NormalMapTextureOperation.field_k);
               var2 = new PacketBuffer(13);
               SetVariableLabelActionFactory.a(SetPointDefenceLaserProjectileDamage.field_p, (byte) -48, GetFixedaim.field_o, var2, OpenGlToolkit.field_Ib);
               var2.writeByte(0, 15);
               var2.writeInt(ByteIndexedRecordWriteRequest.field_d, 332614536);
               TextureLineShape.field_h.write(0, var2.payload, 13, 0);
-              gob.field_c = gob.field_c + 1;
+              GameInvitationText.field_c = GameInvitationText.field_c + 1;
               GetRepairModePower.field_r = 30000L + MonotonicMillisClock.currentTimeMillis(false);
             }
-            if (gob.field_c == 3) {
+            if (GameInvitationText.field_c == 3) {
               if (0 < TextureLineShape.field_h.available(param0 ^ -6269)) {
                 var1_int = TextureLineShape.field_h.readByte(-123);
                 if (var1_int != 0) {
                   stackIn_31_0 = SetReverbDry.a(-71, var1_int);
                   return stackIn_31_0;
                 }
-                gob.field_c = gob.field_c + 1;
+                GameInvitationText.field_c = GameInvitationText.field_c + 1;
               } else {
                 if (GetRepairModePower.field_r < MonotonicMillisClock.currentTimeMillis(false)) {
                   stackIn_27_0 = SetReverbDry.a(-84, -2);
@@ -148,12 +148,12 @@ abstract class DateOfBirthInput extends UiContainer implements ValidatableInput 
                 }
               }
             }
-            if (gob.field_c != 4) {
+            if (GameInvitationText.field_c != 4) {
               stackIn_37_0 = -1;
               return stackIn_37_0;
             }
             GetAutozoomAmountMultiply.field_o.setConnection(TextureLineShape.field_h, ToolkitFontMetrics.field_f, false);
-            gob.field_c = 0;
+            GameInvitationText.field_c = 0;
             TextureLineShape.field_h = null;
             SoftwareSprite2D.field_b = null;
             stackIn_35_0 = 0;

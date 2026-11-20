@@ -61,7 +61,7 @@ final class GuestPlayNoticePanel extends UiContainer implements UiActionListener
         super(0, 0, 476, 225, (UiRenderer) null);
         this.createAccountButton = new UiFocusableComponent(TimedSpecialOrderBehaviour.field_b, (UiListener) null);
         this.backButton = new UiFocusableComponent(SetTorpedoReload.field_p, (UiListener) null);
-        this.playGuestButton = new UiFocusableComponent(cjb.field_a, (UiListener) null);
+        this.playGuestButton = new UiFocusableComponent(GuestPlayText.justPlayText, (UiListener) null);
         ThreeSliceButtonStyle var1 = new ThreeSliceButtonStyle();
         this.createAccountButton.renderer = (UiRenderer) ((Object) var1);
         this.backButton.renderer = (UiRenderer) ((Object) var1);

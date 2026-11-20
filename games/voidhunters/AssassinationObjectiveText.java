@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class enb {
+final class AssassinationObjectiveText {
     static boolean field_b;
     static int field_c;
-    static String field_a;
+    static String assassinationText;
     private static String field_z;
 
     public static void clearSharedReferences(byte param0) {
-        field_a = null;
+        assassinationText = null;
         int var1 = 21 / ((-8 - param0) / 43);
     }
 
     static {
         field_z = "enb.A(";
         field_c = 1024;
-        field_a = "Assassination";
+        assassinationText = "Assassination";
     }
 }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SoftwareFramebuffer implements Framebuffer {
-    static gl field_f;
+    static CommonArchiveId field_f;
     int height;
     private SoftwareDepthBuffer depthBuffer;
     float[] depth;
@@ -85,6 +85,6 @@ final class SoftwareFramebuffer implements Framebuffer {
     }
 
     static {
-        field_f = new gl(2);
+        field_f = new CommonArchiveId(2);
     }
 }

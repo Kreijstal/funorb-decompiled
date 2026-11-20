@@ -9,7 +9,7 @@ final class OpenGlModel extends Model3D {
     private short[] field_E;
     private OpenGlVertexAttribute field_i;
     private short[] field_G;
-    private uia[] field_D;
+    private OpenGlFaceAttachment[] field_D;
     private int field_w;
     private int field_u;
     private short minZ;
@@ -18,7 +18,7 @@ final class OpenGlModel extends Model3D {
     private short[] field_b;
     private short[] field_A;
     private short[] field_n;
-    private dga[] field_r;
+    private OpenGlFaceAttachmentState[] field_r;
     private short[] field_l;
     private short minX;
     private short maxZ;
@@ -398,7 +398,7 @@ final class OpenGlModel extends Model3D {
         OpenGlVertexAttribute discarded$0 = null;
         OpenGlVertexAttribute discarded$1 = null;
         OpenGlVertexAttribute discarded$2 = null;
-        dgb discarded$3 = null;
+        GameJoinNotificationText discarded$3 = null;
         this.field_B = 0;
         this.vertexCount = 0;
         this.field_d = 0;
@@ -409,7 +409,7 @@ final class OpenGlModel extends Model3D {
           discarded$0 = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5126, 2, 0);
           discarded$1 = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5126, 3, 0);
           discarded$2 = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5121, 4, 0);
-          discarded$3 = new dgb();
+          discarded$3 = new GameJoinNotificationText();
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ne.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
@@ -419,7 +419,7 @@ final class OpenGlModel extends Model3D {
         OpenGlVertexAttribute discarded$0 = null;
         OpenGlVertexAttribute discarded$1 = null;
         OpenGlVertexAttribute discarded$2 = null;
-        dgb discarded$3 = null;
+        GameJoinNotificationText discarded$3 = null;
         int var9_int = 0;
         int fieldTemp$9 = 0;
         short dupTemp$10 = 0;
@@ -612,7 +612,7 @@ final class OpenGlModel extends Model3D {
             discarded$2 = new OpenGlVertexAttribute((OpenGlVertexBufferBinding) null, 5121, 4, 0);
           }
           if (GetMissionDebrisVotingChancestep.a(param2, param5, false)) {
-            discarded$3 = new dgb();
+            discarded$3 = new GameJoinNotificationText();
           }
           var65 = param0.field_a;
           this.field_H = new int[param1.field_D + 1];
@@ -731,8 +731,8 @@ final class OpenGlModel extends Model3D {
           var11 = new OpenGlVertexNormal[this.vertexCount];
           if (param1.faceAttachments != null) {
             this.field_o = param1.faceAttachments.length;
-            this.field_r = new dga[this.field_o];
-            this.field_D = new uia[this.field_o];
+            this.field_r = new OpenGlFaceAttachmentState[this.field_o];
+            this.field_D = new OpenGlFaceAttachment[this.field_o];
             for (var12Lifetime1 = 0; this.field_o > var12Lifetime1; var12Lifetime1++) {
               var69 = param1.faceAttachments[var12Lifetime1];
               var70 = GetBombletSprayAimspeed.getFaceAttachmentDefinition(var69.definitionId, 0);
@@ -755,8 +755,8 @@ final class OpenGlModel extends Model3D {
                 stackIn_76_1 = param1.field_r[var69.faceIndex];
               }
               var16Lifetime1Lifetime2 = stackIn_75_0 | -stackIn_76_1 + 255 << 24;
-              this.field_D[var12Lifetime1] = new uia(var15_intLifetime1, (int) param1.faceVertexA[var69.faceIndex], (int) param1.faceVertexB[var69.faceIndex], (int) param1.faceVertexC[var69.faceIndex], var70.field_g, var70.field_b, var70.field_e, var70.field_d, var70.field_f, var70.field_a, var70.field_c, var69.field_c);
-              this.field_r[var12Lifetime1] = new dga(var16Lifetime1Lifetime2);
+              this.field_D[var12Lifetime1] = new OpenGlFaceAttachment(var15_intLifetime1, (int) param1.faceVertexA[var69.faceIndex], (int) param1.faceVertexB[var69.faceIndex], (int) param1.faceVertexC[var69.faceIndex], var70.field_g, var70.field_b, var70.field_e, var70.field_d, var70.field_f, var70.field_a, var70.field_c, var69.field_c);
+              this.field_r[var12Lifetime1] = new OpenGlFaceAttachmentState(var16Lifetime1Lifetime2);
             }
           }
           var12Lifetime2 = 3 * this.field_B;

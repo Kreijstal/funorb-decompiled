@@ -7,7 +7,7 @@ final class PopupMenuWidget extends Widget {
     private Sprite[] field_xb;
     private Widget field_Cb;
     private int field_wb;
-    static gl field_Bb;
+    static CommonArchiveId field_Bb;
     private int selectionResult;
     private int field_zb;
     private int[] itemResults;
@@ -152,7 +152,7 @@ final class PopupMenuWidget extends Widget {
         field_Db = null;
         field_Bb = null;
         if (param0 != 0) {
-          field_Bb = (gl) null;
+          field_Bb = (CommonArchiveId) null;
         }
     }
 
@@ -180,7 +180,7 @@ final class PopupMenuWidget extends Widget {
     }
 
     static {
-        field_Bb = new gl(7);
+        field_Bb = new CommonArchiveId(7);
         field_Db = "You must be a member to play with the current options.";
     }
 }

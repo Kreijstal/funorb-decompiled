@@ -17,8 +17,8 @@ final class SetAngleset extends ConsoleCommand {
             stackIn_2_0 = (OpenGlSpriteTexture) null;
             return stackIn_2_0;
           }
-          if (!param3.field_n && (!bd.a(param1, (byte) -95) ||
-            !bd.a(param2, (byte) -95))) {
+          if (!param3.field_n && (!LobbyThemeBuilder.hasAtMostOneBitSet(param1, (byte) -95) ||
+            !LobbyThemeBuilder.hasAtMostOneBitSet(param2, (byte) -95))) {
             if (param3.field_g) {
               stackIn_13_0 = new OpenGlSpriteTexture(param3, 34037, param4, param1, param2);
               return stackIn_13_0;

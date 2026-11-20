@@ -17,7 +17,7 @@ final class SetSpinningBladeAimarc extends ConsoleCommand {
             SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) ((Object) var1), GetTorpedoReload.field_q, GetUseDetailLines.field_o, 14);
             SetTorpedoProjectiles.field_o.setCursorVisible((java.awt.Component) ((Object) var1), true, (byte) -122);
             PlayerGameData.field_b = GetUseDetailLines.field_o;
-            uia.field_b = GetTorpedoReload.field_q;
+            OpenGlFaceAttachment.field_b = GetTorpedoReload.field_q;
           }
           return;
         }

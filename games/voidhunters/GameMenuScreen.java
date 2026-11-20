@@ -375,7 +375,7 @@ final class GameMenuScreen {
           this.isItemEnabled(this.inputState.selectedIndex, 117)) {
           param2 = this.inputState.selectedIndex;
         }
-        this.inputState.resetSelection(param0, -1, param2, this.hitTestItem(uia.field_b, PlayerGameData.field_b, param1 ^ 7060));
+        this.inputState.resetSelection(param0, -1, param2, this.hitTestItem(OpenGlFaceAttachment.field_b, PlayerGameData.field_b, param1 ^ 7060));
         mba.field_b = SetMinimapWidth.field_o;
     }
 
@@ -1095,7 +1095,7 @@ final class GameMenuScreen {
             this.handleItemInput(24, false, this.inputState.selectedIndex);
           }
           var2Lifetime1Lifetime1 = this.inputState.selectedIndex;
-          this.inputState.updatePointerSelection(this.hitTestItem(qs.field_a, Particle.field_H, 6868), 5620, this.hitTestItem(uia.field_b, PlayerGameData.field_b, param0 ^ 6868));
+          this.inputState.updatePointerSelection(this.hitTestItem(qs.field_a, Particle.field_H, 6868), 5620, this.hitTestItem(OpenGlFaceAttachment.field_b, PlayerGameData.field_b, param0 ^ 6868));
           if (this.inputState.selectedIndex >= 0 &&
             var2Lifetime1Lifetime1 != this.inputState.selectedIndex) {
             GetNebulaFadesOutWhenClose.a(-124, PendingScoreboardRequest.soundEffects[0]);

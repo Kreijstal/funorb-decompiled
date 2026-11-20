@@ -5,7 +5,7 @@ final class OpenGlGpuRectangleTexture extends OpenGlGpuTexture implements GpuTex
     static int field_m;
     private int height;
     private int width;
-    static gl field_k;
+    static CommonArchiveId field_k;
 
     OpenGlGpuRectangleTexture(OpenGlGpuToolkit param0, TextureFormat param1, int param2, int param3, float[] param4, int param5, int param6) {
         super(param0, 34037, param1, GpuDataType.FLOAT, param2 * param3, false);
@@ -31,7 +31,7 @@ final class OpenGlGpuRectangleTexture extends OpenGlGpuTexture implements GpuTex
 
     public final void setRepeat(boolean param0, byte param1, boolean param2) {
         if (param1 != -98) {
-          field_k = (gl) null;
+          field_k = (CommonArchiveId) null;
         }
     }
 
@@ -203,6 +203,6 @@ final class OpenGlGpuRectangleTexture extends OpenGlGpuTexture implements GpuTex
     }
 
     static {
-        field_k = new gl(4);
+        field_k = new CommonArchiveId(4);
     }
 }

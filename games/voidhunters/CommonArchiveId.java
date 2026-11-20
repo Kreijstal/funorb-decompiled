@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gl {
-    int field_a;
+final class CommonArchiveId {
+    int id;
     static String field_c;
     static String field_b;
     static int field_d;
@@ -11,8 +11,8 @@ final class gl {
         throw new IllegalStateException();
     }
 
-    gl(int param0) {
-        this.field_a = param0;
+    CommonArchiveId(int param0) {
+        this.id = param0;
     }
 
     public static void clearSharedReferences(int param0) {

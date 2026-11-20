@@ -4,7 +4,7 @@
 final class ChatMessage {
     int[] field_m;
     Widget widget;
-    static gl field_b;
+    static CommonArchiveId field_b;
     String senderName;
     int field_h;
     long senderKey;
@@ -154,7 +154,7 @@ final class ChatMessage {
     }
 
     static {
-        field_b = new gl(3);
+        field_b = new CommonArchiveId(3);
         field_g = (GameStateFactory) ((Object) new EscapePodFactory());
         field_p = "Toggle condition not";
         field_l = "ESC - cancel private message";

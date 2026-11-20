@@ -28,9 +28,9 @@ final class SetMomentOfInertiaPredivideDownshift extends ConsoleCommand {
           if (GetKeepTeamColours.field_p == null) {
             GetKeepTeamColours.field_p = "0";
           }
-          ud.field_R = param0.getParameter("overxachievements");
-          if (null == ud.field_R) {
-            ud.field_R = "0";
+          LoginTransitionDialog.field_R = param0.getParameter("overxachievements");
+          if (null == LoginTransitionDialog.field_R) {
+            LoginTransitionDialog.field_R = "0";
           }
           var6 = param0.getParameter("currency");
           if (var6 != null &&

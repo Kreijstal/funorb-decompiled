@@ -61,7 +61,7 @@ final class GetDebrisThrowable extends ConsoleCommand {
         }
         if (SetCountermeasureLauncherAimspeed.field_r == SetSniperCannonFireForce.field_o) {
           SetCountermeasureLauncherAimspeed.field_r = ToolkitRasterStateStack.field_d;
-          return cjb.field_b;
+          return GuestPlayText.field_b;
         }
         if (param0 != 10589) {
           field_p = (byte[]) null;

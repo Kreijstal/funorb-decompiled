@@ -5,7 +5,7 @@ final class GameInterfaceAssembler {
     private static String field_z;
 
     final static void assembleGameInterface(boolean param0, int param1) {
-        GetReverbWidth.field_o = !param0 ? new SocialTabsPanel(bd.field_a, SetOndamageParticleLife.field_o) : new SocialTabsPanel(SetMassDriverAimarc.field_p, GetTorpedoProjectileDamage.field_p);
+        GetReverbWidth.field_o = !param0 ? new SocialTabsPanel(LobbyThemeBuilder.field_a, SetOndamageParticleLife.field_o) : new SocialTabsPanel(SetMassDriverAimarc.field_p, GetTorpedoProjectileDamage.field_p);
         WaterTextures.field_g = new Widget(0L, (Widget) null);
         WaterTextures.field_g.addChild(-561, GetReverbWidth.field_o.tabs);
         WaterTextures.field_g.addChild(-561, GetShipToShipRamDamage.field_q);

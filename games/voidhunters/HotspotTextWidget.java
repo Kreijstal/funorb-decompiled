@@ -147,7 +147,7 @@ class HotspotTextWidget extends UiFocusableComponent {
           this.hoveredHotspot = null;
           if (this.hovered) {
             var5_int = -this.x + PlayerGameData.field_b - param1;
-            var6 = -param0 + (uia.field_b - this.y);
+            var6 = -param0 + (OpenGlFaceAttachment.field_b - this.y);
             this.hoveredHotspot = this.findHotspot(var5_int, var6, 0);
           }
           return;

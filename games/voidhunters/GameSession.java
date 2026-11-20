@@ -301,8 +301,8 @@ final class GameSession {
           GetMachineGunPulsetime.a(var19, -50, var14, var21, var15, var20);
           if (PlayerGameData.field_b >= var20 &&
             PlayerGameData.field_b <= var20 + var14 &&
-            var21 <= uia.field_b &&
-            uia.field_b <= var21 + var15) {
+            var21 <= OpenGlFaceAttachment.field_b &&
+            OpenGlFaceAttachment.field_b <= var21 + var15) {
             stackIn_24_0 = new StringBuilder().append("tick=").append(var17_ref.tick).append(",player=").append(var17_ref.field_k).append(",mousex=").append(var17_ref.mousex).append(",y=").append(var17_ref.mousey).append(",triggers=").append(var17_ref.triggers).append(",specialorder=");
             if (var17_ref.specialOrderSubmessage != null) {
               stackIn_25_1 = "yes";
@@ -1682,7 +1682,7 @@ final class GameSession {
             } else {
               if (!var7.missionState.isPreGamePhase((byte) -126) &&
                 null == var7.world.findShipByOwner(var17Lifetime1, 92)) {
-                var11[var17Lifetime1 + 1] = SetAngularForceDownshift.orBits(var11[var17Lifetime1 + 1], bsb.field_a);
+                var11[var17Lifetime1 + 1] = SetAngularForceDownshift.orBits(var11[var17Lifetime1 + 1], GpuVertexKeyBuffer.field_a);
               }
               var19_int = var35.selectedTeam;
               var12[1 + var17Lifetime1] = AlphaContainer.getTeamColor(false, var19_int, 13894143);
@@ -1730,7 +1730,7 @@ final class GameSession {
                       var23_ref_String = Integer.toString(var35.kills);
                     }
                   } else {
-                    if ((bsb.field_a & var11[var17Lifetime1 + 1]) == 0) {
+                    if ((GpuVertexKeyBuffer.field_a & var11[var17Lifetime1 + 1]) == 0) {
                       var37 = var7.world.findShipByOwner(var17Lifetime1, 126);
                       var27 = 0;
                       if (var37 != null) {
@@ -4659,7 +4659,7 @@ final class GameSession {
                   if ((GetBoostersActiveTime.field_o & param7[var16]) != 0) {
                     GetPhasedEnergyBeamReload.a(var18, 2.0f, -52, param4 + param10, param6[var16]);
                   }
-                  if ((param7[var16] & bsb.field_a) != 0) {
+                  if ((param7[var16] & GpuVertexKeyBuffer.field_a) != 0) {
                     DelayedPacket.drawLine(var18, param9 - (-param3 - GetPhasedEnergyBeamProjectiles.a(99, var17)), param3 + param9, var18, -16777216, param6[var16]);
                   }
                 }
@@ -6589,7 +6589,7 @@ final class GameSession {
                 }
                 var22Lifetime1 = 0;
                 if (this.blueprintOverwritePending) {
-                  var23 = veb.field_a;
+                  var23 = BlueprintEditorText.overwriteConfirmationText;
                   SetSelfDestructPrepareToggleCooldown.a(var18, 1, -GetPointDefenceLaserProjectiles.a(false, 3) + (var19 + 4), var23, 3, 16777215, (byte) -117);
                 }
                 var21Lifetime1 = 0;
@@ -7201,7 +7201,7 @@ final class GameSession {
                   var19 = 1000 * var18_int / Particle.field_l;
                   var20 = SetPointDefenceLaserAimspeed.a((byte) 10, var19);
                   var18 = var20;
-                  var10 = SetReverbGain.a(gl.field_b.toUpperCase(), new String[]{var23, var20}, param1 ^ 177);
+                  var10 = SetReverbGain.a(CommonArchiveId.field_b.toUpperCase(), new String[]{var23, var20}, param1 ^ 177);
                 } else {
                   if (var14 != 1) {
                     var10 = SetReverbGain.a(lh.field_a.toUpperCase(), new String[]{var23}, 92);
@@ -7490,7 +7490,7 @@ final class GameSession {
           if (!SetFightersPerPlayerMaximum.field_p ||
             SetMissionTerrainDebrisProbability.field_p) {
             if (SetNebulaProximityFadeDownshift.field_o) {
-              uia.field_b = GetTorpedoReload.field_q;
+              OpenGlFaceAttachment.field_b = GetTorpedoReload.field_q;
               PlayerGameData.field_b = GetUseDetailLines.field_o;
               qs.field_a = GetTorpedoReload.field_q;
               Particle.field_H = GetUseDetailLines.field_o;
@@ -7502,12 +7502,12 @@ final class GameSession {
             PlayerGameData.field_b = var5;
             qs.field_a = var6;
             Particle.field_H = var5;
-            uia.field_b = var6;
+            OpenGlFaceAttachment.field_b = var6;
             AdjustVariableActionFactory.field_a.updateInput(param1, 1332);
             qs.field_a = GetTorpedoReload.field_q;
             Particle.field_H = GetUseDetailLines.field_o;
             PlayerGameData.field_b = GetUseDetailLines.field_o;
-            uia.field_b = GetTorpedoReload.field_q;
+            OpenGlFaceAttachment.field_b = GetTorpedoReload.field_q;
             if (AdjustVariableActionFactory.field_a.field_O) {
               this.uiBlocksWorldInput = true;
             }
@@ -7993,8 +7993,8 @@ final class GameSession {
             var7.draw(var10, var11);
             if (var10 <= PlayerGameData.field_b &&
               var10 + var7.width >= PlayerGameData.field_b &&
-              uia.field_b >= var11 &&
-              var11 + var7.height >= uia.field_b) {
+              OpenGlFaceAttachment.field_b >= var11 &&
+              var11 + var7.height >= OpenGlFaceAttachment.field_b) {
               GetMassDriverReload.a(GetBombletSprayRandomness.field_q[0][var6], -53);
             }
             var8 = Math.max(var8, var9);

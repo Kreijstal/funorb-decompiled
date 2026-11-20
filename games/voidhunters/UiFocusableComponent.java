@@ -276,11 +276,11 @@ class UiFocusableComponent extends UiComponent {
           this.activatedButton = 0;
           if (this.pressedButton != 0 &&
             GpuVertexNormal.field_b != this.pressedButton) {
-            if (this.containsPoint(uia.field_b, param1, PlayerGameData.field_b, param0, (byte) 22) &&
+            if (this.containsPoint(OpenGlFaceAttachment.field_b, param1, PlayerGameData.field_b, param0, (byte) 22) &&
               GpuVertexNormal.field_b == 0) {
-              this.fireAction(this.pressedButton, -param1 + PlayerGameData.field_b, 23015, uia.field_b - param0);
+              this.fireAction(this.pressedButton, -param1 + PlayerGameData.field_b, 23015, OpenGlFaceAttachment.field_b - param0);
             }
-            this.handleMouseRelease((byte) -106, param1, uia.field_b, param0, param3, PlayerGameData.field_b);
+            this.handleMouseRelease((byte) -106, param1, OpenGlFaceAttachment.field_b, param0, param3, PlayerGameData.field_b);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "htb.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');

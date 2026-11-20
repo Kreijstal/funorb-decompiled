@@ -224,7 +224,7 @@ final class ComponentAttachmentPlan {
         return stackIn_57_0;
     }
 
-    final static int a(dj param0, boolean param1, dj param2) {
+    final static int a(AccountRequestText param0, boolean param1, AccountRequestText param2) {
         RuntimeException var3 = null;
         String var4 = null;
         int stackIn_3_0 = 0;

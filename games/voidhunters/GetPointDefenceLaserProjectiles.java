@@ -40,52 +40,52 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         if (param7 >= 59) {
           if (param2 < OpenGlTexture3D.field_j) {
-            ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+            TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
           } else {
             if (GetCountermeasureLauncherProjectiles.field_o < param2) {
-              ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+              TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
             } else {
               if (param4 < OpenGlTexture3D.field_j) {
-                ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
               } else {
                 if (param4 > GetCountermeasureLauncherProjectiles.field_o) {
-                  ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                  TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                 } else {
                   if (param6 < OpenGlTexture3D.field_j) {
-                    ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                    TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                   } else {
                     if (param6 > GetCountermeasureLauncherProjectiles.field_o) {
-                      ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                      TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                     } else {
                       if (param9 < OpenGlTexture3D.field_j) {
-                        ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                        TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                       } else {
                         if (GetCountermeasureLauncherProjectiles.field_o < param9) {
-                          ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                          TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                         } else {
                           if (NebulaField.field_c > param1) {
-                            ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                            TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                           } else {
                             if (param1 > EnvironmentReflectionGpuMaterialEffect.field_i) {
-                              ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                              TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                             } else {
                               if (param5 < NebulaField.field_c) {
-                                ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                                TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                               } else {
                                 if (EnvironmentReflectionGpuMaterialEffect.field_i < param5) {
-                                  ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                                  TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                 } else {
                                   if (param0 < NebulaField.field_c) {
-                                    ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                                    TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                   } else {
                                     if (param0 > EnvironmentReflectionGpuMaterialEffect.field_i) {
-                                      ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                                      TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                     } else {
                                       if (param8 < NebulaField.field_c) {
-                                        ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                                        TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                       } else {
                                         if (EnvironmentReflectionGpuMaterialEffect.field_i < param8) {
-                                          ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                                          TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                         } else {
                                           SoftwareTransform3D.drawCubicBezier(param4, param0, param5, param2, param6, param3, param8, param9, param1, (byte) -57);
                                         }
@@ -107,54 +107,54 @@ final class GetPointDefenceLaserProjectiles extends ConsoleCommand {
         } else {
           field_p = (String) null;
           if (param2 < OpenGlTexture3D.field_j) {
-            ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+            TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
           } else {
             if (GetCountermeasureLauncherProjectiles.field_o < param2) {
-              ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+              TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
             } else {
               if (param4 < OpenGlTexture3D.field_j) {
-                ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
               } else {
                 if (param4 > GetCountermeasureLauncherProjectiles.field_o) {
-                  ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                  TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                 } else {
                   if (param6 < OpenGlTexture3D.field_j) {
-                    ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                    TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                   } else {
                     if (param6 > GetCountermeasureLauncherProjectiles.field_o) {
-                      ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                      TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                     } else {
                       if (param9 < OpenGlTexture3D.field_j) {
-                        ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                        TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                       } else {
                         if (GetCountermeasureLauncherProjectiles.field_o < param9) {
-                          ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                          TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                         } else {
                           if (NebulaField.field_c > param1) {
-                            ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                            TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                           } else {
                             if (param1 > EnvironmentReflectionGpuMaterialEffect.field_i) {
-                              ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                              TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                             } else {
                               if (param5 < NebulaField.field_c) {
-                                ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                                TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                               } else {
                                 if (EnvironmentReflectionGpuMaterialEffect.field_i < param5) {
-                                  ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                                  TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                 } else {
                                   if (param0 < NebulaField.field_c) {
-                                    ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                                    TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                   } else {
                                     if (param0 > EnvironmentReflectionGpuMaterialEffect.field_i) {
-                                      ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                                      TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                     } else {
                                       if (param8 < NebulaField.field_c) {
-                                        ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                                        TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                       } else {
                                         if (EnvironmentReflectionGpuMaterialEffect.field_i >= param8) {
                                           SoftwareTransform3D.drawCubicBezier(param4, param0, param5, param2, param6, param3, param8, param9, param1, (byte) -57);
                                         } else {
-                                          ooa.a(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
+                                          TabbedWidget.drawCubicBezierCurve(param6, param8, param4, param1, -17572, param9, param5, param0, param3, param2);
                                         }
                                       }
                                     }

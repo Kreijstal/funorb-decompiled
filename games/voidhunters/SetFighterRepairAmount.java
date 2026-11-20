@@ -13,11 +13,11 @@ final class SetFighterRepairAmount extends ConsoleCommand {
     final static void a(int param0, int param1, int param2) {
         if (param1 != -22699) {
           SetFighterRepairAmount.clearSharedReferences((byte) -97);
-          alb.field_b = param2;
+          LobbyInviteSuggestionText.field_b = param2;
           SetDebrisPartitioned.field_r = param0;
           return;
         }
-        alb.field_b = param2;
+        LobbyInviteSuggestionText.field_b = param2;
         SetDebrisPartitioned.field_r = param0;
     }
 

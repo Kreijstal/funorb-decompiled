@@ -161,7 +161,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements OpenGlFramebuffer
         }
         if (var3 == 1) {
           if (param1 != 0) {
-            stackIn_26_0 = csa.field_a;
+            stackIn_26_0 = ConvoyObjectiveText.stopEnemyConvoyText;
           } else {
             stackIn_26_0 = FadingMidiPcmStream.field_T;
           }

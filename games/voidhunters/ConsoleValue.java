@@ -109,7 +109,7 @@ final class ConsoleValue {
               if (EnvironmentReflectionGpuMaterialEffect.field_i < param4 + param1) {
                 ffb.a(param4, (byte) -89, param1, param2, param3);
               } else {
-                GetFixedaim.a(param2, param3, param1, param4, 2);
+                GetFixedaim.fillCircleUnclipped(param2, param3, param1, param4, 2);
               }
             }
           }

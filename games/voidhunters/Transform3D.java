@@ -80,8 +80,8 @@ abstract class Transform3D {
           var8Lifetime1 = TextureLineShape.sinAngle(var6Lifetime1, 57) >> 8;
           var9Lifetime1 = GetNumStars.cosAngle(var6Lifetime1, (byte) 61) >> 8;
           if (PlayerGameData.field_b != -1 &&
-            uia.field_b != -1) {
-            var8Lifetime1 = 240 - uia.field_b;
+            OpenGlFaceAttachment.field_b != -1) {
+            var8Lifetime1 = 240 - OpenGlFaceAttachment.field_b;
             var9Lifetime1 = -128;
             var7Lifetime1 = PlayerGameData.field_b - 320;
           }

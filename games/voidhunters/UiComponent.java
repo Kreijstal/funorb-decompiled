@@ -102,7 +102,7 @@ class UiComponent extends IntrusiveNode {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
         try {
-          var5_int = this.containsPoint(uia.field_b, param1, PlayerGameData.field_b, param0, (byte) 22) ? 1 : 0;
+          var5_int = this.containsPoint(OpenGlFaceAttachment.field_b, param1, PlayerGameData.field_b, param0, (byte) 22) ? 1 : 0;
           if (param2 != -981) {
             this.hovered = true;
           }
@@ -446,7 +446,7 @@ class UiComponent extends IntrusiveNode {
         if (param3) {
           if (GetPointDefenceLaserPulsetime.field_o != 0 &&
             var5 != 0) {
-            this.handleMouseWheel(param1, -6006, GetPointDefenceLaserPulsetime.field_o, this, PlayerGameData.field_b, param2, uia.field_b);
+            this.handleMouseWheel(param1, -6006, GetPointDefenceLaserPulsetime.field_o, this, PlayerGameData.field_b, param2, OpenGlFaceAttachment.field_b);
           }
           if (SetDebrisPartitioned.field_o != 0) {
             if (!this.handleMousePress(Particle.field_H, param1, qs.field_a, SetDebrisPartitioned.field_o, this, param2, (byte) -105)) {
@@ -459,7 +459,7 @@ class UiComponent extends IntrusiveNode {
           }
           if (GpuVertexNormal.field_b == 0 &&
             CombatHelpText.field_b != 0) {
-            this.handleMouseRelease((byte) 118, param1, uia.field_b, param2, this, PlayerGameData.field_b);
+            this.handleMouseRelease((byte) 118, param1, OpenGlFaceAttachment.field_b, param2, this, PlayerGameData.field_b);
             var6 = SetBombletSprayRandomness.field_p;
             if (var6 != null) {
               if (var6.listener instanceof UiDropListener) {

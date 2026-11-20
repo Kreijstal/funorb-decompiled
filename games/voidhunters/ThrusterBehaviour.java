@@ -39,7 +39,7 @@ final class ThrusterBehaviour implements DiffableState {
           var11 = var10_int * GetNumStars.cosAngle(param2, (byte) 31) >> 8;
           var12 = var10_int * TextureLineShape.sinAngle(param2, param3 ^ 50) >> 8;
           param8.addForceAtPoint(var12, param4, param7, (byte) -117, var11);
-          if (veb.field_b == 0) {
+          if (BlueprintEditorText.field_b == 0) {
             if (param6 != 46) {
               param0.spawnParticles(1, -var11 >> GetSalvoHoldable.field_p, 0, TextureCombineSource.field_a, 30273, param4, 0, param7, -var12 >> GetSalvoHoldable.field_p);
             } else {
@@ -89,7 +89,7 @@ final class ThrusterBehaviour implements DiffableState {
     }
 
     final void setTrailEnabled(boolean param0, int param1) {
-        if (veb.field_b == 0) {
+        if (BlueprintEditorText.field_b == 0) {
           param0 = false;
         }
         if (param1 != 1024) {
@@ -415,7 +415,7 @@ final class ThrusterBehaviour implements DiffableState {
         int var3;
         var3 = param0;
         if (var3 == 46) {
-          return enb.field_c;
+          return AssassinationObjectiveText.field_c;
         }
         if (var3 == 13) {
           return CarouselSystemEvent.field_b;

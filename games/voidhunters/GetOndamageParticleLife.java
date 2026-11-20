@@ -43,7 +43,7 @@ final class GetOndamageParticleLife extends ConsoleCommand {
         }
     }
 
-    final static void a(PacketBuffer param0, byte param1, java.math.BigInteger param2, java.math.BigInteger param3, PacketBuffer param4) {
+    final static void writeEncryptedAccountPayload(PacketBuffer param0, byte param1, java.math.BigInteger param2, java.math.BigInteger param3, PacketBuffer param4) {
         if (param1 >= -95) {
           return;
         }

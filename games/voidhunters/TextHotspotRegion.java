@@ -126,7 +126,7 @@ final class TextHotspotRegion extends IntrusiveNode {
           if (0 >= param1) {
             throw new IllegalArgumentException();
           }
-          if (bd.a(param1, (byte) -95)) {
+          if (LobbyThemeBuilder.hasAtMostOneBitSet(param1, (byte) -95)) {
             stackIn_5_0 = (int)((long)param1 * ((long)param0.nextInt() & 4294967295L) >> 32);
             return stackIn_5_0;
           }

@@ -229,7 +229,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               if (NetworkMessageState.incomingOpcode == 7) {
                 NetworkMessageState.incomingOpcode = 3;
               }
-              dgb.field_b = AccountNameAvailabilityReplies.field_b.readString(-1);
+              GameJoinNotificationText.field_b = AccountNameAvailabilityReplies.field_b.readString(-1);
               SetShowTutorial.field_o = false;
               stackIn_87_0 = NetworkMessageState.incomingOpcode;
               return stackIn_87_0;
@@ -241,9 +241,9 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
             if (null == SetShipSpawnInvulnerabilityTime.field_o) {
               if (SetShowTutorial.field_o) {
                 if (LegacyOpenGlWaveWaterEffect.getNetworkReadIdleMillis(0) > 30000L) {
-                  dgb.field_b = SetSalvoRepairTimeMultiplier.field_o;
+                  GameJoinNotificationText.field_b = SetSalvoRepairTimeMultiplier.field_o;
                 } else {
-                  dgb.field_b = UiToggleButtonRenderer.field_f;
+                  GameJoinNotificationText.field_b = UiToggleButtonRenderer.field_f;
                 }
                 SetShowTutorial.field_o = false;
                 stackIn_100_0 = 3;

@@ -1158,7 +1158,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
         var10 = (long)(var6 >> EmailAvailabilityCheck.field_c);
         var12 = var8 * (long)param4 + (long)param0 * var10;
         var14 = this.torque;
-        this.torque = (int)((long)this.torque + (var12 >> tua.field_a));
+        this.torque = (int)((long)this.torque + (var12 >> ReturnToLobbyText.field_a));
         if (var12 > 0L) {
           if (this.torque < var14) {
             this.torque = 2147483647;

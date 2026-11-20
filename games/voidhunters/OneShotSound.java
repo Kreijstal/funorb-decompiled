@@ -8,7 +8,7 @@ final class OneShotSound extends IntrusiveNode {
     boolean positional;
     SoundPlayback playback;
     int x;
-    static gl field_e;
+    static CommonArchiveId field_e;
     static lkb field_j;
     static QuickChatDynamicCommand field_g;
     static Widget field_l;
@@ -20,7 +20,7 @@ final class OneShotSound extends IntrusiveNode {
         field_g = null;
         field_l = null;
         if (!param0) {
-          field_e = (gl) null;
+          field_e = (CommonArchiveId) null;
         }
     }
 
@@ -29,7 +29,7 @@ final class OneShotSound extends IntrusiveNode {
 
     static {
         field_z = "qw.A(";
-        field_e = new gl(8);
+        field_e = new CommonArchiveId(8);
         field_j = new lkb();
         field_g = new QuickChatDynamicCommand(13, 0, 1, 0);
     }

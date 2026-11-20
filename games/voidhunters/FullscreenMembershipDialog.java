@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qh extends ResizableModalPanel implements UiActionListener {
-    private UiFocusableComponent field_M;
+final class FullscreenMembershipDialog extends ResizableModalPanel implements UiActionListener {
+    private UiFocusableComponent closeButton;
     static String field_L;
     static String field_N;
-    private UiFocusableComponent field_K;
+    private UiFocusableComponent membersButton;
     static int field_J;
 
-    private final void m(byte param0) {
+    private final void dismiss(byte param0) {
         if (!this.active) {
           return;
         }
         this.active = false;
         if (param0 != -10) {
-          this.field_M = (UiFocusableComponent) null;
+          this.closeButton = (UiFocusableComponent) null;
         }
     }
 
@@ -27,21 +27,21 @@ final class qh extends ResizableModalPanel implements UiActionListener {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 98) {
-            if (null != this.field_K) {
-              this.field_K.requestFocus(0, (UiComponent) (this));
+            if (null != this.membersButton) {
+              this.membersButton.requestFocus(0, (UiComponent) (this));
               return true;
             }
-            this.field_M.requestFocus(0, (UiComponent) (this));
+            this.closeButton.requestFocus(0, (UiComponent) (this));
             return true;
           }
           if (param0 != -15834) {
-            qh.clearSharedReferences((byte) 46);
+            FullscreenMembershipDialog.clearSharedReferences((byte) 46);
           }
           if (param1 != 99) {
             stackIn_11_0 = super.handleKey(-15834, param1, param2, param3);
             return stackIn_11_0;
           }
-          this.field_M.requestFocus(0, (UiComponent) (this));
+          this.closeButton.requestFocus(0, (UiComponent) (this));
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -63,7 +63,7 @@ final class qh extends ResizableModalPanel implements UiActionListener {
         field_L = null;
     }
 
-    qh(ModalStack param0) {
+    FullscreenMembershipDialog(ModalStack param0) {
         super(param0, 200, 130);
         UiComponent var2 = null;
         try {
@@ -75,15 +75,15 @@ final class qh extends ResizableModalPanel implements UiActionListener {
           var2.renderer = (UiRenderer) ((Object) new UiTextStyle(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(-18756, var2);
           if (GetPhasedEnergyBeamPulsetime.isGuestMode((byte) 90)) {
-            this.field_K = this.a((UiListener) (this), GetLaserBeamProjectileDamage.field_s, 125);
+            this.membersButton = this.addChoiceButton((UiListener) (this), GetLaserBeamProjectileDamage.field_s, 125);
           }
-          this.field_M = this.a((UiListener) (this), MissionCondition.field_b, 125);
+          this.closeButton = this.addChoiceButton((UiListener) (this), MissionCondition.field_b, 125);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qh.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final UiFocusableComponent a(UiListener param0, String param1, int param2) {
+    private final UiFocusableComponent addChoiceButton(UiListener param0, String param1, int param2) {
         UiFocusableComponent var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
@@ -134,18 +134,18 @@ final class qh extends ResizableModalPanel implements UiActionListener {
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (param3 != this.field_K) {
-            if (this.field_M == param3) {
-              this.m((byte) -10);
+          if (param3 != this.membersButton) {
+            if (this.closeButton == param3) {
+              this.dismiss((byte) -10);
             }
           } else {
             NodeHashTable.transitionGuestClientState(0);
-            this.m((byte) -10);
+            this.dismiss((byte) -10);
           }
           if (param0 == 11) {
             return;
           }
-          this.m((byte) 55);
+          this.dismiss((byte) 55);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

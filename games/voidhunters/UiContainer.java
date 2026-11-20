@@ -284,7 +284,7 @@ class UiContainer extends UiComponent implements UiContainerMarker {
           if (GetFighterBayAimspeed.field_o != null) {
             RequestNewestBlackboxRecording.field_p.writeCircumfixedString((byte) 0, GetFighterBayAimspeed.field_o);
           }
-          GetOndamageParticleLife.a(RequestNewestBlackboxRecording.field_p, (byte) -126, SetSalvoDamageMultiplier.field_p, UnsupportedGpuMaterialEffect.field_g, SetTorpedoAcceleration.field_p);
+          GetOndamageParticleLife.writeEncryptedAccountPayload(RequestNewestBlackboxRecording.field_p, (byte) -126, SetSalvoDamageMultiplier.field_p, UnsupportedGpuMaterialEffect.field_g, SetTorpedoAcceleration.field_p);
           RequestNewestBlackboxRecording.field_p.writeLengthShort(RequestNewestBlackboxRecording.field_p.position - var5_int, -125);
           TileTextureOperation.flushSocketOutput(-1, 111);
           return;

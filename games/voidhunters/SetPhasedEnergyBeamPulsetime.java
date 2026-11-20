@@ -90,7 +90,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
         int var8 = 0;
         try {
           var2_int = PlayerGameData.field_b;
-          var3 = uia.field_b;
+          var3 = OpenGlFaceAttachment.field_b;
           var4 = DeveloperConsole.field_q.font.getLineCount(param0, 500);
           var5 = 6 + DeveloperConsole.field_q.font.getParagraphWidth(param0, 500);
           var6 = 2 + DialogMessagePanel.field_w * var4;

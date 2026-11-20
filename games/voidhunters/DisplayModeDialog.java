@@ -443,7 +443,7 @@ final class DisplayModeDialog extends ResizableModalPanel implements UiActionLis
                       return;
                     }
                     if (GetDebrisCarryOver.field_o <= 0) {
-                      this.modalStack.pushPanel(false, new qh(this.modalStack));
+                      this.modalStack.pushPanel(false, new FullscreenMembershipDialog(this.modalStack));
                       return;
                     }
                     this.selectMode(true, param3);

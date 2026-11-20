@@ -40,8 +40,8 @@ final class kia {
             stackIn_2_0 = (OpenGlSpriteTexture) null;
             return stackIn_2_0;
           }
-          if (!param1.field_n && (!bd.a(param2, (byte) -95) ||
-            !bd.a(param0, (byte) -95))) {
+          if (!param1.field_n && (!LobbyThemeBuilder.hasAtMostOneBitSet(param2, (byte) -95) ||
+            !LobbyThemeBuilder.hasAtMostOneBitSet(param0, (byte) -95))) {
             if (!param1.field_g) {
               stackIn_11_0 = new OpenGlSpriteTexture(param1, param7, param2, param0, GetSalvoaim.a(param2, (byte) -95), GetSalvoaim.a(param0, (byte) -109), param3, param4);
               return stackIn_11_0;

@@ -61,7 +61,7 @@ final class GetCountermeasureLauncherAimarc extends ConsoleCommand {
     final static void e(byte param0) {
         GetFighterRepairAmount.initializeSpecialOrders(11);
         GetPlayerRepairTime.b(false);
-        GetFixedaim.f((byte) 64);
+        GetFixedaim.initializeComponentDefinitions((byte) 64);
         jk.h(118);
         if (param0 <= 87) {
           field_o = true;

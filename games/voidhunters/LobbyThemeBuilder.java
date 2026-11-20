@@ -1,10 +1,10 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bd {
+final class LobbyThemeBuilder {
     static String field_a;
 
-    final static void a(int param0, int[] param1, ResourceArchive param2, ResourceArchive param3, SoftwareIndexedSprite2D[] param4) {
+    final static void buildLobbyTheme(int param0, int[] param1, ResourceArchive param2, ResourceArchive param3, SoftwareIndexedSprite2D[] param4) {
         Sprite[] dupTemp$0 = null;
         Sprite[] dupTemp$1 = null;
         Sprite[] dupTemp$2 = null;
@@ -296,7 +296,7 @@ final class bd {
         }
     }
 
-    final static boolean a(int param0, byte param1) {
+    final static boolean hasAtMostOneBitSet(int param0, byte param1) {
         if (param1 != -95) {
           return false;
         }

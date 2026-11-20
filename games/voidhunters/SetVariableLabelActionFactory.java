@@ -50,11 +50,11 @@ final class SetVariableLabelActionFactory implements GameStateFactory {
         var28 = VoidHunters.field_G;
         try {
           if (param7 > 0 &&
-            !bd.a(param7, (byte) -95)) {
+            !LobbyThemeBuilder.hasAtMostOneBitSet(param7, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
           if (param6 > 0 &&
-            !bd.a(param6, (byte) -95)) {
+            !LobbyThemeBuilder.hasAtMostOneBitSet(param6, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
           if (param5 != 32993) {

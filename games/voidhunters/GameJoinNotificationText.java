@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dgb {
-    static String field_a;
+final class GameJoinNotificationText {
+    static String playerJoinedGameText;
     static String field_b;
     private static String field_z;
 
@@ -11,11 +11,11 @@ final class dgb {
         if (param0) {
           return;
         }
-        field_a = null;
+        playerJoinedGameText = null;
     }
 
     static {
         field_z = "dgb.A(";
-        field_a = "<%0> has joined your game.";
+        playerJoinedGameText = "<%0> has joined your game.";
     }
 }

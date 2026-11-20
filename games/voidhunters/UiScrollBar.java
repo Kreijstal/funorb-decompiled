@@ -112,7 +112,7 @@ final class UiScrollBar extends UiArrayContainer implements UiActionListener {
             1 == this.track.activatedButton) {
             if (this.verticalScrolling) {
               if (!this.horizontalScrolling) {
-                if (uia.field_b <= param0 - (-this.thumb.y - (this.thumb.height >> 1))) {
+                if (OpenGlFaceAttachment.field_b <= param0 - (-this.thumb.y - (this.thumb.height >> 1))) {
                   this.setVerticalPositionAndNotify((byte) -17, this.verticalPosition - this.verticalPageStep);
                   return;
                 }
@@ -120,7 +120,7 @@ final class UiScrollBar extends UiArrayContainer implements UiActionListener {
                 return;
               }
               var5_intLifetime1 = -this.thumb.x - (this.thumb.width >> 1) + (-param1 + PlayerGameData.field_b) - this.x;
-              var6 = uia.field_b - param0 + (-this.y - (this.thumb.y + (this.thumb.height >> 1)));
+              var6 = OpenGlFaceAttachment.field_b - param0 + (-this.y - (this.thumb.y + (this.thumb.height >> 1)));
               if (Math.abs(var6) <= Math.abs(var5_intLifetime1)) {
                 if (var5_intLifetime1 <= 0) {
                   this.setHorizontalPositionAndNotify(-116, this.horizontalPosition - this.horizontalPageStep);

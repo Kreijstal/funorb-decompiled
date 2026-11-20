@@ -54,11 +54,11 @@ abstract class OpenGlGpuTexture implements GpuTexture {
         var22 = VoidHunters.field_G;
         try {
           if (0 < param4 &&
-            !bd.a(param4, (byte) -95)) {
+            !LobbyThemeBuilder.hasAtMostOneBitSet(param4, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
           if (param1 > 0 &&
-            !bd.a(param1, (byte) -95)) {
+            !LobbyThemeBuilder.hasAtMostOneBitSet(param1, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
           var6_int = this.format.componentCount;
@@ -257,11 +257,11 @@ abstract class OpenGlGpuTexture implements GpuTexture {
             this.pixelCount = -65;
           }
           if (param3 > 0 &&
-            !bd.a(param3, (byte) -95)) {
+            !LobbyThemeBuilder.hasAtMostOneBitSet(param3, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
           if (param2 > 0 &&
-            !bd.a(param2, (byte) -95)) {
+            !LobbyThemeBuilder.hasAtMostOneBitSet(param2, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
           var6_int = this.format.componentCount;
@@ -383,11 +383,11 @@ abstract class OpenGlGpuTexture implements GpuTexture {
         var26 = VoidHunters.field_G;
         try {
           if (param3 > 0 &&
-            !bd.a(param3, (byte) -95)) {
+            !LobbyThemeBuilder.hasAtMostOneBitSet(param3, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
           if (param2 > 0 &&
-            !bd.a(param2, (byte) -95)) {
+            !LobbyThemeBuilder.hasAtMostOneBitSet(param2, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
           if (ComponentAttachmentPlan.field_d != this.format) {

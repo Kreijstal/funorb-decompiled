@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ooa extends Widget {
-    private Widget[] field_yb;
-    private Widget[] field_vb;
-    int field_Ab;
-    private Widget field_wb;
+final class TabbedWidget extends Widget {
+    private Widget[] tabs;
+    private Widget[] pages;
+    int selectedTabIndex;
+    private Widget contentContainer;
     static String field_zb;
     static int field_xb;
 
-    ooa(long param0, Widget param1, String[] param2, Widget param3, Widget[] param4, int param5) {
+    TabbedWidget(long param0, Widget param1, String[] param2, Widget param3, Widget[] param4, int param5) {
         super(param0, (Widget) null);
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -27,24 +27,24 @@ final class ooa extends Widget {
         int var11 = 0;
         int var8_intLifetime1;
         try {
-          this.field_yb = new Widget[param2.length];
-          this.field_wb = new Widget(0L, param3);
-          this.field_vb = param4;
+          this.tabs = new Widget[param2.length];
+          this.contentContainer = new Widget(0L, param3);
+          this.pages = param4;
           for (var8_int = 0; var8_int < param2.length; var8_int++) {
             var9 = new Widget(0L, param1);
             var9.text = param2[var8_int];
-            this.field_yb[var8_int] = var9;
+            this.tabs[var8_int] = var9;
             this.addChild(-561, var9);
           }
-          this.addChild(-561, this.field_wb);
+          this.addChild(-561, this.contentContainer);
           var11 = 0;
           var8_intLifetime1 = var11;
           while (param4.length > var11) {
-            this.field_wb.addChild(-561, param4[var11]);
+            this.contentContainer.addChild(-561, param4[var11]);
             var11++;
           }
-          this.field_Ab = param5;
-          this.field_yb[param5].field_J = true;
+          this.selectedTabIndex = param5;
+          this.tabs[param5].field_J = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -78,12 +78,12 @@ final class ooa extends Widget {
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void setBoundsAndLayout(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         this.width = param1;
         this.y = param0;
         this.height = param5;
         this.x = param6;
-        this.a(param3, (byte) -107, param2);
+        this.layoutTabs(param3, (byte) -107, param2);
         int var8 = -32 % ((param4 - 15) / 35);
     }
 
@@ -94,7 +94,7 @@ final class ooa extends Widget {
         field_zb = null;
     }
 
-    private final void a(int param0, byte param1, int param2) {
+    private final void layoutTabs(int param0, byte param1, int param2) {
         Widget dupTemp$0 = null;
         int var4;
         int var5;
@@ -103,31 +103,31 @@ final class ooa extends Widget {
         int var8;
         int var4Lifetime1;
         var7 = VoidHunters.field_G;
-        for (var4 = 0; var4 < this.field_yb.length; var4++) {
-          var5 = this.width * var4 / this.field_yb.length;
-          var6 = (var4 + 1) * this.width / this.field_yb.length;
-          this.field_yb[var4].x = var5;
-          this.field_yb[var4].y = 0;
-          this.field_yb[var4].width = -var5 + var6;
-          this.field_yb[var4].height = param2;
+        for (var4 = 0; var4 < this.tabs.length; var4++) {
+          var5 = this.width * var4 / this.tabs.length;
+          var6 = (var4 + 1) * this.width / this.tabs.length;
+          this.tabs[var4].x = var5;
+          this.tabs[var4].y = 0;
+          this.tabs[var4].width = -var5 + var6;
+          this.tabs[var4].height = param2;
         }
-        this.field_wb.setBounds(0, -65, this.width, param2, this.height - param2);
+        this.contentContainer.setBounds(0, -65, this.width, param2, this.height - param2);
         var8 = 0;
         var4Lifetime1 = var8;
-        while (this.field_vb.length > var8) {
-          this.field_vb[var8].setBounds(param0, -48, -(param0 * 2) + this.field_wb.width, param0, -(2 * param0) + this.field_wb.height);
-          if (~var8 != ~this.field_Ab) {
-            dupTemp$0 = this.field_vb[var8];
+        while (this.pages.length > var8) {
+          this.pages[var8].setBounds(param0, -48, -(param0 * 2) + this.contentContainer.width, param0, -(2 * param0) + this.contentContainer.height);
+          if (~var8 != ~this.selectedTabIndex) {
+            dupTemp$0 = this.pages[var8];
             dupTemp$0.x = dupTemp$0.x + 10000;
           }
           var8++;
         }
         if (param1 != -107) {
-          this.a(-69, (byte) 80, 46);
+          this.layoutTabs(-69, (byte) 80, 46);
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
+    final static void drawCubicBezierCurve(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
         int var24 = 0;
         int var10_int = 0;
         int var11 = 0;
@@ -195,7 +195,7 @@ final class ooa extends Widget {
             }
           }
           if (param4 != -17572) {
-            ooa.clearSharedReferences(79);
+            TabbedWidget.clearSharedReferences(79);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -205,24 +205,24 @@ final class ooa extends Widget {
         }
     }
 
-    final void i(int param0) {
+    final void updateSelectedTab(int param0) {
         int var2 = 0;
         Widget dupTemp$0 = null;
         Widget dupTemp$1 = null;
         int var3;
         var3 = VoidHunters.field_G;
         if (param0 != 10000) {
-          this.field_vb = (Widget[]) null;
+          this.pages = (Widget[]) null;
         }
-        for (var2 = 0; var2 < this.field_yb.length; var2++) {
-          if (var2 != this.field_Ab &&
-            this.field_yb[var2].field_o != 0) {
-            this.field_yb[this.field_Ab].field_J = false;
-            dupTemp$0 = this.field_vb[this.field_Ab];
+        for (var2 = 0; var2 < this.tabs.length; var2++) {
+          if (var2 != this.selectedTabIndex &&
+            this.tabs[var2].field_o != 0) {
+            this.tabs[this.selectedTabIndex].field_J = false;
+            dupTemp$0 = this.pages[this.selectedTabIndex];
             dupTemp$0.x = dupTemp$0.x + 10000;
-            this.field_Ab = var2;
-            this.field_yb[var2].field_J = true;
-            dupTemp$1 = this.field_vb[var2];
+            this.selectedTabIndex = var2;
+            this.tabs[var2].field_J = true;
+            dupTemp$1 = this.pages[var2];
             dupTemp$1.x = dupTemp$1.x - 10000;
           }
         }

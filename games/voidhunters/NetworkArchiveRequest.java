@@ -105,7 +105,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             GetSpinningBladeAimspeed.field_q = 11;
           }
         }
-        dga.field_a = true;
+        OpenGlFaceAttachmentState.field_a = true;
     }
 
     NetworkArchiveRequest() {

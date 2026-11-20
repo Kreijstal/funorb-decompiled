@@ -5,7 +5,7 @@ import java.io.*;
 
 final class PartitionZoneListFactory implements GameStateFactory {
     static int[] field_a;
-    static pia field_b;
+    static DateOfBirthEntryPanel field_b;
 
     public static void clearSharedReferences(int param0) {
         if (param0 != -1) {

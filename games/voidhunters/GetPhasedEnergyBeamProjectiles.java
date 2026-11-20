@@ -138,7 +138,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           WeaponBehaviour.field_d = param1[18];
           GetMomentOfInertiaPredivideDownshift.field_q = param1[37];
           UiComboBoxRenderer.field_a = param1[222];
-          tua.field_a = param1[180];
+          ReturnToLobbyText.field_a = param1[180];
           CarouselPlayerEvent.field_m = param1[30];
           GetShieldsDirectionalRadius.field_p = param1[167];
           GetFighterRepairAmount.field_o = param1[116];
@@ -174,7 +174,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           ComponentBehaviourFactory.field_c = param1[193];
           Particle.field_p = param1[219];
           OpenGlGlyphMask.field_e = param1[128];
-          ooa.field_xb = param1[151];
+          TabbedWidget.field_xb = param1[151];
           LogoMaterial.field_a = param1[65];
           GetVelocitySustain.field_o = param1[38];
           SetGrapplingHookMaxLength.field_p = param1[186];
@@ -206,7 +206,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetBombletSprayProjectileOndamageParticles.field_q = param1[229];
           SetPointDefenceLaserProjectiles.field_o = param1[50];
           GetMissionResnetResourceTickTime.field_o = param1[168];
-          gl.field_d = param1[8];
+          CommonArchiveId.field_d = param1[8];
           SetPointDefenceLaserEnergyUsed.field_o = param1[200];
           MachineGunWeaponDefinition.field_b = param1[20];
           SetUseRectFill.field_p = param1[184];
@@ -231,7 +231,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetMaxShipSize.field_o = param1[141];
           ValidationState.field_a = param1[33];
           LegacyOpenGlUnderwaterEffect.field_k = param1[208];
-          enb.field_c = param1[171];
+          AssassinationObjectiveText.field_c = param1[171];
           GameMenuScreen.field_e = param1[181];
           Particle.field_h = param1[232];
           SetShieldsDirectionalRadius.field_o = param1[169];
@@ -279,7 +279,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           SelectableIconLabelWidget.field_wb = param1[117];
           fj.field_b = param1[86];
           Particle.field_m = param1[205];
-          qh.field_J = param1[88];
+          FullscreenMembershipDialog.field_J = param1[88];
           GetMissionTerrainNebulaProbability.field_p = param1[143];
           SoftwareFaceAttachment.field_b = param1[161];
           AsteroidFieldFactory.field_a = param1[57];
@@ -312,7 +312,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           Particle.field_j = param1[234];
           GetToggledScoreboard.field_r = param1[67];
           ServerInfo.field_f = param1[146];
-          veb.field_b = param1[1];
+          BlueprintEditorText.field_b = param1[1];
           GetAutoaim.field_o = param1[5];
           GetPointDefenceLaserAimspeed.field_p = param1[159];
           ConsoleCharacterStream.field_d = param1[137];

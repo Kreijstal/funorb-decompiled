@@ -24,7 +24,7 @@ final class SetMutatorVotes extends ConsoleCommand {
         var10 = VoidHunters.field_G;
         try {
           var1_int = GetMissionTerrainAsteroidProbability.field_p - ShieldBehaviour.field_d;
-          ShieldBehaviour.field_d = -(var1_int >> 1) + alb.field_b;
+          ShieldBehaviour.field_d = -(var1_int >> 1) + LobbyInviteSuggestionText.field_b;
           if (param0 != -1321004447) {
             field_o = (int[]) null;
           }
@@ -47,7 +47,7 @@ final class SetMutatorVotes extends ConsoleCommand {
             stackIn_12_1 = -37;
             stackIn_13_2 = !(0 > var4);
             var7 = lsa.a(stackIn_12_0, stackIn_12_1, stackIn_13_2);
-            var8 = -(var7 >> 1) + alb.field_b;
+            var8 = -(var7 >> 1) + LobbyInviteSuggestionText.field_b;
             if (0 <= var4) {
               if (UiAngleDialRenderer.field_c.selectedIndex == var4) {
                 stackIn_18_0 = StrongCacheReference.field_o;

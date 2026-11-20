@@ -57,7 +57,7 @@ abstract class NetworkGameClient extends GameApplet {
             this.showGameError("reconnect", 0);
           }
           NetworkArchiveRequest.f((byte) -119);
-          SetMessageFadetime.a(dgb.field_b, (byte) 72, var2);
+          SetMessageFadetime.a(GameJoinNotificationText.field_b, (byte) 72, var2);
           GetSpinningBladeAimarc.field_o = true;
           StrongCacheReference.field_p = MonotonicMillisClock.currentTimeMillis(false) + 15000L;
         } else {
@@ -227,7 +227,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (MapClearanceArea.field_a == 0 &&
           !SetWeaponProjectileSpeedMultiply.b(true)) {
-          dga.field_a = false;
+          OpenGlFaceAttachmentState.field_a = false;
         }
         if (0 == UiDraggableContainer.field_z &&
           ThrusterBehaviour.loadMasterIndex(param1 - 90)) {
@@ -249,7 +249,7 @@ abstract class NetworkGameClient extends GameApplet {
             ppb.field_a.loadIndex((byte) -81)) {
             if (ppb.field_a.containsNamedGroup(true, "")) {
               if (ppb.field_a.isNamedGroupReady(32171, "")) {
-                dga.a(true, ppb.field_a);
+                OpenGlFaceAttachmentState.loadInterfaceTexts(true, ppb.field_a);
                 ppb.field_a = null;
                 MidiNote.resetFrameTiming(2096);
               }
@@ -533,7 +533,7 @@ abstract class NetworkGameClient extends GameApplet {
     }
 
     final void initializeNetworkClient(boolean param0, int param1, int param2) {
-        this.initializeNetworkClient(-119, TextureBezierShape.field_q.field_a, SetShipPersistence.field_r.field_a, param2, PopupMenuWidget.field_Bb.field_a, ChatMessage.field_b.field_a, param0, SoftwareFramebuffer.field_f.field_a);
+        this.initializeNetworkClient(-119, TextureBezierShape.field_q.id, SetShipPersistence.field_r.id, param2, PopupMenuWidget.field_Bb.id, ChatMessage.field_b.id, param0, SoftwareFramebuffer.field_f.id);
         int var4 = -37 % ((param1 - 30) / 50);
     }
 
@@ -676,11 +676,11 @@ abstract class NetworkGameClient extends GameApplet {
             throw new IllegalStateException();
           }
           if (var4 == 1) {
-            var5 = ComponentAttachmentPlan.a(GetFixedaim.g((byte) -65), true, SetMachineGunFireForce.e(120));
+            var5 = ComponentAttachmentPlan.a(GetFixedaim.createEmailRequestText((byte) -65), true, SetMachineGunFireForce.e(120));
             if (var5 != -1) {
-              AccountNameAvailabilityReplies.handleNameAvailabilityReply(dgb.field_b, var5, (byte) 70, gob.field_a);
-              gob.field_a = null;
-              dgb.field_b = null;
+              AccountNameAvailabilityReplies.handleNameAvailabilityReply(GameJoinNotificationText.field_b, var5, (byte) 70, GameInvitationText.field_a);
+              GameInvitationText.field_a = null;
+              GameJoinNotificationText.field_b = null;
             }
             var12 = SetExplosionPushMultiplier.a(-127);
             if (var12 != null) {
@@ -689,11 +689,11 @@ abstract class NetworkGameClient extends GameApplet {
           }
           var5Lifetime1 = 60 % ((-49 - param0) / 41);
           if (var4 == 2) {
-            var6_int = RoundResult.a(SetVariableAction.b(119), GetPointDefenceLaserRandomness.a(52), this.affiliateId, (byte) 111, LoadBlackboxRecording.a(88), ThrusterBehaviourFactory.a(31065), MassDriverWeaponDefinition.d(true));
+            var6_int = RoundResult.a(SetVariableAction.b(119), GetPointDefenceLaserRandomness.getCurrentAccountEmail(52), this.affiliateId, (byte) 111, LoadBlackboxRecording.a(88), ThrusterBehaviourFactory.a(31065), MassDriverWeaponDefinition.d(true));
             if (-1 != var6_int) {
-              MonotonicMillisClock.handleAccountCreationReply(var6_int, -19342, gob.field_a, dgb.field_b);
-              gob.field_a = null;
-              dgb.field_b = null;
+              MonotonicMillisClock.handleAccountCreationReply(var6_int, -19342, GameInvitationText.field_a, GameJoinNotificationText.field_b);
+              GameInvitationText.field_a = null;
+              GameJoinNotificationText.field_b = null;
             }
           }
           if (3 == var4) {
@@ -708,8 +708,8 @@ abstract class NetworkGameClient extends GameApplet {
               var6_intLifetime1 = GetPhasedEnergyBeamPulseFadetime.a(this.officialHost, this.affiliateId, LoadBlackboxRecording.a(83), (byte) 13, false, MassDriverWeaponDefinition.d(true));
               if (var6_intLifetime1 != -1) {
                 if (var6_intLifetime1 != 0) {
-                  SetMessageFadetime.a(dgb.field_b, (byte) 110, var6_intLifetime1);
-                  dgb.field_b = null;
+                  SetMessageFadetime.a(GameJoinNotificationText.field_b, (byte) 110, var6_intLifetime1);
+                  GameJoinNotificationText.field_b = null;
                 } else {
                   UiComboBoxList.field_C = SetTorpedoAimarc.field_p;
                   TeamShipComponentConditionFactory.b((byte) 49);

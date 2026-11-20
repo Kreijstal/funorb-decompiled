@@ -232,7 +232,7 @@ final class World implements DiffableState, CompactGameState {
                   if (var4.getType((byte) -104) != 3) {
                     var2_ref_tj.life = 0;
                   } else {
-                    var2_ref_tj.life = var2_ref_tj.life - ooa.field_xb;
+                    var2_ref_tj.life = var2_ref_tj.life - TabbedWidget.field_xb;
                     var4.markBeamImpact(-24805);
                   }
                   var4.life = 0;
@@ -9208,7 +9208,7 @@ final class World implements DiffableState, CompactGameState {
         int var5Lifetime1;
         var11 = VoidHunters.field_G;
         try {
-          if (1 <= gl.field_d) {
+          if (1 <= CommonArchiveId.field_d) {
             var14 = this.debris;
             for (var4 = 0; var14.length > var4; var4++) {
               var5_ref_nbb = var14[var4];

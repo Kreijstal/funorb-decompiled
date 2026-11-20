@@ -119,7 +119,7 @@ final class SetReverbDry extends ConsoleCommand {
     final static int a(int param0, int param1) {
         int var3 = VoidHunters.field_G;
         SoftwareSprite2D.field_b = null;
-        gob.field_c = 0;
+        GameInvitationText.field_c = 0;
         TextureLineShape.field_h = null;
         int var2 = SetDefaultFiringLeeway.field_p;
         SetDefaultFiringLeeway.field_p = GetLaserProjectiles.field_p;

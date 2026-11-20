@@ -120,7 +120,7 @@ final class RandomLinesTextureOperation extends TextureOperation {
           }
         }
         if (!param1) {
-          RandomLinesTextureOperation.e((byte) 3);
+          RandomLinesTextureOperation.isEmailAvailabilityPending((byte) 3);
         }
         return var3;
     }
@@ -184,14 +184,14 @@ final class RandomLinesTextureOperation extends TextureOperation {
 
     final void postDecode(byte param0) {
         if (param0 >= -35) {
-          RandomLinesTextureOperation.e((byte) -123);
+          RandomLinesTextureOperation.isEmailAvailabilityPending((byte) -123);
         }
         GetTrapMouse.e((byte) -120);
     }
 
-    final static boolean e(byte param0) {
+    final static boolean isEmailAvailabilityPending(byte param0) {
         if (param0 != -34) {
-          RandomLinesTextureOperation.e((byte) 68);
+          RandomLinesTextureOperation.isEmailAvailabilityPending((byte) 68);
         }
         return !GetBombletSprayPushMultiplier.emailAvailabilityCheck.isComplete(4) ? true : false;
     }

@@ -226,7 +226,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
     final static void updateRematchMenuLabel(int param0) {
         int var2 = VoidHunters.field_G;
         if ((1 << MatchingFieldValidator.field_g.localPlayerIndex & MatchingFieldValidator.field_g.state.rematchRequestMask) != 0) {
-          HighscoreValueRequest.menuActionLabels[10] = !MatchingFieldValidator.field_g.field_h ? GetMachineGunAimarc.field_o : csa.field_b;
+          HighscoreValueRequest.menuActionLabels[10] = !MatchingFieldValidator.field_g.field_h ? GetMachineGunAimarc.field_o : ConvoyObjectiveText.cancelUnratedRematchText;
           if (param0 > -76) {
             field_e = false;
             return;

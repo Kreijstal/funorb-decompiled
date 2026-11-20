@@ -3,7 +3,7 @@
  */
 final class SetShipPersistence extends ConsoleCommand {
     static int field_s;
-    static gl field_r;
+    static CommonArchiveId field_r;
     static String field_p;
     static float field_o;
     static int field_q;
@@ -119,7 +119,7 @@ final class SetShipPersistence extends ConsoleCommand {
 
     static {
         field_s = 131072;
-        field_r = new gl(1);
+        field_r = new CommonArchiveId(1);
         field_o = 1.0f;
         field_p = "Remove selected event";
     }

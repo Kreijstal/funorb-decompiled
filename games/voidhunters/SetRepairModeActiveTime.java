@@ -204,7 +204,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
             SetOndamageParticleLife.field_o.addChild(-561, GetPointDefenceLaserProjectileDamage.field_o);
           }
           SetOndamageParticleLife.field_o.addChild(-561, WaterTextures.field_f);
-          GetShipToShipRamDamage.field_q = new Widget(0L, SetPlayerRepairAmount.field_q, tua.field_b.toUpperCase());
+          GetShipToShipRamDamage.field_q = new Widget(0L, SetPlayerRepairAmount.field_q, ReturnToLobbyText.returnToLobbyText.toUpperCase());
           GetWeaponParticleSpeedDownshift.field_q = new Widget(0L, pa.field_a);
           SetPhysicsCollisionGrapplingHookForceMultiplier.field_o = new Widget(0L, GpuEnvironmentMapSource.field_c);
           ProxySocketConnector.field_e = new Widget(0L, TutorialController.field_b, DisplayModeErrorDialog.field_J.toUpperCase());

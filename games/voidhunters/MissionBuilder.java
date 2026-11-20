@@ -1994,7 +1994,7 @@ final class MissionBuilder implements DiffableState {
             var8_int = 1;
             var9 = 0;
             while (true) {
-              if (ncb.field_a.length <= var9) {
+              if (LobbyOptionCompatibilityRules.optionCombinations.length <= var9) {
                 if (var8_int == 0) {
                   decompiledFrameCompleted2 = false;
                   break;
@@ -2003,7 +2003,7 @@ final class MissionBuilder implements DiffableState {
                 decompiledFrameCompleted1 = false;
                 break;
               }
-              var10_ref_int__ = ncb.field_a[var9];
+              var10_ref_int__ = LobbyOptionCompatibilityRules.optionCombinations[var9];
               var11 = 0;
               var12 = 0;
               scanLoop1: while (true) {

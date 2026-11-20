@@ -430,11 +430,11 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
             var6_int = (int)(var2_long - var4);
             SoftwareFaceAttachment.field_a = ((var6_int >> 1) + 32000) / var6_int;
           }
-          fieldTemp$1 = ncb.field_b;
-          ncb.field_b = ncb.field_b + 1;
+          fieldTemp$1 = LobbyOptionCompatibilityRules.field_b;
+          LobbyOptionCompatibilityRules.field_b = LobbyOptionCompatibilityRules.field_b + 1;
           if (50 < fieldTemp$1) {
             GetShowTutorial.field_o = true;
-            ncb.field_b = ncb.field_b - 50;
+            LobbyOptionCompatibilityRules.field_b = LobbyOptionCompatibilityRules.field_b - 50;
             igb.field_a.setSize(GetDebrisSurvives.field_p, SetPointDefenceLaserReload.field_p);
             igb.field_a.setVisible(true);
             if (PointDefenceLaserWeaponDefinition.field_c != null &&

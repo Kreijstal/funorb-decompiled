@@ -47,7 +47,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static int a(int param0, dj param1, dj param2, int param3, int param4, String param5, boolean param6) {
+    final static int a(int param0, AccountRequestText param1, AccountRequestText param2, int param3, int param4, String param5, boolean param6) {
         int var12 = 0;
         int stackIn_6_0 = 0;
         PacketBuffer stackIn_17_0 = null;
@@ -89,10 +89,10 @@ final class GetBoostersActiveTime extends ConsoleCommand {
         int var9Lifetime3;
         var13 = VoidHunters.field_G;
         try {
-          var14 = param1.b((byte) 41);
+          var14 = param1.getText((byte) 41);
           var11_ref_String = var14;
           var11_ref_StringLifetime1 = var14;
-          var8 = param2.b((byte) 69);
+          var8 = param2.getText((byte) 69);
           var11_ref_StringLifetime2 = var8;
           var11_ref_StringLifetime3 = var8;
           if (null == SetShipSpawnInvulnerabilityTime.field_o &&
@@ -109,7 +109,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               SetTorpedoAcceleration.field_p.writeInt(CountermeasureLauncherWeaponDefinition.field_b.nextInt(), param4 + 332614536);
               stackIn_17_0 = SetTorpedoAcceleration.field_p;
               stackIn_17_1 = 0;
-              if (!param1.a(true)) {
+              if (!param1.shouldIncludeInEncryptedPayload(true)) {
                 stackIn_18_2 = "";
               } else {
                 stackIn_18_2 = var14;
@@ -117,7 +117,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               ((PacketBuffer) (Object) stackIn_17_0).writeCircumfixedString((byte) stackIn_17_1, stackIn_18_2);
               stackIn_20_0 = SetTorpedoAcceleration.field_p;
               stackIn_20_1 = 0;
-              if (!param2.a(true)) {
+              if (!param2.shouldIncludeInEncryptedPayload(true)) {
                 stackIn_21_2 = "";
               } else {
                 stackIn_21_2 = var8;
@@ -126,7 +126,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               RequestNewestBlackboxRecording.field_p.writeByte(0, 16);
               RequestNewestBlackboxRecording.field_p.position = RequestNewestBlackboxRecording.field_p.position + 1;
               var9 = RequestNewestBlackboxRecording.field_p.position;
-              GetOndamageParticleLife.a(RequestNewestBlackboxRecording.field_p, (byte) -105, SetSalvoDamageMultiplier.field_p, UnsupportedGpuMaterialEffect.field_g, SetTorpedoAcceleration.field_p);
+              GetOndamageParticleLife.writeEncryptedAccountPayload(RequestNewestBlackboxRecording.field_p, (byte) -105, SetSalvoDamageMultiplier.field_p, UnsupportedGpuMaterialEffect.field_g, SetTorpedoAcceleration.field_p);
               RequestNewestBlackboxRecording.field_p.writeLengthByte(-var9 + RequestNewestBlackboxRecording.field_p.position, -129);
             } else {
               var9 = 0;
@@ -151,7 +151,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
                 var11_ref_StringLifetime4 = "";
               }
               RequestNewestBlackboxRecording.field_p.writeString(true, var11_ref_StringLifetime4);
-              GetOndamageParticleLife.a(RequestNewestBlackboxRecording.field_p, (byte) -108, SetSalvoDamageMultiplier.field_p, UnsupportedGpuMaterialEffect.field_g, SetTorpedoAcceleration.field_p);
+              GetOndamageParticleLife.writeEncryptedAccountPayload(RequestNewestBlackboxRecording.field_p, (byte) -108, SetSalvoDamageMultiplier.field_p, UnsupportedGpuMaterialEffect.field_g, SetTorpedoAcceleration.field_p);
               RequestNewestBlackboxRecording.field_p.writeLengthShort(RequestNewestBlackboxRecording.field_p.position - var10, -124);
             }
             TileTextureOperation.flushSocketOutput(-1, 113);
@@ -164,11 +164,11 @@ final class GetBoostersActiveTime extends ConsoleCommand {
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
               TextureCombineMappings.field_c = ComponentWordEncoder.field_a;
-              gob.field_a = new String[var9Lifetime1 - 100];
+              GameInvitationText.field_a = new String[var9Lifetime1 - 100];
             } else {
               if (var9Lifetime1 == 248) {
                 ShieldInfoPool.writeSessionMarkerCookie(MissionList.b((byte) -124), param4 ^ 0);
-                dgb.field_b = CurveTextureOperation.field_j;
+                GameJoinNotificationText.field_b = CurveTextureOperation.field_j;
                 FighterBayWeaponDefinition.l(param4 - 125);
                 SetShowTutorial.field_o = false;
                 stackIn_34_0 = var9Lifetime1;
@@ -191,9 +191,9 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               var10Lifetime1 = AccountNameAvailabilityReplies.field_b.readUnsignedShort(1869);
               AccountNameAvailabilityReplies.field_b.position = 0;
               if (ShipBlueprint.a(var10Lifetime1, param4 + 30000)) {
-                var11 = gob.field_a.length;
+                var11 = GameInvitationText.field_a.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  gob.field_a[var12] = AccountNameAvailabilityReplies.field_b.readCircumfixedString(-1609246200);
+                  GameInvitationText.field_a[var12] = AccountNameAvailabilityReplies.field_b.readCircumfixedString(-1609246200);
                 }
                 FighterBayWeaponDefinition.l(-122);
                 SetShowTutorial.field_o = false;
@@ -213,7 +213,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
                 SetNebulaProximityFadeDownshift.a(MissionList.b((byte) -123), var9_ref_String, -1);
               }
             } else {
-              dgb.field_b = AccountNameAvailabilityReplies.field_b.readString(-1);
+              GameJoinNotificationText.field_b = AccountNameAvailabilityReplies.field_b.readString(-1);
             }
             FighterBayWeaponDefinition.l(-122);
             SetShowTutorial.field_o = false;
@@ -223,9 +223,9 @@ final class GetBoostersActiveTime extends ConsoleCommand {
           if (SetShipSpawnInvulnerabilityTime.field_o == null) {
             if (SetShowTutorial.field_o) {
               if (30000L < LegacyOpenGlWaveWaterEffect.getNetworkReadIdleMillis(0)) {
-                dgb.field_b = SetSalvoRepairTimeMultiplier.field_o;
+                GameJoinNotificationText.field_b = SetSalvoRepairTimeMultiplier.field_o;
               } else {
-                dgb.field_b = UiToggleButtonRenderer.field_f;
+                GameJoinNotificationText.field_b = UiToggleButtonRenderer.field_f;
               }
               SetShowTutorial.field_o = false;
               stackIn_63_0 = 249;

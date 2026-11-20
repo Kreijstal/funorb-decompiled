@@ -362,7 +362,7 @@ class Widget extends WidgetNode {
         if (GpuVertexNormal.field_b == 0) {
           this.field_C = 0;
         }
-        stackIn_35_1 = (!GetPlayerRepairAmount.field_p) && (PlayerGameData.field_b >= SoftwareRasterizer2D.clipLeft) && (PlayerGameData.field_b < SoftwareRasterizer2D.clipRight) && (SoftwareRasterizer2D.clipTop <= uia.field_b) && (SoftwareRasterizer2D.clipBottom > uia.field_b);
+        stackIn_35_1 = (!GetPlayerRepairAmount.field_p) && (PlayerGameData.field_b >= SoftwareRasterizer2D.clipLeft) && (PlayerGameData.field_b < SoftwareRasterizer2D.clipRight) && (SoftwareRasterizer2D.clipTop <= OpenGlFaceAttachment.field_b) && (SoftwareRasterizer2D.clipBottom > OpenGlFaceAttachment.field_b);
         this.field_Q = stackIn_35_1;
         stackIn_40_1 = (this.field_Q) && (this.field_C == GpuVertexNormal.field_b) && (param3);
         this.field_O = stackIn_40_1;
@@ -382,7 +382,7 @@ class Widget extends WidgetNode {
         SoftwareRasterizer2D.setClip(var8, var9, var10, var11);
         if (this.field_C != 0 &&
           this.draggable) {
-          this.y = -this.field_n + uia.field_b - param4;
+          this.y = -this.field_n + OpenGlFaceAttachment.field_b - param4;
           this.x = -param1 - this.field_r + PlayerGameData.field_b;
           if (this.x < 0) {
             this.x = 0;

@@ -160,8 +160,8 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
             }
             if (var4 == 0 &&
               SetBots.field_q > SetMachineGunEnergyUsed.field_p &&
-              var3 < uia.field_b &&
-              SettingsChange.field_e.height + var3 > uia.field_b) {
+              var3 < OpenGlFaceAttachment.field_b &&
+              SettingsChange.field_e.height + var3 > OpenGlFaceAttachment.field_b) {
               if (269 - SettingsChange.field_e.width < PlayerGameData.field_b &&
                 PlayerGameData.field_b < 269) {
                 SetBots.field_q = SetMachineGunEnergyUsed.field_p;
@@ -176,7 +176,7 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
           if (!param0) {
             return 0;
           }
-          DialogMessagePanel.field_z.updatePointerSelection(GetGrapplingHookAimspeed.a(-1, qs.field_a, Particle.field_H), 5620, GetGrapplingHookAimspeed.a(-1, uia.field_b, PlayerGameData.field_b));
+          DialogMessagePanel.field_z.updatePointerSelection(GetGrapplingHookAimspeed.a(-1, qs.field_a, Particle.field_H), 5620, GetGrapplingHookAimspeed.a(-1, OpenGlFaceAttachment.field_b, PlayerGameData.field_b));
           if (DialogMessagePanel.field_z.isActivationRequested((byte) -120)) {
             if (DialogMessagePanel.field_z.selectedIndex == 0) {
               stackIn_61_0 = 3;

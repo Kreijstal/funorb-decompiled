@@ -144,7 +144,7 @@ final class UiDraggableContainer extends UiSingleChildContainer {
             ((UiFocusableComponent) (this.child)).enabled) &&
             this.pressedButton == 1) {
             var5_int = -this.grabOffsetX + (PlayerGameData.field_b - param1);
-            var6 = -this.grabOffsetY + uia.field_b - param0;
+            var6 = -this.grabOffsetY + OpenGlFaceAttachment.field_b - param0;
             if (this.x != var5_int ||
               this.y != var6) {
               this.x = var5_int;

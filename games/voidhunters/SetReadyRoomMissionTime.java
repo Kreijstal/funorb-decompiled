@@ -56,18 +56,18 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
               !ShipComponentFactory.field_a) {
               SetMassDriverReload.a(6045);
               if (!ShipComponentFactory.field_a) {
-                GetTorpedoReload.field_q = uia.field_b;
+                GetTorpedoReload.field_q = OpenGlFaceAttachment.field_b;
                 GetUseDetailLines.field_o = PlayerGameData.field_b;
                 GetBots.field_o = GpuVertexNormal.field_b;
                 ArchiveLoadRequest.field_c = SetDebrisPartitioned.field_o;
               } else {
                 if (~CarouselEvent.field_h == ~PlayerGameData.field_b &&
-                  GetComponentBreakingExplosionForceMultiplier.field_p == uia.field_b) {
+                  GetComponentBreakingExplosionForceMultiplier.field_p == OpenGlFaceAttachment.field_b) {
                   GetBots.field_o = GpuVertexNormal.field_b;
                   ArchiveLoadRequest.field_c = SetDebrisPartitioned.field_o;
                   return;
                 }
-                GetTorpedoReload.field_q = GetTorpedoReload.field_q + (-GetComponentBreakingExplosionForceMultiplier.field_p + uia.field_b);
+                GetTorpedoReload.field_q = GetTorpedoReload.field_q + (-GetComponentBreakingExplosionForceMultiplier.field_p + OpenGlFaceAttachment.field_b);
                 GetUseDetailLines.field_o = GetUseDetailLines.field_o + (PlayerGameData.field_b - CarouselEvent.field_h);
                 GetUseDetailLines.field_o = Math.max(0, Math.min(param2 - 1, GetUseDetailLines.field_o));
                 GetTorpedoReload.field_q = Math.max(0, Math.min(param3 - 1, GetTorpedoReload.field_q));
@@ -89,12 +89,12 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
             }
           }
           if (!ShipComponentFactory.field_a) {
-            GetTorpedoReload.field_q = uia.field_b;
+            GetTorpedoReload.field_q = OpenGlFaceAttachment.field_b;
             GetUseDetailLines.field_o = PlayerGameData.field_b;
           } else {
             if (~CarouselEvent.field_h != ~PlayerGameData.field_b ||
-              GetComponentBreakingExplosionForceMultiplier.field_p != uia.field_b) {
-              GetTorpedoReload.field_q = GetTorpedoReload.field_q + (-GetComponentBreakingExplosionForceMultiplier.field_p + uia.field_b);
+              GetComponentBreakingExplosionForceMultiplier.field_p != OpenGlFaceAttachment.field_b) {
+              GetTorpedoReload.field_q = GetTorpedoReload.field_q + (-GetComponentBreakingExplosionForceMultiplier.field_p + OpenGlFaceAttachment.field_b);
               GetUseDetailLines.field_o = GetUseDetailLines.field_o + (PlayerGameData.field_b - CarouselEvent.field_h);
               GetUseDetailLines.field_o = Math.max(0, Math.min(param2 - 1, GetUseDetailLines.field_o));
               GetTorpedoReload.field_q = Math.max(0, Math.min(param3 - 1, GetTorpedoReload.field_q));
@@ -112,12 +112,12 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
           GetComponentBreakingExplosionForceMultiplier.field_p = param3 >> 1;
           if (!SetMachineGunPulsetime.e(0)) {
             if (!ShipComponentFactory.field_a) {
-              GetTorpedoReload.field_q = uia.field_b;
+              GetTorpedoReload.field_q = OpenGlFaceAttachment.field_b;
               GetUseDetailLines.field_o = PlayerGameData.field_b;
             } else {
               if (~CarouselEvent.field_h != ~PlayerGameData.field_b ||
-                GetComponentBreakingExplosionForceMultiplier.field_p != uia.field_b) {
-                GetTorpedoReload.field_q = GetTorpedoReload.field_q + (-GetComponentBreakingExplosionForceMultiplier.field_p + uia.field_b);
+                GetComponentBreakingExplosionForceMultiplier.field_p != OpenGlFaceAttachment.field_b) {
+                GetTorpedoReload.field_q = GetTorpedoReload.field_q + (-GetComponentBreakingExplosionForceMultiplier.field_p + OpenGlFaceAttachment.field_b);
                 GetUseDetailLines.field_o = GetUseDetailLines.field_o + (PlayerGameData.field_b - CarouselEvent.field_h);
                 GetUseDetailLines.field_o = Math.max(0, Math.min(param2 - 1, GetUseDetailLines.field_o));
                 GetTorpedoReload.field_q = Math.max(0, Math.min(param3 - 1, GetTorpedoReload.field_q));
@@ -135,19 +135,19 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
               !ShipComponentFactory.field_a) {
               SetMassDriverReload.a(6045);
               if (!ShipComponentFactory.field_a) {
-                GetTorpedoReload.field_q = uia.field_b;
+                GetTorpedoReload.field_q = OpenGlFaceAttachment.field_b;
                 GetUseDetailLines.field_o = PlayerGameData.field_b;
                 GetBots.field_o = GpuVertexNormal.field_b;
                 ArchiveLoadRequest.field_c = SetDebrisPartitioned.field_o;
                 return;
               }
               if (~CarouselEvent.field_h == ~PlayerGameData.field_b &&
-                GetComponentBreakingExplosionForceMultiplier.field_p == uia.field_b) {
+                GetComponentBreakingExplosionForceMultiplier.field_p == OpenGlFaceAttachment.field_b) {
                 GetBots.field_o = GpuVertexNormal.field_b;
                 ArchiveLoadRequest.field_c = SetDebrisPartitioned.field_o;
                 return;
               }
-              GetTorpedoReload.field_q = GetTorpedoReload.field_q + (-GetComponentBreakingExplosionForceMultiplier.field_p + uia.field_b);
+              GetTorpedoReload.field_q = GetTorpedoReload.field_q + (-GetComponentBreakingExplosionForceMultiplier.field_p + OpenGlFaceAttachment.field_b);
               GetUseDetailLines.field_o = GetUseDetailLines.field_o + (PlayerGameData.field_b - CarouselEvent.field_h);
               GetUseDetailLines.field_o = Math.max(0, Math.min(param2 - 1, GetUseDetailLines.field_o));
               GetTorpedoReload.field_q = Math.max(0, Math.min(param3 - 1, GetTorpedoReload.field_q));
@@ -164,12 +164,12 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
             }
             if (param1) {
               if (!ShipComponentFactory.field_a) {
-                GetTorpedoReload.field_q = uia.field_b;
+                GetTorpedoReload.field_q = OpenGlFaceAttachment.field_b;
                 GetUseDetailLines.field_o = PlayerGameData.field_b;
               } else {
                 if (~CarouselEvent.field_h != ~PlayerGameData.field_b ||
-                  GetComponentBreakingExplosionForceMultiplier.field_p != uia.field_b) {
-                  GetTorpedoReload.field_q = GetTorpedoReload.field_q + (-GetComponentBreakingExplosionForceMultiplier.field_p + uia.field_b);
+                  GetComponentBreakingExplosionForceMultiplier.field_p != OpenGlFaceAttachment.field_b) {
+                  GetTorpedoReload.field_q = GetTorpedoReload.field_q + (-GetComponentBreakingExplosionForceMultiplier.field_p + OpenGlFaceAttachment.field_b);
                   GetUseDetailLines.field_o = GetUseDetailLines.field_o + (PlayerGameData.field_b - CarouselEvent.field_h);
                   GetUseDetailLines.field_o = Math.max(0, Math.min(param2 - 1, GetUseDetailLines.field_o));
                   GetTorpedoReload.field_q = Math.max(0, Math.min(param3 - 1, GetTorpedoReload.field_q));
@@ -185,12 +185,12 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
             } else {
               if (!ShipComponentFactory.field_a) {
                 if (!ShipComponentFactory.field_a) {
-                  GetTorpedoReload.field_q = uia.field_b;
+                  GetTorpedoReload.field_q = OpenGlFaceAttachment.field_b;
                   GetUseDetailLines.field_o = PlayerGameData.field_b;
                 } else {
                   if (~CarouselEvent.field_h != ~PlayerGameData.field_b ||
-                    GetComponentBreakingExplosionForceMultiplier.field_p != uia.field_b) {
-                    GetTorpedoReload.field_q = GetTorpedoReload.field_q + (-GetComponentBreakingExplosionForceMultiplier.field_p + uia.field_b);
+                    GetComponentBreakingExplosionForceMultiplier.field_p != OpenGlFaceAttachment.field_b) {
+                    GetTorpedoReload.field_q = GetTorpedoReload.field_q + (-GetComponentBreakingExplosionForceMultiplier.field_p + OpenGlFaceAttachment.field_b);
                     GetUseDetailLines.field_o = GetUseDetailLines.field_o + (PlayerGameData.field_b - CarouselEvent.field_h);
                     GetUseDetailLines.field_o = Math.max(0, Math.min(param2 - 1, GetUseDetailLines.field_o));
                     GetTorpedoReload.field_q = Math.max(0, Math.min(param3 - 1, GetTorpedoReload.field_q));
@@ -206,11 +206,11 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
               } else {
                 SetSpinningBladeAimarc.e((byte) -128);
                 if (!ShipComponentFactory.field_a) {
-                  GetTorpedoReload.field_q = uia.field_b;
+                  GetTorpedoReload.field_q = OpenGlFaceAttachment.field_b;
                   GetUseDetailLines.field_o = PlayerGameData.field_b;
                 } else {
                   if (~CarouselEvent.field_h != ~PlayerGameData.field_b) {
-                    GetTorpedoReload.field_q = GetTorpedoReload.field_q + (-GetComponentBreakingExplosionForceMultiplier.field_p + uia.field_b);
+                    GetTorpedoReload.field_q = GetTorpedoReload.field_q + (-GetComponentBreakingExplosionForceMultiplier.field_p + OpenGlFaceAttachment.field_b);
                     GetUseDetailLines.field_o = GetUseDetailLines.field_o + (PlayerGameData.field_b - CarouselEvent.field_h);
                     GetUseDetailLines.field_o = Math.max(0, Math.min(param2 - 1, GetUseDetailLines.field_o));
                     GetTorpedoReload.field_q = Math.max(0, Math.min(param3 - 1, GetTorpedoReload.field_q));
@@ -222,8 +222,8 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
                     var4 = stackIn_93_0;
                     SetTorpedoProjectiles.field_o.movePointer((java.awt.Component) (var4), GetComponentBreakingExplosionForceMultiplier.field_p, CarouselEvent.field_h, 14);
                   } else {
-                    if (GetComponentBreakingExplosionForceMultiplier.field_p != uia.field_b) {
-                      GetTorpedoReload.field_q = GetTorpedoReload.field_q + (-GetComponentBreakingExplosionForceMultiplier.field_p + uia.field_b);
+                    if (GetComponentBreakingExplosionForceMultiplier.field_p != OpenGlFaceAttachment.field_b) {
+                      GetTorpedoReload.field_q = GetTorpedoReload.field_q + (-GetComponentBreakingExplosionForceMultiplier.field_p + OpenGlFaceAttachment.field_b);
                       GetUseDetailLines.field_o = GetUseDetailLines.field_o + (PlayerGameData.field_b - CarouselEvent.field_h);
                       GetUseDetailLines.field_o = Math.max(0, Math.min(param2 - 1, GetUseDetailLines.field_o));
                       GetTorpedoReload.field_q = Math.max(0, Math.min(param3 - 1, GetTorpedoReload.field_q));

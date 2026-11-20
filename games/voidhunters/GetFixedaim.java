@@ -8,18 +8,18 @@ final class GetFixedaim extends ConsoleCommand {
     static int field_p;
     static int field_o;
 
-    final static dj g(byte param0) {
+    final static AccountRequestText createEmailRequestText(byte param0) {
         if (param0 != -65) {
-          GetFixedaim.g((byte) 0);
+          GetFixedaim.createEmailRequestText((byte) 0);
         }
-        return new dj(GetPointDefenceLaserRandomness.a(param0 + 117), RandomLinesTextureOperation.e((byte) -34));
+        return new AccountRequestText(GetPointDefenceLaserRandomness.getCurrentAccountEmail(param0 + 117), RandomLinesTextureOperation.isEmailAvailabilityPending((byte) -34));
     }
 
     GetFixedaim(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void fillCircleUnclipped(int param0, int param1, int param2, int param3, int param4) {
         int var5_int = 0;
         int var6 = 0;
         int var7 = 0;
@@ -38,7 +38,7 @@ final class GetFixedaim extends ConsoleCommand {
         var13 = VoidHunters.field_G;
         try {
           if (param4 != 2) {
-            GetFixedaim.f((byte) -69);
+            GetFixedaim.initializeComponentDefinitions((byte) -69);
           }
           var5_int = 0;
           var6 = param3;
@@ -81,8 +81,8 @@ final class GetFixedaim extends ConsoleCommand {
         field_q = null;
     }
 
-    final static void f(byte param0) {
-        class $CfrPartitionedState {
+    final static void initializeComponentDefinitions(byte param0) {
+        class ComponentDefinitionInitializer {
             int var1_int;
             int var2;
             int var3;
@@ -188,7 +188,7 @@ final class GetFixedaim extends ConsoleCommand {
             Throwable caughtException;
             byte param0;
             boolean finished;
-            $CfrPartitionedState(byte initialParam0) {
+            ComponentDefinitionInitializer(byte initialParam0) {
                 this.param0 = initialParam0;
                 this.var1_int = 0;
                 this.var2 = 0;
@@ -294,7 +294,7 @@ final class GetFixedaim extends ConsoleCommand {
                 this.statePc = 0;
                 this.caughtException = null;
             }
-            void runPartition0() {
+            void initializeEquipmentGeometry() {
                 scanLoop1: while (true) {
                     switch (statePc) {
                         case 0: {
@@ -524,7 +524,7 @@ final class GetFixedaim extends ConsoleCommand {
                     }
                 }
             }
-            void runPartition1() {
+            void initializeHullAndAsteroidDefinitions() {
                 scanLoop1: while (true) {
                     switch (statePc) {
                         case 9: {
@@ -969,7 +969,7 @@ final class GetFixedaim extends ConsoleCommand {
                     }
                 }
             }
-            void runPartition2() {
+            void finalizeComponentDefinitionBuffers() {
                 scanLoop1: while (true) {
                     switch (statePc) {
                         case 13: {
@@ -1170,13 +1170,13 @@ final class GetFixedaim extends ConsoleCommand {
             void run() {
                 while (!finished) {
                     if (statePc <= 8) {
-                        runPartition0();
+                        initializeEquipmentGeometry();
                     }
                     else if (statePc <= 10) {
-                        runPartition1();
+                        initializeHullAndAsteroidDefinitions();
                     }
                     else if (statePc <= 35) {
-                        runPartition2();
+                        finalizeComponentDefinitionBuffers();
                     }
                     else {
                         throw new IllegalStateException("invalid CFG state " + statePc);
@@ -1184,7 +1184,7 @@ final class GetFixedaim extends ConsoleCommand {
                 }
             }
         }
-        $CfrPartitionedState decompiledState = new $CfrPartitionedState(param0);
+        ComponentDefinitionInitializer decompiledState = new ComponentDefinitionInitializer(param0);
         decompiledState.run();
     }
 

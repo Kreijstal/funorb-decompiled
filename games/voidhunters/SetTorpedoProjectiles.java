@@ -251,7 +251,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                 }
               } else {
                 if (var12.field_Eb) {
-                  var12.field_Ib.text = SetReverbGain.a(gob.field_b, new String[]{var20}, 74);
+                  var12.field_Ib.text = SetReverbGain.a(GameInvitationText.invitingPlayerText, new String[]{var20}, 74);
                   var12.field_Nb.text = SetMissileLauncherProjectiles.field_p;
                 } else {
                   if (var12.field_Fb) {
@@ -387,7 +387,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                     } else {
                       if ((var8 & ~var12.field_Ab) != 0) {
                         var25_int = ArchiveRequestQueue.highestOneBit(~var12.field_Ab & var8, 1302374146);
-                        var24Lifetime2 = ooa.field_zb;
+                        var24Lifetime2 = TabbedWidget.field_zb;
                         if (0 < var25_int &&
                           MissionFactory.field_a != null &&
                           var25_int <= MissionFactory.field_a.length &&

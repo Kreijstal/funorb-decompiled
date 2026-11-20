@@ -1808,7 +1808,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         int var2 = -18 % ((param0 + 54) / 63);
         this.perspectiveProjectionValid = false;
         this.buildPerspectiveProjection((byte) -94);
-        if (pia.field_x == this.projectionMode) {
+        if (DateOfBirthEntryPanel.field_x == this.projectionMode) {
           this.updateProjection(17975);
         }
     }

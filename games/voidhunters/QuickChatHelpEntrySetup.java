@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class jka {
-    final static void a(QuickChatCategoryDefinition param0, byte param1) {
+final class QuickChatHelpEntrySetup {
+    final static void configureHelpEntry(QuickChatCategoryDefinition param0, byte param1) {
         if (param1 != -111) {
           return;
         }

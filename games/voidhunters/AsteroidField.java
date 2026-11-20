@@ -613,7 +613,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime19 = HuffmanCodec.fetchLocalizedResource((byte) -100, "save_confirmation");
           if (var2Lifetime19 != null) {
-            veb.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime19);
+            BlueprintEditorText.overwriteConfirmationText = Cp1252Strings.decode((byte) -125, var2Lifetime19);
           }
           var2Lifetime20 = HuffmanCodec.fetchLocalizedResource((byte) -4, "scores");
           if (null != var2Lifetime20) {
@@ -893,7 +893,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime89 = HuffmanCodec.fetchLocalizedResource((byte) -109, "editor");
           if (var2Lifetime89 != null) {
-            veb.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime89);
+            BlueprintEditorText.editorText = Cp1252Strings.decode((byte) -125, var2Lifetime89);
           }
           var2Lifetime90 = HuffmanCodec.fetchLocalizedResource((byte) -33, "reloading");
           if (var2Lifetime90 != null) {
@@ -1265,7 +1265,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime182 = HuffmanCodec.fetchLocalizedResource((byte) -59, "ORDER_GRAPPLES_FIRE");
           if (null != var2Lifetime182) {
-            qh.field_L = Cp1252Strings.decode((byte) -125, var2Lifetime182);
+            FullscreenMembershipDialog.field_L = Cp1252Strings.decode((byte) -125, var2Lifetime182);
           }
           var2Lifetime183 = HuffmanCodec.fetchLocalizedResource((byte) -20, "ORDER_GRAPPLES_RECALL");
           if (var2Lifetime183 != null) {
@@ -1281,7 +1281,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime186 = HuffmanCodec.fetchLocalizedResource((byte) -12, "ORDER_SHIELDS_TOGGLE_SHORT");
           if (var2Lifetime186 != null) {
-            gl.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime186);
+            CommonArchiveId.field_c = Cp1252Strings.decode((byte) -125, var2Lifetime186);
           }
           var2Lifetime187 = HuffmanCodec.fetchLocalizedResource((byte) -78, "ORDER_SHIELDS_TOGGLE");
           if (var2Lifetime187 != null) {
@@ -1425,7 +1425,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime222 = HuffmanCodec.fetchLocalizedResource((byte) -110, "VOTE_CONVOY_DESC_B");
           if (var2Lifetime222 != null) {
-            csa.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime222);
+            ConvoyObjectiveText.stopEnemyConvoyText = Cp1252Strings.decode((byte) -125, var2Lifetime222);
           }
           var2Lifetime223 = HuffmanCodec.fetchLocalizedResource((byte) -106, "VOTE_CONVOY_BALANCED");
           if (null != var2Lifetime223) {
@@ -1437,7 +1437,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime225 = HuffmanCodec.fetchLocalizedResource((byte) -26, "VOTE_ASSASSINATE_VIP");
           if (null != var2Lifetime225) {
-            enb.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime225);
+            AssassinationObjectiveText.assassinationText = Cp1252Strings.decode((byte) -125, var2Lifetime225);
           }
           var2Lifetime226 = HuffmanCodec.fetchLocalizedResource((byte) -111, "VOTE_ASSASSINATE_VIP_DESC");
           if (var2Lifetime226 != null) {
@@ -1629,7 +1629,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime273 = HuffmanCodec.fetchLocalizedResource((byte) -100, "win_match_with_less_time_message");
           if (null != var2Lifetime273) {
-            gl.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime273);
+            CommonArchiveId.field_b = Cp1252Strings.decode((byte) -125, var2Lifetime273);
           }
           var2Lifetime274 = HuffmanCodec.fetchLocalizedResource((byte) -107, "win_match_with_more_wins_message");
           if (var2Lifetime274 != null) {
@@ -1681,7 +1681,7 @@ final class AsteroidField implements DiffableState, SpatialStateMarker, CompactG
           }
           var2Lifetime286 = HuffmanCodec.fetchLocalizedResource((byte) -95, "tutorial_fogofwar_label");
           if (null != var2Lifetime286) {
-            uia.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime286);
+            OpenGlFaceAttachment.field_a = Cp1252Strings.decode((byte) -125, var2Lifetime286);
           }
           var2Lifetime287 = HuffmanCodec.fetchLocalizedResource((byte) -60, "tutorial_grabbing");
           if (var2Lifetime287 != null) {

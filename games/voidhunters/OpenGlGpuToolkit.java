@@ -372,8 +372,8 @@ final class OpenGlGpuToolkit extends GpuToolkit {
             stackIn_2_0 = (GpuTexture2D) null;
             return stackIn_2_0;
           }
-          if (!this.field_Xc && (!bd.a(param0, (byte) -95) ||
-            !bd.a(param3, (byte) -95))) {
+          if (!this.field_Xc && (!LobbyThemeBuilder.hasAtMostOneBitSet(param0, (byte) -95) ||
+            !LobbyThemeBuilder.hasAtMostOneBitSet(param3, (byte) -95))) {
             if (this.field_Zc) {
               stackIn_9_0 = new OpenGlGpuRectangleTexture(this, param0, param3, param2, param6, param4);
               return (GpuTexture2D) ((Object) stackIn_9_0);
@@ -923,8 +923,8 @@ final class OpenGlGpuToolkit extends GpuToolkit {
             var10 = (TextureCoordinateMode) null;
             this.setTextureCoordinateMode((byte) -46, (TextureCoordinateMode) null);
           }
-          if (!this.field_Xc && (!bd.a(param7, (byte) -95) ||
-            !bd.a(param4, (byte) -95))) {
+          if (!this.field_Xc && (!LobbyThemeBuilder.hasAtMostOneBitSet(param7, (byte) -95) ||
+            !LobbyThemeBuilder.hasAtMostOneBitSet(param4, (byte) -95))) {
             if (this.field_Zc) {
               stackIn_12_0 = new OpenGlGpuRectangleTexture(this, param0, param7, param4, param1, param3, param5);
               return (GpuTexture2D) ((Object) stackIn_12_0);
@@ -1161,8 +1161,8 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           if (param7 != 11) {
             this.createCubeTexture(true, 116, (int[][]) null, -28);
           }
-          if (!this.field_Xc && (!bd.a(param4, (byte) -95) ||
-            !bd.a(param5, (byte) -95))) {
+          if (!this.field_Xc && (!LobbyThemeBuilder.hasAtMostOneBitSet(param4, (byte) -95) ||
+            !LobbyThemeBuilder.hasAtMostOneBitSet(param5, (byte) -95))) {
             if (this.field_Zc) {
               stackIn_10_0 = new OpenGlGpuRectangleTexture(this, param2, param4, param5, param1, param0, param3);
               return (GpuTexture2D) ((Object) stackIn_10_0);
@@ -1512,8 +1512,8 @@ final class OpenGlGpuToolkit extends GpuToolkit {
             stackIn_2_0 = (GpuTexture2D) null;
             return stackIn_2_0;
           }
-          if (!this.field_Xc && (!bd.a(param1, (byte) -95) ||
-            !bd.a(param2, (byte) -95))) {
+          if (!this.field_Xc && (!LobbyThemeBuilder.hasAtMostOneBitSet(param1, (byte) -95) ||
+            !LobbyThemeBuilder.hasAtMostOneBitSet(param2, (byte) -95))) {
             if (this.field_Zc) {
               stackIn_11_0 = new OpenGlGpuRectangleTexture(this, param3, param4, param1, param2);
               return (GpuTexture2D) ((Object) stackIn_11_0);

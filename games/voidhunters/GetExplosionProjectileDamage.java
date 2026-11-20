@@ -219,7 +219,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
                     var19 = GetAiRepairTime.field_o;
                   }
                 } else {
-                  var19 = bd.field_a;
+                  var19 = LobbyThemeBuilder.field_a;
                 }
               } else {
                 if (VariableCondition.field_e) {
@@ -258,7 +258,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
             !GetBloomThresholdPercentage.field_p) {
             return;
           }
-          PartitionZoneListFactory.field_b = new pia(0, 0, 0, 0);
+          PartitionZoneListFactory.field_b = new DateOfBirthEntryPanel(0, 0, 0, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

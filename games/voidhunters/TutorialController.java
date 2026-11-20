@@ -830,14 +830,14 @@ final class TutorialController {
                       if ((var43 != 0) &&
                         (var22 != 0)) {
                         var24_intLifetime2 = PlayerGameData.field_b;
-                        var25Lifetime1 = uia.field_b;
+                        var25Lifetime1 = OpenGlFaceAttachment.field_b;
                         var26 = OpenGlVertexNormal.field_d[0];
                         var26.draw(-(var26.getWidth() / 2) + var24_intLifetime2, -(var26.getHeight() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[1], 255) << 24, 1);
                       }
                     } else {
                       if (var22 != 0) {
                         var24_intLifetime2 = PlayerGameData.field_b;
-                        var25Lifetime1 = uia.field_b;
+                        var25Lifetime1 = OpenGlFaceAttachment.field_b;
                         var26 = OpenGlVertexNormal.field_d[0];
                         var26.draw(-(var26.getWidth() / 2) + var24_intLifetime2, -(var26.getHeight() / 2) + var25Lifetime1, 0, 16777215 | GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[1], 255) << 24, 1);
                       }
@@ -934,7 +934,7 @@ final class TutorialController {
                       this.completeHint((byte) 113, 4);
                     }
                     if (this.isHintVisible(4, -124)) {
-                      this.drawWorldHint(param0, param3, GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[4], 255), var16, var21_ref_int__Lifetime1, uia.field_a, 1619);
+                      this.drawWorldHint(param0, param3, GetMutatorVotes.computeHintAlpha(HardpointMatch.hintTimers[4], 255), var16, var21_ref_int__Lifetime1, OpenGlFaceAttachment.field_a, 1619);
                     }
                     GetMassDriverFireForce.activeHintIndex = var24_intLifetime1;
                   }

@@ -34,12 +34,12 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           HighscoreValueRequest.menuActionLabels[9] = PhasedEnergyBeamWeaponDefinition.field_b;
           HighscoreValueRequest.menuActionLabels[18] = DateOfBirthTextFields.field_D;
           HighscoreValueRequest.menuActionLabels[22] = GetSalvoaim.field_p;
-          HighscoreValueRequest.menuActionLabels[20] = veb.field_c;
+          HighscoreValueRequest.menuActionLabels[20] = BlueprintEditorText.editorText;
           HighscoreValueRequest.menuActionLabels[6] = null;
           HighscoreValueRequest.menuActionLabels[21] = SetCountermeasureLauncherFireForce.field_q;
           HighscoreValueRequest.menuActionLabels[3] = SetMissilesExplosionPower.field_o;
           HighscoreValueRequest.menuActionLabels[24] = MissionEvent.field_f + ":";
-          HighscoreValueRequest.menuActionLabels[11] = tua.field_b;
+          HighscoreValueRequest.menuActionLabels[11] = ReturnToLobbyText.returnToLobbyText;
           HighscoreValueRequest.menuActionLabels[14] = SaveShipDesignOrderDefinition.field_d;
           HighscoreValueRequest.menuActionLabels[2] = DialogMessagePanel.field_D;
           HighscoreValueRequest.menuActionLabels[15] = GetFightersPerPlayerMaximum.field_q;
@@ -156,7 +156,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetBlueprintSaveTime.specialOrderShortLabels[6] = SetBloomCoefficientPercentage.field_p;
           GetBlueprintSaveTime.specialOrderShortLabels[0] = SetDebrisFoundInPairs.field_o;
           GetBlueprintSaveTime.specialOrderShortLabels[4] = hla.field_b;
-          GetBlueprintSaveTime.specialOrderShortLabels[3] = gl.field_c;
+          GetBlueprintSaveTime.specialOrderShortLabels[3] = CommonArchiveId.field_c;
           GetBlueprintSaveTime.specialOrderShortLabels[5] = NormalMapTextureOperation.field_j;
           GetBlueprintSaveTime.specialOrderShortLabels[2] = Cp1252Strings.field_a;
           GetBlueprintSaveTime.specialOrderShortLabels[7] = NanosecondClock.field_b;
@@ -210,7 +210,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.specialOrderLabels[34] = ffb.field_a;
           GetGrapplingHookSpringConstant.specialOrderLabels[44] = ChatMessage.field_p;
           GetGrapplingHookSpringConstant.specialOrderLabels[41] = EnvironmentReflectionGpuMaterialEffect.field_e;
-          GetGrapplingHookSpringConstant.specialOrderLabels[0] = qh.field_L;
+          GetGrapplingHookSpringConstant.specialOrderLabels[0] = FullscreenMembershipDialog.field_L;
           GetGrapplingHookSpringConstant.specialOrderLabels[46] = SetLaserEnergyUsed.field_o;
           GetGrapplingHookSpringConstant.specialOrderLabels[22] = UrlJaggrabRequest.field_g;
           GetGrapplingHookSpringConstant.specialOrderLabels[39] = FlipTextureOperation.field_m;
@@ -224,7 +224,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
             GetGrapplingHookSpringConstant.specialOrderLabels[var1_int + 72] = SetReverbGain.a(SetMachineGunFireForce.field_o, new String[]{SetSpinningBladeSpinupSpeed.field_o[var1_int]}, 126);
           }
           ShipTeamCondition.field_f = new String[31];
-          ShipTeamCondition.field_f[2] = enb.field_a;
+          ShipTeamCondition.field_f[2] = AssassinationObjectiveText.assassinationText;
           ThrusterBehaviour.field_a = new String[31];
           ShipTeamCondition.field_f[24] = GetComponentBreakingExplosionForceMultiplier.field_o;
           ShipTeamCondition.field_f[30] = GetMachineGunPulsetime.field_o;

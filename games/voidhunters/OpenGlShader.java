@@ -39,11 +39,11 @@ final class OpenGlShader {
         var23 = VoidHunters.field_G;
         try {
           if (0 < param5 &&
-            !bd.a(param5, (byte) -95)) {
+            !LobbyThemeBuilder.hasAtMostOneBitSet(param5, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
           if (0 < param6 &&
-            !bd.a(param6, (byte) -95)) {
+            !LobbyThemeBuilder.hasAtMostOneBitSet(param6, (byte) -95)) {
             throw new IllegalArgumentException("");
           }
           var7_int = ParticleFactory.a((byte) -120, param2);

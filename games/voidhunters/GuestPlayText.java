@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cjb {
+final class GuestPlayText {
     static AccountRequestResult field_b;
-    static String field_a;
+    static String justPlayText;
     private static String field_z;
 
     public static void clearSharedReferences(int param0) {
-        field_a = null;
+        justPlayText = null;
         if (param0 != 0) {
-          cjb.clearSharedReferences(28);
+          GuestPlayText.clearSharedReferences(28);
           field_b = null;
           return;
         }
@@ -18,6 +18,6 @@ final class cjb {
 
     static {
         field_z = "cjb.A(";
-        field_a = "Just play";
+        justPlayText = "Just play";
     }
 }

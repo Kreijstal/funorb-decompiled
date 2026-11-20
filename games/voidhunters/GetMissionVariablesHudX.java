@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetMissionVariablesHudX extends ConsoleCommand {
-    static ud field_o;
+    static LoginTransitionDialog field_o;
 
     GetMissionVariablesHudX(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -26,7 +26,7 @@ final class GetMissionVariablesHudX extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            field_o = (ud) null;
+            field_o = (LoginTransitionDialog) null;
           }
           stackIn_3_0 = new ConsoleValue(GetBoostersActiveTime.field_p);
           return stackIn_3_0;

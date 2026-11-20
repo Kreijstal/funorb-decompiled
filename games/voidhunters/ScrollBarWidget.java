@@ -196,7 +196,7 @@ final class ScrollBarWidget extends Widget {
           if (0 != this.repeatDelay) {
             return false;
           }
-          if (this.thumb.field_db + this.thumb.screenY > uia.field_b) {
+          if (this.thumb.field_db + this.thumb.screenY > OpenGlFaceAttachment.field_b) {
             this.repeatDelay = 3;
             return true;
           }
@@ -211,7 +211,7 @@ final class ScrollBarWidget extends Widget {
         if (0 != this.repeatDelay) {
           return false;
         }
-        if (this.thumb.field_db + this.thumb.screenY > uia.field_b) {
+        if (this.thumb.field_db + this.thumb.screenY > OpenGlFaceAttachment.field_b) {
           this.repeatDelay = 3;
           return true;
         }
@@ -368,7 +368,7 @@ final class ScrollBarWidget extends Widget {
             this.repeatDelay = this.repeatDelay - 1;
           }
           if (this.repeatDelay == 0 &&
-            uia.field_b >= this.thumb.field_E + (this.thumb.screenY + this.thumb.field_db + this.thumb.height)) {
+            OpenGlFaceAttachment.field_b >= this.thumb.field_E + (this.thumb.screenY + this.thumb.field_db + this.thumb.height)) {
             this.repeatDelay = 3;
             return true;
           }

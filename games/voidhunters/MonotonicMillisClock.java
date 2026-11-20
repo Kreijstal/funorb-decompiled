@@ -40,15 +40,15 @@ final class MonotonicMillisClock {
           SetCountermeasureLauncherAimspeed.field_r = SetSniperCannonFireForce.field_o;
           if (param0 == 255) {
             stackIn_11_0 = !(SetDebrisCarryOverPercentage.field_p >= 13);
-            cjb.field_b = GpuIndexBufferOwner.createSuccessfulAccountResult(stackIn_11_0, param1 ^ -19341);
+            GuestPlayText.field_b = GpuIndexBufferOwner.createSuccessfulAccountResult(stackIn_11_0, param1 ^ -19341);
           } else {
             if (param0 < 100) {
-              cjb.field_b = GetArmageddonLength.createAccountErrorResult(param0, param3, (byte) -124);
+              GuestPlayText.field_b = GetArmageddonLength.createAccountErrorResult(param0, param3, (byte) -124);
             } else {
               if (param0 <= 105) {
-                cjb.field_b = MissionCondition.createAccountNameSuggestions(param2, (byte) -122);
+                GuestPlayText.field_b = MissionCondition.createAccountNameSuggestions(param2, (byte) -122);
               } else {
-                cjb.field_b = GetArmageddonLength.createAccountErrorResult(param0, param3, (byte) -124);
+                GuestPlayText.field_b = GetArmageddonLength.createAccountErrorResult(param0, param3, (byte) -124);
               }
             }
           }

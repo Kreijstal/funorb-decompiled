@@ -1,15 +1,15 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ncb {
-    static int[][] field_a;
+final class LobbyOptionCompatibilityRules {
+    static int[][] optionCombinations;
     static int field_b;
     private static String field_z;
 
     public static void clearSharedReferences(int param0) {
-        field_a = (int[][]) null;
+        optionCombinations = (int[][]) null;
         if (param0 != 500) {
-          ncb.clearSharedReferences(-91);
+          LobbyOptionCompatibilityRules.clearSharedReferences(-91);
         }
     }
 
