@@ -54,7 +54,7 @@ final class ChatMessage {
               }
             }
             param3.writeBits(-632, param1, param0);
-            var7 = BodyInZoneCondition.a(-103, -var5_int + var6);
+            var7 = BodyInZoneCondition.getIntegerEncodingBitLength(-103, -var5_int + var6);
             param3.writeBits(-632, var7, 6);
             param3.writeBits(-632, var5_int, 32);
             if (var7 > 0) {

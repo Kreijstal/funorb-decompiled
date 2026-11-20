@@ -48,7 +48,7 @@ final class PolarDisplacementTextureOperation extends TextureOperation {
         return var18;
     }
 
-    final static byte[] a(byte[] param0, int param1, int param2) {
+    final static byte[] copyByteArrayPrefix(byte[] param0, int param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -243,7 +243,7 @@ final class PolarDisplacementTextureOperation extends TextureOperation {
     }
 
     final void postDecode(byte param0) {
-        GetTrapMouse.e((byte) 124);
+        GetTrapMouse.initializeTextureTrigTables((byte) 124);
         if (param0 >= -35) {
           this.displacementScale = 33;
         }

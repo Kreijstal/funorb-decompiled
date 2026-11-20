@@ -42,7 +42,7 @@ final class HslAdjustTextureOperation extends TextureOperation {
           if (param3 != 88) {
             return;
           }
-          GetDebrisThrowable.a(false, "Finished unpacking raw fonts");
+          GetDebrisThrowable.logDeveloperMessage(false, "Finished unpacking raw fonts");
           GetFighterBayAimarc.field_o = true;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

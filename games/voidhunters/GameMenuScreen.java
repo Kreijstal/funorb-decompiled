@@ -633,7 +633,7 @@ final class GameMenuScreen {
                                                       if (this.inputState.isActivationRequested((byte) -119)) {
                                                         stackIn_193_0 = (!SetReverbFeedback.areAllHintsComplete(true)) ? 0 : 1;
                                                         var10_int = stackIn_193_0;
-                                                        GrayscaleTextureOperation.a(var10_int != 0, (byte) -90);
+                                                        GrayscaleTextureOperation.resetTutorialHints(var10_int != 0, (byte) -90);
                                                       }
                                                     } else {
                                                       if (23 == var10_int &&

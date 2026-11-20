@@ -11,7 +11,7 @@ final class GetShipToShipRamDamage extends ConsoleCommand {
           return;
         }
         if (param5 == param1) {
-          AwardVictoryToWinnerActionFactory.a(param6, param7, param2, param5, param0 + 1512, param4, param3);
+          AwardVictoryToWinnerActionFactory.fillBorderedCircle(param6, param7, param2, param5, param0 + 1512, param4, param3);
           return;
         }
         if (OpenGlTexture3D.rasterClipMinX > -param5 + param6) {

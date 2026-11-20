@@ -8,7 +8,7 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
     static int field_o;
     static int field_p;
 
-    final static short[] a(short[] param0, int param1, int param2) {
+    final static short[] copyShortArrayPrefix(short[] param0, int param1, int param2) {
         short[] var3 = null;
         RuntimeException var3_ref = null;
         short[] var4 = null;
@@ -21,7 +21,7 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
         try {
           if (param1 <= 70) {
             var4 = (short[]) null;
-            GetBombletSprayProjectileDamage.a((short[]) null, -85, 57);
+            GetBombletSprayProjectileDamage.copyShortArrayPrefix((short[]) null, -85, 57);
           }
           var5 = new short[param2];
           var3 = var5;

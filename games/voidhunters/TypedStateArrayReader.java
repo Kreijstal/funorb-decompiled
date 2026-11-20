@@ -37,7 +37,7 @@ final class TypedStateArrayReader {
               param1.length != var9) {
               param1 = param3.createArray(11995, var9);
             }
-            var10 = BodyInZoneCondition.a(-118, param0.length - 1);
+            var10 = BodyInZoneCondition.getIntegerEncodingBitLength(-118, param0.length - 1);
             for (var11 = 0; var9 > var11; var11++) {
               if (!LegacyOpenGlSpecularEffect.readBoolean(false, param5)) {
                 param1[var11] = null;

@@ -63,7 +63,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
         }
     }
 
-    final static int a(int param0, String param1) {
+    final static int getDefaultFontStringWidth(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int stackIn_1_0 = 0;

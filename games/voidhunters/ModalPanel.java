@@ -30,7 +30,7 @@ abstract class ModalPanel extends UiContainer {
 
     boolean updateAndCheckClosed(int param0) {
         if (param0 != 248) {
-          ModalPanel.d(true);
+          ModalPanel.clearFaceBucketCounts(true);
         }
         int var2 = this.getTargetOpacity(false);
         int var3 = var2 - this.opacity;
@@ -156,14 +156,14 @@ abstract class ModalPanel extends UiContainer {
     public static void clearSharedReferences(byte param0) {
         field_y = null;
         if (param0 != -17) {
-          ModalPanel.d(false);
+          ModalPanel.clearFaceBucketCounts(false);
           field_x = null;
           return;
         }
         field_x = null;
     }
 
-    final static void d(boolean param0) {
+    final static void clearFaceBucketCounts(boolean param0) {
         int[] var1 = null;
         int var2 = 0;
         int var3 = 0;

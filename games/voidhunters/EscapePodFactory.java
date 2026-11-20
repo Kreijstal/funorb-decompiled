@@ -64,7 +64,7 @@ final class EscapePodFactory implements GameStateFactory {
         return (SerializableGameState[]) ((Object) new EscapePod[param1]);
     }
 
-    final static String a(int param0, String param1) {
+    final static String addLocalPlayerBadges(int param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         String stackIn_5_0 = null;
@@ -73,7 +73,7 @@ final class EscapePodFactory implements GameStateFactory {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = SetMinimapHeight.a(FireGrapplesOrderDefinition.field_d, SetAngularVelocitySustain.field_p, false);
+          var2_int = SetMinimapHeight.classifyPlayerBadge(FireGrapplesOrderDefinition.field_d, SetAngularVelocitySustain.field_p, false);
           if (param0 == var2_int) {
             param1 = "<img=0>" + param1;
           }

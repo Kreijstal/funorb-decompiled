@@ -71,7 +71,7 @@ final class GetAiRepairTime extends ConsoleCommand {
             if (-1 != var7) {
               if (var2 != -1 && (!(Math.abs(var2 - var7) < 8) ||
                 !(8 > Math.abs(-var8 + var3)))) {
-                GetMissionVotes.a(var5, var3, var6, 2, var4, var2);
+                GetMissionVotes.drawSoftwareRasterRegion(var5, var3, var6, 2, var4, var2);
                 var2 = -1;
                 var3 = -1;
                 if ((var7 != -1)) {
@@ -97,7 +97,7 @@ final class GetAiRepairTime extends ConsoleCommand {
           }
           if (var2 != -1) {
             var6Lifetime1 = SoftwareRasterizer2D.height;
-            GetMissionVotes.a(var5, var3, var6Lifetime1, 2, var4, var2);
+            GetMissionVotes.drawSoftwareRasterRegion(var5, var3, var6Lifetime1, 2, var4, var2);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

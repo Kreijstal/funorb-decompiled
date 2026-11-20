@@ -67,11 +67,11 @@ final class LegacyOpenGlTurbulenceEffect extends LegacyOpenGlMaterialEffect {
             if (null == this.program) {
               return;
             }
-            var16 = ScrollPaneWidget.a(4, 0, 4, 3, false, 256, -1, 64, 0.4000000059604645f);
+            var16 = ScrollPaneWidget.generatePerlinNoiseGrid(4, 0, 4, 3, false, 256, -1, 64, 0.4000000059604645f);
             var12 = var16;
             var11 = var12;
             var3 = var11;
-            var23 = ScrollPaneWidget.a(4, 8, 4, 3, false, 256, -1, 64, 0.4000000059604645f);
+            var23 = ScrollPaneWidget.generatePerlinNoiseGrid(4, 8, 4, 3, false, 256, -1, 64, 0.4000000059604645f);
             this.noiseParameters = new float[32768];
             var5 = 0;
             for (var6 = 0; 256 > var6; var6++) {

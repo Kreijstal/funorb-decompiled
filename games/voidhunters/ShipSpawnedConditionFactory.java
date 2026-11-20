@@ -48,7 +48,7 @@ final class ShipSpawnedConditionFactory implements GameStateFactory {
             }
           }
           MissileLauncherWeaponDefinition.field_b = true;
-          GetDebrisThrowable.a(false, "Finished building models");
+          GetDebrisThrowable.logDeveloperMessage(false, "Finished building models");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -5,7 +5,7 @@ final class SetAutozoomSpeedDivide extends ConsoleCommand {
     static String field_o;
     static Widget field_p;
 
-    final static int[] a(int param0, boolean param1, int[] param2, byte param3) {
+    final static int[] addIntArrayValue(int param0, boolean param1, int[] param2, byte param3) {
         RuntimeException var4 = null;
         int[] stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;

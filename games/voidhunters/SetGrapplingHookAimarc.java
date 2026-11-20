@@ -40,7 +40,7 @@ final class SetGrapplingHookAimarc extends ConsoleCommand {
         }
     }
 
-    final static boolean a(GameSnapshot param0, byte param1) {
+    final static boolean canAdvancePastPlayerWait(GameSnapshot param0, byte param1) {
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

@@ -1332,7 +1332,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
                       if (var21.charAt(0) == 120 &&
                         var21.length() >= 3) {
                         var31 = (CharSequence) ((Object) var21.substring(1, 3));
-                        if (SetPointDefenceLaserAimarc.a(var31, 10)) {
+                        if (SetPointDefenceLaserAimarc.isValidDecimalInt(var31, 10)) {
                           var13 = 1;
                           var16 = var21.substring(1);
                         }
@@ -1346,7 +1346,7 @@ final class OpenGlGpuToolkit extends GpuToolkit {
                         }
                         if (var16.length() >= 4) {
                           var32 = (CharSequence) ((Object) var16.substring(0, 4));
-                          if (SetPointDefenceLaserAimarc.a(var32, 10)) {
+                          if (SetPointDefenceLaserAimarc.isValidDecimalInt(var32, 10)) {
                             var33 = (CharSequence) ((Object) var16.substring(0, 4));
                             var11_int = NebulaFieldFactory.parseDecimalInt(63, var33);
                             decompiledRegionSelector0 = 1;

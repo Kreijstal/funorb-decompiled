@@ -214,7 +214,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, Bo
         RuntimeException decompiledCaughtException = null;
         try {
           if (this.targetBody >= 0) {
-            param1 = SetAutozoomSpeedDivide.a(this.targetBody, true, param1, (byte) -14);
+            param1 = SetAutozoomSpeedDivide.addIntArrayValue(this.targetBody, true, param1, (byte) -14);
           }
           if (param0 > 99) {
             stackIn_6_0 = (int[]) (param1);

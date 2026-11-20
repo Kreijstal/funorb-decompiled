@@ -8,7 +8,7 @@ abstract class GraphicsHeap extends IntrusiveNode {
     protected GraphicsHeap() {
     }
 
-    final static int c(byte param0) {
+    final static int countVisiblePresetShips(byte param0) {
         int var2 = 0;
         int var1_int = 0;
         RuntimeException var1 = null;
@@ -21,7 +21,7 @@ abstract class GraphicsHeap extends IntrusiveNode {
         try {
           if (null == ArchiveIndexLoader.field_g) {
             if (param0 != -93) {
-              GraphicsHeap.c((byte) 43);
+              GraphicsHeap.countVisiblePresetShips((byte) 43);
             }
             stackIn_15_0 = 12;
             return stackIn_15_0;

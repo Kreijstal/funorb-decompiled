@@ -7,7 +7,7 @@ final class SetPointDefenceLaserAimarc extends ConsoleCommand {
     static AccountStatusDialog field_o;
     static Sprite[][] field_p;
 
-    final static boolean a(CharSequence param0, int param1) {
+    final static boolean isValidDecimalInt(CharSequence param0, int param1) {
         RuntimeException var2 = null;
         boolean stackIn_3_0 = false;
         RuntimeException stackIn_6_0 = null;

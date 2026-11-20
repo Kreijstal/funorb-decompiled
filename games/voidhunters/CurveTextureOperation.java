@@ -219,7 +219,7 @@ final class CurveTextureOperation extends TextureOperation {
         if (this.interpolationMode == 2) {
           this.buildEndpointMarkers(0);
         }
-        GetTrapMouse.e((byte) -21);
+        GetTrapMouse.initializeTextureTrigTables((byte) -21);
         this.buildCurveLookup(90);
     }
 

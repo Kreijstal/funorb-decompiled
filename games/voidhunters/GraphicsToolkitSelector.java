@@ -11,7 +11,7 @@ final class GraphicsToolkitSelector {
     final static void loadPlayerGameData(int param0, byte[] param1) {
         String var4 = null;
         PlayerGameData var2_ref = null;
-        GetDebrisThrowable.a(false, "Reading gamedata from server");
+        GetDebrisThrowable.logDeveloperMessage(false, "Reading gamedata from server");
         Object var2 = null;
         try {
           var2_ref = (PlayerGameData) (ProjectileFactory.decodeState(param1, 6429, AdjustVariableAction.field_c));
@@ -29,9 +29,9 @@ final class GraphicsToolkitSelector {
           return;
         }
         try {
-          GetDebrisThrowable.a(false, "Player gamedata=" + var2_ref);
+          GetDebrisThrowable.logDeveloperMessage(false, "Player gamedata=" + var2_ref);
           if (var2_ref != null) {
-            GetDebrisThrowable.a(false, "Player gamedata blueprint=" + var2_ref.blueprint);
+            GetDebrisThrowable.logDeveloperMessage(false, "Player gamedata blueprint=" + var2_ref.blueprint);
           }
           if (param0 != -29365) {
             field_b = (String) null;

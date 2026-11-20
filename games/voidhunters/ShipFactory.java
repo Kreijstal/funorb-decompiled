@@ -19,11 +19,11 @@ final class ShipFactory implements GameStateFactory {
         shieldInfoPool = null;
         if (param0 <= 65) {
           int[] var2 = (int[]) null;
-          ShipFactory.a((Random) null, (int[]) null, (byte) -97, false);
+          ShipFactory.chooseExtremeIndex((Random) null, (int[]) null, (byte) -97, false);
         }
     }
 
-    final static int a(Random param0, int[] param1, byte param2, boolean param3) {
+    final static int chooseExtremeIndex(Random param0, int[] param1, byte param2, boolean param3) {
         RuntimeException var4 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;

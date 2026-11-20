@@ -10,13 +10,13 @@ final class SecondaryNodeDequeIterator implements Iterator {
     static String field_c;
     private DualLinkNode nextNode;
 
-    final static void a(int param0) {
+    final static void shutdownClient(int param0) {
         FullscreenExit.exitFullscreen((byte) -95);
         if (null != GammaCorrection.canvas) {
           ShieldInfoPool.detachCanvasInput(GammaCorrection.canvas, param0 ^ 92);
         }
         if (param0 != 1) {
-          SecondaryNodeDequeIterator.a(121);
+          SecondaryNodeDequeIterator.shutdownClient(121);
           SmoothedNanoTickClock.clearKeyboardHandlerReference(-87);
           CarouselPlayerEventFactory.clearMouseHandlerReference(14194);
           GetPedrosRepairModeSwitchtime.closeArchiveResources(16928);

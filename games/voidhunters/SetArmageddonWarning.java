@@ -20,7 +20,7 @@ final class SetArmageddonWarning extends ConsoleCommand {
           if (OpenGlPostEffect.isRepeatedCharacter(121, param1)) {
             return false;
           }
-          if (GetDebrisCarryOver.a(param1, 15)) {
+          if (GetDebrisCarryOver.isOutsideInputLengthBounds(param1, 15)) {
             return false;
           }
           if (0 == param0.length()) {

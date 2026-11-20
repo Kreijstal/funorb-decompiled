@@ -114,7 +114,7 @@ final class DebugRequest extends DebugSendable implements DiffableState {
           if (var4 == 0) {
             return;
           }
-          SetDebrisGrabbingRange.a((byte) -116, "This instance of DebugRequest has changed");
+          SetDebrisGrabbingRange.logErrorIfEnabled((byte) -116, "This instance of DebugRequest has changed");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

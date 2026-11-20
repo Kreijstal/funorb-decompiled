@@ -269,7 +269,7 @@ final class CarouselCommongameInfo implements DiffableState {
         var4 = VoidHunters.field_G;
         try {
           if (param1.tick <= this.tick - (ArchiveRequestQueue.field_b - param0)) {
-            SetDebrisGrabbingRange.a((byte) -84, "Oh dear, this action is off the end of the carousel: " + param1.toString() + ", tick=" + param1.tick + " (my tick=" + this.tick + ")");
+            SetDebrisGrabbingRange.logErrorIfEnabled((byte) -84, "Oh dear, this action is off the end of the carousel: " + param1.toString() + ", tick=" + param1.tick + " (my tick=" + this.tick + ")");
             return false;
           }
           if (param1.systemEvent != null &&

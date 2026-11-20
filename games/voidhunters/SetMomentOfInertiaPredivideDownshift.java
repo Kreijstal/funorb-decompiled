@@ -34,7 +34,7 @@ final class SetMomentOfInertiaPredivideDownshift extends ConsoleCommand {
           }
           var6 = param0.getParameter("currency");
           if (var6 != null &&
-            SetPointDefenceLaserAimarc.a((CharSequence) ((Object) var6), param1 - 2131)) {
+            SetPointDefenceLaserAimarc.isValidDecimalInt((CharSequence) ((Object) var6), param1 - 2131)) {
             NebulaFieldFactory.parseDecimalInt(-106, (CharSequence) ((Object) var6));
           }
           AwardVictoryToWinnerAction.field_a = new Sprite[param2.length];

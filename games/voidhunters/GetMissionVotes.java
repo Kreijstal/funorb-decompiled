@@ -16,7 +16,7 @@ final class GetMissionVotes extends ConsoleCommand {
         try {
           if (obfuscationGuard > -119) {
             var4 = (ToolkitRasterStateStack) null;
-            GetMissionVotes.a((ToolkitRasterStateStack) null, -72, 98, -34, -112, -87);
+            GetMissionVotes.drawSoftwareRasterRegion((ToolkitRasterStateStack) null, -72, 98, -34, -112, -87);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.getSettingValueText(57, 92));
           return stackIn_3_0;
@@ -38,7 +38,7 @@ final class GetMissionVotes extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(ToolkitRasterStateStack param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void drawSoftwareRasterRegion(ToolkitRasterStateStack param0, int param1, int param2, int param3, int param4, int param5) {
         int var6_int = 0;
         int var7 = 0;
         int var8 = 0;

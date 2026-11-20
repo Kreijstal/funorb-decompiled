@@ -166,7 +166,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
               }
             }
             var20 = SetSpinningBladeSpinupSpeed.field_o[SetMissileLauncherProjectileLife.field_p];
-            GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var20, 16763904, 80, 320 - GetPhasedEnergyBeamProjectiles.a(120, var20) / 2, param0 + 4164);
+            GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var20, 16763904, 80, 320 - GetPhasedEnergyBeamProjectiles.getDefaultFontStringWidth(120, var20) / 2, param0 + 4164);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter1) {

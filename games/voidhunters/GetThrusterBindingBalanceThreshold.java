@@ -52,10 +52,10 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
             var2 = SetMomentOfInertiaPerpointCalcDownshift.field_o;
           }
           if (var2 != null) {
-            SetSelfDestructTimer.a(19204, (String) (var2), 0, (String) null, CarouselConstantRequests.field_a);
+            SetSelfDestructTimer.configureChatInputLabel(19204, (String) (var2), 0, (String) null, CarouselConstantRequests.field_a);
           } else {
             var3 = IntIndexTable.field_a;
-            var3 = EscapePodFactory.a(1, var3);
+            var3 = EscapePodFactory.addLocalPlayerBadges(1, var3);
             var4 = "";
             var5 = "|";
             var6 = NetworkMessageState.chatChannel;
@@ -125,7 +125,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
                 }
               }
             }
-            SetSelfDestructTimer.a(19204, var4 + BitmapFont.escapeMarkup(SetShipAimLines.field_p.toString()), var7, var5, ConsoleCommand.field_m[var6]);
+            SetSelfDestructTimer.configureChatInputLabel(19204, var4 + BitmapFont.escapeMarkup(SetShipAimLines.field_p.toString()), var7, var5, ConsoleCommand.field_m[var6]);
             if (!SetFightersPerPlayerMaximum.chatInputActive) {
               WidgetNode.field_l.field_O = false;
             }

@@ -9,7 +9,7 @@ final class GrayscaleTextureOperation extends TextureOperation {
         connectingMessages = null;
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void resetTutorialHints(boolean param0, byte param1) {
         int var2_int = 0;
         int var3 = VoidHunters.field_G;
         try {

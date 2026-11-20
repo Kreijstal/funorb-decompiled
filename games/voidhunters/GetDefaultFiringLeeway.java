@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetDefaultFiringLeeway extends ConsoleCommand {
-    final static boolean a(GameSnapshot param0, byte param1) {
+    final static boolean shouldSwapMissionTeams(GameSnapshot param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;

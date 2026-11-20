@@ -6,7 +6,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
     static String field_o;
     static String field_p;
 
-    final static IsaacPacketBuffer a(int param0, byte[] param1) {
+    final static IsaacPacketBuffer decompressGzipPacket(int param0, byte[] param1) {
         GzipCodec var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
@@ -122,7 +122,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
           var7_int = 2147483647;
           var8 = -2147483648;
           if (param2) {
-            SetCountermeasuresPulseRadius.a(40, (byte[]) null);
+            SetCountermeasuresPulseRadius.decompressGzipPacket(40, (byte[]) null);
           }
           var21 = param5[3] >> 2;
           var22 = param5[4] >> 2;
@@ -286,7 +286,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
           field_p = null;
           field_o = null;
           if (param0 != -27266) {
-            SetCountermeasuresPulseRadius.a(48, (byte[]) null);
+            SetCountermeasuresPulseRadius.decompressGzipPacket(48, (byte[]) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "wl.D(" + param0 + ')');

@@ -305,7 +305,7 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
             var6 = var4[var5];
             if (var6 != null &&
               this.teamId == var6.team) {
-              param2 = SetAutozoomSpeedDivide.a(var5, true, param2, (byte) -14);
+              param2 = SetAutozoomSpeedDivide.addIntArrayValue(var5, true, param2, (byte) -14);
             }
             var5++;
           }

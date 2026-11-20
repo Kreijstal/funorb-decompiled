@@ -44,7 +44,7 @@ final class CrossedWaveTextureOperation extends TextureOperation {
         if (param0 >= -35) {
           discarded$0 = this.isInsideDifferenceBand(-93, -27, 100);
         }
-        GetTrapMouse.e((byte) 118);
+        GetTrapMouse.initializeTextureTrigTables((byte) 118);
     }
 
     final int[] getMonochromeRow(int param0, boolean param1) {

@@ -76,7 +76,7 @@ final class SetReverbGain extends ConsoleCommand {
                 break;
               }
               var7_ref_String = param0.substring(2 + var6_int, var5);
-              if (!SetPointDefenceLaserAimarc.a((CharSequence) ((Object) var7_ref_String), 10)) {
+              if (!SetPointDefenceLaserAimarc.isValidDecimalInt((CharSequence) ((Object) var7_ref_String), 10)) {
                 continue;
               }
               if (var5 >= var3_int) {
@@ -114,7 +114,7 @@ final class SetReverbGain extends ConsoleCommand {
               break;
             }
             var9 = param0.substring(var8Lifetime1 + 2, var5Lifetime1);
-            if (!SetPointDefenceLaserAimarc.a((CharSequence) ((Object) var9), 10)) {
+            if (!SetPointDefenceLaserAimarc.isValidDecimalInt((CharSequence) ((Object) var9), 10)) {
               continue;
             }
             if (var3_int <= var5Lifetime1) {

@@ -81,12 +81,12 @@ final class MissionBuilderFactory implements GameStateFactory {
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 != 11995) {
           CharSequence var4 = (CharSequence) null;
-          MissionBuilderFactory.a('￸', 101, (CharSequence) null);
+          MissionBuilderFactory.canAppendPlayerNameCharacter('￸', 101, (CharSequence) null);
         }
         return (SerializableGameState[]) ((Object) new MissionBuilder[param1]);
     }
 
-    final static boolean a(char param0, int param1, CharSequence param2) {
+    final static boolean canAppendPlayerNameCharacter(char param0, int param1, CharSequence param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_20_0 = null;

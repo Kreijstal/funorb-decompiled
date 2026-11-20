@@ -24,7 +24,7 @@ final class GetDebrisCarryOver extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean a(String param0, int param1) {
+    final static boolean isOutsideInputLengthBounds(String param0, int param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;

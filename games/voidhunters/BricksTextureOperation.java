@@ -108,7 +108,7 @@ final class BricksTextureOperation extends TextureOperation {
         return var3;
     }
 
-    final static boolean b(int param0, int param1, int param2, int param3) {
+    final static boolean handleChatAndDialogKeyEvent(int param0, int param1, int param2, int param3) {
         if (GetLagStandardDeviationOut.field_o != null &&
           GetLagStandardDeviationOut.field_o.pollSelectionPending(0)) {
           TileTextureOperation.closePlayerContextMenu(0);
@@ -126,7 +126,7 @@ final class BricksTextureOperation extends TextureOperation {
         if (param1 != -2048) {
           BricksTextureOperation.clearSharedReferences(false);
         }
-        if (OpenGlCubeTexture.a(param0, -94, param3, param2)) {
+        if (OpenGlCubeTexture.handleChatKeyEvent(param0, -94, param3, param2)) {
           return true;
         }
         return false;
@@ -237,7 +237,7 @@ final class BricksTextureOperation extends TextureOperation {
             this.columnCount = param2.readUnsignedByte((byte) -101);
           }
           if (param1 >= -60) {
-            BricksTextureOperation.b(-48, 83, 33, 63);
+            BricksTextureOperation.handleChatAndDialogKeyEvent(-48, 83, 33, 63);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -10,7 +10,7 @@ final class AwardVictoryToWinnerActionFactory implements GameStateFactory {
         return (SerializableGameState[]) ((Object) new AwardVictoryToWinnerAction[param1]);
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void fillBorderedCircle(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         if (-param3 + param0 < OpenGlTexture3D.rasterClipMinX) {
           SetGrapplingHookMinLength.a(param0, param3, param1, -8, param5, param2, param6);
         } else {

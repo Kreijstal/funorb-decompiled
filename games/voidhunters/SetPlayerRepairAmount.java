@@ -10,7 +10,7 @@ final class SetPlayerRepairAmount extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void e(int param0) {
+    final static void updateChatPanelAnimation(int param0) {
         if (GetAngularForceDownshift.field_p != SetClientSideDragging.field_q.height) {
           GetPhasedEnergyBeamProjectiles.field_o = GetPhasedEnergyBeamProjectiles.field_o + (SetClientSideDragging.field_q.height - GetAngularForceDownshift.field_p);
           GetAngularForceDownshift.field_p = SetClientSideDragging.field_q.height;
@@ -47,7 +47,7 @@ final class SetPlayerRepairAmount extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            SetPlayerRepairAmount.e(-68);
+            SetPlayerRepairAmount.updateChatPanelAnimation(-68);
           }
           SetMachineGunEnergyUsed.submitSettingsChange(227, 62, arguments[0].intValue(12));
           stackIn_3_0 = new ConsoleValue("void");

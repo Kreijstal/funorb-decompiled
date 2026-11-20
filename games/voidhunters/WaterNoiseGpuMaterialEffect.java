@@ -160,7 +160,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
               var5 = TextHotspotRegion.randomBoundedInt(new Random(), 2147483647, 117);
               if (param0) {
                 var4 = 3;
-                GrayscaleTextureOperation.a(true, (byte) -41);
+                GrayscaleTextureOperation.resetTutorialHints(true, (byte) -41);
               }
               MatchingFieldValidator.field_g = new GameSession(false, var3, 0, false, var4, var5, param0);
               GpuSprite.field_e = param1;
@@ -184,7 +184,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
             var5Lifetime2 = TextHotspotRegion.randomBoundedInt(new Random(), 2147483647, 117);
             if (param0) {
               var4 = 3;
-              GrayscaleTextureOperation.a(true, (byte) -41);
+              GrayscaleTextureOperation.resetTutorialHints(true, (byte) -41);
             }
             MatchingFieldValidator.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime2, param0);
             GpuSprite.field_e = param1;
@@ -212,7 +212,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
           var5Lifetime1 = TextHotspotRegion.randomBoundedInt(new Random(), 2147483647, 117);
           if (param0) {
             var4 = 3;
-            GrayscaleTextureOperation.a(true, (byte) -41);
+            GrayscaleTextureOperation.resetTutorialHints(true, (byte) -41);
           }
           MatchingFieldValidator.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime1, param0);
           GpuSprite.field_e = param1;
@@ -225,7 +225,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
             var5Lifetime1 = TextHotspotRegion.randomBoundedInt(new Random(), 2147483647, 117);
             if (param0) {
               var4 = 3;
-              GrayscaleTextureOperation.a(true, (byte) -41);
+              GrayscaleTextureOperation.resetTutorialHints(true, (byte) -41);
             }
             MatchingFieldValidator.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime1, param0);
             GpuSprite.field_e = param1;
@@ -238,7 +238,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
             var5Lifetime1 = TextHotspotRegion.randomBoundedInt(new Random(), 2147483647, 117);
             if (param0) {
               var4 = 3;
-              GrayscaleTextureOperation.a(true, (byte) -41);
+              GrayscaleTextureOperation.resetTutorialHints(true, (byte) -41);
             }
             MatchingFieldValidator.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime1, param0);
             GpuSprite.field_e = param1;

@@ -101,7 +101,7 @@ abstract class GraphicsToolkit {
             GraphicsToolkit.updateQuickChatMenuInput(false, -43, -73, 67);
           }
           if (param7 == 1) {
-            stackIn_12_0 = AsteroidFieldFactory.a(param4, (byte) 16, param2, param5);
+            stackIn_12_0 = AsteroidFieldFactory.createOpenGlToolkit(param4, (byte) 16, param2, param5);
             return stackIn_12_0;
           }
           if (5 == param7) {

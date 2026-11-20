@@ -31,7 +31,7 @@ abstract class GpuMaterialEffect {
           for (var1_int = 0; PlayerReadyFactory.field_b.length > var1_int; var1_int++) {
             PlayerReadyFactory.field_b[var1_int] = GetDebrisGroupColour.field_r.createFont(ShipBodyFactory.field_b[var1_int], CommandConsole.field_s[var1_int], DirectionalLightingTextureOperation.usesMonochromeFont((byte) -26, var1_int));
           }
-          GetDebrisThrowable.a(false, "Finished building fonts");
+          GetDebrisThrowable.logDeveloperMessage(false, "Finished building fonts");
           if (param0 == -2283) {
             return;
           }

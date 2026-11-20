@@ -45,7 +45,7 @@ final class SetSelfDestructTimer extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, String param1, int param2, String param3, int param4) {
+    final static void configureChatInputLabel(int param0, String param1, int param2, String param3, int param4) {
         try {
           UiComboBoxRenderer.field_c.width = UiComboBoxRenderer.field_c.width + WidgetNode.field_l.width;
           UiComboBoxRenderer.field_c.field_Y = param4;

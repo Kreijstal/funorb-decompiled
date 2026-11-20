@@ -41,9 +41,9 @@ final class SetMissileLauncherEnergyUsed extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, byte param1, int param2, float param3, int param4, int param5) {
+    final static void fillCircleAlpha(int param0, byte param1, int param2, float param3, int param4, int param5) {
         if (param1 != 7) {
-          SetMissileLauncherEnergyUsed.a(-51, (byte) -126, 78, -1.8534518480300903f, -88, 102);
+          SetMissileLauncherEnergyUsed.fillCircleAlpha(-51, (byte) -126, 78, -1.8534518480300903f, -88, 102);
           if (!OpenGlTexture1D.field_i) {
             SoftwareRasterizer2D.fillCircleAlpha(param5, param2, (int)param3, param0, param4);
             return;

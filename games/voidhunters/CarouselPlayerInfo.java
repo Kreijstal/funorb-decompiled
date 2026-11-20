@@ -80,7 +80,7 @@ class CarouselPlayerInfo implements DiffableState {
           if (var4 == 0) {
             return;
           }
-          SetDebrisGrabbingRange.a((byte) -73, "This instance of CarouselPlayerInfo has changed");
+          SetDebrisGrabbingRange.logErrorIfEnabled((byte) -73, "This instance of CarouselPlayerInfo has changed");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -45,7 +45,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
         ShipBlueprint var6;
         if (param0 < -44) {
           if (param1 == 73) {
-            GetDebrisThrowable.a(false, "Receiving server info");
+            GetDebrisThrowable.logDeveloperMessage(false, "Receiving server info");
             var5 = new ServerInfo();
             FireBoostersOrderDefinition.readStateFromBits((byte) -61, AccountNameAvailabilityReplies.field_b, var5);
             if (var5 == null) {
@@ -57,7 +57,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
           if (param1 != 74) {
             return false;
           }
-          GetDebrisThrowable.a(false, "Receiving player blueprint");
+          GetDebrisThrowable.logDeveloperMessage(false, "Receiving player blueprint");
           var6 = new ShipBlueprint();
           FireBoostersOrderDefinition.readStateFromBits((byte) -84, AccountNameAvailabilityReplies.field_b, var6);
           if (var6 == null) {
@@ -68,7 +68,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
         }
         GetMpSandboxEnemySpawnLimit.handleServerInfoOrBlueprintPacket(114, 1);
         if (param1 == 73) {
-          GetDebrisThrowable.a(false, "Receiving server info");
+          GetDebrisThrowable.logDeveloperMessage(false, "Receiving server info");
           var3 = new ServerInfo();
           FireBoostersOrderDefinition.readStateFromBits((byte) -61, AccountNameAvailabilityReplies.field_b, var3);
           if (var3 == null) {
@@ -80,7 +80,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
         if (param1 != 74) {
           return false;
         }
-        GetDebrisThrowable.a(false, "Receiving player blueprint");
+        GetDebrisThrowable.logDeveloperMessage(false, "Receiving player blueprint");
         var4 = new ShipBlueprint();
         FireBoostersOrderDefinition.readStateFromBits((byte) -84, AccountNameAvailabilityReplies.field_b, var4);
         if (var4 == null) {

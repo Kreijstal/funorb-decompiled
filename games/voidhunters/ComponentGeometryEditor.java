@@ -170,8 +170,8 @@ final class ComponentGeometryEditor {
                 } else {
                   if (SetMachineGunEnergyUsed.field_o[5]) {
                     if (!LoginMethod.field_b) {
-                      GetDebrisThrowable.a(false, "Saving content data");
-                      SetTorpedoProjectileLife.a(-118);
+                      GetDebrisThrowable.logDeveloperMessage(false, "Saving content data");
+                      SetTorpedoProjectileLife.saveMissionList(-118);
                     }
                     LoginMethod.field_b = true;
                   } else {
@@ -235,7 +235,7 @@ final class ComponentGeometryEditor {
                                   }
                                   System.out.print("}");
                                 }
-                                GetDebrisThrowable.a(false, "};");
+                                GetDebrisThrowable.logDeveloperMessage(false, "};");
                               } else {
                                 if (BoundedRandomAccessFile.field_c == 2) {
                                   System.out.print("int[][] detail_lines=new int[][]{");
@@ -253,7 +253,7 @@ final class ComponentGeometryEditor {
                                     }
                                     System.out.print("}");
                                   }
-                                  GetDebrisThrowable.a(false, "};");
+                                  GetDebrisThrowable.logDeveloperMessage(false, "};");
                                 }
                               }
                             }
@@ -312,8 +312,8 @@ final class ComponentGeometryEditor {
                 var5 = var21.screenToWorldY(0, GetTorpedoReload.field_q);
                 if (ArchiveLoadRequest.field_c == 1 &&
                   SetMachineGunEnergyUsed.field_o[81]) {
-                  LegacyOpenGlEnvironmentReflectionEffect.field_g[-1 + LegacyOpenGlEnvironmentReflectionEffect.field_g.length] = SetAutozoomSpeedDivide.a(var4, false, var23, (byte) -14);
-                  LegacyOpenGlEnvironmentReflectionEffect.field_g[-1 + LegacyOpenGlEnvironmentReflectionEffect.field_g.length] = SetAutozoomSpeedDivide.a(var5, false, LegacyOpenGlEnvironmentReflectionEffect.field_g[-1 + LegacyOpenGlEnvironmentReflectionEffect.field_g.length], (byte) -14);
+                  LegacyOpenGlEnvironmentReflectionEffect.field_g[-1 + LegacyOpenGlEnvironmentReflectionEffect.field_g.length] = SetAutozoomSpeedDivide.addIntArrayValue(var4, false, var23, (byte) -14);
+                  LegacyOpenGlEnvironmentReflectionEffect.field_g[-1 + LegacyOpenGlEnvironmentReflectionEffect.field_g.length] = SetAutozoomSpeedDivide.addIntArrayValue(var5, false, LegacyOpenGlEnvironmentReflectionEffect.field_g[-1 + LegacyOpenGlEnvironmentReflectionEffect.field_g.length], (byte) -14);
                 }
                 if (ArchiveLoadRequest.field_c == 2) {
                   var6_ref_int____ = new int[LegacyOpenGlEnvironmentReflectionEffect.field_g.length + 1][];
@@ -368,9 +368,9 @@ final class ComponentGeometryEditor {
                     }
                   }
                   if (-1 != var3_intLifetime1) {
-                    GetDebrisThrowable.a(false, "Adding point " + var3_intLifetime1);
+                    GetDebrisThrowable.logDeveloperMessage(false, "Adding point " + var3_intLifetime1);
                     var22 = TimingGraph.field_d[-1 + TimingGraph.field_d.length];
-                    TimingGraph.field_d[-1 + TimingGraph.field_d.length] = SetAutozoomSpeedDivide.a(var3_intLifetime1, true, var22, (byte) -14);
+                    TimingGraph.field_d[-1 + TimingGraph.field_d.length] = SetAutozoomSpeedDivide.addIntArrayValue(var3_intLifetime1, true, var22, (byte) -14);
                   }
                 }
                 if (ArchiveLoadRequest.field_c == 2) {

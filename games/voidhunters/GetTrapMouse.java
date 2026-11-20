@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetTrapMouse extends ConsoleCommand {
-    final static void e(byte param0) {
+    final static void initializeTextureTrigTables(byte param0) {
         int var2 = 0;
         double var3 = 0.0;
         int var5 = VoidHunters.field_G;
@@ -32,7 +32,7 @@ final class GetTrapMouse extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetTrapMouse.e((byte) 116);
+            GetTrapMouse.initializeTextureTrigTables((byte) 116);
           }
           stackIn_3_0 = new ConsoleValue(SetNebulaProximityFadeDownshift.field_o);
           return stackIn_3_0;

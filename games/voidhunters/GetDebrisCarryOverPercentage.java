@@ -13,7 +13,7 @@ final class GetDebrisCarryOverPercentage extends ConsoleCommand {
         }
     }
 
-    final static short[] a(int param0, short[] param1, byte param2) {
+    final static short[] copyShortArrayPrefix(int param0, short[] param1, byte param2) {
         short[] var3 = null;
         RuntimeException var3_ref = null;
         short[] var4 = null;
@@ -26,7 +26,7 @@ final class GetDebrisCarryOverPercentage extends ConsoleCommand {
         try {
           if (param2 <= 44) {
             var4 = (short[]) null;
-            GetDebrisCarryOverPercentage.a(-79, (short[]) null, (byte) 29);
+            GetDebrisCarryOverPercentage.copyShortArrayPrefix(-79, (short[]) null, (byte) 29);
           }
           var5 = new short[param0];
           var3 = var5;

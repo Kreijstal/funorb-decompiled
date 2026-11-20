@@ -22,7 +22,7 @@ final class GetNebulaFadesOutWhenClose extends ConsoleCommand {
         }
         WorldSpriteTiler.field_a[AgeValidator.field_f].resetSelection(param1, 320, var4);
         if (AgeValidator.field_f == 7) {
-          BombletSprayWeaponDefinition.a(param1, (byte) 90);
+          BombletSprayWeaponDefinition.initializeCarouselMenuInput(param1, (byte) 90);
           return;
         }
     }

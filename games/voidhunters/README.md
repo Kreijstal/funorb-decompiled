@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1572/1572 classes and 8036/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 0 opaque classes and 179 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1572/1572 classes and 8087/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 0 opaque classes and 128 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -160,6 +160,8 @@ Tooltip text, positional-audio camera, account links and requested player names 
 GPU model predicates name their observed vertex/index allocation, attribute shape, label grouping and option-mask roles without inferring undocumented bit policies. Raster clipping, partition queries, menu metrics, timed tooltips, reconnect presentation, display-name packets and the console registry have named helpers. Objective predicates are traced through symmetric terrain, wide team spawns and team rules; attachment-aim hooks retain their original constant-false/no-op bodies.
 
 Shared-state serialization, force transfer, float mipmaps, random.dat persistence, pointer capture, angle scaling/lookups, bit reversal and name suggestions expose their original operations. Text/primitive rendering and account/logo initialization helpers retain their guards and dispatch paths. Login fallback and retry UI names describe the existing constant hook, error-page suppression and shared retry deadline; no new fallback policy, rendering default or timing behavior is introduced.
+
+Chat/dialog key routing, tutorial hint resets, texture trigonometry and Perlin grid generation have named helpers, alongside menu setup, shutdown and return-to-lobby framing. Array prefix copying, numeric primitive checks, integer encoding widths, packet setup/debugging, development mission saving, face bucket clearing and player-wait readiness retain their exact existing guards, branches and ordering.
 
 Names and review evidence are keyed by original declarations in `voidhunters-names.json` and `voidhunters-diff-names.mjs`. Reproduction verifies compilation, symbol bindings, inheritance relationships and exact source restoration. Fields and locals are outside the complete class/method naming claim. Full gameplay has not been runtime-tested.
 

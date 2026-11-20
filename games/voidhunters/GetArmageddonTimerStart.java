@@ -38,7 +38,7 @@ final class GetArmageddonTimerStart extends ConsoleCommand {
                 var4_int = var8;
               }
             }
-            var6 = BodyInZoneCondition.a(-85, var5 - var4_int);
+            var6 = BodyInZoneCondition.getIntegerEncodingBitLength(-85, var5 - var4_int);
             stackIn_18_0 = 32 + (6 + param1 + param3 * var6);
             return stackIn_18_0;
           }

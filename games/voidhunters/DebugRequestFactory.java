@@ -19,7 +19,7 @@ final class DebugRequestFactory implements GameStateFactory {
         return (SerializableGameState) ((Object) new DebugRequest());
     }
 
-    final static void a(byte param0, int[] param1, NetworkGameClient param2) {
+    final static void configureGamePacketHandlers(byte param0, int[] param1, NetworkGameClient param2) {
         param2.configureCommonPacketHandlers(false, true, true, false, -4590, true, true);
         param1[66] = 1;
         param1[72] = -2;

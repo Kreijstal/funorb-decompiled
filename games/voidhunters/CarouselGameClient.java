@@ -321,7 +321,7 @@ final class CarouselGameClient {
               }
             }
             if (!param2.addEvent(1, param1)) {
-              SetDebrisGrabbingRange.a((byte) -101, "Carousel_clientgame: Added an action off your own carousel! " + param1);
+              SetDebrisGrabbingRange.logErrorIfEnabled((byte) -101, "Carousel_clientgame: Added an action off your own carousel! " + param1);
             }
             return;
           }
@@ -492,7 +492,7 @@ final class CarouselGameClient {
                   var9_int = ((CarouselPlayerEvent) (var17_ref)).playerId;
                 }
                 var18 = param5.getPlayerNames(param3 + 101).getPlayerName(param3 ^ 6, var9_int);
-                SetDebrisGrabbingRange.a((byte) -92, "I'm " + IntIndexTable.field_a + ", and an action from " + var18 + " is off carousel so dropping connection");
+                SetDebrisGrabbingRange.logErrorIfEnabled((byte) -92, "I'm " + IntIndexTable.field_a + ", and an action from " + var18 + " is off carousel so dropping connection");
                 FighterBayWeaponDefinition.closeGameConnection(-118);
               }
             } else if (!var17_ref.isSystemEvent(120) ||
@@ -549,7 +549,7 @@ final class CarouselGameClient {
           var19 = var22;
           var7 = var19;
           if (var7 != null) {
-            var8 = SetCountermeasuresPulseRadius.a(9, var22);
+            var8 = SetCountermeasuresPulseRadius.decompressGzipPacket(9, var22);
             try {
               var20 = new DebugMessage();
               var8.beginBitRead(-23497);
@@ -674,7 +674,7 @@ final class CarouselGameClient {
                   var9 = var9 + SetMissionResnetResourceTickTime.field_q;
                 }
                 if (var7.field_e) {
-                  SetDebrisGrabbingRange.a((byte) -122, "Carousel_clientgame: Recieved a client catchup packet which still connecting");
+                  SetDebrisGrabbingRange.logErrorIfEnabled((byte) -122, "Carousel_clientgame: Recieved a client catchup packet which still connecting");
                 }
                 var5++;
                 param2.requestCatchUpToTick(var9, false, 0);

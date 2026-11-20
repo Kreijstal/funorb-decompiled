@@ -33,7 +33,7 @@ final class CommonGameState implements DiffableState, PlayerNameRegistry {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          GetDebrisThrowable.a(param1, "Starting to read");
+          GetDebrisThrowable.logDeveloperMessage(param1, "Starting to read");
           if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
             this.carouselInfo = null;
           } else {
@@ -128,10 +128,10 @@ final class CommonGameState implements DiffableState, PlayerNameRegistry {
           var4 = GetMessageMaxage.crc32((byte) -69, param1.position, param1.payload, var3_int);
           var5 = param1.readInt(97);
           if (var5 == var4) {
-            GetDebrisThrowable.a(false, "cg readstate: Hmm, it seems correct");
+            GetDebrisThrowable.logDeveloperMessage(false, "cg readstate: Hmm, it seems correct");
           }
           param1.beginBitRead(-23497);
-          GetDebrisThrowable.a(false, "has read state");
+          GetDebrisThrowable.logDeveloperMessage(false, "has read state");
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "oma.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

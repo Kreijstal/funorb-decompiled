@@ -80,7 +80,7 @@ final class ModalStack extends UiSingleChildContainer {
         return null;
     }
 
-    final static void a(boolean param0, String param1, int param2) {
+    final static void drawDialogAndTooltip(boolean param0, String param1, int param2) {
         IsaacPacketBuffer var4 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

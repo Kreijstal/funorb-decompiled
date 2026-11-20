@@ -67,7 +67,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int getIntegerEncodingBitLength(int param0, int param1) {
         int var2;
         int var2Lifetime1;
         if (param1 == 0) {
@@ -180,7 +180,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
             return stackIn_6_0;
           }
           if (-1 != this.bodyId) {
-            stackIn_9_0 = SetAutozoomSpeedDivide.a(this.bodyId, true, param2, (byte) -14);
+            stackIn_9_0 = SetAutozoomSpeedDivide.addIntArrayValue(this.bodyId, true, param2, (byte) -14);
             return stackIn_9_0;
           }
           var5 = param0.getShips(1000);
@@ -189,7 +189,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
             var8 = var6[var7];
             if (var8 != null &&
               var4.containsPoint(var8.getY((byte) 121), var8.getX(false), (byte) -98)) {
-              param2 = SetAutozoomSpeedDivide.a(var8.getId(false), true, param2, (byte) -14);
+              param2 = SetAutozoomSpeedDivide.addIntArrayValue(var8.getId(false), true, param2, (byte) -14);
             }
           }
           stackIn_21_0 = (int[]) (param2);
@@ -228,7 +228,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
             return stackIn_2_0;
           }
           if (this.bodyId >= 0) {
-            param1 = SetAutozoomSpeedDivide.a(this.bodyId, true, param1, (byte) -14);
+            param1 = SetAutozoomSpeedDivide.addIntArrayValue(this.bodyId, true, param1, (byte) -14);
           }
           stackIn_6_0 = (int[]) (param1);
           return stackIn_6_0;

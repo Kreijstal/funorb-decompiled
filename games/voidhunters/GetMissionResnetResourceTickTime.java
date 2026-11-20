@@ -107,14 +107,14 @@ final class GetMissionResnetResourceTickTime extends ConsoleCommand {
         }
         byte[] var2 = TickCondition.encodeState(-30234, var1);
         if (var2 == null) {
-          GetDebrisThrowable.a(false, "Failed to write player gamedata");
+          GetDebrisThrowable.logDeveloperMessage(false, "Failed to write player gamedata");
           return;
         }
         if (var2.length > 200) {
-          GetDebrisThrowable.a(false, "Failed to write player gamedata");
+          GetDebrisThrowable.logDeveloperMessage(false, "Failed to write player gamedata");
           return;
         }
-        GetDebrisThrowable.a(false, "Submitting " + var2.length + " bytes to clientdata");
+        GetDebrisThrowable.logDeveloperMessage(false, "Submitting " + var2.length + " bytes to clientdata");
         if (param0 > -35) {
           field_o = -50;
         } else {

@@ -2516,7 +2516,7 @@ final class World implements DiffableState, CompactGameState {
             if (var9 == 10 &&
               13 == this.objectiveType) {
               var28 = new Random((long)(var8 * var7));
-              var11_int = GetRepairModeRadius.a(-101, 3, SetRepairModeCooldown.countVisiblePresetSpawnChoices((byte) 107), var28);
+              var11_int = GetRepairModeRadius.chooseRandomVisibleComponentOption(-101, 3, SetRepairModeCooldown.countVisiblePresetSpawnChoices((byte) 107), var28);
               var29 = ToolkitViewState.createPresetShip(var11_int, (byte) 47);
               var29.setAi(new ShipAI(), 4);
               var29.setTeam(17704, ToolkitRasterState.field_c);
@@ -8143,7 +8143,7 @@ final class World implements DiffableState, CompactGameState {
             }
             var6Lifetime1 = param1.worldToScreenX(param0.getX(false), (byte) 123);
             var7Lifetime1 = param1.worldToScreenY(true, param0.getY((byte) -54) - 16384);
-            GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var5Lifetime2, 16711935, var7Lifetime1, var6Lifetime1 - (GetPhasedEnergyBeamProjectiles.a(115, var5Lifetime2) >> 1), 4266);
+            GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var5Lifetime2, 16711935, var7Lifetime1, var6Lifetime1 - (GetPhasedEnergyBeamProjectiles.getDefaultFontStringWidth(115, var5Lifetime2) >> 1), 4266);
           }
           if (GetPointDefenceLaserProjectiles.isDebugFlagSet(4096, 11284) &&
             param0.hasAi((byte) -10)) {
@@ -8241,7 +8241,7 @@ final class World implements DiffableState, CompactGameState {
                   var15 = "Dragging debris=" + Integer.toString(var12.getDragging(param4 - 116));
                   var16 = param3.worldToScreenX(var12.getX(false), (byte) 126);
                   var17Lifetime1 = param3.worldToScreenY(true, var12.getY((byte) 125) - 16384);
-                  GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var15, 16711935, var17Lifetime1, var16 - (GetPhasedEnergyBeamProjectiles.a(-9, var15) >> 1), param4 + 4247);
+                  GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var15, 16711935, var17Lifetime1, var16 - (GetPhasedEnergyBeamProjectiles.getDefaultFontStringWidth(-9, var15) >> 1), param4 + 4247);
                   break scanLoop1;
                 }
               }
@@ -8691,7 +8691,7 @@ final class World implements DiffableState, CompactGameState {
             var5 = param2.worldToScreenX(param1.getX(false), (byte) 127);
             var6 = param2.worldToScreenY(true, param1.getBoundingbox((byte) -53)[2]) - OpenGlTexture.getCurrentFontAscent((byte) 118) / 2;
             var7 = Integer.toString(param1.id);
-            GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var7, 16711935, var6, -(GetPhasedEnergyBeamProjectiles.a(-118, var7) >> 1) + var5, 4266);
+            GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var7, 16711935, var6, -(GetPhasedEnergyBeamProjectiles.getDefaultFontStringWidth(-118, var7) >> 1) + var5, 4266);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -8873,7 +8873,7 @@ final class World implements DiffableState, CompactGameState {
             var16Lifetime2 = var10.getDefaultConnectionX(-25) * TextureLineShape.sinAngle(var9.getAngle(0), 62) + var10.getDefaultConnectionY((byte) 100) * GetNumStars.cosAngle(var9.getAngle(0), (byte) 64) >> 16;
             CarouselPlayerInfoFactory.a(param3.chassis.finaly, 1, var14Lifetime2 + var16Lifetime2, var13Lifetime3 + var15Lifetime1, param7, param3.chassis.finalx);
             var17 = TiledSpriteTextureOperation.a(var10, (byte) -84);
-            GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var17, 16777215, param7.worldToScreenY(true, -10000 + var9.getY((byte) -109)), param7.worldToScreenX(var9.getX(false), (byte) 118) - (GetPhasedEnergyBeamProjectiles.a(94, var17) >> 1), 4266);
+            GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var17, 16777215, param7.worldToScreenY(true, -10000 + var9.getY((byte) -109)), param7.worldToScreenX(var9.getX(false), (byte) 118) - (GetPhasedEnergyBeamProjectiles.getDefaultFontStringWidth(94, var17) >> 1), 4266);
             if (null != param3.getAttachmentPreviewOutline(56)) {
               var31 = param3.getAttachmentPreviewOutline(116);
               var30 = var31;

@@ -34,7 +34,7 @@ final class SetVelocitySustainMax extends ConsoleCommand {
         }
     }
 
-    final static void a(Throwable param0, boolean param1, String param2) {
+    final static void logDeveloperError(Throwable param0, boolean param1, String param2) {
         RuntimeException var3 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;

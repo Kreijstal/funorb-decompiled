@@ -197,7 +197,7 @@ class CarouselEvent extends IntrusiveNode implements DiffableState {
           if (var4 == 0) {
             return;
           }
-          SetDebrisGrabbingRange.a((byte) -78, "This instance of CarouselEvent has changed");
+          SetDebrisGrabbingRange.logErrorIfEnabled((byte) -78, "This instance of CarouselEvent has changed");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -616,7 +616,7 @@ final class GpuModel extends Model3D {
                       var55 = ((float)var51_int * var86[2] + ((float)var49_int * var86[0] + (float)var50_int * var86[1])) / var52;
                       var56 = (var86[5] * (float)var51_int + ((float)var50_int * var86[4] + (float)var49_int * var86[3])) / var53;
                       var57 = (var86[7] * (float)var50_int + (float)var49_int * var86[6] + (float)var51_int * var86[8]) / var54;
-                      var30Lifetime1 = GetSniperCannonRandomness.a(-74, var56, var55, var57);
+                      var30Lifetime1 = GetSniperCannonRandomness.selectCubeMapFace(-74, var56, var55, var57);
                       SetPointDefenceLaserRandomness.a(var42, param1.vertexZ[var32_int], var41, (byte) 47, param1.vertexX[var32_int], var37, param1.vertexY[var32_int], var30Lifetime1, GetAutozoomSpeedDivide.field_o, var35, var39_int, var86, var36, var40);
                       var23 = GetAutozoomSpeedDivide.field_o[1];
                       var22_float = GetAutozoomSpeedDivide.field_o[0];
@@ -830,11 +830,11 @@ final class GpuModel extends Model3D {
             this.field_g[var16Lifetime4] = this.field_Q;
           }
           GpuVertexKeyBuffer.renderVertexKeys = null;
-          this.field_A = GetDebrisCarryOverPercentage.a(this.field_L, this.field_A, (byte) 53);
-          this.field_J = GetDebrisCarryOverPercentage.a(this.field_L, this.field_J, (byte) 108);
-          this.field_F = GetDebrisCarryOverPercentage.a(this.field_L, this.field_F, (byte) 69);
-          this.field_r = GetDebrisCarryOverPercentage.a(this.field_L, this.field_r, (byte) 50);
-          this.field_x = GetDebrisCarryOverPercentage.a(this.field_L, this.field_x, (byte) 59);
+          this.field_A = GetDebrisCarryOverPercentage.copyShortArrayPrefix(this.field_L, this.field_A, (byte) 53);
+          this.field_J = GetDebrisCarryOverPercentage.copyShortArrayPrefix(this.field_L, this.field_J, (byte) 108);
+          this.field_F = GetDebrisCarryOverPercentage.copyShortArrayPrefix(this.field_L, this.field_F, (byte) 69);
+          this.field_r = GetDebrisCarryOverPercentage.copyShortArrayPrefix(this.field_L, this.field_r, (byte) 50);
+          this.field_x = GetDebrisCarryOverPercentage.copyShortArrayPrefix(this.field_L, this.field_x, (byte) 59);
           this.field_b = TextureCombineOperation.copyBytePrefix(this.field_b, this.field_L, -28321);
           this.field_D = OpenGlGpuToolkit.copyFloatPrefix(this.field_D, this.field_L, 7353);
           this.field_y = OpenGlGpuToolkit.copyFloatPrefix(this.field_y, this.field_L, 7353);

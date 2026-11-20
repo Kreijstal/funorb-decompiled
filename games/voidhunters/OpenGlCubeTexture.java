@@ -6,14 +6,14 @@ final class OpenGlCubeTexture extends OpenGlTexture {
     private int field_j;
     private int field_i;
 
-    final static boolean a(int param0, int param1, int param2, int param3) {
+    final static boolean handleChatKeyEvent(int param0, int param1, int param2, int param3) {
         if (param1 >= -37) {
           field_h = (Widget) null;
           if (GetBloomThresholdPercentage.field_p) {
             return PartitionZoneListFactory.field_b.dispatchKey(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
           }
           if (LegacyOpenGlTurbulenceEffect.quickChatMenuOpen) {
-            return GetDetachmentMode.a(param3, -9307, param2);
+            return GetDetachmentMode.handleQuickChatKeyEvent(param3, -9307, param2);
           }
           if (SetPhysicsCollisionForceMultiplier.a(param3, 2, param2)) {
             return true;
@@ -27,7 +27,7 @@ final class OpenGlCubeTexture extends OpenGlTexture {
           return PartitionZoneListFactory.field_b.dispatchKey(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
         }
         if (LegacyOpenGlTurbulenceEffect.quickChatMenuOpen) {
-          return GetDetachmentMode.a(param3, -9307, param2);
+          return GetDetachmentMode.handleQuickChatKeyEvent(param3, -9307, param2);
         }
         if (SetPhysicsCollisionForceMultiplier.a(param3, 2, param2)) {
           return true;

@@ -111,7 +111,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
                     var12++;
                   }
                   if (var21 != null &&
-                    SetPhysicsCollisionPhantomForceMultiplier.a((byte) -75, var21)) {
+                    SetPhysicsCollisionPhantomForceMultiplier.isLocalPlayerName((byte) -75, var21)) {
                     var8[1][var13] = IntIndexTable.field_a;
                     var9[1][var13] = null;
                     var34[1][var13] = var22;
@@ -163,7 +163,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
             var4.unlink(-3846);
             return;
           }
-          FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "HS1: " + SetCountermeasuresPulsetime.e(-13514), 0);
+          FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "HS1: " + SetCountermeasuresPulsetime.formatIncomingPacketDebug(-13514), 0);
           FighterBayWeaponDefinition.closeGameConnection(-119);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

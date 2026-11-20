@@ -177,7 +177,7 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
           var8 = -120 % ((-38 - param2) / 49);
           if (0 < param3.field_z &&
             param3.field_E != null) {
-            ModalPanel.d(false);
+            ModalPanel.clearFaceBucketCounts(false);
           }
           CarouselPlayerEvent.bucketedFaceCount = 0;
           var9 = 0;

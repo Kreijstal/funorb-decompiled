@@ -8,7 +8,7 @@ final class WaveformTextureOperation extends TextureOperation {
     private int waveform;
 
     final void postDecode(byte param0) {
-        GetTrapMouse.e((byte) -91);
+        GetTrapMouse.initializeTextureTrigTables((byte) -91);
         if (param0 >= -35) {
           this.phaseMode = 85;
         }

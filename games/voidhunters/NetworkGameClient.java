@@ -582,7 +582,7 @@ abstract class NetworkGameClient extends GameApplet {
                       GetAiRepairAmount.readQuickChatPolicy(-96);
                       break regionExit1;
                     default:
-                      FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "MGS1: " + SetCountermeasuresPulsetime.e(-13514), 0);
+                      FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "MGS1: " + SetCountermeasuresPulsetime.formatIncomingPacketDebug(-13514), 0);
                       FighterBayWeaponDefinition.closeGameConnection(-123);
                       break regionExit1;
                   }
@@ -617,7 +617,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
           return;
         }
-        FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "MGS2: " + SetCountermeasuresPulsetime.e(-13514), 0);
+        FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "MGS2: " + SetCountermeasuresPulsetime.formatIncomingPacketDebug(-13514), 0);
         FighterBayWeaponDefinition.closeGameConnection(-125);
     }
 

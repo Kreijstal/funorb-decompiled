@@ -46,7 +46,7 @@ final class SetMissilesExplosionPower extends ConsoleCommand {
         }
     }
 
-    final static void a(ResourceArchive param0, int param1, ResourceArchive param2) {
+    final static void acceptUiArchives(ResourceArchive param0, int param1, ResourceArchive param2) {
         try {
           if (param1 != 0) {
             field_p = 24;

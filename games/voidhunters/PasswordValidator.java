@@ -38,7 +38,7 @@ final class PasswordValidator extends TextFieldValidator {
             return (String) (stackIn_2_0);
           }
           var5 = var4;
-          if (GetDebrisCarryOver.a(var5, 15)) {
+          if (GetDebrisCarryOver.isOutsideInputLengthBounds(var5, 15)) {
             stackIn_5_0 = SetShipDirectionArrow.field_r;
             return stackIn_5_0;
           }

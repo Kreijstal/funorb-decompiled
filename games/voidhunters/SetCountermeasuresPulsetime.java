@@ -8,7 +8,7 @@ final class SetCountermeasuresPulsetime extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static String e(int param0) {
+    final static String formatIncomingPacketDebug(int param0) {
         int var2 = 0;
         String var1;
         int var3;
@@ -21,7 +21,7 @@ final class SetCountermeasuresPulsetime extends ConsoleCommand {
         var6 = "(" + TypedStateArrayReader.field_a + " " + SetMissionResnetResourceTickTime.field_o + " " + SetSalvoRepairTimeMultiplier.field_r + ") " + NetworkMessageState.incomingOpcode;
         var1 = var6;
         if (param0 != -13514) {
-          SetCountermeasuresPulsetime.e(-111);
+          SetCountermeasuresPulsetime.formatIncomingPacketDebug(-111);
         }
         if (0 < PartitioningManagerFactory.field_a) {
           var1 = var6 + ":";

@@ -53,7 +53,7 @@ final class ServerTick extends IntrusiveNode implements DiffableState {
           if (var4 == 0) {
             return;
           }
-          SetDebrisGrabbingRange.a((byte) -82, "This instance of ServerTick has changed");
+          SetDebrisGrabbingRange.logErrorIfEnabled((byte) -82, "This instance of ServerTick has changed");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

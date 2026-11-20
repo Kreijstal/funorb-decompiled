@@ -186,7 +186,7 @@ final class RandomLinesTextureOperation extends TextureOperation {
         if (param0 >= -35) {
           RandomLinesTextureOperation.isEmailAvailabilityPending((byte) -123);
         }
-        GetTrapMouse.e((byte) -120);
+        GetTrapMouse.initializeTextureTrigTables((byte) -120);
     }
 
     final static boolean isEmailAvailabilityPending(byte param0) {

@@ -61,7 +61,7 @@ final class PlayerJoin implements DiffableState {
           if (var4 == 0) {
             return;
           }
-          SetDebrisGrabbingRange.a((byte) -58, "This instance of PlayerJoin has changed");
+          SetDebrisGrabbingRange.logErrorIfEnabled((byte) -58, "This instance of PlayerJoin has changed");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

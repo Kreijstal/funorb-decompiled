@@ -57,7 +57,7 @@ final class SpawnPointFactory implements GameStateFactory {
               var3 = "Detail lines mode";
             }
           }
-          GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var3, 16777215, 40, GetBombletSprayEnergyUsed.field_p.width / 2 - (GetPhasedEnergyBeamProjectiles.a(123, var3) >> 1), 4266);
+          GetLagStandardDeviationOut.drawTextWithDefaultFont(-1, var3, 16777215, 40, GetBombletSprayEnergyUsed.field_p.width / 2 - (GetPhasedEnergyBeamProjectiles.getDefaultFontStringWidth(123, var3) >> 1), 4266);
           if (param2) {
             return;
           }

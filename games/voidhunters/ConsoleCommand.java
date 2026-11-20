@@ -51,8 +51,8 @@ abstract class ConsoleCommand extends DualLinkNode {
                 this.parameterTypes[var4_int] != Character.TYPE) {
                 return false;
               }
-              if (GetTorpedoFireForce.a(var5, 24145) &&
-                !GetTorpedoFireForce.a(this.parameterTypes[var4_int], 24145)) {
+              if (GetTorpedoFireForce.isNumericPrimitiveType(var5, 24145) &&
+                !GetTorpedoFireForce.isNumericPrimitiveType(this.parameterTypes[var4_int], 24145)) {
                 return false;
               }
             } else {

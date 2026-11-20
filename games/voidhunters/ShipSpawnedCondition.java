@@ -98,7 +98,7 @@ final class ShipSpawnedCondition extends MissionCondition implements DiffableSta
               !var7.hasAi((byte) -10) &&
               var7.getOwner((byte) -117) >= 0 &&
               var7.field_D) {
-              param2 = SetAutozoomSpeedDivide.a(var7.getId(false), true, param2, (byte) -14);
+              param2 = SetAutozoomSpeedDivide.addIntArrayValue(var7.getId(false), true, param2, (byte) -14);
             }
           }
           stackIn_23_0 = (int[]) (param2);

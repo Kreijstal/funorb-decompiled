@@ -53,7 +53,7 @@ final class ShieldInfoPool {
           return (ShieldInfo) null;
         }
         if (this.size >= this.entries.length) {
-          GetDebrisThrowable.a(false, "We've run out of shieldinfo slots");
+          GetDebrisThrowable.logDeveloperMessage(false, "We've run out of shieldinfo slots");
           return null;
         }
         if (null != this.entries[this.size]) {

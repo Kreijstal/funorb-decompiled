@@ -21,7 +21,7 @@ final class AgeValidator extends TextFieldValidator {
         RuntimeException decompiledCaughtException = null;
         try {
           var4 = (CharSequence) ((Object) param0);
-          if (!SetPointDefenceLaserAimarc.a(var4, param1 ^ 16394)) {
+          if (!SetPointDefenceLaserAimarc.isValidDecimalInt(var4, param1 ^ 16394)) {
             stackIn_2_0 = SetArmageddonLength.invalidInput;
             return stackIn_2_0;
           }

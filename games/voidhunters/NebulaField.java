@@ -234,7 +234,7 @@ final class NebulaField implements DiffableState, SpatialStateMarker {
           GetDebrisCarryOver.objectiveMarkerCount = GetDebrisCarryOver.objectiveMarkerCount + 1;
           return fieldTemp$0[fieldTemp$1];
         }
-        GetDebrisThrowable.a(false, "We've run out of temp objective slots");
+        GetDebrisThrowable.logDeveloperMessage(false, "We've run out of temp objective slots");
         return null;
     }
 

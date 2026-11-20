@@ -33,7 +33,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
             stackIn_7_0 = GetReverbWet.field_p;
             return stackIn_7_0;
           }
-          if (SetPhysicsCollisionPhantomForceMultiplier.a((byte) -75, param0)) {
+          if (SetPhysicsCollisionPhantomForceMultiplier.isLocalPlayerName((byte) -75, param0)) {
             stackIn_11_0 = GetUsePolygonFill.field_o;
             return stackIn_11_0;
           }

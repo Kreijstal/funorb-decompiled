@@ -33,7 +33,7 @@ final class SetFighterVision extends ConsoleCommand {
             }
           }
           var7 = (String) null;
-          SetSelfDestructTimer.a(19204, var5, 0, (String) null, CarouselConstantRequests.field_a);
+          SetSelfDestructTimer.configureChatInputLabel(19204, var5, 0, (String) null, CarouselConstantRequests.field_a);
           ServerTick.field_d = WidgetNode.field_l;
           UiComboBoxRenderer.field_c.field_ib = (8355711 & TargetLock.field_b.field_ib >> 1) + (-((16711423 & CarouselConstantRequests.field_a) >> 1) + CarouselConstantRequests.field_a);
           UiComboBoxRenderer.field_c.field_qb = CarouselConstantRequests.field_a - (((16711422 & CarouselConstantRequests.field_a) >> 1) - ((TargetLock.field_b.field_qb & 16711423) >> 1));

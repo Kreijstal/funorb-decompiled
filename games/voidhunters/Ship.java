@@ -232,7 +232,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
     final void recordAttacker(int param0, int param1) {
         if (0 <= this.owner &&
           !ArchiveIndexLoader.moveValueToEnd(param0, 1, this.lastAttackers)) {
-          this.lastAttackers = SetAutozoomSpeedDivide.a(param0, true, this.lastAttackers, (byte) -14);
+          this.lastAttackers = SetAutozoomSpeedDivide.addIntArrayValue(param0, true, this.lastAttackers, (byte) -14);
         }
         if (param1 != 19581) {
           this.selfDestructCountdown = 18;

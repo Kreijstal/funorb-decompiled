@@ -180,7 +180,7 @@ final class Particle implements DiffableState {
             var9 = (int)var7;
             if (this.dx == 0 &&
               this.dy == 0) {
-              SetMissileLauncherEnergyUsed.a(var6, (byte) 7, var4, var7, var8, var3_int);
+              SetMissileLauncherEnergyUsed.fillCircleAlpha(var6, (byte) 7, var4, var7, var8, var3_int);
               return;
             }
             var10 = param1.worldToScreenX((this.dx << 2) + this.x, (byte) 124);
@@ -230,7 +230,7 @@ final class Particle implements DiffableState {
             return;
           }
           var26 = 11 + this.life - (this.fadestart << 1);
-          SetMissileLauncherEnergyUsed.a(var24, (byte) 7, param1.worldToScreenY(true, this.y), (float)(int)((float)var26 * (param1.scale * 4096.0f)), 1, param1.worldToScreenX(this.x, (byte) 113));
+          SetMissileLauncherEnergyUsed.fillCircleAlpha(var24, (byte) 7, param1.worldToScreenY(true, this.y), (float)(int)((float)var26 * (param1.scale * 4096.0f)), 1, param1.worldToScreenX(this.x, (byte) 113));
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

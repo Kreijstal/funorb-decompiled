@@ -923,7 +923,7 @@ final class OpenGlModel extends Model3D {
                       var55 = (var86[2] * (float)var51 + ((float)var49 * var86[0] + (float)var50 * var86[1])) / var52;
                       var56 = ((float)var50 * var86[4] + (float)var49 * var86[3] + var86[5] * (float)var51) / var53;
                       var57 = (var86[7] * (float)var50 + var86[6] * (float)var49 + var86[8] * (float)var51) / var54;
-                      var30Lifetime1 = GetSniperCannonRandomness.a(-93, var56, var55, var57);
+                      var30Lifetime1 = GetSniperCannonRandomness.selectCubeMapFace(-93, var56, var55, var57);
                       SetPointDefenceLaserRandomness.a(var42, param1.vertexZ[var32_int], var41, (byte) 39, param1.vertexX[var32_int], var37, param1.vertexY[var32_int], var30Lifetime1, MissionBuilder.field_f, var35, var39, var86, var36, var40);
                       var23 = MissionBuilder.field_f[1];
                       var22 = MissionBuilder.field_f[0];
@@ -1155,10 +1155,10 @@ final class OpenGlModel extends Model3D {
           }
           this.field_F[var16Lifetime5] = this.field_d;
           WidgetNode.field_m = null;
-          this.field_I = GetBombletSprayProjectileDamage.a(this.field_I, 125, this.field_x);
-          this.field_h = GetBombletSprayProjectileDamage.a(this.field_h, 99, this.field_x);
-          this.field_A = GetBombletSprayProjectileDamage.a(this.field_A, 73, this.field_x);
-          this.field_z = PolarDisplacementTextureOperation.a(this.field_z, this.field_x, 5666);
+          this.field_I = GetBombletSprayProjectileDamage.copyShortArrayPrefix(this.field_I, 125, this.field_x);
+          this.field_h = GetBombletSprayProjectileDamage.copyShortArrayPrefix(this.field_h, 99, this.field_x);
+          this.field_A = GetBombletSprayProjectileDamage.copyShortArrayPrefix(this.field_A, 73, this.field_x);
+          this.field_z = PolarDisplacementTextureOperation.copyByteArrayPrefix(this.field_z, this.field_x, 5666);
           this.field_J = MusicPatchPcmStream.copyFloatArray(this.field_x, 0, this.field_J);
           this.field_k = MusicPatchPcmStream.copyFloatArray(this.field_x, 0, this.field_k);
           if (param1.vertexLabels != null &&

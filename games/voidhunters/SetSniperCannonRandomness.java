@@ -79,7 +79,7 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
           }
           if (var2 != 1) {
             if (var2 != 2) {
-              FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "A1: " + SetCountermeasuresPulsetime.e(-13514), 0);
+              FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "A1: " + SetCountermeasuresPulsetime.formatIncomingPacketDebug(-13514), 0);
               FighterBayWeaponDefinition.closeGameConnection(param0 - 117);
             } else {
               var12 = (IntegerRecordReadQueueEntry) (GetLagStandardDeviationIn.pendingRecordReads.first(0));

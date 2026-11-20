@@ -236,7 +236,7 @@ final class TeamShipComponentCondition extends MissionCondition implements Diffa
               !var7.hasAi((byte) -10) &&
               var7.getOwner((byte) -117) >= 0 &&
               var7.chassis.countType(this.componentTypeId, 0) > 0) {
-              param2 = SetAutozoomSpeedDivide.a(var7.getId(false), true, param2, (byte) -14);
+              param2 = SetAutozoomSpeedDivide.addIntArrayValue(var7.getId(false), true, param2, (byte) -14);
             }
           }
           stackIn_22_0 = (int[]) (param2);

@@ -35,7 +35,7 @@ final class GetDebrisProjectileCollision extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1) {
+    final static void layoutChatPanel(int param0, int param1) {
         int var2 = 0;
         int var3 = 0;
         GetPhasedEnergyBeamProjectiles.field_o = param1;

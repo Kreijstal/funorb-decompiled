@@ -177,7 +177,7 @@ final class BodyDestroyedCondition extends MissionCondition implements DiffableS
             this.readState((IsaacPacketBuffer) null, false);
           }
           if (this.bodyId >= 0) {
-            param1 = SetAutozoomSpeedDivide.a(this.bodyId, true, param1, (byte) -14);
+            param1 = SetAutozoomSpeedDivide.addIntArrayValue(this.bodyId, true, param1, (byte) -14);
           }
           stackIn_6_0 = (int[]) (param1);
           return stackIn_6_0;

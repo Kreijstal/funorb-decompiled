@@ -122,7 +122,7 @@ final class MissionVariable implements DiffableState {
           param0.writeBits(-632, this.label, 32);
           if (param1 > -109) {
             ResourceArchive var4 = (ResourceArchive) null;
-            MissionVariable.a((ResourceArchive) null, (ResourceArchive) null, -60, false);
+            MissionVariable.initializeChatUi((ResourceArchive) null, (ResourceArchive) null, -60, false);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "et.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -146,7 +146,7 @@ final class MissionVariable implements DiffableState {
         }
     }
 
-    final static void a(ResourceArchive param0, ResourceArchive param1, int param2, boolean param3) {
+    final static void initializeChatUi(ResourceArchive param0, ResourceArchive param1, int param2, boolean param3) {
         try {
           GetExplosionProjectileDamage.buildChatPanel(DeveloperConsole.field_q, 0, IncrementVariableActionFactoryHolder.field_c, UiDraggableContainer.field_y, SetAutoAfkTimeout.field_q, SpawnEnemyShipOrderDefinition.field_d, GetMissionDebrisDefaultProbability.field_o, param3, TargetLockFactory.field_a, SetShieldsDirectionalHalfarcCuts.field_p, ResourceArchive.field_a, GetUseNiceTrails.field_o);
           GetGrapplingHookAimspeed.field_o = SetGrapplingHookRopeBreakLength.loadNamedSprites(param0, true, "lobby", "chatfilter");

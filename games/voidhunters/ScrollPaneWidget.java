@@ -6,7 +6,7 @@ final class ScrollPaneWidget extends Widget {
     Widget content;
     ScrollBarWidget scrollbar;
 
-    final static int[][] a(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7, float param8) {
+    final static int[][] generatePerlinNoiseGrid(int param0, int param1, int param2, int param3, boolean param4, int param5, int param6, int param7, float param8) {
         int var11 = 0;
         int var12 = VoidHunters.field_G;
         int[][] var15 = new int[param5][param7];
@@ -36,7 +36,7 @@ final class ScrollPaneWidget extends Widget {
         this.viewport.width = -param0 + (this.width - param2);
         this.content.width = -param2 + this.width - param0;
         if (param1 <= 84) {
-          ScrollPaneWidget.a(92, -71, 109, -69, true, 40, 47, 70, -1.1040540933609009f);
+          ScrollPaneWidget.generatePerlinNoiseGrid(92, -71, 109, -69, true, 40, 47, 70, -1.1040540933609009f);
         }
         this.scrollbar.setBoundsAndGeometry(-param0 + this.width, this.content.height, 0, -this.content.y, this.viewport.height, this.height, param0, -1);
     }
@@ -235,7 +235,7 @@ final class ScrollPaneWidget extends Widget {
           GetReverbWidth.field_o.tabs.updateSelectedTab(10000);
           if (SetThrusterParticleSpeedDownshift.field_o != null) {
             if (GetShipToShipRamDamage.field_q.field_o != 0) {
-              LegacyOpenGlShader.a(false, param3);
+              LegacyOpenGlShader.sendReturnToLobbyRequest(false, param3);
             }
             if (ObjectiveMarker.field_b.field_o != 0) {
               if (ArchiveTextureProvider.field_h) {

@@ -1838,7 +1838,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                     if (var13.charAt(0) == 120 &&
                       var13.length() >= 3) {
                       var21 = (CharSequence) ((Object) var13.substring(1, 3));
-                      if (SetPointDefenceLaserAimarc.a(var21, 10)) {
+                      if (SetPointDefenceLaserAimarc.isValidDecimalInt(var21, 10)) {
                         var10 = var13.substring(1);
                         var7 = 1;
                       }
@@ -1852,7 +1852,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                       }
                       if (var10.length() >= 4) {
                         var22 = (CharSequence) ((Object) var10.substring(0, 4));
-                        if (SetPointDefenceLaserAimarc.a(var22, 10)) {
+                        if (SetPointDefenceLaserAimarc.isValidDecimalInt(var22, 10)) {
                           var23 = (CharSequence) ((Object) var10.substring(0, 4));
                           var5_int = NebulaFieldFactory.parseDecimalInt(-86, var23);
                           decompiledRegionSelector0 = 1;

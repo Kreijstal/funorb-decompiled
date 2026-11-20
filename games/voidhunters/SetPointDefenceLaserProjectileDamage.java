@@ -76,7 +76,7 @@ final class SetPointDefenceLaserProjectileDamage extends ConsoleCommand {
           if (var14 == null) {
             return null;
           }
-          var5 = SetCountermeasuresPulseRadius.a(9, var16);
+          var5 = SetCountermeasuresPulseRadius.decompressGzipPacket(9, var16);
           var6 = var5.readUnsignedByte((byte) -95);
           var7 = var5.readInt(23);
           stackIn_9_0 = (var5.readUnsignedByte((byte) -101) == 0) ? 0 : 1;

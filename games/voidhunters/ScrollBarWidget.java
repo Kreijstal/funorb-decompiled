@@ -76,7 +76,7 @@ final class ScrollBarWidget extends Widget {
           var6_int = stackIn_4_0;
           param0.writeBits(-632, var6_int, param2);
           if (var6_int != 0) {
-            var7 = BodyInZoneCondition.a(-98, -1 + param4.length);
+            var7 = BodyInZoneCondition.getIntegerEncodingBitLength(-98, -1 + param4.length);
             var8 = param1;
             for (var9 = 0; var8.length > var9; var9++) {
               var10 = var8[var9];

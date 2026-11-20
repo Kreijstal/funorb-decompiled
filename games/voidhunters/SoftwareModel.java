@@ -520,7 +520,7 @@ final class SoftwareModel extends Model3D {
                     var46 = ((float)var40 * var75[0] + (float)var41 * var75[1] + (float)var42 * var75[2]) / var43;
                     var47 = ((float)var40 * var75[3] + (float)var41 * var75[4] + (float)var42 * var75[5]) / var44;
                     var48 = ((float)var40 * var75[6] + (float)var41 * var75[7] + (float)var42 * var75[8]) / var45;
-                    var21Lifetime1 = GetSniperCannonRandomness.a(-44, var47, var46, var48);
+                    var21Lifetime1 = GetSniperCannonRandomness.selectCubeMapFace(-44, var47, var46, var48);
                     SetPointDefenceLaserRandomness.a(var33, this.vertexZ[var23], var32, (byte) 109, this.vertexX[var23], var28, this.vertexY[var23], var21Lifetime1, var76, var26, var30, var75, var27, var31);
                     var19[0] = var76[0];
                     var20[0] = var76[1];

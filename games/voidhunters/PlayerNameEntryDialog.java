@@ -243,7 +243,7 @@ final class PlayerNameEntryDialog extends Widget {
             this.inputBuffer.length() > 0) {
             ServerTickFactory.resizeStringBuilder(-1 + this.inputBuffer.length(), false, this.inputBuffer, ' ');
           }
-          if (MissionBuilderFactory.a(SetClientSideDragging.field_r, 109, (CharSequence) ((Object) this.inputBuffer))) {
+          if (MissionBuilderFactory.canAppendPlayerNameCharacter(SetClientSideDragging.field_r, 109, (CharSequence) ((Object) this.inputBuffer))) {
             discarded$0 = this.inputBuffer.append(SetClientSideDragging.field_r);
           } else {
             if (this.inputBuffer.length() == 0 &&

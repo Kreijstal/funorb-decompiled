@@ -267,7 +267,7 @@ final class Nebula implements DiffableState {
             }
             return;
           }
-          SetMissileLauncherEnergyUsed.a(var11, (byte) 7, (int)var8, param3.scale * (float)var9, var10, (int)var7);
+          SetMissileLauncherEnergyUsed.fillCircleAlpha(var11, (byte) 7, (int)var8, param3.scale * (float)var9, var10, (int)var7);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -161,7 +161,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
         discarded$0 = SetShipAimLines.field_p.append((char) var4);
         var5Lifetime1 = 485;
         var17 = IntIndexTable.field_a;
-        var16 = EscapePodFactory.a(1, var17);
+        var16 = EscapePodFactory.addLocalPlayerBadges(1, var17);
         var19 = var16;
         if (NetworkMessageState.chatChannel != 2) {
           var7 = "";

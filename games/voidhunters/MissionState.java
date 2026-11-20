@@ -293,7 +293,7 @@ final class MissionState implements DiffableState {
                 SetMissionResnetResourceTickTime.field_p != 0) && (var14 < 0 ||
                 var18.length <= var14)) {
                 if (var11 == var10) {
-                  var15 = ShipFactory.a(param0, var18, (byte) -21, false);
+                  var15 = ShipFactory.chooseExtremeIndex(param0, var18, (byte) -21, false);
                   var13.selectedTeam = var15;
                   var4[var15] = var4[var15] + 1;
                 }
@@ -326,7 +326,7 @@ final class MissionState implements DiffableState {
     }
 
     final void skipPhaseCountdown(boolean param0) {
-        GetDebrisThrowable.a(param0, "Skipping phase countdown for " + this.missionPhase);
+        GetDebrisThrowable.logDeveloperMessage(param0, "Skipping phase countdown for " + this.missionPhase);
         this.phaseChangeCountdown = 0;
         if (param0) {
           this.customVariables = (MissionVariable[]) null;
@@ -570,7 +570,7 @@ final class MissionState implements DiffableState {
         if (param0 < 125) {
           return;
         }
-        GetDebrisThrowable.a(false, "Extending phase countdown for " + this.missionPhase);
+        GetDebrisThrowable.logDeveloperMessage(false, "Extending phase countdown for " + this.missionPhase);
         this.phaseChangeCountdown = this.phaseChangeCountdown + 600 * Particle.field_l;
     }
 
@@ -1111,7 +1111,7 @@ final class MissionState implements DiffableState {
           }
           if (this.missionPhase == 0) {
             if (this.phaseChangeCountdown == 0) {
-              stackIn_75_0 = (!SetGrapplingHookAimarc.a(param0, (byte) -106)) ? 0 : 1;
+              stackIn_75_0 = (!SetGrapplingHookAimarc.canAdvancePastPlayerWait(param0, (byte) -106)) ? 0 : 1;
               var5Lifetime1 = stackIn_75_0;
               if (var5Lifetime1 == 0) {
                 stackIn_79_0 = (!this.hasPhaseSkipRequest(false, param0)) ? 0 : 1;

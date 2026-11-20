@@ -55,7 +55,7 @@ final class DebugMessage implements DiffableState {
           if (var4 == 0) {
             return;
           }
-          SetDebrisGrabbingRange.a((byte) -108, "This instance of DebugMessage has changed");
+          SetDebrisGrabbingRange.logErrorIfEnabled((byte) -108, "This instance of DebugMessage has changed");
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

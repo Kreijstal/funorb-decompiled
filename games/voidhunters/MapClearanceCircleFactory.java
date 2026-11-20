@@ -69,7 +69,7 @@ final class MapClearanceCircleFactory implements GameStateFactory {
           var4 = new LogoMaterial[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
-              var6 = param0.readBits(0, BodyInZoneCondition.a(-97, var5 - 1));
+              var6 = param0.readBits(0, BodyInZoneCondition.getIntegerEncodingBitLength(-97, var5 - 1));
               var4[var5] = var4[var6];
             } else {
               var6_ref_apb = new LogoMaterial();

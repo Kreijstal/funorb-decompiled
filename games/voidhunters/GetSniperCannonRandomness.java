@@ -36,7 +36,7 @@ final class GetSniperCannonRandomness extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static int a(int param0, float param1, float param2, float param3) {
+    final static int selectCubeMapFace(int param0, float param1, float param2, float param3) {
         float stackIn_3_0 = 0.0f;
         float stackIn_6_0 = 0.0f;
         float stackIn_11_0 = 0.0f;

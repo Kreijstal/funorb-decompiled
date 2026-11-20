@@ -43,7 +43,7 @@ final class SetBurstFireMaxEnergy extends ConsoleCommand {
           LobbyThemeBuilder.buildLobbyTheme(101, param1, param3, param7, param4);
           BuildBlueprintOrderDefinition.initializeSocialWidgets(param7, -97);
           SetRepairModeActiveTime.a(param10, 10231, param15, param7, param11, param6, param14, param13, param12, param8, param19, param9, param18, param16, param5);
-          MissionVariable.a(param7, param2, 2874, param17);
+          MissionVariable.initializeChatUi(param7, param2, 2874, param17);
           GetPointDefenceLaserProjectileDamage.initializeReportReasonLabels((byte) -107);
           if (param0 <= 10) {
             field_o = (boolean[]) null;

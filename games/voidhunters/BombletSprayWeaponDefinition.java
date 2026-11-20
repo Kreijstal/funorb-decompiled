@@ -19,7 +19,7 @@ final class BombletSprayWeaponDefinition extends WeaponDefinition {
         return AccountRequestPhase.field_a;
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void initializeCarouselMenuInput(boolean param0, byte param1) {
         SpriteArchiveDecoder.field_b = 0;
         SetBots.field_q = SetMachineGunEnergyUsed.field_p;
         SetSpecialOrderBoxWidth.field_o = 0;

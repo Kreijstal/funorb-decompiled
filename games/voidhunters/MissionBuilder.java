@@ -2342,7 +2342,7 @@ final class MissionBuilder implements DiffableState {
           if (LoginStage.shouldSpawnNeutralAiFleets(param0, 22681)) {
             this.spawnNeutralAiFleets(param2, 90, var7);
           }
-          if (GetDefaultFiringLeeway.a(param3, (byte) -24)) {
+          if (GetDefaultFiringLeeway.shouldSwapMissionTeams(param3, (byte) -24)) {
             this.swapMissionTeams(-1, param2, param3);
             var7.setTeamsSwapped(48, true);
           } else {

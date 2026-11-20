@@ -19,7 +19,7 @@ final class SetPhysicsCollisionPhantomForceMultiplier extends ConsoleCommand {
         try {
           if (obfuscationGuard > -119) {
             var4 = (String) null;
-            SetPhysicsCollisionPhantomForceMultiplier.a((byte) -89, (String) null);
+            SetPhysicsCollisionPhantomForceMultiplier.isLocalPlayerName((byte) -89, (String) null);
           }
           SetMachineGunEnergyUsed.submitSettingsChange(52, 62, arguments[0].intValue(74));
           stackIn_3_0 = new ConsoleValue("void");
@@ -38,7 +38,7 @@ final class SetPhysicsCollisionPhantomForceMultiplier extends ConsoleCommand {
         }
     }
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean isLocalPlayerName(byte param0, String param1) {
         RuntimeException var2 = null;
         CharSequence var3 = null;
         boolean stackIn_3_0 = false;

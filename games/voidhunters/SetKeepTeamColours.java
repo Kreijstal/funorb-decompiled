@@ -36,7 +36,7 @@ final class SetKeepTeamColours extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0) {
+    final static void initializeMenuScreens(int param0) {
         if (DeveloperAccess.hasDeveloperAccess(2)) {
           GetFullMissionSet.initializeMenuScreen(RidgedNoiseVolumeGenerator.field_r, 2182, 0);
         }

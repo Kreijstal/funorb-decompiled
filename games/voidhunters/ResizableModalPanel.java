@@ -244,7 +244,7 @@ abstract class ResizableModalPanel extends ModalPanel {
               var18[0][var10 * 4 + 1] = SetPhasedEnergyBeamRandomness.field_o[var11];
               var18[0][2 + var10 * 4] = GrowableIntArray.field_d[var11];
               var18[0][3 + 4 * var10] = GetMissionVariablesHudY.field_o[var11];
-              if (SetPhysicsCollisionPhantomForceMultiplier.a((byte) -75, SetAudioRangeCutoff.field_o[var11]) &&
+              if (SetPhysicsCollisionPhantomForceMultiplier.isLocalPlayerName((byte) -75, SetAudioRangeCutoff.field_o[var11]) &&
                 0 == SetPhasedEnergyBeamRandomness.field_o[var11] + GrowableIntArray.field_d[var11] + GetMissionVariablesHudY.field_o[var11]) {
                 var6[0][var10] = null;
                 var10--;
@@ -262,7 +262,7 @@ abstract class ResizableModalPanel extends ModalPanel {
               var18[1][1 + var13 * 4] = SetPhasedEnergyBeamRandomness.field_o[var11Lifetime1];
               var18[1][var13 * 4 + 2] = GrowableIntArray.field_d[var11Lifetime1];
               var18[1][3 + var13 * 4] = GetMissionVariablesHudY.field_o[var11Lifetime1];
-              if (SetPhysicsCollisionPhantomForceMultiplier.a((byte) -75, SetAudioRangeCutoff.field_o[var11Lifetime1]) &&
+              if (SetPhysicsCollisionPhantomForceMultiplier.isLocalPlayerName((byte) -75, SetAudioRangeCutoff.field_o[var11Lifetime1]) &&
                 0 == GetMissionVariablesHudY.field_o[var11Lifetime1] + (GrowableIntArray.field_d[var11Lifetime1] + SetPhasedEnergyBeamRandomness.field_o[var11Lifetime1])) {
                 var6[1][var13] = null;
                 var13--;

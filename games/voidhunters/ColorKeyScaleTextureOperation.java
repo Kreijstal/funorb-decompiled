@@ -189,7 +189,7 @@ final class ColorKeyScaleTextureOperation extends TextureOperation {
           }
           SetVariableAction.field_b = 0;
           if (IntegerRecordWritePackets.field_a) {
-            GetDebrisThrowable.a(false, "Destroying game");
+            GetDebrisThrowable.logDeveloperMessage(false, "Destroying game");
             MatchingFieldValidator.field_g = null;
             IntegerRecordWritePackets.field_a = false;
             ProxyAuthenticationException.field_a = null;

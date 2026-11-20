@@ -38,7 +38,7 @@ final class SetDebrisGrabbingRange extends ConsoleCommand {
         }
     }
 
-    final static void a(byte param0, String param1) {
+    final static void logErrorIfEnabled(byte param0, String param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

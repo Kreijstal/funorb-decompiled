@@ -6,7 +6,7 @@ final class GetTorpedoFireForce extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean a(Class param0, int param1) {
+    final static boolean isNumericPrimitiveType(Class param0, int param1) {
         Class var3 = null;
         boolean stackIn_11_0 = false;
         RuntimeException stackIn_14_0 = null;
@@ -17,7 +17,7 @@ final class GetTorpedoFireForce extends ConsoleCommand {
         try {
           if (param1 != 24145) {
             var3 = (Class) null;
-            GetTorpedoFireForce.a((Class) null, -113);
+            GetTorpedoFireForce.isNumericPrimitiveType((Class) null, -113);
           }
           stackIn_11_0 = (param0 == Integer.TYPE) || (param0 == Short.TYPE) || (param0 == Long.TYPE) || (Byte.TYPE == param0) || (Float.TYPE == param0) || (Double.TYPE == param0);
           return stackIn_11_0;

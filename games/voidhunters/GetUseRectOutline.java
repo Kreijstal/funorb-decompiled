@@ -215,7 +215,7 @@ final class GetUseRectOutline extends ConsoleCommand {
         MessageFactory.playerGameDataRequest = null;
         TextLayout.playerGameDataLoaded = true;
         LoadingAnimationControl.finishAnimations((byte) -114);
-        SetKeepTeamColours.a(15334);
+        SetKeepTeamColours.initializeMenuScreens(15334);
     }
 
     static {

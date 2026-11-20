@@ -248,7 +248,7 @@ final class ShipTeamCondition extends MissionCondition implements DiffableState,
             field_f = (String[]) null;
           }
           if (this.shipId != -1) {
-            stackIn_5_0 = SetAutozoomSpeedDivide.a(this.shipId, true, param2, (byte) -14);
+            stackIn_5_0 = SetAutozoomSpeedDivide.addIntArrayValue(this.shipId, true, param2, (byte) -14);
             return stackIn_5_0;
           }
           var9 = param0.getShips(1000);
@@ -259,7 +259,7 @@ final class ShipTeamCondition extends MissionCondition implements DiffableState,
               var7.getTeam((byte) 121) == this.teamId &&
               !var7.hasAi((byte) -10) &&
               var7.getOwner((byte) -117) >= 0) {
-              param2 = SetAutozoomSpeedDivide.a(var7.getId(false), true, param2, (byte) -14);
+              param2 = SetAutozoomSpeedDivide.addIntArrayValue(var7.getId(false), true, param2, (byte) -14);
             }
           }
           stackIn_23_0 = (int[]) (param2);
@@ -339,7 +339,7 @@ final class ShipTeamCondition extends MissionCondition implements DiffableState,
             return stackIn_2_0;
           }
           if (this.shipId >= 0) {
-            param1 = SetAutozoomSpeedDivide.a(this.shipId, true, param1, (byte) -14);
+            param1 = SetAutozoomSpeedDivide.addIntArrayValue(this.shipId, true, param1, (byte) -14);
           }
           stackIn_7_0 = (int[]) (param1);
           return stackIn_7_0;

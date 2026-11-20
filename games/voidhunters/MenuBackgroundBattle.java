@@ -27,7 +27,7 @@ final class MenuBackgroundBattle {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var5_int = GetRepairModeRadius.a(-99, 0, GraphicsHeap.c((byte) -93), param1);
+          var5_int = GetRepairModeRadius.chooseRandomVisibleComponentOption(-99, 0, GraphicsHeap.countVisiblePresetShips((byte) -93), param1);
           if (!param0 && (var5_int == 2 ||
             var5_int == 1)) {
             var5_int = 2 + var5_int;
@@ -135,8 +135,8 @@ final class MenuBackgroundBattle {
                 var13 = var11_ref_ml.getFinalx(true);
                 var14 = var11_ref_ml.getFinaly((byte) 111);
                 var15 = this.camera.worldToScreenX(var13, (byte) 115);
-                GetLagStandardDeviationOut.drawTextWithDefaultFont(1, var12_ref_String, 16777215, this.camera.worldToScreenY(true, -10000 + var14), -(GetPhasedEnergyBeamProjectiles.a(112, var12_ref_String) >> 1) + var15, 4266);
-                DelayedPacket.drawLine(this.camera.worldToScreenY(true, var14), var15, -(GetPhasedEnergyBeamProjectiles.a(-77, var12_ref_String) >> 2) + var15, this.camera.worldToScreenY(true, -10000 + var14), -16777216, 16777215);
+                GetLagStandardDeviationOut.drawTextWithDefaultFont(1, var12_ref_String, 16777215, this.camera.worldToScreenY(true, -10000 + var14), -(GetPhasedEnergyBeamProjectiles.getDefaultFontStringWidth(112, var12_ref_String) >> 1) + var15, 4266);
+                DelayedPacket.drawLine(this.camera.worldToScreenY(true, var14), var15, -(GetPhasedEnergyBeamProjectiles.getDefaultFontStringWidth(-77, var12_ref_String) >> 2) + var15, this.camera.worldToScreenY(true, -10000 + var14), -16777216, 16777215);
                 return;
               }
             }
@@ -153,8 +153,8 @@ final class MenuBackgroundBattle {
             var14Lifetime1 = TextLayout.approximateVectorLength(var11, (byte) 106, var13Lifetime1);
             if (var14Lifetime1 <= var8Lifetime1) {
               var15Lifetime1 = this.camera.worldToScreenX(var10, (byte) 116);
-              GetLagStandardDeviationOut.drawTextWithDefaultFont(1, var9, 16777215, this.camera.worldToScreenY(true, -10000 + var12), -(GetPhasedEnergyBeamProjectiles.a(-51, var9) >> 1) + var15Lifetime1, 4266);
-              DelayedPacket.drawLine(this.camera.worldToScreenY(true, var12), var15Lifetime1, -(GetPhasedEnergyBeamProjectiles.a(-100, var9) >> 2) + var15Lifetime1, this.camera.worldToScreenY(true, -10000 + var12), -16777216, 16777215);
+              GetLagStandardDeviationOut.drawTextWithDefaultFont(1, var9, 16777215, this.camera.worldToScreenY(true, -10000 + var12), -(GetPhasedEnergyBeamProjectiles.getDefaultFontStringWidth(-51, var9) >> 1) + var15Lifetime1, 4266);
+              DelayedPacket.drawLine(this.camera.worldToScreenY(true, var12), var15Lifetime1, -(GetPhasedEnergyBeamProjectiles.getDefaultFontStringWidth(-100, var9) >> 2) + var15Lifetime1, this.camera.worldToScreenY(true, -10000 + var12), -16777216, 16777215);
             }
           }
           return;

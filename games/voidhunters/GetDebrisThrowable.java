@@ -70,7 +70,7 @@ final class GetDebrisThrowable extends ConsoleCommand {
         return null;
     }
 
-    final static void a(boolean param0, String param1) {
+    final static void logDeveloperMessage(boolean param0, String param1) {
         RuntimeException var2 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;

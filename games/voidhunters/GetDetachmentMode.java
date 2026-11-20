@@ -42,10 +42,10 @@ final class GetDetachmentMode extends ConsoleCommand {
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean handleQuickChatKeyEvent(int param0, int param1, int param2) {
         boolean stackIn_19_0 = false;
         if (param1 != -9307) {
-          GetDetachmentMode.a(-44, 13, -90);
+          GetDetachmentMode.handleQuickChatKeyEvent(-44, 13, -90);
           if (SetBombletSprayProjectileDamage.field_o == 13) {
             WhirlpoolDigest.closeQuickChatIfOpen(18444);
             return true;

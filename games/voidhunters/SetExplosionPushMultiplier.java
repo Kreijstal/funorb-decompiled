@@ -43,7 +43,7 @@ final class SetExplosionPushMultiplier extends ConsoleCommand {
             stackIn_2_0 = QuickChatMenuWidget.field_Cb;
             return stackIn_2_0;
           }
-          if (SetPhysicsCollisionPhantomForceMultiplier.a((byte) -75, param1)) {
+          if (SetPhysicsCollisionPhantomForceMultiplier.isLocalPlayerName((byte) -75, param1)) {
             stackIn_6_0 = GetUsePolygonFill.field_o;
             return stackIn_6_0;
           }

@@ -305,7 +305,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
             SetTorpedoProjectileDamage.field_p[var5] = SetGrapplingHookRopeBreakLength.loadNamedSprites(this.graphicsArchive, true, "basic", UiAngleDialRenderer.field_i[var5]);
             var9[var5] = SetTorpedoProjectileDamage.field_p[var5];
           }
-          OpenGlClientVertexBuffer.a(18090, false);
+          OpenGlClientVertexBuffer.setExtendedLobbyUiEnabled(18090, false);
           SetComponentBreakingExplosionForceMultiplier.setLobbyPlayerStatusLabels(MonochromeRowCache.field_j, param0 + 29073);
           var10 = GetExplosionProjectileDamage.loadNamedIndexedSprites(98, "basic", "extra_crowns", this.graphicsArchive);
           var15 = var10;
@@ -316,7 +316,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           TeamObjectiveFormatter.initializeLobbyInterface(var12, var14, var19, true, (byte) -127, ResourceNode.field_g, GetBombletSprayRandomness.field_q, NetworkGameClient.field_A, GetDebugLineLife.field_o, 8, SetTorpedoProjectileDamage.field_p, var11, 1, this.quickChatArchive, var15, UiComponent.field_o, DebugSendable.field_d);
           ShieldInfoPool.field_c = SetSniperCannonProjectiles.loadNamedSprite(this.graphicsArchive, "lobby_game_logo", "basic", true);
           EdgeMagnitudeTextureOperation.initializeChatMessages(200, -100);
-          SetMissilesExplosionPower.a(var11, param0 - 68, var12);
+          SetMissilesExplosionPower.acceptUiArchives(var11, param0 - 68, var12);
           SetMomentOfInertiaPredivideDownshift.a(AppletRasterBuffer.field_a, 2141, GetShieldsDirectionalArcParticleSpeedDownshift.field_o, 16777215, 0, 0);
           var3 = null;
           this.fontMetricsArchive = null;

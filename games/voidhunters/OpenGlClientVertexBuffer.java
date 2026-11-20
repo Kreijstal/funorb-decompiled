@@ -37,7 +37,7 @@ final class OpenGlClientVertexBuffer extends OpenGlClientBuffer implements OpenG
         highscorePlayers = (HighscorePlayerInfo[]) null;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void setExtendedLobbyUiEnabled(int param0, boolean param1) {
         if (param0 != 18090) {
           highscorePlayers = (HighscorePlayerInfo[]) null;
           GetGrapplingHooksDamageableBySourcePlayer.field_o = param1;

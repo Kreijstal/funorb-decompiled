@@ -141,7 +141,7 @@ final class SetSniperCannonProjectiles extends ConsoleCommand {
         try {
           var4_int = param0.getGroupId(param2, -124);
           var5 = param0.getFileId(param3, var4_int, param1);
-          stackIn_1_0 = SetServerinfoComponentstate.a(var4_int, var5, param0, 2);
+          stackIn_1_0 = SetServerinfoComponentstate.loadSprite(var4_int, var5, param0, 2);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

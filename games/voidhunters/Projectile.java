@@ -256,11 +256,11 @@ final class Projectile extends MovingObject implements DiffableState {
               var8 = 255 * this.damage / TickClock.field_a;
               FixedPointTrigonometry.drawThickLine(var7, 3, 16994, var4, var8 >> 1, var3_int, var5, var6);
               if (0 < this.angle) {
-                SetMissileLauncherEnergyUsed.a(var7, (byte) 7, var4, Math.max(3.0f, (float)var8 * (11.0f * param1.scale)), var8 >> 1, var3_int);
-                SetMissileLauncherEnergyUsed.a(var7, (byte) 7, var4, Math.max(2.0f, 8.0f * param1.scale * (float)var8), var8, var3_int);
+                SetMissileLauncherEnergyUsed.fillCircleAlpha(var7, (byte) 7, var4, Math.max(3.0f, (float)var8 * (11.0f * param1.scale)), var8 >> 1, var3_int);
+                SetMissileLauncherEnergyUsed.fillCircleAlpha(var7, (byte) 7, var4, Math.max(2.0f, 8.0f * param1.scale * (float)var8), var8, var3_int);
               }
-              SetMissileLauncherEnergyUsed.a(var7, (byte) 7, var6, Math.max(2.0f, param1.scale * 8.0f * (float)var8), var8 >> 1, var5);
-              SetMissileLauncherEnergyUsed.a(var7, (byte) 7, var6, Math.max(1.0f, (float)var8 * (param1.scale * 4.0f)), var8, var5);
+              SetMissileLauncherEnergyUsed.fillCircleAlpha(var7, (byte) 7, var6, Math.max(2.0f, param1.scale * 8.0f * (float)var8), var8 >> 1, var5);
+              SetMissileLauncherEnergyUsed.fillCircleAlpha(var7, (byte) 7, var6, Math.max(1.0f, (float)var8 * (param1.scale * 4.0f)), var8, var5);
               SetShowTutorial.drawLineAlpha(var3_int, (byte) 66, var5, var4, var7, var6, var8);
               return;
             }

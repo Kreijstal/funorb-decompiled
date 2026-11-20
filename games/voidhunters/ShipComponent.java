@@ -769,7 +769,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             discarded$0 = this.hasAdjustableConnection((byte) -119);
           }
           if (this.componentTypeId == 45) {
-            SetMissileLauncherEnergyUsed.a(13412864, (byte) 7, param3.worldToScreenY(true, this.finaly), (float)(int)(param3.scale * 4096.0f), 128 + (TextureLineShape.sinAngle(100 * SetMinimapWidth.field_o, param1 ^ 122) >> 8) / 8, param3.worldToScreenX(this.finalx, (byte) 127));
+            SetMissileLauncherEnergyUsed.fillCircleAlpha(13412864, (byte) 7, param3.worldToScreenY(true, this.finaly), (float)(int)(param3.scale * 4096.0f), 128 + (TextureLineShape.sinAngle(100 * SetMinimapWidth.field_o, param1 ^ 122) >> 8) / 8, param3.worldToScreenX(this.finalx, (byte) 127));
           }
           if (GetPointDefenceLaserProjectiles.isDebugFlagSet(16, param1 + 11200)) {
             SetNumStars.drawCircle(param3.scale * (float)var47.boundingRadius, (byte) 113, param3.worldToScreenY(true, this.finaly), 16711680, param3.worldToScreenX(this.finalx, (byte) 126));
@@ -1118,7 +1118,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           stackIn_4_1 = -115;
           stackIn_5_2 = (this.health != this.getDefinition((byte) -112).maxHealth);
           if (DateOfBirthInput.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
-            param0.writeBits(-632, this.health, BodyInZoneCondition.a(-88, this.getDefinition((byte) -112).maxHealth));
+            param0.writeBits(-632, this.health, BodyInZoneCondition.getIntegerEncodingBitLength(-88, this.getDefinition((byte) -112).maxHealth));
           }
           if (this.hasWeaponOrThruster((byte) -98)) {
             param0.writeBits(-632, this.triggermap, 9);
@@ -1636,7 +1636,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (!LegacyOpenGlSpecularEffect.readBoolean(false, param1)) {
             this.health = this.getDefinition((byte) -112).maxHealth;
           } else {
-            this.health = param1.readBits(0, BodyInZoneCondition.a(-111, this.getDefinition((byte) -112).maxHealth));
+            this.health = param1.readBits(0, BodyInZoneCondition.getIntegerEncodingBitLength(-111, this.getDefinition((byte) -112).maxHealth));
           }
           if (this.hasWeaponOrThruster((byte) -15)) {
             this.triggermap = param1.readBits(0, 9);

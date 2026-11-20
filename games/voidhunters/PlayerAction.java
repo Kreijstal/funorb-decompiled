@@ -134,7 +134,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
               if (var11 > 255) {
                 var11 = 255;
               }
-              SetMissileLauncherEnergyUsed.a(8947865, (byte) 7, param1.worldToScreenY(true, var9), (float)(int)((float)var10 * param1.scale), var11, param1.worldToScreenX(var8, (byte) 121));
+              SetMissileLauncherEnergyUsed.fillCircleAlpha(8947865, (byte) 7, param1.worldToScreenY(true, var9), (float)(int)((float)var10 * param1.scale), var11, param1.worldToScreenX(var8, (byte) 121));
             }
           }
           if (OpenGlTexture1D.field_i &&
@@ -431,7 +431,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
             } catch (java.lang.Exception decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var7 = (Exception) (Object) decompiledCaughtException;
-              SetVelocitySustainMax.a((Throwable) ((Object) var7), true, "Invalid blueprint action from player " + this.playerId + " AKA " + param0.getPlayerName(1, this.playerId));
+              SetVelocitySustainMax.logDeveloperError((Throwable) ((Object) var7), true, "Invalid blueprint action from player " + this.playerId + " AKA " + param0.getPlayerName(1, this.playerId));
             }
             return;
           }

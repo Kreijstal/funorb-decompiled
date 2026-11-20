@@ -180,7 +180,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
                 NetworkMessageState.incomingOpcode = var9Lifetime1;
               } else {
                 ShipBlueprint.a(SetWorldWidthUpshift.getEmailAvailabilityReplyLength(param4 + 24655), 30000);
-                LruNodeCache.emailAvailabilityResult = new Boolean(SetSpecialOrderBarYOffset.a(param4 - 2, AccountNameAvailabilityReplies.field_b));
+                LruNodeCache.emailAvailabilityResult = new Boolean(SetSpecialOrderBarYOffset.readEmailAvailabilityFlag(param4 - 2, AccountNameAvailabilityReplies.field_b));
                 AccountNameAvailabilityReplies.field_b.position = 0;
               }
             }

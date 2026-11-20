@@ -6,9 +6,9 @@ final class SetMinimapHeight extends ConsoleCommand {
     static String field_q;
     static int[] bzip2Table;
 
-    final static int a(int param0, int param1, boolean param2) {
+    final static int classifyPlayerBadge(int param0, int param1, boolean param2) {
         if (param2) {
-          SetMinimapHeight.a(120, -7, true);
+          SetMinimapHeight.classifyPlayerBadge(120, -7, true);
           if (param1 >= 2) {
             return 2;
           }

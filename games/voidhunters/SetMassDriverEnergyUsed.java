@@ -60,7 +60,7 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
               SetFightersPerPlayerMaximum.chatInputActive = true;
               return true;
             }
-            return GetDetachmentMode.a(param0, -9307, param1);
+            return GetDetachmentMode.handleQuickChatKeyEvent(param0, -9307, param1);
           }
           if (!ChatPermissions.isFreeChatAllowed(-115)) {
             return false;
@@ -79,10 +79,10 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
           }
           if (!SetFightersPerPlayerMaximum.chatInputActive) {
             if (LegacyOpenGlTurbulenceEffect.quickChatMenuOpen) {
-              return GetDetachmentMode.a(param0, -9307, param1);
+              return GetDetachmentMode.handleQuickChatKeyEvent(param0, -9307, param1);
             }
             if (9 == SetBombletSprayProjectileDamage.field_o) {
-              return GetDetachmentMode.a(param0, -9307, param1);
+              return GetDetachmentMode.handleQuickChatKeyEvent(param0, -9307, param1);
             }
             if (SetBombletSprayProjectileDamage.field_o != 10 &&
               SetBombletSprayProjectileDamage.field_o != 11) {
@@ -95,7 +95,7 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
               SetFightersPerPlayerMaximum.chatInputActive = true;
               return true;
             }
-            return GetDetachmentMode.a(param0, -9307, param1);
+            return GetDetachmentMode.handleQuickChatKeyEvent(param0, -9307, param1);
           }
           if (!ChatPermissions.isFreeChatAllowed(-115)) {
             return false;
