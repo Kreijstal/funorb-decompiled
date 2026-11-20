@@ -29,17 +29,17 @@ final class csb implements dja {
         }
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -98 % ((-64 - param0) / 50);
-        return (tv) ((Object) new kc());
+        return (SerializableGameState) ((Object) new kc());
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           csb.a(true);
-          return (tv[]) ((Object) new kc[param1]);
+          return (SerializableGameState[]) ((Object) new kc[param1]);
         }
-        return (tv[]) ((Object) new kc[param1]);
+        return (SerializableGameState[]) ((Object) new kc[param1]);
     }
 
     static {

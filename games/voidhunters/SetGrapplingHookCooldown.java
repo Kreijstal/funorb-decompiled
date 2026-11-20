@@ -18,7 +18,7 @@ final class SetGrapplingHookCooldown extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(202, 62, arguments[0].a(32));
+          SetMachineGunEnergyUsed.a(202, 62, arguments[0].intValue(32));
           if (obfuscationGuard >= -119) {
             var4 = (java.awt.Canvas) null;
             SetGrapplingHookCooldown.a((byte) -17, (java.awt.Canvas) null);
@@ -44,7 +44,7 @@ final class SetGrapplingHookCooldown extends ConsoleCommand {
           mv.a(10009, (java.awt.Component) ((Object) param1));
           ts.a((java.awt.Component) ((Object) param1), 1);
           if (GetWaitForPlayers.field_o != null) {
-            GetWaitForPlayers.field_o.a(-16, (java.awt.Component) ((Object) param1));
+            GetWaitForPlayers.field_o.attach(-16, (java.awt.Component) ((Object) param1));
           }
           int var2_int = 13 / ((16 - param0) / 56);
         } catch (RuntimeException runtimeException) {

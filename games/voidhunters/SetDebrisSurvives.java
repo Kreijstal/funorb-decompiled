@@ -19,7 +19,7 @@ final class SetDebrisSurvives extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(36, 62, arguments[0].a(33));
+          SetMachineGunEnergyUsed.a(36, 62, arguments[0].intValue(33));
           if (obfuscationGuard >= -119) {
             field_o = (String) null;
           }

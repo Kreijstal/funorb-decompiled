@@ -115,7 +115,7 @@ final class ThrusterBehaviour implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         ThrusterBehaviour var3 = null;
         int var4 = 0;
         int stackIn_3_0 = 0;
@@ -139,7 +139,7 @@ final class ThrusterBehaviour implements DiffableState {
           }
           boolean decompiledFrameRemainder0 = true;
           if ((stackIn_3_0 ^ stackIn_6_1) == 0 && (null == this.timer ||
-            !this.timer.a((byte) -83, var3.timer))) {
+            !this.timer.differsFrom((byte) -83, var3.timer))) {
             stackIn_13_0 = (null != this.trail) ? 0 : 1;
             if (var3.trail != null) {
               stackIn_16_1 = 0;
@@ -147,7 +147,7 @@ final class ThrusterBehaviour implements DiffableState {
               stackIn_16_1 = 1;
             }
             if ((stackIn_13_0 ^ stackIn_16_1) == 0 && (null == this.trail ||
-              !this.trail.a((byte) -44, var3.trail))) {
+              !this.trail.differsFrom((byte) -44, var3.trail))) {
               stackIn_22_0 = false;
               decompiledFrameRemainder0 = false;
             }
@@ -170,13 +170,13 @@ final class ThrusterBehaviour implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         RuntimeException var3 = null;
-        tv var4 = null;
-        faa stackIn_2_0 = null;
+        SerializableGameState var4 = null;
+        IsaacPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         boolean stackIn_3_2 = false;
-        faa stackIn_8_0 = null;
+        IsaacPacketBuffer stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         boolean stackIn_9_2 = false;
         RuntimeException stackIn_16_0 = null;
@@ -184,23 +184,23 @@ final class ThrusterBehaviour implements DiffableState {
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_2_0 = (faa) (param0);
+          stackIn_2_0 = (IsaacPacketBuffer) (param0);
           stackIn_2_1 = 53;
           stackIn_3_2 = (this.timer != null);
-          if (vq.a(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
-            this.timer.b(param0, -123);
+          if (vq.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
+            this.timer.writeState(param0, -123);
           }
-          stackIn_8_0 = (faa) (param0);
+          stackIn_8_0 = (IsaacPacketBuffer) (param0);
           stackIn_8_1 = 87;
           stackIn_9_2 = (null != this.trail);
-          if (vq.a(stackIn_8_0, stackIn_8_1, stackIn_9_2)) {
-            this.trail.b(param0, -126);
+          if (vq.writeBoolean(stackIn_8_0, stackIn_8_1, stackIn_9_2)) {
+            this.trail.writeState(param0, -126);
           }
           if (param1 < -109) {
             return;
           }
-          var4 = (tv) null;
-          this.reportDifferences((tv) null, -102);
+          var4 = (SerializableGameState) null;
+          this.reportDifferences((SerializableGameState) null, -102);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -216,7 +216,7 @@ final class ThrusterBehaviour implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int stackIn_12_0 = 0;
         int stackIn_15_1 = 0;
         int stackIn_23_0 = 0;
@@ -250,7 +250,7 @@ final class ThrusterBehaviour implements DiffableState {
           }
           if ((stackIn_12_0 ^ stackIn_15_1) != 0 ||
             null != this.timer &&
-            this.timer.a((byte) 81, var5.timer)) {
+            this.timer.differsFrom((byte) 81, var5.timer)) {
             System.out.println("TimedSpecialOrderBehaviour timer has changed. before=" + var5.timer + ", now=" + this.timer);
             var4 = 1;
           }
@@ -262,7 +262,7 @@ final class ThrusterBehaviour implements DiffableState {
           }
           if ((stackIn_23_0 ^ stackIn_26_1) != 0 ||
             null != this.trail &&
-            this.trail.a((byte) 91, var5.trail)) {
+            this.trail.differsFrom((byte) 91, var5.trail)) {
             var4 = 1;
             System.out.println("TrailHolder trail has changed. before=" + var5.trail + ", now=" + this.trail);
           }
@@ -285,7 +285,7 @@ final class ThrusterBehaviour implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         ThrusterBehaviour var4 = null;
         ThrusterBehaviour var3 = null;
         try {
@@ -297,7 +297,7 @@ final class ThrusterBehaviour implements DiffableState {
             if (var3.timer == null) {
               var3.timer = new TimedSpecialOrderBehaviour();
             }
-            this.timer.b((byte) 102, var3.timer);
+            this.timer.copyTo((byte) 102, var3.timer);
           }
           this.field_d = false;
           var3.trail = this.trail;
@@ -318,7 +318,7 @@ final class ThrusterBehaviour implements DiffableState {
         if (null != this.trail) {
           var2 = this.trail;
           this.trail = new TrailHolder();
-          var2.b((byte) 112, this.trail);
+          var2.copyTo((byte) 112, this.trail);
           this.field_d = param0 ? true : false;
           return;
         }
@@ -569,10 +569,10 @@ final class ThrusterBehaviour implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         RuntimeException var3 = null;
         int var4 = 0;
-        tv var5 = null;
+        SerializableGameState var5 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -580,23 +580,23 @@ final class ThrusterBehaviour implements DiffableState {
         var4 = VoidHunters.field_G;
         try {
           if (param1) {
-            var5 = (tv) null;
-            this.a((byte) 111, (tv) null);
+            var5 = (SerializableGameState) null;
+            this.differsFrom((byte) 111, (SerializableGameState) null);
           }
-          if (!kv.a(param1, param0)) {
+          if (!kv.readBoolean(param1, param0)) {
             this.timer = null;
           } else {
             if (null == this.timer) {
               this.timer = new TimedSpecialOrderBehaviour();
             }
-            this.timer.a(param0, false);
+            this.timer.readState(param0, false);
           }
-          if (!kv.a(param1, param0)) {
+          if (!kv.readBoolean(param1, param0)) {
             this.trail = null;
             return;
           }
           this.trail = new TrailHolder();
-          this.trail.a(param0, false);
+          this.trail.readState(param0, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

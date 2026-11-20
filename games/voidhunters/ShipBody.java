@@ -15,7 +15,7 @@ class ShipBody extends ara implements DiffableState, utb {
     ShipComponent chassis;
     int field_t;
 
-    public void reportDifferences(tv other, int obfuscationGuard) {
+    public void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int stackIn_7_0 = 0;
         int stackIn_10_1 = 0;
         RuntimeException stackIn_43_0 = null;
@@ -41,7 +41,7 @@ class ShipBody extends ara implements DiffableState, utb {
           }
           if ((stackIn_7_0 ^ stackIn_10_1) != 0 ||
             this.chassis != null &&
-            this.chassis.a((byte) -118, (tv) (var5.chassis))) {
+            this.chassis.differsFrom((byte) -118, (SerializableGameState) (var5.chassis))) {
             System.out.println("Component chassis has changed. before=" + var5.chassis + ", now=" + this.chassis);
             var4 = 1;
           }
@@ -160,10 +160,10 @@ class ShipBody extends ara implements DiffableState, utb {
         return (int)((long)this.centreofmassx * (long)eu.a(var2, param0 + 105) + (long)this.centreofmassy * (long)GetNumStars.a(var2, (byte) -68) >> 16);
     }
 
-    public void a(faa param0, int param1) {
+    public void a(IsaacPacketBuffer param0, int param1) {
         try {
-          super.a(param0, false);
-          if (kv.a(false, param0)) {
+          super.readState(param0, false);
+          if (kv.readBoolean(false, param0)) {
             if (null == this.chassis) {
               this.chassis = new ShipComponent();
             }
@@ -173,12 +173,12 @@ class ShipBody extends ara implements DiffableState, utb {
           }
           this.angle = uwa.a(24, param0, (byte) 20);
           this.angularvelocity = uwa.a(24, param0, (byte) 20);
-          this.centreofmassx = param0.i(0, 32);
-          this.centreofmassy = param0.i(param1 - 32, 32);
-          this.mass = param0.i(0, param1);
-          this.momentofinertia = param0.i(0, 32);
+          this.centreofmassx = param0.readBits(0, 32);
+          this.centreofmassy = param0.readBits(param1 - 32, 32);
+          this.mass = param0.readBits(0, param1);
+          this.momentofinertia = param0.readBits(0, 32);
           this.boundingbox = wkb.a((byte) 37, this.boundingbox, param0, 8);
-          this.id = param0.i(0, 16);
+          this.id = param0.readBits(0, 16);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "anb.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -357,8 +357,8 @@ class ShipBody extends ara implements DiffableState, utb {
         return this.chassis.k((byte) 84);
     }
 
-    public void b(faa param0, int param1) {
-        faa stackIn_2_0 = null;
+    public void writeState(IsaacPacketBuffer param0, int param1) {
+        IsaacPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         boolean stackIn_3_2 = false;
         RuntimeException stackIn_11_0 = null;
@@ -367,16 +367,16 @@ class ShipBody extends ara implements DiffableState, utb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          super.b(param0, -111);
-          stackIn_2_0 = (faa) (param0);
+          super.writeState(param0, -111);
+          stackIn_2_0 = (IsaacPacketBuffer) (param0);
           stackIn_2_1 = -94;
           stackIn_3_2 = (this.chassis != null);
-          if (vq.a(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
-            this.chassis.b(param0, -115);
+          if (vq.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
+            this.chassis.writeState(param0, -115);
           }
-          param0.a(-632, this.angle, 24);
-          param0.a(-632, this.angularvelocity, 24);
-          param0.a(-632, this.id, 16);
+          param0.writeBits(-632, this.angle, 24);
+          param0.writeBits(-632, this.angularvelocity, 24);
+          param0.writeBits(-632, this.id, 16);
           if (param1 > -109) {
             this.c(-33);
           }
@@ -409,20 +409,20 @@ class ShipBody extends ara implements DiffableState, utb {
         return this.chassis.a(param2, false, 0, param1, 21750, 0);
     }
 
-    public void a(faa param0, boolean param1) {
+    public void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, false);
-          if (kv.a(param1, param0)) {
+          super.readState(param0, false);
+          if (kv.readBoolean(param1, param0)) {
             if (null == this.chassis) {
               this.chassis = new ShipComponent();
             }
-            this.chassis.a(param0, false);
+            this.chassis.readState(param0, false);
           } else {
             this.chassis = null;
           }
           this.angle = uwa.a(24, param0, (byte) 20);
           this.angularvelocity = uwa.a(24, param0, (byte) 20);
-          this.id = param0.i(0, 16);
+          this.id = param0.readBits(0, 16);
           this.h((byte) 63);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "anb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -547,23 +547,23 @@ class ShipBody extends ara implements DiffableState, utb {
         return stackIn_8_0;
     }
 
-    public void a(faa param0, byte param1) {
-        super.b(param0, -113);
-        if (vq.a(param0, 54, this.chassis != null ? true : false)) {
+    public void a(IsaacPacketBuffer param0, byte param1) {
+        super.writeState(param0, -113);
+        if (vq.writeBoolean(param0, 54, this.chassis != null ? true : false)) {
           this.chassis.a(param0, (byte) -113);
         }
-        param0.a(-632, this.angle, 24);
+        param0.writeBits(-632, this.angle, 24);
         if (param1 > -91) {
           return;
         }
         try {
-          param0.a(-632, this.angularvelocity, 24);
-          param0.a(-632, this.centreofmassx, 32);
-          param0.a(-632, this.centreofmassy, 32);
-          param0.a(-632, this.mass, 32);
-          param0.a(-632, this.momentofinertia, 32);
+          param0.writeBits(-632, this.angularvelocity, 24);
+          param0.writeBits(-632, this.centreofmassx, 32);
+          param0.writeBits(-632, this.centreofmassy, 32);
+          param0.writeBits(-632, this.mass, 32);
+          param0.writeBits(-632, this.momentofinertia, 32);
           pgb.a(8, null != this.boundingbox ? this.boundingbox.length : 0, 84, param0, this.boundingbox);
-          param0.a(-632, this.id, 16);
+          param0.writeBits(-632, this.id, 16);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "anb.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -1092,7 +1092,7 @@ class ShipBody extends ara implements DiffableState, utb {
         return this.boundingbox;
     }
 
-    public boolean a(byte param0, tv param1) {
+    public boolean differsFrom(byte param0, SerializableGameState param1) {
         ShipBody var3 = null;
         int var4 = 0;
         int stackIn_4_0 = 0;
@@ -1107,7 +1107,7 @@ class ShipBody extends ara implements DiffableState, utb {
           boolean decompiledFrameRemainder0 = true;
           var4 = -16 / ((param0 - 22) / 59);
           var3 = (ShipBody) (param1);
-          if (!super.a((byte) 104, param1)) {
+          if (!super.differsFrom((byte) 104, param1)) {
             stackIn_4_0 = (null != this.chassis) ? 0 : 1;
             if (var3.chassis != null) {
               stackIn_7_1 = 0;
@@ -1115,7 +1115,7 @@ class ShipBody extends ara implements DiffableState, utb {
               stackIn_7_1 = 1;
             }
             if ((stackIn_4_0 ^ stackIn_7_1) == 0 && (this.chassis == null ||
-              !this.chassis.a((byte) 126, (tv) (var3.chassis))) && (var3.angle == this.angle &&
+              !this.chassis.differsFrom((byte) 126, (SerializableGameState) (var3.chassis))) && (var3.angle == this.angle &&
               var3.angularvelocity == this.angularvelocity &&
               this.id == var3.id)) {
               stackIn_17_0 = false;
@@ -1194,16 +1194,16 @@ class ShipBody extends ara implements DiffableState, utb {
         return ": Mass=" + this.mass + ", MOI=" + this.momentofinertia + ",xpos=" + this.x + ",ypos=" + this.y + ", angle=" + this.angle + ",avel=" + this.angularvelocity;
     }
 
-    public void b(byte param0, tv param1) {
+    public void copyTo(byte param0, SerializableGameState param1) {
         ShipBody var4 = null;
         try {
-          super.b((byte) 105, param1);
+          super.copyTo((byte) 105, param1);
           var4 = (ShipBody) (param1);
           if (null != this.chassis) {
             if (null == var4.chassis) {
               var4.chassis = new ShipComponent();
             }
-            this.chassis.b((byte) 110, var4.chassis);
+            this.chassis.copyTo((byte) 110, var4.chassis);
           } else {
             var4.chassis = null;
           }

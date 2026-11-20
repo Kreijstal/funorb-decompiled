@@ -13,7 +13,7 @@ final class SetReverbWet extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          nl.field_n = arguments[0].d(0);
+          nl.field_n = arguments[0].floatValue(0);
           if (obfuscationGuard <= -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

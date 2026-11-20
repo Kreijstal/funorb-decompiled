@@ -25,15 +25,15 @@ final class koa extends le {
           }
           var4_int = param0;
           if (var4_int == 0) {
-            this.field_l = param2.e(1869);
+            this.field_l = param2.readUnsignedShort(1869);
           } else {
             if (var4_int != 1) {
               if (var4_int == 2) {
-                stackIn_13_1 = (param2.e((byte) -93) == 1);
+                stackIn_13_1 = (param2.readUnsignedByte((byte) -93) == 1);
                 this.field_g = stackIn_13_1;
               }
             } else {
-              this.field_j = param2.e(1869);
+              this.field_j = param2.readUnsignedShort(1869);
             }
           }
           return;

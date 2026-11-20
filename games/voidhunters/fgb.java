@@ -22,16 +22,16 @@ class fgb extends DualLinkNode {
     }
 
     final static void a(int param0, int param1, lsa param2) {
-        faa var3 = null;
+        IsaacPacketBuffer var3 = null;
         try {
           if (param0 <= 13) {
             lsa var4 = (lsa) null;
             fgb.a(-2, -20, (lsa) null);
           }
           var3 = RequestNewestBlackboxRecording.field_p;
-          var3.h(24335, param1);
-          var3.c(0, param2.field_g);
-          var3.a(param2.field_d, true);
+          var3.writeIsaacByte(24335, param1);
+          var3.writeByte(0, param2.field_g);
+          var3.writeShort(param2.field_d, true);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fgb.DA(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

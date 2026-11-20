@@ -172,9 +172,9 @@ abstract class mea extends IntrusiveNode {
     final static String a(boolean param0) {
         if (!param0) {
           field_e = (IntrusiveDeque) null;
-          return qga.field_b.a(-1);
+          return qga.field_b.readString(-1);
         }
-        return qga.field_b.a(-1);
+        return qga.field_b.readString(-1);
     }
 
     static {

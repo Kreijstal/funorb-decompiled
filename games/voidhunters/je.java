@@ -37,16 +37,16 @@ final class je {
             var4 = jwa.a(false, param1);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (MouseWheelInput.a(var4.charAt(0), 104)) {
+              if (MouseWheelInput.isNameSeparator(var4.charAt(0), 104)) {
                 return false;
               }
-              if (MouseWheelInput.a(var4.charAt(var4.length() - 1), 26)) {
+              if (MouseWheelInput.isNameSeparator(var4.charAt(var4.length() - 1), 26)) {
                 return false;
               }
               var5 = 0;
               for (var6 = 0; param1.length() > var6; var6++) {
                 var7 = param1.charAt(var6);
-                if (!MouseWheelInput.a((char) var7, 46)) {
+                if (!MouseWheelInput.isNameSeparator((char) var7, 46)) {
                   var5 = 0;
                 } else {
                   var5++;
@@ -89,7 +89,7 @@ final class je {
     }
 
     final static void a(byte param0) {
-        lsa var1 = (lsa) (vfa.field_p.d(0));
+        lsa var1 = (lsa) (vfa.field_p.first(0));
         if (param0 <= 108) {
           je.b((byte) -96);
         }
@@ -97,12 +97,12 @@ final class je {
           ifb.l(-116);
           return;
         }
-        faa var2 = qga.field_b;
-        var2.h(62);
-        var2.h(90);
-        var2.h(60);
-        var2.h(93);
-        var1.b(-3846);
+        IsaacPacketBuffer var2 = qga.field_b;
+        var2.readInt(62);
+        var2.readInt(90);
+        var2.readInt(60);
+        var2.readInt(93);
+        var1.unlink(-3846);
     }
 
     final void a(int param0, pf param1) {

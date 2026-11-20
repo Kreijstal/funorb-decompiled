@@ -31,7 +31,7 @@ class dqa extends shb implements nea {
           if (!param0) {
             dqa.b(false);
           }
-          if (this.field_t.b(115)) {
+          if (this.field_t.isEmpty(115)) {
             return false;
           }
           var3 = new wc(this.field_t);
@@ -98,7 +98,7 @@ class dqa extends shb implements nea {
           var7 = new wc(this.field_t);
           var9 = (shb) (var7.c(570));
           while (var9 != null) {
-            if (var9.b((byte) -63)) {
+            if (var9.isLinked((byte) -63)) {
               var9.a((byte) -109, param1 + this.field_g, param2, this.field_r + param3, param4, param5);
               var9 = (shb) (var7.a(19072));
               continue;
@@ -154,7 +154,7 @@ class dqa extends shb implements nea {
           var11 = new wc(this.field_t);
           var9 = (shb) (var11.c(570));
           while (var9 != null) {
-            if (var9.b((byte) -63)) {
+            if (var9.isLinked((byte) -63)) {
               if (var9.a(param0, param1 + this.field_g, param2, param3, param4, param5 + this.field_r, (byte) -61)) {
                 return true;
               }
@@ -242,23 +242,23 @@ class dqa extends shb implements nea {
           nfa.field_e[2] = (int)(SetMissileLauncherRandomness.field_p >> 32);
           SetTorpedoAcceleration.field_p.position = 0;
           nfa.field_e[3] = (int)SetMissileLauncherRandomness.field_p;
-          SetTorpedoAcceleration.field_p.d(nfa.field_e[0], 332614536);
-          SetTorpedoAcceleration.field_p.d(nfa.field_e[1], 332614536);
-          SetTorpedoAcceleration.field_p.d(nfa.field_e[2], 332614536);
-          SetTorpedoAcceleration.field_p.d(nfa.field_e[3], 332614536);
+          SetTorpedoAcceleration.field_p.writeInt(nfa.field_e[0], 332614536);
+          SetTorpedoAcceleration.field_p.writeInt(nfa.field_e[1], 332614536);
+          SetTorpedoAcceleration.field_p.writeInt(nfa.field_e[2], 332614536);
+          SetTorpedoAcceleration.field_p.writeInt(nfa.field_e[3], 332614536);
           GetMissilesTopSpeed.a((byte) -91, SetTorpedoAcceleration.field_p);
-          SetTorpedoAcceleration.field_p.a(param4, true);
+          SetTorpedoAcceleration.field_p.writeShort(param4, true);
           param3.a(SetTorpedoAcceleration.field_p, -26216);
           RequestNewestBlackboxRecording.field_p.position = 0;
           if (!param2) {
-            RequestNewestBlackboxRecording.field_p.c(0, 16);
+            RequestNewestBlackboxRecording.field_p.writeByte(0, 16);
           } else {
-            RequestNewestBlackboxRecording.field_p.c(0, 18);
+            RequestNewestBlackboxRecording.field_p.writeByte(0, 18);
           }
           RequestNewestBlackboxRecording.field_p.position = RequestNewestBlackboxRecording.field_p.position + 2;
           var5_int = RequestNewestBlackboxRecording.field_p.position;
-          RequestNewestBlackboxRecording.field_p.d(fk.field_c, 332614536);
-          RequestNewestBlackboxRecording.field_p.a(GetDebrisSurvives.field_o, 90);
+          RequestNewestBlackboxRecording.field_p.writeInt(fk.field_c, 332614536);
+          RequestNewestBlackboxRecording.field_p.writeLong(GetDebrisSurvives.field_o, 90);
           var6 = 0;
           if (GetRespawnTime.field_o) {
             var6 = var6 | 1;
@@ -272,7 +272,7 @@ class dqa extends shb implements nea {
           if (GetFighterBayAimspeed.field_o != null) {
             var6 = var6 | 16;
           }
-          RequestNewestBlackboxRecording.field_p.c(0, var6);
+          RequestNewestBlackboxRecording.field_p.writeByte(0, var6);
           var7 = GetMassDriverRandomness.a(-6465, MissionList.b((byte) -121));
           if (var7 == null) {
             var7 = "";
@@ -280,12 +280,12 @@ class dqa extends shb implements nea {
           if (param0 >= -64) {
             field_u = (String) null;
           }
-          RequestNewestBlackboxRecording.field_p.a(true, var7);
+          RequestNewestBlackboxRecording.field_p.writeString(true, var7);
           if (GetFighterBayAimspeed.field_o != null) {
-            RequestNewestBlackboxRecording.field_p.b((byte) 0, GetFighterBayAimspeed.field_o);
+            RequestNewestBlackboxRecording.field_p.writeCircumfixedString((byte) 0, GetFighterBayAimspeed.field_o);
           }
           GetOndamageParticleLife.a(RequestNewestBlackboxRecording.field_p, (byte) -126, SetSalvoDamageMultiplier.field_p, bib.field_g, SetTorpedoAcceleration.field_p);
-          RequestNewestBlackboxRecording.field_p.a(RequestNewestBlackboxRecording.field_p.position - var5_int, -125);
+          RequestNewestBlackboxRecording.field_p.writeLengthShort(RequestNewestBlackboxRecording.field_p.position - var5_int, -125);
           lnb.b(-1, 111);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -304,7 +304,7 @@ class dqa extends shb implements nea {
 
     final void b(int param0, shb param1) {
         try {
-          this.field_t.b(-10258, param1);
+          this.field_t.addLast(-10258, param1);
           if (param0 != -18756) {
             this.field_t = (IntrusiveDeque) null;
           }
@@ -418,7 +418,7 @@ class dqa extends shb implements nea {
           var8 = new wc(this.field_t);
           var6_ref_shb = (shb) (var8.c(570));
           while (var6_ref_shb != null) {
-            if (var6_ref_shb.b((byte) -63)) {
+            if (var6_ref_shb.isLinked((byte) -63)) {
               if (var6_ref_shb.e((byte) -120) &&
                 var6_ref_shb.a(param0 ^ 0, param1, param2, param3)) {
                 return true;
@@ -484,7 +484,7 @@ class dqa extends shb implements nea {
           var9 = new wc(this.field_t);
           var6 = (shb) (var9.c(param2 + 1551));
           while (var6 != null) {
-            if (var6.b((byte) -63)) {
+            if (var6.isLinked((byte) -63)) {
               var6.a(this.field_r + param0, param1 + this.field_g, -981, param3);
               var6 = (shb) (var9.a(19072));
               continue;
@@ -566,7 +566,7 @@ class dqa extends shb implements nea {
           var8 = new wc(this.field_t);
           var9 = (shb) (var8.c(570));
           while (var9 != null) {
-            if (var9.b((byte) -63)) {
+            if (var9.isLinked((byte) -63)) {
               if (var9.e((byte) -120) &&
                 var9.a(param0, -6006, param2, param3, param4, param5, param6)) {
                 return true;
@@ -628,7 +628,7 @@ class dqa extends shb implements nea {
           if (param1 != 0) {
             return false;
           }
-          if (this.field_t.b(param1 ^ 113)) {
+          if (this.field_t.isEmpty(param1 ^ 113)) {
             return false;
           }
           var3 = new wc(this.field_t);

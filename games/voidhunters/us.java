@@ -33,8 +33,8 @@ class us extends oib {
           if (param1 != -26216) {
             field_f = 54;
           }
-          param0.a(this.field_g, 90);
-          param0.a((byte) -53, this.field_e);
+          param0.writeLong(this.field_g, 90);
+          param0.writeBase38Name((byte) -53, this.field_e);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "us.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -20,7 +20,7 @@ final class SetMissileLauncherEnergyUsed extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          SetMachineGunEnergyUsed.a(166, 62, arguments[0].a(113));
+          SetMachineGunEnergyUsed.a(166, 62, arguments[0].intValue(113));
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

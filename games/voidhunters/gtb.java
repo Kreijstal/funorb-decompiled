@@ -7,7 +7,7 @@ final class gtb implements DiffableState {
     static int field_c;
     static IntrusiveDeque field_d;
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         gtb var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -45,7 +45,7 @@ final class gtb implements DiffableState {
         field_d = null;
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         gtb var5 = null;
         gtb var6 = null;
         if (param0 <= 54) {
@@ -60,7 +60,7 @@ final class gtb implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         gtb var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -97,13 +97,13 @@ final class gtb implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
-            faa var4 = (faa) null;
-            this.a((faa) null, true);
+            IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
+            this.readState((IsaacPacketBuffer) null, true);
           }
-          this.field_b = param0.i(0, 32);
+          this.field_b = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gtb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -112,12 +112,12 @@ final class gtb implements DiffableState {
     gtb() {
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          param0.a(-632, this.field_b, 32);
+          param0.writeBits(-632, this.field_b, 32);
           if (param1 >= -109) {
-            tv var4 = (tv) null;
-            this.reportDifferences((tv) null, -73);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.reportDifferences((SerializableGameState) null, -73);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gtb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

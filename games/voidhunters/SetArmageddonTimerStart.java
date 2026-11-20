@@ -15,7 +15,7 @@ final class SetArmageddonTimerStart extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(faa param0, byte param1, boolean[] param2, int param3) {
+    final static void a(IsaacPacketBuffer param0, byte param1, boolean[] param2, int param3) {
         int var5 = 0;
         int var4_int = 0;
         int var6 = 0;
@@ -31,13 +31,13 @@ final class SetArmageddonTimerStart extends ConsoleCommand {
           if (param2 != null &&
             param2.length != 0) {
             var4_int = 1 % ((81 - param1) / 33);
-            param0.a(-632, param2.length, param3);
+            param0.writeBits(-632, param2.length, param3);
             for (var5 = 0; var5 < param2.length; var5++) {
-              vq.a(param0, 118, param2[var5]);
+              vq.writeBoolean(param0, 118, param2[var5]);
             }
             return;
           }
-          param0.a(-632, 0, param3);
+          param0.writeBits(-632, 0, param3);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -70,7 +70,7 @@ final class SetArmageddonTimerStart extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = (String) null;
           }
-          SetMachineGunEnergyUsed.a(60, 62, arguments[0].a(43));
+          SetMachineGunEnergyUsed.a(60, 62, arguments[0].intValue(43));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

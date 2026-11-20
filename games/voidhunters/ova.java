@@ -27,7 +27,7 @@ final class ova {
         }
     }
 
-    final void a(faa param0, boolean param1, int param2) {
+    final void a(IsaacPacketBuffer param0, boolean param1, int param2) {
         int fieldTemp$0 = 0;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
@@ -61,17 +61,17 @@ final class ova {
           if (var5 <= 0) {
             return;
           }
-          param0.h(24335, this.field_e);
+          param0.writeIsaacByte(24335, this.field_e);
           param0.position = param0.position + 2;
           var6 = param0.position;
-          param0.d(this.field_c.length, 332614536);
-          param0.d(this.field_b, 332614536);
+          param0.writeInt(this.field_c.length, 332614536);
+          param0.writeInt(this.field_b, 332614536);
           if (var5 > this.field_c.length - this.field_b) {
             var5 = -this.field_b + this.field_c.length;
           }
-          param0.a(var5, true);
-          param0.a(this.field_b, this.field_c, -1, var5);
-          param0.a(param0.position - var6, -124);
+          param0.writeShort(var5, true);
+          param0.writeBytes(this.field_b, this.field_c, -1, var5);
+          param0.writeLengthShort(param0.position - var6, -124);
           this.field_b = this.field_b + var5;
           if (this.field_b >= this.field_c.length) {
             this.field_c = null;

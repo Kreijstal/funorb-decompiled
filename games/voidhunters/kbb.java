@@ -90,14 +90,14 @@ final class kbb extends le {
           var4_int = param0;
           if (var4_int != 0) {
             if (1 == var4_int) {
-              this.field_o = (param2.d((byte) -114) << 12) / 100;
+              this.field_o = (param2.readByte((byte) -114) << 12) / 100;
             } else {
               if (var4_int == 2) {
-                this.field_n = (param2.d((byte) -114) << 12) / 100;
+                this.field_n = (param2.readByte((byte) -114) << 12) / 100;
               }
             }
           } else {
-            this.field_j = param2.a(true);
+            this.field_j = param2.readShort(true);
           }
           if (param1 <= -60) {
             return;

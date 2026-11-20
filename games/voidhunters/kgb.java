@@ -5,11 +5,11 @@ final class kgb implements dja {
     static int field_a;
     static int[] field_b;
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          return (tv[]) null;
+          return (SerializableGameState[]) null;
         }
-        return (tv[]) ((Object) new hg[param1]);
+        return (SerializableGameState[]) ((Object) new hg[param1]);
     }
 
     public static void a(int param0) {
@@ -19,9 +19,9 @@ final class kgb implements dja {
         }
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 108 % ((param0 + 64) / 50);
-        return (tv) ((Object) new hg());
+        return (SerializableGameState) ((Object) new hg());
     }
 
     static {

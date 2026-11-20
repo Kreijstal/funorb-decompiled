@@ -18,7 +18,7 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          SetMachineGunEnergyUsed.a(77, 62, arguments[0].a(40));
+          SetMachineGunEnergyUsed.a(77, 62, arguments[0].intValue(40));
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -46,32 +46,32 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
         int var2 = 0;
         int[] var3 = null;
         int[] var4 = null;
-        faa var5 = null;
+        IsaacPacketBuffer var5 = null;
         int var6 = 0;
         int var8 = 0;
         int[] var9 = null;
         int[] var10 = null;
         ea var11 = null;
         iea var12 = null;
-        faa var13 = null;
+        IsaacPacketBuffer var13 = null;
         iea var14 = null;
         var8 = VoidHunters.field_G;
         try {
           var13 = qga.field_b;
-          var2 = var13.e((byte) -89);
+          var2 = var13.readUnsignedByte((byte) -89);
           if (var2 == param0) {
             var10 = SetSniperCannonEnergyUsed.f((byte) -85);
             var3 = var10;
             var9 = var10;
             var4 = var9;
             var5 = var13;
-            var6 = ((PacketBuffer) ((Object) var5)).e((byte) -89);
+            var6 = ((PacketBuffer) ((Object) var5)).readUnsignedByte((byte) -89);
             for (var7 = 0; var7 < var6; var7++) {
-              var9[var7] = ((PacketBuffer) ((Object) var5)).h(92);
+              var9[var7] = ((PacketBuffer) ((Object) var5)).readInt(92);
             }
-            var14 = (iea) (GetLagStandardDeviationIn.field_q.d(0));
+            var14 = (iea) (GetLagStandardDeviationIn.field_q.first(0));
             if (var14 != null) {
-              var14.b(param0 ^ -3846);
+              var14.unlink(param0 ^ -3846);
               return;
             }
             ifb.l(-121);
@@ -82,21 +82,21 @@ final class SetSniperCannonRandomness extends ConsoleCommand {
               gna.a((Throwable) null, "A1: " + SetCountermeasuresPulsetime.e(-13514), 0);
               ifb.l(param0 - 117);
             } else {
-              var12 = (iea) (GetLagStandardDeviationIn.field_q.d(0));
+              var12 = (iea) (GetLagStandardDeviationIn.field_q.first(0));
               if (var12 == null) {
                 ifb.l(-119);
                 return;
               }
               SetSniperCannonEnergyUsed.f((byte) -80);
-              var12.b(-3846);
+              var12.unlink(-3846);
             }
           } else {
-            var11 = (ea) (oaa.field_k.d(0));
+            var11 = (ea) (oaa.field_k.first(0));
             if (var11 == null) {
               ifb.l(-125);
               return;
             }
-            var11.b(-3846);
+            var11.unlink(-3846);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

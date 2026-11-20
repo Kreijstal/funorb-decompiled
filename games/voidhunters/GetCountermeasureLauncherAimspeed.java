@@ -44,22 +44,22 @@ final class GetCountermeasureLauncherAimspeed extends ConsoleCommand {
     }
 
     final static void a(ea param0, int param1, int param2) {
-        faa var5 = null;
+        IsaacPacketBuffer var5 = null;
         int var4 = 0;
         try {
           var5 = RequestNewestBlackboxRecording.field_p;
-          var5.h(param1 + 24334, param2);
+          var5.writeIsaacByte(param1 + 24334, param2);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.c(0, param1);
-          var5.c(param1 ^ 1, param0.field_e);
-          var5.c(0, param0.field_g);
-          var5.d(param0.field_i, param1 ^ 332614537);
-          var5.d(param0.field_h, 332614536);
-          var5.d(param0.field_l, param1 ^ 332614537);
-          var5.d(param0.field_f, 332614536);
-          var5.g(param1 ^ 1594, var4);
-          var5.e(var5.position - var4, param1 - 130);
+          var5.writeByte(0, param1);
+          var5.writeByte(param1 ^ 1, param0.field_e);
+          var5.writeByte(0, param0.field_g);
+          var5.writeInt(param0.field_i, param1 ^ 332614537);
+          var5.writeInt(param0.field_h, 332614536);
+          var5.writeInt(param0.field_l, param1 ^ 332614537);
+          var5.writeInt(param0.field_f, 332614536);
+          var5.writeCrc(param1 ^ 1594, var4);
+          var5.writeLengthByte(var5.position - var4, param1 - 130);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hs.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

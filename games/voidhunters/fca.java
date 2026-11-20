@@ -214,15 +214,15 @@ final class fca extends IntrusiveNode {
         int var6_int = 0;
         byte[] var6 = null;
         PacketBuffer var2 = new PacketBuffer(param0);
-        this.field_J = var2.h(124);
-        this.field_B = var2.h(70);
-        this.field_w = var2.h(29);
-        this.field_g = var2.h(87);
+        this.field_J = var2.readInt(124);
+        this.field_B = var2.readInt(70);
+        this.field_w = var2.readInt(29);
+        this.field_g = var2.readInt(87);
         if (this.field_g < 0) {
           this.field_g = ~this.field_g;
           this.field_j = true;
         }
-        int var3 = var2.h(103);
+        int var3 = var2.readInt(103);
         if (var3 < 0) {
           throw new IOException();
         }
@@ -230,11 +230,11 @@ final class fca extends IntrusiveNode {
         for (var4 = 0; var4 < var3; var4++) {
           var5 = 0;
           do {
-            var6_int = var2.e((byte) -94);
+            var6_int = var2.readUnsignedByte((byte) -94);
             var5 = var5 + var6_int;
           } while (var6_int >= 255);
           var6 = new byte[var5];
-          var2.a(0, var6, (byte) -59, var5);
+          var2.readBytes(0, var6, (byte) -59, var5);
           this.field_G[var4] = var6;
         }
     }

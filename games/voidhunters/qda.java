@@ -257,7 +257,7 @@ final class qda {
         this.field_o.b(param0);
         this.field_c = new rpb();
         this.field_c.b(param0);
-        int var2 = param0.e((byte) -87);
+        int var2 = param0.readUnsignedByte((byte) -87);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_y = new rpb();
@@ -265,7 +265,7 @@ final class qda {
           this.field_b = new rpb();
           this.field_b.b(param0);
         }
-        var2 = param0.e((byte) -106);
+        var2 = param0.readUnsignedByte((byte) -106);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_j = new rpb();
@@ -273,7 +273,7 @@ final class qda {
           this.field_w = new rpb();
           this.field_w.b(param0);
         }
-        var2 = param0.e((byte) -98);
+        var2 = param0.readUnsignedByte((byte) -98);
         if (var2 != 0) {
           param0.position = param0.position - 1;
           this.field_e = new rpb();
@@ -282,18 +282,18 @@ final class qda {
           this.field_a.b(param0);
         }
         for (var3 = 0; var3 < 10; var3++) {
-          var4 = param0.f(107);
+          var4 = param0.readUnsignedSmart(107);
           if (var4 == 0) {
             break;
           }
           this.field_n[var3] = var4;
-          this.field_r[var3] = param0.d(0);
-          this.field_q[var3] = param0.f(50);
+          this.field_r[var3] = param0.readSignedSmart(0);
+          this.field_q[var3] = param0.readUnsignedSmart(50);
         }
-        this.field_s = param0.f(84);
-        this.field_u = param0.f(120);
-        this.field_d = param0.e(1869);
-        this.field_k = param0.e(1869);
+        this.field_s = param0.readUnsignedSmart(84);
+        this.field_u = param0.readUnsignedSmart(120);
+        this.field_d = param0.readUnsignedShort(1869);
+        this.field_k = param0.readUnsignedShort(1869);
         this.field_i = new hc();
         this.field_x = new rpb();
         this.field_i.a(param0, this.field_x);

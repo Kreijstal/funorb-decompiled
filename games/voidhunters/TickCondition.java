@@ -40,7 +40,7 @@ final class TickCondition extends MissionCondition implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         RuntimeException var3 = null;
         TickCondition var5 = null;
         TickCondition var6 = null;
@@ -49,7 +49,7 @@ final class TickCondition extends MissionCondition implements DiffableState {
         String stackIn_6_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          super.b((byte) 83, param1);
+          super.copyTo((byte) 83, param1);
           var5 = (TickCondition) (param1);
           var6 = var5;
           var6.tick = this.tick;
@@ -80,20 +80,20 @@ final class TickCondition extends MissionCondition implements DiffableState {
         return this.tick;
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          super.b(param0, -119);
+          super.writeState(param0, -119);
           if (param1 > -109) {
-            tv var4 = (tv) null;
-            this.b((byte) -36, (tv) null);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.copyTo((byte) -36, (SerializableGameState) null);
           }
-          param0.a(-632, this.tick, 32);
+          param0.writeBits(-632, this.tick, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dab.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         TickCondition var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -174,8 +174,8 @@ final class TickCondition extends MissionCondition implements DiffableState {
         }
     }
 
-    final static byte[] a(int param0, tv param1) {
-        faa var2 = null;
+    final static byte[] a(int param0, SerializableGameState param1) {
+        IsaacPacketBuffer var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
         byte[] stackIn_3_0 = null;
@@ -187,10 +187,10 @@ final class TickCondition extends MissionCondition implements DiffableState {
           if (param0 != -30234) {
             field_e = false;
           }
-          var2 = new faa(1000);
-          var2.q(-83);
-          param1.b(var2, param0 + 30119);
-          var2.r(param0 ^ -2514);
+          var2 = new IsaacPacketBuffer(1000);
+          var2.beginBitWrite(-83);
+          param1.writeState(var2, param0 + 30119);
+          var2.endBitWrite(param0 ^ -2514);
           var3 = new byte[var2.position];
           cua.a(var2.payload, 0, var3, 0, var2.position);
           stackIn_3_0 = var3;
@@ -220,10 +220,10 @@ final class TickCondition extends MissionCondition implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
-          this.tick = param0.i(0, 32);
+          super.readState(param0, param1);
+          this.tick = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dab.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -236,7 +236,7 @@ final class TickCondition extends MissionCondition implements DiffableState {
         this.tick = param0;
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         TickCondition var3 = null;
         int var4 = 0;
         boolean stackIn_5_0 = false;
@@ -248,7 +248,7 @@ final class TickCondition extends MissionCondition implements DiffableState {
         try {
           var4 = -39 % ((22 - param0) / 59);
           var3 = (TickCondition) (param1);
-          stackIn_5_0 = (super.a((byte) -70, param1)) || (var3.tick != this.tick);
+          stackIn_5_0 = (super.differsFrom((byte) -70, param1)) || (var3.tick != this.tick);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

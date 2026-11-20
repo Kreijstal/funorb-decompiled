@@ -27,7 +27,7 @@ final class MissionState implements DiffableState {
         return this.winner;
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int stackIn_26_0 = 0;
         int stackIn_29_1 = 0;
         int stackIn_39_0 = 0;
@@ -82,7 +82,7 @@ final class MissionState implements DiffableState {
           }
           if ((stackIn_26_0 ^ stackIn_29_1) != 0 ||
             this.nextround != null &&
-            this.nextround.a((byte) 84, var5.nextround)) {
+            this.nextround.differsFrom((byte) 84, var5.nextround)) {
             System.out.println("MissionGenerationData nextround has changed. before=" + var5.nextround + ", now=" + this.nextround);
             var4 = 1;
           }
@@ -98,7 +98,7 @@ final class MissionState implements DiffableState {
           }
           if ((stackIn_39_0 ^ stackIn_42_1) != 0 ||
             null != this.currentMatch &&
-            this.currentMatch.a((byte) 126, var5.currentMatch)) {
+            this.currentMatch.differsFrom((byte) 126, var5.currentMatch)) {
             System.out.println("MatchResults current_match has changed. before=" + var5.currentMatch + ", now=" + this.currentMatch);
             var4 = 1;
           }
@@ -333,38 +333,38 @@ final class MissionState implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         int var7 = 0;
         int stackIn_6_0 = 0;
-        faa stackIn_12_0 = null;
+        IsaacPacketBuffer stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         boolean stackIn_13_2 = false;
-        faa stackIn_19_0 = null;
+        IsaacPacketBuffer stackIn_19_0 = null;
         int stackIn_19_1 = 0;
         boolean stackIn_20_2 = false;
         int stackIn_25_0 = 0;
         int stackIn_26_1 = 0;
-        faa stackIn_28_0 = null;
+        IsaacPacketBuffer stackIn_28_0 = null;
         int stackIn_28_1 = 0;
         boolean stackIn_29_2 = false;
         RuntimeException stackIn_35_0 = null;
         StringBuilder stackIn_35_1 = null;
         String stackIn_36_2 = null;
         RuntimeException decompiledCaughtException = null;
-        faa var3 = null;
+        IsaacPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         MissionVariable[] var4 = null;
         int var5 = 0;
         MissionVariable[] var6 = null;
         MissionVariable var8 = null;
         int var9 = 0;
-        faa var10 = null;
+        IsaacPacketBuffer var10 = null;
         var9 = VoidHunters.field_G;
         try {
-          param0.a(-632, this.missionPhase, 32);
-          param0.a(-632, this.phaseChangeCountdown, 32);
-          param0.a(-632, this.phaseTimer, 32);
-          param0.a(-632, this.winner, 32);
+          param0.writeBits(-632, this.missionPhase, 32);
+          param0.writeBits(-632, this.phaseChangeCountdown, 32);
+          param0.writeBits(-632, this.phaseTimer, 32);
+          param0.writeBits(-632, this.winner, 32);
           var10 = param0;
           var3 = var10;
           if (param1 >= -109) {
@@ -377,7 +377,7 @@ final class MissionState implements DiffableState {
             stackIn_6_0 = var4.length;
           }
           var5 = stackIn_6_0;
-          var10.a(-632, var5, 8);
+          var10.writeBits(-632, var5, 8);
           if (0 != var5) {
             var6 = var4;
             for (var7 = 0; var6.length > var7; var7++) {
@@ -385,16 +385,16 @@ final class MissionState implements DiffableState {
               stackIn_12_0 = var3;
               stackIn_12_1 = 80;
               stackIn_13_2 = (var8 != null);
-              if (vq.a(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
+              if (vq.writeBoolean(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var10, var8);
               }
             }
           }
-          stackIn_19_0 = (faa) (param0);
+          stackIn_19_0 = (IsaacPacketBuffer) (param0);
           stackIn_19_1 = 99;
           stackIn_20_2 = (this.nextround != null);
-          if (vq.a(stackIn_19_0, stackIn_19_1, stackIn_20_2)) {
-            this.nextround.b(param0, -112);
+          if (vq.writeBoolean(stackIn_19_0, stackIn_19_1, stackIn_20_2)) {
+            this.nextround.writeState(param0, -112);
           }
           stackIn_25_0 = 8;
           if (this.teamscores != null) {
@@ -403,11 +403,11 @@ final class MissionState implements DiffableState {
             stackIn_26_1 = 0;
           }
           pgb.a(stackIn_25_0, stackIn_26_1, 76, param0, this.teamscores);
-          stackIn_28_0 = (faa) (param0);
+          stackIn_28_0 = (IsaacPacketBuffer) (param0);
           stackIn_28_1 = 84;
           stackIn_29_2 = (this.currentMatch != null);
-          if (vq.a(stackIn_28_0, stackIn_28_1, stackIn_29_2)) {
-            this.currentMatch.b(param0, -126);
+          if (vq.writeBoolean(stackIn_28_0, stackIn_28_1, stackIn_29_2)) {
+            this.currentMatch.writeState(param0, -126);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -442,7 +442,7 @@ final class MissionState implements DiffableState {
         return wh.a(param0, (byte) 99, param1) & (((param1 & 8192) != 0 ? true : false) | bla.a(param1, false, param0) | hsb.a(param0, 65536, param1));
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int stackIn_8_0 = 0;
         int stackIn_11_1 = 0;
         int stackIn_19_0 = 0;
@@ -471,7 +471,7 @@ final class MissionState implements DiffableState {
               stackIn_11_1 = 1;
             }
             if ((stackIn_8_0 ^ stackIn_11_1) == 0 && (this.nextround == null ||
-              !this.nextround.a((byte) -74, var5.nextround)) && !SetBlueprintSaveTime.a(var5.teamscores, this.teamscores, (byte) 28)) {
+              !this.nextround.differsFrom((byte) -74, var5.nextround)) && !SetBlueprintSaveTime.a(var5.teamscores, this.teamscores, (byte) 28)) {
               stackIn_19_0 = (null != this.currentMatch) ? 0 : 1;
               if (var5.currentMatch != null) {
                 stackIn_22_1 = 0;
@@ -479,7 +479,7 @@ final class MissionState implements DiffableState {
                 stackIn_22_1 = 1;
               }
               if ((stackIn_19_0 ^ stackIn_22_1) == 0 && (this.currentMatch == null ||
-                !this.currentMatch.a((byte) -57, var5.currentMatch))) {
+                !this.currentMatch.differsFrom((byte) -57, var5.currentMatch))) {
                 stackIn_28_0 = false;
                 decompiledFrameRemainder0 = false;
               }
@@ -655,7 +655,7 @@ final class MissionState implements DiffableState {
         return this.phaseTimer;
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         int var4 = 0;
         MissionState var5 = null;
         RuntimeException stackIn_16_0 = null;
@@ -680,14 +680,14 @@ final class MissionState implements DiffableState {
             if (null == var5.nextround) {
               var5.nextround = new MissionGenerationData();
             }
-            this.nextround.b((byte) 98, var5.nextround);
+            this.nextround.copyTo((byte) 98, var5.nextround);
           }
           var5.teamscores = SetTeamSelectionSpeedup.a(var5.teamscores, (byte) -57, this.teamscores);
           if (null != this.currentMatch) {
             if (var5.currentMatch == null) {
               var5.currentMatch = new MatchResults();
             }
-            this.currentMatch.b((byte) 64, var5.currentMatch);
+            this.currentMatch.copyTo((byte) 64, var5.currentMatch);
           } else {
             var5.currentMatch = null;
           }
@@ -806,8 +806,8 @@ final class MissionState implements DiffableState {
           this.c(6, -7, Particle.field_l * 10);
         }
         if (param0) {
-          tv var4 = (tv) null;
-          this.a((byte) -35, (tv) null);
+          SerializableGameState var4 = (SerializableGameState) null;
+          this.differsFrom((byte) -35, (SerializableGameState) null);
         }
     }
 
@@ -827,10 +827,10 @@ final class MissionState implements DiffableState {
     }
 
     final int a(boolean param0, int param1) {
-        tv var4;
+        SerializableGameState var4;
         if (param0) {
-          var4 = (tv) null;
-          this.a((byte) 66, (tv) null);
+          var4 = (SerializableGameState) null;
+          this.differsFrom((byte) 66, (SerializableGameState) null);
         }
         if (param1 < 0) {
           return 0;
@@ -997,8 +997,8 @@ final class MissionState implements DiffableState {
         try {
           this.nextround.optionTotals = param0;
           if (param1) {
-            faa var4 = (faa) null;
-            this.a((faa) null, false);
+            IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
+            this.readState((IsaacPacketBuffer) null, false);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lbb.JA(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -1019,7 +1019,7 @@ final class MissionState implements DiffableState {
         return this.customVariables;
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         int var4 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -1028,25 +1028,25 @@ final class MissionState implements DiffableState {
         RuntimeException var3 = null;
         var4 = VoidHunters.field_G;
         try {
-          this.missionPhase = param0.i(0, 32);
-          this.phaseChangeCountdown = param0.i(0, 32);
-          this.phaseTimer = param0.i(0, 32);
-          this.winner = param0.i(0, 32);
+          this.missionPhase = param0.readBits(0, 32);
+          this.phaseChangeCountdown = param0.readBits(0, 32);
+          this.phaseTimer = param0.readBits(0, 32);
+          this.winner = param0.readBits(0, 32);
           this.customVariables = (MissionVariable[]) (SetAutoDetail.a(8, SetUseTrails.field_p, param0, 1, -128, this.customVariables));
-          if (kv.a(false, param0)) {
+          if (kv.readBoolean(false, param0)) {
             if (null == this.nextround) {
               this.nextround = new MissionGenerationData();
             }
-            this.nextround.a(param0, false);
+            this.nextround.readState(param0, false);
           } else {
             this.nextround = null;
           }
           this.teamscores = wkb.a((byte) 37, this.teamscores, param0, 8);
-          if (kv.a(param1, param0)) {
+          if (kv.readBoolean(param1, param0)) {
             if (this.currentMatch == null) {
               this.currentMatch = new MatchResults();
             }
-            this.currentMatch.a(param0, false);
+            this.currentMatch.readState(param0, false);
           } else {
             this.currentMatch = null;
           }

@@ -55,7 +55,7 @@ final class SetCountermeasuresPulsetime extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(220, 62, arguments[0].a(104));
+          SetMachineGunEnergyUsed.a(220, 62, arguments[0].intValue(104));
           if (obfuscationGuard >= -119) {
             SetCountermeasuresPulsetime.a(-107);
           }

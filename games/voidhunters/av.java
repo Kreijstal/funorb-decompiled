@@ -12,9 +12,9 @@ final class av implements dja {
         return String.valueOf(param0);
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 13 / ((param0 + 64) / 50);
-        return (tv) ((Object) new MissionAction());
+        return (SerializableGameState) ((Object) new MissionAction());
     }
 
     public static void a(boolean param0) {
@@ -24,12 +24,12 @@ final class av implements dja {
         field_a = null;
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_a = (ShipComponent[]) null;
-          return (tv[]) ((Object) new MissionAction[param1]);
+          return (SerializableGameState[]) ((Object) new MissionAction[param1]);
         }
-        return (tv[]) ((Object) new MissionAction[param1]);
+        return (SerializableGameState[]) ((Object) new MissionAction[param1]);
     }
 
     static {

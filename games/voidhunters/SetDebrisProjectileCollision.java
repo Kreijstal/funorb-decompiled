@@ -15,7 +15,7 @@ final class SetDebrisProjectileCollision extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = true;
           }
-          SetMachineGunEnergyUsed.a(11, 62, arguments[0].a(120));
+          SetMachineGunEnergyUsed.a(11, 62, arguments[0].intValue(120));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

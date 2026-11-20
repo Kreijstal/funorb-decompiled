@@ -2,19 +2,19 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class IntrusiveNode {
-    IntrusiveNode field_c;
-    IntrusiveNode field_a;
-    long field_b;
+    IntrusiveNode next;
+    IntrusiveNode previous;
+    long key;
 
-    final boolean b(byte param0) {
+    final boolean isLinked(byte param0) {
         if (param0 != -63) {
-          IntrusiveNode.a(-99, -70, 95, 66);
-          if (this.field_a != null) {
+          IntrusiveNode.clamp(-99, -70, 95, 66);
+          if (this.previous != null) {
             return true;
           }
           return false;
         }
-        if (this.field_a != null) {
+        if (this.previous != null) {
           return true;
         }
         return false;
@@ -33,34 +33,34 @@ class IntrusiveNode {
         }
     }
 
-    final static int a(int param0, int param1, int param2, int param3) {
+    final static int clamp(int param0, int param1, int param2, int param3) {
         if (param0 == 31123) {
           return param1 > param3 ? param1 : param3 <= param2 ? param3 : param2;
         }
-        IntrusiveNode.a(-107, -16, 102, -117);
+        IntrusiveNode.clamp(-107, -16, 102, -117);
         return param1 > param3 ? param1 : param3 <= param2 ? param3 : param2;
     }
 
-    final void b(int param0) {
-        if (this.field_a == null) {
+    final void unlink(int param0) {
+        if (this.previous == null) {
           return;
         }
-        this.field_a.field_c = this.field_c;
+        this.previous.next = this.next;
         if (param0 == -3846) {
-          this.field_c.field_a = this.field_a;
-          this.field_a = null;
-          this.field_c = null;
+          this.next.previous = this.previous;
+          this.previous = null;
+          this.next = null;
           return;
         }
     }
 
-    final static faa a(byte param0) {
+    final static IsaacPacketBuffer a(byte param0) {
         if (param0 == -6) {
-          return new faa(GameApplet.a((byte) 73, bk.field_w));
+          return new IsaacPacketBuffer(GameApplet.a((byte) 73, bk.field_w));
         }
         no var2 = (no) null;
         IntrusiveNode.a((phb[]) null, 27, -49, (phb[]) null, (phb[]) null, 58, 92, 102, -42, (no) null, 125, 6, -7, 73, -90);
-        return new faa(GameApplet.a((byte) 73, bk.field_w));
+        return new IsaacPacketBuffer(GameApplet.a((byte) 73, bk.field_w));
     }
 
     static {

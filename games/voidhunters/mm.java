@@ -47,19 +47,19 @@ final class mm extends llb {
 
     final int f(byte param0) {
         if (param0 == -13) {
-          return (int)this.c(26390);
+          return (int)this.getSecondaryKey(26390);
         }
         mm var3 = (mm) null;
         this.a((mm) null, -117);
-        return (int)this.c(26390);
+        return (int)this.getSecondaryKey(26390);
     }
 
     final boolean e(byte param0) {
         if (param0 >= 21) {
-          return !this.c((byte) 87) ? true : false;
+          return !this.isSecondaryLinked((byte) 87) ? true : false;
         }
         this.f((byte) -41);
-        return !this.c((byte) 87) ? true : false;
+        return !this.isSecondaryLinked((byte) 87) ? true : false;
     }
 
     final boolean a(mm param0, int param1) {

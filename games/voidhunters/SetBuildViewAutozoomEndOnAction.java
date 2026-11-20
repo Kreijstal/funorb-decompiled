@@ -8,19 +8,19 @@ final class SetBuildViewAutozoomEndOnAction extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, tv param1, faa param2, int param3) {
+    final static void a(int param0, SerializableGameState param1, IsaacPacketBuffer param2, int param3) {
         int var4_int = 0;
         try {
-          param2.h(24335, param3);
+          param2.writeIsaacByte(24335, param3);
           param2.position = param2.position + 1;
           if (param0 != 0) {
             field_o = -13;
           }
           var4_int = param2.position;
-          param2.q(-127);
-          param1.b(param2, -112);
-          param2.r(32712);
-          param2.e(param2.position - var4_int, -129);
+          param2.beginBitWrite(-127);
+          param1.writeState(param2, -112);
+          param2.endBitWrite(32712);
+          param2.writeLengthByte(param2.position - var4_int, -129);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rkb.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ')');
         }
@@ -34,7 +34,7 @@ final class SetBuildViewAutozoomEndOnAction extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetSniperCannonReload.field_o = arguments[0].a(123);
+          SetSniperCannonReload.field_o = arguments[0].intValue(123);
           if (obfuscationGuard >= -119) {
             field_o = 30;
           }

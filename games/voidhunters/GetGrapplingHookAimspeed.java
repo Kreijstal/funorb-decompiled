@@ -91,7 +91,7 @@ final class GetGrapplingHookAimspeed extends ConsoleCommand {
           if (param0 < 121) {
             field_o = (phb[]) null;
           }
-          stackIn_3_0 = new cp(param1.a(true), param1.a(true), param1.a(true), param1.a(true), param1.a(true), param1.a(true), param1.a(true), param1.a(true), param1.c((byte) -77), param1.e((byte) -113));
+          stackIn_3_0 = new cp(param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readUnsignedMedium((byte) -77), param1.readUnsignedByte((byte) -113));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -84,12 +84,12 @@ final class oa extends GraphicsToolkit implements e {
         this.field_e = null;
         this.field_k = null;
         this.field_i.a((byte) -103);
-        ya var1 = (ya) (this.field_c.d(0));
+        ya var1 = (ya) (this.field_c.first(0));
         while (var1 != null) {
           var1.ga();
-          var1 = (ya) (this.field_c.a((byte) 33));
+          var1 = (ya) (this.field_c.next((byte) 33));
         }
-        this.field_c.e(93);
+        this.field_c.clear(93);
         this.FA();
         if (this.field_h) {
           SetDebrisFoundInPairs.a((byte) -115, true, false);
@@ -246,10 +246,10 @@ final class oa extends GraphicsToolkit implements e {
     final void c(int param0) {
         pq.a((byte) -128);
         this.d(param0);
-        ya var2 = (ya) (this.field_c.d(0));
+        ya var2 = (ya) (this.field_c.first(0));
         while (var2 != null) {
           var2.r();
-          var2 = (ya) (this.field_c.a((byte) 121));
+          var2 = (ya) (this.field_c.next((byte) 121));
         }
     }
 
@@ -279,7 +279,7 @@ final class oa extends GraphicsToolkit implements e {
 
     final za e(int param0) {
         ya var2 = new ya(this, param0);
-        this.field_c.b(-10258, var2);
+        this.field_c.addLast(-10258, var2);
         return (za) ((Object) var2);
     }
 

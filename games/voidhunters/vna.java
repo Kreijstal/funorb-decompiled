@@ -7,17 +7,17 @@ final class vna implements dja {
         return rw.field_q;
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -43 / ((-64 - param0) / 50);
-        return (tv) ((Object) new TrailHolder());
+        return (SerializableGameState) ((Object) new TrailHolder());
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           vna.b((byte) 55);
-          return (tv[]) ((Object) new TrailHolder[param1]);
+          return (SerializableGameState[]) ((Object) new TrailHolder[param1]);
         }
-        return (tv[]) ((Object) new TrailHolder[param1]);
+        return (SerializableGameState[]) ((Object) new TrailHolder[param1]);
     }
 
     static {

@@ -73,16 +73,16 @@ final class beb implements dja {
         }
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 66 % ((param0 + 64) / 50);
-        return (tv) ((Object) new Projectile());
+        return (SerializableGameState) ((Object) new Projectile());
     }
 
-    final static tv a(byte[] param0, int param1, dja param2) {
-        faa var3 = null;
+    final static SerializableGameState a(byte[] param0, int param1, dja param2) {
+        IsaacPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
-        tv var4 = null;
-        tv stackIn_6_0 = null;
+        SerializableGameState var4 = null;
+        SerializableGameState stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
@@ -93,14 +93,14 @@ final class beb implements dja {
           if (param0 == null) {
             return null;
           }
-          var3 = new faa(param0);
+          var3 = new IsaacPacketBuffer(param0);
           if (param1 != 6429) {
             field_a = 26;
           }
           var4 = param2.a((byte) 52);
-          var3.p(-23497);
-          var4.a(var3, false);
-          var3.f((byte) -87);
+          var3.beginBitRead(-23497);
+          var4.readState(var3, false);
+          var3.endBitRead((byte) -87);
           stackIn_6_0 = var4;
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -123,11 +123,11 @@ final class beb implements dja {
         }
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          return (tv[]) null;
+          return (SerializableGameState[]) null;
         }
-        return (tv[]) ((Object) new Projectile[param1]);
+        return (SerializableGameState[]) ((Object) new Projectile[param1]);
     }
 
     static {

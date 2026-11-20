@@ -8,14 +8,14 @@ final class Asteroid extends ShipBody implements DiffableState, utb, ofa {
 
     final int d(int param0) {
         if (param0 <= 42) {
-          faa var3 = (faa) null;
-          this.a((faa) null, (byte) -116);
+          IsaacPacketBuffer var3 = (IsaacPacketBuffer) null;
+          this.a((IsaacPacketBuffer) null, (byte) -116);
           return 3;
         }
         return 3;
     }
 
-    public final void a(faa param0, int param1) {
+    public final void a(IsaacPacketBuffer param0, int param1) {
         try {
           super.a(param0, param1);
         } catch (RuntimeException runtimeException) {
@@ -23,30 +23,30 @@ final class Asteroid extends ShipBody implements DiffableState, utb, ofa {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         if (param1 > -109) {
           return;
         }
         try {
-          super.b(param0, -115);
+          super.writeState(param0, -115);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "crb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         try {
           super.reportDifferences(other, -45);
           if (obfuscationGuard >= -19) {
-            faa var4 = (faa) null;
-            this.a((faa) null, true);
+            IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
+            this.readState((IsaacPacketBuffer) null, true);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "crb.F(" + (other != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_1_0 = false;
@@ -56,7 +56,7 @@ final class Asteroid extends ShipBody implements DiffableState, utb, ofa {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 80 / ((22 - param0) / 59);
-          stackIn_1_0 = super.a((byte) 96, param1);
+          stackIn_1_0 = super.differsFrom((byte) 96, param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -72,9 +72,9 @@ final class Asteroid extends ShipBody implements DiffableState, utb, ofa {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
+          super.readState(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "crb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -91,14 +91,14 @@ final class Asteroid extends ShipBody implements DiffableState, utb, ofa {
         field_v = null;
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         Asteroid var3 = (Asteroid) (param1);
         if (this.field_u == var3.field_u) {
           return;
         }
         try {
           var3.field_u = this.field_u;
-          super.b((byte) 94, param1);
+          super.copyTo((byte) 94, param1);
           if (param0 <= 54) {
             field_v = (bwa) null;
           }
@@ -124,7 +124,7 @@ final class Asteroid extends ShipBody implements DiffableState, utb, ofa {
         SetMissionDebrisVotingChancestep.a(param1, 4095);
     }
 
-    public final void a(faa param0, byte param1) {
+    public final void a(IsaacPacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -101);
           if (param1 > -91) {

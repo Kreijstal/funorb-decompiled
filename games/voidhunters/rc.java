@@ -10,17 +10,17 @@ final class rc implements dja {
         return (540800 & param2) != 0 ? true : false;
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           this.a(127, -95);
-          return (tv[]) ((Object) new MissionGenerationData[param1]);
+          return (SerializableGameState[]) ((Object) new MissionGenerationData[param1]);
         }
-        return (tv[]) ((Object) new MissionGenerationData[param1]);
+        return (SerializableGameState[]) ((Object) new MissionGenerationData[param1]);
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -31 % ((-64 - param0) / 50);
-        return (tv) ((Object) new MissionGenerationData());
+        return (SerializableGameState) ((Object) new MissionGenerationData());
     }
 
     public static void a(int param0) {

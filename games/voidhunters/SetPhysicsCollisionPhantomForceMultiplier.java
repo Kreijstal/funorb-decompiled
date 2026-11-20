@@ -21,7 +21,7 @@ final class SetPhysicsCollisionPhantomForceMultiplier extends ConsoleCommand {
             var4 = (String) null;
             SetPhysicsCollisionPhantomForceMultiplier.a((byte) -89, (String) null);
           }
-          SetMachineGunEnergyUsed.a(52, 62, arguments[0].a(74));
+          SetMachineGunEnergyUsed.a(52, 62, arguments[0].intValue(74));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

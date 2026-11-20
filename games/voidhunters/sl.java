@@ -57,7 +57,7 @@ final class sl implements dja {
             field_a = 99;
           }
           fkb.field_m = param1;
-          GetGrapplingHookFireForce.field_o.field_lb.e(param0 + 128);
+          GetGrapplingHookFireForce.field_o.field_lb.clear(param0 + 128);
           GetGrapplingHookFireForce.field_o.b(-561, fkb.field_m);
           uga.field_d = true;
         } catch (RuntimeException runtimeException) {
@@ -65,17 +65,17 @@ final class sl implements dja {
         }
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 91 % ((param0 + 64) / 50);
-        return (tv) ((Object) new AsteroidField());
+        return (SerializableGameState) ((Object) new AsteroidField());
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_a = 110;
-          return (tv[]) ((Object) new AsteroidField[param1]);
+          return (SerializableGameState[]) ((Object) new AsteroidField[param1]);
         }
-        return (tv[]) ((Object) new AsteroidField[param1]);
+        return (SerializableGameState[]) ((Object) new AsteroidField[param1]);
     }
 
     static {

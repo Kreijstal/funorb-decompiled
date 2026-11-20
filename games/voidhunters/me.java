@@ -209,7 +209,7 @@ final class me extends pja {
           var8 = rgb.field_f.field_wb.field_lb;
           var9 = wt.a(false);
           var11 = null;
-          var12 = (mm) (var8.d(0));
+          var12 = (mm) (var8.first(0));
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_lb) {
@@ -638,7 +638,7 @@ final class me extends pja {
                 }
               }
             }
-            var12 = (mm) (var8.a((byte) 92));
+            var12 = (mm) (var8.next((byte) 92));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

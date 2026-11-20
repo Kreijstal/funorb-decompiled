@@ -71,15 +71,15 @@ final class PartitionZone implements DiffableState, ofa, iu {
         return false;
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           pgb.a(8, null != this.ids ? this.ids.length : 0, 73, param0, this.ids);
-          param0.a(-632, this.gridx, 8);
+          param0.writeBits(-632, this.gridx, 8);
           if (param1 > -109) {
             this.gridy = -39;
           }
-          param0.a(-632, this.gridy, 8);
-          param0.a(-632, this.type, 2);
+          param0.writeBits(-632, this.gridy, 8);
+          param0.writeBits(-632, this.type, 2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jo.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -146,7 +146,7 @@ final class PartitionZone implements DiffableState, ofa, iu {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -194,7 +194,7 @@ final class PartitionZone implements DiffableState, ofa, iu {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         PartitionZone var3 = (PartitionZone) (param1);
         if (this.field_c == var3.field_c) {
           return;
@@ -205,8 +205,8 @@ final class PartitionZone implements DiffableState, ofa, iu {
           var3.gridy = this.gridy;
           var3.gridx = this.gridx;
           if (param0 <= 54) {
-            faa var4 = (faa) null;
-            this.b((faa) null, 31);
+            IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
+            this.writeState((IsaacPacketBuffer) null, 31);
           }
           var3.type = this.type;
         } catch (RuntimeException runtimeException) {
@@ -217,7 +217,7 @@ final class PartitionZone implements DiffableState, ofa, iu {
     final void b(int param0, int param1) {
         int var3 = 0;
         int var4;
-        faa var5;
+        IsaacPacketBuffer var5;
         var4 = VoidHunters.field_G;
         for (var3 = 0; var3 < this.ids.length; var3++) {
           if (param1 < this.ids[var3]) {
@@ -226,12 +226,12 @@ final class PartitionZone implements DiffableState, ofa, iu {
           }
         }
         if (param0 != 11964) {
-          var5 = (faa) null;
-          this.b((faa) null, 55);
+          var5 = (IsaacPacketBuffer) null;
+          this.writeState((IsaacPacketBuffer) null, 55);
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
             this.ids = (int[]) null;
@@ -239,13 +239,13 @@ final class PartitionZone implements DiffableState, ofa, iu {
           this.ids = wkb.a((byte) 37, this.ids, param0, 8);
           this.gridx = uwa.a(8, param0, (byte) 20);
           this.gridy = uwa.a(8, param0, (byte) 20);
-          this.type = param0.i(0, 2);
+          this.type = param0.readBits(0, 2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jo.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         PartitionZone var3 = null;
         int var4 = 0;
         boolean stackIn_7_0 = false;

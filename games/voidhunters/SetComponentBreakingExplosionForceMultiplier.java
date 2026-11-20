@@ -15,7 +15,7 @@ final class SetComponentBreakingExplosionForceMultiplier extends ConsoleCommand 
           if (obfuscationGuard > -119) {
             field_o = -101;
           }
-          SetMachineGunEnergyUsed.a(49, 62, arguments[0].a(58));
+          SetMachineGunEnergyUsed.a(49, 62, arguments[0].intValue(58));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

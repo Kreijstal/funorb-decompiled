@@ -5,7 +5,7 @@ final class SettingsInstance implements DiffableState {
     static String field_b;
     int[] values;
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         SettingsInstance var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -42,7 +42,7 @@ final class SettingsInstance implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         SettingsInstance var3 = null;
         if (param0 < 54) {
           return;
@@ -62,7 +62,7 @@ final class SettingsInstance implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_3_1 = 0;
@@ -113,7 +113,7 @@ final class SettingsInstance implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           this.values = wkb.a((byte) 37, this.values, param0, 8);
           if (param1) {
@@ -129,8 +129,8 @@ final class SettingsInstance implements DiffableState {
           GetPhasedEnergyBeamProjectiles.a(107, this.values);
           return;
         }
-        tv var3 = (tv) null;
-        this.reportDifferences((tv) null, 78);
+        SerializableGameState var3 = (SerializableGameState) null;
+        this.reportDifferences((SerializableGameState) null, 78);
         GetPhasedEnergyBeamProjectiles.a(107, this.values);
     }
 
@@ -174,7 +174,7 @@ final class SettingsInstance implements DiffableState {
         this.values = ik.a(-21049);
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         SettingsInstance var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

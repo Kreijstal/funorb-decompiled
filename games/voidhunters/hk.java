@@ -16,7 +16,7 @@ final class hk extends le {
             field_i = (String) null;
           }
           if (0 == param0) {
-            this.field_j = param2.e(1869);
+            this.field_j = param2.readUnsignedShort(1869);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

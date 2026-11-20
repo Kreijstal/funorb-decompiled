@@ -16,7 +16,7 @@ final class SetUsePolygonFill extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetServerinfoComponentstate.field_o = arguments[0].a(false);
+          SetServerinfoComponentstate.field_o = arguments[0].booleanValue(false);
           if (obfuscationGuard >= -119) {
             field_o = 52;
           }

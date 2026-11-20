@@ -13,12 +13,12 @@ final class eta implements dja {
         field_a = (java.awt.Dimension) null;
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_a = (java.awt.Dimension) null;
-          return (tv[]) ((Object) new ara[param1]);
+          return (SerializableGameState[]) ((Object) new ara[param1]);
         }
-        return (tv[]) ((Object) new ara[param1]);
+        return (SerializableGameState[]) ((Object) new ara[param1]);
     }
 
     final static void a(byte param0, mm param1) {
@@ -31,20 +31,20 @@ final class eta implements dja {
         RuntimeException decompiledCaughtException = null;
         var3 = VoidHunters.field_G;
         try {
-          param1.b(-3846);
-          var2 = (mm) (kja.field_E.d(0));
+          param1.unlink(-3846);
+          var2 = (mm) (kja.field_E.first(0));
           if (param0 < 99) {
             return;
           }
           while (var2 != null) {
             if (var2.a(param1, -128)) {
-              var2 = (mm) (kja.field_E.a((byte) 28));
+              var2 = (mm) (kja.field_E.next((byte) 28));
               continue;
             }
             break;
           }
           if (var2 == null) {
-            kja.field_E.b(-10258, param1);
+            kja.field_E.addLast(-10258, param1);
             return;
           }
           al.a(param1, var2, 2);
@@ -70,9 +70,9 @@ final class eta implements dja {
         return (param2 & 2048) != 0 ? true : false;
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 31 % ((param0 + 64) / 50);
-        return (tv) ((Object) new ara());
+        return (SerializableGameState) ((Object) new ara());
     }
 
     static {

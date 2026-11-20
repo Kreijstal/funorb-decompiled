@@ -13,7 +13,7 @@ final class SetUseBackground extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          AwardVictoryToWinnerAction.field_b = arguments[0].a(7);
+          AwardVictoryToWinnerAction.field_b = arguments[0].intValue(7);
           if (obfuscationGuard >= -119) {
             SetUseBackground.a(36);
           }

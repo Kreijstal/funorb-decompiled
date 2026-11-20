@@ -6,7 +6,7 @@ final class lob implements dja {
     static String field_a;
     static llb[] field_c;
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         NebulaField stackIn_1_0 = null;
         RuntimeException decompiledCaughtException = null;
         int var2_int = 0;
@@ -14,7 +14,7 @@ final class lob implements dja {
         try {
           var2_int = 13 / ((-64 - param0) / 50);
           stackIn_1_0 = new NebulaField();
-          return (tv) ((Object) stackIn_1_0);
+          return (SerializableGameState) ((Object) stackIn_1_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = decompiledCaughtException;
@@ -28,7 +28,7 @@ final class lob implements dja {
         int stackIn_14_0 = 0;
         vu stackIn_66_0 = null;
         RuntimeException decompiledCaughtException = null;
-        faa var1 = null;
+        IsaacPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3_int = 0;
@@ -51,24 +51,24 @@ final class lob implements dja {
           if (!param0) {
             field_b = -108;
           }
-          var2 = var1.e((byte) -91);
+          var2 = var1.readUnsignedByte((byte) -91);
           if (var2 == 0) {
             if (TeamNodeCondition.field_c == null) {
               TeamNodeCondition.field_c = new pr(128);
               mq.field_k = 0;
             }
-            stackIn_14_0 = (var1.e((byte) -101) != 1) ? 0 : 1;
+            stackIn_14_0 = (var1.readUnsignedByte((byte) -101) != 1) ? 0 : 1;
             var3_int = stackIn_14_0;
-            var4_ref_String = var1.a(-1);
+            var4_ref_String = var1.readString(-1);
             if (var3_int == 0) {
               var5 = var4_ref_String;
             }
             if (var3_int != 0 ||
               var9 != 0) {
-              var5 = var1.a(-1);
+              var5 = var1.readString(-1);
             }
             var6 = nf.a(var4_ref_String, false);
-            var7 = var1.a(-1);
+            var7 = var1.readString(-1);
             var8 = jwa.a(false, (CharSequence) ((Object) var4_ref_String));
             if (null == var8) {
               var8 = var4_ref_String;
@@ -85,7 +85,7 @@ final class lob implements dja {
               fieldTemp$0 = mq.field_k;
               mq.field_k = mq.field_k + 1;
               var6.field_yb = fieldTemp$0;
-              SetPointDefenceLaserProjectileOndamageParticles.field_o.b(-10258, var6);
+              SetPointDefenceLaserProjectileOndamageParticles.field_o.addLast(-10258, var6);
             }
             var6.field_vb = var7;
             var6.field_Fb = var4_ref_String;
@@ -111,9 +111,9 @@ final class lob implements dja {
               return;
             }
             iwa.field_b = 1;
-            var3 = var1.a(-1);
+            var3 = var1.readString(-1);
             kbb.field_q = ((String) (var3)).intern();
-            var4 = var1.e((byte) -126);
+            var4 = var1.readUnsignedByte((byte) -126);
             rma.b(var4, (byte) 71);
             return;
           }
@@ -121,12 +121,12 @@ final class lob implements dja {
             ae.field_f = new pr(128);
             GetBoostersCooldown.field_p = 0;
           }
-          var3Lifetime1 = var1.a(-1);
+          var3Lifetime1 = var1.readString(-1);
           if (((String) (var3Lifetime1)).equals("")) {
             var3Lifetime1 = null;
           }
-          var4_ref_StringLifetime1 = var1.a(-1);
-          var5Lifetime1 = var1.a(-1);
+          var4_ref_StringLifetime1 = var1.readString(-1);
+          var5Lifetime1 = var1.readString(-1);
           var6Lifetime1 = di.a(var4_ref_StringLifetime1, 0);
           if (var6Lifetime1 == null) {
             var6Lifetime1 = di.a(var5Lifetime1, 0);
@@ -140,7 +140,7 @@ final class lob implements dja {
             fieldTemp$1 = GetBoostersCooldown.field_p;
             GetBoostersCooldown.field_p = GetBoostersCooldown.field_p + 1;
             var6Lifetime1.field_yb = fieldTemp$1;
-            mr.field_M.b(-10258, var6Lifetime1);
+            mr.field_M.addLast(-10258, var6Lifetime1);
           }
           if (var3Lifetime1 != null) {
             var3Lifetime1 = ((String) (var3Lifetime1)).intern();
@@ -148,8 +148,8 @@ final class lob implements dja {
           var6Lifetime1.field_Fb = var4_ref_StringLifetime1;
           var6Lifetime1.field_vb = var5Lifetime1;
           var6Lifetime1.field_Ab = (String) (var3Lifetime1);
-          var6Lifetime1.b(-3846);
-          var7_ref = (vu) (mr.field_M.d(0));
+          var6Lifetime1.unlink(-3846);
+          var7_ref = (vu) (mr.field_M.first(0));
           scanLoop1: while (true) {
             if (var7_ref != null) {
               stackIn_66_0 = var7_ref;
@@ -157,12 +157,12 @@ final class lob implements dja {
                 break scanLoop1;
               }
               if (Nebula.a(stackIn_66_0, 7569, var6Lifetime1)) {
-                var7_ref = (vu) (mr.field_M.a((byte) 78));
+                var7_ref = (vu) (mr.field_M.next((byte) 78));
                 continue;
               }
             }
             if (null == var7_ref) {
-              mr.field_M.b(-10258, var6Lifetime1);
+              mr.field_M.addLast(-10258, var6Lifetime1);
               if (var9 == 0) {
                 return;
               }
@@ -344,17 +344,17 @@ final class lob implements dja {
         }
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         RuntimeException var3 = null;
-        tv[] stackIn_2_0 = null;
+        SerializableGameState[] stackIn_2_0 = null;
         NebulaField[] stackIn_4_0 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == 11995) {
             stackIn_4_0 = new NebulaField[param1];
-            return (tv[]) ((Object) stackIn_4_0);
+            return (SerializableGameState[]) ((Object) stackIn_4_0);
           }
-          stackIn_2_0 = (tv[]) null;
+          stackIn_2_0 = (SerializableGameState[]) null;
           return stackIn_2_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

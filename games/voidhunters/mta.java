@@ -4,9 +4,9 @@
 final class mta implements dja {
     static String[][] field_a;
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -44 / ((-64 - param0) / 50);
-        return (tv) ((Object) new Mission());
+        return (SerializableGameState) ((Object) new Mission());
     }
 
     public static void a(boolean param0) {
@@ -28,12 +28,12 @@ final class mta implements dja {
         SetPhasedEnergyBeamAimspeed.field_p = null;
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           mta.a(false);
-          return (tv[]) ((Object) new Mission[param1]);
+          return (SerializableGameState[]) ((Object) new Mission[param1]);
         }
-        return (tv[]) ((Object) new Mission[param1]);
+        return (SerializableGameState[]) ((Object) new Mission[param1]);
     }
 
     final static void c(byte param0) {

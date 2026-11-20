@@ -18,17 +18,17 @@ final class mbb implements dja {
         field_a = null;
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           this.a((byte) -26);
-          return (tv[]) ((Object) new SetShipTeamAction[param1]);
+          return (SerializableGameState[]) ((Object) new SetShipTeamAction[param1]);
         }
-        return (tv[]) ((Object) new SetShipTeamAction[param1]);
+        return (SerializableGameState[]) ((Object) new SetShipTeamAction[param1]);
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -72 / ((-64 - param0) / 50);
-        return (tv) ((Object) new SetShipTeamAction());
+        return (SerializableGameState) ((Object) new SetShipTeamAction());
     }
 
     static {

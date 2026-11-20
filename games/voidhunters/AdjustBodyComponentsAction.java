@@ -41,7 +41,7 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
         return var2 + " custom variable " + this.index;
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         AdjustBodyComponentsAction var3 = null;
         int var4 = 0;
         boolean stackIn_6_0 = false;
@@ -53,7 +53,7 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
         try {
           var3 = (AdjustBodyComponentsAction) (param1);
           var4 = 78 / ((22 - param0) / 59);
-          stackIn_6_0 = (super.a((byte) -64, param1)) || (this.index != var3.index) || (var3.mode != this.mode);
+          stackIn_6_0 = (super.differsFrom((byte) -64, param1)) || (this.index != var3.index) || (var3.mode != this.mode);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -79,14 +79,14 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
         return this.index;
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 >= -109) {
             field_a = (String) null;
           }
-          super.b(param0, -124);
-          param0.a(-632, this.index, 32);
-          param0.a(-632, this.mode, 2);
+          super.writeState(param0, -124);
+          param0.writeBits(-632, this.index, 32);
+          param0.writeBits(-632, this.mode, 2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tt.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -159,7 +159,7 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         AdjustBodyComponentsAction var5 = null;
         AdjustBodyComponentsAction var6 = null;
         RuntimeException stackIn_5_0 = null;
@@ -170,7 +170,7 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
         try {
           var5 = (AdjustBodyComponentsAction) (param1);
           var6 = var5;
-          super.b((byte) 55, param1);
+          super.copyTo((byte) 55, param1);
           var6.mode = this.mode;
           var6.index = this.index;
           if (param0 <= 54) {
@@ -224,11 +224,11 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
-          this.index = param0.i(0, 32);
-          this.mode = param0.i(0, 2);
+          super.readState(param0, param1);
+          this.index = param0.readBits(0, 32);
+          this.mode = param0.readBits(0, 2);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tt.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -247,7 +247,7 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
 
     final ucb a(World param0, int param1) {
         RuntimeException var3 = null;
-        tv var4 = null;
+        SerializableGameState var4 = null;
         Object stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -257,8 +257,8 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
           if (param1 == 26964) {
             return null;
           }
-          var4 = (tv) null;
-          this.b((byte) 88, (tv) null);
+          var4 = (SerializableGameState) null;
+          this.copyTo((byte) 88, (SerializableGameState) null);
           stackIn_3_0 = null;
           return (ucb) (stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -283,7 +283,7 @@ final class AdjustBodyComponentsAction extends MissionAction implements Diffable
         this.index = param0;
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int var4 = 0;
         AdjustBodyComponentsAction var5 = null;
         RuntimeException stackIn_13_0 = null;

@@ -7,19 +7,19 @@ final class SetTorpedoProjectileLife extends ConsoleCommand {
 
     final static void a(int param0) {
         MissionList var1 = null;
-        faa var2 = null;
+        IsaacPacketBuffer var2 = null;
         MissionList var1Lifetime1;
-        faa var2Lifetime1;
+        IsaacPacketBuffer var2Lifetime1;
         if (param0 > -20) {
           SetTorpedoProjectileLife.e((byte) 50);
           if (!SetMissionTerrainAsteroidProbability.field_o) {
             return;
           }
           var1 = SetDebrisPartitioned.b(false);
-          var2 = new faa(1048576);
-          var2.q(-122);
-          var1.b(var2, -110);
-          var2.r(32712);
+          var2 = new IsaacPacketBuffer(1048576);
+          var2.beginBitWrite(-122);
+          var1.writeState(var2, -110);
+          var2.endBitWrite(32712);
           asb.a(var2.position, "missions.dat", var2.payload, -107, "");
           GetDebrisThrowable.a(false, "Saved out mission list");
           return;
@@ -28,10 +28,10 @@ final class SetTorpedoProjectileLife extends ConsoleCommand {
           return;
         }
         var1Lifetime1 = SetDebrisPartitioned.b(false);
-        var2Lifetime1 = new faa(1048576);
-        var2Lifetime1.q(-122);
-        var1Lifetime1.b(var2Lifetime1, -110);
-        var2Lifetime1.r(32712);
+        var2Lifetime1 = new IsaacPacketBuffer(1048576);
+        var2Lifetime1.beginBitWrite(-122);
+        var1Lifetime1.writeState(var2Lifetime1, -110);
+        var2Lifetime1.endBitWrite(32712);
         asb.a(var2Lifetime1.position, "missions.dat", var2Lifetime1.payload, -107, "");
         GetDebrisThrowable.a(false, "Saved out mission list");
     }
@@ -59,7 +59,7 @@ final class SetTorpedoProjectileLife extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetTorpedoProjectileLife.e((byte) 42);
           }
-          SetMachineGunEnergyUsed.a(91, 62, arguments[0].a(107));
+          SetMachineGunEnergyUsed.a(91, 62, arguments[0].intValue(107));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -22,7 +22,7 @@ final class SetLaserRandomness extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetLaserRandomness.a((byte) -45, -12);
           }
-          SetMachineGunEnergyUsed.a(74, 62, arguments[0].a(118));
+          SetMachineGunEnergyUsed.a(74, 62, arguments[0].intValue(118));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

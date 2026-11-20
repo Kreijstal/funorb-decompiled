@@ -49,7 +49,7 @@ final class SetExplosionProjectileDamage extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(149, 62, arguments[0].a(68));
+          SetMachineGunEnergyUsed.a(149, 62, arguments[0].intValue(68));
           if (obfuscationGuard > -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 72);

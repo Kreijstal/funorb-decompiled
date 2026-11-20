@@ -2,39 +2,39 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MouseWheelHandler extends MouseWheelInput implements java.awt.event.MouseWheelListener {
-    private int field_b;
+    private int rotation;
 
-    final synchronized int b(int param0) {
-        int var2 = this.field_b;
+    final synchronized int pollRotation(int param0) {
+        int var2 = this.rotation;
         if (param0 == 1) {
-          this.field_b = 0;
+          this.rotation = 0;
           return var2;
         }
-        this.field_b = -13;
-        this.field_b = 0;
+        this.rotation = -13;
+        this.rotation = 0;
         return var2;
     }
 
-    final void a(int param0, java.awt.Component param1) {
+    final void attach(int param0, java.awt.Component param1) {
         param1.addMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param0 >= -3) {
-          this.field_b = -12;
+          this.rotation = -12;
         }
     }
 
-    final void a(java.awt.Component param0, int param1) {
+    final void detach(java.awt.Component param0, int param1) {
         param0.removeMouseWheelListener((java.awt.event.MouseWheelListener) (this));
         if (param1 != -21835) {
-          this.field_b = -128;
+          this.rotation = -128;
         }
     }
 
     public final synchronized void mouseWheelMoved(java.awt.event.MouseWheelEvent param0) {
-        this.field_b = this.field_b + param0.getWheelRotation();
+        this.rotation = this.rotation + param0.getWheelRotation();
         param0.consume();
     }
 
     MouseWheelHandler() {
-        this.field_b = 0;
+        this.rotation = 0;
     }
 }

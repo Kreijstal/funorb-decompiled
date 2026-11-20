@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class agb implements dja {
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -61 % ((param0 + 64) / 50);
-        return (tv) ((Object) new AdjustBodyComponentsAction());
+        return (SerializableGameState) ((Object) new AdjustBodyComponentsAction());
     }
 
     final static long a(CharSequence param0, int param1) {
@@ -71,12 +71,12 @@ final class agb implements dja {
         }
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           this.a((byte) 63);
-          return (tv[]) ((Object) new AdjustBodyComponentsAction[param1]);
+          return (SerializableGameState[]) ((Object) new AdjustBodyComponentsAction[param1]);
         }
-        return (tv[]) ((Object) new AdjustBodyComponentsAction[param1]);
+        return (SerializableGameState[]) ((Object) new AdjustBodyComponentsAction[param1]);
     }
 
     static {

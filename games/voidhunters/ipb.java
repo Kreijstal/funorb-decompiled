@@ -16,15 +16,15 @@ final class ipb {
         RuntimeException var2 = null;
         this.field_a = 0;
         try {
-          this.field_b = new tsa[param0.c(3)];
+          this.field_b = new tsa[param0.size(3)];
           var2_int = 0;
-          var3 = (tsa) (param0.d(0));
+          var3 = (tsa) (param0.first(0));
           while (var3 != null) {
-            var3.b(-3846);
+            var3.unlink(-3846);
             incrementValue$2 = var2_int;
             var2_int++;
             this.field_b[incrementValue$2] = var3;
-            var3 = (tsa) (param0.a((byte) 13));
+            var3 = (tsa) (param0.next((byte) 13));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

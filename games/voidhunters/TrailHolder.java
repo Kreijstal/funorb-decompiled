@@ -10,7 +10,7 @@ final class TrailHolder implements DiffableState {
     private int field_g;
     private int[] field_e;
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         TrailHolder var3 = null;
         try {
           var3 = (TrailHolder) (param1);
@@ -29,7 +29,7 @@ final class TrailHolder implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 >= -109) {
             this.field_g = -81;
@@ -40,8 +40,8 @@ final class TrailHolder implements DiffableState {
     }
 
     final void a(byte param0) {
-        tv var3 = null;
-        tv var3Lifetime1;
+        SerializableGameState var3 = null;
+        SerializableGameState var3Lifetime1;
         this.field_a = this.field_a - 8;
         this.field_g = this.field_g + 1;
         if (this.field_a < 0) {
@@ -52,35 +52,35 @@ final class TrailHolder implements DiffableState {
           this.field_d[this.field_c] = 0;
           this.field_g = 0;
           if (param0 >= -123) {
-            var3 = (tv) null;
-            this.b((byte) -29, (tv) null);
+            var3 = (SerializableGameState) null;
+            this.copyTo((byte) -29, (SerializableGameState) null);
             return;
           }
           return;
         }
         if (param0 >= -123) {
-          var3Lifetime1 = (tv) null;
-          this.b((byte) -29, (tv) null);
+          var3Lifetime1 = (SerializableGameState) null;
+          this.copyTo((byte) -29, (SerializableGameState) null);
           return;
         }
     }
 
     final void a(byte param0, int param1) {
-        tv var4 = null;
-        tv var4Lifetime1;
+        SerializableGameState var4 = null;
+        SerializableGameState var4Lifetime1;
         this.field_a = this.field_a + param1;
         if (this.field_a > 255) {
           this.field_a = 255;
           if (param0 <= 93) {
-            var4 = (tv) null;
-            this.reportDifferences((tv) null, 104);
+            var4 = (SerializableGameState) null;
+            this.reportDifferences((SerializableGameState) null, 104);
             return;
           }
           return;
         }
         if (param0 <= 93) {
-          var4Lifetime1 = (tv) null;
-          this.reportDifferences((tv) null, 104);
+          var4Lifetime1 = (SerializableGameState) null;
+          this.reportDifferences((SerializableGameState) null, 104);
           return;
         }
     }
@@ -126,13 +126,13 @@ final class TrailHolder implements DiffableState {
         int stackIn_11_0 = 0;
         int[] stackIn_26_0 = null;
         Throwable decompiledCaughtException = null;
-        faa var2 = null;
+        IsaacPacketBuffer var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
         Exception var6 = null;
         int var7 = 0;
-        faa var8 = null;
+        IsaacPacketBuffer var8 = null;
         pi var9 = null;
         var7 = VoidHunters.field_G;
         var8 = qga.field_b;
@@ -140,37 +140,37 @@ final class TrailHolder implements DiffableState {
         if (param0 < 4) {
           return (pgb) null;
         }
-        var3 = var8.e((byte) -121);
+        var3 = var8.readUnsignedByte((byte) -121);
         wja.field_a = 127 & var3;
         stackIn_5_0 = ((128 & var3) != 0);
         TickCondition.field_e = stackIn_5_0;
-        bl.field_A = var8.e((byte) -106);
-        SetSniperCannonFiringLeeway.field_q = var8.k(255);
+        bl.field_A = var8.readUnsignedByte((byte) -106);
+        SetSniperCannonFiringLeeway.field_q = var8.readLong(255);
         if (wja.field_a == 2) {
-          SetSalvoUsesAllEnergy.field_o = var8.e(1869);
-          jkb.field_b = var8.c((byte) -38);
+          SetSalvoUsesAllEnergy.field_o = var8.readUnsignedShort(1869);
+          jkb.field_b = var8.readUnsignedMedium((byte) -38);
         } else {
           SetSalvoUsesAllEnergy.field_o = 0;
           jkb.field_b = 0;
         }
-        stackIn_11_0 = (var8.e((byte) -106) != 1) ? 0 : 1;
+        stackIn_11_0 = (var8.readUnsignedByte((byte) -106) != 1) ? 0 : 1;
         var4 = stackIn_11_0;
-        ti.field_h = var8.a(-1);
+        ti.field_h = var8.readString(-1);
         if (var4 != 0) {
-          uja.field_a = var8.a(-1);
+          uja.field_a = var8.readString(-1);
         } else {
           uja.field_a = ti.field_h;
         }
         if (wja.field_a == 1) {
-          psb.field_a = var8.e(1869);
-          pva.field_f = var8.a(-1);
+          psb.field_a = var8.readUnsignedShort(1869);
+          pva.field_f = var8.readString(-1);
         } else {
           if (wja.field_a != 4) {
             psb.field_a = 0;
             pva.field_f = null;
           } else {
-            psb.field_a = var8.e(1869);
-            pva.field_f = var8.a(-1);
+            psb.field_a = var8.readUnsignedShort(1869);
+            pva.field_f = var8.readString(-1);
           }
         }
         if (!param1) {
@@ -178,7 +178,7 @@ final class TrailHolder implements DiffableState {
           un.field_h = null;
           return new pgb(param1);
         }
-        var5 = var8.e(1869);
+        var5 = var8.readUnsignedShort(1869);
         try {
           var9 = GetTorpedoAimarc.field_o.a(var5, -119);
           SetCountermeasureLauncherProjectiles.field_p = var9.a(80);
@@ -199,7 +199,7 @@ final class TrailHolder implements DiffableState {
         return new pgb(param1);
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
             this.field_e = (int[]) null;
@@ -294,7 +294,7 @@ final class TrailHolder implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
@@ -318,7 +318,7 @@ final class TrailHolder implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         try {
           if (obfuscationGuard > -19) {
             this.a(-95, 21, (byte) 84, 30, -19, 64, 55);

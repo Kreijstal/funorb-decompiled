@@ -22,7 +22,7 @@ final class kl {
           if (GetWaitForPlayers.field_o == null) {
             return;
           }
-          GetWaitForPlayers.field_o.a((java.awt.Component) ((Object) param0), -21835);
+          GetWaitForPlayers.field_o.detach((java.awt.Component) ((Object) param0), -21835);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

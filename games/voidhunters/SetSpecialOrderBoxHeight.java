@@ -31,7 +31,7 @@ final class SetSpecialOrderBoxHeight extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          CarouselSlotStateDump.field_g = arguments[0].a(121);
+          CarouselSlotStateDump.field_g = arguments[0].intValue(121);
           if (obfuscationGuard >= -119) {
             field_o = (gj) null;
           }

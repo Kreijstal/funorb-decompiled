@@ -60,11 +60,11 @@ abstract class mnb {
           if (!param1) {
             field_d = false;
           }
-          param0.b(-3846);
-          var2 = (jk) (SetMachineGunAimarc.field_q.d(0));
+          param0.unlink(-3846);
+          var2 = (jk) (SetMachineGunAimarc.field_q.first(0));
           while (var2 != null) {
             if (var2.a(26344, param0)) {
-              var2 = (jk) (SetMachineGunAimarc.field_q.a((byte) 114));
+              var2 = (jk) (SetMachineGunAimarc.field_q.next((byte) 114));
               continue;
             }
             break;
@@ -73,7 +73,7 @@ abstract class mnb {
             al.a(param0, var2, 2);
             return;
           }
-          SetMachineGunAimarc.field_q.b(-10258, param0);
+          SetMachineGunAimarc.field_q.addLast(-10258, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

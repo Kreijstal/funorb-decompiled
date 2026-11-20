@@ -34,7 +34,7 @@ final class GetCountermeasureLauncherFireForce extends ConsoleCommand {
     final static void a(int param0) {
         int fieldTemp$0 = 0;
         RuntimeException decompiledCaughtException = null;
-        faa var1 = null;
+        IsaacPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         int var3 = 0;
@@ -45,12 +45,12 @@ final class GetCountermeasureLauncherFireForce extends ConsoleCommand {
           }
           var1 = RequestNewestBlackboxRecording.field_p;
           while (apb.a(57)) {
-            var1.h(param0 + 24327, 8);
+            var1.writeIsaacByte(param0 + 24327, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;
             var2 = fieldTemp$0;
             ida.a(var1, (byte) 127);
-            RequestNewestBlackboxRecording.field_p.e(var1.position - var2, -129);
+            RequestNewestBlackboxRecording.field_p.writeLengthByte(var1.position - var2, -129);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

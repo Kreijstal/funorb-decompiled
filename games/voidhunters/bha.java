@@ -4,7 +4,7 @@
 class bha implements DiffableState {
     boolean field_a;
 
-    public boolean a(byte param0, tv param1) {
+    public boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         bha var4 = null;
@@ -51,7 +51,7 @@ class bha implements DiffableState {
         }
     }
 
-    public void reportDifferences(tv other, int obfuscationGuard) {
+    public void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         bha var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -96,9 +96,9 @@ class bha implements DiffableState {
         }
     }
 
-    public void a(faa param0, boolean param1) {
+    public void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.field_a = kv.a(param1, param0);
+          this.field_a = kv.readBoolean(param1, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bha.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -114,19 +114,19 @@ class bha implements DiffableState {
         }
     }
 
-    public void b(faa param0, int param1) {
+    public void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 > -109) {
-            faa var4 = (faa) null;
-            this.a((faa) null, true);
+            IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
+            this.readState((IsaacPacketBuffer) null, true);
           }
-          vq.a(param0, -82, this.field_a);
+          vq.writeBoolean(param0, -82, this.field_a);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bha.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public void b(byte param0, tv param1) {
+    public void copyTo(byte param0, SerializableGameState param1) {
         bha var5 = null;
         bha var6 = null;
         if (param0 <= 54) {

@@ -66,15 +66,15 @@ final class di extends le {
         try {
           var4_int = param0;
           if (var4_int == 0) {
-            stackIn_8_1 = (param2.e((byte) -96) == 1);
+            stackIn_8_1 = (param2.readUnsignedByte((byte) -96) == 1);
             this.field_o = stackIn_8_1;
           } else {
             if (1 == var4_int) {
-              stackIn_12_1 = (1 == param2.e((byte) -105));
+              stackIn_12_1 = (1 == param2.readUnsignedByte((byte) -105));
               this.field_n = stackIn_12_1;
             } else {
               if (2 == var4_int) {
-                stackIn_16_1 = (param2.e((byte) -89) == 1);
+                stackIn_16_1 = (param2.readUnsignedByte((byte) -89) == 1);
                 this.field_g = stackIn_16_1;
               }
             }

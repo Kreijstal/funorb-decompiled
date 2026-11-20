@@ -24,7 +24,7 @@ final class SetExplosionPushMultiplier extends ConsoleCommand {
     final static String a(int param0, String param1, int param2) {
         RuntimeException var3 = null;
         int var4 = 0;
-        faa var5 = null;
+        IsaacPacketBuffer var5 = null;
         CharSequence var6 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -64,12 +64,12 @@ final class SetExplosionPushMultiplier extends ConsoleCommand {
             return stackIn_21_0;
           }
           var5 = RequestNewestBlackboxRecording.field_p;
-          var5.h(param0 ^ 24333, param2);
+          var5.writeIsaacByte(param0 ^ 24333, param2);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.c(0, param0);
-          var5.a(true, param1);
-          var5.e(var5.position - var4, -129);
+          var5.writeByte(0, param0);
+          var5.writeString(true, param1);
+          var5.writeLengthByte(var5.position - var4, -129);
           stackIn_23_0 = null;
           return (String) (stackIn_23_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -111,7 +111,7 @@ final class SetExplosionPushMultiplier extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_p = -35;
           }
-          SetMachineGunEnergyUsed.a(191, 62, arguments[0].a(85));
+          SetMachineGunEnergyUsed.a(191, 62, arguments[0].intValue(85));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

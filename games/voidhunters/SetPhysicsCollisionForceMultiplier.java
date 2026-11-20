@@ -154,7 +154,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
             var4 = (phb[]) null;
             SetPhysicsCollisionForceMultiplier.a((phb[]) null, 64, 92, -41, -29, false);
           }
-          SetMachineGunEnergyUsed.a(50, 62, arguments[0].a(48));
+          SetMachineGunEnergyUsed.a(50, 62, arguments[0].intValue(48));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -43,7 +43,7 @@ abstract class ps {
             stackIn_13_0 = (byte[]) null;
             return stackIn_13_0;
           }
-          IntrusiveDeque.a(var7, param1 - 10389, 0, param0);
+          IntrusiveDeque.decodeBase64(var7, param1 - 10389, 0, param0);
           stackIn_15_0 = var5;
           return stackIn_15_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

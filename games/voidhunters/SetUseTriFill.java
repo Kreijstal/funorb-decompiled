@@ -17,7 +17,7 @@ final class SetUseTriFill extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          GetBurstFireMaxEnergy.field_o = arguments[0].a(false);
+          GetBurstFireMaxEnergy.field_o = arguments[0].booleanValue(false);
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

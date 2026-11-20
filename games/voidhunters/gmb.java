@@ -18,17 +18,17 @@ final class gmb implements dja {
         field_c = null;
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -119 % ((param0 + 64) / 50);
-        return (tv) ((Object) new SpawnChoice());
+        return (SerializableGameState) ((Object) new SpawnChoice());
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_a = (String) null;
-          return (tv[]) ((Object) new SpawnChoice[param1]);
+          return (SerializableGameState[]) ((Object) new SpawnChoice[param1]);
         }
-        return (tv[]) ((Object) new SpawnChoice[param1]);
+        return (SerializableGameState[]) ((Object) new SpawnChoice[param1]);
     }
 
     static {

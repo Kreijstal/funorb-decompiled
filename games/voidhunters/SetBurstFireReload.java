@@ -11,27 +11,27 @@ final class SetBurstFireReload extends ConsoleCommand {
     }
 
     final static void a(String param0, int param1, int param2, int param3, int param4, String param5) {
-        faa var8 = null;
+        IsaacPacketBuffer var8 = null;
         int var7 = 0;
         try {
           var8 = RequestNewestBlackboxRecording.field_p;
-          faa var6 = var8;
-          var8.h(24335, param3);
+          IsaacPacketBuffer var6 = var8;
+          var8.writeIsaacByte(24335, param3);
           var8.position = var8.position + 1;
           var7 = var8.position;
-          var8.c(0, param4);
+          var8.writeByte(0, param4);
           if (param4 == 2) {
-            var8.a(true, param5);
+            var8.writeString(true, param5);
           }
           if (param1 != -25719) {
             SetBurstFireReload.a(124, -32, -6);
           }
           if (param0 == null) {
-            var8.a(param2, true);
+            var8.writeShort(param2, true);
           } else {
             SetAutoAfkTimeout.a(param0, var8, -113);
           }
-          var8.e(-var7 + var8.position, -129);
+          var8.writeLengthByte(-var7 + var8.position, -129);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "va.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
         }
@@ -46,7 +46,7 @@ final class SetBurstFireReload extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(45, 62, arguments[0].a(50));
+          SetMachineGunEnergyUsed.a(45, 62, arguments[0].intValue(50));
           if (obfuscationGuard > -119) {
             var4 = (String) null;
             SetBurstFireReload.a((String) null, 24, 98, -9, 52, (String) null);

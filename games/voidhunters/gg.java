@@ -26,14 +26,14 @@ final class gg extends le {
         try {
           var4_int = param0;
           if (0 == var4_int) {
-            this.field_k = param2.e((byte) -105);
+            this.field_k = param2.readUnsignedByte((byte) -105);
           } else {
             if (var4_int != 1) {
               if (var4_int == 3) {
-                this.field_l = param2.e((byte) -107);
+                this.field_l = param2.readUnsignedByte((byte) -107);
               }
             } else {
-              this.field_i = param2.e((byte) -104);
+              this.field_i = param2.readUnsignedByte((byte) -104);
             }
           }
           if (param1 >= -60) {

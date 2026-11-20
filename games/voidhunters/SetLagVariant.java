@@ -107,7 +107,7 @@ final class SetLagVariant extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          GetMachineGunReload.a(-108, arguments[0].a(72), arguments[1].a(116));
+          GetMachineGunReload.a(-108, arguments[0].intValue(72), arguments[1].intValue(116));
           if (obfuscationGuard > -119) {
             SetLagVariant.a(98);
           }

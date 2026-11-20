@@ -42,23 +42,23 @@ final class GetMassDriverProjectiles extends ConsoleCommand {
     final static void a(byte param0, boolean param1, byte[] param2, int param3, int param4, int param5) {
         int var7 = 0;
         int var8 = 0;
-        faa var6 = RequestNewestBlackboxRecording.field_p;
-        var6.h(24335, param5);
+        IsaacPacketBuffer var6 = RequestNewestBlackboxRecording.field_p;
+        var6.writeIsaacByte(24335, param5);
         if (param0 < 86) {
           return;
         }
         try {
           var6.position = var6.position + 1;
           var7 = var6.position;
-          var6.c(0, 4);
-          var6.c(0, param4);
+          var6.writeByte(0, 4);
+          var6.writeByte(0, param4);
           var8 = param3;
           if (param1) {
             var8 += 128;
           }
-          var6.c(0, var8);
-          var6.a(0, param2, -1, param2.length);
-          var6.e(var6.position - var7, -129);
+          var6.writeByte(0, var8);
+          var6.writeBytes(0, param2, -1, param2.length);
+          var6.writeLengthByte(var6.position - var7, -129);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "eaa.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }

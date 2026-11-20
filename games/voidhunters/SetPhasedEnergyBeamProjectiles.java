@@ -198,7 +198,7 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(84, 62, arguments[0].a(31));
+          SetMachineGunEnergyUsed.a(84, 62, arguments[0].intValue(31));
           if (obfuscationGuard > -119) {
             field_o = (String[]) null;
           }

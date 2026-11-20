@@ -203,7 +203,7 @@ final class nva extends dqa implements oo {
         }
         this.b(this.field_h, this.field_r, -20, this.field_g, this.field_B);
         this.field_H = false;
-        this.field_G.b(param0 - 9493);
+        this.field_G.unlink(param0 - 9493);
     }
 
     final void f(byte param0) {

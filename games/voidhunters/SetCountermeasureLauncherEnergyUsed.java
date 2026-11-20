@@ -14,7 +14,7 @@ final class SetCountermeasureLauncherEnergyUsed extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(167, 62, arguments[0].a(118));
+          SetMachineGunEnergyUsed.a(167, 62, arguments[0].intValue(118));
           if (obfuscationGuard > -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 32);

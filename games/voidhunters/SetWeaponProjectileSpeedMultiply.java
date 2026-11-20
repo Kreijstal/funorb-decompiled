@@ -17,7 +17,7 @@ final class SetWeaponProjectileSpeedMultiply extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(195, 62, arguments[0].a(23));
+          SetMachineGunEnergyUsed.a(195, 62, arguments[0].intValue(23));
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

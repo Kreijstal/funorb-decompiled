@@ -19,7 +19,7 @@ final class SetGrapplingHookSpringConstant extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetGrapplingHookSpringConstant.a(69, 32, 84);
           }
-          SetMachineGunEnergyUsed.a(200, 62, arguments[0].a(110));
+          SetMachineGunEnergyUsed.a(200, 62, arguments[0].intValue(110));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

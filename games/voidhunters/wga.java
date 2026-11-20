@@ -46,12 +46,12 @@ final class wga implements dja {
         }
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_a = (lwa) null;
-          return (tv[]) ((Object) new RoundResult[param1]);
+          return (SerializableGameState[]) ((Object) new RoundResult[param1]);
         }
-        return (tv[]) ((Object) new RoundResult[param1]);
+        return (SerializableGameState[]) ((Object) new RoundResult[param1]);
     }
 
     public static void a(int param0) {
@@ -62,9 +62,9 @@ final class wga implements dja {
         field_a = (lwa) null;
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 127 % ((-64 - param0) / 50);
-        return (tv) ((Object) new RoundResult());
+        return (SerializableGameState) ((Object) new RoundResult());
     }
 
     static {

@@ -38,7 +38,7 @@ final class SetBoostersCooldown extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(218, 62, arguments[0].a(109));
+          SetMachineGunEnergyUsed.a(218, 62, arguments[0].intValue(109));
           if (obfuscationGuard > -119) {
             var4 = (da) null;
             SetBoostersCooldown.a((GraphicsToolkit) null, (sw) null, (da) null, 34, 113, 21, -90, -26, 89, -84);

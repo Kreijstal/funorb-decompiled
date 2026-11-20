@@ -280,27 +280,27 @@ final class cm extends le {
           }
           var4_int = param0;
           if (0 == var4_int) {
-            this.field_i = param2.e((byte) -92);
+            this.field_i = param2.readUnsignedByte((byte) -92);
           } else {
             if (1 != var4_int) {
               if (var4_int != 2) {
                 if (var4_int == 3) {
-                  this.field_k = param2.e(1869);
+                  this.field_k = param2.readUnsignedShort(1869);
                 } else {
                   if (var4_int == 4) {
-                    this.field_s = param2.e(1869);
+                    this.field_s = param2.readUnsignedShort(1869);
                   } else {
                     if (var4_int == 5) {
-                      this.field_o = param2.e(1869);
+                      this.field_o = param2.readUnsignedShort(1869);
                     } else {
                       if (var4_int == 6) {
-                        this.field_p = param2.e((byte) -88);
+                        this.field_p = param2.readUnsignedByte((byte) -88);
                       } else {
                         if (var4_int == 7) {
-                          this.field_l = param2.e(1869);
+                          this.field_l = param2.readUnsignedShort(1869);
                         } else {
                           if (var4_int == 8) {
-                            this.field_r = param2.e(1869);
+                            this.field_r = param2.readUnsignedShort(1869);
                           }
                         }
                       }
@@ -308,10 +308,10 @@ final class cm extends le {
                   }
                 }
               } else {
-                this.field_q = param2.e(1869);
+                this.field_q = param2.readUnsignedShort(1869);
               }
             } else {
-              this.field_n = param2.e(1869);
+              this.field_n = param2.readUnsignedShort(1869);
             }
           }
           return;

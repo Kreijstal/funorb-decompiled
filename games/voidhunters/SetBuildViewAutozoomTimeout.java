@@ -15,7 +15,7 @@ final class SetBuildViewAutozoomTimeout extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          mbb.field_c = arguments[0].a(64);
+          mbb.field_c = arguments[0].intValue(64);
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

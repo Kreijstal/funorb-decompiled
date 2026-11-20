@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dq {
-    private int[] field_f;
-    private int field_c;
-    private int field_d;
-    private int field_b;
-    private int field_a;
-    private int[] field_e;
+final class IsaacCipher {
+    private int[] memory;
+    private int remaining;
+    private int accumulator;
+    private int counter;
+    private int lastResult;
+    private int[] results;
 
     final static void a(byte param0, int param1, boolean param2) {
         soa stackIn_5_0;
@@ -57,7 +57,7 @@ final class dq {
           vra.field_b.field_xb.field_xb.field_R = null;
           vra.field_b.field_y = true;
           var5 = null;
-          var6 = (vu) (var4.d(0));
+          var6 = (vu) (var4.first(0));
           while (var6 != null) {
             var7 = 0;
             if (var6.field_lb == null) {
@@ -120,7 +120,7 @@ final class dq {
               var14 = qs.field_a;
               var17.field_i.b(var13, -29060, var14, 0, 0);
             }
-            var6 = (vu) (var4.a((byte) 66));
+            var6 = (vu) (var4.next((byte) 66));
           }
           if (0 != vra.field_b.field_wb.field_o) {
             ola.field_p = new qka(vra.field_b.field_wb.field_M, vra.field_b.field_wb.field_u, vra.field_b.field_wb.field_hb, vra.field_b.field_wb.field_G, mw.field_d, GetDebrisMax.field_o, qc.field_q, qc.field_q);
@@ -139,13 +139,13 @@ final class dq {
         }
     }
 
-    private final void a(boolean param0) {
+    private final void initialize(boolean param0) {
         int var2 = 0;
         int var11 = VoidHunters.field_G;
         int var2Lifetime1;
         int var2Lifetime2;
         if (!param0) {
-          this.field_f = (int[]) null;
+          this.memory = (int[]) null;
         }
         int var8 = -1640531527;
         int var7 = -1640531527;
@@ -182,14 +182,14 @@ final class dq {
           var5 = var5 + var10;
         }
         for (var2Lifetime1 = 0; var2Lifetime1 < 256; var2Lifetime1 += 8) {
-          var4 = var4 + this.field_e[1 + var2Lifetime1];
-          var5 = var5 + this.field_e[2 + var2Lifetime1];
-          var9 = var9 + this.field_e[var2Lifetime1 + 6];
-          var8 = var8 + this.field_e[5 + var2Lifetime1];
-          var10 = var10 + this.field_e[7 + var2Lifetime1];
-          var6 = var6 + this.field_e[var2Lifetime1 + 3];
-          var7 = var7 + this.field_e[4 + var2Lifetime1];
-          var3 = var3 + this.field_e[var2Lifetime1];
+          var4 = var4 + this.results[1 + var2Lifetime1];
+          var5 = var5 + this.results[2 + var2Lifetime1];
+          var9 = var9 + this.results[var2Lifetime1 + 6];
+          var8 = var8 + this.results[5 + var2Lifetime1];
+          var10 = var10 + this.results[7 + var2Lifetime1];
+          var6 = var6 + this.results[var2Lifetime1 + 3];
+          var7 = var7 + this.results[4 + var2Lifetime1];
+          var3 = var3 + this.results[var2Lifetime1];
           var3 = var3 ^ var4 << 11;
           var6 = var6 + var3;
           var4 = var4 + var5;
@@ -214,24 +214,24 @@ final class dq {
           var10 = var10 ^ var3 >>> 9;
           var5 = var5 + var10;
           var3 = var3 + var4;
-          this.field_f[var2Lifetime1] = var3;
-          this.field_f[1 + var2Lifetime1] = var4;
-          this.field_f[2 + var2Lifetime1] = var5;
-          this.field_f[3 + var2Lifetime1] = var6;
-          this.field_f[4 + var2Lifetime1] = var7;
-          this.field_f[var2Lifetime1 + 5] = var8;
-          this.field_f[6 + var2Lifetime1] = var9;
-          this.field_f[var2Lifetime1 + 7] = var10;
+          this.memory[var2Lifetime1] = var3;
+          this.memory[1 + var2Lifetime1] = var4;
+          this.memory[2 + var2Lifetime1] = var5;
+          this.memory[3 + var2Lifetime1] = var6;
+          this.memory[4 + var2Lifetime1] = var7;
+          this.memory[var2Lifetime1 + 5] = var8;
+          this.memory[6 + var2Lifetime1] = var9;
+          this.memory[var2Lifetime1 + 7] = var10;
         }
         for (var2Lifetime2 = 0; var2Lifetime2 < 256; var2Lifetime2 += 8) {
-          var9 = var9 + this.field_f[var2Lifetime2 + 6];
-          var10 = var10 + this.field_f[var2Lifetime2 + 7];
-          var3 = var3 + this.field_f[var2Lifetime2];
-          var6 = var6 + this.field_f[3 + var2Lifetime2];
-          var8 = var8 + this.field_f[var2Lifetime2 + 5];
-          var5 = var5 + this.field_f[2 + var2Lifetime2];
-          var7 = var7 + this.field_f[4 + var2Lifetime2];
-          var4 = var4 + this.field_f[var2Lifetime2 + 1];
+          var9 = var9 + this.memory[var2Lifetime2 + 6];
+          var10 = var10 + this.memory[var2Lifetime2 + 7];
+          var3 = var3 + this.memory[var2Lifetime2];
+          var6 = var6 + this.memory[3 + var2Lifetime2];
+          var8 = var8 + this.memory[var2Lifetime2 + 5];
+          var5 = var5 + this.memory[2 + var2Lifetime2];
+          var7 = var7 + this.memory[4 + var2Lifetime2];
+          var4 = var4 + this.memory[var2Lifetime2 + 1];
           var3 = var3 ^ var4 << 11;
           var4 = var4 + var5;
           var6 = var6 + var3;
@@ -256,20 +256,20 @@ final class dq {
           var10 = var10 ^ var3 >>> 9;
           var5 = var5 + var10;
           var3 = var3 + var4;
-          this.field_f[var2Lifetime2] = var3;
-          this.field_f[var2Lifetime2 + 1] = var4;
-          this.field_f[2 + var2Lifetime2] = var5;
-          this.field_f[3 + var2Lifetime2] = var6;
-          this.field_f[var2Lifetime2 + 4] = var7;
-          this.field_f[var2Lifetime2 + 5] = var8;
-          this.field_f[6 + var2Lifetime2] = var9;
-          this.field_f[var2Lifetime2 + 7] = var10;
+          this.memory[var2Lifetime2] = var3;
+          this.memory[var2Lifetime2 + 1] = var4;
+          this.memory[2 + var2Lifetime2] = var5;
+          this.memory[3 + var2Lifetime2] = var6;
+          this.memory[var2Lifetime2 + 4] = var7;
+          this.memory[var2Lifetime2 + 5] = var8;
+          this.memory[6 + var2Lifetime2] = var9;
+          this.memory[var2Lifetime2 + 7] = var10;
         }
-        this.b((byte) 57);
-        this.field_c = 256;
+        this.generate((byte) 57);
+        this.remaining = 256;
     }
 
-    private final void b(byte param0) {
+    private final void generate(byte param0) {
         int var2 = 0;
         int dupTemp$1 = 0;
         int dupTemp$2 = 0;
@@ -278,58 +278,58 @@ final class dq {
         int var5;
         var5 = VoidHunters.field_G;
         if (param0 != 57) {
-          this.field_d = 8;
+          this.accumulator = 8;
         }
-        int fieldTemp$0 = this.field_b + 1;
-        this.field_b = this.field_b + 1;
-        this.field_a = this.field_a + fieldTemp$0;
+        int fieldTemp$0 = this.counter + 1;
+        this.counter = this.counter + 1;
+        this.lastResult = this.lastResult + fieldTemp$0;
         for (var2 = 0; var2 < 256; var2++) {
-          var3 = this.field_f[var2];
+          var3 = this.memory[var2];
           if (0 == (2 & var2)) {
             if (0 != (var2 & 1)) {
-              this.field_d = this.field_d ^ this.field_d >>> 6;
+              this.accumulator = this.accumulator ^ this.accumulator >>> 6;
             } else {
-              this.field_d = this.field_d ^ this.field_d << 13;
+              this.accumulator = this.accumulator ^ this.accumulator << 13;
             }
           } else {
             if ((var2 & 1) == 0) {
-              this.field_d = this.field_d ^ this.field_d << 2;
+              this.accumulator = this.accumulator ^ this.accumulator << 2;
             } else {
-              this.field_d = this.field_d ^ this.field_d >>> 16;
+              this.accumulator = this.accumulator ^ this.accumulator >>> 16;
             }
           }
-          this.field_d = this.field_d + this.field_f[255 & 128 + var2];
-          dupTemp$1 = this.field_a + this.field_f[dla.a(var3 >> 2, 255)] + this.field_d;
+          this.accumulator = this.accumulator + this.memory[255 & 128 + var2];
+          dupTemp$1 = this.lastResult + this.memory[dla.a(var3 >> 2, 255)] + this.accumulator;
           var4 = dupTemp$1;
-          this.field_f[var2] = dupTemp$1;
-          dupTemp$2 = this.field_f[dla.a(var4 >> 8, 1020) >> 2] + var3;
-          this.field_a = dupTemp$2;
-          this.field_e[var2] = dupTemp$2;
+          this.memory[var2] = dupTemp$1;
+          dupTemp$2 = this.memory[dla.a(var4 >> 8, 1020) >> 2] + var3;
+          this.lastResult = dupTemp$2;
+          this.results[var2] = dupTemp$2;
         }
     }
 
-    final int a(byte param0) {
-        if (this.field_c == 0) {
-          this.b((byte) 57);
-          this.field_c = 256;
+    final int nextInt(byte param0) {
+        if (this.remaining == 0) {
+          this.generate((byte) 57);
+          this.remaining = 256;
         }
         if (param0 != -41) {
-          this.field_a = -75;
+          this.lastResult = -75;
         }
-        int fieldTemp$0 = this.field_c - 1;
-        this.field_c = this.field_c - 1;
-        return this.field_e[fieldTemp$0];
+        int fieldTemp$0 = this.remaining - 1;
+        this.remaining = this.remaining - 1;
+        return this.results[fieldTemp$0];
     }
 
-    dq(int[] param0) {
+    IsaacCipher(int[] param0) {
         int var2_int = 0;
         try {
-          this.field_e = new int[256];
-          this.field_f = new int[256];
+          this.results = new int[256];
+          this.memory = new int[256];
           for (var2_int = 0; param0.length > var2_int; var2_int++) {
-            this.field_e[var2_int] = param0[var2_int];
+            this.results[var2_int] = param0[var2_int];
           }
-          this.a(true);
+          this.initialize(true);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dq.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

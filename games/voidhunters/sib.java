@@ -78,7 +78,7 @@ final class sib extends mab implements java.awt.image.ImageProducer, java.awt.im
         try {
           var3_int = -82 % ((46 - param2) / 62);
           try {
-            var4_int = param1.f(50);
+            var4_int = param1.readUnsignedSmart(50);
             if (param0 < var4_int) {
               var4_int = param0;
             }

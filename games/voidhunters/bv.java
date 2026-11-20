@@ -38,7 +38,7 @@ final class bv {
         int var12 = 0;
         var13 = VoidHunters.field_G;
         try {
-          var9 = (lw) (param1.d(0));
+          var9 = (lw) (param1.first(0));
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var9 == null))) {
             var10 = var9.field_l;
@@ -51,7 +51,7 @@ final class bv {
                 stackIn_9_0 = new int[]{var11, var11 + chb.field_a, var12, CarouselSlotStateDump.field_g + var12};
                 return stackIn_9_0;
               }
-              var9 = (lw) (param1.a((byte) 39));
+              var9 = (lw) (param1.next((byte) 39));
               continue;
             }
             break;
@@ -513,12 +513,12 @@ final class bv {
         try {
           var8_int = -18 % ((94 - param2) / 32);
           var9 = param1.world.getProjectiles(true);
-          var10 = (Projectile) (var9.d(0));
+          var10 = (Projectile) (var9.first(0));
           while (var10 != null) {
             if (var10.getFiredTeam(512) != 0) {
               var10.b(0, 71);
             }
-            var10 = (Projectile) (var9.a((byte) 109));
+            var10 = (Projectile) (var9.next((byte) 109));
             if (var17 == 0) {
               continue;
             }
@@ -940,7 +940,7 @@ final class bv {
                   }
                   var20_ref2 = new IntrusiveDeque();
                   param12.a(var20_ref2, 9, param2, param0.world.d(param12.getId(false), (byte) 21));
-                  if (var20_ref2.c(3) > 1) {
+                  if (var20_ref2.size(3) > 1) {
                     this.a(-26476, 9);
                     if (SetMachineGunEnergyUsed.field_o[81]) {
                       this.a((byte) 127, 9);

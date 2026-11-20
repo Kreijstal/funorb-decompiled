@@ -57,7 +57,7 @@ final class RoundResult implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         RoundResult var5 = null;
         RoundResult var6 = null;
         try {
@@ -73,7 +73,7 @@ final class RoundResult implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         RoundResult var4 = null;
         boolean stackIn_5_0 = false;
@@ -101,7 +101,7 @@ final class RoundResult implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RoundResult var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -142,25 +142,25 @@ final class RoundResult implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
-        this.winner = param0.i(0, 32);
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
+        this.winner = param0.readBits(0, 32);
         if (param1) {
           return;
         }
         try {
-          this.winningTime = param0.i(0, 32);
+          this.winningTime = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wna.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 > -109) {
             this.winningTime = 87;
           }
-          param0.a(-632, this.winner, 32);
-          param0.a(-632, this.winningTime, 32);
+          param0.writeBits(-632, this.winner, 32);
+          param0.writeBits(-632, this.winningTime, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wna.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

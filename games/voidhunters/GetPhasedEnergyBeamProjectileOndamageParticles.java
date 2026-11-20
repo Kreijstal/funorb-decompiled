@@ -55,13 +55,13 @@ final class GetPhasedEnergyBeamProjectileOndamageParticles extends ConsoleComman
             stackIn_3_0 = (le) null;
             return stackIn_3_0;
           }
-          param0.e((byte) -96);
-          var2_int = param0.e((byte) -108);
+          param0.readUnsignedByte((byte) -96);
+          var2_int = param0.readUnsignedByte((byte) -108);
           var3 = SetPhasedEnergyBeamProjectiles.a(false, var2_int);
-          var3.field_h = param0.e((byte) -114);
-          var4 = param0.e((byte) -117);
+          var3.field_h = param0.readUnsignedByte((byte) -114);
+          var4 = param0.readUnsignedByte((byte) -117);
           for (var5 = 0; var5 < var4; var5++) {
-            var6 = param0.e((byte) -118);
+            var6 = param0.readUnsignedByte((byte) -118);
             var3.a(var6, -116, param0);
           }
           var3.c((byte) -67);

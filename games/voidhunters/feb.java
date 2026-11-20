@@ -37,7 +37,7 @@ final class feb {
             var3 = var2.field_d;
           } else {
             if (var2 != null) {
-              var2.b(-3846);
+              var2.unlink(-3846);
             }
             var3 = new kla(param0);
             fgb.field_k.a((long)param0.field_b, new qgb(param0, var3), (byte) -127);

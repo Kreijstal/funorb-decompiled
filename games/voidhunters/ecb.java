@@ -11,17 +11,17 @@ final class ecb implements dja {
         }
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -7 % ((-64 - param0) / 50);
-        return (tv) ((Object) new GameSnapshot());
+        return (SerializableGameState) ((Object) new GameSnapshot());
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_a = (int[]) null;
-          return (tv[]) ((Object) new GameSnapshot[param1]);
+          return (SerializableGameState[]) ((Object) new GameSnapshot[param1]);
         }
-        return (tv[]) ((Object) new GameSnapshot[param1]);
+        return (SerializableGameState[]) ((Object) new GameSnapshot[param1]);
     }
 
     final static int a(int param0, byte param1, int param2) {

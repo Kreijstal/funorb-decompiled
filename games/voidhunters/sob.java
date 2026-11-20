@@ -1243,9 +1243,9 @@ final class sob extends GraphicsToolkit {
 
     final void j() {
         if (this.field_l != null) {
-          this.field_k = this.field_D.field_f;
-          this.field_i = this.field_D.field_e;
-          this.field_j = this.field_D.field_d;
+          this.field_k = this.field_D.pixels;
+          this.field_i = this.field_D.width;
+          this.field_j = this.field_D.height;
           this.field_r = this.field_G;
           this.field_F = this.field_v;
           this.field_q = this.field_u;
@@ -1400,8 +1400,8 @@ final class sob extends GraphicsToolkit {
         RasterBuffer var4;
         var4 = (RasterBuffer) (this.field_t.a((long)param0.hashCode(), 119));
         if (var4 != null) {
-          if (var4.field_e == param1 &&
-            var4.field_d == param2) {
+          if (var4.width == param1 &&
+            var4.height == param2) {
             return;
           }
           this.a(param0, param1, param2);
@@ -1570,7 +1570,7 @@ final class sob extends GraphicsToolkit {
         float[] array$0 = null;
         RasterBuffer var6 = (RasterBuffer) (this.field_t.a((long)param0.hashCode(), 97));
         if (var6 != null) {
-          var6.b(-3846);
+          var6.unlink(-3846);
           var7 = ResourceNode.a(param1, true, param0, param2);
           this.field_t.a((long)param0.hashCode(), var7, (byte) -122);
           if (this.field_l == param0 &&
@@ -1579,9 +1579,9 @@ final class sob extends GraphicsToolkit {
             this.field_z = var5.width;
             this.field_o = var5.height;
             this.field_D = var7;
-            this.field_k = var7.field_f;
-            this.field_i = var7.field_e;
-            this.field_j = var7.field_d;
+            this.field_k = var7.pixels;
+            this.field_i = var7.width;
+            this.field_j = var7.height;
             if (this.field_i != this.field_F ||
               this.field_j != this.field_q) {
               this.field_F = this.field_i;
@@ -1606,7 +1606,7 @@ final class sob extends GraphicsToolkit {
         }
         try {
           var3 = this.field_l.getGraphics();
-          this.field_D.a(var3, this.field_z, param1, 32255, param0, 0, 0, this.field_o);
+          this.field_D.drawRegion(var3, this.field_z, param1, 32255, param0, 0, 0, this.field_o);
         } catch (Exception exception) {
           this.field_l.repaint();
         }
@@ -1852,9 +1852,9 @@ final class sob extends GraphicsToolkit {
             this.field_o = var3.height;
             this.field_D = var2;
             if (this.field_c == null) {
-              this.field_k = var2.field_f;
-              this.field_i = var2.field_e;
-              this.field_j = var2.field_d;
+              this.field_k = var2.pixels;
+              this.field_i = var2.width;
+              this.field_j = var2.height;
               if (this.field_i != this.field_F ||
                 this.field_j != this.field_q) {
                 this.field_F = this.field_i;

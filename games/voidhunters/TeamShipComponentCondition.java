@@ -53,7 +53,7 @@ final class TeamShipComponentCondition extends MissionCondition implements Diffa
         return this.componentTypeId;
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int var4 = 0;
         TeamShipComponentCondition var5 = null;
         RuntimeException stackIn_12_0 = null;
@@ -94,10 +94,10 @@ final class TeamShipComponentCondition extends MissionCondition implements Diffa
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         TeamShipComponentCondition var5 = null;
         TeamShipComponentCondition var6 = null;
-        super.b((byte) 69, param1);
+        super.copyTo((byte) 69, param1);
         if (param0 <= 54) {
           return;
         }
@@ -157,24 +157,24 @@ final class TeamShipComponentCondition extends MissionCondition implements Diffa
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          super.b(param0, -115);
+          super.writeState(param0, -115);
           if (param1 >= -109) {
             this.teamId = -31;
           }
-          param0.a(-632, this.teamId, 8);
-          param0.a(-632, this.componentTypeId, 8);
+          param0.writeBits(-632, this.teamId, 8);
+          param0.writeBits(-632, this.componentTypeId, 8);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vp.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
-          this.teamId = param0.i(0, 8);
-          this.componentTypeId = param0.i(0, 8);
+          super.readState(param0, param1);
+          this.teamId = param0.readBits(0, 8);
+          this.componentTypeId = param0.readBits(0, 8);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vp.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -269,7 +269,7 @@ final class TeamShipComponentCondition extends MissionCondition implements Diffa
         return var2 + "on team " + this.teamId + " holds component " + SetSpinningBladeSpinupSpeed.field_o[this.componentTypeId];
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         TeamShipComponentCondition var4 = null;
         boolean stackIn_6_0 = false;
@@ -281,7 +281,7 @@ final class TeamShipComponentCondition extends MissionCondition implements Diffa
         try {
           var3_int = 81 % ((22 - param0) / 59);
           var4 = (TeamShipComponentCondition) (param1);
-          stackIn_6_0 = (super.a((byte) -76, param1)) || (var4.teamId != this.teamId) || (var4.componentTypeId != this.componentTypeId);
+          stackIn_6_0 = (super.differsFrom((byte) -76, param1)) || (var4.teamId != this.teamId) || (var4.componentTypeId != this.componentTypeId);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

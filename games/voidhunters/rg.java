@@ -6,9 +6,9 @@ final class rg implements dja {
     static boolean field_b;
     static String field_c;
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -61 / ((param0 + 64) / 50);
-        return (tv) ((Object) new RemoveEventAction());
+        return (SerializableGameState) ((Object) new RemoveEventAction());
     }
 
     final static int b(byte param0) {
@@ -20,11 +20,11 @@ final class rg implements dja {
         return qn.field_h.g(0).field_r;
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_c = (String) null;
         }
-        return (tv[]) ((Object) new RemoveEventAction[param1]);
+        return (SerializableGameState[]) ((Object) new RemoveEventAction[param1]);
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {

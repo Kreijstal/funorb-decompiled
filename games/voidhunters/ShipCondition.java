@@ -121,11 +121,11 @@ final class ShipCondition extends MissionCondition implements DiffableState, hd 
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
-          this.shipId = param0.i(0, 32);
-          this.teamId = param0.i(0, 32);
+          super.readState(param0, param1);
+          this.shipId = param0.readBits(0, 32);
+          this.teamId = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ih.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -186,7 +186,7 @@ final class ShipCondition extends MissionCondition implements DiffableState, hd 
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         ShipCondition var4 = null;
         boolean stackIn_6_0 = false;
@@ -198,7 +198,7 @@ final class ShipCondition extends MissionCondition implements DiffableState, hd 
         try {
           var3_int = -3 / ((22 - param0) / 59);
           var4 = (ShipCondition) (param1);
-          stackIn_6_0 = (super.a((byte) 89, param1)) || (this.shipId != var4.shipId) || (var4.teamId != this.teamId);
+          stackIn_6_0 = (super.differsFrom((byte) 89, param1)) || (this.shipId != var4.shipId) || (var4.teamId != this.teamId);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -214,14 +214,14 @@ final class ShipCondition extends MissionCondition implements DiffableState, hd 
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         if (param1 > -109) {
           return;
         }
         try {
-          super.b(param0, -122);
-          param0.a(-632, this.shipId, 32);
-          param0.a(-632, this.teamId, 32);
+          super.writeState(param0, -122);
+          param0.writeBits(-632, this.shipId, 32);
+          param0.writeBits(-632, this.teamId, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ih.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -284,7 +284,7 @@ final class ShipCondition extends MissionCondition implements DiffableState, hd 
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int var4 = 0;
         ShipCondition var5 = null;
         RuntimeException stackIn_12_0 = null;
@@ -296,7 +296,7 @@ final class ShipCondition extends MissionCondition implements DiffableState, hd 
           super.reportDifferences(other, -86);
           var5 = (ShipCondition) (other);
           if (obfuscationGuard >= -19) {
-            this.b((faa) null, -126);
+            this.writeState((IsaacPacketBuffer) null, -126);
           }
           var4 = 0;
           if (this.shipId != var5.shipId) {
@@ -373,14 +373,14 @@ final class ShipCondition extends MissionCondition implements DiffableState, hd 
         this.shipId = param0;
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         ShipCondition var4 = (ShipCondition) (param1);
         ShipCondition var3 = var4;
         if (param0 <= 54) {
           return;
         }
         try {
-          super.b((byte) 110, param1);
+          super.copyTo((byte) 110, param1);
           var4.teamId = this.teamId;
           var4.shipId = this.shipId;
         } catch (RuntimeException runtimeException) {

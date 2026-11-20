@@ -39,7 +39,7 @@ final class MessageLog implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         MessageLog var3 = (MessageLog) (param1);
         if (param0 < 54) {
           return;
@@ -163,25 +163,25 @@ final class MessageLog implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         int var5 = 0;
         Message[] var6 = null;
         int var7 = 0;
         Message var8 = null;
         int var9 = VoidHunters.field_G;
-        faa var3 = param0;
+        IsaacPacketBuffer var3 = param0;
         Message[] var4 = this.messages;
         if (param1 >= -109) {
           return;
         }
         try {
           var5 = var4 == null ? 0 : var4.length;
-          var3.a(-632, var5, 8);
+          var3.writeBits(-632, var5, 8);
           if (0 != var5) {
             var6 = var4;
             for (var7 = 0; var7 < var6.length; var7++) {
               var8 = var6[var7];
-              if (vq.a(var3, -74, var8 != null ? true : false)) {
+              if (vq.writeBoolean(var3, -74, var8 != null ? true : false)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
               }
             }
@@ -191,19 +191,19 @@ final class MessageLog implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           this.messages = (Message[]) (SetAutoDetail.a(8, bob.field_e, param0, 1, -69, this.messages));
           if (param1) {
-            tv var4 = (tv) null;
-            this.a((byte) -113, (tv) null);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.differsFrom((byte) -113, (SerializableGameState) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nwa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         MessageLog var3 = null;
         int var4 = 0;
         Message var5 = null;
@@ -242,7 +242,7 @@ final class MessageLog implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         MessageLog var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

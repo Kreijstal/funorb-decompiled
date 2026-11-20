@@ -11,12 +11,12 @@ final class GetAutoAfkTimeout extends ConsoleCommand {
         return "0" + (param0 + 1) + "/" + "0" + mb.field_k.length;
     }
 
-    final static tv[] a(int param0, int param1, tv[] param2, dja param3, int param4, faa param5) {
+    final static SerializableGameState[] a(int param0, int param1, SerializableGameState[] param2, dja param3, int param4, IsaacPacketBuffer param5) {
         int var8 = 0;
         int var6_int = 0;
         int var7 = 0;
         int var9 = 0;
-        tv[] stackIn_17_0 = null;
+        SerializableGameState[] stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -29,14 +29,14 @@ final class GetAutoAfkTimeout extends ConsoleCommand {
         var9 = VoidHunters.field_G;
         try {
           var7 = 47 / ((82 - param0) / 43);
-          var6_int = param5.i(0, param4);
+          var6_int = param5.readBits(0, param4);
           if (0 != var6_int) {
             if (param2 == null ||
               param2.length != var6_int) {
               param2 = param3.a(11995, var6_int);
             }
             for (var8 = 0; var8 < var6_int; var8++) {
-              if (kv.a(false, param5)) {
+              if (kv.readBoolean(false, param5)) {
                 if (param2[var8] == null) {
                   param2[var8] = param3.a((byte) 109);
                 }
@@ -48,7 +48,7 @@ final class GetAutoAfkTimeout extends ConsoleCommand {
           } else {
             param2 = null;
           }
-          stackIn_17_0 = (tv[]) (param2);
+          stackIn_17_0 = (SerializableGameState[]) (param2);
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

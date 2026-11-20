@@ -72,7 +72,7 @@ final class uwa {
         }
     }
 
-    final static int a(int param0, faa param1, byte param2) {
+    final static int a(int param0, IsaacPacketBuffer param1, byte param2) {
         RuntimeException var3 = null;
         int stackIn_2_0 = 0;
         int stackIn_4_0 = 0;
@@ -82,7 +82,7 @@ final class uwa {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param2 == 20) {
-            stackIn_4_0 = (param1.i(0, param0) ^ 1 << -1 + param0) - (1 << -1 + param0);
+            stackIn_4_0 = (param1.readBits(0, param0) ^ 1 << -1 + param0) - (1 << -1 + param0);
             return stackIn_4_0;
           }
           stackIn_2_0 = -29;

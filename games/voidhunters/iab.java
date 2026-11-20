@@ -20,7 +20,7 @@ final class iab implements nka {
 
     final static String a(int param0, String param1, String param2, byte param3) {
         RuntimeException var4 = null;
-        faa var5 = null;
+        IsaacPacketBuffer var5 = null;
         int var6 = 0;
         vu var7 = null;
         CharSequence var8 = null;
@@ -49,19 +49,19 @@ final class iab implements nka {
             stackIn_10_0 = SetReverbGain.a(mr.field_L, new String[]{param1}, 122);
             return stackIn_10_0;
           }
-          var7.b(param3 ^ 3918);
-          var7.d((byte) -35);
+          var7.unlink(param3 ^ 3918);
+          var7.unlinkSecondary((byte) -35);
           mq.field_k = mq.field_k - 1;
           var5 = RequestNewestBlackboxRecording.field_p;
           if (param3 != -76) {
             iab.a(76);
           }
-          var5.h(24335, param0);
+          var5.writeIsaacByte(24335, param0);
           var5.position = var5.position + 1;
           var6 = var5.position;
-          var5.c(param3 ^ -76, 3);
-          var5.a(true, param2);
-          var5.e(var5.position - var6, param3 - 53);
+          var5.writeByte(param3 ^ -76, 3);
+          var5.writeString(true, param2);
+          var5.writeLengthByte(var5.position - var6, param3 - 53);
           stackIn_14_0 = null;
           return (String) (stackIn_14_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

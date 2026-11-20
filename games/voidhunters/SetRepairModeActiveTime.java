@@ -26,7 +26,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetRepairModeActiveTime.a(106);
           }
-          SetMachineGunEnergyUsed.a(215, 62, arguments[0].a(123));
+          SetMachineGunEnergyUsed.a(215, 62, arguments[0].intValue(123));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -195,11 +195,11 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           SetOndamageParticleLife.field_o = new llb(0L, (llb) null);
           SetPhasedEnergyBeamPulsetime.field_o = new llb(0L, qc.field_q);
           SetPhasedEnergyBeamPulsetime.field_o.field_F = 1;
-          NodeHashTableIterator.field_a = new llb(0L, GetThrusterBindingBalanceThreshold.field_p, kpb.field_r);
+          SecondaryNodeDequeIterator.field_a = new llb(0L, GetThrusterBindingBalanceThreshold.field_p, kpb.field_r);
           GetPointDefenceLaserProjectileDamage.field_o = new llb(0L, qsa.field_d, GetMessageMaxage.field_p);
           rga.field_f = new soa(0L, new llb(0L, (llb) null), htb.field_w, GetUseNiceTrails.field_o);
           SetOndamageParticleLife.field_o.b(-561, SetPhasedEnergyBeamPulsetime.field_o);
-          SetOndamageParticleLife.field_o.b(-561, NodeHashTableIterator.field_a);
+          SetOndamageParticleLife.field_o.b(-561, SecondaryNodeDequeIterator.field_a);
           if (GetGrapplingHooksDamageableBySourcePlayer.field_o) {
             SetOndamageParticleLife.field_o.b(-561, GetPointDefenceLaserProjectileDamage.field_o);
           }

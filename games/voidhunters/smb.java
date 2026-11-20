@@ -22,13 +22,13 @@ final class smb extends le {
           }
           var4_int = param0;
           if (0 == var4_int) {
-            this.field_k = param2.e(1869);
+            this.field_k = param2.readUnsignedShort(1869);
           } else {
             if (var4_int == 1) {
-              this.field_i = param2.e(1869);
+              this.field_i = param2.readUnsignedShort(1869);
             } else {
               if (2 == var4_int) {
-                this.field_j = param2.e(1869);
+                this.field_j = param2.readUnsignedShort(1869);
               }
             }
           }

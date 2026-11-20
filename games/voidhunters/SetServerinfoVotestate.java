@@ -11,7 +11,7 @@ final class SetServerinfoVotestate extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMissionTimeLimit.a(arguments[1].a(117), arguments[0].a(123), -10923);
+          SetMissionTimeLimit.a(arguments[1].intValue(117), arguments[0].intValue(123), -10923);
           if (obfuscationGuard > -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 99);

@@ -55,15 +55,15 @@ abstract class qc implements kd {
         int var6 = VoidHunters.field_G;
         try {
           this.field_h.field_wb.b(-561, this.b(param1, 0, param2));
-          if (!(param0 <= ~this.field_h.field_wb.field_lb.c(3))) {
-            this.field_h.field_wb.field_lb.a(true);
+          if (!(param0 <= ~this.field_h.field_wb.field_lb.size(3))) {
+            this.field_h.field_wb.field_lb.removeFirst(true);
           }
           var4_int = 5;
-          var5 = (llb) (this.field_h.field_wb.field_lb.d(0));
+          var5 = (llb) (this.field_h.field_wb.field_lb.first(0));
           while (var5 != null) {
             var5.field_K = var4_int;
             var4_int = var4_int + this.field_e;
-            var5 = (llb) (this.field_h.field_wb.field_lb.a((byte) 30));
+            var5 = (llb) (this.field_h.field_wb.field_lb.next((byte) 30));
           }
           this.field_h.field_wb.field_G = var4_int;
           this.field_h.field_wb.field_K = -var4_int + this.field_h.field_G;
@@ -142,7 +142,7 @@ abstract class qc implements kd {
             else {
               param2 = null;
             }
-            var4.b(-10258, new ila(var7));
+            var4.addLast(-10258, new ila(var7));
           }
           stackIn_20_0 = var4;
           return stackIn_20_0;
@@ -179,14 +179,14 @@ abstract class qc implements kd {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = (ila) (this.field_i.d(0));
+          var3 = (ila) (this.field_i.first(0));
           var4 = -50 / ((74 - param1) / 41);
           if (var3 == null ||
             !param0.equals(var3.field_d)) {
-            this.field_i.a(new ila(param0), (byte) -55);
+            this.field_i.addFirst(new ila(param0), (byte) -55);
           }
-          if (this.field_i.c(3) > 30) {
-            this.field_i.c((byte) -115);
+          if (this.field_i.size(3) > 30) {
+            this.field_i.removeLast((byte) -115);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -357,10 +357,10 @@ abstract class qc implements kd {
             var8 = var6[var7];
             if (var4_int <= this.field_n.b(var8)) {
               var9 = this.a(var4_int, (byte) -128, var8);
-              var10 = (ila) (var9.d(0));
+              var10 = (ila) (var9.first(0));
               while (var10 != null) {
                 this.a(-257, param2, var10.field_d);
-                var10 = (ila) (var9.a((byte) 26));
+                var10 = (ila) (var9.next((byte) 26));
               }
             } else {
               this.a(-257, param2, var8);
@@ -434,18 +434,18 @@ abstract class qc implements kd {
               }
             } else {
               if (null != this.field_k &&
-                this.field_i.field_a != this.field_k.field_a) {
-                this.field_k = (ila) (this.field_k.field_a);
+                this.field_i.sentinel != this.field_k.previous) {
+                this.field_k = (ila) (this.field_k.previous);
                 this.field_p.a(this.field_k.field_d, -114);
               }
             }
           } else {
             if (this.field_k == null ||
-              this.field_i.field_a != this.field_k.field_c) {
+              this.field_i.sentinel != this.field_k.next) {
               if (null != this.field_k) {
-                stackIn_18_1 = this.field_k.field_c;
+                stackIn_18_1 = this.field_k.next;
               } else {
-                stackIn_18_1 = this.field_i.d(param2 + 40);
+                stackIn_18_1 = this.field_i.first(param2 + 40);
               }
               this.field_k = (ila) (stackIn_18_1);
               if (null != this.field_k) {
@@ -459,7 +459,7 @@ abstract class qc implements kd {
             return true;
           }
           this.a(this.field_c + var7, false, 5635925);
-          var5 = (llb) (this.field_h.field_wb.field_lb.b((byte) 127));
+          var5 = (llb) (this.field_h.field_wb.field_lb.last((byte) 127));
           if (!this.a(-10278, var7)) {
             var5.field_Y = 16733525;
           }

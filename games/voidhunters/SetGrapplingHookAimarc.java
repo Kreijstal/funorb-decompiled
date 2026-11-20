@@ -23,7 +23,7 @@ final class SetGrapplingHookAimarc extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_o = (IntrusiveDeque) null;
           }
-          SetMachineGunEnergyUsed.a(139, 62, arguments[0].a(54));
+          SetMachineGunEnergyUsed.a(139, 62, arguments[0].intValue(54));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

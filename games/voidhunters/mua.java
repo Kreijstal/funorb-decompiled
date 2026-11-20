@@ -103,7 +103,7 @@ final class mua extends ComponentBehaviour implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int stackIn_5_0 = 0;
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
@@ -111,12 +111,12 @@ final class mua extends ComponentBehaviour implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        tv var5 = null;
+        SerializableGameState var5 = null;
         mua var6 = null;
         try {
           if (obfuscationGuard > -19) {
-            var5 = (tv) null;
-            this.a((byte) 121, (tv) null);
+            var5 = (SerializableGameState) null;
+            this.differsFrom((byte) 121, (SerializableGameState) null);
           }
           var6 = (mua) (other);
           super.reportDifferences(other, -50);
@@ -153,7 +153,7 @@ final class mua extends ComponentBehaviour implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         mua var6 = null;
         mua var7 = null;
         try {
@@ -161,7 +161,7 @@ final class mua extends ComponentBehaviour implements DiffableState {
             World var4 = (World) null;
             this.a((ShipBody) null, (int[]) null, -13, 109, 122, -45, -75, (World) null, -117, 73, 98);
           }
-          super.b((byte) 85, param1);
+          super.copyTo((byte) 85, param1);
           var6 = (mua) (param1);
           var7 = var6;
           var7.operationalLastFrame = this.operationalLastFrame;
@@ -172,32 +172,32 @@ final class mua extends ComponentBehaviour implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          super.b(param0, -120);
-          vq.a(param0, 120, this.operationalLastFrame);
-          param0.a(-632, this.previousShieldX, 32);
+          super.writeState(param0, -120);
+          vq.writeBoolean(param0, 120, this.operationalLastFrame);
+          param0.writeBits(-632, this.previousShieldX, 32);
           if (param1 >= -109) {
             this.operationalLastFrame = false;
           }
-          param0.a(-632, this.previousShieldY, 32);
+          param0.writeBits(-632, this.previousShieldY, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mua.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, false);
-          this.operationalLastFrame = kv.a(param1, param0);
-          this.previousShieldX = param0.i(0, 32);
-          this.previousShieldY = param0.i(0, 32);
+          super.readState(param0, false);
+          this.operationalLastFrame = kv.readBoolean(param1, param0);
+          this.previousShieldX = param0.readBits(0, 32);
+          this.previousShieldY = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mua.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         mua var3 = null;
         int var4 = 0;
         int stackIn_4_0 = 0;
@@ -211,7 +211,7 @@ final class mua extends ComponentBehaviour implements DiffableState {
           boolean decompiledFrameRemainder0 = true;
           var3 = (mua) (param1);
           var4 = -29 % ((22 - param0) / 59);
-          if (!super.a((byte) 93, param1)) {
+          if (!super.differsFrom((byte) 93, param1)) {
             stackIn_4_0 = (this.operationalLastFrame) ? 0 : 1;
             if (stackIn_4_0 != (var3.operationalLastFrame ? 1 : 0) &&
               this.previousShieldX == var3.previousShieldX &&

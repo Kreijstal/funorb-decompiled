@@ -158,7 +158,7 @@ final class sfa {
             }
           }
           if (var5_int != 0) {
-            this.field_a.b(-3846);
+            this.field_a.unlink(-3846);
           }
           if (param1 != -1) {
             this.field_a = (Projectile) null;

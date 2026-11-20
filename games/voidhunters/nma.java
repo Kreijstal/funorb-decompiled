@@ -5,17 +5,17 @@ final class nma implements dja {
     static int field_a;
     static da[] field_b;
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           this.a((byte) -57);
-          return (tv[]) ((Object) new gtb[param1]);
+          return (SerializableGameState[]) ((Object) new gtb[param1]);
         }
-        return (tv[]) ((Object) new gtb[param1]);
+        return (SerializableGameState[]) ((Object) new gtb[param1]);
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 20 % ((-64 - param0) / 50);
-        return (tv) ((Object) new gtb());
+        return (SerializableGameState) ((Object) new gtb());
     }
 
     public static void b(byte param0) {

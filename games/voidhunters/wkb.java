@@ -26,9 +26,9 @@ final class wkb implements dja {
         SetSalvoaim.field_r = SetSalvoaim.field_r + 1;
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 73 % ((-64 - param0) / 50);
-        return (tv) ((Object) new SetVariableAction());
+        return (SerializableGameState) ((Object) new SetVariableAction());
     }
 
     final static void a(tjb param0, int param1) {
@@ -42,15 +42,15 @@ final class wkb implements dja {
         }
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          faa var4 = (faa) null;
-          wkb.a((byte) -44, (int[]) null, (faa) null, -49);
+          IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
+          wkb.a((byte) -44, (int[]) null, (IsaacPacketBuffer) null, -49);
         }
-        return (tv[]) ((Object) new SetVariableAction[param1]);
+        return (SerializableGameState[]) ((Object) new SetVariableAction[param1]);
     }
 
-    final static int[] a(byte param0, int[] param1, faa param2, int param3) {
+    final static int[] a(byte param0, int[] param1, IsaacPacketBuffer param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -68,7 +68,7 @@ final class wkb implements dja {
         int var9 = 0;
         var8 = VoidHunters.field_G;
         try {
-          var4_int = param2.i(param0 ^ 37, param3);
+          var4_int = param2.readBits(param0 ^ 37, param3);
           if (var4_int == 0) {
             stackIn_3_0 = null;
             return (int[]) (stackIn_3_0);
@@ -77,14 +77,14 @@ final class wkb implements dja {
             param1.length != var4_int) {
             param1 = new int[var4_int];
           }
-          var5 = param2.i(param0 ^ 37, 6);
-          var6 = param2.i(0, 32);
+          var5 = param2.readBits(param0 ^ 37, 6);
+          var6 = param2.readBits(0, 32);
           if (param0 != 37) {
             field_b = -18;
           }
           if (var5 > 0) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param1[var7] = param2.i(0, var5) + var6;
+              param1[var7] = param2.readBits(0, var5) + var6;
             }
           } else {
             var9 = 0;

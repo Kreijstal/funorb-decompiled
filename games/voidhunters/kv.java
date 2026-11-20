@@ -90,8 +90,8 @@ final class kv extends qg {
         this.field_g.b(param0 + 19531);
         this.field_g.a(-96, 1);
         if (param0 != -14667) {
-          faa var4 = (faa) null;
-          kv.a(true, (faa) null);
+          IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
+          kv.readBoolean(true, (IsaacPacketBuffer) null);
         }
         this.field_b.h(param0 + 48651, 1);
         jaggl.OpenGL.glDisable(3168);
@@ -245,7 +245,7 @@ final class kv extends qg {
         }
     }
 
-    final static boolean a(boolean param0, faa param1) {
+    final static boolean readBoolean(boolean param0, IsaacPacketBuffer param1) {
         RuntimeException var2 = null;
         boolean stackIn_5_0 = false;
         RuntimeException stackIn_8_0 = null;
@@ -256,7 +256,7 @@ final class kv extends qg {
           if (param0) {
             field_e = -61;
           }
-          stackIn_5_0 = (param1.i(0, 1) == 1);
+          stackIn_5_0 = (param1.readBits(0, 1) == 1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

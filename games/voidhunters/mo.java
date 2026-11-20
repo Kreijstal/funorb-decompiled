@@ -5,14 +5,14 @@ final class mo extends ub implements DiffableState {
     String field_i;
     static String field_j;
 
-    public final void a(faa param0, boolean param1) {
-        param0.f((byte) -74);
-        this.field_i = param0.g(-1609246200);
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
+        param0.endBitRead((byte) -74);
+        this.field_i = param0.readCircumfixedString(-1609246200);
         if (param1) {
           return;
         }
         try {
-          param0.p(-23497);
+          param0.beginBitRead(-23497);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mo.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -21,15 +21,15 @@ final class mo extends ub implements DiffableState {
     mo() {
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         mo var6 = null;
         mo var7 = null;
         try {
           var6 = (mo) (param1);
           var7 = var6;
           if (param0 <= 54) {
-            tv var4 = (tv) null;
-            this.b((byte) -13, (tv) null);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.copyTo((byte) -13, (SerializableGameState) null);
           }
           var7.field_i = this.field_i;
         } catch (RuntimeException runtimeException) {
@@ -44,14 +44,14 @@ final class mo extends ub implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
-        param0.r(32712);
-        param0.b((byte) 0, this.field_i);
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
+        param0.endBitWrite(32712);
+        param0.writeCircumfixedString((byte) 0, this.field_i);
         if (param1 >= -109) {
           return;
         }
         try {
-          param0.q(-100);
+          param0.beginBitWrite(-100);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mo.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -65,7 +65,7 @@ final class mo extends ub implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         mo var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -93,7 +93,7 @@ final class mo extends ub implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         mo var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

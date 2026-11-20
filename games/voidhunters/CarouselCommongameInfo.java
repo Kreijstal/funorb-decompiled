@@ -18,22 +18,22 @@ final class CarouselCommongameInfo implements DiffableState {
     private tja[] field_a;
     private boolean field_e;
 
-    private final void b(faa param0, byte param1) {
+    private final void b(IsaacPacketBuffer param0, byte param1) {
         uqb var5 = null;
         tja var3 = null;
         int var4 = VoidHunters.field_G;
         try {
-          this.field_g = param0.i(0, SetMissilesTopSpeed.field_p);
+          this.field_g = param0.readBits(0, SetMissilesTopSpeed.field_p);
           if (param1 <= 35) {
             this.field_b = false;
           }
-          var5 = (uqb) (this.field_f.d(0));
+          var5 = (uqb) (this.field_f.first(0));
           while (var5 != null) {
             var5.field_g = false;
-            var5 = (uqb) (this.field_f.a((byte) 88));
+            var5 = (uqb) (this.field_f.next((byte) 88));
           }
           var3 = this.b(28120);
-          var3.a(param0, false);
+          var3.readState(param0, false);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mib.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -119,7 +119,7 @@ final class CarouselCommongameInfo implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         CarouselCommongameInfo var3 = null;
         try {
           var3 = (CarouselCommongameInfo) (param1);
@@ -148,7 +148,7 @@ final class CarouselCommongameInfo implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 > -109) {
             this.c(47);
@@ -178,7 +178,7 @@ final class CarouselCommongameInfo implements DiffableState {
         return this.field_j;
     }
 
-    private final void b(tv param0, int param1) {
+    private final void b(SerializableGameState param0, int param1) {
         CarouselCommongameInfo var3 = null;
         if (param1 >= -124) {
           return;
@@ -192,7 +192,7 @@ final class CarouselCommongameInfo implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         if (param1) {
           return;
         }
@@ -227,7 +227,7 @@ final class CarouselCommongameInfo implements DiffableState {
               var8 = (uqb) (var4.c(570));
               while (var8 != null) {
                 if (var7 != var8 &&
-                  !var7.a((byte) -51, var8)) {
+                  !var7.differsFrom((byte) -51, var8)) {
                   var5 = var7;
                   var6 = var8;
                   break scanLoop1;
@@ -241,8 +241,8 @@ final class CarouselCommongameInfo implements DiffableState {
           }
           if (var5 != null &&
             var6 != null) {
-            ((uqb) (var5)).b(-3846);
-            ((uqb) (var6)).b(-3846);
+            ((uqb) (var5)).unlink(-3846);
+            ((uqb) (var6)).unlink(-3846);
             var2 = 1;
           }
         } while (var2 != 0);
@@ -277,18 +277,18 @@ final class CarouselCommongameInfo implements DiffableState {
             param1.field_d = null;
           } else {
             if (ujb.field_j) {
-              var5 = (uqb) (this.field_f.d(param0 - 1));
+              var5 = (uqb) (this.field_f.first(param0 - 1));
               while (var5 != null) {
                 if (param1 != var5 &&
-                  !var5.a((byte) -41, param1)) {
+                  !var5.differsFrom((byte) -41, param1)) {
                   var5.field_f = true;
                   return true;
                 }
-                var5 = (uqb) (this.field_f.a((byte) 121));
+                var5 = (uqb) (this.field_f.next((byte) 121));
               }
             }
           }
-          this.field_f.b(-10258, param1);
+          this.field_f.addLast(-10258, param1);
           if (this.field_g < param1.field_e) {
             if (SetDebrisPartitioned.field_p != 1) {
               return true;
@@ -320,7 +320,7 @@ final class CarouselCommongameInfo implements DiffableState {
         return this.field_b;
     }
 
-    private final void a(byte param0, faa param1) {
+    private final void a(byte param0, IsaacPacketBuffer param1) {
         try {
           if (!osa.field_e) {
             this.a(param1, (byte) -19);
@@ -333,7 +333,7 @@ final class CarouselCommongameInfo implements DiffableState {
         }
     }
 
-    private final void a(int param0, faa param1) {
+    private final void a(int param0, IsaacPacketBuffer param1) {
         tja var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -341,9 +341,9 @@ final class CarouselCommongameInfo implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          param1.a(param0 - 631, this.field_g, SetMissilesTopSpeed.field_p);
+          param1.writeBits(param0 - 631, this.field_g, SetMissilesTopSpeed.field_p);
           var3 = this.b(28120);
-          var3.b(param1, param0 ^ 127);
+          var3.writeState(param1, param0 ^ 127);
           if (param0 != -1) {
             this.e(-85);
           }
@@ -369,9 +369,9 @@ final class CarouselCommongameInfo implements DiffableState {
         return this.field_a.length;
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int var4 = 0;
-        faa var5 = null;
+        IsaacPacketBuffer var5 = null;
         CarouselCommongameInfo var6 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -392,8 +392,8 @@ final class CarouselCommongameInfo implements DiffableState {
             GetSniperCannonAimarc.a(-6940, "CarouselSlot[] carousel has changed. ");
           }
           if (obfuscationGuard >= -19) {
-            var5 = (faa) null;
-            this.a(87, (faa) null);
+            var5 = (IsaacPacketBuffer) null;
+            this.a(87, (IsaacPacketBuffer) null);
           }
           if (SetCountermeasureLauncherAimspeed.a(hob.a(var6.field_f, 210377952), false, 1, hob.a(this.field_f, 210377952), 121)) {
             var4 = 1;
@@ -432,7 +432,7 @@ final class CarouselCommongameInfo implements DiffableState {
         }
     }
 
-    private final void a(faa param0, byte param1) {
+    private final void a(IsaacPacketBuffer param0, byte param1) {
         int var6 = 0;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
@@ -443,36 +443,36 @@ final class CarouselCommongameInfo implements DiffableState {
         int var4 = 0;
         tja var5 = null;
         int var7 = 0;
-        tv[] var8 = null;
+        SerializableGameState[] var8 = null;
         uqb[] var9 = null;
         uqb var10 = null;
         int var4Lifetime1;
         var7 = VoidHunters.field_G;
         try {
           this.field_f = new IntrusiveDeque();
-          var8 = (tv[]) null;
-          var9 = (uqb[]) (SetAutoDetail.a(12, wc.field_a, param0, 1, -71, (tv[]) null));
+          var8 = (SerializableGameState[]) null;
+          var9 = (uqb[]) (SetAutoDetail.a(12, wc.field_a, param0, 1, -71, (SerializableGameState[]) null));
           var3 = var9;
           if (var3 != null) {
             for (var4 = 0; var9.length > var4; var4++) {
-              this.field_f.b(-10258, var9[var4]);
+              this.field_f.addLast(-10258, var9[var4]);
             }
           }
-          this.field_g = param0.i(param1 ^ -19, SetMissilesTopSpeed.field_p);
-          var10 = (uqb) (this.field_f.d(0));
+          this.field_g = param0.readBits(param1 ^ -19, SetMissilesTopSpeed.field_p);
+          var10 = (uqb) (this.field_f.first(0));
           if (param1 != -19) {
             this.c((byte) -98);
           }
           while (var10 != null) {
             var10.field_g = false;
-            var10 = (uqb) (this.field_f.a((byte) 40));
+            var10 = (uqb) (this.field_f.next((byte) 40));
           }
           var4Lifetime1 = this.field_a.length - 1;
           if (var4Lifetime1 > this.field_g) {
             var4Lifetime1 = this.field_g;
           }
           var5 = this.field_a[this.field_i];
-          var5.a(param0, false);
+          var5.readState(param0, false);
           GetSniperCannonAimarc.a(param1 - 6921, "Tick was " + this.field_g);
           this.field_g = -var4Lifetime1 + this.field_g;
           GetSniperCannonAimarc.a(-6940, "Running post read custom from tick=" + this.field_g + " when ticksbehind=" + this.field_c);
@@ -495,7 +495,7 @@ final class CarouselCommongameInfo implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         CarouselCommongameInfo var3 = null;
         int var4 = 0;
         boolean stackIn_5_0 = false;
@@ -523,7 +523,7 @@ final class CarouselCommongameInfo implements DiffableState {
         }
     }
 
-    private final void a(faa param0, int param1) {
+    private final void a(IsaacPacketBuffer param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -590,15 +590,15 @@ final class CarouselCommongameInfo implements DiffableState {
         }
     }
 
-    private final void c(faa param0, byte param1) {
-        faa var11 = null;
-        faa var3 = null;
-        tv[] var10 = null;
-        tv[] var4 = null;
+    private final void c(IsaacPacketBuffer param0, byte param1) {
+        IsaacPacketBuffer var11 = null;
+        IsaacPacketBuffer var3 = null;
+        SerializableGameState[] var10 = null;
+        SerializableGameState[] var4 = null;
         int var5 = 0;
-        tv[] var6 = null;
+        SerializableGameState[] var6 = null;
         int var7 = 0;
-        tv var8 = null;
+        SerializableGameState var8 = null;
         int var3_int = 0;
         tja var12 = null;
         int var9 = VoidHunters.field_G;
@@ -608,17 +608,17 @@ final class CarouselCommongameInfo implements DiffableState {
           var10 = hob.a(this.field_f, 210377952);
           var4 = var10;
           var5 = var4 == null ? 0 : var10.length;
-          var11.a(-632, var5, 12);
+          var11.writeBits(-632, var5, 12);
           if (var5 != 0) {
             var6 = var10;
             for (var7 = 0; var6.length > var7; var7++) {
               var8 = var6[var7];
-              if (vq.a(var3, 93, var8 != null ? true : false)) {
+              if (vq.writeBoolean(var3, 93, var8 != null ? true : false)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var11, var8);
               }
             }
           }
-          param0.a(-632, this.field_g, SetMissilesTopSpeed.field_p);
+          param0.writeBits(-632, this.field_g, SetMissilesTopSpeed.field_p);
           var3_int = this.field_a.length - 1;
           if (this.field_g < var3_int) {
             var3_int = this.field_g;
@@ -627,7 +627,7 @@ final class CarouselCommongameInfo implements DiffableState {
             this.field_l = (mfa) null;
           }
           var12 = this.a(var3_int, -105);
-          var12.b(param0, -120);
+          var12.writeState(param0, -120);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mib.O(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -680,10 +680,10 @@ final class CarouselCommongameInfo implements DiffableState {
         if (param1 != 106) {
           this.field_a = (tja[]) null;
         }
-        var6_ref_uqb = (uqb) (this.field_f.d(0));
+        var6_ref_uqb = (uqb) (this.field_f.first(0));
         while (var6_ref_uqb != null) {
           if (this.field_g - this.field_a.length > var6_ref_uqb.field_e) {
-            var6_ref_uqb.b(-3846);
+            var6_ref_uqb.unlink(-3846);
           } else {
             if (!var6_ref_uqb.field_f &&
               var5 > var6_ref_uqb.field_e) {
@@ -693,7 +693,7 @@ final class CarouselCommongameInfo implements DiffableState {
               while (true) {
                 if (var12 != null) {
                   if (var6_ref_uqb != var12 &&
-                    !var12.a((byte) -55, var6_ref_uqb)) {
+                    !var12.differsFrom((byte) -55, var6_ref_uqb)) {
                     var7_int = 1;
                   } else {
                     var12 = (uqb) (var13.a(19072));
@@ -712,7 +712,7 @@ final class CarouselCommongameInfo implements DiffableState {
               var4Lifetime1 = var6_ref_uqb.field_e;
             }
           }
-          var6_ref_uqb = (uqb) (this.field_f.a((byte) 52));
+          var6_ref_uqb = (uqb) (this.field_f.next((byte) 52));
         }
         if (0 > this.field_c && (nv.field_o == 0 ||
           (param0 & nv.field_o) != 0)) {
@@ -776,7 +776,7 @@ final class CarouselCommongameInfo implements DiffableState {
           if (tga.field_N) {
             ConsoleValue.a((byte) 68);
           }
-          this.field_a[var5].b((byte) 77, this.field_a[var6]);
+          this.field_a[var5].copyTo((byte) 77, this.field_a[var6]);
           this.a(var5, var6, -121);
           if (tga.field_N) {
             mba.a(-112);
@@ -786,16 +786,16 @@ final class CarouselCommongameInfo implements DiffableState {
             var7 = SetTestActionLag.a(this.field_a[var5], (byte) -9);
           }
           this.field_a[var6].a(false, var4);
-          if (ndb.field_c == 1) {
+          if (ProxyAuthenticationException.field_c == 1) {
             this.b((byte) 71);
           }
-          var8_ref_uqb = (uqb) (this.field_f.d(0));
+          var8_ref_uqb = (uqb) (this.field_f.first(0));
           while (var8_ref_uqb != null) {
             if (var8_ref_uqb.field_e == var4) {
               var8_ref_uqb.a((byte) -122, this.field_l, this.field_a[var6]);
               var8_ref_uqb.field_g = false;
             }
-            var8_ref_uqb = (uqb) (this.field_f.a((byte) 117));
+            var8_ref_uqb = (uqb) (this.field_f.next((byte) 117));
           }
           stackIn_23_0 = this.field_a[var6];
           stackIn_23_1 = this.field_a[var5];

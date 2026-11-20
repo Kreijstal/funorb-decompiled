@@ -25,7 +25,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(19, 62, arguments[0].a(7));
+          SetMachineGunEnergyUsed.a(19, 62, arguments[0].intValue(7));
           if (obfuscationGuard > -119) {
             field_o = (Object[]) (((Object[]) (field_o[1]))[4]);
           }

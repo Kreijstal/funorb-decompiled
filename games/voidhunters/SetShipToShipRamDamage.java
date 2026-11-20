@@ -25,7 +25,7 @@ final class SetShipToShipRamDamage extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(3, 62, arguments[0].a(126));
+          SetMachineGunEnergyUsed.a(3, 62, arguments[0].intValue(126));
           if (obfuscationGuard >= -119) {
             field_o = (no) null;
           }

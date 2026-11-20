@@ -79,7 +79,7 @@ final class SetNebulaProximityFadeDownshift extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(0, 62, arguments[0].a(22));
+          SetMachineGunEnergyUsed.a(0, 62, arguments[0].intValue(22));
           if (obfuscationGuard > -119) {
             SetNebulaProximityFadeDownshift.a(57, true, true);
           }

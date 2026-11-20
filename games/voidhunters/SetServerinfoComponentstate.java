@@ -17,7 +17,7 @@ final class SetServerinfoComponentstate extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          tc.a(70, arguments[1].a(7), arguments[0].a(14));
+          tc.a(70, arguments[1].intValue(7), arguments[0].intValue(14));
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

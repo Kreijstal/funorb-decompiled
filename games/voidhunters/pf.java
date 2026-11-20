@@ -1243,10 +1243,10 @@ abstract class pf extends GraphicsToolkit {
         java.awt.Canvas var2 = null;
         int var3 = VoidHunters.field_G;
         if (!this.field_hc) {
-          var1 = this.field_s.d(0);
+          var1 = this.field_s.first(0);
           while (var1 != null) {
             ((cba) (var1)).a(true);
-            var1 = this.field_s.a((byte) 116);
+            var1 = this.field_s.next((byte) 116);
           }
           var1_ref = this.field_rb.keys();
           while (var1_ref.hasMoreElements()) {
@@ -2375,7 +2375,7 @@ abstract class pf extends GraphicsToolkit {
 
     final za e(int param0) {
         cba var2 = new cba(param0);
-        this.field_s.b(-10258, var2);
+        this.field_s.addLast(-10258, var2);
         return (za) ((Object) var2);
     }
 

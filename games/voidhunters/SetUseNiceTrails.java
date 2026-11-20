@@ -14,7 +14,7 @@ final class SetUseNiceTrails extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          GetSalvoDamageMultiplier.field_q = arguments[0].a(121);
+          GetSalvoDamageMultiplier.field_q = arguments[0].intValue(121);
           if (obfuscationGuard > -119) {
             SetUseNiceTrails.a(-84);
           }

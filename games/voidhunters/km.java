@@ -41,9 +41,9 @@ final class km extends jtb {
         wma var5 = null;
         int[] var6 = null;
         int var7 = 0;
-        faa var8 = null;
+        IsaacPacketBuffer var8 = null;
         int var9 = 0;
-        faa var10 = null;
+        IsaacPacketBuffer var10 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -52,17 +52,17 @@ final class km extends jtb {
         int var4Lifetime1;
         var7 = VoidHunters.field_G;
         try {
-          var8 = new faa(param0.a("", true, "logo.fo3d"));
+          var8 = new IsaacPacketBuffer(param0.a("", true, "logo.fo3d"));
           var10 = var8;
-          var3 = var10.e((byte) -87);
-          var10.p(-23497);
+          var3 = var10.readUnsignedByte((byte) -87);
+          var10.beginBitRead(-23497);
           gs.field_a = bh.a(var10, (byte) -122);
           SetMachineGunFireForce.field_p = new int[var3][];
           SetMissileLauncherFireForce.field_o = new wma[var3];
           for (var4 = 0; var3 > var4; var4++) {
             SetMissileLauncherFireForce.field_o[var4] = GetBuildViewAutozoomTimeout.a(var8, (byte) -105);
           }
-          var10.f((byte) -79);
+          var10.endBitRead((byte) -79);
           var9 = 0;
           var4Lifetime1 = var9;
           if (param1 != 36) {

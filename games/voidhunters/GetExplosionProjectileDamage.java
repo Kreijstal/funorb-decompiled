@@ -204,7 +204,7 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
           ul.field_b = new llb[5];
           lob.field_c = new llb[5];
           SetMissionVariablesHudX.field_o = new llb[5];
-          IterableNodeHashTable.field_c = new llb[5];
+          SecondaryNodeDeque.field_c = new llb[5];
           var18 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var18 >= 5))) {
@@ -232,12 +232,12 @@ final class GetExplosionProjectileDamage extends ConsoleCommand {
               if (decompiledFrameRemainder0) {
                 ul.field_b[var18] = new llb(0L, param8);
                 SetMissionVariablesHudX.field_o[var18] = new llb(0L, TargetLock.field_b, var19);
-                IterableNodeHashTable.field_c[var18] = new llb(0L, (llb) null);
-                IterableNodeHashTable.field_c[var18].field_B = 1;
+                SecondaryNodeDeque.field_c[var18] = new llb(0L, (llb) null);
+                SecondaryNodeDeque.field_c[var18].field_B = 1;
                 lob.field_c[var18] = new llb(0L, TargetLock.field_b);
                 lob.field_c[var18].field_B = 1;
                 ul.field_b[var18].b(-561, SetMissionVariablesHudX.field_o[var18]);
-                ul.field_b[var18].b(-561, IterableNodeHashTable.field_c[var18]);
+                ul.field_b[var18].b(-561, SecondaryNodeDeque.field_c[var18]);
                 ul.field_b[var18].b(-561, lob.field_c[var18]);
                 ul.field_b[var18].g(112);
                 SetToggledScoreboard.field_o.b(param1 ^ -561, ul.field_b[var18]);

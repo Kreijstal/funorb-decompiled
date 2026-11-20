@@ -21,25 +21,25 @@ final class glb {
             field_a = (String) null;
           }
           if (ms.field_y != null &&
-            !ms.field_y.b(-42)) {
-            var1 = (qw) (ms.field_y.d(0));
+            !ms.field_y.isEmpty(-42)) {
+            var1 = (qw) (ms.field_y.first(0));
             while (var1 != null) {
-              if (!var1.field_k.b((byte) -63)) {
-                var1.b(-3846);
+              if (!var1.field_k.isLinked((byte) -63)) {
+                var1.unlink(-3846);
               }
-              var1 = (qw) (ms.field_y.a((byte) 77));
+              var1 = (qw) (ms.field_y.next((byte) 77));
             }
           }
           if (null != gtb.field_d) {
-            stackIn_13_0 = gtb.field_d.b(-74);
+            stackIn_13_0 = gtb.field_d.isEmpty(-74);
             if (stackIn_13_0) {
               return;
             }
-            var1_ref = (nl) (gtb.field_d.d(0));
+            var1_ref = (nl) (gtb.field_d.first(0));
             while (var1_ref != null) {
               if (!var1_ref.field_h) {
                 nmb.a((byte) -91, var1_ref.field_d);
-                var1_ref.b(param0 ^ -19863);
+                var1_ref.unlink(param0 ^ -19863);
               } else {
                 if (var1_ref.field_g) {
                   var2 = uv.a(param0 - 16915, var1_ref.field_i);
@@ -48,7 +48,7 @@ final class glb {
                 }
                 var1_ref.field_h = false;
               }
-              var1_ref = (nl) (gtb.field_d.a((byte) 12));
+              var1_ref = (nl) (gtb.field_d.next((byte) 12));
             }
             return;
           }

@@ -21,17 +21,17 @@ final class il extends le {
           if (0 != var4_int) {
             if (var4_int != 1) {
               if (var4_int == 2) {
-                this.field_j = param2.e(1869);
+                this.field_j = param2.readUnsignedShort(1869);
               } else {
                 if (var4_int == 3) {
-                  this.field_i = param2.e(1869);
+                  this.field_i = param2.readUnsignedShort(1869);
                 }
               }
             } else {
-              this.field_k = param2.e(1869);
+              this.field_k = param2.readUnsignedShort(1869);
             }
           } else {
-            this.field_l = param2.e(1869);
+            this.field_l = param2.readUnsignedShort(1869);
           }
           if (param1 > -60) {
             this.a(-126, false);

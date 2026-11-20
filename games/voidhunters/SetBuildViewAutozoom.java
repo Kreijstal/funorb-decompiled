@@ -47,7 +47,7 @@ final class SetBuildViewAutozoom extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -72);
           }
-          GetPointDefenceLaserPulsetime.field_q = arguments[0].a(41);
+          GetPointDefenceLaserPulsetime.field_q = arguments[0].intValue(41);
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -5,9 +5,9 @@ final class wqa implements dja {
     static long field_a;
     static int field_b;
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -10 / ((param0 + 64) / 50);
-        return (tv) ((Object) new BodyInZoneCondition());
+        return (SerializableGameState) ((Object) new BodyInZoneCondition());
     }
 
     final static boolean a(boolean param0, int param1) {
@@ -17,12 +17,12 @@ final class wqa implements dja {
         return param1 >= 0 ? true : false;
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           this.a(-39, -108);
-          return (tv[]) ((Object) new BodyInZoneCondition[param1]);
+          return (SerializableGameState[]) ((Object) new BodyInZoneCondition[param1]);
         }
-        return (tv[]) ((Object) new BodyInZoneCondition[param1]);
+        return (SerializableGameState[]) ((Object) new BodyInZoneCondition[param1]);
     }
 
     final static void a(int param0, bc param1, int param2, int param3, bc param4, int param5) {

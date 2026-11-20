@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class qga {
-    static faa field_b;
+    static IsaacPacketBuffer field_b;
     static long field_a;
 
     final static void a(String param0, int param1, byte param2, String[] param3) {

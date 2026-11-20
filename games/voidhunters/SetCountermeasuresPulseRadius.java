@@ -6,11 +6,11 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
     static String field_o;
     static String field_p;
 
-    final static faa a(int param0, byte[] param1) {
+    final static IsaacPacketBuffer a(int param0, byte[] param1) {
         lla var2 = null;
         RuntimeException var2_ref = null;
         byte[] var3 = null;
-        faa stackIn_4_0 = null;
+        IsaacPacketBuffer stackIn_4_0 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -21,7 +21,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
             field_o = (String) null;
           }
           var3 = var2.a(param0 - 9, param1);
-          stackIn_4_0 = new faa(var3);
+          stackIn_4_0 = new IsaacPacketBuffer(var3);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -45,7 +45,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(222, 62, arguments[0].a(93));
+          SetMachineGunEnergyUsed.a(222, 62, arguments[0].intValue(93));
           if (obfuscationGuard > -119) {
             field_q = 50;
           }

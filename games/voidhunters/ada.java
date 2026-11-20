@@ -142,16 +142,16 @@ final class ada implements dja {
         }
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 61 % ((param0 + 64) / 50);
-        return (tv) ((Object) new PartitionZoneList());
+        return (SerializableGameState) ((Object) new PartitionZoneList());
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          return (tv[]) null;
+          return (SerializableGameState[]) null;
         }
-        return (tv[]) ((Object) new PartitionZoneList[param1]);
+        return (SerializableGameState[]) ((Object) new PartitionZoneList[param1]);
     }
 
     final static int a(GameSnapshot param0, MissionState param1, boolean param2, MissionAction[] param3) {

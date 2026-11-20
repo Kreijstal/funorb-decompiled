@@ -115,7 +115,7 @@ final class gw extends le {
         try {
           var4_int = param0;
           if (var4_int == 0) {
-            this.field_j = param2.e(1869);
+            this.field_j = param2.readUnsignedShort(1869);
           }
           if (param1 <= -60) {
             return;

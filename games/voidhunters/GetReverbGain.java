@@ -45,18 +45,18 @@ final class GetReverbGain extends ConsoleCommand {
         RuntimeException var2_ref = null;
         var3 = VoidHunters.field_G;
         try {
-          var4 = (dnb) (SetGrapplingHookAimarc.field_o.d(0));
+          var4 = (dnb) (SetGrapplingHookAimarc.field_o.first(0));
           if (param1 != -52) {
             field_o = (kb) null;
           }
           while (var4 != null) {
             nv.a((byte) 88, var4, param0);
-            var4 = (dnb) (SetGrapplingHookAimarc.field_o.a((byte) 89));
+            var4 = (dnb) (SetGrapplingHookAimarc.field_o.next((byte) 89));
           }
-          var2 = GetBoostersActiveTime.field_q.d(0);
+          var2 = GetBoostersActiveTime.field_q.first(0);
           while (var2 != null) {
             wva.b(param0, 22681);
-            var2 = GetBoostersActiveTime.field_q.a((byte) 54);
+            var2 = GetBoostersActiveTime.field_q.next((byte) 54);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

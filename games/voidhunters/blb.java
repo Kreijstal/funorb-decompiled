@@ -2,16 +2,16 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class blb implements dja {
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 121 / ((param0 + 64) / 50);
-        return (tv) ((Object) new TimedSpecialOrderBehaviour());
+        return (SerializableGameState) ((Object) new TimedSpecialOrderBehaviour());
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          return (tv[]) null;
+          return (SerializableGameState[]) null;
         }
-        return (tv[]) ((Object) new TimedSpecialOrderBehaviour[param1]);
+        return (SerializableGameState[]) ((Object) new TimedSpecialOrderBehaviour[param1]);
     }
 
     static {

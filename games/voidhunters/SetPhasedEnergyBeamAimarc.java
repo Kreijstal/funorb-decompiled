@@ -14,7 +14,7 @@ final class SetPhasedEnergyBeamAimarc extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(137, 62, arguments[0].a(16));
+          SetMachineGunEnergyUsed.a(137, 62, arguments[0].intValue(16));
           if (obfuscationGuard > -119) {
             SetPhasedEnergyBeamAimarc.a((byte) -118, -84L);
           }

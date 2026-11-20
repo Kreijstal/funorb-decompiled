@@ -58,7 +58,7 @@ final class bmb {
             stackIn_18_0 = null;
             return (gd) (stackIn_18_0);
           }
-          var9.b(-3846);
+          var9.unlink(-3846);
           this.field_a.a(var6, var8Lifetime1, (byte) -114);
           stackIn_20_0 = var8Lifetime1;
           return stackIn_20_0;
@@ -147,8 +147,8 @@ final class bmb {
           IOException var15 = null;
           RuntimeException var15_ref = null;
           try {
-            qga.field_b = new faa(param13);
-            RequestNewestBlackboxRecording.field_p = new faa(param0);
+            qga.field_b = new IsaacPacketBuffer(param13);
+            RequestNewestBlackboxRecording.field_p = new IsaacPacketBuffer(param0);
             bia.field_d = param1;
             GetAutozoomAmountMultiply.field_p = param6;
             cp.field_n = param4;

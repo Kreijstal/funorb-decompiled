@@ -244,38 +244,38 @@ final class rw extends le {
           var4_int = param0;
           if (0 != var4_int) {
             if (1 == var4_int) {
-              this.field_r = param2.e((byte) -96);
+              this.field_r = param2.readUnsignedByte((byte) -96);
             } else {
               if (2 != var4_int) {
                 if (var4_int != 3) {
                   if (4 == var4_int) {
-                    this.field_i = param2.e((byte) -92);
+                    this.field_i = param2.readUnsignedByte((byte) -92);
                   } else {
                     if (var4_int == 5) {
-                      this.field_j = param2.e((byte) -111);
+                      this.field_j = param2.readUnsignedByte((byte) -111);
                     } else {
                       if (var4_int == 6) {
-                        this.field_o = param2.e((byte) -95);
+                        this.field_o = param2.readUnsignedByte((byte) -95);
                       }
                     }
                   }
                 } else {
-                  dupTemp$0 = param2.e((byte) -106);
+                  dupTemp$0 = param2.readUnsignedByte((byte) -106);
                   this.field_o = dupTemp$0;
                   this.field_j = dupTemp$0;
                 }
               } else {
-                this.field_k = param2.a(true);
+                this.field_k = param2.readShort(true);
                 if (this.field_k < 0) {
                   this.field_m = new short[this.field_r];
                   for (var4_int = 0; this.field_r > var4_int; var4_int++) {
-                    this.field_m[var4_int] = (short)param2.a(true);
+                    this.field_m[var4_int] = (short)param2.readShort(true);
                   }
                 }
               }
             }
           } else {
-            stackIn_15_1 = (param2.e((byte) -127) == 1);
+            stackIn_15_1 = (param2.readUnsignedByte((byte) -127) == 1);
             this.field_s = stackIn_15_1;
           }
           if (param1 > -60) {

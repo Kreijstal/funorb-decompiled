@@ -5,12 +5,12 @@ final class hi implements dja {
     static int field_a;
     static int field_b;
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           CharSequence var4 = (CharSequence) null;
           hi.a((CharSequence) null, 67);
         }
-        return (tv[]) ((Object) new MissionList[param1]);
+        return (SerializableGameState[]) ((Object) new MissionList[param1]);
     }
 
     final static byte[] a(CharSequence param0, int param1) {
@@ -147,9 +147,9 @@ final class hi implements dja {
         }
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 118 % ((param0 + 64) / 50);
-        return (tv) ((Object) new MissionList());
+        return (SerializableGameState) ((Object) new MissionList());
     }
 
     final static phb[] a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8) {

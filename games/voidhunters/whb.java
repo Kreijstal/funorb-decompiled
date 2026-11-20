@@ -15,7 +15,7 @@ final class whb implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int stackIn_9_0 = 0;
         int stackIn_12_1 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -24,13 +24,13 @@ final class whb implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        tv var5 = null;
+        SerializableGameState var5 = null;
         whb var6 = null;
         try {
           var6 = (whb) (other);
           if (obfuscationGuard >= -19) {
-            var5 = (tv) null;
-            this.reportDifferences((tv) null, 37);
+            var5 = (SerializableGameState) null;
+            this.reportDifferences((SerializableGameState) null, 37);
           }
           if (null != this.field_b &&
             null != var6.field_b &&
@@ -48,7 +48,7 @@ final class whb implements DiffableState {
             this.field_b != null &&
             this.field_b.getClass() != var6.field_b.getClass() ||
             this.field_b != null &&
-            this.field_b.a((byte) -45, var6.field_b)) {
+            this.field_b.differsFrom((byte) -45, var6.field_b)) {
             var4 = 1;
             GetSniperCannonAimarc.a(-6940, "DebugSendable response has changed. before=" + var6.field_b + ", now=" + this.field_b);
           }
@@ -71,7 +71,7 @@ final class whb implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         whb var3 = null;
         int var4 = 0;
         int stackIn_3_0 = 0;
@@ -95,7 +95,7 @@ final class whb implements DiffableState {
           if ((stackIn_3_0 ^ stackIn_6_1) == 0 && ((this.field_b == null ||
             this.field_b.getClass() == var3.field_b.getClass()) &&
             (this.field_b == null ||
-            !this.field_b.a((byte) 93, var3.field_b)))) {
+            !this.field_b.differsFrom((byte) 93, var3.field_b)))) {
             stackIn_15_0 = false;
             decompiledFrameRemainder0 = false;
           }
@@ -117,7 +117,7 @@ final class whb implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         int var3_int = 0;
         int var4 = 0;
         RuntimeException stackIn_17_0 = null;
@@ -130,26 +130,26 @@ final class whb implements DiffableState {
           if (param1) {
             whb.a(80);
           }
-          if (!kv.a(param1, param0)) {
+          if (!kv.readBoolean(param1, param0)) {
             this.field_b = null;
             return;
           }
           if (this.field_b != null) {
-            this.field_b.a(param0, false);
+            this.field_b.readState(param0, false);
             return;
           }
-          var3_int = param0.i(0, 1);
+          var3_int = param0.readBits(0, 1);
           if (var3_int == 0) {
             this.field_b = (ub) ((Object) new mo());
-            this.field_b.a(param0, false);
+            this.field_b.readState(param0, false);
             return;
           }
           if (var3_int != 1) {
-            this.field_b.a(param0, false);
+            this.field_b.readState(param0, false);
             return;
           }
           this.field_b = (ub) ((Object) new af());
-          this.field_b.a(param0, false);
+          this.field_b.readState(param0, false);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -165,9 +165,9 @@ final class whb implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         RuntimeException runtimeException = null;
-        faa stackIn_4_0 = null;
+        IsaacPacketBuffer stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         boolean stackIn_5_2 = false;
         RuntimeException stackIn_14_0 = null;
@@ -178,18 +178,18 @@ final class whb implements DiffableState {
           if (param1 >= -109) {
             return;
           }
-          stackIn_4_0 = (faa) (param0);
+          stackIn_4_0 = (IsaacPacketBuffer) (param0);
           stackIn_4_1 = -100;
           stackIn_5_2 = (this.field_b != null);
-          if (vq.a(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
+          if (vq.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
             if (this.field_b.getClass() == mo.class) {
-              param0.a(-632, 0, 1);
+              param0.writeBits(-632, 0, 1);
             } else {
               if (this.field_b.getClass() == af.class) {
-                param0.a(-632, 1, 1);
+                param0.writeBits(-632, 1, 1);
               }
             }
-            this.field_b.b(param0, -122);
+            this.field_b.writeState(param0, -122);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -206,7 +206,7 @@ final class whb implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         int var4 = 0;
         whb var5 = null;
         RuntimeException stackIn_19_0 = null;
@@ -226,20 +226,20 @@ final class whb implements DiffableState {
           }
           if (null != var5.field_b &&
             var5.field_b.getClass() == this.field_b.getClass()) {
-            this.field_b.b((byte) 93, var5.field_b);
+            this.field_b.copyTo((byte) 93, var5.field_b);
             return;
           }
           if (this.field_b.getClass() == mo.class) {
             var5.field_b = (ub) ((Object) new mo());
-            this.field_b.b((byte) 93, var5.field_b);
+            this.field_b.copyTo((byte) 93, var5.field_b);
             return;
           }
           if (this.field_b.getClass() != af.class) {
-            this.field_b.b((byte) 93, var5.field_b);
+            this.field_b.copyTo((byte) 93, var5.field_b);
             return;
           }
           var5.field_b = (ub) ((Object) new af());
-          this.field_b.b((byte) 93, var5.field_b);
+          this.field_b.copyTo((byte) 93, var5.field_b);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

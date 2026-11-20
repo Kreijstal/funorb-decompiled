@@ -8,7 +8,7 @@ final class Message implements DiffableState {
     int tick;
     static int field_d;
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         Message var4 = null;
         boolean stackIn_7_0 = false;
@@ -45,8 +45,8 @@ final class Message implements DiffableState {
             }
             return;
           }
-          param4 = IntrusiveNode.a(31123, NebulaField.field_c, hab.field_i, param4);
-          param3 = IntrusiveNode.a(31123, NebulaField.field_c, hab.field_i, param3);
+          param4 = IntrusiveNode.clamp(31123, NebulaField.field_c, hab.field_i, param4);
+          param3 = IntrusiveNode.clamp(31123, NebulaField.field_c, hab.field_i, param3);
           GetPhasedEnergyBeamProjectileOndamageParticles.a(-105, param4, param1, param3, param2);
         }
         if (param0 <= -18) {
@@ -55,15 +55,15 @@ final class Message implements DiffableState {
         Message.a(72, 80, 26, 93, -92);
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          param0.a(-632, this.tick, 32);
-          param0.a(-632, this.stringId, 8);
-          param0.a(-632, 1 + this.aId, 8);
-          param0.a(-632, 1 + this.bId, 8);
+          param0.writeBits(-632, this.tick, 32);
+          param0.writeBits(-632, this.stringId, 8);
+          param0.writeBits(-632, 1 + this.aId, 8);
+          param0.writeBits(-632, 1 + this.bId, 8);
           if (param1 >= -109) {
-            tv var4 = (tv) null;
-            this.a((byte) -115, (tv) null);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.differsFrom((byte) -115, (SerializableGameState) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rha.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -80,7 +80,7 @@ final class Message implements DiffableState {
         return 0.2956068813800812f;
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -129,7 +129,7 @@ final class Message implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         Message var4 = (Message) (param1);
         Message var3 = var4;
         var4.tick = this.tick;
@@ -145,15 +145,15 @@ final class Message implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
-        this.tick = param0.i(0, 32);
-        this.stringId = param0.i(0, 8);
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
+        this.tick = param0.readBits(0, 32);
+        this.stringId = param0.readBits(0, 8);
         if (param1) {
           return;
         }
         try {
-          this.aId = param0.i(0, 8) - 1;
-          this.bId = -1 + param0.i(0, 8);
+          this.aId = param0.readBits(0, 8) - 1;
+          this.bId = -1 + param0.readBits(0, 8);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rha.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

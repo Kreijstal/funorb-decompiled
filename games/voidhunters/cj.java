@@ -15,10 +15,10 @@ final class cj extends le {
         try {
           var4_int = param0;
           if (0 == var4_int) {
-            this.field_i = param2.e((byte) -91);
+            this.field_i = param2.readUnsignedByte((byte) -91);
           } else {
             if (var4_int == 1) {
-              stackIn_7_1 = (param2.e((byte) -109) == 1);
+              stackIn_7_1 = (param2.readUnsignedByte((byte) -109) == 1);
               this.field_g = stackIn_7_1;
             }
           }

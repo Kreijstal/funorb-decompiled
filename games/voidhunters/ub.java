@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class ub extends IntrusiveNode implements tv {
+abstract class ub extends IntrusiveNode implements SerializableGameState {
     static String field_g;
     static int[] field_f;
     static String[] field_d;
@@ -11,7 +11,7 @@ abstract class ub extends IntrusiveNode implements tv {
     ub() {
     }
 
-    public void a(faa param0, boolean param1) {
+    public void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
             field_g = (String) null;
@@ -21,29 +21,29 @@ abstract class ub extends IntrusiveNode implements tv {
         }
     }
 
-    public void b(byte param0, tv param1) {
+    public void copyTo(byte param0, SerializableGameState param1) {
         try {
           if (param0 <= 54) {
-            faa var4 = (faa) null;
-            this.a((faa) null, false);
+            IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
+            this.readState((IsaacPacketBuffer) null, false);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ub.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public void b(faa param0, int param1) {
+    public void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 >= -109) {
-            tv var4 = (tv) null;
-            this.a((byte) -11, (tv) null);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.differsFrom((byte) -11, (SerializableGameState) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ub.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    void reportDifferences(tv other, int obfuscationGuard) {
+    void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         try {
           if (obfuscationGuard > -19) {
             field_e = (ConsoleCommandRegistry) null;
@@ -64,7 +64,7 @@ abstract class ub extends IntrusiveNode implements tv {
         field_g = null;
     }
 
-    public boolean a(byte param0, tv param1) {
+    public boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;

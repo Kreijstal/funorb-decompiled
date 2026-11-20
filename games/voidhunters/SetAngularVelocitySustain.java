@@ -34,7 +34,7 @@ final class SetAngularVelocitySustain extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 106);
           }
-          SetMachineGunEnergyUsed.a(175, 62, arguments[0].a(44));
+          SetMachineGunEnergyUsed.a(175, 62, arguments[0].intValue(44));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

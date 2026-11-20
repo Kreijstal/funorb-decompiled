@@ -28,7 +28,7 @@ final class lla {
         try {
           var3 = new PacketBuffer(param1);
           var3.position = -4 + param1.length;
-          var4 = var3.i(11468);
+          var4 = var3.readIntLE(11468);
           var3.position = param0;
           var5 = new byte[var4];
           this.a(20773, var5, var3);
@@ -101,7 +101,7 @@ final class lla {
             this.field_i = new java.util.zip.Deflater(this.field_c, true);
             this.field_a = new java.util.zip.CRC32();
             this.field_f = new PacketBuffer(this.field_g);
-            this.field_f.a(0, pb.field_f, -1, pb.field_f.length);
+            this.field_f.writeBytes(0, pb.field_f, -1, pb.field_f.length);
           } else {
             this.field_f.position = pb.field_f.length;
           }
@@ -129,11 +129,11 @@ final class lla {
             }
             break;
           }
-          this.field_f.a((byte) 103, (int)this.field_a.getValue());
+          this.field_f.writeIntLE((byte) 103, (int)this.field_a.getValue());
           if (param0 < 72) {
             return;
           }
-          this.field_f.a((byte) 93, this.field_i.getTotalIn());
+          this.field_f.writeIntLE((byte) 93, this.field_i.getTotalIn());
           this.field_i.reset();
           this.field_a.reset();
           return;

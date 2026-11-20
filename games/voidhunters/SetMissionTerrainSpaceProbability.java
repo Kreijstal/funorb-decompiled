@@ -15,7 +15,7 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_o = 26;
           }
-          SetMachineGunEnergyUsed.a(66, 62, arguments[0].a(36));
+          SetMachineGunEnergyUsed.a(66, 62, arguments[0].intValue(36));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

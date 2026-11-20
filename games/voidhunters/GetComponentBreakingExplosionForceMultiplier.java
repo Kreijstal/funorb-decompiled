@@ -44,14 +44,14 @@ final class GetComponentBreakingExplosionForceMultiplier extends ConsoleCommand 
     }
 
     final static void a(int param0, int param1) {
-        faa var2 = RequestNewestBlackboxRecording.field_p;
-        var2.h(24335, param1);
+        IsaacPacketBuffer var2 = RequestNewestBlackboxRecording.field_p;
+        var2.writeIsaacByte(24335, param1);
         int var3 = -33 / ((-71 - param0) / 46);
-        var2.c(0, 1);
-        var2.c(0, 3);
+        var2.writeByte(0, 1);
+        var2.writeByte(0, 3);
     }
 
-    final static void a(int param0, int param1, faa param2, tv param3) {
+    final static void a(int param0, int param1, IsaacPacketBuffer param2, SerializableGameState param3) {
         RuntimeException var4 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -61,7 +61,7 @@ final class GetComponentBreakingExplosionForceMultiplier extends ConsoleCommand 
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 == 1) {
-            param3.b(param2, -126);
+            param3.writeState(param2, -126);
           }
           if (param1 == param0) {
             ((tva) (param3)).c(param2, 19537);

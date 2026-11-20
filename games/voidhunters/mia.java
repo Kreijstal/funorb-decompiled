@@ -18,8 +18,8 @@ final class mia implements Runnable {
     final static void a(int param0, int param1, int param2) {
         mm var6 = null;
         mm var7 = null;
-        faa var4 = null;
-        faa var4Lifetime1;
+        IsaacPacketBuffer var4 = null;
+        IsaacPacketBuffer var4Lifetime1;
         if (param1 != GetMachineGunPulsetime.field_q) {
           var6 = (mm) (GetLaserReload.field_r.a(-1, (long)GetMachineGunPulsetime.field_q));
           var7 = var6;
@@ -28,10 +28,10 @@ final class mia implements Runnable {
           } else {
             GetMachineGunPulsetime.field_q = param1;
             var4 = RequestNewestBlackboxRecording.field_p;
-            var4.h(24335, param0);
-            var4.c(0, 3);
-            var4.c(0, 11);
-            var4.a(param1, true);
+            var4.writeIsaacByte(24335, param0);
+            var4.writeByte(0, 3);
+            var4.writeByte(0, 11);
+            var4.writeShort(param1, true);
             if (param2 < 42) {
               field_a = (boolean[]) null;
               return;
@@ -40,10 +40,10 @@ final class mia implements Runnable {
           }
           GetMachineGunPulsetime.field_q = param1;
           var4Lifetime1 = RequestNewestBlackboxRecording.field_p;
-          var4Lifetime1.h(24335, param0);
-          var4Lifetime1.c(0, 3);
-          var4Lifetime1.c(0, 11);
-          var4Lifetime1.a(param1, true);
+          var4Lifetime1.writeIsaacByte(24335, param0);
+          var4Lifetime1.writeByte(0, 3);
+          var4Lifetime1.writeByte(0, 11);
+          var4Lifetime1.writeShort(param1, true);
           if (param2 < 42) {
             field_a = (boolean[]) null;
             return;

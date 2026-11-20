@@ -3,12 +3,12 @@
  */
 import java.io.*;
 
-final class ndb extends IOException {
+final class ProxyAuthenticationException extends IOException {
     static int field_c;
     static uca field_a;
     static String field_b;
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != 91) {
           field_b = (String) null;
@@ -18,7 +18,7 @@ final class ndb extends IOException {
         field_b = null;
     }
 
-    final static void b(int param0) {
+    final static void initializePunctuationKeyCodes(int param0) {
         GetBombletSprayRandomness.field_o[61] = 27;
         GetBombletSprayRandomness.field_o[59] = 57;
         GetBombletSprayRandomness.field_o[222] = 58;
@@ -33,7 +33,7 @@ final class ndb extends IOException {
         GetBombletSprayRandomness.field_o[44] = 71;
     }
 
-    ndb(String param0) {
+    ProxyAuthenticationException(String param0) {
         super(param0);
     }
 

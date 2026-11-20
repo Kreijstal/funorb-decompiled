@@ -156,17 +156,17 @@ final class lfa extends le {
           }
           var4_int = param0;
           if (var4_int == 0) {
-            this.field_i = param2.e(1869);
+            this.field_i = param2.readUnsignedShort(1869);
             return;
           }
           if (var4_int == 1) {
-            this.field_l = param2.e(1869);
+            this.field_l = param2.readUnsignedShort(1869);
             return;
           }
           if (var4_int != 2) {
             return;
           }
-          this.field_k = param2.e(1869);
+          this.field_k = param2.readUnsignedShort(1869);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -269,12 +269,12 @@ final class hqb {
             var4 = jwa.a(false, param2);
             if (var4 != null &&
               var4.length() >= 1) {
-              if (!MouseWheelInput.a(var4.charAt(0), 56) &&
-                !MouseWheelInput.a(var4.charAt(var4.length() - 1), param1 ^ 79)) {
+              if (!MouseWheelInput.isNameSeparator(var4.charAt(0), 56) &&
+                !MouseWheelInput.isNameSeparator(var4.charAt(var4.length() - 1), param1 ^ 79)) {
                 var5 = 0;
                 for (var6 = 0; var6 < param2.length(); var6++) {
                   var7 = param2.charAt(var6);
-                  if (MouseWheelInput.a((char) var7, 45)) {
+                  if (MouseWheelInput.isNameSeparator((char) var7, 45)) {
                     var5++;
                   } else {
                     var5 = 0;

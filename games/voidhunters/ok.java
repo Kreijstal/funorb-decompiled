@@ -45,7 +45,7 @@ final class ok implements dja {
           lkb.a(stackIn_4_0, (byte) -106);
           GetReverbWidth.field_o.a(0, -92, -2 + rga.field_g.field_G - 40, 0, rga.field_g.field_hb);
           SetPhasedEnergyBeamPulsetime.field_o.a(0, -11, SetOndamageParticleLife.field_o.field_hb, 0, nna.field_w);
-          stackIn_6_0 = NodeHashTableIterator.field_a;
+          stackIn_6_0 = SecondaryNodeDequeIterator.field_a;
           stackIn_6_1 = 0;
           stackIn_6_2 = param0 + 25;
           stackIn_6_3 = SetOndamageParticleLife.field_o.field_hb;
@@ -175,16 +175,16 @@ final class ok implements dja {
         }
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 47 % ((param0 + 64) / 50);
-        return (tv) ((Object) new ShipBody());
+        return (SerializableGameState) ((Object) new ShipBody());
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           ok.a((byte) 101, true);
         }
-        return (tv[]) ((Object) new ShipBody[param1]);
+        return (SerializableGameState[]) ((Object) new ShipBody[param1]);
     }
 
     public static void b(byte param0) {

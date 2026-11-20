@@ -104,24 +104,24 @@ final class MissionControl implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
-            tv var4 = (tv) null;
-            this.b((byte) -44, (tv) null);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.copyTo((byte) -44, (SerializableGameState) null);
           }
           this.events = (MissionEvent[]) (SetAutoDetail.a(8, GetExplosionPushMultiplier.field_o, param0, 1, -115, this.events));
-          this.selectedEvent = param0.i(0, 32);
-          this.selectedConditionOrAction = param0.i(0, 32);
+          this.selectedEvent = param0.readBits(0, 32);
+          this.selectedConditionOrAction = param0.readBits(0, 32);
           this.reservedIds = wkb.a((byte) 37, this.reservedIds, param0, 8);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "una.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void b(faa param0, int param1) {
-        faa var10 = null;
-        faa var3 = null;
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
+        IsaacPacketBuffer var10 = null;
+        IsaacPacketBuffer var3 = null;
         MissionEvent[] var4 = null;
         int var5 = 0;
         MissionEvent[] var6 = null;
@@ -136,18 +136,18 @@ final class MissionControl implements DiffableState {
           var3 = var10;
           var4 = this.events;
           var5 = var4 != null ? var4.length : 0;
-          var10.a(-632, var5, 8);
+          var10.writeBits(-632, var5, 8);
           if (var5 != 0) {
             var6 = var4;
             for (var7 = 0; var7 < var6.length; var7++) {
               var8 = var6[var7];
-              if (vq.a(var3, -126, var8 != null ? true : false)) {
+              if (vq.writeBoolean(var3, -126, var8 != null ? true : false)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var10, var8);
               }
             }
           }
-          param0.a(-632, this.selectedEvent, 32);
-          param0.a(-632, this.selectedConditionOrAction, 32);
+          param0.writeBits(-632, this.selectedEvent, 32);
+          param0.writeBits(-632, this.selectedConditionOrAction, 32);
           pgb.a(8, null == this.reservedIds ? 0 : this.reservedIds.length, -120, param0, this.reservedIds);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "una.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -263,7 +263,7 @@ final class MissionControl implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         MissionControl var3 = null;
         int var4 = 0;
         boolean stackIn_7_0 = false;
@@ -291,7 +291,7 @@ final class MissionControl implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         MissionControl var3 = null;
         try {
           var3 = (MissionControl) (param1);
@@ -355,7 +355,7 @@ final class MissionControl implements DiffableState {
         field_f = null;
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -411,10 +411,10 @@ final class MissionControl implements DiffableState {
     }
 
     final void c(byte param0) {
-        tv var3;
+        SerializableGameState var3;
         if (param0 != 55) {
-          var3 = (tv) null;
-          this.a((byte) -25, (tv) null);
+          var3 = (SerializableGameState) null;
+          this.differsFrom((byte) -25, (SerializableGameState) null);
         }
         if (this.field_c >= 0) {
           this.events = (MissionEvent[]) (GetSalvoUsesAllEnergy.a(GetExplosionPushMultiplier.field_o, this.field_c, param0 ^ 15620, this.events));

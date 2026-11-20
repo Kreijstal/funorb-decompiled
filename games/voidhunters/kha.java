@@ -30,7 +30,7 @@ final class kha {
         try {
           param0.field_f = param1 ? true : false;
           param0.c((byte) 66);
-          param0.b(-3846);
+          param0.unlink(-3846);
           this.c(false);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kha.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -44,7 +44,7 @@ final class kha {
         int var2 = param0 ? 1 : 0;
         int var3 = 0;
         int var4 = 0;
-        mea var9 = (mea) (this.field_i.d(0));
+        mea var9 = (mea) (this.field_i.first(0));
         int var6Lifetime1;
         while (var9 != null) {
           var6 = var9.d((byte) 7);
@@ -53,7 +53,7 @@ final class kha {
           }
           var4 = var4 + var9.d(23230);
           var2 = var2 != 0 | var9.e(0) ? 1 : 0;
-          var9 = (mea) (this.field_i.a((byte) 72));
+          var9 = (mea) (this.field_i.next((byte) 72));
         }
         if (2 == var3) {
           var5 = 34836;
@@ -94,7 +94,7 @@ final class kha {
           if (null != this.field_h) {
             if (param1.f(-257) ||
               param1.a(param0 - 2907)) {
-              this.field_i.b(-10258, param1);
+              this.field_i.addLast(-10258, param1);
               this.c(false);
               if (this.b(false)) {
                 if (this.field_q != -1 &&
@@ -130,15 +130,15 @@ final class kha {
           this.field_i = (IntrusiveDeque) null;
         }
         if (null != this.field_h &&
-          !this.field_i.b(118)) {
+          !this.field_i.isEmpty(118)) {
           if (this.field_q != param2 ||
             param3 != this.field_b) {
             this.field_b = param3;
             this.field_q = param2;
-            var6 = this.field_i.d(param4 + 5214);
-            while (var6 != this.field_i.field_a) {
+            var6 = this.field_i.first(param4 + 5214);
+            while (var6 != this.field_i.sentinel) {
               ((mea) (var6)).a(this.field_b, this.field_q, -19454);
-              var6 = var6.field_c;
+              var6 = var6.next;
             }
             this.field_j = true;
             this.field_f = true;
@@ -305,9 +305,9 @@ final class kha {
         this.field_t.t(110);
         var2Lifetime1 = 0;
         var3 = 1;
-        var4_ref_mea = (mea) (this.field_i.d(0));
+        var4_ref_mea = (mea) (this.field_i.first(0));
         while (null != var4_ref_mea) {
-          var5 = (mea) (this.field_i.a((byte) 112));
+          var5 = (mea) (this.field_i.next((byte) 112));
           var6 = var4_ref_mea.d(23230);
           for (var7 = 0; var6 > var7; var7++) {
             var4_ref_mea.a(this.field_l[var2Lifetime1], -3009, this.field_w, var7);
@@ -376,11 +376,11 @@ final class kha {
           kha.b(0);
         }
         this.field_o = null;
-        if (!this.field_i.b(8)) {
-          var2 = this.field_i.d(0);
-          while (var2 != this.field_i.field_a) {
+        if (!this.field_i.isEmpty(8)) {
+          var2 = this.field_i.first(0);
+          while (var2 != this.field_i.sentinel) {
             ((mea) (var2)).c((byte) 66);
-            var2 = var2.field_c;
+            var2 = var2.next;
           }
         }
         this.field_b = 1;

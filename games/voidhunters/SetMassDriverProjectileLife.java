@@ -44,7 +44,7 @@ final class SetMassDriverProjectileLife extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(90, 62, arguments[0].a(83));
+          SetMachineGunEnergyUsed.a(90, 62, arguments[0].intValue(83));
           if (obfuscationGuard >= -119) {
             SetMassDriverProjectileLife.e((byte) -13);
           }

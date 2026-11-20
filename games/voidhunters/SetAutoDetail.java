@@ -5,9 +5,9 @@ final class SetAutoDetail extends ConsoleCommand {
     static int field_o;
     static int field_p;
 
-    final static tv[] a(int param0, dja param1, faa param2, int param3, int param4, tv[] param5) {
+    final static SerializableGameState[] a(int param0, dja param1, IsaacPacketBuffer param2, int param3, int param4, SerializableGameState[] param5) {
         int var7 = 0;
-        tv[] stackIn_23_0 = null;
+        SerializableGameState[] stackIn_23_0 = null;
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -19,22 +19,22 @@ final class SetAutoDetail extends ConsoleCommand {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var8 = 0;
-        tv var9 = null;
-        faa var10 = null;
+        SerializableGameState var9 = null;
+        IsaacPacketBuffer var10 = null;
         int var11 = 0;
         var11 = VoidHunters.field_G;
         try {
           if (param4 >= -45) {
-            SetAutoDetail.a(-101, (dja) null, (faa) null, -50, 54, (tv[]) null);
+            SetAutoDetail.a(-101, (dja) null, (IsaacPacketBuffer) null, -50, 54, (SerializableGameState[]) null);
           }
-          var6_int = param2.i(0, param0);
+          var6_int = param2.readBits(0, param0);
           if (0 != var6_int) {
             if (param5 == null ||
               param5.length != var6_int) {
               param5 = param1.a(11995, var6_int);
             }
             for (var7 = 0; var7 < var6_int; var7++) {
-              if (!kv.a(false, param2)) {
+              if (!kv.readBoolean(false, param2)) {
                 param5[var7] = null;
               } else {
                 if (param5[var7] == null) {
@@ -44,7 +44,7 @@ final class SetAutoDetail extends ConsoleCommand {
                 var9 = param5[var7];
                 var10 = param2;
                 if (1 == var8) {
-                  var9.a(var10, false);
+                  var9.readState(var10, false);
                 }
                 if (2 == var8) {
                   ((tva) (var9)).a(-81, var10);
@@ -57,7 +57,7 @@ final class SetAutoDetail extends ConsoleCommand {
           } else {
             param5 = null;
           }
-          stackIn_23_0 = (tv[]) (param5);
+          stackIn_23_0 = (SerializableGameState[]) (param5);
           return stackIn_23_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -94,7 +94,7 @@ final class SetAutoDetail extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetPhasedEnergyBeamAimspeed.field_q = arguments[0].a(98);
+          SetPhasedEnergyBeamAimspeed.field_q = arguments[0].intValue(98);
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

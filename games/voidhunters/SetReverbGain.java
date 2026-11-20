@@ -11,7 +11,7 @@ final class SetReverbGain extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMissileLauncherEnergyUsed.field_p = arguments[0].d(0);
+          SetMissileLauncherEnergyUsed.field_p = arguments[0].floatValue(0);
           if (obfuscationGuard > -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -2);

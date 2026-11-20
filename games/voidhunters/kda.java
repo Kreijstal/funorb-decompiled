@@ -40,7 +40,7 @@ final class kda {
     final int a(boolean param0, int param1) {
         this.field_a = false;
         this.field_o = false;
-        this.field_c.e(110);
+        this.field_c.clear(110);
         int var3 = this.field_n;
         this.field_n = 0;
         this.field_i = new IntrusiveDeque();
@@ -67,7 +67,7 @@ final class kda {
         this.field_d = param1;
     }
 
-    final byte[] b(faa param0, int param1) {
+    final byte[] b(IsaacPacketBuffer param0, int param1) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         byte[] var4 = null;
@@ -138,14 +138,14 @@ final class kda {
               GetSniperCannonAimarc.a(param2 ^ -6388, "Carousel_clientgame_Info.check_servercrc_against_clientcrc was going to look " + var10 + " steps back");
               return;
             }
-            var11 = (uqb) (param0.field_f.d(0));
+            var11 = (uqb) (param0.field_f.first(0));
             while (var11 != null) {
               if (!var11.a(115) &&
                 -var10 + param0.field_g >= var11.field_e) {
                 GetSniperCannonAimarc.a(-6940, "Carousel_clientgame_Info.check_servercrc_against_clientcrc was going to look " + var10 + " steps back when unconfirmed event was back by " + (-var11.field_e + param0.field_g));
                 return;
               }
-              var11 = (uqb) (param0.field_f.a((byte) 36));
+              var11 = (uqb) (param0.field_f.next((byte) 36));
             }
             var11_ref = param0.a(var10, param2 ^ -949);
             var12 = SetTestActionLag.a(var11_ref, (byte) -70);
@@ -217,7 +217,7 @@ final class kda {
         }
     }
 
-    final boolean a(byte param0, CarouselCommongameInfo param1, int param2, faa param3) {
+    final boolean a(byte param0, CarouselCommongameInfo param1, int param2, IsaacPacketBuffer param3) {
         uqb var5 = null;
         RuntimeException var5_ref = null;
         RuntimeException stackIn_12_0 = null;
@@ -261,7 +261,7 @@ final class kda {
         }
     }
 
-    final void a(int param0, faa param1) {
+    final void a(int param0, IsaacPacketBuffer param1) {
         whb var3 = null;
         if (param0 != -32339) {
           return;
@@ -275,7 +275,7 @@ final class kda {
         }
     }
 
-    final void a(boolean param0, uqb param1, CarouselCommongameInfo param2, boolean param3, boolean param4, int param5, faa param6) {
+    final void a(boolean param0, uqb param1, CarouselCommongameInfo param2, boolean param3, boolean param4, int param5, IsaacPacketBuffer param6) {
         uqb stackIn_8_0 = null;
         boolean stackIn_9_1 = false;
         RuntimeException stackIn_27_0 = null;
@@ -314,8 +314,8 @@ final class kda {
             if (param4) {
               if (param3) {
                 var8 = (uqb) (wc.field_a.a((byte) 49));
-                param1.b((byte) 75, var8);
-                this.field_i.b(-10258, var8);
+                param1.copyTo((byte) 75, var8);
+                this.field_i.addLast(-10258, var8);
               } else {
                 this.a(param1, param6, 1000);
               }
@@ -352,7 +352,7 @@ final class kda {
         }
     }
 
-    private final void a(uqb param0, faa param1, int param2) {
+    private final void a(uqb param0, IsaacPacketBuffer param1, int param2) {
         try {
           if (param2 != 1000) {
             this.field_a = true;
@@ -379,7 +379,7 @@ final class kda {
         return this.field_d;
     }
 
-    final boolean a(faa param0, faa param1, boolean param2, byte param3, int param4, CarouselCommongameInfo param5) {
+    final boolean a(IsaacPacketBuffer param0, IsaacPacketBuffer param1, boolean param2, byte param3, int param4, CarouselCommongameInfo param5) {
         boolean discarded$0 = false;
         int var10 = 0;
         Object stackIn_22_0;
@@ -402,7 +402,7 @@ final class kda {
         int var7_int = 0;
         RuntimeException var7_ref = null;
         int var8_int = 0;
-        faa var8 = null;
+        IsaacPacketBuffer var8 = null;
         int var9_int = 0;
         Exception var9 = null;
         int var11 = 0;
@@ -428,9 +428,9 @@ final class kda {
         try {
           if (param4 == GetSniperCannonFiringLeeway.field_o) {
             var16 = new umb();
-            param1.p(-23497);
-            var16.a(param1, false);
-            param1.f((byte) -38);
+            param1.beginBitRead(-23497);
+            var16.readState(param1, false);
+            param1.endBitRead((byte) -38);
             if (param5 != null &&
               param5.f(1)) {
               return true;
@@ -476,9 +476,9 @@ final class kda {
           }
           if (pr.field_d == param4) {
             var17_ref = (uqb) (wc.field_a.a((byte) -126));
-            param1.p(-23497);
-            var17_ref.a(param1, false);
-            param1.f((byte) -114);
+            param1.beginBitRead(-23497);
+            var17_ref.readState(param1, false);
+            param1.endBitRead((byte) -114);
             if (param5 != null &&
               param5.f(1)) {
               return true;
@@ -497,7 +497,7 @@ final class kda {
               }
             } else if (!var17_ref.c(120) ||
               !var17_ref.field_d.field_c) {
-              this.field_c.b(-10258, var17_ref);
+              this.field_c.addLast(-10258, var17_ref);
             }
             return true;
           }
@@ -506,23 +506,23 @@ final class kda {
             discarded$0 = this.a((CarouselCommongameInfo) null, -70);
           }
           if (ehb.field_g == param4) {
-            var7_int = param1.h(94);
+            var7_int = param1.readInt(94);
             if (param5 != null &&
               !this.field_a &&
               !this.field_o) {
-              param0.h(24335, PrintSettings.field_o);
-              param0.d(var7_int, 332614536);
-              param0.d(param5.field_g, 332614536);
+              param0.writeIsaacByte(24335, PrintSettings.field_o);
+              param0.writeInt(var7_int, 332614536);
+              param0.writeInt(param5.field_g, 332614536);
             }
             return true;
           }
           if (GetSniperCannonAimarc.field_o == param4) {
-            var7_intLifetime1 = param1.h(98);
-            var8_intLifetime1 = param1.h(74);
-            var9_intLifetime1 = param1.e((byte) -121);
+            var7_intLifetime1 = param1.readInt(98);
+            var8_intLifetime1 = param1.readInt(74);
+            var9_intLifetime1 = param1.readUnsignedByte((byte) -121);
             for (var10 = 0; var10 < var9_intLifetime1; var10++) {
-              var11 = param1.h(95);
-              var12 = param1.h(95);
+              var11 = param1.readInt(95);
+              var12 = param1.readInt(95);
               if (param5 != null &&
                 !this.field_a &&
                 !this.field_o &&
@@ -552,9 +552,9 @@ final class kda {
             var8 = SetCountermeasuresPulseRadius.a(9, var22);
             try {
               var20 = new whb();
-              var8.p(-23497);
-              var20.a(var8, false);
-              var8.f((byte) -33);
+              var8.beginBitRead(-23497);
+              var20.readState(var8, false);
+              var8.endBitRead((byte) -33);
               if (var20.field_b instanceof af) {
                 GetSniperCannonAimarc.a(param3 - 6947, "Received black box recording");
                 var15 = (af) (var20.field_b);
@@ -617,8 +617,8 @@ final class kda {
     final void c(byte param0) {
         this.field_o = true;
         if (param0 != -94) {
-          faa var3 = (faa) null;
-          this.a(-3, (faa) null);
+          IsaacPacketBuffer var3 = (IsaacPacketBuffer) null;
+          this.a(-3, (IsaacPacketBuffer) null);
         }
     }
 
@@ -662,7 +662,7 @@ final class kda {
           this.field_h = 2147483647;
           var4_int = 0;
           var5 = 0;
-          var6 = this.field_c.d(param0);
+          var6 = this.field_c.first(param0);
           while (var6 != null) {
             if (!(var6 instanceof uqb)) {
               if (var6 instanceof umb) {
@@ -688,7 +688,7 @@ final class kda {
               var4_int++;
               param2.a(param0 ^ 1, (uqb) (var6));
             }
-            var6 = this.field_c.a((byte) 62);
+            var6 = this.field_c.next((byte) 62);
           }
           GetSniperCannonAimarc.a(-6940, "Carousel_clientgame: Adding all the way with " + var4_int + " actions, and " + var5 + " server ticks. Tick=" + param2.field_g + ", Ticks behind=" + param2.field_c);
           param2.g(param0 - 1);
@@ -708,7 +708,7 @@ final class kda {
         }
     }
 
-    final void a(faa param0, int param1, String param2) {
+    final void a(IsaacPacketBuffer param0, int param1, String param2) {
         whb var4 = null;
         try {
           var4 = new whb();
@@ -746,7 +746,7 @@ final class kda {
         this.field_k[param2] = param0;
     }
 
-    final void a(byte param0, String param1, faa param2) {
+    final void a(byte param0, String param1, IsaacPacketBuffer param2) {
         whb var4 = null;
         try {
           if (param0 < 63) {
@@ -760,7 +760,7 @@ final class kda {
         }
     }
 
-    final void a(faa param0, int param1) {
+    final void a(IsaacPacketBuffer param0, int param1) {
         RuntimeException stackIn_26_0 = null;
         StringBuilder stackIn_26_1 = null;
         String stackIn_27_2 = null;
@@ -792,13 +792,13 @@ final class kda {
             }
           }
           this.field_b = (1 + this.field_b) % 5;
-          if (this.field_i.c(3) > 0 &&
+          if (this.field_i.size(3) > 0 &&
             this.field_b == 0) {
-            var4 = (uqb) (this.field_i.d(0));
+            var4 = (uqb) (this.field_i.first(0));
             while (var4 != null) {
               this.a(var4, param0, 1000);
-              var4.b(-3846);
-              var4 = (uqb) (this.field_i.a((byte) 100));
+              var4.unlink(-3846);
+              var4 = (uqb) (this.field_i.next((byte) 100));
             }
             return;
           }
@@ -828,7 +828,7 @@ final class kda {
             return;
           }
           if (param0.field_d != null) {
-            param0.field_d.getServerCarousel(108).b((byte) 96, param0);
+            param0.field_d.getServerCarousel(108).copyTo((byte) 96, param0);
             param0.c(-64);
             param0.field_h = true;
           }

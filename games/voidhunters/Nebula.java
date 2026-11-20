@@ -6,7 +6,7 @@ final class Nebula implements DiffableState {
     private int x;
     private int y;
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException var3 = null;
         int var4 = 0;
         Nebula var5 = null;
@@ -47,7 +47,7 @@ final class Nebula implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         Nebula var3 = null;
         int var4 = 0;
         boolean stackIn_5_0 = false;
@@ -84,26 +84,26 @@ final class Nebula implements DiffableState {
         GetMissionVariablesHudX.field_o.b(fib.field_j, -116);
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 >= -109) {
-            faa var4 = (faa) null;
-            this.a((faa) null, true);
+            IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
+            this.readState((IsaacPacketBuffer) null, true);
           }
-          param0.a(-632, this.x, 32);
-          param0.a(-632, this.y, 32);
+          param0.writeBits(-632, this.x, 32);
+          param0.writeBits(-632, this.y, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qob.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         if (param1) {
           return;
         }
         try {
-          this.x = param0.i(0, 32);
-          this.y = param0.i(0, 32);
+          this.x = param0.readBits(0, 32);
+          this.y = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qob.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -196,7 +196,7 @@ final class Nebula implements DiffableState {
         return 8192 * (-(param0 % 3) + 3);
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         Nebula var5 = null;
         Nebula var6 = null;
         try {

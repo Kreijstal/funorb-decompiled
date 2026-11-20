@@ -9,15 +9,15 @@ final class MissionGenerationData implements DiffableState {
     int[] optionTotals;
     static String field_e;
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         if (param1) {
           return;
         }
         try {
-          this.votedObjective = param0.i(0, 8);
-          this.missionGenerationSeed = param0.i(0, 32);
+          this.votedObjective = param0.readBits(0, 8);
+          this.missionGenerationSeed = param0.readBits(0, 32);
           this.optionTotals = wkb.a((byte) 37, this.optionTotals, param0, 8);
-          this.roundsLeft = param0.i(0, 32);
+          this.roundsLeft = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qdb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -41,12 +41,12 @@ final class MissionGenerationData implements DiffableState {
         int var16Lifetime2;
         var18 = VoidHunters.field_G;
         try {
-          var12 = IntrusiveNode.a(31123, NebulaField.field_c, hab.field_i, param5);
-          var13 = IntrusiveNode.a(31123, NebulaField.field_c, hab.field_i, param7);
-          var14 = IntrusiveNode.a(param2 ^ 31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4);
-          var15 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param0);
-          var8_int = IntrusiveNode.a(31123, NebulaField.field_c, hab.field_i, param5 + param1);
-          var9 = IntrusiveNode.a(31123, NebulaField.field_c, hab.field_i, param7 - param1);
+          var12 = IntrusiveNode.clamp(31123, NebulaField.field_c, hab.field_i, param5);
+          var13 = IntrusiveNode.clamp(31123, NebulaField.field_c, hab.field_i, param7);
+          var14 = IntrusiveNode.clamp(param2 ^ 31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4);
+          var15 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param0);
+          var8_int = IntrusiveNode.clamp(31123, NebulaField.field_c, hab.field_i, param5 + param1);
+          var9 = IntrusiveNode.clamp(31123, NebulaField.field_c, hab.field_i, param7 - param1);
           for (var16 = var12; var16 < var8_int; var16++) {
             GetSalvoRepairTimeMultiplier.a(param6, var15, ResourceNode.field_b[var16], (byte) 75, var14);
           }
@@ -56,8 +56,8 @@ final class MissionGenerationData implements DiffableState {
           for (var16Lifetime1 = var13; var16Lifetime1 > var9; var16Lifetime1--) {
             GetSalvoRepairTimeMultiplier.a(param6, var15, ResourceNode.field_b[var16Lifetime1], (byte) 75, var14);
           }
-          var10 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param1 + param4);
-          var11 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, -param1 + param0);
+          var10 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param1 + param4);
+          var11 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, -param1 + param0);
           for (var16Lifetime2 = var8_int; var16Lifetime2 <= var9; var16Lifetime2++) {
             var22 = ResourceNode.field_b[var16Lifetime2];
             GetSalvoRepairTimeMultiplier.a(param6, var10, var22, (byte) 75, var14);
@@ -72,7 +72,7 @@ final class MissionGenerationData implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         MissionGenerationData var3 = (MissionGenerationData) (param1);
         var3.votedObjective = this.votedObjective;
         var3.missionGenerationSeed = this.missionGenerationSeed;
@@ -95,7 +95,7 @@ final class MissionGenerationData implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         MissionGenerationData var3 = null;
         int var4 = 0;
         boolean stackIn_7_0 = false;
@@ -123,15 +123,15 @@ final class MissionGenerationData implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         if (param1 >= -109) {
           return;
         }
         try {
-          param0.a(-632, this.votedObjective, 8);
-          param0.a(-632, this.missionGenerationSeed, 32);
+          param0.writeBits(-632, this.votedObjective, 8);
+          param0.writeBits(-632, this.missionGenerationSeed, 32);
           pgb.a(8, this.optionTotals != null ? this.optionTotals.length : 0, 49, param0, this.optionTotals);
-          param0.a(-632, this.roundsLeft, 32);
+          param0.writeBits(-632, this.roundsLeft, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qdb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -149,14 +149,14 @@ final class MissionGenerationData implements DiffableState {
         mn.a(param4, param5, param12, 97);
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        faa var5 = null;
+        IsaacPacketBuffer var5 = null;
         MissionGenerationData var6 = null;
         try {
           var6 = (MissionGenerationData) (other);
@@ -181,8 +181,8 @@ final class MissionGenerationData implements DiffableState {
             System.out.println("This instance of MissionGenerationData has changed");
           }
           if (obfuscationGuard > -19) {
-            var5 = (faa) null;
-            this.b((faa) null, -26);
+            var5 = (IsaacPacketBuffer) null;
+            this.writeState((IsaacPacketBuffer) null, -26);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

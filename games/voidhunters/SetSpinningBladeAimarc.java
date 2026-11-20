@@ -31,7 +31,7 @@ final class SetSpinningBladeAimarc extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(134, 62, arguments[0].a(45));
+          SetMachineGunEnergyUsed.a(134, 62, arguments[0].intValue(45));
           if (obfuscationGuard >= -119) {
             field_o = -111;
           }

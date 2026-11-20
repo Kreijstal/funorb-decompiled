@@ -290,16 +290,16 @@ final class nra implements dja {
         }
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -11 % ((-64 - param0) / 50);
-        return (tv) ((Object) new AwardVictoryToTeamAction());
+        return (SerializableGameState) ((Object) new AwardVictoryToTeamAction());
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          return (tv[]) null;
+          return (SerializableGameState[]) null;
         }
-        return (tv[]) ((Object) new AwardVictoryToTeamAction[param1]);
+        return (SerializableGameState[]) ((Object) new AwardVictoryToTeamAction[param1]);
     }
 
     static long a(long param0, long param1) {

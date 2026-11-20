@@ -1,62 +1,62 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class faa extends PacketBuffer {
-    private int field_k;
-    private int field_i;
-    private dq field_j;
+final class IsaacPacketBuffer extends PacketBuffer {
+    private int writeBitsRemaining;
+    private int readBitPosition;
+    private IsaacCipher cipher;
 
-    final void a(int param0, int param1, int param2) {
+    final void writeBits(int param0, int param1, int param2) {
         int fieldTemp$1 = 0;
         int fieldTemp$0 = 0;
         int var5;
         var5 = VoidHunters.field_G;
         param1 = param1 & SetMissionDebrisVotingChancestep.field_q[param2];
-        while (this.field_k < param2) {
-          param2 = param2 - this.field_k;
+        while (this.writeBitsRemaining < param2) {
+          param2 = param2 - this.writeBitsRemaining;
           fieldTemp$1 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$1] = (byte)(this.payload[fieldTemp$1] + (param1 >>> param2));
           this.payload[this.position] = (byte) 0;
-          this.field_k = 8;
+          this.writeBitsRemaining = 8;
         }
-        if (this.field_k == param2) {
+        if (this.writeBitsRemaining == param2) {
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
           this.payload[fieldTemp$0] = (byte)(this.payload[fieldTemp$0] + param1);
           this.payload[this.position] = (byte) 0;
-          this.field_k = 8;
+          this.writeBitsRemaining = 8;
         } else {
-          this.field_k = this.field_k - param2;
-          this.payload[this.position] = (byte)(this.payload[this.position] + (param1 << this.field_k));
+          this.writeBitsRemaining = this.writeBitsRemaining - param2;
+          this.payload[this.position] = (byte)(this.payload[this.position] + (param1 << this.writeBitsRemaining));
         }
         if (param0 == -632) {
           return;
         }
-        this.field_k = -63;
+        this.writeBitsRemaining = -63;
     }
 
-    final void f(byte param0) {
-        this.position = (this.field_i + 7) / 8;
+    final void endBitRead(byte param0) {
+        this.position = (this.readBitPosition + 7) / 8;
         if (param0 > -31) {
-          this.field_j = (dq) null;
+          this.cipher = (IsaacCipher) null;
         }
     }
 
-    final int o(int param0) {
+    final int readIsaacByte(int param0) {
         int fieldTemp$0 = 0;
         if (param0 == 255) {
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          return 255 & this.payload[fieldTemp$0] - this.field_j.a((byte) -41);
+          return 255 & this.payload[fieldTemp$0] - this.cipher.nextInt((byte) -41);
         }
-        this.f((byte) -108);
+        this.endBitRead((byte) -108);
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        return 255 & this.payload[fieldTemp$1] - this.field_j.a((byte) -41);
+        return 255 & this.payload[fieldTemp$1] - this.cipher.nextInt((byte) -41);
     }
 
-    final static vab a(byte param0, OpenGlToolkit param1, int param2, String param3) {
+    final static vab compileArbProgram(byte param0, OpenGlToolkit param1, int param2, String param3) {
         int var4_int = 0;
         RuntimeException var4 = null;
         vab stackIn_2_0 = null;
@@ -105,13 +105,13 @@ final class faa extends PacketBuffer {
         }
     }
 
-    final int i(int param0, int param1) {
+    final int readBits(int param0, int param1) {
         int incrementValue$0 = 0;
         int var6 = VoidHunters.field_G;
-        int var3 = this.field_i >> 3;
-        int var4 = 8 - (7 & this.field_i);
+        int var3 = this.readBitPosition >> 3;
+        int var4 = 8 - (7 & this.readBitPosition);
         int var5 = param0;
-        this.field_i = this.field_i + param1;
+        this.readBitPosition = this.readBitPosition + param1;
         while (var4 < param1) {
           incrementValue$0 = var3;
           var3++;
@@ -127,66 +127,66 @@ final class faa extends PacketBuffer {
         return var5;
     }
 
-    faa(byte[] param0) {
+    IsaacPacketBuffer(byte[] param0) {
         super(param0);
     }
 
-    final void h(int param0, int param1) {
+    final void writeIsaacByte(int param0, int param1) {
         int fieldTemp$0 = 0;
         if (param0 == 24335) {
           fieldTemp$0 = this.position;
           this.position = this.position + 1;
-          this.payload[fieldTemp$0] = (byte)(param1 + this.field_j.a((byte) -41));
+          this.payload[fieldTemp$0] = (byte)(param1 + this.cipher.nextInt((byte) -41));
           return;
         }
-        this.field_j = (dq) null;
+        this.cipher = (IsaacCipher) null;
         int fieldTemp$1 = this.position;
         this.position = this.position + 1;
-        this.payload[fieldTemp$1] = (byte)(param1 + this.field_j.a((byte) -41));
+        this.payload[fieldTemp$1] = (byte)(param1 + this.cipher.nextInt((byte) -41));
     }
 
-    faa(int param0) {
+    IsaacPacketBuffer(int param0) {
         super(param0);
     }
 
-    final void r(int param0) {
-        if (this.field_k < 8) {
+    final void endBitWrite(int param0) {
+        if (this.writeBitsRemaining < 8) {
           this.position = this.position + 1;
-          this.field_k = 8;
+          this.writeBitsRemaining = 8;
         }
         if (param0 == 32712) {
           return;
         }
-        this.field_j = (dq) null;
+        this.cipher = (IsaacCipher) null;
     }
 
-    final void a(int param0, int[] param1) {
+    final void initializeCipher(int param0, int[] param1) {
         try {
-          this.field_j = new dq(param1);
+          this.cipher = new IsaacCipher(param1);
           if (param0 != 18794) {
-            this.r(-43);
+            this.endBitWrite(-43);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "faa.DB(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final void p(int param0) {
-        this.field_i = 8 * this.position;
+    final void beginBitRead(int param0) {
+        this.readBitPosition = 8 * this.position;
         if (param0 != -23497) {
-          this.r(-90);
+          this.endBitWrite(-90);
         }
     }
 
-    final void q(int param0) {
+    final void beginBitWrite(int param0) {
         this.payload[this.position] = (byte) 0;
         if (param0 > -66) {
           return;
         }
-        this.field_k = 8;
+        this.writeBitsRemaining = 8;
     }
 
-    final void a(int param0, int param1, byte param2, byte[] param3) {
+    final void readIsaacBytes(int param0, int param1, byte param2, byte[] param3) {
         int var5_int = 0;
         int fieldTemp$0 = 0;
         RuntimeException stackIn_9_0 = null;
@@ -198,12 +198,12 @@ final class faa extends PacketBuffer {
         var6 = VoidHunters.field_G;
         try {
           if (param2 != -50) {
-            this.o(39);
+            this.readIsaacByte(39);
           }
           for (var5_int = 0; param0 > var5_int; var5_int++) {
             fieldTemp$0 = this.position;
             this.position = this.position + 1;
-            param3[var5_int + param1] = (byte)(this.payload[fieldTemp$0] - this.field_j.a((byte) -41));
+            param3[var5_int + param1] = (byte)(this.payload[fieldTemp$0] - this.cipher.nextInt((byte) -41));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

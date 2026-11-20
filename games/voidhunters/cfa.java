@@ -18,8 +18,8 @@ final class cfa extends oib {
 
     final void a(PacketBuffer param0, int param1) {
         try {
-          param0.b((byte) 0, this.field_f);
-          param0.a((byte) -53, this.field_d);
+          param0.writeCircumfixedString((byte) 0, this.field_f);
+          param0.writeBase38Name((byte) -53, this.field_d);
           if (param1 != -26216) {
             this.field_d = (String) null;
           }

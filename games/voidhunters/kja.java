@@ -46,7 +46,7 @@ class kja extends htb {
         hob var5;
         int var6;
         var6 = VoidHunters.field_G;
-        var4 = (hob) (this.field_B.d(param2 + param2));
+        var4 = (hob) (this.field_B.first(param2 + param2));
         while (var4 != null) {
           var5 = var4;
           while (var5 != null) {
@@ -58,7 +58,7 @@ class kja extends htb {
             }
             var5 = var5.field_f;
           }
-          var4 = (hob) (this.field_B.a((byte) 95));
+          var4 = (hob) (this.field_B.next((byte) 95));
         }
         return null;
     }
@@ -249,7 +249,7 @@ class kja extends htb {
             if (var10 != null) {
               ((hob) (var10)).field_f = var15;
             }
-            this.field_B.b(-10258, var15);
+            this.field_B.addLast(-10258, var15);
             var10 = var15;
           }
         }

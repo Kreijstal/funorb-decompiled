@@ -22,25 +22,25 @@ final class olb extends le {
           var5 = param0;
           if (0 != var5) {
             if (var5 == 1) {
-              this.field_j = param2.e(1869);
+              this.field_j = param2.readUnsignedShort(1869);
             } else {
               if (var5 != 2) {
                 if (var5 == 3) {
-                  this.field_m = param2.e(1869);
+                  this.field_m = param2.readUnsignedShort(1869);
                 } else {
                   if (var5 == 4) {
-                    var4_int = param2.c((byte) -57);
+                    var4_int = param2.readUnsignedMedium((byte) -57);
                     this.field_i[1] = dla.a(var4_int >> 4, 4080);
                     this.field_i[2] = dla.a(255, var4_int) >> 12;
                     this.field_i[0] = dla.a(var4_int, 16711680) << 4;
                   }
                 }
               } else {
-                this.field_l = param2.e(1869);
+                this.field_l = param2.readUnsignedShort(1869);
               }
             }
           } else {
-            this.field_k = param2.e(1869);
+            this.field_k = param2.readUnsignedShort(1869);
           }
           if (param1 < -60) {
             return;
@@ -192,7 +192,7 @@ final class olb extends le {
             GetDebrisThrowable.a(false, "Destroying game");
             vqa.field_g = null;
             aeb.field_a = false;
-            ndb.field_a = null;
+            ProxyAuthenticationException.field_a = null;
           }
           if (GetMachineGunAimarc.field_p) {
             SetGrapplingHookCooldown.field_o = new IntrusiveDeque();

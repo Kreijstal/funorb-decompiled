@@ -271,7 +271,7 @@ final class ShipComponent implements DiffableState, utb {
                   var9 = param2.getShips(1000);
                   var10 = null;
                   var11 = var22.j(param1 ^ 107);
-                  var12 = (Projectile) (var24.d(0));
+                  var12 = (Projectile) (var24.first(0));
                   while (var12 != null) {
                     var13 = var12.getType((byte) -104);
                     if ((~var12.getFiredTeam(512) != ~var26.getTeam((byte) 73) ||
@@ -288,7 +288,7 @@ final class ShipComponent implements DiffableState, utb {
                         var11 = var16;
                       }
                     }
-                    var12 = (Projectile) (var24.a((byte) 65));
+                    var12 = (Projectile) (var24.next((byte) 65));
                   }
                   var19 = var9;
                   var12_array = var9;
@@ -326,7 +326,7 @@ final class ShipComponent implements DiffableState, utb {
           stackIn_65_0 = (!this.k((byte) 46)) ? 0 : 1;
           var5_intLifetime1 = stackIn_65_0;
           if (param1 != -124) {
-            this.a((faa) null, false);
+            this.readState((IsaacPacketBuffer) null, false);
           }
           if (var5_intLifetime1 != 0 &&
             this.weaponbehaviour != null &&
@@ -536,7 +536,7 @@ final class ShipComponent implements DiffableState, utb {
               if (var10 == -1) {
                 return;
               }
-              param3.b(-10258, new fka(this, param2, param5, param4, var10));
+              param3.addLast(-10258, new fka(this, param2, param5, param4, var10));
               return;
             }
             var10Lifetime3 = -1;
@@ -553,7 +553,7 @@ final class ShipComponent implements DiffableState, utb {
             if (var10Lifetime3 == -1) {
               return;
             }
-            param3.b(-10258, new fka(this, param2, param5, param4, var10Lifetime3));
+            param3.addLast(-10258, new fka(this, param2, param5, param4, var10Lifetime3));
             return;
           }
           if (var9 != null) {
@@ -568,12 +568,12 @@ final class ShipComponent implements DiffableState, utb {
             if (var10Lifetime1 == -1) {
               return;
             }
-            param3.b(-10258, new fka(this, param2, param5, param4, var10Lifetime1));
+            param3.addLast(-10258, new fka(this, param2, param5, param4, var10Lifetime1));
             return;
           }
           var10Lifetime2 = ihb.a(this.finaloutline, -5115, param5.finaloutline);
           if (-1 != var10Lifetime2) {
-            param3.b(-10258, new fka(this, param2, param5, param4, var10Lifetime2));
+            param3.addLast(-10258, new fka(this, param2, param5, param4, var10Lifetime2));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1099,9 +1099,9 @@ final class ShipComponent implements DiffableState, utb {
         return this.health <= 0 ? true : false;
     }
 
-    private final void b(faa param0, byte param1) {
+    private final void b(IsaacPacketBuffer param0, byte param1) {
         int var3_int = 0;
-        faa stackIn_4_0 = null;
+        IsaacPacketBuffer stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         boolean stackIn_5_2 = false;
         RuntimeException stackIn_13_0 = null;
@@ -1111,17 +1111,17 @@ final class ShipComponent implements DiffableState, utb {
         RuntimeException var3 = null;
         try {
           if (this.d((byte) -94)) {
-            param0.a(-632, this.currentconnectedangle, 14);
+            param0.writeBits(-632, this.currentconnectedangle, 14);
           }
           var3_int = -63 / ((9 - param1) / 47);
-          stackIn_4_0 = (faa) (param0);
+          stackIn_4_0 = (IsaacPacketBuffer) (param0);
           stackIn_4_1 = -115;
           stackIn_5_2 = (this.health != this.i((byte) -112).field_p);
-          if (vq.a(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
-            param0.a(-632, this.health, BodyInZoneCondition.a(-88, this.i((byte) -112).field_p));
+          if (vq.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
+            param0.writeBits(-632, this.health, BodyInZoneCondition.a(-88, this.i((byte) -112).field_p));
           }
           if (this.f((byte) -98)) {
-            param0.a(-632, this.triggermap, 9);
+            param0.writeBits(-632, this.triggermap, 9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -1191,7 +1191,7 @@ final class ShipComponent implements DiffableState, utb {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int stackIn_31_0 = 0;
         int stackIn_34_1 = 0;
         int stackIn_42_0 = 0;
@@ -1256,7 +1256,7 @@ final class ShipComponent implements DiffableState, utb {
           }
           if ((stackIn_31_0 ^ stackIn_34_1) != 0 ||
             this.weaponbehaviour != null &&
-            this.weaponbehaviour.a((byte) 114, var5.weaponbehaviour)) {
+            this.weaponbehaviour.differsFrom((byte) 114, var5.weaponbehaviour)) {
             System.out.println("WeaponBehaviour weaponbehaviour has changed. before=" + var5.weaponbehaviour + ", now=" + this.weaponbehaviour);
             var4 = 1;
           }
@@ -1268,7 +1268,7 @@ final class ShipComponent implements DiffableState, utb {
           }
           if ((stackIn_42_0 ^ stackIn_45_1) != 0 ||
             this.thrusterbehaviour != null &&
-            this.thrusterbehaviour.a((byte) 109, var5.thrusterbehaviour)) {
+            this.thrusterbehaviour.differsFrom((byte) 109, var5.thrusterbehaviour)) {
             System.out.println("ThrusterBehaviour thrusterbehaviour has changed. before=" + var5.thrusterbehaviour + ", now=" + this.thrusterbehaviour);
             var4 = 1;
           }
@@ -1280,7 +1280,7 @@ final class ShipComponent implements DiffableState, utb {
           }
           if ((stackIn_53_0 ^ stackIn_56_1) != 0 ||
             this.grapplebehaviour != null &&
-            this.grapplebehaviour.a((byte) 110, var5.grapplebehaviour)) {
+            this.grapplebehaviour.differsFrom((byte) 110, var5.grapplebehaviour)) {
             var4 = 1;
             System.out.println("GrappleLauncherBehaviour grapplebehaviour has changed. before=" + var5.grapplebehaviour + ", now=" + this.grapplebehaviour);
           }
@@ -1294,7 +1294,7 @@ final class ShipComponent implements DiffableState, utb {
             null != this.behaviour &&
             this.behaviour.getClass() != var5.behaviour.getClass() ||
             this.behaviour != null &&
-            this.behaviour.a((byte) -125, var5.behaviour)) {
+            this.behaviour.differsFrom((byte) -125, var5.behaviour)) {
             System.out.println("ComponentBehaviour behaviour has changed. before=" + var5.behaviour + ", now=" + this.behaviour);
             var4 = 1;
           }
@@ -1441,7 +1441,7 @@ final class ShipComponent implements DiffableState, utb {
         int var7 = VoidHunters.field_G;
         int var5 = ar.a(param3 - this.finalx, (byte) 124, param1 - this.finaly) + this.i((byte) -112).field_l;
         if (param2 > -61) {
-          this.b((faa) null, (byte) -13);
+          this.b((IsaacPacketBuffer) null, (byte) -13);
         }
         if (var5 > param0) {
           param0 = var5;
@@ -1623,7 +1623,7 @@ final class ShipComponent implements DiffableState, utb {
         }
     }
 
-    private final void a(int param0, faa param1) {
+    private final void a(int param0, IsaacPacketBuffer param1) {
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -1633,13 +1633,13 @@ final class ShipComponent implements DiffableState, utb {
           if (this.d((byte) -94)) {
             this.currentconnectedangle = uwa.a(14, param1, (byte) 20);
           }
-          if (!kv.a(false, param1)) {
+          if (!kv.readBoolean(false, param1)) {
             this.health = this.i((byte) -112).field_p;
           } else {
-            this.health = param1.i(0, BodyInZoneCondition.a(-111, this.i((byte) -112).field_p));
+            this.health = param1.readBits(0, BodyInZoneCondition.a(-111, this.i((byte) -112).field_p));
           }
           if (this.f((byte) -15)) {
-            this.triggermap = param1.i(0, 9);
+            this.triggermap = param1.readBits(0, 9);
           }
           this.c(true);
           if (param0 != 0) {
@@ -1672,7 +1672,7 @@ final class ShipComponent implements DiffableState, utb {
               var4_int == 0) {
               var4_int++;
             }
-            param0.b(-10258, new ihb(this.i((byte) -112).b(-1), var4_int));
+            param0.addLast(-10258, new ihb(this.i((byte) -112).b(-1), var4_int));
           }
           if (this.subcomponents != null) {
             var6 = 0;
@@ -1752,7 +1752,7 @@ final class ShipComponent implements DiffableState, utb {
                 var17 < 245) {
                 var18 = var8 + (var17 * (var10 - var8) >> 8);
                 var19 = var9 + ((var11 - var9) * var17 >> 8);
-                param1.b(-10258, new gda(this, param3, param2, param5, var18, var19, var7_intLifetime1 >> 1, var12 >> 1));
+                param1.addLast(-10258, new gda(this, param3, param2, param5, var18, var19, var7_intLifetime1 >> 1, var12 >> 1));
               }
             }
           }
@@ -2124,7 +2124,7 @@ final class ShipComponent implements DiffableState, utb {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -2134,36 +2134,36 @@ final class ShipComponent implements DiffableState, utb {
         int var4 = 0;
         var4 = VoidHunters.field_G;
         try {
-          this.componentTypeId = param0.i(0, 6);
-          if (!kv.a(false, param0)) {
+          this.componentTypeId = param0.readBits(0, 6);
+          if (!kv.readBoolean(false, param0)) {
             this.weaponbehaviour = null;
           } else {
             if (null == this.weaponbehaviour) {
               this.weaponbehaviour = new WeaponBehaviour();
             }
-            this.weaponbehaviour.a(param0, false);
+            this.weaponbehaviour.readState(param0, false);
           }
-          if (kv.a(false, param0)) {
+          if (kv.readBoolean(false, param0)) {
             if (null == this.thrusterbehaviour) {
               this.thrusterbehaviour = new ThrusterBehaviour();
             }
-            this.thrusterbehaviour.a(param0, param1);
+            this.thrusterbehaviour.readState(param0, param1);
           } else {
             this.thrusterbehaviour = null;
           }
-          if (kv.a(param1, param0)) {
+          if (kv.readBoolean(param1, param0)) {
             if (this.grapplebehaviour == null) {
               this.grapplebehaviour = new GrappleLauncherBehaviour();
             }
-            this.grapplebehaviour.a(param0, param1);
+            this.grapplebehaviour.readState(param0, param1);
           } else {
             this.grapplebehaviour = null;
           }
-          if (!kv.a(false, param0)) {
+          if (!kv.readBoolean(false, param0)) {
             this.behaviour = null;
           } else {
             if (null == this.behaviour) {
-              var3_int = param0.i(0, 1);
+              var3_int = param0.readBits(0, 1);
               if (0 == var3_int) {
                 this.behaviour = (ComponentBehaviour) ((Object) new mua());
               } else {
@@ -2171,9 +2171,9 @@ final class ShipComponent implements DiffableState, utb {
                   this.behaviour = (ComponentBehaviour) ((Object) new kma());
                 }
               }
-              this.behaviour.a(param0, false);
+              this.behaviour.readState(param0, false);
             } else {
-              this.behaviour.a(param0, false);
+              this.behaviour.readState(param0, false);
             }
           }
           this.subcomponents = (ShipComponent[]) (SetAutoDetail.a(5, ii.field_d, param0, 1, -85, this.subcomponents));
@@ -2412,8 +2412,8 @@ final class ShipComponent implements DiffableState, utb {
           var15.a(false, var14.worldx - var17, -var18 + var14.worldy, var16, param3 ^ param3, (int[]) null);
           var19 = new IntrusiveDeque();
           param6.a(var15, 0, 0, (byte) -126, var19);
-          if (var19.c(3) > 0) {
-            var20_ref = (fka) (var19.d(0));
+          if (var19.size(3) > 0) {
+            var20_ref = (fka) (var19.first(0));
             while (var20_ref != null) {
               if (var20_ref.field_e > 255 &&
                 !this.a(param6, -23, var20_ref.field_f, var20_ref.field_d) &&
@@ -2422,7 +2422,7 @@ final class ShipComponent implements DiffableState, utb {
                 var20_ref.field_f != var23.field_b)) {
                 var11.a((byte) 108, var20_ref.field_f);
               }
-              var20_ref = (fka) (var19.a((byte) 112));
+              var20_ref = (fka) (var19.next((byte) 112));
             }
           }
           if (var14.connectedComponentIdx != -1) {
@@ -2450,7 +2450,7 @@ final class ShipComponent implements DiffableState, utb {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int stackIn_4_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_14_0 = 0;
@@ -2479,7 +2479,7 @@ final class ShipComponent implements DiffableState, utb {
               stackIn_7_1 = 1;
             }
             if ((stackIn_4_0 ^ stackIn_7_1) == 0 && (null == this.weaponbehaviour ||
-              !this.weaponbehaviour.a((byte) 87, var5.weaponbehaviour))) {
+              !this.weaponbehaviour.differsFrom((byte) 87, var5.weaponbehaviour))) {
               stackIn_14_0 = (var5.thrusterbehaviour != null) ? 0 : 1;
               if (null != this.thrusterbehaviour) {
                 stackIn_17_1 = 0;
@@ -2487,7 +2487,7 @@ final class ShipComponent implements DiffableState, utb {
                 stackIn_17_1 = 1;
               }
               if ((stackIn_14_0 ^ stackIn_17_1) == 0 && (this.thrusterbehaviour == null ||
-                !this.thrusterbehaviour.a((byte) 117, var5.thrusterbehaviour))) {
+                !this.thrusterbehaviour.differsFrom((byte) 117, var5.thrusterbehaviour))) {
                 stackIn_24_0 = (this.grapplebehaviour != null) ? 0 : 1;
                 if (var5.grapplebehaviour != null) {
                   stackIn_27_1 = 0;
@@ -2495,7 +2495,7 @@ final class ShipComponent implements DiffableState, utb {
                   stackIn_27_1 = 1;
                 }
                 if ((stackIn_24_0 ^ stackIn_27_1) == 0 && (this.grapplebehaviour == null ||
-                  !this.grapplebehaviour.a((byte) 90, var5.grapplebehaviour))) {
+                  !this.grapplebehaviour.differsFrom((byte) 90, var5.grapplebehaviour))) {
                   stackIn_34_0 = (this.behaviour != null) ? 0 : 1;
                   if (null != var5.behaviour) {
                     stackIn_37_1 = 0;
@@ -2504,7 +2504,7 @@ final class ShipComponent implements DiffableState, utb {
                   }
                   if ((stackIn_34_0 ^ stackIn_37_1) == 0 && (this.behaviour == null ||
                     this.behaviour.getClass() == var5.behaviour.getClass()) && (null == this.behaviour ||
-                    !this.behaviour.a((byte) -80, var5.behaviour)) && (!SetCountermeasureLauncherAimspeed.a(var5.subcomponents, false, 1, this.subcomponents, 125) &&
+                    !this.behaviour.differsFrom((byte) -80, var5.behaviour)) && (!SetCountermeasureLauncherAimspeed.a(var5.subcomponents, false, 1, this.subcomponents, 125) &&
                     !SetCountermeasureLauncherAimspeed.a(var5.hardpoints, false, 1, this.hardpoints, 125))) {
                     stackIn_49_0 = false;
                     decompiledFrameRemainder0 = false;
@@ -2918,7 +2918,7 @@ final class ShipComponent implements DiffableState, utb {
         return var2;
     }
 
-    public final void a(faa param0, int param1) {
+    public final void a(IsaacPacketBuffer param0, int param1) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -2928,39 +2928,39 @@ final class ShipComponent implements DiffableState, utb {
         int var4 = 0;
         var4 = VoidHunters.field_G;
         try {
-          this.componentTypeId = param0.i(0, 6);
-          this.triggermap = param0.i(0, 32);
-          this.connectionpointx = param0.i(param1 - 32, 32);
-          this.connectionpointy = param0.i(param1 - 32, param1);
-          if (!kv.a(false, param0)) {
+          this.componentTypeId = param0.readBits(0, 6);
+          this.triggermap = param0.readBits(0, 32);
+          this.connectionpointx = param0.readBits(param1 - 32, 32);
+          this.connectionpointy = param0.readBits(param1 - 32, param1);
+          if (!kv.readBoolean(false, param0)) {
             this.weaponbehaviour = null;
           } else {
             if (this.weaponbehaviour == null) {
               this.weaponbehaviour = new WeaponBehaviour();
             }
-            this.weaponbehaviour.a(param0, false);
+            this.weaponbehaviour.readState(param0, false);
           }
-          if (kv.a(false, param0)) {
+          if (kv.readBoolean(false, param0)) {
             if (this.thrusterbehaviour == null) {
               this.thrusterbehaviour = new ThrusterBehaviour();
             }
-            this.thrusterbehaviour.a(param0, false);
+            this.thrusterbehaviour.readState(param0, false);
           } else {
             this.thrusterbehaviour = null;
           }
-          if (kv.a(false, param0)) {
+          if (kv.readBoolean(false, param0)) {
             if (null == this.grapplebehaviour) {
               this.grapplebehaviour = new GrappleLauncherBehaviour();
             }
-            this.grapplebehaviour.a(param0, false);
+            this.grapplebehaviour.readState(param0, false);
           } else {
             this.grapplebehaviour = null;
           }
-          if (!kv.a(false, param0)) {
+          if (!kv.readBoolean(false, param0)) {
             this.behaviour = null;
           } else {
             if (null == this.behaviour) {
-              var3_int = param0.i(0, 1);
+              var3_int = param0.readBits(0, 1);
               if (var3_int != 0) {
                 if (var3_int == 1) {
                   this.behaviour = (ComponentBehaviour) ((Object) new kma());
@@ -2969,16 +2969,16 @@ final class ShipComponent implements DiffableState, utb {
                 this.behaviour = (ComponentBehaviour) ((Object) new mua());
               }
             }
-            this.behaviour.a(param0, false);
+            this.behaviour.readState(param0, false);
           }
           this.subcomponents = (ShipComponent[]) (GetAutoAfkTimeout.a(127, 1, this.subcomponents, ii.field_d, 5, param0));
           this.hardpoints = (Hardpoint[]) (GetAutoAfkTimeout.a(param1 ^ 93, 1, this.hardpoints, ta.field_a, 5, param0));
-          this.connectedangle = param0.i(0, 32);
+          this.connectedangle = param0.readBits(0, 32);
           this.currentconnectedangle = uwa.a(14, param0, (byte) 20);
-          this.health = param0.i(0, 32);
-          this.finalx = param0.i(0, 32);
-          this.finaly = param0.i(0, 32);
-          this.finalangle = param0.i(0, 32);
+          this.health = param0.readBits(0, 32);
+          this.finalx = param0.readBits(0, 32);
+          this.finaly = param0.readBits(0, 32);
+          this.finalangle = param0.readBits(0, 32);
           this.finaloutline = wkb.a((byte) 37, this.finaloutline, param0, 8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3093,7 +3093,7 @@ final class ShipComponent implements DiffableState, utb {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
         String stackIn_35_2 = null;
@@ -3114,13 +3114,13 @@ final class ShipComponent implements DiffableState, utb {
             if (null == var5.weaponbehaviour) {
               var5.weaponbehaviour = new WeaponBehaviour();
             }
-            this.weaponbehaviour.b((byte) 110, var5.weaponbehaviour);
+            this.weaponbehaviour.copyTo((byte) 110, var5.weaponbehaviour);
           }
           if (this.thrusterbehaviour != null) {
             if (var5.thrusterbehaviour == null) {
               var5.thrusterbehaviour = new ThrusterBehaviour();
             }
-            this.thrusterbehaviour.b((byte) 117, var5.thrusterbehaviour);
+            this.thrusterbehaviour.copyTo((byte) 117, var5.thrusterbehaviour);
           } else {
             var5.thrusterbehaviour = null;
           }
@@ -3128,7 +3128,7 @@ final class ShipComponent implements DiffableState, utb {
             if (null == var5.grapplebehaviour) {
               var5.grapplebehaviour = new GrappleLauncherBehaviour();
             }
-            this.grapplebehaviour.b((byte) 55, var5.grapplebehaviour);
+            this.grapplebehaviour.copyTo((byte) 55, var5.grapplebehaviour);
           } else {
             var5.grapplebehaviour = null;
           }
@@ -3143,7 +3143,7 @@ final class ShipComponent implements DiffableState, utb {
                 }
               }
             }
-            this.behaviour.b((byte) 78, var5.behaviour);
+            this.behaviour.copyTo((byte) 78, var5.behaviour);
           } else {
             var5.behaviour = null;
           }
@@ -3419,7 +3419,7 @@ final class ShipComponent implements DiffableState, utb {
             }
           }
           if (ujb.a((byte) -57, this.finaloutline, param3, param1, param5)) {
-            param6.b(-10258, new gda(this, param2, param0, param8, param3, param1, 0, 0));
+            param6.addLast(-10258, new gda(this, param2, param0, param8, param3, param1, 0, 0));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3580,25 +3580,25 @@ final class ShipComponent implements DiffableState, utb {
         return var7;
     }
 
-    public final void a(faa param0, byte param1) {
-        faa stackIn_3_0 = null;
+    public final void a(IsaacPacketBuffer param0, byte param1) {
+        IsaacPacketBuffer stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         boolean stackIn_4_2 = false;
-        faa stackIn_8_0 = null;
+        IsaacPacketBuffer stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         boolean stackIn_9_2 = false;
-        faa stackIn_13_0 = null;
+        IsaacPacketBuffer stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         boolean stackIn_14_2 = false;
-        faa stackIn_18_0 = null;
+        IsaacPacketBuffer stackIn_18_0 = null;
         int stackIn_18_1 = 0;
         boolean stackIn_19_2 = false;
         int stackIn_30_0 = 0;
-        faa stackIn_35_0 = null;
+        IsaacPacketBuffer stackIn_35_0 = null;
         int stackIn_35_1 = 0;
         boolean stackIn_36_2 = false;
         int stackIn_44_0 = 0;
-        faa stackIn_50_0 = null;
+        IsaacPacketBuffer stackIn_50_0 = null;
         int stackIn_50_1 = 0;
         boolean stackIn_51_2 = false;
         int stackIn_57_0 = 0;
@@ -3607,7 +3607,7 @@ final class ShipComponent implements DiffableState, utb {
         StringBuilder stackIn_62_1 = null;
         String stackIn_63_2 = null;
         RuntimeException decompiledCaughtException = null;
-        faa var3 = null;
+        IsaacPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         ShipComponent[] var4 = null;
         Hardpoint[] var4_array = null;
@@ -3619,45 +3619,45 @@ final class ShipComponent implements DiffableState, utb {
         int var10 = 0;
         ShipComponent[] var11 = null;
         Hardpoint[] var12 = null;
-        faa var3Lifetime1;
+        IsaacPacketBuffer var3Lifetime1;
         int var5Lifetime1;
         int var7Lifetime1;
         var9 = VoidHunters.field_G;
         try {
-          param0.a(-632, this.componentTypeId, 6);
-          param0.a(-632, this.triggermap, 32);
-          param0.a(-632, this.connectionpointx, 32);
-          param0.a(-632, this.connectionpointy, 32);
-          stackIn_3_0 = (faa) (param0);
+          param0.writeBits(-632, this.componentTypeId, 6);
+          param0.writeBits(-632, this.triggermap, 32);
+          param0.writeBits(-632, this.connectionpointx, 32);
+          param0.writeBits(-632, this.connectionpointy, 32);
+          stackIn_3_0 = (IsaacPacketBuffer) (param0);
           stackIn_3_1 = 74;
           stackIn_4_2 = (this.weaponbehaviour != null);
-          if (vq.a(stackIn_3_0, stackIn_3_1, stackIn_4_2)) {
-            this.weaponbehaviour.b(param0, -125);
+          if (vq.writeBoolean(stackIn_3_0, stackIn_3_1, stackIn_4_2)) {
+            this.weaponbehaviour.writeState(param0, -125);
           }
-          stackIn_8_0 = (faa) (param0);
+          stackIn_8_0 = (IsaacPacketBuffer) (param0);
           stackIn_8_1 = 104;
           stackIn_9_2 = (null != this.thrusterbehaviour);
-          if (vq.a(stackIn_8_0, stackIn_8_1, stackIn_9_2)) {
-            this.thrusterbehaviour.b(param0, -125);
+          if (vq.writeBoolean(stackIn_8_0, stackIn_8_1, stackIn_9_2)) {
+            this.thrusterbehaviour.writeState(param0, -125);
           }
-          stackIn_13_0 = (faa) (param0);
+          stackIn_13_0 = (IsaacPacketBuffer) (param0);
           stackIn_13_1 = -93;
           stackIn_14_2 = (this.grapplebehaviour != null);
-          if (vq.a(stackIn_13_0, stackIn_13_1, stackIn_14_2)) {
-            this.grapplebehaviour.b(param0, -115);
+          if (vq.writeBoolean(stackIn_13_0, stackIn_13_1, stackIn_14_2)) {
+            this.grapplebehaviour.writeState(param0, -115);
           }
-          stackIn_18_0 = (faa) (param0);
+          stackIn_18_0 = (IsaacPacketBuffer) (param0);
           stackIn_18_1 = 54;
           stackIn_19_2 = (null != this.behaviour);
-          if (vq.a(stackIn_18_0, stackIn_18_1, stackIn_19_2)) {
+          if (vq.writeBoolean(stackIn_18_0, stackIn_18_1, stackIn_19_2)) {
             if (this.behaviour.getClass() != mua.class) {
               if (this.behaviour.getClass() == kma.class) {
-                param0.a(-632, 1, 1);
+                param0.writeBits(-632, 1, 1);
               }
             } else {
-              param0.a(-632, 0, 1);
+              param0.writeBits(-632, 0, 1);
             }
-            this.behaviour.b(param0, -127);
+            this.behaviour.writeState(param0, -127);
           }
           var3 = param0;
           var4 = this.subcomponents;
@@ -3667,7 +3667,7 @@ final class ShipComponent implements DiffableState, utb {
             stackIn_30_0 = var4.length;
           }
           var5 = stackIn_30_0;
-          var3.a(-632, var5, 5);
+          var3.writeBits(-632, var5, 5);
           if (0 != var5) {
             var11 = var4;
             for (var7 = 0; var11.length > var7; var7++) {
@@ -3675,7 +3675,7 @@ final class ShipComponent implements DiffableState, utb {
               stackIn_35_0 = var3;
               stackIn_35_1 = -97;
               stackIn_36_2 = (var8 != null);
-              if (vq.a(stackIn_35_0, stackIn_35_1, stackIn_36_2)) {
+              if (vq.writeBoolean(stackIn_35_0, stackIn_35_1, stackIn_36_2)) {
                 ((utb) ((Object) var8)).a(var3, (byte) -122);
               }
             }
@@ -3691,7 +3691,7 @@ final class ShipComponent implements DiffableState, utb {
             stackIn_44_0 = 0;
           }
           var5Lifetime1 = stackIn_44_0;
-          var3Lifetime1.a(-632, var5Lifetime1, 5);
+          var3Lifetime1.writeBits(-632, var5Lifetime1, 5);
           if (0 != var5Lifetime1) {
             var12 = var4_array;
             var10 = 0;
@@ -3701,18 +3701,18 @@ final class ShipComponent implements DiffableState, utb {
               stackIn_50_0 = var3Lifetime1;
               stackIn_50_1 = 120;
               stackIn_51_2 = (var8_ref != null);
-              if (vq.a(stackIn_50_0, stackIn_50_1, stackIn_51_2)) {
+              if (vq.writeBoolean(stackIn_50_0, stackIn_50_1, stackIn_51_2)) {
                 ((utb) ((Object) var8_ref)).a(var3Lifetime1, (byte) -93);
               }
               var10++;
             }
           }
-          param0.a(-632, this.connectedangle, 32);
-          param0.a(-632, this.currentconnectedangle, 14);
-          param0.a(-632, this.health, 32);
-          param0.a(-632, this.finalx, 32);
-          param0.a(-632, this.finaly, 32);
-          param0.a(-632, this.finalangle, 32);
+          param0.writeBits(-632, this.connectedangle, 32);
+          param0.writeBits(-632, this.currentconnectedangle, 14);
+          param0.writeBits(-632, this.health, 32);
+          param0.writeBits(-632, this.finalx, 32);
+          param0.writeBits(-632, this.finaly, 32);
+          param0.writeBits(-632, this.finalangle, 32);
           stackIn_57_0 = 8;
           if (this.finaloutline == null) {
             stackIn_58_1 = 0;
@@ -4031,32 +4031,32 @@ final class ShipComponent implements DiffableState, utb {
         return hab.field_g[this.componentTypeId];
     }
 
-    public final void b(faa param0, int param1) {
-        faa stackIn_3_0 = null;
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
+        IsaacPacketBuffer stackIn_3_0 = null;
         int stackIn_3_1 = 0;
         boolean stackIn_4_2 = false;
-        faa stackIn_9_0 = null;
+        IsaacPacketBuffer stackIn_9_0 = null;
         int stackIn_9_1 = 0;
         boolean stackIn_10_2 = false;
-        faa stackIn_14_0 = null;
+        IsaacPacketBuffer stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         boolean stackIn_15_2 = false;
-        faa stackIn_20_0 = null;
+        IsaacPacketBuffer stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         boolean stackIn_21_2 = false;
         int stackIn_31_0 = 0;
-        faa stackIn_36_0 = null;
+        IsaacPacketBuffer stackIn_36_0 = null;
         int stackIn_36_1 = 0;
         boolean stackIn_37_2 = false;
         int stackIn_46_0 = 0;
-        faa stackIn_51_0 = null;
+        IsaacPacketBuffer stackIn_51_0 = null;
         int stackIn_51_1 = 0;
         boolean stackIn_52_2 = false;
         RuntimeException stackIn_59_0 = null;
         StringBuilder stackIn_59_1 = null;
         String stackIn_60_2 = null;
         RuntimeException decompiledCaughtException = null;
-        faa var3 = null;
+        IsaacPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         ShipComponent[] var4 = null;
         Hardpoint[] var4_array = null;
@@ -4068,42 +4068,42 @@ final class ShipComponent implements DiffableState, utb {
         int var10 = 0;
         ShipComponent[] var11 = null;
         Hardpoint[] var12 = null;
-        faa var3Lifetime1;
+        IsaacPacketBuffer var3Lifetime1;
         int var5Lifetime1;
         int var7Lifetime1;
         var9 = VoidHunters.field_G;
         try {
-          param0.a(-632, this.componentTypeId, 6);
-          stackIn_3_0 = (faa) (param0);
+          param0.writeBits(-632, this.componentTypeId, 6);
+          stackIn_3_0 = (IsaacPacketBuffer) (param0);
           stackIn_3_1 = -55;
           stackIn_4_2 = (this.weaponbehaviour != null);
-          if (vq.a(stackIn_3_0, stackIn_3_1, stackIn_4_2)) {
-            this.weaponbehaviour.b(param0, -114);
+          if (vq.writeBoolean(stackIn_3_0, stackIn_3_1, stackIn_4_2)) {
+            this.weaponbehaviour.writeState(param0, -114);
           }
-          stackIn_9_0 = (faa) (param0);
+          stackIn_9_0 = (IsaacPacketBuffer) (param0);
           stackIn_9_1 = 62;
           stackIn_10_2 = (null != this.thrusterbehaviour);
-          if (vq.a(stackIn_9_0, stackIn_9_1, stackIn_10_2)) {
-            this.thrusterbehaviour.b(param0, -123);
+          if (vq.writeBoolean(stackIn_9_0, stackIn_9_1, stackIn_10_2)) {
+            this.thrusterbehaviour.writeState(param0, -123);
           }
-          stackIn_14_0 = (faa) (param0);
+          stackIn_14_0 = (IsaacPacketBuffer) (param0);
           stackIn_14_1 = 113;
           stackIn_15_2 = (this.grapplebehaviour != null);
-          if (vq.a(stackIn_14_0, stackIn_14_1, stackIn_15_2)) {
-            this.grapplebehaviour.b(param0, -115);
+          if (vq.writeBoolean(stackIn_14_0, stackIn_14_1, stackIn_15_2)) {
+            this.grapplebehaviour.writeState(param0, -115);
           }
-          stackIn_20_0 = (faa) (param0);
+          stackIn_20_0 = (IsaacPacketBuffer) (param0);
           stackIn_20_1 = -98;
           stackIn_21_2 = (null != this.behaviour);
-          if (vq.a(stackIn_20_0, stackIn_20_1, stackIn_21_2)) {
+          if (vq.writeBoolean(stackIn_20_0, stackIn_20_1, stackIn_21_2)) {
             if (this.behaviour.getClass() != mua.class) {
               if (this.behaviour.getClass() == kma.class) {
-                param0.a(-632, 1, 1);
+                param0.writeBits(-632, 1, 1);
               }
             } else {
-              param0.a(-632, 0, 1);
+              param0.writeBits(-632, 0, 1);
             }
-            this.behaviour.b(param0, -110);
+            this.behaviour.writeState(param0, -110);
           }
           var3 = param0;
           var4 = this.subcomponents;
@@ -4113,7 +4113,7 @@ final class ShipComponent implements DiffableState, utb {
             stackIn_31_0 = 0;
           }
           var5 = stackIn_31_0;
-          var3.a(-632, var5, 5);
+          var3.writeBits(-632, var5, 5);
           if (var5 != 0) {
             var11 = var4;
             for (var7 = 0; var11.length > var7; var7++) {
@@ -4121,7 +4121,7 @@ final class ShipComponent implements DiffableState, utb {
               stackIn_36_0 = var3;
               stackIn_36_1 = 113;
               stackIn_37_2 = (var8 != null);
-              if (vq.a(stackIn_36_0, stackIn_36_1, stackIn_37_2)) {
+              if (vq.writeBoolean(stackIn_36_0, stackIn_36_1, stackIn_37_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
               }
             }
@@ -4137,7 +4137,7 @@ final class ShipComponent implements DiffableState, utb {
             stackIn_46_0 = 0;
           }
           var5Lifetime1 = stackIn_46_0;
-          var3Lifetime1.a(-632, var5Lifetime1, 5);
+          var3Lifetime1.writeBits(-632, var5Lifetime1, 5);
           if (var5Lifetime1 != 0) {
             var12 = var4_array;
             var10 = 0;
@@ -4147,7 +4147,7 @@ final class ShipComponent implements DiffableState, utb {
               stackIn_51_0 = var3Lifetime1;
               stackIn_51_1 = 53;
               stackIn_52_2 = (var8_ref != null);
-              if (vq.a(stackIn_51_0, stackIn_51_1, stackIn_52_2)) {
+              if (vq.writeBoolean(stackIn_51_0, stackIn_51_1, stackIn_52_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3Lifetime1, var8_ref);
               }
               var10++;
@@ -4552,7 +4552,7 @@ final class ShipComponent implements DiffableState, utb {
         var2 = hab.field_g[this.componentTypeId];
         if (null != var2.field_c) {
           this.weaponbehaviour = new WeaponBehaviour();
-          var2.field_c.b((byte) 94, this.weaponbehaviour);
+          var2.field_c.copyTo((byte) 94, this.weaponbehaviour);
           if (var2.b(-1) == -1 &&
             !var2.field_c.a((byte) 24).e(-3)) {
             this.a((byte) 124, 16);
@@ -4561,19 +4561,19 @@ final class ShipComponent implements DiffableState, utb {
         if (var2.field_e == null) {
           if (null != var2.field_g) {
             this.behaviour = (ComponentBehaviour) ((Object) new mua());
-            var2.field_g.b((byte) 56, this.behaviour);
+            var2.field_g.copyTo((byte) 56, this.behaviour);
           }
         } else {
           this.behaviour = (ComponentBehaviour) ((Object) new kma());
-          var2.field_e.b((byte) 64, this.behaviour);
+          var2.field_e.copyTo((byte) 64, this.behaviour);
         }
         if (null != var2.field_t) {
           this.thrusterbehaviour = new ThrusterBehaviour();
-          var2.field_t.b((byte) 92, this.thrusterbehaviour);
+          var2.field_t.copyTo((byte) 92, this.thrusterbehaviour);
         }
         if (null != var2.field_x) {
           this.grapplebehaviour = new GrappleLauncherBehaviour();
-          var2.field_x.b((byte) 107, this.grapplebehaviour);
+          var2.field_x.copyTo((byte) 107, this.grapplebehaviour);
         }
         this.currentconnectedangle = 0;
         this.health = var2.field_p;

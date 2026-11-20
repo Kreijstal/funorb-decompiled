@@ -18,7 +18,7 @@ final class Player extends bha implements DiffableState {
     int kills;
     int aimtargetx;
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int stackIn_11_0 = 0;
         int stackIn_14_1 = 0;
         boolean stackIn_26_0 = false;
@@ -33,7 +33,7 @@ final class Player extends bha implements DiffableState {
           boolean decompiledFrameRemainder0 = true;
           var4 = 2 / ((param0 - 22) / 59);
           var5 = (Player) (param1);
-          if (!super.a((byte) -38, param1) &&
+          if (!super.differsFrom((byte) -38, param1) &&
             var5.triggers == this.triggers &&
             var5.aimtargetx == this.aimtargetx &&
             this.aimtargety == var5.aimtargety &&
@@ -48,7 +48,7 @@ final class Player extends bha implements DiffableState {
               stackIn_14_1 = 1;
             }
             if ((stackIn_11_0 ^ stackIn_14_1) == 0 && (null == this.savedShip ||
-              !this.savedShip.a((byte) -125, var5.savedShip)) && (!SetBlueprintSaveTime.a(var5.carriedOverComponents, this.carriedOverComponents, (byte) 28) &&
+              !this.savedShip.differsFrom((byte) -125, var5.savedShip)) && (!SetBlueprintSaveTime.a(var5.carriedOverComponents, this.carriedOverComponents, (byte) 28) &&
               this.kills == var5.kills &&
               var5.assists == this.assists &&
               this.deaths == var5.deaths &&
@@ -80,8 +80,8 @@ final class Player extends bha implements DiffableState {
           this.unassignedForAutobalanceTimer = this.unassignedForAutobalanceTimer - 1;
         }
         if (param0 != 11) {
-          tv var3 = (tv) null;
-          this.reportDifferences((tv) null, -82);
+          SerializableGameState var3 = (SerializableGameState) null;
+          this.reportDifferences((SerializableGameState) null, -82);
         }
     }
 
@@ -182,7 +182,7 @@ final class Player extends bha implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int stackIn_23_0 = 0;
         int stackIn_26_1 = 0;
         RuntimeException stackIn_52_0 = null;
@@ -236,7 +236,7 @@ final class Player extends bha implements DiffableState {
           }
           if ((stackIn_23_0 ^ stackIn_26_1) != 0 ||
             null != this.savedShip &&
-            this.savedShip.a((byte) 92, var5.savedShip)) {
+            this.savedShip.differsFrom((byte) 92, var5.savedShip)) {
             var4 = 1;
             System.out.println("Ship saved_ship has changed. before=" + var5.savedShip + ", now=" + this.savedShip);
           }
@@ -320,10 +320,10 @@ final class Player extends bha implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         int stackIn_4_0 = 0;
         int stackIn_5_1 = 0;
-        faa stackIn_7_0 = null;
+        IsaacPacketBuffer stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         boolean stackIn_8_2 = false;
         int stackIn_13_0 = 0;
@@ -334,16 +334,16 @@ final class Player extends bha implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          super.b(param0, -124);
-          param0.a(-632, this.triggers, 4);
-          param0.a(-632, this.aimtargetx, 32);
+          super.writeState(param0, -124);
+          param0.writeBits(-632, this.triggers, 4);
+          param0.writeBits(-632, this.aimtargetx, 32);
           if (param1 >= -109) {
             this.b((byte) 107);
           }
-          param0.a(-632, this.aimtargety, 32);
-          param0.a(-632, 1 + this.specialorder, 8);
-          param0.a(-632, this.spawnChoice, 4);
-          param0.a(-632, 1 + this.selectedTeam, 4);
+          param0.writeBits(-632, this.aimtargety, 32);
+          param0.writeBits(-632, 1 + this.specialorder, 8);
+          param0.writeBits(-632, this.spawnChoice, 4);
+          param0.writeBits(-632, 1 + this.selectedTeam, 4);
           stackIn_4_0 = 4;
           if (this.votes != null) {
             stackIn_5_1 = this.votes.length;
@@ -351,11 +351,11 @@ final class Player extends bha implements DiffableState {
             stackIn_5_1 = 0;
           }
           pgb.a(stackIn_4_0, stackIn_5_1, 49, param0, this.votes);
-          stackIn_7_0 = (faa) (param0);
+          stackIn_7_0 = (IsaacPacketBuffer) (param0);
           stackIn_7_1 = 85;
           stackIn_8_2 = (this.savedShip != null);
-          if (vq.a(stackIn_7_0, stackIn_7_1, stackIn_8_2)) {
-            this.savedShip.b(param0, -114);
+          if (vq.writeBoolean(stackIn_7_0, stackIn_7_1, stackIn_8_2)) {
+            this.savedShip.writeState(param0, -114);
           }
           stackIn_13_0 = 8;
           if (this.carriedOverComponents == null) {
@@ -364,10 +364,10 @@ final class Player extends bha implements DiffableState {
             stackIn_14_1 = this.carriedOverComponents.length;
           }
           pgb.a(stackIn_13_0, stackIn_14_1, 63, param0, this.carriedOverComponents);
-          param0.a(-632, this.kills, 16);
-          param0.a(-632, this.assists, 16);
-          param0.a(-632, this.deaths, 16);
-          param0.a(-632, this.unassignedForAutobalanceTimer, 8);
+          param0.writeBits(-632, this.kills, 16);
+          param0.writeBits(-632, this.assists, 16);
+          param0.writeBits(-632, this.deaths, 16);
+          param0.writeBits(-632, this.unassignedForAutobalanceTimer, 8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -383,13 +383,13 @@ final class Player extends bha implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         Player var4 = (Player) (param1);
         if (param0 <= 54) {
           return;
         }
         try {
-          super.b((byte) 93, param1);
+          super.copyTo((byte) 93, param1);
           var4.selectedTeam = this.selectedTeam;
           var4.triggers = this.triggers;
           var4.aimtargety = this.aimtargety;
@@ -403,7 +403,7 @@ final class Player extends bha implements DiffableState {
             if (var4.savedShip == null) {
               var4.savedShip = new Ship();
             }
-            this.savedShip.b((byte) 93, var4.savedShip);
+            this.savedShip.copyTo((byte) 93, var4.savedShip);
           }
           var4.carriedOverComponents = SetTeamSelectionSpeedup.a(var4.carriedOverComponents, (byte) -66, this.carriedOverComponents);
           var4.assists = this.assists;
@@ -422,34 +422,34 @@ final class Player extends bha implements DiffableState {
         this.votes = null;
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          super.a(param0, param1);
-          this.triggers = param0.i(0, 4);
-          this.aimtargetx = param0.i(0, 32);
-          this.aimtargety = param0.i(0, 32);
-          this.specialorder = -1 + param0.i(0, 8);
-          this.spawnChoice = param0.i(0, 4);
-          this.selectedTeam = param0.i(0, 4) - 1;
+          super.readState(param0, param1);
+          this.triggers = param0.readBits(0, 4);
+          this.aimtargetx = param0.readBits(0, 32);
+          this.aimtargety = param0.readBits(0, 32);
+          this.specialorder = -1 + param0.readBits(0, 8);
+          this.spawnChoice = param0.readBits(0, 4);
+          this.selectedTeam = param0.readBits(0, 4) - 1;
           this.votes = wkb.a((byte) 37, this.votes, param0, 4);
-          if (!kv.a(param1, param0)) {
+          if (!kv.readBoolean(param1, param0)) {
             this.savedShip = null;
           } else {
             if (this.savedShip == null) {
               this.savedShip = new Ship();
             }
-            this.savedShip.a(param0, false);
+            this.savedShip.readState(param0, false);
           }
           this.carriedOverComponents = wkb.a((byte) 37, this.carriedOverComponents, param0, 8);
-          this.kills = param0.i(0, 16);
-          this.assists = param0.i(0, 16);
-          this.deaths = param0.i(0, 16);
-          this.unassignedForAutobalanceTimer = param0.i(0, 8);
+          this.kills = param0.readBits(0, 16);
+          this.assists = param0.readBits(0, 16);
+          this.deaths = param0.readBits(0, 16);
+          this.unassignedForAutobalanceTimer = param0.readBits(0, 8);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -476,8 +476,8 @@ final class Player extends bha implements DiffableState {
     final void b(int param0) {
         this.deaths = 0;
         if (param0 != -1) {
-          faa var3 = (faa) null;
-          this.b((faa) null, 126);
+          IsaacPacketBuffer var3 = (IsaacPacketBuffer) null;
+          this.writeState((IsaacPacketBuffer) null, 126);
         }
         this.assists = 0;
         this.kills = 0;

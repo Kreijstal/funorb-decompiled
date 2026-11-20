@@ -89,14 +89,14 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
                 qva.field_j = SetFullMissionSet.a(96, SetTorpedoAimarc.field_p, (String) null, false, param5);
               }
               RequestNewestBlackboxRecording.field_p.position = 0;
-              RequestNewestBlackboxRecording.field_p.c(param3 ^ 13, 14);
-              RequestNewestBlackboxRecording.field_p.c(0, qva.field_j.a((byte) 56).field_a);
+              RequestNewestBlackboxRecording.field_p.writeByte(param3 ^ 13, 14);
+              RequestNewestBlackboxRecording.field_p.writeByte(0, qva.field_j.a((byte) 56).field_a);
               lnb.b(-1, 117);
               tc.field_c = SetSpecialOrderBoxHeight.field_o;
             }
             if (SetSpecialOrderBoxHeight.field_o == tc.field_c &&
               ShipBlueprint.a(1, 30000)) {
-              var6_int = qga.field_b.e((byte) -121);
+              var6_int = qga.field_b.readUnsignedByte((byte) -121);
               if (var6_int != 0) {
                 vja.field_a = -1;
                 tc.field_c = kw.field_xb;
@@ -108,7 +108,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
             }
             if (ida.field_w == tc.field_c &&
               ShipBlueprint.a(8, param3 ^ 30013)) {
-              SetMissileLauncherRandomness.field_p = qga.field_b.k(255);
+              SetMissileLauncherRandomness.field_p = qga.field_b.readLong(255);
               qga.field_b.position = 0;
               dqa.a(-87, param0, param4, qva.field_j, param1);
               tc.field_c = of.field_a;
@@ -116,7 +116,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
             boolean decompiledFrameRemainder0 = true;
             if (tc.field_c == of.field_a &&
               ShipBlueprint.a(1, 30000)) {
-              var6_intLifetime1 = qga.field_b.e((byte) -110);
+              var6_intLifetime1 = qga.field_b.readUnsignedByte((byte) -110);
               ow.field_a = var6_intLifetime1;
               qga.field_b.position = 0;
               GetFighterBayAimspeed.field_o = null;
@@ -141,13 +141,13 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
             }
             if (tc.field_c == htb.field_A &&
               ci.b((byte) 113)) {
-              SetTorpedoAimarc.field_p = qga.field_b.k(255);
+              SetTorpedoAimarc.field_p = qga.field_b.readLong(255);
               SetLagVariant.field_p = param5;
-              SetAngularVelocitySustain.field_p = qga.field_b.e((byte) -94);
-              nfa.field_d = qga.field_b.e((byte) -106);
-              GetDebrisCarryOver.field_o = qga.field_b.e(param3 + 1856);
-              var12 = qga.field_b.m(0);
-              var7 = qga.field_b.e((byte) -106);
+              SetAngularVelocitySustain.field_p = qga.field_b.readUnsignedByte((byte) -94);
+              nfa.field_d = qga.field_b.readUnsignedByte((byte) -106);
+              GetDebrisCarryOver.field_o = qga.field_b.readUnsignedShort(param3 + 1856);
+              var12 = qga.field_b.readNullableString(0);
+              var7 = qga.field_b.readUnsignedByte((byte) -106);
               if ((var7 & 1) != 0) {
                 ImageProducerRasterBuffer.d((byte) 111);
               }
@@ -165,19 +165,19 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               stackIn_50_0 = ((16 & var7) != 0);
               SetMissilesHitSourceTeam.field_p = stackIn_50_0;
               if (GetBombletSprayReload.field_q) {
-                qga.field_b.e((byte) -117);
-                qga.field_b.e((byte) -91);
-                qga.field_b.h(86);
-                TeamNodeCondition.field_e = qga.field_b.e(1869);
+                qga.field_b.readUnsignedByte((byte) -117);
+                qga.field_b.readUnsignedByte((byte) -91);
+                qga.field_b.readInt(86);
+                TeamNodeCondition.field_e = qga.field_b.readUnsignedShort(1869);
                 GetRepairModeActiveTime.field_o = new byte[TeamNodeCondition.field_e];
                 for (var8 = 0; TeamNodeCondition.field_e > var8; var8++) {
-                  GetRepairModeActiveTime.field_o[var8] = qga.field_b.d((byte) -114);
+                  GetRepairModeActiveTime.field_o[var8] = qga.field_b.readByte((byte) -114);
                 }
               }
-              kca.field_a = qga.field_b.a(param3 ^ -14);
+              kca.field_a = qga.field_b.readString(param3 ^ -14);
               var13 = (CharSequence) ((Object) kca.field_a);
               ffb.field_e = jwa.a(false, var13);
-              SetClientSideDragging.field_p = qga.field_b.e((byte) -94);
+              SetClientSideDragging.field_p = qga.field_b.readUnsignedByte((byte) -94);
               tc.field_c = GetOndamageParticleSpeed.field_o;
               if (qva.field_j.a((byte) 124) == GetSalvoDamageMultiplier.field_r) {
                 SetFighterBayAimspeed.field_o.a(MissionList.b((byte) -106), param3 ^ 13);
@@ -209,11 +209,11 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               if (GetDebrisCarryOver.field_o > 0) {
                 GetRespawnTime.field_o = true;
               }
-              RequestNewestBlackboxRecording.field_p.a(18794, nfa.field_e);
+              RequestNewestBlackboxRecording.field_p.initializeCipher(18794, nfa.field_e);
               for (var8Lifetime1 = 0; 4 > var8Lifetime1; var8Lifetime1++) {
                 nfa.field_e[var8Lifetime1] = nfa.field_e[var8Lifetime1] + 50;
               }
-              qga.field_b.a(18794, nfa.field_e);
+              qga.field_b.initializeCipher(18794, nfa.field_e);
               stackIn_77_0 = ow.field_a;
               return stackIn_77_0;
             }
@@ -229,7 +229,7 @@ final class GetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
               if (ow.field_a == 7) {
                 ow.field_a = 3;
               }
-              dgb.field_b = qga.field_b.a(-1);
+              dgb.field_b = qga.field_b.readString(-1);
               SetShowTutorial.field_o = false;
               stackIn_87_0 = ow.field_a;
               return stackIn_87_0;

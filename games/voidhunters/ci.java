@@ -25,16 +25,16 @@ final class ci implements dja {
         }
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          return (tv[]) null;
+          return (SerializableGameState[]) null;
         }
-        return (tv[]) ((Object) new gqa[param1]);
+        return (SerializableGameState[]) ((Object) new gqa[param1]);
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -88 % ((param0 + 64) / 50);
-        return (tv) ((Object) new gqa());
+        return (SerializableGameState) ((Object) new gqa());
     }
 
     public static void a(int param0) {
@@ -50,14 +50,14 @@ final class ci implements dja {
           if (!ShipBlueprint.a(1, 30000)) {
             return false;
           }
-          vja.field_a = qga.field_b.e((byte) -126);
+          vja.field_a = qga.field_b.readUnsignedByte((byte) -126);
           qga.field_b.position = 0;
         }
         if (param0 <= 9) {
           ci.b((byte) -116);
           if (vja.field_a == -2) {
             if (ShipBlueprint.a(2, 30000)) {
-              vja.field_a = qga.field_b.e(1869);
+              vja.field_a = qga.field_b.readUnsignedShort(1869);
               qga.field_b.position = 0;
               return ShipBlueprint.a(vja.field_a, 30000);
             }
@@ -67,7 +67,7 @@ final class ci implements dja {
         }
         if (vja.field_a == -2) {
           if (ShipBlueprint.a(2, 30000)) {
-            vja.field_a = qga.field_b.e(1869);
+            vja.field_a = qga.field_b.readUnsignedShort(1869);
             qga.field_b.position = 0;
             return ShipBlueprint.a(vja.field_a, 30000);
           }

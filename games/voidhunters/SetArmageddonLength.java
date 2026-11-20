@@ -25,7 +25,7 @@ final class SetArmageddonLength extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetArmageddonLength.e((byte) 112);
           }
-          SetMachineGunEnergyUsed.a(62, 62, arguments[0].a(58));
+          SetMachineGunEnergyUsed.a(62, 62, arguments[0].intValue(58));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

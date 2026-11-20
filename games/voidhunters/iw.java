@@ -190,7 +190,7 @@ abstract class iw extends bl {
         int var11 = 0;
         int var12 = 0;
         int var13 = 0;
-        faa var14 = null;
+        IsaacPacketBuffer var14 = null;
         int[][] var18 = null;
         int var6_intLifetime1;
         int var9Lifetime1;
@@ -199,11 +199,11 @@ abstract class iw extends bl {
         var12 = VoidHunters.field_G;
         try {
           var14 = qga.field_b;
-          var2 = var14.e((byte) -87);
-          var3 = (fa) (gm.field_H.d(param0 + 38));
+          var2 = var14.readUnsignedByte((byte) -87);
+          var3 = (fa) (gm.field_H.first(param0 + 38));
           while (var3 != null) {
             if (~var3.field_f != ~var2) {
-              var3 = (fa) (gm.field_H.a((byte) 95));
+              var3 = (fa) (gm.field_H.next((byte) 95));
               continue;
             }
             break;
@@ -215,12 +215,12 @@ abstract class iw extends bl {
           if (param0 != -38) {
             field_D = (String) null;
           }
-          var4 = var14.e((byte) -118);
+          var4 = var14.readUnsignedByte((byte) -118);
           if (var4 != 0) {
             SetAudioRangeCutoff.field_o[0] = kca.field_a;
             var5 = var3.field_g;
             for (var6_int = 1; var4 > var6_int; var6_int++) {
-              SetAudioRangeCutoff.field_o[var6_int] = var14.a(param0 + 37);
+              SetAudioRangeCutoff.field_o[var6_int] = var14.readString(param0 + 37);
             }
             GetUseCircleFill.a(var5, var4, 0);
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
@@ -270,10 +270,10 @@ abstract class iw extends bl {
               var13++;
               var9Lifetime1++;
             }
-            var3.b(-3846);
+            var3.unlink(-3846);
             return;
           }
-          var3.b(-3846);
+          var3.unlink(-3846);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -3,61 +3,61 @@
  */
 class DualLinkNode extends IntrusiveNode {
     static String field_h;
-    DualLinkNode field_d;
+    DualLinkNode secondaryPrevious;
     static llb field_f;
-    DualLinkNode field_e;
-    long field_i;
+    DualLinkNode secondaryNext;
+    long secondaryKey;
     static String field_j;
     static llb field_g;
 
-    final boolean c(byte param0) {
+    final boolean isSecondaryLinked(byte param0) {
         if (param0 < 26) {
           return true;
         }
-        if (this.field_d == null) {
+        if (this.secondaryPrevious == null) {
           return false;
         }
         return true;
     }
 
-    final void a(long param0, byte param1) {
-        if (this.field_d != null) {
+    final void setSecondaryKey(long param0, byte param1) {
+        if (this.secondaryPrevious != null) {
           throw new RuntimeException();
         }
-        this.field_i = param0;
+        this.secondaryKey = param0;
         if (param1 == 83) {
           return;
         }
         field_g = (llb) null;
     }
 
-    final long c(int param0) {
+    final long getSecondaryKey(int param0) {
         if (param0 != 26390) {
-          this.field_i = 5L;
-          return this.field_i;
+          this.secondaryKey = 5L;
+          return this.secondaryKey;
         }
-        return this.field_i;
+        return this.secondaryKey;
     }
 
-    final void d(byte param0) {
-        if (this.field_d == null) {
+    final void unlinkSecondary(byte param0) {
+        if (this.secondaryPrevious == null) {
           return;
         }
         if (param0 == -35) {
-          this.field_d.field_e = this.field_e;
-          this.field_e.field_d = this.field_d;
-          this.field_e = null;
-          this.field_d = null;
+          this.secondaryPrevious.secondaryNext = this.secondaryNext;
+          this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+          this.secondaryNext = null;
+          this.secondaryPrevious = null;
           return;
         }
-        this.field_d = (DualLinkNode) null;
-        this.field_d.field_e = this.field_e;
-        this.field_e.field_d = this.field_d;
-        this.field_e = null;
-        this.field_d = null;
+        this.secondaryPrevious = (DualLinkNode) null;
+        this.secondaryPrevious.secondaryNext = this.secondaryNext;
+        this.secondaryNext.secondaryPrevious = this.secondaryPrevious;
+        this.secondaryNext = null;
+        this.secondaryPrevious = null;
     }
 
-    public static void d(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_f = null;
         field_g = null;
         field_j = null;

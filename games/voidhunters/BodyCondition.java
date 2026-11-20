@@ -31,10 +31,10 @@ final class BodyCondition extends MissionCondition implements DiffableState, hd 
         return "Body " + this.bodyId + " destroyed";
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          super.b(param0, -119);
-          param0.a(-632, this.bodyId, 32);
+          super.writeState(param0, -119);
+          param0.writeBits(-632, this.bodyId, 32);
           if (param1 > -109) {
             this.bodyId = -40;
           }
@@ -49,7 +49,7 @@ final class BodyCondition extends MissionCondition implements DiffableState, hd 
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
-        tv var10 = null;
+        SerializableGameState var10 = null;
         int stackIn_4_0 = 0;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -61,8 +61,8 @@ final class BodyCondition extends MissionCondition implements DiffableState, hd 
           stackIn_4_0 = (param3 > this.bodyId) ? 1 : -1;
           var5_int = stackIn_4_0;
           if (param1 != -2) {
-            var10 = (tv) null;
-            this.a((byte) -97, (tv) null);
+            var10 = (SerializableGameState) null;
+            this.differsFrom((byte) -97, (SerializableGameState) null);
           }
           var6 = 50;
           var7 = var6 * var5_int + param3;
@@ -100,7 +100,7 @@ final class BodyCondition extends MissionCondition implements DiffableState, hd 
         field_d = null;
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         BodyCondition var4 = null;
         boolean stackIn_5_0 = false;
@@ -112,7 +112,7 @@ final class BodyCondition extends MissionCondition implements DiffableState, hd 
         try {
           var3_int = 14 / ((22 - param0) / 59);
           var4 = (BodyCondition) (param1);
-          stackIn_5_0 = (super.a((byte) 92, param1)) || (var4.bodyId != this.bodyId);
+          stackIn_5_0 = (super.differsFrom((byte) 92, param1)) || (var4.bodyId != this.bodyId);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -165,7 +165,7 @@ final class BodyCondition extends MissionCondition implements DiffableState, hd 
 
     public final int[] a(int param0, int[] param1) {
         RuntimeException var3 = null;
-        faa var4 = null;
+        IsaacPacketBuffer var4 = null;
         int[] stackIn_6_0 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -173,8 +173,8 @@ final class BodyCondition extends MissionCondition implements DiffableState, hd 
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 < 99) {
-            var4 = (faa) null;
-            this.a((faa) null, false);
+            var4 = (IsaacPacketBuffer) null;
+            this.readState((IsaacPacketBuffer) null, false);
           }
           if (this.bodyId >= 0) {
             param1 = SetAutozoomSpeedDivide.a(this.bodyId, true, param1, (byte) -14);
@@ -195,20 +195,20 @@ final class BodyCondition extends MissionCondition implements DiffableState, hd 
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
+          super.readState(param0, param1);
           if (param1) {
             World var4 = (World) null;
             this.a((World) null, 111);
           }
-          this.bodyId = param0.i(0, 32);
+          this.bodyId = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "cc.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         RuntimeException var3 = null;
         BodyCondition var5 = null;
         BodyCondition var6 = null;
@@ -219,7 +219,7 @@ final class BodyCondition extends MissionCondition implements DiffableState, hd 
         try {
           var5 = (BodyCondition) (param1);
           var6 = var5;
-          super.b((byte) 116, param1);
+          super.copyTo((byte) 116, param1);
           var6.bodyId = this.bodyId;
           if (param0 > 54) {
             return;
@@ -240,7 +240,7 @@ final class BodyCondition extends MissionCondition implements DiffableState, hd 
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         BodyCondition var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

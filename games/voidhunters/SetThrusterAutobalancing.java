@@ -18,7 +18,7 @@ final class SetThrusterAutobalancing extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_p = (llb) null;
           }
-          SetMachineGunEnergyUsed.a(22, 62, arguments[0].a(77));
+          SetMachineGunEnergyUsed.a(22, 62, arguments[0].intValue(77));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -22,7 +22,7 @@ final class SetBombletSprayReload extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(111, 62, arguments[0].a(71));
+          SetMachineGunEnergyUsed.a(111, 62, arguments[0].intValue(71));
           if (obfuscationGuard <= -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

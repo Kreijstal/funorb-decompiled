@@ -23,14 +23,14 @@ final class uw extends uj {
         return 106;
     }
 
-    final static void a(byte param0, faa param1, tv param2) {
-        param1.p(-23497);
+    final static void a(byte param0, IsaacPacketBuffer param1, SerializableGameState param2) {
+        param1.beginBitRead(-23497);
         if (param0 >= -31) {
           return;
         }
         try {
-          param2.a(param1, false);
-          param1.f((byte) -59);
+          param2.readState(param1, false);
+          param1.endBitRead((byte) -59);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uw.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

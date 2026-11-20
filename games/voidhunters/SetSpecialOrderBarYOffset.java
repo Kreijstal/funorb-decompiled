@@ -19,7 +19,7 @@ final class SetSpecialOrderBarYOffset extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 53);
           }
-          GetSalvoDamageMultiplier.field_p = arguments[0].a(105);
+          GetSalvoDamageMultiplier.field_p = arguments[0].intValue(105);
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -47,7 +47,7 @@ final class SetSpecialOrderBarYOffset extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var2_int = param1.e((byte) -87);
+          var2_int = param1.readUnsignedByte((byte) -87);
           stackIn_3_0 = (~var2_int == param0) ? 1 : 0;
           var3 = stackIn_3_0;
           stackIn_4_0 = var3;

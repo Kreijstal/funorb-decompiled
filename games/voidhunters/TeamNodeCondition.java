@@ -6,14 +6,14 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
     static int field_e;
     static pr field_c;
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         TeamNodeCondition var5 = null;
         TeamNodeCondition var6 = null;
         try {
           if (param0 <= 54) {
             this.a(-77);
           }
-          super.b((byte) 57, param1);
+          super.copyTo((byte) 57, param1);
           var5 = (TeamNodeCondition) (param1);
           var6 = var5;
           var6.teamId = this.teamId;
@@ -22,7 +22,7 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         TeamNodeCondition var3 = null;
         int var4 = 0;
         boolean stackIn_5_0 = false;
@@ -34,7 +34,7 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
         try {
           var3 = (TeamNodeCondition) (param1);
           var4 = 20 % ((22 - param0) / 59);
-          stackIn_5_0 = (super.a((byte) 90, param1)) || (var3.teamId != this.teamId);
+          stackIn_5_0 = (super.differsFrom((byte) 90, param1)) || (var3.teamId != this.teamId);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -61,14 +61,14 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          super.b(param0, -115);
+          super.writeState(param0, -115);
           if (param1 >= -109) {
-            tv var4 = (tv) null;
-            this.a((byte) -98, (tv) null);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.differsFrom((byte) -98, (SerializableGameState) null);
           }
-          param0.a(-632, this.teamId, 32);
+          param0.writeBits(-632, this.teamId, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "om.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -83,7 +83,7 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
 
     final ucb[] a(World param0, int param1) {
         RuntimeException var3 = null;
-        faa var4 = null;
+        IsaacPacketBuffer var4 = null;
         Object stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -93,8 +93,8 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
           if (param1 == -20605) {
             return null;
           }
-          var4 = (faa) null;
-          this.b((faa) null, -57);
+          var4 = (IsaacPacketBuffer) null;
+          this.writeState((IsaacPacketBuffer) null, -57);
           stackIn_3_0 = null;
           return (ucb[]) (stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -279,7 +279,7 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
         int var5 = 0;
         ResourceNode var6 = null;
         int var7 = 0;
-        tv var8 = null;
+        SerializableGameState var8 = null;
         int[] stackIn_3_0 = null;
         int[] stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
@@ -298,8 +298,8 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
           }
           var5 = 0;
           if (param1 < 16) {
-            var8 = (tv) null;
-            this.a((byte) -88, (tv) null);
+            var8 = (SerializableGameState) null;
+            this.differsFrom((byte) -88, (SerializableGameState) null);
           }
           while (var4.length > var5) {
             var6 = var4[var5];
@@ -334,7 +334,7 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
     TeamNodeCondition() {
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         TeamNodeCondition var3 = null;
         int var4 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -371,14 +371,14 @@ final class TeamNodeCondition extends MissionCondition implements DiffableState 
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
+          super.readState(param0, param1);
           if (param1) {
-            tv var4 = (tv) null;
-            this.a((byte) 42, (tv) null);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.differsFrom((byte) 42, (SerializableGameState) null);
           }
-          this.teamId = param0.i(0, 32);
+          this.teamId = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "om.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

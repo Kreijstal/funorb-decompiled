@@ -137,7 +137,7 @@ final class ShipAI implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         ShipAI var3 = (ShipAI) (other);
         int var4 = 0;
         if (var3.parentPlayer != this.parentPlayer) {
@@ -202,19 +202,19 @@ final class ShipAI implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
             World var4 = (World) null;
             this.a((Ship) null, 11, (lta) null, (World) null);
           }
-          this.parentPlayer = param0.i(0, 4);
+          this.parentPlayer = param0.readBits(0, 4);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aoa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         ShipAI var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -282,7 +282,7 @@ final class ShipAI implements DiffableState {
         int var21 = 0;
         int var22 = 0;
         int var23 = 0;
-        tv var24 = null;
+        SerializableGameState var24 = null;
         int var10Lifetime1;
         int var12Lifetime1;
         int var13Lifetime1;
@@ -302,8 +302,8 @@ final class ShipAI implements DiffableState {
         var23 = VoidHunters.field_G;
         try {
           if (param1 != -73) {
-            var24 = (tv) null;
-            this.b((byte) -82, (tv) null);
+            var24 = (SerializableGameState) null;
+            this.copyTo((byte) -82, (SerializableGameState) null);
           }
           var4_int = param0.dx;
           var5 = param0.dy;
@@ -378,7 +378,7 @@ final class ShipAI implements DiffableState {
             if (param0.chassis.b((byte) 70, 7)) {
               var16_ref_ij = param2.getProjectiles(true);
               var17Lifetime2 = 0;
-              var18_ref_tj = (Projectile) (var16_ref_ij.d(0));
+              var18_ref_tj = (Projectile) (var16_ref_ij.first(0));
               while (true) {
                 boolean decompiledFrameRemainder0 = true;
                 if (var18_ref_tj != null) {
@@ -393,7 +393,7 @@ final class ShipAI implements DiffableState {
                     }
                   }
                   if (decompiledFrameRemainder0) {
-                    var18_ref_tj = (Projectile) (var16_ref_ij.a((byte) 55));
+                    var18_ref_tj = (Projectile) (var16_ref_ij.next((byte) 55));
                     continue;
                   }
                 }
@@ -618,15 +618,15 @@ final class ShipAI implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         ShipAI var6 = null;
         ShipAI var7 = null;
         try {
           var6 = (ShipAI) (param1);
           var7 = var6;
           if (param0 < 54) {
-            tv var4 = (tv) null;
-            this.a((byte) -32, (tv) null);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.differsFrom((byte) -32, (SerializableGameState) null);
           }
           var7.parentPlayer = this.parentPlayer;
         } catch (RuntimeException runtimeException) {
@@ -634,12 +634,12 @@ final class ShipAI implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         if (param1 > -109) {
           return;
         }
         try {
-          param0.a(-632, this.parentPlayer, 4);
+          param0.writeBits(-632, this.parentPlayer, 4);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "aoa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

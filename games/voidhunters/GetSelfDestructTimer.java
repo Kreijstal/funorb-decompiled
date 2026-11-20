@@ -37,10 +37,10 @@ final class GetSelfDestructTimer extends ConsoleCommand {
           var2_long = wt.a(false);
           if (param0 != cd.field_c &&
             SetAutoDetail.field_p < 0) {
-            var4_ref_c = (c) (GetSpinningBladeAimarc.field_q.d(param0 + 0));
+            var4_ref_c = (c) (GetSpinningBladeAimarc.field_q.first(param0 + 0));
             if (var4_ref_c != null &&
               var4_ref_c.field_e < var2_long) {
-              var4_ref_c.b(-3846);
+              var4_ref_c.unlink(-3846);
               vja.field_a = var4_ref_c.field_f.length;
               qga.field_b.position = 0;
               for (var5_int = 0; var5_int < vja.field_a; var5_int++) {
@@ -59,7 +59,7 @@ final class GetSelfDestructTimer extends ConsoleCommand {
               if (!ShipBlueprint.a(1, 30000)) {
                 return false;
               }
-              SetAutoDetail.field_p = qga.field_b.o(255);
+              SetAutoDetail.field_p = qga.field_b.readIsaacByte(255);
               qga.field_b.position = 0;
               vja.field_a = param1[SetAutoDetail.field_p];
             }
@@ -85,7 +85,7 @@ final class GetSelfDestructTimer extends ConsoleCommand {
             for (var6 = 0; var6 < vja.field_a; var6++) {
               var5.field_f[var6] = qga.field_b.payload[var6];
             }
-            GetSpinningBladeAimarc.field_q.b(param0 ^ -10258, var5);
+            GetSpinningBladeAimarc.field_q.addLast(param0 ^ -10258, var5);
             SetAutoDetail.field_p = -1;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

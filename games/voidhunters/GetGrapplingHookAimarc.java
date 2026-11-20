@@ -79,7 +79,7 @@ final class GetGrapplingHookAimarc extends ConsoleCommand {
           var5.field_h = true;
           var5.field_d = var10;
           var5.field_g = true;
-          gtb.field_d.b(-10258, var5);
+          gtb.field_d.addLast(-10258, var5);
         }
         var6Lifetime1 = 116 % ((param3 - 14) / 45);
     }

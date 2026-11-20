@@ -5,9 +5,9 @@ final class qaa implements dja {
     static float field_a;
     static int field_b;
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 46 % ((param0 + 64) / 50);
-        return (tv) ((Object) new ptb());
+        return (SerializableGameState) ((Object) new ptb());
     }
 
     final static void a(int param0, int param1, int param2, int param3, int param4, int param5, int param6, int[] param7, int param8) {
@@ -205,12 +205,12 @@ final class qaa implements dja {
         }
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           int[] var4 = (int[]) null;
           qaa.a(35, 80, -54, 13, 73, 4, -14, (int[]) null, -74);
         }
-        return (tv[]) ((Object) new ptb[param1]);
+        return (SerializableGameState[]) ((Object) new ptb[param1]);
     }
 
     static {

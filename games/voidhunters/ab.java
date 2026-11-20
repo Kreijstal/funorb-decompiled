@@ -64,14 +64,14 @@ final class ab {
         int var3;
         this.field_c = new qda[10];
         for (var2 = 0; var2 < 10; var2++) {
-          var3 = param0.e((byte) -92);
+          var3 = param0.readUnsignedByte((byte) -92);
           if (var3 != 0) {
             param0.position = param0.position - 1;
             this.field_c[var2] = new qda();
             this.field_c[var2].a(param0);
           }
         }
-        this.field_b = param0.e(1869);
-        this.field_a = param0.e(1869);
+        this.field_b = param0.readUnsignedShort(1869);
+        this.field_a = param0.readUnsignedShort(1869);
     }
 }

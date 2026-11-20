@@ -96,7 +96,7 @@ final class SetShipPersistence extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(33, 62, arguments[0].a(29));
+          SetMachineGunEnergyUsed.a(33, 62, arguments[0].intValue(29));
           if (obfuscationGuard >= -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -71);

@@ -39,7 +39,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
         int var24 = 0;
         int var25 = 0;
         int var26 = 0;
-        faa var27 = null;
+        IsaacPacketBuffer var27 = null;
         long[][] var34 = null;
         int[][] var35 = null;
         int var3Lifetime1;
@@ -51,13 +51,13 @@ final class GetLaserAimspeed extends ConsoleCommand {
             GetLaserAimspeed.e(-77);
           }
           var27 = qga.field_b;
-          var2 = var27.e((byte) -93);
+          var2 = var27.readUnsignedByte((byte) -93);
           if (0 == var2) {
-            var3 = var27.e(param0 + 1868);
-            var4_ref = (qn) (md.field_j.d(0));
+            var3 = var27.readUnsignedShort(param0 + 1868);
+            var4_ref = (qn) (md.field_j.first(0));
             while (var4_ref != null) {
               if (var3 != var4_ref.field_e) {
-                var4_ref = (qn) (md.field_j.a((byte) 17));
+                var4_ref = (qn) (md.field_j.next((byte) 17));
                 continue;
               }
               break;
@@ -66,7 +66,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
               ifb.l(-116);
               return;
             }
-            var5 = var27.e((byte) -97);
+            var5 = var27.readUnsignedByte((byte) -97);
             if (0 != var5) {
               var6 = var4_ref.field_i;
               dda.field_d[0].field_b = null;
@@ -74,10 +74,10 @@ final class GetLaserAimspeed extends ConsoleCommand {
               var7 = var4_ref.field_g;
               dda.field_d[0].field_c = false;
               for (var8_int = 1; var8_int < var5; var8_int++) {
-                dda.field_d[var8_int].field_a = var27.a(param0 - 2);
+                dda.field_d[var8_int].field_a = var27.readString(param0 - 2);
                 dda.field_d[var8_int].field_c = false;
-                if (var27.e((byte) -119) == 1) {
-                  dda.field_d[var8_int].field_b = var27.a(param0 ^ -2);
+                if (var27.readUnsignedByte((byte) -119) == 1) {
+                  dda.field_d[var8_int].field_b = var27.readString(param0 ^ -2);
                 } else {
                   dda.field_d[var8_int].field_b = null;
                 }
@@ -92,12 +92,12 @@ final class GetLaserAimspeed extends ConsoleCommand {
               var15 = 0;
               var16 = 0;
               var17 = 0;
-              var18 = var27.e((byte) -97);
+              var18 = var27.readUnsignedByte((byte) -97);
               if (0 < var18) {
                 for (var19 = 0; var18 > var19; var19++) {
-                  var20 = var27.e((byte) -114);
+                  var20 = var27.readUnsignedByte((byte) -114);
                   var21 = dda.field_d[var20].field_a;
-                  var22 = var27.k(255);
+                  var22 = var27.readLong(255);
                   var24 = var27.position;
                   if (var19 < var6) {
                     var8[0][var12] = var21;
@@ -106,7 +106,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
                     for (var25 = 0; var7 > var25; var25++) {
                       incrementValue$0 = var15;
                       var15++;
-                      var35[0][incrementValue$0] = var27.h(SetFixedaim.a(param0, 75));
+                      var35[0][incrementValue$0] = var27.readInt(SetFixedaim.a(param0, 75));
                     }
                     var12++;
                   }
@@ -120,7 +120,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
                     for (var25Lifetime1 = 0; var25Lifetime1 < var7; var25Lifetime1++) {
                       incrementValue$1 = var16;
                       var16++;
-                      var35[1][incrementValue$1] = var27.h(param0 + 20);
+                      var35[1][incrementValue$1] = var27.readInt(param0 + 20);
                     }
                   }
                   if (var14 < var6 &&
@@ -134,24 +134,24 @@ final class GetLaserAimspeed extends ConsoleCommand {
                     for (var25Lifetime2 = 0; var25Lifetime2 < var7; var25Lifetime2++) {
                       incrementValue$2 = var17;
                       var17++;
-                      var35[2][incrementValue$2] = var27.h(21);
+                      var35[2][incrementValue$2] = var27.readInt(21);
                     }
                   }
                 }
-                var4_ref.b(-3846);
+                var4_ref.unlink(-3846);
                 return;
               }
             }
-            var4_ref.b(-3846);
+            var4_ref.unlink(-3846);
             return;
           }
           if (var2 == 1) {
-            var3Lifetime1 = var27.e(1869);
-            var27.k(param0 ^ 254);
-            var4 = (ifa) (SetRespawnTime.field_p.d(param0 - 1));
+            var3Lifetime1 = var27.readUnsignedShort(1869);
+            var27.readLong(param0 ^ 254);
+            var4 = (ifa) (SetRespawnTime.field_p.first(param0 - 1));
             while (var4 != null) {
               if (var3Lifetime1 != var4.field_i) {
-                var4 = (ifa) (SetRespawnTime.field_p.a((byte) 10));
+                var4 = (ifa) (SetRespawnTime.field_p.next((byte) 10));
                 continue;
               }
               break;
@@ -160,7 +160,7 @@ final class GetLaserAimspeed extends ConsoleCommand {
               ifb.l(-126);
               return;
             }
-            var4.b(-3846);
+            var4.unlink(-3846);
             return;
           }
           gna.a((Throwable) null, "HS1: " + SetCountermeasuresPulsetime.e(-13514), 0);

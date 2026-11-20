@@ -101,13 +101,13 @@ final class grb extends le {
         try {
           var4_int = param0;
           if (var4_int == 0) {
-            this.field_m = param2.e((byte) -119);
+            this.field_m = param2.readUnsignedByte((byte) -119);
           } else {
             if (var4_int == 1) {
-              this.field_k = param2.e((byte) -123);
+              this.field_k = param2.readUnsignedByte((byte) -123);
             } else {
               if (2 == var4_int) {
-                stackIn_10_1 = (param2.e((byte) -121) == 1);
+                stackIn_10_1 = (param2.readUnsignedByte((byte) -121) == 1);
                 this.field_g = stackIn_10_1;
               }
             }

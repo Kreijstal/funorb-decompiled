@@ -24,7 +24,7 @@ final class wv extends le {
             wv.d(-72);
           }
           if (param0 == 0) {
-            this.field_i = param2.e(1869);
+            this.field_i = param2.readUnsignedShort(1869);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -76,7 +76,7 @@ final class uca {
           }
           if (1 == fra.field_a) {
             var5 = new Ship();
-            param1.b((byte) 61, var5);
+            param1.copyTo((byte) 61, var5);
             var5.a(param2 ^ 11893, param0, param3);
             var6 = var5.d(false) - var5.j(995401160);
             var7 = var5.g((byte) -54) - var5.i((byte) 5);
@@ -283,7 +283,7 @@ final class uca {
           var12 = var12 + (-1 + var10);
         }
         var16 = this.field_m.carouselInfo.field_f;
-        var17_ref = (hna) (var16.d(0));
+        var17_ref = (hna) (var16.first(0));
         while (var17_ref != null) {
           var18 = var17_ref.field_e - var4;
           var19 = 65280;
@@ -311,7 +311,7 @@ final class uca {
             }
             GetMassDriverReload.a(((StringBuilder) (Object) stackIn_24_0).append(stackIn_25_1).toString(), -101);
           }
-          var17_ref = (hna) (var16.a((byte) 127));
+          var17_ref = (hna) (var16.next((byte) 127));
         }
     }
 
@@ -485,7 +485,7 @@ final class uca {
           } else {
             if (param0.field_l == 8 &&
               param2.getSelfDestructPrepared((byte) -91)) {
-              GetMassDriverReload.a(NodeHashTableIterator.field_c, param3 - 208);
+              GetMassDriverReload.a(SecondaryNodeDequeIterator.field_c, param3 - 208);
             } else {
               GetMassDriverReload.a(GetGrapplingHookSpringConstant.field_o[param0.field_l], -51);
             }
@@ -1017,7 +1017,7 @@ final class uca {
               ((Ship) (var9)).getTargetBlueprint((byte) 28) == null &&
               (16 & var18_ref_tfa.triggers) == 0 &&
               !((Ship) (var9)).d(4, 91)) {
-              ((Ship) (var9)).b((byte) 94, this.field_W);
+              ((Ship) (var9)).copyTo((byte) 94, this.field_W);
               this.field_W.a(-123, var17, var16);
               var20_int = this.field_W.d(false) - this.field_W.j(995401160);
               var21 = this.field_W.g((byte) -31) - this.field_W.i((byte) 5);
@@ -3677,7 +3677,7 @@ final class uca {
         if (!this.field_N) {
           throw new IllegalStateException();
         }
-        RequestNewestBlackboxRecording.field_p.h(24335, 59);
+        RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 59);
         if (!param0) {
           Ship var3 = (Ship) null;
           discarded$0 = this.a(-44, -67, -14, -107, (Ship) null);
@@ -4179,7 +4179,7 @@ final class uca {
         }
         this.e(-115);
         var2Lifetime1 = 0;
-        var3_ref = (hna) (this.field_m.carouselInfo.field_f.d(0));
+        var3_ref = (hna) (this.field_m.carouselInfo.field_f.first(0));
         while (var3_ref != null) {
           if (var3_ref.specialOrderSubmessage != null &&
             var3_ref.specialOrderSubmessage.settingsChange != null) {
@@ -4189,7 +4189,7 @@ final class uca {
             var2Lifetime1++;
             GetLagStandardDeviationOut.a(-1, var35, 16777215, 20 * incrementValue$0 + 300, SetMassDriverReload.field_p - (GetPhasedEnergyBeamProjectiles.a(-37, var35) >> 1), 4266);
           }
-          var3_ref = (hna) (this.field_m.carouselInfo.field_f.a((byte) 22));
+          var3_ref = (hna) (this.field_m.carouselInfo.field_f.next((byte) 22));
         }
         if (GetPointDefenceLaserProjectiles.a(2, 11284)) {
           SetMachineGunFireForce.a((byte) -99, eoa.field_a);
@@ -4614,7 +4614,7 @@ final class uca {
         if (!this.field_N) {
           throw new IllegalStateException();
         }
-        RequestNewestBlackboxRecording.field_p.h(24335, param0);
+        RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, param0);
     }
 
     private final void a(int[] param0, int param1, int param2, int param3, int param4, int[] param5, int[] param6, int[] param7, int param8, int param9, int param10, String[][] param11) {
@@ -5059,13 +5059,13 @@ final class uca {
               }
             }
             var25 = this.field_m.a((byte) 33).getProjectiles(true);
-            var27 = (Projectile) (var25.d(0));
+            var27 = (Projectile) (var25.first(0));
             while (var27 != null) {
               var15 = var8.a(var27.d(116), (byte) 115) + var6;
               var16Lifetime1 = var7 + var8.b(true, var27.e((byte) -107));
               var17Lifetime1 = 16776960;
               MouseWheelInput.a(var17Lifetime1, var16Lifetime1, var15, -110);
-              var27 = (Projectile) (var25.a((byte) 118));
+              var27 = (Projectile) (var25.next((byte) 118));
             }
             var14 = this.field_m.a((byte) 65).a(true);
             var26 = var14;
@@ -5684,7 +5684,7 @@ final class uca {
         if (!this.field_N) {
           throw new IllegalStateException();
         }
-        RequestNewestBlackboxRecording.field_p.h(24335, 61);
+        RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 61);
         if (!param0) {
           GameSnapshot var3 = (GameSnapshot) null;
           discarded$0 = this.a(36, (GameSnapshot) null, -87, -56, -91);
@@ -6442,7 +6442,7 @@ final class uca {
             !var5.d(9, 90) &&
             param2.missionState.getMissionPhase(8) == 5) {
             if (param1) {
-              this.field_E.e(96);
+              this.field_E.clear(96);
               var5.a(this.field_E, 9, this.field_x, param2.world.d(var5.getId(false), (byte) 21));
               if (this.field_v.a(10, true)) {
                 stackIn_33_0 = 1;
@@ -6462,10 +6462,10 @@ final class uca {
                 if (!this.field_x &&
                   13 == param2.world.d(false) && (!this.field_N ||
                   gda.field_d != 0)) {
-                  this.field_E.b(-10258, new ihb(10, 0));
+                  this.field_E.addLast(-10258, new ihb(10, 0));
                 }
                 if (mbb.field_b) {
-                  this.field_E.b(-10258, new ihb(11, 0));
+                  this.field_E.addLast(-10258, new ihb(11, 0));
                   if (es.field_b != null &&
                     es.field_b.blueprint != null) {
                     var7 = 0;
@@ -6476,7 +6476,7 @@ final class uca {
                       es.field_b.blueprint.description[0] != var5.chassis.getComponentTypeId(0)) {
                       var7 = 50;
                     }
-                    this.field_E.b(-10258, new ihb(12, var7));
+                    this.field_E.addLast(-10258, new ihb(12, var7));
                   }
                 }
               }
@@ -6485,11 +6485,11 @@ final class uca {
               this.l(15097);
             }
             var6Lifetime1 = 0;
-            var7_ref_lw = (lw) (this.field_P.d(0));
+            var7_ref_lw = (lw) (this.field_P.first(0));
             while (var7_ref_lw != null) {
               if (var7_ref_lw.field_l != 9 &&
                 var7_ref_lw.field_l != 8) {
-                var7_ref_lw = (lw) (this.field_P.a((byte) 50));
+                var7_ref_lw = (lw) (this.field_P.next((byte) 50));
                 continue;
               }
               var6Lifetime1 = 1;
@@ -6514,7 +6514,7 @@ final class uca {
               var14 = var14 + (255 - this.field_i) / 4;
               var12 = var12 - (-this.field_i + 255) / 6;
             }
-            var15 = (lw) (this.field_P.d(0));
+            var15 = (lw) (this.field_P.first(0));
             while (var15 != null) {
               var16 = chb.field_a;
               var17 = CarouselSlotStateDump.field_g;
@@ -6760,7 +6760,7 @@ final class uca {
               if (var22Lifetime1 != 0) {
                 var11++;
               }
-              var15 = (lw) (this.field_P.a((byte) 124));
+              var15 = (lw) (this.field_P.next((byte) 124));
             }
           }
           stackIn_223_0 = var4_int;
@@ -6879,18 +6879,18 @@ final class uca {
         lw var7Lifetime1;
         var8 = VoidHunters.field_G;
         try {
-          var9 = (lw) (param2.d(0));
+          var9 = (lw) (param2.first(0));
           while (var9 != null) {
             var9.a(-26857);
-            var9 = (lw) (param2.a((byte) 75));
+            var9 = (lw) (param2.next((byte) 75));
           }
-          var5 = (ihb) (param1.d(0));
+          var5 = (ihb) (param1.first(0));
           while (var5 != null) {
             var6 = 0;
-            var7 = (lw) (param2.d(0));
+            var7 = (lw) (param2.first(0));
             while (var7 != null) {
               if (var7.field_l != var5.field_d) {
-                var7 = (lw) (param2.a((byte) 101));
+                var7 = (lw) (param2.next((byte) 101));
                 continue;
               }
               var7.a(-1746542610, var5.field_e);
@@ -6900,17 +6900,17 @@ final class uca {
             if (var6 == 0) {
               var7Lifetime1 = new lw(var5.field_d);
               var7Lifetime1.a(-1746542610, var5.field_e);
-              param2.b(-10258, var7Lifetime1);
+              param2.addLast(-10258, var7Lifetime1);
             }
-            var5 = (ihb) (param1.a((byte) 127));
+            var5 = (ihb) (param1.next((byte) 127));
           }
           if (!param0) {
-            var5_ref = (lw) (param2.d(0));
+            var5_ref = (lw) (param2.first(0));
             while (var5_ref != null) {
               if (var5_ref.field_k <= 0) {
-                var5_ref.b(-3846);
+                var5_ref.unlink(-3846);
               }
-              var5_ref = (lw) (param2.a((byte) 20));
+              var5_ref = (lw) (param2.next((byte) 20));
             }
           }
           var5_int = -18 / ((9 - param3) / 36);
@@ -8329,7 +8329,7 @@ final class uca {
               }
               var8 = SetTorpedoProjectileDamage.field_q[var7].toUpperCase();
               var5_array = new String[]{ct.field_b, uw.field_d, var8};
-              var3Lifetime2Lifetime2 = ndb.field_b + "<br>" + se.field_b + "<br>" + var13;
+              var3Lifetime2Lifetime2 = ProxyAuthenticationException.field_b + "<br>" + se.field_b + "<br>" + var13;
               var6 = var6 + GetPointDefenceLaserProjectiles.a(false, 0);
               var9 = rca.field_a;
               SetAutoaim.a(1, 100, 10, 0, 0, var9, 16777215, 100, -114, 0, 0, 0);

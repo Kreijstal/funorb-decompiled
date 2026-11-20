@@ -3,23 +3,23 @@
  */
 import java.util.*;
 
-final class IterableNodeHashTable implements Iterable {
+final class SecondaryNodeDeque implements Iterable {
     static llb[] field_c;
-    DualLinkNode field_a;
-    private DualLinkNode field_b;
+    DualLinkNode sentinel;
+    private DualLinkNode cursor;
 
-    final void a(byte param0) {
+    final void clear(byte param0) {
         int var3 = VoidHunters.field_G;
-        while (this.field_a.field_e != this.field_a) {
-          this.field_a.field_e.d((byte) -35);
+        while (this.sentinel.secondaryNext != this.sentinel) {
+          this.sentinel.secondaryNext.unlinkSecondary((byte) -35);
         }
         if (param0 >= 50) {
           return;
         }
-        this.a(-59);
+        this.removeFirst(-59);
     }
 
-    private final DualLinkNode a(DualLinkNode param0, int param1) {
+    private final DualLinkNode startAt(DualLinkNode param0, int param1) {
         DualLinkNode var3 = null;
         RuntimeException var3_ref = null;
         Object stackIn_7_0 = null;
@@ -35,14 +35,14 @@ final class IterableNodeHashTable implements Iterable {
           if (param0 != null) {
             var3 = param0;
           } else {
-            var3 = this.field_a.field_e;
+            var3 = this.sentinel.secondaryNext;
           }
-          if (var3 != this.field_a) {
-            this.field_b = var3.field_e;
+          if (var3 != this.sentinel) {
+            this.cursor = var3.secondaryNext;
             stackIn_9_0 = var3;
             return stackIn_9_0;
           }
-          this.field_b = null;
+          this.cursor = null;
           stackIn_7_0 = null;
           return (DualLinkNode) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -59,72 +59,72 @@ final class IterableNodeHashTable implements Iterable {
         }
     }
 
-    final DualLinkNode a(boolean param0) {
+    final DualLinkNode first(boolean param0) {
         if (param0) {
           return (DualLinkNode) null;
         }
-        return this.a((DualLinkNode) null, -113);
+        return this.startAt((DualLinkNode) null, -113);
     }
 
-    final void a(int param0, DualLinkNode param1) {
+    final void addLast(int param0, DualLinkNode param1) {
         if (param0 != -17569) {
           return;
         }
         try {
-          if (null != param1.field_d) {
-            param1.d((byte) -35);
+          if (null != param1.secondaryPrevious) {
+            param1.unlinkSecondary((byte) -35);
           }
-          param1.field_e = this.field_a;
-          param1.field_d = this.field_a.field_d;
-          param1.field_d.field_e = param1;
-          param1.field_e.field_d = param1;
+          param1.secondaryNext = this.sentinel;
+          param1.secondaryPrevious = this.sentinel.secondaryPrevious;
+          param1.secondaryPrevious.secondaryNext = param1;
+          param1.secondaryNext.secondaryPrevious = param1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vh.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final DualLinkNode b(int param0) {
-        DualLinkNode var2 = this.field_b;
+    final DualLinkNode next(int param0) {
+        DualLinkNode var2 = this.cursor;
         if (param0 != 8063) {
           return (DualLinkNode) null;
         }
-        if (var2 != this.field_a) {
-          this.field_b = var2.field_e;
+        if (var2 != this.sentinel) {
+          this.cursor = var2.secondaryNext;
           return var2;
         }
-        this.field_b = null;
+        this.cursor = null;
         return null;
     }
 
-    public static void b(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_c = null;
         if (!param0) {
-          IterableNodeHashTable.b(true);
+          SecondaryNodeDeque.clearSharedReferences(true);
         }
     }
 
     public final Iterator iterator() {
-        return (Iterator) ((Object) new NodeHashTableIterator(this));
+        return (Iterator) ((Object) new SecondaryNodeDequeIterator(this));
     }
 
-    IterableNodeHashTable() {
-        this.field_a = new DualLinkNode();
-        this.field_a.field_e = this.field_a;
-        this.field_a.field_d = this.field_a;
+    SecondaryNodeDeque() {
+        this.sentinel = new DualLinkNode();
+        this.sentinel.secondaryNext = this.sentinel;
+        this.sentinel.secondaryPrevious = this.sentinel;
     }
 
-    final DualLinkNode a(int param0) {
-        DualLinkNode var2 = this.field_a.field_e;
+    final DualLinkNode removeFirst(int param0) {
+        DualLinkNode var2 = this.sentinel.secondaryNext;
         if (param0 != -7481) {
-          this.field_b = (DualLinkNode) null;
-          if (var2 != this.field_a) {
-            var2.d((byte) -35);
+          this.cursor = (DualLinkNode) null;
+          if (var2 != this.sentinel) {
+            var2.unlinkSecondary((byte) -35);
             return var2;
           }
           return null;
         }
-        if (var2 != this.field_a) {
-          var2.d((byte) -35);
+        if (var2 != this.sentinel) {
+          var2.unlinkSecondary((byte) -35);
           return var2;
         }
         return null;

@@ -11,7 +11,7 @@ final class SetLoadingMissions extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMissionTerrainAsteroidProbability.field_o = arguments[0].a(false);
+          SetMissionTerrainAsteroidProbability.field_o = arguments[0].booleanValue(false);
           if (obfuscationGuard >= -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 37);

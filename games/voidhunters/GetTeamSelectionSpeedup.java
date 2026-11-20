@@ -50,7 +50,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
         jk stackIn_84_0 = null;
         boolean stackIn_85_1 = false;
         RuntimeException decompiledCaughtException = null;
-        faa var1 = null;
+        IsaacPacketBuffer var1 = null;
         RuntimeException var1_ref = null;
         int var2 = 0;
         long var3_long = 0L;
@@ -109,17 +109,17 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
           if (param0 != 13) {
             return;
           }
-          var2 = ((PacketBuffer) ((Object) var1)).e((byte) -114);
+          var2 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -114);
           if (var2 != 0 &&
             var2 != 1 &&
             var2 != 2 &&
             var2 != 3 &&
             4 != var2) {
             if (var2 == 5) {
-              var3_long = ((PacketBuffer) ((Object) var1)).k(param0 + 242);
-              var18 = ((PacketBuffer) ((Object) var1)).a(-1);
-              var17 = ((PacketBuffer) ((Object) var1)).a(-1);
-              var19 = ((PacketBuffer) ((Object) var1)).a(-1);
+              var3_long = ((PacketBuffer) ((Object) var1)).readLong(param0 + 242);
+              var18 = ((PacketBuffer) ((Object) var1)).readString(-1);
+              var17 = ((PacketBuffer) ((Object) var1)).readString(-1);
+              var19 = ((PacketBuffer) ((Object) var1)).readString(-1);
               var20 = SetPhasedEnergyBeamAimarc.a((byte) 80, var3_long);
               var8_ref_jk = var20;
               stackIn_12_0 = (var17.equals("")) ? 0 : 1;
@@ -132,21 +132,21 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                 var8_ref_jk = new jk(var18, var19, var3_long);
                 GetReverbWet.field_o.a(var8_ref_jk, (byte) -86, var3_long);
               }
-              var8_ref_jk.field_Kb = wt.a(false) - (long)((PacketBuffer) ((Object) var1)).h(77);
-              var8_ref_jk.field_Gb = ((PacketBuffer) ((Object) var1)).e(1869);
-              var10 = ((PacketBuffer) ((Object) var1)).l(param0 ^ 11425);
+              var8_ref_jk.field_Kb = wt.a(false) - (long)((PacketBuffer) ((Object) var1)).readInt(77);
+              var8_ref_jk.field_Gb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
+              var10 = ((PacketBuffer) ((Object) var1)).readVarInt(param0 ^ 11425);
               stackIn_18_0 = var8_ref_jk;
               stackIn_19_1 = (0 != (var10 & 1));
               stackIn_18_0.field_Lb = stackIn_19_1;
               var8_ref_jk.field_Bb = var10 >> 1;
-              var8_ref_jk.field_vb = ((PacketBuffer) ((Object) var1)).e((byte) -120);
-              var8_ref_jk.field_Ab = ((PacketBuffer) ((Object) var1)).e((byte) -113);
+              var8_ref_jk.field_vb = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -120);
+              var8_ref_jk.field_Ab = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -113);
               mnb.a(var8_ref_jk, true);
               return;
             }
             if (var2 == 6) {
-              var3_longLifetime1 = ((PacketBuffer) ((Object) var1)).k(255);
-              var5 = ((PacketBuffer) ((Object) var1)).e((byte) -120);
+              var3_longLifetime1 = ((PacketBuffer) ((Object) var1)).readLong(255);
+              var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -120);
               var29 = SetPhasedEnergyBeamAimarc.a((byte) 80, var3_longLifetime1);
               if (var29 == null) {
                 return;
@@ -156,26 +156,26 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                 var29.field_Fb = false;
               }
               if (var5 == 0) {
-                var29.b(param0 - 3859);
+                var29.unlink(param0 - 3859);
               } else {
                 var29.field_Db = var5;
                 var29.field_yb = GetMomentOfInertiaPredivideDownshift.field_p;
               }
-              var29.d((byte) -35);
+              var29.unlinkSecondary((byte) -35);
               return;
             }
             if (var2 == 7) {
-              var31 = (jk) (SetMachineGunAimarc.field_q.d(param0 ^ 13));
+              var31 = (jk) (SetMachineGunAimarc.field_q.first(param0 ^ 13));
               while (var31 != null) {
-                var31.b(param0 - 3859);
-                var31.d((byte) -35);
-                var31 = (jk) (SetMachineGunAimarc.field_q.a((byte) 11));
+                var31.unlink(param0 - 3859);
+                var31.unlinkSecondary((byte) -35);
+                var31 = (jk) (SetMachineGunAimarc.field_q.next((byte) 11));
               }
               SetLaserRandomness.field_p = 0;
               return;
             }
             if (var2 == 8) {
-              var3 = ((PacketBuffer) ((Object) var1)).e(1869);
+              var3 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
               var4_ref_mm = (mm) (GetLaserReload.field_r.a(-1, (long)var3));
               if (var4_ref_mm == null) {
                 var4_ref_mm = new mm(ocb.field_l);
@@ -186,34 +186,34 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
               return;
             }
             if (var2 == 9) {
-              var3Lifetime4 = ((PacketBuffer) ((Object) var1)).e(1869);
-              var4 = ((PacketBuffer) ((Object) var1)).e((byte) -127);
+              var3Lifetime4 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
+              var4 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -127);
               var30 = (mm) (GetLaserReload.field_r.a(-1, (long)var3Lifetime4));
               if (var30 != null) {
                 if (var4 != 0) {
                   var30.field_Db = GetMomentOfInertiaPredivideDownshift.field_p;
                   var30.field_ec = var4;
                 } else {
-                  var30.b(param0 - 3859);
+                  var30.unlink(param0 - 3859);
                 }
-                var30.d((byte) -35);
+                var30.unlinkSecondary((byte) -35);
               }
               return;
             }
             if (var2 == 10) {
-              var15 = (mm) (kja.field_E.d(0));
+              var15 = (mm) (kja.field_E.first(0));
               while (var15 != null) {
-                var15.b(-3846);
-                var15.d((byte) -35);
-                var15 = (mm) (kja.field_E.a((byte) 106));
+                var15.unlink(-3846);
+                var15.unlinkSecondary((byte) -35);
+                var15 = (mm) (kja.field_E.next((byte) 106));
               }
               return;
             }
             if (var2 != 11 &&
               var2 != 12) {
               if (13 == var2) {
-                var3Lifetime5 = ((PacketBuffer) ((Object) var1)).e(1869);
-                var4Lifetime1 = ((PacketBuffer) ((Object) var1)).e((byte) -97);
+                var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
+                var4Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -97);
                 var27_ref = (mm) (GetLaserReload.field_r.a(-1, (long)var3Lifetime5));
                 if (var27_ref != null) {
                   var13 = var27_ref;
@@ -233,38 +233,38 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                 if (var2 != 15 &&
                   var2 != 17) {
                   if (var2 == 18) {
-                    var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).k(255);
-                    var25 = ((PacketBuffer) ((Object) var1)).a(-1);
-                    var26 = ((PacketBuffer) ((Object) var1)).a(param0 ^ -14);
+                    var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(255);
+                    var25 = ((PacketBuffer) ((Object) var1)).readString(-1);
+                    var26 = ((PacketBuffer) ((Object) var1)).readString(param0 ^ -14);
                     var7 = pjb.a(var3_longLifetime2, true);
                     if (var7 == null) {
                       var7 = new jk(var25, var26, var3_longLifetime2);
                       SetUseDetailLines.field_p.a(var7, (byte) -76, var3_longLifetime2);
                       SetSpinningBladeSpindamageMultiplier.field_o.field_zb = SetSpinningBladeSpindamageMultiplier.field_o.field_zb + 1;
                     }
-                    var7.field_Gb = ((PacketBuffer) ((Object) var1)).e(1869);
-                    var8 = ((PacketBuffer) ((Object) var1)).l(11436);
+                    var7.field_Gb = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
+                    var8 = ((PacketBuffer) ((Object) var1)).readVarInt(11436);
                     stackIn_84_0 = var7;
                     stackIn_85_1 = ((1 & var8) != 0);
                     stackIn_84_0.field_Lb = stackIn_85_1;
                     var7.field_Bb = var8 >> 1;
-                    var7.field_vb = ((PacketBuffer) ((Object) var1)).e((byte) -103);
-                    var7.field_Ab = ((PacketBuffer) ((Object) var1)).e((byte) -111);
-                    mea.field_e.b(-10258, var7);
+                    var7.field_vb = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -103);
+                    var7.field_Ab = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -111);
+                    mea.field_e.addLast(-10258, var7);
                     return;
                   }
                   if (var2 == 19) {
-                    var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).k(255);
-                    var5Lifetime1 = ((PacketBuffer) ((Object) var1)).e((byte) -120);
+                    var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(255);
+                    var5Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -120);
                     var24 = pjb.a(var3_longLifetime2, true);
                     if (var24 != null) {
                       if (var5Lifetime1 != 0) {
                         var24.field_yb = GetMomentOfInertiaPredivideDownshift.field_p;
                         var24.field_Db = var5Lifetime1;
                       } else {
-                        var24.b(-3846);
+                        var24.unlink(-3846);
                       }
-                      var24.d((byte) -35);
+                      var24.unlinkSecondary((byte) -35);
                       SetSpinningBladeSpindamageMultiplier.field_o.field_zb = SetSpinningBladeSpindamageMultiplier.field_o.field_zb - 1;
                     }
                     return;
@@ -274,7 +274,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                     return;
                   }
                   if (21 == var2) {
-                    var3Lifetime5 = ((PacketBuffer) ((Object) var1)).e(param0 ^ 1856);
+                    var3Lifetime5 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(param0 ^ 1856);
                     if (var3Lifetime5 == 0) {
                       qga.field_a = 0L;
                       return;
@@ -283,20 +283,20 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                     return;
                   }
                   if (var2 == 22) {
-                    SetShieldsDirectionalArcParticleSpeedDownshift.field_q = ((PacketBuffer) ((Object) var1)).e(param0 + 1856);
-                    cla.field_b = ((PacketBuffer) ((Object) var1)).l(11436);
+                    SetShieldsDirectionalArcParticleSpeedDownshift.field_q = ((PacketBuffer) ((Object) var1)).readUnsignedShort(param0 + 1856);
+                    cla.field_b = ((PacketBuffer) ((Object) var1)).readVarInt(11436);
                     return;
                   }
                   if (var2 == 23) {
-                    wqa.field_a = ((PacketBuffer) ((Object) var1)).k(param0 ^ 242);
+                    wqa.field_a = ((PacketBuffer) ((Object) var1)).readLong(param0 ^ 242);
                     return;
                   }
                   gna.a((Throwable) null, "L1: " + SetCountermeasuresPulsetime.e(-13514), 0);
                   ifb.l(-123);
                   return;
                 }
-                var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).k(255);
-                var5Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).e((byte) -89);
+                var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(255);
+                var5Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -89);
                 var12 = SetPhasedEnergyBeamAimarc.a((byte) 80, var3_longLifetime2);
                 var23 = var12;
                 if (var12 == null) {
@@ -317,7 +317,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                 mnb.a(var23, true);
                 return;
               }
-              var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).k(255);
+              var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong(255);
               var22 = SetPhasedEnergyBeamAimarc.a((byte) 80, var3_longLifetime2Lifetime1);
               if (var22 != null) {
                 if (var2 != 14) {
@@ -332,7 +332,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
               }
               return;
             }
-            var3Lifetime6 = ((PacketBuffer) ((Object) var1)).e(1869);
+            var3Lifetime6 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
             var14 = (mm) (GetLaserReload.field_r.a(-1, (long)var3Lifetime6));
             var28 = var14;
             if (var14 != null) {
@@ -345,11 +345,11 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
             }
             return;
           }
-          var3_ref_jk = (jk) (mea.field_e.d(0));
+          var3_ref_jk = (jk) (mea.field_e.first(0));
           while (var3_ref_jk != null) {
-            var3_ref_jk.b(-3846);
-            var3_ref_jk.d((byte) -35);
-            var3_ref_jk = (jk) (mea.field_e.a((byte) 80));
+            var3_ref_jk.unlink(-3846);
+            var3_ref_jk.unlinkSecondary((byte) -35);
+            var3_ref_jk = (jk) (mea.field_e.next((byte) 80));
           }
           var3_ref_jkLifetime1 = (jk) (GetReverbWet.field_o.c(-31));
           while (var3_ref_jkLifetime1 != null) {
@@ -371,9 +371,9 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
           if (var2 != 4) {
             SetSpinningBladeSpindamageMultiplier.field_o = null;
           } else {
-            var3Lifetime1 = ((PacketBuffer) ((Object) var1)).e(1869);
+            var3Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedShort(1869);
             SetSpinningBladeSpindamageMultiplier.field_o = new mm(ocb.field_l);
-            SetSpinningBladeSpindamageMultiplier.field_o.a((long)var3Lifetime1, (byte) 83);
+            SetSpinningBladeSpindamageMultiplier.field_o.setSecondaryKey((long)var3Lifetime1, (byte) 83);
             SetShipAimLines.a(-123, SetSpinningBladeSpindamageMultiplier.field_o, false, var1);
             qga.field_a = 0L;
           }
@@ -391,12 +391,12 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
           }
           ii.field_h = true;
           for (var3Lifetime2 = 0; GetPlayerRepairTime.field_o.length > var3Lifetime2; var3Lifetime2++) {
-            GetPlayerRepairTime.field_o[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).d((byte) -114);
+            GetPlayerRepairTime.field_o[var3Lifetime2] = ((PacketBuffer) ((Object) var1)).readByte((byte) -114);
           }
-          Hardpoint.field_a = ((PacketBuffer) ((Object) var1)).e((byte) -113);
-          qd.field_d = ((PacketBuffer) ((Object) var1)).e((byte) -95);
+          Hardpoint.field_a = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -113);
+          qd.field_d = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -95);
           for (var3Lifetime3 = 0; var3Lifetime3 < GetDebrisThrowable.field_p.length; var3Lifetime3++) {
-            GetDebrisThrowable.field_p[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).d((byte) -114);
+            GetDebrisThrowable.field_p[var3Lifetime3] = ((PacketBuffer) ((Object) var1)).readByte((byte) -114);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -5,12 +5,12 @@ final class AwardVictoryToWinnerAction extends MissionAction implements Diffable
     static phb[] field_a;
     static int field_b;
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
             field_b = 74;
           }
-          super.a(param0, param1);
+          super.readState(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "via.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -55,8 +55,8 @@ final class AwardVictoryToWinnerAction extends MissionAction implements Diffable
 
     final String a(int param0) {
         if (param0 != -1325) {
-          tv var3 = (tv) null;
-          this.reportDifferences((tv) null, -23);
+          SerializableGameState var3 = (SerializableGameState) null;
+          this.reportDifferences((SerializableGameState) null, -23);
         }
         return "Award victory to the winning player";
     }
@@ -119,9 +119,9 @@ final class AwardVictoryToWinnerAction extends MissionAction implements Diffable
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          super.b(param0, -127);
+          super.writeState(param0, -127);
           if (param1 > -109) {
             GameSnapshot var4 = (GameSnapshot) null;
             this.a(62, (int[]) null, (GameSnapshot) null);
@@ -131,7 +131,7 @@ final class AwardVictoryToWinnerAction extends MissionAction implements Diffable
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         try {
           super.reportDifferences(other, -70);
           if (obfuscationGuard >= -19) {
@@ -142,7 +142,7 @@ final class AwardVictoryToWinnerAction extends MissionAction implements Diffable
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_1_0 = false;
@@ -152,7 +152,7 @@ final class AwardVictoryToWinnerAction extends MissionAction implements Diffable
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -17 / ((22 - param0) / 59);
-          stackIn_1_0 = super.a((byte) 91, param1);
+          stackIn_1_0 = super.differsFrom((byte) 91, param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -168,9 +168,9 @@ final class AwardVictoryToWinnerAction extends MissionAction implements Diffable
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         try {
-          super.b((byte) 86, param1);
+          super.copyTo((byte) 86, param1);
           if (param0 <= 54) {
             this.a(67);
           }

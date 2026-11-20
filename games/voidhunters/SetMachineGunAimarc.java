@@ -15,7 +15,7 @@ final class SetMachineGunAimarc extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(138, 62, arguments[0].a(26));
+          SetMachineGunEnergyUsed.a(138, 62, arguments[0].intValue(26));
           if (obfuscationGuard >= -119) {
             field_o = (String) null;
           }

@@ -46,7 +46,7 @@ final class coa implements DiffableState {
         return stackIn_7_0;
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         coa var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -76,7 +76,7 @@ final class coa implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int var4 = 0;
         coa var5 = null;
         int stackIn_10_0 = 0;
@@ -271,8 +271,8 @@ final class coa implements DiffableState {
 
     final boolean b(int param0, int param1) {
         if (param1 != 4) {
-          tv var4 = (tv) null;
-          this.b((byte) 119, (tv) null);
+          SerializableGameState var4 = (SerializableGameState) null;
+          this.copyTo((byte) 119, (SerializableGameState) null);
         }
         int var3 = this.voteoptionStates[param0];
         return this.c(var3, -52);
@@ -359,11 +359,11 @@ final class coa implements DiffableState {
         this.a(13546);
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           this.voteoptionStates = wkb.a((byte) 37, this.voteoptionStates, param0, 8);
           this.componentoptionStates = wkb.a((byte) 37, this.componentoptionStates, param0, 8);
-          this.copyToClipboardHidden = kv.a(param1, param0);
+          this.copyToClipboardHidden = kv.readBoolean(param1, param0);
           this.b(true);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "coa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -389,7 +389,7 @@ final class coa implements DiffableState {
         return this.a(var4, param2, false);
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         int stackIn_2_0 = 0;
         int stackIn_3_1 = 0;
         int stackIn_5_0 = 0;
@@ -414,7 +414,7 @@ final class coa implements DiffableState {
             stackIn_6_1 = 0;
           }
           pgb.a(stackIn_5_0, stackIn_6_1, 60, param0, this.componentoptionStates);
-          vq.a(param0, -110, this.copyToClipboardHidden);
+          vq.writeBoolean(param0, -110, this.copyToClipboardHidden);
           if (param1 >= -109) {
             this.field_e = (lc) null;
           }
@@ -533,7 +533,7 @@ final class coa implements DiffableState {
         return var3 != 4 ? true : false;
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         coa var3 = null;
         int var4 = 0;
         int stackIn_5_0 = 0;

@@ -22,21 +22,21 @@ final class SetOndamageParticleLife extends ConsoleCommand {
         try {
           var2 = new IntrusiveDeque();
           ct.a(param0, 83, var2);
-          var3 = (hua) (var2.c((byte) -103));
+          var3 = (hua) (var2.removeLast((byte) -103));
           if (var3.field_d != -1) {
-            var2.b(-10258, var3);
+            var2.addLast(-10258, var3);
           }
-          var4 = new int[var2.c(3)];
+          var4 = new int[var2.size(3)];
           var5 = 0;
           if (param1 >= -109) {
             field_o = (llb) null;
           }
-          var6 = (hua) (var2.d(0));
+          var6 = (hua) (var2.first(0));
           while (var6 != null) {
             incrementValue$1 = var5;
             var5++;
             var4[incrementValue$1] = var6.field_d;
-            var6 = (hua) (var2.a((byte) 55));
+            var6 = (hua) (var2.next((byte) 55));
           }
           stackIn_9_0 = var4;
           return stackIn_9_0;
@@ -73,7 +73,7 @@ final class SetOndamageParticleLife extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          sva.field_m = arguments[0].a(72);
+          sva.field_m = arguments[0].intValue(72);
           if (obfuscationGuard > -119) {
             field_o = (llb) null;
           }

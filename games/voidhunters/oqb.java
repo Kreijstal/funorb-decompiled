@@ -174,30 +174,30 @@ final class oqb extends le {
           var4_int = param0;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              this.field_j = param2.e(1869);
+              this.field_j = param2.readUnsignedShort(1869);
             } else {
               if (var4_int != 2) {
                 if (var4_int != 3) {
                   if (var4_int == 4) {
-                    this.field_q = param2.e(1869);
+                    this.field_q = param2.readUnsignedShort(1869);
                   } else {
                     if (5 != var4_int) {
                       if (var4_int == 6) {
-                        this.field_m = param2.e(1869);
+                        this.field_m = param2.readUnsignedShort(1869);
                       }
                     } else {
-                      this.field_p = param2.e(1869);
+                      this.field_p = param2.readUnsignedShort(1869);
                     }
                   }
                 } else {
-                  this.field_i = param2.e(1869);
+                  this.field_i = param2.readUnsignedShort(1869);
                 }
               } else {
-                this.field_l = param2.e(1869);
+                this.field_l = param2.readUnsignedShort(1869);
               }
             }
           } else {
-            this.field_o = param2.e(1869);
+            this.field_o = param2.readUnsignedShort(1869);
           }
           if (param1 > -60) {
             this.a(116, true);

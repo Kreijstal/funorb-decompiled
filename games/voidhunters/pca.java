@@ -8,9 +8,9 @@ class pca extends uqb implements DiffableState {
     static int field_j;
     static int field_m;
 
-    public void b(faa param0, int param1) {
+    public void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          super.b(param0, -121);
+          super.writeState(param0, -121);
           if (param1 >= -109) {
             field_m = -29;
           }
@@ -20,22 +20,22 @@ class pca extends uqb implements DiffableState {
         }
     }
 
-    private final void a(faa param0, int param1) {
+    private final void a(IsaacPacketBuffer param0, int param1) {
         RuntimeException var3 = null;
-        faa var4 = null;
+        IsaacPacketBuffer var4 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 0) {
-            var4 = (faa) null;
-            this.b((faa) null, -21);
+            var4 = (IsaacPacketBuffer) null;
+            this.writeState((IsaacPacketBuffer) null, -21);
           }
           if (!SetDebrisProjectileCollision.field_o) {
             return;
           }
-          this.field_k = param0.i(param1 + 0, hab.field_h);
+          this.field_k = param0.readBits(param1 + 0, hab.field_h);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -51,7 +51,7 @@ class pca extends uqb implements DiffableState {
         }
     }
 
-    public void b(byte param0, tv param1) {
+    public void copyTo(byte param0, SerializableGameState param1) {
         pca var5 = null;
         pca var6 = null;
         if (param0 < 54) {
@@ -60,14 +60,14 @@ class pca extends uqb implements DiffableState {
         try {
           var5 = (pca) (param1);
           var6 = var5;
-          super.b((byte) 126, param1);
+          super.copyTo((byte) 126, param1);
           var6.field_k = this.field_k;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pca.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    private final void a(byte param0, faa param1) {
+    private final void a(byte param0, IsaacPacketBuffer param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -80,7 +80,7 @@ class pca extends uqb implements DiffableState {
           if (!SetDebrisProjectileCollision.field_o) {
             return;
           }
-          param1.a(-632, this.field_k, hab.field_h);
+          param1.writeBits(-632, this.field_k, hab.field_h);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -99,7 +99,7 @@ class pca extends uqb implements DiffableState {
     protected pca() {
     }
 
-    public void reportDifferences(tv other, int obfuscationGuard) {
+    public void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         pca var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -137,7 +137,7 @@ class pca extends uqb implements DiffableState {
         }
     }
 
-    public boolean a(byte param0, tv param1) {
+    public boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         pca var4 = null;
         boolean stackIn_5_0 = false;
@@ -149,7 +149,7 @@ class pca extends uqb implements DiffableState {
         try {
           var3_int = -110 / ((param0 - 22) / 59);
           var4 = (pca) (param1);
-          stackIn_5_0 = (super.a((byte) -50, param1)) || (this.field_k != var4.field_k);
+          stackIn_5_0 = (super.differsFrom((byte) -50, param1)) || (this.field_k != var4.field_k);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -165,13 +165,13 @@ class pca extends uqb implements DiffableState {
         }
     }
 
-    public void a(faa param0, boolean param1) {
+    public void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
-            tv var4 = (tv) null;
-            this.reportDifferences((tv) null, -35);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.reportDifferences((SerializableGameState) null, -35);
           }
-          super.a(param0, param1);
+          super.readState(param0, param1);
           this.a(param0, 0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pca.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

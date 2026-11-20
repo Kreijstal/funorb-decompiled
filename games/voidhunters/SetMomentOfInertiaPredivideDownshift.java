@@ -76,7 +76,7 @@ final class SetMomentOfInertiaPredivideDownshift extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = (String) null;
           }
-          SetMachineGunEnergyUsed.a(181, 62, arguments[0].a(79));
+          SetMachineGunEnergyUsed.a(181, 62, arguments[0].intValue(79));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

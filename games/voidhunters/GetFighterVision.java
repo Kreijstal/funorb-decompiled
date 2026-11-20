@@ -46,14 +46,14 @@ final class GetFighterVision extends ConsoleCommand {
         try {
           if (ms.field_y != null &&
             null != kba.field_a) {
-            var3 = (qw) (ms.field_y.d(0));
+            var3 = (qw) (ms.field_y.first(0));
             while (var3 != null) {
               if (param1 == var3.field_f &&
                 !var3.field_m &&
                 Math.abs(var3.field_i - SetReverbDry.field_o) < param2) {
                 return;
               }
-              var3 = (qw) (ms.field_y.a((byte) 92));
+              var3 = (qw) (ms.field_y.next((byte) 92));
             }
             var3_int = param1;
             if (fbb.field_j[param1] > 1) {
@@ -65,7 +65,7 @@ final class GetFighterVision extends ConsoleCommand {
             var5.field_m = false;
             var5.field_i = SetReverbDry.field_o;
             var5.field_f = param1;
-            ms.field_y.b(-10258, var5);
+            ms.field_y.addLast(-10258, var5);
           }
           if (param0 == 6811) {
             return;

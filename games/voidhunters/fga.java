@@ -131,7 +131,7 @@ final class fga extends f {
               this.field_v = 0;
               this.field_l = 0;
               this.field_u = 0;
-              this.b(-3846);
+              this.unlink(-3846);
               param0 = this.field_p;
             }
             this.field_p = 0;
@@ -149,7 +149,7 @@ final class fga extends f {
         if (this.field_i < 0) {
           if (this.field_j <= 0) {
             this.l();
-            this.b(-3846);
+            this.unlink(-3846);
             return;
           }
           this.field_i = 0;
@@ -157,7 +157,7 @@ final class fga extends f {
         if (this.field_i >= var5) {
           if (this.field_j >= 0) {
             this.l();
-            this.b(-3846);
+            this.unlink(-3846);
             return;
           }
           this.field_i = var5 - 1;
@@ -270,7 +270,7 @@ final class fga extends f {
           if (this.field_i >= var5) {
             this.field_i = var5;
             this.l();
-            this.b(-3846);
+            this.unlink(-3846);
           }
           return;
         }
@@ -279,7 +279,7 @@ final class fga extends f {
         }
         this.field_i = -1;
         this.l();
-        this.b(-3846);
+        this.unlink(-3846);
     }
 
     private final void l() {
@@ -515,7 +515,7 @@ final class fga extends f {
         int var2Lifetime1;
         if (param0 == 0) {
           this.e(0);
-          this.b(-3846);
+          this.unlink(-3846);
           return;
         }
         if (this.field_l != 0) {
@@ -575,7 +575,7 @@ final class fga extends f {
         this.field_p = 0;
         this.field_q = 0;
         this.field_u = 0;
-        this.b(-3846);
+        this.unlink(-3846);
     }
 
     private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, fga param9) {
@@ -1085,7 +1085,7 @@ final class fga extends f {
         if (this.field_i < 0) {
           if (this.field_j <= 0) {
             this.l();
-            this.b(-3846);
+            this.unlink(-3846);
             return;
           }
           this.field_i = 0;
@@ -1093,7 +1093,7 @@ final class fga extends f {
         if (this.field_i >= var7) {
           if (this.field_j >= 0) {
             this.l();
-            this.b(-3846);
+            this.unlink(-3846);
             return;
           }
           this.field_i = var7 - 1;
@@ -1220,7 +1220,7 @@ final class fga extends f {
           if (this.field_i >= var7) {
             this.field_i = var7;
             this.l();
-            this.b(-3846);
+            this.unlink(-3846);
           }
           return;
         }
@@ -1230,7 +1230,7 @@ final class fga extends f {
         }
         this.field_i = -1;
         this.l();
-        this.b(-3846);
+        this.unlink(-3846);
         return;
     }
 
@@ -1271,7 +1271,7 @@ final class fga extends f {
           this.field_v = 0;
           this.field_l = 0;
           this.field_u = 0;
-          this.b(-3846);
+          this.unlink(-3846);
           return true;
         }
         if (this.field_u >= var1) {

@@ -6,12 +6,12 @@ final class nf implements dja {
     static int field_a;
     static String field_b;
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_b = (String) null;
-          return (tv[]) ((Object) new pca[param1]);
+          return (SerializableGameState[]) ((Object) new pca[param1]);
         }
-        return (tv[]) ((Object) new pca[param1]);
+        return (SerializableGameState[]) ((Object) new pca[param1]);
     }
 
     public static void a(int param0) {
@@ -93,9 +93,9 @@ final class nf implements dja {
         }
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 20 / ((-64 - param0) / 50);
-        return (tv) ((Object) new pca());
+        return (SerializableGameState) ((Object) new pca());
     }
 
     static {

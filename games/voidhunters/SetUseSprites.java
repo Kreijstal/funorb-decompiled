@@ -43,7 +43,7 @@ final class SetUseSprites extends ConsoleCommand {
           var16 = new PacketBuffer(param1);
           var17 = var16;
           var17.position = -2 + param1.length;
-          mma.field_a = var17.e(1869);
+          mma.field_a = var17.readUnsignedShort(1869);
           hla.field_a = new int[mma.field_a];
           SetInnateThrusters.field_o = new byte[mma.field_a][];
           sh.field_a = new byte[mma.field_a][];
@@ -52,25 +52,25 @@ final class SetUseSprites extends ConsoleCommand {
           SetMissionTerrainDebrisProbability.field_o = new int[mma.field_a];
           iib.field_e = new int[mma.field_a];
           var17.position = -(mma.field_a * 8) - 7 + param1.length;
-          fbb.field_i = var17.e(1869);
-          Ship.field_H = var17.e(1869);
-          var3 = (255 & var17.e((byte) -110)) + 1;
+          fbb.field_i = var17.readUnsignedShort(1869);
+          Ship.field_H = var17.readUnsignedShort(1869);
+          var3 = (255 & var17.readUnsignedByte((byte) -110)) + 1;
           for (var4 = 0; mma.field_a > var4; var4++) {
-            iib.field_e[var4] = var16.e(1869);
+            iib.field_e[var4] = var16.readUnsignedShort(1869);
           }
           for (var4Lifetime1 = 0; var4Lifetime1 < mma.field_a; var4Lifetime1++) {
-            SettingsChange.field_f[var4Lifetime1] = var17.e(1869);
+            SettingsChange.field_f[var4Lifetime1] = var17.readUnsignedShort(1869);
           }
           for (var4Lifetime2 = param0; mma.field_a > var4Lifetime2; var4Lifetime2++) {
-            SetMissionTerrainDebrisProbability.field_o[var4Lifetime2] = var17.e(1869);
+            SetMissionTerrainDebrisProbability.field_o[var4Lifetime2] = var17.readUnsignedShort(1869);
           }
           for (var4Lifetime3 = 0; var4Lifetime3 < mma.field_a; var4Lifetime3++) {
-            hla.field_a[var4Lifetime3] = var17.e(1869);
+            hla.field_a[var4Lifetime3] = var17.readUnsignedShort(1869);
           }
           var17.position = -7 + param1.length - 8 * mma.field_a - (-1 + var3) * 3;
           rlb.field_d = new int[var3];
           for (var4Lifetime4 = 1; var4Lifetime4 < var3; var4Lifetime4++) {
-            rlb.field_d[var4Lifetime4] = var17.c((byte) -87);
+            rlb.field_d[var4Lifetime4] = var17.readUnsignedMedium((byte) -87);
             if (0 == rlb.field_d[var4Lifetime4]) {
               rlb.field_d[var4Lifetime4] = 1;
             }
@@ -89,14 +89,14 @@ final class SetUseSprites extends ConsoleCommand {
             var9 = var19;
             SetInnateThrusters.field_o[var4Lifetime5] = var21;
             var10 = 0;
-            var11 = var17.e((byte) -105);
+            var11 = var17.readUnsignedByte((byte) -105);
             if (0 == (1 & var11)) {
               for (var12 = 0; var7 > var12; var12++) {
-                var8[var12] = var17.d((byte) -114);
+                var8[var12] = var17.readByte((byte) -114);
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var7 > var12; var12++) {
-                  dupTemp$0 = var17.d((byte) -114);
+                  dupTemp$0 = var17.readByte((byte) -114);
                   var9[var12] = dupTemp$0;
                   var13 = dupTemp$0;
                   stackIn_46_0 = var10;
@@ -111,13 +111,13 @@ final class SetUseSprites extends ConsoleCommand {
             } else {
               for (var12 = 0; var5 > var12; var12++) {
                 for (var13 = 0; var13 < var6; var13++) {
-                  var8[var12 + var13 * var5] = var17.d((byte) -114);
+                  var8[var12 + var13 * var5] = var17.readByte((byte) -114);
                 }
               }
               if ((var11 & 2) != 0) {
                 for (var12 = 0; var5 > var12; var12++) {
                   for (var13 = 0; var6 > var13; var13++) {
-                    dupTemp$1 = var17.d((byte) -114);
+                    dupTemp$1 = var17.readByte((byte) -114);
                     var9[var13 * var5 + var12] = dupTemp$1;
                     var14 = dupTemp$1;
                     stackIn_34_0 = var10;
@@ -165,7 +165,7 @@ final class SetUseSprites extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          GetUseSprites.field_o = arguments[0].a(81);
+          GetUseSprites.field_o = arguments[0].intValue(81);
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -12,19 +12,19 @@ final class GetShieldsToggleCooldown extends ConsoleCommand {
           return;
         }
         try {
-          SetCountermeasuresPulseRadius.field_q = param0.e(1869) << 5;
-          var2_int = param0.e((byte) -107);
+          SetCountermeasuresPulseRadius.field_q = param0.readUnsignedShort(1869) << 5;
+          var2_int = param0.readUnsignedByte((byte) -107);
           SetCountermeasuresPulseRadius.field_q = SetCountermeasuresPulseRadius.field_q + (var2_int >> 3);
           vga.field_d = (7 & var2_int) << 18;
-          vga.field_d = vga.field_d + (param0.e(1869) << 2);
-          var2_intLifetime1 = param0.e((byte) -118);
+          vga.field_d = vga.field_d + (param0.readUnsignedShort(1869) << 2);
+          var2_intLifetime1 = param0.readUnsignedByte((byte) -118);
           jv.field_b = var2_intLifetime1 << 15 & 2064384;
           vga.field_d = vga.field_d + (var2_intLifetime1 >> 6);
-          jv.field_b = jv.field_b + (param0.e((byte) -98) << 7);
-          var2_intLifetime2 = param0.e((byte) -126);
+          jv.field_b = jv.field_b + (param0.readUnsignedByte((byte) -98) << 7);
+          var2_intLifetime2 = param0.readUnsignedByte((byte) -126);
           jv.field_b = jv.field_b + (var2_intLifetime2 >> 1);
           GetCountermeasureLauncherFireForce.field_o = 65536 & var2_intLifetime2 << 16;
-          GetCountermeasureLauncherFireForce.field_o = GetCountermeasureLauncherFireForce.field_o + param0.e(1869);
+          GetCountermeasureLauncherFireForce.field_o = GetCountermeasureLauncherFireForce.field_o + param0.readUnsignedShort(1869);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bb.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

@@ -25,7 +25,7 @@ final class SetShieldsDirectionalArcParticleLife extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          LoadSettings.field_q = arguments[0].a(124);
+          LoadSettings.field_q = arguments[0].intValue(124);
           if (obfuscationGuard > -119) {
             field_o = (qca) null;
           }

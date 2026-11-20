@@ -24,7 +24,7 @@ final class SetMachineGunAimspeed extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(125, 62, arguments[0].a(67));
+          SetMachineGunEnergyUsed.a(125, 62, arguments[0].intValue(67));
           if (obfuscationGuard >= -119) {
             SetMachineGunAimspeed.e((byte) -36);
           }

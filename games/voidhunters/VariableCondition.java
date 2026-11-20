@@ -15,7 +15,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         return "Variable " + this.index + " at least " + this.value;
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         VariableCondition var3 = null;
         int var4 = 0;
         boolean stackIn_6_0 = false;
@@ -27,7 +27,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         try {
           var3 = (VariableCondition) (param1);
           var4 = 7 % ((22 - param0) / 59);
-          stackIn_6_0 = (super.a((byte) 116, param1)) || (var3.index != this.index) || (var3.value != this.value);
+          stackIn_6_0 = (super.differsFrom((byte) 116, param1)) || (var3.index != this.index) || (var3.value != this.value);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -109,14 +109,14 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         VariableCondition var5 = null;
         VariableCondition var6 = null;
         try {
           if (param0 <= 54) {
             this.a((byte) -47, -43);
           }
-          super.b((byte) 82, param1);
+          super.copyTo((byte) 82, param1);
           var5 = (VariableCondition) (param1);
           var6 = var5;
           var6.value = this.value;
@@ -195,14 +195,14 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         }
     }
 
-    public final void b(faa param0, int param1) {
-        super.b(param0, -120);
-        param0.a(-632, this.index, 32);
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
+        super.writeState(param0, -120);
+        param0.writeBits(-632, this.index, 32);
         if (param1 > -109) {
           return;
         }
         try {
-          param0.a(-632, this.value, 32);
+          param0.writeBits(-632, this.value, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "cqb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -213,11 +213,11 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         this.value = param1;
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
-          this.index = param0.i(0, 32);
-          this.value = param0.i(0, 32);
+          super.readState(param0, param1);
+          this.index = param0.readBits(0, 32);
+          this.value = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "cqb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -266,7 +266,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         return this.index;
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException var3 = null;
         int var4 = 0;
         VariableCondition var5 = null;
@@ -315,7 +315,7 @@ final class VariableCondition extends MissionCondition implements DiffableState 
         if (SocketConnector.field_c == null) {
           return;
         }
-        SocketConnector.field_c.b(-10258, new pd(param3, param2, param0, param1));
+        SocketConnector.field_c.addLast(-10258, new pd(param3, param2, param0, param1));
     }
 
     static {

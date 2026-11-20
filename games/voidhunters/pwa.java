@@ -9,7 +9,7 @@ final class pwa implements DiffableState {
     hg field_d;
     static int field_b;
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int stackIn_14_0 = 0;
         int stackIn_17_1 = 0;
         int stackIn_25_0 = 0;
@@ -48,7 +48,7 @@ final class pwa implements DiffableState {
           }
           if ((stackIn_14_0 ^ stackIn_17_1) != 0 ||
             null != this.field_e &&
-            this.field_e.a((byte) 115, var5.field_e)) {
+            this.field_e.differsFrom((byte) 115, var5.field_e)) {
             GetSniperCannonAimarc.a(-6940, "PlayerJoin join has changed. before=" + var5.field_e + ", now=" + this.field_e);
             var4 = 1;
           }
@@ -60,7 +60,7 @@ final class pwa implements DiffableState {
           }
           if ((stackIn_25_0 ^ stackIn_28_1) != 0 ||
             this.field_d != null &&
-            this.field_d.a((byte) -51, var5.field_d)) {
+            this.field_d.differsFrom((byte) -51, var5.field_d)) {
             GetSniperCannonAimarc.a(-6940, "PlayerLeave leave has changed. before=" + var5.field_d + ", now=" + this.field_d);
             var4 = 1;
           }
@@ -72,7 +72,7 @@ final class pwa implements DiffableState {
           }
           if ((stackIn_36_0 ^ stackIn_39_1) != 0 ||
             this.field_f != null &&
-            this.field_f.a((byte) -121, var5.field_f)) {
+            this.field_f.differsFrom((byte) -121, var5.field_f)) {
             var4 = 1;
             GetSniperCannonAimarc.a(-6940, "PlayerReady ready has changed. before=" + var5.field_f + ", now=" + this.field_f);
           }
@@ -108,15 +108,15 @@ final class pwa implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         RuntimeException var3 = null;
-        faa stackIn_2_0 = null;
+        IsaacPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         boolean stackIn_3_2 = false;
-        faa stackIn_7_0 = null;
+        IsaacPacketBuffer stackIn_7_0 = null;
         int stackIn_7_1 = 0;
         boolean stackIn_8_2 = false;
-        faa stackIn_12_0 = null;
+        IsaacPacketBuffer stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         boolean stackIn_13_2 = false;
         RuntimeException stackIn_21_0 = null;
@@ -124,25 +124,25 @@ final class pwa implements DiffableState {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          stackIn_2_0 = (faa) (param0);
+          stackIn_2_0 = (IsaacPacketBuffer) (param0);
           stackIn_2_1 = -81;
           stackIn_3_2 = (this.field_e != null);
-          if (vq.a(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
-            this.field_e.b(param0, -119);
+          if (vq.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
+            this.field_e.writeState(param0, -119);
           }
-          stackIn_7_0 = (faa) (param0);
+          stackIn_7_0 = (IsaacPacketBuffer) (param0);
           stackIn_7_1 = -59;
           stackIn_8_2 = (null != this.field_d);
-          if (vq.a(stackIn_7_0, stackIn_7_1, stackIn_8_2)) {
-            this.field_d.b(param0, -110);
+          if (vq.writeBoolean(stackIn_7_0, stackIn_7_1, stackIn_8_2)) {
+            this.field_d.writeState(param0, -110);
           }
-          stackIn_12_0 = (faa) (param0);
+          stackIn_12_0 = (IsaacPacketBuffer) (param0);
           stackIn_12_1 = -43;
           stackIn_13_2 = (this.field_f != null);
-          if (vq.a(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
-            this.field_f.b(param0, -115);
+          if (vq.writeBoolean(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
+            this.field_f.writeState(param0, -115);
           }
-          vq.a(param0, -107, this.field_c);
+          vq.writeBoolean(param0, -107, this.field_c);
           if (param1 < -109) {
             return;
           }
@@ -169,10 +169,10 @@ final class pwa implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         RuntimeException var3 = null;
         int var4 = 0;
-        tv var5 = null;
+        SerializableGameState var5 = null;
         pwa var6 = null;
         pwa var7 = null;
         RuntimeException stackIn_24_0 = null;
@@ -187,7 +187,7 @@ final class pwa implements DiffableState {
             if (null == var7.field_e) {
               var7.field_e = new gqa();
             }
-            this.field_e.b((byte) 110, var7.field_e);
+            this.field_e.copyTo((byte) 110, var7.field_e);
           } else {
             var6.field_e = null;
           }
@@ -197,7 +197,7 @@ final class pwa implements DiffableState {
             if (var7.field_d == null) {
               var7.field_d = new hg();
             }
-            this.field_d.b((byte) 65, var7.field_d);
+            this.field_d.copyTo((byte) 65, var7.field_d);
           }
           if (this.field_f == null) {
             var7.field_f = null;
@@ -205,14 +205,14 @@ final class pwa implements DiffableState {
             if (null == var7.field_f) {
               var7.field_f = new gtb();
             }
-            this.field_f.b((byte) 99, var7.field_f);
+            this.field_f.copyTo((byte) 99, var7.field_f);
           }
           var7.field_c = this.field_c;
           if (param0 > 54) {
             return;
           }
-          var5 = (tv) null;
-          this.b((byte) 53, (tv) null);
+          var5 = (SerializableGameState) null;
+          this.copyTo((byte) 53, (SerializableGameState) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -232,7 +232,7 @@ final class pwa implements DiffableState {
         return "join=" + this.field_e + ", leave=" + this.field_d + ", ready=" + this.field_f + ", event_cancellation=" + this.field_c;
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int stackIn_3_0 = 0;
         int stackIn_6_1 = 0;
         int stackIn_13_0 = 0;
@@ -260,7 +260,7 @@ final class pwa implements DiffableState {
           }
           boolean decompiledFrameRemainder0 = true;
           if ((stackIn_3_0 ^ stackIn_6_1) == 0 && (null == this.field_e ||
-            !this.field_e.a((byte) 90, var4.field_e))) {
+            !this.field_e.differsFrom((byte) 90, var4.field_e))) {
             stackIn_13_0 = (null != var4.field_d) ? 0 : 1;
             if (null != this.field_d) {
               stackIn_16_1 = 0;
@@ -268,7 +268,7 @@ final class pwa implements DiffableState {
               stackIn_16_1 = 1;
             }
             if ((stackIn_13_0 ^ stackIn_16_1) == 0 && (null == this.field_d ||
-              !this.field_d.a((byte) -57, var4.field_d))) {
+              !this.field_d.differsFrom((byte) -57, var4.field_d))) {
               stackIn_23_0 = (this.field_f != null) ? 0 : 1;
               if (null != var4.field_f) {
                 stackIn_26_1 = 0;
@@ -276,7 +276,7 @@ final class pwa implements DiffableState {
                 stackIn_26_1 = 1;
               }
               if ((stackIn_23_0 ^ stackIn_26_1) == 0 && (this.field_f == null ||
-                !this.field_f.a((byte) 122, var4.field_f))) {
+                !this.field_f.differsFrom((byte) 122, var4.field_f))) {
                 stackIn_32_0 = this.field_c;
                 if (var4.field_c) {
                   stackIn_33_1 = 0;
@@ -308,7 +308,7 @@ final class pwa implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         int var4 = 0;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
@@ -317,35 +317,35 @@ final class pwa implements DiffableState {
         RuntimeException var3 = null;
         var4 = VoidHunters.field_G;
         try {
-          if (!kv.a(false, param0)) {
+          if (!kv.readBoolean(false, param0)) {
             this.field_e = null;
           } else {
             if (null == this.field_e) {
               this.field_e = new gqa();
             }
-            this.field_e.a(param0, false);
+            this.field_e.readState(param0, false);
           }
-          if (!kv.a(param1, param0)) {
+          if (!kv.readBoolean(param1, param0)) {
             this.field_d = null;
           } else {
             if (this.field_d != null) {
-              this.field_d.a(param0, param1);
+              this.field_d.readState(param0, param1);
             } else {
               this.field_d = new hg();
-              this.field_d.a(param0, param1);
+              this.field_d.readState(param0, param1);
             }
           }
-          if (!kv.a(param1, param0)) {
+          if (!kv.readBoolean(param1, param0)) {
             this.field_f = null;
           } else {
             if (this.field_f != null) {
-              this.field_f.a(param0, param1);
+              this.field_f.readState(param0, param1);
             } else {
               this.field_f = new gtb();
-              this.field_f.a(param0, param1);
+              this.field_f.readState(param0, param1);
             }
           }
-          this.field_c = kv.a(false, param0);
+          this.field_c = kv.readBoolean(false, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -17,21 +17,21 @@ final class wva implements dja {
         field_a = null;
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_b = 111;
         }
-        return (tv[]) ((Object) new MatchResults[param1]);
+        return (SerializableGameState[]) ((Object) new MatchResults[param1]);
     }
 
     final static void b(int param0, int param1) {
         if (param1 != 22681) {
           wva.b((byte) 45);
         }
-        faa var2 = RequestNewestBlackboxRecording.field_p;
-        var2.h(24335, param0);
-        var2.c(0, 1);
-        var2.c(0, 0);
+        IsaacPacketBuffer var2 = RequestNewestBlackboxRecording.field_p;
+        var2.writeIsaacByte(24335, param0);
+        var2.writeByte(0, 1);
+        var2.writeByte(0, 0);
     }
 
     final static void a(java.applet.Applet param0, byte param1, String param2) {
@@ -73,9 +73,9 @@ final class wva implements dja {
         }
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -42 % ((-64 - param0) / 50);
-        return (tv) ((Object) new MatchResults());
+        return (SerializableGameState) ((Object) new MatchResults());
     }
 
     final static int a(int param0, String[] param1, int param2, String param3, no param4) {

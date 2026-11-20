@@ -11,9 +11,9 @@ final class dtb implements dja {
         field_a = null;
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 49 % ((-64 - param0) / 50);
-        return (tv) ((Object) new bea());
+        return (SerializableGameState) ((Object) new bea());
     }
 
     final static fm[] a(eab param0, int param1) {
@@ -78,12 +78,12 @@ final class dtb implements dja {
         }
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           CharSequence var4 = (CharSequence) null;
           dtb.a('￸', 101, (CharSequence) null);
         }
-        return (tv[]) ((Object) new bea[param1]);
+        return (SerializableGameState[]) ((Object) new bea[param1]);
     }
 
     final static boolean a(char param0, int param1, CharSequence param2) {
@@ -107,7 +107,7 @@ final class dtb implements dja {
           if (12 <= var3_int) {
             return false;
           }
-          if (MouseWheelInput.a(param0, 70) &&
+          if (MouseWheelInput.isNameSeparator(param0, 70) &&
             var3_int == 0) {
             return false;
           }

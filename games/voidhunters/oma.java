@@ -26,7 +26,7 @@ final class oma implements DiffableState, mfa {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -34,11 +34,11 @@ final class oma implements DiffableState, mfa {
         RuntimeException var3 = null;
         try {
           GetDebrisThrowable.a(param1, "Starting to read");
-          if (!kv.a(false, param0)) {
+          if (!kv.readBoolean(false, param0)) {
             this.carouselInfo = null;
           } else {
             this.carouselInfo = new CarouselCommongameInfo((mfa) (this));
-            this.carouselInfo.a(param0, false);
+            this.carouselInfo.readState(param0, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -55,7 +55,7 @@ final class oma implements DiffableState, mfa {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         oma var3 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -73,7 +73,7 @@ final class oma implements DiffableState, mfa {
             if (null == var3.carouselInfo) {
               var3.carouselInfo = new CarouselCommongameInfo((mfa) (this));
             }
-            this.carouselInfo.b((byte) 91, var3.carouselInfo);
+            this.carouselInfo.copyTo((byte) 91, var3.carouselInfo);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -111,7 +111,7 @@ final class oma implements DiffableState, mfa {
         return ((GameSnapshot) (this.carouselInfo.b(28120))).world;
     }
 
-    final void a(int param0, faa param1) {
+    final void a(int param0, IsaacPacketBuffer param1) {
         int var3_int = 0;
         int var4 = 0;
         int var5 = 0;
@@ -120,24 +120,24 @@ final class oma implements DiffableState, mfa {
         }
         try {
           ConsoleValue.b(0);
-          param1.f((byte) -50);
+          param1.endBitRead((byte) -50);
           var3_int = param1.position;
-          param1.p(-23497);
-          this.a(param1, false);
-          param1.f((byte) -47);
+          param1.beginBitRead(-23497);
+          this.readState(param1, false);
+          param1.endBitRead((byte) -47);
           var4 = GetMessageMaxage.a((byte) -69, param1.position, param1.payload, var3_int);
-          var5 = param1.h(97);
+          var5 = param1.readInt(97);
           if (var5 == var4) {
             GetDebrisThrowable.a(false, "cg readstate: Hmm, it seems correct");
           }
-          param1.p(-23497);
+          param1.beginBitRead(-23497);
           GetDebrisThrowable.a(false, "has read state");
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "oma.A(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int var4 = 0;
         oma var5 = null;
         int stackIn_8_0 = 0;
@@ -165,7 +165,7 @@ final class oma implements DiffableState, mfa {
           }
           if ((stackIn_8_0 ^ stackIn_11_1) != 0 ||
             this.carouselInfo != null &&
-            this.carouselInfo.a((byte) 106, var5.carouselInfo)) {
+            this.carouselInfo.differsFrom((byte) 106, var5.carouselInfo)) {
             var4 = 1;
             System.out.println("Carousel_commongame_Info carousel_info has changed. before=" + var5.carouselInfo + ", now=" + this.carouselInfo);
           }
@@ -187,8 +187,8 @@ final class oma implements DiffableState, mfa {
         }
     }
 
-    public final void b(faa param0, int param1) {
-        faa stackIn_4_0 = null;
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
+        IsaacPacketBuffer stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         boolean stackIn_5_2 = false;
         RuntimeException stackIn_11_0 = null;
@@ -200,11 +200,11 @@ final class oma implements DiffableState, mfa {
           if (param1 > -109) {
             return;
           }
-          stackIn_4_0 = (faa) (param0);
+          stackIn_4_0 = (IsaacPacketBuffer) (param0);
           stackIn_4_1 = -107;
           stackIn_5_2 = (null != this.carouselInfo);
-          if (vq.a(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
-            this.carouselInfo.b(param0, -114);
+          if (vq.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
+            this.carouselInfo.writeState(param0, -114);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -308,7 +308,7 @@ final class oma implements DiffableState, mfa {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         oma var3 = null;
         int var4 = 0;
         int stackIn_3_0 = 0;
@@ -330,7 +330,7 @@ final class oma implements DiffableState, mfa {
           }
           boolean decompiledFrameRemainder0 = true;
           if ((stackIn_3_0 ^ stackIn_6_1) == 0 && (null == this.carouselInfo ||
-            !this.carouselInfo.a((byte) -75, var3.carouselInfo))) {
+            !this.carouselInfo.differsFrom((byte) -75, var3.carouselInfo))) {
             stackIn_12_0 = false;
             decompiledFrameRemainder0 = false;
           }

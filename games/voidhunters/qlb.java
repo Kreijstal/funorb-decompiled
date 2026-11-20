@@ -4,15 +4,15 @@
 final class qlb implements dja {
     static int field_a;
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -87 / ((param0 + 64) / 50);
         return null;
     }
 
     final static Object[] a(Object[] param0, Object param1, dja param2, boolean param3, boolean param4, int param5) {
-        tv[] stackIn_7_0 = null;
+        SerializableGameState[] stackIn_7_0 = null;
         Object[] stackIn_18_0 = null;
-        tv[] stackIn_36_0 = null;
+        SerializableGameState[] stackIn_36_0 = null;
         RuntimeException stackIn_39_0 = null;
         StringBuilder stackIn_39_1 = null;
         String stackIn_40_2 = null;
@@ -22,16 +22,16 @@ final class qlb implements dja {
         String stackIn_46_2 = null;
         RuntimeException decompiledCaughtException = null;
         int var6_int = 0;
-        tv[] var6 = null;
+        SerializableGameState[] var6 = null;
         RuntimeException var6_ref = null;
         int var7 = 0;
         int var9 = 0;
         int var10 = 0;
-        tv[] var12 = null;
+        SerializableGameState[] var12 = null;
         int var13 = 0;
         iu var14 = null;
         iu var15 = null;
-        tv[] var6Lifetime1;
+        SerializableGameState[] var6Lifetime1;
         int var7Lifetime1;
         int var9Lifetime1;
         int var9Lifetime2;
@@ -95,11 +95,11 @@ final class qlb implements dja {
             }
             if (decompiledFrameRemainder0) {
               for (var9Lifetime1 = 0; var9Lifetime1 < var7; var9Lifetime1++) {
-                var6[var9Lifetime1] = (tv) (param0[var9Lifetime1]);
+                var6[var9Lifetime1] = (SerializableGameState) (param0[var9Lifetime1]);
               }
-              var6[var7] = (tv) (param1);
+              var6[var7] = (SerializableGameState) (param1);
               for (var9Lifetime2 = var7; var9Lifetime2 < param0.length; var9Lifetime2++) {
-                var6[1 + var9Lifetime2] = (tv) (param0[var9Lifetime2]);
+                var6[1 + var9Lifetime2] = (SerializableGameState) (param0[var9Lifetime2]);
               }
               decompiledFrameRemainder1 = false;
             }
@@ -107,17 +107,17 @@ final class qlb implements dja {
               var13 = 0;
               var7Lifetime1 = var13;
               while (param0.length > var13) {
-                var12[var13] = (tv) (param0[var13]);
+                var12[var13] = (SerializableGameState) (param0[var13]);
                 var13++;
               }
-              var6[param0.length] = (tv) (param1);
+              var6[param0.length] = (SerializableGameState) (param1);
             }
             stackIn_36_0 = var6;
             return stackIn_36_0;
           }
           var6Lifetime1 = param2.a(11995, 1);
           var6Lifetime1 = var6Lifetime1;
-          var6Lifetime1[0] = (tv) (param1);
+          var6Lifetime1[0] = (SerializableGameState) (param1);
           stackIn_7_0 = var6Lifetime1;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -153,11 +153,11 @@ final class qlb implements dja {
         kl.a(MissionList.b((byte) -119), 0);
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_a = -48;
         }
-        return (tv[]) ((Object) new MapClearanceArea[param1]);
+        return (SerializableGameState[]) ((Object) new MapClearanceArea[param1]);
     }
 
     static {

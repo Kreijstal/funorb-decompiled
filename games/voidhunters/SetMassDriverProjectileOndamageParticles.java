@@ -11,7 +11,7 @@ final class SetMassDriverProjectileOndamageParticles extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(152, 62, arguments[0].a(50));
+          SetMachineGunEnergyUsed.a(152, 62, arguments[0].intValue(50));
           if (obfuscationGuard > -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -78);

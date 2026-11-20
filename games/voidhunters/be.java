@@ -5,7 +5,7 @@ final class be implements DiffableState {
     int index;
     int value;
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         be var4 = null;
         boolean stackIn_5_0 = false;
@@ -33,7 +33,7 @@ final class be implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         be var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -78,13 +78,13 @@ final class be implements DiffableState {
         return this.index + " to " + this.value;
     }
 
-    public final void b(faa param0, int param1) {
-        param0.a(-632, this.index, 32);
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
+        param0.writeBits(-632, this.index, 32);
         if (param1 >= -109) {
           return;
         }
         try {
-          param0.a(-632, this.value, 32);
+          param0.writeBits(-632, this.value, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "be.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -102,7 +102,7 @@ final class be implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         RuntimeException var3 = null;
         be var5 = null;
         be var6 = null;
@@ -134,14 +134,14 @@ final class be implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
             kka var4 = (kka) null;
             be.a(-84, true, (kka) null);
           }
-          this.index = param0.i(0, 32);
-          this.value = param0.i(0, 32);
+          this.index = param0.readBits(0, 32);
+          this.value = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "be.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

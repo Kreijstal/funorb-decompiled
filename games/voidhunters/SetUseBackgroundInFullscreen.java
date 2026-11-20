@@ -13,7 +13,7 @@ final class SetUseBackgroundInFullscreen extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          GetMissilesExplosionPower.field_p = arguments[0].a(44);
+          GetMissilesExplosionPower.field_p = arguments[0].intValue(44);
           if (obfuscationGuard >= -119) {
             field_p = (String) null;
           }

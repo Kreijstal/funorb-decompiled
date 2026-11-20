@@ -30,13 +30,13 @@ final class GetArmageddonLength extends ConsoleCommand {
         int var7 = 0;
         byte[] var8 = null;
         kob var9 = null;
-        faa var10 = null;
+        IsaacPacketBuffer var10 = null;
         byte[] var11 = null;
         byte[] var12 = null;
         var7 = VoidHunters.field_G;
         try {
           var10 = qga.field_b;
-          var2 = var10.e((byte) -113);
+          var2 = var10.readUnsignedByte((byte) -113);
           var3 = 44 % ((-49 - param0) / 63);
           if (var2 != 0) {
             if (var2 != 1) {
@@ -44,45 +44,45 @@ final class GetArmageddonLength extends ConsoleCommand {
               ifb.l(-126);
               return;
             }
-            var4 = var10.h(100);
-            var5_ref_dnb = (dnb) (SetGrapplingHookAimarc.field_o.d(0));
+            var4 = var10.readInt(100);
+            var5_ref_dnb = (dnb) (SetGrapplingHookAimarc.field_o.first(0));
             while (var5_ref_dnb != null) {
               if (var5_ref_dnb.field_d != var4) {
-                var5_ref_dnb = (dnb) (SetGrapplingHookAimarc.field_o.a((byte) 78));
+                var5_ref_dnb = (dnb) (SetGrapplingHookAimarc.field_o.next((byte) 78));
                 continue;
               }
               break;
             }
             if (var5_ref_dnb != null) {
-              var5_ref_dnb.b(-3846);
+              var5_ref_dnb.unlink(-3846);
               return;
             }
             ifb.l(-121);
             return;
           }
-          var9 = (kob) (GetBoostersActiveTime.field_q.d(0));
+          var9 = (kob) (GetBoostersActiveTime.field_q.first(0));
           if (var9 == null) {
             ifb.l(-126);
             return;
           }
-          var5 = var10.e((byte) -93);
+          var5 = var10.readUnsignedByte((byte) -93);
           if (var5 != 0) {
             var12 = new byte[var5];
             var11 = var12;
             var8 = var11;
             var6 = var8;
-            var10.a(0, var12, (byte) -59, var5);
+            var10.readBytes(0, var12, (byte) -59, var5);
           } else {
             var6 = null;
           }
           var10.position = var10.position + 4;
-          if (!var10.c(-2780)) {
+          if (!var10.checkCrc(-2780)) {
             ifb.l(-126);
             return;
           }
           var9.field_f = (byte[]) (var6);
           var9.field_d = true;
-          var9.b(-3846);
+          var9.unlink(-3846);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -6,7 +6,7 @@ final class TimedSpecialOrderBehaviour implements DiffableState {
     static String field_b;
     static int field_a;
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         TimedSpecialOrderBehaviour var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -43,7 +43,7 @@ final class TimedSpecialOrderBehaviour implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         TimedSpecialOrderBehaviour var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -71,7 +71,7 @@ final class TimedSpecialOrderBehaviour implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         TimedSpecialOrderBehaviour var5 = null;
         TimedSpecialOrderBehaviour var6 = null;
         if (param0 < 54) {
@@ -86,12 +86,12 @@ final class TimedSpecialOrderBehaviour implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 >= -109) {
             TimedSpecialOrderBehaviour.a(55);
           }
-          param0.a(-632, this.cooldown, 32);
+          param0.writeBits(-632, this.cooldown, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gqb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -137,12 +137,12 @@ final class TimedSpecialOrderBehaviour implements DiffableState {
         return var9;
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
             this.cooldown = 57;
           }
-          this.cooldown = param0.i(0, 32);
+          this.cooldown = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gqb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

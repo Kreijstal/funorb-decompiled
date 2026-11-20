@@ -20,7 +20,7 @@ final class pgb {
     static String field_l;
     static String field_p;
 
-    final static void a(int param0, int param1, int param2, faa param3, int[] param4) {
+    final static void a(int param0, int param1, int param2, IsaacPacketBuffer param3, int[] param4) {
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -53,19 +53,19 @@ final class pgb {
                 var5_int = var9;
               }
             }
-            param3.a(-632, param1, param0);
+            param3.writeBits(-632, param1, param0);
             var7 = BodyInZoneCondition.a(-103, -var5_int + var6);
-            param3.a(-632, var7, 6);
-            param3.a(-632, var5_int, 32);
+            param3.writeBits(-632, var7, 6);
+            param3.writeBits(-632, var5_int, 32);
             if (var7 > 0) {
               for (var8Lifetime1 = 0; var8Lifetime1 < param1; var8Lifetime1++) {
-                param3.a(-632, -var5_int + param4[var8Lifetime1], var7);
+                param3.writeBits(-632, -var5_int + param4[var8Lifetime1], var7);
               }
             }
             var8Lifetime2 = 72 % ((-35 - param2) / 54);
             return;
           }
-          param3.a(-632, 0, param0);
+          param3.writeBits(-632, 0, param0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -7,7 +7,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
     static String field_b;
     private int field_d;
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         AsteroidField var4 = null;
@@ -35,7 +35,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         AsteroidField var3 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -94,9 +94,9 @@ final class AsteroidField implements DiffableState, ofa, utb {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         RuntimeException runtimeException = null;
-        faa var3 = null;
+        IsaacPacketBuffer var3 = null;
         Asteroid[] var4 = null;
         int var5 = 0;
         Asteroid[] var6 = null;
@@ -104,7 +104,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
         Asteroid var8 = null;
         int var9 = 0;
         int stackIn_5_0 = 0;
-        faa stackIn_14_0 = null;
+        IsaacPacketBuffer stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         boolean stackIn_15_2 = false;
         RuntimeException stackIn_26_0 = null;
@@ -121,7 +121,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
             stackIn_5_0 = var4.length;
           }
           var5 = stackIn_5_0;
-          var3.a(-632, var5, 10);
+          var3.writeBits(-632, var5, 10);
           if (var5 != 0) {
             var6 = var4;
             var7 = 0;
@@ -133,7 +133,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
               stackIn_14_0 = var3;
               stackIn_14_1 = 68;
               stackIn_15_2 = (null != var8);
-              if (vq.a(stackIn_14_0, stackIn_14_1, stackIn_15_2)) {
+              if (vq.writeBoolean(stackIn_14_0, stackIn_14_1, stackIn_15_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
               }
               var7++;
@@ -157,7 +157,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException runtimeException = null;
         AsteroidField var3 = null;
         int var4 = 0;
@@ -629,7 +629,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
           }
           var2Lifetime23 = dqb.a((byte) -5, "move");
           if (null != var2Lifetime23) {
-            ndb.field_b = qpa.a((byte) -125, var2Lifetime23);
+            ProxyAuthenticationException.field_b = qpa.a((byte) -125, var2Lifetime23);
           }
           var2Lifetime24 = dqb.a((byte) -76, "zoom");
           if (var2Lifetime24 != null) {
@@ -1341,7 +1341,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
           }
           var2Lifetime201 = dqb.a((byte) -100, "ORDER_SELF_DESTRUCT_UNPREPARE_TOGGLE");
           if (var2Lifetime201 != null) {
-            NodeHashTableIterator.field_c = qpa.a((byte) -125, var2Lifetime201);
+            SecondaryNodeDequeIterator.field_c = qpa.a((byte) -125, var2Lifetime201);
           }
           var2Lifetime202 = dqb.a((byte) -63, "mission_options");
           if (var2Lifetime202 != null) {
@@ -1886,7 +1886,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         boolean stackIn_7_1 = false;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -1895,7 +1895,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
         RuntimeException var3 = null;
         try {
           if (param1) {
-            this.a((faa) null, (byte) 39);
+            this.a((IsaacPacketBuffer) null, (byte) 39);
           }
           stackIn_7_1 = !(param1);
           this.a(stackIn_7_1);
@@ -1992,7 +1992,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != 16520) {
-            this.b((byte) -73, (tv) null);
+            this.copyTo((byte) -73, (SerializableGameState) null);
           }
           var4_int = param0.a(param1 + 13131, param2, this.asteroids, 2) ? 1 : 0;
           if (var4_int != 0) {
@@ -2045,7 +2045,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
         }
     }
 
-    public final void a(faa param0, int param1) {
+    public final void a(IsaacPacketBuffer param0, int param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
@@ -2071,8 +2071,8 @@ final class AsteroidField implements DiffableState, ofa, utb {
         }
     }
 
-    public final void a(faa param0, byte param1) {
-        faa var3 = null;
+    public final void a(IsaacPacketBuffer param0, byte param1) {
+        IsaacPacketBuffer var3 = null;
         Asteroid[] var4 = null;
         int var5 = 0;
         Asteroid[] var6 = null;
@@ -2080,7 +2080,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
         Asteroid var8 = null;
         int var9 = 0;
         int stackIn_8_0 = 0;
-        faa stackIn_17_0 = null;
+        IsaacPacketBuffer stackIn_17_0 = null;
         int stackIn_17_1 = 0;
         boolean stackIn_18_2 = false;
         RuntimeException stackIn_27_0 = null;
@@ -2091,7 +2091,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
         var9 = VoidHunters.field_G;
         try {
           if (param1 >= -91) {
-            this.a((faa) null, true);
+            this.readState((IsaacPacketBuffer) null, true);
           }
           var3 = param0;
           var4 = this.asteroids;
@@ -2101,7 +2101,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
             stackIn_8_0 = var4.length;
           }
           var5 = stackIn_8_0;
-          var3.a(-632, var5, 10);
+          var3.writeBits(-632, var5, 10);
           if (var5 != 0) {
             var6 = var4;
             var7 = 0;
@@ -2113,7 +2113,7 @@ final class AsteroidField implements DiffableState, ofa, utb {
               stackIn_17_0 = var3;
               stackIn_17_1 = -111;
               stackIn_18_2 = (var8 != null);
-              if (vq.a(stackIn_17_0, stackIn_17_1, stackIn_18_2)) {
+              if (vq.writeBoolean(stackIn_17_0, stackIn_17_1, stackIn_18_2)) {
                 ((utb) ((Object) var8)).a(var3, (byte) -127);
               }
               var7++;

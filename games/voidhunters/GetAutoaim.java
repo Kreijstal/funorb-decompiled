@@ -10,7 +10,7 @@ final class GetAutoaim extends ConsoleCommand {
         field_p = null;
     }
 
-    final static boolean[] a(int param0, faa param1, int param2, boolean[] param3) {
+    final static boolean[] a(int param0, IsaacPacketBuffer param1, int param2, boolean[] param3) {
         int var5 = 0;
         int var4_int = 0;
         RuntimeException var4 = null;
@@ -25,7 +25,7 @@ final class GetAutoaim extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         var6 = VoidHunters.field_G;
         try {
-          var4_int = param1.i(0, param0);
+          var4_int = param1.readBits(0, param0);
           if (0 == var4_int) {
             return null;
           }
@@ -34,11 +34,11 @@ final class GetAutoaim extends ConsoleCommand {
             param3 = new boolean[var4_int];
           }
           for (var5 = 0; var5 < var4_int; var5++) {
-            param3[var5] = kv.a(false, param1);
+            param3[var5] = kv.readBoolean(false, param1);
           }
           if (param2 <= 19) {
             var7 = (boolean[]) null;
-            GetAutoaim.a(-37, (faa) null, -23, (boolean[]) null);
+            GetAutoaim.a(-37, (IsaacPacketBuffer) null, -23, (boolean[]) null);
           }
           stackIn_14_0 = (boolean[]) (param3);
           return stackIn_14_0;

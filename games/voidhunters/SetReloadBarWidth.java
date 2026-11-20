@@ -46,7 +46,7 @@ final class SetReloadBarWidth extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          GetSniperCannonAimarc.field_p = arguments[0].a(11);
+          GetSniperCannonAimarc.field_p = arguments[0].intValue(11);
           if (obfuscationGuard > -119) {
             SetReloadBarWidth.f((byte) -42);
           }

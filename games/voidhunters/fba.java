@@ -122,7 +122,7 @@ final class fba implements DiffableState, ofa {
         bs.field_c = param0;
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         fba var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -334,7 +334,7 @@ final class fba implements DiffableState, ofa {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         fba var3 = null;
         int var4 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -371,17 +371,17 @@ final class fba implements DiffableState, ofa {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         PartitionZone discarded$1 = null;
         int var7 = 0;
-        faa var3 = null;
+        IsaacPacketBuffer var3 = null;
         PartitionZoneList[] var4 = null;
         int var5 = 0;
         PartitionZoneList[] var6 = null;
         PartitionZoneList var8 = null;
         int var9 = 0;
         int stackIn_6_0 = 0;
-        faa stackIn_12_0 = null;
+        IsaacPacketBuffer stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         boolean stackIn_13_2 = false;
         RuntimeException stackIn_20_0 = null;
@@ -402,7 +402,7 @@ final class fba implements DiffableState, ofa {
             stackIn_6_0 = var4.length;
           }
           var5 = stackIn_6_0;
-          var3.a(-632, var5, 10);
+          var3.writeBits(-632, var5, 10);
           if (var5 != 0) {
             var6 = var4;
             for (var7 = 0; var6.length > var7; var7++) {
@@ -410,7 +410,7 @@ final class fba implements DiffableState, ofa {
               stackIn_12_0 = var3;
               stackIn_12_1 = 53;
               stackIn_13_2 = (var8 != null);
-              if (vq.a(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
+              if (vq.writeBoolean(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
               }
             }
@@ -462,7 +462,7 @@ final class fba implements DiffableState, ofa {
         kpb.field_s = var3;
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         fba var3 = (fba) (param1);
         if (var3.field_b == this.field_b) {
           return;
@@ -616,7 +616,7 @@ final class fba implements DiffableState, ofa {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         if (param1) {
           return;
         }
@@ -651,7 +651,7 @@ final class fba implements DiffableState, ofa {
         int var8 = 0;
         int var9 = 0;
         PartitionZoneList var10 = null;
-        tv var12 = null;
+        SerializableGameState var12 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -671,8 +671,8 @@ final class fba implements DiffableState, ofa {
             }
           }
           if (param0 != 1) {
-            var12 = (tv) null;
-            this.a((byte) 36, (tv) null);
+            var12 = (SerializableGameState) null;
+            this.differsFrom((byte) 36, (SerializableGameState) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

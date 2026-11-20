@@ -26,7 +26,7 @@ abstract class ka {
         RuntimeException decompiledCaughtException = null;
         try {
           var2 = new ana(param1, param1);
-          GetToggledScoreboard.field_p.b(-10258, var2);
+          GetToggledScoreboard.field_p.addLast(-10258, var2);
           var3 = 119 / ((param0 - 18) / 37);
           kpb.field_q.b(param1);
           stackIn_1_0 = var2;

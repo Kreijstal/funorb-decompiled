@@ -26,7 +26,7 @@ final class SetDebrisCarryOverPercentage extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -96);
           }
-          SetMachineGunEnergyUsed.a(35, 62, arguments[0].a(75));
+          SetMachineGunEnergyUsed.a(35, 62, arguments[0].intValue(75));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

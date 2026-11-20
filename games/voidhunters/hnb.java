@@ -294,7 +294,7 @@ final class hnb extends iw implements oo {
             }
             this.field_P = new nva(var5_ref_String__, var6_int, 150);
             this.field_P.a(this.field_L.field_g + this.field_S.field_g, 126, 18, 1, -19 + (this.field_L.field_f + this.field_S.field_r + this.field_L.field_r));
-            this.field_t.a(this.field_P, (byte) -55);
+            this.field_t.addFirst(this.field_P, (byte) -55);
           }
           this.field_Q = this.a(wv.field_l, (sba) (this), -14);
           var5Lifetime1 = this.field_Q.field_h / 2 + this.field_Q.field_g;

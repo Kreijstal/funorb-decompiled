@@ -17,7 +17,7 @@ final class GrapplingHook extends ShipBody implements DiffableState, utb {
         this.retracting = param1 ? true : false;
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -103,8 +103,8 @@ final class GrapplingHook extends ShipBody implements DiffableState, utb {
 
     final int m(int param0) {
         if (param0 != 32) {
-          tv var3 = (tv) null;
-          this.reportDifferences((tv) null, -15);
+          SerializableGameState var3 = (SerializableGameState) null;
+          this.reportDifferences((SerializableGameState) null, -15);
           return this.firedFromPlayer;
         }
         return this.firedFromPlayer;
@@ -115,16 +115,16 @@ final class GrapplingHook extends ShipBody implements DiffableState, utb {
         return this.grabbedComponentId;
     }
 
-    public final void a(faa param0, byte param1) {
+    public final void a(IsaacPacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -115);
-          param0.a(-632, this.grabbedObjectId, 32);
-          param0.a(-632, this.grabbedComponentId, 32);
-          param0.a(-632, this.grabbedComponentOffsetx, 32);
-          param0.a(-632, this.grabbedComponentOffsety, 32);
-          param0.a(-632, this.firedFromId, 32);
-          param0.a(-632, this.firedFromPlayer, 32);
-          vq.a(param0, -98, this.retracting);
+          param0.writeBits(-632, this.grabbedObjectId, 32);
+          param0.writeBits(-632, this.grabbedComponentId, 32);
+          param0.writeBits(-632, this.grabbedComponentOffsetx, 32);
+          param0.writeBits(-632, this.grabbedComponentOffsety, 32);
+          param0.writeBits(-632, this.firedFromId, 32);
+          param0.writeBits(-632, this.firedFromPlayer, 32);
+          vq.writeBoolean(param0, -98, this.retracting);
           if (param1 > -91) {
             this.o(-128);
           }
@@ -149,16 +149,16 @@ final class GrapplingHook extends ShipBody implements DiffableState, utb {
         field_C = null;
     }
 
-    public final void a(faa param0, int param1) {
+    public final void a(IsaacPacketBuffer param0, int param1) {
         try {
           super.a(param0, 32);
-          this.grabbedObjectId = param0.i(0, 32);
-          this.grabbedComponentId = param0.i(param1 ^ 32, 32);
-          this.grabbedComponentOffsetx = param0.i(0, 32);
-          this.grabbedComponentOffsety = param0.i(0, param1);
-          this.firedFromId = param0.i(param1 ^ 32, 32);
-          this.firedFromPlayer = param0.i(0, 32);
-          this.retracting = kv.a(false, param0);
+          this.grabbedObjectId = param0.readBits(0, 32);
+          this.grabbedComponentId = param0.readBits(param1 ^ 32, 32);
+          this.grabbedComponentOffsetx = param0.readBits(0, 32);
+          this.grabbedComponentOffsety = param0.readBits(0, param1);
+          this.firedFromId = param0.readBits(param1 ^ 32, 32);
+          this.firedFromPlayer = param0.readBits(0, 32);
+          this.retracting = kv.readBoolean(false, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mqb.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -188,28 +188,28 @@ final class GrapplingHook extends ShipBody implements DiffableState, utb {
         this.chassis.a(this.chassis.i((byte) -112).field_p, (byte) 92);
     }
 
-    public final void b(faa param0, int param1) {
-        super.b(param0, -126);
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
+        super.writeState(param0, -126);
         if (param1 >= -109) {
           return;
         }
         try {
-          param0.a(-632, this.grabbedObjectId, 32);
-          param0.a(-632, this.grabbedComponentId, 32);
-          param0.a(-632, this.grabbedComponentOffsetx, 32);
-          param0.a(-632, this.grabbedComponentOffsety, 32);
-          param0.a(-632, this.firedFromId, 32);
-          param0.a(-632, this.firedFromPlayer, 32);
-          vq.a(param0, -123, this.retracting);
+          param0.writeBits(-632, this.grabbedObjectId, 32);
+          param0.writeBits(-632, this.grabbedComponentId, 32);
+          param0.writeBits(-632, this.grabbedComponentOffsetx, 32);
+          param0.writeBits(-632, this.grabbedComponentOffsety, 32);
+          param0.writeBits(-632, this.firedFromId, 32);
+          param0.writeBits(-632, this.firedFromPlayer, 32);
+          vq.writeBoolean(param0, -123, this.retracting);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mqb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         GrapplingHook var4 = (GrapplingHook) (param1);
         GrapplingHook var3 = var4;
-        super.b((byte) 82, param1);
+        super.copyTo((byte) 82, param1);
         if (param0 < 54) {
           return;
         }
@@ -233,7 +233,7 @@ final class GrapplingHook extends ShipBody implements DiffableState, utb {
         return this.retracting;
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int stackIn_10_0 = 0;
         boolean stackIn_13_0 = false;
         RuntimeException stackIn_16_0 = null;
@@ -247,7 +247,7 @@ final class GrapplingHook extends ShipBody implements DiffableState, utb {
           boolean decompiledFrameRemainder0 = true;
           var4 = 66 % ((param0 - 22) / 59);
           var5 = (GrapplingHook) (param1);
-          if (!super.a((byte) 111, param1) &&
+          if (!super.differsFrom((byte) 111, param1) &&
             this.grabbedObjectId == var5.grabbedObjectId &&
             var5.grabbedComponentId == this.grabbedComponentId &&
             var5.grabbedComponentOffsetx == this.grabbedComponentOffsetx &&
@@ -278,16 +278,16 @@ final class GrapplingHook extends ShipBody implements DiffableState, utb {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, false);
-          this.grabbedObjectId = param0.i(0, 32);
-          this.grabbedComponentId = param0.i(0, 32);
-          this.grabbedComponentOffsetx = param0.i(0, 32);
-          this.grabbedComponentOffsety = param0.i(0, 32);
-          this.firedFromId = param0.i(0, 32);
-          this.firedFromPlayer = param0.i(0, 32);
-          this.retracting = kv.a(param1, param0);
+          super.readState(param0, false);
+          this.grabbedObjectId = param0.readBits(0, 32);
+          this.grabbedComponentId = param0.readBits(0, 32);
+          this.grabbedComponentOffsetx = param0.readBits(0, 32);
+          this.grabbedComponentOffsety = param0.readBits(0, 32);
+          this.firedFromId = param0.readBits(0, 32);
+          this.firedFromPlayer = param0.readBits(0, 32);
+          this.retracting = kv.readBoolean(param1, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mqb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

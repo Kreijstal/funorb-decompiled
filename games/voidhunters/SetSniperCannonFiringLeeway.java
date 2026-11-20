@@ -15,7 +15,7 @@ final class SetSniperCannonFiringLeeway extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(97, 62, arguments[0].a(58));
+          SetMachineGunEnergyUsed.a(97, 62, arguments[0].intValue(58));
           if (obfuscationGuard >= -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -44);

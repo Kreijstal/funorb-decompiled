@@ -238,7 +238,7 @@ final class fka extends IntrusiveNode {
                   }
                   var16Lifetime1Lifetime1 = 0;
                   var17 = rga.field_f.field_wb.field_lb;
-                  var18_ref = (jk) (var17.d(0));
+                  var18_ref = (jk) (var17.first(0));
                   scanLoop4: while (true) {
                     if (var18_ref != null) {
                       if (!var18_ref.i(56)) {
@@ -264,7 +264,7 @@ final class fka extends IntrusiveNode {
                           break scanLoop4;
                         }
                       }
-                      var18_ref = (jk) (var17.a((byte) 98));
+                      var18_ref = (jk) (var17.next((byte) 98));
                       continue;
                     }
                     break;

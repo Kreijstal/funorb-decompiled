@@ -21,7 +21,7 @@ final class apb {
         RuntimeException decompiledCaughtException = null;
         var4 = VoidHunters.field_G;
         try {
-          var5 = (mv) (GetArmageddonLength.field_r.d(0));
+          var5 = (mv) (GetArmageddonLength.field_r.first(0));
           var1 = var5;
           if (var1 == null) {
             return false;

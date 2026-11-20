@@ -91,7 +91,7 @@ final class World implements DiffableState, utb {
         return var6 != 0;
     }
 
-    public final void a(faa param0, int param1) {
+    public final void a(IsaacPacketBuffer param0, int param1) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_45_0 = null;
@@ -107,15 +107,15 @@ final class World implements DiffableState, utb {
         try {
           this.ships = (Ship[]) (GetAutoAfkTimeout.a(20, 1, this.ships, MissionGenerationData.field_a, 8, param0));
           this.projectiles = new IntrusiveDeque();
-          var7 = (Projectile[]) (SetAutoDetail.a(10, aba.field_b, param0, 1, -88, (tv[]) null));
+          var7 = (Projectile[]) (SetAutoDetail.a(10, aba.field_b, param0, 1, -88, (SerializableGameState[]) null));
           var3 = var7;
           if (null != var3) {
             for (var4_int = 0; var4_int < var7.length; var4_int++) {
-              this.projectiles.b(param1 ^ -10290, var7[var4_int]);
+              this.projectiles.addLast(param1 ^ -10290, var7[var4_int]);
             }
           }
           this.debris = (Debris[]) (GetAutoAfkTimeout.a(param1 ^ -11, 1, this.debris, vcb.field_z, 10, param0));
-          if (kv.a(false, param0)) {
+          if (kv.readBoolean(false, param0)) {
             if (this.field_e == null) {
               this.field_e = new AsteroidField();
             }
@@ -124,49 +124,49 @@ final class World implements DiffableState, utb {
             this.field_e = null;
           }
           this.spawnPoints = new IntrusiveDeque();
-          var4 = (rdb[]) (SetAutoDetail.a(6, GetBombletSprayProjectileDamage.field_q, param0, 1, param1 ^ -113, (tv[]) null));
+          var4 = (rdb[]) (SetAutoDetail.a(6, GetBombletSprayProjectileDamage.field_q, param0, 1, param1 ^ -113, (SerializableGameState[]) null));
           if (var4 != null) {
             for (var5 = 0; var4.length > var5; var5++) {
-              this.spawnPoints.b(-10258, var4[var5]);
+              this.spawnPoints.addLast(-10258, var4[var5]);
             }
           }
           this.grapplingHooks = (GrapplingHook[]) (GetAutoAfkTimeout.a(-14, 1, this.grapplingHooks, TickCondition.field_c, 8, param0));
           this.respawntimers = wkb.a((byte) 37, this.respawntimers, param0, 4);
-          this.debug = kv.a(false, param0);
-          this.field_y = param0.i(0, param1);
-          this.swappedTeams = kv.a(false, param0);
-          if (kv.a(false, param0)) {
+          this.debug = kv.readBoolean(false, param0);
+          this.field_y = param0.readBits(0, param1);
+          this.swappedTeams = kv.readBoolean(false, param0);
+          if (kv.readBoolean(false, param0)) {
             if (null == this.missionControl) {
               this.missionControl = new MissionControl();
             }
-            this.missionControl.a(param0, false);
+            this.missionControl.readState(param0, false);
           } else {
             this.missionControl = null;
           }
           this.mapZones = (MapZone[]) (SetAutoDetail.a(8, wsb.field_e, param0, 1, -98, this.mapZones));
           this.resNodes = (ResourceNode[]) (SetAutoDetail.a(4, SetShipDirectionArrow.field_p, param0, 1, -84, this.resNodes));
-          if (!kv.a(false, param0)) {
+          if (!kv.readBoolean(false, param0)) {
             this.field_p = null;
           } else {
             this.field_p = new NebulaField();
-            this.field_p.a(param0, false);
+            this.field_p.readState(param0, false);
           }
-          this.width = param0.i(0, 28);
-          this.field_r = param0.i(0, 28);
-          if (!kv.a(false, param0)) {
+          this.width = param0.readBits(0, 28);
+          this.field_r = param0.readBits(0, 28);
+          if (!kv.readBoolean(false, param0)) {
             this.field_u = null;
           } else {
             if (this.field_u == null) {
               this.field_u = new fba();
             }
-            this.field_u.a(param0, false);
+            this.field_u.readState(param0, false);
           }
           this.escapePods = (EscapePod[]) (SetAutoDetail.a(4, pgb.field_g, param0, 1, -62, this.escapePods));
-          if (!kv.a(false, param0)) {
+          if (!kv.readBoolean(false, param0)) {
             this.field_b = null;
           } else {
             this.field_b = new bea();
-            this.field_b.a(param0, false);
+            this.field_b.readState(param0, false);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -217,7 +217,7 @@ final class World implements DiffableState, utb {
         int var8;
         var2_ref = null;
         var8 = VoidHunters.field_G;
-        var2_ref_tj = (Projectile) (this.projectiles.d(0));
+        var2_ref_tj = (Projectile) (this.projectiles.first(0));
         while (var2_ref_tj != null) {
           if (var2_ref_tj.getType((byte) -104) == 1 ||
             var2_ref_tj.getType((byte) -104) == 6) {
@@ -241,7 +241,7 @@ final class World implements DiffableState, utb {
                     continue;
                   }
                   var3.b((byte) 94);
-                  var2_ref_tj.b(-3846);
+                  var2_ref_tj.unlink(-3846);
                   if (var2_ref_tj.getType((byte) -104) == 6 &&
                     var4.getType((byte) -104) == 5) {
                     this.a(0, gib.field_a, var2_ref_tj.getFiredTeam(512), var2_ref_tj.b(false), false, var2_ref_tj.d(111), var2_ref_tj.e((byte) -107));
@@ -255,7 +255,7 @@ final class World implements DiffableState, utb {
               var4 = (Projectile) (var3.a(19072));
             }
           }
-          var2_ref_tj = (Projectile) (this.projectiles.a((byte) 68));
+          var2_ref_tj = (Projectile) (this.projectiles.next((byte) 68));
         }
         var2 = 111 % ((param0 - 3) / 42);
     }
@@ -406,7 +406,7 @@ final class World implements DiffableState, utb {
                 param0.a(var10, var9Lifetime1, 118);
               } else {
                 qba.a(20382, var9Lifetime1, 64, var10, 10);
-                param0.b(-3846);
+                param0.unlink(-3846);
               }
               var23 = ccb.field_a.field_b[var7_int];
               var13 = var23.field_e;
@@ -872,7 +872,7 @@ final class World implements DiffableState, utb {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int stackIn_35_0 = 0;
         int stackIn_38_0 = 0;
         int stackIn_39_0 = 0;
@@ -961,7 +961,7 @@ final class World implements DiffableState, utb {
           }
           if ((stackIn_39_0 ^ stackIn_39_1) == 0 &&
             null != this.field_e &&
-            !this.field_e.a((byte) -90, var5.field_e)) {
+            !this.field_e.differsFrom((byte) -90, var5.field_e)) {
           }
           if (SetCountermeasureLauncherAimspeed.a(hob.a(var5.spawnPoints, 210377952), false, 1, hob.a(this.spawnPoints, 210377952), 118)) {
             var4 = 1;
@@ -1005,7 +1005,7 @@ final class World implements DiffableState, utb {
           }
           if ((stackIn_75_0 ^ stackIn_75_1) != 0 ||
             this.missionControl != null &&
-            this.missionControl.a((byte) -103, var5.missionControl)) {
+            this.missionControl.differsFrom((byte) -103, var5.missionControl)) {
             var4 = 1;
             System.out.println("MissionControl mission_control has changed. before=" + var5.missionControl + ", now=" + this.missionControl);
           }
@@ -1028,7 +1028,7 @@ final class World implements DiffableState, utb {
           }
           if ((stackIn_94_0 ^ stackIn_94_1) == 0 &&
             this.field_p != null &&
-            !this.field_p.a((byte) -81, var5.field_p)) {
+            !this.field_p.differsFrom((byte) -81, var5.field_p)) {
           }
           if (var5.width != this.width) {
             var4 = 1;
@@ -1047,7 +1047,7 @@ final class World implements DiffableState, utb {
           }
           if ((stackIn_114_0 ^ stackIn_114_1) == 0 &&
             this.field_u != null &&
-            !this.field_u.a((byte) 109, var5.field_u)) {
+            !this.field_u.differsFrom((byte) 109, var5.field_u)) {
           }
           if (SetCountermeasureLauncherAimspeed.a(var5.escapePods, false, 1, this.escapePods, 117)) {
             System.out.println("EscapePod[] escape_pods has changed. ");
@@ -1064,7 +1064,7 @@ final class World implements DiffableState, utb {
           }
           if ((stackIn_132_0 ^ stackIn_132_1) == 0 &&
             null != this.field_b &&
-            !this.field_b.a((byte) -75, var5.field_b)) {
+            !this.field_b.differsFrom((byte) -75, var5.field_b)) {
           }
           if (var4 != 0) {
             System.out.println("This instance of World has changed");
@@ -1403,7 +1403,7 @@ final class World implements DiffableState, utb {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.spawnPoints.b(-10258, param1);
+          this.spawnPoints.addLast(-10258, param1);
           if (param0 > -51) {
             this.e(16, -28);
           }
@@ -1545,10 +1545,10 @@ final class World implements DiffableState, utb {
           if (param0 != 1799937864) {
             discarded$0 = this.a((ShipComponent) null, (Ship) null, (ShipComponent) null, 27, 102, (ShipComponent) null);
           }
-          var35 = (Projectile) (this.projectiles.d(0));
+          var35 = (Projectile) (this.projectiles.first(0));
           while (var35 != null) {
             var35.a((byte) 93, this);
-            var35 = (Projectile) (this.projectiles.a((byte) 101));
+            var35 = (Projectile) (this.projectiles.next((byte) 101));
           }
           for (var14 = 0; this.field_s.length > var14; var14++) {
             if (this.field_s[var14].b((byte) -126)) {
@@ -1906,7 +1906,7 @@ final class World implements DiffableState, utb {
                     if (var12.savedShip == null) {
                       var12.savedShip = new Ship();
                     }
-                    var11.b((byte) 113, var12.savedShip);
+                    var11.copyTo((byte) 113, var12.savedShip);
                   }
                 }
               } else {
@@ -2106,7 +2106,7 @@ final class World implements DiffableState, utb {
           }
           param7.chassis.a(param8, param5.chassis, 0, (byte) 125, 0);
           var10_int = 0;
-          if (param8.b(126)) {
+          if (param8.isEmpty(126)) {
             var10_int = 1;
             if (3 == param6) {
               param5.chassis.a(param7.chassis, param7.y, 0, param7.x, 0, param7.g(-106), param8, 0, 0);
@@ -2115,11 +2115,11 @@ final class World implements DiffableState, utb {
               param7.chassis.a(param5.chassis, param5.y, 0, param5.x, 0, param5.g(-68), param8, 0, 0);
             }
           }
-          if (param8.b(-56)) {
+          if (param8.isEmpty(-56)) {
             return false;
           }
           var11 = 1;
-          var12_ref = (gda) (param8.d(0));
+          var12_ref = (gda) (param8.first(0));
           while (null != var12_ref) {
             if (var10_int == 0 &&
               param4) {
@@ -2147,9 +2147,9 @@ final class World implements DiffableState, utb {
                 var11 = 0;
               }
             }
-            var12_ref = (gda) (param8.a((byte) 8));
+            var12_ref = (gda) (param8.next((byte) 8));
           }
-          param8.e(120);
+          param8.clear(120);
           return true;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -2276,7 +2276,7 @@ final class World implements DiffableState, utb {
         RuntimeException decompiledCaughtException = null;
         try {
           if (!param1) {
-            this.b((faa) null, 103);
+            this.writeState((IsaacPacketBuffer) null, 103);
           }
           if (param2 < 0) {
             return null;
@@ -2301,15 +2301,15 @@ final class World implements DiffableState, utb {
     }
 
     final static void a(int param0, long param1, int param2) {
-        faa var4;
+        IsaacPacketBuffer var4;
         int var5;
         var4 = RequestNewestBlackboxRecording.field_p;
-        var4.h(24335, param0);
+        var4.writeIsaacByte(24335, param0);
         var4.position = var4.position + 1;
         var5 = var4.position;
-        var4.c(0, 7);
-        var4.a(param1, 105);
-        var4.e(var4.position - var5, -129);
+        var4.writeByte(0, 7);
+        var4.writeLong(param1, 105);
+        var4.writeLengthByte(var4.position - var5, -129);
         if (param2 >= -120) {
           field_d = (String) null;
         }
@@ -2337,10 +2337,10 @@ final class World implements DiffableState, utb {
             this.a(var8.g((byte) -106), (byte) 4, var8.d(false), var8.g(param0 ^ -63));
           }
         }
-        var7 = (rdb) (this.spawnPoints.d(param0 + param0));
+        var7 = (rdb) (this.spawnPoints.first(param0 + param0));
         while (var7 != null) {
           this.a(var7.a(71), (byte) 4, var7.a(true), 51200);
-          var7 = (rdb) (this.spawnPoints.a((byte) 100));
+          var7 = (rdb) (this.spawnPoints.next((byte) 100));
         }
         if (null != this.resNodes) {
           var9 = this.resNodes;
@@ -2646,12 +2646,12 @@ final class World implements DiffableState, utb {
                       this.a(-107, 0, var35);
                     }
                   }
-                  var84 = (rdb) (this.spawnPoints.d(0));
+                  var84 = (rdb) (this.spawnPoints.first(0));
                   while (var84 != null) {
                     if (var84.a(var7, (byte) -81, var8)) {
-                      var84.b(-3846);
+                      var84.unlink(-3846);
                     }
-                    var84 = (rdb) (this.spawnPoints.a((byte) 106));
+                    var84 = (rdb) (this.spawnPoints.next((byte) 106));
                   }
                   if (this.mapZones != null) {
                     for (var11_int = 0; this.mapZones.length > var11_int; var11_int++) {
@@ -2710,12 +2710,12 @@ final class World implements DiffableState, utb {
                         var41.h(17704, (1 + var41.getTeam((byte) 68)) % SettingsChange.field_b);
                       }
                     }
-                    var10_ref2 = (rdb) (this.spawnPoints.d(0));
+                    var10_ref2 = (rdb) (this.spawnPoints.first(0));
                     while (null != var10_ref2) {
                       if (var10_ref2.a(var7, (byte) -124, var8)) {
                         var10_ref2.a((1 + var10_ref2.getTeam(-29)) % SettingsChange.field_b, (byte) -93);
                       }
-                      var10_ref2 = (rdb) (this.spawnPoints.a((byte) 117));
+                      var10_ref2 = (rdb) (this.spawnPoints.next((byte) 117));
                     }
                   } else {
                     if (var9 != 17) {
@@ -3044,17 +3044,17 @@ final class World implements DiffableState, utb {
                           if (null != var44 &&
                             var44.chassis.a(var8, var7, true) != null) {
                             var45 = new Asteroid();
-                            var44.b((byte) 76, var45);
+                            var44.copyTo((byte) 76, var45);
                             var45.a(var11_int, var12, (byte) -93);
-                            var46.b(-10258, var45);
+                            var46.addLast(-10258, var45);
                           }
                         }
-                        var85 = (Asteroid) (var46.d(0));
+                        var85 = (Asteroid) (var46.first(0));
                         while (var85 != null) {
                           this.a((byte) 126, var85);
-                          var85 = (Asteroid) (var46.a((byte) 80));
+                          var85 = (Asteroid) (var46.next((byte) 80));
                         }
-                        var46.e(95);
+                        var46.clear(95);
                         var47 = this.debris;
                         for (var16 = 0; var16 < var47.length; var16++) {
                           var48 = var47[var16];
@@ -3063,17 +3063,17 @@ final class World implements DiffableState, utb {
                           if (var48 != null &&
                             null != var48.chassis.a(var8, var7, true)) {
                             var49 = new Debris();
-                            var48.b((byte) 87, var49);
+                            var48.copyTo((byte) 87, var49);
                             var49.a(var11_int, var12, (byte) -122);
-                            var46.b(-10258, var49);
+                            var46.addLast(-10258, var49);
                           }
                         }
-                        var86 = (Debris) (var46.d(0));
+                        var86 = (Debris) (var46.first(0));
                         while (var86 != null) {
                           this.a(var86, (byte) 51);
-                          var86 = (Debris) (var46.a((byte) 8));
+                          var86 = (Debris) (var46.next((byte) 8));
                         }
-                        var46.e(107);
+                        var46.clear(107);
                         var50 = this.ships;
                         for (var16 = 0; var50.length > var16; var16++) {
                           var51 = var50[var16];
@@ -3083,17 +3083,17 @@ final class World implements DiffableState, utb {
                             var51.getOwner((byte) -117) == -1 &&
                             null != var51.chassis.a(var8, var7, true)) {
                             var52 = new Ship();
-                            var51.b((byte) 111, var52);
+                            var51.copyTo((byte) 111, var52);
                             var52.a(var11_int, var12, (byte) 39);
                             var52.a(var42.e(0), -82);
                             var52.h(17704, var42.getTeam((byte) 125));
-                            var46.b(-10258, var52);
+                            var46.addLast(-10258, var52);
                           }
                         }
-                        var87 = (Ship) (var46.d(0));
+                        var87 = (Ship) (var46.first(0));
                         while (null != var87) {
                           this.a(var87, (byte) 82);
-                          var87 = (Ship) (var46.a((byte) 122));
+                          var87 = (Ship) (var46.next((byte) 122));
                         }
                       }
                     }
@@ -3170,13 +3170,13 @@ final class World implements DiffableState, utb {
 
     final boolean b(int param0, int param1) {
         int var5 = VoidHunters.field_G;
-        Projectile var6 = (Projectile) (this.projectiles.d(0));
+        Projectile var6 = (Projectile) (this.projectiles.first(0));
         while (var6 != null) {
           if (var6.getType((byte) -104) == 6 &&
             param0 == var6.getTargetBody((byte) -119)) {
             return true;
           }
-          var6 = (Projectile) (this.projectiles.a((byte) 40));
+          var6 = (Projectile) (this.projectiles.next((byte) 40));
         }
         int var4 = -114 % ((69 - param1) / 37);
         return false;
@@ -3211,7 +3211,7 @@ final class World implements DiffableState, utb {
             }
           }
         }
-        var5_ref = (rdb) (this.spawnPoints.d(0));
+        var5_ref = (rdb) (this.spawnPoints.first(0));
         if (param2) {
           this.projectiles = (IntrusiveDeque) null;
         }
@@ -3224,7 +3224,7 @@ final class World implements DiffableState, utb {
               return true;
             }
           }
-          var5_ref = (rdb) (this.spawnPoints.a((byte) 107));
+          var5_ref = (rdb) (this.spawnPoints.next((byte) 107));
         }
         return false;
     }
@@ -3401,7 +3401,7 @@ final class World implements DiffableState, utb {
             this.a(var13 >> 8, param2.field_l, var10.field_v, (byte) -13, param2.field_e, var9.finaly, var9.finalx);
           }
           if (param3 != 46) {
-            this.reportDifferences((tv) null, -125);
+            this.reportDifferences((SerializableGameState) null, -125);
           }
           param0.d((byte) 71);
           param1.d((byte) 107);
@@ -3588,7 +3588,7 @@ final class World implements DiffableState, utb {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         RuntimeException stackIn_101_0 = null;
         StringBuilder stackIn_101_1 = null;
         String stackIn_102_2 = null;
@@ -3648,7 +3648,7 @@ final class World implements DiffableState, utb {
             if (null == var6_ref.field_e) {
               var6_ref.field_e = new AsteroidField();
             }
-            this.field_e.b((byte) 79, var6_ref.field_e);
+            this.field_e.copyTo((byte) 79, var6_ref.field_e);
             if (this.debug &&
               VoidHunters.a(true, this.field_e)) {
               System.err.println("AsteroidContainer asteroid_container has a duplicate reference");
@@ -3677,7 +3677,7 @@ final class World implements DiffableState, utb {
           var6_ref.respawntimers = SetTeamSelectionSpeedup.a(var6_ref.respawntimers, (byte) -66, this.respawntimers);
           var6_ref.debug = this.debug;
           if (param0 < 54) {
-            this.a((byte) -80, (tv) null);
+            this.differsFrom((byte) -80, (SerializableGameState) null);
           }
           var6_ref.field_y = this.field_y;
           var6_ref.swappedTeams = this.swappedTeams;
@@ -3685,7 +3685,7 @@ final class World implements DiffableState, utb {
             if (null == var6_ref.missionControl) {
               var6_ref.missionControl = new MissionControl();
             }
-            this.missionControl.b((byte) 87, var6_ref.missionControl);
+            this.missionControl.copyTo((byte) 87, var6_ref.missionControl);
             if (this.debug &&
               VoidHunters.a(true, this.missionControl)) {
               System.err.println("MissionControl mission_control has a duplicate reference");
@@ -3722,7 +3722,7 @@ final class World implements DiffableState, utb {
             if (var6_ref.field_u == null) {
               var6_ref.field_u = new fba();
             }
-            this.field_u.b((byte) 122, var6_ref.field_u);
+            this.field_u.copyTo((byte) 122, var6_ref.field_u);
             if (this.debug &&
               VoidHunters.a(true, this.field_u)) {
               System.err.println("PartitioningManager grid has a duplicate reference");
@@ -3785,7 +3785,7 @@ final class World implements DiffableState, utb {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
         int stackIn_11_0 = 0;
@@ -3824,7 +3824,7 @@ final class World implements DiffableState, utb {
               stackIn_11_1 = 1;
             }
             if ((stackIn_11_0 ^ stackIn_11_1) == 0 && (null == this.field_e ||
-              !this.field_e.a((byte) -65, var5.field_e)) && (!SetCountermeasureLauncherAimspeed.a(hob.a(var5.spawnPoints, 210377952), false, 1, hob.a(this.spawnPoints, 210377952), -93) &&
+              !this.field_e.differsFrom((byte) -65, var5.field_e)) && (!SetCountermeasureLauncherAimspeed.a(hob.a(var5.spawnPoints, 210377952), false, 1, hob.a(this.spawnPoints, 210377952), -93) &&
               !SetCountermeasureLauncherAimspeed.a(var5.grapplingHooks, false, 1, this.grapplingHooks, 122) &&
               !SetBlueprintSaveTime.a(var5.respawntimers, this.respawntimers, (byte) 28))) {
               stackIn_22_0 = (var5.debug) ? 0 : 1;
@@ -3841,7 +3841,7 @@ final class World implements DiffableState, utb {
                   stackIn_33_1 = 1;
                 }
                 if ((stackIn_33_0 ^ stackIn_33_1) == 0 && (null == this.missionControl ||
-                  !this.missionControl.a((byte) 123, var5.missionControl)) && (!SetCountermeasureLauncherAimspeed.a(var5.mapZones, false, 1, this.mapZones, -71) &&
+                  !this.missionControl.differsFrom((byte) 123, var5.missionControl)) && (!SetCountermeasureLauncherAimspeed.a(var5.mapZones, false, 1, this.mapZones, -71) &&
                   !SetCountermeasureLauncherAimspeed.a(var5.resNodes, false, 1, this.resNodes, -5) &&
                   var5.width == this.width &&
                   var5.field_r == this.field_r &&
@@ -3856,7 +3856,7 @@ final class World implements DiffableState, utb {
                     stackIn_50_1 = 1;
                   }
                   if ((stackIn_50_0 ^ stackIn_50_1) == 0 && (this.field_b == null ||
-                    !this.field_b.a((byte) 89, var5.field_b))) {
+                    !this.field_b.differsFrom((byte) 89, var5.field_b))) {
                     stackIn_57_0 = false;
                     decompiledFrameRemainder0 = false;
                   }
@@ -4155,7 +4155,7 @@ final class World implements DiffableState, utb {
                         var26 = new Ship();
                         var26 = var26;
                         var11_ref = var26;
-                        param2[var5_int].savedShip.b((byte) 74, var26);
+                        param2[var5_int].savedShip.copyTo((byte) 74, var26);
                         var12 = 1;
                         if (((param3.c((byte) -42) ||
                           GetToggledScoreboard.a((byte) -95, this.d(false)))) && ((qrb.field_a == 0))) {
@@ -4254,58 +4254,58 @@ final class World implements DiffableState, utb {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         int stackIn_5_0 = 0;
-        faa stackIn_13_0 = null;
+        IsaacPacketBuffer stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         boolean stackIn_14_2 = false;
         int stackIn_25_0 = 0;
-        faa stackIn_31_0 = null;
+        IsaacPacketBuffer stackIn_31_0 = null;
         int stackIn_31_1 = 0;
         boolean stackIn_32_2 = false;
         int stackIn_41_0 = 0;
-        faa stackIn_49_0 = null;
+        IsaacPacketBuffer stackIn_49_0 = null;
         int stackIn_49_1 = 0;
         boolean stackIn_50_2 = false;
-        faa stackIn_58_0 = null;
+        IsaacPacketBuffer stackIn_58_0 = null;
         int stackIn_58_1 = 0;
         boolean stackIn_59_2 = false;
         int stackIn_67_0 = 0;
-        faa stackIn_73_0 = null;
+        IsaacPacketBuffer stackIn_73_0 = null;
         int stackIn_73_1 = 0;
         boolean stackIn_74_2 = false;
         int stackIn_83_0 = 0;
-        faa stackIn_91_0 = null;
+        IsaacPacketBuffer stackIn_91_0 = null;
         int stackIn_91_1 = 0;
         boolean stackIn_92_2 = false;
         int stackIn_100_0 = 0;
         int stackIn_101_1 = 0;
-        faa stackIn_104_0 = null;
+        IsaacPacketBuffer stackIn_104_0 = null;
         int stackIn_104_1 = 0;
         boolean stackIn_105_2 = false;
         int stackIn_111_0 = 0;
-        faa stackIn_119_0 = null;
+        IsaacPacketBuffer stackIn_119_0 = null;
         int stackIn_119_1 = 0;
         boolean stackIn_120_2 = false;
         int stackIn_129_0 = 0;
-        faa stackIn_137_0 = null;
+        IsaacPacketBuffer stackIn_137_0 = null;
         int stackIn_137_1 = 0;
         boolean stackIn_138_2 = false;
         int stackIn_147_0 = 0;
-        faa stackIn_155_0 = null;
+        IsaacPacketBuffer stackIn_155_0 = null;
         int stackIn_155_1 = 0;
         boolean stackIn_156_2 = false;
-        faa stackIn_164_0 = null;
+        IsaacPacketBuffer stackIn_164_0 = null;
         int stackIn_164_1 = 0;
         boolean stackIn_165_2 = false;
         RuntimeException stackIn_172_0 = null;
         StringBuilder stackIn_172_1 = null;
         String stackIn_173_2 = null;
         RuntimeException decompiledCaughtException = null;
-        faa var3 = null;
+        IsaacPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         Ship[] var4 = null;
-        tv[] var4_array = null;
+        SerializableGameState[] var4_array = null;
         Debris[] var4_array2 = null;
         GrapplingHook[] var4_array3 = null;
         MapZone[] var4_array4 = null;
@@ -4313,10 +4313,10 @@ final class World implements DiffableState, utb {
         EscapePod[] var4_array6 = null;
         int var5 = 0;
         Ship[] var6 = null;
-        tv[] var6_array = null;
+        SerializableGameState[] var6_array = null;
         int var7 = 0;
         Ship var8 = null;
-        tv var8_ref = null;
+        SerializableGameState var8_ref = null;
         Debris var8_ref2 = null;
         GrapplingHook var8_ref3 = null;
         MapZone var8_ref4 = null;
@@ -4324,39 +4324,39 @@ final class World implements DiffableState, utb {
         EscapePod var8_ref6 = null;
         int var9 = 0;
         Ship[] var10 = null;
-        faa var11 = null;
+        IsaacPacketBuffer var11 = null;
         Ship[] var12 = null;
-        tv[] var13 = null;
-        faa var14 = null;
+        SerializableGameState[] var13 = null;
+        IsaacPacketBuffer var14 = null;
         Debris[] var15 = null;
-        faa var16 = null;
+        IsaacPacketBuffer var16 = null;
         Debris[] var17 = null;
-        tv[] var18 = null;
-        faa var19 = null;
-        tv[] var20 = null;
-        tv var21 = null;
+        SerializableGameState[] var18 = null;
+        IsaacPacketBuffer var19 = null;
+        SerializableGameState[] var20 = null;
+        SerializableGameState var21 = null;
         GrapplingHook[] var22 = null;
-        faa var23 = null;
+        IsaacPacketBuffer var23 = null;
         GrapplingHook[] var24 = null;
         MapZone[] var25 = null;
-        faa var26 = null;
+        IsaacPacketBuffer var26 = null;
         MapZone[] var27 = null;
         ResourceNode[] var28 = null;
-        faa var29 = null;
+        IsaacPacketBuffer var29 = null;
         ResourceNode[] var30 = null;
         EscapePod[] var31 = null;
-        faa var32 = null;
+        IsaacPacketBuffer var32 = null;
         EscapePod[] var33 = null;
-        faa var3Lifetime1;
-        faa var3Lifetime2;
-        faa var3Lifetime3;
-        faa var3Lifetime4;
-        faa var3Lifetime5;
-        faa var3Lifetime6;
-        faa var3Lifetime7;
-        tv[] var4_arrayLifetime1;
-        tv var21Lifetime1;
-        tv var21Lifetime2;
+        IsaacPacketBuffer var3Lifetime1;
+        IsaacPacketBuffer var3Lifetime2;
+        IsaacPacketBuffer var3Lifetime3;
+        IsaacPacketBuffer var3Lifetime4;
+        IsaacPacketBuffer var3Lifetime5;
+        IsaacPacketBuffer var3Lifetime6;
+        IsaacPacketBuffer var3Lifetime7;
+        SerializableGameState[] var4_arrayLifetime1;
+        SerializableGameState var21Lifetime1;
+        SerializableGameState var21Lifetime2;
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
@@ -4383,7 +4383,7 @@ final class World implements DiffableState, utb {
             stackIn_5_0 = 0;
           }
           var5 = stackIn_5_0;
-          var11.a(-632, var5, 8);
+          var11.writeBits(-632, var5, 8);
           if (var5 != 0) {
             var12 = var4;
             var6 = var12;
@@ -4392,7 +4392,7 @@ final class World implements DiffableState, utb {
               stackIn_13_0 = var3;
               stackIn_13_1 = -33;
               stackIn_14_2 = (null != var8);
-              if (vq.a(stackIn_13_0, stackIn_13_1, stackIn_14_2)) {
+              if (vq.writeBoolean(stackIn_13_0, stackIn_13_1, stackIn_14_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var11, var8);
               }
             }
@@ -4410,7 +4410,7 @@ final class World implements DiffableState, utb {
             stackIn_25_0 = 0;
           }
           var5Lifetime1 = stackIn_25_0;
-          var14.a(-632, var5Lifetime1, 10);
+          var14.writeBits(-632, var5Lifetime1, 10);
           if (var5Lifetime1 != 0) {
             var6_array = var13;
             for (var7Lifetime1 = 0; var6_array.length > var7Lifetime1; var7Lifetime1++) {
@@ -4420,7 +4420,7 @@ final class World implements DiffableState, utb {
               stackIn_31_0 = var3Lifetime1;
               stackIn_31_1 = 39;
               stackIn_32_2 = (null != var8_ref);
-              if (vq.a(stackIn_31_0, stackIn_31_1, stackIn_32_2)) {
+              if (vq.writeBoolean(stackIn_31_0, stackIn_31_1, stackIn_32_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3Lifetime1, var8_ref);
               }
             }
@@ -4435,7 +4435,7 @@ final class World implements DiffableState, utb {
             stackIn_41_0 = var15.length;
           }
           var5Lifetime2 = stackIn_41_0;
-          var16.a(-632, var5Lifetime2, 10);
+          var16.writeBits(-632, var5Lifetime2, 10);
           if (var5Lifetime2 != 0) {
             var17 = var15;
             for (var7Lifetime2 = 0; var17.length > var7Lifetime2; var7Lifetime2++) {
@@ -4443,16 +4443,16 @@ final class World implements DiffableState, utb {
               stackIn_49_0 = var3Lifetime2;
               stackIn_49_1 = 41;
               stackIn_50_2 = (null != var8_ref2);
-              if (vq.a(stackIn_49_0, stackIn_49_1, stackIn_50_2)) {
+              if (vq.writeBoolean(stackIn_49_0, stackIn_49_1, stackIn_50_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var16, var8_ref2);
               }
             }
           }
-          stackIn_58_0 = (faa) (param0);
+          stackIn_58_0 = (IsaacPacketBuffer) (param0);
           stackIn_58_1 = 77;
           stackIn_59_2 = (null != this.field_e);
-          if (vq.a(stackIn_58_0, stackIn_58_1, stackIn_59_2)) {
-            this.field_e.b(param0, -126);
+          if (vq.writeBoolean(stackIn_58_0, stackIn_58_1, stackIn_59_2)) {
+            this.field_e.writeState(param0, -126);
           }
           var19 = param0;
           var3Lifetime3 = var19;
@@ -4464,7 +4464,7 @@ final class World implements DiffableState, utb {
             stackIn_67_0 = var18.length;
           }
           var5Lifetime3 = stackIn_67_0;
-          var19.a(-632, var5Lifetime3, 6);
+          var19.writeBits(-632, var5Lifetime3, 6);
           if (var5Lifetime3 != 0) {
             var20 = var18;
             for (var7Lifetime3 = 0; var7Lifetime3 < var20.length; var7Lifetime3++) {
@@ -4472,7 +4472,7 @@ final class World implements DiffableState, utb {
               stackIn_73_0 = var3Lifetime3;
               stackIn_73_1 = 118;
               stackIn_74_2 = (var21Lifetime1 != null);
-              if (vq.a(stackIn_73_0, stackIn_73_1, stackIn_74_2)) {
+              if (vq.writeBoolean(stackIn_73_0, stackIn_73_1, stackIn_74_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var19, var21Lifetime1);
               }
             }
@@ -4487,7 +4487,7 @@ final class World implements DiffableState, utb {
             stackIn_83_0 = var22.length;
           }
           var5Lifetime4 = stackIn_83_0;
-          var23.a(-632, var5Lifetime4, 8);
+          var23.writeBits(-632, var5Lifetime4, 8);
           if (0 != var5Lifetime4) {
             var24 = var22;
             for (var7Lifetime4 = 0; var7Lifetime4 < var24.length; var7Lifetime4++) {
@@ -4495,7 +4495,7 @@ final class World implements DiffableState, utb {
               stackIn_91_0 = var3Lifetime4;
               stackIn_91_1 = 88;
               stackIn_92_2 = (var8_ref3 != null);
-              if (vq.a(stackIn_91_0, stackIn_91_1, stackIn_92_2)) {
+              if (vq.writeBoolean(stackIn_91_0, stackIn_91_1, stackIn_92_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var23, var8_ref3);
               }
             }
@@ -4507,14 +4507,14 @@ final class World implements DiffableState, utb {
             stackIn_101_1 = 0;
           }
           pgb.a(stackIn_100_0, stackIn_101_1, 68, param0, this.respawntimers);
-          vq.a(param0, -88, this.debug);
-          param0.a(-632, this.field_y, 32);
-          vq.a(param0, 88, this.swappedTeams);
-          stackIn_104_0 = (faa) (param0);
+          vq.writeBoolean(param0, -88, this.debug);
+          param0.writeBits(-632, this.field_y, 32);
+          vq.writeBoolean(param0, 88, this.swappedTeams);
+          stackIn_104_0 = (IsaacPacketBuffer) (param0);
           stackIn_104_1 = -71;
           stackIn_105_2 = (this.missionControl != null);
-          if (vq.a(stackIn_104_0, stackIn_104_1, stackIn_105_2)) {
-            this.missionControl.b(param0, -117);
+          if (vq.writeBoolean(stackIn_104_0, stackIn_104_1, stackIn_105_2)) {
+            this.missionControl.writeState(param0, -117);
           }
           var26 = param0;
           var3Lifetime5 = var26;
@@ -4526,7 +4526,7 @@ final class World implements DiffableState, utb {
             stackIn_111_0 = var25.length;
           }
           var5Lifetime5 = stackIn_111_0;
-          var26.a(-632, var5Lifetime5, 8);
+          var26.writeBits(-632, var5Lifetime5, 8);
           if (var5Lifetime5 != 0) {
             var27 = var25;
             for (var7Lifetime5 = 0; var27.length > var7Lifetime5; var7Lifetime5++) {
@@ -4534,7 +4534,7 @@ final class World implements DiffableState, utb {
               stackIn_119_0 = var3Lifetime5;
               stackIn_119_1 = 36;
               stackIn_120_2 = (null != var8_ref4);
-              if (vq.a(stackIn_119_0, stackIn_119_1, stackIn_120_2)) {
+              if (vq.writeBoolean(stackIn_119_0, stackIn_119_1, stackIn_120_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var26, var8_ref4);
               }
             }
@@ -4549,7 +4549,7 @@ final class World implements DiffableState, utb {
             stackIn_129_0 = 0;
           }
           var5Lifetime6 = stackIn_129_0;
-          var29.a(-632, var5Lifetime6, 4);
+          var29.writeBits(-632, var5Lifetime6, 4);
           if (var5Lifetime6 != 0) {
             var30 = var28;
             for (var7Lifetime6 = 0; var30.length > var7Lifetime6; var7Lifetime6++) {
@@ -4557,13 +4557,13 @@ final class World implements DiffableState, utb {
               stackIn_137_0 = var3Lifetime6;
               stackIn_137_1 = -87;
               stackIn_138_2 = (var8_ref5 != null);
-              if (vq.a(stackIn_137_0, stackIn_137_1, stackIn_138_2)) {
+              if (vq.writeBoolean(stackIn_137_0, stackIn_137_1, stackIn_138_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var29, var8_ref5);
               }
             }
           }
-          param0.a(-632, this.width, 28);
-          param0.a(-632, this.field_r, 28);
+          param0.writeBits(-632, this.width, 28);
+          param0.writeBits(-632, this.field_r, 28);
           var32 = param0;
           var3Lifetime7 = var32;
           var31 = this.escapePods;
@@ -4574,7 +4574,7 @@ final class World implements DiffableState, utb {
             stackIn_147_0 = 0;
           }
           var5Lifetime7 = stackIn_147_0;
-          var32.a(-632, var5Lifetime7, 4);
+          var32.writeBits(-632, var5Lifetime7, 4);
           if (0 != var5Lifetime7) {
             var33 = var31;
             for (var7Lifetime7 = 0; var33.length > var7Lifetime7; var7Lifetime7++) {
@@ -4582,16 +4582,16 @@ final class World implements DiffableState, utb {
               stackIn_155_0 = var3Lifetime7;
               stackIn_155_1 = 56;
               stackIn_156_2 = (var8_ref6 != null);
-              if (vq.a(stackIn_155_0, stackIn_155_1, stackIn_156_2)) {
+              if (vq.writeBoolean(stackIn_155_0, stackIn_155_1, stackIn_156_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var32, var8_ref6);
               }
             }
           }
-          stackIn_164_0 = (faa) (param0);
+          stackIn_164_0 = (IsaacPacketBuffer) (param0);
           stackIn_164_1 = 46;
           stackIn_165_2 = (null != this.field_b);
-          if (vq.a(stackIn_164_0, stackIn_164_1, stackIn_165_2)) {
-            this.field_b.b(param0, -113);
+          if (vq.writeBoolean(stackIn_164_0, stackIn_164_1, stackIn_165_2)) {
+            this.field_b.writeState(param0, -113);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4629,11 +4629,11 @@ final class World implements DiffableState, utb {
           this.debris[var2Lifetime1] = null;
         }
         this.field_e.a(121);
-        this.projectiles.e(127);
+        this.projectiles.clear(127);
         for (var2Lifetime2 = 0; this.field_s.length > var2Lifetime2; var2Lifetime2++) {
           this.field_s[var2Lifetime2].a((byte) 121);
         }
-        this.spawnPoints.e(125);
+        this.spawnPoints.clear(125);
         if (param0 != 11184895) {
           return;
         }
@@ -4863,10 +4863,10 @@ final class World implements DiffableState, utb {
         var10 = VoidHunters.field_G;
         try {
           if (this.debug) {
-            var13 = (rdb) (this.spawnPoints.d(0));
+            var13 = (rdb) (this.spawnPoints.first(0));
             while (null != var13) {
               var13.a(param0, false);
-              var13 = (rdb) (this.spawnPoints.a((byte) 85));
+              var13 = (rdb) (this.spawnPoints.next((byte) 85));
             }
             if (this.mapZones != null) {
               for (var5_int = 0; var5_int < this.mapZones.length; var5_int++) {
@@ -4939,10 +4939,10 @@ final class World implements DiffableState, utb {
             }
           }
           this.a(-98, param0, param2);
-          var14 = (Projectile) (this.projectiles.d(0));
+          var14 = (Projectile) (this.projectiles.first(0));
           while (null != var14) {
             var14.a(0, param0);
-            var14 = (Projectile) (this.projectiles.a((byte) 84));
+            var14 = (Projectile) (this.projectiles.next((byte) 84));
           }
           var23 = this.field_p.a(false);
           var6 = var23;
@@ -5189,13 +5189,13 @@ final class World implements DiffableState, utb {
           int var3 = -85 % ((param0 - 6) / 47);
           var2 = this.field_p;
           this.field_p = new NebulaField();
-          var2.b((byte) 81, this.field_p);
+          var2.copyTo((byte) 81, this.field_p);
           this.field_q = true;
           return;
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         int var4_int = 0;
         int var5 = 0;
         RuntimeException stackIn_30_0 = null;
@@ -5211,52 +5211,52 @@ final class World implements DiffableState, utb {
         try {
           this.ships = (Ship[]) (SetAutoDetail.a(8, MissionGenerationData.field_a, param0, 1, -109, this.ships));
           this.projectiles = new IntrusiveDeque();
-          var7 = (Projectile[]) (SetAutoDetail.a(10, aba.field_b, param0, 1, -127, (tv[]) null));
+          var7 = (Projectile[]) (SetAutoDetail.a(10, aba.field_b, param0, 1, -127, (SerializableGameState[]) null));
           var3 = var7;
           if (null != var3) {
             for (var4_int = 0; var4_int < var7.length; var4_int++) {
-              this.projectiles.b(-10258, var7[var4_int]);
+              this.projectiles.addLast(-10258, var7[var4_int]);
             }
           }
           this.debris = (Debris[]) (SetAutoDetail.a(10, vcb.field_z, param0, 1, -68, this.debris));
-          if (!kv.a(param1, param0)) {
+          if (!kv.readBoolean(param1, param0)) {
             this.field_e = null;
           } else {
             if (null == this.field_e) {
               this.field_e = new AsteroidField();
             }
-            this.field_e.a(param0, false);
+            this.field_e.readState(param0, false);
           }
           this.spawnPoints = new IntrusiveDeque();
-          var4 = (rdb[]) (SetAutoDetail.a(6, GetBombletSprayProjectileDamage.field_q, param0, 1, -86, (tv[]) null));
+          var4 = (rdb[]) (SetAutoDetail.a(6, GetBombletSprayProjectileDamage.field_q, param0, 1, -86, (SerializableGameState[]) null));
           if (null != var4) {
             for (var5 = 0; var5 < var4.length; var5++) {
-              this.spawnPoints.b(-10258, var4[var5]);
+              this.spawnPoints.addLast(-10258, var4[var5]);
             }
           }
           this.grapplingHooks = (GrapplingHook[]) (SetAutoDetail.a(8, TickCondition.field_c, param0, 1, -47, this.grapplingHooks));
           this.respawntimers = wkb.a((byte) 37, this.respawntimers, param0, 4);
-          this.debug = kv.a(false, param0);
-          this.field_y = param0.i(0, 32);
-          this.swappedTeams = kv.a(false, param0);
-          if (!kv.a(false, param0)) {
+          this.debug = kv.readBoolean(false, param0);
+          this.field_y = param0.readBits(0, 32);
+          this.swappedTeams = kv.readBoolean(false, param0);
+          if (!kv.readBoolean(false, param0)) {
             this.missionControl = null;
           } else {
             if (this.missionControl == null) {
               this.missionControl = new MissionControl();
             }
-            this.missionControl.a(param0, false);
+            this.missionControl.readState(param0, false);
           }
           this.mapZones = (MapZone[]) (SetAutoDetail.a(8, wsb.field_e, param0, 1, -98, this.mapZones));
           this.resNodes = (ResourceNode[]) (SetAutoDetail.a(4, SetShipDirectionArrow.field_p, param0, 1, -71, this.resNodes));
-          this.width = param0.i(0, 28);
-          this.field_r = param0.i(0, 28);
+          this.width = param0.readBits(0, 28);
+          this.field_r = param0.readBits(0, 28);
           this.escapePods = (EscapePod[]) (SetAutoDetail.a(4, pgb.field_g, param0, 1, -83, this.escapePods));
-          if (!kv.a(false, param0)) {
+          if (!kv.readBoolean(false, param0)) {
             this.field_b = null;
           } else {
             this.field_b = new bea();
-            this.field_b.a(param0, false);
+            this.field_b.readState(param0, false);
           }
           this.a((byte) 112);
           return;
@@ -5319,7 +5319,7 @@ final class World implements DiffableState, utb {
         var23 = null;
         var17 = VoidHunters.field_G;
         try {
-          var3_ref = (Projectile) (this.projectiles.d(0));
+          var3_ref = (Projectile) (this.projectiles.first(0));
           scanLoop1: while (true) {
             if (null == var3_ref) {
               var4 = -67 % ((-34 - param1) / 52);
@@ -5428,7 +5428,7 @@ final class World implements DiffableState, utb {
                 if (!(wgb.field_i instanceof Debris)) {
                   wgb.field_i.d((byte) -68);
                   this.a((byte) 108, var3_ref, var13Lifetime3 != 0);
-                  var3_ref = (Projectile) (this.projectiles.a((byte) 46));
+                  var3_ref = (Projectile) (this.projectiles.next((byte) 46));
                   continue scanLoop1;
                 }
                 var19_ref = (Debris) (wgb.field_i);
@@ -5438,7 +5438,7 @@ final class World implements DiffableState, utb {
               wgb.field_i.d((byte) -68);
               this.a((byte) 108, var3_ref, var13Lifetime3 != 0);
             }
-            var3_ref = (Projectile) (this.projectiles.a((byte) 46));
+            var3_ref = (Projectile) (this.projectiles.next((byte) 46));
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -5786,10 +5786,10 @@ final class World implements DiffableState, utb {
             var18 = GetNumStars.a(param0.e(0), (byte) 44);
             var19 = eu.a(param0.e(0), 68);
             var20 = new ShipComponent();
-            param0.chassis.b((byte) 119, var20);
+            param0.chassis.copyTo((byte) 119, var20);
             param0.chassis.a(var19, param0.e(0), var18, var17, true, true, false, var16, (int[]) null);
             var21 = param0.chassis.a(false, param3, 0, -1, param4, 8192, param0.chassis, param5);
-            var20.b((byte) 83, param0.chassis);
+            var20.copyTo((byte) 83, param0.chassis);
             if (var21 != null) {
               param0.a(var21, 3);
             }
@@ -6157,10 +6157,10 @@ final class World implements DiffableState, utb {
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (1023 <= this.projectiles.c(3)) {
+          if (1023 <= this.projectiles.size(3)) {
             return;
           }
-          this.projectiles.b(-10258, param0);
+          this.projectiles.addLast(-10258, param0);
           if (param1) {
             field_c = (int[]) null;
           }
@@ -6324,7 +6324,7 @@ final class World implements DiffableState, utb {
           var4_int = -59 / ((param2 + 25) / 41);
           var5 = new IntrusiveDeque();
           param0.chassis.a(param1.chassis, 0, 0, (byte) -126, var5);
-          if (var5.b(-103)) {
+          if (var5.isEmpty(-103)) {
             return false;
           }
           return true;
@@ -6583,7 +6583,7 @@ final class World implements DiffableState, utb {
           return (Debris) null;
         }
         this.debris[param0] = new Debris();
-        var4.b((byte) 97, this.debris[param0]);
+        var4.copyTo((byte) 97, this.debris[param0]);
         return this.debris[param0];
     }
 
@@ -7388,7 +7388,7 @@ final class World implements DiffableState, utb {
             var11 = 0;
             var12 = 0;
             var13_int = 0;
-            var14_ref_rdb = (rdb) (this.spawnPoints.d(param0 + 200000));
+            var14_ref_rdb = (rdb) (this.spawnPoints.first(param0 + 200000));
             while (null != var14_ref_rdb) {
               if (~param3 == ~var14_ref_rdb.getTeam(-92)) {
                 var13_int++;
@@ -7425,7 +7425,7 @@ final class World implements DiffableState, utb {
                     var9 = 1;
                     var8 = var14_ref_rdb.a(102);
                   }
-                  var14_ref_rdb = (rdb) (this.spawnPoints.a((byte) 11));
+                  var14_ref_rdb = (rdb) (this.spawnPoints.next((byte) 11));
                   continue;
                 }
                 var16_ref_crb__ = this.field_e.c(0);
@@ -7454,7 +7454,7 @@ final class World implements DiffableState, utb {
                   var8 = var14_ref_rdb.a(102);
                 }
               }
-              var14_ref_rdb = (rdb) (this.spawnPoints.a((byte) 11));
+              var14_ref_rdb = (rdb) (this.spawnPoints.next((byte) 11));
             }
             boolean decompiledFrameRemainder0 = true;
             if (var9 == 0) {
@@ -7527,75 +7527,75 @@ final class World implements DiffableState, utb {
         }
     }
 
-    public final void a(faa param0, byte param1) {
+    public final void a(IsaacPacketBuffer param0, byte param1) {
         int stackIn_5_0 = 0;
-        faa stackIn_13_0 = null;
+        IsaacPacketBuffer stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         boolean stackIn_14_2 = false;
         int stackIn_23_0 = 0;
-        faa stackIn_31_0 = null;
+        IsaacPacketBuffer stackIn_31_0 = null;
         int stackIn_31_1 = 0;
         boolean stackIn_32_2 = false;
         int stackIn_41_0 = 0;
-        faa stackIn_49_0 = null;
+        IsaacPacketBuffer stackIn_49_0 = null;
         int stackIn_49_1 = 0;
         boolean stackIn_50_2 = false;
-        faa stackIn_58_0 = null;
+        IsaacPacketBuffer stackIn_58_0 = null;
         int stackIn_58_1 = 0;
         boolean stackIn_59_2 = false;
         int stackIn_67_0 = 0;
-        faa stackIn_73_0 = null;
+        IsaacPacketBuffer stackIn_73_0 = null;
         int stackIn_73_1 = 0;
         boolean stackIn_74_2 = false;
         int stackIn_83_0 = 0;
-        faa stackIn_89_0 = null;
+        IsaacPacketBuffer stackIn_89_0 = null;
         int stackIn_89_1 = 0;
         boolean stackIn_90_2 = false;
         int stackIn_98_0 = 0;
         int stackIn_99_1 = 0;
-        faa stackIn_102_0 = null;
+        IsaacPacketBuffer stackIn_102_0 = null;
         int stackIn_102_1 = 0;
         boolean stackIn_103_2 = false;
         int stackIn_109_0 = 0;
-        faa stackIn_117_0 = null;
+        IsaacPacketBuffer stackIn_117_0 = null;
         int stackIn_117_1 = 0;
         boolean stackIn_118_2 = false;
         int stackIn_127_0 = 0;
-        faa stackIn_135_0 = null;
+        IsaacPacketBuffer stackIn_135_0 = null;
         int stackIn_135_1 = 0;
         boolean stackIn_136_2 = false;
-        faa stackIn_144_0 = null;
+        IsaacPacketBuffer stackIn_144_0 = null;
         int stackIn_144_1 = 0;
         boolean stackIn_145_2 = false;
-        faa stackIn_150_0 = null;
+        IsaacPacketBuffer stackIn_150_0 = null;
         int stackIn_150_1 = 0;
         boolean stackIn_151_2 = false;
         int stackIn_159_0 = 0;
-        faa stackIn_167_0 = null;
+        IsaacPacketBuffer stackIn_167_0 = null;
         int stackIn_167_1 = 0;
         boolean stackIn_168_2 = false;
-        faa stackIn_176_0 = null;
+        IsaacPacketBuffer stackIn_176_0 = null;
         int stackIn_176_1 = 0;
         boolean stackIn_177_2 = false;
         RuntimeException stackIn_185_0 = null;
         StringBuilder stackIn_185_1 = null;
         String stackIn_186_2 = null;
         RuntimeException decompiledCaughtException = null;
-        faa var3 = null;
+        IsaacPacketBuffer var3 = null;
         RuntimeException var3_ref = null;
         Ship[] var4 = null;
-        tv[] var4_array = null;
+        SerializableGameState[] var4_array = null;
         Debris[] var4_array2 = null;
         GrapplingHook[] var4_array3 = null;
         MapZone[] var4_array4 = null;
         ResourceNode[] var4_array5 = null;
         EscapePod[] var4_array6 = null;
         int var5 = 0;
-        tv[] var6 = null;
+        SerializableGameState[] var6 = null;
         Debris[] var6_array = null;
         int var7 = 0;
         Ship var8 = null;
-        tv var8_ref = null;
+        SerializableGameState var8_ref = null;
         Debris var8_ref2 = null;
         GrapplingHook var8_ref3 = null;
         MapZone var8_ref4 = null;
@@ -7603,41 +7603,41 @@ final class World implements DiffableState, utb {
         EscapePod var8_ref6 = null;
         int var9 = 0;
         Ship[] var10 = null;
-        faa var11 = null;
+        IsaacPacketBuffer var11 = null;
         Ship[] var12 = null;
-        tv[] var13 = null;
-        faa var14 = null;
-        tv[] var15 = null;
-        tv var16 = null;
+        SerializableGameState[] var13 = null;
+        IsaacPacketBuffer var14 = null;
+        SerializableGameState[] var15 = null;
+        SerializableGameState var16 = null;
         Debris[] var17 = null;
-        faa var18 = null;
+        IsaacPacketBuffer var18 = null;
         Debris[] var19 = null;
-        tv[] var20 = null;
-        faa var21 = null;
+        SerializableGameState[] var20 = null;
+        IsaacPacketBuffer var21 = null;
         GrapplingHook[] var22 = null;
-        faa var23 = null;
+        IsaacPacketBuffer var23 = null;
         GrapplingHook[] var24 = null;
         MapZone[] var25 = null;
-        faa var26 = null;
+        IsaacPacketBuffer var26 = null;
         MapZone[] var27 = null;
         ResourceNode[] var28 = null;
-        faa var29 = null;
+        IsaacPacketBuffer var29 = null;
         ResourceNode[] var30 = null;
         EscapePod[] var31 = null;
-        faa var32 = null;
+        IsaacPacketBuffer var32 = null;
         EscapePod[] var33 = null;
-        faa var3Lifetime1;
-        faa var3Lifetime2;
-        faa var3Lifetime3;
-        faa var3Lifetime4;
-        faa var3Lifetime5;
-        faa var3Lifetime6;
-        faa var3Lifetime7;
-        tv[] var4_arrayLifetime1;
-        tv[] var6Lifetime1;
-        tv var8_refLifetime1;
-        tv var8_refLifetime2;
-        tv var8_refLifetime3;
+        IsaacPacketBuffer var3Lifetime1;
+        IsaacPacketBuffer var3Lifetime2;
+        IsaacPacketBuffer var3Lifetime3;
+        IsaacPacketBuffer var3Lifetime4;
+        IsaacPacketBuffer var3Lifetime5;
+        IsaacPacketBuffer var3Lifetime6;
+        IsaacPacketBuffer var3Lifetime7;
+        SerializableGameState[] var4_arrayLifetime1;
+        SerializableGameState[] var6Lifetime1;
+        SerializableGameState var8_refLifetime1;
+        SerializableGameState var8_refLifetime2;
+        SerializableGameState var8_refLifetime3;
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
@@ -7664,7 +7664,7 @@ final class World implements DiffableState, utb {
             stackIn_5_0 = var10.length;
           }
           var5 = stackIn_5_0;
-          var11.a(-632, var5, 8);
+          var11.writeBits(-632, var5, 8);
           if (0 != var5) {
             var12 = var10;
             for (var7 = 0; var12.length > var7; var7++) {
@@ -7672,7 +7672,7 @@ final class World implements DiffableState, utb {
               stackIn_13_0 = var3;
               stackIn_13_1 = 110;
               stackIn_14_2 = (null != var8);
-              if (vq.a(stackIn_13_0, stackIn_13_1, stackIn_14_2)) {
+              if (vq.writeBoolean(stackIn_13_0, stackIn_13_1, stackIn_14_2)) {
                 ((utb) ((Object) var8)).a(var11, (byte) -105);
               }
             }
@@ -7687,7 +7687,7 @@ final class World implements DiffableState, utb {
             stackIn_23_0 = var13.length;
           }
           var5Lifetime1 = stackIn_23_0;
-          var14.a(-632, var5Lifetime1, 10);
+          var14.writeBits(-632, var5Lifetime1, 10);
           if (var5Lifetime1 != 0) {
             var15 = var4_array;
             var6 = var15;
@@ -7699,7 +7699,7 @@ final class World implements DiffableState, utb {
               stackIn_31_0 = var3Lifetime1;
               stackIn_31_1 = -69;
               stackIn_32_2 = (var16 != null);
-              if (vq.a(stackIn_31_0, stackIn_31_1, stackIn_32_2)) {
+              if (vq.writeBoolean(stackIn_31_0, stackIn_31_1, stackIn_32_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var14, var16);
               }
             }
@@ -7714,7 +7714,7 @@ final class World implements DiffableState, utb {
             stackIn_41_0 = var17.length;
           }
           var5Lifetime2 = stackIn_41_0;
-          var18.a(-632, var5Lifetime2, 10);
+          var18.writeBits(-632, var5Lifetime2, 10);
           if (var5Lifetime2 != 0) {
             var19 = var4_array2;
             var6_array = var19;
@@ -7723,15 +7723,15 @@ final class World implements DiffableState, utb {
               stackIn_49_0 = var3Lifetime2;
               stackIn_49_1 = 101;
               stackIn_50_2 = (var8_ref2 != null);
-              if (vq.a(stackIn_49_0, stackIn_49_1, stackIn_50_2)) {
+              if (vq.writeBoolean(stackIn_49_0, stackIn_49_1, stackIn_50_2)) {
                 ((utb) ((Object) var8_ref2)).a(var18, (byte) -127);
               }
             }
           }
-          stackIn_58_0 = (faa) (param0);
+          stackIn_58_0 = (IsaacPacketBuffer) (param0);
           stackIn_58_1 = 54;
           stackIn_59_2 = (null != this.field_e);
-          if (vq.a(stackIn_58_0, stackIn_58_1, stackIn_59_2)) {
+          if (vq.writeBoolean(stackIn_58_0, stackIn_58_1, stackIn_59_2)) {
             this.field_e.a(param0, (byte) -92);
           }
           var21 = param0;
@@ -7744,7 +7744,7 @@ final class World implements DiffableState, utb {
             stackIn_67_0 = var20.length;
           }
           var5Lifetime3 = stackIn_67_0;
-          var21.a(-632, var5Lifetime3, 6);
+          var21.writeBits(-632, var5Lifetime3, 6);
           if (var5Lifetime3 != 0) {
             var6Lifetime1 = var20;
             for (var7Lifetime3 = 0; var6Lifetime1.length > var7Lifetime3; var7Lifetime3++) {
@@ -7752,7 +7752,7 @@ final class World implements DiffableState, utb {
               stackIn_73_0 = var3Lifetime3;
               stackIn_73_1 = 66;
               stackIn_74_2 = (var8_refLifetime1 != null);
-              if (vq.a(stackIn_73_0, stackIn_73_1, stackIn_74_2)) {
+              if (vq.writeBoolean(stackIn_73_0, stackIn_73_1, stackIn_74_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3Lifetime3, var8_refLifetime1);
               }
             }
@@ -7767,7 +7767,7 @@ final class World implements DiffableState, utb {
             stackIn_83_0 = var22.length;
           }
           var5Lifetime4 = stackIn_83_0;
-          var23.a(-632, var5Lifetime4, 8);
+          var23.writeBits(-632, var5Lifetime4, 8);
           if (0 != var5Lifetime4) {
             var24 = var22;
             for (var7Lifetime4 = 0; var7Lifetime4 < var24.length; var7Lifetime4++) {
@@ -7775,7 +7775,7 @@ final class World implements DiffableState, utb {
               stackIn_89_0 = var3Lifetime4;
               stackIn_89_1 = 74;
               stackIn_90_2 = (var8_ref3 != null);
-              if (vq.a(stackIn_89_0, stackIn_89_1, stackIn_90_2)) {
+              if (vq.writeBoolean(stackIn_89_0, stackIn_89_1, stackIn_90_2)) {
                 ((utb) ((Object) var8_ref3)).a(var23, (byte) -98);
               }
             }
@@ -7787,14 +7787,14 @@ final class World implements DiffableState, utb {
             stackIn_99_1 = this.respawntimers.length;
           }
           pgb.a(stackIn_98_0, stackIn_99_1, -114, param0, this.respawntimers);
-          vq.a(param0, 56, this.debug);
-          param0.a(-632, this.field_y, 32);
-          vq.a(param0, 39, this.swappedTeams);
-          stackIn_102_0 = (faa) (param0);
+          vq.writeBoolean(param0, 56, this.debug);
+          param0.writeBits(-632, this.field_y, 32);
+          vq.writeBoolean(param0, 39, this.swappedTeams);
+          stackIn_102_0 = (IsaacPacketBuffer) (param0);
           stackIn_102_1 = 122;
           stackIn_103_2 = (null != this.missionControl);
-          if (vq.a(stackIn_102_0, stackIn_102_1, stackIn_103_2)) {
-            this.missionControl.b(param0, -123);
+          if (vq.writeBoolean(stackIn_102_0, stackIn_102_1, stackIn_103_2)) {
+            this.missionControl.writeState(param0, -123);
           }
           var26 = param0;
           var3Lifetime5 = var26;
@@ -7806,7 +7806,7 @@ final class World implements DiffableState, utb {
             stackIn_109_0 = 0;
           }
           var5Lifetime5 = stackIn_109_0;
-          var26.a(-632, var5Lifetime5, 8);
+          var26.writeBits(-632, var5Lifetime5, 8);
           if (0 != var5Lifetime5) {
             var27 = var25;
             for (var7Lifetime5 = 0; var7Lifetime5 < var27.length; var7Lifetime5++) {
@@ -7814,7 +7814,7 @@ final class World implements DiffableState, utb {
               stackIn_117_0 = var3Lifetime5;
               stackIn_117_1 = 47;
               stackIn_118_2 = (null != var8_ref4);
-              if (vq.a(stackIn_117_0, stackIn_117_1, stackIn_118_2)) {
+              if (vq.writeBoolean(stackIn_117_0, stackIn_117_1, stackIn_118_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var26, var8_ref4);
               }
             }
@@ -7829,7 +7829,7 @@ final class World implements DiffableState, utb {
             stackIn_127_0 = 0;
           }
           var5Lifetime6 = stackIn_127_0;
-          var29.a(-632, var5Lifetime6, 4);
+          var29.writeBits(-632, var5Lifetime6, 4);
           if (var5Lifetime6 != 0) {
             var30 = var28;
             for (var7Lifetime6 = 0; var30.length > var7Lifetime6; var7Lifetime6++) {
@@ -7837,24 +7837,24 @@ final class World implements DiffableState, utb {
               stackIn_135_0 = var3Lifetime6;
               stackIn_135_1 = 89;
               stackIn_136_2 = (null != var8_ref5);
-              if (vq.a(stackIn_135_0, stackIn_135_1, stackIn_136_2)) {
+              if (vq.writeBoolean(stackIn_135_0, stackIn_135_1, stackIn_136_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var29, var8_ref5);
               }
             }
           }
-          stackIn_144_0 = (faa) (param0);
+          stackIn_144_0 = (IsaacPacketBuffer) (param0);
           stackIn_144_1 = -94;
           stackIn_145_2 = (null != this.field_p);
-          if (vq.a(stackIn_144_0, stackIn_144_1, stackIn_145_2)) {
-            this.field_p.b(param0, -117);
+          if (vq.writeBoolean(stackIn_144_0, stackIn_144_1, stackIn_145_2)) {
+            this.field_p.writeState(param0, -117);
           }
-          param0.a(-632, this.width, 28);
-          param0.a(-632, this.field_r, 28);
-          stackIn_150_0 = (faa) (param0);
+          param0.writeBits(-632, this.width, 28);
+          param0.writeBits(-632, this.field_r, 28);
+          stackIn_150_0 = (IsaacPacketBuffer) (param0);
           stackIn_150_1 = 109;
           stackIn_151_2 = (null != this.field_u);
-          if (vq.a(stackIn_150_0, stackIn_150_1, stackIn_151_2)) {
-            this.field_u.b(param0, -125);
+          if (vq.writeBoolean(stackIn_150_0, stackIn_150_1, stackIn_151_2)) {
+            this.field_u.writeState(param0, -125);
           }
           if (param1 > -91) {
             field_d = (String) null;
@@ -7869,7 +7869,7 @@ final class World implements DiffableState, utb {
             stackIn_159_0 = var31.length;
           }
           var5Lifetime7 = stackIn_159_0;
-          var32.a(-632, var5Lifetime7, 4);
+          var32.writeBits(-632, var5Lifetime7, 4);
           if (var5Lifetime7 != 0) {
             var33 = var31;
             for (var7Lifetime7 = 0; var33.length > var7Lifetime7; var7Lifetime7++) {
@@ -7877,16 +7877,16 @@ final class World implements DiffableState, utb {
               stackIn_167_0 = var3Lifetime7;
               stackIn_167_1 = -59;
               stackIn_168_2 = (var8_ref6 != null);
-              if (vq.a(stackIn_167_0, stackIn_167_1, stackIn_168_2)) {
+              if (vq.writeBoolean(stackIn_167_0, stackIn_167_1, stackIn_168_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var32, var8_ref6);
               }
             }
           }
-          stackIn_176_0 = (faa) (param0);
+          stackIn_176_0 = (IsaacPacketBuffer) (param0);
           stackIn_176_1 = 38;
           stackIn_177_2 = (null != this.field_b);
-          if (vq.a(stackIn_176_0, stackIn_176_1, stackIn_177_2)) {
-            this.field_b.b(param0, -113);
+          if (vq.writeBoolean(stackIn_176_0, stackIn_176_1, stackIn_177_2)) {
+            this.field_b.writeState(param0, -113);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -8476,10 +8476,10 @@ final class World implements DiffableState, utb {
             this.field_h = false;
           }
           if (!this.debug) {
-            var5 = (rdb) (this.spawnPoints.d(0));
+            var5 = (rdb) (this.spawnPoints.first(0));
             while (var5 != null) {
               var5.a(3128, this);
-              var5 = (rdb) (this.spawnPoints.a((byte) 113));
+              var5 = (rdb) (this.spawnPoints.next((byte) 113));
             }
             this.b(99);
             if (this.missionControl == null) {
@@ -8811,7 +8811,7 @@ final class World implements DiffableState, utb {
                 }
               }
               var12 = new Debris();
-              var27.b((byte) 60, var12);
+              var27.copyTo((byte) 60, var12);
               param3.a((int[]) null, -15);
               var28 = var12;
               var9 = var28;

@@ -7,7 +7,7 @@ final class MapZone extends IntrusiveNode implements DiffableState {
     int y;
     int width;
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         MapZone var5 = null;
         MapZone var6 = null;
         try {
@@ -44,12 +44,12 @@ final class MapZone extends IntrusiveNode implements DiffableState {
         return false;
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.x = param0.i(0, 32);
-          this.y = param0.i(0, 32);
-          this.width = param0.i(0, 32);
-          this.height = param0.i(0, 32);
+          this.x = param0.readBits(0, 32);
+          this.y = param0.readBits(0, 32);
+          this.width = param0.readBits(0, 32);
+          this.height = param0.readBits(0, 32);
           if (param1) {
             this.a(64, 118, (byte) 59);
           }
@@ -58,7 +58,7 @@ final class MapZone extends IntrusiveNode implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -106,22 +106,22 @@ final class MapZone extends IntrusiveNode implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          param0.a(-632, this.x, 32);
-          param0.a(-632, this.y, 32);
-          param0.a(-632, this.width, 32);
+          param0.writeBits(-632, this.x, 32);
+          param0.writeBits(-632, this.y, 32);
+          param0.writeBits(-632, this.width, 32);
           if (param1 > -109) {
             lta var4 = (lta) null;
             this.a(-77, 104, (lta) null);
           }
-          param0.a(-632, this.height, 32);
+          param0.writeBits(-632, this.height, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "cq.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         MapZone var3 = null;
         int var4 = 0;
         boolean stackIn_7_0 = false;
@@ -158,8 +158,8 @@ final class MapZone extends IntrusiveNode implements DiffableState {
           var4_int = param2.a(this.x, (byte) 126);
           var5 = param2.b(true, this.y);
           if (param0 != 32) {
-            faa var8 = (faa) null;
-            this.b((faa) null, 76);
+            IsaacPacketBuffer var8 = (IsaacPacketBuffer) null;
+            this.writeState((IsaacPacketBuffer) null, 76);
           }
           var6 = param2.a(this.width + this.x, (byte) 125);
           var7 = param2.b(true, this.height + this.y);

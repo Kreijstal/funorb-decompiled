@@ -67,7 +67,7 @@ final class SetTabForScores extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = (String) null;
           }
-          me.field_r = arguments[0].a(false);
+          me.field_r = arguments[0].booleanValue(false);
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -35,7 +35,7 @@ final class SetSalvoRepairTimeMultiplier extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(39, 62, arguments[0].a(104));
+          SetMachineGunEnergyUsed.a(39, 62, arguments[0].intValue(104));
           if (obfuscationGuard <= -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

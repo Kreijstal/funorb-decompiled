@@ -8,9 +8,9 @@ class uqb extends IntrusiveNode implements DiffableState {
     pwa field_d;
     boolean field_g;
 
-    public void b(faa param0, int param1) {
+    public void writeState(IsaacPacketBuffer param0, int param1) {
         RuntimeException var3 = null;
-        faa stackIn_4_0 = null;
+        IsaacPacketBuffer stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         boolean stackIn_5_2 = false;
         RuntimeException stackIn_11_0 = null;
@@ -18,17 +18,17 @@ class uqb extends IntrusiveNode implements DiffableState {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0.a(-632, this.field_e, SetMissilesTopSpeed.field_p);
+          param0.writeBits(-632, this.field_e, SetMissilesTopSpeed.field_p);
           if (param1 >= -109) {
             return;
           }
-          stackIn_4_0 = (faa) (param0);
+          stackIn_4_0 = (IsaacPacketBuffer) (param0);
           stackIn_4_1 = 59;
           stackIn_5_2 = (this.field_d != null);
-          if (!vq.a(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
+          if (!vq.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
             return;
           }
-          this.field_d.b(param0, -113);
+          this.field_d.writeState(param0, -113);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -53,15 +53,15 @@ class uqb extends IntrusiveNode implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var4 = null;
         int var5 = 0;
-        tv var7 = null;
+        SerializableGameState var7 = null;
         gqa var8 = null;
         bha var9 = null;
         hg var10 = null;
         bha var11 = null;
         try {
           if (param0 >= -111) {
-            var7 = (tv) null;
-            this.a((byte) 62, (tv) null);
+            var7 = (SerializableGameState) null;
+            this.differsFrom((byte) 62, (SerializableGameState) null);
           }
           if (this.field_d != null &&
             this.field_d.field_e != null) {
@@ -110,7 +110,7 @@ class uqb extends IntrusiveNode implements DiffableState {
         }
     }
 
-    public boolean a(byte param0, tv param1) {
+    public boolean differsFrom(byte param0, SerializableGameState param1) {
         uqb var3 = null;
         int var4 = 0;
         int stackIn_4_0 = 0;
@@ -133,7 +133,7 @@ class uqb extends IntrusiveNode implements DiffableState {
               stackIn_7_1 = 1;
             }
             if ((stackIn_4_0 ^ stackIn_7_1) == 0 && (null == this.field_d ||
-              !this.field_d.a((byte) 121, var3.field_d))) {
+              !this.field_d.differsFrom((byte) 121, var3.field_d))) {
               stackIn_13_0 = false;
               decompiledFrameRemainder0 = false;
             }
@@ -156,7 +156,7 @@ class uqb extends IntrusiveNode implements DiffableState {
         }
     }
 
-    public void reportDifferences(tv other, int obfuscationGuard) {
+    public void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int stackIn_12_0 = 0;
         int stackIn_15_1 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -165,7 +165,7 @@ class uqb extends IntrusiveNode implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        faa var5 = null;
+        IsaacPacketBuffer var5 = null;
         uqb var6 = null;
         try {
           var6 = (uqb) (other);
@@ -175,8 +175,8 @@ class uqb extends IntrusiveNode implements DiffableState {
             var4 = 1;
           }
           if (obfuscationGuard > -19) {
-            var5 = (faa) null;
-            this.b((faa) null, 67);
+            var5 = (IsaacPacketBuffer) null;
+            this.writeState((IsaacPacketBuffer) null, 67);
           }
           if (this.field_d != null &&
             null != var6.field_d) {
@@ -190,7 +190,7 @@ class uqb extends IntrusiveNode implements DiffableState {
           }
           if ((stackIn_12_0 ^ stackIn_15_1) != 0 ||
             this.field_d != null &&
-            this.field_d.a((byte) 108, var6.field_d)) {
+            this.field_d.differsFrom((byte) 108, var6.field_d)) {
             var4 = 1;
             GetSniperCannonAimarc.a(-6940, "CarouselSystemMessage system_message has changed. before=" + var6.field_d + ", now=" + this.field_d);
           }
@@ -224,7 +224,7 @@ class uqb extends IntrusiveNode implements DiffableState {
         this.field_d.field_f = new gtb(param0);
     }
 
-    public void b(byte param0, tv param1) {
+    public void copyTo(byte param0, SerializableGameState param1) {
         uqb var3 = null;
         RuntimeException var3_ref = null;
         uqb var4 = null;
@@ -247,7 +247,7 @@ class uqb extends IntrusiveNode implements DiffableState {
             var3.field_d.getClass() != this.field_d.getClass()) {
             var3.field_d = new pwa();
           }
-          this.field_d.b((byte) 121, var3.field_d);
+          this.field_d.copyTo((byte) 121, var3.field_d);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -266,8 +266,8 @@ class uqb extends IntrusiveNode implements DiffableState {
     void a(mfa param0, int param1, tja param2) {
         try {
           if (param1 != 0) {
-            tv var5 = (tv) null;
-            this.a((byte) -98, (tv) null);
+            SerializableGameState var5 = (SerializableGameState) null;
+            this.differsFrom((byte) -98, (SerializableGameState) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uqb.A(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
@@ -282,25 +282,25 @@ class uqb extends IntrusiveNode implements DiffableState {
         return this.field_g;
     }
 
-    public void a(faa param0, boolean param1) {
+    public void readState(IsaacPacketBuffer param0, boolean param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          this.field_e = param0.i(0, SetMissilesTopSpeed.field_p);
+          this.field_e = param0.readBits(0, SetMissilesTopSpeed.field_p);
           if (param1) {
             return;
           }
-          if (!kv.a(param1, param0)) {
+          if (!kv.readBoolean(param1, param0)) {
             this.field_d = null;
             return;
           }
           if (this.field_d == null) {
             this.field_d = new pwa();
           }
-          this.field_d.a(param0, param1);
+          this.field_d.readState(param0, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -108,7 +108,7 @@ final class SetFighterVision extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          SetMachineGunEnergyUsed.a(2, 62, arguments[0].a(103));
+          SetMachineGunEnergyUsed.a(2, 62, arguments[0].intValue(103));
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

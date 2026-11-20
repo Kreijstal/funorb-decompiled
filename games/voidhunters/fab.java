@@ -367,25 +367,25 @@ final class fab {
             bt.field_a = new PacketBuffer(var7_int);
           }
           bt.field_a.position = 0;
-          bt.field_a.a(param0, param3, -1, param1);
-          bt.field_a.b(var7_int, (byte) 66);
-          bt.field_a.a(var13, (byte) 127);
+          bt.field_a.writeBytes(param0, param3, -1, param1);
+          bt.field_a.padToPosition(var7_int, (byte) 66);
+          bt.field_a.xteaEncrypt(var13, (byte) 127);
           if (null == GetKeepTeamColours.field_o ||
             !(GetKeepTeamColours.field_o.payload.length >= 100)) {
             GetKeepTeamColours.field_o = new PacketBuffer(100);
           }
           GetKeepTeamColours.field_o.position = 0;
-          GetKeepTeamColours.field_o.c(param5 ^ 47, 10);
+          GetKeepTeamColours.field_o.writeByte(param5 ^ 47, 10);
           var11 = 0;
           var9Lifetime1 = var11;
           while (var11 < 4) {
-            GetKeepTeamColours.field_o.d(var13[var11], param5 ^ 332614567);
+            GetKeepTeamColours.field_o.writeInt(var13[var11], param5 ^ 332614567);
             var11++;
           }
-          GetKeepTeamColours.field_o.a(param1, true);
-          GetKeepTeamColours.field_o.a(param6, param4, 16711680);
-          param2.a(0, GetKeepTeamColours.field_o.payload, -1, GetKeepTeamColours.field_o.position);
-          param2.a(0, bt.field_a.payload, param5 - 48, bt.field_a.position);
+          GetKeepTeamColours.field_o.writeShort(param1, true);
+          GetKeepTeamColours.field_o.rsaEncrypt(param6, param4, 16711680);
+          param2.writeBytes(0, GetKeepTeamColours.field_o.payload, -1, GetKeepTeamColours.field_o.position);
+          param2.writeBytes(0, bt.field_a.payload, param5 - 48, bt.field_a.position);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

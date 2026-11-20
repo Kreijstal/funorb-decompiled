@@ -70,7 +70,7 @@ final class rcb extends dqa implements oo {
         int var6 = 0;
         var6 = VoidHunters.field_G;
         try {
-          this.field_t.e(101);
+          this.field_t.clear(101);
           if (param0 != null &&
             param0.length != 0) {
             var3_int = param0.length;

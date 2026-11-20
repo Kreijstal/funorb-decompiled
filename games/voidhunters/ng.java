@@ -33,9 +33,9 @@ final class ng implements dja {
         }
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 29 / ((-64 - param0) / 50);
-        return (tv) ((Object) new SpecialOrderSubmessage());
+        return (SerializableGameState) ((Object) new SpecialOrderSubmessage());
     }
 
     final static int a(int param0, int param1, byte param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9) {
@@ -84,12 +84,12 @@ final class ng implements dja {
         }
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           ng.a(true);
-          return (tv[]) ((Object) new SpecialOrderSubmessage[param1]);
+          return (SerializableGameState[]) ((Object) new SpecialOrderSubmessage[param1]);
         }
-        return (tv[]) ((Object) new SpecialOrderSubmessage[param1]);
+        return (SerializableGameState[]) ((Object) new SpecialOrderSubmessage[param1]);
     }
 
     static {

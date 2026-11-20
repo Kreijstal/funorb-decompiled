@@ -110,7 +110,7 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
             param9.field_lb = new IntrusiveDeque();
           }
           SetMachineGunAimarc.field_q = param9.field_lb;
-          SetMachineGunAimarc.field_q.e(109);
+          SetMachineGunAimarc.field_q.clear(109);
           GetReverbWet.field_o = new pr(param3);
           cla.field_b = -1;
           SetLaserRandomness.field_p = 0;
@@ -120,13 +120,13 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
             param4.field_lb = new IntrusiveDeque();
           }
           kja.field_E = param4.field_lb;
-          kja.field_E.e(118);
+          kja.field_E.clear(118);
           GetLaserReload.field_r = new pr(param8);
           if (null == param1.field_lb) {
             param1.field_lb = new IntrusiveDeque();
           }
           mea.field_e = param1.field_lb;
-          mea.field_e.e(93);
+          mea.field_e.clear(93);
           SetUseDetailLines.field_p = new pr(param2);
           GetMomentOfInertiaPredivideDownshift.field_p = param7;
           if (!param5) {

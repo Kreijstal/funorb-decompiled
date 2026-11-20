@@ -67,8 +67,8 @@ final class wh extends ona {
             var2 = (km) (this.field_a.a((byte) -54));
             while (var2 != null) {
               this.field_e.position = 0;
-              this.field_e.c(0, 1);
-              this.field_e.a(117, var2.field_i);
+              this.field_e.writeByte(0, 1);
+              this.field_e.writeLong40(117, var2.secondaryKey);
               this.field_p.a(0, this.field_e.payload, this.field_e.payload.length, 0);
               this.field_d.a(var2, -84);
               var2 = (km) (this.field_a.a(param0 + 1900));
@@ -76,8 +76,8 @@ final class wh extends ona {
             var2Lifetime1 = (km) (this.field_c.a((byte) -54));
             while (var2Lifetime1 != null) {
               this.field_e.position = 0;
-              this.field_e.c(0, 0);
-              this.field_e.a(100, var2Lifetime1.field_i);
+              this.field_e.writeByte(0, 0);
+              this.field_e.writeLong40(100, var2Lifetime1.secondaryKey);
               this.field_p.a(0, this.field_e.payload, this.field_e.payload.length, 0);
               this.field_f.a(var2Lifetime1, -65);
               var2Lifetime1 = (km) (this.field_c.a(1900));
@@ -122,10 +122,10 @@ final class wh extends ona {
                       }
                     } else {
                       this.field_i.position = 0;
-                      var6 = this.field_i.e((byte) -126);
-                      var7 = this.field_i.h(125);
-                      var8 = this.field_i.e((byte) -125);
-                      var9 = this.field_i.h(24);
+                      var6 = this.field_i.readUnsignedByte((byte) -126);
+                      var7 = this.field_i.readInt(125);
+                      var8 = this.field_i.readUnsignedByte((byte) -125);
+                      var9 = this.field_i.readInt(24);
                       var10 = var8 & 127;
                       stackIn_62_0 = ((128 & var8) == 0) ? 0 : 1;
                       boolean decompiledFrameRemainder0 = true;
@@ -136,7 +136,7 @@ final class wh extends ona {
                       if (var11 == 0) {
                         var14_ref = (km) (this.field_d.a((byte) -54));
                         while (var14_ref != null) {
-                          if (~var14_ref.field_i == ~var12) {
+                          if (~var14_ref.secondaryKey == ~var12) {
                             decompiledFrameCompleted0 = false;
                             break;
                           }
@@ -148,7 +148,7 @@ final class wh extends ona {
                         (decompiledFrameCompleted0)) {
                         var14_ref = (km) (this.field_f.a((byte) -54));
                         while (var14_ref != null) {
-                          if (var14_ref.field_i == var12) {
+                          if (var14_ref.secondaryKey == var12) {
                             break;
                           }
                           var14_ref = (km) (this.field_f.a(1900));
@@ -161,8 +161,8 @@ final class wh extends ona {
                       var15 = stackIn_78_0;
                       this.field_b = var14_ref;
                       this.field_b.field_p = new PacketBuffer(this.field_b.field_q + var9 + var15);
-                      this.field_b.field_p.c(0, var10);
-                      this.field_b.field_p.d(var9, param0 + 332614536);
+                      this.field_b.field_p.writeByte(0, var10);
+                      this.field_b.field_p.writeInt(var9, param0 + 332614536);
                       this.field_i.position = 0;
                       this.field_b.field_r = 10;
                     }
@@ -189,7 +189,7 @@ final class wh extends ona {
                       this.field_b.field_r = 0;
                     }
                   } else {
-                    this.field_b.d((byte) -35);
+                    this.field_b.unlinkSecondary((byte) -35);
                     this.field_b.field_n = false;
                     this.field_b = null;
                   }
@@ -247,8 +247,8 @@ final class wh extends ona {
             } else {
               stackIn_7_2 = 3;
             }
-            ((PacketBuffer) (Object) stackIn_6_0).c(stackIn_6_1, stackIn_7_2);
-            this.field_e.a(param0 ^ -50, 0L);
+            ((PacketBuffer) (Object) stackIn_6_0).writeByte(stackIn_6_1, stackIn_7_2);
+            this.field_e.writeLong40(param0 ^ -50, 0L);
             this.field_p.a(0, this.field_e.payload, this.field_e.payload.length, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -287,9 +287,9 @@ final class wh extends ona {
           }
           try {
             this.field_e.position = 0;
-            this.field_e.c(0, 6);
-            this.field_e.a(3, (byte) 125);
-            this.field_e.a(0, true);
+            this.field_e.writeByte(0, 6);
+            this.field_e.writeMedium(3, (byte) 125);
+            this.field_e.writeShort(0, true);
             this.field_p.a(param0 ^ param0, this.field_e.payload, this.field_e.payload.length, 0);
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
@@ -403,9 +403,9 @@ final class wh extends ona {
             if (0 != this.field_j) {
               try {
                 this.field_e.position = 0;
-                this.field_e.c(0, 4);
-                this.field_e.c(0, (int) this.field_j);
-                this.field_e.d(0, 332614536);
+                this.field_e.writeByte(0, 4);
+                this.field_e.writeByte(0, (int) this.field_j);
+                this.field_e.writeInt(0, 332614536);
                 this.field_p.a(0, this.field_e.payload, this.field_e.payload.length, 0);
               } catch (java.io.IOException decompiledCaughtParameter1) {
                 decompiledCaughtException = decompiledCaughtParameter1;

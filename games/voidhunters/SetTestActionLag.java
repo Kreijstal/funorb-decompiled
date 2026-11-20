@@ -19,7 +19,7 @@ final class SetTestActionLag extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = 74;
           }
-          nsb.field_a = arguments[0].a(92);
+          nsb.field_a = arguments[0].intValue(92);
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -36,9 +36,9 @@ final class SetTestActionLag extends ConsoleCommand {
         }
     }
 
-    final static int a(tv param0, byte param1) {
+    final static int a(SerializableGameState param0, byte param1) {
         RuntimeException var2 = null;
-        tv var3 = null;
+        SerializableGameState var3 = null;
         int stackIn_6_0 = 0;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
@@ -47,16 +47,16 @@ final class SetTestActionLag extends ConsoleCommand {
         try {
           bk.field_w.position = 0;
           if (param1 >= -5) {
-            var3 = (tv) null;
-            SetTestActionLag.a((tv) null, (byte) 16);
+            var3 = (SerializableGameState) null;
+            SetTestActionLag.a((SerializableGameState) null, (byte) 16);
           }
-          bk.field_w.q(-81);
+          bk.field_w.beginBitWrite(-81);
           if (!(param0 instanceof utb)) {
-            param0.b(bk.field_w, -111);
+            param0.writeState(bk.field_w, -111);
           } else {
             ((utb) ((Object) param0)).a(bk.field_w, (byte) -116);
           }
-          bk.field_w.r(32712);
+          bk.field_w.endBitWrite(32712);
           stackIn_6_0 = psb.a(bk.field_w.payload, bk.field_w.position, 0);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

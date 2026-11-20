@@ -46,7 +46,7 @@ final class SetReverbDry extends ConsoleCommand {
               if (var12 < 5) {
                 ul.field_b[var12].a(var6_int, -100, var8, var13, var7Lifetime1);
                 SetMissionVariablesHudX.field_o[var12].a(param3, -110, -param3 + var9, 0, var7Lifetime1);
-                IterableNodeHashTable.field_c[var12].a(var9, -27, param0, param4, -param4 + (var7Lifetime1 - param4));
+                SecondaryNodeDeque.field_c[var12].a(var9, -27, param0, param4, -param4 + (var7Lifetime1 - param4));
                 lob.field_c[var12].a(var10, 127, -var10 + (-param3 + var8), param4, var7Lifetime1 - (param4 + param4));
               } else {
                 SetBombletSprayAimarc.field_o.a(var6_int, -120, var8, var13, var7Lifetime1);
@@ -70,7 +70,7 @@ final class SetReverbDry extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          GetMissileLauncherProjectiles.field_o = arguments[0].d(0);
+          GetMissileLauncherProjectiles.field_o = arguments[0].floatValue(0);
           if (obfuscationGuard <= -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

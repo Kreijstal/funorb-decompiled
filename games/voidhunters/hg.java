@@ -63,7 +63,7 @@ final class hg implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         hg var5 = null;
         hg var6 = null;
         RuntimeException stackIn_5_0 = null;
@@ -143,18 +143,18 @@ final class hg implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 > -109) {
             this.field_d = 42;
           }
-          param0.a(-632, this.field_d, 32);
+          param0.writeBits(-632, this.field_d, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hg.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         hg var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -182,18 +182,18 @@ final class hg implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         if (param1) {
           return;
         }
         try {
-          this.field_d = param0.i(0, 32);
+          this.field_d = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "hg.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         hg var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;

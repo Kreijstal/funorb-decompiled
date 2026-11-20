@@ -7,17 +7,17 @@ final class GameSnapshot extends tja implements DiffableState, utb {
     World world;
     MessageLog messageLog;
 
-    public final void b(faa param0, int param1) {
-        faa stackIn_2_0 = null;
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
+        IsaacPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         boolean stackIn_3_2 = false;
-        faa stackIn_8_0 = null;
+        IsaacPacketBuffer stackIn_8_0 = null;
         int stackIn_8_1 = 0;
         boolean stackIn_9_2 = false;
-        faa stackIn_14_0 = null;
+        IsaacPacketBuffer stackIn_14_0 = null;
         int stackIn_14_1 = 0;
         boolean stackIn_15_2 = false;
-        faa stackIn_21_0 = null;
+        IsaacPacketBuffer stackIn_21_0 = null;
         int stackIn_21_1 = 0;
         boolean stackIn_22_2 = false;
         RuntimeException stackIn_28_0 = null;
@@ -26,33 +26,33 @@ final class GameSnapshot extends tja implements DiffableState, utb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          super.b(param0, -128);
-          stackIn_2_0 = (faa) (param0);
+          super.writeState(param0, -128);
+          stackIn_2_0 = (IsaacPacketBuffer) (param0);
           stackIn_2_1 = -90;
           stackIn_3_2 = (this.world != null);
-          if (vq.a(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
-            this.world.b(param0, -113);
+          if (vq.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
+            this.world.writeState(param0, -113);
           }
-          stackIn_8_0 = (faa) (param0);
+          stackIn_8_0 = (IsaacPacketBuffer) (param0);
           stackIn_8_1 = 46;
           stackIn_9_2 = (null != this.settings);
-          if (vq.a(stackIn_8_0, stackIn_8_1, stackIn_9_2)) {
-            this.settings.b(param0, -128);
+          if (vq.writeBoolean(stackIn_8_0, stackIn_8_1, stackIn_9_2)) {
+            this.settings.writeState(param0, -128);
           }
-          stackIn_14_0 = (faa) (param0);
+          stackIn_14_0 = (IsaacPacketBuffer) (param0);
           stackIn_14_1 = 62;
           stackIn_15_2 = (null != this.missionState);
-          if (vq.a(stackIn_14_0, stackIn_14_1, stackIn_15_2)) {
-            this.missionState.b(param0, -110);
+          if (vq.writeBoolean(stackIn_14_0, stackIn_14_1, stackIn_15_2)) {
+            this.missionState.writeState(param0, -110);
           }
           if (param1 > -109) {
             this.world = (World) null;
           }
-          stackIn_21_0 = (faa) (param0);
+          stackIn_21_0 = (IsaacPacketBuffer) (param0);
           stackIn_21_1 = -93;
           stackIn_22_2 = (this.messageLog != null);
-          if (vq.a(stackIn_21_0, stackIn_21_1, stackIn_22_2)) {
-            this.messageLog.b(param0, -125);
+          if (vq.writeBoolean(stackIn_21_0, stackIn_21_1, stackIn_22_2)) {
+            this.messageLog.writeState(param0, -125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -123,7 +123,7 @@ final class GameSnapshot extends tja implements DiffableState, utb {
         return var6Lifetime2 != 0;
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         int var4 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -132,36 +132,36 @@ final class GameSnapshot extends tja implements DiffableState, utb {
         RuntimeException var3 = null;
         var4 = VoidHunters.field_G;
         try {
-          super.a(param0, param1);
-          if (!kv.a(false, param0)) {
+          super.readState(param0, param1);
+          if (!kv.readBoolean(false, param0)) {
             this.world = null;
           } else {
             if (this.world == null) {
               this.world = new World();
             }
-            this.world.a(param0, false);
+            this.world.readState(param0, false);
           }
-          if (kv.a(param1, param0)) {
+          if (kv.readBoolean(param1, param0)) {
             if (null == this.settings) {
               this.settings = new SettingsInstance();
             }
-            this.settings.a(param0, param1);
+            this.settings.readState(param0, param1);
           } else {
             this.settings = null;
           }
-          if (!kv.a(param1, param0)) {
+          if (!kv.readBoolean(param1, param0)) {
             this.missionState = null;
           } else {
             if (this.missionState == null) {
               this.missionState = new MissionState();
             }
-            this.missionState.a(param0, false);
+            this.missionState.readState(param0, false);
           }
-          if (kv.a(false, param0)) {
+          if (kv.readBoolean(false, param0)) {
             if (this.messageLog == null) {
               this.messageLog = new MessageLog();
             }
-            this.messageLog.a(param0, false);
+            this.messageLog.readState(param0, false);
           } else {
             this.messageLog = null;
           }
@@ -183,8 +183,8 @@ final class GameSnapshot extends tja implements DiffableState, utb {
     final void a(int param0, int param1) {
         super.a(param0, 122);
         if (param1 <= 93) {
-          faa var4 = (faa) null;
-          this.a((faa) null, -44);
+          IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
+          this.a((IsaacPacketBuffer) null, -44);
         }
         this.world = new World(param0);
         this.settings = new SettingsInstance();
@@ -194,8 +194,8 @@ final class GameSnapshot extends tja implements DiffableState, utb {
 
     final Player a(int param0, byte param1) {
         if (param1 != 59) {
-          tv var4 = (tv) null;
-          this.reportDifferences((tv) null, -70);
+          SerializableGameState var4 = (SerializableGameState) null;
+          this.reportDifferences((SerializableGameState) null, -70);
         }
         if (param0 < 0) {
           return null;
@@ -206,26 +206,26 @@ final class GameSnapshot extends tja implements DiffableState, utb {
         return (Player) (this.field_c[param0]);
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        faa var5 = null;
+        IsaacPacketBuffer var5 = null;
         GameSnapshot var6 = null;
         GameSnapshot var7 = null;
         var4 = VoidHunters.field_G;
         try {
-          super.b((byte) 115, param1);
+          super.copyTo((byte) 115, param1);
           var6 = (GameSnapshot) (param1);
           var7 = var6;
           if (null != this.world) {
             if (null == var7.world) {
               var7.world = new World();
             }
-            this.world.b((byte) 125, var7.world);
+            this.world.copyTo((byte) 125, var7.world);
           } else {
             var6.world = null;
           }
@@ -233,19 +233,19 @@ final class GameSnapshot extends tja implements DiffableState, utb {
             if (var7.settings == null) {
               var7.settings = new SettingsInstance();
             }
-            this.settings.b((byte) 96, var7.settings);
+            this.settings.copyTo((byte) 96, var7.settings);
           } else {
             var7.settings = null;
           }
           if (param0 <= 54) {
-            var5 = (faa) null;
-            this.b((faa) null, 64);
+            var5 = (IsaacPacketBuffer) null;
+            this.writeState((IsaacPacketBuffer) null, 64);
           }
           if (null != this.missionState) {
             if (null == var7.missionState) {
               var7.missionState = new MissionState();
             }
-            this.missionState.b((byte) 91, var7.missionState);
+            this.missionState.copyTo((byte) 91, var7.missionState);
           } else {
             var7.missionState = null;
           }
@@ -255,7 +255,7 @@ final class GameSnapshot extends tja implements DiffableState, utb {
             if (null == var7.messageLog) {
               var7.messageLog = new MessageLog();
             }
-            this.messageLog.b((byte) 87, var7.messageLog);
+            this.messageLog.copyTo((byte) 87, var7.messageLog);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -272,7 +272,7 @@ final class GameSnapshot extends tja implements DiffableState, utb {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int stackIn_18_0 = 0;
         int stackIn_21_1 = 0;
         int stackIn_29_0 = 0;
@@ -316,7 +316,7 @@ final class GameSnapshot extends tja implements DiffableState, utb {
           }
           if ((stackIn_18_0 ^ stackIn_21_1) != 0 ||
             this.world != null &&
-            this.world.a((byte) 81, var5.world)) {
+            this.world.differsFrom((byte) 81, var5.world)) {
             System.out.println("World world has changed. before=" + var5.world + ", now=" + this.world);
             var4 = 1;
           }
@@ -328,7 +328,7 @@ final class GameSnapshot extends tja implements DiffableState, utb {
           }
           if ((stackIn_29_0 ^ stackIn_32_1) != 0 ||
             null != this.settings &&
-            this.settings.a((byte) -103, var5.settings)) {
+            this.settings.differsFrom((byte) -103, var5.settings)) {
             System.out.println("SettingsInstance settings has changed. before=" + var5.settings + ", now=" + this.settings);
             var4 = 1;
           }
@@ -340,7 +340,7 @@ final class GameSnapshot extends tja implements DiffableState, utb {
           }
           if ((stackIn_40_0 ^ stackIn_43_1) != 0 ||
             null != this.missionState &&
-            this.missionState.a((byte) -88, var5.missionState)) {
+            this.missionState.differsFrom((byte) -88, var5.missionState)) {
             var4 = 1;
             System.out.println("MissionState mission_state has changed. before=" + var5.missionState + ", now=" + this.missionState);
           }
@@ -355,7 +355,7 @@ final class GameSnapshot extends tja implements DiffableState, utb {
           }
           if ((stackIn_53_0 ^ stackIn_56_1) != 0 ||
             null != this.messageLog &&
-            this.messageLog.a((byte) -115, var5.messageLog)) {
+            this.messageLog.differsFrom((byte) -115, var5.messageLog)) {
             var4 = 1;
             System.out.println("MessageLog message_log has changed. before=" + var5.messageLog + ", now=" + this.messageLog);
           }
@@ -409,7 +409,7 @@ final class GameSnapshot extends tja implements DiffableState, utb {
         }
     }
 
-    public final void a(faa param0, int param1) {
+    public final void a(IsaacPacketBuffer param0, int param1) {
         int var4 = 0;
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
@@ -418,11 +418,11 @@ final class GameSnapshot extends tja implements DiffableState, utb {
         RuntimeException var3 = null;
         var4 = VoidHunters.field_G;
         try {
-          super.a(param0, false);
+          super.readState(param0, false);
           if (param1 != 32) {
             return;
           }
-          if (kv.a(false, param0)) {
+          if (kv.readBoolean(false, param0)) {
             if (null == this.world) {
               this.world = new World();
             }
@@ -430,27 +430,27 @@ final class GameSnapshot extends tja implements DiffableState, utb {
           } else {
             this.world = null;
           }
-          if (!kv.a(false, param0)) {
+          if (!kv.readBoolean(false, param0)) {
             this.settings = null;
           } else {
             if (null == this.settings) {
               this.settings = new SettingsInstance();
             }
-            this.settings.a(param0, false);
+            this.settings.readState(param0, false);
           }
-          if (!kv.a(false, param0)) {
+          if (!kv.readBoolean(false, param0)) {
             this.missionState = null;
           } else {
             if (this.missionState == null) {
               this.missionState = new MissionState();
             }
-            this.missionState.a(param0, false);
+            this.missionState.readState(param0, false);
           }
-          if (kv.a(false, param0)) {
+          if (kv.readBoolean(false, param0)) {
             if (this.messageLog == null) {
               this.messageLog = new MessageLog();
             }
-            this.messageLog.a(param0, false);
+            this.messageLog.readState(param0, false);
           } else {
             this.messageLog = null;
           }
@@ -469,17 +469,17 @@ final class GameSnapshot extends tja implements DiffableState, utb {
         }
     }
 
-    public final void a(faa param0, byte param1) {
-        faa stackIn_2_0 = null;
+    public final void a(IsaacPacketBuffer param0, byte param1) {
+        IsaacPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         boolean stackIn_3_2 = false;
-        faa stackIn_10_0 = null;
+        IsaacPacketBuffer stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         boolean stackIn_11_2 = false;
-        faa stackIn_15_0 = null;
+        IsaacPacketBuffer stackIn_15_0 = null;
         int stackIn_15_1 = 0;
         boolean stackIn_16_2 = false;
-        faa stackIn_20_0 = null;
+        IsaacPacketBuffer stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         boolean stackIn_21_2 = false;
         RuntimeException stackIn_26_0 = null;
@@ -488,33 +488,33 @@ final class GameSnapshot extends tja implements DiffableState, utb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          super.b(param0, -118);
-          stackIn_2_0 = (faa) (param0);
+          super.writeState(param0, -118);
+          stackIn_2_0 = (IsaacPacketBuffer) (param0);
           stackIn_2_1 = -121;
           stackIn_3_2 = (this.world != null);
-          if (vq.a(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
+          if (vq.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
             this.world.a(param0, (byte) -126);
           }
           if (param1 >= -91) {
             return;
           }
-          stackIn_10_0 = (faa) (param0);
+          stackIn_10_0 = (IsaacPacketBuffer) (param0);
           stackIn_10_1 = -53;
           stackIn_11_2 = (null != this.settings);
-          if (vq.a(stackIn_10_0, stackIn_10_1, stackIn_11_2)) {
-            this.settings.b(param0, -127);
+          if (vq.writeBoolean(stackIn_10_0, stackIn_10_1, stackIn_11_2)) {
+            this.settings.writeState(param0, -127);
           }
-          stackIn_15_0 = (faa) (param0);
+          stackIn_15_0 = (IsaacPacketBuffer) (param0);
           stackIn_15_1 = -88;
           stackIn_16_2 = (this.missionState != null);
-          if (vq.a(stackIn_15_0, stackIn_15_1, stackIn_16_2)) {
-            this.missionState.b(param0, -127);
+          if (vq.writeBoolean(stackIn_15_0, stackIn_15_1, stackIn_16_2)) {
+            this.missionState.writeState(param0, -127);
           }
-          stackIn_20_0 = (faa) (param0);
+          stackIn_20_0 = (IsaacPacketBuffer) (param0);
           stackIn_20_1 = 91;
           stackIn_21_2 = (this.messageLog != null);
-          if (vq.a(stackIn_20_0, stackIn_20_1, stackIn_21_2)) {
-            this.messageLog.b(param0, -125);
+          if (vq.writeBoolean(stackIn_20_0, stackIn_20_1, stackIn_21_2)) {
+            this.messageLog.writeState(param0, -125);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -531,7 +531,7 @@ final class GameSnapshot extends tja implements DiffableState, utb {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int stackIn_4_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_14_0 = 0;
@@ -552,7 +552,7 @@ final class GameSnapshot extends tja implements DiffableState, utb {
           boolean decompiledFrameRemainder0 = true;
           var4 = -114 / ((param0 - 22) / 59);
           var5 = (GameSnapshot) (param1);
-          if (!super.a((byte) -123, param1)) {
+          if (!super.differsFrom((byte) -123, param1)) {
             stackIn_4_0 = (var5.world != null) ? 0 : 1;
             if (this.world != null) {
               stackIn_7_1 = 0;
@@ -560,7 +560,7 @@ final class GameSnapshot extends tja implements DiffableState, utb {
               stackIn_7_1 = 1;
             }
             if ((stackIn_4_0 ^ stackIn_7_1) == 0 && (null == this.world ||
-              !this.world.a((byte) -127, var5.world))) {
+              !this.world.differsFrom((byte) -127, var5.world))) {
               stackIn_14_0 = (this.settings != null) ? 0 : 1;
               if (null != var5.settings) {
                 stackIn_17_1 = 0;
@@ -568,7 +568,7 @@ final class GameSnapshot extends tja implements DiffableState, utb {
                 stackIn_17_1 = 1;
               }
               if ((stackIn_14_0 ^ stackIn_17_1) == 0 && (this.settings == null ||
-                !this.settings.a((byte) 87, var5.settings))) {
+                !this.settings.differsFrom((byte) 87, var5.settings))) {
                 stackIn_24_0 = (this.missionState != null) ? 0 : 1;
                 if (null != var5.missionState) {
                   stackIn_27_1 = 0;
@@ -576,7 +576,7 @@ final class GameSnapshot extends tja implements DiffableState, utb {
                   stackIn_27_1 = 1;
                 }
                 if ((stackIn_24_0 ^ stackIn_27_1) == 0 && (null == this.missionState ||
-                  !this.missionState.a((byte) 90, var5.missionState))) {
+                  !this.missionState.differsFrom((byte) 90, var5.missionState))) {
                   stackIn_34_0 = (null != this.messageLog) ? 0 : 1;
                   if (var5.messageLog != null) {
                     stackIn_37_1 = 0;
@@ -584,7 +584,7 @@ final class GameSnapshot extends tja implements DiffableState, utb {
                     stackIn_37_1 = 1;
                   }
                   if ((stackIn_34_0 ^ stackIn_37_1) == 0 && (this.messageLog == null ||
-                    !this.messageLog.a((byte) 124, var5.messageLog))) {
+                    !this.messageLog.differsFrom((byte) 124, var5.messageLog))) {
                     stackIn_43_0 = false;
                     decompiledFrameRemainder0 = false;
                   }

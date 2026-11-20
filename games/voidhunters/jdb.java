@@ -4,9 +4,9 @@
 final class jdb implements dja {
     static String field_a;
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -11 / ((-64 - param0) / 50);
-        return (tv) ((Object) new SetVariableLabelAction());
+        return (SerializableGameState) ((Object) new SetVariableLabelAction());
     }
 
     public static void a(boolean param0) {
@@ -137,21 +137,21 @@ final class jdb implements dja {
           if (param1 != -48) {
             field_a = (String) null;
           }
-          param3.c(param1 ^ -48, 12);
-          param3.a(17, true);
-          param3.a(param2, true);
-          param3.a(param4, true);
-          param3.c(0, param0);
+          param3.writeByte(param1 ^ -48, 12);
+          param3.writeShort(17, true);
+          param3.writeShort(param2, true);
+          param3.writeShort(param4, true);
+          param3.writeByte(0, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jdb.E(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ',' + param4 + ')');
         }
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          return (tv[]) null;
+          return (SerializableGameState[]) null;
         }
-        return (tv[]) ((Object) new SetVariableLabelAction[param1]);
+        return (SerializableGameState[]) ((Object) new SetVariableLabelAction[param1]);
     }
 
     static {

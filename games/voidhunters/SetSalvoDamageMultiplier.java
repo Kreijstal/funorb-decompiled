@@ -61,8 +61,8 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
               SetSalvoDamageMultiplier.a((eab) null, 59, (PacketBuffer) null, false);
             }
             var19 = new mv();
-            var19.field_i = param2.e((byte) -90);
-            var19.field_d = param2.h(26);
+            var19.field_i = param2.readUnsignedByte((byte) -90);
+            var19.field_d = param2.readInt(26);
             var19.field_e = new mob[var19.field_i];
             var19.field_j = new int[var19.field_i];
             var19.field_f = new byte[var19.field_i][][];
@@ -71,28 +71,28 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
             var19.field_k = new int[var19.field_i];
             for (var5 = 0; var19.field_i > var5; var5++) {
               try {
-                var6_int = param2.e((byte) -114);
+                var6_int = param2.readUnsignedByte((byte) -114);
                 if (0 != var6_int &&
                   var6_int != 1 &&
                   var6_int != 2) {
                   if (var6_int == 3 ||
                     var6_int == 4) {
-                    var21 = param2.a(-1);
-                    var22 = param2.a(-1);
-                    var9 = param2.e((byte) -92);
+                    var21 = param2.readString(-1);
+                    var22 = param2.readString(-1);
+                    var9 = param2.readUnsignedByte((byte) -92);
                     var10 = new String[var9];
                     for (var11_int = 0; var11_int < var9; var11_int++) {
-                      var10[var11_int] = param2.a(-1);
+                      var10[var11_int] = param2.readString(-1);
                     }
                     var23 = new byte[var9][];
                     var20 = var23;
                     var11 = var20;
                     if (var6_int == 3) {
                       for (var12_int = 0; var9 > var12_int; var12_int++) {
-                        var13 = param2.h(62);
+                        var13 = param2.readInt(62);
                         array$0 = new byte[var13];
                         var11[var12_int] = array$0;
-                        param2.a(0, var23[var12_int], (byte) -59, var13);
+                        param2.readBytes(0, var23[var12_int], (byte) -59, var13);
                       }
                     }
                     var19.field_h[var5] = var6_int;
@@ -107,11 +107,11 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
                     var19.field_f[var5] = var23;
                   }
                 } else {
-                  var17 = param2.a(-1);
-                  var16 = param2.a(-1);
+                  var17 = param2.readString(-1);
+                  var16 = param2.readString(-1);
                   var9 = 0;
                   if (var6_int == 1) {
-                    var9 = param2.h(40);
+                    var9 = param2.readInt(40);
                   }
                   var19.field_h[var5] = var6_int;
                   var19.field_j[var5] = var9;
@@ -139,7 +139,7 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
                 var19.field_k[var5] = -5;
               }
             }
-            GetArmageddonLength.field_r.b(-10258, var19);
+            GetArmageddonLength.field_r.addLast(-10258, var19);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter5) {
             decompiledCaughtException = decompiledCaughtParameter5;
@@ -183,7 +183,7 @@ final class SetSalvoDamageMultiplier extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          SetMachineGunEnergyUsed.a(38, 62, arguments[0].a(118));
+          SetMachineGunEnergyUsed.a(38, 62, arguments[0].intValue(118));
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

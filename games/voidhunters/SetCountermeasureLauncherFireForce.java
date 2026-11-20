@@ -17,7 +17,7 @@ final class SetCountermeasureLauncherFireForce extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_q = (String) null;
           }
-          SetMachineGunEnergyUsed.a(107, 62, arguments[0].a(99));
+          SetMachineGunEnergyUsed.a(107, 62, arguments[0].intValue(99));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

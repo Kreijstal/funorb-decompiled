@@ -30,7 +30,7 @@ final class SetTorpedoReload extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetTorpedoReload.a(112);
           }
-          SetMachineGunEnergyUsed.a(109, 62, arguments[0].a(52));
+          SetMachineGunEnergyUsed.a(109, 62, arguments[0].intValue(52));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

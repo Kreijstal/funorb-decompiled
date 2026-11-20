@@ -33,7 +33,7 @@ final class Ship extends ShipBody implements DiffableState, utb {
         this.owner = param0;
     }
 
-    public final void a(faa param0, int param1) {
+    public final void a(IsaacPacketBuffer param0, int param1) {
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
@@ -43,39 +43,39 @@ final class Ship extends ShipBody implements DiffableState, utb {
         var4 = VoidHunters.field_G;
         try {
           super.a(param0, 32);
-          this.owner = param0.i(0, 32);
-          this.team = param0.i(param1 ^ 32, 32);
-          this.dragging = param0.i(param1 - 32, 32);
-          if (!kv.a(false, param0)) {
+          this.owner = param0.readBits(0, 32);
+          this.team = param0.readBits(param1 ^ 32, 32);
+          this.dragging = param0.readBits(param1 - 32, 32);
+          if (!kv.readBoolean(false, param0)) {
             this.ai = null;
           } else {
             if (this.ai == null) {
               this.ai = new ShipAI();
             }
-            this.ai.a(param0, false);
+            this.ai.readState(param0, false);
           }
-          this.energy = param0.i(0, 32);
-          this.reloadtimer = param0.i(0, 32);
-          this.maxEnergy = param0.i(0, 32);
-          this.repairModeReload = param0.i(0, 32);
-          this.repairModeOn = kv.a(false, param0);
-          this.selfDestructPrepared = kv.a(false, param0);
-          this.selfDestructActivated = kv.a(false, param0);
-          this.selfDestructCountdown = param0.i(0, param1);
-          this.salvoJustFired = kv.a(false, param0);
-          this.justAttachedSomething = kv.a(false, param0);
-          this.shieldsOn = kv.a(false, param0);
-          this.shieldsToggleCooldown = param0.i(0, 32);
+          this.energy = param0.readBits(0, 32);
+          this.reloadtimer = param0.readBits(0, 32);
+          this.maxEnergy = param0.readBits(0, 32);
+          this.repairModeReload = param0.readBits(0, 32);
+          this.repairModeOn = kv.readBoolean(false, param0);
+          this.selfDestructPrepared = kv.readBoolean(false, param0);
+          this.selfDestructActivated = kv.readBoolean(false, param0);
+          this.selfDestructCountdown = param0.readBits(0, param1);
+          this.salvoJustFired = kv.readBoolean(false, param0);
+          this.justAttachedSomething = kv.readBoolean(false, param0);
+          this.shieldsOn = kv.readBoolean(false, param0);
+          this.shieldsToggleCooldown = param0.readBits(0, 32);
           this.lastAttackers = wkb.a((byte) 37, this.lastAttackers, param0, 4);
-          if (!kv.a(false, param0)) {
+          if (!kv.readBoolean(false, param0)) {
             this.targetBlueprint = null;
           } else {
             if (this.targetBlueprint == null) {
               this.targetBlueprint = new ShipBlueprint();
             }
-            this.targetBlueprint.a(param0, false);
+            this.targetBlueprint.readState(param0, false);
           }
-          this.spawnTimer = param0.i(0, 32);
+          this.spawnTimer = param0.readBits(0, 32);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -220,8 +220,8 @@ final class Ship extends ShipBody implements DiffableState, utb {
     final void a(boolean param0, World param1) {
         try {
           if (!param0) {
-            tv var4 = (tv) null;
-            this.a((byte) 18, (tv) null);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.differsFrom((byte) 18, (SerializableGameState) null);
           }
           this.ai.a(this, (byte) -73, param1);
         } catch (RuntimeException runtimeException) {
@@ -272,17 +272,17 @@ final class Ship extends ShipBody implements DiffableState, utb {
             this.a((qua) null, 93);
           }
           if (1 == GetFightersPerPlayerMaximum.field_p) {
-            param0.b(param1 ^ -10265, new ihb(4, this.repairModeOn ? 2 : 0));
+            param0.addLast(param1 ^ -10265, new ihb(4, this.repairModeOn ? 2 : 0));
           } else {
-            param0.b(param1 - 10267, new ihb(4, this.repairModeReload));
+            param0.addLast(param1 - 10267, new ihb(4, this.repairModeReload));
           }
           if (!param2 &&
             !param3) {
             if (!this.selfDestructActivated) {
-              param0.b(param1 ^ -10265, new ihb(8, 0));
+              param0.addLast(param1 ^ -10265, new ihb(8, 0));
             }
             if (this.selfDestructPrepared) {
-              param0.b(-10258, new ihb(9, this.selfDestructCountdown));
+              param0.addLast(-10258, new ihb(9, this.selfDestructCountdown));
             }
           }
           this.chassis.a(param0, this, 0);
@@ -340,7 +340,7 @@ final class Ship extends ShipBody implements DiffableState, utb {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int stackIn_7_0 = 0;
         int stackIn_10_1 = 0;
         int stackIn_20_0 = 0;
@@ -366,7 +366,7 @@ final class Ship extends ShipBody implements DiffableState, utb {
           boolean decompiledFrameRemainder0 = true;
           var4 = -46 % ((param0 - 22) / 59);
           var5 = (Ship) (param1);
-          if (!super.a((byte) -43, param1) &&
+          if (!super.differsFrom((byte) -43, param1) &&
             var5.owner == this.owner &&
             this.team == var5.team &&
             this.dragging == var5.dragging) {
@@ -377,7 +377,7 @@ final class Ship extends ShipBody implements DiffableState, utb {
               stackIn_10_1 = 1;
             }
             if ((stackIn_7_0 ^ stackIn_10_1) == 0 && (null == this.ai ||
-              !this.ai.a((byte) -43, var5.ai)) && (this.energy == var5.energy &&
+              !this.ai.differsFrom((byte) -43, var5.ai)) && (this.energy == var5.energy &&
               this.reloadtimer == var5.reloadtimer &&
               var5.repairModeReload == this.repairModeReload)) {
               stackIn_20_0 = (this.repairModeOn) ? 0 : 1;
@@ -417,7 +417,7 @@ final class Ship extends ShipBody implements DiffableState, utb {
                             stackIn_53_1 = 1;
                           }
                           if ((stackIn_50_0 ^ stackIn_53_1) == 0 && (null == this.targetBlueprint ||
-                            !this.targetBlueprint.a((byte) -92, var5.targetBlueprint)) && var5.spawnTimer == this.spawnTimer) {
+                            !this.targetBlueprint.differsFrom((byte) -92, var5.targetBlueprint)) && var5.spawnTimer == this.spawnTimer) {
                             stackIn_61_0 = false;
                             decompiledFrameRemainder0 = false;
                           }
@@ -459,7 +459,7 @@ final class Ship extends ShipBody implements DiffableState, utb {
         return this.field_L;
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
@@ -468,39 +468,39 @@ final class Ship extends ShipBody implements DiffableState, utb {
         int var4 = 0;
         var4 = VoidHunters.field_G;
         try {
-          super.a(param0, false);
-          this.owner = param0.i(0, 32);
-          this.team = param0.i(0, 32);
-          this.dragging = param0.i(0, 32);
-          if (!kv.a(false, param0)) {
+          super.readState(param0, false);
+          this.owner = param0.readBits(0, 32);
+          this.team = param0.readBits(0, 32);
+          this.dragging = param0.readBits(0, 32);
+          if (!kv.readBoolean(false, param0)) {
             this.ai = null;
           } else {
             if (null == this.ai) {
               this.ai = new ShipAI();
             }
-            this.ai.a(param0, false);
+            this.ai.readState(param0, false);
           }
-          this.energy = param0.i(0, 32);
-          this.reloadtimer = param0.i(0, 32);
-          this.repairModeReload = param0.i(0, 32);
-          this.repairModeOn = kv.a(param1, param0);
-          this.selfDestructPrepared = kv.a(false, param0);
-          this.selfDestructActivated = kv.a(param1, param0);
-          this.selfDestructCountdown = param0.i(0, 32);
-          this.salvoJustFired = kv.a(false, param0);
-          this.justAttachedSomething = kv.a(false, param0);
-          this.shieldsOn = kv.a(false, param0);
-          this.shieldsToggleCooldown = param0.i(0, 32);
+          this.energy = param0.readBits(0, 32);
+          this.reloadtimer = param0.readBits(0, 32);
+          this.repairModeReload = param0.readBits(0, 32);
+          this.repairModeOn = kv.readBoolean(param1, param0);
+          this.selfDestructPrepared = kv.readBoolean(false, param0);
+          this.selfDestructActivated = kv.readBoolean(param1, param0);
+          this.selfDestructCountdown = param0.readBits(0, 32);
+          this.salvoJustFired = kv.readBoolean(false, param0);
+          this.justAttachedSomething = kv.readBoolean(false, param0);
+          this.shieldsOn = kv.readBoolean(false, param0);
+          this.shieldsToggleCooldown = param0.readBits(0, 32);
           this.lastAttackers = wkb.a((byte) 37, this.lastAttackers, param0, 4);
-          if (!kv.a(false, param0)) {
+          if (!kv.readBoolean(false, param0)) {
             this.targetBlueprint = null;
           } else {
             if (this.targetBlueprint == null) {
               this.targetBlueprint = new ShipBlueprint();
             }
-            this.targetBlueprint.a(param0, false);
+            this.targetBlueprint.readState(param0, false);
           }
-          this.spawnTimer = param0.i(0, 32);
+          this.spawnTimer = param0.readBits(0, 32);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -690,21 +690,21 @@ final class Ship extends ShipBody implements DiffableState, utb {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        faa var5 = null;
+        IsaacPacketBuffer var5 = null;
         Ship var6 = null;
         Ship var7 = null;
         var4 = VoidHunters.field_G;
         try {
           var6 = (Ship) (param1);
           var7 = var6;
-          super.b((byte) 89, param1);
+          super.copyTo((byte) 89, param1);
           var6.owner = this.owner;
           var6.team = this.team;
           var6.dragging = this.dragging;
@@ -712,7 +712,7 @@ final class Ship extends ShipBody implements DiffableState, utb {
             if (null == var7.ai) {
               var7.ai = new ShipAI();
             }
-            this.ai.b((byte) 103, var7.ai);
+            this.ai.copyTo((byte) 103, var7.ai);
           } else {
             var6.ai = null;
           }
@@ -729,15 +729,15 @@ final class Ship extends ShipBody implements DiffableState, utb {
           var7.selfDestructPrepared = this.selfDestructPrepared;
           var7.justAttachedSomething = this.justAttachedSomething;
           if (param0 <= 54) {
-            var5 = (faa) null;
-            this.b((faa) null, -85);
+            var5 = (IsaacPacketBuffer) null;
+            this.writeState((IsaacPacketBuffer) null, -85);
           }
           var7.lastAttackers = SetTeamSelectionSpeedup.a(var7.lastAttackers, (byte) -102, this.lastAttackers);
           if (this.targetBlueprint != null) {
             if (null == var7.targetBlueprint) {
               var7.targetBlueprint = new ShipBlueprint();
             }
-            this.targetBlueprint.b((byte) 89, var7.targetBlueprint);
+            this.targetBlueprint.copyTo((byte) 89, var7.targetBlueprint);
           } else {
             var7.targetBlueprint = null;
           }
@@ -790,13 +790,13 @@ final class Ship extends ShipBody implements DiffableState, utb {
         return var3;
     }
 
-    public final void b(faa param0, int param1) {
-        faa stackIn_4_0 = null;
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
+        IsaacPacketBuffer stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         boolean stackIn_5_2 = false;
         int stackIn_9_0 = 0;
         int stackIn_10_1 = 0;
-        faa stackIn_12_0 = null;
+        IsaacPacketBuffer stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         boolean stackIn_13_2 = false;
         RuntimeException stackIn_20_0 = null;
@@ -805,30 +805,30 @@ final class Ship extends ShipBody implements DiffableState, utb {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          super.b(param0, -118);
-          param0.a(-632, this.owner, 32);
+          super.writeState(param0, -118);
+          param0.writeBits(-632, this.owner, 32);
           if (param1 >= -109) {
             this.s((byte) -86);
           }
-          param0.a(-632, this.team, 32);
-          param0.a(-632, this.dragging, 32);
-          stackIn_4_0 = (faa) (param0);
+          param0.writeBits(-632, this.team, 32);
+          param0.writeBits(-632, this.dragging, 32);
+          stackIn_4_0 = (IsaacPacketBuffer) (param0);
           stackIn_4_1 = -76;
           stackIn_5_2 = (this.ai != null);
-          if (vq.a(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
-            this.ai.b(param0, -113);
+          if (vq.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
+            this.ai.writeState(param0, -113);
           }
-          param0.a(-632, this.energy, 32);
-          param0.a(-632, this.reloadtimer, 32);
-          param0.a(-632, this.repairModeReload, 32);
-          vq.a(param0, 81, this.repairModeOn);
-          vq.a(param0, 47, this.selfDestructPrepared);
-          vq.a(param0, 82, this.selfDestructActivated);
-          param0.a(-632, this.selfDestructCountdown, 32);
-          vq.a(param0, 70, this.salvoJustFired);
-          vq.a(param0, -121, this.justAttachedSomething);
-          vq.a(param0, 104, this.shieldsOn);
-          param0.a(-632, this.shieldsToggleCooldown, 32);
+          param0.writeBits(-632, this.energy, 32);
+          param0.writeBits(-632, this.reloadtimer, 32);
+          param0.writeBits(-632, this.repairModeReload, 32);
+          vq.writeBoolean(param0, 81, this.repairModeOn);
+          vq.writeBoolean(param0, 47, this.selfDestructPrepared);
+          vq.writeBoolean(param0, 82, this.selfDestructActivated);
+          param0.writeBits(-632, this.selfDestructCountdown, 32);
+          vq.writeBoolean(param0, 70, this.salvoJustFired);
+          vq.writeBoolean(param0, -121, this.justAttachedSomething);
+          vq.writeBoolean(param0, 104, this.shieldsOn);
+          param0.writeBits(-632, this.shieldsToggleCooldown, 32);
           stackIn_9_0 = 4;
           if (this.lastAttackers != null) {
             stackIn_10_1 = this.lastAttackers.length;
@@ -836,13 +836,13 @@ final class Ship extends ShipBody implements DiffableState, utb {
             stackIn_10_1 = 0;
           }
           pgb.a(stackIn_9_0, stackIn_10_1, -125, param0, this.lastAttackers);
-          stackIn_12_0 = (faa) (param0);
+          stackIn_12_0 = (IsaacPacketBuffer) (param0);
           stackIn_12_1 = 78;
           stackIn_13_2 = (null != this.targetBlueprint);
-          if (vq.a(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
-            this.targetBlueprint.b(param0, -116);
+          if (vq.writeBoolean(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
+            this.targetBlueprint.writeState(param0, -116);
           }
-          param0.a(-632, this.spawnTimer, 32);
+          param0.writeBits(-632, this.spawnTimer, 32);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -859,12 +859,12 @@ final class Ship extends ShipBody implements DiffableState, utb {
     }
 
     final boolean d(int param0, int param1) {
-        tv var4;
+        SerializableGameState var4;
         boolean stackIn_7_0 = false;
         boolean stackIn_13_0 = false;
         if (param1 <= 38) {
-          var4 = (tv) null;
-          this.b((byte) -22, (tv) null);
+          var4 = (SerializableGameState) null;
+          this.copyTo((byte) -22, (SerializableGameState) null);
         }
         if (param0 != 4) {
           if (param0 != 9) {
@@ -882,8 +882,8 @@ final class Ship extends ShipBody implements DiffableState, utb {
 
     final void z(int param0) {
         if (param0 < 77) {
-          faa var3 = (faa) null;
-          this.b((faa) null, -12);
+          IsaacPacketBuffer var3 = (IsaacPacketBuffer) null;
+          this.writeState((IsaacPacketBuffer) null, -12);
         }
         this.field_A = 0;
     }
@@ -951,13 +951,13 @@ final class Ship extends ShipBody implements DiffableState, utb {
         int var2 = 90 / ((72 - param0) / 44);
     }
 
-    public final void a(faa param0, byte param1) {
-        faa stackIn_2_0 = null;
+    public final void a(IsaacPacketBuffer param0, byte param1) {
+        IsaacPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         boolean stackIn_3_2 = false;
         int stackIn_8_0 = 0;
         int stackIn_9_1 = 0;
-        faa stackIn_13_0 = null;
+        IsaacPacketBuffer stackIn_13_0 = null;
         int stackIn_13_1 = 0;
         boolean stackIn_14_2 = false;
         RuntimeException stackIn_20_0 = null;
@@ -967,27 +967,27 @@ final class Ship extends ShipBody implements DiffableState, utb {
         RuntimeException var3 = null;
         try {
           super.a(param0, (byte) -107);
-          param0.a(-632, this.owner, 32);
-          param0.a(-632, this.team, 32);
-          param0.a(-632, this.dragging, 32);
-          stackIn_2_0 = (faa) (param0);
+          param0.writeBits(-632, this.owner, 32);
+          param0.writeBits(-632, this.team, 32);
+          param0.writeBits(-632, this.dragging, 32);
+          stackIn_2_0 = (IsaacPacketBuffer) (param0);
           stackIn_2_1 = -128;
           stackIn_3_2 = (null != this.ai);
-          if (vq.a(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
-            this.ai.b(param0, -116);
+          if (vq.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
+            this.ai.writeState(param0, -116);
           }
-          param0.a(-632, this.energy, 32);
-          param0.a(-632, this.reloadtimer, 32);
-          param0.a(-632, this.maxEnergy, 32);
-          param0.a(-632, this.repairModeReload, 32);
-          vq.a(param0, -73, this.repairModeOn);
-          vq.a(param0, 90, this.selfDestructPrepared);
-          vq.a(param0, 113, this.selfDestructActivated);
-          param0.a(-632, this.selfDestructCountdown, 32);
-          vq.a(param0, -92, this.salvoJustFired);
-          vq.a(param0, 107, this.justAttachedSomething);
-          vq.a(param0, -102, this.shieldsOn);
-          param0.a(-632, this.shieldsToggleCooldown, 32);
+          param0.writeBits(-632, this.energy, 32);
+          param0.writeBits(-632, this.reloadtimer, 32);
+          param0.writeBits(-632, this.maxEnergy, 32);
+          param0.writeBits(-632, this.repairModeReload, 32);
+          vq.writeBoolean(param0, -73, this.repairModeOn);
+          vq.writeBoolean(param0, 90, this.selfDestructPrepared);
+          vq.writeBoolean(param0, 113, this.selfDestructActivated);
+          param0.writeBits(-632, this.selfDestructCountdown, 32);
+          vq.writeBoolean(param0, -92, this.salvoJustFired);
+          vq.writeBoolean(param0, 107, this.justAttachedSomething);
+          vq.writeBoolean(param0, -102, this.shieldsOn);
+          param0.writeBits(-632, this.shieldsToggleCooldown, 32);
           stackIn_8_0 = 4;
           if (this.lastAttackers == null) {
             stackIn_9_1 = 0;
@@ -998,13 +998,13 @@ final class Ship extends ShipBody implements DiffableState, utb {
           if (param1 > -91) {
             this.s(57);
           }
-          stackIn_13_0 = (faa) (param0);
+          stackIn_13_0 = (IsaacPacketBuffer) (param0);
           stackIn_13_1 = 101;
           stackIn_14_2 = (null != this.targetBlueprint);
-          if (vq.a(stackIn_13_0, stackIn_13_1, stackIn_14_2)) {
-            this.targetBlueprint.b(param0, -118);
+          if (vq.writeBoolean(stackIn_13_0, stackIn_13_1, stackIn_14_2)) {
+            this.targetBlueprint.writeState(param0, -118);
           }
-          param0.a(-632, this.spawnTimer, 32);
+          param0.writeBits(-632, this.spawnTimer, 32);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -1209,12 +1209,12 @@ final class Ship extends ShipBody implements DiffableState, utb {
         this.spawnTimer = 0;
         this.field_D = true;
         if (param0 != 32) {
-          faa var3 = (faa) null;
-          this.a((faa) null, true);
+          IsaacPacketBuffer var3 = (IsaacPacketBuffer) null;
+          this.readState((IsaacPacketBuffer) null, true);
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int stackIn_19_0 = 0;
         int stackIn_22_1 = 0;
         boolean stackIn_40_0 = false;
@@ -1267,7 +1267,7 @@ final class Ship extends ShipBody implements DiffableState, utb {
           }
           if ((stackIn_19_0 ^ stackIn_22_1) != 0 ||
             this.ai != null &&
-            this.ai.a((byte) 89, var5.ai)) {
+            this.ai.differsFrom((byte) 89, var5.ai)) {
             var4 = 1;
             System.out.println("ShipAI ai has changed. before=" + var5.ai + ", now=" + this.ai);
           }
@@ -1359,7 +1359,7 @@ final class Ship extends ShipBody implements DiffableState, utb {
           }
           if ((stackIn_84_0 ^ stackIn_87_1) != 0 ||
             null != this.targetBlueprint &&
-            this.targetBlueprint.a((byte) -92, var5.targetBlueprint)) {
+            this.targetBlueprint.differsFrom((byte) -92, var5.targetBlueprint)) {
             var4 = 1;
             System.out.println("ShipBlueprint target_blueprint has changed. before=" + var5.targetBlueprint + ", now=" + this.targetBlueprint);
           }

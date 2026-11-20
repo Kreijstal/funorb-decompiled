@@ -5,7 +5,7 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
     private int valueAdded;
     private int index;
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         IncrementVariableAction var3 = null;
         int var4 = 0;
         boolean stackIn_6_0 = false;
@@ -17,7 +17,7 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
         try {
           var4 = -126 / ((param0 - 22) / 59);
           var3 = (IncrementVariableAction) (param1);
-          stackIn_6_0 = (super.a((byte) -48, param1)) || (this.index != var3.index) || (this.valueAdded != var3.valueAdded);
+          stackIn_6_0 = (super.differsFrom((byte) -48, param1)) || (this.index != var3.index) || (this.valueAdded != var3.valueAdded);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -55,7 +55,7 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
 
     final ucb a(World param0, int param1) {
         RuntimeException var3 = null;
-        tv var4 = null;
+        SerializableGameState var4 = null;
         Object stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -65,8 +65,8 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
           if (param1 == 26964) {
             return null;
           }
-          var4 = (tv) null;
-          this.a((byte) -70, (tv) null);
+          var4 = (SerializableGameState) null;
+          this.differsFrom((byte) -70, (SerializableGameState) null);
           stackIn_3_0 = null;
           return (ucb) (stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -116,23 +116,23 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
         return (String) null;
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
-          this.index = param0.i(0, 32);
-          this.valueAdded = param0.i(0, 32);
+          super.readState(param0, param1);
+          this.index = param0.readBits(0, 32);
+          this.valueAdded = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uoa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         IncrementVariableAction var5 = null;
         IncrementVariableAction var6 = null;
         try {
           var5 = (IncrementVariableAction) (param1);
           var6 = var5;
-          super.b((byte) 79, param1);
+          super.copyTo((byte) 79, param1);
           if (param0 < 54) {
             this.index = 86;
           }
@@ -177,7 +177,7 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException var3 = null;
         int var4 = 0;
         IncrementVariableAction var5 = null;
@@ -229,15 +229,15 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
         return this.valueAdded;
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          super.b(param0, -118);
-          param0.a(-632, this.index, 32);
+          super.writeState(param0, -118);
+          param0.writeBits(-632, this.index, 32);
           if (param1 > -109) {
-            tv var4 = (tv) null;
-            this.a((byte) 32, (tv) null);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.differsFrom((byte) 32, (SerializableGameState) null);
           }
-          param0.a(-632, this.valueAdded, 32);
+          param0.writeBits(-632, this.valueAdded, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uoa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

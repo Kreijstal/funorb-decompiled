@@ -12,7 +12,7 @@ final class SetVariableAction extends MissionAction implements DiffableState {
         return ((param1 * 6.0f - 15.0f) * param1 + 10.0f) * (param1 * param1 * param1);
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         RuntimeException var3 = null;
         SetVariableAction var5 = null;
         SetVariableAction var6 = null;
@@ -23,7 +23,7 @@ final class SetVariableAction extends MissionAction implements DiffableState {
         try {
           var5 = (SetVariableAction) (param1);
           var6 = var5;
-          super.b((byte) 70, param1);
+          super.copyTo((byte) 70, param1);
           var6.index = this.index;
           var6.value = this.value;
           if (param0 > 54) {
@@ -111,7 +111,7 @@ final class SetVariableAction extends MissionAction implements DiffableState {
         return SetDebrisCarryOverPercentage.field_p;
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException var3 = null;
         int var4 = 0;
         SetVariableAction var5 = null;
@@ -194,30 +194,30 @@ final class SetVariableAction extends MissionAction implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
-          this.index = param0.i(0, 32);
-          this.value = param0.i(0, 32);
+          super.readState(param0, param1);
+          this.index = param0.readBits(0, 32);
+          this.value = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pob.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          super.b(param0, -127);
-          param0.a(-632, this.index, 32);
+          super.writeState(param0, -127);
+          param0.writeBits(-632, this.index, 32);
           if (param1 > -109) {
             this.value = 41;
           }
-          param0.a(-632, this.value, 32);
+          param0.writeBits(-632, this.value, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pob.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         SetVariableAction var4 = null;
         boolean stackIn_6_0 = false;
@@ -229,7 +229,7 @@ final class SetVariableAction extends MissionAction implements DiffableState {
         try {
           var3_int = 127 % ((param0 - 22) / 59);
           var4 = (SetVariableAction) (param1);
-          stackIn_6_0 = (super.a((byte) 93, param1)) || (this.index != var4.index) || (var4.value != this.value);
+          stackIn_6_0 = (super.differsFrom((byte) 93, param1)) || (this.index != var4.index) || (var4.value != this.value);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -20,7 +20,7 @@ final class SetUseCircleOutline extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = (dja) null;
           }
-          GetReadyRoomMutatorTime.field_p = arguments[0].a(false);
+          GetReadyRoomMutatorTime.field_p = arguments[0].booleanValue(false);
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

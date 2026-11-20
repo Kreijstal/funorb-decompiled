@@ -29,7 +29,7 @@ final class chb {
             var6 = qs.field_a;
             var4Lifetime2.field_i.b(var5, -29060, var6, 0, 0);
           }
-          dq.a((byte) 44, param1, param2);
+          IsaacCipher.a((byte) 44, param1, param2);
           return;
         }
         field_a = 126;
@@ -44,7 +44,7 @@ final class chb {
           var6Lifetime1 = qs.field_a;
           var4Lifetime1Lifetime1.field_i.b(var5Lifetime1, -29060, var6Lifetime1, 0, 0);
         }
-        dq.a((byte) 44, param1, param2);
+        IsaacCipher.a((byte) 44, param1, param2);
     }
 
     final static void a(int param0) {

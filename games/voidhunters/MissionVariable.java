@@ -6,10 +6,10 @@ final class MissionVariable implements DiffableState {
     static aba field_c;
     int label;
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException var3 = null;
         int var4 = 0;
-        faa var5 = null;
+        IsaacPacketBuffer var5 = null;
         MissionVariable var6 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -19,8 +19,8 @@ final class MissionVariable implements DiffableState {
           var6 = (MissionVariable) (other);
           var4 = 0;
           if (obfuscationGuard >= -19) {
-            var5 = (faa) null;
-            this.a((faa) null, true);
+            var5 = (IsaacPacketBuffer) null;
+            this.readState((IsaacPacketBuffer) null, true);
           }
           if (this.value != var6.value) {
             System.out.println("int value has changed. before=" + var6.value + ", now=" + this.value);
@@ -49,7 +49,7 @@ final class MissionVariable implements DiffableState {
         }
     }
 
-    final static short[] a(faa param0, int param1, int param2, short[] param3) {
+    final static short[] readPackedShortArray(IsaacPacketBuffer param0, int param1, int param2, short[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -68,9 +68,9 @@ final class MissionVariable implements DiffableState {
         try {
           if (param2 != 24) {
             var9 = (short[]) null;
-            MissionVariable.a((faa) null, 91, -12, (short[]) null);
+            MissionVariable.readPackedShortArray((IsaacPacketBuffer) null, 91, -12, (short[]) null);
           }
-          var4_int = param0.i(0, param1);
+          var4_int = param0.readBits(0, param1);
           if (var4_int == 0) {
             return null;
           }
@@ -78,11 +78,11 @@ final class MissionVariable implements DiffableState {
             param3.length != var4_int) {
             param3 = new short[var4_int];
           }
-          var5 = param0.i(param2 - 24, 4);
-          var6 = (short)param0.i(0, 16);
+          var5 = param0.readBits(param2 - 24, 4);
+          var6 = (short)param0.readBits(0, 16);
           if (0 < var5) {
             for (var7 = 0; var4_int > var7; var7++) {
-              param3[var7] = (short)(var6 + param0.i(0, var5));
+              param3[var7] = (short)(var6 + param0.readBits(0, var5));
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {
@@ -116,10 +116,10 @@ final class MissionVariable implements DiffableState {
         field_c = null;
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          param0.a(-632, this.value, 32);
-          param0.a(-632, this.label, 32);
+          param0.writeBits(-632, this.value, 32);
+          param0.writeBits(-632, this.label, 32);
           if (param1 > -109) {
             asb var4 = (asb) null;
             MissionVariable.a((asb) null, (asb) null, -60, false);
@@ -129,15 +129,15 @@ final class MissionVariable implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         MissionVariable var6 = null;
         MissionVariable var7 = null;
         try {
           var6 = (MissionVariable) (param1);
           var7 = var6;
           if (param0 < 54) {
-            faa var4 = (faa) null;
-            this.b((faa) null, 104);
+            IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
+            this.writeState((IsaacPacketBuffer) null, 104);
           }
           var7.value = this.value;
           var7.label = this.label;
@@ -162,10 +162,10 @@ final class MissionVariable implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.value = param0.i(0, 32);
-          this.label = param0.i(0, 32);
+          this.value = param0.readBits(0, 32);
+          this.label = param0.readBits(0, 32);
           if (param1) {
             this.label = -94;
           }
@@ -174,7 +174,7 @@ final class MissionVariable implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         MissionVariable var4 = null;
         boolean stackIn_5_0 = false;

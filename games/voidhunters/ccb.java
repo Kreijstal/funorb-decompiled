@@ -6,13 +6,13 @@ import java.util.*;
 final class ccb implements dja {
     static kl field_a;
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 == 11995) {
-          return (tv[]) ((Object) new Ship[param1]);
+          return (SerializableGameState[]) ((Object) new Ship[param1]);
         }
         String var4 = (String) null;
         ccb.a(117, (OpenGlToolkit) null, 46, (String) null);
-        return (tv[]) ((Object) new Ship[param1]);
+        return (SerializableGameState[]) ((Object) new Ship[param1]);
     }
 
     public static void b(byte param0) {
@@ -118,9 +118,9 @@ final class ccb implements dja {
         }
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -8 % ((param0 + 64) / 50);
-        return (tv) ((Object) new Ship());
+        return (SerializableGameState) ((Object) new Ship());
     }
 
     static {

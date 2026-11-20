@@ -14,9 +14,9 @@ final class uu implements dja {
         field_b = null;
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 36 % ((param0 + 64) / 50);
-        return (tv) ((Object) new mo());
+        return (SerializableGameState) ((Object) new mo());
     }
 
     final static void a(byte param0, int[] param1, ms param2) {
@@ -47,12 +47,12 @@ final class uu implements dja {
         }
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_c = (String) null;
-          return (tv[]) ((Object) new mo[param1]);
+          return (SerializableGameState[]) ((Object) new mo[param1]);
         }
-        return (tv[]) ((Object) new mo[param1]);
+        return (SerializableGameState[]) ((Object) new mo[param1]);
     }
 
     static {

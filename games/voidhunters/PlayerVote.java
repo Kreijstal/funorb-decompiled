@@ -9,9 +9,9 @@ final class PlayerVote implements DiffableState {
     static int field_f;
     static String field_d;
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         RuntimeException var3 = null;
-        tv var4 = null;
+        SerializableGameState var4 = null;
         PlayerVote var6 = null;
         PlayerVote var7 = null;
         RuntimeException stackIn_5_0 = null;
@@ -26,8 +26,8 @@ final class PlayerVote implements DiffableState {
           if (param0 > 54) {
             return;
           }
-          var4 = (tv) null;
-          this.b((byte) -57, (tv) null);
+          var4 = (SerializableGameState) null;
+          this.copyTo((byte) -57, (SerializableGameState) null);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -52,10 +52,10 @@ final class PlayerVote implements DiffableState {
         SetAiFiringRangeUpshift.a(param5, param4, param1, (byte) -122, 31, param2, param0);
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException var3 = null;
         int var4 = 0;
-        tv var5 = null;
+        SerializableGameState var5 = null;
         PlayerVote var6 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -64,8 +64,8 @@ final class PlayerVote implements DiffableState {
         try {
           var6 = (PlayerVote) (other);
           if (obfuscationGuard > -19) {
-            var5 = (tv) null;
-            this.a((byte) -95, (tv) null);
+            var5 = (SerializableGameState) null;
+            this.differsFrom((byte) -95, (SerializableGameState) null);
           }
           var4 = 0;
           if (var6.option != this.option) {
@@ -95,19 +95,19 @@ final class PlayerVote implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.option = param0.i(0, 32);
-          this.unvote = kv.a(param1, param0);
+          this.option = param0.readBits(0, 32);
+          this.unvote = kv.readBoolean(param1, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dv.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          param0.a(-632, this.option, 32);
-          vq.a(param0, -70, this.unvote);
+          param0.writeBits(-632, this.option, 32);
+          vq.writeBoolean(param0, -70, this.unvote);
           if (param1 >= -109) {
             this.unvote = false;
           }
@@ -116,7 +116,7 @@ final class PlayerVote implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         PlayerVote var3 = null;
         int var4 = 0;
         boolean stackIn_3_0 = false;

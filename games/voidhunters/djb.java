@@ -68,11 +68,11 @@ final class djb extends qc {
           var12_ref_rqa = (ConsoleCommand) (var7_ref.a((byte) -54));
           while (true) {
             if (var12_ref_rqa != null) {
-              stackIn_44_0 = var12_ref_rqa.field_k.length();
+              stackIn_44_0 = var12_ref_rqa.name.length();
               stackIn_44_1 = var11;
               if (var14 == 0) {
                 if (stackIn_44_0 < stackIn_44_1) {
-                  var11 = var12_ref_rqa.field_k.length();
+                  var11 = var12_ref_rqa.name.length();
                 }
                 var12_ref_rqa = (ConsoleCommand) (var7_ref.a(1900));
                 continue;
@@ -86,11 +86,11 @@ final class djb extends qc {
                     break;
                   }
                   if (stackIn_44_0 > stackIn_44_1) {
-                    var12 = ((ConsoleCommand) (var7_ref.a((byte) -54))).field_k.charAt(var9);
+                    var12 = ((ConsoleCommand) (var7_ref.a((byte) -54))).name.charAt(var9);
                     var13 = (ConsoleCommand) (var7_ref.a(1900));
                     while (null != var13) {
                       stackIn_45_0 = var10;
-                      stackOut_31_1 = var13.field_k.charAt(var9);
+                      stackOut_31_1 = var13.name.charAt(var9);
                       stackIn_45_1 = stackOut_31_1;
                       stackIn_32_1 = stackOut_31_1;
                       stackIn_45_2 = var12;
@@ -124,7 +124,7 @@ final class djb extends qc {
             var12Lifetime1++;
             discarded$1 = var8.append("()");
             if (var7_ref.c(0) == 1 &&
-              ((ConsoleCommand) (var7_ref.a((byte) -54))).field_n.length == 0) {
+              ((ConsoleCommand) (var7_ref.a((byte) -54))).parameterTypes.length == 0) {
               var12Lifetime1++;
             }
           }
@@ -235,7 +235,7 @@ final class djb extends qc {
             if (var11 == 0) {
               incrementValue$0 = var9Lifetime1;
               var9Lifetime1++;
-              stackIn_39_0[incrementValue$0] = var10.field_l;
+              stackIn_39_0[incrementValue$0] = var10.signatureText;
               var10 = (ConsoleCommand) (var7_ref.a(1900));
               continue;
             }
@@ -269,14 +269,14 @@ final class djb extends qc {
         RuntimeException decompiledCaughtException = null;
         var6 = VoidHunters.field_G;
         try {
-          this.field_t = new ConsoleCommand[param0.c(3)];
+          this.field_t = new ConsoleCommand[param0.size(3)];
           var4_int = 0;
-          var5 = (ConsoleCommand) (param0.d(0));
+          var5 = (ConsoleCommand) (param0.first(0));
           while (null != var5) {
             incrementValue$1 = var4_int;
             var4_int++;
             this.field_t[incrementValue$1] = var5;
-            var5 = (ConsoleCommand) (param0.a((byte) 92));
+            var5 = (ConsoleCommand) (param0.next((byte) 92));
             if (var6 != 0) {
               return;
             }
@@ -340,7 +340,7 @@ final class djb extends qc {
               decompiledCaughtException = decompiledCaughtParameter0;
               var3_ref = (ojb) (Object) decompiledCaughtException;
               param1 = "<col=55ff55>" + param1.substring(0, var3_ref.field_a) + "</col>" + param1.substring(var3_ref.field_a);
-              var4_ref = (llb) (this.field_h.field_wb.field_lb.b((byte) 122));
+              var4_ref = (llb) (this.field_h.field_wb.field_lb.last((byte) 122));
               var4_ref.field_R = this.field_c + param1;
             } catch (gva decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
@@ -558,12 +558,12 @@ final class djb extends qc {
           var4 = 0;
           boolean decompiledNaturalLoopExit0 = false;
           while (!(decompiledNaturalLoopExit0 = (var4 >= this.field_t.length))) {
-            stackOut_3_0 = this.field_t[var4].field_k.startsWith(param0);
+            stackOut_3_0 = this.field_t[var4].name.startsWith(param0);
             stackIn_11_0 = stackOut_3_0 ? 1 : 0;
             stackIn_4_0 = stackOut_3_0;
             if (var5 == 0) {
               if (stackIn_4_0) {
-                this.field_t[var4].d((byte) -35);
+                this.field_t[var4].unlinkSecondary((byte) -35);
                 var3.a(this.field_t[var4], param1 - 93);
               }
               var4++;

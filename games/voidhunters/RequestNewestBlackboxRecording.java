@@ -3,7 +3,7 @@
  */
 final class RequestNewestBlackboxRecording extends ConsoleCommand {
     static String field_o;
-    static faa field_p;
+    static IsaacPacketBuffer field_p;
     static String field_q;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

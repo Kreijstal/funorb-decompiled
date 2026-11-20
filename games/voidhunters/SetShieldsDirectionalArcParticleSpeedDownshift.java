@@ -16,7 +16,7 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          apb.field_b = arguments[0].a(114);
+          apb.field_b = arguments[0].intValue(114);
           if (obfuscationGuard > -119) {
             field_s = (String) null;
           }

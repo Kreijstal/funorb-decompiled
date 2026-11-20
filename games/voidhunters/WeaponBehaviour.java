@@ -36,20 +36,20 @@ final class WeaponBehaviour implements DiffableState {
         return stackIn_5_0;
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          this.reload = param0.i(0, 16);
-          this.weapontype = param0.i(0, 4);
-          if (kv.a(param1, param0)) {
+          this.reload = param0.readBits(0, 16);
+          this.weapontype = param0.readBits(0, 4);
+          if (kv.readBoolean(param1, param0)) {
             if (this.targetLock == null) {
               this.targetLock = new TargetLock();
             }
-            this.targetLock.a(param0, param1);
+            this.targetLock.readState(param0, param1);
           } else {
             this.targetLock = null;
           }
@@ -68,7 +68,7 @@ final class WeaponBehaviour implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int stackIn_12_0 = 0;
         int stackIn_15_1 = 0;
         RuntimeException stackIn_27_0 = null;
@@ -101,7 +101,7 @@ final class WeaponBehaviour implements DiffableState {
           }
           if ((stackIn_12_0 ^ stackIn_15_1) != 0 ||
             null != this.targetLock &&
-            this.targetLock.a((byte) -43, var5.targetLock)) {
+            this.targetLock.differsFrom((byte) -43, var5.targetLock)) {
             System.out.println("TargetLock target_lock has changed. before=" + var5.targetLock + ", now=" + this.targetLock);
             var4 = 1;
           }
@@ -522,7 +522,7 @@ final class WeaponBehaviour implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         WeaponBehaviour var3 = null;
         WeaponBehaviour var4 = null;
         RuntimeException stackIn_10_0 = null;
@@ -539,7 +539,7 @@ final class WeaponBehaviour implements DiffableState {
             if (null == var3.targetLock) {
               var3.targetLock = new TargetLock();
             }
-            this.targetLock.b((byte) 79, var3.targetLock);
+            this.targetLock.copyTo((byte) 79, var3.targetLock);
           } else {
             var4.targetLock = null;
           }
@@ -561,7 +561,7 @@ final class WeaponBehaviour implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         WeaponBehaviour var3 = null;
         int var4 = 0;
         int stackIn_5_0 = 0;
@@ -585,7 +585,7 @@ final class WeaponBehaviour implements DiffableState {
               stackIn_8_1 = 1;
             }
             if ((stackIn_5_0 ^ stackIn_8_1) == 0 && (this.targetLock == null ||
-              !this.targetLock.a((byte) 91, var3.targetLock))) {
+              !this.targetLock.differsFrom((byte) 91, var3.targetLock))) {
               stackIn_14_0 = false;
               decompiledFrameRemainder0 = false;
             }
@@ -608,8 +608,8 @@ final class WeaponBehaviour implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
-        faa stackIn_4_0 = null;
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
+        IsaacPacketBuffer stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         boolean stackIn_5_2 = false;
         RuntimeException stackIn_11_0 = null;
@@ -618,16 +618,16 @@ final class WeaponBehaviour implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          param0.a(-632, this.reload, 16);
+          param0.writeBits(-632, this.reload, 16);
           if (param1 > -109) {
             this.e((byte) -18);
           }
-          param0.a(-632, this.weapontype, 4);
-          stackIn_4_0 = (faa) (param0);
+          param0.writeBits(-632, this.weapontype, 4);
+          stackIn_4_0 = (IsaacPacketBuffer) (param0);
           stackIn_4_1 = -103;
           stackIn_5_2 = (null != this.targetLock);
-          if (vq.a(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
-            this.targetLock.b(param0, -126);
+          if (vq.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
+            this.targetLock.writeState(param0, -126);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

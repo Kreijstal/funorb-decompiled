@@ -9,7 +9,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
     static boolean field_f;
     static int field_e;
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         SetShipTeamAction var5 = null;
         SetShipTeamAction var6 = null;
         try {
@@ -18,7 +18,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
           }
           var5 = (SetShipTeamAction) (param1);
           var6 = var5;
-          super.b((byte) 103, param1);
+          super.copyTo((byte) 103, param1);
           var6.team = this.team;
           var6.targetBody = this.targetBody;
         } catch (RuntimeException runtimeException) {
@@ -26,7 +26,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int var4 = 0;
         World var5 = null;
         SetShipTeamAction var6 = null;
@@ -130,14 +130,14 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
+          super.readState(param0, param1);
           if (param1) {
             this.a(-27);
           }
-          this.targetBody = param0.i(0, 32);
-          this.team = param0.i(0, 32);
+          this.targetBody = param0.readBits(0, 32);
+          this.team = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lrb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -146,8 +146,8 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
     final String a(int param0) {
         String var2 = "Set team of ship " + this.targetBody;
         if (param0 != -1325) {
-          tv var3 = (tv) null;
-          this.reportDifferences((tv) null, 8);
+          SerializableGameState var3 = (SerializableGameState) null;
+          this.reportDifferences((SerializableGameState) null, 8);
         }
         if (-1 == this.targetBody) {
           var2 = "Set team of whatever ship";
@@ -163,20 +163,20 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          super.b(param0, -119);
+          super.writeState(param0, -119);
           if (param1 > -109) {
             field_b = (dfa) null;
           }
-          param0.a(-632, this.targetBody, 32);
-          param0.a(-632, this.team, 32);
+          param0.writeBits(-632, this.targetBody, 32);
+          param0.writeBits(-632, this.team, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lrb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         SetShipTeamAction var3 = null;
         int var4 = 0;
         boolean stackIn_6_0 = false;
@@ -188,7 +188,7 @@ final class SetShipTeamAction extends MissionAction implements DiffableState, hd
         try {
           var4 = 38 / ((22 - param0) / 59);
           var3 = (SetShipTeamAction) (param1);
-          stackIn_6_0 = (super.a((byte) -44, param1)) || (this.targetBody != var3.targetBody) || (this.team != var3.team);
+          stackIn_6_0 = (super.differsFrom((byte) -44, param1)) || (this.targetBody != var3.targetBody) || (this.team != var3.team);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

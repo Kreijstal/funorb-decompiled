@@ -22,24 +22,24 @@ class bia extends tb {
         ajb var1_refLifetime1;
         if (param0 != 124) {
           bia.a((byte) -88);
-          var1_ref = (ajb) (bc.field_b.c((byte) -126));
+          var1_ref = (ajb) (bc.field_b.removeLast((byte) -126));
           if (var1_ref == null) {
             throw new IllegalStateException();
           }
           dma.a(var1_ref.field_k, var1_ref.field_d, var1_ref.field_i);
           dma.b(var1_ref.field_j, var1_ref.field_g, var1_ref.field_h, var1_ref.field_e);
           var1_ref.field_k = null;
-          GetPlayerRepairTime.field_p.b(-10258, var1_ref);
+          GetPlayerRepairTime.field_p.addLast(-10258, var1_ref);
           return;
         }
-        var1_refLifetime1 = (ajb) (bc.field_b.c((byte) -126));
+        var1_refLifetime1 = (ajb) (bc.field_b.removeLast((byte) -126));
         if (var1_refLifetime1 == null) {
           throw new IllegalStateException();
         }
         dma.a(var1_refLifetime1.field_k, var1_refLifetime1.field_d, var1_refLifetime1.field_i);
         dma.b(var1_refLifetime1.field_j, var1_refLifetime1.field_g, var1_refLifetime1.field_h, var1_refLifetime1.field_e);
         var1_refLifetime1.field_k = null;
-        GetPlayerRepairTime.field_p.b(-10258, var1_refLifetime1);
+        GetPlayerRepairTime.field_p.addLast(-10258, var1_refLifetime1);
     }
 
     final static qkb a(boolean param0) {

@@ -28,14 +28,14 @@ final class rdb extends IntrusiveNode implements DiffableState {
         return true;
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
             this.x = -114;
           }
-          this.x = param0.i(0, 32);
-          this.y = param0.i(0, 32);
-          this.team = param0.i(0, 1);
+          this.x = param0.readBits(0, 32);
+          this.y = param0.readBits(0, 32);
+          this.team = param0.readBits(0, 1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rdb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -66,20 +66,20 @@ final class rdb extends IntrusiveNode implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 >= -109) {
             this.y = -98;
           }
-          param0.a(-632, this.x, 32);
-          param0.a(-632, this.y, 32);
-          param0.a(-632, this.team, 1);
+          param0.writeBits(-632, this.x, 32);
+          param0.writeBits(-632, this.y, 32);
+          param0.writeBits(-632, this.team, 1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rdb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         rdb var6 = null;
         rdb var7 = null;
         try {
@@ -88,8 +88,8 @@ final class rdb extends IntrusiveNode implements DiffableState {
           var7.team = this.team;
           var7.x = this.x;
           if (param0 < 54) {
-            tv var4 = (tv) null;
-            this.a((byte) 14, (tv) null);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.differsFrom((byte) 14, (SerializableGameState) null);
           }
           var7.y = this.y;
         } catch (RuntimeException runtimeException) {
@@ -119,7 +119,7 @@ final class rdb extends IntrusiveNode implements DiffableState {
         field_f = null;
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         rdb var4 = null;
         boolean stackIn_6_0 = false;
@@ -156,7 +156,7 @@ final class rdb extends IntrusiveNode implements DiffableState {
         this.x = param0;
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException var3 = null;
         int var4 = 0;
         rdb var5 = null;

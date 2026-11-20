@@ -5,9 +5,9 @@ class MissionCondition implements DiffableState {
     boolean negated;
     static String field_b;
 
-    public void a(faa param0, boolean param1) {
+    public void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.negated = kv.a(param1, param0);
+          this.negated = kv.readBoolean(param1, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wm.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -80,7 +80,7 @@ class MissionCondition implements DiffableState {
         }
     }
 
-    public void reportDifferences(tv other, int obfuscationGuard) {
+    public void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         MissionCondition var3 = null;
         int var4 = 0;
         int stackIn_5_0 = 0;
@@ -124,7 +124,7 @@ class MissionCondition implements DiffableState {
         }
     }
 
-    public boolean a(byte param0, tv param1) {
+    public boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         MissionCondition var4 = null;
@@ -195,13 +195,13 @@ class MissionCondition implements DiffableState {
         return 0;
     }
 
-    public void b(faa param0, int param1) {
+    public void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 > -109) {
             World var4 = (World) null;
             this.a((World) null, 68, -88, 56);
           }
-          vq.a(param0, -119, this.negated);
+          vq.writeBoolean(param0, -119, this.negated);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wm.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -209,15 +209,15 @@ class MissionCondition implements DiffableState {
 
     String a(int param0) {
         if (param0 != -1) {
-          tv var3 = (tv) null;
-          this.b((byte) -4, (tv) null);
+          SerializableGameState var3 = (SerializableGameState) null;
+          this.copyTo((byte) -4, (SerializableGameState) null);
         }
         return this.toString();
     }
 
     ucb[] a(World param0, int param1) {
         RuntimeException var3 = null;
-        tv var4 = null;
+        SerializableGameState var4 = null;
         Object stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -227,8 +227,8 @@ class MissionCondition implements DiffableState {
           if (param1 == -20605) {
             return null;
           }
-          var4 = (tv) null;
-          this.reportDifferences((tv) null, -22);
+          var4 = (SerializableGameState) null;
+          this.reportDifferences((SerializableGameState) null, -22);
           stackIn_3_0 = null;
           return (ucb[]) (stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -245,7 +245,7 @@ class MissionCondition implements DiffableState {
         }
     }
 
-    public void b(byte param0, tv param1) {
+    public void copyTo(byte param0, SerializableGameState param1) {
         MissionCondition var4 = (MissionCondition) (param1);
         MissionCondition var3 = var4;
         if (param0 <= 54) {

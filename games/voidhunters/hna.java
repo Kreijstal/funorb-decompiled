@@ -11,8 +11,8 @@ final class hna extends pca implements DiffableState {
     SpecialOrderSubmessage specialOrderSubmessage;
     int triggers;
 
-    public final void b(faa param0, int param1) {
-        faa stackIn_4_0 = null;
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
+        IsaacPacketBuffer stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         boolean stackIn_5_2 = false;
         RuntimeException stackIn_10_0 = null;
@@ -21,18 +21,18 @@ final class hna extends pca implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          super.b(param0, -123);
+          super.writeState(param0, -123);
           if (param1 > -109) {
             this.mousey = 115;
           }
-          param0.a(-632, this.triggers, 16);
-          param0.a(-632, this.mousex, 32);
-          param0.a(-632, this.mousey, 32);
-          stackIn_4_0 = (faa) (param0);
+          param0.writeBits(-632, this.triggers, 16);
+          param0.writeBits(-632, this.mousex, 32);
+          param0.writeBits(-632, this.mousey, 32);
+          stackIn_4_0 = (IsaacPacketBuffer) (param0);
           stackIn_4_1 = -126;
           stackIn_5_2 = (this.specialOrderSubmessage != null);
-          if (vq.a(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
-            this.specialOrderSubmessage.b(param0, -115);
+          if (vq.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
+            this.specialOrderSubmessage.writeState(param0, -115);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -49,7 +49,7 @@ final class hna extends pca implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         hna var3 = null;
         hna var4 = null;
         RuntimeException stackIn_10_0 = null;
@@ -60,7 +60,7 @@ final class hna extends pca implements DiffableState {
         try {
           var4 = (hna) (param1);
           var3 = var4;
-          super.b((byte) 88, param1);
+          super.copyTo((byte) 88, param1);
           var4.mousex = this.mousex;
           if (param0 < 54) {
             field_n = 80;
@@ -71,7 +71,7 @@ final class hna extends pca implements DiffableState {
             if (var3.specialOrderSubmessage == null) {
               var3.specialOrderSubmessage = new SpecialOrderSubmessage();
             }
-            this.specialOrderSubmessage.b((byte) 127, var3.specialOrderSubmessage);
+            this.specialOrderSubmessage.copyTo((byte) 127, var3.specialOrderSubmessage);
           } else {
             var4.specialOrderSubmessage = null;
           }
@@ -199,7 +199,7 @@ final class hna extends pca implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         hna var3 = null;
         int var4 = 0;
         int stackIn_7_0 = 0;
@@ -214,7 +214,7 @@ final class hna extends pca implements DiffableState {
           boolean decompiledFrameRemainder0 = true;
           var3 = (hna) (param1);
           var4 = -118 / ((param0 - 22) / 59);
-          if (!super.a((byte) 90, param1) &&
+          if (!super.differsFrom((byte) 90, param1) &&
             this.triggers == var3.triggers &&
             this.mousex == var3.mousex &&
             var3.mousey == this.mousey) {
@@ -225,7 +225,7 @@ final class hna extends pca implements DiffableState {
               stackIn_10_1 = 1;
             }
             if ((stackIn_7_0 ^ stackIn_10_1) == 0 && (this.specialOrderSubmessage == null ||
-              !this.specialOrderSubmessage.a((byte) 94, var3.specialOrderSubmessage))) {
+              !this.specialOrderSubmessage.differsFrom((byte) 94, var3.specialOrderSubmessage))) {
               stackIn_16_0 = false;
               decompiledFrameRemainder0 = false;
             }
@@ -248,22 +248,22 @@ final class hna extends pca implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
         String stackIn_9_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          super.a(param0, param1);
-          this.triggers = param0.i(0, 16);
-          this.mousex = param0.i(0, 32);
-          this.mousey = param0.i(0, 32);
-          if (kv.a(false, param0)) {
+          super.readState(param0, param1);
+          this.triggers = param0.readBits(0, 16);
+          this.mousex = param0.readBits(0, 32);
+          this.mousey = param0.readBits(0, 32);
+          if (kv.readBoolean(false, param0)) {
             if (this.specialOrderSubmessage == null) {
               this.specialOrderSubmessage = new SpecialOrderSubmessage();
             }
-            this.specialOrderSubmessage.a(param0, false);
+            this.specialOrderSubmessage.readState(param0, false);
           } else {
             this.specialOrderSubmessage = null;
           }
@@ -290,7 +290,7 @@ final class hna extends pca implements DiffableState {
         this.specialOrderSubmessage.vote = new PlayerVote(param1, param0);
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int stackIn_15_0 = 0;
         int stackIn_18_1 = 0;
         RuntimeException stackIn_28_0 = null;
@@ -331,7 +331,7 @@ final class hna extends pca implements DiffableState {
           }
           if ((stackIn_15_0 ^ stackIn_18_1) != 0 ||
             null != this.specialOrderSubmessage &&
-            this.specialOrderSubmessage.a((byte) 84, var5.specialOrderSubmessage)) {
+            this.specialOrderSubmessage.differsFrom((byte) 84, var5.specialOrderSubmessage)) {
             System.out.println("SpecialOrderSubmessage special_order_submessage has changed. before=" + var5.specialOrderSubmessage + ", now=" + this.specialOrderSubmessage);
             var4 = 1;
           }

@@ -21,17 +21,17 @@ abstract class ija {
           GetBoostersCooldown.field_p = 0;
           mq.field_k = 0;
           kbb.field_q = null;
-          mr.field_M.e(120);
+          mr.field_M.clear(120);
           int var1_int = -31 % ((param0 + 31) / 39);
-          SetPointDefenceLaserProjectileOndamageParticles.field_o.e(97);
+          SetPointDefenceLaserProjectileOndamageParticles.field_o.clear(97);
           var2 = ae.field_f.c(-43);
           while (var2 != null) {
-            var2.d((byte) -35);
+            var2.unlinkSecondary((byte) -35);
             var2 = ae.field_f.d(-1);
           }
           var2Lifetime1 = TeamNodeCondition.field_c.c(-94);
           while (var2Lifetime1 != null) {
-            var2Lifetime1.d((byte) -35);
+            var2Lifetime1.unlinkSecondary((byte) -35);
             var2Lifetime1 = TeamNodeCondition.field_c.d(-1);
           }
           iwa.field_b = 0;

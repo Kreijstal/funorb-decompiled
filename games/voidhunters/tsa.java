@@ -68,15 +68,15 @@ final class tsa extends IntrusiveNode {
           }
           try {
             if (this.field_e == SetMissionVariablesHudX.field_p) {
-              var7 = new ConsoleValue[this.field_f.c(3)];
+              var7 = new ConsoleValue[this.field_f.size(3)];
               var8 = var7;
               var4 = 0;
-              var5 = (tsa) (this.field_f.d(0));
+              var5 = (tsa) (this.field_f.first(0));
               while (var5 != null) {
                 incrementValue$0 = var4;
                 var4++;
                 var7[incrementValue$0] = var5.a((byte) 96, param1);
-                var5 = (tsa) (this.field_f.a((byte) 69));
+                var5 = (tsa) (this.field_f.next((byte) 69));
               }
               stackIn_10_0 = fjb.a(this.field_d, var8, param1, (byte) -124);
               return stackIn_10_0;

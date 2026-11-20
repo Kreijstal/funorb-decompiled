@@ -4,9 +4,9 @@
 final class bca implements dja {
     static dpb field_a;
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -86 % ((-64 - param0) / 50);
-        return (tv) ((Object) new be());
+        return (SerializableGameState) ((Object) new be());
     }
 
     public static void a(int param0) {
@@ -18,11 +18,11 @@ final class bca implements dja {
         field_a = null;
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          return (tv[]) null;
+          return (SerializableGameState[]) null;
         }
-        return (tv[]) ((Object) new be[param1]);
+        return (SerializableGameState[]) ((Object) new be[param1]);
     }
 
     static {

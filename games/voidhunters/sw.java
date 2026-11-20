@@ -740,15 +740,15 @@ final class sw {
         var12 = VoidHunters.field_G;
         try {
           var2 = new PacketBuffer(param0);
-          var3 = var2.e((byte) -102);
+          var3 = var2.readUnsignedByte((byte) -102);
           if (0 != var3) {
             throw new RuntimeException("");
           }
-          stackIn_8_0 = (var2.e((byte) -89) != 1) ? 0 : 1;
+          stackIn_8_0 = (var2.readUnsignedByte((byte) -89) != 1) ? 0 : 1;
           boolean decompiledFrameCompleted0 = true;
           var4 = stackIn_8_0;
           this.field_b = new byte[256];
-          var2.a(0, this.field_b, (byte) -59, 256);
+          var2.readBytes(0, this.field_b, (byte) -59, 256);
           if (var4 != 0) {
             var5 = new int[256];
             var6 = new int[256];
@@ -758,11 +758,11 @@ final class sw {
                 var7_int = 0;
                 break;
               }
-              var5[var7_int] = var2.e((byte) -124);
+              var5[var7_int] = var2.readUnsignedByte((byte) -124);
               var7_int++;
             } while (var12 == 0);
             while (var7_int < 256) {
-              var6[var7_int] = var2.e((byte) -92);
+              var6[var7_int] = var2.readUnsignedByte((byte) -92);
               var7_int++;
               if (var12 != 0) {
                 return;
@@ -781,7 +781,7 @@ final class sw {
                 }
                 var10 = stackIn_35_0;
                 while (var7[var8_int].length > var10) {
-                  var9 = (byte)(var9 + var2.d((byte) -114));
+                  var9 = (byte)(var9 + var2.readByte((byte) -114));
                   var7[var8_int][var10] = (byte) var9;
                   var10++;
                 }
@@ -804,7 +804,7 @@ final class sw {
                 }
                 var11 = stackIn_47_0;
                 while (var8[var9Lifetime1].length > var11) {
-                  var10Lifetime1 = (byte)(var10Lifetime1 + var2.d((byte) -114));
+                  var10Lifetime1 = (byte)(var10Lifetime1 + var2.readByte((byte) -114));
                   var8[var9Lifetime1][var11] = (byte) var10Lifetime1;
                   var11++;
                 }
@@ -850,13 +850,13 @@ final class sw {
           if (decompiledFrameCompleted0) {
             if (var4 == 0 ||
               var12 != 0) {
-              this.field_a = var2.e((byte) -104);
+              this.field_a = var2.readUnsignedByte((byte) -104);
             }
-            this.field_d = var2.e((byte) -91);
-            stackIn_75_0 = var2.e((byte) -88);
+            this.field_d = var2.readUnsignedByte((byte) -91);
+            stackIn_75_0 = var2.readUnsignedByte((byte) -88);
           }
-          this.field_c = var2.e((byte) -87);
-          this.field_e = var2.e((byte) -126);
+          this.field_c = var2.readUnsignedByte((byte) -87);
+          this.field_e = var2.readUnsignedByte((byte) -126);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

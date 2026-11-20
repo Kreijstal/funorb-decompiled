@@ -55,14 +55,14 @@ final class GetSalvoUsesAllEnergy extends ConsoleCommand {
 
     final static Object[] a(dja param0, int param1, int param2, Object[] param3) {
         int var6 = 0;
-        tv[] var4 = null;
+        SerializableGameState[] var4 = null;
         RuntimeException var4_ref = null;
         int var5 = 0;
         int var7 = 0;
         Object[] stackIn_3_0 = null;
         Object stackIn_6_0 = null;
         Object[] stackIn_11_0 = null;
-        tv[] stackIn_19_0 = null;
+        SerializableGameState[] stackIn_19_0 = null;
         RuntimeException stackIn_22_0 = null;
         StringBuilder stackIn_22_1 = null;
         String stackIn_23_2 = null;
@@ -86,7 +86,7 @@ final class GetSalvoUsesAllEnergy extends ConsoleCommand {
             var5 = 0;
             for (var6 = 0; var6 < param3.length; var6++) {
               if (var6 != param1) {
-                var4[var5] = (tv) (param3[var6]);
+                var4[var5] = (SerializableGameState) (param3[var6]);
                 var5++;
               }
             }

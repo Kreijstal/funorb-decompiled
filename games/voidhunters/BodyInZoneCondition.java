@@ -6,14 +6,14 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
     private int bodyId;
     private int zoneId;
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
+          super.readState(param0, param1);
           if (param1) {
             field_c = (String) null;
           }
-          this.bodyId = param0.i(0, 32);
-          this.zoneId = param0.i(0, 32);
+          this.bodyId = param0.readBits(0, 32);
+          this.zoneId = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "iia.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -33,7 +33,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 != -20605) {
-            this.a((faa) null, true);
+            this.readState((IsaacPacketBuffer) null, true);
           }
           var5 = param0.d((byte) -27, this.bodyId);
           var3 = var5;
@@ -124,7 +124,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
         return var2Lifetime1;
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         BodyInZoneCondition var3 = null;
         int var4 = 0;
         boolean stackIn_6_0 = false;
@@ -136,7 +136,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
         try {
           var4 = -96 % ((param0 - 22) / 59);
           var3 = (BodyInZoneCondition) (param1);
-          stackIn_6_0 = (super.a((byte) -126, param1)) || (var3.bodyId != this.bodyId) || (this.zoneId != var3.zoneId);
+          stackIn_6_0 = (super.differsFrom((byte) -126, param1)) || (var3.bodyId != this.bodyId) || (this.zoneId != var3.zoneId);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -346,7 +346,7 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         BodyInZoneCondition var3 = null;
         int var4 = 0;
         RuntimeException stackIn_12_0 = null;
@@ -393,19 +393,19 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
           var2 = "Any ship";
         }
         if (param0 != -1) {
-          this.a((byte) 14, (tv) null);
+          this.differsFrom((byte) 14, (SerializableGameState) null);
         }
         return var2 + " in map zone " + this.zoneId;
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          super.b(param0, -125);
+          super.writeState(param0, -125);
           if (param1 > -109) {
             this.bodyId = 10;
           }
-          param0.a(-632, this.bodyId, 32);
-          param0.a(-632, this.zoneId, 32);
+          param0.writeBits(-632, this.bodyId, 32);
+          param0.writeBits(-632, this.zoneId, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "iia.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -486,14 +486,14 @@ final class BodyInZoneCondition extends MissionCondition implements DiffableStat
         this.zoneId = param1;
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         BodyInZoneCondition var5 = null;
         BodyInZoneCondition var6 = null;
         try {
           if (param0 <= 54) {
             this.bodyId = -91;
           }
-          super.b((byte) 66, param1);
+          super.copyTo((byte) 66, param1);
           var5 = (BodyInZoneCondition) (param1);
           var6 = var5;
           var6.zoneId = this.zoneId;

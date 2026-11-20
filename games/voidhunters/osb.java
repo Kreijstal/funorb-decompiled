@@ -5,11 +5,11 @@ final class osb implements dja {
     static int field_b;
     static String field_a;
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          return (tv[]) null;
+          return (SerializableGameState[]) null;
         }
-        return (tv[]) ((Object) new BodyCondition[param1]);
+        return (SerializableGameState[]) ((Object) new BodyCondition[param1]);
     }
 
     public static void a(int param0) {
@@ -21,9 +21,9 @@ final class osb implements dja {
         field_a = null;
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -16 % ((-64 - param0) / 50);
-        return (tv) ((Object) new BodyCondition());
+        return (SerializableGameState) ((Object) new BodyCondition());
     }
 
     static {

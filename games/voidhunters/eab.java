@@ -211,7 +211,7 @@ final class eab implements Runnable {
           ThreadDeath var2_ref = null;
           Throwable var2_ref2 = null;
           InterruptedException var3 = null;
-          ndb var3_ref = null;
+          ProxyAuthenticationException var3_ref = null;
           int var3_int = 0;
           Exception var3_ref2 = null;
           au var3_ref3 = null;
@@ -263,11 +263,11 @@ final class eab implements Runnable {
                       throw new IOException();
                     }
                     try {
-                      if (false) throw (ndb) null;
-                      var8.field_d = ppb.a((String) (var8.field_b), var8.field_a, (byte) -112).a(2048);
-                    } catch (ndb decompiledCaughtParameter1) {
+                      if (false) throw (ProxyAuthenticationException) null;
+                      var8.field_d = ppb.a((String) (var8.field_b), var8.field_a, (byte) -112).openSocket(2048);
+                    } catch (ProxyAuthenticationException decompiledCaughtParameter1) {
                       decompiledCaughtException = decompiledCaughtParameter1;
-                      var3_ref = (ndb) (Object) decompiledCaughtException;
+                      var3_ref = (ProxyAuthenticationException) (Object) decompiledCaughtException;
                       var8.field_d = var3_ref.getMessage();
                       throw var3_ref;
                     }

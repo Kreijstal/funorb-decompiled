@@ -4,20 +4,20 @@
 final class RemoveEventAction extends MissionAction implements DiffableState {
     static dpb field_a;
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
+          super.readState(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "oca.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         try {
           if (param0 <= 54) {
             this.a(-78);
           }
-          super.b((byte) 63, param1);
+          super.copyTo((byte) 63, param1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "oca.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -56,7 +56,7 @@ final class RemoveEventAction extends MissionAction implements DiffableState {
         field_a = null;
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_1_0 = false;
@@ -66,7 +66,7 @@ final class RemoveEventAction extends MissionAction implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = 110 % ((22 - param0) / 59);
-          stackIn_1_0 = super.a((byte) 95, param1);
+          stackIn_1_0 = super.differsFrom((byte) 95, param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -82,18 +82,18 @@ final class RemoveEventAction extends MissionAction implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 >= -109) {
             RemoveEventAction.b(49);
           }
-          super.b(param0, -110);
+          super.writeState(param0, -110);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "oca.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         try {
           if (obfuscationGuard >= -19) {
             field_a = (dpb) null;
@@ -107,8 +107,8 @@ final class RemoveEventAction extends MissionAction implements DiffableState {
     final void a(int param0, int[] param1, GameSnapshot param2) {
         try {
           if (param0 != 1) {
-            faa var5 = (faa) null;
-            this.a((faa) null, true);
+            IsaacPacketBuffer var5 = (IsaacPacketBuffer) null;
+            this.readState((IsaacPacketBuffer) null, true);
           }
           param2.world.getMissionControl(0).c((byte) 55);
         } catch (RuntimeException runtimeException) {

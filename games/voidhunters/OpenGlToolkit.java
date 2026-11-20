@@ -605,8 +605,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 var4 = this.field_E.b(1);
                 if (var4 != null) {
                   var10 = (tob) (var4);
-                  var10.d((byte) -35);
-                  var10.b(-3846);
+                  var10.unlinkSecondary((byte) -35);
+                  var10.unlink(-3846);
                   this.field_c.releasePbuffer(var10.f(-128));
                   this.field_Gc = this.field_Gc - var10.field_m;
                   continue;
@@ -635,8 +635,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
                   var4 = this.field_E.b(1);
                   if (var4 != null) {
                     var8 = (nv) (var4);
-                    var8.d((byte) -35);
-                    var8.b(-3846);
+                    var8.unlinkSecondary((byte) -35);
+                    var8.unlink(-3846);
                     var8.e((byte) 124);
                     this.field_Gc = this.field_Gc - var8.field_m;
                     continue;
@@ -932,8 +932,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
 
     final synchronized void a(int param0, int param1, byte param2) {
         hua var4 = new hua(param0);
-        var4.field_b = (long)param1;
-        this.field_ec.b(-10258, var4);
+        var4.key = (long)param1;
+        this.field_ec.addLast(-10258, var4);
         if (param2 < 8) {
           this.field_s = (bu) null;
         }
@@ -1084,8 +1084,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
           this.field_Fc = -96;
         }
         IntrusiveNode var4 = new IntrusiveNode();
-        var4.field_b = param1;
-        this.field_zb.b(-10258, var4);
+        var4.key = param1;
+        this.field_zb.addLast(-10258, var4);
     }
 
     final wib b(int param0, int param1) {
@@ -1116,10 +1116,10 @@ final class OpenGlToolkit extends GraphicsToolkit {
         java.awt.Canvas var2 = null;
         Long var3 = null;
         int var4 = VoidHunters.field_G;
-        IntrusiveNode var1 = this.field_D.d(0);
+        IntrusiveNode var1 = this.field_D.first(0);
         while (var1 != null) {
           ((gpa) (var1)).a(false);
-          var1 = this.field_D.a((byte) 25);
+          var1 = this.field_D.next((byte) 25);
         }
         if (this.field_fc != null) {
           this.field_fc.a(true);
@@ -1272,8 +1272,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
 
     final synchronized void a(int param0, int param1, int param2) {
         hua var4 = new hua(param2);
-        var4.field_b = (long)param0;
-        this.field_Nc.b(-10258, var4);
+        var4.key = (long)param0;
+        this.field_Nc.addLast(-10258, var4);
         if (param1 <= 14) {
           this.field_w = 0.8722803592681885f;
         }
@@ -1650,8 +1650,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
           return;
         }
         hua var4 = new hua(param1);
-        var4.field_b = (long)param2;
-        this.field_xc.b(-10258, var4);
+        var4.key = (long)param2;
+        this.field_xc.addLast(-10258, var4);
     }
 
     final void v() {
@@ -1955,8 +1955,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
     final synchronized void g(int param0, int param1) {
         IntrusiveNode var3 = new IntrusiveNode();
         int var4 = -64 % ((60 - param1) / 52);
-        var3.field_b = (long)param0;
-        this.field_Cc.b(-10258, var3);
+        var3.key = (long)param0;
+        this.field_Cc.addLast(-10258, var3);
     }
 
     private final void q(int param0) {
@@ -2309,7 +2309,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           return;
         }
         hua var3 = new hua(param1);
-        this.field_hc.b(-10258, var3);
+        this.field_hc.addLast(-10258, var3);
     }
 
     final boolean k() {
@@ -2638,11 +2638,11 @@ final class OpenGlToolkit extends GraphicsToolkit {
         var4 = VoidHunters.field_G;
         param0 = param0 & 2147483647;
         var2 = 0;
-        while (!this.field_xc.b(-67)) {
-          var5 = (hua) (this.field_xc.a(true));
+        while (!this.field_xc.isEmpty(-67)) {
+          var5 = (hua) (this.field_xc.removeFirst(true));
           incrementValue$4 = var2;
           var2++;
-          cm.field_j[incrementValue$4] = (int)var5.field_b;
+          cm.field_j[incrementValue$4] = (int)var5.key;
           this.field_mc = this.field_mc - var5.field_d;
           if (var2 != 1000) {
             continue;
@@ -2654,11 +2654,11 @@ final class OpenGlToolkit extends GraphicsToolkit {
           jaggl.OpenGL.glDeleteBuffersARB(var2, cm.field_j, 0);
           var2 = 0;
         }
-        while (!this.field_Nc.b(121)) {
-          var6 = (hua) (this.field_Nc.a(true));
+        while (!this.field_Nc.isEmpty(121)) {
+          var6 = (hua) (this.field_Nc.removeFirst(true));
           incrementValue$3 = var2;
           var2++;
-          cm.field_j[incrementValue$3] = (int)var6.field_b;
+          cm.field_j[incrementValue$3] = (int)var6.key;
           this.field_sb = this.field_sb - var6.field_d;
           if (var2 != 1000) {
             continue;
@@ -2670,11 +2670,11 @@ final class OpenGlToolkit extends GraphicsToolkit {
         regionExit1: {
           if (var2 <= 0) {
             do {
-              if (this.field_hc.b(114)) {
+              if (this.field_hc.isEmpty(114)) {
                 decompiledFrameCompleted0 = false;
                 break;
               }
-              var7 = (hua) (this.field_hc.a(true));
+              var7 = (hua) (this.field_hc.removeFirst(true));
               incrementValue$0 = var2;
               var2++;
               cm.field_j[incrementValue$0] = var7.field_d;
@@ -2691,8 +2691,8 @@ final class OpenGlToolkit extends GraphicsToolkit {
           }
         }
         if (decompiledFrameCompleted0) {
-          while (!this.field_hc.b(114)) {
-            var7 = (hua) (this.field_hc.a(true));
+          while (!this.field_hc.isEmpty(114)) {
+            var7 = (hua) (this.field_hc.removeFirst(true));
             incrementValue$1 = var2;
             var2++;
             cm.field_j[incrementValue$1] = var7.field_d;
@@ -2707,11 +2707,11 @@ final class OpenGlToolkit extends GraphicsToolkit {
           jaggl.OpenGL.glDeleteFramebuffersEXT(var2, cm.field_j, 0);
           var2 = 0;
         }
-        while (!this.field_ec.b(105)) {
-          var8 = (hua) (this.field_ec.a(true));
+        while (!this.field_ec.isEmpty(105)) {
+          var8 = (hua) (this.field_ec.removeFirst(true));
           incrementValue$2 = var2;
           var2++;
-          cm.field_j[incrementValue$2] = (int)var8.field_b;
+          cm.field_j[incrementValue$2] = (int)var8.key;
           this.field_q = this.field_q - var8.field_d;
           stackIn_28_0 = ~var2;
           stackIn_28_1 = -1001;
@@ -2725,21 +2725,21 @@ final class OpenGlToolkit extends GraphicsToolkit {
           jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, cm.field_j, 0);
           var2 = 0;
         }
-        while (!this.field_v.b(124)) {
-          var9 = (hua) (this.field_v.a(true));
-          jaggl.OpenGL.glDeleteLists((int)var9.field_b, var9.field_d);
+        while (!this.field_v.isEmpty(124)) {
+          var9 = (hua) (this.field_v.removeFirst(true));
+          jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_d);
         }
-        while (!this.field_Cc.b(112)) {
-          var10 = this.field_Cc.a(true);
-          jaggl.OpenGL.glDeleteProgramARB((int)var10.field_b);
+        while (!this.field_Cc.isEmpty(112)) {
+          var10 = this.field_Cc.removeFirst(true);
+          jaggl.OpenGL.glDeleteProgramARB((int)var10.key);
         }
-        while (!this.field_zb.b(106)) {
-          var11 = this.field_zb.a(true);
-          jaggl.OpenGL.glDeleteObjectARB(var11.field_b);
+        while (!this.field_zb.isEmpty(106)) {
+          var11 = this.field_zb.removeFirst(true);
+          jaggl.OpenGL.glDeleteObjectARB(var11.key);
         }
-        while (!this.field_v.b(-104)) {
-          var12 = (hua) (this.field_v.a(true));
-          jaggl.OpenGL.glDeleteLists((int)var12.field_b, var12.field_d);
+        while (!this.field_v.isEmpty(-104)) {
+          var12 = (hua) (this.field_v.removeFirst(true));
+          jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_d);
         }
         this.field_r.a(true);
         if (!(this.u(97) <= 100663296) &&
@@ -2831,7 +2831,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
 
     final za e(int param0) {
         gpa var2 = new gpa(param0);
-        this.field_D.b(-10258, var2);
+        this.field_D.addLast(-10258, var2);
         return (za) ((Object) var2);
     }
 

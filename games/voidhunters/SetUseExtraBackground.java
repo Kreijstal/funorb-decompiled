@@ -18,7 +18,7 @@ final class SetUseExtraBackground extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetSalvoDamageMultiplier.field_o = arguments[0].a(7);
+          SetSalvoDamageMultiplier.field_o = arguments[0].intValue(7);
           if (obfuscationGuard > -119) {
             field_t = (String) null;
           }

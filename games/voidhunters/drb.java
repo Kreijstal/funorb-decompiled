@@ -16,7 +16,7 @@ final class drb extends le {
     final static kob a(boolean param0, int param1) {
         kob var2 = new kob();
         if (param0) {
-          GetBoostersActiveTime.field_q.b(-10258, var2);
+          GetBoostersActiveTime.field_q.addLast(-10258, var2);
           wva.b(param1, 22681);
           return var2;
         }
@@ -61,7 +61,7 @@ final class drb extends le {
           if (0 != var4_int) {
             return;
           }
-          this.field_i = (param2.e((byte) -115) << 12) / 255;
+          this.field_i = (param2.readUnsignedByte((byte) -115) << 12) / 255;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

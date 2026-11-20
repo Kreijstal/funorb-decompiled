@@ -207,34 +207,34 @@ final class jlb extends le {
           var4_int = param0;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              this.field_s = param2.e((byte) -118);
+              this.field_s = param2.readUnsignedByte((byte) -118);
             } else {
               if (2 == var4_int) {
-                this.field_r = param2.e(1869);
+                this.field_r = param2.readUnsignedShort(1869);
               } else {
                 if (var4_int != 3) {
                   if (var4_int == 4) {
-                    this.field_j = param2.e(1869);
+                    this.field_j = param2.readUnsignedShort(1869);
                   } else {
                     if (var4_int != 5) {
                       if (var4_int != 6) {
                         if (7 == var4_int) {
-                          this.field_u = param2.e(1869);
+                          this.field_u = param2.readUnsignedShort(1869);
                         }
                       } else {
-                        this.field_k = param2.e(1869);
+                        this.field_k = param2.readUnsignedShort(1869);
                       }
                     } else {
-                      this.field_p = param2.e(1869);
+                      this.field_p = param2.readUnsignedShort(1869);
                     }
                   }
                 } else {
-                  this.field_l = param2.e(1869);
+                  this.field_l = param2.readUnsignedShort(1869);
                 }
               }
             }
           } else {
-            this.field_q = param2.e((byte) -101);
+            this.field_q = param2.readUnsignedByte((byte) -101);
           }
           if (param1 >= -60) {
             jlb.b(-48, 83, 33, 63);

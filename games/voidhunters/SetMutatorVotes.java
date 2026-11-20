@@ -85,7 +85,7 @@ final class SetMutatorVotes extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(58, 62, arguments[0].a(18));
+          SetMachineGunEnergyUsed.a(58, 62, arguments[0].intValue(18));
           if (obfuscationGuard >= -119) {
             SetMutatorVotes.e(-54);
           }

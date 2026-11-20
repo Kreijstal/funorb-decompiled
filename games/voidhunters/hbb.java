@@ -41,7 +41,7 @@ class hbb extends f {
         if (param0 != 144) {
           this.b(80, 70, -74);
         }
-        fkb var3 = (fkb) (this.field_k.field_k.d(0));
+        fkb var3 = (fkb) (this.field_k.field_k.first(0));
         while (var3 != null) {
           if (0 > param1 ||
             var3.field_o == param1) {
@@ -55,9 +55,9 @@ class hbb extends f {
             if (var3.field_v < 0) {
               this.field_O[var3.field_o][var3.field_x] = null;
             }
-            var3.b(param0 ^ -3990);
+            var3.unlink(param0 ^ -3990);
           }
-          var3 = (fkb) (this.field_k.field_k.a((byte) 7));
+          var3 = (fkb) (this.field_k.field_k.next((byte) 7));
         }
     }
 
@@ -311,7 +311,7 @@ class hbb extends f {
           var8 = (ghb) (param4.field_d.c((byte) 126));
           while (var8 != null) {
             boolean decompiledFrameRemainder0 = true;
-            var9 = (int)var8.field_b;
+            var9 = (int)var8.key;
             var10 = (sd) (this.field_E.a((long)var9, param1 ^ -29517));
             if (var10 == null) {
               var10 = waa.a(param2, (byte) 115, var9);
@@ -407,7 +407,7 @@ class hbb extends f {
           if (param3.field_v >= 0 && (param3.field_j == null ||
             param3.field_j.i())) {
             param3.c(25804);
-            param3.b(-3846);
+            param3.unlink(-3846);
             if (0 < param3.field_s) {
               if (param3 != this.field_H[param3.field_o][param3.field_s]) {
                 return true;
@@ -496,7 +496,7 @@ class hbb extends f {
           }
           param3.c(25804);
           if (param3.field_v >= 0) {
-            param3.b(-3846);
+            param3.unlink(-3846);
             if (param3.field_s > 0 &&
               this.field_H[param3.field_o][param3.field_s] == param3) {
               this.field_H[param3.field_o][param3.field_s] = null;
@@ -736,7 +736,7 @@ class hbb extends f {
             return false;
           }
           if (param0.field_v >= 0) {
-            param0.b(-3846);
+            param0.unlink(-3846);
             if (param0.field_s > 0 &&
               param0 == this.field_H[param0.field_o][param0.field_s]) {
               this.field_H[param0.field_o][param0.field_s] = null;
@@ -770,12 +770,12 @@ class hbb extends f {
           this.field_L = true;
         }
         if ((4 & this.field_v[param0]) != 0) {
-          var3 = (fkb) (this.field_k.field_k.d(0));
+          var3 = (fkb) (this.field_k.field_k.first(0));
           while (var3 != null) {
             if (param0 == var3.field_o) {
               var3.field_p = 0;
             }
-            var3 = (fkb) (this.field_k.field_k.a((byte) 117));
+            var3 = (fkb) (this.field_k.field_k.next((byte) 117));
           }
         }
     }
@@ -983,7 +983,7 @@ class hbb extends f {
         if ((2 & this.field_v[param2]) == 0) {
           var8.field_v = 0;
         } else {
-          var6 = (fkb) (this.field_k.field_k.d(0));
+          var6 = (fkb) (this.field_k.field_k.first(0));
           while (var6 != null) {
             if (var8.field_o == var6.field_o &&
               var6.field_v < 0 &&
@@ -991,7 +991,7 @@ class hbb extends f {
               var8.field_v = 0;
               break;
             }
-            var6 = (fkb) (this.field_k.field_k.a((byte) 96));
+            var6 = (fkb) (this.field_k.field_k.next((byte) 96));
           }
         }
     }
@@ -1115,14 +1115,14 @@ class hbb extends f {
         fkb var3 = null;
         int var4 = VoidHunters.field_G;
         if ((this.field_v[param0] & 2) != 0) {
-          var3 = (fkb) (this.field_k.field_k.d(0));
+          var3 = (fkb) (this.field_k.field_k.first(0));
           while (var3 != null) {
             if (~var3.field_o == ~param0 &&
               null == this.field_O[param0][var3.field_x] &&
               var3.field_v < 0) {
               var3.field_v = 0;
             }
-            var3 = (fkb) (this.field_k.field_k.a((byte) 78));
+            var3 = (fkb) (this.field_k.field_k.next((byte) 78));
           }
         }
         if (param1 > -60) {
@@ -1144,7 +1144,7 @@ class hbb extends f {
         var9 = VoidHunters.field_G;
         this.a(64, param2, param3, (byte) 110);
         if (0 != (this.field_v[param3] & 2)) {
-          var5 = (fkb) (this.field_k.field_k.b((byte) 122));
+          var5 = (fkb) (this.field_k.field_k.last((byte) 122));
           while (var5 != null) {
             if (var5.field_o == param3 &&
               var5.field_v < 0) {
@@ -1157,7 +1157,7 @@ class hbb extends f {
               var5.field_h = var6_int - var5.field_d;
               return;
             }
-            var5 = (fkb) (this.field_k.field_k.a(param1 - 1155545385));
+            var5 = (fkb) (this.field_k.field_k.previous(param1 - 1155545385));
           }
         }
         var10 = (sd) (this.field_E.a((long)this.field_A[param3], 103));
@@ -1207,7 +1207,7 @@ class hbb extends f {
         if (param1 != -21459) {
           this.b(84, -87, 32);
         }
-        this.field_k.field_k.b(-10258, var7);
+        this.field_k.field_k.addLast(-10258, var7);
         this.field_O[param3][param2] = var7;
         return;
     }
@@ -1230,14 +1230,14 @@ class hbb extends f {
 
     private final void c(int param0, int param1) {
         int var4 = VoidHunters.field_G;
-        fkb var3 = (fkb) (this.field_k.field_k.d(param0));
+        fkb var3 = (fkb) (this.field_k.field_k.first(param0));
         while (var3 != null) {
           if ((param1 < 0 || var3.field_o == param1) &&
             0 > var3.field_v) {
             this.field_O[var3.field_o][var3.field_x] = null;
             var3.field_v = 0;
           }
-          var3 = (fkb) (this.field_k.field_k.a((byte) 10));
+          var3 = (fkb) (this.field_k.field_k.next((byte) 10));
         }
     }
 

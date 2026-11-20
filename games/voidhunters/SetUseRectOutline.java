@@ -17,7 +17,7 @@ final class SetUseRectOutline extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetPointDefenceLaserReload.field_o = arguments[0].a(false);
+          SetPointDefenceLaserReload.field_o = arguments[0].booleanValue(false);
           if (obfuscationGuard > -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -19);

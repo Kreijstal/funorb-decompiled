@@ -39,7 +39,7 @@ final class SetTorpedoAcceleration extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             SetTorpedoAcceleration.a(58);
           }
-          SetMachineGunEnergyUsed.a(169, 62, arguments[0].a(42));
+          SetMachineGunEnergyUsed.a(169, 62, arguments[0].intValue(42));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

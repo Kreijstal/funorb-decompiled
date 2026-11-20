@@ -41,14 +41,14 @@ final class pjb extends llb {
         this.a(param1, param3, (byte) 88, param4);
         if (param7 != -1) {
           Class[] var10 = (Class[]) null;
-          pjb.a((faa) null, (tv[]) null, -91, 37, (Class[]) null, 13);
+          pjb.a((IsaacPacketBuffer) null, (SerializableGameState[]) null, -91, 37, (Class[]) null, 13);
         }
     }
 
-    final static void a(faa param0, tv[] param1, int param2, int param3, Class[] param4, int param5) {
+    final static void a(IsaacPacketBuffer param0, SerializableGameState[] param1, int param2, int param3, Class[] param4, int param5) {
         int var9 = 0;
         int stackIn_4_0 = 0;
-        faa stackIn_10_0 = null;
+        IsaacPacketBuffer stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         boolean stackIn_11_2 = false;
         RuntimeException stackIn_28_0 = null;
@@ -62,8 +62,8 @@ final class pjb extends llb {
         int var6_int = 0;
         RuntimeException var6 = null;
         int var7 = 0;
-        tv[] var8 = null;
-        tv var10 = null;
+        SerializableGameState[] var8 = null;
+        SerializableGameState var10 = null;
         int var11 = 0;
         int var12 = 0;
         var12 = VoidHunters.field_G;
@@ -74,16 +74,16 @@ final class pjb extends llb {
             stackIn_4_0 = 0;
           }
           var6_int = stackIn_4_0;
-          param0.a(-632, var6_int, param2);
+          param0.writeBits(-632, var6_int, param2);
           if (var6_int != 0) {
             var7 = BodyInZoneCondition.a(-98, -1 + param4.length);
             var8 = param1;
             for (var9 = 0; var8.length > var9; var9++) {
               var10 = var8[var9];
-              stackIn_10_0 = (faa) (param0);
+              stackIn_10_0 = (IsaacPacketBuffer) (param0);
               stackIn_10_1 = 114;
               stackIn_11_2 = (var10 != null);
-              if (vq.a(stackIn_10_0, stackIn_10_1, stackIn_11_2)) {
+              if (vq.writeBoolean(stackIn_10_0, stackIn_10_1, stackIn_11_2)) {
                 var11 = 0;
                 boolean decompiledNaturalLoopExit0 = false;
                 while (!(decompiledNaturalLoopExit0 = (param4.length <= var11))) {
@@ -91,7 +91,7 @@ final class pjb extends llb {
                     var11++;
                     continue;
                   }
-                  param0.a(-632, var11, var7);
+                  param0.writeBits(-632, var11, var7);
                   GetComponentBreakingExplosionForceMultiplier.a(2, param3, param0, var10);
                   break;
                 }
@@ -169,7 +169,7 @@ final class pjb extends llb {
           return;
         }
         Class[] var2 = (Class[]) null;
-        pjb.a((faa) null, (tv[]) null, 92, 41, (Class[]) null, -34);
+        pjb.a((IsaacPacketBuffer) null, (SerializableGameState[]) null, 92, 41, (Class[]) null, -34);
         field_Db = null;
     }
 

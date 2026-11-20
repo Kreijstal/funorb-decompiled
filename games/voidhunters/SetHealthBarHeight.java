@@ -22,7 +22,7 @@ final class SetHealthBarHeight extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          NebulaField.field_d = arguments[0].a(66);
+          NebulaField.field_d = arguments[0].intValue(66);
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

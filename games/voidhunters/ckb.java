@@ -144,14 +144,14 @@ final class ckb extends le {
         var6 = VoidHunters.field_G;
         try {
           if (param0 == 0) {
-            var4_int = param2.e((byte) -115);
+            var4_int = param2.readUnsignedByte((byte) -115);
             if (var4_int == 0) {
-              this.field_j = new int[param2.e((byte) -124)][4];
+              this.field_j = new int[param2.readUnsignedByte((byte) -124)][4];
               for (var5 = 0; this.field_j.length > var5; var5++) {
-                this.field_j[var5][0] = param2.e(1869);
-                this.field_j[var5][1] = param2.e((byte) -118) << 4;
-                this.field_j[var5][2] = param2.e((byte) -101) << 4;
-                this.field_j[var5][3] = param2.e((byte) -90) << 4;
+                this.field_j[var5][0] = param2.readUnsignedShort(1869);
+                this.field_j[var5][1] = param2.readUnsignedByte((byte) -118) << 4;
+                this.field_j[var5][2] = param2.readUnsignedByte((byte) -101) << 4;
+                this.field_j[var5][3] = param2.readUnsignedByte((byte) -90) << 4;
               }
             } else {
               this.a(true, var4_int);

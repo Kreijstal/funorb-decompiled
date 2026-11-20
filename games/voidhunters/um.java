@@ -32,7 +32,7 @@ final class um {
         int var5 = 0;
         int var6 = 0;
         try {
-          var4_int = param0.h(90);
+          var4_int = param0.readInt(90);
           if (param2) {
             System.out.println("data_len received: " + var4_int + " (hex " + Integer.toHexString(var4_int) + ")");
           }
@@ -46,7 +46,7 @@ final class um {
             this.field_d = false;
             this.field_a = new byte[var4_int];
           }
-          var5 = param0.h(90);
+          var5 = param0.readInt(90);
           if (param2) {
             System.out.println("offset received: " + var5 + " (hex " + Integer.toHexString(var5) + ")");
           }
@@ -54,11 +54,11 @@ final class um {
             this.field_b != var5) {
             throw new IllegalStateException("had received " + this.field_b + ", got offset " + var5 + " total len: " + var4_int);
           }
-          var6 = param0.e(1869);
+          var6 = param0.readUnsignedShort(1869);
           if (param2) {
             System.out.println("Receiving: " + var6);
           }
-          param0.a(var5, this.field_a, (byte) -59, var6);
+          param0.readBytes(var5, this.field_a, (byte) -59, var6);
           this.field_b = this.field_b + var6;
           if (this.field_a.length <= this.field_b) {
             this.field_d = true;

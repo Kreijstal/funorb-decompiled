@@ -5,9 +5,9 @@ final class etb implements dja {
     static String field_a;
     static String field_b;
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -63 / ((-64 - param0) / 50);
-        return (tv) ((Object) new ThrusterBehaviour());
+        return (SerializableGameState) ((Object) new ThrusterBehaviour());
     }
 
     final static java.awt.Container b(int param0) {
@@ -34,11 +34,11 @@ final class etb implements dja {
         field_b = null;
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          return (tv[]) null;
+          return (SerializableGameState[]) null;
         }
-        return (tv[]) ((Object) new ThrusterBehaviour[param1]);
+        return (SerializableGameState[]) ((Object) new ThrusterBehaviour[param1]);
     }
 
     static {

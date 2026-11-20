@@ -89,7 +89,7 @@ final class SetFogOfWarSensorRange extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(47, 62, arguments[0].a(109));
+          SetMachineGunEnergyUsed.a(47, 62, arguments[0].intValue(109));
           if (obfuscationGuard > -119) {
             SetFogOfWarSensorRange.a(115);
           }

@@ -25,12 +25,12 @@ final class ehb {
             this.field_a = this.field_a - 1;
           } else {
             var5 = this.field_c.b((byte) 77);
-            var5.b(-3846);
-            var5.d((byte) -35);
+            var5.unlink(-3846);
+            var5.unlinkSecondary((byte) -35);
             if (var5 == this.field_b) {
               var5 = this.field_c.b((byte) -128);
-              var5.b(-3846);
-              var5.d((byte) -35);
+              var5.unlink(-3846);
+              var5.unlinkSecondary((byte) -35);
             }
           }
           this.field_d.a(param0, param2, (byte) -126);

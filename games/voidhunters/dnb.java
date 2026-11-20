@@ -10,15 +10,15 @@ final class dnb extends IntrusiveNode {
         if (param0 != -39) {
           return (tja) null;
         }
-        bk.field_w.p(-23497);
+        bk.field_w.beginBitRead(-23497);
         tja var1 = (tja) (gva.field_a.a((byte) 69));
         if (!(var1 instanceof utb)) {
-          var1.a(bk.field_w, false);
-          bk.field_w.f((byte) -92);
+          var1.readState(bk.field_w, false);
+          bk.field_w.endBitRead((byte) -92);
           return var1;
         }
         ((utb) ((Object) var1)).a(bk.field_w, 32);
-        bk.field_w.f((byte) -92);
+        bk.field_w.endBitRead((byte) -92);
         return var1;
     }
 

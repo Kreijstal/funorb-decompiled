@@ -24,12 +24,12 @@ final class rpb {
 
     final void a(PacketBuffer param0) {
         int var2 = 0;
-        this.field_g = param0.e((byte) -113);
+        this.field_g = param0.readUnsignedByte((byte) -113);
         this.field_f = new int[this.field_g];
         this.field_a = new int[this.field_g];
         for (var2 = 0; var2 < this.field_g; var2++) {
-          this.field_f[var2] = param0.e(1869);
-          this.field_a[var2] = param0.e(1869);
+          this.field_f[var2] = param0.readUnsignedShort(1869);
+          this.field_a[var2] = param0.readUnsignedShort(1869);
         }
     }
 
@@ -53,9 +53,9 @@ final class rpb {
     }
 
     final void b(PacketBuffer param0) {
-        this.field_e = param0.e((byte) -110);
-        this.field_i = param0.h(19);
-        this.field_j = param0.h(63);
+        this.field_e = param0.readUnsignedByte((byte) -110);
+        this.field_i = param0.readInt(19);
+        this.field_j = param0.readInt(63);
         this.a(param0);
     }
 

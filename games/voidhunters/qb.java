@@ -11,17 +11,17 @@ final class qb implements dja {
         field_a = null;
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 50 / ((param0 + 64) / 50);
-        return (tv) ((Object) new CarouselCommongameInfo());
+        return (SerializableGameState) ((Object) new CarouselCommongameInfo());
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           qb.a(-6);
-          return (tv[]) ((Object) new CarouselCommongameInfo[param1]);
+          return (SerializableGameState[]) ((Object) new CarouselCommongameInfo[param1]);
         }
-        return (tv[]) ((Object) new CarouselCommongameInfo[param1]);
+        return (SerializableGameState[]) ((Object) new CarouselCommongameInfo[param1]);
     }
 
     static {

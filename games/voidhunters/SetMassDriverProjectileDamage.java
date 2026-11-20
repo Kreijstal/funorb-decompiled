@@ -35,7 +35,7 @@ final class SetMassDriverProjectileDamage extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetMassDriverProjectileDamage.a(4);
           }
-          SetMachineGunEnergyUsed.a(143, 62, arguments[0].a(49));
+          SetMachineGunEnergyUsed.a(143, 62, arguments[0].intValue(49));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

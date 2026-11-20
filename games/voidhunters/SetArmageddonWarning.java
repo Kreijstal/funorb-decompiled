@@ -78,19 +78,19 @@ final class SetArmageddonWarning extends ConsoleCommand {
 
     final static void b(int param0, int param1, int param2, int param3) {
         SetTorpedoAcceleration.field_p.position = 0;
-        SetTorpedoAcceleration.field_p.c(0, 12);
-        SetTorpedoAcceleration.field_p.d(jeb.field_b.nextInt(), 332614536);
-        SetTorpedoAcceleration.field_p.d(jeb.field_b.nextInt(), 332614536);
-        SetTorpedoAcceleration.field_p.c(param0, param1);
-        SetTorpedoAcceleration.field_p.c(0, param2);
-        SetTorpedoAcceleration.field_p.a(param3, true);
-        SetTorpedoAcceleration.field_p.a(SetSalvoDamageMultiplier.field_p, bib.field_g, param0 + 16711680);
-        RequestNewestBlackboxRecording.field_p.h(param0 ^ 24335, 18);
+        SetTorpedoAcceleration.field_p.writeByte(0, 12);
+        SetTorpedoAcceleration.field_p.writeInt(jeb.field_b.nextInt(), 332614536);
+        SetTorpedoAcceleration.field_p.writeInt(jeb.field_b.nextInt(), 332614536);
+        SetTorpedoAcceleration.field_p.writeByte(param0, param1);
+        SetTorpedoAcceleration.field_p.writeByte(0, param2);
+        SetTorpedoAcceleration.field_p.writeShort(param3, true);
+        SetTorpedoAcceleration.field_p.rsaEncrypt(SetSalvoDamageMultiplier.field_p, bib.field_g, param0 + 16711680);
+        RequestNewestBlackboxRecording.field_p.writeIsaacByte(param0 ^ 24335, 18);
         int fieldTemp$0 = RequestNewestBlackboxRecording.field_p.position + 1;
         RequestNewestBlackboxRecording.field_p.position = RequestNewestBlackboxRecording.field_p.position + 1;
         int var4 = fieldTemp$0;
-        RequestNewestBlackboxRecording.field_p.a(0, SetTorpedoAcceleration.field_p.payload, -1, SetTorpedoAcceleration.field_p.position);
-        RequestNewestBlackboxRecording.field_p.e(-var4 + RequestNewestBlackboxRecording.field_p.position, -129);
+        RequestNewestBlackboxRecording.field_p.writeBytes(0, SetTorpedoAcceleration.field_p.payload, -1, SetTorpedoAcceleration.field_p.position);
+        RequestNewestBlackboxRecording.field_p.writeLengthByte(-var4 + RequestNewestBlackboxRecording.field_p.position, -129);
     }
 
     SetArmageddonWarning(String param0, Class[] param1, String param2) {
@@ -108,7 +108,7 @@ final class SetArmageddonWarning extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_o = -103;
           }
-          SetMachineGunEnergyUsed.a(61, 62, arguments[0].a(38));
+          SetMachineGunEnergyUsed.a(61, 62, arguments[0].intValue(38));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

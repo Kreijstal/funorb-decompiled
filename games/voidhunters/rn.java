@@ -47,7 +47,7 @@ final class rn extends DualLinkNode {
             return;
           }
           while (true) {
-            var3_int = param0.e((byte) -94);
+            var3_int = param0.readUnsignedByte((byte) -94);
             if (0 == var3_int) {
               return;
             }
@@ -87,12 +87,12 @@ final class rn extends DualLinkNode {
         try {
           if (1 != param0) {
             if (param0 == 2) {
-              var4_int = param2.e((byte) -122);
+              var4_int = param2.readUnsignedByte((byte) -122);
               this.field_q = new char[var4_int];
               this.field_l = new int[var4_int];
               for (var5 = 0; var5 < var4_int; var5++) {
-                this.field_l[var5] = param2.e(SetFixedaim.a((int) param1, 1886));
-                var6 = param2.d((byte) -114);
+                this.field_l[var5] = param2.readUnsignedShort(SetFixedaim.a((int) param1, 1886));
+                var6 = param2.readByte((byte) -114);
                 stackIn_8_0 = this.field_q;
                 stackIn_8_1 = var5;
                 if (var6 == 0) {
@@ -104,12 +104,12 @@ final class rn extends DualLinkNode {
               }
             } else {
               if (param0 == 3) {
-                var4_int = param2.e((byte) -106);
+                var4_int = param2.readUnsignedByte((byte) -106);
                 this.field_n = new int[var4_int];
                 this.field_m = new char[var4_int];
                 for (var5 = 0; var5 < var4_int; var5++) {
-                  this.field_n[var5] = param2.e(1869);
-                  var6 = param2.d((byte) -114);
+                  this.field_n[var5] = param2.readUnsignedShort(1869);
+                  var6 = param2.readByte((byte) -114);
                   stackIn_15_0 = this.field_m;
                   stackIn_15_1 = var5;
                   if (0 == var6) {
@@ -126,7 +126,7 @@ final class rn extends DualLinkNode {
               }
             }
           } else {
-            this.field_p = param2.a(param1 - 20);
+            this.field_p = param2.readString(param1 - 20);
           }
           if (param1 != 19) {
             this.field_n = (int[]) null;

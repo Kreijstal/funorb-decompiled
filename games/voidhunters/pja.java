@@ -36,7 +36,7 @@ class pja extends le {
             this.field_m = 105;
           }
           if (0 == param0) {
-            this.field_m = param2.e(1869);
+            this.field_m = param2.readUnsignedShort(1869);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

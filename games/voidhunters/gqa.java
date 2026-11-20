@@ -5,40 +5,40 @@ final class gqa implements DiffableState {
     String field_b;
     int field_a;
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 > -109) {
-            faa var4 = (faa) null;
-            this.b((faa) null, 29);
+            IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
+            this.writeState((IsaacPacketBuffer) null, 29);
           }
-          param0.a(-632, this.field_a, 32);
-          param0.r(32712);
-          param0.b((byte) 0, this.field_b);
-          param0.q(-110);
+          param0.writeBits(-632, this.field_a, 32);
+          param0.endBitWrite(32712);
+          param0.writeCircumfixedString((byte) 0, this.field_b);
+          param0.beginBitWrite(-110);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gqa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         if (param1) {
           return;
         }
         try {
-          this.field_a = param0.i(0, 32);
-          param0.f((byte) -118);
-          this.field_b = param0.g(-1609246200);
-          param0.p(-23497);
+          this.field_a = param0.readBits(0, 32);
+          param0.endBitRead((byte) -118);
+          this.field_b = param0.readCircumfixedString(-1609246200);
+          param0.beginBitRead(-23497);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gqa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         gqa var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        faa var5 = null;
+        IsaacPacketBuffer var5 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -55,8 +55,8 @@ final class gqa implements DiffableState {
             var4 = 1;
           }
           if (obfuscationGuard >= -19) {
-            var5 = (faa) null;
-            this.a((faa) null, false);
+            var5 = (IsaacPacketBuffer) null;
+            this.readState((IsaacPacketBuffer) null, false);
           }
           if (var4 == 0) {
             return;
@@ -77,7 +77,7 @@ final class gqa implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         gqa var5 = null;
         gqa var6 = null;
         try {
@@ -93,7 +93,7 @@ final class gqa implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         gqa var3 = null;
         int var4 = 0;
         boolean stackIn_5_0 = false;

@@ -19,7 +19,7 @@ final class SetMachineGunFireForce extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          SetMachineGunEnergyUsed.a(103, 62, arguments[0].a(96));
+          SetMachineGunEnergyUsed.a(103, 62, arguments[0].intValue(96));
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -66,10 +66,10 @@ final class SetMachineGunFireForce extends ConsoleCommand {
           if (null == SocketConnector.field_c) {
             return;
           }
-          var2 = (pd) (SocketConnector.field_c.d(0));
+          var2 = (pd) (SocketConnector.field_c.first(0));
           while (var2 != null) {
             sn.a(var2.field_e, (byte) 83, var2.field_h, var2.field_f, var2.field_i, 16711935, param1);
-            var2 = (pd) (SocketConnector.field_c.a((byte) 108));
+            var2 = (pd) (SocketConnector.field_c.next((byte) 108));
           }
           if (param0 == -99) {
             return;

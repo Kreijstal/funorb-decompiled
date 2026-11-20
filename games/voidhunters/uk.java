@@ -4,9 +4,9 @@
 final class uk implements dja {
     static String field_a;
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -55 / ((-64 - param0) / 50);
-        return (tv) ((Object) new TeamShipComponentCondition());
+        return (SerializableGameState) ((Object) new TeamShipComponentCondition());
     }
 
     final static boolean a(int param0, fm param1, fm param2) {
@@ -57,12 +57,12 @@ final class uk implements dja {
         }
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           this.a((byte) 15);
-          return (tv[]) ((Object) new TeamShipComponentCondition[param1]);
+          return (SerializableGameState[]) ((Object) new TeamShipComponentCondition[param1]);
         }
-        return (tv[]) ((Object) new TeamShipComponentCondition[param1]);
+        return (SerializableGameState[]) ((Object) new TeamShipComponentCondition[param1]);
     }
 
     final static void b(byte param0) {

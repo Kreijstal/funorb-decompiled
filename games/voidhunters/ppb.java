@@ -74,8 +74,8 @@ final class ppb {
             ppb.a((String) null, 112, (byte) 96);
           }
           var3 = new ProxySocketConnector();
-          ((SocketConnector) ((Object) var3)).field_b = param1;
-          ((SocketConnector) ((Object) var3)).field_a = param0;
+          ((SocketConnector) ((Object) var3)).port = param1;
+          ((SocketConnector) ((Object) var3)).host = param0;
           stackIn_3_0 = var3;
           return (SocketConnector) ((Object) stackIn_3_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

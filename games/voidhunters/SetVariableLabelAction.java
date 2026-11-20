@@ -32,7 +32,7 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
         int var1 = -42 / ((param0 - 27) / 47);
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException var3 = null;
         int var4 = 0;
         SetVariableLabelAction var5 = null;
@@ -135,11 +135,11 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          super.b(param0, -111);
-          param0.a(-632, this.index, 32);
-          param0.a(-632, this.label, 32);
+          super.writeState(param0, -111);
+          param0.writeBits(-632, this.index, 32);
+          param0.writeBits(-632, this.label, 32);
           if (param1 >= -109) {
             SetVariableLabelAction.c(48);
           }
@@ -187,17 +187,17 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
-          this.index = param0.i(0, 32);
-          this.label = param0.i(0, 32);
+          super.readState(param0, param1);
+          this.index = param0.readBits(0, 32);
+          this.label = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "cf.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         SetVariableLabelAction var3 = null;
         int var4 = 0;
         boolean stackIn_6_0 = false;
@@ -209,7 +209,7 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
         try {
           var4 = -11 % ((22 - param0) / 59);
           var3 = (SetVariableLabelAction) (param1);
-          stackIn_6_0 = (super.a((byte) 96, param1)) || (this.index != var3.index) || (this.label != var3.label);
+          stackIn_6_0 = (super.differsFrom((byte) 96, param1)) || (this.index != var3.index) || (this.label != var3.label);
           return stackIn_6_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -242,7 +242,7 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         SetVariableLabelAction var5 = null;
         SetVariableLabelAction var6 = null;
         try {
@@ -251,7 +251,7 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
           }
           var5 = (SetVariableLabelAction) (param1);
           var6 = var5;
-          super.b((byte) 110, param1);
+          super.copyTo((byte) 110, param1);
           var6.label = this.label;
           var6.index = this.index;
         } catch (RuntimeException runtimeException) {

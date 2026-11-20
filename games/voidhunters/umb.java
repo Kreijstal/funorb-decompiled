@@ -16,7 +16,7 @@ final class umb extends IntrusiveNode implements DiffableState {
         field_d = null;
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException var3 = null;
         int var4 = 0;
         umb var5 = null;
@@ -69,20 +69,20 @@ final class umb extends IntrusiveNode implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          param0.a(-632, this.field_f, 32);
-          param0.a(-632, this.field_g, 32);
+          param0.writeBits(-632, this.field_f, 32);
+          param0.writeBits(-632, this.field_g, 32);
           if (param1 > -109) {
             field_d = (llb) null;
           }
-          vq.a(param0, 43, this.field_e);
+          vq.writeBoolean(param0, 43, this.field_e);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "umb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         umb var3 = null;
         int var4 = 0;
         boolean stackIn_4_0 = false;
@@ -128,7 +128,7 @@ final class umb extends IntrusiveNode implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         umb var4 = (umb) (param1);
         umb var3 = var4;
         var4.field_f = this.field_f;
@@ -143,14 +143,14 @@ final class umb extends IntrusiveNode implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.field_f = param0.i(0, 32);
-          this.field_g = param0.i(0, 32);
-          this.field_e = kv.a(param1, param0);
+          this.field_f = param0.readBits(0, 32);
+          this.field_g = param0.readBits(0, 32);
+          this.field_e = kv.readBoolean(param1, param0);
           if (param1) {
-            tv var4 = (tv) null;
-            this.reportDifferences((tv) null, 89);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.reportDifferences((SerializableGameState) null, 89);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "umb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

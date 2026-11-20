@@ -181,8 +181,8 @@ final class jp extends pf {
           this.a((aja) null, true);
         }
         hua var4 = new hua(param1);
-        var4.field_b = (long)param0;
-        this.field_Ic.b(-10258, var4);
+        var4.key = (long)param0;
+        this.field_Ic.addLast(-10258, var4);
     }
 
     final void a(int param0, boolean param1) {
@@ -450,8 +450,8 @@ final class jp extends pf {
           this.field_Gc = (IntrusiveDeque) null;
         }
         hua var4 = new hua(param2);
-        var4.field_b = (long)param0;
-        this.field_Uc.b(-10258, var4);
+        var4.key = (long)param0;
+        this.field_Uc.addLast(-10258, var4);
     }
 
     final hf a(ekb param0, wib param1) {
@@ -781,11 +781,11 @@ final class jp extends pf {
         var4 = VoidHunters.field_G;
         var2 = 0;
         param0 = param0 & 2147483647;
-        while (!this.field_Ic.b(112)) {
-          var5 = (hua) (this.field_Ic.a(true));
+        while (!this.field_Ic.isEmpty(112)) {
+          var5 = (hua) (this.field_Ic.removeFirst(true));
           incrementValue$3 = var2;
           var2++;
-          tgb.field_c[incrementValue$3] = (int)var5.field_b;
+          tgb.field_c[incrementValue$3] = (int)var5.key;
           this.field_ob = this.field_ob - var5.field_d;
           if (1000 != var2) {
             continue;
@@ -797,11 +797,11 @@ final class jp extends pf {
           jaggl.OpenGL.glDeleteBuffersARB(var2, tgb.field_c, 0);
           var2 = 0;
         }
-        while (!this.field_Uc.b(120)) {
-          var6 = (hua) (this.field_Uc.a(true));
+        while (!this.field_Uc.isEmpty(120)) {
+          var6 = (hua) (this.field_Uc.removeFirst(true));
           incrementValue$2 = var2;
           var2++;
-          tgb.field_c[incrementValue$2] = (int)var6.field_b;
+          tgb.field_c[incrementValue$2] = (int)var6.key;
           this.field_Nb = this.field_Nb - var6.field_d;
           if (var2 != 1000) {
             continue;
@@ -813,8 +813,8 @@ final class jp extends pf {
           jaggl.OpenGL.glDeleteTextures(var2, tgb.field_c, 0);
           var2 = 0;
         }
-        while (!this.field_Cc.b(112)) {
-          var7 = (hua) (this.field_Cc.a(true));
+        while (!this.field_Cc.isEmpty(112)) {
+          var7 = (hua) (this.field_Cc.removeFirst(true));
           incrementValue$1 = var2;
           var2++;
           tgb.field_c[incrementValue$1] = var7.field_d;
@@ -828,11 +828,11 @@ final class jp extends pf {
           jaggl.OpenGL.glDeleteFramebuffersEXT(var2, tgb.field_c, 0);
           var2 = 0;
         }
-        while (!this.field_bd.b(123)) {
-          var8 = (hua) (this.field_bd.a(true));
+        while (!this.field_bd.isEmpty(123)) {
+          var8 = (hua) (this.field_bd.removeFirst(true));
           incrementValue$0 = var2;
           var2++;
-          tgb.field_c[incrementValue$0] = (int)var8.field_b;
+          tgb.field_c[incrementValue$0] = (int)var8.key;
           this.field_mb = this.field_mb - var8.field_d;
           if (var2 != 1000) {
             continue;
@@ -844,21 +844,21 @@ final class jp extends pf {
           jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, tgb.field_c, 0);
           var2 = 0;
         }
-        while (!this.field_yc.b(-94)) {
-          var9 = (hua) (this.field_yc.a(true));
-          jaggl.OpenGL.glDeleteLists((int)var9.field_b, var9.field_d);
+        while (!this.field_yc.isEmpty(-94)) {
+          var9 = (hua) (this.field_yc.removeFirst(true));
+          jaggl.OpenGL.glDeleteLists((int)var9.key, var9.field_d);
         }
-        while (!this.field_Ec.b(-96)) {
-          var10 = this.field_Ec.a(true);
-          jaggl.OpenGL.glDeleteProgramARB((int)var10.field_b);
+        while (!this.field_Ec.isEmpty(-96)) {
+          var10 = this.field_Ec.removeFirst(true);
+          jaggl.OpenGL.glDeleteProgramARB((int)var10.key);
         }
-        while (!this.field_Gc.b(127)) {
-          var11 = this.field_Gc.a(true);
-          jaggl.OpenGL.glDeleteObjectARB(var11.field_b);
+        while (!this.field_Gc.isEmpty(127)) {
+          var11 = this.field_Gc.removeFirst(true);
+          jaggl.OpenGL.glDeleteObjectARB(var11.key);
         }
-        while (!this.field_yc.b(-126)) {
-          var12 = (hua) (this.field_yc.a(true));
-          jaggl.OpenGL.glDeleteLists((int)var12.field_b, var12.field_d);
+        while (!this.field_yc.isEmpty(-126)) {
+          var12 = (hua) (this.field_yc.removeFirst(true));
+          jaggl.OpenGL.glDeleteLists((int)var12.key, var12.field_d);
         }
         if (100663296 < this.g(3554) &&
           (this.field_Tc + 60000L) < wt.a(false)) {
@@ -1035,11 +1035,11 @@ final class jp extends pf {
 
     final synchronized void a(long param0, int param1) {
         IntrusiveNode var4 = new IntrusiveNode();
-        var4.field_b = param0;
+        var4.key = param0;
         if (param1 != 0) {
           return;
         }
-        this.field_Gc.b(-10258, var4);
+        this.field_Gc.addLast(-10258, var4);
     }
 
     final Object a(byte param0, java.awt.Canvas param1) {
@@ -1460,11 +1460,11 @@ final class jp extends pf {
 
     final synchronized void a(int param0, byte param1) {
         IntrusiveNode var3 = new IntrusiveNode();
-        var3.field_b = (long)param0;
+        var3.key = (long)param0;
         if (param1 <= 94) {
           return;
         }
-        this.field_Ec.b(-10258, var3);
+        this.field_Ec.addLast(-10258, var3);
     }
 
     final void m(int param0) {

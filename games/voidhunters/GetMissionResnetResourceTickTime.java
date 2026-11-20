@@ -102,7 +102,7 @@ final class GetMissionResnetResourceTickTime extends ConsoleCommand {
         }
         if (bqa.a(false)) {
           var1 = new kc();
-          es.field_b.b((byte) 87, var1);
+          es.field_b.copyTo((byte) 87, var1);
           var1.blueprint = null;
         }
         byte[] var2 = TickCondition.a(-30234, var1);

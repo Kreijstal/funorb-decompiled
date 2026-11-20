@@ -4,8 +4,8 @@
 final class Mission implements DiffableState {
     private World savedState;
 
-    public final void b(faa param0, int param1) {
-        faa stackIn_2_0 = null;
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
+        IsaacPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         boolean stackIn_3_2 = false;
         RuntimeException stackIn_11_0 = null;
@@ -14,11 +14,11 @@ final class Mission implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          stackIn_2_0 = (faa) (param0);
+          stackIn_2_0 = (IsaacPacketBuffer) (param0);
           stackIn_2_1 = 81;
           stackIn_3_2 = (this.savedState != null);
-          if (vq.a(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
-            this.savedState.b(param0, -120);
+          if (vq.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
+            this.savedState.writeState(param0, -120);
           }
           if (param1 >= -109) {
             this.savedState = (World) null;
@@ -47,7 +47,7 @@ final class Mission implements DiffableState {
         return stackIn_7_0;
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         Mission var4 = null;
         int stackIn_3_0 = 0;
@@ -69,7 +69,7 @@ final class Mission implements DiffableState {
           }
           boolean decompiledFrameRemainder0 = true;
           if ((stackIn_3_0 ^ stackIn_6_1) == 0 && (this.savedState == null ||
-            !this.savedState.a((byte) 96, var4.savedState))) {
+            !this.savedState.differsFrom((byte) 96, var4.savedState))) {
             stackIn_12_0 = false;
             decompiledFrameRemainder0 = false;
           }
@@ -98,18 +98,18 @@ final class Mission implements DiffableState {
         return this.savedState.d(false);
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          if (kv.a(param1, param0)) {
+          if (kv.readBoolean(param1, param0)) {
             if (null == this.savedState) {
               this.savedState = new World();
             }
-            this.savedState.a(param0, false);
+            this.savedState.readState(param0, false);
           } else {
             this.savedState = null;
           }
@@ -128,7 +128,7 @@ final class Mission implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         Mission var3 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -146,7 +146,7 @@ final class Mission implements DiffableState {
             if (null == var3.savedState) {
               var3.savedState = new World();
             }
-            this.savedState.b((byte) 108, var3.savedState);
+            this.savedState.copyTo((byte) 108, var3.savedState);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -163,9 +163,9 @@ final class Mission implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int var4 = 0;
-        tv var5 = null;
+        SerializableGameState var5 = null;
         Mission var6 = null;
         int stackIn_8_0 = 0;
         int stackIn_11_1 = 0;
@@ -177,8 +177,8 @@ final class Mission implements DiffableState {
         try {
           var6 = (Mission) (other);
           if (obfuscationGuard > -19) {
-            var5 = (tv) null;
-            this.reportDifferences((tv) null, 5);
+            var5 = (SerializableGameState) null;
+            this.reportDifferences((SerializableGameState) null, 5);
           }
           if (this.savedState != null &&
             var6.savedState != null) {
@@ -193,7 +193,7 @@ final class Mission implements DiffableState {
           }
           if ((stackIn_8_0 ^ stackIn_11_1) != 0 ||
             this.savedState != null &&
-            this.savedState.a((byte) 82, var6.savedState)) {
+            this.savedState.differsFrom((byte) 82, var6.savedState)) {
             var4 = 1;
             System.out.println("World saved_state has changed. before=" + var6.savedState + ", now=" + this.savedState);
           }
@@ -248,13 +248,13 @@ final class Mission implements DiffableState {
                 if (null == var9.savedShip) {
                   var9.savedShip = new Ship();
                 }
-                var8.b((byte) 92, var9.savedShip);
+                var8.copyTo((byte) 92, var9.savedShip);
                 var9.savedShip.u(-14);
               }
             }
           }
           var5 = var11.f(24797);
-          this.savedState.b((byte) 58, var11);
+          this.savedState.copyTo((byte) 58, var11);
           var6 = -74 / ((param2 - 66) / 59);
           var11.b(-123, false);
           var11.a(0, var5);

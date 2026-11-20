@@ -12,7 +12,7 @@ final class GetLaserFireForce extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 66 % ((70 - param1) / 39);
-          stackIn_1_0 = new eu(param0.a(true), param0.a(true), param0.a(true), param0.a(true), param0.c((byte) -123), param0.e((byte) -90));
+          stackIn_1_0 = new eu(param0.readShort(true), param0.readShort(true), param0.readShort(true), param0.readShort(true), param0.readUnsignedMedium((byte) -123), param0.readUnsignedByte((byte) -90));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

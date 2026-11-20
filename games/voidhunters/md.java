@@ -13,15 +13,15 @@ final class md extends le {
         RuntimeException var2 = null;
         var3 = VoidHunters.field_G;
         try {
-          var4 = (ik) (SetSalvoHoldable.field_o.d(0));
+          var4 = (ik) (SetSalvoHoldable.field_o.first(0));
           while (var4 != null) {
             aeb.a(param0, -21584, var4);
-            var4 = (ik) (SetSalvoHoldable.field_o.a((byte) 8));
+            var4 = (ik) (SetSalvoHoldable.field_o.next((byte) 8));
           }
-          var5 = (br) (SetDebugLineLife.field_p.d(param1));
+          var5 = (br) (SetDebugLineLife.field_p.first(param1));
           while (var5 != null) {
             GetMachineGunProjectileDamage.a(var5, -60, param0);
-            var5 = (br) (SetDebugLineLife.field_p.a((byte) 112));
+            var5 = (br) (SetDebugLineLife.field_p.next((byte) 112));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -101,9 +101,9 @@ final class md extends le {
             return;
           }
           if (param0 == 0) {
-            this.field_i = new ev[param2.e((byte) -105)];
+            this.field_i = new ev[param2.readUnsignedByte((byte) -105)];
             for (var4_int = 0; var4_int < this.field_i.length; var4_int++) {
-              var5 = param2.e((byte) -104);
+              var5 = param2.readUnsignedByte((byte) -104);
               var6 = var5;
               if (var6 == 0) {
                 this.field_i[var4_int] = (ev) ((Object) GetLaserFireForce.a(param2, (byte) 118));
@@ -125,7 +125,7 @@ final class md extends le {
             if (param0 != 1) {
               return;
             }
-            stackIn_22_1 = (param2.e((byte) -115) == 1);
+            stackIn_22_1 = (param2.readUnsignedByte((byte) -115) == 1);
             this.field_g = stackIn_22_1;
           }
           return;

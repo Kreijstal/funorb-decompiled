@@ -128,7 +128,7 @@ final class Projectile extends ara implements DiffableState {
           }
           this.life = this.life - 1;
           if (this.life < 0) {
-            this.b(param0 ^ -3929);
+            this.unlink(param0 ^ -3929);
             if (this.type == 6) {
               param1.a(0, gib.field_a, this.firedTeam, this.firedPlayer, false, this.x, this.y);
             }
@@ -317,38 +317,38 @@ final class Projectile extends ara implements DiffableState {
         return this.firedPlayer;
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          super.b(param0, -111);
-          param0.a(-632, this.angle, 32);
-          param0.a(-632, this.life, 32);
-          param0.a(-632, this.firedTeam, 32);
+          super.writeState(param0, -111);
+          param0.writeBits(-632, this.angle, 32);
+          param0.writeBits(-632, this.life, 32);
+          param0.writeBits(-632, this.firedTeam, 32);
           if (param1 > -109) {
-            faa var4 = (faa) null;
-            this.a((faa) null, true);
+            IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
+            this.readState((IsaacPacketBuffer) null, true);
           }
-          param0.a(-632, this.firedPlayer, 32);
-          param0.a(-632, this.type, 32);
-          param0.a(-632, this.targetBody, 32);
-          param0.a(-632, this.damage, 32);
+          param0.writeBits(-632, this.firedPlayer, 32);
+          param0.writeBits(-632, this.type, 32);
+          param0.writeBits(-632, this.targetBody, 32);
+          param0.writeBits(-632, this.damage, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tj.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
-          this.angle = param0.i(0, 32);
-          this.life = param0.i(0, 32);
-          this.firedTeam = param0.i(0, 32);
+          super.readState(param0, param1);
+          this.angle = param0.readBits(0, 32);
+          this.life = param0.readBits(0, 32);
+          this.firedTeam = param0.readBits(0, 32);
           if (param1) {
             field_r = (String) null;
           }
-          this.firedPlayer = param0.i(0, 32);
-          this.type = param0.i(0, 32);
-          this.targetBody = param0.i(0, 32);
-          this.damage = param0.i(0, 32);
+          this.firedPlayer = param0.readBits(0, 32);
+          this.type = param0.readBits(0, 32);
+          this.targetBody = param0.readBits(0, 32);
+          this.damage = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tj.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -388,13 +388,13 @@ final class Projectile extends ara implements DiffableState {
         this.angle = this.angle | 1;
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         Projectile var5 = null;
         Projectile var6 = null;
         try {
           var5 = (Projectile) (param1);
           var6 = var5;
-          super.b((byte) 103, param1);
+          super.copyTo((byte) 103, param1);
           var6.life = this.life;
           var6.firedTeam = this.firedTeam;
           var6.targetBody = this.targetBody;
@@ -424,7 +424,7 @@ final class Projectile extends ara implements DiffableState {
         this.angle = this.angle | 1;
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         boolean stackIn_11_0 = false;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
@@ -436,7 +436,7 @@ final class Projectile extends ara implements DiffableState {
         try {
           var4 = -41 / ((param0 - 22) / 59);
           var3 = (Projectile) (param1);
-          stackIn_11_0 = (super.a((byte) -121, param1)) || (this.angle != var3.angle) || (this.life != var3.life) || (this.firedTeam != var3.firedTeam) || (this.firedPlayer != var3.firedPlayer) || (this.type != var3.type) || (this.targetBody != var3.targetBody) || (var3.damage != this.damage);
+          stackIn_11_0 = (super.differsFrom((byte) -121, param1)) || (this.angle != var3.angle) || (this.life != var3.life) || (this.firedTeam != var3.firedTeam) || (this.firedPlayer != var3.firedPlayer) || (this.type != var3.type) || (this.targetBody != var3.targetBody) || (var3.damage != this.damage);
           return stackIn_11_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -500,7 +500,7 @@ final class Projectile extends ara implements DiffableState {
         return this.type;
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;

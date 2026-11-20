@@ -47,7 +47,7 @@ final class lhb implements dja {
                 return stackIn_25_0;
               }
               param1.field_a = param1.field_a - 1;
-              var5.field_f.b(-10258, lhb.a((byte) 33, param1));
+              var5.field_f.addLast(-10258, lhb.a((byte) 33, param1));
               if (param1.a(35)) {
                 throw new ojb(var5.field_g);
               }
@@ -103,17 +103,17 @@ final class lhb implements dja {
         }
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           this.a((byte) -4);
-          return (tv[]) ((Object) new GrapplingHook[param1]);
+          return (SerializableGameState[]) ((Object) new GrapplingHook[param1]);
         }
-        return (tv[]) ((Object) new GrapplingHook[param1]);
+        return (SerializableGameState[]) ((Object) new GrapplingHook[param1]);
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -113 / ((param0 + 64) / 50);
-        return (tv) ((Object) new GrapplingHook());
+        return (SerializableGameState) ((Object) new GrapplingHook());
     }
 
     public static void b(byte param0) {

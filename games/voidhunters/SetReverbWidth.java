@@ -38,14 +38,14 @@ final class SetReverbWidth extends ConsoleCommand {
                 var8[var6] = RequestNewestBlackboxRecording.field_p.payload[var6];
               }
               var6_ref_c = new c((long)var4 + var2_long, RequestNewestBlackboxRecording.field_p.position, var17);
-              SetResourceNodeCaptureTime.field_o.b(param1 ^ 22878, var6_ref_c);
+              SetResourceNodeCaptureTime.field_o.addLast(param1 ^ 22878, var6_ref_c);
               RequestNewestBlackboxRecording.field_p.position = 0;
             }
-            var9 = (c) (SetResourceNodeCaptureTime.field_o.d(0));
+            var9 = (c) (SetResourceNodeCaptureTime.field_o.first(0));
             var13 = var9;
             if (var13 != null &&
               var13.field_e < var2_long) {
-              var13.b(-3846);
+              var13.unlink(-3846);
               var10 = 0;
               var6Lifetime1 = var10;
               while (var13.field_d > var10) {
@@ -80,7 +80,7 @@ final class SetReverbWidth extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          oma.field_i = arguments[0].d(0);
+          oma.field_i = arguments[0].floatValue(0);
           if (obfuscationGuard <= -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

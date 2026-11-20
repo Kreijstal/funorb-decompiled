@@ -14,7 +14,7 @@ final class SetPointDefenceLaserProjectileDamage extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(150, 62, arguments[0].a(127));
+          SetMachineGunEnergyUsed.a(150, 62, arguments[0].intValue(127));
           if (obfuscationGuard <= -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;
@@ -35,7 +35,7 @@ final class SetPointDefenceLaserProjectileDamage extends ConsoleCommand {
         }
     }
 
-    final static uca a(int param0, kda param1, faa param2, byte param3) {
+    final static uca a(int param0, kda param1, IsaacPacketBuffer param2, byte param3) {
         int var11_int = 0;
         uca stackIn_3_0 = null;
         int stackIn_9_0 = 0;
@@ -49,7 +49,7 @@ final class SetPointDefenceLaserProjectileDamage extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         byte[] var4 = null;
         RuntimeException var4_ref = null;
-        faa var5 = null;
+        IsaacPacketBuffer var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var8 = 0;
@@ -77,30 +77,30 @@ final class SetPointDefenceLaserProjectileDamage extends ConsoleCommand {
             return null;
           }
           var5 = SetCountermeasuresPulseRadius.a(9, var16);
-          var6 = var5.e((byte) -95);
-          var7 = var5.h(23);
-          stackIn_9_0 = (var5.e((byte) -101) == 0) ? 0 : 1;
+          var6 = var5.readUnsignedByte((byte) -95);
+          var7 = var5.readInt(23);
+          stackIn_9_0 = (var5.readUnsignedByte((byte) -101) == 0) ? 0 : 1;
           var8 = stackIn_9_0;
-          var9 = new String[var5.e((byte) -105)];
+          var9 = new String[var5.readUnsignedByte((byte) -105)];
           for (var11_int = 0; var9.length > var11_int; var11_int++) {
-            stackIn_14_0 = (var5.e((byte) -114) != 1) ? 0 : 1;
+            stackIn_14_0 = (var5.readUnsignedByte((byte) -114) != 1) ? 0 : 1;
             var12 = stackIn_14_0;
             if (var12 != 0) {
-              var9[var11_int] = var5.g(-1609246200);
+              var9[var11_int] = var5.readCircumfixedString(-1609246200);
             }
           }
           var10 = -2;
-          var10Lifetime1 = var5.d((byte) -114);
+          var10Lifetime1 = var5.readByte((byte) -114);
           if (-1 == var10Lifetime1) {
             var10Lifetime1 = -2;
           }
           var11 = new uca(true, var9, var10Lifetime1, var8 != 0, var6, var7, false);
-          stackIn_25_0 = (var5.e((byte) -116) != 1) ? 0 : 1;
+          stackIn_25_0 = (var5.readUnsignedByte((byte) -116) != 1) ? 0 : 1;
           var12Lifetime1 = stackIn_25_0;
           if (var12Lifetime1 != 0) {
-            var5.p(-23497);
+            var5.beginBitRead(-23497);
             var11.field_m.a(-62, var5);
-            var5.f((byte) -81);
+            var5.endBitRead((byte) -81);
             param1.a(0, GetThrusterSmallForce.field_o, var11.field_m.carouselInfo);
           }
           var11.field_m.field_j = param1.a(true, -13027);

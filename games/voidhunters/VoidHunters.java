@@ -185,7 +185,7 @@ public final class VoidHunters extends ms {
           olb.d(param1 + 991426336);
           lu.field_d = false;
           wgb.field_f = 6;
-          BodyInZoneCondition.field_c = qga.field_b.a(-1);
+          BodyInZoneCondition.field_c = qga.field_b.readString(-1);
           return;
         }
         boolean decompiledFrameRemainder0 = true;
@@ -273,7 +273,7 @@ public final class VoidHunters extends ms {
             var3 = null;
             if (!GetThrusterSmallForce.field_o) {
               if (SetMissionTerrainDebrisProbability.field_p) {
-                var3 = ndb.field_a;
+                var3 = ProxyAuthenticationException.field_a;
               }
             } else {
               var3 = vqa.field_g;
@@ -290,7 +290,7 @@ public final class VoidHunters extends ms {
               return;
             }
             if (param0 == 63) {
-              var4 = qga.field_b.e((byte) -107);
+              var4 = qga.field_b.readUnsignedByte((byte) -107);
               if (var3 != null) {
                 ((uca) (var3)).field_m.field_f = var4;
                 decompiledFrameRemainder0 = (null != vqa.field_g);
@@ -305,7 +305,7 @@ public final class VoidHunters extends ms {
             if (decompiledFrameRemainder0) {
               if (param0 != 64) {
                 if (param0 == 65) {
-                  var4Lifetime1 = qga.field_b.e((byte) -110);
+                  var4Lifetime1 = qga.field_b.readUnsignedByte((byte) -110);
                   if (var3 != null) {
                     ((uca) (var3)).field_m.field_k = var4Lifetime1;
                     if (null == vqa.field_g) {
@@ -316,7 +316,7 @@ public final class VoidHunters extends ms {
                   return;
                 }
                 if (param0 == 66) {
-                  var4Lifetime1Lifetime1 = qga.field_b.e((byte) -128);
+                  var4Lifetime1Lifetime1 = qga.field_b.readUnsignedByte((byte) -128);
                   if (var3 != null) {
                     ((uca) (var3)).field_B = var4Lifetime1Lifetime1;
                     if (null == vqa.field_g) {
@@ -346,7 +346,7 @@ public final class VoidHunters extends ms {
                 this.e(97);
                 return;
               }
-              var4Lifetime2 = qga.field_b.e((byte) -90);
+              var4Lifetime2 = qga.field_b.readUnsignedByte((byte) -90);
               if (var3 != null &&
                 !di.field_l.a(-28208)) {
                 ((uca) (var3)).field_m.field_j = var4Lifetime2;
@@ -360,7 +360,7 @@ public final class VoidHunters extends ms {
             GetDebrisThrowable.a(false, "Start game packet");
             olb.d(991426348);
             vqa.field_g = null;
-            ndb.field_a = null;
+            ProxyAuthenticationException.field_a = null;
             var8 = SetPointDefenceLaserProjectileDamage.a(param0, di.field_l, qga.field_b, (byte) 120);
             var3Lifetime1 = var8;
             if (var8 != null) {
@@ -374,7 +374,7 @@ public final class VoidHunters extends ms {
                 SetDebrisSurvives.e((byte) -76);
               } else {
                 SetMissionTerrainDebrisProbability.field_p = true;
-                ndb.field_a = var8;
+                ProxyAuthenticationException.field_a = var8;
               }
               SetMassDriverFireForce.field_o = false;
               wgb.field_f = -1;
@@ -478,7 +478,7 @@ public final class VoidHunters extends ms {
         di.field_l.a(RequestNewestBlackboxRecording.field_p, -114);
         if (!GetPhasedEnergyBeamPulsetime.e((byte) 111)) {
           while (true) {
-            var7 = (ea) (SetGrapplingHookCooldown.field_o.a(true));
+            var7 = (ea) (SetGrapplingHookCooldown.field_o.removeFirst(true));
             if (var7 == null) {
               break;
             }
@@ -502,8 +502,8 @@ public final class VoidHunters extends ms {
         if ((ssa.b(2) ||
           (vqa.field_g != null &&
           vqa.field_g.field_m.carouselInfo.field_k ||
-          ndb.field_a != null &&
-          ndb.field_a.field_m.carouselInfo.field_k) &&
+          ProxyAuthenticationException.field_a != null &&
+          ProxyAuthenticationException.field_a.field_m.carouselInfo.field_k) &&
           null != di.field_l &&
           null == di.field_l.field_j) && (wh.g(-114) &&
           SetMachineGunEnergyUsed.field_o[82] &&
@@ -679,7 +679,7 @@ public final class VoidHunters extends ms {
         cl var11;
         var7 = field_G;
         if (vqa.field_g == null &&
-          null == ndb.field_a) {
+          null == ProxyAuthenticationException.field_a) {
           stackIn_5_0 = 0;
         } else {
           stackIn_5_0 = 1;
@@ -712,7 +712,7 @@ public final class VoidHunters extends ms {
             } else {
               var4 = vqa.field_g;
               if (var4 == null) {
-                var4 = ndb.field_a;
+                var4 = ProxyAuthenticationException.field_a;
               }
               if (var4 != null) {
                 var5 = var4.k(-18620);
@@ -866,12 +866,12 @@ public final class VoidHunters extends ms {
         ShipBlueprint.a(0);
         GameKeyHandler.a(-106);
         ms.d(false);
-        ClientException.a(127);
+        ClientException.clearSharedReferences(127);
         bi.b(-19766);
-        MouseWheelInput.a(-25692);
+        MouseWheelInput.clearSharedReferences(-25692);
         dma.b();
         asb.a((byte) 112);
-        PacketBuffer.j(-38);
+        PacketBuffer.clearSharedReferences(-38);
         wt.a(-101);
         tc.a((byte) 40);
         kia.a(3553);
@@ -1025,7 +1025,7 @@ public final class VoidHunters extends ms {
         cna.h(1);
         bs.a((byte) 42);
         ooa.h(126);
-        DualLinkNode.d(-31049);
+        DualLinkNode.clearSharedReferences(-31049);
         qc.a((byte) 78);
         ffb.a(-106);
         kw.g((byte) 124);
@@ -1093,8 +1093,8 @@ public final class VoidHunters extends ms {
         pfb.a(118);
         bbb.a(0);
         jw.a(false);
-        SocketConnector.a((byte) -109);
-        ndb.a(91);
+        SocketConnector.clearSharedReferences((byte) -109);
+        ProxyAuthenticationException.clearSharedReferences(91);
         MissionGenerationData.a((byte) -125);
         TargetLock.a(true);
         MapClearanceArea.a((byte) -128);
@@ -1130,7 +1130,7 @@ public final class VoidHunters extends ms {
         vq.i((byte) -81);
         sha.f(1);
         nga.b((byte) -126);
-        IterableNodeHashTable.b(!param0 ? true : false);
+        SecondaryNodeDeque.clearSharedReferences(!param0 ? true : false);
         al.a(true);
         rlb.a(-120);
         fbb.a(param0);
@@ -1170,7 +1170,7 @@ public final class VoidHunters extends ms {
         ri.a(41);
         ska.e(5697);
         bna.a(!param0 ? true : false);
-        ProxySocketConnector.b(true);
+        ProxySocketConnector.clearSharedReferences(true);
         gab.a(15325);
         pja.d(-1);
         wv.d(65280);
@@ -1200,12 +1200,12 @@ public final class VoidHunters extends ms {
         hk.d(-1210841460);
         oqb.e((byte) -123);
         hc.a();
-        NodeHashTableIterator.a((byte) -101);
+        SecondaryNodeDequeIterator.clearSharedReferences((byte) -101);
         lia.a(97);
         uva.a();
         woa.a(-16777216);
         cs.a((byte) 111);
-        ImageProducerRasterBuffer.c((byte) -128);
+        ImageProducerRasterBuffer.clearSharedReferences((byte) -128);
         r.e((byte) -123);
         ct.a((byte) -96);
         mb.f((byte) -122);
@@ -1280,7 +1280,7 @@ public final class VoidHunters extends ms {
         ujb.a((byte) -111);
         lw.a(false);
         kob.a(127);
-        ConsoleCommand.a(true);
+        ConsoleCommand.clearSharedReferences(true);
         gva.a(true);
         qab.b(0);
         kua.a(181765988);
@@ -1856,7 +1856,7 @@ public final class VoidHunters extends ms {
         if (null != psb.field_b) {
           VariableCondition.b((byte) 86);
         }
-        NodeHashTableIterator.a(1);
+        SecondaryNodeDequeIterator.a(1);
         if (param0 >= -102) {
           VoidHunters.b(63, 91);
         }
@@ -1872,7 +1872,7 @@ public final class VoidHunters extends ms {
         boolean stackIn_44_2 = false;
         boolean stackIn_48_0 = false;
         int stackIn_59_0 = 0;
-        faa stackIn_118_0 = null;
+        IsaacPacketBuffer stackIn_118_0 = null;
         int stackIn_118_1 = 0;
         int stackIn_119_2 = 0;
         boolean stackIn_133_0 = false;
@@ -2042,7 +2042,7 @@ public final class VoidHunters extends ms {
             }
             GetShieldsDirectionalRadius.a((byte) 21, var3 != 0);
             if (SetMissionTerrainDebrisProbability.field_p) {
-              ndb.field_a.a((byte) 98, var4 != 0);
+              ProxyAuthenticationException.field_a.a((byte) 98, var4 != 0);
             }
             if (GetThrusterSmallForce.field_o) {
               if (vqa.field_g == null) {
@@ -2101,7 +2101,7 @@ public final class VoidHunters extends ms {
                   }
                 }
                 if (var7Lifetime2 != 0) {
-                  RequestNewestBlackboxRecording.field_p.h(24335, 69);
+                  RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 69);
                   stackIn_118_0 = RequestNewestBlackboxRecording.field_p;
                   stackIn_118_1 = 0;
                   if (mjb.field_e) {
@@ -2109,7 +2109,7 @@ public final class VoidHunters extends ms {
                   } else {
                     stackIn_119_2 = 0;
                   }
-                  ((faa) (Object) stackIn_118_0).c(stackIn_118_1, stackIn_119_2);
+                  ((IsaacPacketBuffer) (Object) stackIn_118_0).writeByte(stackIn_118_1, stackIn_119_2);
                 }
                 if (var7Lifetime2 == 0 && (SetBombletSprayProjectileDamage.field_o != 80 ||
                   SetFightersPerPlayerMaximum.field_p) && SetMassDriverEnergyUsed.a(13, 15, 12, (byte) 23)) {
@@ -2122,7 +2122,7 @@ public final class VoidHunters extends ms {
                 }
               }
               if (SetMissionTerrainDebrisProbability.field_p) {
-                ndb.field_a.d((byte) -111);
+                ProxyAuthenticationException.field_a.d((byte) -111);
               }
               if (!GetThrusterSmallForce.field_o) {
                 continue;
@@ -2147,12 +2147,12 @@ public final class VoidHunters extends ms {
           var8Lifetime1 = -(vga.field_b * vga.field_b) + var7Lifetime1;
           var9 = 120 * var8Lifetime1 / var7Lifetime1 + nv.field_v;
           GetDebrisProjectileCollision.a(0, var9);
-          if (PlayerVote.field_c.d(0) != null) {
+          if (PlayerVote.field_c.first(0) != null) {
             fieldTemp$0 = wva.field_b + 1;
             wva.field_b = wva.field_b + 1;
             if (fieldTemp$0 == 335) {
               wva.field_b = 0;
-              PlayerVote.field_c.a(true);
+              PlayerVote.field_c.removeFirst(true);
             }
           }
         }
@@ -2160,7 +2160,7 @@ public final class VoidHunters extends ms {
           wu.a(false, false);
         }
         if (-4 == wgb.field_f) {
-          RequestNewestBlackboxRecording.field_p.h(24335, 9);
+          RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 9);
           wgb.field_f = GetArmageddonTimerStart.field_o;
           lu.field_d = true;
           vga.field_b = GetRepairModePower.field_o;
@@ -2329,7 +2329,7 @@ public final class VoidHunters extends ms {
             fr.a(SetSalvoDamageMultiplier.e(83), true);
             BodyCondition.b(-1);
           }
-          var3 = (hua) (PlayerVote.field_c.d(0));
+          var3 = (hua) (PlayerVote.field_c.first(0));
           if (var3 != null) {
             var5_int = wva.field_b;
             if (var5_int < 80) {

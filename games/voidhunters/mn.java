@@ -42,7 +42,7 @@ final class mn {
                 SetShieldsDirectionalArcParticleSpeedDownshift.a(101, var5, var4_int);
               }
               var6 = SetReverbDry.a(var4_int, (byte) 19);
-              IterableNodeHashTable.field_c[var4_int].field_tb = GetGrapplingHookAimspeed.field_o[var6];
+              SecondaryNodeDeque.field_c[var4_int].field_tb = GetGrapplingHookAimspeed.field_o[var6];
               lob.field_c[var4_int].field_R = SetMissileLauncherProjectiles.field_o[var6];
             }
           }

@@ -24,28 +24,28 @@ final class nl extends IntrusiveNode {
         var3 = VoidHunters.field_G;
         try {
           kt.field_l = param0;
-          var2 = (ana) (GetToggledScoreboard.field_p.d(param1 + 13205));
+          var2 = (ana) (GetToggledScoreboard.field_p.first(param1 + 13205));
           if (param1 != -13205) {
             nl.a(-88);
           }
           while (var2 != null) {
-            if (var2.field_g.b((byte) -63)) {
+            if (var2.field_g.isLinked((byte) -63)) {
               var2.field_e.e(128 + kt.field_l * var2.field_d >> 8);
             } else {
-              var2.b(-3846);
+              var2.unlink(-3846);
             }
-            var2 = (ana) (GetToggledScoreboard.field_p.a((byte) 61));
+            var2 = (ana) (GetToggledScoreboard.field_p.next((byte) 61));
           }
           if (null != GetSniperCannonReload.field_o) {
-            var2Lifetime1 = (ana) (GetSniperCannonReload.field_o.d(0));
+            var2Lifetime1 = (ana) (GetSniperCannonReload.field_o.first(0));
             while (var2Lifetime1 != null) {
-              stackIn_13_0 = var2Lifetime1.field_g.b((byte) -63);
+              stackIn_13_0 = var2Lifetime1.field_g.isLinked((byte) -63);
               if (!stackIn_13_0) {
-                var2Lifetime1.b(param1 ^ 15505);
+                var2Lifetime1.unlink(param1 ^ 15505);
               } else {
                 var2Lifetime1.field_e.e(kt.field_l * var2Lifetime1.field_d + 128 >> 8);
               }
-              var2Lifetime1 = (ana) (GetSniperCannonReload.field_o.a((byte) 100));
+              var2Lifetime1 = (ana) (GetSniperCannonReload.field_o.next((byte) 100));
             }
             return;
           }

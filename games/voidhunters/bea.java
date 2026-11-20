@@ -528,10 +528,10 @@ final class bea implements DiffableState {
             }
           }
           var6 = var20.getSpawnPoints((byte) 24);
-          var7 = (rdb) (var6.d(0));
+          var7 = (rdb) (var6.first(0));
           while (var7 != null) {
             var7.a(mjb.b(param0 + 21958, var7.getTeam(121)), (byte) -96);
-            var7 = (rdb) (var6.a((byte) 66));
+            var7 = (rdb) (var6.next((byte) 66));
           }
           if (param0 != -1) {
             this.optionTotals = (int[]) null;
@@ -776,7 +776,7 @@ final class bea implements DiffableState {
               if (!(var7 instanceof Ship)) {
                 if (var7 instanceof Debris) {
                   var13 = new Debris();
-                  var7.b((byte) 67, var13);
+                  var7.copyTo((byte) 67, var13);
                   var13.a(GameKeyHandler.a(22433, var13.e(0) + 4096), -93);
                   var13.a(-var13.x, -var13.y, (byte) -112);
                   param0.world.a(var13, (byte) 53);
@@ -784,7 +784,7 @@ final class bea implements DiffableState {
                 }
               } else {
                 var12 = new Ship();
-                var7.b((byte) 66, var12);
+                var7.copyTo((byte) 66, var12);
                 var12.chassis.g(0);
                 var12.a(GameKeyHandler.a(22433, 4096 + var12.e(0)), -29);
                 var12.a(-var12.x, -var12.y, (byte) 45);
@@ -968,7 +968,7 @@ final class bea implements DiffableState {
           for (var9_int = param0; var9_int < param1.length; var9_int++) {
             var10 = param1[var9_int];
             var11 = new MissionEvent();
-            var10.b((byte) 64, var11);
+            var10.copyTo((byte) 64, var11);
             var12 = var11.getConditions((byte) -128);
             var13 = var11.getActions((byte) -42);
             if (var12 != null) {
@@ -1106,7 +1106,7 @@ final class bea implements DiffableState {
           var6 = 1;
           var7 = 2;
           if (param0 <= 107) {
-            this.b((byte) 3, (tv) null);
+            this.copyTo((byte) 3, (SerializableGameState) null);
           }
           var8 = 500;
           var9 = new MissionEvent();
@@ -1217,7 +1217,7 @@ final class bea implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         Class[] var3 = null;
         dja[] var4 = null;
         RuntimeException stackIn_5_0 = null;
@@ -1226,7 +1226,7 @@ final class bea implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          this.seed = param0.i(0, 32);
+          this.seed = param0.readBits(0, 32);
           this.optionTotals = wkb.a((byte) 37, this.optionTotals, param0, 8);
           var3 = new Class[]{rgb.class, ptb.class};
           var4 = new dja[]{rma.field_d, GetFighterBayReload.field_q};
@@ -1744,7 +1744,7 @@ final class bea implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         bea var3 = null;
         int var4 = 0;
         boolean stackIn_6_0 = false;
@@ -2170,7 +2170,7 @@ final class bea implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         bea var3 = null;
         ShipBody[] discarded$0 = null;
         Class[] var4 = null;
@@ -2784,7 +2784,7 @@ final class bea implements DiffableState {
             for (var5 = 0; var5 < param2.length; var5++) {
               var6 = param2[var5];
               var7 = new MapZone(0, 0);
-              var6.b((byte) 107, var7);
+              var6.copyTo((byte) 107, var7);
               var7.x = -var7.width - var7.x;
               var7.y = -var7.y - var7.height;
               param1.a(5706, var7);
@@ -3216,7 +3216,7 @@ final class bea implements DiffableState {
             }
           }
           if (param3 != 1) {
-            this.b((byte) 84, (tv) null);
+            this.copyTo((byte) 84, (SerializableGameState) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -3373,10 +3373,10 @@ final class bea implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         Class[] var3 = null;
         try {
-          param0.a(-632, this.seed, 32);
+          param0.writeBits(-632, this.seed, 32);
           if (param1 >= -109) {
             field_f = (float[]) null;
           }
@@ -3423,7 +3423,7 @@ final class bea implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int var4 = 0;
         bea var5 = null;
         RuntimeException stackIn_15_0 = null;

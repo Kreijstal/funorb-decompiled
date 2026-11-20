@@ -13,17 +13,17 @@ final class lp implements dja {
         }
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -107 / ((-64 - param0) / 50);
-        return (tv) ((Object) new uqb());
+        return (SerializableGameState) ((Object) new uqb());
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_a = (String) null;
-          return (tv[]) ((Object) new uqb[param1]);
+          return (SerializableGameState[]) ((Object) new uqb[param1]);
         }
-        return (tv[]) ((Object) new uqb[param1]);
+        return (SerializableGameState[]) ((Object) new uqb[param1]);
     }
 
     static {

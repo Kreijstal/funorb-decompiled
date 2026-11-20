@@ -5,11 +5,11 @@ final class sh {
     static byte[][] field_a;
 
     final static void a(int param0, int param1, int param2) {
-        faa var3 = RequestNewestBlackboxRecording.field_p;
-        var3.h(24335, param2);
-        var3.c(0, 3);
-        var3.c(0, 9);
-        var3.a(param0, true);
+        IsaacPacketBuffer var3 = RequestNewestBlackboxRecording.field_p;
+        var3.writeIsaacByte(24335, param2);
+        var3.writeByte(0, 3);
+        var3.writeByte(0, 9);
+        var3.writeShort(param0, true);
         if (param1 == -1) {
           return;
         }
@@ -53,14 +53,14 @@ final class sh {
           if (null == SocketConnector.field_c) {
             return;
           }
-          var1 = (pd) (SocketConnector.field_c.d(0));
+          var1 = (pd) (SocketConnector.field_c.first(0));
           while (var1 != null) {
             fieldTemp$0 = var1.field_d;
             var1.field_d = var1.field_d - 1;
             if (fieldTemp$0 == 0) {
-              var1.b(param0 ^ -24158);
+              var1.unlink(param0 ^ -24158);
             }
-            var1 = (pd) (SocketConnector.field_c.a((byte) 12));
+            var1 = (pd) (SocketConnector.field_c.next((byte) 12));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

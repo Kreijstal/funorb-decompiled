@@ -137,18 +137,18 @@ final class ga extends fnb {
           }
           if (this.field_o) {
             var2_int = 1;
-            var3 = this.field_i.d(0);
+            var3 = this.field_i.first(0);
             while (var3 != null) {
-              var4 = (int)var3.field_b;
+              var4 = (int)var3.key;
               if (this.field_d[var4] == 0) {
                 discarded$3 = this.a(1, -26489, var4);
               }
               if (this.field_d[var4] != 0) {
-                var3.b(-3846);
+                var3.unlink(-3846);
               } else {
                 var2_int = 0;
               }
-              var3 = this.field_i.a((byte) 80);
+              var3 = this.field_i.next((byte) 80);
             }
             scanLoop1: while (true) {
               if (this.field_t.field_j.length > this.field_h) {
@@ -162,9 +162,9 @@ final class ga extends fnb {
                   }
                   if (this.field_d[this.field_h] == 0) {
                     var6 = new IntrusiveNode();
-                    var6.field_b = (long)this.field_h;
+                    var6.key = (long)this.field_h;
                     var2_int = 0;
-                    this.field_i.b(-10258, var6);
+                    this.field_i.addLast(-10258, var6);
                   }
                 }
                 this.field_h = this.field_h + 1;
@@ -181,18 +181,18 @@ final class ga extends fnb {
           else {
             if (this.field_q) {
               var2_intLifetime1 = 1;
-              var3Lifetime1 = this.field_i.d(0);
+              var3Lifetime1 = this.field_i.first(0);
               while (var3Lifetime1 != null) {
-                var4Lifetime1 = (int)var3Lifetime1.field_b;
+                var4Lifetime1 = (int)var3Lifetime1.key;
                 if (this.field_d[var4Lifetime1] != 1) {
                   discarded$1 = this.a(2, -26489, var4Lifetime1);
                 }
                 if (this.field_d[var4Lifetime1] != 1) {
                   var2_intLifetime1 = 0;
                 } else {
-                  var3Lifetime1.b(-3846);
+                  var3Lifetime1.unlink(-3846);
                 }
-                var3Lifetime1 = this.field_i.a((byte) 121);
+                var3Lifetime1 = this.field_i.next((byte) 121);
               }
               scanLoop2: while (true) {
                 if (this.field_h < this.field_t.field_j.length) {
@@ -206,8 +206,8 @@ final class ga extends fnb {
                     }
                     if (1 != this.field_d[this.field_h]) {
                       var7 = new IntrusiveNode();
-                      var7.field_b = (long)this.field_h;
-                      this.field_i.b(-10258, var7);
+                      var7.key = (long)this.field_h;
+                      this.field_i.addLast(-10258, var7);
                       var2_intLifetime1 = 0;
                     }
                   }
@@ -235,7 +235,7 @@ final class ga extends fnb {
                         if (!var2.field_l) {
                           throw new RuntimeException();
                         }
-                        var2.b(-3846);
+                        var2.unlink(-3846);
                       } else {
                         var2.field_k = true;
                       }
@@ -268,7 +268,7 @@ final class ga extends fnb {
                   if (!var2Lifetime1.field_l) {
                     throw new RuntimeException();
                   }
-                  var2Lifetime1.b(-3846);
+                  var2Lifetime1.unlink(-3846);
                 } else {
                   var2Lifetime1.field_k = true;
                 }
@@ -305,7 +305,7 @@ final class ga extends fnb {
         if (param0 <= 112) {
           return (byte[]) null;
         }
-        var3.b(-3846);
+        var3.unlink(-3846);
         return var4;
     }
 
@@ -322,9 +322,9 @@ final class ga extends fnb {
         if (this.a((byte) 9) == null) {
           return;
         }
-        var2 = this.field_v.d(param0);
+        var2 = this.field_v.first(param0);
         while (var2 != null) {
-          var3 = (int)var2.field_b;
+          var3 = (int)var2.key;
           if (0 <= var3 &&
             var3 < this.field_t.field_l &&
             this.field_t.field_j[var3] != 0) {
@@ -335,12 +335,12 @@ final class ga extends fnb {
               discarded$1 = this.a(2, -26489, var3);
             }
             if (this.field_d[var3] == 1) {
-              var2.b(-3846);
+              var2.unlink(-3846);
             }
           } else {
-            var2.b(param0 - 3846);
+            var2.unlink(param0 - 3846);
           }
-          var2 = this.field_v.a((byte) 10);
+          var2 = this.field_v.next((byte) 10);
         }
     }
 
@@ -380,7 +380,7 @@ final class ga extends fnb {
           0 == param0 &&
           !var12.field_l &&
           var12.field_n) {
-          var12.b(-3846);
+          var12.unlink(-3846);
           var4 = null;
         }
         if (var4 == null) {
@@ -457,7 +457,7 @@ final class ga extends fnb {
                 this.field_d[param2] = (byte) 1;
               }
               if (!((jtb) (var4)).field_l) {
-                ((jtb) (var4)).b(-3846);
+                ((jtb) (var4)).unlink(-3846);
               }
               stackIn_92_0 = var4;
               return (jtb) (stackIn_92_0);
@@ -467,7 +467,7 @@ final class ga extends fnb {
             decompiledCaughtException = decompiledCaughtParameter0;
             var6 = (Exception) (Object) decompiledCaughtException;
             this.field_d[param2] = (byte)-1;
-            ((jtb) (var4)).b(-3846);
+            ((jtb) (var4)).unlink(-3846);
             if (!((jtb) (var4)).field_l) {
               return null;
             }
@@ -507,7 +507,7 @@ final class ga extends fnb {
           decompiledCaughtException = decompiledCaughtParameter1;
           var6_ref = (RuntimeException) (Object) decompiledCaughtException;
           this.field_g.a((byte) -25);
-          ((jtb) (var4)).b(-3846);
+          ((jtb) (var4)).unlink(-3846);
           if (((jtb) (var4)).field_l) {
             if (this.field_g.d(54)) {
               return null;
@@ -528,7 +528,7 @@ final class ga extends fnb {
           }
         }
         if (!((jtb) (var4)).field_l) {
-          ((jtb) (var4)).b(-3846);
+          ((jtb) (var4)).unlink(-3846);
         }
         return (jtb) (var4);
     }

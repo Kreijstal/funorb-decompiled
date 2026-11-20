@@ -10,11 +10,11 @@ abstract class sqb extends DualLinkNode {
     int field_k;
     int field_m;
 
-    final static tv[] a(tv[] param0, tv[] param1, int param2, dja param3, boolean param4) {
+    final static SerializableGameState[] a(SerializableGameState[] param0, SerializableGameState[] param1, int param2, dja param3, boolean param4) {
         int var5_int = 0;
-        tv dupTemp$0 = null;
-        tv[] stackIn_10_0 = null;
-        tv[] stackIn_28_0 = null;
+        SerializableGameState dupTemp$0 = null;
+        SerializableGameState[] stackIn_10_0 = null;
+        SerializableGameState[] stackIn_28_0 = null;
         RuntimeException stackIn_31_0 = null;
         StringBuilder stackIn_31_1 = null;
         String stackIn_32_2 = null;
@@ -24,11 +24,11 @@ abstract class sqb extends DualLinkNode {
         String stackIn_38_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var5 = null;
-        tv var6 = null;
-        tv var7 = null;
+        SerializableGameState var6 = null;
+        SerializableGameState var7 = null;
         int var8 = 0;
-        tv var9 = null;
-        tv var10 = null;
+        SerializableGameState var9 = null;
+        SerializableGameState var10 = null;
         int var11 = 0;
         var11 = VoidHunters.field_G;
         try {
@@ -40,7 +40,7 @@ abstract class sqb extends DualLinkNode {
             param0 = param3.a(11995, param1.length);
           }
           if (param4) {
-            stackIn_10_0 = (tv[]) null;
+            stackIn_10_0 = (SerializableGameState[]) null;
             return stackIn_10_0;
           }
           for (var5_int = 0; param1.length > var5_int; var5_int++) {
@@ -56,7 +56,7 @@ abstract class sqb extends DualLinkNode {
               var9 = var6;
               var10 = var7;
               if (var8 == 1) {
-                var9.b((byte) 124, var10);
+                var9.copyTo((byte) 124, var10);
               } else {
                 if (2 == var8) {
                   ((tva) (var9)).a(var10, 29106);
@@ -70,7 +70,7 @@ abstract class sqb extends DualLinkNode {
               param0[var5_int] = null;
             }
           }
-          stackIn_28_0 = (tv[]) (param0);
+          stackIn_28_0 = (SerializableGameState[]) (param0);
           return stackIn_28_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

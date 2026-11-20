@@ -162,21 +162,21 @@ final class SetDebrisGroupColour extends ConsoleCommand {
             if (var4 != 34 &&
               var4 != 39) {
               if (var4 == 40) {
-                var2.b(param0 - 10257, new tsa(wdb.field_vb, var3.field_b - 1));
+                var2.addLast(param0 - 10257, new tsa(wdb.field_vb, var3.field_b - 1));
                 continue;
               }
               if (var4 == 41) {
-                var2.b(-10258, new tsa(SetMissionTerrainVotingChancestep.field_o, -1 + var3.field_b));
+                var2.addLast(-10258, new tsa(SetMissionTerrainVotingChancestep.field_o, -1 + var3.field_b));
                 continue;
               }
               if (var4 == 44) {
-                var2.b(-10258, new tsa(jwa.field_l, -1 + var3.field_b));
+                var2.addLast(-10258, new tsa(jwa.field_l, -1 + var3.field_b));
                 continue;
               }
-              var2.b(param0 ^ 10257, GetMpSandboxEnemySpawnLimit.a(-20, var3));
+              var2.addLast(param0 ^ 10257, GetMpSandboxEnemySpawnLimit.a(-20, var3));
               continue;
             }
-            var2.b(param0 ^ 10257, GetAutoDetail.a(117, var3));
+            var2.addLast(param0 ^ 10257, GetAutoDetail.a(117, var3));
           }
           stackIn_19_0 = var2;
           return stackIn_19_0;
@@ -207,7 +207,7 @@ final class SetDebrisGroupColour extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          btb.field_a = arguments[0].a(false);
+          btb.field_a = arguments[0].booleanValue(false);
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -30,10 +30,10 @@ abstract class vq extends dqa implements lca {
 
     abstract int e(int param0);
 
-    final static boolean a(faa param0, int param1, boolean param2) {
+    final static boolean writeBoolean(IsaacPacketBuffer param0, int param1, boolean param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
-        faa stackIn_2_0 = null;
+        IsaacPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         int stackIn_3_2 = 0;
         boolean stackIn_4_0 = false;
@@ -43,14 +43,14 @@ abstract class vq extends dqa implements lca {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -28 / ((param1 - 0) / 33);
-          stackIn_2_0 = (faa) (param0);
+          stackIn_2_0 = (IsaacPacketBuffer) (param0);
           stackIn_2_1 = -632;
           if (param2) {
             stackIn_3_2 = 1;
           } else {
             stackIn_3_2 = 0;
           }
-          ((faa) (Object) stackIn_2_0).a(stackIn_2_1, stackIn_3_2, 1);
+          ((IsaacPacketBuffer) (Object) stackIn_2_0).writeBits(stackIn_2_1, stackIn_3_2, 1);
           stackIn_4_0 = param2;
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -127,8 +127,8 @@ abstract class vq extends dqa implements lca {
               eu.field_h = new lpb((java.net.Socket) (ija.field_b.field_d), gia.field_k);
               var2 = new PacketBuffer(13);
               jdb.a(SetPointDefenceLaserProjectileDamage.field_p, (byte) -48, GetFixedaim.field_o, var2, OpenGlToolkit.field_Ib);
-              var2.c(0, 15);
-              var2.d(ea.field_d, 332614536);
+              var2.writeByte(0, 15);
+              var2.writeInt(ea.field_d, 332614536);
               eu.field_h.a(0, var2.payload, 13, 0);
               gob.field_c = gob.field_c + 1;
               GetRepairModePower.field_r = 30000L + wt.a(false);

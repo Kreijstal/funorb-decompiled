@@ -31,7 +31,7 @@ final class SetShipDirectionArrow extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          GetPointDefenceLaserProjectileInterceptDamage.field_o = arguments[0].a(false);
+          GetPointDefenceLaserProjectileInterceptDamage.field_o = arguments[0].booleanValue(false);
           if (obfuscationGuard >= -119) {
             field_o = (mfb[]) null;
           }

@@ -12,7 +12,7 @@ final class SetGrapplingHookFireForce extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(199, 62, arguments[0].a(45));
+          SetMachineGunEnergyUsed.a(199, 62, arguments[0].intValue(45));
           if (obfuscationGuard >= -119) {
             field_o = (kb) null;
           }
@@ -79,8 +79,8 @@ final class SetGrapplingHookFireForce extends ConsoleCommand {
           var19 = var16 * (1 + var6_int);
           if (NebulaField.field_c <= param1 &&
             hab.field_i >= param1) {
-            var21 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param3 + param5);
-            var22 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, -param3 + param5);
+            var21 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param3 + param5);
+            var22 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, -param3 + param5);
             GetSalvoRepairTimeMultiplier.a(param2, var21, ResourceNode.field_b[param1], (byte) 75, var22);
           }
           var20 = (var7 - 1) * var15;
@@ -120,8 +120,8 @@ final class SetGrapplingHookFireForce extends ConsoleCommand {
             if (hab.field_i < var21Lifetime1) {
               continue;
             }
-            var23 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param5 + var6_int);
-            var24 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, -var6_int + param5);
+            var23 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param5 + var6_int);
+            var24 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, -var6_int + param5);
             if (NebulaField.field_c <= var21Lifetime1) {
               GetSalvoRepairTimeMultiplier.a(param2, var23, ResourceNode.field_b[var21Lifetime1], (byte) 75, var24);
             }

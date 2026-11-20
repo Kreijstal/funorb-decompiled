@@ -138,7 +138,7 @@ abstract class ms extends GameApplet {
           csb.a(true);
         }
         if (null != GetWaitForPlayers.field_o) {
-          GetPointDefenceLaserPulsetime.field_o = GetWaitForPlayers.field_o.b(1);
+          GetPointDefenceLaserPulsetime.field_o = GetWaitForPlayers.field_o.pollRotation(1);
         }
         if (wh.g(-126)) {
           var3 = 1200 * SetGrapplingHookRopeBreakLength.e(204);
@@ -520,7 +520,7 @@ abstract class ms extends GameApplet {
         int var10 = -52 / ((-72 - param0) / 33);
         bmb.a(5000, this.field_v, 60, this.field_w, SetTorpedoProjectiles.field_o, this.field_t, this.field_u, this.field_z, this.field_p, this.field_q, param6, SetGrapplingHookAimarc.field_p, param3, 5000);
         sha.a(param3, this.field_u, this.field_p, this.field_v, (byte) -2, SetGrapplingHookAimarc.field_p, this.field_q, SetTorpedoProjectiles.field_o, this.field_w);
-        ndb.b(47);
+        ProxyAuthenticationException.initializePunctuationKeyCodes(47);
         GetWaitForPlayers.field_o = ghb.c((byte) -127);
         SetGrapplingHookCooldown.a((byte) 122, igb.field_a);
         GetShieldsDirectionalArc.field_p = param7;
@@ -626,11 +626,11 @@ abstract class ms extends GameApplet {
     }
 
     private final void j(int param0) {
-        int var2 = qga.field_b.e((byte) -124);
+        int var2 = qga.field_b.readUnsignedByte((byte) -124);
         int var3 = (var2 & 1) != 0 ? 1 : 0;
         int var4 = -1 + vja.field_a;
         byte[] var5 = new byte[var4];
-        qga.field_b.a(var4, 0, (byte) -50, var5);
+        qga.field_b.readIsaacBytes(var4, 0, (byte) -50, var5);
         qp.a(var3 != 0, param0 ^ param0, MissionList.b((byte) -117), qpa.a((byte) -125, var5));
     }
 
@@ -744,7 +744,7 @@ abstract class ms extends GameApplet {
             SetNebulaFadesOutWhenClose.a(17, MissionList.b((byte) -127));
           }
           if (var4 == 10) {
-            RequestNewestBlackboxRecording.field_p.h(24335, 17);
+            RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 17);
           }
           if (11 == var4) {
             kr.a(MissionList.b((byte) -126), 5836);

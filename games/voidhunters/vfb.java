@@ -11,16 +11,16 @@ final class vfb implements dja {
         field_a = null;
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -35 % ((-64 - param0) / 50);
-        return (tv) ((Object) new tja());
+        return (SerializableGameState) ((Object) new tja());
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          return (tv[]) null;
+          return (SerializableGameState[]) null;
         }
-        return (tv[]) ((Object) new tja[param1]);
+        return (SerializableGameState[]) ((Object) new tja[param1]);
     }
 
     static {

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class CarouselSlotStateDump extends IntrusiveNode implements tv {
+final class CarouselSlotStateDump extends IntrusiveNode implements SerializableGameState {
     byte[] field_d;
     static String field_e;
     static int field_f;
@@ -13,39 +13,39 @@ final class CarouselSlotStateDump extends IntrusiveNode implements tv {
         if (null != this.field_h) {
           return this.field_h;
         }
-        faa var2 = new faa(this.field_d.length - 4);
-        var2.a(4, this.field_d, -1, -4 + this.field_d.length);
+        IsaacPacketBuffer var2 = new IsaacPacketBuffer(this.field_d.length - 4);
+        var2.writeBytes(4, this.field_d, -1, -4 + this.field_d.length);
         var2.position = param0;
         tja var3 = (tja) (gva.field_a.a((byte) -128));
-        var2.p(-23497);
+        var2.beginBitRead(-23497);
         if (!(var3 instanceof utb)) {
-          var3.a(var2, false);
-          var2.f((byte) -116);
+          var3.readState(var2, false);
+          var2.endBitRead((byte) -116);
           this.field_h = var3;
           return var3;
         }
         ((utb) ((Object) var3)).a(var2, 32);
-        var2.f((byte) -116);
+        var2.endBitRead((byte) -116);
         this.field_h = var3;
         return var3;
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 > -109) {
-            faa var4 = (faa) null;
-            this.b((faa) null, -44);
+            IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
+            this.writeState((IsaacPacketBuffer) null, -44);
           }
-          param0.r(32712);
-          param0.d(this.field_d.length, 332614536);
-          param0.a(0, this.field_d, -1, this.field_d.length);
-          param0.q(-81);
+          param0.endBitWrite(32712);
+          param0.writeInt(this.field_d.length, 332614536);
+          param0.writeBytes(0, this.field_d, -1, this.field_d.length);
+          param0.beginBitWrite(-81);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bhb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    CarouselSlotStateDump(int param0, faa param1) {
+    CarouselSlotStateDump(int param0, IsaacPacketBuffer param1) {
         this(param0, param1.payload, param1.position);
     }
 
@@ -61,7 +61,7 @@ final class CarouselSlotStateDump extends IntrusiveNode implements tv {
         return ((this.field_d[2] & 255) << 8) + (((this.field_d[1] & 255) << 16) + (this.field_d[0] << 24 & -16777216)) + (this.field_d[3] & 255);
     }
 
-    final void a(tv param0, boolean param1) {
+    final void a(SerializableGameState param0, boolean param1) {
         try {
           if (!param1) {
             field_g = -106;
@@ -71,7 +71,7 @@ final class CarouselSlotStateDump extends IntrusiveNode implements tv {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         CarouselSlotStateDump var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_12_0 = null;
@@ -108,7 +108,7 @@ final class CarouselSlotStateDump extends IntrusiveNode implements tv {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
@@ -135,17 +135,17 @@ final class CarouselSlotStateDump extends IntrusiveNode implements tv {
     CarouselSlotStateDump() {
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         int var3_int = 0;
         try {
-          param0.f((byte) -100);
+          param0.endBitRead((byte) -100);
           if (param1) {
             field_e = (String) null;
           }
-          var3_int = param0.h(49);
+          var3_int = param0.readInt(49);
           this.field_d = new byte[var3_int];
-          param0.a(0, this.field_d, (byte) -59, var3_int);
-          param0.p(-23497);
+          param0.readBytes(0, this.field_d, (byte) -59, var3_int);
+          param0.beginBitRead(-23497);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bhb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

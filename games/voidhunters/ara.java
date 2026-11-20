@@ -55,20 +55,20 @@ class ara extends IntrusiveNode implements DiffableState {
         }
     }
 
-    public void b(faa param0, int param1) {
+    public void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          param0.a(-632, this.x, 32);
+          param0.writeBits(-632, this.x, 32);
           if (param1 >= -109) {
             this.y = 34;
           }
-          param0.a(-632, this.y, 32);
+          param0.writeBits(-632, this.y, 32);
           this.b(param0, false);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ara.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public void reportDifferences(tv other, int obfuscationGuard) {
+    public void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -117,7 +117,7 @@ class ara extends IntrusiveNode implements DiffableState {
         }
     }
 
-    public boolean a(byte param0, tv param1) {
+    public boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         ara var4 = null;
         boolean stackIn_5_0 = false;
@@ -145,7 +145,7 @@ class ara extends IntrusiveNode implements DiffableState {
         }
     }
 
-    public void b(byte param0, tv param1) {
+    public void copyTo(byte param0, SerializableGameState param1) {
         ara var5 = null;
         ara var6 = null;
         try {
@@ -163,8 +163,8 @@ class ara extends IntrusiveNode implements DiffableState {
         }
     }
 
-    private final void b(faa param0, boolean param1) {
-        faa stackIn_5_0 = null;
+    private final void b(IsaacPacketBuffer param0, boolean param1) {
+        IsaacPacketBuffer stackIn_5_0 = null;
         int stackIn_5_1 = 0;
         boolean stackIn_7_2 = false;
         RuntimeException stackIn_12_0 = null;
@@ -176,14 +176,14 @@ class ara extends IntrusiveNode implements DiffableState {
           if (param1) {
             return;
           }
-          stackIn_5_0 = (faa) (param0);
+          stackIn_5_0 = (IsaacPacketBuffer) (param0);
           stackIn_5_1 = 87;
           stackIn_7_2 = (this.dx != 0) || (this.dy != 0);
-          if (!vq.a(stackIn_5_0, stackIn_5_1, stackIn_7_2)) {
+          if (!vq.writeBoolean(stackIn_5_0, stackIn_5_1, stackIn_7_2)) {
             return;
           }
-          param0.a(-632, this.dx, 32);
-          param0.a(-632, this.dy, 32);
+          param0.writeBits(-632, this.dx, 32);
+          param0.writeBits(-632, this.dy, 32);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -202,7 +202,7 @@ class ara extends IntrusiveNode implements DiffableState {
     ara() {
     }
 
-    private final void c(faa param0, int param1) {
+    private final void c(IsaacPacketBuffer param0, int param1) {
         RuntimeException var3 = null;
         RuntimeException stackIn_8_0 = null;
         StringBuilder stackIn_8_1 = null;
@@ -212,11 +212,11 @@ class ara extends IntrusiveNode implements DiffableState {
           if (param1 != 32) {
             return;
           }
-          if (!kv.a(false, param0)) {
+          if (!kv.readBoolean(false, param0)) {
             return;
           }
-          this.dx = param0.i(param1 - 32, 32);
-          this.dy = param0.i(0, 32);
+          this.dx = param0.readBits(param1 - 32, 32);
+          this.dy = param0.readBits(0, 32);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -232,13 +232,13 @@ class ara extends IntrusiveNode implements DiffableState {
         }
     }
 
-    public void a(faa param0, boolean param1) {
+    public void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.x = param0.i(0, 32);
+          this.x = param0.readBits(0, 32);
           if (param1) {
             field_g = (String) null;
           }
-          this.y = param0.i(0, 32);
+          this.y = param0.readBits(0, 32);
           this.c(param0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ara.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');

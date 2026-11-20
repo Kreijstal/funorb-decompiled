@@ -53,7 +53,7 @@ final class SetUseLines extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          GetLaserAimarc.field_p = arguments[0].a(false);
+          GetLaserAimarc.field_p = arguments[0].booleanValue(false);
           if (obfuscationGuard > -119) {
             field_q = (String) null;
           }

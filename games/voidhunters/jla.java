@@ -44,7 +44,7 @@ final class jla extends htb {
         try {
           var3 = new dnb(param0);
           var4 = -111 / ((param1 + 2) / 45);
-          SetGrapplingHookAimarc.field_o.b(-10258, var3);
+          SetGrapplingHookAimarc.field_o.addLast(-10258, var3);
           nv.a((byte) -61, var3, param2);
           stackIn_1_0 = var3;
           return stackIn_1_0;

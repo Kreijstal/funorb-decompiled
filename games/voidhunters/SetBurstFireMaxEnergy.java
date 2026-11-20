@@ -169,7 +169,7 @@ final class SetBurstFireMaxEnergy extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(43, 62, arguments[0].a(92));
+          SetMachineGunEnergyUsed.a(43, 62, arguments[0].intValue(92));
           if (obfuscationGuard >= -119) {
             field_o = (boolean[]) null;
           }

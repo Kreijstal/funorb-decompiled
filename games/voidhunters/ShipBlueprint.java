@@ -8,7 +8,7 @@ final class ShipBlueprint implements DiffableState {
     int[] description;
     static String field_b;
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         ShipBlueprint var3 = null;
         RuntimeException var3_ref = null;
         RuntimeException stackIn_5_0 = null;
@@ -44,7 +44,7 @@ final class ShipBlueprint implements DiffableState {
         return 100;
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           this.description = wkb.a((byte) 37, this.description, param0, 8);
           if (param1) {
@@ -98,7 +98,7 @@ final class ShipBlueprint implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         ShipBlueprint var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -135,7 +135,7 @@ final class ShipBlueprint implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         ShipBlueprint var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -174,9 +174,9 @@ final class ShipBlueprint implements DiffableState {
         field_b = null;
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         RuntimeException var3 = null;
-        faa var4 = null;
+        IsaacPacketBuffer var4 = null;
         int stackIn_2_0 = 0;
         int stackIn_3_1 = 0;
         RuntimeException stackIn_8_0 = null;
@@ -194,8 +194,8 @@ final class ShipBlueprint implements DiffableState {
           if (param1 <= -109) {
             return;
           }
-          var4 = (faa) null;
-          this.b((faa) null, -93);
+          var4 = (IsaacPacketBuffer) null;
+          this.writeState((IsaacPacketBuffer) null, -93);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

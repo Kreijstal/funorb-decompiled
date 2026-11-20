@@ -20,7 +20,7 @@ final class SetThrusterParticleLife extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetThrusterParticleLife.a('A', 38);
           }
-          SetMachineGunEnergyUsed.a(177, 62, arguments[0].a(9));
+          SetMachineGunEnergyUsed.a(177, 62, arguments[0].intValue(9));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

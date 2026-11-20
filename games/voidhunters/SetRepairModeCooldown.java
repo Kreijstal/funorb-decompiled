@@ -17,7 +17,7 @@ final class SetRepairModeCooldown extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 27);
           }
-          SetMachineGunEnergyUsed.a(214, 62, arguments[0].a(113));
+          SetMachineGunEnergyUsed.a(214, 62, arguments[0].intValue(113));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

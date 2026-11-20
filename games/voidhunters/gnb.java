@@ -23,7 +23,7 @@ final class gnb {
         if (this.field_g > 0 &&
           this.field_e != this.field_c[this.field_g - 1]) {
           var2 = this.field_e;
-          this.field_e = var2.field_c;
+          this.field_e = var2.next;
           return var2;
         }
         do {
@@ -32,27 +32,27 @@ final class gnb {
           }
           fieldTemp$0 = this.field_g;
           this.field_g = this.field_g + 1;
-          var2 = this.field_c[fieldTemp$0].field_c;
+          var2 = this.field_c[fieldTemp$0].next;
         } while (this.field_c[-1 + this.field_g] == var2);
-        this.field_e = var2.field_c;
+        this.field_e = var2.next;
         return var2;
     }
 
     final void a(long param0, IntrusiveNode param1, byte param2) {
         IntrusiveNode var5 = null;
-        if (null != param1.field_a) {
-          param1.b(-3846);
+        if (null != param1.previous) {
+          param1.unlink(-3846);
         }
         if (param2 >= -112) {
           return;
         }
         try {
           var5 = this.field_c[(int)(param0 & (long)(-1 + this.field_d))];
-          param1.field_c = var5;
-          param1.field_a = var5.field_a;
-          param1.field_a.field_c = param1;
-          param1.field_c.field_a = param1;
-          param1.field_b = param0;
+          param1.next = var5;
+          param1.previous = var5.previous;
+          param1.previous.next = param1;
+          param1.next.previous = param1;
+          param1.key = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gnb.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }
@@ -189,14 +189,14 @@ final class gnb {
           field_f = (String) null;
         }
         IntrusiveNode var4 = this.field_c[(int)(param0 & (long)(this.field_d - 1))];
-        this.field_b = var4.field_c;
+        this.field_b = var4.next;
         while (var4 != this.field_b) {
-          if (this.field_b.field_b == param0) {
+          if (this.field_b.key == param0) {
             var5 = this.field_b;
-            this.field_b = this.field_b.field_c;
+            this.field_b = this.field_b.next;
             return var5;
           }
-          this.field_b = this.field_b.field_c;
+          this.field_b = this.field_b.next;
         }
         this.field_b = null;
         return null;
@@ -213,11 +213,11 @@ final class gnb {
         for (var2 = 0; var2 < this.field_d; var2++) {
           var3 = this.field_c[var2];
           while (true) {
-            var4 = var3.field_c;
+            var4 = var3.next;
             if (var3 == var4) {
               break;
             }
-            var4.b(-3846);
+            var4.unlink(-3846);
           }
         }
         this.field_b = null;
@@ -251,8 +251,8 @@ final class gnb {
           dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
           this.field_c[var2] = dupTemp$0;
-          var3.field_c = var3;
-          var3.field_a = var3;
+          var3.next = var3;
+          var3.previous = var3;
         }
     }
 

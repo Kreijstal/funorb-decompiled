@@ -14,18 +14,18 @@ final class pr {
     final void a(DualLinkNode param0, byte param1, long param2) {
         DualLinkNode var5 = null;
         try {
-          if (null != param0.field_d) {
-            param0.d((byte) -35);
+          if (null != param0.secondaryPrevious) {
+            param0.unlinkSecondary((byte) -35);
           }
           var5 = this.field_g[(int)(param2 & (long)(this.field_f - 1))];
-          param0.field_d = var5.field_d;
-          param0.field_e = var5;
+          param0.secondaryPrevious = var5.secondaryPrevious;
+          param0.secondaryNext = var5;
           if (param1 > -12) {
             field_d = -43;
           }
-          param0.field_d.field_e = param0;
-          param0.field_e.field_d = param0;
-          param0.field_i = param2;
+          param0.secondaryPrevious.secondaryNext = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
+          param0.secondaryKey = param2;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pr.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -40,12 +40,12 @@ final class pr {
         int var2 = 40 % ((param0 + 45) / 39);
         DualLinkNode var3 = this.field_g[(int)((long)(this.field_f - 1) & this.field_b)];
         while (var3 != this.field_a) {
-          if (~this.field_a.field_i == ~this.field_b) {
+          if (~this.field_a.secondaryKey == ~this.field_b) {
             var4 = this.field_a;
-            this.field_a = this.field_a.field_e;
+            this.field_a = this.field_a.secondaryNext;
             return var4;
           }
-          this.field_a = this.field_a.field_e;
+          this.field_a = this.field_a.secondaryNext;
         }
         this.field_a = null;
         return null;
@@ -75,14 +75,14 @@ final class pr {
             }
             fieldTemp$1 = this.field_e;
             this.field_e = this.field_e + 1;
-            var4 = this.field_g[fieldTemp$1].field_e;
+            var4 = this.field_g[fieldTemp$1].secondaryNext;
           } while (this.field_g[-1 + this.field_e] == var4);
-          this.field_h = var4.field_e;
+          this.field_h = var4.secondaryNext;
           return var4;
         }
         if (this.field_h != this.field_g[-1 + this.field_e]) {
           var11 = this.field_h;
-          this.field_h = var11.field_e;
+          this.field_h = var11.secondaryNext;
           return var11;
         }
         do {
@@ -91,9 +91,9 @@ final class pr {
           }
           fieldTemp$0 = this.field_e;
           this.field_e = this.field_e + 1;
-          var8 = this.field_g[fieldTemp$0].field_e;
+          var8 = this.field_g[fieldTemp$0].secondaryNext;
         } while (this.field_g[-1 + this.field_e] == var8);
-        this.field_h = var8.field_e;
+        this.field_h = var8.secondaryNext;
         return var8;
     }
 
@@ -102,14 +102,14 @@ final class pr {
         int var6 = VoidHunters.field_G;
         this.field_b = param1;
         DualLinkNode var4 = this.field_g[(int)(param1 & (long)(this.field_f + param0))];
-        this.field_a = var4.field_e;
+        this.field_a = var4.secondaryNext;
         while (this.field_a != var4) {
-          if (this.field_a.field_i == param1) {
+          if (this.field_a.secondaryKey == param1) {
             var5 = this.field_a;
-            this.field_a = this.field_a.field_e;
+            this.field_a = this.field_a.secondaryNext;
             return var5;
           }
-          this.field_a = this.field_a.field_e;
+          this.field_a = this.field_a.secondaryNext;
         }
         this.field_a = null;
         return null;
@@ -143,8 +143,8 @@ final class pr {
           dupTemp$1 = new DualLinkNode();
           var3 = dupTemp$1;
           this.field_g[var2] = dupTemp$1;
-          var3.field_d = var3;
-          var3.field_e = var3;
+          var3.secondaryPrevious = var3;
+          var3.secondaryNext = var3;
         }
     }
 

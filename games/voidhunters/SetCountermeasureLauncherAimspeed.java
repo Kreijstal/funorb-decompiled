@@ -7,7 +7,7 @@ final class SetCountermeasureLauncherAimspeed extends ConsoleCommand {
     static dfa field_r;
     static int field_q;
 
-    final static boolean a(tv[] param0, boolean param1, int param2, tv[] param3, int param4) {
+    final static boolean a(SerializableGameState[] param0, boolean param1, int param2, SerializableGameState[] param3, int param4) {
         int var8 = 0;
         int var5_int = 0;
         RuntimeException var5 = null;
@@ -89,7 +89,7 @@ final class SetCountermeasureLauncherAimspeed extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          SetMachineGunEnergyUsed.a(129, 62, arguments[0].a(44));
+          SetMachineGunEnergyUsed.a(129, 62, arguments[0].intValue(44));
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

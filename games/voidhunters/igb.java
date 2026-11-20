@@ -83,14 +83,14 @@ final class igb {
         int var3 = VoidHunters.field_G;
         llb var2Lifetime1;
         try {
-          var4 = (llb) (param0.field_lb.d(0));
+          var4 = (llb) (param0.field_lb.first(0));
           var2 = var4;
           while (var4 != null) {
             var4.field_K = 0;
             var4.field_G = 0;
             var4.field_db = 0;
             var4.field_E = 0;
-            var4 = (llb) (param0.field_lb.a((byte) 108));
+            var4 = (llb) (param0.field_lb.next((byte) 108));
             var2Lifetime1 = var4;
           }
           param0.field_K = 0;

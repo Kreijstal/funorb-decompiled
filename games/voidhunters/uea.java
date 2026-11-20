@@ -41,7 +41,7 @@ final class uea extends bob {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 50 / ((param1 + 28) / 55);
-          stackIn_1_0 = new uma(param0.a(true), param0.a(true), param0.a(true), param0.a(true), param0.c((byte) -81), param0.c((byte) -45), param0.e((byte) -119));
+          stackIn_1_0 = new uma(param0.readShort(true), param0.readShort(true), param0.readShort(true), param0.readShort(true), param0.readUnsignedMedium((byte) -81), param0.readUnsignedMedium((byte) -45), param0.readUnsignedByte((byte) -119));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -58,12 +58,12 @@ final class uea extends bob {
     }
 
     final static void c(int param0) {
-        faa var2 = bk.field_w;
-        faa var1 = var2;
+        IsaacPacketBuffer var2 = bk.field_w;
+        IsaacPacketBuffer var1 = var2;
         bk.field_w = im.field_q;
         im.field_q = var2;
         if (null == bk.field_w) {
-          bk.field_w = new faa(1048576);
+          bk.field_w = new IsaacPacketBuffer(1048576);
         }
         if (param0 != 9487) {
           field_p = (String) null;

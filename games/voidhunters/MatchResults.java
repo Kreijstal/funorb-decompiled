@@ -30,9 +30,9 @@ final class MatchResults implements DiffableState {
         return 0;
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         MatchResults var3 = null;
-        tv var4 = null;
+        SerializableGameState var4 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
         String stackIn_6_2 = null;
@@ -42,8 +42,8 @@ final class MatchResults implements DiffableState {
           var3 = (MatchResults) (param1);
           var3.results = (RoundResult[]) (sqb.a(var3.results, this.results, 1, lm.field_b, false));
           if (param0 < 54) {
-            var4 = (tv) null;
-            this.reportDifferences((tv) null, 79);
+            var4 = (SerializableGameState) null;
+            this.reportDifferences((SerializableGameState) null, 79);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -60,25 +60,25 @@ final class MatchResults implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         int var5 = 0;
         RoundResult[] var6 = null;
         int var7 = 0;
         RoundResult var8 = null;
         int var9 = VoidHunters.field_G;
-        faa var3 = param0;
+        IsaacPacketBuffer var3 = param0;
         RoundResult[] var4 = this.results;
         if (param1 >= -109) {
           return;
         }
         try {
           var5 = var4 != null ? var4.length : 0;
-          var3.a(-632, var5, 8);
+          var3.writeBits(-632, var5, 8);
           if (var5 != 0) {
             var6 = var4;
             for (var7 = 0; var6.length > var7; var7++) {
               var8 = var6[var7];
-              if (vq.a(var3, 86, var8 != null ? true : false)) {
+              if (vq.writeBoolean(var3, 86, var8 != null ? true : false)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
               }
             }
@@ -88,7 +88,7 @@ final class MatchResults implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         MatchResults var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -116,7 +116,7 @@ final class MatchResults implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           this.results = (RoundResult[]) (SetAutoDetail.a(8, lm.field_b, param0, 1, -62, this.results));
           if (param1) {
@@ -132,7 +132,7 @@ final class MatchResults implements DiffableState {
         int var3;
         RoundResult var5;
         int var6;
-        faa var7;
+        IsaacPacketBuffer var7;
         var6 = VoidHunters.field_G;
         if (this.results != null &&
           this.results.length != 0) {
@@ -144,8 +144,8 @@ final class MatchResults implements DiffableState {
             }
           }
           if (param1 != -88) {
-            var7 = (faa) null;
-            this.a((faa) null, false);
+            var7 = (IsaacPacketBuffer) null;
+            this.readState((IsaacPacketBuffer) null, false);
           }
           return var3;
         }
@@ -273,7 +273,7 @@ final class MatchResults implements DiffableState {
         return -1;
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         MatchResults var3 = null;
         int var4 = 0;
         RoundResult var5 = null;

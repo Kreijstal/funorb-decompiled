@@ -9,7 +9,7 @@ final class SpecialOrderSubmessage implements DiffableState {
     int ordertype;
     PlayerVote vote;
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int stackIn_19_0 = 0;
         int stackIn_22_1 = 0;
         int stackIn_32_0 = 0;
@@ -56,7 +56,7 @@ final class SpecialOrderSubmessage implements DiffableState {
           }
           if ((stackIn_19_0 ^ stackIn_22_1) != 0 ||
             this.settingsChange != null &&
-            this.settingsChange.a((byte) -80, var5.settingsChange)) {
+            this.settingsChange.differsFrom((byte) -80, var5.settingsChange)) {
             var4 = 1;
             System.out.println("SettingsChange settings_change has changed. before=" + var5.settingsChange + ", now=" + this.settingsChange);
           }
@@ -71,7 +71,7 @@ final class SpecialOrderSubmessage implements DiffableState {
           }
           if ((stackIn_32_0 ^ stackIn_35_1) != 0 ||
             this.spawnchoice != null &&
-            this.spawnchoice.a((byte) -64, var5.spawnchoice)) {
+            this.spawnchoice.differsFrom((byte) -64, var5.spawnchoice)) {
             var4 = 1;
             System.out.println("SpawnChoice spawnchoice has changed. before=" + var5.spawnchoice + ", now=" + this.spawnchoice);
           }
@@ -83,7 +83,7 @@ final class SpecialOrderSubmessage implements DiffableState {
           }
           if ((stackIn_43_0 ^ stackIn_46_1) != 0 ||
             this.vote != null &&
-            this.vote.a((byte) -42, var5.vote)) {
+            this.vote.differsFrom((byte) -42, var5.vote)) {
             var4 = 1;
             System.out.println("PlayerVote vote has changed. before=" + var5.vote + ", now=" + this.vote);
           }
@@ -95,7 +95,7 @@ final class SpecialOrderSubmessage implements DiffableState {
           }
           if ((stackIn_54_0 ^ stackIn_57_1) != 0 ||
             null != this.blueprint &&
-            this.blueprint.a((byte) -40, var5.blueprint)) {
+            this.blueprint.differsFrom((byte) -40, var5.blueprint)) {
             System.out.println("ShipBlueprint blueprint has changed. before=" + var5.blueprint + ", now=" + this.blueprint);
             var4 = 1;
           }
@@ -161,7 +161,7 @@ final class SpecialOrderSubmessage implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -180,13 +180,13 @@ final class SpecialOrderSubmessage implements DiffableState {
             if (null == var6.settingsChange) {
               var6.settingsChange = new SettingsChange();
             }
-            this.settingsChange.b((byte) 64, var6.settingsChange);
+            this.settingsChange.copyTo((byte) 64, var6.settingsChange);
           }
           if (null != this.spawnchoice) {
             if (null == var6.spawnchoice) {
               var6.spawnchoice = new SpawnChoice();
             }
-            this.spawnchoice.b((byte) 111, var6.spawnchoice);
+            this.spawnchoice.copyTo((byte) 111, var6.spawnchoice);
           } else {
             var6.spawnchoice = null;
           }
@@ -198,7 +198,7 @@ final class SpecialOrderSubmessage implements DiffableState {
             if (null == var6.vote) {
               var6.vote = new PlayerVote();
             }
-            this.vote.b((byte) 88, var6.vote);
+            this.vote.copyTo((byte) 88, var6.vote);
           } else {
             var6.vote = null;
           }
@@ -209,7 +209,7 @@ final class SpecialOrderSubmessage implements DiffableState {
           if (var6.blueprint == null) {
             var6.blueprint = new ShipBlueprint();
           }
-          this.blueprint.b((byte) 86, var6.blueprint);
+          this.blueprint.copyTo((byte) 86, var6.blueprint);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -233,7 +233,7 @@ final class SpecialOrderSubmessage implements DiffableState {
         int var1 = -65 % ((-23 - param0) / 51);
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int stackIn_4_0 = 0;
         int stackIn_7_1 = 0;
         int stackIn_14_0 = 0;
@@ -262,7 +262,7 @@ final class SpecialOrderSubmessage implements DiffableState {
               stackIn_7_1 = 1;
             }
             if ((stackIn_4_0 ^ stackIn_7_1) == 0 && (this.settingsChange == null ||
-              !this.settingsChange.a((byte) 123, var4.settingsChange))) {
+              !this.settingsChange.differsFrom((byte) 123, var4.settingsChange))) {
               stackIn_14_0 = (this.spawnchoice != null) ? 0 : 1;
               if (null != var4.spawnchoice) {
                 stackIn_17_1 = 0;
@@ -270,7 +270,7 @@ final class SpecialOrderSubmessage implements DiffableState {
                 stackIn_17_1 = 1;
               }
               if ((stackIn_14_0 ^ stackIn_17_1) == 0 && (this.spawnchoice == null ||
-                !this.spawnchoice.a((byte) -38, var4.spawnchoice))) {
+                !this.spawnchoice.differsFrom((byte) -38, var4.spawnchoice))) {
                 stackIn_24_0 = (var4.vote != null) ? 0 : 1;
                 if (this.vote != null) {
                   stackIn_27_1 = 0;
@@ -278,7 +278,7 @@ final class SpecialOrderSubmessage implements DiffableState {
                   stackIn_27_1 = 1;
                 }
                 if ((stackIn_24_0 ^ stackIn_27_1) == 0 && (this.vote == null ||
-                  !this.vote.a((byte) 110, var4.vote))) {
+                  !this.vote.differsFrom((byte) 110, var4.vote))) {
                   stackIn_34_0 = (this.blueprint != null) ? 0 : 1;
                   if (null != var4.blueprint) {
                     stackIn_37_1 = 0;
@@ -286,7 +286,7 @@ final class SpecialOrderSubmessage implements DiffableState {
                     stackIn_37_1 = 1;
                   }
                   if ((stackIn_34_0 ^ stackIn_37_1) == 0 && (this.blueprint == null ||
-                    !this.blueprint.a((byte) -118, var4.blueprint))) {
+                    !this.blueprint.differsFrom((byte) -118, var4.blueprint))) {
                     stackIn_43_0 = false;
                     decompiledFrameRemainder0 = false;
                   }
@@ -312,18 +312,18 @@ final class SpecialOrderSubmessage implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         RuntimeException var3 = null;
-        faa stackIn_4_0 = null;
+        IsaacPacketBuffer stackIn_4_0 = null;
         int stackIn_4_1 = 0;
         boolean stackIn_5_2 = false;
-        faa stackIn_10_0 = null;
+        IsaacPacketBuffer stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         boolean stackIn_11_2 = false;
-        faa stackIn_15_0 = null;
+        IsaacPacketBuffer stackIn_15_0 = null;
         int stackIn_15_1 = 0;
         boolean stackIn_16_2 = false;
-        faa stackIn_20_0 = null;
+        IsaacPacketBuffer stackIn_20_0 = null;
         int stackIn_20_1 = 0;
         boolean stackIn_21_2 = false;
         RuntimeException stackIn_27_0 = null;
@@ -331,35 +331,35 @@ final class SpecialOrderSubmessage implements DiffableState {
         String stackIn_28_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          param0.a(-632, this.ordertype, 32);
+          param0.writeBits(-632, this.ordertype, 32);
           if (param1 >= -109) {
             return;
           }
-          stackIn_4_0 = (faa) (param0);
+          stackIn_4_0 = (IsaacPacketBuffer) (param0);
           stackIn_4_1 = 66;
           stackIn_5_2 = (null != this.settingsChange);
-          if (vq.a(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
-            this.settingsChange.b(param0, -110);
+          if (vq.writeBoolean(stackIn_4_0, stackIn_4_1, stackIn_5_2)) {
+            this.settingsChange.writeState(param0, -110);
           }
-          stackIn_10_0 = (faa) (param0);
+          stackIn_10_0 = (IsaacPacketBuffer) (param0);
           stackIn_10_1 = 80;
           stackIn_11_2 = (this.spawnchoice != null);
-          if (vq.a(stackIn_10_0, stackIn_10_1, stackIn_11_2)) {
-            this.spawnchoice.b(param0, -125);
+          if (vq.writeBoolean(stackIn_10_0, stackIn_10_1, stackIn_11_2)) {
+            this.spawnchoice.writeState(param0, -125);
           }
-          stackIn_15_0 = (faa) (param0);
+          stackIn_15_0 = (IsaacPacketBuffer) (param0);
           stackIn_15_1 = 117;
           stackIn_16_2 = (this.vote != null);
-          if (vq.a(stackIn_15_0, stackIn_15_1, stackIn_16_2)) {
-            this.vote.b(param0, -126);
+          if (vq.writeBoolean(stackIn_15_0, stackIn_15_1, stackIn_16_2)) {
+            this.vote.writeState(param0, -126);
           }
-          stackIn_20_0 = (faa) (param0);
+          stackIn_20_0 = (IsaacPacketBuffer) (param0);
           stackIn_20_1 = 122;
           stackIn_21_2 = (null != this.blueprint);
-          if (!vq.a(stackIn_20_0, stackIn_20_1, stackIn_21_2)) {
+          if (!vq.writeBoolean(stackIn_20_0, stackIn_20_1, stackIn_21_2)) {
             return;
           }
-          this.blueprint.b(param0, -113);
+          this.blueprint.writeState(param0, -113);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -379,7 +379,7 @@ final class SpecialOrderSubmessage implements DiffableState {
         this.ordertype = param0;
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         RuntimeException stackIn_27_0 = null;
         StringBuilder stackIn_27_1 = null;
         String stackIn_28_2 = null;
@@ -388,41 +388,41 @@ final class SpecialOrderSubmessage implements DiffableState {
         int var4 = 0;
         var4 = VoidHunters.field_G;
         try {
-          this.ordertype = param0.i(0, 32);
-          if (kv.a(param1, param0)) {
+          this.ordertype = param0.readBits(0, 32);
+          if (kv.readBoolean(param1, param0)) {
             if (null == this.settingsChange) {
               this.settingsChange = new SettingsChange();
             }
-            this.settingsChange.a(param0, false);
+            this.settingsChange.readState(param0, false);
           } else {
             this.settingsChange = null;
           }
-          if (!kv.a(false, param0)) {
+          if (!kv.readBoolean(false, param0)) {
             this.spawnchoice = null;
           } else {
             if (null == this.spawnchoice) {
               this.spawnchoice = new SpawnChoice();
             }
-            this.spawnchoice.a(param0, false);
+            this.spawnchoice.readState(param0, false);
           }
-          if (!kv.a(false, param0)) {
+          if (!kv.readBoolean(false, param0)) {
             this.vote = null;
           } else {
             if (this.vote != null) {
-              this.vote.a(param0, false);
+              this.vote.readState(param0, false);
             } else {
               this.vote = new PlayerVote();
-              this.vote.a(param0, false);
+              this.vote.readState(param0, false);
             }
           }
-          if (!kv.a(param1, param0)) {
+          if (!kv.readBoolean(param1, param0)) {
             this.blueprint = null;
             return;
           }
           if (null == this.blueprint) {
             this.blueprint = new ShipBlueprint();
           }
-          this.blueprint.a(param0, param1);
+          this.blueprint.readState(param0, param1);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

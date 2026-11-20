@@ -13,17 +13,17 @@ final class cn implements dja {
         }
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -32 % ((param0 + 64) / 50);
-        return (tv) ((Object) new TickCondition());
+        return (SerializableGameState) ((Object) new TickCondition());
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_a = (float[][]) null;
-          return (tv[]) ((Object) new TickCondition[param1]);
+          return (SerializableGameState[]) ((Object) new TickCondition[param1]);
         }
-        return (tv[]) ((Object) new TickCondition[param1]);
+        return (SerializableGameState[]) ((Object) new TickCondition[param1]);
     }
 
     static {

@@ -7,12 +7,12 @@ final class fob implements dja {
     static String field_d;
     static String field_b;
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_c = -32;
-          return (tv[]) ((Object) new ComponentBehaviour[param1]);
+          return (SerializableGameState[]) ((Object) new ComponentBehaviour[param1]);
         }
-        return (tv[]) ((Object) new ComponentBehaviour[param1]);
+        return (SerializableGameState[]) ((Object) new ComponentBehaviour[param1]);
     }
 
     public static void a(int param0) {
@@ -23,7 +23,7 @@ final class fob implements dja {
         }
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 73 % ((-64 - param0) / 50);
         return null;
     }

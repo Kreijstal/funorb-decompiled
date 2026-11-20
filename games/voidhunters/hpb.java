@@ -49,7 +49,7 @@ final class hpb extends le {
         RuntimeException var4 = null;
         try {
           if (param0 == 0) {
-            stackIn_4_1 = (param2.e((byte) -97) == 1);
+            stackIn_4_1 = (param2.readUnsignedByte((byte) -97) == 1);
             this.field_g = stackIn_4_1;
           }
           if (param1 > -60) {

@@ -62,20 +62,20 @@ final class SetReverbFeedback extends ConsoleCommand {
           GetShieldsDirectionalRadius.field_o = GetShieldsDirectionalRadius.field_o - 1;
           if (GetShieldsDirectionalRadius.field_o == 0) {
             GetShieldsDirectionalRadius.field_o = 200;
-            var1 = (ana) (GetToggledScoreboard.field_p.d(0));
+            var1 = (ana) (GetToggledScoreboard.field_p.first(0));
             while (var1 != null) {
-              if (!var1.field_g.b((byte) -63)) {
-                var1.b(-3846);
+              if (!var1.field_g.isLinked((byte) -63)) {
+                var1.unlink(-3846);
               }
-              var1 = (ana) (GetToggledScoreboard.field_p.a((byte) 96));
+              var1 = (ana) (GetToggledScoreboard.field_p.next((byte) 96));
             }
             if (GetSniperCannonReload.field_o != null) {
-              var1Lifetime1 = (ana) (GetSniperCannonReload.field_o.d(0));
+              var1Lifetime1 = (ana) (GetSniperCannonReload.field_o.first(0));
               while (var1Lifetime1 != null) {
-                if (!var1Lifetime1.field_g.b((byte) -63)) {
-                  var1Lifetime1.b(-3846);
+                if (!var1Lifetime1.field_g.isLinked((byte) -63)) {
+                  var1Lifetime1.unlink(-3846);
                 }
-                var1Lifetime1 = (ana) (GetSniperCannonReload.field_o.a((byte) 47));
+                var1Lifetime1 = (ana) (GetSniperCannonReload.field_o.next((byte) 47));
               }
             }
           }
@@ -105,7 +105,7 @@ final class SetReverbFeedback extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetReverbFeedback.b(true);
           }
-          qua.field_b = arguments[0].d(0);
+          qua.field_b = arguments[0].floatValue(0);
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -26,7 +26,7 @@ final class SetShieldsDirectionalHalfarcCuts extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetBuildViewAutozoomEndOnAction.field_o = arguments[0].a(65);
+          SetBuildViewAutozoomEndOnAction.field_o = arguments[0].intValue(65);
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

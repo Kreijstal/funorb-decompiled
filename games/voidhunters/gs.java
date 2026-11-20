@@ -23,17 +23,17 @@ final class gs implements dja {
         field_a = null;
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -113 % ((param0 + 64) / 50);
-        return (tv) ((Object) new SettingsChange());
+        return (SerializableGameState) ((Object) new SettingsChange());
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           gs.b((byte) 40);
-          return (tv[]) ((Object) new SettingsChange[param1]);
+          return (SerializableGameState[]) ((Object) new SettingsChange[param1]);
         }
-        return (tv[]) ((Object) new SettingsChange[param1]);
+        return (SerializableGameState[]) ((Object) new SettingsChange[param1]);
     }
 
     static {

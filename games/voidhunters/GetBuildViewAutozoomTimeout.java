@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetBuildViewAutozoomTimeout extends ConsoleCommand {
-    final static wma a(faa param0, byte param1) {
+    final static wma a(IsaacPacketBuffer param0, byte param1) {
         int var8 = 0;
         wma stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;
@@ -19,43 +19,43 @@ final class GetBuildViewAutozoomTimeout extends ConsoleCommand {
         int var9 = 0;
         var9 = VoidHunters.field_G;
         try {
-          var2_int = param0.i(0, 8);
+          var2_int = param0.readBits(0, 8);
           if (var2_int > 0) {
             throw new IllegalStateException("" + var2_int);
           }
-          var3 = kv.a(false, param0) ? 1 : 0;
-          var4 = kv.a(false, param0) ? 1 : 0;
+          var3 = kv.readBoolean(false, param0) ? 1 : 0;
+          var4 = kv.readBoolean(false, param0) ? 1 : 0;
           var5 = new wma();
-          var5.field_J = (short)param0.i(0, 16);
-          var5.field_r = MissionVariable.a(param0, 16, 24, var5.field_r);
-          var5.field_o = MissionVariable.a(param0, 16, 24, var5.field_o);
-          var5.field_p = MissionVariable.a(param0, 16, 24, var5.field_p);
+          var5.field_J = (short)param0.readBits(0, 16);
+          var5.field_r = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_r);
+          var5.field_o = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_o);
+          var5.field_p = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_p);
           var6 = -116 / ((-14 - param1) / 61);
-          var5.field_y = (short)param0.i(0, 16);
-          var5.field_w = MissionVariable.a(param0, 16, 24, var5.field_w);
-          var5.field_N = MissionVariable.a(param0, 16, 24, var5.field_N);
-          var5.field_D = MissionVariable.a(param0, 16, 24, var5.field_D);
+          var5.field_y = (short)param0.readBits(0, 16);
+          var5.field_w = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_w);
+          var5.field_N = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_N);
+          var5.field_D = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_D);
           if (var3 != 0) {
-            var5.field_L = (short)param0.i(0, 16);
-            var5.field_k = MissionVariable.a(param0, 16, 24, var5.field_k);
-            var5.field_v = MissionVariable.a(param0, 16, 24, var5.field_v);
-            var5.field_n = MissionVariable.a(param0, 16, 24, var5.field_n);
-            var5.field_j = MissionVariable.a(param0, 16, 24, var5.field_j);
-            var5.field_G = MissionVariable.a(param0, 16, 24, var5.field_G);
-            var5.field_I = MissionVariable.a(param0, 16, 24, var5.field_I);
+            var5.field_L = (short)param0.readBits(0, 16);
+            var5.field_k = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_k);
+            var5.field_v = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_v);
+            var5.field_n = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_n);
+            var5.field_j = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_j);
+            var5.field_G = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_G);
+            var5.field_I = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_I);
           }
           if (var4 != 0) {
-            param0.i(0, 16);
-            var5.field_b = MissionVariable.a(param0, 16, 24, var5.field_b);
-            var5.field_m = MissionVariable.a(param0, 16, 24, var5.field_m);
-            var5.field_f = MissionVariable.a(param0, 16, 24, var5.field_f);
-            var5.field_i = MissionVariable.a(param0, 16, 24, var5.field_i);
-            var5.field_c = MissionVariable.a(param0, 16, 24, var5.field_c);
+            param0.readBits(0, 16);
+            var5.field_b = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_b);
+            var5.field_m = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_m);
+            var5.field_f = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_f);
+            var5.field_i = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_i);
+            var5.field_c = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_c);
           }
-          if (kv.a(false, param0)) {
-            var5.field_K = MissionVariable.a(param0, 16, 24, var5.field_K);
+          if (kv.readBoolean(false, param0)) {
+            var5.field_K = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_K);
           }
-          if (kv.a(false, param0)) {
+          if (kv.readBoolean(false, param0)) {
             var5.field_E = GetClientSideDragging.a(false, 16, param0, var5.field_E);
             var7 = 0;
             for (var8 = 0; var5.field_E.length > var8; var8++) {

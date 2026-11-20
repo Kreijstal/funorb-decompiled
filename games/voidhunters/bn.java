@@ -4,9 +4,9 @@
 final class bn implements dja {
     static int field_a;
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 95 % ((param0 + 64) / 50);
-        return (tv) ((Object) new hna());
+        return (SerializableGameState) ((Object) new hna());
     }
 
     final static void a(int param0, int param1, byte param2, int param3) {
@@ -24,12 +24,12 @@ final class bn implements dja {
         bn.a(-67, -4, (byte) 25, 43);
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           this.a((byte) 20);
-          return (tv[]) ((Object) new hna[param1]);
+          return (SerializableGameState[]) ((Object) new hna[param1]);
         }
-        return (tv[]) ((Object) new hna[param1]);
+        return (SerializableGameState[]) ((Object) new hna[param1]);
     }
 
     static {

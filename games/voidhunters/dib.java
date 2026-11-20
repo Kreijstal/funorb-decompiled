@@ -82,9 +82,9 @@ final class dib extends ev {
             return stackIn_4_0;
           }
           var2 = SetDebrisGroupColour.a(-1, param0);
-          var3 = new tsa[var2.c(3)];
+          var3 = new tsa[var2.size(3)];
           var4 = 0;
-          var5 = (tsa) (var2.d(0));
+          var5 = (tsa) (var2.first(0));
           if (param1 < 32) {
             stackIn_7_0 = (tsa[]) null;
             return stackIn_7_0;
@@ -93,7 +93,7 @@ final class dib extends ev {
             incrementValue$1 = var4;
             var4++;
             var3[incrementValue$1] = var5;
-            var5 = (tsa) (var2.a((byte) 82));
+            var5 = (tsa) (var2.next((byte) 82));
           }
           SetUseModels.field_q = var3;
           GetMissilesExplosionPower.field_o = param0;

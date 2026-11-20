@@ -43,12 +43,12 @@ final class hb {
               var5[1] = ne.a(')', (byte) 111, "", var5[1]);
               var6 = new ConsoleValue(lob.a(-92, (CharSequence) ((Object) var5[1])));
               var7 = new ConsoleValue[]{var6};
-              var8 = (ConsoleCommand) (var2.d(0));
+              var8 = (ConsoleCommand) (var2.first(0));
               while (var8 != null) {
-                if (var8.a(true, var5[0], var7)) {
+                if (var8.matchesSignature(true, var5[0], var7)) {
                   var8.execute(var7, param1 - 157);
                 }
-                var8 = (ConsoleCommand) (var2.a((byte) 12));
+                var8 = (ConsoleCommand) (var2.next((byte) 12));
               }
             }
           }

@@ -61,7 +61,7 @@ final class jwa extends le {
           }
           var4_int = param0;
           if (var4_int == 0) {
-            this.b(param2.c((byte) -94), -123);
+            this.b(param2.readUnsignedMedium((byte) -94), -123);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -107,14 +107,14 @@ final class jwa extends le {
           var2_int = 0;
           var3 = param1.length();
           while (var2_int < var3) {
-            if (MouseWheelInput.a(param1.charAt(var2_int), 120)) {
+            if (MouseWheelInput.isNameSeparator(param1.charAt(var2_int), 120)) {
               var2_int++;
               continue;
             }
             break;
           }
           while (var3 > var2_int) {
-            if (MouseWheelInput.a(param1.charAt(var3 - 1), 116)) {
+            if (MouseWheelInput.isNameSeparator(param1.charAt(var3 - 1), 116)) {
               var3--;
               continue;
             }

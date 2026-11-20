@@ -5,9 +5,9 @@ final class bab implements dja {
     static String field_a;
     static String field_b;
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -28 / ((param0 + 64) / 50);
-        return (tv) ((Object) new PlayerVote());
+        return (SerializableGameState) ((Object) new PlayerVote());
     }
 
     final static String a(String param0, int param1) {
@@ -112,11 +112,11 @@ final class bab implements dja {
         }
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          return (tv[]) null;
+          return (SerializableGameState[]) null;
         }
-        return (tv[]) ((Object) new PlayerVote[param1]);
+        return (SerializableGameState[]) ((Object) new PlayerVote[param1]);
     }
 
     final static void a(boolean param0, ShipComponent param1) {

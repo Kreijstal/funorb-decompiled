@@ -18,10 +18,10 @@ final class SettingsChange implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException var3 = null;
         int var4 = 0;
-        faa var5 = null;
+        IsaacPacketBuffer var5 = null;
         SettingsChange var6 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
@@ -30,8 +30,8 @@ final class SettingsChange implements DiffableState {
         try {
           var6 = (SettingsChange) (other);
           if (obfuscationGuard > -19) {
-            var5 = (faa) null;
-            this.a((faa) null, false);
+            var5 = (IsaacPacketBuffer) null;
+            this.readState((IsaacPacketBuffer) null, false);
           }
           var4 = 0;
           if (this.id != var6.id) {
@@ -61,10 +61,10 @@ final class SettingsChange implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.id = param0.i(0, 32);
-          this.value = param0.i(0, 32);
+          this.id = param0.readBits(0, 32);
+          this.value = param0.readBits(0, 32);
           if (param1) {
             field_f = (int[]) null;
           }
@@ -76,13 +76,13 @@ final class SettingsChange implements DiffableState {
     SettingsChange() {
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          param0.a(-632, this.id, 32);
-          param0.a(-632, this.value, 32);
+          param0.writeBits(-632, this.id, 32);
+          param0.writeBits(-632, this.value, 32);
           if (param1 >= -109) {
-            faa var4 = (faa) null;
-            this.b((faa) null, 25);
+            IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
+            this.writeState((IsaacPacketBuffer) null, 25);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "so.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -94,7 +94,7 @@ final class SettingsChange implements DiffableState {
         this.id = param0;
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         SettingsChange var3 = null;
         int var4 = 0;
         boolean stackIn_5_0 = false;
@@ -122,7 +122,7 @@ final class SettingsChange implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         RuntimeException var3 = null;
         SettingsChange var5 = null;
         SettingsChange var6 = null;

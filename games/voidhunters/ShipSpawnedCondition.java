@@ -6,7 +6,7 @@ final class ShipSpawnedCondition extends MissionCondition implements DiffableSta
     private int teamId;
     static String[] field_e;
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         ShipSpawnedCondition var3 = null;
         int var4 = 0;
         RuntimeException stackIn_10_0 = null;
@@ -176,7 +176,7 @@ final class ShipSpawnedCondition extends MissionCondition implements DiffableSta
         field_e = null;
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         ShipSpawnedCondition var4 = null;
         boolean stackIn_5_0 = false;
@@ -188,7 +188,7 @@ final class ShipSpawnedCondition extends MissionCondition implements DiffableSta
         try {
           var3_int = -112 % ((param0 - 22) / 59);
           var4 = (ShipSpawnedCondition) (param1);
-          stackIn_5_0 = (super.a((byte) -56, param1)) || (this.teamId != var4.teamId);
+          stackIn_5_0 = (super.differsFrom((byte) -56, param1)) || (this.teamId != var4.teamId);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -204,7 +204,7 @@ final class ShipSpawnedCondition extends MissionCondition implements DiffableSta
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         ShipSpawnedCondition var6 = null;
         ShipSpawnedCondition var7 = null;
         try {
@@ -214,7 +214,7 @@ final class ShipSpawnedCondition extends MissionCondition implements DiffableSta
             World var4 = (World) null;
             this.a((World) null, -15);
           }
-          super.b((byte) 81, param1);
+          super.copyTo((byte) 81, param1);
           var7.teamId = this.teamId;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jsb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
@@ -232,10 +232,10 @@ final class ShipSpawnedCondition extends MissionCondition implements DiffableSta
         return var2 + " onto team " + this.teamId;
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
-          this.teamId = param0.i(0, 8);
+          super.readState(param0, param1);
+          this.teamId = param0.readBits(0, 8);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jsb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -264,13 +264,13 @@ final class ShipSpawnedCondition extends MissionCondition implements DiffableSta
         }
     }
 
-    public final void b(faa param0, int param1) {
-        super.b(param0, -116);
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
+        super.writeState(param0, -116);
         if (param1 > -109) {
           return;
         }
         try {
-          param0.a(-632, this.teamId, 8);
+          param0.writeBits(-632, this.teamId, 8);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "jsb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

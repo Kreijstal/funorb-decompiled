@@ -132,7 +132,7 @@ final class GetMissilesTopSpeed extends ConsoleCommand {
                 if (var3_int >= 24) {
                   throw new IOException();
                 }
-                param1.a(0, var2, -1, 24);
+                param1.writeBytes(0, var2, -1, 24);
                 decompiledRegionSelector0 = 0;
               } catch (java.lang.Exception decompiledCaughtParameter0) {
                 decompiledCaughtException = decompiledCaughtParameter0;
@@ -146,7 +146,7 @@ final class GetMissilesTopSpeed extends ConsoleCommand {
                 return;
               }
             }
-            param1.a(0, var2, -1, 24);
+            param1.writeBytes(0, var2, -1, 24);
             return;
           } catch (java.lang.RuntimeException decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;

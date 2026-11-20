@@ -18,7 +18,7 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(159, 62, arguments[0].a(106));
+          SetMachineGunEnergyUsed.a(159, 62, arguments[0].intValue(106));
           if (obfuscationGuard > -119) {
             field_q = 105;
           }
@@ -122,16 +122,16 @@ final class SetMassDriverEnergyUsed extends ConsoleCommand {
 
     final static void a(DualLinkNode param0, DualLinkNode param1, byte param2) {
         try {
-          if (null != param0.field_d) {
-            param0.d((byte) -35);
+          if (null != param0.secondaryPrevious) {
+            param0.unlinkSecondary((byte) -35);
           }
-          param0.field_e = param1.field_e;
-          param0.field_d = param1;
-          param0.field_d.field_e = param0;
+          param0.secondaryNext = param1.secondaryNext;
+          param0.secondaryPrevious = param1;
+          param0.secondaryPrevious.secondaryNext = param0;
           if (param2 != -68) {
             SetMassDriverEnergyUsed.a(12, 69, 48, (byte) 94);
           }
-          param0.field_e.field_d = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gbb.D(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

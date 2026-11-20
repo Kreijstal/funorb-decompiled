@@ -2,43 +2,43 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bh implements dja {
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          return (tv[]) null;
+          return (SerializableGameState[]) null;
         }
-        return (tv[]) ((Object) new rgb[param1]);
+        return (SerializableGameState[]) ((Object) new rgb[param1]);
     }
 
     final static void a(int param0, boolean param1) {
         int var3 = 0;
         int var4 = 0;
-        faa var2 = RequestNewestBlackboxRecording.field_p;
+        IsaacPacketBuffer var2 = RequestNewestBlackboxRecording.field_p;
         int var3Lifetime1;
         int var4Lifetime1;
-        var2.h(24335, param0);
+        var2.writeIsaacByte(24335, param0);
         if (param1) {
           var2.position = var2.position + 1;
           var3 = var2.position;
-          var2.c(0, 5);
-          var2.c(0, SetSpinningBladeSpindamageMultiplier.field_o.field_Fb);
+          var2.writeByte(0, 5);
+          var2.writeByte(0, SetSpinningBladeSpindamageMultiplier.field_o.field_Fb);
           var4 = SetSpinningBladeSpindamageMultiplier.field_o.field_Cb + (SetSpinningBladeSpindamageMultiplier.field_o.field_Bb << 6);
-          var2.c(0, var4);
-          var2.a(0, SetSpinningBladeSpindamageMultiplier.field_o.field_Pb, -1, SetSpinningBladeSpindamageMultiplier.field_o.field_Pb.length);
-          var2.e(-var3 + var2.position, -129);
+          var2.writeByte(0, var4);
+          var2.writeBytes(0, SetSpinningBladeSpindamageMultiplier.field_o.field_Pb, -1, SetSpinningBladeSpindamageMultiplier.field_o.field_Pb.length);
+          var2.writeLengthByte(-var3 + var2.position, -129);
           return;
         }
         bh.a(-30, true);
         var2.position = var2.position + 1;
         var3Lifetime1 = var2.position;
-        var2.c(0, 5);
-        var2.c(0, SetSpinningBladeSpindamageMultiplier.field_o.field_Fb);
+        var2.writeByte(0, 5);
+        var2.writeByte(0, SetSpinningBladeSpindamageMultiplier.field_o.field_Fb);
         var4Lifetime1 = SetSpinningBladeSpindamageMultiplier.field_o.field_Cb + (SetSpinningBladeSpindamageMultiplier.field_o.field_Bb << 6);
-        var2.c(0, var4Lifetime1);
-        var2.a(0, SetSpinningBladeSpindamageMultiplier.field_o.field_Pb, -1, SetSpinningBladeSpindamageMultiplier.field_o.field_Pb.length);
-        var2.e(-var3Lifetime1 + var2.position, -129);
+        var2.writeByte(0, var4Lifetime1);
+        var2.writeBytes(0, SetSpinningBladeSpindamageMultiplier.field_o.field_Pb, -1, SetSpinningBladeSpindamageMultiplier.field_o.field_Pb.length);
+        var2.writeLengthByte(-var3Lifetime1 + var2.position, -129);
     }
 
-    final static apb[] a(faa param0, byte param1) {
+    final static apb[] a(IsaacPacketBuffer param0, byte param1) {
         int var5 = 0;
         int var2_int = 0;
         int var3 = 0;
@@ -56,7 +56,7 @@ final class bh implements dja {
         RuntimeException var2 = null;
         var7 = VoidHunters.field_G;
         try {
-          var2_int = param0.i(0, 8);
+          var2_int = param0.readBits(0, 8);
           if (var2_int > 0) {
             stackIn_3_0 = null;
             return (apb[]) (stackIn_3_0);
@@ -65,21 +65,21 @@ final class bh implements dja {
             stackIn_6_0 = (apb[]) null;
             return stackIn_6_0;
           }
-          var3 = param0.i(0, 12);
+          var3 = param0.readBits(0, 12);
           var4 = new apb[var3];
           for (var5 = 0; var3 > var5; var5++) {
-            if (!kv.a(false, param0)) {
-              var6 = param0.i(0, BodyInZoneCondition.a(-97, var5 - 1));
+            if (!kv.readBoolean(false, param0)) {
+              var6 = param0.readBits(0, BodyInZoneCondition.a(-97, var5 - 1));
               var4[var5] = var4[var6];
             } else {
               var6_ref_apb = new apb();
-              param0.i(0, 24);
-              param0.i(0, 24);
-              var6_ref_apb.field_c = param0.i(0, 24);
-              param0.i(0, 9);
-              param0.i(0, 12);
-              param0.i(0, 12);
-              param0.i(0, 12);
+              param0.readBits(0, 24);
+              param0.readBits(0, 24);
+              var6_ref_apb.field_c = param0.readBits(0, 24);
+              param0.readBits(0, 9);
+              param0.readBits(0, 12);
+              param0.readBits(0, 12);
+              param0.readBits(0, 12);
               var4[var5] = var6_ref_apb;
             }
           }
@@ -99,9 +99,9 @@ final class bh implements dja {
         }
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 15 / ((param0 + 64) / 50);
-        return (tv) ((Object) new rgb());
+        return (SerializableGameState) ((Object) new rgb());
     }
 
     static {

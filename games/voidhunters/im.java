@@ -3,7 +3,7 @@
  */
 final class im extends aia {
     float field_o;
-    static faa field_q;
+    static IsaacPacketBuffer field_q;
     int field_p;
     int field_m;
     float field_n;

@@ -36,7 +36,7 @@ final class SetSniperCannonAimspeed extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          SetMachineGunEnergyUsed.a(122, 62, arguments[0].a(19));
+          SetMachineGunEnergyUsed.a(122, 62, arguments[0].intValue(19));
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

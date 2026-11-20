@@ -141,14 +141,14 @@ final class sma extends le {
           if (var4_int != 0) {
             if (var4_int != 1) {
               if (2 == var4_int) {
-                stackIn_14_1 = (param2.e((byte) -101) == 1);
+                stackIn_14_1 = (param2.readUnsignedByte((byte) -101) == 1);
                 this.field_g = stackIn_14_1;
               }
             } else {
-              this.field_i = param2.e(1869);
+              this.field_i = param2.readUnsignedShort(1869);
             }
           } else {
-            this.field_j = param2.e(1869);
+            this.field_j = param2.readUnsignedShort(1869);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

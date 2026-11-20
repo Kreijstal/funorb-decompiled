@@ -33,7 +33,7 @@ final class ct {
           if (param1 <= 30) {
             field_a = (gj) null;
           }
-          param2.b(-10258, new hua(param0.componentTypeId));
+          param2.addLast(-10258, new hua(param0.componentTypeId));
           if (null != param0.hardpoints) {
             if (0 >= param0.hardpoints.length) {
               return;
@@ -42,7 +42,7 @@ final class ct {
             for (var4 = 0; var4 < param0.hardpoints.length; var4++) {
               var5 = param0.hardpoints[var4];
               if (var5.connectedComponentIdx != -1) {
-                param2.b(-10258, new hua(var4));
+                param2.addLast(-10258, new hua(var4));
                 ct.a(param0.subcomponents[var5.connectedComponentIdx], 108, param2);
                 if (-1 + param0.hardpoints.length == var4) {
                   var3_int = 1;
@@ -52,7 +52,7 @@ final class ct {
             if (var3_int != 0) {
               return;
             }
-            param2.b(-10258, new hua(-1));
+            param2.addLast(-10258, new hua(-1));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

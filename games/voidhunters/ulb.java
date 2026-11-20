@@ -57,16 +57,16 @@ final class ulb implements dja {
         }
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          return (tv[]) null;
+          return (SerializableGameState[]) null;
         }
-        return (tv[]) ((Object) new ShipSpawnedCondition[param1]);
+        return (SerializableGameState[]) ((Object) new ShipSpawnedCondition[param1]);
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 34 % ((param0 + 64) / 50);
-        return (tv) ((Object) new ShipSpawnedCondition());
+        return (SerializableGameState) ((Object) new ShipSpawnedCondition());
     }
 
     static {

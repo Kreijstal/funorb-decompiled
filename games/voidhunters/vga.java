@@ -56,39 +56,39 @@ final class vga {
     final int c(int param0) {
         int var4 = VoidHunters.field_G;
         int var2 = param0;
-        DualLinkNode var3 = this.field_c.field_e;
+        DualLinkNode var3 = this.field_c.secondaryNext;
         while (var3 != this.field_c) {
           var2++;
-          var3 = var3.field_e;
+          var3 = var3.secondaryNext;
         }
         return var2;
     }
 
     final static void a(int param0, byte param1, String param2, long param3, int param4, boolean param5) {
-        RequestNewestBlackboxRecording.field_p.h(24335, param4);
+        RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, param4);
         RequestNewestBlackboxRecording.field_p.position = RequestNewestBlackboxRecording.field_p.position + 1;
         int var7_int = RequestNewestBlackboxRecording.field_p.position;
-        RequestNewestBlackboxRecording.field_p.a(param3, 108);
-        RequestNewestBlackboxRecording.field_p.a(true, param2);
+        RequestNewestBlackboxRecording.field_p.writeLong(param3, 108);
+        RequestNewestBlackboxRecording.field_p.writeString(true, param2);
         if (param1 >= -94) {
           return;
         }
         try {
-          RequestNewestBlackboxRecording.field_p.c(0, param0);
-          RequestNewestBlackboxRecording.field_p.c(0, !param5 ? 0 : 1);
-          RequestNewestBlackboxRecording.field_p.e(-var7_int + RequestNewestBlackboxRecording.field_p.position, -129);
+          RequestNewestBlackboxRecording.field_p.writeByte(0, param0);
+          RequestNewestBlackboxRecording.field_p.writeByte(0, !param5 ? 0 : 1);
+          RequestNewestBlackboxRecording.field_p.writeLengthByte(-var7_int + RequestNewestBlackboxRecording.field_p.position, -129);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vga.B(" + param0 + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ',' + param3 + ',' + param4 + ',' + param5 + ')');
         }
     }
 
     final DualLinkNode a(byte param0) {
-        DualLinkNode var2 = this.field_c.field_e;
+        DualLinkNode var2 = this.field_c.secondaryNext;
         if (this.field_c == var2) {
           this.field_a = null;
           return null;
         }
-        this.field_a = var2.field_e;
+        this.field_a = var2.secondaryNext;
         if (param0 == -54) {
           return var2;
         }
@@ -101,29 +101,29 @@ final class vga {
           return;
         }
         try {
-          if (param0.field_d != null) {
-            param0.d((byte) -35);
+          if (param0.secondaryPrevious != null) {
+            param0.unlinkSecondary((byte) -35);
           }
-          param0.field_e = this.field_c.field_e;
-          param0.field_d = this.field_c;
-          param0.field_d.field_e = param0;
-          param0.field_e.field_d = param0;
+          param0.secondaryNext = this.field_c.secondaryNext;
+          param0.secondaryPrevious = this.field_c;
+          param0.secondaryPrevious.secondaryNext = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vga.E(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
     final DualLinkNode b(int param0) {
-        DualLinkNode var2 = this.field_c.field_d;
+        DualLinkNode var2 = this.field_c.secondaryPrevious;
         if (var2 == this.field_c) {
           return null;
         }
         if (param0 == 1) {
-          var2.d((byte) -35);
+          var2.unlinkSecondary((byte) -35);
           return var2;
         }
         this.a((byte) 3);
-        var2.d((byte) -35);
+        var2.unlinkSecondary((byte) -35);
         return var2;
     }
 
@@ -145,7 +145,7 @@ final class vga {
             this.field_a = null;
             return null;
           }
-          this.field_a = var2.field_e;
+          this.field_a = var2.secondaryNext;
           return var2;
         }
         var2Lifetime1 = this.field_a;
@@ -153,14 +153,14 @@ final class vga {
           this.field_a = null;
           return null;
         }
-        this.field_a = var2Lifetime1.field_e;
+        this.field_a = var2Lifetime1.secondaryNext;
         return var2Lifetime1;
     }
 
     final DualLinkNode b(byte param0) {
-        DualLinkNode var2 = this.field_c.field_e;
+        DualLinkNode var2 = this.field_c.secondaryNext;
         if (this.field_c != var2) {
-          var2.d((byte) -35);
+          var2.unlinkSecondary((byte) -35);
           int var3 = 25 % ((param0 + 18) / 58);
           return var2;
         }
@@ -168,17 +168,17 @@ final class vga {
     }
 
     final void a(DualLinkNode param0, int param1) {
-        if (param0.field_d != null) {
-          param0.d((byte) -35);
+        if (param0.secondaryPrevious != null) {
+          param0.unlinkSecondary((byte) -35);
         }
         if (param1 >= -64) {
           return;
         }
         try {
-          param0.field_e = this.field_c;
-          param0.field_d = this.field_c.field_d;
-          param0.field_d.field_e = param0;
-          param0.field_e.field_d = param0;
+          param0.secondaryNext = this.field_c;
+          param0.secondaryPrevious = this.field_c.secondaryPrevious;
+          param0.secondaryPrevious.secondaryNext = param0;
+          param0.secondaryNext.secondaryPrevious = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vga.I(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -186,8 +186,8 @@ final class vga {
 
     public vga() {
         this.field_c = new DualLinkNode();
-        this.field_c.field_d = this.field_c;
-        this.field_c.field_e = this.field_c;
+        this.field_c.secondaryPrevious = this.field_c;
+        this.field_c.secondaryNext = this.field_c;
     }
 
     static {

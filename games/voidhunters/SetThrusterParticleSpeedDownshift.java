@@ -17,7 +17,7 @@ final class SetThrusterParticleSpeedDownshift extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          SetMachineGunEnergyUsed.a(176, 62, arguments[0].a(124));
+          SetMachineGunEnergyUsed.a(176, 62, arguments[0].intValue(124));
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -55,24 +55,24 @@ final class SetThrusterParticleSpeedDownshift extends ConsoleCommand {
         var3 = null;
         var4 = VoidHunters.field_G;
         if (param1 <= -17) {
-          var3_ref = (nl) (gtb.field_d.d(0));
+          var3_ref = (nl) (gtb.field_d.first(0));
           while (var3_ref != null) {
             if (param0 == var3_ref.field_k &&
               param2 == var3_ref.field_l) {
               return var3_ref;
             }
-            var3_ref = (nl) (gtb.field_d.a((byte) 59));
+            var3_ref = (nl) (gtb.field_d.next((byte) 59));
           }
           return null;
         }
         SetThrusterParticleSpeedDownshift.e((byte) -51);
-        var3_refLifetime1 = (nl) (gtb.field_d.d(0));
+        var3_refLifetime1 = (nl) (gtb.field_d.first(0));
         while (var3_refLifetime1 != null) {
           if (param0 == var3_refLifetime1.field_k &&
             param2 == var3_refLifetime1.field_l) {
             return var3_refLifetime1;
           }
-          var3_refLifetime1 = (nl) (gtb.field_d.a((byte) 59));
+          var3_refLifetime1 = (nl) (gtb.field_d.next((byte) 59));
         }
         return null;
     }

@@ -9,7 +9,7 @@ final class MissionEvent implements DiffableState {
     private MissionAction[] actions;
     static String field_f;
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         MissionEvent var3 = null;
         int var4 = 0;
         boolean stackIn_5_0 = false;
@@ -100,7 +100,7 @@ final class MissionEvent implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         MissionEvent var9 = null;
         Class[] var4 = null;
         dja[] var5 = null;
@@ -112,8 +112,8 @@ final class MissionEvent implements DiffableState {
           var5 = new dja[]{lq.field_i, GetFps.field_o, GetUseCircleOutline.field_o, jv.field_d, GetNebulaProximityFadeDownshift.field_o, SetSalvoaim.field_s, GetMachineGunEnergyUsed.field_q, rla.field_v, oua.field_b};
           var9.conditions = (MissionCondition[]) (hla.a(var4, this.conditions, var5, -118, var9.conditions, 1, jv.field_d));
           if (param0 <= 54) {
-            tv var8 = (tv) null;
-            this.reportDifferences((tv) null, 121);
+            SerializableGameState var8 = (SerializableGameState) null;
+            this.reportDifferences((SerializableGameState) null, 121);
           }
           var6 = new Class[]{SetVariableLabelAction.class, AdjustVariableAction.class, SetShipTeamAction.class, IncrementVariableAction.class, MissionAction.class, AwardVictoryToWinnerAction.class, RemoveEventAction.class, AdjustBodyComponentsAction.class, AwardVictoryToTeamAction.class, SetVariableAction.class};
           var7 = new dja[]{GetUseBackgroundInFullscreen.field_o, re.field_k, SetDebrisCarryOver.field_o, cwa.field_a, SetUseCircleOutline.field_o, GetLaserBeamProjectileDamage.field_r, SetShieldsDirectionalHalfarcCuts.field_o, GetFixedaim.field_q, SetBloomThresholdPercentage.field_o, whb.field_c};
@@ -135,7 +135,7 @@ final class MissionEvent implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         MissionEvent var3 = null;
         int var4 = 0;
         RuntimeException stackIn_13_0 = null;
@@ -177,7 +177,7 @@ final class MissionEvent implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         Class[] var5 = null;
         Class[] var4 = null;
         try {
@@ -220,7 +220,7 @@ final class MissionEvent implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         Class[] var5 = null;
         dja[] var6 = null;
         Class[] var7 = new Class[]{VariableCondition.class, ShipSpawnedCondition.class, TeamNodeCondition.class, MissionCondition.class, BodyInZoneCondition.class, TeamShipComponentCondition.class, TickCondition.class, ShipCondition.class, BodyCondition.class};

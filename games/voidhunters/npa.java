@@ -7,9 +7,9 @@ final class npa implements dja {
     static int[] field_a;
     static double field_c;
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -15 / ((-64 - param0) / 50);
-        return (tv) ((Object) new umb());
+        return (SerializableGameState) ((Object) new umb());
     }
 
     final static void a(int param0, byte param1, int param2, int param3, int param4) {
@@ -64,7 +64,7 @@ final class npa implements dja {
         int var6 = 0;
         vu var7 = null;
         vu var8 = null;
-        faa var9 = null;
+        IsaacPacketBuffer var9 = null;
         CharSequence var10 = null;
         var6 = VoidHunters.field_G;
         try {
@@ -82,28 +82,28 @@ final class npa implements dja {
             stackIn_12_0 = SetReverbGain.a(SetSniperCannonAimarc.field_q, new String[]{param1}, 118);
             return stackIn_12_0;
           }
-          mr.field_M.a(3, var8);
+          mr.field_M.startAt(3, var8);
           while (true) {
-            var7 = (vu) (mr.field_M.a((byte) 72));
+            var7 = (vu) (mr.field_M.next((byte) 72));
             if (var7 != null) {
               var7.field_yb = var7.field_yb - 1;
               continue;
             }
             break;
           }
-          var8.b(-3846);
-          var8.d((byte) -35);
+          var8.unlink(-3846);
+          var8.unlinkSecondary((byte) -35);
           GetBoostersCooldown.field_p = GetBoostersCooldown.field_p - 1;
           var9 = RequestNewestBlackboxRecording.field_p;
           if (param0 != 90) {
             field_c = 0.9397013753078566;
           }
-          var9.h(param0 ^ 24405, param2);
+          var9.writeIsaacByte(param0 ^ 24405, param2);
           var9.position = var9.position + 1;
           var5 = var9.position;
-          var9.c(param0 - 90, 1);
-          var9.a(true, param1);
-          var9.e(var9.position - var5, -129);
+          var9.writeByte(param0 - 90, 1);
+          var9.writeString(true, param1);
+          var9.writeLengthByte(var9.position - var5, -129);
           stackIn_19_0 = null;
           return (String) (stackIn_19_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -168,12 +168,12 @@ final class npa implements dja {
         field_b = (byte[][]) null;
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_a = (int[]) null;
-          return (tv[]) ((Object) new umb[param1]);
+          return (SerializableGameState[]) ((Object) new umb[param1]);
         }
-        return (tv[]) ((Object) new umb[param1]);
+        return (SerializableGameState[]) ((Object) new umb[param1]);
     }
 
     static {

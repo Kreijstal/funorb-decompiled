@@ -15,7 +15,7 @@ final class SetMissionTimeLimit extends ConsoleCommand {
             var4 = (vfa) null;
             SetMissionTimeLimit.a((vfa) null, -90);
           }
-          SetMachineGunEnergyUsed.a(59, 62, arguments[0].a(98));
+          SetMachineGunEnergyUsed.a(59, 62, arguments[0].intValue(98));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

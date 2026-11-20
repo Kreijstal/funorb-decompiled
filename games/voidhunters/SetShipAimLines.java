@@ -38,11 +38,11 @@ final class SetShipAimLines extends ConsoleCommand {
         var10 = VoidHunters.field_G;
         try {
           if (param2) {
-            param1.field_zb = param3.e((byte) -114);
+            param1.field_zb = param3.readUnsignedByte((byte) -114);
           }
-          param1.field_Fb = param3.e((byte) -109);
-          param1.field_Cb = param3.e((byte) -120);
-          var4_int = param3.e((byte) -113);
+          param1.field_Fb = param3.readUnsignedByte((byte) -109);
+          param1.field_Cb = param3.readUnsignedByte((byte) -120);
+          var4_int = param3.readUnsignedByte((byte) -113);
           stackIn_5_0 = (mm) (param1);
           stackIn_6_1 = ((var4_int & 128) != 0);
           stackIn_5_0.field_Xb = stackIn_6_1;
@@ -67,25 +67,25 @@ final class SetShipAimLines extends ConsoleCommand {
           stackIn_21_0.field_xb = stackIn_22_1;
           stackIn_25_0 = ((4 & var4_int) == 0) ? 0 : 1;
           var5 = stackIn_25_0;
-          param3.a(0, param1.field_Pb, (byte) -59, param1.field_Pb.length);
+          param3.readBytes(0, param1.field_Pb, (byte) -59, param1.field_Pb.length);
           stackIn_28_0 = (0 == (2 & var4_int)) ? 0 : 1;
           var6 = stackIn_28_0;
-          param1.field_Kb = param3.e(1869);
-          param1.field_Ob = wt.a(false) - (long)param3.h(106);
+          param1.field_Kb = param3.readUnsignedShort(1869);
+          param1.field_Ob = wt.a(false) - (long)param3.readInt(106);
           var7 = -124 % ((param0 - 42) / 44);
           if (var5 == 0) {
             param1.field_Ub = -1;
           } else {
-            param1.field_Ub = param3.h(53);
+            param1.field_Ub = param3.readInt(53);
           }
-          param1.field_Nb = param3.k(255);
+          param1.field_Nb = param3.readLong(255);
           var8 = param3.position;
-          param1.field_Vb = param3.a(-1);
+          param1.field_Vb = param3.readString(-1);
           if (var6 != 0) {
             param3.position = var8;
             param1.field_Ib = new String[param1.field_zb];
             for (var9 = 0; var9 < param1.field_zb; var9++) {
-              param1.field_Ib[var9] = param3.a(-1);
+              param1.field_Ib[var9] = param3.readString(-1);
             }
             return;
           }
@@ -166,7 +166,7 @@ final class SetShipAimLines extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          sn.field_Y = arguments[0].a(false);
+          sn.field_Y = arguments[0].booleanValue(false);
           if (obfuscationGuard > -119) {
             field_p = (StringBuilder) null;
           }

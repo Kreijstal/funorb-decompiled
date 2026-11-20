@@ -271,11 +271,11 @@ class llb extends fgb {
         int var3 = VoidHunters.field_G;
         if (param0 >= 104) {
           if (null != this.field_lb) {
-            var4 = (llb) (this.field_lb.b((byte) 121));
+            var4 = (llb) (this.field_lb.last((byte) 121));
             while (var4 != null) {
               var4.field_N = true;
               var4.g(127);
-              var4 = (llb) (this.field_lb.a(-1155566844));
+              var4 = (llb) (this.field_lb.previous(-1155566844));
             }
           }
           return;
@@ -367,10 +367,10 @@ class llb extends fgb {
         stackIn_40_1 = (this.field_Q) && (this.field_C == hu.field_b) && (param3);
         this.field_O = stackIn_40_1;
         if (this.field_lb != null) {
-          var13 = (llb) (this.field_lb.b((byte) 119));
+          var13 = (llb) (this.field_lb.last((byte) 119));
           while (var13 != null) {
             var13.a(true, this.field_M, this.field_G, param3, this.field_u, this.field_hb);
-            var13 = (llb) (this.field_lb.a(-1155566844));
+            var13 = (llb) (this.field_lb.previous(-1155566844));
           }
         }
         if (this.field_Q) {
@@ -426,11 +426,11 @@ class llb extends fgb {
         int var8 = this.field_E + var7;
         if (!param3) {
           var9 = 0;
-          var10_ref_llb = (llb) (this.field_lb.d(0));
+          var10_ref_llb = (llb) (this.field_lb.first(0));
           while (var10_ref_llb != null) {
             var10_ref_llb.field_db = -var10_ref_llb.field_K + var9;
             var9 = var9 + (param0 + (var10_ref_llb.field_G + var10_ref_llb.field_E));
-            var10_ref_llb = (llb) (this.field_lb.a((byte) 72));
+            var10_ref_llb = (llb) (this.field_lb.next((byte) 72));
           }
           var8 = -param0 + var9;
         }
@@ -479,13 +479,13 @@ class llb extends fgb {
           this.b(-75, (llb) null);
         }
         if (null != this.field_lb) {
-          var4 = (llb) (this.field_lb.d(param1 - 114));
+          var4 = (llb) (this.field_lb.first(param1 - 114));
           while (var4 != null) {
             var5 = var4.field_hb + var4.field_L;
             if (var3 < var5) {
               var3 = var5;
             }
-            var4 = (llb) (this.field_lb.a((byte) 17));
+            var4 = (llb) (this.field_lb.next((byte) 17));
           }
         }
         return var3;
@@ -499,7 +499,7 @@ class llb extends fgb {
           if (this.field_lb == null) {
             this.field_lb = new IntrusiveDeque();
           }
-          this.field_lb.b(-10258, param1);
+          this.field_lb.addLast(-10258, param1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "llb.V(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -742,10 +742,10 @@ class llb extends fgb {
           }
         }
         if (null != this.field_lb) {
-          var23_ref = (llb) (this.field_lb.d(0));
+          var23_ref = (llb) (this.field_lb.first(0));
           while (var23_ref != null) {
             var23_ref.a(param0, this.field_G, param2, this.field_hb, true, param5, param6, param7, this.field_pb, var19 + this.field_M, this.field_u + var20);
-            var23_ref = (llb) (this.field_lb.a((byte) 109));
+            var23_ref = (llb) (this.field_lb.next((byte) 109));
           }
         }
         dma.b(var12, var13, var14, var15);
@@ -790,7 +790,7 @@ class llb extends fgb {
         this.field_bb = -2147483648;
         try {
           this.field_G = param5;
-          this.field_b = param0;
+          this.key = param0;
           this.field_K = param3;
           this.field_L = param2;
           this.field_hb = param4;

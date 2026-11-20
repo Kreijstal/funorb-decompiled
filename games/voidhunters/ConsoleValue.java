@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class ConsoleValue {
-    Object field_b;
-    boolean field_a;
+    Object value;
+    boolean primitive;
 
     public final String toString() {
-        if (this.field_a) {
-          return sna.a(this.field_b, (byte) 107) + "{" + this.field_b + "}";
+        if (this.primitive) {
+          return sna.getPrimitiveType(this.value, (byte) 107) + "{" + this.value + "}";
         }
-        if (this.field_b == null) {
+        if (this.value == null) {
           return "null";
         }
-        return this.field_b.toString();
+        return this.value.toString();
     }
 
     final static void b(int param0) {
@@ -22,66 +22,66 @@ final class ConsoleValue {
         osa.field_e = SetSniperCannonFiringLeeway.field_p;
     }
 
-    private final long c(int param0) {
-        if (this.field_b instanceof Long) {
-          return ((Long) (this.field_b)).longValue();
+    private final long longValue(int param0) {
+        if (this.value instanceof Long) {
+          return ((Long) (this.value)).longValue();
         }
-        if (this.field_b instanceof Integer) {
-          return ((Integer) (this.field_b)).longValue();
+        if (this.value instanceof Integer) {
+          return ((Integer) (this.value)).longValue();
         }
-        if (this.field_b instanceof Short) {
-          return ((Short) (this.field_b)).longValue();
+        if (this.value instanceof Short) {
+          return ((Short) (this.value)).longValue();
         }
-        if (this.field_b instanceof Byte) {
-          return ((Byte) (this.field_b)).longValue();
+        if (this.value instanceof Byte) {
+          return ((Byte) (this.value)).longValue();
         }
-        if (this.field_b instanceof Double) {
-          return ((Double) (this.field_b)).longValue();
+        if (this.value instanceof Double) {
+          return ((Double) (this.value)).longValue();
         }
         if (param0 != 0) {
           return 104L;
         }
-        if (!(this.field_b instanceof Float)) {
+        if (!(this.value instanceof Float)) {
           throw new ClassCastException();
         }
-        return ((Float) (this.field_b)).longValue();
+        return ((Float) (this.value)).longValue();
     }
 
     ConsoleValue(int param0) {
-        this.field_b = new Integer(param0);
-        this.field_a = true;
+        this.value = new Integer(param0);
+        this.primitive = true;
     }
 
-    final boolean a(boolean param0) {
+    final boolean booleanValue(boolean param0) {
         if (param0) {
-          this.field_b = (Object) null;
-          return ((Boolean) (this.field_b)).booleanValue();
+          this.value = (Object) null;
+          return ((Boolean) (this.value)).booleanValue();
         }
-        return ((Boolean) (this.field_b)).booleanValue();
+        return ((Boolean) (this.value)).booleanValue();
     }
 
-    final int a(int param0) {
+    final int intValue(int param0) {
         if (param0 < 5) {
           ConsoleValue.b(-117);
-          if (!(this.field_b instanceof Integer)) {
-            return (int)this.c(0);
+          if (!(this.value instanceof Integer)) {
+            return (int)this.longValue(0);
           }
-          return ((Integer) (this.field_b)).intValue();
+          return ((Integer) (this.value)).intValue();
         }
-        if (!(this.field_b instanceof Integer)) {
-          return (int)this.c(0);
+        if (!(this.value instanceof Integer)) {
+          return (int)this.longValue(0);
         }
-        return ((Integer) (this.field_b)).intValue();
+        return ((Integer) (this.value)).intValue();
     }
 
     ConsoleValue(long param0) {
-        this.field_b = new Long(param0);
-        this.field_a = true;
+        this.value = new Long(param0);
+        this.primitive = true;
     }
 
     ConsoleValue(boolean param0) {
-        this.field_b = new Boolean(param0);
-        this.field_a = true;
+        this.value = new Boolean(param0);
+        this.primitive = true;
     }
 
     final static void a(byte param0) {
@@ -117,37 +117,37 @@ final class ConsoleValue {
     }
 
     ConsoleValue(float param0) {
-        this.field_b = new Float(param0);
-        this.field_a = true;
+        this.value = new Float(param0);
+        this.primitive = true;
     }
 
     ConsoleValue(double param0) {
-        this.field_b = new Double(param0);
-        this.field_a = true;
+        this.value = new Double(param0);
+        this.primitive = true;
     }
 
-    final float d(int param0) {
-        if (this.field_b instanceof Double) {
-          return ((Double) (this.field_b)).floatValue();
+    final float floatValue(int param0) {
+        if (this.value instanceof Double) {
+          return ((Double) (this.value)).floatValue();
         }
-        if (this.field_b instanceof Float) {
-          return ((Float) (this.field_b)).floatValue();
+        if (this.value instanceof Float) {
+          return ((Float) (this.value)).floatValue();
         }
         if (param0 == 0) {
-          return (float)this.c(0);
+          return (float)this.longValue(0);
         }
-        return (float)this.c(0);
+        return (float)this.longValue(0);
     }
 
     ConsoleValue(char param0) {
-        this.field_b = new Character(param0);
-        this.field_a = true;
+        this.value = new Character(param0);
+        this.primitive = true;
     }
 
     ConsoleValue(Object param0) {
         try {
-          this.field_b = param0;
-          this.field_a = false;
+          this.value = param0;
+          this.primitive = false;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nc.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

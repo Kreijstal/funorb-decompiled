@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetVelocitySustainMax extends ConsoleCommand {
-    final static tv a(Class[] param0, dja[] param1, Class param2, int param3) {
+    final static SerializableGameState a(Class[] param0, dja[] param1, Class param2, int param3) {
         int var4_int = 0;
         int var5 = 0;
-        tv stackIn_3_0 = null;
-        tv stackIn_8_0 = null;
+        SerializableGameState stackIn_3_0 = null;
+        SerializableGameState stackIn_8_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -20,7 +20,7 @@ final class GetVelocitySustainMax extends ConsoleCommand {
         try {
           var4_int = 0;
           if (param3 >= -35) {
-            stackIn_3_0 = (tv) null;
+            stackIn_3_0 = (SerializableGameState) null;
             return stackIn_3_0;
           }
           while (true) {

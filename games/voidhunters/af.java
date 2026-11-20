@@ -5,7 +5,7 @@ final class af extends ub implements DiffableState {
     private CarouselSlotStateDump clientStateDump;
     private CarouselCommongameInfo serverCarousel;
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int stackIn_11_0 = 0;
         int stackIn_14_1 = 0;
         int stackIn_22_0 = 0;
@@ -40,7 +40,7 @@ final class af extends ub implements DiffableState {
           }
           if ((stackIn_11_0 ^ stackIn_14_1) != 0 ||
             null != this.serverCarousel &&
-            this.serverCarousel.a((byte) 118, var5.serverCarousel)) {
+            this.serverCarousel.differsFrom((byte) 118, var5.serverCarousel)) {
             System.out.println("Carousel_commongame_Info server_carousel has changed. before=" + var5.serverCarousel + ", now=" + this.serverCarousel);
             var4 = 1;
           }
@@ -52,7 +52,7 @@ final class af extends ub implements DiffableState {
           }
           if ((stackIn_22_0 ^ stackIn_25_1) != 0 ||
             this.clientStateDump != null &&
-            this.clientStateDump.a((byte) 97, var5.clientStateDump)) {
+            this.clientStateDump.differsFrom((byte) 97, var5.clientStateDump)) {
             var4 = 1;
             System.out.println("CarouselSlotStateDump client_state_dump has changed. before=" + var5.clientStateDump + ", now=" + this.clientStateDump);
           }
@@ -82,7 +82,7 @@ final class af extends ub implements DiffableState {
         return this.serverCarousel;
     }
 
-    private final void a(byte param0, faa param1) {
+    private final void a(byte param0, IsaacPacketBuffer param1) {
         try {
           pu.field_a = osa.field_e;
           int var3_int = -88 % ((12 - param0) / 49);
@@ -92,7 +92,7 @@ final class af extends ub implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         int var4 = 0;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
@@ -102,22 +102,22 @@ final class af extends ub implements DiffableState {
         var4 = VoidHunters.field_G;
         try {
           this.a(param0, (byte) -122);
-          super.a(param0, param1);
-          if (!kv.a(false, param0)) {
+          super.readState(param0, param1);
+          if (!kv.readBoolean(false, param0)) {
             this.serverCarousel = null;
           } else {
             if (this.serverCarousel != null) {
-              this.serverCarousel.a(param0, param1);
+              this.serverCarousel.readState(param0, param1);
             } else {
               this.serverCarousel = new CarouselCommongameInfo();
-              this.serverCarousel.a(param0, param1);
+              this.serverCarousel.readState(param0, param1);
             }
           }
-          if (kv.a(param1, param0)) {
+          if (kv.readBoolean(param1, param0)) {
             if (this.clientStateDump == null) {
               this.clientStateDump = new CarouselSlotStateDump();
             }
-            this.clientStateDump.a(param0, false);
+            this.clientStateDump.readState(param0, false);
           } else {
             this.clientStateDump = null;
           }
@@ -137,7 +137,7 @@ final class af extends ub implements DiffableState {
         }
     }
 
-    private final void a(faa param0, int param1) {
+    private final void a(IsaacPacketBuffer param0, int param1) {
         try {
           osa.field_e = pu.field_a;
           if (param1 <= 25) {
@@ -148,7 +148,7 @@ final class af extends ub implements DiffableState {
         }
     }
 
-    private final void a(int param0, faa param1) {
+    private final void a(int param0, IsaacPacketBuffer param1) {
         try {
           osa.field_e = pu.field_a;
           if (param0 != 116) {
@@ -166,7 +166,7 @@ final class af extends ub implements DiffableState {
         return this.clientStateDump;
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         af var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -177,7 +177,7 @@ final class af extends ub implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         var4 = VoidHunters.field_G;
         try {
-          super.b((byte) 91, param1);
+          super.copyTo((byte) 91, param1);
           var5 = (af) (param1);
           var3 = var5;
           if (param0 <= 54) {
@@ -187,7 +187,7 @@ final class af extends ub implements DiffableState {
             if (null == var3.serverCarousel) {
               var3.serverCarousel = new CarouselCommongameInfo();
             }
-            this.serverCarousel.b((byte) 55, var3.serverCarousel);
+            this.serverCarousel.copyTo((byte) 55, var3.serverCarousel);
           } else {
             var5.serverCarousel = null;
           }
@@ -198,7 +198,7 @@ final class af extends ub implements DiffableState {
           if (null == var3.clientStateDump) {
             var3.clientStateDump = new CarouselSlotStateDump();
           }
-          this.clientStateDump.b((byte) 87, var3.clientStateDump);
+          this.clientStateDump.copyTo((byte) 87, var3.clientStateDump);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -214,14 +214,14 @@ final class af extends ub implements DiffableState {
         }
     }
 
-    private final void a(faa param0, byte param1) {
+    private final void a(IsaacPacketBuffer param0, byte param1) {
         try {
           this.serverCarousel = new CarouselCommongameInfo();
           this.serverCarousel.field_h = true;
           pu.field_a = osa.field_e;
           if (param1 >= -3) {
-            faa var4 = (faa) null;
-            this.a((faa) null, true);
+            IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
+            this.readState((IsaacPacketBuffer) null, true);
           }
           osa.field_e = false;
         } catch (RuntimeException runtimeException) {
@@ -236,7 +236,7 @@ final class af extends ub implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         af var4 = null;
         int stackIn_4_0 = 0;
@@ -253,7 +253,7 @@ final class af extends ub implements DiffableState {
           boolean decompiledFrameRemainder0 = true;
           var3_int = 17 / ((param0 - 22) / 59);
           var4 = (af) (param1);
-          if (!super.a((byte) 105, param1)) {
+          if (!super.differsFrom((byte) 105, param1)) {
             stackIn_4_0 = (null != this.serverCarousel) ? 0 : 1;
             if (null != var4.serverCarousel) {
               stackIn_7_1 = 0;
@@ -261,7 +261,7 @@ final class af extends ub implements DiffableState {
               stackIn_7_1 = 1;
             }
             if ((stackIn_4_0 ^ stackIn_7_1) == 0 && (this.serverCarousel == null ||
-              !this.serverCarousel.a((byte) -70, var4.serverCarousel))) {
+              !this.serverCarousel.differsFrom((byte) -70, var4.serverCarousel))) {
               stackIn_14_0 = (this.clientStateDump != null) ? 0 : 1;
               if (null != var4.clientStateDump) {
                 stackIn_17_1 = 0;
@@ -269,7 +269,7 @@ final class af extends ub implements DiffableState {
                 stackIn_17_1 = 1;
               }
               if ((stackIn_14_0 ^ stackIn_17_1) == 0 && (this.clientStateDump == null ||
-                !this.clientStateDump.a((byte) -116, var4.clientStateDump))) {
+                !this.clientStateDump.differsFrom((byte) -116, var4.clientStateDump))) {
                 stackIn_23_0 = false;
                 decompiledFrameRemainder0 = false;
               }
@@ -296,19 +296,19 @@ final class af extends ub implements DiffableState {
     af() {
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           this.a((byte) -85, param0);
           if (param1 > -109) {
-            tv var4 = (tv) null;
-            this.a((byte) 94, (tv) null);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.differsFrom((byte) 94, (SerializableGameState) null);
           }
-          super.b(param0, -116);
-          if (vq.a(param0, 110, this.serverCarousel != null ? true : false)) {
-            this.serverCarousel.b(param0, -110);
+          super.writeState(param0, -116);
+          if (vq.writeBoolean(param0, 110, this.serverCarousel != null ? true : false)) {
+            this.serverCarousel.writeState(param0, -110);
           }
-          if (vq.a(param0, -35, this.clientStateDump != null ? true : false)) {
-            this.clientStateDump.b(param0, -120);
+          if (vq.writeBoolean(param0, -35, this.clientStateDump != null ? true : false)) {
+            this.clientStateDump.writeState(param0, -120);
           }
           this.a(param0, 92);
         } catch (RuntimeException runtimeException) {

@@ -54,7 +54,7 @@ final class Particle implements DiffableState {
         this.life = 0;
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException stackIn_25_0 = null;
         StringBuilder stackIn_25_1 = null;
         String stackIn_26_2 = null;
@@ -246,7 +246,7 @@ final class Particle implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         RuntimeException var3 = null;
         Particle var5 = null;
         Particle var6 = null;
@@ -283,18 +283,18 @@ final class Particle implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
             this.a(-123);
           }
-          this.x = param0.i(0, 32);
-          this.y = param0.i(0, 32);
-          this.dx = param0.i(0, 32);
-          this.dy = param0.i(0, 32);
-          this.life = param0.i(0, 32);
-          this.fadestart = param0.i(0, 32);
-          this.type = param0.i(0, 4);
+          this.x = param0.readBits(0, 32);
+          this.y = param0.readBits(0, 32);
+          this.dx = param0.readBits(0, 32);
+          this.dy = param0.readBits(0, 32);
+          this.life = param0.readBits(0, 32);
+          this.fadestart = param0.readBits(0, 32);
+          this.type = param0.readBits(0, 4);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "oq.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -311,8 +311,8 @@ final class Particle implements DiffableState {
           this.fadestart = param5;
           return;
         }
-        tv var10 = (tv) null;
-        this.b((byte) -24, (tv) null);
+        SerializableGameState var10 = (SerializableGameState) null;
+        this.copyTo((byte) -24, (SerializableGameState) null);
         this.fadestart = param5;
     }
 
@@ -325,25 +325,25 @@ final class Particle implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          param0.a(-632, this.x, 32);
-          param0.a(-632, this.y, 32);
-          param0.a(-632, this.dx, 32);
-          param0.a(-632, this.dy, 32);
-          param0.a(-632, this.life, 32);
-          param0.a(-632, this.fadestart, 32);
-          param0.a(-632, this.type, 4);
+          param0.writeBits(-632, this.x, 32);
+          param0.writeBits(-632, this.y, 32);
+          param0.writeBits(-632, this.dx, 32);
+          param0.writeBits(-632, this.dy, 32);
+          param0.writeBits(-632, this.life, 32);
+          param0.writeBits(-632, this.fadestart, 32);
+          param0.writeBits(-632, this.type, 4);
           if (param1 > -109) {
-            faa var4 = (faa) null;
-            this.b((faa) null, -1);
+            IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
+            this.writeState((IsaacPacketBuffer) null, -1);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "oq.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         boolean stackIn_10_0 = false;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
@@ -386,8 +386,8 @@ final class Particle implements DiffableState {
         if (param0) {
           return (this.fadestart << 1) - this.life;
         }
-        tv var3 = (tv) null;
-        this.b((byte) -76, (tv) null);
+        SerializableGameState var3 = (SerializableGameState) null;
+        this.copyTo((byte) -76, (SerializableGameState) null);
         return (this.fadestart << 1) - this.life;
     }
 

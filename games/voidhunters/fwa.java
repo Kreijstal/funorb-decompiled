@@ -49,12 +49,12 @@ final class fwa {
         }
         var10 = new PacketBuffer(this.field_d.a(-94));
         var10.position = 5;
-        var3 = var10.e((byte) -108);
+        var3 = var10.readUnsignedByte((byte) -108);
         var10.position = var10.position + 72 * var3;
         var13 = new byte[var10.payload.length - var10.position];
         var11 = var13;
         var4 = var11;
-        var10.a(0, var4, (byte) -59, var13.length);
+        var10.readBytes(0, var4, (byte) -59, var13.length);
         if (null != this.field_b &&
           null != this.field_e) {
           var12 = new java.math.BigInteger(var13);
@@ -130,10 +130,10 @@ final class fwa {
               return stackIn_8_0;
             }
             this.field_c.position = 6 + 72 * param0;
-            var6_int = this.field_c.h(param1 ^ 20);
-            var7 = this.field_c.h(47);
+            var6_int = this.field_c.readInt(param1 ^ 20);
+            var7 = this.field_c.readInt(47);
             var13 = new byte[64];
-            this.field_c.a(0, var13, (byte) -59, 64);
+            this.field_c.readBytes(0, var13, (byte) -59, 64);
             var9 = new ga(param0, param3, param2, this.field_j, this.field_i, var6_int, var13, var7, param4);
             if (param1 != 5) {
               this.a(false);

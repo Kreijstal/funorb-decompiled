@@ -40,7 +40,7 @@ final class pfa implements Runnable {
           synchronized (var5_ref_Object) {
             var6 = (jma) (this.field_d.a((byte) -54));
             while (var6 != null) {
-              if (~var6.field_i == ~(long)param0 &&
+              if (~var6.secondaryKey == ~(long)param0 &&
                 var6.field_o == param1 &&
                 2 == var6.field_r) {
                 var4.field_n = false;
@@ -90,7 +90,7 @@ final class pfa implements Runnable {
           var5.field_r = 2;
           var5.field_l = false;
           var5.field_p = param1;
-          var5.field_i = (long)param3;
+          var5.secondaryKey = (long)param3;
           this.a(0, var5);
           stackIn_3_0 = var5;
           return stackIn_3_0;
@@ -128,7 +128,7 @@ final class pfa implements Runnable {
           var4.field_r = 3;
           var4.field_o = param1;
           var4.field_l = false;
-          var4.field_i = (long)param2;
+          var4.secondaryKey = (long)param2;
           this.a(param0 - 121, var4);
           if (param0 == 121) {
             stackIn_4_0 = var4;
@@ -232,7 +232,7 @@ final class pfa implements Runnable {
             try {
               boolean decompiledFrameRemainder0 = true;
               if (var7.field_r == 2) {
-                var7.field_o.a((int)var7.field_i, 520, var7.field_p, var7.field_p.length);
+                var7.field_o.a((int)var7.secondaryKey, 520, var7.field_p, var7.field_p.length);
                 var7.field_n = false;
               } else {
                 if (var7.field_r != 3) {
@@ -240,7 +240,7 @@ final class pfa implements Runnable {
                   decompiledFrameRemainder0 = false;
                 }
                 else {
-                  var7.field_p = var7.field_o.a((byte) 120, (int)var7.field_i);
+                  var7.field_p = var7.field_o.a((byte) 120, (int)var7.secondaryKey);
                   var7.field_n = false;
                 }
               }

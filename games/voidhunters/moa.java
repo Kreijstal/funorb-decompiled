@@ -143,14 +143,14 @@ final class moa extends le {
         try {
           var4_int = param0;
           if (var4_int == 0) {
-            this.field_m = param2.e((byte) -121);
+            this.field_m = param2.readUnsignedByte((byte) -121);
           } else {
             if (var4_int != 1) {
               if (2 == var4_int) {
-                this.field_k = param2.e((byte) -103);
+                this.field_k = param2.readUnsignedByte((byte) -103);
               }
             } else {
-              this.field_l = param2.e(1869);
+              this.field_l = param2.readUnsignedShort(1869);
             }
           }
           if (param1 > -60) {

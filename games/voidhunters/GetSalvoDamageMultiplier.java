@@ -46,18 +46,18 @@ final class GetSalvoDamageMultiplier extends ConsoleCommand {
         RuntimeException var2_ref = null;
         var3 = VoidHunters.field_G;
         try {
-          var4 = (ea) (oaa.field_k.d(0));
+          var4 = (ea) (oaa.field_k.first(0));
           while (var4 != null) {
             GetCountermeasureLauncherAimspeed.a(var4, 1, param1);
-            var4 = (ea) (oaa.field_k.a((byte) 28));
+            var4 = (ea) (oaa.field_k.next((byte) 28));
           }
           if (param0 != 50) {
             field_p = -54;
           }
-          var2 = GetLagStandardDeviationIn.field_q.d(0);
+          var2 = GetLagStandardDeviationIn.field_q.first(0);
           while (var2 != null) {
             GetTorqueDownshift.b(-105, param1);
-            var2 = GetLagStandardDeviationIn.field_q.a((byte) 9);
+            var2 = GetLagStandardDeviationIn.field_q.next((byte) 9);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

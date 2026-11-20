@@ -14,7 +14,7 @@ final class SetBloomCoefficientPercentage extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          oaa.field_i = arguments[0].a(8);
+          oaa.field_i = arguments[0].intValue(8);
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;
@@ -49,12 +49,12 @@ final class SetBloomCoefficientPercentage extends ConsoleCommand {
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6_int = 0;
-        tv var6 = null;
+        SerializableGameState var6 = null;
         int var7 = 0;
-        tv var8 = null;
+        SerializableGameState var8 = null;
         int var9 = 0;
-        tv var10 = null;
-        tv var11 = null;
+        SerializableGameState var10 = null;
+        SerializableGameState var11 = null;
         int var12 = 0;
         var12 = VoidHunters.field_G;
         try {
@@ -65,22 +65,22 @@ final class SetBloomCoefficientPercentage extends ConsoleCommand {
           if (param0 == null) {
             param0 = new IntrusiveDeque();
           }
-          var5_int = param1.c(3) - param0.c(3);
+          var5_int = param1.size(3) - param0.size(3);
           if (var5_int > 0) {
             for (var6_int = 0; var5_int > var6_int; var6_int++) {
-              param0.b(-10258, (IntrusiveNode) ((Object) param3.a((byte) 6)));
+              param0.addLast(-10258, (IntrusiveNode) ((Object) param3.a((byte) 6)));
             }
           } else {
             if (var5_int < 0) {
               var5_int = -var5_int;
               for (var6_int = 0; var6_int < var5_int; var6_int++) {
-                param0.c((byte) -104);
+                param0.removeLast((byte) -104);
               }
             }
           }
-          var6 = (tv) ((Object) param0.d(0));
+          var6 = (SerializableGameState) ((Object) param0.first(0));
           var7 = 80 / ((param4 + 6) / 48);
-          var8 = (tv) ((Object) param1.d(0));
+          var8 = (SerializableGameState) ((Object) param1.first(0));
           while (var8 != null) {
             var9 = param2;
             var10 = var8;
@@ -90,17 +90,17 @@ final class SetBloomCoefficientPercentage extends ConsoleCommand {
                 ((tva) (var10)).a(var11, 29106);
               } else {
                 if (var9 != 3) {
-                  var6 = (tv) ((Object) param0.a((byte) 94));
-                  var8 = (tv) ((Object) param1.a((byte) 116));
+                  var6 = (SerializableGameState) ((Object) param0.next((byte) 94));
+                  var8 = (SerializableGameState) ((Object) param1.next((byte) 116));
                   continue;
                 }
                 ((sjb) (var10)).a(var11, (byte) 39);
               }
             } else {
-              var10.b((byte) 105, var11);
+              var10.copyTo((byte) 105, var11);
             }
-            var6 = (tv) ((Object) param0.a((byte) 94));
-            var8 = (tv) ((Object) param1.a((byte) 116));
+            var6 = (SerializableGameState) ((Object) param0.next((byte) 94));
+            var8 = (SerializableGameState) ((Object) param1.next((byte) 116));
           }
           stackIn_27_0 = (IntrusiveDeque) (param0);
           return stackIn_27_0;

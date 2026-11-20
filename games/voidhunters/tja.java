@@ -18,14 +18,14 @@ class tja implements DiffableState {
         int var3 = 0;
         int var2;
         int var4;
-        faa var5;
+        IsaacPacketBuffer var5;
         var4 = VoidHunters.field_G;
         if (null == this.field_c) {
           return 0;
         }
         if (param0 != -5358) {
-          var5 = (faa) null;
-          this.b((faa) null, -13);
+          var5 = (IsaacPacketBuffer) null;
+          this.writeState((IsaacPacketBuffer) null, -13);
         }
         var2 = 0;
         for (var3 = 0; this.field_c.length > var3; var3++) {
@@ -36,9 +36,9 @@ class tja implements DiffableState {
         return var2;
     }
 
-    public void b(faa param0, int param1) {
+    public void writeState(IsaacPacketBuffer param0, int param1) {
         int var8 = 0;
-        faa var3 = null;
+        IsaacPacketBuffer var3 = null;
         bha[] var4 = null;
         int var5 = 0;
         int var6 = 0;
@@ -46,7 +46,7 @@ class tja implements DiffableState {
         bha var9 = null;
         int var10 = 0;
         int stackIn_6_0 = 0;
-        faa stackIn_12_0 = null;
+        IsaacPacketBuffer stackIn_12_0 = null;
         int stackIn_12_1 = 0;
         boolean stackIn_13_2 = false;
         RuntimeException stackIn_20_0 = null;
@@ -68,7 +68,7 @@ class tja implements DiffableState {
             stackIn_6_0 = var4.length;
           }
           var6 = stackIn_6_0;
-          var3.a(-632, var6, var5);
+          var3.writeBits(-632, var6, var5);
           if (var6 != 0) {
             var7 = var4;
             for (var8 = 0; var7.length > var8; var8++) {
@@ -76,7 +76,7 @@ class tja implements DiffableState {
               stackIn_12_0 = var3;
               stackIn_12_1 = -110;
               stackIn_13_2 = (var9 != null);
-              if (vq.a(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
+              if (vq.writeBoolean(stackIn_12_0, stackIn_12_1, stackIn_13_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var9);
               }
             }
@@ -152,7 +152,7 @@ class tja implements DiffableState {
               if (null != param2[var8] &&
                 null != param0[var8]) {
                 param2[var8].reportDifferences(param0[var8], param4 ^ -5605);
-                if (param2[var8].a((byte) -78, param0[var8])) {
+                if (param2[var8].differsFrom((byte) -78, param0[var8])) {
                   var7 = 1;
                   System.out.println("Element " + var8 + " has changed");
                 }
@@ -181,7 +181,7 @@ class tja implements DiffableState {
         }
     }
 
-    public void reportDifferences(tv other, int obfuscationGuard) {
+    public void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         tja var3 = null;
         int var4 = 0;
         RuntimeException stackIn_11_0 = null;
@@ -218,7 +218,7 @@ class tja implements DiffableState {
         }
     }
 
-    public boolean a(byte param0, tv param1) {
+    public boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         tja var4 = null;
@@ -256,7 +256,7 @@ class tja implements DiffableState {
         }
     }
 
-    public void b(byte param0, tv param1) {
+    public void copyTo(byte param0, SerializableGameState param1) {
         tja var3 = null;
         RuntimeException stackIn_5_0 = null;
         StringBuilder stackIn_5_1 = null;
@@ -352,7 +352,7 @@ class tja implements DiffableState {
         }
     }
 
-    public void a(faa param0, boolean param1) {
+    public void readState(IsaacPacketBuffer param0, boolean param1) {
         if (param1) {
           return;
         }

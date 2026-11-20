@@ -69,27 +69,27 @@ final class qp {
         var16 = VoidHunters.field_G;
         try {
           var3 = new PacketBuffer(GetWeaponParticleSpeedDownshift.a(0, param1));
-          var4 = var3.e((byte) -87);
+          var4 = var3.readUnsignedByte((byte) -87);
           if (var4 >= 5 &&
             7 >= var4) {
             if (var4 >= 6) {
-              this.field_e = var3.h(106);
+              this.field_e = var3.readInt(106);
             }
             if (var4 < 6 ||
               var16 != 0) {
               this.field_e = 0;
             }
-            var5 = var3.e((byte) -117);
+            var5 = var3.readUnsignedByte((byte) -117);
             stackIn_18_0 = (0 == (1 & var5)) ? 0 : 1;
             var6 = stackIn_18_0;
             stackIn_22_0 = ((var5 & 2) == 0) ? 0 : 1;
             var7 = stackIn_22_0;
             if (var4 < 7) {
-              this.field_f = var3.e(1869);
+              this.field_f = var3.readUnsignedShort(1869);
             }
             if (var4 >= 7 ||
               var16 != 0) {
-              this.field_f = var3.n(-24099);
+              this.field_f = var3.readLargeSmart(-24099);
             }
             boolean decompiledFrameCompleted2 = true;
             boolean decompiledFrameCompleted5 = true;
@@ -104,7 +104,7 @@ final class qp {
             if (var4 >= 7) {
               var10 = 0;
               while (this.field_f > var10) {
-                dupTemp$0 = var8 + var3.n(-24099);
+                dupTemp$0 = var8 + var3.readLargeSmart(-24099);
                 var8 = dupTemp$0;
                 this.field_i[var10] = dupTemp$0;
                 stackIn_69_0 = var9;
@@ -127,7 +127,7 @@ final class qp {
               var10 = 0;
               boolean decompiledNaturalLoopExit0 = false;
               while (!(decompiledNaturalLoopExit0 = (var10 >= this.field_f))) {
-                dupTemp$1 = var8 + var3.e(1869);
+                dupTemp$1 = var8 + var3.readUnsignedShort(1869);
                 var8 = dupTemp$1;
                 this.field_i[var10] = dupTemp$1;
                 stackIn_69_0 = this.field_i[var10];
@@ -147,7 +147,7 @@ final class qp {
             if ((decompiledFrameRemainder0) &&
               (decompiledFrameCompleted6)) {
               while (stackIn_69_0 < stackIn_69_1) {
-                this.field_d[this.field_i[var10]] = var3.h(122);
+                this.field_d[this.field_i[var10]] = var3.readInt(122);
                 var10++;
                 if (var16 != 0) {
                   decompiledFrameCompleted5 = false;
@@ -186,7 +186,7 @@ final class qp {
                   break;
                 }
                 while (var10 < this.field_f) {
-                  this.field_n[this.field_i[var10]] = var3.h(25);
+                  this.field_n[this.field_i[var10]] = var3.readInt(25);
                   var10++;
                   if (var16 != 0) {
                     decompiledFrameCompleted4 = false;
@@ -204,7 +204,7 @@ final class qp {
                 if (stackIn_69_0Lifetime1 >= stackIn_69_1Lifetime1) {
                   break;
                 }
-                this.field_d[this.field_i[var10]] = var3.h(122);
+                this.field_d[this.field_i[var10]] = var3.readInt(122);
                 var10++;
                 if (var16 != 0) {
                   decompiledFrameCompleted3 = false;
@@ -218,7 +218,7 @@ final class qp {
               var10 = 0;
               while (this.field_f > var10) {
                 var11_ref_byte__ = new byte[64];
-                var3.a(0, var11_ref_byte__, (byte) -59, 64);
+                var3.readBytes(0, var11_ref_byte__, (byte) -59, 64);
                 this.field_c[this.field_i[var10]] = var11_ref_byte__;
                 var10++;
                 if (var16 != 0) {
@@ -237,7 +237,7 @@ final class qp {
                 }
                 break;
               }
-              this.field_h[this.field_i[var10]] = var3.h(56);
+              this.field_h[this.field_i[var10]] = var3.readInt(56);
               var10++;
             } while (var16 == 0);
             boolean decompiledFrameCompleted1 = true;
@@ -249,7 +249,7 @@ final class qp {
                   var10 = 0;
                   break;
                 }
-                this.field_j[this.field_i[var10]] = var3.n(-24099);
+                this.field_j[this.field_i[var10]] = var3.readLargeSmart(-24099);
                 var10++;
               } while (var16 == 0);
               while (var10 < this.field_f) {
@@ -266,7 +266,7 @@ final class qp {
                 }
                 var14 = stackIn_142_0;
                 while (var14 < var12) {
-                  dupTemp$3 = var8 + var3.n(-24099);
+                  dupTemp$3 = var8 + var3.readLargeSmart(-24099);
                   var8 = dupTemp$3;
                   dupTemp$4 = this.field_g[var11];
                   dupTemp$4[var14] = dupTemp$3;
@@ -296,7 +296,7 @@ final class qp {
                     var10 = 0;
                     break;
                   }
-                  this.field_j[this.field_i[var10]] = var3.e(1869);
+                  this.field_j[this.field_i[var10]] = var3.readUnsignedShort(1869);
                   var10++;
                 } while (var16 == 0);
                 while (this.field_f > var10) {
@@ -313,7 +313,7 @@ final class qp {
                   }
                   var14 = stackIn_142_0;
                   while (var14 < var12) {
-                    dupTemp$6 = var8 + var3.e(1869);
+                    dupTemp$6 = var8 + var3.readUnsignedShort(1869);
                     var8 = dupTemp$6;
                     dupTemp$7 = this.field_g[var11];
                     dupTemp$7[var14] = dupTemp$6;
@@ -367,7 +367,7 @@ final class qp {
                   } else {
                     var14 = this.field_g[var11][var13];
                   }
-                  this.field_o[var11][var14] = var3.h(38);
+                  this.field_o[var11][var14] = var3.readInt(38);
                   var13++;
                 }
                 this.field_p[var11] = new kca(this.field_o[var11]);
@@ -444,7 +444,7 @@ final class qp {
             rtb.field_h.field_R = SetReverbGain.a(SetVelocitySustain.field_o, new String[]{kbb.field_q}, param1 + 89);
             re.field_n.field_xb.field_xb.field_R = null;
             var6 = null;
-            var7 = (vu) (var4.d(0));
+            var7 = (vu) (var4.first(0));
             boolean decompiledNaturalLoopExit0 = false;
             while (!(decompiledNaturalLoopExit0 = (null == var7))) {
               var8 = 0;
@@ -550,7 +550,7 @@ final class qp {
                 } else {
                   lob.field_a = var7.field_vb;
                 }
-                var7 = (vu) (var4.a((byte) 99));
+                var7 = (vu) (var4.next((byte) 99));
                 continue;
               }
               break;

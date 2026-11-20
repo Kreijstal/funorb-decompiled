@@ -65,30 +65,30 @@ final class vm extends le {
           var4_int = param0;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              this.field_l = param2.e((byte) -127);
+              this.field_l = param2.readUnsignedByte((byte) -127);
             } else {
               if (var4_int == 2) {
-                this.field_i = param2.e(1869);
+                this.field_i = param2.readUnsignedShort(1869);
               } else {
                 if (var4_int != 3) {
                   if (var4_int == 4) {
-                    this.field_n = param2.e((byte) -97);
+                    this.field_n = param2.readUnsignedByte((byte) -97);
                   } else {
                     if (var4_int == 5) {
-                      this.field_m = param2.e((byte) -97);
+                      this.field_m = param2.readUnsignedByte((byte) -97);
                     } else {
                       if (var4_int == 6) {
-                        this.field_p = param2.e((byte) -87);
+                        this.field_p = param2.readUnsignedByte((byte) -87);
                       }
                     }
                   }
                 } else {
-                  this.field_o = param2.e((byte) -108);
+                  this.field_o = param2.readUnsignedByte((byte) -108);
                 }
               }
             }
           } else {
-            dupTemp$0 = param2.e((byte) -123);
+            dupTemp$0 = param2.readUnsignedByte((byte) -123);
             this.field_p = dupTemp$0;
             this.field_m = dupTemp$0;
           }

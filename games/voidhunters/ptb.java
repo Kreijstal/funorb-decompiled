@@ -8,7 +8,7 @@ final class ptb extends MapClearanceArea implements DiffableState {
     private int width;
     private int y;
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         ptb var4 = null;
         boolean stackIn_8_0 = false;
@@ -20,7 +20,7 @@ final class ptb extends MapClearanceArea implements DiffableState {
         try {
           var3_int = 122 / ((param0 - 22) / 59);
           var4 = (ptb) (param1);
-          stackIn_8_0 = (super.a((byte) 113, param1)) || (this.x != var4.x) || (this.y != var4.y) || (this.width != var4.width) || (this.height != var4.height);
+          stackIn_8_0 = (super.differsFrom((byte) 113, param1)) || (this.x != var4.x) || (this.y != var4.y) || (this.width != var4.width) || (this.height != var4.height);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -39,8 +39,8 @@ final class ptb extends MapClearanceArea implements DiffableState {
     final void a(World param0, boolean param1) {
         try {
           if (!param1) {
-            tv var4 = (tv) null;
-            this.a((byte) -16, (tv) null);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.differsFrom((byte) -16, (SerializableGameState) null);
           }
           param0.a(this.x + this.width / 2, this.y + this.height / 2, this.y, false, -124, this.x);
         } catch (RuntimeException runtimeException) {
@@ -82,16 +82,16 @@ final class ptb extends MapClearanceArea implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
-        super.b(param0, -124);
-        param0.a(-632, this.x, 32);
-        param0.a(-632, this.y, 32);
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
+        super.writeState(param0, -124);
+        param0.writeBits(-632, this.x, 32);
+        param0.writeBits(-632, this.y, 32);
         if (param1 > -109) {
           return;
         }
         try {
-          param0.a(-632, this.width, 32);
-          param0.a(-632, this.height, 32);
+          param0.writeBits(-632, this.width, 32);
+          param0.writeBits(-632, this.height, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ptb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -104,23 +104,23 @@ final class ptb extends MapClearanceArea implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
-          this.x = param0.i(0, 32);
-          this.y = param0.i(0, 32);
-          this.width = param0.i(0, 32);
-          this.height = param0.i(0, 32);
+          super.readState(param0, param1);
+          this.x = param0.readBits(0, 32);
+          this.y = param0.readBits(0, 32);
+          this.width = param0.readBits(0, 32);
+          this.height = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ptb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         ptb var5 = null;
         ptb var6 = null;
         try {
-          super.b((byte) 58, param1);
+          super.copyTo((byte) 58, param1);
           var5 = (ptb) (param1);
           var6 = var5;
           if (param0 <= 54) {
@@ -138,7 +138,7 @@ final class ptb extends MapClearanceArea implements DiffableState {
     ptb() {
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;

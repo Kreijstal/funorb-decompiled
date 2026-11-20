@@ -509,7 +509,7 @@ final class lra extends DualLinkNode {
         int var8Lifetime1;
         int var9Lifetime1Lifetime1;
         try {
-          var2_int = param0.e((byte) -120);
+          var2_int = param0.readUnsignedByte((byte) -120);
           var3 = 0;
           var4 = 0;
           var12 = new int[var2_int][];
@@ -527,7 +527,7 @@ final class lra extends DualLinkNode {
             array$2 = new int[var8];
             var12[var6] = array$2;
             for (var9 = 0; var8 > var9; var9++) {
-              var12[var6][var9] = param0.e((byte) -125);
+              var12[var6][var9] = param0.readUnsignedByte((byte) -125);
             }
             this.field_q[var6] = var13;
           }
@@ -555,10 +555,10 @@ final class lra extends DualLinkNode {
             }
             var12[var6Lifetime1] = null;
           }
-          this.field_m = this.field_q[param0.e((byte) -114)];
-          this.field_p = this.field_q[param0.e((byte) -90)];
+          this.field_m = this.field_q[param0.readUnsignedByte((byte) -114)];
+          this.field_p = this.field_q[param0.readUnsignedByte((byte) -90)];
           var5 = (int[][]) null;
-          this.field_k = this.field_q[param0.e((byte) -108)];
+          this.field_k = this.field_q[param0.readUnsignedByte((byte) -108)];
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -5,7 +5,7 @@ final class kma extends ComponentBehaviour implements DiffableState {
     static String field_d;
     static String field_c;
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         if (obfuscationGuard >= -19) {
           return;
         }
@@ -37,9 +37,9 @@ final class kma extends ComponentBehaviour implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         try {
-          super.b((byte) 75, param1);
+          super.copyTo((byte) 75, param1);
           if (param0 < 54) {
             field_d = (String) null;
           }
@@ -77,7 +77,7 @@ final class kma extends ComponentBehaviour implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         boolean stackIn_1_0 = false;
@@ -87,7 +87,7 @@ final class kma extends ComponentBehaviour implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -85 % ((param0 - 22) / 59);
-          stackIn_1_0 = super.a((byte) 122, param1);
+          stackIn_1_0 = super.differsFrom((byte) 122, param1);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -112,9 +112,9 @@ final class kma extends ComponentBehaviour implements DiffableState {
     public kma() {
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          super.b(param0, -127);
+          super.writeState(param0, -127);
           if (param1 > -109) {
             this.b((byte) 105);
           }
@@ -131,9 +131,9 @@ final class kma extends ComponentBehaviour implements DiffableState {
         return 16;
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
+          super.readState(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "kma.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

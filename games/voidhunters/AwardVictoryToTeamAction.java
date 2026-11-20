@@ -6,7 +6,7 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
     static int[] field_a;
     private int team;
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         AwardVictoryToTeamAction var3 = null;
         int var4 = 0;
         boolean stackIn_5_0 = false;
@@ -18,7 +18,7 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
         try {
           var3 = (AwardVictoryToTeamAction) (param1);
           var4 = -69 % ((param0 - 22) / 59);
-          stackIn_5_0 = (super.a((byte) -127, param1)) || (this.team != var3.team);
+          stackIn_5_0 = (super.differsFrom((byte) -127, param1)) || (this.team != var3.team);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -42,16 +42,16 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
         return "Award victory to team " + this.team;
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
-          this.team = param0.i(0, 32);
+          super.readState(param0, param1);
+          this.team = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ika.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         AwardVictoryToTeamAction var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -89,14 +89,14 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 > -109) {
-            tv var4 = (tv) null;
-            this.b((byte) -5, (tv) null);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.copyTo((byte) -5, (SerializableGameState) null);
           }
-          super.b(param0, -119);
-          param0.a(-632, this.team, 32);
+          super.writeState(param0, -119);
+          param0.writeBits(-632, this.team, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ika.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -113,7 +113,7 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
           if (param0 != 32) {
             AwardVictoryToTeamAction.a(42, true);
           }
-          stackIn_3_0 = new dib(param1.a(true), param1.a(true), param1.a(true), param1.a(true), param1.c((byte) -75), param1.c((byte) -94), param1.e((byte) -119));
+          stackIn_3_0 = new dib(param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readUnsignedMedium((byte) -75), param1.readUnsignedMedium((byte) -94), param1.readUnsignedByte((byte) -119));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -172,10 +172,10 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         AwardVictoryToTeamAction var4 = (AwardVictoryToTeamAction) (param1);
         AwardVictoryToTeamAction var3 = var4;
-        super.b((byte) 80, param1);
+        super.copyTo((byte) 80, param1);
         if (param0 <= 54) {
           return;
         }

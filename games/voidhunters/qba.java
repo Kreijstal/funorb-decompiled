@@ -18,7 +18,7 @@ final class qba extends le {
         RuntimeException var4 = null;
         try {
           if (param0 == 0) {
-            stackIn_5_1 = (param2.e((byte) -118) == 1);
+            stackIn_5_1 = (param2.readUnsignedByte((byte) -118) == 1);
             this.field_g = stackIn_5_1;
           }
           if (param1 > -60) {

@@ -31,19 +31,19 @@ final class Debris extends ShipBody implements DiffableState, ofa, utb {
         return 2;
     }
 
-    public final void a(faa param0, int param1) {
+    public final void a(IsaacPacketBuffer param0, int param1) {
         try {
           super.a(param0, param1);
-          this.phantom = kv.a(false, param0);
+          this.phantom = kv.readBoolean(false, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nbb.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          super.b(param0, -110);
-          vq.a(param0, 118, this.phantom);
+          super.writeState(param0, -110);
+          vq.writeBoolean(param0, 118, this.phantom);
           if (param1 > -109) {
             this.d(-99);
           }
@@ -52,7 +52,7 @@ final class Debris extends ShipBody implements DiffableState, ofa, utb {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         Debris var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -134,10 +134,10 @@ final class Debris extends ShipBody implements DiffableState, ofa, utb {
         int var2 = 102 / ((param0 + 4) / 38);
     }
 
-    public final void a(faa param0, byte param1) {
+    public final void a(IsaacPacketBuffer param0, byte param1) {
         try {
           super.a(param0, (byte) -103);
-          vq.a(param0, 95, this.phantom);
+          vq.writeBoolean(param0, 95, this.phantom);
           if (param1 >= -91) {
             this.field_w = 55;
           }
@@ -151,7 +151,7 @@ final class Debris extends ShipBody implements DiffableState, ofa, utb {
         this.d((byte) -52);
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         Debris var3 = (Debris) (param1);
         if (this.field_w == var3.field_w) {
           return;
@@ -159,21 +159,21 @@ final class Debris extends ShipBody implements DiffableState, ofa, utb {
         try {
           var3.field_w = this.field_w;
           this.a(true, var3);
-          super.b((byte) 60, param1);
+          super.copyTo((byte) 60, param1);
           var3.phantom = this.phantom;
           if (param0 < 54) {
-            tv var4 = (tv) null;
-            this.b((byte) -95, (tv) null);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.copyTo((byte) -95, (SerializableGameState) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nbb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, false);
-          this.phantom = kv.a(param1, param0);
+          super.readState(param0, false);
+          this.phantom = kv.readBoolean(param1, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nbb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -186,7 +186,7 @@ final class Debris extends ShipBody implements DiffableState, ofa, utb {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         Debris var3 = null;
         int var4 = 0;
         boolean stackIn_5_0 = false;
@@ -198,7 +198,7 @@ final class Debris extends ShipBody implements DiffableState, ofa, utb {
         try {
           var4 = 114 / ((param0 - 22) / 59);
           var3 = (Debris) (param1);
-          stackIn_5_0 = (super.a((byte) 93, param1)) || (var3.phantom != this.phantom);
+          stackIn_5_0 = (super.differsFrom((byte) 93, param1)) || (var3.phantom != this.phantom);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

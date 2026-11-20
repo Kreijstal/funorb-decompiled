@@ -267,7 +267,7 @@ final class tjb extends llb {
         }
         if (this.field_xb != null) {
           this.field_xb.j(16384);
-          this.field_xb.b(param0 - 20230);
+          this.field_xb.unlink(param0 - 20230);
         }
         this.field_xb = null;
         this.field_vb = -1;

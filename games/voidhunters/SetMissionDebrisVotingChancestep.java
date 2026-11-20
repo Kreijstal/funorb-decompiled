@@ -27,7 +27,7 @@ final class SetMissionDebrisVotingChancestep extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(69, 62, arguments[0].a(116));
+          SetMachineGunEnergyUsed.a(69, 62, arguments[0].intValue(116));
           if (obfuscationGuard > -119) {
             field_o = (String) null;
           }

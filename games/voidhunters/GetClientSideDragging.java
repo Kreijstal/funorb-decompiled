@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetClientSideDragging extends ConsoleCommand {
-    final static byte[] a(boolean param0, int param1, faa param2, byte[] param3) {
+    final static byte[] a(boolean param0, int param1, IsaacPacketBuffer param2, byte[] param3) {
         int var4_int = 0;
         int var5 = 0;
         int var6 = 0;
@@ -20,7 +20,7 @@ final class GetClientSideDragging extends ConsoleCommand {
         RuntimeException var4 = null;
         var8 = VoidHunters.field_G;
         try {
-          var4_int = param2.i(0, param1);
+          var4_int = param2.readBits(0, param1);
           if (var4_int == 0) {
             stackIn_3_0 = null;
             return (byte[]) (stackIn_3_0);
@@ -33,11 +33,11 @@ final class GetClientSideDragging extends ConsoleCommand {
             stackIn_10_0 = (byte[]) null;
             return stackIn_10_0;
           }
-          var5 = param2.i(0, 3);
-          var6 = (byte)param2.i(0, 8);
+          var5 = param2.readBits(0, 3);
+          var6 = (byte)param2.readBits(0, 8);
           if (0 < var5) {
             for (var7 = 0; var7 < var4_int; var7++) {
-              param3[var7] = (byte)(param2.i(0, var5) + var6);
+              param3[var7] = (byte)(param2.readBits(0, var5) + var6);
             }
           } else {
             for (var7 = 0; var4_int > var7; var7++) {

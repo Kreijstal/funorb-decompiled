@@ -23,11 +23,11 @@ final class owa extends le {
             return;
           }
           if (param0 == 0) {
-            this.field_m = param2.e((byte) -118);
-            this.field_n = new int[param2.e((byte) -126)][2];
+            this.field_m = param2.readUnsignedByte((byte) -118);
+            this.field_n = new int[param2.readUnsignedByte((byte) -126)][2];
             for (var4_int = 0; var4_int < this.field_n.length; var4_int++) {
-              this.field_n[var4_int][0] = param2.e(1869);
-              this.field_n[var4_int][1] = param2.e(1869);
+              this.field_n[var4_int][0] = param2.readUnsignedShort(1869);
+              this.field_n[var4_int][1] = param2.readUnsignedShort(1869);
             }
             return;
           }

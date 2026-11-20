@@ -48,7 +48,7 @@ final class ksb extends le {
             return;
           }
           if (param0 == 0) {
-            stackIn_7_1 = (param2.e((byte) -95) == 1);
+            stackIn_7_1 = (param2.readUnsignedByte((byte) -95) == 1);
             this.field_g = stackIn_7_1;
           }
           return;

@@ -4,19 +4,19 @@
 final class pfb {
     static String field_a;
     private int field_e;
-    private IterableNodeHashTable field_b;
+    private SecondaryNodeDeque field_b;
     private nga field_c;
     private int field_d;
 
     final void b(byte param0) {
         if (param0 > 72) {
-          this.field_b.a((byte) 61);
+          this.field_b.clear((byte) 61);
           this.field_c.b(0);
           this.field_d = this.field_e;
           return;
         }
         field_a = (String) null;
-        this.field_b.a((byte) 61);
+        this.field_b.clear((byte) 61);
         this.field_c.b(0);
         this.field_d = this.field_e;
     }
@@ -36,7 +36,7 @@ final class pfb {
         this.a(-70, param2);
         this.field_d = this.field_d - param3;
         while (0 > this.field_d) {
-          var6 = (is) (this.field_b.a(-7481));
+          var6 = (is) (this.field_b.removeFirst(-7481));
           this.a(var6, -17173);
         }
         if (param0 > -43) {
@@ -45,8 +45,8 @@ final class pfb {
         try {
           var6_ref = new ska(param1, param3);
           this.field_c.a(var6_ref, 0, param2);
-          this.field_b.a(-17569, var6_ref);
-          ((is) ((Object) var6_ref)).field_i = 0L;
+          this.field_b.addLast(-17569, var6_ref);
+          ((is) ((Object) var6_ref)).secondaryKey = 0L;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pfb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ')');
         }
@@ -79,8 +79,8 @@ final class pfb {
           }
           var4 = var2;
           var2 = (is) (this.field_c.a((byte) 44));
-          var4.b(param0 ^ -3911);
-          var4.d((byte) -35);
+          var4.unlink(param0 ^ -3911);
+          var4.unlinkSecondary((byte) -35);
           this.field_d = this.field_d + var4.field_k;
         }
         if (param0 != 67) {
@@ -101,50 +101,50 @@ final class pfb {
         var3 = null;
         var5 = VoidHunters.field_G;
         if (param0) {
-          var3_ref = (is) (this.field_b.a(false));
+          var3_ref = (is) (this.field_b.first(false));
           while (var3_ref != null) {
             if (!var3_ref.e((byte) 74)) {
-              fieldTemp$0 = var3_ref.field_i + 1L;
-              var3_ref.field_i = var3_ref.field_i + 1L;
+              fieldTemp$0 = var3_ref.secondaryKey + 1L;
+              var3_ref.secondaryKey = var3_ref.secondaryKey + 1L;
               if ((long)param1 < fieldTemp$0) {
                 var4 = new bna(var3_ref.a(122), var3_ref.field_k);
-                this.field_c.a(var4, 0, var3_ref.field_b);
+                this.field_c.a(var4, 0, var3_ref.key);
                 SetMassDriverEnergyUsed.a(var4, var3_ref, (byte) -68);
-                var3_ref.b(-3846);
-                var3_ref.d((byte) -35);
+                var3_ref.unlink(-3846);
+                var3_ref.unlinkSecondary((byte) -35);
               }
             } else {
               if (null == var3_ref.a(107)) {
-                var3_ref.b(-3846);
-                var3_ref.d((byte) -35);
+                var3_ref.unlink(-3846);
+                var3_ref.unlinkSecondary((byte) -35);
                 this.field_d = this.field_d + var3_ref.field_k;
               }
             }
-            var3_ref = (is) (this.field_b.b(8063));
+            var3_ref = (is) (this.field_b.next(8063));
           }
           return;
         }
         this.field_d = 105;
-        var3_refLifetime1 = (is) (this.field_b.a(false));
+        var3_refLifetime1 = (is) (this.field_b.first(false));
         while (var3_refLifetime1 != null) {
           if (!var3_refLifetime1.e((byte) 74)) {
-            fieldTemp$1 = var3_refLifetime1.field_i + 1L;
-            var3_refLifetime1.field_i = var3_refLifetime1.field_i + 1L;
+            fieldTemp$1 = var3_refLifetime1.secondaryKey + 1L;
+            var3_refLifetime1.secondaryKey = var3_refLifetime1.secondaryKey + 1L;
             if ((long)param1 < fieldTemp$1) {
               var4Lifetime1 = new bna(var3_refLifetime1.a(122), var3_refLifetime1.field_k);
-              this.field_c.a(var4Lifetime1, 0, var3_refLifetime1.field_b);
+              this.field_c.a(var4Lifetime1, 0, var3_refLifetime1.key);
               SetMassDriverEnergyUsed.a(var4Lifetime1, var3_refLifetime1, (byte) -68);
-              var3_refLifetime1.b(-3846);
-              var3_refLifetime1.d((byte) -35);
+              var3_refLifetime1.unlink(-3846);
+              var3_refLifetime1.unlinkSecondary((byte) -35);
             }
           } else {
             if (null == var3_refLifetime1.a(107)) {
-              var3_refLifetime1.b(-3846);
-              var3_refLifetime1.d((byte) -35);
+              var3_refLifetime1.unlink(-3846);
+              var3_refLifetime1.unlinkSecondary((byte) -35);
               this.field_d = this.field_d + var3_refLifetime1.field_k;
             }
           }
-          var3_refLifetime1 = (is) (this.field_b.b(8063));
+          var3_refLifetime1 = (is) (this.field_b.next(8063));
         }
     }
 
@@ -169,8 +169,8 @@ final class pfb {
             }
             var6 = var2;
             var2 = (is) (this.field_c.a((byte) 44));
-            var6.b(-3846);
-            var6.d((byte) -35);
+            var6.unlink(-3846);
+            var6.unlinkSecondary((byte) -35);
             this.field_d = this.field_d + var6.field_k;
           }
         }
@@ -186,8 +186,8 @@ final class pfb {
           }
           var7 = var2Lifetime1;
           var2Lifetime1 = (is) (this.field_c.a((byte) 44));
-          var7.b(-3846);
-          var7.d((byte) -35);
+          var7.unlink(-3846);
+          var7.unlinkSecondary((byte) -35);
           this.field_d = this.field_d + var7.field_k;
         }
     }
@@ -200,26 +200,26 @@ final class pfb {
         }
         Object var5 = var7.a(param0 ^ 94);
         if (var5 == null) {
-          var7.b(-3846);
-          var7.d((byte) -35);
+          var7.unlink(-3846);
+          var7.unlinkSecondary((byte) -35);
           this.field_d = this.field_d + var7.field_k;
           return null;
         }
         if (var7.e((byte) 50)) {
           var6 = new ska(var5, var7.field_k);
-          this.field_c.a(var6, 0, var7.field_b);
-          this.field_b.a(-17569, var6);
-          ((is) ((Object) var6)).field_i = 0L;
-          var7.b(-3846);
-          var7.d((byte) -35);
+          this.field_c.a(var6, 0, var7.key);
+          this.field_b.addLast(-17569, var6);
+          ((is) ((Object) var6)).secondaryKey = 0L;
+          var7.unlink(-3846);
+          var7.unlinkSecondary((byte) -35);
           if (param0 != 0) {
             pfb.a(-93);
             return var5;
           }
           return var5;
         }
-        this.field_b.a(param0 - 17569, var7);
-        var7.field_i = 0L;
+        this.field_b.addLast(param0 - 17569, var7);
+        var7.secondaryKey = 0L;
         if (param0 != 0) {
           pfb.a(-93);
           return var5;
@@ -240,8 +240,8 @@ final class pfb {
           if (param0 == null) {
             return;
           }
-          param0.b(-3846);
-          param0.d((byte) -35);
+          param0.unlink(-3846);
+          param0.unlinkSecondary((byte) -35);
           this.field_d = this.field_d + param0.field_k;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -273,7 +273,7 @@ final class pfb {
 
     private pfb(int param0, int param1) {
         int var3;
-        this.field_b = new IterableNodeHashTable();
+        this.field_b = new SecondaryNodeDeque();
         this.field_d = param0;
         this.field_e = param0;
         var3 = 1;

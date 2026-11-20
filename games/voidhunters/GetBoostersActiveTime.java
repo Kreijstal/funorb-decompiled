@@ -105,8 +105,8 @@ final class GetBoostersActiveTime extends ConsoleCommand {
             RequestNewestBlackboxRecording.field_p.position = 0;
             if (param5 == null) {
               SetTorpedoAcceleration.field_p.position = 0;
-              SetTorpedoAcceleration.field_p.d(jeb.field_b.nextInt(), 332614536);
-              SetTorpedoAcceleration.field_p.d(jeb.field_b.nextInt(), param4 + 332614536);
+              SetTorpedoAcceleration.field_p.writeInt(jeb.field_b.nextInt(), 332614536);
+              SetTorpedoAcceleration.field_p.writeInt(jeb.field_b.nextInt(), param4 + 332614536);
               stackIn_17_0 = SetTorpedoAcceleration.field_p;
               stackIn_17_1 = 0;
               if (!param1.a(true)) {
@@ -114,7 +114,7 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               } else {
                 stackIn_18_2 = var14;
               }
-              ((PacketBuffer) (Object) stackIn_17_0).b((byte) stackIn_17_1, stackIn_18_2);
+              ((PacketBuffer) (Object) stackIn_17_0).writeCircumfixedString((byte) stackIn_17_1, stackIn_18_2);
               stackIn_20_0 = SetTorpedoAcceleration.field_p;
               stackIn_20_1 = 0;
               if (!param2.a(true)) {
@@ -122,44 +122,44 @@ final class GetBoostersActiveTime extends ConsoleCommand {
               } else {
                 stackIn_21_2 = var8;
               }
-              ((PacketBuffer) (Object) stackIn_20_0).b((byte) stackIn_20_1, stackIn_21_2);
-              RequestNewestBlackboxRecording.field_p.c(0, 16);
+              ((PacketBuffer) (Object) stackIn_20_0).writeCircumfixedString((byte) stackIn_20_1, stackIn_21_2);
+              RequestNewestBlackboxRecording.field_p.writeByte(0, 16);
               RequestNewestBlackboxRecording.field_p.position = RequestNewestBlackboxRecording.field_p.position + 1;
               var9 = RequestNewestBlackboxRecording.field_p.position;
               GetOndamageParticleLife.a(RequestNewestBlackboxRecording.field_p, (byte) -105, SetSalvoDamageMultiplier.field_p, bib.field_g, SetTorpedoAcceleration.field_p);
-              RequestNewestBlackboxRecording.field_p.e(-var9 + RequestNewestBlackboxRecording.field_p.position, -129);
+              RequestNewestBlackboxRecording.field_p.writeLengthByte(-var9 + RequestNewestBlackboxRecording.field_p.position, -129);
             } else {
               var9 = 0;
               if (param6) {
                 var9 = var9 | 1;
               }
               SetTorpedoAcceleration.field_p.position = 0;
-              SetTorpedoAcceleration.field_p.d(jeb.field_b.nextInt(), 332614536);
-              SetTorpedoAcceleration.field_p.d(jeb.field_b.nextInt(), param4 ^ 332614536);
-              SetTorpedoAcceleration.field_p.b((byte) 0, var14);
-              SetTorpedoAcceleration.field_p.b((byte) 0, var8);
+              SetTorpedoAcceleration.field_p.writeInt(jeb.field_b.nextInt(), 332614536);
+              SetTorpedoAcceleration.field_p.writeInt(jeb.field_b.nextInt(), param4 ^ 332614536);
+              SetTorpedoAcceleration.field_p.writeCircumfixedString((byte) 0, var14);
+              SetTorpedoAcceleration.field_p.writeCircumfixedString((byte) 0, var8);
               var15 = (CharSequence) ((Object) param5);
-              SetTorpedoAcceleration.field_p.b((byte) 0, esb.a(param4 + 22, var15));
-              SetTorpedoAcceleration.field_p.a(param3, true);
-              SetTorpedoAcceleration.field_p.c(param4 + 0, param0);
-              SetTorpedoAcceleration.field_p.c(0, var9);
-              RequestNewestBlackboxRecording.field_p.c(param4 + 0, 18);
+              SetTorpedoAcceleration.field_p.writeCircumfixedString((byte) 0, esb.a(param4 + 22, var15));
+              SetTorpedoAcceleration.field_p.writeShort(param3, true);
+              SetTorpedoAcceleration.field_p.writeByte(param4 + 0, param0);
+              SetTorpedoAcceleration.field_p.writeByte(0, var9);
+              RequestNewestBlackboxRecording.field_p.writeByte(param4 + 0, 18);
               RequestNewestBlackboxRecording.field_p.position = RequestNewestBlackboxRecording.field_p.position + 2;
               var10 = RequestNewestBlackboxRecording.field_p.position;
               var11_ref_StringLifetime4 = GetMassDriverRandomness.a(-6465, MissionList.b((byte) -114));
               if (var11_ref_StringLifetime4 == null) {
                 var11_ref_StringLifetime4 = "";
               }
-              RequestNewestBlackboxRecording.field_p.a(true, var11_ref_StringLifetime4);
+              RequestNewestBlackboxRecording.field_p.writeString(true, var11_ref_StringLifetime4);
               GetOndamageParticleLife.a(RequestNewestBlackboxRecording.field_p, (byte) -108, SetSalvoDamageMultiplier.field_p, bib.field_g, SetTorpedoAcceleration.field_p);
-              RequestNewestBlackboxRecording.field_p.a(RequestNewestBlackboxRecording.field_p.position - var10, -124);
+              RequestNewestBlackboxRecording.field_p.writeLengthShort(RequestNewestBlackboxRecording.field_p.position - var10, -124);
             }
             lnb.b(-1, 113);
             tc.field_c = bs.field_d;
           }
           if (tc.field_c == bs.field_d &&
             ShipBlueprint.a(1, 30000)) {
-            var9Lifetime1 = qga.field_b.e((byte) -124);
+            var9Lifetime1 = qga.field_b.readUnsignedByte((byte) -124);
             qga.field_b.position = 0;
             if (var9Lifetime1 >= 100 &&
               105 >= var9Lifetime1) {
@@ -188,12 +188,12 @@ final class GetBoostersActiveTime extends ConsoleCommand {
           if (tc.field_c == ct.field_a) {
             var9Lifetime2 = 2;
             if (ShipBlueprint.a(var9Lifetime2, param4 ^ 30000)) {
-              var10Lifetime1 = qga.field_b.e(1869);
+              var10Lifetime1 = qga.field_b.readUnsignedShort(1869);
               qga.field_b.position = 0;
               if (ShipBlueprint.a(var10Lifetime1, param4 + 30000)) {
                 var11 = gob.field_a.length;
                 for (var12 = 0; var12 < var11; var12++) {
-                  gob.field_a[var12] = qga.field_b.g(-1609246200);
+                  gob.field_a[var12] = qga.field_b.readCircumfixedString(-1609246200);
                 }
                 ifb.l(-122);
                 SetShowTutorial.field_o = false;
@@ -208,12 +208,12 @@ final class GetBoostersActiveTime extends ConsoleCommand {
           if (tc.field_c == qva.field_k &&
             ci.b((byte) 46)) {
             if (ow.field_a == 255) {
-              var9_ref_String = qga.field_b.m(0);
+              var9_ref_String = qga.field_b.readNullableString(0);
               if (var9_ref_String != null) {
                 SetNebulaProximityFadeDownshift.a(MissionList.b((byte) -123), var9_ref_String, -1);
               }
             } else {
-              dgb.field_b = qga.field_b.a(-1);
+              dgb.field_b = qga.field_b.readString(-1);
             }
             ifb.l(-122);
             SetShowTutorial.field_o = false;

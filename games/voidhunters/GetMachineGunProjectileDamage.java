@@ -69,8 +69,8 @@ final class GetMachineGunProjectileDamage extends ConsoleCommand {
           var2 = "";
         } else {
           var14 = (ClientException) ((Object) param1);
-          param1 = var14.field_b;
-          var2 = var14.field_a + " | ";
+          param1 = var14.cause;
+          var2 = var14.context + " | ";
           var11 = var2;
           var2 = var11;
           var11Lifetime11 = var2;
@@ -232,14 +232,14 @@ final class GetMachineGunProjectileDamage extends ConsoleCommand {
     }
 
     final static void a(br param0, int param1, int param2) {
-        faa var3 = null;
+        IsaacPacketBuffer var3 = null;
         try {
           var3 = RequestNewestBlackboxRecording.field_p;
           int var4 = -115 / ((param1 - 64) / 46);
-          var3.h(24335, param2);
-          var3.c(0, 2);
-          var3.c(0, 0);
-          var3.c(0, param0.field_e);
+          var3.writeIsaacByte(24335, param2);
+          var3.writeByte(0, 2);
+          var3.writeByte(0, 0);
+          var3.writeByte(0, param0.field_e);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "eva.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }

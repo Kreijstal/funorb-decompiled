@@ -67,9 +67,9 @@ final class kc implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
-        tv var4 = null;
-        faa stackIn_2_0 = null;
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
+        SerializableGameState var4 = null;
+        IsaacPacketBuffer stackIn_2_0 = null;
         int stackIn_2_1 = 0;
         boolean stackIn_3_2 = false;
         RuntimeException stackIn_10_0 = null;
@@ -78,17 +78,17 @@ final class kc implements DiffableState {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         try {
-          param0.a(-632, this.version, 8);
+          param0.writeBits(-632, this.version, 8);
           SetArmageddonTimerStart.a(param0, (byte) -15, this.tipsDone, 8);
-          stackIn_2_0 = (faa) (param0);
+          stackIn_2_0 = (IsaacPacketBuffer) (param0);
           stackIn_2_1 = 79;
           stackIn_3_2 = (this.blueprint != null);
-          if (vq.a(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
-            this.blueprint.b(param0, -126);
+          if (vq.writeBoolean(stackIn_2_0, stackIn_2_1, stackIn_3_2)) {
+            this.blueprint.writeState(param0, -126);
           }
           if (param1 > -109) {
-            var4 = (tv) null;
-            this.a((byte) 81, (tv) null);
+            var4 = (SerializableGameState) null;
+            this.differsFrom((byte) 81, (SerializableGameState) null);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -105,7 +105,7 @@ final class kc implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         kc var3 = null;
         int var4 = 0;
         int stackIn_5_0 = 0;
@@ -129,7 +129,7 @@ final class kc implements DiffableState {
               stackIn_8_1 = 1;
             }
             if ((stackIn_5_0 ^ stackIn_8_1) == 0 && (this.blueprint == null ||
-              !this.blueprint.a((byte) 94, var3.blueprint))) {
+              !this.blueprint.differsFrom((byte) 94, var3.blueprint))) {
               stackIn_14_0 = false;
               decompiledFrameRemainder0 = false;
             }
@@ -257,7 +257,7 @@ final class kc implements DiffableState {
         this.version = 1;
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         kc var3 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
@@ -277,7 +277,7 @@ final class kc implements DiffableState {
             if (null == var3.blueprint) {
               var3.blueprint = new ShipBlueprint();
             }
-            this.blueprint.b((byte) 72, var3.blueprint);
+            this.blueprint.copyTo((byte) 72, var3.blueprint);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -294,7 +294,7 @@ final class kc implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         int stackIn_13_0 = 0;
         int stackIn_16_1 = 0;
         RuntimeException stackIn_26_0 = null;
@@ -330,7 +330,7 @@ final class kc implements DiffableState {
           }
           if ((stackIn_13_0 ^ stackIn_16_1) != 0 ||
             this.blueprint != null &&
-            this.blueprint.a((byte) 121, var5.blueprint)) {
+            this.blueprint.differsFrom((byte) 121, var5.blueprint)) {
             var4 = 1;
             System.out.println("ShipBlueprint blueprint has changed. before=" + var5.blueprint + ", now=" + this.blueprint);
           }
@@ -352,17 +352,17 @@ final class kc implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.version = param0.i(0, 8);
+          this.version = param0.readBits(0, 8);
           this.tipsDone = GetAutoaim.a(8, param0, 76, this.tipsDone);
-          if (!kv.a(param1, param0)) {
+          if (!kv.readBoolean(param1, param0)) {
             this.blueprint = null;
           } else {
             if (null == this.blueprint) {
               this.blueprint = new ShipBlueprint();
             }
-            this.blueprint.a(param0, false);
+            this.blueprint.readState(param0, false);
           }
           this.a((byte) 58);
         } catch (RuntimeException runtimeException) {

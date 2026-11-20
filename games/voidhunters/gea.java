@@ -194,7 +194,7 @@ abstract class gea extends iw {
     private final void a(shb param0, byte param1) {
         try {
           if (null != this.field_L) {
-            this.field_L.b(param1 - 3917);
+            this.field_L.unlink(param1 - 3917);
           }
           if (param0 == null) {
             this.field_L = new qpb();

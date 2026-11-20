@@ -10,7 +10,7 @@ final class ht extends f {
     final f a() {
         fkb var1;
         while (true) {
-          var1 = (fkb) (this.field_k.a((byte) 30));
+          var1 = (fkb) (this.field_k.next((byte) 30));
           if (var1 == null) {
             return null;
           }
@@ -50,7 +50,7 @@ final class ht extends f {
     }
 
     final f c() {
-        fkb var1 = (fkb) (this.field_k.d(0));
+        fkb var1 = (fkb) (this.field_k.first(0));
         if (var1 == null) {
           return null;
         }
@@ -131,7 +131,7 @@ final class ht extends f {
         var7 = VoidHunters.field_G;
         try {
           this.field_j.a(param0, param1, param2);
-          var6 = (fkb) (this.field_k.d(0));
+          var6 = (fkb) (this.field_k.first(0));
           while (var6 != null) {
             stackIn_4_0 = this.field_i.a(var6, 0);
             boolean decompiledFrameCompleted0 = true;
@@ -152,7 +152,7 @@ final class ht extends f {
                 var6.field_k = var6.field_k - var5;
               }
             }
-            var6 = (fkb) (this.field_k.a((byte) 103));
+            var6 = (fkb) (this.field_k.next((byte) 103));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -269,7 +269,7 @@ final class ht extends f {
         int var4;
         var4 = VoidHunters.field_G;
         this.field_j.a(param0);
-        var3 = (fkb) (this.field_k.d(0));
+        var3 = (fkb) (this.field_k.first(0));
         while (var3 != null) {
           if (!this.field_i.a(var3, 0)) {
             var2 = param0;
@@ -283,7 +283,7 @@ final class ht extends f {
               var2 = var2 - var3.field_k;
             } while (!this.field_i.a(0, (int[]) null, var2, var3, (byte) -68));
           }
-          var3 = (fkb) (this.field_k.a((byte) 99));
+          var3 = (fkb) (this.field_k.next((byte) 99));
         }
     }
 

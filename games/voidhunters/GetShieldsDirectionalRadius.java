@@ -157,11 +157,11 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
         kl.field_c.field_l = 0;
         kl.field_c.field_k = 0;
         if (GetExplosionProjectileDamage.field_o) {
-          RequestNewestBlackboxRecording.field_p.h(24335, 57);
+          RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, 57);
           GetExplosionProjectileDamage.field_o = false;
         }
         if (MessageLog.field_d) {
-          RequestNewestBlackboxRecording.field_p.h(param0 ^ 24346, 10);
+          RequestNewestBlackboxRecording.field_p.writeIsaacByte(param0 ^ 24346, 10);
           MessageLog.field_d = false;
         }
     }

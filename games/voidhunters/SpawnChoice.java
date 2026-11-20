@@ -5,12 +5,12 @@ final class SpawnChoice implements DiffableState {
     int choice;
     static String[] field_b;
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          param0.a(-632, this.choice, 32);
+          param0.writeBits(-632, this.choice, 32);
           if (param1 >= -109) {
-            tv var4 = (tv) null;
-            this.a((byte) 94, (tv) null);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.differsFrom((byte) 94, (SerializableGameState) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "twa.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -24,18 +24,18 @@ final class SpawnChoice implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
             SpawnChoice.b(40);
           }
-          this.choice = param0.i(0, 32);
+          this.choice = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "twa.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         SpawnChoice var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -72,7 +72,7 @@ final class SpawnChoice implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         SpawnChoice var5 = null;
         SpawnChoice var6 = null;
         try {
@@ -106,7 +106,7 @@ final class SpawnChoice implements DiffableState {
     SpawnChoice() {
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         SpawnChoice var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;

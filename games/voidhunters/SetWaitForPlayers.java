@@ -26,7 +26,7 @@ final class SetWaitForPlayers extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          SetMachineGunEnergyUsed.a(6, 62, arguments[0].a(52));
+          SetMachineGunEnergyUsed.a(6, 62, arguments[0].intValue(52));
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

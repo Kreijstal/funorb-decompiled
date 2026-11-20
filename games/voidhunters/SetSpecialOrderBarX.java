@@ -26,7 +26,7 @@ final class SetSpecialOrderBarX extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             field_o = (String[]) null;
           }
-          SetFighterBayAimarc.field_o = arguments[0].a(124);
+          SetFighterBayAimarc.field_o = arguments[0].intValue(124);
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

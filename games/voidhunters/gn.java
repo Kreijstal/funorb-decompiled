@@ -108,7 +108,7 @@ final class gn extends kva implements eb {
             stackIn_3_0 = null;
             return (DiffableState[]) (stackIn_3_0);
           }
-          var6 = param1.f(param0 - 4872);
+          var6 = param1.toArray(param0 - 4872);
           var2 = var6;
           var3 = new DiffableState[var6.length];
           for (var4 = param0; var6.length > var4; var4++) {

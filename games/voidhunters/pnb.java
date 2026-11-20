@@ -19,8 +19,8 @@ final class pnb implements Iterator {
         while (this.field_c < this.field_b.field_f) {
           fieldTemp$0 = this.field_c;
           this.field_c = this.field_c + 1;
-          if (this.field_b.field_h[fieldTemp$0].field_c != this.field_b.field_h[-1 + this.field_c]) {
-            this.field_d = this.field_b.field_h[this.field_c - 1].field_c;
+          if (this.field_b.field_h[fieldTemp$0].next != this.field_b.field_h[-1 + this.field_c]) {
+            this.field_d = this.field_b.field_h[this.field_c - 1].next;
             return true;
           }
           this.field_d = this.field_b.field_h[this.field_c - 1];
@@ -35,7 +35,7 @@ final class pnb implements Iterator {
         var2 = VoidHunters.field_G;
         if (this.field_b.field_h[this.field_c - 1] != this.field_d) {
           var1 = this.field_d;
-          this.field_d = var1.field_c;
+          this.field_d = var1.next;
           this.field_a = var1;
           return var1;
         }
@@ -45,22 +45,22 @@ final class pnb implements Iterator {
           }
           fieldTemp$0 = this.field_c;
           this.field_c = this.field_c + 1;
-          var1 = this.field_b.field_h[fieldTemp$0].field_c;
+          var1 = this.field_b.field_h[fieldTemp$0].next;
         } while (this.field_b.field_h[this.field_c - 1] == var1);
-        this.field_d = var1.field_c;
+        this.field_d = var1.next;
         this.field_a = var1;
         return var1;
     }
 
     private final void a(int param0) {
         if (param0 == 1) {
-          this.field_d = this.field_b.field_h[0].field_c;
+          this.field_d = this.field_b.field_h[0].next;
           this.field_a = null;
           this.field_c = 1;
           return;
         }
         this.field_a = (IntrusiveNode) null;
-        this.field_d = this.field_b.field_h[0].field_c;
+        this.field_d = this.field_b.field_h[0].next;
         this.field_a = null;
         this.field_c = 1;
     }
@@ -79,7 +79,7 @@ final class pnb implements Iterator {
         if (null == this.field_a) {
           throw new IllegalStateException();
         }
-        this.field_a.b(-3846);
+        this.field_a.unlink(-3846);
         this.field_a = null;
     }
 

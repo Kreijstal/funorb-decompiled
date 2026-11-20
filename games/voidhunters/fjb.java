@@ -8,9 +8,9 @@ final class fjb implements dja {
     static String field_a;
     static kob field_c;
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 124 % ((-64 - param0) / 50);
-        return (tv) ((Object) new Message());
+        return (SerializableGameState) ((Object) new Message());
     }
 
     public static void a(int param0) {
@@ -22,12 +22,12 @@ final class fjb implements dja {
         }
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_c = (kob) null;
-          return (tv[]) ((Object) new Message[param1]);
+          return (SerializableGameState[]) ((Object) new Message[param1]);
         }
-        return (tv[]) ((Object) new Message[param1]);
+        return (SerializableGameState[]) ((Object) new Message[param1]);
     }
 
     final static ConsoleValue a(String param0, ConsoleValue[] param1, ConsoleCommand[] param2, byte param3) throws gva {
@@ -54,7 +54,7 @@ final class fjb implements dja {
         try {
           var4_int = 0;
           while (param2.length > var4_int) {
-            if (!param2[var4_int].a(true, param0, param1)) {
+            if (!param2[var4_int].matchesSignature(true, param0, param1)) {
               var4_int++;
               continue;
             }
@@ -67,10 +67,10 @@ final class fjb implements dja {
           }
           var7 = new StringBuilder("The method " + param0 + "(");
           for (var5 = 0; param1.length > var5; var5++) {
-            if (param1[var5].field_a) {
-              discarded$1 = var7.append(sna.a(param1[var5].field_b, (byte) 119).toString());
+            if (param1[var5].primitive) {
+              discarded$1 = var7.append(sna.getPrimitiveType(param1[var5].value, (byte) 119).toString());
             } else {
-              discarded$2 = var7.append(wp.a(param1[var5].field_b.getClass(), false));
+              discarded$2 = var7.append(wp.a(param1[var5].value.getClass(), false));
             }
             if (-1 + param1.length > var5) {
               discarded$3 = var7.append(',');

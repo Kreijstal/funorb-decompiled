@@ -13,7 +13,7 @@ final class SetPhasedEnergyBeamPulseFadetime extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(187, 62, arguments[0].a(39));
+          SetMachineGunEnergyUsed.a(187, 62, arguments[0].intValue(39));
           if (obfuscationGuard > -119) {
             SetPhasedEnergyBeamPulseFadetime.a(-47, -122);
           }

@@ -4,16 +4,16 @@
 final class qbb implements dja {
     static int field_a;
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 41 / ((-64 - param0) / 50);
-        return (tv) ((Object) new ShipAI());
+        return (SerializableGameState) ((Object) new ShipAI());
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          return (tv[]) null;
+          return (SerializableGameState[]) null;
         }
-        return (tv[]) ((Object) new ShipAI[param1]);
+        return (SerializableGameState[]) ((Object) new ShipAI[param1]);
     }
 
     static {

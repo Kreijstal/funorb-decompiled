@@ -82,7 +82,7 @@ final class sna extends le {
         }
     }
 
-    final static Class a(Object param0, byte param1) {
+    final static Class getPrimitiveType(Object param0, byte param1) {
         RuntimeException var2 = null;
         Class stackIn_3_0 = null;
         Class stackIn_6_0 = null;
@@ -187,11 +187,11 @@ final class sna extends le {
           var4_int = param0;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              stackIn_11_1 = (param2.e((byte) -121) == 1);
+              stackIn_11_1 = (param2.readUnsignedByte((byte) -121) == 1);
               this.field_g = stackIn_11_1;
             }
           } else {
-            this.field_i = param2.e(1869) << 4;
+            this.field_i = param2.readUnsignedShort(1869) << 4;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

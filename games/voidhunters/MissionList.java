@@ -37,16 +37,16 @@ final class MissionList implements DiffableState {
         return (java.applet.Applet) ((Object) tu.field_a);
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         int var7 = 0;
-        faa var3 = null;
+        IsaacPacketBuffer var3 = null;
         Mission[] var4 = null;
         int var5 = 0;
         Mission[] var6 = null;
         Mission var8 = null;
         int var9 = 0;
         int stackIn_6_0 = 0;
-        faa stackIn_11_0 = null;
+        IsaacPacketBuffer stackIn_11_0 = null;
         int stackIn_11_1 = 0;
         boolean stackIn_12_2 = false;
         RuntimeException stackIn_20_0 = null;
@@ -67,7 +67,7 @@ final class MissionList implements DiffableState {
             stackIn_6_0 = var4.length;
           }
           var5 = stackIn_6_0;
-          var3.a(-632, var5, 8);
+          var3.writeBits(-632, var5, 8);
           if (0 != var5) {
             var6 = var4;
             for (var7 = 0; var6.length > var7; var7++) {
@@ -75,7 +75,7 @@ final class MissionList implements DiffableState {
               stackIn_11_0 = var3;
               stackIn_11_1 = -88;
               stackIn_12_2 = (var8 != null);
-              if (vq.a(stackIn_11_0, stackIn_11_1, stackIn_12_2)) {
+              if (vq.writeBoolean(stackIn_11_0, stackIn_11_1, stackIn_12_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
               }
             }
@@ -100,7 +100,7 @@ final class MissionList implements DiffableState {
         Object var3;
         int var4;
         int var5;
-        tv var6;
+        SerializableGameState var6;
         var5 = VoidHunters.field_G;
         if (null == this.missions) {
           return null;
@@ -120,8 +120,8 @@ final class MissionList implements DiffableState {
           System.err.println("Mission id " + param0 + ", not found, using sandbox");
           return (Mission) (var3);
         }
-        var6 = (tv) null;
-        this.reportDifferences((tv) null, -74);
+        var6 = (SerializableGameState) null;
+        this.reportDifferences((SerializableGameState) null, -74);
         while (this.missions.length > var4) {
           if (param0 == this.missions[var4].a(0)) {
             return this.missions[var4];
@@ -135,7 +135,7 @@ final class MissionList implements DiffableState {
         return (Mission) (var3);
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         MissionList var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -173,7 +173,7 @@ final class MissionList implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         MissionList var3 = (MissionList) (param1);
         if (param0 <= 54) {
           return;
@@ -185,7 +185,7 @@ final class MissionList implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         MissionList var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -213,7 +213,7 @@ final class MissionList implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         if (param1) {
           return;
         }

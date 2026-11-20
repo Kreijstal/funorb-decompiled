@@ -15,7 +15,7 @@ final class SetUseFilledPolygons extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          wkb.field_c = arguments[0].a(68);
+          wkb.field_c = arguments[0].intValue(68);
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

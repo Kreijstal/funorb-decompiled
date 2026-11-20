@@ -5,17 +5,17 @@ final class amb implements dja {
     static String field_b;
     static String field_a;
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_b = (String) null;
-          return (tv[]) ((Object) new coa[param1]);
+          return (SerializableGameState[]) ((Object) new coa[param1]);
         }
-        return (tv[]) ((Object) new coa[param1]);
+        return (SerializableGameState[]) ((Object) new coa[param1]);
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -83 % ((-64 - param0) / 50);
-        return (tv) ((Object) new coa());
+        return (SerializableGameState) ((Object) new coa());
     }
 
     final static void a(int param0, boolean param1) {
@@ -122,8 +122,8 @@ final class amb implements dja {
         int var6Lifetime1Lifetime1Lifetime1Lifetime1;
         if (null != vqa.field_g) {
           vqa.field_g.c((byte) 120, param1);
-          if (null != ndb.field_a) {
-            ndb.field_a.c((byte) 111, param1);
+          if (null != ProxyAuthenticationException.field_a) {
+            ProxyAuthenticationException.field_a.c((byte) 111, param1);
           }
           if (SetShipTeamAction.field_f &&
             GetMessageFadetime.field_o &&
@@ -193,8 +193,8 @@ final class amb implements dja {
           }
           return;
         }
-        if (null != ndb.field_a) {
-          ndb.field_a.c((byte) 111, param1);
+        if (null != ProxyAuthenticationException.field_a) {
+          ProxyAuthenticationException.field_a.c((byte) 111, param1);
         }
         if (SetShipTeamAction.field_f &&
           GetMessageFadetime.field_o &&

@@ -13,30 +13,30 @@ final class al implements hf {
     final static void a(int param0) {
         CharSequence var3 = null;
         if (param0 < -84) {
-          kca.field_a = qga.field_b.a(-1);
+          kca.field_a = qga.field_b.readString(-1);
           var3 = (CharSequence) ((Object) kca.field_a);
           ffb.field_e = jwa.a(false, var3);
           return;
         }
         field_a = (String) null;
-        kca.field_a = qga.field_b.a(-1);
+        kca.field_a = qga.field_b.readString(-1);
         CharSequence var2 = (CharSequence) ((Object) kca.field_a);
         ffb.field_e = jwa.a(false, var2);
     }
 
     final static void a(IntrusiveNode param0, IntrusiveNode param1, int param2) {
         try {
-          if (param0.field_a != null) {
-            param0.b(-3846);
+          if (param0.previous != null) {
+            param0.unlink(-3846);
           }
-          param0.field_a = param1.field_a;
-          param0.field_c = param1;
-          param0.field_a.field_c = param0;
+          param0.previous = param1.previous;
+          param0.next = param1;
+          param0.previous.next = param0;
           if (param2 != 2) {
             IntrusiveNode var4 = (IntrusiveNode) null;
             al.a((IntrusiveNode) null, (IntrusiveNode) null, 44);
           }
-          param0.field_c.field_a = param0;
+          param0.next.previous = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "al.C(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

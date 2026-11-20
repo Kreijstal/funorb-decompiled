@@ -68,7 +68,7 @@ final class SetTeamSelectionSpeedup extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(4, 62, arguments[0].a(106));
+          SetMachineGunEnergyUsed.a(4, 62, arguments[0].intValue(106));
           if (obfuscationGuard > -119) {
             field_q = (String) null;
           }

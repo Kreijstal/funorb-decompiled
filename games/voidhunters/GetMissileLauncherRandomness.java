@@ -52,7 +52,7 @@ final class GetMissileLauncherRandomness extends ConsoleCommand {
         ClientException var2 = null;
         if (param0 instanceof ClientException) {
           var2 = (ClientException) ((Object) param0);
-          var2.field_a = var2.field_a + ' ' + param1;
+          var2.context = var2.context + ' ' + param1;
         } else {
           var2 = new ClientException(param0, param1);
         }

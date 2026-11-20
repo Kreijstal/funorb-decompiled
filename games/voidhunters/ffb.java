@@ -93,8 +93,8 @@ final class ffb {
           var6 = param0;
           var7 = -param0;
           var8 = -1;
-          var9 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 + param0);
-          var10 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 - param0);
+          var9 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 + param0);
+          var10 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 - param0);
           GetSalvoRepairTimeMultiplier.a(param3, var9, ResourceNode.field_b[param2], (byte) 75, var10);
           while (var6 > var5_int) {
             var8 += 2;
@@ -106,8 +106,8 @@ final class ffb {
               var12 = param2 + var6;
               if (NebulaField.field_c <= var12 &&
                 hab.field_i >= var11) {
-                var13 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, var5_int + param4);
-                var14 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 - var5_int);
+                var13 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, var5_int + param4);
+                var14 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 - var5_int);
                 if (var12 <= hab.field_i) {
                   GetSalvoRepairTimeMultiplier.a(param3, var13, ResourceNode.field_b[var12], (byte) 75, var14);
                 }
@@ -125,8 +125,8 @@ final class ffb {
             if (var11Lifetime1 > hab.field_i) {
               continue;
             }
-            var13Lifetime1 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 + var6);
-            var14Lifetime1 = IntrusiveNode.a(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 - var6);
+            var13Lifetime1 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 + var6);
+            var14Lifetime1 = IntrusiveNode.clamp(31123, ob.field_j, GetCountermeasureLauncherProjectiles.field_o, param4 - var6);
             if (hab.field_i >= var12Lifetime1) {
               GetSalvoRepairTimeMultiplier.a(param3, var13Lifetime1, ResourceNode.field_b[var12Lifetime1], (byte) 75, var14Lifetime1);
             }

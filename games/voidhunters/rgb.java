@@ -7,7 +7,7 @@ final class rgb extends MapClearanceArea implements DiffableState {
     private int radius;
     static soa field_f;
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         rgb var3 = null;
         int var4 = 0;
         boolean stackIn_7_0 = false;
@@ -19,7 +19,7 @@ final class rgb extends MapClearanceArea implements DiffableState {
         try {
           var4 = 106 / ((param0 - 22) / 59);
           var3 = (rgb) (param1);
-          stackIn_7_0 = (super.a((byte) -50, param1)) || (this.x != var3.x) || (var3.y != this.y) || (var3.radius != this.radius);
+          stackIn_7_0 = (super.differsFrom((byte) -50, param1)) || (this.x != var3.x) || (var3.y != this.y) || (var3.radius != this.radius);
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -35,14 +35,14 @@ final class rgb extends MapClearanceArea implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         rgb var5 = null;
         rgb var6 = null;
         try {
           if (param0 < 54) {
             field_f = (soa) null;
           }
-          super.b((byte) 98, param1);
+          super.copyTo((byte) 98, param1);
           var5 = (rgb) (param1);
           var6 = var5;
           var6.y = this.y;
@@ -62,12 +62,12 @@ final class rgb extends MapClearanceArea implements DiffableState {
         field_f = null;
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          super.a(param0, param1);
-          this.x = param0.i(0, 32);
-          this.y = param0.i(0, 32);
-          this.radius = param0.i(0, 32);
+          super.readState(param0, param1);
+          this.x = param0.readBits(0, 32);
+          this.y = param0.readBits(0, 32);
+          this.radius = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rgb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -85,7 +85,7 @@ final class rgb extends MapClearanceArea implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException var3 = null;
         int var4 = 0;
         rgb var5 = null;
@@ -131,16 +131,16 @@ final class rgb extends MapClearanceArea implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          super.b(param0, -123);
-          param0.a(-632, this.x, 32);
-          param0.a(-632, this.y, 32);
+          super.writeState(param0, -123);
+          param0.writeBits(-632, this.x, 32);
+          param0.writeBits(-632, this.y, 32);
           if (param1 > -109) {
-            faa var4 = (faa) null;
-            this.b((faa) null, -92);
+            IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
+            this.writeState((IsaacPacketBuffer) null, -92);
           }
-          param0.a(-632, this.radius, 32);
+          param0.writeBits(-632, this.radius, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rgb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

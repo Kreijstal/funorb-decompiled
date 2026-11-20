@@ -12,8 +12,8 @@ final class wc {
         if (param0 != 108) {
           return (IntrusiveNode) null;
         }
-        if (var2 != this.field_c.field_a) {
-          this.field_b = var2.field_a;
+        if (var2 != this.field_c.sentinel) {
+          this.field_b = var2.previous;
           return var2;
         }
         this.field_b = null;
@@ -24,9 +24,9 @@ final class wc {
         if (param0 <= 61) {
           return (IntrusiveNode) null;
         }
-        IntrusiveNode var2 = this.field_c.field_a.field_a;
-        if (this.field_c.field_a != var2) {
-          this.field_b = var2.field_a;
+        IntrusiveNode var2 = this.field_c.sentinel.previous;
+        if (this.field_c.sentinel != var2) {
+          this.field_b = var2.previous;
           return var2;
         }
         this.field_b = null;
@@ -34,21 +34,21 @@ final class wc {
     }
 
     final IntrusiveNode c(int param0) {
-        IntrusiveNode var2 = this.field_c.field_a.field_c;
+        IntrusiveNode var2 = this.field_c.sentinel.next;
         if (param0 != 570) {
           this.field_c = (IntrusiveDeque) null;
-          if (var2 == this.field_c.field_a) {
+          if (var2 == this.field_c.sentinel) {
             this.field_b = null;
             return null;
           }
-          this.field_b = var2.field_c;
+          this.field_b = var2.next;
           return var2;
         }
-        if (var2 == this.field_c.field_a) {
+        if (var2 == this.field_c.sentinel) {
           this.field_b = null;
           return null;
         }
-        this.field_b = var2.field_c;
+        this.field_b = var2.next;
         return var2;
     }
 
@@ -59,16 +59,16 @@ final class wc {
           IntrusiveNode var3 = (IntrusiveNode) null;
           this.a((IntrusiveNode) null, 109);
           var2 = this.field_b;
-          if (this.field_c.field_a != var2) {
-            this.field_b = var2.field_c;
+          if (this.field_c.sentinel != var2) {
+            this.field_b = var2.next;
             return var2;
           }
           this.field_b = null;
           return null;
         }
         var2Lifetime1 = this.field_b;
-        if (this.field_c.field_a != var2Lifetime1) {
-          this.field_b = var2Lifetime1.field_c;
+        if (this.field_c.sentinel != var2Lifetime1) {
+          this.field_b = var2Lifetime1.next;
           return var2Lifetime1;
         }
         this.field_b = null;
@@ -91,14 +91,14 @@ final class wc {
           if (param1 != null) {
             var3 = param1;
           } else {
-            var3 = this.field_c.field_a.field_a;
+            var3 = this.field_c.sentinel.previous;
           }
-          if (var3 == this.field_c.field_a) {
+          if (var3 == this.field_c.sentinel) {
             this.field_b = null;
             stackIn_8_0 = null;
             return (IntrusiveNode) (stackIn_8_0);
           }
-          this.field_b = var3.field_a;
+          this.field_b = var3.previous;
           stackIn_10_0 = var3;
           return stackIn_10_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -137,16 +137,16 @@ final class wc {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 == null) {
-            var3 = this.field_c.field_a.field_c;
+            var3 = this.field_c.sentinel.next;
           } else {
             var3 = param0;
           }
-          if (var3 == this.field_c.field_a) {
+          if (var3 == this.field_c.sentinel) {
             this.field_b = null;
             stackIn_5_0 = null;
             return (IntrusiveNode) (stackIn_5_0);
           }
-          this.field_b = var3.field_c;
+          this.field_b = var3.next;
           if (param1 != -28791) {
             field_d = (String) null;
           }

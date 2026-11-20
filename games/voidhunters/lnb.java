@@ -119,10 +119,10 @@ final class lnb extends le {
           var4_int = param0;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              this.field_j = param2.e((byte) -126);
+              this.field_j = param2.readUnsignedByte((byte) -126);
             }
           } else {
-            this.field_k = param2.e((byte) -121);
+            this.field_k = param2.readUnsignedByte((byte) -121);
           }
           if (param1 >= -60) {
             this.field_k = 0;
@@ -153,7 +153,7 @@ final class lnb extends le {
             }
             if (RequestNewestBlackboxRecording.field_p.position == 0 &&
               (10000L + GetTorpedoProjectileOndamageParticles.field_o) < wt.a(false)) {
-              RequestNewestBlackboxRecording.field_p.h(24335, param0);
+              RequestNewestBlackboxRecording.field_p.writeIsaacByte(24335, param0);
             }
             if (0 < RequestNewestBlackboxRecording.field_p.position) {
               try {

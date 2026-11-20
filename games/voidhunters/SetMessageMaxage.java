@@ -11,7 +11,7 @@ final class SetMessageMaxage extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          Particle.field_c = arguments[0].a(36);
+          Particle.field_c = arguments[0].intValue(36);
           if (obfuscationGuard > -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 123);

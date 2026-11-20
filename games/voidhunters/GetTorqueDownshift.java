@@ -37,11 +37,11 @@ final class GetTorqueDownshift extends ConsoleCommand {
     }
 
     final static void b(int param0, int param1) {
-        faa var2 = RequestNewestBlackboxRecording.field_p;
-        var2.h(24335, param1);
-        var2.c(0, 1);
+        IsaacPacketBuffer var2 = RequestNewestBlackboxRecording.field_p;
+        var2.writeIsaacByte(24335, param1);
+        var2.writeByte(0, 1);
         int var3 = 124 % ((-14 - param0) / 59);
-        var2.c(0, 2);
+        var2.writeByte(0, 2);
     }
 
     final static int a(int param0, int param1) {

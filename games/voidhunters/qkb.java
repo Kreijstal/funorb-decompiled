@@ -14,10 +14,10 @@ final class qkb extends f {
     private final void e() {
         wka var1 = null;
         if (this.field_j > 0) {
-          var1 = (wka) (this.field_k.d(0));
+          var1 = (wka) (this.field_k.first(0));
           while (var1 != null) {
             var1.field_d = var1.field_d - this.field_j;
-            var1 = (wka) (this.field_k.a((byte) 59));
+            var1 = (wka) (this.field_k.next((byte) 59));
           }
           this.field_i = this.field_i - this.field_j;
           this.field_j = 0;
@@ -25,18 +25,18 @@ final class qkb extends f {
     }
 
     final f a() {
-        return (f) (this.field_h.a((byte) 111));
+        return (f) (this.field_h.next((byte) 111));
     }
 
     final f c() {
-        return (f) (this.field_h.d(0));
+        return (f) (this.field_h.first(0));
     }
 
     private final void a(wka param0) {
-        param0.b(-3846);
+        param0.unlink(-3846);
         param0.a();
-        IntrusiveNode var2 = this.field_k.field_a.field_c;
-        if (var2 == this.field_k.field_a) {
+        IntrusiveNode var2 = this.field_k.sentinel.next;
+        if (var2 == this.field_k.sentinel) {
           this.field_i = -1;
         } else {
           this.field_i = ((wka) (var2)).field_d;
@@ -44,7 +44,7 @@ final class qkb extends f {
     }
 
     final synchronized void b(f param0) {
-        this.field_h.a(param0, (byte) -55);
+        this.field_h.addFirst(param0, (byte) -55);
     }
 
     final synchronized void a(int[] param0, int param1, int param2) {
@@ -69,13 +69,13 @@ final class qkb extends f {
           param2 = param2 - var4;
           this.field_j = this.field_j + var4;
           this.e();
-          var5 = (wka) (this.field_k.d(0));
+          var5 = (wka) (this.field_k.first(0));
           var6 = var5;
           synchronized (var6) {
             var7 = var5.a(this);
             if (var7 >= 0) {
               var5.field_d = var7;
-              this.a(var5.field_c, var5);
+              this.a(var5.next, var5);
             } else {
               var5.field_d = 0;
               this.a(var5);
@@ -86,15 +86,15 @@ final class qkb extends f {
     }
 
     private final void c(int[] param0, int param1, int param2) {
-        f var4 = (f) (this.field_h.d(0));
+        f var4 = (f) (this.field_h.first(0));
         while (var4 != null) {
           var4.b(param0, param1, param2);
-          var4 = (f) (this.field_h.a((byte) 60));
+          var4 = (f) (this.field_h.next((byte) 60));
         }
     }
 
     final synchronized void a(f param0) {
-        param0.b(-3846);
+        param0.unlink(-3846);
     }
 
     final synchronized void a(int param0) {
@@ -118,13 +118,13 @@ final class qkb extends f {
           param0 = param0 - var2;
           this.field_j = this.field_j + var2;
           this.e();
-          var3 = (wka) (this.field_k.d(0));
+          var3 = (wka) (this.field_k.first(0));
           var4 = var3;
           synchronized (var4) {
             var5 = var3.a(this);
             if (var5 >= 0) {
               var3.field_d = var5;
-              this.a(var3.field_c, var3);
+              this.a(var3.next, var3);
             } else {
               var3.field_d = 0;
               this.a(var3);
@@ -135,28 +135,28 @@ final class qkb extends f {
     }
 
     private final void c(int param0) {
-        f var2 = (f) (this.field_h.d(0));
+        f var2 = (f) (this.field_h.first(0));
         while (var2 != null) {
           var2.a(param0);
-          var2 = (f) (this.field_h.a((byte) 59));
+          var2 = (f) (this.field_h.next((byte) 59));
         }
     }
 
     private final void a(IntrusiveNode param0, wka param1) {
         while (true) {
-          if (param0 == this.field_k.field_a) {
+          if (param0 == this.field_k.sentinel) {
             al.a(param1, param0, 2);
-            this.field_i = ((wka) (this.field_k.field_a.field_c)).field_d;
+            this.field_i = ((wka) (this.field_k.sentinel.next)).field_d;
             return;
           }
           if (((wka) (param0)).field_d <= param1.field_d) {
-            param0 = param0.field_c;
+            param0 = param0.next;
             continue;
           }
           break;
         }
         al.a(param1, param0, 2);
-        this.field_i = ((wka) (this.field_k.field_a.field_c)).field_d;
+        this.field_i = ((wka) (this.field_k.sentinel.next)).field_d;
         return;
     }
 

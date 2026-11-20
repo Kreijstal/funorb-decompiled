@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 abstract class ConsoleCommand extends DualLinkNode {
-    String field_l;
-    String field_k;
-    Class[] field_n;
+    String signatureText;
+    String name;
+    Class[] parameterTypes;
     static int[] field_m;
 
-    public static void a(boolean param0) {
+    public static void clearSharedReferences(boolean param0) {
         field_m = null;
         if (!param0) {
           field_m = (int[]) null;
@@ -15,10 +15,10 @@ abstract class ConsoleCommand extends DualLinkNode {
     }
 
     public final String toString() {
-        return this.field_l;
+        return this.signatureText;
     }
 
-    final boolean a(boolean param0, String param1, ConsoleValue[] param2) {
+    final boolean matchesSignature(boolean param0, String param1, ConsoleValue[] param2) {
         int var4_int = 0;
         RuntimeException stackIn_34_0 = null;
         StringBuilder stackIn_34_1 = null;
@@ -31,32 +31,32 @@ abstract class ConsoleCommand extends DualLinkNode {
         int var6 = 0;
         var6 = VoidHunters.field_G;
         try {
-          if (!this.field_k.equals(param1)) {
+          if (!this.name.equals(param1)) {
             return false;
           }
-          if (param2.length != this.field_n.length) {
+          if (param2.length != this.parameterTypes.length) {
             return false;
           }
           if (!param0) {
             field_m = (int[]) null;
           }
-          for (var4_int = 0; var4_int < this.field_n.length; var4_int++) {
-            if (param2[var4_int].field_a) {
-              var5 = sna.a(param2[var4_int].field_b, (byte) 124);
+          for (var4_int = 0; var4_int < this.parameterTypes.length; var4_int++) {
+            if (param2[var4_int].primitive) {
+              var5 = sna.getPrimitiveType(param2[var4_int].value, (byte) 124);
               if (var5 == Boolean.TYPE &&
-                this.field_n[var4_int] != Boolean.TYPE) {
+                this.parameterTypes[var4_int] != Boolean.TYPE) {
                 return false;
               }
               if (var5 == Character.TYPE &&
-                this.field_n[var4_int] != Character.TYPE) {
+                this.parameterTypes[var4_int] != Character.TYPE) {
                 return false;
               }
               if (GetTorpedoFireForce.a(var5, 24145) &&
-                !GetTorpedoFireForce.a(this.field_n[var4_int], 24145)) {
+                !GetTorpedoFireForce.a(this.parameterTypes[var4_int], 24145)) {
                 return false;
               }
             } else {
-              if (!this.field_n[var4_int].isInstance(param2[var4_int].field_b)) {
+              if (!this.parameterTypes[var4_int].isInstance(param2[var4_int].value)) {
                 return false;
               }
             }
@@ -91,13 +91,13 @@ abstract class ConsoleCommand extends DualLinkNode {
         StringBuilder discarded$28 = null;
         StringBuilder discarded$29 = null;
         try {
-          this.field_k = param0;
-          this.field_n = param1;
-          var7 = new StringBuilder(this.field_k).append('(');
+          this.name = param0;
+          this.parameterTypes = param1;
+          var7 = new StringBuilder(this.name).append('(');
           var8 = var7;
-          for (var5 = 0; var5 < this.field_n.length; var5++) {
-            discarded$18 = var7.append(wp.a(this.field_n[var5], false));
-            if (var5 < -1 + this.field_n.length) {
+          for (var5 = 0; var5 < this.parameterTypes.length; var5++) {
+            discarded$18 = var7.append(wp.a(this.parameterTypes[var5], false));
+            if (var5 < -1 + this.parameterTypes.length) {
               discarded$19 = var8.append(", ");
             }
           }
@@ -105,7 +105,7 @@ abstract class ConsoleCommand extends DualLinkNode {
           if (param2 != null) {
             discarded$29 = var8.append("     <col=ffaaff>" + param2 + "</col>");
           }
-          this.field_l = var8.toString();
+          this.signatureText = var8.toString();
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

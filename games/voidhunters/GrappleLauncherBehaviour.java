@@ -392,15 +392,15 @@ final class GrappleLauncherBehaviour implements DiffableState {
         field_c = null;
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          param0.a(-632, this.hookId, 32);
+          param0.writeBits(-632, this.hookId, 32);
           if (param1 >= -109) {
             this.ropeLength = -1;
           }
-          param0.a(-632, this.targetRopeLength, 32);
-          param0.a(-632, this.ropeLength, 32);
-          param0.a(-632, this.reload, 32);
+          param0.writeBits(-632, this.targetRopeLength, 32);
+          param0.writeBits(-632, this.ropeLength, 32);
+          param0.writeBits(-632, this.reload, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lja.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
@@ -457,7 +457,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
@@ -505,12 +505,12 @@ final class GrappleLauncherBehaviour implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.hookId = param0.i(0, 32);
-          this.targetRopeLength = param0.i(0, 32);
-          this.ropeLength = param0.i(0, 32);
-          this.reload = param0.i(0, 32);
+          this.hookId = param0.readBits(0, 32);
+          this.targetRopeLength = param0.readBits(0, 32);
+          this.ropeLength = param0.readBits(0, 32);
+          this.reload = param0.readBits(0, 32);
           if (param1) {
             this.reload = -16;
           }
@@ -519,7 +519,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         GrappleLauncherBehaviour var4 = null;
         boolean stackIn_7_0 = false;
@@ -547,7 +547,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         GrappleLauncherBehaviour var6 = null;
         GrappleLauncherBehaviour var7 = null;
         try {

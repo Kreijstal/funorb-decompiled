@@ -14,14 +14,14 @@ final class hob extends IntrusiveNode {
     int field_k;
     int field_g;
 
-    final static tv[] a(IntrusiveDeque param0, int param1) {
+    final static SerializableGameState[] a(IntrusiveDeque param0, int param1) {
         int var4 = 0;
         IntrusiveNode[] var2 = null;
         RuntimeException var2_ref = null;
-        tv[] var3 = null;
+        SerializableGameState[] var3 = null;
         int var5 = 0;
         IntrusiveNode[] var6 = null;
-        tv[] stackIn_10_0 = null;
+        SerializableGameState[] stackIn_10_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
@@ -31,14 +31,14 @@ final class hob extends IntrusiveNode {
           if (param0 == null) {
             return null;
           }
-          var6 = param0.f(-4872);
+          var6 = param0.toArray(-4872);
           var2 = var6;
-          var3 = new tv[var6.length];
+          var3 = new SerializableGameState[var6.length];
           if (param1 != 210377952) {
             hob.a(-49, (byte) -17);
           }
           for (var4 = 0; var6.length > var4; var4++) {
-            var3[var4] = (tv) ((Object) var6[var4]);
+            var3[var4] = (SerializableGameState) ((Object) var6[var4]);
           }
           stackIn_10_0 = var3;
           return stackIn_10_0;

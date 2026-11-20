@@ -12,16 +12,16 @@ final class upa implements dja {
         return "Lo!";
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 29 / ((-64 - param0) / 50);
-        return (tv) ((Object) new ShipComponent());
+        return (SerializableGameState) ((Object) new ShipComponent());
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          return (tv[]) null;
+          return (SerializableGameState[]) null;
         }
-        return (tv[]) ((Object) new ShipComponent[param1]);
+        return (SerializableGameState[]) ((Object) new ShipComponent[param1]);
     }
 
     static {

@@ -102,22 +102,22 @@ final class deb extends mfb {
     }
 
     final static void a(int param0, int param1) {
-        faa var2 = null;
-        faa var2Lifetime1;
+        IsaacPacketBuffer var2 = null;
+        IsaacPacketBuffer var2Lifetime1;
         if (param0 == 40) {
           var2 = RequestNewestBlackboxRecording.field_p;
-          var2.h(24335, param1);
-          var2.c(0, 2);
-          var2.c(0, 4);
-          var2.c(0, kua.a((byte) 75));
+          var2.writeIsaacByte(24335, param1);
+          var2.writeByte(0, 2);
+          var2.writeByte(0, 4);
+          var2.writeByte(0, kua.a((byte) 75));
           return;
         }
         deb.i((byte) 62);
         var2Lifetime1 = RequestNewestBlackboxRecording.field_p;
-        var2Lifetime1.h(24335, param1);
-        var2Lifetime1.c(0, 2);
-        var2Lifetime1.c(0, 4);
-        var2Lifetime1.c(0, kua.a((byte) 75));
+        var2Lifetime1.writeIsaacByte(24335, param1);
+        var2Lifetime1.writeByte(0, 2);
+        var2Lifetime1.writeByte(0, 4);
+        var2Lifetime1.writeByte(0, kua.a((byte) 75));
     }
 
     final int a(boolean param0) {

@@ -6,18 +6,18 @@ abstract class MapClearanceArea implements DiffableState {
     static int field_c;
     static int field_a;
 
-    public void b(byte param0, tv param1) {
+    public void copyTo(byte param0, SerializableGameState param1) {
         try {
           if (param0 <= 54) {
-            tv var4 = (tv) null;
-            this.a((byte) -58, (tv) null);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.differsFrom((byte) -58, (SerializableGameState) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dmb.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public boolean a(byte param0, tv param1) {
+    public boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
@@ -41,7 +41,7 @@ abstract class MapClearanceArea implements DiffableState {
         }
     }
 
-    public void a(faa param0, boolean param1) {
+    public void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
             asb var4 = (asb) null;
@@ -52,7 +52,7 @@ abstract class MapClearanceArea implements DiffableState {
         }
     }
 
-    public void reportDifferences(tv other, int obfuscationGuard) {
+    public void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         try {
           if (obfuscationGuard >= -19) {
             field_b = (ri) null;
@@ -72,7 +72,7 @@ abstract class MapClearanceArea implements DiffableState {
         field_b = null;
     }
 
-    public void b(faa param0, int param1) {
+    public void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 > -109) {
             asb var4 = (asb) null;

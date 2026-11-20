@@ -27,19 +27,19 @@ final class GetWeaponParticleSpeedDownshift extends ConsoleCommand {
         Object var7 = null;
         try {
           var9 = new PacketBuffer(param1);
-          var3 = var9.e((byte) -93);
-          var4 = var9.h(38);
+          var3 = var9.readUnsignedByte((byte) -93);
+          var4 = var9.readInt(38);
           if (var4 >= param0 && (SetPointDefenceLaserAimspeed.field_o == 0 ||
             !(var4 > SetPointDefenceLaserAimspeed.field_o))) {
             if (0 == var3) {
               var12 = new byte[var4];
               var10 = var12;
               var5_ref_byte__ = var10;
-              var9.a(0, var12, (byte) -59, var4);
+              var9.readBytes(0, var12, (byte) -59, var4);
               stackIn_7_0 = var5_ref_byte__;
               return stackIn_7_0;
             }
-            var5 = var9.h(119);
+            var5 = var9.readInt(119);
             if (var5 >= 0 && (SetPointDefenceLaserAimspeed.field_o == 0 ||
               !(var5 > SetPointDefenceLaserAimspeed.field_o))) {
               var13 = new byte[var5];

@@ -7,23 +7,23 @@ final class pa {
     static int field_b;
 
     final static void a(int param0, byte param1, int param2) {
-        faa var3 = null;
-        faa var3Lifetime1;
+        IsaacPacketBuffer var3 = null;
+        IsaacPacketBuffer var3Lifetime1;
         if (param1 < -82) {
           var3 = RequestNewestBlackboxRecording.field_p;
-          var3.h(24335, param0);
-          var3.c(0, 3);
-          var3.c(0, 8);
-          var3.a(param2, true);
+          var3.writeIsaacByte(24335, param0);
+          var3.writeByte(0, 3);
+          var3.writeByte(0, 8);
+          var3.writeShort(param2, true);
           return;
         }
         asb var4 = (asb) null;
         pa.a(-92, -5, (asb) null, 15);
         var3Lifetime1 = RequestNewestBlackboxRecording.field_p;
-        var3Lifetime1.h(24335, param0);
-        var3Lifetime1.c(0, 3);
-        var3Lifetime1.c(0, 8);
-        var3Lifetime1.a(param2, true);
+        var3Lifetime1.writeIsaacByte(24335, param0);
+        var3Lifetime1.writeByte(0, 3);
+        var3Lifetime1.writeByte(0, 8);
+        var3Lifetime1.writeShort(param2, true);
     }
 
     final static void a(String param0, int param1) {

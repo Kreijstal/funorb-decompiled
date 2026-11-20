@@ -26,27 +26,27 @@ final class pi extends DualLinkNode {
             pi.a((byte) 3, false, false);
           }
           if (param1 == 1) {
-            this.field_k = SetFighterBayAimspeed.a((byte) -67, '<', param0.a(-1));
+            this.field_k = SetFighterBayAimspeed.a((byte) -67, '<', param0.readString(-1));
           } else {
             if (param1 == 2) {
-              var4_int = param0.e((byte) -113);
+              var4_int = param0.readUnsignedByte((byte) -113);
               this.field_n = new int[var4_int];
               for (var5 = 0; var4_int > var5; var5++) {
-                this.field_n[var5] = param0.e(1869);
+                this.field_n[var5] = param0.readUnsignedShort(1869);
               }
             } else if (param1 == 3) {
-              var4_int = param0.e((byte) -107);
+              var4_int = param0.readUnsignedByte((byte) -107);
               this.field_m = new int[var4_int];
               this.field_l = new int[var4_int][];
               for (var5 = 0; var4_int > var5; var5++) {
-                var6 = param0.e(param2 ^ 1869);
+                var6 = param0.readUnsignedShort(param2 ^ 1869);
                 var7 = SetPhasedEnergyBeamPulseFadetime.a(0, var6);
                 if (var7 != null) {
                   this.field_m[var5] = var6;
                   array$0 = new int[var7.field_c];
                   this.field_l[var5] = array$0;
                   for (var8 = 0; var8 < var7.field_c; var8++) {
-                    this.field_l[var5][var8] = param0.e(1869);
+                    this.field_l[var5][var8] = param0.readUnsignedShort(1869);
                   }
                 }
               }
@@ -113,7 +113,7 @@ final class pi extends DualLinkNode {
         var4 = VoidHunters.field_G;
         try {
           while (true) {
-            var3_int = param0.e((byte) -104);
+            var3_int = param0.readUnsignedByte((byte) -104);
             if (var3_int != 0) {
               this.a(param0, var3_int, 0);
               continue;

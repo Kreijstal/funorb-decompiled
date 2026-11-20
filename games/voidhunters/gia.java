@@ -23,11 +23,11 @@ final class gia extends le {
           }
           var4_int = param0;
           if (var4_int == 0) {
-            this.field_i = param2.e(1869);
+            this.field_i = param2.readUnsignedShort(1869);
             return;
           }
           if (var4_int == 1) {
-            stackIn_10_1 = (param2.e((byte) -118) == 1);
+            stackIn_10_1 = (param2.readUnsignedByte((byte) -118) == 1);
             this.field_l = stackIn_10_1;
           }
           return;

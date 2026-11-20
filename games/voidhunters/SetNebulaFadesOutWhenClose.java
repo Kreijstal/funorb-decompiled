@@ -20,7 +20,7 @@ final class SetNebulaFadesOutWhenClose extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             field_p = -101;
           }
-          SetMachineGunEnergyUsed.a(17, 62, arguments[0].a(75));
+          SetMachineGunEnergyUsed.a(17, 62, arguments[0].intValue(75));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

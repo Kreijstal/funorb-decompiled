@@ -6,9 +6,9 @@ final class pu implements dja {
     static String field_b;
     static boolean field_a;
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -51 / ((param0 + 64) / 50);
-        return (tv) ((Object) new Particle());
+        return (SerializableGameState) ((Object) new Particle());
     }
 
     final static int a(byte param0, int param1) {
@@ -47,12 +47,12 @@ final class pu implements dja {
         field_b = null;
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_b = (String) null;
-          return (tv[]) ((Object) new Particle[param1]);
+          return (SerializableGameState[]) ((Object) new Particle[param1]);
         }
-        return (tv[]) ((Object) new Particle[param1]);
+        return (SerializableGameState[]) ((Object) new Particle[param1]);
     }
 
     static {

@@ -71,7 +71,7 @@ final class jk extends llb {
 
     final boolean i(int param0) {
         int var2 = -19 / ((-46 - param0) / 57);
-        return !this.c((byte) 97) ? true : false;
+        return !this.isSecondaryLinked((byte) 97) ? true : false;
     }
 
     final void a(String param0, String param1, int param2) {

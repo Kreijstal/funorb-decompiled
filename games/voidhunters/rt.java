@@ -57,14 +57,14 @@ final class rt {
             var3 = new dcb(param0, this.field_d);
             this.field_d = this.field_d + 1;
           } else {
-            var4 = (dcb) (this.field_f.b((byte) 120));
+            var4 = (dcb) (this.field_f.last((byte) 120));
             var3 = new dcb(param0, var4.field_e);
             this.field_e[var4.field_g] = null;
-            var4.b(-3846);
+            var4.unlink(-3846);
           }
           this.field_e[param0] = var3;
         }
-        this.field_f.a(var3, (byte) -55);
+        this.field_f.addFirst(var3, (byte) -55);
         return this.field_c[var3.field_e];
     }
 
@@ -83,7 +83,7 @@ final class rt {
         }
         this.field_c = (int[][][]) null;
         this.field_e = null;
-        this.field_f.e(102);
+        this.field_f.clear(102);
         this.field_f = null;
     }
 

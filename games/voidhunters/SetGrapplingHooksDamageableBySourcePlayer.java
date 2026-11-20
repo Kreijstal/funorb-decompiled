@@ -20,17 +20,17 @@ final class SetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
           ii.field_h = false;
           SetThrusterParticleSpeedDownshift.field_o = null;
           if (null != SetMachineGunAimarc.field_q) {
-            SetMachineGunAimarc.field_q.e(103);
+            SetMachineGunAimarc.field_q.clear(103);
             SetMachineGunAimarc.field_q = null;
           }
           GetReverbWet.field_o = null;
           if (null != kja.field_E) {
-            kja.field_E.e(104);
+            kja.field_E.clear(104);
             kja.field_E = null;
           }
           GetLaserReload.field_r = null;
           if (mea.field_e != null) {
-            mea.field_e.e(126);
+            mea.field_e.clear(126);
             mea.field_e = null;
           }
           SetUseDetailLines.field_p = null;
@@ -39,7 +39,7 @@ final class SetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
           }
           var3 = (jk) (GetReverbWet.field_o.c(param0 - 99));
           while (var3 != null) {
-            var3.d((byte) -35);
+            var3.unlinkSecondary((byte) -35);
             var3 = (jk) (GetReverbWet.field_o.d(param0 - 16));
           }
           GetReverbWet.field_o = null;
@@ -60,7 +60,7 @@ final class SetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(15, 62, arguments[0].a(12));
+          SetMachineGunEnergyUsed.a(15, 62, arguments[0].intValue(12));
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

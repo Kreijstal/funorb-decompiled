@@ -7,7 +7,7 @@ final class SetLaserReload extends ConsoleCommand {
           return;
         }
         try {
-          oaa.field_k.b(-10258, param1);
+          oaa.field_k.addLast(-10258, param1);
           GetCountermeasureLauncherAimspeed.a(param1, 1, param0);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dba.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
@@ -38,7 +38,7 @@ final class SetLaserReload extends ConsoleCommand {
           if (obfuscationGuard > -119) {
             SetLaserReload.a(44, true);
           }
-          SetMachineGunEnergyUsed.a(110, 62, arguments[0].a(25));
+          SetMachineGunEnergyUsed.a(110, 62, arguments[0].intValue(25));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -149,21 +149,21 @@ final class sva extends le {
           }
           var4_int = param0;
           if (var4_int == 0) {
-            this.field_n = param2.e((byte) -101);
+            this.field_n = param2.readUnsignedByte((byte) -101);
           } else {
             if (var4_int == 1) {
-              this.field_k = param2.e(1869);
+              this.field_k = param2.readUnsignedShort(1869);
             } else {
               if (var4_int != 2) {
                 if (var4_int == 3) {
-                  this.field_i = param2.e(1869);
+                  this.field_i = param2.readUnsignedShort(1869);
                 } else {
                   if (var4_int == 4) {
-                    this.field_j = param2.e(1869);
+                    this.field_j = param2.readUnsignedShort(1869);
                   }
                 }
               } else {
-                this.field_l = param2.e((byte) -117);
+                this.field_l = param2.readUnsignedByte((byte) -117);
               }
             }
           }

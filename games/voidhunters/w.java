@@ -90,11 +90,11 @@ final class w extends dqa implements ln, oo {
     }
 
     final static void a(int param0, byte param1) {
-        faa var2 = RequestNewestBlackboxRecording.field_p;
-        var2.h(24335, param0);
-        var2.c(0, 1);
+        IsaacPacketBuffer var2 = RequestNewestBlackboxRecording.field_p;
+        var2.writeIsaacByte(24335, param0);
+        var2.writeByte(0, 1);
         int var3 = -52 / ((-27 - param1) / 35);
-        var2.c(0, 0);
+        var2.writeByte(0, 0);
     }
 
     final boolean a(int param0, int param1, shb param2, char param3) {

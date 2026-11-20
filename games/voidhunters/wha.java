@@ -4,11 +4,11 @@
 final class wha implements dja {
     static int field_a;
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
-          return (tv[]) null;
+          return (SerializableGameState[]) null;
         }
-        return (tv[]) ((Object) new Asteroid[param1]);
+        return (SerializableGameState[]) ((Object) new Asteroid[param1]);
     }
 
     final static void a(int param0) {
@@ -322,9 +322,9 @@ final class wha implements dja {
         }
     }
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = -12 % ((param0 + 64) / 50);
-        return (tv) ((Object) new Asteroid());
+        return (SerializableGameState) ((Object) new Asteroid());
     }
 
     static {

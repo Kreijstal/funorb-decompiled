@@ -50,17 +50,17 @@ final class SetLag extends ConsoleCommand {
         ik var5_ref_ik = null;
         int[] var6 = null;
         int var8 = 0;
-        faa var9 = null;
+        IsaacPacketBuffer var9 = null;
         int[] var10 = null;
         int[] var11 = null;
         var8 = VoidHunters.field_G;
         try {
           boolean decompiledFrameRemainder0 = true;
           var9 = qga.field_b;
-          var2 = var9.e((byte) -117);
-          var3 = var9.e((byte) -94);
+          var2 = var9.readUnsignedByte((byte) -117);
+          var3 = var9.readUnsignedByte((byte) -94);
           if (0 == var2) {
-            var4 = (br) (SetDebugLineLife.field_p.d(param0 ^ -8999));
+            var4 = (br) (SetDebugLineLife.field_p.first(param0 ^ -8999));
             if (var4 == null) {
               ifb.l(-128);
               return;
@@ -73,17 +73,17 @@ final class SetLag extends ConsoleCommand {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.e((byte) -92) << (dla.a(3, var7) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) -92) << (dla.a(3, var7) << 8));
             }
-            var4.b(-3846);
+            var4.unlink(-3846);
           } else {
             if (var2 == 1) {
-              var4_int = var9.d(0);
-              var5_ref_ik = (ik) (SetSalvoHoldable.field_o.d(0));
+              var4_int = var9.readSignedSmart(0);
+              var5_ref_ik = (ik) (SetSalvoHoldable.field_o.first(0));
               while (var5_ref_ik != null) {
                 if (var5_ref_ik.field_f != var3 ||
                   var4_int != var5_ref_ik.field_g) {
-                  var5_ref_ik = (ik) (SetSalvoHoldable.field_o.a((byte) 11));
+                  var5_ref_ik = (ik) (SetSalvoHoldable.field_o.next((byte) 11));
                   continue;
                 }
                 break;
@@ -92,7 +92,7 @@ final class SetLag extends ConsoleCommand {
                 ifb.l(-121);
                 return;
               }
-              var5_ref_ik.b(param0 ^ 11299);
+              var5_ref_ik.unlink(param0 ^ 11299);
               decompiledFrameRemainder0 = false;
             }
             else {
@@ -121,7 +121,7 @@ final class SetLag extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SettingsInstance.a(arguments[3].a(55), false, arguments[2].a(84), arguments[1].a(115), arguments[0].a(88));
+          SettingsInstance.a(arguments[3].intValue(55), false, arguments[2].intValue(84), arguments[1].intValue(115), arguments[0].intValue(88));
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

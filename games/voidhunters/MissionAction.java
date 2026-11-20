@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class MissionAction implements DiffableState {
-    public boolean a(byte param0, tv param1) {
+    public boolean differsFrom(byte param0, SerializableGameState param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         RuntimeException stackIn_4_0 = null;
@@ -129,29 +129,29 @@ class MissionAction implements DiffableState {
         return this.toString();
     }
 
-    public void reportDifferences(tv other, int obfuscationGuard) {
+    public void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         try {
           if (obfuscationGuard > -19) {
-            tv var4 = (tv) null;
-            this.reportDifferences((tv) null, -80);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.reportDifferences((SerializableGameState) null, -80);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rna.F(" + (other != null ? "{...}" : "null") + ',' + obfuscationGuard + ')');
         }
     }
 
-    public void b(byte param0, tv param1) {
+    public void copyTo(byte param0, SerializableGameState param1) {
         try {
           if (param0 < 54) {
-            tv var4 = (tv) null;
-            this.a((byte) 107, (tv) null);
+            SerializableGameState var4 = (SerializableGameState) null;
+            this.differsFrom((byte) 107, (SerializableGameState) null);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rna.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public void a(faa param0, boolean param1) {
+    public void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
             this.a(-32, 17);
@@ -161,11 +161,11 @@ class MissionAction implements DiffableState {
         }
     }
 
-    public void b(faa param0, int param1) {
+    public void writeState(IsaacPacketBuffer param0, int param1) {
         try {
           if (param1 > -109) {
-            faa var4 = (faa) null;
-            this.b((faa) null, 115);
+            IsaacPacketBuffer var4 = (IsaacPacketBuffer) null;
+            this.writeState((IsaacPacketBuffer) null, 115);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rna.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -175,8 +175,8 @@ class MissionAction implements DiffableState {
     void a(int param0, int[] param1, GameSnapshot param2) {
         try {
           if (param0 != 1) {
-            tv var5 = (tv) null;
-            this.reportDifferences((tv) null, 85);
+            SerializableGameState var5 = (SerializableGameState) null;
+            this.reportDifferences((SerializableGameState) null, 85);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rna.E(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

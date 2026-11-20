@@ -5,8 +5,8 @@ import java.io.*;
 
 abstract class SocketConnector {
     static IntrusiveDeque field_c;
-    int field_b;
-    String field_a;
+    int port;
+    String host;
 
     final static boolean a(int param0, int param1, int param2) {
         if (param0 == -6070) {
@@ -16,15 +16,15 @@ abstract class SocketConnector {
         return 0 != (2048 & param2) ? true : false;
     }
 
-    final java.net.Socket a(boolean param0) throws IOException {
+    final java.net.Socket openDirectSocket(boolean param0) throws IOException {
         if (!param0) {
-          return new java.net.Socket(this.field_a, this.field_b);
+          return new java.net.Socket(this.host, this.port);
         }
-        this.field_b = 48;
-        return new java.net.Socket(this.field_a, this.field_b);
+        this.port = 48;
+        return new java.net.Socket(this.host, this.port);
     }
 
-    public static void a(byte param0) {
+    public static void clearSharedReferences(byte param0) {
         if (param0 >= -71) {
           SocketConnector.a(-112, -32, -122);
           field_c = null;
@@ -33,7 +33,7 @@ abstract class SocketConnector {
         field_c = null;
     }
 
-    abstract java.net.Socket a(int param0) throws IOException;
+    abstract java.net.Socket openSocket(int param0) throws IOException;
 
     static {
     }

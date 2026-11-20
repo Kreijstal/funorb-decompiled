@@ -94,7 +94,7 @@ final class SetAutoAfkTimeout extends ConsoleCommand {
           var3_int = param1.position;
           var5 = (CharSequence) ((Object) param0);
           var4 = hi.a(var5, 96);
-          param1.b((byte) 124, var4.length);
+          param1.writeUnsignedSmart((byte) 124, var4.length);
           param1.position = param1.position + GetMissileLauncherAimspeed.field_o.b(var4.length, var4, param1.payload, 104, param1.position, 0);
           stackIn_4_0 = -var3_int + param1.position;
           return stackIn_4_0;
@@ -131,7 +131,7 @@ final class SetAutoAfkTimeout extends ConsoleCommand {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          Particle.field_E = arguments[0].a(93);
+          Particle.field_E = arguments[0].intValue(93);
           if (obfuscationGuard < -119) {
             stackIn_4_0 = new ConsoleValue("void");
             return stackIn_4_0;

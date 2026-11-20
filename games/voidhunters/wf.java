@@ -579,7 +579,7 @@ final class wf {
                                         GetMessageFadetime.field_o = false;
                                         if (wh.g(-118) &&
                                           jkb.field_a) {
-                                          RequestNewestBlackboxRecording.field_p.h(param0 ^ 24343, 10);
+                                          RequestNewestBlackboxRecording.field_p.writeIsaacByte(param0 ^ 24343, 10);
                                           jkb.field_a = false;
                                           MessageLog.field_d = false;
                                         }

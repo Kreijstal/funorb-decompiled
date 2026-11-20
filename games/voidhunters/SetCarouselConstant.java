@@ -24,7 +24,7 @@ final class SetCarouselConstant extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetCarouselConstant.e((byte) 125);
           }
-          kmb.a((String) (arguments[0].field_b), 18700);
+          kmb.a((String) (arguments[0].value), 18700);
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

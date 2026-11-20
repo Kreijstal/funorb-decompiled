@@ -36,7 +36,7 @@ final class gab {
         }
         this.field_h = (int[][]) null;
         this.field_a = null;
-        this.field_i.e(100);
+        this.field_i.clear(100);
         if (param0) {
           this.b(122);
         }
@@ -81,14 +81,14 @@ final class gab {
             var4 = new osa(param1, this.field_d);
             this.field_d = this.field_d + 1;
           } else {
-            var5 = (osa) (this.field_i.b((byte) 116));
+            var5 = (osa) (this.field_i.last((byte) 116));
             var4 = new osa(param1, var5.field_f);
             this.field_a[var5.field_d] = null;
-            var5.b(-3846);
+            var5.unlink(-3846);
           }
           this.field_a[param1] = var4;
         }
-        this.field_i.a(var4, (byte) -55);
+        this.field_i.addFirst(var4, (byte) -55);
         return this.field_h[var4.field_f];
     }
 

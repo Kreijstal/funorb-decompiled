@@ -15,11 +15,11 @@ final class NebulaField implements DiffableState, ofa {
         return var3;
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         NebulaField var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
-        tv var5 = null;
+        SerializableGameState var5 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -27,8 +27,8 @@ final class NebulaField implements DiffableState, ofa {
         try {
           var3 = (NebulaField) (other);
           if (obfuscationGuard >= -19) {
-            var5 = (tv) null;
-            this.b((byte) 8, (tv) null);
+            var5 = (SerializableGameState) null;
+            this.copyTo((byte) 8, (SerializableGameState) null);
           }
           tja.a(var3.nebulae, 1, this.nebulae, false, 5547);
           var4 = 0;
@@ -64,16 +64,16 @@ final class NebulaField implements DiffableState, ofa {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         int var7 = 0;
-        faa var3 = null;
+        IsaacPacketBuffer var3 = null;
         Nebula[] var4 = null;
         int var5 = 0;
         Nebula[] var6 = null;
         Nebula var8 = null;
         int var9 = 0;
         int stackIn_4_0 = 0;
-        faa stackIn_10_0 = null;
+        IsaacPacketBuffer stackIn_10_0 = null;
         int stackIn_10_1 = 0;
         boolean stackIn_11_2 = false;
         RuntimeException stackIn_20_0 = null;
@@ -91,7 +91,7 @@ final class NebulaField implements DiffableState, ofa {
             stackIn_4_0 = 0;
           }
           var5 = stackIn_4_0;
-          var3.a(-632, var5, 12);
+          var3.writeBits(-632, var5, 12);
           if (var5 != 0) {
             var6 = var4;
             for (var7 = 0; var6.length > var7; var7++) {
@@ -99,7 +99,7 @@ final class NebulaField implements DiffableState, ofa {
               stackIn_10_0 = var3;
               stackIn_10_1 = -68;
               stackIn_11_2 = (var8 != null);
-              if (vq.a(stackIn_10_0, stackIn_10_1, stackIn_11_2)) {
+              if (vq.writeBoolean(stackIn_10_0, stackIn_10_1, stackIn_11_2)) {
                 GetComponentBreakingExplosionForceMultiplier.a(2, 1, var3, var8);
               }
             }
@@ -123,7 +123,7 @@ final class NebulaField implements DiffableState, ofa {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         NebulaField var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
@@ -151,7 +151,7 @@ final class NebulaField implements DiffableState, ofa {
         }
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         if (param0 < 54) {
           return;
         }
@@ -210,7 +210,7 @@ final class NebulaField implements DiffableState, ofa {
         return this.nebulae;
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
             NebulaField.a((byte) 76);

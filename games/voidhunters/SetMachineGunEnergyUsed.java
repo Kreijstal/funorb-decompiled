@@ -16,7 +16,7 @@ final class SetMachineGunEnergyUsed extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(164, 62, arguments[0].a(60));
+          SetMachineGunEnergyUsed.a(164, 62, arguments[0].intValue(60));
           if (obfuscationGuard > -119) {
             SetMachineGunEnergyUsed.a(100, -78, -48);
           }

@@ -22,7 +22,7 @@ final class ResourceNode implements DiffableState {
         }
     }
 
-    public final boolean a(byte param0, tv param1) {
+    public final boolean differsFrom(byte param0, SerializableGameState param1) {
         ResourceNode var3 = null;
         int var4 = 0;
         boolean stackIn_8_0 = false;
@@ -50,13 +50,13 @@ final class ResourceNode implements DiffableState {
         }
     }
 
-    public final void b(faa param0, int param1) {
+    public final void writeState(IsaacPacketBuffer param0, int param1) {
         try {
-          param0.a(-632, this.x, 32);
-          param0.a(-632, this.y, 32);
-          param0.a(-632, this.radius, 32);
-          param0.a(-632, this.team, 32);
-          param0.a(-632, this.captureTimer, 32);
+          param0.writeBits(-632, this.x, 32);
+          param0.writeBits(-632, this.y, 32);
+          param0.writeBits(-632, this.radius, 32);
+          param0.writeBits(-632, this.team, 32);
+          param0.writeBits(-632, this.captureTimer, 32);
           if (param1 > -109) {
             this.radius = -88;
           }
@@ -65,7 +65,7 @@ final class ResourceNode implements DiffableState {
         }
     }
 
-    public final void reportDifferences(tv other, int obfuscationGuard) {
+    public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {
         RuntimeException stackIn_19_0 = null;
         StringBuilder stackIn_19_1 = null;
         String stackIn_20_2 = null;
@@ -126,7 +126,7 @@ final class ResourceNode implements DiffableState {
         return var7 <= this.radius ? true : false;
     }
 
-    public final void b(byte param0, tv param1) {
+    public final void copyTo(byte param0, SerializableGameState param1) {
         ResourceNode var4 = (ResourceNode) (param1);
         ResourceNode var3 = var4;
         var4.team = this.team;
@@ -207,14 +207,14 @@ final class ResourceNode implements DiffableState {
                 ResourceNode.a(102, true, (java.awt.Canvas) null, -4);
               }
               var5 = (RasterBuffer) (var4.newInstance());
-              var5.a(4904, param0, param3, param2);
+              var5.initialize(4904, param0, param3, param2);
               stackIn_3_0 = var5;
               return stackIn_3_0;
             } catch (java.lang.Throwable decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
               var4_ref = decompiledCaughtException;
               var5_ref = new ImageProducerRasterBuffer();
-              ((RasterBuffer) ((Object) var5_ref)).a(4904, param0, param3, param2);
+              ((RasterBuffer) ((Object) var5_ref)).initialize(4904, param0, param3, param2);
               stackIn_5_0 = var5_ref;
               return (RasterBuffer) ((Object) stackIn_5_0);
             }
@@ -237,16 +237,16 @@ final class ResourceNode implements DiffableState {
         }
     }
 
-    public final void a(faa param0, boolean param1) {
+    public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
-          this.x = param0.i(0, 32);
-          this.y = param0.i(0, 32);
-          this.radius = param0.i(0, 32);
+          this.x = param0.readBits(0, 32);
+          this.y = param0.readBits(0, 32);
+          this.radius = param0.readBits(0, 32);
           if (param1) {
             this.y = 51;
           }
-          this.team = param0.i(0, 32);
-          this.captureTimer = param0.i(0, 32);
+          this.team = param0.readBits(0, 32);
+          this.captureTimer = param0.readBits(0, 32);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "rba.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

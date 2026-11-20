@@ -4,9 +4,9 @@
 final class spa implements dja {
     static int field_a;
 
-    public final tv a(byte param0) {
+    public final SerializableGameState a(byte param0) {
         int var2 = 56 / ((-64 - param0) / 50);
-        return (tv) ((Object) new mua());
+        return (SerializableGameState) ((Object) new mua());
     }
 
     final static void b(byte param0) {
@@ -30,12 +30,12 @@ final class spa implements dja {
         }
     }
 
-    public final tv[] a(int param0, int param1) {
+    public final SerializableGameState[] a(int param0, int param1) {
         if (param0 != 11995) {
           field_a = -87;
-          return (tv[]) ((Object) new mua[param1]);
+          return (SerializableGameState[]) ((Object) new mua[param1]);
         }
-        return (tv[]) ((Object) new mua[param1]);
+        return (SerializableGameState[]) ((Object) new mua[param1]);
     }
 
     final static void a(int param0, boolean param1) {

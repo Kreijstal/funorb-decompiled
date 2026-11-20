@@ -27,7 +27,7 @@ final class SetMissionVariablesHudX extends ConsoleCommand {
             stackIn_2_0 = (ConsoleValue) null;
             return stackIn_2_0;
           }
-          GetBoostersActiveTime.field_p = arguments[0].a(125);
+          GetBoostersActiveTime.field_p = arguments[0].intValue(125);
           stackIn_4_0 = new ConsoleValue("void");
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

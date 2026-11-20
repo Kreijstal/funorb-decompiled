@@ -16,20 +16,20 @@ abstract class MouseWheelInput {
         }
     }
 
-    abstract void a(int param0, java.awt.Component param1);
+    abstract void attach(int param0, java.awt.Component param1);
 
-    public static void a(int param0) {
+    public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != -25692) {
-          MouseWheelInput.a(4);
+          MouseWheelInput.clearSharedReferences(4);
         }
     }
 
-    abstract void a(java.awt.Component param0, int param1);
+    abstract void detach(java.awt.Component param0, int param1);
 
-    abstract int b(int param0);
+    abstract int pollRotation(int param0);
 
-    final static boolean a(char param0, int param1) {
+    final static boolean isNameSeparator(char param0, int param1) {
         if (param1 <= 22) {
           field_a = (String) null;
           if (param0 == 160) {

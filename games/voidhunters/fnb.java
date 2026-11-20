@@ -32,7 +32,7 @@ abstract class fnb {
           }
           if (null != ms.field_y &&
             null != kba.field_a) {
-            var6 = (qw) (ms.field_y.d(0));
+            var6 = (qw) (ms.field_y.first(0));
             while (var6 != null) {
               if (var6.field_f == param4 &&
                 var6.field_m &&
@@ -48,7 +48,7 @@ abstract class fnb {
                   return;
                 }
               }
-              var6 = (qw) (ms.field_y.a((byte) 127));
+              var6 = (qw) (ms.field_y.next((byte) 127));
             }
             var6_int = uv.a(128, param2);
             var7Lifetime1 = pja.b((byte) 95, param2, param1);
@@ -67,7 +67,7 @@ abstract class fnb {
             var10.field_k = var9;
             var10.field_i = SetReverbDry.field_o;
             var10.field_d = param2;
-            ms.field_y.b(-10258, var10);
+            ms.field_y.addLast(-10258, var10);
             return;
           }
           return;

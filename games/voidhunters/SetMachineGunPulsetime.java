@@ -27,7 +27,7 @@ final class SetMachineGunPulsetime extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(188, 62, arguments[0].a(124));
+          SetMachineGunEnergyUsed.a(188, 62, arguments[0].intValue(124));
           if (obfuscationGuard >= -119) {
             SetMachineGunPulsetime.e(117);
           }

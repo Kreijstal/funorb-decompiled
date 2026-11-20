@@ -13,7 +13,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetMachineGunEnergyUsed.a(85, 62, arguments[0].a(90));
+          SetMachineGunEnergyUsed.a(85, 62, arguments[0].intValue(90));
           if (obfuscationGuard >= -119) {
             var4 = (soa) null;
             SetTorpedoProjectiles.a(13, (byte) -15, (soa) null, true, 117);
@@ -163,7 +163,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
           var9Lifetime1 = stackIn_47_0;
           var10 = param2.field_wb.field_lb;
           var11 = null;
-          var12 = (jk) (var10.d(0));
+          var12 = (jk) (var10.first(0));
           while (var12 != null) {
             var13 = 0;
             if (null == var12.field_lb) {
@@ -490,7 +490,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
               }
             }
             var11 = var12;
-            var12 = (jk) (var10.a((byte) 23));
+            var12 = (jk) (var10.next((byte) 23));
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

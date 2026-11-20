@@ -57,25 +57,25 @@ final class nv extends DualLinkNode implements mda {
     }
 
     final static void a(byte param0, dnb param1, int param2) {
-        faa var4 = null;
+        IsaacPacketBuffer var4 = null;
         int var5 = 0;
         try {
           int var3_int = -87 % ((4 - param0) / 54);
           var4 = RequestNewestBlackboxRecording.field_p;
-          var4.h(24335, param2);
+          var4.writeIsaacByte(24335, param2);
           var4.position = var4.position + 1;
           var5 = var4.position;
-          var4.c(0, 1);
+          var4.writeByte(0, 1);
           if (null != param1.field_e) {
-            var4.c(0, param1.field_e.length);
-            var4.a(0, param1.field_e, -1, param1.field_e.length);
+            var4.writeByte(0, param1.field_e.length);
+            var4.writeBytes(0, param1.field_e, -1, param1.field_e.length);
           } else {
-            var4.c(0, 0);
+            var4.writeByte(0, 0);
           }
-          var4.g(1595, var5);
+          var4.writeCrc(1595, var5);
           var4.position = var4.position - 4;
-          param1.field_d = var4.h(35);
-          var4.e(var4.position - var5, -129);
+          param1.field_d = var4.readInt(35);
+          var4.writeLengthByte(var4.position - var5, -129);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "nv.F(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

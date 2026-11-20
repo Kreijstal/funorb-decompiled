@@ -21,7 +21,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3 = null;
         int var4 = 0;
-        faa var5 = null;
+        IsaacPacketBuffer var5 = null;
         CharSequence var6 = null;
         try {
           var6 = (CharSequence) ((Object) param0);
@@ -55,15 +55,15 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
             return stackIn_28_0;
           }
           var5 = RequestNewestBlackboxRecording.field_p;
-          var5.h(24335, param1);
+          var5.writeIsaacByte(24335, param1);
           var5.position = var5.position + 1;
           var4 = var5.position;
-          var5.c(0, 0);
-          var5.a(true, param0);
+          var5.writeByte(0, 0);
+          var5.writeString(true, param0);
           if (param2 != 9602) {
             field_p = (String) null;
           }
-          var5.e(-var4 + var5.position, -129);
+          var5.writeLengthByte(-var4 + var5.position, -129);
           stackIn_32_0 = null;
           return (String) (stackIn_32_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -137,7 +137,7 @@ final class SetPhasedEnergyBeamPulsetime extends ConsoleCommand {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -36);
           }
-          SetMachineGunEnergyUsed.a(186, 62, arguments[0].a(15));
+          SetMachineGunEnergyUsed.a(186, 62, arguments[0].intValue(15));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

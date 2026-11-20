@@ -16,7 +16,7 @@ final class SetTrapMouse extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          SetNebulaProximityFadeDownshift.field_o = arguments[0].a(false);
+          SetNebulaProximityFadeDownshift.field_o = arguments[0].booleanValue(false);
           if (obfuscationGuard >= -119) {
             SetTrapMouse.b(true);
           }

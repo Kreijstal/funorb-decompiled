@@ -21,14 +21,14 @@ final class vn extends le {
         try {
           var4_int = param0;
           if (var4_int == 0) {
-            this.field_j = param2.e((byte) -108);
+            this.field_j = param2.readUnsignedByte((byte) -108);
           } else {
             if (1 != var4_int) {
               if (2 == var4_int) {
-                this.field_k = param2.e(1869);
+                this.field_k = param2.readUnsignedShort(1869);
               }
             } else {
-              this.field_l = param2.e((byte) -93);
+              this.field_l = param2.readUnsignedByte((byte) -93);
             }
           }
           if (param1 >= -60) {

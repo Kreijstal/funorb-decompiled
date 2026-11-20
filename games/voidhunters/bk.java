@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class bk extends mc {
-    static faa field_w;
+    static IsaacPacketBuffer field_w;
     static jra field_v;
 
     final void a(int param0) {
@@ -90,7 +90,7 @@ final class bk extends mc {
     }
 
     static {
-        field_w = new faa(1048576);
+        field_w = new IsaacPacketBuffer(1048576);
         field_v = new jra();
     }
 }

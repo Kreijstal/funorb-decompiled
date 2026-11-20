@@ -16,7 +16,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             SetMissionDebrisDefaultProbability.a(80);
           }
-          SetMachineGunEnergyUsed.a(68, 62, arguments[0].a(91));
+          SetMachineGunEnergyUsed.a(68, 62, arguments[0].intValue(91));
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -72,7 +72,7 @@ final class SetMissionDebrisDefaultProbability extends ConsoleCommand {
         if (param3 > -70) {
           return (pgb) null;
         }
-        GetUseLines.field_p.field_wb.field_lb.e(122);
+        GetUseLines.field_p.field_wb.field_lb.clear(122);
         var5 = 0;
         var6 = 0;
         for (var7 = -1 + SetRepairModePower.field_q; 0 <= var7; var7--) {

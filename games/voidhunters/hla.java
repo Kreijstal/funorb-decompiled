@@ -5,11 +5,11 @@ final class hla {
     static int[] field_a;
     static String field_b;
 
-    final static tv[] a(Class[] param0, tv[] param1, dja[] param2, int param3, tv[] param4, int param5, dja param6) {
+    final static SerializableGameState[] a(Class[] param0, SerializableGameState[] param1, dja[] param2, int param3, SerializableGameState[] param4, int param5, dja param6) {
         int var8 = 0;
-        tv dupTemp$0 = null;
+        SerializableGameState dupTemp$0 = null;
         Object stackIn_3_0 = null;
-        tv[] stackIn_25_0 = null;
+        SerializableGameState[] stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -24,19 +24,19 @@ final class hla {
         RuntimeException decompiledCaughtException = null;
         int var7_int = 0;
         RuntimeException var7 = null;
-        tv var9 = null;
+        SerializableGameState var9 = null;
         Class var10 = null;
-        tv var11 = null;
+        SerializableGameState var11 = null;
         int var12 = 0;
-        tv var13 = null;
-        tv var14 = null;
+        SerializableGameState var13 = null;
+        SerializableGameState var14 = null;
         int var15 = 0;
-        tv var16 = null;
+        SerializableGameState var16 = null;
         var15 = VoidHunters.field_G;
         try {
           if (param1 == null) {
             stackIn_3_0 = null;
-            return (tv[]) (stackIn_3_0);
+            return (SerializableGameState[]) (stackIn_3_0);
           }
           if (param4 == null ||
             param4.length != param1.length) {
@@ -61,7 +61,7 @@ final class hla {
               var13 = var9;
               var14 = var11;
               if (var12 == 1) {
-                var13.b((byte) 114, var14);
+                var13.copyTo((byte) 114, var14);
               } else {
                 if (2 != var12) {
                   if (var12 == 3) {
@@ -73,7 +73,7 @@ final class hla {
               }
             }
           }
-          stackIn_25_0 = (tv[]) (param4);
+          stackIn_25_0 = (SerializableGameState[]) (param4);
           return stackIn_25_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

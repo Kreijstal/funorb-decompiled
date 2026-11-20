@@ -28,13 +28,13 @@ final class nqa {
           if (param0 == null) {
             return null;
           }
-          var2 = param0.d(0);
+          var2 = param0.first(0);
           while (true) {
             if (var2 == null) {
               return null;
             }
             if (!VoidHunters.a(true, var2)) {
-              var2 = param0.a((byte) 98);
+              var2 = param0.next((byte) 98);
               continue;
             }
             break;

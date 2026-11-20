@@ -26,7 +26,7 @@ final class sr {
             this.a(-11, (PacketBuffer) null, -118, true);
           }
           while (true) {
-            var4_int = param1.e((byte) -127);
+            var4_int = param1.readUnsignedByte((byte) -127);
             if (var4_int == 0) {
               return;
             }
@@ -59,7 +59,7 @@ final class sr {
             this.field_b = 77;
           }
           if (1 == param2) {
-            this.field_e = param1.e(1869);
+            this.field_e = param1.readUnsignedShort(1869);
             if (this.field_e != 65535) {
               return;
             }
@@ -67,20 +67,20 @@ final class sr {
             return;
           }
           if (param2 == 2) {
-            this.field_g = param1.e(1869) + 1;
-            this.field_b = param1.e(1869) + 1;
+            this.field_g = param1.readUnsignedShort(1869) + 1;
+            this.field_b = param1.readUnsignedShort(1869) + 1;
             return;
           }
           if (param2 == 3) {
-            param1.d((byte) -114);
+            param1.readByte((byte) -114);
             return;
           }
           if (param2 == 4) {
-            this.field_f = param1.e((byte) -108);
+            this.field_f = param1.readUnsignedByte((byte) -108);
             return;
           }
           if (param2 == 5) {
-            this.field_d = param1.e((byte) -126);
+            this.field_d = param1.readUnsignedByte((byte) -126);
             return;
           }
           if (6 == param2) {
