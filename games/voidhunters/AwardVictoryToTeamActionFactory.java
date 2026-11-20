@@ -216,7 +216,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.field_o[39] = di.field_m;
           GetGrapplingHookSpringConstant.field_o[4] = llb.field_kb;
           GetGrapplingHookSpringConstant.field_o[47] = pjb.field_Db;
-          GetGrapplingHookSpringConstant.field_o[15] = fkb.field_z;
+          GetGrapplingHookSpringConstant.field_o[15] = MidiNote.field_z;
           GetGrapplingHookSpringConstant.field_o[29] = ifa.field_e;
           GetGrapplingHookSpringConstant.field_o[6] = ssa.field_b;
           GetGrapplingHookSpringConstant.field_o[11] = ShipBlueprint.field_b;

@@ -4,7 +4,7 @@
 final class ga extends fnb {
     private pfa field_f;
     private int field_n;
-    private gnb field_u;
+    private NodeHashTable field_u;
     private qp field_t;
     private fo field_l;
     private int field_p;
@@ -101,7 +101,7 @@ final class ga extends fnb {
     }
 
     final int a(int param0, boolean param1) {
-        jtb var3 = (jtb) (this.field_u.a((long)param0, 122));
+        jtb var3 = (jtb) (this.field_u.get((long)param0, 122));
         if (var3 != null) {
           return var3.e((byte) -4);
         }
@@ -228,7 +228,7 @@ final class ga extends fnb {
                 decompiledFrameRemainder0 = (this.field_m);
                 if ((decompiledFrameRemainder0) &&
                   (decompiledFrameRemainder0 = !(this.field_e > wt.a(false)))) {
-                  var2 = (jtb) (this.field_u.c((byte) 48));
+                  var2 = (jtb) (this.field_u.first((byte) 48));
                   while (var2 != null) {
                     if (!var2.field_n) {
                       if (var2.field_k) {
@@ -240,7 +240,7 @@ final class ga extends fnb {
                         var2.field_k = true;
                       }
                     }
-                    var2 = (jtb) (this.field_u.b(-91));
+                    var2 = (jtb) (this.field_u.next(-91));
                   }
                   decompiledFrameRemainder1 = false;
                 }
@@ -261,7 +261,7 @@ final class ga extends fnb {
           decompiledFrameRemainder0 = (this.field_m);
           if ((decompiledFrameRemainder0) &&
             (decompiledFrameRemainder0 = !(this.field_e > wt.a(false)))) {
-            var2Lifetime1 = (jtb) (this.field_u.c((byte) 48));
+            var2Lifetime1 = (jtb) (this.field_u.first((byte) 48));
             while (var2Lifetime1 != null) {
               if (!var2Lifetime1.field_n) {
                 if (var2Lifetime1.field_k) {
@@ -273,7 +273,7 @@ final class ga extends fnb {
                   var2Lifetime1.field_k = true;
                 }
               }
-              var2Lifetime1 = (jtb) (this.field_u.b(-91));
+              var2Lifetime1 = (jtb) (this.field_u.next(-91));
             }
           }
         }
@@ -374,7 +374,7 @@ final class ga extends fnb {
         if (param1 != -26489) {
           return (jtb) null;
         }
-        var12 = (jtb) (this.field_u.a((long)param2, 100));
+        var12 = (jtb) (this.field_u.get((long)param2, 100));
         var4 = var12;
         if (var12 != null &&
           0 == param0 &&
@@ -416,7 +416,7 @@ final class ga extends fnb {
               var4 = this.field_g.a(true, -21, param2, (byte) 2, this.field_p);
             }
           }
-          this.field_u.a((long)param2, (IntrusiveNode) (var4), (byte) -119);
+          this.field_u.put((long)param2, (IntrusiveNode) (var4), (byte) -119);
         }
         if (((jtb) (var4)).field_n) {
           return null;
@@ -475,7 +475,7 @@ final class ga extends fnb {
               return null;
             }
             var4 = this.field_g.a(true, -21, param2, (byte) 2, this.field_p);
-            this.field_u.a((long)param2, (IntrusiveNode) (var4), (byte) -127);
+            this.field_u.put((long)param2, (IntrusiveNode) (var4), (byte) -127);
             return null;
           }
         }
@@ -513,7 +513,7 @@ final class ga extends fnb {
               return null;
             }
             var4 = this.field_g.a(true, -21, param2, (byte) 2, this.field_p);
-            this.field_u.a((long)param2, (IntrusiveNode) (var4), (byte) -118);
+            this.field_u.put((long)param2, (IntrusiveNode) (var4), (byte) -118);
           }
           return null;
         }
@@ -561,7 +561,7 @@ final class ga extends fnb {
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var10 = null;
-        this.field_u = new gnb(16);
+        this.field_u = new NodeHashTable(16);
         this.field_h = 0;
         this.field_v = new IntrusiveDeque();
         this.field_e = 0L;

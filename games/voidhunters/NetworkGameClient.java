@@ -251,7 +251,7 @@ abstract class NetworkGameClient extends GameApplet {
               if (ppb.field_a.a(32171, "")) {
                 dga.a(true, ppb.field_a);
                 ppb.field_a = null;
-                fkb.a(2096);
+                MidiNote.resetFrameTiming(2096);
               }
             } else {
               ppb.field_a = null;
@@ -288,7 +288,7 @@ abstract class NetworkGameClient extends GameApplet {
           gdb.field_i = null;
           btb.field_b = null;
           qd.a(0, (java.applet.Applet) (this));
-          fkb.a(2096);
+          MidiNote.resetFrameTiming(2096);
           ef.field_z = 10;
         }
         if (10 == ef.field_z) {
@@ -518,10 +518,10 @@ abstract class NetworkGameClient extends GameApplet {
         SetGrapplingHookAimarc.field_p = this.languageId;
         aeb.a(SetGrapplingHookAimarc.field_p, 1);
         int var10 = -52 / ((-72 - param0) / 33);
-        bmb.a(5000, this.secondaryGamePort, 60, this.serverNumber, SetTorpedoProjectiles.field_o, this.instanceId, this.host, this.member, this.primaryGamePort, this.gameCrc, param6, SetGrapplingHookAimarc.field_p, param3, 5000);
+        SoundCache.initializeClientProtocol(5000, this.secondaryGamePort, 60, this.serverNumber, SetTorpedoProjectiles.field_o, this.instanceId, this.host, this.member, this.primaryGamePort, this.gameCrc, param6, SetGrapplingHookAimarc.field_p, param3, 5000);
         sha.a(param3, this.host, this.primaryGamePort, this.secondaryGamePort, (byte) -2, SetGrapplingHookAimarc.field_p, this.gameCrc, SetTorpedoProjectiles.field_o, this.serverNumber);
         ProxyAuthenticationException.initializePunctuationKeyCodes(47);
-        GetWaitForPlayers.field_o = ghb.c((byte) -127);
+        GetWaitForPlayers.field_o = ByteArrayNode.createMouseWheelInput((byte) -127);
         SetGrapplingHookCooldown.a((byte) 122, igb.field_a);
         GetShieldsDirectionalArc.field_p = param7;
         SetFighterRepairAmount.field_p = param5;

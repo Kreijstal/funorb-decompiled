@@ -15,7 +15,7 @@ abstract class ka {
 
     abstract int G();
 
-    final static ana a(int param0, fga param1) {
+    final static ana a(int param0, PcmSampleStream param1) {
         ana var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
@@ -28,7 +28,7 @@ abstract class ka {
           var2 = new ana(param1, param1);
           GetToggledScoreboard.field_p.addLast(-10258, var2);
           var3 = 119 / ((param0 - 18) / 37);
-          kpb.field_q.b(param1);
+          kpb.field_q.addSubStream(param1);
           stackIn_1_0 = var2;
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

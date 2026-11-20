@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sd extends IntrusiveNode {
-    byte[] field_j;
-    byte[] field_g;
-    short[] field_e;
-    gd[] field_d;
-    int field_i;
-    private int[] field_k;
-    cja[] field_h;
-    byte[] field_f;
+final class MusicPatch extends IntrusiveNode {
+    byte[] exclusiveGroups;
+    byte[] keyPans;
+    short[] pitchOffsets;
+    PcmSample[] samples;
+    int volume;
+    private int[] sampleIds;
+    MidiEnvelope[] envelopes;
+    byte[] keyVolumes;
 
-    final boolean a(int param0, bmb param1, int[] param2, byte[] param3) {
+    final boolean loadSamples(int param0, SoundCache param1, int[] param2, byte[] param3) {
         int var8 = 0;
         int stackIn_22_0 = 0;
         RuntimeException stackIn_25_0 = null;
@@ -31,7 +31,7 @@ final class sd extends IntrusiveNode {
         var10 = VoidHunters.field_G;
         try {
           if (param0 != 1069) {
-            this.field_i = -8;
+            this.volume = -8;
           }
           var5_int = 1;
           var6 = 0;
@@ -39,23 +39,23 @@ final class sd extends IntrusiveNode {
           for (var8 = 0; var8 < 128; var8++) {
             if (param3 == null ||
               param3[var8] != 0) {
-              var9 = this.field_k[var8];
+              var9 = this.sampleIds[var8];
               if (var9 != 0) {
                 if (var6 != var9) {
                   var6 = var9;
                   var9--;
                   if (0 != (var9 & 1)) {
-                    var7 = param1.a((byte) 127, var9 >> 2, param2);
+                    var7 = param1.getMusicSample((byte) 127, var9 >> 2, param2);
                   } else {
-                    var7 = param1.a((byte) -16, param2, var9 >> 2);
+                    var7 = param1.getSoundEffect((byte) -16, param2, var9 >> 2);
                   }
                   if (var7 == null) {
                     var5_int = 0;
                   }
                 }
                 if (var7 != null) {
-                  this.field_d[var8] = (gd) (var7);
-                  this.field_k[var8] = 0;
+                  this.samples[var8] = (PcmSample) (var7);
+                  this.sampleIds[var8] = 0;
                 }
               }
             }
@@ -88,17 +88,17 @@ final class sd extends IntrusiveNode {
         }
     }
 
-    final void a(int param0) {
-        this.field_k = null;
+    final void clearSampleIds(int param0) {
+        this.sampleIds = null;
         if (param0 != 0) {
-          this.field_d = (gd[]) null;
+          this.samples = (PcmSample[]) null;
         }
     }
 
-    sd(byte[] param0) {
+    MusicPatch(byte[] param0) {
         int var11_int = 0;
         int incrementValue$0 = 0;
-        cja dupTemp$8 = null;
+        MidiEnvelope dupTemp$8 = null;
         int incrementValue$5 = 0;
         int var25_int = 0;
         int incrementValue$3 = 0;
@@ -120,11 +120,11 @@ final class sd extends IntrusiveNode {
         byte[] var11 = null;
         int var12 = 0;
         int var13_int = 0;
-        cja[] var13 = null;
+        MidiEnvelope[] var13 = null;
         int var14 = 0;
         int var15_int = 0;
         byte[] var15 = null;
-        cja var15_ref = null;
+        MidiEnvelope var15_ref = null;
         byte[] var16 = null;
         int var16_int = 0;
         int var17 = 0;
@@ -139,7 +139,7 @@ final class sd extends IntrusiveNode {
         int var26 = 0;
         int var27 = 0;
         int var28_int = 0;
-        cja var28 = null;
+        MidiEnvelope var28 = null;
         int var29 = 0;
         int var30 = 0;
         int var31 = 0;
@@ -150,19 +150,19 @@ final class sd extends IntrusiveNode {
         int var37 = 0;
         PacketBuffer var38 = null;
         byte[] var39 = null;
-        cja var40 = null;
+        MidiEnvelope var40 = null;
         byte[] var41 = null;
         byte[] var42 = null;
         byte[] var43 = null;
         byte[] var44 = null;
-        cja var45 = null;
+        MidiEnvelope var45 = null;
         byte[] var46 = null;
         byte[] var47 = null;
-        cja var48 = null;
-        cja var49 = null;
-        cja var50 = null;
-        cja var51 = null;
-        cja var52 = null;
+        MidiEnvelope var48 = null;
+        MidiEnvelope var49 = null;
+        MidiEnvelope var50 = null;
+        MidiEnvelope var51 = null;
+        MidiEnvelope var52 = null;
         byte[] var53 = null;
         byte[] var54 = null;
         byte[] var55 = null;
@@ -170,7 +170,7 @@ final class sd extends IntrusiveNode {
         byte[] var57 = null;
         byte[] var58 = null;
         byte[] var59 = null;
-        cja var28Lifetime1;
+        MidiEnvelope var28Lifetime1;
         int var5Lifetime1;
         int var8Lifetime1;
         int var19Lifetime1;
@@ -228,13 +228,13 @@ final class sd extends IntrusiveNode {
         int var30Lifetime1Lifetime2;
         int var31Lifetime1Lifetime1;
         try {
-          this.field_e = new short[128];
-          this.field_d = new gd[128];
-          this.field_g = new byte[128];
-          this.field_f = new byte[128];
-          this.field_j = new byte[128];
-          this.field_k = new int[128];
-          this.field_h = new cja[128];
+          this.pitchOffsets = new short[128];
+          this.samples = new PcmSample[128];
+          this.keyPans = new byte[128];
+          this.keyVolumes = new byte[128];
+          this.exclusiveGroups = new byte[128];
+          this.sampleIds = new int[128];
+          this.envelopes = new MidiEnvelope[128];
           var38 = new PacketBuffer(param0);
           for (var3 = 0; var38.payload[var3 + var38.position] != 0; var3++) {
           }
@@ -294,20 +294,20 @@ final class sd extends IntrusiveNode {
           } else {
             var12 = var9;
           }
-          var13 = new cja[var12];
+          var13 = new MidiEnvelope[var12];
           for (var14Lifetime1 = 0; var13.length > var14Lifetime1; var14Lifetime1++) {
-            dupTemp$8 = new cja();
+            dupTemp$8 = new MidiEnvelope();
             var13[var14Lifetime1] = dupTemp$8;
             var40 = dupTemp$8;
             var15_ref = var40;
             var16_int = var38.readUnsignedByte((byte) -123);
             if (0 < var16_int) {
-              var15_ref.field_h = new byte[2 * var16_int];
+              var15_ref.amplitudeEnvelope = new byte[2 * var16_int];
             }
             var16_intLifetime1 = var38.readUnsignedByte((byte) -124);
             if (0 < var16_intLifetime1) {
-              var15_ref.field_a = new byte[2 * var16_intLifetime1 + 2];
-              var40.field_a[1] = (byte)64;
+              var15_ref.releaseEnvelope = new byte[2 * var16_intLifetime1 + 2];
+              var40.releaseEnvelope[1] = (byte)64;
             }
           }
           var14Lifetime2 = var38.readUnsignedByte((byte) -123);
@@ -341,12 +341,12 @@ final class sd extends IntrusiveNode {
           var19Lifetime1 = 0;
           for (var20 = 0; var20 < 128; var20++) {
             var19Lifetime1 = var19Lifetime1 + var38.readUnsignedByte((byte) -124);
-            this.field_e[var20] = (short)var19Lifetime1;
+            this.pitchOffsets[var20] = (short)var19Lifetime1;
           }
           var19Lifetime2 = 0;
           for (var20Lifetime1 = 0; var20Lifetime1 < 128; var20Lifetime1++) {
             var19Lifetime2 = var19Lifetime2 + var38.readUnsignedByte((byte) -110);
-            this.field_e[var20Lifetime1] = (short)(this.field_e[var20Lifetime1] + (var19Lifetime2 << 8));
+            this.pitchOffsets[var20Lifetime1] = (short)(this.pitchOffsets[var20Lifetime1] + (var19Lifetime2 << 8));
           }
           var20Lifetime2 = 0;
           var21 = 0;
@@ -360,15 +360,15 @@ final class sd extends IntrusiveNode {
               }
               var22 = var38.readVarInt(11436);
             }
-            this.field_e[var23] = (short)(this.field_e[var23] + dla.a(-1 + var22 << 14, 32768));
+            this.pitchOffsets[var23] = (short)(this.pitchOffsets[var23] + dla.a(-1 + var22 << 14, 32768));
             var20Lifetime2--;
-            this.field_k[var23] = var22;
+            this.sampleIds[var23] = var22;
           }
           var21Lifetime1 = 0;
           var20Lifetime3 = 0;
           var23Lifetime1 = 0;
           for (var24 = 0; var24 < 128; var24++) {
-            if (this.field_k[var24] != 0) {
+            if (this.sampleIds[var24] != 0) {
               if (var20Lifetime3 == 0) {
                 incrementValue$5 = var5Lifetime1;
                 var5Lifetime1++;
@@ -380,14 +380,14 @@ final class sd extends IntrusiveNode {
                 }
               }
               var20Lifetime3--;
-              this.field_j[var24] = (byte)var23Lifetime1;
+              this.exclusiveGroups[var24] = (byte)var23Lifetime1;
             }
           }
           var20Lifetime4 = 0;
           var21Lifetime2 = 0;
           var24Lifetime1 = 0;
           for (var25_int = 0; var25_int < 128; var25_int++) {
-            if (this.field_k[var25_int] != 0) {
+            if (this.sampleIds[var25_int] != 0) {
               if (var20Lifetime4 == 0) {
                 incrementValue$3 = var8Lifetime1;
                 var8Lifetime1++;
@@ -399,14 +399,14 @@ final class sd extends IntrusiveNode {
                 }
               }
               var20Lifetime4--;
-              this.field_g[var25_int] = (byte)var24Lifetime1;
+              this.keyPans[var25_int] = (byte)var24Lifetime1;
             }
           }
           var21Lifetime3 = 0;
           var20Lifetime5 = 0;
           var25 = null;
           for (var26 = 0; var26 < 128; var26++) {
-            if (this.field_k[var26] != 0) {
+            if (this.sampleIds[var26] != 0) {
               if (0 == var20Lifetime5) {
                 var25 = var13[var53[var21Lifetime3]];
                 if (var57.length > var21Lifetime3) {
@@ -416,7 +416,7 @@ final class sd extends IntrusiveNode {
                 }
               }
               var20Lifetime5--;
-              this.field_h[var26] = (cja) (var25);
+              this.envelopes[var26] = (MidiEnvelope) (var25);
             }
           }
           var21Lifetime4 = 0;
@@ -429,24 +429,24 @@ final class sd extends IntrusiveNode {
               } else {
                 var20Lifetime6 = -1;
               }
-              if (this.field_k[var27] > 0) {
+              if (this.sampleIds[var27] > 0) {
                 var26Lifetime1 = var38.readUnsignedByte((byte) -106) + 1;
               }
             }
-            this.field_f[var27] = (byte)var26Lifetime1;
+            this.keyVolumes[var27] = (byte)var26Lifetime1;
             var20Lifetime6--;
           }
-          this.field_i = var38.readUnsignedByte((byte) -105) + 1;
+          this.volume = var38.readUnsignedByte((byte) -105) + 1;
           for (var27Lifetime1 = 0; var12 > var27Lifetime1; var27Lifetime1++) {
             var45 = var13[var27Lifetime1];
-            if (var45.field_h != null) {
-              for (var29 = 1; var45.field_h.length > var29; var29 += 2) {
-                var45.field_h[var29] = var38.readByte((byte) -114);
+            if (var45.amplitudeEnvelope != null) {
+              for (var29 = 1; var45.amplitudeEnvelope.length > var29; var29 += 2) {
+                var45.amplitudeEnvelope[var29] = var38.readByte((byte) -114);
               }
             }
-            if (var45.field_a != null) {
-              for (var29Lifetime5 = 3; var29Lifetime5 < -2 + var45.field_a.length; var29Lifetime5 += 2) {
-                var45.field_a[var29Lifetime5] = var38.readByte((byte) -114);
+            if (var45.releaseEnvelope != null) {
+              for (var29Lifetime5 = 3; var29Lifetime5 < -2 + var45.releaseEnvelope.length; var29Lifetime5 += 2) {
+                var45.releaseEnvelope[var29Lifetime5] = var38.readByte((byte) -114);
               }
             }
           }
@@ -463,21 +463,21 @@ final class sd extends IntrusiveNode {
           for (var27Lifetime4 = 0; var12 > var27Lifetime4; var27Lifetime4++) {
             var48 = var13[var27Lifetime4];
             var28 = var48;
-            if (null != var48.field_a) {
+            if (null != var48.releaseEnvelope) {
               var19Lifetime3 = 0;
-              for (var29Lifetime1 = 2; var29Lifetime1 < var48.field_a.length; var29Lifetime1 += 2) {
+              for (var29Lifetime1 = 2; var29Lifetime1 < var48.releaseEnvelope.length; var29Lifetime1 += 2) {
                 var19Lifetime3 = var19Lifetime3 - (-1 - var38.readUnsignedByte((byte) -121));
-                var48.field_a[var29Lifetime1] = (byte)var19Lifetime3;
+                var48.releaseEnvelope[var29Lifetime1] = (byte)var19Lifetime3;
               }
             }
           }
           for (var27Lifetime5 = 0; var27Lifetime5 < var12; var27Lifetime5++) {
             var49 = var13[var27Lifetime5];
-            if (var49.field_h != null) {
+            if (var49.amplitudeEnvelope != null) {
               var19Lifetime4 = 0;
-              for (var29Lifetime2 = 2; var29Lifetime2 < var49.field_h.length; var29Lifetime2 += 2) {
+              for (var29Lifetime2 = 2; var29Lifetime2 < var49.amplitudeEnvelope.length; var29Lifetime2 += 2) {
                 var19Lifetime4 = var38.readUnsignedByte((byte) -114) + (var19Lifetime4 + 1);
-                var49.field_h[var29Lifetime2] = (byte)var19Lifetime4;
+                var49.amplitudeEnvelope[var29Lifetime2] = (byte)var19Lifetime4;
               }
             }
           }
@@ -491,7 +491,7 @@ final class sd extends IntrusiveNode {
             var27Lifetime6Lifetime1 = var58[0];
             var28_int = var58[1];
             for (var29Lifetime3 = 0; var27Lifetime6Lifetime1 > var29Lifetime3; var29Lifetime3++) {
-              this.field_f[var29Lifetime3] = (byte)(32 + var28_int * this.field_f[var29Lifetime3] >> 6);
+              this.keyVolumes[var29Lifetime3] = (byte)(32 + var28_int * this.keyVolumes[var29Lifetime3] >> 6);
             }
             var29Lifetime3Lifetime1 = 2;
             while (var58.length > var29Lifetime3Lifetime1) {
@@ -501,14 +501,14 @@ final class sd extends IntrusiveNode {
               for (var33 = var27Lifetime6Lifetime1; var30 > var33; var33++) {
                 var34 = SetBombletSprayRandomness.a(var32, var30 - var27Lifetime6Lifetime1, false);
                 var32 = var32 + (-var28_int + var31);
-                this.field_f[var33] = (byte)(32 + this.field_f[var33] * var34 >> 6);
+                this.keyVolumes[var33] = (byte)(32 + this.keyVolumes[var33] * var34 >> 6);
               }
               var29Lifetime3Lifetime1 += 2;
               var27Lifetime6Lifetime1 = var30;
               var28_int = var31;
             }
             for (var30Lifetime2 = var27Lifetime6Lifetime1; var30Lifetime2 < 128; var30Lifetime2++) {
-              this.field_f[var30Lifetime2] = (byte)(var28_int * this.field_f[var30Lifetime2] + 32 >> 6);
+              this.keyVolumes[var30Lifetime2] = (byte)(var28_int * this.keyVolumes[var30Lifetime2] + 32 >> 6);
             }
             var15 = null;
           }
@@ -522,14 +522,14 @@ final class sd extends IntrusiveNode {
             var27Lifetime7Lifetime1 = var59[0];
             var28_intLifetime1 = var59[1] << 1;
             for (var29Lifetime4 = 0; var27Lifetime7Lifetime1 > var29Lifetime4; var29Lifetime4++) {
-              var30Lifetime1 = (255 & this.field_g[var29Lifetime4]) + var28_intLifetime1;
+              var30Lifetime1 = (255 & this.keyPans[var29Lifetime4]) + var28_intLifetime1;
               if (0 > var30Lifetime1) {
                 var30Lifetime1 = 0;
               }
               if (var30Lifetime1 > 128) {
                 var30Lifetime1 = 128;
               }
-              this.field_g[var29Lifetime4] = (byte)var30Lifetime1;
+              this.keyPans[var29Lifetime4] = (byte)var30Lifetime1;
             }
             var29Lifetime4Lifetime1 = 2;
             while (var29Lifetime4Lifetime1 < var59.length) {
@@ -540,14 +540,14 @@ final class sd extends IntrusiveNode {
               var33Lifetime1 = var37;
               while (var37 < var30Lifetime1Lifetime1) {
                 var34Lifetime1 = SetBombletSprayRandomness.a(var32Lifetime1, -var27Lifetime7Lifetime1 + var30Lifetime1Lifetime1, false);
-                var35 = var34Lifetime1 + (this.field_g[var37] & 255);
+                var35 = var34Lifetime1 + (this.keyPans[var37] & 255);
                 if (var35 < 0) {
                   var35 = 0;
                 }
                 if (var35 > 128) {
                   var35 = 128;
                 }
-                this.field_g[var37] = (byte)var35;
+                this.keyPans[var37] = (byte)var35;
                 var32Lifetime1 = var32Lifetime1 + (-var28_intLifetime1 + var31Lifetime1);
                 var37++;
               }
@@ -557,45 +557,45 @@ final class sd extends IntrusiveNode {
             }
             var16 = null;
             for (var30Lifetime1Lifetime2 = var27Lifetime7Lifetime1; var30Lifetime1Lifetime2 < 128; var30Lifetime1Lifetime2++) {
-              var31Lifetime1Lifetime1 = (255 & this.field_g[var30Lifetime1Lifetime2]) + var28_intLifetime1;
+              var31Lifetime1Lifetime1 = (255 & this.keyPans[var30Lifetime1Lifetime2]) + var28_intLifetime1;
               if (0 > var31Lifetime1Lifetime1) {
                 var31Lifetime1Lifetime1 = 0;
               }
               if (var31Lifetime1Lifetime1 > 128) {
                 var31Lifetime1Lifetime1 = 128;
               }
-              this.field_g[var30Lifetime1Lifetime2] = (byte)var31Lifetime1Lifetime1;
+              this.keyPans[var30Lifetime1Lifetime2] = (byte)var31Lifetime1Lifetime1;
             }
           }
           for (var27Lifetime8 = 0; var12 > var27Lifetime8; var27Lifetime8++) {
-            var13[var27Lifetime8].field_b = var38.readUnsignedByte((byte) -115);
+            var13[var27Lifetime8].decayRate = var38.readUnsignedByte((byte) -115);
           }
           for (var27Lifetime9 = 0; var27Lifetime9 < var12; var27Lifetime9++) {
             var50 = var13[var27Lifetime9];
             var28Lifetime1 = var50;
-            if (var50.field_h != null) {
-              var50.field_d = var38.readUnsignedByte((byte) -91);
+            if (var50.amplitudeEnvelope != null) {
+              var50.envelopePitchScale = var38.readUnsignedByte((byte) -91);
             }
-            if (null != var50.field_a) {
-              var28Lifetime1.field_g = var38.readUnsignedByte((byte) -113);
+            if (null != var50.releaseEnvelope) {
+              var28Lifetime1.releasePitchScale = var38.readUnsignedByte((byte) -113);
             }
-            if (0 < var28Lifetime1.field_b) {
-              var28Lifetime1.field_c = var38.readUnsignedByte((byte) -89);
+            if (0 < var28Lifetime1.decayRate) {
+              var28Lifetime1.decayPitchScale = var38.readUnsignedByte((byte) -89);
             }
           }
           for (var27Lifetime10 = 0; var27Lifetime10 < var12; var27Lifetime10++) {
-            var13[var27Lifetime10].field_f = var38.readUnsignedByte((byte) -125);
+            var13[var27Lifetime10].vibratoSpeed = var38.readUnsignedByte((byte) -125);
           }
           for (var27Lifetime11 = 0; var12 > var27Lifetime11; var27Lifetime11++) {
             var51 = var13[var27Lifetime11];
-            if (var51.field_f > 0) {
-              var51.field_i = var38.readUnsignedByte((byte) -112);
+            if (var51.vibratoSpeed > 0) {
+              var51.vibratoDepth = var38.readUnsignedByte((byte) -112);
             }
           }
           for (var27Lifetime12 = 0; var12 > var27Lifetime12; var27Lifetime12++) {
             var52 = var13[var27Lifetime12];
-            if (var52.field_i > 0) {
-              var52.field_e = var38.readUnsignedByte((byte) -126);
+            if (var52.vibratoDepth > 0) {
+              var52.vibratoDelay = var38.readUnsignedByte((byte) -126);
             }
           }
           return;

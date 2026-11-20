@@ -149,7 +149,7 @@ final class soa extends llb {
               SetAutozoomSpeedDivide.field_p.field_R = nva.field_D;
               if (ncb.field_a != null) {
                 if (null == tib.field_i) {
-                  mia.field_a = new boolean[ocb.field_l];
+                  AudioPump.field_a = new boolean[ocb.field_l];
                   tib.field_i = new byte[ocb.field_l];
                 }
                 GetMissionVotes.field_p = false;
@@ -157,7 +157,7 @@ final class soa extends llb {
                 var13 = 0;
                 var9_intLifetime1 = var13;
                 while (ocb.field_l > var13) {
-                  mia.field_a[var13] = false;
+                  AudioPump.field_a[var13] = false;
                   var13++;
                 }
                 MissionBuilder.a(ocb.field_l, -1, SetThrusterParticleSpeedDownshift.field_o, -1, 115, true, 0, -1);
@@ -178,7 +178,7 @@ final class soa extends llb {
                     var9 = var11Lifetime1;
                   }
                   for (var10Lifetime1 = 0; ocb.field_l > var10Lifetime1; var10Lifetime1++) {
-                    if (mia.field_a[var10Lifetime1]) {
+                    if (AudioPump.field_a[var10Lifetime1]) {
                       var11_ref = "<col=A00000>" + ClientException.field_c[var10Lifetime1] + "</col>";
                       var9 = var11_ref;
                       var9 = var11_ref;

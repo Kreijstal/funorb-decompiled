@@ -1,39 +1,39 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class fga extends f {
-    private int field_p;
-    private int field_s;
-    private int field_h;
-    private int field_j;
-    private int field_n;
-    private int field_m;
-    private int field_i;
-    private int field_t;
-    private boolean field_o;
-    private int field_v;
-    private int field_l;
-    private int field_q;
-    private int field_u;
-    private int field_r;
-    private int field_k;
+final class PcmSampleStream extends PcmStream {
+    private int rampSamples;
+    private int loopEnd;
+    private int leftGainStep;
+    private int step;
+    private int loopStart;
+    private int gainStep;
+    private int position;
+    private int rightGainStep;
+    private boolean pingPongLoop;
+    private int rightGain;
+    private int leftGain;
+    private int targetGain;
+    private int gain;
+    private int loopCount;
+    private int pan;
 
-    final static fga b(gd param0, int param1, int param2, int param3) {
-        if (param0.field_i == null) {
+    final static PcmSampleStream createRaw(PcmSample param0, int param1, int param2, int param3) {
+        if (param0.samples == null) {
           return null;
         }
-        if (param0.field_i.length != 0) {
-          return new fga(param0, param1, param2, param3);
+        if (param0.samples.length != 0) {
+          return new PcmSampleStream(param0, param1, param2, param3);
         }
         return null;
     }
 
-    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, fga param13, int param14, int param15) {
+    private final static int mixReverseStereoInterpolatedRamped(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, PcmSampleStream param13, int param14, int param15) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
-        param13.field_u = param13.field_u - param13.field_m * param5;
+        param13.gain = param13.gain - param13.gainStep * param5;
         if (param14 != 0) {
           param10 = param5 + (param12 + 256 - param4 + param14) / param14;
         }
@@ -79,153 +79,153 @@ final class fga extends f {
           param4 = param4 + param14;
         }
         param5 = param5 >> 1;
-        param13.field_u = param13.field_u + param13.field_m * param5;
-        param13.field_l = param6;
-        param13.field_v = param7;
-        param13.field_i = param4;
+        param13.gain = param13.gain + param13.gainStep * param5;
+        param13.leftGain = param6;
+        param13.rightGain = param7;
+        param13.position = param4;
         return param5;
     }
 
-    final synchronized int h() {
-        return this.field_k < 0 ? -1 : this.field_k;
+    final synchronized int getPan() {
+        return this.pan < 0 ? -1 : this.pan;
     }
 
-    final synchronized void d(int param0) {
-        this.field_r = param0;
+    final synchronized void setLoopCount(int param0) {
+        this.loopCount = param0;
     }
 
-    final synchronized void c(int param0) {
-        int var2 = ((gd) (this.field_g)).field_i.length << 8;
+    final synchronized void setPosition(int param0) {
+        int var2 = ((PcmSample) (this.sound)).samples.length << 8;
         if (param0 < -1) {
           param0 = -1;
         }
         if (param0 > var2) {
           param0 = var2;
         }
-        this.field_i = param0;
+        this.position = param0;
     }
 
-    private final static int b(int param0, int param1) {
+    private final static int calculateLeftGain(int param0, int param1) {
         return param1 < 0 ? param0 : (int)((double)param0 * Math.sqrt((double)(16384 - param1) * 0.0001220703125) + 0.5);
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
-        gd var2;
+        PcmSample var2;
         int var3;
         int var4;
         int var5;
         int var6;
         int var7;
-        if (this.field_p > 0) {
-          if (param0 < this.field_p) {
-            this.field_u = this.field_u + this.field_m * param0;
-            this.field_l = this.field_l + this.field_h * param0;
-            this.field_v = this.field_v + this.field_t * param0;
-            this.field_p = this.field_p - param0;
+        if (this.rampSamples > 0) {
+          if (param0 < this.rampSamples) {
+            this.gain = this.gain + this.gainStep * param0;
+            this.leftGain = this.leftGain + this.leftGainStep * param0;
+            this.rightGain = this.rightGain + this.rightGainStep * param0;
+            this.rampSamples = this.rampSamples - param0;
           } else {
-            if (this.field_q == -2147483648) {
-              this.field_q = 0;
-              this.field_v = 0;
-              this.field_l = 0;
-              this.field_u = 0;
+            if (this.targetGain == -2147483648) {
+              this.targetGain = 0;
+              this.rightGain = 0;
+              this.leftGain = 0;
+              this.gain = 0;
               this.unlink(-3846);
-              param0 = this.field_p;
+              param0 = this.rampSamples;
             }
-            this.field_p = 0;
-            this.e();
+            this.rampSamples = 0;
+            this.updateGains();
           }
         }
-        var2 = (gd) (this.field_g);
-        var3 = this.field_n << 8;
-        var4 = this.field_s << 8;
-        var5 = var2.field_i.length << 8;
+        var2 = (PcmSample) (this.sound);
+        var3 = this.loopStart << 8;
+        var4 = this.loopEnd << 8;
+        var5 = var2.samples.length << 8;
         var6 = var4 - var3;
         if (var6 <= 0) {
-          this.field_r = 0;
+          this.loopCount = 0;
         }
-        if (this.field_i < 0) {
-          if (this.field_j <= 0) {
-            this.l();
+        if (this.position < 0) {
+          if (this.step <= 0) {
+            this.cancelRamp();
             this.unlink(-3846);
             return;
           }
-          this.field_i = 0;
+          this.position = 0;
         }
-        if (this.field_i >= var5) {
-          if (this.field_j >= 0) {
-            this.l();
+        if (this.position >= var5) {
+          if (this.step >= 0) {
+            this.cancelRamp();
             this.unlink(-3846);
             return;
           }
-          this.field_i = var5 - 1;
+          this.position = var5 - 1;
         }
-        this.field_i = this.field_i + this.field_j * param0;
-        if (this.field_r < 0) {
-          if (!this.field_o) {
-            if (this.field_j >= 0) {
-              if (this.field_i < var4) {
+        this.position = this.position + this.step * param0;
+        if (this.loopCount < 0) {
+          if (!this.pingPongLoop) {
+            if (this.step >= 0) {
+              if (this.position < var4) {
                 return;
               }
-              this.field_i = var3 + (this.field_i - var3) % var6;
+              this.position = var3 + (this.position - var3) % var6;
               return;
             }
-            if (this.field_i >= var3) {
+            if (this.position >= var3) {
               return;
             }
-            this.field_i = var4 - 1 - (var4 - 1 - this.field_i) % var6;
+            this.position = var4 - 1 - (var4 - 1 - this.position) % var6;
             return;
           }
-          if (this.field_j < 0) {
-            if (this.field_i >= var3) {
+          if (this.step < 0) {
+            if (this.position >= var3) {
               return;
             }
-            this.field_i = var3 + var3 - 1 - this.field_i;
-            this.field_j = -this.field_j;
+            this.position = var3 + var3 - 1 - this.position;
+            this.step = -this.step;
           }
-          while (this.field_i >= var4) {
-            this.field_i = var4 + var4 - 1 - this.field_i;
-            this.field_j = -this.field_j;
-            if (this.field_i >= var3) {
+          while (this.position >= var4) {
+            this.position = var4 + var4 - 1 - this.position;
+            this.step = -this.step;
+            if (this.position >= var3) {
               return;
             }
-            this.field_i = var3 + var3 - 1 - this.field_i;
-            this.field_j = -this.field_j;
+            this.position = var3 + var3 - 1 - this.position;
+            this.step = -this.step;
           }
           return;
         }
         boolean decompiledFrameRemainder0 = true;
-        if (this.field_r > 0) {
-          if (!this.field_o) {
-            if (this.field_j >= 0) {
-              if (this.field_i < var4) {
+        if (this.loopCount > 0) {
+          if (!this.pingPongLoop) {
+            if (this.step >= 0) {
+              if (this.position < var4) {
                 return;
               }
-              var7 = (this.field_i - var3) / var6;
-              if (var7 >= this.field_r) {
-                this.field_i = this.field_i - var6 * this.field_r;
-                this.field_r = 0;
+              var7 = (this.position - var3) / var6;
+              if (var7 >= this.loopCount) {
+                this.position = this.position - var6 * this.loopCount;
+                this.loopCount = 0;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.field_i = this.field_i - var6 * var7;
-                this.field_r = this.field_r - var7;
+                this.position = this.position - var6 * var7;
+                this.loopCount = this.loopCount - var7;
               }
             } else {
-              if (this.field_i >= var3) {
+              if (this.position >= var3) {
                 return;
               }
-              var7 = (var4 - 1 - this.field_i) / var6;
-              if (var7 >= this.field_r) {
-                this.field_i = this.field_i + var6 * this.field_r;
-                this.field_r = 0;
+              var7 = (var4 - 1 - this.position) / var6;
+              if (var7 >= this.loopCount) {
+                this.position = this.position + var6 * this.loopCount;
+                this.loopCount = 0;
                 decompiledFrameRemainder0 = false;
               }
               else {
-                this.field_i = this.field_i + var6 * var7;
-                this.field_r = this.field_r - var7;
+                this.position = this.position + var6 * var7;
+                this.loopCount = this.loopCount - var7;
               }
             }
             if (decompiledFrameRemainder0) {
@@ -233,75 +233,75 @@ final class fga extends f {
             }
           }
           if (decompiledFrameRemainder0) {
-            if (this.field_j < 0) {
-              if (this.field_i >= var3) {
+            if (this.step < 0) {
+              if (this.position >= var3) {
                 return;
               }
-              this.field_i = var3 + var3 - 1 - this.field_i;
-              this.field_j = -this.field_j;
-              fieldTemp$0 = this.field_r - 1;
-              this.field_r = this.field_r - 1;
+              this.position = var3 + var3 - 1 - this.position;
+              this.step = -this.step;
+              fieldTemp$0 = this.loopCount - 1;
+              this.loopCount = this.loopCount - 1;
               decompiledFrameRemainder0 = (fieldTemp$0 != 0);
             }
             if (decompiledFrameRemainder0) {
               do {
-                if (this.field_i < var4) {
+                if (this.position < var4) {
                   return;
                 }
-                this.field_i = var4 + var4 - 1 - this.field_i;
-                this.field_j = -this.field_j;
-                fieldTemp$1 = this.field_r - 1;
-                this.field_r = this.field_r - 1;
+                this.position = var4 + var4 - 1 - this.position;
+                this.step = -this.step;
+                fieldTemp$1 = this.loopCount - 1;
+                this.loopCount = this.loopCount - 1;
                 if (fieldTemp$1 == 0) {
                   break;
                 }
-                if (this.field_i >= var3) {
+                if (this.position >= var3) {
                   return;
                 }
-                this.field_i = var3 + var3 - 1 - this.field_i;
-                this.field_j = -this.field_j;
-                fieldTemp$2 = this.field_r - 1;
-                this.field_r = this.field_r - 1;
+                this.position = var3 + var3 - 1 - this.position;
+                this.step = -this.step;
+                fieldTemp$2 = this.loopCount - 1;
+                this.loopCount = this.loopCount - 1;
               } while (fieldTemp$2 != 0);
             }
           }
         }
-        if (this.field_j >= 0) {
-          if (this.field_i >= var5) {
-            this.field_i = var5;
-            this.l();
+        if (this.step >= 0) {
+          if (this.position >= var5) {
+            this.position = var5;
+            this.cancelRamp();
             this.unlink(-3846);
           }
           return;
         }
-        if (this.field_i >= 0) {
+        if (this.position >= 0) {
           return;
         }
-        this.field_i = -1;
-        this.l();
+        this.position = -1;
+        this.cancelRamp();
         this.unlink(-3846);
     }
 
-    private final void l() {
-        if (this.field_p != 0) {
-          if (this.field_q == -2147483648) {
-            this.field_q = 0;
+    private final void cancelRamp() {
+        if (this.rampSamples != 0) {
+          if (this.targetGain == -2147483648) {
+            this.targetGain = 0;
           }
-          this.field_p = 0;
-          this.e();
+          this.rampSamples = 0;
+          this.updateGains();
           return;
         }
     }
 
-    final f a() {
+    final PcmStream nextSubStream() {
         return null;
     }
 
-    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, fga param11, int param12, int param13) {
+    private final static int mixForwardMonoInterpolatedRamped(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmSampleStream param11, int param12, int param13) {
         int incrementValue$3 = 0;
         int incrementValue$2 = 0;
-        param11.field_l = param11.field_l - param11.field_h * param5;
-        param11.field_v = param11.field_v - param11.field_t * param5;
+        param11.leftGain = param11.leftGain - param11.leftGainStep * param5;
+        param11.rightGain = param11.rightGain - param11.rightGainStep * param5;
         if (param12 != 0) {
           param8 = param5 + (param10 - param4 + param12 - 257) / param12;
         }
@@ -334,35 +334,35 @@ final class fga extends f {
           param6 = param6 + param7;
           param4 = param4 + param12;
         }
-        param11.field_l = param11.field_l + param11.field_h * param5;
-        param11.field_v = param11.field_v + param11.field_t * param5;
-        param11.field_u = param6;
-        param11.field_i = param4;
+        param11.leftGain = param11.leftGain + param11.leftGainStep * param5;
+        param11.rightGain = param11.rightGain + param11.rightGainStep * param5;
+        param11.gain = param6;
+        param11.position = param4;
         return param5;
     }
 
-    final synchronized void d(int param0, int param1) {
-        this.a(param0, param1, this.h());
+    final synchronized void rampGain(int param0, int param1) {
+        this.rampTo(param0, param1, this.getPan());
     }
 
-    final synchronized void c(int param0, int param1) {
-        this.field_q = param0;
-        this.field_k = param1;
-        this.field_p = 0;
-        this.e();
+    final synchronized void setGainAndPan(int param0, int param1) {
+        this.targetGain = param0;
+        this.pan = param1;
+        this.rampSamples = 0;
+        this.updateGains();
     }
 
-    final static fga a(gd param0, int param1, int param2, int param3) {
-        if (param0.field_i == null) {
+    final static PcmSampleStream createPanned(PcmSample param0, int param1, int param2, int param3) {
+        if (param0.samples == null) {
           return null;
         }
-        if (param0.field_i.length != 0) {
-          return new fga(param0, (int)((long)param0.field_f * 256L * (long)param1 / (long)(100 * vka.field_s)), param2 << 6, param3 << 6);
+        if (param0.samples.length != 0) {
+          return new PcmSampleStream(param0, (int)((long)param0.sampleRate * 256L * (long)param1 / (long)(100 * AudioOutput.sampleRate)), param2 << 6, param3 << 6);
         }
         return null;
     }
 
-    private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, fga param8) {
+    private final static int mixReverseMonoAligned(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, PcmSampleStream param8) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -411,11 +411,11 @@ final class fga extends f {
           param2--;
           param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
         }
-        param8.field_i = param2 << 8;
+        param8.position = param2 << 8;
         return param3;
     }
 
-    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, fga param10, int param11, int param12) {
+    private final static int mixForwardMonoInterpolated(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmSampleStream param10, int param11, int param12) {
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
         if (param11 != 0) {
@@ -448,15 +448,15 @@ final class fga extends f {
           param3[incrementValue$0] = param3[incrementValue$0] + (((param0 << 8) + (param1 - param0) * (param4 & 255)) * param6 >> 6);
           param4 = param4 + param11;
         }
-        param10.field_i = param4;
+        param10.position = param4;
         return param5;
     }
 
-    private final static int d(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, fga param11, int param12, int param13) {
+    private final static int mixReverseMonoInterpolatedRamped(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmSampleStream param11, int param12, int param13) {
         int incrementValue$3 = 0;
         int incrementValue$2 = 0;
-        param11.field_l = param11.field_l - param11.field_h * param5;
-        param11.field_v = param11.field_v - param11.field_t * param5;
+        param11.leftGain = param11.leftGain - param11.leftGainStep * param5;
+        param11.rightGain = param11.rightGain - param11.rightGainStep * param5;
         if (param12 != 0) {
           param8 = param5 + (param10 + 256 - param4 + param12) / param12;
         }
@@ -489,96 +489,96 @@ final class fga extends f {
           param6 = param6 + param7;
           param4 = param4 + param1;
         }
-        param11.field_l = param11.field_l + param11.field_h * param5;
-        param11.field_v = param11.field_v + param11.field_t * param5;
-        param11.field_u = param6;
-        param11.field_i = param4;
+        param11.leftGain = param11.leftGain + param11.leftGainStep * param5;
+        param11.rightGain = param11.rightGain + param11.rightGainStep * param5;
+        param11.gain = param6;
+        param11.position = param4;
         return param5;
     }
 
-    final int d() {
-        if (this.field_q == 0 &&
-          this.field_p == 0) {
+    final int getActivityWeight() {
+        if (this.targetGain == 0 &&
+          this.rampSamples == 0) {
           return 0;
         }
         return 1;
     }
 
-    private final void e() {
-        this.field_u = this.field_q;
-        this.field_l = fga.b(this.field_q, this.field_k);
-        this.field_v = fga.a(this.field_q, this.field_k);
+    private final void updateGains() {
+        this.gain = this.targetGain;
+        this.leftGain = PcmSampleStream.calculateLeftGain(this.targetGain, this.pan);
+        this.rightGain = PcmSampleStream.calculateRightGain(this.targetGain, this.pan);
     }
 
-    final synchronized void f(int param0) {
+    final synchronized void fadeOut(int param0) {
         int var2 = 0;
         int var2Lifetime1;
         if (param0 == 0) {
-          this.e(0);
+          this.setGain(0);
           this.unlink(-3846);
           return;
         }
-        if (this.field_l != 0) {
-          var2 = -this.field_u;
-          if (this.field_u > var2) {
-            var2 = this.field_u;
+        if (this.leftGain != 0) {
+          var2 = -this.gain;
+          if (this.gain > var2) {
+            var2 = this.gain;
           }
-          if (-this.field_l > var2) {
-            var2 = -this.field_l;
+          if (-this.leftGain > var2) {
+            var2 = -this.leftGain;
           }
-          if (this.field_l > var2) {
-            var2 = this.field_l;
+          if (this.leftGain > var2) {
+            var2 = this.leftGain;
           }
-          if (-this.field_v > var2) {
-            var2 = -this.field_v;
+          if (-this.rightGain > var2) {
+            var2 = -this.rightGain;
           }
-          if (this.field_v > var2) {
-            var2 = this.field_v;
+          if (this.rightGain > var2) {
+            var2 = this.rightGain;
           }
           if (param0 > var2) {
             param0 = var2;
           }
-          this.field_p = param0;
-          this.field_q = -2147483648;
-          this.field_m = -this.field_u / param0;
-          this.field_h = -this.field_l / param0;
-          this.field_t = -this.field_v / param0;
+          this.rampSamples = param0;
+          this.targetGain = -2147483648;
+          this.gainStep = -this.gain / param0;
+          this.leftGainStep = -this.leftGain / param0;
+          this.rightGainStep = -this.rightGain / param0;
           return;
         }
-        if (this.field_v != 0) {
-          var2Lifetime1 = -this.field_u;
-          if (this.field_u > var2Lifetime1) {
-            var2Lifetime1 = this.field_u;
+        if (this.rightGain != 0) {
+          var2Lifetime1 = -this.gain;
+          if (this.gain > var2Lifetime1) {
+            var2Lifetime1 = this.gain;
           }
-          if (-this.field_l > var2Lifetime1) {
-            var2Lifetime1 = -this.field_l;
+          if (-this.leftGain > var2Lifetime1) {
+            var2Lifetime1 = -this.leftGain;
           }
-          if (this.field_l > var2Lifetime1) {
-            var2Lifetime1 = this.field_l;
+          if (this.leftGain > var2Lifetime1) {
+            var2Lifetime1 = this.leftGain;
           }
-          if (-this.field_v > var2Lifetime1) {
-            var2Lifetime1 = -this.field_v;
+          if (-this.rightGain > var2Lifetime1) {
+            var2Lifetime1 = -this.rightGain;
           }
-          if (this.field_v > var2Lifetime1) {
-            var2Lifetime1 = this.field_v;
+          if (this.rightGain > var2Lifetime1) {
+            var2Lifetime1 = this.rightGain;
           }
           if (param0 > var2Lifetime1) {
             param0 = var2Lifetime1;
           }
-          this.field_p = param0;
-          this.field_q = -2147483648;
-          this.field_m = -this.field_u / param0;
-          this.field_h = -this.field_l / param0;
-          this.field_t = -this.field_v / param0;
+          this.rampSamples = param0;
+          this.targetGain = -2147483648;
+          this.gainStep = -this.gain / param0;
+          this.leftGainStep = -this.leftGain / param0;
+          this.rightGainStep = -this.rightGain / param0;
           return;
         }
-        this.field_p = 0;
-        this.field_q = 0;
-        this.field_u = 0;
+        this.rampSamples = 0;
+        this.targetGain = 0;
+        this.gain = 0;
         this.unlink(-3846);
     }
 
-    private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, fga param9) {
+    private final static int mixForwardMonoAlignedRamped(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, PcmSampleStream param9) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -597,8 +597,8 @@ final class fga extends f {
         if (param3 + param8 - param2 > param7) {
           param6 = param7;
         }
-        param9.field_l = param9.field_l + param9.field_h * (param6 - param3);
-        param9.field_v = param9.field_v + param9.field_t * (param6 - param3);
+        param9.leftGain = param9.leftGain + param9.leftGainStep * (param6 - param3);
+        param9.rightGain = param9.rightGain + param9.rightGainStep * (param6 - param3);
         param6 -= 3;
         while (param3 < param6) {
           incrementValue$0 = param3;
@@ -635,12 +635,12 @@ final class fga extends f {
           param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
           param4 = param4 + param5;
         }
-        param9.field_u = param4 >> 2;
-        param9.field_i = param2 << 8;
+        param9.gain = param4 >> 2;
+        param9.position = param2 << 8;
         return param3;
     }
 
-    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, fga param10, int param11, int param12) {
+    private final static int mixReverseMonoInterpolated(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmSampleStream param10, int param11, int param12) {
         int incrementValue$1 = 0;
         int incrementValue$0 = 0;
         if (param11 != 0) {
@@ -673,54 +673,54 @@ final class fga extends f {
           param3[incrementValue$0] = param3[incrementValue$0] + (((param0 << 8) + (param2[param4 >> 8] - param0) * (param4 & 255)) * param6 >> 6);
           param4 = param4 + param1;
         }
-        param10.field_i = param4;
+        param10.position = param4;
         return param5;
     }
 
-    private final int b(int[] param0, int param1, int param2, int param3, int param4) {
+    private final int mixForward(int[] param0, int param1, int param2, int param3, int param4) {
         int var6;
         do {
-          if (this.field_p <= 0) {
-            if (this.field_j == 256 &&
-              (this.field_i & 255) == 0) {
-              if (vka.field_r) {
-                return fga.b(0, ((gd) (this.field_g)).field_i, param0, this.field_i, param1, this.field_l, this.field_v, 0, param3, param2, this);
+          if (this.rampSamples <= 0) {
+            if (this.step == 256 &&
+              (this.position & 255) == 0) {
+              if (AudioOutput.stereo) {
+                return PcmSampleStream.mixForwardStereoAligned(0, ((PcmSample) (this.sound)).samples, param0, this.position, param1, this.leftGain, this.rightGain, 0, param3, param2, this);
               }
-              return fga.b(((gd) (this.field_g)).field_i, param0, this.field_i, param1, this.field_u, 0, param3, param2, this);
+              return PcmSampleStream.mixForwardMonoAligned(((PcmSample) (this.sound)).samples, param0, this.position, param1, this.gain, 0, param3, param2, this);
             }
-            if (vka.field_r) {
-              return fga.c(0, 0, ((gd) (this.field_g)).field_i, param0, this.field_i, param1, this.field_l, this.field_v, 0, param3, param2, this, this.field_j, param4);
+            if (AudioOutput.stereo) {
+              return PcmSampleStream.mixForwardStereoInterpolated(0, 0, ((PcmSample) (this.sound)).samples, param0, this.position, param1, this.leftGain, this.rightGain, 0, param3, param2, this, this.step, param4);
             }
-            return fga.b(0, 0, ((gd) (this.field_g)).field_i, param0, this.field_i, param1, this.field_u, 0, param3, param2, this, this.field_j, param4);
+            return PcmSampleStream.mixForwardMonoInterpolated(0, 0, ((PcmSample) (this.sound)).samples, param0, this.position, param1, this.gain, 0, param3, param2, this, this.step, param4);
           }
-          var6 = param1 + this.field_p;
+          var6 = param1 + this.rampSamples;
           if (var6 > param3) {
             var6 = param3;
           }
-          this.field_p = this.field_p + param1;
-          if (this.field_j == 256 &&
-            (this.field_i & 255) == 0) {
-            if (!vka.field_r) {
-              param1 = fga.b(((gd) (this.field_g)).field_i, param0, this.field_i, param1, this.field_u, this.field_m, 0, var6, param2, this);
+          this.rampSamples = this.rampSamples + param1;
+          if (this.step == 256 &&
+            (this.position & 255) == 0) {
+            if (!AudioOutput.stereo) {
+              param1 = PcmSampleStream.mixForwardMonoAlignedRamped(((PcmSample) (this.sound)).samples, param0, this.position, param1, this.gain, this.gainStep, 0, var6, param2, this);
             } else {
-              param1 = fga.a(0, ((gd) (this.field_g)).field_i, param0, this.field_i, param1, this.field_l, this.field_v, this.field_h, this.field_t, 0, var6, param2, this);
+              param1 = PcmSampleStream.mixForwardStereoAlignedRamped(0, ((PcmSample) (this.sound)).samples, param0, this.position, param1, this.leftGain, this.rightGain, this.leftGainStep, this.rightGainStep, 0, var6, param2, this);
             }
           } else {
-            if (!vka.field_r) {
-              param1 = fga.b(0, 0, ((gd) (this.field_g)).field_i, param0, this.field_i, param1, this.field_u, this.field_m, 0, var6, param2, this, this.field_j, param4);
+            if (!AudioOutput.stereo) {
+              param1 = PcmSampleStream.mixForwardMonoInterpolatedRamped(0, 0, ((PcmSample) (this.sound)).samples, param0, this.position, param1, this.gain, this.gainStep, 0, var6, param2, this, this.step, param4);
             } else {
-              param1 = fga.b(0, 0, ((gd) (this.field_g)).field_i, param0, this.field_i, param1, this.field_l, this.field_v, this.field_h, this.field_t, 0, var6, param2, this, this.field_j, param4);
+              param1 = PcmSampleStream.mixForwardStereoInterpolatedRamped(0, 0, ((PcmSample) (this.sound)).samples, param0, this.position, param1, this.leftGain, this.rightGain, this.leftGainStep, this.rightGainStep, 0, var6, param2, this, this.step, param4);
             }
           }
-          this.field_p = this.field_p - param1;
-          if (this.field_p != 0) {
+          this.rampSamples = this.rampSamples - param1;
+          if (this.rampSamples != 0) {
             return param1;
           }
-        } while (!this.j());
+        } while (!this.finishRamp());
         return param3;
     }
 
-    private final static int a(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, fga param9) {
+    private final static int mixReverseMonoAlignedRamped(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, int param8, PcmSampleStream param9) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -739,8 +739,8 @@ final class fga extends f {
         if (param3 + param2 - (param8 - 1) > param7) {
           param6 = param7;
         }
-        param9.field_l = param9.field_l + param9.field_h * (param6 - param3);
-        param9.field_v = param9.field_v + param9.field_t * (param6 - param3);
+        param9.leftGain = param9.leftGain + param9.leftGainStep * (param6 - param3);
+        param9.rightGain = param9.rightGain + param9.rightGainStep * (param6 - param3);
         param6 -= 3;
         while (param3 < param6) {
           incrementValue$0 = param3;
@@ -777,12 +777,12 @@ final class fga extends f {
           param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
           param4 = param4 + param5;
         }
-        param9.field_u = param4 >> 2;
-        param9.field_i = param2 << 8;
+        param9.gain = param4 >> 2;
+        param9.position = param2 << 8;
         return param3;
     }
 
-    private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, fga param12) {
+    private final static int mixForwardStereoAlignedRamped(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, PcmSampleStream param12) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -803,7 +803,7 @@ final class fga extends f {
         if (param4 + param11 - param3 > param10) {
           param9 = param10;
         }
-        param12.field_u = param12.field_u + param12.field_m * (param9 - param4);
+        param12.gain = param12.gain + param12.gainStep * (param9 - param4);
         param4 = param4 << 1;
         param9 = param9 << 1;
         param9 -= 6;
@@ -857,17 +857,17 @@ final class fga extends f {
           param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
           param6 = param6 + param8;
         }
-        param12.field_l = param5 >> 2;
-        param12.field_v = param6 >> 2;
-        param12.field_i = param3 << 8;
+        param12.leftGain = param5 >> 2;
+        param12.rightGain = param6 >> 2;
+        param12.position = param3 << 8;
         return param4 >> 1;
     }
 
-    final synchronized boolean i() {
-        return this.field_i < 0 || this.field_i >= ((gd) (this.field_g)).field_i.length << 8;
+    final synchronized boolean isOutOfBounds() {
+        return this.position < 0 || this.position >= ((PcmSample) (this.sound)).samples.length << 8;
     }
 
-    private final static int c(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, fga param11, int param12, int param13) {
+    private final static int mixForwardStereoInterpolated(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmSampleStream param11, int param12, int param13) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
@@ -913,11 +913,11 @@ final class fga extends f {
           param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
           param4 = param4 + param12;
         }
-        param11.field_i = param4;
+        param11.position = param4;
         return param5 >> 1;
     }
 
-    private final static int a(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, fga param10) {
+    private final static int mixReverseStereoAligned(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmSampleStream param10) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -979,15 +979,15 @@ final class fga extends f {
           param4++;
           param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
         }
-        param10.field_i = param3 << 8;
+        param10.position = param3 << 8;
         return param4 >> 1;
     }
 
-    final synchronized int f() {
-        return this.field_q == -2147483648 ? 0 : this.field_q;
+    final synchronized int getTargetGain() {
+        return this.targetGain == -2147483648 ? 0 : this.targetGain;
     }
 
-    private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, fga param10) {
+    private final static int mixForwardStereoAligned(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, PcmSampleStream param10) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -1049,17 +1049,17 @@ final class fga extends f {
           param4++;
           param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
         }
-        param10.field_i = param3 << 8;
+        param10.position = param3 << 8;
         return param4 >> 1;
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mix(int[] param0, int param1, int param2) {
         int fieldTemp$0 = 0;
         int fieldTemp$1 = 0;
         int fieldTemp$2 = 0;
         int discarded$4 = 0;
         int discarded$3 = 0;
-        gd var4;
+        PcmSample var4;
         int var5;
         int var6;
         int var7;
@@ -1067,361 +1067,361 @@ final class fga extends f {
         int var9;
         int var10;
         int var10Lifetime1;
-        if (this.field_q == 0 &&
-          this.field_p == 0) {
-          this.a(param2);
+        if (this.targetGain == 0 &&
+          this.rampSamples == 0) {
+          this.skip(param2);
           return;
         }
-        var4 = (gd) (this.field_g);
-        var5 = this.field_n << 8;
-        var6 = this.field_s << 8;
-        var7 = var4.field_i.length << 8;
+        var4 = (PcmSample) (this.sound);
+        var5 = this.loopStart << 8;
+        var6 = this.loopEnd << 8;
+        var7 = var4.samples.length << 8;
         var8 = var6 - var5;
         if (var8 <= 0) {
-          this.field_r = 0;
+          this.loopCount = 0;
         }
         var9 = param1;
         param2 = param2 + param1;
-        if (this.field_i < 0) {
-          if (this.field_j <= 0) {
-            this.l();
+        if (this.position < 0) {
+          if (this.step <= 0) {
+            this.cancelRamp();
             this.unlink(-3846);
             return;
           }
-          this.field_i = 0;
+          this.position = 0;
         }
-        if (this.field_i >= var7) {
-          if (this.field_j >= 0) {
-            this.l();
+        if (this.position >= var7) {
+          if (this.step >= 0) {
+            this.cancelRamp();
             this.unlink(-3846);
             return;
           }
-          this.field_i = var7 - 1;
+          this.position = var7 - 1;
         }
-        if (this.field_r < 0) {
-          if (!this.field_o) {
-            if (this.field_j >= 0) {
+        if (this.loopCount < 0) {
+          if (!this.pingPongLoop) {
+            if (this.step >= 0) {
               while (true) {
-                var9 = this.b(param0, var9, var6, param2, (int) var4.field_i[this.field_n]);
-                if (this.field_i < var6) {
+                var9 = this.mixForward(param0, var9, var6, param2, (int) var4.samples[this.loopStart]);
+                if (this.position < var6) {
                   return;
                 }
-                this.field_i = var5 + (this.field_i - var5) % var8;
+                this.position = var5 + (this.position - var5) % var8;
               }
             }
             while (true) {
-              var9 = this.a(param0, var9, var5, param2, (int) var4.field_i[this.field_s - 1]);
-              if (this.field_i >= var5) {
+              var9 = this.mixReverse(param0, var9, var5, param2, (int) var4.samples[this.loopEnd - 1]);
+              if (this.position >= var5) {
                 return;
               }
-              this.field_i = var6 - 1 - (var6 - 1 - this.field_i) % var8;
+              this.position = var6 - 1 - (var6 - 1 - this.position) % var8;
             }
           }
-          if (this.field_j < 0) {
-            var9 = this.a(param0, var9, var5, param2, (int) var4.field_i[this.field_n]);
-            if (this.field_i >= var5) {
+          if (this.step < 0) {
+            var9 = this.mixReverse(param0, var9, var5, param2, (int) var4.samples[this.loopStart]);
+            if (this.position >= var5) {
               return;
             }
-            this.field_i = var5 + var5 - 1 - this.field_i;
-            this.field_j = -this.field_j;
+            this.position = var5 + var5 - 1 - this.position;
+            this.step = -this.step;
           }
           while (true) {
-            var9 = this.b(param0, var9, var6, param2, (int) var4.field_i[this.field_s - 1]);
-            if (this.field_i < var6) {
+            var9 = this.mixForward(param0, var9, var6, param2, (int) var4.samples[this.loopEnd - 1]);
+            if (this.position < var6) {
               return;
             }
-            this.field_i = var6 + var6 - 1 - this.field_i;
-            this.field_j = -this.field_j;
-            var9 = this.a(param0, var9, var5, param2, (int) var4.field_i[this.field_n]);
-            if (this.field_i >= var5) {
+            this.position = var6 + var6 - 1 - this.position;
+            this.step = -this.step;
+            var9 = this.mixReverse(param0, var9, var5, param2, (int) var4.samples[this.loopStart]);
+            if (this.position >= var5) {
               return;
             }
-            this.field_i = var5 + var5 - 1 - this.field_i;
-            this.field_j = -this.field_j;
+            this.position = var5 + var5 - 1 - this.position;
+            this.step = -this.step;
           }
         }
         boolean decompiledFrameRemainder0 = true;
-        if (this.field_r > 0) {
-          if (!this.field_o) {
-            if (this.field_j < 0) {
+        if (this.loopCount > 0) {
+          if (!this.pingPongLoop) {
+            if (this.step < 0) {
               while (true) {
-                var9 = this.a(param0, var9, var5, param2, (int) var4.field_i[this.field_s - 1]);
-                if (this.field_i >= var5) {
+                var9 = this.mixReverse(param0, var9, var5, param2, (int) var4.samples[this.loopEnd - 1]);
+                if (this.position >= var5) {
                   return;
                 }
-                var10 = (var6 - 1 - this.field_i) / var8;
-                if (var10 < this.field_r) {
-                  this.field_i = this.field_i + var8 * var10;
-                  this.field_r = this.field_r - var10;
+                var10 = (var6 - 1 - this.position) / var8;
+                if (var10 < this.loopCount) {
+                  this.position = this.position + var8 * var10;
+                  this.loopCount = this.loopCount - var10;
                   continue;
                 }
                 break;
               }
-              this.field_i = this.field_i + var8 * this.field_r;
-              this.field_r = 0;
+              this.position = this.position + var8 * this.loopCount;
+              this.loopCount = 0;
             } else {
               while (true) {
-                var9 = this.b(param0, var9, var6, param2, (int) var4.field_i[this.field_n]);
-                if (this.field_i < var6) {
+                var9 = this.mixForward(param0, var9, var6, param2, (int) var4.samples[this.loopStart]);
+                if (this.position < var6) {
                   return;
                 }
-                var10Lifetime1 = (this.field_i - var5) / var8;
-                if (var10Lifetime1 < this.field_r) {
-                  this.field_i = this.field_i - var8 * var10Lifetime1;
-                  this.field_r = this.field_r - var10Lifetime1;
+                var10Lifetime1 = (this.position - var5) / var8;
+                if (var10Lifetime1 < this.loopCount) {
+                  this.position = this.position - var8 * var10Lifetime1;
+                  this.loopCount = this.loopCount - var10Lifetime1;
                   continue;
                 }
                 break;
               }
-              this.field_i = this.field_i - var8 * this.field_r;
-              this.field_r = 0;
+              this.position = this.position - var8 * this.loopCount;
+              this.loopCount = 0;
             }
             decompiledFrameRemainder0 = false;
           }
           else {
-            if (this.field_j < 0) {
-              var9 = this.a(param0, var9, var5, param2, (int) var4.field_i[this.field_n]);
-              if (this.field_i >= var5) {
+            if (this.step < 0) {
+              var9 = this.mixReverse(param0, var9, var5, param2, (int) var4.samples[this.loopStart]);
+              if (this.position >= var5) {
                 return;
               }
-              this.field_i = var5 + var5 - 1 - this.field_i;
-              this.field_j = -this.field_j;
-              fieldTemp$0 = this.field_r - 1;
-              this.field_r = this.field_r - 1;
+              this.position = var5 + var5 - 1 - this.position;
+              this.step = -this.step;
+              fieldTemp$0 = this.loopCount - 1;
+              this.loopCount = this.loopCount - 1;
               decompiledFrameRemainder0 = (fieldTemp$0 != 0);
             }
             if (decompiledFrameRemainder0) {
               do {
-                var9 = this.b(param0, var9, var6, param2, (int) var4.field_i[this.field_s - 1]);
-                if (this.field_i < var6) {
+                var9 = this.mixForward(param0, var9, var6, param2, (int) var4.samples[this.loopEnd - 1]);
+                if (this.position < var6) {
                   return;
                 }
-                this.field_i = var6 + var6 - 1 - this.field_i;
-                this.field_j = -this.field_j;
-                fieldTemp$1 = this.field_r - 1;
-                this.field_r = this.field_r - 1;
+                this.position = var6 + var6 - 1 - this.position;
+                this.step = -this.step;
+                fieldTemp$1 = this.loopCount - 1;
+                this.loopCount = this.loopCount - 1;
                 if (fieldTemp$1 == 0) {
                   break;
                 }
-                var9 = this.a(param0, var9, var5, param2, (int) var4.field_i[this.field_n]);
-                if (this.field_i >= var5) {
+                var9 = this.mixReverse(param0, var9, var5, param2, (int) var4.samples[this.loopStart]);
+                if (this.position >= var5) {
                   return;
                 }
-                this.field_i = var5 + var5 - 1 - this.field_i;
-                this.field_j = -this.field_j;
-                fieldTemp$2 = this.field_r - 1;
-                this.field_r = this.field_r - 1;
+                this.position = var5 + var5 - 1 - this.position;
+                this.step = -this.step;
+                fieldTemp$2 = this.loopCount - 1;
+                this.loopCount = this.loopCount - 1;
               } while (fieldTemp$2 != 0);
             }
           }
         }
-        if (this.field_j >= 0) {
-          discarded$4 = this.b(param0, var9, var7, param2, 0);
-          if (this.field_i >= var7) {
-            this.field_i = var7;
-            this.l();
+        if (this.step >= 0) {
+          discarded$4 = this.mixForward(param0, var9, var7, param2, 0);
+          if (this.position >= var7) {
+            this.position = var7;
+            this.cancelRamp();
             this.unlink(-3846);
           }
           return;
         }
-        discarded$3 = this.a(param0, var9, 0, param2, 0);
-        if (this.field_i >= 0) {
+        discarded$3 = this.mixReverse(param0, var9, 0, param2, 0);
+        if (this.position >= 0) {
           return;
         }
-        this.field_i = -1;
-        this.l();
+        this.position = -1;
+        this.cancelRamp();
         this.unlink(-3846);
         return;
     }
 
-    final int b() {
-        int var1 = this.field_u * 3 >> 6;
+    final int getPriority() {
+        int var1 = this.gain * 3 >> 6;
         var1 = (var1 ^ var1 >> 31) + (var1 >>> 31);
-        if (this.field_r == 0) {
-          var1 = var1 - var1 * this.field_i / (((gd) (this.field_g)).field_i.length << 8);
+        if (this.loopCount == 0) {
+          var1 = var1 - var1 * this.position / (((PcmSample) (this.sound)).samples.length << 8);
         } else {
-          if (this.field_r >= 0) {
-            var1 = var1 - var1 * this.field_n / ((gd) (this.field_g)).field_i.length;
+          if (this.loopCount >= 0) {
+            var1 = var1 - var1 * this.loopStart / ((PcmSample) (this.sound)).samples.length;
           }
         }
         return var1 > 255 ? 255 : var1;
     }
 
-    private final boolean j() {
+    private final boolean finishRamp() {
         int var1;
         int var2;
         int var3;
-        var1 = this.field_q;
+        var1 = this.targetGain;
         if (var1 != -2147483648) {
-          var2 = fga.b(var1, this.field_k);
-          var3 = fga.a(var1, this.field_k);
+          var2 = PcmSampleStream.calculateLeftGain(var1, this.pan);
+          var3 = PcmSampleStream.calculateRightGain(var1, this.pan);
         } else {
           var3 = 0;
           var2 = 0;
           var1 = 0;
         }
-        if (this.field_u == var1 &&
-          this.field_l == var2 &&
-          this.field_v == var3) {
-          if (this.field_q != -2147483648) {
-            this.e();
+        if (this.gain == var1 &&
+          this.leftGain == var2 &&
+          this.rightGain == var3) {
+          if (this.targetGain != -2147483648) {
+            this.updateGains();
             return false;
           }
-          this.field_q = 0;
-          this.field_v = 0;
-          this.field_l = 0;
-          this.field_u = 0;
+          this.targetGain = 0;
+          this.rightGain = 0;
+          this.leftGain = 0;
+          this.gain = 0;
           this.unlink(-3846);
           return true;
         }
-        if (this.field_u >= var1) {
-          if (this.field_u <= var1) {
-            this.field_m = 0;
+        if (this.gain >= var1) {
+          if (this.gain <= var1) {
+            this.gainStep = 0;
           } else {
-            this.field_m = -1;
-            this.field_p = this.field_u - var1;
+            this.gainStep = -1;
+            this.rampSamples = this.gain - var1;
           }
         } else {
-          this.field_m = 1;
-          this.field_p = var1 - this.field_u;
+          this.gainStep = 1;
+          this.rampSamples = var1 - this.gain;
         }
-        if (this.field_l >= var2) {
-          if (this.field_l <= var2) {
-            this.field_h = 0;
+        if (this.leftGain >= var2) {
+          if (this.leftGain <= var2) {
+            this.leftGainStep = 0;
           } else {
-            this.field_h = -1;
-            if (this.field_p == 0 ||
-              this.field_p > this.field_l - var2) {
-              this.field_p = this.field_l - var2;
+            this.leftGainStep = -1;
+            if (this.rampSamples == 0 ||
+              this.rampSamples > this.leftGain - var2) {
+              this.rampSamples = this.leftGain - var2;
             }
           }
         } else {
-          this.field_h = 1;
-          if (this.field_p == 0 ||
-            this.field_p > var2 - this.field_l) {
-            this.field_p = var2 - this.field_l;
+          this.leftGainStep = 1;
+          if (this.rampSamples == 0 ||
+            this.rampSamples > var2 - this.leftGain) {
+            this.rampSamples = var2 - this.leftGain;
           }
         }
-        if (this.field_v < var3) {
-          this.field_t = 1;
-          if (this.field_p != 0 &&
-            this.field_p <= var3 - this.field_v) {
+        if (this.rightGain < var3) {
+          this.rightGainStep = 1;
+          if (this.rampSamples != 0 &&
+            this.rampSamples <= var3 - this.rightGain) {
             return false;
           }
-          this.field_p = var3 - this.field_v;
+          this.rampSamples = var3 - this.rightGain;
           return false;
         }
-        if (this.field_v <= var3) {
-          this.field_t = 0;
+        if (this.rightGain <= var3) {
+          this.rightGainStep = 0;
         } else {
-          this.field_t = -1;
-          if (this.field_p == 0 ||
-            this.field_p > this.field_v - var3) {
-            this.field_p = this.field_v - var3;
+          this.rightGainStep = -1;
+          if (this.rampSamples == 0 ||
+            this.rampSamples > this.rightGain - var3) {
+            this.rampSamples = this.rightGain - var3;
           }
         }
         return false;
     }
 
-    final static fga a(gd param0, int param1, int param2) {
-        if (param0.field_i == null) {
+    final static PcmSampleStream create(PcmSample param0, int param1, int param2) {
+        if (param0.samples == null) {
           return null;
         }
-        if (param0.field_i.length != 0) {
-          return new fga(param0, (int)((long)param0.field_f * 256L * (long)param1 / (long)(100 * vka.field_s)), param2 << 6);
+        if (param0.samples.length != 0) {
+          return new PcmSampleStream(param0, (int)((long)param0.sampleRate * 256L * (long)param1 / (long)(100 * AudioOutput.sampleRate)), param2 << 6);
         }
         return null;
     }
 
-    final synchronized void a(int param0, int param1, int param2) {
+    final synchronized void rampTo(int param0, int param1, int param2) {
         int var6 = 0;
         int var6Lifetime1;
         if (param0 == 0) {
-          this.c(param1, param2);
+          this.setGainAndPan(param1, param2);
           return;
         }
-        int var4 = fga.b(param1, param2);
-        int var5 = fga.a(param1, param2);
-        if (this.field_l != var4) {
-          var6 = param1 - this.field_u;
-          if (this.field_u - param1 > var6) {
-            var6 = this.field_u - param1;
+        int var4 = PcmSampleStream.calculateLeftGain(param1, param2);
+        int var5 = PcmSampleStream.calculateRightGain(param1, param2);
+        if (this.leftGain != var4) {
+          var6 = param1 - this.gain;
+          if (this.gain - param1 > var6) {
+            var6 = this.gain - param1;
           }
-          if (var4 - this.field_l > var6) {
-            var6 = var4 - this.field_l;
+          if (var4 - this.leftGain > var6) {
+            var6 = var4 - this.leftGain;
           }
-          if (this.field_l - var4 > var6) {
-            var6 = this.field_l - var4;
+          if (this.leftGain - var4 > var6) {
+            var6 = this.leftGain - var4;
           }
-          if (var5 - this.field_v > var6) {
-            var6 = var5 - this.field_v;
+          if (var5 - this.rightGain > var6) {
+            var6 = var5 - this.rightGain;
           }
-          if (this.field_v - var5 > var6) {
-            var6 = this.field_v - var5;
+          if (this.rightGain - var5 > var6) {
+            var6 = this.rightGain - var5;
           }
           if (param0 > var6) {
             param0 = var6;
           }
-          this.field_p = param0;
-          this.field_q = param1;
-          this.field_k = param2;
-          this.field_m = (param1 - this.field_u) / param0;
-          this.field_h = (var4 - this.field_l) / param0;
-          this.field_t = (var5 - this.field_v) / param0;
+          this.rampSamples = param0;
+          this.targetGain = param1;
+          this.pan = param2;
+          this.gainStep = (param1 - this.gain) / param0;
+          this.leftGainStep = (var4 - this.leftGain) / param0;
+          this.rightGainStep = (var5 - this.rightGain) / param0;
           return;
         }
-        if (this.field_v != var5) {
-          var6Lifetime1 = param1 - this.field_u;
-          if (this.field_u - param1 > var6Lifetime1) {
-            var6Lifetime1 = this.field_u - param1;
+        if (this.rightGain != var5) {
+          var6Lifetime1 = param1 - this.gain;
+          if (this.gain - param1 > var6Lifetime1) {
+            var6Lifetime1 = this.gain - param1;
           }
-          if (var4 - this.field_l > var6Lifetime1) {
-            var6Lifetime1 = var4 - this.field_l;
+          if (var4 - this.leftGain > var6Lifetime1) {
+            var6Lifetime1 = var4 - this.leftGain;
           }
-          if (this.field_l - var4 > var6Lifetime1) {
-            var6Lifetime1 = this.field_l - var4;
+          if (this.leftGain - var4 > var6Lifetime1) {
+            var6Lifetime1 = this.leftGain - var4;
           }
-          if (var5 - this.field_v > var6Lifetime1) {
-            var6Lifetime1 = var5 - this.field_v;
+          if (var5 - this.rightGain > var6Lifetime1) {
+            var6Lifetime1 = var5 - this.rightGain;
           }
-          if (this.field_v - var5 > var6Lifetime1) {
-            var6Lifetime1 = this.field_v - var5;
+          if (this.rightGain - var5 > var6Lifetime1) {
+            var6Lifetime1 = this.rightGain - var5;
           }
           if (param0 > var6Lifetime1) {
             param0 = var6Lifetime1;
           }
-          this.field_p = param0;
-          this.field_q = param1;
-          this.field_k = param2;
-          this.field_m = (param1 - this.field_u) / param0;
-          this.field_h = (var4 - this.field_l) / param0;
-          this.field_t = (var5 - this.field_v) / param0;
+          this.rampSamples = param0;
+          this.targetGain = param1;
+          this.pan = param2;
+          this.gainStep = (param1 - this.gain) / param0;
+          this.leftGainStep = (var4 - this.leftGain) / param0;
+          this.rightGainStep = (var5 - this.rightGain) / param0;
           return;
         }
-        this.field_p = 0;
+        this.rampSamples = 0;
     }
 
-    final f c() {
+    final PcmStream firstSubStream() {
         return null;
     }
 
-    final synchronized int k() {
-        return this.field_j < 0 ? -this.field_j : this.field_j;
+    final synchronized int getSpeed() {
+        return this.step < 0 ? -this.step : this.step;
     }
 
-    final synchronized void a(boolean param0) {
-        this.field_j = (this.field_j ^ this.field_j >> 31) + (this.field_j >>> 31);
+    final synchronized void setReverse(boolean param0) {
+        this.step = (this.step ^ this.step >> 31) + (this.step >>> 31);
         if (!param0) {
           return;
         }
-        this.field_j = -this.field_j;
+        this.step = -this.step;
     }
 
-    final synchronized void e(int param0) {
-        this.c(param0, this.h());
+    final synchronized void setGain(int param0) {
+        this.setGainAndPan(param0, this.getPan());
     }
 
-    private final static int a(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, fga param11, int param12, int param13) {
+    private final static int mixReverseStereoInterpolated(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, PcmSampleStream param11, int param12, int param13) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
@@ -1466,82 +1466,82 @@ final class fga extends f {
           param3[incrementValue$5] = param3[incrementValue$5] + (param0 * param7 >> 6);
           param4 = param4 + param12;
         }
-        param11.field_i = param4;
+        param11.position = param4;
         return param5 >> 1;
     }
 
-    private final int a(int[] param0, int param1, int param2, int param3, int param4) {
+    private final int mixReverse(int[] param0, int param1, int param2, int param3, int param4) {
         int var6;
         do {
-          if (this.field_p <= 0) {
-            if (this.field_j == -256 &&
-              (this.field_i & 255) == 0) {
-              if (vka.field_r) {
-                return fga.a(0, ((gd) (this.field_g)).field_i, param0, this.field_i, param1, this.field_l, this.field_v, 0, param3, param2, this);
+          if (this.rampSamples <= 0) {
+            if (this.step == -256 &&
+              (this.position & 255) == 0) {
+              if (AudioOutput.stereo) {
+                return PcmSampleStream.mixReverseStereoAligned(0, ((PcmSample) (this.sound)).samples, param0, this.position, param1, this.leftGain, this.rightGain, 0, param3, param2, this);
               }
-              return fga.a(((gd) (this.field_g)).field_i, param0, this.field_i, param1, this.field_u, 0, param3, param2, this);
+              return PcmSampleStream.mixReverseMonoAligned(((PcmSample) (this.sound)).samples, param0, this.position, param1, this.gain, 0, param3, param2, this);
             }
-            if (vka.field_r) {
-              return fga.a(0, 0, ((gd) (this.field_g)).field_i, param0, this.field_i, param1, this.field_l, this.field_v, 0, param3, param2, this, this.field_j, param4);
+            if (AudioOutput.stereo) {
+              return PcmSampleStream.mixReverseStereoInterpolated(0, 0, ((PcmSample) (this.sound)).samples, param0, this.position, param1, this.leftGain, this.rightGain, 0, param3, param2, this, this.step, param4);
             }
-            return fga.a(0, 0, ((gd) (this.field_g)).field_i, param0, this.field_i, param1, this.field_u, 0, param3, param2, this, this.field_j, param4);
+            return PcmSampleStream.mixReverseMonoInterpolated(0, 0, ((PcmSample) (this.sound)).samples, param0, this.position, param1, this.gain, 0, param3, param2, this, this.step, param4);
           }
-          var6 = param1 + this.field_p;
+          var6 = param1 + this.rampSamples;
           if (var6 > param3) {
             var6 = param3;
           }
-          this.field_p = this.field_p + param1;
-          if (this.field_j == -256 &&
-            (this.field_i & 255) == 0) {
-            if (!vka.field_r) {
-              param1 = fga.a(((gd) (this.field_g)).field_i, param0, this.field_i, param1, this.field_u, this.field_m, 0, var6, param2, this);
+          this.rampSamples = this.rampSamples + param1;
+          if (this.step == -256 &&
+            (this.position & 255) == 0) {
+            if (!AudioOutput.stereo) {
+              param1 = PcmSampleStream.mixReverseMonoAlignedRamped(((PcmSample) (this.sound)).samples, param0, this.position, param1, this.gain, this.gainStep, 0, var6, param2, this);
             } else {
-              param1 = fga.b(0, ((gd) (this.field_g)).field_i, param0, this.field_i, param1, this.field_l, this.field_v, this.field_h, this.field_t, 0, var6, param2, this);
+              param1 = PcmSampleStream.mixReverseStereoAlignedRamped(0, ((PcmSample) (this.sound)).samples, param0, this.position, param1, this.leftGain, this.rightGain, this.leftGainStep, this.rightGainStep, 0, var6, param2, this);
             }
           } else {
-            if (!vka.field_r) {
-              param1 = fga.d(0, 0, ((gd) (this.field_g)).field_i, param0, this.field_i, param1, this.field_u, this.field_m, 0, var6, param2, this, this.field_j, param4);
+            if (!AudioOutput.stereo) {
+              param1 = PcmSampleStream.mixReverseMonoInterpolatedRamped(0, 0, ((PcmSample) (this.sound)).samples, param0, this.position, param1, this.gain, this.gainStep, 0, var6, param2, this, this.step, param4);
             } else {
-              param1 = fga.a(0, 0, ((gd) (this.field_g)).field_i, param0, this.field_i, param1, this.field_l, this.field_v, this.field_h, this.field_t, 0, var6, param2, this, this.field_j, param4);
+              param1 = PcmSampleStream.mixReverseStereoInterpolatedRamped(0, 0, ((PcmSample) (this.sound)).samples, param0, this.position, param1, this.leftGain, this.rightGain, this.leftGainStep, this.rightGainStep, 0, var6, param2, this, this.step, param4);
             }
           }
-          this.field_p = this.field_p - param1;
-          if (this.field_p != 0) {
+          this.rampSamples = this.rampSamples - param1;
+          if (this.rampSamples != 0) {
             return param1;
           }
-        } while (!this.j());
+        } while (!this.finishRamp());
         return param3;
     }
 
-    private fga(gd param0, int param1, int param2) {
-        this.field_g = (dl) ((Object) param0);
-        this.field_n = param0.field_g;
-        this.field_s = param0.field_h;
-        this.field_o = param0.field_e;
-        this.field_j = param1;
-        this.field_q = param2;
-        this.field_k = 8192;
-        this.field_i = 0;
-        this.e();
+    private PcmSampleStream(PcmSample param0, int param1, int param2) {
+        this.sound = (SoundNode) ((Object) param0);
+        this.loopStart = param0.loopStart;
+        this.loopEnd = param0.loopEnd;
+        this.pingPongLoop = param0.pingPongLoop;
+        this.step = param1;
+        this.targetGain = param2;
+        this.pan = 8192;
+        this.position = 0;
+        this.updateGains();
     }
 
-    final synchronized boolean g() {
-        return this.field_p != 0;
+    final synchronized boolean isRamping() {
+        return this.rampSamples != 0;
     }
 
-    final synchronized void g(int param0) {
-        if (this.field_j < 0) {
-          this.field_j = -param0;
+    final synchronized void setSpeed(int param0) {
+        if (this.step < 0) {
+          this.step = -param0;
         } else {
-          this.field_j = param0;
+          this.step = param0;
         }
     }
 
-    private final static int a(int param0, int param1) {
+    private final static int calculateRightGain(int param0, int param1) {
         return param1 < 0 ? -param0 : (int)((double)param0 * Math.sqrt((double)param1 * 0.0001220703125) + 0.5);
     }
 
-    private final static int b(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, fga param12) {
+    private final static int mixReverseStereoAlignedRamped(int param0, byte[] param1, int[] param2, int param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, PcmSampleStream param12) {
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
         int incrementValue$4 = 0;
@@ -1562,7 +1562,7 @@ final class fga extends f {
         if (param4 + param3 - (param11 - 1) > param10) {
           param9 = param10;
         }
-        param12.field_u = param12.field_u + param12.field_m * (param9 - param4);
+        param12.gain = param12.gain + param12.gainStep * (param9 - param4);
         param4 = param4 << 1;
         param9 = param9 << 1;
         param9 -= 6;
@@ -1616,30 +1616,30 @@ final class fga extends f {
           param2[incrementValue$14] = param2[incrementValue$14] + param0 * param6;
           param6 = param6 + param8;
         }
-        param12.field_l = param5 >> 2;
-        param12.field_v = param6 >> 2;
-        param12.field_i = param3 << 8;
+        param12.leftGain = param5 >> 2;
+        param12.rightGain = param6 >> 2;
+        param12.position = param3 << 8;
         return param4 >> 1;
     }
 
-    private fga(gd param0, int param1, int param2, int param3) {
-        this.field_g = (dl) ((Object) param0);
-        this.field_n = param0.field_g;
-        this.field_s = param0.field_h;
-        this.field_o = param0.field_e;
-        this.field_j = param1;
-        this.field_q = param2;
-        this.field_k = param3;
-        this.field_i = 0;
-        this.e();
+    private PcmSampleStream(PcmSample param0, int param1, int param2, int param3) {
+        this.sound = (SoundNode) ((Object) param0);
+        this.loopStart = param0.loopStart;
+        this.loopEnd = param0.loopEnd;
+        this.pingPongLoop = param0.pingPongLoop;
+        this.step = param1;
+        this.targetGain = param2;
+        this.pan = param3;
+        this.position = 0;
+        this.updateGains();
     }
 
-    private final static int b(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, fga param13, int param14, int param15) {
+    private final static int mixForwardStereoInterpolatedRamped(int param0, int param1, byte[] param2, int[] param3, int param4, int param5, int param6, int param7, int param8, int param9, int param10, int param11, int param12, PcmSampleStream param13, int param14, int param15) {
         int incrementValue$6 = 0;
         int incrementValue$7 = 0;
         int incrementValue$4 = 0;
         int incrementValue$5 = 0;
-        param13.field_u = param13.field_u - param13.field_m * param5;
+        param13.gain = param13.gain - param13.gainStep * param5;
         if (param14 != 0) {
           param10 = param5 + (param12 - param4 + param14 - 257) / param14;
         }
@@ -1686,14 +1686,14 @@ final class fga extends f {
           param4 = param4 + param14;
         }
         param5 = param5 >> 1;
-        param13.field_u = param13.field_u + param13.field_m * param5;
-        param13.field_l = param6;
-        param13.field_v = param7;
-        param13.field_i = param4;
+        param13.gain = param13.gain + param13.gainStep * param5;
+        param13.leftGain = param6;
+        param13.rightGain = param7;
+        param13.position = param4;
         return param5;
     }
 
-    private final static int b(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, fga param8) {
+    private final static int mixForwardMonoAligned(byte[] param0, int[] param1, int param2, int param3, int param4, int param5, int param6, int param7, PcmSampleStream param8) {
         int incrementValue$0 = 0;
         int incrementValue$1 = 0;
         int incrementValue$2 = 0;
@@ -1742,7 +1742,7 @@ final class fga extends f {
           param2++;
           param1[incrementValue$8] = param1[incrementValue$8] + param0[incrementValue$9] * param4;
         }
-        param8.field_i = param2 << 8;
+        param8.position = param2 << 8;
         return param3;
     }
 }

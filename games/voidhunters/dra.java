@@ -1,25 +1,25 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class dra extends f {
-    private kka field_o;
-    hbb field_n;
+final class dra extends PcmStream {
+    private MusicTrack field_o;
+    MidiPcmStream field_n;
     private int field_u;
     static Sprite[] field_v;
     private boolean field_q;
     private int field_s;
-    private hbb field_j;
-    private kka field_m;
+    private MidiPcmStream field_j;
+    private MusicTrack field_m;
     private int[] field_r;
-    private kka field_w;
+    private MusicTrack field_w;
     private int field_h;
     private int[] field_p;
-    hbb field_k;
+    MidiPcmStream field_k;
     private boolean field_i;
-    private hbb field_l;
+    private MidiPcmStream field_l;
     private int field_t;
 
-    final void a(int[] param0, int param1, int param2) {
+    final void mix(int[] param0, int param1, int param2) {
         int localTemp$0 = 0;
         int localTemp$1 = 0;
         int var10 = 0;
@@ -43,18 +43,18 @@ final class dra extends f {
         var11 = VoidHunters.field_G;
         try {
           if (this.field_h <= 0) {
-            this.a(param2);
+            this.skip(param2);
             return;
           }
           if (this.field_q) {
             if (this.field_t > 0 &&
-              !this.field_k.c(-93)) {
+              !this.field_k.isPlaying(-93)) {
               this.field_o = null;
               this.field_q = false;
               this.field_t = -this.field_t;
             } else {
               if (this.field_t < 0 &&
-                !this.field_j.c(-123)) {
+                !this.field_j.isPlaying(-123)) {
                 this.field_q = false;
                 this.field_m = null;
                 this.field_t = -this.field_t;
@@ -72,7 +72,7 @@ final class dra extends f {
                   this.field_t = 0;
                   if (!this.field_i) {
                     if (null != this.field_o) {
-                      this.field_k.a(true);
+                      this.field_k.stop(true);
                     }
                     this.field_o = null;
                   }
@@ -84,14 +84,14 @@ final class dra extends f {
                 this.field_t = 0;
                 if (!this.field_i) {
                   if (null != this.field_m) {
-                    this.field_j.a(true);
+                    this.field_j.stop(true);
                   }
                   this.field_m = null;
                 }
               }
             }
           }
-          if (vka.field_r) {
+          if (AudioOutput.stereo) {
             stackIn_34_0 = param2 << 1;
           } else {
             stackIn_34_0 = param2;
@@ -100,7 +100,7 @@ final class dra extends f {
           if (this.field_u < 256 && (this.field_o != null ||
             this.field_m != null)) {
             if (var4_int == 256) {
-              this.field_k.a(param0, param1, param2);
+              this.field_k.mix(param0, param1, param2);
             } else {
               if (var5 != 256) {
                 if (this.field_r != null &&
@@ -111,9 +111,9 @@ final class dra extends f {
                   this.field_p = new int[var6];
                   this.field_r = new int[var6];
                 }
-                this.field_k.a(this.field_r, 0, param2);
-                this.field_j.a(this.field_p, 0, param2);
-                if (vka.field_r) {
+                this.field_k.mix(this.field_r, 0, param2);
+                this.field_j.mix(this.field_p, 0, param2);
+                if (AudioOutput.stereo) {
                   localTemp$0 = param1 << 1;
                   param1 = localTemp$0;
                   stackIn_48_0 = localTemp$0;
@@ -125,7 +125,7 @@ final class dra extends f {
                   param0[var7 + var8] = param0[var7 + var8] + (var5 * this.field_p[var8] + this.field_r[var8] * var4_int >> 8);
                 }
               } else {
-                this.field_j.a(param0, param1, param2);
+                this.field_j.mix(param0, param1, param2);
               }
             }
           }
@@ -140,8 +140,8 @@ final class dra extends f {
               this.field_p = new int[var6];
               this.field_r = new int[var6];
             }
-            this.field_l.a(this.field_r, 0, param2);
-            if (vka.field_r) {
+            this.field_l.mix(this.field_r, 0, param2);
+            if (AudioOutput.stereo) {
               localTemp$1 = param1 << 1;
               param1 = localTemp$1;
               stackIn_63_0 = localTemp$1;
@@ -170,30 +170,30 @@ final class dra extends f {
         }
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         int var3;
         var3 = VoidHunters.field_G;
         if (this.field_s > 0 &&
           null != this.field_o) {
-          this.field_k.a(param0);
+          this.field_k.skip(param0);
         }
         if (this.field_s < 1048576 &&
           null != this.field_m) {
-          this.field_j.a(param0);
+          this.field_j.skip(param0);
         }
         if (0 < this.field_u &&
           null != this.field_w) {
-          this.field_l.a(param0);
+          this.field_l.skip(param0);
         }
         if (this.field_q) {
           if (this.field_t > 0 &&
-            !this.field_k.c(-110)) {
+            !this.field_k.isPlaying(-110)) {
             this.field_o = null;
             this.field_q = false;
             this.field_t = -this.field_t;
           } else {
             if (0 > this.field_t &&
-              !this.field_j.c(-102)) {
+              !this.field_j.isPlaying(-102)) {
               this.field_q = false;
               this.field_t = -this.field_t;
               this.field_m = null;
@@ -208,7 +208,7 @@ final class dra extends f {
               this.field_t = 0;
               if (!this.field_i) {
                 if (null != this.field_m) {
-                  this.field_j.a(true);
+                  this.field_j.stop(true);
                 }
                 this.field_m = null;
               }
@@ -220,7 +220,7 @@ final class dra extends f {
                 this.field_t = 0;
                 if (!this.field_i) {
                   if (this.field_o != null) {
-                    this.field_k.a(true);
+                    this.field_k.stop(true);
                   }
                   this.field_o = null;
                 }
@@ -230,14 +230,14 @@ final class dra extends f {
         }
     }
 
-    private final void a(hbb param0, int param1, int param2, int param3) {
+    private final void a(MidiPcmStream param0, int param1, int param2, int param3) {
         try {
           if (param2 >= -112) {
-            this.field_k = (hbb) null;
+            this.field_k = (MidiPcmStream) null;
           }
           this.field_n = param0;
-          param0.b(param1, (byte) 18, -1);
-          param0.a((byte) 30, param3);
+          param0.setChannelGain(param1, (byte) 18, -1);
+          param0.setPlaybackTimeScale((byte) 30, param3);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "dra.F(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');
         }
@@ -251,7 +251,7 @@ final class dra extends f {
         lla.field_e = lla.field_b / 2;
     }
 
-    final synchronized void a(int param0, kka param1, int param2, int param3) {
+    final synchronized void a(int param0, MusicTrack param1, int param2, int param3) {
         try {
           int var5_int = -83 % ((-81 - param0) / 45);
           this.a(256, param2, false, param1, -123, param3);
@@ -260,7 +260,7 @@ final class dra extends f {
         }
     }
 
-    final f c() {
+    final PcmStream firstSubStream() {
         return null;
     }
 
@@ -271,11 +271,11 @@ final class dra extends f {
         }
     }
 
-    final synchronized int d() {
+    final synchronized int getActivityWeight() {
         return 2;
     }
 
-    private final void a(int param0, hbb param1, hbb param2) {
+    private final void a(int param0, MidiPcmStream param1, MidiPcmStream param2) {
         try {
           this.field_k = param1;
           this.field_j = param2;
@@ -287,16 +287,16 @@ final class dra extends f {
         }
     }
 
-    final f a() {
+    final PcmStream nextSubStream() {
         return null;
     }
 
-    final synchronized void a(int param0, int param1, boolean param2, kka param3, int param4, int param5) {
+    final synchronized void a(int param0, int param1, boolean param2, MusicTrack param3, int param4, int param5) {
         boolean stackIn_18_1 = false;
         int stackIn_29_0 = 0;
-        hbb stackIn_39_0 = null;
+        MidiPcmStream stackIn_39_0 = null;
         boolean stackIn_40_1 = false;
-        hbb stackIn_48_0 = null;
+        MidiPcmStream stackIn_48_0 = null;
         boolean stackIn_49_1 = false;
         RuntimeException stackIn_54_0 = null;
         StringBuilder stackIn_54_1 = null;
@@ -312,20 +312,20 @@ final class dra extends f {
             param2) {
             if (this.field_t > 0) {
               if (null != this.field_o) {
-                this.field_k.a(true);
+                this.field_k.stop(true);
               }
               this.field_o = param3;
               if (param3 != null) {
-                this.field_k.a(false, param3, -1);
+                this.field_k.playTrack(false, param3, -1);
                 this.a(this.field_k, param0, -125, param5);
               }
             } else {
               if (null != this.field_m) {
-                this.field_j.a(true);
+                this.field_j.stop(true);
               }
               this.field_m = param3;
               if (param3 != null) {
-                this.field_j.a(false, param3, -1);
+                this.field_j.playTrack(false, param3, -1);
                 this.a(this.field_j, param0, -118, param5);
               }
             }
@@ -356,25 +356,25 @@ final class dra extends f {
           }
           if (var8 != 0) {
             if (null != this.field_o) {
-              this.field_k.a(true);
+              this.field_k.stop(true);
             }
             this.field_o = param3;
             if (param3 != null) {
               stackIn_48_0 = this.field_k;
               stackIn_49_1 = !(param2);
-              ((hbb) (Object) stackIn_48_0).a(stackIn_49_1, param3, -1);
+              ((MidiPcmStream) (Object) stackIn_48_0).playTrack(stackIn_49_1, param3, -1);
               this.a(this.field_k, param0, -122, param5);
             }
             this.field_t = param1;
           } else {
             if (null != this.field_m) {
-              this.field_j.a(true);
+              this.field_j.stop(true);
             }
             this.field_m = param3;
             if (param3 != null) {
               stackIn_39_0 = this.field_j;
               stackIn_40_1 = !(param2);
-              ((hbb) (Object) stackIn_39_0).a(stackIn_40_1, param3, -1);
+              ((MidiPcmStream) (Object) stackIn_39_0).playTrack(stackIn_40_1, param3, -1);
               this.a(this.field_j, param0, -117, param5);
             }
             this.field_t = -param1;
@@ -401,7 +401,7 @@ final class dra extends f {
         }
     }
 
-    dra(hbb param0, hbb param1, hbb param2) {
+    dra(MidiPcmStream param0, MidiPcmStream param1, MidiPcmStream param2) {
         this.field_u = 0;
         this.field_h = 256;
         this.field_i = false;

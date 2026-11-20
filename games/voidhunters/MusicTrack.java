@@ -1,22 +1,22 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kka extends IntrusiveNode {
-    gnb field_d;
-    byte[] field_e;
+final class MusicTrack extends IntrusiveNode {
+    NodeHashTable instrumentUsage;
+    byte[] midi;
 
-    final static kka a(asb param0, String param1, String param2) {
+    final static MusicTrack load(asb param0, String param1, String param2) {
         byte[] var3 = param0.a(param2, true, param1);
         if (var3 == null) {
           return null;
         }
-        return new kka(new PacketBuffer(var3));
+        return new MusicTrack(new PacketBuffer(var3));
     }
 
-    final void a() {
+    final void buildInstrumentUsage() {
         int[] var1;
         int[] var2;
-        q var4;
+        MidiFileReader var4;
         int var5;
         int var6;
         int var7;
@@ -26,7 +26,7 @@ final class kka extends IntrusiveNode {
         int var11;
         int var12;
         int var13;
-        ghb var14;
+        ByteArrayNode var14;
         int[] var15;
         int[] var17;
         int[] var18;
@@ -38,10 +38,10 @@ final class kka extends IntrusiveNode {
         int var11Lifetime1;
         int var11Lifetime2;
         int var12Lifetime1;
-        if (this.field_d != null) {
+        if (this.instrumentUsage != null) {
           return;
         }
-        this.field_d = new gnb(16);
+        this.instrumentUsage = new NodeHashTable(16);
         var20 = new int[16];
         var17 = var20;
         var1 = var17;
@@ -51,26 +51,26 @@ final class kka extends IntrusiveNode {
         var22 = var1;
         var18[9] = 128;
         var22[9] = 128;
-        var4 = new q(this.field_e);
-        var5 = var4.e();
+        var4 = new MidiFileReader(this.midi);
+        var5 = var4.getTrackCount();
         for (var6 = 0; var6 < var5; var6++) {
-          var4.c(var6);
-          var4.e(var6);
-          var4.f(var6);
+          var4.gotoTrack(var6);
+          var4.readTrackDelta(var6);
+          var4.markTrackPosition(var6);
         }
         while (true) {
-          var6Lifetime1 = var4.d();
-          var7 = var4.field_b[var6Lifetime1];
+          var6Lifetime1 = var4.getNextTrack();
+          var7 = var4.trackTicks[var6Lifetime1];
           while (true) {
-            if (var4.field_b[var6Lifetime1] != var7) {
+            if (var4.trackTicks[var6Lifetime1] != var7) {
               break;
             }
-            var4.c(var6Lifetime1);
-            var8 = var4.d(var6Lifetime1);
+            var4.gotoTrack(var6Lifetime1);
+            var8 = var4.readMessage(var6Lifetime1);
             if (var8 == 1) {
-              var4.c();
-              var4.f(var6Lifetime1);
-              if (var4.f()) {
+              var4.setTrackDone();
+              var4.markTrackPosition(var6Lifetime1);
+              if (var4.isDone()) {
                 return;
               }
               break;
@@ -98,25 +98,25 @@ final class kka extends IntrusiveNode {
               var12Lifetime1 = var8 >> 16 & 127;
               if (var12Lifetime1 > 0) {
                 var13 = var18[var10Lifetime2];
-                var14 = (ghb) (this.field_d.a((long)var13, 100));
+                var14 = (ByteArrayNode) (this.instrumentUsage.get((long)var13, 100));
                 if (var14 == null) {
-                  var14 = new ghb(new byte[128]);
-                  this.field_d.a((long)var13, var14, (byte) -118);
+                  var14 = new ByteArrayNode(new byte[128]);
+                  this.instrumentUsage.put((long)var13, var14, (byte) -118);
                 }
-                var14.field_d[var11Lifetime2] = (byte) 1;
+                var14.value[var11Lifetime2] = (byte) 1;
               }
             }
-            var4.e(var6Lifetime1);
-            var4.f(var6Lifetime1);
+            var4.readTrackDelta(var6Lifetime1);
+            var4.markTrackPosition(var6Lifetime1);
           }
         }
     }
 
-    final void b() {
-        this.field_d = null;
+    final void clearInstrumentUsage() {
+        this.instrumentUsage = null;
     }
 
-    private kka(PacketBuffer param0) {
+    private MusicTrack(PacketBuffer param0) {
         int incrementValue$0 = 0;
         int incrementValue$25 = 0;
         int incrementValue$26 = 0;
@@ -417,8 +417,8 @@ final class kka extends IntrusiveNode {
         param0.position = param0.position + var25;
         var50 = param0.position;
         param0.position = param0.position + var5 * 3;
-        this.field_e = new byte[var4];
-        var51 = new PacketBuffer(this.field_e);
+        this.midi = new byte[var4];
+        var51 = new PacketBuffer(this.midi);
         var51.writeInt(1297377380, 332614536);
         var51.writeInt(6, 332614536);
         stackIn_84_0 = var51;

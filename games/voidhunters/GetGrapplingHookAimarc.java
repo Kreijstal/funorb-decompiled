@@ -47,7 +47,7 @@ final class GetGrapplingHookAimarc extends ConsoleCommand {
     final static void a(int param0, int param1, int param2, int param3, int param4) {
         int var7 = 0;
         int var8 = 0;
-        gd var9 = null;
+        PcmSample var9 = null;
         ana var10 = null;
         nl var5 = null;
         int var6 = 0;
@@ -70,7 +70,7 @@ final class GetGrapplingHookAimarc extends ConsoleCommand {
           }
           var9 = fa.field_d[var8];
           var10 = ServerInfo.a(var7, 100, var6, var9);
-          var10.field_e.d(-1);
+          var10.field_e.setLoopCount(-1);
           var5 = new nl();
           var5.field_i = param4;
           var5.field_k = param2;

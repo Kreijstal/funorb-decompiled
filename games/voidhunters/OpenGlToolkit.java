@@ -37,7 +37,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
     private jaa field_lc;
     private int field_Oc;
     private jaa field_W;
-    private gnb field_Ic;
+    private NodeHashTable field_Ic;
     private int field_Gc;
     private int field_q;
     int field_mc;
@@ -596,7 +596,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             if (!this.field_O) {
               throw new RuntimeException("");
             }
-            var3 = (tob) (this.field_Ic.a((long)(this.field_qc.d() << 16 | this.field_qc.a()), 116));
+            var3 = (tob) (this.field_Ic.get((long)(this.field_qc.d() << 16 | this.field_qc.a()), 116));
             if (var3 == null) {
               var9 = new tob(this, this.field_qc.d(), this.field_qc.a());
               var3 = var9;
@@ -613,7 +613,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 }
                 break;
               }
-              this.field_Ic.a((long)(this.field_qc.d() << 16 | this.field_qc.a()), var9, (byte) -120);
+              this.field_Ic.put((long)(this.field_qc.d() << 16 | this.field_qc.a()), var9, (byte) -120);
             }
             this.field_E.a((DualLinkNode) (var3), (byte) -22);
             this.field_c.setPbuffer(var3.f(-128));
@@ -626,7 +626,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
             }
             this.a((byte) -109, (jaa) (this.field_jb));
             if (param1) {
-              var3_ref = (nv) (this.field_Ic.a((long)(this.field_qc.d() << 16 | this.field_qc.a()), 100));
+              var3_ref = (nv) (this.field_Ic.get((long)(this.field_qc.d() << 16 | this.field_qc.a()), 100));
               if (var3_ref == null) {
                 var7 = new nv(this, 6402, this.field_qc.d(), this.field_qc.a());
                 var3_ref = var7;
@@ -643,7 +643,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                   }
                   break;
                 }
-                this.field_Ic.a((long)(this.field_qc.d() << 16 | this.field_qc.a()), var7, (byte) -124);
+                this.field_Ic.put((long)(this.field_qc.d() << 16 | this.field_qc.a()), var7, (byte) -124);
               }
               this.field_E.a((DualLinkNode) (var3_ref), (byte) -22);
               this.field_jb.a(8, var3_ref, (byte) -20);
@@ -1743,7 +1743,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
         this.field_Oc = -1;
         this.field_Gb = new jaa[4];
         this.field_E = new vga();
-        this.field_Ic = new gnb(16);
+        this.field_Ic = new NodeHashTable(16);
         this.field_v = new IntrusiveDeque();
         this.field_xc = new IntrusiveDeque();
         this.field_Nc = new IntrusiveDeque();

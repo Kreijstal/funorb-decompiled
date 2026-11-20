@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class mia implements Runnable {
-    volatile boolean field_c;
+final class AudioPump implements Runnable {
+    volatile boolean running;
     static boolean[] field_a;
-    volatile vka[] field_b;
-    eab field_d;
-    volatile boolean field_e;
+    volatile AudioOutput[] outputs;
+    eab platform;
+    volatile boolean stopRequested;
 
     public static void clearSharedReferences(int param0) {
         field_a = null;
         if (param0 != -11954) {
-          mia.a('\021', false);
+          AudioPump.isCp1252Character('\021', false);
         }
     }
 
@@ -58,7 +58,7 @@ final class mia implements Runnable {
 
     public final void run() {
         int var1_int = 0;
-        vka var2 = null;
+        AudioOutput var2 = null;
         int var4 = 0;
         int decompiledRegionSelector0 = 0;
         Throwable decompiledCaughtException = null;
@@ -67,19 +67,19 @@ final class mia implements Runnable {
         Object var5 = null;
         String var6 = null;
         var4 = VoidHunters.field_G;
-        this.field_c = true;
+        this.running = true;
         try {
           try {
-            while (!this.field_e) {
+            while (!this.stopRequested) {
               for (var1_int = 0; 2 > var1_int; var1_int++) {
-                var2 = this.field_b[var1_int];
+                var2 = this.outputs[var1_int];
                 if (var2 != null) {
-                  var2.h();
+                  var2.service();
                 }
               }
               gdb.b(-106, 10L);
               var5 = (Object) null;
-              ts.a((byte) 97, this.field_d, (Object) null);
+              ts.a((byte) 97, this.platform, (Object) null);
             }
             decompiledRegionSelector0 = 0;
           } catch (java.lang.Exception decompiledCaughtParameter0) {
@@ -95,13 +95,13 @@ final class mia implements Runnable {
         } catch (java.lang.Throwable decompiledCaughtParameter1) {
           decompiledCaughtException = decompiledCaughtParameter1;
           var3 = decompiledCaughtException;
-          this.field_c = false;
-          throw mia.<RuntimeException>$cfr$sneakyThrow(var3);
+          this.running = false;
+          throw AudioPump.<RuntimeException>rethrowUnchecked(var3);
         }
-        this.field_c = false;
+        this.running = false;
     }
 
-    final static boolean a(char param0, boolean param1) {
+    final static boolean isCp1252Character(char param0, boolean param1) {
         int var3 = 0;
         char[] var2 = null;
         RuntimeException var2_ref = null;
@@ -140,17 +140,17 @@ final class mia implements Runnable {
         }
     }
 
-    mia() {
-        this.field_b = new vka[2];
-        this.field_e = false;
-        this.field_c = false;
+    AudioPump() {
+        this.outputs = new AudioOutput[2];
+        this.stopRequested = false;
+        this.running = false;
     }
 
     static {
     }
 
     @SuppressWarnings("unchecked")
-    private static <T extends Throwable> RuntimeException $cfr$sneakyThrow(Throwable throwable) throws T {
+    private static <T extends Throwable> RuntimeException rethrowUnchecked(Throwable throwable) throws T {
         throw (T) throwable;
     }
 }

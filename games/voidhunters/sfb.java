@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class sfb extends f {
+final class sfb extends PcmStream {
     private float field_s;
-    private f field_k;
+    private PcmStream field_k;
     private float field_t;
     private in[] field_o;
     private float field_u;
@@ -18,13 +18,13 @@ final class sfb extends f {
     private in[] field_i;
     private oka[] field_r;
 
-    final f c() {
+    final PcmStream firstSubStream() {
         return this.field_k;
     }
 
     private final void e() {
         int var1;
-        if (!vka.field_r) {
+        if (!AudioOutput.stereo) {
           if (this.field_o != null) {
             for (var1 = 0; var1 < 8; var1++) {
               this.field_i[var1].a();
@@ -45,19 +45,19 @@ final class sfb extends f {
               this.field_r[var1].a();
             }
             this.field_o = new in[8];
-            this.field_o[0] = new in(1139 * vka.field_s / 44100);
-            this.field_o[1] = new in(1211 * vka.field_s / 44100);
-            this.field_o[2] = new in(1300 * vka.field_s / 44100);
-            this.field_o[3] = new in(1379 * vka.field_s / 44100);
-            this.field_o[4] = new in(1445 * vka.field_s / 44100);
-            this.field_o[5] = new in(1514 * vka.field_s / 44100);
-            this.field_o[6] = new in(1580 * vka.field_s / 44100);
-            this.field_o[7] = new in(1640 * vka.field_s / 44100);
+            this.field_o[0] = new in(1139 * AudioOutput.sampleRate / 44100);
+            this.field_o[1] = new in(1211 * AudioOutput.sampleRate / 44100);
+            this.field_o[2] = new in(1300 * AudioOutput.sampleRate / 44100);
+            this.field_o[3] = new in(1379 * AudioOutput.sampleRate / 44100);
+            this.field_o[4] = new in(1445 * AudioOutput.sampleRate / 44100);
+            this.field_o[5] = new in(1514 * AudioOutput.sampleRate / 44100);
+            this.field_o[6] = new in(1580 * AudioOutput.sampleRate / 44100);
+            this.field_o[7] = new in(1640 * AudioOutput.sampleRate / 44100);
             this.field_p = new oka[4];
-            this.field_p[0] = new oka(579 * vka.field_s / 44100);
-            this.field_p[1] = new oka(464 * vka.field_s / 44100);
-            this.field_p[2] = new oka(364 * vka.field_s / 44100);
-            this.field_p[3] = new oka(248 * vka.field_s / 44100);
+            this.field_p[0] = new oka(579 * AudioOutput.sampleRate / 44100);
+            this.field_p[1] = new oka(464 * AudioOutput.sampleRate / 44100);
+            this.field_p[2] = new oka(364 * AudioOutput.sampleRate / 44100);
+            this.field_p[3] = new oka(248 * AudioOutput.sampleRate / 44100);
             this.field_j = new int[512];
           }
         }
@@ -91,7 +91,7 @@ final class sfb extends f {
         return param0;
     }
 
-    final int d() {
+    final int getActivityWeight() {
         return 8;
     }
 
@@ -99,13 +99,13 @@ final class sfb extends f {
         this.field_h = param0;
     }
 
-    final synchronized void a(int param0) {
+    final synchronized void skip(int param0) {
         if (this.field_k != null) {
-          this.field_k.a(param0);
+          this.field_k.skip(param0);
         }
     }
 
-    final synchronized void a(int[] param0, int param1, int param2) {
+    final synchronized void mix(int[] param0, int param1, int param2) {
         int fieldTemp$3 = 0;
         int fieldTemp$2 = 0;
         int incrementValue$0 = 0;
@@ -162,7 +162,7 @@ final class sfb extends f {
             var4 = 256;
           }
           if (this.field_k != null) {
-            this.field_k.a(this.field_j, 0, var4);
+            this.field_k.mix(this.field_j, 0, var4);
           }
           var5 = 0;
           for (var6 = 0; var6 < 8; var6++) {
@@ -171,7 +171,7 @@ final class sfb extends f {
           for (var6Lifetime1 = 0; var6Lifetime1 < 4; var6Lifetime1++) {
             var5 = sfb.a(var5, this.field_r[var6Lifetime1].field_a, this.field_r[var6Lifetime1].field_b, var4);
           }
-          if (vka.field_r) {
+          if (AudioOutput.stereo) {
             for (var6Lifetime2 = 0; var6Lifetime2 < 8; var6Lifetime2++) {
               var5 = sfb.a(var5, this.field_o[var6Lifetime2].field_a, this.field_o[var6Lifetime2].field_b, var4);
             }
@@ -199,7 +199,7 @@ final class sfb extends f {
           var8 = (int)(this.field_v * 4096.0f);
           var9 = (int)(this.field_n * 4096.0f);
           var10 = (int)(this.field_m * 65536.0f);
-          if (!vka.field_r) {
+          if (!AudioOutput.stereo) {
             var11 = (int)(this.field_u * 4096.0f);
             for (var12 = 0; var12 < var4; var12++) {
               var13 = this.field_j[var12] >> var6Lifetime4;
@@ -345,33 +345,33 @@ final class sfb extends f {
 
     final synchronized void b(float param0) {
         this.field_l = param0;
-        this.field_v = 1.0f - (float)Math.pow(0.5, 1000000.0 / (double)(this.field_l * (float)vka.field_s));
+        this.field_v = 1.0f - (float)Math.pow(0.5, 1000000.0 / (double)(this.field_l * (float)AudioOutput.sampleRate));
     }
 
     final synchronized void e(float param0) {
         this.field_n = param0;
     }
 
-    final f a() {
+    final PcmStream nextSubStream() {
         return null;
     }
 
-    sfb(f param0) {
+    sfb(PcmStream param0) {
         this.field_i = new in[8];
-        this.field_i[0] = new in(1116 * vka.field_s / 44100);
-        this.field_i[1] = new in(1188 * vka.field_s / 44100);
-        this.field_i[2] = new in(1277 * vka.field_s / 44100);
-        this.field_i[3] = new in(1356 * vka.field_s / 44100);
-        this.field_i[4] = new in(1422 * vka.field_s / 44100);
-        this.field_i[5] = new in(1491 * vka.field_s / 44100);
-        this.field_i[6] = new in(1557 * vka.field_s / 44100);
-        this.field_i[7] = new in(1617 * vka.field_s / 44100);
+        this.field_i[0] = new in(1116 * AudioOutput.sampleRate / 44100);
+        this.field_i[1] = new in(1188 * AudioOutput.sampleRate / 44100);
+        this.field_i[2] = new in(1277 * AudioOutput.sampleRate / 44100);
+        this.field_i[3] = new in(1356 * AudioOutput.sampleRate / 44100);
+        this.field_i[4] = new in(1422 * AudioOutput.sampleRate / 44100);
+        this.field_i[5] = new in(1491 * AudioOutput.sampleRate / 44100);
+        this.field_i[6] = new in(1557 * AudioOutput.sampleRate / 44100);
+        this.field_i[7] = new in(1617 * AudioOutput.sampleRate / 44100);
         this.field_r = new oka[4];
-        this.field_r[0] = new oka(556 * vka.field_s / 44100);
-        this.field_r[1] = new oka(441 * vka.field_s / 44100);
-        this.field_r[2] = new oka(341 * vka.field_s / 44100);
-        this.field_r[3] = new oka(225 * vka.field_s / 44100);
-        if (!vka.field_r) {
+        this.field_r[0] = new oka(556 * AudioOutput.sampleRate / 44100);
+        this.field_r[1] = new oka(441 * AudioOutput.sampleRate / 44100);
+        this.field_r[2] = new oka(341 * AudioOutput.sampleRate / 44100);
+        this.field_r[3] = new oka(225 * AudioOutput.sampleRate / 44100);
+        if (!AudioOutput.stereo) {
           this.field_j = new int[256];
         }
         this.e();

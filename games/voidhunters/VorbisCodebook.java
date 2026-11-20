@@ -1,34 +1,34 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cr {
-    int field_f;
-    private int[] field_b;
-    private float[][] field_d;
-    private int field_e;
-    private int[] field_a;
-    private int[] field_c;
+final class VorbisCodebook {
+    int dimensions;
+    private int[] multiplicands;
+    private float[][] vectors;
+    private int entries;
+    private int[] decodeTree;
+    private int[] codewordLengths;
 
-    private final static int a(int param0, int param1) {
+    private final static int lookup1Values(int param0, int param1) {
         int var2 = 0;
         for (var2 = (int)Math.pow((double)param0, 1.0 / (double)param1) + 1; SetGrapplingHookRopeChangeRate.a(var2, param1, 1) > param0; var2--) {
         }
         return var2;
     }
 
-    final float[] c() {
-        return this.field_d[this.b()];
+    final float[] decodeVector() {
+        return this.vectors[this.decodeScalar()];
     }
 
-    final int b() {
+    final int decodeScalar() {
         int var1 = 0;
-        while (this.field_a[var1] >= 0) {
-          var1 = fca.c() != 0 ? this.field_a[var1] : var1 + 1;
+        while (this.decodeTree[var1] >= 0) {
+          var1 = VorbisSample.readBit() != 0 ? this.decodeTree[var1] : var1 + 1;
         }
-        return ~this.field_a[var1];
+        return ~this.decodeTree[var1];
     }
 
-    cr() {
+    VorbisCodebook() {
         int incrementValue$0 = 0;
         int stackIn_3_0 = 0;
         int stackIn_13_0 = 0;
@@ -53,64 +53,64 @@ final class cr {
         int var2Lifetime1;
         int var5Lifetime1;
         int var8Lifetime1;
-        fca.c(24);
-        this.field_f = fca.c(16);
-        this.field_e = fca.c(24);
-        this.field_c = new int[this.field_e];
-        stackIn_3_0 = (fca.c() == 0) ? 0 : 1;
+        VorbisSample.readBits(24);
+        this.dimensions = VorbisSample.readBits(16);
+        this.entries = VorbisSample.readBits(24);
+        this.codewordLengths = new int[this.entries];
+        stackIn_3_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 != 0) {
           var2 = 0;
-          var3_int = fca.c(5) + 1;
-          while (var2 < this.field_e) {
-            var4_int = fca.c(SetMutatorVotes.a(this.field_e - var2, 81));
+          var3_int = VorbisSample.readBits(5) + 1;
+          while (var2 < this.entries) {
+            var4_int = VorbisSample.readBits(SetMutatorVotes.a(this.entries - var2, 81));
             for (var5 = 0; var5 < var4_int; var5++) {
               incrementValue$0 = var2;
               var2++;
-              this.field_c[incrementValue$0] = var3_int;
+              this.codewordLengths[incrementValue$0] = var3_int;
             }
             var3_int++;
           }
         } else {
-          stackIn_13_0 = (fca.c() == 0) ? 0 : 1;
+          stackIn_13_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
           var2 = stackIn_13_0;
           var14 = 0;
           var3_int = var14;
-          while (var14 < this.field_e) {
+          while (var14 < this.entries) {
             if (var2 != 0 &&
-              fca.c() == 0) {
-              this.field_c[var14] = 0;
+              VorbisSample.readBit() == 0) {
+              this.codewordLengths[var14] = 0;
             } else {
-              this.field_c[var14] = fca.c(5) + 1;
+              this.codewordLengths[var14] = VorbisSample.readBits(5) + 1;
             }
             var14++;
           }
         }
-        this.a();
-        var2Lifetime1 = fca.c(4);
+        this.buildDecodeTree();
+        var2Lifetime1 = VorbisSample.readBits(4);
         if (var2Lifetime1 > 0) {
-          var3 = fca.a(fca.c(32));
-          var4 = fca.a(fca.c(32));
-          var5Lifetime1 = fca.c(4) + 1;
-          stackIn_25_0 = (fca.c() == 0) ? 0 : 1;
+          var3 = VorbisSample.unpackFloat(VorbisSample.readBits(32));
+          var4 = VorbisSample.unpackFloat(VorbisSample.readBits(32));
+          var5Lifetime1 = VorbisSample.readBits(4) + 1;
+          stackIn_25_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
           var6 = stackIn_25_0;
           if (var2Lifetime1 != 1) {
-            var7 = this.field_e * this.field_f;
+            var7 = this.entries * this.dimensions;
           } else {
-            var7 = cr.a(this.field_e, this.field_f);
+            var7 = VorbisCodebook.lookup1Values(this.entries, this.dimensions);
           }
-          this.field_b = new int[var7];
+          this.multiplicands = new int[var7];
           for (var8 = 0; var8 < var7; var8++) {
-            this.field_b[var8] = fca.c(var5Lifetime1);
+            this.multiplicands[var8] = VorbisSample.readBits(var5Lifetime1);
           }
-          this.field_d = new float[this.field_e][this.field_f];
+          this.vectors = new float[this.entries][this.dimensions];
           if (var2Lifetime1 != 1) {
-            for (var8Lifetime1 = 0; var8Lifetime1 < this.field_e; var8Lifetime1++) {
+            for (var8Lifetime1 = 0; var8Lifetime1 < this.entries; var8Lifetime1++) {
               var9 = 0.0f;
-              var10 = var8Lifetime1 * this.field_f;
-              for (var11 = 0; var11 < this.field_f; var11++) {
-                var12 = (float)this.field_b[var10] * var4 + var3 + var9;
-                this.field_d[var8Lifetime1][var11] = var12;
+              var10 = var8Lifetime1 * this.dimensions;
+              for (var11 = 0; var11 < this.dimensions; var11++) {
+                var12 = (float)this.multiplicands[var10] * var4 + var3 + var9;
+                this.vectors[var8Lifetime1][var11] = var12;
                 if (var6 != 0) {
                   var9 = var12;
                 }
@@ -118,13 +118,13 @@ final class cr {
               }
             }
           } else {
-            for (var8Lifetime1 = 0; var8Lifetime1 < this.field_e; var8Lifetime1++) {
+            for (var8Lifetime1 = 0; var8Lifetime1 < this.entries; var8Lifetime1++) {
               var9 = 0.0f;
               var10 = 1;
-              for (var11 = 0; var11 < this.field_f; var11++) {
+              for (var11 = 0; var11 < this.dimensions; var11++) {
                 var12_int = var8Lifetime1 / var10 % var7;
-                var13 = (float)this.field_b[var12_int] * var4 + var3 + var9;
-                this.field_d[var8Lifetime1][var11] = var13;
+                var13 = (float)this.multiplicands[var12_int] * var4 + var3 + var9;
+                this.vectors[var8Lifetime1][var11] = var13;
                 if (var6 != 0) {
                   var9 = var13;
                 }
@@ -135,7 +135,7 @@ final class cr {
         }
     }
 
-    private final void a() {
+    private final void buildDecodeTree() {
         int[] var2_ref_int__;
         int var2;
         int var3;
@@ -160,12 +160,12 @@ final class cr {
         int var10Lifetime1;
         int var8Lifetime2;
         int var9_intLifetime1;
-        var17 = new int[this.field_e];
+        var17 = new int[this.entries];
         var14 = new int[33];
         var12 = var14;
         var2_ref_int__ = var12;
-        for (var3 = 0; var3 < this.field_e; var3++) {
-          var4 = this.field_c[var3];
+        for (var3 = 0; var3 < this.entries; var3++) {
+          var4 = this.codewordLengths[var3];
           if (var4 != 0) {
             {
               var5 = 1 << 32 - var4;
@@ -198,10 +198,10 @@ final class cr {
             }
           }
         }
-        this.field_a = new int[8];
+        this.decodeTree = new int[8];
         var2 = 0;
-        for (var3Lifetime1 = 0; var3Lifetime1 < this.field_e; var3Lifetime1++) {
-          var4Lifetime1 = this.field_c[var3Lifetime1];
+        for (var3Lifetime1 = 0; var3Lifetime1 < this.entries; var3Lifetime1++) {
+          var4Lifetime1 = this.codewordLengths[var3Lifetime1];
           if (var4Lifetime1 != 0) {
             var5Lifetime1 = var17[var3Lifetime1];
             var6Lifetime1 = 0;
@@ -210,24 +210,24 @@ final class cr {
               if ((var5Lifetime1 & var8Lifetime1) == 0) {
                 var6Lifetime1++;
               } else {
-                if (this.field_a[var6Lifetime1] == 0) {
-                  this.field_a[var6Lifetime1] = var2;
+                if (this.decodeTree[var6Lifetime1] == 0) {
+                  this.decodeTree[var6Lifetime1] = var2;
                 }
-                var6Lifetime1 = this.field_a[var6Lifetime1];
+                var6Lifetime1 = this.decodeTree[var6Lifetime1];
               }
-              if (var6Lifetime1 >= this.field_a.length) {
-                var9 = new int[this.field_a.length * 2];
+              if (var6Lifetime1 >= this.decodeTree.length) {
+                var9 = new int[this.decodeTree.length * 2];
                 var11 = 0;
                 var10Lifetime1 = var11;
-                while (var11 < this.field_a.length) {
-                  var9[var11] = this.field_a[var11];
+                while (var11 < this.decodeTree.length) {
+                  var9[var11] = this.decodeTree[var11];
                   var11++;
                 }
-                this.field_a = var9;
+                this.decodeTree = var9;
               }
               var8Lifetime1 = var8Lifetime1 >>> 1;
             }
-            this.field_a[var6Lifetime1] = ~var3Lifetime1;
+            this.decodeTree[var6Lifetime1] = ~var3Lifetime1;
             if (var6Lifetime1 >= var2) {
               var2 = var6Lifetime1 + 1;
             }

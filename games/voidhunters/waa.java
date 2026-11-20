@@ -263,12 +263,12 @@ final class waa extends dqa implements jpb, oo {
         }
     }
 
-    final static sd a(asb param0, byte param1, int param2) {
+    final static MusicPatch a(asb param0, byte param1, int param2) {
         byte[] var3 = null;
         RuntimeException var3_ref = null;
         int var4 = 0;
         byte[] var5 = null;
-        sd stackIn_4_0 = null;
+        MusicPatch stackIn_4_0 = null;
         RuntimeException stackIn_7_0 = null;
         StringBuilder stackIn_7_1 = null;
         String stackIn_8_2 = null;
@@ -280,7 +280,7 @@ final class waa extends dqa implements jpb, oo {
             return null;
           }
           var4 = -102 % ((param1 - 24) / 60);
-          stackIn_4_0 = new sd(var5);
+          stackIn_4_0 = new MusicPatch(var5);
           return stackIn_4_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

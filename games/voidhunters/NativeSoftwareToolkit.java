@@ -10,7 +10,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements e {
     private pw field_j;
     private int field_d;
     private int field_f;
-    private gnb field_i;
+    private NodeHashTable field_i;
     private a[] field_g;
     private boolean field_h;
     private int field_l;
@@ -33,7 +33,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements e {
         try {
           java.lang.reflect.Method var6 = null;
           Class var7 = null;
-          p var4 = (p) (this.field_i.a((long)param0.hashCode(), 122));
+          p var4 = (p) (this.field_i.get((long)param0.hashCode(), 122));
           if (var4 == null) {
             try {
               var7 = Class.forName("java.awt.Canvas");
@@ -42,7 +42,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements e {
             } catch (Exception exception) {
             }
             var4 = new p(this, param0, param1, param2);
-            this.field_i.a((long)param0.hashCode(), var4, (byte) -127);
+            this.field_i.put((long)param0.hashCode(), var4, (byte) -127);
           } else {
             if (var4.field_e != param1 ||
               var4.field_g != param2) {
@@ -83,7 +83,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements e {
         this.field_g = null;
         this.field_e = null;
         this.field_k = null;
-        this.field_i.a((byte) -103);
+        this.field_i.clear((byte) -103);
         ya var1 = (ya) (this.field_c.first(0));
         while (var1 != null) {
           var1.ga();
@@ -322,7 +322,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements e {
     private final void a(java.awt.Canvas param0) {
         p var2 = null;
         if (param0 != null) {
-          var2 = (p) (this.field_i.a((long)param0.hashCode(), 124));
+          var2 = (p) (this.field_i.get((long)param0.hashCode(), 124));
           this.field_e = var2;
           this.t(var2);
         } else {
@@ -362,7 +362,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements e {
         this.field_c = new IntrusiveDeque();
         this.field_f = 4096;
         this.field_d = 4096;
-        this.field_i = new gnb(4);
+        this.field_i = new NodeHashTable(4);
         this.field_h = false;
         try {
           if (!RasterBuffer.a("sw3d", (byte) 114)) {

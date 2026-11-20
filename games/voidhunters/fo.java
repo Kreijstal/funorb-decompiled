@@ -39,8 +39,8 @@ final class fo {
                     return false;
                   }
                   this.field_b.a(0, (long)(6 * param4));
-                  this.field_b.a(hbb.field_N, 6, 0, -30541);
-                  var7_int = (hbb.field_N[5] & 255) + (65280 & hbb.field_N[4] << 8) + ((255 & hbb.field_N[3]) << 16);
+                  this.field_b.a(MidiPcmStream.field_N, 6, 0, -30541);
+                  var7_int = (MidiPcmStream.field_N[5] & 255) + (65280 & MidiPcmStream.field_N[4] << 8) + ((255 & MidiPcmStream.field_N[3]) << 16);
                   if (var7_int <= 0 ||
                     !((this.field_c.b(0) / 520L) >= (long)var7_int)) {
                     return false;
@@ -51,14 +51,14 @@ final class fo {
                     var7_int = 1;
                   }
                 }
-                hbb.field_N[0] = (byte)(param3 >> 16);
-                hbb.field_N[5] = (byte)var7_int;
-                hbb.field_N[2] = (byte)param3;
-                hbb.field_N[1] = (byte)(param3 >> 8);
-                hbb.field_N[3] = (byte)(var7_int >> 16);
-                hbb.field_N[4] = (byte)(var7_int >> 8);
+                MidiPcmStream.field_N[0] = (byte)(param3 >> 16);
+                MidiPcmStream.field_N[5] = (byte)var7_int;
+                MidiPcmStream.field_N[2] = (byte)param3;
+                MidiPcmStream.field_N[1] = (byte)(param3 >> 8);
+                MidiPcmStream.field_N[3] = (byte)(var7_int >> 16);
+                MidiPcmStream.field_N[4] = (byte)(var7_int >> 8);
                 this.field_b.a(0, (long)(param4 * 6));
-                this.field_b.a(6, 0, (byte) -117, hbb.field_N);
+                this.field_b.a(6, 0, (byte) -117, MidiPcmStream.field_N);
                 var8 = 0;
                 var9 = 0;
                 scanLoop1: while (true) {
@@ -69,7 +69,7 @@ final class fo {
                       this.field_c.a(0, (long)(520 * var7_int));
                       if (param4 <= 65535) {
                         try {
-                          this.field_c.a(hbb.field_N, 8, 0, -30541);
+                          this.field_c.a(MidiPcmStream.field_N, 8, 0, -30541);
                           decompiledRegionSelector0 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter0) {
                           decompiledCaughtException = decompiledCaughtParameter0;
@@ -79,13 +79,13 @@ final class fo {
                         if (decompiledRegionSelector0 != 0) {
                           break scanLoop1;
                         }
-                        var11 = ((hbb.field_N[0] & 255) << 8) + (255 & hbb.field_N[1]);
-                        var10 = (255 & hbb.field_N[6]) + ((hbb.field_N[4] << 16 & 16711680) + (hbb.field_N[5] << 8 & 65280));
-                        var13 = 255 & hbb.field_N[7];
-                        var12 = ((hbb.field_N[2] & 255) << 8) + (255 & hbb.field_N[3]);
+                        var11 = ((MidiPcmStream.field_N[0] & 255) << 8) + (255 & MidiPcmStream.field_N[1]);
+                        var10 = (255 & MidiPcmStream.field_N[6]) + ((MidiPcmStream.field_N[4] << 16 & 16711680) + (MidiPcmStream.field_N[5] << 8 & 65280));
+                        var13 = 255 & MidiPcmStream.field_N[7];
+                        var12 = ((MidiPcmStream.field_N[2] & 255) << 8) + (255 & MidiPcmStream.field_N[3]);
                       } else {
                         try {
-                          this.field_c.a(hbb.field_N, 10, 0, -30541);
+                          this.field_c.a(MidiPcmStream.field_N, 10, 0, -30541);
                           decompiledRegionSelector1 = 0;
                         } catch (java.io.EOFException decompiledCaughtParameter1) {
                           decompiledCaughtException = decompiledCaughtParameter1;
@@ -95,10 +95,10 @@ final class fo {
                         if (decompiledRegionSelector1 != 0) {
                           break scanLoop1;
                         }
-                        var13 = hbb.field_N[9] & 255;
-                        var12 = (255 & hbb.field_N[5]) + (hbb.field_N[4] << 8 & 65280);
-                        var10 = (hbb.field_N[6] << 16 & 16711680) - (-(65280 & hbb.field_N[7] << 8) - (hbb.field_N[8] & 255));
-                        var11 = (hbb.field_N[3] & 255) + ((255 & hbb.field_N[1]) << 16) + (hbb.field_N[0] << 24 & -16777216) + ((hbb.field_N[2] & 255) << 8);
+                        var13 = MidiPcmStream.field_N[9] & 255;
+                        var12 = (255 & MidiPcmStream.field_N[5]) + (MidiPcmStream.field_N[4] << 8 & 65280);
+                        var10 = (MidiPcmStream.field_N[6] << 16 & 16711680) - (-(65280 & MidiPcmStream.field_N[7] << 8) - (MidiPcmStream.field_N[8] & 255));
+                        var11 = (MidiPcmStream.field_N[3] & 255) + ((255 & MidiPcmStream.field_N[1]) << 16) + (MidiPcmStream.field_N[0] << 24 & -16777216) + ((MidiPcmStream.field_N[2] & 255) << 8);
                       }
                       if ((var11 == param4 &&
                         var12 == var9 &&
@@ -125,18 +125,18 @@ final class fo {
                       var10 = 0;
                     }
                     if (param4 > 65535) {
-                      hbb.field_N[8] = (byte)var10;
-                      hbb.field_N[7] = (byte)(var10 >> 8);
-                      hbb.field_N[5] = (byte)var9;
-                      hbb.field_N[0] = (byte)(param4 >> 24);
-                      hbb.field_N[6] = (byte)(var10 >> 16);
-                      hbb.field_N[9] = (byte)this.field_d;
-                      hbb.field_N[4] = (byte)(var9 >> 8);
-                      hbb.field_N[1] = (byte)(param4 >> 16);
-                      hbb.field_N[2] = (byte)(param4 >> 8);
-                      hbb.field_N[3] = (byte)param4;
+                      MidiPcmStream.field_N[8] = (byte)var10;
+                      MidiPcmStream.field_N[7] = (byte)(var10 >> 8);
+                      MidiPcmStream.field_N[5] = (byte)var9;
+                      MidiPcmStream.field_N[0] = (byte)(param4 >> 24);
+                      MidiPcmStream.field_N[6] = (byte)(var10 >> 16);
+                      MidiPcmStream.field_N[9] = (byte)this.field_d;
+                      MidiPcmStream.field_N[4] = (byte)(var9 >> 8);
+                      MidiPcmStream.field_N[1] = (byte)(param4 >> 16);
+                      MidiPcmStream.field_N[2] = (byte)(param4 >> 8);
+                      MidiPcmStream.field_N[3] = (byte)param4;
                       this.field_c.a(0, (long)(var7_int * 520));
-                      this.field_c.a(10, 0, (byte) -120, hbb.field_N);
+                      this.field_c.a(10, 0, (byte) -120, MidiPcmStream.field_N);
                       var11 = -var8 + param3;
                       if (var11 > 510) {
                         var11 = 510;
@@ -144,16 +144,16 @@ final class fo {
                       this.field_c.a(var11, var8, (byte) -106, param0);
                       var8 = var8 + var11;
                     } else {
-                      hbb.field_N[3] = (byte)var9;
-                      hbb.field_N[6] = (byte)var10;
-                      hbb.field_N[0] = (byte)(param4 >> 8);
-                      hbb.field_N[4] = (byte)(var10 >> 16);
-                      hbb.field_N[5] = (byte)(var10 >> 8);
-                      hbb.field_N[7] = (byte)this.field_d;
-                      hbb.field_N[1] = (byte)param4;
-                      hbb.field_N[2] = (byte)(var9 >> 8);
+                      MidiPcmStream.field_N[3] = (byte)var9;
+                      MidiPcmStream.field_N[6] = (byte)var10;
+                      MidiPcmStream.field_N[0] = (byte)(param4 >> 8);
+                      MidiPcmStream.field_N[4] = (byte)(var10 >> 16);
+                      MidiPcmStream.field_N[5] = (byte)(var10 >> 8);
+                      MidiPcmStream.field_N[7] = (byte)this.field_d;
+                      MidiPcmStream.field_N[1] = (byte)param4;
+                      MidiPcmStream.field_N[2] = (byte)(var9 >> 8);
                       this.field_c.a(0, (long)(520 * var7_int));
-                      this.field_c.a(8, 0, (byte) -114, hbb.field_N);
+                      this.field_c.a(8, 0, (byte) -114, MidiPcmStream.field_N);
                       var11 = param3 - var8;
                       if (var11 > 512) {
                         var11 = 512;
@@ -277,9 +277,9 @@ final class fo {
                 return (byte[]) (stackIn_3_0);
               }
               this.field_b.a(0, (long)(6 * param1));
-              this.field_b.a(hbb.field_N, 6, 0, -30541);
-              var4_int = (255 & hbb.field_N[2]) + (((255 & hbb.field_N[0]) << 16) + ((255 & hbb.field_N[1]) << 8));
-              var5 = (hbb.field_N[3] << 16 & 16711680) + (hbb.field_N[4] << 8 & 65280) + (hbb.field_N[5] & 255);
+              this.field_b.a(MidiPcmStream.field_N, 6, 0, -30541);
+              var4_int = (255 & MidiPcmStream.field_N[2]) + (((255 & MidiPcmStream.field_N[0]) << 16) + ((255 & MidiPcmStream.field_N[1]) << 8));
+              var5 = (MidiPcmStream.field_N[3] << 16 & 16711680) + (MidiPcmStream.field_N[4] << 8 & 65280) + (MidiPcmStream.field_N[5] & 255);
               if (var4_int < 0) {
                 return null;
               }
@@ -310,21 +310,21 @@ final class fo {
                   if (var9 > 510) {
                     var9 = 510;
                   }
-                  this.field_c.a(hbb.field_N, var9 + var14, 0, -30541);
-                  var10 = (255 & hbb.field_N[3]) + (((hbb.field_N[2] & 255) << 8) + ((hbb.field_N[0] & 255) << 24) + ((255 & hbb.field_N[1]) << 16));
-                  var12 = ((hbb.field_N[7] & 255) << 8) + (16711680 & hbb.field_N[6] << 16) + (hbb.field_N[8] & 255);
-                  var13 = hbb.field_N[9] & 255;
-                  var11 = (255 & hbb.field_N[5]) + (65280 & hbb.field_N[4] << 8);
+                  this.field_c.a(MidiPcmStream.field_N, var9 + var14, 0, -30541);
+                  var10 = (255 & MidiPcmStream.field_N[3]) + (((MidiPcmStream.field_N[2] & 255) << 8) + ((MidiPcmStream.field_N[0] & 255) << 24) + ((255 & MidiPcmStream.field_N[1]) << 16));
+                  var12 = ((MidiPcmStream.field_N[7] & 255) << 8) + (16711680 & MidiPcmStream.field_N[6] << 16) + (MidiPcmStream.field_N[8] & 255);
+                  var13 = MidiPcmStream.field_N[9] & 255;
+                  var11 = (255 & MidiPcmStream.field_N[5]) + (65280 & MidiPcmStream.field_N[4] << 8);
                 } else {
                   var14 = 8;
                   if (512 < var9) {
                     var9 = 512;
                   }
-                  this.field_c.a(hbb.field_N, var14 + var9, 0, -30541);
-                  var13 = hbb.field_N[7] & 255;
-                  var11 = (255 & hbb.field_N[3]) + ((hbb.field_N[2] & 255) << 8);
-                  var12 = (255 & hbb.field_N[6]) + ((255 & hbb.field_N[4]) << 16) + (65280 & hbb.field_N[5] << 8);
-                  var10 = (hbb.field_N[1] & 255) + (65280 & hbb.field_N[0] << 8);
+                  this.field_c.a(MidiPcmStream.field_N, var14 + var9, 0, -30541);
+                  var13 = MidiPcmStream.field_N[7] & 255;
+                  var11 = (255 & MidiPcmStream.field_N[3]) + ((MidiPcmStream.field_N[2] & 255) << 8);
+                  var12 = (255 & MidiPcmStream.field_N[6]) + ((255 & MidiPcmStream.field_N[4]) << 16) + (65280 & MidiPcmStream.field_N[5] << 8);
+                  var10 = (MidiPcmStream.field_N[1] & 255) + (65280 & MidiPcmStream.field_N[0] << 8);
                 }
                 if (param1 != var10) {
                   return null;
@@ -346,7 +346,7 @@ final class fo {
                 for (var16 = var14; var15 > var16; var16++) {
                   incrementValue$2 = var7;
                   var7++;
-                  var6[incrementValue$2] = hbb.field_N[var16];
+                  var6[incrementValue$2] = MidiPcmStream.field_N[var16];
                 }
                 var8++;
               }

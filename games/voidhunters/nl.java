@@ -30,7 +30,7 @@ final class nl extends IntrusiveNode {
           }
           while (var2 != null) {
             if (var2.field_g.isLinked((byte) -63)) {
-              var2.field_e.e(128 + kt.field_l * var2.field_d >> 8);
+              var2.field_e.setGain(128 + kt.field_l * var2.field_d >> 8);
             } else {
               var2.unlink(-3846);
             }
@@ -43,7 +43,7 @@ final class nl extends IntrusiveNode {
               if (!stackIn_13_0) {
                 var2Lifetime1.unlink(param1 ^ 15505);
               } else {
-                var2Lifetime1.field_e.e(kt.field_l * var2Lifetime1.field_d + 128 >> 8);
+                var2Lifetime1.field_e.setGain(kt.field_l * var2Lifetime1.field_d + 128 >> 8);
               }
               var2Lifetime1 = (ana) (GetSniperCannonReload.field_o.next((byte) 100));
             }

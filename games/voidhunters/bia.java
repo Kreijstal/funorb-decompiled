@@ -42,9 +42,9 @@ class bia extends tb {
         GetPlayerRepairTime.field_p.addLast(-10258, var1_refLifetime1);
     }
 
-    final static qkb a(boolean param0) {
+    final static PcmStreamMixer a(boolean param0) {
         if (!param0) {
-          return (qkb) null;
+          return (PcmStreamMixer) null;
         }
         return kpb.field_q;
     }

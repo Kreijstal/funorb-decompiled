@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class fgb extends DualLinkNode {
-    static gnb field_k;
+    static NodeHashTable field_k;
     static llb field_l;
     static long[] field_m;
 
@@ -38,6 +38,6 @@ class fgb extends DualLinkNode {
     }
 
     static {
-        field_k = new gnb(8);
+        field_k = new NodeHashTable(8);
     }
 }

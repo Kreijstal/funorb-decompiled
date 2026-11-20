@@ -374,7 +374,7 @@ final class bv {
               var24Lifetime1 = param1.a(0, var16);
             }
           }
-          ibb.a(1, param3, -1, param6, (byte) -117, param7, -5 + var16, var15);
+          OpenGlShaderProgram.a(1, param3, -1, param6, (byte) -117, param7, -5 + var16, var15);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

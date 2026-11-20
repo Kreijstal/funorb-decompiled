@@ -7,7 +7,7 @@ final class ehb {
     static int field_e;
     private DualLinkNode field_b;
     private vga field_c;
-    private gnb field_d;
+    private NodeHashTable field_d;
     private int field_a;
 
     final void a(long param0, byte param1, DualLinkNode param2) {
@@ -33,7 +33,7 @@ final class ehb {
               var5.unlinkSecondary((byte) -35);
             }
           }
-          this.field_d.a(param0, param2, (byte) -126);
+          this.field_d.put(param0, param2, (byte) -126);
           this.field_c.a(param2, -94);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -52,7 +52,7 @@ final class ehb {
 
     final DualLinkNode a(long param0, int param1) {
         int var5 = 0;
-        DualLinkNode var4 = (DualLinkNode) (this.field_d.a(param0, 117));
+        DualLinkNode var4 = (DualLinkNode) (this.field_d.get(param0, 117));
         int var5Lifetime1;
         if (var4 == null) {
           var5 = -104 % ((-26 - param1) / 38);
@@ -77,7 +77,7 @@ final class ehb {
         this.field_a = param0;
         for (var2 = 1; param0 > var2 + var2; var2 = var2 + var2) {
         }
-        this.field_d = new gnb(var2);
+        this.field_d = new NodeHashTable(var2);
     }
 
     static {

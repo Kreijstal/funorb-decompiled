@@ -122,8 +122,8 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
           this.angle = this.angle + this.angularvelocity;
           this.y = this.y + this.dy;
           this.angularvelocity = GetMissileLauncherEnergyUsed.field_q * this.angularvelocity / SetMassDriverEnergyUsed.field_o;
-          this.dy = this.dy * ibb.field_a / SetMissilesCooldown.field_o;
-          this.dx = ibb.field_a * this.dx / SetMissilesCooldown.field_o;
+          this.dy = this.dy * OpenGlShaderProgram.field_a / SetMissilesCooldown.field_o;
+          this.dx = OpenGlShaderProgram.field_a * this.dx / SetMissilesCooldown.field_o;
           if (param0) {
             param2.field_u.a(this.boundingbox, (byte) -105);
           }

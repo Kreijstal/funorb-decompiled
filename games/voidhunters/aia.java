@@ -193,7 +193,7 @@ class aia extends pib {
           jaggl.OpenGL.glPixelStorei(3317, 1);
           if (param5 &&
             this.field_b != 34037) {
-            ue.a(param6, 0, param7, param1, param2, param3, param4);
+            OpenGlShader.uploadByteTextureMipmaps(param6, 0, param7, param1, param2, param3, param4);
             this.a((byte) 62, true);
           } else {
             jaggl.OpenGL.glTexImage2Dub(this.field_b, 0, this.field_d, this.field_h, this.field_j, 0, param7, 5121, param6, 0);

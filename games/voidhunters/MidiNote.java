@@ -3,30 +3,30 @@
  */
 import java.io.*;
 
-final class fkb extends IntrusiveNode {
-    int field_k;
+final class MidiNote extends IntrusiveNode {
+    int samplesUntilUpdate;
     static tjb field_m;
-    int field_v;
-    gd field_y;
-    cja field_g;
-    int field_o;
-    int field_r;
-    int field_h;
+    int releasePosition;
+    PcmSample sample;
+    MidiEnvelope envelope;
+    int channel;
+    int envelopePosition;
+    int portamentoDelta;
     static String field_z;
-    int field_l;
-    int field_u;
-    int field_i;
-    int field_w;
-    sd field_n;
-    int field_f;
-    int field_e;
-    int field_p;
-    int field_d;
-    int field_q;
-    int field_x;
-    fga field_j;
-    int field_t;
-    int field_s;
+    int portamentoProgress;
+    int pan;
+    int decayTime;
+    int releaseEnvelopeIndex;
+    MusicPatch patch;
+    int envelopeIndex;
+    int vibratoPhase;
+    int retriggerPhase;
+    int basePitch;
+    int age;
+    int key;
+    PcmSampleStream stream;
+    int velocityScale;
+    int exclusiveGroup;
 
     final static int a(int param0, byte param1) {
         if (param1 != -121) {
@@ -42,23 +42,23 @@ final class fkb extends IntrusiveNode {
         return SetTorpedoEnergyUsed.a(param0, 300).field_e;
     }
 
-    final void c(int param0) {
-        this.field_y = null;
+    final void clearVoiceReferences(int param0) {
+        this.sample = null;
         if (param0 == 25804) {
-          this.field_j = null;
-          this.field_g = null;
-          this.field_n = null;
+          this.stream = null;
+          this.envelope = null;
+          this.patch = null;
           return;
         }
         field_z = (String) null;
-        this.field_j = null;
-        this.field_g = null;
-        this.field_n = null;
+        this.stream = null;
+        this.envelope = null;
+        this.patch = null;
     }
 
     public static void clearSharedReferences(int param0) {
         if (param0 != -25815) {
-          fkb.clearSharedReferences(-108);
+          MidiNote.clearSharedReferences(-108);
           field_m = null;
           field_z = null;
           return;
@@ -67,7 +67,7 @@ final class fkb extends IntrusiveNode {
         field_z = null;
     }
 
-    final static void a(int param0) {
+    final static void resetFrameTiming(int param0) {
         int var1_int = 0;
         int var2 = VoidHunters.field_G;
         int var1_intLifetime1;
@@ -88,10 +88,10 @@ final class fkb extends IntrusiveNode {
         }
     }
 
-    fkb() {
+    MidiNote() {
     }
 
-    final static void a(int param0, Object param1, File param2) {
+    final static void writeSerializedObject(int param0, Object param1, File param2) {
         try {
           RuntimeException stackIn_11_0 = null;
           StringBuilder stackIn_11_1 = null;

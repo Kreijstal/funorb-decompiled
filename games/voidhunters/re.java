@@ -296,7 +296,7 @@ final class re extends ar {
     final static void a(int param0, byte param1) {
         GetMutatorVotes.field_p = param0;
         if (null != SetMassDriverRandomness.field_o) {
-          SetMassDriverRandomness.field_o.b(param0, (byte) 14);
+          SetMassDriverRandomness.field_o.setMasterVolume(param0, (byte) 14);
           if (param1 >= -93) {
             re.clearSharedReferences(-100);
             if (null != GetBurstFireMaxEnergy.field_p) {

@@ -139,7 +139,7 @@ final class qh extends iw implements oo {
               this.m((byte) -10);
             }
           } else {
-            gnb.a(0);
+            NodeHashTable.a(0);
             this.m((byte) -10);
           }
           if (param0 == 11) {

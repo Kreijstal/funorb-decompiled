@@ -67,7 +67,7 @@ final class hb {
         }
     }
 
-    final static void a(kka param0, byte param1) {
+    final static void a(MusicTrack param0, byte param1) {
         try {
           AdminMessage.a(32, true, param0);
           int var2_int = -81 / ((param1 + 42) / 61);

@@ -29,7 +29,7 @@ final class dha {
     boolean[] field_l;
     byte[][] field_G;
     int field_a;
-    static kka field_u;
+    static MusicTrack field_u;
     int[][] field_f;
     boolean[] field_m;
     int field_y;

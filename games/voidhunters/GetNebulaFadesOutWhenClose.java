@@ -31,7 +31,7 @@ final class GetNebulaFadesOutWhenClose extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static ana a(int param0, gd param1) {
+    final static ana a(int param0, PcmSample param1) {
         RuntimeException var2 = null;
         ana stackIn_2_0 = null;
         ana stackIn_4_0 = null;
@@ -41,7 +41,7 @@ final class GetNebulaFadesOutWhenClose extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 <= -85) {
-            stackIn_4_0 = ka.a(61, fga.a(param1, 100, 96));
+            stackIn_4_0 = ka.a(61, PcmSampleStream.create(param1, 100, 96));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ana) null;
@@ -62,7 +62,7 @@ final class GetNebulaFadesOutWhenClose extends ConsoleCommand {
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
-        gd var4 = null;
+        PcmSample var4 = null;
         ConsoleValue stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
@@ -70,8 +70,8 @@ final class GetNebulaFadesOutWhenClose extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            var4 = (gd) null;
-            GetNebulaFadesOutWhenClose.a(-99, (gd) null);
+            var4 = (PcmSample) null;
+            GetNebulaFadesOutWhenClose.a(-99, (PcmSample) null);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(17, 86));
           return stackIn_3_0;

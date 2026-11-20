@@ -544,10 +544,10 @@ final class asb {
                 hrb.field_b = false;
                 if (tib.field_i == null) {
                   tib.field_i = new byte[ocb.field_l];
-                  mia.field_a = new boolean[ocb.field_l];
+                  AudioPump.field_a = new boolean[ocb.field_l];
                 }
                 for (var17_int = 0; var7 > var17_int; var17_int++) {
-                  mia.field_a[var17_int] = false;
+                  AudioPump.field_a[var17_int] = false;
                 }
                 MissionBuilder.a(var7, var9, param1, -1, 93, param2, 0, -1);
                 if (2 <= SetAngularVelocitySustain.field_p &&
@@ -669,7 +669,7 @@ final class asb {
                     var21 = var22;
                   }
                   for (var24 = 0; var7 > var24; var24++) {
-                    if (mia.field_a[var24]) {
+                    if (AudioPump.field_a[var24]) {
                       var25_ref = "</col>" + ClientException.field_c[var24] + "<col=A00000>";
                       var22 = var25_ref;
                       var21 = var22;

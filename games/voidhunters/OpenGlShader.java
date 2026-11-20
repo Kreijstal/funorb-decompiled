@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ue {
+final class OpenGlShader {
     private OpenGlGpuToolkit field_b;
     static String field_c;
     static int field_a;
@@ -12,7 +12,7 @@ final class ue {
         super.finalize();
     }
 
-    final static void a(byte[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final static void uploadByteTextureMipmaps(byte[] param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int var17 = 0;
         int var21 = 0;
         int var22 = 0;
@@ -109,7 +109,7 @@ final class ue {
         try {
           if (param1 != 111) {
             byte[] var5 = (byte[]) null;
-            ue.a((byte[]) null, -33, -97, 6, -100, 46, -12);
+            OpenGlShader.uploadByteTextureMipmaps((byte[]) null, -33, -97, 6, -100, 46, -12);
           }
           SetMissilesExplosionPower.field_p = param0;
           Lo.field_o = param2;
@@ -126,7 +126,7 @@ final class ue {
         field_c = null;
     }
 
-    ue(OpenGlGpuToolkit param0, long param1, int param2) {
+    OpenGlShader(OpenGlGpuToolkit param0, long param1, int param2) {
         try {
           this.field_b = param0;
           this.field_d = param1;

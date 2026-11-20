@@ -28,7 +28,7 @@ final class feb {
             stackIn_3_0 = GetBombletSprayProjectileLife.field_q;
             return stackIn_3_0;
           }
-          var2 = (qgb) (fgb.field_k.a((long)param0.field_b, 124));
+          var2 = (qgb) (fgb.field_k.get((long)param0.field_b, 124));
           if (!param1) {
             field_b = (int[]) null;
           }
@@ -40,7 +40,7 @@ final class feb {
               var2.unlink(-3846);
             }
             var3 = new kla(param0);
-            fgb.field_k.a((long)param0.field_b, new qgb(param0, var3), (byte) -127);
+            fgb.field_k.put((long)param0.field_b, new qgb(param0, var3), (byte) -127);
           }
           GetAutoaim.field_p = param0;
           GetBombletSprayProjectileLife.field_q = var3;

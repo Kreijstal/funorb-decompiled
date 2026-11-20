@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetMassDriverRandomness extends ConsoleCommand {
-    static hbb field_o;
+    static MidiPcmStream field_o;
 
     SetMassDriverRandomness(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);

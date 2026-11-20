@@ -43,14 +43,14 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
     }
 
     final static void a(int param0, int param1, byte param2) {
-        gd var10 = null;
+        PcmSample var10 = null;
         ana var11 = null;
         int var4 = 0;
-        gd var12 = null;
+        PcmSample var12 = null;
         nl var3 = null;
-        gd var12Lifetime1;
+        PcmSample var12Lifetime1;
         nl var3Lifetime1;
-        gd var12Lifetime2;
+        PcmSample var12Lifetime2;
         int var4Lifetime1;
         if (kba.field_a == null) {
           return;
@@ -71,7 +71,7 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
           var12 = var10;
           var12Lifetime2 = var10;
           var11 = GetNebulaFadesOutWhenClose.a(-102, var10);
-          var11.field_e.d(-1);
+          var11.field_e.setLoopCount(-1);
           var3 = new nl();
           var3.field_h = true;
           var3.field_d = var11;
@@ -91,7 +91,7 @@ final class GetBombletSprayProjectileDamage extends ConsoleCommand {
         }
         var12Lifetime1 = fa.field_d[var4Lifetime1];
         ana var13 = GetNebulaFadesOutWhenClose.a(-102, var12Lifetime1);
-        var13.field_e.d(-1);
+        var13.field_e.setLoopCount(-1);
         var3Lifetime1 = new nl();
         var3Lifetime1.field_h = true;
         var3Lifetime1.field_d = var13;

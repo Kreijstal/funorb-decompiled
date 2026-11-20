@@ -31,7 +31,7 @@ final class SetNumStars extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          hbb.field_z = arguments[0].intValue(9);
+          MidiPcmStream.field_z = arguments[0].intValue(9);
           if (obfuscationGuard > -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, 67);

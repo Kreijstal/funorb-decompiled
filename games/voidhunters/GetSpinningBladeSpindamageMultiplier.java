@@ -23,8 +23,8 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
         GetDebrisGroupColour.field_r.KA(0, 0, var9.width, var9.height);
         ocb.f(-10150);
         if (param0 != -9934) {
-          qkb var8 = (qkb) null;
-          GetSpinningBladeSpindamageMultiplier.a((byte) 16, (asb) null, -27, (qkb) null);
+          PcmStreamMixer var8 = (PcmStreamMixer) null;
+          GetSpinningBladeSpindamageMultiplier.a((byte) 16, (asb) null, -27, (PcmStreamMixer) null);
           SetBombletSprayProjectiles.a(-126);
           var2 = GetMassDriverProjectiles.field_q;
           GetMassDriverProjectiles.field_q = vq.field_x.field_e.field_b.field_a;
@@ -172,7 +172,7 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
         }
     }
 
-    final static void a(byte param0, asb param1, int param2, qkb param3) {
+    final static void a(byte param0, asb param1, int param2, PcmStreamMixer param3) {
         GetShieldsDamageEnergyConversion.field_p = param2 * SetGrapplingHookRopeBreakLength.e(204) / 1000;
         GetPlayerRepairTime.a(param1, false);
         km.a(param1, (byte) 36);

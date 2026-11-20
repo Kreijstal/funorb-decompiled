@@ -3,7 +3,7 @@
  */
 final class aaa {
     static String field_a;
-    static vka field_b;
+    static AudioOutput field_b;
 
     public static void clearSharedReferences(byte param0) {
         field_b = null;

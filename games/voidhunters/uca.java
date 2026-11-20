@@ -1110,7 +1110,7 @@ final class uca {
           var18Lifetime1 = ((Ship) (var9)).getDragging(57);
           var26 = var24.world.i(21363, var18Lifetime1);
           if (var26 != null &&
-            ((Ship) (var9)).chassis.j(1) + var26.chassis.j(1) > ue.field_a) {
+            ((Ship) (var9)).chassis.j(1) + var26.chassis.j(1) > OpenGlShader.field_a) {
             ArmBehaviour.a(2, 0, 200, MissionControl.field_a.toUpperCase());
           }
         }
@@ -2433,7 +2433,7 @@ final class uca {
               SetBuildViewAutozoomTimeout.a(true, this.field_U, -36 + var26, var27 - 24, 30);
               var30_int = var26 + 160;
               var31 = 29 + var27;
-              ibb.a(var21, this.field_U, -1, ShipTeamCondition.field_f[this.field_y].toUpperCase(), (byte) -106, 2, var31, var30_int);
+              OpenGlShaderProgram.a(var21, this.field_U, -1, ShipTeamCondition.field_f[this.field_y].toUpperCase(), (byte) -106, 2, var31, var30_int);
               var31 = var31 + (36 - GetPointDefenceLaserProjectiles.a(false, 2));
               var32 = ThrusterBehaviour.field_a[this.field_y];
               if (var32 != null) {
@@ -2462,7 +2462,7 @@ final class uca {
               }
               if (var33 != null) {
                 var44 = ((String) (var33)).toUpperCase();
-                ibb.a(56035, this.field_U, -1, var44, (byte) -70, 2, var28_int + var27, var30_int);
+                OpenGlShaderProgram.a(56035, this.field_U, -1, var44, (byte) -70, 2, var28_int + var27, var30_int);
               }
               SetMissileLauncherEnergyUsed.a(54236, (byte) 7, 25 + var27, 14.0f, this.field_U, var7 + var13 - 25);
               var34 = 0;
@@ -6498,7 +6498,7 @@ final class uca {
             if (!param1) {
               this.c(-17410);
             }
-            var7Lifetime1 = gnb.field_a;
+            var7Lifetime1 = NodeHashTable.field_a;
             var8 = var7Lifetime1 + CarouselSlotStateDump.field_g;
             var9 = 8;
             var10 = 7680 / var9;
@@ -6702,7 +6702,7 @@ final class uca {
                         this.a(var10, var33Lifetime1, var8, -62, this.field_F >> 1, var20);
                       }
                       var34_ref_String = GetBlueprintSaveTime.field_o[var15.field_l];
-                      ibb.a(16777215, this.field_F, 1, var34_ref_String, (byte) -69, 3, var19, var16 / 2 + (var18 - tea.a(3, var34_ref_String, 13879) / 2));
+                      OpenGlShaderProgram.a(16777215, this.field_F, 1, var34_ref_String, (byte) -69, 3, var19, var16 / 2 + (var18 - tea.a(3, var34_ref_String, 13879) / 2));
                     } else {
                       mmb.field_d[101].a(var18, var19, 0, var33Lifetime1, 1);
                       if (var25 != 0) {
@@ -8140,7 +8140,7 @@ final class uca {
                 if (var20 > var8) {
                   var8 = var20;
                 }
-                var5 = var5 + (tib.a(true, var9) + fkb.a(var9, (byte) -121));
+                var5 = var5 + (tib.a(true, var9) + MidiNote.a(var9, (byte) -121));
               }
             }
           }
@@ -8155,7 +8155,7 @@ final class uca {
                 if (var8 < var18_intLifetime1) {
                   var8 = var18_intLifetime1;
                 }
-                var5 = var5 + (tib.a(true, var9) + fkb.a(var9, (byte) -121));
+                var5 = var5 + (tib.a(true, var9) + MidiNote.a(var9, (byte) -121));
               }
             }
           }
@@ -8178,7 +8178,7 @@ final class uca {
                 }
                 var42 = var40 + ": " + var18_intLifetime2 + var41;
                 var20Lifetime1 = -tea.a(var9, var42, 13879) + var6;
-                var21 = tib.a(true, var9) + fkb.a(var9, (byte) -121);
+                var21 = tib.a(true, var9) + MidiNote.a(var9, (byte) -121);
                 var22 = var7 + var21 + var10;
                 var23_int = GetReloadBarWidth.field_o[var29.label];
                 var24 = qpb.a(false, var23_int, 13894143);
@@ -8187,7 +8187,7 @@ final class uca {
                   var25 = eu.a(128 * SetMinimapWidth.field_o, 96) >> 9;
                   var24 = dib.a((byte) 66, 16711680, var25, var24);
                 }
-                SetSelfDestructPrepareToggleCooldown.a(var20Lifetime1, -1, -fkb.a(var9, (byte) -121) + var22, var42, var9, var24, (byte) -117);
+                SetSelfDestructPrepareToggleCooldown.a(var20Lifetime1, -1, -MidiNote.a(var9, (byte) -121) + var22, var42, var9, var24, (byte) -117);
                 var10 = var10 + (var21 - 1);
               }
             }
@@ -8203,9 +8203,9 @@ final class uca {
                 var18 = GetSniperCannonAimarc.a((byte) -38, param1, var45) + ":";
                 var19 = var45.t(0);
                 var20Lifetime2 = qpb.a(false, var45.getTeam((byte) 66), 13894143);
-                var21Lifetime1 = tib.a(true, var9) + fkb.a(var9, (byte) -121);
+                var21Lifetime1 = tib.a(true, var9) + MidiNote.a(var9, (byte) -121);
                 var22Lifetime1 = var7 - (-var21Lifetime1 - var10);
-                woa.a(var20Lifetime2, -fkb.a(var9, (byte) -121) + var22Lifetime1, -3 + var6 - var12, (byte) 74, -1, var9, var18);
+                woa.a(var20Lifetime2, -MidiNote.a(var9, (byte) -121) + var22Lifetime1, -3 + var6 - var12, (byte) 74, -1, var9, var18);
                 var10 = var10 + (var21Lifetime1 - 1);
                 SetMissionTerrainDebrisProbability.a(var20Lifetime2, var19, var22Lifetime1 - var21Lifetime1 / 2 - 2, 4, false, var12, -var12 + (var6 + 1), 2);
                 if (var13 != null &&

@@ -66,7 +66,7 @@ final class nmb extends hrb {
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          kpb.field_q.a(param1.field_e);
+          kpb.field_q.removeSubStream(param1.field_e);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

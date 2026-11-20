@@ -3,19 +3,19 @@
  */
 import java.io.*;
 
-final class bmb {
-    private gnb field_e;
+final class SoundCache {
+    private NodeHashTable pendingMusicSamples;
     static String field_b;
-    private asb field_d;
-    private asb field_c;
-    private gnb field_a;
+    private asb soundEffectArchive;
+    private asb musicSampleArchive;
+    private NodeHashTable decodedSamples;
 
-    private final gd a(byte param0, int param1, int[] param2, int param3) {
-        gd discarded$0 = null;
-        gd stackIn_5_0 = null;
+    private final PcmSample loadMusicSample(byte param0, int param1, int[] param2, int param3) {
+        PcmSample discarded$0 = null;
+        PcmSample stackIn_5_0 = null;
         Object stackIn_14_0 = null;
         Object stackIn_18_0 = null;
-        gd stackIn_20_0 = null;
+        PcmSample stackIn_20_0 = null;
         RuntimeException stackIn_23_0 = null;
         StringBuilder stackIn_23_1 = null;
         String stackIn_24_2 = null;
@@ -23,19 +23,19 @@ final class bmb {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        gd var8 = null;
-        fca var9 = null;
+        PcmSample var8 = null;
+        VorbisSample var9 = null;
         String var10 = null;
-        gd var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = (param3 << 4 & 65522 | param3 >>> 12) ^ param1;
           if (param0 <= 52) {
             var10 = (String) null;
-            discarded$0 = this.a((String) null, (int[]) null, (byte) -7, (String) null);
+            discarded$0 = this.loadNamedMusicSample((String) null, (int[]) null, (byte) -7, (String) null);
           }
           var5_int = var5_int | param3 << 16;
           var6 = (long)var5_int ^ 4294967296L;
-          var8 = (gd) (this.field_a.a(var6, 103));
+          var8 = (PcmSample) (this.decodedSamples.get(var6, 103));
           if (var8 != null) {
             stackIn_5_0 = var8;
             return stackIn_5_0;
@@ -44,22 +44,22 @@ final class bmb {
             0 >= param2[0]) {
             return null;
           }
-          var9 = (fca) (this.field_e.a(var6, 117));
+          var9 = (VorbisSample) (this.pendingMusicSamples.get(var6, 117));
           if (var9 == null) {
-            var9 = fca.a(this.field_c, param3, param1);
+            var9 = VorbisSample.load(this.musicSampleArchive, param3, param1);
             if (var9 == null) {
               stackIn_14_0 = null;
-              return (gd) (stackIn_14_0);
+              return (PcmSample) (stackIn_14_0);
             }
-            this.field_e.a(var6, var9, (byte) -122);
+            this.pendingMusicSamples.put(var6, var9, (byte) -122);
           }
-          var8Lifetime1 = var9.a(param2);
+          var8Lifetime1 = var9.toPcmSample(param2);
           if (var8Lifetime1 == null) {
             stackIn_18_0 = null;
-            return (gd) (stackIn_18_0);
+            return (PcmSample) (stackIn_18_0);
           }
           var9.unlink(-3846);
-          this.field_a.a(var6, var8Lifetime1, (byte) -114);
+          this.decodedSamples.put(var6, var8Lifetime1, (byte) -114);
           stackIn_20_0 = var8Lifetime1;
           return stackIn_20_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -76,15 +76,15 @@ final class bmb {
         }
     }
 
-    private final gd a(String param0, int[] param1, byte param2, String param3) {
-        gd discarded$1 = null;
+    private final PcmSample loadNamedMusicSample(String param0, int[] param1, byte param2, String param3) {
+        PcmSample discarded$1 = null;
         int var5_int = 0;
         RuntimeException var5 = null;
         int var6 = 0;
         int[] var7 = null;
         Object stackIn_4_0 = null;
         Object stackIn_7_0 = null;
-        gd stackIn_9_0 = null;
+        PcmSample stackIn_9_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
@@ -96,20 +96,20 @@ final class bmb {
         try {
           if (param2 > 0) {
             var7 = (int[]) null;
-            discarded$1 = this.a(-78, (byte) 66, -88, (int[]) null);
+            discarded$1 = this.loadSoundEffect(-78, (byte) 66, -88, (int[]) null);
           }
-          var5_int = this.field_c.b(param0, -75);
+          var5_int = this.musicSampleArchive.b(param0, -75);
           if (var5_int < 0) {
             stackIn_4_0 = null;
-            return (gd) (stackIn_4_0);
+            return (PcmSample) (stackIn_4_0);
           }
-          var6 = this.field_c.a(true, var5_int, param3);
+          var6 = this.musicSampleArchive.a(true, var5_int, param3);
           if (var6 >= 0) {
-            stackIn_9_0 = this.a((byte) 123, var6, param1, var5_int);
+            stackIn_9_0 = this.loadMusicSample((byte) 123, var6, param1, var5_int);
             return stackIn_9_0;
           }
           stackIn_7_0 = null;
-          return (gd) (stackIn_7_0);
+          return (PcmSample) (stackIn_7_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var5 = decompiledCaughtException;
@@ -136,7 +136,7 @@ final class bmb {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, eab param4, long param5, String param6, boolean param7, int param8, int param9, boolean param10, int param11, int param12, int param13) {
+    final static void initializeClientProtocol(int param0, int param1, int param2, int param3, eab param4, long param5, String param6, boolean param7, int param8, int param9, boolean param10, int param11, int param12, int param13) {
         try {
           RuntimeException stackIn_12_0 = null;
           StringBuilder stackIn_12_1 = null;
@@ -160,7 +160,7 @@ final class bmb {
             GetUseRectFill.field_p = param12;
             ProjectileFactory.field_a = param3;
             if (param2 < 46) {
-              bmb.clearSharedReferences((byte) -11);
+              SoundCache.clearSharedReferences((byte) -11);
             }
             GetRespawnTime.field_o = param7;
             if (null == cp.field_n.field_o) {
@@ -199,27 +199,27 @@ final class bmb {
         }
     }
 
-    private final gd a(int param0, byte param1, int param2, int[] param3) {
+    private final PcmSample loadSoundEffect(int param0, byte param1, int param2, int[] param3) {
         int var5_int = 0;
         RuntimeException var5 = null;
         long var6 = 0L;
-        gd var8 = null;
-        ab var9 = null;
+        PcmSample var8 = null;
+        SoundEffect var9 = null;
         int var10 = 0;
-        gd var11 = null;
-        gd stackIn_3_0 = null;
+        PcmSample var11 = null;
+        PcmSample stackIn_3_0 = null;
         Object stackIn_7_0 = null;
-        gd stackIn_14_0 = null;
+        PcmSample stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
-        gd var8Lifetime1;
+        PcmSample var8Lifetime1;
         try {
           var5_int = (param0 << 4 & 65530 | param0 >>> 12) ^ param2;
           var5_int = var5_int | param0 << 16;
           var6 = (long)var5_int;
-          var8 = (gd) (this.field_a.a(var6, 103));
+          var8 = (PcmSample) (this.decodedSamples.get(var6, 103));
           if (var8 != null) {
             stackIn_3_0 = var8;
             return stackIn_3_0;
@@ -227,17 +227,17 @@ final class bmb {
           if (param3 != null &&
             param3[0] <= 0) {
             stackIn_7_0 = null;
-            return (gd) (stackIn_7_0);
+            return (PcmSample) (stackIn_7_0);
           }
-          var9 = ab.a(this.field_d, param0, param2);
+          var9 = SoundEffect.load(this.soundEffectArchive, param0, param2);
           if (var9 == null) {
             return null;
           }
-          var11 = var9.b();
+          var11 = var9.toPcmSample();
           var8Lifetime1 = var11;
-          this.field_a.a(var6, var8Lifetime1, (byte) -113);
+          this.decodedSamples.put(var6, var8Lifetime1, (byte) -113);
           if (param3 != null) {
-            param3[0] = param3[0] - var11.field_i.length;
+            param3[0] = param3[0] - var11.samples.length;
           }
           var10 = 3 / ((param1 - 67) / 51);
           stackIn_14_0 = var8Lifetime1;
@@ -256,10 +256,10 @@ final class bmb {
         }
     }
 
-    final gd a(String param0, String param1, byte param2) {
+    final PcmSample getMusicSampleByName(String param0, String param1, byte param2) {
         RuntimeException var4 = null;
         String var5 = null;
-        gd stackIn_3_0 = null;
+        PcmSample stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -269,9 +269,9 @@ final class bmb {
         try {
           if (param2 <= 48) {
             var5 = (String) null;
-            this.a((String) null, (String) null, (byte) 100);
+            this.getMusicSampleByName((String) null, (String) null, (byte) 100);
           }
-          stackIn_3_0 = this.a(param0, (int[]) null, (byte) -56, param1);
+          stackIn_3_0 = this.loadNamedMusicSample(param0, (int[]) null, (byte) -56, param1);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -293,28 +293,28 @@ final class bmb {
         }
     }
 
-    final gd a(byte param0, int param1, int[] param2) {
-        gd discarded$1 = null;
+    final PcmSample getMusicSample(byte param0, int param1, int[] param2) {
+        PcmSample discarded$1 = null;
         RuntimeException var4 = null;
         int[] var5 = null;
-        gd stackIn_3_0 = null;
-        gd stackIn_7_0 = null;
+        PcmSample stackIn_3_0 = null;
+        PcmSample stackIn_7_0 = null;
         RuntimeException stackIn_13_0 = null;
         StringBuilder stackIn_13_1 = null;
         String stackIn_14_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_c.c((byte) 95) == 1) {
-            stackIn_3_0 = this.a((byte) 101, param1, param2, 0);
+          if (this.musicSampleArchive.c((byte) 95) == 1) {
+            stackIn_3_0 = this.loadMusicSample((byte) 101, param1, param2, 0);
             return stackIn_3_0;
           }
-          if (this.field_c.b(param1, param0 - 7069) == 1) {
-            stackIn_7_0 = this.a((byte) 112, 0, param2, param1);
+          if (this.musicSampleArchive.b(param1, param0 - 7069) == 1) {
+            stackIn_7_0 = this.loadMusicSample((byte) 112, 0, param2, param1);
             return stackIn_7_0;
           }
           if (param0 != 127) {
             var5 = (int[]) null;
-            discarded$1 = this.a((byte) -33, -89, (int[]) null, -16);
+            discarded$1 = this.loadMusicSample((byte) -33, -89, (int[]) null, -16);
           }
           throw new RuntimeException();
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -331,26 +331,26 @@ final class bmb {
         }
     }
 
-    final gd a(byte param0, int[] param1, int param2) {
+    final PcmSample getSoundEffect(byte param0, int[] param1, int param2) {
         RuntimeException var4 = null;
-        gd stackIn_2_0 = null;
-        gd stackIn_8_0 = null;
+        PcmSample stackIn_2_0 = null;
+        PcmSample stackIn_8_0 = null;
         RuntimeException stackIn_12_0 = null;
         StringBuilder stackIn_12_1 = null;
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_d.c((byte) 68) == 1) {
-            stackIn_2_0 = this.a(0, (byte) -68, param2, param1);
+          if (this.soundEffectArchive.c((byte) 68) == 1) {
+            stackIn_2_0 = this.loadSoundEffect(0, (byte) -68, param2, param1);
             return stackIn_2_0;
           }
           if (param0 != -16) {
             field_b = (String) null;
           }
-          if (this.field_d.b(param2, param0 ^ 6930) != 1) {
+          if (this.soundEffectArchive.b(param2, param0 ^ 6930) != 1) {
             throw new RuntimeException();
           }
-          stackIn_8_0 = this.a(param2, (byte) -93, 0, param1);
+          stackIn_8_0 = this.loadSoundEffect(param2, (byte) -93, 0, param1);
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -371,12 +371,12 @@ final class bmb {
         field_b = null;
     }
 
-    bmb(asb param0, asb param1) {
-        this.field_e = new gnb(256);
-        this.field_a = new gnb(256);
+    SoundCache(asb param0, asb param1) {
+        this.pendingMusicSamples = new NodeHashTable(256);
+        this.decodedSamples = new NodeHashTable(256);
         try {
-          this.field_d = param0;
-          this.field_c = param1;
+          this.soundEffectArchive = param0;
+          this.musicSampleArchive = param1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bmb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

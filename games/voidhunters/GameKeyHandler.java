@@ -66,7 +66,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
           if (null != GetMomentOfInertiaPerpointCalcDownshift.field_q) {
             var2_int = param0.getKeyChar();
             if (0 != var2_int && var2_int != 65535 &&
-              mia.a((char) var2_int, true)) {
+              AudioPump.isCp1252Character((char) var2_int, true)) {
               var3 = SetComponentBreakingExplosionForceMultiplier.field_o + 1 & 127;
               if (var3 != bva.field_c) {
                 ServerTickFactory.field_a[SetComponentBreakingExplosionForceMultiplier.field_o] = -1;

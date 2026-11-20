@@ -101,7 +101,7 @@ final class wgb extends eca {
     final static void a(float param0, float param1, float param2, int param3, float param4, float param5, float param6) {
         if (vjb.field_b == null) {
           vjb.field_b = new sfb(kpb.field_q);
-          aaa.field_b.a(vjb.field_b);
+          aaa.field_b.setStream(vjb.field_b);
           vjb.field_b.d(param0);
           vjb.field_b.c(param4);
           vjb.field_b.b(param2);

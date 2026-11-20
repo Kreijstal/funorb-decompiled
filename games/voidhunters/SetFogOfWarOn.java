@@ -64,7 +64,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_use_polygon_fill(" + SetServerinfoComponentstate.field_o + ")");
         System.out.println("set_show_tutorial(" + SetUseExtraBackground.field_p + ")");
         System.out.println("set_fps(" + Particle.field_l + ")");
-        System.out.println("set_radial_menu_radius(" + gnb.field_a + ")");
+        System.out.println("set_radial_menu_radius(" + NodeHashTable.field_a + ")");
         System.out.println("set_minimap_width(" + GetAiFiringRangeUpshift.field_o + ")");
         System.out.println("set_minimap_height(" + vv.field_c + ")");
         System.out.println("set_health_bar_width(" + tu.field_d + ")");
@@ -99,7 +99,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_build_view_autozoom(" + GetPointDefenceLaserPulsetime.field_q + ")");
         System.out.println("set_build_view_autozoom_timeout(" + SetShipTeamActionFactory.field_c + ")");
         System.out.println("set_build_view_autozoom_end_on_action(" + SetSniperCannonReload.field_o + ")");
-        System.out.println("set_num_stars(" + hbb.field_z + ")");
+        System.out.println("set_num_stars(" + MidiPcmStream.field_z + ")");
         System.out.println("set_use_bloom(" + ul.field_a + ")");
         System.out.println("set_use_sprites(" + GetUseSprites.field_o + ")");
         System.out.println("set_use_background(" + AwardVictoryToWinnerAction.field_b + ")");
@@ -155,7 +155,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_salvo_damage_multiplier(" + GetVelocitySustain.field_o + ")");
         System.out.println("set_salvo_repair_time_multiplier(" + GrappleLauncherBehaviour.field_d + ")");
         System.out.println("set_mp_sandbox_enemy_spawn_limit(" + gda.field_d + ")");
-        System.out.println("set_max_ship_size(" + ue.field_a + ")");
+        System.out.println("set_max_ship_size(" + OpenGlShader.field_a + ")");
         System.out.println("set_fighters_per_player_maximum(" + wk.field_a + ")");
         System.out.println("set_burst_fire_max_energy(" + PartitionZone.field_e + ")");
         System.out.println("set_burst_fire_regeneration_rate(" + sja.field_b + ")");
@@ -287,7 +287,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_thruster_force(" + CarouselSystemEvent.field_b + ")");
         System.out.println("set_thruster_booster_force(" + enb.field_c + ")");
         System.out.println("set_thruster_small_force(" + ConsoleCommandRegistry.field_a + ")");
-        System.out.println("set_velocity_sustain(" + ibb.field_a + ")");
+        System.out.println("set_velocity_sustain(" + OpenGlShaderProgram.field_a + ")");
         System.out.println("set_velocity_sustain_max(" + SetMissilesCooldown.field_o + ")");
         System.out.println("set_angular_velocity_sustain(" + GetMissileLauncherEnergyUsed.field_q + ")");
         System.out.println("set_thruster_particle_speed_downshift(" + GetSalvoHoldable.field_p + ")");

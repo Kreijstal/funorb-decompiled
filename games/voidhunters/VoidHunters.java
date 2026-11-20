@@ -21,7 +21,7 @@ public final class VoidHunters extends NetworkGameClient {
         try {
           if (this.field_D == -1) {
             for (var4_int = 0; var4_int < param1.levels.length; var4_int++) {
-              GetThrusterParticleLife.field_o.b(param1.levels[var4_int], (byte) 18, var4_int);
+              GetThrusterParticleLife.field_o.setChannelGain(param1.levels[var4_int], (byte) 18, var4_int);
             }
           } else {
             GetThrusterParticleLife.field_o.a((byte) 125, 4000, param1);
@@ -601,7 +601,7 @@ public final class VoidHunters extends NetworkGameClient {
           }
           if (this.field_C == -1) {
             for (var4_int = 0; param0.levels.length > var4_int; var4_int++) {
-              uga.field_g.b(param0.levels[var4_int], (byte) 18, var4_int);
+              uga.field_g.setChannelGain(param0.levels[var4_int], (byte) 18, var4_int);
             }
           } else {
             uga.field_g.a((byte) -115, 4000, param0);
@@ -625,11 +625,11 @@ public final class VoidHunters extends NetworkGameClient {
     final void initializeGame(boolean param0) {
         this.a(false, 110, 92);
         eu.field_i = new fcb();
-        hbb var6 = new hbb();
-        var6.a(128, (byte) 96, 9);
+        MidiPcmStream var6 = new MidiPcmStream();
+        var6.setDefaultProgram(128, (byte) 96, 9);
         GetThrusterParticleLife.field_o = new fdb();
         uga.field_g = new fdb(GetThrusterParticleLife.field_o);
-        hbb var3 = new hbb();
+        MidiPcmStream var3 = new MidiPcmStream();
         dra var4 = new dra(GetThrusterParticleLife.field_o, uga.field_g, var3);
         kr.a((byte) -32, true, SetTorpedoProjectiles.field_o, (java.awt.Component) ((Object) igb.field_a), var4, 22050);
         vfa var5 = new vfa(new iab());
@@ -719,7 +719,7 @@ public final class VoidHunters extends NetworkGameClient {
                 if (var5 == 5) {
                   if (this.field_B <= 0) {
                     for (var6_int = 0; var6_int < 16; var6_int++) {
-                      uga.field_g.b(0, (byte) 18, var6_int);
+                      uga.field_g.setChannelGain(0, (byte) 18, var6_int);
                     }
                     AdminMessage.a(32, false, pab.field_k[2]);
                     this.field_B = 500;
@@ -728,7 +728,7 @@ public final class VoidHunters extends NetworkGameClient {
                   if (6 == var5 &&
                     this.field_B <= 0) {
                     for (var6_int = 0; var6_int < 16; var6_int++) {
-                      uga.field_g.b(0, (byte) 18, var6_int);
+                      uga.field_g.setChannelGain(0, (byte) 18, var6_int);
                     }
                     AdminMessage.a(32, false, pab.field_k[3]);
                     this.field_B = 500;
@@ -973,15 +973,15 @@ public final class VoidHunters extends NetworkGameClient {
         pea.clearSharedReferences(true);
         sra.clearSharedReferences(96);
         ii.clearSharedReferences(25498);
-        bmb.clearSharedReferences((byte) -120);
+        SoundCache.clearSharedReferences((byte) -120);
         dqb.clearSharedReferences(15060);
         tea.clearSharedReferences(!param0 ? true : false);
-        hbb.clearSharedReferences(!param0 ? true : false);
-        gnb.clearSharedReferences((byte) 19);
-        fkb.clearSharedReferences(-25815);
-        q.clearSharedReferences();
-        ht.clearSharedReferences(false);
-        vka.clearSharedReferences();
+        MidiPcmStream.clearSharedReferences(!param0 ? true : false);
+        NodeHashTable.clearSharedReferences((byte) 19);
+        MidiNote.clearSharedReferences(-25815);
+        MidiFileReader.clearSharedReferences();
+        MusicPatchPcmStream.clearSharedReferences(false);
+        AudioOutput.clearSharedReferences();
         iab.clearSharedReferences(2);
         um.clearSharedReferences(100);
         lc.clearSharedReferences(95);
@@ -1071,13 +1071,13 @@ public final class VoidHunters extends NetworkGameClient {
         PlayerReady.clearSharedReferences((byte) -88);
         hp.clearSharedReferences(false);
         fnb.clearSharedReferences(-19);
-        mia.clearSharedReferences(-11954);
+        AudioPump.clearSharedReferences(-11954);
         PlayerVote.clearSharedReferences((byte) -98);
         sa.clearSharedReferences();
         ComponentBehaviour.clearSharedReferences(0);
         TimedSpecialOrderBehaviour.clearSharedReferences(126);
         uab.clearSharedReferences(0);
-        fca.clearSharedReferences();
+        VorbisSample.clearSharedReferences();
         wma.clearSharedReferences(118);
         csa.clearSharedReferences((byte) 124);
         cjb.clearSharedReferences(0);
@@ -1088,7 +1088,7 @@ public final class VoidHunters extends NetworkGameClient {
         cv.clearSharedReferences();
         dha.clearSharedReferences(53);
         fia.clearSharedReferences((byte) -28);
-        ota.clearSharedReferences();
+        VorbisFloor.clearSharedReferences();
         qd.clearSharedReferences((byte) 66);
         pfb.clearSharedReferences(118);
         bbb.clearSharedReferences(0);
@@ -1112,7 +1112,7 @@ public final class VoidHunters extends NetworkGameClient {
         km.clearSharedReferences((byte) 114);
         jma.clearSharedReferences(100);
         ga.clearSharedReferences((byte) -110);
-        qda.clearSharedReferences();
+        SoundInstrument.clearSharedReferences();
         tga.clearSharedReferences(88);
         uf.clearSharedReferences((byte) -128);
         ttb.clearSharedReferences(16711935);
@@ -1123,7 +1123,7 @@ public final class VoidHunters extends NetworkGameClient {
         reb.clearSharedReferences(false);
         w.clearSharedReferences((byte) 77);
         ut.clearSharedReferences(-72);
-        cja.clearSharedReferences(-17719);
+        MidiEnvelope.clearSharedReferences(-17719);
         ata.clearSharedReferences(6344);
         fj.clearSharedReferences(0);
         ita.clearSharedReferences((byte) 106);
@@ -1199,7 +1199,7 @@ public final class VoidHunters extends NetworkGameClient {
         elb.clearSharedReferences((byte) 78);
         hk.clearSharedReferences(-1210841460);
         oqb.clearSharedReferences((byte) -123);
-        hc.clearSharedReferences();
+        SoundFilter.clearSharedReferences();
         SecondaryNodeDequeIterator.clearSharedReferences((byte) -101);
         lia.clearSharedReferences(97);
         uva.clearSharedReferences();
@@ -1260,7 +1260,7 @@ public final class VoidHunters extends NetworkGameClient {
         vhb.clearSharedReferences(21053);
         hla.clearSharedReferences((byte) 39);
         asa.clearSharedReferences(20000000);
-        ue.clearSharedReferences((byte) 124);
+        OpenGlShader.clearSharedReferences((byte) 124);
         sja.clearSharedReferences((byte) 120);
         CarouselCommongameInfoFactory.clearSharedReferences(111);
         MidiChannelLevels.clearSharedReferences((byte) -99);
@@ -1837,12 +1837,12 @@ public final class VoidHunters extends NetworkGameClient {
           VoidHunters.checkDuplicateReference(true, (Object) null);
         }
         for (var2Lifetime1 = 0; var2Lifetime1 < 16; var2Lifetime1++) {
-          GetThrusterParticleLife.field_o.b(0, (byte) 18, var2Lifetime1);
+          GetThrusterParticleLife.field_o.setChannelGain(0, (byte) 18, var2Lifetime1);
         }
         wgb.a(SetMissileLauncherEnergyUsed.field_p, GetMissileLauncherProjectiles.field_o, MapClearanceRectangleFactory.field_a, -131, qua.field_b, nl.field_n, CommonGameState.field_i);
         fka.a("Initing audiohandler", (byte) -64);
         qn.c((byte) 89);
-        fkb.a(2096);
+        MidiNote.resetFrameTiming(2096);
         fka.a("Finished loadloop", (byte) -128);
         if (this.l(0) &&
           GetPhasedEnergyBeamPulsetime.e((byte) 116)) {
@@ -1913,7 +1913,7 @@ public final class VoidHunters extends NetworkGameClient {
             hn.field_a = hn.field_a + 1;
             if (16 == hn.field_a) {
               if (!hpb.field_i) {
-                gnb.a(0);
+                NodeHashTable.a(0);
               } else {
                 pla.a(0);
               }
@@ -2430,7 +2430,7 @@ public final class VoidHunters extends NetworkGameClient {
             var6Lifetime2 = 1;
             var7Lifetime2 = (GetBombletSprayEnergyUsed.field_p.width >> 1) - (tea.a(var6Lifetime2, var5, 13879) >> 1);
             var8Lifetime1 = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (GetPointDefenceLaserProjectiles.a(false, var6Lifetime2) >> 1);
-            BlackBoxRecording.a((byte) -115, 200, fkb.a(var6Lifetime2, (byte) -121) * 8, var7Lifetime2 - 16, var8Lifetime1 - 5 * fkb.a(var6Lifetime2, (byte) -121), 32 + tea.a(var6Lifetime2, var5, 13879));
+            BlackBoxRecording.a((byte) -115, 200, MidiNote.a(var6Lifetime2, (byte) -121) * 8, var7Lifetime2 - 16, var8Lifetime1 - 5 * MidiNote.a(var6Lifetime2, (byte) -121), 32 + tea.a(var6Lifetime2, var5, 13879));
             SetSelfDestructPrepareToggleCooldown.a(var7Lifetime2, 1, var8Lifetime1, var5, var6Lifetime2, 16777215, (byte) -101);
           }
           stackIn_81_0 = 0;

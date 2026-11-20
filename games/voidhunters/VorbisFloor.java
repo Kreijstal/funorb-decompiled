@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ota {
+final class VorbisFloor {
     private static boolean[] field_j;
     private int[] field_f;
     private int[] field_l;
@@ -15,7 +15,7 @@ final class ota {
     private int[] field_b;
     private int field_d;
 
-    final void a(float[] param0, int param1) {
+    final void apply(float[] param0, int param1) {
         int stackIn_5_0 = 0;
         int[] stackIn_9_0 = null;
         int stackIn_9_1 = 0;
@@ -50,9 +50,9 @@ final class ota {
         field_j[1] = true;
         var5[0] = true;
         for (var6 = 2; var6 < var3; var6++) {
-          var7 = ota.b(field_i, var6);
-          var8_int = ota.a(field_i, var6);
-          var9 = this.a(field_i[var7], field_h[var7], field_i[var8_int], field_h[var8_int], field_i[var6]);
+          var7 = VorbisFloor.findLowNeighbor(field_i, var6);
+          var8_int = VorbisFloor.findHighNeighbor(field_i, var6);
+          var9 = this.interpolatePoint(field_i[var7], field_h[var7], field_i[var8_int], field_h[var8_int], field_i[var6]);
           var10 = field_h[var6];
           var11 = var4 - var9;
           var12 = var9;
@@ -88,7 +88,7 @@ final class ota {
             }
           }
         }
-        this.a(0, var3 - 1);
+        this.sortFloorPoints(0, var3 - 1);
         var6Lifetime1 = 0;
         var7Lifetime1 = field_h[0] * this.field_d;
         var16 = 1;
@@ -97,7 +97,7 @@ final class ota {
           if (field_j[var16]) {
             var9Lifetime1 = field_i[var16];
             var10Lifetime1 = field_h[var16] * this.field_d;
-            this.a(var6Lifetime1, var7Lifetime1, var9Lifetime1, var10Lifetime1, param0, param1);
+            this.applyLine(var6Lifetime1, var7Lifetime1, var9Lifetime1, var10Lifetime1, param0, param1);
             if (var9Lifetime1 >= param1) {
               return;
             }
@@ -112,7 +112,7 @@ final class ota {
         }
     }
 
-    private final static int a(int[] param0, int param1) {
+    private final static int findHighNeighbor(int[] param0, int param1) {
         int var5 = 0;
         int var2;
         int var3;
@@ -140,7 +140,7 @@ final class ota {
         field_j = null;
     }
 
-    private final static int b(int[] param0, int param1) {
+    private final static int findLowNeighbor(int[] param0, int param1) {
         int var5 = 0;
         int var2;
         int var3;
@@ -160,7 +160,7 @@ final class ota {
         return var3;
     }
 
-    final boolean b() {
+    final boolean decode() {
         int var6 = 0;
         int var12 = 0;
         int incrementValue$0 = 0;
@@ -179,7 +179,7 @@ final class ota {
         int var10;
         int var11;
         int var13;
-        stackIn_3_0 = (fca.c() == 0) ? 0 : 1;
+        stackIn_3_0 = (VorbisSample.readBit() == 0) ? 0 : 1;
         var1 = stackIn_3_0;
         if (var1 == 0) {
           return false;
@@ -188,8 +188,8 @@ final class ota {
         System.arraycopy(this.field_e, 0, field_i, 0, var2);
         var3 = field_g[this.field_d - 1];
         var4 = SetMutatorVotes.a(var3 - 1, 103);
-        field_h[0] = fca.c(var4);
-        field_h[1] = fca.c(var4);
+        field_h[0] = VorbisSample.readBits(var4);
+        field_h[1] = VorbisSample.readBits(var4);
         var5 = 2;
         for (var6 = 0; var6 < this.field_b.length; var6++) {
           var7 = this.field_b[var6];
@@ -198,7 +198,7 @@ final class ota {
           var10 = (1 << var9) - 1;
           var11 = 0;
           if (var9 > 0) {
-            var11 = fca.field_s[this.field_f[var7]].b();
+            var11 = VorbisSample.codebooks[this.field_f[var7]].decodeScalar();
           }
           for (var12 = 0; var12 < var8; var12++) {
             var13 = this.field_k[var7][var11 & var10];
@@ -210,7 +210,7 @@ final class ota {
             if (var13 < 0) {
               stackIn_14_2 = 0;
             } else {
-              stackIn_14_2 = fca.field_s[var13].b();
+              stackIn_14_2 = VorbisSample.codebooks[var13].decodeScalar();
             }
             stackIn_13_0[stackIn_13_1] = stackIn_14_2;
           }
@@ -218,7 +218,7 @@ final class ota {
         return true;
     }
 
-    private final void a(int param0, int param1, int param2, int param3, float[] param4, int param5) {
+    private final void applyLine(int param0, int param1, int param2, int param3, float[] param4, int param5) {
         int var14 = 0;
         int var7 = param3 - param1;
         int var8 = param2 - param0;
@@ -244,7 +244,7 @@ final class ota {
         }
     }
 
-    private final void a(int param0, int param1) {
+    private final void sortFloorPoints(int param0, int param1) {
         int var7 = 0;
         int var3;
         int var4;
@@ -273,11 +273,11 @@ final class ota {
         field_i[var3] = var4;
         field_h[var3] = var5;
         field_j[var3] = var6 != 0;
-        this.a(param0, var3 - 1);
-        this.a(var3 + 1, param1);
+        this.sortFloorPoints(param0, var3 - 1);
+        this.sortFloorPoints(var3 + 1, param1);
     }
 
-    private final int a(int param0, int param1, int param2, int param3, int param4) {
+    private final int interpolatePoint(int param0, int param1, int param2, int param3, int param4) {
         int var6 = param3 - param1;
         int var7 = param2 - param0;
         int var8 = var6 < 0 ? -var6 : var6;
@@ -286,7 +286,7 @@ final class ota {
         return var6 < 0 ? param1 - var10 : param1 + var10;
     }
 
-    ota() {
+    VorbisFloor() {
         int dupTemp$1 = 0;
         int var8 = 0;
         int incrementValue$0 = 0;
@@ -307,15 +307,15 @@ final class ota {
         int var5Lifetime1;
         int var5Lifetime2;
         int var5Lifetime3;
-        var1 = fca.c(16);
+        var1 = VorbisSample.readBits(16);
         if (var1 != 1) {
           throw new RuntimeException();
         }
-        var2 = fca.c(5);
+        var2 = VorbisSample.readBits(5);
         var3 = 0;
         this.field_b = new int[var2];
         for (var4 = 0; var4 < var2; var4++) {
-          var5 = fca.c(4);
+          var5 = VorbisSample.readBits(4);
           this.field_b[var4] = var5;
           if (var5 >= var3) {
             var3 = var5 + 1;
@@ -326,12 +326,12 @@ final class ota {
         this.field_f = new int[var3];
         this.field_k = new int[var3][];
         for (var4Lifetime1 = 0; var4Lifetime1 < var3; var4Lifetime1++) {
-          this.field_c[var4Lifetime1] = fca.c(3) + 1;
-          dupTemp$1 = fca.c(2);
+          this.field_c[var4Lifetime1] = VorbisSample.readBits(3) + 1;
+          dupTemp$1 = VorbisSample.readBits(2);
           this.field_l[var4Lifetime1] = dupTemp$1;
           var5Lifetime1 = dupTemp$1;
           if (var5Lifetime1 != 0) {
-            this.field_f[var4Lifetime1] = fca.c(8);
+            this.field_f[var4Lifetime1] = VorbisSample.readBits(8);
           }
           var5Lifetime1 = 1 << var5Lifetime1;
           var10 = new int[var5Lifetime1];
@@ -339,11 +339,11 @@ final class ota {
           var6_ref_int__ = var9;
           this.field_k[var4Lifetime1] = var10;
           for (var7 = 0; var7 < var5Lifetime1; var7++) {
-            var6_ref_int__[var7] = fca.c(8) - 1;
+            var6_ref_int__[var7] = VorbisSample.readBits(8) - 1;
           }
         }
-        this.field_d = fca.c(2) + 1;
-        var4Lifetime2 = fca.c(4);
+        this.field_d = VorbisSample.readBits(2) + 1;
+        var4Lifetime2 = VorbisSample.readBits(4);
         var5Lifetime2 = 2;
         for (var6 = 0; var6 < var2; var6++) {
           var5Lifetime2 = var5Lifetime2 + this.field_c[this.field_b[var6]];
@@ -357,7 +357,7 @@ final class ota {
           for (var8 = 0; var8 < this.field_c[var7Lifetime1]; var8++) {
             incrementValue$0 = var5Lifetime3;
             var5Lifetime3++;
-            this.field_e[incrementValue$0] = fca.c(var4Lifetime2);
+            this.field_e[incrementValue$0] = VorbisSample.readBits(var4Lifetime2);
           }
         }
         if (field_i != null &&

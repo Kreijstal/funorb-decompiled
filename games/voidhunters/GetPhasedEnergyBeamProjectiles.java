@@ -296,10 +296,10 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           Particle.field_o = param1[223];
           GetMachineGunAimspeed.field_p = param1[101];
           SetSniperCannonProjectiles.field_o = param1[21];
-          ue.field_a = param1[41];
+          OpenGlShader.field_a = param1[41];
           SetTorpedoAimspeed.field_o = param1[53];
           GetGrapplingHookAimspeed.field_p = param1[16];
-          ibb.field_a = param1[173];
+          OpenGlShaderProgram.field_a = param1[173];
           km.field_o = param1[156];
           SetShipPersistence.field_s = param1[106];
           LoadSettings.field_s = param1[78];

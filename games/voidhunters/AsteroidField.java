@@ -534,7 +534,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
         byte[] var2Lifetime331;
         byte[] var2Lifetime332;
         try {
-          cja.field_j = param1;
+          MidiEnvelope.field_j = param1;
           var2 = dqb.a((byte) -59, "text_benefits,0");
           if (var2 != null) {
             GetShieldsDirectionalArcParticleSpeedDownshift.field_o[0] = qpa.a((byte) -125, var2);
@@ -1870,7 +1870,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           if (var2Lifetime332 != null) {
             ParticleFactory.field_b = qpa.a((byte) -125, var2Lifetime332);
           }
-          cja.field_j = null;
+          MidiEnvelope.field_j = null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

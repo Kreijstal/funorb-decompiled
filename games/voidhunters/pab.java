@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class pab extends DualLinkNode {
-    static kka[] field_k;
+    static MusicTrack[] field_k;
     static int field_m;
     byte[] field_l;
 
@@ -15,7 +15,7 @@ final class pab extends DualLinkNode {
           GetDebrisSurvives.field_q = true;
           return;
         }
-        field_k = (kka[]) null;
+        field_k = (MusicTrack[]) null;
         SetPointDefenceLaserReload.field_p = param0;
         GetLoadingMissions.field_p = param0;
         GetDebrisSurvives.field_q = true;
@@ -24,7 +24,7 @@ final class pab extends DualLinkNode {
     public static void clearSharedReferences(boolean param0) {
         field_k = null;
         if (param0) {
-          field_k = (kka[]) null;
+          field_k = (MusicTrack[]) null;
         }
     }
 

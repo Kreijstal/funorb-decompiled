@@ -265,7 +265,7 @@ final class hnb extends iw implements oo {
           this.b(-18756, this.field_S);
           this.field_O = this.a(SetMissilesDamageSourceTeam.field_q, (byte) 111, (sba) (this), GetFighterRepairAmount.field_q);
           if (var2_intLifetime1 != 0) {
-            this.field_R = this.a(bmb.field_b, (byte) 106, (sba) (this), SetUseBackground.field_p);
+            this.field_R = this.a(SoundCache.field_b, (byte) 106, (sba) (this), SetUseBackground.field_p);
           }
           this.field_L = this.a(GetPointDefenceLaserReload.field_o, (byte) 110, (sba) (this), SpecialOrderSubmessage.field_f);
           if (var2_intLifetime1 == 0) {

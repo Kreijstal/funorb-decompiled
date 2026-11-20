@@ -3,7 +3,7 @@
  */
 final class fib extends uda {
     static String field_h;
-    private ibb field_f;
+    private OpenGlShaderProgram field_f;
     private boolean field_e;
     static waa field_j;
     private boolean field_i;
@@ -93,10 +93,10 @@ final class fib extends uda {
 
     fib(OpenGlGpuToolkit param0, asb param1, rga param2) {
         super(param0);
-        ue var4 = null;
+        OpenGlShader var4 = null;
         RuntimeException var4_ref = null;
-        ue var5 = null;
-        ue var6 = null;
+        OpenGlShader var5 = null;
+        OpenGlShader var6 = null;
         boolean stackIn_8_1 = false;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
@@ -123,7 +123,7 @@ final class fib extends uda {
           var6 = GetMomentOfInertiaPerpointCalcDownshift.a(param1.a("environment_mapped_water_v", true, "gl"), 35633, (byte) -15, param0);
           var4 = var6;
           var5 = GetMomentOfInertiaPerpointCalcDownshift.a(param1.a("environment_mapped_water_f", true, "gl"), 35632, (byte) -15, param0);
-          this.field_f = gnb.a(0, new ue[]{var6, var5}, param0);
+          this.field_f = NodeHashTable.linkShaderProgram(0, new OpenGlShader[]{var6, var5}, param0);
           stackIn_8_1 = (this.field_f != null) && (this.field_g.b((byte) 63));
           this.field_e = stackIn_8_1;
           return;

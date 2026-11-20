@@ -4,7 +4,7 @@
 final class SoftwareToolkit extends GraphicsToolkit {
     private int field_E;
     private int field_z;
-    private gnb field_t;
+    private NodeHashTable field_t;
     private boolean field_B;
     private int field_o;
     private RasterBuffer field_D;
@@ -1398,7 +1398,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
 
     private final void b(java.awt.Canvas param0, int param1, int param2) {
         RasterBuffer var4;
-        var4 = (RasterBuffer) (this.field_t.a((long)param0.hashCode(), 119));
+        var4 = (RasterBuffer) (this.field_t.get((long)param0.hashCode(), 119));
         if (var4 != null) {
           if (var4.width == param1 &&
             var4.height == param2) {
@@ -1407,7 +1407,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
           this.a(param0, param1, param2);
         } else {
           var4 = ResourceNode.a(param1, true, param0, param2);
-          this.field_t.a((long)param0.hashCode(), var4, (byte) -124);
+          this.field_t.put((long)param0.hashCode(), var4, (byte) -124);
         }
     }
 
@@ -1568,11 +1568,11 @@ final class SoftwareToolkit extends GraphicsToolkit {
         RasterBuffer var7 = null;
         java.awt.Dimension var5 = null;
         float[] array$0 = null;
-        RasterBuffer var6 = (RasterBuffer) (this.field_t.a((long)param0.hashCode(), 97));
+        RasterBuffer var6 = (RasterBuffer) (this.field_t.get((long)param0.hashCode(), 97));
         if (var6 != null) {
           var6.unlink(-3846);
           var7 = ResourceNode.a(param1, true, param0, param2);
-          this.field_t.a((long)param0.hashCode(), var7, (byte) -122);
+          this.field_t.put((long)param0.hashCode(), var7, (byte) -122);
           if (this.field_l == param0 &&
             this.field_c == null) {
             var5 = param0.getSize();
@@ -1617,7 +1617,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
         lia discarded$0 = null;
         this.field_B = false;
         this.field_w = false;
-        this.field_t = new gnb(4);
+        this.field_t = new NodeHashTable(4);
         this.field_I = 512;
         this.field_p = 0;
         this.field_m = 512;
@@ -1844,7 +1844,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
             this.y();
           }
         } else {
-          var2 = (RasterBuffer) (this.field_t.a((long)param0.hashCode(), 125));
+          var2 = (RasterBuffer) (this.field_t.get((long)param0.hashCode(), 125));
           if (var2 != null) {
             this.field_l = param0;
             var3 = param0.getSize();

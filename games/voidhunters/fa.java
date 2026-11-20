@@ -4,7 +4,7 @@
 final class fa extends IntrusiveNode {
     int field_g;
     int field_f;
-    static gd[] field_d;
+    static PcmSample[] field_d;
     static String[] field_e;
 
     public static void clearSharedReferences(byte param0) {
@@ -19,7 +19,7 @@ final class fa extends IntrusiveNode {
           kmb.field_c = param2 ? true : false;
           SetPointDefenceLaserAimarc.field_o = new os(GetLagStandardDeviationIn.field_r, GetBoostersCooldown.field_r, param0, tla.field_c, kmb.field_c);
           if (param1 >= -119) {
-            field_d = (gd[]) null;
+            field_d = (PcmSample[]) null;
           }
           GetLagStandardDeviationIn.field_r.a(false, SetPointDefenceLaserAimarc.field_o);
         } catch (RuntimeException runtimeException) {
@@ -32,7 +32,7 @@ final class fa extends IntrusiveNode {
     }
 
     static {
-        field_d = new gd[109];
+        field_d = new PcmSample[109];
         field_e = new String[]{"BAASAicADQESAg--BR4AHgEPAR4AD-8HIwkeAR4AD-8MJgIeAA--Aw8EEgUNDhIPDRANEQ0", "BwENAiYADQENAg0DGwQbBRsDGwUqBh8AGQEN-wcqCCoJHwANARn-CioMGw0nABsBGwIbAw0EDQUNDg0QLQ", "AwEeAQ8EIgANAQ0CHgAsAQ8EGwUN-wUNBg0HDQgNCSIAGwIeAA8BLAMNBA0GDQweAA--Dg8PDw", "BQANAycADQENAx4AGAEnAC0BDQQYBRgEDQUNBRAJIw0QDyYADQENAh4AJgAYARgEDQUtARgEDQUNEg0", "BgANAi0DHwAXAScBDQINAx4AGgENBRf-BCEAFwIX-wUfACYAFwIeAA0BGgMNBA3-ARf-Bi0IDQkuCi4LDQ"};
     }
 }

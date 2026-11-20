@@ -36,11 +36,11 @@ final class ServerInfo implements DiffableState {
     }
 
     private final boolean b(int param0, boolean param1) {
-        gd var4;
+        PcmSample var4;
         boolean stackIn_7_0 = false;
         if (param1) {
-          var4 = (gd) null;
-          ServerInfo.a(-94, -103, 25, (gd) null);
+          var4 = (PcmSample) null;
+          ServerInfo.a(-94, -103, 25, (PcmSample) null);
         }
         stackIn_7_0 = (param0 == 3) || (param0 == 8);
         return stackIn_7_0;
@@ -296,7 +296,7 @@ final class ServerInfo implements DiffableState {
         return this.a(var4, param0, false);
     }
 
-    final static ana a(int param0, int param1, int param2, gd param3) {
+    final static ana a(int param0, int param1, int param2, PcmSample param3) {
         RuntimeException var4 = null;
         ana stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -307,7 +307,7 @@ final class ServerInfo implements DiffableState {
           if (param1 != 100) {
             field_d = (int[]) null;
           }
-          stackIn_3_0 = ka.a(param1 - 193, fga.a(param3, 100, param0, param2));
+          stackIn_3_0 = ka.a(param1 - 193, PcmSampleStream.createPanned(param3, 100, param0, param2));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

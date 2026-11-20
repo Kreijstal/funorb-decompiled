@@ -3,42 +3,42 @@
  */
 import java.util.*;
 
-final class gnb {
+final class NodeHashTable {
     static String field_f;
-    private int field_d;
-    private int field_g;
-    private IntrusiveNode field_b;
-    private IntrusiveNode field_e;
+    private int bucketCount;
+    private int iteratorBucket;
+    private IntrusiveNode lookupCursor;
+    private IntrusiveNode iteratorCursor;
     static int field_a;
-    private IntrusiveNode[] field_c;
+    private IntrusiveNode[] buckets;
 
-    final IntrusiveNode b(int param0) {
+    final IntrusiveNode next(int param0) {
         int fieldTemp$0 = 0;
         IntrusiveNode var2;
         int var3;
         var3 = VoidHunters.field_G;
         if (param0 > -42) {
-          this.field_b = (IntrusiveNode) null;
+          this.lookupCursor = (IntrusiveNode) null;
         }
-        if (this.field_g > 0 &&
-          this.field_e != this.field_c[this.field_g - 1]) {
-          var2 = this.field_e;
-          this.field_e = var2.next;
+        if (this.iteratorBucket > 0 &&
+          this.iteratorCursor != this.buckets[this.iteratorBucket - 1]) {
+          var2 = this.iteratorCursor;
+          this.iteratorCursor = var2.next;
           return var2;
         }
         do {
-          if (this.field_g >= this.field_d) {
+          if (this.iteratorBucket >= this.bucketCount) {
             return null;
           }
-          fieldTemp$0 = this.field_g;
-          this.field_g = this.field_g + 1;
-          var2 = this.field_c[fieldTemp$0].next;
-        } while (this.field_c[-1 + this.field_g] == var2);
-        this.field_e = var2.next;
+          fieldTemp$0 = this.iteratorBucket;
+          this.iteratorBucket = this.iteratorBucket + 1;
+          var2 = this.buckets[fieldTemp$0].next;
+        } while (this.buckets[-1 + this.iteratorBucket] == var2);
+        this.iteratorCursor = var2.next;
         return var2;
     }
 
-    final void a(long param0, IntrusiveNode param1, byte param2) {
+    final void put(long param0, IntrusiveNode param1, byte param2) {
         IntrusiveNode var5 = null;
         if (null != param1.previous) {
           param1.unlink(-3846);
@@ -47,7 +47,7 @@ final class gnb {
           return;
         }
         try {
-          var5 = this.field_c[(int)(param0 & (long)(-1 + this.field_d))];
+          var5 = this.buckets[(int)(param0 & (long)(-1 + this.bucketCount))];
           param1.next = var5;
           param1.previous = var5.previous;
           param1.previous.next = param1;
@@ -58,7 +58,7 @@ final class gnb {
         }
     }
 
-    final static int a(Random param0, byte param1) {
+    final static int chooseRandomAsteroidType(Random param0, byte param1) {
         int var3 = 0;
         int var2_int = 0;
         RuntimeException var2 = null;
@@ -100,10 +100,10 @@ final class gnb {
         }
     }
 
-    final static ibb a(int param0, ue[] param1, OpenGlGpuToolkit param2) {
+    final static OpenGlShaderProgram linkShaderProgram(int param0, OpenGlShader[] param1, OpenGlGpuToolkit param2) {
         Object stackIn_7_0 = null;
         Object stackIn_24_0 = null;
-        ibb stackIn_26_0 = null;
+        OpenGlShaderProgram stackIn_26_0 = null;
         RuntimeException stackIn_29_0 = null;
         StringBuilder stackIn_29_1 = null;
         String stackIn_30_2 = null;
@@ -130,7 +130,7 @@ final class gnb {
               continue;
             }
             stackIn_7_0 = null;
-            return (ibb) (stackIn_7_0);
+            return (OpenGlShaderProgram) (stackIn_7_0);
           }
           var3_long = jaggl.OpenGL.glCreateProgramObjectARB();
           for (var5 = 0; var5 < param1.length; var5++) {
@@ -157,10 +157,10 @@ final class gnb {
               }
               jaggl.OpenGL.glDeleteObjectARB(var3_long);
               stackIn_24_0 = null;
-              return (ibb) (stackIn_24_0);
+              return (OpenGlShaderProgram) (stackIn_24_0);
             }
           }
-          stackIn_26_0 = new ibb(param2, var3_long, param1);
+          stackIn_26_0 = new OpenGlShaderProgram(param2, var3_long, param1);
           return stackIn_26_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -182,36 +182,36 @@ final class gnb {
         }
     }
 
-    final IntrusiveNode a(long param0, int param1) {
+    final IntrusiveNode get(long param0, int param1) {
         IntrusiveNode var5 = null;
         int var6 = VoidHunters.field_G;
         if (param1 <= 96) {
           field_f = (String) null;
         }
-        IntrusiveNode var4 = this.field_c[(int)(param0 & (long)(this.field_d - 1))];
-        this.field_b = var4.next;
-        while (var4 != this.field_b) {
-          if (this.field_b.key == param0) {
-            var5 = this.field_b;
-            this.field_b = this.field_b.next;
+        IntrusiveNode var4 = this.buckets[(int)(param0 & (long)(this.bucketCount - 1))];
+        this.lookupCursor = var4.next;
+        while (var4 != this.lookupCursor) {
+          if (this.lookupCursor.key == param0) {
+            var5 = this.lookupCursor;
+            this.lookupCursor = this.lookupCursor.next;
             return var5;
           }
-          this.field_b = this.field_b.next;
+          this.lookupCursor = this.lookupCursor.next;
         }
-        this.field_b = null;
+        this.lookupCursor = null;
         return null;
     }
 
-    final void a(byte param0) {
+    final void clear(byte param0) {
         int var2 = 0;
         IntrusiveNode var3 = null;
         IntrusiveNode var4 = null;
         int var5 = VoidHunters.field_G;
         if (param0 != -103) {
-          this.a((byte) -13);
+          this.clear((byte) -13);
         }
-        for (var2 = 0; var2 < this.field_d; var2++) {
-          var3 = this.field_c[var2];
+        for (var2 = 0; var2 < this.bucketCount; var2++) {
+          var3 = this.buckets[var2];
           while (true) {
             var4 = var3.next;
             if (var3 == var4) {
@@ -220,8 +220,8 @@ final class gnb {
             var4.unlink(-3846);
           }
         }
-        this.field_b = null;
-        this.field_e = null;
+        this.lookupCursor = null;
+        this.iteratorCursor = null;
     }
 
     public static void clearSharedReferences(byte param0) {
@@ -240,26 +240,26 @@ final class gnb {
         GetSpinningBladeAimspeed.field_q = param0;
     }
 
-    gnb(int param0) {
+    NodeHashTable(int param0) {
         int var2 = 0;
         IntrusiveNode dupTemp$0 = null;
         IntrusiveNode var3 = null;
-        this.field_g = 0;
-        this.field_d = param0;
-        this.field_c = new IntrusiveNode[param0];
+        this.iteratorBucket = 0;
+        this.bucketCount = param0;
+        this.buckets = new IntrusiveNode[param0];
         for (var2 = 0; var2 < param0; var2++) {
           dupTemp$0 = new IntrusiveNode();
           var3 = dupTemp$0;
-          this.field_c[var2] = dupTemp$0;
+          this.buckets[var2] = dupTemp$0;
           var3.next = var3;
           var3.previous = var3;
         }
     }
 
-    final IntrusiveNode c(byte param0) {
-        this.field_g = 0;
+    final IntrusiveNode first(byte param0) {
+        this.iteratorBucket = 0;
         int var2 = -14 % ((85 - param0) / 35);
-        return this.b(-58);
+        return this.next(-58);
     }
 
     static {

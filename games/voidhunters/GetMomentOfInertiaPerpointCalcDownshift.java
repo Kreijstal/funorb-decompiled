@@ -26,13 +26,13 @@ final class GetMomentOfInertiaPerpointCalcDownshift extends ConsoleCommand {
         return var4Lifetime1 * var2 >> 12;
     }
 
-    final static ue a(byte[] param0, int param1, byte param2, OpenGlGpuToolkit param3) {
+    final static OpenGlShader a(byte[] param0, int param1, byte param2, OpenGlGpuToolkit param3) {
         long var4_long = 0L;
         RuntimeException var4 = null;
         byte[] var10 = null;
         Object stackIn_4_0 = null;
         Object stackIn_16_0 = null;
-        ue stackIn_18_0 = null;
+        OpenGlShader stackIn_18_0 = null;
         RuntimeException stackIn_21_0 = null;
         StringBuilder stackIn_21_1 = null;
         String stackIn_22_2 = null;
@@ -45,7 +45,7 @@ final class GetMomentOfInertiaPerpointCalcDownshift extends ConsoleCommand {
           }
           if (param0.length == 0) {
             stackIn_4_0 = null;
-            return (ue) (stackIn_4_0);
+            return (OpenGlShader) (stackIn_4_0);
           }
           var4_long = jaggl.OpenGL.glCreateShaderObjectARB(param1);
           jaggl.OpenGL.glShaderSourceRawARB(var4_long, param0);
@@ -67,10 +67,10 @@ final class GetMomentOfInertiaPerpointCalcDownshift extends ConsoleCommand {
             if (0 == rm.field_f[0]) {
               jaggl.OpenGL.glDeleteObjectARB(var4_long);
               stackIn_16_0 = null;
-              return (ue) (stackIn_16_0);
+              return (OpenGlShader) (stackIn_16_0);
             }
           }
-          stackIn_18_0 = new ue(param3, var4_long, param1);
+          stackIn_18_0 = new OpenGlShader(param3, var4_long, param1);
           return stackIn_18_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

@@ -5,7 +5,7 @@ import java.io.*;
 
 final class ana extends IntrusiveNode {
     static int field_f;
-    fga field_e;
+    PcmSampleStream field_e;
     int field_d;
     IntrusiveNode field_g;
 
@@ -89,12 +89,12 @@ final class ana extends IntrusiveNode {
         }
     }
 
-    ana(fga param0, IntrusiveNode param1) {
+    ana(PcmSampleStream param0, IntrusiveNode param1) {
         try {
           this.field_e = param0;
-          this.field_d = param0.f();
+          this.field_d = param0.getTargetGain();
           this.field_g = param1;
-          this.field_e.e(128 + this.field_d * kt.field_l >> 8);
+          this.field_e.setGain(128 + this.field_d * kt.field_l >> 8);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ana.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
@@ -104,7 +104,7 @@ final class ana extends IntrusiveNode {
         param2 = param2 << 6;
         param1 = param1 << 6;
         this.field_d = param1;
-        this.field_e.c(param0 + param1 * kt.field_l >> 8, param2);
+        this.field_e.setGainAndPan(param0 + param1 * kt.field_l >> 8, param2);
     }
 
     static {

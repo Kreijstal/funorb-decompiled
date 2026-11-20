@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetReverbFeedback extends ConsoleCommand {
-    static qkb field_p;
+    static PcmStreamMixer field_p;
     static int[] field_o;
 
     SetReverbFeedback(String param0, Class[] param1, String param2) {
@@ -57,8 +57,8 @@ final class SetReverbFeedback extends ConsoleCommand {
           if (param0 != 200) {
             return;
           }
-          SetSelfDestructTimer.field_o.h();
-          aaa.field_b.h();
+          SetSelfDestructTimer.field_o.service();
+          aaa.field_b.service();
           GetShieldsDirectionalRadius.field_o = GetShieldsDirectionalRadius.field_o - 1;
           if (GetShieldsDirectionalRadius.field_o == 0) {
             GetShieldsDirectionalRadius.field_o = 200;
@@ -80,7 +80,7 @@ final class SetReverbFeedback extends ConsoleCommand {
             }
           }
           if (SetMassDriverRandomness.field_o != null) {
-            stackIn_20_0 = SetMassDriverRandomness.field_o.c(-100);
+            stackIn_20_0 = SetMassDriverRandomness.field_o.isPlaying(-100);
             if (!stackIn_20_0) {
               dha.field_u = null;
               return;

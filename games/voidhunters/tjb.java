@@ -40,7 +40,7 @@ final class tjb extends llb {
           return this.field_xb.a(param0, -126, param2);
         }
         if (null == this.field_xb &&
-          this == fkb.field_m &&
+          this == MidiNote.field_m &&
           var4 != 0) {
           GetUseExtraBackground.a(-1);
           return true;

@@ -118,10 +118,10 @@ final class fka extends IntrusiveNode {
               if (ncb.field_a != null) {
                 if (null == tib.field_i) {
                   tib.field_i = new byte[ocb.field_l];
-                  mia.field_a = new boolean[ocb.field_l];
+                  AudioPump.field_a = new boolean[ocb.field_l];
                 }
                 for (var11 = 0; var11 < ocb.field_l; var11++) {
-                  mia.field_a[var11] = false;
+                  AudioPump.field_a[var11] = false;
                 }
                 var10 = 0;
                 scanLoop1: while (true) {
@@ -150,7 +150,7 @@ final class fka extends IntrusiveNode {
                               var14 = var16;
                             }
                           }
-                          mia.field_a[var14] = true;
+                          AudioPump.field_a[var14] = true;
                         } else {
                           var15 = var24[var14];
                           var16 = var13_ref_int__[var14 + 1];
@@ -292,7 +292,7 @@ final class fka extends IntrusiveNode {
                   var11_ref = null;
                   var12Lifetime2 = 0;
                   for (var13Lifetime1 = 0; ocb.field_l > var13Lifetime1; var13Lifetime1++) {
-                    if (mia.field_a[var13Lifetime1]) {
+                    if (AudioPump.field_a[var13Lifetime1]) {
                       var23 = "<col=A00000>" + ClientException.field_c[var13Lifetime1] + "</col>";
                       if (var11_ref == null) {
                         var11_ref = var23;

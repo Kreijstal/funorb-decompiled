@@ -4,7 +4,7 @@
 final class GetWeaponProjectileSpeedMultiply extends ConsoleCommand {
     static Sprite field_o;
 
-    final static void a(kka param0, boolean param1, int param2, byte param3) {
+    final static void a(MusicTrack param0, boolean param1, int param2, byte param3) {
         Object var4 = null;
         int var4_int = 0;
         RuntimeException stackIn_19_0 = null;
@@ -20,15 +20,15 @@ final class GetWeaponProjectileSpeedMultiply extends ConsoleCommand {
           if (null != SetMassDriverRandomness.field_o) {
             var4_ref = SetSelfDestructTimer.field_o;
             synchronized (var4_ref) {
-              SetMassDriverRandomness.field_o.b(param2, (byte) 18, -1);
+              SetMassDriverRandomness.field_o.setChannelGain(param2, (byte) 18, -1);
               if (param0 == dha.field_u) {
                 return;
               }
-              SetMassDriverRandomness.field_o.a(true);
-              SetSelfDestructTimer.field_o.f();
+              SetMassDriverRandomness.field_o.stop(true);
+              SetSelfDestructTimer.field_o.flush();
               dha.field_u = param0;
               if (null != dha.field_u) {
-                SetMassDriverRandomness.field_o.a(param1, dha.field_u, -1);
+                SetMassDriverRandomness.field_o.playTrack(param1, dha.field_u, -1);
               }
             }
           }

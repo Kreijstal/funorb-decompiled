@@ -51,7 +51,7 @@ final class ocb extends eca {
             return stackIn_11_0;
           }
           if (this.a(param0, false)) {
-            stackIn_15_0 = gnb.field_f;
+            stackIn_15_0 = NodeHashTable.field_f;
             return stackIn_15_0;
           }
           if (~var3.length() >= param1) {

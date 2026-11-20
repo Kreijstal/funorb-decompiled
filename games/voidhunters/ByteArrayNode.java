@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ghb extends IntrusiveNode {
-    byte[] field_d;
+final class ByteArrayNode extends IntrusiveNode {
+    byte[] value;
 
-    final static MouseWheelInput c(byte param0) {
+    final static MouseWheelInput createMouseWheelInput(byte param0) {
         try {
           Throwable var1 = null;
           MouseWheelInput stackIn_3_0 = null;
           Throwable decompiledCaughtException = null;
           try {
             if (param0 != -127) {
-              ghb.c((byte) 73);
+              ByteArrayNode.createMouseWheelInput((byte) 73);
             }
             stackIn_3_0 = (MouseWheelInput) (Class.forName("MouseWheelHandler").newInstance());
             return stackIn_3_0;
@@ -27,9 +27,9 @@ final class ghb extends IntrusiveNode {
         }
     }
 
-    ghb(byte[] param0) {
+    ByteArrayNode(byte[] param0) {
         try {
-          this.field_d = param0;
+          this.value = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ghb.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

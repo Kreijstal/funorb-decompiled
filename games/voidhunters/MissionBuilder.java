@@ -2018,7 +2018,7 @@ final class MissionBuilder implements DiffableState {
                       GetMissionVotes.field_p = true;
                     } else {
                       if (param3 > var13_int) {
-                        mia.field_a[var13_int] = true;
+                        AudioPump.field_a[var13_int] = true;
                       }
                     }
                   }
@@ -3067,7 +3067,7 @@ final class MissionBuilder implements DiffableState {
                 var19 = hob.a(param0, var14, 123) + var9;
                 var20 = var11 + hob.a(param0, var15, 118);
                 if (fra.a(var7, var20, 2, var19)) {
-                  var21_ref_crb = new Asteroid(new ShipComponent(gnb.a(param0, (byte) 97)));
+                  var21_ref_crb = new Asteroid(new ShipComponent(NodeHashTable.chooseRandomAsteroidType(param0, (byte) 97)));
                   var21_ref_crb.a(var19, var20, (byte) -97);
                   var21_ref_crb.a(hob.a(param0, 8192, 116), -64);
                   var22_ref_crb__ = param1.a(true);

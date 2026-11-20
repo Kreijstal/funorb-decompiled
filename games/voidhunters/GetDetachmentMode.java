@@ -51,13 +51,13 @@ final class GetDetachmentMode extends ConsoleCommand {
             return true;
           }
           if (SetBombletSprayProjectileDamage.field_o == 102) {
-            fkb.field_m.j(param1 ^ -25691);
+            MidiNote.field_m.j(param1 ^ -25691);
             return true;
           }
-          if (null == fkb.field_m) {
+          if (null == MidiNote.field_m) {
             return false;
           }
-          if (!fkb.field_m.a(param0, -122, param2)) {
+          if (!MidiNote.field_m.a(param0, -122, param2)) {
             return false;
           }
           return true;
@@ -67,10 +67,10 @@ final class GetDetachmentMode extends ConsoleCommand {
           return true;
         }
         if (SetBombletSprayProjectileDamage.field_o == 102) {
-          fkb.field_m.j(param1 ^ -25691);
+          MidiNote.field_m.j(param1 ^ -25691);
           return true;
         }
-        stackIn_19_0 = (null != fkb.field_m) && (fkb.field_m.a(param0, -122, param2));
+        stackIn_19_0 = (null != MidiNote.field_m) && (MidiNote.field_m.a(param0, -122, param2));
         return stackIn_19_0;
     }
 

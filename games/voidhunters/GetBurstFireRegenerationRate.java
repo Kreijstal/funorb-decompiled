@@ -18,9 +18,9 @@ final class GetBurstFireRegenerationRate extends ConsoleCommand {
           return;
         }
         if (null != SetSelfDestructTimer.field_o) {
-          SetSelfDestructTimer.field_o.e();
+          SetSelfDestructTimer.field_o.shutdown();
           if (aaa.field_b != null) {
-            aaa.field_b.e();
+            aaa.field_b.shutdown();
             return;
           }
           return;
@@ -28,7 +28,7 @@ final class GetBurstFireRegenerationRate extends ConsoleCommand {
         if (aaa.field_b == null) {
           return;
         }
-        aaa.field_b.e();
+        aaa.field_b.shutdown();
     }
 
     final static Sprite[] a(boolean param0, int param1) {

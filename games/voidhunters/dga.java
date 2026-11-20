@@ -370,7 +370,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("join_request_xs_game", 23100);
                 if (null != var2) {
-                  ue.field_c = qpa.a((byte) -125, var2);
+                  OpenGlShader.field_c = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("join_withdraw_request_xs_game", 23100);
                 if (null != var2) {
@@ -1612,7 +1612,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_alert_passcontainsemail", 23100);
                 if (null != var2) {
-                  gnb.field_f = qpa.a((byte) -125, var2);
+                  NodeHashTable.field_f = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_alert_passcontainsname_partial", 23100);
                 if (var2 != null) {
@@ -2787,7 +2787,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("graphics_config_resizable", 23100);
                 if (var2 != null) {
-                  bmb.field_b = qpa.a((byte) -125, var2);
+                  SoundCache.field_b = qpa.a((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("graphics_config_fullscreen", 23100);
                 if (null != var2) {

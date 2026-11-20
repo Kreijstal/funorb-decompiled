@@ -106,7 +106,7 @@ final class fpb extends mfb {
         if (dw.field_c == SetCountermeasureLauncherAimspeed.field_r) {
           return GrapplingHook.field_x;
         }
-        return ht.field_h;
+        return MusicPatchPcmStream.field_h;
     }
 
     final int a(boolean param0) {

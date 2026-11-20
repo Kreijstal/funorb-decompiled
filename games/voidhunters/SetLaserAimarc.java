@@ -21,7 +21,7 @@ final class SetLaserAimarc extends ConsoleCommand {
           return;
         }
         if (var1_ref != null) {
-          fkb.a(67, wqb.field_e, var1_ref);
+          MidiNote.writeSerializedObject(67, wqb.field_e, var1_ref);
           return;
         }
     }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ibb {
+final class OpenGlShaderProgram {
     static int field_a;
     long field_b;
     private OpenGlGpuToolkit field_c;
@@ -23,7 +23,7 @@ final class ibb {
             return;
           }
           var9 = (String) null;
-          ibb.a(-50, -31, 102, (String) null, (byte) 43, -91, 35, -110);
+          OpenGlShaderProgram.a(-50, -31, 102, (String) null, (byte) 43, -91, 35, -110);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -44,7 +44,7 @@ final class ibb {
         super.finalize();
     }
 
-    ibb(OpenGlGpuToolkit param0, long param1, ue[] param2) {
+    OpenGlShaderProgram(OpenGlGpuToolkit param0, long param1, OpenGlShader[] param2) {
         try {
           this.field_c = param0;
           this.field_b = param1;

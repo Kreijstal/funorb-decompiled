@@ -115,7 +115,7 @@ final class dqb {
             var3 = (String) null;
             dqb.a((byte) 2, (String) null);
           }
-          stackIn_3_0 = cja.field_j.a(param1, true, "");
+          stackIn_3_0 = MidiEnvelope.field_j.a(param1, true, "");
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

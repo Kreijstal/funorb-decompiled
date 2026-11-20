@@ -45,7 +45,7 @@ final class ik extends IntrusiveNode {
         var2[49] = kmb.field_f;
         var2[153] = mc.field_u;
         var2[135] = SetThrusterBindingBalanceThreshold.field_p;
-        var2[41] = ue.field_a;
+        var2[41] = OpenGlShader.field_a;
         var2[90] = Particle.field_x;
         var2[221] = Particle.field_a;
         var2[132] = SetPointDefenceLaserReload.field_q;
@@ -188,7 +188,7 @@ final class ik extends IntrusiveNode {
         var2[104] = GetMassDriverAimarc.field_o;
         var2[82] = GetLaserBeamProjectileDamage.field_o;
         var2[120] = SetThrusterBindingMoveAndTurnHasOppositeMove.field_p;
-        var2[173] = ibb.field_a;
+        var2[173] = OpenGlShaderProgram.field_a;
         var2[21] = SetSniperCannonProjectiles.field_o;
         var2[28] = SetShipTeamAction.field_e;
         var2[152] = ehb.field_e;

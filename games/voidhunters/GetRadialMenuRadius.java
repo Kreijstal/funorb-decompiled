@@ -16,7 +16,7 @@ final class GetRadialMenuRadius extends ConsoleCommand {
           if (obfuscationGuard >= -119) {
             GetRadialMenuRadius.clearSharedReferences(-80);
           }
-          stackIn_3_0 = new ConsoleValue(gnb.field_a);
+          stackIn_3_0 = new ConsoleValue(NodeHashTable.field_a);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

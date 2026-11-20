@@ -64,12 +64,12 @@ final class hqb {
               if (param2 != 3) {
                 if (param2 != 10) {
                   if (param2 == 15) {
-                    mia.a(param1, this.field_h, 91);
+                    AudioPump.a(param1, this.field_h, 91);
                   } else {
                     if (16 != param2) {
                       return false;
                     }
-                    mia.a(param1, 0, 53);
+                    AudioPump.a(param1, 0, 53);
                   }
                 } else {
                   ArmBehaviourFactory.a(this.field_h, param1, 20694);
@@ -476,7 +476,7 @@ final class hqb {
                 if (!var5.field_Qb &&
                   var5.field_Gb && (!var5.field_fc ||
                   var5.field_cc)) {
-                  this.field_i.a(SetReverbGain.a(ue.field_c, new String[]{var3}, 107), (byte) -53, 2);
+                  this.field_i.a(SetReverbGain.a(OpenGlShader.field_c, new String[]{var3}, 107), (byte) -53, 2);
                 }
               }
               if (var5.field_Qb) {

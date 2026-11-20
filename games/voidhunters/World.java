@@ -565,7 +565,7 @@ final class World implements DiffableState, CompactGameState {
                     }
                   }
                   if (var15 != 0 &&
-                    param3.chassis.j(1) + param0.chassis.j(1) > ue.field_a) {
+                    param3.chassis.j(1) + param0.chassis.j(1) > OpenGlShader.field_a) {
                     var15 = 0;
                   }
                   if (var15 == 0) {
@@ -3023,7 +3023,7 @@ final class World implements DiffableState, CompactGameState {
                         }
                       } else {
                         var53 = new Random((long)(var7 * var8));
-                        var54 = new ShipComponent(gnb.a(var53, (byte) 55));
+                        var54 = new ShipComponent(NodeHashTable.chooseRandomAsteroidType(var53, (byte) 55));
                         var55 = new Asteroid(var54);
                         var55.a(var7, var8, (byte) -49);
                         this.a((byte) 126, var55);

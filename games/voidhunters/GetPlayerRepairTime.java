@@ -65,15 +65,15 @@ final class GetPlayerRepairTime extends ConsoleCommand {
     }
 
     final static void a(asb param0, boolean param1) {
-        fca var2 = null;
+        VorbisSample var2 = null;
         try {
-          fca.b(param0.a("", true, "headers.packvorbis"));
+          VorbisSample.decodeSetup(param0.a("", true, "headers.packvorbis"));
           if (param1) {
             asb var3 = (asb) null;
             GetPlayerRepairTime.a((asb) null, false);
           }
-          var2 = fca.a(param0, "jagex logo2.packvorbis", "");
-          var2.b();
+          var2 = VorbisSample.loadByName(param0, "jagex logo2.packvorbis", "");
+          var2.decodeFully();
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ce.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }

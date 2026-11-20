@@ -90,11 +90,11 @@ final class AdminMessage implements DiffableState {
         }
     }
 
-    final static void a(int param0, boolean param1, kka param2) {
+    final static void a(int param0, boolean param1, MusicTrack param2) {
         try {
           if (param0 != 32) {
-            kka var4 = (kka) null;
-            AdminMessage.a(-122, false, (kka) null);
+            MusicTrack var4 = (MusicTrack) null;
+            AdminMessage.a(-122, false, (MusicTrack) null);
           }
           GetWeaponProjectileSpeedMultiply.a(param2, param1, 256, (byte) 97);
         } catch (RuntimeException runtimeException) {
@@ -137,8 +137,8 @@ final class AdminMessage implements DiffableState {
     public final void readState(IsaacPacketBuffer param0, boolean param1) {
         try {
           if (param1) {
-            kka var4 = (kka) null;
-            AdminMessage.a(-84, true, (kka) null);
+            MusicTrack var4 = (MusicTrack) null;
+            AdminMessage.a(-84, true, (MusicTrack) null);
           }
           this.index = param0.readBits(0, 32);
           this.value = param0.readBits(0, 32);
