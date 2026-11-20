@@ -7,7 +7,7 @@ final class kob extends IntrusiveNode {
     boolean field_d;
 
     final static void a(byte param0, int param1, int param2, int param3, int param4) {
-        int var5 = 128 + (eu.a(SetMinimapWidth.field_o * 128 % 8192, param0 + 90) * 127 >> 16);
+        int var5 = 128 + (TextureLineShape.a(SetMinimapWidth.field_o * 128 % 8192, param0 + 90) * 127 >> 16);
         var5 = var5 / 4;
         int var6 = 16711680 | var5 << 8 | var5;
         if (param0 != 17) {

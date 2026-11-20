@@ -43,7 +43,7 @@ final class GetMissionTerrainDebrisProbability extends ConsoleCommand {
           if (param0 != 0) {
             cd.field_c = param0;
             AsteroidField.field_c = param4;
-            if (rw.field_q == 0 &&
+            if (PerlinNoiseTextureOperation.field_q == 0 &&
               param3 > 0) {
               SetResourceNodeCaptureTime.field_o = new IntrusiveDeque();
             } else {
@@ -55,7 +55,7 @@ final class GetMissionTerrainDebrisProbability extends ConsoleCommand {
             GetSpinningBladeAimarc.field_q = null;
             cd.field_c = param0;
             AsteroidField.field_c = param4;
-            if (rw.field_q == 0 &&
+            if (PerlinNoiseTextureOperation.field_q == 0 &&
               param3 > 0) {
               SetResourceNodeCaptureTime.field_o = new IntrusiveDeque();
             } else {
@@ -69,7 +69,7 @@ final class GetMissionTerrainDebrisProbability extends ConsoleCommand {
             GetSpinningBladeAimarc.field_q = new IntrusiveDeque();
             cd.field_c = param0;
             AsteroidField.field_c = param4;
-            if (rw.field_q == 0 &&
+            if (PerlinNoiseTextureOperation.field_q == 0 &&
               param3 > 0) {
               SetResourceNodeCaptureTime.field_o = new IntrusiveDeque();
             } else {
@@ -83,7 +83,7 @@ final class GetMissionTerrainDebrisProbability extends ConsoleCommand {
             }
             cd.field_c = param0;
             AsteroidField.field_c = param4;
-            if (rw.field_q != 0) {
+            if (PerlinNoiseTextureOperation.field_q != 0) {
               if (param3 == 0) {
                 SetResourceNodeCaptureTime.field_o = null;
               }
@@ -98,7 +98,7 @@ final class GetMissionTerrainDebrisProbability extends ConsoleCommand {
             }
           }
         }
-        rw.field_q = param3;
+        PerlinNoiseTextureOperation.field_q = param3;
         ServerTickFactory.field_c = param2;
     }
 

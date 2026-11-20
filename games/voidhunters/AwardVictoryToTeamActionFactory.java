@@ -72,7 +72,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetSpinningBladeSpinupSpeed.field_o[16] = NineSliceSprite.field_a;
           SetSpinningBladeSpinupSpeed.field_o[12] = ne.field_m;
           SetSpinningBladeSpinupSpeed.field_o[30] = wsb.field_c;
-          SetSpinningBladeSpinupSpeed.field_o[0] = ev.field_c;
+          SetSpinningBladeSpinupSpeed.field_o[0] = TextureRasterShape.field_c;
           SetSpinningBladeSpinupSpeed.field_o[26] = HuffmanCodec.field_c;
           SetSpinningBladeSpinupSpeed.field_o[19] = SetUseExtraBackground.field_r;
           SetSpinningBladeSpinupSpeed.field_o[10] = wgb.field_h;

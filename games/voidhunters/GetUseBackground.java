@@ -44,7 +44,7 @@ final class GetUseBackground extends ConsoleCommand {
           }
         }
         if (~SoftwareTransform3D.field_b < param0) {
-          moa.a(true);
+          StripesTextureOperation.a(true);
         }
         if (CarouselPlayerEventFactory.field_a > 0) {
           lkb.a(CarouselPlayerEventFactory.field_a, (byte) -107);

@@ -4,7 +4,7 @@
 final class ScrollableActionPanel extends Widget {
     static Widget field_Ab;
     Widget secondButton;
-    static int field_vb;
+    static int argumentStartTokenType;
     ScrollPaneWidget scrollPane;
     Widget firstButton;
     Widget content;
@@ -33,7 +33,7 @@ final class ScrollableActionPanel extends Widget {
     public static void clearSharedReferences(byte param0) {
         field_Ab = null;
         if (param0 < 126) {
-          field_vb = 24;
+          argumentStartTokenType = 24;
         }
     }
 
@@ -75,6 +75,6 @@ final class ScrollableActionPanel extends Widget {
     }
 
     static {
-        field_vb = 0;
+        argumentStartTokenType = 0;
     }
 }

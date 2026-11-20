@@ -314,7 +314,7 @@ final class ComponentCollision extends IntrusiveNode {
                     if (var12Lifetime2 != 0) {
                       var14_ref_String = SetSalvoaim.field_o + (String) (var11_ref);
                     } else {
-                      var14_ref_String = SetReverbGain.a(cp.field_g, new String[]{(String) (var11_ref)}, 126);
+                      var14_ref_String = SetReverbGain.a(TextureBezierShape.field_g, new String[]{(String) (var11_ref)}, 126);
                     }
                   }
                   NebulaFieldFactory.field_a = "<col=A00000>" + var13_ref_String + "<br>" + var14_ref_String;

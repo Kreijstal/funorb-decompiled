@@ -67,7 +67,7 @@ final class qh extends iw implements UiActionListener {
         super(param0, 200, 130);
         UiComponent var2 = null;
         try {
-          var2 = new UiComponent(dib.field_j, (UiListener) null);
+          var2 = new UiComponent(TextureRectangleShape.field_j, (UiListener) null);
           var2.x = 0;
           var2.height = 80;
           var2.y = 50;

@@ -48,7 +48,7 @@ final class SetMassDriverProjectileOndamageParticles extends ConsoleCommand {
         RuntimeException var3_ref = null;
         try {
           param0 = ne.a((char)param1, (byte) 121, "", param0);
-          var3 = cm.a((byte) -87, param2);
+          var3 = IrregularBricksTextureOperation.a((byte) -87, param2);
           stackIn_5_0 = (param0.indexOf(param2) != -1) || (param0.indexOf(var3) != -1);
           return stackIn_5_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

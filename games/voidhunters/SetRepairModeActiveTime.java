@@ -145,7 +145,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           GetDebrisDetachmentForceMultiplier.field_o = new Widget(0L, GetUseSprites.field_p, SetTrapMouse.field_o);
           uga.field_h = new Widget(0L, ObjectiveMarker.field_d, tea.field_c);
           MapClearanceCircle.field_f = new ScrollPaneWidget(0L, new Widget(0L, (Widget) null), UiFocusableComponent.field_w, GetUseNiceTrails.field_o);
-          GetMomentOfInertiaPerpointCalcDownshift.field_p = new Widget(0L, SetGrapplingHookMaxExtension8Force.field_p, ev.field_b.toUpperCase());
+          GetMomentOfInertiaPerpointCalcDownshift.field_p = new Widget(0L, SetGrapplingHookMaxExtension8Force.field_p, TextureRasterShape.field_b.toUpperCase());
           GetMomentOfInertiaPerpointCalcDownshift.field_p.enabled = GetGrapplingHooksDamageableBySourcePlayer.field_o;
           stackIn_6_0 = null;
           stackIn_6_1 = null;

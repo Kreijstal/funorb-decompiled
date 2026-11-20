@@ -45,7 +45,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
           if (var23 != null) {
             var9 = Lo.a(param2, 84);
             var10 = param5 + (var9 * GetNumStars.a(param0, (byte) -96) >> 16);
-            var11 = param3 + (eu.a(param0, 85) * var9 >> 16);
+            var11 = param3 + (TextureLineShape.a(param0, 85) * var9 >> 16);
             var12 = -var10 + var23.getX(false);
             var13 = -var11 + var23.getY((byte) 124);
             var14 = TextLayout.approximateVectorLength(var12, (byte) 118, var13);
@@ -157,11 +157,11 @@ final class GrappleLauncherBehaviour implements DiffableState {
           }
           if (-1 == this.hookId &&
             this.reload == 0) {
-            var12_int = param5 + (param9 * GetNumStars.a(param4, (byte) 30) - eu.a(param4, 103) * param6 >> 16);
-            var13 = param1 + (param9 * eu.a(param4, 43) + GetNumStars.a(param4, (byte) 87) * param6 >> 16);
+            var12_int = param5 + (param9 * GetNumStars.a(param4, (byte) 30) - TextureLineShape.a(param4, 103) * param6 >> 16);
+            var13 = param1 + (param9 * TextureLineShape.a(param4, 43) + GetNumStars.a(param4, (byte) 87) * param6 >> 16);
             var14 = Lo.a(param2, -71);
             var15 = param5 + (GetNumStars.a(param4, (byte) -63) * var14 >> 16);
-            var16 = (var14 * eu.a(param4, 76) >> 16) + param1;
+            var16 = (var14 * TextureLineShape.a(param4, 76) >> 16) + param1;
             var17 = -var12_int + param0;
             var18 = param3 - var13;
             var19 = GameSnapshotFactory.a(var18, (byte) -77, var17);
@@ -178,7 +178,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
             var14Lifetime1 = Lo.a(var22.chassis.getDefinition((byte) -112).outline, 80);
             var22.setAngle(param4, -17);
             var23 = GetNumStars.a(param4, (byte) -127) * var14Lifetime1 >> 16;
-            var24 = eu.a(param4, 77) * var14Lifetime1 >> 16;
+            var24 = TextureLineShape.a(param4, 77) * var14Lifetime1 >> 16;
             var22.setPosition(var23 * 2 + var15, var24 * 2 + var16, (byte) 100);
             param8.addGrapplingHook((byte) 67, var22);
             var22.dy = param10.dy;
@@ -288,7 +288,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
             param0.onStateChanged((byte) -74);
             var10 = Lo.a(param7, -82);
             var11 = param5 + (var10 * GetNumStars.a(param6, (byte) -125) >> 16);
-            var12 = param2 + (var10 * eu.a(param6, 39) >> 16);
+            var12 = param2 + (var10 * TextureLineShape.a(param6, 39) >> 16);
             var13 = var33.getX(false) - var11;
             var14 = var33.getY((byte) -54) - var12;
             var15 = TextLayout.approximateVectorLength(var13, (byte) 114, var14);
@@ -329,7 +329,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
               if (this.targetRopeLength > bia.field_c >> 1) {
                 this.targetRopeLength = bia.field_c >> 1;
               }
-              var19Lifetime1 = eu.a(var18.finalangle, 126);
+              var19Lifetime1 = TextureLineShape.a(var18.finalangle, 126);
               var20Lifetime1 = GetNumStars.a(var18.finalangle, (byte) -76);
               var21 = (long)var18.finalx + ((long)var20Lifetime1 * (long)var33.o(23463) - (long)var33.getGrabbedComponentOffsety(32) * (long)var19Lifetime1 >> 16);
               var23 = (long)var18.finaly + ((long)var33.o(23463) * (long)var19Lifetime1 + (long)var33.getGrabbedComponentOffsety(32) * (long)var20Lifetime1 >> 16);

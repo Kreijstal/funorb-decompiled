@@ -64,7 +64,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
         SetRepairModeRadius.a(param0 ^ 21);
         if (param0 == 21) {
           if (null != SetSpinningBladeSpindamageMultiplier.field_o) {
-            stackIn_75_0 = (dib.a(112, SetSpinningBladeSpindamageMultiplier.field_o.field_zb)) ? 1 : 0;
+            stackIn_75_0 = (TextureRectangleShape.a(112, SetSpinningBladeSpindamageMultiplier.field_o.field_zb)) ? 1 : 0;
           } else {
             stackIn_75_0 = 0;
           }
@@ -110,7 +110,7 @@ final class GetShieldsDirectionalRadius extends ConsoleCommand {
             stackIn_14_7 = (GetThrusterSmallForce.field_o) || (SetMissionTerrainDebrisProbability.field_p);
             SetGrapplingHookRopeBreakLength.a(stackIn_9_0, stackIn_12_1, stackIn_12_2, stackIn_12_3, stackIn_12_4, stackIn_12_5, stackIn_12_6 != 0, stackIn_14_7, param1, 13, 15, 0);
           } else {
-            if (dib.a(112, SetSpinningBladeSpindamageMultiplier.field_o.field_zb)) {
+            if (TextureRectangleShape.a(112, SetSpinningBladeSpindamageMultiplier.field_o.field_zb)) {
               var2 = 1;
               var3 = GetBombletSprayEnergyUsed.field_p.width;
               var4 = GetBombletSprayEnergyUsed.field_p.height;

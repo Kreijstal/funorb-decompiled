@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class moa extends TextureOperation {
-    private int field_k;
+final class StripesTextureOperation extends TextureOperation {
+    private int direction;
     static String field_n;
-    private int[] field_i;
-    private int[] field_j;
-    private int field_m;
-    private int field_l;
+    private int[] stripeEnds;
+    private int[] stripeStarts;
+    private int stripeCount;
+    private int dutyCycle;
 
     final int[] getMonochromeRow(int param0, boolean param1) {
         int stackIn_19_0 = 0;
@@ -33,14 +33,14 @@ final class moa extends TextureOperation {
         var3 = var12;
         if (this.field_f.field_e) {
           var4 = SetSalvoUsesAllEnergy.textureYCoordinates[param0];
-          if (this.field_k == 0) {
+          if (this.direction == 0) {
             var5 = 0;
             var6 = 0;
             scanLoop1: while (true) {
-              if (var6 < this.field_m) {
-                if (var4 >= this.field_j[var6] &&
-                  var4 < this.field_j[1 + var6]) {
-                  if (var4 >= this.field_i[var6]) {
+              if (var6 < this.stripeCount) {
+                if (var4 >= this.stripeStarts[var6] &&
+                  var4 < this.stripeStarts[1 + var6]) {
+                  if (var4 >= this.stripeEnds[var6]) {
                     break scanLoop1;
                   }
                   var5 = 4096;
@@ -60,7 +60,7 @@ final class moa extends TextureOperation {
               var6Lifetime1 = 0;
               var7 = 0;
               var8 = BoxBlurTextureOperation.textureXCoordinates[var5Lifetime1];
-              var9 = this.field_k;
+              var9 = this.direction;
               stackIn_19_0 = var9;
               stackIn_19_1 = 1;
               if (stackIn_19_0 != stackIn_19_1) {
@@ -77,10 +77,10 @@ final class moa extends TextureOperation {
               var11 = 0;
               var9Lifetime1 = var11;
               scanLoop2: while (true) {
-                if (var11 < this.field_m) {
-                  if (var6Lifetime1 >= this.field_j[var11] &&
-                    this.field_j[var11 + 1] > var6Lifetime1) {
-                    if (this.field_i[var11] <= var6Lifetime1) {
+                if (var11 < this.stripeCount) {
+                  if (var6Lifetime1 >= this.stripeStarts[var11] &&
+                    this.stripeStarts[var11 + 1] > var6Lifetime1) {
+                    if (this.stripeEnds[var11] <= var6Lifetime1) {
                       break scanLoop2;
                     }
                     var7 = 4096;
@@ -103,24 +103,24 @@ final class moa extends TextureOperation {
         return var3;
     }
 
-    private final void e(int param0) {
+    private final void initializeStripeIntervals(int param0) {
         int var5 = 0;
         int var6 = VoidHunters.field_G;
         int var2 = 0;
-        this.field_j = new int[1 + this.field_m];
+        this.stripeStarts = new int[1 + this.stripeCount];
         if (param0 > -51) {
           return;
         }
-        this.field_i = new int[this.field_m + 1];
-        int var3 = 4096 / this.field_m;
-        int var4 = this.field_l * var3 >> 12;
-        for (var5 = 0; var5 < this.field_m; var5++) {
-          this.field_j[var5] = var2;
-          this.field_i[var5] = var2 + var4;
+        this.stripeEnds = new int[this.stripeCount + 1];
+        int var3 = 4096 / this.stripeCount;
+        int var4 = this.dutyCycle * var3 >> 12;
+        for (var5 = 0; var5 < this.stripeCount; var5++) {
+          this.stripeStarts[var5] = var2;
+          this.stripeEnds[var5] = var2 + var4;
           var2 = var2 + var3;
         }
-        this.field_j[this.field_m] = 4096;
-        this.field_i[this.field_m] = this.field_i[0] + 4096;
+        this.stripeStarts[this.stripeCount] = 4096;
+        this.stripeEnds[this.stripeCount] = this.stripeEnds[0] + 4096;
     }
 
     public static void clearSharedReferences(int param0) {
@@ -143,14 +143,14 @@ final class moa extends TextureOperation {
         try {
           var4_int = param0;
           if (var4_int == 0) {
-            this.field_m = param2.readUnsignedByte((byte) -121);
+            this.stripeCount = param2.readUnsignedByte((byte) -121);
           } else {
             if (var4_int != 1) {
               if (2 == var4_int) {
-                this.field_k = param2.readUnsignedByte((byte) -103);
+                this.direction = param2.readUnsignedByte((byte) -103);
               }
             } else {
-              this.field_l = param2.readUnsignedShort(1869);
+              this.dutyCycle = param2.readUnsignedShort(1869);
             }
           }
           if (param1 > -60) {
@@ -172,11 +172,11 @@ final class moa extends TextureOperation {
         }
     }
 
-    public moa() {
+    public StripesTextureOperation() {
         super(0, true);
-        this.field_k = 0;
-        this.field_l = 2048;
-        this.field_m = 10;
+        this.direction = 0;
+        this.dutyCycle = 2048;
+        this.stripeCount = 10;
     }
 
     final static void a(boolean param0) {
@@ -194,7 +194,7 @@ final class moa extends TextureOperation {
         if (param0 > -35) {
           return;
         }
-        this.e(-64);
+        this.initializeStripeIntervals(-64);
     }
 
     static {

@@ -12,7 +12,7 @@ final class GetFixedaim extends ConsoleCommand {
         if (param0 != -65) {
           GetFixedaim.g((byte) 0);
         }
-        return new dj(GetPointDefenceLaserRandomness.a(param0 + 117), sva.e((byte) -34));
+        return new dj(GetPointDefenceLaserRandomness.a(param0 + 117), RandomLinesTextureOperation.e((byte) -34));
     }
 
     GetFixedaim(String param0, Class[] param1, String param2) {
@@ -948,7 +948,7 @@ final class GetFixedaim extends ConsoleCommand {
                                     {
                                         var9 = (8192 * (var8 >> 1) + 8192) / var6_int;
                                         var10 = (long)GetNumStars.a(var9, (byte) -86) * var4_long >> 8;
-                                        var12 = var4_long * (long)eu.a(var9, param0 ^ 12) >> 8;
+                                        var12 = var4_long * (long)TextureLineShape.a(var9, param0 ^ 12) >> 8;
                                         var7_ref_int__[var8] = (int)var10;
                                         var7_ref_int__[var8 + 1] = (int)var12;
                                         var8 += 2;

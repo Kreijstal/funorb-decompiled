@@ -151,7 +151,7 @@ final class SoundCache {
             RequestNewestBlackboxRecording.field_p = new IsaacPacketBuffer(param0);
             bia.field_d = param1;
             GetAutozoomAmountMultiply.field_p = param6;
-            cp.field_n = param4;
+            TextureBezierShape.field_n = param4;
             lmb.field_b = param11;
             GetBombletSprayReload.field_q = param10;
             SetNebulaProximityFadeDownshift.field_p = param8;
@@ -163,11 +163,11 @@ final class SoundCache {
               SoundCache.clearSharedReferences((byte) -11);
             }
             GetRespawnTime.field_o = param7;
-            if (null == cp.field_n.randomFile) {
+            if (null == TextureBezierShape.field_n.randomFile) {
               return;
             }
             try {
-              SetCountermeasureLauncherAimarc.field_r = new BufferedFile(cp.field_n.randomFile, 64, 0);
+              SetCountermeasureLauncherAimarc.field_r = new BufferedFile(TextureBezierShape.field_n.randomFile, 64, 0);
               return;
             } catch (java.io.IOException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;

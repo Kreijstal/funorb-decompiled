@@ -30,7 +30,7 @@ final class MessageFactory implements GameStateFactory {
         return (SerializableGameState[]) ((Object) new Message[param1]);
     }
 
-    final static ConsoleValue a(String param0, ConsoleValue[] param1, ConsoleCommand[] param2, byte param3) throws gva {
+    final static ConsoleValue executeConsoleCommand(String param0, ConsoleValue[] param1, ConsoleCommand[] param2, byte param3) throws ConsoleEvaluationException {
         int var5 = 0;
         StringBuilder discarded$1 = null;
         StringBuilder discarded$2 = null;
@@ -77,7 +77,7 @@ final class MessageFactory implements GameStateFactory {
             }
           }
           discarded$0 = var7.append(") is undefined.");
-          throw new gva(var7.toString());
+          throw new ConsoleEvaluationException(var7.toString());
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var4 = decompiledCaughtException;

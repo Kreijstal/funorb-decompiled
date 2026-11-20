@@ -24,44 +24,44 @@ final class PlayerVoteFactory implements GameStateFactory {
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
         RuntimeException decompiledCaughtException = null;
-        tsa[] var2 = null;
+        ConsoleExpressionToken[] var2 = null;
         RuntimeException var2_ref = null;
         StringBuilder var3 = null;
-        tsa var5 = null;
+        ConsoleExpressionToken var5 = null;
         int var6 = 0;
         int var7 = 0;
         String var8 = null;
         int var9 = 0;
-        tsa[] var10 = null;
+        ConsoleExpressionToken[] var10 = null;
         var9 = VoidHunters.field_G;
         try {
           if (param1 < 74) {
             field_b = (String) null;
           }
-          var10 = dib.a(param0, 127);
+          var10 = TextureRectangleShape.getCachedConsoleTokens(param0, 127);
           var2 = var10;
           var3 = new StringBuilder();
           for (var4 = 0; var4 < var10.length; var4++) {
             var5 = var10[var4];
-            var6 = var5.field_g;
+            var6 = var5.sourceOffset;
             if (-1 + var10.length == var4) {
               stackIn_8_0 = param0.length();
             } else {
-              stackIn_8_0 = var2[1 + var4].field_g;
+              stackIn_8_0 = var2[1 + var4].sourceOffset;
             }
             var7 = stackIn_8_0;
             var8 = param0.substring(var6, var7);
-            if (var5.field_e != dla.field_d) {
-              if (var5.field_e == SetMissionTerrainSpaceProbability.field_o) {
+            if (var5.type != dla.stringTokenType) {
+              if (var5.type == SetMissionTerrainSpaceProbability.charTokenType) {
                 discarded$0 = var3.append("<col=33bbff>").append(var8).append("</col>");
               } else {
-                if (SetMissionVariablesHudX.field_p == var5.field_e) {
+                if (SetMissionVariablesHudX.methodTokenType == var5.type) {
                   discarded$1 = var3.append("<col=ffff99>").append(var8).append("</col>");
                 } else {
-                  if (ArchiveIndexLoader.field_h == var5.field_e) {
+                  if (ArchiveIndexLoader.numberTokenType == var5.type) {
                     discarded$2 = var3.append("<col=ffaaff>").append(var8).append("</col>");
                   } else {
-                    if (var5.field_e != io.field_p) {
+                    if (var5.type != io.booleanTokenType) {
                       discarded$3 = var3.append(var8);
                     } else {
                       discarded$4 = var3.append("<col=33ffaa>").append(var8).append("</col>");

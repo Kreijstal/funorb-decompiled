@@ -135,7 +135,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static tsa a(int param0, qab param1) {
+    final static ConsoleExpressionToken readBareConsoleToken(int param0, ConsoleCharacterStream param1) {
         int fieldTemp$2 = 0;
         StringBuilder discarded$3 = null;
         int var2_int = 0;
@@ -143,7 +143,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
         int var4 = 0;
         String var5 = null;
         int var6 = 0;
-        tsa stackIn_21_0 = null;
+        ConsoleExpressionToken stackIn_21_0 = null;
         RuntimeException stackIn_24_0 = null;
         StringBuilder stackIn_24_1 = null;
         String stackIn_25_2 = null;
@@ -155,12 +155,12 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
           if (param0 >= -8) {
             field_o = (String) null;
           }
-          fieldTemp$2 = param1.field_b - 1;
-          param1.field_b = param1.field_b - 1;
+          fieldTemp$2 = param1.position - 1;
+          param1.position = param1.position - 1;
           var2_int = fieldTemp$2;
           var3 = new StringBuilder();
-          while (!param1.a((byte) -123)) {
-            var4 = param1.a(-104);
+          while (!param1.isAtEnd((byte) -123)) {
+            var4 = param1.readChar(-104);
             if (!Character.isWhitespace((char) var4) &&
               var4 != 44 &&
               var4 != 40 &&
@@ -168,7 +168,7 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
               discarded$3 = var3.append((char) var4);
               continue;
             }
-            param1.field_b = param1.field_b - 1;
+            param1.position = param1.position - 1;
             break;
           }
           var5 = var3.toString();
@@ -176,14 +176,14 @@ final class GetMpSandboxEnemySpawnLimit extends ConsoleCommand {
             !var5.equals("false")) {
             if (45 != var5.charAt(0) &&
               !Character.isDigit(var5.charAt(0))) {
-              var4Lifetime1 = SetMissionVariablesHudX.field_p;
+              var4Lifetime1 = SetMissionVariablesHudX.methodTokenType;
             } else {
-              var4Lifetime1 = ArchiveIndexLoader.field_h;
+              var4Lifetime1 = ArchiveIndexLoader.numberTokenType;
             }
           } else {
-            var4Lifetime1 = io.field_p;
+            var4Lifetime1 = io.booleanTokenType;
           }
-          stackIn_21_0 = new tsa(var4Lifetime1, var2_int, var5);
+          stackIn_21_0 = new ConsoleExpressionToken(var4Lifetime1, var2_int, var5);
           return stackIn_21_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

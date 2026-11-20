@@ -114,7 +114,7 @@ final class SpawnPointFactory implements GameStateFactory {
                 var10 = ((lta) (Object) stackIn_36_0).b(stackIn_37_1, var8Lifetime2);
                 GetPhasedEnergyBeamReload.a(var10, (float)(int)(param0.field_a * 256.0f), -104, var9Lifetime2, 65280);
                 var11 = 8 * GetNumStars.a(var5_ref_lsb__[var6Lifetime2].field_a, (byte) 61) >> 8;
-                var12 = eu.a(var5_ref_lsb__[var6Lifetime2].field_a, 109) * 8 >> 8;
+                var12 = TextureLineShape.a(var5_ref_lsb__[var6Lifetime2].field_a, 109) * 8 >> 8;
                 c.a(param0.b(true, var12 + var8Lifetime2), param0.a(var11 + var7Lifetime2, (byte) 127), var9Lifetime2, var10, -16777216, 16711680);
                 GetLagStandardDeviationOut.a(-1, Integer.toString(var6Lifetime2), 16711935, var10, var9Lifetime2, 4266);
               }

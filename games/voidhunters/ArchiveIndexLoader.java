@@ -6,7 +6,7 @@ final class ArchiveIndexLoader {
     static Widget field_a;
     static ServerInfo field_g;
     private java.math.BigInteger signatureModulus;
-    static int field_h;
+    static int numberTokenType;
     private CachedArchiveProvider[] archiveProviders;
     private java.math.BigInteger signatureExponent;
     private NetworkArchiveClient field_j;
@@ -234,6 +234,6 @@ final class ArchiveIndexLoader {
     }
 
     static {
-        field_h = 6;
+        numberTokenType = 6;
     }
 }

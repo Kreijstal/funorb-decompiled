@@ -31,17 +31,17 @@ final class UiStatefulStyle extends UiTextStyle {
         }
     }
 
-    final static uma a(PacketBuffer param0, int param1) {
+    final static TextureEllipseShape decodeTextureEllipseShape(PacketBuffer param0, int param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        uma stackIn_1_0 = null;
+        TextureEllipseShape stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 50 / ((param1 + 28) / 55);
-          stackIn_1_0 = new uma(param0.readShort(true), param0.readShort(true), param0.readShort(true), param0.readShort(true), param0.readUnsignedMedium((byte) -81), param0.readUnsignedMedium((byte) -45), param0.readUnsignedByte((byte) -119));
+          stackIn_1_0 = new TextureEllipseShape(param0.readShort(true), param0.readShort(true), param0.readShort(true), param0.readShort(true), param0.readUnsignedMedium((byte) -81), param0.readUnsignedMedium((byte) -45), param0.readUnsignedByte((byte) -119));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

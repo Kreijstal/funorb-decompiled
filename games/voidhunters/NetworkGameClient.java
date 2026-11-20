@@ -81,7 +81,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (param0 != 0) {
           this.a((byte) 6, false);
         }
-        if (!eu.a(true)) {
+        if (!TextureLineShape.a(true)) {
           if (UiDraggableContainer.field_z >= 10) {
             if (!lm.a(true)) {
               SetVariableActionFactory.b((byte) 6);
@@ -533,7 +533,7 @@ abstract class NetworkGameClient extends GameApplet {
     }
 
     final void a(boolean param0, int param1, int param2) {
-        this.a(-119, cp.field_q.field_a, SetShipPersistence.field_r.field_a, param2, PopupMenuWidget.field_Bb.field_a, pgb.field_b.field_a, param0, SoftwareFramebuffer.field_f.field_a);
+        this.a(-119, TextureBezierShape.field_q.field_a, SetShipPersistence.field_r.field_a, param2, PopupMenuWidget.field_Bb.field_a, pgb.field_b.field_a, param0, SoftwareFramebuffer.field_f.field_a);
         int var4 = -37 % ((param1 - 30) / 50);
     }
 

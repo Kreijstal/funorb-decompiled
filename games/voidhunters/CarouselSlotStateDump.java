@@ -16,7 +16,7 @@ final class CarouselSlotStateDump extends IntrusiveNode implements SerializableG
         IsaacPacketBuffer var2 = new IsaacPacketBuffer(this.field_d.length - 4);
         var2.writeBytes(4, this.field_d, -1, -4 + this.field_d.length);
         var2.position = param0;
-        CarouselSlot var3 = (CarouselSlot) (gva.field_a.create((byte) -128));
+        CarouselSlot var3 = (CarouselSlot) (ConsoleEvaluationException.field_a.create((byte) -128));
         var2.beginBitRead(-23497);
         if (!(var3 instanceof CompactGameState)) {
           var3.readState(var2, false);

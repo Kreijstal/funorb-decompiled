@@ -122,7 +122,7 @@ final class Nebula implements DiffableState {
         var4 = VoidHunters.field_G;
         try {
           var3_int = -param0.field_yb + param2.field_yb;
-          if (param2.field_Ab != kbb.field_q) {
+          if (param2.field_Ab != HslAdjustTextureOperation.field_q) {
             if (null == param2.field_Ab) {
               var3_int += 200;
             }
@@ -132,7 +132,7 @@ final class Nebula implements DiffableState {
           if (param1 != 7569) {
             Nebula.a(-48);
           }
-          if (kbb.field_q != param0.field_Ab) {
+          if (HslAdjustTextureOperation.field_q != param0.field_Ab) {
             if (param0.field_Ab == null) {
               var3_int -= 200;
             }
@@ -243,7 +243,7 @@ final class Nebula implements DiffableState {
         try {
           var6_int = param4 % 16 - 8;
           var7 = param3.b(this.x + (GetNumStars.a(param2 * var6_int << 1, (byte) -127) >> 4), -125);
-          var8 = param3.c(0, this.y + (eu.a(param2 * var6_int << 1, 116) >> 4));
+          var8 = param3.c(0, this.y + (TextureLineShape.a(param2 * var6_int << 1, 116) >> 4));
           if (param1 <= 42) {
             return;
           }

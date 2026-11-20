@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 class io extends UiTextStyle {
-    static int field_p;
+    static int booleanTokenType;
 
     public final void drawComponent(int param0, UiComponent param1, int param2, int param3, boolean param4) {
         try {
@@ -25,6 +25,6 @@ class io extends UiTextStyle {
     }
 
     static {
-        field_p = 7;
+        booleanTokenType = 7;
     }
 }

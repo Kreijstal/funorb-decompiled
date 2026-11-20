@@ -241,7 +241,7 @@ abstract class PointLight extends IntrusiveNode {
             return;
           }
           var10 = SetMinimapWidth.field_o;
-          var11 = eu.a(var10 * 1024, 54);
+          var11 = TextureLineShape.a(var10 * 1024, 54);
           var12 = param6;
           var13 = param7[var12];
           var14 = param7[(-1 + (var9_int + var12)) % var9_int];

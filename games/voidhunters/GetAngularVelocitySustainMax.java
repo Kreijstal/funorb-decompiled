@@ -15,7 +15,7 @@ final class GetAngularVelocitySustainMax extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         RuntimeException var3_ref = null;
         try {
-          var3 = cm.a((byte) -87, param2);
+          var3 = IrregularBricksTextureOperation.a((byte) -87, param2);
           if (param1 == param0.indexOf(param2) &&
             -1 == param0.indexOf(var3)) {
             stackIn_12_0 = (param0.startsWith(param2)) || (param0.startsWith(var3)) || (param0.endsWith(param2)) || (param0.endsWith(var3));

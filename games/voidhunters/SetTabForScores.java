@@ -17,7 +17,7 @@ final class SetTabForScores extends ConsoleCommand {
         RuntimeException var3_ref = null;
         try {
           param1 = ne.a('_', (byte) 108, "", param1);
-          var3 = cm.a((byte) -87, param1);
+          var3 = IrregularBricksTextureOperation.a((byte) -87, param1);
           if (!param2) {
             SetTabForScores.clearSharedReferences(false);
           }

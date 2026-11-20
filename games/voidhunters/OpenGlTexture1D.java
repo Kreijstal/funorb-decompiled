@@ -37,9 +37,9 @@ final class OpenGlTexture1D extends OpenGlTexture {
     }
 
     final static int[] a(int param0, int param1, int param2) {
-        int var3 = eu.a(param1, 53);
+        int var3 = TextureLineShape.a(param1, 53);
         int var4 = GetNumStars.a(param1, (byte) 106);
-        int var5 = eu.a(param2, 108);
+        int var5 = TextureLineShape.a(param2, 108);
         int var6 = GetNumStars.a(param2, (byte) -76);
         int var7 = (int)((long)var3 * (long)var5 >> 16);
         int var8 = (int)((long)var6 * (long)var3 >> 16);

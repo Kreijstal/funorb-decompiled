@@ -282,7 +282,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_play_rated", 23100);
                 if (null != var2) {
-                  ev.field_b = Cp1252Strings.decode((byte) -125, var2);
+                  TextureRasterShape.field_b = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_create_unrated", 23100);
                 if (var2 != null) {
@@ -558,7 +558,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("quickchat_game", 23100);
                 if (var2 != null) {
-                  oqb.field_k = Cp1252Strings.decode((byte) -125, var2);
+                  CrossedWaveTextureOperation.field_k = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("kick", 23100);
                 if (var2 != null) {
@@ -810,7 +810,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_playerneedsrating", 23100);
                 if (null != var2) {
-                  cp.field_j = Cp1252Strings.decode((byte) -125, var2);
+                  TextureBezierShape.field_j = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_youneedrating", 23100);
                 if (var2 != null) {
@@ -876,7 +876,7 @@ final class dga {
             }
             void runChunk1() throws java.lang.RuntimeException {
                 if (null != var2) {
-                  cp.field_g = Cp1252Strings.decode((byte) -125, var2);
+                  TextureBezierShape.field_g = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("gameopt_pleaseselectoption2", 23100);
                 if (var2 != null) {
@@ -956,7 +956,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("rule_pillar_1", 23100);
                 if (var2 != null) {
-                  oqb.field_n = Cp1252Strings.decode((byte) -125, var2);
+                  CrossedWaveTextureOperation.field_n = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("rule_1_0", 23100);
                 if (var2 != null) {
@@ -1600,7 +1600,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_alert_passrepeated", 23100);
                 if (null != var2) {
-                  qab.field_a = Cp1252Strings.decode((byte) -125, var2);
+                  ConsoleCharacterStream.field_a = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("create_alert_passlength", 23100);
                 if (null != var2) {
@@ -2669,7 +2669,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("fs_nonmember", 23100);
                 if (null != var2) {
-                  dib.field_j = Cp1252Strings.decode((byte) -125, var2);
+                  TextureRectangleShape.field_j = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("fs_button_close", 23100);
                 if (null != var2) {
@@ -2681,7 +2681,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("fs_unavailable", 23100);
                 if (var2 != null) {
-                  moa.field_n = Cp1252Strings.decode((byte) -125, var2);
+                  StripesTextureOperation.field_n = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("fs_unavailable_try_signed_applet", 23100);
             }

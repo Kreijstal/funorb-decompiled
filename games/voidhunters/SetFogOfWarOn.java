@@ -89,7 +89,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_message_fadetime(" + Particle.field_s + ")");
         System.out.println("set_message_max(" + hb.field_a + ")");
         System.out.println("set_ondamage_particle_speed(" + ei.field_a + ")");
-        System.out.println("set_ondamage_particle_life(" + sva.field_m + ")");
+        System.out.println("set_ondamage_particle_life(" + RandomLinesTextureOperation.field_m + ")");
         System.out.println("set_ondamage_particle_fadestart(" + dw.field_b + ")");
         System.out.println("set_shields_directional_halfarc_cuts(" + SetBuildViewAutozoomEndOnAction.field_o + ")");
         System.out.println("set_shields_directional_arc_particle_life(" + LoadSettings.field_q + ")");
@@ -113,7 +113,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_bloom_threshold_percentage(" + pab.field_m + ")");
         System.out.println("set_bloom_coefficient_percentage(" + OpenGlVertexBufferObject.field_i + ")");
         System.out.println("set_autozoom_speed_divide(" + SetMassDriverProjectileDamage.field_o + ")");
-        System.out.println("set_autozoom_amount_multiply(" + rw.field_n + ")");
+        System.out.println("set_autozoom_amount_multiply(" + PerlinNoiseTextureOperation.field_n + ")");
         System.out.println("set_nebula_proximity_fade_downshift(" + SetAutoDetail.field_o + ")");
         System.out.println("set_use_trails(" + veb.field_b + ")");
         System.out.println("set_fighter_vision(" + vqa.field_k + ")");
@@ -194,7 +194,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_sniper_cannon_randomness(" + SetPhasedEnergyBeamPulseFadetime.field_o + ")");
         System.out.println("set_missile_launcher_randomness(" + LoadSettings.field_s + ")");
         System.out.println("set_point_defence_laser_randomness(" + GetRadialMenuRadius.field_p + ")");
-        System.out.println("set_countermeasure_launcher_randomness(" + cp.field_f + ")");
+        System.out.println("set_countermeasure_launcher_randomness(" + TextureBezierShape.field_f + ")");
         System.out.println("set_mass_driver_projectiles(" + SetSalvoRepairTimeMultiplier.field_p + ")");
         System.out.println("set_laser_projectiles(" + GetLaserBeamProjectileDamage.field_o + ")");
         System.out.println("set_bomblet_spray_projectiles(" + la.field_m + ")");
@@ -251,7 +251,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_spinning_blade_aimarc(" + SetLaserRandomness.field_o + ")");
         System.out.println("set_sniper_cannon_aimarc(" + SetThrusterBindingBalanceThreshold.field_p + ")");
         System.out.println("set_bomblet_spray_aimarc(" + cia.field_a + ")");
-        System.out.println("set_phased_energy_beam_aimarc(" + qab.field_d + ")");
+        System.out.println("set_phased_energy_beam_aimarc(" + ConsoleCharacterStream.field_d + ")");
         System.out.println("set_machine_gun_aimarc(" + PlayerReady.field_c + ")");
         System.out.println("set_grappling_hook_aimarc(" + dla.field_c + ")");
         System.out.println("set_missile_launcher_aimarc(" + khb.field_c + ")");

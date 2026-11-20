@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class cj extends TextureOperation {
-    private int field_i;
+final class BlendModesTextureOperation extends TextureOperation {
+    private int blendMode;
 
     final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
@@ -15,7 +15,7 @@ final class cj extends TextureOperation {
         try {
           var4_int = param0;
           if (0 == var4_int) {
-            this.field_i = param2.readUnsignedByte((byte) -91);
+            this.blendMode = param2.readUnsignedByte((byte) -91);
           } else {
             if (var4_int == 1) {
               stackIn_7_1 = (param2.readUnsignedByte((byte) -109) == 1);
@@ -23,7 +23,7 @@ final class cj extends TextureOperation {
             }
           }
           if (param1 >= -60) {
-            this.field_i = 37;
+            this.blendMode = 37;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -78,7 +78,7 @@ final class cj extends TextureOperation {
         if (this.field_f.field_e) {
           var19 = this.getInputMonochromeRow(0, param0, 255);
           var18 = this.getInputMonochromeRow(1, param0, 255);
-          var8 = this.field_i;
+          var8 = this.blendMode;
           if (1 == var8) {
             var11Lifetime1 = var3;
             for (var8 = 0; var8 < hob.textureWidth; var8++) {
@@ -220,9 +220,9 @@ final class cj extends TextureOperation {
         return var3;
     }
 
-    public cj() {
+    public BlendModesTextureOperation() {
         super(2, false);
-        this.field_i = 6;
+        this.blendMode = 6;
     }
 
     final int[][] getColorRow(int param0, int param1) {
@@ -338,7 +338,7 @@ final class cj extends TextureOperation {
           var53 = var51[0];
           var54 = var51[1];
           var56 = var51[2];
-          var21 = this.field_i;
+          var21 = this.blendMode;
           if (var21 == 1) {
             var12Lifetime1 = var33[0];
             var13Lifetime1 = var33[1];
@@ -727,7 +727,7 @@ final class cj extends TextureOperation {
           }
         }
         if (param0 != 255) {
-          this.field_i = 79;
+          this.blendMode = 79;
         }
         return var3;
     }

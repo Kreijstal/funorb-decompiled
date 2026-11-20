@@ -37,7 +37,7 @@ final class ThrusterBehaviour implements DiffableState {
           }
           var10_int = this.getThrust(param6, false) * param1 >> 8;
           var11 = var10_int * GetNumStars.a(param2, (byte) 31) >> 8;
-          var12 = var10_int * eu.a(param2, param3 ^ 50) >> 8;
+          var12 = var10_int * TextureLineShape.a(param2, param3 ^ 50) >> 8;
           param8.addForceAtPoint(var12, param4, param7, (byte) -117, var11);
           if (veb.field_b == 0) {
             if (param6 != 46) {

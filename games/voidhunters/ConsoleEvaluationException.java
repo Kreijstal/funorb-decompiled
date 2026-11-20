@@ -1,8 +1,8 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class gva extends Exception {
-    String field_b;
+final class ConsoleEvaluationException extends Exception {
+    String message;
     static GameStateFactory field_a;
 
     public static void clearSharedReferences(boolean param0) {
@@ -20,9 +20,9 @@ final class gva extends Exception {
         AsteroidFactory.a(2, false, 4);
     }
 
-    gva(String param0) {
+    ConsoleEvaluationException(String param0) {
         try {
-          this.field_b = param0;
+          this.message = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "gva.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

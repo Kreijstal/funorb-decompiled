@@ -105,7 +105,7 @@ final class CarouselCommongameInfo implements DiffableState {
           }
           this.history = new CarouselSlot[var4_int];
           for (var5 = 0; this.history.length > var5; var5++) {
-            this.history[var5] = (CarouselSlot) (gva.field_a.create((byte) 94));
+            this.history[var5] = (CarouselSlot) (ConsoleEvaluationException.field_a.create((byte) 94));
           }
           this.events = new IntrusiveDeque();
           this.playerNames = param0;
@@ -127,7 +127,7 @@ final class CarouselCommongameInfo implements DiffableState {
             this.debugDifferences = (String) null;
           }
           var3.currentIndex = this.currentIndex;
-          var3.history = (CarouselSlot[]) (SpriteDimensions.copyStateArrayByMode(var3.history, this.history, 1, gva.field_a, false));
+          var3.history = (CarouselSlot[]) (SpriteDimensions.copyStateArrayByMode(var3.history, this.history, 1, ConsoleEvaluationException.field_a, false));
           this.copyEventHistoryTo(param1, -128);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "mib.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');

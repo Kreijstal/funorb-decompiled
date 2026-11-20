@@ -80,9 +80,9 @@ final class GetGrapplingHookAimspeed extends ConsoleCommand {
         return -1;
     }
 
-    final static cp a(int param0, PacketBuffer param1) {
+    final static TextureBezierShape decodeTextureBezierShape(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
-        cp stackIn_3_0 = null;
+        TextureBezierShape stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -91,7 +91,7 @@ final class GetGrapplingHookAimspeed extends ConsoleCommand {
           if (param0 < 121) {
             field_o = (Sprite[]) null;
           }
-          stackIn_3_0 = new cp(param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readUnsignedMedium((byte) -77), param1.readUnsignedByte((byte) -113));
+          stackIn_3_0 = new TextureBezierShape(param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readUnsignedMedium((byte) -77), param1.readUnsignedByte((byte) -113));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

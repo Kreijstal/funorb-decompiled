@@ -130,11 +130,11 @@ final class SetDebrisGroupColour extends ConsoleCommand {
         field_o = null;
         if (param0 != 7311) {
           String var2 = (String) null;
-          SetDebrisGroupColour.a(-5, (String) null);
+          SetDebrisGroupColour.tokenizeConsole(-5, (String) null);
         }
     }
 
-    final static IntrusiveDeque a(int param0, String param1) {
+    final static IntrusiveDeque tokenizeConsole(int param0, String param1) {
         IntrusiveDeque stackIn_3_0 = null;
         IntrusiveDeque stackIn_19_0 = null;
         RuntimeException stackIn_22_0 = null;
@@ -143,7 +143,7 @@ final class SetDebrisGroupColour extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         IntrusiveDeque var2 = null;
         RuntimeException var2_ref = null;
-        qab var3 = null;
+        ConsoleCharacterStream var3 = null;
         int var4 = 0;
         int var5 = 0;
         var5 = VoidHunters.field_G;
@@ -153,30 +153,30 @@ final class SetDebrisGroupColour extends ConsoleCommand {
             stackIn_3_0 = (IntrusiveDeque) null;
             return stackIn_3_0;
           }
-          var3 = new qab(param1);
-          while (!var3.a((byte) -111)) {
-            var4 = var3.a(param0 ^ 75);
+          var3 = new ConsoleCharacterStream(param1);
+          while (!var3.isAtEnd((byte) -111)) {
+            var4 = var3.readChar(param0 ^ 75);
             if (Character.isWhitespace((char) var4)) {
               continue;
             }
             if (var4 != 34 &&
               var4 != 39) {
               if (var4 == 40) {
-                var2.addLast(param0 - 10257, new tsa(ScrollableActionPanel.field_vb, var3.field_b - 1));
+                var2.addLast(param0 - 10257, new ConsoleExpressionToken(ScrollableActionPanel.argumentStartTokenType, var3.position - 1));
                 continue;
               }
               if (var4 == 41) {
-                var2.addLast(-10258, new tsa(SetMissionTerrainVotingChancestep.field_o, -1 + var3.field_b));
+                var2.addLast(-10258, new ConsoleExpressionToken(SetMissionTerrainVotingChancestep.argumentEndTokenType, -1 + var3.position));
                 continue;
               }
               if (var4 == 44) {
-                var2.addLast(-10258, new tsa(ConstantColorTextureOperation.field_l, -1 + var3.field_b));
+                var2.addLast(-10258, new ConsoleExpressionToken(ConstantColorTextureOperation.argumentSeparatorTokenType, -1 + var3.position));
                 continue;
               }
-              var2.addLast(param0 ^ 10257, GetMpSandboxEnemySpawnLimit.a(-20, var3));
+              var2.addLast(param0 ^ 10257, GetMpSandboxEnemySpawnLimit.readBareConsoleToken(-20, var3));
               continue;
             }
-            var2.addLast(param0 ^ 10257, GetAutoDetail.a(117, var3));
+            var2.addLast(param0 ^ 10257, GetAutoDetail.readQuotedConsoleToken(117, var3));
           }
           stackIn_19_0 = var2;
           return stackIn_19_0;

@@ -6,7 +6,7 @@ import java.util.*;
 final class dla {
     private lta field_b;
     static Widget field_e;
-    static int field_d;
+    static int stringTokenType;
     private int field_a;
     static int field_c;
     private World field_f;
@@ -63,7 +63,7 @@ final class dla {
           return "";
         }
         if (param0 <= 106) {
-          field_d = 106;
+          stringTokenType = 106;
         }
         return IntIndexTable.field_a;
     }
@@ -373,6 +373,6 @@ final class dla {
 
     static {
         field_c = 1024;
-        field_d = 4;
+        stringTokenType = 4;
     }
 }

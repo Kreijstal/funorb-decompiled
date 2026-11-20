@@ -70,7 +70,7 @@ final class ik extends IntrusiveNode {
         var2[177] = TextureCombineSource.field_a;
         var2[124] = PlayerActionFactory.field_a;
         var2[86] = fj.field_b;
-        var2[137] = qab.field_d;
+        var2[137] = ConsoleCharacterStream.field_d;
         var2[111] = SetMomentOfInertiaPerpointCalcDownshift.field_p;
         var2[213] = GetPhysicsCollisionPhantomForceMultiplier.field_o;
         var2[63] = ku.field_c;
@@ -210,7 +210,7 @@ final class ik extends IntrusiveNode {
         var2[234] = Particle.field_j;
         var2[233] = Particle.field_z;
         var2[99] = SetArmageddonLength.field_p;
-        var2[80] = cp.field_f;
+        var2[80] = TextureBezierShape.field_f;
         var2[29] = GetBombletSprayRandomness.field_p;
         var2[148] = GetMissionTerrainAsteroidProbability.field_o;
         var2[202] = Particle.field_t;

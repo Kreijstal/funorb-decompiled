@@ -1,41 +1,41 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qab {
-    private int field_e;
+final class ConsoleCharacterStream {
+    private int length;
     static String field_a;
-    private String field_c;
+    private String input;
     static int field_d;
-    int field_b;
+    int position;
 
-    final char a(int param0) {
+    final char readChar(int param0) {
         int fieldTemp$0 = 0;
         if (param0 <= -75) {
-          fieldTemp$0 = this.field_b;
-          this.field_b = this.field_b + 1;
-          return this.field_c.charAt(fieldTemp$0);
+          fieldTemp$0 = this.position;
+          this.position = this.position + 1;
+          return this.input.charAt(fieldTemp$0);
         }
-        this.field_b = -65;
-        int fieldTemp$1 = this.field_b;
-        this.field_b = this.field_b + 1;
-        return this.field_c.charAt(fieldTemp$1);
+        this.position = -65;
+        int fieldTemp$1 = this.position;
+        this.position = this.position + 1;
+        return this.input.charAt(fieldTemp$1);
     }
 
     public final String toString() {
-        return this.field_c.substring(0, this.field_b) + "|" + this.field_c.substring(this.field_b);
+        return this.input.substring(0, this.position) + "|" + this.input.substring(this.position);
     }
 
-    final boolean a(byte param0) {
+    final boolean isAtEnd(byte param0) {
         if (param0 <= -102) {
-          return this.field_e <= this.field_b ? true : false;
+          return this.length <= this.position ? true : false;
         }
-        this.a(-42);
-        return this.field_e <= this.field_b ? true : false;
+        this.readChar(-42);
+        return this.length <= this.position ? true : false;
     }
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 0) {
-          qab.a(107, -118);
+          ConsoleCharacterStream.a(107, -118);
           field_a = null;
           return;
         }
@@ -62,11 +62,11 @@ final class qab {
         return false;
     }
 
-    qab(String param0) {
-        this.field_b = 0;
+    ConsoleCharacterStream(String param0) {
+        this.position = 0;
         try {
-          this.field_c = param0;
-          this.field_e = this.field_c.length();
+          this.input = param0;
+          this.length = this.input.length();
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "qab.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }

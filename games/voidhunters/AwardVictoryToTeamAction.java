@@ -102,9 +102,9 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
         }
     }
 
-    final static dib a(int param0, PacketBuffer param1) {
+    final static TextureRectangleShape decodeTextureRectangleShape(int param0, PacketBuffer param1) {
         RuntimeException var2 = null;
-        dib stackIn_3_0 = null;
+        TextureRectangleShape stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
         StringBuilder stackIn_6_1 = null;
         String stackIn_7_2 = null;
@@ -113,7 +113,7 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
           if (param0 != 32) {
             AwardVictoryToTeamAction.a(42, true);
           }
-          stackIn_3_0 = new dib(param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readUnsignedMedium((byte) -75), param1.readUnsignedMedium((byte) -94), param1.readUnsignedByte((byte) -119));
+          stackIn_3_0 = new TextureRectangleShape(param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readUnsignedMedium((byte) -75), param1.readUnsignedMedium((byte) -94), param1.readUnsignedByte((byte) -119));
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -168,7 +168,7 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
         apb.a((byte) 116);
         if (param0 != -356) {
           PacketBuffer var3 = (PacketBuffer) null;
-          AwardVictoryToTeamAction.a(-32, (PacketBuffer) null);
+          AwardVictoryToTeamAction.decodeTextureRectangleShape(-32, (PacketBuffer) null);
         }
     }
 

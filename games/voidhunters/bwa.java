@@ -235,7 +235,7 @@ final class bwa extends Widget {
             if (var16Lifetime2 < var17) {
               var16Lifetime2 = var17;
             }
-            var17Lifetime2 = param6.font.getStringWidth(oqb.field_n);
+            var17Lifetime2 = param6.font.getStringWidth(CrossedWaveTextureOperation.field_n);
             if (var17Lifetime2 > var16Lifetime2) {
               var16Lifetime2 = var17Lifetime2;
             }
@@ -268,7 +268,7 @@ final class bwa extends Widget {
               var17Lifetime5 = var18Lifetime3;
             }
             var18Lifetime4 = 0;
-            var18Lifetime4 = this.a(6300, var28[1], oqb.field_n, var16Lifetime2, var18Lifetime4, param6);
+            var18Lifetime4 = this.a(6300, var28[1], CrossedWaveTextureOperation.field_n, var16Lifetime2, var18Lifetime4, param6);
             var18Lifetime4 = this.a(var28[1], var18Lifetime4, var16Lifetime2, this.field_Db[16], 28488);
             var18Lifetime4 = this.a(var28[1], var18Lifetime4, var16Lifetime2, this.field_Db[17], 28488);
             var18Lifetime4 = this.a(var28[1], var18Lifetime4, var16Lifetime2, this.field_Db[18], 28488);

@@ -1,9 +1,9 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class md extends TextureOperation {
+final class RasterShapesTextureOperation extends TextureOperation {
     static IntrusiveDeque field_j;
-    private ev[] field_i;
+    private TextureRasterShape[] shapes;
 
     final static void b(int param0, int param1) {
         int var3 = 0;
@@ -51,7 +51,7 @@ final class md extends TextureOperation {
           var5 = GetTorpedoReload.field_o;
           var29 = new int[var5][var4];
           var30 = this.field_d.getFullImage(param0 - 134);
-          this.a(true, var29);
+          this.renderShapes(true, var29);
           for (var8 = 0; GetTorpedoReload.field_o > var8; var8++) {
             var32 = var29[var8];
             var31 = var30[var8];
@@ -74,12 +74,12 @@ final class md extends TextureOperation {
 
     final int[] getMonochromeRow(int param0, boolean param1) {
         if (!param1) {
-          this.field_i = (ev[]) null;
+          this.shapes = (TextureRasterShape[]) null;
         }
         int[] var4 = this.field_f.getRow((byte) 121, param0);
         int[] var3 = var4;
         if (this.field_f.field_e) {
-          this.a(param1, this.field_f.getFullImage(123));
+          this.renderShapes(param1, this.field_f.getFullImage(123));
         }
         return var4;
     }
@@ -101,23 +101,23 @@ final class md extends TextureOperation {
             return;
           }
           if (param0 == 0) {
-            this.field_i = new ev[param2.readUnsignedByte((byte) -105)];
-            for (var4_int = 0; var4_int < this.field_i.length; var4_int++) {
+            this.shapes = new TextureRasterShape[param2.readUnsignedByte((byte) -105)];
+            for (var4_int = 0; var4_int < this.shapes.length; var4_int++) {
               var5 = param2.readUnsignedByte((byte) -104);
               var6 = var5;
               if (var6 == 0) {
-                this.field_i[var4_int] = (ev) ((Object) GetLaserFireForce.a(param2, (byte) 118));
+                this.shapes[var4_int] = (TextureRasterShape) ((Object) GetLaserFireForce.decodeTextureLineShape(param2, (byte) 118));
               } else {
                 if (1 != var6) {
                   if (var6 == 2) {
-                    this.field_i[var4_int] = (ev) ((Object) AwardVictoryToTeamAction.a(32, param2));
+                    this.shapes[var4_int] = (TextureRasterShape) ((Object) AwardVictoryToTeamAction.decodeTextureRectangleShape(32, param2));
                   } else {
                     if (3 == var6) {
-                      this.field_i[var4_int] = (ev) ((Object) UiStatefulStyle.a(param2, -87));
+                      this.shapes[var4_int] = (TextureRasterShape) ((Object) UiStatefulStyle.decodeTextureEllipseShape(param2, -87));
                     }
                   }
                 } else {
-                  this.field_i[var4_int] = (ev) ((Object) GetGrapplingHookAimspeed.a(126, param2));
+                  this.shapes[var4_int] = (TextureRasterShape) ((Object) GetGrapplingHookAimspeed.decodeTextureBezierShape(126, param2));
                 }
               }
             }
@@ -143,15 +143,15 @@ final class md extends TextureOperation {
         }
     }
 
-    public md() {
+    public RasterShapesTextureOperation() {
         super(0, true);
     }
 
-    private final void a(boolean param0, int[][] param1) {
+    private final void renderShapes(boolean param0, int[][] param1) {
         int var5 = 0;
         int var3_int = 0;
         int var4 = 0;
-        ev var6 = null;
+        TextureRasterShape var6 = null;
         int var7 = 0;
         int var8 = 0;
         int var9 = 0;
@@ -166,20 +166,20 @@ final class md extends TextureOperation {
           var4 = GetTorpedoReload.field_o;
           AdjustBodyComponentsAction.a(param1, -98);
           GetUseDetailLines.a(wf.textureHeightMask, 0, param0, 0, SetMassDriverEnergyUsed.field_q);
-          if (this.field_i != null) {
-            for (var5 = 0; var5 < this.field_i.length; var5++) {
-              var6 = this.field_i[var5];
-              var7 = var6.field_e;
-              var8 = var6.field_d;
+          if (this.shapes != null) {
+            for (var5 = 0; var5 < this.shapes.length; var5++) {
+              var6 = this.shapes[var5];
+              var7 = var6.fillColor;
+              var8 = var6.outlineColor;
               if (0 <= var7) {
                 if (var8 < 0) {
-                  var6.b((byte) -112, var3_int, var4);
+                  var6.drawFilled((byte) -112, var3_int, var4);
                 } else {
-                  var6.a(var4, (byte) 110, var3_int);
+                  var6.drawFilledAndOutline(var4, (byte) 110, var3_int);
                 }
               } else {
                 if (var8 >= 0) {
-                  var6.a((byte) -99, var4, var3_int);
+                  var6.drawOutline((byte) -99, var4, var3_int);
                 }
               }
             }
@@ -203,7 +203,7 @@ final class md extends TextureOperation {
     public static void clearSharedReferences(boolean param0) {
         field_j = null;
         if (param0) {
-          md.clearSharedReferences(true);
+          RasterShapesTextureOperation.clearSharedReferences(true);
         }
     }
 

@@ -3,13 +3,13 @@
  */
 import java.util.*;
 
-final class sva extends TextureOperation {
-    private int field_j;
-    private int field_k;
+final class RandomLinesTextureOperation extends TextureOperation {
+    private int angleRange;
+    private int lineCount;
     static int field_m;
-    private int field_l;
-    private int field_i;
-    private int field_n;
+    private int lineLength;
+    private int baseAngle;
+    private int seed;
 
     final int[] getMonochromeRow(int param0, boolean param1) {
         int var7 = 0;
@@ -47,21 +47,21 @@ final class sva extends TextureOperation {
         var27 = VoidHunters.field_G;
         var3 = this.field_f.getRow((byte) 117, param0);
         if (this.field_f.field_e) {
-          var4 = this.field_j >> 1;
+          var4 = this.angleRange >> 1;
           var31 = this.field_f.getFullImage(73);
-          var6 = new Random((long)this.field_n);
-          for (var7 = 0; this.field_k > var7; var7++) {
-            if (this.field_j <= 0) {
-              stackIn_7_0 = this.field_i;
+          var6 = new Random((long)this.seed);
+          for (var7 = 0; this.lineCount > var7; var7++) {
+            if (this.angleRange <= 0) {
+              stackIn_7_0 = this.baseAngle;
             } else {
-              stackIn_7_0 = this.field_i + (-var4 + hob.a(var6, this.field_j, 124));
+              stackIn_7_0 = this.baseAngle + (-var4 + hob.a(var6, this.angleRange, 124));
             }
             var8 = stackIn_7_0;
             var8 = var8 >> 4 & 255;
             var9 = hob.a(var6, hob.textureWidth, 127);
             var10 = hob.a(var6, GetTorpedoReload.field_o, 117);
-            var11 = var9 + (GetBombletSprayProjectiles.field_q[var8] * this.field_l >> 12);
-            var12 = var10 + (GetDebrisPartitioned.field_o[var8] * this.field_l >> 12);
+            var11 = var9 + (GetBombletSprayProjectiles.field_q[var8] * this.lineLength >> 12);
+            var12 = var10 + (GetDebrisPartitioned.field_o[var8] * this.lineLength >> 12);
             var13 = -var10 + var12;
             var14 = -var9 + var11;
             if (var14 != 0 ||
@@ -120,18 +120,18 @@ final class sva extends TextureOperation {
           }
         }
         if (!param1) {
-          sva.e((byte) 3);
+          RandomLinesTextureOperation.e((byte) 3);
         }
         return var3;
     }
 
-    public sva() {
+    public RandomLinesTextureOperation() {
         super(0, true);
-        this.field_k = 2000;
-        this.field_j = 4096;
-        this.field_l = 16;
-        this.field_n = 0;
-        this.field_i = 0;
+        this.lineCount = 2000;
+        this.angleRange = 4096;
+        this.lineLength = 16;
+        this.seed = 0;
+        this.baseAngle = 0;
     }
 
     final void decodeParameter(int param0, int param1, PacketBuffer param2) {
@@ -149,21 +149,21 @@ final class sva extends TextureOperation {
           }
           var4_int = param0;
           if (var4_int == 0) {
-            this.field_n = param2.readUnsignedByte((byte) -101);
+            this.seed = param2.readUnsignedByte((byte) -101);
           } else {
             if (var4_int == 1) {
-              this.field_k = param2.readUnsignedShort(1869);
+              this.lineCount = param2.readUnsignedShort(1869);
             } else {
               if (var4_int != 2) {
                 if (var4_int == 3) {
-                  this.field_i = param2.readUnsignedShort(1869);
+                  this.baseAngle = param2.readUnsignedShort(1869);
                 } else {
                   if (var4_int == 4) {
-                    this.field_j = param2.readUnsignedShort(1869);
+                    this.angleRange = param2.readUnsignedShort(1869);
                   }
                 }
               } else {
-                this.field_l = param2.readUnsignedByte((byte) -117);
+                this.lineLength = param2.readUnsignedByte((byte) -117);
               }
             }
           }
@@ -184,14 +184,14 @@ final class sva extends TextureOperation {
 
     final void postDecode(byte param0) {
         if (param0 >= -35) {
-          sva.e((byte) -123);
+          RandomLinesTextureOperation.e((byte) -123);
         }
         GetTrapMouse.e((byte) -120);
     }
 
     final static boolean e(byte param0) {
         if (param0 != -34) {
-          sva.e((byte) 68);
+          RandomLinesTextureOperation.e((byte) 68);
         }
         return !GetBombletSprayPushMultiplier.field_p.a(4) ? true : false;
     }

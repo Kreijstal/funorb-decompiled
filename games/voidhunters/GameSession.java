@@ -815,7 +815,7 @@ final class GameSession {
                     for (var12Lifetime2 = 0; var12Lifetime2 < 100; var12Lifetime2++) {
                       var13Lifetime3 = var11Lifetime2 + var12Lifetime2 * 8192 / 100;
                       var14Lifetime3 = var8 + (GetNumStars.a(var13Lifetime3, (byte) 118) * var10 >> 16);
-                      var15Lifetime4 = (var10 * eu.a(var13Lifetime3, 48) >> 16) + var9;
+                      var15Lifetime4 = (var10 * TextureLineShape.a(var13Lifetime3, 48) >> 16) + var9;
                       CachedArchiveProvider.a(128, false, var14Lifetime3, var15Lifetime4, 1, 1, 16777215);
                     }
                   }
@@ -850,7 +850,7 @@ final class GameSession {
                   for (var12Lifetime1 = 0; var12Lifetime1 < 100; var12Lifetime1++) {
                     var13Lifetime1 = var11Lifetime1 + var12Lifetime1 * 8192 / 100;
                     var14Lifetime1 = var8Lifetime1 + (GetNumStars.a(var13Lifetime1, (byte) 118) * var10Lifetime1 >> 16);
-                    var15Lifetime1 = (var10Lifetime1 * eu.a(var13Lifetime1, 48) >> 16) + var9Lifetime1;
+                    var15Lifetime1 = (var10Lifetime1 * TextureLineShape.a(var13Lifetime1, 48) >> 16) + var9Lifetime1;
                     CachedArchiveProvider.a(128, false, var14Lifetime1, var15Lifetime1, 1, 1, 16777215);
                   }
                 }
@@ -1637,7 +1637,7 @@ final class GameSession {
         var6 = 2;
         var7 = this.state.b(1);
         var8 = var7.world.getObjectiveType(param0);
-        var9 = qab.a(74, var8) ? 1 : 0;
+        var9 = ConsoleCharacterStream.a(74, var8) ? 1 : 0;
         var10 = new String[var32.length][1 + var3];
         var55 = new int[1 + var3];
         var46 = var55;
@@ -4311,10 +4311,10 @@ final class GameSession {
         int var11 = 0;
         int var3_int = 2 * param1.getBoundingExtent(-42);
         int var4 = var3_int * (GetNumStars.a(param1.getAngle(0), (byte) 91) >> 8) >> 8;
-        int var5 = (eu.a(param1.getAngle(0), 43) >> 8) * var3_int >> 8;
+        int var5 = (TextureLineShape.a(param1.getAngle(0), 43) >> 8) * var3_int >> 8;
         var3_int = (int)(24.0f / ShipTeamConditionFactory.field_a.field_a) + var3_int;
         int var6 = (GetNumStars.a(param1.getAngle(0), (byte) -99) >> 8) * var3_int >> 8;
-        int var7 = var3_int * (eu.a(param1.getAngle(0), 102) >> 8) >> 8;
+        int var7 = var3_int * (TextureLineShape.a(param1.getAngle(0), 102) >> 8) >> 8;
         int var8 = (int)(0.05000000074505806f / ShipTeamConditionFactory.field_a.field_a);
         if (param0 > -56) {
           return;
@@ -4550,7 +4550,7 @@ final class GameSession {
         if (this.localPlayerIndex >= 0) {
           var4 = this.state.b(1);
           var2 = ((Player) (var4.players[this.localPlayerIndex])).selectedTeam;
-          if (!qab.a(59, var4.world.getObjectiveType(false))) {
+          if (!ConsoleCharacterStream.a(59, var4.world.getObjectiveType(false))) {
             var2 = this.localPlayerIndex;
           }
           var5 = this.state.a((byte) 33).findShipByOwner(this.localPlayerIndex, 83);
@@ -4772,7 +4772,7 @@ final class GameSession {
               var5 >= var4_int) {
               var7 = (-var4_int + var5) / Particle.field_l;
               var8 = SetReverbGain.a(bt.field_b, new String[]{Integer.toString(var7)}, 118).toUpperCase();
-              var9 = 128 + (eu.a(SetMinimapWidth.field_o * 128 % 8192, 44) * 127 >> 16);
+              var9 = 128 + (TextureLineShape.a(SetMinimapWidth.field_o * 128 % 8192, 44) * 127 >> 16);
               var10 = var9 << 8 | 16711680 | var9;
               SetSelfDestructPrepareToggleCooldown.a(SetMassDriverReload.field_p - tea.a(1, var8, 13879) / 2, 1, GetLaserAimarc.field_q / 2, var8, 1, var10, (byte) -92);
             }
@@ -4876,7 +4876,7 @@ final class GameSession {
               var16 = (var15 * var14 + SetMinimapWidth.field_o * 160) % var12;
               var16 = 8192 * var16 / var12;
               var17 = (GetNumStars.a(var16, (byte) 68) >> 8) * param6 >> 8;
-              var18 = param6 * (eu.a(var16, 96) >> 8) >> 8;
+              var18 = param6 * (TextureLineShape.a(var16, 96) >> 8) >> 8;
               var19 = var17 + param1;
               var20 = var18 + param5;
               this.b(-7178, var19, var15, var20);
@@ -4895,13 +4895,13 @@ final class GameSession {
             this.a((lw) null, (byte) 103, -86, false);
           }
           var16Lifetime1 = GetNumStars.a(var15Lifetime1, (byte) 53) >> 8;
-          var17Lifetime1 = eu.a(var15Lifetime1, 44) >> 8;
+          var17Lifetime1 = TextureLineShape.a(var15Lifetime1, 44) >> 8;
           var18Lifetime1 = param1 + (param6 >> 8) * var16Lifetime1;
           var19Lifetime1 = (param6 >> 8) * var17Lifetime1 + param5;
           var20Lifetime1 = param2 + (var10 >> 8) * var16Lifetime1;
           var21 = param0 + var17Lifetime1 * (var10 >> 8);
           var22 = GetNumStars.a(var14Lifetime1, (byte) 105) >> 8;
-          var23 = eu.a(var14Lifetime1, 54) >> 8;
+          var23 = TextureLineShape.a(var14Lifetime1, 54) >> 8;
           var24 = param2 + (var10 >> 8) * var22;
           var25 = var23 * (var10 >> 8) + param0;
           var26 = (param6 >> 8) * var22 + param1;
@@ -4934,7 +4934,7 @@ final class GameSession {
             if (var36 > var43) {
               var43 = var14Lifetime1 + var43 * 4096 / var12;
               var44 = (GetNumStars.a(var43, (byte) -80) >> 8) * (param6 >> 8);
-              var45 = (param6 >> 8) * (eu.a(var43, 114) >> 8);
+              var45 = (param6 >> 8) * (TextureLineShape.a(var43, 114) >> 8);
               var46 = param1 + var44;
               var47 = var45 + param5;
               this.b(-7178, var46, var42, var47);
@@ -4948,7 +4948,7 @@ final class GameSession {
                 } else {
                   var43 = (-var37 + var43) * 4096 / var32 + var15Lifetime1;
                   var44 = (GetNumStars.a(var43, (byte) 94) >> 8) * (var10 >> 8);
-                  var45 = (eu.a(var43, 91) >> 8) * (var10 >> 8);
+                  var45 = (TextureLineShape.a(var43, 91) >> 8) * (var10 >> 8);
                   var46 = param2 + var44;
                   var47 = param0 + var45;
                   this.b(-7178, var46, var42, var47);
@@ -5664,7 +5664,7 @@ final class GameSession {
           var11 = var10 << 1;
           var12 = GameKeyHandler.a(param3 + 22551, param2 * (-1 + (var6 - var10)) / var6 + var5);
           var13 = this.radialMenuX + (GetNumStars.a(var12, (byte) -99) * var9 >> 16);
-          var14 = this.radialMenuY + (var9 * eu.a(var12, 69) >> 16);
+          var14 = this.radialMenuY + (var9 * TextureLineShape.a(var12, 69) >> 16);
           var17[var11] = var13;
           var8[var11 + 1] = var14;
         }
@@ -5672,7 +5672,7 @@ final class GameSession {
           var11Lifetime1 = (var10Lifetime1 << 1) + var7;
           var12Lifetime1 = GameKeyHandler.a(22433, var5 + var10Lifetime1 * param2 / var6);
           var13Lifetime1 = this.radialMenuX + (param1 * GetNumStars.a(var12Lifetime1, (byte) -106) >> 16);
-          var14Lifetime1 = this.radialMenuY + (param1 * eu.a(var12Lifetime1, param3 + 188) >> 16);
+          var14Lifetime1 = this.radialMenuY + (param1 * TextureLineShape.a(var12Lifetime1, param3 + 188) >> 16);
           var17[var11Lifetime1] = var13Lifetime1;
           var8[var11Lifetime1 + 1] = var14Lifetime1;
         }
@@ -6200,7 +6200,7 @@ final class GameSession {
                 var14Lifetime1 = (float)(-var22[2] + var22[3]);
                 var15Lifetime1 = (float)SetMassDriverReload.field_p / var13Lifetime1;
                 var16 = (float)GetLaserAimarc.field_q / var14Lifetime1;
-                var17 = Math.min(var15Lifetime1, var16) * rw.field_n;
+                var17 = Math.min(var15Lifetime1, var16) * PerlinNoiseTextureOperation.field_n;
                 if ((param3 & 128) == 0 &&
                   0 != param3) {
                   this.field_n = false;
@@ -6324,9 +6324,9 @@ final class GameSession {
                   var21 = GameKeyHandler.a(22433, var12 + var8);
                   var22 = var7.weaponbehaviour.getDefinition((byte) 24).getProjectileRange(123) << 3;
                   var23 = var10 + (GetNumStars.a(var20, (byte) 44) >> 8) * (var22 >> 8);
-                  var24 = (var22 >> 8) * (eu.a(var20, 70) >> 8) + var11;
+                  var24 = (var22 >> 8) * (TextureLineShape.a(var20, 70) >> 8) + var11;
                   var25 = (GetNumStars.a(var21, (byte) 61) >> 8) * (var22 >> 8) + var10;
-                  var26 = (var22 >> 8) * (eu.a(var21, 86) >> 8) + var11;
+                  var26 = (var22 >> 8) * (TextureLineShape.a(var21, 86) >> 8) + var11;
                   c.a(ShipTeamConditionFactory.field_a.b(true, var24), ShipTeamConditionFactory.field_a.a(var23, (byte) 124), var17, var18, -16777216, var19);
                   stackIn_18_0 = ShipTeamConditionFactory.field_a;
                   stackIn_19_1 = !(param1);
@@ -6523,7 +6523,7 @@ final class GameSession {
               var20 = this.getRadialSegmentAngle(false, var9, var15.field_l);
               if (this.radialMenuAlpha > 0) {
                 var21 = this.radialMenuX + (GetNumStars.a(var20, (byte) 47) * var7Lifetime1 >> 16) - var16 / 2;
-                var22 = -(var17 / 2) + this.radialMenuY + (eu.a(var20, 95) * var7Lifetime1 >> 16);
+                var22 = -(var17 / 2) + this.radialMenuY + (TextureLineShape.a(var20, 95) * var7Lifetime1 >> 16);
                 if (this.radialMenuAlpha < 255) {
                   var23_int = -var18 + var21;
                   var24 = var22 - var19;
@@ -6984,7 +6984,7 @@ final class GameSession {
           }
         }
         var3 = var16.world;
-        stackIn_8_0 = (qab.a(106, var3.getObjectiveType(false))) ? 0 : 1;
+        stackIn_8_0 = (ConsoleCharacterStream.a(106, var3.getObjectiveType(false))) ? 0 : 1;
         var4Lifetime1 = stackIn_8_0;
         var5 = (GameSnapshot) (this.state.carouselInfo.getStateStepsAgo(20, param0 ^ 18637));
         if (this.localPlayerIndex >= 0) {
@@ -7173,7 +7173,7 @@ final class GameSession {
           }
           var24 = this.state.b(param1 - 199).missionState;
           if (6 == var24.getMissionPhase(param1 ^ 192)) {
-            stackIn_38_0 = (!qab.a(36, param0.world.getObjectiveType(false))) ? 0 : 1;
+            stackIn_38_0 = (!ConsoleCharacterStream.a(36, param0.world.getObjectiveType(false))) ? 0 : 1;
             var8Lifetime1 = stackIn_38_0;
             var9Lifetime1 = var24.getWinner((byte) 123);
             var11Lifetime1 = 16777215;
@@ -7858,7 +7858,7 @@ final class GameSession {
               if (OpenGlTexture1D.field_i) {
                 var18 = GameSnapshotFactory.a(var12, (byte) -77, var11);
                 var16 = var16 - (GetNumStars.a(var18, (byte) -122) * 28 >> 16);
-                var17 = var17 - (28 * eu.a(var18, 97) >> 16);
+                var17 = var17 - (28 * TextureLineShape.a(var18, 97) >> 16);
                 var10.drawRotatedScaled((float)var16, (float)var17, 20.0f, 23.0f, 4096, -var18 << 3, 0, -1, 1);
               }
               PlayerActionFactory.a(param3, -var9 + var16, (byte) 88, -var9 + var17);
@@ -8184,8 +8184,8 @@ final class GameSession {
                 var24 = qpb.a(false, var23_int, 13894143);
                 if (var18_intLifetime2 > 0 &&
                   var18_intLifetime2 < 60) {
-                  var25 = eu.a(128 * SetMinimapWidth.field_o, 96) >> 9;
-                  var24 = dib.a((byte) 66, 16711680, var25, var24);
+                  var25 = TextureLineShape.a(128 * SetMinimapWidth.field_o, 96) >> 9;
+                  var24 = TextureRectangleShape.a((byte) 66, 16711680, var25, var24);
                 }
                 SetSelfDestructPrepareToggleCooldown.a(var20Lifetime1, -1, -MidiNote.a(var9, (byte) -121) + var22, var42, var9, var24, (byte) -117);
                 var10 = var10 + (var21 - 1);

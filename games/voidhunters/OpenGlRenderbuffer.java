@@ -184,7 +184,7 @@ final class OpenGlRenderbuffer extends DualLinkNode implements OpenGlFramebuffer
         if (0 == param1) {
           stackIn_34_0 = GetThrusterParticleSpeedDownshift.field_q;
         } else {
-          stackIn_34_0 = vm.field_q;
+          stackIn_34_0 = CellularNoiseTextureOperation.field_q;
         }
         return stackIn_34_0;
     }

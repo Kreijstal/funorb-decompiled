@@ -84,7 +84,7 @@ final class GetAutoDetail extends ConsoleCommand {
         }
     }
 
-    final static tsa a(int param0, qab param1) {
+    final static ConsoleExpressionToken readQuotedConsoleToken(int param0, ConsoleCharacterStream param1) {
         int fieldTemp$6 = 0;
         StringBuilder discarded$7 = null;
         StringBuilder discarded$9 = null;
@@ -95,9 +95,9 @@ final class GetAutoDetail extends ConsoleCommand {
         int var5 = 0;
         int var6 = 0;
         int var7 = 0;
-        tsa stackIn_3_0 = null;
+        ConsoleExpressionToken stackIn_3_0 = null;
         int stackIn_16_0 = 0;
-        tsa stackIn_17_0 = null;
+        ConsoleExpressionToken stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -106,19 +106,19 @@ final class GetAutoDetail extends ConsoleCommand {
         int var6Lifetime1;
         var7 = VoidHunters.field_G;
         try {
-          fieldTemp$6 = param1.field_b - 1;
-          param1.field_b = param1.field_b - 1;
+          fieldTemp$6 = param1.position - 1;
+          param1.position = param1.position - 1;
           var2_int = fieldTemp$6;
           var3 = new StringBuilder();
-          var4 = param1.a(-76);
+          var4 = param1.readChar(-76);
           if (param0 < 10) {
-            stackIn_3_0 = (tsa) null;
+            stackIn_3_0 = (ConsoleExpressionToken) null;
             return stackIn_3_0;
           }
           discarded$7 = var3.append((char) var4);
           var5 = 0;
-          while (!param1.a((byte) -126)) {
-            var6 = param1.a(-82);
+          while (!param1.isAtEnd((byte) -126)) {
+            var6 = param1.readChar(-82);
             if (var5 != 0) {
               var5 = 0;
               discarded$9 = var3.append((char) var6);
@@ -135,12 +135,12 @@ final class GetAutoDetail extends ConsoleCommand {
             break;
           }
           if (34 != var4) {
-            stackIn_16_0 = SetMissionTerrainSpaceProbability.field_o;
+            stackIn_16_0 = SetMissionTerrainSpaceProbability.charTokenType;
           } else {
-            stackIn_16_0 = dla.field_d;
+            stackIn_16_0 = dla.stringTokenType;
           }
           var6Lifetime1 = stackIn_16_0;
-          stackIn_17_0 = new tsa(var6Lifetime1, var2_int, var3.toString());
+          stackIn_17_0 = new ConsoleExpressionToken(var6Lifetime1, var2_int, var3.toString());
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

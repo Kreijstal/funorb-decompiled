@@ -134,9 +134,9 @@ final class CountermeasureLauncherWeaponDefinition extends WeaponDefinition {
     final int getProjectileVelocityRandomness(byte param0) {
         if (param0 >= -12) {
           field_c = (int[]) null;
-          return cp.field_f;
+          return TextureBezierShape.field_f;
         }
-        return cp.field_f;
+        return TextureBezierShape.field_f;
     }
 
     static {

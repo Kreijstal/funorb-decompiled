@@ -110,7 +110,7 @@ final class ShipAI implements DiffableState {
                 }
                 var15 = GameSnapshotFactory.a(-var13, (byte) -77, -var12);
                 var4_int = var4_int + GetNumStars.a(var15, (byte) -106) * var11 / (var14 * var14);
-                var5 = var5 + var11 * eu.a(var15, 40) / (var14 * var14);
+                var5 = var5 + var11 * TextureLineShape.a(var15, 40) / (var14 * var14);
               }
             }
           }
@@ -520,7 +520,7 @@ final class ShipAI implements DiffableState {
                 }
                 var15 = GameSnapshotFactory.a(-var13, (byte) -77, -var12);
                 var4_int = var4_int + var11 * GetNumStars.a(var15, (byte) 85) / (var14 * var14);
-                var5 = var5 + eu.a(var15, 107) * var11 / (var14 * var14);
+                var5 = var5 + TextureLineShape.a(var15, 107) * var11 / (var14 * var14);
               }
             }
           }
@@ -574,7 +574,7 @@ final class ShipAI implements DiffableState {
             var8 = GameSnapshotFactory.a(param2.y - var7, (byte) -77, -var6 + param2.x);
             var9 = param3;
             var10 = var6 + (GetNumStars.a(var8, (byte) 38) >> 8) * (var9 >> 8);
-            var11 = (var9 >> 8) * (eu.a(var8, 127) >> 8) + var7;
+            var11 = (var9 >> 8) * (TextureLineShape.a(var8, 127) >> 8) + var7;
             var12 = 256;
             var13 = -param2.x + var10;
             var14 = var11 - param2.y;

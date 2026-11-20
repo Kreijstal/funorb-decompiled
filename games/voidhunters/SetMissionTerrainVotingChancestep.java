@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetMissionTerrainVotingChancestep extends ConsoleCommand {
-    static int field_o;
+    static int argumentEndTokenType;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -61,7 +61,7 @@ final class SetMissionTerrainVotingChancestep extends ConsoleCommand {
             var5 = 0;
             var6 = 0;
             if (!param2) {
-              field_o = 6;
+              argumentEndTokenType = 6;
             }
             var7 = param1.length();
             for (var8 = 0; var7 > var8; var8++) {
@@ -122,6 +122,6 @@ final class SetMissionTerrainVotingChancestep extends ConsoleCommand {
     }
 
     static {
-        field_o = 1;
+        argumentEndTokenType = 1;
     }
 }

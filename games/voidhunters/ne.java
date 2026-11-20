@@ -379,7 +379,7 @@ final class ne extends ka {
           return true;
         }
         if (null == GetPointDefenceLaserProjectiles.field_o) {
-          GetPointDefenceLaserProjectiles.field_o = cp.field_n.openSocket(SetNebulaProximityFadeDownshift.field_p, GetAutozoomAmountMultiply.field_p, -122);
+          GetPointDefenceLaserProjectiles.field_o = TextureBezierShape.field_n.openSocket(SetNebulaProximityFadeDownshift.field_p, GetAutozoomAmountMultiply.field_p, -122);
         }
         if (GetPointDefenceLaserProjectiles.field_o.status == 0) {
           return false;

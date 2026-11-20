@@ -67,7 +67,7 @@ final class AsteroidFactory implements GameStateFactory {
           GetMassDriverAimspeed.field_o = param2;
           SetAngularForceDownshift.field_o = true;
           if (GetMassDriverAimspeed.field_o == 0) {
-            var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, dib.field_j, ShipBlueprint.field_a);
+            var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, TextureRectangleShape.field_j, ShipBlueprint.field_a);
             var4 = var3_int + 3;
             bra.field_f = new String[var4];
             GetMessageMax.field_o = new int[var4];
@@ -86,7 +86,7 @@ final class AsteroidFactory implements GameStateFactory {
             GetMessageMax.field_o[-1 + var4] = 1;
             CountermeasureLauncherWeaponDefinition.field_c[1] = 5;
           } else if (1 == GetMassDriverAimspeed.field_o) {
-            var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, dib.field_j, ShipBlueprint.field_a);
+            var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, TextureRectangleShape.field_j, ShipBlueprint.field_a);
             var4 = 2 + var3_int;
             bra.field_f = new String[var4];
             GetMessageMax.field_o = new int[var4];
@@ -106,7 +106,7 @@ final class AsteroidFactory implements GameStateFactory {
               if (!SetTorpedoProjectiles.field_o.privilegedAccess) {
                 var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, UiArrayContainer.field_t, ShipBlueprint.field_a);
               } else {
-                var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, param0 ^ 2, moa.field_n, ShipBlueprint.field_a);
+                var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, param0 ^ 2, StripesTextureOperation.field_n, ShipBlueprint.field_a);
               }
               var4 = 2 + var3_int;
               GetMessageMax.field_o = new int[var4];

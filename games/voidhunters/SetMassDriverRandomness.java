@@ -8,7 +8,7 @@ final class SetMassDriverRandomness extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static int a(tsa[] param0, int param1, int param2) {
+    final static int findTokenIndexForCaret(ConsoleExpressionToken[] param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -31,7 +31,7 @@ final class SetMassDriverRandomness extends ConsoleCommand {
               stackIn_11_0 = -1 + param0.length;
               return stackIn_11_0;
             }
-            if (param0[var3_int + 1].field_g <= (param2 - 1)) {
+            if (param0[var3_int + 1].sourceOffset <= (param2 - 1)) {
               var3_int++;
               continue;
             }

@@ -3,17 +3,17 @@
  */
 import java.util.*;
 
-final class cm extends TextureOperation {
-    private int field_r;
-    private int field_s;
-    private int field_p;
-    private int field_q;
-    private int field_n;
-    private int field_i;
-    private int field_m;
-    private int field_l;
-    private int field_k;
-    private int field_o;
+final class IrregularBricksTextureOperation extends TextureOperation {
+    private int brightnessRandomness;
+    private int maximumHeight;
+    private int bevelMode;
+    private int maximumWidth;
+    private int minimumWidth;
+    private int seed;
+    private int baseBevelWidth;
+    private int bevelRandomness;
+    private int minimumHeight;
+    private int bevelWidthScale;
     static int[] field_j;
 
     final int[] getMonochromeRow(int param0, boolean param1) {
@@ -78,7 +78,7 @@ final class cm extends TextureOperation {
         var38 = VoidHunters.field_G;
         var3 = this.field_f.getRow((byte) -43, param0);
         if (!param1) {
-          this.field_l = 74;
+          this.bevelRandomness = 74;
         }
         if (this.field_f.field_e) {
           var47 = this.field_f.getFullImage(73);
@@ -93,19 +93,19 @@ final class cm extends TextureOperation {
           var11 = 1;
           var12 = 0;
           var13 = 0;
-          var14 = hob.textureWidth * this.field_n >> 12;
-          var15 = this.field_q * hob.textureWidth >> 12;
-          var16 = this.field_k * GetTorpedoReload.field_o >> 12;
-          var17 = GetTorpedoReload.field_o * this.field_s >> 12;
+          var14 = hob.textureWidth * this.minimumWidth >> 12;
+          var15 = this.maximumWidth * hob.textureWidth >> 12;
+          var16 = this.minimumHeight * GetTorpedoReload.field_o >> 12;
+          var17 = GetTorpedoReload.field_o * this.maximumHeight >> 12;
           if (var17 <= 1) {
             return var47[param0];
           }
-          this.field_m = this.field_o * (hob.textureWidth / 8) >> 12;
+          this.baseBevelWidth = this.bevelWidthScale * (hob.textureWidth / 8) >> 12;
           var18 = hob.textureWidth / var14 + 1;
           var19 = new int[var18][3];
           var48 = new int[var18][3];
           var20 = var48;
-          var21 = new Random((long)this.field_i);
+          var21 = new Random((long)this.seed);
           while (true) {
             var23 = var14 + hob.a(var21, -var14 + var15, 122);
             var24 = var16 + hob.a(var21, -var16 + var17, 127);
@@ -164,7 +164,7 @@ final class cm extends TextureOperation {
                               var34 = 0;
                             }
                           }
-                          this.a(3349, -var34 + var35, var4, var7 + var34, var22 - var33, var21, var33);
+                          this.drawBeveledBrick(3349, -var34 + var35, var4, var7 + var34, var22 - var33, var21, var33);
                         }
                         var39++;
                       }
@@ -197,11 +197,11 @@ final class cm extends TextureOperation {
               var44[1] = var25;
               var44[0] = var8;
               var26[2] = var24 + var22;
-              this.a(3349, var23, var47, var6 + var8, var24, var21, var22);
+              this.drawBeveledBrick(3349, var23, var47, var6 + var8, var24, var21, var22);
               var8 = var25;
               continue;
             }
-            this.a(3349, var23, var4, var8 + var6, var24, var21, var22);
+            this.drawBeveledBrick(3349, var23, var4, var8 + var6, var24, var21, var22);
             if (var10 != 0) {
               break;
             }
@@ -250,17 +250,17 @@ final class cm extends TextureOperation {
         return var3;
     }
 
-    public cm() {
+    public IrregularBricksTextureOperation() {
         super(0, true);
-        this.field_r = 1024;
-        this.field_i = 0;
-        this.field_l = 1024;
-        this.field_n = 1024;
-        this.field_s = 819;
-        this.field_p = 0;
-        this.field_q = 2048;
-        this.field_k = 409;
-        this.field_o = 1024;
+        this.brightnessRandomness = 1024;
+        this.seed = 0;
+        this.bevelRandomness = 1024;
+        this.minimumWidth = 1024;
+        this.maximumHeight = 819;
+        this.bevelMode = 0;
+        this.maximumWidth = 2048;
+        this.minimumHeight = 409;
+        this.bevelWidthScale = 1024;
     }
 
     final void decodeParameter(int param0, int param1, PacketBuffer param2) {
@@ -276,31 +276,31 @@ final class cm extends TextureOperation {
         try {
           if (param1 > -60) {
             var6 = (Random) null;
-            this.a(-81, -19, (int[][]) null, -71, 101, (Random) null, 28);
+            this.drawBeveledBrick(-81, -19, (int[][]) null, -71, 101, (Random) null, 28);
           }
           var4_int = param0;
           if (0 == var4_int) {
-            this.field_i = param2.readUnsignedByte((byte) -92);
+            this.seed = param2.readUnsignedByte((byte) -92);
           } else {
             if (1 != var4_int) {
               if (var4_int != 2) {
                 if (var4_int == 3) {
-                  this.field_k = param2.readUnsignedShort(1869);
+                  this.minimumHeight = param2.readUnsignedShort(1869);
                 } else {
                   if (var4_int == 4) {
-                    this.field_s = param2.readUnsignedShort(1869);
+                    this.maximumHeight = param2.readUnsignedShort(1869);
                   } else {
                     if (var4_int == 5) {
-                      this.field_o = param2.readUnsignedShort(1869);
+                      this.bevelWidthScale = param2.readUnsignedShort(1869);
                     } else {
                       if (var4_int == 6) {
-                        this.field_p = param2.readUnsignedByte((byte) -88);
+                        this.bevelMode = param2.readUnsignedByte((byte) -88);
                       } else {
                         if (var4_int == 7) {
-                          this.field_l = param2.readUnsignedShort(1869);
+                          this.bevelRandomness = param2.readUnsignedShort(1869);
                         } else {
                           if (var4_int == 8) {
-                            this.field_r = param2.readUnsignedShort(1869);
+                            this.brightnessRandomness = param2.readUnsignedShort(1869);
                           }
                         }
                       }
@@ -308,10 +308,10 @@ final class cm extends TextureOperation {
                   }
                 }
               } else {
-                this.field_q = param2.readUnsignedShort(1869);
+                this.maximumWidth = param2.readUnsignedShort(1869);
               }
             } else {
-              this.field_n = param2.readUnsignedShort(1869);
+              this.minimumWidth = param2.readUnsignedShort(1869);
             }
           }
           return;
@@ -348,7 +348,7 @@ final class cm extends TextureOperation {
           var4 = 0;
           if (param0 != -87) {
             var6 = (String) null;
-            cm.a((byte) 86, (String) null);
+            IrregularBricksTextureOperation.a((byte) 86, (String) null);
           }
           while (var4 < var2_int) {
             var3[-var4 + var2_int - 1] = param1.charAt(var4);
@@ -373,7 +373,7 @@ final class cm extends TextureOperation {
     final void postDecode(byte param0) {
         if (param0 > -35) {
           Random var3 = (Random) null;
-          this.a(72, -58, (int[][]) null, -109, -87, (Random) null, 122);
+          this.drawBeveledBrick(72, -58, (int[][]) null, -109, -87, (Random) null, 122);
         }
     }
 
@@ -384,7 +384,7 @@ final class cm extends TextureOperation {
         }
     }
 
-    private final void a(int param0, int param1, int[][] param2, int param3, int param4, Random param5, int param6) {
+    private final void drawBeveledBrick(int param0, int param1, int[][] param2, int param3, int param4, Random param5, int param6) {
         int var17 = 0;
         int dupTemp$0 = 0;
         int dupTemp$2 = 0;
@@ -433,14 +433,14 @@ final class cm extends TextureOperation {
         int var11Lifetime2;
         var23 = VoidHunters.field_G;
         try {
-          if (this.field_r > 0) {
-            stackIn_4_0 = 4096 - hob.a(param5, this.field_r, 123);
+          if (this.brightnessRandomness > 0) {
+            stackIn_4_0 = 4096 - hob.a(param5, this.brightnessRandomness, 123);
           } else {
             stackIn_4_0 = 4096;
           }
           var8_int = stackIn_4_0;
-          var9 = this.field_l * this.field_m >> 12;
-          stackIn_6_0 = this.field_m;
+          var9 = this.bevelRandomness * this.baseBevelWidth >> 12;
+          stackIn_6_0 = this.baseBevelWidth;
           if (0 >= var9) {
             stackIn_7_1 = 0;
           } else {
@@ -449,7 +449,7 @@ final class cm extends TextureOperation {
           var10 = stackIn_6_0 - stackIn_7_1;
           if (param0 != 3349) {
             var24 = (Random) null;
-            this.a(-48, 78, (int[][]) null, 42, 103, (Random) null, -25);
+            this.drawBeveledBrick(-48, 78, (int[][]) null, 42, 103, (Random) null, -25);
           }
           if (param3 >= hob.textureWidth) {
             param3 = param3 - hob.textureWidth;
@@ -484,7 +484,7 @@ final class cm extends TextureOperation {
               var18 = param2[var17 + param6];
               if (var14 > var17) {
                 var19 = var17 * var8_int / var14;
-                if (this.field_p == 0) {
+                if (this.bevelMode == 0) {
                   for (var20 = 0; var20 < var13; var20++) {
                     var21 = var8_int * var20 / var13;
                     dupTemp$0 = dla.a(SetMassDriverEnergyUsed.field_q, param1 + param3 - var20 - 1);
@@ -533,7 +533,7 @@ final class cm extends TextureOperation {
                 }
                 else {
                   var20 = var19 * var8_int / var14;
-                  if (0 == this.field_p) {
+                  if (0 == this.bevelMode) {
                     for (var21 = 0; var21 < var13; var21++) {
                       var22 = var8_int * var21 / var13;
                       dupTemp$1 = dla.a(-var21 + (param1 + (param3 - 1)), SetMassDriverEnergyUsed.field_q);

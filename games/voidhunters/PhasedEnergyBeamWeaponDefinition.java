@@ -110,7 +110,7 @@ final class PhasedEnergyBeamWeaponDefinition extends WeaponDefinition {
 
     final int getAimArc(int param0) {
         int var2 = 32 % ((param0 - 7) / 47);
-        return qab.field_d;
+        return ConsoleCharacterStream.field_d;
     }
 
     PhasedEnergyBeamWeaponDefinition() {

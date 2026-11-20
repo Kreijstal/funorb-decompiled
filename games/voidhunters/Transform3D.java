@@ -77,7 +77,7 @@ abstract class Transform3D {
           var5Lifetime1 = SetBloomThresholdPercentage.field_p[11] >> 8;
           var6Lifetime1 = SetSalvoaim.field_r << 4;
           var7Lifetime1 = 0;
-          var8Lifetime1 = eu.a(var6Lifetime1, 57) >> 8;
+          var8Lifetime1 = TextureLineShape.a(var6Lifetime1, 57) >> 8;
           var9Lifetime1 = GetNumStars.a(var6Lifetime1, (byte) 61) >> 8;
           if (PlayerGameData.field_b != -1 &&
             uia.field_b != -1) {

@@ -11,7 +11,7 @@ final class dnb extends IntrusiveNode {
           return (CarouselSlot) null;
         }
         UiViewport.field_w.beginBitRead(-23497);
-        CarouselSlot var1 = (CarouselSlot) (gva.field_a.create((byte) 69));
+        CarouselSlot var1 = (CarouselSlot) (ConsoleEvaluationException.field_a.create((byte) 69));
         if (!(var1 instanceof CompactGameState)) {
           var1.readState(UiViewport.field_w, false);
           UiViewport.field_w.endBitRead((byte) -92);

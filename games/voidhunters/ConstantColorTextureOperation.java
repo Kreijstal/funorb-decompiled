@@ -3,7 +3,7 @@
  */
 final class ConstantColorTextureOperation extends TextureOperation {
     static Widget field_k;
-    static int field_l;
+    static int argumentSeparatorTokenType;
     private int blue;
     private int green;
     private int red;
@@ -164,6 +164,6 @@ final class ConstantColorTextureOperation extends TextureOperation {
     }
 
     static {
-        field_l = 2;
+        argumentSeparatorTokenType = 2;
     }
 }

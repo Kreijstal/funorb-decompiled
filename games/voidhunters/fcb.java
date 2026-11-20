@@ -281,7 +281,7 @@ final class fcb implements oob {
           mab.field_a.renderGameFrame(-112);
           GrapplingHookFactory.field_a = (BitmapFont) ((Object) fab.a(var12, "", 0, var11, "arialish12"));
           SetMpSandboxEnemySpawnLimit.field_p = GetFighterBayAimspeed.a(0, "basic", this.field_i, this.field_e, "antigrav_18_graphics1");
-          kbb.a(var12, this.field_e, this.field_i, (byte) 88, var11);
+          HslAdjustTextureOperation.a(var12, this.field_e, this.field_i, (byte) 88, var11);
           cbb.a(this.field_d, param0 ^ 57, this.field_i);
           ko.field_e = WorldPoint.a("frame", -124, "basic", this.field_i);
           ScreenSizeController.field_d = WorldPoint.a("frame_filled", 52, "basic", this.field_i);

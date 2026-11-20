@@ -212,7 +212,7 @@ final class SetGrapplingHookMinLength extends ConsoleCommand {
     final static void a(int param0) {
         SetGrapplingHookRopeBreakLength.field_p = SoftwareRasterizer2D.height;
         GetShieldsDirectionalArcParticleLife.field_p = SoftwareRasterizer2D.width;
-        moa.a(true);
+        StripesTextureOperation.a(true);
         lc.field_b.a(0, -83, -40 + (tb.field_a.height - 2), 0, tb.field_a.width);
         nna.field_v.setBounds(0, -17, lw.field_i.width, 0, nna.field_w);
         int var1 = nna.field_w + 2;

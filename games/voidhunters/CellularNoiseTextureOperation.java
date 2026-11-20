@@ -3,50 +3,50 @@
  */
 import java.util.*;
 
-final class vm extends TextureOperation {
+final class CellularNoiseTextureOperation extends TextureOperation {
     static String field_q;
-    private int field_o;
-    private short[] field_k;
-    private int field_i;
-    private byte[] field_j;
-    private int field_n;
-    private int field_l;
-    private int field_p;
-    private int field_m;
+    private int outputMode;
+    private short[] cellOffsets;
+    private int jitterRange;
+    private byte[] permutation;
+    private int distanceMetric;
+    private int seed;
+    private int verticalFrequency;
+    private int horizontalFrequency;
 
     final void postDecode(byte param0) {
-        this.field_j = SpecialOrderStatus.a((byte) 36, this.field_l);
-        this.d(30866);
+        this.permutation = SpecialOrderStatus.a((byte) 36, this.seed);
+        this.initializeCellOffsets(30866);
         if (param0 > -35) {
           PacketBuffer var3 = (PacketBuffer) null;
           this.decodeParameter(-21, 74, (PacketBuffer) null);
         }
     }
 
-    public vm() {
+    public CellularNoiseTextureOperation() {
         super(0, true);
-        this.field_j = new byte[512];
-        this.field_o = 2;
-        this.field_l = 0;
-        this.field_k = new short[512];
-        this.field_i = 2048;
-        this.field_n = 1;
-        this.field_m = 5;
-        this.field_p = 5;
+        this.permutation = new byte[512];
+        this.outputMode = 2;
+        this.seed = 0;
+        this.cellOffsets = new short[512];
+        this.jitterRange = 2048;
+        this.distanceMetric = 1;
+        this.horizontalFrequency = 5;
+        this.verticalFrequency = 5;
     }
 
-    private final void d(int param0) {
+    private final void initializeCellOffsets(int param0) {
         int var3 = 0;
         int var4 = VoidHunters.field_G;
-        Random var5 = new Random((long)this.field_l);
+        Random var5 = new Random((long)this.seed);
         Random var2 = var5;
         if (param0 != 30866) {
           this.postDecode((byte) 124);
         }
-        this.field_k = new short[512];
-        if (this.field_i > 0) {
+        this.cellOffsets = new short[512];
+        if (this.jitterRange > 0) {
           for (var3 = 0; 512 > var3; var3++) {
-            this.field_k[var3] = (short)hob.a(var5, this.field_i, 120);
+            this.cellOffsets[var3] = (short)hob.a(var5, this.jitterRange, 120);
           }
         }
     }
@@ -65,35 +65,35 @@ final class vm extends TextureOperation {
           var4_int = param0;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              this.field_l = param2.readUnsignedByte((byte) -127);
+              this.seed = param2.readUnsignedByte((byte) -127);
             } else {
               if (var4_int == 2) {
-                this.field_i = param2.readUnsignedShort(1869);
+                this.jitterRange = param2.readUnsignedShort(1869);
               } else {
                 if (var4_int != 3) {
                   if (var4_int == 4) {
-                    this.field_n = param2.readUnsignedByte((byte) -97);
+                    this.distanceMetric = param2.readUnsignedByte((byte) -97);
                   } else {
                     if (var4_int == 5) {
-                      this.field_m = param2.readUnsignedByte((byte) -97);
+                      this.horizontalFrequency = param2.readUnsignedByte((byte) -97);
                     } else {
                       if (var4_int == 6) {
-                        this.field_p = param2.readUnsignedByte((byte) -87);
+                        this.verticalFrequency = param2.readUnsignedByte((byte) -87);
                       }
                     }
                   }
                 } else {
-                  this.field_o = param2.readUnsignedByte((byte) -108);
+                  this.outputMode = param2.readUnsignedByte((byte) -108);
                 }
               }
             }
           } else {
             dupTemp$0 = param2.readUnsignedByte((byte) -123);
-            this.field_p = dupTemp$0;
-            this.field_m = dupTemp$0;
+            this.verticalFrequency = dupTemp$0;
+            this.horizontalFrequency = dupTemp$0;
           }
           if (param1 >= -60) {
-            this.field_l = -121;
+            this.seed = -121;
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -151,7 +151,7 @@ final class vm extends TextureOperation {
         }
         var3 = this.field_f.getRow((byte) 118, param0);
         if (this.field_f.field_e) {
-          var4 = 2048 + SetSalvoUsesAllEnergy.textureYCoordinates[param0] * this.field_p;
+          var4 = 2048 + SetSalvoUsesAllEnergy.textureYCoordinates[param0] * this.verticalFrequency;
           var5 = var4 >> 12;
           var6 = var5 + 1;
           for (var14 = 0; hob.textureWidth > var14; var14++) {
@@ -159,33 +159,33 @@ final class vm extends TextureOperation {
             qd.field_b = 2147483647;
             SetSalvoRepairTimeMultiplier.field_q = 2147483647;
             MissionListFactory.field_b = 2147483647;
-            var15 = 2048 + BoxBlurTextureOperation.textureXCoordinates[var14] * this.field_m;
+            var15 = 2048 + BoxBlurTextureOperation.textureXCoordinates[var14] * this.horizontalFrequency;
             var16 = var15 >> 12;
             var17 = var16 + 1;
             for (var8 = var5 - 1; var6 >= var8; var8++) {
-              stackIn_9_0 = this.field_j;
-              if (var8 < this.field_p) {
+              stackIn_9_0 = this.permutation;
+              if (var8 < this.verticalFrequency) {
                 stackIn_10_1 = var8;
               } else {
-                stackIn_10_1 = var8 - this.field_p;
+                stackIn_10_1 = var8 - this.verticalFrequency;
               }
               var12 = stackIn_9_0[stackIn_10_1 & 255] & 255;
               for (var7 = var16 - 1; var7 <= var17; var7++) {
                 stackIn_14_0 = 2;
                 stackIn_14_1 = 255;
-                stackIn_14_2 = this.field_j;
+                stackIn_14_2 = this.permutation;
                 stackIn_14_3 = 255;
-                if (this.field_m <= var7) {
-                  stackIn_15_4 = -this.field_m + var7;
+                if (this.horizontalFrequency <= var7) {
+                  stackIn_15_4 = -this.horizontalFrequency + var7;
                 } else {
                   stackIn_15_4 = var7;
                 }
                 var13 = stackIn_14_0 * (stackIn_14_1 & stackIn_14_2[stackIn_14_3 & stackIn_15_4 + var12]);
                 incrementValue$0 = var13;
                 var13++;
-                var9 = -this.field_k[incrementValue$0] - ((var7 << 12) - var15);
-                var10 = var4 - ((var8 << 12) + this.field_k[var13]);
-                var18 = this.field_n;
+                var9 = -this.cellOffsets[incrementValue$0] - ((var7 << 12) - var15);
+                var10 = var4 - ((var8 << 12) + this.cellOffsets[var13]);
+                var18 = this.distanceMetric;
                 if (var18 != 1) {
                   if (var18 != 3) {
                     if (var18 == 4) {
@@ -269,7 +269,7 @@ final class vm extends TextureOperation {
                 }
               }
             }
-            var18Lifetime1 = this.field_o;
+            var18Lifetime1 = this.outputMode;
             if (0 == var18Lifetime1) {
               var3[var14] = SetSalvoRepairTimeMultiplier.field_q;
             } else {
@@ -296,7 +296,7 @@ final class vm extends TextureOperation {
 
     public static void clearSharedReferences(byte param0) {
         if (param0 != 110) {
-          vm.clearSharedReferences((byte) -75);
+          CellularNoiseTextureOperation.clearSharedReferences((byte) -75);
         }
         field_q = null;
     }

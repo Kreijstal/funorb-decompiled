@@ -140,7 +140,7 @@ final class MissionState implements DiffableState {
           var8 = new MissionBuilder();
           var9 = var8;
           var9.seed = this.getMissionGenerationSeed((byte) 120);
-          if (qab.a(param0 + 92, this.getVotedObjective(6472))) {
+          if (ConsoleCharacterStream.a(param0 + 92, this.getVotedObjective(6472))) {
             var10 = new Random((long)var9.seed);
             this.rebalanceTeams(-1, param1);
             this.assignUnassignedPlayersToTeams(var10, 2196, param1);
@@ -1157,7 +1157,7 @@ final class MissionState implements DiffableState {
               }
               var24 = this.countOptionVotes(param0, (byte) -95);
               this.setVotedOptions(var24, false);
-              if (qab.a(82, this.nextround.votedObjective)) {
+              if (ConsoleCharacterStream.a(82, this.nextround.votedObjective)) {
                 this.setMissionPhase(3, -7, Particle.field_j);
                 return;
               }
@@ -1202,7 +1202,7 @@ final class MissionState implements DiffableState {
                 }
                 if (null != this.currentMatch &&
                   !this.hasNextRound(24416) &&
-                  qab.a(81, var14.getObjectiveType(false))) {
+                  ConsoleCharacterStream.a(81, var14.getObjectiveType(false))) {
                   var5Lifetime1 = this.currentMatch.a(true);
                   if (0 <= var5Lifetime1 &&
                     this.teamscores.length > var5Lifetime1) {

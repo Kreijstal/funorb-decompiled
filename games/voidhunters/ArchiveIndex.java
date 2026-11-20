@@ -441,7 +441,7 @@ final class ArchiveIndex {
           var5 = null;
           if (iwa.field_b == 2) {
             PlayerJoinFactory.field_c.enabled = true;
-            OpenGlCubeTexture.field_h.text = SetReverbGain.a(SetVelocitySustain.field_o, new String[]{kbb.field_q}, param1 + 89);
+            OpenGlCubeTexture.field_h.text = SetReverbGain.a(SetVelocitySustain.field_o, new String[]{HslAdjustTextureOperation.field_q}, param1 + 89);
             BitmapTextLayout.field_n.scrollPane.viewport.text = null;
             var6 = null;
             var7 = (vu) (var4.first(0));
@@ -466,7 +466,7 @@ final class ArchiveIndex {
                 var7.width = BitmapTextLayout.field_n.content.width;
                 var9 = 0;
                 if (null != var7.field_Ab) {
-                  if (kbb.field_q != var7.field_Ab) {
+                  if (HslAdjustTextureOperation.field_q != var7.field_Ab) {
                     var10 = 13421568;
                     var11 = 16777062;
                   } else {

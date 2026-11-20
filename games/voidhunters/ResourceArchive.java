@@ -263,14 +263,14 @@ final class ResourceArchive {
             decompiledFrameRemainder1 = !(SetMutatorVotes.field_o.length < 2);
             if (decompiledFrameRemainder1) {
               if (param2) {
-                stackIn_22_0 = (-1 != tsa.field_h) ? 1 : 0;
+                stackIn_22_0 = (-1 != ConsoleExpressionToken.field_h) ? 1 : 0;
               } else {
                 stackIn_22_0 = 0;
               }
               var6 = stackIn_22_0;
               decompiledFrameRemainder0 = (var6 != 0);
               if (decompiledFrameRemainder0) {
-                var7 = tsa.field_h;
+                var7 = ConsoleExpressionToken.field_h;
                 for (var8_int = 0; var8_int < GetPlayerRepairTime.field_o.length; var8_int++) {
                   GetPlayerRepairTime.field_o[var8_int] = (byte) 0;
                 }
@@ -305,14 +305,14 @@ final class ResourceArchive {
             decompiledFrameRemainder1 = !(SetMutatorVotes.field_o.length < 2);
             if (decompiledFrameRemainder1) {
               if (param2) {
-                stackIn_56_0 = (-1 != tsa.field_h) ? 1 : 0;
+                stackIn_56_0 = (-1 != ConsoleExpressionToken.field_h) ? 1 : 0;
               } else {
                 stackIn_56_0 = 0;
               }
               var6 = stackIn_56_0;
               decompiledFrameRemainder0 = (var6 != 0);
               if (decompiledFrameRemainder0) {
-                var7 = tsa.field_h;
+                var7 = ConsoleExpressionToken.field_h;
                 for (var8_int = 0; var8_int < GetPlayerRepairTime.field_o.length; var8_int++) {
                   GetPlayerRepairTime.field_o[var8_int] = (byte) 0;
                 }
@@ -327,7 +327,7 @@ final class ResourceArchive {
             stackIn_64_0 = (!param2) ? 0 : -1;
             for (var7 = stackIn_64_0; var7 < SetMutatorVotes.field_o.length; var7++) {
               if (var6 != 0) {
-                stackIn_72_0 = (tsa.field_h != var7) ? 1 : 0;
+                stackIn_72_0 = (ConsoleExpressionToken.field_h != var7) ? 1 : 0;
               } else {
                 stackIn_72_0 = 0;
               }
@@ -466,9 +466,9 @@ final class ResourceArchive {
                 var9 >= 0) {
                 if (SetBombletSprayPushMultiplier.field_o != null &&
                   SetBombletSprayPushMultiplier.field_o[var7] != null &&
-                  0 < (~kbb.field_p & SetBombletSprayPushMultiplier.field_o[var7][var9])) {
+                  0 < (~HslAdjustTextureOperation.field_p & SetBombletSprayPushMultiplier.field_o[var7][var9])) {
                   var14 = 1;
-                  var15 = wsb.a(SetBombletSprayPushMultiplier.field_o[var7][var9] & ~kbb.field_p, 1302374146);
+                  var15 = wsb.a(SetBombletSprayPushMultiplier.field_o[var7][var9] & ~HslAdjustTextureOperation.field_p, 1302374146);
                 }
                 if (null != SetGrapplingHookMaxExtension8Force.field_o &&
                   SetGrapplingHookMaxExtension8Force.field_o[var7] != null &&

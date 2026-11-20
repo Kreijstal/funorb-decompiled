@@ -1,7 +1,7 @@
 # Reading Void Hunters
 
-Resolved declarations: 1204/1572 classes and 6081/8215 methods have readable names; 1359 constructors follow their class names.
-Remaining: 368 opaque classes and 2134 opaque methods. The complete naming goal is still in progress.
+Resolved declarations: 1225/1572 classes and 6126/8215 methods have readable names; 1359 constructors follow their class names.
+Remaining: 347 opaque classes and 2089 opaque methods. The complete naming goal is still in progress.
 
 Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionControl` and `GameSnapshot` expose the simulation and mission state. The console command classes retain the names of their registered commands.
 
@@ -32,6 +32,8 @@ Start at `VoidHunters`; `World`, `Ship`, `ShipBody`, `ShipComponent`, `MissionCo
 `PlatformService` queues `PlatformRequest` operations for sockets, threads, reflection, clipboard and display/cursor access. The Microsoft-JVM fullscreen and cursor controllers retain their native contracts. `ArrayOperations`, `Cp1252CharacterEncoder`, `SoftwareSprite2D` and `SoftwareIndexedSprite2D` name array, encoding and indexed raster helpers. `DeveloperConsole` and `CommandConsole` expose animated output, command history, expression execution and completion through `TextNode` records.
 
 Named texture operations identify constants, coordinate gradients, box blur, clamping, curves, colorization, flipping, waveforms, hash noise, weave and brick patterns, polar displacement, tiling, blending, inversion, kaleidoscope sampling, grayscale, color-key scaling, thresholds, range mapping, Mandelbrot iteration, normal maps, edge magnitude and sprite/texture sources. Their factory ids, fixed-point arithmetic and cache behavior are preserved. `UiStatefulStyle` combines `UiVisualStyle` layers for interaction states; `ScreenSizeController`, `CanvasResizeListener`, `FullscreenCanvas` and `DisplayMode` name resize and fullscreen contracts. Small `World` helpers identify mission events, map-zone lookup, escape pods, body overlap and projectile tests.
+
+All forty texture-operation factory products have descriptive class names, including blend modes, HSL adjustment, color gradients, cellular/Perlin noise, stripes, crossed waves, random lines, irregular bricks, directional lighting and raster shapes. `TextureRasterShape` distinguishes line, cubic Bezier, rectangle and ellipse drawing contracts. `ConsoleCharacterStream`, `ConsoleTokenStream` and `ConsoleExpressionToken` expose tokenization, recursive method-call parsing and evaluation; syntax/evaluation exception records retain their original offsets and message payloads. Unrelated static helpers remain in the overall naming audit.
 
 `ShipBody` names force accumulation, motion integration, mass properties, bounds and controls. `ShipComponent` exposes its tree, transforms, aiming, health, attachment and collision operations. `ComponentAttachmentPlan` records the chosen `HardpointMatch` and obstructions; `ComponentCollision` and `ComponentContact` separate polygon overlaps from contact points. `ProjectileHit` resolves impact effects and damage, while `ProjectileTraceResult` retains the nearest intersection.
 

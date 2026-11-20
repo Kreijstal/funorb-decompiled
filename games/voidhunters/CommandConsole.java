@@ -23,10 +23,10 @@ final class CommandConsole extends DeveloperConsole {
         String var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        tsa[] var4 = null;
+        ConsoleExpressionToken[] var4 = null;
         int var5 = 0;
         String var6 = null;
-        tsa var7 = null;
+        ConsoleExpressionToken var7 = null;
         SecondaryNodeQueue var7_ref = null;
         int var8_int = 0;
         StringBuilder var8 = null;
@@ -45,16 +45,16 @@ final class CommandConsole extends DeveloperConsole {
         try {
           var2 = this.inputWidget.getText(-14453);
           var3 = this.inputWidget.getCaretPosition(param0 ^ param0);
-          var4 = dib.a(var2, 90);
-          var5 = SetMassDriverRandomness.a(var4, -25223, var3);
+          var4 = TextureRectangleShape.getCachedConsoleTokens(var2, 90);
+          var5 = SetMassDriverRandomness.findTokenIndexForCaret(var4, -25223, var3);
           var6 = "";
           if (0 <= var5) {
             var7 = var4[var5];
-            var8_int = var3 - var7.field_g;
-            if (var7.field_e == SetMissionVariablesHudX.field_p &&
+            var8_int = var3 - var7.sourceOffset;
+            if (var7.type == SetMissionVariablesHudX.methodTokenType &&
               var8_int > 0 &&
-              var8_int <= var7.field_d.length()) {
-              var6 = var7.field_d.substring(0, var8_int);
+              var8_int <= var7.lexeme.length()) {
+              var6 = var7.lexeme.substring(0, var8_int);
             }
           }
           var7_ref = this.findCommandsByPrefix(var6, (byte) 28);
@@ -160,10 +160,10 @@ final class CommandConsole extends DeveloperConsole {
         String var2 = null;
         RuntimeException var2_ref = null;
         int var3 = 0;
-        tsa[] var4 = null;
+        ConsoleExpressionToken[] var4 = null;
         int var5 = 0;
         String var6 = null;
-        tsa var7 = null;
+        ConsoleExpressionToken var7 = null;
         SecondaryNodeQueue var7_ref = null;
         int var8_int = 0;
         String[] var8 = null;
@@ -180,28 +180,28 @@ final class CommandConsole extends DeveloperConsole {
           boolean decompiledFrameRemainder0 = true;
           var2 = this.inputWidget.getText(-14453);
           var3 = this.inputWidget.getCaretPosition(0);
-          var4 = dib.a(var2, 83);
-          var5 = SetMassDriverRandomness.a(var4, -25223, var3);
+          var4 = TextureRectangleShape.getCachedConsoleTokens(var2, 83);
+          var5 = SetMassDriverRandomness.findTokenIndexForCaret(var4, -25223, var3);
           this.completionBackground.x = 0;
           var6 = "";
           if (var5 >= 0) {
             var7 = var4[var5];
-            var8_int = -var7.field_g + var3;
-            if (~SetMissionVariablesHudX.field_p != ~var7.field_e ||
+            var8_int = -var7.sourceOffset + var3;
+            if (~SetMissionVariablesHudX.methodTokenType != ~var7.type ||
               var8_int <= 0) {
               var9 = var5;
               var10_int = 0;
               scanLoop1: while (true) {
                 if (0 <= var9) {
-                  stackIn_25_0 = SetMissionTerrainVotingChancestep.field_o;
-                  stackIn_25_1 = var4[var9].field_e;
+                  stackIn_25_0 = SetMissionTerrainVotingChancestep.argumentEndTokenType;
+                  stackIn_25_1 = var4[var9].type;
                   if (var11 != 0) {
                     break scanLoop1;
                   }
                   if (stackIn_25_0 == stackIn_25_1) {
                     var10_int++;
                   }
-                  if (ScrollableActionPanel.field_vb == var4[var9].field_e) {
+                  if (ScrollableActionPanel.argumentStartTokenType == var4[var9].type) {
                     var10_int--;
                   }
                   if (var10_int >= 0) {
@@ -214,15 +214,15 @@ final class CommandConsole extends DeveloperConsole {
                 break;
               }
               if (stackIn_25_0 < stackIn_25_1 &&
-                SetMissionVariablesHudX.field_p == var4[var9 - 1].field_e) {
-                var6 = var4[var9 - 1].field_d;
-                this.completionBackground.x = this.font.getStringWidth(var2.substring(0, var4[-1 + var9].field_g));
+                SetMissionVariablesHudX.methodTokenType == var4[var9 - 1].type) {
+                var6 = var4[var9 - 1].lexeme;
+                this.completionBackground.x = this.font.getStringWidth(var2.substring(0, var4[-1 + var9].sourceOffset));
               }
               decompiledFrameRemainder0 = (var11 != 0);
             }
             if (decompiledFrameRemainder0) {
-              var6 = var7.field_d.substring(0, Math.min(var7.field_d.length(), var8_int));
-              this.completionBackground.x = this.font.getStringWidth(var2.substring(0, var7.field_g));
+              var6 = var7.lexeme.substring(0, Math.min(var7.lexeme.length(), var8_int));
+              this.completionBackground.x = this.font.getStringWidth(var2.substring(0, var7.sourceOffset));
             }
           }
           var7_ref = this.findCommandsByPrefix(var6, (byte) 28);
@@ -312,40 +312,40 @@ final class CommandConsole extends DeveloperConsole {
     final boolean executeInput(int param0, String param1) {
         try {
           IntrusiveDeque var3 = null;
-          ojb var3_ref = null;
+          ConsoleSyntaxException var3_ref = null;
           RuntimeException var3_ref2 = null;
-          ipb var4 = null;
+          ConsoleTokenStream var4 = null;
           Widget var4_ref = null;
-          tsa var5 = null;
+          ConsoleExpressionToken var5 = null;
           RuntimeException stackIn_16_0 = null;
           StringBuilder stackIn_16_1 = null;
           String stackIn_17_2 = null;
           Throwable decompiledCaughtException = null;
-          gva var3_ref3 = null;
+          ConsoleEvaluationException var3_ref3 = null;
           try {
             try {
-              if (false) throw (ojb) null;
-              var3 = SetDebrisGroupColour.a(-1, param1);
+              if (false) throw (ConsoleSyntaxException) null;
+              var3 = SetDebrisGroupColour.tokenizeConsole(-1, param1);
               if (param0 != -10278) {
                 CommandConsole.clearSharedReferences((byte) 96);
               }
-              var4 = new ipb(var3);
-              var5 = GrapplingHookFactory.a((byte) 105, var4);
-              if (!var4.a(100)) {
-                throw new ojb(var4.a((byte) -69).field_g);
+              var4 = new ConsoleTokenStream(var3);
+              var5 = GrapplingHookFactory.parseConsoleExpression((byte) 105, var4);
+              if (!var4.isAtEnd(100)) {
+                throw new ConsoleSyntaxException(var4.readToken((byte) -69).sourceOffset);
               }
-              this.printObject(var5.a((byte) 114, this.commands), -110);
+              this.printObject(var5.evaluate((byte) 114, this.commands), -110);
               return true;
-            } catch (ojb decompiledCaughtParameter0) {
+            } catch (ConsoleSyntaxException decompiledCaughtParameter0) {
               decompiledCaughtException = decompiledCaughtParameter0;
-              var3_ref = (ojb) (Object) decompiledCaughtException;
-              param1 = "<col=55ff55>" + param1.substring(0, var3_ref.field_a) + "</col>" + param1.substring(var3_ref.field_a);
+              var3_ref = (ConsoleSyntaxException) (Object) decompiledCaughtException;
+              param1 = "<col=55ff55>" + param1.substring(0, var3_ref.sourceOffset) + "</col>" + param1.substring(var3_ref.sourceOffset);
               var4_ref = (Widget) (this.outputPane.content.children.last((byte) 122));
               var4_ref.text = this.prompt + param1;
-            } catch (gva decompiledCaughtParameter1) {
+            } catch (ConsoleEvaluationException decompiledCaughtParameter1) {
               decompiledCaughtException = decompiledCaughtParameter1;
-              var3_ref3 = (gva) (Object) decompiledCaughtException;
-              this.printLine((byte) 89, var3_ref3.field_b);
+              var3_ref3 = (ConsoleEvaluationException) (Object) decompiledCaughtException;
+              this.printLine((byte) 89, var3_ref3.message);
             }
             return false;
           } catch (java.lang.RuntimeException decompiledCaughtParameter2) {

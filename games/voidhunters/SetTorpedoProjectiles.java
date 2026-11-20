@@ -372,7 +372,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                         }
                       }
                     } else {
-                      var24Lifetime2 = SetReverbGain.a(cp.field_j, new String[]{var20, Integer.toString(var6)}, param1 + 92);
+                      var24Lifetime2 = SetReverbGain.a(TextureBezierShape.field_j, new String[]{var20, Integer.toString(var6)}, param1 + 92);
                     }
                   }
                 }

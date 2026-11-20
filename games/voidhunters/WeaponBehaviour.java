@@ -378,7 +378,7 @@ final class WeaponBehaviour implements DiffableState {
             }
           }
           var15 = GetNumStars.a(param8, (byte) 123);
-          var16 = eu.a(param8, 96);
+          var16 = TextureLineShape.a(param8, 96);
           var17 = (-(param10 * var16) + var15 * param2 >> 16) + param9;
           var18 = (var15 * param10 + var16 * param2 >> 16) + param7;
           var19 = 0;

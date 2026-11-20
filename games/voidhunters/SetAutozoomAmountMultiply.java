@@ -19,7 +19,7 @@ final class SetAutozoomAmountMultiply extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          rw.field_n = arguments[0].floatValue(0);
+          PerlinNoiseTextureOperation.field_n = arguments[0].floatValue(0);
           if (obfuscationGuard >= -119) {
             field_o = (String) null;
           }

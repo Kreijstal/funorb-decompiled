@@ -1084,9 +1084,9 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
               for (var7 = 0; var7 < 5; var7++) {
                 var8 = this.spawnTimer * ((var7 << 4) + var6);
                 var9 = this.x + (GetNumStars.a(var8, (byte) 74) >> 8) * (var5 >> 8);
-                var10 = this.y + (eu.a(var8, 77) >> 8) * (var5 >> 8);
+                var10 = this.y + (TextureLineShape.a(var8, 77) >> 8) * (var5 >> 8);
                 var11 = this.x + (GetNumStars.a(var8 + var6, (byte) -73) >> 8) * (var5 >> 8);
-                var12 = this.y + (var5 >> 8) * (eu.a(var6 + var8, 56) >> 8);
+                var12 = this.y + (var5 >> 8) * (TextureLineShape.a(var6 + var8, 56) >> 8);
                 c.a(param0.b(true, var12), param0.a(var11, (byte) 122), param0.a(var9, (byte) 116), param0.b(true, var10), -16777216, var4_int);
               }
             }

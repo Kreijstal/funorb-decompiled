@@ -4,60 +4,60 @@
 final class GrapplingHookFactory implements GameStateFactory {
     static BitmapFont field_a;
 
-    final static tsa a(byte param0, ipb param1) throws ojb {
-        tsa stackIn_9_0 = null;
-        tsa stackIn_25_0 = null;
-        tsa stackIn_31_0 = null;
+    final static ConsoleExpressionToken parseConsoleExpression(byte param0, ConsoleTokenStream param1) throws ConsoleSyntaxException {
+        ConsoleExpressionToken stackIn_9_0 = null;
+        ConsoleExpressionToken stackIn_25_0 = null;
+        ConsoleExpressionToken stackIn_31_0 = null;
         RuntimeException stackIn_38_0 = null;
         StringBuilder stackIn_38_1 = null;
         String stackIn_39_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
         int var4 = 0;
-        tsa var5 = null;
-        tsa var6 = null;
-        tsa var7 = null;
+        ConsoleExpressionToken var5 = null;
+        ConsoleExpressionToken var6 = null;
+        ConsoleExpressionToken var7 = null;
         var4 = VoidHunters.field_G;
         try {
-          var5 = param1.a((byte) -1);
+          var5 = param1.readToken((byte) -1);
           if (param0 <= 13) {
             field_a = (BitmapFont) null;
           }
-          if (dla.field_d != var5.field_e &&
-            SetMissionTerrainSpaceProbability.field_o != var5.field_e &&
-            var5.field_e != ArchiveIndexLoader.field_h &&
-            io.field_p != var5.field_e) {
-            if (SetMissionVariablesHudX.field_p != var5.field_e) {
-              throw new ojb(var5.field_g);
+          if (dla.stringTokenType != var5.type &&
+            SetMissionTerrainSpaceProbability.charTokenType != var5.type &&
+            var5.type != ArchiveIndexLoader.numberTokenType &&
+            io.booleanTokenType != var5.type) {
+            if (SetMissionVariablesHudX.methodTokenType != var5.type) {
+              throw new ConsoleSyntaxException(var5.sourceOffset);
             }
-            if (param1.a(81)) {
-              throw new ojb(var5.field_g);
+            if (param1.isAtEnd(81)) {
+              throw new ConsoleSyntaxException(var5.sourceOffset);
             }
-            var6 = param1.a((byte) -67);
-            if (var6.field_e != ScrollableActionPanel.field_vb) {
-              throw new ojb(var6.field_g);
+            var6 = param1.readToken((byte) -67);
+            if (var6.type != ScrollableActionPanel.argumentStartTokenType) {
+              throw new ConsoleSyntaxException(var6.sourceOffset);
             }
-            var5.field_f = new IntrusiveDeque();
+            var5.arguments = new IntrusiveDeque();
             while (true) {
-              if (param1.a(67)) {
-                throw new ojb(var5.field_g);
+              if (param1.isAtEnd(67)) {
+                throw new ConsoleSyntaxException(var5.sourceOffset);
               }
-              if (param1.a((byte) -27).field_e == SetMissionTerrainVotingChancestep.field_o) {
+              if (param1.readToken((byte) -27).type == SetMissionTerrainVotingChancestep.argumentEndTokenType) {
                 stackIn_25_0 = var5;
                 return stackIn_25_0;
               }
-              param1.field_a = param1.field_a - 1;
-              var5.field_f.addLast(-10258, GrapplingHookFactory.a((byte) 33, param1));
-              if (param1.a(35)) {
-                throw new ojb(var5.field_g);
+              param1.position = param1.position - 1;
+              var5.arguments.addLast(-10258, GrapplingHookFactory.parseConsoleExpression((byte) 33, param1));
+              if (param1.isAtEnd(35)) {
+                throw new ConsoleSyntaxException(var5.sourceOffset);
               }
-              var7 = param1.a((byte) -28);
-              if (var7.field_e == SetMissionTerrainVotingChancestep.field_o) {
+              var7 = param1.readToken((byte) -28);
+              if (var7.type == SetMissionTerrainVotingChancestep.argumentEndTokenType) {
                 stackIn_31_0 = var5;
                 return stackIn_31_0;
               }
-              if (var7.field_e != ConstantColorTextureOperation.field_l) {
-                throw new ojb(var7.field_g);
+              if (var7.type != ConstantColorTextureOperation.argumentSeparatorTokenType) {
+                throw new ConsoleSyntaxException(var7.sourceOffset);
               }
             }
           }

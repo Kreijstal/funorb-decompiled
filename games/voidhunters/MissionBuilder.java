@@ -396,7 +396,7 @@ final class MissionBuilder implements DiffableState {
                   if (var21 < -var4_int) {
                     var21 = -var4_int;
                   }
-                  var22 = var11 + var20 * (eu.a(var19, 56) >> 8);
+                  var22 = var11 + var20 * (TextureLineShape.a(var19, 56) >> 8);
                   if (var21 > var4_int) {
                     var21 = var4_int;
                   }
@@ -898,7 +898,7 @@ final class MissionBuilder implements DiffableState {
           for (var20 = 0; var17 > var20; var20++) {
             var21 = OpenGlFramebuffer.a(2, 1, true);
             var22 = 2048 * var20 / (var17 - 1) + 2048;
-            var21.setPosition(param1 + var18 * (GetNumStars.a(var22, (byte) 127) >> 8), (eu.a(var22, 50) >> 8) * var18 + param0, (byte) -95);
+            var21.setPosition(param1 + var18 * (GetNumStars.a(var22, (byte) 127) >> 8), (TextureLineShape.a(var22, 50) >> 8) * var18 + param0, (byte) -95);
             var21.setAi(new ShipAI(), 4);
             var21.setTeam(17704, 1);
             param2.addShip(var21, (byte) 81);
@@ -1195,7 +1195,7 @@ final class MissionBuilder implements DiffableState {
           for (var18 = 0; var15Lifetime1 > var18; var18++) {
             var19 = OpenGlFramebuffer.a(2, 2, true);
             var20 = var18 * 2048 / (-1 + var15Lifetime1) + 2048;
-            var19.setPosition(param1 + (GetNumStars.a(var20, (byte) -107) >> 8) * var16Lifetime1, (eu.a(var20, 59) >> 8) * var16Lifetime1 + param3, (byte) -127);
+            var19.setPosition(param1 + (GetNumStars.a(var20, (byte) -107) >> 8) * var16Lifetime1, (TextureLineShape.a(var20, 59) >> 8) * var16Lifetime1 + param3, (byte) -127);
             var19.setAi(new ShipAI(), 4);
             var19.setTeam(17704, 1);
             param2.addShip(var19, (byte) 92);
@@ -1638,7 +1638,7 @@ final class MissionBuilder implements DiffableState {
           if (param4 <= 43) {
             discarded$0 = this.a((byte) 47, (Random) null, (int[][]) null);
           }
-          var11 = (eu.a(var10 * 4, 103) + 65536) / 2;
+          var11 = (TextureLineShape.a(var10 * 4, 103) + 65536) / 2;
           for (var12 = 0; var12 < param2.length; var12 += 2) {
             var13 = param2[var12];
             var14 = param2[1 + var12];
@@ -1845,7 +1845,7 @@ final class MissionBuilder implements DiffableState {
             var23 = hob.a(param4, 8192, 122);
             var24 = hob.a(param4, var19, 126) >> 8;
             for (var25_int = 0; 1000 > var25_int; var25_int++) {
-              var22.setPosition((GetNumStars.a(var23, (byte) -108) >> 8) * var24, (eu.a(var23, 127) >> 8) * var24, (byte) -112);
+              var22.setPosition((GetNumStars.a(var23, (byte) -108) >> 8) * var24, (TextureLineShape.a(var23, 127) >> 8) * var24, (byte) -112);
               var22.updateBounds(0);
               if (param5.overlapsAnyBodyBoundingCircle(-11924, var22)) {
                 continue;
@@ -2332,7 +2332,7 @@ final class MissionBuilder implements DiffableState {
           var7.makeNebulaFieldMutable((byte) 80);
           this.a(0, param1, param0, param2, param3);
           this.a(param1, param2, var7, 0);
-          if (qab.a(33, param0)) {
+          if (ConsoleCharacterStream.a(33, param0)) {
             this.a(InvertTextureOperation.b(-100, param0), false, var7);
           }
           if (param4 < 34) {
@@ -2536,7 +2536,7 @@ final class MissionBuilder implements DiffableState {
             var12_ref_ml = new ShipComponent(26);
             var19 = new Debris(var12_ref_ml, false);
             var14 = (var11 >> 8) * (GetNumStars.a(var10, (byte) 115) >> 8);
-            var15 = (eu.a(var10, 119) >> 8) * (var11 >> 8);
+            var15 = (TextureLineShape.a(var10, 119) >> 8) * (var11 >> 8);
             var19.setPosition(var14 + param2, param3 + var15, (byte) -61);
             var16 = hob.a(param1, 8192, 126);
             var19.setAngle(var16, -107);
@@ -2665,7 +2665,7 @@ final class MissionBuilder implements DiffableState {
             var18 = var11 + hob.a(param2, var14, 126);
             var19 = hob.a(param2, 8192, 118);
             var20 = (int)((long)(GetNumStars.a(var19, (byte) -84) >> 8) * (var15 >> 8));
-            var21 = (int)((var15 >> 8) * (long)(eu.a(var19, 62) >> 8));
+            var21 = (int)((var15 >> 8) * (long)(TextureLineShape.a(var19, 62) >> 8));
             var17 = var17 - var20;
             var18 = var18 - var21;
             var22 = var20 * 2 + var17;

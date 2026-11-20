@@ -61,7 +61,7 @@ final class ana extends IntrusiveNode {
               }
               var4 = new byte[param1];
               var3 = var4;
-              dib.a(param2, param1, var4, (byte) 119);
+              TextureRectangleShape.a(param2, param1, var4, (byte) 119);
               stackIn_3_0 = var4;
               return stackIn_3_0;
             } catch (java.io.IOException decompiledCaughtParameter0) {

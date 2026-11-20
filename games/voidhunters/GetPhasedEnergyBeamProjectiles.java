@@ -193,7 +193,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           ana.field_f = param1[105];
           wk.field_a = param1[42];
           GetRepairModePower.field_q = param1[126];
-          cp.field_f = param1[80];
+          TextureBezierShape.field_f = param1[80];
           GetPlayerRepairAmount.field_o = param1[87];
           Cp1252CharacterEncoder.field_a = param1[72];
           if (param0 != 107) {
@@ -315,7 +315,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           veb.field_b = param1[1];
           GetAutoaim.field_o = param1[5];
           GetPointDefenceLaserAimspeed.field_p = param1[159];
-          qab.field_d = param1[137];
+          ConsoleCharacterStream.field_d = param1[137];
           Particle.field_w = param1[209];
           SetSniperCannonAimspeed.field_o = param1[110];
           TextureCoordinateMode.field_b = param1[228];

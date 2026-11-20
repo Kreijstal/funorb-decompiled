@@ -20,7 +20,7 @@ abstract class SoftwareSprite2D {
         try {
           GetBoostersCooldown.field_p = 0;
           OpenGlIndexBuffer.field_k = 0;
-          kbb.field_q = null;
+          HslAdjustTextureOperation.field_q = null;
           mr.field_M.clear(120);
           int var1_int = -31 % ((param0 + 31) / 39);
           SetPointDefenceLaserProjectileOndamageParticles.field_o.clear(97);

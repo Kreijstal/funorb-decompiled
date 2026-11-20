@@ -24,7 +24,7 @@ final class GetOndamageParticleLife extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= -119) {
-            stackIn_4_0 = new ConsoleValue(sva.field_m);
+            stackIn_4_0 = new ConsoleValue(RandomLinesTextureOperation.field_m);
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

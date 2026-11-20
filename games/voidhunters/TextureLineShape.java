@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class eu extends ev {
-    private int field_j;
-    private int field_g;
-    private int field_k;
+final class TextureLineShape extends TextureRasterShape {
+    private int endX;
+    private int startX;
+    private int startY;
     static BufferedSocket field_h;
     static fcb field_i;
-    private int field_f;
+    private int endY;
 
-    final void a(int param0, byte param1, int param2) {
+    final void drawFilledAndOutline(int param0, byte param1, int param2) {
         if (param1 != 110) {
-          this.field_k = -72;
+          this.startY = -72;
         }
     }
 
     final static boolean a(boolean param0) {
         if (!param0) {
-          eu.a(true);
+          TextureLineShape.a(true);
           if (GetSpinningBladeAimspeed.field_q < 10) {
             return false;
           }
@@ -57,18 +57,18 @@ final class eu extends ev {
         field_h = null;
     }
 
-    final void b(byte param0, int param1, int param2) {
+    final void drawFilled(byte param0, int param1, int param2) {
         if (param0 != -112) {
-          this.field_g = 94;
+          this.startX = 94;
         }
     }
 
-    eu(int param0, int param1, int param2, int param3, int param4, int param5) {
+    TextureLineShape(int param0, int param1, int param2, int param3, int param4, int param5) {
         super(-1, param4, param5);
-        this.field_k = param1;
-        this.field_f = param3;
-        this.field_j = param2;
-        this.field_g = param0;
+        this.startY = param1;
+        this.endY = param3;
+        this.endX = param2;
+        this.startX = param0;
     }
 
     final static void a(PlatformService param0, byte param1, ResourceArchive param2) {
@@ -140,12 +140,12 @@ final class eu extends ev {
         }
     }
 
-    final void a(byte param0, int param1, int param2) {
-        int var4 = param2 * this.field_g >> 12;
-        int var5 = this.field_j * param2 >> 12;
-        int var6 = param1 * this.field_k >> 12;
-        int var7 = param1 * this.field_f >> 12;
-        GetBurstFireMaxEnergy.a(var6, var5, (byte) 84, var4, var7, this.field_d);
+    final void drawOutline(byte param0, int param1, int param2) {
+        int var4 = param2 * this.startX >> 12;
+        int var5 = this.endX * param2 >> 12;
+        int var6 = param1 * this.startY >> 12;
+        int var7 = param1 * this.endY >> 12;
+        GetBurstFireMaxEnergy.a(var6, var5, (byte) 84, var4, var7, this.outlineColor);
         int var8 = -73 / ((param0 + 48) / 40);
     }
 

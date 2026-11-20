@@ -13,19 +13,19 @@ final class ScrollPaneWidget extends Widget {
         int[][] var14 = var15;
         int[][] var13 = var14;
         int[][] var9 = var13;
-        rw var10 = new rw();
-        var10.field_s = param4 ? true : false;
-        var10.field_k = (int)(param8 * 4096.0f);
-        var10.field_o = param2;
+        PerlinNoiseTextureOperation var10 = new PerlinNoiseTextureOperation();
+        var10.biasUnsigned = param4 ? true : false;
+        var10.persistence = (int)(param8 * 4096.0f);
+        var10.verticalFrequency = param2;
         if (param6 != -1) {
           return (int[][]) null;
         }
-        var10.field_j = param0;
-        var10.field_r = param3;
+        var10.horizontalFrequency = param0;
+        var10.octaveCount = param3;
         var10.postDecode((byte) -105);
         SetPhasedEnergyBeamProjectiles.setTextureDimensions(param5, param7, -108);
         for (var11 = 0; var11 < param5; var11++) {
-          var10.a(1, var11, var15[var11]);
+          var10.generateNoiseRow(1, var11, var15[var11]);
         }
         return var9;
     }

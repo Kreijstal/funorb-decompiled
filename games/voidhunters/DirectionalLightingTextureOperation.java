@@ -1,11 +1,11 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class smb extends TextureOperation {
-    private int[] field_l;
-    private int field_i;
-    private int field_k;
-    private int field_j;
+final class DirectionalLightingTextureOperation extends TextureOperation {
+    private int[] lightDirection;
+    private int azimuth;
+    private int heightScale;
+    private int elevation;
 
     final void decodeParameter(int param0, int param1, PacketBuffer param2) {
         int var4_int = 0;
@@ -18,17 +18,17 @@ final class smb extends TextureOperation {
         var5 = VoidHunters.field_G;
         try {
           if (param1 > -60) {
-            this.field_k = -104;
+            this.heightScale = -104;
           }
           var4_int = param0;
           if (0 == var4_int) {
-            this.field_k = param2.readUnsignedShort(1869);
+            this.heightScale = param2.readUnsignedShort(1869);
           } else {
             if (var4_int == 1) {
-              this.field_i = param2.readUnsignedShort(1869);
+              this.azimuth = param2.readUnsignedShort(1869);
             } else {
               if (2 == var4_int) {
-                this.field_j = param2.readUnsignedShort(1869);
+                this.elevation = param2.readUnsignedShort(1869);
               }
             }
           }
@@ -48,29 +48,29 @@ final class smb extends TextureOperation {
     }
 
     final void postDecode(byte param0) {
-        this.d(-32307);
+        this.initializeLightDirection(-32307);
         if (param0 >= -35) {
           int[] var3 = (int[]) null;
-          smb.a((int[]) null, 127, -20, (byte) 126, (int[]) null);
+          DirectionalLightingTextureOperation.a((int[]) null, 127, -20, (byte) 126, (int[]) null);
         }
     }
 
-    private final void d(int param0) {
-        double var2 = Math.cos((double)((float)this.field_j / 4096.0f));
-        this.field_l[0] = (int)(4096.0 * (Math.sin((double)((float)this.field_i / 4096.0f)) * var2));
-        this.field_l[1] = (int)(var2 * Math.cos((double)((float)this.field_i / 4096.0f)) * 4096.0);
-        this.field_l[2] = (int)(Math.sin((double)((float)this.field_j / 4096.0f)) * 4096.0);
-        int var4 = this.field_l[0] * this.field_l[0] >> 12;
-        int var5 = this.field_l[1] * this.field_l[1] >> 12;
+    private final void initializeLightDirection(int param0) {
+        double var2 = Math.cos((double)((float)this.elevation / 4096.0f));
+        this.lightDirection[0] = (int)(4096.0 * (Math.sin((double)((float)this.azimuth / 4096.0f)) * var2));
+        this.lightDirection[1] = (int)(var2 * Math.cos((double)((float)this.azimuth / 4096.0f)) * 4096.0);
+        this.lightDirection[2] = (int)(Math.sin((double)((float)this.elevation / 4096.0f)) * 4096.0);
+        int var4 = this.lightDirection[0] * this.lightDirection[0] >> 12;
+        int var5 = this.lightDirection[1] * this.lightDirection[1] >> 12;
         if (param0 != -32307) {
-          this.field_k = 57;
+          this.heightScale = 57;
         }
-        int var6 = this.field_l[2] * this.field_l[2] >> 12;
+        int var6 = this.lightDirection[2] * this.lightDirection[2] >> 12;
         int var7 = (int)(Math.sqrt((double)(var4 + var5 + var6 >> 12)) * 4096.0);
         if (var7 != 0) {
-          this.field_l[0] = (this.field_l[0] << 12) / var7;
-          this.field_l[2] = (this.field_l[2] << 12) / var7;
-          this.field_l[1] = (this.field_l[1] << 12) / var7;
+          this.lightDirection[0] = (this.lightDirection[0] << 12) / var7;
+          this.lightDirection[2] = (this.lightDirection[2] << 12) / var7;
+          this.lightDirection[1] = (this.lightDirection[1] << 12) / var7;
         }
     }
 
@@ -95,7 +95,7 @@ final class smb extends TextureOperation {
         int[] var18 = this.field_f.getRow((byte) 127, param0);
         int[] var3 = var18;
         if (this.field_f.field_e) {
-          var7 = this.field_k * tpa.field_b >> 12;
+          var7 = this.heightScale * tpa.field_b >> 12;
           var25 = this.getInputMonochromeRow(0, -1 + param0 & wf.textureHeightMask, 255);
           var9 = this.getInputMonochromeRow(0, param0, 255);
           var26 = this.getInputMonochromeRow(0, 1 + param0 & wf.textureHeightMask, 255);
@@ -120,9 +120,9 @@ final class smb extends TextureOperation {
             var5 = var16 * var12 >> 8;
             var6 = var16 * 4096 >> 8;
             var4 = var16 * var13 >> 8;
-            var6 = var6 * this.field_l[2] >> 12;
-            var4 = var4 * this.field_l[0] >> 12;
-            var5 = this.field_l[1] * var5 >> 12;
+            var6 = var6 * this.lightDirection[2] >> 12;
+            var4 = var4 * this.lightDirection[0] >> 12;
+            var5 = this.lightDirection[1] * var5 >> 12;
             var18[var11] = var6 + (var5 + var4);
           }
         }
@@ -174,8 +174,8 @@ final class smb extends TextureOperation {
             param4[var6] = var7;
             param0[param2] = param0[var6];
             param0[var6] = var8;
-            smb.a(param0, param1, -1 + var6, (byte) -54, param4);
-            smb.a(param0, var6 + 1, param2, (byte) -119, param4);
+            DirectionalLightingTextureOperation.a(param0, param1, -1 + var6, (byte) -54, param4);
+            DirectionalLightingTextureOperation.a(param0, var6 + 1, param2, (byte) -119, param4);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -198,18 +198,18 @@ final class smb extends TextureOperation {
         }
     }
 
-    public smb() {
+    public DirectionalLightingTextureOperation() {
         super(1, true);
-        this.field_l = new int[3];
-        this.field_i = 3216;
-        this.field_k = 4096;
-        this.field_j = 3216;
+        this.lightDirection = new int[3];
+        this.azimuth = 3216;
+        this.heightScale = 4096;
+        this.elevation = 3216;
     }
 
     final static boolean a(byte param0, int param1) {
         if (param0 != -26) {
           int[] var3 = (int[]) null;
-          smb.a((int[]) null, -116, 50, (byte) -85, (int[]) null);
+          DirectionalLightingTextureOperation.a((int[]) null, -116, 50, (byte) -85, (int[]) null);
         }
         return true;
     }

@@ -73,7 +73,7 @@ final class SetOndamageParticleLife extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          sva.field_m = arguments[0].intValue(72);
+          RandomLinesTextureOperation.field_m = arguments[0].intValue(72);
           if (obfuscationGuard > -119) {
             field_o = (Widget) null;
           }

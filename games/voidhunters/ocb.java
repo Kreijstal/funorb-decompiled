@@ -47,7 +47,7 @@ final class ocb extends eca {
             return stackIn_8_0;
           }
           if (OpenGlPostEffect.isRepeatedCharacter(126, var5)) {
-            stackIn_11_0 = qab.field_a;
+            stackIn_11_0 = ConsoleCharacterStream.field_a;
             return stackIn_11_0;
           }
           if (this.a(param0, false)) {

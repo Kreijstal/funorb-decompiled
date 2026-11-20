@@ -2,17 +2,17 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetLaserFireForce extends ConsoleCommand {
-    final static eu a(PacketBuffer param0, byte param1) {
+    final static TextureLineShape decodeTextureLineShape(PacketBuffer param0, byte param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
-        eu stackIn_1_0 = null;
+        TextureLineShape stackIn_1_0 = null;
         RuntimeException stackIn_4_0 = null;
         StringBuilder stackIn_4_1 = null;
         String stackIn_5_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = 66 % ((70 - param1) / 39);
-          stackIn_1_0 = new eu(param0.readShort(true), param0.readShort(true), param0.readShort(true), param0.readShort(true), param0.readUnsignedMedium((byte) -123), param0.readUnsignedByte((byte) -90));
+          stackIn_1_0 = new TextureLineShape(param0.readShort(true), param0.readShort(true), param0.readShort(true), param0.readShort(true), param0.readUnsignedMedium((byte) -123), param0.readUnsignedByte((byte) -90));
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -31,7 +31,7 @@ final class GetLaserFireForce extends ConsoleCommand {
     final static String a(int param0, int param1) {
         if (param1 <= 73) {
           PacketBuffer var3 = (PacketBuffer) null;
-          GetLaserFireForce.a((PacketBuffer) null, (byte) -91);
+          GetLaserFireForce.decodeTextureLineShape((PacketBuffer) null, (byte) -91);
           if (vqa.field_g != null) {
             return Integer.toString(vqa.field_g.state.b(1).settings.values[param0]);
           }
@@ -54,7 +54,7 @@ final class GetLaserFireForce extends ConsoleCommand {
         try {
           if (obfuscationGuard >= -119) {
             var4 = (PacketBuffer) null;
-            GetLaserFireForce.a((PacketBuffer) null, (byte) -82);
+            GetLaserFireForce.decodeTextureLineShape((PacketBuffer) null, (byte) -82);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(100, 96));
           return stackIn_3_0;

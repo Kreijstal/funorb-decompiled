@@ -202,7 +202,7 @@ final class Particle implements DiffableState {
             var8Lifetime1 = -var8Lifetime1;
           }
           var9Lifetime1 = GetNumStars.a(var8Lifetime1, (byte) -60);
-          var10Lifetime1 = eu.a(var8Lifetime1, 82);
+          var10Lifetime1 = TextureLineShape.a(var8Lifetime1, 82);
           var11Lifetime1 = -var6Lifetime1;
           var12 = -var7_int;
           var13 = -var6Lifetime1;

@@ -54,10 +54,10 @@ final class GetLaserAimspeed extends ConsoleCommand {
           var2 = var27.readUnsignedByte((byte) -93);
           if (0 == var2) {
             var3 = var27.readUnsignedShort(param0 + 1868);
-            var4_ref = (qn) (md.field_j.first(0));
+            var4_ref = (qn) (RasterShapesTextureOperation.field_j.first(0));
             while (var4_ref != null) {
               if (var3 != var4_ref.field_e) {
-                var4_ref = (qn) (md.field_j.next((byte) 17));
+                var4_ref = (qn) (RasterShapesTextureOperation.field_j.next((byte) 17));
                 continue;
               }
               break;

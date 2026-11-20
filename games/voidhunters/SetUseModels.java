@@ -3,7 +3,7 @@
  */
 final class SetUseModels extends ConsoleCommand {
     static String field_p;
-    static tsa[] field_q;
+    static ConsoleExpressionToken[] field_q;
     static Widget field_o;
 
     SetUseModels(String param0, Class[] param1, String param2) {

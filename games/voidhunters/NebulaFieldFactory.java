@@ -112,7 +112,7 @@ final class NebulaFieldFactory implements GameStateFactory {
             }
             iwa.field_b = 1;
             var3 = var1.readString(-1);
-            kbb.field_q = ((String) (var3)).intern();
+            HslAdjustTextureOperation.field_q = ((String) (var3)).intern();
             var4 = var1.readUnsignedByte((byte) -126);
             MachineGunWeaponDefinition.b(var4, (byte) 71);
             return;

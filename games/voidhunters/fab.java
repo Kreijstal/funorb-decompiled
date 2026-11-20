@@ -461,7 +461,7 @@ final class fab {
           lwa.field_xb = param1;
           MissionEventFactory.field_a = param0;
           this.field_a = param2;
-          eu.a(param3, (byte) 127, param0);
+          TextureLineShape.a(param3, (byte) 127, param0);
           this.a(false, param4);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "fab.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ',' + (param3 != null ? "{...}" : "null") + ',' + (param4 != null ? "{...}" : "null") + ')');

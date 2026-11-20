@@ -1,48 +1,48 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class oqb extends TextureOperation {
-    private int field_q;
-    private int field_p;
-    private int field_l;
-    private int field_i;
-    private int field_m;
-    private int field_o;
-    private int field_j;
+final class CrossedWaveTextureOperation extends TextureOperation {
+    private int frequency;
+    private int amplitudeScale;
+    private int secondOffsetX;
+    private int secondOffsetY;
+    private int amplitudeDivisor;
+    private int firstOffsetX;
+    private int firstOffsetY;
     static String field_n;
     static String field_k;
 
-    private final boolean d(int param0, int param1, int param2) {
+    private final boolean isInsideDifferenceBand(int param0, int param1, int param2) {
         int var4;
         int var5;
         boolean stackIn_6_0 = false;
-        var4 = this.field_q * (param2 + param0) >> 12;
+        var4 = this.frequency * (param2 + param0) >> 12;
         if (param1 != 1047718) {
           return false;
         }
         var5 = GetBombletSprayProjectiles.field_q[(255 * var4 & 1046912) >> 12];
-        var5 = (var5 << 12) / this.field_q;
-        var5 = (var5 << 12) / this.field_m;
-        var5 = this.field_p * var5 >> 12;
+        var5 = (var5 << 12) / this.frequency;
+        var5 = (var5 << 12) / this.amplitudeDivisor;
+        var5 = this.amplitudeScale * var5 >> 12;
         stackIn_6_0 = (var5 > param2 - param0) && (-param0 + param2 > -var5);
         return stackIn_6_0;
     }
 
-    public oqb() {
+    public CrossedWaveTextureOperation() {
         super(0, true);
-        this.field_i = 2048;
-        this.field_q = 12288;
-        this.field_m = 8192;
-        this.field_j = 0;
-        this.field_p = 4096;
-        this.field_l = 0;
-        this.field_o = 2048;
+        this.secondOffsetY = 2048;
+        this.frequency = 12288;
+        this.amplitudeDivisor = 8192;
+        this.firstOffsetY = 0;
+        this.amplitudeScale = 4096;
+        this.secondOffsetX = 0;
+        this.firstOffsetX = 2048;
     }
 
     final void postDecode(byte param0) {
         boolean discarded$0 = false;
         if (param0 >= -35) {
-          discarded$0 = this.d(-93, -27, 100);
+          discarded$0 = this.isInsideDifferenceBand(-93, -27, 100);
         }
         GetTrapMouse.e((byte) 118);
     }
@@ -87,7 +87,7 @@ final class oqb extends TextureOperation {
           var4 = SetSalvoUsesAllEnergy.textureYCoordinates[param0] - 2048;
           for (var5 = 0; var5 < hob.textureWidth; var5++) {
             var6 = -2048 + BoxBlurTextureOperation.textureXCoordinates[var5];
-            var7 = this.field_o + var6;
+            var7 = this.firstOffsetX + var6;
             if (var7 >= -2048) {
               stackIn_8_0 = var7;
             } else {
@@ -100,7 +100,7 @@ final class oqb extends TextureOperation {
               stackIn_11_0 = -4096 + var7Lifetime1;
             }
             var7Lifetime2 = stackIn_11_0;
-            var8 = var4 + this.field_j;
+            var8 = var4 + this.firstOffsetY;
             if (var8 < -2048) {
               stackIn_14_0 = var8 + 4096;
             } else {
@@ -113,7 +113,7 @@ final class oqb extends TextureOperation {
               stackIn_17_0 = var8Lifetime1 - 4096;
             }
             var8Lifetime2 = stackIn_17_0;
-            var9 = var6 + this.field_l;
+            var9 = var6 + this.secondOffsetX;
             if (-2048 <= var9) {
               stackIn_20_0 = var9;
             } else {
@@ -126,7 +126,7 @@ final class oqb extends TextureOperation {
               stackIn_23_0 = var9Lifetime1;
             }
             var9Lifetime2 = stackIn_23_0;
-            var10 = var4 + this.field_i;
+            var10 = var4 + this.secondOffsetY;
             if (var10 >= -2048) {
               stackIn_26_0 = var10;
             } else {
@@ -141,8 +141,8 @@ final class oqb extends TextureOperation {
             var10Lifetime2 = stackIn_29_0;
             stackIn_32_0 = var12;
             stackIn_32_1 = var5;
-            if (!this.c(var8Lifetime2, -23429, var7Lifetime2) &&
-              !this.d(var9Lifetime2, 1047718, var10Lifetime2)) {
+            if (!this.isInsideSumBand(var8Lifetime2, -23429, var7Lifetime2) &&
+              !this.isInsideDifferenceBand(var9Lifetime2, 1047718, var10Lifetime2)) {
               stackIn_34_2 = 0;
             } else {
               stackIn_34_2 = 4096;
@@ -174,30 +174,30 @@ final class oqb extends TextureOperation {
           var4_int = param0;
           if (var4_int != 0) {
             if (var4_int == 1) {
-              this.field_j = param2.readUnsignedShort(1869);
+              this.firstOffsetY = param2.readUnsignedShort(1869);
             } else {
               if (var4_int != 2) {
                 if (var4_int != 3) {
                   if (var4_int == 4) {
-                    this.field_q = param2.readUnsignedShort(1869);
+                    this.frequency = param2.readUnsignedShort(1869);
                   } else {
                     if (5 != var4_int) {
                       if (var4_int == 6) {
-                        this.field_m = param2.readUnsignedShort(1869);
+                        this.amplitudeDivisor = param2.readUnsignedShort(1869);
                       }
                     } else {
-                      this.field_p = param2.readUnsignedShort(1869);
+                      this.amplitudeScale = param2.readUnsignedShort(1869);
                     }
                   }
                 } else {
-                  this.field_i = param2.readUnsignedShort(1869);
+                  this.secondOffsetY = param2.readUnsignedShort(1869);
                 }
               } else {
-                this.field_l = param2.readUnsignedShort(1869);
+                this.secondOffsetX = param2.readUnsignedShort(1869);
               }
             }
           } else {
-            this.field_o = param2.readUnsignedShort(1869);
+            this.firstOffsetX = param2.readUnsignedShort(1869);
           }
           if (param1 > -60) {
             this.getMonochromeRow(116, true);
@@ -217,18 +217,18 @@ final class oqb extends TextureOperation {
         }
     }
 
-    private final boolean c(int param0, int param1, int param2) {
+    private final boolean isInsideSumBand(int param0, int param1, int param2) {
         int var4;
         int var5;
         boolean stackIn_6_0 = false;
-        var4 = (-param2 + param0) * this.field_q >> 12;
+        var4 = (-param2 + param0) * this.frequency >> 12;
         var5 = GetBombletSprayProjectiles.field_q[(var4 * 255 & 1047718) >> 12];
-        var5 = (var5 << 12) / this.field_q;
+        var5 = (var5 << 12) / this.frequency;
         if (param1 != -23429) {
           return true;
         }
-        var5 = (var5 << 12) / this.field_m;
-        var5 = var5 * this.field_p >> 12;
+        var5 = (var5 << 12) / this.amplitudeDivisor;
+        var5 = var5 * this.amplitudeScale >> 12;
         stackIn_6_0 = (var5 > param2 + param0) && (-var5 < param0 + param2);
         return stackIn_6_0;
     }

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
-    static int field_o;
+    static int charTokenType;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;
@@ -13,7 +13,7 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            field_o = 26;
+            charTokenType = 26;
           }
           SetMachineGunEnergyUsed.a(66, 62, arguments[0].intValue(36));
           stackIn_3_0 = new ConsoleValue("void");
@@ -923,6 +923,6 @@ final class SetMissionTerrainSpaceProbability extends ConsoleCommand {
     }
 
     static {
-        field_o = 5;
+        charTokenType = 5;
     }
 }

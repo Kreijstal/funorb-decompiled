@@ -69,7 +69,7 @@ final class GetSniperCannonProjectiles extends ConsoleCommand {
               var9.field_i.addItem(var10, (byte) -53, 14);
             }
             var11 = GetLagStandardDeviationOut.field_o;
-            var12 = oqb.field_k;
+            var12 = CrossedWaveTextureOperation.field_k;
             var11.field_i.addItem(var12, (byte) -53, 20);
           }
           if (param1 != 22859) {

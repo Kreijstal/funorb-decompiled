@@ -26,7 +26,7 @@ final class SetLag extends ConsoleCommand {
           GetLoadingMissions.field_q = param4;
           PrintSettings.field_o = param3;
           SetPointDefenceLaserProjectileDamage.field_o = param0 ? true : false;
-          gva.field_a = param12;
+          ConsoleEvaluationException.field_a = param12;
           fk.field_e = param5;
           GetSniperCannonAimarc.field_o = param2;
         } catch (RuntimeException runtimeException) {

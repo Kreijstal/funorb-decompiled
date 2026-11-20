@@ -37,7 +37,7 @@ final class GetUseTriFill extends ConsoleCommand {
           if (UiDraggableContainer.field_z < 20) {
             return true;
           }
-          if (!eu.a(true)) {
+          if (!TextureLineShape.a(true)) {
             return true;
           }
           if (SetClientSideDragging.field_p <= 0) {
@@ -51,7 +51,7 @@ final class GetUseTriFill extends ConsoleCommand {
         if (UiDraggableContainer.field_z < 20) {
           return true;
         }
-        if (!eu.a(true)) {
+        if (!TextureLineShape.a(true)) {
           return true;
         }
         if (SetClientSideDragging.field_p <= 0) {

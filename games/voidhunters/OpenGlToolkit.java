@@ -2642,28 +2642,28 @@ final class OpenGlToolkit extends GraphicsToolkit {
           var5 = (IntegerNode) (this.buffersToDelete.removeFirst(true));
           incrementValue$4 = var2;
           var2++;
-          cm.field_j[incrementValue$4] = (int)var5.key;
+          IrregularBricksTextureOperation.field_j[incrementValue$4] = (int)var5.key;
           this.bufferBytes = this.bufferBytes - var5.value;
           if (var2 != 1000) {
             continue;
           }
-          jaggl.OpenGL.glDeleteBuffersARB(var2, cm.field_j, 0);
+          jaggl.OpenGL.glDeleteBuffersARB(var2, IrregularBricksTextureOperation.field_j, 0);
           var2 = 0;
         }
         if (var2 > 0) {
-          jaggl.OpenGL.glDeleteBuffersARB(var2, cm.field_j, 0);
+          jaggl.OpenGL.glDeleteBuffersARB(var2, IrregularBricksTextureOperation.field_j, 0);
           var2 = 0;
         }
         while (!this.texturesToDelete.isEmpty(121)) {
           var6 = (IntegerNode) (this.texturesToDelete.removeFirst(true));
           incrementValue$3 = var2;
           var2++;
-          cm.field_j[incrementValue$3] = (int)var6.key;
+          IrregularBricksTextureOperation.field_j[incrementValue$3] = (int)var6.key;
           this.textureBytes = this.textureBytes - var6.value;
           if (var2 != 1000) {
             continue;
           }
-          jaggl.OpenGL.glDeleteTextures(var2, cm.field_j, 0);
+          jaggl.OpenGL.glDeleteTextures(var2, IrregularBricksTextureOperation.field_j, 0);
           var2 = 0;
         }
         boolean decompiledFrameCompleted0 = true;
@@ -2677,16 +2677,16 @@ final class OpenGlToolkit extends GraphicsToolkit {
               var7 = (IntegerNode) (this.framebuffersToDelete.removeFirst(true));
               incrementValue$0 = var2;
               var2++;
-              cm.field_j[incrementValue$0] = var7.value;
+              IrregularBricksTextureOperation.field_j[incrementValue$0] = var7.value;
             } while (var2 != 1000);
             if (decompiledFrameCompleted0) {
-              jaggl.OpenGL.glDeleteFramebuffersEXT(var2, cm.field_j, 0);
+              jaggl.OpenGL.glDeleteFramebuffersEXT(var2, IrregularBricksTextureOperation.field_j, 0);
               var2 = 0;
               break regionExit1;
             }
           }
           if (decompiledFrameCompleted0) {
-            jaggl.OpenGL.glDeleteTextures(var2, cm.field_j, 0);
+            jaggl.OpenGL.glDeleteTextures(var2, IrregularBricksTextureOperation.field_j, 0);
             var2 = 0;
           }
         }
@@ -2695,34 +2695,34 @@ final class OpenGlToolkit extends GraphicsToolkit {
             var7 = (IntegerNode) (this.framebuffersToDelete.removeFirst(true));
             incrementValue$1 = var2;
             var2++;
-            cm.field_j[incrementValue$1] = var7.value;
+            IrregularBricksTextureOperation.field_j[incrementValue$1] = var7.value;
             if (var2 != 1000) {
               continue;
             }
-            jaggl.OpenGL.glDeleteFramebuffersEXT(var2, cm.field_j, 0);
+            jaggl.OpenGL.glDeleteFramebuffersEXT(var2, IrregularBricksTextureOperation.field_j, 0);
             var2 = 0;
           }
         }
         if (var2 > 0) {
-          jaggl.OpenGL.glDeleteFramebuffersEXT(var2, cm.field_j, 0);
+          jaggl.OpenGL.glDeleteFramebuffersEXT(var2, IrregularBricksTextureOperation.field_j, 0);
           var2 = 0;
         }
         while (!this.renderbuffersToDelete.isEmpty(105)) {
           var8 = (IntegerNode) (this.renderbuffersToDelete.removeFirst(true));
           incrementValue$2 = var2;
           var2++;
-          cm.field_j[incrementValue$2] = (int)var8.key;
+          IrregularBricksTextureOperation.field_j[incrementValue$2] = (int)var8.key;
           this.renderbufferBytes = this.renderbufferBytes - var8.value;
           stackIn_28_0 = ~var2;
           stackIn_28_1 = -1001;
           if (stackIn_28_0 != stackIn_28_1) {
             continue;
           }
-          jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, cm.field_j, 0);
+          jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, IrregularBricksTextureOperation.field_j, 0);
           var2 = 0;
         }
         if (var2 > 0) {
-          jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, cm.field_j, 0);
+          jaggl.OpenGL.glDeleteRenderbuffersEXT(var2, IrregularBricksTextureOperation.field_j, 0);
           var2 = 0;
         }
         while (!this.field_v.isEmpty(124)) {

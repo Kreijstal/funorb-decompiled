@@ -103,7 +103,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
           this.getVelocityY(85);
         }
         int var2 = this.angle >> 8;
-        return (int)((long)this.centreofmassx * (long)GetNumStars.a(var2, (byte) -62) - (long)this.centreofmassy * (long)eu.a(var2, 124) >> 16);
+        return (int)((long)this.centreofmassx * (long)GetNumStars.a(var2, (byte) -62) - (long)this.centreofmassy * (long)TextureLineShape.a(var2, 124) >> 16);
     }
 
     final void integrateMotion(boolean param0, boolean param1, World param2) {
@@ -157,7 +157,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
           return -127;
         }
         int var2 = this.angle >> 8;
-        return (int)((long)this.centreofmassx * (long)eu.a(var2, param0 + 105) + (long)this.centreofmassy * (long)GetNumStars.a(var2, (byte) -68) >> 16);
+        return (int)((long)this.centreofmassx * (long)TextureLineShape.a(var2, param0 + 105) + (long)this.centreofmassy * (long)GetNumStars.a(var2, (byte) -68) >> 16);
     }
 
     public void readCompactState(IsaacPacketBuffer param0, int param1) {
@@ -397,7 +397,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
 
     final void addDirectionalForce(int param0, int param1, int param2, int param3, int param4) {
         int var6 = GetNumStars.a(param1, (byte) -69) * param3 >> 8;
-        int var7 = param3 * eu.a(param1, 42) >> 8;
+        int var7 = param3 * TextureLineShape.a(param1, 42) >> 8;
         this.addForceAtPoint(var7, param2, param0, (byte) -118, var6);
         if (param4 != 1948934248) {
           this.id = 82;
@@ -768,14 +768,14 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
             var27_ref.setTriggerMap((byte) -127, 1);
             var8_int = 4096;
             var9 = -(var8_int * GetNumStars.a(this.chassis.finalangle, (byte) -76)) >> 16;
-            var10 = -(eu.a(this.chassis.finalangle, 40) * var8_int) >> 16;
+            var10 = -(TextureLineShape.a(this.chassis.finalangle, 40) * var8_int) >> 16;
             var27_ref.updateWorldTransforms(false, this.chassis.finalx + var9, this.chassis.finaly + var10, this.chassis.finalangle, 0, (int[]) null);
             MissionActionFactory.field_a[0] = var27_ref;
             var28_ref = new ShipComponent(13);
             var28_ref.setTriggerMap((byte) 114, 2);
             var8_intLifetime2 = 4096;
             var9Lifetime2 = GetNumStars.a(this.chassis.finalangle, (byte) 100) * var8_intLifetime2 >> 16;
-            var10Lifetime2 = var8_intLifetime2 * eu.a(this.chassis.finalangle, 122) >> 16;
+            var10Lifetime2 = var8_intLifetime2 * TextureLineShape.a(this.chassis.finalangle, 122) >> 16;
             var11 = this.chassis.finalangle + 4096;
             var28_ref.updateWorldTransforms(false, this.chassis.finalx + var9Lifetime2, this.chassis.finaly + var10Lifetime2, var11, 0, (int[]) null);
             MissionActionFactory.field_a[1] = var28_ref;
@@ -784,7 +784,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
             var8_intLifetime3 = 8192;
             var9Lifetime3 = GameKeyHandler.a(22433, 256 + this.chassis.finalangle);
             var10Lifetime3 = var8_intLifetime3 * GetNumStars.a(var9Lifetime3, (byte) -112) >> 16;
-            var11Lifetime2 = var8_intLifetime3 * eu.a(var9Lifetime3, 85) >> 16;
+            var11Lifetime2 = var8_intLifetime3 * TextureLineShape.a(var9Lifetime3, 85) >> 16;
             var12_int = GameKeyHandler.a(22433, -2048 + this.chassis.finalangle);
             var29_ref.updateWorldTransforms(false, var10Lifetime3 + this.chassis.finalx, var11Lifetime2 + this.chassis.finaly, var12_int, 0, (int[]) null);
             MissionActionFactory.field_a[2] = var29_ref;
@@ -793,7 +793,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
             var8_intLifetime4 = 8192;
             var9Lifetime4 = GameKeyHandler.a(22433, this.chassis.finalangle - 256);
             var10Lifetime4 = var8_intLifetime4 * GetNumStars.a(var9Lifetime4, (byte) -102) >> 16;
-            var11Lifetime3 = var8_intLifetime4 * eu.a(var9Lifetime4, 87) >> 16;
+            var11Lifetime3 = var8_intLifetime4 * TextureLineShape.a(var9Lifetime4, 87) >> 16;
             var12_intLifetime1 = GameKeyHandler.a(22433, 2048 + this.chassis.finalangle);
             var30_ref.updateWorldTransforms(false, var10Lifetime4 + this.chassis.finalx, var11Lifetime3 + this.chassis.finaly, var12_intLifetime1, 0, (int[]) null);
             MissionActionFactory.field_a[3] = var30_ref;
@@ -802,7 +802,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
             var8_intLifetime5 = 8192;
             var9Lifetime5 = GameKeyHandler.a(22433, this.chassis.finalangle - 3840);
             var10Lifetime5 = GetNumStars.a(var9Lifetime5, (byte) -91) * var8_intLifetime5 >> 16;
-            var11Lifetime4 = var8_intLifetime5 * eu.a(var9Lifetime5, 122) >> 16;
+            var11Lifetime4 = var8_intLifetime5 * TextureLineShape.a(var9Lifetime5, 122) >> 16;
             var12_intLifetime2 = GameKeyHandler.a(22433, this.chassis.finalangle + 2048);
             var31_ref.updateWorldTransforms(false, var10Lifetime5 + this.chassis.finalx, var11Lifetime4 + this.chassis.finaly, var12_intLifetime2, 0, (int[]) null);
             MissionActionFactory.field_a[4] = var31_ref;
@@ -811,7 +811,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
             var8_intLifetime6 = 8192;
             var9Lifetime6 = GameKeyHandler.a(22433, 4096 + this.chassis.finalangle - 256);
             var10Lifetime6 = var8_intLifetime6 * GetNumStars.a(var9Lifetime6, (byte) 46) >> 16;
-            var11Lifetime5 = var8_intLifetime6 * eu.a(var9Lifetime6, 85) >> 16;
+            var11Lifetime5 = var8_intLifetime6 * TextureLineShape.a(var9Lifetime6, 85) >> 16;
             var12_intLifetime3 = GameKeyHandler.a(22433, this.chassis.finalangle - 2048);
             var32_ref.updateWorldTransforms(false, var10Lifetime6 + this.chassis.finalx, this.chassis.finaly + var11Lifetime5, var12_intLifetime3, 0, (int[]) null);
             MissionActionFactory.field_a[5] = var32_ref;

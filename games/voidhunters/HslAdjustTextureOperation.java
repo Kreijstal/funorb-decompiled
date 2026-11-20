@@ -1,18 +1,18 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class kbb extends TextureOperation {
+final class HslAdjustTextureOperation extends TextureOperation {
     static String field_q;
-    private int field_i;
-    private int field_j;
-    private int field_k;
-    private int field_l;
-    private int field_o;
-    private int field_n;
-    private int field_s;
+    private int hue;
+    private int hueOffset;
+    private int saturation;
+    private int lightness;
+    private int saturationOffset;
+    private int lightnessOffset;
+    private int green;
     static int field_p;
-    private int field_r;
-    private int field_m;
+    private int red;
+    private int blue;
 
     final static void a(ResourceArchive param0, ResourceArchive param1, ResourceArchive param2, byte param3, ResourceArchive param4) {
         RuntimeException stackIn_6_0 = null;
@@ -90,19 +90,19 @@ final class kbb extends TextureOperation {
           var4_int = param0;
           if (var4_int != 0) {
             if (1 == var4_int) {
-              this.field_o = (param2.readByte((byte) -114) << 12) / 100;
+              this.saturationOffset = (param2.readByte((byte) -114) << 12) / 100;
             } else {
               if (var4_int == 2) {
-                this.field_n = (param2.readByte((byte) -114) << 12) / 100;
+                this.lightnessOffset = (param2.readByte((byte) -114) << 12) / 100;
               }
             }
           } else {
-            this.field_j = param2.readShort(true);
+            this.hueOffset = param2.readShort(true);
           }
           if (param1 <= -60) {
             return;
           }
-          this.b(108, 41, -61, 78);
+          this.convertHslToRgb(108, 41, -61, 78);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -123,7 +123,7 @@ final class kbb extends TextureOperation {
         int var1 = -4 % ((-75 - param0) / 37);
     }
 
-    private final void a(byte param0, int param1, int param2, int param3) {
+    private final void convertRgbToHsl(byte param0, int param1, int param2, int param3) {
         int stackIn_3_0 = 0;
         int stackIn_6_0 = 0;
         int stackIn_11_0 = 0;
@@ -154,29 +154,29 @@ final class kbb extends TextureOperation {
         stackIn_6_0 = (param1 <= param2) ? param1 : param2;
         var6 = stackIn_6_0;
         if (param0 > -10) {
-          kbb.clearSharedReferences((byte) 5);
+          HslAdjustTextureOperation.clearSharedReferences((byte) 5);
         }
         stackIn_11_0 = (var5 < param3) ? param3 : var5;
         var5Lifetime1 = stackIn_11_0;
         stackIn_14_0 = (var6 <= param3) ? var6 : param3;
         var6Lifetime1 = stackIn_14_0;
         var7 = -var6Lifetime1 + var5Lifetime1;
-        this.field_l = (var5Lifetime1 + var6Lifetime1) / 2;
+        this.lightness = (var5Lifetime1 + var6Lifetime1) / 2;
         if (0 >= var7) {
-          this.field_i = 0;
-          if (this.field_l <= 0) {
-            this.field_k = 0;
+          this.hue = 0;
+          if (this.lightness <= 0) {
+            this.saturation = 0;
           } else {
-            if (4096 <= this.field_l) {
-              this.field_k = 0;
+            if (4096 <= this.lightness) {
+              this.saturation = 0;
             } else {
               stackIn_61_1 = var7 << 12;
-              if (this.field_l <= 2048) {
-                stackIn_62_2 = this.field_l * 2;
+              if (this.lightness <= 2048) {
+                stackIn_62_2 = this.lightness * 2;
               } else {
-                stackIn_62_2 = -(this.field_l * 2) + 8192;
+                stackIn_62_2 = -(this.lightness * 2) + 8192;
               }
-              this.field_k = stackIn_61_1 / stackIn_62_2;
+              this.saturation = stackIn_61_1 / stackIn_62_2;
             }
           }
           return;
@@ -190,21 +190,21 @@ final class kbb extends TextureOperation {
           } else {
             stackIn_19_1 = 20480 + var10;
           }
-          this.field_i = stackIn_19_1;
-          this.field_i = this.field_i / 6;
-          if (this.field_l <= 0) {
-            this.field_k = 0;
+          this.hue = stackIn_19_1;
+          this.hue = this.hue / 6;
+          if (this.lightness <= 0) {
+            this.saturation = 0;
           } else {
-            if (4096 <= this.field_l) {
-              this.field_k = 0;
+            if (4096 <= this.lightness) {
+              this.saturation = 0;
             } else {
               stackIn_28_1 = var7 << 12;
-              if (this.field_l <= 2048) {
-                stackIn_29_2 = this.field_l * 2;
+              if (this.lightness <= 2048) {
+                stackIn_29_2 = this.lightness * 2;
               } else {
-                stackIn_29_2 = -(this.field_l * 2) + 8192;
+                stackIn_29_2 = -(this.lightness * 2) + 8192;
               }
-              this.field_k = stackIn_28_1 / stackIn_29_2;
+              this.saturation = stackIn_28_1 / stackIn_29_2;
             }
           }
         } else {
@@ -214,21 +214,21 @@ final class kbb extends TextureOperation {
             } else {
               stackIn_47_1 = var9 + 12288;
             }
-            this.field_i = stackIn_47_1;
-            this.field_i = this.field_i / 6;
-            if (this.field_l <= 0) {
-              this.field_k = 0;
+            this.hue = stackIn_47_1;
+            this.hue = this.hue / 6;
+            if (this.lightness <= 0) {
+              this.saturation = 0;
             } else {
-              if (4096 <= this.field_l) {
-                this.field_k = 0;
+              if (4096 <= this.lightness) {
+                this.saturation = 0;
               } else {
                 stackIn_52_1 = var7 << 12;
-                if (this.field_l <= 2048) {
-                  stackIn_53_2 = this.field_l * 2;
+                if (this.lightness <= 2048) {
+                  stackIn_53_2 = this.lightness * 2;
                 } else {
-                  stackIn_53_2 = -(this.field_l * 2) + 8192;
+                  stackIn_53_2 = -(this.lightness * 2) + 8192;
                 }
-                this.field_k = stackIn_52_1 / stackIn_53_2;
+                this.saturation = stackIn_52_1 / stackIn_53_2;
               }
             }
           } else {
@@ -237,21 +237,21 @@ final class kbb extends TextureOperation {
             } else {
               stackIn_35_1 = 4096 + var8;
             }
-            this.field_i = stackIn_35_1;
-            this.field_i = this.field_i / 6;
-            if (this.field_l <= 0) {
-              this.field_k = 0;
+            this.hue = stackIn_35_1;
+            this.hue = this.hue / 6;
+            if (this.lightness <= 0) {
+              this.saturation = 0;
             } else {
-              if (4096 <= this.field_l) {
-                this.field_k = 0;
+              if (4096 <= this.lightness) {
+                this.saturation = 0;
               } else {
                 stackIn_41_1 = var7 << 12;
-                if (this.field_l <= 2048) {
-                  stackIn_42_2 = this.field_l * 2;
+                if (this.lightness <= 2048) {
+                  stackIn_42_2 = this.lightness * 2;
                 } else {
-                  stackIn_42_2 = -(this.field_l * 2) + 8192;
+                  stackIn_42_2 = -(this.lightness * 2) + 8192;
                 }
-                this.field_k = stackIn_41_1 / stackIn_42_2;
+                this.saturation = stackIn_41_1 / stackIn_42_2;
               }
             }
           }
@@ -259,7 +259,7 @@ final class kbb extends TextureOperation {
         return;
     }
 
-    private final void b(int param0, int param1, int param2, int param3) {
+    private final void convertHslToRgb(int param0, int param1, int param2, int param3) {
         int stackIn_3_0 = 0;
         int var5;
         int var6;
@@ -282,9 +282,9 @@ final class kbb extends TextureOperation {
           return;
         }
         if (0 >= var5) {
-          this.field_m = param2;
-          this.field_s = param2;
-          this.field_r = param2;
+          this.blue = param2;
+          this.green = param2;
+          this.red = param2;
           return;
         }
         param1 = param1 * 6;
@@ -299,41 +299,41 @@ final class kbb extends TextureOperation {
         var12 = -var10 + var5;
         var13 = var8;
         if (var13 == 0) {
-          this.field_s = var11;
-          this.field_r = var5;
-          this.field_m = var6;
+          this.green = var11;
+          this.red = var5;
+          this.blue = var6;
           return;
         }
         if (var13 == 1) {
-          this.field_r = var12;
-          this.field_s = var5;
-          this.field_m = var6;
+          this.red = var12;
+          this.green = var5;
+          this.blue = var6;
           return;
         }
         if (2 == var13) {
-          this.field_r = var6;
-          this.field_s = var5;
-          this.field_m = var11;
+          this.red = var6;
+          this.green = var5;
+          this.blue = var11;
           return;
         }
         if (var13 == 3) {
-          this.field_m = var5;
-          this.field_s = var12;
-          this.field_r = var6;
+          this.blue = var5;
+          this.green = var12;
+          this.red = var6;
           return;
         }
         if (4 == var13) {
-          this.field_m = var5;
-          this.field_s = var6;
-          this.field_r = var11;
+          this.blue = var5;
+          this.green = var6;
+          this.red = var11;
           return;
         }
         if (var13 != 5) {
           return;
         }
-        this.field_r = var5;
-        this.field_m = var12;
-        this.field_s = var6;
+        this.red = var5;
+        this.blue = var12;
+        this.green = var6;
         return;
     }
 
@@ -358,7 +358,7 @@ final class kbb extends TextureOperation {
         var3 = var13;
         if (!this.field_d.field_g) {
           if (param0 != 255) {
-            this.b(72, 53, 92, -63);
+            this.convertHslToRgb(72, 53, 92, -63);
           }
           return var3;
         }
@@ -370,44 +370,44 @@ final class kbb extends TextureOperation {
         var9 = var20[1];
         var10 = var20[2];
         for (var11 = 0; hob.textureWidth > var11; var11++) {
-          this.a((byte) -44, var29[var11], var30[var11], var31[var11]);
-          this.field_l = this.field_l + this.field_n;
-          this.field_k = this.field_k + this.field_o;
-          this.field_i = this.field_i + this.field_j;
-          while (0 > this.field_i) {
-            this.field_i = this.field_i + 4096;
+          this.convertRgbToHsl((byte) -44, var29[var11], var30[var11], var31[var11]);
+          this.lightness = this.lightness + this.lightnessOffset;
+          this.saturation = this.saturation + this.saturationOffset;
+          this.hue = this.hue + this.hueOffset;
+          while (0 > this.hue) {
+            this.hue = this.hue + 4096;
           }
-          while (4096 < this.field_i) {
-            this.field_i = this.field_i - 4096;
+          while (4096 < this.hue) {
+            this.hue = this.hue - 4096;
           }
-          if (this.field_k < 0) {
-            this.field_k = 0;
+          if (this.saturation < 0) {
+            this.saturation = 0;
           }
-          if (this.field_k > 4096) {
-            this.field_k = 4096;
+          if (this.saturation > 4096) {
+            this.saturation = 4096;
           }
-          if (this.field_l < 0) {
-            this.field_l = 0;
+          if (this.lightness < 0) {
+            this.lightness = 0;
           }
-          if (this.field_l > 4096) {
-            this.field_l = 4096;
+          if (this.lightness > 4096) {
+            this.lightness = 4096;
           }
-          this.b(this.field_k, this.field_i, this.field_l, 4096);
-          var8[var11] = this.field_r;
-          var9[var11] = this.field_s;
-          var10[var11] = this.field_m;
+          this.convertHslToRgb(this.saturation, this.hue, this.lightness, 4096);
+          var8[var11] = this.red;
+          var9[var11] = this.green;
+          var10[var11] = this.blue;
         }
         if (param0 != 255) {
-          this.b(72, 53, 92, -63);
+          this.convertHslToRgb(72, 53, 92, -63);
         }
         return var3;
     }
 
-    public kbb() {
+    public HslAdjustTextureOperation() {
         super(1, false);
-        this.field_n = 0;
-        this.field_o = 0;
-        this.field_j = 0;
+        this.lightnessOffset = 0;
+        this.saturationOffset = 0;
+        this.hueOffset = 0;
     }
 
     static {

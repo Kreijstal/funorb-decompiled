@@ -275,7 +275,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                   while (var12 != null) {
                     var13 = var12.getType((byte) -104);
                     if ((~var12.getFiredTeam(512) != ~var26.getTeam((byte) 73) ||
-                      !qab.a(33, param2.getObjectiveType(false)) &&
+                      !ConsoleCharacterStream.a(33, param2.getObjectiveType(false)) &&
                       var12.b(false) != var26.getOwner((byte) -117)) &&
                       (var13 == 6 ||
                       var13 == 1)) {
@@ -769,7 +769,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             discarded$0 = this.hasAdjustableConnection((byte) -119);
           }
           if (this.componentTypeId == 45) {
-            SetMissileLauncherEnergyUsed.a(13412864, (byte) 7, param3.b(true, this.finaly), (float)(int)(param3.field_a * 4096.0f), 128 + (eu.a(100 * SetMinimapWidth.field_o, param1 ^ 122) >> 8) / 8, param3.a(this.finalx, (byte) 127));
+            SetMissileLauncherEnergyUsed.a(13412864, (byte) 7, param3.b(true, this.finaly), (float)(int)(param3.field_a * 4096.0f), 128 + (TextureLineShape.a(100 * SetMinimapWidth.field_o, param1 ^ 122) >> 8) / 8, param3.a(this.finalx, (byte) 127));
           }
           if (GetPointDefenceLaserProjectiles.a(16, param1 + 11200)) {
             SetNumStars.a(param3.field_a * (float)var47.boundingRadius, (byte) 113, param3.b(true, this.finaly), 16711680, param3.a(this.finalx, (byte) 126));
@@ -879,7 +879,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           }
           if (var13 != 0) {
             var14 = GetNumStars.a(this.finalangle, (byte) -108);
-            var15 = eu.a(this.finalangle, 69);
+            var15 = TextureLineShape.a(this.finalangle, 69);
             if (0 != var47.connectionX ||
               0 != var47.connectionY) {
               var16Lifetime1 = -(var47.connectionY * var15) + var47.connectionX * var14 >> 16;
@@ -892,7 +892,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               var22Lifetime1 = this.currentconnectedangle - this.connectedangle;
               var23Lifetime1 = -var22Lifetime1 + this.finalangle;
               var24 = 8 * GetNumStars.a(var23Lifetime1, (byte) 104) >> 9;
-              var25 = eu.a(var23Lifetime1, 55) * 8 >> 9;
+              var25 = TextureLineShape.a(var23Lifetime1, 55) * 8 >> 9;
               c.a(param3.b(true, var19Lifetime1 - var25), param3.a(var18Lifetime1 - var24, (byte) 126), var20, var21, param1 - 16777300, param2);
               var24Lifetime2 = 8 * var14 >> 9;
               var25Lifetime2 = var15 * 8 >> 9;
@@ -1018,7 +1018,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
                   var20Lifetime3 = param3.b(true, var18Lifetime1Lifetime3);
                   if (GetPointDefenceLaserProjectiles.a(4, 11284)) {
                     var21Lifetime2 = GetNumStars.a(this.finalangle + var47.hardpoints[var16Lifetime1Lifetime3].field_a, (byte) -93) * 8 >> 8;
-                    var22Lifetime1Lifetime2 = eu.a(var47.hardpoints[var16Lifetime1Lifetime3].field_a + this.finalangle, 99) * 8 >> 8;
+                    var22Lifetime1Lifetime2 = TextureLineShape.a(var47.hardpoints[var16Lifetime1Lifetime3].field_a + this.finalangle, 99) * 8 >> 8;
                     c.a(param3.b(true, var22Lifetime1Lifetime2 + var18Lifetime1Lifetime3), param3.a(var17Lifetime1Lifetime3 + var21Lifetime2, (byte) 119), var19Lifetime1Lifetime3, var20Lifetime3, -16777216, 16711680);
                     GetLagStandardDeviationOut.a(-1, Integer.toString(var16Lifetime1Lifetime3), 16711935, var20Lifetime3, var19Lifetime1Lifetime3, param1 ^ 4350);
                   }
@@ -1163,7 +1163,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           }
           else {
             var10_int = GetNumStars.a(this.finalangle, (byte) -103);
-            var11 = eu.a(this.finalangle, 57);
+            var11 = TextureLineShape.a(this.finalangle, 57);
             GetShipAimLines.field_o = var10_int;
             GetCountermeasureLauncherRandomness.field_p = var11;
           }
@@ -1360,7 +1360,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (param4 < 84) {
             this.collectSpecialOrderStatuses((IntrusiveDeque) null, (Ship) null, 87);
           }
-          var9 = eu.a(param0, 84);
+          var9 = TextureLineShape.a(param0, 84);
           this.updateWorldTransforms(param2, var9, param3, param0, param6, param1, 256, var8_int, param5);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ml.AB(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + (param6 != null ? "{...}" : "null") + ')');
@@ -1821,10 +1821,10 @@ final class ShipComponent implements DiffableState, CompactGameState {
               var8 = param1.forceY - var4 >> 8;
               var9 = param1.torque - var5;
               var10 = GetNumStars.a(param1.getAngle(0), (byte) -119) >> 8;
-              var11 = eu.a(param1.getAngle(0), 114) >> 8;
+              var11 = TextureLineShape.a(param1.getAngle(0), 114) >> 8;
               var12 = GameKeyHandler.a(22433, -2048 + param1.getAngle(0));
               var13 = GetNumStars.a(var12, (byte) -78) >> 8;
-              var14 = eu.a(var12, 96) >> 8;
+              var14 = TextureLineShape.a(var12, 96) >> 8;
               var15 = var10 * var7 + var8 * var11;
               var16 = var8 * var14 + var13 * var7;
               var17 = Math.max(var8 * var8 + var7 * var7, 1);
@@ -2407,8 +2407,8 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (null != var15.thrusterbehaviour) {
             var16 = GameKeyHandler.a(22433, var16 + 4096);
           }
-          var17 = var15.getDefaultConnectionX(-10) * GetNumStars.a(var10, (byte) -89) - var15.getDefaultConnectionY((byte) 100) * eu.a(var10, 49) >> 16;
-          var18 = var15.getDefaultConnectionX(124) * eu.a(var10, param3 ^ -120) + var15.getDefaultConnectionY((byte) 100) * GetNumStars.a(var10, (byte) -72) >> 16;
+          var17 = var15.getDefaultConnectionX(-10) * GetNumStars.a(var10, (byte) -89) - var15.getDefaultConnectionY((byte) 100) * TextureLineShape.a(var10, 49) >> 16;
+          var18 = var15.getDefaultConnectionX(124) * TextureLineShape.a(var10, param3 ^ -120) + var15.getDefaultConnectionY((byte) 100) * GetNumStars.a(var10, (byte) -72) >> 16;
           var15.updateWorldTransforms(false, var14.worldx - var17, -var18 + var14.worldy, var16, param3 ^ param3, (int[]) null);
           var19 = new IntrusiveDeque();
           param6.collectTreeCollisions(var15, 0, 0, (byte) -126, var19);
@@ -2743,7 +2743,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (param1 != -69) {
             this.grapplebehaviour = (GrappleLauncherBehaviour) null;
           }
-          stackIn_3_0 = this.finalx + (param0.connectionX * GetNumStars.a(this.finalangle, (byte) -99) - param0.connectionY * eu.a(this.finalangle, 84) >> 16);
+          stackIn_3_0 = this.finalx + (param0.connectionX * GetNumStars.a(this.finalangle, (byte) -99) - param0.connectionY * TextureLineShape.a(this.finalangle, 84) >> 16);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -3086,7 +3086,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             discarded$0 = this.rotateAim((byte) 99, 116);
           }
           var7_int = GetNumStars.a(param3, (byte) 35);
-          var8 = eu.a(param3, 86);
+          var8 = TextureLineShape.a(param3, 86);
           this.updateWorldTransforms(param2, var8, param0, param3, param5, false, 256, var7_int, param1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ml.OA(" + param0 + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + (param5 != null ? "{...}" : "null") + ')');
@@ -3806,7 +3806,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           var11 = (long)var42.connectionX;
           var13 = (long)var42.connectionY;
           var15 = GetNumStars.a(this.finalangle, (byte) -97);
-          var16 = eu.a(this.finalangle, 123);
+          var16 = TextureLineShape.a(this.finalangle, 123);
           GetShipAimLines.field_o = var15;
           GetCountermeasureLauncherRandomness.field_p = var16;
           var17 = -(var13 * (long)var16) + (long)var15 * var11 >> 16;
@@ -4277,7 +4277,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         RuntimeException decompiledCaughtException = null;
         try {
           var3_int = -106 % ((-24 - param0) / 56);
-          stackIn_1_0 = this.finaly + (param1.connectionX * eu.a(this.finalangle, 62) + param1.connectionY * GetNumStars.a(this.finalangle, (byte) -119) >> 16);
+          stackIn_1_0 = this.finaly + (param1.connectionX * TextureLineShape.a(this.finalangle, 62) + param1.connectionY * GetNumStars.a(this.finalangle, (byte) -119) >> 16);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

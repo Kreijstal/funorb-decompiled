@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetMissionVariablesHudX extends ConsoleCommand {
-    static int field_p;
+    static int methodTokenType;
     static Widget[] field_o;
 
     public static void clearSharedReferences(int param0) {
@@ -45,6 +45,6 @@ final class SetMissionVariablesHudX extends ConsoleCommand {
     }
 
     static {
-        field_p = 3;
+        methodTokenType = 3;
     }
 }

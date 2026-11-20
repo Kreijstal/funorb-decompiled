@@ -36,7 +36,7 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           return (TextureOperation) ((Object) new ClampTextureOperation());
         }
         if (7 == var2) {
-          return (TextureOperation) ((Object) new cj());
+          return (TextureOperation) ((Object) new BlendModesTextureOperation());
         }
         if (var2 == 8) {
           return (TextureOperation) ((Object) new CurveTextureOperation());
@@ -45,7 +45,7 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           return (TextureOperation) ((Object) new FlipTextureOperation());
         }
         if (var2 == 10) {
-          return (TextureOperation) ((Object) new ckb());
+          return (TextureOperation) ((Object) new ColorGradientTextureOperation());
         }
         if (var2 == 11) {
           return (TextureOperation) ((Object) new ColorizeTextureOperation());
@@ -60,13 +60,13 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           return (TextureOperation) ((Object) new WeaveTextureOperation());
         }
         if (15 == var2) {
-          return (TextureOperation) ((Object) new vm());
+          return (TextureOperation) ((Object) new CellularNoiseTextureOperation());
         }
         if (var2 == 16) {
           return (TextureOperation) ((Object) new HerringboneTextureOperation());
         }
         if (var2 == 17) {
-          return (TextureOperation) ((Object) new kbb());
+          return (TextureOperation) ((Object) new HslAdjustTextureOperation());
         }
         if (18 == var2) {
           return (TextureOperation) ((Object) new TiledSpriteTextureOperation());
@@ -96,13 +96,13 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           return (TextureOperation) ((Object) new ThresholdTextureOperation());
         }
         if (var2 == 27) {
-          return (TextureOperation) ((Object) new moa());
+          return (TextureOperation) ((Object) new StripesTextureOperation());
         }
         if (var2 == 28) {
-          return (TextureOperation) ((Object) new cm());
+          return (TextureOperation) ((Object) new IrregularBricksTextureOperation());
         }
         if (var2 == 29) {
-          return (TextureOperation) ((Object) new md());
+          return (TextureOperation) ((Object) new RasterShapesTextureOperation());
         }
         if (var2 == 30) {
           return (TextureOperation) ((Object) new RangeTextureOperation());
@@ -111,13 +111,13 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           return (TextureOperation) ((Object) new MandelbrotTextureOperation());
         }
         if (var2 == 32) {
-          return (TextureOperation) ((Object) new smb());
+          return (TextureOperation) ((Object) new DirectionalLightingTextureOperation());
         }
         if (var2 == 33) {
           return (TextureOperation) ((Object) new NormalMapTextureOperation());
         }
         if (34 == var2) {
-          return (TextureOperation) ((Object) new rw());
+          return (TextureOperation) ((Object) new PerlinNoiseTextureOperation());
         }
         if (35 == var2) {
           return (TextureOperation) ((Object) new EdgeMagnitudeTextureOperation());
@@ -126,10 +126,10 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           return (TextureOperation) ((Object) new TextureSourceOperation());
         }
         if (var2 == 37) {
-          return (TextureOperation) ((Object) new oqb());
+          return (TextureOperation) ((Object) new CrossedWaveTextureOperation());
         }
         if (var2 == 38) {
-          return (TextureOperation) ((Object) new sva());
+          return (TextureOperation) ((Object) new RandomLinesTextureOperation());
         }
         if (39 == var2) {
           return (TextureOperation) ((Object) new SpriteTextureOperation());
