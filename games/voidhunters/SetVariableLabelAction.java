@@ -233,12 +233,12 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
         this.label = param1;
     }
 
-    final static void b(int param0) {
+    final static void openDisplayModeDialog(int param0) {
         GetDebrisMax.field_s = SetSpinningBladeAimarc.f((byte) 62);
         HighscoreTableRequest.field_h = new ModalStack();
-        GetPhasedEnergyBeamFireForce.e((byte) 117);
+        GetPhasedEnergyBeamFireForce.showDisplayModeDialog((byte) 117);
         if (param0 != 32) {
-          SetVariableLabelAction.b(3);
+          SetVariableLabelAction.openDisplayModeDialog(3);
         }
     }
 

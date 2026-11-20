@@ -69,7 +69,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(wma param0, int[] param1, boolean param2, boolean param3, boolean param4, int[] param5, boolean param6) {
+    final static void a(LogoMesh param0, int[] param1, boolean param2, boolean param3, boolean param4, int[] param5, boolean param6) {
         int stackIn_65_0 = 0;
         int stackIn_65_1 = 0;
         RuntimeException stackIn_70_0 = null;
@@ -152,10 +152,10 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
           var22Lifetime2 = SoftwareFlatTriangleRasterizer.centerY;
           var23Lifetime2 = 0;
           scanLoop1: while (true) {
-            if (var23Lifetime2 < param0.field_J) {
-              var24Lifetime1 = param0.field_r[var23Lifetime2];
-              var25Lifetime1 = param0.field_o[var23Lifetime2];
-              var26Lifetime1 = param0.field_p[var23Lifetime2];
+            if (var23Lifetime2 < param0.vertexCount) {
+              var24Lifetime1 = param0.vertexX[var23Lifetime2];
+              var25Lifetime1 = param0.vertexY[var23Lifetime2];
+              var26Lifetime1 = param0.vertexZ[var23Lifetime2];
               var27Lifetime1 = var9 + (var26Lifetime1 * var18 + (var15 * var25Lifetime1 + var24Lifetime1 * var12) >> 16 - iob.field_f);
               var28Lifetime1 = var10 + (var25Lifetime1 * var16 + var24Lifetime1 * var13 + var26Lifetime1 * var19 >> -iob.field_f + 16);
               var29Lifetime1 = (var24Lifetime1 * var14 + var25Lifetime1 * var17 + var26Lifetime1 * var20 >> 16) + var11;
@@ -194,7 +194,7 @@ final class SetCountermeasuresPulseRadius extends ConsoleCommand {
                 param0.field_x != null &&
                 null != param0.field_l) {
                 var23Lifetime2 = 0;
-                while (!(param0.field_y <= var23Lifetime2)) {
+                while (!(param0.faceCount <= var23Lifetime2)) {
                   var24Lifetime1 = param0.field_A[var23Lifetime2];
                   var25Lifetime1 = param0.field_g[var23Lifetime2];
                   var26Lifetime1 = param0.field_h[var23Lifetime2];

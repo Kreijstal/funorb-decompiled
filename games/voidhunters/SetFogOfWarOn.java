@@ -93,7 +93,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_ondamage_particle_fadestart(" + dw.field_b + ")");
         System.out.println("set_shields_directional_halfarc_cuts(" + SetBuildViewAutozoomEndOnAction.field_o + ")");
         System.out.println("set_shields_directional_arc_particle_life(" + LoadSettings.field_q + ")");
-        System.out.println("set_shields_directional_arc_particle_speed_downshift(" + apb.field_b + ")");
+        System.out.println("set_shields_directional_arc_particle_speed_downshift(" + LogoMaterial.field_b + ")");
         System.out.println("set_auto_afk_timeout(" + Particle.field_E + ")");
         System.out.println("set_test_action_lag(" + TestActionLagSetting.actionLag + ")");
         System.out.println("set_build_view_autozoom(" + GetPointDefenceLaserPulsetime.field_q + ")");
@@ -179,7 +179,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_armageddon_length(" + SetVariableActionFactory.field_a + ")");
         System.out.println("set_mission_terrain_nebula_probability(" + LegacyOpenGlUnlitEffect.field_c + ")");
         System.out.println("set_mission_terrain_asteroid_probability(" + GetDebrisFoundInPairs.field_o + ")");
-        System.out.println("set_mission_terrain_debris_probability(" + apb.field_a + ")");
+        System.out.println("set_mission_terrain_debris_probability(" + LogoMaterial.field_a + ")");
         System.out.println("set_mission_terrain_space_probability(" + SetUseLines.field_p + ")");
         System.out.println("set_mission_terrain_voting_chancestep(" + GetToggledScoreboard.field_r + ")");
         System.out.println("set_mission_debris_default_probability(" + MatchResults.field_b + ")");
@@ -253,7 +253,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_bomblet_spray_aimarc(" + BombletSprayAimArcSetting.aimArc + ")");
         System.out.println("set_phased_energy_beam_aimarc(" + ConsoleCharacterStream.field_d + ")");
         System.out.println("set_machine_gun_aimarc(" + PlayerReady.field_c + ")");
-        System.out.println("set_grappling_hook_aimarc(" + dla.field_c + ")");
+        System.out.println("set_grappling_hook_aimarc(" + MenuBackgroundBattle.field_c + ")");
         System.out.println("set_missile_launcher_aimarc(" + khb.field_c + ")");
         System.out.println("set_point_defence_laser_aimarc(" + GetMaxShipSize.field_o + ")");
         System.out.println("set_countermeasure_launcher_aimarc(" + LegacyOpenGlTextureCache.field_e + ")");

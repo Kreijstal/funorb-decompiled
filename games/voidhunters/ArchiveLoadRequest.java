@@ -99,7 +99,7 @@ final class ArchiveLoadRequest {
         return false;
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4, int param5) {
+    final static void appendScoreRow(int param0, int param1, int param2, int param3, int param4, int param5) {
         int stackIn_8_0 = 0;
         int stackIn_18_0 = 0;
         int stackIn_29_0 = 0;

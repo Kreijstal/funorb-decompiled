@@ -307,7 +307,7 @@ final class PlatformService implements Runnable {
                         break;
                       case 5:
                         if (!this.microsoftJvm) {
-                          var8.result = Class.forName("rk").getMethod("listmodes", new Class[]{}).invoke(this.reflectedFullscreenHelper, new Object[]{});
+                          var8.result = Class.forName("AwtFullscreenController").getMethod("listmodes", new Class[]{}).invoke(this.reflectedFullscreenHelper, new Object[]{});
                         } else {
                           var8.result = this.microsoftFullscreenHelper.listDisplayModes(false);
                         }
@@ -319,7 +319,7 @@ final class PlatformService implements Runnable {
                         if (this.microsoftJvm) {
                           this.microsoftFullscreenHelper.enterFullscreen(-70, var14, var8.secondaryIntArgument >> 16, var8.primaryIntArgument >>> 16, var8.secondaryIntArgument & 65535, var8.primaryIntArgument & 65535);
                         } else {
-                          Class.forName("rk").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.reflectedFullscreenHelper, new Object[]{var14, new Integer(var8.primaryIntArgument >>> 16), new Integer(var8.primaryIntArgument & 65535), new Integer(var8.secondaryIntArgument >> 16), new Integer(var8.secondaryIntArgument & 65535)});
+                          Class.forName("AwtFullscreenController").getMethod("enter", new Class[]{java.awt.Frame.class, Integer.TYPE, Integer.TYPE, Integer.TYPE, Integer.TYPE}).invoke(this.reflectedFullscreenHelper, new Object[]{var14, new Integer(var8.primaryIntArgument >>> 16), new Integer(var8.primaryIntArgument & 65535), new Integer(var8.secondaryIntArgument >> 16), new Integer(var8.secondaryIntArgument & 65535)});
                         }
                         break;
                       case 16:
@@ -392,7 +392,7 @@ final class PlatformService implements Runnable {
                         if (this.microsoftJvm) {
                           this.microsoftFullscreenHelper.exitFullscreen(-76, (java.awt.Frame) (var8.objectArgument));
                         } else {
-                          Class.forName("rk").getMethod("exit", new Class[]{}).invoke(this.reflectedFullscreenHelper, new Object[]{});
+                          Class.forName("AwtFullscreenController").getMethod("exit", new Class[]{}).invoke(this.reflectedFullscreenHelper, new Object[]{});
                         }
                         break;
                       case 21:
@@ -654,7 +654,7 @@ final class PlatformService implements Runnable {
               var10 = new MicrosoftJvmFullscreenController();
               this.microsoftFullscreenHelper = var10;
             } else {
-              this.reflectedFullscreenHelper = Class.forName("rk").newInstance();
+              this.reflectedFullscreenHelper = Class.forName("AwtFullscreenController").newInstance();
             }
           } catch (java.lang.Throwable decompiledCaughtParameter9) {
             decompiledCaughtException = decompiledCaughtParameter9;

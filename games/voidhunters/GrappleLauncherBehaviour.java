@@ -421,7 +421,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
         if (param0 != 12) {
           field_d = -53;
         }
-        return dla.field_c;
+        return MenuBackgroundBattle.field_c;
     }
 
     final void destroyHook(World param0, int param1) {

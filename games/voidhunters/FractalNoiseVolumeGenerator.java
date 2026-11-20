@@ -92,7 +92,7 @@ class FractalNoiseVolumeGenerator extends PerlinNoiseVolumeGenerator {
     void writeSample(int param0, int param1, byte param2) {
         int fieldTemp$0 = this.outputIndex;
         this.outputIndex = this.outputIndex + 1;
-        this.output[fieldTemp$0] = (byte)((dla.andBits((int) param2, 255) >> 1) + 127);
+        this.output[fieldTemp$0] = (byte)((MenuBackgroundBattle.andBits((int) param2, 255) >> 1) + 127);
         if (param0 != 1111320769) {
           this.accumulateOctave(-23, -5, 87);
         }

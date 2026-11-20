@@ -1017,9 +1017,9 @@ final class OpenGlGpuToolkit extends GpuToolkit {
           GetPhasedEnergyBeamFireForce.field_o[2] = (float)var3.getZ((byte) 62);
           GetPhasedEnergyBeamFireForce.field_o[3] = 1.0f;
           jaggl.OpenGL.glLightfv(var5, 4611, GetPhasedEnergyBeamFireForce.field_o, 0);
-          GetPhasedEnergyBeamFireForce.field_o[0] = (float)dla.andBits(255, var4 >> 16) * var6;
-          GetPhasedEnergyBeamFireForce.field_o[2] = (float)dla.andBits(255, var4) * var6;
-          GetPhasedEnergyBeamFireForce.field_o[1] = var6 * (float)(dla.andBits(var4, 65382) >> 8);
+          GetPhasedEnergyBeamFireForce.field_o[0] = (float)MenuBackgroundBattle.andBits(255, var4 >> 16) * var6;
+          GetPhasedEnergyBeamFireForce.field_o[2] = (float)MenuBackgroundBattle.andBits(255, var4) * var6;
+          GetPhasedEnergyBeamFireForce.field_o[1] = var6 * (float)(MenuBackgroundBattle.andBits(var4, 65382) >> 8);
           GetPhasedEnergyBeamFireForce.field_o[3] = 1.0f;
           jaggl.OpenGL.glLightfv(var5, 4609, GetPhasedEnergyBeamFireForce.field_o, 0);
           jaggl.OpenGL.glLightf(var5, 4617, 1.0f / (float)(var3.getRadius(16777215) * var3.getRadius(16777215)));
@@ -1091,13 +1091,13 @@ final class OpenGlGpuToolkit extends GpuToolkit {
 
     final void applyTextureConstantColor(byte param0) {
         GetPhasedEnergyBeamFireForce.field_o[3] = (float)(this.textureConstantColor >>> 24) / 255.0f;
-        GetPhasedEnergyBeamFireForce.field_o[2] = (float)dla.andBits(255, this.textureConstantColor) / 255.0f;
-        GetPhasedEnergyBeamFireForce.field_o[1] = (float)dla.andBits(65280, this.textureConstantColor) / 65280.0f;
+        GetPhasedEnergyBeamFireForce.field_o[2] = (float)MenuBackgroundBattle.andBits(255, this.textureConstantColor) / 255.0f;
+        GetPhasedEnergyBeamFireForce.field_o[1] = (float)MenuBackgroundBattle.andBits(65280, this.textureConstantColor) / 65280.0f;
         if (param0 != -109) {
           TextureCoordinateMode var3 = (TextureCoordinateMode) null;
           this.setTextureCoordinateMode((byte) -64, (TextureCoordinateMode) null);
         }
-        GetPhasedEnergyBeamFireForce.field_o[0] = (float)dla.andBits(this.textureConstantColor, 16711680) / 16711680.0f;
+        GetPhasedEnergyBeamFireForce.field_o[0] = (float)MenuBackgroundBattle.andBits(this.textureConstantColor, 16711680) / 16711680.0f;
         jaggl.OpenGL.glTexEnvfv(8960, 8705, GetPhasedEnergyBeamFireForce.field_o, 0);
     }
 
@@ -1483,12 +1483,12 @@ final class OpenGlGpuToolkit extends GpuToolkit {
         }
         jaggl.OpenGL.glFogf(2915, this.field_p);
         jaggl.OpenGL.glFogf(2916, this.field_r);
-        GetPhasedEnergyBeamFireForce.field_o[0] = (float)dla.andBits(this.field_lc, 16711680) / 16711680.0f;
-        GetPhasedEnergyBeamFireForce.field_o[1] = (float)dla.andBits(this.field_lc, 65280) / 65280.0f;
+        GetPhasedEnergyBeamFireForce.field_o[0] = (float)MenuBackgroundBattle.andBits(this.field_lc, 16711680) / 16711680.0f;
+        GetPhasedEnergyBeamFireForce.field_o[1] = (float)MenuBackgroundBattle.andBits(this.field_lc, 65280) / 65280.0f;
         if (param0 != 8) {
           this.field_Cc = (IntrusiveDeque) null;
         }
-        GetPhasedEnergyBeamFireForce.field_o[2] = (float)dla.andBits(255, this.field_lc) / 255.0f;
+        GetPhasedEnergyBeamFireForce.field_o[2] = (float)MenuBackgroundBattle.andBits(255, this.field_lc) / 255.0f;
         jaggl.OpenGL.glFogfv(2918, GetPhasedEnergyBeamFireForce.field_o, 0);
     }
 

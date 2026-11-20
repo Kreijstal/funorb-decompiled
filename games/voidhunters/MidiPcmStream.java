@@ -376,7 +376,7 @@ class MidiPcmStream extends PcmStream {
         int var5 = 0;
         var3Lifetime1 = var5;
         while (var5 < 16) {
-          this.banks[var5] = dla.andBits(this.defaultPrograms[var5], -128);
+          this.banks[var5] = MenuBackgroundBattle.andBits(this.defaultPrograms[var5], -128);
           var5++;
         }
     }
@@ -863,67 +863,67 @@ class MidiPcmStream extends PcmStream {
         var5Lifetime4 = (param0 & 32715) >> 8;
         var6Lifetime3 = (param0 & 8340936) >> 16;
         if (0 == var5Lifetime4) {
-          this.banks[var4Lifetime4] = (var6Lifetime3 << 14) + dla.andBits(this.banks[var4Lifetime4], -2080769);
+          this.banks[var4Lifetime4] = (var6Lifetime3 << 14) + MenuBackgroundBattle.andBits(this.banks[var4Lifetime4], -2080769);
         }
         if (var5Lifetime4 == 32) {
-          this.banks[var4Lifetime4] = dla.andBits(-16257, this.banks[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.banks[var4Lifetime4] = MenuBackgroundBattle.andBits(-16257, this.banks[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (1 == var5Lifetime4) {
-          this.modulation[var4Lifetime4] = dla.andBits(-16257, this.modulation[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.modulation[var4Lifetime4] = MenuBackgroundBattle.andBits(-16257, this.modulation[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 33) {
-          this.modulation[var4Lifetime4] = dla.andBits(-128, this.modulation[var4Lifetime4]) + var6Lifetime3;
+          this.modulation[var4Lifetime4] = MenuBackgroundBattle.andBits(-128, this.modulation[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 5) {
-          this.portamentoTime[var4Lifetime4] = dla.andBits(this.portamentoTime[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
+          this.portamentoTime[var4Lifetime4] = MenuBackgroundBattle.andBits(this.portamentoTime[var4Lifetime4], -16257) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 37) {
-          this.portamentoTime[var4Lifetime4] = dla.andBits(this.portamentoTime[var4Lifetime4], -128) + var6Lifetime3;
+          this.portamentoTime[var4Lifetime4] = MenuBackgroundBattle.andBits(this.portamentoTime[var4Lifetime4], -128) + var6Lifetime3;
         }
         if (var5Lifetime4 == 7) {
-          this.channelVolume[var4Lifetime4] = (var6Lifetime3 << 7) + dla.andBits(this.channelVolume[var4Lifetime4], -16257);
+          this.channelVolume[var4Lifetime4] = (var6Lifetime3 << 7) + MenuBackgroundBattle.andBits(this.channelVolume[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 39) {
-          this.channelVolume[var4Lifetime4] = dla.andBits(-128, this.channelVolume[var4Lifetime4]) + var6Lifetime3;
+          this.channelVolume[var4Lifetime4] = MenuBackgroundBattle.andBits(-128, this.channelVolume[var4Lifetime4]) + var6Lifetime3;
         }
         if (var5Lifetime4 == 10) {
-          this.channelPan[var4Lifetime4] = (var6Lifetime3 << 7) + dla.andBits(this.channelPan[var4Lifetime4], -16257);
+          this.channelPan[var4Lifetime4] = (var6Lifetime3 << 7) + MenuBackgroundBattle.andBits(this.channelPan[var4Lifetime4], -16257);
         }
         if (var5Lifetime4 == 42) {
-          this.channelPan[var4Lifetime4] = dla.andBits(this.channelPan[var4Lifetime4], -128) + var6Lifetime3;
+          this.channelPan[var4Lifetime4] = MenuBackgroundBattle.andBits(this.channelPan[var4Lifetime4], -128) + var6Lifetime3;
         }
         if (var5Lifetime4 == 11) {
-          this.channelExpression[var4Lifetime4] = dla.andBits(-16257, this.channelExpression[var4Lifetime4]) + (var6Lifetime3 << 7);
+          this.channelExpression[var4Lifetime4] = MenuBackgroundBattle.andBits(-16257, this.channelExpression[var4Lifetime4]) + (var6Lifetime3 << 7);
         }
         if (var5Lifetime4 == 43) {
-          this.channelExpression[var4Lifetime4] = dla.andBits(this.channelExpression[var4Lifetime4], -128) + var6Lifetime3;
+          this.channelExpression[var4Lifetime4] = MenuBackgroundBattle.andBits(this.channelExpression[var4Lifetime4], -128) + var6Lifetime3;
         }
         if (var5Lifetime4 == 64) {
           if (var6Lifetime3 >= 64) {
             this.channelFlags[var4Lifetime4] = SetAngularForceDownshift.orBits(this.channelFlags[var4Lifetime4], 1);
           } else {
-            this.channelFlags[var4Lifetime4] = dla.andBits(this.channelFlags[var4Lifetime4], -2);
+            this.channelFlags[var4Lifetime4] = MenuBackgroundBattle.andBits(this.channelFlags[var4Lifetime4], -2);
           }
         }
         if (65 == var5Lifetime4) {
           if (var6Lifetime3 < 64) {
             this.releasePortamentoNotes(var4Lifetime4, (byte) -89);
-            this.channelFlags[var4Lifetime4] = dla.andBits(this.channelFlags[var4Lifetime4], -3);
+            this.channelFlags[var4Lifetime4] = MenuBackgroundBattle.andBits(this.channelFlags[var4Lifetime4], -3);
           } else {
             this.channelFlags[var4Lifetime4] = SetAngularForceDownshift.orBits(this.channelFlags[var4Lifetime4], 2);
           }
         }
         if (99 == var5Lifetime4) {
-          this.parameterSelection[var4Lifetime4] = (var6Lifetime3 << 7) + dla.andBits(127, this.parameterSelection[var4Lifetime4]);
+          this.parameterSelection[var4Lifetime4] = (var6Lifetime3 << 7) + MenuBackgroundBattle.andBits(127, this.parameterSelection[var4Lifetime4]);
         }
         if (var5Lifetime4 == 98) {
-          this.parameterSelection[var4Lifetime4] = var6Lifetime3 + dla.andBits(this.parameterSelection[var4Lifetime4], 16256);
+          this.parameterSelection[var4Lifetime4] = var6Lifetime3 + MenuBackgroundBattle.andBits(this.parameterSelection[var4Lifetime4], 16256);
         }
         if (var5Lifetime4 == 101) {
-          this.parameterSelection[var4Lifetime4] = (var6Lifetime3 << 7) + 16384 + dla.andBits(this.parameterSelection[var4Lifetime4], 127);
+          this.parameterSelection[var4Lifetime4] = (var6Lifetime3 << 7) + 16384 + MenuBackgroundBattle.andBits(this.parameterSelection[var4Lifetime4], 127);
         }
         if (100 == var5Lifetime4) {
-          this.parameterSelection[var4Lifetime4] = var6Lifetime3 + dla.andBits(this.parameterSelection[var4Lifetime4], 16256) + 16384;
+          this.parameterSelection[var4Lifetime4] = var6Lifetime3 + MenuBackgroundBattle.andBits(this.parameterSelection[var4Lifetime4], 16256) + 16384;
         }
         if (var5Lifetime4 == 120) {
           this.allSoundOff(144, var4Lifetime4);
@@ -937,27 +937,27 @@ class MidiPcmStream extends PcmStream {
         if (var5Lifetime4 == 6) {
           var7 = this.parameterSelection[var4Lifetime4];
           if (var7 == 16384) {
-            this.pitchBendSensitivity[var4Lifetime4] = (var6Lifetime3 << 7) + dla.andBits(-16257, this.pitchBendSensitivity[var4Lifetime4]);
+            this.pitchBendSensitivity[var4Lifetime4] = (var6Lifetime3 << 7) + MenuBackgroundBattle.andBits(-16257, this.pitchBendSensitivity[var4Lifetime4]);
           }
         }
         if (var5Lifetime4 == 38) {
           var7Lifetime1 = this.parameterSelection[var4Lifetime4];
           if (var7Lifetime1 == 16384) {
-            this.pitchBendSensitivity[var4Lifetime4] = var6Lifetime3 + dla.andBits(-128, this.pitchBendSensitivity[var4Lifetime4]);
+            this.pitchBendSensitivity[var4Lifetime4] = var6Lifetime3 + MenuBackgroundBattle.andBits(-128, this.pitchBendSensitivity[var4Lifetime4]);
           }
         }
         if (var5Lifetime4 == 16) {
-          this.sampleOffsets[var4Lifetime4] = (var6Lifetime3 << 7) + dla.andBits(-16257, this.sampleOffsets[var4Lifetime4]);
+          this.sampleOffsets[var4Lifetime4] = (var6Lifetime3 << 7) + MenuBackgroundBattle.andBits(-16257, this.sampleOffsets[var4Lifetime4]);
         }
         if (var5Lifetime4 == 48) {
-          this.sampleOffsets[var4Lifetime4] = dla.andBits(this.sampleOffsets[var4Lifetime4], -128) + var6Lifetime3;
+          this.sampleOffsets[var4Lifetime4] = MenuBackgroundBattle.andBits(this.sampleOffsets[var4Lifetime4], -128) + var6Lifetime3;
         }
         if (var5Lifetime4 == 81) {
           if (var6Lifetime3 >= 64) {
             this.channelFlags[var4Lifetime4] = SetAngularForceDownshift.orBits(this.channelFlags[var4Lifetime4], 4);
           } else {
             this.resetRetriggerPhase(var4Lifetime4, false);
-            this.channelFlags[var4Lifetime4] = dla.andBits(this.channelFlags[var4Lifetime4], -5);
+            this.channelFlags[var4Lifetime4] = MenuBackgroundBattle.andBits(this.channelFlags[var4Lifetime4], -5);
           }
         }
         if (var5Lifetime4 == 17) {
@@ -1214,7 +1214,7 @@ class MidiPcmStream extends PcmStream {
 
     private final void initializeChannelProgram(int param0, int param1, int param2) {
         this.defaultPrograms[param0] = param1;
-        this.banks[param0] = dla.andBits(-128, param1);
+        this.banks[param0] = MenuBackgroundBattle.andBits(-128, param1);
         this.setProgram(param0, -81, param1);
         if (param2 <= 0) {
           this.getMasterVolume(26);

@@ -2661,7 +2661,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("fs_accept_countdown_sing", 23100);
                 if (null != var2) {
-                  wma.field_M = Cp1252Strings.decode((byte) -125, var2);
+                  LogoMesh.field_M = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("fs_accept_countdown_pl", 23100);
                 if (null != var2) {

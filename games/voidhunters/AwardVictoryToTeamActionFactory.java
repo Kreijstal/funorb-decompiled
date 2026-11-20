@@ -212,7 +212,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.specialOrderLabels[41] = EnvironmentReflectionGpuMaterialEffect.field_e;
           GetGrapplingHookSpringConstant.specialOrderLabels[0] = qh.field_L;
           GetGrapplingHookSpringConstant.specialOrderLabels[46] = SetLaserEnergyUsed.field_o;
-          GetGrapplingHookSpringConstant.specialOrderLabels[22] = bi.field_g;
+          GetGrapplingHookSpringConstant.specialOrderLabels[22] = UrlJaggrabRequest.field_g;
           GetGrapplingHookSpringConstant.specialOrderLabels[39] = FlipTextureOperation.field_m;
           GetGrapplingHookSpringConstant.specialOrderLabels[4] = Widget.field_kb;
           GetGrapplingHookSpringConstant.specialOrderLabels[47] = ScrollBarWidget.field_Db;

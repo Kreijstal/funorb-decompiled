@@ -122,7 +122,7 @@ final class MissionBuilder implements DiffableState {
         int var12Lifetime1;
         var16 = VoidHunters.field_G;
         try {
-          var17 = new int[]{LegacyOpenGlUnlitEffect.field_c, GetDebrisFoundInPairs.field_o, apb.field_a, SetUseLines.field_p};
+          var17 = new int[]{LegacyOpenGlUnlitEffect.field_c, GetDebrisFoundInPairs.field_o, LogoMaterial.field_a, SetUseLines.field_p};
           var5 = var17;
           var6 = GetToggledScoreboard.field_r;
           if (this.optionTotals[18] > 0) {

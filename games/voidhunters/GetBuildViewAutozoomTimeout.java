@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetBuildViewAutozoomTimeout extends ConsoleCommand {
-    final static wma a(IsaacPacketBuffer param0, byte param1) {
+    final static LogoMesh decodeLogoMesh(IsaacPacketBuffer param0, byte param1) {
         int var8 = 0;
-        wma stackIn_25_0 = null;
+        LogoMesh stackIn_25_0 = null;
         RuntimeException stackIn_28_0 = null;
         StringBuilder stackIn_28_1 = null;
         String stackIn_29_2 = null;
@@ -13,7 +13,7 @@ final class GetBuildViewAutozoomTimeout extends ConsoleCommand {
         RuntimeException var2 = null;
         int var3 = 0;
         int var4 = 0;
-        wma var5 = null;
+        LogoMesh var5 = null;
         int var6 = 0;
         int var7 = 0;
         int var9 = 0;
@@ -25,16 +25,16 @@ final class GetBuildViewAutozoomTimeout extends ConsoleCommand {
           }
           var3 = LegacyOpenGlSpecularEffect.readBoolean(false, param0) ? 1 : 0;
           var4 = LegacyOpenGlSpecularEffect.readBoolean(false, param0) ? 1 : 0;
-          var5 = new wma();
-          var5.field_J = (short)param0.readBits(0, 16);
-          var5.field_r = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_r);
-          var5.field_o = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_o);
-          var5.field_p = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_p);
+          var5 = new LogoMesh();
+          var5.vertexCount = (short)param0.readBits(0, 16);
+          var5.vertexX = MissionVariable.readPackedShortArray(param0, 16, 24, var5.vertexX);
+          var5.vertexY = MissionVariable.readPackedShortArray(param0, 16, 24, var5.vertexY);
+          var5.vertexZ = MissionVariable.readPackedShortArray(param0, 16, 24, var5.vertexZ);
           var6 = -116 / ((-14 - param1) / 61);
-          var5.field_y = (short)param0.readBits(0, 16);
-          var5.field_w = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_w);
-          var5.field_N = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_N);
-          var5.field_D = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_D);
+          var5.faceCount = (short)param0.readBits(0, 16);
+          var5.faceVertexA = MissionVariable.readPackedShortArray(param0, 16, 24, var5.faceVertexA);
+          var5.faceVertexB = MissionVariable.readPackedShortArray(param0, 16, 24, var5.faceVertexB);
+          var5.faceVertexC = MissionVariable.readPackedShortArray(param0, 16, 24, var5.faceVertexC);
           if (var3 != 0) {
             var5.field_L = (short)param0.readBits(0, 16);
             var5.field_k = MissionVariable.readPackedShortArray(param0, 16, 24, var5.field_k);

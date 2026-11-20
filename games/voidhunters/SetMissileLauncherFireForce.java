@@ -3,7 +3,7 @@
  */
 final class SetMissileLauncherFireForce extends ConsoleCommand {
     static String field_p;
-    static wma[] field_o;
+    static LogoMesh[] logoMeshes;
     static int field_q;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -35,7 +35,7 @@ final class SetMissileLauncherFireForce extends ConsoleCommand {
     }
 
     public static void clearSharedReferences(int param0) {
-        field_o = null;
+        logoMeshes = null;
         if (param0 != -17297) {
           field_q = 47;
           field_p = null;

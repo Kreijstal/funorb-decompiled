@@ -542,7 +542,7 @@ final class GameMenuScreen {
                             if (var10_int != 14) {
                               if (4 == var10_int) {
                                 if (this.inputState.isActivationRequested((byte) -87)) {
-                                  apb.a((byte) 125);
+                                  LogoMaterial.openDisplayModeDialog((byte) 125);
                                 }
                               } else {
                                 if (19 == var10_int) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetPhasedEnergyBeamReload extends ConsoleCommand {
-    static bi field_p;
+    static UrlJaggrabRequest field_p;
     static int field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

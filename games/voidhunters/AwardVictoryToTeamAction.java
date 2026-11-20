@@ -165,7 +165,7 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
     }
 
     final static void a(int param0, boolean param1) {
-        apb.a((byte) 116);
+        LogoMaterial.openDisplayModeDialog((byte) 116);
         if (param0 != -356) {
           PacketBuffer var3 = (PacketBuffer) null;
           AwardVictoryToTeamAction.decodeTextureRectangleShape(-32, (PacketBuffer) null);

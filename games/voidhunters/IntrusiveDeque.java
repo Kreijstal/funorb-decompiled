@@ -227,11 +227,11 @@ final class IntrusiveDeque {
             if (var9 != -1) {
               incrementValue$1 = param2;
               param2++;
-              param0[incrementValue$1] = (byte)SetAngularForceDownshift.orBits(dla.andBits(15, var8) << 4, var9 >>> 2);
+              param0[incrementValue$1] = (byte)SetAngularForceDownshift.orBits(MenuBackgroundBattle.andBits(15, var8) << 4, var9 >>> 2);
               if (-1 != var10) {
                 incrementValue$2 = param2;
                 param2++;
-                param0[incrementValue$2] = (byte)SetAngularForceDownshift.orBits(var10, dla.andBits(var9, 3) << 6);
+                param0[incrementValue$2] = (byte)SetAngularForceDownshift.orBits(var10, MenuBackgroundBattle.andBits(var9, 3) << 6);
                 continue;
               }
             }

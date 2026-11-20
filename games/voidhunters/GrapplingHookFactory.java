@@ -23,7 +23,7 @@ final class GrapplingHookFactory implements GameStateFactory {
           if (param0 <= 13) {
             field_a = (BitmapFont) null;
           }
-          if (dla.stringTokenType != var5.type &&
+          if (MenuBackgroundBattle.stringTokenType != var5.type &&
             SetMissionTerrainSpaceProbability.charTokenType != var5.type &&
             var5.type != ArchiveIndexLoader.numberTokenType &&
             io.booleanTokenType != var5.type) {

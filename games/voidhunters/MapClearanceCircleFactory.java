@@ -38,17 +38,17 @@ final class MapClearanceCircleFactory implements GameStateFactory {
         var2.writeLengthByte(-var3Lifetime1 + var2.position, -129);
     }
 
-    final static apb[] a(IsaacPacketBuffer param0, byte param1) {
+    final static LogoMaterial[] decodeLogoMaterials(IsaacPacketBuffer param0, byte param1) {
         int var5 = 0;
         int var2_int = 0;
         int var3 = 0;
-        apb[] var4 = null;
-        apb var6_ref_apb = null;
+        LogoMaterial[] var4 = null;
+        LogoMaterial var6_ref_apb = null;
         int var6 = 0;
         int var7 = 0;
         Object stackIn_3_0 = null;
-        apb[] stackIn_6_0 = null;
-        apb[] stackIn_15_0 = null;
+        LogoMaterial[] stackIn_6_0 = null;
+        LogoMaterial[] stackIn_15_0 = null;
         RuntimeException stackIn_18_0 = null;
         StringBuilder stackIn_18_1 = null;
         String stackIn_19_2 = null;
@@ -59,23 +59,23 @@ final class MapClearanceCircleFactory implements GameStateFactory {
           var2_int = param0.readBits(0, 8);
           if (var2_int > 0) {
             stackIn_3_0 = null;
-            return (apb[]) (stackIn_3_0);
+            return (LogoMaterial[]) (stackIn_3_0);
           }
           if (param1 > -31) {
-            stackIn_6_0 = (apb[]) null;
+            stackIn_6_0 = (LogoMaterial[]) null;
             return stackIn_6_0;
           }
           var3 = param0.readBits(0, 12);
-          var4 = new apb[var3];
+          var4 = new LogoMaterial[var3];
           for (var5 = 0; var3 > var5; var5++) {
             if (!LegacyOpenGlSpecularEffect.readBoolean(false, param0)) {
               var6 = param0.readBits(0, BodyInZoneCondition.a(-97, var5 - 1));
               var4[var5] = var4[var6];
             } else {
-              var6_ref_apb = new apb();
+              var6_ref_apb = new LogoMaterial();
               param0.readBits(0, 24);
               param0.readBits(0, 24);
-              var6_ref_apb.field_c = param0.readBits(0, 24);
+              var6_ref_apb.color = param0.readBits(0, 24);
               param0.readBits(0, 9);
               param0.readBits(0, 12);
               param0.readBits(0, 12);

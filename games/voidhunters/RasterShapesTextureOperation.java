@@ -60,9 +60,9 @@ final class RasterShapesTextureOperation extends TextureOperation {
             var13 = var31[2];
             for (var14 = 0; var14 < TextHotspotRegion.textureWidth; var14++) {
               var15 = var32[var14];
-              var13[var14] = dla.andBits(255, var15) << 4;
-              var12[var14] = dla.andBits(var15, 65280) >> 4;
-              var11[var14] = dla.andBits(16711680, var15) >> 12;
+              var13[var14] = MenuBackgroundBattle.andBits(255, var15) << 4;
+              var12[var14] = MenuBackgroundBattle.andBits(var15, 65280) >> 4;
+              var11[var14] = MenuBackgroundBattle.andBits(16711680, var15) >> 12;
             }
           }
         }

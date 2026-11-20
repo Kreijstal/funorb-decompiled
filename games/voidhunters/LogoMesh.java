@@ -1,45 +1,45 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wma {
-    private boolean field_F;
-    int field_u;
+final class LogoMesh {
+    private boolean boundsValid;
+    int minY;
     short[] field_K;
     int[] field_l;
     short[] field_i;
-    short field_y;
+    short faceCount;
     int[] field_g;
-    short[] field_w;
+    short[] faceVertexA;
     short field_L;
     short[] field_I;
     short[] field_n;
     int[] field_C;
-    int field_s;
-    int field_q;
+    int minZ;
+    int maxZ;
     int[] field_e;
     short[] field_m;
     int[] field_H;
-    short[] field_p;
+    short[] vertexZ;
     int[] field_t;
     short[] field_b;
-    short[] field_D;
+    short[] faceVertexC;
     short[] field_v;
     int[] field_x;
     int[] field_h;
-    short[] field_o;
+    short[] vertexY;
     static String field_M;
-    short[] field_N;
-    int field_B;
+    short[] faceVertexB;
+    int maxX;
     byte[] field_E;
     byte field_z;
     short[] field_c;
-    short field_J;
-    short[] field_r;
+    short vertexCount;
+    short[] vertexX;
     int[] field_A;
     short[] field_f;
-    int field_a;
+    int maxY;
     short[] field_k;
-    int field_d;
+    int minX;
     short[] field_j;
     short[] field_G;
 
@@ -50,7 +50,7 @@ final class wma {
         field_M = null;
     }
 
-    final void a(int param0) {
+    final void calculateBounds(int param0) {
         int var8 = 0;
         int var2;
         int var3;
@@ -63,22 +63,22 @@ final class wma {
         int var11;
         int var12;
         var12 = VoidHunters.field_G;
-        if (this.field_F) {
+        if (this.boundsValid) {
           return;
         }
-        this.field_F = true;
+        this.boundsValid = true;
         var2 = 32767;
         var3 = 32767;
         var4 = 32767;
         var5 = -32768;
         if (param0 <= 75) {
-          this.field_p = (short[]) null;
+          this.vertexZ = (short[]) null;
         }
         var6 = -32768;
         var7 = -32768;
-        for (var8 = 0; this.field_J > var8; var8++) {
-          var9 = this.field_r[var8];
-          var10 = this.field_o[var8];
+        for (var8 = 0; this.vertexCount > var8; var8++) {
+          var9 = this.vertexX[var8];
+          var10 = this.vertexY[var8];
           if (var10 > var6) {
             var6 = var10;
           }
@@ -88,7 +88,7 @@ final class wma {
           if (var3 > var10) {
             var3 = var10;
           }
-          var11 = this.field_p[var8];
+          var11 = this.vertexZ[var8];
           if (var2 > var9) {
             var2 = var9;
           }
@@ -99,50 +99,50 @@ final class wma {
             var4 = var11;
           }
         }
-        this.field_B = var5;
-        this.field_q = var7;
-        this.field_u = var3;
-        this.field_s = var4;
-        this.field_a = var6;
-        this.field_d = var2;
+        this.maxX = var5;
+        this.maxZ = var7;
+        this.minY = var3;
+        this.minZ = var4;
+        this.maxY = var6;
+        this.minX = var2;
     }
 
-    final void a(int param0, int param1, int param2, int param3, int param4) {
+    final void scale(int param0, int param1, int param2, int param3, int param4) {
         int var7 = VoidHunters.field_G;
         int var6 = 0;
         if (param0 != -21227) {
           return;
         }
-        while (var6 < this.field_J) {
-          this.field_r[var6] = (short)(param3 * this.field_r[var6] / param4);
-          this.field_o[var6] = (short)(this.field_o[var6] * param2 / param4);
-          this.field_p[var6] = (short)(this.field_p[var6] * param1 / param4);
+        while (var6 < this.vertexCount) {
+          this.vertexX[var6] = (short)(param3 * this.vertexX[var6] / param4);
+          this.vertexY[var6] = (short)(this.vertexY[var6] * param2 / param4);
+          this.vertexZ[var6] = (short)(this.vertexZ[var6] * param1 / param4);
           var6++;
         }
-        this.a((byte) -61);
+        this.invalidateBounds((byte) -61);
     }
 
-    private final void a(byte param0) {
-        this.field_F = false;
+    private final void invalidateBounds(byte param0) {
+        this.boundsValid = false;
         if (param0 > -21) {
-          this.field_B = -74;
+          this.maxX = -74;
         }
     }
 
-    final void a(int param0, int param1, int param2, int param3) {
+    final void translate(int param0, int param1, int param2, int param3) {
         int var6 = 0;
         int var7 = VoidHunters.field_G;
         int var5 = -12 / ((param0 - 49) / 52);
-        for (var6 = 0; this.field_J > var6; var6++) {
-          this.field_r[var6] = (short)(this.field_r[var6] + param2);
-          this.field_o[var6] = (short)(this.field_o[var6] + param3);
-          this.field_p[var6] = (short)(this.field_p[var6] + param1);
+        for (var6 = 0; this.vertexCount > var6; var6++) {
+          this.vertexX[var6] = (short)(this.vertexX[var6] + param2);
+          this.vertexY[var6] = (short)(this.vertexY[var6] + param3);
+          this.vertexZ[var6] = (short)(this.vertexZ[var6] + param1);
         }
-        this.a((byte) -103);
+        this.invalidateBounds((byte) -103);
     }
 
-    wma() {
-        this.field_F = false;
+    LogoMesh() {
+        this.boundsValid = false;
         this.field_z = (byte) 0;
     }
 

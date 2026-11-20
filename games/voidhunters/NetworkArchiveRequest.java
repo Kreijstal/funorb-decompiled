@@ -38,7 +38,7 @@ final class NetworkArchiveRequest extends ArchiveRequest {
     final static void loadLogoMeshes(ResourceArchive param0, byte param1) {
         int var3 = 0;
         int var4 = 0;
-        wma var5 = null;
+        LogoMesh var5 = null;
         int[] var6 = null;
         int var7 = 0;
         IsaacPacketBuffer var8 = null;
@@ -56,11 +56,11 @@ final class NetworkArchiveRequest extends ArchiveRequest {
           var10 = var8;
           var3 = var10.readUnsignedByte((byte) -87);
           var10.beginBitRead(-23497);
-          SettingsChangeFactory.field_a = MapClearanceCircleFactory.a(var10, (byte) -122);
-          SetMachineGunFireForce.field_p = new int[var3][];
-          SetMissileLauncherFireForce.field_o = new wma[var3];
+          SettingsChangeFactory.logoMaterials = MapClearanceCircleFactory.decodeLogoMaterials(var10, (byte) -122);
+          SetMachineGunFireForce.logoMeshCenters = new int[var3][];
+          SetMissileLauncherFireForce.logoMeshes = new LogoMesh[var3];
           for (var4 = 0; var3 > var4; var4++) {
-            SetMissileLauncherFireForce.field_o[var4] = GetBuildViewAutozoomTimeout.a(var8, (byte) -105);
+            SetMissileLauncherFireForce.logoMeshes[var4] = GetBuildViewAutozoomTimeout.decodeLogoMesh(var8, (byte) -105);
           }
           var10.endBitRead((byte) -79);
           var9 = 0;
@@ -69,12 +69,12 @@ final class NetworkArchiveRequest extends ArchiveRequest {
             return;
           }
           while (var9 < var3) {
-            var5 = SetMissileLauncherFireForce.field_o[var9];
-            var5.a(-21227, 6, 6, 6, 1);
-            var5.a(param1 + 83);
-            var6 = new int[]{var5.field_B + var5.field_d >> 1, var5.field_a + var5.field_u >> 1, var5.field_s + var5.field_q >> 1};
-            SetMachineGunFireForce.field_p[var9] = var6;
-            var5.a(param1 - 45, -var6[2], -var6[0], -var6[1]);
+            var5 = SetMissileLauncherFireForce.logoMeshes[var9];
+            var5.scale(-21227, 6, 6, 6, 1);
+            var5.calculateBounds(param1 + 83);
+            var6 = new int[]{var5.maxX + var5.minX >> 1, var5.maxY + var5.minY >> 1, var5.minZ + var5.maxZ >> 1};
+            SetMachineGunFireForce.logoMeshCenters[var9] = var6;
+            var5.translate(param1 - 45, -var6[2], -var6[0], -var6[1]);
             var9++;
           }
           return;

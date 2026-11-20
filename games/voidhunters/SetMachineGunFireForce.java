@@ -3,7 +3,7 @@
  */
 final class SetMachineGunFireForce extends ConsoleCommand {
     static String field_q;
-    static int[][] field_p;
+    static int[][] logoMeshCenters;
     static String field_o;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -74,7 +74,7 @@ final class SetMachineGunFireForce extends ConsoleCommand {
           if (param0 == -99) {
             return;
           }
-          field_p = (int[][]) null;
+          logoMeshCenters = (int[][]) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -96,7 +96,7 @@ final class SetMachineGunFireForce extends ConsoleCommand {
           return;
         }
         field_q = null;
-        field_p = (int[][]) null;
+        logoMeshCenters = (int[][]) null;
     }
 
     static {

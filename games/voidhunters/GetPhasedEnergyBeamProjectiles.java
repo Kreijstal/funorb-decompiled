@@ -175,7 +175,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           Particle.field_p = param1[219];
           OpenGlGlyphMask.field_e = param1[128];
           ooa.field_xb = param1[151];
-          apb.field_a = param1[65];
+          LogoMaterial.field_a = param1[65];
           GetVelocitySustain.field_o = param1[38];
           SetGrapplingHookMaxLength.field_p = param1[186];
           OpenGlGpuTexture.field_g = param1[56];
@@ -259,7 +259,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           AsteroidFactory.field_a = param1[61];
           SetLaserAimarc.field_o = param1[160];
           SetPointDefenceLaserReload.field_q = param1[132];
-          dla.field_c = param1[139];
+          MenuBackgroundBattle.field_c = param1[139];
           ArmSelfDestructOrderDefinition.field_e = param1[122];
           GetUseNiceTrails.field_p = param1[47];
           GetMissileLauncherEnergyUsed.field_p = param1[52];

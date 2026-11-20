@@ -360,7 +360,7 @@ final class MusicPatch extends IntrusiveNode {
               }
               var22 = var38.readVarInt(11436);
             }
-            this.pitchOffsets[var23] = (short)(this.pitchOffsets[var23] + dla.andBits(-1 + var22 << 14, 32768));
+            this.pitchOffsets[var23] = (short)(this.pitchOffsets[var23] + MenuBackgroundBattle.andBits(-1 + var22 << 14, 32768));
             var20Lifetime2--;
             this.sampleIds[var23] = var22;
           }

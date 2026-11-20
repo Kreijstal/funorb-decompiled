@@ -73,7 +73,7 @@ final class SetLag extends ConsoleCommand {
               var5 = var11.length << 2;
             }
             for (var7 = 0; var5 > var7; var7++) {
-              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) -92) << (dla.andBits(3, var7) << 8));
+              var6[var7 >> 2] = var6[var7 >> 2] + (var9.readUnsignedByte((byte) -92) << (MenuBackgroundBattle.andBits(3, var7) << 8));
             }
             var4.unlink(-3846);
           } else {

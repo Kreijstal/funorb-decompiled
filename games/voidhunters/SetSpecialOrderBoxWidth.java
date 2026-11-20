@@ -176,7 +176,7 @@ final class SetSpecialOrderBoxWidth extends ConsoleCommand {
                     var17 = (float)param0.field_F[var15Lifetime2] / 1024.0f;
                   }
                 }
-                ((Object[]) (var7))[var15Lifetime2] = SetDebrisGroupColour.a(var19, 0, (int) param0.field_t[var15Lifetime2], dla.andBits((int) param0.field_J[var15Lifetime2], 255), var18, (int) param0.field_i[var15Lifetime2], (int) param0.field_H[var15Lifetime2], var17);
+                ((Object[]) (var7))[var15Lifetime2] = SetDebrisGroupColour.a(var19, 0, (int) param0.field_t[var15Lifetime2], MenuBackgroundBattle.andBits((int) param0.field_J[var15Lifetime2], 255), var18, (int) param0.field_i[var15Lifetime2], (int) param0.field_H[var15Lifetime2], var17);
               }
             }
           }

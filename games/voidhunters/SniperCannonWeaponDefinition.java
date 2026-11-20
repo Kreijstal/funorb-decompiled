@@ -3,7 +3,7 @@
  */
 final class SniperCannonWeaponDefinition extends WeaponDefinition {
     static String field_c;
-    static dla field_b;
+    static MenuBackgroundBattle menuBackgroundBattle;
 
     final int getProjectileType(int param0) {
         if (param0 != 0) {
@@ -14,7 +14,7 @@ final class SniperCannonWeaponDefinition extends WeaponDefinition {
 
     public static void clearSharedReferences(int param0) {
         field_c = null;
-        field_b = null;
+        menuBackgroundBattle = null;
         if (param0 > -27) {
           SniperCannonWeaponDefinition.clearSharedReferences(-69);
         }
@@ -56,7 +56,7 @@ final class SniperCannonWeaponDefinition extends WeaponDefinition {
 
     final int getAimSpeed(int param0) {
         if (param0 != 0) {
-          field_b = (dla) null;
+          menuBackgroundBattle = (MenuBackgroundBattle) null;
           return ArmSelfDestructOrderDefinition.field_e;
         }
         return ArmSelfDestructOrderDefinition.field_e;

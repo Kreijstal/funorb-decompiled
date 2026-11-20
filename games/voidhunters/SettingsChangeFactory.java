@@ -5,7 +5,7 @@ final class SettingsChangeFactory implements GameStateFactory {
     static ContentTransitionPhase field_e;
     static String field_d;
     static Widget field_b;
-    static apb[] field_a;
+    static LogoMaterial[] logoMaterials;
     static int field_c;
 
     public static void clearSharedReferences(byte param0) {
@@ -13,14 +13,14 @@ final class SettingsChangeFactory implements GameStateFactory {
           field_d = null;
           field_e = null;
           field_b = null;
-          field_a = null;
+          logoMaterials = null;
           return;
         }
         SettingsChangeFactory.clearSharedReferences((byte) -38);
         field_d = null;
         field_e = null;
         field_b = null;
-        field_a = null;
+        logoMaterials = null;
     }
 
     public final SerializableGameState create(byte param0) {

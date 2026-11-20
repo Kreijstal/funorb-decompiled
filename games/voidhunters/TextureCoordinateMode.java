@@ -25,7 +25,7 @@ final class TextureCoordinateMode {
           var4 = sh.field_a[var2];
           var5 = new int[var3];
           for (var6 = 0; var6 < var3; var6++) {
-            var5[var6] = LegacyOpenGlTextureCache.field_d[dla.andBits(255, (int) var4[var6])];
+            var5[var6] = LegacyOpenGlTextureCache.field_d[MenuBackgroundBattle.andBits(255, (int) var4[var6])];
           }
           var1[var2] = new Sprite(LegacyOpenGlMaterialEffectManager.field_i, Ship.field_H, LegacyOpenGlScrollingNoiseEffect.field_e[var2], SettingsChange.field_f[var2], SetMissionTerrainDebrisProbability.field_o[var2], hla.field_a[var2], var5);
         }

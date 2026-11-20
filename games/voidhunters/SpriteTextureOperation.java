@@ -176,18 +176,18 @@ class SpriteTextureOperation extends TextureOperation {
             for (var8 = 0; TextHotspotRegion.textureWidth > var8; var8++) {
               var9 = this.sourceWidth * var8 / TextHotspotRegion.textureWidth;
               var10 = this.sourcePixels[var9 + var7];
-              var6[var8] = dla.andBits(var10, 255) << 4;
-              var5[var8] = dla.andBits(4080, var10 >> 4);
-              var4[var8] = dla.andBits(var10 >> 12, 4080);
+              var6[var8] = MenuBackgroundBattle.andBits(var10, 255) << 4;
+              var5[var8] = MenuBackgroundBattle.andBits(4080, var10 >> 4);
+              var4[var8] = MenuBackgroundBattle.andBits(var10 >> 12, 4080);
             }
           } else {
             for (var8 = 0; TextHotspotRegion.textureWidth > var8; var8++) {
               incrementValue$2 = var7;
               var7++;
               var9 = this.sourcePixels[incrementValue$2];
-              var6[var8] = dla.andBits(255, var9) << 4;
-              var5[var8] = dla.andBits(4080, var9 >> 4);
-              var4[var8] = dla.andBits(4080, var9 >> 12);
+              var6[var8] = MenuBackgroundBattle.andBits(255, var9) << 4;
+              var5[var8] = MenuBackgroundBattle.andBits(4080, var9 >> 4);
+              var4[var8] = MenuBackgroundBattle.andBits(4080, var9 >> 12);
             }
           }
           return var3;
@@ -216,18 +216,18 @@ class SpriteTextureOperation extends TextureOperation {
           for (var8Lifetime1 = 0; TextHotspotRegion.textureWidth > var8Lifetime1; var8Lifetime1++) {
             var9Lifetime1 = this.sourceWidth * var8Lifetime1 / TextHotspotRegion.textureWidth;
             var10Lifetime1 = this.sourcePixels[var9Lifetime1 + var7Lifetime1];
-            var6Lifetime1[var8Lifetime1] = dla.andBits(var10Lifetime1, 255) << 4;
-            var5Lifetime1[var8Lifetime1] = dla.andBits(4080, var10Lifetime1 >> 4);
-            var4Lifetime1[var8Lifetime1] = dla.andBits(var10Lifetime1 >> 12, 4080);
+            var6Lifetime1[var8Lifetime1] = MenuBackgroundBattle.andBits(var10Lifetime1, 255) << 4;
+            var5Lifetime1[var8Lifetime1] = MenuBackgroundBattle.andBits(4080, var10Lifetime1 >> 4);
+            var4Lifetime1[var8Lifetime1] = MenuBackgroundBattle.andBits(var10Lifetime1 >> 12, 4080);
           }
         } else {
           for (var8Lifetime1 = 0; TextHotspotRegion.textureWidth > var8Lifetime1; var8Lifetime1++) {
             incrementValue$1 = var7Lifetime1;
             var7Lifetime1++;
             var9Lifetime1 = this.sourcePixels[incrementValue$1];
-            var6Lifetime1[var8Lifetime1] = dla.andBits(255, var9Lifetime1) << 4;
-            var5Lifetime1[var8Lifetime1] = dla.andBits(4080, var9Lifetime1 >> 4);
-            var4Lifetime1[var8Lifetime1] = dla.andBits(4080, var9Lifetime1 >> 12);
+            var6Lifetime1[var8Lifetime1] = MenuBackgroundBattle.andBits(255, var9Lifetime1) << 4;
+            var5Lifetime1[var8Lifetime1] = MenuBackgroundBattle.andBits(4080, var9Lifetime1 >> 4);
+            var4Lifetime1[var8Lifetime1] = MenuBackgroundBattle.andBits(4080, var9Lifetime1 >> 12);
           }
         }
         return var3Lifetime1;

@@ -45,7 +45,7 @@ final class mr extends ResizableModalPanel implements UiActionListener {
         }
         int var2 = 80 / ((-61 - param0) / 55);
         if (0 == var1.length()) {
-          var1 = dla.c(120);
+          var1 = MenuBackgroundBattle.getLocalPlayerName(120);
         }
         if (0 == var1.length()) {
           var1 = SetMachineGunReload.field_o;

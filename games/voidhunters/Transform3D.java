@@ -14,7 +14,7 @@ abstract class Transform3D {
         int var1_int = 0;
         int[] var2 = null;
         int var3 = 0;
-        wma var4_ref_wma = null;
+        LogoMesh var4_ref_wma = null;
         int var4 = 0;
         int var5 = 0;
         int var6 = 0;
@@ -28,14 +28,14 @@ abstract class Transform3D {
         int var13 = 0;
         int var14 = 0;
         int var16 = 0;
-        wma var17 = null;
+        LogoMesh var17 = null;
         int var19 = 0;
         int[] var20 = null;
         int[] var21 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
-        wma var17Lifetime1;
-        wma var17Lifetime2;
+        LogoMesh var17Lifetime1;
+        LogoMesh var17Lifetime2;
         int var3Lifetime1;
         int var5Lifetime1;
         int var6Lifetime1;
@@ -48,19 +48,19 @@ abstract class Transform3D {
         var19 = VoidHunters.field_G;
         try {
           SetBloomThresholdPercentage.field_p = new int[]{0, 0, -8144, 65536, 0, 0, 0, -65536, 0, 0, 0, 65536};
-          var1_int = SetMissileLauncherFireForce.field_o.length;
+          var1_int = SetMissileLauncherFireForce.logoMeshes.length;
           var21 = new int[var1_int];
           var20 = var21;
           var2 = var20;
           for (var3 = 0; var3 < var1_int; var3++) {
-            var4_ref_wma = SetMissileLauncherFireForce.field_o[var3];
+            var4_ref_wma = SetMissileLauncherFireForce.logoMeshes[var3];
             var17 = var4_ref_wma;
             var17Lifetime2 = var4_ref_wma;
-            var4_ref_wma.a(84);
+            var4_ref_wma.calculateBounds(84);
             GpuIndexBufferOwner.updateLogoPieceTransform(-37, var3);
-            var5 = var4_ref_wma.field_B + var4_ref_wma.field_d >> 1;
-            var6 = var4_ref_wma.field_u + var4_ref_wma.field_a >> 1;
-            var7 = var4_ref_wma.field_s + var4_ref_wma.field_q >> 1;
+            var5 = var4_ref_wma.maxX + var4_ref_wma.minX >> 1;
+            var6 = var4_ref_wma.minY + var4_ref_wma.maxY >> 1;
+            var7 = var4_ref_wma.minZ + var4_ref_wma.maxZ >> 1;
             var8 = SetBloomThresholdPercentage.field_p[9] >> 2;
             var9 = SetBloomThresholdPercentage.field_p[10] >> 2;
             var10_int = SetBloomThresholdPercentage.field_p[11] >> 2;
@@ -96,18 +96,18 @@ abstract class Transform3D {
           var12Lifetime1 = (int)((double)var12Lifetime1 * var10Lifetime1);
           var14 = (int)((double)var14 * var10Lifetime1);
           var13Lifetime1 = (int)((double)var13Lifetime1 * var10Lifetime1);
-          for (var15 = 0; var15 < SetMissileLauncherFireForce.field_o.length; var15++) {
+          for (var15 = 0; var15 < SetMissileLauncherFireForce.logoMeshes.length; var15++) {
             var16 = 0;
-            for (var17_int = 1; var17_int < SetMissileLauncherFireForce.field_o.length; var17_int++) {
+            for (var17_int = 1; var17_int < SetMissileLauncherFireForce.logoMeshes.length; var17_int++) {
               if (var21[var17_int] > var21[var16]) {
                 var16 = var17_int;
               }
             }
             var21[var16] = -2147483648;
-            var17Lifetime1 = SetMissileLauncherFireForce.field_o[var16];
+            var17Lifetime1 = SetMissileLauncherFireForce.logoMeshes[var16];
             GpuIndexBufferOwner.updateLogoPieceTransform(param0 ^ -34, var16);
             for (var18 = 0; var18 < 3; var18++) {
-              GetMissileLauncherAimspeed.field_p[var18] = GetMissileLauncherAimspeed.field_p[var18] + SetMachineGunFireForce.field_p[var15][var18];
+              GetMissileLauncherAimspeed.field_p[var18] = GetMissileLauncherAimspeed.field_p[var18] + SetMachineGunFireForce.logoMeshCenters[var15][var18];
             }
             SetCountermeasuresPulseRadius.a(var17Lifetime1, GetMissileLauncherAimspeed.field_p, false, true, false, SetBloomThresholdPercentage.field_p, false);
             RidgedNoiseVolumeGenerator.drawLitMesh(var17Lifetime1, var13Lifetime1, var12Lifetime1, -119, var14, var8Lifetime1, var9Lifetime1, var7Lifetime1);

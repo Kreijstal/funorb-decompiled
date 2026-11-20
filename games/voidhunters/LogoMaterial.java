@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class apb {
+final class LogoMaterial {
     static int field_b;
     static int field_a;
-    int field_c;
+    int color;
 
-    final static void a(byte param0) {
-        SetVariableLabelAction.b(32);
+    final static void openDisplayModeDialog(byte param0) {
+        SetVariableLabelAction.openDisplayModeDialog(32);
         int var1 = -97 % ((62 - param0) / 54);
     }
 

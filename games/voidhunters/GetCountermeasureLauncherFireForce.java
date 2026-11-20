@@ -44,7 +44,7 @@ final class GetCountermeasureLauncherFireForce extends ConsoleCommand {
             field_o = 71;
           }
           var1 = RequestNewestBlackboxRecording.field_p;
-          while (apb.isReflectionCheckReady(57)) {
+          while (LogoMaterial.isReflectionCheckReady(57)) {
             var1.writeIsaacByte(param0 + 24327, 8);
             fieldTemp$0 = var1.position + 1;
             var1.position = var1.position + 1;

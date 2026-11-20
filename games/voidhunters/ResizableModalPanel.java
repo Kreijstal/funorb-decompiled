@@ -226,9 +226,9 @@ abstract class ResizableModalPanel extends ModalPanel {
             for (var6_intLifetime1 = 0; var4 > var6_intLifetime1; var6_intLifetime1++) {
               GetShieldsToggleCooldown.a(var14, true);
               if (var6_intLifetime1 != 0) {
-                ArchiveLoadRequest.a(SetCountermeasuresPulseRadius.field_q, GetCountermeasureLauncherFireForce.field_o, SecondaryNodeQueue.field_d, 13336, var6_intLifetime1, QuickChatCategoryLoader.field_b);
+                ArchiveLoadRequest.appendScoreRow(SetCountermeasuresPulseRadius.field_q, GetCountermeasureLauncherFireForce.field_o, SecondaryNodeQueue.field_d, 13336, var6_intLifetime1, QuickChatCategoryLoader.field_b);
               } else {
-                ArchiveLoadRequest.a(SetCountermeasuresPulseRadius.field_q, GetCountermeasureLauncherFireForce.field_o, SecondaryNodeQueue.field_d, 13336, var6_intLifetime1, QuickChatCategoryLoader.field_b);
+                ArchiveLoadRequest.appendScoreRow(SetCountermeasuresPulseRadius.field_q, GetCountermeasureLauncherFireForce.field_o, SecondaryNodeQueue.field_d, 13336, var6_intLifetime1, QuickChatCategoryLoader.field_b);
               }
             }
             SetLaserRandomness.a((byte) -29, var5);

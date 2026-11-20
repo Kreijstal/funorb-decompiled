@@ -21,7 +21,7 @@ final class ConsoleExpressionToken extends IntrusiveNode {
         if (this.type == SetMissionTerrainSpaceProbability.charTokenType) {
           return "Char{" + this.lexeme + "}";
         }
-        if (dla.stringTokenType == this.type) {
+        if (MenuBackgroundBattle.stringTokenType == this.type) {
           return "String{" + this.lexeme + "}";
         }
         if (this.type == ScrollableActionPanel.argumentStartTokenType) {
@@ -110,7 +110,7 @@ final class ConsoleExpressionToken extends IntrusiveNode {
               stackIn_35_0 = new ConsoleValue(var9.charAt(0));
               return stackIn_35_0;
             }
-            if (dla.stringTokenType == this.type) {
+            if (MenuBackgroundBattle.stringTokenType == this.type) {
               stackIn_39_0 = new ConsoleValue(this.lexeme.substring(1, this.lexeme.length() - 1));
               return stackIn_39_0;
             }

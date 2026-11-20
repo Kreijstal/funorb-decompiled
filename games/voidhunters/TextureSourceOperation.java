@@ -102,18 +102,18 @@ final class TextureSourceOperation extends TextureOperation {
             for (var8 = 0; var8 < TextHotspotRegion.textureWidth; var8++) {
               var9 = var8 * this.sourceWidth / TextHotspotRegion.textureWidth;
               var10 = this.sourcePixels[var4 + var9];
-              var7[var8] = dla.andBits(255, var10) << 4;
-              var6[var8] = dla.andBits(var10 >> 4, 4080);
-              var5[var8] = dla.andBits(16711680, var10) >> 12;
+              var7[var8] = MenuBackgroundBattle.andBits(255, var10) << 4;
+              var6[var8] = MenuBackgroundBattle.andBits(var10 >> 4, 4080);
+              var5[var8] = MenuBackgroundBattle.andBits(16711680, var10) >> 12;
             }
           } else {
             for (var8 = 0; TextHotspotRegion.textureWidth > var8; var8++) {
               incrementValue$0 = var4;
               var4++;
               var9 = this.sourcePixels[incrementValue$0];
-              var7[var8] = dla.andBits(var9 << 4, 4080);
-              var6[var8] = dla.andBits(var9, 65280) >> 4;
-              var5[var8] = dla.andBits(var9 >> 12, 4080);
+              var7[var8] = MenuBackgroundBattle.andBits(var9 << 4, 4080);
+              var6[var8] = MenuBackgroundBattle.andBits(var9, 65280) >> 4;
+              var5[var8] = MenuBackgroundBattle.andBits(var9 >> 12, 4080);
             }
           }
         }

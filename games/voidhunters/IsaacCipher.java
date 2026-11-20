@@ -299,10 +299,10 @@ final class IsaacCipher {
             }
           }
           this.accumulator = this.accumulator + this.memory[255 & 128 + var2];
-          dupTemp$1 = this.lastResult + this.memory[dla.andBits(var3 >> 2, 255)] + this.accumulator;
+          dupTemp$1 = this.lastResult + this.memory[MenuBackgroundBattle.andBits(var3 >> 2, 255)] + this.accumulator;
           var4 = dupTemp$1;
           this.memory[var2] = dupTemp$1;
-          dupTemp$2 = this.memory[dla.andBits(var4 >> 8, 1020) >> 2] + var3;
+          dupTemp$2 = this.memory[MenuBackgroundBattle.andBits(var4 >> 8, 1020) >> 2] + var3;
           this.lastResult = dupTemp$2;
           this.results[var2] = dupTemp$2;
         }

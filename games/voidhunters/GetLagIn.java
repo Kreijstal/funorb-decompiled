@@ -12,7 +12,7 @@ final class GetLagIn extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard <= -119) {
-            stackIn_4_0 = new ConsoleValue(dla.a(-63));
+            stackIn_4_0 = new ConsoleValue(MenuBackgroundBattle.getIncomingLagMillis(-63));
             return stackIn_4_0;
           }
           stackIn_2_0 = (ConsoleValue) null;

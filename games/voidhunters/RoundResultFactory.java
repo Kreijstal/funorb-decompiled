@@ -29,7 +29,7 @@ final class RoundResultFactory implements GameStateFactory {
             var5 = var9;
             var6 = param1;
             var7 = param2;
-            var9[var6] = dla.andBits(8355711, var9[var6] >> 1) + var7;
+            var9[var6] = MenuBackgroundBattle.andBits(8355711, var9[var6] >> 1) + var7;
             param1++;
           }
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

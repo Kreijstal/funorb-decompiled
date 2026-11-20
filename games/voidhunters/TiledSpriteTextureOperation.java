@@ -79,9 +79,9 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
           var7 = this.sourceHeight * (param1 % this.sourceHeight);
           for (var8 = 0; var8 < TextHotspotRegion.textureWidth; var8++) {
             var9 = this.sourcePixels[var8 % this.sourceWidth + var7];
-            var6[var8] = dla.andBits(4080, var9 << 4);
-            var5[var8] = dla.andBits(4080, var9 >> 4);
-            var4[var8] = dla.andBits(4080, var9 >> 12);
+            var6[var8] = MenuBackgroundBattle.andBits(4080, var9 << 4);
+            var5[var8] = MenuBackgroundBattle.andBits(4080, var9 >> 4);
+            var4[var8] = MenuBackgroundBattle.andBits(4080, var9 >> 12);
           }
         }
         return var11;

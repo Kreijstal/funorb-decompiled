@@ -59,14 +59,14 @@ class RidgedNoiseVolumeGenerator extends PerlinNoiseVolumeGenerator {
         this.outputIndex = 0;
     }
 
-    final static void drawLitMesh(wma param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
+    final static void drawLitMesh(LogoMesh param0, int param1, int param2, int param3, int param4, int param5, int param6, int param7) {
         int stackIn_15_0 = 0;
         int[] stackIn_17_0 = null;
         int stackIn_18_1 = 0;
         int stackIn_24_0 = 0;
         int stackIn_27_0 = 0;
         int stackIn_30_0 = 0;
-        apb stackIn_38_0 = null;
+        LogoMaterial stackIn_38_0 = null;
         int stackIn_43_0 = 0;
         int stackIn_47_0 = 0;
         RuntimeException stackIn_54_0 = null;
@@ -83,7 +83,7 @@ class RidgedNoiseVolumeGenerator extends PerlinNoiseVolumeGenerator {
         int var18 = 0;
         int var19 = 0;
         int var20 = 0;
-        apb var21 = null;
+        LogoMaterial var21 = null;
         int var22 = 0;
         int var23 = 0;
         int var24 = 0;
@@ -104,7 +104,7 @@ class RidgedNoiseVolumeGenerator extends PerlinNoiseVolumeGenerator {
         int var39 = 0;
         int var40 = 0;
         int[] var41 = null;
-        wma var44 = null;
+        LogoMesh var44 = null;
         int[] var49 = null;
         int[] var54 = null;
         byte[] var60 = null;
@@ -164,9 +164,9 @@ class RidgedNoiseVolumeGenerator extends PerlinNoiseVolumeGenerator {
           }
           for (var13Lifetime1 = 0; var13Lifetime1 < CarouselPlayerEvent.field_j; var13Lifetime1++) {
             var14Lifetime1 = SetMissionDebrisDefaultProbability.field_p[var13Lifetime1];
-            var15Lifetime1 = param0.field_w[var14Lifetime1];
-            var16 = param0.field_N[var14Lifetime1];
-            var17 = param0.field_D[var14Lifetime1];
+            var15Lifetime1 = param0.faceVertexA[var14Lifetime1];
+            var16 = param0.faceVertexB[var14Lifetime1];
+            var17 = param0.faceVertexC[var14Lifetime1];
             if (param0.field_j[var14Lifetime1] < OpenGlVertexDeclaration.field_b.length) {
               stackIn_24_0 = param0.field_j[var14Lifetime1];
             } else {
@@ -185,12 +185,12 @@ class RidgedNoiseVolumeGenerator extends PerlinNoiseVolumeGenerator {
               stackIn_30_0 = -1;
             }
             var20 = stackIn_30_0;
-            if (SettingsChangeFactory.field_a != null &&
+            if (SettingsChangeFactory.logoMaterials != null &&
               param0.field_K != null &&
               param0.field_K.length > var14Lifetime1 &&
               param0.field_K[var14Lifetime1] != -1 &&
-              param0.field_K[var14Lifetime1] < SettingsChangeFactory.field_a.length) {
-              stackIn_38_0 = SettingsChangeFactory.field_a[param0.field_K[var14Lifetime1]];
+              param0.field_K[var14Lifetime1] < SettingsChangeFactory.logoMaterials.length) {
+              stackIn_38_0 = SettingsChangeFactory.logoMaterials[param0.field_K[var14Lifetime1]];
             } else {
               stackIn_38_0 = null;
             }
@@ -206,7 +206,7 @@ class RidgedNoiseVolumeGenerator extends PerlinNoiseVolumeGenerator {
               var28 = var54[var18];
               var29 = var64[var18];
               if (var21 != null) {
-                stackIn_43_0 = var21.field_c;
+                stackIn_43_0 = var21.color;
               } else {
                 stackIn_43_0 = 8355711;
               }
@@ -226,7 +226,7 @@ class RidgedNoiseVolumeGenerator extends PerlinNoiseVolumeGenerator {
               if (var21 == null) {
                 stackIn_47_0 = 8355711;
               } else {
-                stackIn_47_0 = var21.field_c;
+                stackIn_47_0 = var21.color;
               }
               var34 = stackIn_47_0;
               var35 = 16711935 & var34;

@@ -137,7 +137,7 @@ final class GetAutoDetail extends ConsoleCommand {
           if (34 != var4) {
             stackIn_16_0 = SetMissionTerrainSpaceProbability.charTokenType;
           } else {
-            stackIn_16_0 = dla.stringTokenType;
+            stackIn_16_0 = MenuBackgroundBattle.stringTokenType;
           }
           var6Lifetime1 = stackIn_16_0;
           stackIn_17_0 = new ConsoleExpressionToken(var6Lifetime1, var2_int, var3.toString());

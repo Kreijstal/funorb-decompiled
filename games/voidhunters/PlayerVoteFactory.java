@@ -51,7 +51,7 @@ final class PlayerVoteFactory implements GameStateFactory {
             }
             var7 = stackIn_8_0;
             var8 = param0.substring(var6, var7);
-            if (var5.type != dla.stringTokenType) {
+            if (var5.type != MenuBackgroundBattle.stringTokenType) {
               if (var5.type == SetMissionTerrainSpaceProbability.charTokenType) {
                 discarded$0 = var3.append("<col=33bbff>").append(var8).append("</col>");
               } else {

@@ -77,7 +77,7 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
         RuntimeException var1 = null;
         try {
           if (param0 != 32) {
-            SetDebrisFoundInPairs.a(false, -65, (byte) -47, (wma) null, 29);
+            SetDebrisFoundInPairs.a(false, -65, (byte) -47, (LogoMesh) null, 29);
           }
           field_o = null;
           return;
@@ -131,7 +131,7 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
         }
     }
 
-    final static void a(boolean param0, int param1, byte param2, wma param3, int param4) {
+    final static void a(boolean param0, int param1, byte param2, LogoMesh param3, int param4) {
         byte dupTemp$0 = 0;
         boolean stackIn_11_0 = false;
         int stackIn_25_0 = 0;
@@ -182,10 +182,10 @@ final class SetDebrisFoundInPairs extends ConsoleCommand {
           CarouselPlayerEvent.field_j = 0;
           var9 = 0;
           boolean decompiledNaturalLoopExit0 = false;
-          while (!(decompiledNaturalLoopExit0 = (!(var9 < param3.field_y)))) {
-            var10 = param3.field_w[var9];
-            var11 = param3.field_N[var9];
-            var12 = param3.field_D[var9];
+          while (!(decompiledNaturalLoopExit0 = (!(var9 < param3.faceCount)))) {
+            var10 = param3.faceVertexA[var9];
+            var11 = param3.faceVertexB[var9];
+            var12 = param3.faceVertexC[var9];
             stackOut_10_0 = param0;
             stackIn_46_0 = stackOut_10_0 ? 1 : 0;
             stackIn_11_0 = stackOut_10_0;

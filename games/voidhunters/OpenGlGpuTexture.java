@@ -436,7 +436,7 @@ abstract class OpenGlGpuTexture implements GpuTexture {
                 var21 = var21 + (255 & var17 >> 24);
                 incrementValue$4 = var13;
                 var13++;
-                var11[incrementValue$4] = SetAngularForceDownshift.orBits(dla.andBits(255, var20 >> 2), SetAngularForceDownshift.orBits(dla.andBits(1020, var19) << 6, SetAngularForceDownshift.orBits(dla.andBits(var21, 1020) << 22, dla.andBits(16711680, var18 << 14))));
+                var11[incrementValue$4] = SetAngularForceDownshift.orBits(MenuBackgroundBattle.andBits(255, var20 >> 2), SetAngularForceDownshift.orBits(MenuBackgroundBattle.andBits(1020, var19) << 6, SetAngularForceDownshift.orBits(MenuBackgroundBattle.andBits(var21, 1020) << 22, MenuBackgroundBattle.andBits(16711680, var18 << 14))));
               }
               var23 = var23 + param3;
               var22 = var22 + param3;

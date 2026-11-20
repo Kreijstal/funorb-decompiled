@@ -1,13 +1,13 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rk {
-    private java.awt.DisplayMode field_b;
-    private java.awt.GraphicsDevice field_a;
+final class AwtFullscreenController {
+    private java.awt.DisplayMode previousDisplayMode;
+    private java.awt.GraphicsDevice graphicsDevice;
 
     public final int[] listmodes() {
         int var3 = 0;
-        java.awt.DisplayMode[] var4 = this.field_a.getDisplayModes();
+        java.awt.DisplayMode[] var4 = this.graphicsDevice.getDisplayModes();
         java.awt.DisplayMode[] var1 = var4;
         int[] var2 = new int[var4.length << 2];
         for (var3 = 0; var3 < var4.length; var3++) {
@@ -25,16 +25,16 @@ final class rk {
         java.awt.DisplayMode[] var7;
         int var8;
         int var10;
-        this.field_b = this.field_a.getDisplayMode();
-        if (null == this.field_b) {
+        this.previousDisplayMode = this.graphicsDevice.getDisplayMode();
+        if (null == this.previousDisplayMode) {
           throw new NullPointerException();
         }
         param0.setUndecorated(true);
         param0.enableInputMethods(false);
-        this.a(83, param0);
+        this.setFullscreenWindow(83, param0);
         if (0 == param4) {
-          var6 = this.field_b.getRefreshRate();
-          var7 = this.field_a.getDisplayModes();
+          var6 = this.previousDisplayMode.getRefreshRate();
+          var7 = this.graphicsDevice.getDisplayModes();
           var8 = 0;
           for (var9 = 0; var9 < var7.length; var9++) {
             if (var7[var9].getWidth() == param1 &&
@@ -52,21 +52,21 @@ final class rk {
             param4 = var6;
           }
         }
-        this.field_a.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
+        this.graphicsDevice.setDisplayMode(new java.awt.DisplayMode(param1, param2, param3, param4));
     }
 
     public final void exit() {
-        if (this.field_b != null) {
-          this.field_a.setDisplayMode(this.field_b);
-          if (!this.field_a.getDisplayMode().equals(this.field_b)) {
+        if (this.previousDisplayMode != null) {
+          this.graphicsDevice.setDisplayMode(this.previousDisplayMode);
+          if (!this.graphicsDevice.getDisplayMode().equals(this.previousDisplayMode)) {
             throw new RuntimeException("");
           }
-          this.field_b = null;
+          this.previousDisplayMode = null;
         }
-        this.a(-127, (java.awt.Frame) null);
+        this.setFullscreenWindow(-127, (java.awt.Frame) null);
     }
 
-    private final void a(int param0, java.awt.Frame param1) {
+    private final void setFullscreenWindow(int param0, java.awt.Frame param1) {
         try {
           int decompiledRegionSelector0 = 0;
           Throwable decompiledCaughtException = null;
@@ -82,8 +82,8 @@ final class rk {
           try {
             var5 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
             var5.setAccessible(true);
-            if (((Boolean) (var5.get(this.field_a))).booleanValue()) {
-              var5.set(this.field_a, Boolean.FALSE);
+            if (((Boolean) (var5.get(this.graphicsDevice))).booleanValue()) {
+              var5.set(this.graphicsDevice, Boolean.FALSE);
               var4 = 1;
             }
           } catch (java.lang.Throwable decompiledCaughtParameter0) {
@@ -91,7 +91,7 @@ final class rk {
             var5_ref = decompiledCaughtException;
           }
           try {
-            this.field_a.setFullScreenWindow((java.awt.Window) ((Object) param1));
+            this.graphicsDevice.setFullScreenWindow((java.awt.Window) ((Object) param1));
             decompiledRegionSelector0 = 0;
           } catch (java.lang.Throwable decompiledCaughtParameter1) {
             decompiledCaughtException = decompiledCaughtParameter1;
@@ -101,17 +101,17 @@ final class rk {
           if (decompiledRegionSelector0 != 0) {
             try {
               var8 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-              var8.set(this.field_a, Boolean.TRUE);
+              var8.set(this.graphicsDevice, Boolean.TRUE);
             } catch (java.lang.Throwable decompiledCaughtParameter3) {
               decompiledCaughtException = decompiledCaughtParameter3;
               var8_ref = decompiledCaughtException;
             }
-            throw rk.<RuntimeException>throwUnchecked(var7);
+            throw AwtFullscreenController.<RuntimeException>throwUnchecked(var7);
           }
           if (var4 != 0) {
             try {
               var5 = Class.forName("sun.awt.Win32GraphicsDevice").getDeclaredField("valid");
-              var5.set(this.field_a, Boolean.TRUE);
+              var5.set(this.graphicsDevice, Boolean.TRUE);
             } catch (java.lang.Throwable decompiledCaughtParameter2) {
               decompiledCaughtException = decompiledCaughtParameter2;
               var5_ref = decompiledCaughtException;
@@ -124,15 +124,15 @@ final class rk {
         }
     }
 
-    public rk() throws Exception {
+    public AwtFullscreenController() throws Exception {
         int var4 = 0;
         java.awt.GraphicsEnvironment var1;
         java.awt.GraphicsDevice[] var2;
         java.awt.GraphicsDevice[] var3;
         java.awt.GraphicsDevice var5;
         var1 = java.awt.GraphicsEnvironment.getLocalGraphicsEnvironment();
-        this.field_a = var1.getDefaultScreenDevice();
-        if (this.field_a.isFullScreenSupported()) {
+        this.graphicsDevice = var1.getDefaultScreenDevice();
+        if (this.graphicsDevice.isFullScreenSupported()) {
           return;
         }
         var2 = var1.getScreenDevices();
@@ -141,11 +141,11 @@ final class rk {
           var5 = var3[var4];
           if (var5 != null &&
             var5.isFullScreenSupported()) {
-            this.field_a = var5;
+            this.graphicsDevice = var5;
             return;
           }
         }
-        throw rk.<RuntimeException>throwUnchecked(new Exception());
+        throw AwtFullscreenController.<RuntimeException>throwUnchecked(new Exception());
     }
 
     static {

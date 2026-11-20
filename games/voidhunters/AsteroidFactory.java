@@ -162,7 +162,7 @@ final class AsteroidFactory implements GameStateFactory {
               CountermeasureLauncherWeaponDefinition.field_c[1] = 5;
             }
           } else {
-            var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, SetReverbGain.a(wma.field_M, new String[]{"<br><%0><br>"}, param0 + 93), ShipBlueprint.field_a);
+            var3_int = MatchResultsFactory.a(SetDebrisDetachmentForceMultiplier.field_o, OpenGlTexture3D.field_l, 0, SetReverbGain.a(LogoMesh.field_M, new String[]{"<br><%0><br>"}, param0 + 93), ShipBlueprint.field_a);
             var4 = -1;
             for (var5 = 0; var5 < var3_int; var5++) {
               if (!"<%0>".equals(OpenGlTexture3D.field_l[var5])) {

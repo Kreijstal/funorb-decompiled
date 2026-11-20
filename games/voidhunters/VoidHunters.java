@@ -867,7 +867,7 @@ public final class VoidHunters extends NetworkGameClient {
         GameKeyHandler.clearSharedReferences(-106);
         NetworkGameClient.clearSharedReferences(false);
         ClientException.clearSharedReferences(127);
-        bi.clearSharedReferences(-19766);
+        UrlJaggrabRequest.clearSharedReferences(-19766);
         MouseWheelInput.clearSharedReferences(-25692);
         SoftwareRasterizer2D.clearSharedReferences();
         ResourceArchive.clearSharedReferences((byte) 112);
@@ -891,7 +891,7 @@ public final class VoidHunters extends NetworkGameClient {
         PlayerGameData.clearSharedReferences(-106);
         CommandConsole.clearSharedReferences((byte) -107);
         GameResourceLoader.clearSharedReferences(111);
-        dla.clearSharedReferences((byte) 101);
+        MenuBackgroundBattle.clearSharedReferences((byte) 101);
         mn.clearSharedReferences(-49);
         ShipComponent.clearSharedReferences(24388);
         iwa.clearSharedReferences((byte) -116);
@@ -1078,7 +1078,7 @@ public final class VoidHunters extends NetworkGameClient {
         TimedSpecialOrderBehaviour.clearSharedReferences(126);
         uab.clearSharedReferences(0);
         VorbisSample.clearSharedReferences();
-        wma.clearSharedReferences(118);
+        LogoMesh.clearSharedReferences(118);
         csa.clearSharedReferences((byte) 124);
         cjb.clearSharedReferences(0);
         bd.clearSharedReferences((byte) -103);
@@ -2017,8 +2017,8 @@ public final class VoidHunters extends NetworkGameClient {
           }
           stackIn_59_0Lifetime1 = 17043;
           GpuVertexBufferOwner.updateSoundQueues(stackIn_59_0Lifetime1);
-          if (null != SniperCannonWeaponDefinition.field_b) {
-            SniperCannonWeaponDefinition.field_b.b(0);
+          if (null != SniperCannonWeaponDefinition.menuBackgroundBattle) {
+            SniperCannonWeaponDefinition.menuBackgroundBattle.update(0);
           }
           if (null != DialogMessagePanel.field_C &&
             DialogMessagePanel.field_C.isOpen(13462)) {

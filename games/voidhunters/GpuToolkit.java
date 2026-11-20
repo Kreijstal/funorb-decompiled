@@ -2317,7 +2317,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
                 for (var8 = 0; param0.width > var8; var8++) {
                   incrementValue$0 = var6;
                   var6++;
-                  var4[incrementValue$0] = SetAngularForceDownshift.orBits(param0.palette[dla.andBits(255, (int) param0.pixels[var5])], param0.alpha[var5] << 24);
+                  var4[incrementValue$0] = SetAngularForceDownshift.orBits(param0.palette[MenuBackgroundBattle.andBits(255, (int) param0.pixels[var5])], param0.alpha[var5] << 24);
                   var5++;
                 }
               }

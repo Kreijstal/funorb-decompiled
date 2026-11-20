@@ -22,7 +22,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[10] = GetTeamSelectionSpeedup.field_p;
         var2[31] = GetFightersPerPlayerMaximum.field_p;
         var2[136] = BombletSprayAimArcSetting.aimArc;
-        var2[65] = apb.field_a;
+        var2[65] = LogoMaterial.field_a;
         var2[149] = pea.field_a;
         var2[32] = Particle.field_I;
         var2[17] = ColorRowCacheEntry.field_d;
@@ -165,7 +165,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[206] = gib.field_a;
         var2[228] = TextureCoordinateMode.field_b;
         var2[155] = GetShipAimLines.field_p;
-        var2[139] = dla.field_c;
+        var2[139] = MenuBackgroundBattle.field_c;
         var2[175] = GetMissileLauncherEnergyUsed.field_q;
         var2[16] = GetGrapplingHookAimspeed.field_p;
         var2[198] = GetMissionTerrainNebulaProbability.field_r;

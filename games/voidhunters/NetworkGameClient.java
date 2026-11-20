@@ -755,10 +755,10 @@ abstract class NetworkGameClient extends GameApplet {
           if (var4 == 13) {
             try {
               if (SetPhasedEnergyBeamReload.field_p == null) {
-                SetPhasedEnergyBeamReload.field_p = new bi(SetTorpedoProjectiles.field_o, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
+                SetPhasedEnergyBeamReload.field_p = new UrlJaggrabRequest(SetTorpedoProjectiles.field_o, new java.net.URL(this.getCodeBase(), "countrylist.ws"), 5000);
               }
-              if (SetPhasedEnergyBeamReload.field_p.c(104)) {
-                var7 = SetPhasedEnergyBeamReload.field_p.a(43);
+              if (SetPhasedEnergyBeamReload.field_p.pollComplete(104)) {
+                var7 = SetPhasedEnergyBeamReload.field_p.getResponseBuffer(43);
                 if (var7 != null) {
                   var8 = CarouselSlot.decodeCp1252(0, 0, var7.position, var7.payload);
                   GetMissionTerrainNebulaProbability.a(var8, (byte) 122);

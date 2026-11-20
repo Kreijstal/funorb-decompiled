@@ -3,20 +3,20 @@
  */
 import java.util.*;
 
-final class dla {
-    private Camera2D field_b;
+final class MenuBackgroundBattle {
+    private Camera2D camera;
     static Widget field_e;
     static int stringTokenType;
-    private int field_a;
+    private int tick;
     static int field_c;
-    private World field_f;
+    private World world;
 
-    final static int a(int param0) {
+    final static int getIncomingLagMillis(int param0) {
         int var1 = -61 % ((47 - param0) / 45);
         return cd.field_c;
     }
 
-    private final void a(boolean param0, Random param1, int param2, int param3) {
+    private final void spawnRandomShip(boolean param0, Random param1, int param2, int param3) {
         RuntimeException runtimeException = null;
         int var5_int = 0;
         Ship var6 = null;
@@ -38,11 +38,11 @@ final class dla {
           if (param2 > -26) {
             return;
           }
-          var7 = -this.field_f.getWidth((byte) -122) / 2 + TextHotspotRegion.randomBoundedInt(param1, this.field_f.getWidth((byte) -122), 119);
-          var8 = -this.field_f.getHeight(1) / 2 + TextHotspotRegion.randomBoundedInt(param1, this.field_f.getHeight(1), 120);
+          var7 = -this.world.getWidth((byte) -122) / 2 + TextHotspotRegion.randomBoundedInt(param1, this.world.getWidth((byte) -122), 119);
+          var8 = -this.world.getHeight(1) / 2 + TextHotspotRegion.randomBoundedInt(param1, this.world.getHeight(1), 120);
           var6.setPosition(var7, var8, (byte) -72);
           var6.setAngle(TextHotspotRegion.randomBoundedInt(param1, 8192, 126), -85);
-          this.field_f.addShip(var6, (byte) 125);
+          this.world.addShip(var6, (byte) 125);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -58,7 +58,7 @@ final class dla {
         }
     }
 
-    final static String c(int param0) {
+    final static String getLocalPlayerName(int param0) {
         if (null == IntIndexTable.field_a) {
           return "";
         }
@@ -68,7 +68,7 @@ final class dla {
         return IntIndexTable.field_a;
     }
 
-    final void a(boolean param0, byte param1) {
+    final void render(boolean param0, byte param1) {
         int var9_int = 0;
         int var3;
         int var4;
@@ -99,27 +99,27 @@ final class dla {
         Debris var7_refLifetime2;
         Debris var18Lifetime2;
         var16 = VoidHunters.field_G;
-        var3 = this.field_b.screenToWorldX(true, GetBombletSprayEnergyUsed.field_p.width) - this.field_b.screenToWorldX(true, 0);
-        var4 = this.field_b.screenToWorldY(0, GetBombletSprayEnergyUsed.field_p.height) - this.field_b.screenToWorldY(0, 0);
-        if (var3 != this.field_f.getWidth((byte) -122)) {
-          this.field_f.setWidth(var3, (byte) 113);
-          this.field_f.setHeight(var4, 0);
+        var3 = this.camera.screenToWorldX(true, GetBombletSprayEnergyUsed.field_p.width) - this.camera.screenToWorldX(true, 0);
+        var4 = this.camera.screenToWorldY(0, GetBombletSprayEnergyUsed.field_p.height) - this.camera.screenToWorldY(0, 0);
+        if (var3 != this.world.getWidth((byte) -122)) {
+          this.world.setWidth(var3, (byte) 113);
+          this.world.setHeight(var4, 0);
         } else {
-          if (this.field_f.getHeight(1) != var4) {
-            this.field_f.setWidth(var3, (byte) 113);
-            this.field_f.setHeight(var4, 0);
+          if (this.world.getHeight(1) != var4) {
+            this.world.setWidth(var3, (byte) 113);
+            this.world.setHeight(var4, 0);
           }
         }
-        this.field_b.screenOriginY = GetBombletSprayEnergyUsed.field_p.height / 2;
-        this.field_b.screenOriginX = GetBombletSprayEnergyUsed.field_p.width / 2;
-        this.field_b.updateWorldBounds(GetBombletSprayEnergyUsed.field_p.height, 0, -72, GetBombletSprayEnergyUsed.field_p.width, 0);
-        PlayerAction.a(this.field_f, this.field_b, false, (byte) -59);
-        this.field_f.a(this.field_b, (byte) 85, this.field_a, (Ship) null);
-        var5 = this.field_b.screenToWorldX(true, GetUseDetailLines.field_o);
-        var6 = this.field_b.screenToWorldY(0, GetTorpedoReload.field_q);
+        this.camera.screenOriginY = GetBombletSprayEnergyUsed.field_p.height / 2;
+        this.camera.screenOriginX = GetBombletSprayEnergyUsed.field_p.width / 2;
+        this.camera.updateWorldBounds(GetBombletSprayEnergyUsed.field_p.height, 0, -72, GetBombletSprayEnergyUsed.field_p.width, 0);
+        PlayerAction.a(this.world, this.camera, false, (byte) -59);
+        this.world.a(this.camera, (byte) 85, this.tick, (Ship) null);
+        var5 = this.camera.screenToWorldX(true, GetUseDetailLines.field_o);
+        var6 = this.camera.screenToWorldY(0, GetTorpedoReload.field_q);
         if (param0 && (GetUseDetailLines.field_o != -1 ||
           GetTorpedoReload.field_q != -1)) {
-          var17 = this.field_f.getDebris((byte) -33);
+          var17 = this.world.getDebris((byte) -33);
           var7 = var17;
           var8 = -66 % ((param1 + 62) / 63);
           for (var9_int = 0; var9_int < var17.length; var9_int++) {
@@ -134,14 +134,14 @@ final class dla {
                 var12_ref_String = TiledSpriteTextureOperation.a(var11_ref_ml, (byte) 72);
                 var13 = var11_ref_ml.getFinalx(true);
                 var14 = var11_ref_ml.getFinaly((byte) 111);
-                var15 = this.field_b.worldToScreenX(var13, (byte) 115);
-                GetLagStandardDeviationOut.a(1, var12_ref_String, 16777215, this.field_b.worldToScreenY(true, -10000 + var14), -(GetPhasedEnergyBeamProjectiles.a(112, var12_ref_String) >> 1) + var15, 4266);
-                DelayedPacket.drawLine(this.field_b.worldToScreenY(true, var14), var15, -(GetPhasedEnergyBeamProjectiles.a(-77, var12_ref_String) >> 2) + var15, this.field_b.worldToScreenY(true, -10000 + var14), -16777216, 16777215);
+                var15 = this.camera.worldToScreenX(var13, (byte) 115);
+                GetLagStandardDeviationOut.a(1, var12_ref_String, 16777215, this.camera.worldToScreenY(true, -10000 + var14), -(GetPhasedEnergyBeamProjectiles.a(112, var12_ref_String) >> 1) + var15, 4266);
+                DelayedPacket.drawLine(this.camera.worldToScreenY(true, var14), var15, -(GetPhasedEnergyBeamProjectiles.a(-77, var12_ref_String) >> 2) + var15, this.camera.worldToScreenY(true, -10000 + var14), -16777216, 16777215);
                 return;
               }
             }
           }
-          var18Lifetime1 = this.field_f.findNearestDraggableDebris(true, var6, var5, var5, var6);
+          var18Lifetime1 = this.world.findNearestDraggableDebris(true, var6, var5, var5, var6);
           var7_refLifetime1 = var18Lifetime1;
           if (var18Lifetime1 != null) {
             var8Lifetime1 = var18Lifetime1.getBoundingExtent(-71) << 2;
@@ -152,16 +152,16 @@ final class dla {
             var13Lifetime1 = -var6 + var12;
             var14Lifetime1 = TextLayout.approximateVectorLength(var11, (byte) 106, var13Lifetime1);
             if (var14Lifetime1 <= var8Lifetime1) {
-              var15Lifetime1 = this.field_b.worldToScreenX(var10, (byte) 116);
-              GetLagStandardDeviationOut.a(1, var9, 16777215, this.field_b.worldToScreenY(true, -10000 + var12), -(GetPhasedEnergyBeamProjectiles.a(-51, var9) >> 1) + var15Lifetime1, 4266);
-              DelayedPacket.drawLine(this.field_b.worldToScreenY(true, var12), var15Lifetime1, -(GetPhasedEnergyBeamProjectiles.a(-100, var9) >> 2) + var15Lifetime1, this.field_b.worldToScreenY(true, -10000 + var12), -16777216, 16777215);
+              var15Lifetime1 = this.camera.worldToScreenX(var10, (byte) 116);
+              GetLagStandardDeviationOut.a(1, var9, 16777215, this.camera.worldToScreenY(true, -10000 + var12), -(GetPhasedEnergyBeamProjectiles.a(-51, var9) >> 1) + var15Lifetime1, 4266);
+              DelayedPacket.drawLine(this.camera.worldToScreenY(true, var12), var15Lifetime1, -(GetPhasedEnergyBeamProjectiles.a(-100, var9) >> 2) + var15Lifetime1, this.camera.worldToScreenY(true, -10000 + var12), -16777216, 16777215);
             }
           }
           return;
         }
     }
 
-    final void b(int param0) {
+    final void update(int param0) {
         int stackIn_16_0 = 0;
         MissionState var3;
         MessageLog var4;
@@ -188,15 +188,15 @@ final class dla {
         var12 = VoidHunters.field_G;
         var13 = (Camera2D) null;
         GetReverbWidth.a((Camera2D) null, -8077);
-        Model3D.setSoundTime(this.field_a, -19266);
+        Model3D.setSoundTime(this.tick, -19266);
         var16 = new Player[]{};
         var3 = new MissionState();
         var4 = new MessageLog();
-        this.field_f.a(1799937864, true, var4, var16, var3, this.field_a, var16);
-        this.field_a = this.field_a + 1;
-        if (this.field_f.countTeamShips(0, param0 - 13766) == 0 ||
-          this.field_f.countTeamShips(1, -13766) == 0) {
-          var5 = this.field_f.getShips(1000);
+        this.world.a(1799937864, true, var4, var16, var3, this.tick, var16);
+        this.tick = this.tick + 1;
+        if (this.world.countTeamShips(0, param0 - 13766) == 0 ||
+          this.world.countTeamShips(1, -13766) == 0) {
+          var5 = this.world.getShips(1000);
           var6 = 0;
           var7_int = 1;
           var14 = var5;
@@ -226,9 +226,9 @@ final class dla {
             break;
           }
           var17 = new Random();
-          this.a(var7_int != 0, var17, param0 - 121, var6);
+          this.spawnRandomShip(var7_int != 0, var17, param0 - 121, var6);
         }
-        Debris[] dupTemp$0 = this.field_f.getDebris((byte) -33);
+        Debris[] dupTemp$0 = this.world.getDebris((byte) -33);
         var15 = dupTemp$0;
         var5_array = dupTemp$0;
         var6Lifetime1 = param0;
@@ -263,7 +263,7 @@ final class dla {
             if (var7 == null) {
               break;
             }
-            this.field_f.removeBody(-118, 1, (ShipBody) (var7));
+            this.world.removeBody(-118, 1, (ShipBody) (var7));
             break;
           }
         }
@@ -280,7 +280,7 @@ final class dla {
         field_e = null;
     }
 
-    final static boolean a(int param0, boolean param1, int param2, int param3) {
+    final static boolean scoreRowComesBefore(int param0, boolean param1, int param2, int param3) {
         int var4;
         int var5;
         int var6;
@@ -323,7 +323,7 @@ final class dla {
         return !(param2 <= param3);
     }
 
-    dla() {
+    MenuBackgroundBattle() {
         int var4 = 0;
         Exception exception = null;
         int var1 = 0;
@@ -335,12 +335,12 @@ final class dla {
         Asteroid var9 = null;
         int[] var12 = null;
         Throwable decompiledCaughtException = null;
-        this.field_f = new World(0);
-        this.field_b = new Camera2D();
-        var1 = this.field_b.screenToWorldX(true, GetBombletSprayEnergyUsed.field_p.width) - this.field_b.screenToWorldX(true, 0);
-        var2 = this.field_b.screenToWorldY(0, GetBombletSprayEnergyUsed.field_p.height) - this.field_b.screenToWorldY(0, 0);
-        this.field_f.setWidth(var1, (byte) -93);
-        this.field_f.setHeight(var2, 0);
+        this.world = new World(0);
+        this.camera = new Camera2D();
+        var1 = this.camera.screenToWorldX(true, GetBombletSprayEnergyUsed.field_p.width) - this.camera.screenToWorldX(true, 0);
+        var2 = this.camera.screenToWorldY(0, GetBombletSprayEnergyUsed.field_p.height) - this.camera.screenToWorldY(0, 0);
+        this.world.setWidth(var1, (byte) -93);
+        this.world.setHeight(var2, 0);
         var3 = new Random();
         if (null != es.field_b &&
           null != es.field_b.blueprint) {
@@ -350,7 +350,7 @@ final class dla {
             var5_ref_sg.setTeam(17704, 3);
             var5_ref_sg.setAi(new ShipAI(), 4);
             var5_ref_sg.setAngle(TextHotspotRegion.randomBoundedInt(var3, 8192, 122), -67);
-            this.field_f.addShip(var5_ref_sg, (byte) 107);
+            this.world.addShip(var5_ref_sg, (byte) 107);
           } catch (java.lang.Exception decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             exception = (Exception) (Object) decompiledCaughtException;
@@ -361,14 +361,14 @@ final class dla {
         } else {
           for (var4 = 0; var4 < 2; var4++) {
             var5 = var4 % 2;
-            this.a(false, var3, -99, var5);
+            this.spawnRandomShip(false, var3, -99, var5);
           }
         }
         var9 = new Asteroid(new ShipComponent(49));
-        var5 = -this.field_f.getWidth((byte) -122) / 2 + TextHotspotRegion.randomBoundedInt(var3, this.field_f.getWidth((byte) -122), 120);
-        var6 = -this.field_f.getHeight(1) / 2 + TextHotspotRegion.randomBoundedInt(var3, this.field_f.getHeight(1), 123);
+        var5 = -this.world.getWidth((byte) -122) / 2 + TextHotspotRegion.randomBoundedInt(var3, this.world.getWidth((byte) -122), 120);
+        var6 = -this.world.getHeight(1) / 2 + TextHotspotRegion.randomBoundedInt(var3, this.world.getHeight(1), 123);
         var9.setPosition(var5, var6, (byte) 43);
-        this.field_f.addAsteroid((byte) 126, var9);
+        this.world.addAsteroid((byte) 126, var9);
     }
 
     static {

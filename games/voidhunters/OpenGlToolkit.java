@@ -236,12 +236,12 @@ final class OpenGlToolkit extends GraphicsToolkit {
 
     final void setTextureEnvironmentColor(boolean param0, int param1) {
         GetSpinningBladeTopSpeed.field_o[3] = (float)(param1 >>> 24) / 255.0f;
-        GetSpinningBladeTopSpeed.field_o[2] = (float)dla.andBits(param1, 255) / 255.0f;
+        GetSpinningBladeTopSpeed.field_o[2] = (float)MenuBackgroundBattle.andBits(param1, 255) / 255.0f;
         if (!param0) {
           this.field_U = true;
         }
-        GetSpinningBladeTopSpeed.field_o[0] = (float)dla.andBits(16711680, param1) / 16711680.0f;
-        GetSpinningBladeTopSpeed.field_o[1] = (float)dla.andBits(param1, 65280) / 65280.0f;
+        GetSpinningBladeTopSpeed.field_o[0] = (float)MenuBackgroundBattle.andBits(16711680, param1) / 16711680.0f;
+        GetSpinningBladeTopSpeed.field_o[1] = (float)MenuBackgroundBattle.andBits(param1, 65280) / 65280.0f;
         jaggl.OpenGL.glTexEnvfv(8960, 8705, GetSpinningBladeTopSpeed.field_o, 0);
     }
 
@@ -282,7 +282,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
               for (var7 = 0; param0.width > var7; var7++) {
                 incrementValue$0 = var5;
                 var5++;
-                var3[incrementValue$0] = SetAngularForceDownshift.orBits(param0.palette[dla.andBits(255, (int) param0.pixels[var4])], param0.alpha[var4] << 24);
+                var3[incrementValue$0] = SetAngularForceDownshift.orBits(param0.palette[MenuBackgroundBattle.andBits(255, (int) param0.pixels[var4])], param0.alpha[var4] << 24);
                 var4++;
               }
             }
@@ -891,9 +891,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
         }
         jaggl.OpenGL.glFogf(param0, this.field_wb);
         jaggl.OpenGL.glFogf(2916, this.field_w);
-        GetSpinningBladeTopSpeed.field_o[1] = (float)dla.andBits(this.field_J, 65280) / 65280.0f;
-        GetSpinningBladeTopSpeed.field_o[2] = (float)dla.andBits(this.field_J, 255) / 255.0f;
-        GetSpinningBladeTopSpeed.field_o[0] = (float)dla.andBits(this.field_J, 16711680) / 16711680.0f;
+        GetSpinningBladeTopSpeed.field_o[1] = (float)MenuBackgroundBattle.andBits(this.field_J, 65280) / 65280.0f;
+        GetSpinningBladeTopSpeed.field_o[2] = (float)MenuBackgroundBattle.andBits(this.field_J, 255) / 255.0f;
+        GetSpinningBladeTopSpeed.field_o[0] = (float)MenuBackgroundBattle.andBits(this.field_J, 16711680) / 16711680.0f;
         jaggl.OpenGL.glFogfv(2918, GetSpinningBladeTopSpeed.field_o, 0);
     }
 
@@ -2190,9 +2190,9 @@ final class OpenGlToolkit extends GraphicsToolkit {
           jaggl.OpenGL.glLightfv(var4, 4611, SetSniperCannonProjectileDamage.field_o, 0);
           var5 = var3.getColor(-62);
           var6 = var3.getIntensity(-392138175) / 255.0f;
-          SetSniperCannonProjectileDamage.field_o[2] = var6 * (float)dla.andBits(255, var5);
-          SetSniperCannonProjectileDamage.field_o[0] = var6 * (float)dla.andBits(var5 >> 16, 255);
-          SetSniperCannonProjectileDamage.field_o[1] = (float)dla.andBits(var5 >> 8, 255) * var6;
+          SetSniperCannonProjectileDamage.field_o[2] = var6 * (float)MenuBackgroundBattle.andBits(255, var5);
+          SetSniperCannonProjectileDamage.field_o[0] = var6 * (float)MenuBackgroundBattle.andBits(var5 >> 16, 255);
+          SetSniperCannonProjectileDamage.field_o[1] = (float)MenuBackgroundBattle.andBits(var5 >> 8, 255) * var6;
           jaggl.OpenGL.glLightfv(var4, 4609, SetSniperCannonProjectileDamage.field_o, 0);
           jaggl.OpenGL.glLightf(var4, 4617, 1.0f / (float)(var3.getRadius(16777215) * var3.getRadius(16777215)));
           jaggl.OpenGL.glEnable(var4);

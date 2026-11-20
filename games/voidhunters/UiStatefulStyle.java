@@ -180,7 +180,7 @@ final class UiStatefulStyle extends UiTextStyle {
     final static void a(byte param0, boolean param1, boolean param2, int param3) {
         int var4;
         int var8;
-        dla stackIn_10_0 = null;
+        MenuBackgroundBattle stackIn_10_0 = null;
         boolean stackIn_11_1 = false;
         int var5;
         int var6;
@@ -200,21 +200,21 @@ final class UiStatefulStyle extends UiTextStyle {
             if (param1) {
               ServerInfoFactory.a(-30428, false);
             } else {
-              if (null == SniperCannonWeaponDefinition.field_b) {
-                SniperCannonWeaponDefinition.field_b = new dla();
+              if (null == SniperCannonWeaponDefinition.menuBackgroundBattle) {
+                SniperCannonWeaponDefinition.menuBackgroundBattle = new MenuBackgroundBattle();
               }
               var4 = 1;
-              if (null != SniperCannonWeaponDefinition.field_b) {
-                stackIn_10_0 = SniperCannonWeaponDefinition.field_b;
+              if (null != SniperCannonWeaponDefinition.menuBackgroundBattle) {
+                stackIn_10_0 = SniperCannonWeaponDefinition.menuBackgroundBattle;
                 stackIn_11_1 = (lo.field_a[param3].hitTestItem(GetTorpedoReload.field_q, GetUseDetailLines.field_o, 6868) != -1) ? false : true;
-                ((dla) (Object) stackIn_10_0).a(stackIn_11_1, (byte) 55);
+                ((MenuBackgroundBattle) (Object) stackIn_10_0).render(stackIn_11_1, (byte) 55);
               }
             }
             lo.field_a[param3].draw((byte) 65);
           }
         }
         if (var4 == 0) {
-          SniperCannonWeaponDefinition.field_b = null;
+          SniperCannonWeaponDefinition.menuBackgroundBattle = null;
         }
         var5 = 1;
         var6 = 13421772;

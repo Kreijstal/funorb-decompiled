@@ -60,7 +60,7 @@ final class GetPhasedEnergyBeamFireForce extends ConsoleCommand {
         ThresholdTextureOperation.field_k = param0;
     }
 
-    final static void e(byte param0) {
+    final static void showDisplayModeDialog(byte param0) {
         if (param0 != 117) {
           return;
         }

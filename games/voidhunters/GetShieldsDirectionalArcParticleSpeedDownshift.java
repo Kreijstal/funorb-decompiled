@@ -15,7 +15,7 @@ final class GetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
           if (obfuscationGuard >= -119) {
             GetShieldsDirectionalArcParticleSpeedDownshift.clearSharedReferences((byte) 22);
           }
-          stackIn_3_0 = new ConsoleValue(apb.field_b);
+          stackIn_3_0 = new ConsoleValue(LogoMaterial.field_b);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

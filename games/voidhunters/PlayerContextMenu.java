@@ -154,7 +154,7 @@ final class PlayerContextMenu {
             for (var8Lifetime1 = param0; var8Lifetime1 < var7_intLifetime1; var8Lifetime1++) {
               var9Lifetime1 = UnlitGpuMaterialEffect.field_f[var8Lifetime1];
               var10Lifetime1 = UnlitGpuMaterialEffect.field_f[1 + var8Lifetime1];
-              if (dla.a(param5 + 103, param3, var10Lifetime1, var9Lifetime1)) {
+              if (MenuBackgroundBattle.scoreRowComesBefore(param5 + 103, param3, var10Lifetime1, var9Lifetime1)) {
                 UnlitGpuMaterialEffect.field_f[var8Lifetime1] = var10Lifetime1;
                 UnlitGpuMaterialEffect.field_f[1 + var8Lifetime1] = var9Lifetime1;
               }
