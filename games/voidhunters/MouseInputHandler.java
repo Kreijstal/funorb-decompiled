@@ -11,7 +11,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         try {
           if (GetDebrisFoundInPairs.field_q != null) {
-            OpenGlFramebuffer.field_b = 0;
+            OpenGlFramebuffer.mouseIdleTicks = 0;
             GetBombletSprayAimarc.field_q = 0;
             MouseActivityState.changed = true;
             var2_int = param0.getModifiers();
@@ -47,7 +47,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseExited(java.awt.event.MouseEvent param0) {
         try {
           if (GetDebrisFoundInPairs.field_q != null) {
-            OpenGlFramebuffer.field_b = 0;
+            OpenGlFramebuffer.mouseIdleTicks = 0;
             MonotonicMillisClock.field_a = -1;
             LegacyOpenGlSpecularEffect.field_e = -1;
             MouseActivityState.changed = true;
@@ -60,7 +60,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseDragged(java.awt.event.MouseEvent param0) {
         try {
           if (null != GetDebrisFoundInPairs.field_q) {
-            OpenGlFramebuffer.field_b = 0;
+            OpenGlFramebuffer.mouseIdleTicks = 0;
             MonotonicMillisClock.field_a = param0.getX();
             LegacyOpenGlSpecularEffect.field_e = param0.getY();
             MouseActivityState.changed = true;
@@ -73,7 +73,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseEntered(java.awt.event.MouseEvent param0) {
         try {
           if (GetDebrisFoundInPairs.field_q != null) {
-            OpenGlFramebuffer.field_b = 0;
+            OpenGlFramebuffer.mouseIdleTicks = 0;
             MonotonicMillisClock.field_a = param0.getX();
             LegacyOpenGlSpecularEffect.field_e = param0.getY();
             MouseActivityState.changed = true;
@@ -131,7 +131,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
         RuntimeException decompiledCaughtException = null;
         try {
           if (null != GetDebrisFoundInPairs.field_q) {
-            OpenGlFramebuffer.field_b = 0;
+            OpenGlFramebuffer.mouseIdleTicks = 0;
             TeamObjectiveFormatter.field_a = param0.getX();
             SetBombletSprayAimarc.field_p = param0.getY();
             MonotonicMillisClock.currentTimeMillis(false);
@@ -176,7 +176,7 @@ final class MouseInputHandler implements java.awt.event.MouseListener, java.awt.
     public final synchronized void mouseMoved(java.awt.event.MouseEvent param0) {
         try {
           if (GetDebrisFoundInPairs.field_q != null) {
-            OpenGlFramebuffer.field_b = 0;
+            OpenGlFramebuffer.mouseIdleTicks = 0;
             MonotonicMillisClock.field_a = param0.getX();
             LegacyOpenGlSpecularEffect.field_e = param0.getY();
             MouseActivityState.changed = true;

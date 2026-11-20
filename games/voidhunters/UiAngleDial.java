@@ -10,7 +10,7 @@ final class UiAngleDial extends UiFocusableComponent {
     int markerValue;
     static String settingsFileName;
     int value;
-    static int field_H;
+    static int cachedFramePointerX;
     static String field_G;
 
     public static void clearSharedReferences(int param0) {

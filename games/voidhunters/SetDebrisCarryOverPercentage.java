@@ -3,7 +3,7 @@
  */
 final class SetDebrisCarryOverPercentage extends ConsoleCommand {
     static String field_o;
-    static int field_p;
+    static int accountCreationAge;
 
     final static boolean supportsVertexBufferOption(int param0, byte param1, int param2) {
         if (param1 != 119) {
@@ -45,7 +45,7 @@ final class SetDebrisCarryOverPercentage extends ConsoleCommand {
 
     public static void clearSharedReferences(byte param0) {
         if (param0 > -100) {
-          field_p = 70;
+          accountCreationAge = 70;
           field_o = null;
           return;
         }

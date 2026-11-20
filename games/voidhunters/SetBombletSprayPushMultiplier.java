@@ -47,7 +47,7 @@ final class SetBombletSprayPushMultiplier extends ConsoleCommand {
         }
     }
 
-    final static Widget a(int param0) {
+    final static Widget getIgnoreListContent(int param0) {
         if (param0 != 0) {
           return (Widget) null;
         }

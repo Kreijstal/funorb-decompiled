@@ -10,7 +10,7 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
     static TextureCoordinateMode field_c;
     private int boundTarget;
     private int attachmentMask;
-    static volatile int field_b;
+    static volatile int mouseIdleTicks;
     private OpenGlFramebufferAttachment[] attachments;
 
     final void setReadBuffer(int param0, int param1) {
@@ -441,6 +441,6 @@ final class OpenGlFramebuffer implements OpenGlFramebufferBinding {
 
     static {
         field_c = new TextureCoordinateMode();
-        field_b = 0;
+        mouseIdleTicks = 0;
     }
 }

@@ -111,7 +111,7 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 32) {
-            AwardVictoryToTeamAction.a(42, true);
+            AwardVictoryToTeamAction.openDisplayModeDialog(42, true);
           }
           stackIn_3_0 = new TextureRectangleShape(param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readShort(true), param1.readUnsignedMedium((byte) -75), param1.readUnsignedMedium((byte) -94), param1.readUnsignedByte((byte) -119));
           return stackIn_3_0;
@@ -164,7 +164,7 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
         return this.team;
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void openDisplayModeDialog(int param0, boolean param1) {
         LogoMaterial.openDisplayModeDialog((byte) 116);
         if (param0 != -356) {
           PacketBuffer var3 = (PacketBuffer) null;
@@ -198,7 +198,7 @@ final class AwardVictoryToTeamAction extends MissionAction implements DiffableSt
         try {
           this.team = param3;
           if (param1) {
-            AwardVictoryToTeamAction.a(30, true);
+            AwardVictoryToTeamAction.openDisplayModeDialog(30, true);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.wrapClientException((Throwable) ((Object) runtimeException), "ika.K(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ')');

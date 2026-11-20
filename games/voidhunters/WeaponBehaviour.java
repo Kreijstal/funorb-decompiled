@@ -277,7 +277,7 @@ final class WeaponBehaviour implements DiffableState {
             return;
           }
           if (param4 >= 0) {
-            BlendTextureOperation.a(20382, param13, param4, param7, 5);
+            BlendTextureOperation.playSpatialSound(20382, param13, param4, param7, 5);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -423,7 +423,7 @@ final class WeaponBehaviour implements DiffableState {
           }
           if (this.weapontype == 10) {
             this.reload = Particle.field_a;
-            BlendTextureOperation.a(20382, var20Lifetime1, var34.getFiringSoundId(false), var21Lifetime1, this.reload / 2 + 1);
+            BlendTextureOperation.playSpatialSound(20382, var20Lifetime1, var34.getFiringSoundId(false), var21Lifetime1, this.reload / 2 + 1);
             return;
           }
           if (!var34.aimsDirectlyAtTarget(true) &&

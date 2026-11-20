@@ -106,9 +106,9 @@ final class SetVariableAction extends MissionAction implements DiffableState {
         }
     }
 
-    final static int b(int param0) {
+    final static int getAccountCreationAge(int param0) {
         int var1 = -61 / ((75 - param0) / 43);
-        return SetDebrisCarryOverPercentage.field_p;
+        return SetDebrisCarryOverPercentage.accountCreationAge;
     }
 
     public final void reportDifferences(SerializableGameState other, int obfuscationGuard) {

@@ -87,7 +87,7 @@ abstract class NetworkGameClient extends GameApplet {
               SetVariableActionFactory.advanceLogoAnimation((byte) 6);
             } else {
               if (GetSpinningBladeAimspeed.field_q != 0) {
-                GetLagOut.a(GetPointDefenceLaserPulsetime.field_o, param0 ^ 15877);
+                GetLagOut.updateAccountUi(GetPointDefenceLaserPulsetime.field_o, param0 ^ 15877);
               } else {
                 discarded$28 = this.processLoginUi((byte) -96, false, false);
               }
@@ -135,7 +135,7 @@ abstract class NetworkGameClient extends GameApplet {
         }
         if (!GetUseTriFill.a(45) &&
           GetSpinningBladeAimspeed.field_q != 11) {
-          PlayerGameDataFactory.a(true);
+          PlayerGameDataFactory.updateCachedFrameUi(true);
         }
         if (null != GetWaitForPlayers.field_o) {
           GetPointDefenceLaserPulsetime.field_o = GetWaitForPlayers.field_o.pollRotation(1);
@@ -144,7 +144,7 @@ abstract class NetworkGameClient extends GameApplet {
           var3 = 1200 * SetGrapplingHookRopeBreakLength.getTicksPerSecond(204);
           if (this.field_s ||
             !(var3 >= SetPedrosRepairModeSwitchtime.getKeyboardIdleTicks(32)) &&
-            !(NormalMapTextureOperation.d(-2) <= var3)) {
+            !(NormalMapTextureOperation.getMouseIdleTicks(-2) <= var3)) {
             this.field_s = false;
             FighterBayWeaponDefinition.closeGameConnection(-123);
             NetworkArchiveRequest.f((byte) -119);
@@ -671,7 +671,7 @@ abstract class NetworkGameClient extends GameApplet {
           int var5Lifetime1;
           int var6_intLifetime1;
           var9 = VoidHunters.field_G;
-          var4 = UiComboBoxList.a(false, GetPointDefenceLaserPulsetime.field_o, SetGrapplingHookAimarc.field_p, param2);
+          var4 = UiComboBoxList.pollAccountUi(false, GetPointDefenceLaserPulsetime.field_o, SetGrapplingHookAimarc.field_p, param2);
           if (0 == var4) {
             throw new IllegalStateException();
           }
@@ -689,7 +689,7 @@ abstract class NetworkGameClient extends GameApplet {
           }
           var5Lifetime1 = 60 % ((-49 - param0) / 41);
           if (var4 == 2) {
-            var6_int = RoundResult.a(SetVariableAction.b(119), GetPointDefenceLaserRandomness.getCurrentAccountEmail(52), this.affiliateId, (byte) 111, LoadBlackboxRecording.getCurrentLoginName(88), ThrusterBehaviourFactory.a(31065), MassDriverWeaponDefinition.getCurrentLoginPassword(true));
+            var6_int = RoundResult.a(SetVariableAction.getAccountCreationAge(119), GetPointDefenceLaserRandomness.getCurrentAccountEmail(52), this.affiliateId, (byte) 111, LoadBlackboxRecording.getCurrentLoginName(88), ThrusterBehaviourFactory.isAccountEmailUpdatesEnabled(31065), MassDriverWeaponDefinition.getCurrentLoginPassword(true));
             if (-1 != var6_int) {
               MonotonicMillisClock.handleAccountCreationReply(var6_int, -19342, GameInvitationText.field_a, GameJoinNotificationText.field_b);
               GameInvitationText.field_a = null;

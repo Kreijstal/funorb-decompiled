@@ -164,7 +164,7 @@ final class ComponentGeometryEditor {
                 if (SetMachineGunEnergyUsed.field_o[9]) {
                   if (!LoginMethod.field_b) {
                     System.out.println("Reloading game types");
-                    GetCountermeasureLauncherAimarc.e((byte) 113);
+                    GetCountermeasureLauncherAimarc.initializeGameDefinitions((byte) 113);
                   }
                   LoginMethod.field_b = true;
                 } else {

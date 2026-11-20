@@ -42,7 +42,7 @@ final class GetUseFilledPolygons extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0) {
+    final static void resetAccountUiRequests(int param0) {
         RemoveEventActionFactory.field_b = false;
         OpenGlSprite.reconnecting = false;
         GetSelfDestructPrepareToggleCooldown.setAccountUiResult(-86, param0);

@@ -106,7 +106,7 @@ final class BuildBlueprintOrderDefinition extends SpecialOrderDefinition {
               SetSniperCannonAimarc.a(param1, 0, 0, 0);
             } else {
               if (GetSpinningBladeAimspeed.field_q == 0) {
-                QuickChatPhraseDefinition.a((byte) -70, false, param2);
+                QuickChatPhraseDefinition.drawModalUiBackground((byte) -70, false, param2);
                 SetSniperCannonAimarc.a(param1, 0, 0, 0);
               } else {
                 GetPhasedEnergyBeamAimspeed.a(param1, true);

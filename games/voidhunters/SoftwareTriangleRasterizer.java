@@ -680,7 +680,7 @@ final class SoftwareTriangleRasterizer {
         param2 = param2 + (param5 - 1);
         param4 = param6 - param5 >> 2;
         param7 = param7 + param8 * (float)param5;
-        if (!this.context.field_f) {
+        if (!this.context.depthWriteEnabled) {
           if (this.transparency == 0) {
             while (true) {
               param4--;
@@ -2007,7 +2007,7 @@ final class SoftwareTriangleRasterizer {
         param9 = param9 + param10 * (float)param5;
         param11 = param11 + param12 * (float)param5;
         param13 = param13 + param14 * (float)param5;
-        if (!this.context.field_f) {
+        if (!this.context.depthWriteEnabled) {
           if (!this.coarseShading) {
             param4 = param6 - param5;
             if (this.transparency == 0) {

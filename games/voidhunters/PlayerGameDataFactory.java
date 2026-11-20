@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class PlayerGameDataFactory implements GameStateFactory {
-    final static void a(boolean param0) {
+    final static void updateCachedFrameUi(boolean param0) {
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var1 = null;
@@ -16,7 +16,7 @@ final class PlayerGameDataFactory implements GameStateFactory {
             }
             return;
           }
-          HighscoreTableRequest.field_h.processPointerInput((byte) -5, UiAngleDial.field_H, SetOndamageParticleFadestart.field_o, param0);
+          HighscoreTableRequest.field_h.processPointerInput((byte) -5, UiAngleDial.cachedFramePointerX, SetOndamageParticleFadestart.cachedFramePointerY, param0);
           HighscoreTableRequest.field_h.updatePanels(19976);
           while (UiAngleDial.pollKeyEvent(127)) {
             HighscoreTableRequest.field_h.dispatchKey(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);
@@ -36,7 +36,7 @@ final class PlayerGameDataFactory implements GameStateFactory {
 
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 != 11995) {
-          PlayerGameDataFactory.a(true);
+          PlayerGameDataFactory.updateCachedFrameUi(true);
           return (SerializableGameState[]) ((Object) new PlayerGameData[param1]);
         }
         return (SerializableGameState[]) ((Object) new PlayerGameData[param1]);

@@ -3392,7 +3392,7 @@ final class GameSession {
                     var6 = var6 + ((-this.field_i + 255) * (2 * HighscoreValueRequest.field_d) >> 8);
                     var5 = var5 + ((32 + var4_int) * (-this.field_i + 255) >> 8);
                   }
-                  PlayerJoinFactory.fillGradientRectangle(var6, HighscoreValueRequest.field_d, GetGrapplingHookAimarc.a(param1 ^ -46080, var10), var9, var5, var10, 0);
+                  PlayerJoinFactory.fillGradientRectangle(var6, HighscoreValueRequest.field_d, GetGrapplingHookAimarc.halveRgbPreservingAlpha(param1 ^ -46080, var10), var9, var5, var10, 0);
                   for (var11 = 125; var11 < var8; var11 += 125) {
                     var12 = var11 * var4_int / var8 + var5;
                     DelayedPacket.drawLine(var6 + 2, var12, var12, var6, -16777216, 4473924);

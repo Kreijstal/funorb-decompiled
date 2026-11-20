@@ -120,7 +120,7 @@ final class BricksTextureOperation extends TextureOperation {
           TileTextureOperation.closePlayerContextMenu(0);
           return true;
         }
-        if (GetMissileLauncherEnergyUsed.e((byte) 114)) {
+        if (GetMissileLauncherEnergyUsed.handleNameEntryKeyEvent((byte) 114)) {
           return true;
         }
         if (param1 != -2048) {

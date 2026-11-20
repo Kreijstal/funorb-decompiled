@@ -12,13 +12,13 @@ final class SetMassDriverProjectileDamage extends ConsoleCommand {
     public static void clearSharedReferences(int param0) {
         field_p = null;
         if (param0 != 9099) {
-          SetMassDriverProjectileDamage.a(-21, -94, -54);
+          SetMassDriverProjectileDamage.setCachedFramePointerPosition(-21, -94, -54);
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
-        SetOndamageParticleFadestart.field_o = param1;
-        UiAngleDial.field_H = param0;
+    final static void setCachedFramePointerPosition(int param0, int param1, int param2) {
+        SetOndamageParticleFadestart.cachedFramePointerY = param1;
+        UiAngleDial.cachedFramePointerX = param0;
         if (param2 != 143) {
           SetMassDriverProjectileDamage.clearSharedReferences(-87);
         }

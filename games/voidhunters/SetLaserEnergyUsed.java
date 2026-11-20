@@ -47,9 +47,9 @@ final class SetLaserEnergyUsed extends ConsoleCommand {
         }
     }
 
-    final static int e(byte param0) {
+    final static int getOverlayClipLeft(byte param0) {
         int var1 = 57 % ((param0 - 65) / 52);
-        return SetBombletSprayProjectileOndamageParticles.e((byte) 96) - DirectByteStorage.a(false) / 2;
+        return SetBombletSprayProjectileOndamageParticles.getOverlayClipCenterX((byte) 96) - DirectByteStorage.getOverlayClipWidth(false) / 2;
     }
 
     static {

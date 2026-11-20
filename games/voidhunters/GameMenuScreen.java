@@ -1069,7 +1069,7 @@ final class GameMenuScreen {
         if (!HardpointMatch.field_d &&
           !SetMassDriverFireForce.field_o) {
           while (UiAngleDial.pollKeyEvent(127)) {
-            if (GetSpinningBladeAimspeed.a(-22029)) {
+            if (GetSpinningBladeAimspeed.handleConsoleKeyEvent(-22029)) {
               continue;
             }
             if (SetBombletSprayProjectileDamage.field_o == 13) {

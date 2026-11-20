@@ -88,7 +88,7 @@ final class SpawnChoice implements DiffableState {
     }
 
     final static void b(int param0) {
-        GetUseFilledPolygons.a(-1);
+        GetUseFilledPolygons.resetAccountUiRequests(-1);
         if (param0 > 25) {
           OpenGlSprite.reconnecting = true;
           SocialListEntry.field_xb = true;

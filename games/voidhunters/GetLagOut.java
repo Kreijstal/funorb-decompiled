@@ -6,10 +6,10 @@ final class GetLagOut extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(int param0, int param1) {
-        ColorRowCache.c(1);
+    final static void updateAccountUi(int param0, int param1) {
+        ColorRowCache.pollAccountUi(1);
         if (param1 != 15877) {
-          GetLagOut.a(50, -58);
+          GetLagOut.updateAccountUi(50, -58);
         }
     }
 

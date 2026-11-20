@@ -425,11 +425,11 @@ final class PerlinNoiseTextureOperation extends TextureOperation {
         return var5;
     }
 
-    final static void a(boolean param0, byte param1) {
+    final static void drawDarkenedModalUi(boolean param0, byte param1) {
         if (param1 != 71) {
           return;
         }
-        QuickChatPhraseDefinition.a((byte) -121, true, param0);
+        QuickChatPhraseDefinition.drawModalUiBackground((byte) -121, true, param0);
     }
 
     static {

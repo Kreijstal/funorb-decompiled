@@ -9,7 +9,7 @@ final class GetSpinningBladeAimspeed extends ConsoleCommand {
     public static void clearSharedReferences(byte param0) {
         field_o = null;
         if (param0 >= -113) {
-          GetSpinningBladeAimspeed.a(-93);
+          GetSpinningBladeAimspeed.handleConsoleKeyEvent(-93);
         }
     }
 
@@ -46,7 +46,7 @@ final class GetSpinningBladeAimspeed extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean a(int param0) {
+    final static boolean handleConsoleKeyEvent(int param0) {
         if (DialogMessagePanel.field_C != null) {
           return DialogMessagePanel.field_C.handleKey(SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r, -40);
         }

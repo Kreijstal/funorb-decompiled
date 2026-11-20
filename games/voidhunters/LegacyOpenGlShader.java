@@ -13,7 +13,7 @@ final class LegacyOpenGlShader {
         var1_ref = GetDebrisFoundInPairs.field_q;
         synchronized (var1_ref) {
           GpuVertexNormal.field_b = GetBombletSprayAimarc.field_q;
-          OpenGlFramebuffer.field_b = OpenGlFramebuffer.field_b + 1;
+          OpenGlFramebuffer.mouseIdleTicks = OpenGlFramebuffer.mouseIdleTicks + 1;
           PlayerGameData.field_b = MonotonicMillisClock.field_a;
           OpenGlFaceAttachment.field_b = LegacyOpenGlSpecularEffect.field_e;
           VariableConditionFactory.field_c = MouseActivityState.changed;

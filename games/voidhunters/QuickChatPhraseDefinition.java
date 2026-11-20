@@ -23,7 +23,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         var9 = VoidHunters.field_G;
         try {
           if (param2 != 0) {
-            QuickChatPhraseDefinition.a((byte) 3, false, false);
+            QuickChatPhraseDefinition.drawModalUiBackground((byte) 3, false, false);
           }
           if (param1 == 1) {
             this.textSegments = SetFighterBayAimspeed.a((byte) -67, '<', param0.readString(-1));
@@ -138,7 +138,7 @@ final class QuickChatPhraseDefinition extends DualLinkNode {
         }
     }
 
-    final static void a(byte param0, boolean param1, boolean param2) {
+    final static void drawModalUiBackground(byte param0, boolean param1, boolean param2) {
         if (param0 > -6) {
           return;
         }

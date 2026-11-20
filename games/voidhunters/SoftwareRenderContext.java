@@ -3,7 +3,7 @@
  */
 final class SoftwareRenderContext {
     Runnable thread;
-    boolean field_f;
+    boolean depthWriteEnabled;
     private SoftwareToolkit toolkit;
     private int[] field_b;
     SoftwareTriangleRasterizer rasterizer;
@@ -23,7 +23,7 @@ final class SoftwareRenderContext {
     final void resetRasterizer(byte param0) {
         this.rasterizer = new SoftwareTriangleRasterizer(this.toolkit, this);
         if (param0 != 3) {
-          this.field_f = false;
+          this.depthWriteEnabled = false;
         }
     }
 
@@ -140,7 +140,7 @@ final class SoftwareRenderContext {
         String stackIn_8_2 = null;
         RuntimeException decompiledCaughtException = null;
         RuntimeException var2 = null;
-        this.field_f = true;
+        this.depthWriteEnabled = true;
         SoftwareTransform3D discarded$11 = new SoftwareTransform3D();
         this.field_a = new float[2];
         try {

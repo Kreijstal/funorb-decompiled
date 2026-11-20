@@ -383,8 +383,8 @@ final class PlayerContextMenu {
           BodyInZoneConditionFactory.field_a != this.targetPlayerKey &&
           null != SetSpinningBladeSpindamageMultiplier.field_o &&
           SmoothedNanoTickClock.isLocalLobbyOwner(-45)) {
-          var7 = SetPhasedEnergyBeamAimarc.a((byte) 80, this.targetPlayerKey);
-          var4 = ScrollBarWidget.a(this.targetPlayerKey, true);
+          var7 = SetPhasedEnergyBeamAimarc.findLobbyPlayer((byte) 80, this.targetPlayerKey);
+          var4 = ScrollBarWidget.findGamePlayer(this.targetPlayerKey, true);
           var5 = this.getTargetDisplayName((byte) -128);
           if (var4 == null) {
             if (var7 != null &&

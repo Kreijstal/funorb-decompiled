@@ -120,7 +120,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
               var18 = ((PacketBuffer) ((Object) var1)).readString(-1);
               var17 = ((PacketBuffer) ((Object) var1)).readString(-1);
               var19 = ((PacketBuffer) ((Object) var1)).readString(-1);
-              var20 = SetPhasedEnergyBeamAimarc.a((byte) 80, var3_long);
+              var20 = SetPhasedEnergyBeamAimarc.findLobbyPlayer((byte) 80, var3_long);
               var8_ref_jk = var20;
               stackIn_12_0 = (var17.equals("")) ? 0 : 1;
               var9 = stackIn_12_0;
@@ -147,7 +147,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
             if (var2 == 6) {
               var3_longLifetime1 = ((PacketBuffer) ((Object) var1)).readLong(255);
               var5 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -120);
-              var29 = SetPhasedEnergyBeamAimarc.a((byte) 80, var3_longLifetime1);
+              var29 = SetPhasedEnergyBeamAimarc.findLobbyPlayer((byte) 80, var3_longLifetime1);
               if (var29 == null) {
                 return;
               }
@@ -236,7 +236,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                     var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(255);
                     var25 = ((PacketBuffer) ((Object) var1)).readString(-1);
                     var26 = ((PacketBuffer) ((Object) var1)).readString(param0 ^ -14);
-                    var7 = ScrollBarWidget.a(var3_longLifetime2, true);
+                    var7 = ScrollBarWidget.findGamePlayer(var3_longLifetime2, true);
                     if (var7 == null) {
                       var7 = new LobbyPlayerEntry(var25, var26, var3_longLifetime2);
                       SetUseDetailLines.field_p.put(var7, (byte) -76, var3_longLifetime2);
@@ -256,7 +256,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                   if (var2 == 19) {
                     var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(255);
                     var5Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -120);
-                    var24 = ScrollBarWidget.a(var3_longLifetime2, true);
+                    var24 = ScrollBarWidget.findGamePlayer(var3_longLifetime2, true);
                     if (var24 != null) {
                       if (var5Lifetime1 != 0) {
                         var24.field_yb = GetMomentOfInertiaPredivideDownshift.field_p;
@@ -297,7 +297,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                 }
                 var3_longLifetime2 = ((PacketBuffer) ((Object) var1)).readLong(255);
                 var5Lifetime1Lifetime1 = ((PacketBuffer) ((Object) var1)).readUnsignedByte((byte) -89);
-                var12 = SetPhasedEnergyBeamAimarc.a((byte) 80, var3_longLifetime2);
+                var12 = SetPhasedEnergyBeamAimarc.findLobbyPlayer((byte) 80, var3_longLifetime2);
                 var23 = var12;
                 if (var12 == null) {
                   return;
@@ -318,7 +318,7 @@ final class GetTeamSelectionSpeedup extends ConsoleCommand {
                 return;
               }
               var3_longLifetime2Lifetime1 = ((PacketBuffer) ((Object) var1)).readLong(255);
-              var22 = SetPhasedEnergyBeamAimarc.a((byte) 80, var3_longLifetime2Lifetime1);
+              var22 = SetPhasedEnergyBeamAimarc.findLobbyPlayer((byte) 80, var3_longLifetime2Lifetime1);
               if (var22 != null) {
                 if (var2 != 14) {
                   if (!var22.field_Fb) {

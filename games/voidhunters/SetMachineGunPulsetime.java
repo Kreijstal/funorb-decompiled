@@ -11,7 +11,7 @@ final class SetMachineGunPulsetime extends ConsoleCommand {
         }
     }
 
-    final static boolean e(int param0) {
+    final static boolean hasPrivilegedAccess(int param0) {
         if (param0 != 0) {
           SetMachineGunPulsetime.clearSharedReferences(-11);
           return SetTorpedoProjectiles.field_o.privilegedAccess;
@@ -29,7 +29,7 @@ final class SetMachineGunPulsetime extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(188, 62, arguments[0].intValue(124));
           if (obfuscationGuard >= -119) {
-            SetMachineGunPulsetime.e(117);
+            SetMachineGunPulsetime.hasPrivilegedAccess(117);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;

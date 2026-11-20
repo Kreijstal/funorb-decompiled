@@ -168,7 +168,7 @@ final class ResourceNode implements DiffableState {
           var6 = (int)(8192.0f * param0.scale);
           UiToggleButtonRenderer.drawRectangle(126, var3_int - 1, var6 + 2, -1 + var4, 8947848, var5 + 2);
           var7 = AlphaContainer.getTeamColor(false, this.field_h, 13894143);
-          var8 = GetGrapplingHookAimarc.a(-16777216, var7);
+          var8 = GetGrapplingHookAimarc.halveRgbPreservingAlpha(-16777216, var7);
           PlayerJoinFactory.fillGradientRectangle(var4, var6, var8, this.captureTimer * var5 / Particle.field_G, var3_int, var7, 0);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -5,7 +5,7 @@ final class SetSniperCannonAimspeed extends ConsoleCommand {
     static int field_o;
 
     final static void showLoginForm(boolean param0, int param1, boolean param2, String param3) {
-        GetUseFilledPolygons.a(-1);
+        GetUseFilledPolygons.resetAccountUiRequests(-1);
         GetLagStandardDeviationIn.modalStack.closeAllPanels((byte) -17);
         if (param1 >= -77) {
           return;

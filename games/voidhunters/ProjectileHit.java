@@ -99,12 +99,12 @@ final class ProjectileHit {
               } else {
                 if (!var6.asteroid) {
                   if (var6.field_B == 0) {
-                    BlendTextureOperation.a(20382, this.impactX, 60, this.impactY, 1);
+                    BlendTextureOperation.playSpatialSound(20382, this.impactX, 60, this.impactY, 1);
                   } else {
-                    BlendTextureOperation.a(20382, this.impactX, 56, this.impactY, 1);
+                    BlendTextureOperation.playSpatialSound(20382, this.impactX, 56, this.impactY, 1);
                   }
                 } else {
-                  BlendTextureOperation.a(20382, this.impactX, 77, this.impactY, 1);
+                  BlendTextureOperation.playSpatialSound(20382, this.impactX, 77, this.impactY, 1);
                 }
               }
             } else {

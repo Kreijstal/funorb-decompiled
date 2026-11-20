@@ -15,7 +15,7 @@ final class GetMachineGunReload extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            GetMachineGunReload.a(64, -47, -50);
+            GetMachineGunReload.configureSymmetricSimulatedLag(64, -47, -50);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(113, 100));
           return stackIn_3_0;
@@ -33,7 +33,7 @@ final class GetMachineGunReload extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void configureSymmetricSimulatedLag(int param0, int param1, int param2) {
         SetGrapplingHookSpringConstant.configureSymmetricSimulatedLag(param1, 0, param2);
         int var3 = 28 / ((-50 - param0) / 58);
     }

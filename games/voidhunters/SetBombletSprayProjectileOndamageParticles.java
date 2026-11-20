@@ -41,7 +41,7 @@ final class SetBombletSprayProjectileOndamageParticles extends ConsoleCommand {
         }
     }
 
-    final static int e(byte param0) {
+    final static int getOverlayClipCenterX(byte param0) {
         if (param0 <= 87) {
           field_o = (String) null;
           return 320;

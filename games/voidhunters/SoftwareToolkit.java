@@ -1079,9 +1079,9 @@ final class SoftwareToolkit extends GraphicsToolkit {
         return false;
     }
 
-    private final void a(boolean param0) {
+    private final void setDepthWriteEnabled(boolean param0) {
         SoftwareRenderContext var2 = this.getThreadContext((Runnable) ((Object) Thread.currentThread()));
-        var2.field_f = param0 ? true : false;
+        var2.depthWriteEnabled = param0 ? true : false;
     }
 
     final ToolkitSprite createSprite(int[] param0, int param1, int param2, int param3, int param4, boolean param5) {
@@ -1516,7 +1516,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
         } else {
           var9.transparency = 0;
         }
-        this.a(false);
+        this.setDepthWriteEnabled(false);
         stackIn_25_0 = var9;
         stackIn_27_1 = !(var21 >= 0) || !(var21 <= var9.clipWidth) || !(var22 >= 0) || !(var22 <= var9.clipWidth) || !(var23 >= 0) || !(var23 <= var9.clipWidth);
         stackIn_25_0.clipHorizontally = stackIn_27_1;
@@ -1525,7 +1525,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
         stackIn_36_1 = !(var21 >= 0) || !(var21 <= var9.clipWidth) || !(var23 >= 0) || !(var23 <= var9.clipWidth) || !(var24 >= 0) || !(var24 <= var9.clipWidth);
         stackIn_34_0.clipHorizontally = stackIn_36_1;
         var9.drawFlatTriangle((float)var25, (float)var27, (float)var28, (float)var21, (float)var23, (float)var24, 100.0f, 100.0f, 100.0f, param4);
-        this.a(true);
+        this.setDepthWriteEnabled(true);
         return;
     }
 

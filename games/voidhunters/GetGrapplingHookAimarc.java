@@ -33,7 +33,7 @@ final class GetGrapplingHookAimarc extends ConsoleCommand {
         }
     }
 
-    final static int a(int param0, int param1) {
+    final static int halveRgbPreservingAlpha(int param0, int param1) {
         if (param0 != -16777216) {
           return 34;
         }

@@ -98,11 +98,11 @@ final class UiComboBoxList extends UiFocusProxy {
         }
     }
 
-    final static int a(boolean param0, int param1, int param2, boolean param3) {
+    final static int pollAccountUi(boolean param0, int param1, int param2, boolean param3) {
         if (param0) {
           UiComboBoxList.clearSharedReferences(-64);
         }
-        return ColorRowCache.c(1);
+        return ColorRowCache.pollAccountUi(1);
     }
 
     final int getPreferredListHeight(int param0) {

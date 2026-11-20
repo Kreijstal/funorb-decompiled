@@ -87,7 +87,7 @@ final class ColorRowCache {
         this.field_f = null;
     }
 
-    final static int c(int param0) {
+    final static int pollAccountUi(int param0) {
         int var1_int = 0;
         RuntimeException var1 = null;
         int var2 = 0;

@@ -39,7 +39,7 @@ final class MonotonicMillisClock {
         try {
           SetCountermeasureLauncherAimspeed.field_r = SetSniperCannonFireForce.completedAccountRequest;
           if (param0 == 255) {
-            stackIn_11_0 = !(SetDebrisCarryOverPercentage.field_p >= 13);
+            stackIn_11_0 = !(SetDebrisCarryOverPercentage.accountCreationAge >= 13);
             GuestPlayText.field_b = GpuIndexBufferOwner.createSuccessfulAccountResult(stackIn_11_0, param1 ^ -19341);
           } else {
             if (param0 < 100) {

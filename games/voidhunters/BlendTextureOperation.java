@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class BlendTextureOperation extends TextureOperation {
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void playSpatialSound(int param0, int param1, int param2, int param3, int param4) {
         if (param0 != 20382) {
           return;
         }

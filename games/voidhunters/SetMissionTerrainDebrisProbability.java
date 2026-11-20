@@ -12,7 +12,7 @@ final class SetMissionTerrainDebrisProbability extends ConsoleCommand {
           var8 = param3;
         }
         int var9 = param1 * param5 >> 8;
-        int var10 = GetGrapplingHookAimarc.a(-16777216, param0);
+        int var10 = GetGrapplingHookAimarc.halveRgbPreservingAlpha(-16777216, param0);
         int var11 = TextureRectangleShape.blendColors((byte) 95, param0, param1, var10);
         GetMachineGunPulsetime.fillRectangle(12124934, -98, -var9 + param5, param2 + (-var8 + param3) / 2, var8, param6 + var9);
         PlayerJoinFactory.fillGradientRectangle(param2, param3, var10, var9, param6, var11, param7 ^ param7);

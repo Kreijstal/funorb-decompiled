@@ -46,7 +46,7 @@ final class GetMissileLauncherEnergyUsed extends ConsoleCommand {
         }
     }
 
-    final static boolean e(byte param0) {
+    final static boolean handleNameEntryKeyEvent(byte param0) {
         if (param0 != 114) {
           return false;
         }

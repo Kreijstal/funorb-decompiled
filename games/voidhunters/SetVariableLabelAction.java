@@ -6,7 +6,7 @@ final class SetVariableLabelAction extends MissionAction implements DiffableStat
     private int label;
     static String field_a;
 
-    final static void d(int param0) {
+    final static void disableWindowResizing(int param0) {
         if (MissionConditionFactory.field_b != null) {
           MissionConditionFactory.field_b.resizable = false;
         }

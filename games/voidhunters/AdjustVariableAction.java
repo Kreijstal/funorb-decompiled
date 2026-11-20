@@ -4,7 +4,7 @@
 final class AdjustVariableAction extends MissionAction implements DiffableState {
     private int index;
     static GameStateFactory field_c;
-    static boolean field_a;
+    static boolean accountEmailUpdatesEnabled;
     private int mode;
 
     final WorldPoint getWorldPosition(World param0, int param1) {

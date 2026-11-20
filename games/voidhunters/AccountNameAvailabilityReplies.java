@@ -24,7 +24,7 @@ final class AccountNameAvailabilityReplies {
           }
           SetShipTeamAction.field_b = SetSniperCannonFireForce.completedAccountRequest;
           if (param1 == 255) {
-            stackIn_12_0 = !(SetDebrisCarryOverPercentage.field_p >= 13);
+            stackIn_12_0 = !(SetDebrisCarryOverPercentage.accountCreationAge >= 13);
             PrimitiveType.field_a = GpuIndexBufferOwner.createSuccessfulAccountResult(stackIn_12_0, 1);
             var6 = (String[]) null;
             WeaponDefinition.a((String[]) null, 11113);

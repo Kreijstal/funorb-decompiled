@@ -4,7 +4,7 @@
 final class MissileLauncherWeaponDefinition extends WeaponDefinition {
     static boolean field_b;
 
-    final static Widget i(byte param0) {
+    final static Widget getFriendListContent(byte param0) {
         if (param0 >= -75) {
           field_b = true;
           return BitmapTextLayout.field_n.content;

@@ -51,7 +51,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
         CarouselEvent.field_h = param2 >> 1;
         if (param0) {
           GetComponentBreakingExplosionForceMultiplier.field_p = param3 >> 1;
-          if (SetMachineGunPulsetime.e(0)) {
+          if (SetMachineGunPulsetime.hasPrivilegedAccess(0)) {
             if (param1 &&
               !ShipComponentFactory.field_a) {
               SetMassDriverReload.a(6045);
@@ -110,7 +110,7 @@ final class SetReadyRoomMissionTime extends ConsoleCommand {
         } else {
           SetReadyRoomMissionTime.a(false, true, -60, -60);
           GetComponentBreakingExplosionForceMultiplier.field_p = param3 >> 1;
-          if (!SetMachineGunPulsetime.e(0)) {
+          if (!SetMachineGunPulsetime.hasPrivilegedAccess(0)) {
             if (!ShipComponentFactory.field_a) {
               GetTorpedoReload.field_q = OpenGlFaceAttachment.field_b;
               GetUseDetailLines.field_o = PlayerGameData.field_b;

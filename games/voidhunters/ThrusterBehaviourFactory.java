@@ -21,11 +21,11 @@ final class ThrusterBehaviourFactory implements GameStateFactory {
         return (java.awt.Container) ((Object) MissionList.getApplet((byte) -122));
     }
 
-    final static boolean a(int param0) {
+    final static boolean isAccountEmailUpdatesEnabled(int param0) {
         if (param0 != 31065) {
           return true;
         }
-        return AdjustVariableAction.field_a;
+        return AdjustVariableAction.accountEmailUpdatesEnabled;
     }
 
     public static void clearSharedReferences(byte param0) {

@@ -13508,6 +13508,14 @@
       "renamedSymbol": "F:UiAngleDial.radius:I"
     },
     {
+      "symbol": "F:ata.field_H:I",
+      "originalName": "field_H",
+      "to": "cachedFramePointerX",
+      "evidence": "Original first coordinate stored by setter, passed as X to cached frame modal stack processPointerInput.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:UiAngleDial.cachedFramePointerX:I"
+    },
+    {
       "symbol": "F:ata.field_I:I",
       "originalName": "field_I",
       "to": "stepsPerRevolution",
@@ -15058,6 +15066,14 @@
       "evidence": "Reviewed SoftwareToolkit thread-context lookup and rasterizer refresh.",
       "confidence": "reviewed",
       "renamedSymbol": "F:SoftwareRenderContext.rasterizer:LSoftwareTriangleRasterizer;"
+    },
+    {
+      "symbol": "F:co.field_f:Z",
+      "originalName": "field_f",
+      "to": "depthWriteEnabled",
+      "evidence": "SoftwareRenderContext setter and full flat/Gouraud rasterizer spans prove original depth-write gate; default true and bad-guard false retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SoftwareRenderContext.depthWriteEnabled:Z"
     },
     {
       "symbol": "F:coa.field_a:Z",
@@ -20764,6 +20780,14 @@
       "renamedSymbol": "F:DateOfBirthTextFields.monthFirst:Z"
     },
     {
+      "symbol": "F:iua.field_p:I",
+      "originalName": "field_p",
+      "to": "accountCreationAge",
+      "evidence": "AccountCreationForm parses ageField.text then passes this stored value to original account request. Minus-one parse fallback retained.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SetDebrisCarryOverPercentage.accountCreationAge:I"
+    },
+    {
       "symbol": "F:iv.field_o:I",
       "originalName": "field_o",
       "to": "canvasMenuMode",
@@ -21290,6 +21314,14 @@
       "evidence": "Deferred texture id/cost pairs consumed by glDeleteTextures.",
       "confidence": "reviewed",
       "renamedSymbol": "F:OpenGlGpuToolkit.textureDeletionQueue:LIntrusiveDeque;"
+    },
+    {
+      "symbol": "F:jpa.field_a:Z",
+      "originalName": "field_a",
+      "to": "accountEmailUpdatesEnabled",
+      "evidence": "AccountCreationForm.emailUpdatesToggle.active is stored by startAccountCreation and returned to original request writer.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:AdjustVariableAction.accountEmailUpdatesEnabled:Z"
     },
     {
       "symbol": "F:jpa.field_b:I",
@@ -29196,6 +29228,14 @@
       "renamedSymbol": "F:OpenGlFramebuffer.bindingMask:I"
     },
     {
+      "symbol": "F:rpa.field_b:I",
+      "originalName": "field_b",
+      "to": "mouseIdleTicks",
+      "evidence": "Volatile counter incremented by snapshotMouseState and reset by actual MouseInputHandler event handlers.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:OpenGlFramebuffer.mouseIdleTicks:I"
+    },
+    {
       "symbol": "F:rpa.field_d:I",
       "originalName": "field_d",
       "to": "boundTarget",
@@ -32572,6 +32612,14 @@
       "renamedSymbol": "F:MissionControl.selectedEvent:I"
     },
     {
+      "symbol": "F:uo.field_o:I",
+      "originalName": "field_o",
+      "to": "cachedFramePointerY",
+      "evidence": "Original second coordinate stored by setter, passed as Y to cached frame modal stack processPointerInput.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SetOndamageParticleFadestart.cachedFramePointerY:I"
+    },
+    {
       "symbol": "F:uoa.field_a:I",
       "originalName": "field_a",
       "to": "index",
@@ -35852,6 +35900,14 @@
       "renamedSymbol": "M:SoftwareFramebuffer.clearSharedReferences(Z)V"
     },
     {
+      "symbol": "M:ala.a(II)V",
+      "originalName": "a",
+      "to": "updateAccountUi",
+      "evidence": "Full wrapper and account UI delegate reviewed. Preserve polling side effects, ignored result, unused first argument and bad-guard recursion after polling.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GetLagOut.updateAccountUi(II)V"
+    },
+    {
       "symbol": "M:ala.a([Lnc;I)Lnc;",
       "originalName": "a",
       "to": "execute",
@@ -38860,6 +38916,14 @@
       "renamedSymbol": "M:SetLaserEnergyUsed.execute([LConsoleValue;I)LConsoleValue;"
     },
     {
+      "symbol": "M:bja.e(B)I",
+      "originalName": "e",
+      "to": "getOverlayClipLeft",
+      "evidence": "Full expression and ServerInfoFactory pushClip consumers reviewed: centerX minus width/2. Preserve integer division, guard arithmetic and original getter order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SetLaserEnergyUsed.getOverlayClipLeft(B)I"
+    },
+    {
       "symbol": "M:bja.f(B)V",
       "originalName": "f",
       "to": "clearSharedReferences",
@@ -40468,6 +40532,14 @@
       "renamedSymbol": "M:SetVariableLabelAction.clearSharedReferences(I)V"
     },
     {
+      "symbol": "M:cf.d(I)V",
+      "originalName": "d",
+      "to": "disableWindowResizing",
+      "evidence": "Full body and display-mode restoration caller reviewed: disable original controller resizing when present, then notify browser with original arguments. Preserve null handling and call order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SetVariableLabelAction.disableWindowResizing(I)V"
+    },
+    {
       "symbol": "M:cfa.a(B)Ldka;",
       "originalName": "a",
       "to": "getType",
@@ -41692,6 +41764,14 @@
       "renamedSymbol": "M:PlayerGameDataFactory.createArray(II)[LSerializableGameState;"
     },
     {
+      "symbol": "M:csb.a(Z)V",
+      "originalName": "a",
+      "to": "updateCachedFrameUi",
+      "evidence": "Complete cached-frame modal UI helper reviewed. Preserve focus-loss fullscreen exit/error dialog, cached-frame gate, pointer dispatch, panel updates, key polling order and exception wrapping.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PlayerGameDataFactory.updateCachedFrameUi(Z)V"
+    },
+    {
       "symbol": "M:ct.a(B)V",
       "originalName": "a",
       "to": "clearSharedReferences",
@@ -42266,6 +42346,14 @@
       "evidence": "Append original byte-indexed record-write payload to pending queue and immediately send with supplied opcode;retain guard0 gate and no-copy/ordering behavior.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SetLaserReload.enqueueByteIndexedRecordWrite(ILByteIndexedRecordWriteRequest;I)V"
+    },
+    {
+      "symbol": "M:dba.a(IZ)V",
+      "originalName": "a",
+      "to": "drawNameEntryDialog",
+      "evidence": "Full active-dialog drawing wrapper reviewed. Preserve early guard return, null check, supplied boolean and original draw guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SetLaserReload.drawNameEntryDialog(IZ)V"
     },
     {
       "symbol": "M:dba.a([Lnc;I)Lnc;",
@@ -43090,6 +43178,14 @@
       "evidence": "Random integer offsets in the symmetric range are added independently to projectile X/Y velocity. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:MissileLauncherWeaponDefinition.getProjectileVelocityRandomness(B)I"
+    },
+    {
+      "symbol": "M:dm.i(B)Lllb;",
+      "originalName": "i",
+      "to": "getFriendListContent",
+      "evidence": "Full getter and initializeSocialLists argument-to-friend-deque assignment reviewed. Preserve bad-guard flag write and original content lookup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:MissileLauncherWeaponDefinition.getFriendListContent(B)LWidget;"
     },
     {
       "symbol": "M:dm.k(I)I",
@@ -44378,6 +44474,14 @@
       "evidence": "Every console command subclass returns an nc result from an nc argument array. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GetCountermeasureLauncherAimarc.execute([LConsoleValue;I)LConsoleValue;"
+    },
+    {
+      "symbol": "M:dva.e(B)V",
+      "originalName": "e",
+      "to": "initializeGameDefinitions",
+      "evidence": "Full helper and startup/editor reload callers reviewed: initialize special orders, weapon and component definitions, then capture settings snapshot. Preserve initialization order and bad-guard flag write.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GetCountermeasureLauncherAimarc.initializeGameDefinitions(B)V"
     },
     {
       "symbol": "M:dw.a(I)V",
@@ -45890,6 +45994,14 @@
       "evidence": "Factory contract for a default state object; concrete factories construct their state type, while abstract-only factories return null. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ThrusterBehaviourFactory.create(B)LSerializableGameState;"
+    },
+    {
+      "symbol": "M:etb.a(I)Z",
+      "originalName": "a",
+      "to": "isAccountEmailUpdatesEnabled",
+      "evidence": "Full getter and form-to-startAccountCreation producer reviewed: original emailUpdatesToggle.active value. Preserve invalid-guard true and original request boolean.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ThrusterBehaviourFactory.isAccountEmailUpdatesEnabled(I)Z"
     },
     {
       "symbol": "M:etb.a(II)[Ltv;",
@@ -49340,6 +49452,14 @@
       "renamedSymbol": "M:NormalMapTextureOperation.clearSharedReferences(Z)V"
     },
     {
+      "symbol": "M:gia.d(I)I",
+      "originalName": "d",
+      "to": "getMouseIdleTicks",
+      "evidence": "Full getter, snapshotMouseState increment and MouseInputHandler reset producers reviewed. Original volatile counter increments each snapshot and resets on mouse events; preserve bad-guard cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:NormalMapTextureOperation.getMouseIdleTicks(I)I"
+    },
+    {
       "symbol": "M:gib.a(B)V",
       "originalName": "a",
       "to": "showProgressDialog",
@@ -51708,6 +51828,14 @@
       "renamedSymbol": "M:MissionListFactory.createArray(II)[LSerializableGameState;"
     },
     {
+      "symbol": "M:hia.a(I)Lllb;",
+      "originalName": "a",
+      "to": "getIgnoreListContent",
+      "evidence": "Full getter and initializeSocialLists argument-to-ignore-deque assignment reviewed. Return original scrollpane content; retain invalid-guard null and null-pane failure.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SetBombletSprayPushMultiplier.getIgnoreListContent(I)LWidget;"
+    },
+    {
       "symbol": "M:hia.a([Lnc;I)Lnc;",
       "originalName": "a",
       "to": "execute",
@@ -53692,6 +53820,14 @@
       "renamedSymbol": "M:SetMachineGunPulsetime.execute([LConsoleValue;I)LConsoleValue;"
     },
     {
+      "symbol": "M:iha.e(I)Z",
+      "originalName": "e",
+      "to": "hasPrivilegedAccess",
+      "evidence": "Full PlatformService.privilegedAccess getter reviewed. Preserve invalid-guard shared cleanup and original null-service failure.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SetMachineGunPulsetime.hasPrivilegedAccess(I)Z"
+    },
+    {
       "symbol": "M:ihb.a(JJ)J",
       "originalName": "a",
       "to": "xorLong",
@@ -54146,6 +54282,14 @@
       "evidence": "Read four signed-short corner coordinates,two RGB colors and width into a rectangle record.",
       "confidence": "reviewed",
       "renamedSymbol": "M:AwardVictoryToTeamAction.decodeTextureRectangleShape(ILPacketBuffer;)LTextureRectangleShape;"
+    },
+    {
+      "symbol": "M:ika.a(IZ)V",
+      "originalName": "a",
+      "to": "openDisplayModeDialog",
+      "evidence": "Full display mode wrapper reviewed. Preserve ignored boolean, dialog open before bad-guard texture decoder call and original exception behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:AwardVictoryToTeamAction.openDisplayModeDialog(IZ)V"
     },
     {
       "symbol": "M:ika.a(I[ILrsb;)V",
@@ -60394,6 +60538,14 @@
       "evidence": "Every console command subclass returns an nc result from an nc argument array. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SetBombletSprayRandomness.execute([LConsoleValue;I)LConsoleValue;"
+    },
+    {
+      "symbol": "M:lba.a(I)V",
+      "originalName": "a",
+      "to": "resetAccountUiRequests",
+      "evidence": "Full helper and login/reconnect form entry callers reviewed: clear original cancellation and reconnect flags, set UI result, reset both account requests to idle. Preserve exact supplied result and assignment order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GetUseFilledPolygons.resetAccountUiRequests(I)V"
     },
     {
       "symbol": "M:lba.a([Lnc;I)Lnc;",
@@ -68140,6 +68292,14 @@
       "renamedSymbol": "M:GetMissileLauncherEnergyUsed.execute([LConsoleValue;I)LConsoleValue;"
     },
     {
+      "symbol": "M:nu.e(B)Z",
+      "originalName": "e",
+      "to": "handleNameEntryKeyEvent",
+      "evidence": "Full active-name-dialog keyboard wrapper reviewed. Preserve guard false, null check and original handleNameKeyEvent(false) result.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GetMissileLauncherEnergyUsed.handleNameEntryKeyEvent(B)Z"
+    },
+    {
       "symbol": "M:nua.a(IIIIILjava/lang/String;IIIIII)I",
       "originalName": "a",
       "to": "drawParagraph",
@@ -69154,6 +69314,14 @@
       "evidence": "OpenGL buffer-object implementation returns its native id; client-memory implementation returns zero. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:OpenGlVertexBufferObject.getBufferId(Z)I"
+    },
+    {
+      "symbol": "M:oaa.b(B)D",
+      "originalName": "b",
+      "to": "getOutgoingLagStdDevMillis",
+      "evidence": "Full getter of named outgoing lag standard deviation reviewed. Preserve bad-guard name-dialog predicate call before value read.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:OpenGlVertexBufferObject.getOutgoingLagStdDevMillis(B)D"
     },
     {
       "symbol": "M:oaa.c(I)V",
@@ -71466,6 +71634,14 @@
       "evidence": "Every console command subclass returns an nc result from an nc argument array. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GetTorpedoEnergyUsed.execute([LConsoleValue;I)LConsoleValue;"
+    },
+    {
+      "symbol": "M:pdb.a(BJ)Ljk;",
+      "originalName": "a",
+      "to": "findLobbyPlayer",
+      "evidence": "Full lookup and lobby initializer reviewed: original lobby-player hash table, keyed by player key. Preserve guard null and cast behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SetPhasedEnergyBeamAimarc.findLobbyPlayer(BJ)LLobbyPlayerEntry;"
     },
     {
       "symbol": "M:pdb.a([Lnc;I)Lnc;",
@@ -74452,6 +74628,14 @@
       "renamedSymbol": "M:Sprite.drawRecolored(III)V"
     },
     {
+      "symbol": "M:pi.a(BZZ)V",
+      "originalName": "a",
+      "to": "drawModalUiBackground",
+      "evidence": "Full renderer reviewed: clear framebuffer or darken it with alpha192, then draw modal stack using same background flag. Preserve unused final boolean, early byte guard and draw order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:QuickChatPhraseDefinition.drawModalUiBackground(BZZ)V"
+    },
+    {
       "symbol": "M:pi.a(I)Ljava/lang/String;",
       "originalName": "a",
       "to": "getPreviewText",
@@ -74714,6 +74898,14 @@
       "evidence": "Assign scrollbar bounds and update proportional thumb/track geometry with supplied content and viewport values.",
       "confidence": "reviewed",
       "renamedSymbol": "M:ScrollBarWidget.setBoundsAndGeometry(IIIIIIII)V"
+    },
+    {
+      "symbol": "M:pjb.a(JZ)Ljk;",
+      "originalName": "a",
+      "to": "findGamePlayer",
+      "evidence": "Full lookup and lobby initializer reviewed: original current-game player hash table, keyed by player key. Preserve false-guard null and hash lookup semantics.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ScrollBarWidget.findGamePlayer(JZ)LLobbyPlayerEntry;"
     },
     {
       "symbol": "M:pjb.a(Lfaa;[Ltv;II[Ljava/lang/Class;I)V",
@@ -75098,6 +75290,14 @@
       "evidence": "Copies this instance state into the supplied destination; confirmed by assignments in SettingsChange, MissionVariable and PlayerVote. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SetVariableAction.copyTo(BLSerializableGameState;)V"
+    },
+    {
+      "symbol": "M:pob.b(I)I",
+      "originalName": "b",
+      "to": "getAccountCreationAge",
+      "evidence": "Full getter and AccountCreationForm.submitAccountCreation producer reviewed: parse ageField.text, retain minus-one fallback, store original age and pass it to account-creation request. Preserve getter guard arithmetic.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SetVariableAction.getAccountCreationAge(I)I"
     },
     {
       "symbol": "M:pob.b(Lfaa;I)V",
@@ -75930,6 +76130,14 @@
       "evidence": "Color output contract; the base throws for operations that do not supply color output. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:BlendTextureOperation.getColorRow(II)[[I"
+    },
+    {
+      "symbol": "M:qba.a(IIIII)V",
+      "originalName": "a",
+      "to": "playSpatialSound",
+      "evidence": "Full gameplay sound wrapper reviewed: delegate original coordinates/sound arguments with false and volume256. Preserve guard no-op and argument order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:BlendTextureOperation.playSpatialSound(IIIII)V"
     },
     {
       "symbol": "M:qba.a(IILds;)V",
@@ -78068,6 +78276,14 @@
       "renamedSymbol": "M:VertexStreamLayout.getAttribute(II)LVertexAttribute;"
     },
     {
+      "symbol": "M:qmb.a(I)Z",
+      "originalName": "a",
+      "to": "handleConsoleKeyEvent",
+      "evidence": "Full wrapper and CommandConsole field producer reviewed: dispatch current global key code/character to console when present. Preserve dispatch-before-guard behavior and false fallback.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GetSpinningBladeAimspeed.handleConsoleKeyEvent(I)Z"
+    },
+    {
       "symbol": "M:qmb.a([Lnc;I)Lnc;",
       "originalName": "a",
       "to": "execute",
@@ -78170,6 +78386,14 @@
       "evidence": "Clears own static reference fields field_p. The reviewed body retains its original guard-dependent helper calls, recursion and scalar assignments without changing their behavior.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SetMassDriverProjectileDamage.clearSharedReferences(I)V"
+    },
+    {
+      "symbol": "M:qoa.a(III)V",
+      "originalName": "a",
+      "to": "setCachedFramePointerPosition",
+      "evidence": "Full setter and cached-frame modal input consumer reviewed: store original pointer X/Y used by PlayerGameDataFactory.updateCachedFrameUi. Preserve assignment order and invalid-guard cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SetMassDriverProjectileDamage.setCachedFramePointerPosition(III)V"
     },
     {
       "symbol": "M:qoa.a([Lnc;I)Lnc;",
@@ -80116,6 +80340,14 @@
       "renamedSymbol": "M:MachineGunWeaponDefinition.clearSharedReferences(I)V"
     },
     {
+      "symbol": "M:rmb.a(II)I",
+      "originalName": "a",
+      "to": "halveRgbPreservingAlpha",
+      "evidence": "Full packed-color expression and color-gradient consumers reviewed: shift RGB channels down one while preserving original alpha byte. Preserve mask0x807f7f7f, unsigned shift, addition and invalid-guard34.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GetGrapplingHookAimarc.halveRgbPreservingAlpha(II)I"
+    },
+    {
       "symbol": "M:rmb.a(IIIII)V",
       "originalName": "a",
       "to": "updateLoopingSound",
@@ -80948,6 +81180,14 @@
       "renamedSymbol": "M:ColorRowCache.getFullImage(I)[[[I"
     },
     {
+      "symbol": "M:rt.c(I)I",
+      "originalName": "c",
+      "to": "pollAccountUi",
+      "evidence": "Complete account modal input/result helper reviewed. Preserve pointer/key dispatch, panel updates, result consumption/reset, cancellation and pending name/email/creation request precedence, exact reply codes and guard.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:ColorRowCache.pollAccountUi(I)I"
+    },
+    {
       "symbol": "M:rta.a(I)V",
       "originalName": "a",
       "to": "clearSharedReferences",
@@ -81082,6 +81322,14 @@
       "evidence": "Monochrome output contract; the base throws when that output is unavailable. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PerlinNoiseTextureOperation.getMonochromeRow(IZ)[I"
+    },
+    {
+      "symbol": "M:rw.a(ZB)V",
+      "originalName": "a",
+      "to": "drawDarkenedModalUi",
+      "evidence": "Full wrapper and modal background renderer reviewed. Preserve byte guard and original true background flag plus forwarded otherwise-unused boolean.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PerlinNoiseTextureOperation.drawDarkenedModalUi(ZB)V"
     },
     {
       "symbol": "M:rw.c(B)V",
@@ -81514,6 +81762,14 @@
       "evidence": "Read requested byte count from supplied backing-buffer position. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:DirectByteStorage.getRange(III)[B"
+    },
+    {
+      "symbol": "M:se.a(Z)I",
+      "originalName": "a",
+      "to": "getOverlayClipWidth",
+      "evidence": "Full constant getter and ServerInfoFactory pushClip rectangle consumers reviewed: width495. Preserve true-guard cleanup and exact constant.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:DirectByteStorage.getOverlayClipWidth(Z)I"
     },
     {
       "symbol": "M:se.b(I)[B",
@@ -83356,6 +83612,14 @@
       "renamedSymbol": "M:SoftwareToolkit.setHeap(LGraphicsHeap;)V"
     },
     {
+      "symbol": "M:sob.a(Z)V",
+      "originalName": "a",
+      "to": "setDepthWriteEnabled",
+      "evidence": "Full per-thread context setter and all flat/Gouraud rasterizer span consumers reviewed: boolean gates depth writes. Preserve thread lookup and exact supplied value.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SoftwareToolkit.setDepthWriteEnabled(Z)V"
+    },
+    {
       "symbol": "M:sob.a([IIIIIZ)Laja;",
       "originalName": "a",
       "to": "createSprite",
@@ -83970,6 +84234,14 @@
       "evidence": "Every console command subclass returns an nc result from an nc argument array. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GetMachineGunFireForce.execute([LConsoleValue;I)LConsoleValue;"
+    },
+    {
+      "symbol": "M:sua.a(I)Lllb;",
+      "originalName": "a",
+      "to": "getLobbyPlayerListContent",
+      "evidence": "Full getter and lobby initializer player-list argument/deque consumers reviewed. Preserve bad-guard recursion through cleanup and null-pane failure.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GetMissilesAcceleration.getLobbyPlayerListContent(I)LWidget;"
     },
     {
       "symbol": "M:sua.a([Lnc;I)Lnc;",
@@ -84964,6 +85236,14 @@
       "renamedSymbol": "M:UiComboBoxList.setItems(II[Ljava/lang/Object;)V"
     },
     {
+      "symbol": "M:tia.a(ZIIZ)I",
+      "originalName": "a",
+      "to": "pollAccountUi",
+      "evidence": "Full account UI wrapper and delegate reviewed. Preserve ignored arguments, true-guard cleanup and exact returned account UI result.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:UiComboBoxList.pollAccountUi(ZIIZ)I"
+    },
+    {
       "symbol": "M:tia.b(IIII)V",
       "originalName": "b",
       "to": "drawLayer",
@@ -85890,6 +86170,14 @@
       "evidence": "Every console command subclass returns an nc result from an nc argument array. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SetBombletSprayProjectileOndamageParticles.execute([LConsoleValue;I)LConsoleValue;"
+    },
+    {
+      "symbol": "M:tqa.e(B)I",
+      "originalName": "e",
+      "to": "getOverlayClipCenterX",
+      "evidence": "Full constant getter, overlay drawing caller and left-edge computation reviewed: center320. Preserve bad-guard text cleanup and exact constant.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SetBombletSprayProjectileOndamageParticles.getOverlayClipCenterX(B)I"
     },
     {
       "symbol": "M:tr.a(B)V",
@@ -91794,6 +92082,14 @@
       "evidence": "Every console command subclass returns an nc result from an nc argument array. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GetBombletSprayPushMultiplier.execute([LConsoleValue;I)LConsoleValue;"
+    },
+    {
+      "symbol": "M:wbb.a(III)V",
+      "originalName": "a",
+      "to": "configureSymmetricSimulatedLag",
+      "evidence": "Full wrapper reviewed: forward both supplied values to existing symmetric lag configurator. Preserve trailing guard arithmetic after delegate.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GetMachineGunReload.configureSymmetricSimulatedLag(III)V"
     },
     {
       "symbol": "M:wbb.a([Lnc;I)Lnc;",
@@ -125263,9 +125559,9 @@
     },
     {
       "symbol": "F:ata.field_H:I",
-      "renamedSymbol": "F:UiAngleDial.field_H:I",
+      "renamedSymbol": "F:UiAngleDial.cachedFramePointerX:I",
       "originalName": "field_H",
-      "renamedName": "field_H",
+      "renamedName": "cachedFramePointerX",
       "declaration": {
         "file": "ata.java",
         "start": 236,
@@ -129806,9 +130102,9 @@
     },
     {
       "symbol": "F:co.field_f:Z",
-      "renamedSymbol": "F:SoftwareRenderContext.field_f:Z",
+      "renamedSymbol": "F:SoftwareRenderContext.depthWriteEnabled:Z",
       "originalName": "field_f",
-      "renamedName": "field_f",
+      "renamedName": "depthWriteEnabled",
       "declaration": {
         "file": "co.java",
         "start": 89,
@@ -144876,9 +145172,9 @@
     },
     {
       "symbol": "F:iua.field_p:I",
-      "renamedSymbol": "F:SetDebrisCarryOverPercentage.field_p:I",
+      "renamedSymbol": "F:SetDebrisCarryOverPercentage.accountCreationAge:I",
       "originalName": "field_p",
-      "renamedName": "field_p",
+      "renamedName": "accountCreationAge",
       "declaration": {
         "file": "iua.java",
         "start": 110,
@@ -148330,9 +148626,9 @@
     },
     {
       "symbol": "F:jpa.field_a:Z",
-      "renamedSymbol": "F:AdjustVariableAction.field_a:Z",
+      "renamedSymbol": "F:AdjustVariableAction.accountEmailUpdatesEnabled:Z",
       "originalName": "field_a",
-      "renamedName": "field_a",
+      "renamedName": "accountEmailUpdatesEnabled",
       "declaration": {
         "file": "jpa.java",
         "start": 151,
@@ -173564,9 +173860,9 @@
     },
     {
       "symbol": "F:rpa.field_b:I",
-      "renamedSymbol": "F:OpenGlFramebuffer.field_b:I",
+      "renamedSymbol": "F:OpenGlFramebuffer.mouseIdleTicks:I",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "mouseIdleTicks",
       "declaration": {
         "file": "rpa.java",
         "start": 294,
@@ -181770,9 +182066,9 @@
     },
     {
       "symbol": "F:uo.field_o:I",
-      "renamedSymbol": "F:SetOndamageParticleFadestart.field_o:I",
+      "renamedSymbol": "F:SetOndamageParticleFadestart.cachedFramePointerY:I",
       "originalName": "field_o",
-      "renamedName": "field_o",
+      "renamedName": "cachedFramePointerY",
       "declaration": {
         "file": "uo.java",
         "start": 82,
@@ -235010,7 +235306,7 @@
     },
     {
       "symbol": "L:bja.e(B)I#0",
-      "renamedSymbol": "L:SetLaserEnergyUsed.e(B)I#0",
+      "renamedSymbol": "L:SetLaserEnergyUsed.getOverlayClipLeft(B)I#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -258748,7 +259044,7 @@
     },
     {
       "symbol": "L:csb.a(Z)V#0",
-      "renamedSymbol": "L:PlayerGameDataFactory.a(Z)V#0",
+      "renamedSymbol": "L:PlayerGameDataFactory.updateCachedFrameUi(Z)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -258759,7 +259055,7 @@
     },
     {
       "symbol": "L:csb.a(Z)V#1",
-      "renamedSymbol": "L:PlayerGameDataFactory.a(Z)V#1",
+      "renamedSymbol": "L:PlayerGameDataFactory.updateCachedFrameUi(Z)V#1",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -258770,7 +259066,7 @@
     },
     {
       "symbol": "L:csb.a(Z)V#2",
-      "renamedSymbol": "L:PlayerGameDataFactory.a(Z)V#2",
+      "renamedSymbol": "L:PlayerGameDataFactory.updateCachedFrameUi(Z)V#2",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -258781,7 +259077,7 @@
     },
     {
       "symbol": "L:csb.a(Z)V#3",
-      "renamedSymbol": "L:PlayerGameDataFactory.a(Z)V#3",
+      "renamedSymbol": "L:PlayerGameDataFactory.updateCachedFrameUi(Z)V#3",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -350246,7 +350542,7 @@
     },
     {
       "symbol": "L:ika.a(IZ)V#0",
-      "renamedSymbol": "L:AwardVictoryToTeamAction.a(IZ)V#0",
+      "renamedSymbol": "L:AwardVictoryToTeamAction.openDisplayModeDialog(IZ)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -503718,7 +504014,7 @@
     },
     {
       "symbol": "L:pob.b(I)I#0",
-      "renamedSymbol": "L:SetVariableAction.b(I)I#0",
+      "renamedSymbol": "L:SetVariableAction.getAccountCreationAge(I)I#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -544253,7 +544549,7 @@
     },
     {
       "symbol": "L:rt.c(I)I#0",
-      "renamedSymbol": "L:ColorRowCache.c(I)I#0",
+      "renamedSymbol": "L:ColorRowCache.pollAccountUi(I)I#0",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -544264,7 +544560,7 @@
     },
     {
       "symbol": "L:rt.c(I)I#1",
-      "renamedSymbol": "L:ColorRowCache.c(I)I#1",
+      "renamedSymbol": "L:ColorRowCache.pollAccountUi(I)I#1",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -544275,7 +544571,7 @@
     },
     {
       "symbol": "L:rt.c(I)I#10",
-      "renamedSymbol": "L:ColorRowCache.c(I)I#10",
+      "renamedSymbol": "L:ColorRowCache.pollAccountUi(I)I#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -544286,7 +544582,7 @@
     },
     {
       "symbol": "L:rt.c(I)I#11",
-      "renamedSymbol": "L:ColorRowCache.c(I)I#11",
+      "renamedSymbol": "L:ColorRowCache.pollAccountUi(I)I#11",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -544297,7 +544593,7 @@
     },
     {
       "symbol": "L:rt.c(I)I#2",
-      "renamedSymbol": "L:ColorRowCache.c(I)I#2",
+      "renamedSymbol": "L:ColorRowCache.pollAccountUi(I)I#2",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -544308,7 +544604,7 @@
     },
     {
       "symbol": "L:rt.c(I)I#3",
-      "renamedSymbol": "L:ColorRowCache.c(I)I#3",
+      "renamedSymbol": "L:ColorRowCache.pollAccountUi(I)I#3",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -544319,7 +544615,7 @@
     },
     {
       "symbol": "L:rt.c(I)I#4",
-      "renamedSymbol": "L:ColorRowCache.c(I)I#4",
+      "renamedSymbol": "L:ColorRowCache.pollAccountUi(I)I#4",
       "originalName": "stackIn_11_0",
       "renamedName": "stackIn_11_0",
       "declaration": {
@@ -544330,7 +544626,7 @@
     },
     {
       "symbol": "L:rt.c(I)I#5",
-      "renamedSymbol": "L:ColorRowCache.c(I)I#5",
+      "renamedSymbol": "L:ColorRowCache.pollAccountUi(I)I#5",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -544341,7 +544637,7 @@
     },
     {
       "symbol": "L:rt.c(I)I#6",
-      "renamedSymbol": "L:ColorRowCache.c(I)I#6",
+      "renamedSymbol": "L:ColorRowCache.pollAccountUi(I)I#6",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -544352,7 +544648,7 @@
     },
     {
       "symbol": "L:rt.c(I)I#7",
-      "renamedSymbol": "L:ColorRowCache.c(I)I#7",
+      "renamedSymbol": "L:ColorRowCache.pollAccountUi(I)I#7",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -544363,7 +544659,7 @@
     },
     {
       "symbol": "L:rt.c(I)I#8",
-      "renamedSymbol": "L:ColorRowCache.c(I)I#8",
+      "renamedSymbol": "L:ColorRowCache.pollAccountUi(I)I#8",
       "originalName": "stackIn_24_0",
       "renamedName": "stackIn_24_0",
       "declaration": {
@@ -544374,7 +544670,7 @@
     },
     {
       "symbol": "L:rt.c(I)I#9",
-      "renamedSymbol": "L:ColorRowCache.c(I)I#9",
+      "renamedSymbol": "L:ColorRowCache.pollAccountUi(I)I#9",
       "originalName": "stackIn_26_0",
       "renamedName": "stackIn_26_0",
       "declaration": {
@@ -567573,7 +567869,7 @@
     },
     {
       "symbol": "L:sob.a(Z)V#0",
-      "renamedSymbol": "L:SoftwareToolkit.a(Z)V#0",
+      "renamedSymbol": "L:SoftwareToolkit.setDepthWriteEnabled(Z)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -641691,7 +641987,7 @@
     },
     {
       "symbol": "L:wbb.a(III)V#0",
-      "renamedSymbol": "L:GetMachineGunReload.a(III)V#0",
+      "renamedSymbol": "L:GetMachineGunReload.configureSymmetricSimulatedLag(III)V#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -664274,9 +664570,9 @@
     },
     {
       "symbol": "M:ala.a(II)V",
-      "renamedSymbol": "M:GetLagOut.a(II)V",
+      "renamedSymbol": "M:GetLagOut.updateAccountUi(II)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateAccountUi",
       "declaration": {
         "file": "ala.java",
         "start": 192,
@@ -669070,9 +669366,9 @@
     },
     {
       "symbol": "M:bja.e(B)I",
-      "renamedSymbol": "M:SetLaserEnergyUsed.e(B)I",
+      "renamedSymbol": "M:SetLaserEnergyUsed.getOverlayClipLeft(B)I",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "getOverlayClipLeft",
       "declaration": {
         "file": "bja.java",
         "start": 1551,
@@ -672018,9 +672314,9 @@
     },
     {
       "symbol": "M:cf.d(I)V",
-      "renamedSymbol": "M:SetVariableLabelAction.d(I)V",
+      "renamedSymbol": "M:SetVariableLabelAction.disableWindowResizing(I)V",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "disableWindowResizing",
       "declaration": {
         "file": "cf.java",
         "start": 182,
@@ -674119,9 +674415,9 @@
     },
     {
       "symbol": "M:csb.a(Z)V",
-      "renamedSymbol": "M:PlayerGameDataFactory.a(Z)V",
+      "renamedSymbol": "M:PlayerGameDataFactory.updateCachedFrameUi(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "updateCachedFrameUi",
       "declaration": {
         "file": "csb.java",
         "start": 93,
@@ -675054,9 +675350,9 @@
     },
     {
       "symbol": "M:dba.a(IZ)V",
-      "renamedSymbol": "M:SetLaserReload.a(IZ)V",
+      "renamedSymbol": "M:SetLaserReload.drawNameEntryDialog(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawNameEntryDialog",
       "declaration": {
         "file": "dba.java",
         "start": 515,
@@ -676594,9 +676890,9 @@
     },
     {
       "symbol": "M:dm.i(B)Lllb;",
-      "renamedSymbol": "M:MissileLauncherWeaponDefinition.i(B)LWidget;",
+      "renamedSymbol": "M:MissileLauncherWeaponDefinition.getFriendListContent(B)LWidget;",
       "originalName": "i",
-      "renamedName": "i",
+      "renamedName": "getFriendListContent",
       "declaration": {
         "file": "dm.java",
         "start": 117,
@@ -678684,9 +678980,9 @@
     },
     {
       "symbol": "M:dva.e(B)V",
-      "renamedSymbol": "M:GetCountermeasureLauncherAimarc.e(B)V",
+      "renamedSymbol": "M:GetCountermeasureLauncherAimarc.initializeGameDefinitions(B)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "initializeGameDefinitions",
       "declaration": {
         "file": "dva.java",
         "start": 2679,
@@ -681489,9 +681785,9 @@
     },
     {
       "symbol": "M:etb.a(I)Z",
-      "renamedSymbol": "M:ThrusterBehaviourFactory.a(I)Z",
+      "renamedSymbol": "M:ThrusterBehaviourFactory.isAccountEmailUpdatesEnabled(I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "isAccountEmailUpdatesEnabled",
       "declaration": {
         "file": "etb.java",
         "start": 664,
@@ -687440,9 +687736,9 @@
     },
     {
       "symbol": "M:gia.d(I)I",
-      "renamedSymbol": "M:NormalMapTextureOperation.d(I)I",
+      "renamedSymbol": "M:NormalMapTextureOperation.getMouseIdleTicks(I)I",
       "originalName": "d",
-      "renamedName": "d",
+      "renamedName": "getMouseIdleTicks",
       "declaration": {
         "file": "gia.java",
         "start": 3992,
@@ -691488,9 +691784,9 @@
     },
     {
       "symbol": "M:hia.a(I)Lllb;",
-      "renamedSymbol": "M:SetBombletSprayPushMultiplier.a(I)LWidget;",
+      "renamedSymbol": "M:SetBombletSprayPushMultiplier.getIgnoreListContent(I)LWidget;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getIgnoreListContent",
       "declaration": {
         "file": "hia.java",
         "start": 1564,
@@ -695206,9 +695502,9 @@
     },
     {
       "symbol": "M:iha.e(I)Z",
-      "renamedSymbol": "M:SetMachineGunPulsetime.e(I)Z",
+      "renamedSymbol": "M:SetMachineGunPulsetime.hasPrivilegedAccess(I)Z",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "hasPrivilegedAccess",
       "declaration": {
         "file": "iha.java",
         "start": 266,
@@ -695976,9 +696272,9 @@
     },
     {
       "symbol": "M:ika.a(IZ)V",
-      "renamedSymbol": "M:AwardVictoryToTeamAction.a(IZ)V",
+      "renamedSymbol": "M:AwardVictoryToTeamAction.openDisplayModeDialog(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "openDisplayModeDialog",
       "declaration": {
         "file": "ika.java",
         "start": 6208,
@@ -710628,9 +710924,9 @@
     },
     {
       "symbol": "M:lba.a(I)V",
-      "renamedSymbol": "M:GetUseFilledPolygons.a(I)V",
+      "renamedSymbol": "M:GetUseFilledPolygons.resetAccountUiRequests(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "resetAccountUiRequests",
       "declaration": {
         "file": "lba.java",
         "start": 1419,
@@ -723674,9 +723970,9 @@
     },
     {
       "symbol": "M:nu.e(B)Z",
-      "renamedSymbol": "M:GetMissileLauncherEnergyUsed.e(B)Z",
+      "renamedSymbol": "M:GetMissileLauncherEnergyUsed.handleNameEntryKeyEvent(B)Z",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "handleNameEntryKeyEvent",
       "declaration": {
         "file": "nu.java",
         "start": 1538,
@@ -725203,9 +725499,9 @@
     },
     {
       "symbol": "M:oaa.b(B)D",
-      "renamedSymbol": "M:OpenGlVertexBufferObject.b(B)D",
+      "renamedSymbol": "M:OpenGlVertexBufferObject.getOutgoingLagStdDevMillis(B)D",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "getOutgoingLagStdDevMillis",
       "declaration": {
         "file": "oaa.java",
         "start": 890,
@@ -729240,9 +729536,9 @@
     },
     {
       "symbol": "M:pdb.a(BJ)Ljk;",
-      "renamedSymbol": "M:SetPhasedEnergyBeamAimarc.a(BJ)LLobbyPlayerEntry;",
+      "renamedSymbol": "M:SetPhasedEnergyBeamAimarc.findLobbyPlayer(BJ)LLobbyPlayerEntry;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "findLobbyPlayer",
       "declaration": {
         "file": "pdb.java",
         "start": 1283,
@@ -733585,9 +733881,9 @@
     },
     {
       "symbol": "M:pi.a(BZZ)V",
-      "renamedSymbol": "M:QuickChatPhraseDefinition.a(BZZ)V",
+      "renamedSymbol": "M:QuickChatPhraseDefinition.drawModalUiBackground(BZZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawModalUiBackground",
       "declaration": {
         "file": "pi.java",
         "start": 4828,
@@ -734036,9 +734332,9 @@
     },
     {
       "symbol": "M:pjb.a(JZ)Ljk;",
-      "renamedSymbol": "M:ScrollBarWidget.a(JZ)LLobbyPlayerEntry;",
+      "renamedSymbol": "M:ScrollBarWidget.findGamePlayer(JZ)LLobbyPlayerEntry;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "findGamePlayer",
       "declaration": {
         "file": "pjb.java",
         "start": 5654,
@@ -734784,9 +735080,9 @@
     },
     {
       "symbol": "M:pob.b(I)I",
-      "renamedSymbol": "M:SetVariableAction.b(I)I",
+      "renamedSymbol": "M:SetVariableAction.getAccountCreationAge(I)I",
       "originalName": "b",
-      "renamedName": "b",
+      "renamedName": "getAccountCreationAge",
       "declaration": {
         "file": "pob.java",
         "start": 3726,
@@ -736236,9 +736532,9 @@
     },
     {
       "symbol": "M:qba.a(IIIII)V",
-      "renamedSymbol": "M:BlendTextureOperation.a(IIIII)V",
+      "renamedSymbol": "M:BlendTextureOperation.playSpatialSound(IIIII)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "playSpatialSound",
       "declaration": {
         "file": "qba.java",
         "start": 89,
@@ -739602,9 +739898,9 @@
     },
     {
       "symbol": "M:qmb.a(I)Z",
-      "renamedSymbol": "M:GetSpinningBladeAimspeed.a(I)Z",
+      "renamedSymbol": "M:GetSpinningBladeAimspeed.handleConsoleKeyEvent(I)Z",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleConsoleKeyEvent",
       "declaration": {
         "file": "qmb.java",
         "start": 1520,
@@ -739833,9 +740129,9 @@
     },
     {
       "symbol": "M:qoa.a(III)V",
-      "renamedSymbol": "M:SetMassDriverProjectileDamage.a(III)V",
+      "renamedSymbol": "M:SetMassDriverProjectileDamage.setCachedFramePointerPosition(III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setCachedFramePointerPosition",
       "declaration": {
         "file": "qoa.java",
         "start": 386,
@@ -743364,9 +743660,9 @@
     },
     {
       "symbol": "M:rmb.a(II)I",
-      "renamedSymbol": "M:GetGrapplingHookAimarc.a(II)I",
+      "renamedSymbol": "M:GetGrapplingHookAimarc.halveRgbPreservingAlpha(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "halveRgbPreservingAlpha",
       "declaration": {
         "file": "rmb.java",
         "start": 1232,
@@ -744794,9 +745090,9 @@
     },
     {
       "symbol": "M:rt.c(I)I",
-      "renamedSymbol": "M:ColorRowCache.c(I)I",
+      "renamedSymbol": "M:ColorRowCache.pollAccountUi(I)I",
       "originalName": "c",
-      "renamedName": "c",
+      "renamedName": "pollAccountUi",
       "declaration": {
         "file": "rt.java",
         "start": 2603,
@@ -745069,9 +745365,9 @@
     },
     {
       "symbol": "M:rw.a(ZB)V",
-      "renamedSymbol": "M:PerlinNoiseTextureOperation.a(ZB)V",
+      "renamedSymbol": "M:PerlinNoiseTextureOperation.drawDarkenedModalUi(ZB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawDarkenedModalUi",
       "declaration": {
         "file": "rw.java",
         "start": 15232,
@@ -745861,9 +746157,9 @@
     },
     {
       "symbol": "M:se.a(Z)I",
-      "renamedSymbol": "M:DirectByteStorage.a(Z)I",
+      "renamedSymbol": "M:DirectByteStorage.getOverlayClipWidth(Z)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getOverlayClipWidth",
       "declaration": {
         "file": "se.java",
         "start": 174,
@@ -748930,9 +749226,9 @@
     },
     {
       "symbol": "M:sob.a(Z)V",
-      "renamedSymbol": "M:SoftwareToolkit.a(Z)V",
+      "renamedSymbol": "M:SoftwareToolkit.setDepthWriteEnabled(Z)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "setDepthWriteEnabled",
       "declaration": {
         "file": "sob.java",
         "start": 67367,
@@ -749975,9 +750271,9 @@
     },
     {
       "symbol": "M:sua.a(I)Lllb;",
-      "renamedSymbol": "M:GetMissilesAcceleration.a(I)LWidget;",
+      "renamedSymbol": "M:GetMissilesAcceleration.getLobbyPlayerListContent(I)LWidget;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getLobbyPlayerListContent",
       "declaration": {
         "file": "sua.java",
         "start": 1313,
@@ -751757,9 +752053,9 @@
     },
     {
       "symbol": "M:tia.a(ZIIZ)I",
-      "renamedSymbol": "M:UiComboBoxList.a(ZIIZ)I",
+      "renamedSymbol": "M:UiComboBoxList.pollAccountUi(ZIIZ)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "pollAccountUi",
       "declaration": {
         "file": "tia.java",
         "start": 2936,
@@ -753418,9 +753714,9 @@
     },
     {
       "symbol": "M:tqa.e(B)I",
-      "renamedSymbol": "M:SetBombletSprayProjectileOndamageParticles.e(B)I",
+      "renamedSymbol": "M:SetBombletSprayProjectileOndamageParticles.getOverlayClipCenterX(B)I",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "getOverlayClipCenterX",
       "declaration": {
         "file": "tqa.java",
         "start": 1415,
@@ -763439,9 +763735,9 @@
     },
     {
       "symbol": "M:wbb.a(III)V",
-      "renamedSymbol": "M:GetMachineGunReload.a(III)V",
+      "renamedSymbol": "M:GetMachineGunReload.configureSymmetricSimulatedLag(III)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "configureSymmetricSimulatedLag",
       "declaration": {
         "file": "wbb.java",
         "start": 1247,
@@ -772800,7 +773096,7 @@
     },
     {
       "symbol": "P:ala.a(II)V#0",
-      "renamedSymbol": "P:GetLagOut.a(II)V#0",
+      "renamedSymbol": "P:GetLagOut.updateAccountUi(II)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -772811,7 +773107,7 @@
     },
     {
       "symbol": "P:ala.a(II)V#1",
-      "renamedSymbol": "P:GetLagOut.a(II)V#1",
+      "renamedSymbol": "P:GetLagOut.updateAccountUi(II)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -784801,7 +785097,7 @@
     },
     {
       "symbol": "P:bja.e(B)I#0",
-      "renamedSymbol": "P:SetLaserEnergyUsed.e(B)I#0",
+      "renamedSymbol": "P:SetLaserEnergyUsed.getOverlayClipLeft(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -792061,7 +792357,7 @@
     },
     {
       "symbol": "P:cf.d(I)V#0",
-      "renamedSymbol": "P:SetVariableLabelAction.d(I)V#0",
+      "renamedSymbol": "P:SetVariableLabelAction.disableWindowResizing(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -796461,7 +796757,7 @@
     },
     {
       "symbol": "P:csb.a(Z)V#0",
-      "renamedSymbol": "P:PlayerGameDataFactory.a(Z)V#0",
+      "renamedSymbol": "P:PlayerGameDataFactory.updateCachedFrameUi(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -800256,7 +800552,7 @@
     },
     {
       "symbol": "P:dba.a(IZ)V#0",
-      "renamedSymbol": "P:SetLaserReload.a(IZ)V#0",
+      "renamedSymbol": "P:SetLaserReload.drawNameEntryDialog(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -800267,7 +800563,7 @@
     },
     {
       "symbol": "P:dba.a(IZ)V#1",
-      "renamedSymbol": "P:SetLaserReload.a(IZ)V#1",
+      "renamedSymbol": "P:SetLaserReload.drawNameEntryDialog(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -803369,7 +803665,7 @@
     },
     {
       "symbol": "P:dm.i(B)Lllb;#0",
-      "renamedSymbol": "P:MissileLauncherWeaponDefinition.i(B)LWidget;#0",
+      "renamedSymbol": "P:MissileLauncherWeaponDefinition.getFriendListContent(B)LWidget;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -808605,7 +808901,7 @@
     },
     {
       "symbol": "P:dva.e(B)V#0",
-      "renamedSymbol": "P:GetCountermeasureLauncherAimarc.e(B)V#0",
+      "renamedSymbol": "P:GetCountermeasureLauncherAimarc.initializeGameDefinitions(B)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -815304,7 +815600,7 @@
     },
     {
       "symbol": "P:etb.a(I)Z#0",
-      "renamedSymbol": "P:ThrusterBehaviourFactory.a(I)Z#0",
+      "renamedSymbol": "P:ThrusterBehaviourFactory.isAccountEmailUpdatesEnabled(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -829175,7 +829471,7 @@
     },
     {
       "symbol": "P:gia.d(I)I#0",
-      "renamedSymbol": "P:NormalMapTextureOperation.d(I)I#0",
+      "renamedSymbol": "P:NormalMapTextureOperation.getMouseIdleTicks(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -838503,7 +838799,7 @@
     },
     {
       "symbol": "P:hia.a(I)Lllb;#0",
-      "renamedSymbol": "P:SetBombletSprayPushMultiplier.a(I)LWidget;#0",
+      "renamedSymbol": "P:SetBombletSprayPushMultiplier.getIgnoreListContent(I)LWidget;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -846731,7 +847027,7 @@
     },
     {
       "symbol": "P:iha.e(I)Z#0",
-      "renamedSymbol": "P:SetMachineGunPulsetime.e(I)Z#0",
+      "renamedSymbol": "P:SetMachineGunPulsetime.hasPrivilegedAccess(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -848227,7 +848523,7 @@
     },
     {
       "symbol": "P:ika.a(IZ)V#0",
-      "renamedSymbol": "P:AwardVictoryToTeamAction.a(IZ)V#0",
+      "renamedSymbol": "P:AwardVictoryToTeamAction.openDisplayModeDialog(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -848238,7 +848534,7 @@
     },
     {
       "symbol": "P:ika.a(IZ)V#1",
-      "renamedSymbol": "P:AwardVictoryToTeamAction.a(IZ)V#1",
+      "renamedSymbol": "P:AwardVictoryToTeamAction.openDisplayModeDialog(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -883911,7 +884207,7 @@
     },
     {
       "symbol": "P:lba.a(I)V#0",
-      "renamedSymbol": "P:GetUseFilledPolygons.a(I)V#0",
+      "renamedSymbol": "P:GetUseFilledPolygons.resetAccountUiRequests(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -913644,7 +913940,7 @@
     },
     {
       "symbol": "P:nu.e(B)Z#0",
-      "renamedSymbol": "P:GetMissileLauncherEnergyUsed.e(B)Z#0",
+      "renamedSymbol": "P:GetMissileLauncherEnergyUsed.handleNameEntryKeyEvent(B)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -917373,7 +917669,7 @@
     },
     {
       "symbol": "P:oaa.b(B)D#0",
-      "renamedSymbol": "P:OpenGlVertexBufferObject.b(B)D#0",
+      "renamedSymbol": "P:OpenGlVertexBufferObject.getOutgoingLagStdDevMillis(B)D#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -927350,7 +927646,7 @@
     },
     {
       "symbol": "P:pdb.a(BJ)Ljk;#0",
-      "renamedSymbol": "P:SetPhasedEnergyBeamAimarc.a(BJ)LLobbyPlayerEntry;#0",
+      "renamedSymbol": "P:SetPhasedEnergyBeamAimarc.findLobbyPlayer(BJ)LLobbyPlayerEntry;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -927361,7 +927657,7 @@
     },
     {
       "symbol": "P:pdb.a(BJ)Ljk;#1",
-      "renamedSymbol": "P:SetPhasedEnergyBeamAimarc.a(BJ)LLobbyPlayerEntry;#1",
+      "renamedSymbol": "P:SetPhasedEnergyBeamAimarc.findLobbyPlayer(BJ)LLobbyPlayerEntry;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -939208,7 +939504,7 @@
     },
     {
       "symbol": "P:pi.a(BZZ)V#0",
-      "renamedSymbol": "P:QuickChatPhraseDefinition.a(BZZ)V#0",
+      "renamedSymbol": "P:QuickChatPhraseDefinition.drawModalUiBackground(BZZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -939219,7 +939515,7 @@
     },
     {
       "symbol": "P:pi.a(BZZ)V#1",
-      "renamedSymbol": "P:QuickChatPhraseDefinition.a(BZZ)V#1",
+      "renamedSymbol": "P:QuickChatPhraseDefinition.drawModalUiBackground(BZZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -939230,7 +939526,7 @@
     },
     {
       "symbol": "P:pi.a(BZZ)V#2",
-      "renamedSymbol": "P:QuickChatPhraseDefinition.a(BZZ)V#2",
+      "renamedSymbol": "P:QuickChatPhraseDefinition.drawModalUiBackground(BZZ)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -940341,7 +940637,7 @@
     },
     {
       "symbol": "P:pjb.a(JZ)Ljk;#0",
-      "renamedSymbol": "P:ScrollBarWidget.a(JZ)LLobbyPlayerEntry;#0",
+      "renamedSymbol": "P:ScrollBarWidget.findGamePlayer(JZ)LLobbyPlayerEntry;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -940352,7 +940648,7 @@
     },
     {
       "symbol": "P:pjb.a(JZ)Ljk;#1",
-      "renamedSymbol": "P:ScrollBarWidget.a(JZ)LLobbyPlayerEntry;#1",
+      "renamedSymbol": "P:ScrollBarWidget.findGamePlayer(JZ)LLobbyPlayerEntry;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -941848,7 +942144,7 @@
     },
     {
       "symbol": "P:pob.b(I)I#0",
-      "renamedSymbol": "P:SetVariableAction.b(I)I#0",
+      "renamedSymbol": "P:SetVariableAction.getAccountCreationAge(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -944400,7 +944696,7 @@
     },
     {
       "symbol": "P:qba.a(IIIII)V#0",
-      "renamedSymbol": "P:BlendTextureOperation.a(IIIII)V#0",
+      "renamedSymbol": "P:BlendTextureOperation.playSpatialSound(IIIII)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -944411,7 +944707,7 @@
     },
     {
       "symbol": "P:qba.a(IIIII)V#1",
-      "renamedSymbol": "P:BlendTextureOperation.a(IIIII)V#1",
+      "renamedSymbol": "P:BlendTextureOperation.playSpatialSound(IIIII)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -944422,7 +944718,7 @@
     },
     {
       "symbol": "P:qba.a(IIIII)V#2",
-      "renamedSymbol": "P:BlendTextureOperation.a(IIIII)V#2",
+      "renamedSymbol": "P:BlendTextureOperation.playSpatialSound(IIIII)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -944433,7 +944729,7 @@
     },
     {
       "symbol": "P:qba.a(IIIII)V#3",
-      "renamedSymbol": "P:BlendTextureOperation.a(IIIII)V#3",
+      "renamedSymbol": "P:BlendTextureOperation.playSpatialSound(IIIII)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -944444,7 +944740,7 @@
     },
     {
       "symbol": "P:qba.a(IIIII)V#4",
-      "renamedSymbol": "P:BlendTextureOperation.a(IIIII)V#4",
+      "renamedSymbol": "P:BlendTextureOperation.playSpatialSound(IIIII)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -951880,7 +952176,7 @@
     },
     {
       "symbol": "P:qmb.a(I)Z#0",
-      "renamedSymbol": "P:GetSpinningBladeAimspeed.a(I)Z#0",
+      "renamedSymbol": "P:GetSpinningBladeAimspeed.handleConsoleKeyEvent(I)Z#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -952298,7 +952594,7 @@
     },
     {
       "symbol": "P:qoa.a(III)V#0",
-      "renamedSymbol": "P:SetMassDriverProjectileDamage.a(III)V#0",
+      "renamedSymbol": "P:SetMassDriverProjectileDamage.setCachedFramePointerPosition(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -952309,7 +952605,7 @@
     },
     {
       "symbol": "P:qoa.a(III)V#1",
-      "renamedSymbol": "P:SetMassDriverProjectileDamage.a(III)V#1",
+      "renamedSymbol": "P:SetMassDriverProjectileDamage.setCachedFramePointerPosition(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -952320,7 +952616,7 @@
     },
     {
       "symbol": "P:qoa.a(III)V#2",
-      "renamedSymbol": "P:SetMassDriverProjectileDamage.a(III)V#2",
+      "renamedSymbol": "P:SetMassDriverProjectileDamage.setCachedFramePointerPosition(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -959569,7 +959865,7 @@
     },
     {
       "symbol": "P:rmb.a(II)I#0",
-      "renamedSymbol": "P:GetGrapplingHookAimarc.a(II)I#0",
+      "renamedSymbol": "P:GetGrapplingHookAimarc.halveRgbPreservingAlpha(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -959580,7 +959876,7 @@
     },
     {
       "symbol": "P:rmb.a(II)I#1",
-      "renamedSymbol": "P:GetGrapplingHookAimarc.a(II)I#1",
+      "renamedSymbol": "P:GetGrapplingHookAimarc.halveRgbPreservingAlpha(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -962759,7 +963055,7 @@
     },
     {
       "symbol": "P:rt.c(I)I#0",
-      "renamedSymbol": "P:ColorRowCache.c(I)I#0",
+      "renamedSymbol": "P:ColorRowCache.pollAccountUi(I)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -963364,7 +963660,7 @@
     },
     {
       "symbol": "P:rw.a(ZB)V#0",
-      "renamedSymbol": "P:PerlinNoiseTextureOperation.a(ZB)V#0",
+      "renamedSymbol": "P:PerlinNoiseTextureOperation.drawDarkenedModalUi(ZB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -963375,7 +963671,7 @@
     },
     {
       "symbol": "P:rw.a(ZB)V#1",
-      "renamedSymbol": "P:PerlinNoiseTextureOperation.a(ZB)V#1",
+      "renamedSymbol": "P:PerlinNoiseTextureOperation.drawDarkenedModalUi(ZB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -965476,7 +965772,7 @@
     },
     {
       "symbol": "P:se.a(Z)I#0",
-      "renamedSymbol": "P:DirectByteStorage.a(Z)I#0",
+      "renamedSymbol": "P:DirectByteStorage.getOverlayClipWidth(Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -973374,7 +973670,7 @@
     },
     {
       "symbol": "P:sob.a(Z)V#0",
-      "renamedSymbol": "P:SoftwareToolkit.a(Z)V#0",
+      "renamedSymbol": "P:SoftwareToolkit.setDepthWriteEnabled(Z)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -975112,7 +975408,7 @@
     },
     {
       "symbol": "P:sua.a(I)Lllb;#0",
-      "renamedSymbol": "P:GetMissilesAcceleration.a(I)LWidget;#0",
+      "renamedSymbol": "P:GetMissilesAcceleration.getLobbyPlayerListContent(I)LWidget;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -978797,7 +979093,7 @@
     },
     {
       "symbol": "P:tia.a(ZIIZ)I#0",
-      "renamedSymbol": "P:UiComboBoxList.a(ZIIZ)I#0",
+      "renamedSymbol": "P:UiComboBoxList.pollAccountUi(ZIIZ)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -978808,7 +979104,7 @@
     },
     {
       "symbol": "P:tia.a(ZIIZ)I#1",
-      "renamedSymbol": "P:UiComboBoxList.a(ZIIZ)I#1",
+      "renamedSymbol": "P:UiComboBoxList.pollAccountUi(ZIIZ)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -978819,7 +979115,7 @@
     },
     {
       "symbol": "P:tia.a(ZIIZ)I#2",
-      "renamedSymbol": "P:UiComboBoxList.a(ZIIZ)I#2",
+      "renamedSymbol": "P:UiComboBoxList.pollAccountUi(ZIIZ)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -978830,7 +979126,7 @@
     },
     {
       "symbol": "P:tia.a(ZIIZ)I#3",
-      "renamedSymbol": "P:UiComboBoxList.a(ZIIZ)I#3",
+      "renamedSymbol": "P:UiComboBoxList.pollAccountUi(ZIIZ)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -982669,7 +982965,7 @@
     },
     {
       "symbol": "P:tqa.e(B)I#0",
-      "renamedSymbol": "P:SetBombletSprayProjectileOndamageParticles.e(B)I#0",
+      "renamedSymbol": "P:SetBombletSprayProjectileOndamageParticles.getOverlayClipCenterX(B)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -1005846,7 +1006142,7 @@
     },
     {
       "symbol": "P:wbb.a(III)V#0",
-      "renamedSymbol": "P:GetMachineGunReload.a(III)V#0",
+      "renamedSymbol": "P:GetMachineGunReload.configureSymmetricSimulatedLag(III)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -1005857,7 +1006153,7 @@
     },
     {
       "symbol": "P:wbb.a(III)V#1",
-      "renamedSymbol": "P:GetMachineGunReload.a(III)V#1",
+      "renamedSymbol": "P:GetMachineGunReload.configureSymmetricSimulatedLag(III)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -1005868,7 +1006164,7 @@
     },
     {
       "symbol": "P:wbb.a(III)V#2",
-      "renamedSymbol": "P:GetMachineGunReload.a(III)V#2",
+      "renamedSymbol": "P:GetMachineGunReload.configureSymmetricSimulatedLag(III)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -1013715,7 +1014011,7 @@
       "original": "VoidHunters.java",
       "renamed": "VoidHunters.java",
       "inputSha256": "69cc4b9b8186f4765c6d34781d7b497712847d6d0020d8b54c038b1e406427f1",
-      "outputSha256": "6bf84338b73c59eb2959f76a8076ae3393f9b2066cce2891ec2fe34b1609aafd",
+      "outputSha256": "6e7f6a037255c78cd216ec029cbf31c4f5c20fac891c0b6b534405cca98b288e",
       "edits": [
         {
           "start": 77,
@@ -1014355,6 +1014651,13 @@
           "renamed": "GetMissilesAcceleration"
         },
         {
+          "start": 6855,
+          "end": 6856,
+          "symbol": "M:sua.a(I)Lllb;",
+          "original": "a",
+          "renamed": "getLobbyPlayerListContent"
+        },
+        {
           "start": 6874,
           "end": 6877,
           "symbol": "C:plb",
@@ -1014376,11 +1014679,25 @@
           "renamed": "SetBombletSprayPushMultiplier"
         },
         {
+          "start": 6884,
+          "end": 6885,
+          "symbol": "M:hia.a(I)Lllb;",
+          "original": "a",
+          "renamed": "getIgnoreListContent"
+        },
+        {
           "start": 6890,
           "end": 6892,
           "symbol": "C:dm",
           "original": "dm",
           "renamed": "MissileLauncherWeaponDefinition"
+        },
+        {
+          "start": 6893,
+          "end": 6894,
+          "symbol": "M:dm.i(B)Lllb;",
+          "original": "i",
+          "renamed": "getFriendListContent"
         },
         {
           "start": 6925,
@@ -1015503,6 +1015820,13 @@
           "renamed": "NormalMapTextureOperation"
         },
         {
+          "start": 13572,
+          "end": 13573,
+          "symbol": "M:gia.d(I)I",
+          "original": "d",
+          "renamed": "getMouseIdleTicks"
+        },
+        {
           "start": 13587,
           "end": 13589,
           "symbol": "C:ji",
@@ -1015690,6 +1016014,13 @@
           "symbol": "C:ala",
           "original": "ala",
           "renamed": "GetLagOut"
+        },
+        {
+          "start": 14264,
+          "end": 14265,
+          "symbol": "M:ala.a(II)V",
+          "original": "a",
+          "renamed": "updateAccountUi"
         },
         {
           "start": 14266,
@@ -1017076,6 +1017407,13 @@
           "symbol": "C:dva",
           "original": "dva",
           "renamed": "GetCountermeasureLauncherAimarc"
+        },
+        {
+          "start": 20997,
+          "end": 20998,
+          "symbol": "M:dva.e(B)V",
+          "original": "e",
+          "renamed": "initializeGameDefinitions"
         },
         {
           "start": 21025,
@@ -1032347,6 +1032685,13 @@
           "renamed": "AwardVictoryToTeamAction"
         },
         {
+          "start": 53357,
+          "end": 53358,
+          "symbol": "M:ika.a(IZ)V",
+          "original": "a",
+          "renamed": "openDisplayModeDialog"
+        },
+        {
           "start": 53411,
           "end": 53414,
           "symbol": "C:kua",
@@ -1032816,6 +1033161,13 @@
           "renamed": "GetSpinningBladeAimspeed"
         },
         {
+          "start": 55892,
+          "end": 55893,
+          "symbol": "M:qmb.a(I)Z",
+          "original": "a",
+          "renamed": "handleConsoleKeyEvent"
+        },
+        {
           "start": 56137,
           "end": 56140,
           "symbol": "C:vqa",
@@ -1033096,6 +1033448,13 @@
           "renamed": "SetBombletSprayProjectileOndamageParticles"
         },
         {
+          "start": 57416,
+          "end": 57417,
+          "symbol": "M:tqa.e(B)I",
+          "original": "e",
+          "renamed": "getOverlayClipCenterX"
+        },
+        {
           "start": 57441,
           "end": 57444,
           "symbol": "C:sea",
@@ -1033164,6 +1033523,13 @@
           "symbol": "C:qmb",
           "original": "qmb",
           "renamed": "GetSpinningBladeAimspeed"
+        },
+        {
+          "start": 57717,
+          "end": 57718,
+          "symbol": "M:qmb.a(I)Z",
+          "original": "a",
+          "renamed": "handleConsoleKeyEvent"
         },
         {
           "start": 57802,
@@ -1035147,6 +1035513,13 @@
           "renamed": "SetMassDriverProjectileDamage"
         },
         {
+          "start": 67474,
+          "end": 67475,
+          "symbol": "M:qoa.a(III)V",
+          "original": "a",
+          "renamed": "setCachedFramePointerPosition"
+        },
+        {
           "start": 67523,
           "end": 67526,
           "symbol": "C:vfa",
@@ -1035278,6 +1035651,13 @@
           "symbol": "C:rw",
           "original": "rw",
           "renamed": "PerlinNoiseTextureOperation"
+        },
+        {
+          "start": 67915,
+          "end": 67916,
+          "symbol": "M:rw.a(ZB)V",
+          "original": "a",
+          "renamed": "drawDarkenedModalUi"
         },
         {
           "start": 67948,
@@ -1062802,7 +1063182,7 @@
       "original": "ala.java",
       "renamed": "GetLagOut.java",
       "inputSha256": "74ff0f2aaf8d35e1efe3b61a35b4cdb2350c9210a08d81108f1d865293d6caf1",
-      "outputSha256": "e227de84f93529a487f746c61256163bc368dadcbe73fb49449a75af2e2b6820",
+      "outputSha256": "9bbaf9a00a558010c55b25fca840bbd35776ba077f227bf3927f7c22975498e0",
       "edits": [
         {
           "start": 50,
@@ -1062826,6 +1063206,13 @@
           "renamed": "GetLagOut"
         },
         {
+          "start": 192,
+          "end": 193,
+          "symbol": "M:ala.a(II)V",
+          "original": "a",
+          "renamed": "updateAccountUi"
+        },
+        {
           "start": 228,
           "end": 230,
           "symbol": "C:rt",
@@ -1062833,11 +1063220,25 @@
           "renamed": "ColorRowCache"
         },
         {
+          "start": 231,
+          "end": 232,
+          "symbol": "M:rt.c(I)I",
+          "original": "c",
+          "renamed": "pollAccountUi"
+        },
+        {
           "start": 278,
           "end": 281,
           "symbol": "C:ala",
           "original": "ala",
           "renamed": "GetLagOut"
+        },
+        {
+          "start": 282,
+          "end": 283,
+          "symbol": "M:ala.a(II)V",
+          "original": "a",
+          "renamed": "updateAccountUi"
         },
         {
           "start": 321,
@@ -1063814,7 +1064215,7 @@
       "original": "amb.java",
       "renamed": "ServerInfoFactory.java",
       "inputSha256": "842bcc8493fddfc9f163e7b699f974492ed2fd3afd76f8317d6751ad70a7b67c",
-      "outputSha256": "641ac24360c1cb74f0e6d1f0543d652fa2362d9daabd0eb6f617923a4be9c71b",
+      "outputSha256": "de3cdd849373f2bd54052f370ed6096e0bc70b46d7f71883e1f577715f36ad06",
       "edits": [
         {
           "start": 50,
@@ -1064370,6 +1064771,13 @@
           "renamed": "SetLaserEnergyUsed"
         },
         {
+          "start": 5939,
+          "end": 5940,
+          "symbol": "M:bja.e(B)I",
+          "original": "e",
+          "renamed": "getOverlayClipLeft"
+        },
+        {
           "start": 5986,
           "end": 5989,
           "symbol": "C:fra",
@@ -1064389,6 +1064797,13 @@
           "symbol": "C:se",
           "original": "se",
           "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 6031,
+          "end": 6032,
+          "symbol": "M:se.a(Z)I",
+          "original": "a",
+          "renamed": "getOverlayClipWidth"
         },
         {
           "start": 6064,
@@ -1064979,6 +1065394,13 @@
           "renamed": "SetLaserEnergyUsed"
         },
         {
+          "start": 8873,
+          "end": 8874,
+          "symbol": "M:bja.e(B)I",
+          "original": "e",
+          "renamed": "getOverlayClipLeft"
+        },
+        {
           "start": 8933,
           "end": 8936,
           "symbol": "C:fra",
@@ -1064998,6 +1065420,13 @@
           "symbol": "C:se",
           "original": "se",
           "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 8991,
+          "end": 8992,
+          "symbol": "M:se.a(Z)I",
+          "original": "a",
+          "renamed": "getOverlayClipWidth"
         },
         {
           "start": 9037,
@@ -1065427,6 +1065856,13 @@
           "renamed": "SetLaserEnergyUsed"
         },
         {
+          "start": 11810,
+          "end": 11811,
+          "symbol": "M:bja.e(B)I",
+          "original": "e",
+          "renamed": "getOverlayClipLeft"
+        },
+        {
           "start": 11877,
           "end": 11880,
           "symbol": "C:fra",
@@ -1065446,6 +1065882,13 @@
           "symbol": "C:se",
           "original": "se",
           "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 11942,
+          "end": 11943,
+          "symbol": "M:se.a(Z)I",
+          "original": "a",
+          "renamed": "getOverlayClipWidth"
         },
         {
           "start": 11995,
@@ -1065791,6 +1066234,13 @@
           "renamed": "SetLaserEnergyUsed"
         },
         {
+          "start": 14217,
+          "end": 14218,
+          "symbol": "M:bja.e(B)I",
+          "original": "e",
+          "renamed": "getOverlayClipLeft"
+        },
+        {
           "start": 14291,
           "end": 14294,
           "symbol": "C:fra",
@@ -1065810,6 +1066260,13 @@
           "symbol": "C:se",
           "original": "se",
           "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 14363,
+          "end": 14364,
+          "symbol": "M:se.a(Z)I",
+          "original": "a",
+          "renamed": "getOverlayClipWidth"
         },
         {
           "start": 14423,
@@ -1066036,6 +1066493,13 @@
           "renamed": "SetLaserEnergyUsed"
         },
         {
+          "start": 16251,
+          "end": 16252,
+          "symbol": "M:bja.e(B)I",
+          "original": "e",
+          "renamed": "getOverlayClipLeft"
+        },
+        {
           "start": 16318,
           "end": 16321,
           "symbol": "C:fra",
@@ -1066055,6 +1066519,13 @@
           "symbol": "C:se",
           "original": "se",
           "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 16392,
+          "end": 16393,
+          "symbol": "M:se.a(Z)I",
+          "original": "a",
+          "renamed": "getOverlayClipWidth"
         },
         {
           "start": 16454,
@@ -1066372,6 +1066843,13 @@
           "renamed": "SetLaserEnergyUsed"
         },
         {
+          "start": 18654,
+          "end": 18655,
+          "symbol": "M:bja.e(B)I",
+          "original": "e",
+          "renamed": "getOverlayClipLeft"
+        },
+        {
           "start": 18706,
           "end": 18709,
           "symbol": "C:fra",
@@ -1066391,6 +1066869,13 @@
           "symbol": "C:se",
           "original": "se",
           "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 18765,
+          "end": 18766,
+          "symbol": "M:se.a(Z)I",
+          "original": "a",
+          "renamed": "getOverlayClipWidth"
         },
         {
           "start": 18812,
@@ -1086073,7 +1086558,7 @@
       "original": "ata.java",
       "renamed": "UiAngleDial.java",
       "inputSha256": "2c28094f7b4563c4ef142f2a8fa5025de6fe04bcf599a65412d948958386bbc5",
-      "outputSha256": "9db5580ae38a397f768973bfb3ddb95c409714012581d227e256b986c5491109",
+      "outputSha256": "18b16942ddc9e96ddcbd723e00230070626383042f3eb7aa55d273dfd76c7cf6",
       "edits": [
         {
           "start": 50,
@@ -1086144,6 +1086629,13 @@
           "symbol": "F:ata.field_D:I",
           "original": "field_D",
           "renamed": "value"
+        },
+        {
+          "start": 236,
+          "end": 243,
+          "symbol": "F:ata.field_H:I",
+          "original": "field_H",
+          "renamed": "cachedFramePointerX"
         },
         {
           "start": 296,
@@ -1118132,7 +1118624,7 @@
       "original": "bja.java",
       "renamed": "SetLaserEnergyUsed.java",
       "inputSha256": "1314734dfa5cfaeac89d4d8372a0de68f7cb24a07c3d8f316a8238c5c7b96a83",
-      "outputSha256": "64aac38bda9a597938be94ab47b999c120b3c236233a0863a28f12a72c30742a",
+      "outputSha256": "8e3e319635786a1b1fb4016944f2d6655d1ff2e52fcdc82efd3a6177a76de46f",
       "edits": [
         {
           "start": 50,
@@ -1118282,6 +1118774,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 1551,
+          "end": 1552,
+          "symbol": "M:bja.e(B)I",
+          "original": "e",
+          "renamed": "getOverlayClipLeft"
+        },
+        {
           "start": 1629,
           "end": 1632,
           "symbol": "C:tqa",
@@ -1118289,11 +1118788,25 @@
           "renamed": "SetBombletSprayProjectileOndamageParticles"
         },
         {
+          "start": 1633,
+          "end": 1634,
+          "symbol": "M:tqa.e(B)I",
+          "original": "e",
+          "renamed": "getOverlayClipCenterX"
+        },
+        {
           "start": 1648,
           "end": 1650,
           "symbol": "C:se",
           "original": "se",
           "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 1651,
+          "end": 1652,
+          "symbol": "M:se.a(Z)I",
+          "original": "a",
+          "renamed": "getOverlayClipWidth"
         }
       ]
     },
@@ -1131697,7 +1132210,7 @@
       "original": "bq.java",
       "renamed": "SetReadyRoomMissionTime.java",
       "inputSha256": "7907bbe7680ea158149fdc4a6c8bb682999500d8039348e34509da175b326ec7",
-      "outputSha256": "0b545d39b37fb3b02a8102eeccf15ee194269ce03a6c6bd2c1eba2581d33b01c",
+      "outputSha256": "51c2705c98486836ebb55d53a4a26fa6f0b1171015af6b58a785fbd1a55050a2",
       "edits": [
         {
           "start": 50,
@@ -1131859,6 +1132372,13 @@
           "symbol": "C:iha",
           "original": "iha",
           "renamed": "SetMachineGunPulsetime"
+        },
+        {
+          "start": 1879,
+          "end": 1880,
+          "symbol": "M:iha.e(I)Z",
+          "original": "e",
+          "renamed": "hasPrivilegedAccess"
         },
         {
           "start": 1928,
@@ -1132433,6 +1132953,13 @@
           "symbol": "C:iha",
           "original": "iha",
           "renamed": "SetMachineGunPulsetime"
+        },
+        {
+          "start": 4217,
+          "end": 4218,
+          "symbol": "M:iha.e(I)Z",
+          "original": "e",
+          "renamed": "hasPrivilegedAccess"
         },
         {
           "start": 4242,
@@ -1150782,7 +1151309,7 @@
       "original": "cf.java",
       "renamed": "SetVariableLabelAction.java",
       "inputSha256": "8ee71c188032b4b575d4a78d94b2d09efda20cfc201fc111e340bda7caabd25b",
-      "outputSha256": "dbf315dd0807df9bf3ff5b6341ff92f344df1468b4c28a49563ed14084f17ff5",
+      "outputSha256": "e52b398ef5f0eb3687636fa48d7dbc71e4dff7d1d97347561f7a64e1ff2d38a1",
       "edits": [
         {
           "start": 50,
@@ -1150818,6 +1151345,13 @@
           "symbol": "F:cf.field_c:I",
           "original": "field_c",
           "renamed": "label"
+        },
+        {
+          "start": 182,
+          "end": 183,
+          "symbol": "M:cf.d(I)V",
+          "original": "d",
+          "renamed": "disableWindowResizing"
         },
         {
           "start": 210,
@@ -1154823,7 +1155357,7 @@
       "original": "cka.java",
       "renamed": "GetLagStandardDeviationOut.java",
       "inputSha256": "2480e4a7b8402777234f9e9d87fb1a95efe8dbc92a06ebfbc6b8567110fd606d",
-      "outputSha256": "aa299bab890a67018d5a812cc5b456fcb6396cb1e5b3a3bf128dded831f378bf",
+      "outputSha256": "91489110450198650b762ea7f7351a3e43381ae5a5222869a09cf51e91906a94",
       "edits": [
         {
           "start": 50,
@@ -1154971,6 +1155505,13 @@
           "symbol": "C:oaa",
           "original": "oaa",
           "renamed": "OpenGlVertexBufferObject"
+        },
+        {
+          "start": 1346,
+          "end": 1347,
+          "symbol": "M:oaa.b(B)D",
+          "original": "b",
+          "renamed": "getOutgoingLagStdDevMillis"
         },
         {
           "start": 1431,
@@ -1169830,7 +1170371,7 @@
       "original": "co.java",
       "renamed": "SoftwareRenderContext.java",
       "inputSha256": "e104ef6363036fc3b929bc483c6440e0e9d7e495e8221c16eb5299f0295387d9",
-      "outputSha256": "31deee56d1c47201b1985b7b496f6aa80797e791c681752bc5a7f0c69c671d8d",
+      "outputSha256": "c83b148cc9339a9064943f9c295c5043523589a0007e80f1702f24e1d754f4e3",
       "edits": [
         {
           "start": 50,
@@ -1169845,6 +1170386,13 @@
           "symbol": "F:co.field_c:Ljava/lang/Runnable;",
           "original": "field_c",
           "renamed": "thread"
+        },
+        {
+          "start": 89,
+          "end": 96,
+          "symbol": "F:co.field_f:Z",
+          "original": "field_f",
+          "renamed": "depthWriteEnabled"
         },
         {
           "start": 110,
@@ -1169929,6 +1170477,13 @@
           "symbol": "F:co.field_d:Lsob;",
           "original": "field_d",
           "renamed": "toolkit"
+        },
+        {
+          "start": 695,
+          "end": 702,
+          "symbol": "F:co.field_f:Z",
+          "original": "field_f",
+          "renamed": "depthWriteEnabled"
         },
         {
           "start": 1605,
@@ -1170062,6 +1170617,13 @@
           "symbol": "C:b",
           "original": "b",
           "renamed": "SoftwareModel"
+        },
+        {
+          "start": 4866,
+          "end": 4873,
+          "symbol": "F:co.field_f:Z",
+          "original": "field_f",
+          "renamed": "depthWriteEnabled"
         },
         {
           "start": 4890,
@@ -1176920,7 +1177482,7 @@
       "original": "csb.java",
       "renamed": "PlayerGameDataFactory.java",
       "inputSha256": "d7fee4d6ac6cc3e16d5ed082fbcbd05fb52ddb937f6f14e625238590eaf96395",
-      "outputSha256": "c1597de86bc4a7a2f61cc8f8d5143131ce99a312a964d5464c561ad6fc9cb1e5",
+      "outputSha256": "689d0315d8ab68f0b33b2a801b1bc3c8cadecc2919f8de2acac1acef4783a013",
       "edits": [
         {
           "start": 50,
@@ -1176935,6 +1177497,13 @@
           "symbol": "C:dja",
           "original": "dja",
           "renamed": "GameStateFactory"
+        },
+        {
+          "start": 93,
+          "end": 94,
+          "symbol": "M:csb.a(Z)V",
+          "original": "a",
+          "renamed": "updateCachedFrameUi"
         },
         {
           "start": 297,
@@ -1177063,11 +1177632,25 @@
           "renamed": "UiAngleDial"
         },
         {
+          "start": 580,
+          "end": 587,
+          "symbol": "F:ata.field_H:I",
+          "original": "field_H",
+          "renamed": "cachedFramePointerX"
+        },
+        {
           "start": 589,
           "end": 591,
           "symbol": "C:uo",
           "original": "uo",
           "renamed": "SetOndamageParticleFadestart"
+        },
+        {
+          "start": 592,
+          "end": 599,
+          "symbol": "F:uo.field_o:I",
+          "original": "field_o",
+          "renamed": "cachedFramePointerY"
         },
         {
           "start": 620,
@@ -1177187,6 +1177770,13 @@
           "symbol": "C:csb",
           "original": "csb",
           "renamed": "PlayerGameDataFactory"
+        },
+        {
+          "start": 1266,
+          "end": 1267,
+          "symbol": "M:csb.a(Z)V",
+          "original": "a",
+          "renamed": "updateCachedFrameUi"
         },
         {
           "start": 1293,
@@ -1183130,7 +1183720,7 @@
       "original": "daa.java",
       "renamed": "SoftwareTriangleRasterizer.java",
       "inputSha256": "96d24d3b85681dbcc2a96b11a3dc104cdf3e97787d7a1a50b103b9c0b32dc4a4",
-      "outputSha256": "28dbc92e29ec4d6d8b37f5837ed34058a3859b74040f190eb3239ced3fdbb134",
+      "outputSha256": "085d160d98dc6cf14f2b8ec9fb097c1686526a49274b02c75fa3ea6170444a97",
       "edits": [
         {
           "start": 50,
@@ -1184580,6 +1185170,13 @@
           "symbol": "F:daa.field_c:Lco;",
           "original": "field_c",
           "renamed": "context"
+        },
+        {
+          "start": 25280,
+          "end": 25287,
+          "symbol": "F:co.field_f:Z",
+          "original": "field_f",
+          "renamed": "depthWriteEnabled"
         },
         {
           "start": 25310,
@@ -1186071,6 +1186668,13 @@
           "symbol": "F:daa.field_c:Lco;",
           "original": "field_c",
           "renamed": "context"
+        },
+        {
+          "start": 79595,
+          "end": 79602,
+          "symbol": "F:co.field_f:Z",
+          "original": "field_f",
+          "renamed": "depthWriteEnabled"
         },
         {
           "start": 79626,
@@ -1187585,7 +1188189,7 @@
       "original": "dba.java",
       "renamed": "SetLaserReload.java",
       "inputSha256": "c585ce8eef3623a7fbc27b7111a5fe79a6a20dd2028d817525e22f5820895fbe",
-      "outputSha256": "5cc42ce7704f1f188c0140d8b4d09c4b0039ee9dc442dba3eea22e8c5fda63cf",
+      "outputSha256": "b76b3723cfad519a7b30251b1c0a3ddf5cc487b47595511c19e5fc5b3a459524",
       "edits": [
         {
           "start": 50,
@@ -1187663,6 +1188267,13 @@
           "symbol": "M:rta.a(Ljava/lang/Throwable;Ljava/lang/String;)Lhva;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 515,
+          "end": 516,
+          "symbol": "M:dba.a(IZ)V",
+          "original": "a",
+          "renamed": "drawNameEntryDialog"
         },
         {
           "start": 622,
@@ -1187761,6 +1188372,13 @@
           "symbol": "C:dba",
           "original": "dba",
           "renamed": "SetLaserReload"
+        },
+        {
+          "start": 1147,
+          "end": 1148,
+          "symbol": "M:dba.a(IZ)V",
+          "original": "a",
+          "renamed": "drawNameEntryDialog"
         },
         {
           "start": 1182,
@@ -1237890,7 +1238508,7 @@
       "original": "dm.java",
       "renamed": "MissileLauncherWeaponDefinition.java",
       "inputSha256": "f503c4f1c44d2b5cbebdd75610f3e1576619b018e680b18a517b8307c69b170e",
-      "outputSha256": "5f8b67fbbc5ee0f11f1701b7d2b62ec599ea37bb1ac174583e963e1a260c9894",
+      "outputSha256": "067c90a64d78cf93ffcbfd1f3aa636df2c21b904551c1aa282f6a6e931050e39",
       "edits": [
         {
           "start": 50,
@@ -1237912,6 +1238530,13 @@
           "symbol": "C:llb",
           "original": "llb",
           "renamed": "Widget"
+        },
+        {
+          "start": 117,
+          "end": 118,
+          "symbol": "M:dm.i(B)Lllb;",
+          "original": "i",
+          "renamed": "getFriendListContent"
         },
         {
           "start": 206,
@@ -1255514,7 +1256139,7 @@
       "original": "dva.java",
       "renamed": "GetCountermeasureLauncherAimarc.java",
       "inputSha256": "0be12cced4de9d16546149aa924e131a0a469f966c3425cf59e0b9667948a35d",
-      "outputSha256": "55d4961c56454b7e2c4e0dc73e815e758e0d7f152381082c35533065b343b153",
+      "outputSha256": "88acb35ade5acb83d0035ab1e827ca98005e87067f213772c7a44eaef9fd96ed",
       "edits": [
         {
           "start": 50,
@@ -1255760,6 +1256385,13 @@
           "symbol": "M:rta.a(Ljava/lang/Throwable;Ljava/lang/String;)Lhva;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 2679,
+          "end": 2680,
+          "symbol": "M:dva.e(B)V",
+          "original": "e",
+          "renamed": "initializeGameDefinitions"
         },
         {
           "start": 2704,
@@ -1279072,7 +1279704,7 @@
       "original": "etb.java",
       "renamed": "ThrusterBehaviourFactory.java",
       "inputSha256": "ec0b871470e790334a39049054922fc5b197413e4608feac32fd85403cceed0d",
-      "outputSha256": "cb8d73fe000f39f678417c7d9fdc2dd4e3f6c7a28f6cbbb8135f7a01612d9449",
+      "outputSha256": "fa7a7ed4b9e602e6b994863b1761729eb4288512070b90405b39d9a0717a0f6a",
       "edits": [
         {
           "start": 50,
@@ -1279166,11 +1279798,25 @@
           "renamed": "getApplet"
         },
         {
+          "start": 664,
+          "end": 665,
+          "symbol": "M:etb.a(I)Z",
+          "original": "a",
+          "renamed": "isAccountEmailUpdatesEnabled"
+        },
+        {
           "start": 759,
           "end": 762,
           "symbol": "C:jpa",
           "original": "jpa",
           "renamed": "AdjustVariableAction"
+        },
+        {
+          "start": 763,
+          "end": 770,
+          "symbol": "F:jpa.field_a:Z",
+          "original": "field_a",
+          "renamed": "accountEmailUpdatesEnabled"
         },
         {
           "start": 802,
@@ -1306496,7 +1307142,7 @@
       "original": "fia.java",
       "renamed": "ComponentGeometryEditor.java",
       "inputSha256": "a7cfcc7b0fd7ffbe5abf86aefe5c374dc8f4c8a23efa9a10d9166f7eaf371bb4",
-      "outputSha256": "6d562c64ecc1b4ec12136e41f8a84a53ccaf2355c0064d63692efcb706c850ab",
+      "outputSha256": "e7cacb259cd42150efd7d939ec46f194c5892bd1b36a807653f304c3e7a532ad",
       "edits": [
         {
           "start": 50,
@@ -1306980,6 +1307626,13 @@
           "symbol": "C:dva",
           "original": "dva",
           "renamed": "GetCountermeasureLauncherAimarc"
+        },
+        {
+          "start": 5651,
+          "end": 5652,
+          "symbol": "M:dva.e(B)V",
+          "original": "e",
+          "renamed": "initializeGameDefinitions"
         },
         {
           "start": 5704,
@@ -1336299,7 +1336952,7 @@
       "original": "gia.java",
       "renamed": "NormalMapTextureOperation.java",
       "inputSha256": "65ad087fa2b3157e278718bb83baaedef9a15134d84cf96af9bb97e997a93f35",
-      "outputSha256": "cc4fb8db1a1e736b3b6d75a97fa174777b377cb23c01239f6497fcd8519859c7",
+      "outputSha256": "3bd988c6ba137de83b9da026dc8e977961da8c514b0c81d005fa4ec7b9fe8def",
       "edits": [
         {
           "start": 50,
@@ -1336554,6 +1337207,13 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 3992,
+          "end": 3993,
+          "symbol": "M:gia.d(I)I",
+          "original": "d",
+          "renamed": "getMouseIdleTicks"
+        },
+        {
           "start": 4088,
           "end": 4091,
           "symbol": "C:rpa",
@@ -1336561,11 +1337221,25 @@
           "renamed": "OpenGlFramebuffer"
         },
         {
+          "start": 4092,
+          "end": 4099,
+          "symbol": "F:rpa.field_b:I",
+          "original": "field_b",
+          "renamed": "mouseIdleTicks"
+        },
+        {
           "start": 4126,
           "end": 4129,
           "symbol": "C:rpa",
           "original": "rpa",
           "renamed": "OpenGlFramebuffer"
+        },
+        {
+          "start": 4130,
+          "end": 4137,
+          "symbol": "F:rpa.field_b:I",
+          "original": "field_b",
+          "renamed": "mouseIdleTicks"
         }
       ]
     },
@@ -1365934,7 +1366608,7 @@
       "original": "hia.java",
       "renamed": "SetBombletSprayPushMultiplier.java",
       "inputSha256": "7075ab9181be1a051f3b4fe16fe7354e159223a4041286184a5f52b45e032237",
-      "outputSha256": "1120190e28cfce39e9d093a721cf1f57da492b7568d4c70dd0b72dcaf04dbb0e",
+      "outputSha256": "eee3e82fbe2e31a5f9cf74d70b08b9c49a60518d87dce76d3d70e99b81069df8",
       "edits": [
         {
           "start": 50,
@@ -1366117,6 +1366791,13 @@
           "symbol": "C:llb",
           "original": "llb",
           "renamed": "Widget"
+        },
+        {
+          "start": 1564,
+          "end": 1565,
+          "symbol": "M:hia.a(I)Lllb;",
+          "original": "a",
+          "renamed": "getIgnoreListContent"
         },
         {
           "start": 1625,
@@ -1367095,7 +1367776,7 @@
       "original": "hka.java",
       "renamed": "BuildBlueprintOrderDefinition.java",
       "inputSha256": "4a51db2f7cbc5811aadd53a5c9cafed70ebe58f063b64130b1858d7770850273",
-      "outputSha256": "56d7dbfcf0cbace0f36d37509b0cd76cf081b99b75f07c0eed0ca88a4b149086",
+      "outputSha256": "2bad2b35e336715fdff1c53dfd22c978972ea4dadfaf12a1881c4c8ea6ae5124",
       "edits": [
         {
           "start": 50,
@@ -1367782,6 +1368463,13 @@
           "symbol": "C:pi",
           "original": "pi",
           "renamed": "QuickChatPhraseDefinition"
+        },
+        {
+          "start": 3192,
+          "end": 3193,
+          "symbol": "M:pi.a(BZZ)V",
+          "original": "a",
+          "renamed": "drawModalUiBackground"
         },
         {
           "start": 3238,
@@ -1373587,7 +1374275,7 @@
       "original": "hnb.java",
       "renamed": "DisplayModeDialog.java",
       "inputSha256": "5f7529d4a097fb70d71ec7aa2b283b5cf88c039549283336b15eb3af3de3dd2f",
-      "outputSha256": "4aca04b8a94b0d4f1d685e264cbec6df610b6a4eacf7501dc89162b559bacdbe",
+      "outputSha256": "9ee52be50f676338c029de3a089862f57928dc74e657da0e205c84fb92874a70",
       "edits": [
         {
           "start": 50,
@@ -1376887,6 +1377575,13 @@
           "renamed": "SetVariableLabelAction"
         },
         {
+          "start": 25311,
+          "end": 25312,
+          "symbol": "M:cf.d(I)V",
+          "original": "d",
+          "renamed": "disableWindowResizing"
+        },
+        {
           "start": 25397,
           "end": 25404,
           "symbol": "F:hnb.field_W:Lhtb;",
@@ -1379539,7 +1380234,7 @@
       "original": "hqb.java",
       "renamed": "PlayerContextMenu.java",
       "inputSha256": "2f9be593c0b23b99dc2ec7d73293f1e471ea91cb04d7bea3b02d33e4f72ac1bc",
-      "outputSha256": "76e2d79446cd7a533f1740285a283b673315498deaace4f79db985b11f2112ba",
+      "outputSha256": "698dec208c2ee428acbd02cb6267c465934adf328defe0f24bcad9fb0bf372c4",
       "edits": [
         {
           "start": 50,
@@ -1380963,6 +1381658,13 @@
           "renamed": "SetPhasedEnergyBeamAimarc"
         },
         {
+          "start": 13360,
+          "end": 13361,
+          "symbol": "M:pdb.a(BJ)Ljk;",
+          "original": "a",
+          "renamed": "findLobbyPlayer"
+        },
+        {
           "start": 13378,
           "end": 13385,
           "symbol": "F:hqb.field_d:J",
@@ -1380975,6 +1381677,13 @@
           "symbol": "C:pjb",
           "original": "pjb",
           "renamed": "ScrollBarWidget"
+        },
+        {
+          "start": 13409,
+          "end": 13410,
+          "symbol": "M:pjb.a(JZ)Ljk;",
+          "original": "a",
+          "renamed": "findGamePlayer"
         },
         {
           "start": 13416,
@@ -1391629,7 +1392338,7 @@
       "original": "ie.java",
       "renamed": "GetTeamSelectionSpeedup.java",
       "inputSha256": "4aaf1d7f2bb9f47e6824f9ec4ff495eb713a49e68ce5a389724c3c693d70fa0d",
-      "outputSha256": "608b95c97bf7cc96d0f528fab3cd44d6da99fb4f381121dbc111e9b6abb1c5f4",
+      "outputSha256": "dcd744775e99e546ff96e633829ab389f761c43a559d5729e0ec1ef41d2f158b",
       "edits": [
         {
           "start": 50,
@@ -1392010,6 +1392719,13 @@
           "renamed": "SetPhasedEnergyBeamAimarc"
         },
         {
+          "start": 3704,
+          "end": 3705,
+          "symbol": "M:pdb.a(BJ)Ljk;",
+          "original": "a",
+          "renamed": "findLobbyPlayer"
+        },
+        {
           "start": 3948,
           "end": 3949,
           "symbol": "M:jk.a(Ljava/lang/String;Ljava/lang/String;I)V",
@@ -1392169,6 +1392885,13 @@
           "symbol": "C:pdb",
           "original": "pdb",
           "renamed": "SetPhasedEnergyBeamAimarc"
+        },
+        {
+          "start": 4979,
+          "end": 4980,
+          "symbol": "M:pdb.a(BJ)Ljk;",
+          "original": "a",
+          "renamed": "findLobbyPlayer"
         },
         {
           "start": 5140,
@@ -1392605,6 +1393328,13 @@
           "renamed": "ScrollBarWidget"
         },
         {
+          "start": 8303,
+          "end": 8304,
+          "symbol": "M:pjb.a(JZ)Ljk;",
+          "original": "a",
+          "renamed": "findGamePlayer"
+        },
+        {
           "start": 8405,
           "end": 8407,
           "symbol": "C:jk",
@@ -1392757,6 +1393487,13 @@
           "symbol": "C:pjb",
           "original": "pjb",
           "renamed": "ScrollBarWidget"
+        },
+        {
+          "start": 9401,
+          "end": 9402,
+          "symbol": "M:pjb.a(JZ)Ljk;",
+          "original": "a",
+          "renamed": "findGamePlayer"
         },
         {
           "start": 9560,
@@ -1393004,6 +1393741,13 @@
           "renamed": "SetPhasedEnergyBeamAimarc"
         },
         {
+          "start": 11120,
+          "end": 11121,
+          "symbol": "M:pdb.a(BJ)Ljk;",
+          "original": "a",
+          "renamed": "findLobbyPlayer"
+        },
+        {
           "start": 11360,
           "end": 11363,
           "symbol": "C:qea",
@@ -1393058,6 +1393802,13 @@
           "symbol": "C:pdb",
           "original": "pdb",
           "renamed": "SetPhasedEnergyBeamAimarc"
+        },
+        {
+          "start": 11893,
+          "end": 11894,
+          "symbol": "M:pdb.a(BJ)Ljk;",
+          "original": "a",
+          "renamed": "findLobbyPlayer"
         },
         {
           "start": 12109,
@@ -1396209,7 +1396960,7 @@
       "original": "iha.java",
       "renamed": "SetMachineGunPulsetime.java",
       "inputSha256": "8286a9030523bf393620a57b5b915243de03e17ecf0c9bd75eaa297668bcb29b",
-      "outputSha256": "eeffc5ca3782ea9744989b3883fb021dabac81f390f76f8a1528bc2e7452ddcc",
+      "outputSha256": "e5295898f81c71ff8efeae6bf27d1ac1e5670ecab7052c0f6e55fde81e804eeb",
       "edits": [
         {
           "start": 50,
@@ -1396231,6 +1396982,13 @@
           "symbol": "M:iha.a(I)V",
           "original": "a",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 266,
+          "end": 267,
+          "symbol": "M:iha.e(I)Z",
+          "original": "e",
+          "renamed": "hasPrivilegedAccess"
         },
         {
           "start": 319,
@@ -1396350,6 +1397108,13 @@
           "symbol": "C:iha",
           "original": "iha",
           "renamed": "SetMachineGunPulsetime"
+        },
+        {
+          "start": 817,
+          "end": 818,
+          "symbol": "M:iha.e(I)Z",
+          "original": "e",
+          "renamed": "hasPrivilegedAccess"
         },
         {
           "start": 865,
@@ -1403855,7 +1404620,7 @@
       "original": "ika.java",
       "renamed": "AwardVictoryToTeamAction.java",
       "inputSha256": "807edf4ee1126d325f95573b19e81367c6e7f62d66c06f83c517a89b25c36134",
-      "outputSha256": "cd6d3c4b21bb00262606984d66e6ac64329567b6ab738d6970c89ad233f257f6",
+      "outputSha256": "7ebee90b78bbefbe31f90cbe128e93957ec136b457e74589e4e1605bb6eb86c1",
       "edits": [
         {
           "start": 50,
@@ -1404264,6 +1405029,13 @@
           "renamed": "AwardVictoryToTeamAction"
         },
         {
+          "start": 4159,
+          "end": 4160,
+          "symbol": "M:ika.a(IZ)V",
+          "original": "a",
+          "renamed": "openDisplayModeDialog"
+        },
+        {
           "start": 4212,
           "end": 4215,
           "symbol": "C:dib",
@@ -1404409,6 +1405181,13 @@
           "symbol": "F:ika.field_b:I",
           "original": "field_b",
           "renamed": "team"
+        },
+        {
+          "start": 6208,
+          "end": 6209,
+          "symbol": "M:ika.a(IZ)V",
+          "original": "a",
+          "renamed": "openDisplayModeDialog"
         },
         {
           "start": 6248,
@@ -1404563,6 +1405342,13 @@
           "symbol": "C:ika",
           "original": "ika",
           "renamed": "AwardVictoryToTeamAction"
+        },
+        {
+          "start": 7159,
+          "end": 7160,
+          "symbol": "M:ika.a(IZ)V",
+          "original": "a",
+          "renamed": "openDisplayModeDialog"
         },
         {
           "start": 7254,
@@ -1411121,7 +1411907,7 @@
       "original": "ira.java",
       "renamed": "PointDefenceLaserWeaponDefinition.java",
       "inputSha256": "a10d8e2ca92b14723142b83d7e429835260e09c91ddc7d8ee353c48bef5a8fd7",
-      "outputSha256": "52c9b8af83bd8e4dd6e28e41e676fdd3b31b3f2badf8691c874bb5282801726d",
+      "outputSha256": "0da8163fa292b789a6e63071f3e9e8d5791826ecf0de6a9767f7b32fd94b50e9",
       "edits": [
         {
           "start": 50,
@@ -1411402,6 +1412188,13 @@
           "symbol": "C:pjb",
           "original": "pjb",
           "renamed": "ScrollBarWidget"
+        },
+        {
+          "start": 2445,
+          "end": 2446,
+          "symbol": "M:pjb.a(JZ)Ljk;",
+          "original": "a",
+          "renamed": "findGamePlayer"
         },
         {
           "start": 2957,
@@ -1414637,7 +1415430,7 @@
       "original": "iua.java",
       "renamed": "SetDebrisCarryOverPercentage.java",
       "inputSha256": "b587cd9baa075932de3f3ad80f524863d3e821abd5080872c30b723ec4f6d444",
-      "outputSha256": "745b98d7a6863c20452167076a2a9840ee06c331bd502c4ff5434be4578d5fc4",
+      "outputSha256": "1cb4a30eafb204e466e6f955c2242232492738615560883b1229536e9bb802b3",
       "edits": [
         {
           "start": 50,
@@ -1414652,6 +1415445,13 @@
           "symbol": "C:rqa",
           "original": "rqa",
           "renamed": "ConsoleCommand"
+        },
+        {
+          "start": 110,
+          "end": 117,
+          "symbol": "F:iua.field_p:I",
+          "original": "field_p",
+          "renamed": "accountCreationAge"
         },
         {
           "start": 145,
@@ -1414813,6 +1415613,13 @@
           "symbol": "M:iua.e(B)V",
           "original": "e",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 1536,
+          "end": 1543,
+          "symbol": "F:iua.field_p:I",
+          "original": "field_p",
+          "renamed": "accountCreationAge"
         },
         {
           "start": 1639,
@@ -1421468,7 +1422275,7 @@
       "original": "jd.java",
       "renamed": "SetLagVariant.java",
       "inputSha256": "a6fd7a1f006770c0983978cbe1e6b200b48720825b83e4d6e667385a65c42420",
-      "outputSha256": "d2dda95f72b05c3c5ae649e76b66bf1b475cb621a4279b143fcd8ae69383a1d0",
+      "outputSha256": "dadc6cad40234f37a3d1ab583fad8b7d827d6b069125c29a713e0f7b7e188140",
       "edits": [
         {
           "start": 50,
@@ -1421581,6 +1422388,13 @@
           "symbol": "C:wbb",
           "original": "wbb",
           "renamed": "GetMachineGunReload"
+        },
+        {
+          "start": 3763,
+          "end": 3764,
+          "symbol": "M:wbb.a(III)V",
+          "original": "a",
+          "renamed": "configureSymmetricSimulatedLag"
         },
         {
           "start": 3771,
@@ -1429502,7 +1430316,7 @@
       "original": "jlb.java",
       "renamed": "BricksTextureOperation.java",
       "inputSha256": "90f1ee54b283cb4436b01b92d4deafe32cd2a2f7c7c51c254c2f5c760899eab3",
-      "outputSha256": "9371d4f96b100939f6da7e0589eb239daceaeaf83ed7e08fd7499d91d9107bce",
+      "outputSha256": "717b627051c01f8d163b106e4c47aaaf82967269c8d239a8d53dadf92f27d885",
       "edits": [
         {
           "start": 71,
@@ -1429923,6 +1430737,13 @@
           "symbol": "C:nu",
           "original": "nu",
           "renamed": "GetMissileLauncherEnergyUsed"
+        },
+        {
+          "start": 3449,
+          "end": 3450,
+          "symbol": "M:nu.e(B)Z",
+          "original": "e",
+          "renamed": "handleNameEntryKeyEvent"
         },
         {
           "start": 3540,
@@ -1438655,7 +1439476,7 @@
       "original": "jpa.java",
       "renamed": "AdjustVariableAction.java",
       "inputSha256": "37361d696e2ff8eacfb302ba617b7276aca3fcafadf9e1a14b54615a8528758e",
-      "outputSha256": "504d66eabab01e16091604a87252c67a161ab225bfd1e779226f30192415beee",
+      "outputSha256": "d9c0f480b5c8ed41bf2f5196ceda6c2fd25634e92f972bcd2c03ccbf6e39fd0d",
       "edits": [
         {
           "start": 50,
@@ -1438691,6 +1439512,13 @@
           "symbol": "C:dja",
           "original": "dja",
           "renamed": "GameStateFactory"
+        },
+        {
+          "start": 151,
+          "end": 158,
+          "symbol": "F:jpa.field_a:Z",
+          "original": "field_a",
+          "renamed": "accountEmailUpdatesEnabled"
         },
         {
           "start": 176,
@@ -1473660,7 +1474488,7 @@
       "original": "ku.java",
       "renamed": "LegacyOpenGlUnlitEffect.java",
       "inputSha256": "cc12737ff56251308bb9eefbe957298a312e957f00574925089d610247833463",
-      "outputSha256": "2a55b394b93d0dd34d0f7ed8d0110f6fab3d1de2b6d1236d18681100b9ff5bb7",
+      "outputSha256": "3dc5384ea1cc6d9b4cafd9026cf81b2e043f7dd6063b5dd5a55d0c33dfc1c1be",
       "edits": [
         {
           "start": 50,
@@ -1474006,6 +1474834,13 @@
           "renamed": "SetDebrisCarryOverPercentage"
         },
         {
+          "start": 2157,
+          "end": 2164,
+          "symbol": "F:iua.field_p:I",
+          "original": "field_p",
+          "renamed": "accountCreationAge"
+        },
+        {
           "start": 2187,
           "end": 2190,
           "symbol": "C:cjb",
@@ -1474025,6 +1474860,13 @@
           "symbol": "C:jpa",
           "original": "jpa",
           "renamed": "AdjustVariableAction"
+        },
+        {
+          "start": 2257,
+          "end": 2264,
+          "symbol": "F:jpa.field_a:Z",
+          "original": "field_a",
+          "renamed": "accountEmailUpdatesEnabled"
         },
         {
           "start": 2395,
@@ -1481707,7 +1482549,7 @@
       "original": "lba.java",
       "renamed": "GetUseFilledPolygons.java",
       "inputSha256": "1120a9fffc9718254091ae093b4e057fc2c49cb1d0364f966bb653e713cd9a17",
-      "outputSha256": "2111ccb9cb4a177ce7024395fd3d824fabc408a1449b1329bc259dbf2dfc95e7",
+      "outputSha256": "ba05790beeb4571adaa3fa178312df9537b4897977173ad96ddae6a7aa7df842",
       "edits": [
         {
           "start": 50,
@@ -1481827,6 +1482669,13 @@
           "symbol": "M:lba.e(B)V",
           "original": "e",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 1419,
+          "end": 1420,
+          "symbol": "M:lba.a(I)V",
+          "original": "a",
+          "renamed": "resetAccountUiRequests"
         },
         {
           "start": 1443,
@@ -1491862,7 +1492711,7 @@
       "original": "lja.java",
       "renamed": "GrappleLauncherBehaviour.java",
       "inputSha256": "6e6dbc4b549219d777f2fe96f68a590e5c61ebe846644713cd88f1b53a075e97",
-      "outputSha256": "249880e7467fb61e6df0446209b4ee3f47a649a31fd9839643bfab79f7dbb12d",
+      "outputSha256": "fcc813b452cd8d208402bc3e25257c0262efbe1534f466edeb2fb385d5bc60bb",
       "edits": [
         {
           "start": 50,
@@ -1492607,6 +1493456,13 @@
           "renamed": "BlendTextureOperation"
         },
         {
+          "start": 6748,
+          "end": 6749,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
+        },
+        {
           "start": 6798,
           "end": 6799,
           "symbol": "M:anb.a(IIIII)V",
@@ -1492733,6 +1493589,13 @@
           "renamed": "BlendTextureOperation"
         },
         {
+          "start": 7252,
+          "end": 7253,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
+        },
+        {
           "start": 7267,
           "end": 7268,
           "symbol": "M:anb.d(Z)I",
@@ -1492759,6 +1493622,13 @@
           "symbol": "C:qba",
           "original": "qba",
           "renamed": "BlendTextureOperation"
+        },
+        {
+          "start": 7368,
+          "end": 7369,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
         },
         {
           "start": 8545,
@@ -1530627,7 +1531497,7 @@
       "original": "ml.java",
       "renamed": "ShipComponent.java",
       "inputSha256": "a8775eb216133005871dcb13c91c7da089d1e5d742f112d5960f46d439a0e10a",
-      "outputSha256": "d959f3b8a8c744ecce0a4023d067e94a1c7e7224f2e326d6f967866423567e3b",
+      "outputSha256": "6df35d811c9ccb11203e1f9d1bc5e5568156a0352b84db88623a9ddc70363e0a",
       "edits": [
         {
           "start": 71,
@@ -1547122,6 +1547992,13 @@
           "renamed": "BlendTextureOperation"
         },
         {
+          "start": 169063,
+          "end": 169064,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
+        },
+        {
           "start": 169077,
           "end": 169084,
           "symbol": "F:ml.field_r:I",
@@ -1557375,7 +1558252,7 @@
       "original": "ms.java",
       "renamed": "NetworkGameClient.java",
       "inputSha256": "d7f28737ad996a612a78ae8f91d55de6a86e0f27408afec83e88af55c38e0b74",
-      "outputSha256": "69d46fa8c62253ec4e4532cb4e9350448e2148ddd54b6ef00a0a74596558e5ae",
+      "outputSha256": "79a9bb42462acb7c3f58a6ce0e4f032f9081aa1b0925620dc766f43d53ee3ba9",
       "edits": [
         {
           "start": 53,
@@ -1557819,6 +1558696,13 @@
           "renamed": "GetLagOut"
         },
         {
+          "start": 2258,
+          "end": 2259,
+          "symbol": "M:ala.a(II)V",
+          "original": "a",
+          "renamed": "updateAccountUi"
+        },
+        {
           "start": 2260,
           "end": 2263,
           "symbol": "C:tcb",
@@ -1557980,6 +1558864,13 @@
           "renamed": "PlayerGameDataFactory"
         },
         {
+          "start": 3652,
+          "end": 3653,
+          "symbol": "M:csb.a(Z)V",
+          "original": "a",
+          "renamed": "updateCachedFrameUi"
+        },
+        {
           "start": 3691,
           "end": 3694,
           "symbol": "C:kkb",
@@ -1558055,6 +1558946,13 @@
           "symbol": "C:gia",
           "original": "gia",
           "renamed": "NormalMapTextureOperation"
+        },
+        {
+          "start": 3904,
+          "end": 3905,
+          "symbol": "M:gia.d(I)I",
+          "original": "d",
+          "renamed": "getMouseIdleTicks"
         },
         {
           "start": 3968,
@@ -1561303,6 +1562201,13 @@
           "renamed": "UiComboBoxList"
         },
         {
+          "start": 21167,
+          "end": 21168,
+          "symbol": "M:tia.a(ZIIZ)I",
+          "original": "a",
+          "renamed": "pollAccountUi"
+        },
+        {
           "start": 21176,
           "end": 21179,
           "symbol": "C:tcb",
@@ -1561436,6 +1562341,13 @@
           "renamed": "SetVariableAction"
         },
         {
+          "start": 21816,
+          "end": 21817,
+          "symbol": "M:pob.b(I)I",
+          "original": "b",
+          "renamed": "getAccountCreationAge"
+        },
+        {
           "start": 21824,
           "end": 21827,
           "symbol": "C:wpa",
@@ -1561476,6 +1562388,13 @@
           "symbol": "C:etb",
           "original": "etb",
           "renamed": "ThrusterBehaviourFactory"
+        },
+        {
+          "start": 21876,
+          "end": 21877,
+          "symbol": "M:etb.a(I)Z",
+          "original": "a",
+          "renamed": "isAccountEmailUpdatesEnabled"
         },
         {
           "start": 21886,
@@ -1576007,7 +1576926,7 @@
       "original": "nhb.java",
       "renamed": "SetMissionTerrainDebrisProbability.java",
       "inputSha256": "4edeb601c9c7be7314becbf87041a6b68cd253e913c06de5f8c06abfb7b29ea5",
-      "outputSha256": "59b3d86259f4c63dcd0270a0b6bc7b5b90ba75a161f9a991ec1c5575792336a4",
+      "outputSha256": "a1732ea49644d340c135457482bc6b477fb9d05ed26ac72f66bbd89d3f0aa179",
       "edits": [
         {
           "start": 50,
@@ -1576029,6 +1576948,13 @@
           "symbol": "C:rmb",
           "original": "rmb",
           "renamed": "GetGrapplingHookAimarc"
+        },
+        {
+          "start": 431,
+          "end": 432,
+          "symbol": "M:rmb.a(II)I",
+          "original": "a",
+          "renamed": "halveRgbPreservingAlpha"
         },
         {
           "start": 473,
@@ -1595120,7 +1596046,7 @@
       "original": "nu.java",
       "renamed": "GetMissileLauncherEnergyUsed.java",
       "inputSha256": "21440e9d88339636c1f1d49985a6e22428601885dbcb8f5d7a82063854df6687",
-      "outputSha256": "45071e0c08ee8c8e7c7c6ecdca7330dca69beb6a6f577e28cfd6109d206bb45c",
+      "outputSha256": "56abdcee3a22bfa1afde28336cc743ea9e470282651a7b177a2b26d0095862a9",
       "edits": [
         {
           "start": 50,
@@ -1595254,6 +1596180,13 @@
           "symbol": "M:nu.a(I)V",
           "original": "a",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 1538,
+          "end": 1539,
+          "symbol": "M:nu.e(B)Z",
+          "original": "e",
+          "renamed": "handleNameEntryKeyEvent"
         },
         {
           "start": 1638,
@@ -1601715,7 +1602648,7 @@
       "original": "oaa.java",
       "renamed": "OpenGlVertexBufferObject.java",
       "inputSha256": "7ef74f18622447069101054f6ecf87e8b6ce1064ca0e534fb73cfc04980dae12",
-      "outputSha256": "23161873f227f62c4f9d32725f835a237f285e739f01a9daaa5e5638808a3cd4",
+      "outputSha256": "20891b62ac2c0a4ff4c939247f634fe25292184a7cbaba4a0d69a27588ba402c",
       "edits": [
         {
           "start": 50,
@@ -1601856,6 +1602789,13 @@
           "symbol": "F:ola.field_p:Lqka;",
           "original": "field_p",
           "renamed": "activeNameEntryDialog"
+        },
+        {
+          "start": 890,
+          "end": 891,
+          "symbol": "M:oaa.b(B)D",
+          "original": "b",
+          "renamed": "getOutgoingLagStdDevMillis"
         },
         {
           "start": 946,
@@ -1631185,7 +1632125,7 @@
       "original": "pdb.java",
       "renamed": "SetPhasedEnergyBeamAimarc.java",
       "inputSha256": "1da23a2b356430aa6d710848c0641e53da598d6292a0600b663af0cdf6c9109e",
-      "outputSha256": "860ae17234c1fd8400482c1a56daaf936ca6a4bc05602905272943636d7fc00a",
+      "outputSha256": "46db4ba4b5de23e227ec90868c75c39eca9a3292b1da6144194fb275915aff54",
       "edits": [
         {
           "start": 50,
@@ -1631286,6 +1632226,13 @@
           "renamed": "SetPhasedEnergyBeamAimarc"
         },
         {
+          "start": 565,
+          "end": 566,
+          "symbol": "M:pdb.a(BJ)Ljk;",
+          "original": "a",
+          "renamed": "findLobbyPlayer"
+        },
+        {
           "start": 627,
           "end": 629,
           "symbol": "C:nc",
@@ -1631328,6 +1632275,13 @@
           "renamed": "LobbyPlayerEntry"
         },
         {
+          "start": 1283,
+          "end": 1284,
+          "symbol": "M:pdb.a(BJ)Ljk;",
+          "original": "a",
+          "renamed": "findLobbyPlayer"
+        },
+        {
           "start": 1359,
           "end": 1361,
           "symbol": "C:jk",
@@ -1631361,7 +1632315,7 @@
       "original": "pe.java",
       "renamed": "World.java",
       "inputSha256": "0583ff6606280eda408377c71b228e41ba2d6f2eb2dc9d397a07e3401efb9164",
-      "outputSha256": "fea4dfac645f656a5261bfc3e90f135cbcd6acbaf64bca7df695e42a4a24093c",
+      "outputSha256": "cada6aa383e60d7771c4c867752734324c5d1d026c4d385024df3694fca1cfda",
       "edits": [
         {
           "start": 71,
@@ -1632967,6 +1633921,13 @@
           "renamed": "BlendTextureOperation"
         },
         {
+          "start": 8863,
+          "end": 8864,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
+        },
+        {
           "start": 8884,
           "end": 8885,
           "symbol": "M:tj.d(I)I",
@@ -1633751,6 +1634712,13 @@
           "renamed": "BlendTextureOperation"
         },
         {
+          "start": 16026,
+          "end": 16027,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
+        },
+        {
           "start": 16089,
           "end": 16090,
           "symbol": "M:ksa.b(I)V",
@@ -1634381,6 +1635349,13 @@
           "renamed": "BlendTextureOperation"
         },
         {
+          "start": 22912,
+          "end": 22913,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
+        },
+        {
           "start": 22928,
           "end": 22929,
           "symbol": "M:anb.d(Z)I",
@@ -1634694,6 +1635669,13 @@
           "symbol": "C:qba",
           "original": "qba",
           "renamed": "BlendTextureOperation"
+        },
+        {
+          "start": 24152,
+          "end": 24153,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
         },
         {
           "start": 24168,
@@ -1647007,6 +1647989,13 @@
           "symbol": "C:qba",
           "original": "qba",
           "renamed": "BlendTextureOperation"
+        },
+        {
+          "start": 163979,
+          "end": 163980,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
         },
         {
           "start": 163995,
@@ -1660373,6 +1661362,13 @@
           "renamed": "BlendTextureOperation"
         },
         {
+          "start": 314571,
+          "end": 314572,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
+        },
+        {
           "start": 314586,
           "end": 314587,
           "symbol": "M:anb.d(Z)I",
@@ -1661209,6 +1662205,13 @@
           "renamed": "BlendTextureOperation"
         },
         {
+          "start": 326876,
+          "end": 326877,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
+        },
+        {
           "start": 326894,
           "end": 326897,
           "symbol": "C:anb",
@@ -1661844,6 +1662847,13 @@
           "symbol": "C:qba",
           "original": "qba",
           "renamed": "BlendTextureOperation"
+        },
+        {
+          "start": 336445,
+          "end": 336446,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
         },
         {
           "start": 336615,
@@ -1683441,7 +1684451,7 @@
       "original": "pi.java",
       "renamed": "QuickChatPhraseDefinition.java",
       "inputSha256": "9cb27dbf38edb5da0cfecfd47807fa202fe0f429c8e0575edefbe3edf675b0f5",
-      "outputSha256": "4bfaad6f8739017b993a3ba35ef7333a5efae95373d359c63c2317e2a5a99cee",
+      "outputSha256": "500f219bb2b9360166db77d7d8521344ad15abadc4aa795527d9a633b7818fa6",
       "edits": [
         {
           "start": 50,
@@ -1683512,6 +1684522,13 @@
           "symbol": "C:pi",
           "original": "pi",
           "renamed": "QuickChatPhraseDefinition"
+        },
+        {
+          "start": 718,
+          "end": 719,
+          "symbol": "M:pi.a(BZZ)V",
+          "original": "a",
+          "renamed": "drawModalUiBackground"
         },
         {
           "start": 803,
@@ -1683785,6 +1684802,13 @@
           "symbol": "M:rta.a(Ljava/lang/Throwable;Ljava/lang/String;)Lhva;",
           "original": "a",
           "renamed": "wrapClientException"
+        },
+        {
+          "start": 4828,
+          "end": 4829,
+          "symbol": "M:pi.a(BZZ)V",
+          "original": "a",
+          "renamed": "drawModalUiBackground"
         },
         {
           "start": 4965,
@@ -1686456,7 +1687480,7 @@
       "original": "pjb.java",
       "renamed": "ScrollBarWidget.java",
       "inputSha256": "283295142e6a70b55c18b226679dea21b843088de6d089a992bc130e6d9837b6",
-      "outputSha256": "147ebe2ab02217e5fc642931f47366c2e1cc0c83b1d90a4aad9fd7bdbb2a8132",
+      "outputSha256": "290b98f2bf4177dacd680c20048bc73ba5858798907f71f466634d6110a1f549",
       "edits": [
         {
           "start": 50,
@@ -1686926,6 +1687950,13 @@
           "symbol": "C:jk",
           "original": "jk",
           "renamed": "LobbyPlayerEntry"
+        },
+        {
+          "start": 5654,
+          "end": 5655,
+          "symbol": "M:pjb.a(JZ)Ljk;",
+          "original": "a",
+          "renamed": "findGamePlayer"
         },
         {
           "start": 5728,
@@ -1692826,7 +1693857,7 @@
       "original": "pob.java",
       "renamed": "SetVariableAction.java",
       "inputSha256": "84edbd46edbf0ed014300d1e5bd3309397cde442b4431518fbe022ccb408e2cc",
-      "outputSha256": "cbc4c3baeeefd8091b116c4852be58e49a010fda1a6d2a31e9db6a202b24daf2",
+      "outputSha256": "2e05b5e7fb9f5cb41bc7c2d19ff30f0e01cb83088d1006114a791fde7f2d4443",
       "edits": [
         {
           "start": 50,
@@ -1693186,11 +1694217,25 @@
           "renamed": "wrapClientException"
         },
         {
+          "start": 3726,
+          "end": 3727,
+          "symbol": "M:pob.b(I)I",
+          "original": "b",
+          "renamed": "getAccountCreationAge"
+        },
+        {
           "start": 3804,
           "end": 3807,
           "symbol": "C:iua",
           "original": "iua",
           "renamed": "SetDebrisCarryOverPercentage"
+        },
+        {
+          "start": 3808,
+          "end": 3815,
+          "symbol": "F:iua.field_p:I",
+          "original": "field_p",
+          "renamed": "accountCreationAge"
         },
         {
           "start": 3846,
@@ -1703479,7 +1704524,7 @@
       "original": "qba.java",
       "renamed": "BlendTextureOperation.java",
       "inputSha256": "53bf4174685ce25d394e87ee09e41d7a80c1f6241e98e83dd0b6859099b0b0c7",
-      "outputSha256": "eb4fbad773cc84fcfd7894e544e9397bdaabb9ee4ed546ef73c1fa3cf31c2edb",
+      "outputSha256": "aafe2aaa77bf6fb738fdee5c594c5ba9344c816c9dadd454f0f69aad08309a0c",
       "edits": [
         {
           "start": 50,
@@ -1703494,6 +1704539,13 @@
           "symbol": "C:le",
           "original": "le",
           "renamed": "TextureOperation"
+        },
+        {
+          "start": 89,
+          "end": 90,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
         },
         {
           "start": 220,
@@ -1719372,7 +1720424,7 @@
       "original": "qga.java",
       "renamed": "AccountNameAvailabilityReplies.java",
       "inputSha256": "623ccd31972c5724130edfa1f2842f570cf2a4041a88852c435223c5ce0912fc",
-      "outputSha256": "4d8d1d93cfe0120b5539a750ea66a4235217ef313e0084f8ec4534edbdf4162b",
+      "outputSha256": "0d72c90494f18e632739deeb47ee6a2a1a9568d3964124974c9b0c5fe0c52ba4",
       "edits": [
         {
           "start": 50,
@@ -1719422,6 +1720474,13 @@
           "symbol": "C:iua",
           "original": "iua",
           "renamed": "SetDebrisCarryOverPercentage"
+        },
+        {
+          "start": 835,
+          "end": 842,
+          "symbol": "F:iua.field_p:I",
+          "original": "field_p",
+          "renamed": "accountCreationAge"
         },
         {
           "start": 863,
@@ -1721454,7 +1722513,7 @@
       "original": "qjb.java",
       "renamed": "WeaponBehaviour.java",
       "inputSha256": "8f51b19e3d4bfda030c6ce63f68631fc005bd5aacfeff918ffb9a5c425f84d0d",
-      "outputSha256": "666e775a20c7b49559c94fb5dab5bef111a6770c76e90d7e55da81ba7f8df67f",
+      "outputSha256": "6f606e82de6e9920f13c031b04119b2fa08a9194f58bf8d7986d59aaa462a478",
       "edits": [
         {
           "start": 71,
@@ -1722563,6 +1723622,13 @@
           "renamed": "BlendTextureOperation"
         },
         {
+          "start": 9600,
+          "end": 9601,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
+        },
+        {
           "start": 10949,
           "end": 10952,
           "symbol": "C:rta",
@@ -1722988,6 +1724054,13 @@
           "symbol": "C:qba",
           "original": "qba",
           "renamed": "BlendTextureOperation"
+        },
+        {
+          "start": 15053,
+          "end": 15054,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
         },
         {
           "start": 15084,
@@ -1728079,7 +1729152,7 @@
       "original": "qmb.java",
       "renamed": "GetSpinningBladeAimspeed.java",
       "inputSha256": "3d9b19602050b86fb6b884a67bda64f63998c1261afeaa5495e06d3cfcf8893c",
-      "outputSha256": "a566bf7bbb078e095826a1033ff2a89e1ed25c834dcea81447a775eb0f6cb67c",
+      "outputSha256": "5f3d7d131a20e396ac38b5fae8982c3f2fec88bf8fe7ab3ad9bc4ebbc4471906",
       "edits": [
         {
           "start": 50,
@@ -1728108,6 +1729181,13 @@
           "symbol": "C:qmb",
           "original": "qmb",
           "renamed": "GetSpinningBladeAimspeed"
+        },
+        {
+          "start": 252,
+          "end": 253,
+          "symbol": "M:qmb.a(I)Z",
+          "original": "a",
+          "renamed": "handleConsoleKeyEvent"
         },
         {
           "start": 287,
@@ -1728234,6 +1729314,13 @@
           "symbol": "M:qmb.<init>(Ljava/lang/String;[Ljava/lang/Class;Ljava/lang/String;)V",
           "original": "qmb",
           "renamed": "GetSpinningBladeAimspeed"
+        },
+        {
+          "start": 1520,
+          "end": 1521,
+          "symbol": "M:qmb.a(I)Z",
+          "original": "a",
+          "renamed": "handleConsoleKeyEvent"
         },
         {
           "start": 1548,
@@ -1729295,7 +1730382,7 @@
       "original": "qoa.java",
       "renamed": "SetMassDriverProjectileDamage.java",
       "inputSha256": "9e4c351e9ceae61b00400638a973da8af66f7210464591d221501f6df1751dae",
-      "outputSha256": "d8a16d817cb9b12dc5fd690c64aa39211aeb3d0b6fe37b3a84ebddcc1854ce1f",
+      "outputSha256": "fff5b059f893f0485a30b55d7866e26317ef0e9df3b8a4d441c2cfd88d2af805",
       "edits": [
         {
           "start": 50,
@@ -1729333,6 +1730420,20 @@
           "renamed": "SetMassDriverProjectileDamage"
         },
         {
+          "start": 329,
+          "end": 330,
+          "symbol": "M:qoa.a(III)V",
+          "original": "a",
+          "renamed": "setCachedFramePointerPosition"
+        },
+        {
+          "start": 386,
+          "end": 387,
+          "symbol": "M:qoa.a(III)V",
+          "original": "a",
+          "renamed": "setCachedFramePointerPosition"
+        },
+        {
           "start": 434,
           "end": 436,
           "symbol": "C:uo",
@@ -1729340,11 +1730441,25 @@
           "renamed": "SetOndamageParticleFadestart"
         },
         {
+          "start": 437,
+          "end": 444,
+          "symbol": "F:uo.field_o:I",
+          "original": "field_o",
+          "renamed": "cachedFramePointerY"
+        },
+        {
           "start": 463,
           "end": 466,
           "symbol": "C:ata",
           "original": "ata",
           "renamed": "UiAngleDial"
+        },
+        {
+          "start": 467,
+          "end": 474,
+          "symbol": "F:ata.field_H:I",
+          "original": "field_H",
+          "renamed": "cachedFramePointerX"
         },
         {
           "start": 524,
@@ -1742268,7 +1743383,7 @@
       "original": "rba.java",
       "renamed": "ResourceNode.java",
       "inputSha256": "5d18783097bf88c5e1942c03beeb2d4b2ffd5186dec518a23a89b8e3047115c4",
-      "outputSha256": "b47ce8321d0dd54240f4616b785eb8aa22dd1972b27f4958aa67a8993cb95bbc",
+      "outputSha256": "34ff24bd5077b274f6e0dffdfbb8f18917ee04fd5e3ca4576ada86efb7faf645",
       "edits": [
         {
           "start": 50,
@@ -1743165,6 +1744280,13 @@
           "symbol": "C:rmb",
           "original": "rmb",
           "renamed": "GetGrapplingHookAimarc"
+        },
+        {
+          "start": 6599,
+          "end": 6600,
+          "symbol": "M:rmb.a(II)I",
+          "original": "a",
+          "renamed": "halveRgbPreservingAlpha"
         },
         {
           "start": 6629,
@@ -1759817,7 +1760939,7 @@
       "original": "rmb.java",
       "renamed": "GetGrapplingHookAimarc.java",
       "inputSha256": "6024867fa0f8d91e838e6ba9b43a88f2d34ad1aa1dc784e5853f5de3156ad4c6",
-      "outputSha256": "23efc284d5a444fc4ba77e89a37c76e8223179b22f4d3b8f1224367fbee43054",
+      "outputSha256": "f7bf526d9d99df695b76bcae607f29dda45596d16c50c28307c5af25fc2f7fb3",
       "edits": [
         {
           "start": 71,
@@ -1759937,6 +1761059,13 @@
           "symbol": "P:rmb.a([Lnc;I)Lnc;#1",
           "original": "param1",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1232,
+          "end": 1233,
+          "symbol": "M:rmb.a(II)I",
+          "original": "a",
+          "renamed": "halveRgbPreservingAlpha"
         },
         {
           "start": 1405,
@@ -1765558,7 +1766687,7 @@
       "original": "rpa.java",
       "renamed": "OpenGlFramebuffer.java",
       "inputSha256": "520be9bf9fcd42167167a39023b4bca2b6ee68745532350796ffb9fd8c54e00a",
-      "outputSha256": "f51ed158452163bf19d7ecf5ac1b073b42d4e474cbf4eaf1fc7d783c3d90bc92",
+      "outputSha256": "4a7e9c5eeb596a0c7811653a8a357561b24553c33f7fba2a6364b08abbf116a4",
       "edits": [
         {
           "start": 50,
@@ -1765622,6 +1766751,13 @@
           "symbol": "F:rpa.field_g:I",
           "original": "field_g",
           "renamed": "attachmentMask"
+        },
+        {
+          "start": 294,
+          "end": 301,
+          "symbol": "F:rpa.field_b:I",
+          "original": "field_b",
+          "renamed": "mouseIdleTicks"
         },
         {
           "start": 315,
@@ -1766896,6 +1768032,13 @@
           "symbol": "C:uja",
           "original": "uja",
           "renamed": "TextureCoordinateMode"
+        },
+        {
+          "start": 15848,
+          "end": 15855,
+          "symbol": "F:rpa.field_b:I",
+          "original": "field_b",
+          "renamed": "mouseIdleTicks"
         }
       ]
     },
@@ -1774648,7 +1775791,7 @@
       "original": "rt.java",
       "renamed": "ColorRowCache.java",
       "inputSha256": "56d8799ff1cd7f18e530e6705c8afaf35b29cc43520cc75ed6adbb7303e0feb9",
-      "outputSha256": "f840efc3ad3f420503a633e0464eb05b7716fd0f8b736691c7289cd19ae44538",
+      "outputSha256": "4949be4f167f3b9f7eb613297c1d4f03a4a941d590219c1da251d6429624a6f2",
       "edits": [
         {
           "start": 50,
@@ -1774775,6 +1775918,13 @@
           "symbol": "M:ij.e(I)V",
           "original": "e",
           "renamed": "clear"
+        },
+        {
+          "start": 2603,
+          "end": 2604,
+          "symbol": "M:rt.c(I)I",
+          "original": "c",
+          "renamed": "pollAccountUi"
         },
         {
           "start": 3033,
@@ -1776152,7 +1777302,7 @@
       "original": "rw.java",
       "renamed": "PerlinNoiseTextureOperation.java",
       "inputSha256": "8a795b345cc565878fa2bc3597fb3b97b8be4afd8006749f8834f440fdc7c03b",
-      "outputSha256": "abf44efc55b4c2730eeed2e0c41a174d7c80eca0e1b629d381b6d60a4d22d435",
+      "outputSha256": "8ca42049d85f15936ad4ac5a936c2ded6610e229a49d7c0877c4a99b01d7c89d",
       "edits": [
         {
           "start": 50,
@@ -1777254,11 +1778404,25 @@
           "renamed": "PacketBuffer"
         },
         {
+          "start": 15232,
+          "end": 15233,
+          "symbol": "M:rw.a(ZB)V",
+          "original": "a",
+          "renamed": "drawDarkenedModalUi"
+        },
+        {
           "start": 15329,
           "end": 15331,
           "symbol": "C:pi",
           "original": "pi",
           "renamed": "QuickChatPhraseDefinition"
+        },
+        {
+          "start": 15332,
+          "end": 15333,
+          "symbol": "M:pi.a(BZZ)V",
+          "original": "a",
+          "renamed": "drawModalUiBackground"
         },
         {
           "start": 15414,
@@ -1785731,7 +1786895,7 @@
       "original": "se.java",
       "renamed": "DirectByteStorage.java",
       "inputSha256": "3f10fb496f72480dd380119f0aff06140192f7690d04d2c9d5d2c87b057aaf9c",
-      "outputSha256": "3f5a94abd07da4bcdd9ae74bdb5363b0b0bf1e6d38b3734402706cfa825a2a15",
+      "outputSha256": "6b62e9c0effd7a176a2c26d4b5f6286e6218189bed928f05daa34a524ae8266d",
       "edits": [
         {
           "start": 50,
@@ -1785760,6 +1786924,13 @@
           "symbol": "M:se.<init>()V",
           "original": "se",
           "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 174,
+          "end": 175,
+          "symbol": "M:se.a(Z)I",
+          "original": "a",
+          "renamed": "getOverlayClipWidth"
         },
         {
           "start": 226,
@@ -1785844,6 +1787015,13 @@
           "symbol": "C:se",
           "original": "se",
           "renamed": "DirectByteStorage"
+        },
+        {
+          "start": 1048,
+          "end": 1049,
+          "symbol": "M:se.a(Z)I",
+          "original": "a",
+          "renamed": "getOverlayClipWidth"
         },
         {
           "start": 1071,
@@ -1787436,7 +1788614,7 @@
       "original": "sfa.java",
       "renamed": "ProjectileHit.java",
       "inputSha256": "4b1daa6095202030bef71b5e9bbbf40977c5cde05919a688696b602d48276b22",
-      "outputSha256": "dc450b097788f0d8cf9f44d7325669af6d615ca0703cce8a7ba018a420558c5a",
+      "outputSha256": "84a652da5da45db3e462860c3eb895dcc6802dac292d281205f76cf508fd79a6",
       "edits": [
         {
           "start": 50,
@@ -1788132,6 +1789310,13 @@
           "renamed": "BlendTextureOperation"
         },
         {
+          "start": 3626,
+          "end": 3627,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
+        },
+        {
           "start": 3640,
           "end": 3647,
           "symbol": "F:sfa.field_e:I",
@@ -1788153,6 +1789338,13 @@
           "renamed": "BlendTextureOperation"
         },
         {
+          "start": 3722,
+          "end": 3723,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
+        },
+        {
           "start": 3736,
           "end": 3743,
           "symbol": "F:sfa.field_e:I",
@@ -1788172,6 +1789364,13 @@
           "symbol": "C:qba",
           "original": "qba",
           "renamed": "BlendTextureOperation"
+        },
+        {
+          "start": 3834,
+          "end": 3835,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
         },
         {
           "start": 3848,
@@ -1790833,7 +1792032,7 @@
       "original": "sg.java",
       "renamed": "Ship.java",
       "inputSha256": "c6af2ac1db7743b87a9d01fd2a6ca0c857a92dea14f0f68d46bdcbca4dac144e",
-      "outputSha256": "76cd4c42500abc20bf2753cf033c3b1497436b0153d5dacaf780e37df992f878",
+      "outputSha256": "38ac96874c578562b9fdf17b64463d60de6c4fd27e50272461912108f5112e1f",
       "edits": [
         {
           "start": 50,
@@ -1791921,6 +1793120,13 @@
           "renamed": "BlendTextureOperation"
         },
         {
+          "start": 6193,
+          "end": 6194,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
+        },
+        {
           "start": 6207,
           "end": 6208,
           "symbol": "M:anb.d(Z)I",
@@ -1791940,6 +1793146,13 @@
           "symbol": "C:qba",
           "original": "qba",
           "renamed": "BlendTextureOperation"
+        },
+        {
+          "start": 6280,
+          "end": 6281,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
         },
         {
           "start": 6294,
@@ -1793641,6 +1794854,13 @@
           "symbol": "C:qba",
           "original": "qba",
           "renamed": "BlendTextureOperation"
+        },
+        {
+          "start": 19883,
+          "end": 19884,
+          "symbol": "M:qba.a(IIIII)V",
+          "original": "a",
+          "renamed": "playSpatialSound"
         },
         {
           "start": 20037,
@@ -1804779,7 +1805999,7 @@
       "original": "sj.java",
       "renamed": "SetSalvoUsesAllEnergy.java",
       "inputSha256": "40235f3d69305b598e92d60a9bffcffaf17f15d583091447fbc0b38d010813fb",
-      "outputSha256": "1c3a51c87f3a4efc1c44f41bbf61a2610734b1da4d4e35c44bc5483e278a4975",
+      "outputSha256": "d7f63b09f6553b21dcdae0349f6265ed0154fe90abbb583a3339bcffd9200d15",
       "edits": [
         {
           "start": 71,
@@ -1804913,6 +1806133,13 @@
           "symbol": "C:dba",
           "original": "dba",
           "renamed": "SetLaserReload"
+        },
+        {
+          "start": 3262,
+          "end": 3263,
+          "symbol": "M:dba.a(IZ)V",
+          "original": "a",
+          "renamed": "drawNameEntryDialog"
         },
         {
           "start": 3344,
@@ -1812097,7 +1813324,7 @@
       "original": "sob.java",
       "renamed": "SoftwareToolkit.java",
       "inputSha256": "24ea8d35ce11250a11e0d65f610cd754e9fca9d1bc004b004230c2ff3d8c78d6",
-      "outputSha256": "6c58a2b5946ee512924ac64797204d59d9e725f918a1401c36734737f0f51f3f",
+      "outputSha256": "fd938cef9607db39bd52980e8cf29934e1ec082dacb8e6bc5fa961aa3d70d5ac",
       "edits": [
         {
           "start": 50,
@@ -1814578,6 +1815805,13 @@
           "renamed": "hasVolatileBackbuffer"
         },
         {
+          "start": 67367,
+          "end": 67368,
+          "symbol": "M:sob.a(Z)V",
+          "original": "a",
+          "renamed": "setDepthWriteEnabled"
+        },
+        {
           "start": 67395,
           "end": 67397,
           "symbol": "C:co",
@@ -1814590,6 +1815824,13 @@
           "symbol": "M:sob.a(Ljava/lang/Runnable;)Lco;",
           "original": "a",
           "renamed": "getThreadContext"
+        },
+        {
+          "start": 67472,
+          "end": 67479,
+          "symbol": "F:co.field_f:Z",
+          "original": "field_f",
+          "renamed": "depthWriteEnabled"
         },
         {
           "start": 67522,
@@ -1815679,6 +1816920,13 @@
           "renamed": "transparency"
         },
         {
+          "start": 80924,
+          "end": 80925,
+          "symbol": "M:sob.a(Z)V",
+          "original": "a",
+          "renamed": "setDepthWriteEnabled"
+        },
+        {
           "start": 81019,
           "end": 81026,
           "symbol": "F:daa.field_b:I",
@@ -1815747,6 +1816995,13 @@
           "symbol": "M:daa.a(FFFFFFFFFI)V",
           "original": "a",
           "renamed": "drawFlatTriangle"
+        },
+        {
+          "start": 81671,
+          "end": 81672,
+          "symbol": "M:sob.a(Z)V",
+          "original": "a",
+          "renamed": "setDepthWriteEnabled"
         },
         {
           "start": 81713,
@@ -1823820,7 +1825075,7 @@
       "original": "sua.java",
       "renamed": "GetMissilesAcceleration.java",
       "inputSha256": "09681d7cbc6cc13e3745adf5ba47d11a10b9604f3a959bf06597dd66e2a76f0e",
-      "outputSha256": "109a86b2789ca74bba61524ed2c9f137be3cc4bd8e1afcc4874ec80250ee43ba",
+      "outputSha256": "ed7c45d795e32d20523f1950608043cba893cf8c6ce63997412f88e3f5e281b2",
       "edits": [
         {
           "start": 50,
@@ -1823956,11 +1825211,25 @@
           "renamed": "Widget"
         },
         {
+          "start": 1313,
+          "end": 1314,
+          "symbol": "M:sua.a(I)Lllb;",
+          "original": "a",
+          "renamed": "getLobbyPlayerListContent"
+        },
+        {
           "start": 1368,
           "end": 1371,
           "symbol": "C:sua",
           "original": "sua",
           "renamed": "GetMissilesAcceleration"
+        },
+        {
+          "start": 1372,
+          "end": 1373,
+          "symbol": "M:sua.a(I)Lllb;",
+          "original": "a",
+          "renamed": "getLobbyPlayerListContent"
         },
         {
           "start": 1397,
@@ -1825821,7 +1827090,7 @@
       "original": "swa.java",
       "renamed": "MouseInputHandler.java",
       "inputSha256": "5e3134256f18e355a3feff015cbe210f006f4aef5f77e9c120f29d1cbf67b71c",
-      "outputSha256": "3f3f6ade62a601e9aa1388a4c06e09b61658a087e65fb40602c454e593fa5bc7",
+      "outputSha256": "061cb81dff3dcdbac32788bd4501bb92ebc33085058e2bdb66e2e0baf987ed28",
       "edits": [
         {
           "start": 50,
@@ -1825843,6 +1827112,13 @@
           "symbol": "C:rpa",
           "original": "rpa",
           "renamed": "OpenGlFramebuffer"
+        },
+        {
+          "start": 561,
+          "end": 568,
+          "symbol": "F:rpa.field_b:I",
+          "original": "field_b",
+          "renamed": "mouseIdleTicks"
         },
         {
           "start": 586,
@@ -1825936,6 +1827212,13 @@
           "renamed": "OpenGlFramebuffer"
         },
         {
+          "start": 1845,
+          "end": 1852,
+          "symbol": "F:rpa.field_b:I",
+          "original": "field_b",
+          "renamed": "mouseIdleTicks"
+        },
+        {
           "start": 1870,
           "end": 1872,
           "symbol": "C:wt",
@@ -1825992,6 +1827275,13 @@
           "renamed": "OpenGlFramebuffer"
         },
         {
+          "start": 2309,
+          "end": 2316,
+          "symbol": "F:rpa.field_b:I",
+          "original": "field_b",
+          "renamed": "mouseIdleTicks"
+        },
+        {
           "start": 2334,
           "end": 2336,
           "symbol": "C:wt",
@@ -1826046,6 +1827336,13 @@
           "symbol": "C:rpa",
           "original": "rpa",
           "renamed": "OpenGlFramebuffer"
+        },
+        {
+          "start": 2796,
+          "end": 2803,
+          "symbol": "F:rpa.field_b:I",
+          "original": "field_b",
+          "renamed": "mouseIdleTicks"
         },
         {
           "start": 2821,
@@ -1826144,6 +1827441,13 @@
           "symbol": "C:rpa",
           "original": "rpa",
           "renamed": "OpenGlFramebuffer"
+        },
+        {
+          "start": 4978,
+          "end": 4985,
+          "symbol": "F:rpa.field_b:I",
+          "original": "field_b",
+          "renamed": "mouseIdleTicks"
         },
         {
           "start": 5003,
@@ -1826284,6 +1827588,13 @@
           "symbol": "C:rpa",
           "original": "rpa",
           "renamed": "OpenGlFramebuffer"
+        },
+        {
+          "start": 6564,
+          "end": 6571,
+          "symbol": "F:rpa.field_b:I",
+          "original": "field_b",
+          "renamed": "mouseIdleTicks"
         },
         {
           "start": 6589,
@@ -1837020,7 +1838331,7 @@
       "original": "tia.java",
       "renamed": "UiComboBoxList.java",
       "inputSha256": "7e0318555b7fe1a05b828f58d1bd39724a8e109673c9f81ddbc46fd037a3eb84",
-      "outputSha256": "f0b8f3eb111ee7d50cea4304aa500c10da730cdc484e454bc4b81435b9885a59",
+      "outputSha256": "8c643681895f603bd5986adf1c3ba68969cacfc8227010f58f8d3ad46b653b89",
       "edits": [
         {
           "start": 50,
@@ -1837471,6 +1838782,13 @@
           "renamed": "draw"
         },
         {
+          "start": 2936,
+          "end": 2937,
+          "symbol": "M:tia.a(ZIIZ)I",
+          "original": "a",
+          "renamed": "pollAccountUi"
+        },
+        {
           "start": 3028,
           "end": 3031,
           "symbol": "C:tia",
@@ -1837490,6 +1838808,13 @@
           "symbol": "C:rt",
           "original": "rt",
           "renamed": "ColorRowCache"
+        },
+        {
+          "start": 3068,
+          "end": 3069,
+          "symbol": "M:rt.c(I)I",
+          "original": "c",
+          "renamed": "pollAccountUi"
         },
         {
           "start": 3095,
@@ -1851786,7 +1853111,7 @@
       "original": "tqa.java",
       "renamed": "SetBombletSprayProjectileOndamageParticles.java",
       "inputSha256": "0b336379e37f903f493e74fa5cdaa8ebc96f4a45c33a9454839f0e03df36b3fc",
-      "outputSha256": "e7eabe8839f0b3749f7da1dabb84ca2dce6cd77b2a889c7fffe3555f201e9036",
+      "outputSha256": "151148540e00a285e21c6fa5642eb07bcb5a9295f8f2c4e81b472a9fd87c06bb",
       "edits": [
         {
           "start": 50,
@@ -1851927,6 +1853252,13 @@
           "symbol": "P:tqa.a([Lnc;I)Lnc;#1",
           "original": "param1",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1415,
+          "end": 1416,
+          "symbol": "M:tqa.e(B)I",
+          "original": "e",
+          "renamed": "getOverlayClipCenterX"
         },
         {
           "start": 1558,
@@ -1853141,7 +1854473,7 @@
       "original": "ts.java",
       "renamed": "LegacyOpenGlShader.java",
       "inputSha256": "e2fe6ac8f5f56cdc97f43fe9e3389b5ea066f0e18dbeb4acc9570a55069cb491",
-      "outputSha256": "e07e9df61b5babb292fd57620bde865c827dda831cbb9855d3d54f1305439711",
+      "outputSha256": "d5efbe4d327a2561568556511935126294ad38136096d1c419ca067f73adba83",
       "edits": [
         {
           "start": 50,
@@ -1853207,11 +1854539,25 @@
           "renamed": "OpenGlFramebuffer"
         },
         {
+          "start": 390,
+          "end": 397,
+          "symbol": "F:rpa.field_b:I",
+          "original": "field_b",
+          "renamed": "mouseIdleTicks"
+        },
+        {
           "start": 400,
           "end": 403,
           "symbol": "C:rpa",
           "original": "rpa",
           "renamed": "OpenGlFramebuffer"
+        },
+        {
+          "start": 404,
+          "end": 411,
+          "symbol": "F:rpa.field_b:I",
+          "original": "field_b",
+          "renamed": "mouseIdleTicks"
         },
         {
           "start": 427,
@@ -1858927,7 +1860273,7 @@
       "original": "twa.java",
       "renamed": "SpawnChoice.java",
       "inputSha256": "04edfc00e11a0b8e07bb00d962a4c186954a85fe2f8b67546fdd2124084a8b41",
-      "outputSha256": "0294426617c97368acb8566b770e454326385bf3787963df95b9498071065ac0",
+      "outputSha256": "8dc4289f17f4ff1bcc93c46cb03298ac4328a301026ab5b26a1d8ec111ab53d5",
       "edits": [
         {
           "start": 50,
@@ -1859299,6 +1860645,13 @@
           "symbol": "C:lba",
           "original": "lba",
           "renamed": "GetUseFilledPolygons"
+        },
+        {
+          "start": 3007,
+          "end": 3008,
+          "symbol": "M:lba.a(I)V",
+          "original": "a",
+          "renamed": "resetAccountUiRequests"
         },
         {
           "start": 3051,
@@ -1862275,7 +1863628,7 @@
       "original": "uca.java",
       "renamed": "GameSession.java",
       "inputSha256": "6411540835dfa3b22b2bd717fb0fa6399b771ecbf519ebf16dcb3d8f7f24035c",
-      "outputSha256": "4a7a06a8606deb3e11daf5a9f6cde958fbe306ea77ab900b42b59582ac8a600c",
+      "outputSha256": "cc63f26ba70cb576c032416f7bd669204d45e1f02a3fbd51fe95cdce260600cd",
       "edits": [
         {
           "start": 71,
@@ -1875118,6 +1876471,13 @@
           "symbol": "C:rmb",
           "original": "rmb",
           "renamed": "GetGrapplingHookAimarc"
+        },
+        {
+          "start": 131253,
+          "end": 131254,
+          "symbol": "M:rmb.a(II)I",
+          "original": "a",
+          "renamed": "halveRgbPreservingAlpha"
         },
         {
           "start": 131449,
@@ -1915257,7 +1916617,7 @@
       "original": "uo.java",
       "renamed": "SetOndamageParticleFadestart.java",
       "inputSha256": "13845432fe9f658bb90ebea08b0e72b0f62934874f5dafaca692449f6f6424a3",
-      "outputSha256": "32aac640b90e7834281e2be7cbdb6f297440df199eccb558aa4da74164cdd0c1",
+      "outputSha256": "a92754f085772ca291e13d8c7ffbb94440ff4018c552d889a622e14e1a264981",
       "edits": [
         {
           "start": 50,
@@ -1915272,6 +1916632,13 @@
           "symbol": "C:rqa",
           "original": "rqa",
           "renamed": "ConsoleCommand"
+        },
+        {
+          "start": 82,
+          "end": 89,
+          "symbol": "F:uo.field_o:I",
+          "original": "field_o",
+          "renamed": "cachedFramePointerY"
         },
         {
           "start": 102,
@@ -1954505,7 +1955872,7 @@
       "original": "vt.java",
       "renamed": "SetSniperCannonAimspeed.java",
       "inputSha256": "826fa77e3d26b7e31f01a526882ecb4545a2ed60cc9e37848afbbeefb708e52f",
-      "outputSha256": "0bd1bfffa406a9ceb8defffc21eb4557e529edd4e892d3ea84ae45696084f804",
+      "outputSha256": "8379152c014d911f0f9dc90f43b645b7724d013e6623ea4f4f6b29a4cf9b2e88",
       "edits": [
         {
           "start": 50,
@@ -1954534,6 +1955901,13 @@
           "symbol": "C:lba",
           "original": "lba",
           "renamed": "GetUseFilledPolygons"
+        },
+        {
+          "start": 189,
+          "end": 190,
+          "symbol": "M:lba.a(I)V",
+          "original": "a",
+          "renamed": "resetAccountUiRequests"
         },
         {
           "start": 204,
@@ -1960805,7 +1962179,7 @@
       "original": "wbb.java",
       "renamed": "GetMachineGunReload.java",
       "inputSha256": "f45c53c56ec34a6710ff561b18f8f36fcd77ac7ee6fe8e0310b2fb71ff87f90d",
-      "outputSha256": "44ffcc3fbbdd2ab1514ea641bfdef9b3d1956642f7f10f2930ed2adca3d20e9c",
+      "outputSha256": "fba6e9552fad3b8baa579d9f142f19ee2942d896f3e101d86e0b2c8169d0ff8d",
       "edits": [
         {
           "start": 50,
@@ -1960885,6 +1962259,13 @@
           "renamed": "GetMachineGunReload"
         },
         {
+          "start": 523,
+          "end": 524,
+          "symbol": "M:wbb.a(III)V",
+          "original": "a",
+          "renamed": "configureSymmetricSimulatedLag"
+        },
+        {
           "start": 580,
           "end": 582,
           "symbol": "C:nc",
@@ -1960925,6 +1962306,13 @@
           "symbol": "P:wbb.a([Lnc;I)Lnc;#1",
           "original": "param1",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1247,
+          "end": 1248,
+          "symbol": "M:wbb.a(III)V",
+          "original": "a",
+          "renamed": "configureSymmetricSimulatedLag"
         },
         {
           "start": 1295,
@@ -1964770,7 +1966158,7 @@
       "original": "wf.java",
       "renamed": "GameMenuScreen.java",
       "inputSha256": "92ff4912852c4a2de46e0f31b178890ac4a401dfee8c5fd3edd3699e55db0fad",
-      "outputSha256": "fec5bff65d8ceadabdcf2c207b1fd5a6a13c72bb2e9d8c4ad5180205d455d7fe",
+      "outputSha256": "4ae50c7ff98f83dba76e4676ec0aba655b9e2e5ecea68b8fca5d475c13fd6101",
       "edits": [
         {
           "start": 50,
@@ -1970077,6 +1971465,13 @@
           "symbol": "C:qmb",
           "original": "qmb",
           "renamed": "GetSpinningBladeAimspeed"
+        },
+        {
+          "start": 43908,
+          "end": 43909,
+          "symbol": "M:qmb.a(I)Z",
+          "original": "a",
+          "renamed": "handleConsoleKeyEvent"
         },
         {
           "start": 43975,
@@ -1995011,7 +1996406,7 @@
       "original": "wt.java",
       "renamed": "MonotonicMillisClock.java",
       "inputSha256": "6454a6ca3d05ccdf4ffc8a683a9582beaf2aa09334f7be56ce44365fdcd0be17",
-      "outputSha256": "d28c2a6c1d07d212d3fbda52654eb198444d4967c48da2851a6d5b6bcf890acc",
+      "outputSha256": "1e99f48c7274b922ff3344845f49dc7b3cc891e450050a4a66a4bf2e12393af6",
       "edits": [
         {
           "start": 50,
@@ -1995201,6 +1996596,13 @@
           "symbol": "C:iua",
           "original": "iua",
           "renamed": "SetDebrisCarryOverPercentage"
+        },
+        {
+          "start": 1296,
+          "end": 1303,
+          "symbol": "F:iua.field_p:I",
+          "original": "field_p",
+          "renamed": "accountCreationAge"
         },
         {
           "start": 1324,
@@ -1999129,10 +2000531,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/voidhunters"
     },
-    "rulesSha256": "1fb6e38946c38cc1b82421bee416c9ed9e47b4072d68a8bf15cb6b947aace619",
+    "rulesSha256": "9cb9902e647b23596d67e95ad5bdd1ea7a1b75a76f65bbfebcd293f041bdde47",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "edb5cead5405f544aad442e989958b12eb4352744ef4e2311bc767342c35118c",
-    "outputTreeSha256": "60b155b001200843090cf4fee87b02b0c5d2343ec997ad620aedc493c133fd03",
+    "outputTreeSha256": "d8e387fa8071d900a2253203efe9664d8cf5d651174e5e0b30f0d80785ca2b85",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

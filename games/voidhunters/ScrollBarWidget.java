@@ -173,7 +173,7 @@ final class ScrollBarWidget extends Widget {
         field_Db = null;
     }
 
-    final static LobbyPlayerEntry a(long param0, boolean param1) {
+    final static LobbyPlayerEntry findGamePlayer(long param0, boolean param1) {
         if (!param1) {
           return (LobbyPlayerEntry) null;
         }

@@ -67,10 +67,10 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlMaterialEffect {
             SetCountermeasureLauncherAimspeed.field_r = ActiveIconBorderRenderer.pendingAccountRequest;
             SetResourceNodeCaptureTime.pendingAccountEmail = param6;
             GrapplingHook.pendingAccountPassword = param0;
-            SetDebrisCarryOverPercentage.field_p = param1;
+            SetDebrisCarryOverPercentage.accountCreationAge = param1;
             GuestPlayText.field_b = null;
             GetTabForScores.field_o = param5;
-            AdjustVariableAction.field_a = param3;
+            AdjustVariableAction.accountEmailUpdatesEnabled = param3;
           }
           if (param4 == 1) {
             return true;

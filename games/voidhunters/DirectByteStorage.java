@@ -8,7 +8,7 @@ final class DirectByteStorage extends ByteStorage {
     DirectByteStorage() {
     }
 
-    final static int a(boolean param0) {
+    final static int getOverlayClipWidth(boolean param0) {
         if (param0) {
           DirectByteStorage.clearSharedReferences(-109);
           return 495;
@@ -37,7 +37,7 @@ final class DirectByteStorage extends ByteStorage {
           this.buffer.get(var5, 0, param0);
           return var5;
         }
-        DirectByteStorage.a(false);
+        DirectByteStorage.getOverlayClipWidth(false);
         this.buffer.get(var5, 0, param0);
         return var5;
     }

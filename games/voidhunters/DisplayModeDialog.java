@@ -694,7 +694,7 @@ final class DisplayModeDialog extends ResizableModalPanel implements UiActionLis
           }
         } else {
           FullscreenExit.exitFullscreen((byte) -95);
-          SetVariableLabelAction.d(0);
+          SetVariableLabelAction.disableWindowResizing(0);
         }
         if (param0 >= -18) {
           return;

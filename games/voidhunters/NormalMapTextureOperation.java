@@ -123,12 +123,12 @@ final class NormalMapTextureOperation extends TextureOperation {
         }
     }
 
-    final static int d(int param0) {
+    final static int getMouseIdleTicks(int param0) {
         if (param0 != -2) {
           field_j = (String) null;
-          return OpenGlFramebuffer.field_b;
+          return OpenGlFramebuffer.mouseIdleTicks;
         }
-        return OpenGlFramebuffer.field_b;
+        return OpenGlFramebuffer.mouseIdleTicks;
     }
 
     static {

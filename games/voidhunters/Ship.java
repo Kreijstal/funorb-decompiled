@@ -203,9 +203,9 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           this.shieldsToggleCooldown = CarouselPlayerEvent.specialOrderDefinitions[3].getCooldown((byte) 64);
           this.onStateChanged((byte) 39);
           if (!this.shieldsOn) {
-            BlendTextureOperation.a(20382, this.getX(false), 25, this.getY((byte) -3), 50);
+            BlendTextureOperation.playSpatialSound(20382, this.getX(false), 25, this.getY((byte) -3), 50);
           } else {
-            BlendTextureOperation.a(20382, this.getX(false), 26, this.getY((byte) -71), 50);
+            BlendTextureOperation.playSpatialSound(20382, this.getX(false), 26, this.getY((byte) -71), 50);
           }
         }
     }
@@ -602,7 +602,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
             }
             if (var10 != 0 &&
               0 == SetMinimapWidth.field_o % 80) {
-              BlendTextureOperation.a(20382, param1, 19, param2, 20);
+              BlendTextureOperation.playSpatialSound(20382, param1, 19, param2, 20);
             }
           }
           if (var6 != 0) {

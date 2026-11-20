@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetOndamageParticleFadestart extends ConsoleCommand {
-    static int field_o;
+    static int cachedFramePointerY;
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
         RuntimeException var3 = null;

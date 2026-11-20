@@ -14,7 +14,7 @@ final class SetLaserReload extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void drawNameEntryDialog(int param0, boolean param1) {
         if (param0 < 44) {
           return;
         }
@@ -36,7 +36,7 @@ final class SetLaserReload extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            SetLaserReload.a(44, true);
+            SetLaserReload.drawNameEntryDialog(44, true);
           }
           SetMachineGunEnergyUsed.a(110, 62, arguments[0].intValue(25));
           stackIn_3_0 = new ConsoleValue("void");

@@ -183,7 +183,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
             param8.addGrapplingHook((byte) 67, var22);
             var22.dy = param10.dy;
             var22.dx = param10.dx;
-            BlendTextureOperation.a(20382, var15, 12, var16, 50);
+            BlendTextureOperation.playSpatialSound(20382, var15, 12, var16, 50);
             var22.addDirectionalForce(var16, param4, var15, SegmentIntersections.field_a, 1948934248);
             param10.addDirectionalForce(var16, GameKeyHandler.normalizeSignedAngle(22433, param4 + 4096), var15, SegmentIntersections.field_a, 1948934248);
             this.hookId = var22.id;
@@ -194,10 +194,10 @@ final class GrappleLauncherBehaviour implements DiffableState {
           var25 = param8.getGrapplingHookById(this.hookId, -103);
           if (var25 != null) {
             if (-1 != var25.getGrabbedObjectId((byte) 123)) {
-              BlendTextureOperation.a(20382, var25.getX(false), 13, var25.getY((byte) -69), 50);
+              BlendTextureOperation.playSpatialSound(20382, var25.getX(false), 13, var25.getY((byte) -69), 50);
             }
             this.startRecall(32, var25);
-            BlendTextureOperation.a(20382, param5, 14, param1, 50);
+            BlendTextureOperation.playSpatialSound(20382, param5, 14, param1, 50);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

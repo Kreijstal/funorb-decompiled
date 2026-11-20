@@ -247,7 +247,7 @@ final class World implements DiffableState, CompactGameState {
                     this.spawnRadialProjectiles(0, GpuFaceAttachmentState.field_a, var2_ref_tj.getFiredTeam(512), var2_ref_tj.getFiredPlayer(false), false, var2_ref_tj.getX(111), var2_ref_tj.getY((byte) -107));
                     break;
                   }
-                  BlendTextureOperation.a(20382, var2_ref_tj.getX(113), 81, var2_ref_tj.getY((byte) -107), 50);
+                  BlendTextureOperation.playSpatialSound(20382, var2_ref_tj.getX(113), 81, var2_ref_tj.getY((byte) -107), 50);
                   this.spawnParticles(100, var2_ref_tj.getY((byte) -107), var2_ref_tj.getX(119), 1000, 11184895, 10, 50);
                   break;
                 }
@@ -405,7 +405,7 @@ final class World implements DiffableState, CompactGameState {
               if (3 == param0.getType((byte) -104)) {
                 param0.setImpactEndpoint(var10, var9Lifetime1, 118);
               } else {
-                BlendTextureOperation.a(20382, var9Lifetime1, 64, var10, 10);
+                BlendTextureOperation.playSpatialSound(20382, var9Lifetime1, 64, var10, 10);
                 param0.unlink(-3846);
               }
               var23 = ShipFactory.shieldInfoPool.entries[var7_int];
@@ -579,7 +579,7 @@ final class World implements DiffableState, CompactGameState {
                     for (var17Lifetime1 = 0; var11.obstructions.length > var17Lifetime1; var17Lifetime1++) {
                       var18_ref_mlLifetime1 = var11.obstructions[var17Lifetime1];
                       param3.chassis.detachComponent(false, var18_ref_mlLifetime1, this, 27, param3);
-                      BlendTextureOperation.a(20382, param0.getX(false), 8, param0.getY((byte) 120), 5);
+                      BlendTextureOperation.playSpatialSound(20382, param0.getX(false), 8, param0.getY((byte) 120), 5);
                     }
                   }
                   var17Lifetime1Lifetime1 = var10.getDefaultConnectionX(-24) * GetNumStars.cosAngle(param0.getAngle(0), (byte) -119) - var10.getDefaultConnectionY((byte) 100) * TextureLineShape.sinAngle(param0.getAngle(0), 96) >> 16;
@@ -599,7 +599,7 @@ final class World implements DiffableState, CompactGameState {
                   param3.recalculateMassProperties((byte) 119);
                   this.spawnParticles(40, var14.worldy, var14.worldx, 1000, 11184895, 10, 20);
                   param3.chassis.configureThrusterBindings((byte) -127, (ShipBody) (param3));
-                  BlendTextureOperation.a(20382, param0.getX(false), 4, param0.getY((byte) -94), 5);
+                  BlendTextureOperation.playSpatialSound(20382, param0.getX(false), 4, param0.getY((byte) -94), 5);
                   if (var10.weaponbehaviour != null) {
                     param3.justAttachedSomething = true;
                     var10.weaponbehaviour.a(true, true);
@@ -3916,7 +3916,7 @@ final class World implements DiffableState, CompactGameState {
                 ((ShipComponent) (var8)).getComponentTypeId(0) != var7.getComponentTypeId(param2 ^ 0))) {
                 var7.detachAllChildren(this, (byte) -111, (ShipBody) (param3));
                 param0.detachComponent(false, var7, this, param2 ^ 94, param3);
-                BlendTextureOperation.a(20382, param3.getX(false), 8, param3.getY((byte) -90), 5);
+                BlendTextureOperation.playSpatialSound(20382, param3.getX(false), 8, param3.getY((byte) -90), 5);
                 return true;
               }
               if (null != var7 &&
@@ -8017,7 +8017,7 @@ final class World implements DiffableState, CompactGameState {
                 var22 = -var11.finalangle;
                 var23 = (int)((long)GetNumStars.cosAngle(var22, (byte) 29) * var18 - var20 * (long)TextureLineShape.sinAngle(var22, 39) >> 16);
                 var24 = (int)((long)TextureLineShape.sinAngle(var22, 58) * var18 + var20 * (long)GetNumStars.cosAngle(var22, (byte) 75) >> 16);
-                BlendTextureOperation.a(20382, var26.getX(false), 11, var26.getY((byte) 124), 50);
+                BlendTextureOperation.playSpatialSound(20382, var26.getX(false), 11, var26.getY((byte) 124), 50);
                 var26.setGrabbedComponent(param7, var23, var24, 122, var17.id);
               }
               return false;
@@ -8318,7 +8318,7 @@ final class World implements DiffableState, CompactGameState {
           stackIn_10_0 = 20382;
           stackIn_10_1 = (ShipBody) (param0);
           stackIn_11_2 = !(param1);
-          BlendTextureOperation.a(stackIn_10_0, ((ShipBody) (Object) stackIn_10_1).getX(stackIn_11_2), 68, param0.getY((byte) 127), 10);
+          BlendTextureOperation.playSpatialSound(stackIn_10_0, ((ShipBody) (Object) stackIn_10_1).getX(stackIn_11_2), 68, param0.getY((byte) 127), 10);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -8598,7 +8598,7 @@ final class World implements DiffableState, CompactGameState {
         if (param0 == 1) {
           var8 = 55;
         }
-        BlendTextureOperation.a(20382, param5, var8, param6, 100);
+        BlendTextureOperation.playSpatialSound(20382, param5, var8, param6, 100);
         var9 = param1;
         for (var10 = 0; var9 > var10; var10++) {
           var11 = 8192 * var10 / var9;

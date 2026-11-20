@@ -16,7 +16,7 @@ final class SetPhasedEnergyBeamAimarc extends ConsoleCommand {
         try {
           SetMachineGunEnergyUsed.a(137, 62, arguments[0].intValue(16));
           if (obfuscationGuard > -119) {
-            SetPhasedEnergyBeamAimarc.a((byte) -118, -84L);
+            SetPhasedEnergyBeamAimarc.findLobbyPlayer((byte) -118, -84L);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -34,7 +34,7 @@ final class SetPhasedEnergyBeamAimarc extends ConsoleCommand {
         }
     }
 
-    final static LobbyPlayerEntry a(byte param0, long param1) {
+    final static LobbyPlayerEntry findLobbyPlayer(byte param0, long param1) {
         if (param0 != 80) {
           return (LobbyPlayerEntry) null;
         }
