@@ -439,7 +439,7 @@ final class MissionState implements DiffableState {
         if (param2 < 15) {
           return true;
         }
-        return SocketNetworkArchiveClient.a(param0, (byte) 99, param1) & (((param1 & 8192) != 0 ? true : false) | bla.a(param1, false, param0) | MessageLogFactory.a(param0, 65536, param1));
+        return SocketNetworkArchiveClient.a(param0, (byte) 99, param1) & (((param1 & 8192) != 0 ? true : false) | EmailAvailabilityValidator.a(param1, false, param0) | MessageLogFactory.a(param0, 65536, param1));
     }
 
     public final boolean differsFrom(byte param0, SerializableGameState param1) {
@@ -1103,7 +1103,7 @@ final class MissionState implements DiffableState {
             var10 = (GameSnapshot) null;
             this.updateMissionPhases((GameSnapshot) null, -55, (byte) 8);
           }
-          if (qrb.field_a == 1 &&
+          if (ValidationState.field_a == 1 &&
             5 != this.missionPhase) {
             for (var5 = 0; var5 < param0.players.length; var5++) {
               param0.getPlayer(var5, (byte) 59).savedShip = null;

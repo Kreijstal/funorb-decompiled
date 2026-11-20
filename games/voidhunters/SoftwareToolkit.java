@@ -1632,7 +1632,7 @@ final class SoftwareToolkit extends GraphicsToolkit {
           discarded$0 = new SoftwareTransform3D();
           this.setThreadContextCount(1);
           this.bindThreadContext(0);
-          ocb.a(true, (byte) 33, true);
+          PasswordValidator.a(true, (byte) 33, true);
           this.field_B = true;
           this.field_E = (int)wt.a(false);
         } catch (Throwable throwable) {

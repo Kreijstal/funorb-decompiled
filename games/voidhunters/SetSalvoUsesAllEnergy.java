@@ -104,7 +104,7 @@ final class SetSalvoUsesAllEnergy extends ConsoleCommand {
         if (null != Asteroid.field_v) {
           Asteroid.field_v.draw(param0, -117);
         }
-        ocb.a(param0, 124);
+        PasswordValidator.a(param0, 124);
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {

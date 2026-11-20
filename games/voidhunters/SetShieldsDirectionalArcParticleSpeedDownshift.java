@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleCommand {
-    static qrb field_p;
+    static ValidationState debouncingInput;
     static int field_q;
     static int field_o;
     static String field_s;
@@ -162,7 +162,7 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
             var24.field_i.addItem(-1, 12, var25, var26);
             var27 = GetLagStandardDeviationOut.field_o;
             var28 = GetGrapplingHookAimspeed.field_o[2];
-            var29 = ocb.field_j;
+            var29 = PasswordValidator.field_j;
             var27.field_i.addItem(-1, 13, var28, var29);
           }
           if (2 == param2) {
@@ -197,16 +197,16 @@ final class SetShieldsDirectionalArcParticleSpeedDownshift extends ConsoleComman
         field_s = null;
         if (param0 != -32514) {
           field_o = 71;
-          field_p = null;
+          debouncingInput = null;
           field_r = null;
           return;
         }
-        field_p = null;
+        debouncingInput = null;
         field_r = null;
     }
 
     static {
-        field_p = new qrb();
+        debouncingInput = new ValidationState();
         field_s = "Activate self destruct";
         field_r = "Report abuse";
     }

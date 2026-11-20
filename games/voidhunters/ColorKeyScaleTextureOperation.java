@@ -176,21 +176,21 @@ final class ColorKeyScaleTextureOperation extends TextureOperation {
         int var2Lifetime1;
         var3 = VoidHunters.field_G;
         try {
-          if (GetArmageddonTimerStart.field_o == wgb.field_f) {
+          if (GetArmageddonTimerStart.field_o == AgeValidator.field_f) {
             return;
           }
           if (BodyInZoneConditionFactory.a(false, GetArmageddonTimerStart.field_o)) {
-            lo.field_a[GetArmageddonTimerStart.field_o].b((byte) 49);
+            lo.field_a[GetArmageddonTimerStart.field_o].applyObfuscationGuard((byte) 49);
           }
           SetShipTeamAction.field_f = GetMessageFadetime.field_o;
-          GetArmageddonTimerStart.field_o = wgb.field_f;
+          GetArmageddonTimerStart.field_o = AgeValidator.field_f;
           if (param0 != 991426348) {
             ColorKeyScaleTextureOperation.d(25);
           }
           SetVariableAction.field_b = 0;
           if (aeb.field_a) {
             GetDebrisThrowable.a(false, "Destroying game");
-            vqa.field_g = null;
+            MatchingFieldValidator.field_g = null;
             aeb.field_a = false;
             ProxyAuthenticationException.field_a = null;
           }

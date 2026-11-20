@@ -87,8 +87,8 @@ final class ShieldBehaviourFactory implements GameStateFactory {
         var15Lifetime1 = var3Lifetime1;
         var3Lifetime2 = var15Lifetime1;
         var4 = 0;
-        if (vqa.field_g != null &&
-          !vqa.field_g.networked) {
+        if (MatchingFieldValidator.field_g != null &&
+          !MatchingFieldValidator.field_g.networked) {
           var4 = 1;
         } else {
           if (GetArmageddonTimerStart.field_o != 0) {
@@ -96,7 +96,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             var3Lifetime2 = var15Lifetime2;
             CachedArchiveProvider.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
             var5 = ArmBehaviour.a(var2, 0, 200, var15Lifetime2);
-            var16 = ae.a(GetBombletSprayPushMultiplier.field_o, (byte) 41);
+            var16 = MenuInputState.createShipFromComponentWords(GetBombletSprayPushMultiplier.field_o, (byte) 41);
             var18 = new Camera2D();
             var18.screenOriginY = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (-(var5 >> 1) - ((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5 >> 1) >> 1));
             var18.screenOriginX = GetBombletSprayEnergyUsed.field_p.width >> 1;
@@ -109,9 +109,9 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             var18.worldCenterX = (float)((var25[0] + var25[1]) / 2);
             var18.worldCenterY = (float)((var25[3] + var25[2]) / 2);
             var16.setAngle(SetMinimapWidth.field_o * 10 % 8192, -82);
-            if (vqa.field_g != null &&
-              !vqa.field_g.networked &&
-              vqa.field_g.state.b(param0 + 1).world.findShipByOwner(vqa.field_g.localPlayerIndex, 76) != null) {
+            if (MatchingFieldValidator.field_g != null &&
+              !MatchingFieldValidator.field_g.networked &&
+              MatchingFieldValidator.field_g.state.b(param0 + 1).world.findShipByOwner(MatchingFieldValidator.field_g.localPlayerIndex, 76) != null) {
               var16.setTeam(17704, 1);
               var16.integrateMotion(false, true, (World) null);
               var16.draw(var18, 121, (World) null);
@@ -178,11 +178,11 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             }
             return;
           }
-          if (0 == wgb.field_f) {
+          if (0 == AgeValidator.field_f) {
             var4 = 1;
             CachedArchiveProvider.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
             var5Lifetime2 = ArmBehaviour.a(var2, 0, 200, var3Lifetime2);
-            var19 = ae.a(GetBombletSprayPushMultiplier.field_o, (byte) 41);
+            var19 = MenuInputState.createShipFromComponentWords(GetBombletSprayPushMultiplier.field_o, (byte) 41);
             var21 = new Camera2D();
             var21.screenOriginY = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (-(var5Lifetime2 >> 1) - ((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime2 >> 1) >> 1));
             var21.screenOriginX = GetBombletSprayEnergyUsed.field_p.width >> 1;
@@ -195,9 +195,9 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             var21.worldCenterX = (float)((var26[0] + var26[1]) / 2);
             var21.worldCenterY = (float)((var26[3] + var26[2]) / 2);
             var19.setAngle(SetMinimapWidth.field_o * 10 % 8192, -82);
-            if (vqa.field_g != null &&
-              !vqa.field_g.networked &&
-              vqa.field_g.state.b(param0 + 1).world.findShipByOwner(vqa.field_g.localPlayerIndex, 76) != null) {
+            if (MatchingFieldValidator.field_g != null &&
+              !MatchingFieldValidator.field_g.networked &&
+              MatchingFieldValidator.field_g.state.b(param0 + 1).world.findShipByOwner(MatchingFieldValidator.field_g.localPlayerIndex, 76) != null) {
               var19.setTeam(17704, 1);
             }
             var19.integrateMotion(false, true, (World) null);
@@ -224,7 +224,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
         }
         CachedArchiveProvider.a(200, false, 0, 0, GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width, 1);
         var5Lifetime1 = ArmBehaviour.a(var2, 0, 200, var3Lifetime2);
-        var22 = ae.a(GetBombletSprayPushMultiplier.field_o, (byte) 41);
+        var22 = MenuInputState.createShipFromComponentWords(GetBombletSprayPushMultiplier.field_o, (byte) 41);
         var24 = new Camera2D();
         var24.screenOriginY = (GetBombletSprayEnergyUsed.field_p.height >> 1) - (-(var5Lifetime1 >> 1) - ((GetBombletSprayEnergyUsed.field_p.height >> 1) - (var5Lifetime1 >> 1) >> 1));
         var24.screenOriginX = GetBombletSprayEnergyUsed.field_p.width >> 1;
@@ -237,7 +237,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
         var24.worldCenterX = (float)((var27[0] + var27[1]) / 2);
         var24.worldCenterY = (float)((var27[3] + var27[2]) / 2);
         var22.setAngle(SetMinimapWidth.field_o * 10 % 8192, -82);
-        if (vqa.field_g == null) {
+        if (MatchingFieldValidator.field_g == null) {
           var22.integrateMotion(false, true, (World) null);
           var22.draw(var24, 121, (World) null);
           if (0 == GetBots.field_o &&
@@ -262,7 +262,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
             SetFixedaim.field_o = true;
           }
         } else {
-          if (vqa.field_g.networked) {
+          if (MatchingFieldValidator.field_g.networked) {
             var22.integrateMotion(false, true, (World) null);
             var22.draw(var24, 121, (World) null);
             if (0 == GetBots.field_o &&
@@ -287,7 +287,7 @@ final class ShieldBehaviourFactory implements GameStateFactory {
               SetFixedaim.field_o = true;
             }
           } else {
-            if (vqa.field_g.state.b(param0 + 1).world.findShipByOwner(vqa.field_g.localPlayerIndex, 76) != null) {
+            if (MatchingFieldValidator.field_g.state.b(param0 + 1).world.findShipByOwner(MatchingFieldValidator.field_g.localPlayerIndex, 76) != null) {
               var22.setTeam(17704, 1);
               var22.integrateMotion(false, true, (World) null);
               var22.draw(var24, 121, (World) null);

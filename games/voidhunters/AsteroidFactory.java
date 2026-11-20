@@ -249,7 +249,7 @@ final class AsteroidFactory implements GameStateFactory {
             }
             wt.a(false);
           }
-          mba.field_a.field_c = CountermeasureLauncherWeaponDefinition.field_c.length;
+          mba.field_a.itemCount = CountermeasureLauncherWeaponDefinition.field_c.length;
           var3_intLifetime1 = 0;
           for (var4Lifetime1 = 0; bra.field_f.length > var4Lifetime1; var4Lifetime1++) {
             stackIn_87_0 = -107;
@@ -278,7 +278,7 @@ final class AsteroidFactory implements GameStateFactory {
               }
             }
           }
-          Ship.field_E = (ColorizeTextureOperation.field_m + ro.field_c << 1) * mba.field_a.field_c;
+          Ship.field_E = (ColorizeTextureOperation.field_m + ro.field_c << 1) * mba.field_a.itemCount;
           for (var4Lifetime2 = 0; bra.field_f.length > var4Lifetime2; var4Lifetime2++) {
             stackIn_111_0 = Ship.field_E;
             if (GetMessageMax.field_o[var4Lifetime2] >= 0) {
@@ -310,9 +310,9 @@ final class AsteroidFactory implements GameStateFactory {
             var4Lifetime3++;
           }
           if (param0 != GetMassDriverAimspeed.field_o) {
-            mba.field_a.a(param1, -1, 0, GameSession.a(true, PlayerGameData.field_b, uia.field_b));
+            mba.field_a.resetSelection(param1, -1, 0, GameSession.a(true, PlayerGameData.field_b, uia.field_b));
           } else {
-            mba.field_a.a(param1, -1, -1, -1);
+            mba.field_a.resetSelection(param1, -1, -1, -1);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

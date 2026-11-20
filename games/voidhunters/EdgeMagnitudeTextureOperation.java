@@ -57,9 +57,9 @@ final class EdgeMagnitudeTextureOperation extends TextureOperation {
         var17 = this.field_f.getRow((byte) 124, param0);
         var3 = var17;
         if (this.field_f.field_e) {
-          var25 = this.getInputMonochromeRow(0, wf.textureHeightMask & -1 + param0, 255);
+          var25 = this.getInputMonochromeRow(0, GameMenuScreen.textureHeightMask & -1 + param0, 255);
           var5 = this.getInputMonochromeRow(0, param0, 255);
-          var24 = this.getInputMonochromeRow(0, wf.textureHeightMask & param0 + 1, 255);
+          var24 = this.getInputMonochromeRow(0, GameMenuScreen.textureHeightMask & param0 + 1, 255);
           for (var7 = 0; var7 < TextHotspotRegion.textureWidth; var7++) {
             var8 = this.heightScale * (var24[var7] - var25[var7]);
             var9 = (-var5[SetMassDriverEnergyUsed.field_q & -1 + var7] + var5[var7 + 1 & SetMassDriverEnergyUsed.field_q]) * this.heightScale;

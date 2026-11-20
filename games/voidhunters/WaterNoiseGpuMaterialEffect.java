@@ -162,7 +162,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
                 var4 = 3;
                 GrayscaleTextureOperation.a(true, (byte) -41);
               }
-              vqa.field_g = new GameSession(false, var3, 0, false, var4, var5, param0);
+              MatchingFieldValidator.field_g = new GameSession(false, var3, 0, false, var4, var5, param0);
               GpuSprite.field_e = param1;
               FlipTextureOperation.field_l.startGame(false, -13027);
               var6 = OpenGlBufferObject.field_d ? 1 : 0;
@@ -186,7 +186,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
               var4 = 3;
               GrayscaleTextureOperation.a(true, (byte) -41);
             }
-            vqa.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime2, param0);
+            MatchingFieldValidator.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime2, param0);
             GpuSprite.field_e = param1;
             FlipTextureOperation.field_l.startGame(false, -13027);
             var6Lifetime2 = OpenGlBufferObject.field_d ? 1 : 0;
@@ -214,7 +214,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
             var4 = 3;
             GrayscaleTextureOperation.a(true, (byte) -41);
           }
-          vqa.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime1, param0);
+          MatchingFieldValidator.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime1, param0);
           GpuSprite.field_e = param1;
           FlipTextureOperation.field_l.startGame(false, -13027);
           var6Lifetime1 = OpenGlBufferObject.field_d ? 1 : 0;
@@ -227,7 +227,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
               var4 = 3;
               GrayscaleTextureOperation.a(true, (byte) -41);
             }
-            vqa.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime1, param0);
+            MatchingFieldValidator.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime1, param0);
             GpuSprite.field_e = param1;
             FlipTextureOperation.field_l.startGame(false, -13027);
             var6Lifetime1 = OpenGlBufferObject.field_d ? 1 : 0;
@@ -240,7 +240,7 @@ final class WaterNoiseGpuMaterialEffect extends GpuMaterialEffect {
               var4 = 3;
               GrayscaleTextureOperation.a(true, (byte) -41);
             }
-            vqa.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime1, param0);
+            MatchingFieldValidator.field_g = new GameSession(false, var3, 0, false, var4, var5Lifetime1, param0);
             GpuSprite.field_e = param1;
             FlipTextureOperation.field_l.startGame(false, -13027);
             var6Lifetime1 = OpenGlBufferObject.field_d ? 1 : 0;

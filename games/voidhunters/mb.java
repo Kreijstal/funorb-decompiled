@@ -2,12 +2,12 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mb extends PacketBuffer {
-    static String[] field_k;
+    static String[] helpPages;
     static boolean field_i;
     static int menuSelectedItemColor;
 
     public static void clearSharedReferences(byte param0) {
-        field_k = null;
+        helpPages = null;
         if (param0 > -92) {
           field_i = false;
         }
@@ -124,6 +124,6 @@ final class mb extends PacketBuffer {
 
     static {
         field_i = false;
-        field_k = new String[]{"Move ship<br>Strafe<br>Fire weapons<br>Pick up scrap<br>Zoom the camera<br><br>Hold <col=ffaa00>shift</col> to access the command ring containing special orders such as repair mode.", "How to play<br><br>Build a custom ship out of scrap components, and fight others in a variety of game modes. Practice assembling awesome ships and fighting against computer-controlled opponents in sandbox mode, and jump into multiplayer when you feel ready.", "Combat<br><br>Aim and fire your weapons using the <col=ffaa00>left mouse button</col><br>Keep an eye on your energy meter in the lower right corner of the screen. Firing weapons deplete it, and if it hits zero you will be defenceless until it fully recharges.", "Building a Ship<br><br>Control your tractor beam using the <col=ffaa00>right mouse button</col><br>Pull scrap components from the battlefield and attach them to your ship. Attach additional hull pieces to increase the size of your ship and protect your core chassis.", "Blueprints<br><br>You can save your ship's blueprint in your databanks by pressing <savekey>. At any point, you can give your ship's AI control of the tractor beam and let it attempt to rebuild your blueprint by pressing <loadkey>. It will use any appropriate components nearby."};
+        helpPages = new String[]{"Move ship<br>Strafe<br>Fire weapons<br>Pick up scrap<br>Zoom the camera<br><br>Hold <col=ffaa00>shift</col> to access the command ring containing special orders such as repair mode.", "How to play<br><br>Build a custom ship out of scrap components, and fight others in a variety of game modes. Practice assembling awesome ships and fighting against computer-controlled opponents in sandbox mode, and jump into multiplayer when you feel ready.", "Combat<br><br>Aim and fire your weapons using the <col=ffaa00>left mouse button</col><br>Keep an eye on your energy meter in the lower right corner of the screen. Firing weapons deplete it, and if it hits zero you will be defenceless until it fully recharges.", "Building a Ship<br><br>Control your tractor beam using the <col=ffaa00>right mouse button</col><br>Pull scrap components from the battlefield and attach them to your ship. Attach additional hull pieces to increase the size of your ship and protect your core chassis.", "Blueprints<br><br>You can save your ship's blueprint in your databanks by pressing <savekey>. At any point, you can give your ship's AI control of the tractor beam and let it attempt to rebuild your blueprint by pressing <loadkey>. It will use any appropriate components nearby."};
     }
 }

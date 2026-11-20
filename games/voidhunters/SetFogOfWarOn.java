@@ -116,7 +116,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_autozoom_amount_multiply(" + PerlinNoiseTextureOperation.field_n + ")");
         System.out.println("set_nebula_proximity_fade_downshift(" + SetAutoDetail.field_o + ")");
         System.out.println("set_use_trails(" + veb.field_b + ")");
-        System.out.println("set_fighter_vision(" + vqa.field_k + ")");
+        System.out.println("set_fighter_vision(" + MatchingFieldValidator.field_k + ")");
         System.out.println("set_ship_to_ship_ram_damage(" + bra.field_d + ")");
         System.out.println("set_team_selection_speedup(" + ColorRowCacheEntry.field_f + ")");
         System.out.println("set_full_mission_set(" + GetAutoaim.field_o + ")");
@@ -147,7 +147,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_salvo_holdable(" + CarouselPlayerEvent.field_m + ")");
         System.out.println("set_pedros_repair_mode(" + GetFightersPerPlayerMaximum.field_p + ")");
         System.out.println("set_pedros_repair_mode_switchtime(" + Particle.field_I + ")");
-        System.out.println("set_ship_persistence(" + qrb.field_a + ")");
+        System.out.println("set_ship_persistence(" + ValidationState.field_a + ")");
         System.out.println("set_debris_carry_over(" + SetMaxShipSize.field_o + ")");
         System.out.println("set_debris_carry_over_percentage(" + GetBombletSprayReload.field_s + ")");
         System.out.println("set_debris_survives(" + GetFullMissionSet.field_p + ")");
@@ -217,7 +217,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_laser_fire_force(" + WorldFactory.field_a + ")");
         System.out.println("set_bomblet_spray_fire_force(" + GetMachineGunAimspeed.field_p + ")");
         System.out.println("set_phased_energy_beam_fire_force(" + wja.field_b + ")");
-        System.out.println("set_machine_gun_fire_force(" + eca.field_e + ")");
+        System.out.println("set_machine_gun_fire_force(" + TextFieldValidator.field_e + ")");
         System.out.println("set_sniper_cannon_fire_force(" + GetMassDriverAimarc.field_o + ")");
         System.out.println("set_missile_launcher_fire_force(" + SoundPlayback.field_f + ")");
         System.out.println("set_point_defence_laser_fire_force(" + SetShipPersistence.field_s + ")");
@@ -295,7 +295,7 @@ final class SetFogOfWarOn extends ConsoleCommand {
         System.out.println("set_angular_force_downshift(" + ge.field_c + ")");
         System.out.println("set_angular_velocity_sustain_max(" + SetMassDriverEnergyUsed.field_o + ")");
         System.out.println("set_torque_downshift(" + tua.field_a + ")");
-        System.out.println("set_moment_of_inertia_predivide_downshift(" + wf.field_e + ")");
+        System.out.println("set_moment_of_inertia_predivide_downshift(" + GameMenuScreen.field_e + ")");
         System.out.println("set_moment_of_inertia_perpoint_calc_downshift(" + SetRepairModePower.field_r + ")");
         System.out.println("set_spinning_blade_top_speed(" + SetFps.field_p + ")");
         System.out.println("set_spinning_blade_spinup_speed(" + SetUseRectFill.field_p + ")");

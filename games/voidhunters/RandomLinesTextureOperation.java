@@ -104,7 +104,7 @@ final class RandomLinesTextureOperation extends TextureOperation {
               for (var23 = var9; var23 < var11; var23++) {
                 var24 = var20 * (var23 - var9) + 1024 + var21;
                 var25 = SetMassDriverEnergyUsed.field_q & var23;
-                var26 = var16Lifetime2 & wf.textureHeightMask;
+                var26 = var16Lifetime2 & GameMenuScreen.textureHeightMask;
                 var19 = var19 + var18;
                 if (var15 == 0) {
                   var31[var25][var26] = var24;

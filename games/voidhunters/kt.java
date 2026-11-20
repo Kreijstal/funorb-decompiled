@@ -123,7 +123,7 @@ class kt extends elb {
           if (var44.field_E != null &&
             var44.field_z > 1) {
             var60 = var44.field_E;
-            tga.a(GetAngularVelocitySustain.field_q, 0, (byte) 118, var60, 0);
+            ValidatedTextField.a(GetAngularVelocitySustain.field_q, 0, (byte) 118, var60, 0);
           } else {
             TextNode.c((byte) -15);
           }

@@ -111,7 +111,7 @@ abstract class ResizableModalPanel extends ModalPanel {
           var8Lifetime1++;
           var7Lifetime1++;
         }
-        wf.field_a.draw(-90 + this.width + param2, 10 + param0);
+        GameMenuScreen.field_a.draw(-90 + this.width + param2, 10 + param0);
         GetMissionResnetResourceTickTime.a(param1 ^ 1630174240, 35 + param0, SetCountermeasureLauncherAimarc.field_p, 5 + param2, this.width - 10);
         if (param1 != 1630174241) {
           this.updateAndCheckClosed(59);

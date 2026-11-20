@@ -298,7 +298,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
           this.forceY = 0;
         }
         if (this.torque != 0) {
-          var3 = this.torque / Math.max(this.momentofinertia >> wf.field_e, 1);
+          var3 = this.torque / Math.max(this.momentofinertia >> GameMenuScreen.field_e, 1);
           this.angularvelocity = this.angularvelocity + var3;
           this.onStateChanged((byte) 40);
           this.torque = 0;
@@ -874,7 +874,7 @@ class ShipBody extends MovingObject implements DiffableState, CompactGameState {
               this.forceY = var10Lifetime1;
               this.torque = var11Lifetime1;
               this.forceX = var9Lifetime1;
-              var16Lifetime1 = var15 / Math.max(this.momentofinertia >> wf.field_e, 1);
+              var16Lifetime1 = var15 / Math.max(this.momentofinertia >> GameMenuScreen.field_e, 1);
               if (var15 != 0 &&
                 Math.abs(var16Lifetime1) > us.field_f) {
                 var49 = new int[var7_ref_ml__.length];

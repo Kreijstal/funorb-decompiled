@@ -1,23 +1,23 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tga extends UiTextField implements lca {
+final class ValidatedTextField extends UiTextField implements ValidatableInput {
     static boolean field_N;
-    private eeb field_O;
-    private int field_L;
+    private InputValidator validator;
+    private int pointerOffsetX;
     static String[] field_M;
 
     public static void clearSharedReferences(int param0) {
         field_M = null;
         if (param0 <= 69) {
-          tga.clearSharedReferences(21);
+          ValidatedTextField.clearSharedReferences(21);
         }
     }
 
     final void notifyTextChanged(byte param0) {
         super.notifyTextChanged(param0);
-        if (this.field_O != null) {
-          this.field_O.a(99);
+        if (this.validator != null) {
+          this.validator.markChanged(99);
         }
     }
 
@@ -29,35 +29,35 @@ final class tga extends UiTextField implements lca {
           return null;
         }
         if (param0 == 125) {
-          SetExplosionPushMultiplier.a(PlayerGameData.field_b + (this.width - this.field_L), (byte) -114, uia.field_b);
+          SetExplosionPushMultiplier.a(PlayerGameData.field_b + (this.width - this.pointerOffsetX), (byte) -114, uia.field_b);
           return this.tooltip;
         }
         field_M = (String[]) null;
-        SetExplosionPushMultiplier.a(PlayerGameData.field_b + (this.width - this.field_L), (byte) -114, uia.field_b);
+        SetExplosionPushMultiplier.a(PlayerGameData.field_b + (this.width - this.pointerOffsetX), (byte) -114, uia.field_b);
         return this.tooltip;
     }
 
-    final void a(int param0, eeb param1) {
+    final void setValidator(int param0, InputValidator param1) {
         if (param0 != 6614) {
           return;
         }
         try {
-          this.field_O = param1;
+          this.validator = param1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tga.D(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final eeb a(int param0) {
+    public final InputValidator getValidator(int param0) {
         if (param0 != -782444220) {
-          eeb var3 = (eeb) null;
-          this.a(64, (eeb) null);
-          return this.field_O;
+          InputValidator var3 = (InputValidator) null;
+          this.setValidator(64, (InputValidator) null);
+          return this.validator;
         }
-        return this.field_O;
+        return this.validator;
     }
 
-    tga(String param0, UiListener param1, int param2) {
+    ValidatedTextField(String param0, UiListener param1, int param2) {
         super(param0, param1, param2);
     }
 
@@ -127,7 +127,7 @@ final class tga extends UiTextField implements lca {
     final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         try {
           super.updatePointer(param0, param1, param2, param3);
-          this.field_L = -param1 + (PlayerGameData.field_b - this.x);
+          this.pointerOffsetX = -param1 + (PlayerGameData.field_b - this.x);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "tga.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }

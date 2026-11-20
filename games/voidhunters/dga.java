@@ -266,7 +266,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_gamelist_players", 23100);
                 if (null != var2) {
-                  sc.field_b = Cp1252Strings.decode((byte) -125, var2);
+                  DebouncedInputValidator.field_b = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_gamelist_avg_rating", 23100);
                 if (null != var2) {
@@ -438,7 +438,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_chat_game_hide", 23100);
                 if (var2 != null) {
-                  ocb.field_j = Cp1252Strings.decode((byte) -125, var2);
+                  PasswordValidator.field_j = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("mu_chat_pm_show_all", 23100);
                 if (null != var2) {
@@ -706,7 +706,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("dob_chatdisabled", 23100);
                 if (var2 != null) {
-                  ocb.field_g = Cp1252Strings.decode((byte) -125, var2);
+                  PasswordValidator.field_g = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("dob_enterforchat", 23100);
                 if (null != var2) {
@@ -936,7 +936,7 @@ final class dga {
                 }
                 var2 = NetworkGameClient.loadNamedResource("rule_0_1", 23100);
                 if (var2 != null) {
-                  vqa.field_j = Cp1252Strings.decode((byte) -125, var2);
+                  MatchingFieldValidator.field_j = Cp1252Strings.decode((byte) -125, var2);
                 }
                 var2 = NetworkGameClient.loadNamedResource("rule_0_2", 23100);
                 if (var2 != null) {

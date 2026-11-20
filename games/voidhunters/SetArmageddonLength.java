@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetArmageddonLength extends ConsoleCommand {
-    static qrb field_o;
+    static ValidationState invalidInput;
     static int field_p;
 
     SetArmageddonLength(String param0, Class[] param1, String param2) {
@@ -11,7 +11,7 @@ final class SetArmageddonLength extends ConsoleCommand {
 
     public static void clearSharedReferences(byte param0) {
         int var1 = -82 / ((81 - param0) / 34);
-        field_o = null;
+        invalidInput = null;
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -43,7 +43,7 @@ final class SetArmageddonLength extends ConsoleCommand {
     }
 
     static {
-        field_o = new qrb();
+        invalidInput = new ValidationState();
         field_p = 64;
     }
 }

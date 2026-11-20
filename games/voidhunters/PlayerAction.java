@@ -423,7 +423,7 @@ final class PlayerAction extends CarouselPlayerEvent implements DiffableState {
             }
             var10 = new Ship();
             try {
-              var10.chassis = SetSniperCannonProjectileLife.a(param1 + 1, this.specialOrderSubmessage.blueprint.description);
+              var10.chassis = SetSniperCannonProjectileLife.decodeComponentWords(param1 + 1, this.specialOrderSubmessage.blueprint.description);
               var10.recalculateMassProperties((byte) 119);
               var10.chassis.configureThrusterBindings((byte) 0, (ShipBody) (var10));
               var5.savedShip = var10;

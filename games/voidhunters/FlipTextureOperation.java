@@ -36,7 +36,7 @@ final class FlipTextureOperation extends TextureOperation {
         int[] var3 = var7;
         if (!this.field_f.field_e) {
         } else {
-          var4 = this.getInputMonochromeRow(0, !this.flipVertical ? param0 : -param0 + wf.textureHeightMask, 255);
+          var4 = this.getInputMonochromeRow(0, !this.flipVertical ? param0 : -param0 + GameMenuScreen.textureHeightMask, 255);
           if (!this.flipHorizontal) {
             ArrayOperations.copy(var4, 0, var7, 0, TextHotspotRegion.textureWidth);
           } else {
@@ -133,7 +133,7 @@ final class FlipTextureOperation extends TextureOperation {
           stackIn_6_1 = 62;
           stackIn_6_2 = 0;
           if (this.flipVertical) {
-            stackIn_7_3 = wf.textureHeightMask - param1;
+            stackIn_7_3 = GameMenuScreen.textureHeightMask - param1;
           } else {
             stackIn_7_3 = param1;
           }
@@ -187,7 +187,7 @@ final class FlipTextureOperation extends TextureOperation {
         RuntimeException var2_ref = null;
         var5 = VoidHunters.field_G;
         try {
-          if (null == ae.field_f) {
+          if (null == MenuInputState.field_f) {
             return null;
           }
           if (param0 == null) {
@@ -202,7 +202,7 @@ final class FlipTextureOperation extends TextureOperation {
           if (var2 == null) {
             return null;
           }
-          var3 = (vu) (ae.field_f.a(-1, (long)var2.hashCode()));
+          var3 = (vu) (MenuInputState.field_f.a(-1, (long)var2.hashCode()));
           if (param1 != 0) {
             stackIn_13_0 = (vu) null;
             return stackIn_13_0;
@@ -214,7 +214,7 @@ final class FlipTextureOperation extends TextureOperation {
             var7 = (CharSequence) ((Object) var3.field_Fb);
             var4 = ConstantColorTextureOperation.normalizeName(false, var7);
             if (!var4.equals(var2)) {
-              var3 = (vu) (ae.field_f.e(-116));
+              var3 = (vu) (MenuInputState.field_f.e(-116));
               continue;
             }
             break;

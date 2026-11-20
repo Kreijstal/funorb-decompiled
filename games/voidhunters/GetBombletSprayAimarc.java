@@ -95,7 +95,7 @@ final class GetBombletSprayAimarc extends ConsoleCommand {
           BodyInZoneConditionFactory.field_a = -1L;
           vu.field_zb = param0;
           SetThrusterForce.field_o = param6;
-          ocb.field_l = param0.length;
+          PasswordValidator.field_l = param0.length;
           SetSpinningBladeSpindamageMultiplier.field_o = null;
           ArchiveTextureProvider.field_h = false;
           SetThrusterParticleSpeedDownshift.field_o = null;

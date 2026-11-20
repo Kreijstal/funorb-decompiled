@@ -525,7 +525,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
     private final void updateOrthographicProjection(boolean param0) {
         this.orthographicProjectionValid = false;
         this.buildOrthographicProjection((byte) 97);
-        if (tib.field_h == this.projectionMode) {
+        if (UsernameAvailabilityValidator.field_h == this.projectionMode) {
           this.updateProjection(17975);
         }
         if (!param0) {
@@ -629,7 +629,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
             this.field_e = param5;
             this.viewportHeight = var11.height;
             this.viewportWidth = var11.width;
-            ocb.a(false, (byte) 33, true);
+            PasswordValidator.a(false, (byte) 33, true);
             if (this.field_a != null) {
               this.field_I = new atb(this, this.field_a);
               this.field_Zb = new jagex3.graphics2.hw.NativeInterface(this.field_a.getTextureCount(11316), this.field_e);
@@ -1758,7 +1758,7 @@ abstract class GpuToolkit extends GraphicsToolkit {
         if (MissionGenerationDataFactory.a(param2, (byte) 91, param1) | (param0 != (param1 & 36864) ? true : false) | IncrementVariableAction.a(param2, param1, (byte) 9)) {
           return true;
         }
-        return (bla.a(param1, false, param2) | ((param1 & 8192) != 0 ? true : false) | MessageLogFactory.a(param2, 65536, param1)) & ((55 & param2) == 0 ? true : false);
+        return (EmailAvailabilityValidator.a(param1, false, param2) | ((param1 & 8192) != 0 ? true : false) | MessageLogFactory.a(param2, 65536, param1)) & ((55 & param2) == 0 ? true : false);
     }
 
     abstract void drawPrimitive(PrimitiveType param0, int param1, int param2, int param3);

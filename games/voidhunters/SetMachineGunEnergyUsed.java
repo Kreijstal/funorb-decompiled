@@ -53,11 +53,11 @@ final class SetMachineGunEnergyUsed extends ConsoleCommand {
         if (param1 != 62) {
           field_r = 110;
         }
-        if (vqa.field_g != null) {
+        if (MatchingFieldValidator.field_g != null) {
           var3 = new PlayerAction();
           var3.specialOrderSubmessage = new SpecialOrderSubmessage();
           var3.specialOrderSubmessage.settingsChange = new SettingsChange(param0, param2);
-          vqa.field_g.submitPlayerAction(param1 ^ 62, true, var3);
+          MatchingFieldValidator.field_g.submitPlayerAction(param1 ^ 62, true, var3);
         }
     }
 

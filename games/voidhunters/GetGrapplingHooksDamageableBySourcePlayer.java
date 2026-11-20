@@ -176,13 +176,13 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
           if (!param0) {
             return 0;
           }
-          DialogMessagePanel.field_z.a(GetGrapplingHookAimspeed.a(-1, qs.field_a, Particle.field_H), 5620, GetGrapplingHookAimspeed.a(-1, uia.field_b, PlayerGameData.field_b));
-          if (DialogMessagePanel.field_z.e((byte) -120)) {
-            if (DialogMessagePanel.field_z.field_j == 0) {
+          DialogMessagePanel.field_z.updatePointerSelection(GetGrapplingHookAimspeed.a(-1, qs.field_a, Particle.field_H), 5620, GetGrapplingHookAimspeed.a(-1, uia.field_b, PlayerGameData.field_b));
+          if (DialogMessagePanel.field_z.isActivationRequested((byte) -120)) {
+            if (DialogMessagePanel.field_z.selectedIndex == 0) {
               stackIn_61_0 = 3;
               return stackIn_61_0;
             }
-            if (DialogMessagePanel.field_z.field_j == 1) {
+            if (DialogMessagePanel.field_z.selectedIndex == 1) {
               stackIn_65_0 = 2;
               return stackIn_65_0;
             }
@@ -193,13 +193,13 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
               stackIn_82_0 = 0;
               return stackIn_82_0;
             }
-            DialogMessagePanel.field_z.a(false, 0);
-            if (DialogMessagePanel.field_z.e((byte) -127)) {
-              if (0 == DialogMessagePanel.field_z.field_j) {
+            DialogMessagePanel.field_z.updateHorizontalSelection(false, 0);
+            if (DialogMessagePanel.field_z.isActivationRequested((byte) -127)) {
+              if (0 == DialogMessagePanel.field_z.selectedIndex) {
                 stackIn_74_0 = 3;
                 return stackIn_74_0;
               }
-              if (DialogMessagePanel.field_z.field_j == 1) {
+              if (DialogMessagePanel.field_z.selectedIndex == 1) {
                 stackIn_77_0 = 1;
                 return stackIn_77_0;
               }

@@ -1,39 +1,39 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class vqa extends eca {
+final class MatchingFieldValidator extends TextFieldValidator {
     static int field_k;
     static goa field_i;
     static String field_f;
     static GameSession field_g;
     static String field_j;
-    private UiTextField field_h;
+    private UiTextField referenceField;
 
-    final qrb a(String param0, int param1) {
-        eeb var3 = null;
+    final ValidationState validateValue(String param0, int param1) {
+        InputValidator var3 = null;
         RuntimeException var3_ref = null;
-        qrb stackIn_6_0 = null;
-        qrb stackIn_12_0 = null;
+        ValidationState stackIn_6_0 = null;
+        ValidationState stackIn_12_0 = null;
         RuntimeException stackIn_15_0 = null;
         StringBuilder stackIn_15_1 = null;
         String stackIn_16_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_h instanceof lca) {
-            var3 = ((lca) ((Object) this.field_h)).a(-782444220);
+          if (this.referenceField instanceof ValidatableInput) {
+            var3 = ((ValidatableInput) ((Object) this.referenceField)).getValidator(-782444220);
             if (var3 != null &&
-              var3.a((byte) 35) != GetShipPersistence.field_o) {
-              stackIn_6_0 = SetArmageddonLength.field_o;
+              var3.getValidationState((byte) 35) != GetShipPersistence.validInput) {
+              stackIn_6_0 = SetArmageddonLength.invalidInput;
               return stackIn_6_0;
             }
           }
           if (param1 != 16384) {
             field_k = -96;
           }
-          if (param0.equals(this.field_h.text)) {
-            stackIn_12_0 = GetShipPersistence.field_o;
+          if (param0.equals(this.referenceField.text)) {
+            stackIn_12_0 = GetShipPersistence.validInput;
           } else {
-            stackIn_12_0 = SetArmageddonLength.field_o;
+            stackIn_12_0 = SetArmageddonLength.invalidInput;
           }
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -50,8 +50,8 @@ final class vqa extends eca {
         }
     }
 
-    final String b(String param0, int param1) {
-        eeb var3 = null;
+    final String getValueValidationMessage(String param0, int param1) {
+        InputValidator var3 = null;
         RuntimeException var3_ref = null;
         String stackIn_6_0 = null;
         String stackIn_8_0 = null;
@@ -62,26 +62,26 @@ final class vqa extends eca {
         String stackIn_19_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_h instanceof lca) {
-            var3 = ((lca) ((Object) this.field_h)).a(-782444220);
+          if (this.referenceField instanceof ValidatableInput) {
+            var3 = ((ValidatableInput) ((Object) this.referenceField)).getValidator(-782444220);
             if (var3 != null) {
-              if (var3.a((byte) 35) == GetShipPersistence.field_o &&
-                !param0.equals(this.field_h.text)) {
+              if (var3.getValidationState((byte) 35) == GetShipPersistence.validInput &&
+                !param0.equals(this.referenceField.text)) {
                 stackIn_6_0 = lmb.field_a;
                 return stackIn_6_0;
               }
-              stackIn_8_0 = var3.c((byte) -79);
+              stackIn_8_0 = var3.getValidationMessage((byte) -79);
               return stackIn_8_0;
             }
           }
-          if (!param0.equals(this.field_h.text)) {
+          if (!param0.equals(this.referenceField.text)) {
             stackIn_11_0 = lmb.field_a;
             return stackIn_11_0;
           }
           if (param1 == -1) {
             return null;
           }
-          vqa.clearSharedReferences(108);
+          MatchingFieldValidator.clearSharedReferences(108);
           stackIn_15_0 = null;
           return (String) (stackIn_15_0);
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -108,10 +108,10 @@ final class vqa extends eca {
         field_g = null;
     }
 
-    vqa(UiTextField param0, UiTextField param1) {
+    MatchingFieldValidator(UiTextField param0, UiTextField param1) {
         super(param0);
         try {
-          this.field_h = param1;
+          this.referenceField = param1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vqa.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

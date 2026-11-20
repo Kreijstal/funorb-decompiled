@@ -426,7 +426,7 @@ abstract class BitmapFont extends DualLinkNode {
                                 }
                               } else {
                                 var7 = (CharSequence) ((Object) param0.substring(5));
-                                shadowColor = tib.a(-596, var7, 16);
+                                shadowColor = UsernameAvailabilityValidator.parseInt(-596, var7, 16);
                               }
                             } else {
                               underlineColor = -1;
@@ -436,7 +436,7 @@ abstract class BitmapFont extends DualLinkNode {
                           }
                         } else {
                           var6 = (CharSequence) ((Object) param0.substring(2));
-                          underlineColor = tib.a(-596, var6, 16);
+                          underlineColor = UsernameAvailabilityValidator.parseInt(-596, var6, 16);
                         }
                       } else {
                         strikethroughColor = -1;
@@ -446,7 +446,7 @@ abstract class BitmapFont extends DualLinkNode {
                     }
                   } else {
                     var5 = (CharSequence) ((Object) param0.substring(4));
-                    strikethroughColor = tib.a(-596, var5, 16);
+                    strikethroughColor = UsernameAvailabilityValidator.parseInt(-596, var5, 16);
                   }
                 } else {
                   alpha = defaultAlpha;
@@ -460,7 +460,7 @@ abstract class BitmapFont extends DualLinkNode {
             }
           } else {
             var3 = (CharSequence) ((Object) param0.substring(4));
-            textColor = tib.a(-596, var3, 16);
+            textColor = UsernameAvailabilityValidator.parseInt(-596, var3, 16);
           }
         } catch (java.lang.Exception decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

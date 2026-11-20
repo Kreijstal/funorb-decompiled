@@ -1,12 +1,12 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wta extends sc implements UiTextFieldListener, UiComboBoxSelectionListener {
+final class wta extends DebouncedInputValidator implements UiTextFieldListener, UiComboBoxSelectionListener {
     vq field_c;
 
     public final void onTextChanged(UiTextField param0, byte param1) {
         try {
-          this.a(18);
+          this.markChanged(18);
           if (param1 != 100) {
             this.field_c = (vq) null;
           }
@@ -24,9 +24,9 @@ final class wta extends sc implements UiTextFieldListener, UiComboBoxSelectionLi
         try {
           if (param0 != -3) {
             this.field_c = (vq) null;
-            this.a(79);
+            this.markChanged(79);
           } else {
-            this.a(79);
+            this.markChanged(79);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -46,7 +46,7 @@ final class wta extends sc implements UiTextFieldListener, UiComboBoxSelectionLi
     public wta() {
     }
 
-    final String d(int param0) {
+    final String getCurrentValidationMessage(int param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
@@ -80,15 +80,15 @@ final class wta extends sc implements UiTextFieldListener, UiComboBoxSelectionLi
         return GetUseRectFill.field_o;
     }
 
-    final qrb b(int param0) {
+    final ValidationState validateCurrentValue(int param0) {
         int var2_int = 0;
         NumberFormatException var2 = null;
         int var3 = 0;
         int var4 = 0;
         int var5 = 0;
-        qrb stackIn_5_0 = null;
-        qrb stackIn_9_0 = null;
-        qrb stackIn_12_0 = null;
+        ValidationState stackIn_5_0 = null;
+        ValidationState stackIn_9_0 = null;
+        ValidationState stackIn_12_0 = null;
         Throwable decompiledCaughtException = null;
         try {
           var2_int = this.field_c.e(-5);
@@ -99,38 +99,38 @@ final class wta extends sc implements UiTextFieldListener, UiComboBoxSelectionLi
           var4 = this.field_c.f(3476);
           var5 = SecondaryNodeQueue.getCurrentYear(true);
           if (var4 < 1890) {
-            stackIn_5_0 = SetArmageddonLength.field_o;
+            stackIn_5_0 = SetArmageddonLength.invalidInput;
             return stackIn_5_0;
           }
           if (var4 > -3 + var5) {
-            stackIn_9_0 = SetArmageddonLength.field_o;
+            stackIn_9_0 = SetArmageddonLength.invalidInput;
             return stackIn_9_0;
           }
           if (!BodyInZoneCondition.a(var3, var2_int, true, var4)) {
-            stackIn_12_0 = SetArmageddonLength.field_o;
+            stackIn_12_0 = SetArmageddonLength.invalidInput;
             return stackIn_12_0;
           }
         } catch (java.lang.NumberFormatException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
           var2 = (NumberFormatException) (Object) decompiledCaughtException;
-          return SetArmageddonLength.field_o;
+          return SetArmageddonLength.invalidInput;
         }
-        return GetShipPersistence.field_o;
+        return GetShipPersistence.validInput;
     }
 
     public final void onSubmitted(int param0, UiTextField param1) {
         try {
           if (param0 != -12409) {
-            this.d(116);
+            this.getCurrentValidationMessage(116);
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "wta.I(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ')');
         }
     }
 
-    public final boolean b(byte param0) {
+    public final boolean isEmpty(byte param0) {
         if (param0 >= -100) {
-          this.b((byte) 87);
+          this.isEmpty((byte) 87);
           return this.field_c.d(0);
         }
         return this.field_c.d(0);

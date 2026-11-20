@@ -10,17 +10,17 @@ final class GetAllowShipSaving extends ConsoleCommand {
         if (null != GetLagStandardDeviationIn.field_r) {
           GetLagStandardDeviationIn.field_r.finishPanelAnimations(param0 - 4299);
           if (param0 == 4410) {
-            if (null == vqa.field_i) {
+            if (null == MatchingFieldValidator.field_i) {
               GetDebugLineLife.e(95);
               return;
             }
-            vqa.field_i.g(25880);
+            MatchingFieldValidator.field_i.g(25880);
             GetDebugLineLife.e(95);
             return;
           }
           field_o = (String) null;
-          if (null != vqa.field_i) {
-            vqa.field_i.g(25880);
+          if (null != MatchingFieldValidator.field_i) {
+            MatchingFieldValidator.field_i.g(25880);
             GetDebugLineLife.e(95);
             return;
           }
@@ -29,19 +29,19 @@ final class GetAllowShipSaving extends ConsoleCommand {
         }
         if (param0 != 4410) {
           field_o = (String) null;
-          if (null == vqa.field_i) {
+          if (null == MatchingFieldValidator.field_i) {
             GetDebugLineLife.e(95);
             return;
           }
-          vqa.field_i.g(25880);
+          MatchingFieldValidator.field_i.g(25880);
           GetDebugLineLife.e(95);
           return;
         }
-        if (null == vqa.field_i) {
+        if (null == MatchingFieldValidator.field_i) {
           GetDebugLineLife.e(95);
           return;
         }
-        vqa.field_i.g(25880);
+        MatchingFieldValidator.field_i.g(25880);
         GetDebugLineLife.e(95);
     }
 

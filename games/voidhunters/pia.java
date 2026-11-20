@@ -23,7 +23,7 @@ final class pia extends UiArrayContainer implements UiActionListener {
     final void updatePointer(int param0, int param1, int param2, UiComponent param3) {
         try {
           super.updatePointer(param0, param1, param2, param3);
-          this.field_w.enabled = this.field_v.a(param2 ^ 782443887).a((byte) 35) == GetShipPersistence.field_o ? true : false;
+          this.field_w.enabled = this.field_v.getValidator(param2 ^ 782443887).getValidationState((byte) 35) == GetShipPersistence.validInput ? true : false;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "pia.B(" + param0 + ',' + param1 + ',' + param2 + ',' + (param3 != null ? "{...}" : "null") + ')');
         }
@@ -52,7 +52,7 @@ final class pia extends UiArrayContainer implements UiActionListener {
         if (param0 != 11) {
           this.field_v = (ita) null;
         }
-        if (this.field_v.a(param0 ^ -782444209).a((byte) 35) != GetShipPersistence.field_o) {
+        if (this.field_v.getValidator(param0 ^ -782444209).getValidationState((byte) 35) != GetShipPersistence.validInput) {
           return;
         }
         try {

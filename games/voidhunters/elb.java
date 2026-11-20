@@ -127,10 +127,10 @@ abstract class elb {
                 var15 = var15 & 255;
                 var5 = var5 & 4095;
                 var20 = var5 - 4096;
-                var18 = ocb.field_h[var6];
-                var19 = ocb.field_h[var7];
+                var18 = PasswordValidator.field_h[var6];
+                var19 = PasswordValidator.field_h[var7];
                 var22 = var7 - 4096;
-                var17 = ocb.field_h[var5];
+                var17 = PasswordValidator.field_h[var5];
                 var23 = this.field_d[var15];
                 var24 = this.field_d[var16];
                 var21 = -4096 + var6;

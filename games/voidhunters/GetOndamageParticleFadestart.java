@@ -31,16 +31,16 @@ final class GetOndamageParticleFadestart extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int[] param1, byte param2, int param3, int param4, int param5, int param6) {
-        SetReloadBarWidth.field_p[param6] = param1;
-        SetReloadBarWidth.field_r[param6] = param0;
+    final static void configureMenu(int param0, int[] param1, byte param2, int param3, int param4, int param5, int param6) {
+        SetReloadBarWidth.menuActions[param6] = param1;
+        SetReloadBarWidth.menuLeftEdges[param6] = param0;
         if (param2 >= -11) {
           return;
         }
         try {
-          SetReloadBarWidth.field_q[param6] = param4;
-          SetReloadBarWidth.field_s[param6] = param3;
-          SetReloadBarWidth.field_o[param6] = param5;
+          SetReloadBarWidth.menuRightEdges[param6] = param4;
+          SetReloadBarWidth.menuTopOffsets[param6] = param3;
+          SetReloadBarWidth.menuRowSpacing[param6] = param5;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "vua.B(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ',' + param6 + ')');
         }

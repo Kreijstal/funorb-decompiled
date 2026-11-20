@@ -63,7 +63,7 @@ final class ShipBodyFactory implements GameStateFactory {
             ShipBodyFactory.a((byte) -23, true);
           }
           SetPhysicsCollisionGrapplingHookForceMultiplier.field_o.setBounds(0, 124, vva.field_r.width, 30, -32 + vva.field_r.height - 40);
-          var2_int = 3 + ocb.field_l;
+          var2_int = 3 + PasswordValidator.field_l;
           if (SetMutatorVotes.field_o.length < 2) {
             var2_int--;
           }
@@ -80,7 +80,7 @@ final class ShipBodyFactory implements GameStateFactory {
           }
           ProxySocketConnector.field_e.setBounds(5, param0 + 19, -5 + (-5 + SetPhysicsCollisionGrapplingHookForceMultiplier.field_o.width), 5, var4);
           var5 = 5 + (var4 + 2);
-          for (var6 = 0; ocb.field_l + 4 > var6; var6++) {
+          for (var6 = 0; PasswordValidator.field_l + 4 > var6; var6++) {
             if ((1 != var6 ||
               !(SetMutatorVotes.field_o.length < 2)) && (var6 != 3 ||
               !(GetDebrisThrowable.field_r <= 1))) {

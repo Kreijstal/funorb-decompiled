@@ -11,7 +11,7 @@ final class SetReadyRoomMutatorTime extends ConsoleCommand {
         RuntimeException var1 = null;
         var2 = VoidHunters.field_G;
         try {
-          if (!wgb.field_g) {
+          if (!AgeValidator.field_g) {
             return;
           }
           OpenGlVertexNormal.field_d = new ToolkitSprite[SetPointDefenceLaserAimarc.field_r.length];

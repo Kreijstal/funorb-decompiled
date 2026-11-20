@@ -2009,7 +2009,7 @@ final class MissionBuilder implements DiffableState {
               scanLoop1: while (true) {
                 if (var10_ref_int__.length <= var12) {
                   if (var11 == 0 &&
-                    param3 != ocb.field_l) {
+                    param3 != PasswordValidator.field_l) {
                     break scanLoop1;
                   }
                   for (var12 = 0; var10_ref_int__.length > var12; var12 += 2) {
@@ -2035,7 +2035,7 @@ final class MissionBuilder implements DiffableState {
                     if (param3 <= var13_intLifetime1) {
                       break scanLoop1;
                     }
-                    if ((255 & tib.field_i[var13_intLifetime1]) != var14) {
+                    if ((255 & UsernameAvailabilityValidator.field_i[var13_intLifetime1]) != var14) {
                       break scanLoop1;
                     }
                   }
@@ -2103,7 +2103,7 @@ final class MissionBuilder implements DiffableState {
                   if (-1 == param3) {
                     param7 = var11;
                   } else {
-                    tib.field_i[param3] = (byte)var11;
+                    UsernameAvailabilityValidator.field_i[param3] = (byte)var11;
                   }
                   MissionBuilder.a(param0, param1, param2, 1 + param3, 110, param5, param6, param7);
                   if (TickClock.field_b) {
@@ -2115,7 +2115,7 @@ final class MissionBuilder implements DiffableState {
               if (-1 == param3) {
                 param7 = var11;
               } else {
-                tib.field_i[param3] = (byte)var11;
+                UsernameAvailabilityValidator.field_i[param3] = (byte)var11;
               }
               if (param3 == -1 &&
                 SetMutatorVotes.field_o.length == 1) {
@@ -3630,7 +3630,7 @@ final class MissionBuilder implements DiffableState {
             var7_int = TextHotspotRegion.randomBoundedInt(param4, field_a.length, 127);
             var8 = field_a[var7_int];
             var13 = GetResourceNodeCaptureTime.a(var8, true, true);
-            var10 = ae.a(var13, (byte) 65);
+            var10 = MenuInputState.createShipFromComponentWords(var13, (byte) 65);
             var10.setPosition(0, 0, (byte) 30);
             var10.setAi(new ShipAI(), param5 - 2097148);
             var10.setTeam(param5 - 2079448, 1);

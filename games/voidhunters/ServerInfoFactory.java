@@ -120,16 +120,16 @@ final class ServerInfoFactory implements GameStateFactory {
         int var6Lifetime1Lifetime1Lifetime4;
         int var5Lifetime1Lifetime1Lifetime1Lifetime1;
         int var6Lifetime1Lifetime1Lifetime1Lifetime1;
-        if (null != vqa.field_g) {
-          vqa.field_g.renderSession((byte) 120, param1);
+        if (null != MatchingFieldValidator.field_g) {
+          MatchingFieldValidator.field_g.renderSession((byte) 120, param1);
           if (null != ProxyAuthenticationException.field_a) {
             ProxyAuthenticationException.field_a.renderSession((byte) 111, param1);
           }
           if (SetShipTeamAction.field_f &&
             GetMessageFadetime.field_o &&
-            vqa.field_g != null) {
+            MatchingFieldValidator.field_g != null) {
             if (GetThrusterSmallForce.field_o) {
-              if (!vqa.field_g.networked &&
+              if (!MatchingFieldValidator.field_g.networked &&
                 !GraphicsPresentException.field_a) {
                 stackIn_20_0 = 0;
               } else {
@@ -198,9 +198,9 @@ final class ServerInfoFactory implements GameStateFactory {
         }
         if (SetShipTeamAction.field_f &&
           GetMessageFadetime.field_o &&
-          vqa.field_g != null) {
+          MatchingFieldValidator.field_g != null) {
           if (GetThrusterSmallForce.field_o) {
-            if (vqa.field_g.networked) {
+            if (MatchingFieldValidator.field_g.networked) {
               if (SetFightersPerPlayerMaximum.field_p) {
                 stackIn_108_0 = (!tob.g(0)) ? 0 : 1;
               } else {

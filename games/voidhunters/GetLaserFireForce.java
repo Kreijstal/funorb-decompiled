@@ -32,13 +32,13 @@ final class GetLaserFireForce extends ConsoleCommand {
         if (param1 <= 73) {
           PacketBuffer var3 = (PacketBuffer) null;
           GetLaserFireForce.decodeTextureLineShape((PacketBuffer) null, (byte) -91);
-          if (vqa.field_g != null) {
-            return Integer.toString(vqa.field_g.state.b(1).settings.values[param0]);
+          if (MatchingFieldValidator.field_g != null) {
+            return Integer.toString(MatchingFieldValidator.field_g.state.b(1).settings.values[param0]);
           }
           return "Unknown";
         }
-        if (vqa.field_g != null) {
-          return Integer.toString(vqa.field_g.state.b(1).settings.values[param0]);
+        if (MatchingFieldValidator.field_g != null) {
+          return Integer.toString(MatchingFieldValidator.field_g.state.b(1).settings.values[param0]);
         }
         return "Unknown";
     }

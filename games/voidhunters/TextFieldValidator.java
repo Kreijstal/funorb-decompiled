@@ -1,26 +1,26 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-abstract class eca extends sc implements UiTextFieldListener {
+abstract class TextFieldValidator extends DebouncedInputValidator implements UiTextFieldListener {
     static int field_e;
     static String field_d;
-    private UiTextField field_c;
+    private UiTextField textField;
 
-    final String d(int param0) {
+    final String getCurrentValidationMessage(int param0) {
         if (param0 == 16384) {
-          return this.b(this.field_c.text, -1);
+          return this.getValueValidationMessage(this.textField.text, -1);
         }
         String var3 = (String) null;
-        this.a((String) null, -101);
-        return this.b(this.field_c.text, -1);
+        this.validateValue((String) null, -101);
+        return this.getValueValidationMessage(this.textField.text, -1);
     }
 
-    final qrb b(int param0) {
+    final ValidationState validateCurrentValue(int param0) {
         if (param0 == -1) {
-          return this.a(this.field_c.text, 16384);
+          return this.validateValue(this.textField.text, 16384);
         }
         field_d = (String) null;
-        return this.a(this.field_c.text, 16384);
+        return this.validateValue(this.textField.text, 16384);
     }
 
     public final void onTextChanged(UiTextField param0, byte param1) {
@@ -28,24 +28,24 @@ abstract class eca extends sc implements UiTextFieldListener {
           return;
         }
         try {
-          this.a(20);
+          this.markChanged(20);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "eca.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
         }
     }
 
-    public final boolean b(byte param0) {
+    public final boolean isEmpty(byte param0) {
         if (param0 > -100) {
-          this.field_c = (UiTextField) null;
-          if (this.field_c.text != null) {
-            return this.field_c.text.length() == 0 ? true : false;
+          this.textField = (UiTextField) null;
+          if (this.textField.text != null) {
+            return this.textField.text.length() == 0 ? true : false;
           }
           return true;
         }
-        if (this.field_c.text == null) {
+        if (this.textField.text == null) {
           return true;
         }
-        if (this.field_c.text.length() != 0) {
+        if (this.textField.text.length() != 0) {
           return false;
         }
         return true;
@@ -71,17 +71,17 @@ abstract class eca extends sc implements UiTextFieldListener {
         }
     }
 
-    eca(UiTextField param0) {
+    TextFieldValidator(UiTextField param0) {
         try {
-          this.field_c = param0;
+          this.textField = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "eca.<init>(" + (param0 != null ? "{...}" : "null") + ')');
         }
     }
 
-    abstract qrb a(String param0, int param1);
+    abstract ValidationState validateValue(String param0, int param1);
 
-    abstract String b(String param0, int param1);
+    abstract String getValueValidationMessage(String param0, int param1);
 
     static {
         field_d = "Halve custom variables";

@@ -165,7 +165,7 @@ final class RasterShapesTextureOperation extends TextureOperation {
           var3_int = TextHotspotRegion.textureWidth;
           var4 = GetTorpedoReload.field_o;
           AdjustBodyComponentsAction.a(param1, -98);
-          GetUseDetailLines.a(wf.textureHeightMask, 0, param0, 0, SetMassDriverEnergyUsed.field_q);
+          GetUseDetailLines.a(GameMenuScreen.textureHeightMask, 0, param0, 0, SetMassDriverEnergyUsed.field_q);
           if (this.shapes != null) {
             for (var5 = 0; var5 < this.shapes.length; var5++) {
               var6 = this.shapes[var5];

@@ -7,8 +7,8 @@ final class GetFullMissionSet extends ConsoleCommand {
 
     final static void a(int[] param0, int param1, int param2) {
         try {
-          SetReloadBarWidth.field_p[param2] = param0;
-          lo.field_a[param2] = new wf(param2);
+          SetReloadBarWidth.menuActions[param2] = param0;
+          lo.field_a[param2] = new GameMenuScreen(param2);
           if (param1 != 2182) {
             int[] var4 = (int[]) null;
             GetFullMissionSet.a((int[]) null, 47, 101);

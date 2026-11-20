@@ -32,13 +32,13 @@ final class aeb {
     final static void a(int param0, int param1) {
         if (param1 == 1) {
           GetSpinningBladeTopSpeed.field_p = GrayscaleTextureOperation.field_i[param0];
-          ocb.field_i = gib.field_b[param0];
+          PasswordValidator.field_i = gib.field_b[param0];
           lo.field_d = SpawnChoice.field_b[param0];
           return;
         }
         field_a = false;
         GetSpinningBladeTopSpeed.field_p = GrayscaleTextureOperation.field_i[param0];
-        ocb.field_i = gib.field_b[param0];
+        PasswordValidator.field_i = gib.field_b[param0];
         lo.field_d = SpawnChoice.field_b[param0];
     }
 

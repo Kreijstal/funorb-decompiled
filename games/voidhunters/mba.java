@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class mba {
-    static ae field_a;
+    static MenuInputState field_a;
     static int field_b;
 
     final static void a(int param0) {
@@ -17,12 +17,12 @@ final class mba {
     public static void clearSharedReferences(byte param0) {
         field_a = null;
         if (param0 != 26) {
-          field_a = (ae) null;
+          field_a = (MenuInputState) null;
         }
     }
 
     static {
-        field_a = new ae(1);
+        field_a = new MenuInputState(1);
         field_b = 0;
     }
 }

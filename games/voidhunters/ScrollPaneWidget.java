@@ -148,19 +148,19 @@ final class ScrollPaneWidget extends Widget {
               GetShipToShipRamDamage.field_q.enabled = true;
               SetAutozoomSpeedDivide.field_p.text = UiComboBox.field_D;
               if (ncb.field_a != null) {
-                if (null == tib.field_i) {
-                  AudioPump.field_a = new boolean[ocb.field_l];
-                  tib.field_i = new byte[ocb.field_l];
+                if (null == UsernameAvailabilityValidator.field_i) {
+                  AudioPump.field_a = new boolean[PasswordValidator.field_l];
+                  UsernameAvailabilityValidator.field_i = new byte[PasswordValidator.field_l];
                 }
                 GetMissionVotes.field_p = false;
                 TickClock.field_b = false;
                 var13 = 0;
                 var9_intLifetime1 = var13;
-                while (ocb.field_l > var13) {
+                while (PasswordValidator.field_l > var13) {
                   AudioPump.field_a[var13] = false;
                   var13++;
                 }
-                MissionBuilder.a(ocb.field_l, -1, SetThrusterParticleSpeedDownshift.field_o, -1, 115, true, 0, -1);
+                MissionBuilder.a(PasswordValidator.field_l, -1, SetThrusterParticleSpeedDownshift.field_o, -1, 115, true, 0, -1);
                 if (!(SetAngularVelocitySustain.field_p < 2) &&
                   SetMachineGunEnergyUsed.field_o[12]) {
                   TickClock.field_b = true;
@@ -177,7 +177,7 @@ final class ScrollPaneWidget extends Widget {
                     var11Lifetime1 = var9;
                     var9 = var11Lifetime1;
                   }
-                  for (var10Lifetime1 = 0; ocb.field_l > var10Lifetime1; var10Lifetime1++) {
+                  for (var10Lifetime1 = 0; PasswordValidator.field_l > var10Lifetime1; var10Lifetime1++) {
                     if (AudioPump.field_a[var10Lifetime1]) {
                       var11_ref = "<col=A00000>" + ClientException.field_c[var10Lifetime1] + "</col>";
                       var9 = var11_ref;

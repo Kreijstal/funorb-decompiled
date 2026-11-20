@@ -1,20 +1,20 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wgb extends eca {
+final class AgeValidator extends TextFieldValidator {
     static boolean field_g;
     static String field_h;
     static ShipBody field_i;
     static int field_f;
 
-    final qrb a(String param0, int param1) {
+    final ValidationState validateValue(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         CharSequence var4 = null;
         CharSequence var5 = null;
-        qrb stackIn_2_0 = null;
-        qrb stackIn_7_0 = null;
-        qrb stackIn_11_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_7_0 = null;
+        ValidationState stackIn_11_0 = null;
         RuntimeException stackIn_14_0 = null;
         StringBuilder stackIn_14_1 = null;
         String stackIn_15_2 = null;
@@ -22,7 +22,7 @@ final class wgb extends eca {
         try {
           var4 = (CharSequence) ((Object) param0);
           if (!SetPointDefenceLaserAimarc.a(var4, param1 ^ 16394)) {
-            stackIn_2_0 = SetArmageddonLength.field_o;
+            stackIn_2_0 = SetArmageddonLength.invalidInput;
             return stackIn_2_0;
           }
           var5 = (CharSequence) ((Object) param0);
@@ -30,12 +30,12 @@ final class wgb extends eca {
           if (var3_int > 0 &&
             var3_int <= 130) {
             if (param1 != 16384) {
-              wgb.a(-0.8688769340515137f, 0.8470385074615479f, 1.5502856969833374f, 23, 0.4921734631061554f, 0.5438073873519897f, -1.1896488666534424f);
+              AgeValidator.a(-0.8688769340515137f, 0.8470385074615479f, 1.5502856969833374f, 23, 0.4921734631061554f, 0.5438073873519897f, -1.1896488666534424f);
             }
-            stackIn_11_0 = GetShipPersistence.field_o;
+            stackIn_11_0 = GetShipPersistence.validInput;
             return stackIn_11_0;
           }
-          stackIn_7_0 = SetArmageddonLength.field_o;
+          stackIn_7_0 = SetArmageddonLength.invalidInput;
           return stackIn_7_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -53,7 +53,7 @@ final class wgb extends eca {
 
     public static void clearSharedReferences(int param0) {
         if (param0 <= 64) {
-          wgb.clearSharedReferences(53);
+          AgeValidator.clearSharedReferences(53);
           field_i = null;
           field_h = null;
           return;
@@ -62,11 +62,11 @@ final class wgb extends eca {
         field_h = null;
     }
 
-    wgb(UiTextField param0) {
+    AgeValidator(UiTextField param0) {
         super(param0);
     }
 
-    final String b(String param0, int param1) {
+    final String getValueValidationMessage(String param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_2_0 = null;
         String stackIn_6_0 = null;
@@ -79,7 +79,7 @@ final class wgb extends eca {
             stackIn_2_0 = (String) null;
             return stackIn_2_0;
           }
-          if (this.a(param0, 16384) != SetArmageddonLength.field_o) {
+          if (this.validateValue(param0, 16384) != SetArmageddonLength.invalidInput) {
             return null;
           }
           stackIn_6_0 = SetSniperCannonProjectiles.field_p;

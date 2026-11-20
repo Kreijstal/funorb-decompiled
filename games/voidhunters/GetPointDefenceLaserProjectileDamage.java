@@ -50,7 +50,7 @@ final class GetPointDefenceLaserProjectileDamage extends ConsoleCommand {
         GetSniperCannonEnergyUsed.field_o[21] = bda.field_a;
         GetSniperCannonEnergyUsed.field_o[15] = AccountCreationForm.field_G;
         GetSniperCannonEnergyUsed.field_o[17] = SetBots.field_p;
-        GetSniperCannonEnergyUsed.field_o[9] = vqa.field_j;
+        GetSniperCannonEnergyUsed.field_o[9] = MatchingFieldValidator.field_j;
         if (param0 <= -75) {
           GetSniperCannonEnergyUsed.field_o[11] = fk.field_d;
           GetSniperCannonEnergyUsed.field_o[7] = SetUseExtraBackground.field_o;

@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class tib extends eca {
-    private String field_f;
-    private boolean field_g;
+final class UsernameAvailabilityValidator extends TextFieldValidator {
+    private String checkedName;
+    private boolean nameAvailable;
     static GpuProjectionMode field_h;
     static byte[] field_i;
 
-    tib(UiTextField param0) {
+    UsernameAvailabilityValidator(UiTextField param0) {
         super(param0);
-        this.field_g = false;
+        this.nameAvailable = false;
     }
 
-    final qrb a(String param0, int param1) {
+    final ValidationState validateValue(String param0, int param1) {
         AccountRequestResult var3 = null;
         RuntimeException var3_ref = null;
         CharSequence var4 = null;
-        qrb stackIn_3_0 = null;
-        qrb stackIn_12_0 = null;
-        qrb stackIn_17_0 = null;
+        ValidationState stackIn_3_0 = null;
+        ValidationState stackIn_12_0 = null;
+        ValidationState stackIn_17_0 = null;
         RuntimeException stackIn_20_0 = null;
         StringBuilder stackIn_20_1 = null;
         String stackIn_21_2 = null;
@@ -26,27 +26,27 @@ final class tib extends eca {
         try {
           var4 = (CharSequence) ((Object) param0);
           if (!GetUseBackground.a(var4, 0)) {
-            stackIn_3_0 = SetArmageddonLength.field_o;
+            stackIn_3_0 = SetArmageddonLength.invalidInput;
             return stackIn_3_0;
           }
           if (param1 != 16384) {
             field_i = (byte[]) null;
           }
-          if (!param0.equals(this.field_f)) {
+          if (!param0.equals(this.checkedName)) {
             var3 = ComponentAttachmentPlan.pollNameAvailability(false, param0);
             if (var3 != null &&
               null == var3.message) {
-              this.field_f = param0;
-              this.field_g = var3.success;
+              this.checkedName = param0;
+              this.nameAvailable = var3.success;
             } else {
-              stackIn_12_0 = SetFighterRepairTime.field_q;
+              stackIn_12_0 = SetFighterRepairTime.pendingValidation;
               return stackIn_12_0;
             }
           }
-          if (this.field_g) {
-            stackIn_17_0 = GetShipPersistence.field_o;
+          if (this.nameAvailable) {
+            stackIn_17_0 = GetShipPersistence.validInput;
           } else {
-            stackIn_17_0 = SetArmageddonLength.field_o;
+            stackIn_17_0 = SetArmageddonLength.invalidInput;
           }
           return stackIn_17_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -63,14 +63,14 @@ final class tib extends eca {
         }
     }
 
-    final void d(byte param0) {
-        this.field_f = null;
+    final void invalidateAvailabilityCache(byte param0) {
+        this.checkedName = null;
         if (param0 < 7) {
           field_h = (GpuProjectionMode) null;
         }
     }
 
-    final String b(String param0, int param1) {
+    final String getValueValidationMessage(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         AccountRequestResult var4 = null;
@@ -95,7 +95,7 @@ final class tib extends eca {
             stackIn_6_0 = var3;
             return stackIn_6_0;
           }
-          if (!param0.equals(this.field_f)) {
+          if (!param0.equals(this.checkedName)) {
             var4 = ComponentAttachmentPlan.pollNameAvailability(false, param0);
             if (var4 == null) {
               return null;
@@ -104,10 +104,10 @@ final class tib extends eca {
               stackIn_13_0 = null;
               return (String) (stackIn_13_0);
             }
-            this.field_g = var4.success;
-            this.field_f = param0;
+            this.nameAvailable = var4.success;
+            this.checkedName = param0;
           }
-          if (this.field_g) {
+          if (this.nameAvailable) {
             stackIn_19_0 = uc.field_a;
             return stackIn_19_0;
           }
@@ -127,7 +127,7 @@ final class tib extends eca {
         }
     }
 
-    final static int a(boolean param0, int param1) {
+    final static int getFontAscent(boolean param0, int param1) {
         if (!param0) {
           field_h = (GpuProjectionMode) null;
           if (!OpenGlTexture1D.field_i) {
@@ -141,7 +141,7 @@ final class tib extends eca {
         return SetTorpedoEnergyUsed.a(param1, 300).field_c;
     }
 
-    final static int a(int param0, CharSequence param1, int param2) {
+    final static int parseInt(int param0, CharSequence param1, int param2) {
         RuntimeException var3 = null;
         int stackIn_3_0 = 0;
         RuntimeException stackIn_6_0 = null;
@@ -152,7 +152,7 @@ final class tib extends eca {
           if (param0 != -596) {
             field_h = (GpuProjectionMode) null;
           }
-          stackIn_3_0 = SetMissionTerrainVotingChancestep.a(true, param1, true, param2);
+          stackIn_3_0 = SetMissionTerrainVotingChancestep.parseInt(true, param1, true, param2);
           return stackIn_3_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -175,7 +175,7 @@ final class tib extends eca {
           return;
         }
         CharSequence var2 = (CharSequence) null;
-        tib.a(46, (CharSequence) null, 2);
+        UsernameAvailabilityValidator.parseInt(46, (CharSequence) null, 2);
         field_i = null;
         field_h = null;
     }

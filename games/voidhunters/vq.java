@@ -3,7 +3,7 @@
  */
 import java.io.*;
 
-abstract class vq extends UiContainer implements lca {
+abstract class vq extends UiContainer implements ValidatableInput {
     static int field_v;
     static fab field_x;
     private wta field_z;
@@ -14,7 +14,7 @@ abstract class vq extends UiContainer implements lca {
         try {
           this.field_z = param1;
           if (param0 <= 73) {
-            this.a(68);
+            this.getValidator(68);
           }
           this.field_z.field_c = this;
         } catch (RuntimeException runtimeException) {
@@ -67,12 +67,12 @@ abstract class vq extends UiContainer implements lca {
         }
     }
 
-    public final eeb a(int param0) {
+    public final InputValidator getValidator(int param0) {
         if (param0 != -782444220) {
-          this.a(84);
-          return (eeb) ((Object) this.field_z);
+          this.getValidator(84);
+          return (InputValidator) ((Object) this.field_z);
         }
-        return (eeb) ((Object) this.field_z);
+        return (InputValidator) ((Object) this.field_z);
     }
 
     abstract int f(int param0);

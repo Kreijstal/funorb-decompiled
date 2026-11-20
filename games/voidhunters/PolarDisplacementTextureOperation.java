@@ -38,7 +38,7 @@ final class PolarDisplacementTextureOperation extends TextureOperation {
             var12 = GetBombletSprayProjectiles.field_q[var10] * var11 >> 12;
             var13 = GetDebrisPartitioned.field_o[var10] * var11 >> 12;
             var14 = var9 + (var12 >> 12) & SetMassDriverEnergyUsed.field_q;
-            var15 = wf.textureHeightMask & param1 + (var13 >> 12);
+            var15 = GameMenuScreen.textureHeightMask & param1 + (var13 >> 12);
             var32 = this.getInputColorRow((byte) 82, 0, var15);
             var6[var9] = var32[0][var14];
             var7[var9] = var32[1][var14];
@@ -151,10 +151,10 @@ final class PolarDisplacementTextureOperation extends TextureOperation {
 
     final static void d(int param0) {
         int var2 = VoidHunters.field_G;
-        if ((1 << vqa.field_g.localPlayerIndex & vqa.field_g.state.field_f) != 0) {
+        if ((1 << MatchingFieldValidator.field_g.localPlayerIndex & MatchingFieldValidator.field_g.state.field_f) != 0) {
           HighscoreValueRequest.field_g[8] = ut.field_a;
         } else {
-          if (vqa.field_g.state.field_f != 0) {
+          if (MatchingFieldValidator.field_g.state.field_f != 0) {
             HighscoreValueRequest.field_g[8] = SetShipDirectionArrow.field_q;
           } else {
             HighscoreValueRequest.field_g[8] = PacketBuffer.field_f;
@@ -231,7 +231,7 @@ final class PolarDisplacementTextureOperation extends TextureOperation {
             var9 = var8 * GetBombletSprayProjectiles.field_q[var7] >> 12;
             var10 = var8 * GetDebrisPartitioned.field_o[var7] >> 12;
             var11 = SetMassDriverEnergyUsed.field_q & (var9 >> 12) + var6;
-            var12 = wf.textureHeightMask & (var10 >> 12) + param0;
+            var12 = GameMenuScreen.textureHeightMask & (var10 >> 12) + param0;
             var27 = this.getInputMonochromeRow(0, var12, 255);
             var15[var6] = var27[var11];
           }

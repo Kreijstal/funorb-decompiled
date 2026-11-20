@@ -60,20 +60,20 @@ final class vdb extends uj {
             field_d = 3;
           }
           while (ata.e(127)) {
-            ei.field_c.a((byte) -94);
-            if (!ei.field_c.e((byte) -96)) {
+            ei.field_c.updateVerticalSelection((byte) -94);
+            if (!ei.field_c.isActivationRequested((byte) -96)) {
               continue;
             }
             var1_int = 1;
           }
-          ei.field_c.a(SetBuildViewAutozoomEndOnAction.a(qs.field_a, param0 ^ -29724, Particle.field_H), 5620, SetBuildViewAutozoomEndOnAction.a(uia.field_b, 3841, PlayerGameData.field_b));
-          if (ei.field_c.e((byte) -126)) {
+          ei.field_c.updatePointerSelection(SetBuildViewAutozoomEndOnAction.a(qs.field_a, param0 ^ -29724, Particle.field_H), 5620, SetBuildViewAutozoomEndOnAction.a(uia.field_b, 3841, PlayerGameData.field_b));
+          if (ei.field_c.isActivationRequested((byte) -126)) {
             var1_int = 1;
           }
           var2 = 0;
           if (var1_int != 0 &&
-            0 <= ei.field_c.field_j) {
-            var2 = PlayerGameData.field_e[ei.field_c.field_j];
+            0 <= ei.field_c.selectedIndex) {
+            var2 = PlayerGameData.field_e[ei.field_c.selectedIndex];
             if (var2 == 2) {
               SetMissionTerrainSpaceProbability.b(false);
             }

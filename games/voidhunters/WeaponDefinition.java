@@ -96,7 +96,7 @@ class WeaponDefinition {
         RuntimeException decompiledCaughtException = null;
         try {
           if (GetFighterRepairAmount.field_p != null) {
-            GetFighterRepairAmount.field_p.field_C.a(args, 0);
+            GetFighterRepairAmount.field_p.nameSuggestions.a(args, 0);
           }
           if (null != OpenGlEnvironmentMappedWaterEffect.field_j) {
             OpenGlEnvironmentMappedWaterEffect.field_j.field_v.a(args, param1 - 11113);

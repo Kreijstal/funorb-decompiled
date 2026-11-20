@@ -5,7 +5,7 @@ final class ei implements UiRenderer {
     private int field_b;
     private int field_k;
     private int field_g;
-    static ae field_c;
+    static MenuInputState field_c;
     private int field_l;
     private int field_h;
     private int field_d;
@@ -82,7 +82,7 @@ final class ei implements UiRenderer {
     }
 
     static {
-        field_c = new ae(1);
+        field_c = new MenuInputState(1);
         field_f = "Rotate the mouse wheel or press plus & minus to zoom the camera";
         field_e = "Unable to delete friend - system busy";
         field_i = new String[]{"gametype_icons"};

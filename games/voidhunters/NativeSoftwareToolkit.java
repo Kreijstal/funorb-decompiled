@@ -370,7 +370,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
           }
           NativeDisposalQueue.registerToolkit((byte) -76);
           this.initializeToolkitNative(this.field_a, 0, 0);
-          ocb.a(false, (byte) 33, true);
+          PasswordValidator.a(false, (byte) 33, true);
           this.field_h = true;
           discarded$1 = new NativeSoftwareTransform3D();
           this.setViewTransform(new NativeSoftwareTransform3D());

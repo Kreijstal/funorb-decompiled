@@ -1,24 +1,24 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class wf {
+final class GameMenuScreen {
     static int field_e;
-    private int field_c;
+    private int menuId;
     static int textureHeightMask;
     static Sprite field_a;
-    private ae field_b;
+    private MenuInputState inputState;
 
-    private final void b(int param0, byte param1) {
+    private final void drawBackground(int param0, byte param1) {
         int var9 = VoidHunters.field_G;
         int var3 = 20;
-        if (0 == this.field_c) {
+        if (0 == this.menuId) {
           var3 += 60;
         } else {
-          if (this.field_c == 1 ||
-            2 == this.field_c ||
-            this.field_c == 3 ||
-            this.field_c == 4 ||
-            this.field_c == 9) {
+          if (this.menuId == 1 ||
+            2 == this.menuId ||
+            this.menuId == 3 ||
+            this.menuId == 4 ||
+            this.menuId == 9) {
             var3 = 200;
           }
         }
@@ -29,7 +29,7 @@ final class wf {
         var4 = var4 + var6;
         int var7 = SetVariableAction.field_b;
         if (param1 != -61) {
-          this.field_b = (ae) null;
+          this.inputState = (MenuInputState) null;
         }
         int var8 = 0;
         if (var7 >= 16) {
@@ -42,7 +42,7 @@ final class wf {
         CachedArchiveProvider.a(param0, false, var3 + var8, var4, -(2 * var4) + GetBombletSprayEnergyUsed.field_p.height, GetBombletSprayEnergyUsed.field_p.width - var3 * 2, 0);
     }
 
-    private final String a(String param0, byte param1, String param2, int param3) {
+    private final String formatShortcutHint(String param0, byte param1, String param2, int param3) {
         RuntimeException var5 = null;
         String stackIn_3_0 = null;
         RuntimeException stackIn_6_0 = null;
@@ -53,7 +53,7 @@ final class wf {
         RuntimeException decompiledCaughtException = null;
         try {
           if (param1 <= 34) {
-            this.a(true, 114, 76);
+            this.resetSelection(true, 114, 76);
           }
           stackIn_3_0 = SetLagVariant.a(param2, param0, 0, "<col=ffaa00>" + SetTorpedoProjectileDamage.field_q[param3] + "</col>");
           return stackIn_3_0;
@@ -77,7 +77,7 @@ final class wf {
         }
     }
 
-    final void b(byte param0) {
+    final void applyObfuscationGuard(byte param0) {
         if (param0 != 49) {
           field_e = 99;
         }
@@ -90,7 +90,7 @@ final class wf {
         field_a = null;
     }
 
-    private final void c(int param0) {
+    private final void updateHelpSelection(int param0) {
         int var2;
         int var3;
         int var4;
@@ -98,59 +98,59 @@ final class wf {
         int stackIn_8_0 = 0;
         var4 = VoidHunters.field_G;
         if (param0 != 132) {
-          this.field_c = 86;
+          this.menuId = 86;
         }
-        stackIn_5_0 = (this.a(0, 115)) ? 0 : 1;
+        stackIn_5_0 = (this.isItemEnabled(0, 115)) ? 0 : 1;
         var2 = stackIn_5_0;
-        stackIn_8_0 = (!this.a(2, 120)) ? 1 : 2;
+        stackIn_8_0 = (!this.isItemEnabled(2, 120)) ? 1 : 2;
         var3 = stackIn_8_0;
-        if (!this.field_b.b((byte) 123)) {
+        if (!this.inputState.isMouseButtonHeld((byte) 123)) {
           if (SetBombletSprayProjectileDamage.field_o == 96) {
-            if (this.field_b.field_j > var2) {
-              this.field_b.a((byte) -17, -1 + this.field_b.field_j);
+            if (this.inputState.selectedIndex > var2) {
+              this.inputState.setKeyboardSelection((byte) -17, -1 + this.inputState.selectedIndex);
             } else {
-              this.field_b.a((byte) -17, var3);
+              this.inputState.setKeyboardSelection((byte) -17, var3);
             }
           }
           if (SetBombletSprayProjectileDamage.field_o == 97) {
-            if (this.field_b.field_j >= 0 &&
-              var3 > this.field_b.field_j) {
-              this.field_b.a((byte) -17, 1 + this.field_b.field_j);
-              this.field_b.c(-19255);
+            if (this.inputState.selectedIndex >= 0 &&
+              var3 > this.inputState.selectedIndex) {
+              this.inputState.setKeyboardSelection((byte) -17, 1 + this.inputState.selectedIndex);
+              this.inputState.captureKey(-19255);
             } else {
-              this.field_b.a((byte) -17, var2);
-              this.field_b.c(-19255);
+              this.inputState.setKeyboardSelection((byte) -17, var2);
+              this.inputState.captureKey(-19255);
             }
           } else {
-            this.field_b.c(-19255);
+            this.inputState.captureKey(-19255);
           }
         } else {
-          this.field_b.a((byte) -17, var2);
+          this.inputState.setKeyboardSelection((byte) -17, var2);
         }
     }
 
-    private final int c(int param0, int param1) {
+    private final int getItemTop(int param0, int param1) {
         int var4 = 0;
         int var3 = (GetBombletSprayEnergyUsed.field_p.height - SoftwareRasterizer2D.height) / 2;
         if (param1 != 17915) {
-          this.a(false, -15, 108);
+          this.resetSelection(false, -15, 108);
         }
-        if (0 != this.field_c) {
+        if (0 != this.menuId) {
         } else {
           if (param0 >= 2) {
             param0 -= 2;
           } else {
             var4 = ct.a(param1 ^ 3900, 128);
-            return var3 + SetReloadBarWidth.field_s[this.field_c] + (5 + var4) * param0;
+            return var3 + SetReloadBarWidth.menuTopOffsets[this.menuId] + (5 + var4) * param0;
           }
         }
-        if (5 == this.field_c) {
-          return SetReloadBarWidth.field_s[this.field_c] + var3;
+        if (5 == this.menuId) {
+          return SetReloadBarWidth.menuTopOffsets[this.menuId] + var3;
         }
-        return SetReloadBarWidth.field_s[this.field_c] + var3 + param0 * SetReloadBarWidth.field_o[this.field_c];
+        return SetReloadBarWidth.menuTopOffsets[this.menuId] + var3 + param0 * SetReloadBarWidth.menuRowSpacing[this.menuId];
     }
 
-    private final void a(int param0, boolean param1, int param2) {
+    private final void drawItem(int param0, boolean param1, int param2) {
         int stackIn_64_0 = 0;
         int stackIn_85_0 = 0;
         int stackIn_91_0 = 0;
@@ -193,22 +193,22 @@ final class wf {
         var27 = VoidHunters.field_G;
         var4 = SetVariableAction.field_b;
         var5 = 2;
-        var6 = SetReloadBarWidth.field_p[this.field_c][param0];
-        var7 = SetReloadBarWidth.field_p[this.field_c].length;
+        var6 = SetReloadBarWidth.menuActions[this.menuId][param0];
+        var7 = SetReloadBarWidth.menuActions[this.menuId].length;
         var8 = HighscoreValueRequest.field_g[var6];
         if (var6 == 6) {
           if (SetCountermeasureLauncherProjectileLife.field_o != 0 &&
-            wgb.field_f != 0 &&
+            AgeValidator.field_f != 0 &&
             7 != SetCountermeasureLauncherProjectileLife.field_o &&
-            wgb.field_f != 7) {
+            AgeValidator.field_f != 7) {
             if (SetCountermeasureLauncherProjectileLife.field_o != 1 &&
-              wgb.field_f != 1) {
+              AgeValidator.field_f != 1) {
               if ((SetCountermeasureLauncherProjectileLife.field_o == 2 ||
-                wgb.field_f == 2 ||
+                AgeValidator.field_f == 2 ||
                 SetCountermeasureLauncherProjectileLife.field_o == 3 ||
-                wgb.field_f == 3 ||
+                AgeValidator.field_f == 3 ||
                 SetCountermeasureLauncherProjectileLife.field_o == 4 ||
-                4 == wgb.field_f)) {
+                4 == AgeValidator.field_f)) {
                 var8 = SetMessageFadetime.field_p.toUpperCase();
               }
             } else {
@@ -282,15 +282,15 @@ final class wf {
           } else {
             var8 = SpawnChoiceFactory.field_b.toUpperCase();
             if (SetTorpedoProjectiles.field_o == null ||
-              null == vqa.field_g ||
-              null == vqa.field_g.state.b(1).world.findShipByOwner(vqa.field_g.localPlayerIndex, 107)) {
+              null == MatchingFieldValidator.field_g ||
+              null == MatchingFieldValidator.field_g.state.b(1).world.findShipByOwner(MatchingFieldValidator.field_g.localPlayerIndex, 107)) {
               var9 = 1;
             }
           }
         }
         var10 = tea.a(var5, var8, 13879);
-        var12 = this.b(31488, param0);
-        var13 = this.a((byte) -60, param0);
+        var12 = this.getItemLeft(31488, param0);
+        var13 = this.getItemRight((byte) -60, param0);
         var14 = 0;
         if (var4 < 16) {
           if (0 < var4) {
@@ -303,7 +303,7 @@ final class wf {
         }
         var13 = var13 + var14;
         var12 = var12 + var14;
-        var15 = this.c(param0, 17915);
+        var15 = this.getItemTop(param0, 17915);
         if (var6 != 13) {
           stackIn_64_0 = (var6 == 14) ? 1 : 0;
         } else {
@@ -314,15 +314,15 @@ final class wf {
           var10 = GetSniperCannonAimspeed.a(100, 132);
         }
         var17 = -var10 + var12 + var13 >> 1;
-        var18 = this.a(param0, (byte) 70);
+        var18 = this.getItemHeight(param0, (byte) 70);
         var19 = var13 - var12;
-        var20 = this.a(param0, (byte) 70);
+        var20 = this.getItemHeight(param0, (byte) 70);
         var21 = 0;
         if (param1) {
           var21 = 1;
         }
         var22 = 125;
-        if (this.field_c == 5) {
+        if (this.menuId == 5) {
           var22 = 129;
         }
         if (var6 != 0 &&
@@ -363,23 +363,23 @@ final class wf {
           if (var9 != 0) {
             var25 = 7829367;
           }
-          SetSelfDestructPrepareToggleCooldown.a(var17, -1, -12 + var18 / 2 + var15 + tib.a(true, var5), var8, var5, var25, (byte) -88);
+          SetSelfDestructPrepareToggleCooldown.a(var17, -1, -12 + var18 / 2 + var15 + UsernameAvailabilityValidator.getFontAscent(true, var5), var8, var5, var25, (byte) -88);
         }
     }
 
-    final void a(boolean param0, int param1, int param2) {
+    final void resetSelection(boolean param0, int param1, int param2) {
         if (param1 != 320) {
           field_a = (Sprite) null;
         }
-        if (this.field_b.field_j != -1 &&
-          this.a(this.field_b.field_j, 117)) {
-          param2 = this.field_b.field_j;
+        if (this.inputState.selectedIndex != -1 &&
+          this.isItemEnabled(this.inputState.selectedIndex, 117)) {
+          param2 = this.inputState.selectedIndex;
         }
-        this.field_b.a(param0, -1, param2, this.a(uia.field_b, PlayerGameData.field_b, param1 ^ 7060));
+        this.inputState.resetSelection(param0, -1, param2, this.hitTestItem(uia.field_b, PlayerGameData.field_b, param1 ^ 7060));
         mba.field_b = SetMinimapWidth.field_o;
     }
 
-    final int a(int param0, int param1, int param2) {
+    final int hitTestItem(int param0, int param1, int param2) {
         int var4;
         int var5;
         int var6;
@@ -388,13 +388,13 @@ final class wf {
         if (param2 != 6868) {
           textureHeightMask = 97;
         }
-        while (SetReloadBarWidth.field_p[this.field_c].length > var4) {
-          var5 = this.c(var4, 17915);
-          if (this.a(var4, 116) &&
-            this.b(31488, var4) <= param1 &&
-            param1 < this.a((byte) -9, var4) &&
+        while (SetReloadBarWidth.menuActions[this.menuId].length > var4) {
+          var5 = this.getItemTop(var4, 17915);
+          if (this.isItemEnabled(var4, 116) &&
+            this.getItemLeft(31488, var4) <= param1 &&
+            param1 < this.getItemRight((byte) -9, var4) &&
             param0 >= var5 &&
-            var5 + this.a(var4, (byte) 70) > param0) {
+            var5 + this.getItemHeight(var4, (byte) 70) > param0) {
             return var4;
           }
           var4++;
@@ -402,7 +402,7 @@ final class wf {
         return -1;
     }
 
-    private final void d(byte param0) {
+    private final void drawHelpPage(byte param0) {
         int var2;
         int var3;
         int var4;
@@ -448,20 +448,20 @@ final class wf {
         var15 = -var7 + (-ko.field_e[0].paddedWidth + (var5 + 80 + var9)) + var14;
         var16 = 2 * var7 + (ko.field_e[0].paddedWidth + 480 - var14 * 2) + (ko.field_e[2].paddedWidth - var9 * 2);
         var17 = 13421772;
-        if (SetFps.field_o == 0) {
+        if (SetFps.helpPageIndex == 0) {
           var12 += 50;
-          SetAutoaim.a(-1, var13, var15, GetPointDefenceLaserProjectiles.a(false, var2), 0, mb.field_k[SetFps.field_o], var17, var16, -55, var12, 0, var2);
+          SetAutoaim.a(-1, var13, var15, GetPointDefenceLaserProjectiles.a(false, var2), 0, mb.helpPages[SetFps.helpPageIndex], var17, var16, -55, var12, 0, var2);
           SetAutoaim.a(-1, var13, 140 + var15, GetPointDefenceLaserProjectiles.a(false, var2), 0, HardpointMatch.field_a, 16755200, var16, -51, var12, 0, var2);
         } else {
           var12 -= 10;
-          var20 = this.a("<savekey>", (byte) 119, mb.field_k[SetFps.field_o], SetDetachmentMode.field_p);
-          var21 = this.a("<loadkey>", (byte) 63, var20, WaveformTextureOperation.field_j);
+          var20 = this.formatShortcutHint("<savekey>", (byte) 119, mb.helpPages[SetFps.helpPageIndex], SetDetachmentMode.field_p);
+          var21 = this.formatShortcutHint("<loadkey>", (byte) 63, var20, WaveformTextureOperation.field_j);
           SetAutoaim.a(-1, var13, var15, GetPointDefenceLaserProjectiles.a(false, var2), 1, var21, var17, var16, -42, var12, 0, var2);
         }
-        SetSelfDestructPrepareToggleCooldown.a(80 + var5, -1, -50 + var6 + 160, GetAutoAfkTimeout.a(SetFps.field_o, -98), 1, 16738305, (byte) -96);
+        SetSelfDestructPrepareToggleCooldown.a(80 + var5, -1, -50 + var6 + 160, GetAutoAfkTimeout.a(SetFps.helpPageIndex, -98), 1, 16738305, (byte) -96);
     }
 
-    private final void b(int param0, boolean param1, int param2) {
+    private final void handleItemInput(int param0, boolean param1, int param2) {
         int stackIn_40_0 = 0;
         int stackIn_51_0 = 0;
         int stackIn_156_0 = 0;
@@ -501,57 +501,57 @@ final class wf {
         String var14Lifetime4;
         var15 = VoidHunters.field_G;
         var4 = 1;
-        var5 = SetReloadBarWidth.field_p[this.field_c][param2];
+        var5 = SetReloadBarWidth.menuActions[this.menuId][param2];
         var10_int = var5;
         if (var10_int != 0) {
           if (var10_int == 1) {
-            if (this.field_b.e((byte) -126)) {
+            if (this.inputState.isActivationRequested((byte) -126)) {
               if (GetPhasedEnergyBeamPulsetime.e((byte) 85)) {
                 GetAutoDetail.a(SetMpSandboxEnemySpawnLimit.field_p, 2, (byte) -115, 320, SetDebrisGroupColour.field_o, param1, IntrusiveDequeIterator.field_d, 0, 8, true, SetMpSandboxEnemySpawnLimit.field_p.capHeight, dra.field_v, 240, 8, SetMpSandboxEnemySpawnLimit.field_p.maxDescent + SetMpSandboxEnemySpawnLimit.field_p.capHeight);
               } else {
                 var10_int = param1 ? 1 : 0;
-                GetNebulaFadesOutWhenClose.a(wgb.field_f, var10_int != 0, (byte) -85, -4);
+                GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, var10_int != 0, (byte) -85, -4);
               }
             }
           } else {
             if (var10_int != 2) {
               if (5 != var10_int) {
                 if (16 == var10_int) {
-                  if (this.field_b.e((byte) -78)) {
+                  if (this.inputState.isActivationRequested((byte) -78)) {
                     var10_int = param1 ? 1 : 0;
-                    GetNebulaFadesOutWhenClose.a(wgb.field_f, var10_int != 0, (byte) -85, 7);
+                    GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, var10_int != 0, (byte) -85, 7);
                     GetMachineGunAimarc.field_p = true;
                   }
                 } else {
                   if (var10_int == 3) {
-                    if (this.field_b.e((byte) -86)) {
-                      SetFps.field_o = 0;
+                    if (this.inputState.isActivationRequested((byte) -86)) {
+                      SetFps.helpPageIndex = 0;
                       var10_int = param1 ? 1 : 0;
-                      GetNebulaFadesOutWhenClose.a(wgb.field_f, var10_int != 0, (byte) -85, 5);
+                      GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, var10_int != 0, (byte) -85, 5);
                     }
                   } else {
                     if (var10_int != 6) {
                       if (20 == var10_int) {
-                        if (this.field_b.e((byte) -95)) {
+                        if (this.inputState.isActivationRequested((byte) -95)) {
                           var10_int = param1 ? 1 : 0;
-                          GetNebulaFadesOutWhenClose.a(wgb.field_f, var10_int != 0, (byte) -85, 8);
+                          GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, var10_int != 0, (byte) -85, 8);
                         }
                       } else {
                         if (var10_int != 21) {
                           if (var10_int != 13) {
                             if (var10_int != 14) {
                               if (4 == var10_int) {
-                                if (this.field_b.e((byte) -87)) {
+                                if (this.inputState.isActivationRequested((byte) -87)) {
                                   apb.a((byte) 125);
                                 }
                               } else {
                                 if (19 == var10_int) {
                                   var8 = 0;
-                                  if (this.field_b.c((byte) -45)) {
+                                  if (this.inputState.isIncreaseOrActivateRequested((byte) -45)) {
                                     GetMissileLauncherProjectileLife.graphicsQuality = GetMissileLauncherProjectileLife.graphicsQuality + 1;
                                     var8 = 1;
                                   }
-                                  if (this.field_b.a(42)) {
+                                  if (this.inputState.isDecreaseRequested(42)) {
                                     GetMissileLauncherProjectileLife.graphicsQuality = GetMissileLauncherProjectileLife.graphicsQuality - 1;
                                     var8 = 1;
                                   }
@@ -571,9 +571,9 @@ final class wf {
                                 } else {
                                   if (var10_int != 24) {
                                     if (var10_int == 7) {
-                                      if (this.field_b.e((byte) -126)) {
-                                        if (null != vqa.field_g) {
-                                          vqa.field_g.a(param1, -10510);
+                                      if (this.inputState.isActivationRequested((byte) -126)) {
+                                        if (null != MatchingFieldValidator.field_g) {
+                                          MatchingFieldValidator.field_g.a(param1, -10510);
                                         }
                                         aeb.field_a = true;
                                         GetMessageFadetime.field_o = false;
@@ -587,26 +587,26 @@ final class wf {
                                     } else {
                                       if (var10_int != 8) {
                                         if (var10_int == 9) {
-                                          if (this.field_b.e((byte) -94)) {
-                                            vqa.field_g.beginPacket(60);
+                                          if (this.inputState.isActivationRequested((byte) -94)) {
+                                            MatchingFieldValidator.field_g.beginPacket(60);
                                             var10_int = param1 ? 1 : 0;
                                             stackIn_161_0 = (!ModelFaceAttachment.a(false)) ? 0 : 7;
                                             GetNebulaFadesOutWhenClose.a(stackIn_161_0, var10_int != 0, (byte) -85, -1);
                                           }
                                         } else {
                                           if (var10_int == 10) {
-                                            if (this.field_b.e((byte) -96)) {
-                                              vqa.field_g.b(true);
+                                            if (this.inputState.isActivationRequested((byte) -96)) {
+                                              MatchingFieldValidator.field_g.b(true);
                                               var10_int = param1 ? 1 : 0;
                                               stackIn_166_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
                                               GetNebulaFadesOutWhenClose.a(stackIn_166_0, var10_int != 0, (byte) -85, -1);
                                             }
                                           } else {
                                             if (var10_int == 11) {
-                                              if (this.field_b.e((byte) -98)) {
+                                              if (this.inputState.isActivationRequested((byte) -98)) {
                                                 if (GetThrusterSmallForce.field_o) {
                                                   var10_int = param1 ? 1 : 0;
-                                                  GetNebulaFadesOutWhenClose.a(wgb.field_f, var10_int != 0, (byte) -85, -5);
+                                                  GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, var10_int != 0, (byte) -85, -5);
                                                 }
                                                 if (SetMissionTerrainDebrisProbability.field_p) {
                                                   ArmBehaviourFactory.a(0, 11, 20694);
@@ -615,34 +615,34 @@ final class wf {
                                             } else {
                                               if (var10_int != 17) {
                                                 if (var10_int == 18) {
-                                                  if (this.field_b.e((byte) -115) &&
-                                                    this.a(param2, param0 ^ 96)) {
-                                                    SetFps.field_o = SetFps.field_o + 1;
+                                                  if (this.inputState.isActivationRequested((byte) -115) &&
+                                                    this.isItemEnabled(param2, param0 ^ 96)) {
+                                                    SetFps.helpPageIndex = SetFps.helpPageIndex + 1;
                                                   }
-                                                  if (!this.a(param2, 125) &&
+                                                  if (!this.isItemEnabled(param2, 125) &&
                                                     !param1) {
-                                                    this.field_b.field_j = this.field_b.field_j - 1;
+                                                    this.inputState.selectedIndex = this.inputState.selectedIndex - 1;
                                                   }
                                                 } else {
                                                   if (var10_int == 12) {
-                                                    if (this.field_b.e((byte) -82)) {
+                                                    if (this.inputState.isActivationRequested((byte) -82)) {
                                                       VoidHunters.quitToWebsite(MissionList.b((byte) -123), param0 - 20);
                                                     }
                                                   } else {
                                                     if (var10_int == 22) {
-                                                      if (this.field_b.e((byte) -119)) {
+                                                      if (this.inputState.isActivationRequested((byte) -119)) {
                                                         stackIn_193_0 = (!SetReverbFeedback.b(true)) ? 0 : 1;
                                                         var10_int = stackIn_193_0;
                                                         GrayscaleTextureOperation.a(var10_int != 0, (byte) -90);
                                                       }
                                                     } else {
                                                       if (23 == var10_int &&
-                                                        this.field_b.e((byte) -84)) {
+                                                        this.inputState.isActivationRequested((byte) -84)) {
                                                         var4 = 0;
-                                                        if (vqa.field_g != null &&
+                                                        if (MatchingFieldValidator.field_g != null &&
                                                           SocketNetworkArchiveClient.field_n <= 0 && (!ArchiveIndexLoader.field_g.copyToClipboardHidden ||
                                                           ssa.b(2))) {
-                                                          var10 = vqa.field_g.state.b(1).world.findShipByOwner(vqa.field_g.localPlayerIndex, 93);
+                                                          var10 = MatchingFieldValidator.field_g.state.b(1).world.findShipByOwner(MatchingFieldValidator.field_g.localPlayerIndex, 93);
                                                           if (var10 != null) {
                                                             if (SetTorpedoProjectiles.field_o == null) {
                                                               return;
@@ -702,21 +702,21 @@ final class wf {
                                                   }
                                                 }
                                               } else {
-                                                if (this.field_b.e((byte) -81) &&
-                                                  this.a(param2, 115)) {
-                                                  SetFps.field_o = SetFps.field_o - 1;
+                                                if (this.inputState.isActivationRequested((byte) -81) &&
+                                                  this.isItemEnabled(param2, 115)) {
+                                                  SetFps.helpPageIndex = SetFps.helpPageIndex - 1;
                                                 }
-                                                if (!this.a(param2, 113) &&
+                                                if (!this.isItemEnabled(param2, 113) &&
                                                   !param1) {
-                                                  this.field_b.field_j = this.field_b.field_j + 1;
+                                                  this.inputState.selectedIndex = this.inputState.selectedIndex + 1;
                                                 }
                                               }
                                             }
                                           }
                                         }
                                       } else {
-                                        if (this.field_b.e((byte) -89)) {
-                                          vqa.field_g.e(true);
+                                        if (this.inputState.isActivationRequested((byte) -89)) {
+                                          MatchingFieldValidator.field_g.e(true);
                                           var10_int = param1 ? 1 : 0;
                                           stackIn_156_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
                                           GetNebulaFadesOutWhenClose.a(stackIn_156_0, var10_int != 0, (byte) -85, -1);
@@ -725,10 +725,10 @@ final class wf {
                                     }
                                   } else {
                                     var9 = 0;
-                                    if (this.field_b.c((byte) -45)) {
+                                    if (this.inputState.isIncreaseOrActivateRequested((byte) -45)) {
                                       var9 = 1;
                                     }
-                                    if (this.field_b.a(52)) {
+                                    if (this.inputState.isDecreaseRequested(52)) {
                                       var9 = -1;
                                     }
                                     if (var9 != 0) {
@@ -751,14 +751,14 @@ final class wf {
                               }
                             } else {
                               var7 = GetMutatorVotes.field_p;
-                              if (this.field_b.a(true)) {
+                              if (this.inputState.isHomePressed(true)) {
                                 BitmapTextLayout.setMusicVolume(0, (byte) -109);
                               }
-                              if (this.field_b.d(param0 + 12441)) {
+                              if (this.inputState.isEndPressed(param0 + 12441)) {
                                 BitmapTextLayout.setMusicVolume(256, (byte) -104);
                               }
-                              if (this.field_b.b((byte) 111)) {
-                                var10_int = this.b(31488, param2) + (this.a((byte) -76, param2) - GetSniperCannonAimspeed.a(100, 131)) >> 1;
+                              if (this.inputState.isMouseButtonHeld((byte) 111)) {
+                                var10_int = this.getItemLeft(31488, param2) + (this.getItemRight((byte) -76, param2) - GetSniperCannonAimspeed.a(100, 131)) >> 1;
                                 var11 = PlayerGameData.field_b - var10_int;
                                 var12_int = 256 * var11 / GetSniperCannonAimspeed.a(100, 131);
                                 if (var12_int > 0) {
@@ -771,10 +771,10 @@ final class wf {
                                   BitmapTextLayout.setMusicVolume(0, (byte) -127);
                                 }
                               }
-                              if (this.field_b.d((byte) -7)) {
+                              if (this.inputState.isLeftPressed((byte) -7)) {
                                 GetWeaponProjectileSpeedMultiply.e((byte) -81);
                               }
-                              if (this.field_b.b(-80)) {
+                              if (this.inputState.isRightPressed(-80)) {
                                 UiScrollBar.increaseMusicVolume(32);
                               }
                               if (GetMutatorVotes.field_p != var7 &&
@@ -785,18 +785,18 @@ final class wf {
                             }
                           } else {
                             var6 = 0;
-                            if (this.field_b.a(true) &&
+                            if (this.inputState.isHomePressed(true) &&
                               kt.soundEffectVolume > 0) {
                               LoopingSound.setSoundEffectVolume(0, -13205);
                               var6 = 1;
                             }
-                            if (this.field_b.d(12465) &&
+                            if (this.inputState.isEndPressed(12465) &&
                               256 > kt.soundEffectVolume) {
                               var6 = 1;
                               LoopingSound.setSoundEffectVolume(256, -13205);
                             }
-                            if (this.field_b.b((byte) 126)) {
-                              var10_int = this.b(31488, param2) - (-this.a((byte) -79, param2) + GetSniperCannonAimspeed.a(100, 131)) >> 1;
+                            if (this.inputState.isMouseButtonHeld((byte) 126)) {
+                              var10_int = this.getItemLeft(31488, param2) - (-this.getItemRight((byte) -79, param2) + GetSniperCannonAimspeed.a(100, 131)) >> 1;
                               var11 = PlayerGameData.field_b - var10_int;
                               var12_int = 256 * var11 / GetSniperCannonAimspeed.a(param0 + 76, 131);
                               var6 = 1;
@@ -810,18 +810,18 @@ final class wf {
                                 }
                               }
                             }
-                            if (this.field_b.d((byte) -7) &&
+                            if (this.inputState.isLeftPressed((byte) -7) &&
                               kt.soundEffectVolume > 0) {
                               var6 = 1;
                               ShieldBehaviourFactory.b((byte) 64);
                             }
-                            if (this.field_b.b(-86) &&
+                            if (this.inputState.isRightPressed(-86) &&
                               kt.soundEffectVolume < 256) {
                               ft.b(18941);
                               var6 = 1;
                             }
                             if (var6 != 0) {
-                              if (!this.field_b.b((byte) 119) ||
+                              if (!this.inputState.isMouseButtonHeld((byte) 119) ||
                                 !(mba.field_b >= SetMinimapWidth.field_o)) {
                                 GetNebulaFadesOutWhenClose.a(-124, fa.field_d[1]);
                                 mba.field_b = 20 + SetMinimapWidth.field_o;
@@ -833,29 +833,29 @@ final class wf {
                             }
                           }
                         } else {
-                          if (this.field_b.e((byte) -107)) {
+                          if (this.inputState.isActivationRequested((byte) -107)) {
                             var10_int = param1 ? 1 : 0;
-                            GetNebulaFadesOutWhenClose.a(wgb.field_f, var10_int != 0, (byte) -85, 9);
+                            GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, var10_int != 0, (byte) -85, 9);
                           }
                         }
                       }
                     } else {
-                      if (this.field_b.e((byte) -105)) {
+                      if (this.inputState.isActivationRequested((byte) -105)) {
                         var10_int = SetCountermeasureLauncherProjectileLife.field_o;
                         var11 = param1 ? 1 : 0;
-                        GetNebulaFadesOutWhenClose.a(wgb.field_f, var11 != 0, (byte) -85, var10_int);
+                        GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, var11 != 0, (byte) -85, var10_int);
                       }
                     }
                   }
                 }
               } else {
-                if (this.field_b.e((byte) -83)) {
+                if (this.inputState.isActivationRequested((byte) -83)) {
                   var10_int = param1 ? 1 : 0;
-                  GetNebulaFadesOutWhenClose.a(wgb.field_f, var10_int != 0, (byte) -85, 0);
+                  GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, var10_int != 0, (byte) -85, 0);
                 }
               }
             } else {
-              if (this.field_b.e((byte) -97)) {
+              if (this.inputState.isActivationRequested((byte) -97)) {
                 var10_int = param1 ? 1 : 0;
                 stackIn_51_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
                 GetNebulaFadesOutWhenClose.a(stackIn_51_0, var10_int != 0, (byte) -85, -1);
@@ -863,22 +863,22 @@ final class wf {
             }
           }
         } else {
-          if (this.field_b.e((byte) -78)) {
+          if (this.inputState.isActivationRequested((byte) -78)) {
             var10_int = param1 ? 1 : 0;
             stackIn_40_0 = (ModelFaceAttachment.a(false)) ? 7 : 0;
             GetNebulaFadesOutWhenClose.a(stackIn_40_0, var10_int != 0, (byte) -85, -3);
           }
         }
         if (param0 != 24) {
-          this.c((byte) 37);
+          this.draw((byte) 37);
         }
         if (var4 != 0 &&
-          this.field_b.e((byte) -102)) {
+          this.inputState.isActivationRequested((byte) -102)) {
           GetNebulaFadesOutWhenClose.a(param0 ^ -106, fa.field_d[7]);
         }
     }
 
-    final void c(byte param0) {
+    final void draw(byte param0) {
         String discarded$0 = null;
         int stackIn_13_1 = 0;
         boolean stackIn_14_2 = false;
@@ -896,28 +896,28 @@ final class wf {
         int var4Lifetime1;
         int var6Lifetime1;
         var7 = VoidHunters.field_G;
-        this.b(150, (byte) -61);
-        if (this.field_c == 7) {
+        this.drawBackground(150, (byte) -61);
+        if (this.menuId == 7) {
           return;
         }
-        if (this.field_c == 8) {
+        if (this.menuId == 8) {
           SetWeaponProjectileSpeedMultiply.e((byte) 102);
         }
         if (param0 != 65) {
           var8 = (String) null;
-          discarded$0 = this.a((String) null, (byte) -83, (String) null, -38);
+          discarded$0 = this.formatShortcutHint((String) null, (byte) -83, (String) null, -38);
         }
-        for (var2 = 0; var2 < this.field_b.field_c; var2++) {
-          if (this.a(var2, 126)) {
+        for (var2 = 0; var2 < this.inputState.itemCount; var2++) {
+          if (this.isItemEnabled(var2, 126)) {
             stackIn_13_1 = var2;
-            stackIn_14_2 = (this.field_b.field_j == var2);
-            this.a(stackIn_13_1, stackIn_14_2, param0 ^ 40);
+            stackIn_14_2 = (this.inputState.selectedIndex == var2);
+            this.drawItem(stackIn_13_1, stackIn_14_2, param0 ^ 40);
           }
         }
-        if (5 == this.field_c) {
-          this.d((byte) -48);
+        if (5 == this.menuId) {
+          this.drawHelpPage((byte) -48);
         } else {
-          if (this.field_c == 6) {
+          if (this.menuId == 6) {
             var2Lifetime1 = 3;
             var3 = AsteroidField.getParagraphHeight((byte) -37, BodyInZoneCondition.field_c, GetPointDefenceLaserProjectiles.a(false, var2Lifetime1), var2Lifetime1, 480);
             var4 = 16;
@@ -938,10 +938,10 @@ final class wf {
           var3Lifetime1 = 4 * (-SetRepairModeRadius.f(param0 ^ 190) + 255);
         }
         var4Lifetime1 = (GetBombletSprayEnergyUsed.field_p.height - SoftwareRasterizer2D.height) / 2;
-        if (this.field_c != 0) {
-          if (this.field_c < ocb.field_m.length &&
-            ocb.field_m[this.field_c] != null) {
-            var5 = ocb.field_m[this.field_c];
+        if (this.menuId != 0) {
+          if (this.menuId < PasswordValidator.field_m.length &&
+            PasswordValidator.field_m[this.menuId] != null) {
+            var5 = PasswordValidator.field_m[this.menuId];
             var6Lifetime1 = 1;
             SetSelfDestructPrepareToggleCooldown.a(GetBombletSprayEnergyUsed.field_p.width / 2 - (tea.a(var6Lifetime1, var5, 13879) / 2 - var3Lifetime1), 1, var4Lifetime1 + 110, var5, 1, 16777215, (byte) -120);
           }
@@ -951,45 +951,45 @@ final class wf {
         return;
     }
 
-    private final int b(int param0, int param1) {
+    private final int getItemLeft(int param0, int param1) {
         int discarded$0 = 0;
         int var4 = 0;
         if (param0 != 31488) {
-          discarded$0 = this.a((byte) -10, -10);
+          discarded$0 = this.getItemRight((byte) -10, -10);
         }
         int var3 = (GetBombletSprayEnergyUsed.field_p.width - SoftwareRasterizer2D.width) / 2;
-        if (this.field_c == 5) {
-          return 190 * param1 + var3 + SetReloadBarWidth.field_r[this.field_c];
+        if (this.menuId == 5) {
+          return 190 * param1 + var3 + SetReloadBarWidth.menuLeftEdges[this.menuId];
         }
-        if (0 == this.field_c) {
+        if (0 == this.menuId) {
           if (param1 < 2) {
             var4 = -25 + (GetBombletSprayEnergyUsed.field_p.width / 2 - GetSniperCannonAimspeed.a(100, 128));
             return var4;
           }
-          return 25 + var3 + SetReloadBarWidth.field_r[this.field_c];
+          return 25 + var3 + SetReloadBarWidth.menuLeftEdges[this.menuId];
         }
-        return SetReloadBarWidth.field_r[this.field_c] + var3;
+        return SetReloadBarWidth.menuLeftEdges[this.menuId] + var3;
     }
 
-    private final boolean a(int param0, int param1) {
+    private final boolean isItemEnabled(int param0, int param1) {
         if (param1 <= 112) {
           textureHeightMask = -28;
         }
-        if (this.field_c != 5) {
+        if (this.menuId != 5) {
           return true;
         }
         if (param0 == 0 &&
-          SetFps.field_o == 0) {
+          SetFps.helpPageIndex == 0) {
           return false;
         }
         if (param0 == 2 &&
-          SetFps.field_o == mb.field_k.length - 1) {
+          SetFps.helpPageIndex == mb.helpPages.length - 1) {
           return false;
         }
         return true;
     }
 
-    private final void a(byte param0) {
+    private final void updateKeyboardSelection(byte param0) {
         int var3 = 0;
         int var6;
         int var2;
@@ -997,42 +997,42 @@ final class wf {
         int var5;
         var6 = VoidHunters.field_G;
         if (SetMachineGunEnergyUsed.field_o[13]) {
-          var2 = SetReloadBarWidth.field_p[this.field_c].length;
+          var2 = SetReloadBarWidth.menuActions[this.menuId].length;
           for (var3 = 0; var2 > var3; var3++) {
-            var4 = SetReloadBarWidth.field_p[this.field_c][var3];
+            var4 = SetReloadBarWidth.menuActions[this.menuId][var3];
             if (var4 == 6) {
               var5 = SetCountermeasureLauncherProjectileLife.field_o;
-              GetNebulaFadesOutWhenClose.a(wgb.field_f, false, (byte) -85, var5);
+              GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, false, (byte) -85, var5);
             }
           }
         } else {
           if (5 != GetArmageddonTimerStart.field_o) {
-            this.field_b.a((byte) -63);
+            this.inputState.updateVerticalSelection((byte) -63);
           } else {
-            this.c(param0 + 183);
+            this.updateHelpSelection(param0 + 183);
           }
         }
         if (param0 != -51) {
-          this.b(-56, (byte) 28);
+          this.drawBackground(-56, (byte) 28);
         }
     }
 
-    private final int a(byte param0, int param1) {
+    private final int getItemRight(byte param0, int param1) {
         int var3 = (-SoftwareRasterizer2D.width + GetBombletSprayEnergyUsed.field_p.width) / 2;
-        if (this.field_c == 5) {
-          return this.b(31488, param1) + 140;
+        if (this.menuId == 5) {
+          return this.getItemLeft(31488, param1) + 140;
         }
         if (param0 > -1) {
           return -98;
         }
-        if (this.field_c == 0 &&
+        if (this.menuId == 0 &&
           param1 < 2) {
           return GetBombletSprayEnergyUsed.field_p.width / 2;
         }
-        return SetReloadBarWidth.field_q[this.field_c] + var3;
+        return SetReloadBarWidth.menuRightEdges[this.menuId] + var3;
     }
 
-    final void b(int param0) {
+    final void update(int param0) {
         boolean stackIn_10_0 = false;
         int stackIn_41_0 = 0;
         int var2;
@@ -1044,12 +1044,12 @@ final class wf {
           return;
         }
         if (param0 != 0) {
-          this.field_c = 40;
+          this.menuId = 40;
         }
-        if (8 == this.field_c) {
+        if (8 == this.menuId) {
           fia.a(false);
         }
-        if (this.field_c == 7) {
+        if (this.menuId == 7) {
           stackIn_10_0 = !(GetBombletSprayRandomness.a(-75));
           var2 = GetGrapplingHooksDamageableBySourcePlayer.a(stackIn_10_0, (byte) 40);
           if (3 == var2) {
@@ -1059,10 +1059,10 @@ final class wf {
             SetMaxShipSize.a(MissionList.b((byte) -105), 0);
           }
           if (var2 == 1) {
-            GetNebulaFadesOutWhenClose.a(wgb.field_f, false, (byte) -85, 0);
+            GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, false, (byte) -85, 0);
           }
           if (var2 == 2) {
-            GetNebulaFadesOutWhenClose.a(wgb.field_f, true, (byte) -85, 0);
+            GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, true, (byte) -85, 0);
           }
           return;
         }
@@ -1073,54 +1073,54 @@ final class wf {
               continue;
             }
             if (SetBombletSprayProjectileDamage.field_o == 13) {
-              if (1 != this.field_c &&
-                2 != this.field_c &&
-                this.field_c != 3 &&
-                this.field_c != 4) {
+              if (1 != this.menuId &&
+                2 != this.menuId &&
+                this.menuId != 3 &&
+                this.menuId != 4) {
                 continue;
               }
               stackIn_41_0 = (!ModelFaceAttachment.a(false)) ? 0 : 7;
               GetNebulaFadesOutWhenClose.a(stackIn_41_0, false, (byte) -85, -1);
               continue;
             }
-            var2Lifetime1 = this.field_b.field_j;
-            this.a((byte) -51);
-            if (0 <= this.field_b.field_j &&
-              var2Lifetime1 != this.field_b.field_j) {
+            var2Lifetime1 = this.inputState.selectedIndex;
+            this.updateKeyboardSelection((byte) -51);
+            if (0 <= this.inputState.selectedIndex &&
+              var2Lifetime1 != this.inputState.selectedIndex) {
               GetNebulaFadesOutWhenClose.a(-110, fa.field_d[0]);
             }
-            if (this.field_b.field_j == -1) {
+            if (this.inputState.selectedIndex == -1) {
               continue;
             }
-            this.b(24, false, this.field_b.field_j);
+            this.handleItemInput(24, false, this.inputState.selectedIndex);
           }
-          var2Lifetime1Lifetime1 = this.field_b.field_j;
-          this.field_b.a(this.a(qs.field_a, Particle.field_H, 6868), 5620, this.a(uia.field_b, PlayerGameData.field_b, param0 ^ 6868));
-          if (this.field_b.field_j >= 0 &&
-            var2Lifetime1Lifetime1 != this.field_b.field_j) {
+          var2Lifetime1Lifetime1 = this.inputState.selectedIndex;
+          this.inputState.updatePointerSelection(this.hitTestItem(qs.field_a, Particle.field_H, 6868), 5620, this.hitTestItem(uia.field_b, PlayerGameData.field_b, param0 ^ 6868));
+          if (this.inputState.selectedIndex >= 0 &&
+            var2Lifetime1Lifetime1 != this.inputState.selectedIndex) {
             GetNebulaFadesOutWhenClose.a(-124, fa.field_d[0]);
           }
-          if (this.field_b.field_j != -1) {
-            this.b(24, true, this.field_b.field_j);
+          if (this.inputState.selectedIndex != -1) {
+            this.handleItemInput(24, true, this.inputState.selectedIndex);
           }
         }
     }
 
-    private final int a(int param0, byte param1) {
+    private final int getItemHeight(int param0, byte param1) {
         int discarded$0 = 0;
-        if (this.field_c == 0 &&
+        if (this.menuId == 0 &&
           param0 < 2) {
-          return SetReloadBarWidth.field_o[this.field_c] + 30;
+          return SetReloadBarWidth.menuRowSpacing[this.menuId] + 30;
         }
         if (param1 != 70) {
-          discarded$0 = this.c(-81, -122);
+          discarded$0 = this.getItemTop(-81, -122);
         }
         return 30;
     }
 
-    wf(int param0) {
-        this.field_c = param0;
-        this.field_b = new ae(SetReloadBarWidth.field_p[this.field_c].length);
+    GameMenuScreen(int param0) {
+        this.menuId = param0;
+        this.inputState = new MenuInputState(SetReloadBarWidth.menuActions[this.menuId].length);
     }
 
     static {

@@ -346,7 +346,7 @@ final class dla {
           null != es.field_b.blueprint) {
           try {
             var12 = es.field_b.blueprint.description;
-            var5_ref_sg = ae.a(var12, (byte) 45);
+            var5_ref_sg = MenuInputState.createShipFromComponentWords(var12, (byte) 45);
             var5_ref_sg.setTeam(17704, 3);
             var5_ref_sg.setAi(new ShipAI(), 4);
             var5_ref_sg.setAngle(TextHotspotRegion.randomBoundedInt(var3, 8192, 122), -67);

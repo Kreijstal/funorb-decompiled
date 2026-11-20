@@ -415,7 +415,7 @@ final class World implements DiffableState, CompactGameState {
                 var14.consumeEnergy((byte) 11, param0.getDamage((byte) 45) / GetPhysicsCollisionPhantomForceMultiplier.field_o);
               }
               this.a(RandomLinesTextureOperation.field_m, var10, var9Lifetime1, ei.field_a, 11184895, var11Lifetime1, dw.field_b);
-              wgb.field_i = null;
+              AgeValidator.field_i = null;
             }
           }
           var7_intLifetime1 = -10 % ((26 - param3) / 39);
@@ -1767,14 +1767,14 @@ final class World implements DiffableState, CompactGameState {
           if (!param2.c(112)) {
             param0.testProjectileHit(MonochromeRowCache.field_b, param2, -4414);
             if (MonochromeRowCache.field_b.hasHit((byte) -97)) {
-              wgb.field_i = param0;
+              AgeValidator.field_i = param0;
               return true;
             }
           } else {
             var4 = RoundResult.field_c.component;
             param0.traceProjectile(RoundResult.field_c, param2, (byte) 104);
             if (RoundResult.field_c.component != var4) {
-              wgb.field_i = param0;
+              AgeValidator.field_i = param0;
             }
           }
           if (param1 >= 29) {
@@ -1901,7 +1901,7 @@ final class World implements DiffableState, CompactGameState {
                 if (!var11.isSpecialOrderActive(4, 99) &&
                   var7 != 0) {
                   var14 = var11.repair(SetSniperCannonFireForce.field_q, (byte) -2);
-                  if (1 == qrb.field_a &&
+                  if (1 == ValidationState.field_a &&
                     0 < var14) {
                     if (var12.savedShip == null) {
                       var12.savedShip = new Ship();
@@ -2578,8 +2578,8 @@ final class World implements DiffableState, CompactGameState {
               }
               else {
                 this.addShip(var29, (byte) 96);
-                if (vqa.field_g != null) {
-                  vqa.field_g.d(-31407);
+                if (MatchingFieldValidator.field_g != null) {
+                  MatchingFieldValidator.field_g.d(-31407);
                 }
               }
             }
@@ -2852,7 +2852,7 @@ final class World implements DiffableState, CompactGameState {
                                                                                       var71 = new Random((long)(var7 * var8));
                                                                                       var68 = "AAQPKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESAygAEgISAygBEgMoABICEgMoARIDKAASAhIDKAESBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEgUS-wQSBhIFEv8EEgYSBRL-BBIGEg";
                                                                                       var83 = GetResourceNodeCaptureTime.a(var68, true, true);
-                                                                                      var70 = ae.a(var83, (byte) 126);
+                                                                                      var70 = MenuInputState.createShipFromComponentWords(var83, (byte) 126);
                                                                                       var70.setAi(new ShipAI(), 4);
                                                                                       var70.setTeam(17704, sja.field_c);
                                                                                       var14 = var7;
@@ -3451,7 +3451,7 @@ final class World implements DiffableState, CompactGameState {
             RoundResult.field_c.reset(2147483647);
           }
           if (MonochromeRowCache.field_b.hasHit((byte) 123)) {
-            MonochromeRowCache.field_b.resolve(this, -1, wgb.field_i, param2);
+            MonochromeRowCache.field_b.resolve(this, -1, AgeValidator.field_i, param2);
             MonochromeRowCache.field_b.clear((byte) -113);
           }
           var4_int = 1 % ((30 - param0) / 36);
@@ -4150,7 +4150,7 @@ final class World implements DiffableState, CompactGameState {
                       var12 = 0;
                       if (null != param2[var5_int].savedShip && (param3.isPreGamePhase((byte) -51) ||
                         GetToggledScoreboard.a((byte) -104, this.getObjectiveType(false)) ||
-                        qrb.field_a == 1 &&
+                        ValidationState.field_a == 1 &&
                         param2[var5_int].savedShip.chassis.getComponentTypeId(0) == var10)) {
                         var26 = new Ship();
                         var26 = var26;
@@ -4158,7 +4158,7 @@ final class World implements DiffableState, CompactGameState {
                         param2[var5_int].savedShip.copyTo((byte) 74, var26);
                         var12 = 1;
                         if (((param3.isPreGamePhase((byte) -42) ||
-                          GetToggledScoreboard.a((byte) -95, this.getObjectiveType(false)))) && ((qrb.field_a == 0))) {
+                          GetToggledScoreboard.a((byte) -95, this.getObjectiveType(false)))) && ((ValidationState.field_a == 0))) {
                           param2[var5_int].savedShip = null;
                         }
                         decompiledFrameRemainder0 = false;
@@ -5325,7 +5325,7 @@ final class World implements DiffableState, CompactGameState {
               var4 = -67 % ((-34 - param1) / 52);
               return;
             }
-            wgb.field_i = null;
+            AgeValidator.field_i = null;
             RoundResult.field_c.reset(2147483647);
             MonochromeRowCache.field_b.clear((byte) -70);
             var4Lifetime1 = var3_ref.x;
@@ -5403,10 +5403,10 @@ final class World implements DiffableState, CompactGameState {
             }
             this.a(var3_ref, var5, var9, (byte) -103, var4Lifetime1, var8);
             this.a(var5, var8, var4Lifetime1, var3_ref, var9, 6);
-            if (wgb.field_i != null) {
+            if (AgeValidator.field_i != null) {
               var13Lifetime3 = 1;
-              if (wgb.field_i instanceof Ship) {
-                var23_ref = (Ship) (wgb.field_i);
+              if (AgeValidator.field_i instanceof Ship) {
+                var23_ref = (Ship) (AgeValidator.field_i);
                 if (var3_ref.getFiredTeam(512) != var23_ref.getTeam((byte) 77)) {
                   stackIn_95_0 = (!var23_ref.isSpawnProtected((byte) -127)) ? 1 : 0;
                 } else {
@@ -5425,17 +5425,17 @@ final class World implements DiffableState, CompactGameState {
                   var13Lifetime3 = 1;
                 }
               } else {
-                if (!(wgb.field_i instanceof Debris)) {
-                  wgb.field_i.onStateChanged((byte) -68);
+                if (!(AgeValidator.field_i instanceof Debris)) {
+                  AgeValidator.field_i.onStateChanged((byte) -68);
                   this.a((byte) 108, var3_ref, var13Lifetime3 != 0);
                   var3_ref = (Projectile) (this.projectiles.next((byte) 46));
                   continue scanLoop1;
                 }
-                var19_ref = (Debris) (wgb.field_i);
+                var19_ref = (Debris) (AgeValidator.field_i);
                 var24 = var19_ref;
                 var24.field_u = true;
               }
-              wgb.field_i.onStateChanged((byte) -68);
+              AgeValidator.field_i.onStateChanged((byte) -68);
               this.a((byte) 108, var3_ref, var13Lifetime3 != 0);
             }
             var3_ref = (Projectile) (this.projectiles.next((byte) 46));
@@ -6906,7 +6906,7 @@ final class World implements DiffableState, CompactGameState {
           var6 = var12;
           if (null != var6 &&
             var13.length > 0) {
-            var7 = SetSniperCannonProjectileLife.a(1, var13);
+            var7 = SetSniperCannonProjectileLife.decodeComponentWords(1, var13);
             var8 = param3.chassis;
             var9 = var8.getTreeDepth((byte) 57);
             for (var10 = 0; var10 < var9; var10++) {

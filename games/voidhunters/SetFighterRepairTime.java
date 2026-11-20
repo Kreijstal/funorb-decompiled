@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetFighterRepairTime extends ConsoleCommand {
-    static qrb field_q;
+    static ValidationState pendingValidation;
     static String field_p;
     static String field_o;
 
@@ -12,7 +12,7 @@ final class SetFighterRepairTime extends ConsoleCommand {
         if (param0 != 0) {
           return;
         }
-        field_q = null;
+        pendingValidation = null;
     }
 
     SetFighterRepairTime(String param0, Class[] param1, String param2) {
@@ -50,7 +50,7 @@ final class SetFighterRepairTime extends ConsoleCommand {
     }
 
     static {
-        field_q = new qrb();
+        pendingValidation = new ValidationState();
         field_o = "Loading...";
     }
 }

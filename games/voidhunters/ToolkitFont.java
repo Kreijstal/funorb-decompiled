@@ -465,7 +465,7 @@ abstract class ToolkitFont {
           try {
             if (param1.startsWith("col=")) {
               var5 = (CharSequence) ((Object) param1.substring(4));
-              TimedSpecialOrderBehaviour.field_a = -16777216 & TimedSpecialOrderBehaviour.field_a | tib.a(-596, var5, 16) & 16777215;
+              TimedSpecialOrderBehaviour.field_a = -16777216 & TimedSpecialOrderBehaviour.field_a | UsernameAvailabilityValidator.parseInt(-596, var5, 16) & 16777215;
             } else {
               if (param1.equals("/col")) {
                 TimedSpecialOrderBehaviour.field_a = 16777215 & CarouselPlayerInfoFactory.field_b | TimedSpecialOrderBehaviour.field_a & -16777216;
@@ -473,7 +473,7 @@ abstract class ToolkitFont {
             }
             if (param1.startsWith("argb=")) {
               var9 = (CharSequence) ((Object) param1.substring(5));
-              TimedSpecialOrderBehaviour.field_a = tib.a(-596, var9, 16);
+              TimedSpecialOrderBehaviour.field_a = UsernameAvailabilityValidator.parseInt(-596, var9, 16);
             } else {
               if (!param1.equals("/argb")) {
                 if (!param1.startsWith("str=")) {
@@ -489,7 +489,7 @@ abstract class ToolkitFont {
                             if (!param1.equalsIgnoreCase("shad=-1")) {
                               if (param1.startsWith("shad=")) {
                                 var8 = (CharSequence) ((Object) param1.substring(5));
-                                SetThrusterAutobalancing.field_q = -16777216 & TimedSpecialOrderBehaviour.field_a | tib.a(-596, var8, 16);
+                                SetThrusterAutobalancing.field_q = -16777216 & TimedSpecialOrderBehaviour.field_a | UsernameAvailabilityValidator.parseInt(-596, var8, 16);
                               } else {
                                 if (!param1.equals("shad")) {
                                   if (!param1.equals("/shad")) {
@@ -512,7 +512,7 @@ abstract class ToolkitFont {
                         }
                       } else {
                         var7 = (CharSequence) ((Object) param1.substring(2));
-                        vq.field_v = -16777216 & TimedSpecialOrderBehaviour.field_a | tib.a(-596, var7, 16);
+                        vq.field_v = -16777216 & TimedSpecialOrderBehaviour.field_a | UsernameAvailabilityValidator.parseInt(-596, var7, 16);
                       }
                     }
                   } else {
@@ -520,7 +520,7 @@ abstract class ToolkitFont {
                   }
                 } else {
                   var6 = (CharSequence) ((Object) param1.substring(4));
-                  SetGrapplingHookRopeChangeRate.field_p = TimedSpecialOrderBehaviour.field_a & -16777216 | tib.a(-596, var6, 16);
+                  SetGrapplingHookRopeChangeRate.field_p = TimedSpecialOrderBehaviour.field_a & -16777216 | UsernameAvailabilityValidator.parseInt(-596, var6, 16);
                 }
               } else {
                 TimedSpecialOrderBehaviour.field_a = CarouselPlayerInfoFactory.field_b;

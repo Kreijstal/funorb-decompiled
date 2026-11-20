@@ -11,7 +11,7 @@ final class DialogMessagePanel extends UiContainer implements UiActionListener {
     static CommandConsole field_C;
     private BitmapFont font;
     private String message;
-    static ae field_z;
+    static MenuInputState field_z;
     private int actionButtonCount;
     private UiFocusableComponent[] actionButtons;
 

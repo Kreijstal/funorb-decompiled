@@ -25,8 +25,8 @@ final class GetPhasedEnergyBeamAimarc extends ConsoleCommand {
         if (param0.children == null) {
           param0.children = new IntrusiveDeque();
         }
-        if (ae.field_f == null) {
-          ae.field_f = new pr(64);
+        if (MenuInputState.field_f == null) {
+          MenuInputState.field_f = new pr(64);
         }
         if (null == TeamNodeCondition.field_c) {
           TeamNodeCondition.field_c = new pr(64);

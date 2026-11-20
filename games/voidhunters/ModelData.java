@@ -354,7 +354,7 @@ final class ModelData {
           SetPointDefenceLaserAimarc.field_r[133] = var7[3];
           SetPointDefenceLaserAimarc.field_r[137] = IndexedSpriteData.b(param2, "basic", "logo");
           GetDebrisThrowable.a(false, "Finished unpacking raw sprites");
-          wgb.field_g = true;
+          AgeValidator.field_g = true;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "cbb.D(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + (param2 != null ? "{...}" : "null") + ')');
         }

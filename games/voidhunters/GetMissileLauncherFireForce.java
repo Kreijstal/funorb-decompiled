@@ -134,9 +134,9 @@ final class GetMissileLauncherFireForce extends ConsoleCommand {
           }
           jka.a(var4, (byte) -111);
           var12 = (BitmapFont) null;
-          ScrollableActionPanel.field_Ab = ocb.a(65793, 4020342, 10204, (BitmapFont) null, 1513239, 8947848, 1513239, 5138823, 65793, 1127256, 0, 65793, 2245737);
-          DebrisFactory.field_a = ocb.a(0, 0, param0 ^ -10239, param2, 0, 0, 0, 0, 0, 0, 16764006, 0, 0);
-          ConstantColorTextureOperation.field_k = ocb.a(0, 0, 10204, param2, 0, 0, 0, 0, 0, 0, 16777215, 0, 0);
+          ScrollableActionPanel.field_Ab = PasswordValidator.a(65793, 4020342, 10204, (BitmapFont) null, 1513239, 8947848, 1513239, 5138823, 65793, 1127256, 0, 65793, 2245737);
+          DebrisFactory.field_a = PasswordValidator.a(0, 0, param0 ^ -10239, param2, 0, 0, 0, 0, 0, 0, 16764006, 0, 0);
+          ConstantColorTextureOperation.field_k = PasswordValidator.a(0, 0, 10204, param2, 0, 0, 0, 0, 0, 0, 16777215, 0, 0);
           var5 = SoftwareRasterizer2D.width;
           var6 = SoftwareRasterizer2D.height;
           var16 = SoftwareRasterizer2D.pixels;

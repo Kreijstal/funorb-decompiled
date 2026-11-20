@@ -116,11 +116,11 @@ final class ComponentCollision extends IntrusiveNode {
               var8 = ObjectiveMarker.field_b;
               var10 = 2;
               if (ncb.field_a != null) {
-                if (null == tib.field_i) {
-                  tib.field_i = new byte[ocb.field_l];
-                  AudioPump.field_a = new boolean[ocb.field_l];
+                if (null == UsernameAvailabilityValidator.field_i) {
+                  UsernameAvailabilityValidator.field_i = new byte[PasswordValidator.field_l];
+                  AudioPump.field_a = new boolean[PasswordValidator.field_l];
                 }
-                for (var11 = 0; var11 < ocb.field_l; var11++) {
+                for (var11 = 0; var11 < PasswordValidator.field_l; var11++) {
                   AudioPump.field_a[var11] = false;
                 }
                 var10 = 0;
@@ -194,7 +194,7 @@ final class ComponentCollision extends IntrusiveNode {
                   var13 = 0;
                   var14Lifetime1 = 0;
                   var15Lifetime1 = 0;
-                  for (var16Lifetime1 = 0; ocb.field_l > var16Lifetime1; var16Lifetime1++) {
+                  for (var16Lifetime1 = 0; PasswordValidator.field_l > var16Lifetime1; var16Lifetime1++) {
                     var17_intLifetime1 = 255 & SetSpinningBladeSpindamageMultiplier.field_o.field_Pb[var16Lifetime1];
                     if (null != SetGrapplingHookMaxExtension8Force.field_o &&
                       null != SetGrapplingHookMaxExtension8Force.field_o[var16Lifetime1] &&
@@ -291,7 +291,7 @@ final class ComponentCollision extends IntrusiveNode {
                 if (ObjectiveMarker.field_b.field_Q) {
                   var11_ref = null;
                   var12Lifetime2 = 0;
-                  for (var13Lifetime1 = 0; ocb.field_l > var13Lifetime1; var13Lifetime1++) {
+                  for (var13Lifetime1 = 0; PasswordValidator.field_l > var13Lifetime1; var13Lifetime1++) {
                     if (AudioPump.field_a[var13Lifetime1]) {
                       var23 = "<col=A00000>" + ClientException.field_c[var13Lifetime1] + "</col>";
                       if (var11_ref == null) {

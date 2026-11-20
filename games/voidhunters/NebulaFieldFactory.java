@@ -117,8 +117,8 @@ final class NebulaFieldFactory implements GameStateFactory {
             MachineGunWeaponDefinition.b(var4, (byte) 71);
             return;
           }
-          if (ae.field_f == null) {
-            ae.field_f = new pr(128);
+          if (MenuInputState.field_f == null) {
+            MenuInputState.field_f = new pr(128);
             GetBoostersCooldown.field_p = 0;
           }
           var3Lifetime1 = var1.readString(-1);
@@ -131,12 +131,12 @@ final class NebulaFieldFactory implements GameStateFactory {
           if (var6Lifetime1 == null) {
             var6Lifetime1 = FlipTextureOperation.a(var5Lifetime1, 0);
             if (null != var6Lifetime1) {
-              ae.field_f.a(var6Lifetime1, (byte) -31, (long)ConstantColorTextureOperation.normalizeName(false, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+              MenuInputState.field_f.a(var6Lifetime1, (byte) -31, (long)ConstantColorTextureOperation.normalizeName(false, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             }
           }
           if (var6Lifetime1 == null) {
             var6Lifetime1 = new vu();
-            ae.field_f.a(var6Lifetime1, (byte) -112, (long)ConstantColorTextureOperation.normalizeName(false, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
+            MenuInputState.field_f.a(var6Lifetime1, (byte) -112, (long)ConstantColorTextureOperation.normalizeName(false, (CharSequence) ((Object) var4_ref_StringLifetime1)).hashCode());
             fieldTemp$1 = GetBoostersCooldown.field_p;
             GetBoostersCooldown.field_p = GetBoostersCooldown.field_p + 1;
             var6Lifetime1.field_yb = fieldTemp$1;
@@ -328,7 +328,7 @@ final class NebulaFieldFactory implements GameStateFactory {
         RuntimeException decompiledCaughtException = null;
         try {
           var2_int = -59 % ((param0 + 31) / 40);
-          stackIn_1_0 = SetMissionTerrainVotingChancestep.a(true, param1, true, 10);
+          stackIn_1_0 = SetMissionTerrainVotingChancestep.parseInt(true, param1, true, 10);
           return stackIn_1_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

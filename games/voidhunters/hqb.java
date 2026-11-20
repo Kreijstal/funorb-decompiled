@@ -431,7 +431,7 @@ final class hqb {
             if (0 == GetThrusterSmallForce.field_p) {
               this.field_i.addItem(SetMassDriverEnergyUsed.field_p, (byte) -53, 12);
             }
-            this.field_i.addItem(ocb.field_j, (byte) -53, 13);
+            this.field_i.addItem(PasswordValidator.field_j, (byte) -53, 13);
           }
           if (param0.field_a == 2) {
             if (0 == lla.field_h) {

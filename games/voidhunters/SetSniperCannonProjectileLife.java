@@ -5,7 +5,7 @@ final class SetSniperCannonProjectileLife extends ConsoleCommand {
     static String field_o;
     static String field_p;
 
-    final static ShipComponent a(int param0, int[] param1) {
+    final static ShipComponent decodeComponentWords(int param0, int[] param1) {
         ShipComponent var2 = null;
         RuntimeException var2_ref = null;
         ShipComponent stackIn_1_0 = null;

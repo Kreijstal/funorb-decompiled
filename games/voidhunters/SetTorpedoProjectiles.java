@@ -119,7 +119,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
             null != Asteroid.field_w ||
             null != GetPhasedEnergyBeamRandomness.field_p ||
             SetBombletSprayPushMultiplier.field_o != null)) {
-            for (var9 = 0; var9 < ocb.field_l; var9++) {
+            for (var9 = 0; var9 < PasswordValidator.field_l; var9++) {
               var10_int = SetSpinningBladeSpindamageMultiplier.field_o.field_Pb[var9] & 255;
               if (SetGrapplingHookMaxExtension8Force.field_o != null &&
                 SetGrapplingHookMaxExtension8Force.field_o[var9] != null &&
@@ -414,7 +414,7 @@ final class SetTorpedoProjectiles extends ConsoleCommand {
                 var25 = var30_refLifetime1;
                 var25 = null;
                 var26Lifetime1 = 0;
-                for (var27_int = 0; var27_int < ocb.field_l; var27_int++) {
+                for (var27_int = 0; var27_int < PasswordValidator.field_l; var27_int++) {
                   var28 = SetSpinningBladeSpindamageMultiplier.field_o.field_Pb[var27_int] & 255;
                   var29 = 0;
                   if (SetGrapplingHookMaxExtension8Force.field_o != null &&

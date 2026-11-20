@@ -16,7 +16,7 @@ final class SetMissionTerrainVotingChancestep extends ConsoleCommand {
           SetMachineGunEnergyUsed.a(67, 62, arguments[0].intValue(51));
           if (obfuscationGuard > -119) {
             var4 = (CharSequence) null;
-            SetMissionTerrainVotingChancestep.a(false, (CharSequence) null, true, -5);
+            SetMissionTerrainVotingChancestep.parseInt(false, (CharSequence) null, true, -5);
           }
           stackIn_3_0 = new ConsoleValue("void");
           return stackIn_3_0;
@@ -38,7 +38,7 @@ final class SetMissionTerrainVotingChancestep extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static int a(boolean param0, CharSequence param1, boolean param2, int param3) {
+    final static int parseInt(boolean param0, CharSequence param1, boolean param2, int param3) {
         int var8 = 0;
         int stackIn_45_0 = 0;
         RuntimeException stackIn_48_0 = null;

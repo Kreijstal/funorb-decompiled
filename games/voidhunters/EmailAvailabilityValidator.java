@@ -1,47 +1,47 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class bla extends eca {
-    private String field_g;
-    private boolean field_h;
-    private vqa field_f;
+final class EmailAvailabilityValidator extends TextFieldValidator {
+    private String checkedEmail;
+    private boolean emailAvailable;
+    private MatchingFieldValidator confirmationValidator;
 
     final static boolean a(int param0, boolean param1, int param2) {
         if (!param1) {
           return ((0 != (24 & param0) ? 1 : 0) | ((544 & param0) == 544 ? 1 : 0)) != 0;
         }
-        bla.a(126, true, -36);
+        EmailAvailabilityValidator.a(126, true, -36);
         return ((0 != (24 & param0) ? 1 : 0) | ((544 & param0) == 544 ? 1 : 0)) != 0;
     }
 
-    final qrb a(String param0, int param1) {
+    final ValidationState validateValue(String param0, int param1) {
         ge var3 = null;
         RuntimeException var3_ref = null;
-        qrb stackIn_2_0 = null;
-        qrb stackIn_8_0 = null;
-        qrb stackIn_13_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_8_0 = null;
+        ValidationState stackIn_13_0 = null;
         RuntimeException stackIn_16_0 = null;
         StringBuilder stackIn_16_1 = null;
         String stackIn_17_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_f.a(param0, param1) == SetArmageddonLength.field_o) {
-            stackIn_2_0 = SetArmageddonLength.field_o;
+          if (this.confirmationValidator.validateValue(param0, param1) == SetArmageddonLength.invalidInput) {
+            stackIn_2_0 = SetArmageddonLength.invalidInput;
             return stackIn_2_0;
           }
-          if (!param0.equals(this.field_g)) {
+          if (!param0.equals(this.checkedEmail)) {
             var3 = psb.a(param0, param1 ^ 16384);
             if (!var3.a(4)) {
-              stackIn_8_0 = SetFighterRepairTime.field_q;
+              stackIn_8_0 = SetFighterRepairTime.pendingValidation;
               return stackIn_8_0;
             }
-            this.field_g = param0;
-            this.field_h = var3.b((byte) -20);
+            this.checkedEmail = param0;
+            this.emailAvailable = var3.b((byte) -20);
           }
-          if (!this.field_h) {
-            stackIn_13_0 = SetArmageddonLength.field_o;
+          if (!this.emailAvailable) {
+            stackIn_13_0 = SetArmageddonLength.invalidInput;
           } else {
-            stackIn_13_0 = GetShipPersistence.field_o;
+            stackIn_13_0 = GetShipPersistence.validInput;
           }
           return stackIn_13_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -58,7 +58,7 @@ final class bla extends eca {
         }
     }
 
-    final String b(String param0, int param1) {
+    final String getValueValidationMessage(String param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         String stackIn_7_0 = null;
@@ -68,16 +68,16 @@ final class bla extends eca {
         String stackIn_15_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.field_f.a(param0, 16384) == SetArmageddonLength.field_o) {
-            stackIn_3_0 = this.field_f.b(param0, -1);
+          if (this.confirmationValidator.validateValue(param0, 16384) == SetArmageddonLength.invalidInput) {
+            stackIn_3_0 = this.confirmationValidator.getValueValidationMessage(param0, -1);
             return stackIn_3_0;
           }
-          if (this.a(param0, 16384) == SetArmageddonLength.field_o) {
+          if (this.validateValue(param0, 16384) == SetArmageddonLength.invalidInput) {
             stackIn_7_0 = qh.field_N;
             return stackIn_7_0;
           }
           if (param1 != -1) {
-            this.field_g = (String) null;
+            this.checkedEmail = (String) null;
           }
           stackIn_11_0 = ModelFaceAttachment.field_f;
           return stackIn_11_0;
@@ -95,12 +95,12 @@ final class bla extends eca {
         }
     }
 
-    bla(UiTextField param0, UiTextField param1) {
+    EmailAvailabilityValidator(UiTextField param0, UiTextField param1) {
         super(param0);
-        this.field_g = "";
-        this.field_h = false;
+        this.checkedEmail = "";
+        this.emailAvailable = false;
         try {
-          this.field_f = new vqa(param0, param1);
+          this.confirmationValidator = new MatchingFieldValidator(param0, param1);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bla.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ')');
         }

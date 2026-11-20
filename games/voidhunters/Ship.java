@@ -123,7 +123,7 @@ final class Ship extends ShipBody implements DiffableState, CompactGameState {
           var3 = (ShipAI) null;
           this.setAi((ShipAI) null, -101);
         }
-        stackIn_7_0 = (1 == vqa.field_k) || !(this.isFighter(false));
+        stackIn_7_0 = (1 == MatchingFieldValidator.field_k) || !(this.isFighter(false));
         return stackIn_7_0;
     }
 

@@ -24,10 +24,10 @@ abstract class SoftwareSprite2D {
           mr.field_M.clear(120);
           int var1_int = -31 % ((param0 + 31) / 39);
           SetPointDefenceLaserProjectileOndamageParticles.field_o.clear(97);
-          var2 = ae.field_f.c(-43);
+          var2 = MenuInputState.field_f.c(-43);
           while (var2 != null) {
             var2.unlinkSecondary((byte) -35);
-            var2 = ae.field_f.d(-1);
+            var2 = MenuInputState.field_f.d(-1);
           }
           var2Lifetime1 = TeamNodeCondition.field_c.c(-94);
           while (var2Lifetime1 != null) {

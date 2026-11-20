@@ -6,10 +6,10 @@ final class GpuProjectionMode {
 
     final boolean usesViewTransform(int param0) {
         if (param0 == -12178) {
-          return ((this == tib.field_h ? 1 : 0) | (pia.field_x == this ? 1 : 0)) != 0;
+          return ((this == UsernameAvailabilityValidator.field_h ? 1 : 0) | (pia.field_x == this ? 1 : 0)) != 0;
         }
         field_a = 3;
-        return ((this == tib.field_h ? 1 : 0) | (pia.field_x == this ? 1 : 0)) != 0;
+        return ((this == UsernameAvailabilityValidator.field_h ? 1 : 0) | (pia.field_x == this ? 1 : 0)) != 0;
     }
 
     public final String toString() {

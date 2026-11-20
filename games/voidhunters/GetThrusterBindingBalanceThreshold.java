@@ -100,12 +100,12 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
                   var5 = "";
                   var4 = "<col=999999>" + var4 + vq.field_y + "</col>";
                   if (var10 != 0) {
-                    var4 = "<col=999999>" + var4 + ocb.field_g + "</col>";
+                    var4 = "<col=999999>" + var4 + PasswordValidator.field_g + "</col>";
                     var5 = "";
                   }
                 }
               } else {
-                var4 = "<col=999999>" + var4 + ocb.field_g + "</col>";
+                var4 = "<col=999999>" + var4 + PasswordValidator.field_g + "</col>";
                 var5 = "";
               }
               var9 = DebrisFactory.field_c.getStringWidth(var4);

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class qrb {
+final class ValidationState {
     static int field_a;
     private static String field_z;
 

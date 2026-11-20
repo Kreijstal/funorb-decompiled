@@ -269,7 +269,7 @@ class UiComponent extends IntrusiveNode {
         for (var5_int = param0; var5_int <= var4; var5_int++) {
           this.drawLayer(param2, var5_int, param0 + 93, param1);
         }
-        String var5 = rm.d((byte) 106);
+        String var5 = EmailSyntaxValidator.d((byte) 106);
         if (var5 != null) {
           GetDebrisMax.field_s.a((byte) 27, var5, GetBombletSprayReload.field_r, SetTestActionLag.field_o);
         }

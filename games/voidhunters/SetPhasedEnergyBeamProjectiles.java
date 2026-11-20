@@ -269,7 +269,7 @@ final class SetPhasedEnergyBeamProjectiles extends ConsoleCommand {
                 SetSalvoUsesAllEnergy.textureYCoordinates[var3_intLifetime1] = (var3_intLifetime1 << 12) / param0;
               }
             }
-            wf.textureHeightMask = param0 - 1;
+            GameMenuScreen.textureHeightMask = param0 - 1;
             GetTorpedoReload.field_o = param0;
           }
         } catch (RuntimeException runtimeException) {

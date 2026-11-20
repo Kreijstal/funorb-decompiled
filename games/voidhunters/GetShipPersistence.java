@@ -2,13 +2,13 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetShipPersistence extends ConsoleCommand {
-    static qrb field_o;
+    static ValidationState validInput;
 
     final static void a(String param0, int param1, int param2, int param3, int param4, byte param5) {
         try {
           SoftwareDepthBuffer.a(param3, param2, param1, (byte) 74, param4, SetAutoaim.field_p, param0);
           if (param5 != -103) {
-            field_o = (qrb) null;
+            validInput = (ValidationState) null;
           }
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "lea.C(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ',' + param3 + ',' + param4 + ',' + param5 + ')');
@@ -49,7 +49,7 @@ final class GetShipPersistence extends ConsoleCommand {
     }
 
     public static void clearSharedReferences(int param0) {
-        field_o = null;
+        validInput = null;
         if (param0 != 33) {
           String var2 = (String) null;
           GetShipPersistence.a((String) null, -71, 30, -95, 67, (byte) -77);
@@ -57,6 +57,6 @@ final class GetShipPersistence extends ConsoleCommand {
     }
 
     static {
-        field_o = new qrb();
+        validInput = new ValidationState();
     }
 }

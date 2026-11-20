@@ -24,7 +24,7 @@ final class SetFighterVision extends ConsoleCommand {
           }
           SetFightersPerPlayerMaximum.field_p = false;
           if (GetBloomThresholdPercentage.field_p) {
-            var5 = ocb.field_g;
+            var5 = PasswordValidator.field_g;
           } else {
             if (hb.field_c) {
               var5 = bw.field_b;

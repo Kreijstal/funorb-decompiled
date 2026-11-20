@@ -53,7 +53,7 @@ final class BoxBlurTextureOperation extends TextureOperation {
           var17 = var19;
           var8 = var17;
           for (var9 = param0 - this.verticalRadius; var9 <= this.verticalRadius + param0; var9++) {
-            var10_ref_int__ = this.getInputMonochromeRow(0, var9 & wf.textureHeightMask, 255);
+            var10_ref_int__ = this.getInputMonochromeRow(0, var9 & GameMenuScreen.textureHeightMask, 255);
             var18 = new int[TextHotspotRegion.textureWidth];
             var16 = var18;
             var11_ref_int__ = var16;
@@ -177,7 +177,7 @@ final class BoxBlurTextureOperation extends TextureOperation {
           var30 = var38;
           var8 = var30;
           for (var9_int = -this.verticalRadius + param1; param1 + this.verticalRadius >= var9_int; var9_int++) {
-            var46 = this.getInputColorRow((byte) 110, 0, wf.textureHeightMask & var9_int);
+            var46 = this.getInputColorRow((byte) 110, 0, GameMenuScreen.textureHeightMask & var9_int);
             var50 = new int[3][TextHotspotRegion.textureWidth];
             var12 = 0;
             var13 = 0;

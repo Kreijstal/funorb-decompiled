@@ -1907,7 +1907,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
                 throw new RuntimeException("");
               }
             }
-            ocb.a(false, (byte) 33, true);
+            PasswordValidator.a(false, (byte) 33, true);
             this.field_m = true;
             this.field_r = new rlb(this, this.field_a);
             this.initializeDefaultResources((byte) -92);

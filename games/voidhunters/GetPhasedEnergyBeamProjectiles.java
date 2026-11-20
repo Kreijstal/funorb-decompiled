@@ -199,7 +199,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           if (param0 != 107) {
             field_o = -43;
           }
-          eca.field_e = param1[103];
+          TextFieldValidator.field_e = param1[103];
           bv.field_e = param1[163];
           Particle.field_a = param1[221];
           cia.field_a = param1[136];
@@ -229,10 +229,10 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           GetBombletSprayRandomness.field_p = param1[29];
           AwardVictoryToTeamActionFactory.field_b = param1[201];
           GetMaxShipSize.field_o = param1[141];
-          qrb.field_a = param1[33];
+          ValidationState.field_a = param1[33];
           la.field_k = param1[208];
           enb.field_c = param1[171];
-          wf.field_e = param1[181];
+          GameMenuScreen.field_e = param1[181];
           Particle.field_h = param1[232];
           SetShieldsDirectionalRadius.field_o = param1[169];
           SetMissionDebrisDefaultProbability.field_o = param1[195];
@@ -241,7 +241,7 @@ final class GetPhasedEnergyBeamProjectiles extends ConsoleCommand {
           Particle.field_g = param1[218];
           dfa.field_a = param1[123];
           SetMissilesTopSpeed.field_o = param1[25];
-          vqa.field_k = param1[2];
+          MatchingFieldValidator.field_k = param1[2];
           SetThrusterAutobalancing.field_r = param1[15];
           BodyInZoneConditionFactory.field_b = param1[22];
           SetTorpedoEnergyUsed.field_p = param1[59];

@@ -106,7 +106,7 @@ final class MachineGunWeaponDefinition extends WeaponDefinition {
         if (param0 > -52) {
           return -3;
         }
-        return eca.field_e;
+        return TextFieldValidator.field_e;
     }
 
     final boolean hasSustainedPulse(int param0) {

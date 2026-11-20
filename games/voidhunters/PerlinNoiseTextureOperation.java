@@ -105,7 +105,7 @@ final class PerlinNoiseTextureOperation extends TextureOperation {
               var16 = 0;
             }
             var11 = var11 & 4095;
-            var14 = ocb.field_h[var11];
+            var14 = PasswordValidator.field_h[var11];
             var17 = this.permutation[255 & var15] & 255;
             var18 = 255 & this.permutation[255 & var16];
             if (!this.biasUnsigned) {
@@ -137,7 +137,7 @@ final class PerlinNoiseTextureOperation extends TextureOperation {
               var16Lifetime1 = 0;
             }
             var11Lifetime1 = var11Lifetime1 & 4095;
-            var14Lifetime1 = ocb.field_h[var11Lifetime1];
+            var14Lifetime1 = PasswordValidator.field_h[var11Lifetime1];
             var17Lifetime1 = 255 & this.permutation[255 & var15Lifetime1];
             var18Lifetime1 = this.permutation[255 & var16Lifetime1] & 255;
             for (var10Lifetime1 = 0; var10Lifetime1 < TextHotspotRegion.textureWidth; var10Lifetime1++) {
@@ -160,7 +160,7 @@ final class PerlinNoiseTextureOperation extends TextureOperation {
               if (var13Lifetime2 <= var16Lifetime2) {
                 var16Lifetime2 = 0;
               }
-              var14Lifetime2 = ocb.field_h[var11Lifetime2];
+              var14Lifetime2 = PasswordValidator.field_h[var11Lifetime2];
               var17Lifetime2 = this.permutation[var15Lifetime2 & 255] & 255;
               var18Lifetime2 = this.permutation[255 & var16Lifetime2] & 255;
               if (this.biasUnsigned &&
@@ -338,7 +338,7 @@ final class PerlinNoiseTextureOperation extends TextureOperation {
         var11 = param3 - 4096;
         var10 = -4096 + param5;
         var14 = this.permutation[var13 + param1] & 3;
-        var15 = ocb.field_h[param3];
+        var15 = PasswordValidator.field_h[param3];
         if (var14 > 1) {
           if (var14 != 2) {
             stackIn_12_0 = -param5 - param3;

@@ -749,23 +749,23 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime53 = HuffmanCodec.fetchLocalizedResource((byte) -37, "instructions_pages,0");
           if (var2Lifetime53 != null) {
-            mb.field_k[0] = Cp1252Strings.decode((byte) -125, var2Lifetime53);
+            mb.helpPages[0] = Cp1252Strings.decode((byte) -125, var2Lifetime53);
           }
           var2Lifetime54 = HuffmanCodec.fetchLocalizedResource((byte) -117, "instructions_pages,1");
           if (var2Lifetime54 != null) {
-            mb.field_k[1] = Cp1252Strings.decode((byte) -125, var2Lifetime54);
+            mb.helpPages[1] = Cp1252Strings.decode((byte) -125, var2Lifetime54);
           }
           var2Lifetime55 = HuffmanCodec.fetchLocalizedResource((byte) -44, "instructions_pages,2");
           if (var2Lifetime55 != null) {
-            mb.field_k[2] = Cp1252Strings.decode((byte) -125, var2Lifetime55);
+            mb.helpPages[2] = Cp1252Strings.decode((byte) -125, var2Lifetime55);
           }
           var2Lifetime56 = HuffmanCodec.fetchLocalizedResource((byte) -63, "instructions_pages,3");
           if (null != var2Lifetime56) {
-            mb.field_k[3] = Cp1252Strings.decode((byte) -125, var2Lifetime56);
+            mb.helpPages[3] = Cp1252Strings.decode((byte) -125, var2Lifetime56);
           }
           var2Lifetime57 = HuffmanCodec.fetchLocalizedResource((byte) -105, "instructions_pages,4");
           if (null != var2Lifetime57) {
-            mb.field_k[4] = Cp1252Strings.decode((byte) -125, var2Lifetime57);
+            mb.helpPages[4] = Cp1252Strings.decode((byte) -125, var2Lifetime57);
           }
           var2Lifetime58 = HuffmanCodec.fetchLocalizedResource((byte) -106, "keycode_move_forward");
           if (var2Lifetime58 != null) {
@@ -1101,7 +1101,7 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime141 = HuffmanCodec.fetchLocalizedResource((byte) -58, "COMPONENT_CHASSIS_BUTTERFLY_TEXT");
           if (var2Lifetime141 != null) {
-            wgb.field_h = Cp1252Strings.decode((byte) -125, var2Lifetime141);
+            AgeValidator.field_h = Cp1252Strings.decode((byte) -125, var2Lifetime141);
           }
           var2Lifetime142 = HuffmanCodec.fetchLocalizedResource((byte) -64, "COMPONENT_CHASSIS_WASP_TEXT");
           if (var2Lifetime142 != null) {
@@ -1357,15 +1357,15 @@ final class AsteroidField implements DiffableState, ofa, CompactGameState {
           }
           var2Lifetime205 = HuffmanCodec.fetchLocalizedResource((byte) -79, "mission_voting_titles,0");
           if (null != var2Lifetime205) {
-            tga.field_M[0] = Cp1252Strings.decode((byte) -125, var2Lifetime205);
+            ValidatedTextField.field_M[0] = Cp1252Strings.decode((byte) -125, var2Lifetime205);
           }
           var2Lifetime206 = HuffmanCodec.fetchLocalizedResource((byte) -109, "mission_voting_titles,1");
           if (var2Lifetime206 != null) {
-            tga.field_M[1] = Cp1252Strings.decode((byte) -125, var2Lifetime206);
+            ValidatedTextField.field_M[1] = Cp1252Strings.decode((byte) -125, var2Lifetime206);
           }
           var2Lifetime207 = HuffmanCodec.fetchLocalizedResource((byte) -23, "mission_voting_titles,2");
           if (var2Lifetime207 != null) {
-            tga.field_M[2] = Cp1252Strings.decode((byte) -125, var2Lifetime207);
+            ValidatedTextField.field_M[2] = Cp1252Strings.decode((byte) -125, var2Lifetime207);
           }
           var2Lifetime208 = HuffmanCodec.fetchLocalizedResource((byte) -112, "mission_objective_ordering");
           if (var2Lifetime208 != null) {

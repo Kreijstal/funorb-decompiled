@@ -3,7 +3,7 @@
  */
 final class waa extends UiContainer implements NameSuggestionTarget, UiActionListener {
     rcb field_v;
-    private tga field_A;
+    private ValidatedTextField field_A;
     static String field_y;
     static String[] field_w;
     static String field_x;
@@ -57,15 +57,15 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
     public final void onAction(int param0, int param1, int param2, UiFocusableComponent param3, int param4) {
         boolean discarded$1 = false;
         RuntimeException var6 = null;
-        lca var7 = null;
+        ValidatableInput var7 = null;
         RuntimeException stackIn_9_0 = null;
         StringBuilder stackIn_9_1 = null;
         String stackIn_10_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
           if (param0 != 11) {
-            var7 = (lca) null;
-            discarded$1 = this.a((lca) null, (byte) 100);
+            var7 = (ValidatableInput) null;
+            discarded$1 = this.a((ValidatableInput) null, (byte) 100);
           }
           if (param3 == this.field_C) {
             ot.a(-116);
@@ -130,13 +130,13 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
 
     public waa() {
         super(0, 0, 496, 0, (UiRenderer) null);
-        this.field_A = new tga("", (UiListener) null, 12);
+        this.field_A = new ValidatedTextField("", (UiListener) null, 12);
         UiTextStyle var1 = new UiTextStyle(SetTorpedoProjectileLife.field_o, 0, 0, 0, 0, 16777215, -1, 3, 0, SetShipToShipRamDamage.field_o.maxAscent, -1, 2147483647, true);
         UiComponent var2 = new UiComponent(field_y, var1, (UiListener) null);
         this.field_z = new UiFocusableComponent(UiComboBoxList.field_K, (UiListener) null);
         this.field_C = new UiFocusableComponent(SetMissileLauncherProjectiles.field_p, (UiListener) null);
         this.field_A.tooltip = gna.field_m;
-        this.field_A.a(6614, new tib(this.field_A));
+        this.field_A.setValidator(6614, new UsernameAvailabilityValidator(this.field_A));
         this.field_z.enabled = false;
         this.field_z.renderer = (UiRenderer) ((Object) new vva());
         this.field_C.renderer = (UiRenderer) ((Object) new meb());
@@ -171,19 +171,19 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
 
     private final boolean d(int param0) {
         if (param0 == -31927) {
-          return this.a((lca) (this.field_A), (byte) -92) ? true : false;
+          return this.a((ValidatableInput) (this.field_A), (byte) -92) ? true : false;
         }
         field_y = (String) null;
-        if (!this.a((lca) (this.field_A), (byte) -92)) {
+        if (!this.a((ValidatableInput) (this.field_A), (byte) -92)) {
           return false;
         }
         return true;
     }
 
-    private final boolean a(lca param0, byte param1) {
-        eeb var3 = null;
+    private final boolean a(ValidatableInput param0, byte param1) {
+        InputValidator var3 = null;
         RuntimeException var3_ref = null;
-        qrb var4 = null;
+        ValidationState var4 = null;
         UiComponent var5 = null;
         boolean stackIn_9_0 = false;
         RuntimeException stackIn_12_0 = null;
@@ -191,7 +191,7 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
         String stackIn_13_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = param0.a(-782444220);
+          var3 = param0.getValidator(-782444220);
           if (var3 == null) {
             return true;
           }
@@ -199,8 +199,8 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
             var5 = (UiComponent) null;
             this.updatePointer(-39, -53, -80, (UiComponent) null);
           }
-          var4 = var3.a((byte) 35);
-          stackIn_9_0 = (var4 == GetShipPersistence.field_o);
+          var4 = var3.getValidationState((byte) 35);
+          stackIn_9_0 = (var4 == GetShipPersistence.validInput);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -232,7 +232,7 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
         try {
           var10 = new sca(20, param0, 120 + param6, 25, param3, false, 120, 3, SetShipToShipRamDamage.field_o, 16777215, param2);
           this.addChild(-18756, var10);
-          var9 = new gm(((lca) ((Object) param3)).a(-782444220), param4, param5, param0 + var10.height, 25 + param6, param1);
+          var9 = new gm(((ValidatableInput) ((Object) param3)).getValidator(-782444220), param4, param5, param0 + var10.height, 25 + param6, param1);
           var9.listener = (UiListener) (this);
           this.addChild(-18756, var9);
           stackIn_1_0 = var10.height + var9.height;
@@ -335,7 +335,7 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
 
     public final void invalidateNameAvailability(int param0) {
         int discarded$0 = 0;
-        ((tib) (this.field_A.a(-782444220))).d((byte) 127);
+        ((UsernameAvailabilityValidator) (this.field_A.getValidator(-782444220))).invalidateAvailabilityCache((byte) 127);
         if (param0 != 1546) {
           UiComponent var3 = (UiComponent) null;
           discarded$0 = this.a(25, 1, (String) null, (String) null, 83, (UiComponent) null);
@@ -352,7 +352,7 @@ final class waa extends UiContainer implements NameSuggestionTarget, UiActionLis
 
     public final void setSuggestedName(byte param0, String param1) {
         int discarded$1 = 0;
-        tga var3 = null;
+        ValidatedTextField var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
         String var5 = null;

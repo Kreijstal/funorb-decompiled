@@ -17,17 +17,17 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           return;
         }
         try {
-          ocb.field_m = new String[10];
-          ocb.field_m[9] = SetCountermeasureLauncherFireForce.field_q;
-          ocb.field_m[0] = PlayerVoteFactory.field_a;
-          ocb.field_m[4] = SetMessageFadetime.field_p;
-          ocb.field_m[6] = ro.field_b;
-          ocb.field_m[2] = SetMessageFadetime.field_p;
-          ocb.field_m[5] = SetMissilesExplosionPower.field_o;
-          ocb.field_m[1] = SetSalvoaim.field_q;
-          for (var1_int = 0; var1_int < ocb.field_m.length; var1_int++) {
-            if (ocb.field_m[var1_int] != null) {
-              ocb.field_m[var1_int] = ocb.field_m[var1_int].toUpperCase();
+          PasswordValidator.field_m = new String[10];
+          PasswordValidator.field_m[9] = SetCountermeasureLauncherFireForce.field_q;
+          PasswordValidator.field_m[0] = PlayerVoteFactory.field_a;
+          PasswordValidator.field_m[4] = SetMessageFadetime.field_p;
+          PasswordValidator.field_m[6] = ro.field_b;
+          PasswordValidator.field_m[2] = SetMessageFadetime.field_p;
+          PasswordValidator.field_m[5] = SetMissilesExplosionPower.field_o;
+          PasswordValidator.field_m[1] = SetSalvoaim.field_q;
+          for (var1_int = 0; var1_int < PasswordValidator.field_m.length; var1_int++) {
+            if (PasswordValidator.field_m[var1_int] != null) {
+              PasswordValidator.field_m[var1_int] = PasswordValidator.field_m[var1_int].toUpperCase();
             }
           }
           HighscoreValueRequest.field_g = new String[25];
@@ -75,7 +75,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           SetSpinningBladeSpinupSpeed.field_o[0] = TextureRasterShape.field_c;
           SetSpinningBladeSpinupSpeed.field_o[26] = HuffmanCodec.field_c;
           SetSpinningBladeSpinupSpeed.field_o[19] = SetUseExtraBackground.field_r;
-          SetSpinningBladeSpinupSpeed.field_o[10] = wgb.field_h;
+          SetSpinningBladeSpinupSpeed.field_o[10] = AgeValidator.field_h;
           SetSpinningBladeSpinupSpeed.field_o[29] = vla.field_C;
           SetSpinningBladeSpinupSpeed.field_o[38] = SetArmageddonWarning.field_p;
           SetSpinningBladeSpinupSpeed.field_o[54] = GetPedrosRepairMode.field_o;
@@ -167,7 +167,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.field_o[13] = kmb.field_e;
           GetGrapplingHookSpringConstant.field_o[23] = PlayerVoteFactory.field_b;
           GetGrapplingHookSpringConstant.field_o[33] = SetClientSideDragging.field_o;
-          GetGrapplingHookSpringConstant.field_o[38] = vqa.field_f;
+          GetGrapplingHookSpringConstant.field_o[38] = MatchingFieldValidator.field_f;
           GetGrapplingHookSpringConstant.field_o[45] = CommonGameState.field_b;
           GetGrapplingHookSpringConstant.field_o[52] = pl.field_e;
           GetGrapplingHookSpringConstant.field_o[27] = ArchiveTextureProvider.field_g;
@@ -196,7 +196,7 @@ final class AwardVictoryToTeamActionFactory implements GameStateFactory {
           GetGrapplingHookSpringConstant.field_o[57] = ImageProducerRasterBuffer.field_i;
           GetGrapplingHookSpringConstant.field_o[26] = SetShipPersistence.field_p;
           GetGrapplingHookSpringConstant.field_o[49] = fj.field_c;
-          GetGrapplingHookSpringConstant.field_o[53] = eca.field_d;
+          GetGrapplingHookSpringConstant.field_o[53] = TextFieldValidator.field_d;
           GetGrapplingHookSpringConstant.field_o[32] = GetMissionDebrisVotingChancestep.field_o;
           GetGrapplingHookSpringConstant.field_o[42] = SetShipTeamActionFactory.field_a;
           GetGrapplingHookSpringConstant.field_o[51] = SniperCannonWeaponDefinition.field_c;

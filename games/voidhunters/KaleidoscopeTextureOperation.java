@@ -136,7 +136,7 @@ final class KaleidoscopeTextureOperation extends TextureOperation {
             OpenGlGpuTexture3D.field_n = TextHotspotRegion.textureWidth - param1;
           }
         }
-        GetToggledScoreboard.field_q = GetToggledScoreboard.field_q & wf.textureHeightMask;
+        GetToggledScoreboard.field_q = GetToggledScoreboard.field_q & GameMenuScreen.textureHeightMask;
         OpenGlGpuTexture3D.field_n = OpenGlGpuTexture3D.field_n & SetMassDriverEnergyUsed.field_q;
     }
 

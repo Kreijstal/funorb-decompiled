@@ -46,7 +46,7 @@ final class SetInnateThrusters extends ConsoleCommand {
     }
 
     final static void a(int param0, int[] param1) {
-        SetSniperCannonProjectileLife.a(param0 + 1, param1);
+        SetSniperCannonProjectileLife.decodeComponentWords(param0 + 1, param1);
         if (param0 != 0) {
           int[] var3 = (int[]) null;
           SetInnateThrusters.a(-95, (int[]) null);

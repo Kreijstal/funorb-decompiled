@@ -451,7 +451,7 @@ final class ResourceArchive {
             }
           }
           var6Lifetime3 = 0;
-          for (var7 = 0; var7 < ocb.field_l; var7++) {
+          for (var7 = 0; var7 < PasswordValidator.field_l; var7++) {
             var31 = SetReloadBarHeight.field_q[4 + var7];
             var8_array = var31;
             stackIn_168_0 = (!param2) ? 0 : -1;
@@ -542,9 +542,9 @@ final class ResourceArchive {
                 !ArchiveTextureProvider.field_h)) {
                 GetMissionVotes.field_p = false;
                 TickClock.field_b = false;
-                if (tib.field_i == null) {
-                  tib.field_i = new byte[ocb.field_l];
-                  AudioPump.field_a = new boolean[ocb.field_l];
+                if (UsernameAvailabilityValidator.field_i == null) {
+                  UsernameAvailabilityValidator.field_i = new byte[PasswordValidator.field_l];
+                  AudioPump.field_a = new boolean[PasswordValidator.field_l];
                 }
                 for (var17_int = 0; var7 > var17_int; var17_int++) {
                   AudioPump.field_a[var17_int] = false;

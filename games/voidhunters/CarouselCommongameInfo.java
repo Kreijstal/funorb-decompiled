@@ -773,12 +773,12 @@ final class CarouselCommongameInfo implements DiffableState {
         var5 = var3;
         while ((1 + this.currentIndex) % this.history.length != var5) {
           var6 = (var5 + 1) % this.history.length;
-          if (tga.field_N) {
+          if (ValidatedTextField.field_N) {
             ConsoleValue.beginReferenceTracking((byte) 68);
           }
           this.history[var5].copyTo((byte) 77, this.history[var6]);
           this.swapSlotsForDebug(var5, var6, -121);
-          if (tga.field_N) {
+          if (ValidatedTextField.field_N) {
             mba.a(-112);
           }
           var7 = 0;

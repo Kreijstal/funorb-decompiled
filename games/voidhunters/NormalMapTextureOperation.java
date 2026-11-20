@@ -78,9 +78,9 @@ final class NormalMapTextureOperation extends TextureOperation {
           return (int[][]) null;
         }
         if (this.field_d.field_g) {
-          var41 = this.getInputMonochromeRow(0, wf.textureHeightMask & param1 - 1, 255);
+          var41 = this.getInputMonochromeRow(0, GameMenuScreen.textureHeightMask & param1 - 1, 255);
           var5 = this.getInputMonochromeRow(0, param1, 255);
-          var40 = this.getInputMonochromeRow(0, 1 + param1 & wf.textureHeightMask, 255);
+          var40 = this.getInputMonochromeRow(0, 1 + param1 & GameMenuScreen.textureHeightMask, 255);
           var42 = var29[0];
           var43 = var29[1];
           var44 = var29[2];

@@ -2,11 +2,11 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetReloadBarWidth extends ConsoleCommand {
-    static int[] field_q;
-    static int[] field_s;
-    static int[] field_o;
-    static int[] field_r;
-    static int[][] field_p;
+    static int[] menuRightEdges;
+    static int[] menuTopOffsets;
+    static int[] menuRowSpacing;
+    static int[] menuLeftEdges;
+    static int[][] menuActions;
     static String field_t;
 
     SetReloadBarWidth(String param0, Class[] param1, String param2) {
@@ -27,14 +27,14 @@ final class SetReloadBarWidth extends ConsoleCommand {
     }
 
     public static void clearSharedReferences(byte param0) {
-        field_r = null;
-        field_q = null;
-        field_s = null;
-        field_o = null;
-        field_p = (int[][]) null;
+        menuLeftEdges = null;
+        menuRightEdges = null;
+        menuTopOffsets = null;
+        menuRowSpacing = null;
+        menuActions = (int[][]) null;
         field_t = null;
         if (param0 != -31) {
-          field_s = (int[]) null;
+          menuTopOffsets = (int[]) null;
         }
     }
 
@@ -76,23 +76,23 @@ final class SetReloadBarWidth extends ConsoleCommand {
     }
 
     static {
-        field_s = new int[10];
-        field_r = new int[10];
-        field_o = new int[10];
-        field_q = new int[10];
-        field_p = new int[10][];
+        menuTopOffsets = new int[10];
+        menuLeftEdges = new int[10];
+        menuRowSpacing = new int[10];
+        menuRightEdges = new int[10];
+        menuActions = new int[10][];
         int[] var0 = new int[]{0, 1, 21, 4, 3, 12};
-        GetOndamageParticleFadestart.a(320, var0, (byte) -80, 230, 530, 50, 0);
+        GetOndamageParticleFadestart.configureMenu(320, var0, (byte) -80, 230, 530, 50, 0);
         int var1 = 70;
-        GetOndamageParticleFadestart.a(200, new int[]{2, 21, 3, 23, 7}, (byte) -71, -var1 + 200, 440, 50, 1);
-        GetOndamageParticleFadestart.a(200, new int[]{2, 21, 3, 23, 11}, (byte) -94, 200 - var1, 440, 50, 2);
-        GetOndamageParticleFadestart.a(200, new int[]{2, 21, 3, 11}, (byte) -47, -var1 + 200, 440, 50, 3);
-        GetOndamageParticleFadestart.a(200, new int[]{2, 21, 3, 11}, (byte) -14, -var1 + 200, 440, 50, 4);
-        GetOndamageParticleFadestart.a(60, new int[]{17, 6, 18}, (byte) -84, 400, 440, 50, 5);
-        GetOndamageParticleFadestart.a(200, new int[]{5}, (byte) -58, 400, 440, 50, 6);
-        GetOndamageParticleFadestart.a(200, new int[]{}, (byte) -13, 200, 440, 50, 7);
-        GetOndamageParticleFadestart.a(200, new int[]{6}, (byte) -26, 420, 440, 50, 8);
-        GetOndamageParticleFadestart.a(200, new int[]{13, 14, 24, 19, 22, 6}, (byte) -94, -var1 + 200, 440, 50, 9);
+        GetOndamageParticleFadestart.configureMenu(200, new int[]{2, 21, 3, 23, 7}, (byte) -71, -var1 + 200, 440, 50, 1);
+        GetOndamageParticleFadestart.configureMenu(200, new int[]{2, 21, 3, 23, 11}, (byte) -94, 200 - var1, 440, 50, 2);
+        GetOndamageParticleFadestart.configureMenu(200, new int[]{2, 21, 3, 11}, (byte) -47, -var1 + 200, 440, 50, 3);
+        GetOndamageParticleFadestart.configureMenu(200, new int[]{2, 21, 3, 11}, (byte) -14, -var1 + 200, 440, 50, 4);
+        GetOndamageParticleFadestart.configureMenu(60, new int[]{17, 6, 18}, (byte) -84, 400, 440, 50, 5);
+        GetOndamageParticleFadestart.configureMenu(200, new int[]{5}, (byte) -58, 400, 440, 50, 6);
+        GetOndamageParticleFadestart.configureMenu(200, new int[]{}, (byte) -13, 200, 440, 50, 7);
+        GetOndamageParticleFadestart.configureMenu(200, new int[]{6}, (byte) -26, 420, 440, 50, 8);
+        GetOndamageParticleFadestart.configureMenu(200, new int[]{13, 14, 24, 19, 22, 6}, (byte) -94, -var1 + 200, 440, 50, 9);
         field_t = "Choose the mission";
     }
 }

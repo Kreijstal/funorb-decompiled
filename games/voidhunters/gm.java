@@ -5,7 +5,7 @@ final class gm extends HotspotTextWidget {
     private Sprite field_N;
     static IntrusiveDeque field_H;
     private int field_K;
-    private eeb field_L;
+    private InputValidator field_L;
     static byte[] field_M;
     static String field_I;
     private String field_J;
@@ -30,7 +30,7 @@ final class gm extends HotspotTextWidget {
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
         String var5;
-        qrb var6;
+        ValidationState var6;
         int var13;
         Object var17;
         Object var21;
@@ -72,19 +72,19 @@ final class gm extends HotspotTextWidget {
         int var10Lifetime3;
         int var11Lifetime4;
         int var12Lifetime4;
-        qrb var6Lifetime1;
-        qrb var6Lifetime2;
-        qrb var6Lifetime3;
-        qrb var6Lifetime1Lifetime1;
+        ValidationState var6Lifetime1;
+        ValidationState var6Lifetime2;
+        ValidationState var6Lifetime3;
+        ValidationState var6Lifetime1Lifetime1;
         var17 = null;
         var21 = null;
         var25 = null;
         var30 = null;
         var13 = VoidHunters.field_G;
-        var6 = this.field_L.a((byte) 35);
-        if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p != var6 &&
-          var6 != SetFighterRepairTime.field_q) {
-          var5 = this.field_L.c((byte) -79);
+        var6 = this.field_L.getValidationState((byte) 35);
+        if (SetShieldsDirectionalArcParticleSpeedDownshift.debouncingInput != var6 &&
+          var6 != SetFighterRepairTime.pendingValidation) {
+          var5 = this.field_L.getValidationMessage((byte) -79);
           if (var5 == null) {
             var5 = this.field_J;
           }
@@ -93,20 +93,20 @@ final class gm extends HotspotTextWidget {
         }
         if (var5.equals(this.text)) {
           if (param2 < 47) {
-            this.field_L = (eeb) null;
+            this.field_L = (InputValidator) null;
             super.drawLayer(param0, param1, 111, param3);
-            var6Lifetime1 = this.field_L.a((byte) 35);
+            var6Lifetime1 = this.field_L.getValidationState((byte) 35);
             var34 = (UiTextRenderer) ((Object) this.renderer);
             var9 = param0 + this.x;
             var10 = var34.getTextOriginY(-3, param3, (UiComponent) (this)) + (var34.getTextLayout((UiComponent) (this), 3).getHeight(29565) >> 1);
-            if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p != var6Lifetime1 &&
-              SetFighterRepairTime.field_q != var6Lifetime1) {
-              if (SetArmageddonLength.field_o == var6Lifetime1) {
+            if (SetShieldsDirectionalArcParticleSpeedDownshift.debouncingInput != var6Lifetime1 &&
+              SetFighterRepairTime.pendingValidation != var6Lifetime1) {
+              if (SetArmageddonLength.invalidInput == var6Lifetime1) {
                 var18 = ByteStorage.field_a[2];
                 var18.drawAdditive(var9, var10 - (var18.height >> 1), 256);
                 return;
               }
-              if (var6Lifetime1 != GetShipPersistence.field_o) {
+              if (var6Lifetime1 != GetShipPersistence.validInput) {
                 return;
               }
               var19 = ByteStorage.field_a[1];
@@ -131,18 +131,18 @@ final class gm extends HotspotTextWidget {
             return;
           }
           super.drawLayer(param0, param1, 111, param3);
-          var6Lifetime1Lifetime1 = this.field_L.a((byte) 35);
+          var6Lifetime1Lifetime1 = this.field_L.getValidationState((byte) 35);
           var35 = (UiTextRenderer) ((Object) this.renderer);
           var9Lifetime3 = param0 + this.x;
           var10Lifetime3 = var35.getTextOriginY(-3, param3, (UiComponent) (this)) + (var35.getTextLayout((UiComponent) (this), 3).getHeight(29565) >> 1);
-          if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p != var6Lifetime1Lifetime1 &&
-            SetFighterRepairTime.field_q != var6Lifetime1Lifetime1) {
-            if (SetArmageddonLength.field_o == var6Lifetime1Lifetime1) {
+          if (SetShieldsDirectionalArcParticleSpeedDownshift.debouncingInput != var6Lifetime1Lifetime1 &&
+            SetFighterRepairTime.pendingValidation != var6Lifetime1Lifetime1) {
+            if (SetArmageddonLength.invalidInput == var6Lifetime1Lifetime1) {
               var22 = ByteStorage.field_a[2];
               var22.drawAdditive(var9Lifetime3, var10Lifetime3 - (var22.height >> 1), 256);
               return;
             }
-            if (var6Lifetime1Lifetime1 != GetShipPersistence.field_o) {
+            if (var6Lifetime1Lifetime1 != GetShipPersistence.validInput) {
               return;
             }
             var23 = ByteStorage.field_a[1];
@@ -178,18 +178,18 @@ final class gm extends HotspotTextWidget {
         this.rebuildHotspots((byte) 115);
         if (param2 >= 47) {
           super.drawLayer(param0, param1, 111, param3);
-          var6Lifetime2 = this.field_L.a((byte) 35);
+          var6Lifetime2 = this.field_L.getValidationState((byte) 35);
           var37 = (UiTextRenderer) ((Object) this.renderer);
           var9Lifetime1 = param0 + this.x;
           var10Lifetime1 = var37.getTextOriginY(-3, param3, (UiComponent) (this)) + (var37.getTextLayout((UiComponent) (this), 3).getHeight(29565) >> 1);
-          if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p != var6Lifetime2 &&
-            SetFighterRepairTime.field_q != var6Lifetime2) {
-            if (SetArmageddonLength.field_o == var6Lifetime2) {
+          if (SetShieldsDirectionalArcParticleSpeedDownshift.debouncingInput != var6Lifetime2 &&
+            SetFighterRepairTime.pendingValidation != var6Lifetime2) {
+            if (SetArmageddonLength.invalidInput == var6Lifetime2) {
               var31 = ByteStorage.field_a[2];
               var31.drawAdditive(var9Lifetime1, var10Lifetime1 - (var31.height >> 1), 256);
               return;
             }
-            if (var6Lifetime2 != GetShipPersistence.field_o) {
+            if (var6Lifetime2 != GetShipPersistence.validInput) {
               return;
             }
             var32 = ByteStorage.field_a[1];
@@ -221,13 +221,13 @@ final class gm extends HotspotTextWidget {
           this.field_N.drawAdditive(var9Lifetime1 - (var33.paddedWidth >> 1), -var33.paddedHeight + var10Lifetime1, 256);
           return;
         }
-        this.field_L = (eeb) null;
+        this.field_L = (InputValidator) null;
         super.drawLayer(param0, param1, 111, param3);
-        var6Lifetime3 = this.field_L.a((byte) 35);
+        var6Lifetime3 = this.field_L.getValidationState((byte) 35);
         var36 = (UiTextRenderer) ((Object) this.renderer);
         var9Lifetime2 = param0 + this.x;
         var10Lifetime2 = var36.getTextOriginY(-3, param3, (UiComponent) (this)) + (var36.getTextLayout((UiComponent) (this), 3).getHeight(29565) >> 1);
-        if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p == var6Lifetime3) {
+        if (SetShieldsDirectionalArcParticleSpeedDownshift.debouncingInput == var6Lifetime3) {
           var26 = ByteStorage.field_a[0];
           var11Lifetime2 = var26.paddedWidth << 1;
           var12Lifetime2 = var26.paddedHeight << 1;
@@ -245,13 +245,13 @@ final class gm extends HotspotTextWidget {
           this.field_N.drawAdditive(var9Lifetime2 - (var26.paddedWidth >> 1), -var26.paddedHeight + var10Lifetime2, 256);
           return;
         }
-        if (SetFighterRepairTime.field_q != var6Lifetime3) {
-          if (SetArmageddonLength.field_o == var6Lifetime3) {
+        if (SetFighterRepairTime.pendingValidation != var6Lifetime3) {
+          if (SetArmageddonLength.invalidInput == var6Lifetime3) {
             var27 = ByteStorage.field_a[2];
             var27.drawAdditive(var9Lifetime2, var10Lifetime2 - (var27.height >> 1), 256);
             return;
           }
-          if (var6Lifetime3 != GetShipPersistence.field_o) {
+          if (var6Lifetime3 != GetShipPersistence.validInput) {
             return;
           }
           var28 = ByteStorage.field_a[1];
@@ -359,7 +359,7 @@ final class gm extends HotspotTextWidget {
         }
     }
 
-    gm(eeb param0, String param1, int param2, int param3, int param4, int param5) {
+    gm(InputValidator param0, String param1, int param2, int param3, int param4, int param5) {
         super(param1, cfa.b((byte) -111));
         try {
           this.field_J = param1;

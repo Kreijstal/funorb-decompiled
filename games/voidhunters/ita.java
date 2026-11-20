@@ -182,9 +182,9 @@ final class ita extends vq {
     private ita(UiRenderer param0, boolean param1) {
         super(0, 0, 0, 0, (UiRenderer) null);
         try {
-          this.field_E = (UiTextField) ((Object) new tga("", (UiListener) null, 2));
-          this.field_B = (UiTextField) ((Object) new tga("", (UiListener) null, 2));
-          this.field_C = (UiTextField) ((Object) new tga("", (UiListener) null, 4));
+          this.field_E = (UiTextField) ((Object) new ValidatedTextField("", (UiListener) null, 2));
+          this.field_B = (UiTextField) ((Object) new ValidatedTextField("", (UiListener) null, 2));
+          this.field_C = (UiTextField) ((Object) new ValidatedTextField("", (UiListener) null, 4));
           this.field_C.renderer = param0;
           this.field_B.renderer = param0;
           this.field_E.renderer = param0;

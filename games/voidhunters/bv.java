@@ -553,7 +553,7 @@ final class bv {
               var13Lifetime1 = new int[]{9, 1, 38, 2, 30, -1, -1, 3, 13, 12, 15, 14, 15, 23, 13, 25, 39, 3, 30, -1, -1};
             }
             if (var13Lifetime1 != null) {
-              var14 = ae.a((int[]) (var13Lifetime1), (byte) 56);
+              var14 = MenuInputState.createShipFromComponentWords((int[]) (var13Lifetime1), (byte) 56);
               var14.setTeam(17704, 1);
               var14.setAi(new ShipAI(), 4);
               var15 = param1.world.findSpawnLocation(0, param1.world.getHeight(1) / 2, 0, 0, var14.getTeam((byte) 108), param1.world.getWidth((byte) -122) / 2);

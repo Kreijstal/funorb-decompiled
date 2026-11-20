@@ -3,7 +3,7 @@
  */
 final class SetFps extends ConsoleCommand {
     static int field_p;
-    static int field_o;
+    static int helpPageIndex;
 
     SetFps(String param0, Class[] param1, String param2) {
         super(param0, param1, param2);
@@ -41,6 +41,6 @@ final class SetFps extends ConsoleCommand {
 
     static {
         field_p = 256;
-        field_o = 0;
+        helpPageIndex = 0;
     }
 }

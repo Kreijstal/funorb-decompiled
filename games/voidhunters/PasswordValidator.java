@@ -1,17 +1,17 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class ocb extends eca {
+final class PasswordValidator extends TextFieldValidator {
     static String field_j;
     static String[] field_m;
-    private UiTextField field_f;
+    private UiTextField usernameField;
     static int[] field_h;
-    private UiTextField field_k;
+    private UiTextField emailField;
     static String field_i;
     static String field_g;
     static int field_l;
 
-    final String b(String param0, int param1) {
+    final String getValueValidationMessage(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -31,7 +31,7 @@ final class ocb extends eca {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_f.text.toLowerCase();
+          var3 = this.usernameField.text.toLowerCase();
           var4 = param0.toLowerCase();
           if (var4.length() == 0) {
             stackIn_2_0 = null;
@@ -50,7 +50,7 @@ final class ocb extends eca {
             stackIn_11_0 = ConsoleCharacterStream.field_a;
             return stackIn_11_0;
           }
-          if (this.a(param0, false)) {
+          if (this.containsEmailPart(param0, false)) {
             stackIn_15_0 = NodeHashTable.field_f;
             return stackIn_15_0;
           }
@@ -132,14 +132,14 @@ final class ocb extends eca {
           SetBuildViewAutozoom.a(param1 - 10726);
         }
         if (param1 != 33) {
-          ocb.f(12);
+          PasswordValidator.f(12);
         }
     }
 
     final static void f(int param0) {
         ShipSpawnedConditionFactory.a(100);
         if (param0 != -10150) {
-          ocb.a(-128, 101, 87, (BitmapFont) null, 109, 83, -49, -78, 19, -41, 88, -111, 125);
+          PasswordValidator.a(-128, 101, 87, (BitmapFont) null, 109, 83, -49, -78, 19, -41, 88, -111, 125);
         }
         GpuMaterialEffect.buildToolkitFonts(-2283);
         SetReadyRoomMutatorTime.e(-17);
@@ -166,49 +166,49 @@ final class ocb extends eca {
         }
     }
 
-    ocb(UiTextField param0, UiTextField param1, UiTextField param2) {
+    PasswordValidator(UiTextField param0, UiTextField param1, UiTextField param2) {
         super(param0);
         try {
-          this.field_k = param2;
-          this.field_f = param1;
+          this.emailField = param2;
+          this.usernameField = param1;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "ocb.<init>(" + (param0 != null ? "{...}" : "null") + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');
         }
     }
 
-    final qrb a(String param0, int param1) {
+    final ValidationState validateValue(String param0, int param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
-        qrb stackIn_2_0 = null;
-        qrb stackIn_5_0 = null;
-        qrb stackIn_9_0 = null;
-        qrb stackIn_12_0 = null;
-        qrb stackIn_14_0 = null;
+        ValidationState stackIn_2_0 = null;
+        ValidationState stackIn_5_0 = null;
+        ValidationState stackIn_9_0 = null;
+        ValidationState stackIn_12_0 = null;
+        ValidationState stackIn_14_0 = null;
         RuntimeException stackIn_17_0 = null;
         StringBuilder stackIn_17_1 = null;
         String stackIn_18_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_f.text.toLowerCase();
+          var3 = this.usernameField.text.toLowerCase();
           if (param1 != 16384) {
-            stackIn_2_0 = (qrb) null;
+            stackIn_2_0 = (ValidationState) null;
             return stackIn_2_0;
           }
           var4 = param0.toLowerCase();
           if (var4.length() == 0) {
-            stackIn_5_0 = SetArmageddonLength.field_o;
+            stackIn_5_0 = SetArmageddonLength.invalidInput;
             return stackIn_5_0;
           }
           if (!SetArmageddonWarning.a(var3, var4, -101)) {
-            stackIn_9_0 = SetArmageddonLength.field_o;
+            stackIn_9_0 = SetArmageddonLength.invalidInput;
             return stackIn_9_0;
           }
-          if (!this.a(param0, false)) {
-            stackIn_14_0 = GetShipPersistence.field_o;
+          if (!this.containsEmailPart(param0, false)) {
+            stackIn_14_0 = GetShipPersistence.validInput;
             return stackIn_14_0;
           }
-          stackIn_12_0 = SetArmageddonLength.field_o;
+          stackIn_12_0 = SetArmageddonLength.invalidInput;
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -224,7 +224,7 @@ final class ocb extends eca {
         }
     }
 
-    private final boolean a(String param0, boolean param1) {
+    private final boolean containsEmailPart(String param0, boolean param1) {
         String var3 = null;
         RuntimeException var3_ref = null;
         String var4 = null;
@@ -237,7 +237,7 @@ final class ocb extends eca {
         String stackIn_22_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          var3 = this.field_k.text.toLowerCase();
+          var3 = this.emailField.text.toLowerCase();
           var4 = param0.toLowerCase();
           if (param1) {
             return true;

@@ -34,7 +34,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[131] = OpenGlVertexNormal.field_i;
         var2[211] = rjb.field_u;
         var2[220] = Particle.field_n;
-        var2[33] = qrb.field_a;
+        var2[33] = ValidationState.field_a;
         var2[189] = VariableConditionFactory.field_a;
         var2[40] = ComponentContact.field_d;
         var2[25] = SetMissilesTopSpeed.field_o;
@@ -90,7 +90,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[122] = nnb.field_e;
         var2[1] = veb.field_b;
         var2[18] = WeaponBehaviour.field_d;
-        var2[181] = wf.field_e;
+        var2[181] = GameMenuScreen.field_e;
         var2[134] = SetLaserRandomness.field_o;
         var2[11] = QuickChatPhraseLoader.field_d;
         var2[12] = GetPedrosRepairModeSwitchtime.field_o;
@@ -98,7 +98,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[150] = GetAngularForceDownshift.field_q;
         var2[53] = SetTorpedoAimspeed.field_o;
         var2[13] = GpuEnvironmentMapSource.field_d;
-        var2[103] = eca.field_e;
+        var2[103] = TextFieldValidator.field_e;
         var2[218] = Particle.field_g;
         var2[61] = AsteroidFactory.field_a;
         var2[227] = SetSniperCannonFireForce.field_q;
@@ -193,7 +193,7 @@ final class IntegerRecordWriteRequest extends IntrusiveNode {
         var2[28] = SetShipTeamAction.field_e;
         var2[152] = ehb.field_e;
         var2[57] = AsteroidFieldFactory.field_a;
-        var2[2] = vqa.field_k;
+        var2[2] = MatchingFieldValidator.field_k;
         var2[130] = sib.field_i;
         var2[7] = SetMachineGunAimspeed.field_o;
         var2[133] = SetVariableActionFactory.field_b;

@@ -193,8 +193,8 @@ final class vla extends UiContainer implements UiTextFieldListener, UiActionList
             this.field_w)) {
             throw new IllegalStateException();
           }
-          this.field_y = (UiTextField) ((Object) new tga(param0, (UiListener) (this), 100));
-          this.field_G = (UiTextField) ((Object) new tga("", (UiListener) (this), 20));
+          this.field_y = (UiTextField) ((Object) new ValidatedTextField(param0, (UiListener) (this), 100));
+          this.field_G = (UiTextField) ((Object) new ValidatedTextField("", (UiListener) (this), 20));
           if (this.field_B) {
             this.field_x = new UiFocusableComponent(SetSpecialOrderBoxHeight.field_p, (UiListener) null);
             this.field_A = new UiFocusableComponent(GetFighterBayAimspeed.field_q, (UiListener) null);

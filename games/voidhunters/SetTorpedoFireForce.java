@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetTorpedoFireForce extends ConsoleCommand {
-    static qrb field_p;
+    static ValidationState emptyInput;
     static int field_o;
 
     SetTorpedoFireForce(String param0, Class[] param1, String param2) {
@@ -12,10 +12,10 @@ final class SetTorpedoFireForce extends ConsoleCommand {
     public static void clearSharedReferences(boolean param0) {
         if (param0) {
           SetTorpedoFireForce.clearSharedReferences(true);
-          field_p = null;
+          emptyInput = null;
           return;
         }
-        field_p = null;
+        emptyInput = null;
     }
 
     final ConsoleValue execute(ConsoleValue[] arguments, int obfuscationGuard) {
@@ -47,7 +47,7 @@ final class SetTorpedoFireForce extends ConsoleCommand {
     }
 
     static {
-        field_p = new qrb();
+        emptyInput = new ValidationState();
         field_o = 0;
     }
 }

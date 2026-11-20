@@ -50,21 +50,21 @@ final class GetMomentOfInertiaPerpointCalcDownshift extends ConsoleCommand {
           var4_long = jaggl.OpenGL.glCreateShaderObjectARB(param1);
           jaggl.OpenGL.glShaderSourceRawARB(var4_long, param0);
           jaggl.OpenGL.glCompileShaderARB(var4_long);
-          jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, rm.field_f, 0);
+          jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35713, EmailSyntaxValidator.field_f, 0);
           if (param2 != -15) {
             field_o = 36;
           }
-          if (rm.field_f[0] == 0) {
-            if (rm.field_f[0] == 0) {
+          if (EmailSyntaxValidator.field_f[0] == 0) {
+            if (EmailSyntaxValidator.field_f[0] == 0) {
               System.out.println("Shader compile failed:");
             }
-            jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, rm.field_f, 1);
-            if (rm.field_f[1] > 1) {
-              var10 = new byte[rm.field_f[1]];
-              jaggl.OpenGL.glGetInfoLogARB(var4_long, rm.field_f[1], rm.field_f, 0, var10, 0);
+            jaggl.OpenGL.glGetObjectParameterivARB(var4_long, 35716, EmailSyntaxValidator.field_f, 1);
+            if (EmailSyntaxValidator.field_f[1] > 1) {
+              var10 = new byte[EmailSyntaxValidator.field_f[1]];
+              jaggl.OpenGL.glGetInfoLogARB(var4_long, EmailSyntaxValidator.field_f[1], EmailSyntaxValidator.field_f, 0, var10, 0);
               System.out.println(new String(var10));
             }
-            if (0 == rm.field_f[0]) {
+            if (0 == EmailSyntaxValidator.field_f[0]) {
               jaggl.OpenGL.glDeleteObjectARB(var4_long);
               stackIn_16_0 = null;
               return (OpenGlShader) (stackIn_16_0);

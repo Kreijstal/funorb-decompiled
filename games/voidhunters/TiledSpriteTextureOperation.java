@@ -245,7 +245,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
               }
               stackIn_12_0.field_Lb = new Widget(stackIn_12_3, stackIn_13_4);
               var12.addChild(-561, var12.field_Lb);
-              var12.field_Zb = new Widget[ocb.field_l];
+              var12.field_Zb = new Widget[PasswordValidator.field_l];
               var12.field_Wb = new Widget(0L, (Widget) null);
               if ((1 << TextLayout.field_b & var14) != 0) {
                 var12.field_Lb.addChild(-561, var12.field_Wb);
@@ -269,7 +269,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
               var43.field_B = 1;
               var44.field_B = 1;
               var45.field_B = 1;
-              for (var18_int = 0; ocb.field_l > var18_int; var18_int++) {
+              for (var18_int = 0; PasswordValidator.field_l > var18_int; var18_int++) {
                 var12.field_Zb[var18_int] = new Widget(0L, (Widget) null);
                 if (0 != (1 << var18_int + TextureFormat.field_b & var14)) {
                   var12.field_Lb.addChild(-561, var12.field_Zb[var18_int]);
@@ -335,7 +335,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
             var12.field_Lb.height = 0;
             var21 = var12.field_Lb;
             var21.width = 0;
-            for (var22_int = 0; ocb.field_l > var22_int; var22_int++) {
+            for (var22_int = 0; PasswordValidator.field_l > var22_int; var22_int++) {
               var12.field_Zb[var22_int].field_tb = null;
               var23 = var12.field_Zb[var22_int];
               var12.field_Zb[var22_int].height = 0;
@@ -484,7 +484,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
                 var34_int = var34_int + (var53_ref.paddedWidth + MissionListFactory.field_a);
               }
               if (null != SetPointDefenceLaserAimarc.field_p) {
-                for (var36Lifetime1 = 0; var36Lifetime1 < ocb.field_l; var36Lifetime1++) {
+                for (var36Lifetime1 = 0; var36Lifetime1 < PasswordValidator.field_l; var36Lifetime1++) {
                   if (SetPointDefenceLaserAimarc.field_p[var36Lifetime1] != null &&
                     (var14Lifetime1 & 1 << var36Lifetime1 + TextureFormat.field_b) != 0) {
                     var42 = SetPointDefenceLaserAimarc.field_p[var36Lifetime1][var12.field_Pb[var36Lifetime1] & 255];
@@ -501,7 +501,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
                 var12.field_Eb.x = var12.field_Eb.x + var36Lifetime2;
                 var12.field_Ab.x = var12.field_Ab.x + var36Lifetime2;
                 var12.field_Rb.x = var12.field_Rb.x + var36Lifetime2;
-                for (var37_int = 0; ocb.field_l > var37_int; var37_int++) {
+                for (var37_int = 0; PasswordValidator.field_l > var37_int; var37_int++) {
                   dupTemp$0 = var12.field_Zb[var37_int];
                   dupTemp$0.x = dupTemp$0.x + var36Lifetime2;
                 }
@@ -566,7 +566,7 @@ final class TiledSpriteTextureOperation extends SpriteTextureOperation {
             if (var13 != 0) {
               MapClearanceCircle.field_f.content.positionBelow((Widget) (var11), 2, var12, -25);
             }
-            for (var34_intLifetime2 = 0; var34_intLifetime2 < ocb.field_l; var34_intLifetime2++) {
+            for (var34_intLifetime2 = 0; var34_intLifetime2 < PasswordValidator.field_l; var34_intLifetime2++) {
               if (var12.field_Zb[var34_intLifetime2].field_O) {
                 if (SetShipAimLines.field_o != null) {
                   if (null == SetShipAimLines.field_o[var34_intLifetime2]) {

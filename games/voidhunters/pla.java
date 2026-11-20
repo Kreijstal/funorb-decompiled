@@ -3,7 +3,7 @@
  */
 final class pla extends UiFocusableComponent {
     private int field_B;
-    private eeb field_C;
+    private InputValidator field_C;
 
     final void drawLayer(int param0, int param1, int param2, int param3) {
         Sprite var15 = null;
@@ -24,8 +24,8 @@ final class pla extends UiFocusableComponent {
         if (param2 < 47) {
           return;
         }
-        qrb var8 = this.field_C.a((byte) 35);
-        if (SetShieldsDirectionalArcParticleSpeedDownshift.field_p == var8) {
+        ValidationState var8 = this.field_C.getValidationState((byte) 35);
+        if (SetShieldsDirectionalArcParticleSpeedDownshift.debouncingInput == var8) {
           var15 = ByteStorage.field_a[0];
           var9 = var15.paddedWidth << 1;
           var10 = var15.paddedHeight << 1;
@@ -60,7 +60,7 @@ final class pla extends UiFocusableComponent {
           GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var15.paddedWidth + var5, -var15.paddedHeight + var6, 256);
           return;
         }
-        if (SetFighterRepairTime.field_q == var8) {
+        if (SetFighterRepairTime.pendingValidation == var8) {
           var16 = ByteStorage.field_a[0];
           var9Lifetime1 = var16.paddedWidth << 1;
           var10Lifetime1 = var16.paddedHeight << 1;
@@ -95,12 +95,12 @@ final class pla extends UiFocusableComponent {
           GetWeaponProjectileSpeedMultiply.field_o.drawAdditive(-var16.paddedWidth + var5, -var16.paddedHeight + var6, 256);
           return;
         }
-        if (var8 == SetArmageddonLength.field_o) {
+        if (var8 == SetArmageddonLength.invalidInput) {
           var13 = ByteStorage.field_a[2];
           var13.drawAdditive(var5 - (var13.width >> 1), var6 - (var13.height >> 1), 256);
           return;
         }
-        if (GetShipPersistence.field_o == var8) {
+        if (GetShipPersistence.validInput == var8) {
           var12 = ByteStorage.field_a[1];
           var12.drawAdditive(var5 - (var12.width >> 1), var6 - (var12.height >> 1), 256);
           return;
@@ -118,7 +118,7 @@ final class pla extends UiFocusableComponent {
 
     final String getTooltip(byte param0) {
         if (this.hovered) {
-          return this.field_C.c((byte) -79);
+          return this.field_C.getValidationMessage((byte) -79);
         }
         if (param0 == 125) {
           return null;
@@ -173,7 +173,7 @@ final class pla extends UiFocusableComponent {
         return true;
     }
 
-    pla(eeb param0) {
+    pla(InputValidator param0) {
         try {
           this.field_C = param0;
         } catch (RuntimeException runtimeException) {

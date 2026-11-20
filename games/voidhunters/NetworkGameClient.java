@@ -301,7 +301,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (UiDraggableContainer.field_z == 11) {
           if (OpenGlVertexBuffer.field_j != null && (!OpenGlVertexBuffer.field_j.loadIndex((byte) -38) ||
             !OpenGlVertexBuffer.field_j.loadAllGroups(param1 ^ 113))) {
-            IncrementVariableAction.a(SetMomentOfInertiaPerpointCalcDownshift.a(-93, OpenGlVertexBuffer.field_j, ocb.field_i, lo.field_d), -1, 0.0f);
+            IncrementVariableAction.a(SetMomentOfInertiaPerpointCalcDownshift.a(-93, OpenGlVertexBuffer.field_j, PasswordValidator.field_i, lo.field_d), -1, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {

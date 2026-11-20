@@ -54,7 +54,7 @@ final class SetMassDriverFireForce extends ConsoleCommand {
         }
         if (ppb.field_a != null) {
           if (!ppb.field_a.loadIndex((byte) -37)) {
-            return ocb.field_i;
+            return PasswordValidator.field_i;
           }
           return lo.field_d;
         }

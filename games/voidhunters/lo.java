@@ -4,7 +4,7 @@
 final class lo {
     static String field_d;
     static Widget field_b;
-    static wf[] field_a;
+    static GameMenuScreen[] field_a;
     static Sprite[] field_c;
 
     public static void clearSharedReferences(boolean param0) {
@@ -103,6 +103,6 @@ final class lo {
     }
 
     static {
-        field_a = new wf[10];
+        field_a = new GameMenuScreen[10];
     }
 }

@@ -1,7 +1,7 @@
 /*
  * Decompiled by CFR-JS 0.4.0.
  */
-final class rm extends eca {
+final class EmailSyntaxValidator extends TextFieldValidator {
     static int[] field_f;
 
     final static String d(byte param0) {
@@ -30,11 +30,11 @@ final class rm extends eca {
         return null;
     }
 
-    rm(UiTextField param0) {
+    EmailSyntaxValidator(UiTextField param0) {
         super(param0);
     }
 
-    final String b(String param0, int param1) {
+    final String getValueValidationMessage(String param0, int param1) {
         RuntimeException var3 = null;
         String stackIn_3_0 = null;
         String stackIn_6_0 = null;
@@ -44,7 +44,7 @@ final class rm extends eca {
         String stackIn_12_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (this.a(param0, 16384) == SetArmageddonLength.field_o) {
+          if (this.validateValue(param0, 16384) == SetArmageddonLength.invalidInput) {
             stackIn_3_0 = EscapePod.field_m;
             return stackIn_3_0;
           }
@@ -77,11 +77,11 @@ final class rm extends eca {
         field_f = null;
     }
 
-    final qrb a(String param0, int param1) {
+    final ValidationState validateValue(String param0, int param1) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int stackIn_5_0 = 0;
-        qrb stackIn_8_0 = null;
+        ValidationState stackIn_8_0 = null;
         RuntimeException stackIn_11_0 = null;
         StringBuilder stackIn_11_1 = null;
         String stackIn_12_2 = null;
@@ -93,9 +93,9 @@ final class rm extends eca {
           stackIn_5_0 = (null != lkb.a(param0, (byte) -116)) ? 0 : 1;
           var3_int = stackIn_5_0;
           if (var3_int != 0) {
-            return GetShipPersistence.field_o;
+            return GetShipPersistence.validInput;
           }
-          stackIn_8_0 = SetArmageddonLength.field_o;
+          stackIn_8_0 = SetArmageddonLength.invalidInput;
           return stackIn_8_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

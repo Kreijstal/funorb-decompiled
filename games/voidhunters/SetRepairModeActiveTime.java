@@ -140,7 +140,7 @@ final class SetRepairModeActiveTime extends ConsoleCommand {
           sra.field_a = new Widget(0L, GpuEnvironmentMapSource.field_c);
           ArchiveIndexLoader.field_a = new Widget(0L, GetThrusterBindingBalanceThreshold.field_p, GetLaserRandomness.field_o);
           GetSniperCannonAimspeed.field_q = new Widget(0L, GetUseSprites.field_p, lw.field_e);
-          SettingsChangeFactory.field_b = new Widget(0L, GetUseSprites.field_p, sc.field_b);
+          SettingsChangeFactory.field_b = new Widget(0L, GetUseSprites.field_p, DebouncedInputValidator.field_b);
           GrapplingHook.field_C = new Widget(0L, GetUseSprites.field_p, MissionGenerationData.field_e);
           GetDebrisDetachmentForceMultiplier.field_o = new Widget(0L, GetUseSprites.field_p, SetTrapMouse.field_o);
           uga.field_h = new Widget(0L, ObjectiveMarker.field_d, tea.field_c);

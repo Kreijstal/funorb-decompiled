@@ -2390,7 +2390,7 @@ final class GameSession {
             } else {
               PlayerVote.a(var13, var8, 255, 115, var12, var14);
               var42 = var18_ref_String.toUpperCase();
-              SetSelfDestructPrepareToggleCooldown.a(-(tea.a(var16, var42, 13879) / 2) + var9, -1, var14 + tib.a(true, var16) + 9, var42, var16, var21, (byte) -95);
+              SetSelfDestructPrepareToggleCooldown.a(-(tea.a(var16, var42, 13879) / 2) + var9, -1, var14 + UsernameAvailabilityValidator.getFontAscent(true, var16) + 9, var42, var16, var21, (byte) -95);
             }
             var22_int = 20;
             var23 = (var12 - var15) / 3;
@@ -2407,7 +2407,7 @@ final class GameSession {
             if (var5 == 1) {
               var26_ref_int____ = (int[][]) null;
               var43 = new int[][]{new int[]{11, 2, 0, 4, 12}, new int[]{1, 5, 3, 10}, new int[]{7, 9, 8, 6}};
-              this.a(tga.field_M, 1 + var23, var24 - 3, param1, 40, var13, var15 - 3, (byte) -92, 10 + var14, param2, var43, var22_int, var25);
+              this.a(ValidatedTextField.field_M, 1 + var23, var24 - 3, param1, 40, var13, var15 - 3, (byte) -92, 10 + var14, param2, var43, var22_int, var25);
             } else {
               this.a(param1, var20, 2051269640, var24, var23, var13, var19_int, var15, var22_int, var25, 42, 10 + var14, param2);
             }
@@ -2787,7 +2787,7 @@ final class GameSession {
                   }
                 }
                 if (var21 != 0) {
-                  var24 = ae.a(es.field_b.blueprint.description, (byte) 41);
+                  var24 = MenuInputState.createShipFromComponentWords(es.field_b.blueprint.description, (byte) 41);
                   var23[var18 - 1] = var24;
                 }
                 var56 = new int[var18][];
@@ -3543,12 +3543,12 @@ final class GameSession {
             GetBuildViewAutozoomEndOnAction.a(61848)) {
             var28 = VariableConditionFactory.a(99);
             if (var24 != null) {
-              var23 = ae.a(var28, (byte) 27);
+              var23 = MenuInputState.createShipFromComponentWords(var28, (byte) 27);
               var23.setTeam(17704, 1);
               var23.setAi(new ShipAI(), 4);
               this.state.b(1).world.addShip(var23, (byte) 92);
             } else {
-              var22 = ae.a(var28, (byte) 27);
+              var22 = MenuInputState.createShipFromComponentWords(var28, (byte) 27);
               var22.setOwner(0, -117);
               this.state.b(1).world.addShip(var22, (byte) 124);
               this.state.b(1).world.a(0);
@@ -3660,7 +3660,7 @@ final class GameSession {
           var19 = (String) null;
           var18 = (String) null;
           lh.a((byte) -123, 0, (String) null, (String) null, var13, 2);
-          GetNebulaFadesOutWhenClose.a(wgb.field_f, false, (byte) -85, -5);
+          GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, false, (byte) -85, -5);
         }
         return;
     }
@@ -3928,7 +3928,7 @@ final class GameSession {
           if (null != es.field_b &&
             es.field_b.blueprint != null &&
             null != es.field_b.blueprint.description) {
-            var36 = ae.a(es.field_b.blueprint.description, (byte) 60);
+            var36 = MenuInputState.createShipFromComponentWords(es.field_b.blueprint.description, (byte) 60);
             var37 = var36;
             var7 = new Camera2D();
             var8 = 512;
@@ -5153,7 +5153,7 @@ final class GameSession {
             var7.draw(var4, var5, 2, 1157627903, 1);
           }
           var8 = SetWeaponProjectileSpeedMultiply.field_o;
-          SetSelfDestructPrepareToggleCooldown.a(var4 + (var7.getWidth() / 2 - tea.a(var6, var8, param0 + 13920) / 2), 1, var7.getHeight() / 2 + var5 + tib.a(true, var6) / 2, var8, var6, 16777215, (byte) -86);
+          SetSelfDestructPrepareToggleCooldown.a(var4 + (var7.getWidth() / 2 - tea.a(var6, var8, param0 + 13920) / 2), 1, var7.getHeight() / 2 + var5 + UsernameAvailabilityValidator.getFontAscent(true, var6) / 2, var8, var6, 16777215, (byte) -86);
         }
         if (param0 != -41) {
           this.field_U = -69;
@@ -7611,7 +7611,7 @@ final class GameSession {
           var6 = 3;
           for (var7 = 0; var7 < var5_int; var7++) {
             var8 = ShipTeamConditionFactory.field_a.worldToScreenX(param0, (byte) 114) - (GetPhasedEnergyBeamProjectiles.a(param3 + 215, param2[0]) >> 1);
-            var9 = ShipTeamConditionFactory.field_a.worldToScreenY(true, -10000 + param1) - (var5_int - var7) * tib.a(true, var6);
+            var9 = ShipTeamConditionFactory.field_a.worldToScreenY(true, -10000 + param1) - (var5_int - var7) * UsernameAvailabilityValidator.getFontAscent(true, var6);
             if (null != this.field_v &&
               this.field_v.b(3, -22)) {
               var9 -= 20;
@@ -7807,12 +7807,12 @@ final class GameSession {
               var2 = 4;
             }
           } else {
-            if (null != vqa.field_g) {
+            if (null != MatchingFieldValidator.field_g) {
               var2 = 1;
             }
           }
           var3 = var2;
-          GetNebulaFadesOutWhenClose.a(wgb.field_f, false, (byte) -85, var3);
+          GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, false, (byte) -85, var3);
           return;
         }
         var2Lifetime1 = 61 / ((param0 + 72) / 38);
@@ -7964,14 +7964,14 @@ final class GameSession {
             else {
               pa.a(11, (byte) -123, param3.getGameId((byte) -13));
             }
-            if (vqa.field_g != null) {
+            if (MatchingFieldValidator.field_g != null) {
               this.field_v.a((byte) -111);
-              GetNebulaFadesOutWhenClose.a(wgb.field_f, true, (byte) -85, -2);
+              GetNebulaFadesOutWhenClose.a(AgeValidator.field_f, true, (byte) -85, -2);
             }
             GetMessageFadetime.field_o = false;
             aeb.field_a = true;
             ColorKeyScaleTextureOperation.d(991426348);
-            wgb.field_f = -2;
+            AgeValidator.field_f = -2;
             GetSniperCannonProjectiles.field_p = true;
             HardpointDefinition.a(true);
           }
@@ -8140,7 +8140,7 @@ final class GameSession {
                 if (var20 > var8) {
                   var8 = var20;
                 }
-                var5 = var5 + (tib.a(true, var9) + MidiNote.a(var9, (byte) -121));
+                var5 = var5 + (UsernameAvailabilityValidator.getFontAscent(true, var9) + MidiNote.a(var9, (byte) -121));
               }
             }
           }
@@ -8155,7 +8155,7 @@ final class GameSession {
                 if (var8 < var18_intLifetime1) {
                   var8 = var18_intLifetime1;
                 }
-                var5 = var5 + (tib.a(true, var9) + MidiNote.a(var9, (byte) -121));
+                var5 = var5 + (UsernameAvailabilityValidator.getFontAscent(true, var9) + MidiNote.a(var9, (byte) -121));
               }
             }
           }
@@ -8178,7 +8178,7 @@ final class GameSession {
                 }
                 var42 = var40 + ": " + var18_intLifetime2 + var41;
                 var20Lifetime1 = -tea.a(var9, var42, 13879) + var6;
-                var21 = tib.a(true, var9) + MidiNote.a(var9, (byte) -121);
+                var21 = UsernameAvailabilityValidator.getFontAscent(true, var9) + MidiNote.a(var9, (byte) -121);
                 var22 = var7 + var21 + var10;
                 var23_int = GetReloadBarWidth.field_o[var29.label];
                 var24 = AlphaContainer.getTeamColor(false, var23_int, 13894143);
@@ -8203,7 +8203,7 @@ final class GameSession {
                 var18 = GetSniperCannonAimarc.a((byte) -38, param1, var45) + ":";
                 var19 = var45.getHealthProgress(0);
                 var20Lifetime2 = AlphaContainer.getTeamColor(false, var45.getTeam((byte) 66), 13894143);
-                var21Lifetime1 = tib.a(true, var9) + MidiNote.a(var9, (byte) -121);
+                var21Lifetime1 = UsernameAvailabilityValidator.getFontAscent(true, var9) + MidiNote.a(var9, (byte) -121);
                 var22Lifetime1 = var7 - (-var21Lifetime1 - var10);
                 SoftwareDepthBuffer.a(var20Lifetime2, -MidiNote.a(var9, (byte) -121) + var22Lifetime1, -3 + var6 - var12, (byte) 74, -1, var9, var18);
                 var10 = var10 + (var21Lifetime1 - 1);
@@ -8814,7 +8814,7 @@ final class GameSession {
           var8 = null;
           if (!this.networked &&
             GetBuildViewAutozoomEndOnAction.a(61848)) {
-            var8 = ae.a(VariableConditionFactory.a(108), (byte) 127);
+            var8 = MenuInputState.createShipFromComponentWords(VariableConditionFactory.a(108), (byte) 127);
           } else {
             if (this.field_x) {
               var8 = t.a(3, (byte) 65);
