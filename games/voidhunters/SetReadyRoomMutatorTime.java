@@ -4,7 +4,7 @@
 final class SetReadyRoomMutatorTime extends ConsoleCommand {
     static int[] field_o;
 
-    final static void e(int param0) {
+    final static void buildToolkitSprites(int param0) {
         int var1_int = 0;
         int var2 = 0;
         RuntimeException decompiledCaughtException = null;
@@ -77,7 +77,7 @@ final class SetReadyRoomMutatorTime extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, boolean param1) {
+    final static void requestFullscreen(int param0, boolean param1) {
         int var2;
         int var3;
         var3 = VoidHunters.field_G;

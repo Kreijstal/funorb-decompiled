@@ -51,7 +51,7 @@ final class UiComboBoxRenderer implements UiRenderer {
           var7 = param3 + param1.y;
           ServerTickFactory.drawGradientBorder(var7, (byte) 115, param1.height, param1.width, var6_int);
           if (param1.hasFocus((byte) -120)) {
-            SetCountermeasureLauncherRandomness.a(var7 + 2, param1.width - 4, 2 + var6_int, param1.height - 4, (byte) -100);
+            SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(var7 + 2, param1.width - 4, 2 + var6_int, param1.height - 4, (byte) -100);
           }
           SoftwareRasterizer2D.setClip(var6_int, var7, param1.width + (var6_int - 2), param1.height + var7);
           var9 = 78 % ((-27 - param0) / 35);

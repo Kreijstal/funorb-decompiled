@@ -5,7 +5,7 @@ import java.io.*;
 import java.util.*;
 
 final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
-    static ToolkitSprite field_p;
+    static ToolkitSprite toolkitFogOfWarSprite;
     static boolean field_o;
 
     final static int a(int param0) {
@@ -49,7 +49,7 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
     }
 
     public static void clearSharedReferences(int param0) {
-        field_p = null;
+        toolkitFogOfWarSprite = null;
         if (param0 == 1) {
           return;
         }
@@ -60,7 +60,7 @@ final class GetGrapplingHooksDamageableBySourcePlayer extends ConsoleCommand {
         File var1_ref = null;
         Object var1 = null;
         if (param0 != -120) {
-          field_p = (ToolkitSprite) null;
+          toolkitFogOfWarSprite = (ToolkitSprite) null;
         }
         try {
           var1_ref = CacheFiles.resolveCacheFile(UiAngleDial.field_L, (byte) 34);

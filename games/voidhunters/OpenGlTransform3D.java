@@ -8,7 +8,7 @@ final class OpenGlTransform3D extends Transform3D {
     private float m23;
     private float m11;
     private float m10;
-    static Sprite field_m;
+    static Sprite softwareFogOfWarSprite;
     private float m22;
     private float m02;
     private float m00;
@@ -178,11 +178,11 @@ final class OpenGlTransform3D extends Transform3D {
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 13) {
-          field_m = (Sprite) null;
-          field_m = null;
+          softwareFogOfWarSprite = (Sprite) null;
+          softwareFogOfWarSprite = null;
           return;
         }
-        field_m = null;
+        softwareFogOfWarSprite = null;
     }
 
     final void flipYZ(int param0) {

@@ -32,8 +32,8 @@ final class SetBombletSprayProjectiles extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0) {
-        SetMassDriverAimspeed.a(-105);
+    final static void invalidateFogOfWarSprite(int param0) {
+        SetMassDriverAimspeed.invalidateFogOfWarSprite(-105);
         if (param0 >= -104) {
           SetBombletSprayProjectiles.clearSharedReferences((byte) 50);
         }

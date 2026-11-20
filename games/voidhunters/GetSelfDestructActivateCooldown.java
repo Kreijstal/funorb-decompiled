@@ -4,7 +4,7 @@
 import java.io.*;
 
 final class GetSelfDestructActivateCooldown extends ConsoleCommand {
-    final static String a(int param0, int param1) {
+    final static String getComponentTypeName(int param0, int param1) {
         if (param0 == 0) {
           return UiTextField.field_F;
         }
@@ -43,7 +43,7 @@ final class GetSelfDestructActivateCooldown extends ConsoleCommand {
         try {
           if (obfuscationGuard > -119) {
             var4 = (File) null;
-            GetSelfDestructActivateCooldown.a((byte) -64, (String) null, (File) null);
+            GetSelfDestructActivateCooldown.registerNativeLibraryFile((byte) -64, (String) null, (File) null);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(224, 118));
           return stackIn_3_0;
@@ -65,9 +65,9 @@ final class GetSelfDestructActivateCooldown extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static void a(byte param0, String param1, File param2) {
+    final static void registerNativeLibraryFile(byte param0, String param1, File param2) {
         try {
-          DiskArchiveRequest.field_q.put(param1, param2);
+          DiskArchiveRequest.nativeLibraryFiles.put(param1, param2);
           int var3_int = 97 / ((63 - param0) / 59);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "td.C(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + (param2 != null ? "{...}" : "null") + ')');

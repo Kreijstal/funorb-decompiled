@@ -38,7 +38,7 @@ final class NativeLibraryLoader {
             }
             var4 = null;
             if (var4 == null) {
-              var4 = (File) (DiskArchiveRequest.field_q.get(param2));
+              var4 = (File) (DiskArchiveRequest.nativeLibraryFiles.get(param2));
             }
             if (var4 == null) {
               return false;

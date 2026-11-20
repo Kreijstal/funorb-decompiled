@@ -25,7 +25,7 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
         if (param0 != -9934) {
           PcmStreamMixer var8 = (PcmStreamMixer) null;
           GetSpinningBladeSpindamageMultiplier.a((byte) 16, (ResourceArchive) null, -27, (PcmStreamMixer) null);
-          SetBombletSprayProjectiles.a(-126);
+          SetBombletSprayProjectiles.invalidateFogOfWarSprite(-126);
           var2 = GetMassDriverProjectiles.field_q;
           GetMassDriverProjectiles.field_q = DateOfBirthInput.field_x.context.backendOption.backendId;
           if (var2 != GetMassDriverProjectiles.field_q &&
@@ -67,7 +67,7 @@ final class GetSpinningBladeSpindamageMultiplier extends ConsoleCommand {
           }
           return;
         }
-        SetBombletSprayProjectiles.a(-126);
+        SetBombletSprayProjectiles.invalidateFogOfWarSprite(-126);
         var2Lifetime1 = GetMassDriverProjectiles.field_q;
         GetMassDriverProjectiles.field_q = DateOfBirthInput.field_x.context.backendOption.backendId;
         if (var2Lifetime1 != GetMassDriverProjectiles.field_q) {

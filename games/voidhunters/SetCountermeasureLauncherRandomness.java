@@ -34,7 +34,7 @@ final class SetCountermeasureLauncherRandomness extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, byte param4) {
+    final static void drawDottedFocusRectangle(int param0, int param1, int param2, int param3, byte param4) {
         int stackIn_4_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_12_0 = 0;
@@ -152,7 +152,7 @@ final class SetCountermeasureLauncherRandomness extends ConsoleCommand {
     public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 1511754497) {
-          SetCountermeasureLauncherRandomness.a(-121, 80, -93, -27, (byte) -68);
+          SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(-121, 80, -93, -27, (byte) -68);
         }
     }
 

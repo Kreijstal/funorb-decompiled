@@ -116,11 +116,11 @@ final class SetReverbDry extends ConsoleCommand {
         return var2;
     }
 
-    final static int a(int param0, int param1) {
+    final static int handleArchiveConnectionError(int param0, int param1) {
         int var3 = VoidHunters.field_G;
-        SoftwareSprite2D.field_b = null;
-        GameInvitationText.field_c = 0;
-        TextureLineShape.field_h = null;
+        SoftwareSprite2D.archiveSocketRequest = null;
+        GameInvitationText.archiveConnectionStage = 0;
+        TextureLineShape.pendingArchiveSocket = null;
         int var2 = SetDefaultFiringLeeway.field_p;
         SetDefaultFiringLeeway.field_p = GetLaserProjectiles.field_p;
         GetAutozoomAmountMultiply.field_o.errorCount = GetAutozoomAmountMultiply.field_o.errorCount + 1;

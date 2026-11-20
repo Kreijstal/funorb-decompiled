@@ -16868,6 +16868,14 @@
       "renamedSymbol": "F:OpenGlTransform3D.m23:F"
     },
     {
+      "symbol": "F:epb.field_m:Lphb;",
+      "originalName": "field_m",
+      "to": "softwareFogOfWarSprite",
+      "evidence": "Original ArgbSprite explicitly created as g1 fog of war sprite and used for software raster drawing.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:OpenGlTransform3D.softwareFogOfWarSprite:LSprite;"
+    },
+    {
       "symbol": "F:epb.field_n:F",
       "originalName": "field_n",
       "to": "m03",
@@ -16946,6 +16954,14 @@
       "evidence": "Normalized first endpoint X.",
       "confidence": "reviewed",
       "renamedSymbol": "F:TextureLineShape.startX:I"
+    },
+    {
+      "symbol": "F:eu.field_h:Llpb;",
+      "originalName": "field_h",
+      "to": "pendingArchiveSocket",
+      "evidence": "Original BufferedSocket during archive handshake,handed to NetworkArchiveClient on completion.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:TextureLineShape.pendingArchiveSocket:LBufferedSocket;"
     },
     {
       "symbol": "F:eu.field_j:I",
@@ -18924,6 +18940,14 @@
       "renamedSymbol": "F:GameInvitationText.invitingPlayerText:Ljava/lang/String;"
     },
     {
+      "symbol": "F:gob.field_c:I",
+      "originalName": "field_c",
+      "to": "archiveConnectionStage",
+      "evidence": "Original archive connection state0..4,reset on success/error.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:GameInvitationText.archiveConnectionStage:I"
+    },
+    {
       "symbol": "F:gp.field_o:[J",
       "originalName": "field_o",
       "to": "whirlpoolRoundConstants",
@@ -20092,6 +20116,14 @@
       "renamedSymbol": "F:SoftwareSprite2D.canvasWidth:I"
     },
     {
+      "symbol": "F:ija.field_b:Lmob;",
+      "originalName": "field_b",
+      "to": "archiveSocketRequest",
+      "evidence": "Original pending platform socket request in pollArchiveConnection and its error cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:SoftwareSprite2D.archiveSocketRequest:LPlatformRequest;"
+    },
+    {
       "symbol": "F:ija.field_d:I",
       "originalName": "field_d",
       "to": "offsetY",
@@ -20874,6 +20906,14 @@
       "evidence": "Reviewed archive requests, disk worker, sector access and bounded file operations.",
       "confidence": "reviewed",
       "renamedSymbol": "F:DiskArchiveRequest.data:[B"
+    },
+    {
+      "symbol": "F:jma.field_q:Ljava/util/Hashtable;",
+      "originalName": "field_q",
+      "to": "nativeLibraryFiles",
+      "evidence": "Original native-library-name/File registry queried by preparation and populated by registration.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:DiskArchiveRequest.nativeLibraryFiles:Ljava/util/Hashtable;"
     },
     {
       "symbol": "F:jma.field_r:I",
@@ -22282,6 +22322,14 @@
       "evidence": "The state-diff method prints \"targetRopeLength has changed\" for this field.",
       "confidence": "reviewed",
       "renamedSymbol": "F:GrappleLauncherBehaviour.targetRopeLength:I"
+    },
+    {
+      "symbol": "F:ll.field_p:Laja;",
+      "originalName": "field_p",
+      "to": "toolkitFogOfWarSprite",
+      "evidence": "Original ToolkitSprite explicitly created as g2 fog of war sprite and used as render target/pixel-copy destination.",
+      "confidence": "reviewed",
+      "renamedSymbol": "F:GetGrapplingHooksDamageableBySourcePlayer.toolkitFogOfWarSprite:LToolkitSprite;"
     },
     {
       "symbol": "F:lla.field_a:Ljava/util/zip/CRC32;",
@@ -34428,6 +34476,22 @@
       "renamedSymbol": "M:TextureCombineOperation.clearSharedReferences(I)V"
     },
     {
+      "symbol": "M:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V",
+      "originalName": "a",
+      "to": "drawObjectiveConditionIndicators",
+      "evidence": "Complete body reviewed:inspect body-in-zone/body-destroyed/team-component conditions,add original markers and draw map zones by phase/team. Preserve marker kinds,condition ordering,guard arithmetic and missing-body handling.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V"
+    },
+    {
+      "symbol": "M:aba.a([BII)[B",
+      "originalName": "a",
+      "to": "copyBytePrefix",
+      "evidence": "Full body reviewed:allocate supplied prefix length and copy original bytes from0. Preserve allocation/copy exceptions and guard factory clearing.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:TextureCombineOperation.copyBytePrefix([BII)[B"
+    },
+    {
       "symbol": "M:abb.a(B)J",
       "originalName": "a",
       "to": "nanoTime",
@@ -34500,6 +34564,14 @@
       "renamedSymbol": "M:SetMissilesHitSourceTeam.clearSharedReferences(Z)V"
     },
     {
+      "symbol": "M:ad.a(I)V",
+      "originalName": "a",
+      "to": "invalidateFogOfWarSprite",
+      "evidence": "Full wrapper reviewed:delegate original fog-sprite invalidation and preserve guarded shared-reference cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SetBombletSprayProjectiles.invalidateFogOfWarSprite(I)V"
+    },
+    {
       "symbol": "M:ad.a([Lnc;I)Lnc;",
       "originalName": "a",
       "to": "execute",
@@ -34538,6 +34610,22 @@
       "evidence": "Factory contract creating an array with the requested length and concrete component state type. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:PartitionZoneListFactory.createArray(II)[LSerializableGameState;"
+    },
+    {
+      "symbol": "M:ada.a(Ljava/lang/String;Z)I",
+      "originalName": "a",
+      "to": "prepareNativeLibrary",
+      "evidence": "Complete body reviewed:privilege/platform lookup,archive progress,cache-file comparison/write and registration. Preserve original return-1/progress/100,comparison control flags,file side effects and fetch flag.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I"
+    },
+    {
+      "symbol": "M:ada.a(Lrsb;Llbb;Z[Lrna;)I",
+      "originalName": "a",
+      "to": "getTeamForActions",
+      "evidence": "Complete body reviewed:derive original team from first recognized team-change/victory/variable action. Preserve canSelectTeam failure,variable-label lookup/sign swap,early break and guarded cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I"
     },
     {
       "symbol": "M:ae.a(B)V",
@@ -34868,6 +34956,14 @@
       "renamedSymbol": "M:SetReadyRoomMutatorTime.clearSharedReferences(I)V"
     },
     {
+      "symbol": "M:ah.a(IZ)V",
+      "originalName": "a",
+      "to": "requestFullscreen",
+      "evidence": "Complete body reviewed:apply original guest/member gating,create fullscreen canvas through original platform path,notify browser/layout helper,and optionally rebuild canvas menu. Preserve mode selection,guard behavior and original640x480 arguments.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SetReadyRoomMutatorTime.requestFullscreen(IZ)V"
+    },
+    {
       "symbol": "M:ah.a([Lnc;I)Lnc;",
       "originalName": "a",
       "to": "execute",
@@ -34876,12 +34972,28 @@
       "renamedSymbol": "M:SetReadyRoomMutatorTime.execute([LConsoleValue;I)LConsoleValue;"
     },
     {
+      "symbol": "M:ah.e(I)V",
+      "originalName": "e",
+      "to": "buildToolkitSprites",
+      "evidence": "Complete body reviewed:create original toolkit sprite array from raw sources,skip null entries,replace original index30 and log completion. Preserve capability guard,cleanup guard and construction order.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SetReadyRoomMutatorTime.buildToolkitSprites(I)V"
+    },
+    {
       "symbol": "M:aha.a(I)V",
       "originalName": "a",
       "to": "clearSharedReferences",
       "evidence": "Clears own static reference fields field_o. The reviewed body retains its original guard-dependent helper calls, recursion and scalar assignments without changing their behavior.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SetCountermeasureLauncherRandomness.clearSharedReferences(I)V"
+    },
+    {
+      "symbol": "M:aha.a(IIIIB)V",
+      "originalName": "a",
+      "to": "drawDottedFocusRectangle",
+      "evidence": "Complete body and focus-renderer consumer reviewed:draw original white alternating-pixel border under raster clipping. Preserve parity,endpoints,original top/bottom clipping conditions and guard cleanup.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V"
     },
     {
       "symbol": "M:aha.a([Lnc;I)Lnc;",
@@ -50556,6 +50668,14 @@
       "renamedSymbol": "M:SetBombletSprayPushMultiplier.clearSharedReferences(I)V"
     },
     {
+      "symbol": "M:hib.a(I)V",
+      "originalName": "a",
+      "to": "invalidateFogOfWarSprite",
+      "evidence": "Full body and GameSession fog-of-war creation/draw consumers reviewed:clear original toolkit fog sprite after guard arithmetic. Preserve invalid-guard exceptions.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SetMassDriverAimspeed.invalidateFogOfWarSprite(I)V"
+    },
+    {
       "symbol": "M:hib.a([Lnc;I)Lnc;",
       "originalName": "a",
       "to": "execute",
@@ -55082,6 +55202,14 @@
       "evidence": "Full body and chat-panel consumer reviewed:return selected original filter0/1/2 or0 for other indices. Preserve wrong-guard scalar assignment.",
       "confidence": "reviewed",
       "renamedSymbol": "M:SetReverbDry.getChatFilter(IB)I"
+    },
+    {
+      "symbol": "M:jia.a(II)I",
+      "originalName": "a",
+      "to": "handleArchiveConnectionError",
+      "evidence": "Complete duplicated-branch body and DateOfBirthInput.pollArchiveConnection caller reviewed:clear pending request/socket/stage,swap ports,increment archive error count,set error status and return original retry/result code. Preserve all independent tests,guard branches and retry thresholds.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:SetReverbDry.handleArchiveConnectionError(II)I"
     },
     {
       "symbol": "M:jia.a([Lnc;I)Lnc;",
@@ -81962,6 +82090,22 @@
       "evidence": "Every console command subclass returns an nc result from an nc argument array. Resolved override family.",
       "confidence": "reviewed",
       "renamedSymbol": "M:GetPointDefenceLaserPulsetime.execute([LConsoleValue;I)LConsoleValue;"
+    },
+    {
+      "symbol": "M:td.a(BLjava/lang/String;Ljava/io/File;)V",
+      "originalName": "a",
+      "to": "registerNativeLibraryFile",
+      "evidence": "Full body and native preparation caller reviewed:store original library-name/File pair,then execute original guard arithmetic. Preserve map replacement and exception behavior.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GetSelfDestructActivateCooldown.registerNativeLibraryFile(BLjava/lang/String;Ljava/io/File;)V"
+    },
+    {
+      "symbol": "M:td.a(II)Ljava/lang/String;",
+      "originalName": "a",
+      "to": "getComponentTypeName",
+      "evidence": "Complete body reviewed:return original component-type label or null for specified categories/default Unknown component type. Preserve original guard placement and early category returns.",
+      "confidence": "reviewed",
+      "renamedSymbol": "M:GetSelfDestructActivateCooldown.getComponentTypeName(II)Ljava/lang/String;"
     },
     {
       "symbol": "M:td.a([Lnc;I)Lnc;",
@@ -131908,9 +132052,9 @@
     },
     {
       "symbol": "F:epb.field_m:Lphb;",
-      "renamedSymbol": "F:OpenGlTransform3D.field_m:LSprite;",
+      "renamedSymbol": "F:OpenGlTransform3D.softwareFogOfWarSprite:LSprite;",
       "originalName": "field_m",
-      "renamedName": "field_m",
+      "renamedName": "softwareFogOfWarSprite",
       "declaration": {
         "file": "epb.java",
         "start": 244,
@@ -132216,9 +132360,9 @@
     },
     {
       "symbol": "F:eu.field_h:Llpb;",
-      "renamedSymbol": "F:TextureLineShape.field_h:LBufferedSocket;",
+      "renamedSymbol": "F:TextureLineShape.pendingArchiveSocket:LBufferedSocket;",
       "originalName": "field_h",
-      "renamedName": "field_h",
+      "renamedName": "pendingArchiveSocket",
       "declaration": {
         "file": "eu.java",
         "start": 156,
@@ -137430,9 +137574,9 @@
     },
     {
       "symbol": "F:gob.field_c:I",
-      "renamedSymbol": "F:GameInvitationText.field_c:I",
+      "renamedSymbol": "F:GameInvitationText.archiveConnectionStage:I",
       "originalName": "field_c",
-      "renamedName": "field_c",
+      "renamedName": "archiveConnectionStage",
       "declaration": {
         "file": "gob.java",
         "start": 71,
@@ -140873,9 +141017,9 @@
     },
     {
       "symbol": "F:ija.field_b:Lmob;",
-      "renamedSymbol": "F:SoftwareSprite2D.field_b:LPlatformRequest;",
+      "renamedSymbol": "F:SoftwareSprite2D.archiveSocketRequest:LPlatformRequest;",
       "originalName": "field_b",
-      "renamedName": "field_b",
+      "renamedName": "archiveSocketRequest",
       "declaration": {
         "file": "ija.java",
         "start": 169,
@@ -144657,9 +144801,9 @@
     },
     {
       "symbol": "F:jma.field_q:Ljava/util/Hashtable;",
-      "renamedSymbol": "F:DiskArchiveRequest.field_q:Ljava/util/Hashtable;",
+      "renamedSymbol": "F:DiskArchiveRequest.nativeLibraryFiles:Ljava/util/Hashtable;",
       "originalName": "field_q",
-      "renamedName": "field_q",
+      "renamedName": "nativeLibraryFiles",
       "declaration": {
         "file": "jma.java",
         "start": 127,
@@ -149299,9 +149443,9 @@
     },
     {
       "symbol": "F:ll.field_p:Laja;",
-      "renamedSymbol": "F:GetGrapplingHooksDamageableBySourcePlayer.field_p:LToolkitSprite;",
+      "renamedSymbol": "F:GetGrapplingHooksDamageableBySourcePlayer.toolkitFogOfWarSprite:LToolkitSprite;",
       "originalName": "field_p",
-      "renamedName": "field_p",
+      "renamedName": "toolkitFogOfWarSprite",
       "declaration": {
         "file": "ll.java",
         "start": 121,
@@ -188503,7 +188647,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#0",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#0",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#0",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -188514,7 +188658,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#1",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#1",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#1",
       "originalName": "stackIn_31_0",
       "renamedName": "stackIn_31_0",
       "declaration": {
@@ -188525,7 +188669,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#10",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#10",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#10",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -188536,7 +188680,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#11",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#11",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#11",
       "originalName": "var7_int",
       "renamedName": "var7_int",
       "declaration": {
@@ -188547,7 +188691,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#12",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#12",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#12",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -188558,7 +188702,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#13",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#13",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#13",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -188569,7 +188713,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#14",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#14",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#14",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -188580,7 +188724,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#15",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#15",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#15",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -188591,7 +188735,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#16",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#16",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#16",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -188602,7 +188746,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#17",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#17",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#17",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -188613,7 +188757,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#18",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#18",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#18",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -188624,7 +188768,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#19",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#19",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#19",
       "originalName": "var16",
       "renamedName": "var16",
       "declaration": {
@@ -188635,7 +188779,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#2",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#2",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#2",
       "originalName": "stackIn_31_1",
       "renamedName": "stackIn_31_1",
       "declaration": {
@@ -188646,7 +188790,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#20",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#20",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#20",
       "originalName": "var17",
       "renamedName": "var17",
       "declaration": {
@@ -188657,7 +188801,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#21",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#21",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#21",
       "originalName": "var18",
       "renamedName": "var18",
       "declaration": {
@@ -188668,7 +188812,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#22",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#22",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#22",
       "originalName": "var19",
       "renamedName": "var19",
       "declaration": {
@@ -188679,7 +188823,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#23",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#23",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#23",
       "originalName": "var20",
       "renamedName": "var20",
       "declaration": {
@@ -188690,7 +188834,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#24",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#24",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#24",
       "originalName": "var21",
       "renamedName": "var21",
       "declaration": {
@@ -188701,7 +188845,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#25",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#25",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#25",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -188712,7 +188856,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#3",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#3",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#3",
       "originalName": "stackIn_32_2",
       "renamedName": "stackIn_32_2",
       "declaration": {
@@ -188723,7 +188867,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#4",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#4",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#4",
       "originalName": "stackIn_34_1",
       "renamedName": "stackIn_34_1",
       "declaration": {
@@ -188734,7 +188878,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#5",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#5",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#5",
       "originalName": "stackIn_35_2",
       "renamedName": "stackIn_35_2",
       "declaration": {
@@ -188745,7 +188889,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#6",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#6",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#6",
       "originalName": "stackIn_37_1",
       "renamedName": "stackIn_37_1",
       "declaration": {
@@ -188756,7 +188900,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#7",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#7",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#7",
       "originalName": "stackIn_38_2",
       "renamedName": "stackIn_38_2",
       "declaration": {
@@ -188767,7 +188911,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#8",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#8",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#8",
       "originalName": "stackIn_40_1",
       "renamedName": "stackIn_40_1",
       "declaration": {
@@ -188778,7 +188922,7 @@
     },
     {
       "symbol": "L:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#9",
-      "renamedSymbol": "L:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#9",
+      "renamedSymbol": "L:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#9",
       "originalName": "stackIn_41_2",
       "renamedName": "stackIn_41_2",
       "declaration": {
@@ -188789,7 +188933,7 @@
     },
     {
       "symbol": "L:aba.a([BII)[B#0",
-      "renamedSymbol": "L:TextureCombineOperation.a([BII)[B#0",
+      "renamedSymbol": "L:TextureCombineOperation.copyBytePrefix([BII)[B#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -188800,7 +188944,7 @@
     },
     {
       "symbol": "L:aba.a([BII)[B#1",
-      "renamedSymbol": "L:TextureCombineOperation.a([BII)[B#1",
+      "renamedSymbol": "L:TextureCombineOperation.copyBytePrefix([BII)[B#1",
       "originalName": "var3_ref",
       "renamedName": "var3_ref",
       "declaration": {
@@ -188811,7 +188955,7 @@
     },
     {
       "symbol": "L:aba.a([BII)[B#2",
-      "renamedSymbol": "L:TextureCombineOperation.a([BII)[B#2",
+      "renamedSymbol": "L:TextureCombineOperation.copyBytePrefix([BII)[B#2",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -188822,7 +188966,7 @@
     },
     {
       "symbol": "L:aba.a([BII)[B#3",
-      "renamedSymbol": "L:TextureCombineOperation.a([BII)[B#3",
+      "renamedSymbol": "L:TextureCombineOperation.copyBytePrefix([BII)[B#3",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -188833,7 +188977,7 @@
     },
     {
       "symbol": "L:aba.a([BII)[B#4",
-      "renamedSymbol": "L:TextureCombineOperation.a([BII)[B#4",
+      "renamedSymbol": "L:TextureCombineOperation.copyBytePrefix([BII)[B#4",
       "originalName": "stackIn_6_0",
       "renamedName": "stackIn_6_0",
       "declaration": {
@@ -188844,7 +188988,7 @@
     },
     {
       "symbol": "L:aba.a([BII)[B#5",
-      "renamedSymbol": "L:TextureCombineOperation.a([BII)[B#5",
+      "renamedSymbol": "L:TextureCombineOperation.copyBytePrefix([BII)[B#5",
       "originalName": "stackIn_6_1",
       "renamedName": "stackIn_6_1",
       "declaration": {
@@ -188855,7 +188999,7 @@
     },
     {
       "symbol": "L:aba.a([BII)[B#6",
-      "renamedSymbol": "L:TextureCombineOperation.a([BII)[B#6",
+      "renamedSymbol": "L:TextureCombineOperation.copyBytePrefix([BII)[B#6",
       "originalName": "stackIn_7_2",
       "renamedName": "stackIn_7_2",
       "declaration": {
@@ -188866,7 +189010,7 @@
     },
     {
       "symbol": "L:aba.a([BII)[B#7",
-      "renamedSymbol": "L:TextureCombineOperation.a([BII)[B#7",
+      "renamedSymbol": "L:TextureCombineOperation.copyBytePrefix([BII)[B#7",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -188877,7 +189021,7 @@
     },
     {
       "symbol": "L:aba.a([BII)[B#8",
-      "renamedSymbol": "L:TextureCombineOperation.a([BII)[B#8",
+      "renamedSymbol": "L:TextureCombineOperation.copyBytePrefix([BII)[B#8",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -189922,7 +190066,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#0",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#0",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#0",
       "originalName": "stackIn_3_0",
       "renamedName": "stackIn_3_0",
       "declaration": {
@@ -189933,7 +190077,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#1",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#1",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#1",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -189944,7 +190088,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#10",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#10",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#10",
       "originalName": "stackIn_46_1",
       "renamedName": "stackIn_46_1",
       "declaration": {
@@ -189955,7 +190099,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#11",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#11",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#11",
       "originalName": "stackIn_47_2",
       "renamedName": "stackIn_47_2",
       "declaration": {
@@ -189966,7 +190110,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#12",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#12",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#12",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -189977,7 +190121,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#13",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#13",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#13",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -189988,7 +190132,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#14",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#14",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#14",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -189999,7 +190143,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#15",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#15",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#15",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -190010,7 +190154,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#16",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#16",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#16",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -190021,7 +190165,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#17",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#17",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#17",
       "originalName": "var6_ref_RuntimeException",
       "renamedName": "var6_ref_RuntimeException",
       "declaration": {
@@ -190032,7 +190176,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#18",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#18",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#18",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -190043,7 +190187,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#19",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#19",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#19",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -190054,7 +190198,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#2",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#2",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#2",
       "originalName": "stackIn_10_0",
       "renamedName": "stackIn_10_0",
       "declaration": {
@@ -190065,7 +190209,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#20",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#20",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#20",
       "originalName": "var8_int",
       "renamedName": "var8_int",
       "declaration": {
@@ -190076,7 +190220,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#21",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#21",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#21",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -190087,7 +190231,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#22",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#22",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#22",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -190098,7 +190242,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#23",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#23",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#23",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -190109,7 +190253,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#24",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#24",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#24",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -190120,7 +190264,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#25",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#25",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#25",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -190131,7 +190275,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#26",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#26",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#26",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -190142,7 +190286,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#27",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#27",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#27",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -190153,7 +190297,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#28",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#28",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#28",
       "originalName": "var15",
       "renamedName": "var15",
       "declaration": {
@@ -190164,7 +190308,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#29",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#29",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#29",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -190175,7 +190319,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#3",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#3",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#3",
       "originalName": "stackIn_14_0",
       "renamedName": "stackIn_14_0",
       "declaration": {
@@ -190186,7 +190330,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#30",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#30",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#30",
       "originalName": "decompiledFrameRemainder0",
       "renamedName": "decompiledFrameRemainder0",
       "declaration": {
@@ -190197,7 +190341,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#31",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#31",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#31",
       "originalName": "decompiledFrameCompleted0",
       "renamedName": "decompiledFrameCompleted0",
       "declaration": {
@@ -190208,7 +190352,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#32",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#32",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#32",
       "originalName": "decompiledNaturalLoopExit0",
       "renamedName": "decompiledNaturalLoopExit0",
       "declaration": {
@@ -190219,7 +190363,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#33",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#33",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#33",
       "originalName": "decompiledCaughtParameter1",
       "renamedName": "decompiledCaughtParameter1",
       "declaration": {
@@ -190230,7 +190374,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#34",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#34",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#34",
       "originalName": "decompiledCaughtParameter2",
       "renamedName": "decompiledCaughtParameter2",
       "declaration": {
@@ -190241,7 +190385,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#4",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#4",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#4",
       "originalName": "stackIn_17_0",
       "renamedName": "stackIn_17_0",
       "declaration": {
@@ -190252,7 +190396,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#5",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#5",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#5",
       "originalName": "stackIn_22_0",
       "renamedName": "stackIn_22_0",
       "declaration": {
@@ -190263,7 +190407,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#6",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#6",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#6",
       "originalName": "stackIn_39_0",
       "renamedName": "stackIn_39_0",
       "declaration": {
@@ -190274,7 +190418,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#7",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#7",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#7",
       "originalName": "stackIn_41_0",
       "renamedName": "stackIn_41_0",
       "declaration": {
@@ -190285,7 +190429,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#8",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#8",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#8",
       "originalName": "stackIn_43_0",
       "renamedName": "stackIn_43_0",
       "declaration": {
@@ -190296,7 +190440,7 @@
     },
     {
       "symbol": "L:ada.a(Ljava/lang/String;Z)I#9",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#9",
+      "renamedSymbol": "L:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#9",
       "originalName": "stackIn_46_0",
       "renamedName": "stackIn_46_0",
       "declaration": {
@@ -190307,7 +190451,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#0",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#0",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#0",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -190318,7 +190462,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#1",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#1",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#1",
       "originalName": "stackIn_18_0",
       "renamedName": "stackIn_18_0",
       "declaration": {
@@ -190329,7 +190473,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#10",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#10",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#10",
       "originalName": "var4_int",
       "renamedName": "var4_int",
       "declaration": {
@@ -190340,7 +190484,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#11",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#11",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#11",
       "originalName": "var4",
       "renamedName": "var4",
       "declaration": {
@@ -190351,7 +190495,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#12",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#12",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#12",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -190362,7 +190506,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#13",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#13",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#13",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -190373,7 +190517,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#14",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#14",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#14",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -190384,7 +190528,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#15",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#15",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#15",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -190395,7 +190539,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#16",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#16",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#16",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -190406,7 +190550,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#17",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#17",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#17",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -190417,7 +190561,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#18",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#18",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#18",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -190428,7 +190572,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#19",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#19",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#19",
       "originalName": "var14",
       "renamedName": "var14",
       "declaration": {
@@ -190439,7 +190583,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#2",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#2",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#2",
       "originalName": "stackIn_21_0",
       "renamedName": "stackIn_21_0",
       "declaration": {
@@ -190450,7 +190594,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#20",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#20",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#20",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -190461,7 +190605,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#3",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#3",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#3",
       "originalName": "stackIn_21_1",
       "renamedName": "stackIn_21_1",
       "declaration": {
@@ -190472,7 +190616,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#4",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#4",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#4",
       "originalName": "stackIn_22_2",
       "renamedName": "stackIn_22_2",
       "declaration": {
@@ -190483,7 +190627,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#5",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#5",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#5",
       "originalName": "stackIn_24_1",
       "renamedName": "stackIn_24_1",
       "declaration": {
@@ -190494,7 +190638,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#6",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#6",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#6",
       "originalName": "stackIn_25_2",
       "renamedName": "stackIn_25_2",
       "declaration": {
@@ -190505,7 +190649,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#7",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#7",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#7",
       "originalName": "stackIn_27_1",
       "renamedName": "stackIn_27_1",
       "declaration": {
@@ -190516,7 +190660,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#8",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#8",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#8",
       "originalName": "stackIn_28_2",
       "renamedName": "stackIn_28_2",
       "declaration": {
@@ -190527,7 +190671,7 @@
     },
     {
       "symbol": "L:ada.a(Lrsb;Llbb;Z[Lrna;)I#9",
-      "renamedSymbol": "L:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#9",
+      "renamedSymbol": "L:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#9",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -191814,7 +191958,7 @@
     },
     {
       "symbol": "L:ah.a(IZ)V#0",
-      "renamedSymbol": "L:SetReadyRoomMutatorTime.a(IZ)V#0",
+      "renamedSymbol": "L:SetReadyRoomMutatorTime.requestFullscreen(IZ)V#0",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -191825,7 +191969,7 @@
     },
     {
       "symbol": "L:ah.a(IZ)V#1",
-      "renamedSymbol": "L:SetReadyRoomMutatorTime.a(IZ)V#1",
+      "renamedSymbol": "L:SetReadyRoomMutatorTime.requestFullscreen(IZ)V#1",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -191924,7 +192068,7 @@
     },
     {
       "symbol": "L:ah.e(I)V#0",
-      "renamedSymbol": "L:SetReadyRoomMutatorTime.e(I)V#0",
+      "renamedSymbol": "L:SetReadyRoomMutatorTime.buildToolkitSprites(I)V#0",
       "originalName": "var1_int",
       "renamedName": "var1_int",
       "declaration": {
@@ -191935,7 +192079,7 @@
     },
     {
       "symbol": "L:ah.e(I)V#1",
-      "renamedSymbol": "L:SetReadyRoomMutatorTime.e(I)V#1",
+      "renamedSymbol": "L:SetReadyRoomMutatorTime.buildToolkitSprites(I)V#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -191946,7 +192090,7 @@
     },
     {
       "symbol": "L:ah.e(I)V#2",
-      "renamedSymbol": "L:SetReadyRoomMutatorTime.e(I)V#2",
+      "renamedSymbol": "L:SetReadyRoomMutatorTime.buildToolkitSprites(I)V#2",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -191957,7 +192101,7 @@
     },
     {
       "symbol": "L:ah.e(I)V#3",
-      "renamedSymbol": "L:SetReadyRoomMutatorTime.e(I)V#3",
+      "renamedSymbol": "L:SetReadyRoomMutatorTime.buildToolkitSprites(I)V#3",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -191968,7 +192112,7 @@
     },
     {
       "symbol": "L:ah.e(I)V#4",
-      "renamedSymbol": "L:SetReadyRoomMutatorTime.e(I)V#4",
+      "renamedSymbol": "L:SetReadyRoomMutatorTime.buildToolkitSprites(I)V#4",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -191979,7 +192123,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#0",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#0",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#0",
       "originalName": "stackIn_4_0",
       "renamedName": "stackIn_4_0",
       "declaration": {
@@ -191990,7 +192134,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#1",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#1",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#1",
       "originalName": "stackIn_7_0",
       "renamedName": "stackIn_7_0",
       "declaration": {
@@ -192001,7 +192145,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#10",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#10",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#10",
       "originalName": "var9",
       "renamedName": "var9",
       "declaration": {
@@ -192012,7 +192156,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#11",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#11",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#11",
       "originalName": "var10",
       "renamedName": "var10",
       "declaration": {
@@ -192023,7 +192167,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#12",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#12",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#12",
       "originalName": "var11",
       "renamedName": "var11",
       "declaration": {
@@ -192034,7 +192178,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#13",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#13",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#13",
       "originalName": "var12",
       "renamedName": "var12",
       "declaration": {
@@ -192045,7 +192189,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#14",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#14",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#14",
       "originalName": "var13",
       "renamedName": "var13",
       "declaration": {
@@ -192056,7 +192200,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#15",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#15",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#15",
       "originalName": "var11Lifetime1",
       "renamedName": "var11Lifetime1",
       "declaration": {
@@ -192067,7 +192211,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#16",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#16",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#16",
       "originalName": "var11Lifetime2",
       "renamedName": "var11Lifetime2",
       "declaration": {
@@ -192078,7 +192222,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#17",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#17",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#17",
       "originalName": "var11Lifetime3",
       "renamedName": "var11Lifetime3",
       "declaration": {
@@ -192089,7 +192233,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#18",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#18",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#18",
       "originalName": "var12Lifetime1",
       "renamedName": "var12Lifetime1",
       "declaration": {
@@ -192100,7 +192244,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#19",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#19",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#19",
       "originalName": "var12Lifetime2",
       "renamedName": "var12Lifetime2",
       "declaration": {
@@ -192111,7 +192255,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#2",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#2",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#2",
       "originalName": "stackIn_12_0",
       "renamedName": "stackIn_12_0",
       "declaration": {
@@ -192122,7 +192266,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#20",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#20",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#20",
       "originalName": "var12Lifetime3",
       "renamedName": "var12Lifetime3",
       "declaration": {
@@ -192133,7 +192277,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#21",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#21",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#21",
       "originalName": "decompiledCaughtParameter0",
       "renamedName": "decompiledCaughtParameter0",
       "declaration": {
@@ -192144,7 +192288,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#3",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#3",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#3",
       "originalName": "stackIn_15_0",
       "renamedName": "stackIn_15_0",
       "declaration": {
@@ -192155,7 +192299,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#4",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#4",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#4",
       "originalName": "decompiledCaughtException",
       "renamedName": "decompiledCaughtException",
       "declaration": {
@@ -192166,7 +192310,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#5",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#5",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#5",
       "originalName": "var5_int",
       "renamedName": "var5_int",
       "declaration": {
@@ -192177,7 +192321,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#6",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#6",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#6",
       "originalName": "var5",
       "renamedName": "var5",
       "declaration": {
@@ -192188,7 +192332,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#7",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#7",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#7",
       "originalName": "var6",
       "renamedName": "var6",
       "declaration": {
@@ -192199,7 +192343,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#8",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#8",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#8",
       "originalName": "var7",
       "renamedName": "var7",
       "declaration": {
@@ -192210,7 +192354,7 @@
     },
     {
       "symbol": "L:aha.a(IIIIB)V#9",
-      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.a(IIIIB)V#9",
+      "renamedSymbol": "L:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#9",
       "originalName": "var8",
       "renamedName": "var8",
       "declaration": {
@@ -329182,7 +329326,7 @@
     },
     {
       "symbol": "L:hib.a(I)V#0",
-      "renamedSymbol": "L:SetMassDriverAimspeed.a(I)V#0",
+      "renamedSymbol": "L:SetMassDriverAimspeed.invalidateFogOfWarSprite(I)V#0",
       "originalName": "var1",
       "renamedName": "var1",
       "declaration": {
@@ -359839,7 +359983,7 @@
     },
     {
       "symbol": "L:jia.a(II)I#0",
-      "renamedSymbol": "L:SetReverbDry.a(II)I#0",
+      "renamedSymbol": "L:SetReverbDry.handleArchiveConnectionError(II)I#0",
       "originalName": "var3",
       "renamedName": "var3",
       "declaration": {
@@ -359850,7 +359994,7 @@
     },
     {
       "symbol": "L:jia.a(II)I#1",
-      "renamedSymbol": "L:SetReverbDry.a(II)I#1",
+      "renamedSymbol": "L:SetReverbDry.handleArchiveConnectionError(II)I#1",
       "originalName": "var2",
       "renamedName": "var2",
       "declaration": {
@@ -574834,7 +574978,7 @@
     },
     {
       "symbol": "L:td.a(BLjava/lang/String;Ljava/io/File;)V#0",
-      "renamedSymbol": "L:GetSelfDestructActivateCooldown.a(BLjava/lang/String;Ljava/io/File;)V#0",
+      "renamedSymbol": "L:GetSelfDestructActivateCooldown.registerNativeLibraryFile(BLjava/lang/String;Ljava/io/File;)V#0",
       "originalName": "var3_int",
       "renamedName": "var3_int",
       "declaration": {
@@ -574845,7 +574989,7 @@
     },
     {
       "symbol": "L:td.a(BLjava/lang/String;Ljava/io/File;)V#1",
-      "renamedSymbol": "L:GetSelfDestructActivateCooldown.a(BLjava/lang/String;Ljava/io/File;)V#1",
+      "renamedSymbol": "L:GetSelfDestructActivateCooldown.registerNativeLibraryFile(BLjava/lang/String;Ljava/io/File;)V#1",
       "originalName": "runtimeException",
       "renamedName": "runtimeException",
       "declaration": {
@@ -659622,9 +659766,9 @@
     },
     {
       "symbol": "M:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V",
-      "renamedSymbol": "M:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V",
+      "renamedSymbol": "M:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawObjectiveConditionIndicators",
       "declaration": {
         "file": "aba.java",
         "start": 126,
@@ -659633,9 +659777,9 @@
     },
     {
       "symbol": "M:aba.a([BII)[B",
-      "renamedSymbol": "M:TextureCombineOperation.a([BII)[B",
+      "renamedSymbol": "M:TextureCombineOperation.copyBytePrefix([BII)[B",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "copyBytePrefix",
       "declaration": {
         "file": "aba.java",
         "start": 5009,
@@ -659776,9 +659920,9 @@
     },
     {
       "symbol": "M:ad.a(I)V",
-      "renamedSymbol": "M:SetBombletSprayProjectiles.a(I)V",
+      "renamedSymbol": "M:SetBombletSprayProjectiles.invalidateFogOfWarSprite(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "invalidateFogOfWarSprite",
       "declaration": {
         "file": "ad.java",
         "start": 1208,
@@ -659842,9 +659986,9 @@
     },
     {
       "symbol": "M:ada.a(Ljava/lang/String;Z)I",
-      "renamedSymbol": "M:PartitionZoneListFactory.a(Ljava/lang/String;Z)I",
+      "renamedSymbol": "M:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "prepareNativeLibrary",
       "declaration": {
         "file": "ada.java",
         "start": 328,
@@ -659853,9 +659997,9 @@
     },
     {
       "symbol": "M:ada.a(Lrsb;Llbb;Z[Lrna;)I",
-      "renamedSymbol": "M:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I",
+      "renamedSymbol": "M:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getTeamForActions",
       "declaration": {
         "file": "ada.java",
         "start": 5182,
@@ -660392,9 +660536,9 @@
     },
     {
       "symbol": "M:ah.a(IZ)V",
-      "renamedSymbol": "M:SetReadyRoomMutatorTime.a(IZ)V",
+      "renamedSymbol": "M:SetReadyRoomMutatorTime.requestFullscreen(IZ)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "requestFullscreen",
       "declaration": {
         "file": "ah.java",
         "start": 2631,
@@ -660414,9 +660558,9 @@
     },
     {
       "symbol": "M:ah.e(I)V",
-      "renamedSymbol": "M:SetReadyRoomMutatorTime.e(I)V",
+      "renamedSymbol": "M:SetReadyRoomMutatorTime.buildToolkitSprites(I)V",
       "originalName": "e",
-      "renamedName": "e",
+      "renamedName": "buildToolkitSprites",
       "declaration": {
         "file": "ah.java",
         "start": 116,
@@ -660447,9 +660591,9 @@
     },
     {
       "symbol": "M:aha.a(IIIIB)V",
-      "renamedSymbol": "M:SetCountermeasureLauncherRandomness.a(IIIIB)V",
+      "renamedSymbol": "M:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "drawDottedFocusRectangle",
       "declaration": {
         "file": "aha.java",
         "start": 1271,
@@ -688508,9 +688652,9 @@
     },
     {
       "symbol": "M:hib.a(I)V",
-      "renamedSymbol": "M:SetMassDriverAimspeed.a(I)V",
+      "renamedSymbol": "M:SetMassDriverAimspeed.invalidateFogOfWarSprite(I)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "invalidateFogOfWarSprite",
       "declaration": {
         "file": "hib.java",
         "start": 90,
@@ -700795,9 +700939,9 @@
     },
     {
       "symbol": "M:jia.a(II)I",
-      "renamedSymbol": "M:SetReverbDry.a(II)I",
+      "renamedSymbol": "M:SetReverbDry.handleArchiveConnectionError(II)I",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "handleArchiveConnectionError",
       "declaration": {
         "file": "jia.java",
         "start": 4518,
@@ -747798,9 +747942,9 @@
     },
     {
       "symbol": "M:td.a(BLjava/lang/String;Ljava/io/File;)V",
-      "renamedSymbol": "M:GetSelfDestructActivateCooldown.a(BLjava/lang/String;Ljava/io/File;)V",
+      "renamedSymbol": "M:GetSelfDestructActivateCooldown.registerNativeLibraryFile(BLjava/lang/String;Ljava/io/File;)V",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "registerNativeLibraryFile",
       "declaration": {
         "file": "td.java",
         "start": 1963,
@@ -747809,9 +747953,9 @@
     },
     {
       "symbol": "M:td.a(II)Ljava/lang/String;",
-      "renamedSymbol": "M:GetSelfDestructActivateCooldown.a(II)Ljava/lang/String;",
+      "renamedSymbol": "M:GetSelfDestructActivateCooldown.getComponentTypeName(II)Ljava/lang/String;",
       "originalName": "a",
-      "renamedName": "a",
+      "renamedName": "getComponentTypeName",
       "declaration": {
         "file": "td.java",
         "start": 110,
@@ -765387,7 +765531,7 @@
     },
     {
       "symbol": "P:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#0",
-      "renamedSymbol": "P:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#0",
+      "renamedSymbol": "P:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -765398,7 +765542,7 @@
     },
     {
       "symbol": "P:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#1",
-      "renamedSymbol": "P:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#1",
+      "renamedSymbol": "P:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -765409,7 +765553,7 @@
     },
     {
       "symbol": "P:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#2",
-      "renamedSymbol": "P:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#2",
+      "renamedSymbol": "P:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -765420,7 +765564,7 @@
     },
     {
       "symbol": "P:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#3",
-      "renamedSymbol": "P:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#3",
+      "renamedSymbol": "P:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -765431,7 +765575,7 @@
     },
     {
       "symbol": "P:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#4",
-      "renamedSymbol": "P:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#4",
+      "renamedSymbol": "P:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -765442,7 +765586,7 @@
     },
     {
       "symbol": "P:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#5",
-      "renamedSymbol": "P:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#5",
+      "renamedSymbol": "P:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#5",
       "originalName": "param5",
       "renamedName": "param5",
       "declaration": {
@@ -765453,7 +765597,7 @@
     },
     {
       "symbol": "P:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V#6",
-      "renamedSymbol": "P:TextureCombineOperation.a(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#6",
+      "renamedSymbol": "P:TextureCombineOperation.drawObjectiveConditionIndicators(LMissionState;[LMissionCondition;LCamera2D;IBILGameSnapshot;)V#6",
       "originalName": "param6",
       "renamedName": "param6",
       "declaration": {
@@ -765464,7 +765608,7 @@
     },
     {
       "symbol": "P:aba.a([BII)[B#0",
-      "renamedSymbol": "P:TextureCombineOperation.a([BII)[B#0",
+      "renamedSymbol": "P:TextureCombineOperation.copyBytePrefix([BII)[B#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -765475,7 +765619,7 @@
     },
     {
       "symbol": "P:aba.a([BII)[B#1",
-      "renamedSymbol": "P:TextureCombineOperation.a([BII)[B#1",
+      "renamedSymbol": "P:TextureCombineOperation.copyBytePrefix([BII)[B#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -765486,7 +765630,7 @@
     },
     {
       "symbol": "P:aba.a([BII)[B#2",
-      "renamedSymbol": "P:TextureCombineOperation.a([BII)[B#2",
+      "renamedSymbol": "P:TextureCombineOperation.copyBytePrefix([BII)[B#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -765948,7 +766092,7 @@
     },
     {
       "symbol": "P:ad.a(I)V#0",
-      "renamedSymbol": "P:SetBombletSprayProjectiles.a(I)V#0",
+      "renamedSymbol": "P:SetBombletSprayProjectiles.invalidateFogOfWarSprite(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -766036,7 +766180,7 @@
     },
     {
       "symbol": "P:ada.a(Ljava/lang/String;Z)I#0",
-      "renamedSymbol": "P:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#0",
+      "renamedSymbol": "P:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -766047,7 +766191,7 @@
     },
     {
       "symbol": "P:ada.a(Ljava/lang/String;Z)I#1",
-      "renamedSymbol": "P:PartitionZoneListFactory.a(Ljava/lang/String;Z)I#1",
+      "renamedSymbol": "P:PartitionZoneListFactory.prepareNativeLibrary(Ljava/lang/String;Z)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -766058,7 +766202,7 @@
     },
     {
       "symbol": "P:ada.a(Lrsb;Llbb;Z[Lrna;)I#0",
-      "renamedSymbol": "P:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#0",
+      "renamedSymbol": "P:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -766069,7 +766213,7 @@
     },
     {
       "symbol": "P:ada.a(Lrsb;Llbb;Z[Lrna;)I#1",
-      "renamedSymbol": "P:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#1",
+      "renamedSymbol": "P:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -766080,7 +766224,7 @@
     },
     {
       "symbol": "P:ada.a(Lrsb;Llbb;Z[Lrna;)I#2",
-      "renamedSymbol": "P:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#2",
+      "renamedSymbol": "P:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -766091,7 +766235,7 @@
     },
     {
       "symbol": "P:ada.a(Lrsb;Llbb;Z[Lrna;)I#3",
-      "renamedSymbol": "P:PartitionZoneListFactory.a(LGameSnapshot;LMissionState;Z[LMissionAction;)I#3",
+      "renamedSymbol": "P:PartitionZoneListFactory.getTeamForActions(LGameSnapshot;LMissionState;Z[LMissionAction;)I#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -767081,7 +767225,7 @@
     },
     {
       "symbol": "P:ah.a(IZ)V#0",
-      "renamedSymbol": "P:SetReadyRoomMutatorTime.a(IZ)V#0",
+      "renamedSymbol": "P:SetReadyRoomMutatorTime.requestFullscreen(IZ)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -767092,7 +767236,7 @@
     },
     {
       "symbol": "P:ah.a(IZ)V#1",
-      "renamedSymbol": "P:SetReadyRoomMutatorTime.a(IZ)V#1",
+      "renamedSymbol": "P:SetReadyRoomMutatorTime.requestFullscreen(IZ)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -767125,7 +767269,7 @@
     },
     {
       "symbol": "P:ah.e(I)V#0",
-      "renamedSymbol": "P:SetReadyRoomMutatorTime.e(I)V#0",
+      "renamedSymbol": "P:SetReadyRoomMutatorTime.buildToolkitSprites(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -767180,7 +767324,7 @@
     },
     {
       "symbol": "P:aha.a(IIIIB)V#0",
-      "renamedSymbol": "P:SetCountermeasureLauncherRandomness.a(IIIIB)V#0",
+      "renamedSymbol": "P:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -767191,7 +767335,7 @@
     },
     {
       "symbol": "P:aha.a(IIIIB)V#1",
-      "renamedSymbol": "P:SetCountermeasureLauncherRandomness.a(IIIIB)V#1",
+      "renamedSymbol": "P:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -767202,7 +767346,7 @@
     },
     {
       "symbol": "P:aha.a(IIIIB)V#2",
-      "renamedSymbol": "P:SetCountermeasureLauncherRandomness.a(IIIIB)V#2",
+      "renamedSymbol": "P:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -767213,7 +767357,7 @@
     },
     {
       "symbol": "P:aha.a(IIIIB)V#3",
-      "renamedSymbol": "P:SetCountermeasureLauncherRandomness.a(IIIIB)V#3",
+      "renamedSymbol": "P:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#3",
       "originalName": "param3",
       "renamedName": "param3",
       "declaration": {
@@ -767224,7 +767368,7 @@
     },
     {
       "symbol": "P:aha.a(IIIIB)V#4",
-      "renamedSymbol": "P:SetCountermeasureLauncherRandomness.a(IIIIB)V#4",
+      "renamedSymbol": "P:SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(IIIIB)V#4",
       "originalName": "param4",
       "renamedName": "param4",
       "declaration": {
@@ -835556,7 +835700,7 @@
     },
     {
       "symbol": "P:hib.a(I)V#0",
-      "renamedSymbol": "P:SetMassDriverAimspeed.a(I)V#0",
+      "renamedSymbol": "P:SetMassDriverAimspeed.invalidateFogOfWarSprite(I)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -865531,7 +865675,7 @@
     },
     {
       "symbol": "P:jia.a(II)I#0",
-      "renamedSymbol": "P:SetReverbDry.a(II)I#0",
+      "renamedSymbol": "P:SetReverbDry.handleArchiveConnectionError(II)I#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -865542,7 +865686,7 @@
     },
     {
       "symbol": "P:jia.a(II)I#1",
-      "renamedSymbol": "P:SetReverbDry.a(II)I#1",
+      "renamedSymbol": "P:SetReverbDry.handleArchiveConnectionError(II)I#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -973826,7 +973970,7 @@
     },
     {
       "symbol": "P:td.a(BLjava/lang/String;Ljava/io/File;)V#0",
-      "renamedSymbol": "P:GetSelfDestructActivateCooldown.a(BLjava/lang/String;Ljava/io/File;)V#0",
+      "renamedSymbol": "P:GetSelfDestructActivateCooldown.registerNativeLibraryFile(BLjava/lang/String;Ljava/io/File;)V#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -973837,7 +973981,7 @@
     },
     {
       "symbol": "P:td.a(BLjava/lang/String;Ljava/io/File;)V#1",
-      "renamedSymbol": "P:GetSelfDestructActivateCooldown.a(BLjava/lang/String;Ljava/io/File;)V#1",
+      "renamedSymbol": "P:GetSelfDestructActivateCooldown.registerNativeLibraryFile(BLjava/lang/String;Ljava/io/File;)V#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -973848,7 +973992,7 @@
     },
     {
       "symbol": "P:td.a(BLjava/lang/String;Ljava/io/File;)V#2",
-      "renamedSymbol": "P:GetSelfDestructActivateCooldown.a(BLjava/lang/String;Ljava/io/File;)V#2",
+      "renamedSymbol": "P:GetSelfDestructActivateCooldown.registerNativeLibraryFile(BLjava/lang/String;Ljava/io/File;)V#2",
       "originalName": "param2",
       "renamedName": "param2",
       "declaration": {
@@ -973859,7 +974003,7 @@
     },
     {
       "symbol": "P:td.a(II)Ljava/lang/String;#0",
-      "renamedSymbol": "P:GetSelfDestructActivateCooldown.a(II)Ljava/lang/String;#0",
+      "renamedSymbol": "P:GetSelfDestructActivateCooldown.getComponentTypeName(II)Ljava/lang/String;#0",
       "originalName": "param0",
       "renamedName": "param0",
       "declaration": {
@@ -973870,7 +974014,7 @@
     },
     {
       "symbol": "P:td.a(II)Ljava/lang/String;#1",
-      "renamedSymbol": "P:GetSelfDestructActivateCooldown.a(II)Ljava/lang/String;#1",
+      "renamedSymbol": "P:GetSelfDestructActivateCooldown.getComponentTypeName(II)Ljava/lang/String;#1",
       "originalName": "param1",
       "renamedName": "param1",
       "declaration": {
@@ -1034121,7 +1034265,7 @@
       "original": "aba.java",
       "renamed": "TextureCombineOperation.java",
       "inputSha256": "104dd1cba58c31d8b0c7a726b12e05302db56bc3c75370a5f568f6c1a6569b04",
-      "outputSha256": "ba495a3f0576120b791d45fec65b65158fe325cea99571c8a7108d75e0dfdc0f",
+      "outputSha256": "7eb958eeb592a9a69cf22e73e34c7270e0f039bc7b6e590ec18802ca962732a9",
       "edits": [
         {
           "start": 50,
@@ -1034143,6 +1034287,13 @@
           "symbol": "C:aw",
           "original": "aw",
           "renamed": "PopupMenuWidget"
+        },
+        {
+          "start": 126,
+          "end": 127,
+          "symbol": "M:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V",
+          "original": "a",
+          "renamed": "drawObjectiveConditionIndicators"
         },
         {
           "start": 128,
@@ -1034530,6 +1034681,13 @@
           "renamed": "TextureCombineOperation"
         },
         {
+          "start": 4880,
+          "end": 4881,
+          "symbol": "M:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V",
+          "original": "a",
+          "renamed": "drawObjectiveConditionIndicators"
+        },
+        {
           "start": 4883,
           "end": 4886,
           "symbol": "C:lbb",
@@ -1034556,6 +1034714,13 @@
           "symbol": "C:rsb",
           "original": "rsb",
           "renamed": "GameSnapshot"
+        },
+        {
+          "start": 5009,
+          "end": 5010,
+          "symbol": "M:aba.a([BII)[B",
+          "original": "a",
+          "renamed": "copyBytePrefix"
         },
         {
           "start": 5495,
@@ -1035484,7 +1035649,7 @@
       "original": "ad.java",
       "renamed": "SetBombletSprayProjectiles.java",
       "inputSha256": "822cba3ec60913ad625074eb64aa80685a9f165c5118cc86b886e9efc93122ca",
-      "outputSha256": "106ce2114e5066525ffcd4658ab130b5afbef3ea37d0a4d4fabbb800fa181d47",
+      "outputSha256": "7f0300acf75d26d65147a7e42db0b9ce6381ca143955b534d0a9a826347643a3",
       "edits": [
         {
           "start": 50,
@@ -1035599,11 +1035764,25 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 1208,
+          "end": 1209,
+          "symbol": "M:ad.a(I)V",
+          "original": "a",
+          "renamed": "invalidateFogOfWarSprite"
+        },
+        {
           "start": 1232,
           "end": 1235,
           "symbol": "C:hib",
           "original": "hib",
           "renamed": "SetMassDriverAimspeed"
+        },
+        {
+          "start": 1236,
+          "end": 1237,
+          "symbol": "M:hib.a(I)V",
+          "original": "a",
+          "renamed": "invalidateFogOfWarSprite"
         },
         {
           "start": 1285,
@@ -1035639,7 +1035818,7 @@
       "original": "ada.java",
       "renamed": "PartitionZoneListFactory.java",
       "inputSha256": "ebb60aa09d85e52f1acbfe75a017f1dbe5a8dd7c3a34ac5a920e3a09aefd0dfc",
-      "outputSha256": "d8bac91b3a4eac87d0bcc8c94d7158fbb5ee7b93484d0502291c2892d34cf088",
+      "outputSha256": "adf80f8bfe1c2812978f9ffcd6012ee26986c3b3e7fb9b63e206550f01d76eb0",
       "edits": [
         {
           "start": 69,
@@ -1035670,6 +1035849,13 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 328,
+          "end": 329,
+          "symbol": "M:ada.a(Ljava/lang/String;Z)I",
+          "original": "a",
+          "renamed": "prepareNativeLibrary"
+        },
+        {
           "start": 1355,
           "end": 1358,
           "symbol": "C:nwa",
@@ -1035689,6 +1035875,13 @@
           "symbol": "C:jma",
           "original": "jma",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 1470,
+          "end": 1477,
+          "symbol": "F:jma.field_q:Ljava/util/Hashtable;",
+          "original": "field_q",
+          "renamed": "nativeLibraryFiles"
         },
         {
           "start": 1594,
@@ -1035817,6 +1036010,13 @@
           "renamed": "GetSelfDestructActivateCooldown"
         },
         {
+          "start": 4055,
+          "end": 4056,
+          "symbol": "M:td.a(BLjava/lang/String;Ljava/io/File;)V",
+          "original": "a",
+          "renamed": "registerNativeLibraryFile"
+        },
+        {
           "start": 4678,
           "end": 4681,
           "symbol": "C:rta",
@@ -1035885,6 +1036085,13 @@
           "symbol": "C:cda",
           "original": "cda",
           "renamed": "PartitionZoneList"
+        },
+        {
+          "start": 5182,
+          "end": 5183,
+          "symbol": "M:ada.a(Lrsb;Llbb;Z[Lrna;)I",
+          "original": "a",
+          "renamed": "getTeamForActions"
         },
         {
           "start": 5184,
@@ -1041460,7 +1041667,7 @@
       "original": "ah.java",
       "renamed": "SetReadyRoomMutatorTime.java",
       "inputSha256": "108913c1a578a9c321c0da1ec8b24559b68f6bb2ca5e9809b0c1df487c29016c",
-      "outputSha256": "6b5a748d31538fa888c80c6e8f8cf6eda81c3d6ecf48a61dbd107dffe88448f5",
+      "outputSha256": "4ff4037ec04b0b940ad3297c014c79e88449cc788580a3a4349a7442c736ef7c",
       "edits": [
         {
           "start": 50,
@@ -1041475,6 +1041682,13 @@
           "symbol": "C:rqa",
           "original": "rqa",
           "renamed": "ConsoleCommand"
+        },
+        {
+          "start": 116,
+          "end": 117,
+          "symbol": "M:ah.e(I)V",
+          "original": "e",
+          "renamed": "buildToolkitSprites"
         },
         {
           "start": 342,
@@ -1041715,6 +1041929,13 @@
           "renamed": "obfuscationGuard"
         },
         {
+          "start": 2631,
+          "end": 2632,
+          "symbol": "M:ah.a(IZ)V",
+          "original": "a",
+          "renamed": "requestFullscreen"
+        },
+        {
           "start": 2752,
           "end": 2755,
           "symbol": "C:hcb",
@@ -1041923,7 +1042144,7 @@
       "original": "aha.java",
       "renamed": "SetCountermeasureLauncherRandomness.java",
       "inputSha256": "044ba074fcb2d5dd16c695f9fda1c809dd9f2dfbb6be7667dc651aa6ab8b7d85",
-      "outputSha256": "d32ad22e6c8b457379be28349d3d88533f0e4550b3d5d8091a633ae486786ba7",
+      "outputSha256": "ca6e0bc8a5a83197f52b391a62f80c4b9a57ed0410c9263db52cc0ba1826e1a3",
       "edits": [
         {
           "start": 50,
@@ -1042057,6 +1042278,13 @@
           "symbol": "P:aha.a([Lnc;I)Lnc;#1",
           "original": "param1",
           "renamed": "obfuscationGuard"
+        },
+        {
+          "start": 1271,
+          "end": 1272,
+          "symbol": "M:aha.a(IIIIB)V",
+          "original": "a",
+          "renamed": "drawDottedFocusRectangle"
         },
         {
           "start": 2072,
@@ -1042456,6 +1042684,13 @@
           "symbol": "C:aha",
           "original": "aha",
           "renamed": "SetCountermeasureLauncherRandomness"
+        },
+        {
+          "start": 5127,
+          "end": 5128,
+          "symbol": "M:aha.a(IIIIB)V",
+          "original": "a",
+          "renamed": "drawDottedFocusRectangle"
         },
         {
           "start": 5183,
@@ -1123540,7 +1123775,7 @@
       "original": "bpa.java",
       "renamed": "UiComboBoxRenderer.java",
       "inputSha256": "5428e767a5a233302ad89ef75cc6db60512e2b4d0a4e15e7d2cc53be5b966dce",
-      "outputSha256": "5a42c1dd556982b29a44f98f68f70b0438108fc9dc7dea7a1da8e9d20f1a1608",
+      "outputSha256": "395ad19d08a00ede8351a231b123dddadd5c1dba1b23b86c159b667368022bcc",
       "edits": [
         {
           "start": 50,
@@ -1123744,6 +1123979,13 @@
           "symbol": "C:aha",
           "original": "aha",
           "renamed": "SetCountermeasureLauncherRandomness"
+        },
+        {
+          "start": 1646,
+          "end": 1647,
+          "symbol": "M:aha.a(IIIIB)V",
+          "original": "a",
+          "renamed": "drawDottedFocusRectangle"
         },
         {
           "start": 1665,
@@ -1242558,7 +1242800,7 @@
       "original": "dw.java",
       "renamed": "ActiveIconBorderRenderer.java",
       "inputSha256": "96b1e7faa350732cb7404d424d33f7f3fb3eeff97ffc356a5d840480b351b787",
-      "outputSha256": "76fbe737b267fed9c6bb8e5d8a38e26212ead69a6103196ca03c71fb716216f7",
+      "outputSha256": "1e0531fd20df28d34cf80b7a504f2856e44a5ff58c2127f3143238c290e3f081",
       "edits": [
         {
           "start": 50,
@@ -1242741,6 +1242983,13 @@
           "symbol": "C:aha",
           "original": "aha",
           "renamed": "SetCountermeasureLauncherRandomness"
+        },
+        {
+          "start": 1208,
+          "end": 1209,
+          "symbol": "M:aha.a(IIIIB)V",
+          "original": "a",
+          "renamed": "drawDottedFocusRectangle"
         },
         {
           "start": 1227,
@@ -1260132,7 +1260381,7 @@
       "original": "epb.java",
       "renamed": "OpenGlTransform3D.java",
       "inputSha256": "5d8cd4613a1b860e416dec0e9fc27a2f7fcc06b7a76978fb493cdd25e008dc26",
-      "outputSha256": "ba9a5f14e1d1b31b60706bb1e2779cc3583916dee3656ac0e2d25c3092be2ba7",
+      "outputSha256": "4d9376068f713149fdb3567d539e5421f97233565470b5d016ac0ef59937b030",
       "edits": [
         {
           "start": 50,
@@ -1260196,6 +1260445,13 @@
           "symbol": "C:phb",
           "original": "phb",
           "renamed": "Sprite"
+        },
+        {
+          "start": 244,
+          "end": 251,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
         },
         {
           "start": 271,
@@ -1261332,11 +1261588,32 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 6954,
+          "end": 6961,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
+        },
+        {
           "start": 6965,
           "end": 6968,
           "symbol": "C:phb",
           "original": "phb",
           "renamed": "Sprite"
+        },
+        {
+          "start": 6986,
+          "end": 6993,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
+        },
+        {
+          "start": 7038,
+          "end": 7045,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
         },
         {
           "start": 7076,
@@ -1264667,7 +1264944,7 @@
       "original": "eu.java",
       "renamed": "TextureLineShape.java",
       "inputSha256": "d2bddd0a8f2c528de70f8a14471be5a2fdda162c4f8731f59bb189cd9f0eafa0",
-      "outputSha256": "4a4ba762c4a88ba123ee88b1f69ef1392a46571b50bb3cdde13270b6a7a3da61",
+      "outputSha256": "dd8ddca2321dd6f0151f93288af362a221dd0c3f10eccd7d9c813bec98cb3d70",
       "edits": [
         {
           "start": 50,
@@ -1264710,6 +1264987,13 @@
           "symbol": "C:lpb",
           "original": "lpb",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 156,
+          "end": 163,
+          "symbol": "F:eu.field_h:Llpb;",
+          "original": "field_h",
+          "renamed": "pendingArchiveSocket"
         },
         {
           "start": 176,
@@ -1264845,11 +1265129,32 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 1217,
+          "end": 1224,
+          "symbol": "F:eu.field_h:Llpb;",
+          "original": "field_h",
+          "renamed": "pendingArchiveSocket"
+        },
+        {
           "start": 1228,
           "end": 1231,
           "symbol": "C:lpb",
           "original": "lpb",
           "renamed": "BufferedSocket"
+        },
+        {
+          "start": 1275,
+          "end": 1282,
+          "symbol": "F:eu.field_h:Llpb;",
+          "original": "field_h",
+          "renamed": "pendingArchiveSocket"
+        },
+        {
+          "start": 1351,
+          "end": 1358,
+          "symbol": "F:eu.field_h:Llpb;",
+          "original": "field_h",
+          "renamed": "pendingArchiveSocket"
         },
         {
           "start": 1389,
@@ -1267721,7 +1268026,7 @@
       "original": "fab.java",
       "renamed": "GraphicsToolkitSelector.java",
       "inputSha256": "e644c7f6adf75d18b7fbec12dd50ee8b1cb6906b2b2908063f025b6084043381",
-      "outputSha256": "447639549cfb5219e15f3feb540b94433d532aed45ff5ca55956b8bb6c6c94b4",
+      "outputSha256": "257c0fb303c2ee070282186d3dbcafe61b35f5e0c6d3ee159505c42ce1881f82",
       "edits": [
         {
           "start": 50,
@@ -1268081,6 +1268386,13 @@
           "renamed": "PartitionZoneListFactory"
         },
         {
+          "start": 4872,
+          "end": 4873,
+          "symbol": "M:ada.a(Ljava/lang/String;Z)I",
+          "original": "a",
+          "renamed": "prepareNativeLibrary"
+        },
+        {
           "start": 4960,
           "end": 4967,
           "symbol": "F:fs.field_b:Z",
@@ -1268093,6 +1268405,13 @@
           "symbol": "C:ada",
           "original": "ada",
           "renamed": "PartitionZoneListFactory"
+        },
+        {
+          "start": 5220,
+          "end": 5221,
+          "symbol": "M:ada.a(Ljava/lang/String;Z)I",
+          "original": "a",
+          "renamed": "prepareNativeLibrary"
         },
         {
           "start": 5311,
@@ -1268123,6 +1268442,13 @@
           "renamed": "PartitionZoneListFactory"
         },
         {
+          "start": 5809,
+          "end": 5810,
+          "symbol": "M:ada.a(Ljava/lang/String;Z)I",
+          "original": "a",
+          "renamed": "prepareNativeLibrary"
+        },
+        {
           "start": 5901,
           "end": 5908,
           "symbol": "F:fs.field_b:Z",
@@ -1268137,6 +1268463,13 @@
           "renamed": "PartitionZoneListFactory"
         },
         {
+          "start": 6175,
+          "end": 6176,
+          "symbol": "M:ada.a(Ljava/lang/String;Z)I",
+          "original": "a",
+          "renamed": "prepareNativeLibrary"
+        },
+        {
           "start": 6270,
           "end": 6277,
           "symbol": "F:fs.field_b:Z",
@@ -1268149,6 +1268482,13 @@
           "symbol": "C:ada",
           "original": "ada",
           "renamed": "PartitionZoneListFactory"
+        },
+        {
+          "start": 6554,
+          "end": 6555,
+          "symbol": "M:ada.a(Ljava/lang/String;Z)I",
+          "original": "a",
+          "renamed": "prepareNativeLibrary"
         },
         {
           "start": 6648,
@@ -1268186,6 +1268526,13 @@
           "renamed": "PartitionZoneListFactory"
         },
         {
+          "start": 7304,
+          "end": 7305,
+          "symbol": "M:ada.a(Ljava/lang/String;Z)I",
+          "original": "a",
+          "renamed": "prepareNativeLibrary"
+        },
+        {
           "start": 7396,
           "end": 7403,
           "symbol": "F:fs.field_b:Z",
@@ -1268198,6 +1268545,13 @@
           "symbol": "C:ada",
           "original": "ada",
           "renamed": "PartitionZoneListFactory"
+        },
+        {
+          "start": 7670,
+          "end": 7671,
+          "symbol": "M:ada.a(Ljava/lang/String;Z)I",
+          "original": "a",
+          "renamed": "prepareNativeLibrary"
         },
         {
           "start": 7764,
@@ -1268228,6 +1268582,13 @@
           "renamed": "PartitionZoneListFactory"
         },
         {
+          "start": 8261,
+          "end": 8262,
+          "symbol": "M:ada.a(Ljava/lang/String;Z)I",
+          "original": "a",
+          "renamed": "prepareNativeLibrary"
+        },
+        {
           "start": 8343,
           "end": 8350,
           "symbol": "F:fs.field_b:Z",
@@ -1268242,6 +1268603,13 @@
           "renamed": "PartitionZoneListFactory"
         },
         {
+          "start": 8589,
+          "end": 8590,
+          "symbol": "M:ada.a(Ljava/lang/String;Z)I",
+          "original": "a",
+          "renamed": "prepareNativeLibrary"
+        },
+        {
           "start": 8677,
           "end": 8684,
           "symbol": "F:fs.field_b:Z",
@@ -1268254,6 +1268622,13 @@
           "symbol": "C:ada",
           "original": "ada",
           "renamed": "PartitionZoneListFactory"
+        },
+        {
+          "start": 8933,
+          "end": 8934,
+          "symbol": "M:ada.a(Ljava/lang/String;Z)I",
+          "original": "a",
+          "renamed": "prepareNativeLibrary"
         },
         {
           "start": 9020,
@@ -1327498,7 +1327873,7 @@
       "original": "gob.java",
       "renamed": "GameInvitationText.java",
       "inputSha256": "86c1fe2d0e13a975c1379fd2fcc806e02008a30f19e91665c95100a4a213ca00",
-      "outputSha256": "7ea0f7d097ffd8609381dff04f34bad973131a594f30bd9624b0d63548315e6a",
+      "outputSha256": "6b8c56ac05ff3ce9548bb858e0afdf43bc5d6af1d30d366b9ceee9bb7897f71a",
       "edits": [
         {
           "start": 50,
@@ -1327506,6 +1327881,13 @@
           "symbol": "C:gob",
           "original": "gob",
           "renamed": "GameInvitationText"
+        },
+        {
+          "start": 71,
+          "end": 78,
+          "symbol": "F:gob.field_c:I",
+          "original": "field_c",
+          "renamed": "archiveConnectionStage"
         },
         {
           "start": 98,
@@ -1348624,7 +1349006,7 @@
       "original": "hib.java",
       "renamed": "SetMassDriverAimspeed.java",
       "inputSha256": "54a99e7fd7f9bd8f819a8256551a2966e7f2d8c4e530be5f2492bb1135fd6747",
-      "outputSha256": "eec2d38fba344c1ff920b7291f4ceb9c6de25c3e5959ce3589b41d7dd59029c0",
+      "outputSha256": "2e2e503a60ec961b2ab0ce70e1fcf94b9e45e56feb845bb3e1fa1f386b2343fb",
       "edits": [
         {
           "start": 50,
@@ -1348641,11 +1349023,25 @@
           "renamed": "ConsoleCommand"
         },
         {
+          "start": 90,
+          "end": 91,
+          "symbol": "M:hib.a(I)V",
+          "original": "a",
+          "renamed": "invalidateFogOfWarSprite"
+        },
+        {
           "start": 161,
           "end": 163,
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "GetGrapplingHooksDamageableBySourcePlayer"
+        },
+        {
+          "start": 164,
+          "end": 171,
+          "symbol": "F:ll.field_p:Laja;",
+          "original": "field_p",
+          "renamed": "toolkitFogOfWarSprite"
         },
         {
           "start": 191,
@@ -1355737,7 +1356133,7 @@
       "original": "hnb.java",
       "renamed": "DisplayModeDialog.java",
       "inputSha256": "5f7529d4a097fb70d71ec7aa2b283b5cf88c039549283336b15eb3af3de3dd2f",
-      "outputSha256": "b7f11954e461cd6fbcbee7b96d2bba12365856082dedc6922eb59bcbed5a2ee4",
+      "outputSha256": "77c564b7e47f2b6842694498dd854b3218de0a5e5a48a491e70797ba29a1aef3",
       "edits": [
         {
           "start": 50,
@@ -1358890,6 +1359286,13 @@
           "renamed": "SetReadyRoomMutatorTime"
         },
         {
+          "start": 25020,
+          "end": 25021,
+          "symbol": "M:ah.a(IZ)V",
+          "original": "a",
+          "renamed": "requestFullscreen"
+        },
+        {
           "start": 25053,
           "end": 25060,
           "symbol": "F:bl.field_v:Lida;",
@@ -1358923,6 +1359326,13 @@
           "symbol": "C:ah",
           "original": "ah",
           "renamed": "SetReadyRoomMutatorTime"
+        },
+        {
+          "start": 25136,
+          "end": 25137,
+          "symbol": "M:ah.a(IZ)V",
+          "original": "a",
+          "renamed": "requestFullscreen"
         },
         {
           "start": 25169,
@@ -1382684,7 +1383094,7 @@
       "original": "ija.java",
       "renamed": "SoftwareSprite2D.java",
       "inputSha256": "aa168fd4c6acb324d3b8094b67f3fabd52aa2b9d3b21d7a2c81993b13ceab1d5",
-      "outputSha256": "51055858db452b2ccffdd82f6a9befb30c4311991e44620d893508e48dec3e33",
+      "outputSha256": "c6e9f4a17b7522decfc40d2f2e6449e10f80d1b6434f8faf3557331c42234eda",
       "edits": [
         {
           "start": 53,
@@ -1382727,6 +1383137,13 @@
           "symbol": "C:mob",
           "original": "mob",
           "renamed": "PlatformRequest"
+        },
+        {
+          "start": 169,
+          "end": 176,
+          "symbol": "F:ija.field_b:Lmob;",
+          "original": "field_b",
+          "renamed": "archiveSocketRequest"
         },
         {
           "start": 186,
@@ -1382904,11 +1383321,32 @@
           "renamed": "clearSharedReferences"
         },
         {
+          "start": 1217,
+          "end": 1224,
+          "symbol": "F:ija.field_b:Lmob;",
+          "original": "field_b",
+          "renamed": "archiveSocketRequest"
+        },
+        {
           "start": 1228,
           "end": 1231,
           "symbol": "C:mob",
           "original": "mob",
           "renamed": "PlatformRequest"
+        },
+        {
+          "start": 1249,
+          "end": 1256,
+          "symbol": "F:ija.field_b:Lmob;",
+          "original": "field_b",
+          "renamed": "archiveSocketRequest"
+        },
+        {
+          "start": 1301,
+          "end": 1308,
+          "symbol": "F:ija.field_b:Lmob;",
+          "original": "field_b",
+          "renamed": "archiveSocketRequest"
         },
         {
           "start": 1350,
@@ -1400101,7 +1400539,7 @@
       "original": "jc.java",
       "renamed": "GetSpinningBladeSpindamageMultiplier.java",
       "inputSha256": "b60850b7d2fc1e6c98cc0973a8586086fb7b9c76521b7f7092a877b8133fb766",
-      "outputSha256": "99c0aaed7f1ba9dbc8fbc38f1638a0aae7ec72753addb17acd8d2e353ff8cd03",
+      "outputSha256": "3044abac10c6286cb8cbcc572b3518ffe3b1842aec71757eac2a702bad3189c3",
       "edits": [
         {
           "start": 50,
@@ -1400263,6 +1400701,13 @@
           "symbol": "C:ad",
           "original": "ad",
           "renamed": "SetBombletSprayProjectiles"
+        },
+        {
+          "start": 847,
+          "end": 848,
+          "symbol": "M:ad.a(I)V",
+          "original": "a",
+          "renamed": "invalidateFogOfWarSprite"
         },
         {
           "start": 873,
@@ -1400592,6 +1401037,13 @@
           "symbol": "C:ad",
           "original": "ad",
           "renamed": "SetBombletSprayProjectiles"
+        },
+        {
+          "start": 2945,
+          "end": 2946,
+          "symbol": "M:ad.a(I)V",
+          "original": "a",
+          "renamed": "invalidateFogOfWarSprite"
         },
         {
           "start": 2978,
@@ -1406483,7 +1406935,7 @@
       "original": "jia.java",
       "renamed": "SetReverbDry.java",
       "inputSha256": "991a1086c4d25a8cd79cbd110c33e7fb3003e814a6a87e7c1b5acd70f125d6d5",
-      "outputSha256": "933fc3a5b01879185ffdf3a808c075ca8900bb3c14e329e38ec8a8d0e3211973",
+      "outputSha256": "ebefd150a3a589655a7f204c553bfac961f4569a08cfc39ad717a8eae561d2e6",
       "edits": [
         {
           "start": 50,
@@ -1407025,11 +1407477,25 @@
           "renamed": "GzipCodec"
         },
         {
+          "start": 4518,
+          "end": 4519,
+          "symbol": "M:jia.a(II)I",
+          "original": "a",
+          "renamed": "handleArchiveConnectionError"
+        },
+        {
           "start": 4594,
           "end": 4597,
           "symbol": "C:ija",
           "original": "ija",
           "renamed": "SoftwareSprite2D"
+        },
+        {
+          "start": 4598,
+          "end": 4605,
+          "symbol": "F:ija.field_b:Lmob;",
+          "original": "field_b",
+          "renamed": "archiveSocketRequest"
         },
         {
           "start": 4622,
@@ -1407039,11 +1407505,25 @@
           "renamed": "GameInvitationText"
         },
         {
+          "start": 4626,
+          "end": 4633,
+          "symbol": "F:gob.field_c:I",
+          "original": "field_c",
+          "renamed": "archiveConnectionStage"
+        },
+        {
           "start": 4647,
           "end": 4649,
           "symbol": "C:eu",
           "original": "eu",
           "renamed": "TextureLineShape"
+        },
+        {
+          "start": 4650,
+          "end": 4657,
+          "symbol": "F:eu.field_h:Llpb;",
+          "original": "field_h",
+          "renamed": "pendingArchiveSocket"
         },
         {
           "start": 4685,
@@ -1410618,7 +1411098,7 @@
       "original": "jma.java",
       "renamed": "DiskArchiveRequest.java",
       "inputSha256": "384a09ba1785d2b200abd5b4c01800a3630a3377e5a161986090f273accc654e",
-      "outputSha256": "2f06406ddca0889d4ad99fdae54cff2422faaa7543271b10de470f9132c01d1d",
+      "outputSha256": "a6a821ab81b7e222968e90f68c1e7c6fb7ece0ab91379954084d9dac01ebfc62",
       "edits": [
         {
           "start": 71,
@@ -1410640,6 +1411120,13 @@
           "symbol": "F:jma.field_r:I",
           "original": "field_r",
           "renamed": "operation"
+        },
+        {
+          "start": 127,
+          "end": 134,
+          "symbol": "F:jma.field_q:Ljava/util/Hashtable;",
+          "original": "field_q",
+          "renamed": "nativeLibraryFiles"
         },
         {
           "start": 140,
@@ -1410689,6 +1411176,13 @@
           "symbol": "M:jma.e(I)V",
           "original": "e",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 414,
+          "end": 421,
+          "symbol": "F:jma.field_q:Ljava/util/Hashtable;",
+          "original": "field_q",
+          "renamed": "nativeLibraryFiles"
         },
         {
           "start": 469,
@@ -1410745,6 +1411239,13 @@
           "symbol": "M:jma.<init>()V",
           "original": "jma",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 801,
+          "end": 808,
+          "symbol": "F:jma.field_q:Ljava/util/Hashtable;",
+          "original": "field_q",
+          "renamed": "nativeLibraryFiles"
         }
       ]
     },
@@ -1435031,7 +1435532,7 @@
       "original": "kea.java",
       "renamed": "NativeLibraryLoader.java",
       "inputSha256": "c07ae042123c92a727a0ab80bdcf88df4066417b395fc0c3719647cd557b4dec",
-      "outputSha256": "d33478fed5932c3703a2b2baeb62902c6ad7231f03cccade3fc76bb2deae6efe",
+      "outputSha256": "6c705af6714206c5d28aa2137aadfc99b0f38e41b2b29f048807c7cab58cc48c",
       "edits": [
         {
           "start": 69,
@@ -1435067,6 +1435568,13 @@
           "symbol": "C:jma",
           "original": "jma",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 1272,
+          "end": 1279,
+          "symbol": "F:jma.field_q:Ljava/util/Hashtable;",
+          "original": "field_q",
+          "renamed": "nativeLibraryFiles"
         },
         {
           "start": 2107,
@@ -1440863,7 +1441371,7 @@
       "original": "kja.java",
       "renamed": "HotspotTextWidget.java",
       "inputSha256": "f60f23c9d4f46586e5a551ad0593d70547f9058a4a30d04a7d596e67ad807601",
-      "outputSha256": "3e7aa8a723bdbcbd14b34f0196d8167d6d4084ac7eeb97a470e583c3181026e1",
+      "outputSha256": "041a90b6cb06a202bbaf884e9c4c7a64e83157fe21cc5b414132505fd82c058a",
       "edits": [
         {
           "start": 44,
@@ -1441571,6 +1442079,13 @@
           "symbol": "C:aha",
           "original": "aha",
           "renamed": "SetCountermeasureLauncherRandomness"
+        },
+        {
+          "start": 6293,
+          "end": 6294,
+          "symbol": "M:aha.a(IIIIB)V",
+          "original": "a",
+          "renamed": "drawDottedFocusRectangle"
         },
         {
           "start": 6300,
@@ -1472036,7 +1472551,7 @@
       "original": "ll.java",
       "renamed": "GetGrapplingHooksDamageableBySourcePlayer.java",
       "inputSha256": "3c8b47cd66618391c303e04007029072a745661172abaf97750bc46e13eb55ea",
-      "outputSha256": "20ed4c4ce2fbe57fbe550f5bbec0850a374500cd005d173484e24a3ce369c1b3",
+      "outputSha256": "d308ed703f3539474e44c1df4dc7223c16009009210395d4ef068e9298689363",
       "edits": [
         {
           "start": 89,
@@ -1472058,6 +1472573,13 @@
           "symbol": "C:aja",
           "original": "aja",
           "renamed": "ToolkitSprite"
+        },
+        {
+          "start": 121,
+          "end": 128,
+          "symbol": "F:ll.field_p:Laja;",
+          "original": "field_p",
+          "renamed": "toolkitFogOfWarSprite"
         },
         {
           "start": 250,
@@ -1472205,6 +1472727,20 @@
           "symbol": "M:ll.e(I)V",
           "original": "e",
           "renamed": "clearSharedReferences"
+        },
+        {
+          "start": 1560,
+          "end": 1567,
+          "symbol": "F:ll.field_p:Laja;",
+          "original": "field_p",
+          "renamed": "toolkitFogOfWarSprite"
+        },
+        {
+          "start": 1800,
+          "end": 1807,
+          "symbol": "F:ll.field_p:Laja;",
+          "original": "field_p",
+          "renamed": "toolkitFogOfWarSprite"
         },
         {
           "start": 1811,
@@ -1494185,7 +1494721,7 @@
       "original": "meb.java",
       "renamed": "UnderlinedLinkRenderer.java",
       "inputSha256": "cc80449b8191426d5315fdeda352743b9432e3ecf8075b7646d05e988a747d89",
-      "outputSha256": "8fb051829ff014cd9cdffa12e12a98d961115a7cc4b71117be2d338c0fb9674f",
+      "outputSha256": "2244e5ecae00fe71983c7e6c75d9de7aa10f9c1343433250f23da9a2d4aa6832",
       "edits": [
         {
           "start": 50,
@@ -1494578,6 +1495114,13 @@
           "symbol": "C:aha",
           "original": "aha",
           "renamed": "SetCountermeasureLauncherRandomness"
+        },
+        {
+          "start": 2537,
+          "end": 2538,
+          "symbol": "M:aha.a(IIIIB)V",
+          "original": "a",
+          "renamed": "drawDottedFocusRectangle"
         },
         {
           "start": 3063,
@@ -1576389,7 +1576932,7 @@
       "original": "ocb.java",
       "renamed": "PasswordValidator.java",
       "inputSha256": "0cb2f8dca6a5a2580dfee9754419c3a51e7d109431c32705a02676864284a11e",
-      "outputSha256": "3a83b7a781ee501faeede2063bd4cb5b5439adf82b516dbc7328e9f5862e4e04",
+      "outputSha256": "a000d6a667d73c62684c44772d0734ac5f624100990c105f10d7eaef90d6e969",
       "edits": [
         {
           "start": 50,
@@ -1576894,6 +1577437,13 @@
           "symbol": "C:ah",
           "original": "ah",
           "renamed": "SetReadyRoomMutatorTime"
+        },
+        {
+          "start": 5420,
+          "end": 5421,
+          "symbol": "M:ah.e(I)V",
+          "original": "e",
+          "renamed": "buildToolkitSprites"
         },
         {
           "start": 5458,
@@ -1728378,7 +1728928,7 @@
       "original": "roa.java",
       "renamed": "GpuModel.java",
       "inputSha256": "e2cde29f738f0bb136fc86d277c6d2cc26f52107b9dc5b67817a9159f7ec6550",
-      "outputSha256": "e81d6c91bf49617e5805af364f157babe07310edf9b1f6590fbd50b067e7a559",
+      "outputSha256": "9d28d2e45aa36a1f98a52b4a9d6af0dc9ad3ee62a55b343fc9e51ec27ddb1cde",
       "edits": [
         {
           "start": 50,
@@ -1730633,6 +1731183,13 @@
           "symbol": "C:aba",
           "original": "aba",
           "renamed": "TextureCombineOperation"
+        },
+        {
+          "start": 37917,
+          "end": 37918,
+          "symbol": "M:aba.a([BII)[B",
+          "original": "a",
+          "renamed": "copyBytePrefix"
         },
         {
           "start": 37981,
@@ -1794206,7 +1794763,7 @@
       "original": "td.java",
       "renamed": "GetSelfDestructActivateCooldown.java",
       "inputSha256": "a1d171eef7c9b93efc1fff6e5abe2dc9e4811787d0a2ea83cea43ca0841f08b9",
-      "outputSha256": "7c28f7421e900d6795180753300d2b15975169a6e18da112e78f7661dc141fc1",
+      "outputSha256": "ea3e4fc37c8638eaa7e5b9db9795611bba06e363c194c3e2eeda79eabe3edb4a",
       "edits": [
         {
           "start": 69,
@@ -1794221,6 +1794778,13 @@
           "symbol": "C:rqa",
           "original": "rqa",
           "renamed": "ConsoleCommand"
+        },
+        {
+          "start": 110,
+          "end": 111,
+          "symbol": "M:td.a(II)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "getComponentTypeName"
         },
         {
           "start": 182,
@@ -1794307,6 +1794871,13 @@
           "renamed": "GetSelfDestructActivateCooldown"
         },
         {
+          "start": 1113,
+          "end": 1114,
+          "symbol": "M:td.a(BLjava/lang/String;Ljava/io/File;)V",
+          "original": "a",
+          "renamed": "registerNativeLibraryFile"
+        },
+        {
           "start": 1196,
           "end": 1198,
           "symbol": "C:nc",
@@ -1794349,11 +1794920,25 @@
           "renamed": "GetSelfDestructActivateCooldown"
         },
         {
+          "start": 1963,
+          "end": 1964,
+          "symbol": "M:td.a(BLjava/lang/String;Ljava/io/File;)V",
+          "original": "a",
+          "renamed": "registerNativeLibraryFile"
+        },
+        {
           "start": 2032,
           "end": 2035,
           "symbol": "C:jma",
           "original": "jma",
           "renamed": "DiskArchiveRequest"
+        },
+        {
+          "start": 2036,
+          "end": 2043,
+          "symbol": "F:jma.field_q:Ljava/util/Hashtable;",
+          "original": "field_q",
+          "renamed": "nativeLibraryFiles"
         },
         {
           "start": 2187,
@@ -1825203,7 +1825788,7 @@
       "original": "uca.java",
       "renamed": "GameSession.java",
       "inputSha256": "6411540835dfa3b22b2bd717fb0fa6399b771ecbf519ebf16dcb3d8f7f24035c",
-      "outputSha256": "c5514514521a6d4fee63850ef0daef8d2d1d6324c3d22c00b6226e510148df39",
+      "outputSha256": "2f97d61ec5b4c74a7b928b522ebc767e65274fde3b6131ac9c903f1e3a12eb98",
       "edits": [
         {
           "start": 71,
@@ -1827201,11 +1827786,25 @@
           "renamed": "OpenGlTransform3D"
         },
         {
+          "start": 20541,
+          "end": 20548,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
+        },
+        {
           "start": 20564,
           "end": 20567,
           "symbol": "C:epb",
           "original": "epb",
           "renamed": "OpenGlTransform3D"
+        },
+        {
+          "start": 20568,
+          "end": 20575,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
         },
         {
           "start": 20576,
@@ -1827227,6 +1827826,13 @@
           "symbol": "C:epb",
           "original": "epb",
           "renamed": "OpenGlTransform3D"
+        },
+        {
+          "start": 20618,
+          "end": 20625,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
         },
         {
           "start": 20626,
@@ -1827255,6 +1827861,13 @@
           "symbol": "C:epb",
           "original": "epb",
           "renamed": "OpenGlTransform3D"
+        },
+        {
+          "start": 20733,
+          "end": 20740,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
         },
         {
           "start": 20744,
@@ -1827292,6 +1827905,13 @@
           "renamed": "GetGrapplingHooksDamageableBySourcePlayer"
         },
         {
+          "start": 20840,
+          "end": 20847,
+          "symbol": "F:ll.field_p:Laja;",
+          "original": "field_p",
+          "renamed": "toolkitFogOfWarSprite"
+        },
+        {
           "start": 20897,
           "end": 20899,
           "symbol": "C:li",
@@ -1827306,11 +1827926,25 @@
           "renamed": "GetGrapplingHooksDamageableBySourcePlayer"
         },
         {
+          "start": 20953,
+          "end": 20960,
+          "symbol": "F:ll.field_p:Laja;",
+          "original": "field_p",
+          "renamed": "toolkitFogOfWarSprite"
+        },
+        {
           "start": 20984,
           "end": 20986,
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "GetGrapplingHooksDamageableBySourcePlayer"
+        },
+        {
+          "start": 20987,
+          "end": 20994,
+          "symbol": "F:ll.field_p:Laja;",
+          "original": "field_p",
+          "renamed": "toolkitFogOfWarSprite"
         },
         {
           "start": 20995,
@@ -1827332,6 +1827966,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "GetGrapplingHooksDamageableBySourcePlayer"
+        },
+        {
+          "start": 21032,
+          "end": 21039,
+          "symbol": "F:ll.field_p:Laja;",
+          "original": "field_p",
+          "renamed": "toolkitFogOfWarSprite"
         },
         {
           "start": 21040,
@@ -1827362,6 +1828003,13 @@
           "renamed": "GetGrapplingHooksDamageableBySourcePlayer"
         },
         {
+          "start": 21142,
+          "end": 21149,
+          "symbol": "F:ll.field_p:Laja;",
+          "original": "field_p",
+          "renamed": "toolkitFogOfWarSprite"
+        },
+        {
           "start": 21201,
           "end": 21204,
           "symbol": "C:epb",
@@ -1827369,11 +1828017,25 @@
           "renamed": "OpenGlTransform3D"
         },
         {
+          "start": 21205,
+          "end": 21212,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
+        },
+        {
           "start": 21247,
           "end": 21249,
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "GetGrapplingHooksDamageableBySourcePlayer"
+        },
+        {
+          "start": 21250,
+          "end": 21257,
+          "symbol": "F:ll.field_p:Laja;",
+          "original": "field_p",
+          "renamed": "toolkitFogOfWarSprite"
         },
         {
           "start": 21260,
@@ -1827461,6 +1828123,13 @@
           "renamed": "OpenGlTransform3D"
         },
         {
+          "start": 21629,
+          "end": 21636,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
+        },
+        {
           "start": 21655,
           "end": 21658,
           "symbol": "C:dma",
@@ -1827508,6 +1828177,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "GetGrapplingHooksDamageableBySourcePlayer"
+        },
+        {
+          "start": 21761,
+          "end": 21768,
+          "symbol": "F:ll.field_p:Laja;",
+          "original": "field_p",
+          "renamed": "toolkitFogOfWarSprite"
         },
         {
           "start": 21790,
@@ -1828034,6 +1828710,13 @@
           "renamed": "OpenGlTransform3D"
         },
         {
+          "start": 26113,
+          "end": 26120,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
+        },
+        {
           "start": 26121,
           "end": 26122,
           "symbol": "M:phb.a(II)V",
@@ -1828046,6 +1828729,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "GetGrapplingHooksDamageableBySourcePlayer"
+        },
+        {
+          "start": 26200,
+          "end": 26207,
+          "symbol": "F:ll.field_p:Laja;",
+          "original": "field_p",
+          "renamed": "toolkitFogOfWarSprite"
         },
         {
           "start": 26208,
@@ -1828062,6 +1828752,13 @@
           "renamed": "OpenGlTransform3D"
         },
         {
+          "start": 26220,
+          "end": 26227,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
+        },
+        {
           "start": 26228,
           "end": 26235,
           "symbol": "F:sqb.field_q:I",
@@ -1828074,6 +1828771,13 @@
           "symbol": "C:epb",
           "original": "epb",
           "renamed": "OpenGlTransform3D"
+        },
+        {
+          "start": 26241,
+          "end": 26248,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
         },
         {
           "start": 26249,
@@ -1828090,6 +1828794,13 @@
           "renamed": "OpenGlTransform3D"
         },
         {
+          "start": 26262,
+          "end": 26269,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
+        },
+        {
           "start": 26270,
           "end": 26277,
           "symbol": "F:phb.field_r:[I",
@@ -1828104,6 +1828815,13 @@
           "renamed": "OpenGlTransform3D"
         },
         {
+          "start": 26286,
+          "end": 26293,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
+        },
+        {
           "start": 26294,
           "end": 26301,
           "symbol": "F:sqb.field_q:I",
@@ -1828116,6 +1828834,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "GetGrapplingHooksDamageableBySourcePlayer"
+        },
+        {
+          "start": 26337,
+          "end": 26344,
+          "symbol": "F:ll.field_p:Laja;",
+          "original": "field_p",
+          "renamed": "toolkitFogOfWarSprite"
         },
         {
           "start": 26345,
@@ -1828358,6 +1829083,13 @@
           "renamed": "OpenGlTransform3D"
         },
         {
+          "start": 29097,
+          "end": 29104,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
+        },
+        {
           "start": 29105,
           "end": 29106,
           "symbol": "M:phb.a(II)V",
@@ -1828370,6 +1829102,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "GetGrapplingHooksDamageableBySourcePlayer"
+        },
+        {
+          "start": 29180,
+          "end": 29187,
+          "symbol": "F:ll.field_p:Laja;",
+          "original": "field_p",
+          "renamed": "toolkitFogOfWarSprite"
         },
         {
           "start": 29188,
@@ -1828386,6 +1829125,13 @@
           "renamed": "OpenGlTransform3D"
         },
         {
+          "start": 29200,
+          "end": 29207,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
+        },
+        {
           "start": 29208,
           "end": 29215,
           "symbol": "F:sqb.field_q:I",
@@ -1828398,6 +1829144,13 @@
           "symbol": "C:epb",
           "original": "epb",
           "renamed": "OpenGlTransform3D"
+        },
+        {
+          "start": 29221,
+          "end": 29228,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
         },
         {
           "start": 29229,
@@ -1828414,6 +1829167,13 @@
           "renamed": "OpenGlTransform3D"
         },
         {
+          "start": 29242,
+          "end": 29249,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
+        },
+        {
           "start": 29250,
           "end": 29257,
           "symbol": "F:phb.field_r:[I",
@@ -1828428,6 +1829188,13 @@
           "renamed": "OpenGlTransform3D"
         },
         {
+          "start": 29266,
+          "end": 29273,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
+        },
+        {
           "start": 29274,
           "end": 29281,
           "symbol": "F:sqb.field_q:I",
@@ -1828440,6 +1829207,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "GetGrapplingHooksDamageableBySourcePlayer"
+        },
+        {
+          "start": 29315,
+          "end": 29322,
+          "symbol": "F:ll.field_p:Laja;",
+          "original": "field_p",
+          "renamed": "toolkitFogOfWarSprite"
         },
         {
           "start": 29323,
@@ -1828476,6 +1829250,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "GetGrapplingHooksDamageableBySourcePlayer"
+        },
+        {
+          "start": 29569,
+          "end": 29576,
+          "symbol": "F:ll.field_p:Laja;",
+          "original": "field_p",
+          "renamed": "toolkitFogOfWarSprite"
         },
         {
           "start": 29577,
@@ -1828661,6 +1829442,13 @@
           "renamed": "GetGrapplingHooksDamageableBySourcePlayer"
         },
         {
+          "start": 30774,
+          "end": 30781,
+          "symbol": "F:ll.field_p:Laja;",
+          "original": "field_p",
+          "renamed": "toolkitFogOfWarSprite"
+        },
+        {
           "start": 30782,
           "end": 30783,
           "symbol": "M:aja.a(II)V",
@@ -1828689,6 +1829477,13 @@
           "renamed": "OpenGlTransform3D"
         },
         {
+          "start": 30959,
+          "end": 30966,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
+        },
+        {
           "start": 30967,
           "end": 30968,
           "symbol": "M:phb.a(II)V",
@@ -1828701,6 +1829496,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "GetGrapplingHooksDamageableBySourcePlayer"
+        },
+        {
+          "start": 31026,
+          "end": 31033,
+          "symbol": "F:ll.field_p:Laja;",
+          "original": "field_p",
+          "renamed": "toolkitFogOfWarSprite"
         },
         {
           "start": 31034,
@@ -1828717,6 +1829519,13 @@
           "renamed": "OpenGlTransform3D"
         },
         {
+          "start": 31046,
+          "end": 31053,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
+        },
+        {
           "start": 31054,
           "end": 31061,
           "symbol": "F:sqb.field_q:I",
@@ -1828729,6 +1829538,13 @@
           "symbol": "C:epb",
           "original": "epb",
           "renamed": "OpenGlTransform3D"
+        },
+        {
+          "start": 31067,
+          "end": 31074,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
         },
         {
           "start": 31075,
@@ -1828745,6 +1829561,13 @@
           "renamed": "OpenGlTransform3D"
         },
         {
+          "start": 31088,
+          "end": 31095,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
+        },
+        {
           "start": 31096,
           "end": 31103,
           "symbol": "F:phb.field_r:[I",
@@ -1828759,6 +1829582,13 @@
           "renamed": "OpenGlTransform3D"
         },
         {
+          "start": 31112,
+          "end": 31119,
+          "symbol": "F:epb.field_m:Lphb;",
+          "original": "field_m",
+          "renamed": "softwareFogOfWarSprite"
+        },
+        {
           "start": 31120,
           "end": 31127,
           "symbol": "F:sqb.field_q:I",
@@ -1828771,6 +1829601,13 @@
           "symbol": "C:ll",
           "original": "ll",
           "renamed": "GetGrapplingHooksDamageableBySourcePlayer"
+        },
+        {
+          "start": 31153,
+          "end": 31160,
+          "symbol": "F:ll.field_p:Laja;",
+          "original": "field_p",
+          "renamed": "toolkitFogOfWarSprite"
         },
         {
           "start": 31161,
@@ -1841860,6 +1842697,13 @@
           "renamed": "GetSelfDestructActivateCooldown"
         },
         {
+          "start": 171990,
+          "end": 171991,
+          "symbol": "M:td.a(II)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "getComponentTypeName"
+        },
+        {
           "start": 171998,
           "end": 171999,
           "symbol": "M:ml.i(B)Lwfb;",
@@ -1842012,6 +1842856,13 @@
           "symbol": "C:td",
           "original": "td",
           "renamed": "GetSelfDestructActivateCooldown"
+        },
+        {
+          "start": 172851,
+          "end": 172852,
+          "symbol": "M:td.a(II)Ljava/lang/String;",
+          "original": "a",
+          "renamed": "getComponentTypeName"
         },
         {
           "start": 172858,
@@ -1907260,7 +1908111,7 @@
       "original": "vq.java",
       "renamed": "DateOfBirthInput.java",
       "inputSha256": "55e178bb40e395c18a4d8dffda00153bb23b599103ef45f3123ae2d358c4c8e0",
-      "outputSha256": "9bde047d00562a8ec934e2223aa8ea7dc386b509b5f82647d40b4859914338cf",
+      "outputSha256": "c0d2807594bc98a2899745bf8ab07c3a2275849e5d1926070a964482f7f10c15",
       "edits": [
         {
           "start": 72,
@@ -1907571,11 +1908422,25 @@
           "renamed": "GameInvitationText"
         },
         {
+          "start": 3408,
+          "end": 3415,
+          "symbol": "F:gob.field_c:I",
+          "original": "field_c",
+          "renamed": "archiveConnectionStage"
+        },
+        {
           "start": 3433,
           "end": 3436,
           "symbol": "C:ija",
           "original": "ija",
           "renamed": "SoftwareSprite2D"
+        },
+        {
+          "start": 3437,
+          "end": 3444,
+          "symbol": "F:ija.field_b:Lmob;",
+          "original": "field_b",
+          "renamed": "archiveSocketRequest"
         },
         {
           "start": 3447,
@@ -1907613,11 +1908478,25 @@
           "renamed": "GameInvitationText"
         },
         {
+          "start": 3522,
+          "end": 3529,
+          "symbol": "F:gob.field_c:I",
+          "original": "field_c",
+          "renamed": "archiveConnectionStage"
+        },
+        {
           "start": 3532,
           "end": 3535,
           "symbol": "C:gob",
           "original": "gob",
           "renamed": "GameInvitationText"
+        },
+        {
+          "start": 3536,
+          "end": 3543,
+          "symbol": "F:gob.field_c:I",
+          "original": "field_c",
+          "renamed": "archiveConnectionStage"
         },
         {
           "start": 3584,
@@ -1907627,11 +1908506,25 @@
           "renamed": "GameInvitationText"
         },
         {
+          "start": 3588,
+          "end": 3595,
+          "symbol": "F:gob.field_c:I",
+          "original": "field_c",
+          "renamed": "archiveConnectionStage"
+        },
+        {
           "start": 3617,
           "end": 3620,
           "symbol": "C:ija",
           "original": "ija",
           "renamed": "SoftwareSprite2D"
+        },
+        {
+          "start": 3621,
+          "end": 3628,
+          "symbol": "F:ija.field_b:Lmob;",
+          "original": "field_b",
+          "renamed": "archiveSocketRequest"
         },
         {
           "start": 3629,
@@ -1907648,11 +1908541,25 @@
           "renamed": "SetReverbDry"
         },
         {
+          "start": 3680,
+          "end": 3681,
+          "symbol": "M:jia.a(II)I",
+          "original": "a",
+          "renamed": "handleArchiveConnectionError"
+        },
+        {
           "start": 3763,
           "end": 3766,
           "symbol": "C:ija",
           "original": "ija",
           "renamed": "SoftwareSprite2D"
+        },
+        {
+          "start": 3767,
+          "end": 3774,
+          "symbol": "F:ija.field_b:Lmob;",
+          "original": "field_b",
+          "renamed": "archiveSocketRequest"
         },
         {
           "start": 3775,
@@ -1907669,11 +1908576,25 @@
           "renamed": "GameInvitationText"
         },
         {
+          "start": 3811,
+          "end": 3818,
+          "symbol": "F:gob.field_c:I",
+          "original": "field_c",
+          "renamed": "archiveConnectionStage"
+        },
+        {
           "start": 3821,
           "end": 3824,
           "symbol": "C:gob",
           "original": "gob",
           "renamed": "GameInvitationText"
+        },
+        {
+          "start": 3825,
+          "end": 3832,
+          "symbol": "F:gob.field_c:I",
+          "original": "field_c",
+          "renamed": "archiveConnectionStage"
         },
         {
           "start": 3884,
@@ -1907683,11 +1908604,25 @@
           "renamed": "GameInvitationText"
         },
         {
+          "start": 3888,
+          "end": 3895,
+          "symbol": "F:gob.field_c:I",
+          "original": "field_c",
+          "renamed": "archiveConnectionStage"
+        },
+        {
           "start": 3918,
           "end": 3920,
           "symbol": "C:eu",
           "original": "eu",
           "renamed": "TextureLineShape"
+        },
+        {
+          "start": 3921,
+          "end": 3928,
+          "symbol": "F:eu.field_h:Llpb;",
+          "original": "field_h",
+          "renamed": "pendingArchiveSocket"
         },
         {
           "start": 3935,
@@ -1907702,6 +1908637,13 @@
           "symbol": "C:ija",
           "original": "ija",
           "renamed": "SoftwareSprite2D"
+        },
+        {
+          "start": 3962,
+          "end": 3969,
+          "symbol": "F:ija.field_b:Lmob;",
+          "original": "field_b",
+          "renamed": "archiveSocketRequest"
         },
         {
           "start": 3970,
@@ -1907781,6 +1908723,13 @@
           "renamed": "TextureLineShape"
         },
         {
+          "start": 4197,
+          "end": 4204,
+          "symbol": "F:eu.field_h:Llpb;",
+          "original": "field_h",
+          "renamed": "pendingArchiveSocket"
+        },
+        {
           "start": 4205,
           "end": 4206,
           "symbol": "M:lpb.a(I[BII)V",
@@ -1907802,11 +1908751,25 @@
           "renamed": "GameInvitationText"
         },
         {
+          "start": 4250,
+          "end": 4257,
+          "symbol": "F:gob.field_c:I",
+          "original": "field_c",
+          "renamed": "archiveConnectionStage"
+        },
+        {
           "start": 4260,
           "end": 4263,
           "symbol": "C:gob",
           "original": "gob",
           "renamed": "GameInvitationText"
+        },
+        {
+          "start": 4264,
+          "end": 4271,
+          "symbol": "F:gob.field_c:I",
+          "original": "field_c",
+          "renamed": "archiveConnectionStage"
         },
         {
           "start": 4291,
@@ -1907837,11 +1908800,25 @@
           "renamed": "GameInvitationText"
         },
         {
+          "start": 4361,
+          "end": 4368,
+          "symbol": "F:gob.field_c:I",
+          "original": "field_c",
+          "renamed": "archiveConnectionStage"
+        },
+        {
           "start": 4399,
           "end": 4401,
           "symbol": "C:eu",
           "original": "eu",
           "renamed": "TextureLineShape"
+        },
+        {
+          "start": 4402,
+          "end": 4409,
+          "symbol": "F:eu.field_h:Llpb;",
+          "original": "field_h",
+          "renamed": "pendingArchiveSocket"
         },
         {
           "start": 4410,
@@ -1907858,6 +1908835,13 @@
           "renamed": "TextureLineShape"
         },
         {
+          "start": 4461,
+          "end": 4468,
+          "symbol": "F:eu.field_h:Llpb;",
+          "original": "field_h",
+          "renamed": "pendingArchiveSocket"
+        },
+        {
           "start": 4469,
           "end": 4470,
           "symbol": "M:lpb.a(I)I",
@@ -1907872,6 +1908856,13 @@
           "renamed": "SetReverbDry"
         },
         {
+          "start": 4552,
+          "end": 4553,
+          "symbol": "M:jia.a(II)I",
+          "original": "a",
+          "renamed": "handleArchiveConnectionError"
+        },
+        {
           "start": 4643,
           "end": 4646,
           "symbol": "C:gob",
@@ -1907879,11 +1908870,25 @@
           "renamed": "GameInvitationText"
         },
         {
+          "start": 4647,
+          "end": 4654,
+          "symbol": "F:gob.field_c:I",
+          "original": "field_c",
+          "renamed": "archiveConnectionStage"
+        },
+        {
           "start": 4657,
           "end": 4660,
           "symbol": "C:gob",
           "original": "gob",
           "renamed": "GameInvitationText"
+        },
+        {
+          "start": 4661,
+          "end": 4668,
+          "symbol": "F:gob.field_c:I",
+          "original": "field_c",
+          "renamed": "archiveConnectionStage"
         },
         {
           "start": 4717,
@@ -1907914,11 +1908919,25 @@
           "renamed": "SetReverbDry"
         },
         {
+          "start": 4783,
+          "end": 4784,
+          "symbol": "M:jia.a(II)I",
+          "original": "a",
+          "renamed": "handleArchiveConnectionError"
+        },
+        {
           "start": 4898,
           "end": 4901,
           "symbol": "C:gob",
           "original": "gob",
           "renamed": "GameInvitationText"
+        },
+        {
+          "start": 4902,
+          "end": 4909,
+          "symbol": "F:gob.field_c:I",
+          "original": "field_c",
+          "renamed": "archiveConnectionStage"
         },
         {
           "start": 5012,
@@ -1907942,6 +1908961,13 @@
           "renamed": "TextureLineShape"
         },
         {
+          "start": 5028,
+          "end": 5035,
+          "symbol": "F:eu.field_h:Llpb;",
+          "original": "field_h",
+          "renamed": "pendingArchiveSocket"
+        },
+        {
           "start": 5037,
           "end": 5039,
           "symbol": "C:sw",
@@ -1907956,11 +1908982,25 @@
           "renamed": "GameInvitationText"
         },
         {
+          "start": 5073,
+          "end": 5080,
+          "symbol": "F:gob.field_c:I",
+          "original": "field_c",
+          "renamed": "archiveConnectionStage"
+        },
+        {
           "start": 5098,
           "end": 5100,
           "symbol": "C:eu",
           "original": "eu",
           "renamed": "TextureLineShape"
+        },
+        {
+          "start": 5101,
+          "end": 5108,
+          "symbol": "F:eu.field_h:Llpb;",
+          "original": "field_h",
+          "renamed": "pendingArchiveSocket"
         },
         {
           "start": 5129,
@@ -1907970,11 +1909010,25 @@
           "renamed": "SoftwareSprite2D"
         },
         {
+          "start": 5133,
+          "end": 5140,
+          "symbol": "F:ija.field_b:Lmob;",
+          "original": "field_b",
+          "renamed": "archiveSocketRequest"
+        },
+        {
           "start": 5437,
           "end": 5440,
           "symbol": "C:jia",
           "original": "jia",
           "renamed": "SetReverbDry"
+        },
+        {
+          "start": 5441,
+          "end": 5442,
+          "symbol": "M:jia.a(II)I",
+          "original": "a",
+          "renamed": "handleArchiveConnectionError"
         },
         {
           "start": 5756,
@@ -1921435,7 +1922489,7 @@
       "original": "wda.java",
       "renamed": "LoadSettings.java",
       "inputSha256": "20739f9064268ae8fa1cadc2b9bd0878b8e1a756d7162dbb5222b7bbe0f1f94c",
-      "outputSha256": "3ab2b4ec3efe573a88812765dbad91e0e95759c1b89b952ba00a7b1702e206ea",
+      "outputSha256": "35d794fd4ed05447c830f30873117f86af98202dc15edc5fef4f9ab5b09b6146",
       "edits": [
         {
           "start": 50,
@@ -1921690,6 +1922744,13 @@
           "renamed": "PartitionZoneListFactory"
         },
         {
+          "start": 2570,
+          "end": 2571,
+          "symbol": "M:ada.a(Lrsb;Llbb;Z[Lrna;)I",
+          "original": "a",
+          "renamed": "getTeamForActions"
+        },
+        {
           "start": 2667,
           "end": 2670,
           "symbol": "C:glb",
@@ -1921709,6 +1922770,13 @@
           "symbol": "C:aba",
           "original": "aba",
           "renamed": "TextureCombineOperation"
+        },
+        {
+          "start": 2713,
+          "end": 2714,
+          "symbol": "M:aba.a(Llbb;[Lwm;Llta;IBILrsb;)V",
+          "original": "a",
+          "renamed": "drawObjectiveConditionIndicators"
         },
         {
           "start": 3840,
@@ -1955694,10 +1956762,10 @@
       "commit": "32e4691aae4850122db80d30c2db96a06b6b4029",
       "subdirectory": "games/voidhunters"
     },
-    "rulesSha256": "b6a1cf8abb420d6562ba3885bc8039b5d18d7ba1d9c68780704bea52daeb66b8",
+    "rulesSha256": "1314903dc338abddb371ef67a44217d92c25eec99376b99373a3800e19c336c5",
     "generatorSha256": "c87ba8382ad34d3c3c57003e11e034e8eb16f2f20a91985e9179c7253427aab7",
     "inputTreeSha256": "edb5cead5405f544aad442e989958b12eb4352744ef4e2311bc767342c35118c",
-    "outputTreeSha256": "1ae3d16ab4ba74b871bfa3d9054b0bd49e34d14a85ee54c63c832e0354414adb",
+    "outputTreeSha256": "df33fd9fe18c1230beae8432ae0e2cf45776e906a6e35fff7d9616236059ad2f",
     "jdk": "openjdk version \"11.0.32.1\" 2026-08-18\nOpenJDK Runtime Environment (build 11.0.32.1+1)\nOpenJDK 64-Bit Server VM (build 11.0.32.1+1, mixed mode)",
     "classpath": [
       {

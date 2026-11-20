@@ -5,7 +5,7 @@ final class TextureLineShape extends TextureRasterShape {
     private int endX;
     private int startX;
     private int startY;
-    static BufferedSocket field_h;
+    static BufferedSocket pendingArchiveSocket;
     static GameResourceLoader field_i;
     private int endY;
 
@@ -48,13 +48,13 @@ final class TextureLineShape extends TextureRasterShape {
 
     public static void clearSharedReferences(int param0) {
         if (param0 != 30826) {
-          field_h = (BufferedSocket) null;
+          pendingArchiveSocket = (BufferedSocket) null;
           field_i = null;
-          field_h = null;
+          pendingArchiveSocket = null;
           return;
         }
         field_i = null;
-        field_h = null;
+        pendingArchiveSocket = null;
     }
 
     final void drawFilled(byte param0, int param1, int param2) {

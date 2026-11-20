@@ -110,58 +110,58 @@ abstract class DateOfBirthInput extends UiContainer implements ValidatableInput 
             return 121;
           }
           try {
-            if (0 == GameInvitationText.field_c) {
-              SoftwareSprite2D.field_b = NormalMapTextureOperation.field_k.openSocket(SetDefaultFiringLeeway.field_p, TextHotspotRegion.field_l, param0 ^ -6201);
-              GameInvitationText.field_c = GameInvitationText.field_c + 1;
+            if (0 == GameInvitationText.archiveConnectionStage) {
+              SoftwareSprite2D.archiveSocketRequest = NormalMapTextureOperation.field_k.openSocket(SetDefaultFiringLeeway.field_p, TextHotspotRegion.field_l, param0 ^ -6201);
+              GameInvitationText.archiveConnectionStage = GameInvitationText.archiveConnectionStage + 1;
             }
-            if (1 == GameInvitationText.field_c) {
-              if (SoftwareSprite2D.field_b.status == 2) {
-                stackIn_17_0 = SetReverbDry.a(-93, -1);
+            if (1 == GameInvitationText.archiveConnectionStage) {
+              if (SoftwareSprite2D.archiveSocketRequest.status == 2) {
+                stackIn_17_0 = SetReverbDry.handleArchiveConnectionError(-93, -1);
                 return stackIn_17_0;
               }
-              if (SoftwareSprite2D.field_b.status == 1) {
-                GameInvitationText.field_c = GameInvitationText.field_c + 1;
+              if (SoftwareSprite2D.archiveSocketRequest.status == 1) {
+                GameInvitationText.archiveConnectionStage = GameInvitationText.archiveConnectionStage + 1;
               }
             }
-            if (GameInvitationText.field_c == 2) {
-              TextureLineShape.field_h = new BufferedSocket((java.net.Socket) (SoftwareSprite2D.field_b.result), NormalMapTextureOperation.field_k);
+            if (GameInvitationText.archiveConnectionStage == 2) {
+              TextureLineShape.pendingArchiveSocket = new BufferedSocket((java.net.Socket) (SoftwareSprite2D.archiveSocketRequest.result), NormalMapTextureOperation.field_k);
               var2 = new PacketBuffer(13);
               SetVariableLabelActionFactory.a(SetPointDefenceLaserProjectileDamage.field_p, (byte) -48, GetFixedaim.field_o, var2, OpenGlToolkit.field_Ib);
               var2.writeByte(0, 15);
               var2.writeInt(ByteIndexedRecordWriteRequest.field_d, 332614536);
-              TextureLineShape.field_h.write(0, var2.payload, 13, 0);
-              GameInvitationText.field_c = GameInvitationText.field_c + 1;
+              TextureLineShape.pendingArchiveSocket.write(0, var2.payload, 13, 0);
+              GameInvitationText.archiveConnectionStage = GameInvitationText.archiveConnectionStage + 1;
               GetRepairModePower.field_r = 30000L + MonotonicMillisClock.currentTimeMillis(false);
             }
-            if (GameInvitationText.field_c == 3) {
-              if (0 < TextureLineShape.field_h.available(param0 ^ -6269)) {
-                var1_int = TextureLineShape.field_h.readByte(-123);
+            if (GameInvitationText.archiveConnectionStage == 3) {
+              if (0 < TextureLineShape.pendingArchiveSocket.available(param0 ^ -6269)) {
+                var1_int = TextureLineShape.pendingArchiveSocket.readByte(-123);
                 if (var1_int != 0) {
-                  stackIn_31_0 = SetReverbDry.a(-71, var1_int);
+                  stackIn_31_0 = SetReverbDry.handleArchiveConnectionError(-71, var1_int);
                   return stackIn_31_0;
                 }
-                GameInvitationText.field_c = GameInvitationText.field_c + 1;
+                GameInvitationText.archiveConnectionStage = GameInvitationText.archiveConnectionStage + 1;
               } else {
                 if (GetRepairModePower.field_r < MonotonicMillisClock.currentTimeMillis(false)) {
-                  stackIn_27_0 = SetReverbDry.a(-84, -2);
+                  stackIn_27_0 = SetReverbDry.handleArchiveConnectionError(-84, -2);
                   return stackIn_27_0;
                 }
               }
             }
-            if (GameInvitationText.field_c != 4) {
+            if (GameInvitationText.archiveConnectionStage != 4) {
               stackIn_37_0 = -1;
               return stackIn_37_0;
             }
-            GetAutozoomAmountMultiply.field_o.setConnection(TextureLineShape.field_h, ToolkitFontMetrics.field_f, false);
-            GameInvitationText.field_c = 0;
-            TextureLineShape.field_h = null;
-            SoftwareSprite2D.field_b = null;
+            GetAutozoomAmountMultiply.field_o.setConnection(TextureLineShape.pendingArchiveSocket, ToolkitFontMetrics.field_f, false);
+            GameInvitationText.archiveConnectionStage = 0;
+            TextureLineShape.pendingArchiveSocket = null;
+            SoftwareSprite2D.archiveSocketRequest = null;
             stackIn_35_0 = 0;
             return stackIn_35_0;
           } catch (java.io.IOException decompiledCaughtParameter0) {
             decompiledCaughtException = decompiledCaughtParameter0;
             var1 = (IOException) (Object) decompiledCaughtException;
-            return SetReverbDry.a(param0 ^ 6182, -3);
+            return SetReverbDry.handleArchiveConnectionError(param0 ^ 6182, -3);
           }
         } catch (RuntimeException | Error decompiledUncheckedException) {
           throw decompiledUncheckedException;

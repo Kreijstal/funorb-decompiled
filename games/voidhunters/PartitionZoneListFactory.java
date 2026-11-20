@@ -15,7 +15,7 @@ final class PartitionZoneListFactory implements GameStateFactory {
         field_a = null;
     }
 
-    final static int a(String param0, boolean param1) {
+    final static int prepareNativeLibrary(String param0, boolean param1) {
         int stackIn_3_0 = 0;
         int stackIn_7_0 = 0;
         int stackIn_10_0 = 0;
@@ -51,7 +51,7 @@ final class PartitionZoneListFactory implements GameStateFactory {
             stackIn_3_0 = -1;
             return stackIn_3_0;
           }
-          if (DiskArchiveRequest.field_q.containsKey(param0)) {
+          if (DiskArchiveRequest.nativeLibraryFiles.containsKey(param0)) {
             stackIn_7_0 = 100;
             return stackIn_7_0;
           }
@@ -122,7 +122,7 @@ final class PartitionZoneListFactory implements GameStateFactory {
               stackIn_39_0 = -1;
               return stackIn_39_0;
             }
-            GetSelfDestructActivateCooldown.a((byte) 123, param0, var11);
+            GetSelfDestructActivateCooldown.registerNativeLibraryFile((byte) 123, param0, var11);
             stackIn_41_0 = 100;
             return stackIn_41_0;
           }
@@ -154,7 +154,7 @@ final class PartitionZoneListFactory implements GameStateFactory {
         return (SerializableGameState[]) ((Object) new PartitionZoneList[param1]);
     }
 
-    final static int a(GameSnapshot param0, MissionState param1, boolean param2, MissionAction[] param3) {
+    final static int getTeamForActions(GameSnapshot param0, MissionState param1, boolean param2, MissionAction[] param3) {
         int var5 = 0;
         int stackIn_18_0 = 0;
         RuntimeException stackIn_21_0 = null;

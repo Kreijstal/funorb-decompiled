@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GameInvitationText {
-    static int field_c;
+    static int archiveConnectionStage;
     static String invitingPlayerText;
     static String[] field_a;
     private static String field_z;

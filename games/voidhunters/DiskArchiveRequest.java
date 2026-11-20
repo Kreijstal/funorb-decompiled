@@ -5,7 +5,7 @@ import java.util.*;
 
 final class DiskArchiveRequest extends ArchiveRequest {
     int operation;
-    static Hashtable field_q;
+    static Hashtable nativeLibraryFiles;
     ArchiveDisk archiveDisk;
     byte[] data;
 
@@ -18,7 +18,7 @@ final class DiskArchiveRequest extends ArchiveRequest {
     }
 
     public static void clearSharedReferences(int param0) {
-        field_q = null;
+        nativeLibraryFiles = null;
         if (param0 != 100) {
           DiskArchiveRequest.clearSharedReferences(-2);
         }
@@ -42,6 +42,6 @@ final class DiskArchiveRequest extends ArchiveRequest {
     }
 
     static {
-        field_q = new Hashtable();
+        nativeLibraryFiles = new Hashtable();
     }
 }

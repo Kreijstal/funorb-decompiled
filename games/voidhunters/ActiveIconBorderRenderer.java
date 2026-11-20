@@ -34,7 +34,7 @@ final class ActiveIconBorderRenderer implements UiRenderer {
             var8.drawAdditive((-var8.paddedWidth + param1.width >> 1) + (1 + var6_int), 1 + (var7 + (-var8.paddedHeight + param1.height >> 1)), 256);
           }
           if (param1.hasFocus((byte) -120)) {
-            SetCountermeasureLauncherRandomness.a(var7 + 2, param1.width - 4, var6_int + 2, -4 + param1.height, (byte) -62);
+            SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(var7 + 2, param1.width - 4, var6_int + 2, -4 + param1.height, (byte) -62);
           }
           var9 = -1 / ((-27 - param0) / 35);
           return;

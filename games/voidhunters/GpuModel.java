@@ -835,7 +835,7 @@ final class GpuModel extends Model3D {
           this.field_F = GetDebrisCarryOverPercentage.a(this.field_L, this.field_F, (byte) 69);
           this.field_r = GetDebrisCarryOverPercentage.a(this.field_L, this.field_r, (byte) 50);
           this.field_x = GetDebrisCarryOverPercentage.a(this.field_L, this.field_x, (byte) 59);
-          this.field_b = TextureCombineOperation.a(this.field_b, this.field_L, -28321);
+          this.field_b = TextureCombineOperation.copyBytePrefix(this.field_b, this.field_L, -28321);
           this.field_D = OpenGlGpuToolkit.copyFloatPrefix(this.field_D, this.field_L, 7353);
           this.field_y = OpenGlGpuToolkit.copyFloatPrefix(this.field_y, this.field_L, 7353);
           if (null != param1.vertexLabels &&

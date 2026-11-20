@@ -142,7 +142,7 @@ final class PasswordValidator extends TextFieldValidator {
           PasswordValidator.createBorderedWidgetTemplate(-128, 101, 87, (BitmapFont) null, 109, 83, -49, -78, 19, -41, 88, -111, 125);
         }
         GpuMaterialEffect.buildToolkitFonts(-2283);
-        SetReadyRoomMutatorTime.e(-17);
+        SetReadyRoomMutatorTime.buildToolkitSprites(-17);
     }
 
     public static void clearSharedReferences(byte param0) {

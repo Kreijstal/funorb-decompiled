@@ -684,10 +684,10 @@ final class DisplayModeDialog extends ResizableModalPanel implements UiActionLis
                 if (var2 >= 0) {
                   MissionConditionFactory.field_b.setFullscreenSize(this.displayModes[var2].height, 480, this.displayModes[var2].width);
                 }
-                SetReadyRoomMutatorTime.a(2, true);
+                SetReadyRoomMutatorTime.requestFullscreen(2, true);
                 this.modalStack.pushPanel(false, new FullscreenConfirmationDialog(this.modalStack));
               } else {
-                SetReadyRoomMutatorTime.a(2, true);
+                SetReadyRoomMutatorTime.requestFullscreen(2, true);
                 this.modalStack.pushPanel(false, new FullscreenConfirmationDialog(this.modalStack));
               }
             }

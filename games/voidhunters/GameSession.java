@@ -619,26 +619,26 @@ final class GameSession {
           if (var6 == 0) {
             OpenGlTexture1D.field_i = false;
           }
-          if (!OpenGlTexture1D.field_i && (null == OpenGlTransform3D.field_m ||
-            OpenGlTransform3D.field_m.width != PartitionZoneFactory.field_a ||
-            OpenGlTransform3D.field_m.height != MissionVariableFactory.field_a)) {
+          if (!OpenGlTexture1D.field_i && (null == OpenGlTransform3D.softwareFogOfWarSprite ||
+            OpenGlTransform3D.softwareFogOfWarSprite.width != PartitionZoneFactory.field_a ||
+            OpenGlTransform3D.softwareFogOfWarSprite.height != MissionVariableFactory.field_a)) {
             GetDebrisThrowable.a(false, "Creating a new g1 fog of war sprite");
-            OpenGlTransform3D.field_m = (Sprite) ((Object) new ArgbSprite(PartitionZoneFactory.field_a, MissionVariableFactory.field_a));
+            OpenGlTransform3D.softwareFogOfWarSprite = (Sprite) ((Object) new ArgbSprite(PartitionZoneFactory.field_a, MissionVariableFactory.field_a));
             if (var6 != 0) {
-              GetGrapplingHooksDamageableBySourcePlayer.field_p = null;
+              GetGrapplingHooksDamageableBySourcePlayer.toolkitFogOfWarSprite = null;
             }
           }
           if ((OpenGlTexture1D.field_i ||
             var6 == 0) &&
-            (GetGrapplingHooksDamageableBySourcePlayer.field_p == null ||
-            GetGrapplingHooksDamageableBySourcePlayer.field_p.getPaddedWidth() != PartitionZoneFactory.field_a ||
-            GetGrapplingHooksDamageableBySourcePlayer.field_p.getPaddedHeight() != MissionVariableFactory.field_a)) {
+            (GetGrapplingHooksDamageableBySourcePlayer.toolkitFogOfWarSprite == null ||
+            GetGrapplingHooksDamageableBySourcePlayer.toolkitFogOfWarSprite.getPaddedWidth() != PartitionZoneFactory.field_a ||
+            GetGrapplingHooksDamageableBySourcePlayer.toolkitFogOfWarSprite.getPaddedHeight() != MissionVariableFactory.field_a)) {
             GetDebrisThrowable.a(false, "Creating a new g2 fog of war sprite");
-            GetGrapplingHooksDamageableBySourcePlayer.field_p = null;
+            GetGrapplingHooksDamageableBySourcePlayer.toolkitFogOfWarSprite = null;
             if (var6 != 0) {
-              OpenGlTransform3D.field_m = null;
+              OpenGlTransform3D.softwareFogOfWarSprite = null;
             }
-            GetGrapplingHooksDamageableBySourcePlayer.field_p = GetDebrisGroupColour.field_r.createSprite(PartitionZoneFactory.field_a, MissionVariableFactory.field_a, true);
+            GetGrapplingHooksDamageableBySourcePlayer.toolkitFogOfWarSprite = GetDebrisGroupColour.field_r.createSprite(PartitionZoneFactory.field_a, MissionVariableFactory.field_a, true);
             if (var6 == 0) {
               GetDebrisThrowable.a(false, "Setting area");
               GetDebrisGroupColour.field_r.writePixels(0, 0, 1, 1, new int[]{1}, 0, 1);
@@ -649,10 +649,10 @@ final class GameSession {
             if (param3) {
               var7 = 0;
               if (!OpenGlTexture1D.field_i) {
-                SetTorpedoEnergyUsed.a(107, OpenGlTransform3D.field_m);
+                SetTorpedoEnergyUsed.a(107, OpenGlTransform3D.softwareFogOfWarSprite);
                 SoftwareRasterizer2D.fillRectangle(0, 0, PartitionZoneFactory.field_a, MissionVariableFactory.field_a, -1442840576);
               } else {
-                SetUseBackground.field_o.pushRenderTarget(GetGrapplingHooksDamageableBySourcePlayer.field_p, 0);
+                SetUseBackground.field_o.pushRenderTarget(GetGrapplingHooksDamageableBySourcePlayer.toolkitFogOfWarSprite, 0);
                 GetDebrisGroupColour.field_r.clearColor(-1442840576);
               }
               if (0 <= this.localPlayerIndex) {
@@ -739,10 +739,10 @@ final class GameSession {
                           SoftwareRasterStateRestorer.popRasterState((byte) 124);
                           if ((var7 == 0)) {
                             if (var6 != 0) {
-                              OpenGlTransform3D.field_m.draw(0, 0);
+                              OpenGlTransform3D.softwareFogOfWarSprite.draw(0, 0);
                             } else {
-                              GetGrapplingHooksDamageableBySourcePlayer.field_p.writePixels(0, 0, OpenGlTransform3D.field_m.width, OpenGlTransform3D.field_m.height, OpenGlTransform3D.field_m.pixels, 0, OpenGlTransform3D.field_m.width);
-                              GetGrapplingHooksDamageableBySourcePlayer.field_p.draw(0, 0);
+                              GetGrapplingHooksDamageableBySourcePlayer.toolkitFogOfWarSprite.writePixels(0, 0, OpenGlTransform3D.softwareFogOfWarSprite.width, OpenGlTransform3D.softwareFogOfWarSprite.height, OpenGlTransform3D.softwareFogOfWarSprite.pixels, 0, OpenGlTransform3D.softwareFogOfWarSprite.width);
+                              GetGrapplingHooksDamageableBySourcePlayer.toolkitFogOfWarSprite.draw(0, 0);
                             }
                           }
                           break regionExit4;
@@ -790,10 +790,10 @@ final class GameSession {
                         SoftwareRasterStateRestorer.popRasterState((byte) 124);
                         if ((var7 == 0)) {
                           if (var6 != 0) {
-                            OpenGlTransform3D.field_m.draw(0, 0);
+                            OpenGlTransform3D.softwareFogOfWarSprite.draw(0, 0);
                           } else {
-                            GetGrapplingHooksDamageableBySourcePlayer.field_p.writePixels(0, 0, OpenGlTransform3D.field_m.width, OpenGlTransform3D.field_m.height, OpenGlTransform3D.field_m.pixels, 0, OpenGlTransform3D.field_m.width);
-                            GetGrapplingHooksDamageableBySourcePlayer.field_p.draw(0, 0);
+                            GetGrapplingHooksDamageableBySourcePlayer.toolkitFogOfWarSprite.writePixels(0, 0, OpenGlTransform3D.softwareFogOfWarSprite.width, OpenGlTransform3D.softwareFogOfWarSprite.height, OpenGlTransform3D.softwareFogOfWarSprite.pixels, 0, OpenGlTransform3D.softwareFogOfWarSprite.width);
+                            GetGrapplingHooksDamageableBySourcePlayer.toolkitFogOfWarSprite.draw(0, 0);
                           }
                         }
                         break regionExit4;
@@ -801,7 +801,7 @@ final class GameSession {
                     }
                     SetUseBackground.field_o.pop(true);
                     if (var7 == 0) {
-                      GetGrapplingHooksDamageableBySourcePlayer.field_p.draw(0, 0);
+                      GetGrapplingHooksDamageableBySourcePlayer.toolkitFogOfWarSprite.draw(0, 0);
                     }
                   }
                   OpenGlTexture1D.field_i = var5_int != 0;
@@ -825,16 +825,16 @@ final class GameSession {
               if (OpenGlTexture1D.field_i) {
                 SetUseBackground.field_o.pop(true);
                 if (var7 == 0) {
-                  GetGrapplingHooksDamageableBySourcePlayer.field_p.draw(0, 0);
+                  GetGrapplingHooksDamageableBySourcePlayer.toolkitFogOfWarSprite.draw(0, 0);
                 }
               } else {
                 SoftwareRasterStateRestorer.popRasterState((byte) 124);
                 if (var7 == 0) {
                   if (var6 != 0) {
-                    OpenGlTransform3D.field_m.draw(0, 0);
+                    OpenGlTransform3D.softwareFogOfWarSprite.draw(0, 0);
                   } else {
-                    GetGrapplingHooksDamageableBySourcePlayer.field_p.writePixels(0, 0, OpenGlTransform3D.field_m.width, OpenGlTransform3D.field_m.height, OpenGlTransform3D.field_m.pixels, 0, OpenGlTransform3D.field_m.width);
-                    GetGrapplingHooksDamageableBySourcePlayer.field_p.draw(0, 0);
+                    GetGrapplingHooksDamageableBySourcePlayer.toolkitFogOfWarSprite.writePixels(0, 0, OpenGlTransform3D.softwareFogOfWarSprite.width, OpenGlTransform3D.softwareFogOfWarSprite.height, OpenGlTransform3D.softwareFogOfWarSprite.pixels, 0, OpenGlTransform3D.softwareFogOfWarSprite.width);
+                    GetGrapplingHooksDamageableBySourcePlayer.toolkitFogOfWarSprite.draw(0, 0);
                   }
                 }
               }
@@ -4464,7 +4464,7 @@ final class GameSession {
               }
               this.field_ab = true;
               this.field_J = var15.getComponentTypeId(param0 ^ 36);
-              var10_ref_String__ = this.revealStringLines(this.field_o, true, new String[]{TiledSpriteTextureOperation.a(var14, (byte) -120), GetSelfDestructActivateCooldown.a(var14.getDefinition((byte) -112).field_a, 94), ShipSpawnedCondition.field_e[var14.getComponentTypeId(param0 - 36)]});
+              var10_ref_String__ = this.revealStringLines(this.field_o, true, new String[]{TiledSpriteTextureOperation.a(var14, (byte) -120), GetSelfDestructActivateCooldown.getComponentTypeName(var14.getDefinition((byte) -112).field_a, 94), ShipSpawnedCondition.field_e[var14.getComponentTypeId(param0 - 36)]});
               this.drawWorldInspectionText(var15.getFinalx(true), var15.getFinaly((byte) 85), var10_ref_String__, (byte) -96);
               stackIn_21_0 = 1;
               return stackIn_21_0;
@@ -4479,7 +4479,7 @@ final class GameSession {
               }
               this.field_ab = true;
               this.field_J = var8.chassis.getComponentTypeId(param0 - 36);
-              var12 = this.revealStringLines(this.field_o, true, new String[]{TiledSpriteTextureOperation.a(var8.chassis, (byte) -95), GetSelfDestructActivateCooldown.a(var8.chassis.getDefinition((byte) -112).field_a, 111), ShipSpawnedCondition.field_e[var8.chassis.getComponentTypeId(0)]});
+              var12 = this.revealStringLines(this.field_o, true, new String[]{TiledSpriteTextureOperation.a(var8.chassis, (byte) -95), GetSelfDestructActivateCooldown.getComponentTypeName(var8.chassis.getDefinition((byte) -112).field_a, 111), ShipSpawnedCondition.field_e[var8.chassis.getComponentTypeId(0)]});
               if (this.drawInspectionOutline(param1, var10, param2, false, var12, var11, var9Lifetime1)) {
                 stackIn_28_0 = 1;
                 return stackIn_28_0;

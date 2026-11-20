@@ -2,9 +2,9 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class SetMassDriverAimspeed extends ConsoleCommand {
-    final static void a(int param0) {
+    final static void invalidateFogOfWarSprite(int param0) {
         int var1 = -85 % ((param0 + 37) / 56);
-        GetGrapplingHooksDamageableBySourcePlayer.field_p = null;
+        GetGrapplingHooksDamageableBySourcePlayer.toolkitFogOfWarSprite = null;
     }
 
     SetMassDriverAimspeed(String param0, Class[] param1, String param2) {

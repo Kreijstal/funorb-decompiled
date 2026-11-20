@@ -7,7 +7,7 @@ abstract class SoftwareSprite2D {
     int offsetY;
     int height;
     int canvasWidth;
-    static PlatformRequest field_b;
+    static PlatformRequest archiveSocketRequest;
     int canvasHeight;
     int offsetX;
 
@@ -43,11 +43,11 @@ abstract class SoftwareSprite2D {
     public static void clearSharedReferences(boolean param0) {
         field_c = null;
         if (!param0) {
-          field_b = (PlatformRequest) null;
-          field_b = null;
+          archiveSocketRequest = (PlatformRequest) null;
+          archiveSocketRequest = null;
           return;
         }
-        field_b = null;
+        archiveSocketRequest = null;
     }
 
     final static Object[] appendStateArrayValue(Object param0, Object[] param1, int param2, GameStateFactory param3) {

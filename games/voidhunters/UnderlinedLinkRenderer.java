@@ -73,7 +73,7 @@ final class UnderlinedLinkRenderer implements UiRenderer {
               var11 = var11 + (-var9 + param1.height >> 1);
             }
           }
-          SetCountermeasureLauncherRandomness.a(var11 + 2, var8 + 4, var10 - 2, var9, (byte) -79);
+          SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(var11 + 2, var8 + 4, var10 - 2, var9, (byte) -79);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

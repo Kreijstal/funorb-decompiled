@@ -132,7 +132,7 @@ final class GraphicsToolkitSelector {
                     if (!MissionEventFactory.field_a.loadIndex((byte) 87)) {
                       return;
                     }
-                    var7_int = PartitionZoneListFactory.a("jaclib", true);
+                    var7_int = PartitionZoneListFactory.prepareNativeLibrary("jaclib", true);
                     if (var7_int == -1) {
                       var6.enabled = false;
                       decompiledFrameRemainder0 = false;
@@ -141,7 +141,7 @@ final class GraphicsToolkitSelector {
                       if (100 > var7_int) {
                         return;
                       }
-                      var8_int = PartitionZoneListFactory.a("jaggl", true);
+                      var8_int = PartitionZoneListFactory.prepareNativeLibrary("jaggl", true);
                       if (var8_int == -1) {
                         var6.enabled = false;
                         decompiledFrameRemainder0 = false;
@@ -157,7 +157,7 @@ final class GraphicsToolkitSelector {
                       if (!MissionEventFactory.field_a.loadIndex((byte) -57)) {
                         return;
                       }
-                      var7_int = PartitionZoneListFactory.a("jaclib", true);
+                      var7_int = PartitionZoneListFactory.prepareNativeLibrary("jaclib", true);
                       if (var7_int == -1) {
                         var6.enabled = false;
                         decompiledFrameRemainder0 = false;
@@ -166,7 +166,7 @@ final class GraphicsToolkitSelector {
                         if (var7_int < 100) {
                           return;
                         }
-                        var8_int = PartitionZoneListFactory.a("jagdx", true);
+                        var8_int = PartitionZoneListFactory.prepareNativeLibrary("jagdx", true);
                         if (-1 == var8_int) {
                           var6.enabled = false;
                           decompiledFrameRemainder0 = false;
@@ -175,7 +175,7 @@ final class GraphicsToolkitSelector {
                           if (100 > var8_int) {
                             return;
                           }
-                          var9 = PartitionZoneListFactory.a("hw3d", true);
+                          var9 = PartitionZoneListFactory.prepareNativeLibrary("hw3d", true);
                           if (var9 == -1) {
                             var6.enabled = false;
                             decompiledFrameRemainder0 = false;
@@ -194,7 +194,7 @@ final class GraphicsToolkitSelector {
                       if (!MissionEventFactory.field_a.loadIndex((byte) -83)) {
                         return;
                       }
-                      var7_int = PartitionZoneListFactory.a("jaclib", true);
+                      var7_int = PartitionZoneListFactory.prepareNativeLibrary("jaclib", true);
                       if (-1 == var7_int) {
                         var6.enabled = false;
                         decompiledFrameRemainder0 = false;
@@ -203,7 +203,7 @@ final class GraphicsToolkitSelector {
                         if (var7_int < 100) {
                           return;
                         }
-                        var8_int = PartitionZoneListFactory.a("sw3d", true);
+                        var8_int = PartitionZoneListFactory.prepareNativeLibrary("sw3d", true);
                         if (var8_int == -1) {
                           var6.enabled = false;
                           decompiledFrameRemainder0 = false;
@@ -220,7 +220,7 @@ final class GraphicsToolkitSelector {
                   if (!MissionEventFactory.field_a.loadIndex((byte) 121)) {
                     return;
                   }
-                  var7_int = PartitionZoneListFactory.a("hw3d", true);
+                  var7_int = PartitionZoneListFactory.prepareNativeLibrary("hw3d", true);
                   if (var7_int == -1) {
                     var6.enabled = false;
                     decompiledFrameRemainder0 = false;
@@ -229,7 +229,7 @@ final class GraphicsToolkitSelector {
                     if (var7_int < 100) {
                       return;
                     }
-                    var8_int = PartitionZoneListFactory.a("jaclib", true);
+                    var8_int = PartitionZoneListFactory.prepareNativeLibrary("jaclib", true);
                     if (-1 == var8_int) {
                       var6.enabled = false;
                       decompiledFrameRemainder0 = false;
@@ -238,7 +238,7 @@ final class GraphicsToolkitSelector {
                       if (var8_int < 100) {
                         return;
                       }
-                      var9 = PartitionZoneListFactory.a("jaggl", true);
+                      var9 = PartitionZoneListFactory.prepareNativeLibrary("jaggl", true);
                       if (-1 == var9) {
                         var6.enabled = false;
                         decompiledFrameRemainder0 = false;

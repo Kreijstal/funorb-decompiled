@@ -182,7 +182,7 @@ class HotspotTextWidget extends UiFocusableComponent {
           var7 = var9.getTextOriginX(0, param0, (UiComponent) (this));
           var8 = var9.getTextOriginY(-3, param3, (UiComponent) (this));
           do {
-            SetCountermeasureLauncherRandomness.a(var6.y + var8 - 2, var6.width + 2, var7 + var6.x - 2, 2 + var6.height, (byte) -90);
+            SetCountermeasureLauncherRandomness.drawDottedFocusRectangle(var6.y + var8 - 2, var6.width + 2, var7 + var6.x - 2, 2 + var6.height, (byte) -90);
             var6 = var6.continuation;
           } while (var6 != null);
         }
