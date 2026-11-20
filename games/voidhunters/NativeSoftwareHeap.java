@@ -6,7 +6,7 @@ final class NativeSoftwareHeap extends GraphicsHeap implements NativeResource {
 
     public final native void disposeNative(boolean param0);
 
-    final native void ga();
+    final native void onToolkitReleaseNative();
 
     protected final void finalize() {
         if (this.field_nativeid != 0L) {
@@ -14,11 +14,11 @@ final class NativeSoftwareHeap extends GraphicsHeap implements NativeResource {
         }
     }
 
-    private final native void aa(NativeSoftwareToolkit param0, int param1);
+    private final native void initializeNative(NativeSoftwareToolkit param0, int param1);
 
     NativeSoftwareHeap(NativeSoftwareToolkit param0, int param1) {
-        this.aa(param0, param1);
+        this.initializeNative(param0, param1);
     }
 
-    final native void r();
+    final native void onFrameUpdateNative();
 }

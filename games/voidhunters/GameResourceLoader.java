@@ -112,7 +112,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
           this.vorbisArchive != null) {
           ComponentCollision.a("Unpacking sounds", (byte) -104);
           GetAllowShipSaving.finishLoadingAnimations(4410);
-          IncrementVariableAction.a(OpenGlVertexDeclaration.field_e, param0 ^ -69, 82.0f);
+          IncrementVariableAction.setProgressDialogStatus(OpenGlVertexDeclaration.field_e, param0 ^ -69, 82.0f);
           AppletRasterBuffer.field_a.renderGameFrame(param0 - 187);
           this.soundCache = new SoundCache(this.soundEffectArchive, this.vorbisArchive);
           PendingScoreboardRequest.soundEffects[0] = this.soundCache.getMusicSampleByName("", "vh_menu_mouseover", (byte) 113);
@@ -245,7 +245,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
         }
         if (null != this.musicArchive) {
           ComponentCollision.a("Unpacking music", (byte) -125);
-          IncrementVariableAction.a(GetBloomCoefficientPercentage.field_p, -1, 88.0f);
+          IncrementVariableAction.setProgressDialogStatus(GetBloomCoefficientPercentage.field_p, -1, 88.0f);
           AppletRasterBuffer.field_a.renderGameFrame(-103);
           CachedByteArray.musicTracks = new MusicTrack[4];
           CachedByteArray.musicTracks[0] = MusicTrack.load(this.musicArchive, "", "VH_Title_Music");
@@ -277,7 +277,7 @@ final class GameResourceLoader implements GameResourceLoaderMarker {
         if (null != this.fontMetricsArchive &&
           this.jpegArchive != null) {
           ComponentCollision.a("Unpacking graphics", (byte) -113);
-          IncrementVariableAction.a(SetAutozoomSpeedDivide.field_o, -1, 90.0f);
+          IncrementVariableAction.setProgressDialogStatus(SetAutozoomSpeedDivide.field_o, -1, 90.0f);
           AppletRasterBuffer.field_a.renderGameFrame(-112);
           GrapplingHookFactory.field_a = (BitmapFont) ((Object) GraphicsToolkitSelector.loadSoftwareMonochromeFontByName(var12, "", 0, var11, "arialish12"));
           SetMpSandboxEnemySpawnLimit.field_p = GetFighterBayAimspeed.loadSoftwareAlphaFontByName(0, "basic", this.graphicsArchive, this.fontMetricsArchive, "antigrav_18_graphics1");

@@ -61,7 +61,7 @@ final class LegacyOpenGlUnlitEffect extends LegacyOpenGlMaterialEffect {
           var9 = new AccountCreationDialog(GetLagStandardDeviationIn.field_r, param2);
           var7 = var9;
           GetLagStandardDeviationIn.field_r.pushPanel(false, var9);
-          if (SetAutozoomAmountMultiply.f(0)) {
+          if (SetAutozoomAmountMultiply.isAccountCreationBlocked(0)) {
             var9.showAccountIneligible(false);
           } else {
             SetCountermeasureLauncherAimspeed.field_r = ActiveIconBorderRenderer.pendingAccountRequest;

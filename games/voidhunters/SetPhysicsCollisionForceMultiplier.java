@@ -48,7 +48,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
               SetBurstFireReload.a((String) null, -25719, GetWaitForPlayers.field_p, param2, EmailAvailabilityCheckFactory.field_a, IncrementVariableActionFactoryHolder.field_b);
               return true;
             }
-            if (PointDefenceLaserWeaponDefinition.a(ConsoleSettingsScript.field_b, IncrementVariableActionFactoryHolder.field_b, 41)) {
+            if (PointDefenceLaserWeaponDefinition.isPrivateChatTargetAvailable(ConsoleSettingsScript.field_b, IncrementVariableActionFactoryHolder.field_b, 41)) {
               if (EmailAvailabilityCheckFactory.field_a != 2) {
                 if (var3 == 0) {
                   if (AdjustVariableAction.b(param1 + 5)) {
@@ -108,7 +108,7 @@ final class SetPhysicsCollisionForceMultiplier extends ConsoleCommand {
               }
               return true;
             }
-            if (PointDefenceLaserWeaponDefinition.a(ConsoleSettingsScript.field_b, IncrementVariableActionFactoryHolder.field_b, 41)) {
+            if (PointDefenceLaserWeaponDefinition.isPrivateChatTargetAvailable(ConsoleSettingsScript.field_b, IncrementVariableActionFactoryHolder.field_b, 41)) {
               if (EmailAvailabilityCheckFactory.field_a != 2) {
                 if (var3 == 0) {
                   if (AdjustVariableAction.b(param1 + 5)) {

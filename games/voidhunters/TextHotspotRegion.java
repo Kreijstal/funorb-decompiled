@@ -137,7 +137,7 @@ final class TextHotspotRegion extends IntrusiveNode {
           do {
             var4 = param0.nextInt();
           } while (var3_int <= var4);
-          stackIn_12_0 = GetPhasedEnergyBeamFireForce.b(var4, param1, -103);
+          stackIn_12_0 = GetPhasedEnergyBeamFireForce.positiveModulo(var4, param1, -103);
           return stackIn_12_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;

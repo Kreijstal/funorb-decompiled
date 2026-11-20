@@ -39,14 +39,14 @@ final class SetAutozoomAmountMultiply extends ConsoleCommand {
         }
     }
 
-    final static boolean a(int param0) {
+    final static boolean isPrivateChatTargetAvailable(int param0) {
         if (param0 != 0) {
-          SetAutozoomAmountMultiply.f(118);
+          SetAutozoomAmountMultiply.isAccountCreationBlocked(118);
         }
-        return PointDefenceLaserWeaponDefinition.a(PendingRequest.privateChatRecipientKey, GetDebrisThrowable.privateChatTarget, 41);
+        return PointDefenceLaserWeaponDefinition.isPrivateChatTargetAvailable(PendingRequest.privateChatRecipientKey, GetDebrisThrowable.privateChatTarget, 41);
     }
 
-    final static boolean f(int param0) {
+    final static boolean isAccountCreationBlocked(int param0) {
         if (param0 != 0) {
           return false;
         }
@@ -57,7 +57,7 @@ final class SetAutozoomAmountMultiply extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static boolean a(byte param0, String param1) {
+    final static boolean containsCharactersOutsideAsciiAlphanumeric(byte param0, String param1) {
         int var2_int = 0;
         RuntimeException var2 = null;
         int var3 = 0;
@@ -75,7 +75,7 @@ final class SetAutozoomAmountMultiply extends ConsoleCommand {
           while (param1.length() > var2_int) {
             var3 = param1.charAt(var2_int);
             if (!SoftwareFaceAttachmentState.isAsciiLetter((char) var3, 0) &&
-              !GetRepairModeCooldown.a((char) var3, true)) {
+              !GetRepairModeCooldown.isAsciiDigit((char) var3, true)) {
               return true;
             }
             var2_int++;

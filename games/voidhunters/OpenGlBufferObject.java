@@ -5,7 +5,7 @@ abstract class OpenGlBufferObject {
     private int byteSize;
     static boolean field_d;
     private boolean streamDraw;
-    static String field_g;
+    static String progressDialogMessage;
     private boolean disposed;
     int bufferId;
     OpenGlToolkit toolkit;
@@ -40,11 +40,11 @@ abstract class OpenGlBufferObject {
 
     public static void clearSharedReferences(int param0) {
         if (param0 <= 109) {
-          field_g = (String) null;
-          field_g = null;
+          progressDialogMessage = (String) null;
+          progressDialogMessage = null;
           return;
         }
-        field_g = null;
+        progressDialogMessage = null;
     }
 
     final static void insertLobbyPlayerSorted(LobbyPlayerEntry param0, boolean param1) {

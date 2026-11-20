@@ -70,7 +70,7 @@ final class SetReverbGain extends ConsoleCommand {
             if (0 <= var6_int) {
               stackIn_6_0 = var6_int + 2;
               for (var5 = stackIn_6_0; var3_int > var5; var5++) {
-                if (GetRepairModeCooldown.a(param0.charAt(var5), true)) {
+                if (GetRepairModeCooldown.isAsciiDigit(param0.charAt(var5), true)) {
                   continue;
                 }
                 break;
@@ -108,7 +108,7 @@ final class SetReverbGain extends ConsoleCommand {
             }
             stackIn_23_0 = var8Lifetime1 + 2;
             for (var5Lifetime1 = stackIn_23_0; var3_int > var5Lifetime1; var5Lifetime1++) {
-              if (GetRepairModeCooldown.a(param0.charAt(var5Lifetime1), true)) {
+              if (GetRepairModeCooldown.isAsciiDigit(param0.charAt(var5Lifetime1), true)) {
                 continue;
               }
               break;

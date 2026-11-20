@@ -369,7 +369,7 @@ final class World implements DiffableState, CompactGameState {
                     var17 = var15Lifetime2 - var10_ref_uwa.x;
                     var18 = -var10_ref_uwa.y + var16Lifetime1;
                     var19 = GameSnapshotFactory.a(var18, (byte) -77, var17);
-                    var20 = GameKeyHandler.a(22433, var19 - var10_ref_uwa.angle);
+                    var20 = GameKeyHandler.normalizeSignedAngle(22433, var19 - var10_ref_uwa.angle);
                     if (Math.abs(var20) < var10_ref_uwa.arcHalfAngle) {
                       var14_intLifetime2 = 1;
                     } else {
@@ -383,7 +383,7 @@ final class World implements DiffableState, CompactGameState {
                           var17Lifetime1 = var15Lifetime2Lifetime1 - var10_ref_uwa.x;
                           var18Lifetime1 = var16Lifetime1Lifetime1 - var10_ref_uwa.y;
                           var19Lifetime1 = GameSnapshotFactory.a(var18Lifetime1, (byte) -77, var17Lifetime1);
-                          var20 = GameKeyHandler.a(22433, -var10_ref_uwa.angle + var19Lifetime1);
+                          var20 = GameKeyHandler.normalizeSignedAngle(22433, -var10_ref_uwa.angle + var19Lifetime1);
                           if (Math.abs(var20) < var10_ref_uwa.arcHalfAngle) {
                             var14_intLifetime2 = 1;
                           }
@@ -591,7 +591,7 @@ final class World implements DiffableState, CompactGameState {
                   var25 = var13.getDefinition((byte) -112).hardpoints[var12.hardpointIndex];
                   var20Lifetime1 = var25.field_a + var12.component.finalangle;
                   if (param0.chassis.thrusterbehaviour != null) {
-                    var20Lifetime1 = GameKeyHandler.a(22433, var20Lifetime1 + 4096);
+                    var20Lifetime1 = GameKeyHandler.normalizeSignedAngle(22433, var20Lifetime1 + 4096);
                   }
                   param0.setAngle(var20Lifetime1, -95);
                   var10.clearPlaceholderHealth(98);
@@ -1179,7 +1179,7 @@ final class World implements DiffableState, CompactGameState {
             param6.addForceAtPoint(param6.getMass(false) * var15 * 4, param6.getX(false), param6.getY((byte) 124), (byte) -121, param6.getMass(false) * (var14 * 4));
             param6.dx = 180 * param6.dx >> 8;
             param6.dy = param6.dy * 180 >> 8;
-            var20 = GameKeyHandler.a(22433, -param6.getAngle(0) + var19);
+            var20 = GameKeyHandler.normalizeSignedAngle(22433, -param6.getAngle(0) + var19);
             param6.angularvelocity = (var20 << 12) / var17;
             if (Math.abs(param6.angularvelocity) > Math.abs(var20) << 8) {
               param6.angularvelocity = var20 << 4;
@@ -5769,7 +5769,7 @@ final class World implements DiffableState, CompactGameState {
             var12_ref_lsb = var10_ref_ml.getDefinition((byte) -112).hardpoints[var9.hardpointIndex];
             var13 = var12_ref_lsb.field_a + var9.component.finalangle;
             if (null != param3.chassis.thrusterbehaviour) {
-              var13 = GameKeyHandler.a(22433, var13 + 4096);
+              var13 = GameKeyHandler.normalizeSignedAngle(22433, var13 + 4096);
             }
             param3.setAngle(var13, -86);
             var14 = var22.getDefaultConnectionX(38) * GetNumStars.cosAngle(param3.getAngle(0), (byte) -99) - var22.getDefaultConnectionY((byte) 100) * TextureLineShape.sinAngle(param3.getAngle(0), 125) >> 16;

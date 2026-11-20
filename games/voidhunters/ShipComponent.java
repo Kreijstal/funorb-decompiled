@@ -1822,7 +1822,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               var9 = param1.torque - var5;
               var10 = GetNumStars.cosAngle(param1.getAngle(0), (byte) -119) >> 8;
               var11 = TextureLineShape.sinAngle(param1.getAngle(0), 114) >> 8;
-              var12 = GameKeyHandler.a(22433, -2048 + param1.getAngle(0));
+              var12 = GameKeyHandler.normalizeSignedAngle(22433, -2048 + param1.getAngle(0));
               var13 = GetNumStars.cosAngle(var12, (byte) -78) >> 8;
               var14 = TextureLineShape.sinAngle(var12, 96) >> 8;
               var15 = var10 * var7 + var8 * var11;
@@ -1911,7 +1911,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
               if (param1 == this.subcomponents[var6_int]) {
                 var7 = param1.finalangle;
                 if (null != param1.thrusterbehaviour) {
-                  var7 = GameKeyHandler.a(22433, var7 + 4096);
+                  var7 = GameKeyHandler.normalizeSignedAngle(22433, var7 + 4096);
                 }
                 param1.detachFromBody(param2, -19625, param4);
                 var8 = new Debris(param1, param0);
@@ -2268,9 +2268,9 @@ final class ShipComponent implements DiffableState, CompactGameState {
           this.health > 0) {
           var3 = 0;
           if (param1 > 0) {
-            var3Lifetime1 = Math.abs(GameKeyHandler.a(22433, this.connectedangle - (-this.getAimArc(124) + this.currentconnectedangle)));
+            var3Lifetime1 = Math.abs(GameKeyHandler.normalizeSignedAngle(22433, this.connectedangle - (-this.getAimArc(124) + this.currentconnectedangle)));
           } else {
-            var3Lifetime1 = Math.abs(GameKeyHandler.a(22433, this.connectedangle - (this.getAimArc(-116) + this.currentconnectedangle)));
+            var3Lifetime1 = Math.abs(GameKeyHandler.normalizeSignedAngle(22433, this.connectedangle - (this.getAimArc(-116) + this.currentconnectedangle)));
           }
           var4 = this.getAimSpeed((byte) 103);
           if (SetShipTeamAction.field_e == 1) {
@@ -2286,7 +2286,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           if (param1 < 0) {
             var5 = -var5;
           }
-          this.currentconnectedangle = GameKeyHandler.a(22433, var5 + this.currentconnectedangle);
+          this.currentconnectedangle = GameKeyHandler.normalizeSignedAngle(22433, var5 + this.currentconnectedangle);
           param1 = param1 - var5;
         }
         if (param0 <= -68) {
@@ -2360,7 +2360,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           return;
         }
         if (this.canAimIndependently(true)) {
-          var2Lifetime1 = GameKeyHandler.a(22433, this.connectedangle - this.currentconnectedangle);
+          var2Lifetime1 = GameKeyHandler.normalizeSignedAngle(22433, this.connectedangle - this.currentconnectedangle);
           discarded$0 = this.rotateAim((byte) -105, var2Lifetime1);
         }
     }
@@ -2405,7 +2405,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           var15 = param1.chassis;
           var16 = var13.field_a + var12.finalangle;
           if (null != var15.thrusterbehaviour) {
-            var16 = GameKeyHandler.a(22433, var16 + 4096);
+            var16 = GameKeyHandler.normalizeSignedAngle(22433, var16 + 4096);
           }
           var17 = var15.getDefaultConnectionX(-10) * GetNumStars.cosAngle(var10, (byte) -89) - var15.getDefaultConnectionY((byte) 100) * TextureLineShape.sinAngle(var10, 49) >> 16;
           var18 = var15.getDefaultConnectionX(124) * TextureLineShape.sinAngle(var10, param3 ^ -120) + var15.getDefaultConnectionY((byte) 100) * GetNumStars.cosAngle(var10, (byte) -72) >> 16;
@@ -3515,9 +3515,9 @@ final class ShipComponent implements DiffableState, CompactGameState {
         if (param4 != 21750) {
           this.grapplebehaviour = (GrappleLauncherBehaviour) null;
         }
-        var8 = Math.abs(GameKeyHandler.a(param4 + 683, this.connectedangle + (-this.getAimArc(127) - this.currentconnectedangle)));
+        var8 = Math.abs(GameKeyHandler.normalizeSignedAngle(param4 + 683, this.connectedangle + (-this.getAimArc(127) - this.currentconnectedangle)));
         param2 = param2 + var8;
-        var9 = Math.abs(GameKeyHandler.a(param4 + 683, this.connectedangle + (this.getAimArc(param4 ^ 21639) - this.currentconnectedangle)));
+        var9 = Math.abs(GameKeyHandler.normalizeSignedAngle(param4 + 683, this.connectedangle + (this.getAimArc(param4 ^ 21639) - this.currentconnectedangle)));
         if (param2 >= 8192) {
           param2 = 8191;
         }
@@ -3553,10 +3553,10 @@ final class ShipComponent implements DiffableState, CompactGameState {
           var14 = param3 - var12Lifetime1;
           var15 = GameSnapshotFactory.a(var14, (byte) -77, var13);
           if (this.isSpinningWeapon(-77)) {
-            var16 = GameKeyHandler.a(param4 ^ 855, GameKeyHandler.a(22433, -this.currentconnectedangle + this.finalangle) + this.connectedangle);
-            var7 = GameKeyHandler.a(22433, var15 - var16);
+            var16 = GameKeyHandler.normalizeSignedAngle(param4 ^ 855, GameKeyHandler.normalizeSignedAngle(22433, -this.currentconnectedangle + this.finalangle) + this.connectedangle);
+            var7 = GameKeyHandler.normalizeSignedAngle(22433, var15 - var16);
           } else {
-            var7 = GameKeyHandler.a(22433, -this.finalangle + var15);
+            var7 = GameKeyHandler.normalizeSignedAngle(22433, -this.finalangle + var15);
           }
           var16Lifetime1 = var7;
           if (0 < var16Lifetime1) {
@@ -3800,7 +3800,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           } else {
             stackIn_4_3 = this.currentconnectedangle;
           }
-          this.finalangle = GameKeyHandler.a(stackIn_3_1, stackIn_3_2 + stackIn_4_3);
+          this.finalangle = GameKeyHandler.normalizeSignedAngle(stackIn_3_1, stackIn_3_2 + stackIn_4_3);
           var40 = this.getDefinition((byte) -112);
           var42 = var40;
           var11 = (long)var42.connectionX;
@@ -3920,7 +3920,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             var13.dy = param5.dy;
             var13.dx = param5.dx;
           }
-          var13.addDirectionalForce(this.finaly, GameKeyHandler.a(22433, -100 + (var11 + TextHotspotRegion.randomBoundedInt(param0, 200, 118))), this.finalx, var12, 1948934248);
+          var13.addDirectionalForce(this.finaly, GameKeyHandler.normalizeSignedAngle(22433, -100 + (var11 + TextHotspotRegion.randomBoundedInt(param0, 200, 118))), this.finalx, var12, 1948934248);
           param1.addDebris(var13, (byte) 50);
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4362,7 +4362,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
         if (param0 != -127) {
           this.finaloutline = (int[]) null;
         }
-        return GameKeyHandler.a(22433, this.finalangle - this.currentconnectedangle + this.connectedangle);
+        return GameKeyHandler.normalizeSignedAngle(22433, this.finalangle - this.currentconnectedangle + this.connectedangle);
     }
 
     final int getFinalx(boolean param0) {
@@ -4450,7 +4450,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
             }
             var15 = GameSnapshotFactory.a(var13, (byte) -77, var12);
             var16 = param2.getMass(false) * var9 / var14;
-            param2.addDirectionalForce(this.finaly, GameKeyHandler.a(22433, -100 + (var15 + TextHotspotRegion.randomBoundedInt(var10, 200, 123))), this.finalx, var16, 1948934248);
+            param2.addDirectionalForce(this.finaly, GameKeyHandler.normalizeSignedAngle(22433, -100 + (var15 + TextHotspotRegion.randomBoundedInt(var10, 200, 123))), this.finalx, var16, 1948934248);
           }
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
@@ -4504,7 +4504,7 @@ final class ShipComponent implements DiffableState, CompactGameState {
           }
           var5_int = param2.hardpoints[param3].field_a;
           if (null != param0.thrusterbehaviour) {
-            var5_int = GameKeyHandler.a(22433, 4096 + var5_int);
+            var5_int = GameKeyHandler.normalizeSignedAngle(22433, 4096 + var5_int);
           }
           param0.setConnectionTransform(var5_int, param2.hardpoints[param3].field_b, 56, param2.hardpoints[param3].field_c);
         } catch (RuntimeException runtimeException) {

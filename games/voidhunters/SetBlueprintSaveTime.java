@@ -12,7 +12,7 @@ final class SetBlueprintSaveTime extends ConsoleCommand {
     public static void clearSharedReferences(int param0) {
         field_o = null;
         if (param0 != 0) {
-          SetBlueprintSaveTime.a(108, -55);
+          SetBlueprintSaveTime.getOrCreateCommonArchive(108, -55);
           field_p = null;
           return;
         }
@@ -135,21 +135,21 @@ final class SetBlueprintSaveTime extends ConsoleCommand {
         }
     }
 
-    final static ResourceArchive a(int param0, int param1) {
+    final static ResourceArchive getOrCreateCommonArchive(int param0, int param1) {
         if (param1 != 11835) {
           field_o = (String) null;
-          if (MissionEventFactory.field_a == null) {
-            return -1 == param0 ? MissionEventFactory.field_a : SetAutoAfkTimeout.a(true, false, -52, true, param0, 1);
+          if (MissionEventFactory.commonArchive == null) {
+            return -1 == param0 ? MissionEventFactory.commonArchive : SetAutoAfkTimeout.a(true, false, -52, true, param0, 1);
           }
-          return MissionEventFactory.field_a;
+          return MissionEventFactory.commonArchive;
         }
-        if (MissionEventFactory.field_a != null) {
-          return MissionEventFactory.field_a;
+        if (MissionEventFactory.commonArchive != null) {
+          return MissionEventFactory.commonArchive;
         }
         if (-1 != param0) {
           return SetAutoAfkTimeout.a(true, false, -52, true, param0, 1);
         }
-        return MissionEventFactory.field_a;
+        return MissionEventFactory.commonArchive;
     }
 
     static {

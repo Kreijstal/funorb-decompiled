@@ -104,7 +104,7 @@ final class SetFighterRepairAmount extends ConsoleCommand {
           var3 = 0;
         }
         if (2 == NetworkMessageState.chatChannel &&
-          !SetAutozoomAmountMultiply.a(param2 + 85)) {
+          !SetAutozoomAmountMultiply.isPrivateChatTargetAvailable(param2 + 85)) {
           var3 = 0;
         }
         if (param2 == ~SetBombletSprayProjectileDamage.field_o) {

@@ -9,14 +9,14 @@ final class SetGrapplingHookRopeChangeRate extends ConsoleCommand {
         super(param0, param1, param2);
     }
 
-    final static int a(int param0, int param1, int param2, int param3, int param4) {
+    final static int interpolateInt(int param0, int param1, int param2, int param3, int param4) {
         if (param2 != 1) {
           return -53;
         }
         return param3 + param0 * (-param3 + param1) / param4;
     }
 
-    final static int a(int param0, int param1, int param2) {
+    final static int integerPower(int param0, int param1, int param2) {
         int var3_int = 0;
         RuntimeException var3 = null;
         int var4 = 0;
@@ -46,10 +46,10 @@ final class SetGrapplingHookRopeChangeRate extends ConsoleCommand {
         }
     }
 
-    final static void a(java.applet.Applet param0, int param1) {
+    final static void clearSessionCookieAndReload(java.applet.Applet param0, int param1) {
         try {
           if (param1 != -18209) {
-            SetGrapplingHookRopeChangeRate.a(91, -87, 12, -41, -105);
+            SetGrapplingHookRopeChangeRate.interpolateInt(91, -87, 12, -41, -105);
           }
           MatchResultsFactory.setSessionCookie(param0, (byte) 56, "");
           AppletReload.reloadGamePage(param0, param1 ^ -20973);

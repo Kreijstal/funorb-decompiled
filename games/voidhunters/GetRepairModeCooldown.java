@@ -5,7 +5,7 @@ final class GetRepairModeCooldown extends ConsoleCommand {
     static String field_o;
     static String field_p;
 
-    final static boolean a(char param0, boolean param1) {
+    final static boolean isAsciiDigit(char param0, boolean param1) {
         if (!param1) {
           return true;
         }
@@ -27,7 +27,7 @@ final class GetRepairModeCooldown extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard >= -119) {
-            GetRepairModeCooldown.a('ﾛ', true);
+            GetRepairModeCooldown.isAsciiDigit('ﾛ', true);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(214, 111));
           return stackIn_3_0;
@@ -49,7 +49,7 @@ final class GetRepairModeCooldown extends ConsoleCommand {
         field_o = null;
         field_p = null;
         if (param0 != 91) {
-          GetRepairModeCooldown.a('3', true);
+          GetRepairModeCooldown.isAsciiDigit('3', true);
         }
     }
 

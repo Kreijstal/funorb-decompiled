@@ -86,7 +86,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
         this.field_i.clear((byte) -103);
         NativeSoftwareHeap var1 = (NativeSoftwareHeap) (this.field_c.first(0));
         while (var1 != null) {
-          var1.ga();
+          var1.onToolkitReleaseNative();
           var1 = (NativeSoftwareHeap) (this.field_c.next((byte) 33));
         }
         this.field_c.clear(93);
@@ -248,7 +248,7 @@ final class NativeSoftwareToolkit extends GraphicsToolkit implements NativeResou
         this.updateFrameNative(param0);
         NativeSoftwareHeap var2 = (NativeSoftwareHeap) (this.field_c.first(0));
         while (var2 != null) {
-          var2.r();
+          var2.onFrameUpdateNative();
           var2 = (NativeSoftwareHeap) (this.field_c.next((byte) 121));
         }
     }

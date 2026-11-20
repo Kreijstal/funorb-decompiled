@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class GetAiRepairAmount extends ConsoleCommand {
-    final static void e(int param0) {
+    final static void readQuickChatPolicy(int param0) {
         GetBloomThresholdPercentage.field_p = false;
         ConsoleSettingsScript.quickChatOnly = AccountNameAvailabilityReplies.field_b.readUnsignedByte((byte) -90) == 0 ? true : false;
         if (param0 >= -65) {
@@ -19,7 +19,7 @@ final class GetAiRepairAmount extends ConsoleCommand {
         RuntimeException decompiledCaughtException = null;
         try {
           if (obfuscationGuard > -119) {
-            GetAiRepairAmount.a(87);
+            GetAiRepairAmount.getCommonArchive(87);
           }
           stackIn_3_0 = new ConsoleValue(GetLaserFireForce.a(229, 87));
           return stackIn_3_0;
@@ -37,20 +37,20 @@ final class GetAiRepairAmount extends ConsoleCommand {
         }
     }
 
-    final static void e(byte param0) {
+    final static void printLoadSettingsCommand(byte param0) {
         System.out.println("load_settings(\"");
         SetFogOfWarOn.e((byte) 106);
         System.out.println("\")");
         if (param0 < 102) {
-          GetAiRepairAmount.e(-54);
+          GetAiRepairAmount.readQuickChatPolicy(-54);
         }
     }
 
-    final static ResourceArchive a(int param0) {
+    final static ResourceArchive getCommonArchive(int param0) {
         if (param0 != 0) {
           return (ResourceArchive) null;
         }
-        return SetBlueprintSaveTime.a(SetBombletSprayReload.field_o.id, 11835);
+        return SetBlueprintSaveTime.getOrCreateCommonArchive(SetBombletSprayReload.commonArchiveId.id, 11835);
     }
 
     GetAiRepairAmount(String param0, Class[] param1, String param2) {

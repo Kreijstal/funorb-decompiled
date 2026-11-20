@@ -165,7 +165,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
             var17 = -var12_int + param0;
             var18 = param3 - var13;
             var19 = GameSnapshotFactory.a(var18, (byte) -77, var17);
-            var20 = GameKeyHandler.a(22433, var19 - param4);
+            var20 = GameKeyHandler.normalizeSignedAngle(22433, var19 - param4);
             if (Math.abs(var20) > 256) {
               return;
             }
@@ -185,7 +185,7 @@ final class GrappleLauncherBehaviour implements DiffableState {
             var22.dx = param10.dx;
             BlendTextureOperation.a(20382, var15, 12, var16, 50);
             var22.addDirectionalForce(var16, param4, var15, SegmentIntersections.field_a, 1948934248);
-            param10.addDirectionalForce(var16, GameKeyHandler.a(22433, param4 + 4096), var15, SegmentIntersections.field_a, 1948934248);
+            param10.addDirectionalForce(var16, GameKeyHandler.normalizeSignedAngle(22433, param4 + 4096), var15, SegmentIntersections.field_a, 1948934248);
             this.hookId = var22.id;
             this.reload = CarouselPlayerEvent.specialOrderDefinitions[0].getCooldown((byte) 64);
             this.targetRopeLength = this.ropeLength;

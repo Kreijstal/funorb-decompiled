@@ -3,7 +3,7 @@
  */
 final class ThresholdTextureOperation extends TextureOperation {
     private int lowerBound;
-    static int field_k;
+    static int modalPointerX;
     private int upperBound;
 
     final void decodeParameter(int param0, int param1, PacketBuffer param2) {

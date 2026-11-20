@@ -26,7 +26,7 @@ final class HighscoreTableRequest extends IntrusiveNode {
         if (param1 != -25) {
           return true;
         }
-        if (!OpenGlSprite.b(111, param0)) {
+        if (!OpenGlSprite.isVoteOptionAvailable(111, param0)) {
           if (ArchiveIndexLoader.field_g.isVoteOptionComingSoon(param0, param1 ^ -29)) {
             return ArchiveIndexLoader.field_g.isVoteOptionAllowedInCurrentMode(param0, false) ? true : false;
           }

@@ -14,7 +14,7 @@ final class SetArmageddonWarning extends ConsoleCommand {
         String stackIn_34_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          if (SetAutozoomAmountMultiply.a((byte) 122, param1)) {
+          if (SetAutozoomAmountMultiply.containsCharactersOutsideAsciiAlphanumeric((byte) 122, param1)) {
             return false;
           }
           if (OpenGlPostEffect.isRepeatedCharacter(121, param1)) {

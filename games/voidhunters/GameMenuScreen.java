@@ -357,7 +357,7 @@ final class GameMenuScreen {
           PlayerActionFactory.a(var22, -1 + var17 - (-var26 + var23 / 2), (byte) 92, var25 + (ComponentWordEncoder.getSpriteHeightOrFallback(19143, 132) - var24) / 2);
         } else {
           PlayerActionFactory.a(var22, var19 / 2 + (var12 - var23 / 2), (byte) 108, var15 + var20 / 2 - var24 / 2);
-          IncrementVariableAction.a(var22, 250, -(var24 / 2) + (var20 / 2 + var15), 0, -(var23 / 2) + var12 + var19 / 2);
+          IncrementVariableAction.drawToolkitSpriteWithAlpha(var22, 250, -(var24 / 2) + (var20 / 2 + var15), 0, -(var23 / 2) + var12 + var19 / 2);
           stackIn_85_0 = (param1) ? 15658751 : 13421772;
           var25 = stackIn_85_0;
           if (var9 != 0) {

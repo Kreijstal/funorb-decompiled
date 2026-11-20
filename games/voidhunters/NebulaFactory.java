@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class NebulaFactory implements GameStateFactory {
-    static float field_b;
+    static float progressDialogValue;
     static String field_a;
 
     public static void clearSharedReferences(byte param0) {

@@ -2,7 +2,7 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class MissionEventFactory implements GameStateFactory {
-    static ResourceArchive field_a;
+    static ResourceArchive commonArchive;
 
     public final SerializableGameState[] createArray(int param0, int param1) {
         if (param0 != 11995) {
@@ -19,7 +19,7 @@ final class MissionEventFactory implements GameStateFactory {
 
     public static void clearSharedReferences(byte param0) {
         int var1 = -21 % ((param0 + 35) / 34);
-        field_a = null;
+        commonArchive = null;
     }
 
     static {

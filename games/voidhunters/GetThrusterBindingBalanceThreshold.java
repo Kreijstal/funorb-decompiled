@@ -32,7 +32,7 @@ final class GetThrusterBindingBalanceThreshold extends ConsoleCommand {
             var2 = GetRepairModePower.field_p;
           }
           if (NetworkMessageState.chatChannel == 2 &&
-            !SetAutozoomAmountMultiply.a(0)) {
+            !SetAutozoomAmountMultiply.isPrivateChatTargetAvailable(0)) {
             if (GetTorqueDownshift.a(GetDebrisThrowable.privateChatTarget, (byte) -47)) {
               var2 = SetReverbGain.a(BodyDestroyedCondition.field_d, new String[]{ChoosePlayerNameForm.privateChatTargetDisplayName}, 78);
               if (var10 != 0) {

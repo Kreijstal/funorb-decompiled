@@ -3,13 +3,13 @@
  */
 final class SetBombletSprayReload extends ConsoleCommand {
     static LoginStage field_p;
-    static CommonArchiveId field_o;
+    static CommonArchiveId commonArchiveId;
 
     public static void clearSharedReferences(int param0) {
-        field_o = null;
+        commonArchiveId = null;
         field_p = null;
         if (param0 != 0) {
-          field_o = (CommonArchiveId) null;
+          commonArchiveId = (CommonArchiveId) null;
         }
     }
 
@@ -49,6 +49,6 @@ final class SetBombletSprayReload extends ConsoleCommand {
 
     static {
         field_p = new LoginStage();
-        field_o = new CommonArchiveId(0);
+        commonArchiveId = new CommonArchiveId(0);
     }
 }

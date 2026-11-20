@@ -13,7 +13,7 @@ final class PrintSettings extends ConsoleCommand {
         String stackIn_7_2 = null;
         RuntimeException decompiledCaughtException = null;
         try {
-          GetAiRepairAmount.e((byte) 104);
+          GetAiRepairAmount.printLoadSettingsCommand((byte) 104);
           if (obfuscationGuard >= -119) {
             var4 = (ConsoleValue[]) null;
             this.execute((ConsoleValue[]) null, -109);

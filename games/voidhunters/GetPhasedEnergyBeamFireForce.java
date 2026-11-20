@@ -32,16 +32,16 @@ final class GetPhasedEnergyBeamFireForce extends ConsoleCommand {
         }
     }
 
-    final static void b(boolean param0) {
+    final static void buildFullscreenConfirmationText(boolean param0) {
         if (!param0) {
-          SoftwareFramebuffer.field_a = CarouselGameClient.field_g + " <b>" + ServerInfoFactory.field_b + "</b> " + GetFighterBayAimspeed.field_p + " <b>" + GetFighterRepairAmount.field_r + "</b> " + SetReloadBarHeight.field_p + "<br>" + "<br>" + GetDebrisMax.field_r;
+          SoftwareFramebuffer.fullscreenConfirmationText = CarouselGameClient.field_g + " <b>" + ServerInfoFactory.field_b + "</b> " + GetFighterBayAimspeed.field_p + " <b>" + GetFighterRepairAmount.field_r + "</b> " + SetReloadBarHeight.field_p + "<br>" + "<br>" + GetDebrisMax.field_r;
           return;
         }
         field_p = -73;
-        SoftwareFramebuffer.field_a = CarouselGameClient.field_g + " <b>" + ServerInfoFactory.field_b + "</b> " + GetFighterBayAimspeed.field_p + " <b>" + GetFighterRepairAmount.field_r + "</b> " + SetReloadBarHeight.field_p + "<br>" + "<br>" + GetDebrisMax.field_r;
+        SoftwareFramebuffer.fullscreenConfirmationText = CarouselGameClient.field_g + " <b>" + ServerInfoFactory.field_b + "</b> " + GetFighterBayAimspeed.field_p + " <b>" + GetFighterRepairAmount.field_r + "</b> " + SetReloadBarHeight.field_p + "<br>" + "<br>" + GetDebrisMax.field_r;
     }
 
-    final static int b(int param0, int param1, int param2) {
+    final static int positiveModulo(int param0, int param1, int param2) {
         int var3 = param1 - 1 & param0 >> 31;
         int var4 = 125 % ((param2 + 6) / 41);
         return var3 + (param0 + (param0 >>> 31)) % param1;
@@ -54,10 +54,10 @@ final class GetPhasedEnergyBeamFireForce extends ConsoleCommand {
         }
     }
 
-    final static void a(int param0, int param1, int param2) {
+    final static void setModalPointerPosition(int param0, int param1, int param2) {
         int var3 = 8 / ((-49 - param1) / 47);
-        MapClearanceArea.field_c = param2;
-        ThresholdTextureOperation.field_k = param0;
+        MapClearanceArea.modalPointerY = param2;
+        ThresholdTextureOperation.modalPointerX = param0;
     }
 
     final static void showDisplayModeDialog(byte param0) {

@@ -9,7 +9,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         int var1 = 56 / ((0 - param0) / 50);
     }
 
-    final static int a(int param0, int param1) {
+    final static int normalizeSignedAngle(int param0, int param1) {
         if (param0 == 22433) {
           return -4096 + (4096 ^ param1 & 8191);
         }
@@ -142,7 +142,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         }
     }
 
-    final static NanosecondClock b(int param0) {
+    final static NanosecondClock createNanosecondClock(int param0) {
         if (param0 >= -37) {
           field_a = 79;
           return (NanosecondClock) ((Object) new SystemNanoClock());
@@ -150,7 +150,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
         return (NanosecondClock) ((Object) new SystemNanoClock());
     }
 
-    final static int a(byte param0, int param1, int param2, int param3, String param4) {
+    final static int getParagraphWidth(byte param0, int param1, int param2, int param3, String param4) {
         RuntimeException var5 = null;
         int stackIn_4_0 = 0;
         int stackIn_6_0 = 0;
@@ -210,7 +210,7 @@ final class GameKeyHandler implements java.awt.event.KeyListener, java.awt.event
 
     public static void clearSharedReferences(int param0) {
         if (param0 >= -1) {
-          GameKeyHandler.b(-72);
+          GameKeyHandler.createNanosecondClock(-72);
           field_b = null;
           return;
         }

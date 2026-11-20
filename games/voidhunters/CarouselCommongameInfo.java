@@ -639,7 +639,7 @@ final class CarouselCommongameInfo implements DiffableState {
         }
         if (null != this.recording &&
           this.recording.getClientStateDump(116) != null) {
-          return this.recording.getClientStateDump(param0 ^ 116).d(param0 + 0);
+          return this.recording.getClientStateDump(param0 ^ 116).getDecodedState(param0 + 0);
         }
         return this.history[this.currentIndex];
     }
@@ -666,7 +666,7 @@ final class CarouselCommongameInfo implements DiffableState {
         }
         if (null != this.recording &&
           var3 != null) {
-          var4 = ((CarouselSlotStateDump) (var3)).c(param1 - 161);
+          var4 = ((CarouselSlotStateDump) (var3)).getSnapshotTick(param1 - 161);
           this.showClientState = false;
           if (this.tick >= var4) {
             if (param0 % GetBombletSprayProjectileOndamageParticles.field_p > GetBombletSprayProjectileOndamageParticles.field_p / 2) {
@@ -732,13 +732,13 @@ final class CarouselCommongameInfo implements DiffableState {
         }
         if (null != this.recording &&
           var3 != null) {
-          var6 = ((CarouselSlotStateDump) (var3)).c(-80);
+          var6 = ((CarouselSlotStateDump) (var3)).getSnapshotTick(-80);
           if (var6 == this.tick) {
             var7 = System.out;
             var14 = new StringBuilder();
             var9 = new PrintStream((OutputStream) ((Object) new StringBuilderOutputStream(var14)));
             System.setOut(var9);
-            var10 = ((CarouselSlotStateDump) (var3)).d(0);
+            var10 = ((CarouselSlotStateDump) (var3)).getDecodedState(0);
             var10.reportDifferences(this.history[this.currentIndex], -100);
             System.setOut(var7);
             this.debugDifferences = var14.toString();

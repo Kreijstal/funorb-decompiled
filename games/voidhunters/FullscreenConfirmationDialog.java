@@ -64,14 +64,14 @@ final class FullscreenConfirmationDialog extends ResizableModalPanel implements 
         UiComponent var3 = null;
         try {
           this.startedAtMillis = MonotonicMillisClock.currentTimeMillis(false);
-          var3 = new UiComponent(SoftwareFramebuffer.field_a, (UiListener) null);
+          var3 = new UiComponent(SoftwareFramebuffer.fullscreenConfirmationText, (UiListener) null);
           var3.x = 0;
           var3.width = this.width;
           var3.y = 50;
           var3.height = 100;
           var3.renderer = (UiRenderer) ((Object) new UiTextStyle(SetTorpedoProjectileLife.field_o, 10, 10, 0, 10, 16777215, -1, 1, 0, 16, 0, 0, true));
           this.addChild(-18756, var3);
-          this.countdownWidget = new UiComponent(SoftwareFramebuffer.field_a, (UiListener) null);
+          this.countdownWidget = new UiComponent(SoftwareFramebuffer.fullscreenConfirmationText, (UiListener) null);
           this.countdownWidget.y = 20 + var3.y + var3.height;
           this.countdownWidget.x = 0;
           this.countdownWidget.width = this.width;

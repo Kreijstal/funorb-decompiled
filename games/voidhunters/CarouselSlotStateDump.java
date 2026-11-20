@@ -2,31 +2,31 @@
  * Decompiled by CFR-JS 0.4.0.
  */
 final class CarouselSlotStateDump extends IntrusiveNode implements SerializableGameState {
-    byte[] field_d;
+    byte[] serializedState;
     static String field_e;
     static int field_f;
     static int field_g;
     static int field_i;
-    private CarouselSlot field_h;
+    private CarouselSlot decodedState;
 
-    final CarouselSlot d(int param0) {
-        if (null != this.field_h) {
-          return this.field_h;
+    final CarouselSlot getDecodedState(int param0) {
+        if (null != this.decodedState) {
+          return this.decodedState;
         }
-        IsaacPacketBuffer var2 = new IsaacPacketBuffer(this.field_d.length - 4);
-        var2.writeBytes(4, this.field_d, -1, -4 + this.field_d.length);
+        IsaacPacketBuffer var2 = new IsaacPacketBuffer(this.serializedState.length - 4);
+        var2.writeBytes(4, this.serializedState, -1, -4 + this.serializedState.length);
         var2.position = param0;
         CarouselSlot var3 = (CarouselSlot) (ConsoleEvaluationException.field_a.create((byte) -128));
         var2.beginBitRead(-23497);
         if (!(var3 instanceof CompactGameState)) {
           var3.readState(var2, false);
           var2.endBitRead((byte) -116);
-          this.field_h = var3;
+          this.decodedState = var3;
           return var3;
         }
         ((CompactGameState) ((Object) var3)).readCompactState(var2, 32);
         var2.endBitRead((byte) -116);
-        this.field_h = var3;
+        this.decodedState = var3;
         return var3;
     }
 
@@ -37,8 +37,8 @@ final class CarouselSlotStateDump extends IntrusiveNode implements SerializableG
             this.writeState((IsaacPacketBuffer) null, -44);
           }
           param0.endBitWrite(32712);
-          param0.writeInt(this.field_d.length, 332614536);
-          param0.writeBytes(0, this.field_d, -1, this.field_d.length);
+          param0.writeInt(this.serializedState.length, 332614536);
+          param0.writeBytes(0, this.serializedState, -1, this.serializedState.length);
           param0.beginBitWrite(-81);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bhb.B(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -56,12 +56,12 @@ final class CarouselSlotStateDump extends IntrusiveNode implements SerializableG
         field_e = null;
     }
 
-    final int c(int param0) {
+    final int getSnapshotTick(int param0) {
         int var2 = 23 / ((param0 - 26) / 60);
-        return ((this.field_d[2] & 255) << 8) + (((this.field_d[1] & 255) << 16) + (this.field_d[0] << 24 & -16777216)) + (this.field_d[3] & 255);
+        return ((this.serializedState[2] & 255) << 8) + (((this.serializedState[1] & 255) << 16) + (this.serializedState[0] << 24 & -16777216)) + (this.serializedState[3] & 255);
     }
 
-    final void a(SerializableGameState param0, boolean param1) {
+    final void reportDifferences(SerializableGameState param0, boolean param1) {
         try {
           if (!param1) {
             field_g = -106;
@@ -80,19 +80,19 @@ final class CarouselSlotStateDump extends IntrusiveNode implements SerializableG
         RuntimeException decompiledCaughtException = null;
         try {
           var3 = (CarouselSlotStateDump) (param1);
-          if (null == this.field_d) {
-            var3.field_d = null;
+          if (null == this.serializedState) {
+            var3.serializedState = null;
           } else {
-            if (null == var3.field_d ||
-              this.field_d.length != var3.field_d.length) {
-              var3.field_d = new byte[this.field_d.length];
+            if (null == var3.serializedState ||
+              this.serializedState.length != var3.serializedState.length) {
+              var3.serializedState = new byte[this.serializedState.length];
             }
-            ArrayOperations.copy(this.field_d, 0, var3.field_d, 0, this.field_d.length);
+            ArrayOperations.copy(this.serializedState, 0, var3.serializedState, 0, this.serializedState.length);
           }
           if (param0 > 54) {
             return;
           }
-          this.field_h = (CarouselSlot) null;
+          this.decodedState = (CarouselSlot) null;
           return;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {
           decompiledCaughtException = decompiledCaughtParameter0;
@@ -143,8 +143,8 @@ final class CarouselSlotStateDump extends IntrusiveNode implements SerializableG
             field_e = (String) null;
           }
           var3_int = param0.readInt(49);
-          this.field_d = new byte[var3_int];
-          param0.readBytes(0, this.field_d, (byte) -59, var3_int);
+          this.serializedState = new byte[var3_int];
+          param0.readBytes(0, this.serializedState, (byte) -59, var3_int);
           param0.beginBitRead(-23497);
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bhb.H(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ')');
@@ -153,13 +153,13 @@ final class CarouselSlotStateDump extends IntrusiveNode implements SerializableG
 
     private CarouselSlotStateDump(int param0, byte[] param1, int param2) {
         try {
-          this.field_d = new byte[param2 + 4];
-          this.field_d[2] = (byte)(param0 >> 8);
-          this.field_d[3] = (byte)param0;
-          this.field_d[1] = (byte)(param0 >> 16);
-          this.field_d[0] = (byte)(param0 >> 24);
-          ArrayOperations.copy(param1, 0, this.field_d, 4, param2);
-          this.field_h = null;
+          this.serializedState = new byte[param2 + 4];
+          this.serializedState[2] = (byte)(param0 >> 8);
+          this.serializedState[3] = (byte)param0;
+          this.serializedState[1] = (byte)(param0 >> 16);
+          this.serializedState[0] = (byte)(param0 >> 24);
+          ArrayOperations.copy(param1, 0, this.serializedState, 4, param2);
+          this.decodedState = null;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "bhb.<init>(" + param0 + ',' + (param1 != null ? "{...}" : "null") + ',' + param2 + ')');
         }

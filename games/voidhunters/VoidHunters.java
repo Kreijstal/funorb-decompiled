@@ -643,7 +643,7 @@ public final class VoidHunters extends NetworkGameClient {
         this.applyShipCookie(false);
         ArchiveIndexLoader.field_g = new ServerInfo();
         ArchiveIndexLoader.field_g.resetOptionStates((byte) -65);
-        SetUseTriFill.field_o = GameKeyHandler.b(-89);
+        SetUseTriFill.field_o = GameKeyHandler.createNanosecondClock(-89);
         SetGrapplingHookMaxExtension8Force.field_o = TextureCombineMappings.field_b;
         LobbyOptionCompatibilityRules.optionCombinations = GetPointDefenceLaserAimspeed.field_o;
         if (UiDraggableContainer.field_E) {
@@ -2296,7 +2296,7 @@ public final class VoidHunters extends NetworkGameClient {
             return;
           }
           if (!Mission.b(-1)) {
-            IncrementVariableAction.a(QuickChatHelpWindow.loadingExtraDataText, -1, 100.0f);
+            IncrementVariableAction.setProgressDialogStatus(QuickChatHelpWindow.loadingExtraDataText, -1, 100.0f);
             GetPhasedEnergyBeamAimspeed.a(var10, true);
             return;
           }
@@ -2365,7 +2365,7 @@ public final class VoidHunters extends NetworkGameClient {
           if (QuickChatMenuWidget.l(0)) {
             var4_int = (-SoftwareRasterizer2D.width + GetBombletSprayEnergyUsed.field_p.width) / 2;
             var5_intLifetime2 = (-SoftwareRasterizer2D.height + GetBombletSprayEnergyUsed.field_p.height) / 2;
-            GetPhasedEnergyBeamFireForce.a(var4_int, 32, var5_intLifetime2);
+            GetPhasedEnergyBeamFireForce.setModalPointerPosition(var4_int, 32, var5_intLifetime2);
             if (!RoundResult.field_e) {
               this.drawCachedCenteredFrame(2, 20 + PanelHeightQuery.getMaximumPanelHeight(true), PanelWidthQuery.getMaximumPanelWidth(-119));
             }

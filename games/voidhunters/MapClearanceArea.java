@@ -3,7 +3,7 @@
  */
 abstract class MapClearanceArea implements DiffableState {
     static QuickChatDynamicCommand field_b;
-    static int field_c;
+    static int modalPointerY;
     static int field_a;
 
     public void copyTo(byte param0, SerializableGameState param1) {

@@ -432,7 +432,7 @@ final class WeaponBehaviour implements DiffableState {
             var25_int = param3 - var17;
             var26_int = -var18 + param6;
             var27 = GameSnapshotFactory.a(var26_int, (byte) -77, var25_int);
-            var28 = GameKeyHandler.a(22433, var27 - param8);
+            var28 = GameKeyHandler.normalizeSignedAngle(22433, var27 - param8);
             if (Math.abs(var28) > var34.getFiringLeeway(27918)) {
               return;
             }
@@ -755,7 +755,7 @@ final class WeaponBehaviour implements DiffableState {
           var10 = param2 - var7;
           var11 = param1 - var8;
           var12 = GameSnapshotFactory.a(var11, (byte) -77, var10);
-          var13 = GameKeyHandler.a(22433, var12 - var9);
+          var13 = GameKeyHandler.normalizeSignedAngle(22433, var12 - var9);
           stackIn_9_0 = !(Math.abs(var13) > var6_int);
           return stackIn_9_0;
         } catch (java.lang.RuntimeException decompiledCaughtParameter0) {

@@ -4888,8 +4888,8 @@ final class GameSession {
             return true;
           }
           var13Lifetime1 = GameSnapshotFactory.a(var9, (byte) -77, var8_int);
-          var14Lifetime1 = GameKeyHandler.a(22433, -2048 + var13Lifetime1);
-          var15Lifetime1 = GameKeyHandler.a(22433, 2048 + var13Lifetime1);
+          var14Lifetime1 = GameKeyHandler.normalizeSignedAngle(22433, -2048 + var13Lifetime1);
+          var15Lifetime1 = GameKeyHandler.normalizeSignedAngle(22433, 2048 + var13Lifetime1);
           if (param3) {
             var49 = (SpecialOrderButtonState) null;
             this.handleSpecialOrderHotkey((SpecialOrderButtonState) null, (byte) 103, -86, false);
@@ -5645,7 +5645,7 @@ final class GameSession {
         int var13 = 0;
         int var14 = 0;
         int var15 = VoidHunters.field_G;
-        int var5 = GameKeyHandler.a(22433, -(param2 / 2) + param0);
+        int var5 = GameKeyHandler.normalizeSignedAngle(22433, -(param2 / 2) + param0);
         int var6 = 64;
         int var7 = var6 << 1;
         int[] var17 = new int[var7 + (var6 << 1)];
@@ -5662,7 +5662,7 @@ final class GameSession {
         int var9 = param1 / 8;
         for (var10 = 0; var6 > var10; var10++) {
           var11 = var10 << 1;
-          var12 = GameKeyHandler.a(param3 + 22551, param2 * (-1 + (var6 - var10)) / var6 + var5);
+          var12 = GameKeyHandler.normalizeSignedAngle(param3 + 22551, param2 * (-1 + (var6 - var10)) / var6 + var5);
           var13 = this.radialMenuX + (GetNumStars.cosAngle(var12, (byte) -99) * var9 >> 16);
           var14 = this.radialMenuY + (var9 * TextureLineShape.sinAngle(var12, 69) >> 16);
           var17[var11] = var13;
@@ -5670,7 +5670,7 @@ final class GameSession {
         }
         for (var10Lifetime1 = 0; var6 > var10Lifetime1; var10Lifetime1++) {
           var11Lifetime1 = (var10Lifetime1 << 1) + var7;
-          var12Lifetime1 = GameKeyHandler.a(22433, var5 + var10Lifetime1 * param2 / var6);
+          var12Lifetime1 = GameKeyHandler.normalizeSignedAngle(22433, var5 + var10Lifetime1 * param2 / var6);
           var13Lifetime1 = this.radialMenuX + (param1 * GetNumStars.cosAngle(var12Lifetime1, (byte) -106) >> 16);
           var14Lifetime1 = this.radialMenuY + (param1 * TextureLineShape.sinAngle(var12Lifetime1, param3 + 188) >> 16);
           var17[var11Lifetime1] = var13Lifetime1;
@@ -5960,7 +5960,7 @@ final class GameSession {
                   var16 = var6_int - var13;
                   var17 = var7 - var14;
                   var18 = GameSnapshotFactory.a(var17, (byte) -77, var16);
-                  var19 = GameKeyHandler.a(param3 + 22433, var18 - var15);
+                  var19 = GameKeyHandler.normalizeSignedAngle(param3 + 22433, var18 - var15);
                   if (var11 >= Math.abs(var19)) {
                     param2 = 2;
                     if (!AccountCreationDialog.field_Y) {
@@ -6313,15 +6313,15 @@ final class GameSession {
                   var13 = param2 - var10;
                   var14 = param3 - var11;
                   var15 = GameSnapshotFactory.a(var14, (byte) -77, var13);
-                  var16 = GameKeyHandler.a(22433, -var12 + var15);
+                  var16 = GameKeyHandler.normalizeSignedAngle(22433, -var12 + var15);
                   var17 = ShipTeamConditionFactory.field_a.worldToScreenX(var10, (byte) 122);
                   var18 = ShipTeamConditionFactory.field_a.worldToScreenY(true, var11);
                   if (Math.abs(var16) <= var8) {
                     DelayedPacket.drawLine(ShipTeamConditionFactory.field_a.worldToScreenY(true, param3), ShipTeamConditionFactory.field_a.worldToScreenX(param2, (byte) 124), var17, var18, -16777216, 16711680);
                   }
                   var19 = 16777215;
-                  var20 = GameKeyHandler.a(22433, var12 - var8);
-                  var21 = GameKeyHandler.a(22433, var12 + var8);
+                  var20 = GameKeyHandler.normalizeSignedAngle(22433, var12 - var8);
+                  var21 = GameKeyHandler.normalizeSignedAngle(22433, var12 + var8);
                   var22 = var7.weaponbehaviour.getDefinition((byte) 24).getProjectileRange(123) << 3;
                   var23 = var10 + (GetNumStars.cosAngle(var20, (byte) 44) >> 8) * (var22 >> 8);
                   var24 = (var22 >> 8) * (TextureLineShape.sinAngle(var20, 70) >> 8) + var11;
@@ -6727,7 +6727,7 @@ final class GameSession {
                 var34 = 0;
                 var35 = 0;
                 if (var30Lifetime1 < 256) {
-                  IncrementVariableAction.a(var33Lifetime2, 100, var19 + var35, 0, var18 + var34);
+                  IncrementVariableAction.drawToolkitSpriteWithAlpha(var33Lifetime2, 100, var19 + var35, 0, var18 + var34);
                 }
                 var36 = var17 * var30Lifetime1 >> 8;
                 SaveShipDesignOrderDefinition.pushClip(var17 + (var19 - var36), var17 + var19, true, var18 + var16, var18);
@@ -8238,7 +8238,7 @@ final class GameSession {
         int var9 = -41 / ((param1 - 48) / 45);
         if (var8 > param3 / 8 &&
           var8 < param3 &&
-          param0 / 2 > Math.abs(GameKeyHandler.a(22433, -param2 + var7))) {
+          param0 / 2 > Math.abs(GameKeyHandler.normalizeSignedAngle(22433, -param2 + var7))) {
           return true;
         }
         return false;

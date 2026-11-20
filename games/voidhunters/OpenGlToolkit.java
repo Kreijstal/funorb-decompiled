@@ -2360,7 +2360,7 @@ final class OpenGlToolkit extends GraphicsToolkit {
           if (!this.field_O) {
             throw new RuntimeException("");
           }
-          this.field_qc.c(0, this.field_Sb, 0, 0, 101, 0, this.field_Y);
+          this.field_qc.copyFromFramebuffer(0, this.field_Sb, 0, 0, 101, 0, this.field_Y);
           this.field_c.setSurface(this.field_ic);
         } else {
           if (this.field_jb != this.field_lc) {

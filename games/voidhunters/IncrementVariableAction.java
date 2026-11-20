@@ -33,21 +33,21 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
         }
     }
 
-    final static boolean a(int param0, int param1, byte param2) {
+    final static boolean matchesGpuBufferDataMask(int param0, int param1, byte param2) {
         if (param2 == 9) {
           return 0 != (256 & param1) ? true : false;
         }
-        IncrementVariableAction.a(14, -116, 46);
+        IncrementVariableAction.matchesVertexDataMask(14, -116, 46);
         return 0 != (256 & param1) ? true : false;
     }
 
-    final static void a(String param0, int param1, float param2) {
-        NebulaFactory.field_b = param2;
+    final static void setProgressDialogStatus(String param0, int param1, float param2) {
+        NebulaFactory.progressDialogValue = param2;
         if (param1 != -1) {
           return;
         }
         try {
-          OpenGlBufferObject.field_g = param0;
+          OpenGlBufferObject.progressDialogMessage = param0;
         } catch (RuntimeException runtimeException) {
           throw GetMissileLauncherRandomness.a((Throwable) ((Object) runtimeException), "uoa.L(" + (param0 != null ? "{...}" : "null") + ',' + param1 + ',' + param2 + ')');
         }
@@ -83,9 +83,9 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
         }
     }
 
-    final static void a(int param0, int param1, int param2, int param3, int param4) {
+    final static void drawToolkitSpriteWithAlpha(int param0, int param1, int param2, int param3, int param4) {
         if (param3 != 0) {
-          IncrementVariableAction.a(125, 2, 96);
+          IncrementVariableAction.matchesVertexDataMask(125, 2, 96);
           if (OpenGlTexture1D.field_i) {
             OpenGlVertexNormal.field_d[param0].draw(param4, param2, 0, 16777215 | param1 << 24, 1);
             return;
@@ -243,7 +243,7 @@ final class IncrementVariableAction extends MissionAction implements DiffableSta
         }
     }
 
-    final static boolean a(int param0, int param1, int param2) {
+    final static boolean matchesVertexDataMask(int param0, int param1, int param2) {
         if (param0 < 74) {
           return true;
         }

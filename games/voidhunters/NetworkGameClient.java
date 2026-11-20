@@ -265,8 +265,8 @@ abstract class NetworkGameClient extends GameApplet {
           SetBombletSprayEnergyUsed.a(GetSalvoUsesAllEnergy.field_o, 2, BufferedFile.field_i, CommonUiArchiveResources.commonUiArchive) &&
           GetUseOffscreenRendering.a(-20230, BufferedFile.field_i)) {
           MissionFactory.b((byte) 123);
-          GetPhasedEnergyBeamFireForce.b(false);
-          OpenGlBufferObject.field_g = SetFighterRepairTime.field_o;
+          GetPhasedEnergyBeamFireForce.buildFullscreenConfirmationText(false);
+          OpenGlBufferObject.progressDialogMessage = SetFighterRepairTime.field_o;
           CommandConsole.field_r = false;
           GetUseCircleOutline.a(GetRespawnTime.field_o, GetSalvoUsesAllEnergy.field_o, CommonUiArchiveResources.commonUiArchive, BufferedFile.field_i, false);
           if (BoosterOrderText.field_a ||
@@ -301,7 +301,7 @@ abstract class NetworkGameClient extends GameApplet {
         if (UiDraggableContainer.field_z == 11) {
           if (OpenGlVertexBuffer.field_j != null && (!OpenGlVertexBuffer.field_j.loadIndex((byte) -38) ||
             !OpenGlVertexBuffer.field_j.loadAllGroups(param1 ^ 113))) {
-            IncrementVariableAction.a(SetMomentOfInertiaPerpointCalcDownshift.a(-93, OpenGlVertexBuffer.field_j, PasswordValidator.waitingForTextMessage, WorldSpriteTiler.loadingTextMessage), -1, 0.0f);
+            IncrementVariableAction.setProgressDialogStatus(SetMomentOfInertiaPerpointCalcDownshift.a(-93, OpenGlVertexBuffer.field_j, PasswordValidator.waitingForTextMessage, WorldSpriteTiler.loadingTextMessage), -1, 0.0f);
             decompiledFrameRemainder0 = false;
           }
           else {
@@ -318,7 +318,7 @@ abstract class NetworkGameClient extends GameApplet {
           if (null != OpenGlGpuTexture3D.field_m) {
             stackIn_133_0 = (!OpenGlGpuTexture3D.field_m.pollRequests((byte) 87)) ? 0 : 1;
             var3Lifetime2 = stackIn_133_0;
-            IncrementVariableAction.a(OpenGlGpuTexture3D.field_m.statusText, -1, OpenGlGpuTexture3D.field_m.progress);
+            IncrementVariableAction.setProgressDialogStatus(OpenGlGpuTexture3D.field_m.statusText, -1, OpenGlGpuTexture3D.field_m.progress);
           }
           if (var3Lifetime2 != 0) {
             UiDraggableContainer.field_z = 20;
@@ -579,7 +579,7 @@ abstract class NetworkGameClient extends GameApplet {
                       this.handleOpenUrlPacket(3);
                       break regionExit1;
                     case 18:
-                      GetAiRepairAmount.e(-96);
+                      GetAiRepairAmount.readQuickChatPolicy(-96);
                       break regionExit1;
                     default:
                       FractalNoiseVolumeGenerator.reportClientError((Throwable) null, "MGS1: " + SetCountermeasuresPulsetime.e(-13514), 0);
@@ -724,7 +724,7 @@ abstract class NetworkGameClient extends GameApplet {
               GetSpinningBladeAimspeed.field_q = 10;
               GuestModeState.guestMode = true;
             } else {
-              SetGrapplingHookRopeChangeRate.a(MissionList.b((byte) -84), -18209);
+              SetGrapplingHookRopeChangeRate.clearSessionCookieAndReload(MissionList.b((byte) -84), -18209);
             }
           }
           if (5 == var4) {
@@ -738,7 +738,7 @@ abstract class NetworkGameClient extends GameApplet {
             SetPedrosRepairModeSwitchtime.a(32, MissionList.b((byte) -86));
           }
           if (var4 == 8) {
-            SetGrapplingHookRopeChangeRate.a(MissionList.b((byte) -90), -18209);
+            SetGrapplingHookRopeChangeRate.clearSessionCookieAndReload(MissionList.b((byte) -90), -18209);
           }
           if (var4 == 9) {
             SetNebulaFadesOutWhenClose.a(17, MissionList.b((byte) -127));

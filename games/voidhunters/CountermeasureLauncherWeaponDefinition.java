@@ -103,7 +103,7 @@ final class CountermeasureLauncherWeaponDefinition extends WeaponDefinition {
           }
           boolean decompiledFrameRemainder0 = true;
           if (param1 != null && (param0 != 2 ||
-            PointDefenceLaserWeaponDefinition.a(param2, param3, 41))) {
+            PointDefenceLaserWeaponDefinition.isPrivateChatTargetAvailable(param2, param3, 41))) {
             stackIn_8_0 = true;
             decompiledFrameRemainder0 = false;
           }

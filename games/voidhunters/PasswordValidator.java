@@ -42,7 +42,7 @@ final class PasswordValidator extends TextFieldValidator {
             stackIn_5_0 = SetShipDirectionArrow.field_r;
             return stackIn_5_0;
           }
-          if (SetAutozoomAmountMultiply.a((byte) 109, var5)) {
+          if (SetAutozoomAmountMultiply.containsCharactersOutsideAsciiAlphanumeric((byte) 109, var5)) {
             stackIn_8_0 = GetThrusterParticleSpeedDownshift.field_o;
             return stackIn_8_0;
           }

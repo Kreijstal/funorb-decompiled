@@ -101,7 +101,7 @@ final class ColorRowCache {
         RuntimeException decompiledCaughtException = null;
         var2 = VoidHunters.field_G;
         try {
-          GetLagStandardDeviationIn.field_r.processPointerInput((byte) -5, ThresholdTextureOperation.field_k, MapClearanceArea.field_c, true);
+          GetLagStandardDeviationIn.field_r.processPointerInput((byte) -5, ThresholdTextureOperation.modalPointerX, MapClearanceArea.modalPointerY, true);
           GetLagStandardDeviationIn.field_r.updatePanels(19976);
           while (UiAngleDial.pollKeyEvent(127)) {
             GetLagStandardDeviationIn.field_r.dispatchKey(-9445, SetBombletSprayProjectileDamage.field_o, SetClientSideDragging.field_r);

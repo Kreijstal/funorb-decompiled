@@ -777,7 +777,7 @@ final class MissionBuilder implements DiffableState {
                 if (var7 instanceof Debris) {
                   var13 = new Debris();
                   var7.copyTo((byte) 67, var13);
-                  var13.setAngle(GameKeyHandler.a(22433, var13.getAngle(0) + 4096), -93);
+                  var13.setAngle(GameKeyHandler.normalizeSignedAngle(22433, var13.getAngle(0) + 4096), -93);
                   var13.setPosition(-var13.x, -var13.y, (byte) -112);
                   param0.world.addDebris(var13, (byte) 53);
                   var5 = (ShipBody[]) (SoftwareSprite2D.appendStateArrayValue(var13, (Object[]) (var5), 0, ShipBodyFactoryHolder.factory));
@@ -786,7 +786,7 @@ final class MissionBuilder implements DiffableState {
                 var12 = new Ship();
                 var7.copyTo((byte) 66, var12);
                 var12.chassis.makeThrusterTrailsMutable(0);
-                var12.setAngle(GameKeyHandler.a(22433, 4096 + var12.getAngle(0)), -29);
+                var12.setAngle(GameKeyHandler.normalizeSignedAngle(22433, 4096 + var12.getAngle(0)), -29);
                 var12.setPosition(-var12.x, -var12.y, (byte) 45);
                 var9 = GpuSprite.swapTeamId(21957, var12.getTeam((byte) 64));
                 var12.setTeam(17704, var9);

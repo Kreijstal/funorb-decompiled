@@ -54,7 +54,7 @@ final class PointDefenceLaserWeaponDefinition extends WeaponDefinition {
         field_c = null;
         if (param0 != 17036) {
           String var2 = (String) null;
-          PointDefenceLaserWeaponDefinition.a(25L, (String) null, -89);
+          PointDefenceLaserWeaponDefinition.isPrivateChatTargetAvailable(25L, (String) null, -89);
         }
     }
 
@@ -86,7 +86,7 @@ final class PointDefenceLaserWeaponDefinition extends WeaponDefinition {
         return VariableConditionFactory.field_a;
     }
 
-    final static boolean a(long param0, String param1, int param2) {
+    final static boolean isPrivateChatTargetAvailable(long param0, String param1, int param2) {
         SocialListEntry var4 = null;
         RuntimeException var4_ref = null;
         String var5 = null;
@@ -99,7 +99,7 @@ final class PointDefenceLaserWeaponDefinition extends WeaponDefinition {
           var4 = FlipTextureOperation.a(param1, 0);
           if (param2 != 41) {
             var5 = (String) null;
-            PointDefenceLaserWeaponDefinition.a(1L, (String) null, 31);
+            PointDefenceLaserWeaponDefinition.isPrivateChatTargetAvailable(1L, (String) null, 31);
           }
           if (var4 != null &&
             null != var4.field_Ab) {

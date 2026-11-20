@@ -35,7 +35,7 @@ final class PlayerNameEntryDialog extends Widget {
                 if (SoftwareFaceAttachmentState.isAsciiLetter((char) var2, 0)) {
                   discarded$6 = this.inputBuffer.append((char) var2);
                 } else {
-                  if (GetRepairModeCooldown.a((char) var2, true)) {
+                  if (GetRepairModeCooldown.isAsciiDigit((char) var2, true)) {
                     discarded$7 = this.inputBuffer.append((char) var2);
                   }
                 }
@@ -64,7 +64,7 @@ final class PlayerNameEntryDialog extends Widget {
                 }
                 return true;
               }
-              if (GetRepairModeCooldown.a((char) var2, true)) {
+              if (GetRepairModeCooldown.isAsciiDigit((char) var2, true)) {
                 discarded$9 = this.inputBuffer.append((char) var2);
                 if (SetBombletSprayProjectileDamage.field_o == 84) {
                   if (this.inputBuffer.length() <= 0) {
@@ -129,7 +129,7 @@ final class PlayerNameEntryDialog extends Widget {
             if (SoftwareFaceAttachmentState.isAsciiLetter((char) var2Lifetime1, 0)) {
               discarded$1 = this.inputBuffer.append((char) var2Lifetime1);
             } else {
-              if (GetRepairModeCooldown.a((char) var2Lifetime1, true)) {
+              if (GetRepairModeCooldown.isAsciiDigit((char) var2Lifetime1, true)) {
                 discarded$2 = this.inputBuffer.append((char) var2Lifetime1);
               }
             }
@@ -169,7 +169,7 @@ final class PlayerNameEntryDialog extends Widget {
           }
           return false;
         }
-        if (!GetRepairModeCooldown.a((char) var2Lifetime1, true)) {
+        if (!GetRepairModeCooldown.isAsciiDigit((char) var2Lifetime1, true)) {
           if (SetBombletSprayProjectileDamage.field_o == 84) {
             if (this.inputBuffer.length() <= 0) {
               this.result = 1;

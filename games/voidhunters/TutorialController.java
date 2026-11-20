@@ -785,8 +785,8 @@ final class TutorialController {
                         if (!stackIn_101_0) {
                           var25 = var24.getAimArc(118);
                           if (var25 != 0) {
-                            var26_int = GameKeyHandler.a(22433, var24.getUnrotatedWorldAngle((byte) -127) - var24.getAimArc(-61));
-                            var27 = GameKeyHandler.a(22433, var24.getUnrotatedWorldAngle((byte) -127) + var24.getAimArc(-118));
+                            var26_int = GameKeyHandler.normalizeSignedAngle(22433, var24.getUnrotatedWorldAngle((byte) -127) - var24.getAimArc(-61));
+                            var27 = GameKeyHandler.normalizeSignedAngle(22433, var24.getUnrotatedWorldAngle((byte) -127) + var24.getAimArc(-118));
                             var28 = var24.getWorldConnectionX(var24.getDefinition((byte) -112), (byte) -69);
                             var29 = var24.getWorldConnectionY(125, var24.getDefinition((byte) -112));
                             var30 = 8;

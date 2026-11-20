@@ -129,7 +129,7 @@ final class GraphicsToolkitSelector {
               if (var7_int != 0) {
                 if (var7_int != 5) {
                   if (var7_int == 1) {
-                    if (!MissionEventFactory.field_a.loadIndex((byte) 87)) {
+                    if (!MissionEventFactory.commonArchive.loadIndex((byte) 87)) {
                       return;
                     }
                     var7_int = PartitionZoneListFactory.prepareNativeLibrary("jaclib", true);
@@ -154,7 +154,7 @@ final class GraphicsToolkitSelector {
                     }
                   } else {
                     if (3 == var7_int) {
-                      if (!MissionEventFactory.field_a.loadIndex((byte) -57)) {
+                      if (!MissionEventFactory.commonArchive.loadIndex((byte) -57)) {
                         return;
                       }
                       var7_int = PartitionZoneListFactory.prepareNativeLibrary("jaclib", true);
@@ -191,7 +191,7 @@ final class GraphicsToolkitSelector {
                       if (var7_int != 2) {
                         throw new IllegalStateException("UT" + var6.backendId);
                       }
-                      if (!MissionEventFactory.field_a.loadIndex((byte) -83)) {
+                      if (!MissionEventFactory.commonArchive.loadIndex((byte) -83)) {
                         return;
                       }
                       var7_int = PartitionZoneListFactory.prepareNativeLibrary("jaclib", true);
@@ -217,7 +217,7 @@ final class GraphicsToolkitSelector {
                     }
                   }
                 } else {
-                  if (!MissionEventFactory.field_a.loadIndex((byte) 121)) {
+                  if (!MissionEventFactory.commonArchive.loadIndex((byte) 121)) {
                     return;
                   }
                   var7_int = PartitionZoneListFactory.prepareNativeLibrary("hw3d", true);
@@ -452,14 +452,14 @@ final class GraphicsToolkitSelector {
     }
 
     GraphicsToolkitSelector(TextureProvider param0, GraphicsBackendOption[] param1) {
-        this(GetAiRepairAmount.a(0), DeveloperConsole.getToolkitResourceArchive(0), param0, SetTorpedoProjectiles.field_o, param1);
+        this(GetAiRepairAmount.getCommonArchive(0), DeveloperConsole.getToolkitResourceArchive(0), param0, SetTorpedoProjectiles.field_o, param1);
     }
 
     private GraphicsToolkitSelector(ResourceArchive param0, ResourceArchive param1, TextureProvider param2, PlatformService param3, GraphicsBackendOption[] param4) {
         this.selectionCurrent = false;
         try {
           QuickChatHelpWindow.field_xb = param1;
-          MissionEventFactory.field_a = param0;
+          MissionEventFactory.commonArchive = param0;
           this.textureProvider = param2;
           TextureLineShape.a(param3, (byte) 127, param0);
           this.setBackendOptions(false, param4);

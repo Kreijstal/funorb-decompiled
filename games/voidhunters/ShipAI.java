@@ -347,7 +347,7 @@ final class ShipAI implements DiffableState {
                   var20 != 10 &&
                   var8 >> 3 <= var19_ref_ml.weaponbehaviour.getDefinition((byte) 24).getProjectileRange(127)) {
                   var21 = var19_ref_ml.getUnrotatedWorldAngle((byte) -127);
-                  var22 = GameKeyHandler.a(param1 + 22506, var15 - var21);
+                  var22 = GameKeyHandler.normalizeSignedAngle(param1 + 22506, var15 - var21);
                   if (var17 > Math.abs(var22)) {
                     var17 = Math.abs(var22);
                     var16 = var22;
@@ -365,7 +365,7 @@ final class ShipAI implements DiffableState {
               if (0 != this.desiredVelocityX &&
                 this.desiredVelocityY != 0) {
                 var16 = GameSnapshotFactory.a(this.desiredVelocityY, (byte) -77, this.desiredVelocityX);
-                this.desiredAngularVelocity = GameKeyHandler.a(22433, var16 - param0.getAngle(param1 ^ -73)) << 8;
+                this.desiredAngularVelocity = GameKeyHandler.normalizeSignedAngle(22433, var16 - param0.getAngle(param1 ^ -73)) << 8;
               }
             }
             if (GetUseNiceTrails.fogOfWarSensorRange > var14) {
@@ -426,10 +426,10 @@ final class ShipAI implements DiffableState {
               var15Lifetime1 != 0) {
               var17Lifetime1 = GameSnapshotFactory.a(var15Lifetime1, (byte) -77, var14Lifetime1);
               var18Lifetime1 = param0.getAngle(0);
-              var19Lifetime1 = GameKeyHandler.a(22433, var17Lifetime1 - var18Lifetime1);
-              var20Lifetime1 = GameKeyHandler.a(22433, -4096 - (var18Lifetime1 - var17Lifetime1));
-              var21Lifetime1 = GameKeyHandler.a(22433, 2048 - (var18Lifetime1 - var17Lifetime1));
-              var22Lifetime1 = GameKeyHandler.a(param1 + 22506, var17Lifetime1 - var18Lifetime1 - 2048);
+              var19Lifetime1 = GameKeyHandler.normalizeSignedAngle(22433, var17Lifetime1 - var18Lifetime1);
+              var20Lifetime1 = GameKeyHandler.normalizeSignedAngle(22433, -4096 - (var18Lifetime1 - var17Lifetime1));
+              var21Lifetime1 = GameKeyHandler.normalizeSignedAngle(22433, 2048 - (var18Lifetime1 - var17Lifetime1));
+              var22Lifetime1 = GameKeyHandler.normalizeSignedAngle(param1 + 22506, var17Lifetime1 - var18Lifetime1 - 2048);
               if (Math.abs(var19Lifetime1) < var13Lifetime1) {
                 var9 = var9 | 1;
               }

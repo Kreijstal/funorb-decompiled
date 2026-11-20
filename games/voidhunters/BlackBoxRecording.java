@@ -26,7 +26,7 @@ final class BlackBoxRecording extends DebugSendable implements DiffableState {
           }
           if (null != this.clientStateDump &&
             var5.clientStateDump != null) {
-            this.clientStateDump.a(var5.clientStateDump, true);
+            this.clientStateDump.reportDifferences(var5.clientStateDump, true);
           }
           var4 = 0;
           if (obfuscationGuard >= -19) {

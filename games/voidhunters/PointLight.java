@@ -335,16 +335,16 @@ abstract class PointLight extends IntrusiveNode {
                     var63 = param1[1 + var41];
                     var64 = param5[var41];
                     var65 = param5[var41 + 1];
-                    var58_int = SetGrapplingHookRopeChangeRate.a(var45, var58_int, param2 ^ 6406, var39, var44);
-                    var59 = SetGrapplingHookRopeChangeRate.a(var45, var59, 1, var40, var44);
-                    var60 = SetGrapplingHookRopeChangeRate.a(var45, var60, param2 - 6406, var39, var44);
-                    var61 = SetGrapplingHookRopeChangeRate.a(var45, var61, 1, var40, var44);
+                    var58_int = SetGrapplingHookRopeChangeRate.interpolateInt(var45, var58_int, param2 ^ 6406, var39, var44);
+                    var59 = SetGrapplingHookRopeChangeRate.interpolateInt(var45, var59, 1, var40, var44);
+                    var60 = SetGrapplingHookRopeChangeRate.interpolateInt(var45, var60, param2 - 6406, var39, var44);
+                    var61 = SetGrapplingHookRopeChangeRate.interpolateInt(var45, var61, 1, var40, var44);
                     if (var37 > 0) {
                       var45 = 16 * var37 + var44;
-                      var62 = SetGrapplingHookRopeChangeRate.a(var45, var62, 1, var42, var44);
-                      var63 = SetGrapplingHookRopeChangeRate.a(var45, var63, 1, var43, var44);
-                      var64 = SetGrapplingHookRopeChangeRate.a(var45, var64, 1, var42, var44);
-                      var65 = SetGrapplingHookRopeChangeRate.a(var45, var65, 1, var43, var44);
+                      var62 = SetGrapplingHookRopeChangeRate.interpolateInt(var45, var62, 1, var42, var44);
+                      var63 = SetGrapplingHookRopeChangeRate.interpolateInt(var45, var63, 1, var43, var44);
+                      var64 = SetGrapplingHookRopeChangeRate.interpolateInt(var45, var64, 1, var42, var44);
+                      var65 = SetGrapplingHookRopeChangeRate.interpolateInt(var45, var65, 1, var43, var44);
                     }
                     var66 = param0.worldToScreenX(var58_int, (byte) 121);
                     var67 = param0.worldToScreenY(true, var59);

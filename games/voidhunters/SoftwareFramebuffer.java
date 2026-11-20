@@ -6,7 +6,7 @@ final class SoftwareFramebuffer implements Framebuffer {
     int height;
     private SoftwareDepthBuffer depthBuffer;
     float[] depth;
-    static String field_a;
+    static String fullscreenConfirmationText;
     int[] pixels;
     int width;
 
@@ -18,7 +18,7 @@ final class SoftwareFramebuffer implements Framebuffer {
           ByteStorageAccess.field_e = ConstantColorTextureOperation.normalizeName(false, var3);
           return;
         }
-        field_a = (String) null;
+        fullscreenConfirmationText = (String) null;
         IntIndexTable.field_a = AccountNameAvailabilityReplies.field_b.readString(-1);
         CharSequence var2 = (CharSequence) ((Object) IntIndexTable.field_a);
         ByteStorageAccess.field_e = ConstantColorTextureOperation.normalizeName(false, var2);
@@ -77,11 +77,11 @@ final class SoftwareFramebuffer implements Framebuffer {
         if (!param0) {
           SoftwareFramebuffer.a(-57);
           field_f = null;
-          field_a = null;
+          fullscreenConfirmationText = null;
           return;
         }
         field_f = null;
-        field_a = null;
+        fullscreenConfirmationText = null;
     }
 
     static {

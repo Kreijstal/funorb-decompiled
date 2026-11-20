@@ -4,9 +4,9 @@
 final class OpenGlSprite extends ToolkitSprite {
     private int field_b;
     static String field_k;
-    private int field_j;
+    private int secondaryTextureMode;
     private OpenGlToolkit toolkit;
-    private OpenGlSpriteTexture field_e;
+    private OpenGlSpriteTexture secondaryTexture;
     static String field_h;
     private int field_a;
     private boolean field_l;
@@ -15,9 +15,9 @@ final class OpenGlSprite extends ToolkitSprite {
     private int paddingTop;
     private int paddingLeft;
 
-    private final void a(int param0) {
+    private final void resetSecondaryTextureCombine(int param0) {
         if (param0 != -27568) {
-          this.field_e = (OpenGlSpriteTexture) null;
+          this.secondaryTexture = (OpenGlSpriteTexture) null;
         }
         this.toolkit.setActiveTextureUnit(33984, 1);
         this.toolkit.bindTexture(65, (OpenGlTexture) null);
@@ -28,7 +28,7 @@ final class OpenGlSprite extends ToolkitSprite {
         this.toolkit.setRgbCombineArgument(1, 34192, 768, 34168);
     }
 
-    final static boolean b(int param0, int param1) {
+    final static boolean isVoteOptionAvailable(int param0, int param1) {
         if (param0 < 92) {
           return false;
         }
@@ -42,9 +42,9 @@ final class OpenGlSprite extends ToolkitSprite {
         jaggl.OpenGL.glColor4ub((byte)(param3 >> 16), (byte)(param3 >> 8), (byte)param3, (byte)(param3 >> 24));
         param1 = param1 + this.paddingTop;
         param0 = param0 + this.paddingLeft;
-        if (this.field_e != null) {
-          this.a(true, param2);
-          this.field_e.setLinearFiltering(-77, false);
+        if (this.secondaryTexture != null) {
+          this.setupSecondaryTextureCombine(true, param2);
+          this.secondaryTexture.setLinearFiltering(-77, false);
           jaggl.OpenGL.glBegin(7);
           jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.texture.vMax);
           jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.vMax);
@@ -59,7 +59,7 @@ final class OpenGlSprite extends ToolkitSprite {
           jaggl.OpenGL.glTexCoord2f(this.texture.uMax, this.texture.vMax);
           jaggl.OpenGL.glVertex2i(param0 + this.texture.logicalWidth, param1);
           jaggl.OpenGL.glEnd();
-          this.a(-27568);
+          this.resetSecondaryTextureCombine(-27568);
         } else {
           this.toolkit.bindTexture(117, this.texture);
           this.toolkit.setTextureCombineMode(0, param2);
@@ -84,7 +84,7 @@ final class OpenGlSprite extends ToolkitSprite {
         return this.texture.logicalHeight - (-this.paddingTop - this.field_b);
     }
 
-    private final void a(boolean param0, int param1) {
+    private final void setupSecondaryTextureCombine(boolean param0, int param1) {
         OpenGlToolkit stackIn_12_0 = null;
         float stackIn_12_1 = 0.0f;
         float stackIn_12_2 = 0.0f;
@@ -100,21 +100,21 @@ final class OpenGlSprite extends ToolkitSprite {
         this.toolkit.setRgbCombineArgument(1, 34192, 768, 34167);
         this.toolkit.setAlphaCombineArgument(0, 770, 34168, 34184);
         this.toolkit.setActiveTextureUnit(33984, 0);
-        this.toolkit.bindTexture(63, this.field_e);
+        this.toolkit.bindTexture(63, this.secondaryTexture);
         this.toolkit.setTextureCombineOperations(34479, 7681, false);
         this.toolkit.setRgbCombineArgument(1, 34192, 768, 34166);
-        if (this.field_j == 0) {
+        if (this.secondaryTextureMode == 0) {
           stackIn_12_0 = this.toolkit;
           stackIn_12_1 = 0.0f;
           stackIn_12_2 = 0.5f;
           stackIn_13_3 = (param0) ? false : true;
           ((OpenGlToolkit) (Object) stackIn_12_0).setTextureEnvironmentColor(stackIn_12_1, stackIn_12_2, stackIn_13_3, 0.5f, 1.0f);
         } else {
-          if (this.field_j == 1) {
+          if (this.secondaryTextureMode == 1) {
             this.toolkit.setTextureEnvironmentColor(0.0f, 1.0f, false, 0.5f, 0.5f);
           } else {
-            if (this.field_j != 2) {
-              if (this.field_j == 3) {
+            if (this.secondaryTextureMode != 2) {
+              if (this.secondaryTextureMode == 3) {
                 this.toolkit.setTextureEnvironmentColor(0.0f, 128.5f, false, 128.5f, 128.5f);
               }
             } else {
@@ -152,9 +152,9 @@ final class OpenGlSprite extends ToolkitSprite {
         this.toolkit.setBlendMode(param6, 115);
         jaggl.OpenGL.glColor4ub((byte)(param5 >> 16), (byte)(param5 >> 8), (byte)param5, (byte)(param5 >> 24));
         if (!this.field_l) {
-          if (null != this.field_e) {
-            this.a(true, param4);
-            this.field_e.setLinearFiltering(-112, true);
+          if (null != this.secondaryTexture) {
+            this.setupSecondaryTextureCombine(true, param4);
+            this.secondaryTexture.setLinearFiltering(-112, true);
             jaggl.OpenGL.glBegin(7);
             jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.texture.vMax);
             jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.vMax);
@@ -169,7 +169,7 @@ final class OpenGlSprite extends ToolkitSprite {
             jaggl.OpenGL.glTexCoord2f(this.texture.uMax, this.texture.vMax);
             jaggl.OpenGL.glVertex2i(param2 + param0, param1);
             jaggl.OpenGL.glEnd();
-            this.a(-27568);
+            this.resetSecondaryTextureCombine(-27568);
           } else {
             this.toolkit.bindTexture(103, this.texture);
             this.toolkit.setTextureCombineMode(0, param4);
@@ -191,9 +191,9 @@ final class OpenGlSprite extends ToolkitSprite {
           var12 = (float)param1 + (float)this.paddingTop * var10;
           var13 = var11 + (float)this.texture.logicalWidth * var9;
           var14 = (float)this.texture.logicalHeight * var10 + var12;
-          if (this.field_e != null) {
-            this.a(true, param4);
-            this.field_e.setLinearFiltering(-128, true);
+          if (this.secondaryTexture != null) {
+            this.setupSecondaryTextureCombine(true, param4);
+            this.secondaryTexture.setLinearFiltering(-128, true);
             jaggl.OpenGL.glBegin(7);
             jaggl.OpenGL.glMultiTexCoord2f(33985, 0.0f, this.texture.vMax);
             jaggl.OpenGL.glTexCoord2f(0.0f, this.texture.vMax);
@@ -208,7 +208,7 @@ final class OpenGlSprite extends ToolkitSprite {
             jaggl.OpenGL.glTexCoord2f(this.texture.uMax, this.texture.vMax);
             jaggl.OpenGL.glVertex2f(var13, var12);
             jaggl.OpenGL.glEnd();
-            this.a(-27568);
+            this.resetSecondaryTextureCombine(-27568);
           } else {
             this.toolkit.bindTexture(120, this.texture);
             this.toolkit.setTextureCombineMode(0, param4);
@@ -353,7 +353,7 @@ final class OpenGlSprite extends ToolkitSprite {
         this.field_l = stackIn_7_1;
     }
 
-    final void c(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
+    final void copyFromFramebuffer(int param0, int param1, int param2, int param3, int param4, int param5, int param6) {
         int[] var14 = null;
         int[] var12 = null;
         int[] var11 = null;
@@ -454,7 +454,7 @@ final class OpenGlSprite extends ToolkitSprite {
         this.field_a = 0;
         this.paddingTop = 0;
         this.field_b = 0;
-        this.field_j = 0;
+        this.secondaryTextureMode = 0;
         this.paddingLeft = 0;
         this.field_l = false;
         try {
@@ -469,7 +469,7 @@ final class OpenGlSprite extends ToolkitSprite {
         this.field_a = 0;
         this.paddingTop = 0;
         this.field_b = 0;
-        this.field_j = 0;
+        this.secondaryTextureMode = 0;
         this.paddingLeft = 0;
         this.field_l = false;
         try {

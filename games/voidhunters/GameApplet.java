@@ -595,7 +595,7 @@ public abstract class GameApplet extends java.applet.Applet implements Runnable,
                     (var2.startsWith("1.6.0_"))) {
                     var3 = 6;
                     while (var3 < var2.length()) {
-                      stackIn_66_0 = GetRepairModeCooldown.a(var2.charAt(var3), true);
+                      stackIn_66_0 = GetRepairModeCooldown.isAsciiDigit(var2.charAt(var3), true);
                       if (var5 != 0) {
                         decompiledFrameCompleted0 = false;
                         break;
